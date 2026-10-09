@@ -126,16 +126,16 @@ const TestPanel = () => {
             variant="outlined"
             color="secondary"
             size="small"
-            startIcon={<FontAwesomeV6Icon iconName="shuffle" />}
+            startIcon={
+              <FontAwesomeV6Icon iconName="shuffle" aria-hidden="true" />
+            }
             onClick={onClickRandom}
           >
             Random
           </Button>
         </div>
       </section>
-      <div aria-live="polite">
-        <PredictionResult />
-      </div>
+      <PredictionResult />
     </div>
   );
 };

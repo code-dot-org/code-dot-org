@@ -10,8 +10,9 @@ const jestAliases = {
   ...LOCALE_ALIASES,
   // Force module uuid to resolve with the CJS entry point, because Jest does not support package.json.exports. See https://github.com/uuidjs/uuid/issues/451
   uuid: require.resolve('uuid'),
-  // Pin react to use the apps version of react when used in conjunction with linked npm packages
+  // Pin react and react-dom to the apps versions when used in conjunction with linked npm packages
   '^react$': require.resolve('react'),
+  '^react-dom$': require.resolve('react-dom'),
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',

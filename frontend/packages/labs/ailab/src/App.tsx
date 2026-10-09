@@ -211,6 +211,9 @@ export interface AppProps {
     key: InstructionsKey,
     options: {showOverlay?: boolean} | null,
   ) => void;
+  onStartOver?: () => void;
+  /** Optional callback invoked with the accuracy of each newly trained model. */
+  onTrained?: (accuracy: number) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -219,12 +222,19 @@ export interface AppProps {
 const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
   shallowEqual(a.prev, b.prev) && shallowEqual(a.next, b.next);
 
-const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
+const App = ({
+  onContinue,
+  saveTrainedModel,
+  setInstructionsKey,
+  onStartOver,
+  onTrained,
+}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
+  const latestResult = useAppSelector(state => state.historicResults[0]);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
@@ -241,9 +251,15 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
     reportPanelView(currentPanel);
   }, [currentPanel]);
 
+  useEffect(() => {
+    if (latestResult) {
+      onTrained?.(Number(latestResult.accuracy));
+    }
+  }, [latestResult]);
+
   return (
     <div className={styles.app} style={colorVariables}>
-      <WorkspaceHeader />
+      <WorkspaceHeader onStartOver={onStartOver} />
 
       {currentPanel === 'selectDataset' && (
         <BodyContainer>

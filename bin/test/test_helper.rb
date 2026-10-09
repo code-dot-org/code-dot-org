@@ -33,7 +33,7 @@ end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
-module MiniTest
+module Minitest
   module Assertions
     alias :actual_diff :diff
 

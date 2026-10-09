@@ -18,7 +18,7 @@ class RedisSlaveReadGemTest < Minitest::Test
     nodes = []
     test_redis_proc = proc do |url|
       # Read operations distribute evenly across all nodes
-      node = MiniTest::Mock.new
+      node = Minitest::Mock.new
       unless url == "redis://netsim-1"
         node.expect :hgetall, {}, [String]
       end
@@ -51,7 +51,7 @@ class RedisSlaveReadGemTest < Minitest::Test
     nodes = []
     test_redis_proc = proc do |url|
       # Write operations only expected on master
-      node = MiniTest::Mock.new
+      node = Minitest::Mock.new
       if url == "redis://netsim-1"
         node.expect :hincrby, 1, [String, String, Integer]
         node.expect :hincrby, 1, [String, String, Integer]

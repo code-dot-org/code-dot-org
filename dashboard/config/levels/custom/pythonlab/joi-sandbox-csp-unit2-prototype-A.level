@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-08T15:45:25.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# FIRST INSTRUMENT -- Single Match (STRONG STUDENT SAMPLE)\n# Picks ONE instrument to learn, based on sound, practice space,\n# playing with others, and budget.\n# Branching only: nested if-else + compound conditions, no points.\n#\n# HOW IT WORKS: the console runs the interview. The Theater shows ONE\n# screen at the end: a concert ticket with the instrument and a\n# one-line reason. Loops in the drawing code are decorative only.\n\nfrom theater import *\n\nprint(\"FIRST INSTRUMENT: which one should you learn?\")\nname = input(\"What's your name? \")\n\n# ============================================================\n# THE INTERVIEW (console)\n# ============================================================\nprint(\"\")\nprint(\"Q1: What kind of sound do you want?\")\nprint(\"  1 = big and loud\")\nprint(\"  2 = smooth and mellow\")\nsound = input(\"Type 1 or 2: \")\nwhile sound != \"1\" and sound != \"2\":\n    print(\"Please type 1 (big and loud) or 2 (smooth and mellow).\")\n    sound = input(\"Type 1 or 2: \")\nsound = int(sound)\n\nprint(\"\")\nprint(\"Q2: Where will you practice?\")\nprint(\"  1 = apartment (hello, neighbors)\")\nprint(\"  2 = garage or house\")\nplace = input(\"Type 1 or 2: \")\nwhile place != \"1\" and place != \"2\":\n    print(\"Please type 1 (apartment) or 2 (garage or house).\")\n    place = input(\"Type 1 or 2: \")\nplace = int(place)\n\nprint(\"\")\nprint(\"Q3: Who will you play with?\")\nprint(\"  1 = a band\")\nprint(\"  2 = just me\")\ngroup = input(\"Type 1 or 2: \")\nwhile group != \"1\" and group != \"2\":\n    print(\"Please type 1 (a band) or 2 (just me).\")\n    group = input(\"Type 1 or 2: \")\ngroup = int(group)\n\nprint(\"\")\nprint(\"Q4: About how much can you spend on your instrument?\")\nbudget_text = input(\"Type a whole number of dollars (like 150): \")\nwhile not budget_text.isdigit():\n    print(\"Please type a whole number, like 150 (no $, letters, or decimals).\")\n    budget_text = input(\"Type a whole number of dollars (like 150): \")\nbudget = int(budget_text)\n\n# ============================================================\n# THE ALGORITHM\n# ============================================================\n\n# ----- STEP 1: nested decision on sound, then compound checks -----\nif sound == 1:\n    # loud: a drum kit needs a band AND $300 or more\n    if group == 1 and budget >= 300:\n        instrument = \"Drum Kit\"\n        pick_reason = \"Loud, in a band, with budget for a kit.\"\n    # an electric guitar needs EITHER a band OR a place to plug in,\n    # AND at least $100 for the guitar and an amp\n    elif (group == 1 or place == 2) and budget >= 100:\n        instrument = \"Guitar\"\n        pick_reason = \"Loud, with a band or a place to plug in.\"\n    else:\n        instrument = \"DJ Controller\"\n        pick_reason = \"Big sound, solo, headphones on: DJ time.\"\nelse:\n    # mellow: keys need solo practice AND $150 or more\n    if group == 2 and budget >= 150:\n        instrument = \"Keyboard\"\n        pick_reason = \"Mellow, solo, and the budget for keys.\"\n    else:\n        instrument = \"Guitar\"\n        pick_reason = \"Mellow and flexible: a guitar fits.\"\n\n# ----- STEP 2: OVERRIDE RULES (beat Step 1) -----\n# Override A: Step 1 can hand a drum kit to someone in an apartment.\n# That's a fight with the neighbors waiting to happen, so a drum kit\n# in an apartment becomes a guitar. It's a limit on where the sound\n# can go, not a preference, so it beats what the user likes.\nif place == 1:\n    if instrument == \"Drum Kit\":\n        instrument = \"Guitar\"\n        pick_reason = \"Neighbors say no drums: try a guitar.\"\n\n# Override B: under $40 isn't enough for most instruments, no matter\n# how well the other answers fit. A harmonica is the cheapest way in.\nif budget < 40:\n    if instrument != \"Harmonica\":\n        instrument = \"Harmonica\"\n        pick_reason = \"Under $40? A harmonica is a great start.\"\n\nprint(\"\")\nprint(\"Check the Theater for your match, \" + name + \"!\")\n\n# ============================================================\n# THE THEATER SCREEN -- one concert ticket with the result\n# ============================================================\nclear(\"#1B1B3A\")\nremove_stroke_color()\n\n# decorative stage lights along the top (the loop only draws lights)\nfor light in range(10):\n    if light % 2 == 0:\n        set_fill_color(\"#FF3D81\")\n    else:\n        set_fill_color(\"#2EE6D6\")\n    draw_ellipse(light * 40 + 8, 8, 24, 24)\n\n# ticket with shadow and notches\nset_fill_color(\"#0E0E22\")\ndraw_rectangle(26, 49, 356, 267)\nset_fill_color(\"#FFF8E7\")\ndraw_rectangle(22, 45, 356, 267)\nset_fill_color(\"#1B1B3A\")\ndraw_ellipse(12, 168, 20, 20)\ndraw_ellipse(368, 168, 20, 20)\n\n# a different illustration for each possible result\nif instrument == \"Drum Kit\":\n    set_fill_color(\"#FF3D81\")\n    draw_rectangle(150, 150, 100, 52)    # drum body\n    set_fill_color(\"#2EE6D6\")\n    draw_ellipse(150, 134, 100, 32)      # drum head\n    set_stroke_color(\"#1B1B3A\")\n    set_stroke_width(4)\n    draw_line(150, 112, 190, 146)        # sticks\n    draw_line(250, 112, 210, 146)\n    remove_stroke_color()\nelif instrument == \"Guitar\":\n    set_fill_color(\"#FF3D81\")\n    draw_ellipse(160, 150, 80, 70)       # lower body\n    draw_ellipse(170, 124, 60, 54)       # upper body\n    set_fill_color(\"#1B1B3A\")\n    draw_rectangle(192, 64, 16, 80)      # neck\n    draw_rectangle(188, 50, 24, 18)      # headstock\n    draw_ellipse(186, 158, 28, 28)       # sound hole\n    set_fill_color(\"#FFD23F\")\n    draw_rectangle(176, 202, 48, 8)      # bridge\nelif instrument == \"Keyboard\":\n    set_fill_color(\"#1B1B3A\")\n    draw_rectangle(104, 124, 192, 88)    # case\n    set_fill_color(\"#FFFFFF\")\n    # decorative key loops: they only draw the keys\n    for key in range(7):\n        draw_rectangle(110 + key * 26, 130, 24, 76)\n    set_fill_color(\"#1B1B3A\")\n    for key in range(6):\n        if key != 2:\n            draw_rectangle(130 + key * 26, 130, 16, 46)\nelif instrument == \"DJ Controller\":\n    set_fill_color(\"#1B1B3A\")\n    draw_rectangle(96, 134, 208, 80)     # body\n    set_fill_color(\"#FF3D81\")\n    draw_ellipse(106, 142, 64, 64)       # left platter\n    draw_ellipse(230, 142, 64, 64)       # right platter\n    set_fill_color(\"#FFD23F\")\n    draw_ellipse(128, 164, 20, 20)\n    draw_ellipse(252, 164, 20, 20)\n    set_fill_color(\"#2EE6D6\")\n    draw_rectangle(188, 148, 24, 52)     # mixer slider\nelse:\n    set_fill_color(\"#C0C6D6\")\n    draw_rectangle(116, 150, 168, 44)    # body\n    set_fill_color(\"#FF3D81\")\n    draw_rectangle(116, 150, 14, 44)     # end caps\n    draw_rectangle(270, 150, 14, 44)\n    set_fill_color(\"#1B1B3A\")\n    # decorative loop: it only draws the holes\n    for hole in range(8):\n        draw_rectangle(136 + hole * 16, 164, 10, 16)\n\n# just the result and a one-line reason\nset_text_style(\"sans\", \"bold\")\nset_text_color(\"#1B1B3A\")\nset_text_height(22)\ndraw_text(instrument, 44, 252)\nset_text_style(\"sans\", \"normal\")\nset_text_height(13)\ndraw_text(pick_reason, 44, 278)\n\nplay_note(72, 0.5)\nplay()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-08 15:46:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-10-08 15:47:21 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

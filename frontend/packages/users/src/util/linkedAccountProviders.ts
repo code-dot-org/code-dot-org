@@ -17,6 +17,7 @@ type LinkedAccountIcon =
 
 interface LinkedAccountProvider {
   icon: LinkedAccountIcon;
+  learnMoreUrl?: string;
 }
 
 // Logos come from each provider's own brand kit; an LMS login takes its
@@ -24,20 +25,51 @@ interface LinkedAccountProvider {
 const PROVIDERS: Record<string, LinkedAccountProvider> = {
   google_oauth2: {icon: googleLogo},
   microsoft_v2_auth: {icon: microsoftLogo},
-  clever: {icon: cleverLogo},
-  classlink: {icon: classlinkLogo},
+  clever: {
+    icon: cleverLogo,
+    learnMoreUrl:
+      'https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync',
+  },
+  classlink: {
+    icon: classlinkLogo,
+    learnMoreUrl:
+      'https://support.code.org/hc/en-us/articles/43950200633869-Adding-CodeAI-to-the-ClassLink-Dashboard',
+  },
   facebook: {icon: facebookLogo},
   [LTI_PROVIDER]: {icon: {iconName: 'graduation-cap'}},
 };
 
+const CANVAS_INSTRUCTIONS_URL =
+  'https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas';
+
 // Keyed by LtiIntegration#platform_name; Canvas names from legacy
 // LmsLoginTypeNames and its logo from the sign-up page (apps/src/signUpFlow/images).
 // PowerSchool acquired Schoology and brands it with the PowerSchool mark.
-const LMS_PLATFORMS: Record<string, {name: string; icon: string}> = {
-  canvas_cloud: {name: 'Canvas', icon: canvasLogo},
-  canvas_beta_cloud: {name: 'Canvas Beta', icon: canvasLogo},
-  canvas_test_cloud: {name: 'Canvas Test', icon: canvasLogo},
-  schoology: {name: 'PowerSchool (Schoology)', icon: powerSchoolLogo},
+const LMS_PLATFORMS: Record<
+  string,
+  {name: string; icon: string; learnMoreUrl: string}
+> = {
+  canvas_cloud: {
+    name: 'Canvas',
+    icon: canvasLogo,
+    learnMoreUrl: CANVAS_INSTRUCTIONS_URL,
+  },
+  canvas_beta_cloud: {
+    name: 'Canvas Beta',
+    icon: canvasLogo,
+    learnMoreUrl: CANVAS_INSTRUCTIONS_URL,
+  },
+  canvas_test_cloud: {
+    name: 'Canvas Test',
+    icon: canvasLogo,
+    learnMoreUrl: CANVAS_INSTRUCTIONS_URL,
+  },
+  schoology: {
+    name: 'PowerSchool (Schoology)',
+    icon: powerSchoolLogo,
+    learnMoreUrl:
+      'https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology',
+  },
 };
 
 export function linkedAccountProvider(
@@ -48,7 +80,7 @@ export function linkedAccountProvider(
 
 export function lmsPlatform(
   lmsName: string | null,
-): {name: string; icon: string} | undefined {
+): {name: string; icon: string; learnMoreUrl: string} | undefined {
   return lmsName ? LMS_PLATFORMS[lmsName] : undefined;
 }
 

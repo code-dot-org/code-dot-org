@@ -21,12 +21,17 @@ $content-height: 416px;
 }
 
 .panels {
+  display: flex;
   flex: 0 1 $content-height;
+  flex-direction: column;
   min-height: 0;
   overflow-y: auto;
 
-  > [role='tabpanel'] {
-    height: 100%;
+  > [role='tabpanel']:not([hidden]) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
   }
 }
 

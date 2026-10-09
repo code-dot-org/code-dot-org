@@ -314,8 +314,8 @@
             },
             {
               "type": "rating",
-              "name": "tcai_position_ai",
-              "title": "TBD",
+              "name": "tcai_stance_responsible_ai",
+              "title": "Take a stance on responsible AI use",
               "rateValues": [
                 {
                   "value": 4,

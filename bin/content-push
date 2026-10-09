@@ -4,7 +4,7 @@ require_relative '../deployment'
 require 'cdo/git_utils'
 require 'cdo/only_one'
 
-CONTENT_PATHS = 'dashboard pegasus aws/dms'.freeze
+CONTENT_PATHS = 'dashboard pegasus'.freeze
 
 # Revert any local changes to these files on levelbuilder
 LEVELBUILDER_OMISSIONS = [
