@@ -13,7 +13,7 @@ const REFUSED_PX = 0.5;
 
 // Compared in the direction asked for, so a leftward move is judged like a
 // rightward one.
-function refused(asked: number, got: number): boolean {
+export function refused(asked: number, got: number): boolean {
   return Math.abs(asked) - got * Math.sign(asked) > REFUSED_PX;
 }
 
