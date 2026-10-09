@@ -85,10 +85,15 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   useBodyScrollLock(true);
   useEscapeKeyHandler(onClose);
 
-  // Runs after MUI's trap has focused its container and after mount effects; focus already inside the panel stays put.
+  // Runs after MUI's trap has focused its container and after mount effects; focus that anything moved since stays put.
   const focusFirstControl = useCallback(() => {
     const panel = panelRef.current;
-    if (!panel || panel.contains(document.activeElement)) return;
+    const active = document.activeElement;
+    const untouched =
+      !active ||
+      active === document.body ||
+      active === panel?.closest('.MuiDialog-container');
+    if (!panel || !untouched) return;
     // A match can refuse focus (a hidden input, an invisible control), so stop at the first that takes it.
     for (const el of panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)) {
       el.focus();

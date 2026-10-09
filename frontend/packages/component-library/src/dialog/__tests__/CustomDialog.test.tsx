@@ -376,6 +376,26 @@ describe('CustomDialog Component', () => {
     expect(screen.getByRole('textbox', {name: 'Target'})).toHaveFocus();
   });
 
+  it('should leave focus on an outside control that took it before the dialog entered', async () => {
+    const Overlay = () => {
+      const ref = useRef<HTMLInputElement>(null);
+      useEffect(() => ref.current?.focus(), []);
+      return <input ref={ref} aria-label="Overlay" />;
+    };
+    render(
+      <>
+        <CustomDialog {...defaultProps}>
+          <p id="dsco-dialog-description">Description</p>
+          <button type="button">First</button>
+        </CustomDialog>
+        <Overlay />
+      </>,
+    );
+    await settle();
+
+    expect(screen.getByRole('textbox', {name: 'Overlay'})).toHaveFocus();
+  });
+
   it('should focus the MUI container when the panel has nothing focusable', async () => {
     render(
       <CustomDialog aria-label="Nothing to focus">{description}</CustomDialog>,
@@ -430,6 +450,34 @@ describe('CustomDialog Component', () => {
 
     await user.tab({shift: true});
     expect(last).toHaveFocus();
+  });
+
+  it('should restore focus to an opener inside the dialog underneath', async () => {
+    const Nested = ({second}: {second: boolean}) => (
+      <>
+        <CustomDialog aria-label="First">
+          <p id="dsco-dialog-description">First</p>
+          <button type="button">Opener</button>
+        </CustomDialog>
+        {second && (
+          <CustomDialog aria-label="Second">
+            <p id="dsco-dialog-description">Second</p>
+            <button type="button">In second</button>
+          </CustomDialog>
+        )}
+      </>
+    );
+    const {rerender} = render(<Nested second={false} />);
+    const opener = screen.getByRole('button', {name: 'Opener'});
+    await waitFor(() => expect(opener).toHaveFocus());
+
+    rerender(<Nested second />);
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'In second'})).toHaveFocus(),
+    );
+
+    rerender(<Nested second={false} />);
+    await waitFor(() => expect(opener).toHaveFocus());
   });
 
   describe('with two dialogs open', () => {
