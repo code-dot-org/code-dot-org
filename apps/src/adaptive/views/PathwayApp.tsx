@@ -1,12 +1,14 @@
 // Chooses which screen to show: the checkpoint map, one checkpoint's steps,
 // or the project on its own. Owns the progress they share.
 
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
+import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {isAdaptiveAiEnabled} from '../ai/generate';
 import {useProgress} from '../progress';
 import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
@@ -67,6 +69,11 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   } = useProgress(pathway, progressKey);
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
+  // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
+  useEffect(() => {
+    setAiGatewayOptIn(isAdaptiveAiEnabled());
+    return () => setAiGatewayOptIn(false);
+  }, []);
 
   const checkpoint =
     view.kind === 'step'
