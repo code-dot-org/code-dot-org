@@ -189,6 +189,13 @@ export default function useBlocklyWorkspace({
       if (!workspaceRef.current) {
         return;
       }
+      // A drag out of the flyout creates the block while it is still in
+      // hand, and a release over the flyout deletes it again; the move or
+      // delete that ends the drag fires once the gesture is over, and that
+      // is the state to keep.
+      if (workspaceRef.current.isDragging()) {
+        return;
+      }
       const serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;

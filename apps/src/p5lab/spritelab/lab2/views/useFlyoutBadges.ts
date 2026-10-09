@@ -34,12 +34,11 @@ export function useFlyoutBadges({
   const used = useMemo(() => usedBlockTypes(scenes), [scenes]);
   const [seen, setSeen] = useState<ReadonlySet<string>>(new Set());
   useEffect(() => {
-    setSeen(current => {
-      if ([...used].every(type => current.has(type))) {
-        return current;
-      }
-      return new Set([...current, ...used]);
-    });
+    setSeen(current =>
+      [...used].every(type => current.has(type))
+        ? current
+        : new Set([...current, ...used])
+    );
   }, [used]);
 
   const fresh = useMemo(() => new Set(newBlocks ?? []), [newBlocks]);
