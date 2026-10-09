@@ -1,6 +1,7 @@
 import {
   BURST_LOOKS,
   burstAlpha,
+  burstOrigin,
   createBurst,
   drawBursts,
   isBurstLook,
@@ -121,16 +122,65 @@ describe('bursts', () => {
     expect(confetti.particles[0].vy).toBeLessThan(sparks.particles[0].vy);
   });
 
+  it('starts dust at the feet, the edge gravity presses the sprite against', () => {
+    const sprite = {
+      position: {x: 50, y: 100},
+      width: 40,
+      height: 60,
+      scale: 0.5,
+    };
+    expect(burstOrigin('sparks', sprite, PLATFORM_GRAVITY)).toEqual({
+      x: 50,
+      y: 100,
+    });
+    expect(burstOrigin('dust', sprite, PLATFORM_GRAVITY)).toEqual({
+      x: 50,
+      y: 115,
+    });
+    expect(burstOrigin('dust', sprite, -PLATFORM_GRAVITY)).toEqual({
+      x: 50,
+      y: 85,
+    });
+  });
+
+  it('dust puffs out to either side near level, slowly, and does not fall', () => {
+    const burst = createBurst(
+      'dust',
+      20,
+      {x: 100, y: 200},
+      PLATFORM_GRAVITY,
+      turning()
+    );
+    const sides = new Set(burst.particles.map(p => Math.sign(p.vx)));
+    expect(sides).toEqual(new Set([1, -1]));
+    // Scattered along the feet, not from one point; never off them.
+    expect(new Set(burst.particles.map(p => p.x)).size).toBeGreaterThan(1);
+    burst.particles.forEach(p => {
+      expect(Math.abs(p.x - 100)).toBeLessThanOrEqual(8);
+      expect(p.y).toBe(200);
+    });
+    burst.particles.forEach(p => {
+      // Within the fan of level, before the small lift.
+      expect(Math.abs(p.vy + 0.4)).toBeLessThan(Math.abs(p.vx) * 0.6);
+      expect(Math.hypot(p.vx, p.vy + 0.4)).toBeLessThanOrEqual(2.2);
+    });
+    const p = burst.particles[0];
+    Object.assign(p, {vx: 0, vy: 0, life: 1000});
+    for (let i = 0; i < 30; i++) stepBurst(burst, scene());
+    expect(p.vy).toBe(0);
+  });
+
   it('knows its looks', () => {
-    expect(BURST_LOOKS).toEqual(['sparks', 'confetti']);
+    expect(BURST_LOOKS).toEqual(['sparks', 'confetti', 'dust']);
     expect(isBurstLook('confetti')).toBe(true);
     expect(isBurstLook('rain')).toBe(false);
   });
 
-  it('draws sparks as the tinted image, a dot until it loads, and confetti as paper', () => {
+  it('draws sparks as the tinted image, a dot until it loads, confetti as paper, and dust as a puff that swells', () => {
     const calls: string[] = [];
     const context = {globalAlpha: 1};
     const alphas: number[] = [];
+    const sizes: number[] = [];
     const canvas = new Proxy(
       {CENTER: 'center', drawingContext: context},
       {
@@ -138,9 +188,12 @@ describe('bursts', () => {
           if (name in t) {
             return (t as Record<string, unknown>)[name];
           }
-          return () => {
+          return (...args: unknown[]) => {
             if (name === 'image' || name === 'ellipse' || name === 'rect') {
               alphas.push(context.globalAlpha);
+            }
+            if (name === 'image') {
+              sizes.push(args[3] as number);
             }
             calls.push(name);
           };
@@ -169,5 +222,24 @@ describe('bursts', () => {
     );
     expect(calls.filter(c => c === 'rect')).toHaveLength(4);
     expect(calls.filter(c => c === 'image')).toHaveLength(0);
+    calls.length = 0;
+    sizes.length = 0;
+    const shapes: string[] = [];
+    const dust = createBurst(
+      'dust',
+      2,
+      {x: 0, y: 0},
+      PLATFORM_GRAVITY,
+      () => 0.5
+    );
+    dust.particles[1].age = dust.particles[1].life - 1;
+    drawBursts(canvas, [dust], shape => {
+      shapes.push(shape);
+      return {};
+    });
+    expect(shapes).toEqual(['puff', 'puff']);
+    expect(calls.filter(c => c === 'image')).toHaveLength(2);
+    // The old puff is drawn bigger than the new one.
+    expect(sizes[1]).toBeGreaterThan(sizes[0] * 2);
   });
 });

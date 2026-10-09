@@ -9,12 +9,14 @@ import {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import puffUrl from '@cdo/static/spritelab_lab2/particles/puff.png';
 import sparkUrl from '@cdo/static/spritelab_lab2/particles/spark.png';
 
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
+  burstOrigin,
   createBurst,
   drawBursts,
   isBurstLook,
@@ -221,44 +223,46 @@ export default class SpriteLab2Engine extends SpriteLab {
     // pool, built at the first paint after the kind changes.
     this.weatherKind_ = 'none';
     this.weather_ = null;
-    // Bursts in flight (see burstParticles); the spark image, loaded on
-    // the first burst, and a copy of it per palette colour (see sparkFor_).
+    // Bursts in flight (see burstParticles); the particle images, loaded
+    // on the first burst, and a copy of each per palette colour (see
+    // imageFor_).
     this.bursts_ = [];
-    this.spark_ = null;
-    this.tintedSparks_ = new Map();
+    this.particleImages_ = null;
+    this.tintedParticles_ = new Map();
     // The frame the particles last stepped in: a thumbnail capture paints
     // twice in one frame, and the particles must move once.
     this.particlesSteppedFrame_ = -1;
   }
 
-  // The spark image in one colour, made once per colour: this p5 recolours
-  // an image by rebuilding a canvas on every draw, too slow per particle.
-  // A p5.Image, not a p5.Graphics: a graphics canvas is scaled by the pixel
-  // density while image() reads it at its logical size, showing one corner.
-  sparkFor_(color) {
-    const image = this.spark_?.image;
+  // A particle image in one colour, made once per colour: this p5
+  // recolours an image by rebuilding a canvas on every draw, too slow per
+  // particle. A p5.Image, not a p5.Graphics: a graphics canvas is scaled by
+  // the pixel density while image() reads it at its logical size, showing
+  // one corner.
+  imageFor_(shape, color) {
+    const image = this.particleImages_?.[shape];
     if (!image) {
       return undefined;
     }
-    const key = color.join(',');
-    let tinted = this.tintedSparks_.get(key);
+    const key = `${shape}:${color.join(',')}`;
+    let tinted = this.tintedParticles_.get(key);
     if (!tinted) {
       tinted = this.p5Wrapper.p5.createImage(image.width, image.height);
       const context = tinted.drawingContext;
-      // The spark is white, so the colour is the whole tint; the image
-      // keeps only its own alpha.
+      // The image is white, so the colour is the whole tint; it keeps only
+      // its own alpha.
       context.fillStyle = `rgb(${color.join(',')})`;
       context.fillRect(0, 0, image.width, image.height);
       context.globalCompositeOperation = 'destination-in';
       context.drawImage(image.canvas, 0, 0);
-      this.tintedSparks_.set(key, tinted);
+      this.tintedParticles_.set(key, tinted);
     }
     return tinted;
   }
 
   /**
-   * The burst block: fling sparks from each sprite the argument names, the
-   * count shared among them; from the stage centre when it names none.
+   * The burst block: fling particles from each sprite the argument names,
+   * the count shared among them; from the stage centre when it names none.
    * Capped so a block in a loop cannot flood the scene.
    */
   burstParticles(count, look, spriteArg) {
@@ -266,22 +270,22 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!view) {
       return;
     }
-    if (!this.spark_) {
-      this.spark_ = {image: null};
-      this.p5Wrapper.p5.loadImage(sparkUrl, image => {
-        this.spark_.image = image;
-      });
+    if (!this.particleImages_) {
+      this.particleImages_ = {spark: null, puff: null};
+      const {p5} = this.p5Wrapper;
+      p5.loadImage(sparkUrl, image => (this.particleImages_.spark = image));
+      p5.loadImage(puffUrl, image => (this.particleImages_.puff = image));
     }
+    const kind = isBurstLook(look) ? look : 'sparks';
     const origins = this.library
       .getSpriteArray(spriteArg)
-      .map(sprite => ({x: sprite.position.x, y: sprite.position.y}));
+      .map(sprite => burstOrigin(kind, sprite, view.gravity));
     if (!origins.length) {
       origins.push({x: view.width / 2, y: view.height / 2});
     }
     const inFlight = this.bursts_.reduce((n, b) => n + b.particles.length, 0);
     const wanted = Math.min(MAX_BURST_COUNT, Math.max(1, Number(count) || 0));
     const allowed = Math.min(wanted, MAX_BURST_PARTICLES - inFlight);
-    const kind = isBurstLook(look) ? look : 'sparks';
     // The allowance shared out exactly: the first origins take the extra.
     const base = Math.floor(allowed / origins.length);
     const extra = allowed % origins.length;
@@ -356,7 +360,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (step) {
       this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, view));
     }
-    drawBursts(p5, this.bursts_, color => this.sparkFor_(color));
+    drawBursts(p5, this.bursts_, (shape, color) =>
+      this.imageFor_(shape, color)
+    );
   }
 
   /**
