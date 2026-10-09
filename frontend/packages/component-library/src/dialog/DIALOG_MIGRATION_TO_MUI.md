@@ -569,8 +569,8 @@ are the legacy ones again (`designsystem-dialog-dialog--*`,
 legacy dialog beside the wrapper now open two wrappers, and
 `DialogInNarrowViewport` moves with its stories to `stories/Dialog.story.tsx`.
 
-Focus trap handed to MUI (RE-216): `CustomDialog` drops the three
-`disable*Focus` flags and `useFocusTrap`, which is deleted. MUI's `FocusTrap`
+Focus trap handed to MUI (RE-216): `CustomDialog` drops `disableAutoFocus`,
+`disableRestoreFocus` and `useFocusTrap`, which is deleted. MUI's `FocusTrap`
 focuses its container on open, wraps Tab and Shift+Tab through its sentinels,
 and restores focus to the opener. `disableEnforceFocus` stays: with enforcement
 on, MUI pulls focus back from any overlay it does not track, and several open
