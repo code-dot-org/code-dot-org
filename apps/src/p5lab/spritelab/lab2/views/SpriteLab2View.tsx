@@ -432,8 +432,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // until the student adds them from the dialog.
   const catalogOn = !!levelProperties.blockCatalog && !isToolboxMode;
   const catalog = useMemo(
-    () => (catalogOn ? catalogEntries(levelProperties.newBlocks) : []),
-    [catalogOn, levelProperties.newBlocks]
+    () =>
+      catalogOn
+        ? catalogEntries(
+            levelProperties.newBlocks,
+            levelProperties.toolboxDefinition
+          )
+        : [],
+    [catalogOn, levelProperties.newBlocks, levelProperties.toolboxDefinition]
   );
   const chosenBlocks = currentSources.chosenBlocks;
   const chosenBlockSet = useMemo(

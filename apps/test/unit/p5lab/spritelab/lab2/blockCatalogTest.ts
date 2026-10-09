@@ -17,6 +17,21 @@ describe('catalogEntries', () => {
   it('is empty without new blocks', () => {
     expect(catalogEntries(undefined)).toEqual([]);
   });
+
+  it('names the scene type whose toolbox category offers the block', () => {
+    const toolbox = {
+      kind: 'categoryToolbox',
+      contents: [
+        {
+          kind: 'category',
+          name: 'Platform',
+          contents: [{kind: 'block', type: WITH_HELP}],
+        },
+      ],
+    };
+    expect(catalogEntries([WITH_HELP], toolbox)[0].sceneType).toBe('platform');
+    expect(catalogEntries([WITH_HELP])[0].sceneType).toBeUndefined();
+  });
 });
 
 describe('heldBackBlockTypes', () => {

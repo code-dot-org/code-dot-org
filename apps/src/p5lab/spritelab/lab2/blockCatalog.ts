@@ -10,10 +10,15 @@ import {
 
 import {BLOCK_HELP, BlockHelp} from './blockHelp/blockHelpContent';
 import {ToolboxInfo, ToolboxItemInfo} from './blockly/toolbox/types';
+import {sceneTypesByBlock} from './sceneToolbox';
+import {SceneType} from './types';
 
 export interface CatalogEntry {
   type: string;
   help: BlockHelp;
+  /** The scene type whose toolbox offers the block; unset for one every
+      scene offers. */
+  sceneType?: SceneType;
 }
 
 /**
@@ -21,11 +26,13 @@ export interface CatalogEntry {
  * nothing to show in the catalog, so it stays in the toolbox as usual.
  */
 export function catalogEntries(
-  newBlocks: readonly string[] | undefined
+  newBlocks: readonly string[] | undefined,
+  toolbox?: ToolboxInfo
 ): CatalogEntry[] {
+  const sceneTypes = sceneTypesByBlock(toolbox);
   return (newBlocks ?? []).flatMap(type => {
     const help = BLOCK_HELP[type];
-    return help ? [{type, help}] : [];
+    return help ? [{type, help, sceneType: sceneTypes.get(type)}] : [];
   });
 }
 

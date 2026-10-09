@@ -7,10 +7,18 @@ import React, {useState} from 'react';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {CatalogEntry} from '../blockCatalog';
+import {SceneType} from '../types';
 
 import moduleStyles from './block-catalog.module.scss';
 
 const TITLE = 'Add new blocks';
+
+// Where a block can be used, by the scene type whose toolbox offers it.
+const SCENE_TYPE_NOTES: Record<SceneType, string> = {
+  platform: 'For platformer scenes',
+  story: 'For story scenes',
+};
+const ANY_SCENE_NOTE = 'For any scene';
 
 interface BlockCatalogDialogProps {
   entries: readonly CatalogEntry[];
@@ -86,6 +94,11 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
             {selected && (
               <>
                 <h3>{selected.help.title}</h3>
+                <p className={moduleStyles.sceneNote}>
+                  {selected.sceneType
+                    ? SCENE_TYPE_NOTES[selected.sceneType]
+                    : ANY_SCENE_NOTE}
+                </p>
                 <div className={moduleStyles.infoRow}>
                   {selected.help.animation && (
                     <img
