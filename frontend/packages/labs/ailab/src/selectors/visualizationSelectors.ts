@@ -10,6 +10,7 @@ import {
   type DisplayTreeNode,
   type SerializedTree,
 } from '../helpers/displayTree';
+import {measureDisplayTreeNodes} from '../helpers/displayTreeNodeContent';
 import {
   traceDisplayTree,
   type DisplayTreeTrace,
@@ -294,3 +295,16 @@ export function getPredictionStep(state: RootState): number {
   const pathLength = getPredictionTrace(state)?.path.length ?? 0;
   return state.predictionStep ?? pathLength - 1;
 }
+
+export const getDisplayTreeNodeWidth = createSelector(
+  [getDisplayTree, getDatasetId],
+  (
+    tree: DisplayTreeNode | undefined,
+    datasetId: string | undefined,
+  ): ((id: string) => number) => {
+    const widths = tree
+      ? measureDisplayTreeNodes(tree, datasetId ?? '')
+      : new Map<string, number>();
+    return id => widths.get(id)!;
+  },
+);

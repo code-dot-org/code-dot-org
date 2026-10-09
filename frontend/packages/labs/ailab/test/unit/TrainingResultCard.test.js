@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
+import I18n from '../../src/i18n';
 import {
   removeSelectedFeature,
   setHistoricResult,
@@ -17,6 +18,7 @@ import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 import {levelStore} from './levelStore';
 
 function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
+  I18n.initI18n();
   const store = levelStore({trainer});
   if (trained) {
     train.reset();
@@ -40,6 +42,8 @@ function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
 const accuracy = () => screen.queryByText('Accuracy');
 
 describe('TrainingResultCard', () => {
+  afterEach(() => I18n.reset());
+
   test('is empty before training', () => {
     renderCard({trained: false});
     expect(accuracy()).toBeNull();

@@ -6,8 +6,8 @@ import {
 } from './displayTree';
 import type {Rect} from './fitToView';
 
-export const TREE_NODE_WIDTH = 160;
-export const TREE_NODE_HEIGHT = 40;
+export const TREE_NODE_MAX_WIDTH = 280;
+export const TREE_NODE_HEIGHT = 42;
 export const TREE_COLUMN_GAP = 16;
 // Tall enough for a branch label between two rows of nodes.
 export const TREE_ROW_GAP = 64;
@@ -19,6 +19,7 @@ export interface PlacedTreeNode {
   // Top-left corner.
   x: number;
   y: number;
+  width: number;
   parent?: PlacedTreeNode;
   children: PlacedTreeNode[];
   branch?: DisplayTreeBranch;
@@ -32,16 +33,16 @@ export interface DisplayTreeLayout {
 }
 
 const EDGE_BEND_DROP = 20;
-const EDGE_CORNER_RADIUS = 8;
+const EDGE_CORNER_RADIUS = 10;
 
 export function edgePath(
   parent: PlacedTreeNode,
   child: PlacedTreeNode,
   bendDrop = EDGE_BEND_DROP,
 ): string {
-  const startX = parent.x + TREE_NODE_WIDTH / 2;
+  const startX = parent.x + parent.width / 2;
   const startY = parent.y + TREE_NODE_HEIGHT;
-  const endX = child.x + TREE_NODE_WIDTH / 2;
+  const endX = child.x + child.width / 2;
   const bendY = startY + bendDrop;
   const radius = Math.min(EDGE_CORNER_RADIUS, Math.abs(endX - startX) / 2);
   const turn = Math.sign(endX - startX) * radius;
@@ -55,10 +56,60 @@ export function edgePath(
   ].join(' ');
 }
 
+interface SubtreeExtent {
+  width: number;
+  // The rest are measured from the subtree's left edge.
+  span: number;
+  center: number;
+  childLefts: number[];
+}
+
+function extentOver(width: number, children: SubtreeExtent[]): SubtreeExtent {
+  if (children.length === 0) {
+    return {width, span: width, center: width / 2, childLefts: []};
+  }
+  let right = 0;
+  const childLefts = children.map(child => {
+    const left = right;
+    right += child.span + TREE_COLUMN_GAP;
+    return left;
+  });
+  const childrenSpan = right - TREE_COLUMN_GAP;
+  const last = children.length - 1;
+  const center =
+    (childLefts[0] +
+      children[0].center +
+      childLefts[last] +
+      children[last].center) /
+    2;
+  const overhang = Math.max(0, width / 2 - center);
+  return {
+    width,
+    span: Math.max(childrenSpan, center + width / 2) + overhang,
+    center: center + overhang,
+    childLefts: childLefts.map(left => left + overhang),
+  };
+}
+
 export function layoutDisplayTree(
   root: DisplayTreeNode,
+  nodeWidth: (id: string) => number = () => TREE_NODE_MAX_WIDTH,
   rowGap = TREE_ROW_GAP,
 ): DisplayTreeLayout {
+  const extents = new Map<string, SubtreeExtent>();
+
+  const measure = (node: DisplayTreeNode, id: string): SubtreeExtent => {
+    const children =
+      node.type === 'question'
+        ? node.branches.map((branch, index) =>
+            measure(branch.child, getChildNodeId(id, index)),
+          )
+        : [];
+    const extent = extentOver(nodeWidth(id), children);
+    extents.set(id, extent);
+    return extent;
+  };
+
   const nodes: PlacedTreeNode[] = [];
   let answerCount = 0;
   let maxDepth = 0;
@@ -67,15 +118,18 @@ export function layoutDisplayTree(
     node: DisplayTreeNode,
     id: string,
     depth: number,
+    left: number,
     parent?: PlacedTreeNode,
     branch?: DisplayTreeBranch,
   ): PlacedTreeNode => {
+    const {width, center, childLefts} = extents.get(id)!;
     const placed: PlacedTreeNode = {
       id,
       node,
       depth,
-      x: 0,
+      x: left + center - width / 2,
       y: depth * (TREE_NODE_HEIGHT + rowGap),
+      width,
       parent,
       children: [],
       branch,
@@ -85,42 +139,40 @@ export function layoutDisplayTree(
 
     if (node.type === 'answer') {
       placed.answerIndex = answerCount;
-      placed.x = answerCount * (TREE_NODE_WIDTH + TREE_COLUMN_GAP);
       answerCount++;
     } else {
-      const children = node.branches.map((childBranch, index) =>
+      placed.children = node.branches.map((childBranch, index) =>
         place(
           childBranch.child,
           getChildNodeId(id, index),
           depth + 1,
+          left + childLefts[index],
           placed,
           childBranch,
         ),
       );
-      placed.children = children;
-      placed.x = (children[0].x + children[children.length - 1].x) / 2;
     }
     return placed;
   };
 
-  place(root, DISPLAY_TREE_ROOT_ID, 0);
+  const {span} = measure(root, DISPLAY_TREE_ROOT_ID);
+  place(root, DISPLAY_TREE_ROOT_ID, 0, 0);
 
   return {
     nodes,
-    width: answerCount * (TREE_NODE_WIDTH + TREE_COLUMN_GAP) - TREE_COLUMN_GAP,
+    width: span,
     height: (maxDepth + 1) * (TREE_NODE_HEIGHT + rowGap) - rowGap,
   };
 }
 
 export function getNodesBounds(nodes: PlacedTreeNode[]): Rect {
-  const xs = nodes.map(placed => placed.x);
   const ys = nodes.map(placed => placed.y);
-  const left = Math.min(...xs);
+  const left = Math.min(...nodes.map(placed => placed.x));
   const top = Math.min(...ys);
   return {
     x: left,
     y: top,
-    width: Math.max(...xs) + TREE_NODE_WIDTH - left,
+    width: Math.max(...nodes.map(placed => placed.x + placed.width)) - left,
     height: Math.max(...ys) + TREE_NODE_HEIGHT - top,
   };
 }

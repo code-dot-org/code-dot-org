@@ -15,11 +15,9 @@ import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
-  formatNumber,
   THRESHOLD_SIGNS,
   thresholdValue,
   type DisplayTreeBranch,
-  type DisplayTreeNode,
   type DisplayTreeQuestion,
 } from '../helpers/displayTree';
 import {
@@ -28,14 +26,16 @@ import {
   layoutDisplayTree,
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
-  TREE_NODE_WIDTH,
+  TREE_NODE_MAX_WIDTH,
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
+import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
+  getDisplayTreeNodeWidth,
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
@@ -58,10 +58,10 @@ const HIDDEN_WORDS = {
   onPath: 'On your path',
 };
 
-const BRANCH_LABEL_RISE = 22;
+const BRANCH_LABEL_RISE = 19;
 
 const canvasVariables = {
-  '--tree-node-width': `${TREE_NODE_WIDTH}px`,
+  '--tree-node-max-width': `${TREE_NODE_MAX_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
   '--tree-branch-offset': `${BRANCH_LABEL_RISE}px`,
 } as CSSProperties;
@@ -95,10 +95,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const isStepping = useAppSelector(
     state => state.predictionStep !== undefined,
   );
+  const nodeWidth = useAppSelector(getDisplayTreeNodeWidth);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
-    () => (tree ? layoutDisplayTree(tree) : undefined),
-    [tree],
+    () => (tree ? layoutDisplayTree(tree, nodeWidth) : undefined),
+    [tree, nodeWidth],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const reachedIds = useMemo(
@@ -186,15 +187,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const columnText = (node: DisplayTreeQuestion): string =>
     getLocalizedColumnName(datasetId, node.column);
 
-  const nodeText = (node: DisplayTreeNode): string => {
-    if (node.type === 'question') {
-      return `${columnText(node)}?`;
-    }
-    return typeof node.prediction === 'number'
-      ? formatNumber(node.prediction)
-      : valueText(node.prediction);
-  };
-
   const pathBounds =
     trace &&
     getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
@@ -278,7 +270,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               </g>
             </svg>
             {layout.nodes.map(placed => {
-              const text = nodeText(placed.node);
+              const text = displayNodeLabel(placed.node, datasetId);
               const label = placed.branch && branchLabel(placed.branch);
               const branch = label?.sign
                 ? `${label.sign} ${label.text}`
@@ -326,7 +318,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   onFocus={() => setFocusedId(placed.id)}
                   onKeyDown={event => moveFocus(event, placed)}
                   className={styles.nodeSlot}
-                  style={{left: placed.x, top: placed.y}}
+                  style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
                   {label?.text && (
                     <div
@@ -353,7 +345,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         style={leafColorStyle(placed.answerIndex)}
                       />
                     )}
-                    <span id={textId(placed.id)} className={styles.nodeText}>
+                    <Typography
+                      id={textId(placed.id)}
+                      variant="body3"
+                      component="span"
+                      className={styles.nodeText}
+                    >
                       {placed.node.type === 'question' ? (
                         <>
                           <span id={columnId(placed.id)}>
@@ -364,7 +361,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                       ) : (
                         text
                       )}
-                    </span>
+                    </Typography>
                   </div>
                 </div>
               );

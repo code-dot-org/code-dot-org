@@ -21,6 +21,7 @@ describe('TreeMiniMap', () => {
     render(
       createElement(TreeMiniMap, {
         tree: question(question(answer(1), answer(2)), answer(3)),
+        nodeWidth: () => 100,
         onReplay: () => {},
       }),
     );
