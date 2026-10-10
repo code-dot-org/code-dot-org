@@ -48,6 +48,14 @@ describe('playPlacement', () => {
     expect(box(p)).toEqual({left: 238, right: 762, top: 12, bottom: 536});
   });
 
+  it('keeps room to the left of the box, centering box plus room', () => {
+    // 80px kept left in a 1000x600 overlay: the box centers in the 920
+    // to its right, so it sits 40px right of where it would otherwise.
+    const p = playPlacement({w: 1000, h: 600}, null, 0, 80);
+    expect(box(p)).toEqual({left: 252, right: 828, top: 12, bottom: 588});
+    expect(p.x - 80).toBeGreaterThanOrEqual(0);
+  });
+
   it('keeps the reserved room clear of the guide too', () => {
     const b = box(playPlacement({w: 750, h: 1000}, GUIDE, 52));
     const guideTop = 1000 - GUIDE.height - 20;

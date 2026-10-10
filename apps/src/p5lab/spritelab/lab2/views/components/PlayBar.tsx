@@ -145,36 +145,71 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
 
 interface PlayBarProps {
   playing: boolean;
+  /** The stage is in its edit mode (the World editor). */
+  editing?: boolean;
   arrows: ArrowSet;
   onPlay: (event: React.MouseEvent<HTMLElement>) => void;
   /** Absent when there is no editing view to return to. */
   onStop?: (event: React.MouseEvent<HTMLElement>) => void;
+  /** Opens the World editor; absent where the scene has no world. */
+  onEditWorld?: (event: React.MouseEvent<HTMLElement>) => void;
+  /** Leaves the World editor for the code; absent on a level without code. */
+  onDone?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 /**
- * The bar under the playspace: Play, or while playing, Stop and the arrow
- * buttons. The Play button follows the legacy lab's Run button, so it
+ * The bar under the playspace: World and Play beside the preview, Done
+ * and Play while editing the world, Stop and the arrow buttons while
+ * playing. The Play button follows the legacy lab's Run button, so it
  * takes the when-run block's color under an accessibility theme.
  */
 const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   playing,
+  editing = false,
   arrows,
   onPlay,
   onStop,
+  onEditWorld,
+  onDone,
 }) => {
   const setupBlockColor = useSetupBlockColor();
   if (!playing) {
     return (
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="small"
-        sx={getRunButtonSx(setupBlockColor)}
-        startIcon={<FontAwesomeV6Icon iconName="play" />}
-        onClick={onPlay}
-      >
-        Play
-      </MuiButton>
+      <>
+        {editing
+          ? onDone && (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="check" />}
+                onClick={onDone}
+              >
+                Done
+              </MuiButton>
+            )
+          : onEditWorld && (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="table-cells" />}
+                onClick={onEditWorld}
+              >
+                World
+              </MuiButton>
+            )}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          sx={getRunButtonSx(setupBlockColor)}
+          startIcon={<FontAwesomeV6Icon iconName="play" />}
+          onClick={onPlay}
+        >
+          Play
+        </MuiButton>
+      </>
     );
   }
   return (

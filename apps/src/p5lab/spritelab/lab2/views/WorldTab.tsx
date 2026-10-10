@@ -277,6 +277,9 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
+  /** The grid fills its area's shorter side exactly, with no padding: the
+      editor sits where the stage is, at the stage's size. */
+  fill?: boolean;
 }
 
 /**
@@ -302,6 +305,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onMoveCell,
   selected,
   onSelect,
+  fill = false,
 }) => {
   const placeOne = !!onMoveCell;
   const animationList = useAppSelector(state => state.animationList);
@@ -691,16 +695,18 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     }
     const observer = new ResizeObserver(() => {
       setGridPixels(
-        Math.max(
-          MIN_GRID_PIXELS,
-          Math.min(GRID_PIXELS, area.clientHeight, area.clientWidth)
-        )
+        fill
+          ? Math.min(area.clientHeight, area.clientWidth)
+          : Math.max(
+              MIN_GRID_PIXELS,
+              Math.min(GRID_PIXELS, area.clientHeight, area.clientWidth)
+            )
       );
       setAreaHeight(area.clientHeight);
     });
     observer.observe(area);
     return () => observer.disconnect();
-  }, []);
+  }, [fill]);
 
   const cellPixels = gridPixels / sceneSize;
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
@@ -851,8 +857,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   };
   return (
     <div
-      className={moduleStyles.worldTab}
-      style={{paddingRight: PREVIEW_CLEARANCE}}
+      className={classNames(
+        moduleStyles.worldTab,
+        fill && moduleStyles.worldTabFill
+      )}
+      style={fill ? undefined : {paddingRight: PREVIEW_CLEARANCE}}
     >
       <div
         role="radiogroup"

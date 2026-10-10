@@ -14,6 +14,15 @@
   color: var(--text-neutral-primary);
 }
 
+// In the stage's place: the palette in the room kept to the left, the grid
+// exactly the stage's size.
+.worldTabFill {
+  gap: 16px;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+}
+
 .worldGridColumn {
   display: flex;
   flex: 1 1 auto;

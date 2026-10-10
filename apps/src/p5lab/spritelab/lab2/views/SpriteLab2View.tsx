@@ -1,4 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -120,18 +122,18 @@ import {
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
-import {isPointerClick} from './blurAfterPointerClick';
+import {blurAfterPointerClick, isPointerClick} from './blurAfterPointerClick';
+import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
-import TabShell from './components/TabShell';
 import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
-import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import SceneTabs from './SceneTabs';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneEditing from './useSceneEditing';
@@ -157,6 +159,8 @@ registerReducers({
 });
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
+// The drawer the Pictures button controls.
+const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -286,16 +290,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [levelProperties.levelMode, worldTabParamEnabled]);
   const worldTabEnabled = tabs.includes('World');
-  // Play is entered from the bar under the playspace; the header's Play tab
-  // stays behind a URL parameter in case it comes back.
-  const playTabParamEnabled = useMemo(
-    () => queryParams('play-tab') === 'true',
-    []
-  );
-  const visibleTabs = useMemo(
-    () => (playTabParamEnabled ? tabs : tabs.filter(tab => tab !== 'Play')),
-    [tabs, playTabParamEnabled]
-  );
+  // The project's pictures, in a drawer over the workspace.
+  const picturesOffered = tabs.includes('Images');
+  const [picturesOpen, setPicturesOpen] = useState(false);
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
@@ -322,22 +319,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
-  // ?scenes=gallery: the scene chip opens the gallery directly instead of a
-  // menu that ends in it. Two candidates under trial.
-  const chipOpensGallery = useMemo(
-    () => queryParams('scenes') === 'gallery',
-    []
-  );
-  // The Images tab mounts once (idle pre-mount after seeding, or first
-  // visit) and stays mounted clipped, so no visit pays the mount cost.
+  // The pictures drawer mounts once (idle pre-mount after seeding, or first
+  // opening) and stays mounted, so no opening pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
   useEffect(() => {
-    if (activeTab === 'Images') {
+    if (picturesOpen) {
       setImagesMounted(true);
     }
-  }, [activeTab]);
-  // Same for the World tab: inserting its grid costs far more than rendering
-  // it, because the consent script's autoblocker walks every added node.
+  }, [picturesOpen]);
+  // Same for the World editor: inserting its grid costs far more than
+  // rendering it, because the consent script's autoblocker walks every
+  // added node.
   const [worldMounted, setWorldMounted] = useState(false);
   useEffect(() => {
     if (activeTab === 'World') {
@@ -1241,26 +1233,37 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     musicProjects
   );
 
-  // Hidden tabs stay mounted behind a clip-path, which hides them visually
-  // but leaves their contents (workspace, palette, grid) in the tab order
-  // and the accessibility tree. Inert while hidden.
-  // Set via refs: React 18's JSX has no inert attribute. The mount flags
-  // are deps because a wrapper can first render while its tab is hidden
-  // (the Images idle pre-mount), after the last activeTab change.
+  // The hidden workspace stays mounted behind a clip-path, and the closed
+  // drawer slid out of view, which hides them visually but leaves their
+  // contents in the tab order and the accessibility tree. Inert while
+  // hidden. Set via refs: React 18's JSX has no inert attribute. The mount
+  // flag is a dep because the drawer can first render closed (the idle
+  // pre-mount), after the last change.
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const imagesWrapperRef = useRef<HTMLDivElement>(null);
-  const worldWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (codeWrapperRef.current) {
       codeWrapperRef.current.inert = activeTab !== 'Code';
     }
     if (imagesWrapperRef.current) {
-      imagesWrapperRef.current.inert = activeTab !== 'Images';
+      imagesWrapperRef.current.inert = !picturesOpen;
     }
-    if (worldWrapperRef.current) {
-      worldWrapperRef.current.inert = activeTab !== 'World';
+  }, [activeTab, picturesOpen, imagesMounted]);
+  // Escape inside the drawer closes it. The image dialogs render in a
+  // portal, so their own Escape never reaches here.
+  useEffect(() => {
+    const drawer = imagesWrapperRef.current;
+    if (!drawer || !picturesOpen) {
+      return;
     }
-  }, [activeTab, imagesMounted, worldMounted]);
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setPicturesOpen(false);
+      }
+    };
+    drawer.addEventListener('keydown', onKeyDown);
+    return () => drawer.removeEventListener('keydown', onKeyDown);
+  }, [picturesOpen, imagesMounted]);
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -1635,21 +1638,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
   });
 
-  // Entering Play by keyboard leaves focus on the tab button, where
+  // Entering Play by keyboard leaves focus on the button, where
   // swallowOnControls eats every game key and the game can't be played.
   const focusPlayspaceRef = useRef(false);
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
-  const handleTabChange = useCallback(
-    (tab: Tab, event: React.MouseEvent<HTMLElement>) => {
-      // Entering Play from the tab button starts from the beginning.
-      if (tab === 'Play') {
-        setPlayStartSceneId(null);
-        focusPlayspaceRef.current = !isPointerClick(event);
-        // Inside the gesture, where browsers let an audio context start.
-        unlockGameAudioRef.current();
+  // The stage's edit mode (the World editor) and the way back to the code.
+  const handleEditWorld = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (isPointerClick(event)) {
+        event.currentTarget.blur();
       }
-      dispatch(setActiveTab(tab));
+      dispatch(setActiveTab('World'));
+    },
+    [dispatch]
+  );
+  const handleDoneEditing = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (isPointerClick(event)) {
+        event.currentTarget.blur();
+      }
+      dispatch(setActiveTab('Code'));
     },
     [dispatch]
   );
@@ -1760,15 +1769,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch, stopTab]
   );
 
-  // World and Code are the scene-editing tabs: they share the corner
-  // preview and the scene selector.
-  const onSceneTab = activeTab === 'Code' || activeTab === 'World';
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no
   // mode is unconstrained.
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
+  // The stage: the corner preview beside the code, centered to play, and
+  // centered as the World editor.
   const playspaceMode: PlayspaceMode =
-    activeTab === 'Play' ? 'play' : onSceneTab ? 'preview' : 'hidden';
+    activeTab === 'Play'
+      ? 'play'
+      : activeTab === 'World'
+      ? 'edit'
+      : activeTab === 'Code'
+      ? 'preview'
+      : 'hidden';
 
   // Freeze the game while nobody can see it: the playspace hidden behind
   // another tab, or the whole document hidden. (A hidden document stops
@@ -1784,9 +1798,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, []);
   useEffect(() => {
     engineRef.current?.setDrawPaused(
-      playspaceMode === 'hidden' || documentHidden
+      playspaceMode === 'hidden' || playspaceMode === 'edit' || documentHidden
     );
-    // engineReady: a level that STARTS on a hidden tab (an images-only
+    // engineReady: a level that STARTS with the stage hidden (an images-only
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, documentHidden, engineReady]);
 
@@ -1903,36 +1917,53 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           )}
         </div>
       ) : (
-        <TabShell
-          activeTab={activeTab}
-          onTabChange={handleTabChange}
-          enabledTabs={enabledTabs}
-          visibleTabs={visibleTabs}
+        <LabShell
           onClickStartOver={
             isEditable ? () => setShowStartOver(true) : undefined
           }
-          startOverExtra={
-            activeTab === 'Play' && nowPlaying ? (
-              <SceneMusicBar
-                title={nowPlaying.title}
-                loading={nowPlaying.loading}
-              />
-            ) : undefined
+          rightExtra={
+            <>
+              {activeTab === 'Play' && nowPlaying && (
+                <SceneMusicBar
+                  title={nowPlaying.title}
+                  loading={nowPlaying.loading}
+                />
+              )}
+              {picturesOffered && (
+                <MuiButton
+                  variant={picturesOpen ? 'contained' : 'outlined'}
+                  color="secondary"
+                  size="extraSmall"
+                  type="button"
+                  aria-expanded={picturesOpen}
+                  aria-controls={PICTURES_DRAWER_ID}
+                  startIcon={
+                    <FontAwesomeV6Icon iconStyle="solid" iconName="images" />
+                  }
+                  onClick={event => {
+                    blurAfterPointerClick(event);
+                    setPicturesOpen(open => !open);
+                  }}
+                >
+                  Pictures
+                </MuiButton>
+              )}
+            </>
           }
-          sceneTabsExtra={
-            // A toolbox has no scenes; "New scene…" here would put the student
+          sceneTabs={
+            // A toolbox has no scenes; "New scene" here would put the student
             // default onto the canvas and into the saved toolbox. A pinned
-            // level has nothing to switch, so it shows no scene control.
+            // level has nothing to switch, so it shows no scene tabs.
             animationsSeeded && !isToolboxMode && !pinnedSceneId ? (
-              <SceneSelector
+              <SceneTabs
                 scenes={sceneMetadata}
                 activeSceneId={activeSceneId}
-                disabled={!onSceneTab && activeTab !== 'Scenes'}
+                galleryOpen={activeTab === 'Scenes'}
+                disabled={activeTab === 'Play'}
                 allowCreate={scenesEditable}
                 onSelectScene={sceneEditing.selectScene}
                 onCreateScene={sceneEditing.createScene}
                 onManageScenes={sceneEditing.openGallery}
-                chipOpensGallery={chipOpensGallery}
               />
             ) : undefined
           }
@@ -1953,18 +1984,32 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             )}
           </div>
 
-          {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
-          the guide's transition frames, and remounting loses gallery state. */}
+          {/* Kept mounted like the workspace: opening mid-transition eats
+          the guide's frames, and remounting loses gallery state. */}
           {imagesMounted && (
             <div
               ref={imagesWrapperRef}
-              className={classNames(moduleStyles.codeTabWrapper)}
-              style={{
-                clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
-                pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
-              }}
+              id={PICTURES_DRAWER_ID}
+              role="region"
+              aria-label="Pictures"
+              className={classNames(
+                moduleStyles.picturesDrawer,
+                !picturesOpen && moduleStyles.picturesDrawerClosed
+              )}
             >
-              <div className={moduleStyles.imagesTab}>
+              <div className={moduleStyles.picturesDrawerHeader}>
+                <span>Pictures</span>
+                <MuiIconButton
+                  variant="text"
+                  color="secondary"
+                  size="small"
+                  aria-label="Close pictures"
+                  onClick={() => setPicturesOpen(false)}
+                >
+                  <FontAwesomeV6Icon iconName="xmark" />
+                </MuiIconButton>
+              </div>
+              <div className={moduleStyles.picturesDrawerBody}>
                 <GenerateImagePane {...imagePaneProps} />
               </div>
             </div>
@@ -1987,38 +2032,32 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             </div>
           )}
 
-          {worldTabEnabled && worldMounted && (
-            <div
-              ref={worldWrapperRef}
-              className={moduleStyles.codeTabWrapper}
-              style={{
-                clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
-                pointerEvents: activeTab === 'World' ? 'auto' : 'none',
-              }}
-            >
-              <WorldTab
-                world={activeWorld}
-                sceneSize={activeSceneSize}
-                onPaintCell={handlePaintWorldCell}
-                emptyMessage={
-                  visibleTabs.includes('Images')
-                    ? 'Create some images on the Images tab first.'
-                    : 'Go back and make your image first.'
-                }
-                only={paletteOnlyImage}
-                onMoveCell={placeOne ? handleMoveWorldCell : undefined}
-                selected={worldPaletteSelection}
-                onSelect={choosePaletteSelection}
-              />
-            </div>
-          )}
-
-          {/* Always mounted so the engine keeps running; animates between the
-          Code tab's corner preview and the Play tab's centered view. */}
+          {/* Always mounted so the engine keeps running; animates between
+          the corner preview beside the code and the centered play and edit
+          views. */}
           <Playspace
             boxRef={playspaceRef}
             platformScene={playingPlatformer}
             mode={playspaceMode}
+            editor={
+              worldTabEnabled && worldMounted ? (
+                <WorldTab
+                  fill
+                  world={activeWorld}
+                  sceneSize={activeSceneSize}
+                  onPaintCell={handlePaintWorldCell}
+                  emptyMessage={
+                    picturesOffered
+                      ? 'Make some pictures first.'
+                      : 'Go back and make your image first.'
+                  }
+                  only={paletteOnlyImage}
+                  onMoveCell={placeOne ? handleMoveWorldCell : undefined}
+                  selected={worldPaletteSelection}
+                  onSelect={choosePaletteSelection}
+                />
+              ) : undefined
+            }
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no
@@ -2036,9 +2075,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             playBar={
               <PlayBar
                 playing={activeTab === 'Play'}
+                editing={activeTab === 'World'}
                 arrows={arrowSet}
                 onPlay={handlePlayClick}
                 onStop={stopTab ? handleStopClick : undefined}
+                onEditWorld={
+                  activeTab === 'Code' && enabledTabs.includes('World')
+                    ? handleEditWorld
+                    : undefined
+                }
+                onDone={tabs.includes('Code') ? handleDoneEditing : undefined}
               />
             }
             guideSize={levelProperties.levelMode ? guideSize : null}
@@ -2063,7 +2109,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               levelProperties={levelProperties}
             />
           )}
-        </TabShell>
+        </LabShell>
       )}
     </div>
   );

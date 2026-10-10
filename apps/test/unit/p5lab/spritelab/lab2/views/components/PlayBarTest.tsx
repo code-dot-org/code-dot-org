@@ -18,6 +18,48 @@ describe('PlayBar', () => {
     expect(names()).toEqual(['Play']);
   });
 
+  it('offers World beside Play where the scene has a world', () => {
+    const onEditWorld = jest.fn();
+    render(
+      <PlayBar
+        playing={false}
+        arrows="jump"
+        onPlay={jest.fn()}
+        onEditWorld={onEditWorld}
+      />
+    );
+    expect(names()).toEqual(['World', 'Play']);
+    screen.getByRole('button', {name: 'World'}).click();
+    expect(onEditWorld).toHaveBeenCalled();
+  });
+
+  it('offers Done and Play while editing the world, Play alone without code', () => {
+    const onDone = jest.fn();
+    const {rerender} = render(
+      <PlayBar
+        playing={false}
+        editing
+        arrows="jump"
+        onPlay={jest.fn()}
+        onEditWorld={jest.fn()}
+        onDone={onDone}
+      />
+    );
+    expect(names()).toEqual(['Done', 'Play']);
+    screen.getByRole('button', {name: 'Done'}).click();
+    expect(onDone).toHaveBeenCalled();
+    rerender(
+      <PlayBar
+        playing={false}
+        editing
+        arrows="jump"
+        onPlay={jest.fn()}
+        onEditWorld={jest.fn()}
+      />
+    );
+    expect(names()).toEqual(['Play']);
+  });
+
   it('shows Stop with the arrow set the scene wants', () => {
     const {rerender} = render(
       <PlayBar playing arrows="jump" onPlay={jest.fn()} onStop={jest.fn()} />

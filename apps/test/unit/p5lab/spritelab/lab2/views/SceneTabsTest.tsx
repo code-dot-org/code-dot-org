@@ -1,0 +1,65 @@
+import {fireEvent, render, screen} from '@testing-library/react';
+import React from 'react';
+
+import SceneTabs from '@cdo/apps/p5lab/spritelab/lab2/views/SceneTabs';
+
+const SCENES = [
+  {id: 'a', name: 'Forest'},
+  {id: 'b', name: 'Cave', thumbnail: 'data:image/png;base64,'},
+];
+
+function renderTabs(props = {}) {
+  const onSelectScene = jest.fn();
+  const onManageScenes = jest.fn();
+  render(
+    <SceneTabs
+      scenes={SCENES}
+      activeSceneId="b"
+      galleryOpen={false}
+      onSelectScene={onSelectScene}
+      onCreateScene={jest.fn()}
+      onManageScenes={onManageScenes}
+      {...props}
+    />
+  );
+  return {onSelectScene, onManageScenes};
+}
+
+const tabNames = () =>
+  screen.getAllByRole('tab').map(tab => tab.textContent?.trim());
+const selectedNames = () =>
+  screen
+    .getAllByRole('tab', {selected: true})
+    .map(tab => tab.textContent?.trim());
+
+describe('SceneTabs', () => {
+  it('shows every scene as a tab, the current one selected, then All scenes', () => {
+    renderTabs();
+    expect(tabNames()).toEqual(['Forest', 'Cave', 'All scenes']);
+    expect(selectedNames()).toEqual(['Cave']);
+    expect(screen.getByRole('button', {name: 'New scene'})).toBeTruthy();
+  });
+
+  it('selects a scene and opens the gallery', () => {
+    const {onSelectScene, onManageScenes} = renderTabs();
+    fireEvent.click(screen.getByRole('tab', {name: 'Forest'}));
+    expect(onSelectScene).toHaveBeenCalledWith('a');
+    fireEvent.click(screen.getByRole('tab', {name: 'All scenes'}));
+    expect(onManageScenes).toHaveBeenCalled();
+  });
+
+  it('marks the gallery selected while it is open, and no scene', () => {
+    renderTabs({galleryOpen: true});
+    expect(selectedNames()).toEqual(['All scenes']);
+  });
+
+  it('withholds New scene when scenes cannot be made, and disables all while playing', () => {
+    renderTabs({allowCreate: false, disabled: true});
+    expect(screen.queryByRole('button', {name: 'New scene'})).toBeNull();
+    expect(
+      screen
+        .getAllByRole('tab')
+        .every(tab => (tab as HTMLButtonElement).disabled)
+    ).toBe(true);
+  });
+});

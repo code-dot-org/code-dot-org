@@ -65,33 +65,45 @@ $tab-item-height: 34px;
   }
 }
 
-.tab {
+// --- Scene tabs ---
+
+// A row of the project's scenes; the selected one carries the underline a
+// tab does. Overflow hides under the row's end (the selected tab scrolls
+// into view) and "All scenes" opens the gallery.
+.sceneTabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
   height: $tab-item-height;
-  padding: 0 16px;
-  // Cancel the legacy global button margin so hover fills the group.
+}
+
+.sceneTabsRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sceneTab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  min-width: 64px;
+  max-width: 180px;
+  padding: 0 10px;
   margin: 0;
-  // Every tab item carries the same "button" structure, so the scene group
-  // reads coherently next to plain tabs. The outer edges are the stronger
-  // border; dividers inside a group stay subtle (see .tabGroup).
   border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
-
-  // Selecting a tab bolds it, and bold text is a couple of px wider — enough
-  // to nudge every tab after it along. Hold the bold width at all times: this
-  // copy of the label is never painted and adds no height, it only sets how
-  // wide the button wants to be.
-  &::after {
-    content: attr(data-label);
-    display: block;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    font-weight: 600;
-  }
 
   &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
@@ -103,12 +115,9 @@ $tab-item-height: 34px;
   }
 }
 
-.tabActive {
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
+.sceneTabActive {
   font-weight: 600;
   box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
-  // Already here: clicking does nothing, so don't promise otherwise.
   cursor: default;
 
   &:hover:not(:disabled) {
@@ -116,63 +125,43 @@ $tab-item-height: 34px;
   }
 }
 
-// The scene selector plus the tabs that edit that scene, as one segmented
-// control: the selector leads, the tabs follow. Segments share this explicit
-// height so their text sits on one centerline inside the group's outline.
-$tab-segment-height: $tab-item-height - 2px;
+.sceneTabName {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-.tabGroup {
+// "All scenes" never shrinks under the row's overflow.
+.sceneTabAll {
+  flex: none;
+}
+
+// New scene: a square beside the tabs.
+.sceneTabButton {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: none;
   box-sizing: border-box;
+  width: $tab-item-height;
   height: $tab-item-height;
-  // The arrow, not the I-beam `auto` gives over the scene name's text.
-  cursor: default;
+  margin: 0;
+  padding: 0;
   border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
   background: var(--background-neutral-primary);
-
-  .tab {
-    height: $tab-segment-height;
-    border: none;
-    border-radius: 0;
-    // Dividers between segments; the group draws the outer edge.
-    border-left: 1px solid var(--borders-neutral-primary);
-
-    &:first-child {
-      border-left: none;
-    }
-
-    // The group can't clip (its dropdown menu hangs below it), so the last
-    // segment rounds its own corner to match the group's.
-    &:last-child {
-      border-radius: 0 3px 0 0;
-    }
-  }
-
-  .tabActive {
-    background: transparent;
-
-    &:hover:not(:disabled) {
-      background: transparent;
-    }
-  }
-
-  // The trigger is the group's first segment; the group's own radius shows
-  // through where the segment is transparent, so the segment has none.
-  .sceneDropdown {
-    height: $tab-segment-height;
-  }
-}
-
-// Set while a click on the group's non-tab area would open one of its tabs.
-.tabGroupOpensTab {
+  color: var(--text-neutral-primary);
   cursor: pointer;
-}
 
-// The Scenes gallery is open: the picker takes the selected tab's underline.
-.tabGroupActive .sceneDropdown {
-  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
 }
 
 // The song a playing game is using, sized to sit among the tab controls.
@@ -316,47 +305,6 @@ $tab-segment-height: $tab-item-height - 2px;
 // The scene dropdown, styled as the first segment of the tab group: no box
 // of its own, one divider on its right. The design-system trigger is an
 // MUI text button; its own hover/focus styling stays.
-.sceneDropdown {
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
-
-  // Higher specificity than the dropdown's own black/gray container rules.
-  .tabGroup & > button.sceneTrigger,
-  > button.sceneTrigger {
-    height: 100%;
-    min-width: 0;
-    max-width: 200px;
-    margin: 0;
-    padding: 0 10px;
-    gap: 8px;
-    border: none;
-    border-right: 1px solid var(--borders-neutral-primary);
-    border-radius: 3px 0 0 0;
-    color: var(--text-neutral-primary);
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: none;
-
-    // Unusable off the scene tabs, but not dimmed: it reads as one of the
-    // group's labels, and those stay bright when their tab isn't the active
-    // one. MUI already drops pointer-events, so the click reaches the group
-    // and opens the Code tab.
-    &:disabled {
-      color: var(--text-neutral-primary);
-    }
-  }
-}
-
-.sceneTriggerName {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 // Square, like the stage. Sized for the menu; `small` fits the tab bar.
 .sceneThumb {
   display: inline-flex;
@@ -382,81 +330,6 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 22px;
   border-radius: 2px;
   font-size: 11px;
-}
-
-.sceneMenu {
-  margin: 0;
-  padding: 4px 0;
-  user-select: none;
-  min-width: 200px;
-  max-height: 60vh;
-  overflow-y: auto;
-
-  li {
-    list-style: none;
-    margin: 0;
-  }
-}
-
-.sceneMenuItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin: 0;
-  padding: 4px 12px;
-  border: none;
-  border-radius: 0;
-  background: none;
-  color: var(--text-neutral-primary);
-  font-size: 14px;
-  text-align: left;
-  cursor: pointer;
-
-  &:hover {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: -2px;
-  }
-}
-
-.sceneMenuItemActive {
-  background: var(--background-brand-teal-primary);
-  color: var(--text-neutral-white-fixed);
-
-  &:hover {
-    background: var(--background-brand-teal-primary);
-  }
-
-  .sceneThumb {
-    color: var(--text-neutral-white-fixed);
-    background: rgb(255 255 255 / 25%);
-  }
-}
-
-.sceneMenuName {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-// Stands where a thumbnail would, so the labels line up.
-.sceneMenuIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-}
-
-.sceneMenuDivider {
-  height: 1px;
-  margin: 4px 0;
-  background: var(--borders-neutral-primary);
 }
 
 // --- Scenes gallery (the Images tab's card idiom) ---
@@ -807,6 +680,56 @@ $tab-segment-height: $tab-item-height - 2px;
   &:hover {
     opacity: 1;
   }
+}
+
+// The World editor in the box's place: the grid at the box's size, the
+// palette in the room kept to its left. Placed like the box, unscaled.
+.editorArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+}
+
+// The project's pictures, over the workspace's right side. Kept mounted and
+// slid out of view when closed.
+.picturesDrawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  max-width: 100%;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  box-shadow: -8px 0 24px rgb(0 0 0 / 30%);
+  transition: transform 0.25s ease;
+}
+
+.picturesDrawerClosed {
+  transform: translateX(calc(100% + 24px));
+  box-shadow: none;
+}
+
+.picturesDrawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: none;
+  padding: 8px 8px 8px 16px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.picturesDrawerBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
 }
 
 .playspaceCanvas {
