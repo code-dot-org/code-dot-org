@@ -13,7 +13,11 @@ import {
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
+import {
+  IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
+  sanitizeImageName,
+} from '../imageReferences';
 
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
@@ -21,6 +25,7 @@ import GenerateImageView, {
   ImageFormOptions,
   NewImageDraft,
 } from './GenerateImageView';
+import ImageExploreDialogBody from './ImageExploreDialogBody';
 import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -290,7 +295,39 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           )}
         </div>
       )}
-      {view === 'generate' ? (
+      {view === 'generate' && !advanced ? (
+        // The student form: the explore scene's sentence and picture. A
+        // new image's name is the next free one for its type.
+        <ImageExploreDialogBody
+          imageType={
+            isNew ? lockedImageType ?? 'sprite' : imageType || 'sprite'
+          }
+          imageSubject={isNew ? lockedImageSubject : generation?.subject}
+          typeChoice={isNew && !lockedImageType}
+          defaultStyle={defaultStyle ?? 'smooth'}
+          onKeep={async result => {
+            await onAcceptGenerated(
+              result,
+              isNew
+                ? nextImageName(result.generation.imageType, isNameTaken)
+                : undefined
+            );
+            setView('details');
+          }}
+          onCancel={isNew ? onClose : () => setView('details')}
+          onPaintManually={
+            isNew && !paintDisabled && onPaintNew
+              ? draft =>
+                  onPaintNew({
+                    ...draft,
+                    name: nextImageName(draft.imageType, isNameTaken),
+                  })
+              : undefined
+          }
+          onGenerateStart={onGenerateStart}
+          hideCancel={imageLevel && isNew}
+        />
+      ) : view === 'generate' ? (
         <GenerateImageView
           existing={
             isNew
@@ -311,7 +348,15 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           adlibSet={adlibSet}
           adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
-          onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
+          onPaintManually={
+            isNew && !paintDisabled && onPaintNew
+              ? draft =>
+                  onPaintNew({
+                    ...draft,
+                    name: nextImageName(draft.imageType, isNameTaken),
+                  })
+              : undefined
+          }
           onGenerateStart={onGenerateStart}
           onAccept={async (result, newName) => {
             await onAcceptGenerated(result, newName);

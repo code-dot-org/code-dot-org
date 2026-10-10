@@ -576,3 +576,38 @@
   font-size: 13px;
   opacity: 0.8;
 }
+
+// --- Explore view (the student form) ---
+
+// The picture's column: the pane, and Behind the scenes under it.
+.exploreColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 380px;
+}
+
+.explorePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+
+  // Focus lands here on a mode change; the panel's edge is not the cue.
+  &:focus {
+    outline: none;
+  }
+}
+
+// The style dropdown at the left, the animation checkbox at the right.
+.exploreRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  > :last-child:not(:first-child) {
+    margin-left: auto;
+  }
+}

@@ -1,6 +1,9 @@
 // An image level laid out as two halves: the picture on the left, the
 // controls on the right. Reached by level_mode.imageUi or ?image-ui=explore.
+// A host with its own chrome (the image dialog) passes a layout that places
+// the same parts itself.
 
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -20,10 +23,15 @@ import {
   GenerateImageOptions,
   UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {
+  IMAGE_KINDS,
+  imageKindFor,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageKinds';
 import {ImageSafetyError} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
 import {defaultPixelGrid} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
+  imageKindLabel,
   ImageStyle,
   ImageSubject,
   ImageType,
@@ -50,7 +58,7 @@ import {
 } from './exploreSentences';
 import {playSound} from './exploreSounds';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
-import ResultActions, {Verdict} from './ResultActions';
+import ResultActions, {Verdict, VerdictRow} from './ResultActions';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import SentenceReadOnly from './SentenceReadOnly';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
@@ -62,7 +70,7 @@ const STYLES = Object.keys(IMAGE_STYLE_LABELS) as ImageStyle[];
 // The service's middle temperature.
 const TEMPERATURE = 1;
 
-type Mode = 'edit' | 'generating' | 'result' | 'paint';
+export type Mode = 'edit' | 'generating' | 'result' | 'paint';
 
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
 const PAINT_COLORS: readonly PaletteColor[] = [
@@ -89,6 +97,40 @@ interface Made {
   sent: SentPrompts;
 }
 
+/** What a host lays out. The nodes are ready to place; the callbacks and
+    flags let a host draw its own buttons. */
+export interface ExploreParts {
+  mode: Mode;
+  busy: boolean;
+  /** Every word the sentence needs is chosen. */
+  complete: boolean;
+  panelRef: React.RefObject<HTMLElement>;
+  /** The picture, the spinner, or nothing. */
+  frame: React.ReactNode;
+  /** A made picture is showing in the frame. */
+  frameFilled: boolean;
+  /** Behind the scenes, once there is a picture. */
+  underFrame: React.ReactNode;
+  /** The screen reader's status line. */
+  status: React.ReactNode;
+  /** The Type dropdown, when the host offers the choice. */
+  typeChoice: React.ReactNode;
+  /** The word menus, or the sentence read back while busy. */
+  sentence: React.ReactNode;
+  styleChoice: React.ReactNode;
+  /** The Generate animation checkbox, for a character when offered. */
+  animateChoice: React.ReactNode;
+  error: React.ReactNode;
+  fact: React.ReactNode;
+  /** The question and the thumbs, once there is a picture. */
+  verdict: React.ReactNode;
+  generate: () => void;
+  changeWords: () => void;
+  keep: () => void;
+  /** The style and the kind the host's own paint entry would start from. */
+  draft: {imageType: ImageType; style: ImageStyle};
+}
+
 interface ImageExploreSceneProps {
   imageType: ImageType;
   imageSubject?: ImageSubject;
@@ -103,26 +145,55 @@ interface ImageExploreSceneProps {
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
+  /** Offer the Type dropdown; imageType and imageSubject are then where it
+      starts. */
+  typeChoice?: boolean;
+  /** Offer the Generate animation checkbox for a character; without it
+      every character is animated. */
+  animateChoice?: boolean;
+  /** Keep a made picture; the level's own saving when unset. */
+  onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
+  /** A generation request is leaving. */
+  onGenerateStart?: () => void;
+  /** Analytics: which surface generated. */
+  method?: string;
+  /** Lay the parts out instead of the level's two halves. */
+  layout?: (parts: ExploreParts) => React.ReactNode;
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
-  imageType,
-  imageSubject,
+  imageType: initialImageType,
+  imageSubject: initialImageSubject,
   sentenceId,
   defaultStyle,
   imageRole,
   uploadImage,
   instructions,
   showTts,
+  typeChoice,
+  animateChoice,
+  onKeep,
+  onGenerateStart,
+  method = 'explore',
+  layout,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
+  const [kind, setKind] = useState(
+    () => imageKindFor(initialImageType, initialImageSubject).value
+  );
+  const {imageType, subject: imageSubject} = typeChoice
+    ? IMAGE_KINDS.find(k => k.value === kind) ?? IMAGE_KINDS[0]
+    : {imageType: initialImageType, subject: initialImageSubject};
   const sentence = sentenceFor(imageType, imageSubject, sentenceId);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
-  // Every character is animated; an object or a background is one picture.
-  const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
+  const [animate, setAnimate] = useState(true);
+  // Every character is animated (or every one the student asks for); an
+  // object or a background is one picture.
+  const characterKind = imageType === 'sprite' && imageSubject !== 'object';
+  const canAnimate = characterKind && (!animateChoice || animate);
 
   const [mode, setMode] = useState<Mode>('edit');
   const [made, setMade] = useState<Made | null>(null);
@@ -147,7 +218,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
         promptText: prompt,
-        method: 'explore',
+        method,
         imageType,
         sentenceId: sentence.id,
         choices,
@@ -155,6 +226,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       },
       true
     );
+    onGenerateStart?.();
     setMode('generating');
     setVerdict(null);
     setError(null);
@@ -216,7 +288,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       }
       setMode('edit');
     }
-  }, [sentence, choices, imageType, imageSubject, style, canAnimate]);
+  }, [
+    sentence,
+    choices,
+    imageType,
+    imageSubject,
+    style,
+    canAnimate,
+    method,
+    onGenerateStart,
+  ]);
 
   const keep = useCallback(async () => {
     if (!made) {
@@ -224,12 +305,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     }
     setSaving(true);
     try {
-      await saveGeneratedImage(dispatch, made.result, {
-        uploadImage,
-        imageType,
-        imageRole,
-      });
-      dispatch(continueOrFinishLesson());
+      if (onKeep) {
+        await onKeep(made.result);
+      } else {
+        await saveGeneratedImage(dispatch, made.result, {
+          uploadImage,
+          imageType,
+          imageRole,
+        });
+        dispatch(continueOrFinishLesson());
+      }
     } catch (e) {
       console.error('Saving the image failed:', e);
       setError("Couldn't save the picture. Try again.");
@@ -237,7 +322,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       // On the last level with no finish URL, the lesson does not move on.
       setSaving(false);
     }
-  }, [made, dispatch, uploadImage, imageType, imageRole]);
+  }, [made, onKeep, dispatch, uploadImage, imageType, imageRole]);
 
   const startPaint = useCallback(() => {
     setError(null);
@@ -386,6 +471,80 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     );
   }
 
+  const typeChoiceNode = typeChoice ? (
+    <SimpleDropdown
+      name="explore-type"
+      labelText="Type"
+      isLabelVisible={false}
+      size="s"
+      color={theme === 'Dark' ? 'white' : 'black'}
+      items={IMAGE_KINDS.map(k => ({
+        value: k.value,
+        text: imageKindLabel(k.imageType, k.subject),
+      }))}
+      selectedValue={kind}
+      disabled={busy}
+      onChange={e => {
+        setKind(e.target.value);
+        // A new sentence takes new words.
+        setChoices({});
+      }}
+    />
+  ) : null;
+  const styleChoice = (
+    <SimpleDropdown
+      name="explore-style"
+      labelText="Style"
+      isLabelVisible={false}
+      size="s"
+      color={theme === 'Dark' ? 'white' : 'black'}
+      items={STYLES.map(s => ({value: s, text: IMAGE_STYLE_LABELS[s]}))}
+      selectedValue={style}
+      disabled={busy}
+      onChange={e => setStyle(e.target.value as ImageStyle)}
+    />
+  );
+  const animateChoiceNode =
+    animateChoice && characterKind ? (
+      <Checkbox
+        name="explore-animate"
+        label="Generate animation"
+        size="s"
+        checked={animate}
+        disabled={busy}
+        onChange={e => setAnimate(e.target.checked)}
+      />
+    ) : null;
+  const statusNode = (
+    <div className={styles.srOnly} role="status">
+      {status}
+    </div>
+  );
+  const sentenceNode =
+    showingResult || generating ? (
+      <SentenceReadOnly sentence={sentence} choices={choices} />
+    ) : (
+      <WordMenus
+        sentence={sentence}
+        choices={choices}
+        onChange={setChoices}
+        disabled={busy}
+      />
+    );
+  const factNode = generating && fact && (
+    <aside
+      className={classNames(styles.factBox, styles.bottomRow)}
+      aria-label="Did you know?"
+    >
+      <FontAwesomeV6Icon
+        iconName="lightbulb"
+        className={styles.factIcon}
+        aria-hidden
+      />
+      <MuiTypography variant="body2">{fact}</MuiTypography>
+    </aside>
+  );
+
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
@@ -420,35 +579,56 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     </>
   ) : null;
 
+  const underFrame = showingResult && made && (
+    <BehindTheScenes sent={made.sent} disabled={busy} />
+  );
+  const verdictNode = showingResult && made && (
+    <VerdictRow verdict={verdict} onJudge={judge} disabled={busy} />
+  );
+
+  if (layout) {
+    return (
+      <>
+        {layout({
+          mode,
+          busy,
+          complete,
+          panelRef,
+          frame,
+          frameFilled: !!made && !generating,
+          underFrame,
+          status: statusNode,
+          typeChoice: typeChoiceNode,
+          sentence: sentenceNode,
+          styleChoice,
+          animateChoice: animateChoiceNode,
+          error: errorLine,
+          fact: factNode,
+          verdict: verdictNode,
+          generate,
+          changeWords,
+          keep,
+          draft: {imageType, style},
+        })}
+      </>
+    );
+  }
+
   return (
     <ExploreLayout
       frameClassName={classNames(
         made && !generating && styles.imageFrameFilled
       )}
       frame={frame}
-      underFrame={
-        showingResult &&
-        made && <BehindTheScenes sent={made.sent} disabled={busy} />
-      }
+      underFrame={underFrame}
       frameAriaLabel="Your picture"
       panelAriaLabel="Make your picture"
       panelRef={panelRef}
       fillFrameHeight={!showingResult}
     >
-      <div className={styles.srOnly} role="status">
-        {status}
-      </div>
+      {statusNode}
       {instructionsBlock}
-      {showingResult || generating ? (
-        <SentenceReadOnly sentence={sentence} choices={choices} />
-      ) : (
-        <WordMenus
-          sentence={sentence}
-          choices={choices}
-          onChange={setChoices}
-          disabled={busy}
-        />
-      )}
+      {sentenceNode}
       {showingResult && made ? (
         <ResultActions
           verdict={verdict}
@@ -467,16 +647,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         </div>
       ) : (
         <div className={styles.generateRow}>
-          <SimpleDropdown
-            name="explore-style"
-            labelText="Style"
-            isLabelVisible={false}
-            size="s"
-            color={theme === 'Dark' ? 'white' : 'black'}
-            items={STYLES.map(s => ({value: s, text: IMAGE_STYLE_LABELS[s]}))}
-            selectedValue={style}
-            onChange={e => setStyle(e.target.value as ImageStyle)}
-          />
+          {styleChoice}
           <MuiButton
             className={classNames(
               styles.generateButton,
@@ -493,19 +664,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         </div>
       )}
       {errorLine}
-      {generating && fact && (
-        <aside
-          className={classNames(styles.factBox, styles.bottomRow)}
-          aria-label="Did you know?"
-        >
-          <FontAwesomeV6Icon
-            iconName="lightbulb"
-            className={styles.factIcon}
-            aria-hidden
-          />
-          <MuiTypography variant="body2">{fact}</MuiTypography>
-        </aside>
-      )}
+      {factNode}
       {mode === 'edit' && (
         <div className={styles.bottomRow}>
           <hr className={styles.resultDivider} />

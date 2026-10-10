@@ -10,13 +10,57 @@ import styles from './image-explore.module.scss';
 /** Goes to analytics only. */
 export type Verdict = 'up' | 'down';
 
-interface ResultActionsProps {
+interface VerdictRowProps {
   verdict: Verdict | null;
   onJudge: (verdict: Verdict) => void;
+  disabled?: boolean;
+}
+
+/** The question about the picture and the two thumbs. */
+export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
+  verdict,
+  onJudge,
+  disabled,
+}) => (
+  <div
+    className={styles.resultQuestionRow}
+    role="group"
+    aria-labelledby="explore-result-label"
+  >
+    <span id="explore-result-label" className={styles.resultQuestion}>
+      How did the AI do?
+    </span>
+    <MuiIconButton
+      aria-label="Good"
+      aria-pressed={verdict === 'up'}
+      className={classNames(
+        styles.verdictButton,
+        verdict === 'up' && styles.verdictChosen
+      )}
+      disabled={disabled}
+      onClick={() => onJudge('up')}
+    >
+      <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
+    </MuiIconButton>
+    <MuiIconButton
+      aria-label="Not so good"
+      aria-pressed={verdict === 'down'}
+      className={classNames(
+        styles.verdictButton,
+        verdict === 'down' && styles.verdictChosen
+      )}
+      disabled={disabled}
+      onClick={() => onJudge('down')}
+    >
+      <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
+    </MuiIconButton>
+  </div>
+);
+
+interface ResultActionsProps extends VerdictRowProps {
   onChangeWords: () => void;
   onGenerateAgain: () => void;
   onContinue: () => void;
-  disabled?: boolean;
 }
 
 const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
@@ -30,39 +74,7 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
   <>
     <hr className={styles.resultDivider} />
     <div className={styles.resultActions}>
-      <div
-        className={styles.resultQuestionRow}
-        role="group"
-        aria-labelledby="explore-result-label"
-      >
-        <span id="explore-result-label" className={styles.resultQuestion}>
-          How did the AI do?
-        </span>
-        <MuiIconButton
-          aria-label="Good"
-          aria-pressed={verdict === 'up'}
-          className={classNames(
-            styles.verdictButton,
-            verdict === 'up' && styles.verdictChosen
-          )}
-          disabled={disabled}
-          onClick={() => onJudge('up')}
-        >
-          <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
-        </MuiIconButton>
-        <MuiIconButton
-          aria-label="Not so good"
-          aria-pressed={verdict === 'down'}
-          className={classNames(
-            styles.verdictButton,
-            verdict === 'down' && styles.verdictChosen
-          )}
-          disabled={disabled}
-          onClick={() => onJudge('down')}
-        >
-          <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
-        </MuiIconButton>
-      </div>
+      <VerdictRow verdict={verdict} onJudge={onJudge} disabled={disabled} />
       <div className={styles.resultButtons}>
         <MuiButton
           variant="outlined"

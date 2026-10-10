@@ -36,6 +36,7 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {IMAGE_KINDS} from '../ai/images/imageKinds';
 import {ImageSafetyError} from '../ai/images/imageSafety';
 import {defaultPixelGrid} from '../ai/images/modelHelpers';
 import {
@@ -93,18 +94,6 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
 // The advanced form's pixel Resolution choices, as divisors of the type's
 // default grid (64/32/16 for a sprite, 128/64/32 for a background).
 const PIXEL_SCALES = [1, 2, 4];
-
-// The Type choice: a sprite is offered as a character or an object.
-const IMAGE_KINDS: {
-  value: string;
-  imageType: ImageType;
-  subject?: ImageSubject;
-}[] = [
-  {value: 'background', imageType: 'background'},
-  {value: 'character', imageType: 'sprite', subject: 'character'},
-  {value: 'object', imageType: 'sprite', subject: 'object'},
-  {value: 'block', imageType: 'block'},
-];
 
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
