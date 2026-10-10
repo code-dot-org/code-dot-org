@@ -30,6 +30,9 @@
       "gamelab_addBehaviorSimple": [
         "friend"
       ],
+      "spritelab2_beginsBehavior": [
+        "friend"
+      ],
       "gamelab_checkTouching": [
         "hero",
         "treasure"
@@ -80,18 +83,9 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "block": {
-                    "type": "spritelab2_patrollingOnBlocks"
-                  }
-                }
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "patrollingOnBlocks"
               }
             },
             {
@@ -165,6 +159,13 @@
             {
               "kind": "block",
               "type": "spritelab2_makeSpriteAtPosition"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "movingLeft"
+              }
             },
             {
               "kind": "block",

@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/blockly/utils/toolbox';
 import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
+import {BEGINS_BEHAVIOR_BLOCK_TYPE} from '../blockDefinitions/beginsBehavior';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
@@ -111,9 +112,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_atTime',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
-      'gamelab_addBehaviorSimple',
-      'spritelab2_movingLeft',
-      'spritelab2_patrollingLeftRight',
+      BEGINS_BEHAVIOR_BLOCK_TYPE,
     ],
   },
 ];

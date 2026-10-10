@@ -2,6 +2,7 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import beginsBehavior from './beginsBehavior';
 import burst from './burst';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
@@ -12,7 +13,6 @@ import makeSpriteAtPosition from './makeSpriteAtPosition';
 import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
-import patrollingOnBlocks from './patrollingOnBlocks';
 import placeholder from './placeholder';
 import playMusic from './playMusic';
 import playSound from './playSound';
@@ -22,6 +22,7 @@ import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setWeather from './setWeather';
 import thePlayer from './thePlayer';
+import walkingOnBlocks from './walkingOnBlocks';
 import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -40,7 +41,8 @@ const labBlockDefinitions: {
   movingLeft,
   movingWithArrowKeys,
   patrollingLeftRight,
-  patrollingOnBlocks,
+  walkingOnBlocks,
+  beginsBehavior,
   makePlatformPlayer,
   makeSpriteAtGrid,
   makeSpriteAtPosition,

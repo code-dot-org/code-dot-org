@@ -21,6 +21,7 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     THE_PLAYER_BLOCK_TYPE,
   ],
   Behaviors: [
+    'spritelab2_beginsBehavior',
     'spritelab2_movingLeft',
     'spritelab2_movingWithArrowKeys',
     'spritelab2_patrollingLeftRight',
