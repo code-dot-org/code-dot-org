@@ -491,32 +491,32 @@
   opacity: 0.8;
 }
 
-// --- Explore view ---
+// --- Sentence view ---
 
 // Room for the word menus beside a larger picture; the panel's max-width
 // still shrinks it on narrow browsers.
-$explore-dialog-width: 970px;
-$explore-pane-size: 420px;
+$sentence-dialog-width: 970px;
+$sentence-pane-size: 420px;
 
 .dialogHost .dialogWide {
-  width: $explore-dialog-width;
+  width: $sentence-dialog-width;
 }
 
 // The picture's column: the pane, and Behind the scenes under it.
-.exploreColumn {
+.sentenceColumn {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex-shrink: 0;
-  width: $explore-pane-size;
+  width: $sentence-pane-size;
 
   .imagePane {
-    width: $explore-pane-size;
-    height: $explore-pane-size;
+    width: $sentence-pane-size;
+    height: $sentence-pane-size;
   }
 }
 
-.explorePanel {
+.sentencePanel {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -530,6 +530,6 @@ $explore-pane-size: 420px;
 }
 
 // The Type choice stands a little apart from the sentence it decides.
-.exploreType {
+.sentenceType {
   margin-bottom: 10px;
 }

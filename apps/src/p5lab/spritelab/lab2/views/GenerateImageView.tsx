@@ -48,16 +48,16 @@ import {
 
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
+import ImagePaneButton from './ImagePaneButton';
 import {
   Choices,
   chosenBodyPlan,
   isComplete,
   promptText as sentenceText,
   sentenceFor,
-} from './explore/exploreSentences';
-import WordMenus from './explore/WordMenus';
-import type {NewImageDraft} from './ImageExploreDialogBody';
-import ImagePaneButton from './ImagePaneButton';
+} from './sentence/sentences';
+import WordMenus from './sentence/WordMenus';
+import type {NewImageDraft} from './SentenceDialogBody';
 import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';

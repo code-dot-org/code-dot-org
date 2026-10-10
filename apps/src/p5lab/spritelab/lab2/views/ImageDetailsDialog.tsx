@@ -22,8 +22,8 @@ import {
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView, {ImageFormOptions} from './GenerateImageView';
-import ImageExploreDialogBody, {NewImageDraft} from './ImageExploreDialogBody';
 import ImagePaneButton from './ImagePaneButton';
+import SentenceDialogBody, {NewImageDraft} from './SentenceDialogBody';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -155,9 +155,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
-  // The student's generate view hosts the explore scene; the advanced
+  // The student's generate view hosts the sentence scene; the advanced
   // dialog keeps its full form. Both want room for the word menus.
-  const exploreView = view === 'generate' && !advanced;
+  const sentenceView = view === 'generate' && !advanced;
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState('');
   const [nameError, setNameError] = useState<string | null>(null);
@@ -285,10 +285,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           </>
         )}
       </div>
-      {exploreView ? (
-        // The student form: the explore scene's sentence and picture. A
+      {sentenceView ? (
+        // The student form: the sentence scene's sentence and picture. A
         // new image's name is the next free one for its type.
-        <ImageExploreDialogBody
+        <SentenceDialogBody
           imageType={
             isNew ? lockedImageType ?? 'sprite' : imageType || 'sprite'
           }

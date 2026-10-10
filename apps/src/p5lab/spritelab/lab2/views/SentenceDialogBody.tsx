@@ -1,4 +1,4 @@
-// The image dialog's generate view: the explore scene's parts laid out in
+// The image dialog's generate view: the sentence scene's parts laid out in
 // the dialog's chrome. The picture and Behind the scenes on the left, the
 // Type choice and the sentence on the right; the verdict and the buttons
 // in the footer.
@@ -10,8 +10,8 @@ import React from 'react';
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {ImageStyle, ImageSubject, ImageType} from '../ai/images/types';
 
-import ImageExploreScene, {ExploreParts} from './explore/ImageExploreScene';
 import ImagePaneButton from './ImagePaneButton';
+import SentenceScene, {SentenceSceneParts} from './sentence/SentenceScene';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -22,7 +22,7 @@ export interface NewImageDraft {
   style: ImageStyle;
 }
 
-interface ImageExploreDialogBodyProps {
+interface SentenceDialogBodyProps {
   /** Where the Type choice starts, or the type the image is locked to. */
   imageType: ImageType;
   imageSubject?: ImageSubject;
@@ -37,9 +37,7 @@ interface ImageExploreDialogBodyProps {
   onGenerateStart?: () => void;
 }
 
-const ImageExploreDialogBody: React.FunctionComponent<
-  ImageExploreDialogBodyProps
-> = ({
+const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
   imageType,
   imageSubject,
   typeChoice,
@@ -49,13 +47,13 @@ const ImageExploreDialogBody: React.FunctionComponent<
   onPaintManually,
   onGenerateStart,
 }) => {
-  const layout = (parts: ExploreParts) => {
+  const layout = (parts: SentenceSceneParts) => {
     const result = parts.mode === 'result';
     const generating = parts.mode === 'generating';
     return (
       <>
         <div className={moduleStyles.body}>
-          <div className={moduleStyles.exploreColumn}>
+          <div className={moduleStyles.sentenceColumn}>
             {!parts.frame && onPaintManually ? (
               // The blank pane is itself the way into the paint editor.
               <ImagePaneButton
@@ -79,12 +77,14 @@ const ImageExploreDialogBody: React.FunctionComponent<
           <section
             ref={parts.panelRef}
             tabIndex={-1}
-            className={moduleStyles.explorePanel}
+            className={moduleStyles.sentencePanel}
             aria-label="Make your picture"
           >
             {parts.status}
             {parts.typeChoice && (
-              <div className={moduleStyles.exploreType}>{parts.typeChoice}</div>
+              <div className={moduleStyles.sentenceType}>
+                {parts.typeChoice}
+              </div>
             )}
             {parts.sentence}
             {!result && !generating && parts.styleChoice}
@@ -150,17 +150,17 @@ const ImageExploreDialogBody: React.FunctionComponent<
   };
 
   return (
-    <ImageExploreScene
+    <SentenceScene
       imageType={imageType}
       imageSubject={imageSubject}
       defaultStyle={defaultStyle}
       typeChoice={typeChoice}
       onKeep={onKeep}
       onGenerateStart={onGenerateStart}
-      method="explore-dialog"
+      method="dialog"
       layout={layout}
     />
   );
 };
 
-export default ImageExploreDialogBody;
+export default SentenceDialogBody;

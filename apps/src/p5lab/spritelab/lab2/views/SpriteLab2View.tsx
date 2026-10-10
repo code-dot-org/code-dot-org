@@ -122,13 +122,13 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
-import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import SentenceScene from './sentence/SentenceScene';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneEditing from './useSceneEditing';
@@ -1846,10 +1846,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       />
       <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
-        // The image scene is the whole lab: its panel is the Guide,
+        // The sentence scene is the whole lab: its panel is the Guide,
         // instructions included.
         <div className={moduleStyles.imageLevelArea}>
-          <ImageExploreScene
+          <SentenceScene
             imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
             imageSubject={levelProperties.levelMode?.imageSubject}
             sentenceId={levelProperties.levelMode?.sentence}

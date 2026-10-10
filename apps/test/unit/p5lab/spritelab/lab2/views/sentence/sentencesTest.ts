@@ -5,11 +5,11 @@ import {
   promptText,
   sentenceFor,
   slotsToOffer,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
-describe('exploreSentences', () => {
+describe('sentences', () => {
   it('needs only the creature', () => {
     expect(isComplete(CHARACTER_SENTENCE, {})).toBe(false);
     expect(isComplete(CHARACTER_SENTENCE, {adjective: 'brave'})).toBe(false);

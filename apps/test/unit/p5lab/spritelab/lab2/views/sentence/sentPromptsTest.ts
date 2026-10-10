@@ -1,7 +1,7 @@
 import {
   POSE_MARK,
   sentPromptsFor,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/sentPrompts';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentPrompts';
 
 const OPTIONS = {imageType: 'sprite', style: 'pixel', pixelGrid: 64} as const;
 

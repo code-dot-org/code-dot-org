@@ -45,24 +45,24 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import BehindTheScenes from './BehindTheScenes';
-import {pickFact} from './exploreFacts';
-import ExploreLayout from './ExploreLayout';
+import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
+import ResultActions, {Verdict, VerdictRow} from './ResultActions';
+import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
+import {pickFact} from './sentenceFacts';
+import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
   chosenBodyPlan,
   isComplete,
   promptText,
   sentenceFor,
-} from './exploreSentences';
-import {playSound} from './exploreSounds';
-import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
-import ResultActions, {Verdict, VerdictRow} from './ResultActions';
-import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
-import SentenceReadOnly from './SentenceReadOnly';
+} from './sentences';
+import SentenceSceneLayout from './SentenceSceneLayout';
+import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
 import WordMenus from './WordMenus';
 
-import styles from './image-explore.module.scss';
+import styles from './sentence-scene.module.scss';
 
 const STYLES = Object.keys(IMAGE_STYLE_LABELS) as ImageStyle[];
 // The service's middle temperature.
@@ -97,7 +97,7 @@ interface Made {
 
 /** What a host lays out. The nodes are ready to place; the callbacks and
     flags let a host draw its own buttons. */
-export interface ExploreParts {
+export interface SentenceSceneParts {
   mode: Mode;
   busy: boolean;
   /** Every word the sentence needs is chosen. */
@@ -127,7 +127,7 @@ export interface ExploreParts {
   draft: {imageType: ImageType; style: ImageStyle};
 }
 
-interface ImageExploreSceneProps {
+interface SentenceSceneProps {
   imageType: ImageType;
   imageSubject?: ImageSubject;
   /** The sentence to build, by id; the image type's own when unset. */
@@ -151,10 +151,10 @@ interface ImageExploreSceneProps {
   /** Analytics: which surface generated. */
   method?: string;
   /** Lay the parts out instead of the level's two halves. */
-  layout?: (parts: ExploreParts) => React.ReactNode;
+  layout?: (parts: SentenceSceneParts) => React.ReactNode;
 }
 
-const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
+const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   imageType: initialImageType,
   imageSubject: initialImageSubject,
   sentenceId,
@@ -166,7 +166,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   typeChoice,
   onKeep,
   onGenerateStart,
-  method = 'explore',
+  method = 'scene',
   layout,
 }) => {
   const dispatch = useAppDispatch();
@@ -425,7 +425,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         onSave={savePaint}
       >
         {parts => (
-          <ExploreLayout
+          <SentenceSceneLayout
             frameClassName={styles.paintFrame}
             frame={parts.canvas}
             frameAriaLabel="Your drawing"
@@ -454,7 +454,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 Save
               </MuiButton>
             </div>
-          </ExploreLayout>
+          </SentenceSceneLayout>
         )}
       </PixelEditor>
     );
@@ -462,7 +462,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
 
   const typeChoiceNode = typeChoice ? (
     <SimpleDropdown
-      name="explore-type"
+      name="sentence-type"
       labelText="Type"
       isLabelVisible={false}
       size="s"
@@ -482,7 +482,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   ) : null;
   const styleChoice = (
     <SimpleDropdown
-      name="explore-style"
+      name="sentence-style"
       labelText="Style"
       isLabelVisible={false}
       size="s"
@@ -592,7 +592,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   }
 
   return (
-    <ExploreLayout
+    <SentenceSceneLayout
       frameClassName={classNames(
         made && !generating && styles.imageFrameFilled
       )}
@@ -656,8 +656,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           </MuiButton>
         </div>
       )}
-    </ExploreLayout>
+    </SentenceSceneLayout>
   );
 };
 
-export default ImageExploreScene;
+export default SentenceScene;

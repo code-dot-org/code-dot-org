@@ -1,6 +1,6 @@
-// The sentences a student builds from word chips on an explore image
-// level, and the prompt text a filled sentence becomes. A sentence is a
-// row of segments: fixed text, a slot that takes one word, or a phrase
+// The sentences a student builds from word chips, on an image level or in
+// the New image dialog, and the prompt text a filled sentence becomes. A
+// sentence is a row of segments: fixed text, a slot that takes one word, or a phrase
 // whose words show only when its slot is filled. A required slot must be
 // filled before the sentence can generate.
 
@@ -9,7 +9,7 @@ import {
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
-import manifestJson from '@cdo/static/spritelab_lab2/exploreSentences.json';
+import manifestJson from '@cdo/static/spritelab_lab2/sentences.json';
 
 export interface Word {
   id: string;
@@ -78,7 +78,7 @@ function loadSentences(manifest: Manifest): Record<string, Sentence> {
                 : slot.words;
             if (!words) {
               throw new Error(
-                `exploreSentences.json: sentence "${id}" slot "${slotId}" names an unknown word set "${slot.words}"`
+                `sentences.json: sentence "${id}" slot "${slotId}" names an unknown word set "${slot.words}"`
               );
             }
             return [slotId, {...slot, id: slotId, words}];
@@ -93,7 +93,7 @@ const SENTENCES = loadSentences(manifestJson as Manifest);
 // The sentences sentenceFor returns; a missing one fails at load.
 ['character', 'object', 'place'].forEach(id => {
   if (!SENTENCES[id]) {
-    throw new Error(`exploreSentences.json: no "${id}" sentence`);
+    throw new Error(`sentences.json: no "${id}" sentence`);
   }
 });
 
@@ -108,7 +108,7 @@ export function sentenceFor(
     if (SENTENCES[sentenceId]) {
       return SENTENCES[sentenceId];
     }
-    console.warn(`exploreSentences.json has no "${sentenceId}" sentence`);
+    console.warn(`sentences.json has no "${sentenceId}" sentence`);
   }
   if (imageType === 'background') {
     return SENTENCES.place;

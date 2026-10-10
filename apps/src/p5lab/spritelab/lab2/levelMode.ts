@@ -22,7 +22,7 @@ export interface LevelMode {
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
-  /** The explore layout's sentence, by id in exploreSentences.json; the
+  /** The sentence scene's sentence, by id in sentences.json; the
       image type's own sentence when unset. */
   sentence?: string;
 }

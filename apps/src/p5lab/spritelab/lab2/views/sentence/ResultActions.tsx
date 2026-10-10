@@ -5,7 +5,7 @@ import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './image-explore.module.scss';
+import styles from './sentence-scene.module.scss';
 
 /** Goes to analytics only. */
 export type Verdict = 'up' | 'down';
@@ -25,9 +25,9 @@ export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
   <div
     className={styles.resultQuestionRow}
     role="group"
-    aria-labelledby="explore-result-label"
+    aria-labelledby="sentence-result-label"
   >
-    <span id="explore-result-label" className={styles.resultQuestion}>
+    <span id="sentence-result-label" className={styles.resultQuestion}>
       How did the AI do?
     </span>
     <MuiIconButton

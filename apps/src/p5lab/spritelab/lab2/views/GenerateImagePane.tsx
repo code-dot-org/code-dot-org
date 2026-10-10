@@ -38,13 +38,13 @@ import {
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
-import type {NewImageDraft} from './ImageExploreDialogBody';
 import {
   AnimationPatch,
   createNamedAnimation,
   framesPatch,
   uploadOrEmbed,
 } from './imageSave';
+import type {NewImageDraft} from './SentenceDialogBody';
 import {
   alternativeFromAnimation,
   framesFromAnimation,

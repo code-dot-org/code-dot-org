@@ -10,15 +10,12 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/GenerateImageView', () => ({
   __esModule: true,
   default: () => <div data-generate-view />,
 }));
-jest.mock(
-  '@cdo/apps/p5lab/spritelab/lab2/views/ImageExploreDialogBody',
-  () => ({
-    __esModule: true,
-    default: (props: {typeChoice: boolean}) => (
-      <div data-explore-body data-type-choice={String(props.typeChoice)} />
-    ),
-  })
-);
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/SentenceDialogBody', () => ({
+  __esModule: true,
+  default: (props: {typeChoice: boolean}) => (
+    <div data-sentence-body data-type-choice={String(props.typeChoice)} />
+  ),
+}));
 
 // The summary view's primary button reads Accept when this dialog session
 // replaced the image it opened on (including starting from nothing), and
@@ -104,11 +101,11 @@ describe('resolutionLabel', () => {
 });
 
 describe('ImageDetailsDialog generate view', () => {
-  it('opens a new image on the explore form with the Type free', () => {
+  it('opens a new image on the image form with the Type free', () => {
     renderDialog({animKey: null, name: undefined});
     expect(
       document
-        .querySelector('[data-explore-body]')
+        .querySelector('[data-sentence-body]')
         ?.getAttribute('data-type-choice')
     ).toBe('true');
   });
@@ -117,7 +114,7 @@ describe('ImageDetailsDialog generate view', () => {
     renderDialog({animKey: null, name: undefined, lockedImageType: 'block'});
     expect(
       document
-        .querySelector('[data-explore-body]')
+        .querySelector('[data-sentence-body]')
         ?.getAttribute('data-type-choice')
     ).toBe('false');
   });
@@ -125,7 +122,7 @@ describe('ImageDetailsDialog generate view', () => {
   it('keeps the full form for the advanced dialog', () => {
     renderDialog({animKey: null, name: undefined, advanced: true});
     expect(document.querySelector('[data-generate-view]')).toBeTruthy();
-    expect(document.querySelector('[data-explore-body]')).toBeNull();
+    expect(document.querySelector('[data-sentence-body]')).toBeNull();
   });
 });
 

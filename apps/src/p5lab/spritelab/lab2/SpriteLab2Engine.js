@@ -801,8 +801,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   /** Whether the running scene is a platformer: by its type, or by platform
       blocks in a scene made before scene types. */
   isPlatformScene() {
-    if (this.sceneType_) {
-      return this.sceneType_ === 'platform';
+    if (this.sentenceType_) {
+      return this.sentenceType_ === 'platform';
     }
     const code = this.userCode || '';
     return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
@@ -821,11 +821,11 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code, referencedImages, sceneType) {
+  runProgram(code, referencedImages, sentenceType) {
     if (this.destroyed_) {
       return;
     }
-    this.sceneType_ = sceneType;
+    this.sentenceType_ = sentenceType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
     }

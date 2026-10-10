@@ -4,7 +4,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import ImageExploreDialogBody from '@cdo/apps/p5lab/spritelab/lab2/views/ImageExploreDialogBody';
+import SentenceDialogBody from '@cdo/apps/p5lab/spritelab/lab2/views/SentenceDialogBody';
 
 const generateImage = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration', () => ({
@@ -48,7 +48,7 @@ function renderBody(props = {}) {
   render(
     <Provider store={store}>
       <ThemeProvider>
-        <ImageExploreDialogBody
+        <SentenceDialogBody
           imageType="sprite"
           typeChoice
           defaultStyle="pixel"
@@ -79,7 +79,7 @@ const footerNames = () =>
       ].includes(name || '')
     );
 
-describe('ImageExploreDialogBody', () => {
+describe('SentenceDialogBody', () => {
   beforeEach(() => {
     generateImage.mockReset();
     generateCharacterSet.mockReset();
@@ -129,7 +129,7 @@ describe('ImageExploreDialogBody', () => {
     expect(generateCharacterSet).toHaveBeenCalled();
     expect(generateImage).not.toHaveBeenCalled();
     expect(sendEvent.mock.calls[0][1]).toMatchObject({
-      method: 'explore-dialog',
+      method: 'dialog',
     });
   });
 

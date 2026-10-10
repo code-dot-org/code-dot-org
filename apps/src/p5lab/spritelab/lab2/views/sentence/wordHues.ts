@@ -2,7 +2,7 @@
 // the sentence: one per slot, in carousel order, so a sentence of three
 // words shows three colors.
 
-import {Sentence, slotsToOffer} from './exploreSentences';
+import {Sentence, slotsToOffer} from './sentences';
 
 type Hue = 'blue' | 'yellow' | 'pink' | 'orange' | 'purple';
 

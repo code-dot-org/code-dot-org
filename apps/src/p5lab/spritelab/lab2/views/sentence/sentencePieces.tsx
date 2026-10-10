@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {Sentence, Word} from './exploreSentences';
+import {Sentence, Word} from './sentences';
 import {hueFor} from './wordHues';
 
 import styles from './word-menus.module.scss';

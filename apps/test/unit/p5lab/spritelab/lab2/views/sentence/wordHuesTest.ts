@@ -1,8 +1,8 @@
 import {
   sentenceFor,
   slotsToOffer,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
-import {hueFor} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/wordHues';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
+import {hueFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordHues';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
