@@ -29,6 +29,9 @@
       "gamelab_checkTouching": [
         "hero",
         "treasure"
+      ],
+      "spritelab2_beginsBehavior": [
+        "treasure"
       ]
     },
     "pinned_scene": {
@@ -64,6 +67,13 @@
                 "type": "gamelab_allSpritesWithAnimation"
               }
             }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_beginsBehavior",
+          "fields": {
+            "BEHAVIOR": "floating"
           }
         }
       ]
