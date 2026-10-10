@@ -1,9 +1,10 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -16,8 +17,6 @@ import aiBot3 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-3.png';
 import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
-import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
-import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {
   CHARACTER_SET_PICTURE_COUNT,
@@ -29,7 +28,7 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
-import {IMAGE_KINDS} from '../ai/images/imageKinds';
+import {IMAGE_KINDS, imageKindFor} from '../ai/images/imageKinds';
 import {ImageSafetyError} from '../ai/images/imageSafety';
 import {defaultPixelGrid} from '../ai/images/modelHelpers';
 import {
@@ -193,6 +192,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     existing?.generation?.subject || lockedImageSubject || 'character';
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState(create?.initial?.name || '');
+  const {theme} = useTheme();
+  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
   const [imageType, setImageType] = useState<ImageType>(initialImageType);
   const [subject, setSubject] = useState<ImageSubject>(initialSubject);
   const [style, setStyle] = useState<ImageStyle>(
@@ -506,94 +507,64 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             }
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
-                  level can lock the choice for new images too; the student
-                  form drops a locked group, which would only push Generate
-                  down. */}
-              {!(lockedImageType && !advanced) && (
-                <fieldset
-                  className={moduleStyles.radioGroup}
-                  disabled={generating || !!existing || !!lockedImageType}
-                >
-                  <legend>Type</legend>
-                  {IMAGE_KINDS.map(kind => (
-                    <RadioButton
-                      key={kind.value}
-                      name="generation-type"
-                      value={kind.value}
-                      label={imageKindLabel(kind.imageType, kind.subject)}
-                      size="s"
-                      checked={
-                        imageType === kind.imageType &&
-                        (kind.subject === undefined || subject === kind.subject)
-                      }
-                      onChange={() => {
-                        setImageType(kind.imageType);
-                        if (kind.subject) {
-                          setSubject(kind.subject);
-                        }
-                      }}
-                    />
-                  ))}
-                </fieldset>
-              )}
-              <fieldset
-                className={moduleStyles.radioGroup}
+                  level can lock the choice for new images too. */}
+              <SimpleDropdown
+                name="generation-type"
+                labelText="Type"
+                size="s"
+                color={dropdownColor}
+                items={IMAGE_KINDS.map(kind => ({
+                  value: kind.value,
+                  text: imageKindLabel(kind.imageType, kind.subject),
+                }))}
+                selectedValue={imageKindFor(imageType, subject).value}
+                disabled={generating || !!existing || !!lockedImageType}
+                onChange={e => {
+                  const kind = IMAGE_KINDS.find(
+                    k => k.value === e.target.value
+                  );
+                  if (kind) {
+                    setImageType(kind.imageType);
+                    if (kind.subject) {
+                      setSubject(kind.subject);
+                    }
+                  }
+                }}
+              />
+              <SimpleDropdown
+                name="generation-style"
+                labelText="Style"
+                size="s"
+                color={dropdownColor}
+                items={(['smooth', 'pixel'] as const).map(s => ({
+                  value: s,
+                  text: IMAGE_STYLE_LABELS[s],
+                }))}
+                selectedValue={style}
                 disabled={generating}
-              >
-                <legend>Style</legend>
-                {(['smooth', 'pixel'] as const).map(s => (
-                  <RadioButton
-                    key={s}
-                    name="generation-style"
-                    value={s}
-                    size="s"
-                    checked={style === s}
-                    onChange={() => setStyle(s)}
-                    className={moduleStyles.styleOption}
-                  >
-                    {/* The same star in each style, ahead of the label so
-                        the two rows line up. The label is ours, in the
-                        radio's own text size, so it can follow the sample. */}
-                    <span className={moduleStyles.styleSwatch}>
-                      <img
-                        src={s === 'pixel' ? pixelSample : smoothSample}
-                        alt=""
-                        className={classNames(
-                          s === 'pixel' && moduleStyles.pixelArt
-                        )}
-                      />
-                    </span>
-                    <MuiTypography variant="body3" component="span">
-                      {IMAGE_STYLE_LABELS[s]}
-                    </MuiTypography>
-                  </RadioButton>
-                ))}
-              </fieldset>
+                onChange={e => setStyle(e.target.value as ImageStyle)}
+              />
               {/* Internal knob: ask the model for a coarser grid than the
                   type's default, to survey what it returns at lower asks. */}
-              {advanced && style === 'pixel' && (
-                <fieldset
-                  className={moduleStyles.radioGroup}
-                  disabled={generating}
-                >
-                  <legend>Resolution</legend>
-                  {PIXEL_SCALES.map(scale => {
+              {style === 'pixel' && (
+                <SimpleDropdown
+                  name="generation-pixel-grid"
+                  labelText="Resolution"
+                  size="s"
+                  color={dropdownColor}
+                  items={PIXEL_SCALES.map(scale => {
                     const grid = defaultPixelGrid(imageType) / scale;
-                    return (
-                      <RadioButton
-                        key={scale}
-                        name="generation-pixel-grid"
-                        value={String(scale)}
-                        label={`${grid} × ${grid}${
-                          scale === 1 ? ' (default)' : ''
-                        }`}
-                        size="s"
-                        checked={pixelScale === scale}
-                        onChange={() => setPixelScale(scale)}
-                      />
-                    );
+                    return {
+                      value: String(scale),
+                      text: `${grid} × ${grid}${
+                        scale === 1 ? ' (default)' : ''
+                      }`,
+                    };
                   })}
-                </fieldset>
+                  selectedValue={String(pixelScale)}
+                  disabled={generating}
+                  onChange={e => setPixelScale(Number(e.target.value))}
+                />
               )}
             </div>
           </div>

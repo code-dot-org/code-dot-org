@@ -354,38 +354,7 @@
 
 // A Style option is taller than its text, so its radio, swatch and label
 // center on the row; the design system aligns a radio row to the top.
-.styleOption {
-  align-items: center;
 
-  i {
-    margin-top: 0;
-  }
-}
-
-// A Style option's sample: a swatch tile between the radio and the label,
-// the same size on both rows so the labels line up.
-.styleSwatch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  box-sizing: border-box;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--dialog-control-border);
-  border-radius: 6px;
-  background: var(--dialog-control-bg);
-
-  // Drawn at 64px for exactly 2x; the pixel star keeps its hard edges.
-  img {
-    width: 32px;
-    height: 32px;
-
-    &.pixelArt {
-      image-rendering: pixelated;
-    }
-  }
-}
 
 // Wears .radioGroup's bordered look; this only fits the slider, which the
 // design system fixes at 300px (its track and input already stretch to
