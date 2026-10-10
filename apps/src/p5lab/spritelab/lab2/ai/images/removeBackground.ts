@@ -55,16 +55,12 @@ function keySignature(
 const KEY_SIGNATURE = 150;
 const KEY_EDGE_SIGNATURE = 65;
 
-// The backdrop sometimes comes back duller than asked: a magenta near
-// (190, 29, 155) scores about 120, under KEY_SIGNATURE, so nothing is
-// background outright, the flood never starts and the whole backdrop
-// stays. The prompt puts the backdrop on every edge, so the border's
-// signature is the backdrop's: when the border is flat (its 10th and 90th
-// percentiles within DULL_KEY_SPREAD; two dull sheets measured 11 apart)
-// and sits in the band, the outright cutoff drops to just under its
-// median. A border that scores under the floor (the subject touches the
-// edges, or the key is wrong), varies (the subject crosses it), or is
-// mostly transparent already leaves the cutoff alone.
+// A backdrop that came back duller than asked scores under KEY_SIGNATURE
+// everywhere, so no flood starts and all of it stays. The prompt puts the
+// backdrop on every edge: when the border is one flat colour (10th to 90th
+// percentile within the spread) scoring in the band, the outright cutoff
+// drops to just under its median. A border that scores under the floor,
+// varies, or is mostly transparent already leaves the cutoff alone.
 const DULL_KEY_FLOOR = 90;
 const DULL_KEY_MARGIN = 24;
 const DULL_KEY_SPREAD = 40;
@@ -257,8 +253,8 @@ export function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
  * Returns the input unchanged when there's nothing to crop (full-bleed
  * content or nothing opaque). Run after keying: the delivered image then
  * fills its own frame edge-to-edge, so grid-placed copies tile seamlessly no
- * matter how much margin the model left. Stray marks the keying left at the
- * edges are cleared first, or they would hold the crop open.
+ * matter how much margin the model left. Stray marks do not count toward
+ * the bounds, or a line at the edge would hold the crop open.
  */
 export async function cropToContent(blob: Blob): Promise<Blob> {
   const img = await loadImageFromBlob(blob);
@@ -269,21 +265,14 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
   ctx.drawImage(img, 0, 0);
 
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  if (
-    clearMinorComponents(
-      imageData.data,
-      imageData.width,
-      imageData.height,
-      ALPHA_THRESHOLD
-    )
-  ) {
-    ctx.putImageData(imageData, 0, 0);
-  }
-  const bounds = findOpaqueBounds(
-    imageData.data,
+  const counted = imageData.data.slice();
+  clearMinorComponents(
+    counted,
     imageData.width,
-    imageData.height
+    imageData.height,
+    ALPHA_THRESHOLD
   );
+  const bounds = findOpaqueBounds(counted, imageData.width, imageData.height);
   if (
     !bounds ||
     (bounds.left === 0 &&
@@ -315,27 +304,27 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
 }
 
 /**
- * Stretch an image Blob to a square of its longer side and return a new PNG
+ * Crop an image Blob to a square of its shorter side and return a new PNG
  * Blob; the input unchanged when it is square already. A ground block is
  * shown in a square cell, scaled to fit, so a block that came back a little
- * taller than wide would leave a gap above and below every copy; a slight
- * stretch of a texture is invisible where a gap is not.
+ * taller than wide would leave a gap above and below every copy. A wide
+ * block loses equal margins at the sides; a tall one keeps its top edge,
+ * the surface a character stands on, and loses the bottom. Cropping keeps
+ * a pixel block's grid where a stretch would not.
  */
-export async function stretchToSquare(
-  blob: Blob,
-  smooth: boolean
-): Promise<Blob> {
+export async function cropToSquare(blob: Blob): Promise<Blob> {
   const img = await loadImageFromBlob(blob);
   if (img.width === img.height) {
     return blob;
   }
-  const side = Math.max(img.width, img.height);
+  const side = Math.min(img.width, img.height);
+  const left = Math.floor((img.width - side) / 2);
   const canvas = document.createElement('canvas');
   canvas.width = side;
   canvas.height = side;
-  const ctx = canvas.getContext('2d')!;
-  ctx.imageSmoothingEnabled = smooth;
-  ctx.drawImage(img, 0, 0, side, side);
+  canvas
+    .getContext('2d')!
+    .drawImage(img, left, 0, side, side, 0, 0, side, side);
   return canvasToBlob(canvas);
 }
 

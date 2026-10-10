@@ -109,6 +109,27 @@ describe('SpriteLab2 keyOutColor', () => {
     ]);
   });
 
+  it("feathers a dull backdrop's fringe from the lowered cutoff", () => {
+    const dull = [190, 29, 155];
+    const red = [255, 0, 0];
+    // Between the dull backdrop and red: scores 100, under the lowered
+    // cutoff of 102 and above the band's floor.
+    const fringe = [200, 20, 120];
+    const inner = [dull, fringe, red, red, red, fringe, dull];
+    const data = rgba([
+      ...Array(7).fill(dull),
+      ...inner,
+      ...inner,
+      ...inner,
+      ...Array(7).fill(dull),
+    ]);
+    keyOutColor(data, 7, 5, MAGENTA, {soft: true});
+    expect(alpha(data, 15)).toBeGreaterThan(0);
+    expect(alpha(data, 15)).toBeLessThan(255);
+    expect(alpha(data, 16)).toBe(255);
+    expect(alpha(data, 14)).toBe(0);
+  });
+
   it('keeps the cutoff when the border varies', () => {
     // The same ring with the body crossing it: the border is not a flat
     // backdrop, so a dull pixel beside the body stays.

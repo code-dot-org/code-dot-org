@@ -159,6 +159,10 @@ describe('generateImage', () => {
     const sprite = fullPromptFor('a chest', {imageType: 'sprite'});
     expect(sprite).toContain('pure magenta (#FF00FF)');
     expect(sprite).toContain('no pure magenta');
+    expect(sprite).not.toContain('clothes');
+    expect(
+      fullPromptFor('a knight', {imageType: 'sprite', subject: 'character'})
+    ).not.toContain('clothes');
     const pink = fullPromptFor('a pink unicorn', {imageType: 'sprite'});
     expect(pink).toContain('pure bright green (#00FF00)');
     expect(pink).not.toContain('magenta');

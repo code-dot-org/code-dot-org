@@ -23,8 +23,8 @@ import {
 import {
   cropToContent,
   flattenOntoGround,
+  cropToSquare,
   removeKeyColor,
-  stretchToSquare,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -60,8 +60,7 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
   );
 }
 
-// The named key colour the subject is keyed out against afterwards, as a
-// character set asks for it (characterSet.ts).
+// The named key colour the subject is keyed out against afterwards.
 function spritePromptClause(key: KeyColor): string {
   return keyClause(key, 'subject');
 }
@@ -77,7 +76,7 @@ export const NO_WRITING_CLAUSE =
 
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
-// decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
+// decorations go unnamed — named things get drawn (see blockPromptClause).
 // The place is empty because the student's characters go on top; a
 // background with its own people is a crowd.
 const BACKGROUND_PROMPT_CLAUSE =
@@ -395,7 +394,7 @@ export async function generateImage(
     trimmed = true;
   }
   if (imageType === 'block') {
-    blob = await stretchToSquare(blob, style === 'smooth');
+    blob = await cropToSquare(blob);
   }
   if (imageType === 'background') {
     blob = await flattenOntoGround(blob);

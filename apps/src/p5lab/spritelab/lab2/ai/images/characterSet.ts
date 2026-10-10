@@ -256,13 +256,13 @@ async function composeStrip(
     const ctx = canvas.getContext('2d')!;
     ctx.imageSmoothingEnabled = style === 'smooth';
     ctx.drawImage(img, 0, 0, width, height);
-    const imageData = ctx.getImageData(0, 0, width, height);
-    const {data} = imageData;
     // A stray mark at the frame's edge would pin the crop to the full cell.
-    if (clearMinorComponents(data, width, height, SOLID_ALPHA)) {
-      ctx.putImageData(imageData, 0, 0);
-    }
-    return {canvas, bounds: findOpaqueBounds(data, width, height, SOLID_ALPHA)};
+    const counted = ctx.getImageData(0, 0, width, height).data;
+    clearMinorComponents(counted, width, height, SOLID_ALPHA);
+    return {
+      canvas,
+      bounds: findOpaqueBounds(counted, width, height, SOLID_ALPHA),
+    };
   });
 
   const boxes = rasters
@@ -341,13 +341,17 @@ async function faceLikeBase(keyed: Blob, base: ImageData): Promise<Blob> {
   ) {
     return keyed;
   }
+  const upright = document.createElement('canvas');
+  upright.width = frame.width;
+  upright.height = frame.height;
+  upright.getContext('2d')!.putImageData(frame, 0, 0);
   const canvas = document.createElement('canvas');
   canvas.width = frame.width;
   canvas.height = frame.height;
   const ctx = canvas.getContext('2d')!;
   ctx.translate(frame.width, 0);
   ctx.scale(-1, 1);
-  ctx.drawImage(await loadImageFromBlob(keyed), 0, 0);
+  ctx.drawImage(upright, 0, 0);
   return canvasToBlob(canvas);
 }
 

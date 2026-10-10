@@ -59,6 +59,37 @@ describe('SpriteLab2 clearMinorComponents', () => {
     expect(clearMinorComponents(data, SIDE, SIDE, 64)).toBe(2);
   });
 
+  it('counts alpha at the threshold as clear, and a patch at the share as kept', () => {
+    const data = picture([
+      [0, 0, 20, 20],
+      [30, 30, 2, 1],
+    ]);
+    // 2 of 400 is exactly 0.5%.
+    expect(clearMinorComponents(data, SIDE, SIDE, 64)).toBe(0);
+    data[(30 * SIDE + 31) * 4 + 3] = 64;
+    expect(clearMinorComponents(data, SIDE, SIDE, 64)).toBe(1);
+  });
+
+  it('copes with a one-pixel-wide picture and with thousands of patches', () => {
+    const line = new Uint8ClampedArray(1 * 9 * 4);
+    [0, 1, 2, 3, 4, 5, 8].forEach(y => (line[y * 4 + 3] = 255));
+    expect(clearMinorComponents(line, 1, 9, 64, 0.5)).toBe(1);
+    // A dot on every other pixel of a 200x200 lattice beside a body.
+    const side = 200;
+    const dots = new Uint8ClampedArray(side * side * 4);
+    for (let y = 0; y < side; y += 2) {
+      for (let x = 0; x < side; x += 2) {
+        dots[(y * side + x) * 4 + 3] = 255;
+      }
+    }
+    for (let y = 100; y < 160; y++) {
+      for (let x = 100; x < 160; x++) {
+        dots[(y * side + x) * 4 + 3] = 255;
+      }
+    }
+    expect(clearMinorComponents(dots, side, side, 64)).toBeGreaterThan(9000);
+  });
+
   it('clears nothing from an empty or single-patch picture', () => {
     expect(clearMinorComponents(picture([]), SIDE, SIDE, 64)).toBe(0);
     expect(clearMinorComponents(picture([[0, 0, 5, 5]]), SIDE, SIDE, 64)).toBe(

@@ -1,7 +1,8 @@
 // Stray marks the model leaves after keying: a one-pixel line along an
 // image edge, a dot of backdrop texture. Too small to see, large enough
 // to pin a content crop to the full frame, so the picture renders smaller
-// than it could.
+// than it could. Callers clear them from a copy they take the crop bounds
+// from, so a stray inside the crop still ships.
 
 // A connected patch smaller than this share of the largest one is a stray
 // mark. A 1x267 edge line is 0.3% of a 100k-pixel character; a hat or a
@@ -53,7 +54,10 @@ export function clearMinorComponents(
       }
     }
   }
-  const largest = Math.max(...sizes);
+  let largest = 0;
+  for (const size of sizes) {
+    largest = Math.max(largest, size);
+  }
   const minor = sizes.map(size => size < largest * minShare);
   let cleared = 0;
   for (let p = 0; p < total; p++) {
