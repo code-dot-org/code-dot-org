@@ -7,6 +7,7 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 import {
   chainedSlotIds,
   Choices,
@@ -19,9 +20,8 @@ import {
   Word,
   WORD_DRAG_TYPE,
   wordFor,
-} from './exploreSentences';
-import {playSound} from './exploreSounds';
-import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
+} from './sentences';
+import {playSound} from './sentenceSounds';
 
 import styles from './word-menus.module.scss';
 

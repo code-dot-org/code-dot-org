@@ -3,14 +3,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {
-  Choices,
-  phraseFilled,
-  Segment,
-  Sentence,
-  wordFor,
-} from './exploreSentences';
 import {withPeriod, WordChip, WordText} from './sentencePieces';
+import {Choices, phraseFilled, Segment, Sentence, wordFor} from './sentences';
 
 import styles from './word-menus.module.scss';
 

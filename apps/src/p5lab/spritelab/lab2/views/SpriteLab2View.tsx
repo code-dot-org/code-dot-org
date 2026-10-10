@@ -42,7 +42,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks} from '../addBlocks';
-import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -66,11 +65,9 @@ import {
 import {defaultImageName, defaultRole} from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
-  adlibSetForMode,
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
   isImageMode,
-  isImageUi,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -125,13 +122,13 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
-import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import SentenceScene from './sentence/SentenceScene';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneEditing from './useSceneEditing';
@@ -158,25 +155,6 @@ registerReducers({
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
-
-// ?image-adlibs=<set> previews the adlib combos without a level change.
-function getImageAdlibSetParam(): ImageAdlibSet | undefined {
-  const value = queryParams('image-adlibs');
-  return isImageAdlibSet(value) ? value : undefined;
-}
-
-// ?image-free-text=true restores the free-text prompt box on adlib-only
-// levels, for internal testing.
-function getImageFreeTextParam(): boolean {
-  return queryParams('image-free-text') === 'true';
-}
-
-// ?image-ui=explore tries the two-half image scene on any image level; a
-// level opts in with level_mode.imageUi.
-function getImageUiParam() {
-  const value = queryParams('image-ui');
-  return isImageUi(value) ? value : undefined;
-}
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -268,8 +246,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => queryParams('world-tab') === 'true',
     []
   );
-  const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
-  const imageFreeTextParam = useMemo(getImageFreeTextParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one. Level edit modes author starter images, which needs the
   // naming controls.
@@ -1817,8 +1793,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  const imageUi = getImageUiParam() ?? levelProperties.levelMode?.imageUi;
-
   // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
@@ -1828,12 +1802,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedImageSubject: levelProperties.levelMode?.imageSubject,
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
-    adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
-    // Every level takes its words from the combos; the typed prompt box
-    // shows only behind ?image-free-text=true. Freeplay hands back the
-    // paint tools.
-    adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
+    // Freeplay hands back the paint tools.
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
   };
 
@@ -1876,31 +1846,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       />
       <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
-        // The image panel is the whole lab, with the floating guide over it.
+        // The sentence scene is the whole lab: its panel is the Guide,
+        // instructions included.
         <div className={moduleStyles.imageLevelArea}>
-          {imageUi ? (
-            // The explore scene is its own Guide, instructions included.
-            <ImageExploreScene
-              imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
-              imageSubject={levelProperties.levelMode?.imageSubject}
-              sentenceId={levelProperties.levelMode?.sentence}
-              defaultStyle={DEFAULT_IMAGE_STYLE}
-              imageRole={levelProperties.levelMode?.imageRole}
-              uploadImage={uploadImage}
-              instructions={guide.text}
-              showTts={showTtsFor(levelProperties)}
-            />
-          ) : (
-            <>
-              <GenerateImagePane imageLevel {...imagePaneProps} />
-              <GenerateSpriteLab
-                levelMode={levelProperties.levelMode}
-                instructions={guide.text}
-                showContinue={guide.showContinue}
-                levelProperties={levelProperties}
-              />
-            </>
-          )}
+          <SentenceScene
+            imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
+            imageSubject={levelProperties.levelMode?.imageSubject}
+            sentenceId={levelProperties.levelMode?.sentence}
+            defaultStyle={DEFAULT_IMAGE_STYLE}
+            imageRole={levelProperties.levelMode?.imageRole}
+            uploadImage={uploadImage}
+            instructions={guide.text}
+            showTts={showTtsFor(levelProperties)}
+          />
         </div>
       ) : (
         <TabShell

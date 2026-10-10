@@ -5,11 +5,11 @@ import {
   promptText,
   sentenceFor,
   slotsToOffer,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
-describe('exploreSentences', () => {
+describe('sentences', () => {
   it('needs only the creature', () => {
     expect(isComplete(CHARACTER_SENTENCE, {})).toBe(false);
     expect(isComplete(CHARACTER_SENTENCE, {adjective: 'brave'})).toBe(false);
@@ -79,7 +79,7 @@ describe('exploreSentences', () => {
   it('picks a sentence by what the level makes', () => {
     expect(sentenceFor('sprite').id).toBe('character');
     expect(sentenceFor('sprite', 'object').id).toBe('object');
-    expect(sentenceFor('block').id).toBe('object');
+    expect(sentenceFor('block').id).toBe('block');
     expect(sentenceFor('background').id).toBe('place');
   });
 

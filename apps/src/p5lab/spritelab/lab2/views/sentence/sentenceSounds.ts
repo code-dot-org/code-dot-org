@@ -1,4 +1,4 @@
-// Short synthesized sounds for the explore level: a tick for a word, a
+// Short synthesized sounds for the sentence scene: a tick for a word, a
 // chime for a finished sentence, a run up the scale for a picture.
 
 import {
@@ -6,7 +6,7 @@ import {
   wake,
 } from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/audioVoice';
 
-type ExploreSound =
+type SentenceSound =
   | 'pick'
   | 'unpick'
   | 'flip'
@@ -32,7 +32,7 @@ const ATTACK_S = 0.01;
 // Exponential ramps can't reach zero.
 const SILENCE = 0.0001;
 
-const SOUNDS: Record<ExploreSound, Note[]> = {
+const SOUNDS: Record<SentenceSound, Note[]> = {
   pick: [{hz: 740, at: 0, seconds: 0.09}],
   unpick: [{hz: 440, at: 0, seconds: 0.09}],
   flip: [{hz: 520, at: 0, seconds: 0.05, volume: 0.05}],
@@ -75,7 +75,7 @@ const muted = (): boolean =>
   typeof window.AudioContext !== 'function' ||
   new URLSearchParams(window.location.search).has('quiet');
 
-export function playSound(name: ExploreSound): void {
+export function playSound(name: SentenceSound): void {
   if (muted()) {
     return;
   }
