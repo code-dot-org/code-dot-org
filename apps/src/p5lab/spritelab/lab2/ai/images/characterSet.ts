@@ -17,6 +17,7 @@ import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
+import {isMirrored} from './frameFacing';
 import {
   GeneratedImageResult,
   logicalGridFor,
@@ -28,7 +29,7 @@ import {
   styleClause,
 } from './imageGeneration';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
-import {chooseKeyColor, KeyColor} from './keyColor';
+import {chooseKeyColor, keyClause, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
@@ -38,6 +39,7 @@ import {
   loadImageFromBlob,
   removeKeyColor,
 } from './removeBackground';
+import {clearMinorComponents} from './specks';
 import {BodyPlan, ImageGenerationMetadata, ImageStyle} from './types';
 
 /** One frame of the strip after the base: its label and pose description. */
@@ -152,11 +154,6 @@ export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.upright.length;
 const ONLY_THIS_CHARACTER =
   'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself.';
 
-/** The one flat colour every frame is drawn on, keyed out afterwards. */
-function keyClause(key: KeyColor): string {
-  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}. The character itself must contain no ${key.name} or anything close to it anywhere — not on clothes, hat, hair, skin or accessories; choose other colors for those.`;
-}
-
 /**
  * The prompt for the base frame: the whole character, standing, facing
  * right — the picture every other frame is drawn from.
@@ -259,8 +256,13 @@ async function composeStrip(
     const ctx = canvas.getContext('2d')!;
     ctx.imageSmoothingEnabled = style === 'smooth';
     ctx.drawImage(img, 0, 0, width, height);
-    const {data} = ctx.getImageData(0, 0, width, height);
-    return {canvas, bounds: findOpaqueBounds(data, width, height, SOLID_ALPHA)};
+    // A stray mark at the frame's edge would pin the crop to the full cell.
+    const counted = ctx.getImageData(0, 0, width, height).data;
+    clearMinorComponents(counted, width, height, SOLID_ALPHA);
+    return {
+      canvas,
+      bounds: findOpaqueBounds(counted, width, height, SOLID_ALPHA),
+    };
   });
 
   const boxes = rasters
@@ -313,6 +315,44 @@ async function composeStrip(
     );
   });
   return canvasToBlob(strip);
+}
+
+/** A blob's pixels, for comparing frames. */
+async function rasterOf(blob: Blob): Promise<ImageData> {
+  const img = await loadImageFromBlob(blob);
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.drawImage(img, 0, 0);
+  return ctx.getImageData(0, 0, img.width, img.height);
+}
+
+/**
+ * The keyed frame, flipped when it came back as a mirror image of the base
+ * (frameFacing.ts). A frame of another size is left as it is.
+ */
+async function faceLikeBase(keyed: Blob, base: ImageData): Promise<Blob> {
+  const frame = await rasterOf(keyed);
+  if (
+    frame.width !== base.width ||
+    frame.height !== base.height ||
+    !isMirrored(frame.data, base.data, frame.width, frame.height)
+  ) {
+    return keyed;
+  }
+  const upright = document.createElement('canvas');
+  upright.width = frame.width;
+  upright.height = frame.height;
+  upright.getContext('2d')!.putImageData(frame, 0, 0);
+  const canvas = document.createElement('canvas');
+  canvas.width = frame.width;
+  canvas.height = frame.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.translate(frame.width, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(upright, 0, 0);
+  return canvasToBlob(canvas);
 }
 
 // One pause-and-retry per frame: a transient failure gets one more try
@@ -400,6 +440,7 @@ export async function generateCharacterSet(
   const baseVerdict = judgeFrame(base);
   const baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
   const baseKeyed = await keyFrame(base);
+  const baseRaster = await rasterOf(baseKeyed);
   // Also gates the posed frames: a flagged base costs one generation, not
   // five.
   await baseVerdict;
@@ -422,7 +463,7 @@ export async function generateCharacterSet(
         }
       );
       const verdict = judgeFrame(raw);
-      const keyed = await keyFrame(raw);
+      const keyed = await faceLikeBase(await keyFrame(raw), baseRaster);
       await verdict;
       done++;
       preview = await previewURI(keyed);

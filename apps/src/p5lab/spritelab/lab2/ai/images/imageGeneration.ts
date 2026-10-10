@@ -10,6 +10,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
+import {chooseKeyColor, keyClause, KeyColor} from './keyColor';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -22,7 +23,8 @@ import {
 import {
   cropToContent,
   flattenOntoGround,
-  removeBackground,
+  cropToSquare,
+  removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -58,11 +60,10 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
   );
 }
 
-// Asks for the flat key color a costume is keyed out against afterwards
-// (removeBackground flood-fills it from the corners). The character-set
-// generator asks for a NAMED key color in its own prompts instead.
-const SPRITE_PROMPT_CLAUSE =
-  'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
+// The named key colour the subject is keyed out against afterwards.
+function spritePromptClause(key: KeyColor): string {
+  return keyClause(key, 'subject');
+}
 
 // A still character faces the way an animated one does (characterSet.ts),
 // so a story's right-lane mirror turns it toward the others.
@@ -75,7 +76,7 @@ export const NO_WRITING_CLAUSE =
 
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
-// decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
+// decorations go unnamed — named things get drawn (see blockPromptClause).
 // The place is empty because the student's characters go on top; a
 // background with its own people is a crowd.
 const BACKGROUND_PROMPT_CLAUSE =
@@ -84,9 +85,12 @@ const BACKGROUND_PROMPT_CLAUSE =
 // The square is ground in a platform game, and the prompt says so: without
 // the game's meaning, "a block of gold" comes back as a picture of a gold
 // cube. Name no separate object ("block", "tile", "cube") — the model draws
-// it inside the square — describe the ground's face instead.
-const BLOCK_PROMPT_CLAUSE =
-  'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
+// it inside the square — describe the ground's face instead. The margin is
+// the named key colour; "a block of grass" once came back as a whole
+// three-tier hillside under a sky, hence the one-square clause.
+function blockPromptClause(key: KeyColor): string {
+  return `This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Draw exactly one such square: no sky above it, no scene around it, and no second tier, ledge or slope. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in ${key.name} (${key.hex}), one plain solid flat color that appears nowhere in the artwork, extending to the image edges. No background scene — just the artwork on that flat ${key.name}.`;
+}
 
 /**
  * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
@@ -278,6 +282,7 @@ export function fullPromptFor(
 ): string {
   const {imageType = 'sprite', style = 'smooth'} = options;
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
+  const key = chooseKeyColor(prompt);
   // Read the prompt as a sentence before the clauses, without doubling the
   // punctuation a prompt may already end with.
   const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
@@ -286,9 +291,9 @@ export function fullPromptFor(
     if (options.subject === 'character') {
       fullPrompt = `${fullPrompt} ${CHARACTER_FACING_CLAUSE}`;
     }
-    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${spritePromptClause(key)}`;
   } else if (imageType === 'block') {
-    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${blockPromptClause(key)}`;
   } else if (imageType === 'background') {
     fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
   }
@@ -296,9 +301,8 @@ export function fullPromptFor(
 }
 
 /**
- * Generate an image from a text prompt. Sprites and blocks get a flat key
- * color the model picks to contrast with the subject, flood-filled to
- * transparency.
+ * Generate an image from a text prompt. Sprites and blocks are drawn on a
+ * named key colour (keyColor.ts) that is keyed out afterwards.
  */
 export async function generateImage(
   prompt: string,
@@ -371,13 +375,15 @@ export async function generateImage(
     };
   }
 
-  // Sprites and blocks get the key-color background removed the same way
-  // (both prompts keep the corner as background); blocks are then cropped to
-  // content so grid-placed copies tile seamlessly. Backgrounds are flattened
-  // opaque; pixel style gets grid-normalized.
+  // Sprites and blocks get the named key colour removed the same way;
+  // blocks are then cropped to content and squared so grid-placed copies
+  // tile seamlessly. Backgrounds are flattened opaque; pixel style gets
+  // grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
-    blob = await removeBackground(blob, {soft: style === 'smooth'});
+    blob = await removeKeyColor(blob, chooseKeyColor(prompt).rgb, {
+      soft: style === 'smooth',
+    });
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites
@@ -386,6 +392,9 @@ export async function generateImage(
   if (imageType === 'block' || (imageType === 'sprite' && style !== 'pixel')) {
     blob = await cropToContent(blob);
     trimmed = true;
+  }
+  if (imageType === 'block') {
+    blob = await cropToSquare(blob);
   }
   if (imageType === 'background') {
     blob = await flattenOntoGround(blob);

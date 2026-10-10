@@ -1,15 +1,7 @@
-// The flat background colour a character set is drawn on and keyed against.
-//
-// A single sprite lets the model pick its own contrasting background and
-// keys it out by flood-filling from the corners, which works well for one
-// picture. A set is two dozen pictures that must key identically, and the
-// corner flood has three failure modes across that many: the model's pick
-// lands near the character's own colours and the matte hollows it out; an
-// enclosed gap (between legs, under an arm) is never reached; and a pose
-// that touches a corner gets the character sampled as the background. So a
-// set names its colour up front and keys every pixel near it, wherever it
-// is. Two candidates, far apart in hue; the prompt decides which one the
-// character is less likely to wear.
+// The flat background colour a generated picture is drawn on. Every prompt
+// names it, so the keyer can clear it wherever it is, enclosed gaps
+// included. Two candidates, far apart in hue; the prompt decides which one
+// the subject is less likely to wear.
 
 export interface KeyColor {
   /** The name the prompt uses. */
@@ -39,4 +31,17 @@ export function chooseKeyColor(prompt: string): KeyColor {
   const magentaHits = (prompt.match(MAGENTA_WORDS) || []).length;
   const greenHits = (prompt.match(GREEN_WORDS) || []).length;
   return magentaHits > greenHits ? KEY_COLORS.green : KEY_COLORS.magenta;
+}
+
+/**
+ * The prompt clause asking for the key colour as the whole background and
+ * nowhere on the subject, which the prompt calls `subject` ("character",
+ * "subject", "artwork").
+ */
+export function keyClause(key: KeyColor, subject: string = 'character') {
+  const wear =
+    subject === 'character'
+      ? ' — not on clothes, hat, hair, skin or accessories; choose other colors for those'
+      : '; choose other colors';
+  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, no sky, and no shadow under the ${subject}. Only the ${subject} on that flat ${key.name}. The ${subject} itself must contain no ${key.name} or anything close to it anywhere${wear}.`;
 }
