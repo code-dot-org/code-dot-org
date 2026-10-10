@@ -10,6 +10,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
+import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -23,6 +24,7 @@ import {
   cropToContent,
   flattenOntoGround,
   removeBackground,
+  removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -88,11 +90,13 @@ const BACKGROUND_PROMPT_CLAUSE =
 const BLOCK_PROMPT_CLAUSE =
   'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
 
-// A ladder is drawn like a block, as one square of a climbable thing, and
-// the open space between its rungs is asked in the key colour so keying it
-// out everywhere leaves the rungs open.
-const LADDER_PROMPT_CLAUSE =
-  'This is one square of a climbable ladder in a side-view platform game: two vertical side rails with evenly spaced horizontal rungs between them, seen straight on. The rails run from the very top edge to the very bottom edge of the square and the rungs span the full width between them, so copies stacked one above another connect into one continuous ladder. Show the material as what the rails and rungs are made of, not as a separate object sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere on the rails or rungs, extending to the image edges, and fill the open spaces between the rungs with that same flat color. No background scene — just the artwork on that flat color.';
+// A ladder is drawn like a block, as one square of a climbable thing, on a
+// key colour named up front (like a character set's) so it can be keyed out
+// everywhere, enclosed gaps included: the open spaces between the rungs are
+// the backdrop too, and whatever sits in the image's corner is not.
+function ladderPromptClause(key: KeyColor): string {
+  return `This is one square of a single climbable ladder in a side-view platform game: exactly one ladder, with two vertical side rails and evenly spaced horizontal rungs between them, seen straight on. The rails run from the very top edge to the very bottom edge of the square and the rungs span the full width between them, so copies stacked one above another connect into one continuous ladder. Show the material as what the rails and rungs are made of, not as a separate object sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge. Leave a clear margin around all four sides of that square in a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), extending to the image edges, and fill the open spaces between the rungs with that same flat ${key.name}. The rails and rungs themselves must contain no ${key.name} or anything close to it anywhere; choose other colors for them. No background scene — just the artwork on that flat ${key.name}.`;
+}
 
 /**
  * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
@@ -296,7 +300,7 @@ export function fullPromptFor(
   } else if (imageType === 'block') {
     fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
   } else if (imageType === 'ladder') {
-    fullPrompt = `${fullPrompt} ${LADDER_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${ladderPromptClause(chooseKeyColor(prompt))}`;
   } else if (imageType === 'background') {
     fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
   }
@@ -379,18 +383,17 @@ export async function generateImage(
     };
   }
 
-  // Sprites, blocks and ladders get the key-color background removed the
-  // same way (their prompts keep the corner as background); a ladder's key
-  // is removed everywhere, so the enclosed gaps between its rungs open too.
-  // Blocks and ladders are then cropped to content so grid-placed copies
-  // tile seamlessly. Backgrounds are flattened opaque; pixel style gets
-  // grid-normalized.
+  // Sprites and blocks get the key-color background removed from the
+  // corners in; a ladder's named key is removed everywhere, so the enclosed
+  // gaps between its rungs open too. Blocks and ladders are then cropped to
+  // content so grid-placed copies tile seamlessly. Backgrounds are
+  // flattened opaque; pixel style gets grid-normalized.
   let blob = rawImageToBlob(raw);
-  if (imageType !== 'background') {
-    blob = await removeBackground(blob, {
-      soft: style === 'smooth',
-      everywhere: imageType === 'ladder',
-    });
+  const soft = style === 'smooth';
+  if (imageType === 'ladder') {
+    blob = await removeKeyColor(blob, chooseKeyColor(prompt).rgb, {soft});
+  } else if (imageType !== 'background') {
+    blob = await removeBackground(blob, {soft});
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites
