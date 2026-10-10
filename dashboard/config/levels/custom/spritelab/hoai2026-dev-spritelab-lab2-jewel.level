@@ -25,7 +25,6 @@
       "kind": "image",
       "imageType": "sprite",
       "imageSubject": "object",
-      "adlibs": "treasure",
       "imageRole": "treasure",
       "imageUi": "explore",
       "sentence": "treasure"
