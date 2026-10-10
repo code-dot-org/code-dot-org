@@ -280,6 +280,8 @@ interface WorldTabProps {
   /** The grid fills its area's shorter side exactly, with no padding: the
       editor sits where the stage is, at the stage's size. */
   fill?: boolean;
+  /** Offers a New square above the palette that asks for a picture. */
+  onNewPicture?: () => void;
 }
 
 /**
@@ -306,6 +308,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   selected,
   onSelect,
   fill = false,
+  onNewPicture,
 }) => {
   const placeOne = !!onMoveCell;
   const animationList = useAppSelector(state => state.animationList);
@@ -710,10 +713,14 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
 
   const cellPixels = gridPixels / sceneSize;
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
+  // The New square takes one item's room above the palette.
+  const paletteRoom = onNewPicture
+    ? areaHeight - PALETTE_ITEM_PX - PALETTE_GAP_PX
+    : areaHeight;
   const paletteRows = Math.max(
     1,
     areaHeight
-      ? Math.min(paletteItemsPerColumn(areaHeight), selections.length)
+      ? Math.min(paletteItemsPerColumn(paletteRoom), selections.length)
       : selections.length
   );
   const paletteColumns = Math.max(
@@ -863,88 +870,107 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       )}
       style={fill ? undefined : {paddingRight: PREVIEW_CLEARANCE}}
     >
-      <div
-        role="radiogroup"
-        aria-label="Items to place"
-        // Focus lives on the items (roving tabindex); the container is only
-        // a programmatic target.
-        tabIndex={-1}
-        className={moduleStyles.worldPalette}
-        style={paletteStyle}
-        onKeyDown={handlePaletteKeyDown}
-      >
-        {palette.map((item, index) => (
-          <PaletteTooltip
-            key={item.image}
-            tooltipId={`world-palette-${index}`}
-            suppress={dragging?.image === item.image}
-            text={
-              shortcutFor(index)
-                ? `${item.image}, ${item.kind} (${shortcutFor(index)})`
-                : `${item.image}, ${item.kind}`
-            }
+      <div className={moduleStyles.worldPaletteColumn}>
+        {onNewPicture && (
+          <button
+            type="button"
+            className={classNames(
+              moduleStyles.worldPaletteItem,
+              moduleStyles.worldPaletteNew
+            )}
+            onClick={onNewPicture}
           >
-            <button
-              ref={el => (paletteRefs.current[index] = el)}
-              type="button"
-              role="radio"
-              aria-checked={selectedIndex === index}
-              aria-keyshortcuts={shortcutFor(index)}
-              tabIndex={index === Math.max(selectedIndex, 0) ? 0 : -1}
-              className={classNames(
-                moduleStyles.worldPaletteItem,
-                selectedIndex === index && moduleStyles.worldPaletteSelected
-              )}
-              // The explicit focus is for Safari and macOS Firefox, which
-              // don't focus a pressed button; the roving tab stop follows
-              // the selection and must not part from focus.
-              onClick={event => {
-                event.currentTarget.focus();
-                if (clickAfterDrop.current) {
-                  clickAfterDrop.current = false;
-                  return;
-                }
-                choose(selections[index]);
-              }}
-              onPointerDown={event => handlePalettePointerDown(event, item)}
-            >
-              <span className={moduleStyles.srOnly}>
-                {item.image}, {item.kind}
-              </span>
-              {item.thumb && <img src={item.thumb} alt="" draggable={false} />}
-            </button>
-          </PaletteTooltip>
-        ))}
-        {/* With no images left, Erase is still the only way a pointer user
-            can clear placed cells; only placing one thing does without it. */}
-        {!placeOne && (
-          <PaletteTooltip
-            tooltipId="world-palette-erase"
-            text={`Erase (${ERASE_SHORTCUT})`}
-          >
-            <button
-              ref={el => (paletteRefs.current[palette.length] = el)}
-              type="button"
-              role="radio"
-              aria-checked={effectiveSelected === 'erase'}
-              aria-keyshortcuts={ERASE_SHORTCUT}
-              tabIndex={Math.max(selectedIndex, 0) === palette.length ? 0 : -1}
-              className={classNames(
-                moduleStyles.worldPaletteItem,
-                moduleStyles.worldPaletteErase,
-                effectiveSelected === 'erase' &&
-                  moduleStyles.worldPaletteSelected
-              )}
-              onClick={event => {
-                event.currentTarget.focus();
-                choose('erase');
-              }}
-            >
-              <FontAwesomeV6Icon iconName="eraser" />
-              Erase
-            </button>
-          </PaletteTooltip>
+            <FontAwesomeV6Icon iconName="plus" />
+            New
+          </button>
         )}
+        <div
+          role="radiogroup"
+          aria-label="Items to place"
+          // Focus lives on the items (roving tabindex); the container is only
+          // a programmatic target.
+          tabIndex={-1}
+          className={moduleStyles.worldPalette}
+          style={paletteStyle}
+          onKeyDown={handlePaletteKeyDown}
+        >
+          {palette.map((item, index) => (
+            <PaletteTooltip
+              key={item.image}
+              tooltipId={`world-palette-${index}`}
+              suppress={dragging?.image === item.image}
+              text={
+                shortcutFor(index)
+                  ? `${item.image}, ${item.kind} (${shortcutFor(index)})`
+                  : `${item.image}, ${item.kind}`
+              }
+            >
+              <button
+                ref={el => (paletteRefs.current[index] = el)}
+                type="button"
+                role="radio"
+                aria-checked={selectedIndex === index}
+                aria-keyshortcuts={shortcutFor(index)}
+                tabIndex={index === Math.max(selectedIndex, 0) ? 0 : -1}
+                className={classNames(
+                  moduleStyles.worldPaletteItem,
+                  selectedIndex === index && moduleStyles.worldPaletteSelected
+                )}
+                // The explicit focus is for Safari and macOS Firefox, which
+                // don't focus a pressed button; the roving tab stop follows
+                // the selection and must not part from focus.
+                onClick={event => {
+                  event.currentTarget.focus();
+                  if (clickAfterDrop.current) {
+                    clickAfterDrop.current = false;
+                    return;
+                  }
+                  choose(selections[index]);
+                }}
+                onPointerDown={event => handlePalettePointerDown(event, item)}
+              >
+                <span className={moduleStyles.srOnly}>
+                  {item.image}, {item.kind}
+                </span>
+                {item.thumb && (
+                  <img src={item.thumb} alt="" draggable={false} />
+                )}
+              </button>
+            </PaletteTooltip>
+          ))}
+          {/* With no images left, Erase is still the only way a pointer user
+            can clear placed cells; only placing one thing does without it. */}
+          {!placeOne && (
+            <PaletteTooltip
+              tooltipId="world-palette-erase"
+              text={`Erase (${ERASE_SHORTCUT})`}
+            >
+              <button
+                ref={el => (paletteRefs.current[palette.length] = el)}
+                type="button"
+                role="radio"
+                aria-checked={effectiveSelected === 'erase'}
+                aria-keyshortcuts={ERASE_SHORTCUT}
+                tabIndex={
+                  Math.max(selectedIndex, 0) === palette.length ? 0 : -1
+                }
+                className={classNames(
+                  moduleStyles.worldPaletteItem,
+                  moduleStyles.worldPaletteErase,
+                  effectiveSelected === 'erase' &&
+                    moduleStyles.worldPaletteSelected
+                )}
+                onClick={event => {
+                  event.currentTarget.focus();
+                  choose('erase');
+                }}
+              >
+                <FontAwesomeV6Icon iconName="eraser" />
+                Erase
+              </button>
+            </PaletteTooltip>
+          )}
+        </div>
       </div>
       <p id="world-grid-help" className={moduleStyles.srOnly}>
         {placeOne

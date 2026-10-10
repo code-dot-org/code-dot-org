@@ -50,6 +50,7 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {ImageType} from '../ai/images/types';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
@@ -85,6 +86,11 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
+import {
+  PictureRequest,
+  requestPicture,
+  setPictureRequestHandler,
+} from '../picturePicker';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -293,6 +299,33 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The project's pictures, in a drawer over the workspace.
   const picturesOffered = tabs.includes('Images');
   const [picturesOpen, setPicturesOpen] = useState(false);
+  // A block or the world palette asked for a picture: the drawer opens on
+  // a new one of that kind, and the finished picture goes back to the
+  // asker. Closing the drawer drops the ask.
+  const [pickRequest, setPickRequest] = useState<PictureRequest | null>(null);
+  useEffect(
+    () =>
+      setPictureRequestHandler(request => {
+        setPickRequest({...request});
+        setPicturesOpen(true);
+      }),
+    []
+  );
+  useEffect(() => {
+    if (!picturesOpen) {
+      setPickRequest(null);
+    }
+  }, [picturesOpen]);
+  const handleImageCreated = useCallback(
+    (name: string, imageType: ImageType) => {
+      if (pickRequest) {
+        pickRequest.onPicked(name, imageType);
+        setPickRequest(null);
+        setPicturesOpen(false);
+      }
+    },
+    [pickRequest]
+  );
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
@@ -581,6 +614,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     []
   );
+  // The world palette's New square: a placeable picture, selected once
+  // made.
+  const handleNewWorldPicture = useCallback(() => {
+    requestPicture({
+      onPicked: (name, imageType) => {
+        if (imageType !== 'background') {
+          choosePaletteSelection({
+            image: name,
+            kind: imageType === 'block' ? 'block' : 'sprite',
+          });
+        }
+      },
+    });
+  }, [choosePaletteSelection]);
 
   // Preselect the level's image of its imageType: the image_role_defaults role,
   // else the newest. Backgrounds are excluded, a world cell being a sprite or
@@ -1849,6 +1896,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
+    pickRequest,
+    onImageCreated: handleImageCreated,
   };
 
   return (
@@ -2055,6 +2104,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   onMoveCell={placeOne ? handleMoveWorldCell : undefined}
                   selected={worldPaletteSelection}
                   onSelect={choosePaletteSelection}
+                  onNewPicture={
+                    picturesOffered ? handleNewWorldPicture : undefined
+                  }
                 />
               ) : undefined
             }
