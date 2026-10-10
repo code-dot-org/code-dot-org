@@ -221,6 +221,8 @@ interface GenerateImagePaneProps {
   pickRequest?: PictureRequest | null;
   /** A new image was made (generated or painted), by name and kind. */
   onImageCreated?: (name: string, imageType: ImageType) => void;
+  /** The dialog a pick opened was closed without a picture. */
+  onPickCancel?: () => void;
 }
 
 /**
@@ -270,6 +272,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   imageLevel,
   pickRequest = null,
   onImageCreated,
+  onPickCancel,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -458,8 +461,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('no');
     setPaintNewDraft(null);
     endSession();
+    if (pickRequest) {
+      onPickCancel?.();
+    }
     triggerRef.current?.focus();
-  }, [endSession]);
+  }, [endSession, pickRequest, onPickCancel]);
 
   // Leaving the tab mid-session must still reclaim the session's leftover
   // assets (and orphan any in-flight persist), exactly as closing would.

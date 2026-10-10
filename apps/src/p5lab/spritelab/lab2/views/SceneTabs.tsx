@@ -75,7 +75,12 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
                   moduleStyles.sceneThumbSmall
                 )}
               />
-              <span className={moduleStyles.sceneTabName}>{scene.name}</span>
+              <span
+                className={moduleStyles.sceneTabName}
+                data-label={scene.name}
+              >
+                {scene.name}
+              </span>
             </button>
           );
         })}
@@ -112,7 +117,9 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
           }}
         >
           <FontAwesomeV6Icon iconName="table-cells" iconStyle="solid" />
-          <span className={moduleStyles.sceneTabName}>All scenes</span>
+          <span className={moduleStyles.sceneTabName} data-label="All scenes">
+            All scenes
+          </span>
         </button>
       )}
       {naming && (

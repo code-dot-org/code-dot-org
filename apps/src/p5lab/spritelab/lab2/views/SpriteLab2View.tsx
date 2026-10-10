@@ -300,33 +300,37 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The project's pictures, in a drawer over the workspace.
   const picturesOffered = tabs.includes('Images');
   const [picturesOpen, setPicturesOpen] = useState(false);
-  // A block or the world palette asked for a picture: the drawer opens on
-  // a new one of that kind, and the finished picture goes back to the
-  // asker. Closing the drawer drops the ask.
+  // The pictures drawer mounts once (idle pre-mount after seeding, or first
+  // opening) and stays mounted, so no opening pays the mount cost.
+  const [imagesMounted, setImagesMounted] = useState(false);
+  useEffect(() => {
+    if (picturesOpen) {
+      setImagesMounted(true);
+    }
+  }, [picturesOpen]);
+  // A block or the world palette asked for a picture: the new-image dialog
+  // opens on one of that kind, with the drawer staying as it was, and the
+  // finished picture goes back to the asker. The dialog renders in a
+  // portal, so the closed drawer's pane can host it.
   const [pickRequest, setPickRequest] = useState<PictureRequest | null>(null);
   useEffect(
     () =>
       setPictureRequestHandler(request => {
         setPickRequest({...request});
-        setPicturesOpen(true);
+        setImagesMounted(true);
       }),
     []
   );
-  useEffect(() => {
-    if (!picturesOpen) {
-      setPickRequest(null);
-    }
-  }, [picturesOpen]);
   const handleImageCreated = useCallback(
     (name: string, imageType: ImageType) => {
       if (pickRequest) {
         pickRequest.onPicked(name, imageType);
         setPickRequest(null);
-        setPicturesOpen(false);
       }
     },
     [pickRequest]
   );
+  const handlePickCancel = useCallback(() => setPickRequest(null), []);
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
@@ -353,14 +357,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
-  // The pictures drawer mounts once (idle pre-mount after seeding, or first
-  // opening) and stays mounted, so no opening pays the mount cost.
-  const [imagesMounted, setImagesMounted] = useState(false);
-  useEffect(() => {
-    if (picturesOpen) {
-      setImagesMounted(true);
-    }
-  }, [picturesOpen]);
   // Same for the World editor: inserting its grid costs far more than
   // rendering it, because the consent script's autoblocker walks every
   // added node.
@@ -370,6 +366,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setWorldMounted(true);
     }
   }, [activeTab]);
+  // The docked palette's width, which the stage keeps clear of.
+  const [worldPaletteWidth, setWorldPaletteWidth] = useState(0);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   // The project is shared by every level of the lesson, so Start Over sends
   // the student back to its first level to remake it. A level outside a
@@ -1899,6 +1897,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
     pickRequest,
     onImageCreated: handleImageCreated,
+    onPickCancel: handlePickCancel,
   };
 
   return (
@@ -2101,27 +2100,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             boxRef={playspaceRef}
             platformScene={playingPlatformer}
             mode={playspaceMode}
+            editorReserveLeft={worldPaletteWidth}
             editor={
-              worldTabEnabled && worldMounted ? (
-                <WorldTab
-                  fill
-                  world={activeWorld}
-                  sceneSize={activeSceneSize}
-                  onPaintCell={handlePaintWorldCell}
-                  emptyMessage={
-                    picturesOffered
-                      ? 'Make some pictures first.'
-                      : 'Go back and make your image first.'
-                  }
-                  only={paletteOnlyImage}
-                  onMoveCell={placeOne ? handleMoveWorldCell : undefined}
-                  selected={worldPaletteSelection}
-                  onSelect={choosePaletteSelection}
-                  onNewPicture={
-                    picturesOffered ? handleNewWorldPicture : undefined
-                  }
-                />
-              ) : undefined
+              worldTabEnabled && worldMounted
+                ? placement => (
+                    <WorldTab
+                      placement={placement}
+                      onPaletteWidth={setWorldPaletteWidth}
+                      world={activeWorld}
+                      sceneSize={activeSceneSize}
+                      onPaintCell={handlePaintWorldCell}
+                      emptyMessage={
+                        picturesOffered
+                          ? 'Make some pictures first.'
+                          : 'Go back and make your image first.'
+                      }
+                      only={paletteOnlyImage}
+                      onMoveCell={placeOne ? handleMoveWorldCell : undefined}
+                      selected={worldPaletteSelection}
+                      onSelect={choosePaletteSelection}
+                      onNewPicture={
+                        picturesOffered ? handleNewWorldPicture : undefined
+                      }
+                    />
+                  )
+                : undefined
             }
             controls={
               <PlayControls

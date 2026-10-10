@@ -277,9 +277,12 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
-  /** The grid fills its area's shorter side exactly, with no padding: the
-      editor sits where the stage is, at the stage's size. */
-  fill?: boolean;
+  /** The editor in the stage's place: the palette docked down the left
+      edge of the whole area, the grid exactly here. */
+  placement?: {x: number; y: number; side: number};
+  /** The docked palette's width, as measured, for the stage to keep
+      clear of. */
+  onPaletteWidth?: (width: number) => void;
   /** Offers a New square above the palette that asks for a picture. */
   onNewPicture?: () => void;
 }
@@ -307,7 +310,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onMoveCell,
   selected,
   onSelect,
-  fill = false,
+  placement,
+  onPaletteWidth,
   onNewPicture,
 }) => {
   const placeOne = !!onMoveCell;
@@ -688,6 +692,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   // floored so cells stay paintable. The same height sets the palette's
   // rows; CSS auto-fill would size the palette's width before its height
   // and come out a column too wide.
+  const docked = !!placement;
   const gridAreaRef = useRef<HTMLDivElement | null>(null);
   const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
   const [areaHeight, setAreaHeight] = useState(0);
@@ -698,7 +703,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     }
     const observer = new ResizeObserver(() => {
       setGridPixels(
-        fill
+        docked
           ? Math.min(area.clientHeight, area.clientWidth)
           : Math.max(
               MIN_GRID_PIXELS,
@@ -709,17 +714,37 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     });
     observer.observe(area);
     return () => observer.disconnect();
-  }, [fill]);
+  }, [docked]);
+  // Docked, the palette runs the whole height of the area, not the
+  // grid's, so its rows do not depend on where the grid lands; its
+  // measured width is what the stage keeps clear of.
+  const paletteAreaRef = useRef<HTMLDivElement | null>(null);
+  const [paletteHeight, setPaletteHeight] = useState(0);
+  const reportWidth = useRef(onPaletteWidth);
+  reportWidth.current = onPaletteWidth;
+  useEffect(() => {
+    const column = paletteAreaRef.current;
+    if (!column || !docked) {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      setPaletteHeight(column.clientHeight);
+      reportWidth.current?.(column.offsetWidth);
+    });
+    observer.observe(column);
+    return () => observer.disconnect();
+  }, [docked]);
 
   const cellPixels = gridPixels / sceneSize;
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
   // The New square takes one item's room above the palette.
+  const columnHeight = docked ? paletteHeight : areaHeight;
   const paletteRoom = onNewPicture
-    ? areaHeight - PALETTE_ITEM_PX - PALETTE_GAP_PX
-    : areaHeight;
+    ? columnHeight - PALETTE_ITEM_PX - PALETTE_GAP_PX
+    : columnHeight;
   const paletteRows = Math.max(
     1,
-    areaHeight
+    columnHeight
       ? Math.min(paletteItemsPerColumn(paletteRoom), selections.length)
       : selections.length
   );
@@ -866,11 +891,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     <div
       className={classNames(
         moduleStyles.worldTab,
-        fill && moduleStyles.worldTabFill
+        docked && moduleStyles.worldTabDocked
       )}
-      style={fill ? undefined : {paddingRight: PREVIEW_CLEARANCE}}
+      style={docked ? undefined : {paddingRight: PREVIEW_CLEARANCE}}
     >
-      <div className={moduleStyles.worldPaletteColumn}>
+      <div ref={paletteAreaRef} className={moduleStyles.worldPaletteColumn}>
         {onNewPicture && (
           <button
             type="button"
@@ -977,7 +1002,20 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           ? 'Arrow keys move around the grid. Enter or Space puts the chosen item on an empty cell, or moves it there; on its own cell, it removes it. Delete removes it. Number keys 1 to 9 choose an item.'
           : 'Arrow keys move around the grid. Enter or Space places the chosen item, or removes it if the cell already holds it; hold the key down and move to keep painting. Delete clears the cell. Number keys 1 to 9 choose an item; 0 chooses Erase.'}
       </p>
-      <div className={moduleStyles.worldGridColumn}>
+      <div
+        className={moduleStyles.worldGridColumn}
+        style={
+          placement
+            ? {
+                position: 'absolute',
+                left: placement.x,
+                top: placement.y,
+                width: placement.side,
+                height: placement.side,
+              }
+            : undefined
+        }
+      >
         {!palette.length && (
           <p className={moduleStyles.worldEmpty}>{emptyMessage}</p>
         )}

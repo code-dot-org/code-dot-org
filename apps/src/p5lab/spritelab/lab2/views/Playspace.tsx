@@ -48,9 +48,9 @@ export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
 export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
-// Room kept to the left of the box in edit mode for the World palette
-// (WorldTab's 64px items and its gap).
-export const EDITOR_PALETTE_ROOM = 80;
+// The docked palette's inset from the overlay's left edge, and its gap to
+// the box.
+const EDITOR_DOCK_MARGIN = 12;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;
@@ -151,9 +151,12 @@ interface PlayspaceProps {
   // Shown under the box in every visible mode; the box is placed to leave
   // it room.
   playBar?: React.ReactNode;
-  // The World editor, shown in the box's place in edit mode (its palette in
-  // the room to the left). Kept mounted and inert in the other modes.
-  editor?: React.ReactNode;
+  // The World editor, given the box's placement to put its grid in; it
+  // covers the whole overlay, with its palette docked at the left. Kept
+  // mounted and inert in the other modes.
+  editor?: (placement: {x: number; y: number; side: number}) => React.ReactNode;
+  // The docked palette's width, which the box keeps clear of in edit mode.
+  editorReserveLeft?: number;
   // The floating guide's footprint, pinned to the overlay's bottom-right
   // (playPlacement).
   guideSize?: {width: number; height: number} | null;
@@ -176,6 +179,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   controls,
   playBar,
   editor,
+  editorReserveLeft = 0,
   guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -338,7 +342,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       size,
       guideSize,
       playBar ? BAR_ROOM : 0,
-      mode === 'edit' ? EDITOR_PALETTE_ROOM : 0
+      mode === 'edit' && editorReserveLeft
+        ? editorReserveLeft + 2 * EDITOR_DOCK_MARGIN
+        : 0
     );
   } else {
     // Preview: small box pinned to the top-right corner.
@@ -515,14 +521,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         <div
           ref={editorRef}
           className={moduleStyles.editorArea}
-          style={{
-            transform: `translate(${x - EDITOR_PALETTE_ROOM}px, ${y}px)`,
-            width: boxSide + EDITOR_PALETTE_ROOM,
-            height: boxSide,
-            visibility: mode === 'edit' ? 'visible' : 'hidden',
-          }}
+          style={{visibility: mode === 'edit' ? 'visible' : 'hidden'}}
         >
-          {editor}
+          {editor({x, y, side: boxSide})}
         </div>
       )}
       {mode === 'play' && controls && (

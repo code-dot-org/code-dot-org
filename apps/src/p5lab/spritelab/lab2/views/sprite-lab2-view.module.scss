@@ -126,10 +126,23 @@ $tab-item-height: 34px;
 }
 
 .sceneTabName {
+  display: block;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  // Selecting a tab bolds it, and bold text is a couple of px wider,
+  // enough to nudge every tab after it. This unpainted bold copy of the
+  // name sets the width at all times and adds no height.
+  &::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
 }
 
 // "All scenes" never shrinks under the row's overflow.
@@ -682,12 +695,11 @@ $tab-item-height: 34px;
   }
 }
 
-// The World editor in the box's place: the grid at the box's size, the
-// palette in the room kept to its left. Placed like the box, unscaled.
+// The World editor over the whole overlay: its palette docked at the left,
+// its grid where the box is, at the box's size, unscaled.
 .editorArea {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   pointer-events: auto;
 }
 
