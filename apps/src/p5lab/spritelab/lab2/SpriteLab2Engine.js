@@ -606,8 +606,8 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.__slab2Body = true;
       });
     };
-    // A behavior that moves its sprite through the blocks (floating) marks
-    // it for one frame, and the wall collision leaves it alone.
+    // A behavior marks its sprite for one frame, and the wall collision
+    // leaves it alone.
     library.commands.passThroughWalls = spriteArg => {
       library.getSpriteArray(spriteArg).forEach(sprite => {
         sprite.__slab2PassWalls = true;
@@ -1264,7 +1264,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
     // Other sprites keep the stock resolver; running it pre-paint means
     // props draw already resolved. A sprite marked as passing through walls
-    // this frame (a floating one) is left where its behavior put it.
+    // this frame is left where its behavior put it.
     const walls = this.library.getSpriteArray({group: 'walls'});
     this.library.getSpriteArray({group: ''}).forEach(sprite => {
       const passing = sprite.__slab2PassWalls;

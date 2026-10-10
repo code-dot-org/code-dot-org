@@ -34,6 +34,9 @@ interface WalkCase {
   // A stand-in for randomNumber: the roll each call takes, 0..1 of the range.
   random?: () => number;
   frames?: number;
+  // A wall's left edge: after each tick the sprite is pushed back out of it,
+  // as the engine's collision does between behaviour ticks.
+  wallAt?: number;
 }
 
 function walk({
@@ -48,6 +51,7 @@ function walk({
   playerX,
   random = () => 0.5,
   frames = 600,
+  wallAt,
 }: WalkCase) {
   const centerOf = (col: number) => cell / 2 + cell * col;
   const top = cell * (row + 1);
@@ -110,7 +114,11 @@ function walk({
   const seen: number[] = [];
   for (frame = 0; frame < frames; frame++) {
     made.func({id: 1});
+    // Seen where the tick left it, so a try at a wall shows before the push.
     seen.push(sprite.x);
+    if (wallAt !== undefined && sprite.x + size * 0.4 > wallAt) {
+      sprite.x = wallAt - size * 0.4;
+    }
   }
   return {
     name: made.name,
@@ -230,14 +238,11 @@ describe('patrollingOnBlocks', () => {
 });
 
 describe('wanderingOnBlocks', () => {
-  // A roll sequence that stands now and then and picks both directions.
+  // A roll sequence that varies, so it stands now and then and picks both
+  // directions.
   function rolling() {
     let n = 0;
-    return () => {
-      n++;
-      // Every WANDER_STAND_EVERY-th roll of the stand check comes up 1.
-      return (n * 0.37) % 1;
-    };
+    return () => (++n * 0.37) % 1;
   }
 
   it('stays on the blocks and goes both ways', () => {
@@ -282,6 +287,22 @@ describe('wanderingOnBlocks', () => {
     );
     expect(steps).toEqual(new Set([1, -1]));
     expect(WANDER_STAND_EVERY).toBeGreaterThan(TURN_PAUSE_TICKS);
+  });
+
+  it('keeps the turn after an edge rather than rolling back into it', () => {
+    // Rolls high: no random stands, and any re-roll would pick the right.
+    const w = walk({
+      behavior: 'wanderingOnBlocks',
+      size: 40,
+      costumeWidth: 1024,
+      blockCols: [2, 3, 4, 5, 6],
+      startCol: 5,
+      random: () => 0.9,
+      frames: 400,
+    });
+    // Turned at the right edge, it walks all the way to the left one.
+    expect(w.right).toBeLessThanOrEqual(264);
+    expect(w.left).toBeLessThan(100);
   });
 });
 
@@ -331,6 +352,26 @@ describe('followingPlayerOnBlocks', () => {
     // Blocks span 80..200; the body stops with its edge at theirs and stays.
     expect(w.right).toBeLessThanOrEqual(184);
     expect(w.seen.slice(-50).every(x => x === w.last)).toBe(true);
+  });
+
+  it('waits a moment at a wall and tries again, rather than pressing on it every tick', () => {
+    const w = walk({
+      behavior: 'followingPlayerOnBlocks',
+      size: 40,
+      costumeWidth: 1024,
+      blockCols: FULL_FLOOR,
+      startCol: 2,
+      playerX: 380,
+      wallAt: 250,
+      frames: 300,
+    });
+    // A try reaches two pixels into the wall before the push; no further.
+    expect(w.right).toBeLessThanOrEqual(250 - 16 + 2);
+    // Once at the wall it mostly stands: a try every stand, not every tick.
+    const atWall = w.seen.slice(100);
+    const moves = atWall.filter((x, i) => i > 0 && x !== atWall[i - 1]).length;
+    expect(moves).toBeLessThan(atWall.length / 3);
+    expect(moves).toBeGreaterThan(0);
   });
 
   it('stands still with no player in the scene', () => {
