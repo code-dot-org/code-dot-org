@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {STATE_CODES} from '@cdo/apps/geographyConstants';
+import {ages} from '@cdo/apps/templates/AgeDropdown';
 import {
   demoSecretPictureUrlFor,
   demoSecretWordsFor,
@@ -119,6 +121,13 @@ const blankNewStudentRow = {
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
   usState: null,
+};
+
+const sharingDisabledForAge = age => {
+  if (age === '21+') {
+    return false;
+  }
+  return age === '' || Number(age) < 13;
 };
 
 /** Initial state for the manageStudents redux store.
@@ -389,6 +398,38 @@ export const addStudents = studentIds => {
   };
 };
 
+export const parseAge = raw => {
+  if (!raw) return '';
+  const trimmed = raw.toString().trim();
+  const numericAge = Number(trimmed);
+  if (Number.isInteger(numericAge) && numericAge >= 21) {
+    return '21+';
+  }
+  return ages.includes(trimmed) ? trimmed : '';
+};
+
+export const parseGender = raw => {
+  if (!raw) return '';
+  const normalized = raw.trim().toLowerCase();
+  const lookup = {
+    male: 'm',
+    m: 'm',
+    female: 'f',
+    f: 'f',
+    'non-binary': 'n',
+    nonbinary: 'n',
+    'preferred term not listed': 'o',
+    other: 'o',
+  };
+  return lookup[normalized] || '';
+};
+
+export const parseUsState = raw => {
+  if (!raw) return '';
+  const upper = raw.trim().toUpperCase();
+  return STATE_CODES.includes(upper) ? upper : '';
+};
+
 // Creates a new RowType.NEW_STUDENT for each name in the array.
 export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
@@ -396,13 +437,17 @@ export const addMultipleAddRows = studentDataArray => {
       .filter(data => data.name)
       .reduce((accumulator, data) => {
         const newId = addRowIdCounter--;
-
+        const age = data.age || '';
         return {
           ...accumulator,
           [newId]: {
             ...blankNewStudentRow,
             name: data.name,
-            familyName: data.familyName,
+            familyName: data.familyName || '',
+            age,
+            genderTeacherInput: data.gender || '',
+            sharingDisabled: sharingDisabledForAge(age),
+            usState: data.usState || null,
             id: newId,
           },
         };
@@ -678,7 +723,7 @@ export default function manageStudents(state = initialState, action) {
   if (action.type === SET_SHARING_DEFAULT) {
     const editedAge = state.editingData[action.studentId].age;
     // For privacy reasons, we disable sharing by default if the student is under the age of 13.
-    const sharingDisabled = editedAge < 13;
+    const sharingDisabled = sharingDisabledForAge(editedAge);
     return {
       ...state,
       editingData: {
