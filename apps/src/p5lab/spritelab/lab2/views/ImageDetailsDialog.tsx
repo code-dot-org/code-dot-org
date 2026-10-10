@@ -351,15 +351,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           adlibSet={adlibSet}
           adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
-          onPaintManually={
-            isNew && !paintDisabled && onPaintNew
-              ? draft =>
-                  onPaintNew({
-                    ...draft,
-                    name: nextImageName(draft.imageType, isNameTaken),
-                  })
-              : undefined
-          }
+          onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
           onGenerateStart={onGenerateStart}
           onAccept={async (result, newName) => {
             await onAcceptGenerated(result, newName);
