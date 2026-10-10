@@ -23,6 +23,7 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -1936,6 +1937,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           !!levelProperties.levelMode && moduleStyles.resourceSidebar
         )}
         sidebarOnly={!!levelProperties.levelMode}
+        footerButtons={
+          isEditable && (
+            <IconButtonWithTooltip
+              id="start-over"
+              label="Start Over"
+              icon={{iconName: 'refresh', iconStyle: 'solid'}}
+              variant="text"
+              color="tertiary"
+              tooltipDirection="onRight"
+              onClick={() => setShowStartOver(true)}
+              theme={theme}
+              size="small"
+            />
+          )
+        }
       />
       <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
@@ -1967,9 +1983,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         </div>
       ) : (
         <LabShell
-          onClickStartOver={
-            isEditable ? () => setShowStartOver(true) : undefined
-          }
           rightExtra={
             <>
               {activeTab === 'Play' && nowPlaying && (
