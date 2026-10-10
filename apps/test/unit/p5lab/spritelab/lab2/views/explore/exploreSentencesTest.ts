@@ -79,7 +79,7 @@ describe('exploreSentences', () => {
   it('picks a sentence by what the level makes', () => {
     expect(sentenceFor('sprite').id).toBe('character');
     expect(sentenceFor('sprite', 'object').id).toBe('object');
-    expect(sentenceFor('block').id).toBe('object');
+    expect(sentenceFor('block').id).toBe('block');
     expect(sentenceFor('background').id).toBe('place');
   });
 

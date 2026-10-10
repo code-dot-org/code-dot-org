@@ -113,7 +113,10 @@ export function sentenceFor(
   if (imageType === 'background') {
     return SENTENCES.place;
   }
-  if (imageType === 'block' || subject === 'object') {
+  if (imageType === 'block') {
+    return SENTENCES.block;
+  }
+  if (subject === 'object') {
     return SENTENCES.object;
   }
   return SENTENCES.character;
