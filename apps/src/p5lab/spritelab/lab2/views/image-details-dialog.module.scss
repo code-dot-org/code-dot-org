@@ -579,13 +579,27 @@
 
 // --- Explore view (the student form) ---
 
+// Room for the word menus beside a larger picture; the panel's max-width
+// still shrinks it on narrow browsers.
+$explore-dialog-width: 970px;
+$explore-pane-size: 420px;
+
+.dialogHost .dialogWide {
+  width: $explore-dialog-width;
+}
+
 // The picture's column: the pane, and Behind the scenes under it.
 .exploreColumn {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex-shrink: 0;
-  width: 380px;
+  width: $explore-pane-size;
+
+  .imagePane {
+    width: $explore-pane-size;
+    height: $explore-pane-size;
+  }
 }
 
 .explorePanel {

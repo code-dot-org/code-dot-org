@@ -164,6 +164,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
+  // The student's generate view hosts the explore scene, which wants room
+  // for its word menus beside the picture.
+  const exploreView = view === 'generate' && !advanced;
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState('');
   const [nameError, setNameError] = useState<string | null>(null);
@@ -295,7 +298,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           )}
         </div>
       )}
-      {view === 'generate' && !advanced ? (
+      {exploreView ? (
         // The student form: the explore scene's sentence and picture. A
         // new image's name is the next free one for its type.
         <ImageExploreDialogBody
@@ -515,7 +518,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           aria-label={title}
           onClose={onClose}
           mode={mode}
-          className={moduleStyles.dialog}
+          className={classNames(
+            moduleStyles.dialog,
+            exploreView && moduleStyles.dialogWide
+          )}
         >
           {panelBody}
         </CustomDialog>
