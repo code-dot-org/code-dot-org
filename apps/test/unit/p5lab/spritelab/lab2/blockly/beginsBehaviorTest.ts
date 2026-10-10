@@ -5,8 +5,8 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields', () => ({
 
 import beginsBehavior, {
   BEHAVIOR_OPTIONS,
-  FLOAT_LIFT_PX,
   FLOAT_PERIOD_TICKS,
+  FLOAT_SWING_PX,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/beginsBehavior';
 
 describe('beginsBehavior block', () => {
@@ -46,6 +46,7 @@ describe('floating', () => {
   // up-positive y, as getProp and setProp read and write it.
   function float(startY: number, phaseRoll = 0) {
     const props: {[key: string]: number | undefined} = {y: startY};
+    let passes = 0;
     const commands = {
       getProp: (id: unknown, prop: string) => props[prop],
       setProp: (id: unknown, prop: string, value: number | undefined) => {
@@ -53,30 +54,38 @@ describe('floating', () => {
       },
       randomNumber: (low: number, high: number) =>
         low + Math.round(phaseRoll * (high - low)),
+      passThroughWalls: () => passes++,
     };
     const made = new Function(
       'getProp',
       'setProp',
       'randomNumber',
+      'passThroughWalls',
       `${beginsBehavior.helperCode}\nreturn floating();`
-    )(commands.getProp, commands.setProp, commands.randomNumber);
+    )(
+      commands.getProp,
+      commands.setProp,
+      commands.randomNumber,
+      commands.passThroughWalls
+    );
     const ys: number[] = [];
     for (let i = 0; i < FLOAT_PERIOD_TICKS * 2; i++) {
       made.func({id: 1});
       ys.push(props.y as number);
     }
-    return {name: made.name, ys};
+    return {name: made.name, ys, passes};
   }
 
-  it('rises from its resting height by the lift and settles back, once per period, never below', () => {
-    const {name, ys} = float(200);
+  it('bobs about its resting height by the swing, once per period, passing through the blocks', () => {
+    const {name, ys, passes} = float(200);
     expect(name).toBe('floating');
-    expect(Math.max(...ys)).toBeCloseTo(200 + FLOAT_LIFT_PX, 0);
-    expect(Math.min(...ys)).toBeCloseTo(200, 0);
-    expect(ys.every(y => y >= 200 - 1e-9)).toBe(true);
+    expect(Math.max(...ys)).toBeCloseTo(200 + FLOAT_SWING_PX, 0);
+    expect(Math.min(...ys)).toBeCloseTo(200 - FLOAT_SWING_PX, 0);
     // One period on, it is back where it was.
     expect(ys[FLOAT_PERIOD_TICKS]).toBeCloseTo(ys[0], 5);
     expect(ys[0]).toBeCloseTo(200, 5);
+    // Marked every tick: the mark lasts one frame.
+    expect(passes).toBe(ys.length);
   });
 
   it('starts each sprite at its own point in the wave', () => {

@@ -606,6 +606,13 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.__slab2Body = true;
       });
     };
+    // A behavior that moves its sprite through the blocks (floating) marks
+    // it for one frame, and the wall collision leaves it alone.
+    library.commands.passThroughWalls = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2PassWalls = true;
+      });
+    };
     library.commands.platformGravity = () => this.platformGravity_;
     library.commands.platformGrounded = spriteArg =>
       footing(spriteArg, isSupported);
@@ -1256,14 +1263,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
     bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
     // Other sprites keep the stock resolver; running it pre-paint means
-    // props draw already resolved.
-    this.library.commands.collide.call(
-      this.library,
-      'collide',
-      {group: ''},
-      {group: 'walls'}
-    );
+    // props draw already resolved. A sprite marked as passing through walls
+    // this frame (a floating one) is left where its behavior put it.
     const walls = this.library.getSpriteArray({group: 'walls'});
+    this.library.getSpriteArray({group: ''}).forEach(sprite => {
+      const passing = sprite.__slab2PassWalls;
+      sprite.__slab2PassWalls = false;
+      if (!passing) {
+        walls.forEach(wall => sprite.collide(wall));
+      }
+    });
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     if (bodies.length) {
