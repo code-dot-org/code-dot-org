@@ -1,0 +1,13 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-09T23:06:24.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-hoai-template",
+    "hide_share_and_remix": true,
+    "long_instructions": "TODO"
+  },
+  "published": true
+}]]></config>
+</Weblab2>
