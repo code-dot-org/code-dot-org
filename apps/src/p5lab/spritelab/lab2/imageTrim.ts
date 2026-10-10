@@ -8,7 +8,7 @@ import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 // matte's near-invisible fringe (which otherwise stretches sprite bounds
 // past the visible art — platformer feet float on it), low enough to keep
 // real soft edges.
-const ALPHA_THRESHOLD = 32;
+export const ALPHA_THRESHOLD = 32;
 
 /**
  * The tight bounding box of non-transparent content in RGBA data, or null for

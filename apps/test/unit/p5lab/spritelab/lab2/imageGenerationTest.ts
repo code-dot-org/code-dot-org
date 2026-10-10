@@ -152,7 +152,23 @@ describe('generateImage', () => {
       subject: 'object',
     });
     expect(object).not.toContain('faces to the right');
-    expect(object).toContain('plain solid background');
+    expect(object).toContain('flat background');
+  });
+
+  it('names the key colour, green when the subject sounds pink', () => {
+    const sprite = fullPromptFor('a chest', {imageType: 'sprite'});
+    expect(sprite).toContain('pure magenta (#FF00FF)');
+    expect(sprite).toContain('no pure magenta');
+    const pink = fullPromptFor('a pink unicorn', {imageType: 'sprite'});
+    expect(pink).toContain('pure bright green (#00FF00)');
+    expect(pink).not.toContain('magenta');
+    // A green subject keeps the magenta key.
+    const block = fullPromptFor('a block of grass', {imageType: 'block'});
+    expect(block).toContain('pure magenta (#FF00FF)');
+    expect(block).toContain('exactly one such square');
+    expect(fullPromptFor('a beach', {imageType: 'background'})).not.toContain(
+      'magenta'
+    );
   });
 
   it('asks every kind of image for no writing', () => {
