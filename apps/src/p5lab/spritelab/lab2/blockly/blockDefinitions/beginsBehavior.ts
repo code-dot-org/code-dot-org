@@ -12,8 +12,6 @@ export const BEHAVIOR_OPTIONS: [string, string][] = [
   ['wandering on blocks', 'wanderingOnBlocks'],
   ['following the player', 'followingPlayerOnBlocks'],
   ['floating', 'floating'],
-  ['moving left', 'movingLeft'],
-  ['patrolling left and right', 'patrollingLeftRight'],
 ];
 
 /** "[sprite] begins [behaviour]" in one block, the behaviour chosen from a

@@ -162,13 +162,6 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_beginsBehavior",
-              "fields": {
-                "BEHAVIOR": "movingLeft"
-              }
-            },
-            {
-              "kind": "block",
               "type": "gamelab_setProp",
               "inputs": {
                 "SPRITE": {

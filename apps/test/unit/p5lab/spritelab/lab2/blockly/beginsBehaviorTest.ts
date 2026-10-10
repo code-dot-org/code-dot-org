@@ -10,7 +10,7 @@ import beginsBehavior, {
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/beginsBehavior';
 
 describe('beginsBehavior block', () => {
-  it('offers the walkers, floating and the story movements in one dropdown', () => {
+  it('offers the three walkers and floating in one dropdown', () => {
     const {definition} = beginsBehavior;
     expect(definition.message0).toBe('%1 begins %2');
     expect(definition.args0?.[0]).toMatchObject({
@@ -27,8 +27,6 @@ describe('beginsBehavior block', () => {
       'wanderingOnBlocks',
       'followingPlayerOnBlocks',
       'floating',
-      'movingLeft',
-      'patrollingLeftRight',
     ]);
   });
 
