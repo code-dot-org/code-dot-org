@@ -2,7 +2,7 @@
   "formatVersion": 4,
   "id": "sample",
   "title": "Web Dev Tutorial",
-  "objective": "Steer AI toward an intended design by writing specific prompts and refining them based on what comes back. Judge AI output against your own intent, and decide when to accept, redirect, or override it.",
+  "objective": "Steer AI toward an intended design by writing specific prompts and refining them based on what comes back. Judge AI output against your own intent, and decide when to accept, redirect, or override it. Use the vocabulary of web design (hero, feature cards, interactive canvas, call-to-action) to analyze what makes a page effective and to describe what you want built. Describe a problem with enough context for AI to give a useful explanation and fix. Verify an AI-proposed fix before trusting it, confirming the problem is resolved and nothing new broke.",
   "project": {
     "templateLevel": "adaptive-hoai-template",
     "description": "Your final project for the Web Dev Tutorial."
@@ -12,6 +12,16 @@
       "id": "build",
       "title": "Build with AI",
       "description": "Students move from asking for something, to specifying it, to judging what comes back."
+    },
+    "language": {
+      "id": "language",
+      "title": "Language of web dev",
+      "description": "Students move from spotting the blocks, to explaining them, to using the vocabulary themselves."
+    },
+    "debug": {
+      "id": "debug",
+      "title": "Debug with AI",
+      "description": "Students move from spotting the clue, to sharing it with AI, to verifying and diagnosing on their own."
     }
   },
   "checkpoints": [
@@ -239,7 +249,7 @@
       "title": "Tweak It",
       "description": "Respond to what came back with a follow-up that targets one thing that's off",
       "skillIds": ["build"],
-      "requires": ["add-details"],
+      "requires": ["introduction"],
       "steps": [
         {
           "id": "tweak-it-panel",
@@ -269,7 +279,7 @@
       "title": "Edit by Hand",
       "description": "Decide when a direct edit beats another prompt, and make it",
       "skillIds": ["build"],
-      "requires": ["tweak-it"],
+      "requires": ["introduction"],
       "steps": [
         {
           "id": "edit-by-hand-fix",
@@ -280,7 +290,7 @@
         },
         {
           "id": "edit-by-hand-panel",
-          "title": "TODO",
+          "title": "Edit by Hand",
           "kind": "panels",
           "panels": [
             {
@@ -324,7 +334,238 @@
           "kind": "level",
           "level": "adaptive-hoai-project-override",
           "project": true,
-          "instructions": "TODO"
+          "instructions": "1.  Find one small thing on your page to fix, like a word, or a color.\n2.  Change it yourself in the code.\n3.  Run your page to check your fix.\n\nWas editing faster than asking the AI?",
+          "instructionsPrompt": "Have the student find one small thing on their page to fix, like a word or a color, change it themselves in the code, and run the page to check the fix. Name the actual text or element on their page to edit."
+        }
+      ]
+    },
+    {
+      "id": "spot-section",
+      "title": "Spot the Section",
+      "description": "Locate the hero, feature cards, interactive canvas, and call-to-action on the target site",
+      "skillIds": ["language"],
+      "requires": ["add-details", "tweak-it", "edit-by-hand"],
+      "steps": [
+        {
+          "id": "spot-section-help-ai",
+          "title": "Help the AI find the right section.",
+          "kind": "level",
+          "level": "adaptive-hoai-recognize-boba",
+          "instructions": "1.  Pick one section of the page.\n2.  Tell the AI to make that section’s background pink. Describe which section it is so the AI could find it without seeing the page."
+        },
+        {
+          "id": "spot-section-panel",
+          "title": "Spot the Section",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-test-web-sections-d113721f-bd7c-4135-b706-9f2fd044b5d5",
+              "imageUrl": "https://images.code.org/17758db155e5c034d5d6f5f7acc34c32-section1.png",
+              "text": "###Hero section \nThe big opening area at the top that says what the site is"
+            },
+            {
+              "key": "adaptive-test-web-sections-3c435ec3-e6fc-4559-ba66-1a0ecb266df8",
+              "imageUrl": "https://images.code.org/a28761780355d68b3b17fe269b596fd6-section2.png",
+              "text": "###Feature cards\nBoxes that show what the site offers"
+            },
+            {
+              "key": "adaptive-test-web-sections-a711450d-2df5-420a-99bb-dd3c173bff8e",
+              "imageUrl": "https://images.code.org/bd9f630ca79bbc48c7e7ac77f3f3c7ce-section3.png",
+              "text": "###Interactive canvas\nThe area where visitors can play or create"
+            },
+            {
+              "key": "adaptive-test-web-sections-8bc9eab0-82c3-4c57-b9f4-911f855c5417",
+              "imageUrl": "https://images.code.org/dd1c35fae31d58efe740f012fc1053e5-section4.png",
+              "text": "###Call-to-action\nThe button that asks visitors to do something"
+            }
+          ]
+        },
+        {
+          "id": "spot-section-check",
+          "title": "Spot the Section questions",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 105,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "spot-section-q1",
+              "questionTitle": "You open a website and see a big banner across the top with the site’s name and a short line about what it is. What is this section called?",
+              "choices": [
+                { "id": "a", "text": "Call-to-action" },
+                { "id": "b", "text": "Hero section" },
+                { "id": "c", "text": "Interactive canvas" },
+                { "id": "d", "text": "Feature cards" }
+              ],
+              "correctChoiceId": "b"
+            },
+            {
+              "id": 106,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "spot-section-q2",
+              "questionTitle": "A page has three boxes stacked in a column. Each box has a title and a short description of something the site offers. What are these boxes called?",
+              "choices": [
+                { "id": "a", "text": "Feature cards" },
+                { "id": "b", "text": "Hero section" },
+                { "id": "c", "text": "Call-to-action" },
+                { "id": "d", "text": "Interactive canvas" }
+              ],
+              "correctChoiceId": "a"
+            },
+            {
+              "id": 107,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "spot-section-q3",
+              "questionTitle": "A page has a small “Log in” link in the corner and a big colorful “Join now” button under the opening banner. Which one is the call-to-action?",
+              "choices": [
+                { "id": "a", "text": "The “Log in” link" },
+                { "id": "b", "text": "The “Join now” button" },
+                { "id": "c", "text": "Both of them" },
+                { "id": "d", "text": "Neither of them" }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "spot-section-project",
+          "title": "Project Level",
+          "kind": "level",
+          "level": "adaptive-hoai-project-spot-section",
+          "project": true,
+          "instructions": "**Do This**\n\n1.  Run your page and find the **hero section**, the **feature cards**, the **interactive canvas**, and the **call-to-action**.\n2.  Pick two of them.\n3.  Ask the AI to change each one, using its name in your prompt.\n4.  Run your page. Did each change land on the right block?\n\nMissing a section? Say “I don’t have this one yet,” or ask the AI to add it.",
+          "instructionsPrompt": "Have the student find the hero section, feature cards, interactive canvas, and call-to-action on their page, pick two, and prompt the AI to change each one by naming the block. If a block is missing, have them say so or ask the AI to add it. Refer to the blocks as they actually appear on their page."
+        }
+      ]
+    },
+    {
+      "id": "whats-it-for",
+      "title": "What’s It For?",
+      "description": "Say what each block is for",
+      "skillIds": ["language"],
+      "requires": ["spot-section"],
+      "steps": [
+        {
+          "id": "whats-it-for-fix",
+          "title": "“Fix the complaint”",
+          "kind": "level",
+          "level": "adaptive-hoai-whats-it-for-complaints",
+          "instructions": "A visitor left three complaints about this page. For each one, find the section that should fix it and improve its words. Ask the AI or edit them yourself.\n\n1.  “I can’t tell what this site is.”\n2.  “I don’t know what they sell.”\n3.  “I don’t know what to click.”"
+        },
+        {
+          "id": "whats-it-for-check",
+          "title": "Multiple choice q",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 108,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "whats-it-for-q1",
+              "questionTitle": "A visitor lands on a bakery page and wonders, “What do they sell?” Which block answers that?",
+              "choices": [
+                { "id": "a", "text": "Hero section" },
+                { "id": "b", "text": "Feature cards" },
+                { "id": "c", "text": "Interactive canvas" },
+                { "id": "d", "text": "Call-to-action" }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "whats-it-for-project",
+          "title": "Apply to Project",
+          "kind": "level",
+          "level": "adaptive-hoai-project-whats-it-for",
+          "project": true,
+          "instructions": "**Do This**\n\n1.  Run your page and look at it like a first-time visitor.\n2.  Ask each question and see if your page answers it:\n\n      - Hero section: What is this site?\n      - Feature cards: What can I get here?\n      - Interactive canvas: What can I try?\n      - Call-to-action: What should I do next?\n3.  Pick at least two blocks that don’t answer their question yet.\n4.  Change them so they do. Ask the AI or edit them yourself.\n5.  Run your page again. Would a visitor get an answer now?\n\nMissing a block? Add it so your page answers that question.",
+          "instructionsPrompt": "Have the student look at their page like a first-time visitor and check whether each block answers its question: hero section, what is this site; feature cards, what can I get here; interactive canvas, what can I try; call-to-action, what should I do next. Have them pick at least two blocks that don’t answer their question yet and change them, by prompting the AI or editing by hand, or add a missing block. Name the actual blocks and text on their page."
+        }
+      ]
+    },
+    {
+      "id": "speak-web-dev",
+      "title": "Speak Web Dev",
+      "description": "Name the language a change needs (HTML, CSS, or JavaScript) and use it in a prompt",
+      "skillIds": ["language"],
+      "requires": ["whats-it-for", "find-the-clue"],
+      "steps": [
+        {
+          "id": "speak-web-dev-panel",
+          "title": "Speak the language of web development",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-test-speak-web-dev-f0bfc4b1-acf3-47d0-83bd-1d310892f3fd",
+              "imageUrl": "https://images.code.org/114ece31c663d795d0e4238bba6a6ca4-button-stages-labeled.png",
+              "text": "Speak the language of web development \n\n**HTML** says what’s on the page.\n\n**CSS** says how it looks.\n\n**JavaScript** says what it does.",
+              "layout": "text-top-center"
+            }
+          ]
+        },
+        {
+          "id": "speak-web-dev-practice",
+          "title": "“Right file, right fix”",
+          "kind": "level",
+          "level": "adaptive-hoai-speak-web-dev-dogwash",
+          "instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nRun your page after each fix to check it."
+        },
+        {
+          "id": "speak-web-dev-project",
+          "title": "Project",
+          "kind": "level",
+          "level": "adaptive-hoai-project-speak-web-dev",
+          "project": true,
+          "instructions": "Pick one change you want on your page. Decide which language it needs: words (HTML), look (CSS), or action (JavaScript). Then ask the AI for the change using the name of the section and the language in your prompt.\n\nExample: “Use CSS to make the call-to-action bigger and pink.”",
+          "instructionsPrompt": "Have the student pick one change for their page, decide which language it needs (words: HTML, look: CSS, action: JavaScript), and prompt the AI with the section’s name, a reason tied to that section’s purpose, and the language, as in: Use CSS to make the call-to-action bigger and pink. Name an actual section on their page."
+        }
+      ]
+    },
+    {
+      "id": "find-the-clue",
+      "title": "Find the Clue",
+      "description": "Point to the part of an error message or broken page that signals what's wrong",
+      "skillIds": ["debug"],
+      "requires": ["spot-section"],
+      "steps": [
+        {
+          "id": "find-the-clue-question",
+          "title": "MC Question",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 109,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "find-the-clue-q1",
+              "questionTitle": "A page shows a broken-picture icon where a photo should be. The tutor shows this message:\n\nskateboard-photo.jpeg 404 (Not Found)\n\nYou’re asking the AI for help. Which part is the most useful clue to give it?",
+              "choices": [
+                { "id": "a", "text": "404" },
+                { "id": "b", "text": "skateboard-photo.jpeg" },
+                { "id": "c", "text": "(Not Found)" },
+                { "id": "d", "text": "Nothing, just say “it’s broken”" }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "find-the-clue-panel",
+          "title": "Clues to give the AI",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-test-debug-panel-7c58b191-99aa-48b8-a5a0-cb52c9832b63",
+              "imageUrl": "https://images.code.org/cbf8eaca3145a78c6bb9a734abb14993-Broken image, linked code clue.png",
+              "text": "###Clues to give the AI\n\n- What you see: a broken-picture icon\n- What the error says: the file name and “Not Found”\n\nThe more clues you give, the better the fix.",
+              "layout": "text-bottom-right"
+            }
+          ]
+        },
+        {
+          "id": "find-the-clue-practice",
+          "title": "Fix the missing photo",
+          "kind": "level",
+          "level": "adaptive-hoai-find-the-clue-photo",
+          "instructions": "**Do This**\n\n1.  Run the page. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Run the page again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
         }
       ]
     }
