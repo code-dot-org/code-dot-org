@@ -207,9 +207,6 @@ interface GenerateImagePaneProps {
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
-  /** The image panel is the level: no gallery, no modal, always open on a
-      blank generate form. */
-  imageLevel?: boolean;
 }
 
 /**
@@ -254,7 +251,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   advanced,
   defaultStyle,
   paintDisabled,
-  imageLevel,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -791,15 +787,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
-  // An image level opens on a blank form, and returns to one whenever a
-  // close or delete clears the target: the level is there to make an image,
-  // and the newest one of its type belongs to whichever level made it.
-  useEffect(() => {
-    if (imageLevel && !dialogTarget) {
-      setDialogTarget('new');
-    }
-  }, [imageLevel, dialogTarget]);
-
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -809,36 +796,34 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      {!imageLevel && (
-        <div className={moduleStyles.imageGallery}>
-          {/* First slot, so it never hides behind a scroll. */}
-          <div className={moduleStyles.imageCard}>
-            <button
-              type="button"
-              className={moduleStyles.newImageCard}
-              onClick={openNewDialog}
-            >
-              <span aria-hidden>+</span>
-              <span className={moduleStyles.newImageLabel}>New image</span>
-            </button>
-          </div>
-          {images.map(({key, props}) => (
-            <GalleryCard
-              key={key}
-              animKey={key}
-              name={props?.name}
-              caption={advanced ? props?.name : undefined}
-              thumb={
-                getImageThumbnail(props?.name) ||
-                props?.dataURI ||
-                props?.sourceUrl ||
-                undefined
-              }
-              onOpen={openDialog}
-            />
-          ))}
+      <div className={moduleStyles.imageGallery}>
+        {/* First slot, so it never hides behind a scroll. */}
+        <div className={moduleStyles.imageCard}>
+          <button
+            type="button"
+            className={moduleStyles.newImageCard}
+            onClick={openNewDialog}
+          >
+            <span aria-hidden>+</span>
+            <span className={moduleStyles.newImageLabel}>New image</span>
+          </button>
         </div>
-      )}
+        {images.map(({key, props}) => (
+          <GalleryCard
+            key={key}
+            animKey={key}
+            name={props?.name}
+            caption={advanced ? props?.name : undefined}
+            thumb={
+              getImageThumbnail(props?.name) ||
+              props?.dataURI ||
+              props?.sourceUrl ||
+              undefined
+            }
+            onOpen={openDialog}
+          />
+        ))}
+      </div>
 
       {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
@@ -889,7 +874,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           advanced={advanced}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
-          imageLevel={imageLevel}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}

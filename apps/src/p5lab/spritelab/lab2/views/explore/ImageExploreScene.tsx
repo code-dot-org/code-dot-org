@@ -1,7 +1,6 @@
 // An image level laid out as two halves: the picture on the left, the
-// controls on the right. Reached by level_mode.imageUi or ?image-ui=explore.
-// A host with its own chrome (the image dialog) passes a layout that places
-// the same parts itself.
+// controls on the right. A host with its own chrome (the image dialog)
+// passes a layout that places the same parts itself.
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';

@@ -26,7 +26,6 @@
       "imageType": "sprite",
       "imageSubject": "object",
       "imageRole": "treasure",
-      "imageUi": "explore",
       "sentence": "treasure"
     },
     "guide_steps": [

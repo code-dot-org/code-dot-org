@@ -68,7 +68,6 @@ import {
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
   isImageMode,
-  isImageUi,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -156,13 +155,6 @@ registerReducers({
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
-
-// ?image-ui=explore tries the two-half image scene on any image level; a
-// level opts in with level_mode.imageUi.
-function getImageUiParam() {
-  const value = queryParams('image-ui');
-  return isImageUi(value) ? value : undefined;
-}
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -1801,8 +1793,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  const imageUi = getImageUiParam() ?? levelProperties.levelMode?.imageUi;
-
   // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
@@ -1856,31 +1846,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       />
       <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
-        // The image panel is the whole lab, with the floating guide over it.
+        // The image scene is the whole lab: its panel is the Guide,
+        // instructions included.
         <div className={moduleStyles.imageLevelArea}>
-          {imageUi ? (
-            // The explore scene is its own Guide, instructions included.
-            <ImageExploreScene
-              imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
-              imageSubject={levelProperties.levelMode?.imageSubject}
-              sentenceId={levelProperties.levelMode?.sentence}
-              defaultStyle={DEFAULT_IMAGE_STYLE}
-              imageRole={levelProperties.levelMode?.imageRole}
-              uploadImage={uploadImage}
-              instructions={guide.text}
-              showTts={showTtsFor(levelProperties)}
-            />
-          ) : (
-            <>
-              <GenerateImagePane imageLevel {...imagePaneProps} />
-              <GenerateSpriteLab
-                levelMode={levelProperties.levelMode}
-                instructions={guide.text}
-                showContinue={guide.showContinue}
-                levelProperties={levelProperties}
-              />
-            </>
-          )}
+          <ImageExploreScene
+            imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
+            imageSubject={levelProperties.levelMode?.imageSubject}
+            sentenceId={levelProperties.levelMode?.sentence}
+            defaultStyle={DEFAULT_IMAGE_STYLE}
+            imageRole={levelProperties.levelMode?.imageRole}
+            uploadImage={uploadImage}
+            instructions={guide.text}
+            showTts={showTtsFor(levelProperties)}
+          />
         </div>
       ) : (
         <TabShell

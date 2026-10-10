@@ -35,8 +35,6 @@ interface ImageExploreDialogBodyProps {
       and style; the host names it. */
   onPaintManually?: (draft: Omit<NewImageDraft, 'name'>) => void;
   onGenerateStart?: () => void;
-  /** An image level, brand-new image: there is nowhere to cancel to. */
-  hideCancel?: boolean;
 }
 
 const ImageExploreDialogBody: React.FunctionComponent<
@@ -50,7 +48,6 @@ const ImageExploreDialogBody: React.FunctionComponent<
   onCancel,
   onPaintManually,
   onGenerateStart,
-  hideCancel,
 }) => {
   const layout = (parts: ExploreParts) => {
     const result = parts.mode === 'result';
@@ -99,16 +96,14 @@ const ImageExploreDialogBody: React.FunctionComponent<
           {parts.verdict && (
             <div className={moduleStyles.footerLeft}>{parts.verdict}</div>
           )}
-          {!hideCancel && (
-            <button
-              type="button"
-              className={moduleStyles.button}
-              disabled={generating}
-              onClick={onCancel}
-            >
-              Cancel
-            </button>
-          )}
+          <button
+            type="button"
+            className={moduleStyles.button}
+            disabled={generating}
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
           {result ? (
             <>
               <button
