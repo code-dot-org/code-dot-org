@@ -84,12 +84,7 @@ const ImageExploreDialogBody: React.FunctionComponent<
               <div className={moduleStyles.exploreType}>{parts.typeChoice}</div>
             )}
             {parts.sentence}
-            {!result && !generating && (
-              <div className={moduleStyles.exploreRow}>
-                {parts.styleChoice}
-                {parts.animateChoice}
-              </div>
-            )}
+            {!result && !generating && parts.styleChoice}
             {parts.error}
             {parts.fact}
           </section>
@@ -159,7 +154,6 @@ const ImageExploreDialogBody: React.FunctionComponent<
       imageSubject={imageSubject}
       defaultStyle={defaultStyle}
       typeChoice={typeChoice}
-      animateChoice
       onKeep={onKeep}
       onGenerateStart={onGenerateStart}
       method="explore-dialog"

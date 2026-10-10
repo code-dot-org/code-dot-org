@@ -619,14 +619,3 @@ $explore-pane-size: 420px;
 .exploreType {
   margin-bottom: 10px;
 }
-
-// The style dropdown at the left, the animation checkbox at the right.
-.exploreRow {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  > :last-child:not(:first-child) {
-    margin-left: auto;
-  }
-}

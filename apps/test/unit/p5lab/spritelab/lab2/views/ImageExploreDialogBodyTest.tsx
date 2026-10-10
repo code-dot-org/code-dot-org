@@ -86,7 +86,7 @@ describe('ImageExploreDialogBody', () => {
     sendEvent.mockReset();
   });
 
-  it('offers the Type choice, the words, the style and the animation checkbox, with Cancel and Generate in the footer', () => {
+  it('offers the Type choice, the words and the style, with Cancel and Generate in the footer', () => {
     renderBody();
     const type = screen.getByRole('combobox', {
       name: 'Type',
@@ -98,9 +98,6 @@ describe('ImageExploreDialogBody', () => {
       'Block',
     ]);
     expect(type.value).toBe('character');
-    expect(
-      screen.getByRole('checkbox', {name: 'Generate animation'})
-    ).toBeChecked();
     expect(footerNames()).toEqual(['Cancel', 'Generate']);
     expect(screen.getByRole('button', {name: 'Generate'})).toBeDisabled();
     // The blank pane opens the paint editor.
@@ -115,9 +112,6 @@ describe('ImageExploreDialogBody', () => {
       target: {value: 'block'},
     });
     expect(screen.getByRole('button', {name: 'Generate'})).toBeDisabled();
-    expect(
-      screen.queryByRole('checkbox', {name: 'Generate animation'})
-    ).toBeNull();
   });
 
   it('locks the Type when told to', () => {
@@ -125,16 +119,15 @@ describe('ImageExploreDialogBody', () => {
     expect(screen.queryByRole('combobox', {name: 'Type'})).toBeNull();
   });
 
-  it('makes one picture for a character when the animation is unchecked', async () => {
-    generateImage.mockResolvedValue(RESULT);
+  it('animates every character, and names the dialog as the surface', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
     renderBody();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'Generate animation'}));
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     });
-    expect(generateImage).toHaveBeenCalled();
-    expect(generateCharacterSet).not.toHaveBeenCalled();
+    expect(generateCharacterSet).toHaveBeenCalled();
+    expect(generateImage).not.toHaveBeenCalled();
     expect(sendEvent.mock.calls[0][1]).toMatchObject({
       method: 'explore-dialog',
     });

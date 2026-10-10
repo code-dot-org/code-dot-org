@@ -3,7 +3,6 @@
 // A host with its own chrome (the image dialog) passes a layout that places
 // the same parts itself.
 
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -118,8 +117,6 @@ export interface ExploreParts {
   /** The word menus, or the sentence read back while busy. */
   sentence: React.ReactNode;
   styleChoice: React.ReactNode;
-  /** The Generate animation checkbox, for a character when offered. */
-  animateChoice: React.ReactNode;
   error: React.ReactNode;
   fact: React.ReactNode;
   /** The question and the thumbs, once there is a picture. */
@@ -148,9 +145,6 @@ interface ImageExploreSceneProps {
   /** Offer the Type dropdown; imageType and imageSubject are then where it
       starts. */
   typeChoice?: boolean;
-  /** Offer the Generate animation checkbox for a character; without it
-      every character is animated. */
-  animateChoice?: boolean;
   /** Keep a made picture; the level's own saving when unset. */
   onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
   /** A generation request is leaving. */
@@ -171,7 +165,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   instructions,
   showTts,
   typeChoice,
-  animateChoice,
   onKeep,
   onGenerateStart,
   method = 'explore',
@@ -189,11 +182,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   const sentence = sentenceFor(imageType, imageSubject, sentenceId);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
-  const [animate, setAnimate] = useState(true);
-  // Every character is animated (or every one the student asks for); an
-  // object or a background is one picture.
-  const characterKind = imageType === 'sprite' && imageSubject !== 'object';
-  const canAnimate = characterKind && (!animateChoice || animate);
+  // Every character is animated; an object or a background is one picture.
+  const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
 
   const [mode, setMode] = useState<Mode>('edit');
   const [made, setMade] = useState<Made | null>(null);
@@ -504,17 +494,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       onChange={e => setStyle(e.target.value as ImageStyle)}
     />
   );
-  const animateChoiceNode =
-    animateChoice && characterKind ? (
-      <Checkbox
-        name="explore-animate"
-        label="Generate animation"
-        size="s"
-        checked={animate}
-        disabled={busy}
-        onChange={e => setAnimate(e.target.checked)}
-      />
-    ) : null;
   const statusNode = (
     <div className={styles.srOnly} role="status">
       {status}
@@ -601,7 +580,6 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           typeChoice: typeChoiceNode,
           sentence: sentenceNode,
           styleChoice,
-          animateChoice: animateChoiceNode,
           error: errorLine,
           fact: factNode,
           verdict: verdictNode,
