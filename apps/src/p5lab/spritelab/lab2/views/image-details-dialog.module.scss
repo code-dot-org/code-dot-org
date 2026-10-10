@@ -318,6 +318,265 @@
   flex-shrink: 0;
 }
 
+// --- Generate view ---
+
+// Hosts the transplanted guide Adlib (it brings its own dark panel and
+// glowing border); the native fieldset disable dims it while typed text
+// has precedence.
+.adlibGroup {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: opacity 0.15s ease;
+
+  &[disabled] {
+    opacity: 0.45;
+  }
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+
+  > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+// The row's roomier half (prompt, start-from choices).
+.wide {
+  flex: 1.6 1 0;
+}
+
+.promptLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.promptLabel span,
+.radioGroup legend {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: var(--dialog-text-secondary);
+}
+
+// Bootstrap's global legend styling draws a full-width underline; these
+// sit inset on the group's border like classic fieldset legends.
+.radioGroup legend {
+  width: auto;
+  margin: 0;
+  padding: 0 4px;
+  border: none;
+  line-height: inherit;
+}
+
+// A column of stacked groups sharing a row with the prompt.
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.promptInput {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--dialog-control-border);
+  border-radius: 6px;
+  background-color: var(--dialog-control-bg);
+  color: chrome.$panel-text;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 6px;
+  // The design system's disabled-label grey is illegible on the panel;
+  // remap the variable it reads to our secondary text (the greyed radio
+  // circle still marks the option disabled).
+  --text-neutral-disabled: var(--dialog-text-secondary);
+}
+
+// A Style option is taller than its text, so its radio, swatch and label
+// center on the row; the design system aligns a radio row to the top.
+.styleOption {
+  align-items: center;
+
+  i {
+    margin-top: 0;
+  }
+}
+
+// A Style option's sample: a swatch tile between the radio and the label,
+// the same size on both rows so the labels line up.
+.styleSwatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--dialog-control-border);
+  border-radius: 6px;
+  background: var(--dialog-control-bg);
+
+  // Drawn at 64px for exactly 2x; the pixel star keeps its hard edges.
+  img {
+    width: 32px;
+    height: 32px;
+
+    &.pixelArt {
+      image-rendering: pixelated;
+    }
+  }
+}
+
+// Wears .radioGroup's bordered look; this only fits the slider, which the
+// design system fixes at 300px (its track and input already stretch to
+// their container).
+
+.temperatureGroup > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.bot {
+  width: 64px;
+  height: 64px;
+  align-self: center;
+  object-fit: contain;
+}
+
+// The pixelated variant is a canvas whose bitmap IS the coarse art grid;
+// sized to the bitmap's aspect so the upscale stays square-pixeled.
+.botPixelated {
+  width: auto;
+  image-rendering: pixelated;
+}
+
+// The style choice picks which bot variant shows (both stay mounted).
+.botHidden {
+  display: none;
+}
+
+.reviewHint {
+  margin: 0;
+  font-size: 14px;
+  color: chrome.$panel-text;
+}
+
+// The rename field sits in the header; sized so its save/cancel buttons
+// stay next to it (the design system wrapper's own min-width is 300px,
+// wider than the input it draws).
+.header .headerNameField {
+  width: 280px;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.generateError {
+  color: var(--dialog-danger-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+// This dialog session's recent generations, pinned to the pane's bottom so
+// they sit beside the jumbo image's foot.
+.alternatives {
+  margin-top: auto;
+}
+
+.alternativesLabel {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.alternativesRow {
+  display: flex;
+  gap: 10px;
+  // Room for the selection ring, which extends past the tiles.
+  padding: 4px;
+}
+
+.alternativeThumb {
+  @include tile.image-tile(72px);
+}
+
+.alternativeSelected {
+  // The chosen one wears a ring in the active-selection brand color (the
+  // active tab's), held off the image by a panel-colored gap so it reads
+  // against any image in any theme.
+  box-shadow: 0 0 0 2px var(--dialog-panel-bg),
+    0 0 0 4px var(--borders-brand-teal-primary);
+  cursor: default;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+// A field's error, beside it rather than below, so its appearance doesn't
+// change the dialog's height.
+.nameRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+// Without a width the design system wrapper stretches to the whole pane,
+// leaving the error no room.
+.nameRow .nameField {
+  width: 240px;
+  min-width: 0;
+  flex-shrink: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Wraps within its row's leftover width instead of overflowing the panel;
+// the field beside it is taller than a few wrapped lines, so the dialog's
+// height still never changes.
+.inlineFieldError {
+  margin-bottom: 10px;
+  color: var(--dialog-danger-text);
+  font-size: 13px;
+  flex: 1;
+  min-width: 0;
+}
+
+// The fields can't take TextField's errorMessage prop (it renders its own
+// message below); restore the red border it would have drawn, keyed on the
+// aria-invalid the views set. Weighted to outrank the design system's
+// resting border (.textField.textField-color-* input).
+.dialogHost .nameRow .nameField input[aria-invalid='true'],
+.dialogHost .header .headerNameField input[aria-invalid='true'] {
+  border-color: var(--borders-error-primary);
+}
+
+.generateProgress {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
 // --- Explore view ---
 
 // Room for the word menus beside a larger picture; the panel's max-width

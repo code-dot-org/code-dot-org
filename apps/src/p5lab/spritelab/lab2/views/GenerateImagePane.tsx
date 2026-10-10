@@ -875,6 +875,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             setPainting('loading');
           }}
           onPaintNew={handlePaintNew}
+          newImageDraft={paintNewDraft ?? undefined}
           onRename={handleRename}
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}

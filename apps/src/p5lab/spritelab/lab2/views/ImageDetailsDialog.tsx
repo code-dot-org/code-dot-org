@@ -10,8 +10,6 @@ import {
   IMAGE_STYLE_LABELS,
   ImageGenerationMetadata,
   imageKindLabel,
-  ImageStyle,
-  ImageSubject,
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
@@ -23,24 +21,11 @@ import {
 
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
+import GenerateImageView, {ImageFormOptions} from './GenerateImageView';
 import ImageExploreDialogBody, {NewImageDraft} from './ImageExploreDialogBody';
 import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
-
-/** Level and session choices the image dialog forwards to the generate
-    view unchanged. */
-export interface ImageFormOptions {
-  /** Level-imposed type for new images; the Type choice is locked to it. */
-  lockedImageType?: ImageType;
-  /** Level-imposed subject for new sprites. */
-  lockedImageSubject?: ImageSubject;
-  /** Style the form starts on for new images (default smooth). */
-  defaultStyle?: ImageStyle;
-  /** A generation request is leaving; fires before the model call, so the
-      caller can stamp what the eventual result belongs to. */
-  onGenerateStart?: () => void;
-}
 
 interface ImageDetailsDialogProps extends ImageFormOptions {
   // null = the "new image" state: it opens straight into the generate view
@@ -63,6 +48,8 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   onPaint: () => void;
   /** New image only: open the paint editor on a blank canvas. */
   onPaintNew?: (draft: NewImageDraft) => void;
+  /** New image only: form values to reopen with after a cancelled paint. */
+  newImageDraft?: NewImageDraft;
   /** Rename this image everywhere; error or null. */
   onRename: (newName: string) => string | null;
   onDelete: () => void;
@@ -145,6 +132,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onClose,
   onPaint,
   onPaintNew,
+  newImageDraft,
   onRename,
   onDelete,
   imageType,
@@ -171,9 +159,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
-  // The generate view hosts the explore scene, which wants room for its
-  // word menus beside the picture.
-  const exploreView = view === 'generate';
+  // The student's generate view hosts the explore scene; the advanced
+  // dialog keeps its full form. Both want room for the word menus.
+  const exploreView = view === 'generate' && !advanced;
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState('');
   const [nameError, setNameError] = useState<string | null>(null);
@@ -306,8 +294,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         </div>
       )}
       {exploreView ? (
-        // The explore scene's sentence and picture. A new image's name is
-        // the next free one for its type.
+        // The student form: the explore scene's sentence and picture. A
+        // new image's name is the next free one for its type.
         <ImageExploreDialogBody
           imageType={
             isNew ? lockedImageType ?? 'sprite' : imageType || 'sprite'
@@ -336,6 +324,36 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           }
           onGenerateStart={onGenerateStart}
           hideCancel={imageLevel && isNew}
+        />
+      ) : view === 'generate' ? (
+        <GenerateImageView
+          existing={
+            isNew
+              ? undefined
+              : {
+                  generation,
+                  imageType: imageType || 'sprite',
+                  getDataURI,
+                }
+          }
+          thumb={isNew ? undefined : thumb}
+          sheet={isNew ? undefined : sheet}
+          thumbPixelated={pixelated}
+          create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
+          lockedImageType={lockedImageType}
+          lockedImageSubject={lockedImageSubject}
+          advanced={advanced}
+          defaultStyle={defaultStyle}
+          onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
+          onGenerateStart={onGenerateStart}
+          onAccept={async (result, newName) => {
+            await onAcceptGenerated(result, newName);
+            setView('details');
+          }}
+          // A brand-new image has no summary to fall back to.
+          onCancel={isNew ? onClose : () => setView('details')}
+          hideCancel={imageLevel && isNew}
+          onDelete={isNew ? undefined : onDelete}
         />
       ) : (
         <>
@@ -491,7 +509,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           mode={mode}
           className={classNames(
             moduleStyles.dialog,
-            exploreView && moduleStyles.dialogWide
+            view === 'generate' && moduleStyles.dialogWide
           )}
         >
           {panelBody}

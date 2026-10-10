@@ -6,6 +6,10 @@ import ImageDetailsDialog, {
   resolutionLabel,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/ImageDetailsDialog';
 
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/GenerateImageView', () => ({
+  __esModule: true,
+  default: () => <div data-generate-view />,
+}));
 jest.mock(
   '@cdo/apps/p5lab/spritelab/lab2/views/ImageExploreDialogBody',
   () => ({
@@ -118,9 +122,10 @@ describe('ImageDetailsDialog generate view', () => {
     ).toBe('false');
   });
 
-  it('uses the explore form in the advanced dialog too', () => {
+  it('keeps the full form for the advanced dialog', () => {
     renderDialog({animKey: null, name: undefined, advanced: true});
-    expect(document.querySelector('[data-explore-body]')).toBeTruthy();
+    expect(document.querySelector('[data-generate-view]')).toBeTruthy();
+    expect(document.querySelector('[data-explore-body]')).toBeNull();
   });
 });
 
