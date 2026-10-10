@@ -27,9 +27,6 @@
     },
     "image_role_defaults": {
       "sprite": "hero",
-      "gamelab_addBehaviorSimple": [
-        "friend"
-      ],
       "spritelab2_beginsBehavior": [
         "friend"
       ],

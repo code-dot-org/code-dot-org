@@ -97,7 +97,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   },
   {
     // Scene-driven storytelling: place and size characters, speech, click and
-    // timer events, scene jumps, and the simple movement behaviors.
+    // timer events, and scene jumps. No behaviours: those are for platform
+    // scenes for now.
     name: 'Story',
     types: [
       'gamelab_setBackgroundImageAs',
@@ -111,9 +112,6 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_atTime',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
-      'gamelab_addBehaviorSimple',
-      'spritelab2_movingLeft',
-      'spritelab2_patrollingLeftRight',
     ],
   },
 ];
