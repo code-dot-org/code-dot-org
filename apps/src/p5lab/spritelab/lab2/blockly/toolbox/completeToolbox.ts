@@ -25,7 +25,6 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     'spritelab2_movingLeft',
     'spritelab2_movingWithArrowKeys',
     'spritelab2_patrollingLeftRight',
-    'spritelab2_patrollingOnBlocks',
   ],
   'Game Design': [
     GO_TO_SCENE_BLOCK_TYPE,

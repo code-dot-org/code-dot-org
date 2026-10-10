@@ -1,22 +1,7 @@
-import {Order} from 'blockly/javascript';
-
-import {BlockStyles} from '@cdo/apps/blockly/constants';
-import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
-// The behaviour value block of the older "begins" pair; the begins block
-// with a dropdown (beginsBehavior.ts) is what the unit offers now.
-const definition: BlockJson = {
-  type: 'spritelab2_patrollingOnBlocks',
-  message0: 'patrolling left and right on blocks',
-  output: 'Behavior',
-  style: BlockStyles.BEHAVIOR,
-};
-
-const generator: GeneratorFunction = () => [
-  'patrollingOnBlocks()',
-  Order.FUNCTION_CALL,
-];
+// The interpreted half of the three walks on blocks the begins block
+// offers (beginsBehavior.ts), which carries this source as its helperCode.
 
 // Ticks a walker stands at each turn before setting off the other way:
 // about a quarter of a second, enough to read as looking around.
@@ -43,7 +28,7 @@ export const FOLLOW_REACH_PX = 20;
 // left it); 'air' while falling, when nothing is read as being blocked.
 // Patrolling turns at every stop; wandering turns and stands at random;
 // following walks toward the player and simply stops.
-const helperCode = [
+export const WALKERS_HELPER_CODE = [
   'var WALK_SPEED = 2;',
   'function walkOnBlocks(spriteId, dir) {',
   '  usePlatformBody(spriteId);',
@@ -148,5 +133,3 @@ const helperCode = [
   '  };',
   '}',
 ].join('\n');
-
-export default {definition, generator, helperCode};

@@ -4,6 +4,8 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 import {noteImageFieldValue} from '../../imageReferences';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
+import {WALKERS_HELPER_CODE} from './walkingOnBlocks';
+
 export const BEGINS_BEHAVIOR_BLOCK_TYPE = 'spritelab2_beginsBehavior';
 
 /** The dropdown's behaviours: label, and the helper that makes one. */
@@ -45,7 +47,7 @@ export const FLOAT_SWAY_Y_PX = 8;
 export const FLOAT_X_RATE = 2;
 export const FLOAT_Y_RATE = 6;
 
-const helperCode = [
+const FLOATING_HELPER_CODE = [
   'function floating() {',
   '  return {',
   '    func: function (spriteId) {',
@@ -68,5 +70,7 @@ const helperCode = [
   '  };',
   '}',
 ].join('\n');
+
+const helperCode = `${WALKERS_HELPER_CODE}\n${FLOATING_HELPER_CODE}`;
 
 export default {definition, generator, helperCode};

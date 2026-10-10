@@ -1,6 +1,7 @@
-import walkingOnBlocks, {
+import {
   FOLLOW_REACH_PX,
   TURN_PAUSE_TICKS,
+  WALKERS_HELPER_CODE,
   WANDER_STAND_EVERY,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/walkingOnBlocks';
 
@@ -96,7 +97,7 @@ function walk({
     'platformGrounded',
     'platformSupportAhead',
     'randomNumber',
-    `${walkingOnBlocks.helperCode}\nreturn ${behavior}();`
+    `${WALKERS_HELPER_CODE}\nreturn ${behavior}();`
   )(
     commands.getProp,
     commands.setProp,

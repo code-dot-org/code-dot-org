@@ -22,7 +22,6 @@ import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setWeather from './setWeather';
 import thePlayer from './thePlayer';
-import walkingOnBlocks from './walkingOnBlocks';
 import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -41,7 +40,6 @@ const labBlockDefinitions: {
   movingLeft,
   movingWithArrowKeys,
   patrollingLeftRight,
-  walkingOnBlocks,
   beginsBehavior,
   makePlatformPlayer,
   makeSpriteAtGrid,
