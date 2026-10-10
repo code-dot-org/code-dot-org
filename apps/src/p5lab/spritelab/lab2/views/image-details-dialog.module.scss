@@ -615,6 +615,11 @@ $explore-pane-size: 420px;
   }
 }
 
+// The Type choice stands a little apart from the sentence it decides.
+.exploreType {
+  margin-bottom: 10px;
+}
+
 // The style dropdown at the left, the animation checkbox at the right.
 .exploreRow {
   display: flex;

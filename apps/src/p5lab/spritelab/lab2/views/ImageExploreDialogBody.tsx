@@ -80,7 +80,9 @@ const ImageExploreDialogBody: React.FunctionComponent<
             aria-label="Make your picture"
           >
             {parts.status}
-            {parts.typeChoice}
+            {parts.typeChoice && (
+              <div className={moduleStyles.exploreType}>{parts.typeChoice}</div>
+            )}
             {parts.sentence}
             {!result && !generating && (
               <div className={moduleStyles.exploreRow}>
