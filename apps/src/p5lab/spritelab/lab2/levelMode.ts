@@ -1,7 +1,6 @@
 // What kind of level this is, and everything that follows from it: the
 // surfaces a student sees, and the image controls they get.
 
-import {ImageAdlibSet} from './ai/images/imageAdlibs';
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
@@ -20,8 +19,6 @@ export interface LevelMode {
       is the image_role_defaults level property (imageRoleDefaults.ts), which code
       and world levels use to open their dropdowns on an image by role. */
   imageRole?: string;
-  /** Word combos to offer, in place of the set the kind implies. */
-  adlibs?: ImageAdlibSet;
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
@@ -53,12 +50,6 @@ const TABS: Record<LevelModeKind, Tab[]> = {
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
-/** Which combos a kind offers when the level names none. */
-const ADLIBS: Partial<Record<LevelModeKind, ImageAdlibSet>> = {
-  image: 'simple',
-  freeplay: 'expanded',
-};
-
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   return mode ? TABS[mode.kind] : undefined;
 }
@@ -71,10 +62,4 @@ export function isImageMode(mode: LevelMode | undefined): boolean {
 /** The only mode offering the prompt box and the paint tools. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
-}
-
-export function adlibSetForMode(
-  mode: LevelMode | undefined
-): ImageAdlibSet | undefined {
-  return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
 }

@@ -42,7 +42,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks} from '../addBlocks';
-import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -66,7 +65,6 @@ import {
 import {defaultImageName, defaultRole} from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
-  adlibSetForMode,
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
   isImageMode,
@@ -158,18 +156,6 @@ registerReducers({
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
-
-// ?image-adlibs=<set> previews the adlib combos without a level change.
-function getImageAdlibSetParam(): ImageAdlibSet | undefined {
-  const value = queryParams('image-adlibs');
-  return isImageAdlibSet(value) ? value : undefined;
-}
-
-// ?image-free-text=true restores the free-text prompt box on adlib-only
-// levels, for internal testing.
-function getImageFreeTextParam(): boolean {
-  return queryParams('image-free-text') === 'true';
-}
 
 // ?image-ui=explore tries the two-half image scene on any image level; a
 // level opts in with level_mode.imageUi.
@@ -268,8 +254,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => queryParams('world-tab') === 'true',
     []
   );
-  const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
-  const imageFreeTextParam = useMemo(getImageFreeTextParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one. Level edit modes author starter images, which needs the
   // naming controls.
@@ -1828,12 +1812,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedImageSubject: levelProperties.levelMode?.imageSubject,
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
-    adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
-    // Every level takes its words from the combos; the typed prompt box
-    // shows only behind ?image-free-text=true. Freeplay hands back the
-    // paint tools.
-    adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
+    // Freeplay hands back the paint tools.
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
   };
 

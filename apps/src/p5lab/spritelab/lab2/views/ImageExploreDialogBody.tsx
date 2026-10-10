@@ -11,10 +11,16 @@ import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {ImageStyle, ImageSubject, ImageType} from '../ai/images/types';
 
 import ImageExploreScene, {ExploreParts} from './explore/ImageExploreScene';
-import {NewImageDraft} from './GenerateImageView';
 import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
+
+/** What a new image has settled on, enough to start painting it. */
+export interface NewImageDraft {
+  name: string;
+  imageType: ImageType;
+  style: ImageStyle;
+}
 
 interface ImageExploreDialogBodyProps {
   /** Where the Type choice starts, or the type the image is locked to. */

@@ -15,10 +15,6 @@ jest.mock(
     ),
   })
 );
-jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/GenerateImageView', () => ({
-  __esModule: true,
-  default: () => <div data-generate-view />,
-}));
 
 // The summary view's primary button reads Accept when this dialog session
 // replaced the image it opened on (including starting from nothing), and
@@ -111,7 +107,6 @@ describe('ImageDetailsDialog generate view', () => {
         .querySelector('[data-explore-body]')
         ?.getAttribute('data-type-choice')
     ).toBe('true');
-    expect(document.querySelector('[data-generate-view]')).toBeNull();
   });
 
   it('locks the Type for a new image on a level that sets it', () => {
@@ -123,10 +118,9 @@ describe('ImageDetailsDialog generate view', () => {
     ).toBe('false');
   });
 
-  it('keeps the full form for the advanced dialog', () => {
+  it('uses the explore form in the advanced dialog too', () => {
     renderDialog({animKey: null, name: undefined, advanced: true});
-    expect(document.querySelector('[data-generate-view]')).toBeTruthy();
-    expect(document.querySelector('[data-explore-body]')).toBeNull();
+    expect(document.querySelector('[data-explore-body]')).toBeTruthy();
   });
 });
 

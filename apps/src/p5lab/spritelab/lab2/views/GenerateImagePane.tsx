@@ -17,7 +17,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI, dataURIToBytes} from '../ai/images/encoding';
-import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -38,8 +37,8 @@ import {
 } from '../imageTrim';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 
-import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
+import type {NewImageDraft} from './ImageExploreDialogBody';
 import {
   AnimationPatch,
   createNamedAnimation,
@@ -204,10 +203,6 @@ interface GenerateImagePaneProps {
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
-  /** Offer this tier of adlib prompt combos in the student dialog. */
-  adlibSet?: ImageAdlibSet;
-  /** The adlib is the only prompt input: no free-text box. */
-  adlibOnly?: boolean;
   /** Style the generate form starts on for new images. */
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
@@ -257,8 +252,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   lockedImageSubject,
   imageRole,
   advanced,
-  adlibSet,
-  adlibOnly,
   defaultStyle,
   paintDisabled,
   imageLevel,
@@ -882,7 +875,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             setPainting('loading');
           }}
           onPaintNew={handlePaintNew}
-          newImageDraft={paintNewDraft ?? undefined}
           onRename={handleRename}
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
@@ -894,8 +886,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           advanced={advanced}
-          adlibSet={adlibSet}
-          adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
           imageLevel={imageLevel}
