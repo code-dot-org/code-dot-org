@@ -26,18 +26,16 @@ interface AuthoredCategory {
  */
 export function toolboxForSceneType(
   toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined,
-  sentenceType: SceneType | undefined
+  sceneType: SceneType | undefined
 ): BlocklyCore.utils.toolbox.ToolboxInfo | undefined {
-  if (!toolbox || !sentenceType || toolbox.kind !== 'categoryToolbox') {
+  if (!toolbox || !sceneType || toolbox.kind !== 'categoryToolbox') {
     return toolbox;
   }
   const categories = (toolbox.contents || []) as AuthoredCategory[];
-  if (
-    !categories.some(entry => entry.name === CATEGORY_FOR_TYPE[sentenceType])
-  ) {
+  if (!categories.some(entry => entry.name === CATEGORY_FOR_TYPE[sceneType])) {
     return toolbox;
   }
-  const wanted = [CATEGORY_FOR_TYPE[sentenceType], SHARED_CATEGORY];
+  const wanted = [CATEGORY_FOR_TYPE[sceneType], SHARED_CATEGORY];
   return {
     kind: 'flyoutToolbox',
     contents: wanted.flatMap(

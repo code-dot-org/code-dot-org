@@ -290,11 +290,19 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         // new image's name is the next free one for its type.
         <SentenceDialogBody
           imageType={
-            isNew ? lockedImageType ?? 'sprite' : imageType || 'sprite'
+            isNew
+              ? newImageDraft?.imageType ?? lockedImageType ?? 'sprite'
+              : imageType || 'sprite'
           }
-          imageSubject={isNew ? lockedImageSubject : generation?.subject}
+          imageSubject={
+            isNew
+              ? newImageDraft?.subject ?? lockedImageSubject
+              : generation?.subject
+          }
           typeChoice={isNew && !lockedImageType}
-          defaultStyle={defaultStyle ?? 'smooth'}
+          defaultStyle={
+            (isNew && newImageDraft?.style) || defaultStyle || 'smooth'
+          }
           onKeep={async result => {
             await onAcceptGenerated(
               result,
@@ -304,7 +312,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             );
             setView('details');
           }}
-          onCancel={isNew ? onClose : () => setView('details')}
+          onCancel={onClose}
           onPaintManually={
             isNew && !paintDisabled && onPaintNew
               ? draft =>

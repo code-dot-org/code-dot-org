@@ -53,12 +53,12 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
             maxLength={SCENE_NAME_MAX_LENGTH}
             onChange={e => setName(e.target.value)}
           />
-          <fieldset className={moduleStyles.sentenceTypeGroup}>
+          <fieldset className={moduleStyles.sceneTypeGroup}>
             <legend>What is this scene for?</legend>
             {SCENE_TYPE_LABELS.map(({value, label}) => (
               <RadioButton
                 key={value}
-                name="sentenceType"
+                name="sceneType"
                 value={value}
                 label={label}
                 size="s"

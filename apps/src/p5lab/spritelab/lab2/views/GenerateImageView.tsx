@@ -475,7 +475,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
 
           {/* Native disable dims the sentence while typed text wins. */}
           <fieldset
-            className={moduleStyles.adlibGroup}
+            className={moduleStyles.wordMenusGroup}
             disabled={generating || freeTextEntered}
           >
             <WordMenus

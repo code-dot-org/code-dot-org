@@ -124,7 +124,7 @@ export interface SentenceSceneParts {
   changeWords: () => void;
   keep: () => void;
   /** The style and the kind the host's own paint entry would start from. */
-  draft: {imageType: ImageType; style: ImageStyle};
+  draft: {imageType: ImageType; subject?: ImageSubject; style: ImageStyle};
 }
 
 interface SentenceSceneProps {
@@ -585,7 +585,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           generate,
           changeWords,
           keep,
-          draft: {imageType, style},
+          draft: {imageType, subject: imageSubject, style},
         })}
       </>
     );

@@ -1,8 +1,8 @@
 // The sentences a student builds from word chips, on an image level or in
 // the New image dialog, and the prompt text a filled sentence becomes. A
-// sentence is a row of segments: fixed text, a slot that takes one word, or a phrase
-// whose words show only when its slot is filled. A required slot must be
-// filled before the sentence can generate.
+// sentence is a row of segments: fixed text, a slot that takes one word,
+// or a phrase whose words show only when its slot is filled. A required
+// slot must be filled before the sentence can generate.
 
 import {
   BodyPlan,
@@ -48,7 +48,7 @@ export type Choices = Record<string, string | undefined>;
 export const WORD_DRAG_TYPE = 'application/x-spritelab2-word';
 
 // The manifest: named word sets, and sentences whose slots name a set or
-// carry their own words. Separate from the image dialog's adlib manifest.
+// carry their own words.
 interface ManifestSlot {
   label: string;
   words: string | Word[];
@@ -91,7 +91,7 @@ function loadSentences(manifest: Manifest): Record<string, Sentence> {
 
 const SENTENCES = loadSentences(manifestJson as Manifest);
 // The sentences sentenceFor returns; a missing one fails at load.
-['character', 'object', 'place'].forEach(id => {
+['character', 'object', 'place', 'block'].forEach(id => {
   if (!SENTENCES[id]) {
     throw new Error(`sentences.json: no "${id}" sentence`);
   }

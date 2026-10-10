@@ -1,7 +1,5 @@
 // The image dialog's generate view: the sentence scene's parts laid out in
-// the dialog's chrome. The picture and Behind the scenes on the left, the
-// Type choice and the sentence on the right; the verdict and the buttons
-// in the footer.
+// the dialog's chrome.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -19,6 +17,7 @@ import moduleStyles from './image-details-dialog.module.scss';
 export interface NewImageDraft {
   name: string;
   imageType: ImageType;
+  subject?: ImageSubject;
   style: ImageStyle;
 }
 
@@ -81,7 +80,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
             aria-label="Make your picture"
           >
             {parts.status}
-            {parts.typeChoice && (
+            {!result && !generating && parts.typeChoice && (
               <div className={moduleStyles.sentenceType}>
                 {parts.typeChoice}
               </div>

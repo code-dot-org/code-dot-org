@@ -155,6 +155,20 @@ describe('SentenceDialogBody', () => {
     expect(onKeep).toHaveBeenCalledWith(RESULT);
   });
 
+  it('hides the Type and Style choices while there is a picture, and shows them again for new words', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderBody();
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    expect(screen.queryByRole('combobox', {name: 'Type'})).toBeNull();
+    expect(screen.queryByRole('combobox', {name: 'Style'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Change words'}));
+    expect(screen.getByRole('combobox', {name: 'Type'})).toBeTruthy();
+    expect(screen.getByRole('combobox', {name: 'Style'})).toBeTruthy();
+  });
+
   it('starts the paint editor from the blank pane with the kind and style chosen', () => {
     const {onPaintManually} = renderBody();
     fireEvent.change(screen.getByRole('combobox', {name: 'Type'}), {
@@ -163,6 +177,7 @@ describe('SentenceDialogBody', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Paint manually'}));
     expect(onPaintManually).toHaveBeenCalledWith({
       imageType: 'block',
+      subject: undefined,
       style: 'pixel',
     });
   });
