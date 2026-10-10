@@ -108,6 +108,8 @@ const PLATFORM_SCENE_MARKERS = [
   'setAsPlatformPlayer(',
   "'walls'",
 ];
+// The world prelude's ladder spawns: a scene with any has ladders to climb.
+const LADDER_SCENE_MARKER = "'ladders'";
 
 /**
  * Stand-in for the StudioApp singleton: exactly the members the classic
@@ -829,6 +831,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.onControlsChange({
         platformer: this.usesPlatformPhysics_ && this.isPlatformScene(),
         gravity: this.platformGravity_,
+        ladders: (this.userCode || '').includes(LADDER_SCENE_MARKER),
       });
     }
   }

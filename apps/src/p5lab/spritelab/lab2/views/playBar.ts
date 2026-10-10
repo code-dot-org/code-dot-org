@@ -8,17 +8,24 @@ export interface ControlsState {
   /** A platform scene, where the player jumps against gravity. */
   platformer: boolean;
   gravity: number;
+  /** The scene places ladders, which the down arrow climbs. */
+  ladders: boolean;
 }
 
-/** Left and right plus Jump; left, right, up and down; or no arrows. */
-export type ArrowSet = 'jump' | 'steer' | 'none';
+/** Left and right plus Jump; the same plus Down, for ladders; left, right,
+    up and down; or no arrows. */
+export type ArrowSet = 'jump' | 'climb' | 'steer' | 'none';
 
-/** A story scene has nothing to steer. */
+/** A story scene has nothing to steer. Under gravity the up arrow jumps,
+    and climbs a ladder, so only Down needs its own button. */
 export function arrowSetFor(state: ControlsState): ArrowSet {
   if (!state.platformer) {
     return 'none';
   }
-  return state.gravity !== 0 ? 'jump' : 'steer';
+  if (state.gravity === 0) {
+    return 'steer';
+  }
+  return state.ladders ? 'climb' : 'jump';
 }
 
 export type GameKey = 'left' | 'right' | 'up' | 'down';

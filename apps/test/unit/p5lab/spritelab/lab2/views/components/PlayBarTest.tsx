@@ -24,6 +24,10 @@ describe('PlayBar', () => {
     );
     expect(names()).toEqual(['Stop', 'Left', 'Jump', 'Right']);
     rerender(
+      <PlayBar playing arrows="climb" onPlay={jest.fn()} onStop={jest.fn()} />
+    );
+    expect(names()).toEqual(['Stop', 'Left', 'Jump', 'Right', 'Down']);
+    rerender(
       <PlayBar playing arrows="steer" onPlay={jest.fn()} onStop={jest.fn()} />
     );
     expect(names()).toEqual(['Stop', 'Left', 'Right', 'Up', 'Down']);
