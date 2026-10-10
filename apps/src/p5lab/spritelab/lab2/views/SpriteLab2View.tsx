@@ -1292,9 +1292,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       codeWrapperRef.current.inert = activeTab !== 'Code';
     }
     if (imagesWrapperRef.current) {
-      imagesWrapperRef.current.inert = !picturesOpen;
+      // The dialog a pick opened renders inside the closed drawer, and
+      // inert would reach it: the drawer stays live for as long as the
+      // pick does (the dialog holds the focus meanwhile).
+      imagesWrapperRef.current.inert = !picturesOpen && !pickRequest;
     }
-  }, [activeTab, picturesOpen, imagesMounted]);
+  }, [activeTab, picturesOpen, imagesMounted, pickRequest]);
   // Escape inside the drawer closes it. The image dialogs render in a
   // portal, so their own Escape never reaches here.
   useEffect(() => {

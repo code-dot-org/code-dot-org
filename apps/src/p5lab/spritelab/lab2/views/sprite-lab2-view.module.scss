@@ -1,6 +1,7 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
+@use '../../../../lab2/views/components/layout/variables';
 
 .labRow {
   display: flex;
@@ -715,7 +716,9 @@ $pictures-drawer-width: 480px;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 6;
+  // Above the floating guide: the image dialog renders inside the drawer,
+  // not in a portal, so it can be no higher than the drawer is.
+  z-index: variables.$z-index-overlay;
   display: flex;
   flex-direction: column;
   width: $pictures-drawer-width;
