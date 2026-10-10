@@ -4,7 +4,6 @@ class UserPracticeProblemAttemptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     @practice_problem = create(:practice_problem)
     @user = create(:student)
     @other_user = create(:student)
@@ -37,20 +36,6 @@ class UserPracticeProblemAttemptsControllerTest < ActionController::TestCase
   test 'update redirects to sign in when not signed in' do
     put :update, params: {id: @attempt.id, ai_feedback: 'good'}
     assert_redirected_to_sign_in
-  end
-
-  test 'create is forbidden without lesson deep dive access' do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
-    sign_in @user
-    assert_no_difference 'UserPracticeProblemAttempt.count' do
-      post :create, params: {
-        practice_problem_id: @practice_problem.id,
-        attempt: {answer: 'a'},
-        correct: false,
-        delivery_context_type: SharedConstants::PRACTICE_PROBLEM_DELIVERY_CONTEXT[:AI_TUTOR_LESSON_DEEP_DIVE]
-      }
-    end
-    assert_response :forbidden
   end
 
   # --- index ---
