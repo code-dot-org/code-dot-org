@@ -129,3 +129,16 @@ describe('ImageDetailsDialog generate view', () => {
     expect(document.querySelector('[data-explore-body]')).toBeNull();
   });
 });
+
+describe('ImageDetailsDialog existing-image footer', () => {
+  it('offers no regenerate to students', () => {
+    renderDialog();
+    expect(screen.queryByRole('button', {name: /Generate with AI/})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Done'})).toBeTruthy();
+  });
+
+  it('keeps Generate with AI in the advanced dialog', () => {
+    renderDialog({advanced: true});
+    expect(screen.getByRole('button', {name: /Generate with AI/})).toBeTruthy();
+  });
+});

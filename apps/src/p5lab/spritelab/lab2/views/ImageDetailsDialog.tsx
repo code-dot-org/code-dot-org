@@ -469,14 +469,18 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               <div className={moduleStyles.footerLeft}>
                 <DeleteImageButton onDelete={onDelete} />
               </div>
-              <button
-                type="button"
-                className={moduleStyles.button}
-                onClick={() => setView('generate')}
-              >
-                <FontAwesomeV6Icon iconName="sparkles" />
-                Generate with AI
-              </button>
+              {/* Students make a new image rather than replacing one in
+                  place; the regenerate path stays for the advanced dialog. */}
+              {advanced && (
+                <button
+                  type="button"
+                  className={moduleStyles.button}
+                  onClick={() => setView('generate')}
+                >
+                  <FontAwesomeV6Icon iconName="sparkles" />
+                  Generate with AI
+                </button>
+              )}
               <button
                 type="button"
                 className={moduleStyles.primaryButton}
