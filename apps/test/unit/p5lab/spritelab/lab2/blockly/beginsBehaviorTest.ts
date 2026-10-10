@@ -5,8 +5,8 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields', () => ({
 
 import beginsBehavior, {
   BEHAVIOR_OPTIONS,
+  FLOAT_LIFT_PX,
   FLOAT_PERIOD_TICKS,
-  FLOAT_SWING_PX,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/beginsBehavior';
 
 describe('beginsBehavior block', () => {
@@ -68,11 +68,12 @@ describe('floating', () => {
     return {name: made.name, ys};
   }
 
-  it('bobs about its resting height by the swing, once per period', () => {
+  it('rises from its resting height by the lift and settles back, once per period, never below', () => {
     const {name, ys} = float(200);
     expect(name).toBe('floating');
-    expect(Math.max(...ys)).toBeCloseTo(200 + FLOAT_SWING_PX, 0);
-    expect(Math.min(...ys)).toBeCloseTo(200 - FLOAT_SWING_PX, 0);
+    expect(Math.max(...ys)).toBeCloseTo(200 + FLOAT_LIFT_PX, 0);
+    expect(Math.min(...ys)).toBeCloseTo(200, 0);
+    expect(ys.every(y => y >= 200 - 1e-9)).toBe(true);
     // One period on, it is back where it was.
     expect(ys[FLOAT_PERIOD_TICKS]).toBeCloseTo(ys[0], 5);
     expect(ys[0]).toBeCloseTo(200, 5);

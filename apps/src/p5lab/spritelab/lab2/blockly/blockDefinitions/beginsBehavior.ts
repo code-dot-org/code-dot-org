@@ -37,10 +37,12 @@ const generator: GeneratorFunction = block =>
     block.getFieldValue('SPRITE')
   )}}, ${block.getFieldValue('BEHAVIOR')}());\n`;
 
-// A bob about the sprite's resting height, after the Oceans fish: an
-// eight pixel swing over about three seconds, each sprite starting at its
-// own point in the wave so neighbours do not bob in step.
-export const FLOAT_SWING_PX = 8;
+// A bob after the Oceans fish, about three seconds a cycle, each sprite
+// starting at its own point in the wave so neighbours do not bob in step.
+// It rises from the resting height and settles back to it, never below:
+// the stock collision keeps every sprite out of the blocks, and a sprite
+// resting on one would be held there for the lower half of a centred wave.
+export const FLOAT_LIFT_PX = 16;
 export const FLOAT_PERIOD_TICKS = 180;
 
 const FLOATING_HELPER_CODE = [
@@ -56,7 +58,7 @@ const FLOATING_HELPER_CODE = [
   '      var angle =',
   `        (tick / ${FLOAT_PERIOD_TICKS}) * 2 * Math.PI + getProp(spriteId, 'floatPhase');`,
   "      setProp(spriteId, 'y',",
-  `        getProp(spriteId, 'floatBaseY') + ${FLOAT_SWING_PX} * Math.sin(angle));`,
+  `        getProp(spriteId, 'floatBaseY') + (${FLOAT_LIFT_PX} * (1 - Math.cos(angle))) / 2);`,
   "      setProp(spriteId, 'floatTick', tick + 1);",
   '    },',
   "    name: 'floating',",
