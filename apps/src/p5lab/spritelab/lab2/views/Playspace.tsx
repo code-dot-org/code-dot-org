@@ -24,7 +24,7 @@ import {getImageThumbnail} from '../imageTrim';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-export type PlayspaceMode = 'preview' | 'play' | 'edit' | 'hidden';
+export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
 // Read by a screen reader when focus reaches the game, which otherwise
 // reports itself only in sound.
@@ -35,22 +35,14 @@ const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
 // play area.
 const CANVAS = 400;
 const MARGIN = 12;
-// The corner preview sits over the Blockly workspace, whose scrollbar hugs
-// the right edge; a larger margin (equal top and side) keeps them visually
-// separated.
+// The preview's inset from the top of its column, and the gap kept between
+// the column's edge and the box.
 const PREVIEW_MARGIN = 24;
-const PREVIEW_SCALE = 0.64;
-// The preview's full horizontal footprint, for siblings that must keep their
-// content clear of it (it floats over the active tab's top-right corner).
-export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 // The play bar under the box: one row of the design system's small
 // buttons (2rem at the root font size, plus their 1px borders) and its gap.
 const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
 export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
-// The docked palette's inset from the overlay's left edge, and its gap to
-// the box.
-const EDITOR_DOCK_MARGIN = 12;
 // The preview's column takes at most this share of the width; the code
 // keeps the rest.
 const PREVIEW_WIDTH_SHARE = 0.4;
@@ -154,12 +146,6 @@ interface PlayspaceProps {
   // Shown under the box in every visible mode; the box is placed to leave
   // it room.
   playBar?: React.ReactNode;
-  // The World editor, given the box's placement to put its grid over the
-  // scene's first frame; it covers the whole overlay, with its palette
-  // docked at the left. Kept mounted and inert in the other modes.
-  editor?: (placement: {x: number; y: number; side: number}) => React.ReactNode;
-  // The docked palette's width, which the box keeps clear of in edit mode.
-  editorReserveLeft?: number;
   // How much of the width the preview's column takes, so the code can keep
   // the rest.
   onPreviewWidth?: (width: number) => void;
@@ -184,8 +170,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   platformScene = false,
   controls,
   playBar,
-  editor,
-  editorReserveLeft = 0,
   onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
@@ -344,15 +328,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   }, []);
 
   let placement: Placement;
-  if (mode === 'play' || mode === 'edit') {
-    placement = playPlacement(
-      size,
-      guideSize,
-      playBar ? BAR_ROOM : 0,
-      mode === 'edit' && editorReserveLeft
-        ? editorReserveLeft + 2 * EDITOR_DOCK_MARGIN
-        : 0
-    );
+  if (mode === 'play') {
+    placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0);
   } else {
     // Preview: as large as its column allows, clear of the guide like the
     // play view, and at the top rather than centered.
@@ -383,32 +360,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // and fades in once the box has arrived. Before paint, so the jump is
   // not seen.
   const barRef = useRef<HTMLDivElement>(null);
-  const editorRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     if (animate) {
-      const fade: [Keyframe[], KeyframeAnimationOptions] = [
+      barRef.current?.animate?.(
         [
           {opacity: 0},
           {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
           {opacity: 1},
         ],
-        {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'},
-      ];
-      barRef.current?.animate?.(...fade);
-      if (mode === 'edit') {
-        editorRef.current?.animate?.(...fade);
-      }
+        {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+      );
     }
     // Only a mode change moves the bar; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
-  // The editor stays mounted (its grid is costly to insert) but must not be
-  // reachable while hidden.
-  useEffect(() => {
-    if (editorRef.current) {
-      editorRef.current.inert = mode !== 'edit';
-    }
-  }, [mode, editor]);
 
   return (
     <div
@@ -535,15 +500,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           footsteps and bumps, a tone for your height, and tones that grow
           louder as a wall or an edge comes near.
         </p>
-      )}
-      {editor && (
-        <div
-          ref={editorRef}
-          className={moduleStyles.editorArea}
-          style={{visibility: mode === 'edit' ? 'visible' : 'hidden'}}
-        >
-          {editor({x, y, side: boxSide})}
-        </div>
       )}
       {mode === 'play' && controls && (
         <div className={moduleStyles.playControls}>{controls}</div>

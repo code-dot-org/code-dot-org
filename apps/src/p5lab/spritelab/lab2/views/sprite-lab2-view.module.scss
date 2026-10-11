@@ -158,6 +158,50 @@ $tab-item-height: 34px;
   font-size: 12px;
 }
 
+// World | Code: the scene's two editors, as one segmented control.
+.editorSwitch {
+  display: flex;
+  flex: none;
+  height: $tab-item-height;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--background-neutral-primary);
+}
+
+.editorSwitchButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  margin: 0;
+  padding: 0 12px;
+  border: none;
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+.editorSwitchActive {
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  cursor: default;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
 // New scene: a square beside the tabs.
 .sceneTabButton {
   display: flex;
@@ -756,14 +800,6 @@ $tab-item-height: 34px;
   &:hover {
     opacity: 1;
   }
-}
-
-// The World editor over the whole overlay: its palette docked at the left,
-// its grid where the box is, at the box's size, unscaled.
-.editorArea {
-  position: absolute;
-  inset: 0;
-  pointer-events: auto;
 }
 
 // The project's pictures, over the workspace's right side. Kept mounted and

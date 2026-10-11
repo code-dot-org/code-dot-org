@@ -14,28 +14,13 @@
   color: var(--text-neutral-primary);
 }
 
-// Over the whole stage area: the palette docked down the left edge, the
-// grid placed inline where the stage is, at its size.
-.worldTabDocked {
-  position: absolute;
-  inset: 0;
-  display: block;
-  padding: 0;
-  overflow: visible;
-  background: transparent;
-
-  .worldPaletteColumn {
-    position: absolute;
-    top: 12px;
-    bottom: 12px;
-    left: 12px;
-  }
-
-  // The grid is drawn over the scene's first frame, so the cells show the
-  // engine's own picture of what is placed: lines only, no thumbnails. A
-  // dark line with a light edge reads on a light scene and on a dark one.
+// The grid over the scene's first frame: the cells show the engine's own
+// picture of what is placed, lines only, no thumbnails. A dark line with
+// a light edge reads on a light scene and on a dark one.
+.worldTabPictured {
   .worldGrid {
     border-color: rgb(0 0 0 / 35%);
+    background-size: 100% 100%;
   }
 
   .worldCell {

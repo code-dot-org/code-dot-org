@@ -131,6 +131,7 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {blurAfterPointerClick, isPointerClick} from './blurAfterPointerClick';
+import EditorSwitch from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
@@ -367,8 +368,33 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setWorldMounted(true);
     }
   }, [activeTab]);
-  // The docked palette's width, which the stage keeps clear of.
-  const [worldPaletteWidth, setWorldPaletteWidth] = useState(0);
+  // The scene's first frame, captured from each run while the world
+  // editor is open: the picture its grid is drawn over.
+  const [startFrame, setStartFrame] = useState<string | null>(null);
+  const activeTabRef = useRef(activeTab);
+  activeTabRef.current = activeTab;
+  // Ahead of a run while the editor is open. The waiter runs as the first
+  // frame is drawn; by the next animation frame it is on the canvas and
+  // held there (setHoldAtStart).
+  const captureStartFrame = useCallback(
+    (engine: {
+      captureFirstFrame: (
+        onFrame: (canvas: HTMLCanvasElement | null) => void
+      ) => void;
+    }) => {
+      if (activeTabRef.current !== 'World') {
+        return;
+      }
+      engine.captureFirstFrame(canvas => {
+        if (canvas) {
+          window.requestAnimationFrame(() =>
+            setStartFrame(canvas.toDataURL('image/png'))
+          );
+        }
+      });
+    },
+    []
+  );
   // The preview's column, which the code keeps clear of.
   const [previewWidth, setPreviewWidth] = useState(0);
   // The workspace does not notice its container changing width.
@@ -1021,9 +1047,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
     }
+    captureStartFrame(engine);
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
     setPlayingPlatformer(engine.isPlatformScene());
-  }, [dispatch, getCode, requestThumbnail]);
+  }, [dispatch, getCode, requestThumbnail, captureStartFrame]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -1066,10 +1093,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       });
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
+      captureStartFrame(engine);
       engine.runProgram(program, referencedImages, scene.type);
       setPlayingPlatformer(engine.isPlatformScene());
     },
-    [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
+    [
+      dispatch,
+      activeSceneId,
+      getCode,
+      worldFor,
+      requestThumbnail,
+      captureStartFrame,
+    ]
   );
 
   const runScene = useCallback(
@@ -1298,10 +1333,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // flag is a dep because the drawer can first render closed (the idle
   // pre-mount), after the last change.
   const codeWrapperRef = useRef<HTMLDivElement>(null);
+  const worldWrapperRef = useRef<HTMLDivElement>(null);
   const imagesWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (codeWrapperRef.current) {
       codeWrapperRef.current.inert = activeTab !== 'Code';
+    }
+    if (worldWrapperRef.current) {
+      worldWrapperRef.current.inert = activeTab !== 'World';
     }
     if (imagesWrapperRef.current) {
       // The dialog a pick opened renders inside the closed drawer, and
@@ -1309,7 +1348,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // pick does (the dialog holds the focus meanwhile).
       imagesWrapperRef.current.inert = !picturesOpen && !pickRequest;
     }
-  }, [activeTab, picturesOpen, imagesMounted, pickRequest]);
+  }, [activeTab, picturesOpen, imagesMounted, worldMounted, pickRequest]);
   // Escape inside the drawer closes it. The image dialogs render in a
   // portal, so their own Escape never reaches here.
   useEffect(() => {
@@ -1710,23 +1749,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const focusPlayspaceRef = useRef(false);
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
-  // The stage's edit mode (the World editor) and the way back to the code.
-  const handleEditWorld = useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
-      if (isPointerClick(event)) {
-        event.currentTarget.blur();
-      }
-      dispatch(setActiveTab('World'));
-    },
-    [dispatch]
-  );
-  const handleDoneEditing = useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
-      if (isPointerClick(event)) {
-        event.currentTarget.blur();
-      }
-      dispatch(setActiveTab('Code'));
-    },
+  // Which of the scene's two editors fills the main area.
+  const handleEditorChange = useCallback(
+    (editor: 'World' | 'Code') => dispatch(setActiveTab(editor)),
     [dispatch]
   );
 
@@ -1848,14 +1873,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // mode is unconstrained.
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
-  // The stage: the corner preview beside the code, centered to play, and
-  // centered as the World editor.
+  // The stage: the preview beside either editor, centered to play.
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
       ? 'play'
-      : activeTab === 'World'
-      ? 'edit'
-      : activeTab === 'Code'
+      : activeTab === 'Code' || activeTab === 'World'
       ? 'preview'
       : 'hidden';
 
@@ -2013,6 +2035,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <LabShell
           rightExtra={
             <>
+              {enabledTabs.includes('World') &&
+                tabs.includes('Code') &&
+                (activeTab === 'World' || activeTab === 'Code') && (
+                  <EditorSwitch
+                    value={activeTab}
+                    onChange={handleEditorChange}
+                  />
+                )}
               {activeTab === 'Play' && nowPlaying && (
                 <SceneMusicBar
                   title={nowPlaying.title}
@@ -2126,40 +2156,47 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             </div>
           )}
 
+          {/* Kept mounted like the workspace: inserting the grid is the
+          costly part. The world editor keeps clear of the preview's column
+          as the code does. */}
+          {worldTabEnabled && worldMounted && (
+            <div
+              ref={worldWrapperRef}
+              className={moduleStyles.codeTabWrapper}
+              style={{
+                clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
+                pointerEvents: activeTab === 'World' ? 'auto' : 'none',
+                right: previewWidth,
+              }}
+            >
+              <WorldTab
+                backdrop={startFrame ?? undefined}
+                world={activeWorld}
+                sceneSize={activeSceneSize}
+                onPaintCell={handlePaintWorldCell}
+                emptyMessage={
+                  picturesOffered
+                    ? 'Make some pictures first.'
+                    : 'Go back and make your image first.'
+                }
+                only={paletteOnlyImage}
+                onMoveCell={placeOne ? handleMoveWorldCell : undefined}
+                selected={worldPaletteSelection}
+                onSelect={choosePaletteSelection}
+                onNewPicture={
+                  picturesOffered ? handleNewWorldPicture : undefined
+                }
+              />
+            </div>
+          )}
+
           {/* Always mounted so the engine keeps running; animates between
-          the corner preview beside the code and the centered play and edit
-          views. */}
+          the preview beside the editors and the centered play view. */}
           <Playspace
             boxRef={playspaceRef}
             platformScene={playingPlatformer}
             mode={playspaceMode}
-            editorReserveLeft={worldPaletteWidth}
             onPreviewWidth={setPreviewWidth}
-            editor={
-              worldTabEnabled && worldMounted
-                ? placement => (
-                    <WorldTab
-                      placement={placement}
-                      onPaletteWidth={setWorldPaletteWidth}
-                      world={activeWorld}
-                      sceneSize={activeSceneSize}
-                      onPaintCell={handlePaintWorldCell}
-                      emptyMessage={
-                        picturesOffered
-                          ? 'Make some pictures first.'
-                          : 'Go back and make your image first.'
-                      }
-                      only={paletteOnlyImage}
-                      onMoveCell={placeOne ? handleMoveWorldCell : undefined}
-                      selected={worldPaletteSelection}
-                      onSelect={choosePaletteSelection}
-                      onNewPicture={
-                        picturesOffered ? handleNewWorldPicture : undefined
-                      }
-                    />
-                  )
-                : undefined
-            }
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no
@@ -2177,16 +2214,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             playBar={
               <PlayBar
                 playing={activeTab === 'Play'}
-                editing={activeTab === 'World'}
                 arrows={arrowSet}
                 onPlay={handlePlayClick}
                 onStop={stopTab ? handleStopClick : undefined}
-                onEditWorld={
-                  activeTab === 'Code' && enabledTabs.includes('World')
-                    ? handleEditWorld
-                    : undefined
-                }
-                onDone={tabs.includes('Code') ? handleDoneEditing : undefined}
               />
             }
             guideSize={levelProperties.levelMode ? guideSize : null}
