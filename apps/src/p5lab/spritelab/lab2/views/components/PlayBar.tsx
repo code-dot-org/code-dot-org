@@ -155,9 +155,6 @@ interface PlayBarProps {
   onEditWorld?: (event: React.MouseEvent<HTMLElement>) => void;
   /** Leaves the World editor for the code; absent on a level without code. */
   onDone?: (event: React.MouseEvent<HTMLElement>) => void;
-  /** The stage has focus (large, beside the code); absent hides the toggle. */
-  focused?: boolean;
-  onToggleFocus?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 /**
@@ -174,25 +171,11 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   onStop,
   onEditWorld,
   onDone,
-  focused,
-  onToggleFocus,
 }) => {
   const setupBlockColor = useSetupBlockColor();
   if (!playing) {
     return (
       <>
-        {!editing && onToggleFocus && (
-          <MuiIconButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            aria-label={focused ? 'Smaller stage' : 'Bigger stage'}
-            aria-pressed={!!focused}
-            onClick={onToggleFocus}
-          >
-            <FontAwesomeV6Icon iconName={focused ? 'compress' : 'expand'} />
-          </MuiIconButton>
-        )}
         {editing
           ? onDone && (
               <MuiButton

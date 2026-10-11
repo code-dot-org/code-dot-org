@@ -51,9 +51,9 @@ export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // The docked palette's inset from the overlay's left edge, and its gap to
 // the box.
 const EDITOR_DOCK_MARGIN = 12;
-// With the stage in focus, the preview takes at most this share of the
-// width; the code keeps the rest.
-const FOCUS_WIDTH_SHARE = 0.55;
+// The preview's column takes at most this share of the width; the code
+// keeps the rest.
+const PREVIEW_WIDTH_SHARE = 0.4;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;
@@ -160,9 +160,8 @@ interface PlayspaceProps {
   editor?: (placement: {x: number; y: number; side: number}) => React.ReactNode;
   // The docked palette's width, which the box keeps clear of in edit mode.
   editorReserveLeft?: number;
-  // The stage has focus: the preview is large, at the right, and the code
-  // keeps the room to its left (onPreviewWidth says how much is taken).
-  focus?: boolean;
+  // How much of the width the preview's column takes, so the code can keep
+  // the rest.
   onPreviewWidth?: (width: number) => void;
   // The floating guide's footprint, pinned to the overlay's bottom-right
   // (playPlacement).
@@ -187,7 +186,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   playBar,
   editor,
   editorReserveLeft = 0,
-  focus = false,
   onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
@@ -355,33 +353,24 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         ? editorReserveLeft + 2 * EDITOR_DOCK_MARGIN
         : 0
     );
-  } else if (focus) {
-    // Preview in focus: as large as the right column allows, clear of the
-    // guide like the play view.
-    placement = playPlacement(
+  } else {
+    // Preview: as large as its column allows, clear of the guide like the
+    // play view, and at the top rather than centered.
+    const column = playPlacement(
       size,
       guideSize,
       playBar ? BAR_ROOM : 0,
-      Math.round(size.w * (1 - FOCUS_WIDTH_SHARE))
+      Math.round(size.w * (1 - PREVIEW_WIDTH_SHARE))
     );
-  } else {
-    // Preview: small box pinned to the top-right corner.
-    placement = {
-      scale: PREVIEW_SCALE,
-      x: Math.max(
-        PREVIEW_MARGIN,
-        size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
-      ),
-      y: PREVIEW_MARGIN,
-    };
+    placement = {...column, y: PREVIEW_MARGIN};
   }
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
-  // The room the code gives up: the column from the box's left edge to
-  // the overlay's right, only while the preview is large.
+  // The room the code gives up: the column from a margin left of the box
+  // to the overlay's right, tinted apart from the workspace.
   const previewWidth =
-    mode === 'preview' && focus && measured ? Math.ceil(size.w - x) : 0;
+    mode === 'preview' && measured ? Math.ceil(size.w - x + PREVIEW_MARGIN) : 0;
   const reportPreviewWidth = useRef(onPreviewWidth);
   reportPreviewWidth.current = onPreviewWidth;
   useEffect(() => {
@@ -430,6 +419,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       // first placed with a stale size and then animates into the right spot.
       style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
     >
+      {previewWidth > 0 && (
+        <div
+          className={moduleStyles.previewColumn}
+          style={{width: previewWidth}}
+        />
+      )}
       <div
         ref={boxRef}
         className={moduleStyles.playspaceBox}

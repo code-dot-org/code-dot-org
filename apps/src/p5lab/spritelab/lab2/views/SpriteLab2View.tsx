@@ -369,18 +369,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab]);
   // The docked palette's width, which the stage keeps clear of.
   const [worldPaletteWidth, setWorldPaletteWidth] = useState(0);
-  // The stage in focus: the preview large at the right, the code narrower.
-  const [stageFocus, setStageFocus] = useState(false);
+  // The preview's column, which the code keeps clear of.
   const [previewWidth, setPreviewWidth] = useState(0);
-  const handleToggleFocus = useCallback(
-    (event: React.MouseEvent<HTMLElement>) => {
-      if (isPointerClick(event)) {
-        event.currentTarget.blur();
-      }
-      setStageFocus(focus => !focus);
-    },
-    []
-  );
   // The workspace does not notice its container changing width.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -2071,7 +2061,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
               pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
-              // The code gives the large preview its column.
+              // The code keeps clear of the preview's column.
               right: previewWidth,
             }}
           >
@@ -2138,7 +2128,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             platformScene={playingPlatformer}
             mode={playspaceMode}
             editorReserveLeft={worldPaletteWidth}
-            focus={stageFocus}
             onPreviewWidth={setPreviewWidth}
             editor={
               worldTabEnabled && worldMounted
@@ -2192,10 +2181,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     : undefined
                 }
                 onDone={tabs.includes('Code') ? handleDoneEditing : undefined}
-                focused={stageFocus}
-                onToggleFocus={
-                  activeTab === 'Code' ? handleToggleFocus : undefined
-                }
               />
             }
             guideSize={levelProperties.levelMode ? guideSize : null}

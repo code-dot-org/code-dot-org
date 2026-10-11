@@ -662,6 +662,16 @@ $tab-item-height: 34px;
   pointer-events: none;
 }
 
+// The preview's column, tinted apart from the workspace beside it.
+.previewColumn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background-neutral-secondary);
+  border-left: 1px solid var(--borders-neutral-primary);
+}
+
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
 // animate between the corner preview and the centered play view.
 .playspaceBox {
