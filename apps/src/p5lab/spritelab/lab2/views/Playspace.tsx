@@ -352,10 +352,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
-  // The room the code gives up: the column from a margin left of the box
-  // to the overlay's right, tinted apart from the workspace.
+  // The room the code gives up: the column is the whole share, so the box,
+  // its bar and what is docked beneath all centre in it, whatever height
+  // limits the box.
   const previewWidth =
-    mode === 'preview' && measured ? Math.ceil(size.w - x + PREVIEW_MARGIN) : 0;
+    mode === 'preview' && measured
+      ? Math.round(size.w * PREVIEW_WIDTH_SHARE)
+      : 0;
   const reportPreviewWidth = useRef(onPreviewWidth);
   reportPreviewWidth.current = onPreviewWidth;
   useEffect(() => {
@@ -530,13 +533,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         <div
           className={moduleStyles.previewBelow}
           style={{
-            left: x,
+            left: size.w - previewWidth,
             top: y + boxSide + BAR_ROOM + BAR_GAP,
-            width: boxSide,
-            maxHeight: Math.max(
-              0,
-              size.h - (y + boxSide + BAR_ROOM + BAR_GAP) - MARGIN
-            ),
+            width: previewWidth,
           }}
         >
           {below}

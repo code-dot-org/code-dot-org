@@ -1019,22 +1019,23 @@ $editor-strip-height: 46px;
   }
 }
 
-// The instructions docked under the preview, in the column's remaining
-// height; a long step scrolls inside rather than pushing anything.
+// The column's lower section: the instructions, a band of their own from
+// under the bar to the column's foot, a shade apart from the preview's
+// section above and ruled off from it; a long step scrolls inside.
 .previewBelow {
   position: absolute;
+  bottom: 0;
   box-sizing: border-box;
   overflow: auto;
   pointer-events: auto;
+  background: var(--background-neutral-tertiary);
+  border-top: 1px solid var(--borders-neutral-primary);
 }
 
-// The guide's panel look, in place rather than floating.
+// The guide's body, in place rather than floating.
 .guideDocked {
   box-sizing: border-box;
-  padding: 16px 20px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 14px;
-  background: var(--background-neutral-secondary);
+  padding: 16px 24px;
   color: var(--text-neutral-primary);
   font-size: 15px;
   line-height: 1.5;
