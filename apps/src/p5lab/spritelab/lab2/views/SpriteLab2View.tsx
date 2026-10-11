@@ -367,33 +367,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setWorldMounted(true);
     }
   }, [activeTab]);
-  // The scene's first frame, captured from each run while the world
-  // editor is open: the picture its grid is drawn over.
-  const [startFrame, setStartFrame] = useState<string | null>(null);
-  const activeTabRef = useRef(activeTab);
-  activeTabRef.current = activeTab;
-  // Ahead of a run while the editor is open. The waiter runs as the first
-  // frame is drawn; by the next animation frame it is on the canvas and
-  // held there (setHoldAtStart).
-  const captureStartFrame = useCallback(
-    (engine: {
-      captureFirstFrame: (
-        onFrame: (canvas: HTMLCanvasElement | null) => void
-      ) => void;
-    }) => {
-      if (activeTabRef.current !== 'World') {
-        return;
-      }
-      engine.captureFirstFrame(canvas => {
-        if (canvas) {
-          window.requestAnimationFrame(() =>
-            setStartFrame(canvas.toDataURL('image/png'))
-          );
-        }
-      });
-    },
-    []
-  );
   // The preview's column, which the code keeps clear of.
   const [previewWidth, setPreviewWidth] = useState(0);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
@@ -1049,10 +1022,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
     }
-    captureStartFrame(engine);
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
     setPlayingPlatformer(engine.isPlatformScene());
-  }, [dispatch, getCode, requestThumbnail, captureStartFrame]);
+  }, [dispatch, getCode, requestThumbnail]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -1095,18 +1067,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       });
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
-      captureStartFrame(engine);
       engine.runProgram(program, referencedImages, scene.type);
       setPlayingPlatformer(engine.isPlatformScene());
     },
-    [
-      dispatch,
-      activeSceneId,
-      getCode,
-      worldFor,
-      requestThumbnail,
-      captureStartFrame,
-    ]
+    [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
   );
 
   const runScene = useCallback(
@@ -1490,12 +1454,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       runProgram();
     }
   }, [engineReady, runProgram]);
-
-  // The world editor shows the scene held at its first frame: the picture
-  // the engine draws, with the grid over it. Set ahead of the run below.
-  useEffect(() => {
-    engineRef.current?.setHoldAtStart(activeTab === 'World');
-  }, [activeTab, engineReady]);
 
   // Tab semantics: Play (re)starts at the chosen start scene
   // (or the beginning); returning to Code resumes previewing the scene being
@@ -2169,7 +2127,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               }}
             >
               <WorldTab
-                backdrop={startFrame ?? undefined}
                 world={activeWorld}
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}

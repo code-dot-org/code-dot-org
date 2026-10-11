@@ -275,9 +275,6 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
-  /** The scene's first frame, as a data URL: the grid is drawn over it,
-      so the cells show the engine's own picture of what is placed. */
-  backdrop?: string;
   /** Offers a New square above the palette that asks for a picture. */
   onNewPicture?: () => void;
 }
@@ -305,7 +302,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onMoveCell,
   selected,
   onSelect,
-  backdrop,
   onNewPicture,
 }) => {
   const placeOne = !!onMoveCell;
@@ -859,12 +855,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     };
   };
   return (
-    <div
-      className={classNames(
-        moduleStyles.worldTab,
-        backdrop && moduleStyles.worldTabPictured
-      )}
-    >
+    <div className={moduleStyles.worldTab}>
       <div className={moduleStyles.worldPaletteColumn}>
         {onNewPicture && (
           <button
@@ -985,12 +976,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             // Focus lives on the cursor cell (roving tabindex).
             tabIndex={-1}
             className={moduleStyles.worldGrid}
-            style={
-              {
-                '--world-cell': `${cellPixels}px`,
-                backgroundImage: backdrop ? `url(${backdrop})` : undefined,
-              } as React.CSSProperties
-            }
+            style={{'--world-cell': `${cellPixels}px`} as React.CSSProperties}
             onKeyDown={handleGridKeyDown}
             onKeyUp={handleGridKeyUp}
           >

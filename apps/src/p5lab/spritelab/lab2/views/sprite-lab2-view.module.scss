@@ -226,13 +226,21 @@ $tab-item-height: 34px;
   }
 }
 
-// The map's tab, the row's parent: a plain button, never shrinking under
-// the overflow.
-.sceneTabAll {
-  flex: none;
+// Back up to the map, at the row's head: a plain button, never shrinking
+// under the overflow.
+.sceneTabBack {
+  display: flex;
   align-items: center;
   gap: 8px;
+  flex: none;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  margin: 0;
   padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
 
@@ -244,22 +252,6 @@ $tab-item-height: 34px;
     opacity: 0.4;
     cursor: default;
   }
-
-  &.sceneTabActive {
-    font-weight: 600;
-    cursor: default;
-
-    &:hover:not(:disabled) {
-      background: var(--background-neutral-primary);
-    }
-  }
-}
-
-// Between the map and its scenes.
-.sceneTabsChevron {
-  flex: none;
-  color: var(--text-neutral-secondary);
-  font-size: 12px;
 }
 
 // New scene: a square beside the tabs.

@@ -14,34 +14,6 @@
   color: var(--text-neutral-primary);
 }
 
-// The grid over the scene's first frame: the cells show the engine's own
-// picture of what is placed, lines only, no thumbnails. A dark line with
-// a light edge reads on a light scene and on a dark one.
-.worldTabPictured {
-  .worldGrid {
-    border-color: rgb(0 0 0 / 35%);
-    background-size: 100% 100%;
-  }
-
-  .worldCell {
-    background: transparent;
-    border-color: rgb(0 0 0 / 28%);
-    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 25%);
-
-    img {
-      display: none;
-    }
-
-    &:hover {
-      background: rgb(0 0 0 / 12%);
-    }
-  }
-
-  .worldCellBlocked:hover {
-    background: transparent;
-  }
-}
-
 .worldGridColumn {
   display: flex;
   flex: 1 1 auto;

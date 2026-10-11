@@ -37,11 +37,11 @@ const EDITORS: {editor: Editor; icon: string}[] = [
 
 /**
  * The project's scenes as a row of tabs, each with its picture, so the
- * scenes are in sight rather than inside a menu. The row reads as a
- * breadcrumb: Scenes, the map of the whole game, then the scenes in it;
- * the open scene's tab holds its World | Code switch, so the choice sits
- * inside the scene it is about. Overflow hides under the row's end; the
- * selected tab scrolls into view.
+ * scenes are in sight rather than inside a menu. "All scenes" at the head
+ * goes back up to the map, and is gone while the map is open; the open
+ * scene's tab holds its World | Code switch, so the choice sits inside
+ * the scene it is about. Overflow hides under the row's end; the selected
+ * tab scrolls into view.
  */
 const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   scenes,
@@ -61,34 +61,21 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   }, [activeSceneId, scenes.length]);
   return (
     <div className={moduleStyles.sceneTabs} role="tablist" aria-label="Scenes">
-      {onManageScenes && (
-        <>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={galleryOpen}
-            disabled={disabled}
-            className={classNames(
-              moduleStyles.sceneTab,
-              moduleStyles.sceneTabAll,
-              galleryOpen && moduleStyles.sceneTabActive
-            )}
-            onClick={event => {
-              blurAfterPointerClick(event);
-              onManageScenes();
-            }}
-          >
-            <FontAwesomeV6Icon iconName="table-cells" iconStyle="solid" />
-            <span className={moduleStyles.sceneTabName} data-label="Scenes">
-              Scenes
-            </span>
-          </button>
-          <FontAwesomeV6Icon
-            iconName="chevron-right"
-            iconStyle="solid"
-            className={moduleStyles.sceneTabsChevron}
-          />
-        </>
+      {onManageScenes && !galleryOpen && (
+        <button
+          type="button"
+          disabled={disabled}
+          className={moduleStyles.sceneTabBack}
+          onClick={event => {
+            blurAfterPointerClick(event);
+            onManageScenes();
+          }}
+        >
+          <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+          <span className={moduleStyles.sceneTabName} data-label="All scenes">
+            All scenes
+          </span>
+        </button>
       )}
       <div className={moduleStyles.sceneTabsRow}>
         {scenes.map(scene => {
