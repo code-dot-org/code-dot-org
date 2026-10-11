@@ -142,7 +142,7 @@ $tab-item-height: 34px;
     border-color: rgb(255 255 255 / 35%);
   }
 
-  .sceneTabEditors {
+  .sceneTabEditorsInner {
     border-color: rgb(255 255 255 / 35%);
   }
 
@@ -166,22 +166,32 @@ $tab-item-height: 34px;
 }
 
 .sceneTabEditors {
-  display: flex;
+  // A grid track from 0fr to 1fr animates to the segments' own width,
+  // where a max-width guess would overshoot and end the motion early.
+  display: grid;
   flex: none;
+  grid-template-columns: 1fr;
+  animation: scene-tab-open 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.sceneTabEditorsInner {
+  display: flex;
   align-items: stretch;
-  max-width: 220px;
+  min-width: 0;
+  height: 100%;
   overflow: hidden;
   border-left: 1px solid var(--borders-neutral-primary);
-  animation: scene-tab-open 0.2s ease-out;
 }
 
 @keyframes scene-tab-open {
   from {
-    max-width: 0;
+    grid-template-columns: 0fr;
+    opacity: 0;
   }
 
   to {
-    max-width: 220px;
+    grid-template-columns: 1fr;
+    opacity: 1;
   }
 }
 

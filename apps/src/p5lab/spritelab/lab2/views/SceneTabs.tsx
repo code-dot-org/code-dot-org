@@ -122,26 +122,28 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
                   role="group"
                   aria-label="Edit"
                 >
-                  {EDITORS.map(({editor: choice, icon}) => (
-                    <button
-                      key={choice}
-                      type="button"
-                      aria-pressed={editor.value === choice}
-                      disabled={disabled}
-                      className={classNames(
-                        moduleStyles.sceneTabEditor,
-                        editor.value === choice &&
-                          moduleStyles.sceneTabEditorActive
-                      )}
-                      onClick={event => {
-                        blurAfterPointerClick(event);
-                        editor.onChange(choice);
-                      }}
-                    >
-                      <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
-                      {choice}
-                    </button>
-                  ))}
+                  <div className={moduleStyles.sceneTabEditorsInner}>
+                    {EDITORS.map(({editor: choice, icon}) => (
+                      <button
+                        key={choice}
+                        type="button"
+                        aria-pressed={editor.value === choice}
+                        disabled={disabled}
+                        className={classNames(
+                          moduleStyles.sceneTabEditor,
+                          editor.value === choice &&
+                            moduleStyles.sceneTabEditorActive
+                        )}
+                        onClick={event => {
+                          blurAfterPointerClick(event);
+                          editor.onChange(choice);
+                        }}
+                      >
+                        <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+                        {choice}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
