@@ -341,6 +341,49 @@ $scene-tab-fade-ms: 260ms;
   }
 }
 
+// Stacked: each editor its own row, dividers between rows.
+.editorSwitchVertical {
+  flex-direction: column;
+  height: auto;
+
+  .editorSwitchButton {
+    height: $tab-item-height - 2px;
+    border-left: none;
+    border-top: 1px solid var(--borders-neutral-primary);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .editorSwitchActive {
+    box-shadow: inset 3px 0 0 var(--borders-brand-teal-primary);
+  }
+}
+
+// The ?editors=float variant: the switch floats over the editors' left
+// strip, above the toolbox, and the strips start under it.
+// Shared with the view, which hands the world editor the same room.
+$editor-float-room: 80px;
+
+.editorFloat {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  // Over the toolbox's own stacking (70); under the overlay's 72.
+  z-index: 71;
+}
+
+.underEditorFloat {
+  // The toolbox's categories start under the float; the flyout to their
+  // right is clear of it, the float being no wider than the strip.
+  :global(.blocklyToolboxDiv) {
+    box-sizing: border-box;
+    padding-top: $editor-float-room;
+  }
+
+}
+
 // New scene: a square beside the tabs.
 .sceneTabButton {
   display: flex;

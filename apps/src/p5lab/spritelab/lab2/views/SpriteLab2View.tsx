@@ -170,6 +170,9 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The drawer the Pictures button controls.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
+// Room the ?editors=float switch takes above the editors' left strips
+// (the stylesheet's $editor-float-room).
+const EDITOR_FLOAT_ROOM_PX = 80;
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -506,8 +509,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the open scene's tab, or, with ?editors=strip, as a strip over the
   // editor pane. Two candidates under trial.
   const editorChoice = enabledTabs.includes('World') && tabs.includes('Code');
-  const editorsInStrip = useMemo(() => queryParams('editors') === 'strip', []);
-  const editorStrip = editorChoice && editorsInStrip;
+  // ?editors=strip: a strip over the editor pane; ?editors=float: a stacked
+  // switch floating over the editors' left strip; else inside the tab.
+  const editorsPlacement = useMemo(() => {
+    const value = queryParams('editors');
+    return value === 'strip' || value === 'float' ? value : 'tab';
+  }, []);
+  const editorsInStrip = editorsPlacement !== 'tab';
+  const editorStrip = editorChoice && editorsPlacement === 'strip';
+  const editorFloat = editorChoice && editorsPlacement === 'float';
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -2063,13 +2073,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               />
             </div>
           )}
+          {editorFloat && (activeTab === 'World' || activeTab === 'Code') && (
+            <div className={moduleStyles.editorFloat}>
+              <EditorSwitch
+                vertical
+                value={activeTab}
+                onChange={handleEditorChange}
+              />
+            </div>
+          )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div
             ref={codeWrapperRef}
             className={classNames(
               moduleStyles.codeTabWrapper,
-              editorStrip && moduleStyles.underEditorStrip
+              editorStrip && moduleStyles.underEditorStrip,
+              editorFloat && moduleStyles.underEditorFloat
             )}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -2141,7 +2161,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               ref={worldWrapperRef}
               className={classNames(
                 moduleStyles.codeTabWrapper,
-                editorStrip && moduleStyles.underEditorStrip
+                editorStrip && moduleStyles.underEditorStrip,
+                editorFloat && moduleStyles.underEditorFloat
               )}
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
@@ -2165,6 +2186,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onNewPicture={
                   picturesOffered ? handleNewWorldPicture : undefined
                 }
+                paletteTopRoom={editorFloat ? EDITOR_FLOAT_ROOM_PX : 0}
               />
             </div>
           )}

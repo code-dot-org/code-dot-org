@@ -11,6 +11,8 @@ export type Editor = 'World' | 'Code';
 interface EditorSwitchProps {
   value: Editor;
   onChange: (editor: Editor, event: React.MouseEvent<HTMLElement>) => void;
+  /** Stacked, to fit within the editors' left strip. */
+  vertical?: boolean;
 }
 
 const EDITORS: {editor: Editor; icon: string}[] = [
@@ -26,8 +28,16 @@ const EDITORS: {editor: Editor; icon: string}[] = [
 const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   value,
   onChange,
+  vertical = false,
 }) => (
-  <div className={moduleStyles.editorSwitch} role="group" aria-label="Edit">
+  <div
+    className={classNames(
+      moduleStyles.editorSwitch,
+      vertical && moduleStyles.editorSwitchVertical
+    )}
+    role="group"
+    aria-label="Edit"
+  >
     {EDITORS.map(({editor, icon}) => (
       <button
         key={editor}
