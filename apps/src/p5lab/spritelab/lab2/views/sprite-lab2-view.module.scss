@@ -1028,8 +1028,10 @@ $editor-strip-height: 46px;
   box-sizing: border-box;
   overflow: auto;
   pointer-events: auto;
-  background: var(--background-neutral-tertiary);
-  border-top: 1px solid var(--borders-neutral-primary);
+  // The darker of the lab's surfaces, under the column's grey, with the
+  // brand line between: the split reads from across the room.
+  background: var(--background-neutral-primary);
+  border-top: 3px solid var(--borders-brand-teal-primary);
 }
 
 // The guide's body, in place rather than floating.
