@@ -363,8 +363,8 @@ $scene-tab-fade-ms: 260ms;
 
 // The ?editors=float variant: the switch floats over the editors' left
 // strip, above the toolbox, and the strips start under it.
-// Shared with the view, which hands the world editor the same room.
-$editor-float-room: 80px;
+// The room the pane leaves above its content for the float.
+$editor-float-room: 58px;
 
 .editorFloat {
   position: absolute;
@@ -372,17 +372,18 @@ $editor-float-room: 80px;
   left: 8px;
   // Over the toolbox's own stacking (70); under the overlay's 72.
   z-index: 71;
-}
+  // A slim backing around the pair, so they read as one control floating
+  // over whatever is beneath.
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--background-neutral-secondary);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 35%);
 
-.underEditorFloat {
-  // The toolbox's categories start under the float; the flyout to their
-  // right is clear of it, the float being no wider than the strip.
-  :global(.blocklyToolboxDiv) {
-    box-sizing: border-box;
-    padding-top: $editor-float-room;
+  .editorSwitch {
+    border-color: var(--borders-neutral-primary);
   }
-
 }
+
 
 // New scene: a square beside the tabs.
 .sceneTabButton {
@@ -468,6 +469,12 @@ $editor-strip-height: 46px;
 // After .codeTabWrapper: its inset shorthand would otherwise win the top.
 .underEditorStrip {
   top: $editor-strip-height;
+}
+
+// The pane's content starts under the float: the pair is wider than the
+// toolbox strip, so the flyout and the world grid would run under it.
+.underEditorFloat {
+  top: $editor-float-room;
 }
 
 .blocklyDiv {

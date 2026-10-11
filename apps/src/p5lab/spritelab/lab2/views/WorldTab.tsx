@@ -277,8 +277,6 @@ interface WorldTabProps {
   onSelect: (selection: PaletteSelection) => void;
   /** Offers a New square above the palette that asks for a picture. */
   onNewPicture?: () => void;
-  /** Room kept above the palette, for a control floating over it. */
-  paletteTopRoom?: number;
 }
 
 /**
@@ -305,7 +303,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   selected,
   onSelect,
   onNewPicture,
-  paletteTopRoom = 0,
 }) => {
   const placeOne = !!onMoveCell;
   const animationList = useAppSelector(state => state.animationList);
@@ -709,10 +706,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const cellPixels = gridPixels / sceneSize;
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
   // The New square takes one item's room above the palette.
-  const paletteRoom =
-    (onNewPicture
-      ? areaHeight - PALETTE_ITEM_PX - PALETTE_GAP_PX
-      : areaHeight) - paletteTopRoom;
+  const paletteRoom = onNewPicture
+    ? areaHeight - PALETTE_ITEM_PX - PALETTE_GAP_PX
+    : areaHeight;
   const paletteRows = Math.max(
     1,
     areaHeight
@@ -860,10 +856,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   };
   return (
     <div className={moduleStyles.worldTab}>
-      <div
-        className={moduleStyles.worldPaletteColumn}
-        style={paletteTopRoom ? {paddingTop: paletteTopRoom} : undefined}
-      >
+      <div className={moduleStyles.worldPaletteColumn}>
         {onNewPicture && (
           <button
             type="button"

@@ -170,9 +170,6 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The drawer the Pictures button controls.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
-// Room the ?editors=float switch takes above the editors' left strips
-// (the stylesheet's $editor-float-room).
-const EDITOR_FLOAT_ROOM_PX = 80;
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -2075,11 +2072,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           )}
           {editorFloat && (activeTab === 'World' || activeTab === 'Code') && (
             <div className={moduleStyles.editorFloat}>
-              <EditorSwitch
-                vertical
-                value={activeTab}
-                onChange={handleEditorChange}
-              />
+              <EditorSwitch value={activeTab} onChange={handleEditorChange} />
             </div>
           )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
@@ -2186,7 +2179,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onNewPicture={
                   picturesOffered ? handleNewWorldPicture : undefined
                 }
-                paletteTopRoom={editorFloat ? EDITOR_FLOAT_ROOM_PX : 0}
               />
             </div>
           )}
