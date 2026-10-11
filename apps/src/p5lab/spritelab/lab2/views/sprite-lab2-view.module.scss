@@ -923,14 +923,14 @@ $editor-strip-height: 46px;
   pointer-events: none;
 }
 
-// The preview's column: the workspace's own ground continues under its
-// two cards, with no tint or edge of its own; the cards do the work.
+// Tinted so the World | Code switch reads as the workspace's, not the column's.
 .previewColumn {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  background: transparent;
+  background: var(--background-neutral-secondary);
+  border-left: 1px solid var(--borders-neutral-primary);
 }
 
 // The preview's card: a rounded panel behind the box and its bar, one of
@@ -939,7 +939,7 @@ $editor-strip-height: 46px;
   position: absolute;
   box-sizing: border-box;
   border-radius: 14px;
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-tertiary);
   border: 1px solid var(--borders-neutral-primary);
 }
 
@@ -1039,7 +1039,7 @@ $editor-strip-height: 46px;
   pointer-events: auto;
   // The instructions' card, the column's other.
   border-radius: 14px;
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-tertiary);
   border: 1px solid var(--borders-neutral-primary);
 }
 
