@@ -105,6 +105,7 @@ import spriteLab2Reducer, {
   setScenes,
   Tab,
 } from '../redux/spriteLab2Redux';
+import {sceneLinks} from '../sceneLinks';
 import {
   collectSavedExternalKeys,
   ExternalProject,
@@ -368,6 +369,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab]);
   // The docked palette's width, which the stage keeps clear of.
   const [worldPaletteWidth, setWorldPaletteWidth] = useState(0);
+  // The stage in focus: the preview large at the right, the code narrower.
+  const [stageFocus, setStageFocus] = useState(false);
+  const [previewWidth, setPreviewWidth] = useState(0);
+  const handleToggleFocus = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (isPointerClick(event)) {
+        event.currentTarget.blur();
+      }
+      setStageFocus(focus => !focus);
+    },
+    []
+  );
+  // The workspace does not notice its container changing width.
+  useEffect(() => {
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    if (workspace) {
+      Blockly.svgResize(workspace);
+    }
+  }, [previewWidth]);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   // The project is shared by every level of the lesson, so Start Over sends
   // the student back to its first level to remake it. A level outside a
@@ -1761,6 +1783,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [handOffControlFocus]
   );
 
+  // Play game, from the map: from the start scene.
+  const handlePlayGame = useCallback(() => {
+    setPlayStartSceneId(null);
+    unlockGameAudioRef.current();
+    dispatch(setActiveTab('Play'));
+  }, [dispatch]);
+  const links = useMemo(() => sceneLinks(scenes), [scenes]);
+
   // Clicking the live preview opens Play on the scene being previewed.
   // Previewing the first scene IS the beginning; keep the quiet default state.
   const handlePreviewClick = useCallback(() => {
@@ -2041,6 +2071,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
               pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
+              // The code gives the large preview its column.
+              right: previewWidth,
             }}
           >
             {animationsSeeded && (
@@ -2086,6 +2118,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   scenes={sceneMetadata}
                   activeSceneId={activeSceneId}
                   editable={scenesEditable}
+                  links={links}
+                  onPlayGame={handlePlayGame}
                   onOpenScene={sceneEditing.selectScene}
                   onCreateScene={sceneEditing.createScene}
                   onRenameScene={sceneEditing.renameScene}
@@ -2104,6 +2138,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             platformScene={playingPlatformer}
             mode={playspaceMode}
             editorReserveLeft={worldPaletteWidth}
+            focus={stageFocus}
+            onPreviewWidth={setPreviewWidth}
             editor={
               worldTabEnabled && worldMounted
                 ? placement => (
@@ -2156,6 +2192,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     : undefined
                 }
                 onDone={tabs.includes('Code') ? handleDoneEditing : undefined}
+                focused={stageFocus}
+                onToggleFocus={
+                  activeTab === 'Code' ? handleToggleFocus : undefined
+                }
               />
             }
             guideSize={levelProperties.levelMode ? guideSize : null}

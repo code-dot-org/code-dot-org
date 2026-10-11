@@ -51,6 +51,9 @@ export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // The docked palette's inset from the overlay's left edge, and its gap to
 // the box.
 const EDITOR_DOCK_MARGIN = 12;
+// With the stage in focus, the preview takes at most this share of the
+// width; the code keeps the rest.
+const FOCUS_WIDTH_SHARE = 0.55;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;
@@ -157,6 +160,10 @@ interface PlayspaceProps {
   editor?: (placement: {x: number; y: number; side: number}) => React.ReactNode;
   // The docked palette's width, which the box keeps clear of in edit mode.
   editorReserveLeft?: number;
+  // The stage has focus: the preview is large, at the right, and the code
+  // keeps the room to its left (onPreviewWidth says how much is taken).
+  focus?: boolean;
+  onPreviewWidth?: (width: number) => void;
   // The floating guide's footprint, pinned to the overlay's bottom-right
   // (playPlacement).
   guideSize?: {width: number; height: number} | null;
@@ -180,6 +187,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   playBar,
   editor,
   editorReserveLeft = 0,
+  focus = false,
+  onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -346,6 +355,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         ? editorReserveLeft + 2 * EDITOR_DOCK_MARGIN
         : 0
     );
+  } else if (focus) {
+    // Preview in focus: as large as the right column allows, clear of the
+    // guide like the play view.
+    placement = playPlacement(
+      size,
+      guideSize,
+      playBar ? BAR_ROOM : 0,
+      Math.round(size.w * (1 - FOCUS_WIDTH_SHARE))
+    );
   } else {
     // Preview: small box pinned to the top-right corner.
     placement = {
@@ -360,6 +378,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
+  // The room the code gives up: the column from the box's left edge to
+  // the overlay's right, only while the preview is large.
+  const previewWidth =
+    mode === 'preview' && focus && measured ? Math.ceil(size.w - x) : 0;
+  const reportPreviewWidth = useRef(onPreviewWidth);
+  reportPreviewWidth.current = onPreviewWidth;
+  useEffect(() => {
+    reportPreviewWidth.current?.(previewWidth);
+  }, [previewWidth]);
   // Under the box, unscaled, at the box's width.
   const barTransform = `translate(${x}px, ${y + boxSide + BAR_GAP}px)`;
   const visible = measured && mode !== 'hidden';

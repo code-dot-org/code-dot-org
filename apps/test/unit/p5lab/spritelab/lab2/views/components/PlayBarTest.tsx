@@ -18,6 +18,42 @@ describe('PlayBar', () => {
     expect(names()).toEqual(['Play']);
   });
 
+  it('offers the stage focus toggle beside the preview, not while editing', () => {
+    const onToggleFocus = jest.fn();
+    const {rerender} = render(
+      <PlayBar
+        playing={false}
+        arrows="jump"
+        onPlay={jest.fn()}
+        onToggleFocus={onToggleFocus}
+      />
+    );
+    expect(names()).toEqual(['Bigger stage', 'Play']);
+    screen.getByRole('button', {name: 'Bigger stage'}).click();
+    expect(onToggleFocus).toHaveBeenCalled();
+    rerender(
+      <PlayBar
+        playing={false}
+        focused
+        arrows="jump"
+        onPlay={jest.fn()}
+        onToggleFocus={onToggleFocus}
+      />
+    );
+    expect(names()).toEqual(['Smaller stage', 'Play']);
+    rerender(
+      <PlayBar
+        playing={false}
+        editing
+        arrows="jump"
+        onPlay={jest.fn()}
+        onDone={jest.fn()}
+        onToggleFocus={onToggleFocus}
+      />
+    );
+    expect(names()).toEqual(['Done', 'Play']);
+  });
+
   it('offers World beside Play where the scene has a world', () => {
     const onEditWorld = jest.fn();
     render(
