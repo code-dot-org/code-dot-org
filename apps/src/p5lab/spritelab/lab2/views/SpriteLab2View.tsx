@@ -509,15 +509,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the open scene's tab, or, with ?editors=strip, as a strip over the
   // editor pane. Two candidates under trial.
   const editorChoice = enabledTabs.includes('World') && tabs.includes('Code');
-  // ?editors=strip: a strip over the editor pane; ?editors=float: a stacked
-  // switch floating over the editors' left strip; else inside the tab.
+  // ?editors=strip: a strip over the editor pane; ?editors=float: a pill
+  // floating over the editors' left strip; ?editors=floatright: the pill at
+  // the workspace's top-right; else inside the tab.
   const editorsPlacement = useMemo(() => {
     const value = queryParams('editors');
-    return value === 'strip' || value === 'float' ? value : 'tab';
+    return value === 'strip' || value === 'float' || value === 'floatright'
+      ? value
+      : 'tab';
   }, []);
   const editorsInStrip = editorsPlacement !== 'tab';
   const editorStrip = editorChoice && editorsPlacement === 'strip';
   const editorFloat = editorChoice && editorsPlacement === 'float';
+  // ?editors=floatright: the same pill at the workspace's top-right, where
+  // nothing sits beneath it and nothing has to move down.
+  const editorFloatRight = editorChoice && editorsPlacement === 'floatright';
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -2076,11 +2082,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               />
             </div>
           )}
-          {editorFloat && (activeTab === 'World' || activeTab === 'Code') && (
-            <div className={moduleStyles.editorFloat}>
-              <EditorSwitch value={activeTab} onChange={handleEditorChange} />
-            </div>
-          )}
+          {(editorFloat || editorFloatRight) &&
+            (activeTab === 'World' || activeTab === 'Code') && (
+              <div
+                className={moduleStyles.editorFloat}
+                style={
+                  editorFloatRight
+                    ? {left: 'auto', right: previewWidth + 8}
+                    : undefined
+                }
+              >
+                <EditorSwitch value={activeTab} onChange={handleEditorChange} />
+              </div>
+            )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div
