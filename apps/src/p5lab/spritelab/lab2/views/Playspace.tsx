@@ -52,6 +52,10 @@ const COLUMN_MIN_PX = 320;
 // The least height kept under the bar for the docked instructions: a
 // student can read with a small preview, not with no text.
 const BELOW_MIN_PX = 150;
+// The column's two cards, the preview's and the instructions', are inset
+// from the column's edges and from each other by this much, and the
+// preview card pads its box by it.
+const CARD_GAP = 12;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;
@@ -413,6 +417,17 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           style={{width: previewWidth}}
         />
       )}
+      {previewWidth > 0 && (
+        <div
+          className={moduleStyles.previewCard}
+          style={{
+            left: size.w - previewWidth + CARD_GAP,
+            top: y - CARD_GAP,
+            width: previewWidth - 2 * CARD_GAP,
+            height: boxSide + (playBar ? BAR_ROOM : 0) + 2 * CARD_GAP,
+          }}
+        />
+      )}
       <div
         ref={boxRef}
         className={moduleStyles.playspaceBox}
@@ -545,9 +560,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         <div
           className={moduleStyles.previewBelow}
           style={{
-            left: size.w - previewWidth,
-            top: y + boxSide + BAR_ROOM + BAR_GAP,
-            width: previewWidth,
+            left: size.w - previewWidth + CARD_GAP,
+            top: y + boxSide + BAR_ROOM + 2 * CARD_GAP,
+            width: previewWidth - 2 * CARD_GAP,
+            bottom: CARD_GAP,
           }}
         >
           {below}
