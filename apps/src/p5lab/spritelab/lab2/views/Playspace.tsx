@@ -43,11 +43,11 @@ const PREVIEW_MARGIN = 24;
 const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
 export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
-// The preview's column takes at most this share of the width; the code
-// keeps the rest. The column is only as wide as the box it holds needs,
-// down to a floor that fits the bar's buttons and a readable line of
-// instructions.
-const PREVIEW_WIDTH_SHARE = 0.4;
+// The preview's column takes at most this share of the browser's width;
+// the code keeps the rest. The column is only as wide as the box it holds
+// needs, down to a floor that fits the bar's buttons and a readable line
+// of instructions.
+const PREVIEW_WIDTH_SHARE = 1 / 3;
 const COLUMN_MIN_PX = 320;
 // The least height kept under the bar for the docked instructions: a
 // student can read with a small preview, not with no text.
@@ -350,12 +350,18 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     // Preview: as large as its column allows, clear of the guide like the
     // play view (when the guide floats), leaving room under the bar for
     // what is docked there, and at the top rather than centered.
-    const share = Math.round(size.w * PREVIEW_WIDTH_SHARE);
+    // The browser's width, not the playspace's: the panels left of the
+    // workspace count against the code, not the preview. A browser resize
+    // resizes the playspace too, so this reads fresh each time.
+    const browserWidth = window.innerWidth || size.w;
+    const share = Math.round(browserWidth * PREVIEW_WIDTH_SHARE);
+    // The box fits inside the share's card, not the share, so it keeps
+    // its inset from the card's edges when the width is what limits it.
     const inShare = playPlacement(
       size,
       below ? null : guideSize,
       (playBar ? BAR_ROOM : 0) + (below ? BELOW_MIN_PX + BAR_GAP : 0),
-      size.w - share
+      size.w - share + 2 * CARD_GAP
     );
     // The column shrinks to the box when the height, not the share,
     // limits it; the box centres in whatever width that leaves.
