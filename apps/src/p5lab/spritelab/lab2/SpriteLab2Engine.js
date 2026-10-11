@@ -217,6 +217,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
+    // The world editor holds every run at its first frame (setHoldAtStart):
+    // asked for, and in force once that frame has drawn.
+    this.holdAtStart_ = false;
+    this.heldAtStart_ = false;
     // The run's weather kind, set by the set-weather block, and its live
     // pool, built at the first paint after the kind changes.
     this.weatherKind_ = 'none';
@@ -372,6 +376,19 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.applyDrawPaused_();
   }
 
+  /**
+   * Hold each run at its first frame, once drawn, so the stage shows the
+   * scene's start: the world editor paints over that picture. Lifting the
+   * hold lets the current run go on.
+   */
+  setHoldAtStart(hold) {
+    this.holdAtStart_ = !!hold;
+    if (!this.holdAtStart_) {
+      this.heldAtStart_ = false;
+      this.applyDrawPaused_();
+    }
+  }
+
   // Also reasserted after a rerun: a rerun builds a fresh library (whose
   // pause clock starts at zero) and turns the loop back on.
   applyDrawPaused_() {
@@ -379,7 +396,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const now = new Date().getTime();
-    if (this.drawPaused_) {
+    if (this.drawPaused_ || this.heldAtStart_) {
       if (this.library && !this.library.currentPauseStartTime) {
         this.library.startPause(now);
       }
@@ -828,6 +845,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
+    }
+    // A new run draws its first frame before any hold takes effect.
+    this.heldAtStart_ = false;
+    if (this.holdAtStart_) {
+      this.captureFirstFrame(canvas => {
+        if (canvas && this.holdAtStart_) {
+          this.heldAtStart_ = true;
+          this.applyDrawPaused_();
+        }
+      });
     }
     // A second execute() while the first's preload is pending crashes the
     // interpreter (getScope); defer and re-run with the latest code after.

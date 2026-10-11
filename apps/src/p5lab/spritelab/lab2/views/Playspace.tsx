@@ -154,9 +154,9 @@ interface PlayspaceProps {
   // Shown under the box in every visible mode; the box is placed to leave
   // it room.
   playBar?: React.ReactNode;
-  // The World editor, given the box's placement to put its grid in; it
-  // covers the whole overlay, with its palette docked at the left. Kept
-  // mounted and inert in the other modes.
+  // The World editor, given the box's placement to put its grid over the
+  // scene's first frame; it covers the whole overlay, with its palette
+  // docked at the left. Kept mounted and inert in the other modes.
   editor?: (placement: {x: number; y: number; side: number}) => React.ReactNode;
   // The docked palette's width, which the box keeps clear of in edit mode.
   editorReserveLeft?: number;
@@ -471,9 +471,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           ref={canvasRef}
           id="divGameLab"
           className={moduleStyles.playspaceCanvas}
-          // The editor stands in the box's place; the scene behind it
-          // would show through the grid's empty cells.
-          style={{visibility: mode === 'edit' ? 'hidden' : 'visible'}}
         />
         {/* Click-to-play: a transparent catcher over the live preview so a
             click opens Play on this scene. Only in preview and never while

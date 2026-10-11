@@ -1450,6 +1450,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [engineReady, runProgram]);
 
+  // The world editor shows the scene held at its first frame: the picture
+  // the engine draws, with the grid over it. Set ahead of the run below.
+  useEffect(() => {
+    engineRef.current?.setHoldAtStart(activeTab === 'World');
+  }, [activeTab, engineReady]);
+
   // Tab semantics: Play (re)starts at the chosen start scene
   // (or the beginning); returning to Code resumes previewing the scene being
   // edited. Skip the initial mount — the engine-ready effect handles the
@@ -1463,7 +1469,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     if (activeTab === 'Play') {
       runScene(playStartSceneId ?? defaultPlaySceneId);
-    } else if (activeTab === 'Code') {
+    } else if (activeTab === 'Code' || activeTab === 'World') {
       runScene(activeSceneId);
     }
     // playStartSceneId is set in the same batch as the tab change; the
@@ -1867,7 +1873,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, []);
   useEffect(() => {
     engineRef.current?.setDrawPaused(
-      playspaceMode === 'hidden' || playspaceMode === 'edit' || documentHidden
+      playspaceMode === 'hidden' || documentHidden
     );
     // engineReady: a level that STARTS with the stage hidden (an images-only
     // level) must pause the engine as soon as it exists.
