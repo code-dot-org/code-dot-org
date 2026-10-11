@@ -146,9 +146,16 @@ $tab-item-height: 34px;
   }
 }
 
-// "All scenes" never shrinks under the row's overflow.
+// The map's tab, the row's parent: never shrinks under the overflow.
 .sceneTabAll {
   flex: none;
+}
+
+// Between the map and its scenes.
+.sceneTabsChevron {
+  flex: none;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
 }
 
 // New scene: a square beside the tabs.

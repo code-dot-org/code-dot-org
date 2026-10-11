@@ -33,9 +33,9 @@ const selectedNames = () =>
     .map(tab => tab.textContent?.trim());
 
 describe('SceneTabs', () => {
-  it('shows every scene as a tab, the current one selected, then All scenes', () => {
+  it('leads with the map, then every scene as a tab, the current one selected', () => {
     renderTabs();
-    expect(tabNames()).toEqual(['Forest', 'Cave', 'All scenes']);
+    expect(tabNames()).toEqual(['Scenes', 'Forest', 'Cave']);
     expect(selectedNames()).toEqual(['Cave']);
     expect(screen.getByRole('button', {name: 'New scene'})).toBeTruthy();
   });
@@ -44,13 +44,13 @@ describe('SceneTabs', () => {
     const {onSelectScene, onManageScenes} = renderTabs();
     fireEvent.click(screen.getByRole('tab', {name: 'Forest'}));
     expect(onSelectScene).toHaveBeenCalledWith('a');
-    fireEvent.click(screen.getByRole('tab', {name: 'All scenes'}));
+    fireEvent.click(screen.getByRole('tab', {name: 'Scenes'}));
     expect(onManageScenes).toHaveBeenCalled();
   });
 
   it('marks the gallery selected while it is open, and no scene', () => {
     renderTabs({galleryOpen: true});
-    expect(selectedNames()).toEqual(['All scenes']);
+    expect(selectedNames()).toEqual(['Scenes']);
   });
 
   it('withholds New scene when scenes cannot be made, and disables all while playing', () => {

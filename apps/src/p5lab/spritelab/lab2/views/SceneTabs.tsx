@@ -27,9 +27,9 @@ interface SceneTabsProps {
 
 /**
  * The project's scenes as a row of tabs, each with its picture, so the
- * scenes are in sight rather than inside a menu. Overflow hides under the
- * row's end; the selected tab scrolls into view, and "All scenes" opens
- * the gallery, which lists every scene and manages them.
+ * scenes are in sight rather than inside a menu. The row reads as a
+ * breadcrumb: Scenes, the map of the whole game, then the scenes in it.
+ * Overflow hides under the row's end; the selected tab scrolls into view.
  */
 const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   scenes,
@@ -48,6 +48,35 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   }, [activeSceneId, scenes.length]);
   return (
     <div className={moduleStyles.sceneTabs} role="tablist" aria-label="Scenes">
+      {onManageScenes && (
+        <>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={galleryOpen}
+            disabled={disabled}
+            className={classNames(
+              moduleStyles.sceneTab,
+              moduleStyles.sceneTabAll,
+              galleryOpen && moduleStyles.sceneTabActive
+            )}
+            onClick={event => {
+              blurAfterPointerClick(event);
+              onManageScenes();
+            }}
+          >
+            <FontAwesomeV6Icon iconName="table-cells" iconStyle="solid" />
+            <span className={moduleStyles.sceneTabName} data-label="Scenes">
+              Scenes
+            </span>
+          </button>
+          <FontAwesomeV6Icon
+            iconName="chevron-right"
+            iconStyle="solid"
+            className={moduleStyles.sceneTabsChevron}
+          />
+        </>
+      )}
       <div className={moduleStyles.sceneTabsRow}>
         {scenes.map(scene => {
           const selected = !galleryOpen && scene.id === activeSceneId;
@@ -98,28 +127,6 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
           }}
         >
           <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-        </button>
-      )}
-      {onManageScenes && (
-        <button
-          type="button"
-          role="tab"
-          aria-selected={galleryOpen}
-          disabled={disabled}
-          className={classNames(
-            moduleStyles.sceneTab,
-            moduleStyles.sceneTabAll,
-            galleryOpen && moduleStyles.sceneTabActive
-          )}
-          onClick={event => {
-            blurAfterPointerClick(event);
-            onManageScenes();
-          }}
-        >
-          <FontAwesomeV6Icon iconName="table-cells" iconStyle="solid" />
-          <span className={moduleStyles.sceneTabName} data-label="All scenes">
-            All scenes
-          </span>
         </button>
       )}
       {naming && (
