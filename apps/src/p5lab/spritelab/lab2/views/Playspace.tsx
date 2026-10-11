@@ -44,8 +44,11 @@ const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
 export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // The preview's column takes at most this share of the width; the code
-// keeps the rest.
+// keeps the rest. The column is only as wide as the box it holds needs,
+// down to a floor that fits the bar's buttons and a readable line of
+// instructions.
 const PREVIEW_WIDTH_SHARE = 0.4;
+const COLUMN_MIN_PX = 320;
 // The least height kept under the bar for the docked instructions: a
 // student can read with a small preview, not with no text.
 const BELOW_MIN_PX = 150;
@@ -335,30 +338,39 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   }, []);
 
   let placement: Placement;
+  // The preview column's width; 0 outside preview.
+  let columnWidth = 0;
   if (mode === 'play') {
     placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0);
   } else {
     // Preview: as large as its column allows, clear of the guide like the
     // play view (when the guide floats), leaving room under the bar for
     // what is docked there, and at the top rather than centered.
-    const column = playPlacement(
+    const share = Math.round(size.w * PREVIEW_WIDTH_SHARE);
+    const inShare = playPlacement(
       size,
       below ? null : guideSize,
       (playBar ? BAR_ROOM : 0) + (below ? BELOW_MIN_PX + BAR_GAP : 0),
-      Math.round(size.w * (1 - PREVIEW_WIDTH_SHARE))
+      size.w - share
     );
-    placement = {...column, y: PREVIEW_MARGIN};
+    // The column shrinks to the box when the height, not the share,
+    // limits it; the box centres in whatever width that leaves.
+    const side = CANVAS * inShare.scale;
+    columnWidth = Math.min(
+      share,
+      Math.max(COLUMN_MIN_PX, Math.round(side + 2 * PREVIEW_MARGIN))
+    );
+    placement = {
+      scale: inShare.scale,
+      x: size.w - columnWidth + (columnWidth - side) / 2,
+      y: PREVIEW_MARGIN,
+    };
   }
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
-  // The room the code gives up: the column is the whole share, so the box,
-  // its bar and what is docked beneath all centre in it, whatever height
-  // limits the box.
-  const previewWidth =
-    mode === 'preview' && measured
-      ? Math.round(size.w * PREVIEW_WIDTH_SHARE)
-      : 0;
+  // The room the code gives up.
+  const previewWidth = mode === 'preview' && measured ? columnWidth : 0;
   const reportPreviewWidth = useRef(onPreviewWidth);
   reportPreviewWidth.current = onPreviewWidth;
   useEffect(() => {
