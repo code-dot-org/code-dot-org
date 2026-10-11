@@ -165,13 +165,18 @@ $tab-item-height: 34px;
   max-width: 360px;
 }
 
+// The unveil in two steps: the tab makes room, then the two options fade
+// into it.
+$scene-tab-grow-ms: 320ms;
+$scene-tab-fade-ms: 260ms;
+
 .sceneTabEditors {
   // A grid track from 0fr to 1fr animates to the segments' own width,
   // where a max-width guess would overshoot and end the motion early.
   display: grid;
   flex: none;
   grid-template-columns: 1fr;
-  animation: scene-tab-open 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: scene-tab-grow $scene-tab-grow-ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .sceneTabEditorsInner {
@@ -181,16 +186,27 @@ $tab-item-height: 34px;
   height: 100%;
   overflow: hidden;
   border-left: 1px solid var(--borders-neutral-primary);
+  // Invisible until the room is made; `both` holds the first frame
+  // through the delay.
+  animation: scene-tab-fade $scene-tab-fade-ms ease-out $scene-tab-grow-ms both;
 }
 
-@keyframes scene-tab-open {
+@keyframes scene-tab-grow {
   from {
     grid-template-columns: 0fr;
-    opacity: 0;
   }
 
   to {
     grid-template-columns: 1fr;
+  }
+}
+
+@keyframes scene-tab-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
     opacity: 1;
   }
 }
