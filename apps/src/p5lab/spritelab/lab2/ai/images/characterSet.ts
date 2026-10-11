@@ -17,6 +17,7 @@ import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
+import {CachedImage} from './imageCache';
 import {
   GeneratedImageResult,
   logicalGridFor,
@@ -28,7 +29,7 @@ import {
   styleClause,
 } from './imageGeneration';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
-import {chooseKeyColor, KeyColor} from './keyColor';
+import {chooseKeyColor, KEY_COLORS, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
@@ -339,6 +340,9 @@ export interface CharacterSetOptions {
   pixelGrid?: number;
   /** How the character is built; absent = a person-like figure. */
   bodyPlan?: BodyPlan;
+  /** Take every frame from the cache instead of the model; see
+      GenerateImageOptions.cached. */
+  cached?: CachedImage;
 }
 
 export interface CharacterSetProgress {
@@ -365,11 +369,27 @@ export async function generateCharacterSet(
   options: CharacterSetOptions,
   onProgress?: (progress: CharacterSetProgress) => void
 ): Promise<GeneratedImageResult> {
-  const key = chooseKeyColor(prompt);
+  const {cached} = options;
+  const sidecar = cached ? await cached.sidecar() : undefined;
+  // A cached set was drawn on the colour its generator chose from the
+  // words of its day; the sidecar says which, in case the words changed.
+  const key =
+    (sidecar?.keyColor &&
+      KEY_COLORS[sidecar.keyColor as keyof typeof KEY_COLORS]) ||
+    chooseKeyColor(prompt);
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
-  const pixelBlock = pixelBlockFor('sprite', options.pixelGrid);
+  const {temperature} = options;
+  const pixelBlock = pixelBlockFor(
+    'sprite',
+    sidecar?.pixelGrid ?? options.pixelGrid
+  );
+  const drawFrame = (
+    frame: string,
+    text: string,
+    request: Parameters<typeof requestFrameWithRetry>[1]
+  ) => (cached ? cached.raw(frame) : requestFrameWithRetry(text, request));
   const total = CHARACTER_SET_PICTURE_COUNT;
   const keyFrame = (raw: RawImage) =>
     removeKeyColor(rawImageToBlob(raw), key.rgb, {
@@ -379,19 +399,23 @@ export async function generateCharacterSet(
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
   // The prompt judge runs while the base picture draws; its verdict gates
-  // everything after (the posed frames embed the same student text).
-  const promptVerdict = markHandled(checkPromptSafety(prompt));
+  // everything after (the posed frames embed the same student text). A
+  // cached set was reviewed before upload: neither judge runs.
+  const promptVerdict = cached
+    ? Promise.resolve()
+    : markHandled(checkPromptSafety(prompt));
   // Judge every generated frame. Each verdict is awaited before that
   // frame's preview shows, so flagged pixels never reach the progress UI.
   const judgeFrame = (raw: RawImage): Promise<void> =>
-    markHandled(checkImageSafety(raw));
+    cached ? Promise.resolve() : markHandled(checkImageSafety(raw));
 
   onProgress?.({done: 0, total, label: 'the character'});
-  const base = await requestFrameWithRetry(
+  const base = await drawFrame(
+    'base',
     basePrompt(prompt, options.style, key, pixelBlock, options.bodyPlan),
     {
       seed,
-      temperature: options.temperature,
+      temperature,
       imageSize: CHARACTER_SET_IMAGE_SIZE,
       model: getCharacterSetImageModel(),
     }
@@ -411,11 +435,12 @@ export async function generateCharacterSet(
   // parallel: a set costs two round trips, not five.
   const posed = await Promise.all(
     posedFrames(options.bodyPlan).map(async (frame, index) => {
-      const raw = await requestFrameWithRetry(
+      const raw = await drawFrame(
+        frame.label,
         posePrompt(prompt, frame, options.style, key, pixelBlock),
         {
           seed: seed + index + 1,
-          temperature: options.temperature,
+          temperature,
           references: [baseURI],
           imageSize: CHARACTER_SET_IMAGE_SIZE,
           model: getCharacterSetImageModel(),
@@ -449,10 +474,7 @@ export async function generateCharacterSet(
     prompt,
     imageType: 'sprite',
     style: options.style,
-    seed,
-    ...(options.temperature !== undefined && {
-      temperature: options.temperature,
-    }),
+    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
     ...(options.style === 'pixel' && {
       pixelGrid: logicalGridFor(pixelBlock),
     }),

@@ -6,6 +6,7 @@ import {
   sentenceFor,
   slotsToOffer,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
+import manifest from '@cdo/static/spritelab_lab2/exploreSentences.json';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 
@@ -103,16 +104,29 @@ describe('exploreSentences', () => {
     expect(
       full('place-time', {adjective: 'spooky', place: 'castle', time: 'night'})
     ).toBe('A spooky castle at night');
-    expect(
-      full('place-detail', {place: 'forest', detail: 'glowing-mushrooms'})
-    ).toBe('A forest with glowing mushrooms');
+    expect(full('place-detail', {place: 'forest', detail: 'mushrooms'})).toBe(
+      'A forest with glowing mushrooms'
+    );
     expect(full('block', {material: 'ice'})).toBe('A block of ice');
-    expect(full('block', {material: 'stone', detail: 'tiny-gems'})).toBe(
+    expect(full('block', {material: 'stone', detail: 'gems'})).toBe(
       'A block of stone with tiny gems'
     );
     expect(
-      full('treasure', {look: 'golden', treasure: 'key', detail: 'a-ribbon'})
+      full('treasure', {look: 'golden', treasure: 'key', detail: 'ribbon'})
     ).toBe('A golden key with a ribbon');
+  });
+
+  it('word ids are single words: the cache joins them with dashes', () => {
+    const words = [
+      ...Object.values(manifest.wordSets).flat(),
+      ...Object.values(manifest.sentences).flatMap(sentence =>
+        Object.values(sentence.slots).flatMap(slot =>
+          typeof slot.words === 'string' ? [] : slot.words
+        )
+      ),
+    ];
+    expect(words.length).toBeGreaterThan(0);
+    words.forEach(word => expect(word.id).toMatch(/^[a-z0-9]+$/));
   });
 
   it("every sentence's optional slots are the ones inside phrases", () => {

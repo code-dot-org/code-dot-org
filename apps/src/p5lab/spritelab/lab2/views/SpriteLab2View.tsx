@@ -43,6 +43,7 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks} from '../addBlocks';
 import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
+import {ImageSource, isImageSource} from '../ai/images/imageCache';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -68,6 +69,7 @@ import {onTrimsUpdated} from '../imageTrim';
 import {
   adlibSetForMode,
   DEFAULT_IMAGE_STYLE,
+  imageSourceForMode,
   isFreeplayMode,
   isImageMode,
   isImageUi,
@@ -171,6 +173,19 @@ function getImageFreeTextParam(): boolean {
   return queryParams('image-free-text') === 'true';
 }
 
+// ?image-source=cached|live overrides the level's, and
+// ?image-cache-url= reads another tree (a local one, or a version under
+// review), for internal testing.
+function getImageSourceParam(): ImageSource | undefined {
+  const value = queryParams('image-source');
+  return isImageSource(value) ? value : undefined;
+}
+
+function getImageCacheUrlParam(): string | undefined {
+  const value = queryParams('image-cache-url');
+  return typeof value === 'string' && value ? value : undefined;
+}
+
 // ?image-ui=explore tries the two-half image scene on any image level; a
 // level opts in with level_mode.imageUi.
 function getImageUiParam() {
@@ -270,6 +285,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
   const imageFreeTextParam = useMemo(getImageFreeTextParam, []);
+  const imageSourceParam = useMemo(getImageSourceParam, []);
+  const imageCacheUrlParam = useMemo(getImageCacheUrlParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one. Level edit modes author starter images, which needs the
   // naming controls.
@@ -1889,6 +1906,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               uploadImage={uploadImage}
               instructions={guide.text}
               showTts={showTtsFor(levelProperties)}
+              imageSource={
+                imageSourceParam ||
+                imageSourceForMode(levelProperties.levelMode)
+              }
+              imageCacheUrl={imageCacheUrlParam}
             />
           ) : (
             <>

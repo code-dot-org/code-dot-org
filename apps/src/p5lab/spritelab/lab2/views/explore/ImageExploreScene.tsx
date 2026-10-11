@@ -15,6 +15,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
 import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
+  CachedImage,
+  findCachedImage,
+  ImageSource,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
+import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
@@ -47,6 +52,7 @@ import {
   isComplete,
   promptText,
   sentenceFor,
+  sentenceWordIds,
 } from './exploreSentences';
 import {playSound} from './exploreSounds';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
@@ -103,6 +109,11 @@ interface ImageExploreSceneProps {
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
+  /** Where a sentence's picture comes from: the model, the cache, or the
+      cache with the model behind it (imageCache.ts). The model when unset. */
+  imageSource?: ImageSource;
+  /** Another tree to read cached pictures from (QA). */
+  imageCacheUrl?: string;
 }
 
 const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
@@ -114,6 +125,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   uploadImage,
   instructions,
   showTts,
+  imageSource = 'live',
+  imageCacheUrl,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
@@ -138,10 +151,39 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
   // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
+  // The cached variant shown last, so Generate again shows another.
+  const lastCachedVariantRef = useRef<number>();
+
+  // The cached picture for the sentence as filled, when the level reads
+  // from the cache and it has one of the right style and form.
+  const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
+    if (imageSource === 'live') {
+      return undefined;
+    }
+    const cached = await findCachedImage({
+      sentenceId: sentence.id,
+      wordIds: sentenceWordIds(sentence, choices),
+      style,
+      avoidVariant: lastCachedVariantRef.current,
+      baseUrl: imageCacheUrl,
+    });
+    // A set's base frame serves as a single picture; a single picture
+    // cannot become a set.
+    return canAnimate && cached && !cached.characterSet ? undefined : cached;
+  }, [imageSource, sentence, choices, style, imageCacheUrl, canAnimate]);
 
   const generate = useCallback(async () => {
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
+    // A live level never waits here: the generating state shows at once.
+    const cached = imageSource === 'cached' ? await findCached() : undefined;
+    if (run !== runRef.current) {
+      return;
+    }
+    if (imageSource === 'cached' && !cached) {
+      setError("This picture isn't ready yet. Try different words.");
+      return;
+    }
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
@@ -152,6 +194,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         sentenceId: sentence.id,
         choices,
         style,
+        imageSource,
+        cached: !!cached,
       },
       true
     );
@@ -174,6 +218,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         ...(style === 'pixel' && {pixelGrid: defaultPixelGrid(imageType)}),
       };
       const bodyPlan = chosenBodyPlan(sentence, choices);
+      // What the lab would send. A cached picture was made from the same
+      // words by the same prompt builders, so this describes it as well.
       const sent: SentPrompts = sentPromptsFor(
         prompt,
         options,
@@ -181,16 +227,20 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         canAnimate,
         bodyPlan
       );
-      const result = canAnimate
+      const result: GeneratedImageResult = canAnimate
         ? await generateCharacterSet(prompt, {
             style,
             temperature: TEMPERATURE,
             pixelGrid: options.pixelGrid,
             bodyPlan,
+            cached,
           })
-        : await generateImage(prompt, options);
+        : await generateImage(prompt, {...options, cached});
       if (run !== runRef.current) {
         return;
+      }
+      if (cached) {
+        lastCachedVariantRef.current = cached.variant;
       }
       setMade({
         result,
@@ -216,7 +266,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       }
       setMode('edit');
     }
-  }, [sentence, choices, imageType, imageSubject, style, canAnimate]);
+  }, [
+    sentence,
+    choices,
+    imageType,
+    imageSubject,
+    style,
+    canAnimate,
+    findCached,
+    imageSource,
+  ]);
 
   const keep = useCallback(async () => {
     if (!made) {
