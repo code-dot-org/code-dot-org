@@ -131,7 +131,24 @@ $tab-item-height: 34px;
 }
 
 .sceneTabActive {
-  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  // Trial: a filled tab, far stronger than the 2px underline, to see
+  // whether the open scene reads at a glance.
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--borders-brand-teal-primary);
+  color: #fff;
+
+  .sceneTabEditor {
+    color: rgb(255 255 255 / 75%);
+    border-color: rgb(255 255 255 / 35%);
+  }
+
+  .sceneTabEditors {
+    border-color: rgb(255 255 255 / 35%);
+  }
+
+  .sceneTabEditorActive {
+    color: #fff;
+  }
 
   .sceneTabMain {
     font-weight: 600;
