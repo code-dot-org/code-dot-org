@@ -23,13 +23,25 @@ interface SceneTabsProps {
   onCreateScene: (name: string, type: SceneType) => void;
   /** Opens the Scenes gallery; the row offers it only when given. */
   onManageScenes?: () => void;
+  /** The open scene's two editors, as segments inside its tab; absent
+      where the scene has only one. */
+  editor?: {value: Editor; onChange: (editor: Editor) => void};
 }
+
+export type Editor = 'World' | 'Code';
+
+const EDITORS: {editor: Editor; icon: string}[] = [
+  {editor: 'World', icon: 'table-cells'},
+  {editor: 'Code', icon: 'code'},
+];
 
 /**
  * The project's scenes as a row of tabs, each with its picture, so the
  * scenes are in sight rather than inside a menu. The row reads as a
- * breadcrumb: Scenes, the map of the whole game, then the scenes in it.
- * Overflow hides under the row's end; the selected tab scrolls into view.
+ * breadcrumb: Scenes, the map of the whole game, then the scenes in it;
+ * the open scene's tab holds its World | Code switch, so the choice sits
+ * inside the scene it is about. Overflow hides under the row's end; the
+ * selected tab scrolls into view.
  */
 const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   scenes,
@@ -40,6 +52,7 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   onSelectScene,
   onCreateScene,
   onManageScenes,
+  editor,
 }) => {
   const [naming, setNaming] = useState(false);
   const activeRef = useRef<HTMLButtonElement>(null);
@@ -80,37 +93,71 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
       <div className={moduleStyles.sceneTabsRow}>
         {scenes.map(scene => {
           const selected = !galleryOpen && scene.id === activeSceneId;
+          const open = selected && !!editor;
           return (
-            <button
+            <div
               key={scene.id}
-              ref={selected ? activeRef : undefined}
-              type="button"
-              role="tab"
-              aria-selected={selected}
-              disabled={disabled}
               className={classNames(
                 moduleStyles.sceneTab,
-                selected && moduleStyles.sceneTabActive
+                selected && moduleStyles.sceneTabActive,
+                open && moduleStyles.sceneTabOpen
               )}
-              onClick={event => {
-                blurAfterPointerClick(event);
-                onSelectScene(scene.id);
-              }}
             >
-              <ScenePicture
-                src={scene.thumbnail}
-                className={classNames(
-                  moduleStyles.sceneThumb,
-                  moduleStyles.sceneThumbSmall
-                )}
-              />
-              <span
-                className={moduleStyles.sceneTabName}
-                data-label={scene.name}
+              <button
+                ref={selected ? activeRef : undefined}
+                type="button"
+                role="tab"
+                aria-selected={selected}
+                disabled={disabled}
+                className={moduleStyles.sceneTabMain}
+                onClick={event => {
+                  blurAfterPointerClick(event);
+                  onSelectScene(scene.id);
+                }}
               >
-                {scene.name}
-              </span>
-            </button>
+                <ScenePicture
+                  src={scene.thumbnail}
+                  className={classNames(
+                    moduleStyles.sceneThumb,
+                    moduleStyles.sceneThumbSmall
+                  )}
+                />
+                <span
+                  className={moduleStyles.sceneTabName}
+                  data-label={scene.name}
+                >
+                  {scene.name}
+                </span>
+              </button>
+              {open && editor && (
+                <div
+                  className={moduleStyles.sceneTabEditors}
+                  role="group"
+                  aria-label="Edit"
+                >
+                  {EDITORS.map(({editor: choice, icon}) => (
+                    <button
+                      key={choice}
+                      type="button"
+                      aria-pressed={editor.value === choice}
+                      disabled={disabled}
+                      className={classNames(
+                        moduleStyles.sceneTabEditor,
+                        editor.value === choice &&
+                          moduleStyles.sceneTabEditorActive
+                      )}
+                      onClick={event => {
+                        blurAfterPointerClick(event);
+                        editor.onChange(choice);
+                      }}
+                    >
+                      <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+                      {choice}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           );
         })}
       </div>

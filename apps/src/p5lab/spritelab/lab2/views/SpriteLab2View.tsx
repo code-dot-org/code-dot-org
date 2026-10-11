@@ -131,7 +131,6 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {blurAfterPointerClick, isPointerClick} from './blurAfterPointerClick';
-import EditorSwitch from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
@@ -528,9 +527,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       activeSceneType === 'story' ? tabs.filter(tab => tab !== 'World') : tabs,
     [tabs, activeSceneType]
   );
-  // Which of the scene's two editors fills the main area. The switch shows
-  // where the scene has a world and the level has code.
-  const editorStrip = enabledTabs.includes('World') && tabs.includes('Code');
+  // Which of the scene's two editors fills the main area. The choice is
+  // offered where the scene has a world and the level has code.
+  const editorChoice = enabledTabs.includes('World') && tabs.includes('Code');
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -539,7 +538,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (workspace) {
       Blockly.svgResize(workspace);
     }
-  }, [previewWidth, editorStrip]);
+  }, [previewWidth]);
   useEffect(() => {
     if (activeTab === 'World' && !enabledTabs.includes('World')) {
       dispatch(
@@ -2078,32 +2077,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onSelectScene={sceneEditing.selectScene}
                 onCreateScene={sceneEditing.createScene}
                 onManageScenes={sceneEditing.openGallery}
+                editor={
+                  editorChoice &&
+                  (activeTab === 'World' || activeTab === 'Code')
+                    ? {value: activeTab, onChange: handleEditorChange}
+                    : undefined
+                }
               />
             ) : undefined
           }
         >
           {WorkspaceAlert}
-          {/* The scene's two editors, a strip over the editor pane: part of
-          the pane, not the bar, which names scopes. */}
-          {editorStrip && (
-            <div
-              className={moduleStyles.editorStrip}
-              style={{right: previewWidth}}
-            >
-              <EditorSwitch
-                value={activeTab === 'World' ? 'World' : 'Code'}
-                onChange={handleEditorChange}
-              />
-            </div>
-          )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div
             ref={codeWrapperRef}
-            className={classNames(
-              moduleStyles.codeTabWrapper,
-              editorStrip && moduleStyles.underEditorStrip
-            )}
+            className={moduleStyles.codeTabWrapper}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
               pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
@@ -2172,10 +2161,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {worldTabEnabled && worldMounted && (
             <div
               ref={worldWrapperRef}
-              className={classNames(
-                moduleStyles.codeTabWrapper,
-                editorStrip && moduleStyles.underEditorStrip
-              )}
+              className={moduleStyles.codeTabWrapper}
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
                 pointerEvents: activeTab === 'World' ? 'auto' : 'none',
