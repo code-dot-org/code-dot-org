@@ -170,6 +170,16 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The drawer the Pictures button controls.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
+// Room the ?editors=float switch takes above the editors' left strips
+// (the stylesheet's $editor-float-room), and the flyout's share of it,
+// read by the wrapped positioning step below.
+const EDITOR_FLOAT_ROOM_PX = 58;
+const flyoutRoom = {current: 0};
+const FLOAT_ROOM_WRAPPED = Symbol('spritelab2 float room');
+type FlyoutPrototype = {
+  positionAt_?: (width: number, height: number, x: number, y: number) => void;
+  [FLOAT_ROOM_WRAPPED]?: boolean;
+};
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -1299,6 +1309,37 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [animationsSeeded, sceneToolbox, workspaceVersion, refreshToolbox]);
 
+  // Under the float, the flyout starts lower too. Blockly places the
+  // flyout by an attribute transform and reads that transform back for
+  // every drop, so the room goes through its own positioning step (a CSS
+  // offset moved the picture and left drops landing 58 px above the
+  // pointer). The step is wrapped on the flyout's prototype, since the
+  // toolbox is rebuilt, flyout and all, after seeding and on refreshes;
+  // the version dep lands the wrap after the workspace exists.
+  useEffect(() => {
+    if (!animationsSeeded) {
+      return;
+    }
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    const flyout = workspace?.getToolbox?.()?.getFlyout?.();
+    if (!flyout) {
+      return;
+    }
+    const proto = Object.getPrototypeOf(flyout) as FlyoutPrototype;
+    if (proto.positionAt_ && !proto[FLOAT_ROOM_WRAPPED]) {
+      const placeAtTop = proto.positionAt_;
+      proto.positionAt_ = function (this: unknown, width, height, x, y) {
+        const room = flyoutRoom.current;
+        placeAtTop.call(this, width, height - room, x, y + room);
+      };
+      proto[FLOAT_ROOM_WRAPPED] = true;
+    }
+    flyoutRoom.current = editorFloat ? EDITOR_FLOAT_ROOM_PX : 0;
+    flyout.position();
+  }, [editorFloat, animationsSeeded, workspaceVersion]);
+
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
     musicProjects
@@ -2179,6 +2220,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onNewPicture={
                   picturesOffered ? handleNewWorldPicture : undefined
                 }
+                paletteTopRoom={editorFloat ? EDITOR_FLOAT_ROOM_PX : 0}
               />
             </div>
           )}

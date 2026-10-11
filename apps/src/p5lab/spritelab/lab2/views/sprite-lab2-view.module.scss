@@ -471,10 +471,15 @@ $editor-strip-height: 46px;
   top: $editor-strip-height;
 }
 
-// The pane's content starts under the float: the pair is wider than the
-// toolbox strip, so the flyout and the world grid would run under it.
-.underEditorFloat {
-  top: $editor-float-room;
+// Under the float, the toolbox's categories start lower while the column
+// itself keeps its full height (a gap above it read as a black bar). This
+// build's toolbox is .blocklyToolbox, not Blockly's stock .blocklyToolboxDiv.
+// The flyout is placed by the view through Blockly's own positioning: a
+// CSS translate on it moved the picture but not where a dropped block
+// lands.
+.underEditorFloat :global(.blocklyToolbox) {
+  box-sizing: border-box;
+  padding-top: $editor-float-room;
 }
 
 .blocklyDiv {
