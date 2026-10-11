@@ -56,7 +56,6 @@ import useGameAudio from '../audioFeedback/useGameAudio';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
-import {setFlyoutRoom} from '../blockly/flyoutRoom';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
@@ -116,7 +115,7 @@ import {
   toExternalSceneOptions,
 } from '../scenesApi';
 import {sceneMetadataFor} from '../sceneThumbnails';
-import {toolboxForSceneType} from '../sceneToolbox';
+import {toolboxForSceneType, withLeadingRoom} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
@@ -537,8 +536,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab, enabledTabs, dispatch]);
   const sceneToolbox = useMemo(
     () =>
-      toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType),
-    [levelProperties.toolboxDefinition, activeSceneType]
+      withLeadingRoom(
+        toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType),
+        editorFloat ? EDITOR_FLOAT_ROOM_PX : 0
+      ),
+    [levelProperties.toolboxDefinition, activeSceneType, editorFloat]
   );
   // Blockly fixes a workspace's toolbox kind at injection, so reaching a
   // toolbox of the other kind takes a new workspace. Same-kind changes swap
@@ -1302,16 +1304,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       refreshToolbox(sceneToolbox);
     }
   }, [animationsSeeded, sceneToolbox, workspaceVersion, refreshToolbox]);
-
-  // Under the float, the flyout starts lower too (flyoutRoom.ts); an
-  // open flyout is re-placed at once.
-  useEffect(() => {
-    setFlyoutRoom(editorFloat ? EDITOR_FLOAT_ROOM_PX : 0);
-    const workspace = Blockly.getMainWorkspace?.() as
-      | BlocklyCore.WorkspaceSvg
-      | undefined;
-    workspace?.getToolbox?.()?.getFlyout?.()?.position();
-  }, [editorFloat, animationsSeeded, workspaceVersion]);
 
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
