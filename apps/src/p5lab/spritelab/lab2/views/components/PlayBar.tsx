@@ -149,6 +149,9 @@ interface PlayBarProps {
   onPlay: (event: React.MouseEvent<HTMLElement>) => void;
   /** Absent when there is no editing view to return to. */
   onStop?: (event: React.MouseEvent<HTMLElement>) => void;
+  /** Plays from the start scene; offered beside Play only where the
+      project has more than one scene, when the two differ. */
+  onPlayGame?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 /**
@@ -161,20 +164,34 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   arrows,
   onPlay,
   onStop,
+  onPlayGame,
 }) => {
   const setupBlockColor = useSetupBlockColor();
   if (!playing) {
     return (
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="small"
-        sx={getRunButtonSx(setupBlockColor)}
-        startIcon={<FontAwesomeV6Icon iconName="play" />}
-        onClick={onPlay}
-      >
-        Play
-      </MuiButton>
+      <>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          sx={getRunButtonSx(setupBlockColor)}
+          startIcon={<FontAwesomeV6Icon iconName="play" />}
+          onClick={onPlay}
+        >
+          {onPlayGame ? 'Play scene' : 'Play'}
+        </MuiButton>
+        {onPlayGame && (
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            startIcon={<FontAwesomeV6Icon iconName="flag-checkered" />}
+            onClick={onPlayGame}
+          >
+            Play game
+          </MuiButton>
+        )}
+      </>
     );
   }
   return (

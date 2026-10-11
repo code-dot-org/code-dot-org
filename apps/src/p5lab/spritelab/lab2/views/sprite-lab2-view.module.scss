@@ -1019,6 +1019,35 @@ $editor-strip-height: 46px;
   }
 }
 
+// The instructions docked under the preview, in the column's remaining
+// height; a long step scrolls inside rather than pushing anything.
+.previewBelow {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+// The guide's panel look, in place rather than floating.
+.guideDocked {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 14px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+// The start scene's mark, when there is more than one scene.
+.sceneTabStart {
+  display: inline-flex;
+  flex: none;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+}
+
 // The project's pictures, over the workspace's right side. Kept mounted and
 // slid out of view when closed. The slide moves `right`, not a transform:
 // a transformed ancestor would become the containing block of the image

@@ -46,6 +46,9 @@ export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // The preview's column takes at most this share of the width; the code
 // keeps the rest.
 const PREVIEW_WIDTH_SHARE = 0.4;
+// The least height kept under the bar for the docked instructions: a
+// student can read with a small preview, not with no text.
+const BELOW_MIN_PX = 150;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;
@@ -146,6 +149,9 @@ interface PlayspaceProps {
   // Shown under the box in every visible mode; the box is placed to leave
   // it room.
   playBar?: React.ReactNode;
+  // Shown under the bar in preview, in the column's remaining height; the
+  // preview shrinks to leave it at least BELOW_MIN_PX.
+  below?: React.ReactNode;
   // How much of the width the preview's column takes, so the code can keep
   // the rest.
   onPreviewWidth?: (width: number) => void;
@@ -170,6 +176,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   platformScene = false,
   controls,
   playBar,
+  below,
   onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
@@ -332,11 +339,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0);
   } else {
     // Preview: as large as its column allows, clear of the guide like the
-    // play view, and at the top rather than centered.
+    // play view (when the guide floats), leaving room under the bar for
+    // what is docked there, and at the top rather than centered.
     const column = playPlacement(
       size,
-      guideSize,
-      playBar ? BAR_ROOM : 0,
+      below ? null : guideSize,
+      (playBar ? BAR_ROOM : 0) + (below ? BELOW_MIN_PX + BAR_GAP : 0),
       Math.round(size.w * (1 - PREVIEW_WIDTH_SHARE))
     );
     placement = {...column, y: PREVIEW_MARGIN};
@@ -516,6 +524,22 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           }}
         >
           {playBar}
+        </div>
+      )}
+      {below && mode === 'preview' && visible && (
+        <div
+          className={moduleStyles.previewBelow}
+          style={{
+            left: x,
+            top: y + boxSide + BAR_ROOM + BAR_GAP,
+            width: boxSide,
+            maxHeight: Math.max(
+              0,
+              size.h - (y + boxSide + BAR_ROOM + BAR_GAP) - MARGIN
+            ),
+          }}
+        >
+          {below}
         </div>
       )}
     </div>

@@ -78,9 +78,10 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
         </button>
       )}
       <div className={moduleStyles.sceneTabsRow}>
-        {scenes.map(scene => {
+        {scenes.map((scene, index) => {
           const selected = !galleryOpen && scene.id === activeSceneId;
           const open = selected && !!editor;
+          const startsHere = index === 0 && scenes.length > 1;
           return (
             <div
               key={scene.id}
@@ -109,6 +110,15 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
                     moduleStyles.sceneThumbSmall
                   )}
                 />
+                {startsHere && (
+                  <span
+                    className={moduleStyles.sceneTabStart}
+                    title="The game starts here"
+                    aria-hidden
+                  >
+                    <FontAwesomeV6Icon iconName="flag-checkered" />
+                  </span>
+                )}
                 <span
                   className={moduleStyles.sceneTabName}
                   data-label={scene.name}

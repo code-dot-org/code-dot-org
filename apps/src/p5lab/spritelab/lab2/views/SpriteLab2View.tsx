@@ -2217,7 +2217,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 arrows={arrowSet}
                 onPlay={handlePlayClick}
                 onStop={stopTab ? handleStopClick : undefined}
+                onPlayGame={
+                  scenes.length > 1 && !pinnedSceneId
+                    ? handlePlayGame
+                    : undefined
+                }
               />
+            }
+            below={
+              levelProperties.levelMode ? (
+                <GenerateSpriteLab
+                  docked
+                  levelMode={levelProperties.levelMode}
+                  instructions={guide.text}
+                  collapsedText={guide.collapsedText}
+                  showContinue={guide.showContinue}
+                  levelProperties={levelProperties}
+                />
+              ) : undefined
             }
             guideSize={levelProperties.levelMode ? guideSize : null}
             fadeTrigger={fadeTrigger}
@@ -2227,10 +2244,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onPreviewClick={handlePreviewClick}
           />
 
-          {/* Floating guide, when the level asks for it; it follows the
-          student across every tab, narrowing on Play to leave the game more
-          space. */}
-          {!!levelProperties.levelMode && (
+          {/* The guide floats while playing and on the map, narrowing on
+          Play to leave the game more space; beside the editors it is docked
+          under the preview instead. */}
+          {!!levelProperties.levelMode && playspaceMode !== 'preview' && (
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}

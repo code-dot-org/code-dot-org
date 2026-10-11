@@ -55,6 +55,9 @@ interface GenerateSpriteLabProps {
   showContinue?: boolean;
   /** For the Continue button's progression handling. */
   levelProperties: SpriteLab2LevelProperties;
+  /** Rendered in place, as a panel its parent lays out, instead of
+      floating over the lab; never collapsible. */
+  docked?: boolean;
 }
 
 /**
@@ -69,6 +72,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   onLayout,
   showContinue,
   levelProperties,
+  docked = false,
 }) => {
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
@@ -118,7 +122,37 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   );
 
   // Freeplay's guide sits over a full lab; the guided levels need theirs open.
-  const collapsible = isFreeplayMode(levelMode);
+  const collapsible = isFreeplayMode(levelMode) && !docked;
+
+  const body = (
+    <div ref={bodyRef} className={moduleStyles.guideBody}>
+      {collapsed
+        ? collapsedText && (
+            <p className={moduleStyles.guideCollapsedText}>{collapsedText}</p>
+          )
+        : instructionsBlock || 'Build a program, then press Run.'}
+      {showContinue && (
+        <div className={moduleStyles.guideContinue}>
+          <NavigationArea
+            levelProperties={levelProperties}
+            // No Run/Submit gating here: reaching this step is the gate.
+            hasRun={true}
+            hasEdited={true}
+            isRunning={false}
+            textVariant="simple"
+          />
+        </div>
+      )}
+    </div>
+  );
+
+  if (docked) {
+    return (
+      <div ref={panelRef} className={moduleStyles.guideDocked}>
+        {body}
+      </div>
+    );
+  }
 
   return (
     <Guide
@@ -135,27 +169,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
         className={moduleStyles.guideAnimator}
         style={bodyHeight === undefined ? undefined : {height: bodyHeight}}
       >
-        <div ref={bodyRef} className={moduleStyles.guideBody}>
-          {collapsed
-            ? collapsedText && (
-                <p className={moduleStyles.guideCollapsedText}>
-                  {collapsedText}
-                </p>
-              )
-            : instructionsBlock || 'Build a program, then press Run.'}
-          {showContinue && (
-            <div className={moduleStyles.guideContinue}>
-              <NavigationArea
-                levelProperties={levelProperties}
-                // No Run/Submit gating here: reaching this step is the gate.
-                hasRun={true}
-                hasEdited={true}
-                isRunning={false}
-                textVariant="simple"
-              />
-            </div>
-          )}
-        </div>
+        {body}
       </div>
     </Guide>
   );
