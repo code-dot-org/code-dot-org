@@ -258,11 +258,34 @@ $tab-item-height: 34px;
   min-height: 0;
 }
 
+// The World | Code switch's strip at the top of the editor pane; the
+// editors below start under it.
+$editor-strip-height: 46px;
+
+.editorStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: $editor-strip-height;
+  padding: 6px 12px;
+  background: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
 // Code tab is kept mounted; the parent toggles visibility with clip-path so the
 // Blockly workspace and flyout SVG keep their real dimensions across switches.
 .codeTabWrapper {
   position: absolute;
   inset: 0;
+}
+
+// After .codeTabWrapper: its inset shorthand would otherwise win the top.
+.underEditorStrip {
+  top: $editor-strip-height;
 }
 
 .blocklyDiv {

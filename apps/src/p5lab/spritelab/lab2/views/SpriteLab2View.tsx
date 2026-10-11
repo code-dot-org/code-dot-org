@@ -397,15 +397,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // The preview's column, which the code keeps clear of.
   const [previewWidth, setPreviewWidth] = useState(0);
-  // The workspace does not notice its container changing width.
-  useEffect(() => {
-    const workspace = Blockly.getMainWorkspace?.() as
-      | BlocklyCore.WorkspaceSvg
-      | undefined;
-    if (workspace) {
-      Blockly.svgResize(workspace);
-    }
-  }, [previewWidth]);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   // The project is shared by every level of the lesson, so Start Over sends
   // the student back to its first level to remake it. A level outside a
@@ -537,6 +528,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       activeSceneType === 'story' ? tabs.filter(tab => tab !== 'World') : tabs,
     [tabs, activeSceneType]
   );
+  // Which of the scene's two editors fills the main area. The switch shows
+  // where the scene has a world and the level has code.
+  const editorStrip = enabledTabs.includes('World') && tabs.includes('Code');
+  // The workspace does not notice its container changing size.
+  useEffect(() => {
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    if (workspace) {
+      Blockly.svgResize(workspace);
+    }
+  }, [previewWidth, editorStrip]);
   useEffect(() => {
     if (activeTab === 'World' && !enabledTabs.includes('World')) {
       dispatch(
@@ -1749,7 +1752,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const focusPlayspaceRef = useRef(false);
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
-  // Which of the scene's two editors fills the main area.
   const handleEditorChange = useCallback(
     (editor: 'World' | 'Code') => dispatch(setActiveTab(editor)),
     [dispatch]
@@ -2035,14 +2037,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <LabShell
           rightExtra={
             <>
-              {enabledTabs.includes('World') &&
-                tabs.includes('Code') &&
-                (activeTab === 'World' || activeTab === 'Code') && (
-                  <EditorSwitch
-                    value={activeTab}
-                    onChange={handleEditorChange}
-                  />
-                )}
               {activeTab === 'Play' && nowPlaying && (
                 <SceneMusicBar
                   title={nowPlaying.title}
@@ -2089,11 +2083,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         >
           {WorkspaceAlert}
+          {/* The scene's two editors, a strip over the editor pane: part of
+          the pane, not the bar, which names scopes. */}
+          {editorStrip && (
+            <div
+              className={moduleStyles.editorStrip}
+              style={{right: previewWidth}}
+            >
+              <EditorSwitch
+                value={activeTab === 'World' ? 'World' : 'Code'}
+                onChange={handleEditorChange}
+              />
+            </div>
+          )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div
             ref={codeWrapperRef}
-            className={moduleStyles.codeTabWrapper}
+            className={classNames(
+              moduleStyles.codeTabWrapper,
+              editorStrip && moduleStyles.underEditorStrip
+            )}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
               pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
@@ -2162,7 +2172,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {worldTabEnabled && worldMounted && (
             <div
               ref={worldWrapperRef}
-              className={moduleStyles.codeTabWrapper}
+              className={classNames(
+                moduleStyles.codeTabWrapper,
+                editorStrip && moduleStyles.underEditorStrip
+              )}
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
                 pointerEvents: activeTab === 'World' ? 'auto' : 'none',
