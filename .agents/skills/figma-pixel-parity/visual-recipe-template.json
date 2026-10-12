@@ -1,0 +1,96 @@
+{
+  "$schema": "./visual-recipe.schema.json",
+  "schemaVersion": 1,
+  "component": "ComponentName",
+  "figma": {
+    "fileKey": "",
+    "publicNodeId": "0:0",
+    "componentKey": "",
+    "relatedNodeIds": [],
+    "retrievedAt": "YYYY-MM-DD",
+    "designContextCaptured": false
+  },
+  "change": {
+    "taskPath": "new",
+    "previousRecipe": null,
+    "figmaChanges": []
+  },
+  "axes": {
+    "public": {},
+    "designOnly": ["state"],
+    "restrictedCombinations": []
+  },
+  "geometry": {
+    "sizes": {},
+    "layout": {
+      "padding": "",
+      "gap": "",
+      "borderWidth": "",
+      "radius": ""
+    },
+    "typography": {
+      "family": "",
+      "size": "",
+      "weight": "",
+      "lineHeight": ""
+    },
+    "icon": {
+      "family": "",
+      "size": ""
+    }
+  },
+  "recipes": [
+    {
+      "when": {
+        "variant": "default",
+        "color": "default",
+        "state": "default",
+        "mode": "light"
+      },
+      "variables": {
+        "background": "",
+        "border": "",
+        "text": "",
+        "icon": "",
+        "focus": ""
+      },
+      "geometryOverrides": {},
+      "figmaVariant": "",
+      "notes": []
+    }
+  ],
+  "coverage": {
+    "strategy": "pairwise-plus-risk",
+    "requiredDimensions": [],
+    "cases": [
+      {
+        "id": "component-default-light",
+        "figmaNodeId": "0:0",
+        "figmaVariant": "",
+        "mode": "light",
+        "props": {},
+        "state": "default",
+        "viewport": {
+          "width": 320,
+          "height": 160,
+          "deviceScaleFactor": 1
+        },
+        "expectedGeometry": {},
+        "expectedVariables": [],
+        "fixturePath": "",
+        "referenceScreenshot": "",
+        "browserScreenshot": "",
+        "result": "pending",
+        "mismatches": []
+      }
+    ]
+  },
+  "acceptedDifferences": [],
+  "evidence": {
+    "apiAudit": null,
+    "typecheck": null,
+    "build": null,
+    "docsBuild": null,
+    "correctionPasses": []
+  }
+}
