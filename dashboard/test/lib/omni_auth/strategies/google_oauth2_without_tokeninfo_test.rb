@@ -29,6 +29,17 @@ class GoogleOauth2WithoutTokeninfoTest < ActiveSupport::TestCase
     refute @strategy.credentials.key?('scope')
   end
 
+  test 'restores the gem behavior when the DCDO flag is on' do
+    set_access_token('scope' => SCOPE)
+    DCDO.stubs(:get).with(OmniAuth::Strategies::GoogleOauth2WithoutTokeninfo::USE_TOKENINFO_DCDO_KEY, false).returns(true)
+    @strategy.expects(:token_info).with('ya29.token').returns('scope' => 'from tokeninfo')
+
+    credentials = @strategy.credentials
+
+    assert_equal 'ya29.token', credentials['token']
+    assert_equal 'from tokeninfo', credentials['scope']
+  end
+
   test 'keeps the google_oauth2 provider name' do
     assert_equal 'google_oauth2', @strategy.name
   end
