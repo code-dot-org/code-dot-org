@@ -5,6 +5,7 @@ import React from 'react';
 import {QuizQuestionEditableFields} from '../types';
 
 import styles from './quiz-question-card.module.scss';
+import builderCommonStyles from '../builder-common.module.scss';
 
 interface QuestionTabProps {
   draft: QuizQuestionEditableFields;
@@ -17,7 +18,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
   onChange,
   disabled,
 }) => (
-  <div className={styles.tabContent}>
+  <div className={builderCommonStyles.section}>
     <TextField
       name="questionName"
       label="Internal name"
