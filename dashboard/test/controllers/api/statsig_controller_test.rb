@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class Api::StatsigControllerTest < ActionDispatch::IntegrationTest
-  describe 'GET /api/statsig/stable_id' do
+  describe 'GET /api/stable_id' do
     subject(:get_statsig_stable_id) {get api_statsig_stable_id_path}
 
     let(:request_stable_id) {request.statsig_stable_id}

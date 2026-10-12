@@ -1,11 +1,12 @@
+import {act} from '@testing-library/react';
+
 import I18n from '../../src/i18n';
-import {loadLevel, startOver} from '../../src/index';
+import {initAll, loadLevel, startOver, unmount} from '../../src/index';
 import {
   setAccuracyCheckExamples,
   setCurrentPanel,
   setHistoricResult,
   setLabelColumn,
-  setTrainedModel,
 } from '../../src/redux';
 import {store} from '../../src/store';
 
@@ -21,7 +22,6 @@ describe('startOver', () => {
     store.dispatch(setLabelColumn('animal'));
     store.dispatch(setCurrentPanel('results'));
     store.dispatch(setAccuracyCheckExamples([[4]]));
-    store.dispatch(setTrainedModel({}));
     store.dispatch(setHistoricResult('animal', ['legs'], '80.00'));
   });
 
@@ -39,7 +39,14 @@ describe('startOver', () => {
     expect(store.getState().labelColumn).toBeUndefined();
     expect(store.getState().currentPanel).toBe('datasetView');
     expect(store.getState().accuracyCheckExamples).toEqual([]);
-    expect(store.getState().trainedModel).toBeUndefined();
+  });
+
+  test('counts the reset, so the training data context clears', () => {
+    const before = store.getState().resetCount;
+
+    startOver();
+
+    expect(store.getState().resetCount).toBe(before + 1);
   });
 
   test("reloads the level's mode", () => {
@@ -58,5 +65,28 @@ describe('loadLevel', () => {
     loadLevel(undefined);
 
     expect(store.getState().historicResults).toEqual([]);
+  });
+});
+
+// The component suites render panels directly, so only this reaches the
+// provider nesting that mount() sets up.
+describe('mount', () => {
+  test('renders the app under the training data provider', () => {
+    const root = document.createElement('div');
+    root.id = 'root';
+    document.body.appendChild(root);
+
+    act(() => {
+      initAll({
+        assetPath: './',
+        onContinue: () => {},
+        saveTrainedModel: () => {},
+      });
+    });
+
+    expect(root.querySelector('#train-panel')).not.toBeNull();
+
+    act(() => unmount());
+    root.remove();
   });
 });
