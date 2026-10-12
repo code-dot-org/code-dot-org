@@ -113,7 +113,7 @@ iframe {
 .controls-row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     color: white;
     height: 40px;
 }
@@ -140,9 +140,15 @@ iframe {
 
 /* Control Buttons (Data URIs) */
 .control-btn {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
+    /* Centers a glyph a page supplies through ::part()::before. */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 4px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
