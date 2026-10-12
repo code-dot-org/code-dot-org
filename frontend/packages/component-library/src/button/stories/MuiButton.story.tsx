@@ -44,6 +44,7 @@ export default {
         'inherit',
         'white',
         'tertiary',
+        'orange',
       ],
       description: 'The color of the component.',
     },

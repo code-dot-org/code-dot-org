@@ -3,51 +3,54 @@ import {Components, Theme} from '@mui/material/styles';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 /**
- * MUI Button style overrides to match the existing button design.
- * Extends MUI's size and color systems to support custom options:
- * - Sizes: xs, s, m, l (in addition to small, medium, large)
- * - Colors: purple, black, gray, white, destructive (in addition to primary, secondary, error)
+ * MUI Button overrides for CADS Button `15724:18791`.
+ * Heights are 24 / 32 / 40 / 48. Radius is `--shape-sm` (6px).
+ * `white` and labeled `tertiary` are code-only; Figma tertiary is text + icon-only.
  */
 
-// Size specifications matching genericButton.module.scss
+// CADS Button size scale. Line-heights are the Figma body leading (no token in this repo).
 const SIZE_SPECS = {
   xs: {
+    height: '1.5rem',
     padding: '0.125rem 0.5rem',
     gap: '0.25rem',
-    fontSize: '0.75rem', // button-four-text
-    lineHeight: 1.64, // button-four-text
-    iconSize: '0.8125rem',
-    iconWidth: '1rem',
+    fontSize: 'var(--font-size-body-xs)',
+    lineHeight: '1.125rem',
+    iconSize: '0.75rem',
+    iconWidth: '0.75rem',
     iconOnlyPadding: '0.25rem',
     iconOnlyMinWidth: '1.5rem',
   },
   s: {
-    padding: '0.3125rem 1rem',
-    gap: '0.5rem',
-    fontSize: '0.875rem', // button-three-text
-    lineHeight: 1.54, // button-three-text
+    height: '2rem',
+    padding: '0.3125rem 0.75rem',
+    gap: '0.375rem',
+    fontSize: 'var(--font-size-body-sm)',
+    lineHeight: '1.375rem',
     iconSize: '0.875rem',
-    iconWidth: '1.125rem',
+    iconWidth: '0.875rem',
     iconOnlyPadding: '0.4375rem',
     iconOnlyMinWidth: '2rem',
   },
   m: {
-    padding: '0.5rem 1rem',
+    height: '2.5rem',
+    padding: '0.5rem 0.875rem',
     gap: '0.5rem',
-    fontSize: '1rem', // button-two-text
-    lineHeight: 1.48, // button-two-text
+    fontSize: 'var(--font-size-body-md)',
+    lineHeight: '1.5rem',
     iconSize: '1rem',
-    iconWidth: '1.25rem',
+    iconWidth: '1rem',
     iconOnlyPadding: '0.625rem',
     iconOnlyMinWidth: '2.5rem',
   },
   l: {
+    height: '3rem',
     padding: '0.625rem 1rem',
-    gap: '0.5rem',
-    fontSize: '1.25rem', // button-one-text
-    lineHeight: 1.4, // button-one-text
-    iconSize: '1.1875rem',
-    iconWidth: '1.5rem',
+    gap: '0.625rem',
+    fontSize: 'var(--font-size-body-lg)',
+    lineHeight: '1.625rem',
+    iconSize: '1.125rem',
+    iconWidth: '1.125rem',
     iconOnlyPadding: '0.75rem',
     iconOnlyMinWidth: '3rem',
   },
@@ -72,9 +75,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       style: () => {
         const specs = SIZE_SPECS.xs;
         return {
+          height: specs.height,
+          minHeight: specs.height,
+          minWidth: specs.height,
           padding: specs.padding,
           gap: specs.gap,
-          minHeight: 'auto',
           fontSize: specs.fontSize,
           lineHeight: specs.lineHeight,
           '& .MuiButton-startIcon, & .MuiButton-endIcon': {
@@ -86,8 +91,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             },
           },
           '&[data-icon-only="true"]': {
+            width: specs.height,
             padding: specs.iconOnlyPadding,
             minWidth: specs.iconOnlyMinWidth,
+            gap: 0,
           },
         };
       },
@@ -98,9 +105,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       style: () => {
         const specs = SIZE_SPECS.s;
         return {
+          height: specs.height,
+          minHeight: specs.height,
+          minWidth: specs.height,
           padding: specs.padding,
           gap: specs.gap,
-          minHeight: 'auto',
           fontSize: specs.fontSize,
           lineHeight: specs.lineHeight,
           '& .MuiButton-startIcon, & .MuiButton-endIcon': {
@@ -112,8 +121,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             },
           },
           '&[data-icon-only="true"]': {
+            width: specs.height,
             padding: specs.iconOnlyPadding,
             minWidth: specs.iconOnlyMinWidth,
+            gap: 0,
           },
         };
       },
@@ -124,9 +135,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       style: () => {
         const specs = SIZE_SPECS.m;
         return {
+          height: specs.height,
+          minHeight: specs.height,
+          minWidth: specs.height,
           padding: specs.padding,
           gap: specs.gap,
-          minHeight: 'auto',
           fontSize: specs.fontSize,
           lineHeight: specs.lineHeight,
           '& .MuiButton-startIcon, & .MuiButton-endIcon': {
@@ -138,8 +151,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             },
           },
           '&[data-icon-only="true"]': {
+            width: specs.height,
             padding: specs.iconOnlyPadding,
             minWidth: specs.iconOnlyMinWidth,
+            gap: 0,
           },
         };
       },
@@ -150,9 +165,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       style: () => {
         const specs = SIZE_SPECS.l;
         return {
+          height: specs.height,
+          minHeight: specs.height,
+          minWidth: specs.height,
           padding: specs.padding,
           gap: specs.gap,
-          minHeight: 'auto',
           fontSize: specs.fontSize,
           lineHeight: specs.lineHeight,
           '& .MuiButton-startIcon, & .MuiButton-endIcon': {
@@ -164,8 +181,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             },
           },
           '&[data-icon-only="true"]': {
+            width: specs.height,
             padding: specs.iconOnlyPadding,
             minWidth: specs.iconOnlyMinWidth,
+            gap: 0,
           },
         };
       },
@@ -175,26 +194,25 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
     {
       props: {variant: 'contained', color: 'primary'},
       style: {
-        backgroundColor: 'var(--background-brand-purple-primary)',
+        backgroundColor: 'var(--background-brand-primary)',
         color: 'var(--text-neutral-white-fixed)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-purple-strong)',
+          backgroundColor: 'var(--background-brand-strong)',
           color: 'var(--text-neutral-white-fixed)',
         },
         '&:focus, a&:focus': {
           color: 'var(--text-neutral-white-fixed)',
         },
         '&:active, a&:active': {
+          backgroundColor: 'var(--background-brand-strong)',
           color: 'var(--text-neutral-white-fixed)',
         },
-        // Normal disabled look (non-loading)
         '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-disabled)',
-          color: 'var(--text-neutral-disabled-inverse)',
+          backgroundColor: 'var(--background-disabled-brand)',
+          color: 'var(--text-disabled-neutral-inverse)',
         },
-        // Pending/loading: keep primary colors even though disabled
         '&.MuiButton-loading': {
-          backgroundColor: 'var(--background-brand-purple-primary)',
+          backgroundColor: 'var(--background-brand-primary)',
           color: 'var(--text-neutral-white-fixed)',
         },
         '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
@@ -209,30 +227,31 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       props: {variant: 'contained', color: 'secondary'},
       style: {
         backgroundColor: 'var(--background-neutral-primary-inverse)',
-        color: 'var(--text-neutral-inverse)',
+        color: 'var(--text-neutral-primary-inverse)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-octonary)',
-          color: 'var(--text-neutral-inverse)',
+          color: 'var(--text-neutral-primary-inverse)',
         },
         '&:focus, a&:focus': {
-          color: 'var(--text-neutral-inverse)',
+          color: 'var(--text-neutral-primary-inverse)',
         },
         '&:active, a&:active': {
-          color: 'var(--text-neutral-inverse)',
+          backgroundColor: 'var(--background-neutral-primary-inverse)',
+          color: 'var(--text-neutral-primary-inverse)',
         },
         '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-disabled)',
-          color: 'var(--text-neutral-disabled-inverse)',
+          backgroundColor: 'var(--background-disabled-neutral)',
+          color: 'var(--text-disabled-neutral-inverse)',
         },
         '&.MuiButton-loading': {
           backgroundColor: 'var(--background-neutral-primary-inverse)',
-          color: 'var(--text-neutral-inverse)',
+          color: 'var(--text-neutral-primary-inverse)',
         },
         '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
           color: 'transparent',
         },
         '&.MuiButton-loading i': {
-          color: 'var(--text-neutral-inverse)',
+          color: 'var(--text-neutral-primary-inverse)',
         },
       },
     },
@@ -268,6 +287,38 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       },
     },
     {
+      props: {variant: 'contained', color: 'orange'},
+      style: {
+        backgroundColor: 'var(--background-accent-orange-primary)',
+        color: 'var(--text-neutral-white-fixed)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-accent-orange-strong)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&:active, a&:active': {
+          backgroundColor: 'var(--background-accent-orange-strong)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: 'var(--background-disabled-orange)',
+          color: 'var(--text-disabled-neutral-inverse)',
+        },
+        '&.MuiButton-loading': {
+          backgroundColor: 'var(--background-accent-orange-primary)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-white-fixed)',
+        },
+      },
+    },
+    {
       props: {variant: 'contained', color: 'error'},
       style: {
         backgroundColor: 'var(--background-error-primary)',
@@ -280,11 +331,12 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-white-fixed)',
         },
         '&:active, a&:active': {
+          backgroundColor: 'var(--background-error-strong)',
           color: 'var(--text-neutral-white-fixed)',
         },
         '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-disabled)',
-          color: 'var(--text-neutral-disabled-inverse)',
+          backgroundColor: 'var(--background-disabled-error)',
+          color: 'var(--text-disabled-neutral-inverse)',
         },
         '&.MuiButton-loading': {
           backgroundColor: 'var(--background-error-primary)',
@@ -303,62 +355,66 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
     {
       props: {variant: 'outlined', color: 'primary'},
       style: {
-        border: '1px solid var(--borders-brand-purple-primary)',
-        color: 'var(--text-brand-purple-primary)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        border: '1px solid var(--border-neutral-solid)',
+        color: 'var(--text-neutral-primary)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-purple-hover)',
-          border: '1px solid var(--borders-brand-purple-primary)',
-          color: 'var(--text-brand-purple-primary)',
+          backgroundColor: 'var(--background-neutral-tertiary)',
+          border: '1px solid var(--border-neutral-solid)',
+          color: 'var(--text-neutral-primary)',
         },
         '&:focus, a&:focus': {
-          color: 'var(--text-brand-purple-primary)',
+          color: 'var(--text-neutral-primary)',
         },
         '&:active, a&:active': {
-          border: '1px solid var(--borders-brand-purple-primary)',
-          color: 'var(--text-brand-purple-primary)',
+          backgroundColor: 'var(--background-neutral-tertiary)',
+          border: '1px solid var(--border-neutral-solid)',
+          color: 'var(--text-neutral-primary)',
         },
         '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled) !important',
-          color: 'var(--text-neutral-disabled)',
+          borderColor: 'var(--border-disabled-neutral)',
+          color: 'var(--text-disabled-neutral)',
           backgroundColor: 'var(--background-neutral-primary)',
         },
         '&.MuiButton-loading': {
-          border: '1px solid var(--borders-brand-purple-primary)',
-          color: 'var(--text-brand-purple-primary)',
+          border: '1px solid var(--border-neutral-solid)',
+          backgroundColor: 'var(--background-neutral-primary)',
+          color: 'var(--text-neutral-primary)',
         },
         '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
           color: 'transparent',
         },
         '&.MuiButton-loading i': {
-          color: 'var(--text-brand-purple-primary)',
+          color: 'var(--text-neutral-primary)',
         },
       },
     },
     {
       props: {variant: 'outlined', color: 'secondary'},
       style: {
-        border: '1px solid var(--borders-neutral-solid)',
+        border: '1px solid var(--border-neutral-secondary)',
         backgroundColor: 'var(--background-neutral-primary)',
         color: 'var(--text-neutral-primary)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-tertiary)',
-          border: '1px solid var(--borders-neutral-solid)',
+          border: '1px solid var(--border-neutral-secondary)',
           color: 'var(--text-neutral-primary)',
         },
         '&:focus, a&:focus': {
           color: 'var(--text-neutral-primary)',
         },
         '&:active, a&:active': {
-          border: '1px solid var(--borders-neutral-solid)',
+          backgroundColor: 'var(--background-neutral-tertiary)',
+          border: '1px solid var(--border-neutral-secondary)',
           color: 'var(--text-neutral-primary)',
         },
         '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled) !important',
-          color: 'var(--text-neutral-disabled)',
+          borderColor: 'var(--border-disabled-neutral)',
+          color: 'var(--text-disabled-neutral)',
           backgroundColor: 'var(--background-neutral-primary)',
         },
         '&.MuiButton-loading': {
-          border: '1px solid var(--borders-neutral-solid)',
+          border: '1px solid var(--border-neutral-secondary)',
           backgroundColor: 'var(--background-neutral-primary)',
           color: 'var(--text-neutral-primary)',
         },
@@ -446,27 +502,28 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       props: {variant: 'outlined', color: 'error'},
       style: {
         backgroundColor: 'var(--background-neutral-primary)',
-        border: '1px solid var(--borders-error-primary)',
+        border: '1px solid var(--border-error-primary)',
         color: 'var(--text-error-primary)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-error-light)',
-          border: '1px solid var(--borders-error-primary)',
+          border: '1px solid var(--border-error-primary)',
           color: 'var(--text-error-primary)',
         },
         '&:focus, a&:focus': {
           color: 'var(--text-error-primary)',
         },
         '&:active, a&:active': {
-          border: '1px solid var(--borders-error-primary)',
+          backgroundColor: 'var(--background-error-light)',
+          border: '1px solid var(--border-error-primary)',
           color: 'var(--text-error-primary)',
         },
         '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled) !important',
-          color: 'var(--text-neutral-disabled)',
+          borderColor: 'var(--border-disabled-error)',
+          color: 'var(--text-disabled-error)',
           backgroundColor: 'var(--background-neutral-primary)',
         },
         '&.MuiButton-loading': {
-          border: '1px solid var(--borders-error-primary)',
+          border: '1px solid var(--border-error-primary)',
           backgroundColor: 'var(--background-error-light)',
           color: 'var(--text-error-primary)',
         },
@@ -483,30 +540,30 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
     {
       props: {variant: 'text', color: 'primary'},
       style: {
-        color: 'var(--text-brand-purple-primary)',
+        color: 'var(--text-brand-primary)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-purple-hover)',
-          color: 'var(--text-brand-purple-primary)',
+          backgroundColor: 'var(--background-brand-light)',
+          color: 'var(--text-brand-primary)',
         },
         '&:focus, a&:focus': {
-          color: 'var(--text-brand-purple-primary)',
+          color: 'var(--text-brand-primary)',
         },
         '&:active, a&:active': {
-          backgroundColor: 'var(--background-brand-purple-hover)',
-          color: 'var(--text-brand-purple-secondary)',
+          backgroundColor: 'var(--background-brand-light)',
+          color: 'var(--text-brand-secondary)',
         },
         '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'unset',
+          color: 'var(--text-disabled-brand)',
+          backgroundColor: 'transparent',
         },
         '&.MuiButton-loading': {
-          color: 'var(--text-brand-purple-primary)',
+          color: 'var(--text-brand-primary)',
         },
         '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
           color: 'transparent',
         },
         '&.MuiButton-loading i': {
-          color: 'var(--text-brand-purple-primary)',
+          color: 'var(--text-brand-primary)',
         },
       },
     },
@@ -526,8 +583,8 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-tertiary)',
         },
         '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'unset',
+          color: 'var(--text-disabled-neutral)',
+          backgroundColor: 'transparent',
         },
         '&.MuiButton-loading': {
           color: 'var(--text-neutral-primary)',
@@ -556,8 +613,8 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-neutral-tertiary)',
         },
         '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'unset',
+          color: 'var(--text-disabled-neutral)',
+          backgroundColor: 'transparent',
         },
         '&.MuiButton-loading': {
           color: 'var(--text-neutral-quaternary)',
@@ -616,8 +673,8 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           color: 'var(--text-error-secondary)',
         },
         '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'unset',
+          color: 'var(--text-disabled-error)',
+          backgroundColor: 'transparent',
         },
         '&.MuiButton-loading': {
           color: 'var(--text-error-primary)',
@@ -637,51 +694,44 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         string,
         string | number | Record<string, string | number>
       > = {
-        borderRadius: '0.25rem',
+        borderRadius: 'var(--shape-sm)',
         boxSizing: 'border-box',
         margin: 0,
         border: '1px solid transparent',
         textDecoration: 'none',
         cursor: 'pointer',
-        transition: 'all 0.2s ease-in-out',
+        transition:
+          'background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out',
         display: 'inline-flex',
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        fontWeight: 600, // Button text is always bold
-        textTransform: 'none', // Remove MUI's default uppercase
-        minHeight: 'auto', // Remove MUI's default minHeight
-        lineHeight: 'normal', // Use normal line height
-        boxShadow: 'none', // Remove MUI's default shadow
-        // Override global link styles when button is rendered as <a>
-        // Using more specific selectors to override global a:hover, a:focus, a:active
+        fontFamily: 'var(--font-family-main)',
+        fontWeight: 600,
+        textTransform: 'none',
+        boxShadow: 'none',
         '&:hover, a&:hover': {
-          boxShadow: 'none', // Remove shadow on hover
-          textDecoration: 'none', // Override global a:hover styles via specificity
+          boxShadow: 'none',
+          textDecoration: 'none',
         },
         '&:focus, a&:focus': {
-          boxShadow: 'none', // Remove shadow on focus
           textDecoration: 'none',
-          outline: 'none', // Remove default outline to use focus-visible styles
+          outline: 'none',
         },
-
         '&:focus-visible, a&:focus-visible': {
-          outline: '2px solid var(--borders-brand-teal-primary)',
-          outlineOffset: '2px',
-          borderRadius: '0.375rem',
-          boxShadow: 'none', // Remove shadow on focus-visible
+          outline: 'none',
+          boxShadow:
+            '0 0 0 2px var(--background-neutral-primary), 0 0 0 4px var(--border-focused-primary)',
           textDecoration: 'none',
         },
-
         '&:active, a&:active': {
-          border: '1px solid transparent',
-          boxShadow: 'none', // Remove shadow on active
+          boxShadow: 'none',
           textDecoration: 'none',
         },
-
         '&.Mui-disabled, &[aria-disabled="true"]': {
           cursor: 'not-allowed',
-          boxShadow: 'none', // Remove shadow when disabled
+          opacity: 1,
+          boxShadow: 'none',
         },
 
         // Disable ripple effect (CSS fallback in case defaultProps doesn't work)
