@@ -15,6 +15,7 @@ import {QuizQuestionSummary} from '../types';
 import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import PageDivider from './PageDivider';
@@ -291,6 +292,42 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
+  const renderQuestionContainer = (question: QuizQuestionSummary) => {
+    const questionLabel =
+      quizQuestions.length > 1
+        ? `Question ${
+            quizQuestions.findIndex(q => q.id === question.id) + 1
+          } of ${quizQuestions.length}`
+        : undefined;
+    switch (question.type) {
+      case 'MultipleChoiceQuestion':
+        return (
+          <MultiChoiceQuestionContainer
+            key={question.id}
+            question={question}
+            questionLabel={questionLabel}
+            selectedChoiceId={selectedChoicesByQuestionId[question.id] ?? null}
+            onSelectChoice={choiceId =>
+              handleSelectChoice(question.id, choiceId)
+            }
+          />
+        );
+      case 'FreeResponseQuestion':
+        return (
+          <FreeResponseQuestionContainer
+            key={question.id}
+            question={question}
+            questionLabel={questionLabel}
+          />
+        );
+      default: {
+        // A new question type fails to compile here until it gets a case.
+        const unhandledType: never = question.type;
+        return unhandledType;
+      }
+    }
+  };
+
   const renderQuestionResults = (results: QuizQuestionResult[]) =>
     resultPages.map(
       (
@@ -428,27 +465,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               .filter(
                 question => question.page === pageNumbers[currentPageNumber - 1]
               )
-              // Only MultipleChoiceQuestion has a container built so far.
-              .filter(question => question.type === 'MultipleChoiceQuestion')
-              .map(question => (
-                <MultiChoiceQuestionContainer
-                  key={question.id}
-                  question={question}
-                  questionLabel={
-                    quizQuestions.length > 1
-                      ? `Question ${
-                          quizQuestions.findIndex(q => q.id === question.id) + 1
-                        } of ${quizQuestions.length}`
-                      : undefined
-                  }
-                  selectedChoiceId={
-                    selectedChoicesByQuestionId[question.id] ?? null
-                  }
-                  onSelectChoice={choiceId =>
-                    handleSelectChoice(question.id, choiceId)
-                  }
-                />
-              ))}
+              .map(renderQuestionContainer)}
           </div>
         )}
       </div>
