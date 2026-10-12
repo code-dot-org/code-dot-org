@@ -140,15 +140,150 @@ export function layoutHoneycomb(
   };
 }
 
+type Cell = {col: number; row: number};
+const cellKey = (c: Cell) => `${c.col},${c.row}`;
+// The eight neighbours of a cell, clockwise from the top, edges before
+// corners. Ties between candidate cells go to the first generated, so this
+// order is the direction preference: a root's children fill above, right,
+// below, left, and corners fill clockwise from the top right.
+const NEIGHBOUR_OFFSETS: Cell[] = [
+  {col: 0, row: -1},
+  {col: 1, row: 0},
+  {col: 0, row: 1},
+  {col: -1, row: 0},
+  {col: 1, row: -1},
+  {col: 1, row: 1},
+  {col: -1, row: 1},
+  {col: -1, row: -1},
+];
+const chebyshev = (a: Cell, b: Cell) =>
+  Math.max(Math.abs(a.col - b.col), Math.abs(a.row - b.row));
+const adjacent = (a: Cell, b: Cell) => chebyshev(a, b) === 1;
+
 /**
- * Checkpoints on a uniform grid in authored order, the first in the middle
- * and the rest spiralling outward. `row` is the grid row.
+ * The city grid: checkpoints on grid cells, grown outward from the root.
+ * Each is placed in a free cell touching its parents, so every dependency
+ * line runs between neighbours. A child of two parents takes a cell touching
+ * both when one is free. Among the cells touching a parent, the one nearest
+ * the root wins, then an edge over a corner, so a single parent's child
+ * takes an edge and leaves the corners between for children of two parents,
+ * and a ring fills before the next starts. A cell touching no parent is a
+ * last resort, taken nearest the parents. `row` is the grid row.
  */
-export function layoutCluster(
+export function layoutCity(
   checkpoints: Checkpoint[],
   spacing = NORMAL_SPACING
 ): MapLayout {
-  const cells = spiralCells(checkpoints.length);
+  const byId = new Map(checkpoints.map(c => [c.id, c]));
+  const origin: Cell = {col: 0, row: 0};
+  const placed = new Map<string, Cell>();
+  const taken = new Set<string>();
+  const place = (id: string, cell: Cell) => {
+    placed.set(id, cell);
+    taken.add(cellKey(cell));
+  };
+  // Free cells in rings around `center`, nearest first.
+  const nearestFree = (center: Cell): Cell => {
+    for (let k = 0; ; k++) {
+      const ring = spiralCells((2 * k + 1) ** 2)
+        .slice(k === 0 ? 0 : (2 * k - 1) ** 2)
+        .map(c => ({col: center.col + c.col, row: center.row + c.row}));
+      const free = ring.find(c => !taken.has(cellKey(c)));
+      if (free) return free;
+    }
+  };
+
+  for (const ids of depthRows(checkpoints)) {
+    for (const id of ids) {
+      const parents = (byId.get(id)?.requires || [])
+        .map(p => placed.get(p))
+        .filter((c): c is Cell => !!c);
+      if (!parents.length) {
+        place(id, taken.has(cellKey(origin)) ? nearestFree(origin) : origin);
+        continue;
+      }
+      const seen = new Set<string>();
+      const candidates: Cell[] = [];
+      for (const parent of parents) {
+        for (const d of NEIGHBOUR_OFFSETS) {
+          const c = {col: parent.col + d.col, row: parent.row + d.row};
+          const key = cellKey(c);
+          if (taken.has(key) || seen.has(key)) continue;
+          seen.add(key);
+          candidates.push(c);
+        }
+      }
+      const touching = (c: Cell) => parents.filter(p => adjacent(p, c)).length;
+      const onEdge = (c: Cell) =>
+        parents.filter(
+          p => adjacent(p, c) && (p.col === c.col || p.row === c.row)
+        ).length;
+      const best = candidates.sort(
+        (p, q) =>
+          touching(q) - touching(p) ||
+          chebyshev(p, origin) - chebyshev(q, origin) ||
+          onEdge(q) - onEdge(p)
+      )[0];
+      if (best) {
+        place(id, best);
+        continue;
+      }
+      const distance = (c: Cell) =>
+        parents.reduce((s, p) => s + chebyshev(p, c), 0);
+      const fallback = nearestFree(parents[0]);
+      place(
+        id,
+        parents
+          .map(nearestFree)
+          .reduce((a, b) => (distance(b) < distance(a) ? b : a), fallback)
+      );
+    }
+  }
+
+  const cells = checkpoints.map(c => placed.get(c.id)!);
+  return gridLayout(checkpoints, cells, spacing);
+}
+
+/**
+ * A grid layout turned a quarter turn clockwise. What was above the root is
+ * now to its right. Columns become rows, so the spacing swaps with them and
+ * lines still route through the gaps. Nodes stay upright; `row` is left as
+ * it was.
+ */
+export function turnLayout(layout: MapLayout): MapLayout {
+  const {column, row} = layout.spacing;
+  const spacing = {...layout.spacing, column: row, row: column};
+  // (x, y) -> (-y, x) about the origin, then shifted back into the board,
+  // which is the old board with its sides swapped.
+  const left = column;
+  const top = TOP_MARGIN;
+  const nodes: {[id: string]: NodePosition} = {};
+  const ys = Object.values(layout.nodes).map(n => n.y);
+  const maxY = Math.max(...ys);
+  for (const n of Object.values(layout.nodes)) {
+    nodes[n.id] = {
+      ...n,
+      x: left + (maxY - n.y),
+      y: top + (n.x - column),
+    };
+  }
+  const xs = Object.values(nodes).map(n => n.x);
+  const ys2 = Object.values(nodes).map(n => n.y);
+  return {
+    ...layout,
+    nodes,
+    spacing,
+    width: Math.max(...xs) + column,
+    height: Math.max(...ys2) + BOTTOM_MARGIN,
+  };
+}
+
+/** Positions and board size for checkpoints already assigned grid cells. */
+function gridLayout(
+  checkpoints: Checkpoint[],
+  cells: Cell[],
+  spacing: Spacing
+): MapLayout {
   const minCol = Math.min(...cells.map(c => c.col));
   const maxCol = Math.max(...cells.map(c => c.col));
   const minRow = Math.min(...cells.map(c => c.row));
@@ -170,6 +305,17 @@ export function layoutCluster(
     height: TOP_MARGIN + (maxRow - minRow) * spacing.row + BOTTOM_MARGIN,
     spacing,
   };
+}
+
+/**
+ * Checkpoints on a uniform grid in authored order, the first in the middle
+ * and the rest spiralling outward. `row` is the grid row.
+ */
+export function layoutCluster(
+  checkpoints: Checkpoint[],
+  spacing = NORMAL_SPACING
+): MapLayout {
+  return gridLayout(checkpoints, spiralCells(checkpoints.length), spacing);
 }
 
 /** One edge per known `requires`, parent to child. */

@@ -5,7 +5,13 @@
 import {createContext, useContext} from 'react';
 
 export type EdgeShape = 'curve' | 'straight' | 'elbow';
-export type LayoutMode = 'tree' | 'treeUp' | 'cluster' | 'radial' | 'honeycomb';
+export type LayoutMode =
+  | 'tree'
+  | 'treeUp'
+  | 'cluster'
+  | 'city'
+  | 'radial'
+  | 'honeycomb';
 export type NodeShape = 'circle' | 'circleTitled' | 'square' | 'hexagon';
 
 export interface UiVariants {
@@ -23,6 +29,8 @@ export interface UiVariants {
   nodeShape: NodeShape;
   /** The status icon as a small badge on the node's corner rather than at its center. */
   statusBadge: boolean;
+  /** Quarter turns clockwise applied to the city grid, 0 to 3. */
+  cityTurns: number;
 }
 
 export const DEFAULT_UI_VARIANTS: UiVariants = {
@@ -33,6 +41,7 @@ export const DEFAULT_UI_VARIANTS: UiVariants = {
   highlightIncomingEdges: true,
   nodeShape: 'circle',
   statusBadge: false,
+  cityTurns: 0,
 };
 
 export const NODE_SHAPES: {value: NodeShape; text: string}[] = [
@@ -46,6 +55,7 @@ export const LAYOUT_MODES: {value: LayoutMode; text: string}[] = [
   {value: 'tree', text: 'Tree (rows by depth)'},
   {value: 'treeUp', text: 'Tree, bottom to top'},
   {value: 'cluster', text: 'Cluster (grid)'},
+  {value: 'city', text: 'City grid (grown from the start)'},
   {value: 'radial', text: 'Radial (rings from the start)'},
   {value: 'honeycomb', text: 'Honeycomb (hex tiling)'},
 ];

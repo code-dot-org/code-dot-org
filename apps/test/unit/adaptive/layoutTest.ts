@@ -2,6 +2,8 @@ import {Checkpoint} from '@cdo/apps/adaptive/types';
 import {
   MapLayout,
   layoutCheckpoints,
+  layoutCity,
+  turnLayout,
   layoutCluster,
   layoutHoneycomb,
   layoutRadial,
@@ -232,5 +234,86 @@ describe('layoutHoneycomb', () => {
     expect(Math.hypot(h.x - center.x, h.y - center.y)).toBeGreaterThan(
       1.5 * step
     );
+  });
+});
+
+describe('layoutCity', () => {
+  // The playtest pathway: three children of the start, one checkpoint on
+  // two of them, and two single-parent chains.
+  const pathway = [
+    checkpoint('intro'),
+    checkpoint('details', ['intro']),
+    checkpoint('tweak', ['intro']),
+    checkpoint('edit', ['intro']),
+    checkpoint('spot', ['details', 'tweak']),
+    checkpoint('whats', ['spot']),
+    checkpoint('speak', ['clue']),
+    checkpoint('clue', ['edit']),
+  ];
+  const cellsOf = (layout: MapLayout) => {
+    const {column, row} = layout.spacing;
+    const origin = layout.nodes.intro;
+    return Object.fromEntries(
+      Object.values(layout.nodes).map(n => [
+        n.id,
+        {col: (n.x - origin.x) / column, row: (n.y - origin.y) / row},
+      ])
+    );
+  };
+  const touching = (
+    a: {col: number; row: number},
+    b: {col: number; row: number}
+  ) => Math.max(Math.abs(a.col - b.col), Math.abs(a.row - b.row)) === 1;
+
+  it('puts every checkpoint in a cell touching each of its parents', () => {
+    const cells = cellsOf(layoutCity(pathway));
+    for (const c of pathway) {
+      for (const parent of c.requires || []) {
+        expect(touching(cells[c.id], cells[parent])).toBe(true);
+      }
+    }
+  });
+
+  it("gives the start's children edges and a two-parent child the corner between", () => {
+    const cells = cellsOf(layoutCity(pathway));
+    for (const id of ['details', 'tweak', 'edit']) {
+      expect(cells[id].col === 0 || cells[id].row === 0).toBe(true);
+    }
+    expect(Math.abs(cells.spot.col)).toBe(1);
+    expect(Math.abs(cells.spot.row)).toBe(1);
+  });
+
+  it('turned a quarter turn, moves what was above the root to its right', () => {
+    const flat = layoutCity(pathway);
+    const turned = turnLayout(flat);
+    // details was straight above intro.
+    expect(flat.nodes.details.x).toBe(flat.nodes.intro.x);
+    expect(flat.nodes.details.y).toBeLessThan(flat.nodes.intro.y);
+    expect(turned.nodes.details.y).toBe(turned.nodes.intro.y);
+    expect(turned.nodes.details.x).toBeGreaterThan(turned.nodes.intro.x);
+    // Neighbours stay one cell apart under the swapped spacing.
+    expect(turned.nodes.details.x - turned.nodes.intro.x).toBe(
+      turned.spacing.column
+    );
+    expect(turned.spacing.column).toBe(flat.spacing.row);
+    for (const n of Object.values(turned.nodes)) {
+      expect(n.x).toBeGreaterThan(0);
+      expect(n.y).toBeGreaterThan(0);
+      expect(n.x).toBeLessThan(turned.width);
+      expect(n.y).toBeLessThan(turned.height);
+    }
+  });
+
+  it('fills the first ring before growing into the next', () => {
+    const cells = cellsOf(layoutCity(pathway));
+    const ring = (id: string) =>
+      Math.max(Math.abs(cells[id].col), Math.abs(cells[id].row));
+    expect(ring('clue')).toBe(1);
+    expect(ring('whats')).toBe(2);
+    expect(ring('speak')).toBe(2);
+    // Eight distinct cells.
+    expect(
+      new Set(Object.values(cells).map(c => `${c.col},${c.row}`)).size
+    ).toBe(8);
   });
 });

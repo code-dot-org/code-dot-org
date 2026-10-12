@@ -1,6 +1,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {Typography as MuiTypography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React from 'react';
 
 import {
@@ -14,6 +15,7 @@ import {
 } from './uiVariants';
 
 import shared from './shared.module.scss';
+import styles from './uiVariantsCard.module.scss';
 
 /** Controls for the map's UI experiments; see uiVariants. */
 const UiVariantsCard: React.FunctionComponent = () => {
@@ -29,6 +31,31 @@ const UiVariantsCard: React.FunctionComponent = () => {
         onChange={e => setVariant('layoutMode', e.target.value as LayoutMode)}
         size="s"
       />
+      <div className={styles.row}>
+        <MuiButton
+          variant="outlined"
+          size="small"
+          aria-label="Rotate city grid left"
+          disabled={variants.layoutMode !== 'city'}
+          onClick={() => setVariant('cityTurns', (variants.cityTurns + 3) % 4)}
+        >
+          <FontAwesomeV6Icon iconName="rotate-left" />
+          &nbsp;Rotate
+        </MuiButton>
+        <MuiButton
+          variant="outlined"
+          size="small"
+          aria-label="Rotate city grid right"
+          disabled={variants.layoutMode !== 'city'}
+          onClick={() => setVariant('cityTurns', (variants.cityTurns + 1) % 4)}
+        >
+          Rotate&nbsp;
+          <FontAwesomeV6Icon iconName="rotate-right" />
+        </MuiButton>
+        <MuiTypography variant="body4" className={shared.muted}>
+          {variants.cityTurns * 90}°
+        </MuiTypography>
+      </div>
       <Checkbox
         name="ui-variant-show-edges"
         label="Show all dependency lines"

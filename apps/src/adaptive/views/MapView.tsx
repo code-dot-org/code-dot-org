@@ -20,9 +20,11 @@ import {
   PACKED_SPACING,
   Spacing,
   layoutCheckpoints,
+  layoutCity,
   layoutCluster,
   layoutHoneycomb,
   layoutRadial,
+  turnLayout,
 } from './layout';
 import {Rect, Size, ZoomLevel, boardTransform} from './mapZoom';
 import {EdgeShape, LayoutMode, NodeShape, useUiVariants} from './uiVariants';
@@ -143,9 +145,13 @@ const LAYOUTS: {
   tree: layoutCheckpoints,
   treeUp: (c, spacing) => layoutCheckpoints(c, spacing, true),
   cluster: layoutCluster,
+  city: layoutCity,
   radial: layoutRadial,
   honeycomb: layoutHoneycomb,
 };
+
+// Layouts on square cells, whose lines route through the gaps between them.
+const GRID_MODES = new Set<LayoutMode>(['cluster', 'city']);
 
 interface MapViewProps {
   pathway: Pathway;
@@ -192,14 +198,14 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
 }) => {
   const {variants} = useUiVariants();
   const metrics = NODE_METRICS[variants.nodeShape];
-  const layout = useMemo(
-    () =>
-      LAYOUTS[variants.layoutMode](
-        pathway.checkpoints,
-        variants.showEdges ? NORMAL_SPACING : PACKED_SPACING
-      ),
-    [pathway, variants.layoutMode, variants.showEdges]
-  );
+  const cityTurns =
+    variants.layoutMode === 'city' ? ((variants.cityTurns % 4) + 4) % 4 : 0;
+  const layout = useMemo(() => {
+    const spacing = variants.showEdges ? NORMAL_SPACING : PACKED_SPACING;
+    let built = LAYOUTS[variants.layoutMode](pathway.checkpoints, spacing);
+    for (let i = 0; i < cityTurns; i++) built = turnLayout(built);
+    return built;
+  }, [pathway, variants.layoutMode, variants.showEdges, cityTurns]);
   // The selected checkpoint's immediate requirements, marked on the map and
   // kept in view at focus.
   const required = useMemo(() => {
@@ -271,7 +277,7 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
       ? layout.edges.filter(feedsFocus)
       : [];
     const drawn =
-      variants.showEdges && variants.layoutMode === 'cluster'
+      variants.showEdges && GRID_MODES.has(variants.layoutMode)
         ? gridRoutes(layout, variants.edgeShape)
         : shown.map(edge => ({
             key: `${edge.from}-${edge.to}`,
