@@ -40,6 +40,8 @@ class Quiz < Level
     show_questions_after_submit
   )
 
+  attr_accessor :serialized_placements
+
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
   # nil/blank means "no time limit" - only a set value has to be a real
@@ -56,6 +58,31 @@ class Quiz < Level
   has_many :questions, through: :placements, source: :quiz_question
   # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
+
+  def serializable_hash(options = nil)
+    super.merge('serialized_placements' => placements.includes(:quiz_question).map(&:serializable_hash))
+  end
+
+  def import_serialized_placements!
+    return if serialized_placements.nil?
+
+    questions_by_key = QuizQuestion.where(key: serialized_placements.map {|entry| entry['question_key']}).index_by(&:key)
+
+    desired = serialized_placements.map do |entry|
+      question = questions_by_key[entry['question_key']]
+      raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
+      {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
+    end
+
+    existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
+    return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
+
+    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
+    # the after commit hook that would otherwise circularly resave the quiz.
+    placements.delete_all
+    QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
+    placements.reset
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
