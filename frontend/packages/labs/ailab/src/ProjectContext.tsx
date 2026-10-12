@@ -15,8 +15,9 @@ import {initialProject, type AilabProject, type DataRow} from './types';
 import {useResetSignal} from './useResetSignal';
 
 /*
-  What a training run owns, and so all that cancelling one puts back. The
-  column choices are the student's, and survive a cancelled run untouched.
+  What will be stored when a training run is applied,
+  and what will be restored (from the previous state)
+  if the run is cancelled.
 */
 type TrainingRunOutputs = Pick<
   AilabProject,
@@ -34,9 +35,7 @@ interface ProjectContextValue {
   restoreTrainingRun: () => void;
 }
 
-// Features read in the order the dataset lists its columns, not the order
-// they were picked in.
-function inColumnOrder(features: string[], data: DataRow[]): string[] {
+function sortByColumnOrder(features: string[], data: DataRow[]): string[] {
   const columns = Object.keys(data[0] ?? {});
   return [...features].sort((a, b) => columns.indexOf(a) - columns.indexOf(b));
 }
@@ -85,8 +84,6 @@ export const ProjectProvider = ({
     }));
   }, []);
 
-  // A level that hides the label picker takes the dataset's own default, once
-  // the metadata naming it has loaded.
   useEffect(() => {
     if (presetLabelColumn) {
       setLabelColumn(presetLabelColumn);
@@ -100,7 +97,7 @@ export const ProjectProvider = ({
           ? previous
           : {
               ...previous,
-              selectedFeatures: inColumnOrder(
+              selectedFeatures: sortByColumnOrder(
                 [...previous.selectedFeatures, feature],
                 data,
               ),
@@ -123,7 +120,7 @@ export const ProjectProvider = ({
     (features: string[]) => {
       setProject(previous => ({
         ...previous,
-        selectedFeatures: inColumnOrder(features, data),
+        selectedFeatures: sortByColumnOrder(features, data),
       }));
     },
     [data],
