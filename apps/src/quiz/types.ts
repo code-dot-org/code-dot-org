@@ -16,6 +16,7 @@ export interface QuizQuestionSummary {
   type: string;
   questionName: string;
   questionTitle: string;
+  description?: string | null;
   choices?: {id: string; text: string}[];
   page: number;
 }

@@ -8,6 +8,7 @@ import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {replayTraining, setCurrentPanel} from '../redux';
 import {getDisplayTree} from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import TreeMiniMap from './TreeMiniMap';
 
@@ -18,7 +19,9 @@ const TrainingResultCard = () => {
   const hasResult = useAppSelector(hasCurrentTrainingResult);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = useAppSelector(state => state.historicResults[0]);
-  const tree = useAppSelector(getDisplayTree);
+  const {trainedModel} = useTrainingData();
+  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
   const testButton = useRef<HTMLButtonElement>(null);
   const isVisible = hasResult && (!isModalOpen || isReplaying);
@@ -39,7 +42,11 @@ const TrainingResultCard = () => {
   return (
     <div className={styles.card}>
       {tree && (
-        <TreeMiniMap tree={tree} onReplay={() => dispatch(replayTraining())} />
+        <TreeMiniMap
+          tree={tree}
+          datasetId={datasetId}
+          onReplay={() => dispatch(replayTraining())}
+        />
       )}
       <div className={styles.results}>
         <div className={styles.result}>
