@@ -314,11 +314,14 @@ describe('DecisionTree', () => {
     });
     afterEach(() => vi.restoreAllMocks());
 
+    // jsdom lays nothing out, so Popper sees every anchor as clipped and hides its tooltip.
+    const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
+
     it('shows the keyboard-focused name whole in a tooltip', () => {
       const root = focusRoot();
       const name = root.querySelector(`.${moduleStyles.nodeText}`);
 
-      expect(screen.getByRole('tooltip').textContent).toBe(name.textContent);
+      expect(tooltip().textContent).toBe(name.textContent);
     });
 
     it('shows no tooltip when a click focuses a node', () => {
@@ -333,7 +336,7 @@ describe('DecisionTree', () => {
 
       focusRoot();
 
-      expect(screen.queryByRole('tooltip')).toBeNull();
+      expect(tooltip()).toBeNull();
     });
   });
 

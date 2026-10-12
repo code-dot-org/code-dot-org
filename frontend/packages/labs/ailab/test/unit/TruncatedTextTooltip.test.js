@@ -29,7 +29,8 @@ function settle() {
   act(() => vi.advanceTimersByTime(1000));
 }
 
-const tooltip = () => screen.queryByRole('tooltip');
+// jsdom lays nothing out, so Popper sees every anchor as clipped and hides its tooltip.
+const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
 
 describe('TruncatedTextTooltip', () => {
   beforeEach(() => vi.useFakeTimers());
@@ -75,6 +76,22 @@ describe('TruncatedTextTooltip', () => {
     const {container} = render(label({focused: true}));
 
     fireEvent.mouseLeave(container.querySelector('span'));
+    settle();
+
+    expect(tooltip().textContent).toBe(TEXT);
+  });
+
+  test('stays open when its node loses focus under the pointer', () => {
+    textWidth(120);
+    const matches = Element.prototype.matches;
+    vi.spyOn(Element.prototype, 'matches').mockImplementation(
+      function (selector) {
+        return selector === ':hover' ? true : matches.call(this, selector);
+      },
+    );
+    const {rerender} = render(label({focused: true}));
+
+    rerender(label({focused: false}));
     settle();
 
     expect(tooltip().textContent).toBe(TEXT);
