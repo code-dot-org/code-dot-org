@@ -152,34 +152,29 @@ export function shareOut(total: number, parts: number): number[] {
   return Array.from({length: parts}, (_, i) => base + (i < extra ? 1 : 0));
 }
 
-/** Where the player stood as its jump was detected, and the frame. */
-export interface JumpStart {
-  sprite: PhysicsBox;
-  x: number;
-  y: number;
-  frame: number;
-}
+/** Where each sprite stood as its jump impulse was applied. */
+export type JumpStarts = Map<PhysicsBox, {x: number; y: number}>;
 
-/** A jump's start stands in for the player this many frames after it: the
-    jump is detected after the impulse has moved the sprite, and the event
-    runs a frame later, so a burst in the handler would start partway up. */
-export const JUMP_START_FRAMES = 4;
-
-/** The sprites a burst starts from, the player replaced by where it stood
-    when a jump just began. */
+/** The boxes a burst starts from: a sprite with a jump start stands where it
+    took off, since the jump event fires after the impulse has moved it. */
 export function burstBoxes(
   sprites: PhysicsBox[],
-  jump: JumpStart | null,
-  frame: number
+  jumpStarts: JumpStarts | null
 ): PhysicsBox[] {
-  if (!jump || frame - jump.frame > JUMP_START_FRAMES) {
+  if (!jumpStarts) {
     return sprites;
   }
-  return sprites.map(sprite =>
-    sprite === jump.sprite
-      ? {...sprite, position: {x: jump.x, y: jump.y}}
-      : sprite
-  );
+  return sprites.map(sprite => {
+    const start = jumpStarts.get(sprite);
+    return start
+      ? {
+          position: {x: start.x, y: start.y},
+          width: sprite.width,
+          height: sprite.height,
+          scale: sprite.scale,
+        }
+      : sprite;
+  });
 }
 
 /** Where a look's burst starts on a sprite: its center, or its feet, the
