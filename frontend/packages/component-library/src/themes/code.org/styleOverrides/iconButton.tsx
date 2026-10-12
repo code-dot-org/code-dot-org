@@ -558,7 +558,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
     root: () => {
       return {
         position: 'relative', // Required for absolute-positioned loadingIndicator
-        borderRadius: '0.25rem', // Force square corners (MUI defaults to circular)
+        borderRadius: 'var(--shape-sm)', // MUI defaults to a circle
         transition: 'all 0.2s ease-in-out',
         boxShadow: 'none', // Remove MUI's default shadow
         minWidth: 'auto', // Remove MUI's default minWidth
@@ -578,7 +578,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
         '&:focus-visible, a&:focus-visible': {
           outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
-          borderRadius: '0.375rem',
+          borderRadius: 'var(--shape-sm)',
           boxShadow: 'none', // Remove shadow on focus-visible
           textDecoration: 'none',
         },
