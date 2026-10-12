@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module CdoContentful
-  module CsForAll
+  module HourOfAi
     module Entry
       module Base
         extend ActiveSupport::Concern
@@ -9,7 +9,7 @@ module CdoContentful
         include BaseEntry
 
         included do
-          self.client = CdoContentful::CsForAll::Client
+          self.client = CdoContentful::HourOfAi::Client
         end
       end
     end
