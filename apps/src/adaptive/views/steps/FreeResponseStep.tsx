@@ -1,5 +1,6 @@
 // Displays a prompt and collects a free-text response from the student.
-// Saves the response to StepContext before advancing to the next step.
+// Drafts are auto-saved to the progress store (localStorage) while typing,
+// so a navigation or connection loss does not lose the student's work.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
@@ -30,8 +31,23 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
     headingRef.current?.focus();
   }, []);
 
+  // Persist draft after 500 ms of inactivity. Skip the write when the text
+  // matches what is already in the store so a mount with a restored value
+  // does not write back unnecessarily.
+  const persistedRef = useRef(saved);
+  useEffect(() => {
+    if (text === persistedRef.current) return;
+    const timer = setTimeout(() => {
+      updateStepContext(step.id, {freeResponse: text});
+      persistedRef.current = text;
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [text, step.id, updateStepContext]);
+
   const handleSubmit = () => {
+    // Flush the draft immediately rather than waiting for the debounce.
     updateStepContext(step.id, {freeResponse: text});
+    persistedRef.current = text;
     onComplete();
   };
 
@@ -47,7 +63,6 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
           value={text}
           onChange={e => setText(e.target.value)}
           placeholder={step.placeholder}
-          aria-label={step.prompt}
         />
       </div>
       <div className={styles.freeResponseActions}>

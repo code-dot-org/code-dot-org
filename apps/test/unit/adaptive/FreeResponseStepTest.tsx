@@ -106,6 +106,58 @@ describe('FreeResponseStep', () => {
     expect(onComplete).not.toHaveBeenCalled();
   });
 
+  describe('draft auto-save', () => {
+    beforeEach(() => jest.useFakeTimers());
+    afterEach(() => jest.useRealTimers());
+
+    it('saves the draft 500 ms after typing stops', () => {
+      const {updateStepContext} = renderStep();
+      fireEvent.change(screen.getByRole('textbox'), {
+        target: {value: 'Draft text.'},
+      });
+      expect(updateStepContext).not.toHaveBeenCalled();
+      jest.advanceTimersByTime(500);
+      expect(updateStepContext).toHaveBeenCalledWith('reflect', {
+        freeResponse: 'Draft text.',
+      });
+    });
+
+    it('resets the timer on each keystroke', () => {
+      const {updateStepContext} = renderStep();
+      fireEvent.change(screen.getByRole('textbox'), {target: {value: 'A'}});
+      jest.advanceTimersByTime(400);
+      fireEvent.change(screen.getByRole('textbox'), {target: {value: 'AB'}});
+      jest.advanceTimersByTime(400);
+      expect(updateStepContext).not.toHaveBeenCalled();
+      jest.advanceTimersByTime(100);
+      expect(updateStepContext).toHaveBeenCalledTimes(1);
+      expect(updateStepContext).toHaveBeenCalledWith('reflect', {
+        freeResponse: 'AB',
+      });
+    });
+
+    it('does not auto-save when text matches the restored value', () => {
+      const {updateStepContext} = renderStep({
+        reflect: {freeResponse: 'Previous answer.'},
+      });
+      jest.advanceTimersByTime(1000);
+      expect(updateStepContext).not.toHaveBeenCalled();
+    });
+
+    it('flushes the draft immediately on submit without waiting for the timer', () => {
+      const {updateStepContext, onComplete} = renderStep();
+      fireEvent.change(screen.getByRole('textbox'), {
+        target: {value: 'Draft text.'},
+      });
+      // Submit before the 500 ms debounce fires.
+      fireEvent.click(screen.getByRole('button', {name: /Continue/}));
+      expect(updateStepContext).toHaveBeenCalledWith('reflect', {
+        freeResponse: 'Draft text.',
+      });
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
+  });
+
   it('restores a saved response from stepContextMap', () => {
     renderStep({reflect: {freeResponse: 'Previous answer.'}});
     expect(screen.getByRole('textbox')).toHaveValue('Previous answer.');
