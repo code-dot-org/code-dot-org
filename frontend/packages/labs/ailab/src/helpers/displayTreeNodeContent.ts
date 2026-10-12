@@ -22,13 +22,13 @@ export function displayNodeLabel(
     : String(getLocalizedValue(node.prediction, datasetId));
 }
 
-// body3's fontSize is in rem.
 function labelFont(): string {
   const {fontFamily, fontSize} = CdoTheme.typography.body3;
+  const rems = parseFloat(String(fontSize));
   const rootFontSize = parseFloat(
     getComputedStyle(document.documentElement).fontSize,
   );
-  return `600 ${parseFloat(String(fontSize)) * rootFontSize}px ${fontFamily}`;
+  return `600 ${rems * rootFontSize}px ${fontFamily}`;
 }
 
 export function nodeWidthMeasurer(
