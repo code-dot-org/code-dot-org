@@ -1,11 +1,9 @@
-import Alert from '@code-dot-org/component-library/alert';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
-import {Button, IconButton, Tooltip, Typography} from '@mui/material';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 
+import BuilderCard from './BuilderCard';
 import {QuizConfigurationData} from './QuizConfigurationPanel';
 
 import styles from './QuizQuestionCard/quiz-question-card.module.scss';
@@ -31,7 +29,6 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
   const [error, setError] = useState<string | null>(null);
   const isBusy = isSaving || isRemoving;
   const isDirty = draft !== customIntroText;
-  const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setDraft(customIntroText);
@@ -54,144 +51,49 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
     setIsSaving(false);
     if (ok) {
       setIsExpanded(false);
-      // Collapsing unmounts the focused Save button.
-      toggleButtonRef.current?.focus();
     }
   };
 
   const handleRemove = async () => {
-    if (hasTimeLimit) {
-      return;
-    }
     setIsRemoving(true);
     await save({showIntroScreen: false});
     setIsRemoving(false);
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.headerPreview}>
-          <FontAwesomeV6Icon iconName="hand-wave" className={styles.typeIcon} />
-          <Typography variant="strong" component="span">
-            Intro Screen
-          </Typography>
-          <Typography
-            variant="body3"
-            component="span"
-            className={styles.questionTitlePreview}
-          >
-            {draft}
-          </Typography>
-        </div>
-        {isDirty && (
-          <Tooltip title="Unsaved changes">
-            <div className={styles.unsavedBadge} aria-label="Unsaved changes">
-              <FontAwesomeV6Icon
-                iconName="triangle-exclamation"
-                iconStyle="solid"
-              />
-            </div>
-          </Tooltip>
-        )}
-        <IconButton
-          ref={toggleButtonRef}
-          aria-label={
-            isExpanded ? 'Collapse intro screen' : 'Edit intro screen'
-          }
-          aria-expanded={isExpanded}
-          size="extraSmall"
-          variant="outlined"
-          color="secondary"
-          type="button"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          <FontAwesomeV6Icon
-            iconName={isExpanded ? 'chevron-up' : 'pen-to-square'}
+    <BuilderCard
+      iconName="hand-wave"
+      name="Intro Screen"
+      preview={draft}
+      itemLabel="intro screen"
+      isExpanded={isExpanded}
+      onExpandedChange={setIsExpanded}
+      isDirty={isDirty}
+      isSaving={isSaving}
+      isRemoving={isRemoving}
+      error={error}
+      onSave={handleSave}
+      onDiscard={() => setDraft(customIntroText)}
+      onRemove={handleRemove}
+      removeDisabledReason={
+        hasTimeLimit
+          ? 'Remove the time limit in Configuration before removing the intro screen.'
+          : undefined
+      }
+    >
+      <div className={styles.tabContent}>
+        <FormFieldWrapper label="Content" helperMessage="Supports markdown.">
+          <textarea
+            className={styles.textarea}
+            name="customIntroText"
+            rows={6}
+            value={draft}
+            onChange={e => setDraft(e.target.value)}
+            disabled={isBusy}
           />
-        </IconButton>
+        </FormFieldWrapper>
       </div>
-
-      {isExpanded && (
-        <>
-          <div className={styles.tabContent}>
-            <FormFieldWrapper
-              label="Content"
-              helperMessage="Supports markdown."
-            >
-              <textarea
-                className={styles.textarea}
-                name="customIntroText"
-                rows={6}
-                value={draft}
-                onChange={e => setDraft(e.target.value)}
-                disabled={isBusy}
-              />
-            </FormFieldWrapper>
-          </div>
-
-          {error && (
-            <Alert
-              type="danger"
-              size="xs"
-              text={error}
-              className={styles.saveError}
-            />
-          )}
-
-          <div className={styles.footer}>
-            <Tooltip
-              describeChild
-              title={
-                hasTimeLimit
-                  ? 'Remove the time limit in Configuration before removing the intro screen.'
-                  : ''
-              }
-            >
-              <Button
-                variant="outlined"
-                color="error"
-                size="extraSmall"
-                type="button"
-                className={styles.ariaDisabled}
-                disabled={isBusy}
-                aria-disabled={hasTimeLimit}
-                loading={isRemoving}
-                onClick={handleRemove}
-              >
-                Remove from quiz
-              </Button>
-            </Tooltip>
-            <div className={styles.footerActions}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                onClick={() => setDraft(customIntroText)}
-              >
-                Discard changes
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                loading={isSaving}
-                onClick={handleSave}
-                startIcon={
-                  <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
-                }
-              >
-                Save
-              </Button>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
+    </BuilderCard>
   );
 };
 
