@@ -441,8 +441,10 @@ dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
 puma_control_server_token: !Secret
 
-# Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
-dashboard_session_ttl_days: 40
+# Session timeout in days. Controls both the Devise timeout and the Rails
+# session store (Redis) TTL. Targeting a little over two weeks, so students
+# should remain authenticated through winter break.
+dashboard_session_ttl_days: 18
 
 # Pegasus
 override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
