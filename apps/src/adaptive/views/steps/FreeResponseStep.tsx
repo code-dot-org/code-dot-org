@@ -2,11 +2,7 @@
 // Saves the response to StepContext before advancing to the next step.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Button as MuiButton,
-  TextField as MuiTextField,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {FreeResponseStep as FreeResponseStepContent} from '../../types';
@@ -46,14 +42,12 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
       </MuiTypography>
       <div className={styles.freeResponseBody}>
         <MuiTypography variant="body1">{step.prompt}</MuiTypography>
-        <MuiTextField
-          multiline
-          minRows={4}
-          fullWidth
+        <textarea
+          className={styles.freeResponseTextarea}
           value={text}
           onChange={e => setText(e.target.value)}
           placeholder={step.placeholder}
-          inputProps={{'aria-label': step.prompt}}
+          aria-label={step.prompt}
         />
       </div>
       <div className={styles.freeResponseActions}>

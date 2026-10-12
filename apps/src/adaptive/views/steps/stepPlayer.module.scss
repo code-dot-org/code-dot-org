@@ -128,7 +128,7 @@
   min-height: 0;
   overflow-y: auto;
   padding: 24px;
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-primary);
 }
 
 .freeResponseBody {
@@ -144,6 +144,30 @@
   justify-content: flex-end;
   width: 100%;
   max-width: 800px;
+}
+
+.freeResponseTextarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 0.25rem;
+  background: var(--background-neutral-primary);
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+  caret-color: var(--borders-brand-teal-primary);
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+    border-color: var(--borders-brand-teal-primary);
+  }
 }
 
 // Level step
