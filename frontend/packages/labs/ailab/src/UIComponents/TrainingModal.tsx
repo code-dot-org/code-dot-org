@@ -9,6 +9,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setCurrentPanel, setTrainingModalStep} from '../redux';
 import train from '../train';
+import {useTrainingData} from '../TrainingDataContext';
 
 import GenerateResults from './GenerateResults';
 import TrainModel from './TrainModel';
@@ -23,6 +24,7 @@ const TrainingModal = () => {
   const step = useAppSelector(state => state.trainingModalStep);
   const isReplay = useAppSelector(state => state.isTrainingReplay);
   const [testingFinished, setTestingFinished] = useState(false);
+  const {restoreTrainedModel} = useTrainingData();
 
   // This component stays mounted between runs, so each run starts over.
   useEffect(() => {
@@ -40,6 +42,7 @@ const TrainingModal = () => {
   const closeModal = () => {
     if (isInProgress) {
       train.cancel();
+      restoreTrainedModel();
     }
     dispatch(setTrainingModalStep(undefined));
   };

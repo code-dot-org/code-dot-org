@@ -7,6 +7,7 @@ import reducer, {
   setColumnsByDataType,
   setInstructionsEnabled,
   addSelectedFeature,
+  setSelectedFeatures,
   setTestData,
   setPrediction,
   playPredictionStep,
@@ -120,6 +121,30 @@ describe('ailab reducer', () => {
       state = reducer(state, addSelectedFeature('c'));
       state = reducer(state, addSelectedFeature('a'));
       expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
+  });
+
+  describe('setSelectedFeatures', () => {
+    const imported = reducer(
+      initialState,
+      setImportedData([{a: '1', b: '2', c: '3'}], false),
+    );
+
+    test('replaces the selection, in table order', () => {
+      const state = reducer(imported, setSelectedFeatures(['c', 'a']));
+      expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
+
+    test('clears the selection', () => {
+      let state = reducer(imported, setSelectedFeatures(['a', 'b']));
+      state = reducer(state, setSelectedFeatures([]));
+      expect(state.selectedFeatures).toEqual([]);
+    });
+
+    test('leaves the dispatched array untouched', () => {
+      const features = ['c', 'a'];
+      reducer(imported, setSelectedFeatures(features));
+      expect(features).toEqual(['c', 'a']);
     });
   });
 
@@ -276,19 +301,23 @@ describe('ailab reducer', () => {
   // saveModel is a thunk; invoke its inner (dispatch, getState) directly with a
   // recording dispatch and a stub save callback — no store/middleware needed.
   describe('saveModel thunk', () => {
-    const runSaveModel = saveResponse => {
+    const runSaveModel = (saveResponse, trainedModel) => {
       const state = reducer(initialState, setLabelColumn('a'));
       const actions = [];
-      const save = (_dataToSave, callback) => callback(saveResponse);
-      saveModel(save)(
+      const saved = [];
+      const save = (dataToSave, callback) => {
+        saved.push(dataToSave);
+        callback(saveResponse);
+      };
+      saveModel(save, trainedModel)(
         action => actions.push(action),
         () => state,
       );
-      return actions;
+      return {actions, saved};
     };
 
     test('marks the save started, then applies a success response', () => {
-      const actions = runSaveModel({status: 'success'});
+      const {actions} = runSaveModel({status: 'success'});
       expect(setSaveStatus.match(actions[0])).toBe(true);
       expect(actions[0].payload.status).toBe('started');
       expect(actions[1].payload.status).toBe('success');
@@ -297,8 +326,17 @@ describe('ailab reducer', () => {
     });
 
     test('an error response returns to the save panel', () => {
-      const actions = runSaveModel({status: 'error'});
+      const {actions} = runSaveModel({status: 'error'});
       expect(actions[actions.length - 1].payload).toBe('saveModel');
+    });
+
+    test('saves the model it is handed, which Redux no longer holds', () => {
+      const model = {toJSON: () => ({name: 'KNN'}), predict: () => []};
+      const {saved} = runSaveModel({status: 'success'}, model);
+      expect(saved[0].trainedModel).toEqual({name: 'KNN'});
+
+      const {saved: untrained} = runSaveModel({status: 'success'});
+      expect(untrained[0].trainedModel).toBeNull();
     });
   });
 });
