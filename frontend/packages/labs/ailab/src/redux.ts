@@ -38,8 +38,6 @@ export interface RootState {
   removedRowsCount: number;
   highlightDataset: string | undefined;
   columnsByDataType: Record<string, string>;
-  selectedFeatures: string[];
-  labelColumn: string | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
@@ -110,8 +108,6 @@ export const initialState: RootState = {
   removedRowsCount: 0,
   highlightDataset: undefined,
   columnsByDataType: {},
-  selectedFeatures: [],
-  labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
@@ -202,32 +198,6 @@ const ailabSlice = createSlice({
       prepare(column: string, dataType: string) {
         return {payload: {column, dataType}};
       },
-    },
-    addSelectedFeature(state, action: PayloadAction<string>) {
-      if (!state.selectedFeatures.includes(action.payload)) {
-        const columns = Object.keys(state.data[0] ?? {});
-        state.selectedFeatures.push(action.payload);
-        state.selectedFeatures.sort(
-          (a, b) => columns.indexOf(a) - columns.indexOf(b),
-        );
-      }
-    },
-    removeSelectedFeature(state, action: PayloadAction<string>) {
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
-    },
-    setSelectedFeatures(state, action: PayloadAction<string[]>) {
-      const columns = Object.keys(state.data[0] ?? {});
-      state.selectedFeatures = [...action.payload].sort(
-        (a, b) => columns.indexOf(a) - columns.indexOf(b),
-      );
-    },
-    setLabelColumn(state, action: PayloadAction<string>) {
-      state.labelColumn = action.payload;
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -440,10 +410,6 @@ export const {
   setImportedMetadata,
   setRemovedRowsCount,
   setColumnsByDataType,
-  addSelectedFeature,
-  removeSelectedFeature,
-  setSelectedFeatures,
-  setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
   setAccuracyCheckExamples,
@@ -510,11 +476,14 @@ export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
-export function getPredictAvailable(state: RootState): boolean {
+export function getPredictAvailable(
+  state: RootState,
+  project: AilabProject,
+): boolean {
   return (
     Object.keys(state.testData).filter(
       value => state.testData[value] && state.testData[value] !== '',
-    ).length === state.selectedFeatures.length
+    ).length === project.selectedFeatures.length
   );
 }
 
@@ -528,18 +497,19 @@ export function getPanelButtons(
   return prevNextButtons(state, project);
 }
 
-export function readyToTrain(state: RootState): boolean {
-  return uniqLabelFeaturesSelected(state);
+export function readyToTrain(project: AilabProject): boolean {
+  return uniqLabelFeaturesSelected(project);
 }
 
 /* Functions for processing data to display. */
 
 export function getTableData(
   state: RootState,
+  project: AilabProject,
   useResultsData: boolean,
 ): DataRow[] {
   if (useResultsData) {
-    return getResultsDataInDataTableForm(state);
+    return getResultsDataInDataTableForm(state, project);
   } else {
     return state.data;
   }

@@ -7,7 +7,12 @@ import type {
   TreeRegressionTrainer,
 } from '../constants';
 import type {RootState} from '../redux';
-import type {HistoricResult, Hyperparameters, TrainedModel} from '../types';
+import type {
+  AilabProject,
+  HistoricResult,
+  Hyperparameters,
+  TrainedModel,
+} from '../types';
 
 /*
   A level selects a trainer family. The label column type then decides
@@ -43,5 +48,5 @@ export interface Trainer {
 }
 
 export interface TrainerConstructor {
-  new (store: Store<RootState>): Trainer;
+  new (store: Store<RootState>, project: AilabProject): Trainer;
 }

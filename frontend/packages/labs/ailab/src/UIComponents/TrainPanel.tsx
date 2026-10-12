@@ -11,14 +11,7 @@ import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {
-  addSelectedFeature,
-  readyToTrain,
-  removeSelectedFeature,
-  setLabelColumn,
-  setSelectedFeatures,
-  setTrainingModalStep,
-} from '../redux';
+import {readyToTrain, setTrainingModalStep} from '../redux';
 import {getSelectableColumns} from '../selectors';
 import {useTrainingRun} from '../useTrainingRun';
 
@@ -31,16 +24,19 @@ import styles from './trainPanel.module.scss';
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
   const datasetId = useAppSelector(state => state.metadata?.name || '');
-  const labelColumn = useAppSelector(state => state.labelColumn);
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
-  const canTrain = useAppSelector(readyToTrain);
-  const {project} = useProject();
-  const hasTrainingResult = useAppSelector(state =>
-    hasCurrentTrainingResult(state, project),
-  );
+  const {
+    project,
+    setLabelColumn,
+    addSelectedFeature,
+    removeSelectedFeature,
+    setSelectedFeatures,
+  } = useProject();
+  const {labelColumn, selectedFeatures} = project;
+  const canTrain = readyToTrain(project);
+  const hasTrainingResult = hasCurrentTrainingResult(project);
   const {beginRun} = useTrainingRun();
 
   const columnName = (column: string) =>
@@ -62,22 +58,24 @@ const TrainPanel = () => {
     .map(column => ({value: column, label: columnName(column)}));
 
   const onLabelChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setLabelColumn(event.target.value));
+    setLabelColumn(event.target.value);
   };
 
   const onFeatureChange = (event: ChangeEvent<HTMLInputElement>) => {
     const {value, checked} = event.target;
-    dispatch(
-      checked ? addSelectedFeature(value) : removeSelectedFeature(value),
-    );
+    if (checked) {
+      addSelectedFeature(value);
+    } else {
+      removeSelectedFeature(value);
+    }
   };
 
   const onSelectAllFeatures = () => {
-    dispatch(setSelectedFeatures(featureOptions.map(option => option.value)));
+    setSelectedFeatures(featureOptions.map(option => option.value));
   };
 
   const onRemoveAllFeatures = () => {
-    dispatch(setSelectedFeatures([]));
+    setSelectedFeatures([]);
   };
 
   const onTrain = () => {

@@ -16,15 +16,16 @@ import {
 
 // Trains the way clicking Train model does, and hands back the run so a test
 // can seed the contexts with it.
-export function runTraining(store) {
+export function runTraining(store, project) {
   train.reset();
-  train.init(store);
+  train.init(store, project);
   return train.onClickTrain();
 }
 
 // The project a run leaves behind, for tests that work outside the module.
-export function projectFromRun(run) {
+export function projectFromRun(project, run) {
   return {
+    ...project,
     hyperparameters: run?.hyperparameters,
     historicResults: run ? [run.historicResult] : [],
   };
@@ -93,10 +94,16 @@ export function renderWithProviders(
 
   return {
     ...result,
+    store,
     trainingData: () => contexts.trainingData,
     project: () => contexts.project.project,
+    // The project's actions, for tests that change the columns by hand.
+    projectActions: () => contexts.project,
     // useTrainingRun can't serve here: it trains against the store singleton
     // rather than this test's store.
-    trainModel: () => act(() => applyRun(contexts, runTraining(store))),
+    trainModel: () =>
+      act(() =>
+        applyRun(contexts, runTraining(store, contexts.project.project)),
+      ),
   };
 }

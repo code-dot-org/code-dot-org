@@ -155,11 +155,15 @@ export interface HistoricResult {
 /* Everything saved with a student's work and restored when the level loads
    again. A work in progress; more will be added here. */
 export interface AilabProject {
+  labelColumn?: string;
+  selectedFeatures: string[];
   hyperparameters?: Hyperparameters;
   historicResults: HistoricResult[];
 }
 
 export const initialProject: AilabProject = {
+  labelColumn: undefined,
+  selectedFeatures: [],
   hyperparameters: undefined,
   historicResults: [],
 };

@@ -5,15 +5,13 @@ import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import rootReducer, {
   getTrainingResults,
   setImportedData,
-  setLabelColumn,
-  addSelectedFeature,
-  removeSelectedFeature,
   setColumnsByDataType,
   setTestData,
 } from '../../src/redux';
 import train from '../../src/train';
+import {initialProject} from '../../src/types';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 
 describe('train functions', () => {
   test('train and predict with numerical data', async () => {
@@ -30,11 +28,13 @@ describe('train functions', () => {
     store.dispatch(setColumnsByDataType('cost', ColumnTypes.NUMERICAL));
     store.dispatch(setColumnsByDataType('rain', ColumnTypes.NUMERICAL));
     store.dispatch(setColumnsByDataType('temperature', ColumnTypes.NUMERICAL));
-    store.dispatch(setLabelColumn('cost'));
-    store.dispatch(addSelectedFeature('temperature'));
-    store.dispatch(addSelectedFeature('rain'));
+    const project = {
+      ...initialProject,
+      labelColumn: 'cost',
+      selectedFeatures: ['temperature', 'rain'],
+    };
 
-    train.init(store);
+    train.init(store, project);
     const {trainedModel} = train.onClickTrain();
 
     store.dispatch(setTestData('temperature', 10));
@@ -42,7 +42,10 @@ describe('train functions', () => {
 
     train.onClickPredict(trainedModel);
 
-    const predictedValue = getConvertedPredictedLabel(store.getState());
+    const predictedValue = getConvertedPredictedLabel(
+      store.getState(),
+      project,
+    );
 
     expect(predictedValue).toBe(20);
   });
@@ -62,11 +65,13 @@ describe('train functions', () => {
     store.dispatch(setColumnsByDataType('color', ColumnTypes.CATEGORICAL));
     store.dispatch(setColumnsByDataType('flavor', ColumnTypes.CATEGORICAL));
     store.dispatch(setColumnsByDataType('texture', ColumnTypes.CATEGORICAL));
-    store.dispatch(setLabelColumn('color'));
-    store.dispatch(addSelectedFeature('flavor'));
-    store.dispatch(addSelectedFeature('texture'));
+    const project = {
+      ...initialProject,
+      labelColumn: 'color',
+      selectedFeatures: ['flavor', 'texture'],
+    };
 
-    train.init(store);
+    train.init(store, project);
     const {trainedModel} = train.onClickTrain();
 
     store.dispatch(setTestData('flavor', 'sweet'));
@@ -74,38 +79,31 @@ describe('train functions', () => {
 
     train.onClickPredict(trainedModel);
 
-    const predictedLabel = getConvertedPredictedLabel(store.getState());
+    const predictedLabel = getConvertedPredictedLabel(
+      store.getState(),
+      project,
+    );
 
     expect(predictedLabel).toBe('green');
   });
 });
 
+// Cancel undoes only the Redux half of a run; ProjectContext and
+// TrainingDataContext undo theirs, and useTrainingRun drives all three.
 describe('train.cancel', () => {
-  const trainOnce = store => {
-    train.init(store);
+  const trainOnce = (store, project) => {
+    train.init(store, project);
     train.onClickTrain();
   };
 
   test('puts back the results from before the cancelled run', () => {
     const store = levelStore({});
-    trainOnce(store);
+    trainOnce(store, levelProject());
     const before = getTrainingResults(store.getState());
 
-    store.dispatch(removeSelectedFeature('legs'));
-    store.dispatch(addSelectedFeature('legs'));
-    trainOnce(store);
+    trainOnce(store, levelProject());
 
     train.cancel();
     expect(getTrainingResults(store.getState())).toEqual(before);
-  });
-
-  test('leaves the label and features as chosen', () => {
-    const store = levelStore({});
-    trainOnce(store);
-    train.cancel();
-
-    const state = store.getState();
-    expect(state.labelColumn).toBe('animal');
-    expect(state.selectedFeatures).toEqual(['legs']);
   });
 });

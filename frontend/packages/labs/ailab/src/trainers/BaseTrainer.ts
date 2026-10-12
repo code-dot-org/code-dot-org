@@ -18,7 +18,12 @@ import {
 import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
 import {setPrediction, setAccuracyCheckPredictedLabels} from '../redux';
-import type {HistoricResult, Hyperparameters, TrainedModel} from '../types';
+import type {
+  AilabProject,
+  HistoricResult,
+  Hyperparameters,
+  TrainedModel,
+} from '../types';
 
 import type {Trainer, TrainingRun} from './types';
 
@@ -30,9 +35,11 @@ export interface OptimalModelDetails<Candidate> {
 
 export default abstract class BaseTrainer<Candidate> implements Trainer {
   protected readonly store: Store<RootState>;
+  protected readonly project: AilabProject;
 
-  constructor(store: Store<RootState>) {
+  constructor(store: Store<RootState>, project: AilabProject) {
     this.store = store;
+    this.project = project;
   }
 
   protected abstract candidates(state: RootState): Candidate[];
@@ -59,7 +66,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
     const trainedState = this.store.getState();
 
-    logMetric('train-model', trainedState);
+    logMetric('train-model', trainedState, this.project);
 
     return {
       trainedModel: optimalModel.model,
@@ -71,7 +78,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   getOptimalModelDetails(
     state: RootState,
   ): OptimalModelDetails<Candidate> | undefined {
-    const gradeOptions = getGradeOptions(state);
+    const gradeOptions = getGradeOptions(state, this.project);
     let best: OptimalModelDetails<Candidate> | undefined;
     let bestAccuracy = -1;
 
@@ -132,11 +139,11 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   }
 
   buildHistoricResult(state: RootState): HistoricResult {
-    const {correct, total} = getCorrectCount(state);
+    const {correct, total} = getCorrectCount(state, this.project);
     return {
-      label: state.labelColumn!,
-      features: state.selectedFeatures,
-      accuracy: getPercentCorrect(state),
+      label: this.project.labelColumn!,
+      features: this.project.selectedFeatures,
+      accuracy: getPercentCorrect(state, this.project),
       correct,
       total,
     };
