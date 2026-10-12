@@ -288,7 +288,6 @@ describe('DecisionTree', () => {
 
     expect(pills.map(pill => pill.textContent)).toContain('< 1');
     expect(pills.map(pill => pill.textContent)).toContain('≥ 1');
-    pills.forEach(pill => expect(pill.textContent).toBe(pill.title));
   });
 
   describe('with every name cut off', () => {

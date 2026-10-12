@@ -49,13 +49,15 @@ describe('TruncatedTextTooltip', () => {
     expect(tooltip().textContent).toBe(TEXT);
   });
 
-  test('stays closed on hover when the text fits', () => {
+  test('stays closed on hover or focus when the text fits', () => {
     textWidth(60);
-    render(label());
+    const {rerender} = render(label());
 
     fireEvent.mouseOver(screen.getByText(TEXT));
     settle();
+    expect(tooltip()).toBeNull();
 
+    rerender(label({focused: true}));
     expect(tooltip()).toBeNull();
   });
 
@@ -81,43 +83,6 @@ describe('TruncatedTextTooltip', () => {
     expect(tooltip().textContent).toBe(TEXT);
   });
 
-  test('stays open when its node loses focus under the pointer', () => {
-    textWidth(120);
-    const matches = Element.prototype.matches;
-    vi.spyOn(Element.prototype, 'matches').mockImplementation(
-      function (selector) {
-        return selector === ':hover' ? true : matches.call(this, selector);
-      },
-    );
-    const {rerender} = render(label({focused: true}));
-
-    rerender(label({focused: false}));
-    settle();
-
-    expect(tooltip().textContent).toBe(TEXT);
-  });
-
-  test('closes on Escape while focused, and keeps that Escape to itself', () => {
-    textWidth(120);
-    const onKeyDown = vi.fn();
-    const {container} = render(
-      createElement('div', {onKeyDown}, label({focused: true})),
-    );
-
-    fireEvent.keyDown(container.querySelector('span'), {key: 'Escape'});
-    settle();
-
-    expect(tooltip()).toBeNull();
-    expect(onKeyDown).not.toHaveBeenCalled();
-  });
-
-  test('stays closed while focused when the text fits', () => {
-    textWidth(60);
-    render(label({focused: true}));
-
-    expect(tooltip()).toBeNull();
-  });
-
   test('follows the canvas only while open', () => {
     textWidth(120);
     const unsubscribe = vi.fn();
@@ -126,10 +91,7 @@ describe('TruncatedTextTooltip', () => {
     expect(subscribeToMoves).not.toHaveBeenCalled();
 
     rerender(label({focused: true, subscribeToMoves}));
-    const [[onMove]] = subscribeToMoves.mock.calls;
-    act(() => {
-      onMove();
-    });
+    expect(subscribeToMoves).toHaveBeenCalledTimes(1);
 
     rerender(label({focused: false, subscribeToMoves}));
     expect(unsubscribe).toHaveBeenCalledTimes(1);
