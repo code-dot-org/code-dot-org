@@ -468,7 +468,8 @@ $editor-strip-height: 41px;
   padding-inline: 0.5rem;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-quaternary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-top: none;
 }
 
 .editorStripTitle {
@@ -1126,7 +1127,7 @@ $editor-strip-height: 41px;
   box-sizing: border-box;
   padding: 16px 24px;
   color: var(--text-neutral-primary);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -1134,10 +1135,10 @@ $editor-strip-height: 41px;
 // instructions take less of the column's height; the padding shrinks with it.
 .previewBelowCompact .guideDocked {
   padding: 12px 16px;
-  font-size: 13px;
+  font-size: 12px;
 
   p {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.4;
   }
 }
