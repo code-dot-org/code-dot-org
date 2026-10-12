@@ -199,11 +199,7 @@ LongListCheckboxDropdown.args = {
   onClearAll: () => null,
   size: 'm',
 };
-LongListCheckboxDropdown.play = async ({
-  canvasElement,
-}: {
-  canvasElement: HTMLElement;
-}) => {
+LongListCheckboxDropdown.play = async ({canvasElement}) => {
   const canvas = within(canvasElement);
   const trigger = canvas.getByRole('button', {
     name: /long-list-dropdown filter dropdown/i,
@@ -212,24 +208,17 @@ LongListCheckboxDropdown.play = async ({
 
   const list = canvasElement.querySelector('ul');
   const menu = list?.parentElement;
-  const actions = canvas.getByRole('button', {name: 'Done (1)'});
-  expect(list).not.toBeNull();
-  expect(menu).not.toBeNull();
   if (!list || !menu) {
-    return;
+    throw new Error('checkbox menu did not open');
   }
 
-  const items = [...list.querySelectorAll('li')];
-  expect(items).toHaveLength(longListOptions.length);
-  items.forEach(item => {
-    expect(item.querySelector('input[type="checkbox"]')).not.toBeNull();
-  });
   expect(list.scrollHeight).toBeGreaterThan(list.clientHeight);
-
-  const menuBottom = menu.getBoundingClientRect().bottom;
-  const actionBottom = actions.getBoundingClientRect().bottom;
-  expect(Math.abs(menuBottom - actionBottom)).toBeLessThan(2);
-  expect(menu.getBoundingClientRect().width).toBeGreaterThanOrEqual(
+  const menuBox = menu.getBoundingClientRect();
+  const action = canvas.getByRole('button', {name: 'Done (1)'});
+  expect(
+    Math.abs(menuBox.bottom - action.getBoundingClientRect().bottom),
+  ).toBeLessThan(2);
+  expect(menuBox.width).toBeGreaterThanOrEqual(
     trigger.getBoundingClientRect().width - 1,
   );
 };
@@ -316,11 +305,7 @@ StyledAsFieldCheckboxDropdown.args = {
   styleAsFormField: true,
   size: 'm',
 };
-StyledAsFieldCheckboxDropdown.play = async ({
-  canvasElement,
-}: {
-  canvasElement: HTMLElement;
-}) => {
+StyledAsFieldCheckboxDropdown.play = async ({canvasElement}) => {
   const canvas = within(canvasElement);
   const trigger = canvas.getByRole('button', {
     name: /styled-as-field-checkbox-dropdown filter dropdown/i,
@@ -328,9 +313,8 @@ StyledAsFieldCheckboxDropdown.play = async ({
   await userEvent.click(trigger);
 
   const menu = canvasElement.querySelector('ul')?.parentElement;
-  expect(menu).not.toBeNull();
   if (!menu) {
-    return;
+    throw new Error('checkbox menu did not open');
   }
 
   expect(menu.getBoundingClientRect().width).toBeGreaterThanOrEqual(

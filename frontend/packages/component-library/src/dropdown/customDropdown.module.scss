@@ -96,8 +96,8 @@
       rgb(0 0 0 / 0.1) 0 10px 15px -3px,
       rgb(0 0 0 / 0.05) 0 4px 6px -2px;
     background-clip: padding-box;
+    // Border sits inside the min-width, so the menu lines up with the trigger and can still grow.
     box-sizing: border-box;
-    // At least as wide as the trigger. A longer option can make it wider.
     min-width: 100%;
     white-space: nowrap;
 
@@ -222,19 +222,6 @@
         }
       }
     }
-
-    // A long option list scrolls inside the menu. The action row stays at the bottom.
-    &:has(.bottomButtonsContainer) {
-      flex-direction: column;
-      max-height: min(20rem, calc(100vh - 8rem));
-      overflow: hidden;
-
-      ul {
-        overflow-y: auto;
-        min-height: 0;
-        overscroll-behavior: contain;
-      }
-    }
   }
 
   .bottomButtonsContainer {
@@ -247,7 +234,6 @@
 
     border-radius: 0 0 0.25rem 0.25rem;
     border-top: 1px solid var(--borders-neutral-primary);
-    background-color: var(--background-neutral-primary);
   }
 }
 
@@ -255,8 +241,18 @@
   .dropdownMenuContainer {
     display: block;
 
+    // A long option list scrolls inside the menu. The action row stays at the bottom.
     &:has(.bottomButtonsContainer) {
       display: flex;
+      flex-direction: column;
+      max-height: min(20rem, calc(100vh - 8rem));
+      overflow: hidden;
+
+      ul {
+        overflow-y: auto;
+        min-height: 0;
+        overscroll-behavior: contain;
+      }
     }
   }
 }
