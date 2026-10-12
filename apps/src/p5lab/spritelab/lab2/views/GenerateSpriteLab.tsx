@@ -7,21 +7,7 @@ import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/Navigat
 import {isFreeplayMode, LevelMode} from '../levelMode';
 import {SpriteLab2LevelProperties} from '../types';
 
-import ObjectivesList from './components/ObjectivesList';
 import {showTtsFor} from './showTts';
-
-// TEMPORARY layout stress test (Brendan, 2026-10-12): the longest checklist
-// in PR #75833 (the player level), shown on free play's docked guide.
-const STRESS_OBJECTIVES = {
-  title: '**Make your character the player.**',
-  items: [
-    {text: 'Drag **set as player** onto the dotted outline.', done: true},
-    {
-      text: 'Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.',
-      done: false,
-    },
-  ],
-};
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -130,20 +116,12 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   }, []);
 
   const showTts = showTtsFor(levelProperties);
-  const instructionsBlock = docked ? (
-    <ObjectivesList
-      title={STRESS_OBJECTIVES.title}
-      items={STRESS_OBJECTIVES.items}
-      showTts
+  const instructionsBlock = instructions && (
+    <MainInstructionsContent
+      instructionsText={instructions}
+      markdownClassName={moduleStyles.guideInstructions}
+      showTts={showTts}
     />
-  ) : (
-    instructions && (
-      <MainInstructionsContent
-        instructionsText={instructions}
-        markdownClassName={moduleStyles.guideInstructions}
-        showTts={showTts}
-      />
-    )
   );
 
   // Freeplay's guide sits over a full lab; the guided levels need theirs open.
