@@ -5,14 +5,14 @@ require 'cdo_contentful'
 CdoContentful.configure do |config|
   config.hour_of_ai.client.tap do |client|
     client.access_token = CDO.contentful_hour_of_ai_access_token
-    client.space        = CDO.contentful_hour_of_ai_space if CDO.contentful_hour_of_ai_space
-    client.api_url      = CDO.contentful_hour_of_ai_api_url if CDO.contentful_hour_of_ai_api_url
-    client.namespace    = CDO.contentful_hour_of_ai_namespace if CDO.contentful_hour_of_ai_namespace
+    client.space        = CDO.contentful_hour_of_ai_space
+    client.api_url      = CDO.contentful_hour_of_ai_api_url
+    client.namespace    = CDO.contentful_hour_of_ai_namespace
   end
 
   config.marketing.client.tap do |client|
     client.access_token = CDO.contentful_api_key
-    client.space        = CDO.contentful_space_id if CDO.contentful_space_id
-    client.api_url      = CDO.contentful_hostname if CDO.contentful_hostname
+    client.space        = CDO.contentful_space_id
+    client.api_url      = CDO.contentful_hostname
   end
 end
