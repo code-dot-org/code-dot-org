@@ -1,6 +1,7 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
+import {getAccuracyGrades} from '../helpers/accuracy';
 import {
   getUniqueOptions,
   getLocalizedColumnName,
@@ -11,7 +12,10 @@ import {
   type SerializedTree,
 } from '../helpers/displayTree';
 import {
+  countDisplayTreeRows,
+  NO_ROWS,
   traceDisplayTree,
+  type DisplayTreeCountsLookup,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
@@ -29,6 +33,7 @@ import type {
   CrossTabResult,
   CrossTabData,
   DataRow,
+  TrainedModel,
 } from '../types';
 
 import {
@@ -243,7 +248,7 @@ export const getUniqueOptionsLabelColumn = createSelector(
 
 export const getDisplayTree = createSelector(
   [
-    (state: RootState) => state.trainedModel,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
     getTrainerFamily,
     (state: RootState) => state.selectedFeatures,
     (state: RootState) => state.featureNumberKey,
@@ -270,7 +275,7 @@ export const getDisplayTree = createSelector(
 export const getPredictionTrace = createSelector(
   [
     getDisplayTree,
-    (state: RootState) => state.trainedModel,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
     (state: RootState) => state.prediction,
     (state: RootState) => state.predictionInputs,
     (state: RootState) => state.predictionTestData,
@@ -290,7 +295,32 @@ export const getPredictionTrace = createSelector(
   },
 );
 
-export function getPredictionStep(state: RootState): number {
-  const pathLength = getPredictionTrace(state)?.path.length ?? 0;
+export function getPredictionStep(
+  state: RootState,
+  trainedModel?: TrainedModel,
+): number {
+  const pathLength = getPredictionTrace(state, trainedModel)?.path.length ?? 0;
   return state.predictionStep ?? pathLength - 1;
 }
+
+export const getDisplayTreeCounts = createSelector(
+  [
+    getDisplayTree,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
+    (state: RootState) => state.accuracyCheckExamples,
+    getAccuracyGrades,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    examples: number[][],
+    grades: string[],
+  ): DisplayTreeCountsLookup => {
+    if (!tree) {
+      return () => NO_ROWS;
+    }
+    const {root} = trainedModel!.toJSON() as SerializedTree;
+    const counts = countDisplayTreeRows(tree, root!, examples, grades);
+    return nodeId => counts.get(nodeId) ?? NO_ROWS;
+  },
+);

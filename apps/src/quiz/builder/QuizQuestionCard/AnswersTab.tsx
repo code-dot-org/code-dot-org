@@ -9,6 +9,7 @@ import AddItemButton from '../AddItemButton';
 import {QuizQuestionEditableFields} from '../types';
 
 import styles from './quiz-question-card.module.scss';
+import builderCommonStyles from '../builder-common.module.scss';
 
 interface AnswersTabProps {
   draft: QuizQuestionEditableFields;
@@ -60,7 +61,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   };
 
   return (
-    <div className={styles.tabContent}>
+    <div className={builderCommonStyles.section}>
       <div className={styles.optionsList}>
         {draft.choices.map(choice => {
           const isCorrect = draft.correctChoiceId === choice.id;
@@ -110,7 +111,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
 
       <FormFieldWrapper label="Answer explanation (optional)">
         <textarea
-          className={styles.textarea}
+          className={builderCommonStyles.textarea}
           name="explanation"
           rows={4}
           value={draft.explanation ?? ''}

@@ -6,8 +6,13 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {replayTraining, setCurrentPanel} from '../redux';
-import {getDisplayTree} from '../selectors/visualizationSelectors';
+import {
+  getDisplayTree,
+  getDisplayTreeCounts,
+} from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import TreeMiniMap from './TreeMiniMap';
 
@@ -15,10 +20,18 @@ import styles from './trainingResultCard.module.scss';
 
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
-  const hasResult = useAppSelector(hasCurrentTrainingResult);
+  const {project} = useProject();
+  const hasResult = useAppSelector(state =>
+    hasCurrentTrainingResult(state, project),
+  );
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
-  const latestResult = useAppSelector(state => state.historicResults[0]);
-  const tree = useAppSelector(getDisplayTree);
+  const latestResult = project.historicResults[0];
+  const {trainedModel} = useTrainingData();
+  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const counts = useAppSelector(state =>
+    getDisplayTreeCounts(state, trainedModel),
+  );
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
   const testButton = useRef<HTMLButtonElement>(null);
   const isVisible = hasResult && (!isModalOpen || isReplaying);
@@ -39,7 +52,12 @@ const TrainingResultCard = () => {
   return (
     <div className={styles.card}>
       {tree && (
-        <TreeMiniMap tree={tree} onReplay={() => dispatch(replayTraining())} />
+        <TreeMiniMap
+          tree={tree}
+          datasetId={datasetId}
+          counts={counts}
+          onReplay={() => dispatch(replayTraining())}
+        />
       )}
       <div className={styles.results}>
         <div className={styles.result}>

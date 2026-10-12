@@ -41,12 +41,13 @@ function setUp(data, columns, label) {
 }
 
 // Mirrors `prepareTestData` in train.ts, which is not exported.
-function predictWith(store, trainer, testValues) {
+function predictWith(store, trainer, trainedModel, testValues) {
   Object.entries(testValues).forEach(([feature, value]) =>
     store.dispatch(setTestData(feature, value)),
   );
   const state = store.getState();
   trainer.predict(
+    trainedModel,
     state.selectedFeatures.map(feature =>
       convertValueForTraining(state, state.testData[feature], feature),
     ),
@@ -77,11 +78,15 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       'animal',
     );
 
-    trainer.startTraining();
+    const {trainedModel} = trainer.startTraining();
 
-    expect(store.getState().trainedModel).toBeDefined();
-    expect(predictWith(store, trainer, {legs: 4, tail: 'yes'})).toBe('dog');
-    expect(predictWith(store, trainer, {legs: 0, tail: 'no'})).toBe('snake');
+    expect(trainedModel).toBeDefined();
+    expect(
+      predictWith(store, trainer, trainedModel, {legs: 4, tail: 'yes'}),
+    ).toBe('dog');
+    expect(
+      predictWith(store, trainer, trainedModel, {legs: 0, tail: 'no'}),
+    ).toBe('snake');
   });
 
   test('batchPredict returns no labels before training', () => {
@@ -94,7 +99,7 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       'animal',
     );
 
-    expect(trainer.batchPredict([[2]])).toEqual([]);
+    expect(trainer.batchPredict(undefined, [[2]])).toEqual([]);
   });
 });
 
@@ -123,13 +128,13 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       'label',
     );
 
-    trainer.startTraining();
+    const run = trainer.startTraining();
 
     const state = store.getState();
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
-    expect(state.hyperparameters).toEqual({maxDepth: 1});
+    expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
   /*
@@ -162,10 +167,10 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       'label',
     );
 
-    trainer.startTraining();
+    const run = trainer.startTraining();
 
     const state = store.getState();
-    expect(state.hyperparameters).toEqual({maxDepth: 2});
+    expect(run.hyperparameters).toEqual({maxDepth: 2});
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
@@ -196,9 +201,9 @@ describe('DecisionTreeTrainer: regression', () => {
       'price',
     );
 
-    trainer.startTraining();
+    const {trainedModel} = trainer.startTraining();
 
-    const prediction = predictWith(store, trainer, {size: 1});
+    const prediction = predictWith(store, trainer, trainedModel, {size: 1});
     const observedLabels = store.getState().trainingLabels.map(Number);
 
     expect(observedLabels).not.toContain(prediction);
@@ -237,9 +242,7 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
       'animal',
     );
 
-    trainer.startTraining();
-
-    const model = store.getState().trainedModel;
+    const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeClassifier, rows)).toEqual(
@@ -266,9 +269,7 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
       'price',
     );
 
-    trainer.startTraining();
-
-    const model = store.getState().trainedModel;
+    const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeRegression, rows)).toEqual(

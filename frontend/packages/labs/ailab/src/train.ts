@@ -18,8 +18,8 @@ import {
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
-import type {Trainer} from './trainers/types';
-import type {DataRow} from './types';
+import type {Trainer, TrainingRun} from './trainers/types';
+import type {DataRow, TrainedModel} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -148,14 +148,14 @@ const init = (store: Store<RootState>): void => {
   prepareTrainingData(store);
 };
 
-const onClickTrain = (): void => {
-  trainingState.trainer?.startTraining();
+const onClickTrain = (): TrainingRun | undefined => {
+  return trainingState.trainer?.startTraining();
 };
 
-const onClickPredict = (): void => {
+const onClickPredict = (trainedModel: TrainedModel | undefined): void => {
   const {trainer, store} = trainingState;
   if (trainer && store) {
-    trainer.predict(prepareTestData(store));
+    trainer.predict(trainedModel, prepareTestData(store));
   }
 };
 

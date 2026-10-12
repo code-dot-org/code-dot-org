@@ -1,0 +1,59 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-09T16:45:56.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Dream it. Describe it. Build it.",
+        "imageUrl": "https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png",
+        "key": "adaptive-test-kickoff-f53be11d-a281-4bb0-a62e-c63389ee7dc6",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###Start with a vision. \nWho needs something, and what would you make for them? You’ll pick up the language of web developers as you build with AI.",
+        "imageUrl": "https://images.code.org/ab398ff421cc49dda5ad4547c45ea4ce-Panel 2.png",
+        "key": "adaptive-test-kickoff-3e0098fb-b792-442e-ade6-acaf5400fbde",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Spark your ideas.\nCheck out these examples then think about what YOU want to build!",
+        "imageUrl": "https://images.code.org/c8d6eae80b0e56a0ff6f77049964a597-Panel 3.png",
+        "key": "adaptive-test-kickoff-a1596eb7-255e-4629-8dc8-a4a4dc65fd23",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Second Helpings\nConnect extra food with the people who need it, before it goes to waste.",
+        "imageUrl": "https://images.code.org/b9499ec8e0d0089c1a804c9782dacd63-Second Helpings meal pickup dashboard.png",
+        "key": "adaptive-test-kickoff-388e91e4-3f9c-4072-a12c-81dead86efd2",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "####Open Door\nMake it easier for a teen to find the right support at the right moment.",
+        "imageUrl": "https://images.code.org/fdce7115752a614e912d3f6bbfea64cd-Calm Open Door teen support dashboard.png",
+        "key": "adaptive-test-kickoff-8da3742a-efad-47fd-b3bd-6c3b62e712f4",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Puente\nMake sure every family can understand what’s happening at school.",
+        "imageUrl": "https://images.code.org/4d73db76c6b43c86d4f2e73a172a849d-Puente_ School news in your language.png",
+        "key": "adaptive-test-kickoff-3fc8f926-869c-4d76-86d0-b4041931f9f5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "####Build it!\nIn this lesson, your path is unique. Share your idea and your coding experience, and your lesson shifts with every answer along the way.",
+        "imageUrl": "https://images.code.org/f1dc3032a40eb929d2182f0f1da7373d-Panel 4.png",
+        "key": "adaptive-test-kickoff-5c85af8a-bed3-4276-8b1a-7c64cea8ae9b",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-09 16:56:52 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 16:57:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 17:05:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 17:06:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

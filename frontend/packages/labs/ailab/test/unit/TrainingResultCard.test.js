@@ -1,45 +1,33 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-
+import I18n from '../../src/i18n';
 import {
   removeSelectedFeature,
-  setHistoricResult,
   setLabelColumn,
   setTrainingModalStep,
 } from '../../src/redux';
-import train from '../../src/train';
 import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
-function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
+function renderCard({trained = true, trainer = 'decisionTree', run} = {}) {
+  I18n.initI18n();
   const store = levelStore({trainer});
-  if (trained) {
-    train.reset();
-    train.init(store);
-    train.onClickTrain();
-  }
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(TrainingResultCard),
-      ),
-    ),
-  );
+  const trainingRun = run ?? (trained ? runTraining(store) : undefined);
+  renderWithProviders(createElement(TrainingResultCard), {
+    store,
+    trainingRun,
+  });
   return store;
 }
 
 const accuracy = () => screen.queryByText('Accuracy');
 
 describe('TrainingResultCard', () => {
+  afterEach(() => I18n.reset());
+
   test('is empty before training', () => {
     renderCard({trained: false});
     expect(accuracy()).toBeNull();
@@ -52,9 +40,16 @@ describe('TrainingResultCard', () => {
   });
 
   test('shows the stored accuracy, not a rounded one', () => {
-    const store = renderCard({trained: false});
-    act(() => {
-      store.dispatch(setHistoricResult('animal', ['legs'], '83.33', 5, 6));
+    renderCard({
+      run: {
+        historicResult: {
+          label: 'animal',
+          features: ['legs'],
+          accuracy: '83.33',
+          correct: 5,
+          total: 6,
+        },
+      },
     });
     expect(screen.getByText('83.33%')).not.toBeNull();
     expect(screen.getByText('5/6')).not.toBeNull();
