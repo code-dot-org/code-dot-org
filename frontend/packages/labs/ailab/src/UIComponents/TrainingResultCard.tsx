@@ -1,21 +1,36 @@
 import {Button, Typography} from '@mui/material';
+import {useEffect, useRef} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {formatAccuracy} from '../helpers/accuracy';
-import {isTrainedOnCurrentColumns} from '../helpers/navigationValidation';
+import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setCurrentPanel} from '../redux';
+import {replayTraining, setCurrentPanel} from '../redux';
+import {getDisplayTree} from '../selectors/visualizationSelectors';
+
+import TreeMiniMap from './TreeMiniMap';
 
 import styles from './trainingResultCard.module.scss';
 
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
-  const isTrained = useAppSelector(isTrainedOnCurrentColumns);
+  const hasResult = useAppSelector(hasCurrentTrainingResult);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = useAppSelector(state => state.historicResults[0]);
+  const tree = useAppSelector(getDisplayTree);
+  const isReplaying = useAppSelector(state => state.isTrainingReplay);
+  const testButton = useRef<HTMLButtonElement>(null);
+  const isVisible = hasResult && (!isModalOpen || isReplaying);
 
-  if (!isTrained || isModalOpen || latestResult.total === 0) {
+  // The card replaces the Train model button, which previously received focus.
+  useEffect(() => {
+    if (isVisible && document.activeElement === document.body) {
+      testButton.current?.focus();
+    }
+  }, [isVisible]);
+
+  if (!isVisible) {
     return null;
   }
 
@@ -23,12 +38,15 @@ const TrainingResultCard = () => {
 
   return (
     <div className={styles.card}>
+      {tree && (
+        <TreeMiniMap tree={tree} onReplay={() => dispatch(replayTraining())} />
+      )}
       <div className={styles.results}>
         <div className={styles.result}>
           <Typography variant="body4" className={styles.label}>
             Accuracy
           </Typography>
-          <Typography variant="body2" className={styles.accuracyValue}>
+          <Typography variant="body2" className={styles.value}>
             {formatAccuracy(accuracy)}
           </Typography>
         </div>
@@ -43,6 +61,7 @@ const TrainingResultCard = () => {
       </div>
       <div className={styles.actionRow}>
         <Button
+          ref={testButton}
           variant="contained"
           color="primary"
           size="small"

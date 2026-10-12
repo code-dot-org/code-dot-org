@@ -25,10 +25,9 @@
 #  index_levels_on_type       (type)
 #
 class Quiz < Level
-  # custom_intro_text, if set, is shown once on the pre-attempt 'start quiz'
-  # screen before timer/attempt begins (blank falls back to default framing
-  # text on the frontend). Distinct from instructions, which stays available
-  # in the persistent Instructions panel throughout the attempt.
+  # custom_intro_text is the body of the pre-attempt intro screen, shown only
+  # while show_intro_screen is on; blank falls back to default text on the
+  # frontend. Unlike instructions, it isn't shown during the attempt.
   serialized_attrs %w(
     time_limit_minutes
     show_correctness
@@ -86,6 +85,8 @@ class Quiz < Level
     existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
     return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
 
+    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
+    # the after commit hook that would otherwise circularly resave the quiz.
     placements.delete_all
     QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
     placements.reset
@@ -135,8 +136,7 @@ class Quiz < Level
         id: question.id,
         type: question.type,
         questionName: question.name,
-        questionTitle: question.content['question_title'],
-        choices: question.content['choices'],
+        **question.attempt_content_json,
         page: placement.page,
       }
     end

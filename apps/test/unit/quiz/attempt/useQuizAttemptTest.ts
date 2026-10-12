@@ -135,6 +135,32 @@ describe('useQuizAttempt', () => {
     expect(result.current.attempt).toEqual(OTHER_LEVEL_ATTEMPT);
   });
 
+  it("never returns the previous student's attempt after switching students", async () => {
+    const STUDENT_A_ATTEMPT: QuizAttemptData = {...ATTEMPT, id: 10};
+    get.mockResolvedValue(jsonResponse(STUDENT_A_ATTEMPT));
+    const {result, rerender, waitForNextUpdate} = renderHook(
+      props => useQuizAttempt(props),
+      {initialProps: {levelId: 42, unitId: 7, userId: 1}}
+    );
+    await waitForNextUpdate();
+    expect(result.current.attempt).toEqual(STUDENT_A_ATTEMPT);
+    const rendersBeforeSwitch = result.all.length;
+
+    get.mockResolvedValue(jsonResponse(null));
+    rerender({levelId: 42, unitId: 7, userId: 2});
+
+    // Every render for student 2, including the one before the reload
+    // effect runs, is loading with no attempt.
+    const rendersAfterSwitch = result.all.slice(rendersBeforeSwitch);
+    expect(rendersAfterSwitch.length).toBeGreaterThan(0);
+    for (const render of rendersAfterSwitch) {
+      expect(render).toMatchObject({attempt: undefined, isLoading: true});
+    }
+
+    await waitForNextUpdate();
+    expect(result.current.attempt).toBeNull();
+  });
+
   it('beginAttempt rejects without starting a request when there is no unit', async () => {
     const {result} = renderHook(() =>
       useQuizAttempt({levelId: 42, unitId: undefined})

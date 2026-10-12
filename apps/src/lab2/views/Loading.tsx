@@ -15,6 +15,8 @@ export interface LoadingProps {
    * that covers the window covers the drawer with it.
    */
   bounded?: boolean;
+  /** Shown under the spinner in place of the slow-loading message. */
+  loadingText?: string;
 }
 
 const noFade = window.location.href.includes('lab2-no-fade');
@@ -22,6 +24,7 @@ const noFade = window.location.href.includes('lab2-no-fade');
 const Loading: React.FunctionComponent<LoadingProps> = ({
   isLoading,
   bounded = false,
+  loadingText,
 }: LoadingProps) => {
   const overlayStyle: string = noFade
     ? isLoading
@@ -58,7 +61,7 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
             />
           </div>
           <div className={moduleStyles.spinnerText}>
-            {commonI18n.slowLoading()}
+            {loadingText ?? commonI18n.slowLoading()}
           </div>
         </div>
       )}
