@@ -50,12 +50,14 @@ describe('ailabMode', () => {
       expect(cleanMode({requireAccuracy: 101}, KNOWN).mode).toEqual({});
     });
 
-    it('checks only the shape of the label', () => {
-      const mode = {label: 'any column'};
+    it('checks only the shape of the label and features', () => {
+      const mode = {label: 'any column', features: ['a', 'b']};
       expect(cleanMode(mode, KNOWN).mode).toEqual(mode);
-      [{label: 3}, {label: ''}].forEach(bad => {
-        expect(cleanMode(bad, KNOWN).mode).toEqual({});
-      });
+      [{label: 3}, {label: ''}, {features: 'a'}, {features: ['a', 2]}].forEach(
+        bad => {
+          expect(cleanMode(bad, KNOWN).mode).toEqual({});
+        }
+      );
     });
   });
 

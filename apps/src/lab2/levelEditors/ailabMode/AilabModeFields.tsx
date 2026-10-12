@@ -1,5 +1,8 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {
+  CheckboxDropdown,
+  SimpleDropdown,
+} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
@@ -15,6 +18,7 @@ import {
   MIN_ACCURACY,
   ModeObject,
   setDataset,
+  setFeatures,
 } from './ailabMode';
 import {DatasetFiles} from './datasetColumns';
 import LabelField from './LabelField';
@@ -86,12 +90,50 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
 
+  const features = (mode.features as string[] | undefined) ?? [];
+  const startingLabel =
+    (mode.label as string | undefined) ??
+    (mode.hideSelectLabel === true ? columns?.defaultLabel : undefined);
+  const selectableColumns = columns?.selectable ?? [];
+  const featureColumns = selectableColumns.filter(
+    column => column !== startingLabel
+  );
+  const featureOptions = featureColumns.map(column => ({
+    value: column,
+    label: column,
+  }));
+
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
     columnsHelperMessage = 'Choose a dataset first.';
   } else if (!columns && !columnsFailed) {
     columnsHelperMessage = "Loading the dataset's columns...";
   }
+
+  const startingFeatures = features.filter(feature =>
+    featureColumns.includes(feature)
+  );
+  const skippedFeatures = columns
+    ? features.filter(feature => !featureColumns.includes(feature))
+    : [];
+  const featuresError =
+    skippedFeatures.length > 0
+      ? `Students will not start with these features: ${skippedFeatures.join(
+          ', '
+        )}.`
+      : undefined;
+
+  const handleFeatureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {value, checked} = e.target;
+    onChange(
+      setFeatures(
+        mode,
+        featureColumns.filter(column =>
+          column === value ? checked : features.includes(column)
+        )
+      )
+    );
+  };
 
   const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
     <Checkbox
@@ -165,6 +207,29 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
             'Lock the label so students cannot change it'
           )}
         </div>
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <CheckboxDropdown
+          labelText="Features"
+          aria-label="Features"
+          name="ailab_mode_features"
+          styleAsFormField
+          allOptions={featureOptions}
+          checkedOptions={startingFeatures}
+          onChange={handleFeatureChange}
+          onSelectAll={() => onChange(setFeatures(mode, featureColumns))}
+          onClearAll={() => onChange(setFeatures(mode, []))}
+          selectAllText="Select all"
+          clearAllText="Clear"
+          doneText="Done"
+          disabled={!columns}
+          helperMessage={
+            columnsHelperMessage ??
+            'The columns students start out predicting from.'
+          }
+          errorMessage={featuresError}
+          size="s"
+        />
       </div>
 
       <Typography variant="body2" className={moduleStyles.label}>
