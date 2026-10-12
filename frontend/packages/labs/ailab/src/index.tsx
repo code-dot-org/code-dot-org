@@ -95,13 +95,11 @@ export const unmount = function (): void {
  * Prepare the lab for a level. Call this once per level after mount().
  */
 export const loadLevel = function (mode?: Mode): void {
-  reload(mode, false);
+  reload(mode, /*keepHistoricResults*/ false);
 };
 
-// Start Over returns to the top of the same level, keeping the results the
-// student has already earned. ProjectContext reads that off the reset.
 export const startOver = function (): void {
-  reload(store.getState().mode, true);
+  reload(store.getState().mode, /*keepHistoricResults*/ true);
 };
 
 const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
