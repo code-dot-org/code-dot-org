@@ -82,8 +82,9 @@ export class ParticleLayer {
 
   /**
    * The burst block: `count` particles of a look from each sprite, the count
-   * shared among them; from the stage centre when there are none. Capped so
-   * a block in a loop cannot flood the scene.
+   * shared among them; from the stage center when there are none. At most
+   * MAX_BURST_PARTICLES fly at once: a burst block inside a loop adds
+   * nothing once that many are in the air.
    */
   burst(
     p5: ParticleCanvas,
