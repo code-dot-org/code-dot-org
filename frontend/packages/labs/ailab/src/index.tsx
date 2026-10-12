@@ -7,13 +7,12 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
-import {parseCSV} from './csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from './datasetLoad';
 import type {Dataset} from './datasetManifest';
 import {getAvailableDatasets, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
-import {parseJSON} from './jsonReaderWrapper';
+import {loadDataset} from './loadDataset';
 import {
   setMode,
   setCurrentPanel,
@@ -141,10 +140,7 @@ const processMode = (mode: Mode | undefined): void => {
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
   store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-  parseCSV(assetPath + item.path, true, false);
-
-  // Also retrieve model metadata and set column data types.
-  parseJSON(assetPath + item.metadataPath);
+  loadDataset(assetPath + item.path, assetPath + item.metadataPath);
 
   store.dispatch(setCurrentPanel('datasetView'));
 };
@@ -152,11 +148,13 @@ const processMode = (mode: Mode | undefined): void => {
 // Export a few types.
 export type {
   InstructionsKey,
+  Metadata,
   Mode,
   ModelDataToSave,
   SaveResponse,
 } from './types';
 export {INSTRUCTIONS_KEYS} from './types';
+export {selectableColumns} from './helpers/columnDetails';
 export type {Lab2Instructions} from './lab2Instructions';
 export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';

@@ -27,6 +27,14 @@ describe('parseCSV', () => {
     expect(store.getState().data[0].animal).toBe('cat');
   });
 
+  test('resolves once the rows are in the store', async () => {
+    const loaded = parseCSV('cats.csv', true, false);
+    Papa.parse.mock.calls[0][1].complete(parseResult('cat'));
+
+    await loaded;
+    expect(store.getState().data[0].animal).toBe('cat');
+  });
+
   test('drops a download that completes after a newer load started', () => {
     parseCSV('cats.csv', true, false);
     const completeStaleLoad = Papa.parse.mock.calls[0][1].complete;
