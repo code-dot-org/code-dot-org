@@ -3,7 +3,7 @@
   whatever JSON an author typed into the level editor, so misspellings count.
 */
 import {ColumnTypes} from '../../src/constants';
-import {getTrainedModelDataToSave} from '../../src/redux';
+import {getTrainedModelDataToSave} from '../../src/selectors/saveSelectors';
 import {buildTrainer} from '../../src/trainers';
 import DecisionTreeTrainer from '../../src/trainers/DecisionTreeTrainer';
 import KNNTrainer from '../../src/trainers/KNNTrainer';

@@ -1,9 +1,5 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {
   removeSelectedFeature,
@@ -11,29 +7,18 @@ import {
   setLabelColumn,
   setTrainingModalStep,
 } from '../../src/redux';
-import train from '../../src/train';
 import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders, trainModel} from './renderWithProviders';
 
 function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
   const store = levelStore({trainer});
-  if (trained) {
-    train.reset();
-    train.init(store);
-    train.onClickTrain();
-  }
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(TrainingResultCard),
-      ),
-    ),
-  );
+  const trainedModel = trained ? trainModel(store) : undefined;
+  renderWithProviders(createElement(TrainingResultCard), {
+    store,
+    trainedModel,
+  });
   return store;
 }
 

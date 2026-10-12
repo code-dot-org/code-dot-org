@@ -125,6 +125,15 @@ describe('QuestionResultCard', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('renders the question description as markdown', () => {
+    renderCard(
+      {},
+      {question: {...QUESTION, description: 'Count **carefully**.'}}
+    );
+
+    expect(screen.getByText('carefully').tagName).toBe('STRONG');
+  });
+
   describe('answer explanation', () => {
     it('shows it when revealAnswerExplanation is on and the result has one', () => {
       renderCard(
