@@ -508,24 +508,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [tabs, activeSceneType]
   );
   // Which of the scene's two editors fills the main area. The choice is
-  // offered where the scene has a world and the level has code: inside
-  // the open scene's tab, or, with ?editors=strip, as a strip over the
-  // editor pane. Two candidates under trial.
+  // offered where the scene has a world and the level has code.
   const editorChoice = enabledTabs.includes('World') && tabs.includes('Code');
-  // ?editors=strip: a strip over the editor pane; ?editors=float: a pill
-  // floating over the editors' left strip; ?editors=floatright: the pill at
-  // the workspace's top-right; else inside the tab.
+  // The switch is a pill floating at the workspace's top (its right, with
+  // the preview at the left); ?editors=tab puts it inside the open scene's
+  // tab, ?editors=strip in a strip over the editor pane, ?editors=floatright
+  // at the top-right whatever the preview's side.
   const editorsPlacement = useMemo(() => {
     const value = queryParams('editors');
-    return value === 'strip' || value === 'float' || value === 'floatright'
+    return value === 'tab' || value === 'strip' || value === 'floatright'
       ? value
-      : 'tab';
+      : 'float';
   }, []);
   const editorsInStrip = editorsPlacement !== 'tab';
-  // ?preview=left: the preview column at the lab's left, before the
-  // toolbox, instead of at its right.
+  // The preview column at the lab's left, before the toolbox;
+  // ?preview=right puts it at the right.
   const previewSide = useMemo<'left' | 'right'>(
-    () => (queryParams('preview') === 'left' ? 'left' : 'right'),
+    () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
   // ?instructions=left-top: the instructions above the preview in the
