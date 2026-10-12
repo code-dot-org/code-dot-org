@@ -18,12 +18,19 @@ describe('playPlacement', () => {
     expect(box(p)).toEqual({left: 212, right: 788, top: 12, bottom: 588});
   });
 
-  it('sits beside the guide on a landscape window, centered in the room left', () => {
+  it('sits beside the guide on a landscape window, as near the centre as it can', () => {
     const p = playPlacement({w: 1300, h: 650}, GUIDE);
     const b = box(p);
     const guideLeft = 1300 - GUIDE.width - 32;
-    expect(b.right).toBeLessThanOrEqual(guideLeft - 12);
-    expect((b.left + b.right) / 2).toBeCloseTo((guideLeft - 12) / 2);
+    expect(b.right).toBeCloseTo(guideLeft - 12);
+    expect(b.bottom - b.top).toBe(650 - 24);
+  });
+
+  it('clears a guide hung from the left on its right, as near the centre as it can', () => {
+    const p = playPlacement({w: 1300, h: 650}, GUIDE, 0, 0, 'left');
+    const b = box(p);
+    const guideRight = 32 + GUIDE.width;
+    expect(b.left).toBeCloseTo(guideRight + 12);
     expect(b.bottom - b.top).toBe(650 - 24);
   });
 

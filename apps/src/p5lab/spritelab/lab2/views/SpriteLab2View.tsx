@@ -528,6 +528,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => (queryParams('preview') === 'left' ? 'left' : 'right'),
     []
   );
+  // ?instructions=left-top: the instructions above the preview in the
+  // column rather than under it.
+  const instructionsTop = useMemo(
+    () => queryParams('instructions') === 'left-top',
+    []
+  );
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
@@ -2232,6 +2238,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             onPreviewWidth={setPreviewWidth}
             side={previewSide}
+            instructionsTop={instructionsTop}
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no

@@ -126,6 +126,9 @@ export function playPlacement(
   const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
   const clearsAbove =
     whole.y + CANVAS * whole.scale + reserveBelow <= guideTop - MARGIN;
+  // Beside the guide: scaled to the room on the guide's other side, and
+  // as near the centre as clearing the guide allows, not centred in that
+  // room, which would push the box further out than it needs to go.
   if (guideSide === 'left') {
     // The guide hangs from the left: the box clears it to its right.
     const guideRight = GUIDE_RIGHT_OFFSET_PX + guideSize.width;
@@ -136,7 +139,10 @@ export function playPlacement(
       w: size.w - guideRight - MARGIN,
       h: size.h - reserveBelow,
     });
-    const beside = {...inner, x: inner.x + guideRight + MARGIN};
+    const beside = {
+      ...inner,
+      x: Math.max((size.w - CANVAS * inner.scale) / 2, guideRight + MARGIN),
+    };
     const above = centeredIn({
       w: size.w,
       h: guideTop - MARGIN - reserveBelow,
@@ -149,10 +155,17 @@ export function playPlacement(
   if (clearsGuide) {
     return whole;
   }
-  const beside = centeredIn({
+  const inner = centeredIn({
     w: guideLeft - MARGIN,
     h: size.h - reserveBelow,
   });
+  const beside = {
+    ...inner,
+    x: Math.min(
+      (size.w - CANVAS * inner.scale) / 2,
+      guideLeft - MARGIN - CANVAS * inner.scale
+    ),
+  };
   const above = centeredIn({
     w: size.w,
     h: guideTop - MARGIN - reserveBelow,
@@ -192,6 +205,8 @@ interface PlayspaceProps {
   below?: React.ReactNode;
   /** Which edge the preview column sits at; the code keeps the rest. */
   side?: 'left' | 'right';
+  /** The instructions above the box in the column instead of under it. */
+  instructionsTop?: boolean;
   // How much of the width the preview's column takes, so the code can keep
   // the rest.
   onPreviewWidth?: (width: number) => void;
@@ -218,6 +233,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   playBar,
   below,
   side = 'right',
+  instructionsTop = false,
   onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
@@ -433,7 +449,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     placement = {
       scale: inColumn.scale,
       x: columnLeft() + (columnWidth - boxWidth) / 2,
-      y: CARD_GAP,
+      // Under the instructions' card when they come first.
+      y: CARD_GAP + (below && instructionsTop ? need + CARD_GAP : 0),
     };
     // The instructions have pushed the box under its floor: move them
     // beside it, in a column up to the larger share, if that gives the
@@ -482,6 +499,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const barWidth =
     previewWidth > 0 && !beside ? previewWidth - 2 * CARD_GAP : boxSide;
   const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
+  // The instructions' card when it comes first: from the column's top to
+  // just above the box.
+  const belowOnTop = instructionsTop && !beside;
   const compact = size.h < COMPACT_BELOW_PX;
   const visible = measured && mode !== 'hidden';
   // The bar does not ride the slide: it waits, unseen, at its destination
@@ -662,6 +682,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
                   top: CARD_GAP,
                   width: previewWidth - 3 * CARD_GAP - boxSide,
                   bottom: CARD_GAP,
+                }
+              : belowOnTop
+              ? {
+                  left: belowLeft,
+                  top: CARD_GAP,
+                  width: previewWidth - 2 * CARD_GAP,
+                  height: y - 2 * CARD_GAP,
                 }
               : {
                   left: belowLeft,
