@@ -2,7 +2,7 @@
 
 import {ThemeProvider} from '@mui/material/styles';
 import {act, render} from '@testing-library/react';
-import {createElement, useEffect} from 'react';
+import {createElement, useEffect, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
@@ -47,10 +47,15 @@ const ContextProbe = ({trainingRun, report}) => {
 
   report(contexts);
 
-  // Seeds once, from the run the probe mounted with.
+  // The context values close over state, so a seed must use the latest ones
+  // rather than whichever render scheduled the effect.
+  const contextsRef = useRef(contexts);
+  contextsRef.current = contexts;
+
+  // Seeds once per run.
   useEffect(() => {
     if (trainingRun) {
-      applyRun(contexts, trainingRun);
+      applyRun(contextsRef.current, trainingRun);
     }
   }, [trainingRun]);
 
