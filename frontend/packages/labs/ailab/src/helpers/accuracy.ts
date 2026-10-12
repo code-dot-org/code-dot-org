@@ -6,6 +6,8 @@
   of the range of labels to count as "correct".
 */
 
+import {createSelector} from 'reselect';
+
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
 import type {RootState} from '../redux';
 import type {ResultsData, DataRow} from '../types';
@@ -69,13 +71,6 @@ export function getResultsByGrade(
     return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
   });
   return {examples, labels, predictedLabels};
-}
-
-export function getAccuracyGrades(state: RootState): string[] {
-  const grades = isRegression(state)
-    ? getAccuracyRegression(state).grades
-    : getAccuracyClassification(state).grades;
-  return grades;
 }
 
 export function getCorrectCount(state: RootState): {
@@ -146,14 +141,30 @@ export function gradeAccuracy(
   };
 }
 
-function regressionTolerance(state: RootState): number {
-  const {range} = getExtrema(state.data, state.labelColumn!);
+function regressionTolerance(data: DataRow[], labelColumn: string): number {
+  const {range} = getExtrema(data, labelColumn);
   return (range * REGRESSION_ERROR_TOLERANCE) / 100;
 }
 
-export function getGradeOptions(state: RootState): AccuracyGradeOptions {
-  return isRegression(state) ? {tolerance: regressionTolerance(state)} : {};
-}
+export const getGradeOptions = createSelector(
+  [
+    isRegression,
+    (state: RootState) => state.data,
+    (state: RootState) => state.labelColumn,
+  ],
+  (regression, data, labelColumn): AccuracyGradeOptions =>
+    regression ? {tolerance: regressionTolerance(data, labelColumn!)} : {},
+);
+
+export const getAccuracyGrades = createSelector(
+  [
+    (state: RootState) => state.accuracyCheckPredictedLabels,
+    (state: RootState) => state.accuracyCheckLabels,
+    getGradeOptions,
+  ],
+  (predictedLabels, labels, gradeOptions): string[] =>
+    gradeAccuracy(predictedLabels, labels, gradeOptions).grades,
+);
 
 export function getAccuracyClassification(state: RootState): AccuracyGrades {
   return gradeAccuracy(
@@ -166,7 +177,7 @@ export function getAccuracyRegression(state: RootState): AccuracyGrades {
   return gradeAccuracy(
     state.accuracyCheckPredictedLabels,
     state.accuracyCheckLabels,
-    {tolerance: regressionTolerance(state)},
+    {tolerance: regressionTolerance(state.data, state.labelColumn!)},
   );
 }
 

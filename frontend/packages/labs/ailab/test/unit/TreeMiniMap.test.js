@@ -1,6 +1,7 @@
 import {render} from '@testing-library/react';
 import {createElement} from 'react';
 
+import {NO_ROWS} from '../../src/helpers/displayTreeTrace';
 import I18n from '../../src/i18n';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
 import TreeMiniMap from '../../src/UIComponents/TreeMiniMap';
@@ -26,6 +27,7 @@ describe('TreeMiniMap', () => {
       createElement(TreeMiniMap, {
         tree: question(question(answer(1), answer(2)), answer(3)),
         datasetId: 'unknown',
+        counts: () => NO_ROWS,
         onReplay: () => {},
       }),
     );

@@ -7,6 +7,7 @@ import {getTrainedModelDataToSave} from '../../src/selectors/saveSelectors';
 import {buildTrainer} from '../../src/trainers';
 import DecisionTreeTrainer from '../../src/trainers/DecisionTreeTrainer';
 import KNNTrainer from '../../src/trainers/KNNTrainer';
+import {initialProject} from '../../src/types';
 
 import {levelStore} from './levelStore';
 
@@ -24,7 +25,8 @@ const JEANS_COLUMNS = {
 };
 
 function savedTrainerId(store) {
-  return getTrainedModelDataToSave(store.getState()).selectedTrainer;
+  return getTrainedModelDataToSave(store.getState(), initialProject)
+    .selectedTrainer;
 }
 
 describe('trainer selection from mode', () => {

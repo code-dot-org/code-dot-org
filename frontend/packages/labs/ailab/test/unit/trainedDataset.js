@@ -55,8 +55,8 @@ export function trainDataset(
   ).forEach(column => store.dispatch(addSelectedFeature(column)));
 
   train.init(store);
-  const trainedModel = train.onClickTrain();
-  return {state: store.getState(), trainedModel};
+  const run = train.onClickTrain();
+  return {state: store.getState(), trainedModel: run?.trainedModel, run};
 }
 
 export function modelInputs(state) {
