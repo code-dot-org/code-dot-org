@@ -182,8 +182,22 @@ class QuizTest < ActiveSupport::TestCase
         {'question_key' => first.quiz_question.key, 'page' => 1, 'position' => 1},
         {'question_key' => second.quiz_question.key, 'page' => 1, 'position' => 2},
       ],
-      quiz.serializable_hash['serialized_placements']
+      quiz.serializable_hash['placements']
     )
+  end
+
+  test "load_level_xml translates the file's placements key to serialized_placements" do
+    quiz = create(:quiz)
+    xml = Nokogiri::XML(<<~XML, &:noblanks)
+      <Quiz>
+        <config><![CDATA[{"placements": [{"question_key": "abc", "page": 1, "position": 1}]}]]></config>
+      </Quiz>
+    XML
+
+    hash = quiz.load_level_xml(xml)
+
+    assert_equal [{'question_key' => 'abc', 'page' => 1, 'position' => 1}], hash['serialized_placements']
+    refute hash.key?('placements')
   end
 
   test "import_serialized_placements! creates placements from serialized_placements" do

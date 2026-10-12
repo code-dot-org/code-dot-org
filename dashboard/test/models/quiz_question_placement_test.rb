@@ -39,7 +39,7 @@ class QuizQuestionPlacementTest < ActiveSupport::TestCase
 
     File.expects(:write).with do |_path, contents|
       parsed = JSON.parse(Nokogiri::XML(contents).at('config').text)
-      parsed['serialized_placements'] == [{'question_key' => question.key, 'page' => 1, 'position' => 1}]
+      parsed['placements'] == [{'question_key' => question.key, 'page' => 1, 'position' => 1}]
     end
 
     create(:quiz_question_placement, level: quiz, quiz_question: question, page: 1, position: 1)
@@ -54,7 +54,7 @@ class QuizQuestionPlacementTest < ActiveSupport::TestCase
     placement = create(:quiz_question_placement, level: quiz)
 
     File.expects(:write).with do |_path, contents|
-      JSON.parse(Nokogiri::XML(contents).at('config').text)['serialized_placements'] == []
+      JSON.parse(Nokogiri::XML(contents).at('config').text)['placements'] == []
     end
 
     placement.destroy!

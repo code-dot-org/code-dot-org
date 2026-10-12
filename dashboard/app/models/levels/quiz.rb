@@ -61,7 +61,15 @@ class Quiz < Level
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
   def serializable_hash(options = nil)
-    super.merge('serialized_placements' => placements.includes(:quiz_question).map(&:serializable_hash))
+    super.merge('placements' => placements.includes(:quiz_question).map(&:serializable_hash))
+  end
+
+  # Translates the key used in the .level file ("placements") to "serialized_placements",
+  # which we use to differentiate between the file's data and placements derived from the association.
+  def load_level_xml(xml_node)
+    hash = super
+    hash['serialized_placements'] = hash.delete('placements') if hash.key?('placements')
+    hash
   end
 
   def import_serialized_placements!
