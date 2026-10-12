@@ -74,41 +74,43 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
 // default lineup appears only when the level doesn't mention the name.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
-    // Building and playing a platformer: the composites, the world's feel, and
-    // reacting to the player reaching something.
+    // Building and playing a platformer. Gravity and zoom lead; the rest
+    // group by color: sprite blocks, the background, the event, then the
+    // light blue ones.
     name: 'Platform',
     types: [
-      'gamelab_setBackgroundImageAs',
-      PLAY_SOUND_BLOCK_TYPE,
-      PLAY_MUSIC_BLOCK_TYPE,
+      'spritelab2_setPlatformGravity',
+      'spritelab2_setCameraZoom',
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
       THE_PLAYER_BLOCK_TYPE,
-      'spritelab2_setPlatformGravity',
-      'spritelab2_setCameraZoom',
-      RESTART_SCENE_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
+      'gamelab_setBackgroundImageAs',
       'gamelab_checkTouching',
+      PLAY_SOUND_BLOCK_TYPE,
+      PLAY_MUSIC_BLOCK_TYPE,
+      RESTART_SCENE_BLOCK_TYPE,
       'gamelab_spriteSay',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     ],
   },
   {
-    // Scene-driven storytelling: place and size characters, speech, click and
-    // timer events, scene jumps, and the simple movement behaviors.
+    // Scene-driven storytelling, grouped by color like Platform: the sprite
+    // block, the background, the events, then the light blue ones and the
+    // behaviors.
     name: 'Story',
     types: [
+      'gamelab_makeNewSpriteAnon',
       'gamelab_setBackgroundImageAs',
+      'gamelab_spriteClicked',
+      'gamelab_atTime',
       PLAY_SOUND_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
-      'gamelab_makeNewSpriteAnon',
       'gamelab_setProp',
       'gamelab_spriteSay',
       'gamelab_spriteSayTime',
-      'gamelab_spriteClicked',
-      'gamelab_atTime',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
       'gamelab_addBehaviorSimple',

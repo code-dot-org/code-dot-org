@@ -8,6 +8,7 @@ import {
 describe('camelize', () => {
   it('matches the server camelization for every editable key', () => {
     const expected = {
+      block_catalog: 'blockCatalog',
       guide_steps: 'guideSteps',
       hide_custom_blocks: 'hideCustomBlocks',
       image_role_defaults: 'imageRoleDefaults',

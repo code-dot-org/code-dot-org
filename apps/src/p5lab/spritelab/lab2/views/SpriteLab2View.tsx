@@ -49,6 +49,7 @@ import {
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
+import {catalogEntries, heldBackBlockTypes} from '../blockCatalog';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -120,6 +121,8 @@ import {
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
+import AddBlocksButton from './AddBlocksButton';
+import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
@@ -134,6 +137,7 @@ import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import {useFlyoutDots} from './useFlyoutDots';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -406,6 +410,48 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
+  // The new-block catalog: the unit's new blocks stay out of the toolbox
+  // until the student adds them from the dialog. Off in the levelbuilder's
+  // edit modes, whose saves would carry its flags into every student's
+  // start sources.
+  const catalogOn = !!levelProperties.blockCatalog && !isLevelEditMode;
+  const catalog = useMemo(
+    () =>
+      catalogOn
+        ? catalogEntries(
+            levelProperties.newBlocks,
+            levelProperties.toolboxDefinition
+          )
+        : [],
+    [catalogOn, levelProperties.newBlocks, levelProperties.toolboxDefinition]
+  );
+  const chosenBlocks = currentSources.chosenBlocks;
+  const chosenBlockSet = useMemo(
+    () => new Set(chosenBlocks ?? []),
+    [chosenBlocks]
+  );
+  const hiddenBlockTypes = useMemo(
+    () => heldBackBlockTypes(catalog, chosenBlocks),
+    [catalog, chosenBlocks]
+  );
+  const [showBlockCatalog, setShowBlockCatalog] = useState(false);
+  // Dismissing the catalog, not opening it, is what counts as seen: an
+  // opening cut short (a Start Over that leaves the level, a reload) comes
+  // back next time.
+  const closeBlockCatalog = useCallback(() => {
+    setShowBlockCatalog(false);
+    if (!currentSources.blockCatalogSeen) {
+      patchSources({blockCatalogSeen: true});
+    }
+  }, [currentSources.blockCatalogSeen, patchSources]);
+  const addCatalogBlock = useCallback(
+    (type: string) => {
+      if (!chosenBlockSet.has(type)) {
+        patchSources({chosenBlocks: [...chosenBlockSet, type]});
+      }
+    },
+    [chosenBlockSet, patchSources]
+  );
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -896,6 +942,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
+    hiddenBlockTypes,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1234,7 +1281,42 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (animationsSeeded && sceneToolbox) {
       refreshToolbox(sceneToolbox);
     }
-  }, [animationsSeeded, sceneToolbox, workspaceVersion, refreshToolbox]);
+  }, [
+    animationsSeeded,
+    sceneToolbox,
+    hiddenBlockTypes,
+    workspaceVersion,
+    refreshToolbox,
+  ]);
+
+  // ?new-blocks=reset puts the catalog back to nothing added, for trying
+  // the first landing again.
+  const resetCatalogRef = useRef(queryParams('new-blocks') === 'reset');
+  useEffect(() => {
+    if (resetCatalogRef.current && catalog.length && isEditable) {
+      resetCatalogRef.current = false;
+      patchSources({chosenBlocks: [], blockCatalogSeen: false});
+    }
+  }, [catalog.length, isEditable, patchSources]);
+
+  // The catalog opens itself the first time the student lands here, and
+  // closes if the level changes under it.
+  useEffect(() => {
+    if (!catalog.length) {
+      setShowBlockCatalog(false);
+    } else if (
+      isEditable &&
+      animationsSeeded &&
+      !currentSources.blockCatalogSeen
+    ) {
+      setShowBlockCatalog(true);
+    }
+  }, [
+    catalog.length,
+    isEditable,
+    animationsSeeded,
+    currentSources.blockCatalogSeen,
+  ]);
 
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
@@ -1763,6 +1845,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
+  // Dots beside the catalog blocks the project has not used yet.
+  const getMainWorkspace = useCallback(
+    () => Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg | null,
+    []
+  );
+  useFlyoutDots({
+    enabled: catalogOn,
+    added: chosenBlockSet,
+    scenes,
+    workspaceVersion,
+    getWorkspace: getMainWorkspace,
+  });
+
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no
   // mode is unconstrained.
   const scenesEditable =
@@ -1862,6 +1957,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         />
       )}
+      {showBlockCatalog && (
+        <BlockCatalogDialog
+          entries={catalog}
+          chosen={chosenBlockSet}
+          onAdd={addCatalogBlock}
+          onClose={closeBlockCatalog}
+        />
+      )}
       <ResourcePanel
         levelProperties={levelProperties}
         isRunning={isRunning}
@@ -1950,6 +2053,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           >
             {animationsSeeded && (
               <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
+            )}
+            {catalog.length > 0 && (
+              <AddBlocksButton
+                workspaceVersion={workspaceVersion}
+                getWorkspace={getMainWorkspace}
+                remaining={hiddenBlockTypes.size}
+                onClick={() => setShowBlockCatalog(true)}
+              />
             )}
           </div>
 
