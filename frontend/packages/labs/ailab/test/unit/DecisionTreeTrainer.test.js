@@ -78,7 +78,7 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       'animal',
     );
 
-    const trainedModel = trainer.startTraining();
+    const {trainedModel} = trainer.startTraining();
 
     expect(trainedModel).toBeDefined();
     expect(
@@ -128,13 +128,13 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       'label',
     );
 
-    trainer.startTraining();
+    const run = trainer.startTraining();
 
     const state = store.getState();
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
-    expect(state.hyperparameters).toEqual({maxDepth: 1});
+    expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
   /*
@@ -167,10 +167,10 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       'label',
     );
 
-    trainer.startTraining();
+    const run = trainer.startTraining();
 
     const state = store.getState();
-    expect(state.hyperparameters).toEqual({maxDepth: 2});
+    expect(run.hyperparameters).toEqual({maxDepth: 2});
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
@@ -201,7 +201,7 @@ describe('DecisionTreeTrainer: regression', () => {
       'price',
     );
 
-    const trainedModel = trainer.startTraining();
+    const {trainedModel} = trainer.startTraining();
 
     const prediction = predictWith(store, trainer, trainedModel, {size: 1});
     const observedLabels = store.getState().trainingLabels.map(Number);
@@ -242,7 +242,7 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
       'animal',
     );
 
-    const model = trainer.startTraining();
+    const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeClassifier, rows)).toEqual(
@@ -269,7 +269,7 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
       'price',
     );
 
-    const model = trainer.startTraining();
+    const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeRegression, rows)).toEqual(

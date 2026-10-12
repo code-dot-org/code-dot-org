@@ -10,6 +10,7 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {
   addSelectedFeature,
   readyToTrain,
@@ -19,9 +20,7 @@ import {
   setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
-import {store} from '../store';
-import train from '../train';
-import {useTrainingData} from '../TrainingDataContext';
+import {useTrainingRun} from '../useTrainingRun';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
@@ -37,8 +36,11 @@ const TrainPanel = () => {
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const canTrain = useAppSelector(readyToTrain);
-  const hasTrainingResult = useAppSelector(hasCurrentTrainingResult);
-  const {setTrainedModel, snapshotTrainedModel} = useTrainingData();
+  const {project} = useProject();
+  const hasTrainingResult = useAppSelector(state =>
+    hasCurrentTrainingResult(state, project),
+  );
+  const {beginRun} = useTrainingRun();
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -75,9 +77,7 @@ const TrainPanel = () => {
   };
 
   const onTrain = () => {
-    snapshotTrainedModel();
-    train.init(store);
-    setTrainedModel(train.onClickTrain());
+    beginRun();
     dispatch(setTrainingModalStep('training'));
   };
 

@@ -4,22 +4,21 @@ import {createElement} from 'react';
 import I18n from '../../src/i18n';
 import {
   removeSelectedFeature,
-  setHistoricResult,
   setLabelColumn,
   setTrainingModalStep,
 } from '../../src/redux';
 import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
-function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
+function renderCard({trained = true, trainer = 'decisionTree', run} = {}) {
   I18n.initI18n();
   const store = levelStore({trainer});
-  const trainedModel = trained ? trainModel(store) : undefined;
+  const trainingRun = run ?? (trained ? runTraining(store) : undefined);
   renderWithProviders(createElement(TrainingResultCard), {
     store,
-    trainedModel,
+    trainingRun,
   });
   return store;
 }
@@ -41,9 +40,16 @@ describe('TrainingResultCard', () => {
   });
 
   test('shows the stored accuracy, not a rounded one', () => {
-    const store = renderCard({trained: false});
-    act(() => {
-      store.dispatch(setHistoricResult('animal', ['legs'], '83.33', 5, 6));
+    renderCard({
+      run: {
+        historicResult: {
+          label: 'animal',
+          features: ['legs'],
+          accuracy: '83.33',
+          correct: 5,
+          total: 6,
+        },
+      },
     });
     expect(screen.getByText('83.33%')).not.toBeNull();
     expect(screen.getByText('5/6')).not.toBeNull();

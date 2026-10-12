@@ -6,6 +6,7 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import {isPanelEnabled} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {setCurrentPanel} from '../redux';
 
 import styles from './workspaceHeader.module.scss';
@@ -22,7 +23,10 @@ interface WorkspaceHeaderProps {
 const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
   const dispatch = useAppDispatch();
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const canTest = useAppSelector(state => isPanelEnabled(state, 'results'));
+  const {project} = useProject();
+  const canTest = useAppSelector(state =>
+    isPanelEnabled(state, project, 'results'),
+  );
   const openTab = TABS.find(tab => tab.panel === currentPanel);
 
   const onTabChange = (value: string) => {

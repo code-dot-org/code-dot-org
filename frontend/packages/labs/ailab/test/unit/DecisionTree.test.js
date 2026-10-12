@@ -12,7 +12,7 @@ import DecisionTree from '../../src/UIComponents/DecisionTree';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
@@ -26,9 +26,9 @@ function predictSnake({store, trainedModel}) {
 function renderTrainedTree() {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  const trainedModel = trainModel(store);
-  renderWithProviders(createElement(DecisionTree), {store, trainedModel});
-  return {store, trainedModel};
+  const trainingRun = runTraining(store);
+  renderWithProviders(createElement(DecisionTree), {store, trainingRun});
+  return {store, trainedModel: trainingRun.trainedModel};
 }
 
 function zoomToPathButton() {

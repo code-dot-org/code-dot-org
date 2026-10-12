@@ -6,12 +6,12 @@ import {removeSelectedFeature} from '../../src/redux';
 import TrainPanel from '../../src/UIComponents/TrainPanel';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderPanel({trained = false} = {}) {
   const store = levelStore({});
-  const trainedModel = trained ? trainModel(store) : undefined;
-  renderWithProviders(createElement(TrainPanel), {store, trainedModel});
+  const trainingRun = trained ? runTraining(store) : undefined;
+  renderWithProviders(createElement(TrainPanel), {store, trainingRun});
   return store;
 }
 
