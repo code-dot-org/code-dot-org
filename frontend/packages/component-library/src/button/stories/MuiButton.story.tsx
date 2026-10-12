@@ -44,6 +44,7 @@ export default {
         'inherit',
         'white',
         'tertiary',
+        'orange',
       ],
       description: 'The color of the component.',
     },
@@ -181,6 +182,28 @@ ButtonWithIcons.args = {
   endIcon: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
   size: 'medium',
 };
+
+export const RunButton: StoryFn = () => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: 12,
+    }}
+  >
+    <MuiButton
+      variant="contained"
+      color="orange"
+      size="medium"
+      onClick={() => null}
+      startIcon={<FontAwesomeV6Icon iconName="play" iconStyle="solid" />}
+    >
+      Run
+    </MuiButton>
+    <p style={{margin: 0}}>Orange is only for the Run button in labs.</p>
+  </div>
+);
 
 export const IconButton = SingleTemplate.bind({});
 IconButton.args = {
@@ -348,16 +371,23 @@ GroupOfColorsOfButtons.args = {
       onClick: () => null,
     },
     {
+      children: 'Button Primary Orange',
+      variant: 'contained',
+      color: 'orange',
+      size: 'medium',
+      onClick: () => null,
+    },
+    {
       children: 'Button Secondary Black',
       variant: 'outlined',
-      color: 'secondary',
+      color: 'primary',
       size: 'medium',
       onClick: () => null,
     },
     {
       children: 'Button Secondary Gray',
       variant: 'outlined',
-      color: 'tertiary',
+      color: 'secondary',
       size: 'medium',
       onClick: () => null,
     },
