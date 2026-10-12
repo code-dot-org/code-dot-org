@@ -6,6 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -35,6 +36,7 @@ function SummaryProgressRow({
   unitName,
   userId,
   userType,
+  aiChatAccessLevel,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -55,7 +57,10 @@ function SummaryProgressRow({
   // These lessons don't have lesson plans, so we can use that as a proxy for
   // whether or not to show the Lesson Tutor button.
   const showLessonTutorButton =
-    lesson.lessonTutorPath && lesson.hasLessonPlan && userId;
+    lesson.lessonTutorPath &&
+    lesson.hasLessonPlan &&
+    userId &&
+    canUseLessonDeepDive(aiChatAccessLevel);
 
   const handleLessonTutorClick = () => {
     analyticsReporter.sendEvent(EVENTS.LESSON_TUTOR_UNIT_OVERVIEW_CLICK, {
@@ -215,6 +220,7 @@ SummaryProgressRow.propTypes = {
   unitName: PropTypes.string,
   userId: PropTypes.number,
   userType: PropTypes.string,
+  aiChatAccessLevel: PropTypes.string,
 };
 
 export const styles = {
@@ -307,4 +313,5 @@ export default connect((state, ownProps) => ({
   unitName: state.progress.unitTitle,
   userId: state.currentUser.userId,
   userType: state.currentUser.userType,
+  aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
 }))(SummaryProgressRow);
