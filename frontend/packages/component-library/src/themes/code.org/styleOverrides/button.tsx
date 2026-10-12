@@ -9,7 +9,7 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
  * - Colors: purple, black, gray, white, destructive (in addition to primary, secondary, error)
  */
 
-// Size specifications matching genericButton.module.scss
+// Size specifications of the DSCO button
 const SIZE_SPECS = {
   xs: {
     padding: '0.125rem 0.5rem',
@@ -695,7 +695,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           textDecoration: 'none',
         },
 
-        // Remove margins from startIcon and endIcon - use gap instead (matching genericButton.module.scss)
+        // Remove margins from startIcon and endIcon - use gap instead, as the DSCO button did
         '& .MuiButton-startIcon': {
           marginLeft: 0,
           marginRight: 0,

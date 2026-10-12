@@ -11,6 +11,7 @@ import {
 } from '@/common/types';
 
 import CustomDropdown, {
+  buttonSizeToMuiSizeMap,
   CustomDropdownMenuPlacement,
   CustomDropdownMenuVerticalPlacement,
   CustomDropdownOption,
