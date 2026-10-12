@@ -1,4 +1,3 @@
-/* Shows cut-off text whole, on hover or while its node has keyboard focus. */
 import {Tooltip, type TooltipProps} from '@mui/material';
 import type {Instance} from '@popperjs/core';
 import {
@@ -35,7 +34,8 @@ const TruncatedTextTooltip = ({
   const [open, setOpen] = useState(false);
 
   useLayoutEffect(() => {
-    setOpen(focused && isCutOff(textRef.current!));
+    const text = textRef.current!;
+    setOpen((focused || text.matches(':hover')) && isCutOff(text));
   }, [focused]);
 
   useEffect(() => {
@@ -53,7 +53,12 @@ const TruncatedTextTooltip = ({
       onClose={() => setOpen(focused && isCutOff(textRef.current!))}
       placement={placement}
       describeChild
-      slotProps={{popper: {popperRef}}}
+      slotProps={{
+        popper: {
+          popperRef,
+          sx: {'&[data-popper-reference-hidden]': {visibility: 'hidden'}},
+        },
+      }}
     >
       {children}
     </Tooltip>
