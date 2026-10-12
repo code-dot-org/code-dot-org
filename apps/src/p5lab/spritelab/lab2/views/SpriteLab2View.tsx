@@ -1044,8 +1044,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // --- External scenes (cross-project jumps) ---
   const externalProjectsRef = useRef(new Map<string, ExternalProject>());
-  // One preload list per fetched project; the engine tells projects apart
-  // by the list's identity.
+  // One preload list per fetched project, kept for as long as the project
+  // is: the engine tells one project's list from another's by object
+  // reference, so a project must hand it the same list object every jump.
   const externalPreloadListsRef = useRef(
     new WeakMap<ExternalProject, RuntimeAnimationList>()
   );
