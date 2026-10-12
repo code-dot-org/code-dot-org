@@ -182,4 +182,4 @@ use_my_studio: true
 #contentful_hour_of_ai_access_token:
 #contentful_hour_of_ai_space: hwu8vzk5v0g2
 #contentful_hour_of_ai_api_url: preview.contentful.com
-#contentful_hour_of_ai_namespace: master
+#contentful_hour_of_ai_environment: master

@@ -7,7 +7,7 @@ CdoContentful.configure do |config|
     client.access_token = CDO.contentful_hour_of_ai_access_token
     client.space        = CDO.contentful_hour_of_ai_space
     client.api_url      = CDO.contentful_hour_of_ai_api_url
-    client.namespace    = CDO.contentful_hour_of_ai_namespace
+    client.environment  = CDO.contentful_hour_of_ai_environment
   end
 
   config.marketing.client.tap do |client|
