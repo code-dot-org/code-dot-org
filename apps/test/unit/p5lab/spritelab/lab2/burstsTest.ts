@@ -1,10 +1,12 @@
 import {
   BURST_LOOKS,
   burstAlpha,
+  burstBoxes,
   burstOrigin,
   createBurst,
   drawBursts,
   isBurstLook,
+  JUMP_START_FRAMES,
   shareOut,
   stepBurst,
 } from '@cdo/apps/p5lab/spritelab/lab2/bursts';
@@ -170,6 +172,19 @@ describe('bursts', () => {
     for (let i = 0; i < 60; i++) stepBurst(burst, scene());
     expect(p.vy).toBeGreaterThan(0);
     expect(p.vy).toBeLessThan(1);
+  });
+
+  it('starts the player from where it stood for a few frames after a jump', () => {
+    const player = {position: {x: 50, y: 60}, width: 20, height: 40, scale: 1};
+    const other = {position: {x: 90, y: 60}, width: 20, height: 40, scale: 1};
+    const jump = {sprite: player, x: 50, y: 80, frame: 100};
+    const boxes = burstBoxes([player, other], jump, 101);
+    expect(boxes[0].position).toEqual({x: 50, y: 80});
+    expect(boxes[1]).toBe(other);
+    expect(burstBoxes([player], jump, 100 + JUMP_START_FRAMES + 1)[0]).toBe(
+      player
+    );
+    expect(burstBoxes([player], null, 101)[0]).toBe(player);
   });
 
   it('shares a count out exactly, the first parts taking the extra', () => {

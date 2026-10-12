@@ -13,6 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
+import {burstBoxes} from './bursts';
 import {
   backgroundFrame,
   cameraFocus,
@@ -205,17 +206,27 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.drawPaused_ = false;
     // The weather and the bursts in flight, drawn inside the paint.
     this.particles_ = new ParticleLayer();
+    // Where the player stood as its jump was detected, set by the player
+    // action tracking where the engine has it; a burst from the player in
+    // the frames after starts there, not partway up the jump.
+    this.jumpStart_ = null;
   }
 
-  /** The burst block: particles from each sprite the argument names. */
+  /** The burst block: particles from each sprite the argument names; the
+      player, just after a jump, from where it stood (see jumpStart_). */
   burstParticles(count, look, spriteArg) {
     const view = this.particleView_();
     if (view) {
+      const p5 = this.p5Wrapper.p5;
       this.particles_.burst(
-        this.p5Wrapper.p5,
+        p5,
         look,
         count,
-        this.library.getSpriteArray(spriteArg),
+        burstBoxes(
+          this.library.getSpriteArray(spriteArg),
+          this.jumpStart_,
+          p5.frameCount
+        ),
         view
       );
     }
