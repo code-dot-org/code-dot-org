@@ -209,10 +209,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.drawPaused_ = false;
     // The weather and the bursts in flight, drawn inside the paint.
     this.particles_ = new ParticleLayer();
-    // Where the player stood as its jump was detected, set by the player
-    // action tracking where the engine has it; a burst from the player in
-    // the frames after starts there, not partway up the jump.
-    this.jumpStart_ = null;
   }
 
   /** The burst block: particles from each sprite the argument names; the
