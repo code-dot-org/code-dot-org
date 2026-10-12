@@ -25,7 +25,7 @@ declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     white: true;
     tertiary: true;
-    /** CADS contained-only run color. */
+    /** Contained buttons only. */
     orange: true;
   }
 }
