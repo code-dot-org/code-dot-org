@@ -1,4 +1,4 @@
-import {act, fireEvent, screen} from '@testing-library/react';
+import {act, fireEvent, screen, waitFor} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
@@ -289,6 +289,50 @@ describe('DecisionTree', () => {
     expect(pills.map(pill => pill.textContent)).toContain('< 1');
     expect(pills.map(pill => pill.textContent)).toContain('≥ 1');
     pills.forEach(pill => expect(pill.textContent).toBe(pill.title));
+  });
+
+  describe('with every name cut off', () => {
+    beforeEach(() => {
+      vi.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(100);
+      vi.spyOn(Element.prototype, 'clientWidth', 'get').mockReturnValue(50);
+    });
+    afterEach(() => vi.restoreAllMocks());
+
+    // jsdom lays nothing out, so Popper sees every anchor as clipped and hides its tooltip.
+    const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
+
+    it('shows the keyboard-focused name whole in a tooltip', () => {
+      const root = focusRoot();
+      const name = root.querySelector(`.${moduleStyles.nodeText}`);
+
+      expect(tooltip().textContent).toBe(name.textContent);
+    });
+
+    it('closes the tooltip on the first Escape and leaves the tree on the next', async () => {
+      const root = focusRoot();
+
+      fireEvent.keyDown(root, {key: 'Escape'});
+      await waitFor(() => expect(tooltip()).toBeNull());
+      expect(document.activeElement).toBe(root);
+
+      fireEvent.keyDown(root, {key: 'Escape'});
+      expect(document.activeElement).toBe(canvasGroup());
+    });
+
+    it('shows no tooltip when a click focuses a node', () => {
+      const matches = Element.prototype.matches;
+      vi.spyOn(Element.prototype, 'matches').mockImplementation(
+        function (selector) {
+          return selector === ':focus-visible'
+            ? false
+            : matches.call(this, selector);
+        },
+      );
+
+      focusRoot();
+
+      expect(tooltip()).toBeNull();
+    });
   });
 
   it('describes each node on the path as on it', () => {
