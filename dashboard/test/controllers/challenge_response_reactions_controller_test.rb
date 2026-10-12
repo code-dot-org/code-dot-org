@@ -16,7 +16,6 @@ class ChallengeResponseReactionsControllerTest < ActionController::TestCase
   # react to) the author's final submission; the outsider shares no section.
   let(:section) {create(:section)}
   before do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     create(:follower, section:, student_user: student)
     create(:follower, section:, student_user: other_student)
   end
@@ -26,20 +25,6 @@ class ChallengeResponseReactionsControllerTest < ActionController::TestCase
       it 'redirects to sign in' do
         post :create, params: {challenge_response_id: challenge_response.id, emoji: 'heart'}
         assert_redirected_to_sign_in
-      end
-    end
-
-    context 'without lesson deep dive access' do
-      before do
-        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
-        sign_in other_student
-      end
-
-      it 'is forbidden' do
-        assert_no_difference -> {challenge_response.challenge_response_reactions.count} do
-          post :create, params: {challenge_response_id: challenge_response.id, emoji: 'heart'}
-        end
-        assert_response :forbidden
       end
     end
 

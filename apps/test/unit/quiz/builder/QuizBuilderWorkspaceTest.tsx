@@ -42,7 +42,8 @@ const BASE_STATE: QuizBuilderQuestionsState = {
 };
 
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {}
+  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
@@ -52,6 +53,11 @@ function renderWorkspace(
     <QuizBuilderWorkspace
       levelId={42}
       quizTitle="AI Foundations Certification Exam"
+      showIntroScreen={false}
+      customIntroText=""
+      hasTimeLimit={false}
+      onSaveQuizConfig={jest.fn()}
+      {...propOverrides}
     />
   );
 }
@@ -59,6 +65,20 @@ function renderWorkspace(
 describe('QuizBuilderWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
+  });
+
+  it('shows the intro screen card, with its content, when the intro screen is on', () => {
+    renderWorkspace(
+      {},
+      {showIntroScreen: true, customIntroText: 'You have 45 minutes.'}
+    );
+    expect(screen.getByText('Intro Screen')).toBeInTheDocument();
+    expect(screen.getByText('You have 45 minutes.')).toBeInTheDocument();
+  });
+
+  it('hides the intro screen card when the intro screen is off', () => {
+    renderWorkspace({}, {showIntroScreen: false});
+    expect(screen.queryByText('Intro Screen')).not.toBeInTheDocument();
   });
 
   it('fetches questions for the given level', () => {

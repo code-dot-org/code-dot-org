@@ -1,0 +1,27 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T00:04:09.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Panda Fan Club</title>\n    <style>\n      body {\n        background-color: #d8f0d0;\n        font-family: Arial, sans-serif;\n        text-align: center;\n        padding: 20px;\n      }\n      h1 {\n        color: #1f5f2e;\n      }\n      .food {\n        color: #1f5f2e;\n      }\n      .facts {\n        color: #ff0000;\n      }\n      button {\n        background-color: #1f5f2e;\n        color: white;\n        border: none;\n        border-radius: 20px;\n        padding: 12px 24px;\n        font-size: 18px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Panda Fan Culb</h1>\n    <p>\n      Is it snack time yet? I just finished my bamboo, and I'm already\n      thinking about more bamboo. Welcome to the club!\n    </p>\n\n    <h2 class=\"food\">Our Favorite Food</h2>\n    <p>Bamboo for breakfast, bamboo for lunch, and bamboo for dinner.</p>\n\n    <h2 class=\"facts\">Panda Fun Facts</h2>\n    <p>Pandas can spend up to 14 hours a day eating.</p>\n\n    <button>Meet the koalas</button>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "long_instructions": "Sam’s page is almost done, but three small things are off.\n\n1.  Run the page and look for what’s wrong: a typo in the heading, a heading that’s the wrong color, and a button with the wrong words.\n2.  Fix each one yourself in the code. Don’t ask the AI.\n3.  Run the page again to check your fixes.\n4.  Write one sentence: why was editing faster than writing another prompt?"
+  },
+  "published": true
+}]]></config>
+</Weblab2>
