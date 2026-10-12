@@ -3,10 +3,11 @@ import isEqual from 'lodash/isEqual';
 import React, {useEffect, useState} from 'react';
 
 import BuilderCard from '../BuilderCard';
+import {QUESTION_TYPE_LABELS_ICONS} from '../constants';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
-  QuizQuestionEditableFields,
+  QuizQuestionDraft,
 } from '../types';
 
 import AnswersTab from './AnswersTab';
@@ -22,22 +23,26 @@ interface QuizQuestionCardProps {
   error?: string | null;
   onSave: (
     id: number,
-    payload: QuizQuestionEditableFields
+    payload: QuizQuestionDraft
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
 }
 
-function toEditableFields(
-  question: QuizBuilderQuestion
-): QuizQuestionEditableFields {
-  return {
+function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
+  const shared = {
     questionName: question.questionName,
     questionTitle: question.questionTitle,
     description: question.description,
-    choices: question.choices,
-    correctChoiceId: question.correctChoiceId,
     explanation: question.explanation,
   };
+  return question.type === 'MultipleChoiceQuestion'
+    ? {
+        ...shared,
+        type: question.type,
+        choices: question.choices,
+        correctChoiceId: question.correctChoiceId,
+      }
+    : {...shared, type: question.type};
 }
 
 // One row of the quiz outline. Collapsed, it's a read-only preview; expanded,
@@ -51,7 +56,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   onSave,
   onRemove,
 }) => {
-  const [draft, setDraft] = useState(() => toEditableFields(question));
+  const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
   const isBusy = isSaving || isRemoving;
@@ -59,14 +64,13 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   // server yet, so it counts as dirty even untouched - otherwise Save
   // would start out disabled with nothing to enable it.
   const isDirty =
-    isPendingQuestionId(question.id) ||
-    !isEqual(draft, toEditableFields(question));
+    isPendingQuestionId(question.id) || !isEqual(draft, toDraft(question));
 
   // A save can fork the question into a new id (see
   // useQuizBuilderQuestions#saveQuestion) - resync the draft whenever the
   // identity of the question this card is editing changes.
   useEffect(() => {
-    setDraft(toEditableFields(question));
+    setDraft(toDraft(question));
   }, [question]);
 
   const handleSave = async () => {
@@ -79,7 +83,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   };
 
   const handleDiscard = () => {
-    setDraft(toEditableFields(question));
+    setDraft(toDraft(question));
   };
 
   const handleRemove = async () => {
@@ -90,7 +94,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
 
   return (
     <BuilderCard
-      iconName="list-check"
+      iconName={QUESTION_TYPE_LABELS_ICONS[question.type].iconName}
       name={draft.questionName}
       preview={draft.questionTitle}
       itemLabel="question"
