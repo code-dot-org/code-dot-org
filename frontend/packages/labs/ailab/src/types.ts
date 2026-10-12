@@ -151,6 +151,18 @@ export interface HistoricResult {
   total: number;
 }
 
+/* Everything saved with a student's work and restored when the level loads
+   again. A work in progress; more will be added here. */
+export interface AilabProject {
+  hyperparameters?: Hyperparameters;
+  historicResults: HistoricResult[];
+}
+
+export const initialProject: AilabProject = {
+  hyperparameters: undefined,
+  historicResults: [],
+};
+
 export interface ModelDataToSave {
   name?: string;
   datasetDetails: DatasetDetails;

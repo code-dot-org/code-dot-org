@@ -8,8 +8,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setCurrentPanel, setTrainingModalStep} from '../redux';
-import train from '../train';
-import {useTrainingData} from '../TrainingDataContext';
+import {useTrainingRun} from '../useTrainingRun';
 
 import GenerateResults from './GenerateResults';
 import TrainModel from './TrainModel';
@@ -24,7 +23,7 @@ const TrainingModal = () => {
   const step = useAppSelector(state => state.trainingModalStep);
   const isReplay = useAppSelector(state => state.isTrainingReplay);
   const [testingFinished, setTestingFinished] = useState(false);
-  const {restoreTrainedModel} = useTrainingData();
+  const {cancelRun} = useTrainingRun();
 
   // This component stays mounted between runs, so each run starts over.
   useEffect(() => {
@@ -41,8 +40,7 @@ const TrainingModal = () => {
   const isInProgress = !isReplay && (isTraining || !testingFinished);
   const closeModal = () => {
     if (isInProgress) {
-      train.cancel();
-      restoreTrainedModel();
+      cancelRun();
     }
     dispatch(setTrainingModalStep(undefined));
   };

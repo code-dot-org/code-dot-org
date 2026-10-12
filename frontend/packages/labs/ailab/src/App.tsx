@@ -11,6 +11,7 @@ import {
 } from './helpers/navigationValidation';
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
+import {useProject} from './ProjectContext';
 import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import type {
@@ -231,11 +232,15 @@ const App = ({
   onTrained,
 }: AppProps) => {
   const dispatch = useAppDispatch();
-  const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
+  const {project} = useProject();
+  const panelButtons = useAppSelector<PrevNextButtons>(
+    state => getPanelButtons(state, project),
+    panelButtonsEqual,
+  );
   const currentPanel = useAppSelector(state => state.currentPanel);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
-  const latestResult = useAppSelector(state => state.historicResults[0]);
+  const latestResult = project.historicResults[0];
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
   const {trainedModel} = useTrainingData();
@@ -322,7 +327,7 @@ const App = ({
           setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
           onContinue={onContinue}
           startSaveTrainedModel={() =>
-            dispatch(saveModel(saveTrainedModel, trainedModel))
+            dispatch(saveModel(saveTrainedModel, project, trainedModel))
           }
           saveStatus={saveStatus}
           saveResponseData={saveResponseData}
