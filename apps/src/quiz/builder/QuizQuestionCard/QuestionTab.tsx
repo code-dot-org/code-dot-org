@@ -2,14 +2,14 @@ import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 import React from 'react';
 
-import {QuizQuestionEditableFields} from '../types';
+import {QuizQuestionDraft} from '../types';
 
 import styles from './quiz-question-card.module.scss';
 import builderCommonStyles from '../builder-common.module.scss';
 
 interface QuestionTabProps {
-  draft: QuizQuestionEditableFields;
-  onChange: (draft: QuizQuestionEditableFields) => void;
+  draft: QuizQuestionDraft;
+  onChange: (draft: QuizQuestionDraft) => void;
   disabled?: boolean;
 }
 
