@@ -1,13 +1,13 @@
-// A burst: sparks or confetti flung out from a point, slowing in the air,
-// drawn down by the scene's gravity, and gone in a moment. A visual
-// flourish: it passes through tiles and bodies, and nothing of it is left
-// to pick up. Several can be in flight. Particles are plain records, not
-// sprites.
+// A burst: sparks, confetti or dust flung out from a sprite, slowing in
+// the air, drawn down by the scene's gravity, and gone in a moment. A
+// visual flourish: it passes through tiles and bodies, and nothing of it
+// is left to pick up. Several can be in flight. Particles are plain
+// records, not sprites.
 
-import {PLATFORM_GRAVITY} from './platformPhysics';
+import {PhysicsBox, PLATFORM_GRAVITY} from './platformPhysics';
 import {Random, weatherGravity} from './weather';
 
-export const BURST_LOOKS = ['sparks', 'confetti'] as const;
+export const BURST_LOOKS = ['sparks', 'confetti', 'dust'] as const;
 export type BurstLook = (typeof BURST_LOOKS)[number];
 
 export function isBurstLook(value: unknown): value is BurstLook {
@@ -44,8 +44,19 @@ export const MAX_BURST_COUNT = 100;
 // The share of a particle's life over which it fades out.
 const FADE_SHARE = 0.5;
 
+/** The particle images, white, tinted per particle when drawn. */
+export type BurstShape = 'spark';
+
 /** How a look moves and shows. */
 interface Look {
+  /** Where on the sprite the particles start. */
+  origin: 'center' | 'feet';
+  /** Launch directions: every way, or within this angle of level, either
+      side. */
+  fan?: number;
+  /** Start positions scattered this far either side of the origin, so a
+      slow burst does not all leave from one point. */
+  spread: number;
   speed: [number, number];
   /** Launch push against gravity. */
   lift: number;
@@ -55,21 +66,26 @@ interface Look {
   fall: number;
   life: [number, number];
   size: [number, number];
+  /** Drawn size at the end of life, as a multiple of the start. */
+  grow: number;
   spin: [number, number];
-  /** The spark image, or a tumbling scrap of paper. */
-  shape: 'spark' | 'paper';
+  /** An image, a tumbling scrap of paper, or a plain speck. */
+  shape: BurstShape | 'paper' | 'speck';
   palette: [number, number, number][];
 }
 
 const LOOKS: Record<BurstLook, Look> = {
   // Hot, fast and brief, like metal sparks.
   sparks: {
+    origin: 'center',
+    spread: 0,
     speed: [5, 12],
     lift: 2,
     drag: 0.95,
     fall: 0.25,
     life: [25, 40],
     size: [10, 18],
+    grow: 1,
     spin: [-0.3, 0.3],
     shape: 'spark',
     palette: [
@@ -81,12 +97,15 @@ const LOOKS: Record<BurstLook, Look> = {
   },
   // Light scraps that tumble and float down.
   confetti: {
+    origin: 'center',
+    spread: 0,
     speed: [3, 8],
     lift: 3,
     drag: 0.97,
     fall: 0.08,
     life: [70, 110],
     size: [6, 11],
+    grow: 1,
     spin: [-0.25, 0.25],
     shape: 'paper',
     palette: [
@@ -98,13 +117,58 @@ const LOOKS: Record<BurstLook, Look> = {
       [255, 120, 200],
     ],
   },
+  // Specks kicked up at the feet: out to the sides and up a little, then
+  // settling back down, each on its own.
+  dust: {
+    origin: 'feet',
+    fan: 0.6,
+    spread: 10,
+    speed: [1, 3],
+    lift: 0.8,
+    drag: 0.93,
+    fall: 0.05,
+    life: [20, 34],
+    size: [2, 4],
+    grow: 1.3,
+    spin: [0, 0],
+    shape: 'speck',
+    palette: [
+      [176, 160, 138],
+      [196, 182, 160],
+      [158, 142, 120],
+      [186, 170, 148],
+    ],
+  },
 };
 
 const between = (random: Random, [min, max]: [number, number]) =>
   min + random() * (max - min);
 
+/** `total` shared exactly among `parts`: the first parts take the extra. */
+export function shareOut(total: number, parts: number): number[] {
+  const base = Math.floor(total / parts);
+  const extra = total % parts;
+  return Array.from({length: parts}, (_, i) => base + (i < extra ? 1 : 0));
+}
+
+/** Where a look's burst starts on a sprite: its centre, or its feet, the
+    edge the scene's gravity presses it against. */
+export function burstOrigin(
+  look: BurstLook,
+  sprite: PhysicsBox,
+  gravity: number
+): {x: number; y: number} {
+  const {x, y} = sprite.position;
+  if (LOOKS[look].origin === 'center') {
+    return {x, y};
+  }
+  const down = weatherGravity(gravity) < 0 ? -1 : 1;
+  return {x, y: y + (down * sprite.height * sprite.scale) / 2};
+}
+
 /** A burst of `count` particles from a point, flung out in every direction
-    with a little lift against gravity. */
+    (or, for a fanned look, out to either side) with a little lift against
+    gravity. */
 export function createBurst(
   look: BurstLook,
   count: number,
@@ -115,10 +179,13 @@ export function createBurst(
   const rule = LOOKS[look];
   const up = weatherGravity(gravity) < 0 ? 1 : -1;
   const particles = Array.from({length: count}, () => {
-    const angle = random() * Math.PI * 2;
+    const angle =
+      rule.fan === undefined
+        ? random() * Math.PI * 2
+        : (random() < 0.5 ? 0 : Math.PI) + (random() * 2 - 1) * rule.fan;
     const speed = between(random, rule.speed);
     return {
-      x: origin.x,
+      x: origin.x + (random() * 2 - 1) * rule.spread,
       y: origin.y,
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed + up * rule.lift,
@@ -191,24 +258,28 @@ export interface BurstCanvas {
   rectMode(mode: unknown): void;
   image(img: unknown, x: number, y: number, w: number, h: number): void;
   noStroke(): void;
-  fill(r: number, g: number, b: number): void;
+  fill(r: number, g: number, b: number, a?: number): void;
   rect(x: number, y: number, w: number, h: number): void;
   ellipse(x: number, y: number, w: number, h?: number): void;
   drawingContext: {globalAlpha: number};
   CENTER: unknown;
 }
 
-/** The spark image already tinted a colour, or nothing until it has
+/** A particle image already tinted a colour, or nothing until it has
     loaded. */
-export type SparkFor = (color: [number, number, number]) => unknown;
+export type ImageFor = (
+  shape: BurstShape,
+  color: [number, number, number]
+) => unknown;
 
 /** Draw every burst's particles: sparks as the spark image in their colour,
     shrinking as they fade (a dot until the image has loaded); confetti as
-    scraps of paper that tumble by narrowing and widening. */
+    scraps of paper that tumble by narrowing and widening; dust as specks
+    that grow a little over their life. */
 export function drawBursts(
   p5: BurstCanvas,
   bursts: Burst[],
-  sparkFor: SparkFor
+  imageFor: ImageFor
 ): void {
   if (!bursts.length) {
     return;
@@ -220,7 +291,7 @@ export function drawBursts(
   const context = p5.drawingContext;
   const alphaBefore = context.globalAlpha;
   for (const burst of bursts) {
-    const paper = LOOKS[burst.look].shape === 'paper';
+    const {shape, grow} = LOOKS[burst.look];
     for (const p of burst.particles) {
       const alpha = burstAlpha(p);
       const [r, g, b] = p.color;
@@ -228,16 +299,20 @@ export function drawBursts(
       p5.translate(p.x, p.y);
       p5.rotate(p.rotation);
       context.globalAlpha = alphaBefore * alpha;
-      if (paper) {
+      if (shape === 'paper') {
         // A scrap seen edge-on and face-on by turns.
         p5.scale(Math.max(0.15, Math.abs(Math.cos(p.age * 0.18 + p.phase))), 1);
         p5.fill(r, g, b);
         p5.rect(0, 0, p.size, p.size * 0.6);
+      } else if (shape === 'speck') {
+        const size = p.size * (1 + ((grow - 1) * p.age) / p.life);
+        p5.fill(r, g, b);
+        p5.ellipse(0, 0, size, size);
       } else {
         const size = p.size * (0.4 + 0.6 * alpha);
-        const spark = sparkFor(p.color);
-        if (spark) {
-          p5.image(spark, 0, 0, size, size);
+        const image = imageFor(shape, p.color);
+        if (image) {
+          p5.image(image, 0, 0, size, size);
         } else {
           p5.fill(r, g, b);
           p5.ellipse(0, 0, size * 0.4, size * 0.4);
