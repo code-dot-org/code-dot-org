@@ -2117,7 +2117,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         >
           {WorkspaceAlert}
-          {editorStrip && (
+          {editorStrip && (activeTab === 'World' || activeTab === 'Code') && (
             <div className={moduleStyles.editorStrip} style={clearOfPreview}>
               <MuiTypography
                 component="h2"
