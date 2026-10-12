@@ -38,8 +38,7 @@ const updateData = (result: string): void => {
     }
   }
 
-  // A level that hides the label picker takes the dataset's own default. This
-  // is the only place that rule lives.
+  // A level that hides the label picker takes the dataset's own default.
   if (state.mode && state.mode.hideSelectLabel && metadata.defaultLabelColumn) {
     store.dispatch(setLabelColumn(metadata.defaultLabelColumn));
   }
