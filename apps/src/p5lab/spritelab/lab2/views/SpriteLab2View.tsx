@@ -173,6 +173,9 @@ const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // Room the ?editors=float switch takes above the editors' left strips
 // (the stylesheet's $editor-float-room).
 const EDITOR_FLOAT_ROOM_PX = 58;
+// The floating switch's gap from the preview column at the workspace's
+// right: room for the workspace's vertical scrollbar beside it.
+const EDITOR_FLOAT_RIGHT_GAP_PX = 28;
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -2088,7 +2091,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 className={moduleStyles.editorFloat}
                 style={
                   editorFloatRight
-                    ? {left: 'auto', right: previewWidth + 8}
+                    ? {
+                        left: 'auto',
+                        right: previewWidth + EDITOR_FLOAT_RIGHT_GAP_PX,
+                      }
                     : undefined
                 }
               >
