@@ -290,6 +290,24 @@ class QuickAssignHelperTest < ActionController::TestCase
     assert_equal ['Recommended'], course_offerings[:high]['Course'].keys
   end
 
+  test 'no Recommended header is returned when no offering is featured' do
+    high_course_version = create(:course_version)
+    high_course_version.content_root.update!(published_state: 'stable')
+    high_course_version.course_offering.update!(grade_levels: '11', curriculum_type: 'Course', header: 'Year Long')
+
+    pl_course_version = create(:course_version)
+    pl_course_version.content_root.update!(published_state: 'stable', instructor_audience: 'facilitator', participant_audience: 'teacher')
+    pl_course_version.course_offering.update!(header: 'Self-Paced')
+
+    facilitator = create(:facilitator)
+    course_offerings = QuickAssignHelper.course_offerings(facilitator, I18n.default_locale, 'teacher')
+
+    refute_includes course_offerings[:high]['Course'].keys, 'Recommended'
+    refute_includes course_offerings[:pl].keys, 'Recommended'
+    assert_equal ['Year Long'], course_offerings[:high]['Course'].keys
+    assert_equal ['Self-Paced'], course_offerings[:pl].keys
+  end
+
   test 'featured PL offerings without a header are still ignored' do
     no_header_course_offering = create(:course_offering, is_featured: true)
 
