@@ -21,7 +21,7 @@ export interface BuilderCardProps {
   onDiscard: () => void;
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
-  removeIsDisabledReason?: string;
+  cannotRemoveReason?: string;
   children: React.ReactNode;
 }
 
@@ -39,7 +39,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   onSave,
   onDiscard,
   onRemove,
-  removeIsDisabledReason,
+  cannotRemoveReason,
   children,
 }) => {
   const isBusy = isSaving || isRemoving;
@@ -115,7 +115,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
           )}
 
           <div className={styles.footer}>
-            <Tooltip describeChild title={removeIsDisabledReason ?? ''}>
+            <Tooltip describeChild title={cannotRemoveReason ?? ''}>
               <Button
                 variant="outlined"
                 color="error"
@@ -123,9 +123,9 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
                 type="button"
                 className={styles.ariaDisabled}
                 disabled={isBusy}
-                aria-disabled={!!removeIsDisabledReason}
+                aria-disabled={!!cannotRemoveReason}
                 loading={isRemoving}
-                onClick={() => !removeIsDisabledReason && onRemove()}
+                onClick={() => !cannotRemoveReason && onRemove()}
               >
                 Remove from quiz
               </Button>
