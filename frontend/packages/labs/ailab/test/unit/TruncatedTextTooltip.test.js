@@ -97,6 +97,20 @@ describe('TruncatedTextTooltip', () => {
     expect(tooltip().textContent).toBe(TEXT);
   });
 
+  test('closes on Escape while focused, and keeps that Escape to itself', () => {
+    textWidth(120);
+    const onKeyDown = vi.fn();
+    const {container} = render(
+      createElement('div', {onKeyDown}, label({focused: true})),
+    );
+
+    fireEvent.keyDown(container.querySelector('span'), {key: 'Escape'});
+    settle();
+
+    expect(tooltip()).toBeNull();
+    expect(onKeyDown).not.toHaveBeenCalled();
+  });
+
   test('stays closed while focused when the text fits', () => {
     textWidth(60);
     render(label({focused: true}));
