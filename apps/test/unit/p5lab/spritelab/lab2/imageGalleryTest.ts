@@ -1,4 +1,6 @@
+import {IMAGE_TYPES} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
+  categoriesForType,
   galleryOrder,
   imageTypeFromCategories,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageGallery';
@@ -10,6 +12,14 @@ describe('imageTypeFromCategories', () => {
     expect(imageTypeFromCategories(['other'])).toBe('sprite');
     expect(imageTypeFromCategories([])).toBe('sprite');
     expect(imageTypeFromCategories(undefined)).toBe('sprite');
+  });
+});
+
+describe('categoriesForType', () => {
+  it('round-trips every image type through its categories', () => {
+    IMAGE_TYPES.forEach(type => {
+      expect(imageTypeFromCategories(categoriesForType(type))).toBe(type);
+    });
   });
 });
 

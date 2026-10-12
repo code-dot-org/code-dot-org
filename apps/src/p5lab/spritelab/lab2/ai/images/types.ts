@@ -3,7 +3,9 @@
 // Every image kind, in canonical display order: the gallery's groups and the
 // dialog's Type choice both follow it. 'block' is a square platform tile:
 // keyed and cropped to its content so copies tile seamlessly on the grid.
-export const IMAGE_TYPES = ['background', 'sprite', 'block'] as const;
+// 'ladder' is the same square, climbable instead of solid, keyed everywhere
+// so the gaps between its rungs are open.
+export const IMAGE_TYPES = ['background', 'sprite', 'block', 'ladder'] as const;
 export type ImageType = (typeof IMAGE_TYPES)[number];
 
 // What a sprite depicts. A character can be drawn as an animated set; an
@@ -27,6 +29,7 @@ export const IMAGE_TYPE_LABELS: Record<ImageType, string> = {
   sprite: 'Sprite',
   background: 'Background',
   block: 'Block',
+  ladder: 'Ladder',
 };
 export const IMAGE_STYLE_LABELS: Record<ImageStyle, string> = {
   smooth: 'Smooth',

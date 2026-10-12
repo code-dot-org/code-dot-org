@@ -37,6 +37,17 @@ describe('world', () => {
     expect(compileWorldPrelude(createEmptyWorld())).toBe('');
   });
 
+  it('spawns ladders into their own group, after blocks', () => {
+    const world = createEmptyWorld();
+    world.grid[0][0] = {image: 'rope', kind: 'ladder'};
+    world.grid[0][1] = {image: 'stone', kind: 'block'};
+    const code = compileWorldPrelude(world);
+    expect(code.indexOf("'walls'")).toBeLessThan(code.indexOf("'ladders'"));
+    expect(code).toContain(
+      `makeNewGroupSprite("rope", 'ladders', {x: 20, y: 20});`
+    );
+  });
+
   it('spawns blocks before sprites at cell centers, cell-sized', () => {
     const world = createEmptyWorld(LEGACY_SCENE_SIZE);
     world.grid[0][1] = {image: 'owl', kind: 'sprite'};

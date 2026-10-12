@@ -1,7 +1,7 @@
 // Gallery presentation logic for the Images tab.
 
 import {IMAGE_TYPES, ImageType} from './ai/images/types';
-import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from './types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY, LADDERS_CATEGORY} from './types';
 
 /** The image kind an animation's categories record. */
 export function imageTypeFromCategories(categories?: string[]): ImageType {
@@ -10,6 +10,9 @@ export function imageTypeFromCategories(categories?: string[]): ImageType {
   }
   if (categories?.includes(BLOCKS_CATEGORY)) {
     return 'block';
+  }
+  if (categories?.includes(LADDERS_CATEGORY)) {
+    return 'ladder';
   }
   return 'sprite';
 }
@@ -21,6 +24,9 @@ export function categoriesForType(imageType: ImageType): string[] {
   }
   if (imageType === 'block') {
     return [BLOCKS_CATEGORY];
+  }
+  if (imageType === 'ladder') {
+    return [LADDERS_CATEGORY];
   }
   return [];
 }

@@ -32,7 +32,8 @@ const generator: GeneratorFunction = block =>
 // the player from its physics. Movement reads the sprite's own speed so
 // "set speed" still applies; the jump goes through platformJump, which
 // checks footing and jumps against gravity whichever way it points. At
-// zero gravity there is no jump and the up and down arrows steer instead.
+// zero gravity there is no jump and the up and down arrows steer instead;
+// on a ladder they climb, and space jumps off.
 // Clears a two-tile step with a little margin (apex ~2.4 tiles at the
 // default gravity).
 const JUMP_SPEED = 13;
@@ -53,19 +54,15 @@ const helperCode = [
   "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'East');",
   '  });',
   "  keyPressed('while', 'up', function () {",
-  '    if (platformGravity() === 0) {',
-  "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'North');",
-  '    }',
+  "    platformClimb('up', getProp({group: 'players'}, 'speed'));",
   '  });',
   "  keyPressed('when', 'up', function () {",
-  '    if (platformGravity() !== 0) {',
+  '    if (platformGravity() !== 0 && !platformOnLadder()) {',
   `      platformJump(${JUMP_SPEED});`,
   '    }',
   '  });',
   "  keyPressed('while', 'down', function () {",
-  '    if (platformGravity() === 0) {',
-  "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'South');",
-  '    }',
+  "    platformClimb('down', getProp({group: 'players'}, 'speed'));",
   '  });',
   "  keyPressed('when', 'space', function () {",
   `    platformJump(${JUMP_SPEED});`,

@@ -95,6 +95,20 @@ describe('generateImage', () => {
     });
   });
 
+  it('names the key colour a ladder is drawn on, chosen from its words, and asks for one ladder', () => {
+    const wood = fullPromptFor('A ladder made of wood with metal bolts', {
+      imageType: 'ladder',
+    });
+    expect(wood).toContain('exactly one ladder');
+    expect(wood).toContain('pure magenta (#FF00FF)');
+    expect(wood).toContain('fill the open spaces between the rungs');
+    // Words that suggest magenta send it to the other key.
+    const pink = fullPromptFor('A ladder made of pink ribbon', {
+      imageType: 'ladder',
+    });
+    expect(pink).toContain('pure bright green (#00FF00)');
+  });
+
   it('lets a request choose its output size', async () => {
     await requestImage('a frame', {seed: 1, imageSize: '2K'});
     expect(

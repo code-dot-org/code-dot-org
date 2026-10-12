@@ -196,12 +196,17 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
           <HoldKey gameKey="left" label="Left">
             <FontAwesomeV6Icon iconName="caret-left" />
           </HoldKey>
-          {arrows === 'jump' && (
+          {(arrows === 'jump' || arrows === 'climb') && (
             <HoldKey gameKey="up" label="Jump" text="Jump" />
           )}
           <HoldKey gameKey="right" label="Right">
             <FontAwesomeV6Icon iconName="caret-right" />
           </HoldKey>
+          {arrows === 'climb' && (
+            <HoldKey gameKey="down" label="Down">
+              <FontAwesomeV6Icon iconName="caret-down" />
+            </HoldKey>
+          )}
           {arrows === 'steer' && (
             <>
               <HoldKey gameKey="up" label="Up">
