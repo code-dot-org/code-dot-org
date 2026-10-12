@@ -55,6 +55,9 @@ class QuizQuestion < ApplicationRecord
         question.save! if question.changed?
       rescue JSON::ParserError
         raise format('failed to parse %s', path)
+      rescue Encryption::KeyMissingError
+        raise if rack_env?(:production)
+        puts "WARNING: quiz question '#{source['key']}' not seeded properly due to missing CDO.properties_encryption_key"
       end
     end
   end
