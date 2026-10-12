@@ -35,3 +35,20 @@ import '@code-dot-org/json-video';
 
 `duration` may be `"auto"` or absent, in which case the scene lasts 350 ms
 per word of `speech`, at least 2 s.
+
+## Demo and tests
+
+`yarn dev` serves `demo/` at http://localhost:5173 (the Playwright run uses
+5179). Query parameters pick the video (`?video=` a key of `demo/videos.ts`)
+and the player width (`?width=` in pixels).
+
+`yarn test` runs the Vitest unit tests; `yarn test:ui` runs the Playwright
+suite in `e2e/` against the demo, starting `yarn dev` if needed.
+
+The Playwright suite drives the player through its controls as a user would.
+`e2e/controls.spec.ts` holds the behavior every set of controls must share,
+and runs once per entry in `e2e/variants.ts`. Each entry supplies a driver
+(`e2e/drivers/`) that finds controls by role and accessible name, so a new
+set of controls only needs a root locator and the same control names. The
+page clock is frozen after load; tests move playback with
+`VideoPage.advance()`.

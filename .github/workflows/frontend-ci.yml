@@ -159,6 +159,8 @@ jobs:
     if: ${{ needs.setup.outputs.json-video-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/json-video-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Start the shared-constants package CI workflow
