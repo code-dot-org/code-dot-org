@@ -13,6 +13,9 @@
   gap: 12px;
   padding: 10px;
   background: var(--background-neutral-primary);
+}
+
+.header:not(:last-child) {
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
@@ -63,6 +66,7 @@
   flex-direction: column;
   gap: 8px;
   padding: 8px 10px 10px;
+  background: var(--background-neutral-primary);
 }
 
 .optionsList {
@@ -135,6 +139,13 @@
   padding: 10px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
+}
+
+// aria-disabled rather than disabled, so the button keeps focus and its tooltip.
+.footer .ariaDisabled[aria-disabled='true'] {
+  border-color: var(--borders-neutral-disabled);
+  color: var(--text-neutral-disabled);
+  background-color: var(--background-neutral-primary);
 }
 
 .footerActions {

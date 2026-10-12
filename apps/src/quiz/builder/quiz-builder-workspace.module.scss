@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+.introScreen {
+  flex-shrink: 0;
+}
+
 .header {
   display: flex;
   flex-direction: column;

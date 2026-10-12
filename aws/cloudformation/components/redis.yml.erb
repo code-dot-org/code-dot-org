@@ -12,14 +12,14 @@
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
       ReplicationGroupDescription: <%="Redis Replication Group (CDO.redis_url for #{stack_name})" %>
-      # 6 nodes of cache.r7g.4xlarge will cost ($1,274/mo * 6) = ~$7,644/month
+      # 3 nodes of cache.r7g.4xlarge will cost ($1,274/mo * 3) = ~$3,822/month
       CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.4xlarge' : 'cache.t4g.micro' -%>
 
       Engine: Redis
       EngineVersion: 7.1
 
       ClusterMode: disabled
-<% num_cache_clusters = 6 # 1 primary and 5 replicas, the max for a single cluster. -%>
+<% num_cache_clusters = 3 # 1 primary and 2 replicas. -%>
       NumCacheClusters: <%= num_cache_clusters %>
       AutomaticFailoverEnabled: true
       MultiAZEnabled: true

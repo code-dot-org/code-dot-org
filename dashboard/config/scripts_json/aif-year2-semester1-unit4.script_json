@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "include_student_lesson_plans": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-31 03:23:17 UTC",
+    "serialized_at": "2026-10-11 00:46:27 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -20,37 +21,1698 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Machine Learning in Python",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What tools can help me build a machine learning model?**\n\nIn this lesson, students step into the role of machine learning engineers and meet scikit-learn, the library professionals use to build models. Each student picks one of three clients and makes a prediction by hand, plotting the client’s five data points and drawing a line with a ruler. Students then train a linear regression model on the same data with fit and answer the client’s question with predict. Along the way, they meet the input structure scikit-learn requires and read a real error message to fix it.",
+        "preparation": "- Print copies of the Your First Client Activity Guide (one for each student)\n- Provide rulers, or another straightedge, for drawing prediction lines (one for each student)",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What tools can help me build a machine learning model?**\n\nIn this lesson, you'll step into the role of machine learning engineers and meet `scikit-learn`, the library professionals use to build models. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Encodings",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**What does data need to look like to use machine learning?**\n\nIn this lesson, students learn to prepare data for a machine learning model. They take on the role of a machine learning engineer building a feature matrix—a table of numbers used as input to a machine learning model. They encounter the challenge of including non-numeric data in a feature matrix and learn about its solution: encodings. Students then practice using two kinds of encoding—binary encoding and one-hot encoding—in a context of their choice. Along the way, students learn about `scikit-learn`’s built-in encoders.",
+        "preparation": "- Print one copy of the Encodings Activity Guide for each student.",
+        "student_overview": "**What does data need to look like to use machine learning?**\n\nIn this lesson, you'll learn to prepare data for a machine learning model."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Training and Test Sets",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**How can I make sure models will work well in the real world?**\n\nIn this lesson, students learn how to split data into training sets and test sets. They will then evaluate whether the resulting model is generalized by testing it on data not included in the training data. They will learn about how a model can achieve near zero loss on training data while being useless on new unseen data. This is called \"overfitting\", in which the model memorizes the training set rather than learning the underlying pattern.",
+        "preparation": "- Print one copy of the Beach Days Activity Guide for each student.",
+        "student_overview": "**How can I make sure models will work well in the real world?**\n\nIn this lesson, you'll learn how to split data into training sets and test sets. You will then evaluate whether the resulting model is generalized by testing it on data not included in the training data."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Lesson 5",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Lesson 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Lesson 7",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Lesson 8",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Lesson 9",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Lesson 10",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Lesson 11",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Lesson 12",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c693110b-a39c-409d-8505-0f8f238aca37",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c693110b-a39c-409d-8505-0f8f238aca37",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "b77f62c7-0a55-4073-9ec5-af29597de64b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b77f62c7-0a55-4073-9ec5-af29597de64b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "c7e8e0a8-5569-4c2d-bb78-2f55259d2372",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7e8e0a8-5569-4c2d-bb78-2f55259d2372",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "14722ead-fc2a-4f70-86c0-a101c404408b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "8fa60c2f-0290-4e3b-bd01-ad651b5b4ca4",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8fa60c2f-0290-4e3b-bd01-ad651b5b4ca4",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "bff944b9-6bf2-49e9-a3ba-0a3c27868971",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bff944b9-6bf2-49e9-a3ba-0a3c27868971",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "c634d80a-b689-465a-af1d-5ad229a686f0",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c634d80a-b689-465a-af1d-5ad229a686f0",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "dd864c5b-bcaa-467d-bb06-0964e460b644",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario for today."
+      },
+      "seeding_key": {
+        "activity_section.key": "dd864c5b-bcaa-467d-bb06-0964e460b644",
+        "lesson_activity.key": "c693110b-a39c-409d-8505-0f8f238aca37"
+      }
+    },
+    {
+      "key": "7d4133ee-9adc-42cc-81b1-28f06bb0491b",
+      "position": 2,
+      "properties": {
+        "description": "Today, you will play the role of machine learning engineers. A machine learning engineer writes code that uses data to build models that make useful predictions. Three new clients are in the waiting room. Each one wants a prediction that will be useful for their business. Before you choose a client and meet with them, let’s talk about some of the tools that machine learning engineers use.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7d4133ee-9adc-42cc-81b1-28f06bb0491b",
+        "lesson_activity.key": "c693110b-a39c-409d-8505-0f8f238aca37"
+      }
+    },
+    {
+      "key": "cff56f29-3966-4e84-ae2a-0f0d9222ea0b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Think of any profession. What are some tools that these professionals use? What does having those tools allow these “pros?”\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students name examples from any profession: doctors get medical equipment, carpenters get power tools, chefs get the tools of a full kitchen, photographers get high quality cameras. Help students see what the tools change: professionals get more done, faster, with fewer mistakes, because someone built tools for the job. Connect this idea to prior lessons: In Unit 2, you built regression models by hand. You plotted data points, chose a slope and a y-intercept, and adjusted your line until it captured the pattern well enough to predict with. That is what a beginner machine learning engineer might do: work by hand. Doing it by hand taught you how models work. Professional machine learning engineers use a professional tools, built with code. Today, you will use a Python library called `scikit-learn`. This is the same tool that some professional machine learning engineers might use.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reintroduce this lesson’s Career Journeys connection: machine learning engineers. Students were exposed to this role in Unit 2."
+      },
+      "seeding_key": {
+        "activity_section.key": "cff56f29-3966-4e84-ae2a-0f0d9222ea0b",
+        "lesson_activity.key": "c693110b-a39c-409d-8505-0f8f238aca37"
+      }
+    },
+    {
+      "key": "b7e22407-7ecb-4e25-b50e-6eb8ada986f7",
+      "position": 4,
+      "properties": {
+        "description": "Recall that we discussed machine learning engineers before. Back in Unit 2, you acted as machine learning engineers when you built regression models and used them to make predictions. Today, you will be using a code-based machine learning library to train models the way working engineers do!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7e22407-7ecb-4e25-b50e-6eb8ada986f7",
+        "lesson_activity.key": "c693110b-a39c-409d-8505-0f8f238aca37"
+      }
+    },
+    {
+      "key": "42788223-db18-4d15-945e-bbb66283b9a4",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "42788223-db18-4d15-945e-bbb66283b9a4",
+        "lesson_activity.key": "c693110b-a39c-409d-8505-0f8f238aca37"
+      }
+    },
+    {
+      "key": "ea9db6ca-45d0-4ba7-8bd8-cd06729a0dcd",
+      "position": 1,
+      "properties": {
+        "description": "Here are your clients. Kai coaches an esports squad and wants to know what score to expect from next week’s practice. Jade runs a boba shop and wants to know how many drinks to prepare for tomorrow when it will hit 85 degrees. Coach Rivera wants to know how many shots a player will make in games based on their number of practice shots. These are three different businesses, but every question is essentially the same: How can one number predict another number? In a moment, you will pick a client to help.",
+        "duration": "15",
+        "name": "Your First Client",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ea9db6ca-45d0-4ba7-8bd8-cd06729a0dcd",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "fdc9a852-3f01-4f14-8b8f-0edf6dff11eb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Every student delivers a prediction by hand. They will plot the client’s five data points, draw a straight line, and answer questions based upon their drawing. The hand-drawn line is the setup for the coding activity. Every student’s line makes a prediction. The `scikit-learn` library will take that paper-prediction into a code-based one.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Your First Client Activity Guide, plus a ruler (if they don’t have one). Students work individually, each on their own guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read page 1, put a check next to the client they choose, and turn to that client’s page. Attempt to get a rough, classwide balance across the three clients. However, uneven numbers will work fine.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students about 8 minutes to plot, draw, and predict. Keep this slide visible while they work. Remind them that their prediction line might not touch every point, and that’s okay.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for these student challenges:\n- Students connecting the dots point to point. Ask: “Is that one straight line? Could a ruler draw it?”\n- Students drawing a line through only the first and last points. Ask: “Does your line follow the middle points too, or just the ends?”\n- Students unsure how to read a prediction. Have them put a finger on the question’s value along the bottom axis. Have them draw a dotted line straight up to the prediction line and draw a dot. Then have them draw a dotted line straight across to the left axis. This will show the intercept of X and Y.\n- Early finishers. Ask: “Does your prediction fit make sense given the data you have? Would your client believe this answer is probable?”\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students find one or two classmates who chose the same client, compare their plots, and complete the last page of the guide (this is the section behind the guide’s stop sign).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *You and your classmates had the exact same five data points for your client. Did you deliver the same prediction as your peers that chose the same client? Whose line should the client trust?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface the disagreement between the various lines that were drawn. Then, name that every hand-drawn line is a judgment call (a best guess), and nobody in the room has a rule or process that names which line is best. Collect a few completed, competing predictions for one client on the board. Ask, “Which line is best?” Do not resolve the question. Name the tension: The client can only act on one number. We need a tool that finds the line by a rule instead of by eye. That tool is what machine learning engineers use. `scikit-learn` offers us such a tool."
+      },
+      "seeding_key": {
+        "activity_section.key": "fdc9a852-3f01-4f14-8b8f-0edf6dff11eb",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "ee61208c-4391-4f74-be17-c4c19705c8e6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students utilize `scikit-learn` the first time and train a linear regression model on their client’s five data points with fit. Then, answer the client’s question with predict. As they do this, students will encounter what `scikit-learn` expects for inputs, by reading a real error message and fixing it.",
+        "duration": "20",
+        "name": "Train Your Client's Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee61208c-4391-4f74-be17-c4c19705c8e6",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "e2d9a2bc-1e83-4db9-8521-469c9ae6e354",
+      "position": 4,
+      "properties": {
+        "description": "Here is your professional toolkit. `scikit-learn` is a library: prebuilt code that professionals share. In Unit 3, you used `matplotlib` to draw charts. `scikit-learn` is the library machine learning engineers use to build models. Instead of writing the regression math yourself like you did in Unit 2, or relying solely based upon a guess from your drawing today, you will call a few functions and let the library make a prediction. The import line loads the toolkit. Without that import line, you won’t be able to use the `scikit-learn` library.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e2d9a2bc-1e83-4db9-8521-469c9ae6e354",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "0589f6fc-cd22-4b93-be0b-ba0af7c5d882",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *This is Kai’s data. Kai is trying to predict if the squad practices 7 hours next week, what match score should they expect. These are the same five points some of you plotted. Read the program. What will it do when we run it? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect each line to something they already know. Lines 1 and 2 hold the table from the guide. `LinearRegression()` creates a model. The `fit` method trains it on the data (line 4 is where the model learns). The `predict` method asks for the answer at 7 hours. This is the same prediction (for Kai) they made by hand. Listen for students and their understanding of this code, then confirm it through the walkthrough.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example code. Point out the formatting when defining the input hours: Every input sits inside its own small list, like a column instead of a row. `scikit-learn` requires this format for inputs, and only for inputs; the outputs on line 2 stay a flat list. The same shape appears in the `predict` call: `[[7]]`."
+      },
+      "seeding_key": {
+        "activity_section.key": "0589f6fc-cd22-4b93-be0b-ba0af7c5d882",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "cad31646-752e-4f95-9771-a66a0b03ca26",
+      "position": 6,
+      "properties": {
+        "description": "This is Kai’s data. Kai is trying to predict if the squad practices 7 hours next week, what match score should they expect. Notice the format of the inputs. You have written plenty of lists in this course, but this one is new: it is a list of lists, where each input is wrapped in its own small list. That is the structure `scikit-learn` requires. Your client’s program will not run until the inputs have this shape.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may ask why `scikit-learn` demands this structure when a flat list seems fine. The library is built for many inputs per example, so even one input rides in its own list. In Lesson 2 of this unit, students will see multiple numbers per inner list."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cad31646-752e-4f95-9771-a66a0b03ca26",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "9632de0d-475f-4b5a-8a70-d3a696f37027",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *fit*."
+      },
+      "seeding_key": {
+        "activity_section.key": "9632de0d-475f-4b5a-8a70-d3a696f37027",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "cee10c8b-0f8e-45ea-aa2b-66240e6c5503",
+      "position": 8,
+      "properties": {
+        "description": "Fit is defined as “to train a model on data.” When you call fit, the model learns from the data. In the case of our three clients, it tries out various lines (like those you drew) and keeps the one that best matches the points. This is the code version of what you did by hand with a ruler. Once a model is fit, the predict method can determine answers based on the equation of the line it learned.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cee10c8b-0f8e-45ea-aa2b-66240e6c5503",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "7ca11056-5934-4a04-90a9-a6908ffd1c63",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up before they start. Each student completes their own program individually. The pair exists so the discussion at the end of the level has a partner ready. Partners do not need the same client."
+      },
+      "seeding_key": {
+        "activity_section.key": "7ca11056-5934-4a04-90a9-a6908ffd1c63",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "1221f41d-5c4c-4a2b-93c3-f651f5e17f89",
+      "position": 10,
+      "properties": {
+        "progression_name": "Train Your Client's Model"
+      },
+      "seeding_key": {
+        "activity_section.key": "1221f41d-5c4c-4a2b-93c3-f651f5e17f89",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "75870d4d-b063-464e-ae4b-d9d5b989ff5c",
+      "position": 11,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "75870d4d-b063-464e-ae4b-d9d5b989ff5c",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "9fcc5ff8-6cd1-4ac1-80b3-b27c40500730",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Python Lab.\n- **Level 1:** Students fix the input data structure so their client’s program runs, then deliver the prediction they made on paper.\n- **Level 2:** Students complete a Check Your Understanding on how they would train a model and deliver a prediction for a new client.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for:\n- The code crash: every starter fails as given, and the **Do This** asks why. \n- Students stuck at the error: have them read the first line of the error aloud (“Expected 2D array, got 1D array”), then compare their data lines to the walkthrough example (flip back to the code slide if needed). The fix is TODO 1: wrap each input in its own list.\n- Some students will wrap the outputs in small lists too, copying the input style. The program still runs, but the prediction prints wrapped in brackets, like `[46.66165414]`. Ask: “Which of the two lists did the error message complain about?” Only the inputs need the special structure; have them change the outputs back to one flat list.\n- Some students will write `model.predict(7)` instead of `model.predict([[7]])`. This crashes with the same kind of structure error they just fixed. Remind them that a prediction input needs the same wrapping as the training inputs: `7` becomes` [[7]]`.\n- Students bothered by the long decimals. That is normal library output. Ask: “What would you actually tell your client? Round it like an engineer.”\n- Students who finish TODO 2: have them compare the printed prediction to the one they made on paper. For most, the two will be very close to one another.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 1 is the Building Models (Stage 1) assessment point. As you circulate, note who completes the TODOs independently and can say what fit did (Level 3 on the rubric) versus who needs prompting at the shape fix or the predict call."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9fcc5ff8-6cd1-4ac1-80b3-b27c40500730",
+        "lesson_activity.key": "8c61518a-c131-4f0a-a18e-e01653e0c6e8"
+      }
+    },
+    {
+      "key": "c36bb27f-169d-4c12-b1b8-0ad814b4f9b6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Thinking back to your paper graph, if your client had a question about a value way past the edge of your paper (for example: 20 hours of practice for Kai, 104 degrees for Jade, 100 practice shots for Coach Rivera), could your drawn line have answered that? Why or why not?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate the difference between the drawn line and the trained, code-based model. The paper plot cannot answer because the drawn line stops at the edge of the page. However, the code-based prediction model can. The predict method evaluates its line at any value you ask for and provides an answer (about 91 for Kai, about 101 for Jade, about 30 for Coach Rivera). The model built in `scikit-learn` will always hand you a number: even way beyond any data provided to it. Note that it’s reasonable to ask the question of whether such an answer should be trusted. This will be an idea students explore in the remainder of the unit and in the course.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "c36bb27f-169d-4c12-b1b8-0ad814b4f9b6",
+        "lesson_activity.key": "b77f62c7-0a55-4073-9ec5-af29597de64b"
+      }
+    },
+    {
+      "key": "88d837b2-f0f3-4d26-9f26-6afd0058a5bd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Have you ever tried origami? What do you know about it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Connect students’ experiences to the context in which they’ll learn about encodings. For students who aren’t familiar, consider defining origami as the art of folding paper. Origami (折り紙) is a Japanese word—from oru, \"to fold,\" and kami, \"paper\"—and the activity has ties to Japanese culture. However, the true origins of the art of folding paper aren’t wholly known. Even if students haven’t made, say, a paper crane, perhaps they’ve made other origami or origami-like creations: a paper fortune teller (\"cootie catcher\"), a papier-mâché creation, or the like. Once you’ve defined origami, and a few students have shared what they know or don’t know—move on."
+      },
+      "seeding_key": {
+        "activity_section.key": "88d837b2-f0f3-4d26-9f26-6afd0058a5bd",
+        "lesson_activity.key": "c7e8e0a8-5569-4c2d-bb78-2f55259d2372"
+      }
+    },
+    {
+      "key": "6c6b3312-c57a-4974-9620-7c5da849cceb",
+      "position": 2,
+      "properties": {
+        "description": "Today we’ll explore how we could build a regression model that predicts how long an origami creation will take to make. Along the way, we’ll need to learn about new ways to prepare data.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6c6b3312-c57a-4974-9620-7c5da849cceb",
+        "lesson_activity.key": "c7e8e0a8-5569-4c2d-bb78-2f55259d2372"
+      }
+    },
+    {
+      "key": "017d98ae-d1de-4705-9b3c-fff641b1d971",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "017d98ae-d1de-4705-9b3c-fff641b1d971",
+        "lesson_activity.key": "c7e8e0a8-5569-4c2d-bb78-2f55259d2372"
+      }
+    },
+    {
+      "key": "9c8fdc93-4a23-4617-80e8-e0bd372bc4ba",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to feature matrices.",
+        "duration": "8",
+        "name": "Feature Matrices"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c8fdc93-4a23-4617-80e8-e0bd372bc4ba",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "2b4a2fe8-bbaa-44ea-a6aa-8b053326649d",
+      "position": 2,
+      "properties": {
+        "description": "As you begin to use machine learning libraries like `scikit-learn`, you’ll need to provide data to models in the right format.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b4a2fe8-bbaa-44ea-a6aa-8b053326649d",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "910c0d17-2550-448f-8372-fd22c04f7108",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Encodings Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the first part of the Encodings Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "910c0d17-2550-448f-8372-fd22c04f7108",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "a26c7f51-162f-41ce-992d-782f648ade79",
+      "position": 4,
+      "properties": {
+        "description": "First, read about something called a *feature matrix*—a common format for machine learning inputs. Then, fill in the feature matrix with the data given to you. Wait for us to continue as a class before moving on.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a26c7f51-162f-41ce-992d-782f648ade79",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "9f1e1b44-d8d4-478c-aa99-7791535fd6c3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students complete the feature matrix, look for…\n- Students writing more than just numbers in the cells of the feature matrix (e.g., \"2 inches\"). Remind them that a feature matrix is strictly filled with numbers.\n- Students writing data in the wrong row or the wrong column. Remind them that the row and column in which they write their data matters—each row represents an example a model is learning from, while each column represents a particular feature.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider reminding students about the definition of a feature: a piece of information used to make a prediction."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f1e1b44-d8d4-478c-aa99-7791535fd6c3",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "7ac0fdc7-03a0-493e-8afa-c6e24b1ece1a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *feature matrix*."
+      },
+      "seeding_key": {
+        "activity_section.key": "7ac0fdc7-03a0-493e-8afa-c6e24b1ece1a",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "08b723d6-33a7-4c1e-9928-f3570c4ef2b4",
+      "position": 7,
+      "properties": {
+        "description": "This is an example of what the feature matrix in the first part of your Activity Guide should look like. Notice that each row represents a particular example. And each column represents a particular feature.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "08b723d6-33a7-4c1e-9928-f3570c4ef2b4",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "94f9e052-0b33-4790-880f-140aa9bc6b48",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to encodings and how to encode categorical data with two exclusive categories.",
+        "duration": "12",
+        "name": "Encodings"
+      },
+      "seeding_key": {
+        "activity_section.key": "94f9e052-0b33-4790-880f-140aa9bc6b48",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "d00b5ac4-4876-42e9-add3-b2917bde8d52",
+      "position": 9,
+      "properties": {
+        "description": "Some data isn’t numeric. But remember that a feature matrix can only store numeric data. What should you do?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d00b5ac4-4876-42e9-add3-b2917bde8d52",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "bb647491-8a50-4f71-9afa-8c99d5b9d7f5",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the second part of the Encodings Activity Guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you encode the new feature? Why did you choose to encode it the way you did?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** See how students chose to encode the \"Cuts\" feature from the origami example in their Activity Guide. Invite a few students to share what they tried. Look for students who’ve discovered binary encodings—using 1’s and 0’s to denote whether an example has a feature or not. Ask these students to explain why they chose this encoding. Once a few students have shared, continue on.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce an example of a binary encoding: origami creations that require cutting are encoded with a 1. Origami creations that don’t are encoded with a 0."
+      },
+      "seeding_key": {
+        "activity_section.key": "bb647491-8a50-4f71-9afa-8c99d5b9d7f5",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "27c44923-567b-4fae-ad41-ef548855a9fb",
+      "position": 11,
+      "properties": {
+        "description": "In this example, those creations that require cutting are encoded with 1. Those creations that don’t are encoded with 0. Does the third creation—that with 20 folds, 3 sheets, and a 2 inch result—require cutting?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "27c44923-567b-4fae-ad41-ef548855a9fb",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "af3b1026-b9e8-4daf-ac67-fde2db2e2da4",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *encoding*."
+      },
+      "seeding_key": {
+        "activity_section.key": "af3b1026-b9e8-4daf-ac67-fde2db2e2da4",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "53d2af59-dd81-45d5-bbb0-7abe0c1b3583",
+      "position": 13,
+      "properties": {
+        "description": "As you’ve just seen, encodings allow you to translate data that isn’t numeric—like whether an origami creation requires cutting—into numeric data a machine learning model can work with.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53d2af59-dd81-45d5-bbb0-7abe0c1b3583",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "faa1ac51-e2ad-4a0f-b385-2db3317dbfa5",
+      "position": 14,
+      "properties": {
+        "description": "Now, let’s look at how to encode data in a program. Read this Python program.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "faa1ac51-e2ad-4a0f-b385-2db3317dbfa5",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "73d79f94-5e2b-4916-aaa6-731dbbcb76ac",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What will this program do? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to read a program that implements a binary encoding scheme."
+      },
+      "seeding_key": {
+        "activity_section.key": "73d79f94-5e2b-4916-aaa6-731dbbcb76ac",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "897a11e4-3b32-489a-8ca7-c4217c56c7b1",
+      "position": 16,
+      "properties": {
+        "description": "Now, practice encoding some of the data you chose in Python Lab using a binary encoding.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "897a11e4-3b32-489a-8ca7-c4217c56c7b1",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "ba618c66-c5ed-438f-8944-1dc751de9693",
+      "position": 17,
+      "properties": {
+        "progression_name": "Binary Encodings"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba618c66-c5ed-438f-8944-1dc751de9693",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "a637c23c-a51d-40f7-aa1f-c316f587939e",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1.\n- **Level 1:** Students encode categorical data with two categories (e.g., \"yes\" and \"no\") using binary encoding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for…\n- Students who need help writing a list comprehension. Prompt them to ask AI for guidance, or give them a hint. Consider also displaying the previous example on the board, so they can use it as a reference."
+      },
+      "seeding_key": {
+        "activity_section.key": "a637c23c-a51d-40f7-aa1f-c316f587939e",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "4590cb82-3410-40b6-853f-a5a10b8f7ca6",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce to students one-hot encodings—how to encode categorical data with many exclusive categories.",
+        "duration": "15",
+        "name": "One-Hot Encodings"
+      },
+      "seeding_key": {
+        "activity_section.key": "4590cb82-3410-40b6-853f-a5a10b8f7ca6",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "0d2288fa-9931-4345-8686-cf16ccb98de5",
+      "position": 20,
+      "properties": {
+        "description": "Sometimes, your data will have more than two options. That’s when a kind of encoding called a one-hot encoding is useful.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0d2288fa-9931-4345-8686-cf16ccb98de5",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "50ced773-431e-4acf-9bee-bd7e704dee9c",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the third part of the Encodings Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce an example of a one-hot encoding. Each paper type an origami creations calls for is a column. If a particular creation uses that paper type, it has a 1 in the column and a 0 otherwise."
+      },
+      "seeding_key": {
+        "activity_section.key": "50ced773-431e-4acf-9bee-bd7e704dee9c",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "4f43db30-592a-4764-b95a-294525f2a11c",
+      "position": 22,
+      "properties": {
+        "description": "Here’s an example of what your one-hot encoding will look like. Notice that there’s a 1 in the column for the paper type an origami creation uses—and a 0 in the others. That’s why it’s called \"one-hot\"—because there’s only one category that’s \"hot,\" while the others are not.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may wonder why they can’t label paper types with, for instance, 1, 2, and 3. This is one possible encoding of the paper types, but it is one that implies a numerical relationship: if \"Printer\" is encoded as 3 and \"Tissue\" as 1, does that mean printer paper is somehow \"more\" than tissue paper? A one-hot encoding side-steps these concerns."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4f43db30-592a-4764-b95a-294525f2a11c",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "2664b376-0b17-4f7c-84d7-88d8245dffa1",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce `scikit-learn`’s OneHotEncoder.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What will this program do? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to read a program using OneHotEncoder and predict what it will do. Look for students to offer more depth than \"it will encode the paper feature.\" Look for students to explain, step by step, what the program does. For instance, \"It creates something from scikit-learn called a OneHotEncoder. And then it uses the encoder it made to encode the paper data.\""
+      },
+      "seeding_key": {
+        "activity_section.key": "2664b376-0b17-4f7c-84d7-88d8245dffa1",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "e392a9b6-9585-44b6-b2e1-0748350516ab",
+      "position": 24,
+      "properties": {
+        "description": "`OneHotEncoder` is a class from `scikit-learn`. You can use it to create and configure an object—an encoder—to one-hot encode your data. And once you’ve created an encoder, you can use it to encode your data.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e392a9b6-9585-44b6-b2e1-0748350516ab",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "cf72b6c8-24f3-4a68-8e80-3ae693e7c7d6",
+      "position": 25,
+      "properties": {
+        "description": "The encoder takes, as input, a list of lists—rather than a list of values. A list of lists is called a matrix.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider reminding students about the definitions of class and object they’ve learned in prior units. This may help you use more precise language. For example, `OneHotEncoder` is a class from `scikit-learn`. The class is used to create a `paper_encoder` object that can perform a one-hot encoding on the paper data."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cf72b6c8-24f3-4a68-8e80-3ae693e7c7d6",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "c4aba0db-189c-4a75-863b-88b905f9908c",
+      "position": 26,
+      "properties": {
+        "description": "Now, practice encoding some of the data you chose in Python Lab using a one-hot encoding.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c4aba0db-189c-4a75-863b-88b905f9908c",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "a5d027c5-d444-4522-b042-271cee1bfb3b",
+      "position": 27,
+      "properties": {
+        "progression_name": "One-Hot Encodings"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5d027c5-d444-4522-b042-271cee1bfb3b",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "0a65441c-95ba-403b-8528-7e0f32f29ccf",
+      "position": 28,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a65441c-95ba-403b-8528-7e0f32f29ccf",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "5eee1c66-7f5d-4ba1-a6b8-353ca2675012",
+      "position": 29,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2–3.\n- **Level 2:** Students use `scikit-learn`’s `OneHotEncoder` to encode data with many exclusive categories.\n- **Level 3:** Students complete a Check Your Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for…\n- Students who aren’t sure how to use `OneHotEncoder`. Prompt them to ask AI for guidance, or give them a hint. Consider also displaying the previous example on the board, so they can use it as a reference.\n- Students who aren’t sure how to add the encoding to their feature matrix. Prompt them to…\n  - Add the name of the columns they’re using (i.e., all those except the one they’ve dropped) to the feature names list, in alphabetical order.\n  - Add their encoding as another argument to the function that creates their feature matrix."
+      },
+      "seeding_key": {
+        "activity_section.key": "5eee1c66-7f5d-4ba1-a6b8-353ca2675012",
+        "lesson_activity.key": "14722ead-fc2a-4f70-86c0-a101c404408b"
+      }
+    },
+    {
+      "key": "c7ad8e1b-9639-40e8-b34c-025daeb97d58",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "c7ad8e1b-9639-40e8-b34c-025daeb97d58",
+        "lesson_activity.key": "8fa60c2f-0290-4e3b-bd01-ad651b5b4ca4"
+      }
+    },
+    {
+      "key": "36de718f-05c7-41d5-b1ea-6f93ec9af24d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *A student memorize the answer key to last year’s exam. How well do you think they will do on this year’s exam, assuming no questions are reused?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface students’ intuitions about the difference between memorizing specific answers and understanding underlying concepts. Strong responses will recognize that the student who memorized the answer key learned particular answers rather than the reasoning behind them, and will predict that student would struggle if the exact questions changed, even on the same material. If students are struggling, prompt them to think about a time they crammed for a test versus a time they actually understood the material, and ask what the difference felt like when the questions weren't exactly what they expected."
+      },
+      "seeding_key": {
+        "activity_section.key": "36de718f-05c7-41d5-b1ea-6f93ec9af24d",
+        "lesson_activity.key": "bff944b9-6bf2-49e9-a3ba-0a3c27868971"
+      }
+    },
+    {
+      "key": "4d3898df-dc0c-4115-95c7-16bcc73c40aa",
+      "position": 2,
+      "properties": {
+        "description": "This is something we have to think about when computers are learning too. We don’t want computers just to memorize answers to some questions, we want them to be able to figure out answers to new questions too.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4d3898df-dc0c-4115-95c7-16bcc73c40aa",
+        "lesson_activity.key": "bff944b9-6bf2-49e9-a3ba-0a3c27868971"
+      }
+    },
+    {
+      "key": "b6edf63c-8709-4931-a88c-2f7ec8f6f278",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6edf63c-8709-4931-a88c-2f7ec8f6f278",
+        "lesson_activity.key": "bff944b9-6bf2-49e9-a3ba-0a3c27868971"
+      }
+    },
+    {
+      "key": "d4258bea-0313-4e9a-824a-5b631cfcf243",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to the need for splitting data into training and testing sets.",
+        "duration": "15",
+        "name": "Exploring Training and Test Sets"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4258bea-0313-4e9a-824a-5b631cfcf243",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "fe165b58-4644-4140-92c4-4a3c333e6e77",
+      "position": 2,
+      "properties": {
+        "description": "Look at this model: the line hits every single training point exactly. If we only measured this model using the same data it was trained on, it would look perfect. But that doesn't tell us what we actually want to know: will it work on a new input it hasn't seen before? The problem is, if we test a model on the same data it learned from, we're not really testing its ability to make predictions in the future, we're just checking if it memorized past answers. To actually know if a model will work in the real world, we need to check its performance on data it never saw during training. Today, we’ll explore ways that we can do just that.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fe165b58-4644-4140-92c4-4a3c333e6e77",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "8e3a3811-9887-46d1-a458-93882c7d6744",
+      "position": 3,
+      "properties": {
+        "description": "You’ll now have a chance to test out two different models to see if they work on data they haven’t seen before.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8e3a3811-9887-46d1-a458-93882c7d6744",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "c074f706-76ec-4b4a-bd8f-45379e3bc795",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Beach Days Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “The Training Data” section and the first part of the “Make Your Own Predictions” section of the Training and Test Data Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students begin using the graphs to determine each models’ predictions, look for students who may not be sure what is being asked for here.\n- Some students might be unsure if the prediction for each model is the y-value of the each graph that corresponds to the “Hours of Sunshine”\n- Some students might try to determine the absolute error for each model, but that data to determine this has not yet been provided.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the actual results. Direct students to complete the final column in the “Make Your Own Predictions” section of the Training and Test Data Activity Guide. Then, they should complete the “Compare the Models” section.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the original graphs with data for the new days added to them.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which model fits the training data better? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that Model 2 fits the training data more closely, since its curve passes through nearly every training point exactly, while Model 1's straight line only approximates the training points. Strong responses will point to the visual evidence (the curve touching vs. not touching the black dots) as their reasoning, not just a guess. If students are struggling, ask them to count how many black training dots it actually touches.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which one did a better job predicting? What do you notice?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice the reversal, the model that fit the training data better (Model 2) actually performed worse on the new days, while Model 1, which fit training data less precisely, predicted the new days more accurately. Strong responses will connect this back to their error calculations and start to explain why: Model 2 bent itself around the noise and quirks of the six training points rather than capturing the general upward trend, so it had nothing reliable to fall back on for new points that didn't match those exact quirks. If students are struggling, have them compare their error numbers for each model directly, then ask why the model with the \"better\" training fit ended up with worse errors on new data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *overfitting*."
+      },
+      "seeding_key": {
+        "activity_section.key": "c074f706-76ec-4b4a-bd8f-45379e3bc795",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "f809e6ac-11ca-4cd6-8971-7ba69c96c850",
+      "position": 5,
+      "properties": {
+        "description": "When a model overfits, it doesn’t perform as well on new data.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f809e6ac-11ca-4cd6-8971-7ba69c96c850",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "c5f93c98-f7f6-4544-8845-6628a4f3c0db",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the signs that a model is overfitting?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may note that this curve looks “too specific” and doesn’t generalize the relationship. Perhaps it matches the training points too well."
+      },
+      "seeding_key": {
+        "activity_section.key": "c5f93c98-f7f6-4544-8845-6628a4f3c0db",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "ab34b7e2-9868-470e-ba3b-349469c539ae",
+      "position": 7,
+      "properties": {
+        "description": "How can we make sure our model is reliable? For that, we need test data: data that the model didn’t see during training, so we can test the model on something that it definitely didn’t memorize.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab34b7e2-9868-470e-ba3b-349469c539ae",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "fd90fd1e-dcb6-41e1-868d-966182114dd1",
+      "position": 8,
+      "properties": {
+        "description": "The only way to know if a model actually generalized (learned the real pattern) is to test it on data it never touched during training. To do this, we randomly divide the data into two chunks before training. The training set (typically 80%) is what the model learns from. The test set (the remaining 20%) is held back completely and used only afterward, to check how well the model performs on data it's never seen.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fd90fd1e-dcb6-41e1-868d-966182114dd1",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "92f4fd2b-be2a-4e91-89e1-abbb2bda32fb",
+      "position": 9,
+      "properties": {
+        "description": "Why should the division of a data set be random? If the data is sorted, you may only select the larger values as test data, which may not provide as good of a model.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that train/test splitting is a matter of professional integrity - there is no engineering safeguard against using test data for training- it is on the honor system, and can therefore be exploited!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92f4fd2b-be2a-4e91-89e1-abbb2bda32fb",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "6dd616a7-98a4-40ca-8b6c-3cdac360eea1",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students learn to use the tools of scikit-learn to split data into training and test sets.",
+        "duration": "20",
+        "name": "Training and Test Sets in Python"
+      },
+      "seeding_key": {
+        "activity_section.key": "6dd616a7-98a4-40ca-8b6c-3cdac360eea1",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "ad6b119c-2ee6-41b3-99f6-9ee3b1a80a52",
+      "position": 11,
+      "properties": {
+        "description": "Let’s review how to build a multiple linear regression model using Python and `sklearn`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ad6b119c-2ee6-41b3-99f6-9ee3b1a80a52",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "de7ac76e-4689-47c2-91aa-35217c37bc4c",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the process of building a linear regression model in code."
+      },
+      "seeding_key": {
+        "activity_section.key": "de7ac76e-4689-47c2-91aa-35217c37bc4c",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "2f18d284-862e-4b54-b3e0-c646c11ced5a",
+      "position": 13,
+      "properties": {
+        "description": "With `scikit-learn`, we can use the `train_test_split` function to split data into training and test sets. We start with four data points, each with three inputs and one output. We call `train_test_split` on inputs and outputs with `test_size=0.25`, which holds back 25% of the data, unseen by the model during training, to use for testing afterward.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2f18d284-862e-4b54-b3e0-c646c11ced5a",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "8aa75371-9c3a-444f-9849-50554b4e2f0e",
+      "position": 14,
+      "properties": {
+        "description": "Notice that we’re not just getting back one thing from `train_test_split`. We’re getting four things at once: `train_inputs`, `test_inputs`, `train_outputs`, `test_outputs`. We can get all four at once, by listing the four variable names on the left, separated by commas, in the same order they come back. This is called unpacking.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Notice that `inputs` and `outputs` are two separate lists, but they're linked by position. The first inner list in `inputs`, `[85, 40, 5]`, corresponds to the first value in `outputs`, `220`. The second inner list, `[17, 15, 40]`, corresponds to the second output, `40`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8aa75371-9c3a-444f-9849-50554b4e2f0e",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "faa116a6-562a-4988-a3ae-092772764509",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *unpacking*."
+      },
+      "seeding_key": {
+        "activity_section.key": "faa116a6-562a-4988-a3ae-092772764509",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "ff9c6147-c183-4963-96f5-ebeb89ad4ff5",
+      "position": 16,
+      "properties": {
+        "description": "Now practice splitting data using `train_test_split`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9c6147-c183-4963-96f5-ebeb89ad4ff5",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "34f7d366-ed0c-458a-8912-11a621d7f395",
+      "position": 17,
+      "properties": {
+        "progression_name": "Splitting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "34f7d366-ed0c-458a-8912-11a621d7f395",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "24b9a821-958d-472c-8af2-721ff8b908be",
+      "position": 18,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "24b9a821-958d-472c-8af2-721ff8b908be",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "19e3ebee-ff9f-48e5-888f-31dc981eb23d",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to work on Lesson 5, Levels 1-4.\n- **Level 1:** Students import `train_test_split` and run it to split the data\n- **Level 2:** Students fit the model on the training data\n- **Level 3:** Students test the model on the test data\n- **Level 4:** Students complete a Check Your Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students complete the programs, look for possible areas of confusion.\n- Students may not understand how “unpacking” works. Be sure to explain this by reviewing the slide above and stressing the importance of the order of the variables.\n- If students rerun the model and get different results, explain how train_test_split randomly selects data for testing."
+      },
+      "seeding_key": {
+        "activity_section.key": "19e3ebee-ff9f-48e5-888f-31dc981eb23d",
+        "lesson_activity.key": "25beb2b4-625b-4dd1-935d-5b5892cb27f8"
+      }
+    },
+    {
+      "key": "dfa337d4-3853-4f81-a128-9186ed17cef0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "dfa337d4-3853-4f81-a128-9186ed17cef0",
+        "lesson_activity.key": "c634d80a-b689-465a-af1d-5ad229a686f0"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Train Your Client's Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "1221f41d-5c4c-4a2b-93c3-f651f5e17f89"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson1-level1-2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson1-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "75870d4d-b063-464e-ae4b-d9d5b989ff5c"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson1-level2-2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Binary Encodings"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson3-level1-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "ba618c66-c5ed-438f-8944-1dc751de9693"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson3-level1-2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "One-Hot Encodings"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson3-level2-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "a5d027c5-d444-4522-b042-271cee1bfb3b"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson3-level2-2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson3-level3-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "0a65441c-95ba-403b-8528-7e0f32f29ccf"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson3-level3-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Splitting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson5-level1-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "34f7d366-ed0c-458a-8912-11a621d7f395"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson5-level1-2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Splitting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson5-level2-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "34f7d366-ed0c-458a-8912-11a621d7f395"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson5-level2-2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson5-level3-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "24b9a821-958d-472c-8af2-721ff8b908be"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson5-level3-2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson1-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "1221f41d-5c4c-4a2b-93c3-f651f5e17f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson1-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson1-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "75870d4d-b063-464e-ae4b-d9d5b989ff5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson3-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson3-level1-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "ba618c66-c5ed-438f-8944-1dc751de9693"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson3-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson3-level2-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "a5d027c5-d444-4522-b042-271cee1bfb3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson3-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson3-level3-2026"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "0a65441c-95ba-403b-8528-7e0f32f29ccf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson5-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson5-level1-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "34f7d366-ed0c-458a-8912-11a621d7f395"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson5-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson5-level2-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "34f7d366-ed0c-458a-8912-11a621d7f395"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson5-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson5-level3-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "24b9a821-958d-472c-8af2-721ff8b908be"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Encodings",
+      "url": "https://docs.google.com/presentation/d/1QkZxm45o_TQuLICk12hLl4aAnvYriGlNnrKUl_kX6qc/edit?usp=sharing",
+      "key": "encodings",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "encodings"
+      }
+    },
+    {
+      "name": "Encodings",
+      "url": "https://docs.google.com/document/d/14dPY9I0z9Mgg1UWqDT1HbOro6cUHZeEuhx6FMEnUH6U/edit?usp=share_link",
+      "key": "encodings_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "encodings_1"
+      }
+    },
+    {
+      "name": "Encodings",
+      "url": "https://docs.google.com/document/d/1cohi2sN-_THRhVUCeTJPtzX9hYFiEzXvw7oXYZDU4nU/edit?usp=sharing",
+      "key": "encodings_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "encodings_2"
+      }
+    },
+    {
+      "name": "Machine Learning in Python",
+      "url": "https://docs.google.com/presentation/u/0/d/1H31hFfiTHgERU22QFcXZc2heaUKKbY7-e6NcxtZDAyg/edit",
+      "key": "machine_learning_in_python",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "machine_learning_in_python"
+      }
+    },
+    {
+      "name": "Training and Test Sets",
+      "url": "https://docs.google.com/presentation/d/1dYLI-kUsAnyIRkitD3lcNdASBw-IW3PWrn0GUbhuDaQ/edit?usp=sharing",
+      "key": "training_and_test_sets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "training_and_test_sets"
+      }
+    },
+    {
+      "name": "Training and Test Sets",
+      "url": "https://docs.google.com/document/d/1YgjIdu18V31WwCxqzEcGMCDiwsFcseXqbMx6bxMNLkU/edit?usp=sharing",
+      "key": "training_and_test_sets_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "training_and_test_sets_1"
+      }
+    },
+    {
+      "name": "Training and Tests Sets",
+      "url": "https://docs.google.com/document/d/1y7Hq-TfNECsDrqCAtuDFE0zXBpWf6iM7tHbJ-x8eS9M/edit?usp=share_link",
+      "key": "training_and_tests_sets",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "training_and_tests_sets"
+      }
+    },
+    {
+      "name": "Your First Client",
+      "url": "https://docs.google.com/document/u/0/d/1QPi1WTfoaD8p0VPC5Atc-7h_rJY7ODCyksWce4foly0/edit",
+      "key": "your_first_client",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "your_first_client"
+      }
+    },
+    {
+      "name": "Your First Client",
+      "url": "https://docs.google.com/document/u/0/d/1n6ITIqBhe_0DvaXT5XDLMxPd0MeCLYCXEqOkuQz-seU/edit",
+      "key": "your_first_client_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "your_first_client_1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "machine_learning_in_python"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "your_first_client"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "your_first_client_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "encodings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "encodings_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "encodings_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "training_and_test_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "training_and_test_sets_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "training_and_tests_sets"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -59,16 +1721,153 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "encoding",
+      "word": "encoding",
+      "definition": "a numeric representation of non-numeric data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "encoding"
+      }
+    },
+    {
+      "key": "feature_matrix",
+      "word": "feature matrix",
+      "definition": "a table of numbers, representing features from examples, used as input to a model",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature_matrix"
+      }
+    },
+    {
+      "key": "fit",
+      "word": "fit",
+      "definition": "to train a model on data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "fit"
+      }
+    },
+    {
+      "key": "overfitting",
+      "word": "overfitting",
+      "definition": "when a model memorizes the training data’s exact details and noise instead of learning the general pattern, so it performs poorly on new data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overfitting"
+      }
+    },
+    {
+      "key": "unpacking",
+      "word": "unpacking",
+      "definition": "assigning multiple returned values to multiple variables at once, in one line, matched in order",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unpacking"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "encoding"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "feature_matrix"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "overfitting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "unpacking"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "0b323b7f-861f-4ace-9c62-164a59ee0189",
+      "properties": {
+        "description": "Identify commonly used encodings for machine learning"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "0b323b7f-861f-4ace-9c62-164a59ee0189"
+      }
+    },
+    {
+      "key": "266e0973-97e4-4239-8004-02f41633370f",
+      "properties": {
+        "description": "Split data into training sets and test sets appropriately to avoid overfitting"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "266e0973-97e4-4239-8004-02f41633370f"
+      }
+    },
+    {
+      "key": "5ed3cb5e-f1d1-4ab0-94c3-6482400dc3e8",
+      "properties": {
+        "description": "Use a machine learning library to train models based on data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "5ed3cb5e-f1d1-4ab0-94c3-6482400dc3e8"
+      }
+    },
+    {
+      "key": "6e8058d6-164c-4b72-a261-694e2eb5db8b",
+      "properties": {
+        "description": "Use training sets and test sets in the model training process"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "6e8058d6-164c-4b72-a261-694e2eb5db8b"
+      }
+    },
+    {
+      "key": "717961b7-a5f3-435f-b41d-0da27b59c155",
+      "properties": {
+        "description": "Represent non-numeric data in ways models can use"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "717961b7-a5f3-435f-b41d-0da27b59c155"
+      }
+    },
+    {
+      "key": "f3b97c0b-8669-4fa7-93f8-35f2274c836d",
+      "properties": {
+        "description": "Use a machine learning model to make predictions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "f3b97c0b-8669-4fa7-93f8-35f2274c836d"
+      }
+    }
   ],
   "lessons_standards": [
 
@@ -80,12 +1879,280 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "aif-y2-making-predictions-lesson1-level2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "level_name": "aif-y2-making-predictions-lesson3-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "level_name": "aif-y2-making-predictions-lesson5-level2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "3289f3cb-160e-4675-a40b-3f16a6d04e09",
+      "position": 2,
+      "learning_goal": "Preparing Data for Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3289f3cb-160e-4675-a40b-3f16a6d04e09",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "42eb4233-a0a0-45af-94c8-170ad5539ec1",
+      "position": 1,
+      "learning_goal": "Evaluating and Improving Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "42eb4233-a0a0-45af-94c8-170ad5539ec1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
+      "position": 1,
+      "learning_goal": "Preparing Data for Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
+      "position": 1,
+      "learning_goal": "Preparing Data for Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt to identify features and labels or explain how data is divided into training and test sets.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3289f3cb-160e-4675-a40b-3f16a6d04e09",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student identifies some features and labels in a dataset, but makes errors when splitting the data (for example unpacking the results of train_test_split in the wrong order) and does not explain why the split is needed.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3289f3cb-160e-4675-a40b-3f16a6d04e09",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student correctly identifies the features and labels in a dataset, and when prompted, applies train_test_split to divide them into training and test sets. Student recognizes that which data the model trains on affects what it learns.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3289f3cb-160e-4675-a40b-3f16a6d04e09",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student splits data into training and test sets randomly, with an appropriate test_size and each input still matched to its output. Student explains how the split affects what a model learns, including why the test set must be kept unseen by the model and how splitting appropriately helps avoid overfitting.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3289f3cb-160e-4675-a40b-3f16a6d04e09",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt to explain how a model is evaluated.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "42eb4233-a0a0-45af-94c8-170ad5539ec1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student recognizes that a model’s performance can be measured, but does not correctly explain how training and test performance differ, and cannot complete code to train and evaluate a model even when given the computation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "42eb4233-a0a0-45af-94c8-170ad5539ec1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student trains a model using only the training set and writes Python code that uses model.predict() and calculates MSE on the test set. Student explains that a large gap between training and test performance may indicate overfitting.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "42eb4233-a0a0-45af-94c8-170ad5539ec1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student writes code that trains a model on the training set, predicts, and computes MSE. Student interprets the results to diagnose overfitting, explains why the test set gives a more trustworthy measure than the training set, and names a way a model might be improved.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "42eb4233-a0a0-45af-94c8-170ad5539ec1",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt the question.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student misidentifies the best encoding for each feature. Or, their analysis about when to use each encoding is incorrect.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student identifies the best encoding for each feature. Their analysis about when to use each encoding is correct.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student identifies the best encoding for each feature. Their analysis about when to use each encoding is precise and correct, with clear examples.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student’s answer is nonexistent or unrelated.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student describes training a model but leaves the data out of the story, or describes preparing it incorrectly.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student identifies what the new client’s inputs and outputs would be and describes putting them into the two lists the library expects.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student identifies the inputs and outputs, describes the shape the library expects, and explains why the shape matters.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    }
   ]
 }

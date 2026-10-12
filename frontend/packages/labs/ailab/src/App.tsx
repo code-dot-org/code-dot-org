@@ -12,6 +12,7 @@ import {
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
 import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
   Panel,
@@ -237,6 +238,7 @@ const App = ({
   const latestResult = useAppSelector(state => state.historicResults[0]);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
+  const {trainedModel} = useTrainingData();
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   // Notify the consumer of instructions key changes when they occur.
@@ -319,7 +321,9 @@ const App = ({
           currentPanel={currentPanel}
           setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
           onContinue={onContinue}
-          startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
+          startSaveTrainedModel={() =>
+            dispatch(saveModel(saveTrainedModel, trainedModel))
+          }
           saveStatus={saveStatus}
           saveResponseData={saveResponseData}
           isSaveComplete={isSaveComplete}

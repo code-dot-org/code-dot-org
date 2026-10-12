@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-09T18:20:46.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/a0c173f8842980b9bca3db7a7e7d62ff-detail1.png",
+        "key": "adaptive-test-Refine1-c8ae656c-f081-4d4f-8e64-f8e18b95e233",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/a047e9bcfb614447a7515349ea2b0eb8-detail2.png",
+        "key": "adaptive-test-Refine1-ca8ee96e-b93d-426e-8fb8-0d7f01c9e904",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/4317d013331e1b9cc5771a13c2ef06ab-detail3.png",
+        "key": "adaptive-test-Refine1-9fa252a1-36cb-4ed0-8227-568a051e8b10",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/dc013531411aeed1c88d1d4d47d60e0c-detail4.png",
+        "key": "adaptive-test-Refine1-4a3edfa0-c2cf-4ae3-bf78-dca794292fd5",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/75c9fef8afed7e5238ef66683ed7659e-detail5.png",
+        "key": "adaptive-test-Refine1-509da35a-600e-454a-93c2-28ac90eb1e87",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/dc47719ea0a7b40bc4fceb004eb3c9fb-detail6.png",
+        "key": "adaptive-test-Refine1-67316ebf-b227-4bf3-b68d-52f6b7da25a1",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-09 18:27:00 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 18:31:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 23:10:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
