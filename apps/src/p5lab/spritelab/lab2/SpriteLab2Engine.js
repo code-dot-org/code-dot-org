@@ -13,7 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
-import {burstBoxes, JUMP_EVENT_FRAMES} from './bursts';
+import {burstBoxes} from './bursts';
 import {
   backgroundFrame,
   cameraFocus,
@@ -51,6 +51,13 @@ import {
   wallBox,
 } from './platformPhysics';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
+
+// A burst from the player starts at its take-off spot this many frames
+// after the jump event fires: the handler runs on the interpreter's next
+// tick, not inside the dispatch. The spot must come from an impulse this
+// recent, or a jump the tracker saw without one would serve a stale spot.
+const JUMP_EVENT_FRAMES = 4;
+const JUMP_IMPULSE_FRAMES = 8;
 
 const NOOP = () => {};
 
@@ -206,9 +213,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.drawPaused_ = false;
     // The weather and the bursts in flight, drawn inside the paint.
     this.particles_ = new ParticleLayer();
-    // Where each player stood as its last jump impulse was applied, and the
-    // frame the jump event last fired (see burstParticles).
+    // Where each player stood as its last jump impulse was applied, the
+    // frame of that impulse, and the frame the jump event last fired (see
+    // burstParticles).
     this.jumpStarts_ = null;
+    this.jumpImpulseFrame_ = -Infinity;
     this.jumpEventFrame_ = -Infinity;
   }
 
@@ -220,7 +229,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (view) {
       const p5 = this.p5Wrapper.p5;
       const justJumped =
-        p5.frameCount - this.jumpEventFrame_ <= JUMP_EVENT_FRAMES;
+        p5.frameCount - this.jumpEventFrame_ <= JUMP_EVENT_FRAMES &&
+        p5.frameCount - this.jumpImpulseFrame_ <= JUMP_IMPULSE_FRAMES;
       this.particles_.burst(
         p5,
         look,
@@ -414,6 +424,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
     this.particles_.reset();
+    this.jumpStarts_ = null;
+    this.jumpImpulseFrame_ = -Infinity;
+    this.jumpEventFrame_ = -Infinity;
     library.commands.setWeather = kind => this.particles_.setWeather(kind);
     library.commands.burstParticles = (count, look, spriteArg) =>
       this.burstParticles(count, look, spriteArg);
@@ -506,6 +519,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
       this.jumpStarts_ = new Map();
+      this.jumpImpulseFrame_ = this.p5Wrapper.p5
+        ? this.p5Wrapper.p5.frameCount
+        : -Infinity;
       library.getSpriteArray({group: 'players'}).forEach(sprite => {
         this.jumpStarts_.set(sprite, {
           x: sprite.position.x,
