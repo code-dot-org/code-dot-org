@@ -1,5 +1,6 @@
 import {expect, test} from '../fixtures';
 import {LessonTutorPage} from '../pages/lesson-tutor-page';
+import {createTeacherAssociatedStudent, resetSession} from '../shared/auth';
 import {
   MAIN_TRACK_VIDEO,
   MAIN_TRACK_VIDEO_SECONDS,
@@ -7,14 +8,23 @@ import {
   SCENE_NARRATED_VIDEO_SECONDS,
   serveJsonVideos,
 } from '../shared/json-video-documents';
+import {setSectionAiChatAccessLevel} from '../shared/sections';
 
 // Under an AIF course offering, which enables the deep dive, with two videos.
 const UNIT = 'ui-test-lesson-tutor';
 const LESSON = 1;
 
 test.describe('Lesson tutor videos', () => {
-  test.beforeEach(async ({page, signInAsNewUser}) => {
-    await signInAsNewUser({type: 'student', name: 'Test Student'});
+  test.beforeEach(async ({page}) => {
+    // The deep dive needs an authorized teacher's section with AI chat enabled.
+    await resetSession(page);
+    await page.goto('/');
+    await createTeacherAssociatedStudent(page, {
+      studentName: 'Test Student',
+      authorized: true,
+      onSectionCreated: ({id}) =>
+        setSectionAiChatAccessLevel(page, id, 'enabled'),
+    });
     await serveJsonVideos(page, [SCENE_NARRATED_VIDEO, MAIN_TRACK_VIDEO]);
     const tutor = new LessonTutorPage(page);
     await tutor.gotoScreen({unit: UNIT, lesson: LESSON});
