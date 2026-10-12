@@ -152,6 +152,10 @@ interface PlayBarProps {
   /** Plays from the start scene; offered beside Play only where the
       project has more than one scene, when the two differ. */
   onPlayGame?: (event: React.MouseEvent<HTMLElement>) => void;
+  /** Play game shown but disabled, with the reason on hover: a level
+      that keeps to one scene still shows the button. */
+  playGameDisabled?: boolean;
+  playGameReason?: string;
 }
 
 /**
@@ -165,6 +169,8 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
   onPlay,
   onStop,
   onPlayGame,
+  playGameDisabled = false,
+  playGameReason,
 }) => {
   const setupBlockColor = useSetupBlockColor();
   if (!playing) {
@@ -181,15 +187,20 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
           {onPlayGame ? 'Play scene' : 'Play'}
         </MuiButton>
         {onPlayGame && (
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            startIcon={<FontAwesomeV6Icon iconName="flag-checkered" />}
-            onClick={onPlayGame}
-          >
-            Play game
-          </MuiButton>
+          // A disabled button takes no pointer events, so the title sits on
+          // a wrapper.
+          <span title={playGameDisabled ? playGameReason : undefined}>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              disabled={playGameDisabled}
+              startIcon={<FontAwesomeV6Icon iconName="flag-checkered" />}
+              onClick={onPlayGame}
+            >
+              Play game
+            </MuiButton>
+          </span>
         )}
       </>
     );

@@ -18,6 +18,11 @@ interface SceneTabsProps {
   galleryOpen: boolean;
   /** While the game plays, switching scenes has no effect. */
   disabled?: boolean;
+  /** The level keeps its student to the selected scene: the row still
+      shows, so the full lab holds no surprises, but the way back, the
+      other tabs and New scene are disabled, with the reason on hover. */
+  locked?: boolean;
+  lockedReason?: string;
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string, type: SceneType) => void;
@@ -48,6 +53,8 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   activeSceneId,
   galleryOpen,
   disabled = false,
+  locked = false,
+  lockedReason,
   allowCreate = true,
   onSelectScene,
   onCreateScene,
@@ -64,7 +71,8 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
       {onManageScenes && !galleryOpen && (
         <button
           type="button"
-          disabled={disabled}
+          disabled={disabled || locked}
+          title={locked ? lockedReason : undefined}
           className={moduleStyles.sceneTabBack}
           onClick={event => {
             blurAfterPointerClick(event);
@@ -96,7 +104,8 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
                 type="button"
                 role="tab"
                 aria-selected={selected}
-                disabled={disabled}
+                disabled={disabled || (locked && !selected)}
+                title={locked && !selected ? lockedReason : undefined}
                 className={moduleStyles.sceneTabMain}
                 onClick={event => {
                   blurAfterPointerClick(event);
@@ -165,8 +174,8 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
           type="button"
           className={moduleStyles.sceneTabButton}
           aria-label="New scene"
-          title="New scene"
-          disabled={disabled}
+          title={locked && lockedReason ? lockedReason : 'New scene'}
+          disabled={disabled || locked}
           onClick={event => {
             blurAfterPointerClick(event);
             setNaming(true);

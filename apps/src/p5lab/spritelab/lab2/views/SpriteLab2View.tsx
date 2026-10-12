@@ -131,7 +131,7 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {blurAfterPointerClick, isPointerClick} from './blurAfterPointerClick';
-import EditorSwitch from './components/EditorSwitch';
+import EditorSwitch, {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
@@ -176,6 +176,8 @@ const EDITOR_FLOAT_ROOM_PX = 58;
 // The floating switch's gap from the preview column at the workspace's
 // right: room for the workspace's vertical scrollbar beside it.
 const EDITOR_FLOAT_RIGHT_GAP_PX = 28;
+// On hover over a control a level withholds.
+const LOCKED_REASON = 'Unlocks later in the lesson.';
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -510,6 +512,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Which of the scene's two editors fills the main area. The choice is
   // offered where the scene has a world and the level has code.
   const editorChoice = enabledTabs.includes('World') && tabs.includes('Code');
+  // Every level with the tab shell shows the full lab's controls; what the
+  // level withholds is disabled rather than missing, so the free play lab
+  // holds no surprises. The switch shows wherever the scene has one editor.
+  const editorsShown = tabs.includes('Code') || enabledTabs.includes('World');
+  const disabledEditors = useMemo<Editor[]>(
+    () => [
+      ...(tabs.includes('Code') ? [] : (['Code'] as Editor[])),
+      ...(enabledTabs.includes('World') ? [] : (['World'] as Editor[])),
+    ],
+    [tabs, enabledTabs]
+  );
   // The switch is a pill floating at the workspace's top (its right, with
   // the preview at the left); ?editors=tab puts it inside the open scene's
   // tab, ?editors=strip in a strip over the editor pane, ?editors=floatright
@@ -536,15 +549,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
-  const editorStrip = editorChoice && editorsPlacement === 'strip';
+  const editorStrip = editorsShown && editorsPlacement === 'strip';
   // With the preview at the left, the float pill's top-left would be the
   // column's: it goes to the workspace's right instead, like floatright.
   const editorFloat =
-    editorChoice && editorsPlacement === 'float' && previewSide !== 'left';
+    editorsShown && editorsPlacement === 'float' && previewSide !== 'left';
   // ?editors=floatright: the same pill at the workspace's top-right, where
   // nothing sits beneath it and nothing has to move down.
   const editorFloatRight =
-    editorChoice &&
+    editorsShown &&
     (editorsPlacement === 'floatright' ||
       (editorsPlacement === 'float' && previewSide === 'left'));
   // The workspace does not notice its container changing size.
@@ -2047,12 +2060,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   loading={nowPlaying.loading}
                 />
               )}
-              {picturesOffered && (
+              <span title={picturesOffered ? undefined : LOCKED_REASON}>
                 <MuiButton
                   variant={picturesOpen ? 'contained' : 'outlined'}
                   color="secondary"
                   size="extraSmall"
                   type="button"
+                  disabled={!picturesOffered}
                   aria-expanded={picturesOpen}
                   aria-controls={PICTURES_DRAWER_ID}
                   startIcon={
@@ -2065,20 +2079,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 >
                   Pictures
                 </MuiButton>
-              )}
+              </span>
             </>
           }
           sceneTabs={
             // A toolbox has no scenes; "New scene" here would put the student
             // default onto the canvas and into the saved toolbox. A pinned
-            // level has nothing to switch, so it shows no scene tabs.
-            animationsSeeded && !isToolboxMode && !pinnedSceneId ? (
+            // level shows its one scene's tab, with the row disabled.
+            animationsSeeded && !isToolboxMode ? (
               <SceneTabs
-                scenes={sceneMetadata}
+                scenes={
+                  pinnedSceneId
+                    ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
+                    : sceneMetadata
+                }
                 activeSceneId={activeSceneId}
                 galleryOpen={activeTab === 'Scenes'}
                 disabled={activeTab === 'Play'}
-                allowCreate={scenesEditable}
+                locked={!!pinnedSceneId}
+                lockedReason={LOCKED_REASON}
+                allowCreate={scenesEditable || !!pinnedSceneId}
                 onSelectScene={sceneEditing.selectScene}
                 onCreateScene={sceneEditing.createScene}
                 onManageScenes={sceneEditing.openGallery}
@@ -2099,6 +2119,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <EditorSwitch
                 value={activeTab === 'World' ? 'World' : 'Code'}
                 onChange={handleEditorChange}
+                disabledEditors={disabledEditors}
+                disabledReason={LOCKED_REASON}
               />
             </div>
           )}
@@ -2117,7 +2139,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     : undefined
                 }
               >
-                <EditorSwitch value={activeTab} onChange={handleEditorChange} />
+                <EditorSwitch
+                  value={activeTab}
+                  onChange={handleEditorChange}
+                  disabledEditors={disabledEditors}
+                  disabledReason={LOCKED_REASON}
+                />
               </div>
             )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
@@ -2258,11 +2285,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 arrows={arrowSet}
                 onPlay={handlePlayClick}
                 onStop={stopTab ? handleStopClick : undefined}
-                onPlayGame={
-                  scenes.length > 1 && !pinnedSceneId
-                    ? handlePlayGame
-                    : undefined
-                }
+                onPlayGame={handlePlayGame}
+                playGameDisabled={scenes.length < 2 || !!pinnedSceneId}
+                playGameReason={LOCKED_REASON}
               />
             }
             below={

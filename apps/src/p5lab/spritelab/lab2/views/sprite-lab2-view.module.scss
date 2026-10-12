@@ -322,6 +322,12 @@ $scene-tab-fade-ms: 260ms;
   cursor: pointer;
   font-size: 14px;
 
+  // An editor the level withholds: present, dimmed, inert.
+  &:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+
   &:first-child {
     border-left: none;
   }
