@@ -134,21 +134,8 @@ $overlay-float-min-width: 600px;
 
   &:focus-visible {
     z-index: 1;
-    height: auto;
     outline: calc(#{$focus-ring-width} / #{$canvas-scale}) solid $focus-color;
     outline-offset: calc(#{$focus-ring-gap} / #{$canvas-scale});
-
-    .nodeText {
-      white-space: normal;
-    }
-
-    .branch {
-      width: max-content;
-      height: auto;
-      transform: translate(-50%, calc(-100% + #{$branch-height * 0.5}));
-      white-space: normal;
-      overflow-wrap: anywhere;
-    }
   }
 }
 
@@ -216,7 +203,6 @@ $overlay-float-min-width: 600px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow-wrap: anywhere;
 }
 
 .node .nodeText {
