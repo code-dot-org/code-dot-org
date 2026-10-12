@@ -3,12 +3,10 @@ import {Components, Theme} from '@mui/material/styles';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
 /**
- * MUI Button overrides for CADS Button `15724:18791`.
- * Heights are 24 / 32 / 40 / 48. Radius is `--shape-sm` (6px).
- * `white` and labeled `tertiary` are code-only; Figma tertiary is text + icon-only.
+ * `white` and labeled `tertiary` have no CADS symbol. Figma tertiary is text and icon-only.
  */
 
-// CADS Button size scale. Line-heights are the Figma body leading (no token in this repo).
+// Body line-heights; this repo has no leading token for them.
 const SIZE_SPECS = {
   xs: {
     height: '1.5rem',
@@ -67,9 +65,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       />
     ),
   },
-  // Add variants for custom sizes
   variants: [
-    // Extra small size
     {
       props: {size: 'extraSmall'},
       style: () => {
@@ -99,7 +95,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         };
       },
     },
-    // Small size
     {
       props: {size: 'small'},
       style: () => {
@@ -129,7 +124,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         };
       },
     },
-    // Medium size (default)
     {
       props: {size: 'medium'},
       style: () => {
@@ -159,7 +153,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         };
       },
     },
-    // Large size
     {
       props: {size: 'large'},
       style: () => {
@@ -190,7 +183,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       },
     },
 
-    // Contained (primary) variant × color combinations
     {
       props: {variant: 'contained', color: 'primary'},
       style: {
@@ -351,7 +343,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       },
     },
 
-    // Outlined (secondary) variant × color combinations
     {
       props: {variant: 'outlined', color: 'primary'},
       style: {
@@ -536,7 +527,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
       },
     },
 
-    // Text (tertiary) variant × color combinations
     {
       props: {variant: 'text', color: 'primary'},
       style: {
@@ -734,18 +724,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           boxShadow: 'none',
         },
 
-        // Disable ripple effect (CSS fallback in case defaultProps doesn't work)
+        // disableRipple does not always remove the ripple node.
         '& .MuiTouchRipple-root': {
           display: 'none',
         },
 
-        // Force hover state
         '&.force-hover, &[data-force-hover="true"]': {
           boxShadow: 'none',
           textDecoration: 'none',
         },
 
-        // Remove margins from startIcon and endIcon - use gap instead (matching genericButton.module.scss)
         '& .MuiButton-startIcon': {
           marginLeft: 0,
           marginRight: 0,
@@ -756,16 +744,13 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         },
 
         '.MuiButton-loadingIndicator': {
-          color: 'inherit', // Ensure spinner inherits text color
+          color: 'inherit',
         },
       };
 
       return baseStyles;
     },
-    // Color styling is now handled via variants above
-    // These are intentional placeholders. In MUI, styleOverrides.variantName can override variant styles,
-    // but since all variant × color styling is handled in the variants array, these are
-    // kept empty to prevent MUI from applying default variant styles that would conflict with our custom styling.
+    // Empty so MUI's default variant styles do not replace the variants above.
     contained: () => ({}),
     outlined: () => ({}),
     text: () => ({}),

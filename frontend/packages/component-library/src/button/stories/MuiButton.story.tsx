@@ -351,14 +351,14 @@ GroupOfColorsOfButtons.args = {
     {
       children: 'Button Secondary Black',
       variant: 'outlined',
-      color: 'secondary',
+      color: 'primary',
       size: 'medium',
       onClick: () => null,
     },
     {
       children: 'Button Secondary Gray',
       variant: 'outlined',
-      color: 'tertiary',
+      color: 'secondary',
       size: 'medium',
       onClick: () => null,
     },

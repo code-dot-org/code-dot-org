@@ -9,7 +9,7 @@ type CaseSpec = {
   mode: Mode;
 };
 
-/** One coverage case per id. State is applied in the browser, not as a prop. */
+// Hover, focus, and press are applied in the browser.
 const CASES: Record<string, CaseSpec> = {
   'button-large-contained-primary-default-light': {
     mode: 'Light',
