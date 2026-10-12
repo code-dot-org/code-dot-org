@@ -1,6 +1,7 @@
 import {render} from '@testing-library/react';
 import {createElement} from 'react';
 
+import I18n from '../../src/i18n';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
 import TreeMiniMap from '../../src/UIComponents/TreeMiniMap';
 
@@ -17,11 +18,15 @@ const question = (left, right) => ({
 });
 
 describe('TreeMiniMap', () => {
+  beforeEach(() => I18n.initI18n());
+  afterEach(() => I18n.reset());
+
   test('colors answers by their left-to-right order and questions plainly', () => {
     render(
       createElement(TreeMiniMap, {
         tree: question(question(answer(1), answer(2)), answer(3)),
-        nodeWidth: () => 100,
+        datasetId: 'unknown',
+        counts: new Map(),
         onReplay: () => {},
       }),
     );

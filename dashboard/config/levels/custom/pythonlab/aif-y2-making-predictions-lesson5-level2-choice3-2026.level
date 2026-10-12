@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-11T00:25:34.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Leveling Up",
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice3-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Fit the model by calling `model.fit` with `train_inputs` and `train_outputs`.\r\n- Measure your model’s loss. First, call `model.predict` with `test_inputs`. Then, calculate the mean squared error of those predictions against the `test_outputs`.\r\n- Print your model’s loss. \r\n\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember you can fit a model with:\r\n\r\n```\r\nmodel.fit(train_inputs, train_outputs)\r\n```\r\n\r\nTo measure your model’s loss on the test data, first use the fitted model to make predictions from the test inputs.\r\n\r\n```\r\npredictions = model.predict(test_inputs)\r\n```\r\n\r\nThen, compute the mean squared error by comparing those predictions with the actual test outputs.\r\n\r\n```\r\nmse = mean_squared_error(test_outputs, predictions)\r\n```\r\n\r\nConsider rounding the result as you print it.\r\n\r\n```\r\nprint(round(mse, 2))\r\n```\r\n",
+    "bubble_choice_description": "Help an esports coach predict their players' performances.",
+    "thumbnail_url": "https://images.code.org/c124ebb471a2711fbcebe29978f80200-gamer.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY6CH9QC+PyuLjlz\nXLTnsuyaLGZUNVKERI2RJDrE85AmEtHNzD+/WfALdcTY+saPgHfzXY9lJVFm\nI7PlZQzDHgtXAeY27CG3t2caYcd0wpS3YHzPdDf/CYFqLpmw5tWz96pRG+RE\nShPmObZIeJH3FirOGMZvMxcwnh4GLsZh3AGAGmcOvetLVmoK2v6xyQppq/Hg\n747ejU806jLO0nzWTry5tl6A8yMkfyI+fuFnC1u1jJ8nFuwDzy61DgMm/bNf\noknS33lZzo6+Dvsimv65JXCFUwU7OoDZli+i9mYymTJaxjgDAojpjdZNk7JE\n905KNxVfmuh4mZfpvWZW0jMKjSUBorFO24Nu8DaIVCW57+kbw4/PHYLG4/mo\nA9nWuyV6QyiAbgr9fWJXjSHswDQlwv0qk0riNOGT+aVS0MOIEsYf/grXoYoD\nO8H9N1FHwgiVf2bsAYAj5KWtyTeXBoZVe8qA98gWwSUBgcgBgoRkZehV60DG\nmR+E0yypg9e031Fw95c8uaCHeP/B9665qdaX0TYE9Uu6iBDg/r6fBXQku/BI\nnapfjGPfu4G+sBHyhZw9ncwQf2aITMSCsy8kM77k0YzYk4gEeDnNr6PFfBAB\nF5g33uoWweD1JFQswdI8MHt0BHAerxwlLA7EIp2VH7NlIoR4S+Bo+izQXsqa\nd6wWxIaiUGsv2DIrHBaTSCNm5onHQ2BfUdWM4rt//rWqUvZLjSmvxTrmUERj\nq/XvIJgNULHJjh39zg5Qzq/mw1CQfN+sgXIdXdGqoXyLJK2WB23W63eunWpp\nagg425+7zHyam3PjMgWW6lAf3Zu6LUqH2EXfyxWPsP1Ekq+Xl5sT84JTTluF\nFcfsKW1HkW3xlpX1IRlQGHp/W90+Gmlp7O+4g0mBXchfMR3V5vFro34YeLQw\nwbufbClgIuTTeqPJFPNkxP8epQ/PmjN75pcOTzu04XEbnJXx3116h9GfCEsp\nEBLRMvjA2kwZMl0UMfh6B9ADKw1dFCcUVnhakLvFCIfoj48y1B1w7LmbF9ic\nqVdaIkDFYfXOQBsBsM45+z8JzboBvSSIejkdcpwe0UYVXm3GB4PnEuWZVntW\nnaA2R1zWvul0p/QTvCAjsvof3IGkbVPca6pIqChYL78PwU80kxIPsecYXwE/\noHGuLMrFk4vYn6b3kDR1m9oHZccTr2ySbpPkQdLO+L4i26RdNmhg56Dw4DJe\nrL1UKoIsFf6FSFj8m20LQ2fGO/n/mJ3b16yNL3ReG9WrCRzTcu1p0XvEH8yZ\nLZk+NDhDqkE6KxrL6HYiXAj7D9qdxm3vFlnVWmiGUf+R5dGQHgayPASnptdz\nPPnNZFLvOTs7eYI+5FnI3wwoYx1NniTyv2mJgf0ruhELjXSeaFbPPgBI5LKY\n421SZ72CQk1F7fqv7Z4Siw5d+mTvB8DK5FU7ZcQ0jkoVHKkdatjEzSZrv6Yt\n6QkyXMTXCUED5a+XqLGQr+G39bIL1YOkkC34W4UgKkQj4eN9WAiGGDNP7bSk\nw4tWi16Uy5gszbiCaaTsXjqSCkiGlGn95XK8aZYeSoDsmpuaBH0SqMgFOuom\ntoJf5dO5mJKhBf8TlIJhyZGXSToW76a33H3Eo+Rtqrfo6umcNrUBbe3DVB/d\nZQoEPpbs8V2etG9Im8x8B5gIsQZ2fXDdWuuyW7lmFpiarLm563XbPW4RKAYx\nGTA4amFPBRSYwJMJkSlO2Ks7n/4jhAHBdCItCzwxtHo5IQWR0BRAMPqZ5NHL\nch3fzhjg8YSMlYgxxQ/KbjaMqJMdKQ1eGTnXlOiMtMJsgAdesWl5Z1jbe7cN\nI91b2nvmIZae09z07gVgt/4wqc5nh3HlgyKqhEoYf/2vHUO12eWpwOtDhSNl\ntnmFFttqTM0n7ovcz9IkzXXtdGn2mH01cMQ0VRkeMCQwNhc=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:33:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:33:51 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:44:01 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

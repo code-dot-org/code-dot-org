@@ -2,19 +2,12 @@
 
 $path-ring-width: 3px;
 $path-color: var(--border-selected-primary);
-$path-hover-background: var(--background-brand-light);
 $path-node-text-color: var(--text-selected-primary-inverse);
 $off-path-color: var(--background-neutral-septenary);
-$hover-background: color-mix(
-  in srgb,
-  var(--background-neutral-secondary) 50%,
-  transparent
-);
 $focus-ring-width: 2px;
 $focus-ring-gap: 2px;
 $focus-color: var(--border-focused-primary);
 $node-radius: 6px;
-$answer-dot-size: 12px;
 $count-color: var(--text-neutral-tertiary);
 $path-count-color: var(--text-brand-secondary);
 $correct-color: var(--text-success-primary-fixed);
@@ -145,21 +138,8 @@ $overlay-float-min-width: 600px;
 
   &:focus-visible {
     z-index: 1;
-    height: auto;
     outline: calc(#{$focus-ring-width} / #{$canvas-scale}) solid $focus-color;
     outline-offset: calc(#{$focus-ring-gap} / #{$canvas-scale});
-
-    .nodeText {
-      white-space: normal;
-    }
-
-    .branch {
-      width: max-content;
-      height: auto;
-      transform: translate(-50%, calc(-100% + #{$branch-height * 0.5}));
-      white-space: normal;
-      overflow-wrap: anywhere;
-    }
   }
 }
 
@@ -170,8 +150,8 @@ $overlay-float-min-width: 600px;
   min-height: var(--tree-node-height);
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: var(--tree-node-gap);
+  padding: 8px var(--tree-node-padding-inline);
   border-width: 1.5px;
   border-style: solid;
   border-radius: $node-radius;
@@ -190,17 +170,17 @@ $overlay-float-min-width: 600px;
 
 .pathNode {
   border-color: $path-color;
-  border-width: 2px;
+  border-width: var(--tree-path-node-border);
   color: $path-node-text-color;
 }
 
 .nodeSlot:hover .node {
-  background-color: $hover-background;
+  background-color: var(--background-neutral-secondary);
   box-shadow: var(--shadow-md);
 }
 
 .nodeSlot:hover .pathNode {
-  background-color: $path-hover-background;
+  background-color: var(--background-brand-light);
 }
 
 .nodeSlot:active .node {
@@ -215,8 +195,8 @@ $overlay-float-min-width: 600px;
 
 .answerDot {
   flex-shrink: 0;
-  width: $answer-dot-size;
-  height: $answer-dot-size;
+  width: var(--tree-answer-dot-size);
+  height: var(--tree-answer-dot-size);
   border-radius: 50%;
   box-sizing: border-box;
   border: 2px solid transparent;
@@ -227,7 +207,6 @@ $overlay-float-min-width: 600px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow-wrap: anywhere;
 }
 
 .node .nodeText {
@@ -238,8 +217,8 @@ $overlay-float-min-width: 600px;
 .counts {
   display: flex;
   flex-shrink: 0;
-  gap: 6px;
-  margin-left: 6px;
+  gap: var(--tree-counts-gap);
+  margin-left: var(--tree-counts-gap);
 }
 
 .node .counts {
@@ -254,12 +233,12 @@ $overlay-float-min-width: 600px;
 .incorrect {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: var(--tree-grade-icon-gap);
   font-weight: var(--font-weight-semi-bold);
 }
 
 .gradeIcon {
-  font-size: 11px;
+  font-size: var(--tree-grade-icon-size);
 }
 
 .correct {
@@ -301,6 +280,12 @@ $overlay-float-min-width: 600px;
 }
 
 @media (forced-colors: active) {
+  .nodeSlot:focus-visible {
+    outline-offset: calc(
+      #{$path-ring-width} + #{$focus-ring-gap} / #{$canvas-scale}
+    );
+  }
+
   .pathNode,
   .pathBranch {
     outline: $path-ring-width solid;

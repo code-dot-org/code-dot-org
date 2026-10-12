@@ -11,7 +11,6 @@ import {
   type DisplayTreeNode,
   type SerializedTree,
 } from '../helpers/displayTree';
-import {measureDisplayTreeNodes} from '../helpers/displayTreeNodeContent';
 import {
   countDisplayTreeRows,
   traceDisplayTree,
@@ -33,6 +32,7 @@ import type {
   CrossTabResult,
   CrossTabData,
   DataRow,
+  TrainedModel,
 } from '../types';
 
 import {
@@ -247,7 +247,7 @@ export const getUniqueOptionsLabelColumn = createSelector(
 
 export const getDisplayTree = createSelector(
   [
-    (state: RootState) => state.trainedModel,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
     getTrainerFamily,
     (state: RootState) => state.selectedFeatures,
     (state: RootState) => state.featureNumberKey,
@@ -274,7 +274,7 @@ export const getDisplayTree = createSelector(
 export const getPredictionTrace = createSelector(
   [
     getDisplayTree,
-    (state: RootState) => state.trainedModel,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
     (state: RootState) => state.prediction,
     (state: RootState) => state.predictionInputs,
     (state: RootState) => state.predictionTestData,
@@ -294,8 +294,11 @@ export const getPredictionTrace = createSelector(
   },
 );
 
-export function getPredictionStep(state: RootState): number {
-  const pathLength = getPredictionTrace(state)?.path.length ?? 0;
+export function getPredictionStep(
+  state: RootState,
+  trainedModel?: TrainedModel,
+): number {
+  const pathLength = getPredictionTrace(state, trainedModel)?.path.length ?? 0;
   return state.predictionStep ?? pathLength - 1;
 }
 
@@ -303,7 +306,7 @@ export function getPredictionStep(state: RootState): number {
 export const getDisplayTreeCounts = createSelector(
   [
     getDisplayTree,
-    (state: RootState) => state.trainedModel,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
     (state: RootState) => state.accuracyCheckExamples,
     (state: RootState) => state.accuracyCheckLabels,
     (state: RootState) => state.accuracyCheckPredictedLabels,
@@ -323,19 +326,5 @@ export const getDisplayTreeCounts = createSelector(
     const {grades} = gradeAccuracy(predictedLabels, labels, {tolerance});
     const {root} = trainedModel!.toJSON() as SerializedTree;
     return countDisplayTreeRows(tree, root!, examples, grades);
-  },
-);
-
-export const getDisplayTreeNodeWidth = createSelector(
-  [getDisplayTree, getDisplayTreeCounts, getDatasetId],
-  (
-    tree: DisplayTreeNode | undefined,
-    counts: Map<string, DisplayTreeNodeCounts>,
-    datasetId: string | undefined,
-  ): ((id: string) => number) => {
-    const widths = tree
-      ? measureDisplayTreeNodes(tree, counts, datasetId ?? '')
-      : new Map<string, number>();
-    return id => widths.get(id)!;
   },
 );

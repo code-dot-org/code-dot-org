@@ -7,10 +7,11 @@ import {
 } from '../../src/helpers/displayTreeLayout';
 
 describe('layoutDisplayTree', () => {
-  const answer = prediction => ({type: 'answer', prediction});
-  const question = (left, right) => ({
+  const answer = (prediction, width) => ({type: 'answer', prediction, width});
+  const question = (left, right, width) => ({
     type: 'question',
     column: 'c',
+    width,
     branches: [
       {kind: 'values', values: ['a'], child: left},
       {kind: 'values', values: ['b'], child: right},
@@ -110,21 +111,15 @@ describe('layoutDisplayTree', () => {
 
   describe('with nodes of their own widths', () => {
     const tree = question(
-      question(answer(1), answer(2)),
-      question(answer(3), question(answer(4), answer(5))),
+      question(answer(1, 60), answer(2, 80), 260),
+      question(
+        answer(3, 120),
+        question(answer(4, 70), answer(5, 150), 90),
+        100,
+      ),
+      200,
     );
-    const widths = {
-      0: 200,
-      '0.0': 260,
-      '0.0.0': 60,
-      '0.0.1': 80,
-      0.1: 100,
-      '0.1.0': 120,
-      '0.1.1': 90,
-      '0.1.1.0': 70,
-      '0.1.1.1': 150,
-    };
-    const layout = layoutDisplayTree(tree, id => widths[id]);
+    const layout = layoutDisplayTree(tree, node => node.width);
     const placedById = Object.fromEntries(
       layout.nodes.map(placed => [placed.id, placed]),
     );
@@ -132,7 +127,7 @@ describe('layoutDisplayTree', () => {
 
     test('each node takes its width', () => {
       layout.nodes.forEach(placed =>
-        expect(placed.width).toBe(widths[placed.id]),
+        expect(placed.width).toBe(placed.node.width),
       );
     });
 

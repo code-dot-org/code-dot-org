@@ -57,16 +57,19 @@ export function edgePath(
 }
 
 interface SubtreeExtent {
-  width: number;
+  nodeWidth: number;
   // The rest are measured from the subtree's left edge.
   span: number;
   center: number;
   childLefts: number[];
 }
 
-function extentOver(width: number, children: SubtreeExtent[]): SubtreeExtent {
+function extentOver(
+  nodeWidth: number,
+  children: SubtreeExtent[],
+): SubtreeExtent {
   if (children.length === 0) {
-    return {width, span: width, center: width / 2, childLefts: []};
+    return {nodeWidth, span: nodeWidth, center: nodeWidth / 2, childLefts: []};
   }
   let right = 0;
   const childLefts = children.map(child => {
@@ -82,10 +85,10 @@ function extentOver(width: number, children: SubtreeExtent[]): SubtreeExtent {
       childLefts[last] +
       children[last].center) /
     2;
-  const overhang = Math.max(0, width / 2 - center);
+  const overhang = Math.max(0, nodeWidth / 2 - center);
   return {
-    width,
-    span: Math.max(childrenSpan, center + width / 2) + overhang,
+    nodeWidth,
+    span: Math.max(childrenSpan, center + nodeWidth / 2) + overhang,
     center: center + overhang,
     childLefts: childLefts.map(left => left + overhang),
   };
@@ -93,7 +96,8 @@ function extentOver(width: number, children: SubtreeExtent[]): SubtreeExtent {
 
 export function layoutDisplayTree(
   root: DisplayTreeNode,
-  nodeWidth: (id: string) => number = () => TREE_NODE_MAX_WIDTH,
+  nodeWidth: (node: DisplayTreeNode, id: string) => number = () =>
+    TREE_NODE_MAX_WIDTH,
   rowGap = TREE_ROW_GAP,
 ): DisplayTreeLayout {
   const extents = new Map<string, SubtreeExtent>();
@@ -105,7 +109,7 @@ export function layoutDisplayTree(
             measure(branch.child, getChildNodeId(id, index)),
           )
         : [];
-    const extent = extentOver(nodeWidth(id), children);
+    const extent = extentOver(nodeWidth(node, id), children);
     extents.set(id, extent);
     return extent;
   };
@@ -122,7 +126,7 @@ export function layoutDisplayTree(
     parent?: PlacedTreeNode,
     branch?: DisplayTreeBranch,
   ): PlacedTreeNode => {
-    const {width, center, childLefts} = extents.get(id)!;
+    const {nodeWidth: width, center, childLefts} = extents.get(id)!;
     const placed: PlacedTreeNode = {
       id,
       node,

@@ -1,23 +1,18 @@
+import {CdoTheme} from '@code-dot-org/component-library/themes';
+
 import {getLocalizedColumnName} from './columnDetails';
-import {
-  DISPLAY_TREE_ROOT_ID,
-  formatNumber,
-  getChildNodeId,
-  type DisplayTreeNode,
-} from './displayTree';
+import {formatNumber, type DisplayTreeNode} from './displayTree';
 import {TREE_NODE_MAX_WIDTH} from './displayTreeLayout';
 import {NO_ROWS, type DisplayTreeNodeCounts} from './displayTreeTrace';
 import {getLocalizedValue} from './valueDetails';
 
-// The node box in decisionTree.module.scss, which these must match.
-const NODE_PADDING = 12;
-const NODE_BORDER = 2;
-const ANSWER_DOT_SIZE = 12;
-const ANSWER_DOT_GAP = 8;
-const LABEL_GAP = 14;
-const GRADES_GAP = 6;
-const GRADE_ICON_SIZE = 11;
-const GRADE_ICON_GAP = 3;
+export const NODE_PADDING_INLINE = 12;
+export const PATH_NODE_BORDER = 2;
+export const ANSWER_DOT_SIZE = 12;
+export const NODE_GAP = 8;
+export const COUNTS_GAP = 6;
+export const GRADE_ICON_SIZE = 11;
+export const GRADE_ICON_GAP = 3;
 
 const GRADES = ['correct', 'incorrect'] as const;
 
@@ -48,32 +43,34 @@ export function showsGrades(
   return node.type === 'answer' && rowCount(counts) > 0;
 }
 
-let context: CanvasRenderingContext2D | undefined;
-
-function textWidth(text: string, font: string): number {
-  context ??= document.createElement('canvas').getContext('2d')!;
-  context.font = font;
-  return context.measureText(text).width;
+function textMeasurer(
+  variant: 'body3' | 'body4',
+  weight: number,
+): (text: string) => number {
+  const {fontFamily, fontSize} = CdoTheme.typography[variant];
+  const rems = parseFloat(String(fontSize));
+  const rootFontSize = parseFloat(
+    getComputedStyle(document.documentElement).fontSize,
+  );
+  const context = document.createElement('canvas').getContext('2d')!;
+  context.font = `${weight} ${rems * rootFontSize}px ${fontFamily}`;
+  return text => context.measureText(text).width;
 }
 
-export function measureDisplayTreeNodes(
-  root: DisplayTreeNode,
-  counts: Map<string, DisplayTreeNodeCounts>,
+export function nodeWidthMeasurer(
   datasetId: string,
-): Map<string, number> {
-  const family = getComputedStyle(document.documentElement).getPropertyValue(
-    '--font-family-main',
-  );
-  const labelFont = `600 14px ${family}`;
-  const rowsFont = `400 12px ${family}`;
-  const gradeFont = `600 12px ${family}`;
+  counts: Map<string, DisplayTreeNodeCounts>,
+): (node: DisplayTreeNode, id: string) => number {
+  const labelWidth = textMeasurer('body3', 600);
+  const rowsWidth = textMeasurer('body4', 400);
+  const gradeWidth = textMeasurer('body4', 600);
 
   const countsWidth = (
     node: DisplayTreeNode,
     nodeCounts: DisplayTreeNodeCounts,
   ): number => {
     if (!showsGrades(node, nodeCounts)) {
-      return textWidth(rowCountText(rowCount(nodeCounts)), rowsFont);
+      return rowsWidth(rowCountText(rowCount(nodeCounts)));
     }
     const shown = GRADES.filter(grade => nodeCounts[grade] > 0);
     return shown.reduce(
@@ -81,33 +78,22 @@ export function measureDisplayTreeNodes(
         sum +
         GRADE_ICON_SIZE +
         GRADE_ICON_GAP +
-        textWidth(String(nodeCounts[grade]), gradeFont),
-      GRADES_GAP * (shown.length - 1),
+        gradeWidth(String(nodeCounts[grade])),
+      COUNTS_GAP * (shown.length - 1),
     );
   };
 
-  const widths = new Map<string, number>();
-  const measure = (node: DisplayTreeNode, id: string) => {
+  return (node, id) => {
     const nodeCounts = counts.get(id) ?? NO_ROWS;
     const contentWidth =
-      (node.type === 'answer' ? ANSWER_DOT_SIZE + ANSWER_DOT_GAP : 0) +
-      textWidth(displayNodeLabel(node, datasetId), labelFont) +
-      LABEL_GAP +
+      (node.type === 'answer' ? ANSWER_DOT_SIZE + NODE_GAP : 0) +
+      labelWidth(displayNodeLabel(node, datasetId)) +
+      NODE_GAP +
+      COUNTS_GAP +
       countsWidth(node, nodeCounts);
-    widths.set(
-      id,
-      Math.min(
-        TREE_NODE_MAX_WIDTH,
-        Math.ceil(contentWidth + 2 * (NODE_PADDING + NODE_BORDER)),
-      ),
+    return Math.min(
+      TREE_NODE_MAX_WIDTH,
+      Math.ceil(contentWidth + 2 * (NODE_PADDING_INLINE + PATH_NODE_BORDER)),
     );
-    if (node.type === 'question') {
-      node.branches.forEach((branch, index) =>
-        measure(branch.child, getChildNodeId(id, index)),
-      );
-    }
   };
-  measure(root, DISPLAY_TREE_ROOT_ID);
-
-  return widths;
 }

@@ -33,7 +33,15 @@ import {
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
 import {
+  ANSWER_DOT_SIZE,
+  COUNTS_GAP,
   displayNodeLabel,
+  GRADE_ICON_GAP,
+  GRADE_ICON_SIZE,
+  NODE_GAP,
+  NODE_PADDING_INLINE,
+  nodeWidthMeasurer,
+  PATH_NODE_BORDER,
   rowCount,
   rowCountText,
   showsGrades,
@@ -45,13 +53,14 @@ import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
   getDisplayTreeCounts,
-  getDisplayTreeNodeWidth,
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
+import TruncatedTextTooltip from './TruncatedTextTooltip';
 
 import appStyles from '../app.module.scss';
 import styles from './decisionTree.module.scss';
@@ -74,6 +83,13 @@ const BRANCH_LABEL_RISE = 19;
 const canvasVariables = {
   '--tree-node-max-width': `${TREE_NODE_MAX_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
+  '--tree-node-padding-inline': `${NODE_PADDING_INLINE}px`,
+  '--tree-path-node-border': `${PATH_NODE_BORDER}px`,
+  '--tree-answer-dot-size': `${ANSWER_DOT_SIZE}px`,
+  '--tree-node-gap': `${NODE_GAP}px`,
+  '--tree-counts-gap': `${COUNTS_GAP}px`,
+  '--tree-grade-icon-size': `${GRADE_ICON_SIZE}px`,
+  '--tree-grade-icon-gap': `${GRADE_ICON_GAP}px`,
   '--tree-branch-offset': `${BRANCH_LABEL_RISE}px`,
 } as CSSProperties;
 
@@ -144,18 +160,25 @@ interface DecisionTreeProps {
 
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const dispatch = useAppDispatch();
-  const tree = useAppSelector(getDisplayTree);
-  const trace = useAppSelector(getPredictionTrace);
-  const step = useAppSelector(getPredictionStep);
+  const {trainedModel} = useTrainingData();
+  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, trainedModel),
+  );
+  const step = useAppSelector(state => getPredictionStep(state, trainedModel));
   const isStepping = useAppSelector(
     state => state.predictionStep !== undefined,
   );
-  const counts = useAppSelector(getDisplayTreeCounts);
-  const nodeWidth = useAppSelector(getDisplayTreeNodeWidth);
+  const counts = useAppSelector(state =>
+    getDisplayTreeCounts(state, trainedModel),
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
-    () => (tree ? layoutDisplayTree(tree, nodeWidth) : undefined),
-    [tree, nodeWidth],
+    () =>
+      tree
+        ? layoutDisplayTree(tree, nodeWidthMeasurer(datasetId, counts))
+        : undefined,
+    [tree, datasetId, counts],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const reachedIds = useMemo(
@@ -169,6 +192,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const keysHintId = useId();
   const nameId = useId();
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
+  const [focusVisibleId, setFocusVisibleId] = useState<string>();
   const [entered, setEntered] = useState(false);
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
@@ -310,9 +334,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               aria-hidden="true"
               className={styles.edges}
             >
-              {edges.map(({id, d}) => (
-                <path key={id} d={d} />
-              ))}
+              {edges
+                .filter(({id}) => id !== nextId)
+                .map(({id, d}) => (
+                  <path key={id} d={d} />
+                ))}
               <g className={styles.marks}>
                 {edges.map(({id, d}) => (
                   <path
@@ -329,9 +355,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             {layout.nodes.map(placed => {
               const text = displayNodeLabel(placed.node, datasetId);
               const label = placed.branch && branchLabel(placed.branch);
-              const branch = label?.sign
-                ? `${label.sign} ${label.text}`
-                : label?.text;
+              const focusVisible = placed.id === focusVisibleId;
               const kind =
                 placed.answerIndex === undefined
                   ? styles.question
@@ -371,25 +395,39 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   aria-setsize={siblings.length}
                   aria-posinset={siblings.indexOf(placed) + 1}
                   tabIndex={entered && placed.id === tabStopId ? 0 : -1}
-                  onFocus={() => setFocusedId(placed.id)}
+                  onFocus={event => {
+                    setFocusedId(placed.id);
+                    setFocusVisibleId(
+                      event.currentTarget.matches(':focus-visible')
+                        ? placed.id
+                        : undefined,
+                    );
+                  }}
+                  onBlur={() => setFocusVisibleId(undefined)}
                   onKeyDown={event => moveFocus(event, placed)}
                   className={styles.nodeSlot}
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
                   {label?.text && (
-                    <div
-                      title={branch}
-                      className={classNames(styles.branch, {
-                        [styles.pathBranch]: reachedIds.has(placed.id),
-                        [styles.nextBranch]: placed.id === nextId,
-                      })}
+                    <TruncatedTextTooltip
+                      focused={focusVisible}
+                      placement="top"
+                      title={
+                        label.sign ? `${label.sign} ${label.text}` : label.text
+                      }
                     >
-                      {label.sign && `${label.sign} `}
-                      <span id={branchId(placed.id)}>{label.text}</span>
-                    </div>
+                      <div
+                        className={classNames(styles.branch, {
+                          [styles.pathBranch]: reachedIds.has(placed.id),
+                          [styles.nextBranch]: placed.id === nextId,
+                        })}
+                      >
+                        {label.sign && `${label.sign} `}
+                        <span id={branchId(placed.id)}>{label.text}</span>
+                      </div>
+                    </TruncatedTextTooltip>
                   )}
                   <div
-                    title={text}
                     className={classNames(styles.node, kind, {
                       [styles.pathNode]: reachedIds.has(placed.id),
                     })}
@@ -401,23 +439,29 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         style={leafColorStyle(placed.answerIndex)}
                       />
                     )}
-                    <Typography
-                      id={textId(placed.id)}
-                      variant="body3"
-                      component="span"
-                      className={styles.nodeText}
+                    <TruncatedTextTooltip
+                      title={text}
+                      focused={focusVisible}
+                      placement="bottom"
                     >
-                      {placed.node.type === 'question' ? (
-                        <>
-                          <span id={columnId(placed.id)}>
-                            {columnText(placed.node)}
-                          </span>
-                          ?
-                        </>
-                      ) : (
-                        text
-                      )}
-                    </Typography>
+                      <Typography
+                        id={textId(placed.id)}
+                        variant="body3"
+                        component="span"
+                        className={styles.nodeText}
+                      >
+                        {placed.node.type === 'question' ? (
+                          <>
+                            <span id={columnId(placed.id)}>
+                              {columnText(placed.node)}
+                            </span>
+                            ?
+                          </>
+                        ) : (
+                          text
+                        )}
+                      </Typography>
+                    </TruncatedTextTooltip>
                     <NodeCounts
                       id={countsId(placed.id)}
                       node={placed.node}

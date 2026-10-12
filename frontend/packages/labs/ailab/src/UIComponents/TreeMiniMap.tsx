@@ -10,6 +10,8 @@ import {
   layoutDisplayTree,
   TREE_NODE_HEIGHT,
 } from '../helpers/displayTreeLayout';
+import {nodeWidthMeasurer} from '../helpers/displayTreeNodeContent';
+import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
 
 import {leafColorStyle} from './leafColors';
 
@@ -23,14 +25,20 @@ const VIEW_MARGIN = 8;
 
 interface TreeMiniMapProps {
   tree: DisplayTreeNode;
-  nodeWidth: (id: string) => number;
+  datasetId: string;
+  counts: Map<string, DisplayTreeNodeCounts>;
   onReplay: () => void;
 }
 
-const TreeMiniMap = ({tree, nodeWidth, onReplay}: TreeMiniMapProps) => {
+const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
   const layout = useMemo(
-    () => layoutDisplayTree(tree, nodeWidth, MINI_ROW_GAP),
-    [tree, nodeWidth],
+    () =>
+      layoutDisplayTree(
+        tree,
+        nodeWidthMeasurer(datasetId, counts),
+        MINI_ROW_GAP,
+      ),
+    [tree, datasetId, counts],
   );
 
   return (

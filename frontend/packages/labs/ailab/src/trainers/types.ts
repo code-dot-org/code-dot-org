@@ -7,6 +7,7 @@ import type {
   TreeRegressionTrainer,
 } from '../constants';
 import type {RootState} from '../redux';
+import type {TrainedModel} from '../types';
 
 /*
   A level selects a trainer family. The label column type then decides
@@ -26,9 +27,12 @@ export type TrainerId =
   | typeof TreeRegressionTrainer;
 
 export interface Trainer {
-  startTraining(): void;
-  predict(testValues: number[]): void;
-  batchPredict(examples: number[][]): (number | string)[];
+  startTraining(): TrainedModel | undefined;
+  predict(trainedModel: TrainedModel | undefined, testValues: number[]): void;
+  batchPredict(
+    trainedModel: TrainedModel | undefined,
+    examples: number[][],
+  ): (number | string)[];
 }
 
 export interface TrainerConstructor {
