@@ -8,7 +8,7 @@ import {
   SCENE_NARRATED_VIDEO_SECONDS,
   serveJsonVideos,
 } from '../shared/json-video-documents';
-import {setSectionAiChatAccessLevel} from '../shared/sections';
+import {setAiChatAccessLevelOnCreate} from '../shared/sections';
 
 // Under an AIF course offering, which enables the deep dive, with two videos.
 const UNIT = 'ui-test-lesson-tutor';
@@ -22,8 +22,7 @@ test.describe('Lesson tutor videos', () => {
     await createTeacherAssociatedStudent(page, {
       studentName: 'Test Student',
       authorized: true,
-      onSectionCreated: ({id}) =>
-        setSectionAiChatAccessLevel(page, id, 'enabled'),
+      onSectionCreated: setAiChatAccessLevelOnCreate(page, 'enabled'),
     });
     await serveJsonVideos(page, [SCENE_NARRATED_VIDEO, MAIN_TRACK_VIDEO]);
     const tutor = new LessonTutorPage(page);

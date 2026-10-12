@@ -57,6 +57,17 @@ export async function setSectionAiChatAccessLevel(
 }
 
 /**
+ * An onSectionCreated hook for createTeacherAssociatedStudent that sets the
+ * new section's AI chat access level.
+ */
+export function setAiChatAccessLevelOnCreate(
+  page: Page,
+  level: AiChatAccessLevel,
+): (section: {id: number}) => Promise<void> {
+  return ({id}) => setSectionAiChatAccessLevel(page, id, level);
+}
+
+/**
  * Join a section through the UI rather than POST /join, so the real
  * enrollment flow runs. The joining account's session must already be current.
  */
