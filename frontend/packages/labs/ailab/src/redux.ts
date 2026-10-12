@@ -11,9 +11,9 @@ import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
-import type {AilabProject} from './ProjectContext';
 import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
+  AilabProject,
   DataRow,
   Metadata,
   Mode,

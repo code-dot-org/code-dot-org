@@ -15,7 +15,7 @@ import {
 import type {TrainedModel} from './types';
 import {useResetSignal} from './useResetSignal';
 
-export interface TrainingDataContextValue {
+interface TrainingDataContextValue {
   trainedModel?: TrainedModel;
   setTrainedModel: (model?: TrainedModel) => void;
   // Taken before a training run so cancelling it can put back what was there.

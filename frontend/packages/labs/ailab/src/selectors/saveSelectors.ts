@@ -3,10 +3,14 @@
 import {getSummaryStat} from '../helpers/accuracy';
 import {getColumnDataToSave} from '../helpers/columnDetails';
 import {getDatasetDetails} from '../helpers/datasetDetails';
-import type {AilabProject} from '../ProjectContext';
 import type {RootState} from '../redux';
 import {getTrainerId} from '../trainers/ids';
-import type {ModelCardColumn, ModelDataToSave, TrainedModel} from '../types';
+import type {
+  AilabProject,
+  ModelCardColumn,
+  ModelDataToSave,
+  TrainedModel,
+} from '../types';
 
 export function getFeaturesToSave(state: RootState): ModelCardColumn[] {
   const features = state.selectedFeatures.map(feature =>

@@ -1,5 +1,4 @@
 import {ColumnTypes} from '../../src/constants';
-import {initialProject} from '../../src/ProjectContext';
 import reducer, {
   initialState,
   setCurrentPanel,
@@ -22,6 +21,7 @@ import reducer, {
   saveModel,
   setTrainingModalStep,
 } from '../../src/redux';
+import {initialProject} from '../../src/types';
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {

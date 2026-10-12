@@ -1,9 +1,3 @@
-/*
-  Everything saved with a student's work and restored when the
-  level loads again.
-  This is a work in progress; more will be added here.
-*/
-
 import {
   createContext,
   useCallback,
@@ -15,25 +9,15 @@ import {
 } from 'react';
 
 import type {TrainingRun} from './trainers/types';
-import type {Hyperparameters, HistoricResult} from './types';
+import {initialProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
 
-export interface AilabProject {
-  hyperparameters?: Hyperparameters;
-  historicResults: HistoricResult[];
-}
-
-export interface ProjectContextValue {
+interface ProjectContextValue {
   project: AilabProject;
   applyTrainingRun: (run?: TrainingRun) => void;
   snapshotTrainingRun: () => void;
   restoreTrainingRun: () => void;
 }
-
-export const initialProject: AilabProject = {
-  hyperparameters: undefined,
-  historicResults: [],
-};
 
 const ProjectContext = createContext<ProjectContextValue | undefined>(
   undefined,

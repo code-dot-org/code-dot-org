@@ -1,7 +1,6 @@
 import I18n from '../i18n';
-import type {AilabProject} from '../ProjectContext';
 import type {RootState} from '../redux';
-import type {NavButton, PrevNextButtons} from '../types';
+import type {AilabProject, NavButton, PrevNextButtons} from '../types';
 
 import {areArraysEqual} from './utils';
 /*
