@@ -197,4 +197,22 @@ describe('QuizQuestionCard', () => {
       expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
     });
   });
+
+  it('opens a free response question saved without choices', () => {
+    // FreeResponseQuestion#builder_content_json sends no choices.
+    const {choices, correctChoiceId, ...shared} = QUESTION;
+    void choices;
+    void correctChoiceId;
+    renderCard({
+      question: {...shared, type: 'FreeResponseQuestion'},
+      isExpanded: true,
+    });
+
+    fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
+
+    expect(screen.queryByRole('button', {name: 'Add option'})).toBeNull();
+    expect(
+      screen.getByLabelText('Answer explanation (optional)')
+    ).toBeInTheDocument();
+  });
 });
