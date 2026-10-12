@@ -214,10 +214,18 @@ LongListCheckboxDropdown.play = async ({canvasElement}) => {
 
   expect(list.scrollHeight).toBeGreaterThan(list.clientHeight);
   const menuBox = menu.getBoundingClientRect();
-  const action = canvas.getByRole('button', {name: 'Done (1)'});
-  expect(
-    Math.abs(menuBox.bottom - action.getBoundingClientRect().bottom),
-  ).toBeLessThan(2);
+  const actionRow = canvas.getByRole('button', {
+    name: 'Done (1)',
+  }).parentElement;
+  if (!actionRow) {
+    throw new Error('checkbox menu action row did not render');
+  }
+  const borderBottom = parseFloat(getComputedStyle(menu).borderBottomWidth);
+  // The row sits inside the menu border. The button is inset by the row padding.
+  expect(menuBox.bottom - actionRow.getBoundingClientRect().bottom).toBeCloseTo(
+    borderBottom,
+    0,
+  );
   expect(menuBox.width).toBeGreaterThanOrEqual(
     trigger.getBoundingClientRect().width - 1,
   );
