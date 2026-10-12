@@ -1,3 +1,4 @@
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 import React from 'react';
 
@@ -36,6 +37,16 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       onChange={e => onChange({...draft, questionTitle: e.target.value})}
       disabled={disabled}
     />
+    <FormFieldWrapper label="Description (optional, markdown supported)">
+      <textarea
+        className={styles.textarea}
+        name="description"
+        rows={5}
+        value={draft.description ?? ''}
+        onChange={e => onChange({...draft, description: e.target.value})}
+        disabled={disabled}
+      />
+    </FormFieldWrapper>
   </div>
 );
 

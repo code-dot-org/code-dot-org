@@ -33,6 +33,7 @@ function toEditableFields(
   return {
     questionName: question.questionName,
     questionTitle: question.questionTitle,
+    description: question.description,
     choices: question.choices,
     correctChoiceId: question.correctChoiceId,
     explanation: question.explanation,

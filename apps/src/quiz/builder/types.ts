@@ -18,6 +18,7 @@ export interface QuizQuestion {
   type: string;
   questionName: string;
   questionTitle: string;
+  description: string | null;
   choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;
@@ -45,6 +46,7 @@ export function isPendingQuestionId(id: number): boolean {
 export interface QuizQuestionEditableFields {
   questionName: string;
   questionTitle: string;
+  description: string | null;
   choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;

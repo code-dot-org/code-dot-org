@@ -66,6 +66,7 @@ export default function useQuizBuilderQuestions(
         id,
         type: 'MultipleChoiceQuestion',
         ...NEW_QUESTION_DEFAULTS,
+        description: null,
         explanation: null,
         standards: [],
         attachedToOtherQuizzes: false,
