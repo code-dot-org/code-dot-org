@@ -83,7 +83,9 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
           variant="outlined"
           color="secondary"
           size="extraSmall"
-          startIcon={<FontAwesomeV6Icon iconName="forward-step" aria-hidden="true" />}
+          startIcon={
+            <FontAwesomeV6Icon iconName="forward-step" aria-hidden="true" />
+          }
           aria-label="Skip to the answer"
           onClick={skip}
         >

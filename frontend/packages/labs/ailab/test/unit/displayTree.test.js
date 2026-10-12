@@ -49,6 +49,8 @@ describe('getDisplayTree on shipped datasets', () => {
         modelPredictions(state, trainedModel),
       );
     },
+    // Whole-dataset training takes seconds on a busy CI runner.
+    30_000,
   );
 
   test('a KNN model has no display tree', () => {
