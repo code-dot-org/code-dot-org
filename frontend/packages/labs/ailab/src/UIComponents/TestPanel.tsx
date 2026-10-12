@@ -135,9 +135,7 @@ const TestPanel = () => {
           </Button>
         </div>
       </section>
-      <div aria-live="polite">
-        <PredictionResult />
-      </div>
+      <PredictionResult />
     </div>
   );
 };

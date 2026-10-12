@@ -1,6 +1,9 @@
 import cookies from 'js-cookie';
 
-import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
+import {
+  StatsigStableIdKey,
+  StatsigStableIdPattern,
+} from '@cdo/generated-scripts/sharedConstants';
 import {api_statsig_stable_id_url} from '@cdo/generated-scripts/studioRoutes';
 
 import {
@@ -11,6 +14,7 @@ import {
 } from '../utils';
 
 const STABLE_ID_KEY = StatsigStableIdKey;
+const STABLE_ID_FORMAT = new RegExp(`^${StatsigStableIdPattern}$`, 'i');
 const STABLE_ID_TIMEOUT_MS = 3000;
 const COOKIE_OPTIONS = {
   path: '/',
@@ -34,11 +38,23 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
+/**
+ * Check whether a value matches the shared Statsig stable ID format.
+ *
+ * Matching is case-insensitive and does not restrict the variant nibble.
+ *
+ * @param {*} value - The value to validate.
+ * @returns {boolean} Whether the value matches the Statsig stable ID format.
+ */
+export function isValidStableId(value) {
+  return typeof value === 'string' && STABLE_ID_FORMAT.test(value);
+}
+
 export async function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
     let stableId = cookies.get(STABLE_ID_KEY);
 
-    if (!stableId) {
+    if (!isValidStableId(stableId)) {
       try {
         const response = await fetch(api_statsig_stable_id_url(), {
           signal: AbortSignal.timeout(STABLE_ID_TIMEOUT_MS),
@@ -54,7 +70,9 @@ export async function findOrCreateStableId() {
       }
     }
 
-    stableId ||= createUuid();
+    if (!isValidStableId(stableId)) {
+      stableId = createUuid();
+    }
 
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
     return stableId;
