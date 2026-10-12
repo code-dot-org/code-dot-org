@@ -14,6 +14,7 @@ import {
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import TraceStepper from './TraceStepper';
 
@@ -24,8 +25,13 @@ const PredictionResult = () => {
   const datasetId = useAppSelector(state => state.metadata?.name || '');
   const labelColumn = useAppSelector(state => state.labelColumn || '');
   const predictedLabel = useAppSelector(getConvertedPredictedLabel);
-  const trace = useAppSelector(getPredictionTrace);
-  const currentStep = useAppSelector(getPredictionStep);
+  const {trainedModel} = useTrainingData();
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, trainedModel),
+  );
+  const currentStep = useAppSelector(state =>
+    getPredictionStep(state, trainedModel),
+  );
   const steppedByHand = useAppSelector(state => state.predictionStepByHand);
   const predictionCount = useAppSelector(state => state.predictionCount);
   const [replays, setReplays] = useState(0);

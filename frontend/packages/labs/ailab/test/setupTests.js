@@ -5,3 +5,7 @@ vi.stubGlobal(
     disconnect() {}
   },
 );
+
+HTMLCanvasElement.prototype.getContext = () => ({
+  measureText: text => ({width: text.length * 8}),
+});

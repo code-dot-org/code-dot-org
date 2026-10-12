@@ -10,16 +10,17 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {
   addSelectedFeature,
   readyToTrain,
   removeSelectedFeature,
   setLabelColumn,
+  setSelectedFeatures,
   setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
-import {store} from '../store';
-import train from '../train';
+import {useTrainingRun} from '../useTrainingRun';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
@@ -35,7 +36,11 @@ const TrainPanel = () => {
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const canTrain = useAppSelector(readyToTrain);
-  const hasTrainingResult = useAppSelector(hasCurrentTrainingResult);
+  const {project} = useProject();
+  const hasTrainingResult = useAppSelector(state =>
+    hasCurrentTrainingResult(state, project),
+  );
+  const {beginRun} = useTrainingRun();
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -63,9 +68,16 @@ const TrainPanel = () => {
     );
   };
 
+  const onSelectAllFeatures = () => {
+    dispatch(setSelectedFeatures(featureOptions.map(option => option.value)));
+  };
+
+  const onRemoveAllFeatures = () => {
+    dispatch(setSelectedFeatures([]));
+  };
+
   const onTrain = () => {
-    train.init(store);
-    train.onClickTrain();
+    beginRun();
     dispatch(setTrainingModalStep('training'));
   };
 
@@ -118,7 +130,11 @@ const TrainPanel = () => {
                   allOptions={featureOptions}
                   checkedOptions={selectedFeatures}
                   onChange={onFeatureChange}
-                  hideControls
+                  doneText="Done"
+                  selectAllText="Select All"
+                  clearAllText="Clear"
+                  onClearAll={onRemoveAllFeatures}
+                  onSelectAll={onSelectAllFeatures}
                 />
               </DropdownProviderWrapper>
             </div>

@@ -1,19 +1,15 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {
   removeSelectedFeature,
   setCurrentPanel,
   setPrediction,
 } from '../../src/redux';
-import train from '../../src/train';
 import WorkspaceHeader from '../../src/UIComponents/WorkspaceHeader';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderHeader({
   panel = 'datasetView',
@@ -21,23 +17,12 @@ function renderHeader({
   onStartOver,
 } = {}) {
   const store = levelStore({});
-  if (trained) {
-    train.reset();
-    train.init(store);
-    train.onClickTrain();
-  }
+  const trainingRun = trained ? runTraining(store) : undefined;
   store.dispatch(setCurrentPanel(panel));
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(WorkspaceHeader, {onStartOver}),
-      ),
-    ),
-  );
+  renderWithProviders(createElement(WorkspaceHeader, {onStartOver}), {
+    store,
+    trainingRun,
+  });
   return store;
 }
 

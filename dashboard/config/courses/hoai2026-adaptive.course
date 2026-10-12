@@ -1,0 +1,24 @@
+{
+  "name": "hoai2026-adaptive",
+  "script_names": [
+    "hoai2026-adaptive"
+  ],
+  "original_script_names": [
+    "hoai2026-adaptive"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoai2026-adaptive",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
