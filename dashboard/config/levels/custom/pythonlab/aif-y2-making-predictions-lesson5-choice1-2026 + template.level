@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-11T00:01:52.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# TODO 1: Import `train_test_split`\n\n# Read data\nf = open(\"beach_days.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs\ninputs = []\nfor row in data:\n  inputs.append([\n      int(row[\"temperature_f\"]),\n      int(row[\"humidity_pct\"]),\n      int(row[\"wind_mph\"])\n  ])\n\n# Define outputs\noutputs = []\nfor row in data:\n  outputs.append(int(row[\"people_at_beach\"]))\n\n# TODO 2: Split data using `train_test_split`\n\n# Create model\nmodel = LinearRegression()\n\n# TODO 3: Fit model\n\n# TODO 4: Measure loss\n\n# TODO 5: Print loss",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "beach_days.csv",
+          "contents": "temperature_f,humidity_pct,wind_mph,people_at_beach\n85,40,5,220\n62,70,15,40\n90,35,3,260\n55,80,20,15\n78,50,8,180\n95,30,2,300\n68,60,12,75\n82,45,6,210\n60,75,18,25\n88,38,4,250\n73,55,10,140\n58,78,22,10\n92,32,3,280\n70,58,11,120\n80,48,7,195\n64,65,14,55\n86,42,5,230\n75,52,9,160\n66,68,16,45\n91,33,2,275",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:02:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:02:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:05:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:05:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

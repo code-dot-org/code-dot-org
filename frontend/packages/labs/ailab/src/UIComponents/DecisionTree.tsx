@@ -45,6 +45,7 @@ import {
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
@@ -99,9 +100,12 @@ interface DecisionTreeProps {
 
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const dispatch = useAppDispatch();
-  const tree = useAppSelector(getDisplayTree);
-  const trace = useAppSelector(getPredictionTrace);
-  const step = useAppSelector(getPredictionStep);
+  const {trainedModel} = useTrainingData();
+  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, trainedModel),
+  );
+  const step = useAppSelector(state => getPredictionStep(state, trainedModel));
   const isStepping = useAppSelector(
     state => state.predictionStep !== undefined,
   );
