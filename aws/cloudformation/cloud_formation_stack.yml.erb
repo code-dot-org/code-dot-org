@@ -560,6 +560,16 @@ Resources:
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dev"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+        - PolicyName: ManageZeroEtlIntegrationDataFilter
+          PolicyDocument:
+            Statement:
+
+              - Effect: Allow
+                Action: 'rds:DescribeIntegrations'
+                Resource: '*' # Unscoped so a daemon can enumerate every Integration to find the match for the current environment type.
+              - Effect: Allow
+                Action: 'rds:ModifyIntegration'
+                Resource: !Ref ZeroETLIntegration
 <% end -%>
 <% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
