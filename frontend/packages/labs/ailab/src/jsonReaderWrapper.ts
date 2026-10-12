@@ -4,7 +4,7 @@ import {setImportedMetadata, setColumnsByDataType} from './redux';
 import {store} from './store';
 import type {Metadata} from './types';
 
-// A superseded or failed load never settles.
+// If a newer load starts first or the fetch fails, the promise never resolves.
 export const parseJSON = (jsonfile: string): Promise<void> =>
   new Promise(resolve => {
     const loadId = getDatasetLoadId();

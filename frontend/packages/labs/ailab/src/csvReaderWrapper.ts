@@ -13,7 +13,7 @@ import {
 import {store} from './store';
 import type {DataRow} from './types';
 
-// A superseded load never settles.
+// If a newer load starts first, the promise never resolves.
 export const parseCSV = (
   csvfile: string,
   download: boolean,
