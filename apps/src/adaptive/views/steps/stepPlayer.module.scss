@@ -128,22 +128,12 @@
   min-height: 0;
   overflow-y: auto;
   padding: 24px;
-  background: var(--background-neutral-primary);
+  background: var(--background-neutral-secondary);
 }
 
-.freeResponseBody {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  max-width: 800px;
-}
-
-.freeResponseActions {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  max-width: 800px;
+// AttemptCard clips overflow; prevent the card from shrinking and hiding content.
+.freeResponseStep > * {
+  flex: none;
 }
 
 .freeResponseTextarea {

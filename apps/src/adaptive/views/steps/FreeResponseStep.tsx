@@ -6,6 +6,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import AttemptCard from '../../../quiz/attempt/AttemptCard';
 import {FreeResponseStep as FreeResponseStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
@@ -25,11 +26,6 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
   const {stepContextMap, updateStepContext} = usePathwayContext();
   const saved = stepContextMap[step.id]?.freeResponse ?? '';
   const [text, setText] = useState(saved);
-
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  useEffect(() => {
-    headingRef.current?.focus();
-  }, []);
 
   // Persist draft after 500 ms of inactivity. Skip the write when the text
   // matches what is already in the store so a mount with a restored value
@@ -53,31 +49,32 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
 
   return (
     <div className={styles.freeResponseStep}>
-      <MuiTypography variant="h2" tabIndex={-1} ref={headingRef}>
-        {step.title}
-      </MuiTypography>
-      <div className={styles.freeResponseBody}>
-        <MuiTypography variant="body1">{step.prompt}</MuiTypography>
+      <AttemptCard
+        title={step.title}
+        description={
+          <MuiTypography variant="body2">{step.prompt}</MuiTypography>
+        }
+        footer={
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            type="button"
+            endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+            disabled={text.trim().length === 0}
+            onClick={handleSubmit}
+          >
+            {continueLabel}
+          </MuiButton>
+        }
+      >
         <textarea
           className={styles.freeResponseTextarea}
           value={text}
           onChange={e => setText(e.target.value)}
           placeholder={step.placeholder}
         />
-      </div>
-      <div className={styles.freeResponseActions}>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          type="button"
-          endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
-          disabled={text.trim().length === 0}
-          onClick={handleSubmit}
-        >
-          {continueLabel}
-        </MuiButton>
-      </div>
+      </AttemptCard>
     </div>
   );
 };
