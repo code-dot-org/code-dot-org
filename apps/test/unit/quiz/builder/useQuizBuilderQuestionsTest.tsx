@@ -13,6 +13,7 @@ const QUESTION = {
     {id: 'b', text: '4'},
   ],
   correctChoiceId: 'b',
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
@@ -121,6 +122,7 @@ describe('useQuizBuilderQuestions', () => {
       questionTitle: 'What is 2 + 3?',
       choices: QUESTION.choices,
       correctChoiceId: 'b',
+      description: null,
       explanation: null,
     };
 

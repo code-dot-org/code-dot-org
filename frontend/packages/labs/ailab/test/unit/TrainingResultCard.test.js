@@ -1,6 +1,7 @@
 import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
+import I18n from '../../src/i18n';
 import {
   removeSelectedFeature,
   setLabelColumn,
@@ -12,6 +13,7 @@ import {levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderCard({trained = true, trainer = 'decisionTree', run} = {}) {
+  I18n.initI18n();
   const store = levelStore({trainer});
   const trainingRun = run ?? (trained ? runTraining(store) : undefined);
   renderWithProviders(createElement(TrainingResultCard), {
@@ -24,6 +26,8 @@ function renderCard({trained = true, trainer = 'decisionTree', run} = {}) {
 const accuracy = () => screen.queryByText('Accuracy');
 
 describe('TrainingResultCard', () => {
+  afterEach(() => I18n.reset());
+
   test('is empty before training', () => {
     renderCard({trained: false});
     expect(accuracy()).toBeNull();

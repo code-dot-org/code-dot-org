@@ -9,7 +9,7 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
-import {useProgress} from '../progress';
+import {Progress, useProgress} from '../progress';
 import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
@@ -57,17 +57,66 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
 }) => {
-  const {
-    progress,
-    statusMap,
-    isLoading,
-    markStarted,
-    markComplete,
-    updateStepContext,
-    saveAnswers,
-    reset,
-  } = useProgress(pathway, progressKey);
-  const [view, setView] = useState<View>({kind: 'map'});
+  const {progress, statusMap, ...actions} = useProgress(pathway, progressKey);
+  if (!progress) {
+    return (
+      <div className={styles.app}>
+        <Loading isLoading />
+      </div>
+    );
+  }
+  // Automatically start on the first checkpoint if there's no progress.
+  const noProgress =
+    progress.started.length === 0 && progress.completed.length === 0;
+  const initialCheckpointId = noProgress
+    ? pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id
+    : undefined;
+  return (
+    <LoadedPathwayApp
+      pathway={pathway}
+      progressKey={progressKey}
+      progress={progress}
+      statusMap={statusMap}
+      initialView={
+        initialCheckpointId
+          ? {kind: 'step', checkpointId: initialCheckpointId}
+          : {kind: 'map'}
+      }
+      initialCheckpointId={initialCheckpointId}
+      {...actions}
+    />
+  );
+};
+
+/** What useProgress returns once the stored progress has loaded. */
+type LoadedProgress = ReturnType<typeof useProgress> & {progress: Progress};
+
+type LoadedPathwayAppProps = PathwayAppProps &
+  LoadedProgress & {
+    initialView: View;
+    /** A checkpoint to mark started on mount, when the initial view opens one. */
+    initialCheckpointId?: string;
+  };
+
+// The pathway once its progress is known. Reads initialView and
+// initialCheckpointId once, on mount.
+const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
+  pathway,
+  progressKey,
+  progress,
+  statusMap,
+  initialView,
+  initialCheckpointId,
+  markStarted,
+  markComplete,
+  updateStepContext,
+  saveAnswers,
+  reset,
+}) => {
+  const [view, setView] = useState<View>(initialView);
+  useEffect(() => {
+    if (initialCheckpointId) markStarted(initialCheckpointId);
+  }, [initialCheckpointId, markStarted]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
@@ -92,8 +141,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   );
   const pathwayContext = useMemo(
     () =>
-      playing &&
-      progress && {
+      playing && {
         pathway,
         checkpoint: playing,
         statusMap,
@@ -103,14 +151,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       },
     [pathway, playing, statusMap, progress, updateStepContext, aiContext]
   );
-
-  if (isLoading) {
-    return (
-      <div className={styles.app}>
-        <Loading isLoading />
-      </div>
-    );
-  }
 
   if (pathwayContext) {
     const isProject = view.kind === 'project';
