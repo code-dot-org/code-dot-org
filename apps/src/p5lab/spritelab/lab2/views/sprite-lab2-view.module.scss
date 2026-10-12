@@ -485,6 +485,14 @@ $editor-strip-height: 41px;
   align-items: center;
 }
 
+.editorStripStart {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 // The Pictures button, the size of a scene tab, so the drawer's door
 // matches the row it sits in.
 .picturesTab {

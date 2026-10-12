@@ -526,13 +526,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ],
     [tabs, enabledTabs]
   );
-  // The switch sits at the end of the workspace's bar; ?editors=tab puts
+  // The switch sits at the end of the workspace's bar (?editors=stripleft:
+  // its start); ?editors=tab puts
   // it inside the open scene's tab, ?editors=float in a pill floating at
   // the workspace's top (its right, with the preview at the left),
   // ?editors=floatright at the top-right whatever the preview's side.
   const editorsPlacement = useMemo(() => {
     const value = queryParams('editors');
-    return value === 'tab' || value === 'float' || value === 'floatright'
+    return value === 'tab' ||
+      value === 'float' ||
+      value === 'floatright' ||
+      value === 'stripleft'
       ? value
       : 'strip';
   }, []);
@@ -552,7 +556,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
-  const editorStrip = editorsShown && editorsPlacement === 'strip';
+  const editorStrip =
+    editorsShown &&
+    (editorsPlacement === 'strip' || editorsPlacement === 'stripleft');
+  // ?editors=stripleft: the switch at the bar's start instead of its end.
+  const editorStripStart = editorsPlacement === 'stripleft';
   // With the preview at the left, the float pill's top-left would be the
   // column's: it goes to the workspace's right instead, like floatright.
   const editorFloat =
@@ -2126,7 +2134,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               >
                 {activeTab === 'World' ? 'World' : 'Workspace'}
               </MuiTypography>
-              <div className={moduleStyles.editorStripEnd}>
+              <div
+                className={
+                  editorStripStart
+                    ? moduleStyles.editorStripStart
+                    : moduleStyles.editorStripEnd
+                }
+              >
                 <EditorSwitch
                   value={activeTab === 'World' ? 'World' : 'Code'}
                   onChange={handleEditorChange}
