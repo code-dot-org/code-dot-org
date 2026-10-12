@@ -2085,11 +2085,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           sceneTabs={
             // A toolbox has no scenes; "New scene" here would put the student
             // default onto the canvas and into the saved toolbox. A pinned
-            // level shows its one scene's tab, with the row disabled.
+            // level shows its one scene's tab, or every scene's with the
+            // others locked, with the row's controls disabled.
             animationsSeeded && !isToolboxMode ? (
               <SceneTabs
                 scenes={
-                  pinnedSceneId
+                  pinnedSceneId &&
+                  levelProperties.levelMode?.sceneTabs !== 'all'
                     ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
                     : sceneMetadata
                 }
