@@ -26,6 +26,7 @@ describe('TreeMiniMap', () => {
       createElement(TreeMiniMap, {
         tree: question(question(answer(1), answer(2)), answer(3)),
         datasetId: 'unknown',
+        counts: new Map(),
         onReplay: () => {},
       }),
     );

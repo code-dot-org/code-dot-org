@@ -1,6 +1,7 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
+import {getGradeOptions, gradeAccuracy} from '../helpers/accuracy';
 import {
   getUniqueOptions,
   getLocalizedColumnName,
@@ -11,7 +12,9 @@ import {
   type SerializedTree,
 } from '../helpers/displayTree';
 import {
+  countDisplayTreeRows,
   traceDisplayTree,
+  type DisplayTreeNodeCounts,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
@@ -298,3 +301,30 @@ export function getPredictionStep(
   const pathLength = getPredictionTrace(state, trainedModel)?.path.length ?? 0;
   return state.predictionStep ?? pathLength - 1;
 }
+
+// Counts the held-out rows, so the correct counts sum to the accuracy score's.
+export const getDisplayTreeCounts = createSelector(
+  [
+    getDisplayTree,
+    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
+    (state: RootState) => state.accuracyCheckExamples,
+    (state: RootState) => state.accuracyCheckLabels,
+    (state: RootState) => state.accuracyCheckPredictedLabels,
+    (state: RootState) => getGradeOptions(state).tolerance,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    examples: number[][],
+    labels: (number | string)[],
+    predictedLabels: (number | string)[],
+    tolerance: number | undefined,
+  ): Map<string, DisplayTreeNodeCounts> => {
+    if (!tree) {
+      return new Map();
+    }
+    const {grades} = gradeAccuracy(predictedLabels, labels, {tolerance});
+    const {root} = trainedModel!.toJSON() as SerializedTree;
+    return countDisplayTreeRows(tree, root!, examples, grades);
+  },
+);
