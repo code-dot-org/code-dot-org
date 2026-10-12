@@ -176,8 +176,6 @@ const EDITOR_FLOAT_ROOM_PX = 58;
 // The floating switch's gap from the preview column at the workspace's
 // right: room for the workspace's vertical scrollbar beside it.
 const EDITOR_FLOAT_RIGHT_GAP_PX = 28;
-// The floating switch's own offset from the pane's left (its stylesheet's).
-const EDITOR_FLOAT_LEFT_PX = 8;
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -534,10 +532,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
   const editorStrip = editorChoice && editorsPlacement === 'strip';
-  const editorFloat = editorChoice && editorsPlacement === 'float';
+  // With the preview at the left, the float pill's top-left would be the
+  // column's: it goes to the workspace's right instead, like floatright.
+  const editorFloat =
+    editorChoice && editorsPlacement === 'float' && previewSide !== 'left';
   // ?editors=floatright: the same pill at the workspace's top-right, where
   // nothing sits beneath it and nothing has to move down.
-  const editorFloatRight = editorChoice && editorsPlacement === 'floatright';
+  const editorFloatRight =
+    editorChoice &&
+    (editorsPlacement === 'floatright' ||
+      (editorsPlacement === 'float' && previewSide === 'left'));
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -2105,8 +2109,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                           (previewSide === 'right' ? previewWidth : 0) +
                           EDITOR_FLOAT_RIGHT_GAP_PX,
                       }
-                    : previewSide === 'left'
-                    ? {left: previewWidth + EDITOR_FLOAT_LEFT_PX}
                     : undefined
                 }
               >
@@ -2285,6 +2287,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
               onLayout={handleGuideLayout}
+              side={previewSide}
               instructions={guide.text}
               collapsedText={guide.collapsedText}
               showContinue={guide.showContinue}

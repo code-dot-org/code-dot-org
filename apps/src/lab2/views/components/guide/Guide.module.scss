@@ -52,6 +52,12 @@
   flex-direction: column;
   position: absolute;
   right: var(--guide-right-offset);
+
+  // From the left edge instead, at the same distance.
+  &.guideLeft {
+    right: auto;
+    left: var(--guide-right-offset);
+  }
   border-radius: 14px;
   padding: var(--guide-padding);
   border: 1px solid var(--borders-neutral-primary);

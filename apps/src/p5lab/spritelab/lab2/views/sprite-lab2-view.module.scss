@@ -939,16 +939,6 @@ $editor-strip-height: 46px;
   border-left: none;
 }
 
-// The preview's card: a rounded panel behind the box and its bar, one of
-// the column's two.
-.previewCard {
-  position: absolute;
-  box-sizing: border-box;
-  border-radius: 14px;
-  background: var(--background-neutral-tertiary);
-  border: 1px solid var(--borders-neutral-primary);
-}
-
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
 // animate between the corner preview and the centered play view.
 .playspaceBox {

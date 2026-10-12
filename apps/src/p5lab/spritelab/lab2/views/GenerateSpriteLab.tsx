@@ -7,7 +7,21 @@ import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/Navigat
 import {isFreeplayMode, LevelMode} from '../levelMode';
 import {SpriteLab2LevelProperties} from '../types';
 
+import ObjectivesList from './components/ObjectivesList';
 import {showTtsFor} from './showTts';
+
+// TEMPORARY layout stress test (Brendan, 2026-10-12): the longest checklist
+// in PR #75833 (the player level), shown on free play's docked guide.
+const STRESS_OBJECTIVES = {
+  title: '**Make your character the player.**',
+  items: [
+    {text: 'Drag **set as player** onto the dotted outline.', done: true},
+    {
+      text: 'Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.',
+      done: false,
+    },
+  ],
+};
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -58,6 +72,8 @@ interface GenerateSpriteLabProps {
   /** Rendered in place, as a panel its parent lays out, instead of
       floating over the lab; never collapsible. */
   docked?: boolean;
+  /** Which side the floating panel hangs from; right by default. */
+  side?: 'left' | 'right';
 }
 
 /**
@@ -73,6 +89,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   showContinue,
   levelProperties,
   docked = false,
+  side,
 }) => {
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
@@ -113,12 +130,20 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   }, []);
 
   const showTts = showTtsFor(levelProperties);
-  const instructionsBlock = instructions && (
-    <MainInstructionsContent
-      instructionsText={instructions}
-      markdownClassName={moduleStyles.guideInstructions}
-      showTts={showTts}
+  const instructionsBlock = docked ? (
+    <ObjectivesList
+      title={STRESS_OBJECTIVES.title}
+      items={STRESS_OBJECTIVES.items}
+      showTts
     />
+  ) : (
+    instructions && (
+      <MainInstructionsContent
+        instructionsText={instructions}
+        markdownClassName={moduleStyles.guideInstructions}
+        showTts={showTts}
+      />
+    )
   );
 
   // Freeplay's guide sits over a full lab; the guided levels need theirs open.
@@ -157,6 +182,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   return (
     <Guide
       position="bottom"
+      side={side}
       width={width ?? 'normal'}
       collapsed={collapsed}
       cornerIcon={
