@@ -23,7 +23,6 @@ describe('startOver', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  // ProjectContext acts on this flag; see ProjectContext.test.js.
   test('asks the reset to keep the results already earned', () => {
     startOver();
 

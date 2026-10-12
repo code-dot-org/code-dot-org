@@ -86,8 +86,6 @@ describe('train.cancel', () => {
     train.onClickTrain();
   };
 
-  // Cancel undoes only the Redux half of a run; ProjectContext and
-  // TrainingDataContext undo theirs, and useTrainingRun drives all three.
   test('puts back the results from before the cancelled run', () => {
     const store = levelStore({});
     trainOnce(store);

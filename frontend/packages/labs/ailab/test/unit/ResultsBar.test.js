@@ -7,7 +7,6 @@ import ResultsBar from '../../src/UIComponents/ResultsBar';
 import {levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
-// Results arrive oldest first, the order a student would train them in.
 function renderBar(results) {
   renderWithProviders(createElement(ResultsBar), {
     store: levelStore(),

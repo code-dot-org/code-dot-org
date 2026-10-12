@@ -22,7 +22,7 @@ export function runTraining(store) {
   return train.onClickTrain();
 }
 
-// The project a run leaves behind, for tests that work outside React.
+// The project a run leaves behind, for tests that work outside the module.
 export function projectFromRun(run) {
   return {
     hyperparameters: run?.hyperparameters,
@@ -39,7 +39,7 @@ function applyRun({trainingData, project}, run) {
   project.applyTrainingRun(run);
 }
 
-// Seeds a run made outside React, and keeps both context values reachable.
+// Seeds a run made outside the module, and keeps both context values reachable.
 const ContextProbe = ({trainingRun, report}) => {
   const trainingData = useTrainingData();
   const project = useProject();

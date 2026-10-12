@@ -25,7 +25,6 @@ const JEANS_COLUMNS = {
 };
 
 function savedTrainerId(store) {
-  // The trainer id comes off the label column, so an untrained project is fine.
   return getTrainedModelDataToSave(store.getState(), initialProject)
     .selectedTrainer;
 }
