@@ -921,10 +921,14 @@ $editor-strip-height: 46px;
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.
+// Over the toolbox's own stacking (70), under the pictures drawer's (72):
+// the box slides back from the play view across the toolbox as the
+// workspace reappears, and must pass over it, not under. Clicks fall
+// through; the overlay paints only the column and the box.
 .playspaceOverlay {
   position: absolute;
   inset: 0;
-  z-index: 5;
+  z-index: 71;
   overflow: hidden;
   pointer-events: none;
 }
