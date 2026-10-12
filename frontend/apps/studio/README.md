@@ -37,7 +37,33 @@ Each lab owns its fixtures under `packages/labs/<lab>/src/fixtures/` and
 exposes them via the `./mocks` export subpath. See
 `packages/core/src/api/mocks/README.md` for the handler/fixture model.
 
-## Routes
+## Packaged activity launchpad prototype
+
+`launchpad/index.html` and `launchpad/application.tsx` provide a separate,
+signed-out home screen built from this Studio application. It uses the existing
+React/MUI theme and presents five hosted activities selected from Exhibit A.
+It does not boot the Rails router, authentication, API clients, or lab modules.
+This is a distinct build entry, not an export for another application to import.
+
+From `frontend/`:
+
+```bash
+yarn build:launchpad --filter @code-dot-org/studio
+yarn workspace @code-dot-org/studio dev:launchpad
+```
+
+The preview is served at `http://127.0.0.1:5173/`. Browser selections open normal
+website tabs; only the installed app demonstrates native navigation containment.
+`vite.launchpad.config.ts` emits a standalone `dist-launchpad/index.html` with
+relative assets, without changing the existing Rails build or route prefix.
+`frontend/apps/fire-tablet` packages that directory for Android and iOS; see
+[its README](../fire-tablet/README.md) for native commands and limitations.
+
+The catalog and platform-neutral opening call live in `src/modules/launchpad/`.
+Later, a selected entry can navigate to a local Studio lab instead of opening a
+hosted course. This prototype only implements the hosted destinations.
+
+## Studio routes
 
 Routes are file-based under `src/routes/` using TanStack Router. Read `src/routeTree.gen.ts` or the files in `src/routes/` directly to see current routes — enumerating them here would go stale.
 

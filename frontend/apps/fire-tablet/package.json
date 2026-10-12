@@ -1,0 +1,36 @@
+{
+  "name": "@code-dot-org/fire-tablet",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "android:build:debug": "yarn android:sync && cd android && ./gradlew assembleDebug",
+    "android:build:release": "yarn android:sync && cd android && ./gradlew assembleRelease",
+    "android:sync": "yarn build && cap sync android",
+    "build": "yarn run -T turbo build:launchpad --filter @code-dot-org/studio",
+    "dev": "yarn workspace @code-dot-org/studio dev:launchpad",
+    "ios:open": "cap open ios",
+    "ios:sync": "yarn build && cap sync ios",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "yarn workspace @code-dot-org/studio exec vite preview --config vite.launchpad.config.ts",
+    "test": "yarn workspace @code-dot-org/studio exec vitest run src/modules/launchpad",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/ios": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

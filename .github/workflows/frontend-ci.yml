@@ -10,6 +10,7 @@ on:
     paths:
       - "frontend/**"
       - ".github/**"
+      - ".nvmrc"
   push:
     branches:
       - staging
@@ -17,6 +18,7 @@ on:
     paths:
       - "frontend/**"
       - ".github/**"
+      - ".nvmrc"
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -31,6 +33,7 @@ jobs:
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
+      fire-tablet-changed: ${{ steps.changes.outputs.fire-tablet }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
       markdown-changed: ${{ steps.changes.outputs.markdown }}
       users-changed: ${{ steps.changes.outputs.users }}
@@ -60,6 +63,18 @@ jobs:
               - 'frontend/apps/studio/**'
               - 'frontend/*'
               - '.github/**'
+            fire-tablet:
+              - 'frontend/apps/fire-tablet/**'
+              - 'frontend/apps/studio/**'
+              - 'frontend/packages/component-library/**'
+              - 'frontend/packages/fonts/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/packages/component-library-styles/**'
+              - 'frontend/*'
+              - '.nvmrc'
+              - '.github/workflows/frontend-ci.yml'
+              - '.github/workflows/fire-tablet-ci.yml'
+              - '.github/actions/frontend/setup/**'
             oceans:
               - 'frontend/packages/labs/oceans/**'
               - 'frontend/packages/core/**'
@@ -104,6 +119,12 @@ jobs:
     needs: setup
     uses: ./.github/workflows/studio-ci.yml
     secrets: inherit
+
+  # Start the Fire Tablet wrapper CI workflow
+  fire-tablet:
+    if: ${{ needs.setup.outputs.fire-tablet-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/fire-tablet-ci.yml
 
   # Start the component library CI workflow
   component-library:

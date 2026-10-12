@@ -78,6 +78,20 @@
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
+    },
+    "@code-dot-org/fire-tablet#build": {
+      "dependsOn": ["@code-dot-org/studio#build:launchpad"],
+      "outputs": []
+    },
+    "@code-dot-org/fire-tablet#test": {
+      "dependsOn": ["@code-dot-org/studio#build:launchpad"]
+    },
+    "build:launchpad": {
+      "dependsOn": [
+        "@code-dot-org/component-library#build",
+        "@code-dot-org/fonts#build"
+      ],
+      "outputs": ["dist-launchpad/**"]
     }
   }
 }

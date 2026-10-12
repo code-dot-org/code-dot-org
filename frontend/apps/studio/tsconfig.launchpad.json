@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.app.json",
+  "include": [
+    "launchpad/application.tsx",
+    "src/modules/launchpad",
+    "src/setupTests.ts"
+  ]
+}

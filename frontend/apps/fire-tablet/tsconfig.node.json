@@ -1,0 +1,4 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.node.json",
+  "include": ["capacitor.config.ts"]
+}

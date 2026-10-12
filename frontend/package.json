@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "build": "turbo build",
+    "build:launchpad": "turbo build:launchpad",
     "clean": "turbo clean",
     "dev": "turbo clean --filter '@code-dot-org/studio...' && turbo watch dev --filter @code-dot-org/studio",
     "format": "prettier --check *",
