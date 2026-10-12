@@ -187,14 +187,6 @@ const ailabSlice = createSlice({
     },
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
-      if (
-        state.mode &&
-        state.mode.datasets &&
-        state.mode.datasets.length > 1 &&
-        state.mode.hideSelectLabel
-      ) {
-        state.labelColumn = action.payload.defaultLabelColumn;
-      }
     },
     setRemovedRowsCount(state, action: PayloadAction<number>) {
       state.removedRowsCount = action.payload;

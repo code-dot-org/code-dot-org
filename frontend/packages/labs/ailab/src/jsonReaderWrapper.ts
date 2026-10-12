@@ -38,8 +38,9 @@ const updateData = (result: string): void => {
     }
   }
 
+  // A level that hides the label picker takes the dataset's own default. This
+  // is the only place that rule lives.
   if (state.mode && state.mode.hideSelectLabel && metadata.defaultLabelColumn) {
-    // Use the manifest's default label instead.
     store.dispatch(setLabelColumn(metadata.defaultLabelColumn));
   }
 };
