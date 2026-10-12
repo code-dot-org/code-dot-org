@@ -223,8 +223,9 @@
 
   .bottomButtonsContainer {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
+    gap: 0.25rem;
     padding: 0.25rem;
 
     border-radius: 0 0 0.25rem 0.25rem;

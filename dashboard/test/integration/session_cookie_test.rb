@@ -66,7 +66,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     it 'persists through sign-in and rotates after sign-out' do
       get '/'
       initial_stable_id = request_statsig_stable_id
-      _(initial_stable_id).must_match Cdo::AnonUserId::FORMAT
+      _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
       _(cookies[:statsig_stable_id]).must_be_nil
       _(session[:statsig_stable_id]).must_equal initial_stable_id
 
@@ -86,7 +86,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
       get '/'
       rotated_stable_id = request.statsig_stable_id
-      _(rotated_stable_id).must_match Cdo::AnonUserId::FORMAT
+      _(rotated_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
       _(rotated_stable_id).wont_equal initial_stable_id
       _(cookies[:statsig_stable_id]).must_be_empty
       _(session[:statsig_stable_id]).must_equal rotated_stable_id
