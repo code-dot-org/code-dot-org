@@ -9,7 +9,6 @@ import {
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import experiments from '@cdo/apps/util/experiments';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ProgressLesson', () => {
   const lessonNumber = 3;
@@ -380,7 +379,6 @@ describe('ProgressLesson', () => {
       lesson: tutorLesson,
       viewAs: ViewType.Participant,
       userId: 1,
-      aiChatAccessLevel: AiChatAccessLevels.ENABLED,
     };
 
     let realIsEnabled;
@@ -409,17 +407,6 @@ describe('ProgressLesson', () => {
         <ProgressLesson {...tutorProps} viewAs={ViewType.Instructor} />
       );
       expect(wrapper.text()).toContain('Lesson Tutor');
-    });
-
-    it('does not show with essential-only AI chat access', () => {
-      experiments.isEnabled = jest.fn(() => true);
-      const wrapper = shallow(
-        <ProgressLesson
-          {...tutorProps}
-          aiChatAccessLevel={AiChatAccessLevels.ESSENTIAL_ONLY}
-        />
-      );
-      expect(wrapper.text()).not.toContain('Lesson Tutor');
     });
 
     it('does not show when signed out', () => {

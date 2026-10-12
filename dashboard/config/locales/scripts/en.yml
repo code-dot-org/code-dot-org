@@ -29615,14 +29615,46 @@ en:
             :::
           student_description: ''
         aif-year2-semester1-unit4:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
           name: aif-year2-semester1-unit4
-          title: AIF Year 2 Semester 1 Unit 4
+          title: Making Predictions
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to problems in the domain of supervised machine learning, inviting them to write Python code to train classification and regression models.
+
+            Students introduced to industry-standard tools like `scikit-learn` that introduce helpful abstractions to facilitate the process of building machine learning systems. As students build their first AI systems, they make use of the machine learning fundamentals and data analysis skills from Unit 2 and Unit 3, writing code to split data into training and test sets, training machine learning models, and visualizing the results of their work.
+          student_description: |-
+            This unit introduces you to problems in the domain of supervised machine learning, inviting you to write Python code to train classification and regression models.
+
+            You'll be introduced to industry-standard tools like `scikit-learn` that introduce helpful abstractions to facilitate the process of building machine learning systems. As you build your first AI systems, you'll make use of the machine learning fundamentals and data analysis skills from Unit 2 and Unit 3, writing code to split data into training and test sets, training machine learning models, and visualizing the results of your work.
         aif-year2-semester1-unit5:
           lessons: {}
           lesson_groups: {}
@@ -30378,6 +30410,8 @@ en:
               name: 'Lesson 11: Machine Learning'
             lesson-27:
               name: 'Lesson 15: Algorithmic Bias'
+            lesson-28:
+              name: 'Lesson 17: The Need for Programming Languages'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
@@ -31019,3 +31053,14 @@ en:
         pl-sandbox-aif-year2-onboarding:
           lessons: {}
           lesson_groups: {}
+        hoai2026-adaptive:
+          lessons:
+            lesson-1:
+              name: adaptive-progression
+          lesson_groups: {}
+          name: hoai2026-adaptive
+          title: Hour of AI 2026 - Adaptive Weblab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
