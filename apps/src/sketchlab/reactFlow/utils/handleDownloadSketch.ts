@@ -2,7 +2,10 @@ import {type ReactFlowInstance} from '@xyflow/react';
 
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 
-import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
+import {
+  CAPTURE_ERROR,
+  createSketchSnapshotBlob,
+} from './createSketchSnapshotBlob';
 
 export const handleDownloadSketch = async (
   reactFlow: ReactFlowInstance | null,
@@ -13,7 +16,7 @@ export const handleDownloadSketch = async (
     await dialogControl.showDialog({
       type: DialogType.GenericAlert,
       title: 'Unable to download sketch',
-      message: error ?? 'Could not capture your sketch. Please try again.',
+      message: error ?? CAPTURE_ERROR,
     });
     return;
   }

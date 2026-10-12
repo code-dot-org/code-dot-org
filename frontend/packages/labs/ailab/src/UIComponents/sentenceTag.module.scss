@@ -7,6 +7,11 @@
   border: 1px solid;
   border-radius: var(--shape-sm);
   white-space: nowrap;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-brand-primary);
+    outline-offset: 2px;
+  }
 }
 
 // Rules below use two classes to outrank the Typography variant's own weight,

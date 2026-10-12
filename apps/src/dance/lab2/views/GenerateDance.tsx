@@ -6,7 +6,6 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
-import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {DanceLevelProperties} from '@cdo/apps/dance/types';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -21,7 +20,7 @@ import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instruction
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import buildDanceBlockly from '../../blockly/buildDanceBlockly';
 
@@ -250,17 +249,11 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
     }
   }, [aiGenerateState]);
 
-  const hasParent = !!useParentLevelProperties();
-  const dispatch = useAppDispatch();
-  const sublevelOnContinue = useCallback(() => {
-    dispatch(
-      sendSuccessReportForLevel(
-        levelProperties.id.toString(),
-        levelProperties.appName
-      )
-    );
-  }, [dispatch, levelProperties.appName, levelProperties.id]);
-
+  const parent = useParentLevelProperties();
+  const hasParent = !!parent;
+  // Only a sublevel in a lesson has somewhere to continue to; a standalone
+  // project has no progression to finish.
+  const showNavigation = hasParent && !parent.isProjectLevel;
   const showTts =
     levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
 
@@ -456,7 +449,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
             >
               {'Back to prompt'}
             </MuiButton>
-            {hasParent && (
+            {showNavigation && (
               <NavigationArea
                 levelProperties={levelProperties}
                 // The following props don't really matter as we don't have a Submit button or validation here.
@@ -464,8 +457,6 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
                 hasEdited={true}
                 isRunning={false}
                 className={styles.buttonWide}
-                // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                onContinue={sublevelOnContinue}
                 textVariant={'simple'}
               />
             )}

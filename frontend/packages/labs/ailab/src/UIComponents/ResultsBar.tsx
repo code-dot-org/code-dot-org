@@ -28,6 +28,8 @@ const ResultsBar = () => {
           label={currentResult.label}
           features={currentResult.features}
           size="m"
+          singleLine
+          className={styles.sentence}
         />
         <div className={styles.buttons}>
           <Button
@@ -48,7 +50,12 @@ const ResultsBar = () => {
             variant="outlined"
             color="secondary"
             size="extraSmall"
-            startIcon={<FontAwesomeV6Icon iconName="clock-rotate-left" />}
+            startIcon={
+              <FontAwesomeV6Icon
+                iconName="clock-rotate-left"
+                aria-hidden="true"
+              />
+            }
             onClick={() => setOpenTab('allResults')}
           >
             All results

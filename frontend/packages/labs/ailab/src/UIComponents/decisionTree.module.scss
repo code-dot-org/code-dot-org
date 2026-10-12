@@ -1,7 +1,17 @@
 @use '../sharedMixins' as mixins;
 
+$path-ring-width: 3px;
 $path-color: var(--border-selected-primary);
+$path-node-background: var(--background-brand-light);
+$path-node-text-color: var(--text-selected-primary-inverse);
 $off-path-color: var(--background-neutral-septenary);
+$focus-ring-width: 2px;
+$focus-ring-gap: 2px;
+$focus-color: var(--border-focused-primary);
+$node-radius: 6px;
+$answer-dot-size: 12px;
+$branch-height: 22px;
+$canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
 
 .decisionTree {
@@ -23,11 +33,62 @@ $overlay-float-min-width: 600px;
   @include mixins.canvas-overlay;
 }
 
+.canvasGroup {
+  &:focus-visible {
+    outline: none;
+  }
+
+  // The panel's scroll box clips a ring outside the canvas, and its content paints over one inside it.
+  &:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    outline: $focus-ring-width solid $focus-color;
+    outline-offset: -$focus-ring-width;
+    pointer-events: none;
+  }
+}
+
+.hints {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  // The 300px Test panel floats only in a canvas at least twice its width.
+  max-width: calc(50cqi - 16px);
+
+  .hint {
+    grid-area: 1 / 1;
+    justify-self: start;
+    padding: 4px 8px;
+    border: 1px solid var(--border-neutral-primary);
+    border-radius: var(--shape-sm);
+    background-color: var(--background-neutral-primary);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-neutral-secondary);
+    visibility: hidden;
+  }
+}
+
+.canvasGroup:focus-visible .shownHint,
+.canvasGroup:has(:focus-visible) .shownHint {
+  visibility: visible;
+}
+
+@supports not selector(:has(*)) {
+  .canvasGroup:focus-within .shownHint {
+    visibility: visible;
+  }
+}
+
 @container (width < #{$overlay-float-min-width}) {
   .overlay {
     position: static;
     align-self: flex-end;
     max-height: none;
+  }
+
+  .hints {
+    max-width: calc(100cqi - 16px);
   }
 }
 
@@ -46,31 +107,76 @@ $overlay-float-min-width: 600px;
   stroke-width: 1.5;
 }
 
-.pathEdge {
+.marks {
   stroke: $path-color;
   stroke-width: 2;
+  stroke-opacity: 0;
+
+  path {
+    transition: stroke-opacity mixins.$mark-transition;
+  }
+}
+
+.pathEdge,
+.nextEdge {
+  stroke-opacity: 1;
+}
+
+.nextEdge {
+  stroke-dasharray: 5 4;
 }
 
 .nodeSlot {
   position: absolute;
   width: var(--tree-node-width);
   height: var(--tree-node-height);
+  border-radius: $node-radius;
+
+  &:focus-visible {
+    z-index: 1;
+    height: auto;
+    outline: calc(#{$focus-ring-width} / #{$canvas-scale}) solid $focus-color;
+    outline-offset: calc(
+      #{$path-ring-width} + #{$focus-ring-gap} / #{$canvas-scale}
+    );
+
+    .node {
+      padding-block: 2px;
+    }
+
+    .nodeText {
+      -webkit-line-clamp: unset;
+    }
+
+    .branch {
+      width: max-content;
+      height: auto;
+      transform: translate(-50%, calc(-100% + #{$branch-height * 0.5}));
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+  }
 }
 
 .node {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  min-height: var(--tree-node-height);
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
   padding: 0 8px;
   border-width: 1.5px;
   border-style: solid;
-  border-radius: 6px;
+  border-radius: $node-radius;
   font-size: 13px;
+  font-weight: 600;
   line-height: 1.2;
-  text-align: center;
+  transition:
+    border-color mixins.$mark-transition,
+    background-color mixins.$mark-transition,
+    color mixins.$mark-transition;
 }
 
 .question,
@@ -83,6 +189,18 @@ $overlay-float-min-width: 600px;
 .pathNode {
   border-color: $path-color;
   border-width: 2px;
+  background-color: $path-node-background;
+  color: $path-node-text-color;
+}
+
+.answerDot {
+  flex-shrink: 0;
+  width: $answer-dot-size;
+  height: $answer-dot-size;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  background-color: var(--leaf-color);
 }
 
 .nodeText {
@@ -100,6 +218,7 @@ $overlay-float-min-width: 600px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   max-width: 100%;
+  height: $branch-height;
   line-height: 18px;
   padding: 2px 10px;
   border-radius: var(--shape-round);
@@ -108,6 +227,7 @@ $overlay-float-min-width: 600px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: background-color mixins.$mark-transition;
 }
 
 .pathBranch {
@@ -116,9 +236,18 @@ $overlay-float-min-width: 600px;
   font-weight: 600;
 }
 
+.nextBranch {
+  background-color: var(--background-neutral-primary);
+  box-shadow: inset 0 0 0 1px $path-color;
+}
+
 @media (forced-colors: active) {
   .pathNode,
   .pathBranch {
-    outline: 3px solid;
+    outline: $path-ring-width solid;
+  }
+
+  .nextBranch {
+    outline: 1px dashed;
   }
 }

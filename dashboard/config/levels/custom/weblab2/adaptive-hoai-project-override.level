@@ -1,0 +1,13 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T00:35:18.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-hoai-template",
+    "hide_share_and_remix": true,
+    "long_instructions": "1.  Find one small thing on your page to fix, like a word, or a color.\n2.  Change it yourself in the code.\n3.  Run your page to check your fix.\n\nWas editing faster than asking the AI?"
+  },
+  "published": true
+}]]></config>
+</Weblab2>

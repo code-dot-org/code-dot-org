@@ -70,6 +70,39 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'lab2 level derives validations from requireAccuracy' do
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: 70}.to_json)
+    met, unmet = level.get_validations
+    assert_equal [{'name' => 'ACCURACY_AT_LEAST', 'value' => 70}], met['conditions']
+    assert met['next']
+    assert_equal 'Train a model with at least 70% accuracy to continue.', unmet['message']
+    refute unmet['next']
+    assert level.validated?
+  end
+
+  test 'lab2 level without a positive requireAccuracy has no validations' do
+    [{datasets: ['zoo']}, {datasets: ['zoo'], requireAccuracy: 0}].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode.to_json)
+      assert_nil level.get_validations
+      refute level.validated?
+    end
+  end
+
+  test 'legacy level has no validations' do
+    level = build(:ailab, mode: {requireAccuracy: 70}.to_json)
+    assert_nil level.get_validations
+  end
+
+  test 'lab2 level is channel backed' do
+    level = build(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}')
+    assert level.channel_backed?
+  end
+
+  test 'legacy level is not channel backed' do
+    level = build(:ailab, mode: '{"hideSave": true}')
+    refute level.channel_backed?
+  end
+
   test 'legacy level does not require a dataset' do
     [nil, 'false'].each do |uses_lab2|
       level = build(:ailab, uses_lab2: uses_lab2, mode: '{"hideSave": true}')

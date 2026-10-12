@@ -1,3 +1,5 @@
+@use '../sharedMixins' as mixins;
+
 .groups {
   display: flex;
   flex-direction: column;
@@ -5,8 +7,10 @@
   padding: 20px 24px 24px;
 }
 
+// Fixed, so a cell's width never grows to fit an uncollapsed sentence.
 .table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
 
   // Code Studio's global th rule fills headers and borders them in white.
@@ -34,12 +38,9 @@
 }
 
 .accuracy {
+  @include mixins.accuracy-readout;
+
   width: 80px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
-  white-space: nowrap;
-  color: var(--text-neutral-primary);
 }
 
 .empty {
