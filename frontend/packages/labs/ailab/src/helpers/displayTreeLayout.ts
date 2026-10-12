@@ -99,7 +99,8 @@ function boxAround(nodeWidth: number, children: SubtreeBox[]): SubtreeBox {
 
 export function layoutDisplayTree(
   root: DisplayTreeNode,
-  nodeWidth: (node: DisplayTreeNode) => number = () => TREE_NODE_MAX_WIDTH,
+  nodeWidth: (node: DisplayTreeNode, id: string) => number = () =>
+    TREE_NODE_MAX_WIDTH,
   rowGap = TREE_ROW_GAP,
 ): DisplayTreeLayout {
   const boxes = new Map<string, SubtreeBox>();
@@ -111,7 +112,7 @@ export function layoutDisplayTree(
             measure(branch.child, getChildNodeId(id, index)),
           )
         : [];
-    const box = boxAround(nodeWidth(node), children);
+    const box = boxAround(nodeWidth(node, id), children);
     boxes.set(id, box);
     return box;
   };

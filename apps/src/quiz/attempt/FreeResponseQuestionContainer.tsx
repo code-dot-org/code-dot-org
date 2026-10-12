@@ -11,18 +11,20 @@ export interface FreeResponseQuestionContainerProps {
   question: Omit<QuizQuestionSummary, 'page'>;
   // Omit for a quiz with only one question.
   questionLabel?: string;
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 // TODO: keep the answer in QuizAttemptWorkspace, passed down as a prop, and
 // save it once the backend reads free response answers from response_data.
 const FreeResponseQuestionContainer: React.FunctionComponent<
   FreeResponseQuestionContainerProps
-> = ({question, questionLabel}) => {
+> = ({question, questionLabel, headingRef}) => {
   const [answer, setAnswer] = useState('');
   return (
     <AttemptCard
       label={questionLabel}
       title={question.questionTitle}
+      headingRef={headingRef}
       description={<QuestionDescription markdown={question.description} />}
     >
       <textarea

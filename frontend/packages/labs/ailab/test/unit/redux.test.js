@@ -21,6 +21,7 @@ import reducer, {
   saveModel,
   setTrainingModalStep,
 } from '../../src/redux';
+import {initialProject} from '../../src/types';
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
@@ -309,7 +310,11 @@ describe('ailab reducer', () => {
         saved.push(dataToSave);
         callback(saveResponse);
       };
-      saveModel(save, trainedModel)(
+      saveModel(
+        save,
+        initialProject,
+        trainedModel,
+      )(
         action => actions.push(action),
         () => state,
       );

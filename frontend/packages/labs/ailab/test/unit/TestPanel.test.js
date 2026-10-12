@@ -8,7 +8,7 @@ import TestPanel from '../../src/UIComponents/TestPanel';
 import {STEP_INTERVAL_MS} from '../../src/UIComponents/TraceStepper';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 const PENGUINS = [
   {species: 'Adelie', island: 'Torgersen', mass: '3750', bill: '39.1'},
@@ -23,14 +23,14 @@ const PENGUIN_COLUMNS = {
   bill: ColumnTypes.NUMERICAL,
 };
 
-function renderTestPanel(store, trainedModel) {
-  renderWithProviders(createElement(TestPanel), {store, trainedModel});
+function renderTestPanel(store, trainingRun) {
+  renderWithProviders(createElement(TestPanel), {store, trainingRun});
 }
 
 // Renders a panel whose model is trained and reachable from the context.
 function renderTrainedAnimalPanel(mode) {
   const store = levelStore(mode);
-  renderTestPanel(store, trainModel(store));
+  renderTestPanel(store, runTraining(store));
   return store;
 }
 

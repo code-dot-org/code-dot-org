@@ -5,12 +5,12 @@ import I18n from '../../src/i18n';
 import Results from '../../src/UIComponents/Results';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
-  const trainedModel = trainModel(store);
-  renderWithProviders(createElement(Results), {store, trainedModel});
+  const trainingRun = runTraining(store);
+  renderWithProviders(createElement(Results), {store, trainingRun});
 }
 
 function testPanel() {
