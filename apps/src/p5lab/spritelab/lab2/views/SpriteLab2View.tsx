@@ -2124,7 +2124,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 variant="overline2"
                 className={moduleStyles.editorStripTitle}
               >
-                Workspace
+                {activeTab === 'World' ? 'World' : 'Workspace'}
               </MuiTypography>
               <div className={moduleStyles.editorStripEnd}>
                 <EditorSwitch
