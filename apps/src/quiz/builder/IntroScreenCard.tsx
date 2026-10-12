@@ -75,7 +75,7 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
       onSave={handleSave}
       onDiscard={() => setDraft(customIntroText)}
       onRemove={handleRemove}
-      removeDisabledReason={
+      removeIsDisabledReason={
         hasTimeLimit
           ? 'Remove the time limit in Configuration before removing the intro screen.'
           : undefined

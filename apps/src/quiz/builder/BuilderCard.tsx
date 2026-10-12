@@ -20,13 +20,11 @@ export interface BuilderCardProps {
   onSave: () => void;
   onDiscard: () => void;
   onRemove: () => void;
-  // When set, Remove stays focusable but inert, with this as its tooltip.
-  removeDisabledReason?: string;
+  // When set, Remove looks disabled but stays focusable to show this tooltip.
+  removeIsDisabledReason?: string;
   children: React.ReactNode;
 }
 
-// Shared shell for the rows of the quiz outline: a collapsed preview that
-// expands in place into an editor with Remove / Discard / Save actions.
 const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   iconName,
   name,
@@ -41,7 +39,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   onSave,
   onDiscard,
   onRemove,
-  removeDisabledReason,
+  removeIsDisabledReason,
   children,
 }) => {
   const isBusy = isSaving || isRemoving;
@@ -117,7 +115,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
           )}
 
           <div className={styles.footer}>
-            <Tooltip describeChild title={removeDisabledReason ?? ''}>
+            <Tooltip describeChild title={removeIsDisabledReason ?? ''}>
               <Button
                 variant="outlined"
                 color="error"
@@ -125,9 +123,9 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
                 type="button"
                 className={styles.ariaDisabled}
                 disabled={isBusy}
-                aria-disabled={!!removeDisabledReason}
+                aria-disabled={!!removeIsDisabledReason}
                 loading={isRemoving}
-                onClick={() => !removeDisabledReason && onRemove()}
+                onClick={() => !removeIsDisabledReason && onRemove()}
               >
                 Remove from quiz
               </Button>
