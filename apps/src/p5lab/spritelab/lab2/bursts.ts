@@ -155,10 +155,6 @@ export function shareOut(total: number, parts: number): number[] {
 /** Where each sprite stood as its jump impulse was applied. */
 export type JumpStarts = Map<PhysicsBox, {x: number; y: number}>;
 
-/** How long after the jump event fires a burst from the player starts at
-    its take-off spot: the handler runs on the interpreter's next tick. */
-export const JUMP_EVENT_FRAMES = 4;
-
 /** The boxes a burst starts from: a sprite with a jump start stands where it
     took off, since the jump event fires after the impulse has moved it. */
 export function burstBoxes(
