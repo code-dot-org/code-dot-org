@@ -21,6 +21,7 @@ import {
 import {getSelectableColumns} from '../selectors';
 import {store} from '../store';
 import train from '../train';
+import {useTrainingData} from '../TrainingDataContext';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
@@ -37,6 +38,7 @@ const TrainPanel = () => {
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const canTrain = useAppSelector(readyToTrain);
   const hasTrainingResult = useAppSelector(hasCurrentTrainingResult);
+  const {setTrainedModel, snapshotTrainedModel} = useTrainingData();
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -73,8 +75,9 @@ const TrainPanel = () => {
   };
 
   const onTrain = () => {
+    snapshotTrainedModel();
     train.init(store);
-    train.onClickTrain();
+    setTrainedModel(train.onClickTrain());
     dispatch(setTrainingModalStep('training'));
   };
 

@@ -35,12 +35,12 @@ describe('train functions', () => {
     store.dispatch(addSelectedFeature('rain'));
 
     train.init(store);
-    train.onClickTrain();
+    const trainedModel = train.onClickTrain();
 
     store.dispatch(setTestData('temperature', 10));
     store.dispatch(setTestData('rain', 1010));
 
-    train.onClickPredict();
+    train.onClickPredict(trainedModel);
 
     const predictedValue = getConvertedPredictedLabel(store.getState());
 
@@ -67,12 +67,12 @@ describe('train functions', () => {
     store.dispatch(addSelectedFeature('texture'));
 
     train.init(store);
-    train.onClickTrain();
+    const trainedModel = train.onClickTrain();
 
     store.dispatch(setTestData('flavor', 'sweet'));
     store.dispatch(setTestData('texture', 'crunchy'));
 
-    train.onClickPredict();
+    train.onClickPredict(trainedModel);
 
     const predictedLabel = getConvertedPredictedLabel(store.getState());
 
@@ -109,6 +109,5 @@ describe('train.cancel', () => {
     expect(state.labelColumn).toBe('animal');
     expect(state.selectedFeatures).toEqual(['legs']);
     expect(state.historicResults).toEqual([]);
-    expect(state.trainedModel).toBeUndefined();
   });
 });

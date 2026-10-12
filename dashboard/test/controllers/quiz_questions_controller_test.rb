@@ -203,6 +203,24 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
+  test "update stores the description, and omits a blank one" do
+    params = {
+      id: @question.id, quizLevelId: @quiz.id,
+      questionName: 'Name', questionTitle: 'Title',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+    }
+
+    put :update, params: params.merge(description: 'Think about **x**.')
+    assert_response :success
+    assert_equal 'Think about **x**.', JSON.parse(response.body)['description']
+    assert_equal 'Think about **x**.', @question.reload.content['description']
+
+    put :update, params: params.merge(description: '')
+    assert_response :success
+    refute @question.reload.content.key?('description')
+    assert_nil JSON.parse(response.body)['description']
+  end
+
   test "update forks instead of mutating when the question is used in a published unit" do
     unit = create(:unit)
     create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
