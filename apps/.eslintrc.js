@@ -203,18 +203,6 @@ module.exports = {
             message:
               'DSCO Button is deprecated. Use MUI Button from @mui/material instead. Codemod available: frontend/packages/component-library/codemods/button-to-mui-button.ts; see codemods/README.md there',
           },
-          {
-            name: '@code-dot-org/component-library/dialog',
-            importNames: [
-              'Dialog',
-              'CustomDialog',
-              'default',
-              'DialogProps',
-              'CustomDialogProps',
-            ],
-            message:
-              'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: frontend/packages/component-library/codemods/dialog-to-mui-dialog.ts; see codemods/README.md there',
-          },
         ],
         patterns: [
           {

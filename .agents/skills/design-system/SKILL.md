@@ -13,7 +13,7 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 - **Always prefer design system components** over custom or legacy alternatives (e.g. `apps/src/sharedComponents/`, `apps/src/legacySharedComponents/`). Only create custom UI components when no design system equivalent exists.
 
 ## Which Component to Use
-- **Use MUI** for: Typography, Button/LinkButton/GenericButton, IconButton, Breadcrumbs, Tooltip, Dialog. These have been migrated — their DSCO equivalents are deprecated. Dialog is the exception to importing from `@mui/material`: use the package's MUI wrapper, `import {MuiDialog, MuiCustomDialog} from '@code-dot-org/component-library/dialog';`, never `Dialog` from `@mui/material` or the deprecated `Dialog`/`CustomDialog`/default exports of the same path.
+- **Use MUI** for: Typography, Button/LinkButton/GenericButton, IconButton, Breadcrumbs, Tooltip, Dialog. These have been migrated — their DSCO equivalents are deprecated. Dialog is the exception to importing from `@mui/material`: use the package's MUI wrapper, `import {Dialog, CustomDialog} from '@code-dot-org/component-library/dialog';`, never `Dialog` from `@mui/material`.
 - **Use DSCO** for: everything else (Checkbox, Dropdown, Modal, Tabs, TextField, Toggle, etc.). Browse `frontend/packages/component-library/src/` to discover available components.
 - **Unsure?** Check `frontend/packages/component-library/MIGRATION_STATUS.md` for the full per-component status, or look for `@deprecated` / `DEPRECATED` in the component's JSDoc header. A `@deprecated` on a single prop marks that prop, not the component.
 - Several directories ship a `README.md` next to the source (`src/form/`, `src/tooltip/`, `src/dialog/`) that says more than the status table does.

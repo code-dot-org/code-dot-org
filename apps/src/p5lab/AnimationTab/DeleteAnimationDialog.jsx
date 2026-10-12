@@ -1,5 +1,5 @@
 /** @file controls below a dialog to delete animations */
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
 

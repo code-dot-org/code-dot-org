@@ -1,4 +1,4 @@
-import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 import PixelEditor, {PixelEditorProps} from './PixelEditor';

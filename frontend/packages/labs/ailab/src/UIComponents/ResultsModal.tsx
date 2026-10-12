@@ -1,7 +1,7 @@
 import {Button, Typography} from '@mui/material';
 import {useEffect, useId, useRef} from 'react';
 
-import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 
 import AllResults from './AllResults';
@@ -21,7 +21,7 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
   const titleId = useId();
   const titleRowRef = useRef<HTMLDivElement>(null);
 
-  // MuiCustomDialog has already focused the first tab, selected or not.
+  // CustomDialog has already focused the first tab, selected or not.
   useEffect(() => {
     titleRowRef.current
       ?.closest('[role="dialog"]')
@@ -30,7 +30,7 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
   }, []);
 
   return (
-    <MuiCustomDialog
+    <CustomDialog
       aria-labelledby={titleId}
       closeLabel="Close results"
       className={styles.dialog}
@@ -70,7 +70,7 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
           Back to Testing
         </Button>
       </div>
-    </MuiCustomDialog>
+    </CustomDialog>
   );
 };
 

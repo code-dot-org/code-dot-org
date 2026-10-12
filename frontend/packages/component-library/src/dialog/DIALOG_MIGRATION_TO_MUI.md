@@ -1,5 +1,10 @@
 # Dialog Migration: DSCO to MUI
 
+> Steps 1 to 4 are done. The sections before the closing notes are the plan as
+> written: they still name the interim `Mui` exports, the codemod's original
+> direction (legacy names to `Mui`) and the story ids of the time. The notes at
+> the end record what each step changed.
+
 ## Summary
 
 `Dialog` and `CustomDialog` move onto MUI's `Dialog` as a wrapper in
@@ -16,7 +21,7 @@ staged migration, and two managers would release each other's state out of
 order. MUI's own managers take over only after the last legacy dialog is
 deleted, which is outside this run.
 
-The target is what DSCO renders today, within 0.005 mismatch per story. Four
+The target is what DSCO renders today, within 0.005 mismatch per story. Five
 legacy defects are fixed on purpose. Figma is out of scope.
 
 ## Approach and exports
@@ -538,3 +543,27 @@ Migrated, behavior pending; until that PR lands the row reads In Progress. The s
 Dialog under "Use MUI" and gives the wrapper's import. `apps/.eslintrc.js`
 bans the five legacy names at `@code-dot-org/component-library/dialog`
 through `importNames`, because the `Mui` names ship at the same path.
+
+Legacy source deleted (RE-215, lifecycle step 4): the DSCO `Dialog.tsx`,
+`CustomDialog.tsx`, their module sheets, tests and stories are gone, and the
+wrapper files took their names (`MuiDialog.tsx` is now `Dialog.tsx`,
+`muiCustomDialog.module.scss` is now `customDialog.module.scss`, and the same
+for the tests and stories). `index.ts` exports `Dialog`, `CustomDialog`,
+`DialogProps`, `CustomDialogProps` and `default` (`Dialog`), and nothing else.
+The plan kept the `Mui` names as aliases until consumers dropped them. They
+dropped them in the same change, so the aliases went too; `default` stays, as
+the policy says. The codemod now moves `Mui` names to the plain ones. One run
+over the tracked `apps/` and `frontend/` files rewrote 49 files, the 48 `apps/`
+consumers and AI Lab's `TrainingModal.tsx`, and a second run rewrote none.
+`Modal.tsx` imports by file path and followed the rename by hand, as did AI
+Lab's `ResultsModal.tsx`, which reached staging after the run.
+`PixelEditorModal.tsx` needed the parentheses recast added around two JSX
+branches removed by hand, and `eslint --fix` joined `SignInOrAgeDialog.js`'s
+shortened import onto one line. `apps/.eslintrc.js` no longer restricts imports
+from the entry point. Behavior is unchanged: the `disable*` flags, the detached
+`container`, the paper slot and the DSCO hooks are as they were. The story ids
+are the legacy ones again (`designsystem-dialog-dialog--*`,
+`designsystem-dialog-customdialog--*`). The generated class names did not change
+(`_customDialogOverlay_1gbhd_1` before and after). The tests that opened a
+legacy dialog beside the wrapper now open two wrappers, and
+`DialogInNarrowViewport` moves with its stories to `stories/Dialog.story.tsx`.

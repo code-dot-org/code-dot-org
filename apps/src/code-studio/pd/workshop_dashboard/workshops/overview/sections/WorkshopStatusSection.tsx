@@ -1,5 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
 import {

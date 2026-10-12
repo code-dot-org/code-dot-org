@@ -1,11 +1,14 @@
 /**
- * Codemod: move `@code-dot-org/component-library/dialog` consumers onto
- * `MuiDialog` / `MuiCustomDialog`.
+ * Codemod: move `@code-dot-org/component-library/dialog` consumers off the
+ * `MuiDialog` / `MuiCustomDialog` names onto `Dialog` / `CustomDialog`.
  *
- * The wrappers take the legacy props unchanged, so only imports and
- * `jest.mock` factories are rewritten; local names, JSX and references stay
- * as written. Idempotent. Enzyme string selectors and module shapes it cannot
- * rewrite are reported per file for hand work. See codemods/README.md.
+ * The `Mui` names were the MUI wrapper's while the DSCO dialog shipped beside
+ * it. The DSCO source is deleted and the wrapper now ships under the plain
+ * names only, so only imports and `jest.mock` factories are rewritten; local
+ * names, JSX and references stay as written. Default imports already resolve
+ * to the wrapper and are left alone. Idempotent. Enzyme string selectors and
+ * module shapes it cannot rewrite are reported per file for hand work. See
+ * codemods/README.md.
  *
  *   cd frontend/packages/component-library
  *   TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/dialog-to-mui-dialog.ts \
@@ -24,28 +27,30 @@ import type {
 
 const SOURCE = '@code-dot-org/component-library/dialog';
 
+// '@/dialog' is the package-internal spelling of SOURCE.
+const ENTRY_SOURCES = new Set([SOURCE, '@/dialog']);
+
 // Package-internal paths, used by Modal.tsx.
 const INTERNAL_SOURCES: Record<string, string> = {
-  '@/dialog/CustomDialog': '@/dialog/MuiCustomDialog',
-  '@/dialog/Dialog': '@/dialog/MuiDialog',
+  '@/dialog/MuiCustomDialog': '@/dialog/CustomDialog',
+  '@/dialog/MuiDialog': '@/dialog/Dialog',
 };
 
 const RENAMES: Record<string, string> = {
-  Dialog: 'MuiDialog',
-  CustomDialog: 'MuiCustomDialog',
-  DialogProps: 'MuiDialogProps',
-  CustomDialogProps: 'MuiCustomDialogProps',
+  MuiDialog: 'Dialog',
+  MuiCustomDialog: 'CustomDialog',
+  MuiDialogProps: 'DialogProps',
+  MuiCustomDialogProps: 'CustomDialogProps',
 };
 
 const MOCK_KEYS: Record<string, string> = {
-  default: 'MuiDialog',
-  Dialog: 'MuiDialog',
-  CustomDialog: 'MuiCustomDialog',
+  MuiDialog: 'Dialog',
+  MuiCustomDialog: 'CustomDialog',
 };
 
 const DISPLAY_NAMES: Record<string, string> = {
-  Dialog: 'MuiDialog',
-  CustomDialog: 'MuiCustomDialog',
+  MuiDialog: 'Dialog',
+  MuiCustomDialog: 'CustomDialog',
 };
 
 // Enzyme wrapper methods that take a selector as their first argument.
@@ -83,9 +88,6 @@ const keyOf = (property: Property): string | undefined => {
   return computed ? undefined : nameOf(key);
 };
 
-const isValueImport = (decl: ImportDeclaration) =>
-  !decl.importKind || decl.importKind === 'value';
-
 // A new node, not an edited one: recast patches a shorthand specifier's shared source span and drops the alias.
 function renameSpecifiers(j: JSCodeshift, decl: ImportDeclaration): boolean {
   let renamed = false;
@@ -113,10 +115,11 @@ function transformer(file: FileInfo, api: API) {
   const root = j(file.source);
   const report = (node: Located, message: string) =>
     api.report(`line ${node.loc?.start.line ?? '?'}: ${message}`);
+  const sourceOf = (node: unknown) =>
+    j(node as Parameters<typeof j>[0]).toSource();
   let changed = false;
 
-  // Enzyme matches a string selector against the display name, which becomes MuiDialog / MuiCustomDialog.
-  // A test does not import the dialog it finds, so a match may be another Dialog, such as legacySharedComponents'.
+  // Enzyme matches a string selector against the display name, which is Dialog / CustomDialog again.
   root.find(j.CallExpression).forEach(path => {
     const {callee, arguments: args} = path.value;
     if (callee.type !== 'MemberExpression') return;
@@ -130,66 +133,27 @@ function transformer(file: FileInfo, api: API) {
     ) {
       report(
         path.value,
-        `.${method}('${selector}'): if it targets the component-library dialog, use '${DISPLAY_NAMES[selector]}'.`,
+        `.${method}('${selector}') matches a display name that no longer exists; use '${DISPLAY_NAMES[selector]}'.`,
       );
     }
   });
 
-  const sourceImports = root.find(j.ImportDeclaration, {
-    source: {value: SOURCE},
-  });
+  // Transform 1: named imports from the entry point.
+  root
+    .find(j.ImportDeclaration)
+    .filter(path => ENTRY_SOURCES.has(stringOf(path.value.source) ?? ''))
+    .forEach(path => {
+      const decl = path.value;
+      if (
+        (decl.specifiers ?? []).some(s => s.type === 'ImportNamespaceSpecifier')
+      ) {
+        report(decl, 'namespace import; check it for Mui members by hand.');
+        return;
+      }
+      if (renameSpecifiers(j, decl)) changed = true;
+    });
 
-  // Transforms 1-3: imports from the public entry point.
-  sourceImports.forEach(path => {
-    const decl = path.value;
-    if (
-      (decl.specifiers ?? []).some(s => s.type === 'ImportNamespaceSpecifier')
-    ) {
-      report(decl, 'namespace import; switch its members by hand.');
-      return;
-    }
-    if (renameSpecifiers(j, decl)) changed = true;
-
-    const specifiers = decl.specifiers ?? [];
-    const defaultSpec = specifiers.find(
-      s => s.type === 'ImportDefaultSpecifier',
-    );
-    if (!defaultSpec) return;
-    const named = j.importSpecifier(
-      j.identifier('MuiDialog'),
-      j.identifier(defaultSpec.local?.name ?? 'Dialog'),
-    );
-    const rest = specifiers.filter(s => s !== defaultSpec);
-    changed = true;
-
-    // A default-only import merges into another named import of the same kind, if one exists.
-    const target =
-      rest.length === 0
-        ? sourceImports
-            .filter(
-              other =>
-                other !== path &&
-                isValueImport(other.value) === isValueImport(decl) &&
-                (other.value.specifiers ?? []).some(
-                  s => s.type === 'ImportSpecifier',
-                ),
-            )
-            .paths()[0]
-        : undefined;
-    if (!target) {
-      decl.specifiers = [named, ...rest];
-      return;
-    }
-    target.value.specifiers = [named, ...(target.value.specifiers ?? [])];
-    const comments = (decl as {comments?: unknown[]}).comments;
-    if (comments?.length) {
-      const targetNode = target.value as {comments?: unknown[]};
-      targetNode.comments = [...comments, ...(targetNode.comments ?? [])];
-    }
-    j(path).remove();
-  });
-
-  // Transform 4: package-internal default imports.
+  // Transform 2: package-internal module paths.
   root
     .find(j.ImportDeclaration)
     .filter(path => (stringOf(path.value.source) ?? '') in INTERNAL_SOURCES)
@@ -202,7 +166,7 @@ function transformer(file: FileInfo, api: API) {
       changed = true;
     });
 
-  // Transform 5: jest.mock factories that return an object literal.
+  // Transform 3: jest.mock factories that return an object literal.
   root
     .find(j.CallExpression, {
       callee: {
@@ -213,7 +177,7 @@ function transformer(file: FileInfo, api: API) {
     })
     .forEach((path: ASTPath<CallExpression>) => {
       const [moduleName, factory] = path.value.arguments;
-      if (stringOf(moduleName) !== SOURCE || !factory) return;
+      if (!ENTRY_SOURCES.has(stringOf(moduleName) ?? '') || !factory) return;
       let returned: unknown;
       if (
         factory.type === 'ArrowFunctionExpression' ||
@@ -233,48 +197,64 @@ function transformer(file: FileInfo, api: API) {
       if ((returned as {type?: string})?.type !== 'ObjectExpression') {
         report(
           path.value,
-          'jest.mock factory does not return an object literal; add the Mui keys by hand.',
+          'jest.mock factory does not return an object literal; move its Mui keys by hand.',
         );
         return;
       }
       const object = returned as ObjectExpression;
-      const keys = new Set(object.properties.map(keyOf));
+      const byKey = new Map<string, Property>();
+      object.properties.forEach(property => {
+        const key = keyOf(property);
+        if (key) byKey.set(key, property);
+      });
       const properties: Property[] = [];
       for (const property of object.properties) {
-        properties.push(property);
         const key = keyOf(property);
-        if (!key || !(key in MOCK_KEYS) || keys.has(MOCK_KEYS[key])) continue;
-        if (
-          property.type !== 'ObjectProperty' &&
-          property.type !== 'Property'
-        ) {
-          report(
-            property,
-            `jest.mock key '${key}' is a method; add '${MOCK_KEYS[key]}' by hand.`,
-          );
+        if (!key || !(key in MOCK_KEYS)) {
+          properties.push(property);
           continue;
         }
-        properties.push(
-          j.objectProperty(
-            j.identifier(MOCK_KEYS[key]),
-            property.value as Parameters<typeof j.objectProperty>[1],
-          ),
-        );
-        keys.add(MOCK_KEYS[key]);
-        changed = true;
+        const plain = MOCK_KEYS[key];
+        const existing = byKey.get(plain);
+        if (!existing) {
+          Object.assign(property, {key: j.identifier(plain), shorthand: false});
+          properties.push(property);
+          changed = true;
+        } else if (
+          (property.type === 'ObjectProperty' ||
+            property.type === 'Property') &&
+          (existing.type === 'ObjectProperty' ||
+            existing.type === 'Property') &&
+          sourceOf(property.value) === sourceOf(existing.value)
+        ) {
+          changed = true;
+        } else {
+          report(
+            property,
+            `jest.mock key '${key}' differs from its '${plain}' key; merge them by hand.`,
+          );
+          properties.push(property);
+        }
       }
       object.properties = properties;
     });
 
   // Report only: shapes the transforms above do not reach.
-  for (const type of [j.ExportNamedDeclaration, j.ExportAllDeclaration]) {
-    root
-      .find(type)
-      .filter(path => stringOf(path.value.source) === SOURCE)
-      .forEach(path =>
-        report(path.value, 're-export; point it at the Mui names by hand.'),
-      );
-  }
+  root
+    .find(j.ExportNamedDeclaration)
+    .filter(
+      path =>
+        ENTRY_SOURCES.has(stringOf(path.value.source) ?? '') &&
+        (path.value.specifiers ?? []).some(
+          spec => (nameOf(spec.local) ?? '') in RENAMES,
+        ),
+    )
+    .forEach(path =>
+      report(
+        path.value,
+        're-export of a Mui name; point it at the plain name by hand.',
+      ),
+    );
   root
     .find(j.CallExpression)
     .filter(path => {
@@ -282,12 +262,12 @@ function transformer(file: FileInfo, api: API) {
       const loads =
         callee.type === 'Import' ||
         (callee.type === 'Identifier' && callee.name === 'require');
-      return loads && stringOf(args[0]) === SOURCE;
+      return loads && ENTRY_SOURCES.has(stringOf(args[0]) ?? '');
     })
     .forEach(path =>
       report(
         path.value,
-        'require() or import() of the entry point; switch its members by hand.',
+        'require() or import() of the entry point; check it for Mui members by hand.',
       ),
     );
 
