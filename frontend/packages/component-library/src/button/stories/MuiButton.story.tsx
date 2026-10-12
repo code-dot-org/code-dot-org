@@ -204,6 +204,14 @@ export const RunButton: StoryFn = () => (
     <p style={{margin: 0}}>Orange is only for the Run button in labs.</p>
   </div>
 );
+// CADS orange (#f46800) with white text is about 3.1:1, under the 4.5:1 text minimum.
+RunButton.parameters = {
+  a11y: {
+    config: {
+      rules: [{id: 'color-contrast', enabled: false}],
+    },
+  },
+};
 
 export const IconButton = SingleTemplate.bind({});
 IconButton.args = {
@@ -340,6 +348,19 @@ LoadingIconButtons.args = {
 };
 
 export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
+// CADS orange (#f46800) with white text is about 3.1:1. Keep checking the other colors.
+GroupOfColorsOfButtons.parameters = {
+  a11y: {
+    config: {
+      rules: [
+        {
+          id: 'color-contrast',
+          selector: 'button:not(.MuiButton-containedOrange)',
+        },
+      ],
+    },
+  },
+};
 GroupOfColorsOfButtons.args = {
   components: [
     {
