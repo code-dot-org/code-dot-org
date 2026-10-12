@@ -46,8 +46,7 @@ export function tooManyUniqueOptions(uniqueOptionsCount: number): boolean {
   return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 
-// Columns a model can train on: numbers-only numerical columns, and
-// categorical columns under the unique-options limit.
+// Columns a model can train on.
 export function selectableColumns(
   data: DataRow[],
   columnsByDataType: Record<string, string>,

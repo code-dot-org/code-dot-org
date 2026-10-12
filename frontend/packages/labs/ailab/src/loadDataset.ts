@@ -4,8 +4,6 @@ import {setLabelColumn, setSelectedFeatures} from './redux';
 import {getSelectableColumns} from './selectors';
 import {store} from './store';
 
-// The mode's columns wait for both files: the metadata types the columns,
-// and the rows decide which are selectable and the order of the features.
 export const loadDataset = async (
   csvPath: string,
   jsonPath: string,

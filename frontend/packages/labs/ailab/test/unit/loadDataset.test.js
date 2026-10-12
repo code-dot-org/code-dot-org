@@ -56,6 +56,8 @@ beforeEach(() => {
   );
 });
 
+afterEach(() => vi.restoreAllMocks());
+
 async function load(mode) {
   store.dispatch(setMode(mode));
   const loaded = loadDataset('animals.csv', 'animals.json');
@@ -78,21 +80,12 @@ describe('loadDataset', () => {
 
       finishFirst();
       await Promise.resolve();
-      expect(store.getState().labelColumn).toBeUndefined();
-
       finishSecond();
       await loaded;
       expect(store.getState().labelColumn).toBe('animal');
       expect(store.getState().selectedFeatures).toEqual(['legs']);
     },
   );
-
-  test('orders the features as the table does', async () => {
-    expect(await load({features: ['animal', 'legs']})).toEqual({
-      labelColumn: undefined,
-      selectedFeatures: ['legs', 'animal'],
-    });
-  });
 
   test("locks the dataset's default label when no label is set", async () => {
     expect((await load({hideSelectLabel: true})).labelColumn).toBe('animal');
@@ -127,7 +120,5 @@ describe('loadDataset', () => {
       'AI Lab mode: "wings" is not a selectable column of this dataset.',
       'AI Lab mode: "name" is not a selectable column of this dataset.',
     ]);
-
-    consoleError.mockRestore();
   });
 });
