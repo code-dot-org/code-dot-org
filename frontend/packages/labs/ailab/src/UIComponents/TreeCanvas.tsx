@@ -106,7 +106,6 @@ function undoScroll({currentTarget}: UIEvent<HTMLElement>) {
   currentTarget.scrollLeft = 0;
 }
 
-// Subscribes to every pan and zoom of the content; returns the unsubscribe.
 type SubscribeToMoves = (onMove: () => void) => () => void;
 
 export const CanvasMoveContext = createContext<SubscribeToMoves>(

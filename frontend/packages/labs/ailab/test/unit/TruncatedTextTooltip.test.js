@@ -18,7 +18,6 @@ function label({focused = false, subscribeToMoves = () => () => {}} = {}) {
   );
 }
 
-// jsdom lays nothing out, so every element reports these widths.
 function textWidth(scrollWidth) {
   vi.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(
     scrollWidth,
