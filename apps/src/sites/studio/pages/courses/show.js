@@ -106,6 +106,9 @@ function showCourseOverview() {
         userType={scriptData.user_type}
         participantAudience={courseSummary.participant_audience}
         aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
+        requiresInaccessibleAiModels={
+          courseSummary.requires_inaccessible_ai_models
+        }
       />
     </Provider>,
     document.getElementById('course_overview'),

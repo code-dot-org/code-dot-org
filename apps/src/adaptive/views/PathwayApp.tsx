@@ -1,15 +1,20 @@
 // Chooses which screen to show: the checkpoint map, one checkpoint's steps,
 // or the project on its own. Owns the progress they share.
 
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
+import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
+import {AichatContext} from '@cdo/apps/aichat/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {isAdaptiveAiEnabled} from '../ai/generate';
 import {useProgress} from '../progress';
 import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
 import MapScreen from './MapScreen';
+import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
 
 import styles from './shared.module.scss';
@@ -52,17 +57,52 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
 }) => {
-  const {statusMap, isLoading, markStarted, markComplete, reset} = useProgress(
-    pathway,
-    progressKey
-  );
+  const {
+    progress,
+    statusMap,
+    isLoading,
+    markStarted,
+    markComplete,
+    updateStepContext,
+    saveAnswers,
+    reset,
+  } = useProgress(pathway, progressKey);
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
+  // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
+  useEffect(() => {
+    setAiGatewayOptIn(isAdaptiveAiEnabled());
+    return () => setAiGatewayOptIn(false);
+  }, []);
 
   const checkpoint =
     view.kind === 'step'
       ? pathway.checkpoints.find(c => c.id === view.checkpointId)
       : undefined;
+  const playing = view.kind === 'project' ? project : checkpoint;
+  // The shell's AI calls run as the adaptive level, not the step's level.
+  const aiContext = useMemo<AichatContext>(
+    () => ({
+      clientType: AiChatClientTypes.ADAPTIVE,
+      currentLevelId: progressKey.levelId,
+      scriptId: progressKey.scriptId,
+      channelId: undefined,
+    }),
+    [progressKey.levelId, progressKey.scriptId]
+  );
+  const pathwayContext = useMemo(
+    () =>
+      playing &&
+      progress && {
+        pathway,
+        checkpoint: playing,
+        statusMap,
+        stepContextMap: progress.stepContext,
+        updateStepContext,
+        aiContext,
+      },
+    [pathway, playing, statusMap, progress, updateStepContext, aiContext]
+  );
 
   if (isLoading) {
     return (
@@ -72,47 +112,49 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     );
   }
 
-  if (view.kind === 'project') {
+  if (pathwayContext) {
+    const isProject = view.kind === 'project';
+    const {checkpoint} = pathwayContext;
     return (
       <div className={styles.app}>
-        <StepPlayer
-          checkpoint={project}
-          finishLabel="Back to map"
-          onExit={() => setView({kind: 'map'})}
-          onFinish={() => setView({kind: 'map'})}
-        />
+        <PathwayContext.Provider value={pathwayContext}>
+          <StepPlayer
+            checkpoint={checkpoint}
+            finishLabel={isProject ? 'Back to map' : undefined}
+            onSaveAnswers={saveAnswers}
+            onExit={() =>
+              setView({
+                kind: 'map',
+                focusId: isProject ? undefined : checkpoint.id,
+              })
+            }
+            onFinish={() => {
+              if (!isProject) markComplete(checkpoint.id);
+              setView({kind: 'map'});
+            }}
+          />
+        </PathwayContext.Provider>
       </div>
     );
   }
 
   return (
     <div className={styles.app}>
-      {checkpoint ? (
-        <StepPlayer
-          checkpoint={checkpoint}
-          onExit={() => setView({kind: 'map', focusId: checkpoint.id})}
-          onFinish={() => {
-            markComplete(checkpoint.id);
-            setView({kind: 'map'});
-          }}
-        />
-      ) : (
-        <MapScreen
-          pathway={pathway}
-          statusMap={statusMap}
-          focusId={view.kind === 'map' ? view.focusId : undefined}
-          onFocus={focusId => setView({kind: 'map', focusId})}
-          onStart={id => {
-            markStarted(id);
-            setView({kind: 'step', checkpointId: id});
-          }}
-          onWorkOnProject={() => setView({kind: 'project'})}
-          onReset={() => {
-            reset();
-            setView({kind: 'map'});
-          }}
-        />
-      )}
+      <MapScreen
+        pathway={pathway}
+        statusMap={statusMap}
+        focusId={view.kind === 'map' ? view.focusId : undefined}
+        onFocus={focusId => setView({kind: 'map', focusId})}
+        onStart={id => {
+          markStarted(id);
+          setView({kind: 'step', checkpointId: id});
+        }}
+        onWorkOnProject={() => setView({kind: 'project'})}
+        onReset={() => {
+          reset();
+          setView({kind: 'map'});
+        }}
+      />
     </div>
   );
 };

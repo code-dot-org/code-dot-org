@@ -15,9 +15,14 @@ export interface QuizQuestionSummary {
   id: number;
   type: string;
   questionName: string;
-  stem: string;
+  questionTitle: string;
   choices?: {id: string; text: string}[];
   page: number;
+}
+
+export interface QuizPage<T> {
+  page: number;
+  questions: T[];
 }
 
 export interface QuizLevelProperties extends LevelProperties {
@@ -29,7 +34,6 @@ export interface QuizLevelProperties extends LevelProperties {
   showIntroScreen?: boolean;
   purpose?: string;
   allowMultipleAttempts?: boolean;
+  showQuestionsAfterSubmit?: boolean;
   quizQuestions?: QuizQuestionSummary[];
 }
-
-export const toBool = (value: boolean | undefined) => value ?? false;

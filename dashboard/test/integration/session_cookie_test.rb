@@ -33,6 +33,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     create(:single_unit_course, unit: unit, name: 'jigsaw-session-cookie-test', published_state: 'stable')
     get "/courses/#{unit.name}/units/1/lessons/1"
     assert_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
   test 'session cookie not set in publicly cached level page' do
@@ -43,9 +44,10 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/courses/music-jam-2024/units/1/lessons/1/levels/1'
     assert_response :success
     assert_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
-  test 'session cookie is set in on non-cached level page' do
+  test 'session cookie is set on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
     unit = create(:unit, :with_levels, name: 'music-jam-2024')
     create(:single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable')
@@ -55,31 +57,39 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       env: {'rack-cache.allow_reload' => true}
     assert_response :success
     refute_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
   describe 'request#statsig_stable_id' do
     subject(:request_statsig_stable_id) {request.statsig_stable_id}
 
-    it 'persists through Rails, legacy API, sign-in, and sign-out requests' do
+    it 'persists through sign-in and rotates after sign-out' do
       get '/'
-      _request_statsig_stable_id.must_match Cdo::AnonUserId::FORMAT
-      _(session[:statsig_stable_id]).must_equal request_statsig_stable_id
+      initial_stable_id = request_statsig_stable_id
+      _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+      _(cookies[:statsig_stable_id]).must_be_nil
+      _(session[:statsig_stable_id]).must_equal initial_stable_id
 
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       sign_in create(:user)
 
       get '/'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/users/sign_out'
-      _(request.statsig_stable_id).wont_equal request_statsig_stable_id
-      _(request.statsig_stable_id).must_match Cdo::AnonUserId::FORMAT
-      _(session[:statsig_stable_id]).must_equal request.statsig_stable_id
+      _(cookies[:statsig_stable_id]).must_be_empty
+
+      get '/'
+      rotated_stable_id = request.statsig_stable_id
+      _(rotated_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+      _(rotated_stable_id).wont_equal initial_stable_id
+      _(cookies[:statsig_stable_id]).must_be_empty
+      _(session[:statsig_stable_id]).must_equal rotated_stable_id
     end
 
     context 'with Statsig cookie' do

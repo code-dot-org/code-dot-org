@@ -7,8 +7,9 @@ class ChallengeResponsesController < ApplicationController
   # `index` and `unit_counts` are skipped too: the :read ability is
   # block-based, which accessible_by cannot translate into a query, so those
   # actions build their own scope (see gallery_scope).
-  load_and_authorize_resource except: [:create, :index, :unit_counts]
+  load_and_authorize_resource except: [:create, :index, :unit_counts, :approve]
   before_action :authorize_create!, only: :create
+  before_action :load_and_authorize_approve!, only: :approve
 
   # GET /challenge_responses?section_id=:section_id&unit_id=:unit_id&sort=oldest
   # GET /challenge_responses?lesson_id=:lesson_id
@@ -90,6 +91,15 @@ class ChallengeResponsesController < ApplicationController
     render json: summary
   end
 
+  # PATCH /challenge_responses/:id/approve
+  #
+  # Sets approved on a response. Teacher-only: only the instructor of the
+  # submitting student may approve or revoke approval.
+  def approve
+    @challenge_response.update!(approved: params[:approved])
+    render json: @challenge_response.summarize(viewer: current_user)
+  end
+
   # POST /challenge_responses/:id/evaluate
   #
   # Enqueues asynchronous AI evaluation of this response. Fire-and-forget
@@ -137,6 +147,9 @@ class ChallengeResponsesController < ApplicationController
     section = Section.find(params[:section_id])
     authorize! :list_projects, section
     section_scope = scope.where(user_id: section.students.select(:id))
+    unless current_user.students.exists?(id: section.students.select(:id))
+      section_scope = section_scope.where(approved: true).or(section_scope.where(user_id: current_user.id))
+    end
     ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))
   end
 
@@ -156,6 +169,13 @@ class ChallengeResponsesController < ApplicationController
     return 'owner' if @challenge_response.user_id == current_user.id
     return 'teacher' if current_user.students.exists?(id: @challenge_response.user_id)
     'peer'
+  end
+
+  private def load_and_authorize_approve!
+    @challenge_response = ChallengeResponse.find(params[:id])
+    unless current_user.students.exists?(id: @challenge_response.user_id)
+      raise CanCan::AccessDenied.new(nil, :approve, ChallengeResponse)
+    end
   end
 
   private def authorize_create!

@@ -17,7 +17,7 @@ export interface QuizQuestion {
   id: number;
   type: string;
   questionName: string;
-  stem: string;
+  questionTitle: string;
   choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;
@@ -44,7 +44,7 @@ export function isPendingQuestionId(id: number): boolean {
 // The fields a per-question editor can change.
 export interface QuizQuestionEditableFields {
   questionName: string;
-  stem: string;
+  questionTitle: string;
   choices: QuizQuestionChoice[];
   correctChoiceId: string | null;
   explanation: string | null;
@@ -59,8 +59,8 @@ export interface QuizBuilderQuestionsState {
   // not about any existing question. A caller uses this to show the error
   // on that question's card instead of globally.
   errorQuestionId: number | null;
-  // Adds a placeholder question to local state only.
-  addPendingQuestion: () => number;
+  // Adds a placeholder question to local state only, on the given page.
+  addPendingQuestion: (page: number) => number;
   // Resolves with the saved question's id on success. For a pending
   // question this is its first save, which creates it server-side and
   // replaces the negative id with the real one; otherwise it's a normal

@@ -22,5 +22,9 @@ declare global {
         session: {currentlyUsingBlocks: boolean};
       };
     };
+    /** OneTrust's public API; ToggleInfoDisplay appears once its UI has rendered. */
+    OneTrust?: {ToggleInfoDisplay?(): void};
+    /** OneTrust's consented group ids, comma-delimited, e.g. ",C0001,C0002,". */
+    OnetrustActiveGroups?: string;
   }
 }

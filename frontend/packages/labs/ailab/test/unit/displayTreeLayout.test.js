@@ -1,6 +1,8 @@
 import {
+  getNodesBounds,
   layoutDisplayTree,
   TREE_COLUMN_GAP,
+  TREE_NODE_HEIGHT,
   TREE_NODE_WIDTH,
 } from '../../src/helpers/displayTreeLayout';
 
@@ -28,6 +30,20 @@ describe('layoutDisplayTree', () => {
     expect(layout.width).toBe(3 * column - TREE_COLUMN_GAP);
   });
 
+  test('answers are numbered from left to right', () => {
+    const layout = layoutDisplayTree(
+      question(question(answer(1), answer(2)), answer(3)),
+    );
+
+    expect(layout.nodes.map(placed => placed.answerIndex)).toEqual([
+      undefined,
+      undefined,
+      0,
+      1,
+      2,
+    ]);
+  });
+
   test('nodes on one row do not overlap', () => {
     const layout = layoutDisplayTree(
       question(
@@ -45,6 +61,49 @@ describe('layoutDisplayTree', () => {
       sorted.slice(1).forEach((x, index) => {
         expect(x - sorted[index]).toBeGreaterThanOrEqual(TREE_NODE_WIDTH);
       });
+    });
+  });
+
+  test('a row gap spaces the rows by that much', () => {
+    const rowGap = 10;
+    const layout = layoutDisplayTree(
+      question(question(answer(1), answer(2)), answer(3)),
+      rowGap,
+    );
+    const [root, inner, first] = layout.nodes;
+
+    expect([root.y, inner.y, first.y]).toEqual([
+      0,
+      TREE_NODE_HEIGHT + rowGap,
+      2 * (TREE_NODE_HEIGHT + rowGap),
+    ]);
+    expect(layout.height).toBe(3 * TREE_NODE_HEIGHT + 2 * rowGap);
+  });
+
+  test('the bounds of every node are the size of the layout', () => {
+    const layout = layoutDisplayTree(
+      question(question(answer(1), answer(2)), answer(3)),
+    );
+
+    expect(getNodesBounds(layout.nodes)).toEqual({
+      x: 0,
+      y: 0,
+      width: layout.width,
+      height: layout.height,
+    });
+  });
+
+  test('the bounds of some nodes cover just those nodes', () => {
+    const layout = layoutDisplayTree(
+      question(answer(1), question(answer(2), answer(3))),
+    );
+    const [, , inner, , last] = layout.nodes;
+
+    expect(getNodesBounds([inner, last])).toEqual({
+      x: inner.x,
+      y: inner.y,
+      width: last.x + TREE_NODE_WIDTH - inner.x,
+      height: last.y + TREE_NODE_HEIGHT - inner.y,
     });
   });
 });

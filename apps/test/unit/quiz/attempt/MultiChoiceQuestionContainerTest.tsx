@@ -9,7 +9,7 @@ const QUESTION: QuizQuestionSummary = {
   id: 5,
   type: 'MultipleChoiceQuestion',
   questionName: 'Variable reassignment',
-  stem: 'What is the value of x?',
+  questionTitle: 'What is the value of x?',
   choices: [
     {id: 'a', text: '5'},
     {id: 'b', text: '8'},
@@ -18,7 +18,7 @@ const QUESTION: QuizQuestionSummary = {
 };
 
 describe('MultiChoiceQuestionContainer', () => {
-  it("renders the question's stem as an h2 title", () => {
+  it('renders the question title as an h2 title', () => {
     render(
       <MultiChoiceQuestionContainer
         question={QUESTION}
@@ -77,5 +77,19 @@ describe('MultiChoiceQuestionContainer', () => {
     fireEvent.click(screen.getByRole('radio', {name: /B\./}));
 
     expect(onSelectChoice).toHaveBeenCalledWith('b');
+  });
+
+  it('marks only the selected option with selectedChoiceStatus', () => {
+    render(
+      <MultiChoiceQuestionContainer
+        question={QUESTION}
+        selectedChoiceId="b"
+        onSelectChoice={jest.fn()}
+        selectedChoiceStatus="incorrect"
+      />
+    );
+
+    expect(screen.getByRole('radio', {name: /8.*Incorrect/})).toBeChecked();
+    expect(screen.getAllByText('Incorrect')).toHaveLength(1);
   });
 });

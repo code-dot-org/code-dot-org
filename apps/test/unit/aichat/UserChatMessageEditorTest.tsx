@@ -60,7 +60,7 @@ describe('UserChatMessageEditor', () => {
       retrievalContexts: [],
     },
     clientType: AiChatClientTypes.AI_TUTOR,
-    currentLevelId: 'level1',
+    currentLevelId: 1,
   };
 
   beforeEach(() => {
@@ -200,7 +200,7 @@ describe('UserChatMessageEditor', () => {
 
     expect(textarea).toHaveValue('Here is a message that should clear');
 
-    rerender(<UserChatMessageEditor {...baseProps} currentLevelId="level2" />);
+    rerender(<UserChatMessageEditor {...baseProps} currentLevelId={2} />);
 
     expect(textarea).toHaveValue('');
   });

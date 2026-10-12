@@ -20,9 +20,14 @@ export default function useQuizAttemptView({
     customIntroText,
     timeLimitMinutes,
     showIntroScreen,
+    showCorrectness,
+    revealAnswerExplanation,
+    showQuestionsAfterSubmit,
   } = levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
+  const viewAsUserId =
+    useAppSelector(state => state.progress.viewAsUserId) ?? undefined;
 
   return {
     resourcePanelProps: {},
@@ -32,12 +37,16 @@ export default function useQuizAttemptView({
         appName={appName}
         levelName={levelName}
         unitId={unitId}
+        viewAsUserId={viewAsUserId}
         quizQuestions={quizQuestions}
         allowMultipleAttempts={allowMultipleAttempts}
         displayName={displayName}
         customIntroText={customIntroText}
         timeLimitMinutes={timeLimitMinutes}
         showIntroScreen={showIntroScreen}
+        showCorrectness={showCorrectness}
+        revealAnswerExplanation={revealAnswerExplanation}
+        showQuestionsAfterSubmit={showQuestionsAfterSubmit}
       />
     ),
   };

@@ -420,6 +420,7 @@
     "build": "vite build",
     "clean": "rimraf dist .turbo",
     "codemod:buttons": "TS_NODE_TRANSPILE_ONLY=true npx jscodeshift -t ./codemods/button-to-mui-button.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register",
+    "codemod:dialog": "TS_NODE_TRANSPILE_ONLY=true jscodeshift -t ./codemods/dialog-to-mui-dialog.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register",
     "dev": "vite build --watch",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

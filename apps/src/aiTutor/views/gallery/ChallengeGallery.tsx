@@ -1,19 +1,21 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {useApiClient} from '@code-dot-org/core/api';
 import {
   ChallengeResponse,
-  challengeResponseListValidator,
   GallerySort,
+  getUnitCounts,
+  listChallengeResponses,
+  ProjectView,
   Reaction,
+  setApproved,
   TutorGalleryData,
-  unitCountsValidator,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
-import ProjectView from './ProjectView';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -38,7 +40,12 @@ const projectIdFromLocation = () => {
 // the "My projects" view. Clicking a project opens its project page in
 // place.
 const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
-  const {units, sections, currentUnitId} = tutorGalleryData;
+  const {
+    units,
+    sections,
+    currentUnitId,
+    is_teacher: isTeacher,
+  } = tutorGalleryData;
 
   const [sectionId, setSectionId] = useState<number | null>(
     sections[0]?.id ?? null
@@ -51,6 +58,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   const [projectId, setProjectId] = useState<number | null>(
     projectIdFromLocation
   );
+
+  const api = useApiClient();
 
   useEffect(() => {
     const onPopState = () => setProjectId(projectIdFromLocation());
@@ -87,12 +96,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     if (sort === 'oldest') {
       params.append('sort', 'oldest');
     }
-    HttpClient.fetchJson<ChallengeResponse[]>(
-      `/challenge_responses?${params.toString()}`,
-      {},
-      challengeResponseListValidator
-    )
-      .then(({value}) => {
+    listChallengeResponses(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setResponses(value || []);
         }
@@ -105,7 +110,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     return () => {
       cancelled = true;
     };
-  }, [sectionId, unitId, sort]);
+  }, [sectionId, unitId, sort, api]);
 
   useEffect(() => {
     let cancelled = false;
@@ -113,12 +118,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     if (sectionId !== null) {
       params.append('section_id', sectionId.toString());
     }
-    HttpClient.fetchJson<Record<string, number>>(
-      `/challenge_responses/unit_counts?${params.toString()}`,
-      {},
-      unitCountsValidator
-    )
-      .then(({value}) => {
+    getUnitCounts(api.transport, params)
+      .then(value => {
         if (!cancelled) {
           setUnitCounts(value || {});
         }
@@ -129,7 +130,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     return () => {
       cancelled = true;
     };
-  }, [sectionId]);
+  }, [sectionId, api]);
 
   if (
     !experiments.isEnabledAllowingQueryString(
@@ -150,6 +151,17 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           )
         : prev
     );
+
+  const updateResponseApproved = async (id: number, approved: boolean) => {
+    await setApproved(api.transport, id, approved);
+    setResponses(prev =>
+      prev
+        ? prev.map(response =>
+            response.id === id ? {...response, approved} : response
+          )
+        : prev
+    );
+  };
 
   const unitPositionFor = (responseUnitId: number | null) =>
     units.find(unit => unit.id === responseUnitId)?.position ?? null;
@@ -181,6 +193,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
             variant={variant}
             unitPosition={unitPositionFor(response.unit_id)}
             onOpen={() => navigateToProject(response.id)}
+            isTeacher={isTeacher}
+            onApprovalChange={updateResponseApproved}
           />
         ))}
       </div>
@@ -256,6 +270,14 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           <p className={styles.pageOverline}>{sectionName || 'My Projects'}</p>
           <h1 className={styles.pageTitle}>Extension Activities</h1>
         </header>
+        {isTeacher && (
+          <Alert
+            text="By default, students can't see each other's projects. Please make sure you've reviewed a project before making it visible for students."
+            type="info"
+            isImmediateImportance={false}
+            className={styles.teacherAlert}
+          />
+        )}
         {renderContent()}
       </main>
     </div>

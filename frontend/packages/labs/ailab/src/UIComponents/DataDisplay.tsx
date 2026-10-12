@@ -1,36 +1,45 @@
 /* React component to handle displaying imported data. */
+import {Typography} from '@mui/material';
+
+import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppSelector} from '../hooks';
-import I18n from '../i18n';
 
 import DataTable from './DataTable';
-import Statement from './Statement';
 
-import shared from '../shared.module.scss';
 import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
-  const data = useAppSelector(state => state.data);
+  const rowCount = useAppSelector(state => state.data.length);
+  const datasetName = useAppSelector(state => state.name);
 
-  if (data.length === 0) {
+  if (rowCount === 0) {
     return null;
   }
 
-  const rowCount = data.length;
-  const rowLimit = 100;
+  const rowCountText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
   const rowCountMessage =
-    rowCount <= rowLimit
-      ? I18n.t('dataDisplayRowCount', {rowCount: rowCount})
-      : I18n.t('dataDisplayRowCountTruncated', {
-          rowCount: rowCount,
-          rowLimit: rowLimit,
-        });
+    rowCount > DATA_TABLE_ROW_LIMIT
+      ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
+      : rowCountText;
+
   return (
-    <div id="data-display" className={shared.panel}>
-      <Statement />
-      <div className={shared.tableParent}>
+    <div id="data-display" className={styles.panel}>
+      <div className={styles.header}>
+        <Typography component="h3" variant="label2" className={styles.title}>
+          {datasetName || 'Dataset'}
+        </Typography>
+        <span className={styles.separator} aria-hidden="true" />
+        <Typography
+          component="span"
+          variant="body4"
+          className={styles.rowCount}
+        >
+          {rowCountMessage}
+        </Typography>
+      </div>
+      <div className={styles.tableContainer}>
         <DataTable />
       </div>
-      <div className={styles.footer}>{rowCountMessage}</div>
     </div>
   );
 };

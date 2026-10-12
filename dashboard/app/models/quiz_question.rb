@@ -19,6 +19,9 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
+  # Every concrete question subtype. TODO: P0 - add MultipleSelectQuestion, MatchQuestion.
+  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion).freeze
+
   after_initialize {self.type ||= self.class.sti_name}
 
   # No FK; parent delete leaves a dangling id.
@@ -33,9 +36,53 @@ class QuizQuestion < ApplicationRecord
   # No cascade. Destroy checks this (and other placements) before hard-delete.
   has_many :quiz_question_responses, dependent: nil
 
-  validates :key, presence: true
+  validates :key, presence: true, uniqueness: true
   validates :name, presence: true
   validates :content, presence: true
+
+  after_commit :write_to_file, on: %i(create update)
+  after_commit :delete_file, on: :destroy
+
+  def self.setup(dashboard_root = '.')
+    ActiveRecord::Base.transaction do
+      Dir.glob("#{dashboard_root}/config/quiz_questions/**/*.json").each do |path|
+        source = JSON.parse(File.read(path))
+        question = source['type'].constantize.find_or_initialize_by(key: source['key'])
+        question.name = source['name']
+        decrypted = Encryption.decrypt_object(source['encrypted_content'])
+        question.content = decrypted['content']
+        question.explanation = decrypted['explanation']
+        question.save! if question.changed?
+      rescue JSON::ParserError
+        raise format('failed to parse %s', path)
+      end
+    end
+  end
+
+  def formatted_for_file
+    JSON.pretty_generate(
+      'key' => key,
+      'type' => type,
+      'name' => name,
+      'encrypted_content' => Encryption.encrypt_object('content' => content, 'explanation' => explanation)
+    )
+  end
+
+  def write_to_file
+    if write_to_file?
+      file_path = Rails.root.join("config/quiz_questions/#{key}.json")
+      FileUtils.mkdir_p(File.dirname(file_path))
+      File.write(file_path, formatted_for_file)
+    end
+  end
+
+  def delete_file
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if write_to_file?
+  end
+
+  def write_to_file?
+    Rails.application.config.levelbuilder_mode
+  end
 
   # published unit means preview/stable/sunsetting
   def used_in_published_unit?
@@ -76,6 +123,21 @@ class QuizQuestion < ApplicationRecord
   # until manual/AI grading is built.
   def auto_gradable?
     false
+  end
+
+  # Builds `content` from question builder request params.
+  def self.content_from_builder_params(builder_params)
+    raise ArgumentError, "#{name} does not accept editor params"
+  end
+
+  # Subtype-specific fields for the quiz builder, answer key included.
+  def builder_content_json
+    raise NotImplementedError, "#{self.class.name} must implement builder_content_json"
+  end
+
+  # Subtype-specific fields for a student attempt; must never include the answer key.
+  def attempt_content_json
+    raise NotImplementedError, "#{self.class.name} must implement attempt_content_json"
   end
 
   # Shared by subtypes whose `content` includes a "choices" array. Returns

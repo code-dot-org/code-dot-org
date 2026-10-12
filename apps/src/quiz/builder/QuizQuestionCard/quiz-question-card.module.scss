@@ -13,6 +13,9 @@
   gap: 12px;
   padding: 10px;
   background: var(--background-neutral-primary);
+}
+
+.header:not(:last-child) {
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
@@ -41,7 +44,7 @@
   color: var(--text-warning-secondary);
 }
 
-.stemPreview {
+.questionTitlePreview {
   flex: 1 0 0;
   min-width: 0;
   overflow: hidden;
@@ -63,6 +66,7 @@
   flex-direction: column;
   gap: 8px;
   padding: 8px 10px 10px;
+  background: var(--background-neutral-primary);
 }
 
 .optionsList {
@@ -97,11 +101,12 @@
   }
 }
 
-.addOption {
+// FormFieldWrapper aligns its children to flex-start, so the input needs its own width.
+.fullWidthField {
   width: 100%;
 
-  &:global(.MuiButton-outlined) {
-    border-style: dashed;
+  input {
+    width: 100%;
   }
 }
 
@@ -134,6 +139,13 @@
   padding: 10px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
+}
+
+// aria-disabled rather than disabled, so the button keeps focus and its tooltip.
+.footer .ariaDisabled[aria-disabled='true'] {
+  border-color: var(--borders-neutral-disabled);
+  color: var(--text-neutral-disabled);
+  background-color: var(--background-neutral-primary);
 }
 
 .footerActions {

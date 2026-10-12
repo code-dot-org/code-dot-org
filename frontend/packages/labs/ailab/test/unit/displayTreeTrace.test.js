@@ -2,9 +2,10 @@ import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
-import {setTestData} from '../../src/redux';
+import {playPredictionStep, setTestData} from '../../src/redux';
 import {
   getDisplayTree,
+  getPredictionStep,
   getPredictionTrace,
 } from '../../src/selectors/visualizationSelectors';
 import {store} from '../../src/store';
@@ -166,7 +167,7 @@ describe('getPredictionTrace', () => {
     Object.entries(values).forEach(([feature, value]) =>
       store.dispatch(setTestData(feature, value)),
     );
-    train.onClickPredict(store);
+    train.onClickPredict();
     return store.getState();
   };
 
@@ -192,7 +193,7 @@ describe('getPredictionTrace', () => {
     store.dispatch(setTestData('Legs', '4'));
     expect(getPredictionTrace(store.getState())).toBeUndefined();
 
-    train.onClickPredict(store);
+    train.onClickPredict();
     const state = store.getState();
     expect(getPredictionTrace(state).prediction).toBe(
       getConvertedPredictedLabel(state),
@@ -213,5 +214,23 @@ describe('getPredictionTrace', () => {
 
     expect(state.prediction).toBeDefined();
     expect(getPredictionTrace(state)).toBeUndefined();
+  });
+});
+
+describe('getPredictionStep', () => {
+  test('is the last step of the path until a step is chosen', () => {
+    trainDataset('zoo', zooOptions);
+    const fish = {Legs: '0', Feathers: 'No', Milk: 'No', Fins: 'Yes'};
+    Object.entries(fish).forEach(([feature, value]) =>
+      store.dispatch(setTestData(feature, value)),
+    );
+    train.onClickPredict();
+    const {path} = getPredictionTrace(store.getState());
+
+    expect(getPredictionStep(store.getState())).toBe(path.length - 1);
+
+    store.dispatch(playPredictionStep(0));
+
+    expect(getPredictionStep(store.getState())).toBe(0);
   });
 });

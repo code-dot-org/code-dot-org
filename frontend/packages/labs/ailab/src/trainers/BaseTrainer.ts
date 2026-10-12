@@ -11,6 +11,7 @@ import type {Store} from 'redux';
 
 import {
   gradeAccuracy,
+  getCorrectCount,
   getGradeOptions,
   getPercentCorrect,
 } from '../helpers/accuracy';
@@ -143,8 +144,15 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   storeHistoricResult(state: RootState): void {
     const accuracy = getPercentCorrect(state);
+    const {correct, total} = getCorrectCount(state);
     this.store.dispatch(
-      setHistoricResult(state.labelColumn!, state.selectedFeatures, accuracy),
+      setHistoricResult(
+        state.labelColumn!,
+        state.selectedFeatures,
+        accuracy,
+        correct,
+        total,
+      ),
     );
   }
 }

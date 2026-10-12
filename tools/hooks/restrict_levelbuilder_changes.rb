@@ -16,6 +16,7 @@ PROGRAMMING_ENVIRONMENTS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/pr
 PROGRAMMING_EXPRESSIONS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/programming_expressions', __FILE__).freeze
 VIDEO_THUMBNAILS_DIR = File.expand_path(REPO_DIR + '/dashboard/public/c/video_thumbnails', __FILE__).freeze
 FOORM_DIR = File.expand_path(REPO_DIR + '/dashboard/config/foorm', __FILE__).freeze
+QUIZ_QUESTIONS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/quiz_questions', __FILE__).freeze
 ALLOWED_FILES = %w(
   dashboard/config/locales/dsls/en.yml
   dashboard/config/locales/scripts/en.yml
@@ -34,6 +35,6 @@ staged_files = HooksUtils.get_staged_files
 
 staged_files.each do |filename|
   raise "#{ERROR_MESSAGE}\nFile blocked: #{filename}" unless filename.start_with?(
-    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, SCRIPTS_DIR, LEVELS_DIR, COURSES_DIR, COURSE_OFFERINGS_DIR, DATA_DOCS_DIR, REFERENCE_GUIDES_DIR, PROGRAMMING_CLASSES_DIR, PROGRAMMING_ENVIRONMENTS_DIR, PROGRAMMING_EXPRESSIONS_DIR, VIDEO_THUMBNAILS_DIR, FOORM_DIR
+    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, SCRIPTS_DIR, LEVELS_DIR, COURSES_DIR, COURSE_OFFERINGS_DIR, DATA_DOCS_DIR, REFERENCE_GUIDES_DIR, PROGRAMMING_CLASSES_DIR, PROGRAMMING_ENVIRONMENTS_DIR, PROGRAMMING_EXPRESSIONS_DIR, VIDEO_THUMBNAILS_DIR, FOORM_DIR, QUIZ_QUESTIONS_DIR
   ) || ALLOWED_FILES.include?(filename)
 end

@@ -11,19 +11,16 @@ class QuizQuestionPlacementsController < ApplicationController
 
   # POST /levels/:level_id/quiz_question_placements
   #
-  # Creates a MultipleChoiceQuestion and attaches it to this Quiz level.
-  # TODO: other question types. requires_new: true - a plain transaction
-  # would just join a test's open one and not actually roll back.
+  # Creates a question of the given type and attaches it to this Quiz level.
+  # requires_new: a unit test's own transaction would otherwise absorb this one,
+  # so a failed create would leave the question behind instead of rolling back.
   def create
     question = ActiveRecord::Base.transaction(requires_new: true) do
-      question = MultipleChoiceQuestion.create!(
+      question_class = quiz_question_class
+      question = question_class.create!(
         key: SecureRandom.uuid,
         name: quiz_question_params[:questionName],
-        content: {
-          stem: quiz_question_params[:stem],
-          choices: (quiz_question_params[:choices] || []).map(&:to_h),
-          correct_choice_id: quiz_question_params[:correctChoiceId],
-        },
+        content: question_class.content_from_builder_params(quiz_question_params),
         explanation: quiz_question_params[:explanation]
       )
       question.standards = fetch_quiz_question_standards(quiz_question_params[:standards])
@@ -45,7 +42,7 @@ class QuizQuestionPlacementsController < ApplicationController
   # Attaches an existing bank question - no new QuizQuestion row, just a
   # placement. find_or_create_by! makes double-clicking idempotent.
   def attach
-    question = MultipleChoiceQuestion.find(params[:id])
+    question = QuizQuestion.where(type: QuizQuestion::TYPES).find(params[:id])
     next_position = (@level.placements.maximum(:position) || 0) + 1
     QuizQuestionPlacement.find_or_create_by!(level: @level, quiz_question: question) do |placement|
       placement.page = 1

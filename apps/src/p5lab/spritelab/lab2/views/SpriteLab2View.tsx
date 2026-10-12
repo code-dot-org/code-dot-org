@@ -70,6 +70,7 @@ import {
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
   isImageMode,
+  isImageUi,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -124,12 +125,14 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
+import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
+import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
@@ -166,6 +169,13 @@ function getImageAdlibSetParam(): ImageAdlibSet | undefined {
 // levels, for internal testing.
 function getImageFreeTextParam(): boolean {
   return queryParams('image-free-text') === 'true';
+}
+
+// ?image-ui=explore tries the two-half image scene on any image level; a
+// level opts in with level_mode.imageUi.
+function getImageUiParam() {
+  const value = queryParams('image-ui');
+  return isImageUi(value) ? value : undefined;
 }
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -1257,7 +1267,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // from the tab button or "Restart game" clears it.
   const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
   // The arrow buttons the running scene wants, as the engine reports it.
-  const [arrowSet, setArrowSet] = useState<ArrowSet>('steer');
+  // No controls until the engine says which the running scene wants.
+  const [arrowSet, setArrowSet] = useState<ArrowSet>('none');
 
   // p5 listens for keys on window, so a game reading arrows/space would eat
   // them while the student edits blocks. Give the game the keyboard only in
@@ -1519,6 +1530,62 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // workspace follows the active scene and re-runs the preview.
   // Sources generation and workspace the toolbox was last loaded into.
   const toolboxLoadedForRef = useRef('');
+  // Loads of a scene's code into the workspace.
+  const sceneLoadsRef = useRef(0);
+  // The key of the last added-blocks pass (see addLevelBlocks).
+  const addedBlocksForRef = useRef('');
+  // Set when Start Over leaves for the first level: the level being left and
+  // the reinitialization count before its reset. The pass skips that reset,
+  // or the fresh project would open with this level's blocks in it. A level
+  // change ends it, consumed or not.
+  const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
+  useEffect(() => {
+    leavingResetRef.current = undefined;
+  }, [levelProperties.id]);
+  // The level's added blocks join the pinned scene once it is on screen:
+  // once per level, load, sources generation and workspace. A level reached
+  // in page loads nothing, so arriving runs it; a load puts the view back
+  // wherever the workspace was, so a load runs it too and brings the
+  // level's outline back on screen.
+  const addLevelBlocks = useCallback(() => {
+    if (
+      !animationsSeeded ||
+      isToolboxMode ||
+      !levelProperties.addBlocks ||
+      activeScene.id !== pinnedSceneId
+    ) {
+      return;
+    }
+    const key = [
+      levelProperties.id,
+      sourcesReinitializedCount,
+      workspaceVersion,
+      sceneLoadsRef.current,
+    ].join(':');
+    if (addedBlocksForRef.current === key) {
+      return;
+    }
+    addedBlocksForRef.current = key;
+    const leavingReset = leavingResetRef.current;
+    if (
+      leavingReset &&
+      leavingReset.level === levelProperties.id &&
+      sourcesReinitializedCount > leavingReset.reinitBefore
+    ) {
+      leavingResetRef.current = undefined;
+      return;
+    }
+    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
+    addMissingBlocks(workspace, levelProperties.addBlocks);
+  }, [
+    animationsSeeded,
+    levelProperties.id,
+    levelProperties.addBlocks,
+    activeScene.id,
+    pinnedSceneId,
+    sourcesReinitializedCount,
+    workspaceVersion,
+  ]);
   useEffect(() => {
     if (!animationsSeeded) {
       return;
@@ -1537,9 +1604,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (isEqual(getCurrentBlocks(), source)) {
       return;
     }
+    sceneLoadsRef.current++;
     loadCode(source);
     runLocalScene(activeScene);
+    // After the load, so the blocks sit below what the workspace holds.
+    addLevelBlocks();
   }, [
+    addLevelBlocks,
     animationsSeeded,
     activeScene,
     currentSources.source,
@@ -1550,42 +1621,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
   ]);
-
-  // The level's added blocks join the pinned scene once it is on screen,
-  // after the load above (effects run in order), so they sit below what the
-  // workspace has rendered. Per level, not per load: a level reached in
-  // page shares the scene's code with the last one, and loads nothing.
-  const addedBlocksForRef = useRef('');
   useEffect(() => {
-    if (
-      !animationsSeeded ||
-      isToolboxMode ||
-      !levelProperties.addBlocks ||
-      activeScene.id !== pinnedSceneId
-    ) {
-      return;
-    }
-    const key = [
-      levelProperties.id,
-      activeScene.id,
-      sourcesReinitializedCount,
-      workspaceVersion,
-    ].join(':');
-    if (addedBlocksForRef.current === key) {
-      return;
-    }
-    addedBlocksForRef.current = key;
-    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    addMissingBlocks(workspace, levelProperties.addBlocks);
-  }, [
-    animationsSeeded,
-    levelProperties.id,
-    levelProperties.addBlocks,
-    activeScene.id,
-    pinnedSceneId,
-    sourcesReinitializedCount,
-    workspaceVersion,
-  ]);
+    addLevelBlocks();
+  }, [addLevelBlocks]);
 
   const sceneEditing = useSceneEditing({
     scenes,
@@ -1779,6 +1817,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  const imageUi = getImageUiParam() ?? levelProperties.levelMode?.imageUi;
+
   // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
@@ -1802,9 +1842,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showStartOver && isEditable && (
         <StartOverDialog
           onConfirm={() => {
+            const leaving = !!firstLevelId && firstLevelId !== currentLevelId;
+            if (leaving) {
+              leavingResetRef.current = {
+                level: levelProperties.id,
+                reinitBefore: sourcesReinitializedCount,
+              };
+            }
             startOver();
             setShowStartOver(false);
-            if (firstLevelId && firstLevelId !== currentLevelId) {
+            if (leaving) {
               dispatch(navigateToLevelId(firstLevelId));
             }
           }}
@@ -1831,13 +1878,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {isImageMode(levelProperties.levelMode) ? (
         // The image panel is the whole lab, with the floating guide over it.
         <div className={moduleStyles.imageLevelArea}>
-          <GenerateImagePane imageLevel {...imagePaneProps} />
-          <GenerateSpriteLab
-            levelMode={levelProperties.levelMode}
-            instructions={guide.text}
-            showContinue={guide.showContinue}
-            levelProperties={levelProperties}
-          />
+          {imageUi ? (
+            // The explore scene is its own Guide, instructions included.
+            <ImageExploreScene
+              imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
+              imageSubject={levelProperties.levelMode?.imageSubject}
+              sentenceId={levelProperties.levelMode?.sentence}
+              defaultStyle={DEFAULT_IMAGE_STYLE}
+              imageRole={levelProperties.levelMode?.imageRole}
+              uploadImage={uploadImage}
+              instructions={guide.text}
+              showTts={showTtsFor(levelProperties)}
+            />
+          ) : (
+            <>
+              <GenerateImagePane imageLevel {...imagePaneProps} />
+              <GenerateSpriteLab
+                levelMode={levelProperties.levelMode}
+                instructions={guide.text}
+                showContinue={guide.showContinue}
+                levelProperties={levelProperties}
+              />
+            </>
+          )}
         </div>
       ) : (
         <TabShell

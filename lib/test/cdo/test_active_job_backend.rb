@@ -1,5 +1,6 @@
 require_relative '../test_helper'
 require 'cdo/active_job_backend'
+require 'delayed_job'
 require 'tmpdir'
 
 describe 'Cdo::ActiveJobBackend' do
@@ -105,6 +106,24 @@ describe 'Cdo::ActiveJobBackend' do
       Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.3', anything).once
       Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.4', anything).once
       Cdo::ActiveJobBackend.start_n_workers(2, initial_worker_index: 3)
+    end
+  end
+
+  describe 'before_worker_fork()' do
+    before do
+      Cdo::ActiveJobBackend.unstub(:before_worker_fork)
+      @original_execution_context = CDO.execution_context
+    end
+
+    after do
+      CDO.execution_context = @original_execution_context
+    end
+
+    it 'marks the process as an ActiveJob worker before loading Rails' do
+      Cdo::ActiveJobBackend.expects(:require).with {CDO.running_active_job_worker?}
+      Delayed::Worker.expects(:before_fork)
+
+      Cdo::ActiveJobBackend.before_worker_fork
     end
   end
 

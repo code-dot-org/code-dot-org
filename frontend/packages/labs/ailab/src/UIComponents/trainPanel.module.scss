@@ -1,0 +1,75 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.side-panel;
+}
+
+.header {
+  @include mixins.panel-header;
+
+  justify-content: center;
+}
+
+.header .title {
+  @include mixins.panel-header-title;
+}
+
+.content {
+  @include mixins.panel-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+$features-menu-max-height: 240px;
+
+.card {
+  @include mixins.card;
+}
+
+.fields {
+  @include mixins.card-fields;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.field .dropdown {
+  @include mixins.full-width-field;
+}
+
+.featuresField .featuresDropdown {
+  display: block;
+  width: 100%;
+
+  > button {
+    width: 100%;
+
+    > span {
+      flex-grow: 1;
+      text-align: start;
+    }
+  }
+
+  // The checkbox menu of features.
+  > div {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: $features-menu-max-height;
+    overflow-y: auto;
+  }
+}
+
+.sentence {
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.actionRow {
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+}

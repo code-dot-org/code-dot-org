@@ -1,7 +1,7 @@
 {
   "key": "hello-world-space",
   "display_name": "Hello World: Space",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",

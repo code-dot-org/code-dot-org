@@ -1,0 +1,43 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T00:53:29.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Pixel Pup Dog Wash</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <h1>Pixel Pup Dog Wassh</h1>\n    <p>Bubbles, brushes, and a fluffy finish for your best friend.</p>\n    <button id=\"book\">Book a wash</button>\n    <p id=\"message\"></p>\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  font-family: system-ui, Arial, sans-serif;\n  background: #d9f1ff;\n  color: #14324a;\n  text-align: center;\n  padding: 60px 20px;\n}\n\nh1 {\n  font-size: 2.6rem;\n  margin-bottom: 8px;\n}\n\np {\n  font-size: 1.2rem;\n}\n\nbutton {\n  background: #999999;\n  color: white;\n  border: none;\n  border-radius: 30px;\n  padding: 14px 32px;\n  font-size: 1.2rem;\n  cursor: pointer;\n}\n\n#message {\n  font-weight: bold;\n  margin-top: 24px;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "var bookButton = document.getElementById(\"book\");\nvar message = document.getElementById(\"message\");\n\nbookButton.addEventListener(\"click\", function () {\n  message.textContent = \"Error\";\n});\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "long_instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nRun your page after each fix to check it."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

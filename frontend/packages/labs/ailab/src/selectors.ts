@@ -2,10 +2,13 @@ import {createSelector} from 'reselect';
 
 import {ColumnTypes} from './constants';
 import {
+  containsOnlyNumbers,
   filterColumnsByType,
+  getDecimalPlaces,
   getUniqueOptions,
   getExtrema,
   getColumnDescription,
+  tooManyUniqueOptions,
 } from './helpers/columnDetails';
 import {arrayIntersection} from './helpers/utils';
 import type {RootState} from './redux';
@@ -78,6 +81,23 @@ export const getSelectedNumericalFeatures = createSelector(
   },
 );
 
+// Columns a model can train on: numbers-only numerical columns, and
+// categorical columns under the unique-options limit.
+export const getSelectableColumns = createSelector(
+  [getData, getColumnsByDataType],
+  (data: DataRow[], columnsByDataType: Record<string, string>): string[] =>
+    Object.keys(data[0] ?? {}).filter(column => {
+      const dataType = columnsByDataType[column];
+      if (dataType === ColumnTypes.NUMERICAL) {
+        return containsOnlyNumbers(data, column);
+      }
+      if (dataType === ColumnTypes.CATEGORICAL) {
+        return !tooManyUniqueOptions(getUniqueOptions(data, column).length);
+      }
+      return false;
+    }),
+);
+
 export const getUniqueOptionsByColumn = createSelector(
   [getSelectedCategoricalColumns, getData],
   (
@@ -107,6 +127,20 @@ export const getExtremaByColumn = createSelector(
     );
     return extremaByColumn;
   },
+);
+
+export const getDecimalPlacesByColumn = createSelector(
+  [getSelectedNumericalColumns, getData],
+  (
+    selectedNumericalColumns: string[],
+    data: DataRow[],
+  ): Record<string, number> =>
+    Object.fromEntries(
+      selectedNumericalColumns.map(column => [
+        column,
+        getDecimalPlaces(data, column),
+      ]),
+    ),
 );
 
 export const getSelectedColumnsDescriptions = createSelector(
