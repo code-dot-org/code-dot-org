@@ -231,7 +231,7 @@
           "title": "Practice - Web Lab Practice",
           "kind": "level",
           "level": "adaptive-hoai-first-prompt-panda",
-          "instructions": "Someone named Sam wrote this prompt for a panda fan page:\n\n*“Make a website about pandas.”*\n\nRun the page to see what it built. Sam is not happy with it.\n\n*After run:*\n\nPick one thing you’d change. Then write a better prompt for Sam. Name the part you’re changing and add at least two details, like a color, a tone, or something pandas do."
+          "instructions": "Someone named Sam wrote this prompt for a panda fan page:\n\n*“Make a website about pandas.”*\n\nLook at the preview to see what it built. Sam is not happy with it.\n\n*Then:*\n\nPick one thing you’d change. Then write a better prompt for Sam. Name the part you’re changing and add at least two details, like a color, a tone, or something pandas do."
         },
         {
           "id": "add-details-project",
@@ -239,7 +239,7 @@
           "kind": "level",
           "level": "adaptive-hoai-project-first-prompt",
           "project": true,
-          "instructions": "Now it’s your turn. Look at your own page and pick one thing you want to change.\n\n**Do This:**\n\n1.  Write a detailed prompt that names the part of your page you want to change.  *Think color, size, wording, or tone. Change your heading, text, background or buttons.*\n1.  Run the page to see what changed. If it’s not what you meant, say what to change next.",
+          "instructions": "Now it’s your turn. Look at your own page and pick one thing you want to change.\n\n**Do This:**\n\n1.  Write a detailed prompt that names the part of your page you want to change.  *Think color, size, wording, or tone. Change your heading, text, background or buttons.*\n1.  Look at the preview to see what changed. If it’s not what you meant, say what to change next.",
           "instructionsPrompt": "Have the student look at their own page, pick one thing to change, and write a detailed prompt that names that part of the page and uses 2+ specific design details, such as color, size, wording, or tone. Name the actual element or text on their page that the change builds on."
         }
       ]
@@ -286,7 +286,7 @@
           "title": "Edit by Hand",
           "kind": "level",
           "level": "adaptive-hoai-override-panda",
-          "instructions": "Sam’s page is almost done, but three small things are off.\n\n1.  Run the page and look for what’s wrong: a typo in the heading, a heading that’s the wrong color, and a button with the wrong words.\n2.  Fix each one yourself in the code. Don’t ask the AI.\n3.  Run the page again to check your fixes.\n4.  Write one sentence: why was editing faster than writing another prompt?"
+          "instructions": "Sam’s page is almost done, but three small things are off.\n\n1.  Look at the preview and find what’s wrong: a typo in the heading, a heading that’s the wrong color, and a button with the wrong words.\n2.  Fix each one yourself in the code. Don’t ask the AI.\n3.  Check the preview again to see your fixes.\n4.  Write one sentence: why was editing faster than writing another prompt?"
         },
         {
           "id": "edit-by-hand-panel",
@@ -334,8 +334,8 @@
           "kind": "level",
           "level": "adaptive-hoai-project-override",
           "project": true,
-          "instructions": "1.  Find one small thing on your page to fix, like a word, or a color.\n2.  Change it yourself in the code.\n3.  Run your page to check your fix.\n\nWas editing faster than asking the AI?",
-          "instructionsPrompt": "Have the student find one small thing on their page to fix, like a word or a color, change it themselves in the code, and run the page to check the fix. Name the actual text or element on their page to edit."
+          "instructions": "1.  Find one small thing on your page to fix, like a word, or a color.\n2.  Change it yourself in the code.\n3.  Look at the preview to check your fix.\n\nWas editing faster than asking the AI?",
+          "instructionsPrompt": "Have the student find one small thing on their page to fix, like a word or a color, change it themselves in the code, and look at the preview to check the fix. Name the actual text or element on their page to edit."
         }
       ]
     },
@@ -432,7 +432,7 @@
           "kind": "level",
           "level": "adaptive-hoai-project-spot-section",
           "project": true,
-          "instructions": "**Do This**\n\n1.  Run your page and find the **hero section**, the **feature cards**, the **interactive canvas**, and the **call-to-action**.\n2.  Pick two of them.\n3.  Ask the AI to change each one, using its name in your prompt.\n4.  Run your page. Did each change land on the right block?\n\nMissing a section? Say “I don’t have this one yet,” or ask the AI to add it.",
+          "instructions": "**Do This**\n\n1.  Look at your page and find the **hero section**, the **feature cards**, the **interactive canvas**, and the **call-to-action**.\n2.  Pick two of them.\n3.  Ask the AI to change each one, using its name in your prompt.\n4.  Check the preview. Did each change land on the right block?\n\nMissing a section? Say “I don’t have this one yet,” or ask the AI to add it.",
           "instructionsPrompt": "Have the student find the hero section, feature cards, interactive canvas, and call-to-action on their page, pick two, and prompt the AI to change each one by naming the block. If a block is missing, have them say so or ask the AI to add it. Refer to the blocks as they actually appear on their page."
         }
       ]
@@ -477,7 +477,7 @@
           "kind": "level",
           "level": "adaptive-hoai-project-whats-it-for",
           "project": true,
-          "instructions": "**Do This**\n\n1.  Run your page and look at it like a first-time visitor.\n2.  Ask each question and see if your page answers it:\n\n      - Hero section: What is this site?\n      - Feature cards: What can I get here?\n      - Interactive canvas: What can I try?\n      - Call-to-action: What should I do next?\n3.  Pick at least two blocks that don’t answer their question yet.\n4.  Change them so they do. Ask the AI or edit them yourself.\n5.  Run your page again. Would a visitor get an answer now?\n\nMissing a block? Add it so your page answers that question.",
+          "instructions": "**Do This**\n\n1.  Look at your page like a first-time visitor.\n2.  Ask each question and see if your page answers it:\n\n      - Hero section: What is this site?\n      - Feature cards: What can I get here?\n      - Interactive canvas: What can I try?\n      - Call-to-action: What should I do next?\n3.  Pick at least two blocks that don’t answer their question yet.\n4.  Change them so they do. Ask the AI or edit them yourself.\n5.  Look at your page again. Would a visitor get an answer now?\n\nMissing a block? Add it so your page answers that question.",
           "instructionsPrompt": "Have the student look at their page like a first-time visitor and check whether each block answers its question: hero section, what is this site; feature cards, what can I get here; interactive canvas, what can I try; call-to-action, what should I do next. Have them pick at least two blocks that don’t answer their question yet and change them, by prompting the AI or editing by hand, or add a missing block. Name the actual blocks and text on their page."
         }
       ]
@@ -507,7 +507,7 @@
           "title": "“Right file, right fix”",
           "kind": "level",
           "level": "adaptive-hoai-speak-web-dev-dogwash",
-          "instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nRun your page after each fix to check it."
+          "instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nCheck the preview after each fix."
         },
         {
           "id": "speak-web-dev-project",
@@ -565,7 +565,7 @@
           "title": "Fix the missing photo",
           "kind": "level",
           "level": "adaptive-hoai-find-the-clue-photo",
-          "instructions": "**Do This**\n\n1.  Run the page. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Run the page again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
+          "instructions": "**Do This**\n\n1.  Look at the preview. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Check the preview again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
         }
       ]
     }

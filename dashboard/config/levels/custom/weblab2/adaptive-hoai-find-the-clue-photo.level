@@ -28,7 +28,7 @@
       ]
     },
     "hide_share_and_remix": true,
-    "long_instructions": "**Do This**\n\n1.  Run the page. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Run the page again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
+    "long_instructions": "**Do This**\n\n1.  Look at the preview. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Check the preview again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
   },
   "published": true
 }]]></config>
