@@ -8,7 +8,7 @@ class AdaptiveTracesController < ApplicationController
   OUTCOMES = %w[success schema_mismatch error].freeze
   # Unknown metadata keys are dropped rather than refused, so a client ahead of
   # or behind this list still gets its trace recorded.
-  METADATA_KEYS = %w[pathwayId checkpointId stepId scriptId inputsHash responseId].freeze
+  METADATA_KEYS = %w[pathwayId checkpointId stepId scriptId inputsHash promptVersion responseId].freeze
   USAGE_KEYS = %w[input output total].freeze
   TRACE_ID_FORMAT = /\A\h{32}\z/
   # The prompt carries the student's project source; longer text is cut, not refused.

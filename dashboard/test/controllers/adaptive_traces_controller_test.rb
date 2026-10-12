@@ -14,7 +14,7 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
       usage: {input: 10, output: 2, total: 12},
       startedAt: 1_767_225_600_000,
       endedAt: 1_767_225_602_000,
-      metadata: {pathwayId: 'p', stepId: 's', inputsHash: 'h', nested: {no: 1}, secret: 'nope'},
+      metadata: {pathwayId: 'p', stepId: 's', inputsHash: 'h', promptVersion: 'v1', nested: {no: 1}, secret: 'nope'},
     }
   end
 
@@ -79,7 +79,7 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
 
     opts = capture_trace
 
-    assert_equal({pathway_id: 'p', step_id: 's', inputs_hash: 'h', level_id: 7}, opts[:metadata])
+    assert_equal({pathway_id: 'p', step_id: 's', inputs_hash: 'h', prompt_version: 'v1', level_id: 7}, opts[:metadata])
   end
 
   test 'relays a failed generation with its message and no output' do

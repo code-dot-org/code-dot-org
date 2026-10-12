@@ -1,5 +1,8 @@
 import {generate} from '@cdo/apps/adaptive/ai/generate';
-import {buildInstructionsPrompt} from '@cdo/apps/adaptive/ai/instructionsPrompt';
+import {
+  INSTRUCTIONS_PROMPT_VERSION,
+  buildInstructionsPrompt,
+} from '@cdo/apps/adaptive/ai/instructionsPrompt';
 import {resolveStepInstructions} from '@cdo/apps/adaptive/ai/resolveStepInstructions';
 import {generateInputsHash} from '@cdo/apps/adaptive/progress/model';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
@@ -127,6 +130,7 @@ describe('resolveStepInstructions', () => {
           checkpointId: 'basics',
           stepId: 'build',
           inputsHash,
+          promptVersion: INSTRUCTIONS_PROMPT_VERSION,
         },
       },
     });

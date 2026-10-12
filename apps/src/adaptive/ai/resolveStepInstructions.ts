@@ -12,6 +12,7 @@ import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
 import {generate} from './generate';
 import {
+  INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
   generatedInstructionsSchema,
 } from './instructionsPrompt';
@@ -73,6 +74,7 @@ export async function resolveStepInstructions({
         checkpointId: checkpoint.id,
         stepId: step.id,
         inputsHash,
+        promptVersion: INSTRUCTIONS_PROMPT_VERSION,
       },
     },
   });
