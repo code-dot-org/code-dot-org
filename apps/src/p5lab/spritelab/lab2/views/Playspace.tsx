@@ -23,6 +23,8 @@ import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import {getImageThumbnail} from '../imageTrim';
 
+import {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
@@ -416,8 +418,21 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // instructions' card at the box's left instead of under it.
   let columnWidth = 0;
   let beside = false;
+  // Playing: the instructions' card sits in the bottom corner on the
+  // column's side, at the floating guide's width, and the box clears it as
+  // it would that guide.
+  const playCardSize =
+    below && belowNeed > 0
+      ? {width: PLAY_GUIDE_WIDTH_PX, height: belowNeed + 2 * CARD_BORDER_PX}
+      : null;
   if (mode === 'play') {
-    placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0, 0, side);
+    placement = playPlacement(
+      size,
+      below ? playCardSize : guideSize,
+      playBar ? BAR_ROOM : 0,
+      0,
+      side
+    );
   } else {
     // Preview: as large as its column allows, clear of the guide like the
     // play view (when the guide floats), leaving room under the bar for
@@ -689,14 +704,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {playBar}
         </div>
       )}
-      {below && mode === 'preview' && visible && (
+      {below && mode !== 'hidden' && visible && (
         <div
           className={classNames(
             moduleStyles.previewBelow,
             compact && moduleStyles.previewBelowCompact
           )}
           style={
-            beside
+            mode === 'play'
+              ? {
+                  [side === 'left' ? 'left' : 'right']: GUIDE_RIGHT_OFFSET_PX,
+                  bottom: GUIDE_BOTTOM_OFFSET_PX,
+                  width: PLAY_GUIDE_WIDTH_PX,
+                }
+              : beside
               ? {
                   left: belowLeft,
                   top: CARD_GAP,

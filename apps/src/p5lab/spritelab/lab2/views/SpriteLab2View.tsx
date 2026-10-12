@@ -2322,10 +2322,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onPreviewClick={handlePreviewClick}
           />
 
-          {/* The guide floats while playing and on the map, narrowing on
-          Play to leave the game more space; beside the editors it is docked
-          under the preview instead. */}
-          {!!levelProperties.levelMode && playspaceMode !== 'preview' && (
+          {/* The guide floats on the map only; beside the editors and
+          while playing it is the card the playspace places. */}
+          {!!levelProperties.levelMode && playspaceMode === 'hidden' && (
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
