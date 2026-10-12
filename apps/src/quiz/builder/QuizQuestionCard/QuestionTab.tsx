@@ -11,15 +11,18 @@ interface QuestionTabProps {
   draft: QuizQuestionDraft;
   onChange: (draft: QuizQuestionDraft) => void;
   disabled?: boolean;
+  nameFieldRef?: React.Ref<HTMLInputElement>;
 }
 
 const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
   draft,
   onChange,
   disabled,
+  nameFieldRef,
 }) => (
   <div className={builderCommonStyles.section}>
     <TextField
+      ref={nameFieldRef}
       name="questionName"
       label="Internal name"
       size="m"

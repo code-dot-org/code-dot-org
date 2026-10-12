@@ -1,6 +1,6 @@
 import Tabs from '@code-dot-org/component-library/tabs';
 import isEqual from 'lodash/isEqual';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import BuilderCard from '../BuilderCard';
 import {QUESTION_TYPE_LABELS_ICONS} from '../constants';
@@ -59,6 +59,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
+  const nameFieldRef = useRef<HTMLInputElement>(null);
   const isBusy = isSaving || isRemoving;
   // A pending question (see isPendingQuestionId) doesn't exist on the
   // server yet, so it counts as dirty even untouched - otherwise Save
@@ -69,6 +70,16 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   // A save can fork the question into a new id (see
   // useQuizBuilderQuestions#saveQuestion) - resync the draft whenever the
   // identity of the question this card is editing changes.
+  // Picking a type in the create dropdown disables or unmounts it, which
+  // drops focus; hand it to the new question's first field.
+  useEffect(() => {
+    if (isPendingQuestionId(question.id) && isExpanded) {
+      nameFieldRef.current?.focus();
+    }
+    // Mount only: a later expand of an existing card shouldn't steal focus.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     setDraft(toDraft(question));
   }, [question]);
@@ -122,6 +133,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                 draft={draft}
                 onChange={setDraft}
                 disabled={isBusy}
+                nameFieldRef={nameFieldRef}
               />
             ),
           },

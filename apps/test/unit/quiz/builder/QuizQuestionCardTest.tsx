@@ -196,6 +196,18 @@ describe('QuizQuestionCard', () => {
 
       expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
     });
+
+    it('focuses the Internal name field, since the create dropdown that made it loses focus', () => {
+      renderCard({question: PENDING_QUESTION, isExpanded: true});
+
+      expect(screen.getByLabelText('Internal name')).toHaveFocus();
+    });
+  });
+
+  it('does not take focus when an existing question opens expanded', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByLabelText('Internal name')).not.toHaveFocus();
   });
 
   it('opens a free response question saved without choices', () => {
