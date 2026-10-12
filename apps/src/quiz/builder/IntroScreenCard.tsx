@@ -6,7 +6,7 @@ import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import BuilderCard from './BuilderCard';
 import {QuizConfigurationData} from './QuizConfigurationPanel';
 
-import styles from './QuizQuestionCard/quiz-question-card.module.scss';
+import builderCommonStyles from './builder-common.module.scss';
 
 interface IntroScreenCardProps {
   customIntroText: string;
@@ -81,10 +81,10 @@ const IntroScreenCard: React.FunctionComponent<IntroScreenCardProps> = ({
           : undefined
       }
     >
-      <div className={styles.tabContent}>
+      <div className={builderCommonStyles.section}>
         <FormFieldWrapper label="Content" helperMessage="Supports markdown.">
           <textarea
-            className={styles.textarea}
+            className={builderCommonStyles.textarea}
             name="customIntroText"
             rows={6}
             value={draft}

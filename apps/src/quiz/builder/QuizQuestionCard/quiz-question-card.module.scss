@@ -6,14 +6,6 @@
   background: var(--background-neutral-primary);
 }
 
-.tabContent {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px 10px 10px;
-  background: var(--background-neutral-primary);
-}
-
 .optionsList {
   display: flex;
   flex-direction: column;
@@ -58,15 +50,4 @@
 .optionText {
   flex: 1 0 0;
   min-width: 0;
-}
-
-.textarea {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 80px;
-  padding: 8px 12px;
-  border: 1px solid var(--border-neutral-secondary);
-  border-radius: var(--shape-sm);
-  font: inherit;
-  resize: vertical;
 }
