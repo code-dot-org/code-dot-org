@@ -162,6 +162,11 @@ class Unit < ApplicationRecord
   # use the tutor: teachers were being told the course cannot be completed
   # without AI chat tools.
   #
+  # The same 73 Web Lab 2 levels ship twice: once as csd2-2026, the CSD unit, and
+  # once as web-development-2026, the standalone Web Development unit and course.
+  # Both need naming, because the exemption matches a unit by name and the two
+  # units are distinct records holding distinct clones of those levels.
+  #
   # A unit named here reports AVAILABLE rather than ESSENTIAL, which quiets the
   # alerts that state the stronger claim. It does not change what students and
   # teachers may do -- level-by-level access is decided by
@@ -172,6 +177,7 @@ class Unit < ApplicationRecord
   # Web Lab 2 level say whether its tutor is essential, makes the list unnecessary.
   NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS = %w(
     csd2-2026
+    web-development-2026
   ).freeze
 
   # Every caller reaches this through Unit#requires_ai_chat_tools? or
