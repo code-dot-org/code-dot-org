@@ -530,6 +530,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     // on them run one frame later.
     this.playerActionTracker_ = createPlayerActionTracker();
     this.playerActions_ = new Set();
+    // Where the player stood the frame before a jump was detected, for a
+    // burst from the player in the frames after (the dust look starts at
+    // the feet); the jump is detected after its impulse has moved the
+    // sprite, and the event runs a frame later.
+    this.jumpStart_ = null;
+    this.playerBefore_ = null;
     library.commands.whenPlayer = (action, callback) => {
       if (isPlayerAction(action)) {
         library.addEvent(PLAYER_ACTION_EVENT, {action}, callback);
@@ -1208,10 +1214,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!players.length) {
       this.playerActionTracker_.forget();
       this.playerActions_ = new Set();
+      this.playerBefore_ = null;
       return;
     }
     const {sprite, x: requestedX, y: requestedY} = players[0];
     const animation = sprite.animation;
+    const before = this.playerBefore_;
+    this.playerBefore_ = {sprite, x: sprite.position.x, y: sprite.position.y};
     this.playerActions_ = this.playerActionTracker_.observe(
       {
         sprite,
@@ -1225,6 +1234,14 @@ export default class SpriteLab2Engine extends SpriteLab {
       },
       Date.now()
     );
+    if (this.playerActions_.has('jump') && before && before.sprite === sprite) {
+      this.jumpStart_ = {
+        sprite,
+        x: before.x,
+        y: before.y,
+        frame: this.p5Wrapper.p5.frameCount,
+      };
+    }
   }
 
   /** The audio's observer of the player, or null. */
