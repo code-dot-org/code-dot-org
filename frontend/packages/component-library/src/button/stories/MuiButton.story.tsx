@@ -183,6 +183,28 @@ ButtonWithIcons.args = {
   size: 'medium',
 };
 
+export const RunButton: StoryFn = () => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: 12,
+    }}
+  >
+    <MuiButton
+      variant="contained"
+      color="orange"
+      size="medium"
+      onClick={() => null}
+      startIcon={<FontAwesomeV6Icon iconName="play" iconStyle="solid" />}
+    >
+      Run
+    </MuiButton>
+    <p style={{margin: 0}}>Orange is only for the Run button in labs.</p>
+  </div>
+);
+
 export const IconButton = SingleTemplate.bind({});
 IconButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
@@ -345,6 +367,13 @@ GroupOfColorsOfButtons.args = {
       children: 'Button Primary Destructive',
       variant: 'contained',
       color: 'error',
+      size: 'medium',
+      onClick: () => null,
+    },
+    {
+      children: 'Button Primary Orange',
+      variant: 'contained',
+      color: 'orange',
       size: 'medium',
       onClick: () => null,
     },
