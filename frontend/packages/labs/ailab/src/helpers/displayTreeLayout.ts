@@ -56,40 +56,43 @@ export function edgePath(
   ].join(' ');
 }
 
-interface SubtreeExtent {
+interface SubtreeBox {
+  subtreeWidth: number;
   nodeWidth: number;
-  // The rest are measured from the subtree's left edge.
-  span: number;
-  center: number;
+  // Measured from the subtree's left edge.
+  nodeCenter: number;
   childLefts: number[];
 }
 
-function extentOver(
-  nodeWidth: number,
-  children: SubtreeExtent[],
-): SubtreeExtent {
+function boxAround(nodeWidth: number, children: SubtreeBox[]): SubtreeBox {
   if (children.length === 0) {
-    return {nodeWidth, span: nodeWidth, center: nodeWidth / 2, childLefts: []};
+    return {
+      subtreeWidth: nodeWidth,
+      nodeWidth,
+      nodeCenter: nodeWidth / 2,
+      childLefts: [],
+    };
   }
   let right = 0;
   const childLefts = children.map(child => {
     const left = right;
-    right += child.span + TREE_COLUMN_GAP;
+    right += child.subtreeWidth + TREE_COLUMN_GAP;
     return left;
   });
-  const childrenSpan = right - TREE_COLUMN_GAP;
+  const childrenWidth = right - TREE_COLUMN_GAP;
   const last = children.length - 1;
-  const center =
+  const nodeCenter =
     (childLefts[0] +
-      children[0].center +
+      children[0].nodeCenter +
       childLefts[last] +
-      children[last].center) /
+      children[last].nodeCenter) /
     2;
-  const overhang = Math.max(0, nodeWidth / 2 - center);
+  const overhang = Math.max(0, nodeWidth / 2 - nodeCenter);
   return {
+    subtreeWidth:
+      Math.max(childrenWidth, nodeCenter + nodeWidth / 2) + overhang,
     nodeWidth,
-    span: Math.max(childrenSpan, center + nodeWidth / 2) + overhang,
-    center: center + overhang,
+    nodeCenter: nodeCenter + overhang,
     childLefts: childLefts.map(left => left + overhang),
   };
 }
@@ -99,18 +102,18 @@ export function layoutDisplayTree(
   nodeWidth: (node: DisplayTreeNode) => number = () => TREE_NODE_MAX_WIDTH,
   rowGap = TREE_ROW_GAP,
 ): DisplayTreeLayout {
-  const extents = new Map<string, SubtreeExtent>();
+  const boxes = new Map<string, SubtreeBox>();
 
-  const measure = (node: DisplayTreeNode, id: string): SubtreeExtent => {
+  const measure = (node: DisplayTreeNode, id: string): SubtreeBox => {
     const children =
       node.type === 'question'
         ? node.branches.map((branch, index) =>
             measure(branch.child, getChildNodeId(id, index)),
           )
         : [];
-    const extent = extentOver(nodeWidth(node), children);
-    extents.set(id, extent);
-    return extent;
+    const box = boxAround(nodeWidth(node), children);
+    boxes.set(id, box);
+    return box;
   };
 
   const nodes: PlacedTreeNode[] = [];
@@ -125,12 +128,12 @@ export function layoutDisplayTree(
     parent?: PlacedTreeNode,
     branch?: DisplayTreeBranch,
   ): PlacedTreeNode => {
-    const {nodeWidth: width, center, childLefts} = extents.get(id)!;
+    const {nodeWidth: width, nodeCenter, childLefts} = boxes.get(id)!;
     const placed: PlacedTreeNode = {
       id,
       node,
       depth,
-      x: left + center - width / 2,
+      x: left + nodeCenter - width / 2,
       y: depth * (TREE_NODE_HEIGHT + rowGap),
       width,
       parent,
@@ -158,12 +161,12 @@ export function layoutDisplayTree(
     return placed;
   };
 
-  const {span} = measure(root, DISPLAY_TREE_ROOT_ID);
+  const {subtreeWidth} = measure(root, DISPLAY_TREE_ROOT_ID);
   place(root, DISPLAY_TREE_ROOT_ID, 0, 0);
 
   return {
     nodes,
-    width: span,
+    width: subtreeWidth,
     height: (maxDepth + 1) * (TREE_NODE_HEIGHT + rowGap) - rowGap,
   };
 }
