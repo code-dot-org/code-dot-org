@@ -16,8 +16,8 @@ interface EditorSwitchProps {
 }
 
 const EDITORS: {editor: Editor; icon: string}[] = [
-  {editor: 'World', icon: 'table-cells'},
   {editor: 'Code', icon: 'code'},
+  {editor: 'World', icon: 'table-cells'},
 ];
 
 /**

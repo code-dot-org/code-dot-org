@@ -31,15 +31,15 @@ interface SceneTabsProps {
 export type Editor = 'World' | 'Code';
 
 const EDITORS: {editor: Editor; icon: string}[] = [
-  {editor: 'World', icon: 'table-cells'},
   {editor: 'Code', icon: 'code'},
+  {editor: 'World', icon: 'table-cells'},
 ];
 
 /**
  * The project's scenes as a row of tabs, each with its picture, so the
  * scenes are in sight rather than inside a menu. "All scenes" at the head
  * goes back up to the map, and is gone while the map is open; the open
- * scene's tab holds its World | Code switch, so the choice sits inside
+ * scene's tab holds its Code | World switch, so the choice sits inside
  * the scene it is about. Overflow hides under the row's end; the selected
  * tab scrolls into view.
  */

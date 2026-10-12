@@ -89,7 +89,7 @@ $tab-item-height: 34px;
 }
 
 // A scene's tab: its picture and name, and, when it is the open scene,
-// its World | Code segments after them.
+// its Code | World segments after them.
 .sceneTab {
   display: flex;
   align-items: stretch;
@@ -297,7 +297,7 @@ $scene-tab-fade-ms: 260ms;
   }
 }
 
-// World | Code: the scene's two editors, as one segmented control.
+// Code | World: the scene's two editors, as one segmented control.
 .editorSwitch {
   display: flex;
   flex: none;
@@ -441,7 +441,7 @@ $editor-float-room: 58px;
   min-height: 0;
 }
 
-// The World | Code switch's strip at the top of the editor pane, the
+// The Code | World switch's strip at the top of the editor pane, the
 // ?editors=strip variant; the editors below start under it.
 $editor-strip-height: 46px;
 
@@ -923,7 +923,7 @@ $editor-strip-height: 46px;
   pointer-events: none;
 }
 
-// Tinted so the World | Code switch reads as the workspace's, not the column's.
+// Tinted so the Code | World switch reads as the workspace's, not the column's.
 .previewColumn {
   position: absolute;
   top: 0;

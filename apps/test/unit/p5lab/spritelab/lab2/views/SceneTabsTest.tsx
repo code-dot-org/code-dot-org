@@ -49,7 +49,7 @@ describe('SceneTabs', () => {
     expect(onManageScenes).toHaveBeenCalled();
   });
 
-  it('holds World | Code inside the open scene tab only', () => {
+  it('holds Code | World inside the open scene tab only', () => {
     const onChange = jest.fn();
     renderTabs({editor: {value: 'Code', onChange}});
     const group = screen.getByRole('group', {name: 'Edit'});

@@ -4,7 +4,7 @@ import React from 'react';
 import EditorSwitch from '@cdo/apps/p5lab/spritelab/lab2/views/components/EditorSwitch';
 
 describe('EditorSwitch', () => {
-  it('offers World and Code, pressing the one in use, and reports a choice', () => {
+  it('offers Code and World, pressing the one in use, and reports a choice', () => {
     const onChange = jest.fn();
     render(<EditorSwitch value="Code" onChange={onChange} />);
     const world = screen.getByRole('button', {name: 'World'});
