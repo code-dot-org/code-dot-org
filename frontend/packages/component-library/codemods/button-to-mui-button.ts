@@ -88,7 +88,8 @@ interface TransformResult {
 }
 
 function transformer(file: FileInfo, api: API) {
-  const j = api.jscodeshift;
+  // tsx rejects `<T>x` casts, which are valid in .ts files.
+  const j = api.jscodeshift.withParser(/\.ts$/.test(file.path) ? 'ts' : 'tsx');
   const root = j(file.source);
 
   // Check if file uses Button or LinkButton

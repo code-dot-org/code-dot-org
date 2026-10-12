@@ -19,6 +19,9 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
+  # Every concrete question subtype. TODO: P0 - add MultipleSelectQuestion, MatchQuestion.
+  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion).freeze
+
   after_initialize {self.type ||= self.class.sti_name}
 
   # No FK; parent delete leaves a dangling id.
@@ -120,6 +123,21 @@ class QuizQuestion < ApplicationRecord
   # until manual/AI grading is built.
   def auto_gradable?
     false
+  end
+
+  # Builds `content` from question builder request params.
+  def self.content_from_builder_params(builder_params)
+    raise ArgumentError, "#{name} does not accept editor params"
+  end
+
+  # Subtype-specific fields for the quiz builder, answer key included.
+  def builder_content_json
+    raise NotImplementedError, "#{self.class.name} must implement builder_content_json"
+  end
+
+  # Subtype-specific fields for a student attempt; must never include the answer key.
+  def attempt_content_json
+    raise NotImplementedError, "#{self.class.name} must implement attempt_content_json"
   end
 
   # Shared by subtypes whose `content` includes a "choices" array. Returns

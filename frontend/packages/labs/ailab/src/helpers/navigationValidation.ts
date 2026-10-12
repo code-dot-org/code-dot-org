@@ -103,6 +103,10 @@ function isTrainedOnCurrentColumns(state: RootState): boolean {
   );
 }
 
+export function hasCurrentTrainingResult(state: RootState): boolean {
+  return isTrainedOnCurrentColumns(state) && state.historicResults[0].total > 0;
+}
+
 function resultsAvailable(state: RootState): boolean {
   return (
     state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(state)

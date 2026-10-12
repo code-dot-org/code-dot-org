@@ -143,6 +143,32 @@ describe('InterventionBox', () => {
     ).not.toBeInTheDocument();
   });
 
+  describe('initialSelection prop', () => {
+    it('shows the choice grid when initialSelection is omitted', () => {
+      renderInterventionBox();
+      expect(screen.getByText("Let's get to work")).toBeInTheDocument();
+      expect(screen.queryByText('challenge content')).not.toBeInTheDocument();
+    });
+
+    it('opens directly to challenge content when initialSelection is "challenge"', () => {
+      render(
+        <InterventionBox
+          lessonId={LESSON_ID}
+          lessonName={LESSON_NAME}
+          lessonSummary=""
+          vocabulary={[]}
+          assessmentAnalysis={[]}
+          objectives={[]}
+          jsonVideos={[]}
+          reflectionData={null}
+          initialSelection="challenge"
+        />
+      );
+      expect(screen.getByText('challenge content')).toBeInTheDocument();
+      expect(screen.queryByText("Let's get to work")).not.toBeInTheDocument();
+    });
+  });
+
   describe('nav bar', () => {
     it('is absent on the initial choice grid', () => {
       renderInterventionBox();

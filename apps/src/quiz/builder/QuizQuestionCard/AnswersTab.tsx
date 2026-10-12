@@ -70,7 +70,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
                 name={`choice-${choice.id}`}
                 aria-label="Choice text"
                 size="m"
-                className={styles.optionText}
+                className={classNames(styles.fullWidthField, styles.optionText)}
                 value={choice.text}
                 onChange={e => updateChoiceText(choice.id, e.target.value)}
                 disabled={disabled}

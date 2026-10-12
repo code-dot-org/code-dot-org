@@ -19,6 +19,7 @@ import {
   getUniqueOptionsByColumn,
 } from '../selectors';
 import train from '../train';
+import {useTrainingData} from '../TrainingDataContext';
 
 import PredictionResult from './PredictionResult';
 
@@ -35,6 +36,7 @@ const TestPanel = () => {
   const decimalPlacesByColumn = useAppSelector(getDecimalPlacesByColumn);
   const uniqueOptionsByColumn = useAppSelector(getUniqueOptionsByColumn);
   const predictAvailable = useAppSelector(getPredictAvailable);
+  const {trainedModel} = useTrainingData();
 
   const onChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -118,7 +120,7 @@ const TestPanel = () => {
             color="primary"
             size="small"
             disabled={!predictAvailable}
-            onClick={train.onClickPredict}
+            onClick={() => train.onClickPredict(trainedModel)}
           >
             Predict
           </Button>
@@ -126,16 +128,16 @@ const TestPanel = () => {
             variant="outlined"
             color="secondary"
             size="small"
-            startIcon={<FontAwesomeV6Icon iconName="shuffle" />}
+            startIcon={
+              <FontAwesomeV6Icon iconName="shuffle" aria-hidden="true" />
+            }
             onClick={onClickRandom}
           >
             Random
           </Button>
         </div>
       </section>
-      <div aria-live="polite">
-        <PredictionResult />
-      </div>
+      <PredictionResult />
     </div>
   );
 };

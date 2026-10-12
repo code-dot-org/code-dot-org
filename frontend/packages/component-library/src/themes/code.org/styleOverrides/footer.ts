@@ -147,7 +147,7 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
     copyright: ({theme}: {theme: Theme}) => ({
       color: 'var(--text-neutral-inverse)',
       // Production effective size is ~11.9px (relative sizing); --font-size-body-xs
-      // (0.813rem ≈ 13px) is the closest design-system token.
+      // (0.75rem = 12px) is the closest design-system token.
       fontSize: 'var(--font-size-body-xs)',
       lineHeight: 1.38,
       textAlign: 'end',
@@ -158,7 +158,7 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
     }),
     fineprint: () => ({
       color: 'var(--neutral-white-alpha-80)',
-      // Same token as copyright — 13px × 1.38 ≈ 18px line-height matching production.
+      // Same token as copyright — 12px × 1.38 ≈ 17px line-height matching production.
       fontSize: 'var(--font-size-body-xs)',
       lineHeight: 1.38,
       textAlign: 'start',

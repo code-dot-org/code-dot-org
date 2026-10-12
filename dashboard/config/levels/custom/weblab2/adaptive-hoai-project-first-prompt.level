@@ -1,0 +1,13 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-09T22:59:26.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-hoai-template",
+    "hide_share_and_remix": true,
+    "long_instructions": "Now it’s your turn. Look at your own page and pick one thing you want to change.\n\n**Do This:**\n\n1.  Write a detailed prompt that names the part of your page you want to change.  *Think color, size, wording, or tone. Change your heading, text, background or buttons.*\n1.  Run the page to see what changed. If it’s not what you meant, say what to change next."
+  },
+  "published": true
+}]]></config>
+</Weblab2>
