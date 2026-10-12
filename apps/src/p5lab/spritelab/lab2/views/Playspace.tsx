@@ -49,9 +49,16 @@ export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // of instructions.
 const PREVIEW_WIDTH_SHARE = 1 / 3;
 const COLUMN_MIN_PX = 320;
-// The least height kept under the bar for the docked instructions: a
-// student can read with a small preview, not with no text.
+// The instructions are always whole: the box gives up height to them
+// first, and once it would go under this side the column widens instead,
+// a step at a time up to this share, so the text reflows shorter.
+const PREVIEW_MIN_PX = 240;
+const PREVIEW_WIDTH_MAX_SHARE = 1 / 2;
+const WIDEN_STEP_PX = 48;
+// The least height of the instructions' card under the bar, with nothing
+// measured yet: a student can read with a small preview, not with no text.
 const BELOW_MIN_PX = 150;
+const CARD_BORDER_PX = 1;
 // The column's two cards, the preview's and the instructions', are inset
 // from the column's edges and from each other by this much, and the
 // preview card pads its box by it.
@@ -192,6 +199,34 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
+  // The height the docked instructions need, measured from their content
+  // (the card scrolls, so the content keeps its natural height), and the
+  // width added to the column so far to make them fit.
+  const [belowNeed, setBelowNeed] = useState({height: 0, width: 0});
+  const [widen, setWiden] = useState(0);
+  const belowObserver = useRef<ResizeObserver | null>(null);
+  const belowContentRef = useCallback((el: HTMLDivElement | null) => {
+    belowObserver.current?.disconnect();
+    belowObserver.current = null;
+    if (!el || typeof ResizeObserver === 'undefined') {
+      setBelowNeed({height: 0, width: 0});
+      return;
+    }
+    const observer = new ResizeObserver(entries => {
+      // The card's width, not the content's: a scrollbar narrows the content.
+      setBelowNeed({
+        height: Math.ceil(entries[0].contentRect.height),
+        width: el.parentElement?.getBoundingClientRect().width ?? 0,
+      });
+    });
+    observer.observe(el);
+    belowObserver.current = observer;
+  }, []);
+  useEffect(() => () => belowObserver.current?.disconnect(), []);
+  // Widening only ever grows between resizes, so it cannot chase itself.
+  useEffect(() => {
+    setWiden(0);
+  }, [size.w, size.h]);
 
   const dispatch = useAppDispatch();
   // The location-picker block puts us in "selecting" mode; while active, the
@@ -355,27 +390,64 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     // resizes the playspace too, so this reads fresh each time.
     const browserWidth = window.innerWidth || size.w;
     const share = Math.round(browserWidth * PREVIEW_WIDTH_SHARE);
-    // The box fits inside the share's card, not the share, so it keeps
-    // its inset from the card's edges when the width is what limits it.
-    const inShare = playPlacement(
+    // What the box leaves under its card for the instructions' card: the
+    // bar, the gaps between and around the two cards, and the card itself.
+    const belowRoom = (card: number) =>
+      (playBar ? BAR_ROOM : 0) + (below ? 3 * CARD_GAP + card : 0);
+    // The column's width comes from the box with the least instructions
+    // room, not the measured need, so a taller need shrinks the box inside
+    // the column without narrowing the column (which would reflow the
+    // text taller again). The box fits inside the share's card, not the
+    // share, so it keeps its inset from the card's edges when the width
+    // is what limits it.
+    const forWidth = playPlacement(
       size,
       below ? null : guideSize,
-      (playBar ? BAR_ROOM : 0) + (below ? BELOW_MIN_PX + BAR_GAP : 0),
+      belowRoom(BELOW_MIN_PX),
       size.w - share + 2 * CARD_GAP
     );
-    // The column shrinks to the box when the height, not the share,
-    // limits it; the box centres in whatever width that leaves.
-    const side = CANVAS * inShare.scale;
     columnWidth = Math.min(
       share,
-      Math.max(COLUMN_MIN_PX, Math.round(side + 2 * PREVIEW_MARGIN))
+      Math.max(
+        COLUMN_MIN_PX,
+        Math.round(CANVAS * forWidth.scale + 2 * PREVIEW_MARGIN)
+      )
     );
+    columnWidth = Math.min(
+      columnWidth + widen,
+      Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE)
+    );
+    // Then the box within that column, over the instructions' whole height.
+    const need = Math.max(BELOW_MIN_PX, belowNeed.height + 2 * CARD_BORDER_PX);
+    const inColumn = playPlacement(
+      size,
+      below ? null : guideSize,
+      belowRoom(need),
+      size.w - columnWidth + 2 * CARD_GAP
+    );
+    const side = CANVAS * inColumn.scale;
     placement = {
-      scale: inShare.scale,
+      scale: inColumn.scale,
       x: size.w - columnWidth + (columnWidth - side) / 2,
       y: PREVIEW_MARGIN,
     };
   }
+  // The instructions have pushed the box under its floor: widen the
+  // column a step, once the need has been measured at this width, so the
+  // text reflows before the next step.
+  const canWiden =
+    mode === 'preview' &&
+    !!below &&
+    measured &&
+    CANVAS * placement.scale < PREVIEW_MIN_PX &&
+    columnWidth <
+      Math.round((window.innerWidth || size.w) * PREVIEW_WIDTH_MAX_SHARE) &&
+    Math.abs(belowNeed.width - (columnWidth - 2 * CARD_GAP)) < 1;
+  useEffect(() => {
+    if (canWiden) {
+      setWiden(current => current + WIDEN_STEP_PX);
+    }
+  }, [canWiden]);
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
@@ -386,8 +458,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     reportPreviewWidth.current?.(previewWidth);
   }, [previewWidth]);
-  // Under the box, unscaled, at the box's width.
-  const barTransform = `translate(${x}px, ${y + boxSide + BAR_GAP}px)`;
+  // Under the box, unscaled: at the box's width, or in the preview at its
+  // card's, so a box shrunk for the instructions never wraps the buttons.
+  const barLeft = previewWidth > 0 ? size.w - previewWidth + CARD_GAP : x;
+  const barWidth = previewWidth > 0 ? previewWidth - 2 * CARD_GAP : boxSide;
+  const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
   const visible = measured && mode !== 'hidden';
   // The bar does not ride the slide: it waits, unseen, at its destination
   // and fades in once the box has arrived. Before paint, so the jump is
@@ -554,7 +629,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           className={moduleStyles.playBar}
           style={{
             transform: barTransform,
-            width: boxSide,
+            width: barWidth,
             opacity: visible ? 1 : 0,
             transition: `opacity ${FADE_MS}ms ease-in`,
           }}
@@ -572,7 +647,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
             bottom: CARD_GAP,
           }}
         >
-          {below}
+          <div ref={belowContentRef}>{below}</div>
         </div>
       )}
     </div>
