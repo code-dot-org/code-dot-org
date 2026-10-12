@@ -6,9 +6,10 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 // Instead we inline only the faces the sketch actually draws with, from
 // stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
 //
-// For each piece of text we embed the first family in its font stack that has a
-// readable face at the weight and style in use. Later families are fallbacks for
-// glyphs the first one lacks.
+// For each piece of text we embed the first family in its font stack that is readable
+// at the weight and style in use. If there are characters in the text
+// that are not covered by the first family (such as from a different language),
+// the browser will fall back to a system font.
 
 const DEFAULT_FONT_WEIGHT = 400;
 const WEIGHT_KEYWORDS = new Map([
@@ -59,8 +60,9 @@ const hasOwnText = (element: Element): boolean =>
     node => node.nodeType === Node.TEXT_NODE && node.textContent?.trim()
   );
 
-// Readable @font-face rules, grouped by the family they declare. A cross-origin
-// stylesheet throws when read; its fonts stay unembedded.
+// Readable @font-face rules, grouped by the family they declare.
+// If a stylesheet is from another origin not loaded with CORS,
+// attempting to read it will throw a security error, and we will return nothing.
 const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
   const byFamily = new Map<string, FontFaceCandidate[]>();
   Array.from(document.styleSheets).forEach(sheet => {
@@ -68,6 +70,7 @@ const readCandidatesByFamily = (): Map<string, FontFaceCandidate[]> => {
     try {
       sheetRules = Array.from(sheet.cssRules);
     } catch {
+      // Reading this stylesheet failed, probably due to CORS restrictions. Skip it.
       return;
     }
     sheetRules.forEach(rule => {
