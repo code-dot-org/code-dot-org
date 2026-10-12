@@ -344,7 +344,7 @@
       "title": "Spot the Section",
       "description": "Locate the hero, feature cards, interactive canvas, and call-to-action on the target site",
       "skillIds": ["language"],
-      "requires": ["add-details", "tweak-it", "edit-by-hand"],
+      "requires": ["add-details", "tweak-it"],
       "steps": [
         {
           "id": "spot-section-help-ai",
@@ -487,7 +487,7 @@
       "title": "Speak Web Dev",
       "description": "Name the language a change needs (HTML, CSS, or JavaScript) and use it in a prompt",
       "skillIds": ["language"],
-      "requires": ["whats-it-for", "find-the-clue"],
+      "requires": ["find-the-clue"],
       "steps": [
         {
           "id": "speak-web-dev-panel",
@@ -525,7 +525,7 @@
       "title": "Find the Clue",
       "description": "Point to the part of an error message or broken page that signals what's wrong",
       "skillIds": ["debug"],
-      "requires": ["spot-section"],
+      "requires": ["edit-by-hand"],
       "steps": [
         {
           "id": "find-the-clue-question",
