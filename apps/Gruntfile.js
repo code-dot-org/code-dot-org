@@ -476,9 +476,8 @@ module.exports = function (grunt) {
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
     generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
-    buildFrontendDependencies: './script/build-frontend-dependencies.sh',
-    watchFrontendDependencies:
-      './script/build-frontend-dependencies.sh --watch',
+    buildFrontendDependencies: './script/frontend-dependencies.sh',
+    watchFrontendDependencies: './script/frontend-dependencies.sh --watch',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);

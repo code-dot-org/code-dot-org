@@ -53,11 +53,6 @@
     "test": {
       "dependsOn": ["^build", "^test"]
     },
-    "test:ui:ci": {
-      "cache": false,
-      "dependsOn": ["^build", "^test:ui:ci"],
-      "env": ["STAGE"]
-    },
     "test:ui": {
       "cache": false,
       "dependsOn": ["^build", "^test:ui"],
@@ -74,10 +69,36 @@
         "VISUAL_PROVIDER"
       ]
     },
+    "test:ui:ci": {
+      "cache": false,
+      "dependsOn": ["build", "^test:ui:ci"],
+      "passThroughEnv": [
+        "APPLITOOLS_API_KEY",
+        "APPLITOOLS_BATCH_ID",
+        "APPLITOOLS_BATCH_NAME",
+        "APPLITOOLS_BRANCH",
+        "APPLITOOLS_SHOULD_REPORT_FAILURE",
+        "GITHUB_*",
+        "HOME",
+        "PLAYWRIGHT_BROWSERS_PATH",
+        "PLAYWRIGHT_PROVIDER",
+        "STAGE",
+        "TARGET_URL",
+        "VISUAL_PROVIDER"
+      ]
+    },
     "dev": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
+    },
+    "deploy": {
+      "cache": false,
+      "dependsOn": ["build"]
+    },
+    "release": {
+      "cache": false,
+      "dependsOn": ["release:dryrun"]
     }
   }
 }

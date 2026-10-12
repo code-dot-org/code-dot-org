@@ -20,5 +20,5 @@ export const LAB2_INSTRUCTIONS: Lab2Instructions[] = lab2InstructionsJson.map(
       throw new Error(`lab2-instructions.json: unknown key ${key}`);
     }
     return {key, name, defaultText};
-  }
+  },
 );
