@@ -1,5 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {ChangeEvent, MouseEvent, useState, useCallback} from 'react';
+import {expect, userEvent, within} from 'storybook/test';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from '../index';
 
@@ -177,6 +178,56 @@ DefaultCheckboxDropdown.args = {
   onSelectAll: () => null,
   onClearAll: () => null,
   size: 'm',
+};
+
+// Twenty options is enough to reach the menu max-height.
+const longListOptions = Array.from({length: 20}, (_, index) => ({
+  value: `option-${index + 1}`,
+  label: `Option ${index + 1}`,
+}));
+
+export const LongListCheckboxDropdown = SingleTemplate.bind({});
+LongListCheckboxDropdown.args = {
+  name: 'long-list-dropdown',
+  allOptions: longListOptions,
+  labelText: 'Long list',
+  checkedOptions: ['option-1'],
+  disabled: false,
+  color: dropdownColors.black,
+  onChange: () => null,
+  onSelectAll: () => null,
+  onClearAll: () => null,
+  size: 'm',
+};
+LongListCheckboxDropdown.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  await userEvent.click(
+    canvas.getByRole('button', {name: /long-list-dropdown filter dropdown/i}),
+  );
+
+  const list = canvasElement.querySelector('ul');
+  const menu = list?.parentElement;
+  const actions = canvas.getByRole('button', {name: 'Done (1)'});
+  expect(list).not.toBeNull();
+  expect(menu).not.toBeNull();
+  if (!list || !menu) {
+    return;
+  }
+
+  const items = [...list.querySelectorAll('li')];
+  expect(items).toHaveLength(longListOptions.length);
+  items.forEach(item => {
+    expect(item.querySelector('input[type="checkbox"]')).not.toBeNull();
+  });
+  expect(list.scrollHeight).toBeGreaterThan(list.clientHeight);
+
+  const menuBottom = menu.getBoundingClientRect().bottom;
+  const actionBottom = actions.getBoundingClientRect().bottom;
+  expect(Math.abs(menuBottom - actionBottom)).toBeLessThan(2);
 };
 
 export const NoSelectOrClearAllCheckboxDropdown = SingleTemplate.bind({});
