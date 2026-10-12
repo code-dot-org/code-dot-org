@@ -62,16 +62,7 @@ class MultipleChoiceQuestion < QuizQuestion
   private def validate_question_shape
     return if content.blank?
     q = content.deep_stringify_keys
-
-    unless q['question_title'].is_a?(String) && q['question_title'].present?
-      errors.add(:content, 'must have a non-blank "question_title"')
-      return
-    end
-
-    unless q['description'].nil? || q['description'].is_a?(String)
-      errors.add(:content, '"description" must be a String if given')
-      return
-    end
+    validate_shared_content(q)
 
     choice_ids = validate_choices(q['choices'])
     return if choice_ids.nil?

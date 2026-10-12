@@ -148,6 +148,17 @@ class QuizQuestion < ApplicationRecord
     raise NotImplementedError, "#{self.class.name} must implement attempt_content_json"
   end
 
+  # Validates the `content` fields every subtype has.
+  protected def validate_shared_content(q)
+    unless q['question_title'].is_a?(String) && q['question_title'].present?
+      errors.add(:content, 'must have a non-blank "question_title"')
+    end
+
+    unless q['description'].nil? || q['description'].is_a?(String)
+      errors.add(:content, '"description" must be a String if given')
+    end
+  end
+
   # Shared by subtypes whose `content` includes a "choices" array. Returns
   # the set of choice ids, or nil (after recording an error on `content`) if
   # the shape is invalid.

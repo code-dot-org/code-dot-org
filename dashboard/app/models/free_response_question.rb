@@ -45,14 +45,6 @@ class FreeResponseQuestion < QuizQuestion
 
   private def validate_question_shape
     return if content.blank?
-    q = content.deep_stringify_keys
-
-    unless q['question_title'].is_a?(String) && q['question_title'].present?
-      errors.add(:content, 'must have a non-blank "question_title"')
-    end
-
-    unless q['description'].nil? || q['description'].is_a?(String)
-      errors.add(:content, '"description" must be a string')
-    end
+    validate_shared_content(content.deep_stringify_keys)
   end
 end
