@@ -449,20 +449,78 @@ $editor-float-room: 58px;
 
 // The Code | World switch's strip at the top of the editor pane, the
 // ?editors=strip variant; the editors below start under it.
-$editor-strip-height: 46px;
+$editor-strip-height: 41px;
 
+// The workspace's bar, as Music Lab's panel headers: the label centred,
+// the Code | World switch at its end.
 .editorStrip {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  gap: 20px;
   box-sizing: border-box;
   height: $editor-strip-height;
-  padding: 6px 12px;
+  padding-inline: 0.5rem;
   background: var(--background-neutral-primary);
+  color: var(--text-neutral-quaternary);
   border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.editorStripTitle {
+  grid-column: 2;
+  margin: 0;
+  white-space: nowrap;
+  color: var(--text-neutral-quaternary);
+}
+
+.editorStripEnd {
+  grid-column: 3;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+// The Pictures button, the size of a scene tab, so the drawer's door
+// matches the row it sits in.
+.picturesTab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.picturesTabOpen {
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--borders-brand-teal-primary);
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: var(--borders-brand-teal-primary);
+  }
 }
 
 // Code tab is kept mounted; the parent toggles visibility with clip-path so the

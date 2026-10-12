@@ -502,6 +502,26 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // The instructions' card when it comes first: from the column's top to
   // just above the box.
   const belowOnTop = instructionsTop && !beside;
+  // The instructions' card under the box: it hugs its text rather than
+  // running to the column's foot, and sits centred in the room the box
+  // leaves; until measured it takes that room whole.
+  const belowRoomTop = y + boxSide + BAR_ROOM + CARD_GAP;
+  const belowRoom = size.h - belowRoomTop - CARD_GAP;
+  const belowHeight = Math.min(belowNeed + 2 * CARD_BORDER_PX, belowRoom);
+  const belowCard =
+    belowNeed > 0
+      ? {
+          left: belowLeft,
+          top: belowRoomTop + (belowRoom - belowHeight) / 2,
+          width: previewWidth - 2 * CARD_GAP,
+          height: belowHeight,
+        }
+      : {
+          left: belowLeft,
+          top: belowRoomTop,
+          width: previewWidth - 2 * CARD_GAP,
+          bottom: CARD_GAP,
+        };
   const compact = size.h < COMPACT_BELOW_PX;
   const visible = measured && mode !== 'hidden';
   // The bar does not ride the slide: it waits, unseen, at its destination
@@ -690,12 +710,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
                   width: previewWidth - 2 * CARD_GAP,
                   height: y - 2 * CARD_GAP,
                 }
-              : {
-                  left: belowLeft,
-                  top: y + boxSide + BAR_ROOM + CARD_GAP,
-                  width: previewWidth - 2 * CARD_GAP,
-                  bottom: CARD_GAP,
-                }
+              : belowCard
           }
         >
           <div

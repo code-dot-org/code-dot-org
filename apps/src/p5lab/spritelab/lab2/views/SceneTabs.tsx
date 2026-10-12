@@ -79,7 +79,6 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
             onManageScenes();
           }}
         >
-          <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
           <span className={moduleStyles.sceneTabName} data-label="All scenes">
             All scenes
           </span>

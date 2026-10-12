@@ -1,6 +1,9 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -523,15 +526,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ],
     [tabs, enabledTabs]
   );
-  // The switch is a pill floating at the workspace's top (its right, with
-  // the preview at the left); ?editors=tab puts it inside the open scene's
-  // tab, ?editors=strip in a strip over the editor pane, ?editors=floatright
-  // at the top-right whatever the preview's side.
+  // The switch sits at the end of the workspace's bar; ?editors=tab puts
+  // it inside the open scene's tab, ?editors=float in a pill floating at
+  // the workspace's top (its right, with the preview at the left),
+  // ?editors=floatright at the top-right whatever the preview's side.
   const editorsPlacement = useMemo(() => {
     const value = queryParams('editors');
-    return value === 'tab' || value === 'strip' || value === 'floatright'
+    return value === 'tab' || value === 'float' || value === 'floatright'
       ? value
-      : 'float';
+      : 'strip';
   }, []);
   const editorsInStrip = editorsPlacement !== 'tab';
   // The preview column at the lab's left, before the toolbox;
@@ -2060,26 +2063,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   loading={nowPlaying.loading}
                 />
               )}
-              <span title={picturesOffered ? undefined : LOCKED_REASON}>
-                <MuiButton
-                  variant={picturesOpen ? 'contained' : 'outlined'}
-                  color="secondary"
-                  size="extraSmall"
-                  type="button"
-                  disabled={!picturesOffered}
-                  aria-expanded={picturesOpen}
-                  aria-controls={PICTURES_DRAWER_ID}
-                  startIcon={
-                    <FontAwesomeV6Icon iconStyle="solid" iconName="images" />
-                  }
-                  onClick={event => {
-                    blurAfterPointerClick(event);
-                    setPicturesOpen(open => !open);
-                  }}
-                >
-                  Pictures
-                </MuiButton>
-              </span>
+              <button
+                type="button"
+                className={classNames(
+                  moduleStyles.picturesTab,
+                  picturesOpen && moduleStyles.picturesTabOpen
+                )}
+                disabled={!picturesOffered}
+                title={picturesOffered ? undefined : LOCKED_REASON}
+                aria-expanded={picturesOpen}
+                aria-controls={PICTURES_DRAWER_ID}
+                onClick={event => {
+                  blurAfterPointerClick(event);
+                  setPicturesOpen(open => !open);
+                }}
+              >
+                <FontAwesomeV6Icon iconStyle="solid" iconName="images" />
+                Pictures
+              </button>
             </>
           }
           sceneTabs={
@@ -2118,12 +2119,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {WorkspaceAlert}
           {editorStrip && (
             <div className={moduleStyles.editorStrip} style={clearOfPreview}>
-              <EditorSwitch
-                value={activeTab === 'World' ? 'World' : 'Code'}
-                onChange={handleEditorChange}
-                disabledEditors={disabledEditors}
-                disabledReason={LOCKED_REASON}
-              />
+              <MuiTypography
+                component="h2"
+                variant="overline2"
+                className={moduleStyles.editorStripTitle}
+              >
+                Workspace
+              </MuiTypography>
+              <div className={moduleStyles.editorStripEnd}>
+                <EditorSwitch
+                  value={activeTab === 'World' ? 'World' : 'Code'}
+                  onChange={handleEditorChange}
+                  disabledEditors={disabledEditors}
+                  disabledReason={LOCKED_REASON}
+                />
+              </div>
             </div>
           )}
           {(editorFloat || editorFloatRight) &&
