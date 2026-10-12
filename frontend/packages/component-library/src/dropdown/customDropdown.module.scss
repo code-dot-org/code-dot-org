@@ -96,6 +96,9 @@
       rgb(0 0 0 / 0.1) 0 10px 15px -3px,
       rgb(0 0 0 / 0.05) 0 4px 6px -2px;
     background-clip: padding-box;
+    box-sizing: border-box;
+    // At least as wide as the trigger. A longer option can make it wider.
+    min-width: 100%;
     white-space: nowrap;
 
     ul {

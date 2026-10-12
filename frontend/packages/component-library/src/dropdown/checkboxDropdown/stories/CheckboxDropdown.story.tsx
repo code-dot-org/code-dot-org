@@ -205,9 +205,10 @@ LongListCheckboxDropdown.play = async ({
   canvasElement: HTMLElement;
 }) => {
   const canvas = within(canvasElement);
-  await userEvent.click(
-    canvas.getByRole('button', {name: /long-list-dropdown filter dropdown/i}),
-  );
+  const trigger = canvas.getByRole('button', {
+    name: /long-list-dropdown filter dropdown/i,
+  });
+  await userEvent.click(trigger);
 
   const list = canvasElement.querySelector('ul');
   const menu = list?.parentElement;
@@ -228,6 +229,9 @@ LongListCheckboxDropdown.play = async ({
   const menuBottom = menu.getBoundingClientRect().bottom;
   const actionBottom = actions.getBoundingClientRect().bottom;
   expect(Math.abs(menuBottom - actionBottom)).toBeLessThan(2);
+  expect(menu.getBoundingClientRect().width).toBeGreaterThanOrEqual(
+    trigger.getBoundingClientRect().width - 1,
+  );
 };
 
 export const NoSelectOrClearAllCheckboxDropdown = SingleTemplate.bind({});
@@ -311,6 +315,27 @@ StyledAsFieldCheckboxDropdown.args = {
   helperMessage: 'Helper message',
   styleAsFormField: true,
   size: 'm',
+};
+StyledAsFieldCheckboxDropdown.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const trigger = canvas.getByRole('button', {
+    name: /styled-as-field-checkbox-dropdown filter dropdown/i,
+  });
+  await userEvent.click(trigger);
+
+  const menu = canvasElement.querySelector('ul')?.parentElement;
+  expect(menu).not.toBeNull();
+  if (!menu) {
+    return;
+  }
+
+  expect(menu.getBoundingClientRect().width).toBeGreaterThanOrEqual(
+    trigger.getBoundingClientRect().width - 1,
+  );
 };
 
 export const WithErrorCheckboxDropdown = SingleTemplate.bind({});
