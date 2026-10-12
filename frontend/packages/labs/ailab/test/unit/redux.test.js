@@ -7,8 +7,12 @@ import reducer, {
   setColumnsByDataType,
   setInstructionsEnabled,
   addSelectedFeature,
+  setSelectedFeatures,
   setTestData,
   setPrediction,
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
   setMode,
   setReserveLocation,
   setImportedData,
@@ -120,6 +124,30 @@ describe('ailab reducer', () => {
     });
   });
 
+  describe('setSelectedFeatures', () => {
+    const imported = reducer(
+      initialState,
+      setImportedData([{a: '1', b: '2', c: '3'}], false),
+    );
+
+    test('replaces the selection, in table order', () => {
+      const state = reducer(imported, setSelectedFeatures(['c', 'a']));
+      expect(state.selectedFeatures).toEqual(['a', 'c']);
+    });
+
+    test('clears the selection', () => {
+      let state = reducer(imported, setSelectedFeatures(['a', 'b']));
+      state = reducer(state, setSelectedFeatures([]));
+      expect(state.selectedFeatures).toEqual([]);
+    });
+
+    test('leaves the dispatched array untouched', () => {
+      const features = ['c', 'a'];
+      reducer(imported, setSelectedFeatures(features));
+      expect(features).toEqual(['c', 'a']);
+    });
+  });
+
   describe('setLabelColumn', () => {
     test('removes the new label from the selected features', () => {
       let state = reducer(initialState, addSelectedFeature('a'));
@@ -154,6 +182,53 @@ describe('ailab reducer', () => {
       const state = reducer(initialState, setMode({hideColumnClicking: true}));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBeUndefined();
+    });
+  });
+
+  describe('setPrediction', () => {
+    test('shows the whole of the new path, not the step of the last one', () => {
+      const stepped = reducer(initialState, playPredictionStep(2));
+      const next = reducer(stepped, setPrediction(1, [0]));
+      expect(next.predictionStep).toBeUndefined();
+    });
+
+    test('stops the last path playing', () => {
+      const playing = reducer(initialState, setPredictionPlaying(true));
+      const next = reducer(playing, setPrediction(1, [0]));
+      expect(next.predictionPlaying).toBe(false);
+    });
+
+    test('counts each prediction, even one that repeats the last', () => {
+      const first = reducer(initialState, setPrediction(1, [0]));
+      const next = reducer(first, setPrediction(1, [0]));
+      expect(next.predictionCount).toBe(first.predictionCount + 1);
+    });
+
+    test('forgets that the student stepped the last path by hand', () => {
+      const stepped = reducer(initialState, stepPredictionByHand(1));
+      const next = reducer(stepped, setPrediction(1, [0]));
+      expect(next.predictionStepByHand).toBe(false);
+    });
+  });
+
+  describe('stepping a prediction', () => {
+    test('marks a step taken by hand', () => {
+      const next = reducer(initialState, stepPredictionByHand(1));
+      expect(next.predictionStep).toBe(1);
+      expect(next.predictionStepByHand).toBe(true);
+    });
+
+    test('clears the mark when playback sets the step', () => {
+      const stepped = reducer(initialState, stepPredictionByHand(1));
+      const next = reducer(stepped, playPredictionStep(0));
+      expect(next.predictionStep).toBe(0);
+      expect(next.predictionStepByHand).toBe(false);
+    });
+
+    test('stops playback when the student steps by hand', () => {
+      const playing = reducer(initialState, setPredictionPlaying(true));
+      const next = reducer(playing, stepPredictionByHand(1));
+      expect(next.predictionPlaying).toBe(false);
     });
   });
 

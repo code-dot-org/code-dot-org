@@ -159,8 +159,8 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
 
   test('records the accuracy the shapes level requires', () => {
     // `sides` fixes `shape` in this dataset: 0 circle, 3 triangle, 4 square.
-    // The curriculum level that loads it sets requireAccuracy to 100, so this
-    // number is the one that decides whether a student can continue.
+    // The curriculum level that loads it sets requireAccuracy to 100, and lab2
+    // keeps Continue disabled until the latest trained model reaches it.
     const state = load('shapes_v1_toy', ['sides']);
 
     expect(getPercentCorrect(state)).toBe('100.00');

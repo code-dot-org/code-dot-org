@@ -30,3 +30,28 @@ export function fitToView(
     scale,
   };
 }
+
+export function panIntoView(
+  rect: Rect,
+  frame: Rect,
+): {x: number; y: number} | undefined {
+  if (frame.width <= 0 || frame.height <= 0) {
+    return undefined;
+  }
+  return {
+    x: panAxis(rect.x, rect.width, frame.x, frame.width),
+    y: panAxis(rect.y, rect.height, frame.y, frame.height),
+  };
+}
+
+function panAxis(
+  start: number,
+  size: number,
+  frameStart: number,
+  frameSize: number,
+): number {
+  if (start < frameStart || size > frameSize) {
+    return frameStart - start;
+  }
+  return Math.min(0, frameStart + frameSize - (start + size));
+}

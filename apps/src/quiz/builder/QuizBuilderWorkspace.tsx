@@ -7,6 +7,8 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {groupByPage} from '../utils';
 
 import AddItemButton from './AddItemButton';
+import IntroScreenCard from './IntroScreenCard';
+import {QuizConfigurationData} from './QuizConfigurationPanel';
 import QuizQuestionCard from './QuizQuestionCard';
 import {isPendingQuestionId} from './types';
 import useQuizBuilderQuestions from './useQuizBuilderQuestions';
@@ -16,13 +18,24 @@ import styles from './quiz-builder-workspace.module.scss';
 interface QuizBuilderWorkspaceProps {
   levelId: number;
   quizTitle: string;
+  showIntroScreen: boolean;
+  customIntroText: string;
+  hasTimeLimit: boolean;
+  onSaveQuizConfig: (fields: Partial<QuizConfigurationData>) => Promise<void>;
 }
 
 // The center column: the quiz's question outline plus a create action.
 // Each row is a QuizQuestionCard, expandable in place for editing.
 const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
-> = ({levelId, quizTitle}) => {
+> = ({
+  levelId,
+  quizTitle,
+  showIntroScreen,
+  customIntroText,
+  hasTimeLimit,
+  onSaveQuizConfig,
+}) => {
   const {
     questions,
     isLoading,
@@ -143,6 +156,16 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           <Typography variant="body2" color="error" role="alert">
             {error}
           </Typography>
+        )}
+
+        {showIntroScreen && (
+          <div className={styles.introScreen}>
+            <IntroScreenCard
+              customIntroText={customIntroText}
+              hasTimeLimit={hasTimeLimit}
+              onSave={onSaveQuizConfig}
+            />
+          </div>
         )}
 
         {outline}

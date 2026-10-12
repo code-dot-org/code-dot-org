@@ -31,8 +31,16 @@ export const levelStepSourceSchema = stepBaseSchema.extend({
   kind: z.literal('level'),
   /** Name of the level to play. */
   level: z.string().min(1),
-  /** Replaces the level's own instructions when set. */
+  /**
+   * Replaces the level's own instructions when set. Also what the student
+   * sees when `instructionsPrompt` generation is off or fails.
+   */
   instructions: z.string().min(1).optional(),
+  /**
+   * Brief for generating this step's instructions around the student's own
+   * project. Only on project steps.
+   */
+  instructionsPrompt: z.string().min(1).optional(),
   /**
    * Marks a step that edits the student's project. Its level must name the
    * pathway's template level as its project template; a step without this

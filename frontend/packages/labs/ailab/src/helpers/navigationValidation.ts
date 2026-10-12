@@ -94,13 +94,17 @@ export function uniqLabelFeaturesSelected(state: RootState): boolean {
   );
 }
 
-export function isTrainedOnCurrentColumns(state: RootState): boolean {
+function isTrainedOnCurrentColumns(state: RootState): boolean {
   const latestResult = state.historicResults[0];
   return (
     !!latestResult &&
     latestResult.label === state.labelColumn &&
     areArraysEqual(latestResult.features, state.selectedFeatures)
   );
+}
+
+export function hasCurrentTrainingResult(state: RootState): boolean {
+  return isTrainedOnCurrentColumns(state) && state.historicResults[0].total > 0;
 }
 
 function resultsAvailable(state: RootState): boolean {

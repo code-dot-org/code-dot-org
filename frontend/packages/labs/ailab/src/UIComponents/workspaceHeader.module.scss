@@ -28,3 +28,8 @@ $lab2-panel-header-height: 41px;
 
   grid-column: 2;
 }
+
+.startOver {
+  grid-column: 3;
+  justify-self: end;
+}

@@ -16,8 +16,8 @@ import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 
 import {levelStore} from './levelStore';
 
-function renderCard({trained = true} = {}) {
-  const store = levelStore({trainer: 'decisionTree'});
+function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
+  const store = levelStore({trainer});
   if (trained) {
     train.reset();
     train.init(store);
@@ -64,6 +64,39 @@ describe('TrainingResultCard', () => {
     const store = renderCard();
     fireEvent.click(screen.getByRole('button', {name: 'Test model'}));
     expect(store.getState().currentPanel).toBe('results');
+  });
+
+  test('shows the tree mini map after decision tree training', () => {
+    renderCard();
+    expect(
+      screen.getByRole('button', {name: 'Replay training'}),
+    ).not.toBeNull();
+  });
+
+  test('has no mini map after nearest neighbor training', () => {
+    renderCard({trainer: 'knn'});
+    expect(accuracy()).not.toBeNull();
+    expect(screen.queryByRole('button', {name: 'Replay training'})).toBeNull();
+  });
+
+  test('Replay training reopens the modal and keeps the card', () => {
+    const store = renderCard();
+    fireEvent.click(screen.getByRole('button', {name: 'Replay training'}));
+    expect(store.getState().trainingModalStep).toBe('training');
+    expect(accuracy()).not.toBeNull();
+  });
+
+  test('takes focus when the training modal closes and focus was lost', () => {
+    const store = renderCard();
+    act(() => {
+      store.dispatch(setTrainingModalStep('training'));
+    });
+    act(() => {
+      store.dispatch(setTrainingModalStep(undefined));
+    });
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'Test model'}),
+    );
   });
 
   test('stays hidden while the training modal is open', () => {
