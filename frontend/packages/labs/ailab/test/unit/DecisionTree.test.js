@@ -1,4 +1,4 @@
-import {act, fireEvent, screen} from '@testing-library/react';
+import {act, fireEvent, screen, waitFor} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
@@ -306,6 +306,17 @@ describe('DecisionTree', () => {
       const name = root.querySelector(`.${moduleStyles.nodeText}`);
 
       expect(tooltip().textContent).toBe(name.textContent);
+    });
+
+    it('closes the tooltip on the first Escape and leaves the tree on the next', async () => {
+      const root = focusRoot();
+
+      fireEvent.keyDown(root, {key: 'Escape'});
+      await waitFor(() => expect(tooltip()).toBeNull());
+      expect(document.activeElement).toBe(root);
+
+      fireEvent.keyDown(root, {key: 'Escape'});
+      expect(document.activeElement).toBe(canvasGroup());
     });
 
     it('shows no tooltip when a click focuses a node', () => {

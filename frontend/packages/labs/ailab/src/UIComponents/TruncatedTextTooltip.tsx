@@ -44,6 +44,19 @@ const TruncatedTextTooltip = ({
     }
   }, [open, subscribeToMoves]);
 
+  useEffect(() => {
+    if (open && focused) {
+      const dismiss = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          event.stopPropagation();
+          setOpen(false);
+        }
+      };
+      document.addEventListener('keydown', dismiss, true);
+      return () => document.removeEventListener('keydown', dismiss, true);
+    }
+  }, [open, focused]);
+
   return (
     <Tooltip
       ref={textRef}
