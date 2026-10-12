@@ -3,7 +3,6 @@ import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import {
   countDisplayTreeRows,
-  NO_ROWS,
   traceDisplayTree,
 } from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
@@ -204,7 +203,7 @@ describe('countDisplayTreeRows', () => {
 
 describe('getDisplayTreeCounts', () => {
   const rows = (counts, id) => {
-    const {correct, incorrect} = counts.get(id) ?? NO_ROWS;
+    const {correct, incorrect} = counts(id);
     return correct + incorrect;
   };
 
@@ -220,7 +219,7 @@ describe('getDisplayTreeCounts', () => {
         .nodes.filter(placed => placed.answerIndex !== undefined)
         .map(placed => placed.id);
       const answerCorrect = answerIds.reduce(
-        (sum, answerId) => sum + (counts.get(answerId) ?? NO_ROWS).correct,
+        (sum, answerId) => sum + counts(answerId).correct,
         0,
       );
 

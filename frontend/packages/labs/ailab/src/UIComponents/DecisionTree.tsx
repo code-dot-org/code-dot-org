@@ -44,9 +44,11 @@ import {
   PATH_NODE_BORDER,
   rowCount,
   rowCountText,
+  shownGrades,
   showsGrades,
+  type Grade,
 } from '../helpers/displayTreeNodeContent';
-import {NO_ROWS, type DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
+import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionPlaying} from '../redux';
@@ -110,25 +112,28 @@ const KeyHint = ({id, shown, children}: KeyHintProps) => (
   </Typography>
 );
 
-const GRADE_ICONS = {correct: 'circle-check', incorrect: 'circle-xmark'};
+const GRADE_ICONS: Record<Grade, string> = {
+  correct: 'circle-check',
+  incorrect: 'circle-xmark',
+};
 
 interface GradeCountProps {
-  grade: 'correct' | 'incorrect';
+  grade: Grade;
   count: number;
 }
 
-const GradeCount = ({grade, count}: GradeCountProps) =>
-  count > 0 && (
-    <span className={styles[grade]}>
-      <FontAwesomeV6Icon
-        iconName={GRADE_ICONS[grade]}
-        iconStyle="solid"
-        className={styles.gradeIcon}
-      />
-      {count}
-      <span className={appStyles.visuallyHidden}> {grade} </span>
-    </span>
-  );
+const GradeCount = ({grade, count}: GradeCountProps) => (
+  <span className={styles[grade]}>
+    <FontAwesomeV6Icon
+      iconName={GRADE_ICONS[grade]}
+      iconStyle="solid"
+      className={styles.gradeIcon}
+      aria-hidden="true"
+    />
+    {count}
+    <span className={appStyles.visuallyHidden}> {grade} </span>
+  </span>
+);
 
 interface NodeCountsProps {
   id: string;
@@ -144,10 +149,9 @@ const NodeCounts = ({id, node, counts}: NodeCountsProps) => (
     className={styles.counts}
   >
     {showsGrades(node, counts) ? (
-      <>
-        <GradeCount grade="correct" count={counts.correct} />
-        <GradeCount grade="incorrect" count={counts.incorrect} />
-      </>
+      shownGrades(counts).map(grade => (
+        <GradeCount key={grade} grade={grade} count={counts[grade]} />
+      ))
     ) : (
       rowCountText(rowCount(counts))
     )}
@@ -465,7 +469,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     <NodeCounts
                       id={countsId(placed.id)}
                       node={placed.node}
-                      counts={counts.get(placed.id) ?? NO_ROWS}
+                      counts={counts(placed.id)}
                     />
                   </div>
                 </div>

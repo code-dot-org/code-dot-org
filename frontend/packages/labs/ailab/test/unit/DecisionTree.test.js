@@ -6,6 +6,8 @@ import I18n from '../../src/i18n';
 import {
   playPredictionStep,
   setAccuracyCheckExamples,
+  setAccuracyCheckLabels,
+  setAccuracyCheckPredictedLabels,
   setPredictionPlaying,
   setTestData,
 } from '../../src/redux';
@@ -299,7 +301,11 @@ describe('DecisionTree', () => {
 
   it('shows and describes how many held-out rows reach a question', () => {
     const {store} = trained;
-    const [example] = store.getState().accuracyCheckExamples;
+    const {
+      accuracyCheckExamples: [example],
+      accuracyCheckLabels: [label],
+      accuracyCheckPredictedLabels: [predictedLabel],
+    } = store.getState();
     const [root] = screen.getAllByRole('treeitem');
     const shown = () =>
       root.querySelector(`.${moduleStyles.counts}`).textContent;
@@ -309,7 +315,11 @@ describe('DecisionTree', () => {
       screen.getAllByRole('treeitem', {description: /\b1 test row$/}),
     ).toContain(root);
 
-    act(() => store.dispatch(setAccuracyCheckExamples([example, example])));
+    act(() => {
+      store.dispatch(setAccuracyCheckExamples([example, example]));
+      store.dispatch(setAccuracyCheckLabels([label, label]));
+      store.dispatch(setAccuracyCheckPredictedLabels([predictedLabel, predictedLabel]));
+    });
 
     expect(shown()).toBe('2 test rows');
   });

@@ -1,7 +1,7 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
-import {getGradeOptions, gradeAccuracy} from '../helpers/accuracy';
+import {getAccuracyGrades} from '../helpers/accuracy';
 import {
   getUniqueOptions,
   getLocalizedColumnName,
@@ -13,8 +13,9 @@ import {
 } from '../helpers/displayTree';
 import {
   countDisplayTreeRows,
+  NO_ROWS,
   traceDisplayTree,
-  type DisplayTreeNodeCounts,
+  type DisplayTreeCountsLookup,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
@@ -308,23 +309,19 @@ export const getDisplayTreeCounts = createSelector(
     getDisplayTree,
     (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
     (state: RootState) => state.accuracyCheckExamples,
-    (state: RootState) => state.accuracyCheckLabels,
-    (state: RootState) => state.accuracyCheckPredictedLabels,
-    (state: RootState) => getGradeOptions(state).tolerance,
+    getAccuracyGrades,
   ],
   (
     tree: DisplayTreeNode | undefined,
     trainedModel,
     examples: number[][],
-    labels: (number | string)[],
-    predictedLabels: (number | string)[],
-    tolerance: number | undefined,
-  ): Map<string, DisplayTreeNodeCounts> => {
+    grades: string[],
+  ): DisplayTreeCountsLookup => {
     if (!tree) {
-      return new Map();
+      return () => NO_ROWS;
     }
-    const {grades} = gradeAccuracy(predictedLabels, labels, {tolerance});
     const {root} = trainedModel!.toJSON() as SerializedTree;
-    return countDisplayTreeRows(tree, root!, examples, grades);
+    const counts = countDisplayTreeRows(tree, root!, examples, grades);
+    return nodeId => counts.get(nodeId) ?? NO_ROWS;
   },
 );

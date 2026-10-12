@@ -30,6 +30,8 @@ export interface DisplayTreeNodeCounts {
 
 export const NO_ROWS: DisplayTreeNodeCounts = {correct: 0, incorrect: 0};
 
+export type DisplayTreeCountsLookup = (nodeId: string) => DisplayTreeNodeCounts;
+
 export function traceDisplayTree(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
@@ -74,8 +76,9 @@ export function countDisplayTreeRows(
     const grade =
       grades[index] === ResultsGrades.CORRECT ? 'correct' : 'incorrect';
     traceDisplayTree(root, modelRoot, inputs, {}).path.forEach(nodeId => {
-      const nodeCounts = counts.get(nodeId) ?? NO_ROWS;
-      counts.set(nodeId, {...nodeCounts, [grade]: nodeCounts[grade] + 1});
+      const nodeCounts = counts.get(nodeId) ?? {...NO_ROWS};
+      nodeCounts[grade]++;
+      counts.set(nodeId, nodeCounts);
     });
   });
 

@@ -164,8 +164,10 @@ describe('get accuracy', () => {
 describe('get grades', () => {
   classificationTestCases.forEach(testCase => {
     test(testCase.case, async () => {
-      classificationState['accuracyCheckPredictedLabels'] = testCase.results;
-      const grades = getAccuracyGrades(classificationState);
+      const grades = getAccuracyGrades({
+        ...classificationState,
+        accuracyCheckPredictedLabels: testCase.results,
+      });
       expect(grades).toEqual(testCase.grades);
     });
   });

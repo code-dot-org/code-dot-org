@@ -3,7 +3,10 @@ import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {getLocalizedColumnName} from './columnDetails';
 import {formatNumber, type DisplayTreeNode} from './displayTree';
 import {TREE_NODE_MAX_WIDTH} from './displayTreeLayout';
-import {NO_ROWS, type DisplayTreeNodeCounts} from './displayTreeTrace';
+import type {
+  DisplayTreeCountsLookup,
+  DisplayTreeNodeCounts,
+} from './displayTreeTrace';
 import {getLocalizedValue} from './valueDetails';
 
 export const NODE_PADDING_INLINE = 12;
@@ -15,6 +18,8 @@ export const GRADE_ICON_SIZE = 11;
 export const GRADE_ICON_GAP = 3;
 
 const GRADES = ['correct', 'incorrect'] as const;
+
+export type Grade = (typeof GRADES)[number];
 
 export function displayNodeLabel(
   node: DisplayTreeNode,
@@ -43,51 +48,56 @@ export function showsGrades(
   return node.type === 'answer' && rowCount(counts) > 0;
 }
 
-function textMeasurer(
+export function shownGrades(counts: DisplayTreeNodeCounts): Grade[] {
+  return GRADES.filter(grade => counts[grade] > 0);
+}
+
+function textMeasurer(): (
   variant: 'body3' | 'body4',
   weight: number,
-): (text: string) => number {
-  const {fontFamily, fontSize} = CdoTheme.typography[variant];
-  const rems = parseFloat(String(fontSize));
+  text: string,
+) => number {
   const rootFontSize = parseFloat(
     getComputedStyle(document.documentElement).fontSize,
   );
   const context = document.createElement('canvas').getContext('2d')!;
-  context.font = `${weight} ${rems * rootFontSize}px ${fontFamily}`;
-  return text => context.measureText(text).width;
+  return (variant, weight, text) => {
+    const {fontFamily, fontSize} = CdoTheme.typography[variant];
+    const rems = parseFloat(String(fontSize));
+    context.font = `${weight} ${rems * rootFontSize}px ${fontFamily}`;
+    return context.measureText(text).width;
+  };
 }
 
 export function nodeWidthMeasurer(
   datasetId: string,
-  counts: Map<string, DisplayTreeNodeCounts>,
+  counts: DisplayTreeCountsLookup,
 ): (node: DisplayTreeNode, id: string) => number {
-  const labelWidth = textMeasurer('body3', 600);
-  const rowsWidth = textMeasurer('body4', 400);
-  const gradeWidth = textMeasurer('body4', 600);
+  const textWidth = textMeasurer();
 
   const countsWidth = (
     node: DisplayTreeNode,
     nodeCounts: DisplayTreeNodeCounts,
   ): number => {
     if (!showsGrades(node, nodeCounts)) {
-      return rowsWidth(rowCountText(rowCount(nodeCounts)));
+      return textWidth('body4', 400, rowCountText(rowCount(nodeCounts)));
     }
-    const shown = GRADES.filter(grade => nodeCounts[grade] > 0);
+    const shown = shownGrades(nodeCounts);
     return shown.reduce(
       (sum, grade) =>
         sum +
         GRADE_ICON_SIZE +
         GRADE_ICON_GAP +
-        gradeWidth(String(nodeCounts[grade])),
+        textWidth('body4', 600, String(nodeCounts[grade])),
       COUNTS_GAP * (shown.length - 1),
     );
   };
 
   return (node, id) => {
-    const nodeCounts = counts.get(id) ?? NO_ROWS;
+    const nodeCounts = counts(id);
     const contentWidth =
       (node.type === 'answer' ? ANSWER_DOT_SIZE + NODE_GAP : 0) +
-      labelWidth(displayNodeLabel(node, datasetId)) +
+      textWidth('body3', 600, displayNodeLabel(node, datasetId)) +
       NODE_GAP +
       COUNTS_GAP +
       countsWidth(node, nodeCounts);

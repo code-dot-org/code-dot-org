@@ -11,7 +11,7 @@ import {
   TREE_NODE_HEIGHT,
 } from '../helpers/displayTreeLayout';
 import {nodeWidthMeasurer} from '../helpers/displayTreeNodeContent';
-import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
+import type {DisplayTreeCountsLookup} from '../helpers/displayTreeTrace';
 
 import {leafColorStyle} from './leafColors';
 
@@ -26,7 +26,7 @@ const VIEW_MARGIN = 8;
 interface TreeMiniMapProps {
   tree: DisplayTreeNode;
   datasetId: string;
-  counts: Map<string, DisplayTreeNodeCounts>;
+  counts: DisplayTreeCountsLookup;
   onReplay: () => void;
 }
 
