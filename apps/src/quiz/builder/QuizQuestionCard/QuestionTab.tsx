@@ -39,7 +39,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
     />
     <FormFieldWrapper label="Description (optional, markdown supported)">
       <textarea
-        className={styles.textarea}
+        className={builderCommonStyles.textarea}
         name="description"
         rows={5}
         value={draft.description ?? ''}
