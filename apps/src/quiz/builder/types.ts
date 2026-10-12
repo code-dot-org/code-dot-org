@@ -1,3 +1,5 @@
+import {QuizQuestionType} from '../types';
+
 export interface QuizQuestionChoice {
   id: string;
   text: string;
@@ -11,11 +13,10 @@ export interface StandardSummary {
   description: string;
 }
 
-// Mirrors the QuizQuestion model. `type` is the STI class name;
-// MultipleChoiceQuestion is the only one so far.
+// Mirrors the QuizQuestion model.
 export interface QuizQuestion {
   id: number;
-  type: string;
+  type: QuizQuestionType;
   questionName: string;
   questionTitle: string;
   description: string | null;
@@ -62,7 +63,7 @@ export interface QuizBuilderQuestionsState {
   // on that question's card instead of globally.
   errorQuestionId: number | null;
   // Adds a placeholder question to local state only, on the given page.
-  addPendingQuestion: (page: number) => number;
+  addPendingQuestion: (page: number, type: QuizQuestionType) => number;
   // Resolves with the saved question's id on success. For a pending
   // question this is its first save, which creates it server-side and
   // replaces the negative id with the real one; otherwise it's a normal
