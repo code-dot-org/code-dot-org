@@ -72,7 +72,7 @@ class Quiz < Level
   end
 
   def import_serialized_placements!
-    return if serialized_placements.nil?
+    raise "quiz #{name.dump}: .level file is missing a placements list" if serialized_placements.nil?
 
     questions_by_key = QuizQuestion.where(key: serialized_placements.map {|entry| entry['question_key']}).index_by(&:key)
 

@@ -241,14 +241,10 @@ class QuizTest < ActiveSupport::TestCase
     assert_empty quiz.placements
   end
 
-  test "import_serialized_placements! leaves existing placements alone when serialized_placements is nil" do
+  test "import_serialized_placements! raises when the .level file has no placements list" do
     quiz = create(:quiz)
-    placement = create(:quiz_question_placement, level: quiz)
-    # serialized_placements left at its default, unset nil.
 
-    quiz.import_serialized_placements!
-
-    assert_equal placement.id, quiz.placements.first.id
+    assert_raises(RuntimeError) {quiz.import_serialized_placements!}
   end
 
   test "import_serialized_placements! raises on an unresolvable question_key" do
