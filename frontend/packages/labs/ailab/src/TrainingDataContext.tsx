@@ -6,15 +6,14 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useRef,
   useState,
   type ReactNode,
 } from 'react';
 
-import {useAppSelector} from './hooks';
 import type {TrainedModel} from './types';
+import {useResetSignal} from './useResetSignal';
 
 export interface TrainingDataContextValue {
   trainedModel?: TrainedModel;
@@ -35,17 +34,13 @@ interface TrainingDataProviderProps {
 export const TrainingDataProvider = ({children}: TrainingDataProviderProps) => {
   const [trainedModel, setTrainedModel] = useState<TrainedModel | undefined>();
   const previousTrainedModel = useRef<TrainedModel | undefined>(undefined);
-  const resetCount = useAppSelector(state => state.resetCount);
-  const appliedReset = useRef(resetCount);
 
-  useEffect(() => {
-    if (appliedReset.current === resetCount) {
-      return;
-    }
-    appliedReset.current = resetCount;
-    setTrainedModel(undefined);
-    previousTrainedModel.current = undefined;
-  }, [resetCount]);
+  useResetSignal(
+    useCallback(() => {
+      setTrainedModel(undefined);
+      previousTrainedModel.current = undefined;
+    }, []),
+  );
 
   const snapshotTrainedModel = useCallback(() => {
     previousTrainedModel.current = trainedModel;

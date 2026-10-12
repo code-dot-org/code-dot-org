@@ -8,16 +8,15 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
   useRef,
   useState,
   type ReactNode,
 } from 'react';
 
-import {useAppSelector} from './hooks';
 import type {TrainingRun} from './trainers/types';
 import type {Hyperparameters, HistoricResult} from './types';
+import {useResetSignal} from './useResetSignal';
 
 export interface AilabProject {
   hyperparameters?: Hyperparameters;
@@ -52,25 +51,19 @@ export const ProjectProvider = ({
   const [project, setProject] = useState<AilabProject>(
     openWith ?? initialProject,
   );
+  // What a training run owns, and so what cancelling one puts back.
   const previousRun = useRef<AilabProject | undefined>(undefined);
-  const resetCount = useAppSelector(state => state.resetCount);
-  const keepsHistoricResults = useAppSelector(
-    state => state.resetKeepsHistoricResults,
-  );
-  const appliedReset = useRef(resetCount);
 
-  useEffect(() => {
-    if (appliedReset.current === resetCount) {
-      return;
-    }
-    appliedReset.current = resetCount;
-    previousRun.current = undefined;
-    setProject(previous =>
-      keepsHistoricResults
-        ? {...initialProject, historicResults: previous.historicResults}
-        : initialProject,
-    );
-  }, [resetCount, keepsHistoricResults]);
+  useResetSignal(
+    useCallback((keepsHistoricResults: boolean) => {
+      previousRun.current = undefined;
+      setProject(previous =>
+        keepsHistoricResults
+          ? {...initialProject, historicResults: previous.historicResults}
+          : initialProject,
+      );
+    }, []),
+  );
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
