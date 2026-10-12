@@ -263,9 +263,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               aria-hidden="true"
               className={styles.edges}
             >
-              {edges.map(({id, d}) => (
-                <path key={id} d={d} />
-              ))}
+              {edges
+                .filter(({id}) => id !== nextId)
+                .map(({id, d}) => (
+                  <path key={id} d={d} />
+                ))}
               <g className={styles.marks}>
                 {edges.map(({id, d}) => (
                   <path
