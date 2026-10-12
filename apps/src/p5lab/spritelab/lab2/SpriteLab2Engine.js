@@ -549,9 +549,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       const fires = this.playerActions_.has(inputEvent.args.action);
       // A burst in a jump handler starts where the player took off; the
-      // physics pass after the handlers clears this.
+      // handler runs on the interpreter's next tick, so the frame is kept.
       if (fires && inputEvent.args.action === 'jump') {
-        this.jumpEventFiring_ = true;
+        this.jumpEventFrame_ = this.p5Wrapper.p5.frameCount;
       }
       return fires ? [{}] : [];
     };
