@@ -42,10 +42,8 @@ import {
   NODE_PADDING_INLINE,
   nodeWidthMeasurer,
   PATH_NODE_BORDER,
-  rowCount,
   rowCountText,
   shownGrades,
-  showsGrades,
   type Grade,
 } from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
@@ -141,22 +139,23 @@ interface NodeCountsProps {
   counts: DisplayTreeNodeCounts;
 }
 
-const NodeCounts = ({id, node, counts}: NodeCountsProps) => (
-  <Typography
-    id={id}
-    variant="body4"
-    component="span"
-    className={styles.counts}
-  >
-    {showsGrades(node, counts) ? (
-      shownGrades(counts).map(grade => (
-        <GradeCount key={grade} grade={grade} count={counts[grade]} />
-      ))
-    ) : (
-      rowCountText(rowCount(counts))
-    )}
-  </Typography>
-);
+const NodeCounts = ({id, node, counts}: NodeCountsProps) => {
+  const grades = shownGrades(node, counts);
+  return (
+    <Typography
+      id={id}
+      variant="body4"
+      component="span"
+      className={styles.counts}
+    >
+      {grades.length > 0
+        ? grades.map(grade => (
+            <GradeCount key={grade} grade={grade} count={counts[grade]} />
+          ))
+        : rowCountText(counts)}
+    </Typography>
+  );
+};
 
 interface DecisionTreeProps {
   overlay?: ReactNode;

@@ -33,23 +33,18 @@ export function displayNodeLabel(
     : String(getLocalizedValue(node.prediction, datasetId));
 }
 
-export function rowCount(counts: DisplayTreeNodeCounts): number {
-  return counts.correct + counts.incorrect;
-}
-
-export function rowCountText(rows: number): string {
+export function rowCountText(counts: DisplayTreeNodeCounts): string {
+  const rows = counts.correct + counts.incorrect;
   return `${rows} test ${rows === 1 ? 'row' : 'rows'}`;
 }
 
-export function showsGrades(
+export function shownGrades(
   node: DisplayTreeNode,
   counts: DisplayTreeNodeCounts,
-): boolean {
-  return node.type === 'answer' && rowCount(counts) > 0;
-}
-
-export function shownGrades(counts: DisplayTreeNodeCounts): Grade[] {
-  return GRADES.filter(grade => counts[grade] > 0);
+): Grade[] {
+  return node.type === 'answer'
+    ? GRADES.filter(grade => counts[grade] > 0)
+    : [];
 }
 
 function textMeasurer(): (
@@ -79,10 +74,10 @@ export function nodeWidthMeasurer(
     node: DisplayTreeNode,
     nodeCounts: DisplayTreeNodeCounts,
   ): number => {
-    if (!showsGrades(node, nodeCounts)) {
-      return textWidth('body4', 400, rowCountText(rowCount(nodeCounts)));
+    const shown = shownGrades(node, nodeCounts);
+    if (shown.length === 0) {
+      return textWidth('body4', 400, rowCountText(nodeCounts));
     }
-    const shown = shownGrades(nodeCounts);
     return shown.reduce(
       (sum, grade) =>
         sum +

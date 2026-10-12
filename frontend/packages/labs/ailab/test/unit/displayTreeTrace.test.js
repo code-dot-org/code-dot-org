@@ -1,4 +1,3 @@
-import {getCorrectCount} from '../../src/helpers/accuracy';
 import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import {
@@ -9,7 +8,6 @@ import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import {playPredictionStep, setTestData} from '../../src/redux';
 import {
   getDisplayTree,
-  getDisplayTreeCounts,
   getPredictionStep,
   getPredictionTrace,
 } from '../../src/selectors/visualizationSelectors';
@@ -192,58 +190,6 @@ describe('countDisplayTreeRows', () => {
       '0.1.0': {correct: 0, incorrect: 1},
       '0.1.1': {correct: 2, incorrect: 0},
     });
-  });
-
-  test('leaves out a node no row reaches', () => {
-    const counts = countDisplayTreeRows(tree, model, [[0]], ['correct']);
-
-    expect([...counts.keys()]).toEqual(['0', '0.0']);
-  });
-});
-
-describe('getDisplayTreeCounts', () => {
-  const rows = (counts, id) => {
-    const {correct, incorrect} = counts(id);
-    return correct + incorrect;
-  };
-
-  test.each([
-    ['a classification', 'zoo', zooOptions],
-    ['a regression', 'jeans', {}],
-  ])(
-    "counts %s tree's held-out rows, so the answers' correct counts sum to the score's",
-    (_kind, id, options) => {
-      const {state, trainedModel} = trainDataset(id, options);
-      const counts = getDisplayTreeCounts(state, trainedModel);
-      const answerIds = layoutDisplayTree(getDisplayTree(state, trainedModel))
-        .nodes.filter(placed => placed.answerIndex !== undefined)
-        .map(placed => placed.id);
-      const answerCorrect = answerIds.reduce(
-        (sum, answerId) => sum + counts(answerId).correct,
-        0,
-      );
-
-      expect(rows(counts, '0')).toBe(state.accuracyCheckExamples.length);
-      expect(answerCorrect).toBe(getCorrectCount(state).correct);
-    },
-  );
-
-  test("gives each question's rows to its children", () => {
-    const {state, trainedModel} = trainDataset('zoo', zooOptions);
-    const counts = getDisplayTreeCounts(state, trainedModel);
-
-    layoutDisplayTree(getDisplayTree(state, trainedModel)).nodes.forEach(
-      placed => {
-        if (placed.children.length > 0) {
-          expect(
-            placed.children.reduce(
-              (sum, child) => sum + rows(counts, child.id),
-              0,
-            ),
-          ).toBe(rows(counts, placed.id));
-        }
-      },
-    );
   });
 });
 

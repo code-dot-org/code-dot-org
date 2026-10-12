@@ -303,7 +303,6 @@ export function getPredictionStep(
   return state.predictionStep ?? pathLength - 1;
 }
 
-// Counts the held-out rows, so the correct counts sum to the accuracy score's.
 export const getDisplayTreeCounts = createSelector(
   [
     getDisplayTree,

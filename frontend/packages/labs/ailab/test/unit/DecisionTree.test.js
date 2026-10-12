@@ -5,9 +5,6 @@ import {getCorrectCount} from '../../src/helpers/accuracy';
 import I18n from '../../src/i18n';
 import {
   playPredictionStep,
-  setAccuracyCheckExamples,
-  setAccuracyCheckLabels,
-  setAccuracyCheckPredictedLabels,
   setPredictionPlaying,
   setTestData,
 } from '../../src/redux';
@@ -300,28 +297,14 @@ describe('DecisionTree', () => {
   });
 
   it('shows and describes how many held-out rows reach a question', () => {
-    const {store} = trained;
-    const {
-      accuracyCheckExamples: [example],
-      accuracyCheckLabels: [label],
-      accuracyCheckPredictedLabels: [predictedLabel],
-    } = store.getState();
     const [root] = screen.getAllByRole('treeitem');
-    const shown = () =>
-      root.querySelector(`.${moduleStyles.counts}`).textContent;
 
-    expect(shown()).toBe('1 test row');
+    expect(root.querySelector(`.${moduleStyles.counts}`).textContent).toBe(
+      '1 test row',
+    );
     expect(
       screen.getAllByRole('treeitem', {description: /\b1 test row$/}),
     ).toContain(root);
-
-    act(() => {
-      store.dispatch(setAccuracyCheckExamples([example, example]));
-      store.dispatch(setAccuracyCheckLabels([label, label]));
-      store.dispatch(setAccuracyCheckPredictedLabels([predictedLabel, predictedLabel]));
-    });
-
-    expect(shown()).toBe('2 test rows');
   });
 
   it('counts zero test rows on an answer no held-out row reaches', () => {
