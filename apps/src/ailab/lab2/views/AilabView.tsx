@@ -16,6 +16,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import AccuracyValidator from '../AccuracyValidator';
+import {AILAB_ASSET_PATH} from '../assetPath';
 import {getDefaultInstructions} from '../defaultInstructions';
 import {AilabLevelProperties} from '../types';
 
@@ -92,7 +93,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     };
 
     ailab.mount({
-      assetPath: '/blockly/media/skins/ailab/',
+      assetPath: AILAB_ASSET_PATH,
       onContinue,
       setInstructionsKey,
       onTrained,

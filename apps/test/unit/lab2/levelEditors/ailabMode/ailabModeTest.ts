@@ -1,6 +1,9 @@
 import {
   cleanMode,
   getSelectedDataset,
+  setDataset,
+  setFeatures,
+  setLabel,
   withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
@@ -48,6 +51,45 @@ describe('ailabMode', () => {
 
     it('drops an out-of-range accuracy', () => {
       expect(cleanMode({requireAccuracy: 101}, KNOWN).mode).toEqual({});
+    });
+
+    it('checks only the shape of the label and features', () => {
+      const mode = {label: 'any column', features: ['a', 'b']};
+      expect(cleanMode(mode, KNOWN).mode).toEqual(mode);
+      [{label: 3}, {features: 'a'}, {features: ['a', 2]}].forEach(bad => {
+        expect(cleanMode(bad, KNOWN).mode).toEqual({});
+      });
+    });
+  });
+
+  it('setDataset clears the label and features', () => {
+    expect(
+      setDataset(
+        {
+          datasets: ['zoo'],
+          label: 'animal',
+          features: ['legs'],
+          hideSave: true,
+        },
+        'heart'
+      )
+    ).toEqual({datasets: ['heart'], hideSave: true});
+  });
+
+  it('setFeatures removes the key when no feature is left', () => {
+    expect(setFeatures({features: ['legs']}, [])).toEqual({});
+  });
+
+  describe('setLabel', () => {
+    it('removes the label from the features', () => {
+      expect(setLabel({features: ['legs', 'wings']}, 'legs')).toEqual({
+        features: ['wings'],
+        label: 'legs',
+      });
+    });
+
+    it('removes the key when the label is cleared', () => {
+      expect(setLabel({label: 'legs'}, undefined)).toEqual({});
     });
   });
 

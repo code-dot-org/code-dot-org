@@ -1,14 +1,81 @@
-import {act, render, screen, fireEvent} from '@testing-library/react';
+import {act, render, screen, fireEvent, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import EditAilabMode from '@cdo/apps/lab2/levelEditors/ailabMode/EditAilabMode';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+jest.mock('@cdo/apps/util/HttpClient');
+
+const dataset = (id: string, name: string) => ({
+  id,
+  name,
+  path: `datasets/${id}.csv`,
+  metadataPath: `datasets/${id}.json`,
+});
 
 const DATASETS = [
-  {id: 'zoo', name: 'Zoo Animals'},
-  {id: 'heart', name: 'Heart Disease'},
-  {id: 'pizza_toy', name: 'Pizza Toppings', isToy: true},
+  dataset('zoo', 'Zoo Animals'),
+  dataset('heart', 'Heart Disease'),
+  {...dataset('pizza_toy', 'Pizza Toppings'), isToy: true},
 ];
+
+const ASSET_PATH = '/blockly/media/skins/ailab/datasets/';
+
+const FILES: Record<string, string | object> = {
+  // `name` has no type in the metadata, so students cannot choose it.
+  'zoo.csv': 'name,legs,wings,animal\nTom,4,0,cat\nTweety,2,2,bird\n',
+  'zoo.json': {
+    card: {},
+    defaultLabelColumn: 'animal',
+    fields: [
+      {id: 'legs', type: 'numerical'},
+      {id: 'wings', type: 'numerical'},
+      {id: 'animal'},
+    ],
+  },
+  'heart.csv': 'age,sex\n50,M\n60,F\n',
+  'heart.json': {
+    card: {},
+    fields: [
+      {id: 'age', type: 'numerical'},
+      {id: 'sex', type: 'categorical'},
+    ],
+  },
+  // The default label names a column the CSV does not have.
+  'pizza_toy.csv': 'topping,price\nham,3\nolive,2\n',
+  'pizza_toy.json': {
+    card: {},
+    defaultLabelColumn: 'Topping?',
+    fields: [{id: 'topping'}, {id: 'price', type: 'numerical'}],
+  },
+};
+
+function serveFiles(files: Record<string, string | object>) {
+  const file = (url: string) => {
+    const name = url.replace(ASSET_PATH, '');
+    if (!(name in files)) {
+      throw new Error(`404 ${url}`);
+    }
+    return files[name];
+  };
+  jest
+    .mocked(HttpClient.get)
+    .mockImplementation(
+      async url => ({text: async () => file(url)} as unknown as Response)
+    );
+  jest
+    .mocked(HttpClient.fetchJson)
+    .mockImplementation(
+      async url => ({value: file(url), response: {} as Response} as never)
+    );
+}
+
+// The columns stay loading unless a test serves the dataset files.
+beforeEach(() => {
+  jest.mocked(HttpClient.get).mockReturnValue(new Promise(() => {}));
+  jest.mocked(HttpClient.fetchJson).mockReturnValue(new Promise(() => {}));
+});
 
 function renderEditor(
   initialMode: string | null,
@@ -49,6 +116,20 @@ function datasetDropdown() {
 
 function chooseDataset(datasetId: string) {
   fireEvent.change(datasetDropdown(), {target: {value: datasetId}});
+}
+
+function labelDropdown() {
+  return screen.getByRole('combobox', {name: /^Label/});
+}
+
+function optionsOf(select: HTMLElement) {
+  return Array.from((select as HTMLSelectElement).options).map(
+    option => option.text
+  );
+}
+
+function columnsLoaded() {
+  return waitFor(() => expect(labelDropdown()).toBeEnabled());
 }
 
 describe('EditAilabMode', () => {
@@ -237,5 +318,131 @@ describe('EditAilabMode', () => {
         .filter(option => option.closest('select') === datasetDropdown())
         .map(option => (option as HTMLOptionElement).value)
     ).toEqual(['', 'zoo', 'heart', 'pizza_toy']);
+  });
+  describe('label and features', () => {
+    beforeEach(() => serveFiles(FILES));
+
+    it('offers the columns students can choose', async () => {
+      renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+      expect(optionsOf(labelDropdown())).toEqual([
+        'None',
+        'animal (default)',
+        'legs',
+        'wings',
+      ]);
+    });
+
+    it('waits for a dataset', () => {
+      renderEditor(null);
+      expect(labelDropdown()).toBeDisabled();
+      expect(screen.getByText('Choose a dataset first.')).toBeInTheDocument();
+    });
+
+    it('sets the label', async () => {
+      const savedMode = renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+
+      fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+      });
+
+      fireEvent.change(labelDropdown(), {target: {value: ''}});
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+      });
+    });
+
+    it('removes the new label from the features', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "features": ["legs", "wings"]}'
+      );
+      await columnsLoaded();
+
+      fireEvent.change(labelDropdown(), {target: {value: 'legs'}});
+
+      expect(JSON.parse(savedMode())).toMatchObject({
+        label: 'legs',
+        features: ['wings'],
+      });
+    });
+
+    it('clears them when the dataset changes', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"]}'
+      );
+      await columnsLoaded();
+
+      chooseDataset('heart');
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['heart'],
+        trainer: 'knn',
+      });
+      await waitFor(() =>
+        expect(optionsOf(labelDropdown())).toEqual(['None', 'age', 'sex'])
+      );
+    });
+
+    it("shows the dataset's default label when locked with none set", async () => {
+      const savedMode = renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+      const lock = screen.getByRole('checkbox', {
+        name: 'Lock the label so students cannot change it',
+      });
+
+      fireEvent.click(lock);
+
+      expect(labelDropdown()).toHaveValue('animal');
+      expect(optionsOf(labelDropdown())).toEqual([
+        'animal (default)',
+        'legs',
+        'wings',
+      ]);
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        hideSelectLabel: true,
+      });
+
+      fireEvent.click(lock);
+
+      expect(labelDropdown()).toHaveValue('');
+    });
+
+    it.each(['heart', 'pizza_toy'])(
+      'asks for a label to lock when %s has no usable default',
+      async datasetId => {
+        renderEditor(`{"datasets": ["${datasetId}"], "hideSelectLabel": true}`);
+        await columnsLoaded();
+        expect(
+          screen.getByText(
+            'This dataset has no default label. Choose a label to lock.'
+          )
+        ).toBeInTheDocument();
+      }
+    );
+
+    it('flags a saved label students cannot choose', async () => {
+      renderEditor('{"datasets": ["zoo"], "label": "name"}');
+      await columnsLoaded();
+      expect(
+        screen.getByText('Students cannot choose "name" in this dataset.')
+      ).toBeInTheDocument();
+    });
+
+    it("reports a dataset whose columns don't load", async () => {
+      serveFiles({});
+      renderEditor('{"datasets": ["zoo"]}');
+      expect(
+        await screen.findByText("Could not load the dataset's columns.")
+      ).toBeInTheDocument();
+      expect(labelDropdown()).toBeDisabled();
+    });
   });
 });

@@ -54,6 +54,15 @@ function isValidModeValue(
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
   }
+  if (key === 'label') {
+    return typeof value === 'string';
+  }
+  if (key === 'features') {
+    return (
+      Array.isArray(value) &&
+      value.every(feature => typeof feature === 'string')
+    );
+  }
   if ((BOOLEAN_MODE_KEYS as string[]).includes(key)) {
     return typeof value === 'boolean';
   }
@@ -79,6 +88,34 @@ export function cleanMode(
 
 export function getSelectedDataset(mode: ModeObject): string | undefined {
   return Array.isArray(mode.datasets) ? mode.datasets[0] : undefined;
+}
+
+// The label and features name columns of one dataset, so choosing another clears them.
+export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
+  const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
+  delete newMode.label;
+  delete newMode.features;
+  return newMode;
+}
+
+export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
+  return setJsonObjectValue(
+    mode,
+    'features',
+    features.length ? features : undefined
+  );
+}
+
+// Like the lab, choosing a label removes it from the features.
+export function setLabel(
+  mode: ModeObject,
+  label: string | undefined
+): ModeObject {
+  const features = (mode.features as string[] | undefined) ?? [];
+  return setFeatures(
+    setJsonObjectValue(mode, 'label', label),
+    features.filter(feature => feature !== label)
+  );
 }
 
 // Names the default trainer explicitly, so a saved Lab 2 level always records one.
