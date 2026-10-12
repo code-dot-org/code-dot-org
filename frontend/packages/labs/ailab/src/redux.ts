@@ -71,14 +71,13 @@ export interface RootState {
   showOverlay: boolean;
   resultsTab: string;
   resetCount: number;
-  // Start Over keeps the results already earned; a level load does not.
   resetKeepsHistoricResults: boolean;
   mode?: Mode;
 }
 
 // What a training run writes to Redux, so a cancelled run can be undone. The
 // model and the project data it also produces are undone by their own
-// contexts; useTrainingRun() drives all three together.
+// contexts.
 const TRAINING_RESULT_KEYS = [
   'featureNumberKey',
   'trainingExamples',

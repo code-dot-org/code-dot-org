@@ -2,6 +2,7 @@
   One training run writes to three places: the training data Redux still holds,
   the model, and the project. Starting and cancelling a run has to move all
   three together, so nothing else should drive them one at a time.
+  This will be simplified once all project and training data is managed via context.
 */
 
 import {useCallback} from 'react';

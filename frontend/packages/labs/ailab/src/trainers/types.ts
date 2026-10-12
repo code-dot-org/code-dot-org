@@ -26,7 +26,7 @@ export type TrainerId =
   | typeof TreeClassificationTrainer
   | typeof TreeRegressionTrainer;
 
-/* What one training run produces, for its caller to put where each piece goes. */
+/* What one training run produces. */
 export interface TrainingRun {
   trainedModel: TrainedModel;
   hyperparameters: Hyperparameters;

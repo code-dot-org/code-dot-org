@@ -53,7 +53,6 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
       return undefined;
     }
 
-    // Grading the run reads these back out of the store, so dispatch first.
     this.store.dispatch(
       setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
     );
