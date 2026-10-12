@@ -118,18 +118,19 @@ const LOOKS: Record<BurstLook, Look> = {
     ],
   },
   // Specks kicked up at the feet: out to the sides and up a little, then
-  // settling back down, each on its own.
+  // settling back down, each on its own. Small and brief, so a dozen read
+  // as a scuff rather than a cloud.
   dust: {
     origin: 'feet',
     fan: 0.6,
     spread: 10,
     speed: [1, 3],
     lift: 0.8,
-    drag: 0.93,
+    drag: 0.9,
     fall: 0.05,
-    life: [20, 34],
-    size: [2, 4],
-    grow: 1.3,
+    life: [12, 22],
+    size: [2, 3],
+    grow: 1.15,
     spin: [0, 0],
     shape: 'speck',
     palette: [
