@@ -41,6 +41,15 @@
   color: var(--text-neutral-primary);
 }
 
+.teacherAlert {
+  margin-bottom: 16px;
+}
+
+.toggleWrapper {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
 .projectGroup {
   margin-bottom: 40px;
 }
@@ -211,6 +220,7 @@
 .details {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 4px;
   padding: 12px;
 }
@@ -291,3 +301,4 @@
     text-decoration: underline;
   }
 }
+

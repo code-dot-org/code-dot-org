@@ -1,8 +1,9 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Alert} from '@mui/material';
-import React, {useEffect, useRef, useState} from 'react';
+import {Alert, Tooltip} from '@mui/material';
+import {pick} from 'lodash';
+import React, {useEffect, useId, useRef, useState} from 'react';
 
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -20,6 +21,9 @@ export interface QuizConfigurationData {
   allowMultipleAttempts: boolean;
   showQuestionsAfterSubmit: boolean;
 }
+
+const INTRO_SCREEN_LOCKED_MESSAGE =
+  'A timed quiz must have an intro screen, remove the time limit first.';
 
 const PURPOSE_OPTIONS = [
   {
@@ -102,9 +106,9 @@ const ConfigCard: React.FunctionComponent<{
 interface QuizConfigurationPanelProps {
   quizId: number;
   initialValues: QuizConfigurationData;
-  // Called with the server's saved values on success, so a caller can sync
-  // its own copy of the configuration without a page reload.
-  onSaved: (updated: QuizConfigurationData) => void;
+  // Called on success with the server's values for the fields this save sent,
+  // so a caller can sync its own copy of the configuration without a reload.
+  onSaved: (updated: Partial<QuizConfigurationData>) => void;
 }
 
 const QuizConfigurationPanel: React.FunctionComponent<
@@ -126,6 +130,14 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [showIntroScreen, setShowIntroScreen] = useState(
     initialValues.showIntroScreen
   );
+  // The workspace's intro screen card can also turn this off.
+  useEffect(() => {
+    setShowIntroScreen(initialValues.showIntroScreen);
+  }, [initialValues.showIntroScreen]);
+  // The backend requires the intro screen while a time limit is saved.
+  const isIntroScreenLocked =
+    !!initialValues.timeLimitMinutes && showIntroScreen;
+  const introScreenLockedMessageId = useId();
   const [purpose, setPurpose] = useState(initialValues.purpose || '');
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts
@@ -203,7 +215,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
         {'Content-Type': 'application/json'}
       );
       const saved: QuizConfigurationData = await response.json();
-      onSaved(saved);
+      onSaved(pick(saved, Object.keys(body)));
       return true;
     } catch (error) {
       setError(await networkErrorMessage(error));
@@ -423,20 +435,45 @@ const QuizConfigurationPanel: React.FunctionComponent<
               />
             </div>
             <div className={styles.cardRow}>
-              <div className={styles.toggleRow}>
-                <span className={styles.toggleLabel}>Show intro screen</span>
-                <Toggle
-                  name="showIntroScreen"
-                  aria-label="Show intro screen"
-                  size="s"
-                  disabled={savingField === 'showIntroScreen'}
-                  checked={showIntroScreen}
-                  onChange={handleShowIntroScreenChange}
-                />
+              <div className={styles.toggleWithHelper}>
+                <Tooltip
+                  title={isIntroScreenLocked ? INTRO_SCREEN_LOCKED_MESSAGE : ''}
+                  placement="top-end"
+                >
+                  <div className={styles.toggleRow}>
+                    <span className={styles.toggleLabel}>
+                      Show intro screen
+                    </span>
+                    <Toggle
+                      name="showIntroScreen"
+                      aria-label="Show intro screen"
+                      size="s"
+                      disabled={
+                        savingField === 'showIntroScreen' || isIntroScreenLocked
+                      }
+                      aria-describedby={
+                        isIntroScreenLocked
+                          ? introScreenLockedMessageId
+                          : undefined
+                      }
+                      checked={showIntroScreen}
+                      onChange={handleShowIntroScreenChange}
+                    />
+                  </div>
+                </Tooltip>
+                {/* A disabled toggle can't take focus, so the tooltip is mouse-only. */}
+                {isIntroScreenLocked && (
+                  <span
+                    id={introScreenLockedMessageId}
+                    className={styles.visuallyHidden}
+                  >
+                    {INTRO_SCREEN_LOCKED_MESSAGE}
+                  </span>
+                )}
+                <p className={styles.cardHelperText}>
+                  Edit intro screen contents in the workspace
+                </p>
               </div>
-              <p className={styles.cardHelperText}>
-                Edit intro screen contents in the workspace
-              </p>
             </div>
           </ConfigCard>
           <ConfigCard label="rules">

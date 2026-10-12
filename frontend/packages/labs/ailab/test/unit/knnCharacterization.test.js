@@ -24,7 +24,6 @@ import {getPercentCorrect} from '../../src/helpers/accuracy';
 import I18n from '../../src/i18n';
 import {
   addSelectedFeature,
-  getTrainedModelDataToSave,
   resetState,
   setColumnsByDataType,
   setImportedMetadata,
@@ -33,6 +32,7 @@ import {
   setSelectedCSV,
   setSelectedJSON,
 } from '../../src/redux';
+import {getTrainedModelDataToSave} from '../../src/selectors/saveSelectors';
 import {store} from '../../src/store';
 import train from '../../src/train';
 
@@ -89,8 +89,8 @@ function load(id, features) {
   chosen.forEach(column => store.dispatch(addSelectedFeature(column)));
 
   train.init(store);
-  train.onClickTrain(store);
-  return store.getState();
+  const trainedModel = train.onClickTrain();
+  return {state: store.getState(), trainedModel};
 }
 
 /*
@@ -112,7 +112,7 @@ afterAll(() => {
 */
 describe('shipped dataset fingerprints', () => {
   test('shapes_v1_toy is 100 clean rows over 6 columns', () => {
-    const state = load('shapes_v1_toy');
+    const {state} = load('shapes_v1_toy');
 
     expect(state.data.length).toBe(100);
     expect(state.removedRowsCount).toBe(0);
@@ -128,7 +128,7 @@ describe('shipped dataset fingerprints', () => {
   });
 
   test('jeans is 80 clean rows with a numerical label', () => {
-    const state = load('jeans');
+    const {state} = load('jeans');
 
     expect(state.data.length).toBe(80);
     expect(state.removedRowsCount).toBe(0);
@@ -139,8 +139,8 @@ describe('shipped dataset fingerprints', () => {
 
 describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
   test('records every feature selected', () => {
-    const state = load('shapes_v1_toy');
-    const saved = getTrainedModelDataToSave(state);
+    const {state, trainedModel} = load('shapes_v1_toy');
+    const saved = getTrainedModelDataToSave(state, trainedModel);
 
     expect(state.hyperparameters).toEqual({k: 1});
     expect(getPercentCorrect(state)).toBe('90.00');
@@ -159,16 +159,16 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
 
   test('records the accuracy the shapes level requires', () => {
     // `sides` fixes `shape` in this dataset: 0 circle, 3 triangle, 4 square.
-    // The curriculum level that loads it sets requireAccuracy to 100, so this
-    // number is the one that decides whether a student can continue.
-    const state = load('shapes_v1_toy', ['sides']);
+    // The curriculum level that loads it sets requireAccuracy to 100, and lab2
+    // keeps Continue disabled until the latest trained model reaches it.
+    const {state} = load('shapes_v1_toy', ['sides']);
 
     expect(getPercentCorrect(state)).toBe('100.00');
     expect(state.hyperparameters).toEqual({k: 1});
   });
 
   test('records a sweep that does not choose the smallest k', () => {
-    const state = load('shapes_v1_toy', [
+    const {state, trainedModel} = load('shapes_v1_toy', [
       'sides',
       'border color',
       'fill color',
@@ -177,15 +177,15 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
     expect(state.hyperparameters).toEqual({k: 7});
     expect(getPercentCorrect(state)).toBe('100.00');
 
-    const saved = getTrainedModelDataToSave(state);
+    const saved = getTrainedModelDataToSave(state, trainedModel);
     expect(saved.hyperparameters).toEqual({k: 7});
   });
 });
 
 describe('KNN characterization: jeans, a numerical label', () => {
   test('records the chosen k, the accuracy, and the predictions', () => {
-    const state = load('jeans');
-    const saved = getTrainedModelDataToSave(state);
+    const {state, trainedModel} = load('jeans');
+    const saved = getTrainedModelDataToSave(state, trainedModel);
 
     // A numerical label under 100 rows takes the minimal k, without a sweep.
     expect(state.hyperparameters).toEqual({k: 1});
@@ -203,7 +203,7 @@ describe('KNN characterization: jeans, a numerical label', () => {
   });
 
   test('records that the 13 features are unscaled', () => {
-    const state = load('jeans');
+    const {state} = load('jeans');
 
     // Nothing normalizes a feature, so `Cotton contents` (0-100) and the pocket
     // measurements (single digits) contribute to the distance at their own
@@ -216,8 +216,7 @@ describe('KNN characterization: jeans, a numerical label', () => {
 
 describe('KNN characterization: save and reload', () => {
   test('a serialized model reloads and predicts identically', () => {
-    const state = load('shapes_v1_toy');
-    const model = state.trainedModel;
+    const {state, trainedModel: model} = load('shapes_v1_toy');
     const rows = state.accuracyCheckExamples;
 
     // JSON.parse(JSON.stringify(...)) is what the save path does to the model,

@@ -1,0 +1,37 @@
+@use '../sharedMixins' as mixins;
+
+.card {
+  @include mixins.card;
+
+  overflow: hidden;
+}
+
+.results {
+  display: flex;
+}
+
+// The label comes first for screen readers but sits under the value.
+.result {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  min-width: 0;
+  padding: 8px 10px;
+
+  + .result {
+    border-left: 1px solid var(--border-neutral-primary);
+  }
+}
+
+.card .label {
+  color: var(--text-neutral-quaternary);
+}
+
+.card .value {
+  font-weight: 600;
+}
+
+.actionRow {
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+}

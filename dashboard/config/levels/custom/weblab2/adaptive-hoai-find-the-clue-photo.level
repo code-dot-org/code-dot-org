@@ -1,0 +1,35 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T01:07:05.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Sunny Skate Park</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <h1>Sunny Skate Park</h1>\n    <p>Ramps, rails, and good vibes. Open every day.</p>\n    <img src=\"skateboard-photo.jpeg\" alt=\"A skateboard on the pavement\" />\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  font-family: system-ui, Arial, sans-serif;\n  background: #fff4c7;\n  color: #1d3b53;\n  text-align: center;\n  padding: 50px 20px;\n}\n\nh1 {\n  font-size: 2.6rem;\n  margin-bottom: 8px;\n}\n\np {\n  font-size: 1.2rem;\n}\n\nimg {\n  width: 100%;\n  max-width: 480px;\n  border-radius: 16px;\n  margin-top: 20px;\n}\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "long_instructions": "**Do This**\n\n1.  Run the page. The photo is missing.\n2.  Ask the AI for help. Tell it what’s wrong.\n3.  Run the page again. Is the photo there?\n\nHere’s what the page is telling you: skateboard-photo.jpeg 404 (Not Found)"
+  },
+  "published": true
+}]]></config>
+</Weblab2>
