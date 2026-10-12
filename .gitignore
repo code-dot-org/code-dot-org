@@ -120,3 +120,6 @@ CLAUDE.local.md
 # playwright-best-practices: managed by skills-lock.json, not vendored.
 # Restore with `npx skills experimental_install` (see e2e-tests/README.md).
 .agents/skills/playwright-best-practices/
+
+# Local machine-specific compose additions (see docker/dev/README.md)
+docker/dev/compose.override.yaml

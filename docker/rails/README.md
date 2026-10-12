@@ -61,7 +61,7 @@ Build the parent yourself, which is what the example above assumes and matches
 by construction:
 
 ```
-docker build -t cdo-build:local docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:local .
 docker build -f docker/deps/Dockerfile \
   --build-arg BUILD_IMAGE=cdo-build:local \
   -t cdo-deps:local .
