@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-10T21:09:25.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Rivera's Basketball Team",
+    "long_instructions": "If a player takes 35 practice shots a day, how many shots should they make in games?\r\n\r\nThe client’s records are in the program: practice shots per day, and shots made in games, for five players on the team. Right now the program stops with an error.\r\n\r\n**☑️ Do This:**\r\n\r\n- Run this program and notice the error in the console. Consider why the error might be happening.\r\n- `scikit-learn` requires that each input example is wrapped in its own list, like `[[1], [2], [3]]`. Rewrite `practice_shots` as a list of lists, then run the program again.\r\n- Make the prediction you made on paper: `value = model.predict([[35]])[0]`, then print it with `print(f\"Prediction for 35: {value}\")`.\r\n- If time allows, discuss with your partner: if the client asked you to predict for 100 practice shots a day, could your paper plot have answered that?\r\n\r\n**💻 Coding Tip**\r\n\r\n`model.fit(inputs, outputs)` trains the model, and `scikit-learn` expects every input wrapped in its own list. `model.predict([[35]])` returns a list holding one prediction, so `[0]` takes the number out of it.\r\n",
+    "bubble_choice_description": "Help Coach Rivera predict how many shots their players will make.",
+    "thumbnail_url": "https://images.code.org/61d75c0c0630a07f5f57c5d39f1a13ac-basketball.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\n\n# TODO 1: Fix the definition of practice_shots\npractice_shots = [5, 15, 25, 40, 50]\nmade_shots = [3, 6.5, 9.5, 14, 15]\n\n# This line confirms how many examples the data holds:\nprint(\"Data loaded:\", len(practice_shots), \"examples\")\n\n# This line creates a new, untrained model:\nmodel = LinearRegression()\n\n# This line trains the model on the client's data:\nmodel.fit(practice_shots, made_shots)\n\n# TODO 2: Predict the value you made on paper\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoSq+Ye1R5/X6XY\nI/eejgKOhJ4RNq9GeaLRMcosIAGmzgbmqMkX+LjI9I4JQq/nybRo/J97uled\nfrMsuXpBPdMtEKEuNlAO6qUgIYQwgLqSm10uRToweMypONVvLDt3UxUdcjqj\nsogivUgNtXzLkqhsmQgKwteG9WYKrX2I+WruVyAXSQ9c7SZwPDEt64J3RnUf\nAcWIA33Q0pUz33wReJtEEFAiapET2pVGCjhrRZyfN9xBaQviJASf++A89Vla\njURDd+js4LzsAvdsjTCjUs6JVhj8RfRqqFE1h/cmp6MBrhGEc1vMn8pWY/dt\nvzn9nUFz5iQvevjW5Cm+tu3CqqEOl+kAwyjZ7hlcMuW/Y+7OOyrQOevc0L8p\nxg/Gmz3F5oE3C7HSTWVKgI/Er6ZRn7KSfimJz7UPv+ZFc34+69q34+qQ2uKX\nd79iYRyq0waKD4VJGdSWPorrxuenai5ikS4235+fDRNjeZRs9E1KW3gFZg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-10 21:22:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:23:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:23:05 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:23:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
