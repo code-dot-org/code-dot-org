@@ -11,7 +11,7 @@ import {
 
 import {CanvasMoveContext} from './TreeCanvas';
 
-interface TruncatedTextTooltipProps {
+interface FullTextTooltipProps {
   title: string;
   focused: boolean;
   placement: TooltipProps['placement'];
@@ -22,12 +22,12 @@ function isCutOff(element: HTMLElement): boolean {
   return element.scrollWidth > element.clientWidth;
 }
 
-const TruncatedTextTooltip = ({
+const FullTextTooltip = ({
   title,
   focused,
   placement,
   children,
-}: TruncatedTextTooltipProps) => {
+}: FullTextTooltipProps) => {
   const textRef = useRef<HTMLElement>(null);
   const popperRef = useRef<Instance>(null);
   const subscribeToMoves = useContext(CanvasMoveContext);
@@ -78,4 +78,4 @@ const TruncatedTextTooltip = ({
   );
 };
 
-export default TruncatedTextTooltip;
+export default FullTextTooltip;

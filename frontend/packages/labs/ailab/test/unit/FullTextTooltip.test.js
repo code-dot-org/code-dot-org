@@ -1,8 +1,8 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
+import FullTextTooltip from '../../src/UIComponents/FullTextTooltip';
 import {CanvasMoveContext} from '../../src/UIComponents/TreeCanvas';
-import TruncatedTextTooltip from '../../src/UIComponents/TruncatedTextTooltip';
 
 const TEXT = 'Sunny or Overcast';
 
@@ -11,7 +11,7 @@ function label({focused = false, subscribeToMoves = () => () => {}} = {}) {
     CanvasMoveContext.Provider,
     {value: subscribeToMoves},
     createElement(
-      TruncatedTextTooltip,
+      FullTextTooltip,
       {title: TEXT, focused, placement: 'top'},
       createElement('span', null, TEXT),
     ),
@@ -32,7 +32,7 @@ function settle() {
 // jsdom lays nothing out, so Popper sees every anchor as clipped and hides its tooltip.
 const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
 
-describe('TruncatedTextTooltip', () => {
+describe('FullTextTooltip', () => {
   beforeEach(() => vi.useFakeTimers());
   afterEach(() => {
     vi.useRealTimers();

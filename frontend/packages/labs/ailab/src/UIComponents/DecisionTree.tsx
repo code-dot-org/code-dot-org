@@ -47,9 +47,9 @@ import {
 } from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
+import FullTextTooltip from './FullTextTooltip';
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
-import TruncatedTextTooltip from './TruncatedTextTooltip';
 
 import styles from './decisionTree.module.scss';
 
@@ -345,7 +345,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
                   {label?.text && (
-                    <TruncatedTextTooltip
+                    <FullTextTooltip
                       focused={focusVisible}
                       placement="top"
                       title={
@@ -361,7 +361,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         {label.sign && `${label.sign} `}
                         <span id={branchId(placed.id)}>{label.text}</span>
                       </div>
-                    </TruncatedTextTooltip>
+                    </FullTextTooltip>
                   )}
                   <div
                     className={classNames(styles.node, kind, {
@@ -375,7 +375,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         style={leafColorStyle(placed.answerIndex)}
                       />
                     )}
-                    <TruncatedTextTooltip
+                    <FullTextTooltip
                       title={text}
                       focused={focusVisible}
                       placement="bottom"
@@ -397,7 +397,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                           text
                         )}
                       </Typography>
-                    </TruncatedTextTooltip>
+                    </FullTextTooltip>
                   </div>
                 </div>
               );
