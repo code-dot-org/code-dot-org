@@ -1,8 +1,7 @@
 /*
-  The project: everything saved with a student's work and restored when the
-  level loads again. The dataset is re-fetched on load and the model is refit,
-  so neither belongs here — only the choices and results that exist nowhere
-  else.
+  Everything saved with a student's work and restored when the
+  level loads again.
+  This is a work in progress; more will be added here.
 */
 
 import {
@@ -25,13 +24,6 @@ export interface AilabProject {
   historicResults: HistoricResult[];
 }
 
-// What a training run owns, and so what cancelling one puts back. The rest of
-// the project survives a cancelled run untouched.
-type TrainingRunOutputs = Pick<
-  AilabProject,
-  'hyperparameters' | 'historicResults'
->;
-
 export interface ProjectContextValue {
   project: AilabProject;
   applyTrainingRun: (run?: TrainingRun) => void;
@@ -50,7 +42,6 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 
 interface ProjectProviderProps {
   children: ReactNode;
-  // The project to open with. A level load will pass a saved one here.
   project?: AilabProject;
 }
 
@@ -61,15 +52,13 @@ export const ProjectProvider = ({
   const [project, setProject] = useState<AilabProject>(
     openWith ?? initialProject,
   );
-  const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  const previousRun = useRef<AilabProject | undefined>(undefined);
   const resetCount = useAppSelector(state => state.resetCount);
   const keepsHistoricResults = useAppSelector(
     state => state.resetKeepsHistoricResults,
   );
   const appliedReset = useRef(resetCount);
 
-  // A reset is dispatched outside React — by loadLevel(), by startOver(), or
-  // by choosing or uploading a dataset — so it can't clear the project itself.
   useEffect(() => {
     if (appliedReset.current === resetCount) {
       return;
