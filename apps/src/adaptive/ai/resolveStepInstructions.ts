@@ -62,14 +62,23 @@ export async function resolveStepInstructions({
     return stepContext.generated.instructions;
   }
 
-  const result = await generate({
+  const {output, traceId} = await generate({
     schema: generatedInstructionsSchema,
     prompt,
     context: aichatContext,
+    trace: {
+      name: 'adaptive-instructions',
+      metadata: {
+        pathwayId: pathway.id,
+        checkpointId: checkpoint.id,
+        stepId: step.id,
+        inputsHash,
+      },
+    },
   });
-  if (!result) return authoredInstructions;
+  if (!output) return authoredInstructions;
   updateStepContext(step.id, {
-    generated: {instructions: result.instructions, inputsHash},
+    generated: {instructions: output.instructions, inputsHash, traceId},
   });
-  return result.instructions;
+  return output.instructions;
 }
