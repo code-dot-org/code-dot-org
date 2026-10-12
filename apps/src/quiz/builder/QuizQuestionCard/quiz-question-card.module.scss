@@ -1,71 +1,8 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-sm);
-  background: var(--background-neutral-secondary);
-  overflow: hidden;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  background: var(--background-neutral-primary);
-}
-
-.header:not(:last-child) {
-  border-bottom: 1px solid var(--border-neutral-primary);
-}
-
-.headerPreview {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 1 0 0;
-  min-width: 0;
-}
-
-.typeIcon {
-  color: var(--text-neutral-quaternary);
-}
-
-.unsavedBadge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--border-warning-mid);
-  border-radius: var(--shape-sm);
-  background: var(--background-warning-light);
-  color: var(--text-warning-secondary);
-}
-
-.questionTitlePreview {
-  flex: 1 0 0;
-  min-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: var(--text-neutral-tertiary);
-}
-
 .tabsRow {
   padding: 0 10px;
 }
 
 .tabPanels {
-  background: var(--background-neutral-primary);
-}
-
-.tabContent {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px 10px 10px;
   background: var(--background-neutral-primary);
 }
 
@@ -113,43 +50,4 @@
 .optionText {
   flex: 1 0 0;
   min-width: 0;
-}
-
-.textarea {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 80px;
-  padding: 8px 12px;
-  border: 1px solid var(--border-neutral-secondary);
-  border-radius: var(--shape-sm);
-  font: inherit;
-  resize: vertical;
-}
-
-.saveError {
-  padding: 8px 10px 10px;
-  background: var(--background-neutral-primary);
-}
-
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-  padding: 10px;
-  background: var(--background-neutral-primary);
-  border-top: 1px solid var(--border-neutral-primary);
-}
-
-// aria-disabled rather than disabled, so the button keeps focus and its tooltip.
-.footer .ariaDisabled[aria-disabled='true'] {
-  border-color: var(--borders-neutral-disabled);
-  color: var(--text-neutral-disabled);
-  background-color: var(--background-neutral-primary);
-}
-
-.footerActions {
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }

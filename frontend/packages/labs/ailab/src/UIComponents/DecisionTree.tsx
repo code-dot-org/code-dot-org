@@ -15,11 +15,9 @@ import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
-  formatNumber,
   THRESHOLD_SIGNS,
   thresholdValue,
   type DisplayTreeBranch,
-  type DisplayTreeNode,
   type DisplayTreeQuestion,
 } from '../helpers/displayTree';
 import {
@@ -28,9 +26,17 @@ import {
   layoutDisplayTree,
   type PlacedTreeNode,
   TREE_NODE_HEIGHT,
-  TREE_NODE_WIDTH,
+  TREE_NODE_MAX_WIDTH,
 } from '../helpers/displayTreeLayout';
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
+import {
+  ANSWER_DOT_GAP,
+  ANSWER_DOT_SIZE,
+  displayNodeLabel,
+  NODE_PADDING_INLINE,
+  nodeWidthMeasurer,
+  PATH_NODE_BORDER,
+} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setPredictionPlaying} from '../redux';
@@ -41,6 +47,7 @@ import {
 } from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
+import FullTextTooltip from './FullTextTooltip';
 import {leafColorStyle} from './leafColors';
 import TreeCanvas from './TreeCanvas';
 
@@ -59,11 +66,15 @@ const HIDDEN_WORDS = {
   onPath: 'On your path',
 };
 
-const BRANCH_LABEL_RISE = 22;
+const BRANCH_LABEL_RISE = 19;
 
 const canvasVariables = {
-  '--tree-node-width': `${TREE_NODE_WIDTH}px`,
+  '--tree-node-max-width': `${TREE_NODE_MAX_WIDTH}px`,
   '--tree-node-height': `${TREE_NODE_HEIGHT}px`,
+  '--tree-node-padding-inline': `${NODE_PADDING_INLINE}px`,
+  '--tree-path-node-border': `${PATH_NODE_BORDER}px`,
+  '--tree-answer-dot-size': `${ANSWER_DOT_SIZE}px`,
+  '--tree-answer-dot-gap': `${ANSWER_DOT_GAP}px`,
   '--tree-branch-offset': `${BRANCH_LABEL_RISE}px`,
 } as CSSProperties;
 
@@ -101,8 +112,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
-    () => (tree ? layoutDisplayTree(tree) : undefined),
-    [tree],
+    () =>
+      tree ? layoutDisplayTree(tree, nodeWidthMeasurer(datasetId)) : undefined,
+    [tree, datasetId],
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const reachedIds = useMemo(
@@ -116,6 +128,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const keysHintId = useId();
   const nameId = useId();
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
+  const [focusVisibleId, setFocusVisibleId] = useState<string>();
   const [entered, setEntered] = useState(false);
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
@@ -190,15 +203,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const columnText = (node: DisplayTreeQuestion): string =>
     getLocalizedColumnName(datasetId, node.column);
 
-  const nodeText = (node: DisplayTreeNode): string => {
-    if (node.type === 'question') {
-      return `${columnText(node)}?`;
-    }
-    return typeof node.prediction === 'number'
-      ? formatNumber(node.prediction)
-      : valueText(node.prediction);
-  };
-
   const pathBounds =
     trace &&
     getNodesBounds(layout.nodes.filter(placed => pathIds.has(placed.id)));
@@ -265,9 +269,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               aria-hidden="true"
               className={styles.edges}
             >
-              {edges.map(({id, d}) => (
-                <path key={id} d={d} />
-              ))}
+              {edges
+                .filter(({id}) => id !== nextId)
+                .map(({id, d}) => (
+                  <path key={id} d={d} />
+                ))}
               <g className={styles.marks}>
                 {edges.map(({id, d}) => (
                   <path
@@ -282,11 +288,9 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
               </g>
             </svg>
             {layout.nodes.map(placed => {
-              const text = nodeText(placed.node);
+              const text = displayNodeLabel(placed.node, datasetId);
               const label = placed.branch && branchLabel(placed.branch);
-              const branch = label?.sign
-                ? `${label.sign} ${label.text}`
-                : label?.text;
+              const focusVisible = placed.id === focusVisibleId;
               const kind =
                 placed.answerIndex === undefined
                   ? styles.question
@@ -327,25 +331,39 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                   aria-setsize={siblings.length}
                   aria-posinset={siblings.indexOf(placed) + 1}
                   tabIndex={entered && placed.id === tabStopId ? 0 : -1}
-                  onFocus={() => setFocusedId(placed.id)}
+                  onFocus={event => {
+                    setFocusedId(placed.id);
+                    setFocusVisibleId(
+                      event.currentTarget.matches(':focus-visible')
+                        ? placed.id
+                        : undefined,
+                    );
+                  }}
+                  onBlur={() => setFocusVisibleId(undefined)}
                   onKeyDown={event => moveFocus(event, placed)}
                   className={styles.nodeSlot}
-                  style={{left: placed.x, top: placed.y}}
+                  style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
                   {label?.text && (
-                    <div
-                      title={branch}
-                      className={classNames(styles.branch, {
-                        [styles.pathBranch]: reachedIds.has(placed.id),
-                        [styles.nextBranch]: placed.id === nextId,
-                      })}
+                    <FullTextTooltip
+                      focused={focusVisible}
+                      placement="top"
+                      title={
+                        label.sign ? `${label.sign} ${label.text}` : label.text
+                      }
                     >
-                      {label.sign && `${label.sign} `}
-                      <span id={branchId(placed.id)}>{label.text}</span>
-                    </div>
+                      <div
+                        className={classNames(styles.branch, {
+                          [styles.pathBranch]: reachedIds.has(placed.id),
+                          [styles.nextBranch]: placed.id === nextId,
+                        })}
+                      >
+                        {label.sign && `${label.sign} `}
+                        <span id={branchId(placed.id)}>{label.text}</span>
+                      </div>
+                    </FullTextTooltip>
                   )}
                   <div
-                    title={text}
                     className={classNames(styles.node, kind, {
                       [styles.pathNode]: reachedIds.has(placed.id),
                     })}
@@ -357,18 +375,29 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                         style={leafColorStyle(placed.answerIndex)}
                       />
                     )}
-                    <span id={textId(placed.id)} className={styles.nodeText}>
-                      {placed.node.type === 'question' ? (
-                        <>
-                          <span id={columnId(placed.id)}>
-                            {columnText(placed.node)}
-                          </span>
-                          ?
-                        </>
-                      ) : (
-                        text
-                      )}
-                    </span>
+                    <FullTextTooltip
+                      title={text}
+                      focused={focusVisible}
+                      placement="bottom"
+                    >
+                      <Typography
+                        id={textId(placed.id)}
+                        variant="body3"
+                        component="span"
+                        className={styles.nodeText}
+                      >
+                        {placed.node.type === 'question' ? (
+                          <>
+                            <span id={columnId(placed.id)}>
+                              {columnText(placed.node)}
+                            </span>
+                            ?
+                          </>
+                        ) : (
+                          text
+                        )}
+                      </Typography>
+                    </FullTextTooltip>
                   </div>
                 </div>
               );
