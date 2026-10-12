@@ -107,7 +107,13 @@ import {
 import {sceneMetadataFor} from '../sceneThumbnails';
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
-import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
+import {
+  RuntimeAnimationList,
+  SceneType,
+  SpriteLab2LevelProperties,
+  Scene,
+  Sources,
+} from '../types';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
@@ -1038,6 +1044,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // --- External scenes (cross-project jumps) ---
   const externalProjectsRef = useRef(new Map<string, ExternalProject>());
+  // One preload list per fetched project; the engine tells projects apart
+  // by the list's identity.
+  const externalPreloadListsRef = useRef(
+    new WeakMap<ExternalProject, RuntimeAnimationList>()
+  );
   // The external project whose scene is currently running; its own go-to-scene
   // blocks resolve against this.
   const currentExternalProjectRef = useRef<ExternalProject | null>(null);
@@ -1117,16 +1128,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       });
       // Preload the external project's images. Their saved animations carry
       // sourceUrl (dataURI is stripped on save); p5.loadImage takes URLs too.
-      const theirs = project.animations;
-      engine.preloadAnimationsOverride = {
-        orderedKeys: theirs.orderedKeys || [],
-        propsByKey: Object.fromEntries(
-          Object.entries(theirs.propsByKey || {}).map(([key, props]) => [
-            key,
-            {...props, dataURI: props.sourceUrl},
-          ])
-        ),
-      };
+      let preloadList = externalPreloadListsRef.current.get(project);
+      if (!preloadList) {
+        const theirs = project.animations;
+        preloadList = {
+          orderedKeys: theirs.orderedKeys || [],
+          propsByKey: Object.fromEntries(
+            Object.entries(theirs.propsByKey || {}).map(([key, props]) => [
+              key,
+              {...props, dataURI: props.sourceUrl},
+            ])
+          ),
+        };
+        externalPreloadListsRef.current.set(project, preloadList);
+      }
+      engine.preloadAnimationsOverride = preloadList;
       dispatch(setIsRunning(true));
       engine.runProgram(program, referencedImages, scene.type);
       setPlayingPlatformer(engine.isPlatformScene());
