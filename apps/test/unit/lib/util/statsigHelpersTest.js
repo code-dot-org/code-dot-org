@@ -4,6 +4,7 @@ import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 import {
   findOrCreateStableId,
   formatUserId,
+  isValidStableId,
 } from '@cdo/apps/metrics/statsigHelpers';
 import * as utils from '@cdo/apps/utils';
 import {StatsigStableIdKey} from '@cdo/generated-scripts/sharedConstants';
@@ -12,6 +13,43 @@ import {api_statsig_stable_id_url} from '@cdo/generated-scripts/studioRoutes';
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('statsigHelpers', () => {
+  describe('isValidStableId', () => {
+    const uuid = '37fdc3bf-8392-45d2-8810-7ea304d2d9c9';
+
+    it('accepts generated UUID v4 values', () => {
+      expect(isValidStableId(utils.createUuid())).to.be.true;
+    });
+
+    [uuid, uuid.toUpperCase(), '37fdc3bf-8392-45d2-0810-7ea304d2d9c9'].forEach(
+      value => {
+        it(`accepts ${value}`, () => {
+          expect(isValidStableId(value)).to.be.true;
+        });
+      }
+    );
+
+    [
+      undefined,
+      null,
+      123,
+      {},
+      [uuid],
+      '',
+      '<html>blocked</html>',
+      '37fdc3bf-8392-15d2-8810-7ea304d2d9c9',
+      'g7fdc3bf-8392-45d2-8810-7ea304d2d9c9',
+      `${uuid}\n`,
+      `\n${uuid}`,
+      `${uuid}\r\n`,
+      ` ${uuid} `,
+      `${uuid}extra`,
+    ].forEach(value => {
+      it(`rejects ${JSON.stringify(value)}`, () => {
+        expect(isValidStableId(value)).to.be.false;
+      });
+    });
+  });
+
   describe('findOrCreateStableId', () => {
     const nativeRandomUUID = window.crypto.randomUUID;
     const nativeTimeout = AbortSignal.timeout;
@@ -25,6 +63,15 @@ describe('statsigHelpers', () => {
     let createUuidStub;
     let consoleErrorStub;
     const generatedStableId = 'a82143d8-82d7-4342-a9cb-d4f69563231a';
+    const serverStableId = '0b26deae-cf8e-4af3-8b03-4534de3b781f';
+    const invalidStableIds = [
+      ['short HTML', '<html>blocked</html>'],
+      ['large HTML', `<!DOCTYPE html><html>${'blocked'.repeat(1000)}</html>`],
+      ['plain text', 'blocked'],
+      ['a non-v4 UUID', '0b26deae-cf8e-1af3-8b03-4534de3b781f'],
+      ['a trailing newline', `${serverStableId}\n`],
+      ['surrounding spaces', ` ${serverStableId} `],
+    ];
 
     beforeAll(() => {
       if (!nativeTimeout) {
@@ -135,6 +182,58 @@ describe('statsigHelpers', () => {
       expect(consoleErrorStub).not.to.have.been.called;
     });
 
+    invalidStableIds.forEach(([description, invalidId]) => {
+      it(`generates an ID when a successful response contains ${description}`, async () => {
+        response.text.resolves(invalidId);
+
+        expect(await findOrCreateStableId()).to.equal(generatedStableId);
+        expectCookieSet(generatedStableId);
+        expect(setCookieStub).to.have.been.calledOnce;
+        expect(createUuidStub).to.have.been.calledOnce;
+      });
+
+      it(`replaces a cookie containing ${description} with the server ID`, async () => {
+        getCookieStub.returns(invalidId);
+        response.text.resolves(serverStableId);
+
+        expect(await findOrCreateStableId()).to.equal(serverStableId);
+        expect(getStub).to.have.been.calledOnce;
+        expectCookieSet(serverStableId);
+        expect(createUuidStub).not.to.have.been.called;
+      });
+    });
+
+    it('replaces an invalid cookie when the server also returns HTML', async () => {
+      getCookieStub.returns('<html>blocked</html>');
+      response.text.resolves('<!DOCTYPE html><html>blocked</html>');
+
+      expect(await findOrCreateStableId()).to.equal(generatedStableId);
+      expectCookieSet(generatedStableId);
+      getCookieStub.returns(generatedStableId);
+
+      expect(await findOrCreateStableId()).to.equal(generatedStableId);
+      expect(getStub).to.have.been.calledOnce;
+      expect(createUuidStub).to.have.been.calledOnce;
+    });
+
+    it('replaces an invalid cookie when the request fails', async () => {
+      getCookieStub.returns('<html>blocked</html>');
+      getStub.rejects(new Error('Request failed'));
+
+      expect(await findOrCreateStableId()).to.equal(generatedStableId);
+      expectCookieSet(generatedStableId);
+      expect(createUuidStub).to.have.been.calledOnce;
+    });
+
+    it('accepts uppercase IDs and unrestricted variants like the backend', async () => {
+      const stableId = '0B26DEAE-CF8E-4AF3-0B03-4534DE3B781F';
+      response.text.resolves(stableId);
+
+      expect(await findOrCreateStableId()).to.equal(stableId);
+      expectCookieSet(stableId);
+      expect(createUuidStub).not.to.have.been.called;
+    });
+
     it('generates an ID when the request fails', async () => {
       const error = new Error('Request failed');
       getStub.rejects(error);
@@ -201,20 +300,20 @@ describe('statsigHelpers', () => {
           resolveRequest = resolve;
         })
       );
-      response.text.resolves('server-id');
+      response.text.resolves(serverStableId);
 
       const pending = findOrCreateStableId();
       expect(getStub).to.have.been.calledOnce;
       expect(setCookieStub).not.to.have.been.called;
       resolveRequest(response);
 
-      expect(await pending).to.equal('server-id');
+      expect(await pending).to.equal(serverStableId);
       expect(setCookieStub).to.have.been.calledOnce;
-      expectCookieSet('server-id');
+      expectCookieSet(serverStableId);
     });
 
     it('uses the saved cookie without another request', async () => {
-      response.text.resolves('server-id');
+      response.text.resolves(serverStableId);
       const stableId = await findOrCreateStableId();
       getCookieStub.returns(stableId);
       expect(await findOrCreateStableId()).to.equal(stableId);
@@ -222,9 +321,9 @@ describe('statsigHelpers', () => {
     });
 
     it('fetches again when there is no saved cookie', async () => {
-      response.text.resolves('server-id');
-      expect(await findOrCreateStableId()).to.equal('server-id');
-      expect(await findOrCreateStableId()).to.equal('server-id');
+      response.text.resolves(serverStableId);
+      expect(await findOrCreateStableId()).to.equal(serverStableId);
+      expect(await findOrCreateStableId()).to.equal(serverStableId);
       expect(getStub).to.have.been.calledTwice;
     });
 

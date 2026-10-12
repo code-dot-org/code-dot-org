@@ -6,8 +6,10 @@ import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
-import type {RootState} from './redux';
+import type {RootState, TrainingResults} from './redux';
 import {
+  getTrainingResults,
+  restoreTrainingResults,
   setFeatureNumberKey,
   setTrainingExamples,
   setTrainingLabels,
@@ -17,7 +19,7 @@ import {
 import {getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
 import type {Trainer} from './trainers/types';
-import type {DataRow} from './types';
+import type {DataRow, TrainedModel} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -133,34 +135,50 @@ const prepareTestData = (store: Store<RootState>): number[] => {
   return testValues;
 };
 
-const trainingState: {trainer?: Trainer; store?: Store<RootState>} = {};
+const trainingState: {
+  trainer?: Trainer;
+  store?: Store<RootState>;
+  previousResults?: TrainingResults;
+} = {};
 const init = (store: Store<RootState>): void => {
+  trainingState.previousResults = getTrainingResults(store.getState());
   trainingState.store = store;
   trainingState.trainer = buildTrainer(store);
   buildOptionNumberKeysByFeature(store);
   prepareTrainingData(store);
 };
 
-const onClickTrain = (): void => {
-  trainingState.trainer?.startTraining();
+const onClickTrain = (): TrainedModel | undefined => {
+  return trainingState.trainer?.startTraining();
 };
 
-const onClickPredict = (): void => {
+const onClickPredict = (trainedModel: TrainedModel | undefined): void => {
   const {trainer, store} = trainingState;
   if (trainer && store) {
-    trainer.predict(prepareTestData(store));
+    trainer.predict(trainedModel, prepareTestData(store));
   }
+};
+
+// Put back what the store held before the latest init().
+const cancel = (): void => {
+  const {store, previousResults} = trainingState;
+  if (store && previousResults) {
+    store.dispatch(restoreTrainingResults(previousResults));
+  }
+  trainingState.previousResults = undefined;
 };
 
 // Discard the trainer held from a prior level/model.
 const reset = (): void => {
   trainingState.trainer = undefined;
   trainingState.store = undefined;
+  trainingState.previousResults = undefined;
 };
 
 export default {
   init,
   onClickTrain,
   onClickPredict,
+  cancel,
   reset,
 };

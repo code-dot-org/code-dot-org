@@ -1,3 +1,5 @@
+@use '../sharedMixins' as mixins;
+
 .table {
   // Half-opacity fills, so a chosen column is lighter than its row hover state.
   --body-cell-hover: color-mix(
@@ -26,7 +28,7 @@
 .header,
 .indexCell,
 .bodyCell {
-  height: 28px;
+  height: mixins.$data-table-row-height;
   box-sizing: border-box;
   padding: 0 10px;
   border-style: solid;

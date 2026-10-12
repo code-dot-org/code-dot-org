@@ -211,7 +211,11 @@ describe('useQuizBuilderQuestions', () => {
       expect(putSpy).not.toHaveBeenCalled();
       expect(postSpy).toHaveBeenCalledWith(
         '/levels/42/quiz_question_placements',
-        JSON.stringify({...PAYLOAD, page: 1}),
+        JSON.stringify({
+          ...PAYLOAD,
+          type: 'MultipleChoiceQuestion',
+          page: 1,
+        }),
         true,
         {'Content-Type': 'application/json'}
       );
@@ -239,7 +243,11 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         '/levels/42/quiz_question_placements',
-        JSON.stringify({...PAYLOAD, page: 2}),
+        JSON.stringify({
+          ...PAYLOAD,
+          type: 'MultipleChoiceQuestion',
+          page: 2,
+        }),
         true,
         {'Content-Type': 'application/json'}
       );

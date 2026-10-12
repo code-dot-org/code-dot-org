@@ -1,6 +1,6 @@
 /*
   The training flow shared by every trainer: sweep a list of candidate
-  hyperparameters, keep the model that grades best, and store it.
+  hyperparameters, keep the model that grades best, and return it.
 
   A subclass supplies only what differs between algorithms — which candidates
   to try, how to build a model from one, and how to name it for the saved
@@ -11,6 +11,7 @@ import type {Store} from 'redux';
 
 import {
   gradeAccuracy,
+  getCorrectCount,
   getGradeOptions,
   getPercentCorrect,
 } from '../helpers/accuracy';
@@ -18,7 +19,6 @@ import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
 import {
   setHyperparameters,
-  setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels,
   setHistoricResult,
@@ -49,22 +49,24 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  startTraining(): void {
+  startTraining(): TrainedModel | undefined {
     const state = this.store.getState();
 
     const optimalModel = this.getOptimalModelDetails(state);
 
     if (!optimalModel) {
-      return;
+      return undefined;
     }
 
-    this.storeTrainedModel(optimalModel);
+    this.storeTrainingResults(optimalModel);
 
     const trainedState = this.store.getState();
 
     logMetric('train-model', trainedState);
 
     this.storeHistoricResult(trainedState);
+
+    return optimalModel.model;
   }
 
   getOptimalModelDetails(
@@ -107,9 +109,10 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     return rows.length > 0 ? model.predict(rows) : [];
   }
 
-  batchPredict(accuracyCheckExamples: number[][]): (number | string)[] {
-    const {trainedModel} = this.store.getState();
-
+  batchPredict(
+    trainedModel: TrainedModel | undefined,
+    accuracyCheckExamples: number[][],
+  ): (number | string)[] {
     if (!trainedModel) {
       return [];
     }
@@ -122,29 +125,33 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     return predictedLabels;
   }
 
-  predict(testValues: number[]): void {
-    const state = this.store.getState();
-
-    if (state.trainedModel) {
-      const predictions = state.trainedModel.predict([testValues]);
+  predict(trainedModel: TrainedModel | undefined, testValues: number[]): void {
+    if (trainedModel) {
+      const predictions = trainedModel.predict([testValues]);
       this.store.dispatch(setPrediction(predictions[0], testValues));
     }
   }
 
-  storeTrainedModel(optimalModel: OptimalModelDetails<Candidate>): void {
+  storeTrainingResults(optimalModel: OptimalModelDetails<Candidate>): void {
     this.store.dispatch(
       setHyperparameters(this.hyperparameters(optimalModel.candidate)),
     );
     this.store.dispatch(
       setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
     );
-    this.store.dispatch(setTrainedModel(optimalModel.model));
   }
 
   storeHistoricResult(state: RootState): void {
     const accuracy = getPercentCorrect(state);
+    const {correct, total} = getCorrectCount(state);
     this.store.dispatch(
-      setHistoricResult(state.labelColumn!, state.selectedFeatures, accuracy),
+      setHistoricResult(
+        state.labelColumn!,
+        state.selectedFeatures,
+        accuracy,
+        correct,
+        total,
+      ),
     );
   }
 }

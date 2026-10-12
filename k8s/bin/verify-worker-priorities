@@ -24,13 +24,24 @@ def helm(values = {})
   Open3.capture3('helm', 'template', 'cdo', File.join(K8S_ROOT, 'helm'), '--set', 'RAILS_ENV=adhoc', *args)
 end
 
-# Locate the worker container in the multi-resource Helm output.
-def worker_container(manifest)
-  worker = YAML.load_stream(manifest).find do |doc|
+# Locate the worker Deployment in the multi-resource Helm output.
+def worker_deployment(manifest)
+  YAML.load_stream(manifest).find do |doc|
     doc && doc['kind'] == 'Deployment' &&
       doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'active-job-worker'
   end
-  worker&.dig('spec', 'template', 'spec', 'containers')&.find {|container| container['name'] == 'active-job-worker'}
+end
+
+# Locate the worker container in the multi-resource Helm output.
+def worker_container(manifest)
+  worker_deployment(manifest)&.dig('spec', 'template', 'spec', 'containers')&.find {|container| container['name'] == 'active-job-worker'}
+end
+
+# Read the worker pod's grace period after a successful Helm render.
+def render_grace_period(values = {})
+  manifest, stderr, status = helm(values)
+  check(status.success?, stderr)
+  worker_deployment(manifest)&.dig('spec', 'template', 'spec', 'terminationGracePeriodSeconds')
 end
 
 # Require a successful Helm render with a worker container for positive cases.
@@ -76,6 +87,10 @@ check(render_worker(custom).slice('command', 'args') == custom, 'both mode lost 
     check_rejected({'priorityMode' => mode, key => value}, 'require priorityMode: both')
   end
 end
+check(render_grace_period == 60, 'default terminationGracePeriodSeconds is not 60')
+check(render_grace_period('terminationGracePeriodSeconds' => 2100) == 2100, 'terminationGracePeriodSeconds override not rendered')
+check_rejected({'terminationGracePeriodSeconds' => 'soon'}, 'terminationGracePeriodSeconds')
+check_rejected({'terminationGracePeriodSeconds' => -1}, 'terminationGracePeriodSeconds')
 manifest, stderr, status = helm('enabled' => false)
 check(status.success? && worker_container(manifest).nil?, "disabled worker rendered: #{stderr}")
 puts 'Worker priority modes, command execution, and validation passed.'

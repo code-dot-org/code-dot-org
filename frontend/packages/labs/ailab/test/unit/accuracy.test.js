@@ -6,6 +6,7 @@ import {
   gradeAccuracy,
   getGradeOptions,
   getAccuracyGrades,
+  getCorrectCount,
   getResultsByGrade,
   getPercentCorrect,
   getResultsDataInDataTableForm,
@@ -187,6 +188,23 @@ describe('get percent correct', () => {
   test('regression', async () => {
     const percentCorrect = getPercentCorrect(regressionState);
     expect(percentCorrect).toEqual(regressionPercent);
+  });
+});
+
+describe('getCorrectCount', () => {
+  test('classification', () => {
+    const state = {
+      ...classificationState,
+      accuracyCheckPredictedLabels: mostlyAccurateResults,
+    };
+    expect(getCorrectCount(state)).toEqual({
+      correct: 5,
+      total: 6,
+    });
+  });
+
+  test('regression', () => {
+    expect(getCorrectCount(regressionState)).toEqual({correct: 4, total: 6});
   });
 });
 

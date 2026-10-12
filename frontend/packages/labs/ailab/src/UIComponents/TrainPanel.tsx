@@ -8,20 +8,24 @@ import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxD
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {
   addSelectedFeature,
   readyToTrain,
   removeSelectedFeature,
   setLabelColumn,
+  setSelectedFeatures,
   setTrainingModalStep,
 } from '../redux';
 import {getSelectableColumns} from '../selectors';
 import {store} from '../store';
 import train from '../train';
+import {useTrainingData} from '../TrainingDataContext';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
+import TrainingResultCard from './TrainingResultCard';
 
 import styles from './trainPanel.module.scss';
 
@@ -33,6 +37,8 @@ const TrainPanel = () => {
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const canTrain = useAppSelector(readyToTrain);
+  const hasTrainingResult = useAppSelector(hasCurrentTrainingResult);
+  const {setTrainedModel, snapshotTrainedModel} = useTrainingData();
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -60,9 +66,18 @@ const TrainPanel = () => {
     );
   };
 
+  const onSelectAllFeatures = () => {
+    dispatch(setSelectedFeatures(featureOptions.map(option => option.value)));
+  };
+
+  const onRemoveAllFeatures = () => {
+    dispatch(setSelectedFeatures([]));
+  };
+
   const onTrain = () => {
+    snapshotTrainedModel();
     train.init(store);
-    train.onClickTrain();
+    setTrainedModel(train.onClickTrain());
     dispatch(setTrainingModalStep('training'));
   };
 
@@ -115,7 +130,11 @@ const TrainPanel = () => {
                   allOptions={featureOptions}
                   checkedOptions={selectedFeatures}
                   onChange={onFeatureChange}
-                  hideControls
+                  doneText="Done"
+                  selectAllText="Select All"
+                  clearAllText="Clear"
+                  onClearAll={onRemoveAllFeatures}
+                  onSelectAll={onSelectAllFeatures}
                 />
               </DropdownProviderWrapper>
             </div>
@@ -125,19 +144,22 @@ const TrainPanel = () => {
             features={selectedFeatures}
             className={styles.sentence}
           />
-          <div className={styles.actionRow}>
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              fullWidth
-              disabled={!canTrain}
-              onClick={onTrain}
-            >
-              Train model
-            </Button>
-          </div>
+          {!hasTrainingResult && (
+            <div className={styles.actionRow}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="small"
+                fullWidth
+                disabled={!canTrain}
+                onClick={onTrain}
+              >
+                Train model
+              </Button>
+            </div>
+          )}
         </div>
+        <TrainingResultCard />
       </div>
     </div>
   );

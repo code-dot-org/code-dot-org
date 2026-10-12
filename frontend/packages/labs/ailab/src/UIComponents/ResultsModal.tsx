@@ -1,5 +1,5 @@
 import {Button, Typography} from '@mui/material';
-import {useEffect, useId} from 'react';
+import {useEffect, useId, useRef} from 'react';
 
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
@@ -12,8 +12,6 @@ import styles from './resultsModal.module.scss';
 
 export type ResultsModalTab = 'scorecard' | 'allResults';
 
-const TABS_ID = 'ailab-results-tabs';
-
 interface ResultsModalProps {
   initialTab: ResultsModalTab;
   onClose: () => void;
@@ -21,12 +19,13 @@ interface ResultsModalProps {
 
 const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
   const titleId = useId();
+  const titleRowRef = useRef<HTMLDivElement>(null);
 
   // MuiCustomDialog has already focused the first tab, selected or not.
   useEffect(() => {
-    document
-      .getElementById(TABS_ID)
-      ?.querySelector<HTMLElement>('[aria-selected="true"]')
+    titleRowRef.current
+      ?.closest('[role="dialog"]')
+      ?.querySelector<HTMLElement>('[role="tab"][aria-selected="true"]')
       ?.focus();
   }, []);
 
@@ -37,7 +36,7 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
       className={styles.dialog}
       onClose={onClose}
     >
-      <div className={styles.titleRow}>
+      <div ref={titleRowRef} className={styles.titleRow}>
         <Typography id={titleId} variant="h3" component="h2">
           Results
         </Typography>
@@ -51,7 +50,6 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
         type="secondary"
         defaultSelectedTabValue={initialTab}
         onChange={() => {}}
-        tabsContainerId={TABS_ID}
         tabsContainerClassName={styles.tabRow}
         tabPanelsContainerClassName={styles.panels}
         tabs={[
