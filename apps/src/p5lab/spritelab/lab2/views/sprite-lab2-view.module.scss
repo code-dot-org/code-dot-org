@@ -932,10 +932,11 @@ $editor-strip-height: 46px;
   border-left: 1px solid var(--borders-neutral-primary);
 }
 
-// ?preview=left: the column at the lab's left, its edge on the other side.
+// ?preview=left: the column at the lab's left, with no tint or edge of
+// its own: the workspace's ground continues under the two cards.
 .previewColumnLeft {
+  background: transparent;
   border-left: none;
-  border-right: 1px solid var(--borders-neutral-primary);
 }
 
 // The preview's card: a rounded panel behind the box and its bar, one of
@@ -1048,10 +1049,10 @@ $editor-strip-height: 46px;
   border: 1px solid var(--borders-neutral-primary);
 }
 
-// ?preview=left: the two cards on the workspace's own dark ground.
-// Declared after both cards, so it wins on the same specificity.
-.previewCardOnLeft {
-  background: var(--background-neutral-primary);
+// The measured wrapper: its own formatting context, so a child's margin
+// cannot collapse through it and escape the measurement.
+.previewBelowContent {
+  display: flow-root;
 }
 
 // The guide's body, in place rather than floating.
