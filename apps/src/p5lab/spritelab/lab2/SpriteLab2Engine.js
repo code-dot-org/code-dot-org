@@ -206,26 +206,25 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.drawPaused_ = false;
     // The weather and the bursts in flight, drawn inside the paint.
     this.particles_ = new ParticleLayer();
-    // Where the player stood as its jump was detected, set by the player
-    // action tracking where the engine has it; a burst from the player in
-    // the frames after starts there, not partway up the jump.
-    this.jumpStart_ = null;
+    // Where each player stood as its last jump impulse was applied, used by
+    // a burst while the jump event's handlers run (see burstParticles).
+    this.jumpStarts_ = null;
+    this.jumpEventFiring_ = false;
   }
 
-  /** The burst block: particles from each sprite the argument names; the
-      player, just after a jump, from where it stood (see jumpStart_). */
+  /** The burst block: particles from each sprite the argument names. While
+      the jump event's handlers run, a player bursts from where it took off:
+      the event fires after the impulse has moved it. */
   burstParticles(count, look, spriteArg) {
     const view = this.particleView_();
     if (view) {
-      const p5 = this.p5Wrapper.p5;
       this.particles_.burst(
-        p5,
+        this.p5Wrapper.p5,
         look,
         count,
         burstBoxes(
           this.library.getSpriteArray(spriteArg),
-          this.jumpStart_,
-          p5.frameCount
+          this.jumpEventFiring_ ? this.jumpStarts_ : null
         ),
         view
       );
@@ -503,7 +502,12 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
+      this.jumpStarts_ = new Map();
       library.getSpriteArray({group: 'players'}).forEach(sprite => {
+        this.jumpStarts_.set(sprite, {
+          x: sprite.position.x,
+          y: sprite.position.y,
+        });
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
@@ -1120,6 +1124,12 @@ export default class SpriteLab2Engine extends SpriteLab {
   // after p5's pre-phase velocity integration and after this frame's
   // behaviors/events have moved sprites.
   resolvePlatformPhysics_() {
+    // The jump event's handlers ran before this pass; the take-off spot
+    // has served its burst.
+    if (this.jumpEventFiring_) {
+      this.jumpEventFiring_ = false;
+      this.jumpStarts_ = null;
+    }
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
