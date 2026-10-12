@@ -1,4 +1,5 @@
 import * as BlocklyCore from 'blockly/core';
+import classNames from 'classnames';
 import React, {
   useCallback,
   useEffect,
@@ -51,14 +52,18 @@ const PREVIEW_WIDTH_SHARE = 1 / 3;
 const COLUMN_MIN_PX = 320;
 // The instructions are always whole: the box gives up height to them
 // first, and once it would go under this side the column widens instead,
-// a step at a time up to this share, so the text reflows shorter.
-const PREVIEW_MIN_PX = 240;
-const PREVIEW_WIDTH_MAX_SHARE = 1 / 2;
-const WIDEN_STEP_PX = 48;
+// up to this share, and the instructions move beside the box, where the
+// width buys the box height; their card keeps at least this width.
+const PREVIEW_MIN_PX = 200;
+const PREVIEW_WIDTH_MAX_SHARE = 0.45;
+const BESIDE_TEXT_MIN_PX = 280;
 // The least height of the instructions' card under the bar, with nothing
 // measured yet: a student can read with a small preview, not with no text.
 const BELOW_MIN_PX = 150;
 const CARD_BORDER_PX = 1;
+// Under this overlay height the instructions use the smaller type that the
+// blocks and the header already use.
+const COMPACT_BELOW_PX = 560;
 // The column's two cards, the preview's and the instructions', are inset
 // from the column's edges and from each other by this much, and the
 // preview card pads its box by it.
@@ -166,6 +171,8 @@ interface PlayspaceProps {
   // Shown under the bar in preview, in the column's remaining height; the
   // preview shrinks to leave it at least BELOW_MIN_PX.
   below?: React.ReactNode;
+  /** Which edge the preview column sits at; the code keeps the rest. */
+  side?: 'left' | 'right';
   // How much of the width the preview's column takes, so the code can keep
   // the rest.
   onPreviewWidth?: (width: number) => void;
@@ -191,6 +198,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   controls,
   playBar,
   below,
+  side = 'right',
   onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
@@ -200,33 +208,23 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
   // The height the docked instructions need, measured from their content
-  // (the card scrolls, so the content keeps its natural height), and the
-  // width added to the column so far to make them fit.
-  const [belowNeed, setBelowNeed] = useState({height: 0, width: 0});
-  const [widen, setWiden] = useState(0);
+  // (the card scrolls, so the content keeps its natural height).
+  const [belowNeed, setBelowNeed] = useState(0);
   const belowObserver = useRef<ResizeObserver | null>(null);
   const belowContentRef = useCallback((el: HTMLDivElement | null) => {
     belowObserver.current?.disconnect();
     belowObserver.current = null;
     if (!el || typeof ResizeObserver === 'undefined') {
-      setBelowNeed({height: 0, width: 0});
+      setBelowNeed(0);
       return;
     }
     const observer = new ResizeObserver(entries => {
-      // The card's width, not the content's: a scrollbar narrows the content.
-      setBelowNeed({
-        height: Math.ceil(entries[0].contentRect.height),
-        width: el.parentElement?.getBoundingClientRect().width ?? 0,
-      });
+      setBelowNeed(Math.ceil(entries[0].contentRect.height));
     });
     observer.observe(el);
     belowObserver.current = observer;
   }, []);
   useEffect(() => () => belowObserver.current?.disconnect(), []);
-  // Widening only ever grows between resizes, so it cannot chase itself.
-  useEffect(() => {
-    setWiden(0);
-  }, [size.w, size.h]);
 
   const dispatch = useAppDispatch();
   // The location-picker block puts us in "selecting" mode; while active, the
@@ -377,8 +375,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   }, []);
 
   let placement: Placement;
-  // The preview column's width; 0 outside preview.
+  // The preview column's width; 0 outside preview. Beside: the
+  // instructions' card at the box's left instead of under it.
   let columnWidth = 0;
+  let beside = false;
   if (mode === 'play') {
     placement = playPlacement(size, guideSize, playBar ? BAR_ROOM : 0);
   } else {
@@ -413,41 +413,48 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         Math.round(CANVAS * forWidth.scale + 2 * PREVIEW_MARGIN)
       )
     );
-    columnWidth = Math.min(
-      columnWidth + widen,
-      Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE)
-    );
     // Then the box within that column, over the instructions' whole height.
-    const need = Math.max(BELOW_MIN_PX, belowNeed.height + 2 * CARD_BORDER_PX);
+    const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
     const inColumn = playPlacement(
       size,
       below ? null : guideSize,
       belowRoom(need),
       size.w - columnWidth + 2 * CARD_GAP
     );
-    const side = CANVAS * inColumn.scale;
+    let boxWidth = CANVAS * inColumn.scale;
+    const columnLeft = () => (side === 'left' ? 0 : size.w - columnWidth);
     placement = {
       scale: inColumn.scale,
-      x: size.w - columnWidth + (columnWidth - side) / 2,
+      x: columnLeft() + (columnWidth - boxWidth) / 2,
       y: PREVIEW_MARGIN,
     };
-  }
-  // The instructions have pushed the box under its floor: widen the
-  // column a step, once the need has been measured at this width, so the
-  // text reflows before the next step.
-  const canWiden =
-    mode === 'preview' &&
-    !!below &&
-    measured &&
-    CANVAS * placement.scale < PREVIEW_MIN_PX &&
-    columnWidth <
-      Math.round((window.innerWidth || size.w) * PREVIEW_WIDTH_MAX_SHARE) &&
-    Math.abs(belowNeed.width - (columnWidth - 2 * CARD_GAP)) < 1;
-  useEffect(() => {
-    if (canWiden) {
-      setWiden(current => current + WIDEN_STEP_PX);
+    // The instructions have pushed the box under its floor: move them
+    // beside it, in a column up to the larger share, if that gives the
+    // box more. The box then has the height, less its card's gaps, or
+    // what the column leaves after the text's card; its card sits at the
+    // column's right, the text's fills the rest.
+    if (below && boxWidth < PREVIEW_MIN_PX) {
+      const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
+      const besideWidth = Math.min(
+        size.h - 4 * CARD_GAP - (playBar ? BAR_ROOM : 0),
+        maxColumn - BESIDE_TEXT_MIN_PX - 5 * CARD_GAP
+      );
+      if (besideWidth > boxWidth) {
+        beside = true;
+        boxWidth = besideWidth;
+        columnWidth = Math.min(
+          maxColumn,
+          Math.round(boxWidth + BESIDE_TEXT_MIN_PX + 5 * CARD_GAP)
+        );
+        // The box's card at the column's outer edge, the text's inside it.
+        placement = {
+          scale: boxWidth / CANVAS,
+          x: side === 'left' ? 2 * CARD_GAP : size.w - 2 * CARD_GAP - boxWidth,
+          y: PREVIEW_MARGIN,
+        };
+      }
     }
-  }, [canWiden]);
+  }
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
@@ -458,11 +465,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     reportPreviewWidth.current?.(previewWidth);
   }, [previewWidth]);
+  // The preview's card: the column's width when the instructions are
+  // under it, the box's when they are beside it.
+  const previewCardWidth = beside
+    ? boxSide + 2 * CARD_GAP
+    : previewWidth - 2 * CARD_GAP;
+  const columnLeft = side === 'left' ? 0 : size.w - previewWidth;
+  const previewCardLeft =
+    side === 'left' ? CARD_GAP : size.w - CARD_GAP - previewCardWidth;
+  // The text's card: under the preview's, or beside it on its inner side.
+  const belowLeft =
+    beside && side === 'left'
+      ? previewCardLeft + previewCardWidth + CARD_GAP
+      : columnLeft + CARD_GAP;
   // Under the box, unscaled: at the box's width, or in the preview at its
   // card's, so a box shrunk for the instructions never wraps the buttons.
-  const barLeft = previewWidth > 0 ? size.w - previewWidth + CARD_GAP : x;
-  const barWidth = previewWidth > 0 ? previewWidth - 2 * CARD_GAP : boxSide;
+  const barLeft = previewWidth > 0 ? previewCardLeft : x;
+  const barWidth = previewWidth > 0 ? previewCardWidth : boxSide;
   const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
+  const compact = size.h < COMPACT_BELOW_PX;
   const visible = measured && mode !== 'hidden';
   // The bar does not ride the slide: it waits, unseen, at its destination
   // and fades in once the box has arrived. Before paint, so the jump is
@@ -494,17 +515,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     >
       {previewWidth > 0 && (
         <div
-          className={moduleStyles.previewColumn}
-          style={{width: previewWidth}}
+          className={classNames(
+            moduleStyles.previewColumn,
+            side === 'left' && moduleStyles.previewColumnLeft
+          )}
+          style={{left: columnLeft, width: previewWidth}}
         />
       )}
       {previewWidth > 0 && (
         <div
           className={moduleStyles.previewCard}
           style={{
-            left: size.w - previewWidth + CARD_GAP,
+            left: previewCardLeft,
             top: y - CARD_GAP,
-            width: previewWidth - 2 * CARD_GAP,
+            width: previewCardWidth,
             height: boxSide + (playBar ? BAR_ROOM : 0) + 2 * CARD_GAP,
           }}
         />
@@ -639,13 +663,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {below && mode === 'preview' && visible && (
         <div
-          className={moduleStyles.previewBelow}
-          style={{
-            left: size.w - previewWidth + CARD_GAP,
-            top: y + boxSide + BAR_ROOM + 2 * CARD_GAP,
-            width: previewWidth - 2 * CARD_GAP,
-            bottom: CARD_GAP,
-          }}
+          className={classNames(
+            moduleStyles.previewBelow,
+            compact && moduleStyles.previewBelowCompact
+          )}
+          style={
+            beside
+              ? {
+                  left: belowLeft,
+                  top: CARD_GAP,
+                  width: previewWidth - 3 * CARD_GAP - previewCardWidth,
+                  bottom: CARD_GAP,
+                }
+              : {
+                  left: belowLeft,
+                  top: y + boxSide + BAR_ROOM + 2 * CARD_GAP,
+                  width: previewWidth - 2 * CARD_GAP,
+                  bottom: CARD_GAP,
+                }
+          }
         >
           <div ref={belowContentRef}>{below}</div>
         </div>

@@ -927,10 +927,15 @@ $editor-strip-height: 46px;
 .previewColumn {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   background: var(--background-neutral-secondary);
   border-left: 1px solid var(--borders-neutral-primary);
+}
+
+// ?preview=left: the column at the lab's left, its edge on the other side.
+.previewColumnLeft {
+  border-left: none;
+  border-right: 1px solid var(--borders-neutral-primary);
 }
 
 // The preview's card: a rounded panel behind the box and its bar, one of
@@ -1050,6 +1055,18 @@ $editor-strip-height: 46px;
   color: var(--text-neutral-primary);
   font-size: 15px;
   line-height: 1.5;
+}
+
+// Short windows: the type the blocks and the header already use, so the
+// instructions take less of the column's height; the padding shrinks with it.
+.previewBelowCompact .guideDocked {
+  padding: 12px 16px;
+  font-size: 13px;
+
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
 }
 
 // The start scene's mark, when there is more than one scene.

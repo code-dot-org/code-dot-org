@@ -176,6 +176,8 @@ const EDITOR_FLOAT_ROOM_PX = 58;
 // The floating switch's gap from the preview column at the workspace's
 // right: room for the workspace's vertical scrollbar beside it.
 const EDITOR_FLOAT_RIGHT_GAP_PX = 28;
+// The floating switch's own offset from the pane's left (its stylesheet's).
+const EDITOR_FLOAT_LEFT_PX = 8;
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -522,6 +524,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       : 'tab';
   }, []);
   const editorsInStrip = editorsPlacement !== 'tab';
+  // ?preview=left: the preview column at the lab's left, before the
+  // toolbox, instead of at its right.
+  const previewSide = useMemo<'left' | 'right'>(
+    () => (queryParams('preview') === 'left' ? 'left' : 'right'),
+    []
+  );
+  // The room the editors keep clear of the column, on its side.
+  const clearOfPreview =
+    previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
   const editorStrip = editorChoice && editorsPlacement === 'strip';
   const editorFloat = editorChoice && editorsPlacement === 'float';
   // ?editors=floatright: the same pill at the workspace's top-right, where
@@ -2075,10 +2086,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         >
           {WorkspaceAlert}
           {editorStrip && (
-            <div
-              className={moduleStyles.editorStrip}
-              style={{right: previewWidth}}
-            >
+            <div className={moduleStyles.editorStrip} style={clearOfPreview}>
               <EditorSwitch
                 value={activeTab === 'World' ? 'World' : 'Code'}
                 onChange={handleEditorChange}
@@ -2093,8 +2101,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   editorFloatRight
                     ? {
                         left: 'auto',
-                        right: previewWidth + EDITOR_FLOAT_RIGHT_GAP_PX,
+                        right:
+                          (previewSide === 'right' ? previewWidth : 0) +
+                          EDITOR_FLOAT_RIGHT_GAP_PX,
                       }
+                    : previewSide === 'left'
+                    ? {left: previewWidth + EDITOR_FLOAT_LEFT_PX}
                     : undefined
                 }
               >
@@ -2114,7 +2126,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
               pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
               // The code keeps clear of the preview's column.
-              right: previewWidth,
+              ...clearOfPreview,
             }}
           >
             {animationsSeeded && (
@@ -2186,7 +2198,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
                 pointerEvents: activeTab === 'World' ? 'auto' : 'none',
-                right: previewWidth,
+                ...clearOfPreview,
               }}
             >
               <WorldTab
@@ -2217,6 +2229,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             platformScene={playingPlatformer}
             mode={playspaceMode}
             onPreviewWidth={setPreviewWidth}
+            side={previewSide}
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no
