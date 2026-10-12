@@ -975,7 +975,7 @@ $editor-strip-height: 41px;
 .guideContinue {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 // Room for the corner icon on its right; the collapsed panel is otherwise
@@ -1125,7 +1125,7 @@ $editor-strip-height: 41px;
 // The guide's body, in place rather than floating.
 .guideDocked {
   box-sizing: border-box;
-  padding: 16px 24px;
+  padding: 12px 18px;
   color: var(--text-neutral-primary);
   font-size: 14px;
   line-height: 1.5;
@@ -1134,7 +1134,7 @@ $editor-strip-height: 41px;
 // Short windows: the type the blocks and the header already use, so the
 // instructions take less of the column's height; the padding shrinks with it.
 .previewBelowCompact .guideDocked {
-  padding: 12px 16px;
+  padding: 10px 14px;
   font-size: 12px;
 
   p {
