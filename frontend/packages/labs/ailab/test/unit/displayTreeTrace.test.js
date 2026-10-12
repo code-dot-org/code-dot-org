@@ -1,6 +1,9 @@
 import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
-import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
+import {
+  countDisplayTreeRows,
+  traceDisplayTree,
+} from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import {playPredictionStep, setTestData} from '../../src/redux';
 import {
@@ -155,6 +158,37 @@ describe('traceDisplayTree', () => {
       path: ['0'],
       steps: [],
       prediction: 'Mammal',
+    });
+  });
+});
+
+describe('countDisplayTreeRows', () => {
+  const leaf = {distribution: [[1]]};
+  const model = {
+    splitColumn: 0,
+    splitValue: 0.5,
+    left: leaf,
+    right: {splitColumn: 0, splitValue: 1.5, left: leaf, right: leaf},
+  };
+  const tree = buildDisplayTree(
+    {name: 'DTClassifier', root: model},
+    {features: ['x'], featureNumberKey: {}, labelColumn: 'y'},
+  );
+
+  test('counts each row at every node on its path, by its grade', () => {
+    const counts = countDisplayTreeRows(
+      tree,
+      model,
+      [[0], [1], [2], [3]],
+      ['correct', 'incorrect', 'correct', 'correct'],
+    );
+
+    expect(Object.fromEntries(counts)).toEqual({
+      0: {correct: 3, incorrect: 1},
+      '0.0': {correct: 1, incorrect: 0},
+      0.1: {correct: 2, incorrect: 1},
+      '0.1.0': {correct: 0, incorrect: 1},
+      '0.1.1': {correct: 2, incorrect: 0},
     });
   });
 });

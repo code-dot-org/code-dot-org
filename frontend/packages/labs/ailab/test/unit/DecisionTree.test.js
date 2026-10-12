@@ -1,6 +1,7 @@
 import {act, fireEvent, screen, waitFor} from '@testing-library/react';
 import {createElement} from 'react';
 
+import {getCorrectCount} from '../../src/helpers/accuracy';
 import I18n from '../../src/i18n';
 import {
   playPredictionStep,
@@ -144,7 +145,10 @@ describe('DecisionTree', () => {
 
     expect(marked.length).toBeGreaterThan(1);
     expect(slotPosition(marked[0])[1]).toBe(0);
-    expect(marked[marked.length - 1].textContent).toBe('snake');
+    expect(
+      marked[marked.length - 1].querySelector(`.${moduleStyles.nodeText}`)
+        .textContent,
+    ).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
     expect(marks.parentElement.lastElementChild).toBe(marks);
     expect(pathEdges.every(edge => edge.parentElement === marks)).toBe(true);
@@ -280,7 +284,9 @@ describe('DecisionTree', () => {
     expect(screen.getByRole('tree', {description: keysHint})).toBe(
       screen.getByRole('tree'),
     );
-    expect(screen.getByRole('treeitem', {description: keysHint})).toBe(root);
+    expect(
+      screen.getByRole('treeitem', {description: new RegExp(`^${keysHint}`)}),
+    ).toBe(root);
   });
 
   it("shows each branch's whole text on its pill", () => {
@@ -288,6 +294,60 @@ describe('DecisionTree', () => {
 
     expect(pills.map(pill => pill.textContent)).toContain('< 1');
     expect(pills.map(pill => pill.textContent)).toContain('≥ 1');
+  });
+
+  it('shows and describes how many held-out rows reach a question', () => {
+    const [root] = screen.getAllByRole('treeitem');
+
+    expect(root.querySelector(`.${moduleStyles.counts}`).textContent).toBe(
+      '1 test row',
+    );
+    expect(
+      screen.getAllByRole('treeitem', {description: /\b1 test row$/}),
+    ).toContain(root);
+  });
+
+  it('counts zero test rows on an answer no held-out row reaches', () => {
+    const missed = [...document.getElementsByClassName(moduleStyles.answer)]
+      .map(answer => answer.querySelector(`.${moduleStyles.counts}`))
+      .filter(
+        counts =>
+          !counts.querySelector(
+            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`,
+          ),
+      );
+
+    expect(missed.length).toBeGreaterThan(0);
+    missed.forEach(counts => expect(counts.textContent).toBe('0 test rows'));
+  });
+
+  it('shows and describes how many held-out rows each answer gets right and wrong', () => {
+    const {correct, total} = getCorrectCount(trained.store.getState());
+    const answers = [...document.getElementsByClassName(moduleStyles.answer)];
+    const shown = grade =>
+      answers.reduce(
+        (sum, answer) =>
+          sum +
+          parseInt(
+            answer.querySelector(`.${moduleStyles[grade]}`)?.textContent ?? 0,
+          ),
+        0,
+      );
+    const described = screen.getAllByRole('treeitem', {
+      description: /\d+ (correct|incorrect)/,
+    });
+
+    expect(shown('correct')).toBe(correct);
+    expect(shown('incorrect')).toBe(total - correct);
+    expect(described).toEqual(
+      answers
+        .filter(answer =>
+          answer.querySelector(
+            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`,
+          ),
+        )
+        .map(answer => answer.parentElement),
+    );
   });
 
   describe('with every name cut off', () => {

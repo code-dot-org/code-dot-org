@@ -8,6 +8,10 @@ $focus-ring-width: 2px;
 $focus-ring-gap: 2px;
 $focus-color: var(--border-focused-primary);
 $node-radius: 6px;
+$count-color: var(--text-neutral-tertiary);
+$path-count-color: var(--text-brand-secondary);
+$correct-color: var(--text-success-primary-fixed);
+$incorrect-color: var(--text-error-primary-fixed);
 $branch-height: 22px;
 $canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
@@ -146,7 +150,7 @@ $overlay-float-min-width: 600px;
   min-height: var(--tree-node-height);
   display: flex;
   align-items: center;
-  gap: var(--tree-answer-dot-gap);
+  gap: var(--tree-node-gap);
   padding: 8px var(--tree-node-padding-inline);
   border-width: 1.5px;
   border-style: solid;
@@ -208,6 +212,41 @@ $overlay-float-min-width: 600px;
 .node .nodeText {
   font-weight: var(--font-weight-semi-bold);
   color: inherit;
+}
+
+.counts {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--tree-counts-gap);
+  margin-left: var(--tree-counts-gap);
+}
+
+.node .counts {
+  color: $count-color;
+}
+
+.pathNode .counts {
+  color: $path-count-color;
+}
+
+.correct,
+.incorrect {
+  display: flex;
+  align-items: center;
+  gap: var(--tree-grade-icon-gap);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.gradeIcon {
+  font-size: var(--tree-grade-icon-size);
+}
+
+.correct {
+  color: $correct-color;
+}
+
+.incorrect {
+  color: $incorrect-color;
 }
 
 .branch {
