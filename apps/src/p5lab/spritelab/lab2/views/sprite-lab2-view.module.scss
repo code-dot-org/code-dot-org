@@ -1048,6 +1048,12 @@ $editor-strip-height: 46px;
   border: 1px solid var(--borders-neutral-primary);
 }
 
+// ?preview=left: the two cards on the workspace's own dark ground.
+// Declared after both cards, so it wins on the same specificity.
+.previewCardOnLeft {
+  background: var(--background-neutral-primary);
+}
+
 // The guide's body, in place rather than floating.
 .guideDocked {
   box-sizing: border-box;

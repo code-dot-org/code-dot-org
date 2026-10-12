@@ -524,7 +524,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {previewWidth > 0 && (
         <div
-          className={moduleStyles.previewCard}
+          className={classNames(
+            moduleStyles.previewCard,
+            side === 'left' && moduleStyles.previewCardOnLeft
+          )}
           style={{
             left: previewCardLeft,
             top: y - CARD_GAP,
@@ -665,7 +668,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         <div
           className={classNames(
             moduleStyles.previewBelow,
-            compact && moduleStyles.previewBelowCompact
+            compact && moduleStyles.previewBelowCompact,
+            side === 'left' && moduleStyles.previewCardOnLeft
           )}
           style={
             beside
