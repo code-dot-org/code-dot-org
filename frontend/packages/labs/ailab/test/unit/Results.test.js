@@ -1,32 +1,16 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {render, screen} from '@testing-library/react';
+import {screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
-import train from '../../src/train';
 import Results from '../../src/UIComponents/Results';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders, trainModel} from './renderWithProviders';
 
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
-  train.reset();
-  train.init(store);
-  train.onClickTrain();
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(Results),
-      ),
-    ),
-  );
+  const trainedModel = trainModel(store);
+  renderWithProviders(createElement(Results), {store, trainedModel});
 }
 
 function testPanel() {

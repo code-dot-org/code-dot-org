@@ -15,6 +15,7 @@ const QUESTION: QuizBuilderQuestion = {
     {id: 'b', text: '4'},
   ],
   correctChoiceId: 'b',
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
@@ -88,6 +89,22 @@ describe('QuizQuestionCard', () => {
       expect.objectContaining({questionName: 'Renamed question'})
     );
     expect(screen.queryByRole('tab', {name: 'Question'})).toBeNull();
+  });
+
+  it('saves an edited description', async () => {
+    const {onSave} = renderCard({isExpanded: true});
+
+    fireEvent.change(screen.getByLabelText(/Description/), {
+      target: {value: 'Think about **lifecycle**.'},
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+    });
+
+    expect(onSave).toHaveBeenCalledWith(
+      7,
+      expect.objectContaining({description: 'Think about **lifecycle**.'})
+    );
   });
 
   it('disables Save and Discard until something is edited', () => {

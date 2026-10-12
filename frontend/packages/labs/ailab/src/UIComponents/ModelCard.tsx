@@ -8,7 +8,7 @@ import {getDatasetDetails} from '../helpers/datasetDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {getLabelToSave, getFeaturesToSave} from '../redux';
+import {getLabelToSave, getFeaturesToSave} from '../selectors/saveSelectors';
 
 import Statement from './Statement';
 

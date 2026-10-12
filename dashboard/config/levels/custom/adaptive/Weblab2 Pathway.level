@@ -1,0 +1,14 @@
+<Adaptive>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 77,
+  "created_at": "2026-10-09T21:31:55.000Z",
+  "level_num": "custom",
+  "user_id": 19429,
+  "properties": {
+    "encrypted": "false",
+    "adaptive_id": "sample"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-09 21:32:09 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+}]]></config>
+</Adaptive>
