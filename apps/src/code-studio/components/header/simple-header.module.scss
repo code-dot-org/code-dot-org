@@ -1,3 +1,5 @@
+@use "color.scss";
+
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -11,22 +13,95 @@
 .row {
   width: 100%;
   min-width: 0;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: fadein 0.4s;
 }
 
+.image {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid color.$white;
+  border-radius: 6px;
+  background-color: color.$black;
+  flex: none;
+  object-fit: cover;
+}
+
+// The two lines: name and label, then the bar and the saved-at. Grows to
+// its cap so the bar has room beside the saved-at, and shrinks with the
+// row: the names ellipsize and the bar fills what is left.
+.text {
+  margin-inline-start: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 480px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  color: color.$white;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.unitName,
+.label {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unitName {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  flex: none;
+}
+
+.status {
+  height: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  flex: 1 1 auto;
+  min-width: 60px;
+}
+
+// Holds the badge's width from the start, so the bar does not move when
+// "Saved" arrives.
+.saved {
+  flex: none;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
 // The project buttons cannot shrink, and their container clips, so the
 // project info keeps its width and the names give way instead.
 .projectInfo {
   flex: none;
-}
-
-// Each name may shrink below its content; what it holds ellipsizes.
-.unitName,
-.progress {
-  flex: 0 1 auto;
-  min-width: 0;
-  margin: 0 5px;
+  margin-inline-start: 5px;
 }

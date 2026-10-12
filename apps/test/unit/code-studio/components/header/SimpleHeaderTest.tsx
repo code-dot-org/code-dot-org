@@ -1,4 +1,4 @@
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
@@ -18,14 +18,21 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
 }));
-jest.mock('@cdo/apps/code-studio/components/header/ScriptName', () => ({
+jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
   __esModule: true,
-  default: (props: {name: string; href: string}) =>
-    require('react').createElement('a', {href: props.href}, props.name),
+  default: () => require('react').createElement('span', null, 'Saved'),
 }));
 
-function renderHeader() {
-  const store = createStore(() => ({isRtl: false}));
+interface StoreState {
+  isRtl: boolean;
+  project?: {showProjectUpdatedAt: boolean};
+  simpleProgress?: {
+    progress: {label: string; position: number; total: number} | null;
+  };
+}
+
+function renderHeader(state: Partial<StoreState> = {}) {
+  const store = createStore(() => ({isRtl: false, ...state}));
   return render(
     <Provider store={store}>
       <SimpleHeader
@@ -42,22 +49,46 @@ describe('SimpleHeader', () => {
     expect(document.querySelector('#header_middle_content')).not.toBeNull();
   });
 
-  it('places each part of the row under its class', () => {
+  it('places the image, the name and label, the bar and the buttons', () => {
     renderHeader();
-    const has = (id: string, className: string) =>
-      (document.querySelector(`#${id}`) as HTMLElement).classList.contains(
-        className
-      );
-    expect(has('header_middle_content', styles.row)).toBe(true);
-    expect(has('project_info_container', styles.projectInfo)).toBe(true);
-    expect(has('unit_name_container', styles.unitName)).toBe(true);
-    expect(has('simple_progress_container', styles.progress)).toBe(true);
+    const row = document.querySelector('#header_middle_content') as HTMLElement;
+    expect(row.classList.contains(styles.row)).toBe(true);
+    expect(row.querySelector('img')?.getAttribute('src')).toBe('/logo.png');
+    const name = document.querySelector('#unit_name_container') as HTMLElement;
+    expect(name.getAttribute('href')).toBe('/s/hoai2026-dev');
+    expect(name.textContent).toBe('hoai2026 dev');
     expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
       'Story'
     );
+    expect(screen.getByRole('progressbar').getAttribute('aria-valuetext')).toBe(
+      'Level 1 of 2'
+    );
     expect(
-      document.querySelector('a[href="/s/hoai2026-dev"]')?.textContent
-    ).toBe('hoai2026 dev');
+      document
+        .querySelector('#project_info_container')
+        ?.classList.contains(styles.projectInfo)
+    ).toBe(true);
+  });
+
+  it('shows the saved-at only once the project store asks for it', () => {
+    renderHeader();
+    expect(screen.queryByText('Saved')).toBeNull();
+    renderHeader({project: {showProjectUpdatedAt: true}});
+    expect(screen.getByText('Saved')).toBeTruthy();
+  });
+
+  it('prefers progress reported to the store over the levels', () => {
+    renderHeader({
+      simpleProgress: {
+        progress: {label: 'Introduction', position: 2, total: 4},
+      },
+    });
+    expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
+      'Introduction'
+    );
+    const bar = screen.getByRole('progressbar');
+    expect(bar.getAttribute('aria-valuenow')).toBe('2');
+    expect((bar.firstChild as HTMLElement).style.width).toBe('50%');
   });
 
   it('marks the document as carrying the header', () => {

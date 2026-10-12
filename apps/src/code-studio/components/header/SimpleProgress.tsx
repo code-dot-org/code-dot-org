@@ -17,6 +17,8 @@ export interface SubPath {
   /** 1-based. A label that covers one level is 1 of 1. */
   position: number;
   total: number;
+  /** Read by assistive technology in place of "Level n of m". */
+  valueText?: string;
 }
 
 // Where the current level sits among the levels sharing its header label.
@@ -39,53 +41,43 @@ export function subPathFor(levels?: ProgressLevel[]): SubPath | null {
 }
 
 interface SimpleProgressProps {
-  imageUrl?: string;
-  levels?: ProgressLevel[];
+  subPath: SubPath | null;
 }
 
-/** A unit's logo, the current level's header label and a bar showing where
-    the level sits among those sharing it. Shrinks with the header's row:
-    the label ellipsizes and the bar fills what is left. */
+/** The bar showing where a part's position sits in its total, named by the
+    header's label beside it. Nothing for no part. */
 const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
-  imageUrl,
-  levels,
+  subPath,
 }) => {
-  const subPath = subPathFor(levels);
+  if (!subPath) {
+    return null;
+  }
   return (
-    <div id="simple_progress" className={styles.outer}>
-      <div className={styles.row}>
-        {imageUrl && <img src={imageUrl} alt="" className={styles.image} />}
-        {subPath && (
-          // Keyed on the label so a new part starts at its own fill rather
-          // than sliding from the last part's.
-          <div key={subPath.label} className={styles.text}>
-            <span id="simple_progress_label" className={styles.label}>
-              {subPath.label}
-            </span>
-            <div className={styles.barRow}>
-              <div
-                className={styles.track}
-                role="progressbar"
-                aria-labelledby="simple_progress_label"
-                aria-valuemin={0}
-                aria-valuemax={subPath.total}
-                aria-valuenow={subPath.position}
-                aria-valuetext={i18n.simpleProgressLevelOf({
-                  position: subPath.position,
-                  total: subPath.total,
-                })}
-              >
-                <div
-                  className={styles.fill}
-                  style={{
-                    width: `${(100 * subPath.position) / subPath.total}%`,
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+    // Keyed on the label so a new part starts at its own fill rather than
+    // sliding from the last part's.
+    <div
+      key={subPath.label}
+      id="simple_progress"
+      className={styles.track}
+      role="progressbar"
+      aria-labelledby="simple_progress_label"
+      aria-valuemin={0}
+      aria-valuemax={subPath.total}
+      aria-valuenow={subPath.position}
+      aria-valuetext={
+        subPath.valueText ??
+        i18n.simpleProgressLevelOf({
+          position: subPath.position,
+          total: subPath.total,
+        })
+      }
+    >
+      <div
+        className={styles.fill}
+        style={{
+          width: `${(100 * subPath.position) / subPath.total}%`,
+        }}
+      />
     </div>
   );
 };

@@ -18,53 +18,46 @@ const levelsWithCurrent = (currentId: string) =>
   ].map(level => ({...level, isCurrentLevel: level.id === currentId}));
 
 describe('SimpleProgress', () => {
-  it('shows the current level label and its place in the sub-path', () => {
+  it('fills the bar to the position in the total and says so', () => {
     render(
-      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
+      <SimpleProgress subPath={{label: 'Story', position: 2, total: 3}} />
     );
-    expect(screen.getByText('Story')).toBeTruthy();
     const bar = screen.getByRole('progressbar');
     expect(bar.getAttribute('aria-valuetext')).toBe('Level 2 of 3');
+    expect(bar.classList.contains(styles.track)).toBe(true);
     expect((bar.firstChild as HTMLElement).style.width).toBe(
       `${(100 * 2) / 3}%`
     );
   });
 
-  it('fills the bar for a label that covers one level', () => {
-    render(<SimpleProgress levels={levelsWithCurrent('1')} />);
-    expect(screen.getByText('Getting started')).toBeTruthy();
-    const bar = screen.getByRole('progressbar');
-    expect(bar.getAttribute('aria-valuetext')).toBe('Level 1 of 1');
-    expect((bar.firstChild as HTMLElement).style.width).toBe('100%');
+  it('reads a given value text instead of the level wording', () => {
+    render(
+      <SimpleProgress
+        subPath={{
+          label: 'Introduction',
+          position: 1,
+          total: 4,
+          valueText: 'Step 1 of 4',
+        }}
+      />
+    );
+    expect(screen.getByRole('progressbar').getAttribute('aria-valuetext')).toBe(
+      'Step 1 of 4'
+    );
   });
 
-  it('shows nothing but the logo for a level without a label', () => {
-    render(
-      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('5')} />
-    );
+  it('shows nothing for no part', () => {
+    render(<SimpleProgress subPath={null} />);
     expect(screen.queryByRole('progressbar')).toBeNull();
-    expect(document.querySelector('#simple_progress')?.textContent).toBe('');
   });
 
-  it("wears the classes that shrink it with the header's row", () => {
+  it('is named by the label beside it', () => {
     render(
-      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
+      <SimpleProgress subPath={{label: 'Story', position: 1, total: 1}} />
     );
-    const outer = document.querySelector('#simple_progress') as HTMLElement;
-    expect(outer.classList.contains(styles.outer)).toBe(true);
-    const label = screen.getByText('Story');
-    expect(label.classList.contains(styles.label)).toBe(true);
-    expect(label.parentElement!.classList.contains(styles.text)).toBe(true);
     expect(
-      screen.getByRole('progressbar').classList.contains(styles.track)
-    ).toBe(true);
-  });
-
-  it('names the bar after its label', () => {
-    render(<SimpleProgress levels={levelsWithCurrent('3')} />);
-    const bar = screen.getByRole('progressbar');
-    expect(bar.getAttribute('aria-labelledby')).toBe('simple_progress_label');
-    expect(screen.getByText('Story').id).toBe('simple_progress_label');
+      screen.getByRole('progressbar').getAttribute('aria-labelledby')
+    ).toBe('simple_progress_label');
   });
 });
 
@@ -87,9 +80,14 @@ describe('subPathFor', () => {
 
   it("counts a sublevel's parent as current and leaves bonus levels out", () => {
     const levels = [
-      {id: '1', headerLabel: 'Story'},
-      {id: '2', headerLabel: 'Story', sublevels: [{isCurrentLevel: true}]},
-      {id: '3', headerLabel: 'Story', bonus: true},
+      {id: '1', headerLabel: 'Story', bonus: true, isCurrentLevel: false},
+      {id: '2', headerLabel: 'Story', isCurrentLevel: false},
+      {
+        id: '3',
+        headerLabel: 'Story',
+        isCurrentLevel: false,
+        sublevels: [{isCurrentLevel: true}],
+      },
     ];
     expect(subPathFor(levels)).toEqual({label: 'Story', position: 2, total: 2});
   });
@@ -97,5 +95,6 @@ describe('subPathFor', () => {
   it('is null for a level without a label, or with no levels', () => {
     expect(subPathFor(levelsWithCurrent('5'))).toBeNull();
     expect(subPathFor(undefined)).toBeNull();
+    expect(subPathFor([])).toBeNull();
   });
 });
