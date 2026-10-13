@@ -59,6 +59,8 @@ export const ProjectProvider = ({
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
+  const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
+  const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
 
   useResetSignal(
     useCallback((keepsHistoricResults: boolean) => {
@@ -122,20 +124,42 @@ export const ProjectProvider = ({
     [data],
   );
 
-  // Handle preset columns from the level once the dataset has loaded.
-  // TODO: ensure we don't override user selections with preset columns
-  // if the user has already made choices and the preset columns can be overwritten.
+  /*
+    Handle the preset columns for the project. A locked column always
+    wins, since the student has no way to change it. An unlocked one will
+    never replaces a choice already in the project.
+  */
   useEffect(() => {
     if (!presetColumns) {
       return;
     }
-    if (presetColumns.selectedFeatures) {
-      setSelectedFeatures(presetColumns.selectedFeatures);
-    }
-    if (presetColumns.labelColumn !== undefined) {
-      setLabelColumn(presetColumns.labelColumn);
-    }
-  }, [presetColumns, setSelectedFeatures, setLabelColumn]);
+    setProject(previous => {
+      let labelColumn = previous.labelColumn;
+      if (
+        presetColumns.labelColumn !== undefined &&
+        (lockedLabel || previous.labelColumn === undefined)
+      ) {
+        labelColumn = presetColumns.labelColumn;
+      }
+
+      let features = previous.selectedFeatures;
+      if (
+        presetColumns.selectedFeatures &&
+        (lockedFeatures || previous.selectedFeatures.length === 0)
+      ) {
+        features = presetColumns.selectedFeatures;
+      }
+
+      return {
+        ...previous,
+        labelColumn,
+        selectedFeatures: sortByColumnOrder(
+          features.filter(feature => feature !== labelColumn),
+          data,
+        ),
+      };
+    });
+  }, [presetColumns, lockedLabel, lockedFeatures, data]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
