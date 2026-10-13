@@ -1,0 +1,63 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:37:11.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Tune a classifier that identifies a player as \"about to quit\" or \"keeps playing.\" To make this prediction, the classifier uses:\r\n\r\n- How many minutes the player played this week (`time`).\r\n- The furthest level they’ve gotten to in the game (`levels`).\r\n\r\nCurrently, the classifier looks at only one nearest neighbor.\r\n\r\n**☑️ Do This:**\r\n\r\n- Run the program. What is the accuracy of the classifier when `n_neighbors` is 1?\r\n- Write a loop that tries every setting in the `n_neighbors` list, printing the classifier’s accuracy for each value.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember a `for` loop allows you to iterate over a list of values.\r\n\r\n```\r\nn_neighbors = [1, 3, 5, 7, 9, 11, 13, 15]\r\nfor n_neighbor in n_neighbors:\r\n  ...\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Read data\nf = open(\"players.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs and outputs\ninputs = []\noutputs = []\nfor row in data:\n  inputs.append([int(row[\"time\"]), int(row[\"levels\"])])\n  outputs.append(row[\"verdict\"])\n\n# Split data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n    inputs, outputs, test_size=0.25, random_state=42)\n\n# Scale features\nscaler = MinMaxScaler()\nscaled_train_inputs = scaler.fit_transform(train_inputs)\nscaled_test_inputs = scaler.transform(test_inputs)\n\n# Train classifier\nn_neighbors = [1, 3, 5, 7, 9, 11, 13, 15]\n\n# TODO: Use a loop to find the best hyperparameter\nmodel = KNeighborsClassifier(n_neighbors=1)\nmodel.fit(scaled_train_inputs, train_outputs)\naccuracy = model.score(scaled_test_inputs, test_outputs)\nprint(f\"n_neighbors = 1: accuracy {accuracy}\")\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "players.csv",
+          "contents": "time,levels,verdict\n52,4,about to quit\n126,8,about to quit\n403,13,keeps playing\n295,21,keeps playing\n56,24,about to quit\n222,18,keeps playing\n245,6,about to quit\n88,14,about to quit\n370,18,keeps playing\n66,2,about to quit\n202,17,keeps playing\n263,10,about to quit\n221,15,keeps playing\n298,17,keeps playing\n372,17,keeps playing\n479,14,keeps playing\n149,14,about to quit\n328,6,about to quit\n351,13,about to quit\n153,4,about to quit\n11,13,about to quit\n487,14,keeps playing\n156,20,keeps playing\n164,10,about to quit\n447,1,about to quit\n297,14,about to quit\n241,6,about to quit\n389,19,keeps playing\n25,10,about to quit\n356,10,about to quit\n193,23,keeps playing\n55,10,about to quit\n334,9,keeps playing\n466,9,about to quit\n112,13,about to quit\n319,3,about to quit\n156,14,keeps playing\n373,23,keeps playing\n364,15,keeps playing\n117,19,keeps playing\n417,24,keeps playing\n332,21,keeps playing\n345,19,keeps playing\n412,21,keeps playing\n220,21,about to quit\n382,7,about to quit\n440,13,keeps playing\n60,9,about to quit\n426,7,keeps playing\n203,15,about to quit\n245,9,keeps playing\n82,16,about to quit\n352,15,keeps playing\n153,4,about to quit\n437,12,keeps playing\n145,10,about to quit\n285,18,keeps playing\n206,3,about to quit\n310,5,about to quit\n106,13,about to quit\n98,11,about to quit\n376,17,keeps playing\n379,9,keeps playing\n288,6,about to quit\n461,23,keeps playing\n111,7,about to quit\n427,5,keeps playing\n93,8,about to quit\n483,9,about to quit\n316,6,keeps playing\n307,14,keeps playing\n486,23,keeps playing\n396,4,keeps playing\n397,11,keeps playing\n37,17,about to quit\n191,22,keeps playing\n52,25,keeps playing\n105,4,about to quit\n115,14,about to quit\n431,22,keeps playing\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nwFMk\n",
+    "display_name": "Quit Prediction",
+    "bubble_choice_description": "Predict whether a player will quit.",
+    "thumbnail_url": "https://images.code.org/c355152349a7836fecf1aae8e7d53d68-quit.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:39:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:40:51 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:43:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:44:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:45:48 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:47:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:59:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
