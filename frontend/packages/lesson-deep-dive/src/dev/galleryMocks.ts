@@ -1,7 +1,10 @@
 // mocks.ts owns POST */challenge_responses; these GETs share its path, not
 // its method, so both registries can load together.
 
-import {registerMockFixture} from '@code-dot-org/core/api/mocks';
+import {
+  registerMockFixture,
+  type MockResponderContext,
+} from '@code-dot-org/core/api/mocks';
 
 import {
   CHALLENGES,
@@ -20,15 +23,40 @@ function viewerRoleFromLocation(): ViewerRole {
   return role === 'owner' || role === 'peer' ? role : 'teacher';
 }
 
-// Approvals the viewer has toggled, by response id, over the fixture's own.
-const approvals = new Map<number, boolean>();
+type MockStore = MockResponderContext['store'];
 
-function isApproved(response: FixtureResponse): boolean {
-  return approvals.get(response.id) ?? response.approved;
+// Approvals the viewer has toggled, by response id, over the fixture's own.
+function readApprovals(store: MockStore): Record<string, boolean> {
+  return store.read<Record<string, boolean>>('approvals') ?? {};
+}
+
+function isApproved(store: MockStore, response: FixtureResponse): boolean {
+  return readApprovals(store)[response.id] ?? response.approved;
+}
+
+// The viewer's own reactions by response id; the fixture has no other viewers.
+function readReactions(store: MockStore): Record<string, string[]> {
+  return store.read<Record<string, string[]>>('reactions') ?? {};
+}
+
+// Synced with ChallengeResponseReaction::EMOJIS, whose order Rails returns.
+const EMOJI_ORDER = ['clap', 'fire', 'smile', 'heart', 'party', 'trophy'];
+
+function reactionsBody(mine: string[]) {
+  return {
+    reactions: EMOJI_ORDER.filter(emoji => mine.includes(emoji)).map(emoji => ({
+      emoji,
+      count: 1,
+      reacted: true,
+    })),
+  };
 }
 
 // Rails' summarize omits student_feedback from list rows: absent, not null.
-function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
+function toListResponse(
+  store: MockStore,
+  response: FixtureResponse,
+): GalleryChallengeResponse {
   return {
     id: response.id,
     challenge_id: response.challenge_id,
@@ -40,26 +68,10 @@ function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
     transcript: response.transcript,
     evaluation_status: response.evaluation_status,
     is_final: response.is_final,
-    approved: isApproved(response),
+    approved: isApproved(store, response),
     created_at: response.created_at,
     assets: response.assets,
-  };
-}
-
-// The viewer's own reactions by response id; the fixture has no other viewers.
-const viewerReactions = new Map<number, ReadonlySet<string>>();
-
-// Synced with ChallengeResponseReaction::EMOJIS, whose order Rails returns.
-const EMOJI_ORDER = ['clap', 'fire', 'smile', 'heart', 'party', 'trophy'];
-
-function reactionsBody(responseId: number) {
-  const mine = viewerReactions.get(responseId) ?? new Set<string>();
-  return {
-    reactions: EMOJI_ORDER.filter(emoji => mine.has(emoji)).map(emoji => ({
-      emoji,
-      count: 1,
-      reacted: true,
-    })),
+    ...reactionsBody(readReactions(store)[response.id] ?? []),
   };
 }
 
@@ -71,12 +83,13 @@ export function registerGalleryMocks(): void {
     {
       method: 'post',
       path: '*/challenge_responses/:id/reactions',
-      respond: async ({params, request}) => {
-        const id = Number(params.id);
+      respond: async ({params, request, store}) => {
+        const id = String(params.id);
         const {emoji} = (await request.json()) as {emoji: string};
-        const current = viewerReactions.get(id) ?? new Set<string>();
-        viewerReactions.set(id, new Set([...current, emoji]));
-        return reactionsBody(id);
+        const reactions = readReactions(store);
+        const mine = [...new Set([...(reactions[id] ?? []), emoji])];
+        store.write('reactions', {...reactions, [id]: mine});
+        return reactionsBody(mine);
       },
     },
 
@@ -84,13 +97,14 @@ export function registerGalleryMocks(): void {
     {
       method: 'delete',
       path: '*/challenge_responses/:id/reactions/:emoji',
-      respond: ({params}) => {
-        const id = Number(params.id);
-        const remaining = [...(viewerReactions.get(id) ?? [])].filter(
+      respond: ({params, store}) => {
+        const id = String(params.id);
+        const reactions = readReactions(store);
+        const mine = (reactions[id] ?? []).filter(
           emoji => emoji !== params.emoji,
         );
-        viewerReactions.set(id, new Set(remaining));
-        return reactionsBody(id);
+        store.write('reactions', {...reactions, [id]: mine});
+        return reactionsBody(mine);
       },
     },
 
@@ -98,14 +112,17 @@ export function registerGalleryMocks(): void {
     {
       method: 'patch',
       path: '*/challenge_responses/:id/approve',
-      respond: async ({params, request}) => {
+      respond: async ({params, request, store}) => {
         const response = FIXTURE_RESPONSES.find(
           r => r.id === Number(params.id),
         );
         if (!response) return new Response(null, {status: 404});
         const {approved} = (await request.json()) as {approved: boolean};
-        approvals.set(response.id, approved);
-        return {...toListResponse(response)};
+        store.write('approvals', {
+          ...readApprovals(store),
+          [response.id]: approved,
+        });
+        return {...toListResponse(store, response)};
       },
     },
 
@@ -122,7 +139,7 @@ export function registerGalleryMocks(): void {
     // GET /challenge_responses?challenge_id=&user_id=&sort=oldest
     {
       path: '*/challenge_responses',
-      respond: ({url}) => {
+      respond: ({url, store}) => {
         const params = url.searchParams;
         let list = FIXTURE_RESPONSES;
         if (params.has('unit_id')) {
@@ -145,13 +162,13 @@ export function registerGalleryMocks(): void {
         // Rails also shows a student their own rows; the fixture has no
         // signed-in user.
         if (viewerRoleFromLocation() !== 'teacher') {
-          list = list.filter(isApproved);
+          list = list.filter(response => isApproved(store, response));
         }
         const sorted = [...list].sort((a, b) =>
           a.created_at.localeCompare(b.created_at),
         );
         if (params.get('sort') !== 'oldest') sorted.reverse();
-        return sorted.map(toListResponse);
+        return sorted.map(response => toListResponse(store, response));
       },
     },
 
@@ -178,7 +195,7 @@ export function registerGalleryMocks(): void {
     // Rails omits the role-gated keys rather than nulling them; so does this.
     {
       path: '*/challenge_responses/:id',
-      respond: ({params}) => {
+      respond: ({params, store}) => {
         const response = FIXTURE_RESPONSES.find(
           r => r.id === Number(params.id),
         );
@@ -186,7 +203,7 @@ export function registerGalleryMocks(): void {
         const role = viewerRoleFromLocation();
         const challenge = CHALLENGES[response.challenge_id];
         return {
-          ...toListResponse(response),
+          ...toListResponse(store, response),
           viewer_role: role,
           question: challenge.question,
           ...(role !== 'peer' && {

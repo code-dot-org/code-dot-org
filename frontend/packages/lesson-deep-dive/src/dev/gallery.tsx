@@ -50,7 +50,11 @@ async function fetchTutorGalleryData(): Promise<TutorGalleryData> {
 async function boot(): Promise<void> {
   // Without the worker, the Vite proxy forwards requests to a local Rails.
   if (import.meta.env.VITE_API_MODE === 'msw') {
-    const {startMockWorker} = await import('@code-dot-org/core/api/mocks');
+    const {maybeResetFromUrl, setActiveScenario, startMockWorker} =
+      await import('@code-dot-org/core/api/mocks');
+    // The scenario keys the sessionStorage that keeps mock writes across reloads.
+    setActiveScenario({labKey: 'lesson-deep-dive-gallery', tag: 'default'});
+    maybeResetFromUrl();
     registerGalleryMocks();
     await startMockWorker();
   }

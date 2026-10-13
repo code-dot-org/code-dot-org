@@ -144,6 +144,9 @@ project page layout. Only `teacher` sees the approval alert and toggles; the
 other roles see approved projects only. Dashboard mode takes the role from the
 signed-in user.
 
+Approvals and reactions made in msw mode are kept in sessionStorage, so they
+survive reloads and role changes in the same tab. `?cdoMockReset=1` clears them.
+
 The msw fixture's unit and section ids are invented. To regenerate it, request
 the bootstrap route above as a teacher.
 

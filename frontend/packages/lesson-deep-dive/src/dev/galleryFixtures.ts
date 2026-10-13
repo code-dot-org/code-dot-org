@@ -3,6 +3,7 @@
 
 import type {
   EvaluationResult,
+  Reaction,
   RubricEntry,
   TutorGalleryData,
 } from '../gallery/types';
@@ -41,6 +42,7 @@ export interface GalleryChallengeResponse {
   approved: boolean;
   created_at: string;
   assets: GalleryAsset[];
+  reactions: Reaction[];
 }
 
 export interface Challenge {
@@ -110,7 +112,9 @@ export const CHALLENGES: Record<number, Challenge> = {
 };
 
 // evaluation is what EvaluateChallengeResponseJob would have written.
-export interface FixtureResponse extends GalleryChallengeResponse {
+// Reactions come from the viewer's mock writes, not the fixture.
+export interface FixtureResponse
+  extends Omit<GalleryChallengeResponse, 'reactions'> {
   sectionId: number;
   evaluation: EvaluationResult | null;
   evaluatedAt: string | null;
