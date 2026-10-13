@@ -74,23 +74,11 @@ class Quiz < Level
   def import_serialized_placements!
     raise "quiz #{name.dump}: .level file is missing a placements list" if serialized_placements.nil?
 
-    placement_question_keys = serialized_placements.map {|entry| entry['question_key']}
-    questions_by_key = QuizQuestion.where(key: placement_question_keys).index_by(&:key)
-
-    # Seeding of quiz questions is skipped in environments where the encryption key is not present (eg, Drone).
-    # Log a warning in this situation, rather than raising an error.
-    missing_key = placement_question_keys.find {|key| !questions_by_key.key?(key)}
-    if missing_key
-      if rack_env?(:production) || CDO.properties_encryption_key.present?
-        raise "quiz #{name.dump}: unknown question_key #{missing_key.dump}"
-      else
-        puts "WARNING: quiz #{name.dump} placements not seeded properly due to missing CDO.properties_encryption_key"
-        return
-      end
-    end
+    questions_by_key = QuizQuestion.where(key: serialized_placements.map {|entry| entry['question_key']}).index_by(&:key)
 
     desired = serialized_placements.map do |entry|
       question = questions_by_key[entry['question_key']]
+      raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
       {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
     end
 
