@@ -22,7 +22,10 @@ class AdaptiveProgressController < ApplicationController
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
-    render json: {steps: steps_json}
+    rows = adaptive_user_level&.user_adaptive_steps || []
+    steps = rows.filter_map {|row| (entry = row_json(row)) && [row.step_id, entry]}.to_h
+    steps.merge!(level_step_progress) {|_step_id, entry, progress| entry.merge(progress)}
+    render json: {steps: steps}
   end
 
   # PUT /adaptive_progress/steps/:step_id
@@ -31,54 +34,35 @@ class AdaptiveProgressController < ApplicationController
     step = @level.find_step(params[:step_id])
     return head :unprocessable_entity unless step
 
-    present = PROGRESS_FIELDS.select {|field| body.key?(field)}
-    return head :unprocessable_entity if step['kind'] == 'level' && present.any?
+    # Progress on level-backed steps is in UserLevel.
+    return head :unprocessable_entity if step['kind'] == 'level' && PROGRESS_FIELDS.any? {|field| body.key?(field)}
 
-    json_values = JSON_FIELDS.keys.select {|field| body.key?(field)}.index_with {|field| body[field]}
-    return head :unprocessable_entity unless json_values.values.all? {|value| valid_json_value?(value)}
+    columns = JSON_FIELDS.filter_map {|field, column| [column, body[field]] if body.key?(field)}.to_h
+    return head :unprocessable_entity unless columns.values.all? {|value| valid_json_value?(value)}
 
     if body.key?('answers')
-      question_id, answers = graded_answers(step, body['answers'])
+      answers = student_responses(step, body['answers'])
       return head :unprocessable_entity unless answers
     end
 
     if body.key?('timeSinceLastSave')
-      time_ms = body['timeSinceLastSave']
-      return head :unprocessable_entity unless time_ms.is_a?(Numeric) && time_ms >= 0
-      seconds = [(time_ms / 1000.0).ceil, ActivitiesController::MAX_INT_TIME_SPENT].min
+      seconds = time_spent_seconds(body['timeSinceLastSave'])
+      return head :unprocessable_entity unless seconds
     end
 
-    row = find_or_create_row(adaptive_user_level || start_adaptive_user_level, step['id'])
-    row.with_lock do
-      JSON_FIELDS.each {|field, column| row[column] = json_values[field] if json_values.key?(field)}
-      if present.any?
-        progress = row.progress || {}
-        now = Time.zone.now.utc.iso8601
-        progress['startedAt'] ||= now if body['started'] == true
-        progress['completedAt'] ||= now if body['completed'] == true
-        progress['timeSpent'] = (progress['timeSpent'] || 0) + seconds if seconds
-        if answers
-          progress['answers'] = (progress['answers'] || {}).merge(question_id => answers)
-          progress['submitted'] = true
-        end
-        row.progress = progress
-      end
-      row.save!
+    user_level = adaptive_user_level || start_adaptive_user_level
+    row = Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      UserAdaptiveStep.find_or_create_by!(user_level_id: user_level.id, step_id: step['id'])
     end
+    row.record_progress!(
+      started: body['started'] == true,
+      completed: body['completed'] == true,
+      seconds: seconds,
+      answers: answers,
+      columns: columns
+    )
 
-    render json: steps_json[step['id']] || {}
-  end
-
-  # DELETE /adaptive_progress?scriptId=&levelId=
-  #
-  # Keeps the adaptive level's UserLevel: the student did start the pathway.
-  def destroy
-    ActiveRecord::Base.transaction do
-      user_level = adaptive_user_level
-      UserAdaptiveStep.where(user_level_id: user_level.id).delete_all if user_level
-      step_user_levels.destroy_all
-    end
-    head :no_content
+    render json: step_json(step, row)
   end
 
   private def load_adaptive
@@ -88,7 +72,7 @@ class AdaptiveProgressController < ApplicationController
   end
 
   private def adaptive_user_level
-    UserLevel.where(user_id: current_user.id, level_id: @level.id, script_id: @unit.id).first
+    UserLevel.find_by(user_id: current_user.id, level_id: @level.id, script_id: @unit.id)
   end
 
   # Through the milestone path, so a racing Start milestone finds the same row.
@@ -105,69 +89,64 @@ class AdaptiveProgressController < ApplicationController
     user_level
   end
 
-  private def find_or_create_row(user_level, step_id)
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      UserAdaptiveStep.find_or_create_by!(user_level_id: user_level.id, step_id: step_id)
-    end
+  # Step id => progress, for each of `levels` the student has a UserLevel on.
+  private def level_step_progress(levels = @level.step_levels)
+    user_levels = UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: levels.values.map(&:id)).index_by(&:level_id)
+    levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
   end
 
-  private def step_user_levels
-    UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: @level.step_levels.values.map(&:id))
+  private def step_json(step, row)
+    entry = row_json(row) || {}
+    return entry unless step['kind'] == 'level'
+    entry.merge(level_step_progress(@level.step_levels.slice(step['id']))[step['id']] || {})
   end
 
-  private def steps_json
-    steps = {}
-    user_level = adaptive_user_level
-    if user_level
-      UserAdaptiveStep.where(user_level_id: user_level.id).find_each do |row|
-        entry = {'timeSpent' => 0}
-        if (progress = row.progress)
-          entry['status'] = progress['completedAt'] ? 'complete' : 'started'
-          entry['timeSpent'] = progress['timeSpent'] || 0
-          entry.merge!(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
-        end
-        entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
-        steps[row.step_id] = entry if entry.key?('status') || entry.key?('generatedInstructions')
-      end
-    end
+  # A row's progress and generated instructions, or nil when it has neither.
+  private def row_json(row)
+    return nil unless row.progress || row.generated_instructions
+    entry = {'timeSpent' => 0}.merge(row.progress_json)
+    entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
+    entry
+  end
 
-    step_ids_by_level_id = @level.step_levels.to_h {|step_id, level| [level.id, step_id]}
-    step_user_levels.each do |step_user_level|
-      step_id = step_ids_by_level_id[step_user_level.level_id]
-      steps[step_id] = (steps[step_id] || {}).merge(
-        'status' => step_user_level.passing? ? 'complete' : 'started',
-        'timeSpent' => step_user_level.time_spent || 0,
-      )
-    end
-    steps
+  private def user_level_json(user_level)
+    {
+      'status' => user_level.passing? ? 'complete' : 'started',
+      'timeSpent' => user_level.time_spent || 0,
+    }
   end
 
   private def valid_json_value?(value)
     (value.is_a?(Hash) || value.is_a?(Array)) && value.to_json.bytesize <= MAX_JSON_BYTES
   end
 
-  # [question id, answers graded from the content], or nil if they do not fit.
-  private def graded_answers(step, answers)
+  private def time_spent_seconds(time_ms)
+    return nil unless time_ms.is_a?(Numeric) && time_ms >= 0
+    [(time_ms / 1000.0).ceil, ActivitiesController::MAX_INT_TIME_SPENT].min
+  end
+
+  # {question id => student responses checked against the content}, or nil if they do not fit.
+  private def student_responses(step, answers)
     return nil unless answers.is_a?(Hash) && answers['list'].is_a?(Array)
     question_id = answers['questionId'].to_s
+    return nil if question_id.empty?
     question = Array(step['questions']).find {|q| q.is_a?(Hash) && q['id'].to_s == question_id}
     return nil unless question
 
-    list = answers['list'].map do |entry|
-      return nil unless entry.is_a?(Hash)
-      case question['type']
-      when 'MultipleChoiceQuestion'
-        choice_ids = Array(question['choices']).map {|choice| choice['id']}
-        return nil unless choice_ids.include?(entry['answerId'])
-        correct_id = question['correctChoiceId']
-        correct_id ? {'answerId' => entry['answerId'], 'isCorrect' => entry['answerId'] == correct_id} : {'answerId' => entry['answerId']}
-      when 'freeResponse'
-        return nil unless entry['text'].is_a?(String) && entry['text'].length <= MAX_TEXT_LENGTH
-        {'text' => entry['text']}
-      else
-        return nil
-      end
+    entries = answers['list']
+    return nil unless entries.all?(Hash)
+    case question['type']
+    when 'MultipleChoiceQuestion'
+      choice_ids = Array(question['choices']).map {|choice| choice['id']}
+      return nil unless entries.all? {|entry| choice_ids.include?(entry['answerId'])}
+      correct_id = question['correctChoiceId']
+      list = entries.map {|entry| {'answerId' => entry['answerId'], 'isCorrect' => correct_id && entry['answerId'] == correct_id}.compact}
+    when 'freeResponse'
+      return nil unless entries.all? {|entry| entry['text'].is_a?(String) && entry['text'].length <= MAX_TEXT_LENGTH}
+      list = entries.map {|entry| {'text' => entry['text']}}
+    else
+      return nil
     end
-    [question_id, list]
+    {question_id => list}
   end
 end
