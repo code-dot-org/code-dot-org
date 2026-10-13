@@ -19,6 +19,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
             {'id' => 'how', 'type' => 'scale', 'text' => 'How much?', 'scale' => {'min' => 1, 'max' => 5}},
           ]},
           {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
+          {'id' => 'retry', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
         ],
       }],
     }.to_json
@@ -102,7 +103,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_equal 4, steps['read']['timeSpent']
   end
 
-  test "answers replace one question's list and are graded by the content" do
+  test "answers replace one question's list and are checked against the content" do
     put_step 'quiz', answers: {questionId: 1, list: [{answerId: 'a', isCorrect: true}]}
     put_step 'quiz', answers: {questionId: 2, list: [{answerId: 'a'}]}
     put_step 'quiz', submitted: false, answers: {questionId: 1, list: [{answerId: 'a', isCorrect: true}, {answerId: 'b'}]}
@@ -172,6 +173,13 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
 
     put_step 'try', validationHistory: [{'passed' => true}]
     assert_equal({'status' => 'complete', 'timeSpent' => 12}, JSON.parse(response.body))
+  end
+
+  test "steps that share a level both take its user level's state" do
+    create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 7)
+
+    assert_equal steps['try'], steps['retry']
+    assert_equal({'status' => 'started', 'timeSpent' => 7}, steps['retry'])
   end
 
   test "the project takes its state from the template level's user level" do

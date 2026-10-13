@@ -76,10 +76,6 @@ class Adaptive < Level
     names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
-  def step_level?(level)
-    step_level_names.value?(level.name)
-  end
-
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
     pathway = content

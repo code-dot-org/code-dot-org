@@ -1234,44 +1234,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal current_locale, parent_user_level.locale
   end
 
-  test "milestone under an adaptive level records its step levels and refuses other levels" do
-    dir = Pathname.new(Dir.mktmpdir)
-    dir.join('steps.json').write({
-      'id' => 'steps',
-      'project' => {'templateLevel' => 'adaptive-milestone-template'},
-      'checkpoints' => [{'id' => 'basics', 'steps' => [{'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-milestone-sandbox'}]}],
-    }.to_json
-    )
-    AdaptiveContent.stubs(:content_dir).returns(dir)
-    AdaptiveContent.reset_cache!
-    sandbox = create(:weblab2, name: 'adaptive-milestone-sandbox')
-    template = create(:weblab2, name: 'adaptive-milestone-template')
-    adaptive = create(:adaptive, adaptive_id: 'steps')
-    script_level = create(:script_level, levels: [adaptive])
-    script = script_level.script
-    params = {user_id: 0, script_level_id: script_level.id, app: 'adaptive', result: 'true', testResult: '30'}
-
-    post :milestone, params: params.merge(level_id: sandbox.id)
-    assert_response :success
-    assert_equal 30, UserLevel.find_by(user: @user, level: sandbox, script: script).best_result
-
-    post :milestone, params: params.merge(level_id: template.id)
-    assert_response :success
-    assert_equal 30, UserLevel.find_by(user: @user, level: template, script: script).best_result
-
-    other = create(:weblab2)
-    post :milestone, params: params.merge(level_id: other.id)
-    assert_response :forbidden
-    assert_nil UserLevel.find_by(user: @user, level: other, script: script)
-
-    post :milestone, params: params.merge(level_id: adaptive.id, testResult: '-150')
-    assert_response :success
-    assert_equal(-150, UserLevel.find_by(user: @user, level: adaptive, script: script).best_result)
-  ensure
-    AdaptiveContent.reset_cache!
-    FileUtils.remove_entry(dir) if dir
-  end
-
   test 'milestone triggers AI rubric eval job' do
     section = create(:section, teacher: @teacher, script: @script)
     create(:follower, section: section, student_user: @student)

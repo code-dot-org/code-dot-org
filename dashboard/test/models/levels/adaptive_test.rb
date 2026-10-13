@@ -99,9 +99,6 @@ class AdaptiveTest < ActiveSupport::TestCase
     level = create(:adaptive, adaptive_id: 'levels')
 
     assert_equal({'try' => sandbox, 'project' => template}, level.step_levels)
-    assert level.step_level?(sandbox)
-    assert level.step_level?(template)
-    refute level.step_level?(create(:weblab2))
   end
 
   test "lookups are empty without content" do
