@@ -205,7 +205,7 @@ describe('ProjectContext column choices', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('a column cannot be both the label and a feature', () => {
+  test('choosing a label drops it from the features', () => {
     const {project, context} = renderContext(undefined, imported());
     act(() => context().setSelectedFeatures(['a', 'b']));
 
@@ -213,6 +213,25 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBe('a');
     expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('the label cannot be added as a feature', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('a'));
+
+    act(() => context().addSelectedFeature('a'));
+    act(() => context().addSelectedFeature('b'));
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('setting the features drops the label from them', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('b'));
+
+    act(() => context().setSelectedFeatures(['a', 'b', 'c']));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
   });
 
   /*

@@ -82,13 +82,10 @@ export const ProjectProvider = ({
     }));
   }, []);
 
-  /*
-    TODO: Filter out the label column from the selected features
-    when adding or setting features.
-  */
   const addSelectedFeature = useCallback(
     (feature: string) => {
       setProject(previous =>
+        feature === previous.labelColumn ||
         previous.selectedFeatures.includes(feature)
           ? previous
           : {
@@ -116,7 +113,10 @@ export const ProjectProvider = ({
     (features: string[]) => {
       setProject(previous => ({
         ...previous,
-        selectedFeatures: sortByColumnOrder(features, data),
+        selectedFeatures: sortByColumnOrder(
+          features.filter(feature => feature !== previous.labelColumn),
+          data,
+        ),
       }));
     },
     [data],
