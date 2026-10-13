@@ -1,22 +1,20 @@
 ---
 name: figma-pixel-parity
 description: >-
-  Mandatory Figma-to-code pixel-parity workflow for an MUI-based component
-  library. Use before building or updating any library component from a Figma
-  spec, when finishing a component, or when asked for pixel-perfect alignment,
-  visual parity, screenshot comparison, or proof the implementation matches
-  Figma. Requires a spec pull, a visual recipe, and a browser-vs-Figma
-  correction loop before the work can be called done. Skip this skill in the
-  CADS reference repo; use cads-parity-qa there.
+  Figma-to-code pixel-parity workflow for the component library. Use when
+  aligning an existing library component with its Figma component set, or,
+  rarely, building a new component from one. Requires a spec pull, a visual
+  recipe, and a browser-vs-Figma correction loop before the component can be
+  called done. Not for component work that does not start from a Figma node.
 ---
 
 # Figma pixel parity
 
 Use this skill from the first spec pull through the last recapture. It is not an end-of-task checklist. Human review is for genuine ambiguity or API decisions, not for styling already specified in Figma.
 
-On first use, if `repo.md` is missing beside this skill, copy `repo.template.md` to `repo.md`, fill it from the repo, and ask for any Figma file key you cannot find. Do not invent one.
+Read `repo.md` beside this skill first. It binds the workflow to this library: Figma file, paths, tokens, capture URL, and verify commands.
 
-Also load `figma-design-to-code` before calling Figma `get_design_context`. Design-context output is a reference to adapt to this library. Do not paste it as the component.
+Before calling Figma `get_design_context`, load the Figma plugin's `figma-design-to-code` skill. Without the plugin, read the Figma MCP server's `skill://figma/figma-design-to-code/SKILL.md` resource. Design-context output is a reference to adapt to this library. Do not paste it as the component.
 
 Do not write component code until phases 0–2 are done.
 
@@ -27,7 +25,7 @@ A case matches only when all of these are true in the current session:
 1. Design context was retrieved for the exact component-set node (not a page, frame, or nearby example).
 2. The visual recipe has a cell for that variant, state, and mode, with geometry and token bindings taken from that retrieval.
 3. A Figma screenshot of that exact variant exists.
-4. A browser capture of the library component, in a deterministic fixture, exists for the same case id.
+4. A browser capture of the library component, from its story, exists for the same case id.
 5. You compared them by overlay or by measured box plus computed style. Recording two file paths is not a comparison.
 6. Every mismatch is fixed and recaptured, or written up as an accepted difference.
 
@@ -38,10 +36,12 @@ Code inspection, “the token name looks right,” and “side by side looks clo
 | Layer | Source |
 |---|---|
 | Design | Figma file in `repo.md`. Exact public component-set node. |
-| Spec | Visual recipe from `visual-recipe-template.json`, validated against `visual-recipe.schema.json` |
+| Spec | Visual recipe from `visual-recipe-template.json`, checked with `validate-recipe.mjs` |
 | Code API | The library’s prop catalog in `repo.md` |
-| Visual proof | Figma screenshot vs fixture capture for each coverage case |
+| Visual proof | Figma screenshot vs story capture for each coverage case |
 | Build | Verify commands in `repo.md` |
+
+The recipe and the captures are working files for one task. They live in the gitignored work directory named in `repo.md` and are never committed.
 
 Read [references/correction-loop.md](references/correction-loop.md) before the first capture. Read [references/mui-watchouts.md](references/mui-watchouts.md) when styling an MUI-backed component. Apply a watch-out only after confirming this library hits that failure.
 
@@ -56,15 +56,15 @@ Escalate only when:
 
 Do not ask a human to re-confirm sizes, enums, or states already present on the component set.
 
-Every accepted difference records: case ids, Figma behavior, code behavior, reason, and who decided. “Looks close” is not an accepted difference.
+Every accepted difference records: case ids, Figma behavior, code behavior, reason, and who decided. “Looks close” is not an accepted difference. The recipe is not committed, so copy accepted differences into the PR description.
 
 ## Phase 0 — classify
 
 Pick one path and record it on the recipe:
 
-- **New component.** Write the visual recipe before implementation.
-- **Figma update.** Refresh the recipe, diff it against the previous one, list changed axes, values, tokens, and geometry, and test the changed cases plus one regression sentinel per affected variant family.
+- **Figma update.** The usual path: an existing component is brought in line with its Figma component set. Pull a fresh recipe. If an earlier recipe for the component is still in the work directory, diff against it; otherwise diff against the current implementation. List changed axes, values, tokens, and geometry, and test the changed cases plus one regression sentinel per affected variant family.
 - **Code-only fix.** Still refresh design evidence for the affected cases so the fix does not contradict Figma.
+- **New component.** Rare. Write the visual recipe before implementation.
 
 ## Phase 1 — pull the spec
 
@@ -77,7 +77,7 @@ Pick one path and record it on the recipe:
    - type family, size, weight, line-height, and icon size
    - the library token bound to every visible color, not a raw hex
    - default, hover, focus, press, disabled, and selected recipes
-   - light and dark differences, plus annotations
+   - Light and Dark differences, plus annotations
 5. Take a Figma screenshot for each case chosen in phase 2.
 6. Update the visual recipe. Never fill a gap from memory, from MUI defaults, or from the current implementation.
 
@@ -89,13 +89,15 @@ Fill `coverage.cases` before implementation. Use pairwise coverage plus risk cas
 
 - every size, color, and visual variant at least once
 - every interaction state
-- light and dark
+- Light and Dark
 - selected and disabled, where the component has them
 - icon-only, leading/trailing icon, long label, and composed layouts, where they exist
 - combinations Figma marks as restricted or exceptional
 - one default sentinel per major variant family
 
-Each case needs a stable id (`button-medium-contained-primary-hover-light`), a Figma node or variant name, mode, props, state, viewport, expected geometry, and expected tokens. Names like `test1` are invalid.
+Each case needs a stable id (`button-medium-contained-primary-hover-light`), a Figma node and variant name, mode, props, state, viewport, expected geometry, and expected tokens. Names like `test1` are invalid.
+
+Run `validate-recipe.mjs` on the recipe before moving on.
 
 ## Phase 3 — implement from the recipe
 
@@ -110,7 +112,7 @@ Each case needs a stable id (`button-medium-contained-primary-hover-light`), a F
 
 Follow [references/correction-loop.md](references/correction-loop.md). For each coverage case:
 
-1. Capture the fixture at the recipe viewport and device scale, after tokens and fonts have loaded.
+1. Capture the case from its story at the recipe viewport and device scale, after tokens and fonts have loaded.
 2. Produce hover, keyboard focus-visible, and press with real browser input. Disabled is a real disabled control. Do not fake these with an undocumented public prop.
 3. Compare against the matching Figma screenshot. Also measure the rendered box and computed type, spacing, radius, and colors against the recipe.
 4. Classify each mismatch: `geometry`, `typography`, `variable-color`, `state`, `icon`, `content`, or `rendering-noise`.
@@ -130,18 +132,17 @@ One pass that finds a mismatch is not done. A checklist without case ids and res
 
 ## Phase 6 — evidence summary
 
-Run the verify commands in `repo.md`. The final message must include:
+Run the verify commands in `repo.md` and record each in `evidence.verify`. Run `validate-recipe.mjs` on the final recipe. The final message must include:
 
 ```text
-Task path: new | figma-update | code-only fix
+Task path: figma-update | code-only fix | new
 Components:
 Figma evidence: public and related node ids, retrieval date
-Spec: visual recipe path
 Coverage: passed/total case ids; modes; states actually exercised
 Correction loop: mismatches found, fixes, cases recaptured
 API check: result
 Verification: commands and results
-Accepted differences: none | structured list
+Accepted differences: none | structured list (also in the PR description)
 Still missing: none | evidence that could not be captured
 ```
 
@@ -151,7 +152,7 @@ Do not report the component as done when any required case is `pending` or `fail
 
 ```text
 Load figma-pixel-parity and figma-design-to-code. Read repo.md.
-Classify this as a new component, Figma update, or code-only fix.
+Classify this as a Figma update, code-only fix, or new component.
 Pull design context from the exact component-set node, update the visual
 recipe, and define coverage cases before writing code. Before done, run the
 correction loop, the API check, the repo verify commands, and report the

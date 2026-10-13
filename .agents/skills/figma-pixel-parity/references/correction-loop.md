@@ -1,19 +1,20 @@
 # Correction loop
 
-A fixture renders one coverage case at a time so a capture can be compared with one Figma variant. Use the fixture URL in `repo.md`. If the library has no fixture, add the smallest route or Storybook story that meets the contract below before claiming visual parity.
+Each coverage case is captured on its own, so the capture can be compared with one Figma variant.
 
-## Fixture contract
+## Capturing a case
 
-- The URL selects component, case id, and mode.
-- The page renders only that case inside a fixed-size capture region.
-- Library tokens and the real font files are loaded before capture. A fallback font is a false typography mismatch.
-- Transitions and animations inside the fixture are disabled.
-- Stable selectors exist for the fixture root, the capture region, and the component subject.
-- Light and dark use the same switch the library uses in production.
-- Selected, checked, and disabled states use the component’s real props.
-- Hover, focus-visible, and press are produced in the browser for the capture. A capture-only forced pseudo-class is allowed only when the browser cannot hold the state long enough to screenshot, and it must not be a public component prop. Document that mechanism in the recipe note for the case.
+Capture from the component’s own story in design-system Storybook, using the capture URL in `repo.md`. Set the case’s props through the URL `args`. If no story can render the case, add one to the component’s stories rather than a one-off page.
 
-Open the fixture, wait until fonts are ready, then screenshot the capture region at the case’s `deviceScaleFactor`. Save Figma references and browser captures next to the recipe, using the case id in the filename.
+Before the capture:
+
+- `<html>` carries `data-brand="codeai-next"` and the case’s `data-theme` (`Light` or `Dark`).
+- Library tokens and the real font files have loaded. A fallback font is a false typography mismatch.
+- Transitions and animations are off. Inject `* { transition: none !important; animation: none !important; }` into the page.
+- Selected, checked, and disabled come from the component’s real props.
+- Hover, focus-visible, and press are produced with real browser input. A capture-only forced pseudo-class is allowed only when the browser cannot hold the state long enough to screenshot, and it must not be a public component prop. Record that mechanism in the recipe note for the case.
+
+Screenshot the component inside `#storybook-root` at the case’s `deviceScaleFactor`. Save the Figma reference and the browser capture in the work directory from `repo.md`, using the case id in the filename. Do not commit them.
 
 ## Comparison
 

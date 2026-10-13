@@ -1,6 +1,6 @@
 # MUI watch-outs
 
-This library is MUI-based, and its styling setup may differ from CADS. Confirm the failure exists here before applying a fix. Do not copy CADS selectors or class names across.
+Confirm a failure exists in the component before applying its fix.
 
 ## Specified geometry beats MUI defaults
 

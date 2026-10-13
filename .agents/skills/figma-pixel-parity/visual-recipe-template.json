@@ -1,5 +1,5 @@
 {
-  "$schema": "./visual-recipe.schema.json",
+  "$schema": "../../visual-recipe.schema.json",
   "schemaVersion": 1,
   "component": "ComponentName",
   "figma": {
@@ -11,7 +11,7 @@
     "designContextCaptured": false
   },
   "change": {
-    "taskPath": "new",
+    "taskPath": "figma-update",
     "previousRecipe": null,
     "figmaChanges": []
   },
@@ -45,7 +45,7 @@
         "variant": "default",
         "color": "default",
         "state": "default",
-        "mode": "light"
+        "mode": "Light"
       },
       "variables": {
         "background": "",
@@ -67,7 +67,7 @@
         "id": "component-default-light",
         "figmaNodeId": "0:0",
         "figmaVariant": "",
-        "mode": "light",
+        "mode": "Light",
         "props": {},
         "state": "default",
         "viewport": {
@@ -77,7 +77,7 @@
         },
         "expectedGeometry": {},
         "expectedVariables": [],
-        "fixturePath": "",
+        "captureUrl": "",
         "referenceScreenshot": "",
         "browserScreenshot": "",
         "result": "pending",
@@ -88,9 +88,7 @@
   "acceptedDifferences": [],
   "evidence": {
     "apiAudit": null,
-    "typecheck": null,
-    "build": null,
-    "docsBuild": null,
+    "verify": [],
     "correctionPasses": []
   }
 }

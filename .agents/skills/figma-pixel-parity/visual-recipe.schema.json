@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://local/figma-pixel-parity/visual-recipe.schema.json",
   "title": "Component visual recipe",
   "type": "object",
   "additionalProperties": false,
@@ -108,7 +107,13 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["when", "variables", "geometryOverrides", "figmaVariant", "notes"],
+        "required": [
+          "when",
+          "variables",
+          "geometryOverrides",
+          "figmaVariant",
+          "notes"
+        ],
         "properties": {
           "when": { "type": "object", "minProperties": 1 },
           "variables": { "type": "object", "minProperties": 1 },
@@ -138,16 +143,30 @@
             "required": [
               "id",
               "figmaNodeId",
+              "figmaVariant",
               "mode",
               "props",
               "state",
               "viewport",
               "expectedGeometry",
               "expectedVariables",
-              "fixturePath",
+              "captureUrl",
               "result",
               "mismatches"
             ],
+            "if": {
+              "required": ["result"],
+              "properties": {
+                "result": { "enum": ["pass", "accepted-difference"] }
+              }
+            },
+            "then": {
+              "required": ["referenceScreenshot", "browserScreenshot"],
+              "properties": {
+                "referenceScreenshot": { "type": "string", "minLength": 1 },
+                "browserScreenshot": { "type": "string", "minLength": 1 }
+              }
+            },
             "properties": {
               "id": {
                 "type": "string",
@@ -157,8 +176,8 @@
                 "type": "string",
                 "pattern": "^[0-9]+:[0-9]+$"
               },
-              "figmaVariant": { "type": "string" },
-              "mode": { "enum": ["light", "dark"] },
+              "figmaVariant": { "type": "string", "minLength": 1 },
+              "mode": { "enum": ["Light", "Dark"] },
               "props": { "type": "object" },
               "state": { "type": "string", "minLength": 1 },
               "viewport": {
@@ -177,7 +196,7 @@
                 "items": { "type": "string", "minLength": 1 },
                 "uniqueItems": true
               },
-              "fixturePath": { "type": "string" },
+              "captureUrl": { "type": "string" },
               "referenceScreenshot": { "type": "string" },
               "browserScreenshot": { "type": "string" },
               "result": {
@@ -238,27 +257,39 @@
     "evidence": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "apiAudit",
-        "typecheck",
-        "build",
-        "docsBuild",
-        "correctionPasses"
-      ],
+      "required": ["apiAudit", "verify", "correctionPasses"],
       "properties": {
         "apiAudit": {},
-        "typecheck": {},
-        "build": {},
-        "docsBuild": {},
+        "verify": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["command", "result"],
+            "properties": {
+              "command": { "type": "string", "minLength": 1 },
+              "result": { "enum": ["pass", "fail"] },
+              "notes": { "type": "string" }
+            }
+          }
+        },
         "correctionPasses": {
           "type": "array",
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["caseIds", "mismatchesFound", "fixesMade", "recaptured"],
+            "required": [
+              "caseIds",
+              "mismatchesFound",
+              "fixesMade",
+              "recaptured"
+            ],
             "properties": {
               "caseIds": { "type": "array", "items": { "type": "string" } },
-              "mismatchesFound": { "type": "array", "items": { "type": "string" } },
+              "mismatchesFound": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
               "fixesMade": { "type": "array", "items": { "type": "string" } },
               "recaptured": { "type": "boolean" }
             }
