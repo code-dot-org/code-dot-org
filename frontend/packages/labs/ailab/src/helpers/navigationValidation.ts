@@ -35,7 +35,7 @@ export function isPanelEnabled(
   }
 
   if (panelId === 'selectFeatures') {
-    if (!minOneFeatureSelected(state)) {
+    if (project.selectedFeatures.length === 0) {
       return false;
     }
   }
@@ -82,48 +82,33 @@ function isDataUploaded(state: RootState): boolean {
   return state.data.length > 0 && !state.invalidData;
 }
 
-function minOneFeatureSelected(state: RootState): boolean {
-  return state.selectedFeatures.length !== 0;
-}
-
-function labelSelected(state: RootState): boolean {
-  return !!state.labelColumn;
-}
-
-export function uniqLabelFeaturesSelected(state: RootState): boolean {
+export function uniqLabelFeaturesSelected(project: AilabProject): boolean {
+  const {labelColumn, selectedFeatures} = project;
   return (
-    minOneFeatureSelected(state) &&
-    labelSelected(state) &&
-    !state.selectedFeatures.includes(state.labelColumn!)
+    selectedFeatures.length !== 0 &&
+    !!labelColumn &&
+    !selectedFeatures.includes(labelColumn)
   );
 }
 
-function isTrainedOnCurrentColumns(
-  state: RootState,
-  project: AilabProject,
-): boolean {
+function isTrainedOnCurrentColumns(project: AilabProject): boolean {
   const latestResult = project.historicResults[0];
   return (
     !!latestResult &&
-    latestResult.label === state.labelColumn &&
-    areArraysEqual(latestResult.features, state.selectedFeatures)
+    latestResult.label === project.labelColumn &&
+    areArraysEqual(latestResult.features, project.selectedFeatures)
   );
 }
 
-export function hasCurrentTrainingResult(
-  state: RootState,
-  project: AilabProject,
-): boolean {
+export function hasCurrentTrainingResult(project: AilabProject): boolean {
   return (
-    isTrainedOnCurrentColumns(state, project) &&
-    project.historicResults[0].total > 0
+    isTrainedOnCurrentColumns(project) && project.historicResults[0].total > 0
   );
 }
 
 function resultsAvailable(state: RootState, project: AilabProject): boolean {
   return (
-    state.accuracyCheckExamples.length > 0 &&
-    isTrainedOnCurrentColumns(state, project)
+    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(project)
   );
 }
 

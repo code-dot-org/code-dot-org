@@ -15,7 +15,7 @@ const ResultsDetails = () => {
     state => state.accuracyCheckPredictedLabels.length > 0,
   );
   const results = useAppSelector(
-    state => getResultsByGrade(state, state.resultsTab),
+    state => getResultsByGrade(state, project, state.resultsTab),
     deepEqual,
   );
 

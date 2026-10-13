@@ -49,6 +49,7 @@ import {
 import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {setPredictionPlaying} from '../redux';
 import {
   getDisplayTree,
@@ -163,17 +164,22 @@ interface DecisionTreeProps {
 
 const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const dispatch = useAppDispatch();
+  const {project} = useProject();
   const {trainedModel} = useTrainingData();
-  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
-  const trace = useAppSelector(state =>
-    getPredictionTrace(state, trainedModel),
+  const tree = useAppSelector(state =>
+    getDisplayTree(state, project, trainedModel),
   );
-  const step = useAppSelector(state => getPredictionStep(state, trainedModel));
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, project, trainedModel),
+  );
+  const step = useAppSelector(state =>
+    getPredictionStep(state, project, trainedModel),
+  );
   const isStepping = useAppSelector(
     state => state.predictionStep !== undefined,
   );
   const counts = useAppSelector(state =>
-    getDisplayTreeCounts(state, trainedModel),
+    getDisplayTreeCounts(state, project, trainedModel),
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
