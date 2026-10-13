@@ -319,7 +319,7 @@ describe('EditAilabMode', () => {
     ).toEqual(['', 'zoo', 'heart', 'pizza_toy']);
   });
 
-  describe('label and features', () => {
+  describe('label', () => {
     beforeEach(() => serveFiles(FILES));
 
     it('offers the columns students can choose', async () => {
@@ -359,26 +359,9 @@ describe('EditAilabMode', () => {
       });
     });
 
-    it('removes the new label from the features', async () => {
+    it('clears the label when the dataset changes', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "features": ["legs", "wings"]}'
-      );
-      await columnsLoaded();
-
-      fireEvent.change(labelDropdown(), {target: {value: 'legs'}});
-
-      expect(JSON.parse(savedMode())).toMatchObject({
-        label: 'legs',
-        features: ['wings'],
-      });
-
-      fireEvent.change(labelDropdown(), {target: {value: 'wings'}});
-      expect(JSON.parse(savedMode())).not.toHaveProperty('features');
-    });
-
-    it('clears them when the dataset changes', async () => {
-      const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"]}'
+        '{"datasets": ["zoo"], "label": "animal"}'
       );
       await columnsLoaded();
 

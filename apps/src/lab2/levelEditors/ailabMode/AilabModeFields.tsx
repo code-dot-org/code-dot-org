@@ -15,7 +15,6 @@ import {
   MIN_ACCURACY,
   ModeObject,
   setDataset,
-  setLabel,
 } from './ailabMode';
 import {DatasetFiles, useDatasetColumns} from './datasetColumns';
 
@@ -195,7 +194,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
               ? NO_LABEL
               : startingLabel ?? NO_LABEL
           }
-          onChange={e => onChange(setLabel(mode, e.target.value || undefined))}
+          onChange={e =>
+            onChange(
+              setJsonObjectValue(mode, 'label', e.target.value || undefined)
+            )
+          }
           disabled={!columns}
           helperMessage={
             columnsHelperMessage ?? 'The column students start out predicting.'
