@@ -31,7 +31,6 @@ class Adaptive < Level
     adaptive_id
   )
 
-  # The project screen's step, which the client builds from the pathway's project.
   PROJECT_STEP_ID = 'project'.freeze
 
   validates :adaptive_id, presence: true

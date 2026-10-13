@@ -21,6 +21,7 @@ export interface ResultsCardProps {
   hasNextLevel: boolean;
   onTryAgain: () => void;
   onNextLevel: () => void;
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 // Shown once an attempt is submitted.
@@ -37,6 +38,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
   hasNextLevel,
   onTryAgain,
   onNextLevel,
+  headingRef,
 }) => {
   const percentage = maxScore
     ? Math.round(((score ?? 0) / maxScore) * 100)
@@ -46,6 +48,7 @@ const ResultsCard: React.FunctionComponent<ResultsCardProps> = ({
     <AttemptCard
       label={showCorrectness ? 'results' : 'submitted'}
       title={title}
+      headingRef={headingRef}
       beforeFooterBorderedRow={
         <div className={styles.statsRow}>
           {showCorrectness && (

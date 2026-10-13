@@ -1,7 +1,6 @@
 class CreateUserAdaptiveSteps < ActiveRecord::Migration[7.0]
   def change
     create_table :user_adaptive_steps, charset: "utf8mb4", collation: "utf8mb4_unicode_ci" do |t|
-      # The adaptive level's UserLevel; no foreign key, per repo convention.
       t.bigint :user_level_id, unsigned: true, null: false
       t.string :step_id, null: false
       t.json :progress

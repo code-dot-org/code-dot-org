@@ -55,7 +55,7 @@ class UserLevel < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user, optional: true
-  # Kept through a soft delete, so that restoring the UserLevel restores them.
+
   has_many :user_adaptive_steps, dependent: nil
 
   after_save :after_submit, if: :submitted_or_resubmitted?

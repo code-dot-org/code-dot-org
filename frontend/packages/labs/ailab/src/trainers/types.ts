@@ -7,6 +7,12 @@ import type {
   TreeRegressionTrainer,
 } from '../constants';
 import type {RootState} from '../redux';
+import type {
+  AilabProject,
+  HistoricResult,
+  Hyperparameters,
+  TrainedModel,
+} from '../types';
 
 /*
   A level selects a trainer family. The label column type then decides
@@ -25,12 +31,22 @@ export type TrainerId =
   | typeof TreeClassificationTrainer
   | typeof TreeRegressionTrainer;
 
+/* What one training run produces. */
+export interface TrainingRun {
+  trainedModel: TrainedModel;
+  hyperparameters: Hyperparameters;
+  historicResult: HistoricResult;
+}
+
 export interface Trainer {
-  startTraining(): void;
-  predict(testValues: number[]): void;
-  batchPredict(examples: number[][]): (number | string)[];
+  startTraining(): TrainingRun | undefined;
+  predict(trainedModel: TrainedModel | undefined, testValues: number[]): void;
+  batchPredict(
+    trainedModel: TrainedModel | undefined,
+    examples: number[][],
+  ): (number | string)[];
 }
 
 export interface TrainerConstructor {
-  new (store: Store<RootState>): Trainer;
+  new (store: Store<RootState>, project: AilabProject): Trainer;
 }

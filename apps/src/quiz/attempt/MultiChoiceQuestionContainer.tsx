@@ -8,6 +8,7 @@ import {QuizQuestionSummary} from '../types';
 import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import QuestionDescription from './QuestionDescription';
 
 import styles from './multi-choice-question-container.module.scss';
 
@@ -21,6 +22,7 @@ export interface MultiChoiceQuestionContainerProps {
   // This is used for FE grading, while Quiz backed levels will handle grading on the server.
   // Therefore quiz backed levels should be used for most evaluation scenarios.
   selectedChoiceStatus?: 'correct' | 'incorrect';
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 const MultiChoiceQuestionContainer: React.FunctionComponent<
@@ -31,8 +33,14 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
   selectedChoiceId,
   onSelectChoice,
   selectedChoiceStatus,
+  headingRef,
 }) => (
-  <AttemptCard label={questionLabel} title={question.questionTitle}>
+  <AttemptCard
+    label={questionLabel}
+    title={question.questionTitle}
+    headingRef={headingRef}
+    description={<QuestionDescription markdown={question.description} />}
+  >
     <div
       className={styles.choices}
       role="radiogroup"

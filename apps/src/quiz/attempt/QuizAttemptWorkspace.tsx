@@ -15,6 +15,7 @@ import {QuizQuestionSummary} from '../types';
 import {groupByPage, toBool} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import PageDivider from './PageDivider';
@@ -117,8 +118,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // The finish-time success report, so Next level can wait for it.
   const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
 
-  const questionsRef = useRef<HTMLDivElement>(null);
-  const submittedRef = useRef<HTMLDivElement>(null);
+  const introScreenHeadingRef = useRef<HTMLHeadingElement>(null);
+  // The first card on the current page: the quiz title card or a question.
+  const pageHeadingRef = useRef<HTMLHeadingElement>(null);
+  const resultsHeadingRef = useRef<HTMLHeadingElement>(null);
   // Quiz views stay mounted across same-lab navigation, so a begin/finish
   // request can resolve after a different level is already current.
   // Gate progress reporting on this level instead.
@@ -126,7 +129,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   useEffect(() => {
     currentLevelKeyRef.current = levelId;
   }, [levelId]);
-  const introRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const selectedChoices: Record<number, string> = {};
@@ -149,27 +151,28 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // fail too.
   const didInitialCheckForAttemptFail = !attempt && !!error;
   const hasNoAttemptYet = attempt === null;
+  const hasTitleCard = currentPageNumber === 1 && !showIntroScreen;
 
   // Covers both the very first intro screen and Retake reopening it - either
   // way, the button that led here is gone, so hand focus to the heading.
   useEffect(() => {
     if (isIntroOpen) {
-      introRef.current?.querySelector<HTMLElement>('h2')?.focus();
+      introScreenHeadingRef.current?.focus();
     }
   }, [isIntroOpen]);
 
   // Focus on the new page's heading when navigating to a new page.
   useEffect(() => {
-    questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
+    pageHeadingRef.current?.focus();
   }, [currentPageNumber, isAttemptInProgress]);
 
-  // Focus the heading first, like introRef - not a button, so the result
+  // Focus the heading first, like the intro - not a button, so the result
   // gets announced before a screen reader user reaches Try again/Next level.
   useEffect(() => {
     if (!attempt?.submittedAt) {
       return;
     }
-    submittedRef.current?.querySelector<HTMLElement>('[tabindex]')?.focus();
+    resultsHeadingRef.current?.focus();
   }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {
@@ -291,6 +294,50 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
+  const renderQuestionContainer = (
+    question: QuizQuestionSummary,
+    indexOnPage: number
+  ) => {
+    // With no title card, focus moves to first question's heading on a page change.
+    const headingRef =
+      !hasTitleCard && indexOnPage === 0 ? pageHeadingRef : undefined;
+    const questionLabel =
+      quizQuestions.length > 1
+        ? `Question ${
+            quizQuestions.findIndex(q => q.id === question.id) + 1
+          } of ${quizQuestions.length}`
+        : undefined;
+    switch (question.type) {
+      case 'MultipleChoiceQuestion':
+        return (
+          <MultiChoiceQuestionContainer
+            key={question.id}
+            headingRef={headingRef}
+            question={question}
+            questionLabel={questionLabel}
+            selectedChoiceId={selectedChoicesByQuestionId[question.id] ?? null}
+            onSelectChoice={choiceId =>
+              handleSelectChoice(question.id, choiceId)
+            }
+          />
+        );
+      case 'FreeResponseQuestion':
+        return (
+          <FreeResponseQuestionContainer
+            key={question.id}
+            headingRef={headingRef}
+            question={question}
+            questionLabel={questionLabel}
+          />
+        );
+      default: {
+        // A new question type fails to compile here until it gets a case.
+        const unhandledType: never = question.type;
+        return unhandledType;
+      }
+    }
+  };
+
   const renderQuestionResults = (results: QuizQuestionResult[]) =>
     resultPages.map(
       (
@@ -376,8 +423,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               )}
           </div>
         ) : isIntroOpen ? (
-          <div className={styles.questions} ref={introRef}>
+          <div className={styles.questions}>
             <IntroCard
+              headingRef={introScreenHeadingRef}
               title={displayName || levelName}
               introText={customIntroText}
               questionCount={quizQuestions.length}
@@ -402,8 +450,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             <Typography variant="body2">Loading…</Typography>
           )
         ) : attempt.submittedAt ? (
-          <div className={styles.questions} ref={submittedRef}>
+          <div className={styles.questions}>
             <ResultsCard
+              headingRef={resultsHeadingRef}
               title={displayName || levelName}
               showCorrectness={isViewingStudent || toBool(showCorrectness)}
               score={attempt.score}
@@ -420,35 +469,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               renderQuestionResults(attempt.questionResults ?? [])}
           </div>
         ) : (
-          <div className={styles.questions} ref={questionsRef}>
-            {currentPageNumber === 1 && !showIntroScreen && (
-              <AttemptCard title={displayName || levelName} />
+          <div className={styles.questions}>
+            {hasTitleCard && (
+              <AttemptCard
+                title={displayName || levelName}
+                headingRef={pageHeadingRef}
+              />
             )}
             {quizQuestions
               .filter(
                 question => question.page === pageNumbers[currentPageNumber - 1]
               )
-              // Only MultipleChoiceQuestion has a container built so far.
-              .filter(question => question.type === 'MultipleChoiceQuestion')
-              .map(question => (
-                <MultiChoiceQuestionContainer
-                  key={question.id}
-                  question={question}
-                  questionLabel={
-                    quizQuestions.length > 1
-                      ? `Question ${
-                          quizQuestions.findIndex(q => q.id === question.id) + 1
-                        } of ${quizQuestions.length}`
-                      : undefined
-                  }
-                  selectedChoiceId={
-                    selectedChoicesByQuestionId[question.id] ?? null
-                  }
-                  onSelectChoice={choiceId =>
-                    handleSelectChoice(question.id, choiceId)
-                  }
-                />
-              ))}
+              .map(renderQuestionContainer)}
           </div>
         )}
       </div>

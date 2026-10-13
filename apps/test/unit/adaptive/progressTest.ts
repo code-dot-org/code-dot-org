@@ -254,22 +254,4 @@ describe('useProgress', () => {
     expect(result.current.stepContextMap).toEqual({try: {generated}});
     expect(store.saveStep).not.toHaveBeenCalled();
   });
-
-  it('resets locally and on the server', async () => {
-    const store = fakeStore({
-      steps: {read: {status: 'complete', timeSpent: 1}},
-    });
-    const {result} = await renderProgress(store);
-    act(() =>
-      result.current.updateStepContext('try', {
-        generated: {instructions: 'Hi', inputsHash: 'ab'},
-      })
-    );
-
-    act(() => result.current.reset());
-
-    expect(result.current.progress).toEqual(EMPTY_PROGRESS);
-    expect(result.current.stepContextMap).toEqual({});
-    expect(store.reset).toHaveBeenCalledWith(key);
-  });
 });

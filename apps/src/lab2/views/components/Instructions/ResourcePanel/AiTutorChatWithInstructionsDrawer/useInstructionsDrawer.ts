@@ -20,11 +20,14 @@ interface UseInstructionsDrawerOptions {
   // True when the AI Tutor tab is selected. When false (Instructions tab), the
   // chat is hidden and the instructions fill the whole panel.
   aiTutorActive: boolean;
+  // The drawer starts open rather than collapsed.
+  initiallyOpen?: boolean;
 }
 
 export const useInstructionsDrawer = ({
   isPredictLevel,
   aiTutorActive,
+  initiallyOpen = false,
 }: UseInstructionsDrawerOptions) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsScrollAreaRef = useRef<HTMLDivElement>(null);
@@ -46,7 +49,7 @@ export const useInstructionsDrawer = ({
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(!initiallyOpen);
   const [showScrollFade, setShowScrollFade] = useState(false);
 
   const {
