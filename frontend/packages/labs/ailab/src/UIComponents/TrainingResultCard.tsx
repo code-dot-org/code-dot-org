@@ -21,15 +21,15 @@ import styles from './trainingResultCard.module.scss';
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
   const {project} = useProject();
-  const hasResult = useAppSelector(state =>
-    hasCurrentTrainingResult(state, project),
-  );
+  const hasResult = hasCurrentTrainingResult(project);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = project.historicResults[0];
   const {trainedModel} = useTrainingData();
-  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const tree = useAppSelector(state =>
+    getDisplayTree(state, project, trainedModel),
+  );
   const counts = useAppSelector(state =>
-    getDisplayTreeCounts(state, trainedModel),
+    getDisplayTreeCounts(state, project, trainedModel),
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);

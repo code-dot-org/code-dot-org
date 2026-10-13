@@ -12,24 +12,29 @@ import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-function predictSnake({store, trainedModel}) {
+function predictSnake({store, project, trainedModel}) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
   });
 }
 
 function renderTrainedTree() {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  const trainingRun = runTraining(store);
-  renderWithProviders(createElement(DecisionTree), {store, trainingRun});
-  return {store, trainedModel: trainingRun.trainedModel};
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
+  renderWithProviders(createElement(DecisionTree), {
+    store,
+    project,
+    trainingRun,
+  });
+  return {store, project, trainedModel: trainingRun.trainedModel};
 }
 
 function zoomToPathButton() {
@@ -322,7 +327,10 @@ describe('DecisionTree', () => {
   });
 
   it('shows and describes how many held-out rows each answer gets right and wrong', () => {
-    const {correct, total} = getCorrectCount(trained.store.getState());
+    const {correct, total} = getCorrectCount(
+      trained.store.getState(),
+      trained.project,
+    );
     const answers = [...document.getElementsByClassName(moduleStyles.answer)];
     const shown = grade =>
       answers.reduce(

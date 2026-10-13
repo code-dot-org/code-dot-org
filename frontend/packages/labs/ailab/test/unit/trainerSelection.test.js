@@ -24,9 +24,11 @@ const JEANS_COLUMNS = {
   size: ColumnTypes.NUMERICAL,
 };
 
-function savedTrainerId(store) {
-  return getTrainedModelDataToSave(store.getState(), initialProject)
-    .selectedTrainer;
+// The trainer id comes off the label column's type, so an untrained project
+// carrying the right label is enough.
+function savedTrainerId(store, label = 'animal') {
+  const project = {...initialProject, labelColumn: label};
+  return getTrainedModelDataToSave(store.getState(), project).selectedTrainer;
 }
 
 describe('trainer selection from mode', () => {
@@ -66,14 +68,17 @@ describe('the trainer id recorded on a saved model', () => {
 
     expect(savedTrainerId(levelStore(mode))).toBe('treeClassify');
     expect(
-      savedTrainerId(levelStore(mode, JEANS, JEANS_COLUMNS, 'price')),
+      savedTrainerId(levelStore(mode, JEANS, JEANS_COLUMNS, 'price'), 'price'),
     ).toBe('treeRegress');
   });
 
   test('a knn level records the knn ids', () => {
     expect(savedTrainerId(levelStore(undefined))).toBe('knnClassify');
     expect(
-      savedTrainerId(levelStore(undefined, JEANS, JEANS_COLUMNS, 'price')),
+      savedTrainerId(
+        levelStore(undefined, JEANS, JEANS_COLUMNS, 'price'),
+        'price',
+      ),
     ).toBe('knnRegress');
   });
 

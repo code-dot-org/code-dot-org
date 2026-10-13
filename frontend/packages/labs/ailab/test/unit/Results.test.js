@@ -4,13 +4,14 @@ import {createElement} from 'react';
 import I18n from '../../src/i18n';
 import Results from '../../src/UIComponents/Results';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
-  const trainingRun = runTraining(store);
-  renderWithProviders(createElement(Results), {store, trainingRun});
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
+  renderWithProviders(createElement(Results), {store, project, trainingRun});
 }
 
 function testPanel() {

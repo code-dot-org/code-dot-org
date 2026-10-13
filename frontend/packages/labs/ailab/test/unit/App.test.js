@@ -5,11 +5,12 @@ import App from '../../src/App';
 import I18n from '../../src/i18n';
 import {resetState, setMode} from '../../src/redux';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderApp(mode) {
   const store = levelStore(mode);
+  const project = levelProject();
   const onTrained = vi.fn();
   const {trainModel} = renderWithProviders(
     createElement(App, {
@@ -17,7 +18,7 @@ function renderApp(mode) {
       saveTrainedModel: () => {},
       onTrained,
     }),
-    {store},
+    {store, project},
   );
   return {store, onTrained, trainModel};
 }
