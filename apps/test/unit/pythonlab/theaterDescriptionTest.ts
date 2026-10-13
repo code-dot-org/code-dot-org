@@ -2,6 +2,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {
   MAX_CODE_CHARACTERS,
+  MAX_RUN_CHARACTERS,
   buildDescriptionPrompt,
   cleanDescription,
   getDescribableFiles,
@@ -82,6 +83,20 @@ describe('theaterDescription', () => {
       expect(prompt).not.toContain('b = 2');
       expect(prompt).toContain('</code>');
     });
+
+    it('adds what the run drew, truncated past its budget', () => {
+      const prompt = buildDescriptionPrompt(
+        'Draw a sun.',
+        [file('1', 'main.py', 'play()')],
+        {
+          summary: 'A yellow circle.',
+          transcript: 'x'.repeat(MAX_RUN_CHARACTERS),
+        }
+      );
+      expect(prompt).toContain('<run>\nA yellow circle.\nxxx');
+      expect(prompt).not.toContain('x'.repeat(MAX_RUN_CHARACTERS));
+      expect(prompt).toContain('</run>');
+    });
   });
 
   describe('cleanDescription', () => {
@@ -89,6 +104,12 @@ describe('theaterDescription', () => {
       expect(
         cleanDescription('## Scene\n- A **red** circle\n- `blue` text')
       ).toBe('Scene A red circle blue text');
+    });
+
+    it('keeps punctuation that is part of the stage text', () => {
+      expect(
+        cleanDescription('The text "C# #1 hello_world 2 * 3 * 4" at the top.')
+      ).toBe('The text "C# #1 hello_world 2 * 3 * 4" at the top.');
     });
   });
 
@@ -125,6 +146,15 @@ describe('theaterDescription', () => {
         'A sun.'
       );
       await requestTheaterDescription(source('b'));
+
+      expect(mockGenerateText).toHaveBeenCalledTimes(2);
+    });
+
+    it('asks again when the same program draws something different', async () => {
+      mockGenerateText.mockResolvedValue({text: 'A die showing 3.'});
+
+      await requestTheaterDescription(source('d'), {summary: 'Shows 3.'});
+      await requestTheaterDescription(source('d'), {summary: 'Shows 5.'});
 
       expect(mockGenerateText).toHaveBeenCalledTimes(2);
     });

@@ -16,6 +16,10 @@ export function handleTheaterMedia(
     return;
   }
 
+  // Output printed before now has been read; output after it would cut off
+  // the stage description.
+  CodebridgeRegistry.getInstance().getConsoleManager()?.setNarrating(true);
+
   if (summary) {
     theater.handleSignal({
       value: TheaterSignalType.DESCRIPTION,

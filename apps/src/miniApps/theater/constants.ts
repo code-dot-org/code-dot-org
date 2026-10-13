@@ -20,6 +20,12 @@ export enum InputMessage {
 export const THEATER_IMAGE_ID = 'theater';
 export const THEATER_AUDIO_ID = 'theater-audio';
 
+// The theater package's account of what the run drew and played.
+export interface SceneDescription {
+  summary: string;
+  transcript?: string;
+}
+
 // `summary` doubles as the image's alt text.
 export type TheaterDescription =
   | {status: 'pending'}

@@ -7,6 +7,7 @@ import MiniApp from '@cdo/apps/miniApps/MiniApp';
 
 import {
   InputMessage,
+  SceneDescription,
   THEATER_AUDIO_ID,
   THEATER_IMAGE_ID,
   TheaterDescription,
@@ -131,8 +132,8 @@ export default class Theater extends MiniApp {
   private readonly audioSource: TrackedSource;
   // Bumped on reset and on each describe(), so a late answer is dropped.
   private descriptionGeneration: number;
-  // Read when no AI description arrives.
-  private fallbackDescription: {summary: string; transcript?: string} | null;
+  // Grounds the AI description, and is read when none arrives.
+  private fallbackDescription: SceneDescription | null;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -364,6 +365,10 @@ export default class Theater extends MiniApp {
     this.isVisualPlaying = false;
     this.settlePlayback();
     this.clearDescription();
+  }
+
+  getSceneDescription() {
+    return this.fallbackDescription;
   }
 
   // Falls back when the promise rejects or is absent.
