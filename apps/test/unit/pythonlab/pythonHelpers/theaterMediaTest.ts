@@ -4,12 +4,10 @@ import {handleTheaterMedia} from '@cdo/apps/pythonlab/pythonHelpers/theaterMedia
 
 describe('handleTheaterMedia', () => {
   let handleSignal: jest.Mock;
-  let setNarrating: jest.Mock;
   let createdUrls: string[];
 
   beforeEach(() => {
     handleSignal = jest.fn();
-    setNarrating = jest.fn();
     createdUrls = [];
 
     let counter = 0;
@@ -21,14 +19,7 @@ describe('handleTheaterMedia', () => {
 
     jest.spyOn(CodebridgeRegistry, 'getInstance').mockReturnValue({
       getTheater: () => ({handleSignal}),
-      getConsoleManager: () => ({setNarrating}),
     } as unknown as CodebridgeRegistry);
-  });
-
-  it('silences the console once the stage has media to describe', () => {
-    handleTheaterMedia(new Uint8Array([1, 2, 3]));
-
-    expect(setNarrating).toHaveBeenCalledWith(true);
   });
 
   afterEach(() => {

@@ -47,7 +47,6 @@ export async function handleRunClick(
   }
   // Set before the run's first write, and left set past the end of the run:
   // restoring announcements there would talk over the closing summary.
-  // Theater starts narrating only once its media arrives (handleTheaterMedia).
   consoleManager?.setNarrating(isNeighborhoodLevel() && !runTests);
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
