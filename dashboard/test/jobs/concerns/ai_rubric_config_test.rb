@@ -44,6 +44,19 @@ class AiRubricConfigTest < ActiveSupport::TestCase
     refute AiRubricConfig.ai_enabled?(@script_level)
   end
 
+  test 'ai_enabled? returns false when rubric has no s3_config_dir' do
+    create(:rubric, lesson: @lesson, level: @level, s3_config_dir: nil)
+
+    refute AiRubricConfig.ai_enabled?(@script_level)
+  end
+
+  # The levelbuilder rubric editor saves an unset s3_config_dir as "".
+  test 'ai_enabled? returns false when rubric has empty s3_config_dir' do
+    create(:rubric, lesson: @lesson, level: @level, s3_config_dir: '')
+
+    refute AiRubricConfig.ai_enabled?(@script_level)
+  end
+
   test 'validate passes when s3_config_dir is nil and no ai-enabled learning goals' do
     CDO.stubs(:aws_s3_emulated).returns(false)
     rubric = create(:rubric, lesson: @lesson, level: @level, s3_config_dir: nil)

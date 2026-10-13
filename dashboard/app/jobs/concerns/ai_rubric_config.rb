@@ -13,7 +13,7 @@ class AiRubricConfig
   end
 
   def self.ai_enabled?(script_level)
-    !!get_lesson_s3_name(script_level)
+    get_lesson_s3_name(script_level).present?
   end
 
   # Returns the path suffix of the location in S3 which contains the config
