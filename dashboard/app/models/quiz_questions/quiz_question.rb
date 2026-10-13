@@ -24,6 +24,10 @@ class QuizQuestion < ApplicationRecord
 
   after_initialize {self.type ||= self.class.sti_name}
 
+  # Set while loading from a file in self.setup, so the after_commit hook
+  # doesn't immediately write the just-read content back to the same file.
+  attr_accessor :skip_write_to_file
+
   # No FK; parent delete leaves a dangling id.
   belongs_to :fork_parent, class_name: 'QuizQuestion', optional: true
 
@@ -48,6 +52,7 @@ class QuizQuestion < ApplicationRecord
       Dir.glob("#{dashboard_root}/config/quiz_questions/**/*.json").each do |path|
         source = JSON.parse(File.read(path))
         question = source['type'].constantize.find_or_initialize_by(key: source['key'])
+        question.skip_write_to_file = true
         question.name = source['name']
         begin
           decrypted = Encryption.decrypt_object(source['encrypted_content'])
@@ -83,11 +88,11 @@ class QuizQuestion < ApplicationRecord
   end
 
   def delete_file
-    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if write_to_file?
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if levelbuilder_mode?
   end
 
   def write_to_file?
-    Rails.application.config.levelbuilder_mode
+    levelbuilder_mode? && !skip_write_to_file
   end
 
   # published unit means preview/stable/sunsetting
@@ -196,5 +201,9 @@ class QuizQuestion < ApplicationRecord
     end
 
     choice_ids
+  end
+
+  private def levelbuilder_mode?
+    Rails.application.config.levelbuilder_mode
   end
 end
