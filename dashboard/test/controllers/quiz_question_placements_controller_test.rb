@@ -46,6 +46,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_difference '@quiz.placements.count', 1 do
       post :create, params: {
         level_id: @quiz.id,
+        type: 'MultipleChoiceQuestion',
         questionName: 'New question',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
@@ -59,13 +60,14 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     question = MultipleChoiceQuestion.find(body['id'])
     assert_equal 'New question', question.name
     assert_equal 'b', question.content['correct_choice_id']
+    refute question.content.key?('description')
     placement = @quiz.placements.find_by!(quiz_question_id: question.id)
     assert_equal 3, placement.position
   end
 
   test "create returns bad_request when required fields are missing" do
     assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {level_id: @quiz.id, questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
+      post :create, params: {level_id: @quiz.id, type: 'MultipleChoiceQuestion', questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
     end
 
     assert_response :bad_request
@@ -76,6 +78,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_no_difference 'QuizQuestion.count' do
       post :create, params: {
         level_id: @quiz.id,
+        type: 'MultipleChoiceQuestion',
         questionName: 'Orphan risk',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
@@ -86,6 +89,45 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
     assert_response :bad_request
     refute QuizQuestion.exists?(name: 'Orphan risk')
+  end
+
+  test "create makes a FreeResponseQuestion" do
+    post :create, params: {
+      level_id: @quiz.id,
+      type: 'FreeResponseQuestion',
+      questionName: 'Reflection',
+      questionTitle: 'Give one example of an abstraction.',
+      description: 'A function counts.'
+    }
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    question = FreeResponseQuestion.find(body['id'])
+    assert_equal 'Give one example of an abstraction.', question.content['question_title']
+    assert_equal 'A function counts.', body['description']
+    assert @quiz.placements.exists?(quiz_question_id: question.id)
+  end
+
+  test "create returns bad_request when type is missing" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {
+        level_id: @quiz.id,
+        questionName: 'No type',
+        questionTitle: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
+        correctChoiceId: 'b'
+      }
+    end
+
+    assert_response :bad_request
+  end
+
+  test "create returns bad_request for a type not in QuizQuestion::TYPES" do
+    assert_no_difference 'QuizQuestion.count' do
+      post :create, params: {level_id: @quiz.id, type: 'QuizQuestion', questionName: 'x', questionTitle: 'x'}
+    end
+
+    assert_response :bad_request
   end
 
   # --- attach / detach / destroy: three different removal semantics ---
@@ -106,6 +148,25 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
     assert_response :created
     assert @quiz.placements.exists?(quiz_question_id: other_question.id)
+  end
+
+  test "attach accepts a FreeResponseQuestion" do
+    other_question = create(:free_response_question)
+
+    post :attach, params: {level_id: @quiz.id, id: other_question.id}
+
+    assert_response :created
+    assert @quiz.placements.exists?(quiz_question_id: other_question.id)
+  end
+
+  test "attach returns bad_request for a question type outside QuizQuestion::TYPES" do
+    base_question = create(:quiz_question)
+
+    assert_no_difference 'QuizQuestionPlacement.count' do
+      post :attach, params: {level_id: @quiz.id, id: base_question.id}
+    end
+
+    assert_response :bad_request
   end
 
   test "detach removes the placement but leaves the question itself intact" do

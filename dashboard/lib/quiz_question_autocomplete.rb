@@ -27,11 +27,11 @@ class QuizQuestionAutocomplete < AutocompleteHelper
   def self.get_search_matches(query, limit, sort = nil, standard_id = nil, course_or_unit = nil)
     limit = limit.to_i.clamp(MIN_LIMIT, MAX_LIMIT)
     order = SORT_ORDERS.fetch(sort, SORT_ORDERS['recent'])
-    rows = MultipleChoiceQuestion.order(order).limit(limit)
+    rows = QuizQuestion.where(type: QuizQuestion::TYPES).order(order).limit(limit)
     rows = rows.joins(:standards).where(standards: {id: standard_id}) if standard_id
     rows = apply_course_or_unit_filter(rows, course_or_unit) if course_or_unit
     return rows if query.blank?
-    return MultipleChoiceQuestion.none if query.length < MIN_WORD_LENGTH
+    return QuizQuestion.none if query.length < MIN_WORD_LENGTH
 
     rows.where("MATCH(name) AGAINST(? IN BOOLEAN MODE)", format_query(query))
   end

@@ -3,6 +3,12 @@ require_relative '../test_helper'
 require 'dynamic_config/gatekeeper'
 
 class DynamicConfigGatekeeperTest < Minitest::Test
+  class MockGatekeeper < Gatekeeper
+    def self.datastore_cache
+      @@mock_datastore_cache ||= Minitest::Mock.new
+    end
+  end
+
   MOCK_DATA = {
     'basic feature': {
       "[]" => true
@@ -14,74 +20,69 @@ class DynamicConfigGatekeeperTest < Minitest::Test
     }
   }.freeze
 
-  def setup
-    @mock_datastore = Minitest::Mock.new
-    @gatekeeper = GatekeeperBase.new(@mock_datastore)
-  end
-
   def test_allows
-    @mock_datastore.expect(:get, {"[]" => true}, ["test"])
-    assert @gatekeeper.allows("test")
+    MockGatekeeper.datastore_cache.expect(:get, {"[]" => true}, ["test"])
+    assert MockGatekeeper.allows("test")
 
-    @mock_datastore.expect(:get, {"[]" => false}, ["test"])
-    refute @gatekeeper.allows("test")
+    MockGatekeeper.datastore_cache.expect(:get, {"[]" => false}, ["test"])
+    refute MockGatekeeper.allows("test")
 
-    @mock_datastore.expect(:get, {"[[\"type\",\"query\"]]" => true}, ["test"])
-    assert @gatekeeper.allows("test", where: {type: "query"})
+    MockGatekeeper.datastore_cache.expect(:get, {"[[\"type\",\"query\"]]" => true}, ["test"])
+    assert MockGatekeeper.allows("test", where: {type: "query"})
 
-    @mock_datastore.expect(:get, {"[[\"type\",\"query\"]]" => false}, ["test"])
-    refute @gatekeeper.allows("test", where: {type: "query"})
+    MockGatekeeper.datastore_cache.expect(:get, {"[[\"type\",\"query\"]]" => false}, ["test"])
+    refute MockGatekeeper.allows("test", where: {type: "query"})
 
-    @mock_datastore.verify
+    MockGatekeeper.datastore_cache.verify
   end
 
   def test_basic_setter_functionality
     assert_raises ArgumentError do
-      @gatekeeper.set("valid key", "non-boolean value")
+      MockGatekeeper.set("valid key", "non-boolean value")
     end
 
-    @gatekeeper.stubs(:get_rule_map).returns({})
+    MockGatekeeper.stubs(:get_rule_map).returns({})
 
-    @mock_datastore.expect(:set, true, ["valid key", {"[]" => true}])
-    assert @gatekeeper.set("valid key", value: true)
+    MockGatekeeper.datastore_cache.expect(:set, true, ["valid key", {"[]" => true}])
+    assert MockGatekeeper.set("valid key", value: true)
 
-    @mock_datastore.expect(:set, true, ["valid key", {"[]" => true, "[[\"type\",\"query\"]]" => true}])
-    assert @gatekeeper.set("valid key", value: true, where: {type: "query"})
+    MockGatekeeper.datastore_cache.expect(:set, true, ["valid key", {"[]" => true, "[[\"type\",\"query\"]]" => true}])
+    assert MockGatekeeper.set("valid key", value: true, where: {type: "query"})
 
-    @mock_datastore.verify
-    @gatekeeper.unstub(:get_rule_map)
+    MockGatekeeper.datastore_cache.verify
+    MockGatekeeper.unstub(:get_rule_map)
   end
 
   def test_delete
     assert_raises ArgumentError do
-      @gatekeeper.delete(:invalid_key, where: {})
+      MockGatekeeper.delete(:invalid_key, where: {})
     end
 
-    @gatekeeper.stubs(:get_rule_map).returns({"[[\"type\",\"query\"]]" => true})
+    MockGatekeeper.stubs(:get_rule_map).returns({"[[\"type\",\"query\"]]" => true})
 
-    refute @gatekeeper.delete("nonexistent key")
-    refute @gatekeeper.delete("valid key", where: {"nonexistent type" => "query"})
-    refute @gatekeeper.delete("valid key", where: {"type" => "nonexistent query"})
+    refute MockGatekeeper.delete("nonexistent key")
+    refute MockGatekeeper.delete("valid key", where: {"nonexistent type" => "query"})
+    refute MockGatekeeper.delete("valid key", where: {"type" => "nonexistent query"})
 
-    @mock_datastore.expect(:set, true, ["valid key", {}])
-    assert @gatekeeper.delete("valid key", where: {"type" => "query"})
+    MockGatekeeper.datastore_cache.expect(:set, true, ["valid key", {}])
+    assert MockGatekeeper.delete("valid key", where: {"type" => "query"})
 
-    @mock_datastore.verify
-    @gatekeeper.unstub(:get_rule_map)
+    MockGatekeeper.datastore_cache.verify
+    MockGatekeeper.unstub(:get_rule_map)
   end
 
   def test_where_key
-    assert_equal "[]", @gatekeeper.where_key({})
+    assert_equal "[]", MockGatekeeper.where_key({})
 
     assert_equal "[[\"script_name\",\"Test Script\"]]",
-      @gatekeeper.where_key({script_name: "Test Script"})
+      MockGatekeeper.where_key({script_name: "Test Script"})
 
     assert_equal "[[\"lesson_name\",\"Test Lesson\"],[\"script_name\",\"Test Script\"]]",
-      @gatekeeper.where_key({script_name: "Test Script", lesson_name: "Test Lesson"})
+      MockGatekeeper.where_key({script_name: "Test Script", lesson_name: "Test Lesson"})
   end
 
   def test_to_hash
-    @mock_datastore.expect(:all, MOCK_DATA)
+    MockGatekeeper.datastore_cache.expect(:all, MOCK_DATA)
     expected = {
       'basic feature': [{"rule" => nil, "value" => true}],
       'empty feature': [],
@@ -90,23 +91,23 @@ class DynamicConfigGatekeeperTest < Minitest::Test
         {"rule" => nil, "where" => {"type" => "query"}, "value" => false}
       ]
     }
-    assert_equal(expected, @gatekeeper.to_hash)
-    @mock_datastore.verify
+    assert_equal(expected, MockGatekeeper.to_hash)
+    MockGatekeeper.datastore_cache.verify
   end
 
   def test_feature_names
-    @mock_datastore.expect(:all, MOCK_DATA)
-    assert_equal(Set[:'basic feature', :'complex feature'], @gatekeeper.feature_names)
-    @mock_datastore.verify
+    MockGatekeeper.datastore_cache.expect(:all, MOCK_DATA)
+    assert_equal(Set[:'basic feature', :'complex feature'], MockGatekeeper.feature_names)
+    MockGatekeeper.datastore_cache.verify
   end
 
   def test_property_values
-    @mock_datastore.expect(:all, MOCK_DATA)
-    assert_equal(Set[], @gatekeeper.property_values(""))
+    MockGatekeeper.datastore_cache.expect(:all, MOCK_DATA)
+    assert_equal(Set[], MockGatekeeper.property_values(""))
 
-    @mock_datastore.expect(:all, MOCK_DATA)
-    assert_equal(Set["query"], @gatekeeper.property_values("type"))
+    MockGatekeeper.datastore_cache.expect(:all, MOCK_DATA)
+    assert_equal(Set["query"], MockGatekeeper.property_values("type"))
 
-    @mock_datastore.verify
+    MockGatekeeper.datastore_cache.verify
   end
 end

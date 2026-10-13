@@ -22,6 +22,8 @@ type AiTutorChatWithInstructionDrawerProps = Omit<
   // Instructions tab (where it renders instructions only); the chat and the
   // Hide/Show Instructions toggle fade in only when the AI Tutor tab is active.
   aiTutorActive: boolean;
+  // The instructions drawer starts open rather than collapsed.
+  instructionsInitiallyOpen?: boolean;
 };
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -30,6 +32,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   instructionsContent,
   isPredictLevel,
   aiTutorActive,
+  instructionsInitiallyOpen = false,
   ...aiTutorChatProps
 }) => {
   const {
@@ -44,7 +47,11 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isPredictLevel, aiTutorActive});
+  } = useInstructionsDrawer({
+    isPredictLevel,
+    aiTutorActive,
+    initiallyOpen: instructionsInitiallyOpen,
+  });
 
   // Keep the chat mounted across tab switches (so its state persists) but inert
   // when the Instructions tab is showing, so its hidden controls aren't tabbable.

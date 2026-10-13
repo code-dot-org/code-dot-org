@@ -169,6 +169,7 @@ module Dashboard
     runtime_load_paths = [
       Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('app', 'models', 'quiz_questions'),
       Rails.root.join('app', 'models', 'sections'),
       Rails.root.join('../lib/cdo/shared_constants')
     ]

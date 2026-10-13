@@ -24,6 +24,7 @@ class MultipleChoiceQuestion < QuizQuestion
   # `content` shape:
   #   {
   #     "question_title" => "What is 2 + 2?",
+  #     "description" => "Markdown shown under the title. Optional.",
   #     "choices" => [{"id" => "0", "text" => "Option A"}, {"id" => "1", "text" => "Option B"}, ...],
   #     "correct_choice_id" => "0"
   #   }
@@ -43,14 +44,25 @@ class MultipleChoiceQuestion < QuizQuestion
     {score: correct ? 1 : 0, max_score: 1}
   end
 
+  def self.content_from_builder_params(params)
+    shared_content(params).merge(
+      choices: (params[:choices] || []).map(&:to_h),
+      correct_choice_id: params[:correctChoiceId],
+    )
+  end
+
+  def builder_content_json
+    attempt_content_json.merge(correctChoiceId: content['correct_choice_id'])
+  end
+
+  def attempt_content_json
+    {questionTitle: content['question_title'], description: content['description'], choices: content['choices']}
+  end
+
   private def validate_question_shape
     return if content.blank?
     q = content.deep_stringify_keys
-
-    unless q['question_title'].is_a?(String) && q['question_title'].present?
-      errors.add(:content, 'must have a non-blank "question_title"')
-      return
-    end
+    validate_shared_content(q)
 
     choice_ids = validate_choices(q['choices'])
     return if choice_ids.nil?

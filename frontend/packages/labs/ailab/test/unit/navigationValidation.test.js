@@ -58,6 +58,11 @@ const sameFeatureLabelState = {
 const resultsState = {
   ...selectedFeaturesState,
   accuracyCheckExamples: [0, 0],
+};
+
+const noProject = {historicResults: []};
+
+const trainedProject = {
   historicResults: [{label: 'isEvil', features: ['house'], accuracy: '100'}],
 };
 
@@ -76,47 +81,63 @@ const savedModelState = {
 
 describe('isPanelEnabled', () => {
   test('datasetView - disabled', async () => {
-    const result = isPanelEnabled(initialState, 'datasetView');
+    const result = isPanelEnabled(initialState, noProject, 'datasetView');
     expect(result).toBe(false);
   });
 
   test('datasetView - enabled', async () => {
-    const result = isPanelEnabled(dataUploadedState, 'datasetView');
+    const result = isPanelEnabled(dataUploadedState, noProject, 'datasetView');
     expect(result).toBe(true);
   });
 
   test('selectFeatures - disabled', async () => {
-    const result = isPanelEnabled(selectedLabelState, 'selectFeatures');
+    const result = isPanelEnabled(
+      selectedLabelState,
+      noProject,
+      'selectFeatures',
+    );
     expect(result).toBe(false);
   });
 
   test('selectFeatures - enabled', async () => {
-    const result = isPanelEnabled(selectedFeaturesState, 'selectFeatures');
+    const result = isPanelEnabled(
+      selectedFeaturesState,
+      noProject,
+      'selectFeatures',
+    );
     expect(result).toBe(true);
   });
 
   test('results - disabled', async () => {
-    const result = isPanelEnabled(selectedFeaturesState, 'results');
+    const result = isPanelEnabled(selectedFeaturesState, noProject, 'results');
     expect(result).toBe(false);
   });
 
   test('results - enabled', async () => {
-    const result = isPanelEnabled(resultsState, 'results');
+    const result = isPanelEnabled(resultsState, trainedProject, 'results');
     expect(result).toBe(true);
   });
 
   test('modelSummary - disabled, no model name', async () => {
-    const result = isPanelEnabled(resultsState, 'modelSummary');
+    const result = isPanelEnabled(resultsState, trainedProject, 'modelSummary');
     expect(result).toBe(false);
   });
 
   test('modelSummary - disabled, save in progress', async () => {
-    const result = isPanelEnabled(savingModelState, 'modelSummary');
+    const result = isPanelEnabled(
+      savingModelState,
+      trainedProject,
+      'modelSummary',
+    );
     expect(result).toBe(false);
   });
 
   test('modelSummary - enabled', async () => {
-    const result = isPanelEnabled(savedModelState, 'modelSummary');
+    const result = isPanelEnabled(
+      savedModelState,
+      trainedProject,
+      'modelSummary',
+    );
     expect(result).toBe(true);
   });
 });
@@ -135,19 +156,19 @@ describe('isPanelEnabled for results after training', () => {
   const trainedState = {
     ...resultsState,
     selectedFeatures: ['house', 'name'],
+  };
+  const project = {
     historicResults: [
       {label: 'isEvil', features: ['house', 'name'], accuracy: '100'},
     ],
   };
 
   test('disabled before any training', () => {
-    expect(
-      isPanelEnabled({...resultsState, historicResults: []}, 'results'),
-    ).toBe(false);
+    expect(isPanelEnabled(resultsState, noProject, 'results')).toBe(false);
   });
 
   test('enabled when the columns match the latest training', () => {
-    expect(isPanelEnabled(trainedState, 'results')).toBe(true);
+    expect(isPanelEnabled(trainedState, project, 'results')).toBe(true);
   });
 
   test.each([
@@ -155,9 +176,9 @@ describe('isPanelEnabled for results after training', () => {
     ['features', {selectedFeatures: ['house']}],
     ['feature order', {selectedFeatures: ['name', 'house']}],
   ])('disabled when the %s changed since training', (_, changes) => {
-    expect(isPanelEnabled({...trainedState, ...changes}, 'results')).toBe(
-      false,
-    );
+    expect(
+      isPanelEnabled({...trainedState, ...changes}, project, 'results'),
+    ).toBe(false);
   });
 });
 
@@ -169,11 +190,10 @@ describe('prevNextButtons on the data panels', () => {
   test.each([undefined, {datasets: ['a', 'b']}])(
     'datasetView never goes back to the hidden dataset picker with mode %o',
     mode => {
-      const {prev, next} = prevNextButtons({
-        ...selectedFeaturesState,
-        currentPanel: 'datasetView',
-        mode,
-      });
+      const {prev, next} = prevNextButtons(
+        {...selectedFeaturesState, currentPanel: 'datasetView', mode},
+        noProject,
+      );
       expect(prev).toBeUndefined();
       expect(next).toBeUndefined();
     },
@@ -182,20 +202,19 @@ describe('prevNextButtons on the data panels', () => {
   test.each([{}, {hideSelectLabel: true}])(
     'selectDataset moves on to datasetView with mode %o',
     mode => {
-      const {next} = prevNextButtons({
-        ...dataUploadedState,
-        currentPanel: 'selectDataset',
-        mode,
-      });
+      const {next} = prevNextButtons(
+        {...dataUploadedState, currentPanel: 'selectDataset', mode},
+        noProject,
+      );
       expect(next.panel).toBe('datasetView');
     },
   );
 
   test('results has neither button; the Dataset tab goes back', () => {
-    const {prev, next} = prevNextButtons({
-      ...resultsState,
-      currentPanel: 'results',
-    });
+    const {prev, next} = prevNextButtons(
+      {...resultsState, currentPanel: 'results'},
+      trainedProject,
+    );
     expect(prev).toBeUndefined();
     expect(next).toBeUndefined();
   });

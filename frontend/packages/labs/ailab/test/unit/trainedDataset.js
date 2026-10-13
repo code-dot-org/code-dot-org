@@ -55,8 +55,8 @@ export function trainDataset(
   ).forEach(column => store.dispatch(addSelectedFeature(column)));
 
   train.init(store);
-  train.onClickTrain();
-  return store.getState();
+  const run = train.onClickTrain();
+  return {state: store.getState(), trainedModel: run?.trainedModel, run};
 }
 
 export function modelInputs(state) {
@@ -67,18 +67,18 @@ export function modelInputs(state) {
   );
 }
 
-export function modelPredictions(state) {
+export function modelPredictions(state, trainedModel) {
   const labelKey = state.featureNumberKey[state.labelColumn];
-  return state.trainedModel
+  return trainedModel
     .predict(modelInputs(state))
     .map(prediction =>
       labelKey ? getKeyByValue(labelKey, prediction) : prediction,
     );
 }
 
-export function rowTraces(state) {
-  const tree = getDisplayTree(state);
-  const {root} = state.trainedModel.toJSON();
+export function rowTraces(state, trainedModel) {
+  const tree = getDisplayTree(state, trainedModel);
+  const {root} = trainedModel.toJSON();
   const inputs = modelInputs(state);
   return state.data.map((row, index) =>
     traceDisplayTree(tree, root, inputs[index], row),

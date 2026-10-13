@@ -66,6 +66,7 @@ export default function useQuizBuilderQuestions(
         id,
         type: 'MultipleChoiceQuestion',
         ...NEW_QUESTION_DEFAULTS,
+        description: null,
         explanation: null,
         standards: [],
         attachedToOtherQuizzes: false,
@@ -86,12 +87,14 @@ export default function useQuizBuilderQuestions(
       setError(null);
       setErrorQuestionId(null);
       try {
+        const question = questions.find(q => q.id === id);
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
               JSON.stringify({
                 ...payload,
-                page: questions.find(question => question.id === id)?.page ?? 1,
+                type: question?.type,
+                page: question?.page ?? 1,
               }),
               true,
               {'Content-Type': 'application/json'}
