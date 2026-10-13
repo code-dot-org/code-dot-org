@@ -1,4 +1,5 @@
 require 'cdo/shared_constants'
+require 'omni_auth/strategies/google_oauth2_without_tokeninfo'
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
@@ -286,6 +287,7 @@ Devise.setup do |config|
     }
 
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
+    strategy_class: OmniAuth::Strategies::GoogleOauth2WithoutTokeninfo,
     include_granted_scopes: true,
     prompt: 'consent',
     setup: lambda do |env|

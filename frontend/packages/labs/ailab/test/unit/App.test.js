@@ -6,12 +6,12 @@ import I18n from '../../src/i18n';
 import {resetState, setMode} from '../../src/redux';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders} from './renderWithProviders';
 
 function renderApp(mode) {
   const store = levelStore(mode);
   const onTrained = vi.fn();
-  renderWithProviders(
+  const {trainModel} = renderWithProviders(
     createElement(App, {
       onContinue: () => {},
       saveTrainedModel: () => {},
@@ -19,13 +19,7 @@ function renderApp(mode) {
     }),
     {store},
   );
-  return {store, onTrained};
-}
-
-function runTraining(store) {
-  act(() => {
-    trainModel(store);
-  });
+  return {store, onTrained, trainModel};
 }
 
 describe('onTrained', () => {
@@ -37,15 +31,15 @@ describe('onTrained', () => {
   });
 
   test('receives the accuracy of every training run', () => {
-    const {store, onTrained} = renderApp({trainer: 'decisionTree'});
-    runTraining(store);
-    runTraining(store);
+    const {onTrained, trainModel} = renderApp({trainer: 'decisionTree'});
+    trainModel();
+    trainModel();
     expect(onTrained.mock.calls).toEqual([[100], [100]]);
   });
 
   test('is not called when the next level loads', () => {
-    const {store, onTrained} = renderApp({trainer: 'decisionTree'});
-    runTraining(store);
+    const {store, onTrained, trainModel} = renderApp({trainer: 'decisionTree'});
+    trainModel();
     act(() => {
       store.dispatch(resetState());
       store.dispatch(setMode({}));

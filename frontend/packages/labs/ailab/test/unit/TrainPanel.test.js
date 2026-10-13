@@ -6,16 +6,21 @@ import {removeSelectedFeature} from '../../src/redux';
 import TrainPanel from '../../src/UIComponents/TrainPanel';
 
 import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
-function renderPanel({trained = false} = {}) {
-  const store = levelStore({});
-  const trainedModel = trained ? trainModel(store) : undefined;
-  renderWithProviders(createElement(TrainPanel), {store, trainedModel});
+function renderPanel({trained = false, mode = {}} = {}) {
+  const store = levelStore(mode);
+  const trainingRun = trained ? runTraining(store) : undefined;
+  renderWithProviders(createElement(TrainPanel), {store, trainingRun});
   return store;
 }
 
 const trainButton = () => screen.queryByRole('button', {name: 'Train model'});
+const labelOptions = () =>
+  Array.from(screen.getByRole('combobox', {name: 'Predict'}).options).map(
+    option => option.value,
+  );
+const featuresButton = () => screen.getByRole('button', {name: /^Using/});
 
 describe('TrainPanel', () => {
   beforeAll(() => {
@@ -39,5 +44,17 @@ describe('TrainPanel', () => {
       store.dispatch(removeSelectedFeature('legs'));
     });
     expect(trainButton()).not.toBeNull();
+  });
+
+  test('lets students change the features', () => {
+    renderPanel();
+    expect(featuresButton().disabled).toBe(false);
+    expect(labelOptions()).toEqual(['', 'animal', 'legs']);
+  });
+
+  test('locks the features, leaving them out of the label choices', () => {
+    renderPanel({mode: {lockFeatures: true}});
+    expect(featuresButton().disabled).toBe(true);
+    expect(labelOptions()).toEqual(['', 'animal']);
   });
 });

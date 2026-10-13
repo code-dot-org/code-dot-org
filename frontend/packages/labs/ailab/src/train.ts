@@ -18,7 +18,7 @@ import {
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
-import type {Trainer} from './trainers/types';
+import type {Trainer, TrainingRun} from './trainers/types';
 import type {DataRow, TrainedModel} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
@@ -148,7 +148,7 @@ const init = (store: Store<RootState>): void => {
   prepareTrainingData(store);
 };
 
-const onClickTrain = (): TrainedModel | undefined => {
+const onClickTrain = (): TrainingRun | undefined => {
   return trainingState.trainer?.startTraining();
 };
 

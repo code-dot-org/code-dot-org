@@ -7,7 +7,11 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
+  label?: string;
+  features?: string[];
+  // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
+  lockFeatures?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
@@ -147,6 +151,18 @@ export interface HistoricResult {
   correct: number;
   total: number;
 }
+
+/* Everything saved with a student's work and restored when the level loads
+   again. A work in progress; more will be added here. */
+export interface AilabProject {
+  hyperparameters?: Hyperparameters;
+  historicResults: HistoricResult[];
+}
+
+export const initialProject: AilabProject = {
+  hyperparameters: undefined,
+  historicResults: [],
+};
 
 export interface ModelDataToSave {
   name?: string;

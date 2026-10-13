@@ -18,7 +18,7 @@ import TraceStepper, {
 } from '../../src/UIComponents/TraceStepper';
 
 import {levelStore} from './levelStore';
-import {trainModel} from './renderWithProviders';
+import {runTraining} from './renderWithProviders';
 
 // A bird sits two questions deep whichever way the tree first splits legs.
 function predictBird(store, trainedModel) {
@@ -41,7 +41,7 @@ const StoreStepper = ({trainedModel, onReplay}) =>
 function renderStepper(onReplay = () => {}) {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  const trainedModel = trainModel(store);
+  const {trainedModel} = runTraining(store);
   predictBird(store, trainedModel);
   render(
     createElement(
