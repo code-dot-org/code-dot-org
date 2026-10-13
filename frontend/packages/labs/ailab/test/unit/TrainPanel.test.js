@@ -1,35 +1,17 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, render, screen} from '@testing-library/react';
+import {act, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
 import {removeSelectedFeature} from '../../src/redux';
-import train from '../../src/train';
 import TrainPanel from '../../src/UIComponents/TrainPanel';
 
 import {levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderPanel({trained = false} = {}) {
   const store = levelStore({});
-  if (trained) {
-    train.reset();
-    train.init(store);
-    train.onClickTrain();
-  }
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(TrainPanel),
-      ),
-    ),
-  );
+  const trainingRun = trained ? runTraining(store) : undefined;
+  renderWithProviders(createElement(TrainPanel), {store, trainingRun});
   return store;
 }
 

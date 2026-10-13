@@ -13,6 +13,8 @@
 #ta_langfuse_secret_key: localoverride
 #tutor_langfuse_public_key: localoverride
 #ta_langfuse_public_key: localoverride
+#adaptive_langfuse_secret_key: localoverride
+#adaptive_langfuse_public_key: localoverride
 #google_gemini_ai_chat_lab_api_key: localoverride
 #google_gemini_ai_tutor_api_key: localoverride
 #azure_ai_content_safety_key: localoverride

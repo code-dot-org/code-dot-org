@@ -121,8 +121,8 @@ export function useProgress(
   }, []);
 
   return {
+    /** Undefined until the stored progress has loaded. */
     progress,
-    isLoading: progress === undefined,
     statusMap,
     stepContextMap,
     markStarted,

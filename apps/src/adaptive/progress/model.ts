@@ -28,6 +28,8 @@ export type StepAnswers = {[questionId: number]: Answer[]};
 export interface GeneratedContent {
   instructions: string;
   inputsHash: string;
+  /** The Langfuse trace it was generated under. */
+  traceId?: string;
 }
 
 /** What a step has accumulated for a student, by concern. */
