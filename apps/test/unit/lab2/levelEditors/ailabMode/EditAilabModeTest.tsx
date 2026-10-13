@@ -127,6 +127,12 @@ function optionsOf(select: HTMLElement) {
   );
 }
 
+function featuresLock() {
+  return screen.getByRole('checkbox', {
+    name: 'Lock the features so students cannot change them',
+  });
+}
+
 function featuresDropdown() {
   return screen.getByRole('button', {name: /^Features/});
 }
@@ -556,20 +562,18 @@ describe('EditAilabMode', () => {
       const savedMode = renderEditor('{"datasets": ["zoo"]}');
       await columnsLoaded();
 
-      fireEvent.click(
-        screen.getByRole('checkbox', {
-          name: 'Lock the features so students cannot change them',
-        })
-      );
+      fireEvent.click(featuresLock());
       expect(
         screen.getByText('Choose the features to lock.')
       ).toBeInTheDocument();
+      expect(featuresLock()).toBeInvalid();
 
       toggleFeature('legs');
 
       expect(
         screen.queryByText('Choose the features to lock.')
       ).not.toBeInTheDocument();
+      expect(featuresLock()).toBeValid();
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
@@ -586,9 +590,11 @@ describe('EditAilabMode', () => {
 
       fireEvent.click(screen.getByRole('button', {name: 'Select all'}));
       expect(screen.getByText(noLabelLeft)).toBeInTheDocument();
+      expect(featuresLock()).toBeInvalid();
 
       fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
       expect(screen.queryByText(noLabelLeft)).not.toBeInTheDocument();
+      expect(featuresLock()).toBeValid();
     });
 
     it("reports a dataset whose columns don't load", async () => {

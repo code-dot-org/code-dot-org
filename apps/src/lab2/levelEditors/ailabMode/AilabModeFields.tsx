@@ -181,12 +181,6 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           }
           onChange={changeMode}
         />
-        <div className={moduleStyles.booleanField}>
-          {renderCheckbox(
-            'lockFeatures',
-            'Lock the features so students cannot change them'
-          )}
-        </div>
       </div>
 
       <Typography variant="body2" className={moduleStyles.label}>
