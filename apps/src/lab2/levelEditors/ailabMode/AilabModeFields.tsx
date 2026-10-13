@@ -17,8 +17,11 @@ import {
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
+  getFeatures,
+  getStartingLabel,
   setDataset,
   setFeatures,
+  withoutLabelInFeatures,
 } from './ailabMode';
 import {DatasetFiles} from './datasetColumns';
 import LabelField from './LabelField';
@@ -90,10 +93,10 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
 
-  const features = (mode.features as string[] | undefined) ?? [];
-  const startingLabel =
-    (mode.label as string | undefined) ??
-    (mode.hideSelectLabel === true ? columns?.defaultLabel : undefined);
+  const features = getFeatures(mode);
+  const featuresLocked = mode.lockFeatures === true;
+  const defaultLabel = columns?.defaultLabel;
+  const startingLabel = getStartingLabel(mode, defaultLabel);
   const selectableColumns = columns?.selectable ?? [];
   const featureColumns = selectableColumns.filter(
     column => column !== startingLabel
@@ -121,17 +124,23 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     featuresError = `Students will not start with these features: ${skippedFeatures.join(
       ', '
     )}.`;
+  } else if (columns && featuresLocked && startingFeatures.length === 0) {
+    featuresError = 'Choose the features to lock.';
   } else if (
     columns &&
-    mode.lockFeatures === true &&
-    startingFeatures.length === 0
+    featuresLocked &&
+    selectableColumns.every(column => startingFeatures.includes(column))
   ) {
-    featuresError = 'Choose the features to lock.';
+    featuresError =
+      'Leave a column out for students to predict, or choose a label.';
   }
+
+  const changeMode = (newMode: ModeObject) =>
+    onChange(withoutLabelInFeatures(newMode, defaultLabel));
 
   const handleFeatureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {value, checked} = e.target;
-    onChange(
+    changeMode(
       setFeatures(
         mode,
         featureColumns.filter(column =>
@@ -147,7 +156,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       label={checkboxLabel}
       checked={mode[key] === true}
       onChange={e =>
-        onChange(
+        changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
         )
       }
@@ -159,7 +168,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     const text = e.target.value;
     const accuracy = Number(text);
     setAccuracyText(text);
-    onChange(
+    changeMode(
       setJsonObjectValue(
         mode,
         'requireAccuracy',
@@ -187,7 +196,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           required
           items={datasetItems}
           selectedValue={selectedDataset ?? NO_DATASET}
-          onChange={e => onChange(setDataset(mode, e.target.value))}
+          onChange={e => changeMode(setDataset(mode, e.target.value))}
           helperMessage="Students start with this dataset loaded."
           errorMessage={
             selectedDataset
@@ -205,7 +214,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           helperMessage={
             columnsHelperMessage ?? 'The column students start out predicting.'
           }
-          onChange={onChange}
+          onChange={changeMode}
         />
         <div className={moduleStyles.booleanField}>
           {renderCheckbox(
@@ -217,14 +226,14 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       <div className={moduleStyles.fieldArea}>
         <CheckboxDropdown
           labelText="Features"
-          aria-label="Features"
+          aria-label={`Features, ${startingFeatures.join(', ') || 'None'}`}
           name="ailab_mode_features"
           styleAsFormField
           allOptions={featureOptions}
           checkedOptions={startingFeatures}
           onChange={handleFeatureChange}
-          onSelectAll={() => onChange(setFeatures(mode, featureColumns))}
-          onClearAll={() => onChange(setFeatures(mode, []))}
+          onSelectAll={() => changeMode(setFeatures(mode, featureColumns))}
+          onClearAll={() => changeMode(setFeatures(mode, []))}
           selectAllText="Select all"
           clearAllText="Clear"
           doneText="Done"
@@ -254,7 +263,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
           onChange={e =>
-            onChange(setJsonObjectValue(mode, 'trainer', e.target.value))
+            changeMode(setJsonObjectValue(mode, 'trainer', e.target.value))
           }
           size="s"
         />

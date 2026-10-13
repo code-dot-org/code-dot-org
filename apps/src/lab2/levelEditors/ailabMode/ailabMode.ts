@@ -62,7 +62,9 @@ function isValidModeValue(
   if (key === 'features') {
     return (
       Array.isArray(value) &&
-      value.every(feature => typeof feature === 'string')
+      value.length > 0 &&
+      value.every(feature => typeof feature === 'string' && feature !== '') &&
+      new Set(value).size === value.length
     );
   }
   if ((BOOLEAN_MODE_KEYS as string[]).includes(key)) {
@@ -99,6 +101,20 @@ export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   return newMode;
 }
 
+export function getFeatures(mode: ModeObject): string[] {
+  return (mode.features as string[] | undefined) ?? [];
+}
+
+export function getStartingLabel(
+  mode: ModeObject,
+  defaultLabel: string | undefined
+): string | undefined {
+  return (
+    (mode.label as string | undefined) ??
+    (mode.hideSelectLabel === true ? defaultLabel : undefined)
+  );
+}
+
 export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
   return setJsonObjectValue(
     mode,
@@ -107,14 +123,14 @@ export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
   );
 }
 
-export function setLabel(
+export function withoutLabelInFeatures(
   mode: ModeObject,
-  label: string | undefined
+  defaultLabel: string | undefined
 ): ModeObject {
-  const features = (mode.features as string[] | undefined) ?? [];
+  const startingLabel = getStartingLabel(mode, defaultLabel);
   return setFeatures(
-    setJsonObjectValue(mode, 'label', label),
-    features.filter(feature => feature !== label)
+    mode,
+    getFeatures(mode).filter(feature => feature !== startingLabel)
   );
 }
 

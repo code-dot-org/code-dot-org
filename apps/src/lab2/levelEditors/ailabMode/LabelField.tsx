@@ -1,7 +1,9 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 
-import {ModeObject, setLabel} from './ailabMode';
+import {setJsonObjectValue} from '../jsonUtils';
+
+import {getStartingLabel, ModeObject} from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
 
 const NO_LABEL = '';
@@ -29,7 +31,7 @@ const LabelField: React.FunctionComponent<LabelFieldProps> = ({
   const savedLabelUnlisted =
     savedLabel !== undefined && !choices.includes(savedLabel);
   const savedLabelUnavailable = !!columns && savedLabelUnlisted;
-  const startingLabel = savedLabel ?? (locked ? defaultLabel : undefined);
+  const startingLabel = getStartingLabel(mode, defaultLabel);
   const shownLabel =
     locked && savedLabelUnavailable ? undefined : startingLabel;
   const offerNone = !locked || shownLabel === undefined;
@@ -63,7 +65,9 @@ const LabelField: React.FunctionComponent<LabelFieldProps> = ({
       required={locked}
       items={items}
       selectedValue={shownLabel ?? NO_LABEL}
-      onChange={e => onChange(setLabel(mode, e.target.value || undefined))}
+      onChange={e =>
+        onChange(setJsonObjectValue(mode, 'label', e.target.value || undefined))
+      }
       disabled={!columns}
       helperMessage={helperMessage}
       errorMessage={error}

@@ -54,11 +54,17 @@ describe('ailabMode', () => {
     it('checks only the shape of the label and features', () => {
       const mode = {label: 'any column', features: ['a', 'b']};
       expect(cleanMode(mode, KNOWN).mode).toEqual(mode);
-      [{label: 3}, {label: ''}, {features: 'a'}, {features: ['a', 2]}].forEach(
-        bad => {
-          expect(cleanMode(bad, KNOWN).mode).toEqual({});
-        }
-      );
+      [
+        {label: 3},
+        {label: ''},
+        {features: 'a'},
+        {features: ['a', 2]},
+        {features: []},
+        {features: ['']},
+        {features: ['a', 'a']},
+      ].forEach(bad => {
+        expect(cleanMode(bad, KNOWN).mode).toEqual({});
+      });
     });
   });
 
