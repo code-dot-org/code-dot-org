@@ -49,15 +49,18 @@ class QuizQuestion < ApplicationRecord
         source = JSON.parse(File.read(path))
         question = source['type'].constantize.find_or_initialize_by(key: source['key'])
         question.name = source['name']
-        decrypted = Encryption.decrypt_object(source['encrypted_content'])
-        question.content = decrypted['content']
-        question.explanation = decrypted['explanation']
+        begin
+          decrypted = Encryption.decrypt_object(source['encrypted_content'])
+          question.content = decrypted['content']
+          question.explanation = decrypted['explanation']
+        rescue Encryption::KeyMissingError
+          raise if rack_env?(:production)
+          puts "WARNING: quiz question '#{source['key']}' seeded with placeholder content due to missing CDO.properties_encryption_key"
+          question.content = question.placeholder_content
+        end
         question.save! if question.changed?
       rescue JSON::ParserError
         raise format('failed to parse %s', path)
-      rescue Encryption::KeyMissingError
-        raise if rack_env?(:production)
-        puts "WARNING: quiz question '#{source['key']}' not seeded properly due to missing CDO.properties_encryption_key"
       end
     end
   end
@@ -131,6 +134,14 @@ class QuizQuestion < ApplicationRecord
   # Builds `content` from question builder request params.
   def self.content_from_builder_params(builder_params)
     raise ArgumentError, "#{name} does not accept editor params"
+  end
+
+  # A valid `content` for this subtype, used in place of real (encrypted)
+  # content when seeding without CDO.properties_encryption_key. An instance
+  # method, not class-level, so it can fold in this question's own key -
+  # keeping placeholders distinguishable when a quiz has more than one.
+  def placeholder_content
+    raise NotImplementedError, "#{self.class.name} must implement placeholder_content"
   end
 
   # The `content` fields every subtype has. A blank description is omitted,

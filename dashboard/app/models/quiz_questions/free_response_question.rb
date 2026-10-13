@@ -35,6 +35,10 @@ class FreeResponseQuestion < QuizQuestion
     shared_content(params)
   end
 
+  def placeholder_content
+    {'question_title' => "Placeholder question #{key} - encryption key missing"}
+  end
+
   def builder_content_json
     attempt_content_json
   end
