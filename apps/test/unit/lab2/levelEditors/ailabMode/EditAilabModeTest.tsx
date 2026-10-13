@@ -516,6 +516,32 @@ describe('EditAilabMode', () => {
       expect(labelDropdown()).toBeInvalid();
     });
 
+    it('locks the features, asking for some to lock', async () => {
+      const savedMode = renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+
+      fireEvent.click(
+        screen.getByRole('checkbox', {
+          name: 'Lock the features so students cannot change them',
+        })
+      );
+      expect(
+        screen.getByText('Choose the features to lock.')
+      ).toBeInTheDocument();
+
+      toggleFeature('legs');
+
+      expect(
+        screen.queryByText('Choose the features to lock.')
+      ).not.toBeInTheDocument();
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        lockFeatures: true,
+        features: ['legs'],
+      });
+    });
+
     it("reports a dataset whose columns don't load", async () => {
       serveFiles({});
       renderEditor('{"datasets": ["zoo"]}');

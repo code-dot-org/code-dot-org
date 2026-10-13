@@ -116,12 +116,18 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const skippedFeatures = columns
     ? features.filter(feature => !featureColumns.includes(feature))
     : [];
-  const featuresError =
-    skippedFeatures.length > 0
-      ? `Students will not start with these features: ${skippedFeatures.join(
-          ', '
-        )}.`
-      : undefined;
+  let featuresError: string | undefined;
+  if (skippedFeatures.length > 0) {
+    featuresError = `Students will not start with these features: ${skippedFeatures.join(
+      ', '
+    )}.`;
+  } else if (
+    columns &&
+    mode.lockFeatures === true &&
+    startingFeatures.length === 0
+  ) {
+    featuresError = 'Choose the features to lock.';
+  }
 
   const handleFeatureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {value, checked} = e.target;
@@ -230,6 +236,12 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           errorMessage={featuresError}
           size="s"
         />
+        <div className={moduleStyles.booleanField}>
+          {renderCheckbox(
+            'lockFeatures',
+            'Lock the features so students cannot change them'
+          )}
+        </div>
       </div>
 
       <Typography variant="body2" className={moduleStyles.label}>
