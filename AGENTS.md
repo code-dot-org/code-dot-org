@@ -21,7 +21,7 @@ A complex file may open with a short orienting paragraph. A file of independent 
 
 ## Pull requests
 
-Write PR descriptions to `.github/pull_request_template.md` and `.github/PULL_REQUEST_GUIDELINES.md`.
+Write PR descriptions to `.github/pull_request_template.md` and `.github/PULL_REQUEST_GUIDELINES.md`. Never write in the first person: "I" and "me" are the PR author's. Refer to the author by name or GitHub username.
 
 ## A few other useful docs:
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX. ALWAYS read @apps/README.md before working with frontend code.
