@@ -14,6 +14,7 @@ import {getAvailableDatasets, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
+import {ProjectProvider} from './ProjectContext';
 import {
   setMode,
   setCurrentPanel,
@@ -24,10 +25,10 @@ import {
   setInstructionsDismissed,
   setInstructionsEnabled,
   resetState,
-  setHistoricResults,
 } from './redux';
 import {store} from './store';
 import train from './train';
+import {TrainingDataProvider} from './TrainingDataContext';
 import type {Mode} from './types';
 
 let root: Root | undefined;
@@ -69,11 +70,15 @@ export const mount = function (options: MountOptions): void {
   // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <ThemeProvider
-        theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
-      >
-        <App {...options} />
-      </ThemeProvider>
+      <ProjectProvider>
+        <TrainingDataProvider>
+          <ThemeProvider
+            theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
+          >
+            <App {...options} />
+          </ThemeProvider>
+        </TrainingDataProvider>
+      </ProjectProvider>
     </Provider>,
   );
 };
@@ -90,17 +95,19 @@ export const unmount = function (): void {
  * Prepare the lab for a level. Call this once per level after mount().
  */
 export const loadLevel = function (mode?: Mode): void {
-  invalidatePendingDatasetLoads();
-  store.dispatch(resetState());
-  train.reset();
-  store.dispatch(setMode(mode));
-  processMode(mode);
+  reload(mode, /*keepHistoricResults*/ false);
 };
 
 export const startOver = function (): void {
-  const {mode, historicResults} = store.getState();
-  loadLevel(mode);
-  store.dispatch(setHistoricResults(historicResults));
+  reload(store.getState().mode, /*keepHistoricResults*/ true);
+};
+
+const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
+  invalidatePendingDatasetLoads();
+  store.dispatch(resetState(keepHistoricResults));
+  train.reset();
+  store.dispatch(setMode(mode));
+  processMode(mode);
 };
 
 /**

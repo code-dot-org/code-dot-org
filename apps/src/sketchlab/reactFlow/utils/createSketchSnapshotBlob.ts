@@ -8,6 +8,7 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
+import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
 import {SketchCaptureError} from './SketchCaptureError';
 
 const EXPORT_PADDING_PX = 10;
@@ -61,8 +62,11 @@ export const createSketchSnapshotBlob = async (
 
   let blob: Blob | null;
   try {
+    // Supplying this stops html-to-image from inlining every font the page declares.
+    const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
     blob = await toBlob(viewport, {
       backgroundColor,
+      fontEmbedCSS,
       width: imageWidth,
       height: imageHeight,
       style: {

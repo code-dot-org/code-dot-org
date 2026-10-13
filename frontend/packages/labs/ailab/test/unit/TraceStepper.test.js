@@ -18,30 +18,31 @@ import TraceStepper, {
 } from '../../src/UIComponents/TraceStepper';
 
 import {levelStore} from './levelStore';
+import {runTraining} from './renderWithProviders';
 
 // A bird sits two questions deep whichever way the tree first splits legs.
-function predictBird(store) {
+function predictBird(store, trainedModel) {
   act(() => {
     store.dispatch(setTestData('legs', '2'));
-    train.onClickPredict();
+    train.onClickPredict(trainedModel);
   });
 }
 
-const StoreStepper = ({onReplay}) =>
+const StoreStepper = ({trainedModel, onReplay}) =>
   createElement(TraceStepper, {
     key: useAppSelector(state => state.predictionCount),
-    step: useAppSelector(getPredictionStep),
-    stepCount: useAppSelector(state => getPredictionTrace(state).path.length),
+    step: useAppSelector(state => getPredictionStep(state, trainedModel)),
+    stepCount: useAppSelector(
+      state => getPredictionTrace(state, trainedModel).path.length,
+    ),
     onReplay,
   });
 
 function renderStepper(onReplay = () => {}) {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  train.reset();
-  train.init(store);
-  train.onClickTrain();
-  predictBird(store);
+  const {trainedModel} = runTraining(store);
+  predictBird(store, trainedModel);
   render(
     createElement(
       Provider,
@@ -49,15 +50,15 @@ function renderStepper(onReplay = () => {}) {
       createElement(
         ThemeProvider,
         {theme: getMuiThemeForBrand(undefined)},
-        createElement(StoreStepper, {onReplay}),
+        createElement(StoreStepper, {trainedModel, onReplay}),
       ),
     ),
   );
-  return store;
+  return {store, trainedModel};
 }
 
-function step(store) {
-  return getPredictionStep(store.getState());
+function step(store, trainedModel) {
+  return getPredictionStep(store.getState(), trainedModel);
 }
 
 function button(name) {
@@ -85,71 +86,71 @@ describe('TraceStepper', () => {
   });
 
   it('plays a new prediction one step per interval, then offers a replay', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
 
-    expect(step(store)).toBe(0);
+    expect(step(store, trainedModel)).toBe(0);
     expect(button('Skip to the answer')).toBeTruthy();
 
     advanceOneStep();
-    expect(step(store)).toBe(1);
+    expect(step(store, trainedModel)).toBe(1);
 
     advanceOneStep();
-    expect(step(store)).toBe(2);
+    expect(step(store, trainedModel)).toBe(2);
     expect(button('Replay from the start')).toBeTruthy();
 
     advanceOneStep();
-    expect(step(store)).toBe(2);
+    expect(step(store, trainedModel)).toBe(2);
   });
 
   it('skips straight to the answer', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
 
     fireEvent.click(button('Skip to the answer'));
     advanceOneStep();
 
-    expect(step(store)).toBe(2);
+    expect(step(store, trainedModel)).toBe(2);
     expect(unavailable('Next step')).toBe(true);
     expect(unavailable('Previous step')).toBe(false);
   });
 
   it('replays from the root', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
     fireEvent.click(button('Skip to the answer'));
 
     fireEvent.click(button('Replay from the start'));
 
-    expect(step(store)).toBe(0);
+    expect(step(store, trainedModel)).toBe(0);
     advanceOneStep();
-    expect(step(store)).toBe(1);
+    expect(step(store, trainedModel)).toBe(1);
   });
 
   it('plays again when another prediction comes in', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
     fireEvent.click(button('Skip to the answer'));
 
-    predictBird(store);
+    predictBird(store, trainedModel);
 
-    expect(step(store)).toBe(0);
+    expect(step(store, trainedModel)).toBe(0);
     expect(button('Skip to the answer')).toBeTruthy();
   });
 
   it('stops playing when the student steps by hand', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
 
     fireEvent.click(button('Next step'));
     advanceOneStep();
 
-    expect(step(store)).toBe(1);
+    expect(step(store, trainedModel)).toBe(1);
     expect(button('Replay from the start')).toBeTruthy();
 
     fireEvent.click(button('Previous step'));
 
-    expect(step(store)).toBe(0);
+    expect(step(store, trainedModel)).toBe(0);
     expect(unavailable('Previous step')).toBe(true);
   });
 
   it('stops where it is when playback is stopped from outside', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
     advanceOneStep();
 
     act(() => {
@@ -157,7 +158,7 @@ describe('TraceStepper', () => {
     });
     advanceOneStep();
 
-    expect(step(store)).toBe(1);
+    expect(step(store, trainedModel)).toBe(1);
     expect(button('Replay from the start')).toBeTruthy();
   });
 
@@ -174,14 +175,14 @@ describe('TraceStepper', () => {
   });
 
   it('keeps focus on a button at an end, where pressing it does nothing', () => {
-    const store = renderStepper();
+    const {store, trainedModel} = renderStepper();
     act(() => button('Previous step').focus());
 
     fireEvent.click(button('Previous step'));
     fireEvent.click(button('Previous step'));
     fireEvent.click(button('Previous step'));
 
-    expect(step(store)).toBe(0);
+    expect(step(store, trainedModel)).toBe(0);
     expect(button('Previous step').disabled).toBe(false);
     expect(document.activeElement).toBe(button('Previous step'));
   });
@@ -194,20 +195,20 @@ describe('TraceStepper', () => {
     });
 
     it('shows the whole path at once', () => {
-      const store = renderStepper();
+      const {store, trainedModel} = renderStepper();
 
       expect(store.getState().predictionStep).toBeUndefined();
-      expect(step(store)).toBe(2);
+      expect(step(store, trainedModel)).toBe(2);
       expect(button('Replay from the start')).toBeTruthy();
     });
 
     it('replays from the root, leaving the stepping to the student', () => {
-      const store = renderStepper();
+      const {store, trainedModel} = renderStepper();
 
       fireEvent.click(button('Replay from the start'));
       advanceOneStep();
 
-      expect(step(store)).toBe(0);
+      expect(step(store, trainedModel)).toBe(0);
     });
   });
 });

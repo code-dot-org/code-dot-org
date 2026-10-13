@@ -3,7 +3,7 @@ import React from 'react';
 
 import {QuizBuilderQuestion} from '../types';
 
-import styles from './quiz-question-card.module.scss';
+import builderCommonStyles from '../builder-common.module.scss';
 
 interface UsageTabProps {
   question: QuizBuilderQuestion;
@@ -12,7 +12,7 @@ interface UsageTabProps {
 // Read-only cross-quiz usage context that QuizQuestionSerialization adds -
 // not part of the editable draft.
 const UsageTab: React.FunctionComponent<UsageTabProps> = ({question}) => (
-  <div className={styles.tabContent}>
+  <div className={builderCommonStyles.section}>
     <Typography variant="body3" component="p">
       {question.attachedToOtherQuizzes
         ? 'This question is also used on other quizzes.'
