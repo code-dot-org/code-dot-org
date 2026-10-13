@@ -127,6 +127,33 @@ function optionsOf(select: HTMLElement) {
   );
 }
 
+function featuresLock() {
+  return screen.getByRole('checkbox', {
+    name: 'Lock the features so students cannot change them',
+  });
+}
+
+function featuresDropdown() {
+  return screen.getByRole('button', {name: /^Features/});
+}
+
+function featureCheckboxes() {
+  return Array.from(
+    // The menu has no accessible role of its own.
+    document.querySelectorAll<HTMLInputElement>(
+      '#ailab_mode_features-dropdown input[type="checkbox"]'
+    )
+  );
+}
+
+function featureOptions() {
+  return featureCheckboxes().map(checkbox => checkbox.value);
+}
+
+function toggleFeature(column: string) {
+  fireEvent.click(featureCheckboxes().find(box => box.value === column)!);
+}
+
 function columnsLoaded() {
   return waitFor(() => expect(labelDropdown()).toBeEnabled());
 }
@@ -319,7 +346,7 @@ describe('EditAilabMode', () => {
     ).toEqual(['', 'zoo', 'heart', 'pizza_toy']);
   });
 
-  describe('label', () => {
+  describe('label and features', () => {
     beforeEach(() => serveFiles(FILES));
 
     it('offers the columns students can choose', async () => {
@@ -332,26 +359,35 @@ describe('EditAilabMode', () => {
         'wings',
       ]);
       expect(labelDropdown()).toBeValid();
+      expect(featureOptions()).toEqual(['legs', 'wings', 'animal']);
     });
 
     it('waits for a dataset', () => {
       renderEditor(null);
       expect(labelDropdown()).toBeDisabled();
-      expect(screen.getByText('Choose a dataset first.')).toBeInTheDocument();
+      expect(featuresDropdown()).toBeDisabled();
+      expect(screen.getAllByText('Choose a dataset first.')).toHaveLength(2);
     });
 
-    it('sets the label', async () => {
+    it('sets the label and the features', async () => {
       const savedMode = renderEditor('{"datasets": ["zoo"]}');
       await columnsLoaded();
 
       fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
+      toggleFeature('wings');
+      toggleFeature('legs');
 
+      expect(featureOptions()).toEqual(['legs', 'wings']);
+      expect(featuresDropdown()).toHaveAccessibleName('Features, legs, wings');
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
         label: 'animal',
+        features: ['legs', 'wings'],
       });
 
+      toggleFeature('legs');
+      toggleFeature('wings');
       fireEvent.change(labelDropdown(), {target: {value: ''}});
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
@@ -359,9 +395,39 @@ describe('EditAilabMode', () => {
       });
     });
 
-    it('clears the label when the dataset changes', async () => {
+    it('selects and clears all the features', async () => {
       const savedMode = renderEditor(
         '{"datasets": ["zoo"], "label": "animal"}'
+      );
+      await columnsLoaded();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Select all'}));
+      expect(JSON.parse(savedMode()).features).toEqual(['legs', 'wings']);
+
+      fireEvent.click(screen.getByRole('button', {name: 'Clear'}));
+      expect(JSON.parse(savedMode())).not.toHaveProperty('features');
+    });
+
+    it('removes the starting label from the features', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "features": ["legs", "wings", "animal"]}'
+      );
+      await columnsLoaded();
+
+      fireEvent.click(
+        screen.getByRole('checkbox', {
+          name: 'Lock the label so students cannot change it',
+        })
+      );
+      expect(JSON.parse(savedMode()).features).toEqual(['legs', 'wings']);
+
+      fireEvent.change(labelDropdown(), {target: {value: 'legs'}});
+      expect(JSON.parse(savedMode()).features).toEqual(['wings']);
+    });
+
+    it('clears them when the dataset changes', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"]}'
       );
       await columnsLoaded();
 
@@ -421,6 +487,7 @@ describe('EditAilabMode', () => {
         'legs',
         'wings',
       ]);
+      expect(featureOptions()).toEqual(['legs', 'wings']);
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
@@ -454,13 +521,32 @@ describe('EditAilabMode', () => {
       expect(optionsOf(labelDropdown())).toEqual(['age', 'sex']);
     });
 
-    it('flags a saved label students cannot choose', async () => {
-      renderEditor('{"datasets": ["zoo"], "label": "name"}');
+    it('flags saved columns students cannot choose', async () => {
+      renderEditor(
+        '{"datasets": ["zoo"], "label": "name", "features": ["legs", "fins"]}'
+      );
       await columnsLoaded();
       expect(labelDropdown()).toHaveValue('name');
       expect(
         screen.getByText('Students cannot choose "name" in this dataset.')
       ).toBeInTheDocument();
+      expect(
+        screen.getByText('Students will not start with these features: fins.')
+      ).toBeInTheDocument();
+    });
+
+    it('drops saved features students will not start with when the features change', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "features": ["legs", "fins"]}'
+      );
+      await columnsLoaded();
+
+      toggleFeature('wings');
+
+      expect(JSON.parse(savedMode()).features).toEqual(['legs', 'wings']);
+      expect(
+        screen.queryByText(/Students will not start with these features/)
+      ).not.toBeInTheDocument();
     });
 
     it('requires another label in place of a locked one students cannot choose', async () => {
@@ -472,6 +558,45 @@ describe('EditAilabMode', () => {
       expect(labelDropdown()).toBeInvalid();
     });
 
+    it('locks the features, asking for some to lock', async () => {
+      const savedMode = renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+
+      fireEvent.click(featuresLock());
+      expect(
+        screen.getByText('Choose the features to lock.')
+      ).toBeInTheDocument();
+      expect(featuresLock()).toBeInvalid();
+
+      toggleFeature('legs');
+
+      expect(
+        screen.queryByText('Choose the features to lock.')
+      ).not.toBeInTheDocument();
+      expect(featuresLock()).toBeValid();
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        lockFeatures: true,
+        features: ['legs'],
+      });
+    });
+
+    it('asks for a column to predict when every column is locked', async () => {
+      renderEditor('{"datasets": ["zoo"], "lockFeatures": true}');
+      await columnsLoaded();
+      const noLabelLeft =
+        'Leave a column out for students to predict, or choose a label.';
+
+      fireEvent.click(screen.getByRole('button', {name: 'Select all'}));
+      expect(screen.getByText(noLabelLeft)).toBeInTheDocument();
+      expect(featuresLock()).toBeInvalid();
+
+      fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
+      expect(screen.queryByText(noLabelLeft)).not.toBeInTheDocument();
+      expect(featuresLock()).toBeValid();
+    });
+
     it("reports a dataset whose columns don't load", async () => {
       serveFiles({});
       renderEditor('{"datasets": ["zoo"]}');
@@ -479,6 +604,7 @@ describe('EditAilabMode', () => {
         await screen.findByText("Could not load the dataset's columns.")
       ).toBeInTheDocument();
       expect(labelDropdown()).toBeDisabled();
+      expect(featuresDropdown()).toBeDisabled();
     });
   });
 });

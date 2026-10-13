@@ -15,8 +15,10 @@ import {
   MIN_ACCURACY,
   ModeObject,
   setDataset,
+  withoutLabelInFeatures,
 } from './ailabMode';
 import {DatasetFiles} from './datasetColumns';
+import FeaturesField from './FeaturesField';
 import LabelField from './LabelField';
 import {useDatasetColumns} from './useDatasetColumns';
 
@@ -93,13 +95,16 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     columnsHelperMessage = "Loading the dataset's columns...";
   }
 
+  const changeMode = (newMode: ModeObject) =>
+    onChange(withoutLabelInFeatures(newMode, columns?.defaultLabel));
+
   const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
     <Checkbox
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
       onChange={e =>
-        onChange(
+        changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
         )
       }
@@ -111,7 +116,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     const text = e.target.value;
     const accuracy = Number(text);
     setAccuracyText(text);
-    onChange(
+    changeMode(
       setJsonObjectValue(
         mode,
         'requireAccuracy',
@@ -139,7 +144,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           required
           items={datasetItems}
           selectedValue={selectedDataset ?? NO_DATASET}
-          onChange={e => onChange(setDataset(mode, e.target.value))}
+          onChange={e => changeMode(setDataset(mode, e.target.value))}
           helperMessage="Students start with this dataset loaded."
           errorMessage={
             selectedDataset
@@ -157,7 +162,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           helperMessage={
             columnsHelperMessage ?? 'The column students start out predicting.'
           }
-          onChange={onChange}
+          onChange={changeMode}
         />
         <div className={moduleStyles.booleanField}>
           {renderCheckbox(
@@ -165,6 +170,17 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
             'Lock the label so students cannot change it'
           )}
         </div>
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <FeaturesField
+          mode={mode}
+          columns={columns}
+          helperMessage={
+            columnsHelperMessage ??
+            'The columns students start out predicting from.'
+          }
+          onChange={changeMode}
+        />
       </div>
 
       <Typography variant="body2" className={moduleStyles.label}>
@@ -177,7 +193,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
           onChange={e =>
-            onChange(setJsonObjectValue(mode, 'trainer', e.target.value))
+            changeMode(setJsonObjectValue(mode, 'trainer', e.target.value))
           }
           size="s"
         />

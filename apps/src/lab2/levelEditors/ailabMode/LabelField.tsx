@@ -3,7 +3,7 @@ import React from 'react';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
-import {ModeObject} from './ailabMode';
+import {getStartingLabel, ModeObject} from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
 
 const NO_LABEL = '';
@@ -31,7 +31,7 @@ const LabelField: React.FunctionComponent<LabelFieldProps> = ({
   const savedLabelUnlisted =
     savedLabel !== undefined && !choices.includes(savedLabel);
   const savedLabelUnavailable = !!columns && savedLabelUnlisted;
-  const startingLabel = savedLabel ?? (locked ? defaultLabel : undefined);
+  const startingLabel = getStartingLabel(mode, defaultLabel);
   const shownLabel =
     locked && savedLabelUnavailable ? undefined : startingLabel;
   const offerNone = !locked || shownLabel === undefined;

@@ -10,12 +10,14 @@ export type ModeObject = Record<string, unknown>;
 // hideInstructionsOverlay is absent: Lab 2 never shows the overlay.
 export type BooleanModeKey =
   | 'hideSelectLabel'
+  | 'lockFeatures'
   | 'hideSave'
   | 'randomizeTestData'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
+  'lockFeatures',
   'hideSave',
   'hideColumnClicking',
   'randomizeTestData',
@@ -57,6 +59,14 @@ function isValidModeValue(
   if (key === 'label') {
     return typeof value === 'string' && value !== '';
   }
+  if (key === 'features') {
+    return (
+      Array.isArray(value) &&
+      value.length > 0 &&
+      value.every(feature => typeof feature === 'string' && feature !== '') &&
+      new Set(value).size === value.length
+    );
+  }
   if ((BOOLEAN_MODE_KEYS as string[]).includes(key)) {
     return typeof value === 'boolean';
   }
@@ -87,7 +97,41 @@ export function getSelectedDataset(mode: ModeObject): string | undefined {
 export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
   delete newMode.label;
+  delete newMode.features;
   return newMode;
+}
+
+export function getFeatures(mode: ModeObject): string[] {
+  return (mode.features as string[] | undefined) ?? [];
+}
+
+export function getStartingLabel(
+  mode: ModeObject,
+  defaultLabel: string | undefined
+): string | undefined {
+  return (
+    (mode.label as string | undefined) ??
+    (mode.hideSelectLabel === true ? defaultLabel : undefined)
+  );
+}
+
+export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
+  return setJsonObjectValue(
+    mode,
+    'features',
+    features.length ? features : undefined
+  );
+}
+
+export function withoutLabelInFeatures(
+  mode: ModeObject,
+  defaultLabel: string | undefined
+): ModeObject {
+  const startingLabel = getStartingLabel(mode, defaultLabel);
+  return setFeatures(
+    mode,
+    getFeatures(mode).filter(feature => feature !== startingLabel)
+  );
 }
 
 // Names the default trainer explicitly, so a saved Lab 2 level always records one.
