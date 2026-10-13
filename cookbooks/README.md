@@ -11,6 +11,7 @@ The top-level cookbook/recipe is [`cdo-apps`](cdo-apps)`::`[`default`](cdo-apps/
 ## How cookbooks are used
 
 These cookbooks are used to provision applications to `production` and other managed-infrastructure server environments.
+Kubernetes is replacing these EC2 instances; see [`k8s/`](../k8s/README.md#status).
 In these managed environments, the [application's CloudFormation template](../aws/cloudformation/cloud_formation_stack.yml.erb) 
 provides its EC2 instances with a
 [cloud-init user-data script](https://cloudinit.readthedocs.io/en/latest/topics/format.html#user-data-script) 
