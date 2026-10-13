@@ -88,8 +88,10 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   const label = mode.label as string | undefined;
   const labelLocked = mode.hideSelectLabel === true;
+  const labelUnchoosable =
+    !!columns && label !== undefined && !columns.selectable.includes(label);
   const defaultLabel = columns?.defaultLabel;
-  const noneMeansDefault = labelLocked && !!defaultLabel;
+  const noneMeansDefault = labelLocked && !!defaultLabel && !labelUnchoosable;
   const startingLabel = label ?? (labelLocked ? defaultLabel : undefined);
   const selectableColumns = columns?.selectable ?? [];
   const unlistedLabel =
@@ -120,11 +122,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   let labelError: string | undefined;
   if (columnsFailed) {
     labelError = "Could not load the dataset's columns.";
-  } else if (
-    columns &&
-    label !== undefined &&
-    !columns.selectable.includes(label)
-  ) {
+  } else if (labelUnchoosable) {
     labelError = `Students cannot choose "${label}" in this dataset.`;
   } else if (columns && labelLocked && !startingLabel) {
     labelError = 'This dataset has no default label. Choose a label to lock.';
@@ -192,7 +190,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           name="ailab_mode_label"
           required={labelLocked}
           items={labelItems}
-          selectedValue={startingLabel ?? NO_LABEL}
+          selectedValue={
+            labelLocked && labelUnchoosable
+              ? NO_LABEL
+              : startingLabel ?? NO_LABEL
+          }
           onChange={e => onChange(setLabel(mode, e.target.value || undefined))}
           disabled={!columns}
           helperMessage={

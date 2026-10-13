@@ -472,6 +472,15 @@ describe('EditAilabMode', () => {
       ).toBeInTheDocument();
     });
 
+    it('requires another label in place of a locked one students cannot choose', async () => {
+      renderEditor(
+        '{"datasets": ["zoo"], "label": "name", "hideSelectLabel": true}'
+      );
+      await columnsLoaded();
+      expect(labelDropdown()).toHaveValue('');
+      expect(labelDropdown()).toBeInvalid();
+    });
+
     it("reports a dataset whose columns don't load", async () => {
       serveFiles({});
       renderEditor('{"datasets": ["zoo"]}');
