@@ -39,6 +39,9 @@ steps:
 
         Running on instance: $instance_id ($region)
 
+        Configure AWS in your development environment's shell to use the Development AWS account (where the workers run):
+        export AWS_PROFILE=codeorg-dev
+
         To open a shell in this drone build (via AWS SSM), wait until the 'unit-tests' step starts and run:
         bin/drone/shell $instance_id $region
 
@@ -149,6 +152,9 @@ steps:
         cat <<EOF
 
         Running on instance: $instance_id ($region)
+
+        Configure AWS in your development environment's shell to use the Development AWS account (where the workers run):
+        export AWS_PROFILE=codeorg-dev
 
         To open a shell in this drone build (via AWS SSM), wait until the 'ui-tests' step starts and run:
         bin/drone/shell $instance_id $region
@@ -364,6 +370,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 2aa0d0cf048d224a6e9197e54a7dd380a2ae9f8919b703d51084c43468d8344e
+hmac: 2cb68513308cd6df12c63efecc81fe49aa6bab06a61cee94d447f98eeb2a78d0
 
 ...

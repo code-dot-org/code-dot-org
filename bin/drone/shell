@@ -11,12 +11,30 @@ Notes:
      drone build.
   2. Run only when drone is in either the unit->\`unit-tests\` or ui->\`ui-tests\`
      step, depending on which you want to debug. Running too early will not work.
-  3. The drone workers run in a separate AWS account; this uses the 'codeorg-dev'
-     profile (override with DRONE_AWS_PROFILE) which must authenticate to it and
-     allow ssm:StartSession.
+  3. The drone workers run in a separate AWS account. Set AWS_PROFILE=codeorg-dev
+     (authenticated via aws-google) before running; the script checks you are in
+     that account and prompts you if not.
 "
 
-PROFILE="${DRONE_AWS_PROFILE:-codeorg-dev}"
+# The alias of the dev AWS Account where the drone workers run.
+EXPECTED_ACCOUNT_ALIAS="codeorg-dev"
+
+# Confirms the active AWS credentials belong to the dev account before connecting.
+drone-preflight () {
+  local account_alias
+  account_alias=$(aws iam list-account-aliases --query 'AccountAliases[0]' --output text 2>/dev/null)
+  [ "$account_alias" = "$EXPECTED_ACCOUNT_ALIAS" ] && return 0
+
+  cat >&2 <<EOF
+
+Your active AWS credentials are not the '$EXPECTED_ACCOUNT_ALIAS' account, where the
+drone workers run. Set AWS_PROFILE=codeorg-dev and retry. If you recently used
+another profile, clear the cached aws-google session first (see the dev-account
+setup docs).
+
+EOF
+  return 1
+}
 
 # Opens an interactive shell in the live build container on INSTANCE_ID via SSM.
 # 'docker ps -lq' is the most-recently-created container, i.e. the running build.
@@ -30,11 +48,12 @@ drone-shell () {
   local instance_id=$1
   local region=$2
 
+  drone-preflight || exit 1
+
   local -a region_args=()
   [ -n "$region" ] && region_args=(--region "$region")
 
   aws ssm start-session \
-    --profile "$PROFILE" \
     "${region_args[@]}" \
     --target "$instance_id" \
     --document-name AWS-StartInteractiveCommand \
