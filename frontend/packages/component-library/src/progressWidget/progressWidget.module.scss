@@ -1,5 +1,3 @@
-@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
-
 $narrow: 991.98px;
 
 .widget {
@@ -23,32 +21,16 @@ $narrow: 991.98px;
   padding-inline: 3px 6px;
 }
 
-.lessonButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  box-sizing: border-box;
+// The CADS Dropdown Button: the outlined secondary button with a lighter
+// border and regular weight.  Two classes, to win over MUI's styles.
+.lesson .lessonButton {
   min-width: 0;
   height: 24px;
-  min-height: 0;
-  margin: 0;
-  padding: 2px 8px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: var(--shape-sm);
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-family: inherit;
-  font-size: 12px;
+  border-color: var(--borders-neutral-strong);
   font-weight: var(--font-weight-regular);
-  line-height: 18px;
-  cursor: pointer;
 
   &:hover {
-    background-color: var(--background-neutral-secondary);
-  }
-
-  &:focus-visible {
-    @include mixins.focus-styles;
+    border-color: var(--borders-neutral-strong);
   }
 
   @media (max-width: $narrow) {
@@ -57,16 +39,10 @@ $narrow: 991.98px;
 }
 
 .lessonLabel {
+  min-width: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.chevron {
-  flex-shrink: 0;
-  width: 16px;
-  font-size: 12px;
-  text-align: center;
 }
 
 .saveStatus {

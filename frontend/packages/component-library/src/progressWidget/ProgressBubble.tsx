@@ -102,9 +102,10 @@ const ProgressBubble: FunctionComponent<ProgressBubbleProps> = ({
     'aria-current': isActive ? ('step' as const) : undefined,
   };
 
+  // A disabled bubble keeps the role it would have enabled, and is focusable
+  // only when there is a tooltip to reach.
   let bubble;
-  if (disabled) {
-    // The disabled-link pattern; focusable only when there is a tooltip to reach.
+  if (disabled && href) {
     bubble = (
       <span
         {...shared}
@@ -114,6 +115,17 @@ const ProgressBubble: FunctionComponent<ProgressBubbleProps> = ({
       >
         {content}
       </span>
+    );
+  } else if (disabled && onClick) {
+    bubble = (
+      <button
+        {...shared}
+        type="button"
+        aria-disabled="true"
+        tabIndex={tooltip ? undefined : -1}
+      >
+        {content}
+      </button>
     );
   } else if (href) {
     bubble = (

@@ -1,4 +1,4 @@
-import {Box, Tooltip} from '@mui/material';
+import {Box, Button, Tooltip} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
 import classNames from 'classnames';
 import {FunctionComponent, MouseEvent, ReactNode} from 'react';
@@ -81,19 +81,19 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
 }) => (
   <div className={classNames(moduleStyles.widget, className)}>
     <div className={moduleStyles.lesson}>
-      <button
-        type="button"
+      <Button
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
         className={moduleStyles.lessonButton}
         onClick={onLessonClick}
         aria-expanded={lessonMenuExpanded}
+        endIcon={
+          <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
+        }
       >
         <span className={moduleStyles.lessonLabel}>{lessonLabel}</span>
-        <FontAwesomeV6Icon
-          iconName="chevron-down"
-          iconStyle="solid"
-          className={moduleStyles.chevron}
-        />
-      </button>
+      </Button>
       {saveStatus !== 'none' && (
         <Tooltip title={saveStatusLabel} placement="bottom">
           <span

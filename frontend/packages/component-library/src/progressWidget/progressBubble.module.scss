@@ -79,7 +79,7 @@ $statuses: (
   text-decoration: none;
   cursor: default;
 
-  &:is(a, button) {
+  &:is(a, button):not([aria-disabled]) {
     cursor: pointer;
   }
 
@@ -109,7 +109,7 @@ $statuses: (
     --edge: #{map.get($c, edge)};
     --ink: #{map.get($c, ink)};
 
-    &:is(a, button):is(:hover, :active) {
+    &:is(a, button):not([aria-disabled]):is(:hover, :active) {
       --fill: #{map.get($c, hover-fill)};
       --edge: #{map.get($c, hover-edge)};
       --ink: #{map.get($c, hover-ink)};
@@ -164,7 +164,7 @@ $statuses: (
   border-radius: 2px;
 
   &.active,
-  &:is(a, button):is(:hover, :active) {
+  &:is(a, button):not([aria-disabled]):is(:hover, :active) {
     --ink: var(--text-neutral-primary);
   }
 

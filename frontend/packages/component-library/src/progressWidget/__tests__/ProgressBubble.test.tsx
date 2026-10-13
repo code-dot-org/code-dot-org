@@ -18,7 +18,7 @@ describe('ProgressBubble', () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
-  it('is a disabled link that ignores clicks when disabled', async () => {
+  it('stays a link, without href or clicks, when disabled', async () => {
     const onClick = vi.fn();
     render(
       <ProgressBubble
@@ -36,9 +36,33 @@ describe('ProgressBubble', () => {
     expect(onClick).not.toHaveBeenCalled();
   });
 
+  it('stays a button, unclickable and unfocusable, when disabled', async () => {
+    const onClick = vi.fn();
+    render(
+      <ProgressBubble ariaLabel="Level 4, locked" onClick={onClick} disabled />,
+    );
+    const bubble = screen.getByRole('button', {name: 'Level 4, locked'});
+    expect(bubble).toHaveAttribute('aria-disabled', 'true');
+    expect(bubble).toHaveAttribute('tabindex', '-1');
+    await userEvent.click(bubble);
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('stays an image when disabled with nothing to do', () => {
+    render(<ProgressBubble ariaLabel="Level 5, locked" disabled />);
+    expect(
+      screen.getByRole('img', {name: 'Level 5, locked'}),
+    ).toBeInTheDocument();
+  });
+
   it('lets the keyboard reach a disabled bubble with a tooltip', () => {
     render(
-      <ProgressBubble ariaLabel="Level 3, locked" tooltip="Locked" disabled />,
+      <ProgressBubble
+        ariaLabel="Level 3, locked"
+        href="/level/3"
+        tooltip="Locked"
+        disabled
+      />,
     );
     expect(screen.getByRole('link', {name: 'Level 3, locked'})).toHaveAttribute(
       'tabindex',
