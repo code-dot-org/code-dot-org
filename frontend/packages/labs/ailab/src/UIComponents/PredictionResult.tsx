@@ -10,10 +10,12 @@ import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {
   getPredictionStep,
   getPredictionTrace,
 } from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import TraceStepper from './TraceStepper';
 
@@ -22,10 +24,18 @@ import styles from './predictionResult.module.scss';
 
 const PredictionResult = () => {
   const datasetId = useAppSelector(state => state.metadata?.name || '');
-  const labelColumn = useAppSelector(state => state.labelColumn || '');
-  const predictedLabel = useAppSelector(getConvertedPredictedLabel);
-  const trace = useAppSelector(getPredictionTrace);
-  const currentStep = useAppSelector(getPredictionStep);
+  const {project} = useProject();
+  const labelColumn = project.labelColumn || '';
+  const predictedLabel = useAppSelector(state =>
+    getConvertedPredictedLabel(state, project),
+  );
+  const {trainedModel} = useTrainingData();
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, project, trainedModel),
+  );
+  const currentStep = useAppSelector(state =>
+    getPredictionStep(state, project, trainedModel),
+  );
   const steppedByHand = useAppSelector(state => state.predictionStepByHand);
   const predictionCount = useAppSelector(state => state.predictionCount);
   const [replays, setReplays] = useState(0);

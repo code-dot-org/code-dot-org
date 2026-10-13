@@ -7,7 +7,11 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
+  label?: string;
+  features?: string[];
+  // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
+  lockFeatures?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
@@ -147,6 +151,28 @@ export interface HistoricResult {
   correct: number;
   total: number;
 }
+
+/* Columns a level's mode fixes for the student, once a dataset has loaded. */
+export interface PresetColumns {
+  labelColumn?: string;
+  selectedFeatures?: string[];
+}
+
+/* Everything saved with a student's work and restored when the level loads
+   again. */
+export interface AilabProject {
+  labelColumn?: string;
+  selectedFeatures: string[];
+  hyperparameters?: Hyperparameters;
+  historicResults: HistoricResult[];
+}
+
+export const initialProject: AilabProject = {
+  labelColumn: undefined,
+  selectedFeatures: [],
+  hyperparameters: undefined,
+  historicResults: [],
+};
 
 export interface ModelDataToSave {
   name?: string;

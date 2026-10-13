@@ -18,8 +18,8 @@ import {
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
-import type {Trainer} from './trainers/types';
-import type {DataRow} from './types';
+import type {Trainer, TrainingRun} from './trainers/types';
+import type {AilabProject, DataRow, TrainedModel} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -38,13 +38,19 @@ import type {DataRow} from './types';
   }
   */
 
-const buildOptionNumberKeysByFeature = (store: Store<RootState>): void => {
+const buildOptionNumberKeysByFeature = (
+  store: Store<RootState>,
+  project: AilabProject,
+): void => {
   const state = store.getState();
   const optionsMappedToNumbersByFeature: Record<
     string,
     Record<string, number>
   > = {};
-  const categoricalColumnsToConvert = getSelectedCategoricalColumns(state);
+  const categoricalColumnsToConvert = getSelectedCategoricalColumns(
+    state,
+    project,
+  );
   categoricalColumnsToConvert.forEach(
     (feature: string) =>
       (optionsMappedToNumbersByFeature[feature] = buildOptionNumberKey(
@@ -66,29 +72,39 @@ const buildOptionNumberKeysByFeature = (store: Store<RootState>): void => {
   }
   @return {array}
   */
-const extractTrainingExamples = (state: RootState, row: DataRow): number[] => {
+const extractTrainingExamples = (
+  state: RootState,
+  project: AilabProject,
+  row: DataRow,
+): number[] => {
   const exampleValues: number[] = [];
-  state.selectedFeatures.forEach((feature: string) =>
-    exampleValues.push(convertValueForTraining(state, row[feature], feature)),
+  project.selectedFeatures.forEach((feature: string) =>
+    exampleValues.push(
+      convertValueForTraining(state, project, row[feature], feature),
+    ),
   );
   return exampleValues;
 };
 
 const extractTrainingLabel = (
   state: RootState,
+  project: AilabProject,
   row: DataRow,
 ): number | string => {
-  const value = row[state.labelColumn!];
-  return convertValueForTraining(state, value, state.labelColumn!);
+  const value = row[project.labelColumn!];
+  return convertValueForTraining(state, project, value, project.labelColumn!);
 };
 
-const prepareTrainingData = (store: Store<RootState>): void => {
+const prepareTrainingData = (
+  store: Store<RootState>,
+  project: AilabProject,
+): void => {
   const updatedState = store.getState();
   const trainingExamples = updatedState.data.map((row: DataRow) =>
-    extractTrainingExamples(updatedState, row),
+    extractTrainingExamples(updatedState, project, row),
   );
   const trainingLabels = updatedState.data.map((row: DataRow) =>
-    extractTrainingLabel(updatedState, row),
+    extractTrainingLabel(updatedState, project, row),
   );
   /*
   Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
@@ -120,13 +136,17 @@ const prepareTrainingData = (store: Store<RootState>): void => {
   store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
 
-const prepareTestData = (store: Store<RootState>): number[] => {
+const prepareTestData = (
+  store: Store<RootState>,
+  project: AilabProject,
+): number[] => {
   const updatedState = store.getState();
   const testValues: number[] = [];
-  updatedState.selectedFeatures.forEach((feature: string) =>
+  project.selectedFeatures.forEach((feature: string) =>
     testValues.push(
       convertValueForTraining(
         updatedState,
+        project,
         updatedState.testData[feature],
         feature,
       ),
@@ -140,22 +160,25 @@ const trainingState: {
   store?: Store<RootState>;
   previousResults?: TrainingResults;
 } = {};
-const init = (store: Store<RootState>): void => {
+const init = (store: Store<RootState>, project: AilabProject): void => {
   trainingState.previousResults = getTrainingResults(store.getState());
   trainingState.store = store;
-  trainingState.trainer = buildTrainer(store);
-  buildOptionNumberKeysByFeature(store);
-  prepareTrainingData(store);
+  trainingState.trainer = buildTrainer(store, project);
+  buildOptionNumberKeysByFeature(store, project);
+  prepareTrainingData(store, project);
 };
 
-const onClickTrain = (): void => {
-  trainingState.trainer?.startTraining();
+const onClickTrain = (): TrainingRun | undefined => {
+  return trainingState.trainer?.startTraining();
 };
 
-const onClickPredict = (): void => {
+const onClickPredict = (
+  trainedModel: TrainedModel | undefined,
+  project: AilabProject,
+): void => {
   const {trainer, store} = trainingState;
   if (trainer && store) {
-    trainer.predict(prepareTestData(store));
+    trainer.predict(trainedModel, prepareTestData(store, project));
   }
 };
 

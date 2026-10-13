@@ -4,7 +4,7 @@ import {useState} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {formatAccuracy} from '../helpers/accuracy';
-import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 
 import PredictionSentence from './PredictionSentence';
 import ResultsModal, {type ResultsModalTab} from './ResultsModal';
@@ -12,7 +12,8 @@ import ResultsModal, {type ResultsModalTab} from './ResultsModal';
 import styles from './resultsBar.module.scss';
 
 const ResultsBar = () => {
-  const currentResult = useAppSelector(state => state.historicResults[0]);
+  const {project} = useProject();
+  const currentResult = project.historicResults[0];
   const [openTab, setOpenTab] = useState<ResultsModalTab>();
 
   if (!currentResult) {

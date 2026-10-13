@@ -1,38 +1,31 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
 import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
-  setHistoricResult,
 } from '../../src/redux';
 import ResultsDetails from '../../src/UIComponents/ResultsDetails';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders} from './renderWithProviders';
 
 function renderScorecard() {
   const store = levelStore();
   store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
   store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
   store.dispatch(setAccuracyCheckPredictedLabels(['bird', 'dog', 'bird']));
-  store.dispatch(setHistoricResult('animal', ['legs'], '66.67'));
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(ResultsDetails),
-      ),
-    ),
-  );
+  renderWithProviders(createElement(ResultsDetails), {
+    store,
+    project: {
+      ...levelProject(),
+      historicResults: [
+        {label: 'animal', features: ['legs'], accuracy: '66.67'},
+      ],
+    },
+  });
 }
 
 function rowsIn(rowgroup) {

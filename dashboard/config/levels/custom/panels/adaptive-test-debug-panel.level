@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-10T00:40:49.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Clues to give the AI\n\n- What you see: a broken-picture icon\n- What the error says: the file name and “Not Found”\n\nThe more clues you give, the better the fix.",
+        "imageUrl": "https://images.code.org/cbf8eaca3145a78c6bb9a734abb14993-Broken image, linked code clue.png",
+        "key": "adaptive-test-debug-panel-7c58b191-99aa-48b8-a5a0-cb52c9832b63",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-10 00:42:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:44:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:51:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

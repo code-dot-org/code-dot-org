@@ -9,8 +9,9 @@ import {
   edgePath,
   layoutDisplayTree,
   TREE_NODE_HEIGHT,
-  TREE_NODE_WIDTH,
 } from '../helpers/displayTreeLayout';
+import {nodeWidthMeasurer} from '../helpers/displayTreeNodeContent';
+import type {DisplayTreeCountsLookup} from '../helpers/displayTreeTrace';
 
 import {leafColorStyle} from './leafColors';
 
@@ -24,11 +25,21 @@ const VIEW_MARGIN = 8;
 
 interface TreeMiniMapProps {
   tree: DisplayTreeNode;
+  datasetId: string;
+  counts: DisplayTreeCountsLookup;
   onReplay: () => void;
 }
 
-const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
-  const layout = useMemo(() => layoutDisplayTree(tree, MINI_ROW_GAP), [tree]);
+const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
+  const layout = useMemo(
+    () =>
+      layoutDisplayTree(
+        tree,
+        nodeWidthMeasurer(datasetId, counts),
+        MINI_ROW_GAP,
+      ),
+    [tree, datasetId, counts],
+  );
 
   return (
     <div className={styles.miniMap}>
@@ -57,7 +68,7 @@ const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
             key={placed.id}
             x={placed.x}
             y={placed.y}
-            width={TREE_NODE_WIDTH}
+            width={placed.width}
             height={TREE_NODE_HEIGHT}
             rx={NODE_CORNER_RADIUS}
             {...(placed.answerIndex === undefined

@@ -2,6 +2,8 @@
 
 import MessageFormat from 'messageformat';
 
+import {initialProject} from '../../src/types';
+
 export const regressionState = {
   data: [
     {
@@ -29,11 +31,9 @@ export const regressionState = {
       height: 1.6,
     },
   ],
-  labelColumn: 'height',
   accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
   accuracyCheckLabels: [5.9, 3.8, 2.6, 2.5, 1.6, 0.7],
   accuracyCheckExamples: [[2], [2], [1], [1], [0], [0]],
-  selectedFeatures: ['sun'],
   columnsByDataType: {
     height: 'numerical',
     sun: 'categorical',
@@ -81,8 +81,6 @@ export const classificationState = {
     },
   ],
   currentColumn: 'temp',
-  labelColumn: 'play',
-  selectedFeatures: ['temp', 'weather'],
   columnsByDataType: {
     weather: 'categorical',
     temp: 'categorical',
@@ -153,8 +151,6 @@ export const allNumericalState = {
     },
   ],
   currentColumn: 'batCount',
-  labelColumn: 'mosquitoCount',
-  selectedFeatures: ['batCount'],
   columnsByDataType: {
     batCount: 'numerical',
     mosquitoCount: 'numerical',
@@ -250,3 +246,22 @@ export const premadeDataset = {
   imagePath: 'datasets/bats.jpg',
 };
 export const premadeDatasets = [premadeDataset];
+
+/* The column choices that pair with each state above. */
+export const regressionProject = {
+  ...initialProject,
+  labelColumn: 'height',
+  selectedFeatures: ['sun'],
+};
+
+export const classificationProject = {
+  ...initialProject,
+  labelColumn: 'play',
+  selectedFeatures: ['temp', 'weather'],
+};
+
+export const allNumericalProject = {
+  ...initialProject,
+  labelColumn: 'mosquitoCount',
+  selectedFeatures: ['batCount'],
+};

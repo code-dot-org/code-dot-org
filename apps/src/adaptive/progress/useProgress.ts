@@ -197,11 +197,6 @@ export function useProgress(
     return map;
   }, [progress]);
 
-  const reset = useCallback(() => {
-    setProgress(EMPTY_PROGRESS);
-    store.reset({scriptId, levelId});
-  }, [store, scriptId, levelId]);
-
   return {
     progress,
     isLoading: progress === undefined,
@@ -212,6 +207,5 @@ export function useProgress(
     leaveStep,
     saveAnswers,
     updateStepContext,
-    reset,
   };
 }
