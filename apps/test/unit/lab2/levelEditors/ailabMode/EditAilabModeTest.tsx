@@ -446,6 +446,14 @@ describe('EditAilabMode', () => {
       }
     );
 
+    it('offers None under the lock only when no label is shown', async () => {
+      renderEditor(
+        '{"datasets": ["heart"], "label": "age", "hideSelectLabel": true}'
+      );
+      await columnsLoaded();
+      expect(optionsOf(labelDropdown())).toEqual(['age', 'sex']);
+    });
+
     it('flags a saved label students cannot choose', async () => {
       renderEditor('{"datasets": ["zoo"], "label": "name"}');
       await columnsLoaded();

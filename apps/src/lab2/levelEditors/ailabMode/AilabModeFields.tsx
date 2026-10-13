@@ -16,7 +16,9 @@ import {
   ModeObject,
   setDataset,
 } from './ailabMode';
-import {DatasetFiles, useDatasetColumns} from './datasetColumns';
+import {DatasetFiles} from './datasetColumns';
+import LabelField from './LabelField';
+import {useDatasetColumns} from './useDatasetColumns';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
 
@@ -46,7 +48,6 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
 ];
 
 const NO_DATASET = '';
-const NO_LABEL = '';
 
 const TRAINER_ITEMS = [
   {value: 'knn', text: 'k-nearest neighbors'},
@@ -85,46 +86,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
 
-  const label = mode.label as string | undefined;
-  const labelLocked = mode.hideSelectLabel === true;
-  const labelUnchoosable =
-    !!columns && label !== undefined && !columns.selectable.includes(label);
-  const defaultLabel = columns?.defaultLabel;
-  const noneMeansDefault = labelLocked && !!defaultLabel && !labelUnchoosable;
-  const startingLabel = label ?? (labelLocked ? defaultLabel : undefined);
-  const selectableColumns = columns?.selectable ?? [];
-  const unlistedLabel =
-    label !== undefined && !selectableColumns.includes(label)
-      ? label
-      : undefined;
-
-  const labelItems = [
-    ...(noneMeansDefault ? [] : [{value: NO_LABEL, text: 'None'}]),
-    ...(unlistedLabel
-      ? [{value: unlistedLabel, text: unlistedLabel, disabled: true}]
-      : []),
-    ...(defaultLabel
-      ? [{value: defaultLabel, text: `${defaultLabel} (default)`}]
-      : []),
-    ...selectableColumns
-      .filter(column => column !== defaultLabel)
-      .map(column => ({value: column, text: column})),
-  ];
-
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
     columnsHelperMessage = 'Choose a dataset first.';
   } else if (!columns && !columnsFailed) {
     columnsHelperMessage = "Loading the dataset's columns...";
-  }
-
-  let labelError: string | undefined;
-  if (columnsFailed) {
-    labelError = "Could not load the dataset's columns.";
-  } else if (labelUnchoosable) {
-    labelError = `Students cannot choose "${label}" in this dataset.`;
-  } else if (columns && labelLocked && !startingLabel) {
-    labelError = 'This dataset has no default label. Choose a label to lock.';
   }
 
   const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
@@ -184,27 +150,14 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         />
       </div>
       <div className={moduleStyles.fieldArea}>
-        <SimpleDropdown
-          labelText="Label"
-          name="ailab_mode_label"
-          required={labelLocked}
-          items={labelItems}
-          selectedValue={
-            labelLocked && labelUnchoosable
-              ? NO_LABEL
-              : startingLabel ?? NO_LABEL
-          }
-          onChange={e =>
-            onChange(
-              setJsonObjectValue(mode, 'label', e.target.value || undefined)
-            )
-          }
-          disabled={!columns}
+        <LabelField
+          mode={mode}
+          columns={columns}
+          columnsFailed={columnsFailed}
           helperMessage={
             columnsHelperMessage ?? 'The column students start out predicting.'
           }
-          errorMessage={labelError}
-          size="s"
+          onChange={onChange}
         />
         <div className={moduleStyles.booleanField}>
           {renderCheckbox(
