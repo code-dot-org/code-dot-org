@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react';
 import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
 import path from 'node:path';
+import {VitePWA} from 'vite-plugin-pwa';
 
 const LOCALE_FONTS = /^@code-dot-org\/fonts\/locales\//;
 const NO_LOCALE_FONTS = '\0no-locale-fonts';
@@ -59,12 +60,9 @@ function englishFontsOnly(): Plugin {
   };
 }
 
-// Builds the landing page that Capacitor packages into the Android app. The
-// output is loaded from local files, so asset URLs are relative and index.html
-// sits at the root of dist, where Capacitor expects it.
+// Relative URLs let the same assets run on a web host and inside Capacitor.
 export default defineConfig({
   base: './',
-  publicDir: false,
   build: {
     outDir: path.resolve(__dirname, 'dist'),
     emptyOutDir: true,
@@ -80,5 +78,31 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [englishFontsOnly(), react()],
+  plugins: [
+    englishFontsOnly(),
+    react(),
+    VitePWA({
+      injectRegister: false,
+      registerType: 'autoUpdate',
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true,
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
+      },
+      manifest: {
+        name: 'CodeAI',
+        short_name: 'CodeAI',
+        description: 'Choose a coding and AI activity.',
+        start_url: './',
+        scope: './',
+        display: 'standalone',
+        background_color: '#FFFFFF',
+        theme_color: '#4C42CF',
+        icons: [
+          {src: 'pwa-192.png', sizes: '192x192', type: 'image/png'},
+          {src: 'pwa-512.png', sizes: '512x512', type: 'image/png'},
+        ],
+      },
+    }),
+  ],
 });

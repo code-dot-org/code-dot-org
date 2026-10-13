@@ -5,21 +5,33 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
 
+import {Capacitor} from '@capacitor/core';
 import {GlobalStyles, StyledEngineProvider, ThemeProvider} from '@mui/material';
+import {RouterProvider} from '@tanstack/react-router';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
+import {registerSW} from 'virtual:pwa-register';
 
 import {
   getMuiThemeForBrand,
   resolveBrand,
 } from '@code-dot-org/component-library/themes';
+import {initializeCore} from '@code-dot-org/core';
+import {consentPlugin} from '@code-dot-org/core/plugins/consent';
+import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
+import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
-import App from '@/App';
+import router from '@/router';
 
-// Entry for the landing page Capacitor packages into the Android app. It has
-// no router, Rails config or auth, unlike the site's frontend: the landing page
-// is signed-out and runs from local files.
+initializeCore({
+  plugins: [consentPlugin, localizationPlugin, observabilityPlugin],
+});
+
+// Capacitor installs these assets with the app and does not need a service worker.
+if (!Capacitor.isNativePlatform()) {
+  registerSW({immediate: true});
+}
 
 document.documentElement.dataset.brand = resolveBrand(undefined);
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
@@ -65,7 +77,7 @@ function render() {
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           {globalStyles}
-          <App />
+          <RouterProvider router={router} />
         </ThemeProvider>
       </StyledEngineProvider>
     </StrictMode>,

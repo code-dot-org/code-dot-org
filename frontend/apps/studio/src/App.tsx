@@ -1,4 +1,5 @@
-import {useEffect, useState} from 'react';
+import {Capacitor} from '@capacitor/core';
+import {useLocation, useRouter} from '@tanstack/react-router';
 
 import Congratulations from './Congratulations';
 import {
@@ -11,7 +12,7 @@ import Launcher from './Launcher';
 
 // MainActivity.kt opens #finished=<course> when a curriculum reaches its
 // certificate page; the course is empty when unknown.
-const FINISHED_FRAGMENT = '#finished=';
+const FINISHED_FRAGMENT = 'finished=';
 // MainActivity.kt handles this link and never loads it: it erases the
 // session's progress and projects, then opens ?next= above the landing page.
 const RESET_URL = 'https://studio.code.org/codeai-app/reset';
@@ -21,6 +22,10 @@ function openCurriculum(curriculum: Curriculum) {
 }
 
 function tryAgain(curriculum: Curriculum) {
+  if (!Capacitor.isNativePlatform()) {
+    window.location.assign(firstLevelUrl(curriculum));
+    return;
+  }
   const next = encodeURIComponent(firstLevelUrl(curriculum));
   window.location.assign(`${RESET_URL}?next=${next}`);
 }
@@ -37,18 +42,9 @@ function finishedCourseIn(hash: string): string | null {
  * child back. Finishing a curriculum brings them back to its congratulations.
  */
 export default function App() {
-  const [finishedCourse, setFinishedCourse] = useState(() =>
-    finishedCourseIn(window.location.hash),
-  );
-
-  // Back from the congratulations returns to the curricula.
-  useEffect(() => {
-    function onHashChange() {
-      setFinishedCourse(finishedCourseIn(window.location.hash));
-    }
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
+  const hash = useLocation({select: location => location.hash});
+  const router = useRouter();
+  const finishedCourse = finishedCourseIn(hash);
 
   if (finishedCourse !== null) {
     return (
@@ -56,7 +52,7 @@ export default function App() {
         curriculum={curriculumForCourse(finishedCourse)}
         onTryAgain={tryAgain}
         // The landing page without #finished is the entry before this one.
-        onChooseAnother={() => window.history.back()}
+        onChooseAnother={() => router.history.back()}
       />
     );
   }
