@@ -54,6 +54,9 @@ function isValidModeValue(
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
   }
+  if (key === 'label') {
+    return typeof value === 'string' && value !== '';
+  }
   if ((BOOLEAN_MODE_KEYS as string[]).includes(key)) {
     return typeof value === 'boolean';
   }
@@ -79,6 +82,12 @@ export function cleanMode(
 
 export function getSelectedDataset(mode: ModeObject): string | undefined {
   return Array.isArray(mode.datasets) ? mode.datasets[0] : undefined;
+}
+
+export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
+  const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
+  delete newMode.label;
+  return newMode;
 }
 
 // Names the default trainer explicitly, so a saved Lab 2 level always records one.

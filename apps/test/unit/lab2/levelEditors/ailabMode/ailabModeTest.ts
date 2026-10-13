@@ -49,6 +49,14 @@ describe('ailabMode', () => {
     it('drops an out-of-range accuracy', () => {
       expect(cleanMode({requireAccuracy: 101}, KNOWN).mode).toEqual({});
     });
+
+    it('checks only the shape of the label', () => {
+      const mode = {label: 'any column'};
+      expect(cleanMode(mode, KNOWN).mode).toEqual(mode);
+      [{label: 3}, {label: ''}].forEach(bad => {
+        expect(cleanMode(bad, KNOWN).mode).toEqual({});
+      });
+    });
   });
 
   it('getSelectedDataset returns the one dataset', () => {
