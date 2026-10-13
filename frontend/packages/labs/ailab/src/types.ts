@@ -152,14 +152,14 @@ export interface HistoricResult {
   total: number;
 }
 
-/* Everything saved with a student's work and restored when the level loads
-   again. A work in progress; more will be added here. */
 /* Columns a level's mode fixes for the student, once a dataset has loaded. */
 export interface PresetColumns {
   labelColumn?: string;
   selectedFeatures?: string[];
 }
 
+/* Everything saved with a student's work and restored when the level loads
+   again. */
 export interface AilabProject {
   labelColumn?: string;
   selectedFeatures: string[];

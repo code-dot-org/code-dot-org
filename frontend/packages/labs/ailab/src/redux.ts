@@ -68,8 +68,6 @@ export interface RootState {
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
-  // Set once a dataset load has worked out what the mode fixes, for
-  // ProjectContext to apply. A plain signal, not lab state.
   presetColumns: PresetColumns | undefined;
   resetCount: number;
   resetKeepsHistoricResults: boolean;

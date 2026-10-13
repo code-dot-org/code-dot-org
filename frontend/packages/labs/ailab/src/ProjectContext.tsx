@@ -82,6 +82,10 @@ export const ProjectProvider = ({
     }));
   }, []);
 
+  /*
+    TODO: Filter out the label column from the selected features
+    when adding or setting features.
+  */
   const addSelectedFeature = useCallback(
     (feature: string) => {
       setProject(previous =>
@@ -118,8 +122,7 @@ export const ProjectProvider = ({
     [data],
   );
 
-  // What a level's mode fixes, once loadDataset has checked it against the
-  // dataset. Features first, so setting the label drops it from them.
+  // Handle preset columns from the level once the dataset has loaded.
   useEffect(() => {
     if (!presetColumns) {
       return;

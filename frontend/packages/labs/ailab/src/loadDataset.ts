@@ -26,16 +26,15 @@ const applyModeColumns = (): void => {
     return false;
   };
 
-  // Features are checked first, so their complaints come before the label's.
   const features = mode?.features?.filter(isSelectable);
-  const named =
+  const namedLabel =
     mode?.label ??
     (mode?.hideSelectLabel ? metadata.defaultLabelColumn : undefined);
   const labelColumn =
-    named !== undefined && isSelectable(named) ? named : undefined;
+    namedLabel !== undefined && isSelectable(namedLabel)
+      ? namedLabel
+      : undefined;
 
-  // ProjectContext owns the columns, so hand it what the mode fixed rather
-  // than setting them here.
   store.dispatch(
     setPresetColumns({
       labelColumn,
