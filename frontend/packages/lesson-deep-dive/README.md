@@ -135,10 +135,14 @@ dashboard mode, `?script=` (default `aif1-2025`) and `?lessonPosition=`
 error.
 
 In dashboard mode, sign in as a teacher whose section has final challenge
-submissions.
+submissions. The teacher needs AI chat access
+(`User#can_use_lesson_deep_dive?`; a verified teacher account has it), or the
+bootstrap returns 403.
 
 In msw mode, `?viewerRole=teacher|owner|peer` (default `teacher`) selects the
-project page layout. Dashboard mode takes the role from the signed-in user.
+project page layout. Only `teacher` sees the approval alert and toggles; the
+other roles see approved projects only. Dashboard mode takes the role from the
+signed-in user.
 
 The msw fixture's unit and section ids are invented. To regenerate it, request
 the bootstrap route above as a teacher.
