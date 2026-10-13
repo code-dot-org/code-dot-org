@@ -254,6 +254,26 @@ class QuizTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {quiz.import_serialized_placements!}
   end
 
+  test "import_serialized_placements! skips and warns on an unresolvable question_key outside production when the encryption key is missing" do
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    quiz = create(:quiz)
+    placement = create(:quiz_question_placement, level: quiz)
+    quiz.serialized_placements = [{'question_key' => 'not-a-real-key', 'page' => 1, 'position' => 1}]
+
+    assert_output(/WARNING.*placements not seeded properly due to missing CDO.properties_encryption_key/) {quiz.import_serialized_placements!}
+
+    assert_equal placement.id, quiz.placements.first.id
+  end
+
+  test "import_serialized_placements! still raises on an unresolvable question_key in production, even with the encryption key missing" do
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    CDO.stubs(:rack_env).returns(:production)
+    quiz = create(:quiz)
+    quiz.serialized_placements = [{'question_key' => 'not-a-real-key', 'page' => 1, 'position' => 1}]
+
+    assert_raises(RuntimeError) {quiz.import_serialized_placements!}
+  end
+
   test "import_serialized_placements! raises rather than silently dropping a duplicate question_key" do
     quiz = create(:quiz)
     question = create(:quiz_question)
