@@ -11,16 +11,27 @@ import {
 } from './helpers/columnDetails';
 import {arrayIntersection} from './helpers/utils';
 import type {RootState} from './redux';
-import type {DataRow, Metadata, TrainedModelDetailsSave} from './types';
+import type {
+  AilabProject,
+  DataRow,
+  Metadata,
+  TrainedModelDetailsSave,
+} from './types';
 
 export const getData = (state: RootState): DataRow[] => state.data;
 export const getColumnsByDataType = (
   state: RootState,
 ): Record<string, string> => state.columnsByDataType;
-const getSelectedFeatures = (state: RootState): string[] =>
-  state.selectedFeatures;
-export const getLabelColumn = (state: RootState): string | undefined =>
-  state.labelColumn;
+// Reselect passes a selector's extra arguments to every input selector, so
+// taking the project here gives it to everything derived below.
+const getSelectedFeatures = (
+  _state: RootState,
+  project: AilabProject,
+): string[] => project.selectedFeatures;
+export const getLabelColumn = (
+  _state: RootState,
+  project: AilabProject,
+): string | undefined => project.labelColumn;
 export const getMetadata = (state: RootState): Metadata => state.metadata;
 export const getDatasetId = (state: RootState): string | undefined =>
   state.metadata && state.metadata.name;

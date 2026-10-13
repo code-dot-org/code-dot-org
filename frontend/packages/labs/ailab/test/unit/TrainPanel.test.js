@@ -2,17 +2,20 @@ import {act, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
-import {removeSelectedFeature} from '../../src/redux';
 import TrainPanel from '../../src/UIComponents/TrainPanel';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderPanel({trained = false, mode = {}} = {}) {
   const store = levelStore(mode);
-  const trainingRun = trained ? runTraining(store) : undefined;
-  renderWithProviders(createElement(TrainPanel), {store, trainingRun});
-  return store;
+  const project = levelProject();
+  const trainingRun = trained ? runTraining(store, project) : undefined;
+  return renderWithProviders(createElement(TrainPanel), {
+    store,
+    project,
+    trainingRun,
+  });
 }
 
 const trainButton = () => screen.queryByRole('button', {name: 'Train model'});
@@ -39,10 +42,8 @@ describe('TrainPanel', () => {
   });
 
   test('brings Train model back once the columns change', () => {
-    const store = renderPanel({trained: true});
-    act(() => {
-      store.dispatch(removeSelectedFeature('legs'));
-    });
+    const {projectActions} = renderPanel({trained: true});
+    act(() => projectActions().removeSelectedFeature('legs'));
     expect(trainButton()).not.toBeNull();
   });
 

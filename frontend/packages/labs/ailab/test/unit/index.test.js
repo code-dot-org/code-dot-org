@@ -2,11 +2,7 @@ import {act} from '@testing-library/react';
 
 import I18n from '../../src/i18n';
 import {initAll, loadLevel, startOver, unmount} from '../../src/index';
-import {
-  setAccuracyCheckExamples,
-  setCurrentPanel,
-  setLabelColumn,
-} from '../../src/redux';
+import {setAccuracyCheckExamples, setCurrentPanel} from '../../src/redux';
 import {store} from '../../src/store';
 
 vi.mock('../../src/csvReaderWrapper');
@@ -18,7 +14,6 @@ afterEach(() => I18n.reset());
 describe('startOver', () => {
   beforeEach(() => {
     loadLevel(undefined);
-    store.dispatch(setLabelColumn('animal'));
     store.dispatch(setCurrentPanel('results'));
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
@@ -32,7 +27,6 @@ describe('startOver', () => {
   test('resets everything else to the start of the level', () => {
     startOver();
 
-    expect(store.getState().labelColumn).toBeUndefined();
     expect(store.getState().currentPanel).toBe('datasetView');
     expect(store.getState().accuracyCheckExamples).toEqual([]);
   });

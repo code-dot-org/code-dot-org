@@ -64,7 +64,7 @@ async function load(mode) {
   finishCSV();
   finishJSON();
   await loaded;
-  const {labelColumn, selectedFeatures} = store.getState();
+  const {labelColumn, selectedFeatures} = store.getState().presetColumns;
   return {labelColumn, selectedFeatures};
 }
 
@@ -82,8 +82,10 @@ describe('loadDataset', () => {
       await Promise.resolve();
       finishSecond();
       await loaded;
-      expect(store.getState().labelColumn).toBe('animal');
-      expect(store.getState().selectedFeatures).toEqual(['legs']);
+      expect(store.getState().presetColumns).toEqual({
+        labelColumn: 'animal',
+        selectedFeatures: ['legs'],
+      });
     },
   );
 

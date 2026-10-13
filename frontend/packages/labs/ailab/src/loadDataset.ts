@@ -1,6 +1,6 @@
 import {parseCSV} from './csvReaderWrapper';
 import {parseJSON} from './jsonReaderWrapper';
-import {setLabelColumn, setSelectedFeatures} from './redux';
+import {setPresetColumns} from './redux';
 import {getSelectableColumns} from './selectors';
 import {store} from './store';
 
@@ -26,14 +26,22 @@ const applyModeColumns = (): void => {
     return false;
   };
 
-  // Features first, so setting the label drops it from the features.
-  if (mode?.features) {
-    store.dispatch(setSelectedFeatures(mode.features.filter(isSelectable)));
-  }
-  const label =
+  const features = mode?.features?.filter(isSelectable);
+  const namedLabel =
     mode?.label ??
     (mode?.hideSelectLabel ? metadata.defaultLabelColumn : undefined);
-  if (label !== undefined && isSelectable(label)) {
-    store.dispatch(setLabelColumn(label));
-  }
+  const labelColumn =
+    namedLabel !== undefined && isSelectable(namedLabel)
+      ? namedLabel
+      : undefined;
+
+  store.dispatch(
+    setPresetColumns({
+      labelColumn,
+      // A column can't be both the label and a feature.
+      selectedFeatures: labelColumn
+        ? features?.filter(feature => feature !== labelColumn)
+        : features,
+    }),
+  );
 };

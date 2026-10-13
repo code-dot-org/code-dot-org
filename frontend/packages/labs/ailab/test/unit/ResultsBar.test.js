@@ -4,13 +4,13 @@ import {createElement} from 'react';
 import I18n from '../../src/i18n';
 import ResultsBar from '../../src/UIComponents/ResultsBar';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderBar(results) {
   renderWithProviders(createElement(ResultsBar), {
     store: levelStore(),
-    project: {historicResults: [...results].reverse()},
+    project: {...levelProject(), historicResults: [...results].reverse()},
   });
 }
 

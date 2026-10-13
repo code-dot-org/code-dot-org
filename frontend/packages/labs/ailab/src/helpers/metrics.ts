@@ -3,19 +3,23 @@
 */
 import type {RootState} from '../redux';
 import {getTrainerId} from '../trainers/ids';
+import type {AilabProject} from '../types';
 
 import {getPercentCorrect} from './accuracy';
 import {isUserUploadedDataset} from './datasetDetails';
 
-function getModelMetrics(state: RootState): Record<string, unknown> {
+function getModelMetrics(
+  state: RootState,
+  project: AilabProject,
+): Record<string, unknown> {
   const modelMetrics: Record<string, unknown> = {};
   modelMetrics.userUploaded = isUserUploadedDataset(state);
   modelMetrics.datasetName = state.metadata.name;
-  modelMetrics.features = state.selectedFeatures;
-  modelMetrics.label = state.labelColumn;
-  modelMetrics.accuracy = getPercentCorrect(state);
+  modelMetrics.features = project.selectedFeatures;
+  modelMetrics.label = project.labelColumn;
+  modelMetrics.accuracy = getPercentCorrect(state, project);
   // The same id the saved model records, so the two can be joined.
-  modelMetrics.trainer = getTrainerId(state);
+  modelMetrics.trainer = getTrainerId(state, project);
   return modelMetrics;
 }
 
@@ -27,9 +31,13 @@ export function setMetricsLogger(logger: MetricsLogger) {
   metricsLogger = logger;
 }
 
-export function logMetric(action: string, state: RootState): void {
+export function logMetric(
+  action: string,
+  state: RootState,
+  project: AilabProject,
+): void {
   if (metricsLogger) {
-    metricsLogger(action, getModelMetrics(state));
+    metricsLogger(action, getModelMetrics(state, project));
   }
 }
 
