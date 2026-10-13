@@ -1,13 +1,61 @@
 <%
 require 'dynamic_config/dcdo'
 
-# TODO: Rails 4.1 may be able to be configured with the database url
-# instead of having to parse it here. Actually 4.0 can do that too but
-# it doesn't work with the way seamless_database_pool wants to
-# configure the read pool
-
+# Legacy database connection configuration settings. The Chef recipe that conditionally installs ProxySQL modifies
+# these settings at build time to set the host name and port in these URIs to the localhost and port where ProxySQL
+# is installed and listening for client database connections.
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
 reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
+
+# Which proxy, if any, the read replica pool connects through: 'proxysql', 'rdsproxy', or 'none'.
+proxysql_installed = !CDO.db_proxy_admin.nil?
+database_proxy = DCDO.get('database_proxy', proxysql_installed ? 'proxysql' : 'none')
+database_proxy = 'none' if database_proxy == 'proxysql' && !proxysql_installed
+
+# Client database connection configuration settings for the primary (writer instance), replica (read replica
+# instances), and reporting (reporting instances).
+db_connection_settings = {
+  primary: {
+    database: writer.path.sub(%r{^/}, "") || "dashboard_#{Rails.env}",
+    host: writer.host || 'localhost',
+    password: writer.password || '',
+    port: writer.port || 3306,
+    username: writer.user || 'root',
+  },
+  primary_replica: {
+    database: CDO.dashboard_db_name,
+    host: CDO.db_endpoint_proxy_reader,
+    password: CDO.db_credential_reader['password'],
+    port: CDO.db_endpoint_proxy_reader_port,
+    username: CDO.db_credential_reader['username'],
+  },
+  primary_reporting: {
+    database: CDO.dashboard_db_name,
+    host: CDO.db_endpoint_proxy_reporting,
+    password: CDO.db_credential_reader['password'],
+    port: CDO.db_endpoint_proxy_reporting_port,
+    username: CDO.db_credential_reader['username'],
+  },
+}.tap do |hash|
+  case database_proxy
+  when 'proxysql'
+    # The Chef recipe that conditionally installs ProxySQL modifies the hostname and port in `CDO.dashboard_db_reader`
+    # to point to the localhost/port where ProxySQL is listening for client database connections.
+    hash[:primary_replica] = {
+      database: reader.path.sub(%r{^/}, ""),
+      host: reader.host,
+      password: reader.password,
+      port: reader.port || 3306,
+      username: reader.user,
+    }
+  when 'none'
+    # Use the writer endpoint with the read-only `reader` SQL user for read-split SELECT statements.
+    hash[:primary_replica] = hash[:primary_replica].merge(
+      host: CDO.db_endpoint_writer,
+      port: CDO.db_endpoint_writer_port
+    )
+  end
+end
 %>
 
 mysql_defaults: &mysql_defaults
@@ -56,42 +104,23 @@ mysql_defaults: &mysql_defaults
 environment_defaults: &environment_defaults
   primary:
     <<: *mysql_defaults
-    database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
-    host: <%= writer.host || 'localhost' %>
-    password: <%= writer.password || '' %>
-    port: <%= writer.port || 3306 %>
-    username: <%= writer.user || 'root' %>
-<%
-   proxy = DCDO.get('database_proxy', 'proxysql')
-   if proxy == 'proxysql' && (reader && reader != writer) # ProxySQL requires a separate `reader` credential has been set.
-%>   
+    database: <%= db_connection_settings[:primary][:database] %>
+    host: <%= db_connection_settings[:primary][:host] %>
+    password: <%= db_connection_settings[:primary][:password] %>
+    port: <%= db_connection_settings[:primary][:port] %>
+    username: <%= db_connection_settings[:primary][:username] %>
+  # Always provision a read replica and a reporting database pool, even in environments that do not have an Aurora
+  # cluster (with reader database instances) and that do not have RDS Proxy reader/reporting endpoints. In local
+  # development environments and continuous integration builds CDO.db_endpoint_proxy_reader and
+  # CDO.db_endpoint_proxy_reporting are set to the same servername as the writer database (typically 'localhost').
   primary_replica:
     replica: true
     <<: *mysql_defaults
-    database: <%= reader.path.sub(%r{^/},"") %>
-    host: <%= reader.host %>
-    password: <%= reader.password %>
-    port: <%= reader.port || 3306 %>
-    username: <%= reader.user %>
-<% elsif proxy == 'rdsproxy' %>
-  # When RDS Proxy is enabled, provision the read replica connection pool against the RDS Proxy reader endpoint. This
-  # endpoint exists even in environments that do not have an Aurora cluster with read replicas, such as local
-  # development environments and continuous integration builds. In those non-AWS environments,
-  # CDO.db_endpoint_proxy_reader is set to the same servername as the writer (typically 'localhost').
-  primary_replica:
-    replica: true
-    <<: *mysql_defaults
-    host: <%= CDO.db_endpoint_proxy_reader %>
-    port: <%= CDO.db_endpoint_proxy_reader_port %>
-    username: <%= CDO.db_credential_reader['username'] %>
-    password: <%= CDO.db_credential_reader['password'] %>
-    database: <%= CDO.dashboard_db_name %>
-<% end %>
-
-  # Always provision a reporting replica database connection pool, even in environments that do not have an Aurora
-  # cluster with a "reporting" RDS Proxy, such as local development environments and continuous integration
-  # builds. In those non-AWS environments, CDO.db_endpoint_proxy_reporting is set to the same servername as the writer
-  # (typically 'localhost').
+    database: <%= db_connection_settings[:primary_replica][:database] %>
+    host: <%= db_connection_settings[:primary_replica][:host] %>
+    password: <%= db_connection_settings[:primary_replica][:password] %>
+    port: <%= db_connection_settings[:primary_replica][:port] %>
+    username: <%= db_connection_settings[:primary_replica][:username] %>
   primary_reporting:
     replica: true
     <<: *mysql_defaults
@@ -100,11 +129,11 @@ environment_defaults: &environment_defaults
     # such as queries executing in an ActiveJob worker, a cron job, or irb (dashboard-console).
     read_timeout: 600
     <% end %>
-    host: <%= CDO.db_endpoint_proxy_reporting %>
-    port: <%= CDO.db_endpoint_proxy_reporting_port %>
-    username: <%= CDO.db_credential_reader['username'] %>
-    password: <%= CDO.db_credential_reader['password'] %>
-    database: <%= CDO.dashboard_db_name %>
+    database: <%= db_connection_settings[:primary_reporting][:database] %>
+    host: <%= db_connection_settings[:primary_reporting][:host] %>
+    password: <%= db_connection_settings[:primary_reporting][:password] %>
+    port: <%= db_connection_settings[:primary_reporting][:port] %>
+    username: <%= db_connection_settings[:primary_reporting][:username] %>
 
 development:
   <<: *environment_defaults
@@ -129,11 +158,11 @@ test:
   primary:
     <<: *mysql_defaults
     database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
-    host: <%= writer.host || 'localhost' %>
-    password: <%= writer.password || '' %>
+    host: <%= db_connection_settings[:primary][:host] %>
+    password: <%= db_connection_settings[:primary][:password] %>
     pool: <%= ENV['CI'] ? 20 : 5 %>
-    port: <%= writer.port || 3306 %>
-    username: <%= writer.user || 'root' %>
+    port: <%= db_connection_settings[:primary][:port] %>
+    username: <%= db_connection_settings[:primary][:username] %>
 
 production:
   <<: *environment_defaults
