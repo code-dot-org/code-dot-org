@@ -4,10 +4,12 @@
 
 * AWS CLI
 * [SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
-* [NodeJS 10.10+](https://nodejs.org/en/download/releases/)
+* [NodeJS 18](https://nodejs.org/en/download/releases/), matching the `nodejs18.x` runtime in `template.yaml`
 * Docker
 
 ## Development
+
+Run `npm` commands from `src/`, which holds `package.json`.
 
 **Install**
 

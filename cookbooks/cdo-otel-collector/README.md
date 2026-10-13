@@ -35,6 +35,9 @@ The following ports must be locally accessible:
 | `node['cdo-otel-collector']['otelcol_deb_sha256']` | *(see attributes/default.rb)* | SHA256 of the linux_amd64 .deb (must match the version) |
 | `node['cdo-otel-collector']['apm_trace_sample_rate']` | `0.1` | APM trace sampling percentage (float, 0.0-100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
 | `node['cdo-otel-collector']['apm_backend']` | `'sentry'` | APM backend; only `'sentry'` is currently supported |
+| `node['cdo-otel-collector']['enable_logs']` | `false` | Enable the logs pipeline and the rsyslog forwarding rule |
+| `node['cdo-otel-collector']['prometheus_remote_write_url']` | `''` | Prometheus remote write endpoint for the spanmetrics pipeline; empty disables it |
+| `node['cdo-otel-collector']['prometheus_region']` | `'us-east-1'` | AWS region for SigV4 signing of Prometheus remote write requests |
 | `node['cdo-otel-collector']['sentry_otlp_endpoint']` | `''` | **(Sentry)** OTLP/HTTP endpoint. Construct from your DSN: `https://o<org_id>.ingest.sentry.io/api/<project_id>/otlp/` |
 
 When upgrading `otelcol_version`, update `otelcol_deb_sha256` to match the corresponding entry in the release's `otelcol-contrib_checksums.txt`.
@@ -67,10 +70,10 @@ The APM backend credential is retrieved via AWS Secrets Manager using the standa
 
 ## Syslog Integration
 
-When co-deployed with `cdo-syslog`, this cookbook adds an rsyslog forwarding rule that
+When `enable_logs` is set, this cookbook adds an rsyslog forwarding rule that
 pipes syslog to the OTel syslog receiver. This requires no changes to `cdo-syslog`.
 
-The recipe manages `/etc/rsyslog.d/51-otelcol.conf` (numbered after `cdo-syslog`'s
+The recipe then manages `/etc/rsyslog.d/51-otelcol.conf` (numbered after `cdo-syslog`'s
 `50-default.conf`) and restarts rsyslog when the file changes. The syslog receiver uses
 RFC 3164 (Ubuntu/rsyslog default) over TCP on `127.0.0.1:54526`. rsyslog continues
 writing to `/var/log/syslog` as normal — the two rules are independent.
@@ -80,7 +83,7 @@ writing to `/var/log/syslog` as normal — the two rules are independent.
 The cookbook creates and manages:
 
 - `/etc/otelcol-contrib/config.yaml` - OpenTelemetry Collector configuration
-- `/etc/rsyslog.d/51-otelcol.conf` - rsyslog forwarding rule to the syslog receiver
+- `/etc/rsyslog.d/51-otelcol.conf` - rsyslog forwarding rule to the syslog receiver (only with `enable_logs`)
 
 ## Service Management
 
@@ -129,7 +132,7 @@ sudo otelcol-contrib validate --config /etc/otelcol-contrib/config.yaml
 
 1. Make changes to the cookbook
 2. Update version in `metadata.rb`
-3. Run tests: `bundle exec kitchen verify`
+3. Converge it: `bundle exec kitchen converge` (there is no `test/` suite, so `kitchen verify` checks nothing)
 4. Update this README if needed
 5. Submit pull request
 
