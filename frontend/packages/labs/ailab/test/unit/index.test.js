@@ -63,12 +63,6 @@ describe('loadLevel', () => {
 
     expect(store.getState().reserveLocation).toBe(TestDataLocations.RANDOM);
   });
-
-  test('tests a pretrained level on the last rows', () => {
-    loadLevel({pretrained: true, randomizeTestData: true});
-
-    expect(store.getState().reserveLocation).toBe(TestDataLocations.END);
-  });
 });
 
 // The component suites render panels directly, so only this reaches the

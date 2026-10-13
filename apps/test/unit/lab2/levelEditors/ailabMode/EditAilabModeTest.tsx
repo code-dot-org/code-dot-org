@@ -664,6 +664,54 @@ describe('EditAilabMode', () => {
       expect(pretrainedCheckbox()).toBeValid();
     });
 
+    it('asks for columns students can choose to pretrain on', async () => {
+      renderEditor(
+        '{"datasets": ["zoo"], "pretrained": true, "label": "name", "features": ["legs"]}'
+      );
+      await columnsLoaded();
+      expect(pretrainedCheckbox()).toBeInvalid();
+
+      fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
+      expect(pretrainedCheckbox()).toBeValid();
+    });
+
+    it("pretrains on the dataset's default label when it is locked", async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "hideSelectLabel": true, "features": ["legs"]}'
+      );
+      await columnsLoaded();
+
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        pretrained: true,
+      });
+      expect(pretrainedCheckbox()).toBeValid();
+    });
+
+    it('drops the saved settings pretraining replaces', () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+      );
+      const accuracy = screen.getByRole('spinbutton', {
+        name: /Required accuracy/,
+      });
+      expect(accuracy).toHaveValue(null);
+
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+      });
+    });
+
     it("reports a dataset whose columns don't load", async () => {
       serveFiles({});
       renderEditor('{"datasets": ["zoo"]}');

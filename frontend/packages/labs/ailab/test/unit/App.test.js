@@ -75,6 +75,21 @@ describe('a pretrained level', () => {
     expect(onTrained.mock.calls).toEqual([[100]]);
     expect(trainingData().trainedModel).toBeDefined();
     expect(storeSingleton.getState().trainingModalStep).toBeUndefined();
+    expect(document.activeElement).toBe(document.body);
+  });
+
+  test('trains again once the next level has its columns', () => {
+    const {onTrained} = renderPretrainedApp();
+
+    act(() => {
+      storeSingleton.dispatch(resetState());
+    });
+    expect(onTrained).toHaveBeenCalledTimes(1);
+
+    act(() => {
+      seedLevel(storeSingleton, {trainer: 'decisionTree', pretrained: true});
+    });
+    expect(onTrained.mock.calls).toEqual([[100], [100]]);
   });
 
   test('hides Start over', () => {

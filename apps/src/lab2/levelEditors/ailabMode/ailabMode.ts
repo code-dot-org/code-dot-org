@@ -136,9 +136,8 @@ export function withoutLabelInFeatures(
   );
 }
 
-// Pretraining locks the label and features itself, tests on the last rows, and
-// sets no accuracy bar, since students cannot retrain to meet one.
-const REPLACED_BY_PRETRAINED = [
+// Students cannot retrain a pretrained model, so these settings do not apply.
+export const REPLACED_BY_PRETRAINED = [
   'hideSelectLabel',
   'lockFeatures',
   'randomizeTestData',
@@ -147,7 +146,8 @@ const REPLACED_BY_PRETRAINED = [
 
 export function setPretrained(
   mode: ModeObject,
-  pretrained: boolean
+  pretrained: boolean,
+  defaultLabel?: string
 ): ModeObject {
   const newMode = setJsonObjectValue(
     mode,
@@ -155,15 +155,22 @@ export function setPretrained(
     pretrained ? true : undefined
   );
   if (pretrained) {
+    newMode.label = getStartingLabel(mode, defaultLabel);
     REPLACED_BY_PRETRAINED.forEach(key => delete newMode[key]);
   }
   return newMode;
 }
 
-export function isMissingPretrainedColumns(mode: ModeObject): boolean {
+export function isMissingPretrainedColumns(
+  mode: ModeObject,
+  selectable: string[] | undefined
+): boolean {
+  const offered = (column: unknown) =>
+    column !== undefined &&
+    (!selectable || selectable.includes(column as string));
   return (
     mode.pretrained === true &&
-    (mode.label === undefined || getFeatures(mode).length === 0)
+    !(offered(mode.label) && getFeatures(mode).some(offered))
   );
 }
 

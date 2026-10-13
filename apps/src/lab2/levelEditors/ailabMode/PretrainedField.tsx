@@ -1,33 +1,32 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {Typography} from '@mui/material';
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 
 import {
   isMissingPretrainedColumns,
   ModeObject,
   setPretrained,
 } from './ailabMode';
+import {DatasetColumns} from './datasetColumns';
+import {useCheckboxValidity} from './useCheckboxValidity';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
 
 interface PretrainedFieldProps {
   mode: ModeObject;
+  columns: DatasetColumns | undefined;
   onChange: (mode: ModeObject) => void;
 }
 
 const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
   mode,
+  columns,
   onChange,
 }) => {
-  const checkboxRef = useRef<HTMLDivElement>(null);
-  const error = isMissingPretrainedColumns(mode)
+  const error = isMissingPretrainedColumns(mode, columns?.selectable)
     ? 'Choose a label and features to train the model on.'
     : undefined;
-
-  // Checkbox does not forward refs; missing columns stop the level from saving.
-  useEffect(() => {
-    checkboxRef.current!.querySelector('input')!.setCustomValidity(error ?? '');
-  }, [error]);
+  const checkboxRef = useCheckboxValidity(error);
 
   return (
     <div ref={checkboxRef}>
@@ -35,7 +34,9 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
         name="ailab_mode_pretrained"
         label="Pretrain the model"
         checked={mode.pretrained === true}
-        onChange={e => onChange(setPretrained(mode, e.target.checked))}
+        onChange={e =>
+          onChange(setPretrained(mode, e.target.checked, columns?.defaultLabel))
+        }
         size="s"
       />
       <Typography variant="body4" className={moduleStyles.descriptionText}>
