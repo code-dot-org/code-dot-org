@@ -21,7 +21,7 @@ export default class DecisionTreeTrainer extends BaseTrainer<number> {
   }
 
   protected buildModel(state: RootState, maxDepth: number): TrainedModel {
-    const tree = isRegression(state)
+    const tree = isRegression(state, this.project)
       ? new DecisionTreeRegression({maxDepth})
       : new DecisionTreeClassifier({maxDepth});
     tree.train(state.trainingExamples, state.trainingLabels.map(Number));

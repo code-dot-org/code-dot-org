@@ -1,0 +1,58 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T23:34:02.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Look at the data given to you in `surgery.csv`.\r\n- Run the program to visualize this data in `matplotlib`. The program is already written for you.\r\n- In your Project Planning Guide, respond to the questions in **Step 3: Visualizing Your Problem**.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nimport matplotlib.pyplot as plt\n\n# Data\nwith open(\"surgery.csv\") as f:\n  data = list(csv.DictReader(f))\n\ngroups = [(\"yes\", \"Emergency\"), (\"no\", \"Non-Emergency\")]\n\n# Styling\nplt.rcParams.update({\"font.size\": 11, \"figure.dpi\": 140})\nstyles = {\n    \"healed\": {\n        \"marker\": \"o\",\n        \"color\": \"#0072B2\",\n        \"size\": 45,\n        \"label\": \"Healed\"\n    },\n    \"infected\": {\n        \"marker\": \"^\",\n        \"color\": \"#E69F00\",\n        \"size\": 90,\n        \"label\": \"Infected\"\n    },\n}\n\n# Plotting\nfigure, axes_list = plt.subplots(2,\n                                 1,\n                                 figsize=(6, 9),\n                                 sharex=True,\n                                 sharey=True)\n\nfor axes, (value, heading) in zip(axes_list, groups):\n  subset = [row for row in data if row[\"emergency\"] == value]\n\n  for outcome in [\"healed\", \"infected\"]:\n    style = styles[outcome]\n    x = [float(row[\"length\"]) for row in subset if row[\"outcome\"] == outcome]\n    y = [float(row[\"glucose\"]) for row in subset if row[\"outcome\"] == outcome]\n    axes.scatter(\n        x,\n        y,\n        marker=style[\"marker\"],\n        color=style[\"color\"],\n        s=style[\"size\"],\n        edgecolors=\"black\",\n        linewidths=0.5,\n        label=f\"{style['label']} (n={len(x)})\",\n    )\n\n  axes.set_title(f\"{heading} (n={len(subset)})\")\n  axes.set_ylabel(\"Blood Glucose (mg/dL)\")\n  axes.legend(loc=\"upper left\", fontsize=9)\n  axes.grid(True, linestyle=\":\", alpha=0.6)\n\naxes_list[-1].set_xlabel(\"Operation Length (minutes)\")\n\nfigure.suptitle(\"Post-Surgery Healing\")\nfigure.tight_layout()\nplt.show()\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "surgery.csv",
+          "contents": "length,glucose,emergency,outcome\n129,131,no,healed\n55,98,no,healed\n71,155,no,healed\n31,117,yes,healed\n81,89,no,healed\n75,108,yes,healed\n110,132,yes,healed\n104,160,yes,healed\n34,137,yes,healed\n211,126,no,healed\n158,110,no,healed\n95,115,no,healed\n152,147,no,healed\n126,148,no,healed\n132,93,no,healed\n49,155,yes,healed\n120,100,no,healed\n218,116,no,healed\n153,93,no,healed\n97,90,no,healed\n160,119,no,healed\n117,87,yes,healed\n375,151,no,infected\n38,155,no,healed\n198,152,no,healed\n41,100,no,healed\n193,120,no,healed\n88,131,no,healed\n206,154,no,healed\n180,161,no,healed\n122,139,no,healed\n166,135,no,healed\n67,92,no,healed\n164,132,no,healed\n221,151,no,infected\n218,126,no,healed\n281,202,no,infected\n161,133,no,healed\n114,132,no,healed\n36,124,no,healed\n59,143,no,healed\n98,130,no,healed\n99,155,no,healed\n135,98,no,healed\n40,94,no,healed\n182,111,no,healed\n122,98,no,healed\n32,117,no,healed\n178,111,no,healed\n97,155,yes,healed\n75,124,no,healed\n55,139,yes,healed\n196,116,no,healed\n211,157,no,healed\n175,133,no,healed\n151,108,yes,infected\n188,135,no,healed\n134,86,no,healed\n220,135,no,healed\n116,99,no,healed\n33,101,yes,healed\n98,122,no,healed\n93,97,no,healed\n118,106,yes,healed\n416,237,no,infected\n83,110,yes,healed\n198,100,no,healed\n119,131,no,healed\n101,135,no,healed\n117,154,no,healed\n73,127,no,healed\n199,155,no,healed\n156,141,no,healed\n204,106,no,healed\n125,156,no,healed\n51,210,no,infected\n136,145,no,healed\n315,156,no,infected\n73,157,no,healed\n412,188,yes,infected\n117,103,yes,healed\n184,120,no,healed\n102,141,no,healed\n77,126,no,healed\n159,92,no,healed\n222,200,yes,infected\n265,132,yes,infected\n216,98,no,healed\n91,138,no,healed\n149,124,no,healed\n198,150,no,healed\n190,140,no,healed\n40,118,yes,healed\n189,92,no,healed\n30,128,yes,healed\n179,101,no,healed\n166,101,no,healed\n200,140,no,healed\n104,97,no,healed\n147,148,no,healed\n173,99,no,healed\n88,155,no,healed\n141,172,no,infected\n166,92,no,healed\n40,127,no,healed\n176,155,no,healed\n84,151,no,healed\n164,89,no,healed\n73,140,no,healed\n145,131,no,healed\n78,155,no,healed\n31,124,no,healed\n179,98,no,healed\n57,92,yes,healed\n84,102,yes,healed\n35,128,no,healed\n67,132,no,healed\n170,100,no,healed\n45,97,yes,healed\n93,150,no,healed\n70,137,yes,healed\n45,148,yes,healed\n82,95,no,healed\n40,152,no,healed\n71,132,no,healed\n84,118,no,healed\n195,88,no,healed\n167,101,no,healed\n138,187,no,infected\n135,146,no,healed\n117,107,yes,healed\n124,108,yes,healed\n192,130,no,healed\n280,194,no,infected\n132,116,no,healed\n127,140,no,healed\n204,124,no,healed\n68,147,yes,healed\n120,98,no,healed\n213,127,no,healed\n208,110,no,healed\n55,104,no,healed\n107,125,yes,healed\n115,151,yes,healed\n123,102,no,healed\n95,142,no,healed\n185,113,no,healed\n193,115,no,healed\n290,204,no,infected\n214,141,no,healed\n67,134,no,healed\n120,131,no,healed\n194,138,no,healed\n145,127,no,healed\n214,140,no,healed\n44,124,yes,healed\n126,116,yes,healed\n198,119,no,healed\n92,122,yes,healed\n81,104,yes,healed\n200,154,no,healed\n91,95,no,healed\n91,144,no,healed\n126,140,no,healed\n43,135,yes,healed\n38,107,no,healed\n151,179,yes,infected\n102,96,no,healed\n131,88,no,healed\n53,125,no,healed\n188,131,no,healed\n362,117,no,infected\n87,144,no,healed\n143,139,no,healed\n52,139,no,healed\n309,110,yes,infected\n67,146,no,healed\n414,222,no,infected\n47,86,yes,healed\n33,128,no,healed\n54,161,no,healed\n118,142,no,healed\n53,106,yes,healed\n65,152,no,healed\n173,88,no,healed\n153,121,no,healed\n147,137,no,healed\n41,199,no,infected\n197,87,no,healed\n87,144,no,healed\n125,88,yes,healed\n87,95,yes,healed\n154,140,no,healed\n246,91,no,infected\n116,123,no,healed\n110,94,no,healed\n128,91,no,healed\n208,102,no,healed\n90,124,yes,healed\n75,159,yes,healed\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Healing After Surgery",
+    "thumbnail_url": "https://images.code.org/88730973ccef743b0a7353db506174f4-surgery.jpg",
+    "bubble_choice_description": "Will this wound heal well?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 23:35:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:38:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:38:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:39:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:41:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:14 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

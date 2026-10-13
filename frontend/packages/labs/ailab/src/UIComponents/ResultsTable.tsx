@@ -6,6 +6,7 @@ import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
 
 import tableStyles from './dataTable.module.scss';
@@ -38,9 +39,12 @@ const CellText = ({children}: {children: ReactNode}) => (
 );
 
 const ResultsTable = ({results}: ResultsTableProps) => {
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
-  const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
-  const isRegressionMode = useAppSelector(isRegression);
+  const {project} = useProject();
+  const selectedFeatures = project.selectedFeatures;
+  const labelColumn = project.labelColumn || 'unknown';
+  const isRegressionMode = useAppSelector(state =>
+    isRegression(state, project),
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
   const columnName = (column: string) =>

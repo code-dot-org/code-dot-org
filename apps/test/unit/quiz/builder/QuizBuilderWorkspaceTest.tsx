@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -40,6 +40,16 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   removeQuestion: jest.fn(),
   load: jest.fn(),
 };
+
+// Opens the nth "Create question" dropdown and picks a question type.
+function createFromDropdown(index: number, typeLabel: string) {
+  const trigger = screen.getAllByRole('button', {name: 'Create question'})[
+    index
+  ];
+  fireEvent.click(trigger);
+  const dropdown = trigger.closest('[id$="-dropdown"]') as HTMLElement;
+  fireEvent.click(within(dropdown).getByRole('button', {name: typeLabel}));
+}
 
 function renderWorkspace(
   stateOverrides: Partial<QuizBuilderQuestionsState> = {},
@@ -138,17 +148,17 @@ describe('QuizBuilderWorkspace', () => {
     });
     renderWorkspace({questions: [question()], addPendingQuestion});
 
-    fireEvent.click(screen.getByRole('button', {name: 'Create question'}));
+    createFromDropdown(0, 'Multiple choice');
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
   });
 
-  it('calls addPendingQuestion with page 1 when the create button is clicked from the empty state', () => {
+  it('calls addPendingQuestion with page 1 and the chosen type from the empty state', () => {
     const addPendingQuestion = jest.fn();
     renderWorkspace({addPendingQuestion});
 
-    fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
+    createFromDropdown(0, 'Free response');
 
-    expect(addPendingQuestion).toHaveBeenCalledWith(1);
+    expect(addPendingQuestion).toHaveBeenCalledWith(1, 'FreeResponseQuestion');
   });
 
   it("creates a question on the page whose row's button was clicked", () => {
@@ -161,16 +171,18 @@ describe('QuizBuilderWorkspace', () => {
       addPendingQuestion,
     });
 
-    const createButtons = screen.getAllByRole('button', {
-      name: 'Create question',
-    });
-    expect(createButtons).toHaveLength(2);
+    expect(
+      screen.getAllByRole('button', {name: 'Create question'})
+    ).toHaveLength(2);
 
-    fireEvent.click(createButtons[1]);
-    expect(addPendingQuestion).toHaveBeenCalledWith(2);
+    createFromDropdown(1, 'Multiple choice');
+    expect(addPendingQuestion).toHaveBeenCalledWith(
+      2,
+      'MultipleChoiceQuestion'
+    );
   });
 
-  it('adds a page one past the last existing page', () => {
+  it('adds an empty page one past the last existing page without creating a question', () => {
     const addPendingQuestion = jest.fn();
     renderWorkspace({
       questions: [
@@ -181,13 +193,18 @@ describe('QuizBuilderWorkspace', () => {
     });
 
     fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
-    expect(addPendingQuestion).toHaveBeenCalledWith(4);
+    expect(addPendingQuestion).not.toHaveBeenCalled();
+    expect(screen.getByText('Page 4')).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
+
+    createFromDropdown(2, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
   });
 
   it('disables the create button while questions are still loading', () => {
     renderWorkspace({isLoading: true});
     expect(
-      screen.getByRole('button', {name: '+ Create question'})
+      screen.getByRole('button', {name: 'Create question'})
     ).toBeDisabled();
   });
 

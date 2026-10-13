@@ -73,6 +73,15 @@ describe('UsersSettingsPage — accessibility', () => {
     expect(await auditBody()).toHaveNoViolations();
   });
 
+  it('has no axe violations with the unlink dialog open', async () => {
+    renderPage('lti-teacher', 'integrations');
+    fireEvent.click(
+      await screen.findByRole('button', {name: /^disconnect canvas/i}),
+    );
+    await screen.findByRole('alertdialog');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
   it('has no axe violations with the update-school dialog open', async () => {
     renderPage('teacher-no-school', 'educator-profile');
     await screen.findByRole('heading', {level: 2, name: 'Role'});
