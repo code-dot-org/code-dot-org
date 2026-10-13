@@ -1,6 +1,7 @@
 import {act, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
 
@@ -23,6 +24,23 @@ jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
 }));
 jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   isAdaptiveAiEnabled: () => false,
+}));
+const mockDispatch = jest.fn();
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppDispatch: () => mockDispatch,
+}));
+jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
+  sendAdaptiveStepReport: jest.fn(),
+  sendStartedReportIfNotStarted: (app: string) => ({startedReport: app}),
+}));
+const mockLoad = jest.fn<Promise<Progress>, []>();
+jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
+  serverProgressStore: {
+    load: () => mockLoad(),
+    saveStep: jest.fn(),
+    reset: jest.fn(),
+  },
 }));
 
 const step = (id: string) => ({
@@ -54,11 +72,13 @@ const pathway: Pathway = {
     },
   ],
 };
-const progressKey = {userId: 1, scriptId: 2, levelId: 3, pathwayId: 'p'};
-const storageKey = 'adaptive-progress:1:2:3';
+const progressKey = {scriptId: 2, levelId: 3};
 
 describe('PathwayApp', () => {
-  beforeEach(() => window.localStorage.clear());
+  beforeEach(() => {
+    mockDispatch.mockClear();
+    mockLoad.mockResolvedValue(EMPTY_PROGRESS);
+  });
 
   // Progress loads from a promise, so the first render settles after a tick.
   const renderSettled = async () => {
@@ -74,22 +94,17 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText('playing Intro')).toBeTruthy();
-    const stored = JSON.parse(window.localStorage.getItem(storageKey)!);
-    expect(stored.progress.started).toEqual(['intro']);
+    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
   it('shows the map once anything has been started', async () => {
-    window.localStorage.setItem(
-      storageKey,
-      JSON.stringify({
-        pathwayId: 'p',
-        progress: {completed: [], started: ['intro'], stepContext: {}},
-        savedAt: 'x',
-      })
-    );
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
 
     await renderSettled();
 
     expect(screen.getByText('map screen')).toBeTruthy();
+    expect(mockDispatch).not.toHaveBeenCalled();
   });
 });
