@@ -120,14 +120,6 @@ class ApplicationController < ActionController::Base
     render_404
   end
 
-  # Rails' open-redirect protection only trusts the request's own host. This override
-  # allows URLs from the root code.org domain instead of just the studio subdomain.
-  private def _url_host_allowed?(url)
-    super || URI(url.to_s).host == URI(CDO.code_org_url).host
-  rescue ArgumentError, URI::Error
-    false
-  end
-
   def render_404
     respond_to do |format|
       format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
@@ -475,5 +467,13 @@ class ApplicationController < ActionController::Base
     super
     payload[:user_id] = current_user&.id
     payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
+  end
+
+  # Rails' open-redirect protection only trusts the request's own host. This override
+  # allows URLs from the root code.org domain instead of just the studio subdomain.
+  private def _url_host_allowed?(url)
+    super || URI(url.to_s).host == URI(CDO.code_org_url).host
+  rescue ArgumentError, URI::Error
+    false
   end
 end
