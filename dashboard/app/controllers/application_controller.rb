@@ -120,9 +120,8 @@ class ApplicationController < ActionController::Base
     render_404
   end
 
-  # Rails' open-redirect protection only trusts the request's own host. The
-  # code.org marketing site hands us return URLs (the Amazon Future Engineer
-  # form sends teachers here to sign in), so its host is trusted as well.
+  # Rails' open-redirect protection only trusts the request's own host. This override
+  # allows URLs from the root code.org domain instead of just the studio subdomain.
   private def _url_host_allowed?(url)
     super || URI(url.to_s).host == URI(CDO.code_org_url).host
   rescue ArgumentError, URI::Error
