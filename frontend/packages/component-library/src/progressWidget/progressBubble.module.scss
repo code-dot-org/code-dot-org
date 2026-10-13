@@ -1,0 +1,204 @@
+$inactive-size: 12px;
+$active-size: 24px;
+$edge-width: 1.5px;
+
+// Per status: the fill, the edge and the ink (number, star), at rest and
+// while hovered or pressed. The circle and the diamond both draw from these.
+$statuses: (
+  notStarted: (
+    fill: var(--background-neutral-primary),
+    edge: var(--borders-neutral-strong),
+    ink: var(--text-neutral-primary),
+    hover-fill: var(--background-neutral-tertiary),
+    hover-edge: var(--borders-neutral-strong),
+    hover-ink: var(--text-neutral-primary),
+  ),
+  inProgress: (
+    fill: var(--background-neutral-primary),
+    edge: var(--borders-success-strong),
+    ink: var(--text-neutral-primary),
+    hover-fill: var(--background-success-light),
+    hover-edge: var(--borders-success-strong),
+    hover-ink: var(--text-neutral-primary),
+  ),
+  passed: (
+    fill: var(--background-success-mid),
+    edge: var(--background-success-mid),
+    ink: var(--text-neutral-primary),
+    hover-fill: var(--background-success-strong),
+    hover-edge: var(--background-success-strong),
+    hover-ink: var(--text-neutral-white-fixed),
+  ),
+  completed: (
+    fill: var(--background-success-primary),
+    edge: var(--background-success-primary),
+    ink: var(--text-neutral-white-fixed),
+    hover-fill: var(--background-success-strong),
+    hover-edge: var(--background-success-strong),
+    hover-ink: var(--text-neutral-white-fixed),
+  ),
+  keepWorking: (
+    fill: var(--background-warning-primary),
+    edge: var(--background-warning-primary),
+    ink: var(--text-neutral-primary),
+    hover-fill: var(--background-warning-strong),
+    hover-edge: var(--background-warning-strong),
+    hover-ink: var(--text-neutral-white-fixed),
+  ),
+  error: (
+    fill: var(--background-error-primary),
+    edge: var(--background-error-primary),
+    ink: var(--text-neutral-white-fixed),
+    hover-fill: var(--background-error-strong),
+    hover-edge: var(--background-error-strong),
+    hover-ink: var(--text-neutral-white-fixed),
+  ),
+);
+
+@mixin focus-ring {
+  box-shadow:
+    0 0 0 2px var(--background-neutral-primary),
+    0 0 0 4px var(--borders-brand-teal-primary);
+}
+
+.bubble {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: $inactive-size;
+  height: $inactive-size;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: default;
+
+  &:is(a, button) {
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &.active {
+    width: $active-size;
+    height: $active-size;
+  }
+}
+
+@each $status, $c in $statuses {
+  .#{$status} {
+    --fill: #{map-get($c, fill)};
+    --edge: #{map-get($c, edge)};
+    --ink: #{map-get($c, ink)};
+
+    &:is(a, button):is(:hover, :active) {
+      --fill: #{map-get($c, hover-fill)};
+      --edge: #{map-get($c, hover-edge)};
+      --ink: #{map-get($c, hover-ink)};
+    }
+  }
+}
+
+.bubble.disabled {
+  --fill: var(--background-neutral-disabled);
+  --edge: var(--background-neutral-disabled);
+  --ink: var(--text-neutral-disabled-inverse);
+}
+
+.default {
+  border: $edge-width solid var(--edge);
+  border-radius: var(--shape-round);
+  background-color: var(--fill);
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.panelLevel {
+  &::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border: $edge-width solid var(--edge);
+    border-radius: 2px;
+    background-color: var(--fill);
+    transform: rotate(45deg);
+  }
+
+  &.active::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  &:focus-visible::before {
+    @include focus-ring;
+  }
+}
+
+.lessonExtras {
+  border-radius: 2px;
+  color: var(--text-neutral-quaternary);
+
+  &.active,
+  &:is(a, button):is(:hover, :active) {
+    color: var(--text-neutral-primary);
+  }
+
+  &.disabled {
+    color: var(--text-neutral-disabled);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.icon {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.number {
+  position: relative;
+  font-family: var(--font-family-main);
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--ink);
+}
+
+.assessment {
+  position: relative;
+  display: inline-flex;
+  font-size: 6px;
+  line-height: 1;
+  color: var(--ink);
+
+  .active & {
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border: 1.25px solid var(--borders-neutral-solid);
+    border-radius: var(--shape-round);
+    background-color: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    font-size: 5px;
+  }
+}
