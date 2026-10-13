@@ -198,11 +198,11 @@ describe('countDisplayTreeRows', () => {
 describe('getPredictionTrace', () => {
   const fish = {Legs: '0', Feathers: 'No', Milk: 'No', Fins: 'Yes'};
   const mammal = {Legs: '4', Feathers: 'No', Milk: 'Yes', Fins: 'No'};
-  const predictWith = (values, trainedModel) => {
+  const predictWith = (values, project, trainedModel) => {
     Object.entries(values).forEach(([feature, value]) =>
       store.dispatch(setTestData(feature, value)),
     );
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
     return store.getState();
   };
 
@@ -215,6 +215,7 @@ describe('getPredictionTrace', () => {
       Object.fromEntries(
         zooOptions.features.map(feature => [feature, String(row[feature])]),
       ),
+      project,
       trainedModel,
     );
 
@@ -225,7 +226,7 @@ describe('getPredictionTrace', () => {
 
   test('clears when a value changes, until the next prediction', () => {
     const {project, trainedModel} = trainDataset('zoo', zooOptions);
-    predictWith(fish, trainedModel);
+    predictWith(fish, project, trainedModel);
     expect(
       getPredictionTrace(store.getState(), project, trainedModel),
     ).toBeDefined();
@@ -235,7 +236,7 @@ describe('getPredictionTrace', () => {
       getPredictionTrace(store.getState(), project, trainedModel),
     ).toBeUndefined();
 
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
     const state = store.getState();
     expect(getPredictionTrace(state, project, trainedModel).prediction).toBe(
       getConvertedPredictedLabel(state, project),
@@ -244,7 +245,7 @@ describe('getPredictionTrace', () => {
 
   test('keeps the values predicted with when the test data changes', () => {
     const {project, trainedModel} = trainDataset('zoo', zooOptions);
-    const predicted = predictWith(fish, trainedModel);
+    const predicted = predictWith(fish, project, trainedModel);
     const trace = getPredictionTrace(predicted, project, trainedModel);
 
     expect(
@@ -261,7 +262,7 @@ describe('getPredictionTrace', () => {
       ...zooOptions,
       mode: {},
     });
-    const state = predictWith(fish, trainedModel);
+    const state = predictWith(fish, project, trainedModel);
 
     expect(state.prediction).toBeDefined();
     expect(getPredictionTrace(state, project, trainedModel)).toBeUndefined();
@@ -275,7 +276,7 @@ describe('getPredictionStep', () => {
     Object.entries(fish).forEach(([feature, value]) =>
       store.dispatch(setTestData(feature, value)),
     );
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
     const {path} = getPredictionTrace(store.getState(), project, trainedModel);
 
     expect(getPredictionStep(store.getState(), project, trainedModel)).toBe(

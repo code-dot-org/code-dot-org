@@ -134,7 +134,7 @@ const TestPanel = () => {
             color="primary"
             size="small"
             disabled={!predictAvailable}
-            onClick={() => train.onClickPredict(trainedModel)}
+            onClick={() => train.onClickPredict(trainedModel, project)}
           >
             Predict
           </Button>

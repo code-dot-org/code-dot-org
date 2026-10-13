@@ -17,10 +17,10 @@ import {renderWithProviders, runTraining} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-function predictSnake({store, trainedModel}) {
+function predictSnake({store, project, trainedModel}) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
   });
 }
 

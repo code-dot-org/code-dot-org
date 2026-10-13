@@ -158,13 +158,11 @@ const prepareTestData = (
 const trainingState: {
   trainer?: Trainer;
   store?: Store<RootState>;
-  project?: AilabProject;
   previousResults?: TrainingResults;
 } = {};
 const init = (store: Store<RootState>, project: AilabProject): void => {
   trainingState.previousResults = getTrainingResults(store.getState());
   trainingState.store = store;
-  trainingState.project = project;
   trainingState.trainer = buildTrainer(store, project);
   buildOptionNumberKeysByFeature(store, project);
   prepareTrainingData(store, project);
@@ -174,9 +172,12 @@ const onClickTrain = (): TrainingRun | undefined => {
   return trainingState.trainer?.startTraining();
 };
 
-const onClickPredict = (trainedModel: TrainedModel | undefined): void => {
-  const {trainer, store, project} = trainingState;
-  if (trainer && store && project) {
+const onClickPredict = (
+  trainedModel: TrainedModel | undefined,
+  project: AilabProject,
+): void => {
+  const {trainer, store} = trainingState;
+  if (trainer && store) {
     trainer.predict(trainedModel, prepareTestData(store, project));
   }
 };
@@ -194,7 +195,6 @@ const cancel = (): void => {
 const reset = (): void => {
   trainingState.trainer = undefined;
   trainingState.store = undefined;
-  trainingState.project = undefined;
   trainingState.previousResults = undefined;
 };
 

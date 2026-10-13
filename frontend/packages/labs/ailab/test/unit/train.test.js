@@ -40,7 +40,7 @@ describe('train functions', () => {
     store.dispatch(setTestData('temperature', 10));
     store.dispatch(setTestData('rain', 1010));
 
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
 
     const predictedValue = getConvertedPredictedLabel(
       store.getState(),
@@ -77,7 +77,7 @@ describe('train functions', () => {
     store.dispatch(setTestData('flavor', 'sweet'));
     store.dispatch(setTestData('texture', 'crunchy'));
 
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
 
     const predictedLabel = getConvertedPredictedLabel(
       store.getState(),
@@ -105,5 +105,50 @@ describe('train.cancel', () => {
 
     train.cancel();
     expect(getTrainingResults(store.getState())).toEqual(before);
+  });
+
+  /*
+    A cancelled run restores the model trained before it, so a prediction has
+    to be built from that model's columns. Reusing the cancelled run's columns
+    feeds it values for features it never saw.
+  */
+  test('predicts with the restored model, not the cancelled run', () => {
+    const store = createStore(rootReducer);
+    const data = [
+      {animal: 'bird', legs: '2', tail: 'yes'},
+      {animal: 'dog', legs: '4', tail: 'yes'},
+      {animal: 'snake', legs: '0', tail: 'no'},
+      {animal: 'bird', legs: '2', tail: 'no'},
+      {animal: 'dog', legs: '4', tail: 'no'},
+      {animal: 'snake', legs: '0', tail: 'yes'},
+    ];
+    store.dispatch(setImportedData(data, false));
+    store.dispatch(setColumnsByDataType('animal', ColumnTypes.CATEGORICAL));
+    store.dispatch(setColumnsByDataType('legs', ColumnTypes.NUMERICAL));
+    store.dispatch(setColumnsByDataType('tail', ColumnTypes.CATEGORICAL));
+
+    const onLegs = {
+      ...initialProject,
+      labelColumn: 'animal',
+      selectedFeatures: ['legs'],
+    };
+    const onLegsAndTail = {...onLegs, selectedFeatures: ['legs', 'tail']};
+
+    train.init(store, onLegs);
+    const {trainedModel} = train.onClickTrain();
+    store.dispatch(setTestData('legs', 0));
+    train.onClickPredict(trainedModel, onLegs);
+    const predicted = getConvertedPredictedLabel(store.getState(), onLegs);
+
+    // A second run on different columns, which the student then cancels.
+    train.init(store, onLegsAndTail);
+    train.onClickTrain();
+    train.cancel();
+
+    train.onClickPredict(trainedModel, onLegs);
+
+    expect(getConvertedPredictedLabel(store.getState(), onLegs)).toBe(
+      predicted,
+    );
   });
 });

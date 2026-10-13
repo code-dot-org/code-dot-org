@@ -24,7 +24,7 @@ import {runTraining} from './renderWithProviders';
 function predictBird(store, project, trainedModel) {
   act(() => {
     store.dispatch(setTestData('legs', '2'));
-    train.onClickPredict(trainedModel);
+    train.onClickPredict(trainedModel, project);
   });
 }
 
