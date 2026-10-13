@@ -167,9 +167,10 @@ export function isMissingPretrainedColumns(
   const offered = (column: unknown) =>
     column !== undefined &&
     (!selectable || selectable.includes(column as string));
+  const features = getFeatures(mode);
   return (
     mode.pretrained === true &&
-    !(offered(mode.label) && getFeatures(mode).some(offered))
+    !(offered(mode.label) && features.length > 0 && features.every(offered))
   );
 }
 

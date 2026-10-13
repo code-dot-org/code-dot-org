@@ -652,7 +652,9 @@ describe('EditAilabMode', () => {
         '{"datasets": ["zoo"], "pretrained": true, "label": "name"}'
       );
       await columnsLoaded();
-      expect(screen.getByText(PRETRAINED_COLUMNS_REQUIRED)).toBeInTheDocument();
+      expect(pretrainedCheckbox()).toHaveAccessibleDescription(
+        PRETRAINED_COLUMNS_REQUIRED
+      );
       expect(pretrainedCheckbox()).toBeInvalid();
 
       fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
@@ -664,6 +666,14 @@ describe('EditAilabMode', () => {
         screen.queryByText(PRETRAINED_COLUMNS_REQUIRED)
       ).not.toBeInTheDocument();
       expect(pretrainedCheckbox()).toBeValid();
+    });
+
+    it('asks to pretrain on only features students can choose', async () => {
+      renderEditor(
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs", "name"]}'
+      );
+      await columnsLoaded();
+      expect(pretrainedCheckbox()).toBeInvalid();
     });
 
     it("pretrains on the dataset's default label when it is locked", async () => {

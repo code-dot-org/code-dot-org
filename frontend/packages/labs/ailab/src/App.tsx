@@ -252,14 +252,16 @@ const App = ({
   const {trainedModel} = useTrainingData();
   const {beginRun} = useTrainingRun();
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
+  // A level change empties the data at once but resets the project in a later effect.
+  const dataLoaded = useAppSelector(state => state.data.length > 0);
   const canTrain = readyToTrain(project);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   useEffect(() => {
-    if (pretrained && canTrain && !trainedModel) {
+    if (pretrained && dataLoaded && canTrain && !trainedModel) {
       beginRun();
     }
-  }, [pretrained, canTrain, trainedModel, beginRun]);
+  }, [pretrained, dataLoaded, canTrain, trainedModel, beginRun]);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {

@@ -1,6 +1,6 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {Typography} from '@mui/material';
-import React from 'react';
+import React, {useId} from 'react';
 
 import {
   isMissingPretrainedColumns,
@@ -27,6 +27,7 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
     ? 'Choose a label and features to train the model on.'
     : undefined;
   const checkboxRef = useCheckboxValidity(error);
+  const errorId = useId();
 
   return (
     <div ref={checkboxRef}>
@@ -34,6 +35,8 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
         name="ailab_mode_pretrained"
         label="Pretrain the model"
         checked={mode.pretrained === true}
+        aria-invalid={!!error}
+        aria-describedby={error ? errorId : undefined}
         onChange={e =>
           onChange(setPretrained(mode, e.target.checked, columns?.defaultLabel))
         }
@@ -45,7 +48,11 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
         level cannot require an accuracy.
       </Typography>
       {error && (
-        <Typography variant="body4" className={moduleStyles.warningText}>
+        <Typography
+          id={errorId}
+          variant="body4"
+          className={moduleStyles.warningText}
+        >
           {error}
         </Typography>
       )}
