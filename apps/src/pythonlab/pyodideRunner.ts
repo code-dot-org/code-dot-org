@@ -22,6 +22,7 @@ import {getValidationFromSource, RunType} from '../codebridge';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {asyncRun, restartPyodideIfProgramIsRunning} from './pyodideManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
+import {describeTheaterOutput} from './theaterDescription';
 
 const appName = 'pythonlab';
 
@@ -46,7 +47,10 @@ export async function handleRunClick(
   }
   // Set before the run's first write, and left set past the end of the run:
   // restoring announcements there would talk over the closing summary.
-  consoleManager?.setNarrating(isNeighborhoodLevel() && !runTests);
+  // Theater too: the console's region would cut off its description.
+  consoleManager?.setNarrating(
+    (isNeighborhoodLevel() || isTheaterLevel()) && !runTests
+  );
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
@@ -68,6 +72,7 @@ export async function handleRunClick(
     }
     if (isTheaterLevel()) {
       resetTheaterIfNoOutput();
+      describeTheaterOutput(source);
     }
   }
 }

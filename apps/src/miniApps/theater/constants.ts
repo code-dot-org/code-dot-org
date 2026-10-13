@@ -7,6 +7,8 @@ export enum TheaterSignalType {
   GET_IMAGE = 'GET_IMAGE',
   // The program produced no audio.
   NO_AUDIO = 'NO_AUDIO',
+  // The theater package's own description of the scene.
+  DESCRIPTION = 'DESCRIPTION',
 }
 
 export enum InputMessage {
@@ -17,3 +19,9 @@ export enum InputMessage {
 // DOM ids of the image and audio elements rendered by TheaterVisualization.
 export const THEATER_IMAGE_ID = 'theater';
 export const THEATER_AUDIO_ID = 'theater-audio';
+
+// `summary` doubles as the image's alt text.
+export type TheaterDescription =
+  | {status: 'pending'}
+  | {status: 'ready'; summary: string; detail?: string}
+  | {status: 'unavailable'};

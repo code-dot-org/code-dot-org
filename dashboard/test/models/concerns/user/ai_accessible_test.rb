@@ -311,6 +311,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:ai_chat_lab) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]}
     let(:ai_tutor) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]}
     let(:adaptive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE]}
+    let(:theater_description) {SharedConstants::AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION]}
 
     before do
       allow(user).to receive(:has_aichat_access?).and_return(false)
@@ -331,6 +332,17 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     it 'returns false for ADAPTIVE when enabled but the user lacks access' do
       allow(DCDO).to receive(:get).with("adaptive-ai-enabled", false).and_return(true)
       _(user.can_access_aichat_chat_completion?(adaptive, 123)).must_equal false
+    end
+
+    it 'returns false for THEATER_DESCRIPTION until enabled via DCDO, even with access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(theater_description, 123)).must_equal false
+    end
+
+    it 'returns true for THEATER_DESCRIPTION when enabled via DCDO and the user has access' do
+      allow(DCDO).to receive(:get).with("theater-ai-descriptions-enabled", false).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(theater_description, 123)).must_equal true
     end
 
     it 'returns false if AI_CHAT_LAB is blocked via DCDO' do

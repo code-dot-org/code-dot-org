@@ -54,6 +54,7 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] && DCDO.get("block_aichat_lab_chat_completion", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:AI_TUTOR] && DCDO.get("block_ai_tutor_chat_completion", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:ADAPTIVE] && !DCDO.get("adaptive-ai-enabled", false)
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] && !DCDO.get("theater-ai-descriptions-enabled", false)
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end
