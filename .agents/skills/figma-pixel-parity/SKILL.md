@@ -83,6 +83,8 @@ Pick one path and record it on the recipe:
 
 If design context times out, retry a smaller exact node. Do not implement from screenshots alone.
 
+Figma has no `outline`. A ring there is usually two `box-shadow`s with no blur and no offset: an inner spread in the surface color, then a larger spread in the focus color. Record that as `outline` and `outline-offset`. Do not replace an existing outline with `box-shadow`. A shadow with blur or a vertical offset is elevation; keep that as `box-shadow`.
+
 ## Phase 2 — coverage before code
 
 Fill `coverage.cases` before implementation. Use pairwise coverage plus risk cases, not every permutation. Include:

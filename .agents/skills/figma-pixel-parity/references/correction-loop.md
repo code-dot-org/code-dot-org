@@ -20,7 +20,7 @@ Screenshot the component inside `#storybook-root` at the case’s `deviceScaleFa
 
 Do both checks. Either one can fail the case.
 
-**Visual.** Overlay the Figma screenshot on the browser capture, or diff them. Ignore single-pixel anti-aliasing only. Differences in alignment, weight, icon shape, padding, radius, or color are mismatches.
+**Visual.** Overlay the Figma screenshot on the browser capture, or diff them. Ignore single-pixel anti-aliasing only. Differences in alignment, weight, icon shape, padding, radius, or color are mismatches. A focus ring that Figma draws as stacked zero-blur shadows matches a CSS `outline` with `outline-offset`. That is not a mismatch, and the outline stays an outline.
 
 **Measured.** On the rendered subject, read layout and computed style and compare with `expectedGeometry` and `expectedVariables`:
 
