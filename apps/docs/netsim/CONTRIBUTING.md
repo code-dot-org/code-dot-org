@@ -1,14 +1,12 @@
 # Contributing to Internet Simulator
 
-There is plenty of work to do on the Internet Simulator. If you are internal to
-CodeAI you can pick up a task from the [Internet Simulator Pivotal project](https://www.pivotaltracker.com/n/projects/1407902). If not, please see
-the [Contributing](../../README.md#contributing)
-section of our main README to get started.
+To get started, see the [Contributing](../../README.md#contributing) section of
+the apps README.
 
 ## Developer set-up
 
 Internet Simulator depends on [our standard build
-set-up](../../README.md#build-setup). It has two additional dependencies that
+set-up](../../README.md#quick-start). It has two additional dependencies that
 are not (yet) required for other development: Redis (required) and
 Pusher (optional).
 
