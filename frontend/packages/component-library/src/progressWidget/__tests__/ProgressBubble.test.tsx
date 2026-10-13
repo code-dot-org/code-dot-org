@@ -18,13 +18,57 @@ describe('ProgressBubble', () => {
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 
-  it('is neither link nor button when disabled', () => {
-    render(<ProgressBubble ariaLabel="Level 3" href="/level/3" disabled />);
-    expect(screen.queryByRole('link')).not.toBeInTheDocument();
-    expect(screen.getByLabelText('Level 3')).toHaveAttribute(
-      'aria-disabled',
-      'true',
+  it('is a disabled link that ignores clicks when disabled', async () => {
+    const onClick = vi.fn();
+    render(
+      <ProgressBubble
+        ariaLabel="Level 3, locked"
+        href="/level/3"
+        onClick={onClick}
+        disabled
+      />,
     );
+    const bubble = screen.getByRole('link', {name: 'Level 3, locked'});
+    expect(bubble).toHaveAttribute('aria-disabled', 'true');
+    expect(bubble).not.toHaveAttribute('href');
+    expect(bubble).not.toHaveAttribute('tabindex');
+    await userEvent.click(bubble);
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('lets the keyboard reach a disabled bubble with a tooltip', () => {
+    render(
+      <ProgressBubble ariaLabel="Level 3, locked" tooltip="Locked" disabled />,
+    );
+    expect(screen.getByRole('link', {name: 'Level 3, locked'})).toHaveAttribute(
+      'tabindex',
+      '0',
+    );
+  });
+
+  it('runs onClick on a link bubble', async () => {
+    const onClick = vi.fn((e: {preventDefault: () => void}) =>
+      e.preventDefault(),
+    );
+    render(
+      <ProgressBubble ariaLabel="Level 4" href="/level/4" onClick={onClick} />,
+    );
+    await userEvent.click(screen.getByRole('link', {name: 'Level 4'}));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies the status and className', () => {
+    render(
+      <ProgressBubble
+        ariaLabel="Level 5"
+        status="keepWorking"
+        className="extra"
+        onClick={() => {}}
+      />,
+    );
+    const bubble = screen.getByRole('button', {name: 'Level 5'});
+    expect(bubble.className).toMatch(/keepWorking/);
+    expect(bubble).toHaveClass('extra');
   });
 
   it('marks the active bubble as the current step and shows its number', () => {

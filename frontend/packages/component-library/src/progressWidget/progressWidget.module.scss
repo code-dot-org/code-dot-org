@@ -1,11 +1,6 @@
-$narrow: 991.98px;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
-@mixin focus-ring {
-  outline: none;
-  box-shadow:
-    0 0 0 2px var(--background-neutral-primary),
-    0 0 0 4px var(--borders-brand-teal-primary);
-}
+$narrow: 991.98px;
 
 .widget {
   display: inline-flex;
@@ -24,7 +19,8 @@ $narrow: 991.98px;
   align-items: center;
   gap: 6px;
   min-width: 0;
-  padding: 0 6px 0 3px;
+  padding-block: 0;
+  padding-inline: 3px 6px;
 }
 
 .lessonButton {
@@ -52,7 +48,7 @@ $narrow: 991.98px;
   }
 
   &:focus-visible {
-    @include focus-ring;
+    @include mixins.focus-styles;
   }
 
   @media (max-width: $narrow) {
@@ -88,8 +84,9 @@ $narrow: 991.98px;
   border-inline: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
 
+  // Only when some bubble is current, so the row is never left empty.
   @media (max-width: $narrow) {
-    > :not([aria-current]) {
+    &:has(> [aria-current]) > :not([aria-current]) {
       display: none;
     }
   }
@@ -98,5 +95,6 @@ $narrow: 991.98px;
 .action {
   display: flex;
   align-items: center;
-  padding: 0 3px;
+  padding-block: 0;
+  padding-inline: 3px;
 }

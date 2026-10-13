@@ -1,4 +1,5 @@
-import {Tooltip} from '@mui/material';
+import {Box, Tooltip} from '@mui/material';
+import {visuallyHidden} from '@mui/utils';
 import classNames from 'classnames';
 import {FunctionComponent, MouseEvent, ReactNode} from 'react';
 
@@ -13,22 +14,30 @@ export type ProgressWidgetSaveStatus =
   | 'offline'
   | 'none';
 
-export interface ProgressWidgetProps {
+/** 'none' hides the icon, for levels with no project; any other status needs a label. */
+export type ProgressWidgetSaveProps =
+  | {saveStatus?: 'none'; saveStatusLabel?: undefined}
+  | {
+      saveStatus: Exclude<ProgressWidgetSaveStatus, 'none'>;
+      /** Names the save icon and shows on hover, e.g. "Saved 6 days ago". */
+      saveStatusLabel: string;
+    };
+
+export type ProgressWidgetProps = {
   /** Lesson name on the lesson menu button, e.g. "Lesson 3: Online Puzzles". */
   lessonLabel: string;
   /** Opens the lesson menu. */
-  onLessonClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+  onLessonClick: (e: MouseEvent<HTMLButtonElement>) => void;
   lessonMenuExpanded?: boolean;
-  /** 'none' hides the icon, for levels with no project. */
-  saveStatus?: ProgressWidgetSaveStatus;
-  /** Names the save icon and shows on hover and focus, e.g. "Saved 6 days ago". */
-  saveStatusLabel?: string;
-  /** The bubble row. The bubble with aria-current stays visible on narrow screens. */
+  /** Names the bubble row for screen readers, e.g. "Lesson progress". */
+  bubblesLabel: string;
+  /** The bubbles, as direct children.  Below 992px only the one with
+   *  aria-current stays visible. */
   children: ReactNode;
   /** The Continue button. */
   action?: ReactNode;
   className?: string;
-}
+} & ProgressWidgetSaveProps;
 
 const saveIconName: Record<
   Exclude<ProgressWidgetSaveStatus, 'none'>,
@@ -40,11 +49,16 @@ const saveIconName: Record<
   offline: 'cloud-slash',
 };
 
+// Autosave flips between saving and saved all the time; only the states that
+// need the student's attention are announced.
+const announcedSaveStatuses: ProgressWidgetSaveStatus[] = ['failed', 'offline'];
+
 /**
  * ### Production-ready Checklist:
  * * (✘) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * *     (behavior and roles are tested; the narrow layout is not)
  * * (see ./__tests__/ProgressWidget.test.tsx)
  * * (?) passes accessibility checks;
  *
@@ -58,6 +72,7 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
   lessonLabel,
   onLessonClick,
   lessonMenuExpanded,
+  bubblesLabel,
   saveStatus = 'none',
   saveStatusLabel,
   children,
@@ -94,8 +109,17 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
           </span>
         </Tooltip>
       )}
+      <Box component="span" role="status" sx={visuallyHidden}>
+        {announcedSaveStatuses.includes(saveStatus) ? saveStatusLabel : ''}
+      </Box>
     </div>
-    <div className={moduleStyles.bubbles}>{children}</div>
+    <div
+      className={moduleStyles.bubbles}
+      role="group"
+      aria-label={bubblesLabel}
+    >
+      {children}
+    </div>
     {action && <div className={moduleStyles.action}>{action}</div>}
   </div>
 );

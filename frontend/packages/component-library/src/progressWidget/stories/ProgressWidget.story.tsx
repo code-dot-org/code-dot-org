@@ -1,6 +1,6 @@
 import {Button} from '@mui/material';
 import type {Meta, StoryObj} from '@storybook/react-vite';
-import {expect, within} from 'storybook/test';
+import {expect, fn, within} from 'storybook/test';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -42,46 +42,60 @@ const lessonBubbles = (
     <ProgressBubble
       status="completed"
       ariaLabel="Level 1, completed"
-      href="#"
+      onClick={fn()}
     />
     <ProgressBubble
       levelType="panelLevel"
       status="completed"
       ariaLabel="Level 2, completed"
-      href="#"
+      onClick={fn()}
     />
     <ProgressBubble
       status="completed"
       ariaLabel="Level 3, completed"
-      href="#"
+      onClick={fn()}
     />
     <ProgressBubble
       status="completed"
       isAssessment
       ariaLabel="Level 4, completed"
-      href="#"
+      onClick={fn()}
     />
-    <ProgressBubble status="passed" ariaLabel="Level 5, passed" href="#" />
+    <ProgressBubble
+      status="passed"
+      ariaLabel="Level 5, passed"
+      onClick={fn()}
+    />
     <ProgressBubble
       status="inProgress"
       isActive
       levelNumber={6}
       ariaLabel="Level 6, in progress"
     />
-    <ProgressBubble ariaLabel="Level 7, not started" href="#" />
-    <ProgressBubble isAssessment ariaLabel="Level 8, not started" href="#" />
+    <ProgressBubble ariaLabel="Level 7, not started" onClick={fn()} />
+    <ProgressBubble
+      isAssessment
+      ariaLabel="Level 8, not started"
+      onClick={fn()}
+    />
     <ProgressBubble
       levelType="lessonExtras"
       ariaLabel="Lesson extras"
       tooltip="Lesson extras"
-      href="#"
+      onClick={fn()}
     />
   </>
 );
 
+const sharedArgs = {
+  lessonLabel: 'Lesson 3: Introduction to Online Puzzles',
+  onLessonClick: fn(),
+  bubblesLabel: 'Lesson progress',
+};
+
 export const DefaultProgressWidget: Story = {
   args: {
-    lessonLabel: 'Lesson 3: Introduction to Online Puzzles',
+    ...sharedArgs,
     saveStatus: 'saved',
     saveStatusLabel: 'Saved 6 days ago',
     children: lessonBubbles,
@@ -97,13 +111,49 @@ export const DefaultProgressWidget: Story = {
   },
 };
 
-export const UnsavedNoAction: Story = {
+export const OfflineNoAction: Story = {
   args: {
-    lessonLabel: 'Lesson 3: Introduction to Online Puzzles',
+    ...sharedArgs,
     saveStatus: 'offline',
     saveStatusLabel: "You're offline",
     children: lessonBubbles,
   },
+};
+
+export const SaveStatuses: Story = {
+  render: () => (
+    <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+      <ProgressWidget
+        {...sharedArgs}
+        saveStatus="saved"
+        saveStatusLabel="Saved 6 days ago"
+      >
+        {lessonBubbles}
+      </ProgressWidget>
+      <ProgressWidget
+        {...sharedArgs}
+        saveStatus="saving"
+        saveStatusLabel="Saving..."
+      >
+        {lessonBubbles}
+      </ProgressWidget>
+      <ProgressWidget
+        {...sharedArgs}
+        saveStatus="failed"
+        saveStatusLabel="Not saved"
+      >
+        {lessonBubbles}
+      </ProgressWidget>
+      <ProgressWidget
+        {...sharedArgs}
+        saveStatus="offline"
+        saveStatusLabel="You're offline"
+      >
+        {lessonBubbles}
+      </ProgressWidget>
+      <ProgressWidget {...sharedArgs}>{lessonBubbles}</ProgressWidget>
+    </div>
+  ),
 };
 
 export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
@@ -125,7 +175,7 @@ export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
                     isActive={isActive}
                     levelNumber={10}
                     ariaLabel={`${levelType} ${status}`}
-                    href="#"
+                    onClick={fn()}
                   />
                 </td>
               ))}
@@ -135,7 +185,8 @@ export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
                   isActive={isActive}
                   levelNumber={10}
                   disabled
-                  ariaLabel={`${levelType} disabled`}
+                  ariaLabel={`${levelType} locked`}
+                  tooltip="This level is locked"
                 />
               </td>
               <td>
@@ -146,7 +197,7 @@ export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
                     isAssessment
                     levelNumber={10}
                     ariaLabel="default assessment"
-                    href="#"
+                    onClick={fn()}
                   />
                 )}
               </td>
@@ -159,7 +210,7 @@ export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
             <ProgressBubble
               levelType="lessonExtras"
               ariaLabel="Lesson extras"
-              href="#"
+              onClick={fn()}
             />
           </td>
           <td>

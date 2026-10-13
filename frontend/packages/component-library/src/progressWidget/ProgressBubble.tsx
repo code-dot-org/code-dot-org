@@ -30,10 +30,14 @@ export interface ProgressBubbleProps {
   disabled?: boolean;
   /** Renders the bubble as a link. */
   href?: string;
-  /** Renders the bubble as a button, or runs before a link navigates. */
+  /** Renders the bubble as a button, or runs before a link navigates.  A
+   *  handler that calls preventDefault on a link should first let modified
+   *  clicks (open in new tab) through. */
   onClick?: (e: MouseEvent<HTMLElement>) => void;
-  /** Screen reader name, e.g. "Level 6, completed". */
+  /** Screen reader name.  Star and color are visual only, so it carries the
+   *  status, e.g. "Level 6, completed". */
   ariaLabel: string;
+  /** Read after the name unless it repeats it. */
   tooltip?: ReactNode;
   className?: string;
 }
@@ -42,7 +46,8 @@ export interface ProgressBubbleProps {
  * ### Production-ready Checklist:
  * * (✘) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * *     (behavior and roles are tested; status colors are not asserted)
  * * (see ./__tests__/ProgressBubble.test.tsx)
  * * (?) passes accessibility checks;
  *
@@ -99,8 +104,14 @@ const ProgressBubble: FunctionComponent<ProgressBubbleProps> = ({
 
   let bubble;
   if (disabled) {
+    // The disabled-link pattern; focusable only when there is a tooltip to reach.
     bubble = (
-      <span {...shared} aria-disabled="true">
+      <span
+        {...shared}
+        role="link"
+        aria-disabled="true"
+        tabIndex={tooltip ? 0 : undefined}
+      >
         {content}
       </span>
     );
@@ -125,7 +136,11 @@ const ProgressBubble: FunctionComponent<ProgressBubbleProps> = ({
   }
 
   return tooltip ? (
-    <Tooltip title={tooltip} placement="bottom">
+    <Tooltip
+      title={tooltip}
+      placement="bottom"
+      describeChild={tooltip !== ariaLabel}
+    >
       {bubble}
     </Tooltip>
   ) : (
