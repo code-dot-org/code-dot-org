@@ -122,7 +122,14 @@ export const OfflineNoAction: Story = {
 
 export const SaveStatuses: Story = {
   render: () => (
-    <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: 12,
+      }}
+    >
       <ProgressWidget
         {...sharedArgs}
         saveStatus="saved"
