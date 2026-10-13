@@ -6,7 +6,11 @@ import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
-  default: () => <div>map screen</div>,
+  default: ({onWorkOnProject}: {onWorkOnProject: () => void}) => (
+    <button type="button" onClick={onWorkOnProject}>
+      map screen
+    </button>
+  ),
 }));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
@@ -104,5 +108,8 @@ describe('PathwayApp', () => {
 
     expect(screen.getByText('map screen')).toBeTruthy();
     expect(mockDispatch).not.toHaveBeenCalled();
+
+    act(() => screen.getByText('map screen').click());
+    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 });

@@ -48,37 +48,27 @@ class AdaptiveProgressController < ApplicationController
       seconds = [(time_ms / 1000.0).ceil, ActivitiesController::MAX_INT_TIME_SPENT].min
     end
 
-    row = find_or_create_row(adaptive_user_level || start_adaptive_user_level, step['id'])
+    user_level = adaptive_user_level || start_adaptive_user_level
+    row = Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      UserAdaptiveStep.find_or_create_by!(user_level_id: user_level.id, step_id: step['id'])
+    end
     row.with_lock do
       JSON_FIELDS.each {|field, column| row[column] = json_values[field] if json_values.key?(field)}
-      if present.any?
-        progress = row.progress || {}
-        now = Time.zone.now.utc.iso8601
-        progress['startedAt'] ||= now if body['started'] == true
-        progress['completedAt'] ||= now if body['completed'] == true
-        progress['timeSpent'] = (progress['timeSpent'] || 0) + seconds if seconds
-        if answers
-          progress['answers'] = (progress['answers'] || {}).merge(question_id => answers)
-          progress['submitted'] = true
-        end
-        row.progress = progress
+      progress = row.progress || {}
+      now = Time.zone.now.utc.iso8601
+      progress['startedAt'] ||= now if body['started'] == true
+      progress['completedAt'] ||= now if body['completed'] == true
+      progress['timeSpent'] = (progress['timeSpent'] || 0) + seconds if seconds&.positive?
+      if answers
+        progress['answers'] = (progress['answers'] || {}).merge(question_id => answers)
+        progress['submitted'] = true
       end
+      # Any progress at all makes the step started, so a no-op save leaves it nil.
+      row.progress = progress if progress.any?
       row.save!
     end
 
-    render json: steps_json[step['id']] || {}
-  end
-
-  # DELETE /adaptive_progress?scriptId=&levelId=
-  #
-  # Keeps the adaptive level's UserLevel: the student did start the pathway.
-  def destroy
-    ActiveRecord::Base.transaction do
-      user_level = adaptive_user_level
-      UserAdaptiveStep.where(user_level_id: user_level.id).delete_all if user_level
-      step_user_levels.destroy_all
-    end
-    head :no_content
+    render json: step_json(step, row)
   end
 
   private def load_adaptive
@@ -105,12 +95,6 @@ class AdaptiveProgressController < ApplicationController
     user_level
   end
 
-  private def find_or_create_row(user_level, step_id)
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      UserAdaptiveStep.find_or_create_by!(user_level_id: user_level.id, step_id: step_id)
-    end
-  end
-
   private def step_user_levels
     UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: @level.step_levels.values.map(&:id))
   end
@@ -120,22 +104,38 @@ class AdaptiveProgressController < ApplicationController
     user_level = adaptive_user_level
     if user_level
       UserAdaptiveStep.where(user_level_id: user_level.id).where.not(progress: nil).find_each do |row|
-        progress = row.progress
-        steps[row.step_id] = {
-          'status' => progress['completedAt'] ? 'complete' : 'started',
-          'timeSpent' => progress['timeSpent'] || 0,
-        }.merge(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
+        steps[row.step_id] = progress_json(row.progress)
       end
     end
 
     step_ids_by_level_id = @level.step_levels.to_h {|step_id, level| [level.id, step_id]}
     step_user_levels.each do |step_user_level|
-      steps[step_ids_by_level_id[step_user_level.level_id]] = {
-        'status' => step_user_level.passing? ? 'complete' : 'started',
-        'timeSpent' => step_user_level.time_spent || 0,
-      }
+      steps[step_ids_by_level_id[step_user_level.level_id]] = user_level_json(step_user_level)
     end
     steps
+  end
+
+  private def step_json(step, row)
+    if step['kind'] == 'level'
+      user_level = UserLevel.joins(:level).find_by(user_id: current_user.id, script_id: @unit.id, levels: {name: step['level']})
+      user_level ? user_level_json(user_level) : {}
+    else
+      row.progress ? progress_json(row.progress) : {}
+    end
+  end
+
+  private def progress_json(progress)
+    {
+      'status' => progress['completedAt'] ? 'complete' : 'started',
+      'timeSpent' => progress['timeSpent'] || 0,
+    }.merge(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
+  end
+
+  private def user_level_json(user_level)
+    {
+      'status' => user_level.passing? ? 'complete' : 'started',
+      'timeSpent' => user_level.time_spent || 0,
+    }
   end
 
   private def valid_json_value?(value)
@@ -146,6 +146,7 @@ class AdaptiveProgressController < ApplicationController
   private def graded_answers(step, answers)
     return nil unless answers.is_a?(Hash) && answers['list'].is_a?(Array)
     question_id = answers['questionId'].to_s
+    return nil if question_id.empty?
     question = Array(step['questions']).find {|q| q.is_a?(Hash) && q['id'].to_s == question_id}
     return nil unless question
 

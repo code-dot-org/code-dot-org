@@ -1256,8 +1256,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 30, UserLevel.find_by(user: @user, level: sandbox, script: script).best_result
 
     post :milestone, params: params.merge(level_id: template.id)
+    assert_response :success
+    assert_equal 30, UserLevel.find_by(user: @user, level: template, script: script).best_result
+
+    other = create(:weblab2)
+    post :milestone, params: params.merge(level_id: other.id)
     assert_response :forbidden
-    assert_nil UserLevel.find_by(user: @user, level: template, script: script)
+    assert_nil UserLevel.find_by(user: @user, level: other, script: script)
 
     post :milestone, params: params.merge(level_id: adaptive.id, testResult: '-150')
     assert_response :success

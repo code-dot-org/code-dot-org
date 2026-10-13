@@ -194,7 +194,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           dispatch(sendStartedReportIfNotStarted('adaptive'));
           setView({kind: 'step', checkpointId: id});
         }}
-        onWorkOnProject={() => setView({kind: 'project'})}
+        onWorkOnProject={() => {
+          dispatch(sendStartedReportIfNotStarted('adaptive'));
+          setView({kind: 'project'});
+        }}
       />
     </div>
   );

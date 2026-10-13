@@ -27,7 +27,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     AdaptiveContent.reset_cache!
 
     @sandbox = create(:weblab2, name: 'adaptive-progress-sandbox')
-    create(:weblab2, name: 'adaptive-progress-template')
+    @template = create(:weblab2, name: 'adaptive-progress-template')
     @level = create(:adaptive, adaptive_id: 'progress')
     @unit = create(:script_level, levels: [@level]).script
     @student = create(:student)
@@ -129,6 +129,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       ['nowhere', {started: true}],
       ['try', {started: true}],
       ['try', {timeSinceLastSave: 1000}],
+      ['quiz', {answers: {list: [{answerId: 'a'}]}}],
       ['quiz', {answers: {questionId: 9, list: [{answerId: 'a'}]}}],
       ['quiz', {answers: {questionId: 'how', list: [{answerId: '3'}]}}],
       ['quiz', {answers: {questionId: 1, list: [{answerId: 'z'}]}}],
@@ -168,19 +169,25 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
 
     user_level.update!(best_result: ActivityConstants::FREE_PLAY_RESULT)
     assert_equal 'complete', steps['try']['status']
+
+    put_step 'try', validationHistory: [{'passed' => true}]
+    assert_equal({'status' => 'complete', 'timeSpent' => 12}, JSON.parse(response.body))
   end
 
-  test "destroy clears steps and step levels but keeps the adaptive user level" do
-    put_step 'read', started: true
-    put_step 'quiz', answers: {questionId: 1, list: [{answerId: 'b'}]}
-    step_user_level = create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: 30)
+  test "the project takes its state from the template level's user level" do
+    create(:user_level, user: @student, level: @template, script: @unit, best_result: -150, time_spent: 5)
 
-    delete :destroy, params: params
+    assert_equal({'status' => 'started', 'timeSpent' => 5}, steps['project'])
+  end
 
-    assert_response :no_content
-    assert_equal({}, steps)
-    assert UserLevel.exists?(user: @student, level: @level, script: @unit)
-    assert UserLevel.with_deleted.find(step_user_level.id).deleted?
+  test "saves that change nothing do not start a step" do
+    put_step 'read', started: false
+    put_step 'read', completed: false
+    put_step 'read', timeSinceLastSave: 0
+
+    assert_response :success
+    assert_equal({}, JSON.parse(response.body))
+    assert_empty steps
   end
 
   test "another student's progress is not shown" do
