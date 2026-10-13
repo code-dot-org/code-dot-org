@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:37:09.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Tune a classifier that identifies speedruns as \"legit\" or \"suspicious.\" To make this prediction, the classifier uses:\r\n\r\n- How fast the player finished, in seconds (`time`).\r\n- How many levels they completed (`levels`).\r\n\r\nCurrently, the classifier looks at only one nearest neighbor.\r\n\r\n**☑️ Do This:**\r\n\r\n- Run the program. What is the accuracy of the classifier when `n_neighbors` is 1?\r\n- Write a loop that tries every setting in the `n_neighbors` list, printing the classifier’s accuracy for each value.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember a `for` loop allows you to iterate over a list of values.\r\n\r\n```\r\nn_neighbors = [1, 3, 5, 7, 9, 11, 13, 15]\r\nfor n_neighbor in n_neighbors:\r\n  ...\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "print(\"Hello world!\")",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "speedruns.csv",
+          "contents": "time,levels,verdict\n999,13,suspicious\n1223,7,legit\n1835,16,legit\n658,16,legit\n1260,6,legit\n846,10,legit\n1561,23,legit\n1178,13,legit\n564,21,suspicious\n1129,17,suspicious\n636,17,suspicious\n289,22,suspicious\n403,2,suspicious\n817,14,suspicious\n228,22,suspicious\n1591,14,legit\n1647,1,legit\n237,24,suspicious\n1147,19,suspicious\n978,10,suspicious\n922,5,legit\n329,2,legit\n1892,23,suspicious\n734,21,suspicious\n1878,4,legit\n926,5,legit\n577,18,suspicious\n652,4,legit\n646,15,suspicious\n1649,10,legit\n1693,15,legit\n1655,16,legit\n679,8,suspicious\n732,8,legit\n1168,6,suspicious\n1481,24,suspicious\n1472,12,suspicious\n1716,3,legit\n1577,13,legit\n1126,17,suspicious\n1447,22,suspicious\n1576,9,legit\n547,20,suspicious\n1960,17,legit\n1169,23,suspicious\n1344,9,legit\n1408,6,legit\n1474,1,legit\n357,14,suspicious\n337,15,suspicious\n739,10,legit\n439,22,suspicious\n1545,7,legit\n1051,20,suspicious\n528,23,suspicious\n926,12,legit\n554,2,legit\n1547,15,legit\n921,17,legit\n1734,24,suspicious\n1477,22,legit\n1036,12,legit\n1234,17,suspicious\n1998,6,legit\n1496,17,suspicious\n965,20,suspicious\n911,14,suspicious\n1733,9,legit\n1333,2,legit\n1450,12,legit\n489,9,suspicious\n999,23,suspicious\n231,6,suspicious\n1165,1,legit\n236,8,suspicious\n1371,12,legit\n462,7,legit\n334,19,suspicious\n496,9,suspicious\n951,5,legit\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Speedrun Screening",
+    "bubble_choice_description": "Predict whether a speedrun is legitimate or suspicious.",
+    "thumbnail_url": "https://images.code.org/2ccd408d3676565dd0c91f68822119ca-speedrun.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:39:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:42:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:47:07 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:59:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
