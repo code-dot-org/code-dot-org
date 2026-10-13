@@ -113,7 +113,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   markComplete,
   updateStepContext,
   saveAnswers,
-  reset,
 }) => {
   const dispatch = useAppDispatch();
   const [view, setView] = useState<View>(initialView);
@@ -196,10 +195,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           setView({kind: 'step', checkpointId: id});
         }}
         onWorkOnProject={() => setView({kind: 'project'})}
-        onReset={() => {
-          reset();
-          setView({kind: 'map'});
-        }}
       />
     </div>
   );

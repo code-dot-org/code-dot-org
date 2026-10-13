@@ -71,7 +71,7 @@ export function useProgress(
     );
   }, []);
 
-  // Generated instructions live for the page only; they are not progress.
+  // Generated instructions for the step.
   const [generated, setGenerated] = useState<{
     [stepId: string]: GeneratedContent;
   }>({});
@@ -115,11 +115,6 @@ export function useProgress(
     []
   );
 
-  const reset = useCallback(() => {
-    setProgress(EMPTY_PROGRESS);
-    setGenerated({});
-  }, []);
-
   return {
     /** Undefined until the stored progress has loaded. */
     progress,
@@ -129,6 +124,5 @@ export function useProgress(
     markComplete,
     updateStepContext,
     saveAnswers,
-    reset,
   };
 }

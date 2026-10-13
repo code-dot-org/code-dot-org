@@ -124,8 +124,6 @@ describe('useProgress', () => {
       progressOf([], ['intro']),
       progressOf(['intro'], ['intro']),
     ]);
-    act(() => result.current.reset());
-    expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
 
   it('keeps generated instructions for the page without saving them', async () => {
@@ -141,7 +139,7 @@ describe('useProgress', () => {
     expect(store.saved[store.saved.length - 1].stepContext).toEqual({});
   });
 
-  it('stores answers per step beside other step context and clears them on reset', async () => {
+  it('stores answers per step beside other step context', async () => {
     const store = fakeStore(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
@@ -165,7 +163,5 @@ describe('useProgress', () => {
       quiz: {answers: {1: [wrong, right], 2: [right]}},
       other: {answers: {3: [right]}},
     });
-    act(() => result.current.reset());
-    expect(result.current.stepContextMap).toEqual({});
   });
 });
