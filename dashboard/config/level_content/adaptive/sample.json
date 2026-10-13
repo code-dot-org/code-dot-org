@@ -521,21 +521,6 @@
       ]
     },
     {
-      "id": "reflect",
-      "title": "Reflect",
-      "description": "Describe what you built and what you'd do differently next time.",
-      "requires": ["introduction"],
-      "steps": [
-        {
-          "id": "reflect-response",
-          "title": "Reflection",
-          "kind": "freeResponse",
-          "prompt": "What did you build in this project, and what's one thing you'd change if you started over?",
-          "placeholder": "Type your reflection here..."
-        }
-      ]
-    },
-    {
       "id": "find-the-clue",
       "title": "Find the Clue",
       "description": "Point to the part of an error message or broken page that signals what's wrong",
