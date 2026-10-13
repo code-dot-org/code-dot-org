@@ -10,6 +10,10 @@ import React, {
 } from 'react';
 
 import {
+  clearHeaderNavigation,
+  setHeaderNavigation,
+} from '@cdo/apps/code-studio/headerRedux';
+import {
   getCurrentLevel,
   getLessonCount,
   getNextLevel,
@@ -19,6 +23,10 @@ import {
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {
+  useHeaderContinue,
+  useOwnsHeaderNavigation,
+} from '@cdo/apps/lab2/progress/headerNavigation';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -55,6 +63,8 @@ interface NavigationAreaProps {
    * 'simple': Renders with 'simpler' text (Continue, Finish, etc)
    */
   textVariant?: 'simple';
+  /** Keeps Continue here even when the progress widget would take it. */
+  keepContinueInLab?: boolean;
 }
 
 /**
@@ -74,6 +84,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   overrideTheme,
   styleAsBubble = false,
   textVariant,
+  keepContinueInLab = false,
 }) => {
   const {
     id,
@@ -296,11 +307,47 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasEdited,
   ]);
 
+  // The progress widget draws Continue in the header; Submit stays here.
+  const progressWidget = useAppSelector(
+    state => !!state.header?.progressWidget
+  );
+  const continueInHeader = progressWidget && !submittable && !keepContinueInLab;
+  const ownsHeaderNavigation = useOwnsHeaderNavigation();
+  const publishesToHeader = continueInHeader && ownsHeaderNavigation;
+  const headerLabel = externalNavigation?.label ?? simpleText;
+
+  useEffect(() => {
+    if (publishesToHeader) {
+      dispatch(
+        setHeaderNavigation({
+          label: headerLabel,
+          enabled: continueEnabled,
+          tooltip: continueTooltip,
+        })
+      );
+    }
+  }, [
+    publishesToHeader,
+    headerLabel,
+    continueEnabled,
+    continueTooltip,
+    dispatch,
+  ]);
+
+  useEffect(() => {
+    if (publishesToHeader) {
+      return () => {
+        dispatch(clearHeaderNavigation());
+      };
+    }
+  }, [publishesToHeader, dispatch]);
+
+  useHeaderContinue(publishesToHeader ? handleContinue : undefined);
+
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
   if (
     !submittable &&
-    hideContinueIfDisabled &&
-    !continueEnabled &&
+    (continueInHeader || (hideContinueIfDisabled && !continueEnabled)) &&
     !feedbackMessage
   ) {
     return null;
@@ -342,17 +389,19 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               tooltipMessage={submitTooltip}
             />
           ) : (
-            <ContinueButton
-              disabled={!continueEnabled}
-              variant={variant}
-              color={color}
-              endIcon={externalNavigation?.endIcon ?? endIcon}
-              tooltipMessage={continueTooltip}
-              hideIfDisabled={hideContinueIfDisabled}
-              onContinue={handleContinue}
-            >
-              {buttonText}
-            </ContinueButton>
+            !continueInHeader && (
+              <ContinueButton
+                disabled={!continueEnabled}
+                variant={variant}
+                color={color}
+                endIcon={externalNavigation?.endIcon ?? endIcon}
+                tooltipMessage={continueTooltip}
+                hideIfDisabled={hideContinueIfDisabled}
+                onContinue={handleContinue}
+              >
+                {buttonText}
+              </ContinueButton>
+            )
           )}
         </div>
         {showTts && feedbackMessage && !hideContinueIfDisabled && (

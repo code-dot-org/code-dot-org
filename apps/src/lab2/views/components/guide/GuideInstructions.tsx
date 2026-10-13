@@ -51,6 +51,7 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
         hasEdited={hasEdited}
         hideContinueIfDisabled={true}
         textVariant={'simple'}
+        keepContinueInLab
       />
     </Guide>
   );

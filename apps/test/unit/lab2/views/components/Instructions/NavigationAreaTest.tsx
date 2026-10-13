@@ -5,8 +5,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import header, {showProgressWidget} from '@cdo/apps/code-studio/headerRedux';
 import lab, {setValidationState} from '@cdo/apps/lab2/lab2Redux';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
+import {requestHeaderContinue} from '@cdo/apps/lab2/progress/headerNavigation';
 import lab2Project, {
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -285,6 +287,83 @@ describe('NavigationArea', () => {
       fireEvent.click(screen.getByRole('button'));
 
       expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('with the progress widget', () => {
+    beforeEach(() => {
+      registerReducers({header});
+      store.dispatch(showProgressWidget());
+    });
+
+    it('publishes Continue to the header instead of drawing it', () => {
+      renderDefault();
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+      expect(store.getState().header.headerNavigation).toEqual({
+        label: commonI18n.continue(),
+        enabled: true,
+        tooltip: undefined,
+      });
+    });
+
+    it('publishes the reason Continue is disabled', () => {
+      renderDefault({requireRun: true});
+
+      expect(store.getState().header.headerNavigation).toMatchObject({
+        enabled: false,
+        tooltip: expect.any(String),
+      });
+    });
+
+    it("labels the last level's Continue as finishing", () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      renderDefault();
+
+      expect(store.getState().header.headerNavigation.label).toBe(
+        commonI18n.finish()
+      );
+    });
+
+    it("continues the lesson on the header's Continue", () => {
+      renderDefault();
+
+      requestHeaderContinue();
+
+      expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+
+    it('answers the header once when two are mounted', () => {
+      renderDefault();
+      renderDefault();
+
+      requestHeaderContinue();
+
+      expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+
+    it('clears the header on unmount', () => {
+      const {unmount} = renderDefault();
+
+      unmount();
+
+      expect(store.getState().header.headerNavigation).toBeUndefined();
+    });
+
+    it('keeps Continue in the lab when asked to', () => {
+      renderDefault({keepContinueInLab: true});
+
+      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(store.getState().header.headerNavigation).toBeUndefined();
+    });
+
+    it('keeps Submit in the lab', () => {
+      renderDefault({
+        levelProperties: makeLevelProperties({submittable: true}),
+      });
+
+      expect(screen.getByText('Submit')).toBeInTheDocument();
+      expect(store.getState().header.headerNavigation).toBeUndefined();
     });
   });
 
