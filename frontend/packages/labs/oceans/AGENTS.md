@@ -7,11 +7,13 @@ an internal Turborepo workspace under `frontend/packages/labs/oceans/`.
 
 Consumed by:
 
-- `apps/src/fish/Fish.js` (legacy webpack consumer; calls the imperative
-  `initAll(...)` named export).
 - `frontend/apps/studio/src/modules/labs/oceans/index.tsx` (Vite/TanStack
   consumer; renders the `<OceansLab />` default export wrapped in CSS-only
   responsive shell classes).
+
+`apps/src/fish/Fish.js` (legacy webpack) does not consume this package yet;
+it still imports the npm package `@code-dot-org/ml-activities`. See
+`docs/architecture.md`, "Legacy apps/ consumer".
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
 ESLint flat config, Prettier, Stylelint. Scene components are class
@@ -25,9 +27,8 @@ All commands run from `frontend/`:
 yarn install
 ```
 
-The lab's `dist/` outputs are produced by Vite. Consumers (`apps/`,
-`frontend/apps/studio`) pick them up automatically via the `workspace:*`
-protocol.
+The lab's `dist/` outputs are produced by Vite. `frontend/apps/studio`
+picks them up automatically via the `workspace:*` protocol.
 
 ## Development workflow
 
