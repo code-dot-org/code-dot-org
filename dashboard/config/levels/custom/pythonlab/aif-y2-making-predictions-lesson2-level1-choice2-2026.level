@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T01:18:17.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "New Shoes",
+    "long_instructions": "You’re building a multiple linear regression model that predicts how long a new pair of shoes will last (in weeks) based on two variables: the distance you walk each week (in miles) and the price of the shoes (in dollars). You have the following training data:\r\n\r\n---\r\n\r\n| Distance | Price | Time Until Worn Out |\r\n| - | - | - |\r\n| 5 miles | $30 | 40 weeks |\r\n| 10 miles | $45 | 30 weeks |\r\n| 15 miles | $60 | 24 weeks |\r\n| 20 miles | $80 | 18 weeks |\r\n| 20 miles | $30 | 9 weeks |\r\n\r\n---\r\n\r\n**☑️ Do This:**\r\n\r\n1. The first training data example has already been added to the `inputs` list. Add the remaining training data examples to the `inputs` list.\r\n2. The first training data example has already been added to the `outputs` list. Add the remaining training data examples to the `outputs` list.\r\n3. Train the model based on the training data inputs and outputs.\r\n4. Run the code and make some predictions. Check that they seem reasonable based on your training data.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo train a linear regression model with `scikit-learn`, recall that you can use code like:\r\n\r\n```python\r\nmodel.fit(x, y)\r\n```\r\n\r\nwhere `x` represents the inputs and `y` represents the outputs.\r\n",
+    "bubble_choice_description": "Predict how long a new pair of shoes will last.",
+    "thumbnail_url": "https://images.code.org/3e8c8ce7091d70e1fee06fb9e6a7a316-shoes.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\n\n# Input features: [distance walked, price]\n# TODO 1: Add the remaining training data inputs\ninputs = [[5, 30]]\n\n# Output: weeks until shoes are worn out\n# TODO 2: Add the remaining training data outputs\noutputs = [40]\n\nmodel = LinearRegression()\n\n# TODO 3: Fit the model to the inputs and outputs\n\n# Make a prediction for a new pair of shoes\ndistance = int(input(\"Enter distance walked per week (in miles): \"))\nprice = int(input(\"Enter price of shoes (in dollars): \"))\nprediction = model.predict([[distance, price]])\n\nprint(\"Predicted weeks until shoes are worn out:\", round(prediction[0]))",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpDyHWFsuvV5svB\nQUkhDOE7UGUtCHpPW0gw4Ky1iOM1o/x3z2oTHIUyJOjWKUtH9SyWG1aYYxQ4\nMbp/36rn9qTl6gOzwsA1w1Y6qZXOUfOD4PGyeS4OorfvPidEecL2CGFKoNjd\ng8Yw1+Iy+DvyDOs4fSV/qJ/rXgGKU+C5IgFYQI6nNnoeewixfuX8cVZzcvc5\n+viryeBh6j3tHhaDBIiKPJ4IcChg62zflj75YoegHfITnE4Aw0fJTVVwE0ML\njKrbbHlxnm6eWGM0/toLPrdf4TvA7rxuCsMU3blviNRRxT7YqJ7UOwfOuo8O\nr4MBo0XXr+jbyVZ+rBw+gqKMb01bHz4lD3wr/Quh9vXtF26yu5s5mpAQiUpQ\nlsYq1dZTK3FsqMqvaaFgiCiEZjJYeLjHWtOUfqkPoxqdzYPNsy6n8bllzPzi\nkGPAtlznpGzFjFHoqTQ0t1L5XmsMLpisfBPLPC89m3fZqSkQhkceJMJp1ayy\n+2RRLUX8u7KHT8AS+l9tPtP1cDCDGR87CGVx0dgyXaUcuXxzLc3GTzhwiqKx\nLkCXRWh66dJS0zcG7vQj62FP1I+322IdopJtaqhDRdb+m4vD2WgpaL7asJia\nh5FsdNm8IUUc8UvH3R+0Z9CvvOiMoGJRosaXMHl1Q5sAJvXtnfZJV2DALYO7\nktmle8IvC0x+4beBDAUBxJVW0Tclb7HlVsB6FtRyKZxuOUG2G4zm/DPNSFQq\ngbo8ocEpfI27FePZpzAS6WpqStxrEDVeHMvmsWtprJK/Xg8znu/1oiS8azpp\nTmttLPfXmFhhOGCLkSD7cR9EIYlXFgyuv2mj2kfLXRZtuCNhrvVEL7isR0rX\nMO1Yv3f7V3UeojVSamjguuGWznOg/qrf1D8JhLzB1GM=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 01:25:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:27:44 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:27:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
