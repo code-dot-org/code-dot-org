@@ -10,12 +10,14 @@ export type ModeObject = Record<string, unknown>;
 // hideInstructionsOverlay is absent: Lab 2 never shows the overlay.
 export type BooleanModeKey =
   | 'hideSelectLabel'
+  | 'lockFeatures'
   | 'hideSave'
   | 'randomizeTestData'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
+  'lockFeatures',
   'hideSave',
   'hideColumnClicking',
   'randomizeTestData',
@@ -55,7 +57,7 @@ function isValidModeValue(
     return isValidAccuracy(value);
   }
   if (key === 'label') {
-    return typeof value === 'string';
+    return typeof value === 'string' && value !== '';
   }
   if (key === 'features') {
     return (

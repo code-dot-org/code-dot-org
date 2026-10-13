@@ -92,9 +92,16 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const noneMeansDefault = labelLocked && !!defaultLabel;
   const startingLabel = label ?? (labelLocked ? defaultLabel : undefined);
   const selectableColumns = columns?.selectable ?? [];
+  const unlistedLabel =
+    label !== undefined && !selectableColumns.includes(label)
+      ? label
+      : undefined;
 
   const labelItems = [
     ...(noneMeansDefault ? [] : [{value: NO_LABEL, text: 'None'}]),
+    ...(unlistedLabel
+      ? [{value: unlistedLabel, text: unlistedLabel, disabled: true}]
+      : []),
     ...(defaultLabel
       ? [{value: defaultLabel, text: `${defaultLabel} (default)`}]
       : []),
@@ -183,6 +190,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         <SimpleDropdown
           labelText="Label"
           name="ailab_mode_label"
+          required={labelLocked}
           items={labelItems}
           selectedValue={startingLabel ?? NO_LABEL}
           onChange={e => onChange(setLabel(mode, e.target.value || undefined))}

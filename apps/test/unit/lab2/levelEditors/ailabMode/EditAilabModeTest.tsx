@@ -2,6 +2,7 @@ import {act, render, screen, fireEvent, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {AILAB_ASSET_PATH} from '@cdo/apps/ailab/lab2/assetPath';
 import EditAilabMode from '@cdo/apps/lab2/levelEditors/ailabMode/EditAilabMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -20,7 +21,7 @@ const DATASETS = [
   {...dataset('pizza_toy', 'Pizza Toppings'), isToy: true},
 ];
 
-const ASSET_PATH = '/blockly/media/skins/ailab/datasets/';
+const ASSET_PATH = AILAB_ASSET_PATH + 'datasets/';
 
 const FILES: Record<string, string | object> = {
   // `name` has no type in the metadata, so students cannot choose it.
@@ -331,6 +332,7 @@ describe('EditAilabMode', () => {
         'legs',
         'wings',
       ]);
+      expect(labelDropdown()).toBeValid();
     });
 
     it('waits for a dataset', () => {
@@ -389,6 +391,36 @@ describe('EditAilabMode', () => {
       );
     });
 
+    it("shows only the chosen dataset's columns", async () => {
+      let releaseHeart = () => {};
+      const heartHeld = new Promise<void>(resolve => (releaseHeart = resolve));
+      const serve = jest.mocked(HttpClient.get).getMockImplementation()!;
+      jest.mocked(HttpClient.get).mockImplementation(async url => {
+        if (url.endsWith('heart.csv')) {
+          await heartHeld;
+        }
+        return serve(url);
+      });
+      renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+
+      chooseDataset('heart');
+      expect(labelDropdown()).toBeDisabled();
+
+      chooseDataset('zoo');
+      await columnsLoaded();
+      await act(async () => {
+        releaseHeart();
+        await new Promise(resolve => setTimeout(resolve));
+      });
+      expect(optionsOf(labelDropdown())).toEqual([
+        'None',
+        'animal (default)',
+        'legs',
+        'wings',
+      ]);
+    });
+
     it("shows the dataset's default label when locked with none set", async () => {
       const savedMode = renderEditor('{"datasets": ["zoo"]}');
       await columnsLoaded();
@@ -425,12 +457,14 @@ describe('EditAilabMode', () => {
             'This dataset has no default label. Choose a label to lock.'
           )
         ).toBeInTheDocument();
+        expect(labelDropdown()).toBeInvalid();
       }
     );
 
     it('flags a saved label students cannot choose', async () => {
       renderEditor('{"datasets": ["zoo"], "label": "name"}');
       await columnsLoaded();
+      expect(labelDropdown()).toHaveValue('name');
       expect(
         screen.getByText('Students cannot choose "name" in this dataset.')
       ).toBeInTheDocument();
