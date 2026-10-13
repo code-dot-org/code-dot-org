@@ -20,6 +20,7 @@ import {
 import {DatasetFiles} from './datasetColumns';
 import FeaturesField from './FeaturesField';
 import LabelField from './LabelField';
+import PretrainedField from './PretrainedField';
 import {useDatasetColumns} from './useDatasetColumns';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -87,6 +88,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
+  const pretrained = mode.pretrained === true;
 
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
@@ -98,11 +100,16 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const changeMode = (newMode: ModeObject) =>
     onChange(withoutLabelInFeatures(newMode, columns?.defaultLabel));
 
-  const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
+  const renderCheckbox = (
+    key: BooleanModeKey,
+    checkboxLabel: string,
+    {checked = mode[key] === true, disabled = false} = {}
+  ) => (
     <Checkbox
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
-      checked={mode[key] === true}
+      checked={checked}
+      disabled={disabled}
       onChange={e =>
         changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
@@ -167,7 +174,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         <div className={moduleStyles.booleanField}>
           {renderCheckbox(
             'hideSelectLabel',
-            'Lock the label so students cannot change it'
+            'Lock the label so students cannot change it',
+            {
+              checked: pretrained || mode.hideSelectLabel === true,
+              disabled: pretrained,
+            }
           )}
         </div>
       </div>
@@ -180,6 +191,15 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
             'The columns students start out predicting from.'
           }
           onChange={changeMode}
+        />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <PretrainedField
+          mode={mode}
+          onChange={newMode => {
+            setAccuracyText('');
+            changeMode(newMode);
+          }}
         />
       </div>
 
@@ -209,6 +229,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           step="any"
           value={accuracyText}
           onChange={handleAccuracyChange}
+          disabled={pretrained}
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
           size="s"
@@ -218,7 +239,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       <div className={moduleStyles.fieldArea}>
         {BOOLEAN_FIELDS.map(({key, label: checkboxLabel}) => (
           <div key={key} className={moduleStyles.booleanField}>
-            {renderCheckbox(key, checkboxLabel)}
+            {renderCheckbox(key, checkboxLabel, {
+              disabled: pretrained && key === 'randomizeTestData',
+            })}
           </div>
         ))}
       </div>

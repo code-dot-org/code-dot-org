@@ -221,5 +221,15 @@ class Ailab < Level
         errors.add(:mode, 'must have a required accuracy from 0 to 100.')
       end
     end
+
+    if parsed_mode['pretrained'] == true
+      label = parsed_mode['label']
+      features = parsed_mode['features']
+      unless label.is_a?(String) && label.present? && features.is_a?(Array) && features.present?
+        errors.add(:mode, 'must choose a label and features when pretrained.')
+      end
+      errors.add(:mode, 'cannot randomize the test rows when pretrained.') if parsed_mode['randomizeTestData'] == true
+      errors.add(:mode, 'cannot require an accuracy when pretrained.') if parsed_mode.key?('requireAccuracy')
+    end
   end
 end

@@ -1,11 +1,12 @@
-import {act} from '@testing-library/react';
+import {act, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
 import App from '../../src/App';
 import I18n from '../../src/i18n';
 import {resetState, setMode} from '../../src/redux';
+import {store as storeSingleton} from '../../src/store';
 
-import {levelProject, levelStore} from './levelStore';
+import {levelProject, levelStore, seedLevel} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderApp(mode) {
@@ -46,5 +47,38 @@ describe('onTrained', () => {
       store.dispatch(setMode({}));
     });
     expect(onTrained).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('a pretrained level', () => {
+  beforeEach(() => I18n.initI18n());
+
+  // Auto-training goes through useTrainingRun, which trains the store singleton.
+  function renderPretrainedApp() {
+    storeSingleton.dispatch(resetState());
+    seedLevel(storeSingleton, {trainer: 'decisionTree', pretrained: true});
+    const onTrained = vi.fn();
+    const {trainingData} = renderWithProviders(
+      createElement(App, {
+        onContinue: () => {},
+        saveTrainedModel: () => {},
+        onStartOver: () => {},
+        onTrained,
+      }),
+      {store: storeSingleton, project: levelProject()},
+    );
+    return {onTrained, trainingData};
+  }
+
+  test('trains once on load, without the training modal', () => {
+    const {onTrained, trainingData} = renderPretrainedApp();
+    expect(onTrained.mock.calls).toEqual([[100]]);
+    expect(trainingData().trainedModel).toBeDefined();
+    expect(storeSingleton.getState().trainingModalStep).toBeUndefined();
+  });
+
+  test('hides Start over', () => {
+    renderPretrainedApp();
+    expect(screen.queryByRole('button', {name: 'Start over'})).toBeNull();
   });
 });

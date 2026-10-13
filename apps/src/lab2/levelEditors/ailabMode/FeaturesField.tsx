@@ -30,6 +30,7 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
   const lockRef = useRef<HTMLDivElement>(null);
   const savedFeatures = getFeatures(mode);
   const locked = mode.lockFeatures === true;
+  const pretrained = mode.pretrained === true;
   const startingLabel = getStartingLabel(mode, columns?.defaultLabel);
   const selectable = columns?.selectable ?? [];
   const choices = selectable.filter(column => column !== startingLabel);
@@ -100,7 +101,8 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
         <Checkbox
           name="ailab_mode_lockFeatures"
           label="Lock the features so students cannot change them"
-          checked={locked}
+          checked={locked || pretrained}
+          disabled={pretrained}
           onChange={e =>
             onChange(
               setJsonObjectValue(

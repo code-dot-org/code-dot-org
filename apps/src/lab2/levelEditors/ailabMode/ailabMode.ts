@@ -11,6 +11,7 @@ export type ModeObject = Record<string, unknown>;
 export type BooleanModeKey =
   | 'hideSelectLabel'
   | 'lockFeatures'
+  | 'pretrained'
   | 'hideSave'
   | 'randomizeTestData'
   | 'hideColumnClicking';
@@ -18,6 +19,7 @@ export type BooleanModeKey =
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
   'lockFeatures',
+  'pretrained',
   'hideSave',
   'hideColumnClicking',
   'randomizeTestData',
@@ -131,6 +133,37 @@ export function withoutLabelInFeatures(
   return setFeatures(
     mode,
     getFeatures(mode).filter(feature => feature !== startingLabel)
+  );
+}
+
+// Pretraining locks the label and features itself, tests on the last rows, and
+// sets no accuracy bar, since students cannot retrain to meet one.
+const REPLACED_BY_PRETRAINED = [
+  'hideSelectLabel',
+  'lockFeatures',
+  'randomizeTestData',
+  'requireAccuracy',
+];
+
+export function setPretrained(
+  mode: ModeObject,
+  pretrained: boolean
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'pretrained',
+    pretrained ? true : undefined
+  );
+  if (pretrained) {
+    REPLACED_BY_PRETRAINED.forEach(key => delete newMode[key]);
+  }
+  return newMode;
+}
+
+export function isMissingPretrainedColumns(mode: ModeObject): boolean {
+  return (
+    mode.pretrained === true &&
+    (mode.label === undefined || getFeatures(mode).length === 0)
   );
 }
 

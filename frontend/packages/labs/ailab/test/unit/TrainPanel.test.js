@@ -58,4 +58,11 @@ describe('TrainPanel', () => {
     expect(featuresButton().disabled).toBe(true);
     expect(labelOptions()).toEqual(['', 'animal']);
   });
+
+  test('locks the columns of a pretrained level and never offers Train model', () => {
+    renderPanel({mode: {pretrained: true}});
+    expect(screen.getByRole('combobox', {name: 'Predict'}).disabled).toBe(true);
+    expect(featuresButton().disabled).toBe(true);
+    expect(trainButton()).toBeNull();
+  });
 });

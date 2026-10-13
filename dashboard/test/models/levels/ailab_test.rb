@@ -70,6 +70,31 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'lab2 level accepts pretraining on a label and features' do
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], pretrained: true, label: 'Type', features: ['Legs']}.to_json)
+    assert level.valid?, level.errors.full_messages.join(', ')
+  end
+
+  test 'lab2 level requires a label and features to pretrain on' do
+    [{}, {label: 'Type'}, {features: ['Legs']}, {label: '', features: ['Legs']}, {label: 'Type', features: []}, {label: 'Type', features: 'Legs'}].each do |columns|
+      level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], pretrained: true, **columns}.to_json)
+      refute level.valid?, "expected pretraining on #{columns.inspect} to be invalid"
+      assert_equal ['must choose a label and features when pretrained.'], level.errors[:mode]
+    end
+  end
+
+  test 'lab2 level cannot pretrain with random test rows or a required accuracy' do
+    pretrained = {datasets: ['zoo'], pretrained: true, label: 'Type', features: ['Legs']}
+
+    level = build(:ailab, uses_lab2: 'true', mode: pretrained.merge(randomizeTestData: true).to_json)
+    refute level.valid?
+    assert_equal ['cannot randomize the test rows when pretrained.'], level.errors[:mode]
+
+    level = build(:ailab, uses_lab2: 'true', mode: pretrained.merge(requireAccuracy: 70).to_json)
+    refute level.valid?
+    assert_equal ['cannot require an accuracy when pretrained.'], level.errors[:mode]
+  end
+
   test 'lab2 level derives validations from requireAccuracy' do
     level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: 70}.to_json)
     met, unmet = level.get_validations

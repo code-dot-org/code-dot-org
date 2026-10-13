@@ -125,9 +125,11 @@ export const instructionsDismissed = function (): void {
 const processMode = (mode: Mode | undefined): void => {
   const assetPath = getAssetPath();
 
-  const reserveLocation = mode?.randomizeTestData
-    ? TestDataLocations.RANDOM
-    : TestDataLocations.END;
+  // A pretrained level tests on fixed rows, so every load builds the same model.
+  const reserveLocation =
+    mode?.randomizeTestData && !mode.pretrained
+      ? TestDataLocations.RANDOM
+      : TestDataLocations.END;
   store.dispatch(setReserveLocation(reserveLocation));
 
   // The dataset picker is hidden for now, so a mode without exactly one

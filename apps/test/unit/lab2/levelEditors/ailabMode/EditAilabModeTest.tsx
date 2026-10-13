@@ -158,6 +158,13 @@ function columnsLoaded() {
   return waitFor(() => expect(labelDropdown()).toBeEnabled());
 }
 
+function pretrainedCheckbox() {
+  return screen.getByRole('checkbox', {name: 'Pretrain the model'});
+}
+
+const PRETRAINED_COLUMNS_REQUIRED =
+  'Choose a label and features to train the model on.';
+
 describe('EditAilabMode', () => {
   it('shows the JSON text area unchanged when Lab 2 is off', () => {
     const original = '{"hideSave": "yes", "hideModelCard": true}';
@@ -595,6 +602,66 @@ describe('EditAilabMode', () => {
       fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
       expect(screen.queryByText(noLabelLeft)).not.toBeInTheDocument();
       expect(featuresLock()).toBeValid();
+    });
+
+    it('pretrains in place of the locks, random test rows and required accuracy', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideSelectLabel": true, "lockFeatures": true, "randomizeTestData": true, "requireAccuracy": 80}'
+      );
+      await columnsLoaded();
+      const labelLock = screen.getByRole('checkbox', {
+        name: 'Lock the label so students cannot change it',
+      });
+      const randomRows = screen.getByRole('checkbox', {
+        name: 'Reserve random rows for testing instead of the last rows',
+      });
+      const accuracy = screen.getByRole('spinbutton', {
+        name: /Required accuracy/,
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        pretrained: true,
+      });
+      expect(pretrainedCheckbox()).toBeValid();
+      expect(labelLock).toBeChecked();
+      expect(labelLock).toBeDisabled();
+      expect(featuresLock()).toBeChecked();
+      expect(featuresLock()).toBeDisabled();
+      expect(randomRows).not.toBeChecked();
+      expect(randomRows).toBeDisabled();
+      expect(accuracy).toHaveValue(null);
+      expect(accuracy).toBeDisabled();
+
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).not.toHaveProperty('pretrained');
+      expect(labelLock).not.toBeChecked();
+      expect(labelLock).toBeEnabled();
+      expect(randomRows).toBeEnabled();
+      expect(accuracy).toBeEnabled();
+    });
+
+    it('asks for a label and features to pretrain on', async () => {
+      renderEditor('{"datasets": ["zoo"], "pretrained": true}');
+      await columnsLoaded();
+      expect(screen.getByText(PRETRAINED_COLUMNS_REQUIRED)).toBeInTheDocument();
+      expect(pretrainedCheckbox()).toBeInvalid();
+
+      fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
+      expect(pretrainedCheckbox()).toBeInvalid();
+
+      toggleFeature('legs');
+
+      expect(
+        screen.queryByText(PRETRAINED_COLUMNS_REQUIRED)
+      ).not.toBeInTheDocument();
+      expect(pretrainedCheckbox()).toBeValid();
     });
 
     it("reports a dataset whose columns don't load", async () => {

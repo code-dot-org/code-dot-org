@@ -12,6 +12,8 @@ export interface Mode {
   // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
   lockFeatures?: boolean;
+  // Trains on `label` and `features` when the level loads, locking both.
+  pretrained?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;

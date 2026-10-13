@@ -1,5 +1,6 @@
 import {act} from '@testing-library/react';
 
+import {TestDataLocations} from '../../src/constants';
 import I18n from '../../src/i18n';
 import {initAll, loadLevel, startOver, unmount} from '../../src/index';
 import {setAccuracyCheckExamples, setCurrentPanel} from '../../src/redux';
@@ -55,6 +56,18 @@ describe('loadLevel', () => {
     loadLevel(undefined);
 
     expect(store.getState().resetKeepsHistoricResults).toBe(false);
+  });
+
+  test('tests on random rows when the mode asks', () => {
+    loadLevel({randomizeTestData: true});
+
+    expect(store.getState().reserveLocation).toBe(TestDataLocations.RANDOM);
+  });
+
+  test('tests a pretrained level on the last rows', () => {
+    loadLevel({pretrained: true, randomizeTestData: true});
+
+    expect(store.getState().reserveLocation).toBe(TestDataLocations.END);
   });
 });
 
