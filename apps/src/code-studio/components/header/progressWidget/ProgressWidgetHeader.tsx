@@ -97,11 +97,7 @@ function useSaveStatus(): ProgressWidgetSaveProps {
   }
 }
 
-/**
- * The level header's middle for a unit with the progress widget: the project
- * info, then the lesson menu, save status, bubbles and the lab's Continue
- * button in one group.
- */
+/** The level header's middle for a unit with the progress widget. */
 const ProgressWidgetHeader: React.FunctionComponent<
   ProgressWidgetHeaderProps
 > = ({scriptData, lessonName}) => {
@@ -109,8 +105,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
   const isRtl = useAppSelector(
     state => (state as unknown as HeaderState).isRtl
   );
-  // The selector builds a new array per call; compare by content or every
-  // store change re-renders the row.
+  // getCurrentLevels builds a new array per call; isEqual skips needless re-renders.
   const levels = useAppSelector(getCurrentLevels, isEqual) as WidgetLevel[];
   const currentLevel = useAppSelector(getCurrentLevel) as WidgetLevel;
   const currentLevelId = useAppSelector(
@@ -131,8 +126,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
   const widgetRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Eyes UI tests key on these to tell a page with this header from one with
-  // a server-rendered header, and to wait for the font swap.
+  // Eyes UI tests wait on these.
   useEffect(() => {
     document.documentElement.dataset.headerPresent = 'true';
     return remeasureOnFontsReady(() => {

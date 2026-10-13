@@ -108,8 +108,7 @@ header.build = function (
     currentPageNumber
   );
 
-  // The widget's Continue button stands in for the lab's, so it needs every
-  // level in the lesson to be a Lab2 level.
+  // Continue moves into the header, which only Lab2 levels support.
   const showProgressWidget =
     (scriptData.progressWidget ||
       experiments.isEnabledAllowingQueryString(experiments.PROGRESS_WIDGET)) &&
