@@ -14,7 +14,6 @@ describe('ailabMode', () => {
         datasets: ['zoo'],
         requireAccuracy: 80,
         hideSave: false,
-        lockFeatures: true,
       };
       expect(cleanMode(mode, KNOWN)).toEqual({mode, removed: []});
     });

@@ -2,8 +2,9 @@ import {type Metadata, selectableColumns} from '@code-dot-org/ailab';
 import Papa from 'papaparse';
 import {useEffect, useState} from 'react';
 
-import {AILAB_ASSET_PATH} from '@cdo/apps/ailab/lab2/assetPath';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+const AILAB_ASSET_PATH = '/blockly/media/skins/ailab/';
 
 export interface DatasetFiles {
   id: string;

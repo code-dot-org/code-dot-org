@@ -2,7 +2,6 @@ import {act, render, screen, fireEvent, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {AILAB_ASSET_PATH} from '@cdo/apps/ailab/lab2/assetPath';
 import EditAilabMode from '@cdo/apps/lab2/levelEditors/ailabMode/EditAilabMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -21,7 +20,7 @@ const DATASETS = [
   {...dataset('pizza_toy', 'Pizza Toppings'), isToy: true},
 ];
 
-const ASSET_PATH = AILAB_ASSET_PATH + 'datasets/';
+const ASSET_PATH = '/blockly/media/skins/ailab/datasets/';
 
 const FILES: Record<string, string | object> = {
   // `name` has no type in the metadata, so students cannot choose it.
