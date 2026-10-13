@@ -71,7 +71,7 @@ const announcedSaveStatuses: ProgressWidgetSaveStatus[] = ['failed', 'offline'];
 const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
   lessonLabel,
   onLessonClick,
-  lessonMenuExpanded,
+  lessonMenuExpanded = false,
   bubblesLabel,
   saveStatus = 'none',
   saveStatusLabel,

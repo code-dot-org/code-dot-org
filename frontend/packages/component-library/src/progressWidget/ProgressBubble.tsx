@@ -34,8 +34,8 @@ export interface ProgressBubbleProps {
    *  handler that calls preventDefault on a link should first let modified
    *  clicks (open in new tab) through. */
   onClick?: (e: MouseEvent<HTMLElement>) => void;
-  /** Screen reader name.  Star and color are visual only, so it carries the
-   *  status, e.g. "Level 6, completed". */
+  /** Screen reader name.  Star and color are visual only, so it carries
+   *  them, e.g. "Level 6, assessment, completed". */
   ariaLabel: string;
   /** Read after the name unless it repeats it. */
   tooltip?: ReactNode;

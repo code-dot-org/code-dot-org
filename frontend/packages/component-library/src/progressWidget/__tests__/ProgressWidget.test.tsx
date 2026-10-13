@@ -28,6 +28,13 @@ describe('ProgressWidget', () => {
     expect(onLessonClick).toHaveBeenCalledTimes(1);
   });
 
+  it('reports the menu as closed by default', () => {
+    renderWidget();
+    expect(
+      screen.getByRole('button', {name: 'Lesson 3: Puzzles'}),
+    ).toHaveAttribute('aria-expanded', 'false');
+  });
+
   it('reports the menu as open', () => {
     renderWidget({lessonMenuExpanded: true});
     expect(
