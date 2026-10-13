@@ -1,13 +1,14 @@
 # frontend/
 
-Turborepo workspace for modular frontend packages and apps. New code goes here;
-the legacy webpack bundle is in `apps/` at the repo root.
+Turborepo workspace for modular frontend packages and apps. This is an
+experiment: new code goes in `apps/` at the repo root unless the work has
+explicitly chosen this workspace (see the root `AGENTS.md`).
 
 ## Structure
 
 ```
 apps/
-  studio/                    # Code Studio — Rails-Vite app (primary architecture);
+  studio/                    # Code Studio — Rails-Vite app (experimental);
                              # standalone mode is a supported architectural alternative
 packages/
   core/                      # Core application functionality
