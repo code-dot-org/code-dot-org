@@ -1533,7 +1533,7 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :quiz_attempts, only: [:index, :create, :update]
-    resource :adaptive_progress, controller: :adaptive_progress, only: [:show, :destroy] do
+    resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
       put 'steps/:step_id', action: :update_step, as: :step
     end
     resources :quiz_question_responses, only: [:create]
