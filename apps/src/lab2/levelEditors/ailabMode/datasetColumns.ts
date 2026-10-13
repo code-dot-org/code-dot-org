@@ -16,7 +16,6 @@ export interface DatasetColumns {
   defaultLabel?: string;
 }
 
-// The metadata types the columns, but only the rows tell which ones students can choose.
 export async function fetchDatasetColumns(
   dataset: DatasetFiles
 ): Promise<DatasetColumns> {

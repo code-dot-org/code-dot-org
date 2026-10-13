@@ -72,7 +72,6 @@ function serveFiles(files: Record<string, string | object>) {
     );
 }
 
-// The columns stay loading unless a test serves the dataset files.
 beforeEach(() => {
   jest.mocked(HttpClient.get).mockReturnValue(new Promise(() => {}));
   jest.mocked(HttpClient.fetchJson).mockReturnValue(new Promise(() => {}));
@@ -320,6 +319,7 @@ describe('EditAilabMode', () => {
         .map(option => (option as HTMLOptionElement).value)
     ).toEqual(['', 'zoo', 'heart', 'pizza_toy']);
   });
+
   describe('label and features', () => {
     beforeEach(() => serveFiles(FILES));
 
@@ -372,6 +372,9 @@ describe('EditAilabMode', () => {
         label: 'legs',
         features: ['wings'],
       });
+
+      fireEvent.change(labelDropdown(), {target: {value: 'wings'}});
+      expect(JSON.parse(savedMode())).not.toHaveProperty('features');
     });
 
     it('clears them when the dataset changes', async () => {

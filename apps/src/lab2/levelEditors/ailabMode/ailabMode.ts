@@ -92,7 +92,6 @@ export function getSelectedDataset(mode: ModeObject): string | undefined {
   return Array.isArray(mode.datasets) ? mode.datasets[0] : undefined;
 }
 
-// The label and features name columns of one dataset, so choosing another clears them.
 export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
   delete newMode.label;
@@ -108,7 +107,6 @@ export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
   );
 }
 
-// Like the lab, choosing a label removes it from the features.
 export function setLabel(
   mode: ModeObject,
   label: string | undefined
