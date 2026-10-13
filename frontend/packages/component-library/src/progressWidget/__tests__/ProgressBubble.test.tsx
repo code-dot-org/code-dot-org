@@ -48,6 +48,17 @@ describe('ProgressBubble', () => {
     expect(container.querySelector('.fa-star')).toBeInTheDocument();
   });
 
+  it('never stars a panel level', () => {
+    const {container} = render(
+      <ProgressBubble
+        levelType="panelLevel"
+        ariaLabel="Level 9"
+        isAssessment
+      />,
+    );
+    expect(container.querySelector('.fa-star')).not.toBeInTheDocument();
+  });
+
   it('draws a flag for lesson extras', () => {
     const {container} = render(
       <ProgressBubble levelType="lessonExtras" ariaLabel="Lesson extras" />,

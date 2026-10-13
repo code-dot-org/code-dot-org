@@ -139,15 +139,16 @@ export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
                 />
               </td>
               <td>
-                <ProgressBubble
-                  levelType={levelType}
-                  status="completed"
-                  isActive={isActive}
-                  isAssessment
-                  levelNumber={10}
-                  ariaLabel={`${levelType} assessment`}
-                  href="#"
-                />
+                {levelType === 'default' && (
+                  <ProgressBubble
+                    status="completed"
+                    isActive={isActive}
+                    isAssessment
+                    levelNumber={10}
+                    ariaLabel="default assessment"
+                    href="#"
+                  />
+                )}
               </td>
             </tr>
           )),

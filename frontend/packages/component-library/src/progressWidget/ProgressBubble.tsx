@@ -23,7 +23,7 @@ export interface ProgressBubbleProps {
   status?: ProgressBubbleStatus;
   /** The current level: drawn large, with its number. */
   isActive?: boolean;
-  /** Adds a star mark. */
+  /** Adds a star mark.  Circles only: panel levels are never assessments. */
   isAssessment?: boolean;
   /** Shown only while active. */
   levelNumber?: number | string;
@@ -83,7 +83,7 @@ const ProgressBubble: FunctionComponent<ProgressBubbleProps> = ({
   ) : (
     <>
       {isActive && <span className={moduleStyles.number}>{levelNumber}</span>}
-      {isAssessment && (
+      {isAssessment && levelType === 'default' && (
         <span className={moduleStyles.assessment}>
           <FontAwesomeV6Icon iconName="star" iconStyle="solid" />
         </span>
