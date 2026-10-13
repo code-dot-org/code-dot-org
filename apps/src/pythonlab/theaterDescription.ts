@@ -1,6 +1,6 @@
 // AI descriptions of theater output for screen reader users, worked out from
 // the level instructions, the student's code and the theater package's
-// transcript of the run, rather than the rendered gif.
+// transcript of the run.
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
@@ -131,7 +131,7 @@ async function generateDescription(prompt: string): Promise<string> {
   const currentLevelId = state.progress.currentLevelId;
   const {text} = await generateText(
     {
-      // Flash Lite with thinking off: the student is waiting on this.
+      // The fastest model, with thinking off, so the answer comes back quickly.
       model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_LITE),
       system: SYSTEM_PROMPT,
       prompt,
@@ -191,7 +191,7 @@ export function requestTheaterDescription(
   );
 }
 
-// Not awaited: the theater announces the result when it arrives.
+// Returns at once; the theater announces the AI's answer when it comes back.
 export function describeTheaterOutput(source: MultiFileSource) {
   const theater = CodebridgeRegistry.getInstance().getTheater();
   if (!theater?.hasOutput()) {

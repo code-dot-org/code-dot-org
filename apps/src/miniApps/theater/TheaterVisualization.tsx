@@ -37,8 +37,7 @@ const TheaterVisualization: React.FunctionComponent<
 > = ({description, isRunning = false}) => {
   const liveRegion = useRef<HTMLDivElement>(null);
 
-  // Filled by hand: a React re-render with the same text is silent, and
-  // VoiceOver dropped polite updates.
+  // Emptied and refilled by hand so identical text is announced again.
   useEffect(() => {
     const element = liveRegion.current;
     if (!element) {
@@ -71,6 +70,7 @@ const TheaterVisualization: React.FunctionComponent<
       {/* The audio is generated at runtime, so there is no caption track. */}
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <audio id={THEATER_AUDIO_ID} preload="auto" />
+      {/* Assertive: VoiceOver drops polite updates here. */}
       <div
         ref={liveRegion}
         role="alert"
