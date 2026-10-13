@@ -1,11 +1,37 @@
+import {generateText} from '@cdo/apps/aiGateway';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {
   MAX_CODE_CHARACTERS,
   buildDescriptionPrompt,
   cleanDescription,
   getDescribableFiles,
+  requestTheaterDescription,
   withTimeout,
 } from '@cdo/apps/pythonlab/theaterDescription';
+
+jest.mock('@cdo/apps/aiGateway', () => ({generateText: jest.fn()}));
+jest.mock('@cdo/apps/aichat/api/client/helpers/modelHelpers', () => ({
+  getModel: () => 'model',
+}));
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({incrementCounter: jest.fn()}),
+      getProjectManager: () => null,
+    }),
+  },
+}));
+jest.mock('@cdo/apps/redux', () => ({
+  getStore: () => ({
+    getState: () => ({
+      progress: {currentLevelId: '7', scriptId: null},
+      lab: {levelProperties: {longInstructions: 'Draw a sun.'}},
+    }),
+  }),
+}));
+
+const mockGenerateText = generateText as jest.Mock;
 
 const file = (
   id: string,
@@ -80,6 +106,38 @@ describe('theaterDescription', () => {
       const pending = withTimeout(new Promise<string>(() => {}), 1000);
       jest.advanceTimersByTime(1000);
       await expect(pending).rejects.toThrow('timed out');
+    });
+  });
+
+  describe('requestTheaterDescription', () => {
+    const source = (code: string) => ({
+      folders: {},
+      files: {1: file('1', 'main.py', code)},
+    });
+
+    it('asks the model once per distinct program', async () => {
+      mockGenerateText.mockResolvedValue({text: '**A sun.**'});
+
+      await expect(requestTheaterDescription(source('a'))).resolves.toBe(
+        'A sun.'
+      );
+      await expect(requestTheaterDescription(source('a'))).resolves.toBe(
+        'A sun.'
+      );
+      await requestTheaterDescription(source('b'));
+
+      expect(mockGenerateText).toHaveBeenCalledTimes(2);
+    });
+
+    it('does not cache a failure', async () => {
+      mockGenerateText.mockRejectedValueOnce(new Error('down'));
+      await expect(requestTheaterDescription(source('c'))).rejects.toThrow(
+        'down'
+      );
+      mockGenerateText.mockResolvedValueOnce({text: 'A moon.'});
+      await expect(requestTheaterDescription(source('c'))).resolves.toBe(
+        'A moon.'
+      );
     });
   });
 });

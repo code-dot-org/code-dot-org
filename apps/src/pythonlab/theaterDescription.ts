@@ -111,7 +111,12 @@ export function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   );
 }
 
-async function generateDescription(source: MultiFileSource): Promise<string> {
+// Re-runs of unchanged code are common, so the last few answers are kept for
+// the life of the page.
+const MAX_CACHED = 20;
+const cache = new Map<string, string>();
+
+async function generateDescription(prompt: string): Promise<string> {
   const state = getStore().getState();
   const currentLevelId = state.progress.currentLevelId;
   const {text} = await generateText(
@@ -119,10 +124,7 @@ async function generateDescription(source: MultiFileSource): Promise<string> {
       // Flash Lite with thinking off: the student is waiting on this.
       model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_LITE),
       system: SYSTEM_PROMPT,
-      prompt: buildDescriptionPrompt(
-        state.lab.levelProperties?.longInstructions,
-        getDescribableFiles(source)
-      ),
+      prompt,
       temperature: 0.2,
       maxOutputTokens: 160,
       providerOptions: {google: {thinkingConfig: {thinkingBudget: 0}}},
@@ -150,10 +152,23 @@ export function requestTheaterDescription(
   source: MultiFileSource
 ): Promise<string> {
   const reporter = Lab2Registry.getInstance().getMetricsReporter();
+  const prompt = buildDescriptionPrompt(
+    getStore().getState().lab.levelProperties?.longInstructions,
+    getDescribableFiles(source)
+  );
+  const cached = cache.get(prompt);
+  if (cached) {
+    reporter.incrementCounter('TheaterDescription.CacheHit');
+    return Promise.resolve(cached);
+  }
   reporter.incrementCounter('TheaterDescription.Attempt');
-  return withTimeout(generateDescription(source), DESCRIPTION_TIMEOUT_MS).then(
+  return withTimeout(generateDescription(prompt), DESCRIPTION_TIMEOUT_MS).then(
     text => {
       reporter.incrementCounter('TheaterDescription.Success');
+      if (cache.size >= MAX_CACHED) {
+        cache.delete(cache.keys().next().value!);
+      }
+      cache.set(prompt, text);
       return text;
     },
     error => {
