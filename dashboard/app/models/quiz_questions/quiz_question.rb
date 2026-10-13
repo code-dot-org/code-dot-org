@@ -142,9 +142,7 @@ class QuizQuestion < ApplicationRecord
   end
 
   # A valid `content` for this subtype, used in place of real (encrypted)
-  # content when seeding without CDO.properties_encryption_key. An instance
-  # method, not class-level, so it can fold in this question's own key -
-  # keeping placeholders distinguishable when a quiz has more than one.
+  # content when seeding without an encryption key.
   def placeholder_content
     raise NotImplementedError, "#{self.class.name} must implement placeholder_content"
   end
