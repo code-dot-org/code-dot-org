@@ -37,7 +37,6 @@ export interface RootState {
   metadata: Metadata;
   removedRowsCount: number;
   highlightDataset: string | undefined;
-  highlightColumn: string | undefined;
   columnsByDataType: Record<string, string>;
   selectedFeatures: string[];
   labelColumn: string | undefined;
@@ -110,7 +109,6 @@ export const initialState: RootState = {
   },
   removedRowsCount: 0,
   highlightDataset: undefined,
-  highlightColumn: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
@@ -389,20 +387,6 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightColumn(state, action: PayloadAction<string>) {
-      const highlightColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
-        return;
-      }
-      if (
-        state.currentPanel === 'datasetView' &&
-        highlightColumn === state.labelColumn
-      ) {
-        return;
-      }
-      state.highlightColumn = highlightColumn;
-    },
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
@@ -477,7 +461,6 @@ export const {
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
-  setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
   replayTraining,
