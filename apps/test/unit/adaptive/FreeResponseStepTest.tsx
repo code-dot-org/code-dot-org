@@ -158,6 +158,15 @@ describe('FreeResponseStep', () => {
     });
   });
 
+  it('disables the button immediately after submit', () => {
+    renderStep();
+    fireEvent.change(screen.getByRole('textbox'), {
+      target: {value: 'My answer.'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: /Continue/}));
+    expect(screen.getByRole('button', {name: /Continue/})).toBeDisabled();
+  });
+
   it('restores a saved response from stepContextMap', () => {
     renderStep({reflect: {freeResponse: 'Previous answer.'}});
     expect(screen.getByRole('textbox')).toHaveValue('Previous answer.');

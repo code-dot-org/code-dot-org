@@ -26,6 +26,7 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
   const {stepContextMap, updateStepContext} = usePathwayContext();
   const saved = stepContextMap[step.id]?.freeResponse ?? '';
   const [text, setText] = useState(saved);
+  const [submitted, setSubmitted] = useState(false);
 
   // Persist draft after 500 ms of inactivity. Skip the write when the text
   // matches what is already in the store so a mount with a restored value
@@ -44,6 +45,7 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
     // Flush the draft immediately rather than waiting for the debounce.
     updateStepContext(step.id, {freeResponse: text});
     persistedRef.current = text;
+    setSubmitted(true);
     onComplete();
   };
 
@@ -67,7 +69,7 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
           size="medium"
           type="button"
           endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
-          disabled={text.trim().length === 0}
+          disabled={text.trim().length === 0 || submitted}
           onClick={handleSubmit}
         >
           {continueLabel}
