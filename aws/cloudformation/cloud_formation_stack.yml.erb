@@ -563,7 +563,6 @@ Resources:
         - PolicyName: ManageZeroEtlIntegrationDataFilter
           PolicyDocument:
             Statement:
-
               - Effect: Allow
                 Action: 'rds:DescribeIntegrations'
                 Resource: '*' # Unscoped so a daemon can enumerate every Integration to find the match for the current environment type.
