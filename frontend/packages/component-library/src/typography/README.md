@@ -1,9 +1,11 @@
 # `componentLibrary/typography`
 
+> **⚠️ Deprecated**: The DSCO Typography components are deprecated. Use MUI `Typography` from `@mui/material` instead; the theme maps its variants to the design system type scale. See [MIGRATION_STATUS.md](../../MIGRATION_STATUS.md) for overall progress.
+
+## Legacy Documentation
+
 This is a set of Typography components for use in the Code.org component library.
 Implements Typography components with our rebranded styles. Part of global rebranding.
-At some point it will be moved to (https://github.com/code-dot-org/dsco_), however the signature of the components should
-remain the same, and we'll just need to update the import statements once it's in that library.
 
 ### Why there's semanticTag and visualAppearance props?
 
@@ -73,7 +75,7 @@ Here are some examples:
 ## Consuming This Package
 
 ```javascript
-import {Heading1, BodyTwoText, StrongText} from './../componentLibrary/typography';
+import {Heading1, BodyTwoText, StrongText} from '@code-dot-org/component-library/typography';
 
 <Heading1>Some Heading</Heading1>
 <BodyTwoText>Some body text</BodyTwoText>
@@ -81,7 +83,7 @@ import {Heading1, BodyTwoText, StrongText} from './../componentLibrary/typograph
 
 // OR
 
-import Typography from './../componentLibrary/typography';
+import Typography from '@code-dot-org/component-library/typography';
 
 <Typography semanticTag="h1" visualAppearance="heading-xxl">Some Heading1</Typography>
 <Typography semanticTag="p" visualAppearance="body-two">Some body text</Typography>
@@ -92,4 +94,7 @@ import Typography from './../componentLibrary/typography';
 
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](http://localhost:9001/?path=/story/designsystem-typography--all-typography-elements).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-typography--docs).
+Or run storybook locally and go
+to [DesignSystem / Typography](http://localhost:6006/?path=/docs/designsystem-typography--docs).

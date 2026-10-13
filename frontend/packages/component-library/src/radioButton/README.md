@@ -16,6 +16,7 @@ import {
 import RadioButton from '@code-dot-org/component-library/radioButton/RadioButton';
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [DesignSystem / Radio Button Component](http://localhost:9001/?path=/story/designsystem-radio-button-component--default-radio-button).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-radio-button--docs).
+Or run storybook locally and go
+to [DesignSystem / Radio Button](http://localhost:6006/?path=/docs/designsystem-radio-button--docs).

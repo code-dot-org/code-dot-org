@@ -11,7 +11,6 @@ import Link from '@code-dot-org/component-library/link';
 ```
 
 For guidelines on how to use these components and the features they
-offer, [visit Storybook](https://code-dot-org.github.io/cdo-styleguide/?path=/docs/designsystem-link--docs).
-
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-link--docs).
 Or run storybook locally and go
-to [Design System / Link](http://localhost:9001/?path=/story/designsystem-link-component--default-link).
+to [DesignSystem / Link](http://localhost:6006/?path=/docs/designsystem-link--docs).

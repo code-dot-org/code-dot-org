@@ -39,6 +39,7 @@ query lets the window's own scrollbar take over, and with no clipping there is n
 Because the fade is a mask, it works over any page background. Its edges are physical
 left/right: RTL is not handled.
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [Design System / Tabs](http://localhost:9001/?path=/story/designsystem-tabs--default-tabs).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-tabs--docs).
+Or run storybook locally and go
+to [DesignSystem / Tabs](http://localhost:6006/?path=/docs/designsystem-tabs--docs).

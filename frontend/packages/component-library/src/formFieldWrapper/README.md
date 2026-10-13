@@ -9,6 +9,6 @@ import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 ```
 
 For guidelines on how to use these components and the features they
-offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [Design System / FormFieldWrapper](http://localhost:9001/?path=/story/designsystem-formfieldwrapper--docs).
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-formfieldwrapper--docs).
+Or run storybook locally and go
+to [DesignSystem / FormFieldWrapper](http://localhost:6006/?path=/docs/designsystem-formfieldwrapper--docs).
