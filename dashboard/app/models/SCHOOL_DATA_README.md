@@ -1,3 +1,7 @@
+> **Snapshot (March 2018).** A point-in-time investigation of `schools` and
+> `school_infos` data. The code, queries, and counts below may no longer hold;
+> do not use this as current reference.
+
 This is a collection of notes about known issues with `schools` and `school_infos` data.
 Original doc is [here](https://docs.google.com/document/d/1db49R4ezbGGjD67jEfuoW4lxedNonmw9qo4E9TWxNdQ/edit#).
 
