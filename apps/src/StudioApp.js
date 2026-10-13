@@ -35,6 +35,7 @@ import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDia
 import {white, workspace_running_background} from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
+import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
@@ -114,7 +115,10 @@ let runButtonWasClicked = false;
  */
 const getMaxResizableVisualizationWidth = isBigPlayspaceEnabled => {
   return isBigPlayspaceEnabled
-    ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
+    ? Math.min(
+        window.innerHeight - bigPlaySpacePadding,
+        availableContentWidth() / 2
+      )
     : 400;
 };
 
@@ -271,9 +275,11 @@ class StudioApp extends EventEmitter {
     this.keyHandler = new KeyHandler(document);
 
     /**
-     * Last window dimensions when a resize was handled.
+     * Dimensions the last handled resize laid the playspace out for. Width is
+     * the space left over by the TA drawer, not the whole window, so opening
+     * the drawer counts as a resize.
      */
-    this.lastWindowInnerWidth = undefined;
+    this.lastAvailableContentWidth = undefined;
     this.lastWindowInnerHeight = undefined;
   }
 }
@@ -1448,7 +1454,7 @@ StudioApp.prototype.onResize = function () {
   if (this.isBigPlayspaceEnabled) {
     // Let's avoid an infinite recursion by making sure this is a genuine resize.
     if (
-      window.innerWidth !== this.lastWindowInnerWidth ||
+      availableContentWidth() !== this.lastAvailableContentWidth ||
       window.innerHeight !== this.lastWindowInnerHeight
     ) {
       this.maxVisualizationWidth = getMaxResizableVisualizationWidth(
@@ -1461,7 +1467,7 @@ StudioApp.prototype.onResize = function () {
       const visualizationColumnWidth = $(visualizationColumn).width();
       this.resizeVisualization(visualizationColumnWidth, true);
 
-      this.lastWindowInnerWidth = window.innerWidth;
+      this.lastAvailableContentWidth = availableContentWidth();
       this.lastWindowInnerHeight = window.innerHeight;
     }
   }

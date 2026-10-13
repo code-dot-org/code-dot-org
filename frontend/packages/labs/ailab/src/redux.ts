@@ -5,34 +5,27 @@ import {
   type AnyAction,
 } from '@reduxjs/toolkit';
 
-import {ColumnTypes, TestDataLocations, ResultsGrades} from './constants';
-import {
-  getSummaryStat,
-  getResultsDataInDataTableForm,
-} from './helpers/accuracy';
-import {getColumnDataToSave} from './helpers/columnDetails';
-import {getDatasetDetails} from './helpers/datasetDetails';
+import {TestDataLocations, ResultsGrades} from './constants';
+import {getResultsDataInDataTableForm} from './helpers/accuracy';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
-import {getTrainerId} from './trainers/ids';
+import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
+  AilabProject,
   DataRow,
-  Hyperparameters,
   Metadata,
   Mode,
   TrainedModelDetailsSave,
   SaveResponseData,
-  HistoricResult,
-  ModelCardColumn,
-  ModelDataToSave,
   PrevNextButtons,
   InstructionsKey,
   SaveResponse,
   SaveTrainedModel,
   Panel,
   TrainedModel,
+  TrainingModalStep,
 } from './types';
 
 export interface RootState {
@@ -59,24 +52,50 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
-  trainedModel: TrainedModel | undefined;
+  // Undefined shows the whole path; a number shows it up to that step.
+  predictionStep: number | undefined;
+  predictionStepByHand: boolean;
+  predictionPlaying: boolean;
+  predictionCount: number;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
+  trainingModalStep: TrainingModalStep | undefined;
+  isTrainingReplay: boolean;
   currentColumn: string | undefined;
-  resultsPhase: number | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
-  historicResults: HistoricResult[];
-  showResultsDetails: boolean;
-  resultsHighlightRow: number | undefined;
-  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
+  resetCount: number;
+  resetKeepsHistoricResults: boolean;
   mode?: Mode;
+}
+
+// What a training run writes to Redux, so a cancelled run can be undone. The
+// model and the project data it also produces are undone by their own
+// contexts.
+const TRAINING_RESULT_KEYS = [
+  'featureNumberKey',
+  'trainingExamples',
+  'trainingLabels',
+  'accuracyCheckExamples',
+  'accuracyCheckLabels',
+  'accuracyCheckPredictedLabels',
+] as const;
+
+export type TrainingResults = Pick<
+  RootState,
+  (typeof TRAINING_RESULT_KEYS)[number]
+>;
+
+export function getTrainingResults(state: RootState): TrainingResults {
+  return Object.fromEntries(
+    TRAINING_RESULT_KEYS.map(key => [key, state[key]]),
+  ) as TrainingResults;
 }
 
 export const initialState: RootState = {
@@ -106,27 +125,29 @@ export const initialState: RootState = {
   prediction: undefined,
   predictionTestData: {},
   predictionInputs: [],
-  trainedModel: undefined,
+  predictionStep: undefined,
+  predictionStepByHand: false,
+  predictionPlaying: false,
+  predictionCount: 0,
   trainedModelDetails: {},
-  currentPanel: 'selectDataset',
+  currentPanel: 'datasetView',
+  trainingModalStep: undefined,
+  isTrainingReplay: false,
   currentColumn: undefined,
-  resultsPhase: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: 'notStarted',
   // Additional data for a failed save response.  Currently contains
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
-  historicResults: [],
-  showResultsDetails: false,
-  resultsHighlightRow: undefined,
-  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
+  resetCount: 0,
+  resetKeepsHistoricResults: false,
 };
 
 const ailabSlice = createSlice({
@@ -194,12 +215,22 @@ const ailabSlice = createSlice({
     },
     addSelectedFeature(state, action: PayloadAction<string>) {
       if (!state.selectedFeatures.includes(action.payload)) {
+        const columns = Object.keys(state.data[0] ?? {});
         state.selectedFeatures.push(action.payload);
+        state.selectedFeatures.sort(
+          (a, b) => columns.indexOf(a) - columns.indexOf(b),
+        );
       }
     },
     removeSelectedFeature(state, action: PayloadAction<string>) {
       state.selectedFeatures = state.selectedFeatures.filter(
         item => item !== action.payload,
+      );
+    },
+    setSelectedFeatures(state, action: PayloadAction<string[]>) {
+      const columns = Object.keys(state.data[0] ?? {});
+      state.selectedFeatures = [...action.payload].sort(
+        (a, b) => columns.indexOf(a) - columns.indexOf(b),
       );
     },
     setLabelColumn(state, action: PayloadAction<string>) {
@@ -254,6 +285,10 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
+    setTestDataValues(state, action: PayloadAction<Record<string, string>>) {
+      Object.assign(state.testData, action.payload);
+      state.prediction = undefined;
+    },
     setPrediction: {
       reducer(
         state,
@@ -262,21 +297,41 @@ const ailabSlice = createSlice({
         state.prediction = action.payload.prediction;
         state.predictionTestData = {...state.testData};
         state.predictionInputs = action.payload.inputs;
+        state.predictionStep = undefined;
+        state.predictionStepByHand = false;
+        state.predictionPlaying = false;
+        state.predictionCount += 1;
       },
       prepare(prediction: number | string, inputs: number[]) {
         return {payload: {prediction, inputs}};
       },
     },
-    resetState(state) {
-      return {
-        ...initialState,
-        mode: state.mode,
-        reserveLocation: state.reserveLocation,
-        instructionsEnabled: state.instructionsEnabled,
-      };
+    playPredictionStep(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
+      state.predictionStepByHand = false;
     },
-    setTrainedModel(state, action: PayloadAction<TrainedModel>) {
-      state.trainedModel = action.payload;
+    setPredictionPlaying(state, action: PayloadAction<boolean>) {
+      state.predictionPlaying = action.payload;
+    },
+    stepPredictionByHand(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
+      state.predictionStepByHand = true;
+      state.predictionPlaying = false;
+    },
+    resetState: {
+      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
+        return {
+          ...initialState,
+          mode: state.mode,
+          reserveLocation: state.reserveLocation,
+          instructionsEnabled: state.instructionsEnabled,
+          resetCount: state.resetCount + 1,
+          resetKeepsHistoricResults: action.payload.keepHistoricResults,
+        };
+      },
+      prepare(keepHistoricResults = false) {
+        return {payload: {keepHistoricResults}};
+      },
     },
     setTrainedModelDetail: {
       reducer(
@@ -321,50 +376,26 @@ const ailabSlice = createSlice({
         showedOverlay = true;
       }
       state.currentPanel = currentPanel;
+      state.trainingModalStep = undefined;
+      state.isTrainingReplay = false;
       state.instructionsOverlayActive = showedOverlay;
       state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
-      if (currentPanel === 'dataDisplayLabel') {
-        state.currentColumn = undefined;
-        state.selectedFeatures = [];
-      } else if (currentPanel === 'results') {
+      if (currentPanel === 'results') {
         state.testData = {};
         state.prediction = undefined;
         state.resultsTab = ResultsGrades.CORRECT;
-        state.showResultsDetails = false;
       } else {
         state.currentColumn = undefined;
       }
     },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
-      if (!getColumnClickable(state, currentColumn)) {
+      if (!getShowColumnClicking(state)) {
         return;
       }
-      if (state.currentColumn === currentColumn) {
-        // If column is selected, then deselect.
-        if (state.currentPanel === 'dataDisplayFeatures') {
-          state.instructionsKey = 'dataDisplayFeatures';
-          state.showOverlay = false;
-        }
-        state.currentColumn = undefined;
-      } else {
-        if (state.currentPanel === 'dataDisplayFeatures') {
-          if (
-            state.columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL
-          ) {
-            state.instructionsKey = 'selectedFeatureNumerical';
-            state.showOverlay = false;
-          } else if (
-            state.columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL
-          ) {
-            state.instructionsKey = 'selectedFeatureCategorical';
-            state.showOverlay = false;
-          }
-        }
-        // Select the column.
-        state.currentColumn = currentColumn;
-      }
+      state.currentColumn =
+        state.currentColumn === currentColumn ? undefined : currentColumn;
     },
     setHighlightColumn(state, action: PayloadAction<string>) {
       const highlightColumn = action.payload;
@@ -373,11 +404,9 @@ const ailabSlice = createSlice({
         return;
       }
       if (
-        state.currentPanel === 'dataDisplayFeatures' &&
+        state.currentPanel === 'datasetView' &&
         highlightColumn === state.labelColumn
       ) {
-        // If doing feature selection, and the label column is clicked, do
-        // nothing.
         return;
       }
       state.highlightColumn = highlightColumn;
@@ -385,11 +414,18 @@ const ailabSlice = createSlice({
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
-    setResultsPhase(state, action: PayloadAction<number>) {
-      state.resultsPhase = action.payload;
+    setTrainingModalStep(
+      state,
+      action: PayloadAction<TrainingModalStep | undefined>,
+    ) {
+      state.trainingModalStep = action.payload;
+      if (action.payload !== 'testing') {
+        state.isTrainingReplay = false;
+      }
     },
-    setResultsHighlightRow(state, action: PayloadAction<number>) {
-      state.resultsHighlightRow = action.payload;
+    replayTraining(state) {
+      state.trainingModalStep = 'training';
+      state.isTrainingReplay = true;
     },
     setSaveStatus: {
       reducer(
@@ -403,32 +439,8 @@ const ailabSlice = createSlice({
         return {payload: {status, data}};
       },
     },
-    setHistoricResult: {
-      reducer(
-        state,
-        action: PayloadAction<{
-          label: string;
-          features: string[];
-          accuracy: string;
-        }>,
-      ) {
-        state.historicResults.unshift({
-          label: action.payload.label,
-          features: action.payload.features,
-          accuracy: action.payload.accuracy,
-        });
-      },
-      prepare(label: string, features: string[], accuracy: string) {
-        return {payload: {label, features, accuracy}};
-      },
-    },
-    setShowResultsDetails(state, action: PayloadAction<boolean>) {
-      state.instructionsKey = action.payload ? 'resultsDetails' : 'results';
-      state.showOverlay = false;
-      state.showResultsDetails = action.payload;
-    },
-    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
-      state.hyperparameters = action.payload;
+    restoreTrainingResults(state, action: PayloadAction<TrainingResults>) {
+      Object.assign(state, action.payload);
     },
     setInstructionsDismissed(state) {
       state.instructionsOverlayActive = false;
@@ -454,6 +466,7 @@ export const {
   setColumnsByDataType,
   addSelectedFeature,
   removeSelectedFeature,
+  setSelectedFeatures,
   setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
@@ -463,20 +476,21 @@ export const {
   setTrainingExamples,
   setTrainingLabels,
   setTestData,
+  setTestDataValues,
   setPrediction,
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
   resetState,
-  setTrainedModel,
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
   setHighlightColumn,
   setHighlightDataset,
-  setResultsPhase,
-  setResultsHighlightRow,
+  setTrainingModalStep,
+  replayTraining,
   setSaveStatus,
-  setHistoricResult,
-  setShowResultsDetails,
-  setHyperparameters,
+  restoreTrainingResults,
   setInstructionsDismissed,
   setInstructionsEnabled,
   setResultsTab,
@@ -491,9 +505,15 @@ export default ailabSlice.reducer;
 export const saveModel =
   (
     saveTrainedModel: SaveTrainedModel,
+    project: AilabProject,
+    trainedModel?: TrainedModel,
   ): ThunkAction<void, RootState, unknown, AnyAction> =>
   (dispatch, getState) => {
-    const dataToSave = getTrainedModelDataToSave(getState());
+    const dataToSave = getTrainedModelDataToSave(
+      getState(),
+      project,
+      trainedModel,
+    );
     dispatch(setSaveStatus('started'));
     saveTrainedModel(dataToSave, (response: SaveResponse) => {
       dispatch(setSaveStatus(response.status, response.data));
@@ -511,19 +531,8 @@ export function getSpecifiedDatasets(state: RootState): string[] | undefined {
 
 /* Functions for determining UI element availability and interactivity. */
 
-function getShowColumnClicking(state: RootState): boolean {
+export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
-}
-
-export function getColumnClickable(state: RootState, column: string): boolean {
-  // If doing feature selection, the label column is no longer clickable
-  return (
-    getShowColumnClicking(state) &&
-    !(
-      state.currentPanel === 'dataDisplayFeatures' &&
-      column === state.labelColumn
-    )
-  );
 }
 
 export function getPredictAvailable(state: RootState): boolean {
@@ -537,8 +546,11 @@ export function getPredictAvailable(state: RootState): boolean {
 // Builds {prev, next} and reads the I18n global for button text, so it is not
 // memoized on Redux state. App selects it with a prev/next-aware equality fn so
 // the new object reference doesn't trigger unnecessary rerenders.
-export function getPanelButtons(state: RootState): PrevNextButtons {
-  return prevNextButtons(state);
+export function getPanelButtons(
+  state: RootState,
+  project: AilabProject,
+): PrevNextButtons {
+  return prevNextButtons(state, project);
 }
 
 export function readyToTrain(state: RootState): boolean {
@@ -556,34 +568,4 @@ export function getTableData(
   } else {
     return state.data;
   }
-}
-
-/* Functions for processing data about a trained model to save. */
-export function getFeaturesToSave(state: RootState): ModelCardColumn[] {
-  const features = state.selectedFeatures.map(feature =>
-    getColumnDataToSave(state, feature),
-  );
-  return features;
-}
-
-export function getLabelToSave(state: RootState): ModelCardColumn {
-  return getColumnDataToSave(state, state.labelColumn!);
-}
-
-export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
-  const dataToSave: ModelDataToSave = {
-    name: state.trainedModelDetails.name,
-    datasetDetails: getDatasetDetails(state),
-    potentialUses: state.trainedModelDetails.potentialUses,
-    potentialMisuses: state.trainedModelDetails.potentialMisuses,
-    selectedTrainer: getTrainerId(state),
-    featureNumberKey: state.featureNumberKey,
-    label: getColumnDataToSave(state, state.labelColumn!),
-    features: getFeaturesToSave(state),
-    summaryStat: getSummaryStat(state),
-    trainedModel: state.trainedModel ? state.trainedModel.toJSON() : null,
-    hyperparameters: state.hyperparameters ?? null,
-  };
-
-  return dataToSave;
 }

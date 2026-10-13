@@ -7,6 +7,110 @@
   font-family: var(--font-family-main);
 }
 
+@mixin side-panel {
+  @include panel;
+
+  background-color: var(--background-neutral-secondary);
+  border-left: 1px solid var(--border-neutral-primary);
+}
+
+@mixin panel-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+@mixin card {
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-md);
+}
+
+@mixin card-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px 10px;
+}
+
+// Include under two classes, to outrank the design system's minimum field width.
+@mixin full-width-field {
+  min-width: 0;
+  width: 100%;
+  align-items: stretch;
+}
+
+$data-table-row-height: 28px;
+
+@mixin accuracy-readout {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+$modal-max-width: 800px;
+$modal-margin: 24px;
+
+@mixin modal {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(#{$modal-max-width}, calc(100vw - #{2 * $modal-margin}));
+  max-height: calc(100vh - #{2 * $modal-margin});
+  overflow: hidden;
+  border-radius: var(--shape-xl);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-family-main);
+
+  // The design system's close button, moved into the title row.
+  > button {
+    inset-block-start: 24px;
+    inset-inline-end: 20px;
+  }
+}
+
+@mixin modal-title-row {
+  display: flex;
+  align-items: center;
+  padding: 18px 56px 18px 24px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+@mixin modal-action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 18px 20px 18px 24px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+// Include under two classes, to outrank DSCO's xs segmented buttons.
+@mixin segmented-buttons-xs {
+  // CADS borders an unselected segment one step darker than DSCO does.
+  --border-neutral-primary: var(--border-neutral-secondary);
+
+  button {
+    gap: 4px;
+  }
+
+  button span {
+    line-height: 18px;
+  }
+}
+
+@mixin canvas-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @mixin panel-header {
   display: flex;
   align-items: center;
@@ -17,3 +121,13 @@
   background-color: var(--background-neutral-primary);
   border-bottom: 1px solid var(--border-neutral-primary);
 }
+
+@mixin panel-header-title {
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.72px;
+  color: var(--text-neutral-quaternary);
+}
+
+$mark-transition: 0.16s ease;

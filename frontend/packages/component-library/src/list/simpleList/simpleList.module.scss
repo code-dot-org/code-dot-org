@@ -59,7 +59,7 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-lg));
-      line-height: 1.4;
+      line-height: 1.44;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.875rem);
@@ -76,7 +76,7 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-md));
-      line-height: 1.48;
+      line-height: 1.5;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.75rem);
@@ -93,7 +93,7 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-sm));
-      line-height: 1.54;
+      line-height: 1.57;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.625rem);
@@ -110,7 +110,7 @@
 
     .simpleListItemIcon {
       @include mixins.icon-dimensions(var(--font-size-body-xs));
-      line-height: 1.64;
+      line-height: 1.5;
 
       &.simpleListItemBullet {
         @include mixins.icon-dimensions(0.5rem);

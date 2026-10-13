@@ -9,7 +9,7 @@ const QUESTION: QuizQuestionSummary = {
   id: 5,
   type: 'MultipleChoiceQuestion',
   questionName: 'Variable reassignment',
-  stem: 'What is the value of x?',
+  questionTitle: 'What is the value of x?',
   choices: [
     {id: 'a', text: '5'},
     {id: 'b', text: '8'},
@@ -18,7 +18,7 @@ const QUESTION: QuizQuestionSummary = {
 };
 
 describe('MultiChoiceQuestionContainer', () => {
-  it("renders the question's stem as an h2 title", () => {
+  it('renders the question title as an h2 title', () => {
     render(
       <MultiChoiceQuestionContainer
         question={QUESTION}
@@ -36,6 +36,34 @@ describe('MultiChoiceQuestionContainer', () => {
         level: 2,
       })
     ).toBeInTheDocument();
+  });
+
+  it('renders the description as markdown under the title', () => {
+    render(
+      <MultiChoiceQuestionContainer
+        question={{...QUESTION, description: '### Hint\n\nAssume x is 5.'}}
+        selectedChoiceId={null}
+        onSelectChoice={jest.fn()}
+      />
+    );
+
+    expect(
+      screen.getByRole('heading', {name: 'Hint', level: 3})
+    ).toBeInTheDocument();
+    expect(screen.getByText('Assume x is 5.')).toBeInTheDocument();
+  });
+
+  it('renders only the title heading when there is no description', () => {
+    render(
+      <MultiChoiceQuestionContainer
+        question={{...QUESTION, description: null}}
+        selectedChoiceId={null}
+        onSelectChoice={jest.fn()}
+      />
+    );
+
+    expect(screen.getAllByRole('heading')).toHaveLength(1);
+    expect(screen.getAllByRole('radio')).toHaveLength(2);
   });
 
   it('renders one radio option per choice, lettered in order', () => {
@@ -77,5 +105,19 @@ describe('MultiChoiceQuestionContainer', () => {
     fireEvent.click(screen.getByRole('radio', {name: /B\./}));
 
     expect(onSelectChoice).toHaveBeenCalledWith('b');
+  });
+
+  it('marks only the selected option with selectedChoiceStatus', () => {
+    render(
+      <MultiChoiceQuestionContainer
+        question={QUESTION}
+        selectedChoiceId="b"
+        onSelectChoice={jest.fn()}
+        selectedChoiceStatus="incorrect"
+      />
+    );
+
+    expect(screen.getByRole('radio', {name: /8.*Incorrect/})).toBeChecked();
+    expect(screen.getAllByText('Incorrect')).toHaveLength(1);
   });
 });

@@ -1,0 +1,154 @@
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 14px 10px 12px;
+    background: var(--background-neutral-primary);
+    border: 1px solid var(--border-neutral-primary);
+    border-radius: var(--shape-sm);
+  }
+  
+  .optionContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    min-width: 0;
+  }
+  
+  // Only the student's own pick is ever shown filled.
+  .radioVisualFilled::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  .optionCorrect {
+    background: var(--background-success-light);
+    border-color: var(--border-success-mid);
+  
+    .radioVisual {
+      border-color: var(--border-success-primary);
+    }
+  
+    .radioVisualFilled::after {
+      background: var(--background-success-primary);
+    }
+  }
+  
+  .optionIncorrect {
+    background: var(--background-error-light);
+    border-color: var(--border-error-mid);
+  
+    .radioVisual {
+      border-color: var(--border-error-primary);
+    }
+  
+    .radioVisualFilled::after {
+      background: var(--background-error-primary);
+    }
+  }
+  
+  .optionSelectedUngraded {
+    background: var(--background-brand-purple-light);
+    border-color: var(--borders-brand-purple-light);
+  
+    .radioVisual {
+      border-color: var(--borders-brand-purple-primary);
+    }
+  
+    .radioVisualFilled::after {
+      background: var(--background-brand-purple-primary);
+    }
+  }
+  
+  .optionNeutral {
+    border-color: var(--border-disabled-neutral);
+  
+    .optionText,
+    .optionLetter {
+      color: var(--text-neutral-tertiary);
+    }
+  }
+  
+  .radioVisual {
+    position: relative;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-disabled-neutral);
+    border-radius: 50%;
+  }
+  
+  .optionLetter {
+    font-weight: 600;
+  }
+  
+  .optionText {
+    word-break: break-word;
+  }
+  
+  .correctIcon {
+    flex-shrink: 0;
+    color: var(--text-success-primary);
+  }
+  
+  .incorrectIcon {
+    flex-shrink: 0;
+    color: var(--text-error-primary);
+  }
+  
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .explanation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: var(--spacing-p-s);
+    background: var(--background-neutral-primary);
+    border: 1px solid var(--border-success-mid);
+    border-radius: var(--shape-sm);
+    overflow: hidden;
+  }
+
+  .explanationHeader {
+    padding: 10px 12px;
+    background: var(--background-success-light);
+    border-bottom: 1px solid var(--border-success-mid);
+  }
+
+  .explanationLabel {
+    color: var(--text-success-primary);
+  }
+
+  .explanationBody {
+    padding: 12px;
+    color: var(--text-neutral-primary);
+  }
+  

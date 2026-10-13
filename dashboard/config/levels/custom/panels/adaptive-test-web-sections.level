@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-09T23:27:23.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Hero section \nThe big opening area at the top that says what the site is",
+        "imageUrl": "https://images.code.org/17758db155e5c034d5d6f5f7acc34c32-section1.png",
+        "key": "adaptive-test-web-sections-d113721f-bd7c-4135-b706-9f2fd044b5d5"
+      },
+      {
+        "text": "###Feature cards\nBoxes that show what the site offers",
+        "imageUrl": "https://images.code.org/a28761780355d68b3b17fe269b596fd6-section2.png",
+        "key": "adaptive-test-web-sections-3c435ec3-e6fc-4559-ba66-1a0ecb266df8"
+      },
+      {
+        "text": "###Interactive canvas\nThe area where visitors can play or create",
+        "imageUrl": "https://images.code.org/bd9f630ca79bbc48c7e7ac77f3f3c7ce-section3.png",
+        "key": "adaptive-test-web-sections-a711450d-2df5-420a-99bb-dd3c173bff8e"
+      },
+      {
+        "text": "###Call-to-action\nThe button that asks visitors to do something",
+        "imageUrl": "https://images.code.org/dd1c35fae31d58efe740f012fc1053e5-section4.png",
+        "key": "adaptive-test-web-sections-8bc9eab0-82c3-4c57-b9f4-911f855c5417"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-09 23:30:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

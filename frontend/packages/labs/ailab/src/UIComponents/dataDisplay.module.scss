@@ -15,12 +15,7 @@
 }
 
 .title {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
   white-space: nowrap;
-  color: var(--text-neutral-primary);
 }
 
 .separator {
@@ -31,9 +26,7 @@
   background-color: var(--background-neutral-quinary);
 }
 
-.rowCount {
-  font-size: 12px;
-  line-height: 18px;
+.header .rowCount {
   white-space: nowrap;
   color: var(--text-neutral-quaternary);
 }

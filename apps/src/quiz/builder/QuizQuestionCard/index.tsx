@@ -1,10 +1,8 @@
-import Alert from '@code-dot-org/component-library/alert';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import isEqual from 'lodash/isEqual';
 import React, {useEffect, useState} from 'react';
 
+import BuilderCard from '../BuilderCard';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
@@ -34,7 +32,8 @@ function toEditableFields(
 ): QuizQuestionEditableFields {
   return {
     questionName: question.questionName,
-    stem: question.stem,
+    questionTitle: question.questionTitle,
+    description: question.description,
     choices: question.choices,
     correctChoiceId: question.correctChoiceId,
     explanation: question.explanation,
@@ -90,138 +89,54 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.headerPreview}>
-          <FontAwesomeV6Icon
-            iconName="list-check"
-            className={styles.typeIcon}
-          />
-          <Typography variant="strong" component="span">
-            {draft.questionName}
-          </Typography>
-          <Typography
-            variant="body3"
-            component="span"
-            className={styles.stemPreview}
-          >
-            {draft.stem}
-          </Typography>
-        </div>
-        {isDirty && (
-          <Tooltip title="Unsaved changes">
-            <div className={styles.unsavedBadge} aria-label="Unsaved changes">
-              <FontAwesomeV6Icon
-                iconName="triangle-exclamation"
-                iconStyle="solid"
+    <BuilderCard
+      iconName="list-check"
+      name={draft.questionName}
+      preview={draft.questionTitle}
+      itemLabel="question"
+      isExpanded={isExpanded}
+      onExpandedChange={onExpandedChange}
+      isDirty={isDirty}
+      isSaving={isSaving}
+      isRemoving={isRemoving}
+      error={error}
+      onSave={handleSave}
+      onDiscard={handleDiscard}
+      onRemove={handleRemove}
+    >
+      <Tabs
+        name={`question-${question.id}-tabs`}
+        defaultSelectedTabValue="question"
+        tabsContainerClassName={styles.tabsRow}
+        tabPanelsContainerClassName={styles.tabPanels}
+        tabs={[
+          {
+            value: 'question',
+            text: 'Question',
+            tabContent: (
+              <QuestionTab
+                draft={draft}
+                onChange={setDraft}
+                disabled={isBusy}
               />
-            </div>
-          </Tooltip>
-        )}
-        <IconButton
-          aria-label={isExpanded ? 'Collapse question' : 'Edit question'}
-          size="extraSmall"
-          variant="outlined"
-          color="secondary"
-          type="button"
-          onClick={() => onExpandedChange(!isExpanded)}
-        >
-          <FontAwesomeV6Icon
-            iconName={isExpanded ? 'chevron-up' : 'chevron-down'}
-          />
-        </IconButton>
-      </div>
-
-      {isExpanded && (
-        <>
-          <Tabs
-            name={`question-${question.id}-tabs`}
-            defaultSelectedTabValue="question"
-            tabsContainerClassName={styles.tabsRow}
-            tabPanelsContainerClassName={styles.tabPanels}
-            tabs={[
-              {
-                value: 'question',
-                text: 'Question',
-                tabContent: (
-                  <QuestionTab
-                    draft={draft}
-                    onChange={setDraft}
-                    disabled={isBusy}
-                  />
-                ),
-              },
-              {
-                value: 'answers',
-                text: 'Answers',
-                tabContent: (
-                  <AnswersTab
-                    draft={draft}
-                    onChange={setDraft}
-                    disabled={isBusy}
-                  />
-                ),
-              },
-              {
-                value: 'usage',
-                text: 'Usage',
-                tabContent: <UsageTab question={question} />,
-              },
-            ]}
-            onChange={() => {}}
-          />
-
-          {error && (
-            <Alert
-              type="danger"
-              size="xs"
-              text={error}
-              className={styles.saveError}
-            />
-          )}
-
-          <div className={styles.footer}>
-            <Button
-              variant="outlined"
-              color="error"
-              size="extraSmall"
-              type="button"
-              disabled={isBusy}
-              loading={isRemoving}
-              onClick={handleRemove}
-            >
-              Remove from quiz
-            </Button>
-            <div className={styles.footerActions}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                onClick={handleDiscard}
-              >
-                Discard changes
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                loading={isSaving}
-                onClick={handleSave}
-                startIcon={
-                  <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
-                }
-              >
-                Save
-              </Button>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
+            ),
+          },
+          {
+            value: 'answers',
+            text: 'Answers',
+            tabContent: (
+              <AnswersTab draft={draft} onChange={setDraft} disabled={isBusy} />
+            ),
+          },
+          {
+            value: 'usage',
+            text: 'Usage',
+            tabContent: <UsageTab question={question} />,
+          },
+        ]}
+        onChange={() => {}}
+      />
+    </BuilderCard>
   );
 };
 

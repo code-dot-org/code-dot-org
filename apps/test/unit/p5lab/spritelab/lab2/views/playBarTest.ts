@@ -9,9 +9,12 @@ describe('arrowSetFor', () => {
     expect(arrowSetFor({platformer: true, gravity: -0.75})).toBe('jump');
   });
 
-  it('steers up and down when weightless, and in a story scene', () => {
+  it('steers up and down when weightless', () => {
     expect(arrowSetFor({platformer: true, gravity: 0})).toBe('steer');
-    expect(arrowSetFor({platformer: false, gravity: 0.75})).toBe('steer');
+  });
+
+  it('offers no arrows in a story scene', () => {
+    expect(arrowSetFor({platformer: false, gravity: 0.75})).toBe('none');
   });
 });
 

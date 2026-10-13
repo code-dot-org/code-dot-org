@@ -3,6 +3,7 @@ require 'test_helper'
 class AiGatewayAuthControllerTest < ActionController::TestCase
   setup_all do
     @authorized_teacher = create(:authorized_teacher)
+    @student = create(:student)
     @level = create(:level, type: 'Aichat')
     @script = create(:script, :in_single_unit_course)
   end
@@ -47,6 +48,34 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal 'fake.jwt.token', JSON.parse(response.body)['token']
+  end
+
+  test 'lesson deep dive mints a token only when AI chat access is enabled' do
+    deep_dive_params = {
+      aichatContext: {
+        clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE],
+        currentLevelId: nil,
+        scriptId: nil,
+        lessonId: 1,
+      },
+    }
+    sign_in(@student)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    # The signing key is only configured outside the test environment.
+    OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
+    JWT.stubs(:encode).returns('fake.jwt.token')
+
+    {
+      SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED] => :success,
+      SharedConstants::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY] => :forbidden,
+      SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED] => :forbidden,
+    }.each do |access_level, expected_response|
+      User.any_instance.stubs(:ai_chat_access_level).returns(access_level)
+
+      post :get_access_token, params: deep_dive_params, as: :json
+
+      assert_response expected_response, "access level #{access_level}"
+    end
   end
 
   test 'sends the log token rather than the raw user id' do

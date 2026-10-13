@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';

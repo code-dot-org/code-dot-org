@@ -6,9 +6,11 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {Pathway} from '../types';
 
 import {
+  Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
   Progress,
+  StepContext,
   getStatusMap,
 } from './model';
 import {
@@ -68,14 +70,52 @@ export function useProgress(
     );
   }, []);
 
+  /** Merges into a step's context, so one concern's write keeps the others. */
+  const updateStepContext = useCallback((id: string, patch: StepContext) => {
+    setProgress(
+      p =>
+        p && {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [id]: {...p.stepContext[id], ...patch},
+          },
+        }
+    );
+  }, []);
+
+  // Not a call to updateStepContext: the patch must read the latest answers,
+  // or two saves in one tick would drop the first.
+  const saveAnswers = useCallback(
+    (stepId: string, questionId: number, answers: Answer[]) => {
+      setProgress(p => {
+        if (!p) return p;
+        const step = p.stepContext[stepId];
+        return {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [stepId]: {
+              ...step,
+              answers: {...step?.answers, [questionId]: answers},
+            },
+          },
+        };
+      });
+    },
+    []
+  );
+
   const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
 
   return {
+    /** Undefined until the stored progress has loaded. */
     progress,
-    isLoading: progress === undefined,
     statusMap,
     markStarted,
     markComplete,
+    updateStepContext,
+    saveAnswers,
     reset,
   };
 }

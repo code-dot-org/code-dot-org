@@ -89,9 +89,9 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_distribute_reads
-    master = MiniTest::Mock.new
-    slave1 = MiniTest::Mock.new
-    slave2 = MiniTest::Mock.new
+    master = Minitest::Mock.new
+    slave1 = Minitest::Mock.new
+    slave2 = Minitest::Mock.new
     test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
     NetSimApi.override_redis_for_test(test_redis)
 
@@ -109,9 +109,9 @@ class NetSimApiTest < Minitest::Test
   end
 
   def test_not_distribute_writes
-    master = MiniTest::Mock.new
-    slave1 = MiniTest::Mock.new
-    slave2 = MiniTest::Mock.new
+    master = Minitest::Mock.new
+    slave1 = Minitest::Mock.new
+    slave2 = Minitest::Mock.new
     test_redis = Redis::SlaveRead::Interface::Hiredis.new(master: master, slaves: [slave1, slave2])
     NetSimApi.override_redis_for_test(test_redis)
 

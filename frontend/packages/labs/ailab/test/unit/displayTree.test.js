@@ -1,4 +1,8 @@
-import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
+import {
+  buildDisplayTree,
+  getChildNodeId,
+  thresholdText,
+} from '../../src/helpers/displayTree';
 import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
 
 import {modelPredictions, rowTraces, trainDataset} from './trainedDataset';
@@ -32,9 +36,9 @@ describe('getDisplayTree on shipped datasets', () => {
   ])(
     'every row of %s follows the labels down the model route to its answer',
     (id, options) => {
-      const state = trainDataset(id, options);
-      const tree = getDisplayTree(state);
-      const traces = rowTraces(state);
+      const {state, trainedModel} = trainDataset(id, options);
+      const tree = getDisplayTree(state, trainedModel);
+      const traces = rowTraces(state, trainedModel);
 
       expect(tree).toBeDefined();
       expect(countQuestions(tree)).toBeGreaterThan(0);
@@ -42,16 +46,19 @@ describe('getDisplayTree on shipped datasets', () => {
         traces.map(trace => trace.path),
       );
       expect(traces.map(trace => trace.prediction)).toEqual(
-        modelPredictions(state),
+        modelPredictions(state, trainedModel),
       );
     },
   );
 
   test('a KNN model has no display tree', () => {
-    const state = trainDataset('zoo', {label: 'Class', mode: {}});
+    const {state, trainedModel} = trainDataset('zoo', {
+      label: 'Class',
+      mode: {},
+    });
 
-    expect(state.trainedModel).toBeDefined();
-    expect(getDisplayTree(state)).toBeUndefined();
+    expect(trainedModel).toBeDefined();
+    expect(getDisplayTree(state, trainedModel)).toBeUndefined();
   });
 });
 
@@ -160,5 +167,20 @@ describe('buildDisplayTree', () => {
         child: {type: 'answer', prediction: 90},
       },
     ]);
+  });
+});
+
+describe('thresholdText', () => {
+  test('drops float noise from a split midpoint', () => {
+    expect(
+      thresholdText({kind: 'lessThan', threshold: (39.1 + 39.2) / 2}),
+    ).toBe('< 39.15');
+    expect(thresholdText({kind: 'atLeast', threshold: (3.3 + 3.4) / 2})).toBe(
+      '≥ 3.35',
+    );
+  });
+
+  test('keeps a split finer than two decimal places', () => {
+    expect(thresholdText({kind: 'atLeast', threshold: 0.005})).toBe('≥ 0.005');
   });
 });

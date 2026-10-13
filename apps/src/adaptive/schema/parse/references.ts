@@ -1,6 +1,7 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, and whether each level step's `project` flag agrees with the level
-// the server resolved for it.
+// shape, question and choice ids, each level played by at most one step, and whether
+// each level step's `project` flag agrees with the level the server resolved
+// for it.
 
 import {z} from 'zod';
 
@@ -11,26 +12,108 @@ type Pathway = z.infer<typeof pathwaySchema>;
 /**
  * Detects and returns any reference problems in a pathway.
  */
-export function referenceProblems(pathway: Pathway): string[] {
+export function findReferenceProblems(pathway: Pathway): string[] {
   return [
-    ...skillProblems(pathway),
-    ...checkpointProblems(pathway),
-    ...levelStepProblems(pathway),
+    ...findSkillProblems(pathway),
+    ...findCheckpointProblems(pathway),
+    ...findQuestionProblems(pathway),
+    ...findLevelReuseProblems(pathway),
+    ...findLevelStepProblems(pathway),
   ];
+}
+
+/**
+ * Detects question ids used more than once, and multiple choice questions
+ * whose choice ids repeat or whose correct choice is not among them.
+ */
+function findQuestionProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const seen = new Set<string | number>();
+  const duplicates = new Set<string | number>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (seen.has(question.id)) duplicates.add(question.id);
+        seen.add(question.id);
+
+        if (question.type !== 'MultipleChoiceQuestion') return;
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.questions.${index}`;
+        const choiceIds = new Set<string>();
+        const repeated = new Set<string>();
+        for (const {id} of question.choices) {
+          if (choiceIds.has(id)) repeated.add(id);
+          choiceIds.add(id);
+        }
+        for (const id of repeated) {
+          problems.push(`${where}: choice id '${id}' is used more than once`);
+        }
+        const {correctChoiceId} = question;
+        if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
+          problems.push(
+            `${where}.correctChoiceId: '${correctChoiceId}' is not one of its choices`
+          );
+        }
+      });
+    }
+  }
+  return [
+    ...[...duplicates].map(
+      id => `checkpoints: question id '${id}' is used more than once`
+    ),
+    ...problems,
+  ];
+}
+
+/**
+ * Detects a level played by more than one step, or by a step and the project
+ * view: level steps must be unique and must not name the project template.
+ */
+function findLevelReuseProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const template = pathway.project.templateLevel;
+  const firstUse = new Map<string, string>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'level') continue;
+      const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      if (step.level === template) {
+        problems.push(
+          `${where}: level '${step.level}' is the project template level, which only the project view plays`
+        );
+      }
+      const earlier = firstUse.get(step.level);
+      if (earlier) {
+        problems.push(
+          `${where}: level '${step.level}' is already played by ${earlier}`
+        );
+      } else {
+        firstUse.set(step.level, where);
+      }
+    }
+  }
+  return problems;
 }
 
 /**
  * Detects level steps whose `project` flag disagrees with their level: a
  * project step's level must share the pathway's project template, and a
- * sandbox step's must not. Steps whose level did not resolve are skipped.
+ * sandbox step's must not (skipped when the level did not resolve), and
+ * sandbox steps that ask for generated instructions.
  */
-function levelStepProblems(pathway: Pathway): string[] {
+function findLevelStepProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   const template = pathway.project.templateLevel;
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
-      if (step.kind !== 'level' || !step.levelProperties) continue;
+      if (step.kind !== 'level') continue;
       const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      if (step.instructionsPrompt && !step.project) {
+        problems.push(
+          `${where}: instructionsPrompt needs the student's project, so the step must be marked project`
+        );
+      }
+      if (!step.levelProperties) continue;
       const sharesProject =
         step.level === template ||
         step.levelProperties.projectTemplateLevelName === template;
@@ -52,7 +135,7 @@ function levelStepProblems(pathway: Pathway): string[] {
  * Detects and returns any problems with skills: map keys must match ids and
  * checkpoints may only reference skills in the map.
  */
-function skillProblems(pathway: Pathway): string[] {
+function findSkillProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   for (const [skillId, skill] of Object.entries(pathway.skills)) {
     if (skill.id !== skillId) {
@@ -77,7 +160,7 @@ function skillProblems(pathway: Pathway): string[] {
  * root, and every checkpoint can eventually unlock, meaning its `requires`
  * chains all lead back to a root rather than looping.
  */
-function checkpointProblems(pathway: Pathway): string[] {
+function findCheckpointProblems(pathway: Pathway): string[] {
   const where = 'checkpoints';
   const problems: string[] = [];
   const ids = new Set(pathway.checkpoints.map(c => c.id));

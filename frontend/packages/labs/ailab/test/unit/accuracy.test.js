@@ -1,10 +1,12 @@
 import {ResultsGrades, MLTypes} from '../../src/constants';
 import {
+  formatAccuracy,
   getAccuracyRegression,
   getAccuracyClassification,
   gradeAccuracy,
   getGradeOptions,
   getAccuracyGrades,
+  getCorrectCount,
   getResultsByGrade,
   getPercentCorrect,
   getResultsDataInDataTableForm,
@@ -162,8 +164,10 @@ describe('get accuracy', () => {
 describe('get grades', () => {
   classificationTestCases.forEach(testCase => {
     test(testCase.case, async () => {
-      classificationState['accuracyCheckPredictedLabels'] = testCase.results;
-      const grades = getAccuracyGrades(classificationState);
+      const grades = getAccuracyGrades({
+        ...classificationState,
+        accuracyCheckPredictedLabels: testCase.results,
+      });
       expect(grades).toEqual(testCase.grades);
     });
   });
@@ -186,6 +190,23 @@ describe('get percent correct', () => {
   test('regression', async () => {
     const percentCorrect = getPercentCorrect(regressionState);
     expect(percentCorrect).toEqual(regressionPercent);
+  });
+});
+
+describe('getCorrectCount', () => {
+  test('classification', () => {
+    const state = {
+      ...classificationState,
+      accuracyCheckPredictedLabels: mostlyAccurateResults,
+    };
+    expect(getCorrectCount(state)).toEqual({
+      correct: 5,
+      total: 6,
+    });
+  });
+
+  test('regression', () => {
+    expect(getCorrectCount(regressionState)).toEqual({correct: 4, total: 6});
   });
 });
 
@@ -315,5 +336,16 @@ describe('getGradeOptions', () => {
         getGradeOptions(classificationState),
       ),
     );
+  });
+});
+
+describe('formatAccuracy', () => {
+  test('drops trailing zeros from the stored two decimals', () => {
+    expect(formatAccuracy('80.00')).toBe('80%');
+    expect(formatAccuracy('66.67')).toBe('66.67%');
+  });
+
+  test('shows a dash when there was nothing to grade', () => {
+    expect(formatAccuracy('NaN')).toBe('—');
   });
 });

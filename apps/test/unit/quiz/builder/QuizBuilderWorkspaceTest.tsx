@@ -18,9 +18,10 @@ const question = (
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
-  stem: 'What is a variable in JavaScript?',
+  questionTitle: 'What is a variable in JavaScript?',
   choices: [],
   correctChoiceId: null,
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
@@ -41,7 +42,8 @@ const BASE_STATE: QuizBuilderQuestionsState = {
 };
 
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {}
+  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
@@ -51,6 +53,11 @@ function renderWorkspace(
     <QuizBuilderWorkspace
       levelId={42}
       quizTitle="AI Foundations Certification Exam"
+      showIntroScreen={false}
+      customIntroText=""
+      hasTimeLimit={false}
+      onSaveQuizConfig={jest.fn()}
+      {...propOverrides}
     />
   );
 }
@@ -58,6 +65,20 @@ function renderWorkspace(
 describe('QuizBuilderWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
+  });
+
+  it('shows the intro screen card, with its content, when the intro screen is on', () => {
+    renderWorkspace(
+      {},
+      {showIntroScreen: true, customIntroText: 'You have 45 minutes.'}
+    );
+    expect(screen.getByText('Intro Screen')).toBeInTheDocument();
+    expect(screen.getByText('You have 45 minutes.')).toBeInTheDocument();
+  });
+
+  it('hides the intro screen card when the intro screen is off', () => {
+    renderWorkspace({}, {showIntroScreen: false});
+    expect(screen.queryByText('Intro Screen')).not.toBeInTheDocument();
   });
 
   it('fetches questions for the given level', () => {
@@ -78,14 +99,14 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('0 questions')).toBeInTheDocument();
   });
 
-  it('lists each placed question with its name and stem', () => {
+  it('lists each placed question with its name and question title', () => {
     renderWorkspace({
       questions: [
         question(),
         question({
           id: 2,
           questionName: 'MVC frameworks',
-          stem: 'Which MVC framework is most popular?',
+          questionTitle: 'Which MVC framework is most popular?',
         }),
       ],
     });
@@ -218,7 +239,7 @@ describe('QuizBuilderWorkspace', () => {
   it("shows a question-specific error on that question's card, not the banner", () => {
     renderWorkspace({
       questions: [question()],
-      error: 'stem cannot be blank',
+      error: 'question title cannot be blank',
       errorQuestionId: 1,
     });
 
@@ -227,7 +248,9 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.queryByRole('alert')).toBeNull();
 
     fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
-    expect(screen.getByRole('alert')).toHaveTextContent('stem cannot be blank');
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'question title cannot be blank'
+    );
   });
 
   it('does not show a question-specific error on a different card', () => {
@@ -236,7 +259,7 @@ describe('QuizBuilderWorkspace', () => {
         question(),
         question({id: 2, questionName: 'MVC frameworks'}),
       ],
-      error: 'stem cannot be blank',
+      error: 'question title cannot be blank',
       errorQuestionId: 1,
     });
 

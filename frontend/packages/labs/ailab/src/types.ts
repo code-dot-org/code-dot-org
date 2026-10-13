@@ -144,7 +144,21 @@ export interface HistoricResult {
   label: string;
   features: string[];
   accuracy: string;
+  correct: number;
+  total: number;
 }
+
+/* Everything saved with a student's work and restored when the level loads
+   again. A work in progress; more will be added here. */
+export interface AilabProject {
+  hyperparameters?: Hyperparameters;
+  historicResults: HistoricResult[];
+}
+
+export const initialProject: AilabProject = {
+  hyperparameters: undefined,
+  historicResults: [],
+};
 
 export interface ModelDataToSave {
   name?: string;
@@ -178,10 +192,7 @@ export interface PrevNextButtons {
 
 export const CONTENT_PANELS = [
   'selectDataset',
-  'dataDisplayLabel',
-  'dataDisplayFeatures',
-  'trainModel',
-  'generateResults',
+  'datasetView',
   'results',
   'saveModel',
   'modelSummary',
@@ -192,13 +203,12 @@ type ContentPanel = (typeof CONTENT_PANELS)[number];
 // Valid panels are content panels + Continue/Finish targets.
 export type Panel = ContentPanel | 'continue' | 'finish';
 
+export type TrainingModalStep = 'training' | 'testing';
+
 export const INSTRUCTIONS_KEYS = [
   ...CONTENT_PANELS,
   'uploadedDataset',
   'selectedDataset',
-  'selectedFeatureNumerical',
-  'selectedFeatureCategorical',
-  'resultsDetails',
 ] as const;
 
 export type InstructionsKey = (typeof INSTRUCTIONS_KEYS)[number];

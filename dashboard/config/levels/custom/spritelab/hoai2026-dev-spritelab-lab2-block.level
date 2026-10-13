@@ -24,11 +24,13 @@
     "level_mode": {
       "kind": "image",
       "imageType": "block",
-      "imageRole": "block"
+      "imageRole": "block",
+      "imageUi": "explore",
+      "sentence": "block"
     },
     "guide_steps": [
       {
-        "text": "**Make a block.** Platformers are built from blocks. Pick a material and click **Generate**."
+        "text": "**Make a block.** Platformers are built from blocks. Pick a material and click **Generate**, or draw your own."
       },
       {
         "text": "**Nice!** Click **Continue**.",
@@ -38,7 +40,8 @@
         }
       }
     ],
-    "long_instructions": "# Make a block\nPlatformers are built from blocks. Pick a material and click **Generate**."
+    "long_instructions": "# Make a block\nPlatformers are built from blocks. Pick a material and click **Generate**, or draw your own.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

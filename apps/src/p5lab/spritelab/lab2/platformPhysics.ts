@@ -89,12 +89,33 @@ function wallHalf(wall: PhysicsBox): number {
 
 // The feet-anchored solid body of a player sprite (see PLAYER_BODY_SCALE):
 // `drop` is the body center's offset below the image center.
-function playerBody(sprite: PhysicsSprite) {
+function playerBody(sprite: PhysicsBox) {
   const imgHalfW = (sprite.width * sprite.scale) / 2;
   const imgHalfH = (sprite.height * sprite.scale) / 2;
   const halfW = imgHalfW * PLAYER_BODY_SCALE;
   const halfH = imgHalfH * PLAYER_BODY_SCALE;
   return {imgHalfW, halfW, halfH, drop: imgHalfH - halfH};
+}
+
+/** An axis-aligned box in world coordinates, by center and half sizes. */
+export interface CollisionBox {
+  x: number;
+  y: number;
+  halfW: number;
+  halfH: number;
+}
+
+/** The square a wall tile occupies for collision: its full cell. */
+export function wallBox(wall: PhysicsBox): CollisionBox {
+  const half = wallHalf(wall);
+  return {x: wall.position.x, y: wall.position.y, halfW: half, halfH: half};
+}
+
+/** The box a character or object occupies for collision: its feet-anchored
+    body, as the resolver measures a player. */
+export function bodyBox(sprite: PhysicsBox): CollisionBox {
+  const {halfW, halfH, drop} = playerBody(sprite);
+  return {x: sprite.position.x, y: sprite.position.y + drop, halfW, halfH};
 }
 
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {

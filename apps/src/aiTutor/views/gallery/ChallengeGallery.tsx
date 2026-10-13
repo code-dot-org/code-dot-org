@@ -1,10 +1,13 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {useApiClient} from '@code-dot-org/core/api';
 import {
   ChallengeResponse,
   GallerySort,
   getUnitCounts,
   listChallengeResponses,
+  ProjectView,
   Reaction,
+  setApproved,
   TutorGalleryData,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
@@ -13,7 +16,6 @@ import experiments from '@cdo/apps/util/experiments';
 
 import GallerySidebar from './GallerySidebar';
 import ProjectCard, {ProjectVariant} from './ProjectCard';
-import ProjectView from './ProjectView';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -38,7 +40,12 @@ const projectIdFromLocation = () => {
 // the "My projects" view. Clicking a project opens its project page in
 // place.
 const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
-  const {units, sections, currentUnitId} = tutorGalleryData;
+  const {
+    units,
+    sections,
+    currentUnitId,
+    is_teacher: isTeacher,
+  } = tutorGalleryData;
 
   const [sectionId, setSectionId] = useState<number | null>(
     sections[0]?.id ?? null
@@ -145,6 +152,17 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
         : prev
     );
 
+  const updateResponseApproved = async (id: number, approved: boolean) => {
+    await setApproved(api.transport, id, approved);
+    setResponses(prev =>
+      prev
+        ? prev.map(response =>
+            response.id === id ? {...response, approved} : response
+          )
+        : prev
+    );
+  };
+
   const unitPositionFor = (responseUnitId: number | null) =>
     units.find(unit => unit.id === responseUnitId)?.position ?? null;
 
@@ -175,6 +193,8 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
             variant={variant}
             unitPosition={unitPositionFor(response.unit_id)}
             onOpen={() => navigateToProject(response.id)}
+            isTeacher={isTeacher}
+            onApprovalChange={updateResponseApproved}
           />
         ))}
       </div>
@@ -250,6 +270,14 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           <p className={styles.pageOverline}>{sectionName || 'My Projects'}</p>
           <h1 className={styles.pageTitle}>Extension Activities</h1>
         </header>
+        {isTeacher && (
+          <Alert
+            text="By default, students can't see each other's projects. Please make sure you've reviewed a project before making it visible for students."
+            type="info"
+            isImmediateImportance={false}
+            className={styles.teacherAlert}
+          />
+        )}
         {renderContent()}
       </main>
     </div>

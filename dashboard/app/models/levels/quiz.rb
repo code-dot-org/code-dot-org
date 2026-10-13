@@ -25,10 +25,9 @@
 #  index_levels_on_type       (type)
 #
 class Quiz < Level
-  # custom_intro_text, if set, is shown once on the pre-attempt 'start quiz'
-  # screen before timer/attempt begins (blank falls back to default framing
-  # text on the frontend). Distinct from instructions, which stays available
-  # in the persistent Instructions panel throughout the attempt.
+  # custom_intro_text is the body of the pre-attempt intro screen, shown only
+  # while show_intro_screen is on; blank falls back to default text on the
+  # frontend. Unlike instructions, it isn't shown during the attempt.
   serialized_attrs %w(
     time_limit_minutes
     show_correctness
@@ -38,6 +37,7 @@ class Quiz < Level
     show_intro_screen
     allow_multiple_attempts
     max_attempts
+    show_questions_after_submit
   )
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
@@ -47,6 +47,7 @@ class Quiz < Level
   validates :time_limit_minutes, numericality: {only_integer: true, greater_than: 0}, allow_blank: true
 
   validate :reveal_answer_explanation_requires_show_correctness
+  validate :reveal_answer_explanation_requires_questions_shown
   validate :max_attempts_requires_allow_multiple_attempts
   validate :show_intro_screen_required_when_time_limit
 
@@ -100,8 +101,7 @@ class Quiz < Level
         id: question.id,
         type: question.type,
         questionName: question.name,
-        stem: question.content['stem'],
-        choices: question.content['choices'],
+        **question.attempt_content_json,
         page: placement.page,
       }
     end
@@ -111,6 +111,13 @@ class Quiz < Level
   private def reveal_answer_explanation_requires_show_correctness
     return unless reveal_answer_explanation? && !show_correctness?
     errors.add(:reveal_answer_explanation, 'cannot be true unless show_correctness is also true')
+  end
+
+  # The explanation only ever surfaces on a per-question result card, which
+  # only renders when show_questions_after_submit is on.
+  private def reveal_answer_explanation_requires_questions_shown
+    return unless reveal_answer_explanation? && !show_questions_after_submit?
+    errors.add(:reveal_answer_explanation, 'cannot be true unless show_questions_after_submit is also true')
   end
 
   # A time limit with no intro screen means a student could start the timer

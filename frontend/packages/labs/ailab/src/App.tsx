@@ -11,7 +11,9 @@ import {
 } from './helpers/navigationValidation';
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
+import {useProject} from './ProjectContext';
 import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
   Panel,
@@ -19,16 +21,16 @@ import type {
   SaveResponseData,
   SaveTrainedModel,
 } from './types';
+import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
-import GenerateResults from './UIComponents/GenerateResults';
 import ModelCard from './UIComponents/ModelCard';
-import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
 import SelectDataset from './UIComponents/SelectDataset';
-import TrainModel from './UIComponents/TrainModel';
+import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
+import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 
 import styles from './app.module.scss';
 
@@ -211,6 +213,9 @@ export interface AppProps {
     key: InstructionsKey,
     options: {showOverlay?: boolean} | null,
   ) => void;
+  onStartOver?: () => void;
+  /** Optional callback invoked with the accuracy of each newly trained model. */
+  onTrained?: (accuracy: number) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -219,15 +224,27 @@ export interface AppProps {
 const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
   shallowEqual(a.prev, b.prev) && shallowEqual(a.next, b.next);
 
-const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
+const App = ({
+  onContinue,
+  saveTrainedModel,
+  setInstructionsKey,
+  onStartOver,
+  onTrained,
+}: AppProps) => {
   const dispatch = useAppDispatch();
-  const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
+  const {project} = useProject();
+  const panelButtons = useAppSelector<PrevNextButtons>(
+    state => getPanelButtons(state, project),
+    panelButtonsEqual,
+  );
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
+  const latestResult = project.historicResults[0];
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
+  const {trainedModel} = useTrainingData();
+  const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -241,8 +258,16 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
     reportPanelView(currentPanel);
   }, [currentPanel]);
 
+  useEffect(() => {
+    if (latestResult) {
+      onTrained?.(Number(latestResult.accuracy));
+    }
+  }, [latestResult]);
+
   return (
     <div className={styles.app} style={colorVariables}>
+      <WorkspaceHeader onStartOver={onStartOver} />
+
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
           <ContainerLeft>
@@ -254,44 +279,28 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
+      {currentPanel === 'datasetView' && (
         <BodyContainer flush>
-          <ContainerLeft>
-            <DataDisplay />
-          </ContainerLeft>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <DataDisplay />
+            </ContainerLeft>
 
-          <ContainerRight>
-            <TrainPanel />
-          </ContainerRight>
+            <ContainerRight>
+              <TrainPanel />
+            </ContainerRight>
+          </div>
+          <ColumnAnalysis />
         </BodyContainer>
       )}
 
-      {currentPanel === 'trainModel' && (
-        <BodyContainer>
-          <ContainerFullWidth>
-            <TrainModel />
-          </ContainerFullWidth>
-        </BodyContainer>
-      )}
-
-      {currentPanel === 'generateResults' && (
-        <BodyContainer>
-          <ContainerFullWidth>
-            <GenerateResults />
-          </ContainerFullWidth>
-        </BodyContainer>
-      )}
+      <TrainingModal />
 
       {currentPanel === 'results' && (
-        <BodyContainer>
-          <ContainerLeft>
+        <BodyContainer flush>
+          <ContainerFullWidth>
             <Results />
-          </ContainerLeft>
-          {resultsPhase === 1 && (
-            <ContainerRight>
-              <Predict />
-            </ContainerRight>
-          )}
+          </ContainerFullWidth>
         </BodyContainer>
       )}
 
@@ -311,17 +320,21 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      <PanelButtons
-        panelButtons={panelButtons}
-        currentPanel={currentPanel}
-        setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
-        onContinue={onContinue}
-        startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
-        saveStatus={saveStatus}
-        saveResponseData={saveResponseData}
-        isSaveComplete={isSaveComplete}
-        shouldDisplaySaveStatus={shouldDisplaySaveStatus}
-      />
+      {hasNavigation && (
+        <PanelButtons
+          panelButtons={panelButtons}
+          currentPanel={currentPanel}
+          setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
+          onContinue={onContinue}
+          startSaveTrainedModel={() =>
+            dispatch(saveModel(saveTrainedModel, project, trainedModel))
+          }
+          saveStatus={saveStatus}
+          saveResponseData={saveResponseData}
+          isSaveComplete={isSaveComplete}
+          shouldDisplaySaveStatus={shouldDisplaySaveStatus}
+        />
+      )}
     </div>
   );
 };

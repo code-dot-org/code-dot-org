@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson7-choice3-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Test the model using `model.score` and print the score.\r\n- Classify a new customer by using `model.predict` and print the prediction.\r\n\r\n💻 Coding Tip\r\n\r\nRemember that you can score a model with a line like:\r\n\r\n```\r\nmodel.score(test_inputs, test_outputs)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nzVN0RE7GpuynCdF+B3o/KoBJMW+PoA==\n",
+    "display_name": "Business Analyst",
+    "bubble_choice_description": "A business analyst advises businesses on how to achieve their goals.",
+    "thumbnail_url": "https://images.code.org/21b6d52b6163cd99a440be22dfc787ae-analyst.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:07:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:09:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:17:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
