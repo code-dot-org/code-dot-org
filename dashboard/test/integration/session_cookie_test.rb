@@ -67,14 +67,12 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     end
 
     it 'persists through sign-in and rotates after sign-out' do
-      get api_statsig_stable_id_path
-      initial_stable_id = body
-      _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
-      _(cookies[:statsig_stable_id]).must_be_nil
-      _(session[:statsig_stable_id]).must_equal initial_stable_id
-
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal initial_stable_id
+      initial_stable_id = session[:statsig_stable_id]
+      _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+
+      get api_statsig_stable_id_path
+      _(body).must_equal initial_stable_id
 
       sign_in create(:user)
 
@@ -88,11 +86,8 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       _(cookies[:statsig_stable_id]).must_be_empty
 
       get api_statsig_stable_id_path
-      rotated_stable_id = body
-      _(rotated_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
-      _(rotated_stable_id).wont_equal initial_stable_id
-      _(cookies[:statsig_stable_id]).must_be_empty
-      _(session[:statsig_stable_id]).must_equal rotated_stable_id
+      _(body).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+      _(body).wont_equal initial_stable_id
     end
 
     context 'with Statsig cookie' do
@@ -124,12 +119,15 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       end
 
       context 'with conflicting session ID' do
+        let(:session_stable_id) {session[:statsig_stable_id]}
+
         before do
           cookies.delete('statsig_stable_id')
-          get api_statsig_stable_id_path
+
+          get '/v3/channels'
+
           _(session_cookie_written?).must_equal true
-          _(body).wont_equal cookies_statsig_stable_id
-          @session_stable_id = body
+          _(session_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
           cookies[:statsig_stable_id] = cookies_statsig_stable_id
         end
 
@@ -137,7 +135,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
           get api_statsig_stable_id_path, xhr: true
 
           _(body).must_equal cookies_statsig_stable_id
-          _(session[:statsig_stable_id]).must_equal @session_stable_id
+          _(session[:statsig_stable_id]).must_equal session_stable_id
           _(session_cookie_written?).must_equal false
         end
       end

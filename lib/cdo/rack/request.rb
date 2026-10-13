@@ -99,20 +99,27 @@ module Cdo
       env[:splat_path_info]
     end
 
+    # Statsig stable ID from the cookie or the session, without generating one.
+    #
+    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
+    def existing_statsig_stable_id
+      # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
+      # See: apps/src/metrics/statsigHelpers.js
+      cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return cookies_stable_id if STATSIG_STABLE_ID_FORMAT.match?(cookies_stable_id)
+
+      session_stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return session_stable_id if session_stable_id.is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(session_stable_id)
+
+      nil
+    end
+
     # Statsig stable ID for use of anonymous (signed-out) user tracking.
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
       @statsig_stable_id ||=
-        if STATSIG_STABLE_ID_FORMAT.match?(cookies[SharedConstants::STATSIG_STABLE_ID_KEY])
-          # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
-          # See: apps/src/metrics/statsigHelpers.js
-          cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
-        elsif STATSIG_STABLE_ID_FORMAT.match?(session[SharedConstants::STATSIG_STABLE_ID_KEY])
-          session[SharedConstants::STATSIG_STABLE_ID_KEY]
-        else
-          session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate
-        end
+        existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
     end
 
     def anon_user_id
