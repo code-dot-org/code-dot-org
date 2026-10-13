@@ -70,8 +70,8 @@ export function bubbleAriaLabel(level: WidgetLevel): string {
   const status = level.isLocked
     ? commonI18n.progressWidgetStatusLocked()
     : statusLabel[bubbleStatus(level)]();
-  return commonI18n.progressWidgetLevel({
-    levelNumber: level.levelNumber ?? '',
-    status,
-  });
+  const params = {levelNumber: level.levelNumber ?? '', status};
+  return isAssessment(level)
+    ? commonI18n.progressWidgetAssessmentLevel(params)
+    : commonI18n.progressWidgetLevel(params);
 }

@@ -678,6 +678,7 @@
   "continueToLevel": "Continue to Level {level}",
   "simpleProgressLevelOf": "Level {position} of {total}",
   "progressWidgetLevel": "Level {levelNumber}, {status}",
+  "progressWidgetAssessmentLevel": "Level {levelNumber}, assessment, {status}",
   "progressWidgetLessonProgress": "Lesson progress",
   "progressWidgetStatusNotStarted": "not started",
   "progressWidgetStatusInProgress": "in progress",

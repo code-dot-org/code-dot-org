@@ -96,7 +96,10 @@ describe('ProgressWidgetHeader', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByLabelText(
-        label(4, commonI18n.progressWidgetStatusKeepWorking())
+        commonI18n.progressWidgetAssessmentLevel({
+          levelNumber: 4,
+          status: commonI18n.progressWidgetStatusKeepWorking(),
+        })
       )
     ).toBeInTheDocument();
     expect(
