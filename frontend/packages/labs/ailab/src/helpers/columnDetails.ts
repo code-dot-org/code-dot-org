@@ -46,6 +46,23 @@ export function tooManyUniqueOptions(uniqueOptionsCount: number): boolean {
   return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 
+// Columns a model can train on.
+export function selectableColumns(
+  data: DataRow[],
+  columnsByDataType: Record<string, string>,
+): string[] {
+  return Object.keys(data[0] ?? {}).filter(column => {
+    const dataType = columnsByDataType[column];
+    if (dataType === ColumnTypes.NUMERICAL) {
+      return containsOnlyNumbers(data, column);
+    }
+    if (dataType === ColumnTypes.CATEGORICAL) {
+      return !tooManyUniqueOptions(getUniqueOptions(data, column).length);
+    }
+    return false;
+  });
+}
+
 export function getUniqueOptions(
   data: DataRow[],
   column: string,
