@@ -10,13 +10,13 @@ class Policies::StandaloneProjectsTest < ActiveSupport::TestCase
   test 'validate! names the file and key when an entry body is outdented' do
     # `applab:` followed by `name: ...` at column 0 parses as a nil entry plus a top-level `name` key.
     error = assert_invalid({'applab' => nil, 'name' => 'New App Lab Project'})
-    assert_includes error.message, 'standalone_projects.yml: entry "applab"'
+    assert_includes error.message, 'standalone_projects.yml: project type "applab":'
     assert_includes error.message, 'check indentation'
   end
 
   test 'validate! rejects an outdented flag' do
     error = assert_invalid(VALID_CONFIG.merge('i18n' => true))
-    assert_includes error.message, 'entry "i18n"'
+    assert_includes error.message, 'project type "i18n":'
   end
 
   test 'validate! rejects unknown keys' do
