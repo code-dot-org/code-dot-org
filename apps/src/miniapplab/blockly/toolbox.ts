@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {
+  AI_ANSWER_BLOCK_TYPE,
   ASK_AI_BLOCK_TYPE,
   GET_TEXT_BLOCK_TYPE,
   JOIN_BLOCK_TYPE,
@@ -37,5 +38,6 @@ export const toolbox: BlocklyCore.utils.toolbox.ToolboxInfo = {
         PROMPT: {shadow: {type: 'text', fields: {TEXT: 'Tell me a joke'}}},
       },
     },
+    {kind: 'block', type: AI_ANSWER_BLOCK_TYPE},
   ],
 };

@@ -10,6 +10,7 @@ export const SET_TEXT_BLOCK_TYPE = 'miniapp_setText';
 export const GET_TEXT_BLOCK_TYPE = 'miniapp_getText';
 export const JOIN_BLOCK_TYPE = 'miniapp_join';
 export const ASK_AI_BLOCK_TYPE = 'miniapp_askAi';
+export const AI_ANSWER_BLOCK_TYPE = 'miniapp_aiAnswer';
 
 interface LabBlock {
   definition: BlockJson;
@@ -27,7 +28,8 @@ const elementField = (name: string, kind: ElementKind) =>
   } as unknown as BlockJson['args0'][number]);
 
 // Handlers are async so an "ask AI" block can wait for its answer before the
-// blocks below it run.
+// blocks inside it run.  `aiAnswer` is the handler's own, so an "AI answer"
+// block outside any ask reads '' rather than throwing.
 const whenButtonPressed: LabBlock = {
   definition: {
     type: WHEN_BUTTON_PRESSED_BLOCK_TYPE,
@@ -43,9 +45,10 @@ const whenButtonPressed: LabBlock = {
   generator: (block, generator) => {
     const id = block.getFieldValue('BUTTON');
     const body = generator.statementToCode(block, 'DO');
-    return `MiniApp.onButtonPressed(${quote(
-      id
-    )}, async function () {\n${body}});\n`;
+    return (
+      `MiniApp.onButtonPressed(${quote(id)}, async function () {\n` +
+      `  let aiAnswer = '';\n${body}});\n`
+    );
   },
 };
 
@@ -104,23 +107,34 @@ const join: LabBlock = {
 const askAi: LabBlock = {
   definition: {
     type: ASK_AI_BLOCK_TYPE,
-    message0: 'ask AI %1 and show the answer in %2',
+    message0: 'ask AI %1 then do %2 %3',
     args0: [
       {type: 'input_value', name: 'PROMPT'},
-      elementField('FIELD', 'text'),
+      {type: 'input_dummy', name: 'HEAD'},
+      {type: 'input_statement', name: 'DO'},
     ],
-    inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: BlockStyles.LAB_BLOCKS,
     tooltip:
-      'Sends the prompt to the AI, waits for the answer, and shows it in the chosen field.',
+      'Sends the prompt to the AI and waits.  The blocks inside run once the answer is back.',
   },
   generator: (block, generator) => {
     const prompt = generator.valueToCode(block, 'PROMPT', Order.NONE) || "''";
-    const id = block.getFieldValue('FIELD');
-    return `await MiniApp.askAi(${prompt}, ${quote(id)});\n`;
+    const body = generator.statementToCode(block, 'DO');
+    return `aiAnswer = await MiniApp.askAi(${prompt});\n${body}`;
   },
+};
+
+const aiAnswer: LabBlock = {
+  definition: {
+    type: AI_ANSWER_BLOCK_TYPE,
+    message0: 'AI answer',
+    output: null,
+    style: BlockStyles.LAB_BLOCKS,
+    tooltip: 'What the AI answered, inside an "ask AI" block.',
+  },
+  generator: () => ['aiAnswer', Order.ATOMIC],
 };
 
 export const labBlocks: LabBlock[] = [
@@ -129,4 +143,5 @@ export const labBlocks: LabBlock[] = [
   getText,
   join,
   askAi,
+  aiAnswer,
 ];

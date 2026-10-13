@@ -4,6 +4,8 @@ import {askAi} from '../ai/askAi';
 export interface RuntimeHost {
   getText: (id: string) => string;
   setText: (id: string, text: string) => void;
+  /** How many AI requests are in flight. */
+  setPendingAiCount: (count: number) => void;
   onError: (message: string) => void;
 }
 
@@ -14,10 +16,8 @@ interface MiniAppApi {
   onButtonPressed: (id: string, handler: ButtonHandler) => void;
   getText: (id: string) => string;
   setText: (id: string, text: string) => void;
-  askAi: (prompt: unknown, id: string) => Promise<void>;
+  askAi: (prompt: unknown) => Promise<string>;
 }
-
-const thinkingText = '…';
 
 /**
  * Runs a generated program.  Blocks register button handlers at start; a
@@ -27,6 +27,7 @@ const thinkingText = '…';
 export default class ProgramRunner {
   private handlers = new Map<string, ButtonHandler[]>();
   private runId = 0;
+  private pendingAi = 0;
 
   constructor(private host: RuntimeHost) {}
 
@@ -41,6 +42,8 @@ export default class ProgramRunner {
   stop() {
     this.handlers.clear();
     this.runId++;
+    this.pendingAi = 0;
+    this.host.setPendingAiCount(0);
   }
 
   pressButton(id: string) {
@@ -71,21 +74,22 @@ export default class ProgramRunner {
           this.host.setText(id, String(text));
         }
       },
-      askAi: async (prompt, id) => {
+      // Resolves to the answer, or to a message the program can show in
+      // its place; it never rejects, so the blocks inside still run.
+      askAi: async prompt => {
         const promptText = String(prompt).trim();
         if (!promptText) {
-          this.host.setText(id, 'Ask the AI something first.');
-          return;
+          return 'Ask the AI something first.';
         }
-        this.host.setText(id, thinkingText);
+        this.host.setPendingAiCount(++this.pendingAi);
         try {
           const answer = await askAi(promptText);
-          if (isCurrent()) {
-            this.host.setText(id, answer || 'The AI had nothing to say.');
-          }
+          return answer || 'The AI had nothing to say.';
         } catch (error) {
+          return aiErrorText(error);
+        } finally {
           if (isCurrent()) {
-            this.host.setText(id, aiErrorText(error));
+            this.host.setPendingAiCount(--this.pendingAi);
           }
         }
       },

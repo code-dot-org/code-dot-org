@@ -1,8 +1,10 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
 import {
+  AI_ANSWER_BLOCK_TYPE,
   ASK_AI_BLOCK_TYPE,
   GET_TEXT_BLOCK_TYPE,
+  SET_TEXT_BLOCK_TYPE,
   WHEN_BUTTON_PRESSED_BLOCK_TYPE,
 } from './blockly/blocks';
 import {AppDesign} from './types';
@@ -59,12 +61,18 @@ export const defaultBlocks: WorkspaceSerialization = {
           DO: {
             block: {
               type: ASK_AI_BLOCK_TYPE,
-              fields: {FIELD: 'answer'},
               inputs: {
                 PROMPT: {
                   block: {
                     type: GET_TEXT_BLOCK_TYPE,
                     fields: {FIELD: 'question'},
+                  },
+                },
+                DO: {
+                  block: {
+                    type: SET_TEXT_BLOCK_TYPE,
+                    fields: {FIELD: 'answer'},
+                    inputs: {TEXT: {block: {type: AI_ANSWER_BLOCK_TYPE}}},
                   },
                 },
               },

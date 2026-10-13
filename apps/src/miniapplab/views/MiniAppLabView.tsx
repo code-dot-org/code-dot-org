@@ -101,6 +101,7 @@ const MiniAppLabView: React.FunctionComponent<Partial<LabProps>> = () => {
   const [tab, setTab] = useState<LabTab>('design');
   const [isRunning, setIsRunning] = useState(false);
   const [runValues, setRunValues] = useState<ElementValues>({});
+  const [pendingAiCount, setPendingAiCount] = useState(0);
   const [status, setStatus] = useState<string>();
   // Run follows the event block color, as in the other Lab2 labs.
   const setupBlockColor = useSetupBlockColor();
@@ -114,6 +115,7 @@ const MiniAppLabView: React.FunctionComponent<Partial<LabProps>> = () => {
         getText: id => runValuesRef.current[id] ?? '',
         setText: (id, text) =>
           setRunValues(values => ({...values, [id]: text})),
+        setPendingAiCount,
         onError: message => setStatus(`Something went wrong: ${message}`),
       }),
     []
@@ -302,7 +304,13 @@ const MiniAppLabView: React.FunctionComponent<Partial<LabProps>> = () => {
         <div className={moduleStyles.screenColumn}>
           <PanelContainer
             id="miniapplab-screen-panel"
-            headerContent={isRunning ? 'Running' : 'App'}
+            headerContent={
+              !isRunning
+                ? 'App'
+                : pendingAiCount > 0
+                ? 'Running · asking the AI…'
+                : 'Running'
+            }
           >
             <div
               className={moduleStyles.screenHolder}
