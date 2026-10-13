@@ -1,8 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {
-  CheckboxDropdown,
-  SimpleDropdown,
-} from '@code-dot-org/component-library/dropdown';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography} from '@mui/material';
 import React, {useState} from 'react';
@@ -17,13 +14,11 @@ import {
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
-  getFeatures,
-  getStartingLabel,
   setDataset,
-  setFeatures,
   withoutLabelInFeatures,
 } from './ailabMode';
 import {DatasetFiles} from './datasetColumns';
+import FeaturesField from './FeaturesField';
 import LabelField from './LabelField';
 import {useDatasetColumns} from './useDatasetColumns';
 
@@ -93,19 +88,6 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
 
-  const features = getFeatures(mode);
-  const featuresLocked = mode.lockFeatures === true;
-  const defaultLabel = columns?.defaultLabel;
-  const startingLabel = getStartingLabel(mode, defaultLabel);
-  const selectableColumns = columns?.selectable ?? [];
-  const featureColumns = selectableColumns.filter(
-    column => column !== startingLabel
-  );
-  const featureOptions = featureColumns.map(column => ({
-    value: column,
-    label: column,
-  }));
-
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
     columnsHelperMessage = 'Choose a dataset first.';
@@ -113,42 +95,8 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     columnsHelperMessage = "Loading the dataset's columns...";
   }
 
-  const startingFeatures = features.filter(feature =>
-    featureColumns.includes(feature)
-  );
-  const skippedFeatures = columns
-    ? features.filter(feature => !featureColumns.includes(feature))
-    : [];
-  let featuresError: string | undefined;
-  if (skippedFeatures.length > 0) {
-    featuresError = `Students will not start with these features: ${skippedFeatures.join(
-      ', '
-    )}.`;
-  } else if (columns && featuresLocked && startingFeatures.length === 0) {
-    featuresError = 'Choose the features to lock.';
-  } else if (
-    columns &&
-    featuresLocked &&
-    selectableColumns.every(column => startingFeatures.includes(column))
-  ) {
-    featuresError =
-      'Leave a column out for students to predict, or choose a label.';
-  }
-
   const changeMode = (newMode: ModeObject) =>
-    onChange(withoutLabelInFeatures(newMode, defaultLabel));
-
-  const handleFeatureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {value, checked} = e.target;
-    changeMode(
-      setFeatures(
-        mode,
-        featureColumns.filter(column =>
-          column === value ? checked : features.includes(column)
-        )
-      )
-    );
-  };
+    onChange(withoutLabelInFeatures(newMode, columns?.defaultLabel));
 
   const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
     <Checkbox
@@ -224,26 +172,14 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
         </div>
       </div>
       <div className={moduleStyles.fieldArea}>
-        <CheckboxDropdown
-          labelText="Features"
-          aria-label={`Features, ${startingFeatures.join(', ') || 'None'}`}
-          name="ailab_mode_features"
-          styleAsFormField
-          allOptions={featureOptions}
-          checkedOptions={startingFeatures}
-          onChange={handleFeatureChange}
-          onSelectAll={() => changeMode(setFeatures(mode, featureColumns))}
-          onClearAll={() => changeMode(setFeatures(mode, []))}
-          selectAllText="Select all"
-          clearAllText="Clear"
-          doneText="Done"
-          disabled={!columns}
+        <FeaturesField
+          mode={mode}
+          columns={columns}
           helperMessage={
             columnsHelperMessage ??
             'The columns students start out predicting from.'
           }
-          errorMessage={featuresError}
-          size="s"
+          onChange={changeMode}
         />
         <div className={moduleStyles.booleanField}>
           {renderCheckbox(
