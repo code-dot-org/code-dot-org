@@ -136,6 +136,20 @@
   flex: none;
 }
 
+.freeResponseHeading {
+  width: 100%;
+  max-width: 800px;
+}
+
+.freeResponseActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
 .freeResponseTextarea {
   width: 100%;
   min-height: 120px;

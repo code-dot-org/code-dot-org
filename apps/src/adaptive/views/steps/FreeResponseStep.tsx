@@ -49,25 +49,10 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
 
   return (
     <div className={styles.freeResponseStep}>
-      <AttemptCard
-        title={step.title}
-        description={
-          <MuiTypography variant="body2">{step.prompt}</MuiTypography>
-        }
-        footer={
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            type="button"
-            endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
-            disabled={text.trim().length === 0}
-            onClick={handleSubmit}
-          >
-            {continueLabel}
-          </MuiButton>
-        }
-      >
+      <MuiTypography variant="h2" className={styles.freeResponseHeading}>
+        {step.title}
+      </MuiTypography>
+      <AttemptCard title={step.prompt}>
         <textarea
           className={styles.freeResponseTextarea}
           value={text}
@@ -75,6 +60,19 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
           placeholder={step.placeholder}
         />
       </AttemptCard>
+      <div className={styles.freeResponseActions}>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          type="button"
+          endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+          disabled={text.trim().length === 0}
+          onClick={handleSubmit}
+        >
+          {continueLabel}
+        </MuiButton>
+      </div>
     </div>
   );
 };
