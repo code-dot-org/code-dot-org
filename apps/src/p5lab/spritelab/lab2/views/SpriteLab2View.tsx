@@ -125,6 +125,7 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
+import TextEntry from './components/TextEntry';
 import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
@@ -399,6 +400,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [channelId, levelProperties.name]);
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
+  // The running program has a "when text entered" block: the field shows.
+  const [textInputWanted, setTextInputWanted] = useState(false);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
   // Jump transition: the cover blanks the playspace while the target loads;
@@ -1368,6 +1371,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onPlayMusic = playMusic;
+    engine.onTextInputWanted = setTextInputWanted;
     engine.onControlsChange = (state: ControlsState) =>
       setArrowSet(arrowSetFor(state));
   }, [
@@ -2019,6 +2023,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             boxRef={playspaceRef}
             platformScene={playingPlatformer}
             mode={playspaceMode}
+            inside={
+              textInputWanted ? (
+                <TextEntry
+                  onSubmit={text => engineRef.current?.enterText(text)}
+                />
+              ) : undefined
+            }
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no

@@ -951,3 +951,33 @@ $tab-segment-height: $tab-item-height - 2px;
   overflow: auto;
   background-color: var(--background-neutral-primary);
 }
+
+// The text field's strip over the foot of the game while playing.
+.playspaceInside {
+  position: absolute;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+  background: rgb(0 0 0 / 55%);
+}
+
+.textEntryForm {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.textEntryInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+}

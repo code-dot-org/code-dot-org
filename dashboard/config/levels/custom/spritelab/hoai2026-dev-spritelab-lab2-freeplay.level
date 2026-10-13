@@ -239,6 +239,65 @@
               "type": "spritelab2_goToExternalScene"
             }
           ]
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_whenTextEntered"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAi",
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "spritelab2_enteredText"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_say",
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "spritelab2_aiAnswer"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_joinText",
+              "inputs": {
+                "A": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Answer like a pirate: "
+                    }
+                  }
+                },
+                "B": {
+                  "block": {
+                    "type": "spritelab2_enteredText"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_enteredText"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_aiAnswer"
+            }
+          ]
         }
       ]
     },

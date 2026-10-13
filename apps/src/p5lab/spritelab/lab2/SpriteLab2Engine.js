@@ -13,6 +13,7 @@ import sparkUrl from '@cdo/static/spritelab_lab2/particles/spark.png';
 
 import SpriteLab from '../SpriteLab';
 
+import {askAi, NO_ANSWER} from './ai/askAi';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   createBurst,
@@ -64,6 +65,10 @@ import {
   stepWeather,
 } from './weather';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
+
+// The text field's and the AI's handlers, as library events.
+const TEXT_ENTERED_EVENT = 'textEntered';
+const AI_ANSWERED_EVENT = 'aiAnswered';
 
 const NOOP = () => {};
 
@@ -177,6 +182,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // Fires with true when the running program has a "when text entered"
+    // block, so the view shows the text field over the game, and false when
+    // a run starts without one. The field's text and the AI's answers come
+    // back through enterText and the AI request below.
+    this.onTextInputWanted = null;
+    this.textInputWanted_ = false;
+    this.lastEnteredText_ = '';
+    this.lastAiAnswer_ = '';
+    this.textEnteredThisFrame_ = false;
+    this.aiAnswersReady_ = new Set();
+    this.askAiSeq_ = 0;
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
@@ -401,8 +417,74 @@ export default class SpriteLab2Engine extends SpriteLab {
    * library per (re)run is also what clears background/input events between
    * scenes.
    */
+  /** The text field over the game sent this; the next frame's "when text
+      entered" handlers run with it. */
+  enterText(text) {
+    this.lastEnteredText_ = String(text ?? '');
+    this.textEnteredThisFrame_ = true;
+  }
+
+  setTextInputWanted_(wanted) {
+    if (this.textInputWanted_ !== wanted) {
+      this.textInputWanted_ = wanted;
+      if (this.onTextInputWanted) {
+        this.onTextInputWanted(wanted);
+      }
+    }
+  }
+
+  // The text and AI blocks. Handlers are events the library runs each
+  // frame: "when text entered" fires on the frame after the field sends
+  // text, and each ask fires its own handler once, on the frame after the
+  // answer arrives. Both run on the interpreter's tick, like every event.
+  installTextAndAiCommands_(library) {
+    library.commands.whenTextEntered = callback => {
+      library.addEvent(TEXT_ENTERED_EVENT, {}, callback);
+      this.setTextInputWanted_(true);
+    };
+    library.commands.enteredText = () => this.lastEnteredText_;
+    library.commands.askAi = (text, callback) => {
+      const id = ++this.askAiSeq_;
+      library.addEvent(AI_ANSWERED_EVENT, {id}, callback);
+      askAi(String(text ?? ''))
+        .catch(() => NO_ANSWER)
+        .then(answer => {
+          // A run that ended before the answer came back has no handler.
+          if (this.library !== library) {
+            return;
+          }
+          this.lastAiAnswer_ = answer;
+          this.aiAnswersReady_.add(id);
+        });
+    };
+    library.commands.aiAnswer = () => this.lastAiAnswer_;
+    const callbackArgs = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent => {
+      if (inputEvent.type === TEXT_ENTERED_EVENT) {
+        return this.textEnteredThisFrame_ ? [{}] : [];
+      }
+      if (inputEvent.type === AI_ANSWERED_EVENT) {
+        return this.aiAnswersReady_.has(inputEvent.args.id) ? [{}] : [];
+      }
+      return callbackArgs(inputEvent);
+    };
+    const runEvents = library.runEvents.bind(library);
+    library.runEvents = () => {
+      runEvents();
+      this.textEnteredThisFrame_ = false;
+      this.aiAnswersReady_.clear();
+    };
+  }
+
   createLibrary(args) {
     const library = super.createLibrary(args);
+    this.lastEnteredText_ = '';
+    this.lastAiAnswer_ = '';
+    this.textEnteredThisFrame_ = false;
+    this.aiAnswersReady_ = new Set();
+    this.askAiSeq_ = 0;
+    this.setTextInputWanted_(false);
+    this.installTextAndAiCommands_(library);
     // Fixed for the run: the scene type is set before the run begins.
     const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike

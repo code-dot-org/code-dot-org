@@ -455,7 +455,13 @@ type ArgumentJson =
   | FieldInput
   | FieldDropdown
   | FieldNumber
-  | FieldImageJson;
+  | FieldImageJson
+  | InputJson;
+
+interface InputJson extends FieldJson {
+  type: 'input_value' | 'input_statement' | 'input_dummy';
+  check?: string | string[];
+}
 
 interface FieldImageJson extends FieldJson {
   type: 'field_image';

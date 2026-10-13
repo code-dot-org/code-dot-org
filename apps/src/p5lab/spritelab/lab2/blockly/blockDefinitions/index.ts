@@ -2,9 +2,13 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import aiAnswer from './aiAnswer';
+import askAi from './askAi';
 import burst from './burst';
+import enteredText from './enteredText';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
+import joinText from './joinText';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
 import makeSpriteAtGrid from './makeSpriteAtGrid';
@@ -17,12 +21,14 @@ import placeholder from './placeholder';
 import playMusic from './playMusic';
 import playSound from './playSound';
 import restartScene from './restartScene';
+import say from './say';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setWeather from './setWeather';
 import thePlayer from './thePlayer';
 import whenRun from './whenRun';
+import whenTextEntered from './whenTextEntered';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
 // block whose runtime half is interpreted code exports it as helperCode.
@@ -52,6 +58,12 @@ const labBlockDefinitions: {
   burst,
   thePlayer,
   placeholder,
+  whenTextEntered,
+  askAi,
+  enteredText,
+  aiAnswer,
+  joinText,
+  say,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,
