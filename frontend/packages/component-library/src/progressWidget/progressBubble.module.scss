@@ -5,8 +5,7 @@ $inactive-size: 12px;
 $active-size: 24px;
 $edge-width: 1.5px;
 
-// Per status: the fill, the edge and the ink (number, star), at rest and
-// while hovered or pressed. The circle and the diamond both draw from these.
+// Fill, edge and ink per status, at rest and on hover; circles and diamonds share them.
 $statuses: (
   notStarted: (
     fill: var(--background-neutral-primary),
@@ -40,8 +39,7 @@ $statuses: (
     hover-edge: var(--background-success-strong),
     hover-ink: var(--text-neutral-white-fixed),
   ),
-  // The yellow does not follow the theme, so neither does its ink; white on
-  // the hover yellow would be under 3:1.
+  // Fixed yellow takes fixed black ink; white on the hover yellow is under 3:1.
   keepWorking: (
       fill: var(--background-warning-primary),
       edge: var(--background-warning-primary),
@@ -148,7 +146,7 @@ $statuses: (
     border-radius: 4px;
   }
 
-  // The ring follows the diamond.
+  // On ::before so the ring follows the diamond.
   &:focus-visible {
     outline: none;
 

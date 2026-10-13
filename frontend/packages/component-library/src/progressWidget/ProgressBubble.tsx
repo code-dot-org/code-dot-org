@@ -30,12 +30,9 @@ export interface ProgressBubbleProps {
   disabled?: boolean;
   /** Renders the bubble as a link. */
   href?: string;
-  /** Renders the bubble as a button, or runs before a link navigates.  A
-   *  handler that calls preventDefault on a link should first let modified
-   *  clicks (open in new tab) through. */
+  /** Renders a button, or runs before a link navigates; let modified clicks through. */
   onClick?: (e: MouseEvent<HTMLElement>) => void;
-  /** Screen reader name.  Star and color are visual only, so it carries
-   *  them, e.g. "Level 6, assessment, completed". */
+  /** Must carry what color and the star show, e.g. "Level 6, assessment, completed". */
   ariaLabel: string;
   /** Read after the name unless it repeats it. */
   tooltip?: ReactNode;
@@ -102,8 +99,6 @@ const ProgressBubble: FunctionComponent<ProgressBubbleProps> = ({
     'aria-current': isActive ? ('step' as const) : undefined,
   };
 
-  // A disabled bubble keeps the role it would have enabled, and is focusable
-  // only when there is a tooltip to reach.
   let bubble;
   if (disabled && href) {
     bubble = (

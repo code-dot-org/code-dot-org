@@ -31,8 +31,7 @@ export type ProgressWidgetProps = {
   lessonMenuExpanded?: boolean;
   /** Names the bubble row for screen readers, e.g. "Lesson progress". */
   bubblesLabel: string;
-  /** The bubbles, as direct children.  Below 992px only the one with
-   *  aria-current stays visible. */
+  /** Bubbles as direct children; below 992px only the aria-current one shows. */
   children: ReactNode;
   /** The Continue button. */
   action?: ReactNode;
@@ -49,8 +48,7 @@ const saveIconName: Record<
   offline: 'cloud-slash',
 };
 
-// Autosave flips between saving and saved all the time; only the states that
-// need the student's attention are announced.
+// Saving and saved repeat with every autosave; announce only what needs action.
 const announcedSaveStatuses: ProgressWidgetSaveStatus[] = ['failed', 'offline'];
 
 /**
