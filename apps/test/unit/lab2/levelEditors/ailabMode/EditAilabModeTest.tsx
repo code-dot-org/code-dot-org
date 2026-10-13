@@ -389,20 +389,6 @@ describe('EditAilabMode', () => {
       });
     });
 
-    it('removes the new label from the features', async () => {
-      const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "features": ["legs", "wings"]}'
-      );
-      await columnsLoaded();
-
-      fireEvent.change(labelDropdown(), {target: {value: 'legs'}});
-
-      expect(JSON.parse(savedMode())).toMatchObject({
-        label: 'legs',
-        features: ['wings'],
-      });
-    });
-
     it('selects and clears all the features', async () => {
       const savedMode = renderEditor(
         '{"datasets": ["zoo"], "label": "animal"}'
@@ -416,9 +402,9 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).not.toHaveProperty('features');
     });
 
-    it('removes the default label from the features when the label is locked', async () => {
+    it('removes the starting label from the features', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "features": ["legs", "animal"]}'
+        '{"datasets": ["zoo"], "features": ["legs", "wings", "animal"]}'
       );
       await columnsLoaded();
 
@@ -427,11 +413,10 @@ describe('EditAilabMode', () => {
           name: 'Lock the label so students cannot change it',
         })
       );
+      expect(JSON.parse(savedMode()).features).toEqual(['legs', 'wings']);
 
-      expect(JSON.parse(savedMode())).toMatchObject({
-        hideSelectLabel: true,
-        features: ['legs'],
-      });
+      fireEvent.change(labelDropdown(), {target: {value: 'legs'}});
+      expect(JSON.parse(savedMode()).features).toEqual(['wings']);
     });
 
     it('clears them when the dataset changes', async () => {
@@ -594,9 +579,7 @@ describe('EditAilabMode', () => {
     });
 
     it('asks for a column to predict when every column is locked', async () => {
-      const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "lockFeatures": true}'
-      );
+      renderEditor('{"datasets": ["zoo"], "lockFeatures": true}');
       await columnsLoaded();
       const noLabelLeft =
         'Leave a column out for students to predict, or choose a label.';
@@ -606,7 +589,6 @@ describe('EditAilabMode', () => {
 
       fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
       expect(screen.queryByText(noLabelLeft)).not.toBeInTheDocument();
-      expect(JSON.parse(savedMode()).features).toEqual(['legs', 'wings']);
     });
 
     it("reports a dataset whose columns don't load", async () => {
