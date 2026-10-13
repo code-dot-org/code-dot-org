@@ -684,7 +684,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         string,
         string | number | Record<string, string | number>
       > = {
-        borderRadius: 'var(--shape-sm)',
+        borderRadius: 'var(--shape-sm, 0.375rem)',
         boxSizing: 'border-box',
         margin: 0,
         border: '1px solid transparent',
@@ -709,9 +709,9 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           outline: 'none',
         },
         '&:focus-visible, a&:focus-visible': {
-          outline: 'none',
-          boxShadow:
-            '0 0 0 2px var(--background-neutral-primary), 0 0 0 4px var(--border-focused-primary)',
+          outline: '2px solid var(--border-focused-primary)',
+          outlineOffset: '2px',
+          boxShadow: 'none',
           textDecoration: 'none',
         },
         '&:active, a&:active': {
