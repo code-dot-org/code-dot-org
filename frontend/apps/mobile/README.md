@@ -4,13 +4,13 @@ The CodeAI Android app for Amazon Fire tablets (Amazon Kids+), packaged with
 [Capacitor](https://capacitorjs.com). The React application lives in
 [Studio](../studio), which builds the shared browser PWA and mobile launcher.
 This workspace owns the Capacitor configuration and Android project;
-Capacitor copies `../studio/dist/` into `android/`.
+Capacitor copies `../studio/dist-pwa/` into `android/`.
 
-The app is the landing page only, and everything runs in one WebView: the
+The app starts at Studio's `/launcher` route, and everything runs in one WebView: the
 landing page, every studio.code.org page, `window.open` and `target=_blank`.
 Pages therefore share one browser session, so sessionStorage, session cookies
 and localStorage carry across every page load. It lists the Amazon Fire Kids
-Content Library, the 22 curricula in `../studio/src/curricula.ts`, as
+Content Library, the 22 curricula in `../studio/src/modules/launcher/curricula.ts`, as
 cards laid out like the course catalog's (`CurriculumCatalogCard` in `apps/`),
 with the catalog's images, descriptions, topics, grades and durations; tapping
 one navigates the app's WebView to that curriculum's studio.code.org URL.
@@ -131,8 +131,6 @@ about 0.3MB. `../studio/vite.config.ts` drops the rest of the brand fonts and
 the per-language fonts `@code-dot-org/fonts` would otherwise add, about 21MB.
 Since they are local, text waits for them rather than being drawn in a
 fallback font and redrawn, and the landing page preloads the weights it uses.
-It also waits, for at most a second, for the Font Awesome icon font, so its
-text and icons appear together.
 Site pages use the site's own fonts, which the WebView caches.
 
 The app appends `CodeAIApp/<version> (android; amazon-kids)` to the WebView's
@@ -145,7 +143,7 @@ Building needs JDK 21 and the Android SDK (platform 36); Gradle fetches the
 Kotlin compiler. From this directory:
 
 ```bash
-yarn android:sync     # build dist (landing page and zoom controls) and copy it into android/
+yarn android:sync     # build Studio PWA and zoom controls, then copy them into android/
 cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.1.0-debug.apk
 yarn android:open     # or open the project in Android Studio
 ```

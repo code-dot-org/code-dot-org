@@ -6,8 +6,8 @@
   "scripts": {
     "android:open": "cap open android",
     "android:sync": "yarn build && cap sync android",
-    "build": "yarn run -T turbo build --filter @code-dot-org/studio",
-    "dev": "yarn workspace @code-dot-org/studio dev",
+    "build": "yarn run -T turbo build:pwa --filter @code-dot-org/studio",
+    "dev": "yarn workspace @code-dot-org/studio dev --mode pwa",
     "lint": "yarn typecheck",
     "lint:fix": "prettier --write .",
     "prettier": "prettier --check .",

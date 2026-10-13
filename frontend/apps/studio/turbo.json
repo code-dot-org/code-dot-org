@@ -1,0 +1,12 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build:pwa": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist-pwa/**"]
+    },
+    "release:dryrun": {
+      "dependsOn": ["build", "build:pwa", "lint", "test"]
+    }
+  }
+}

@@ -3,8 +3,9 @@ import type {CapacitorConfig} from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'org.codeai',
   appName: 'CodeAI',
-  webDir: '../studio/dist',
+  webDir: '../studio/dist-pwa',
   server: {
+    appStartPath: '/launcher',
     // Hosts the app's WebView may navigate to. Keep in step with
     // ALLOWED_ORIGINS in MainActivity.kt, which ignores links to any other
     // host.

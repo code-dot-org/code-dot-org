@@ -2,7 +2,8 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "outputs": []
+      "outputs": [],
+      "dependsOn": ["@code-dot-org/studio#build:pwa"]
     }
   }
 }

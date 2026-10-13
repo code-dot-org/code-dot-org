@@ -116,7 +116,7 @@ class MainActivity : BridgeActivity() {
                 }
                 if (SitePolicy.isCertificatePage(url)) {
                     pendingLandingUrl =
-                        "${bridge.localUrl}/$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
+                        "${bridge.appUrl}$FINISHED_FRAGMENT${SitePolicy.finishedCourse(url)}"
                     view.post { goHome() }
                     return true
                 }
@@ -388,7 +388,7 @@ class MainActivity : BridgeActivity() {
 
     companion object {
         // The landing page opens its congratulations at #finished=<course>,
-        // with the course empty when unknown. Keep in step with App.tsx.
+        // with the course empty when unknown. Keep in step with Studio's launcher route.
         private const val FINISHED_FRAGMENT = "#finished="
 
         // The last studio.code.org page shown, so a fresh start resumes there.

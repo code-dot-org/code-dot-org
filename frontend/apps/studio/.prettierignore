@@ -1,1 +1,2 @@
-/dist
+src/routeTree.gen.ts
+.vite/

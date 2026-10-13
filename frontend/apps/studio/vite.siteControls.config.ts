@@ -4,7 +4,7 @@ import path from 'node:path';
 
 // Builds the header controls the Android app puts in studio.code.org pages
 // (entrypoints/siteControls.tsx) as one script and one stylesheet, at fixed
-// names the app's page script loads: dist/site-controls.js and .css. Run
+// names the app's page script loads: dist-pwa/site-controls.js and .css. Run
 // after vite.config.ts, which empties dist.
 export default defineConfig({
   publicDir: false,
@@ -13,7 +13,7 @@ export default defineConfig({
     'process.env.NODE_ENV': JSON.stringify('production'),
   },
   build: {
-    outDir: path.resolve(__dirname, 'dist'),
+    outDir: path.resolve(__dirname, 'dist-pwa'),
     emptyOutDir: false,
     lib: {
       entry: path.resolve(__dirname, 'entrypoints/siteControls.tsx'),

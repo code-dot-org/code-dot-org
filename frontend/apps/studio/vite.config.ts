@@ -1,6 +1,8 @@
 import react from '@vitejs/plugin-react';
-import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
+import {tanstackRouter} from '@tanstack/router-plugin/vite';
 import path from 'node:path';
+import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
+import ViteRails from 'vite-plugin-rails';
 import {VitePWA} from 'vite-plugin-pwa';
 
 const LOCALE_FONTS = /^@code-dot-org\/fonts\/locales\//;
@@ -60,49 +62,57 @@ function englishFontsOnly(): Plugin {
   };
 }
 
-// Relative URLs let the same assets run on a web host and inside Capacitor.
-export default defineConfig({
-  base: './',
-  build: {
-    outDir: path.resolve(__dirname, 'dist'),
-    emptyOutDir: true,
-  },
-  server: {
-    fs: {
-      allow: [searchForWorkspaceRoot(process.cwd())],
+export default defineConfig(({mode}) => {
+  const isPwa = mode === 'pwa';
+
+  return {
+    ...(isPwa && {base: './'}),
+    build: {
+      outDir: isPwa ? 'dist-pwa' : 'dist',
+      ...(isPwa && {emptyOutDir: true, sourcemap: false, target: 'chrome86'}),
     },
-  },
-  resolve: {
-    dedupe: ['@mui/material', '@emotion/react', '@emotion/styled'],
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+    define: {global: 'globalThis'},
+    server: {
+      allowedHosts: ['localhost-studio.code.org'],
+      fs: {allow: [searchForWorkspaceRoot(process.cwd())]},
     },
-  },
-  plugins: [
-    englishFontsOnly(),
-    react(),
-    VitePWA({
-      injectRegister: false,
-      registerType: 'autoUpdate',
-      workbox: {
-        clientsClaim: true,
-        skipWaiting: true,
-        globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
-      },
-      manifest: {
-        name: 'CodeAI',
-        short_name: 'CodeAI',
-        description: 'Choose a coding and AI activity.',
-        start_url: './',
-        scope: './',
-        display: 'standalone',
-        background_color: '#FFFFFF',
-        theme_color: '#4C42CF',
-        icons: [
-          {src: 'pwa-192.png', sizes: '192x192', type: 'image/png'},
-          {src: 'pwa-512.png', sizes: '512x512', type: 'image/png'},
-        ],
-      },
-    }),
-  ],
+    resolve: {
+      dedupe: ['@mui/material', '@emotion/react', '@emotion/styled'],
+      alias: {'@': path.resolve(__dirname, './src')},
+    },
+    plugins: [
+      ...(isPwa ? [englishFontsOnly()] : [ViteRails()]),
+      tanstackRouter({
+        target: 'react',
+        autoCodeSplitting: true,
+        routeFileIgnorePattern: '(__tests__|shouldHideFooter)',
+      }),
+      react(),
+      VitePWA({
+        disable: !isPwa,
+        injectRegister: false,
+        registerType: 'autoUpdate',
+        workbox: {
+          clientsClaim: true,
+          skipWaiting: true,
+          maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+          globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
+        },
+        manifest: {
+          name: 'CodeAI',
+          short_name: 'CodeAI',
+          description: 'Choose a coding and AI activity.',
+          start_url: './launcher',
+          scope: './',
+          display: 'standalone',
+          background_color: '#FFFFFF',
+          theme_color: '#4C42CF',
+          icons: [
+            {src: 'pwa-192.png', sizes: '192x192', type: 'image/png'},
+            {src: 'pwa-512.png', sizes: '512x512', type: 'image/png'},
+          ],
+        },
+      }),
+    ],
+  };
 });

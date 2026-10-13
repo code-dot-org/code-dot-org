@@ -9,7 +9,7 @@ import {
   resolveBrand,
 } from '@code-dot-org/component-library/themes';
 
-import SiteControls, {type PageZoom} from '@/SiteControls';
+import SiteControls, {type PageZoom} from '@/modules/launcher/SiteControls';
 
 // Entry for the zoom controls debug builds of the Android app show in the
 // header of studio.code.org pages (vite.siteControls.config.ts). The app's
