@@ -7,7 +7,11 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
+  label?: string;
+  features?: string[];
+  // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
+  lockFeatures?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
