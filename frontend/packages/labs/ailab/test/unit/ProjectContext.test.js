@@ -7,8 +7,7 @@ import {ProjectProvider, useProject} from '../../src/ProjectContext';
 import rootReducer, {
   resetState,
   setImportedData,
-  setImportedMetadata,
-  setMode,
+  setPresetColumns,
 } from '../../src/redux';
 import {initialProject} from '../../src/types';
 
@@ -216,28 +215,35 @@ describe('ProjectContext column choices', () => {
     expect(project().selectedFeatures).toEqual(['b']);
   });
 
-  // The rule used to live in two places: the setImportedMetadata reducer and
-  // jsonReaderWrapper. Both ran outside React.
-  test('a level that hides the label picker takes the dataset default', () => {
+  /*
+    loadDataset works out what a level's mode fixes once the dataset is in,
+    and publishes it; applying it is this context's job. loadDataset.test.js
+    covers the working out.
+  */
+  test('takes the columns a dataset load fixed', () => {
     const store = imported();
-    store.dispatch(setMode({hideSelectLabel: true}));
     const {project} = renderContext(undefined, store);
 
     act(() => {
-      store.dispatch(setImportedMetadata({card: {}, defaultLabelColumn: 'b'}));
+      store.dispatch(
+        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']}),
+      );
     });
 
     expect(project().labelColumn).toBe('b');
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
   });
 
-  test('a level that shows the picker leaves the label unchosen', () => {
+  test('leaves the columns alone when a load fixes neither', () => {
     const store = imported();
-    const {project} = renderContext(undefined, store);
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().setSelectedFeatures(['a']));
 
     act(() => {
-      store.dispatch(setImportedMetadata({card: {}, defaultLabelColumn: 'b'}));
+      store.dispatch(setPresetColumns({}));
     });
 
     expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual(['a']);
   });
 });

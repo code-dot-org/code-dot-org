@@ -17,6 +17,7 @@ import type {
   DataRow,
   Metadata,
   Mode,
+  PresetColumns,
   TrainedModelDetailsSave,
   SaveResponseData,
   PrevNextButtons,
@@ -67,6 +68,9 @@ export interface RootState {
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
+  // Set once a dataset load has worked out what the mode fixes, for
+  // ProjectContext to apply. A plain signal, not lab state.
+  presetColumns: PresetColumns | undefined;
   resetCount: number;
   resetKeepsHistoricResults: boolean;
   mode?: Mode;
@@ -140,6 +144,7 @@ export const initialState: RootState = {
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
+  presetColumns: undefined,
   resetCount: 0,
   resetKeepsHistoricResults: false,
 };
@@ -183,6 +188,9 @@ const ailabSlice = createSlice({
     },
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
+    },
+    setPresetColumns(state, action: PayloadAction<PresetColumns>) {
+      state.presetColumns = action.payload;
     },
     setRemovedRowsCount(state, action: PayloadAction<number>) {
       state.removedRowsCount = action.payload;
@@ -408,6 +416,7 @@ export const {
   setInvalidData,
   setImportedData,
   setImportedMetadata,
+  setPresetColumns,
   setRemovedRowsCount,
   setColumnsByDataType,
   setFeatureNumberKey,

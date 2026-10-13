@@ -58,9 +58,7 @@ export const ProjectProvider = ({
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const data = useAppSelector(state => state.data);
-  const presetLabelColumn = useAppSelector(state =>
-    state.mode?.hideSelectLabel ? state.metadata.defaultLabelColumn : undefined,
-  );
+  const presetColumns = useAppSelector(state => state.presetColumns);
 
   useResetSignal(
     useCallback((keepsHistoricResults: boolean) => {
@@ -83,12 +81,6 @@ export const ProjectProvider = ({
       ),
     }));
   }, []);
-
-  useEffect(() => {
-    if (presetLabelColumn) {
-      setLabelColumn(presetLabelColumn);
-    }
-  }, [presetLabelColumn, setLabelColumn]);
 
   const addSelectedFeature = useCallback(
     (feature: string) => {
@@ -125,6 +117,20 @@ export const ProjectProvider = ({
     },
     [data],
   );
+
+  // What a level's mode fixes, once loadDataset has checked it against the
+  // dataset. Features first, so setting the label drops it from them.
+  useEffect(() => {
+    if (!presetColumns) {
+      return;
+    }
+    if (presetColumns.selectedFeatures) {
+      setSelectedFeatures(presetColumns.selectedFeatures);
+    }
+    if (presetColumns.labelColumn !== undefined) {
+      setLabelColumn(presetColumns.labelColumn);
+    }
+  }, [presetColumns, setSelectedFeatures, setLabelColumn]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
