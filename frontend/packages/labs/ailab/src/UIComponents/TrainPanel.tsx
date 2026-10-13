@@ -34,6 +34,7 @@ const TrainPanel = () => {
   const labelColumn = useAppSelector(state => state.labelColumn);
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
+  const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const canTrain = useAppSelector(readyToTrain);
   const {project} = useProject();
@@ -45,9 +46,12 @@ const TrainPanel = () => {
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
 
+  const labelColumns = featuresLocked
+    ? selectableColumns.filter(column => !selectedFeatures.includes(column))
+    : selectableColumns;
   const labelItems = [
     {value: '', text: 'Choose one', disabled: true},
-    ...selectableColumns.map(column => ({
+    ...labelColumns.map(column => ({
       value: column,
       text: columnName(column),
     })),
@@ -135,6 +139,7 @@ const TrainPanel = () => {
                   clearAllText="Clear"
                   onClearAll={onRemoveAllFeatures}
                   onSelectAll={onSelectAllFeatures}
+                  disabled={featuresLocked}
                 />
               </DropdownProviderWrapper>
             </div>
