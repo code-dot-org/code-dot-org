@@ -25,7 +25,8 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
       ref={nameFieldRef}
       name="questionName"
       label="Internal name"
-      size="m"
+      size="s"
+      color="gray"
       className={styles.fullWidthField}
       value={draft.questionName}
       onChange={e => onChange({...draft, questionName: e.target.value})}
@@ -34,7 +35,8 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
     <TextField
       name="questionTitle"
       label="Question title"
-      size="m"
+      size="s"
+      color="gray"
       className={styles.fullWidthField}
       value={draft.questionTitle}
       onChange={e => onChange({...draft, questionTitle: e.target.value})}

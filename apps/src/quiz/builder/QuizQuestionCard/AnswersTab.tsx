@@ -75,7 +75,8 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
               <TextField
                 name={`choice-${choice.id}`}
                 aria-label="Choice text"
-                size="m"
+                size="s"
+                color="gray"
                 className={classNames(styles.fullWidthField, styles.optionText)}
                 value={choice.text}
                 onChange={e => updateChoiceText(choice.id, e.target.value)}

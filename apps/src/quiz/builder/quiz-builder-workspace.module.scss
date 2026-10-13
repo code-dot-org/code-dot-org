@@ -67,6 +67,11 @@
 
 .addPageButton {
   align-self: flex-start;
+
+  // .pageLabel sets its own color, so it misses the button's disabled color.
+  &:disabled .pageLabel {
+    color: var(--text-neutral-disabled);
+  }
 }
 
 .addQuestionRow {

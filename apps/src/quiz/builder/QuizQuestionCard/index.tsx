@@ -124,6 +124,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
         defaultSelectedTabValue="question"
         tabsContainerClassName={styles.tabsRow}
         tabPanelsContainerClassName={styles.tabPanels}
+        size="s"
         tabs={[
           {
             value: 'question',
