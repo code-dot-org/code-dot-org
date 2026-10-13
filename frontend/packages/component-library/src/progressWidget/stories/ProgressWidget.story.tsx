@@ -194,6 +194,7 @@ export const BubbleMatrix: StoryObj<typeof ProgressBubble> = {
                   disabled
                   ariaLabel={`${levelType} locked`}
                   tooltip="This level is locked"
+                  onClick={fn()}
                 />
               </td>
               <td>

@@ -19,6 +19,9 @@ Rules for callers:
   none is, it shows them all.
 - `ariaLabel` must carry what the color and star show, e.g. "Level 4,
   assessment, completed": they are not announced.
+- Give a disabled (locked) bubble its `href` or `onClick` anyway. It then
+  renders as a disabled link or button, which contrast rules exempt; with
+  neither it is a plain image, and its white-on-grey number fails 4.5:1.
 - A tooltip that repeats `ariaLabel` is not read twice; one that adds to it
   is read as a description.
 - An `onClick` that calls `preventDefault` on a link bubble should first let
