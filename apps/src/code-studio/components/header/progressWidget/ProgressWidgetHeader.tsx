@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import ProgressWidget, {
   ProgressBubble,
-  ProgressWidgetSaveStatus,
+  ProgressWidgetSaveProps,
 } from '@code-dot-org/component-library/progressWidget';
 import {Button, Tooltip} from '@mui/material';
 import {isEqual} from 'lodash';
@@ -60,10 +60,7 @@ interface ProgressWidgetHeaderProps {
   lessonName: string;
 }
 
-function useSaveStatus(): {
-  saveStatus: ProgressWidgetSaveStatus;
-  saveStatusLabel?: string;
-} {
+function useSaveStatus(): ProgressWidgetSaveProps {
   const online = useOnline();
   const {showProjectUpdatedAt, projectUpdatedStatus, projectUpdatedAt} =
     useAppSelector(state => (state as unknown as HeaderState).project);
@@ -128,7 +125,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
   const navigation = useAppSelector(
     (state: RootState) => state.header.headerNavigation
   );
-  const {saveStatus, saveStatusLabel} = useSaveStatus();
+  const saveProps = useSaveStatus();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const widgetRef = useRef<HTMLDivElement>(null);
@@ -196,6 +193,10 @@ const ProgressWidgetHeader: React.FunctionComponent<
           onClick={
             !active && navigatesInPage
               ? (e: MouseEvent<HTMLElement>) => {
+                  // Modified clicks open the level's URL in a new tab.
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) {
+                    return;
+                  }
                   e.preventDefault();
                   dispatch(navigateToLevelId(level.id));
                 }
@@ -235,8 +236,8 @@ const ProgressWidgetHeader: React.FunctionComponent<
           lessonLabel={lessonName}
           onLessonClick={toggleMenu}
           lessonMenuExpanded={menuOpen}
-          saveStatus={saveStatus}
-          saveStatusLabel={saveStatusLabel}
+          bubblesLabel={commonI18n.progressWidgetLessonProgress()}
+          {...saveProps}
           action={action}
         >
           {bubbles}
