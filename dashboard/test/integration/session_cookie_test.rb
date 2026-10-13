@@ -61,11 +61,14 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
   end
 
   describe 'request#statsig_stable_id' do
-    subject(:request_statsig_stable_id) {request.statsig_stable_id}
+    it 'is not assigned by page requests' do
+      get '/'
+      _(session[:statsig_stable_id]).must_be_nil
+    end
 
     it 'persists through sign-in and rotates after sign-out' do
-      get '/'
-      initial_stable_id = request_statsig_stable_id
+      get api_statsig_stable_id_path
+      initial_stable_id = body
       _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
       _(cookies[:statsig_stable_id]).must_be_nil
       _(session[:statsig_stable_id]).must_equal initial_stable_id
@@ -75,8 +78,8 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
       sign_in create(:user)
 
-      get '/'
-      _(request.statsig_stable_id).must_equal initial_stable_id
+      get api_statsig_stable_id_path
+      _(body).must_equal initial_stable_id
 
       get '/v3/channels'
       _(request.statsig_stable_id).must_equal initial_stable_id
@@ -84,8 +87,8 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       get '/users/sign_out'
       _(cookies[:statsig_stable_id]).must_be_empty
 
-      get '/'
-      rotated_stable_id = request.statsig_stable_id
+      get api_statsig_stable_id_path
+      rotated_stable_id = body
       _(rotated_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
       _(rotated_stable_id).wont_equal initial_stable_id
       _(cookies[:statsig_stable_id]).must_be_empty
@@ -95,36 +98,47 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     context 'with Statsig cookie' do
       let(:cookies_statsig_stable_id) {SecureRandom.uuid}
 
+      def session_cookie_written?
+        response.headers['Set-Cookie'].to_s.include?('_learn_session_test=')
+      end
+
       before do
         cookies[:statsig_stable_id] = cookies_statsig_stable_id
       end
 
-      it 'stores Statsig cookie value in session' do
-        get '/'
-        _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-        _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
+      it 'does not create session' do
+        get api_statsig_stable_id_path
+
+        _(body).must_equal cookies_statsig_stable_id
+        _(session[:statsig_stable_id]).must_be_nil
+        _(session_cookie_written?).must_equal false
+        _(cookies['_learn_session_test']).must_be_nil
       end
 
-      it 'restores Statsig cookie value after session reset' do
+      it 'keeps Statsig cookie value after session reset' do
         get '/reset_session'
-        get '/'
+        get api_statsig_stable_id_path
 
-        _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-        _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
+        _(body).must_equal cookies_statsig_stable_id
+        _(session[:statsig_stable_id]).must_be_nil
       end
 
       context 'with conflicting session ID' do
-        let(:previous_session_value) {SecureRandom.uuid}
-
         before do
-          get '/'
-          session[:statsig_stable_id] = previous_session_value
+          cookies.delete('statsig_stable_id')
+          get api_statsig_stable_id_path
+          _(session_cookie_written?).must_equal true
+          _(body).wont_equal cookies_statsig_stable_id
+          @session_stable_id = body
+          cookies[:statsig_stable_id] = cookies_statsig_stable_id
         end
 
-        it 'replaces session ID with Statsig cookie value' do
-          get '/'
-          _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-          _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
+        it 'prefers Statsig cookie value without rewriting session' do
+          get api_statsig_stable_id_path, xhr: true
+
+          _(body).must_equal cookies_statsig_stable_id
+          _(session[:statsig_stable_id]).must_equal @session_stable_id
+          _(session_cookie_written?).must_equal false
         end
       end
     end
