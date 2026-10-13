@@ -105,8 +105,8 @@ type LoadedPathwayAppProps = PathwayAppProps &
 const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   pathway,
   progressKey,
+  progress,
   statusMap,
-  stepContextMap,
   initialView,
   initialCheckpointId,
   markStarted,
@@ -149,11 +149,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         pathway,
         checkpoint: playing,
         statusMap,
-        stepContextMap,
+        stepContextMap: progress.stepContext,
         updateStepContext,
         aiContext,
       },
-    [pathway, playing, statusMap, stepContextMap, updateStepContext, aiContext]
+    [pathway, playing, statusMap, progress, updateStepContext, aiContext]
   );
 
   if (pathwayContext) {

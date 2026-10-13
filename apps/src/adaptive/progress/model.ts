@@ -24,17 +24,13 @@ export interface Answer {
 /** Submitted answers per question, oldest first; the last is current. */
 export type StepAnswers = {[questionId: number]: Answer[]};
 
-/** Content generated for a step, keyed by generateInputsHash. */
-export interface GeneratedContent {
-  instructions: string;
-  inputsHash: string;
-  /** The Langfuse trace it was generated under. */
-  traceId?: string;
-}
-
 /** What a step has accumulated for a student, by concern. */
 export interface StepContext {
-  generated?: GeneratedContent;
+  /**
+   * Any content that was dynamically generated for this step, keyed by
+   * generateInputsHash. traceId is the Langfuse trace it was generated under.
+   */
+  generated?: {instructions: string; inputsHash: string; traceId?: string};
   answers?: StepAnswers;
 }
 

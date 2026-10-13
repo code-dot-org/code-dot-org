@@ -15,10 +15,7 @@ export interface PathwayContextValue {
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
   stepContextMap: {[stepId: string]: StepContext};
-  updateStepContext: (
-    stepId: string,
-    patch: Pick<StepContext, 'generated'>
-  ) => void;
+  updateStepContext: (stepId: string, patch: StepContext) => void;
   /** What the shell's own AI calls present for an access token. */
   aiContext: AichatContext;
 }

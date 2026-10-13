@@ -9,7 +9,6 @@ import {
   Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
-  GeneratedContent,
   Progress,
   StepContext,
   getStatusMap,
@@ -71,30 +70,22 @@ export function useProgress(
     );
   }, []);
 
-  // Generated instructions for the step.
-  const [generated, setGenerated] = useState<{
-    [stepId: string]: GeneratedContent;
-  }>({});
+  /** Merges into a step's context, so one concern's write keeps the others. */
+  const updateStepContext = useCallback((id: string, patch: StepContext) => {
+    setProgress(
+      p =>
+        p && {
+          ...p,
+          stepContext: {
+            ...p.stepContext,
+            [id]: {...p.stepContext[id], ...patch},
+          },
+        }
+    );
+  }, []);
 
-  const updateStepContext = useCallback(
-    (id: string, patch: Pick<StepContext, 'generated'>) => {
-      const content = patch.generated;
-      if (content) setGenerated(g => ({...g, [id]: content}));
-    },
-    []
-  );
-
-  const stepContextMap = useMemo(() => {
-    const map: {[stepId: string]: StepContext} = {};
-    for (const [id, context] of Object.entries(progress?.stepContext ?? {})) {
-      map[id] = {answers: context.answers};
-    }
-    for (const [id, content] of Object.entries(generated)) {
-      map[id] = {...map[id], generated: content};
-    }
-    return map;
-  }, [progress, generated]);
-
+  // Not a call to updateStepContext: the patch must read the latest answers,
+  // or two saves in one tick would drop the first.
   const saveAnswers = useCallback(
     (stepId: string, questionId: number, answers: Answer[]) => {
       setProgress(p => {
@@ -119,7 +110,6 @@ export function useProgress(
     /** Undefined until the stored progress has loaded. */
     progress,
     statusMap,
-    stepContextMap,
     markStarted,
     markComplete,
     updateStepContext,
