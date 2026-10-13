@@ -127,7 +127,7 @@ export const ProjectProvider = ({
   /*
     Handle the preset columns for the project. A locked column always
     wins, since the student has no way to change it. An unlocked one will
-    never replaces a choice already in the project.
+    never replace a choice already in the project.
   */
   useEffect(() => {
     if (!presetColumns) {
