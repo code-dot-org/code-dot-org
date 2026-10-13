@@ -70,8 +70,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   // A save can fork the question into a new id (see
   // useQuizBuilderQuestions#saveQuestion) - resync the draft whenever the
   // identity of the question this card is editing changes.
-  // Picking a type in the create dropdown disables or unmounts it, which
-  // drops focus; hand it to the new question's first field.
+  // Picking a type in the create dropdown disables or unmounts it, so
+  // focus moves to new question's first field.
   useEffect(() => {
     if (isPendingQuestionId(question.id) && isExpanded) {
       nameFieldRef.current?.focus();

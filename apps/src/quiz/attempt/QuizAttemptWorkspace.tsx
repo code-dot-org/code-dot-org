@@ -298,7 +298,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     question: QuizQuestionSummary,
     indexOnPage: number
   ) => {
-    // Without a title card, the page's first question takes focus on a page change.
+    // With no title card, focus moves to first question's heading on a page change.
     const headingRef =
       !hasTitleCard && indexOnPage === 0 ? pageHeadingRef : undefined;
     const questionLabel =
