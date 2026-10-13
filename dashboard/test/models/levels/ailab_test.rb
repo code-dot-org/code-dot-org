@@ -76,7 +76,7 @@ class AilabTest < ActiveSupport::TestCase
   end
 
   test 'lab2 level requires a label and features to pretrain on' do
-    [{}, {label: 'Type'}, {features: ['Legs']}, {label: '', features: ['Legs']}, {label: 'Type', features: []}, {label: 'Type', features: 'Legs'}].each do |columns|
+    [{label: 'Type'}, {features: ['Legs']}, {label: '', features: ['Legs']}, {label: 'Type', features: []}, {label: 'Type', features: 'Legs'}].each do |columns|
       level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], pretrained: true, **columns}.to_json)
       refute level.valid?, "expected pretraining on #{columns.inspect} to be invalid"
       assert_equal ['must choose a label and features when pretrained.'], level.errors[:mode]

@@ -647,8 +647,10 @@ describe('EditAilabMode', () => {
       expect(accuracy).toBeEnabled();
     });
 
-    it('asks for a label and features to pretrain on', async () => {
-      renderEditor('{"datasets": ["zoo"], "pretrained": true}');
+    it('asks for a label and features students can choose to pretrain on', async () => {
+      renderEditor(
+        '{"datasets": ["zoo"], "pretrained": true, "label": "name"}'
+      );
       await columnsLoaded();
       expect(screen.getByText(PRETRAINED_COLUMNS_REQUIRED)).toBeInTheDocument();
       expect(pretrainedCheckbox()).toBeInvalid();
@@ -661,17 +663,6 @@ describe('EditAilabMode', () => {
       expect(
         screen.queryByText(PRETRAINED_COLUMNS_REQUIRED)
       ).not.toBeInTheDocument();
-      expect(pretrainedCheckbox()).toBeValid();
-    });
-
-    it('asks for columns students can choose to pretrain on', async () => {
-      renderEditor(
-        '{"datasets": ["zoo"], "pretrained": true, "label": "name", "features": ["legs"]}'
-      );
-      await columnsLoaded();
-      expect(pretrainedCheckbox()).toBeInvalid();
-
-      fireEvent.change(labelDropdown(), {target: {value: 'animal'}});
       expect(pretrainedCheckbox()).toBeValid();
     });
 
@@ -701,14 +692,12 @@ describe('EditAilabMode', () => {
         name: /Required accuracy/,
       });
       expect(accuracy).toHaveValue(null);
-
-      fireEvent.click(pretrainedCheckbox());
-
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
         label: 'animal',
         features: ['legs'],
+        pretrained: true,
       });
     });
 

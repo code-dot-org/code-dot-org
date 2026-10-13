@@ -136,7 +136,6 @@ export function withoutLabelInFeatures(
   );
 }
 
-// Students cannot retrain a pretrained model, so these settings do not apply.
 export const REPLACED_BY_PRETRAINED = [
   'hideSelectLabel',
   'lockFeatures',
