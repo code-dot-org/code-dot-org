@@ -3,6 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import ProgressWidgetHeader from '@cdo/apps/code-studio/components/header/progressWidget/ProgressWidgetHeader';
 import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {
@@ -11,6 +12,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import experiments from '@cdo/apps/util/experiments';
 
 import {getStore} from '../redux';
 
@@ -21,6 +23,7 @@ import {
   showMinimalProjectHeader,
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
+  showProgressWidget as showProgressWidgetAction,
 } from './headerRedux';
 import progress from './progress';
 import {setCurrentLevelId} from './progressRedux';
@@ -105,6 +108,16 @@ header.build = function (
     currentPageNumber
   );
 
+  // The widget's Continue button stands in for the lab's, so it needs every
+  // level in the lesson to be a Lab2 level.
+  const showProgressWidget =
+    (scriptData.progressWidget ||
+      experiments.isEnabledAllowingQueryString(experiments.PROGRESS_WIDGET)) &&
+    lessonData.levels.every(level => level.uses_lab2);
+  if (showProgressWidget) {
+    getStore().dispatch(showProgressWidgetAction());
+  }
+
   // Set up a navigation handler, in case we contain levels that don't
   // require a page reload when switching between them.
   if (lessonData.levels.some(level => level.uses_lab2)) {
@@ -117,7 +130,12 @@ header.build = function (
   $(document).ready(function () {
     // A unit with simple progress has no bubbles to fit, so its header is
     // a plain flex row rather than the measured one.
-    const middle = scriptData.simpleProgress ? (
+    const middle = showProgressWidget ? (
+      <ProgressWidgetHeader
+        scriptData={scriptData}
+        lessonName={scriptNameData?.name ?? lessonData.name}
+      />
+    ) : scriptData.simpleProgress ? (
       <SimpleHeader scriptData={scriptData} scriptNameData={scriptNameData} />
     ) : (
       <HeaderMiddle

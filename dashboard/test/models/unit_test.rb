@@ -715,11 +715,29 @@ class UnitTest < ActiveSupport::TestCase
       hasUnnumberedLessons: false,
       simpleProgress: false,
       simpleProgressImage: nil,
+      progressWidget: false,
       course_name: unit_group.name,
       course_id: unit_group.id,
       unit_position: unit_group_unit.position,
     }
     assert_equal expected, unit.summarize_header(unit_group_unit: unit_group_unit)
+  end
+
+  test 'summarize_header includes progress_widget' do
+    unit = create(:script, name: 'progress-widget-unit')
+    unit.update!(progress_widget: true)
+
+    assert unit.summarize_header[:progressWidget]
+    assert unit.summarize[:progressWidget]
+  end
+
+  test 'cannot show both simple progress and the progress widget' do
+    unit = create(:script, name: 'two-progress-unit')
+    unit.simple_progress = true
+    unit.progress_widget = true
+
+    refute unit.valid?
+    assert_includes unit.errors[:base].join, 'progress widget'
   end
 
   test 'should exclude lessons if include_lessons is false' do

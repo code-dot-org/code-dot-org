@@ -9,6 +9,34 @@ import MiniView from '../progress/MiniView';
 
 import styles from './header-popup.module.scss';
 
+/** The lesson menu: every lesson in the unit with its bubbles. */
+export const HeaderPopupPanel = React.forwardRef(
+  ({scriptData, minimal, windowHeight}, ref) => (
+    <div className="header_popup" ref={ref}>
+      <div
+        className="header_popup_scrollable"
+        style={{maxHeight: windowHeight - 80}}
+      >
+        <div className="header_popup_body">
+          <div className="user-stats-block">
+            <MiniView
+              minimal={minimal}
+              courseName={scriptData?.course_name}
+              unitPosition={scriptData?.unit_position}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+);
+HeaderPopupPanel.displayName = 'HeaderPopupPanel';
+HeaderPopupPanel.propTypes = {
+  scriptData: PropTypes.object,
+  minimal: PropTypes.bool,
+  windowHeight: PropTypes.number,
+};
+
 export default class HeaderPopup extends Component {
   static propTypes = {
     scriptName: PropTypes.string,
@@ -21,6 +49,8 @@ export default class HeaderPopup extends Component {
   state = {
     open: false,
   };
+
+  popupRef = React.createRef();
 
   shouldComponentUpdate(nextProps, nextState) {
     return (
@@ -51,7 +81,7 @@ export default class HeaderPopup extends Component {
 
   handleClickDocument = event => {
     const target = event && event.target;
-    if ($(this.refs.headerPopup).find(target).length > 0) {
+    if (this.popupRef.current?.contains(target)) {
       return;
     }
 
@@ -59,9 +89,6 @@ export default class HeaderPopup extends Component {
   };
 
   render() {
-    const scriptData = this.props.scriptData;
-    const courseName = scriptData?.course_name;
-    const unitPosition = scriptData?.unit_position;
     return (
       <div>
         {!this.state.open && (
@@ -94,22 +121,12 @@ export default class HeaderPopup extends Component {
               <div className={styles.more}>{i18n.lessAllCaps()}</div>
             </button>
 
-            <div className="header_popup" ref="headerPopup">
-              <div
-                className="header_popup_scrollable"
-                style={{maxHeight: this.props.windowHeight - 80}}
-              >
-                <div className="header_popup_body">
-                  <div className="user-stats-block">
-                    <MiniView
-                      minimal={this.props.minimal}
-                      courseName={courseName}
-                      unitPosition={unitPosition}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HeaderPopupPanel
+              ref={this.popupRef}
+              scriptData={this.props.scriptData}
+              minimal={this.props.minimal}
+              windowHeight={this.props.windowHeight}
+            />
           </div>
         )}
       </div>
