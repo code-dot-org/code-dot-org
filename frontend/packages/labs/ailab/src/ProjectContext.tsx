@@ -123,6 +123,8 @@ export const ProjectProvider = ({
   );
 
   // Handle preset columns from the level once the dataset has loaded.
+  // TODO: ensure we don't override user selections with preset columns 
+  // if the user has already made choices and the preset columns can be overwritten.
   useEffect(() => {
     if (!presetColumns) {
       return;
