@@ -20,6 +20,13 @@ function viewerRoleFromLocation(): ViewerRole {
   return role === 'owner' || role === 'peer' ? role : 'teacher';
 }
 
+// Approvals the viewer has toggled, by response id, over the fixture's own.
+const approvals = new Map<number, boolean>();
+
+function isApproved(response: FixtureResponse): boolean {
+  return approvals.get(response.id) ?? response.approved;
+}
+
 // Rails' summarize omits student_feedback from list rows: absent, not null.
 function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
   return {
@@ -33,6 +40,7 @@ function toListResponse(response: FixtureResponse): GalleryChallengeResponse {
     transcript: response.transcript,
     evaluation_status: response.evaluation_status,
     is_final: response.is_final,
+    approved: isApproved(response),
     created_at: response.created_at,
     assets: response.assets,
   };
@@ -86,10 +94,28 @@ export function registerGalleryMocks(): void {
       },
     },
 
+    // PATCH /challenge_responses/:id/approve {approved}
+    {
+      method: 'patch',
+      path: '*/challenge_responses/:id/approve',
+      respond: async ({params, request}) => {
+        const response = FIXTURE_RESPONSES.find(
+          r => r.id === Number(params.id),
+        );
+        if (!response) return new Response(null, {status: 404});
+        const {approved} = (await request.json()) as {approved: boolean};
+        approvals.set(response.id, approved);
+        return {...toListResponse(response)};
+      },
+    },
+
     // GET /api/v1/scripts/:script/lessons/:position/tutor_gallery_data
     {
       path: '*/tutor_gallery_data',
-      respond: () => ({...TUTOR_GALLERY_DATA}),
+      respond: () => ({
+        ...TUTOR_GALLERY_DATA,
+        is_teacher: viewerRoleFromLocation() === 'teacher',
+      }),
     },
 
     // GET /challenge_responses?unit_id=&section_id=&sort=
@@ -115,6 +141,11 @@ export function registerGalleryMocks(): void {
         }
         if (params.has('user_id')) {
           list = list.filter(r => r.user_id === Number(params.get('user_id')));
+        }
+        // Rails also shows a student their own rows; the fixture has no
+        // signed-in user.
+        if (viewerRoleFromLocation() !== 'teacher') {
+          list = list.filter(isApproved);
         }
         const sorted = [...list].sort((a, b) =>
           a.created_at.localeCompare(b.created_at),

@@ -38,6 +38,7 @@ export interface GalleryChallengeResponse {
   transcript: string | null;
   evaluation_status: string | null;
   is_final: boolean;
+  approved: boolean;
   created_at: string;
   assets: GalleryAsset[];
 }
@@ -129,6 +130,7 @@ export const FIXTURE_RESPONSES: FixtureResponse[] = [
       'The AI looks at huge amounts of text and learns which words tend to follow each other, so it predicts the next word based on probability, not real understanding.',
     evaluation_status: 'success',
     is_final: true,
+    approved: true,
     created_at: '2026-08-18T15:04:00.000Z',
     assets: [
       {id: 701, asset_type: 'video', download_url: '/gallery/sample-video.mp4'},
@@ -157,6 +159,7 @@ export const FIXTURE_RESPONSES: FixtureResponse[] = [
     transcript: null,
     evaluation_status: 'success',
     is_final: true,
+    approved: false,
     created_at: '2026-08-17T13:30:00.000Z',
     assets: [
       {
@@ -188,6 +191,7 @@ export const FIXTURE_RESPONSES: FixtureResponse[] = [
     transcript: null,
     evaluation_status: 'queued',
     is_final: true,
+    approved: false,
     created_at: '2026-08-19T09:12:00.000Z',
     assets: [
       {
@@ -213,6 +217,7 @@ export const FIXTURE_RESPONSES: FixtureResponse[] = [
       "I said the AI doesn't actually know anything, it just guesses the most likely next word based on the huge amount of text it was trained on, like autocomplete but much bigger.",
     evaluation_status: 'success',
     is_final: true,
+    approved: true,
     created_at: '2026-08-16T10:45:00.000Z',
     assets: [
       {id: 704, asset_type: 'video', download_url: '/gallery/sample-video.mp4'},
@@ -241,6 +246,7 @@ export const FIXTURE_RESPONSES: FixtureResponse[] = [
     transcript: null,
     evaluation_status: 'success',
     is_final: true,
+    approved: false,
     created_at: '2026-08-20T11:00:00.000Z',
     assets: [
       {
@@ -273,6 +279,7 @@ export const FIXTURE_RESPONSES: FixtureResponse[] = [
       'AI predicts text by looking at probability, so more common word pairings show up more often in its answers.',
     evaluation_status: 'success',
     is_final: true,
+    approved: true,
     created_at: '2026-08-15T08:20:00.000Z',
     assets: [
       {id: 706, asset_type: 'video', download_url: '/gallery/sample-video.mp4'},
