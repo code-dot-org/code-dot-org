@@ -390,7 +390,7 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.levelResults['339'], TestResults.ALL_PASS);
     });
 
-    it('keeps the best unit progress status when a weaker result arrives last', () => {
+    it('keeps a level perfect when a started report arrives after an all-pass report', () => {
       let state = reducer(
         initialState,
         mergeUnitProgress({levelId: 341, result: TestResults.ALL_PASS})
