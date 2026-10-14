@@ -1,0 +1,59 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:05.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Tell AI Your Vision\r\n\r\nNow it's your turn. Every website starts as a vision - and your job is to communicate it clearly.\r\n\r\n**Do This:**\r\n1. **Compose your vision** as a message to AI Tutor. Cover all of these:\r\n   - What the website is **about**\r\n   - **2-3 things** it must include\r\n   - The **tone** (fun? serious? cozy?)\r\n   - The **colors** you want\r\n   - **Why** you're making it\r\n2. **Send it** and ask AI Tutor to build the page.\r\n3. **Look at the first draft.** If it's roughly right, click **Accept**.\r\n\r\n> **Tip:** The more specific your vision, the closer the first draft. \"A bright, cheerful page about my dog Milo with a story about how we met\" beats \"a page about dogs\".\r\n\r\nDon't polish yet! The goal is a first draft - you'll come back to perfect it later. Once you accept the draft, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS"
+      ],
+      "answerTypeCustomizations": {
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do not create a style.css file - put all css updates in a <style> tag in the head.\n- Generate both HTML and CSS at the same time\n- Do not include any image or video files\n- Do not include IDs\n- Never generate placeholder images or videos. If the user implies they want an image, generate an empty `<img src=\"\" />` tag and tell the user they need to upload images to their project.\n- If the user asks to generate images: explain that you cannot generate new images but can insert any images that the user uploads to the project\n- If the user asks to insert an image from an external URL: explain that for security reasons, you cannot use external URLs for images. Instead, suggest that the user will eventually be able to upload their own images that can be added to webpages.\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- If the student has already made at least one accepted change (i.e., a status message shows 'You accepted AI Tutor's changes'), then also include the following in your response: 'Great job! For this level, the goal is just to generate one first draft. The instructions say to click Continue now - you'll have more chances to refine it later!'",
+        "buildCSS": "Additionally, follow these instructions even if they contradict the above ones above:\n- Do NOT generate a style.css file - put all updates in a <style> tag in the head of the page\n- Interpret user’s vision document to generate a unique style for the webpage that matches their color, layout, and tone preferences\n- Keep all explanations short, concise, and simple. Do not over-explain the changes you've made to the code.\n- If the student has already made at least one accepted change (i.e., a status message shows 'You accepted AI Tutor's changes'), then also include the following in your response: 'Great job! For this level, the goal is just to generate one first draft. The instructions say to click Continue now - you'll have more chances to refine it later!'"
+      }
+    },
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <p>This page is waiting for your vision!</p>\n    <p>Describe the website you want in the AI Tutor chat, and watch it appear here.</p>\n  </body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "project_template_level_name": "intro-web-lab3-template1",
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** Students communicate a complete vision in a single message and see what AI does with it. The friction of an imperfect first draft is the point - it motivates the rest of the lesson. Unlike other versions of this lesson, the vision lives in the chat conversation rather than a vision.md file; the skill being built is saying what you want clearly, not editing files.\r\n\r\n**Circulation questions:**\r\n\r\n- \"What did you put in your vision? What did AI do with it?\"\r\n- \"Is this what you had in your head? What's different?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may send a one-line vision - ask them which of the five ingredients (about, includes, tone, colors, why) they skipped\r\n- Students may keep iterating - encourage them onward: the next levels teach the skills to close the gap\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-3_pilot2_launch\\\" for intro-to-web-lab3\"], \"cloned_from\": \"hoai-web-design-v2-3_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>
