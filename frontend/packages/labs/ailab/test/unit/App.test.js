@@ -1,11 +1,12 @@
-import {act} from '@testing-library/react';
+import {act, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
 import App from '../../src/App';
 import I18n from '../../src/i18n';
-import {resetState, setMode} from '../../src/redux';
+import {resetState, setMode, setPresetColumns} from '../../src/redux';
+import {store as storeSingleton} from '../../src/store';
 
-import {levelProject, levelStore} from './levelStore';
+import {levelProject, levelStore, seedLevel} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderApp(mode) {
@@ -46,5 +47,89 @@ describe('onTrained', () => {
       store.dispatch(setMode({}));
     });
     expect(onTrained).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('a pretrained level', () => {
+  beforeEach(() => I18n.initI18n());
+
+  const PRETRAINED = {
+    trainer: 'decisionTree',
+    pretrained: true,
+    hideSelectLabel: true,
+    lockFeatures: true,
+  };
+
+  // Auto-training goes through useTrainingRun, which trains the store singleton.
+  function renderLevel(mode) {
+    storeSingleton.dispatch(resetState());
+    seedLevel(storeSingleton, mode);
+    const onTrained = vi.fn();
+    const {trainingData} = renderWithProviders(
+      createElement(App, {
+        onContinue: () => {},
+        saveTrainedModel: () => {},
+        onStartOver: () => {},
+        onTrained,
+      }),
+      {store: storeSingleton, project: levelProject()},
+    );
+    return {onTrained, trainingData};
+  }
+
+  test('trains once on load, without the training modal', () => {
+    const {onTrained, trainingData} = renderLevel(PRETRAINED);
+    expect(onTrained.mock.calls).toEqual([[100]]);
+    expect(trainingData().trainedModel).toBeDefined();
+    expect(storeSingleton.getState().trainingModalStep).toBeUndefined();
+    expect(document.activeElement).toBe(document.body);
+  });
+
+  test('waits for its own data and columns after a level change', () => {
+    const {onTrained} = renderLevel({trainer: 'decisionTree'});
+
+    act(() => {
+      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(setMode(PRETRAINED));
+    });
+    expect(onTrained).not.toHaveBeenCalled();
+
+    act(() => {
+      seedLevel(storeSingleton, PRETRAINED);
+      storeSingleton.dispatch(
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+      );
+    });
+    expect(onTrained.mock.calls).toEqual([[100]]);
+  });
+
+  test('stays on the dataset view once trained', () => {
+    renderLevel(PRETRAINED);
+    expect(storeSingleton.getState().currentPanel).toBe('datasetView');
+  });
+
+  test('shows no dataset view while it loads, then opens on the results', () => {
+    const hiding = {...PRETRAINED, hideDatasetView: true};
+    renderLevel({trainer: 'decisionTree'});
+
+    act(() => {
+      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(setMode(hiding));
+    });
+    expect(storeSingleton.getState().currentPanel).toBe('datasetView');
+    expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
+
+    act(() => {
+      seedLevel(storeSingleton, hiding);
+      storeSingleton.dispatch(
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+      );
+    });
+    expect(storeSingleton.getState().currentPanel).toBe('results');
+  });
+
+  test('hides Start over', () => {
+    renderLevel(PRETRAINED);
+    expect(screen.queryByRole('button', {name: 'Start over'})).toBeNull();
   });
 });

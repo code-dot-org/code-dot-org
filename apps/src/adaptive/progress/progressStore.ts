@@ -56,7 +56,7 @@ export function createServerProgressStore(
     saveStep(key, stepId, write) {
       return enqueue(`save ${stepId}`, () =>
         http.put(
-          `/adaptive_progress/steps/${encodeURIComponent(stepId)}`,
+          `/adaptive_progress/steps/${encodeURIComponent(stepId)}/progress`,
           JSON.stringify({...key, ...write}),
           true,
           {'Content-Type': 'application/json'}

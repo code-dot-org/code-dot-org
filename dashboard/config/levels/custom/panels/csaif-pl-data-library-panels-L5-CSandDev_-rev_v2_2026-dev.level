@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-07-29T14:55:40.000Z",
   "level_num": "custom",
@@ -39,15 +40,15 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "## Up Next\nAs you proceed to the next level, feel free to work through as much or as little of the activity as you like.\n\nYou may choose to use the <a href=\"https://docs.google.com/document/d/1-JLKmlnVwZffCRvACIRb3teUV4m6yF7GiENiNdAlgeg/edit?tab=t.0\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> to guide you through the lesson.",
+        "text": "## Up Next\nAs you proceed to the next level, feel free to work through as much or as little of the activity as you like.\n\nYou may choose to use the <a href=\"https://docs.google.com/document/d/1e26NO0zxUX7PDmHFYW1GHdy7LoxEu0bKUf36lxI3yDI/edit?usp=sharing\">Activity Guide</a> to guide you through the lesson.",
         "imageUrl": "https://images.code.org/360426e13d8aca6a1fef93b0c4949a8a-Screenshot 2025-12-15 at 1.26.45 PM.png",
         "key": "csaif-pl-data-library-panels-L5-CSandDev-061a3301-6515-4f18-9963-040f193637c5",
         "layout": "text-top-left"
       }
     ],
-    "name_suffix": "_2026-dev"
+    "name_suffix": "_2026-dev",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T14:55:40.306+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-data-library-panels-L5-CSandDev_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif-pl-data-library-panels-L5-CSandDev_-rev_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T14:55:40.306+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-data-library-panels-L5-CSandDev_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif-pl-data-library-panels-L5-CSandDev_-rev_v2_2026\"},{\"changed_at\":\"2026-10-13 15:43:28 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-13 15:45:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

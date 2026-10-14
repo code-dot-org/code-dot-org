@@ -137,8 +137,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       ['quiz', {answers: {questionId: 1, list: [{text: 'a'}]}}],
       ['quiz', {answers: {questionId: 'why', list: [{text: 'x' * 10_001}]}}],
       ['read', {timeSinceLastSave: 'soon'}],
-      ['read', {started: true, generatedInstructions: 'text'}],
-      ['try', {generatedInstructions: {'instructions' => 'x' * 70_000}}],
+      ['try', {}],
     ].each do |step_id, body|
       assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
         put_step step_id, **body
@@ -147,24 +146,44 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
   end
 
-  test "level steps accept generated instructions and validation history" do
+  test "generated instructions are saved on any step without starting it" do
     generated = {'instructions' => 'Do this.', 'inputsHash' => 'ab'}
 
-    put_step 'try', generatedInstructions: generated, validationHistory: [{'passed' => false}]
-    put_step 'project', generatedInstructions: generated
+    put_instructions 'try', generated
+    put_instructions 'project', generated
 
     assert_response :success
     rows = UserAdaptiveStep.where(step_id: %w(try project)).index_by(&:step_id)
     assert_equal generated, rows['try'].generated_instructions
-    assert_equal [{'passed' => false}], rows['try'].validation_history
     assert_nil rows['try'].progress
     assert_equal generated, rows['project'].generated_instructions
     assert_equal({'timeSpent' => 0, 'generatedInstructions' => generated}, steps['project'])
     refute steps['try'].key?('status'), 'a row without progress is not a started step'
   end
 
+  test "refuses invalid generated instructions and stores nothing" do
+    [
+      ['nowhere', {'instructions' => 'Do this.'}],
+      ['read', 'text'],
+      ['try', {'instructions' => 'x' * 70_000}],
+    ].each do |step_id, generated|
+      assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
+        put_instructions step_id, generated
+      end
+      assert_response :unprocessable_entity, "#{step_id} #{generated}"
+    end
+  end
+
+  test "validation history is not implemented" do
+    assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
+      put :update_validation_history, params: {step_id: 'try', **params}, as: :json
+    end
+    assert_response :not_implemented
+    assert JSON.parse(response.body)['error'].present?
+  end
+
   test "level steps take their state from the step level's user level" do
-    put_step 'try', generatedInstructions: {'instructions' => 'Do this.'}
+    put_instructions 'try', {'instructions' => 'Do this.'}
     user_level = create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 12)
 
     assert_equal(
@@ -174,9 +193,6 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
 
     user_level.update!(best_result: ActivityConstants::FREE_PLAY_RESULT)
     assert_equal 'complete', steps['try']['status']
-
-    put_step 'try', validationHistory: [{'passed' => true}]
-    assert_equal({'status' => 'complete', 'timeSpent' => 12}, JSON.parse(response.body))
   end
 
   test "steps that share a level both take its user level's state" do
@@ -215,7 +231,11 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
   end
 
   private def put_step(step_id, **body)
-    put :update_step, params: {step_id: step_id, **params, **body}, as: :json
+    put :update_progress, params: {step_id: step_id, **params, **body}, as: :json
+  end
+
+  private def put_instructions(step_id, generated)
+    put :update_generated_instructions, params: {step_id: step_id, **params, generatedInstructions: generated}, as: :json
   end
 
   private def steps

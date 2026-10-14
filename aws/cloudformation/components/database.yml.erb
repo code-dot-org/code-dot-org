@@ -355,6 +355,7 @@
         - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
         - ClusterId: <%=DATABASE_CONFIGURATION[:db_cluster_id]%>
       TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
+      # PLACEHOLDER - The include/exclude list is managed by `Cdo::RDS`.
       DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
       Tags:
         - Key: environment

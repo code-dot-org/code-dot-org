@@ -221,5 +221,22 @@ class Ailab < Level
         errors.add(:mode, 'must have a required accuracy from 0 to 100.')
       end
     end
+
+    if parsed_mode['pretrained'] == true
+      label = parsed_mode['label']
+      features = parsed_mode['features']
+      unless label.is_a?(String) && label.present? && features.is_a?(Array) && (features - [label]).present?
+        errors.add(:mode, 'must choose a label and features when pretrained.')
+      end
+      unless parsed_mode['hideSelectLabel'] == true && parsed_mode['lockFeatures'] == true
+        errors.add(:mode, 'must lock the label and features when pretrained.')
+      end
+      errors.add(:mode, 'cannot randomize the test rows when pretrained.') if parsed_mode['randomizeTestData'] == true
+      errors.add(:mode, 'cannot require an accuracy when pretrained.') if parsed_mode.key?('requireAccuracy')
+    end
+
+    if parsed_mode['hideDatasetView'] == true && parsed_mode['pretrained'] != true
+      errors.add(:mode, 'cannot hide the dataset view unless pretrained.')
+    end
   end
 end

@@ -483,6 +483,10 @@ export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
+export function getHideDatasetView(state: RootState): boolean {
+  return !!state.mode?.hideDatasetView;
+}
+
 export function getPredictAvailable(
   state: RootState,
   project: AilabProject,
