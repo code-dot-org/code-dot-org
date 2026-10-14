@@ -4,7 +4,7 @@ import {
   MAX_CODE_CHARACTERS,
   MAX_RUN_CHARACTERS,
   buildDescriptionPrompt,
-  canUseTheaterDescriptionModel,
+  canRequestTheaterDescription,
   cleanDescription,
   getDescribableFiles,
   requestTheaterDescription,
@@ -25,7 +25,6 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   },
 }));
 const mockCurrentUser = {
-  isLevelbuilder: false,
   usOnlyAichatModelsDisabled: false,
   aiChatAccessLevel: 'enabled',
 };
@@ -54,36 +53,26 @@ const file = (
 ) => ({id, name, contents, folderId: '0', type});
 
 describe('theaterDescription', () => {
-  describe('canUseTheaterDescriptionModel', () => {
+  describe('canRequestTheaterDescription', () => {
     afterEach(() => {
       Object.assign(mockCurrentUser, {
-        isLevelbuilder: false,
         usOnlyAichatModelsDisabled: false,
         aiChatAccessLevel: 'enabled',
       });
     });
 
     it('allows a user with AI access in the US', () => {
-      expect(canUseTheaterDescriptionModel()).toBe(true);
+      expect(canRequestTheaterDescription()).toBe(true);
     });
 
     it('refuses a user without full AI access', () => {
       mockCurrentUser.aiChatAccessLevel = 'essential_only';
-      expect(canUseTheaterDescriptionModel()).toBe(false);
+      expect(canRequestTheaterDescription()).toBe(false);
     });
 
     it('refuses a user blocked from US-only models', () => {
       mockCurrentUser.usOnlyAichatModelsDisabled = true;
-      expect(canUseTheaterDescriptionModel()).toBe(false);
-    });
-
-    it('always allows levelbuilders', () => {
-      Object.assign(mockCurrentUser, {
-        isLevelbuilder: true,
-        usOnlyAichatModelsDisabled: true,
-        aiChatAccessLevel: 'disabled',
-      });
-      expect(canUseTheaterDescriptionModel()).toBe(true);
+      expect(canRequestTheaterDescription()).toBe(false);
     });
   });
 

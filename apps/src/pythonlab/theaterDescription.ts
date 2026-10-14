@@ -68,17 +68,12 @@ export function isTheaterDescriptionEnabled(): boolean {
 
 // Mirrors the gateway token check (AiGatewayAuthController), so a request it
 // would refuse is skipped rather than counted as a failure.
-export function canUseTheaterDescriptionModel(): boolean {
+export function canRequestTheaterDescription(): boolean {
   const {currentUser, lab} = getStore().getState();
-  if (currentUser.isLevelbuilder) {
-    return true;
-  }
-  if (currentUser.usOnlyAichatModelsDisabled) {
-    return false;
-  }
   const appName = lab.levelProperties?.appName;
   return (
     !!appName &&
+    !currentUser.usOnlyAichatModelsDisabled &&
     areAiChatToolsEnabled({
       appName,
       aiChatAccessLevel: currentUser.aiChatAccessLevel,
@@ -222,7 +217,7 @@ export function describeTheaterOutput(source: MultiFileSource) {
     theater.describe();
     return;
   }
-  if (!canUseTheaterDescriptionModel()) {
+  if (!canRequestTheaterDescription()) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('TheaterDescription.Skipped');
