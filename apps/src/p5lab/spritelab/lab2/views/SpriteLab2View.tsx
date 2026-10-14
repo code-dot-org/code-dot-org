@@ -1314,16 +1314,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     musicProjects
   );
 
-  // The hidden workspace stays mounted behind a clip-path, and the closed
-  // drawer slid out of view, which hides them visually but leaves their
-  // contents in the tab order and the accessibility tree. Inert while
-  // hidden. Set via refs: React 18's JSX has no inert attribute. The mount
-  // flag is a dep because the drawer can first render closed (the idle
-  // pre-mount), after the last change.
+  // A sheet over the editors and the stage: Pictures, or the map.
+  const stageCovered = picturesOpen || activeTab === 'Scenes';
+  // The hidden workspace stays mounted behind a clip-path, the closed
+  // drawer slid out of view, and a sheet covers the editors and the stage:
+  // hidden visually, but still in the tab order and the accessibility
+  // tree. Inert while hidden. Set via refs: React 18's JSX has no inert
+  // attribute. The mount flags are deps because a wrapper can first render
+  // after the last change.
+  const stageRef = useRef<HTMLDivElement>(null);
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const worldWrapperRef = useRef<HTMLDivElement>(null);
   const imagesWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    if (stageRef.current) {
+      stageRef.current.inert = stageCovered;
+    }
     if (codeWrapperRef.current) {
       codeWrapperRef.current.inert = activeTab !== 'Code';
     }
@@ -1336,7 +1342,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // pick does (the dialog holds the focus meanwhile).
       imagesWrapperRef.current.inert = !picturesOpen && !pickRequest;
     }
-  }, [activeTab, picturesOpen, imagesMounted, worldMounted, pickRequest]);
+  }, [
+    stageCovered,
+    activeTab,
+    picturesOpen,
+    imagesMounted,
+    worldMounted,
+    pickRequest,
+  ]);
   // Escape inside the drawer closes it. The image dialogs render in a
   // portal, so their own Escape never reaches here.
   useEffect(() => {
@@ -1863,10 +1876,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ? 'preview'
       : 'hidden';
 
-  // Freeze the game while nobody can see it: the playspace hidden behind
-  // another tab, or the whole document hidden. (A hidden document stops
-  // drawing on its own — the browser pauses animation frames — but the
-  // wall clock kept running, so timers jumped forward on return.)
+  // Freeze the game while nobody can see it: the stage under a sheet, or
+  // the whole document hidden. (A hidden document stops drawing on its
+  // own — the browser pauses animation frames — but the wall clock kept
+  // running, so timers jumped forward on return.)
   const [documentHidden, setDocumentHidden] = useState(
     () => typeof document !== 'undefined' && document.hidden
   );
@@ -1877,11 +1890,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, []);
   useEffect(() => {
     engineRef.current?.setDrawPaused(
-      playspaceMode === 'hidden' || documentHidden
+      playspaceMode === 'hidden' || stageCovered || documentHidden
     );
     // engineReady: a level that STARTS with the stage hidden (an images-only
     // level) must pause the engine as soon as it exists.
-  }, [playspaceMode, documentHidden, engineReady]);
+  }, [playspaceMode, stageCovered, documentHidden, engineReady]);
 
   // Once the playspace is focusable, which is the render after this one.
   useEffect(() => {
@@ -2080,43 +2093,141 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         >
           {WorkspaceAlert}
-          {editorsShown && (activeTab === 'World' || activeTab === 'Code') && (
-            <div className={moduleStyles.editorStrip} style={clearOfPreview}>
-              <MuiTypography
-                component="h2"
-                variant="overline2"
-                className={moduleStyles.editorStripTitle}
+          <div ref={stageRef} className={moduleStyles.stage}>
+            {editorsShown &&
+              (activeTab === 'World' || activeTab === 'Code') && (
+                <div
+                  className={moduleStyles.editorStrip}
+                  style={clearOfPreview}
+                >
+                  <MuiTypography
+                    component="h2"
+                    variant="overline2"
+                    className={moduleStyles.editorStripTitle}
+                  >
+                    {activeTab === 'World' ? 'World' : 'Workspace'}
+                  </MuiTypography>
+                  <div className={moduleStyles.editorStripEnd}>
+                    <EditorSwitch
+                      value={activeTab === 'World' ? 'World' : 'Code'}
+                      onChange={handleEditorChange}
+                      disabledEditors={disabledEditors}
+                      disabledReason={LOCKED_REASON}
+                    />
+                  </div>
+                </div>
+              )}
+            {/* Kept mounted (clipped) so the workspace survives tab switches;
+          gated on animationsSeeded (see the seed effect). */}
+            <div
+              ref={codeWrapperRef}
+              className={classNames(
+                moduleStyles.codeTabWrapper,
+                editorsShown && moduleStyles.underEditorStrip
+              )}
+              style={{
+                clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
+                pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
+                // The code keeps clear of the preview's column.
+                ...clearOfPreview,
+              }}
+            >
+              {animationsSeeded && (
+                <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
+              )}
+            </div>
+
+            {/* Kept mounted like the workspace: inserting the grid is the
+          costly part. The world editor keeps clear of the preview's column
+          as the code does. */}
+            {worldTabEnabled && worldMounted && (
+              <div
+                ref={worldWrapperRef}
+                className={classNames(
+                  moduleStyles.codeTabWrapper,
+                  editorsShown && moduleStyles.underEditorStrip
+                )}
+                style={{
+                  clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
+                  pointerEvents: activeTab === 'World' ? 'auto' : 'none',
+                  ...clearOfPreview,
+                }}
               >
-                {activeTab === 'World' ? 'World' : 'Workspace'}
-              </MuiTypography>
-              <div className={moduleStyles.editorStripEnd}>
-                <EditorSwitch
-                  value={activeTab === 'World' ? 'World' : 'Code'}
-                  onChange={handleEditorChange}
-                  disabledEditors={disabledEditors}
-                  disabledReason={LOCKED_REASON}
+                <WorldTab
+                  world={activeWorld}
+                  sceneSize={activeSceneSize}
+                  onPaintCell={handlePaintWorldCell}
+                  emptyMessage={
+                    picturesOffered
+                      ? 'Make some pictures first.'
+                      : 'Go back and make your image first.'
+                  }
+                  only={paletteOnlyImage}
+                  onMoveCell={placeOne ? handleMoveWorldCell : undefined}
+                  selected={worldPaletteSelection}
+                  onSelect={choosePaletteSelection}
+                  onNewPicture={
+                    picturesOffered ? handleNewWorldPicture : undefined
+                  }
                 />
               </div>
-            </div>
-          )}
-          {/* Kept mounted (clipped) so the workspace survives tab switches;
-          gated on animationsSeeded (see the seed effect). */}
-          <div
-            ref={codeWrapperRef}
-            className={classNames(
-              moduleStyles.codeTabWrapper,
-              editorsShown && moduleStyles.underEditorStrip
             )}
-            style={{
-              clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
-              pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
-              // The code keeps clear of the preview's column.
-              ...clearOfPreview,
-            }}
-          >
-            {animationsSeeded && (
-              <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
-            )}
+
+            {/* Always mounted so the engine keeps running; animates between
+          the preview beside the editors and the centered play view. */}
+            <Playspace
+              boxRef={playspaceRef}
+              platformScene={playingPlatformer}
+              mode={playspaceMode}
+              onPreviewWidth={setPreviewWidth}
+              side={previewSide}
+              controls={
+                <PlayControls
+                  // On a pinned-scene level the game IS the one scene, so no
+                  // whole-game restart.
+                  onRestartGame={
+                    pinnedSceneId
+                      ? undefined
+                      : event => handleRestartClick(event, handleRestartGame)
+                  }
+                  onRestartScene={event =>
+                    handleRestartClick(event, handleRestartScene)
+                  }
+                />
+              }
+              playBar={
+                <PlayBar
+                  playing={activeTab === 'Play'}
+                  arrows={arrowSet}
+                  onPlay={handlePlayClick}
+                  onStop={stopTab ? handleStopClick : undefined}
+                  onPlayGame={handlePlayGame}
+                  playGameDisabled={!!pinnedSceneId}
+                  playGameReason={LOCKED_REASON}
+                  playSceneHidden={
+                    !pinnedSceneId && activeScene.id === scenes[0].id
+                  }
+                />
+              }
+              below={
+                levelProperties.levelMode ? (
+                  <GenerateSpriteLab
+                    docked
+                    levelMode={levelProperties.levelMode}
+                    instructions={guide.text}
+                    collapsedText={guide.collapsedText}
+                    showContinue={guide.showContinue}
+                    levelProperties={levelProperties}
+                  />
+                ) : undefined
+              }
+              guideSize={levelProperties.levelMode ? guideSize : null}
+              fadeTrigger={fadeTrigger}
+              covered={jumpCover}
+              loading={externalLoading}
+              getDefaultSpriteSize={getDefaultSpriteSize}
+              onPreviewClick={handlePreviewClick}
+            />
           </div>
 
           {/* Kept mounted like the workspace: opening mid-transition eats
@@ -2180,98 +2291,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               </div>
             </div>
           )}
-
-          {/* Kept mounted like the workspace: inserting the grid is the
-          costly part. The world editor keeps clear of the preview's column
-          as the code does. */}
-          {worldTabEnabled && worldMounted && (
-            <div
-              ref={worldWrapperRef}
-              className={classNames(
-                moduleStyles.codeTabWrapper,
-                editorsShown && moduleStyles.underEditorStrip
-              )}
-              style={{
-                clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
-                pointerEvents: activeTab === 'World' ? 'auto' : 'none',
-                ...clearOfPreview,
-              }}
-            >
-              <WorldTab
-                world={activeWorld}
-                sceneSize={activeSceneSize}
-                onPaintCell={handlePaintWorldCell}
-                emptyMessage={
-                  picturesOffered
-                    ? 'Make some pictures first.'
-                    : 'Go back and make your image first.'
-                }
-                only={paletteOnlyImage}
-                onMoveCell={placeOne ? handleMoveWorldCell : undefined}
-                selected={worldPaletteSelection}
-                onSelect={choosePaletteSelection}
-                onNewPicture={
-                  picturesOffered ? handleNewWorldPicture : undefined
-                }
-              />
-            </div>
-          )}
-
-          {/* Always mounted so the engine keeps running; animates between
-          the preview beside the editors and the centered play view. */}
-          <Playspace
-            boxRef={playspaceRef}
-            platformScene={playingPlatformer}
-            mode={playspaceMode}
-            onPreviewWidth={setPreviewWidth}
-            side={previewSide}
-            controls={
-              <PlayControls
-                // On a pinned-scene level the game IS the one scene, so no
-                // whole-game restart.
-                onRestartGame={
-                  pinnedSceneId
-                    ? undefined
-                    : event => handleRestartClick(event, handleRestartGame)
-                }
-                onRestartScene={event =>
-                  handleRestartClick(event, handleRestartScene)
-                }
-              />
-            }
-            playBar={
-              <PlayBar
-                playing={activeTab === 'Play'}
-                arrows={arrowSet}
-                onPlay={handlePlayClick}
-                onStop={stopTab ? handleStopClick : undefined}
-                onPlayGame={handlePlayGame}
-                playGameDisabled={!!pinnedSceneId}
-                playGameReason={LOCKED_REASON}
-                playSceneHidden={
-                  !pinnedSceneId && activeScene.id === scenes[0].id
-                }
-              />
-            }
-            below={
-              levelProperties.levelMode ? (
-                <GenerateSpriteLab
-                  docked
-                  levelMode={levelProperties.levelMode}
-                  instructions={guide.text}
-                  collapsedText={guide.collapsedText}
-                  showContinue={guide.showContinue}
-                  levelProperties={levelProperties}
-                />
-              ) : undefined
-            }
-            guideSize={levelProperties.levelMode ? guideSize : null}
-            fadeTrigger={fadeTrigger}
-            covered={jumpCover}
-            loading={externalLoading}
-            getDefaultSpriteSize={getDefaultSpriteSize}
-            onPreviewClick={handlePreviewClick}
-          />
 
           {/* The guide floats on the map only; beside the editors and
           while playing it is the card the playspace places. */}

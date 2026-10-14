@@ -345,6 +345,11 @@ $scene-tab-fade-ms: 260ms;
   min-height: 0;
 }
 
+// The editors and the stage, inert together while a sheet covers them.
+.stage {
+  display: contents;
+}
+
 // The Code | World switch's strip at the top of the editor pane, the
 // ?editors=strip variant; the editors below start under it.
 $editor-strip-height: 41px;
