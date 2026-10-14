@@ -31,12 +31,18 @@ export function displayNodeLabel(
   node: DisplayTreeNode,
   datasetId: string
 ): string {
-  if (node.type === 'question') {
-    return `${getLocalizedColumnName(datasetId, node.column)}?`;
-  }
-  return typeof node.prediction === 'number'
-    ? formatNumber(node.prediction)
-    : String(getLocalizedValue(node.prediction, datasetId));
+  return node.type === 'question'
+    ? `${getLocalizedColumnName(datasetId, node.column)}?`
+    : displayValue(node.prediction, datasetId);
+}
+
+export function displayValue(
+  value: string | number,
+  datasetId: string,
+): string {
+  return typeof value === 'number'
+    ? formatNumber(value)
+    : String(getLocalizedValue(value, datasetId));
 }
 
 const orList = new Intl.ListFormat('en', {type: 'disjunction'});

@@ -4,7 +4,10 @@ import {Button, Typography} from '@mui/material';
 import React, {useId, useState} from 'react';
 
 import {getDisplayTreePath, type DisplayTreeNode} from '../helpers/displayTree';
-import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
+import {
+  displayNodeLabel,
+  displayValue,
+} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {
@@ -43,12 +46,8 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   const path = getDisplayTreePath(tree, nodeId);
   const {node} = path[path.length - 1];
   const nodeLabel = displayNodeLabel(node, datasetId);
-  const answerPath =
-    trace?.path.includes(nodeId) &&
-    getDisplayTreePath(tree, trace.path[trace.path.length - 1]);
   const examplePrediction =
-    answerPath &&
-    displayNodeLabel(answerPath[answerPath.length - 1].node, datasetId);
+    trace?.path.includes(nodeId) && displayValue(trace.prediction, datasetId);
   const isAnswer = node.type === 'answer';
   const columnProps = {
     emphasizedColumn: isAnswer ? project.labelColumn : node.column,
