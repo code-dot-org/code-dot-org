@@ -604,9 +604,9 @@ describe('EditAilabMode', () => {
       expect(featuresLock()).toBeValid();
     });
 
-    it('pretrains in place of the locks, random test rows and required accuracy', async () => {
+    it('pretrains with both locks, in place of random test rows and a required accuracy', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideSelectLabel": true, "lockFeatures": true, "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
       );
       await columnsLoaded();
       const labelLock = screen.getByRole('checkbox', {
@@ -627,6 +627,8 @@ describe('EditAilabMode', () => {
         label: 'animal',
         features: ['legs'],
         pretrained: true,
+        hideSelectLabel: true,
+        lockFeatures: true,
       });
       expect(pretrainedCheckbox()).toBeValid();
       expect(labelLock).toBeChecked();
@@ -641,8 +643,10 @@ describe('EditAilabMode', () => {
       fireEvent.click(pretrainedCheckbox());
 
       expect(JSON.parse(savedMode())).not.toHaveProperty('pretrained');
-      expect(labelLock).not.toBeChecked();
+      expect(labelLock).toBeChecked();
       expect(labelLock).toBeEnabled();
+      expect(featuresLock()).toBeChecked();
+      expect(featuresLock()).toBeEnabled();
       expect(randomRows).toBeEnabled();
       expect(accuracy).toBeEnabled();
     });
@@ -676,9 +680,9 @@ describe('EditAilabMode', () => {
       expect(pretrainedCheckbox()).toBeInvalid();
     });
 
-    it("pretrains on the dataset's default label when it is locked", async () => {
+    it("pretrains on the dataset's default label when none is chosen", async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "hideSelectLabel": true, "features": ["legs"]}'
+        '{"datasets": ["zoo"], "features": ["legs"]}'
       );
       await columnsLoaded();
 
@@ -690,11 +694,13 @@ describe('EditAilabMode', () => {
         label: 'animal',
         features: ['legs'],
         pretrained: true,
+        hideSelectLabel: true,
+        lockFeatures: true,
       });
       expect(pretrainedCheckbox()).toBeValid();
     });
 
-    it('drops the saved settings pretraining replaces', () => {
+    it('locks a saved pretrained level and drops the settings pretraining replaces', () => {
       const savedMode = renderEditor(
         '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
       );
@@ -708,6 +714,8 @@ describe('EditAilabMode', () => {
         label: 'animal',
         features: ['legs'],
         pretrained: true,
+        hideSelectLabel: true,
+        lockFeatures: true,
       });
     });
 

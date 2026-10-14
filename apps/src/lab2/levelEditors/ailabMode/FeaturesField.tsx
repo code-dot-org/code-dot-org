@@ -98,7 +98,7 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
         <Checkbox
           name="ailab_mode_lockFeatures"
           label="Lock the features so students cannot change them"
-          checked={locked || pretrained}
+          checked={locked}
           disabled={pretrained}
           onChange={e =>
             onChange(

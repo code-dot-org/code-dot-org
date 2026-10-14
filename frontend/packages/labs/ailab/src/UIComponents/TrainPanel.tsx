@@ -24,11 +24,9 @@ import styles from './trainPanel.module.scss';
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
   const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
+  const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
-  const labelIsPreset =
-    useAppSelector(state => !!state.mode?.hideSelectLabel) || pretrained;
-  const featuresLocked =
-    useAppSelector(state => !!state.mode?.lockFeatures) || pretrained;
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const {
     project,

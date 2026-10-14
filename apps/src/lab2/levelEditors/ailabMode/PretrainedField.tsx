@@ -44,7 +44,7 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
       />
       <Typography variant="body4" className={moduleStyles.descriptionText}>
         Students start with the model already trained on the label and features
-        above, and cannot change them. The model tests on the last rows, and the
+        below, and cannot change them. The model tests on the last rows, and the
         level cannot require an accuracy.
       </Typography>
       {error && (

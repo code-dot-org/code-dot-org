@@ -136,11 +136,11 @@ export function withoutLabelInFeatures(
   );
 }
 
-export const REPLACED_BY_PRETRAINED = [
-  'hideSelectLabel',
-  'lockFeatures',
-  'randomizeTestData',
-  'requireAccuracy',
+const LOCKED_BY_PRETRAINED = ['hideSelectLabel', 'lockFeatures'];
+const REPLACED_BY_PRETRAINED = ['randomizeTestData', 'requireAccuracy'];
+export const FIXED_BY_PRETRAINED = [
+  ...LOCKED_BY_PRETRAINED,
+  ...REPLACED_BY_PRETRAINED,
 ];
 
 export function setPretrained(
@@ -154,8 +154,9 @@ export function setPretrained(
     pretrained ? true : undefined
   );
   if (pretrained) {
-    newMode.label = getStartingLabel(mode, defaultLabel);
+    LOCKED_BY_PRETRAINED.forEach(key => (newMode[key] = true));
     REPLACED_BY_PRETRAINED.forEach(key => delete newMode[key]);
+    newMode.label = getStartingLabel(newMode, defaultLabel);
   }
   return newMode;
 }

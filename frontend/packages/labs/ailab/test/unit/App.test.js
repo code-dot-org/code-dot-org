@@ -53,7 +53,12 @@ describe('onTrained', () => {
 describe('a pretrained level', () => {
   beforeEach(() => I18n.initI18n());
 
-  const PRETRAINED = {trainer: 'decisionTree', pretrained: true};
+  const PRETRAINED = {
+    trainer: 'decisionTree',
+    pretrained: true,
+    hideSelectLabel: true,
+    lockFeatures: true,
+  };
 
   // Auto-training goes through useTrainingRun, which trains the store singleton.
   function renderLevel(mode) {
