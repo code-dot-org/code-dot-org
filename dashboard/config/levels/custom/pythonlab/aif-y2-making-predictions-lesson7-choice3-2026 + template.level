@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-10-12T19:57:51.000Z",
   "level_num": "custom",
@@ -29,7 +28,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "from sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\n\n# Input features: [days_since_last_purchase, orders_last_90_days, avg_order_value ($), months_as_customer]\ninputs = [\n    [3, 18, 62, 26],\n    [34, 3, 41, 8],\n    [78, 2, 59, 24],\n    [7, 15, 74, 31],\n    [27, 4, 55, 14],\n    [95, 1, 72, 18],\n    [5, 22, 58, 19],\n    [46, 2, 38, 5],\n    [64, 3, 48, 30],\n    [11, 14, 81, 37],\n    [21, 5, 63, 11],\n    [112, 0, 66, 21],\n    [9, 20, 66, 22],\n    [39, 3, 47, 27],\n    [86, 1, 83, 33]\n]\n\noutputs = [\n    \"loyal\",\n    \"occasional\",\n    \"at-risk\",\n    \"loyal\",\n    \"occasional\",\n    \"at-risk\",\n    \"loyal\",\n    \"occasional\",\n    \"at-risk\",\n    \"loyal\",\n    \"occasional\",\n    \"at-risk\",\n    \"loyal\",\n    \"occasional\",\n    \"at-risk\"\n]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n    inputs,\n    outputs,\n    test_size=0.4,\n)\n\n# TODO 1: Configure the classifier using KNeighborsClassifier\n# TODO 2: Train the model with model.fit\n\n# TODO 3: Compute the accuracy using model.score() and print it out\n# TODO 4: Classify a new, unknown customer who just appeared in this month's sales report\nunknown_customer = [[71, 2, 64, 27]]",
+          "contents": "from sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\n\n# Input features: [days_since_last_purchase, orders_last_90_days, avg_order_value ($), months_as_customer]\ninputs = [\n  [3, 18, 62, 26],\n  [34, 3, 41, 8],\n  [78, 2, 59, 24],\n  [7, 15, 74, 31],\n  [27, 4, 55, 14],\n  [95, 1, 72, 18],\n  [5, 22, 58, 19],\n  [46, 2, 38, 5],\n  [64, 3, 48, 30],\n  [11, 14, 81, 37],\n  [21, 5, 63, 11],\n  [112, 0, 66, 21],\n  [9, 20, 66, 22],\n  [39, 3, 47, 27],\n  [86, 1, 83, 33]\n]\n\noutputs = [\n  \"loyal\",\n  \"occasional\",\n  \"at-risk\",\n  \"loyal\",\n  \"occasional\",\n  \"at-risk\",\n  \"loyal\",\n  \"occasional\",\n  \"at-risk\",\n  \"loyal\",\n  \"occasional\",\n  \"at-risk\",\n  \"loyal\",\n  \"occasional\",\n  \"at-risk\"\n]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs,\n  outputs,\n  test_size=0.4,\n)\n\n# TODO 1: Configure the classifier using KNeighborsClassifier\n# TODO 2: Train the model with model.fit\n\n# TODO 3: Compute the accuracy using model.score() and print it out\n# TODO 4: Classify a new, unknown customer who just appeared in this month's sales report\nunknown_customer = [[71, 2, 64, 27]]",
           "folderId": "0",
           "active": true
         }
@@ -41,6 +40,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-12 19:58:59 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 19:59:05 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:00:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 19:58:59 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 19:59:05 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:00:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:20:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

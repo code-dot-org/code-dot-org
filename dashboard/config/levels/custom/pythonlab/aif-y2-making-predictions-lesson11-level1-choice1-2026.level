@@ -33,23 +33,22 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "import csv\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Read data\nf = open(\"levels.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs and outputs\ninputs = []\noutputs = []\nfor row in data:\n  inputs.append([int(row[\"time\"]), int(row[\"deaths\"])])\n  outputs.append(row[\"verdict\"])\n\n# Split data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n    inputs, outputs, test_size=0.25, random_state=42)\n\n# Scale features\nscaler = MinMaxScaler()\nscaled_train_inputs = scaler.fit_transform(train_inputs)\nscaled_test_inputs = scaler.transform(test_inputs)\n\n# Train classifier\nn_neighbors = [1, 3, 5, 7, 9, 11, 13, 15]\n\n# TODO: Use a loop to find the best hyperparameter\nmodel = KNeighborsClassifier(n_neighbors=1)\nmodel.fit(scaled_train_inputs, train_outputs)\naccuracy = model.score(scaled_test_inputs, test_outputs)\nprint(f\"n_neighbors = 1: accuracy {accuracy}\")",
+          "contents": "import csv\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Read data\nf = open(\"levels.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs and outputs\ninputs = []\noutputs = []\nfor row in data:\n  inputs.append([int(row[\"time\"]), int(row[\"deaths\"])])\n  outputs.append(row[\"verdict\"])\n\n# Split data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs, outputs, test_size=0.25, random_state=42)\n\n# Scale features\nscaler = MinMaxScaler()\nscaled_train_inputs = scaler.fit_transform(train_inputs)\nscaled_test_inputs = scaler.transform(test_inputs)\n\n# Train classifier\nn_neighbors = [1, 3, 5, 7, 9, 11, 13, 15]\n\n# TODO: Use a loop to find the best hyperparameter\nmodel = KNeighborsClassifier(n_neighbors=1)\nmodel.fit(scaled_train_inputs, train_outputs)\naccuracy = model.score(scaled_test_inputs, test_outputs)\nprint(f\"n_neighbors = 1: accuracy {accuracy}\")",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "1": {
           "id": "1",
           "name": "levels.csv",
           "contents": "time,deaths,verdict\n293,1,just right\n278,12,too hard\n65,9,just right\n293,7,too hard\n155,7,too hard\n202,0,just right\n393,4,too hard\n63,2,just right\n106,8,too hard\n79,8,just right\n345,11,too hard\n292,11,too hard\n128,11,too hard\n87,3,just right\n295,3,too hard\n109,8,just right\n142,8,too hard\n294,8,too hard\n63,8,just right\n151,3,just right\n222,10,too hard\n267,1,just right\n184,5,just right\n397,5,too hard\n316,7,too hard\n42,2,just right\n159,8,just right\n47,1,just right\n343,11,too hard\n80,8,just right\n171,11,just right\n326,10,too hard\n178,10,just right\n50,11,just right\n134,3,just right\n160,1,just right\n244,3,just right\n316,4,too hard\n237,3,just right\n46,2,just right\n345,2,too hard\n188,2,just right\n313,2,just right\n123,7,too hard\n53,11,just right\n169,9,too hard\n331,1,just right\n387,2,just right\n239,6,just right\n324,2,just right\n307,4,too hard\n52,12,too hard\n132,5,just right\n83,5,just right\n298,9,too hard\n80,9,just right\n171,2,just right\n115,11,too hard\n361,3,too hard\n328,12,too hard\n258,1,too hard\n119,10,too hard\n268,6,too hard\n216,11,too hard\n235,3,just right\n355,7,too hard\n260,1,just right\n142,2,just right\n58,10,too hard\n160,11,too hard\n104,5,just right\n122,11,just right\n122,6,just right\n131,8,just right\n200,7,too hard\n142,9,too hard\n332,6,too hard\n245,7,too hard\n141,3,just right\n259,4,just right\n",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
       },
       "openFiles": [
-        "0",
-        "1"
+        "0"
       ]
     },
     "display_name": "Level Difficulty",
@@ -57,6 +56,6 @@
     "thumbnail_url": "https://images.code.org/dce611893328b060e69693405dc06112-difficult.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-12 20:39:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:40:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:41:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:47:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:59:30 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:39:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:40:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:41:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:47:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:59:30 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:20:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

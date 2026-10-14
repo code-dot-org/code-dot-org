@@ -3,69 +3,67 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# AI in the Real World
+# Exploring IoT Devices
 
-## 📝 To Do 
+In Lesson 10, your students start an activity by comparing devices that work on their own with devices that connect to the Internet. Try the comparison yourself before you teach it.
 
-AI systems use data to make decisions in real-world applications. Let’s explore how different AI models function and what data they rely on.
-
-Choose one of the scenarios below and explore:
-- *What is the AI model doing in this scenario?*
-- *What type of data is being input?*
-- *What does this AI system do with the data?*
-- *Why does this task require speed and scale?*
-
-<div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-
-  <!-- First Row -->
-<div style="display: flex; justify-content: center; gap: 20px; width: 80%;">
-    
-    <div style="background-color: #F5F7F8; color: #000000; padding: 10px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>Voice Assistants</b></h3>
-      <img src="https://images.code.org/7441f4da5ec65b903a9d8886534bfb9c-image-1742570801450.png" alt="Social Media Influencer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-      <p style = "font-size: 14pt;">AI processes voice input and generates responses.</p>
-      <p style = "font-size: 12pt;"><a href='https://docs.google.com/presentation/d/1426PdbblrbQnqStYFtC3sll5Q94PbAvzKntTqH_TD9o/edit?slide=id.g2694c47731d_3_332#slide=id.g2694c47731d_3_332' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Learn More</a></p>
-    </div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 10px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>Self-Driving Cars</b></h3>
-      <img src="https://images.code.org/2394e3a663ea7b28c01352d968c6fc3c-image-1742570863526.png" alt="College Student" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-      <p style = "font-size: 14pt;">AI uses sensor data to navigate roads.</p>
-	  <p style = "font-size: 12pt;"><a href='https://docs.google.com/presentation/d/1426PdbblrbQnqStYFtC3sll5Q94PbAvzKntTqH_TD9o/edit?slide=id.g34c237e3bf7_0_13#slide=id.g34c237e3bf7_0_13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Learn More</a></p>
-    </div>
-
-  </div>
-
-  <!-- Second Row -->
-<div style="display: flex; justify-content: center; gap: 10px; width: 80%;">
-    
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>Medical Imaging AI</b></h3>
-      <img src="https://images.code.org/6dbfbfc4025b91c7bfc2ecfe5158a664-image-1742570943934.png" alt="Geologist" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-        <p style = "font-size: 14pt;">AI scans medical images for disease detection.</p>
-        <p style = "font-size: 12pt;"><a href='https://docs.google.com/presentation/d/1426PdbblrbQnqStYFtC3sll5Q94PbAvzKntTqH_TD9o/edit?slide=id.g34c237e3bf7_0_24#slide=id.g34c237e3bf7_0_24' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Learn More</a></p>
-    </div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 10px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>AI Translation Tools</b></h3>
-      <img src="https://images.code.org/8e002cca72bd6cd91de3d090092d6c74-image-1742571064774.png" alt="VR Designer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-        <p style = "font-size: 14pt;">AI converts text/audio between languages.</p>
-        <p style = "font-size: 12pt;"><a href='https://docs.google.com/presentation/d/1426PdbblrbQnqStYFtC3sll5Q94PbAvzKntTqH_TD9o/edit?slide=id.g34c237e3bf7_0_34#slide=id.g34c237e3bf7_0_34' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Learn More</a></p>
-    </div>
-
-  </div>
-
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
+<p>📖 <strong>Internet of Things (IoT)</strong>: a network of smart devices that connect and share data over the Internet</p>
 </div>
 
-After examining these real-world scenarios, students should recognize the importance of optimizing AI systems.
+## Compare a Device Pair
 
-Next, they’ll explore which types of hardware are best suited for powering and improving AI performance.
+Choose one standalone device and one IoT device below. Answer these questions for each device you choose:
+
+<p>• What types of data does this device collect, and how might it be used?</p>
+<p>• How might it transmit data, if at all?</p>
+<p>• What privacy risks might it introduce?</p>
+<p>• With Internet connectivity, how might its functionality change?</p>
+
+<div style="display:flex; gap:20px; flex-wrap:wrap; margin:20px 0;">
+<div style="flex:1; min-width:260px; background-color:#F7F7FB; border:1px solid #E4E2F8; border-radius:10px; padding:16px;">
+<div style="font-size:16px; font-weight:bold; color:#1F1976;">Standalone Device</div>
+<p>Runs locally without external data sharing</p>
+<div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+<div style="flex:1; min-width:120px; background-color:#FFFFFF; border:1px solid #ACA8EA; border-radius:10px; padding:12px; text-align:center;">
+<img src="https://images.code.org/444c213457ae28e39ba548f0dc022a30-image-1791910025087.png" alt="A small pedometer that counts steps" style="width:100px; height:auto; border-radius:10px; display:block; margin:0 auto 10px auto;">
+<div style="font-size:16px; font-weight:bold; color:#222222;">Pedometer</div>
+</div>
+<div style="flex:1; min-width:120px; background-color:#FFFFFF; border:1px solid #ACA8EA; border-radius:10px; padding:12px; text-align:center;">
+<img src="https://images.code.org/c19d67b136faf7fd3461cde9f350e26a-image-1791909758846.png" alt="A handheld digital thermometer showing a temperature reading" style="width:100px; height:auto; border-radius:10px; display:block; margin:0 auto 10px auto;">
+<div style="font-size:16px; font-weight:bold; color:#222222;">Digital thermometer</div>
+</div>
+</div>
+</div>
+<div style="flex:1; min-width:260px; background-color:#E4E2F8; border:1px solid #ACA8EA; border-radius:10px; padding:16px;">
+<div style="font-size:16px; font-weight:bold; color:#1F1976;">Internet of Things (IoT) Device</div>
+<p>Communicates with the Internet for additional functionality</p>
+<div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+<div style="flex:1; min-width:120px; background-color:#FFFFFF; border:1px solid #ACA8EA; border-radius:10px; padding:12px; text-align:center;">
+<img src="https://images.code.org/17a56695a56f5d2f273a7563724ebde7-image-1791909365860.png" alt="A cylindrical smart speaker with a light ring" style="width:100px; height:auto; border-radius:10px; display:block; margin:0 auto 10px auto;">
+<div style="font-size:16px; font-weight:bold; color:#222222;">Smart speaker</div>
+</div>
+<div style="flex:1; min-width:120px; background-color:#FFFFFF; border:1px solid #ACA8EA; border-radius:10px; padding:12px; text-align:center;">
+<img src="https://images.code.org/cf0b8eb49daa45b4866781ae13b1f453-image-1791909566738.png" alt="A video doorbell camera mounted beside a front door" style="width:100px; height:auto; border-radius:10px; display:block; margin:0 auto 10px auto;">
+<div style="font-size:16px; font-weight:bold; color:#222222;">Video doorbell camera</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="background-color:#E4E2F8; color:#222222; border-radius:10px; padding:14px 16px; margin:20px 0;">
+<p><strong>💡 Teacher tip:</strong> The goal of this comparison is for students to see that they already use IoT devices in everyday life, such as a smartwatch that sends step counts to a phone app or a thermostat that adjusts to the weather outside. Invite students to name devices from their own lives before you share these examples.</p>
+</div>
 
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 9. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>➡️ Find the full details in the <a href="LESSON-10-URL" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">Lesson 10 lesson plan: IoT and Emerging Technologies</a>.</p>
+</div>
 
 ---
-*Images are AI generated.*
+<!-- Keep the line below only if the images are AI generated. Delete it otherwise. -->
+*Images are AI generated
+
+![]()
 MARKDOWN
