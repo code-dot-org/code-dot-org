@@ -113,7 +113,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     result = attempt.question_results.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
     assert_nil result[:correct]
     assert_nil result[:explanation]
     assert_nil result[:correct_choice_id]
@@ -185,8 +185,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     )
 
     result = attempt.question_results.first
-    assert_equal 'Because', result[:answer_text]
-    assert_nil result[:selected_choice_id]
+    assert_equal({'answerText' => 'Because'}, result[:response_data])
     assert_nil result[:correct]
     assert_nil result[:correct_choice_id]
     assert_equal 'Any function counts.', result[:explanation]
@@ -211,7 +210,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
     refute result.key?(:correct)
     refute result.key?(:explanation)
   end
@@ -240,8 +239,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'Because', result[:answer_text]
-    assert_nil result[:selected_choice_id]
+    assert_equal({'answerText' => 'Because'}, result[:response_data])
   end
 
   test "question_results_in_progress omits a free response question with blank answer text" do
@@ -296,7 +294,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     refute attempt.retakeable?
     result = attempt.question_results.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
     assert_nil result[:correct]
     assert_nil result[:explanation]
     assert_nil result[:correct_choice_id]
@@ -320,6 +318,6 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil attempt.level
     result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
   end
 end
