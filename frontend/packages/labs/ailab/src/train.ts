@@ -118,8 +118,8 @@ const reserveRowIndices = (rowCount: number, location: string): number[] => {
 };
 
 /*
-  Turns the dataset into the numbers a trainer works with, split into the rows
-  it trains on and the rows it is graded against.
+  Prepares the training and accuracy check datasets.
+  Data is stored in redux.
 */
 const prepareTrainingData = (
   store: Store<RootState>,
@@ -127,7 +127,7 @@ const prepareTrainingData = (
   accuracyCheckRowIndices: number[],
 ): void => {
   const state = store.getState();
-  const reserved = new Set(accuracyCheckRowIndices);
+  const reservedIndices = new Set(accuracyCheckRowIndices);
 
   const trainingExamples: number[][] = [];
   const trainingLabels: (number | string)[] = [];
@@ -137,7 +137,7 @@ const prepareTrainingData = (
   state.data.forEach((row: DataRow, index: number) => {
     const example = extractTrainingExamples(state, project, row);
     const label = extractTrainingLabel(state, project, row);
-    if (reserved.has(index)) {
+    if (reservedIndices.has(index)) {
       accuracyCheckExamples.push(example);
       accuracyCheckLabels.push(label);
     } else {
@@ -191,7 +191,7 @@ const prepare = (
   prepareTrainingData(store, project, accuracyCheckRowIndices);
 };
 
-// A run the student started, on a split chosen fresh.
+// A run the student started, without a predetermined split.
 const init = (store: Store<RootState>, project: AilabProject): void => {
   const state = store.getState();
   trainingState.previousResults = getTrainingResults(state);
