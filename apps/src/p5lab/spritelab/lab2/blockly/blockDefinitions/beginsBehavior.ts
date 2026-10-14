@@ -32,19 +32,23 @@ const definition: BlockJson = {
   tooltip: 'Give a sprite something to do on its own.',
 };
 
-const generator: GeneratorFunction = block =>
-  `addBehaviorSimple({costume: ${noteImageFieldValue(
+// A sprite keeps one behaviour: the new one replaces whatever it had.
+const generator: GeneratorFunction = block => {
+  const sprite = `{costume: ${noteImageFieldValue(
     block.getFieldValue('SPRITE')
-  )}}, ${block.getFieldValue('BEHAVIOR')}());\n`;
+  )}}`;
+  return `removeAllBehaviors(${sprite});\naddBehaviorSimple(${sprite}, ${block.getFieldValue(
+    'BEHAVIOR'
+  )}());\n`;
+};
 
-// A bob about the sprite's resting height, after the Oceans fish: an
-// eight pixel swing over about three seconds, each sprite starting at its
-// own point in the wave so neighbours do not bob in step. The sprite passes
-// through the blocks: the wall collision would otherwise hold it against
-// any block the wave reaches.
+// An eight pixel swing over about three seconds, after the Oceans fish;
+// the sprite passes through blocks, which would otherwise hold it.
 export const FLOAT_SWING_PX = 8;
 export const FLOAT_PERIOD_TICKS = 180;
 
+// The bob is applied as a change from the last tick's offset, so other
+// blocks can still move the sprite.
 const FLOATING_HELPER_CODE = [
   'function floating() {',
   '  return {',
@@ -53,13 +57,14 @@ const FLOATING_HELPER_CODE = [
   "      var tick = getProp(spriteId, 'floatTick');",
   '      if (tick == undefined) {',
   '        tick = 0;',
-  "        setProp(spriteId, 'floatBaseY', getProp(spriteId, 'y'));",
+  "        setProp(spriteId, 'floatLast', 0);",
   "        setProp(spriteId, 'floatPhase', (randomNumber(0, 359) * Math.PI) / 180);",
   '      }',
   '      var angle =',
   `        (tick / ${FLOAT_PERIOD_TICKS}) * 2 * Math.PI + getProp(spriteId, 'floatPhase');`,
-  "      setProp(spriteId, 'y',",
-  `        getProp(spriteId, 'floatBaseY') + ${FLOAT_SWING_PX} * Math.sin(angle));`,
+  `      var offset = ${FLOAT_SWING_PX} * Math.sin(angle);`,
+  "      changePropBy(spriteId, 'y', offset - getProp(spriteId, 'floatLast'));",
+  "      setProp(spriteId, 'floatLast', offset);",
   "      setProp(spriteId, 'floatTick', tick + 1);",
   '    },',
   "    name: 'floating',",

@@ -1,7 +1,6 @@
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
-// The interpreted half of the three walks on blocks the begins block
-// offers (beginsBehavior.ts), which carries this source as its helperCode.
+// The three walks on blocks, as interpreted source.
 
 // Ticks a walker stands at each turn before setting off the other way:
 // about a quarter of a second, enough to read as looking around.
@@ -16,20 +15,35 @@ export const WALK_X_UNKNOWN = -1;
 export const WANDER_STAND_EVERY = 90;
 export const WANDER_STAND_TICKS: [number, number] = [8, 40];
 
-// A follower is close enough to stop within this many pixels of the player.
-export const FOLLOW_REACH_PX = 20;
+// A follower stops this close to the player, centre to centre: one cell,
+// so it stands beside the player rather than over it.
+export const FOLLOW_REACH_PX = 40;
 
-// The walkers on blocks share one step: walk one tick along the blocks in a
-// direction (0 stands still), standing a moment at each turn. Gravity and
-// footing come from the platform resolver, so the walk is the same whichever
-// way is down. The step reports what stopped it: a gap or edge (a point
-// probe under the leading foot, which sees a gap narrower than the sprite),
-// the playspace bounds, or being blocked (x differs from where last tick
-// left it); 'air' while falling, when nothing is read as being blocked.
-// Patrolling turns at every stop; wandering turns and stands at random;
-// following walks toward the player and simply stops.
+// walkOnBlocks walks one tick in a direction (0 stands still) and reports
+// what stopped it: 'edge', 'bound', 'blocked', or 'air' while falling.
 export const WALKERS_HELPER_CODE = [
   'var WALK_SPEED = 2;',
+  // Resets a walker's state when a different walker last ran on the sprite;
+  // true when it did.
+  'function startWalk(spriteId, name, dir) {',
+  "  if (getProp(spriteId, 'walkOf') === name) {",
+  '    return false;',
+  '  }',
+  "  setProp(spriteId, 'walkOf', name);",
+  "  setProp(spriteId, 'walkDir', dir);",
+  "  setProp(spriteId, 'walkPause', 0);",
+  "  setProp(spriteId, 'walkRoll', 0);",
+  `  setProp(spriteId, 'walkExpX', ${WALK_X_UNKNOWN});`,
+  '  return true;',
+  '}',
+  // Counts a stand down by one tick; returns the ticks left before this one.
+  'function walkPause(spriteId) {',
+  "  var pause = getProp(spriteId, 'walkPause') || 0;",
+  '  if (pause > 0) {',
+  "    setProp(spriteId, 'walkPause', pause - 1);",
+  '  }',
+  '  return pause;',
+  '}',
   'function walkOnBlocks(spriteId, dir) {',
   '  usePlatformBody(spriteId);',
   // 'scale' is the on-screen size in pixels; 'width' would be the costume's
@@ -67,16 +81,11 @@ export const WALKERS_HELPER_CODE = [
   'function patrollingOnBlocks() {',
   '  return {',
   '    func: function (spriteId) {',
-  "      if (getProp(spriteId, 'walkDir') == undefined) {",
-  "        setProp(spriteId, 'walkDir', 1);",
-  `        setProp(spriteId, 'walkExpX', ${WALK_X_UNKNOWN});`,
-  '      }',
+  "      startWalk(spriteId, 'patrol', 1);",
   "      var dir = getProp(spriteId, 'walkDir');",
-  "      var pause = getProp(spriteId, 'walkPause') || 0;",
+  '      var pause = walkPause(spriteId);',
   '      var stopped = walkOnBlocks(spriteId, pause > 0 ? 0 : dir);',
-  '      if (pause > 0) {',
-  "        setProp(spriteId, 'walkPause', pause - 1);",
-  "      } else if (stopped && stopped !== 'air') {",
+  "      if (pause === 0 && stopped && stopped !== 'air') {",
   "        setProp(spriteId, 'walkDir', -dir);",
   `        setProp(spriteId, 'walkPause', ${TURN_PAUSE_TICKS});`,
   '      }',
@@ -87,15 +96,13 @@ export const WALKERS_HELPER_CODE = [
   'function wanderingOnBlocks() {',
   '  return {',
   '    func: function (spriteId) {',
-  "      if (getProp(spriteId, 'walkDir') == undefined) {",
+  "      if (startWalk(spriteId, 'wander', 0)) {",
   "        setProp(spriteId, 'walkDir', randomNumber(0, 1) ? 1 : -1);",
-  `        setProp(spriteId, 'walkExpX', ${WALK_X_UNKNOWN});`,
   '      }',
   "      var dir = getProp(spriteId, 'walkDir');",
-  "      var pause = getProp(spriteId, 'walkPause') || 0;",
+  '      var pause = walkPause(spriteId);',
   '      var stopped = walkOnBlocks(spriteId, pause > 0 ? 0 : dir);',
   '      if (pause > 0) {',
-  "        setProp(spriteId, 'walkPause', pause - 1);",
   // Only a stand of its own choosing ends in a direction of its own
   // choosing: the stand after a turn keeps the turn.
   "        if (pause === 1 && getProp(spriteId, 'walkRoll')) {",
@@ -116,12 +123,8 @@ export const WALKERS_HELPER_CODE = [
   'function followingPlayerOnBlocks() {',
   '  return {',
   '    func: function (spriteId) {',
-  "      if (getProp(spriteId, 'walkExpX') == undefined) {",
-  `        setProp(spriteId, 'walkExpX', ${WALK_X_UNKNOWN});`,
-  '      }',
-  "      var pause = getProp(spriteId, 'walkPause') || 0;",
-  '      if (pause > 0) {',
-  "        setProp(spriteId, 'walkPause', pause - 1);",
+  "      startWalk(spriteId, 'follow', 0);",
+  '      if (walkPause(spriteId) > 0) {',
   '        walkOnBlocks(spriteId, 0);',
   '        return;',
   '      }',
