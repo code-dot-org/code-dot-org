@@ -1,9 +1,0 @@
-{
-  "extends": ["//"],
-  "tasks": {
-    "build": {
-      "dependsOn": ["^build", "@code-dot-org/studio#build:mobile"],
-      "outputs": ["dist/**"]
-    }
-  }
-}

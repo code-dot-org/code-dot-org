@@ -3,5 +3,5 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": ["vite.siteControls.config.ts", "capacitor.config.ts"]
+  "include": ["capacitor.config.ts"]
 }
