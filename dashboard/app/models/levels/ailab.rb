@@ -234,5 +234,9 @@ class Ailab < Level
       errors.add(:mode, 'cannot randomize the test rows when pretrained.') if parsed_mode['randomizeTestData'] == true
       errors.add(:mode, 'cannot require an accuracy when pretrained.') if parsed_mode.key?('requireAccuracy')
     end
+
+    if parsed_mode['hideDatasetView'] == true && parsed_mode['pretrained'] != true
+      errors.add(:mode, 'cannot hide the dataset view unless pretrained.')
+    end
   end
 end

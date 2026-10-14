@@ -88,6 +88,15 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'lab2 level hides the dataset view only when pretrained' do
+    pretrained = {datasets: ['zoo'], pretrained: true, hideSelectLabel: true, lockFeatures: true, label: 'Type', features: ['Legs']}
+    assert build(:ailab, uses_lab2: 'true', mode: pretrained.merge(hideDatasetView: true).to_json).valid?
+
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideDatasetView: true}.to_json)
+    refute level.valid?
+    assert_equal ['cannot hide the dataset view unless pretrained.'], level.errors[:mode]
+  end
+
   test 'lab2 level derives validations from requireAccuracy' do
     level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: 70}.to_json)
     met, unmet = level.get_validations

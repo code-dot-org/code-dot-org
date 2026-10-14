@@ -246,6 +246,9 @@ const App = ({
   const showOverlay = useAppSelector(state => state.showOverlay);
   const {trainedModel} = useTrainingData();
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
+  const hideDatasetView = useAppSelector(
+    state => !!state.mode?.hideDatasetView,
+  );
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   usePretrainOnLoad();
@@ -283,7 +286,7 @@ const App = ({
         </BodyContainer>
       )}
 
-      {currentPanel === 'datasetView' && (
+      {currentPanel === 'datasetView' && !hideDatasetView && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
             <ContainerLeft>

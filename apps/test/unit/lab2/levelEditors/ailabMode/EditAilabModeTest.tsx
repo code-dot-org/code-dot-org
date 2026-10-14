@@ -711,6 +711,29 @@ describe('EditAilabMode', () => {
       });
     });
 
+    it('offers to hide the dataset view only while pretrained', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"]}'
+      );
+      await columnsLoaded();
+      const hideDatasetView = () =>
+        screen.queryByRole('checkbox', {
+          name: 'Hide the dataset view so students start on testing',
+        });
+      expect(hideDatasetView()).not.toBeInTheDocument();
+
+      fireEvent.click(pretrainedCheckbox());
+      fireEvent.click(hideDatasetView()!);
+      expect(JSON.parse(savedMode())).toMatchObject({
+        pretrained: true,
+        hideDatasetView: true,
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+      expect(hideDatasetView()).not.toBeInTheDocument();
+      expect(JSON.parse(savedMode())).not.toHaveProperty('hideDatasetView');
+    });
+
     it("reports a dataset whose columns don't load", async () => {
       serveFiles({});
       renderEditor('{"datasets": ["zoo"]}');

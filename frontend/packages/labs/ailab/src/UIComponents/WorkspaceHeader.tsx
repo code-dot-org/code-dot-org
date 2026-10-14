@@ -23,6 +23,9 @@ interface WorkspaceHeaderProps {
 const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
   const dispatch = useAppDispatch();
   const currentPanel = useAppSelector(state => state.currentPanel);
+  const hideDatasetView = useAppSelector(
+    state => !!state.mode?.hideDatasetView,
+  );
   const {project} = useProject();
   const canTest = useAppSelector(state =>
     isPanelEnabled(state, project, 'results'),
@@ -38,7 +41,7 @@ const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
 
   return (
     <div className={styles.header}>
-      {openTab && (
+      {openTab && !hideDatasetView && (
         <Tooltip
           title={
             canTest ? undefined : 'Train the model on these columns to test it'

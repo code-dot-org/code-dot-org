@@ -224,3 +224,21 @@ describe('prevNextButtons on the data panels', () => {
     expect(next).toBeUndefined();
   });
 });
+
+describe('prevNextButtons when the dataset view is hidden', () => {
+  beforeAll(() => {
+    I18n.initI18n();
+  });
+
+  test('saveModel goes back to the results', () => {
+    const {prev} = prevNextButtons(
+      {
+        ...resultsState,
+        currentPanel: 'saveModel',
+        mode: {pretrained: true, hideDatasetView: true},
+      },
+      trainedProject,
+    );
+    expect(prev).toMatchObject({panel: 'results', enabled: true});
+  });
+});

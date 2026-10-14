@@ -166,6 +166,14 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
             changeMode(newMode);
           }}
         />
+        {mode.pretrained === true && (
+          <div className={moduleStyles.booleanField}>
+            {renderCheckbox(
+              'hideDatasetView',
+              'Hide the dataset view so students start on testing'
+            )}
+          </div>
+        )}
       </div>
       <div className={moduleStyles.fieldArea}>
         <LabelField
