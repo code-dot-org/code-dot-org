@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "build:mobile": "tsc -b && vite build --config vite.mobile.config.ts",
     "dev": "vite dev",
+    "dev:mobile": "vite dev --config vite.mobile.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",

@@ -28,10 +28,10 @@ function renderApp(initialEntries: string[]): void {
   render(<RouterProvider router={testRouter} />);
 }
 
-describe('/launcher in the native build', () => {
+describe('/launcher in the mobile build', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.stubEnv('MODE', 'native');
+    vi.stubEnv('MODE', 'mobile');
   });
   afterEach(() => vi.unstubAllEnvs());
 

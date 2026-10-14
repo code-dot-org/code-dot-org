@@ -30,7 +30,7 @@ import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import SiteHeader from '@/components/header';
-import {isNativeBuild} from '@/config/buildMode';
+import {isMobileBuild} from '@/config/buildMode';
 import {
   fetchAuthOutcome,
   primeCsrfToken,
@@ -84,8 +84,8 @@ function RootContent() {
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
   const hideFooter = shouldHideFooter(useMatches());
-  // The native build draws no site chrome; the launcher has its own header.
-  const siteChrome = !isNativeBuild();
+  // The mobile build draws no site chrome; the launcher has its own header.
+  const siteChrome = !isMobileBuild();
 
   return (
     <>
@@ -169,8 +169,8 @@ export const Route = createRootRoute({
     ],
   }),
   beforeLoad: async () => {
-    // The native build runs from local files and never calls Rails.
-    if (isNativeBuild()) {
+    // The mobile build runs from local files and never calls Rails.
+    if (isMobileBuild()) {
       return {auth: {status: 'signed-out'} as AuthOutcome};
     }
     const auth = await fetchAuthOutcome();
