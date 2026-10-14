@@ -109,7 +109,10 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
         </div>
         <div
           className={styles.saved}
-          style={{height: PROJECT_UPDATED_AT_HEIGHT}}
+          style={{
+            height: PROJECT_UPDATED_AT_HEIGHT,
+            lineHeight: `${PROJECT_UPDATED_AT_HEIGHT}px`,
+          }}
         >
           {showSaved && <ProjectUpdatedAt />}
         </div>
