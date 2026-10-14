@@ -26,6 +26,8 @@ export default function useQuizAttemptView({
   } = levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
+  const viewAsUserId =
+    useAppSelector(state => state.progress.viewAsUserId) ?? undefined;
 
   return {
     resourcePanelProps: {},
@@ -35,6 +37,7 @@ export default function useQuizAttemptView({
         appName={appName}
         levelName={levelName}
         unitId={unitId}
+        viewAsUserId={viewAsUserId}
         quizQuestions={quizQuestions}
         allowMultipleAttempts={allowMultipleAttempts}
         displayName={displayName}

@@ -969,3 +969,33 @@ export const noRecommendedVersionsOfferings = {
     },
   },
 };
+
+/*
+The quick assign endpoint groups a featured course offering under a 'Recommended'
+header in place of the header the offering was assigned. HoC and HoAI ignore
+is_featured, so only the grade-band and PL views can carry a 'Recommended' group.
+*/
+
+const [featuredHighSchoolCourse, ...remainingYearLongCourses] =
+  highSchoolCourseOfferings.high.Course['Year Long'];
+
+export const highSchoolCourseOfferingsWithRecommended = {
+  high: {
+    Course: {
+      Recommended: [featuredHighSchoolCourse],
+      'Year Long': remainingYearLongCourses,
+    },
+    'Standalone Unit': highSchoolCourseOfferings.high['Standalone Unit'],
+  },
+};
+
+const [featuredPlCourse, ...remainingWorkshopCourses] =
+  plCourseOfferings.pl['6–12 Virtual Academic Year Workshops'];
+
+export const plCourseOfferingsWithRecommended = {
+  pl: {
+    Recommended: [featuredPlCourse],
+    '6–12 Virtual Academic Year Workshops': remainingWorkshopCourses,
+    'Self-Paced': plCourseOfferings.pl['Self-Paced'],
+  },
+};

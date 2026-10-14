@@ -24,6 +24,7 @@ export function arrayIntersection<T>(array1: T[], array2: T[]): T[] {
   return array1.filter(value => array2.includes(value));
 }
 
+// Returns a random integer from 0 (inclusive) to max (exclusive).
 export function getRandomInt(max: number): number {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -41,4 +42,8 @@ export function getNiceAxisStep(max: number, intervals: number): number {
   const multiplier =
     NICE_STEP_MULTIPLIERS.find(m => m * magnitude >= rawStep) ?? 10;
   return Math.max(1, multiplier * magnitude);
+}
+
+export function prefersReducedMotion(): boolean {
+  return !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }

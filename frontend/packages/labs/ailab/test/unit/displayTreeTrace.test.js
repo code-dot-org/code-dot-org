@@ -1,10 +1,14 @@
 import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
-import {traceDisplayTree} from '../../src/helpers/displayTreeTrace';
+import {
+  countDisplayTreeRows,
+  traceDisplayTree,
+} from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
-import {setTestData} from '../../src/redux';
+import {playPredictionStep, setTestData} from '../../src/redux';
 import {
   getDisplayTree,
+  getPredictionStep,
   getPredictionTrace,
 } from '../../src/selectors/visualizationSelectors';
 import {store} from '../../src/store';
@@ -19,34 +23,35 @@ const zooOptions = {
 
 describe('traceDisplayTree on a shipped dataset', () => {
   test('each step names the column, the row value and the branch taken', () => {
-    const state = trainDataset('zoo', zooOptions);
+    const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
 
-    rowTraces(state).forEach(({path, steps}, rowIndex) => {
-      const row = state.data[rowIndex];
+    rowTraces(state, project, trainedModel).forEach(
+      ({path, steps}, rowIndex) => {
+        const row = state.data[rowIndex];
 
-      expect(steps.length).toBeGreaterThan(0);
-      expect(path).toHaveLength(steps.length + 1);
-      steps.forEach((step, index) => {
-        expect(state.selectedFeatures).toContain(step.column);
-        expect(step.value).toBe(row[step.column]);
-        expect(step.nodeId).toBe(path[index]);
-        expect(path[index + 1]).toBe(
-          getChildNodeId(step.nodeId, step.branchIndex),
-        );
-      });
-    });
+        expect(steps.length).toBeGreaterThan(0);
+        expect(path).toHaveLength(steps.length + 1);
+        steps.forEach((step, index) => {
+          expect(project.selectedFeatures).toContain(step.column);
+          expect(step.value).toBe(row[step.column]);
+          expect(step.nodeId).toBe(path[index]);
+          expect(path[index + 1]).toBe(
+            getChildNodeId(step.nodeId, step.branchIndex),
+          );
+        });
+      },
+    );
   });
 
   test('the path names the placed nodes of the layout', () => {
-    const state = trainDataset('zoo', zooOptions);
+    const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
     const placedById = Object.fromEntries(
-      layoutDisplayTree(getDisplayTree(state)).nodes.map(placed => [
-        placed.id,
-        placed,
-      ]),
+      layoutDisplayTree(getDisplayTree(state, project, trainedModel)).nodes.map(
+        placed => [placed.id, placed],
+      ),
     );
 
-    rowTraces(state).forEach(({path, prediction}) => {
+    rowTraces(state, project, trainedModel).forEach(({path, prediction}) => {
       const placedNodes = path.map(id => placedById[id]);
 
       expect(placedNodes.every(Boolean)).toBe(true);
@@ -159,59 +164,127 @@ describe('traceDisplayTree', () => {
   });
 });
 
+describe('countDisplayTreeRows', () => {
+  const leaf = {distribution: [[1]]};
+  const model = {
+    splitColumn: 0,
+    splitValue: 0.5,
+    left: leaf,
+    right: {splitColumn: 0, splitValue: 1.5, left: leaf, right: leaf},
+  };
+  const tree = buildDisplayTree(
+    {name: 'DTClassifier', root: model},
+    {features: ['x'], featureNumberKey: {}, labelColumn: 'y'},
+  );
+
+  test('counts each row at every node on its path, by its grade', () => {
+    const counts = countDisplayTreeRows(
+      tree,
+      model,
+      [[0], [1], [2], [3]],
+      ['correct', 'incorrect', 'correct', 'correct'],
+    );
+
+    expect(Object.fromEntries(counts)).toEqual({
+      0: {correct: 3, incorrect: 1},
+      '0.0': {correct: 1, incorrect: 0},
+      0.1: {correct: 2, incorrect: 1},
+      '0.1.0': {correct: 0, incorrect: 1},
+      '0.1.1': {correct: 2, incorrect: 0},
+    });
+  });
+});
+
 describe('getPredictionTrace', () => {
   const fish = {Legs: '0', Feathers: 'No', Milk: 'No', Fins: 'Yes'};
   const mammal = {Legs: '4', Feathers: 'No', Milk: 'Yes', Fins: 'No'};
-  const predictWith = values => {
+  const predictWith = (values, project, trainedModel) => {
     Object.entries(values).forEach(([feature, value]) =>
       store.dispatch(setTestData(feature, value)),
     );
-    train.onClickPredict();
+    train.onClickPredict(trainedModel, project);
     return store.getState();
   };
 
   test('is the trace of the values the student predicted with', () => {
-    const state = trainDataset('zoo', zooOptions);
+    const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
     const row = state.data[0];
-    expect(getPredictionTrace(state)).toBeUndefined();
+    expect(getPredictionTrace(state, project, trainedModel)).toBeUndefined();
 
     const predicted = predictWith(
       Object.fromEntries(
         zooOptions.features.map(feature => [feature, String(row[feature])]),
       ),
+      project,
+      trainedModel,
     );
 
-    expect(getPredictionTrace(predicted)).toEqual(rowTraces(state)[0]);
+    expect(getPredictionTrace(predicted, project, trainedModel)).toEqual(
+      rowTraces(state, project, trainedModel)[0],
+    );
   });
 
   test('clears when a value changes, until the next prediction', () => {
-    trainDataset('zoo', zooOptions);
-    predictWith(fish);
-    expect(getPredictionTrace(store.getState())).toBeDefined();
+    const {project, trainedModel} = trainDataset('zoo', zooOptions);
+    predictWith(fish, project, trainedModel);
+    expect(
+      getPredictionTrace(store.getState(), project, trainedModel),
+    ).toBeDefined();
 
     store.dispatch(setTestData('Legs', '4'));
-    expect(getPredictionTrace(store.getState())).toBeUndefined();
+    expect(
+      getPredictionTrace(store.getState(), project, trainedModel),
+    ).toBeUndefined();
 
-    train.onClickPredict();
+    train.onClickPredict(trainedModel, project);
     const state = store.getState();
-    expect(getPredictionTrace(state).prediction).toBe(
-      getConvertedPredictedLabel(state),
+    expect(getPredictionTrace(state, project, trainedModel).prediction).toBe(
+      getConvertedPredictedLabel(state, project),
     );
   });
 
   test('keeps the values predicted with when the test data changes', () => {
-    trainDataset('zoo', zooOptions);
-    const predicted = predictWith(fish);
-    const trace = getPredictionTrace(predicted);
+    const {project, trainedModel} = trainDataset('zoo', zooOptions);
+    const predicted = predictWith(fish, project, trainedModel);
+    const trace = getPredictionTrace(predicted, project, trainedModel);
 
-    expect(getPredictionTrace({...predicted, testData: mammal})).toEqual(trace);
+    expect(
+      getPredictionTrace(
+        {...predicted, testData: mammal},
+        project,
+        trainedModel,
+      ),
+    ).toEqual(trace);
   });
 
   test('a KNN model has no trace', () => {
-    trainDataset('zoo', {...zooOptions, mode: {}});
-    const state = predictWith(fish);
+    const {project, trainedModel} = trainDataset('zoo', {
+      ...zooOptions,
+      mode: {},
+    });
+    const state = predictWith(fish, project, trainedModel);
 
     expect(state.prediction).toBeDefined();
-    expect(getPredictionTrace(state)).toBeUndefined();
+    expect(getPredictionTrace(state, project, trainedModel)).toBeUndefined();
+  });
+});
+
+describe('getPredictionStep', () => {
+  test('is the last step of the path until a step is chosen', () => {
+    const {project, trainedModel} = trainDataset('zoo', zooOptions);
+    const fish = {Legs: '0', Feathers: 'No', Milk: 'No', Fins: 'Yes'};
+    Object.entries(fish).forEach(([feature, value]) =>
+      store.dispatch(setTestData(feature, value)),
+    );
+    train.onClickPredict(trainedModel, project);
+    const {path} = getPredictionTrace(store.getState(), project, trainedModel);
+
+    expect(getPredictionStep(store.getState(), project, trainedModel)).toBe(
+      path.length - 1,
+    );
+
+    store.dispatch(playPredictionStep(0));
+
+    expect(getPredictionStep(store.getState(), project, trainedModel)).toBe(0);
   });
 });

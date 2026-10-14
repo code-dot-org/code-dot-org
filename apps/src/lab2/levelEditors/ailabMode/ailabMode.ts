@@ -10,12 +10,20 @@ export type ModeObject = Record<string, unknown>;
 // hideInstructionsOverlay is absent: Lab 2 never shows the overlay.
 export type BooleanModeKey =
   | 'hideSelectLabel'
+  | 'lockFeatures'
+  | 'pretrained'
+  | 'hideDatasetView'
+  | 'hideTestingView'
   | 'hideSave'
   | 'randomizeTestData'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
+  'lockFeatures',
+  'pretrained',
+  'hideDatasetView',
+  'hideTestingView',
   'hideSave',
   'hideColumnClicking',
   'randomizeTestData',
@@ -54,6 +62,17 @@ function isValidModeValue(
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
   }
+  if (key === 'label') {
+    return typeof value === 'string' && value !== '';
+  }
+  if (key === 'features') {
+    return (
+      Array.isArray(value) &&
+      value.length > 0 &&
+      value.every(feature => typeof feature === 'string' && feature !== '') &&
+      new Set(value).size === value.length
+    );
+  }
   if ((BOOLEAN_MODE_KEYS as string[]).includes(key)) {
     return typeof value === 'boolean';
   }
@@ -79,6 +98,122 @@ export function cleanMode(
 
 export function getSelectedDataset(mode: ModeObject): string | undefined {
   return Array.isArray(mode.datasets) ? mode.datasets[0] : undefined;
+}
+
+export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
+  const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
+  delete newMode.label;
+  delete newMode.features;
+  return newMode;
+}
+
+export function getFeatures(mode: ModeObject): string[] {
+  return (mode.features as string[] | undefined) ?? [];
+}
+
+export function getStartingLabel(
+  mode: ModeObject,
+  defaultLabel: string | undefined
+): string | undefined {
+  return (
+    (mode.label as string | undefined) ??
+    (mode.hideSelectLabel === true ? defaultLabel : undefined)
+  );
+}
+
+export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
+  return setJsonObjectValue(
+    mode,
+    'features',
+    features.length ? features : undefined
+  );
+}
+
+export function withoutLabelInFeatures(
+  mode: ModeObject,
+  defaultLabel: string | undefined
+): ModeObject {
+  const startingLabel = getStartingLabel(mode, defaultLabel);
+  return setFeatures(
+    mode,
+    getFeatures(mode).filter(feature => feature !== startingLabel)
+  );
+}
+
+// What pretraining sets each key to; undefined removes it.
+const SET_BY_PRETRAINED: ModeObject = {
+  hideSelectLabel: true,
+  lockFeatures: true,
+  randomizeTestData: undefined,
+  requireAccuracy: undefined,
+  hideTestingView: undefined,
+};
+
+export function isSetByPretrained(mode: ModeObject, key: string): boolean {
+  return mode.pretrained === true && key in SET_BY_PRETRAINED;
+}
+
+export function setPretrained(
+  mode: ModeObject,
+  pretrained: boolean,
+  defaultLabel?: string
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'pretrained',
+    pretrained ? true : undefined
+  );
+  if (pretrained) {
+    Object.assign(newMode, SET_BY_PRETRAINED);
+    newMode.label = getStartingLabel(newMode, defaultLabel);
+  } else {
+    delete newMode.hideDatasetView;
+  }
+  return newMode;
+}
+
+const SET_BY_HIDDEN_TESTING: ModeObject = {
+  requireAccuracy: undefined,
+  hideSave: undefined,
+  randomizeTestData: undefined,
+};
+
+export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
+  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
+}
+
+export function setHideTestingView(
+  mode: ModeObject,
+  hideTestingView: boolean
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'hideTestingView',
+    hideTestingView ? true : undefined
+  );
+  if (hideTestingView) {
+    Object.assign(newMode, SET_BY_HIDDEN_TESTING);
+  }
+  return newMode;
+}
+
+export function isMissingPretrainedColumns(
+  mode: ModeObject,
+  selectable: string[] | undefined
+): boolean {
+  // Before the columns load, only a column's presence can be checked.
+  const isSelectable = (column: unknown) =>
+    column !== undefined &&
+    (!selectable || selectable.includes(column as string));
+  const features = getFeatures(mode).filter(feature => feature !== mode.label);
+  return (
+    mode.pretrained === true &&
+    !(
+      isSelectable(mode.label) &&
+      features.length > 0 &&
+      features.every(isSelectable)
+    )
+  );
 }
 
 // Names the default trainer explicitly, so a saved Lab 2 level always records one.

@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-08T15:45:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\n\nprint(\"WHICH DOG MATCHES YOUR INNER PERSONALITY?\")\nprint(\"A just-for-fun quiz using fictional breed personas.\")\nprint(\"Enter 1 or 2 for each question.\\n\")\n\nenergy = input(\"Your ideal weekend: 1 = adventure, 2 = relaxing: \")\nwhile energy != \"1\" and energy != \"2\":\n    energy = input(\"Please enter 1 for adventure or 2 for relaxing: \")\n\nsocial = input(\"Recharge with: 1 = a group, 2 = time on your own: \")\nwhile social != \"1\" and social != \"2\":\n    social = input(\"Please enter 1 for a group or 2 for time alone: \")\n\npuzzles = input(\"A tricky puzzle appears: 1 = solve it, 2 = skip it: \")\nwhile puzzles != \"1\" and puzzles != \"2\":\n    puzzles = input(\"Please enter 1 to solve it or 2 to skip it: \")\n\n# Choose a base match using BOTH energy and social preference.\n# Every valid combination reaches a result.\nif energy == \"1\":\n    if social == \"1\":\n        breed = \"Golden Retriever\"\n        reason = \"Adventure is better with friends.\"\n    else:\n        breed = \"Siberian Husky\"\n        reason = \"You enjoy exploring your own way.\"\nelse:\n    if social == \"1\":\n        breed = \"Cavalier Spaniel\"\n        reason = \"A relaxed hangout is your happy place.\"\n    else:\n        breed = \"Shiba Inu\"\n        reason = \"You enjoy quiet time on your terms.\"\n\n# My special rule: ONLY adventurous puzzle fans get this match.\n# This replaces the base match because challenge matters most here.\nif energy == \"1\" and puzzles == \"1\":\n    breed = \"Border Collie\"\n    reason = \"You want adventure AND a challenge.\"\n\n# Show the same computed result in the console and Theater.\nprint(\"\\nYOUR INNER DOG: \" + breed)\nprint(reason)\n\n# Theater presentation: a dog portrait and a result card.\nclear(\"#E9F5F1\")\nremove_stroke_color()\nset_fill_color(\"#FFFFFF\")\ndraw_rectangle(20, 20, 360, 360)\nset_text_style(\"sans\", \"bold\")\nset_text_color(\"#24483F\")\nset_text_height(21)\ndraw_text(\"MEET YOUR INNER DOG\", 48, 57)\n\n# Floppy ears, a round face, and a muzzle.\nset_fill_color(\"#95643F\")\ndraw_ellipse(104, 90, 62, 116)\ndraw_ellipse(234, 90, 62, 116)\nset_fill_color(\"#E5B77C\")\ndraw_ellipse(133, 90, 134, 135)\nset_fill_color(\"#FFF0D8\")\ndraw_ellipse(167, 163, 66, 50)\nset_fill_color(\"#263E36\")\ndraw_ellipse(163, 139, 12, 16)\ndraw_ellipse(225, 139, 12, 16)\ndraw_ellipse(189, 170, 22, 15)\nset_stroke_color(\"#263E36\")\nset_stroke_width(2)\ndraw_line(200, 184, 200, 195)\ndraw_line(200, 195, 186, 201)\ndraw_line(200, 195, 214, 201)\n\nset_text_style(\"sans\", \"bold\")\nset_text_height(24)\ndraw_text(breed, 45, 265)\nset_text_style(\"sans\", \"normal\")\nset_text_height(14)\ndraw_text(reason, 45, 294)\nset_text_height(11)\ndraw_text(\"Just for fun. Every real dog is different.\", 45, 357)\nplay()\n\n# SAMPLE STUDENT TEST RECORD (constructed for this exemplar)\n# Inputs below are energy, social, puzzles, in that order.\n# Before running, I wrote down the result my rules should produce.\n# Expected result               | Observed result\n# 1,1,1 -> Border Collie         | Border Collie: PASS\n# 1,1,2 -> Golden Retriever      | Golden Retriever: PASS\n# 1,2,1 -> Border Collie         | Border Collie: PASS\n# 1,2,2 -> Siberian Husky        | Siberian Husky: PASS\n# 2,1,1 -> Cavalier Spaniel      | Cavalier Spaniel: PASS\n# 2,1,2 -> Cavalier Spaniel      | Cavalier Spaniel: PASS\n# 2,2,1 -> Shiba Inu             | Shiba Inu: PASS\n# 2,2,2 -> Shiba Inu             | Shiba Inu: PASS\n# I also tried blank, 3, and hello at each question. Each re-prompted.\n# Changing either part of my special rule can remove the override:\n# 1,1,1 -> Border Collie; 2,1,1 -> Cavalier; 1,1,2 -> Golden.\n# I compared the console and Theater text: they use the same result.\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-08 15:48:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-10-08 15:48:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-10-08 15:48:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-10-08 15:49:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

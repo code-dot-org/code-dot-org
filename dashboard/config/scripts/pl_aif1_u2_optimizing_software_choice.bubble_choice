@@ -1,0 +1,13 @@
+name 'pl-aif1-U2-optimizing-software-choice'
+display_name 'Optimizing Software'
+
+description 'Choose one of the clients below based on the career track of your interest. You will assist them in optimizing their devices. As a teacher, you are welcome to click around and explore a client just to see what the activity looks like. Follow along with the activity guide if you would like to complete it yourself, or simply observe how it works, there is no need to finish the whole thing to understand what your students will be doing.'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson5-amara2'
+level 'ai-and-the-systems-that-power-it-lesson5-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson5-denise'
+level 'ai-and-the-systems-that-power-it-lesson5-marcus'
+level 'ai-and-the-systems-that-power-it-lesson5-layla'
+
+uses_lab2

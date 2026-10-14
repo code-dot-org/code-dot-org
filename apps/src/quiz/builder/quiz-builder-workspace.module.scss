@@ -7,6 +7,11 @@
   padding: 24px;
   overflow-y: auto;
   box-sizing: border-box;
+  background: var(--background-neutral-secondary);
+}
+
+.introScreen {
+  flex-shrink: 0;
 }
 
 .header {
@@ -62,6 +67,19 @@
 
 .addPageButton {
   align-self: flex-start;
+
+  // .pageLabel sets its own color, so it misses the button's disabled color.
+  &:disabled .pageLabel {
+    color: var(--text-neutral-disabled);
+  }
+}
+
+.addQuestionRow {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  border: 1px dashed var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
 }
 
 .createButton {

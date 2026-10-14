@@ -7,12 +7,13 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
-import {parseCSV} from './csvReaderWrapper';
+import {invalidatePendingDatasetLoads} from './datasetLoad';
 import type {Dataset} from './datasetManifest';
 import {getAvailableDatasets, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
-import {parseJSON} from './jsonReaderWrapper';
+import {loadDataset} from './loadDataset';
+import {ProjectProvider} from './ProjectContext';
 import {
   setMode,
   setCurrentPanel,
@@ -23,10 +24,10 @@ import {
   setInstructionsDismissed,
   setInstructionsEnabled,
   resetState,
-  setHistoricResults,
 } from './redux';
 import {store} from './store';
 import train from './train';
+import {TrainingDataProvider} from './TrainingDataContext';
 import type {Mode} from './types';
 
 let root: Root | undefined;
@@ -68,11 +69,15 @@ export const mount = function (options: MountOptions): void {
   // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <ThemeProvider
-        theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
-      >
-        <App {...options} />
-      </ThemeProvider>
+      <ProjectProvider>
+        <TrainingDataProvider>
+          <ThemeProvider
+            theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
+          >
+            <App {...options} />
+          </ThemeProvider>
+        </TrainingDataProvider>
+      </ProjectProvider>
     </Provider>,
   );
 };
@@ -89,16 +94,19 @@ export const unmount = function (): void {
  * Prepare the lab for a level. Call this once per level after mount().
  */
 export const loadLevel = function (mode?: Mode): void {
-  store.dispatch(resetState());
-  train.reset();
-  store.dispatch(setMode(mode));
-  processMode(mode);
+  reload(mode, /*keepHistoricResults*/ false);
 };
 
 export const startOver = function (): void {
-  const {mode, historicResults} = store.getState();
-  loadLevel(mode);
-  store.dispatch(setHistoricResults(historicResults));
+  reload(store.getState().mode, /*keepHistoricResults*/ true);
+};
+
+const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
+  invalidatePendingDatasetLoads();
+  store.dispatch(resetState(keepHistoricResults));
+  train.reset();
+  store.dispatch(setMode(mode));
+  processMode(mode);
 };
 
 /**
@@ -136,13 +144,7 @@ const processMode = (mode: Mode | undefined): void => {
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
   store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-  // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
-  // directly and are fire-and-forget, so an in-flight load from a prior
-  // level/dataset can resolve after a newer loadLevel and clobber state.
-  parseCSV(assetPath + item.path, true, false);
-
-  // Also retrieve model metadata and set column data types.
-  parseJSON(assetPath + item.metadataPath);
+  loadDataset(assetPath + item.path, assetPath + item.metadataPath);
 
   store.dispatch(setCurrentPanel('datasetView'));
 };
@@ -150,11 +152,13 @@ const processMode = (mode: Mode | undefined): void => {
 // Export a few types.
 export type {
   InstructionsKey,
+  Metadata,
   Mode,
   ModelDataToSave,
   SaveResponse,
 } from './types';
 export {INSTRUCTIONS_KEYS} from './types';
+export {selectableColumns} from './helpers/columnDetails';
 export type {Lab2Instructions} from './lab2Instructions';
 export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';

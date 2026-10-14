@@ -10,16 +10,25 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
+  isSetByHiddenTesting,
+  isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
+  setDataset,
+  setHideTestingView,
+  withoutLabelInFeatures,
 } from './ailabMode';
+import {DatasetFiles} from './datasetColumns';
+import FeaturesField from './FeaturesField';
+import LabelField from './LabelField';
+import PretrainedField from './PretrainedField';
+import {useDatasetColumns} from './useDatasetColumns';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
 
-export interface AilabDataset {
-  id: string;
+export interface AilabDataset extends DatasetFiles {
   name: string;
   isToy?: boolean;
 }
@@ -33,11 +42,6 @@ interface AilabModeFieldsProps {
 }
 
 const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
-  {
-    key: 'hideSelectLabel',
-    label:
-      "Skip choosing a label; use the dataset's default label column instead",
-  },
   {key: 'hideSave', label: 'Hide the save model step'},
   {
     key: 'hideColumnClicking',
@@ -67,6 +71,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   );
 
   const selectedDataset = getSelectedDataset(mode);
+  const {columns, failed: columnsFailed} = useDatasetColumns(
+    datasets.find(dataset => dataset.id === selectedDataset)
+  );
 
   // A flat list, because a required select only treats a top-level empty option as unchosen.
   const datasetItems = [
@@ -85,11 +92,36 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
 
+  let columnsHelperMessage: string | undefined;
+  if (!selectedDataset) {
+    columnsHelperMessage = 'Choose a dataset first.';
+  } else if (!columns && !columnsFailed) {
+    columnsHelperMessage = "Loading the dataset's columns...";
+  }
+
+  const changeMode = (newMode: ModeObject) =>
+    onChange(withoutLabelInFeatures(newMode, columns?.defaultLabel));
+
+  const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
+    <Checkbox
+      name={`ailab_mode_${key}`}
+      label={checkboxLabel}
+      checked={mode[key] === true}
+      disabled={isSetByPretrained(mode, key) || isSetByHiddenTesting(mode, key)}
+      onChange={e =>
+        changeMode(
+          setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
+        )
+      }
+      size="s"
+    />
+  );
+
   const handleAccuracyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text = e.target.value;
     const accuracy = Number(text);
     setAccuracyText(text);
-    onChange(
+    changeMode(
       setJsonObjectValue(
         mode,
         'requireAccuracy',
@@ -117,9 +149,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           required
           items={datasetItems}
           selectedValue={selectedDataset ?? NO_DATASET}
-          onChange={e =>
-            onChange(setJsonObjectValue(mode, 'datasets', [e.target.value]))
-          }
+          onChange={e => changeMode(setDataset(mode, e.target.value))}
           helperMessage="Students start with this dataset loaded."
           errorMessage={
             selectedDataset
@@ -127,6 +157,65 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
               : 'Choose a dataset. The level cannot be saved without one.'
           }
           size="s"
+        />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <PretrainedField
+          mode={mode}
+          columns={columns}
+          onChange={newMode => {
+            setAccuracyText('');
+            changeMode(newMode);
+          }}
+        />
+        {mode.pretrained === true && (
+          <div className={moduleStyles.booleanField}>
+            {renderCheckbox(
+              'hideDatasetView',
+              'Hide the dataset view so students start on testing'
+            )}
+          </div>
+        )}
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="ailab_mode_hideTestingView"
+            label="Hide training and testing so students only explore the dataset"
+            checked={mode.hideTestingView === true}
+            disabled={isSetByPretrained(mode, 'hideTestingView')}
+            onChange={e => {
+              setAccuracyText('');
+              changeMode(setHideTestingView(mode, e.target.checked));
+            }}
+            size="s"
+          />
+        </div>
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <LabelField
+          mode={mode}
+          columns={columns}
+          columnsFailed={columnsFailed}
+          helperMessage={
+            columnsHelperMessage ?? 'The column students start out predicting.'
+          }
+          onChange={changeMode}
+        />
+        <div className={moduleStyles.booleanField}>
+          {renderCheckbox(
+            'hideSelectLabel',
+            'Lock the label so students cannot change it'
+          )}
+        </div>
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <FeaturesField
+          mode={mode}
+          columns={columns}
+          helperMessage={
+            columnsHelperMessage ??
+            'The columns students start out predicting from.'
+          }
+          onChange={changeMode}
         />
       </div>
 
@@ -140,7 +229,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
           onChange={e =>
-            onChange(setJsonObjectValue(mode, 'trainer', e.target.value))
+            changeMode(setJsonObjectValue(mode, 'trainer', e.target.value))
           }
           size="s"
         />
@@ -156,6 +245,10 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           step="any"
           value={accuracyText}
           onChange={handleAccuracyChange}
+          disabled={
+            isSetByPretrained(mode, 'requireAccuracy') ||
+            isSetByHiddenTesting(mode, 'requireAccuracy')
+          }
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
           size="s"
@@ -163,23 +256,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       </div>
 
       <div className={moduleStyles.fieldArea}>
-        {BOOLEAN_FIELDS.map(({key, label}) => (
+        {BOOLEAN_FIELDS.map(({key, label: checkboxLabel}) => (
           <div key={key} className={moduleStyles.booleanField}>
-            <Checkbox
-              name={`ailab_mode_${key}`}
-              label={label}
-              checked={mode[key] === true}
-              onChange={e =>
-                onChange(
-                  setJsonObjectValue(
-                    mode,
-                    key,
-                    e.target.checked ? true : undefined
-                  )
-                )
-              }
-              size="s"
-            />
+            {renderCheckbox(key, checkboxLabel)}
           </div>
         ))}
       </div>

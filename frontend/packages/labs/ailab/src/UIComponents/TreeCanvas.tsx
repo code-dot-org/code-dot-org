@@ -9,18 +9,22 @@ import {
   type ZoomTransform,
 } from 'd3-zoom';
 import {
+  createContext,
   type FocusEvent,
   type HTMLAttributes,
   type MutableRefObject,
   type ReactNode,
   type RefObject,
   type UIEvent,
+  useCallback,
+  useEffect,
   useLayoutEffect,
   useMemo,
   useRef,
 } from 'react';
 
 import {fitToView, panIntoView, type Rect} from '../helpers/fitToView';
+import {prefersReducedMotion} from '../helpers/utils';
 
 import ZoomButton from './ZoomButton';
 
@@ -36,9 +40,7 @@ const READABLE_SCALE = 1;
 const SCALE_PROPERTY = '--tree-canvas-scale';
 
 function zoomDuration(): number {
-  return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
-    ? 0
-    : ZOOM_DURATION_MS;
+  return prefersReducedMotion() ? 0 : ZOOM_DURATION_MS;
 }
 
 function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
@@ -104,10 +106,17 @@ function undoScroll({currentTarget}: UIEvent<HTMLElement>) {
   currentTarget.scrollLeft = 0;
 }
 
+type SubscribeToMoves = (onMove: () => void) => () => void;
+
+export const CanvasMoveContext = createContext<SubscribeToMoves>(
+  () => () => {},
+);
+
 interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
   contentWidth: number;
   contentHeight: number;
   pathBounds?: Rect;
+  followId?: string;
   overlayRef?: RefObject<HTMLElement>;
   toolbarTabbable?: boolean;
   hints?: ReactNode;
@@ -118,6 +127,7 @@ const TreeCanvas = ({
   contentWidth,
   contentHeight,
   pathBounds,
+  followId,
   overlayRef,
   toolbarTabbable = true,
   hints,
@@ -133,6 +143,7 @@ const TreeCanvas = ({
   const scaleTargetRef = useRef<number>();
   const panTargetRef = useRef<ZoomTransform>();
   const autoFitRef = useRef(true);
+  const moveListenersRef = useRef(new Set<() => void>());
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
     [contentWidth, contentHeight],
@@ -148,6 +159,7 @@ const TreeCanvas = ({
           autoFitRef.current = false;
         }
         content.style.transform = `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`;
+        moveListenersRef.current.forEach(onMove => onMove());
         const focused = document.activeElement;
         if (focused instanceof HTMLElement && content.contains(focused)) {
           focused.style.setProperty(SCALE_PROPERTY, String(transform.k));
@@ -185,6 +197,13 @@ const TreeCanvas = ({
     observer.observe(viewport);
     return () => observer.disconnect();
   }, [contentRect, overlayRef]);
+
+  const subscribeToMoves = useCallback((onMove: () => void) => {
+    moveListenersRef.current.add(onMove);
+    return () => {
+      moveListenersRef.current.delete(onMove);
+    };
+  }, []);
 
   const animate = () =>
     select(viewportRef.current!).transition().duration(zoomDuration());
@@ -224,16 +243,12 @@ const TreeCanvas = ({
     }
   };
 
-  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+  const showReadably = (element: HTMLElement) => {
     const viewport = viewportRef.current!;
     const toolbar = toolbarRef.current!;
     const current = zoomTransform(viewport);
-    target.style.setProperty(SCALE_PROPERTY, String(current.k));
-    if (!target.matches(':focus-visible')) {
-      return;
-    }
     const from = panTargetRef.current ?? current;
-    const box = boundingBox(target);
+    const box = boundingBox(element);
     const origin = contentRef.current!.getBoundingClientRect();
     const node = {
       x: (box.x - origin.left) / current.k,
@@ -266,6 +281,20 @@ const TreeCanvas = ({
     }
   };
 
+  const followFocus = ({target}: FocusEvent<HTMLElement>) => {
+    const scale = zoomTransform(viewportRef.current!).k;
+    target.style.setProperty(SCALE_PROPERTY, String(scale));
+    if (target.matches(':focus-visible')) {
+      showReadably(target);
+    }
+  };
+
+  useEffect(() => {
+    if (followId) {
+      showReadably(document.getElementById(followId)!);
+    }
+  }, [followId]);
+
   return (
     <div
       {...rootProps}
@@ -275,7 +304,9 @@ const TreeCanvas = ({
       {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- it only watches focus rising from the tree's nodes */}
       <div ref={viewportRef} className={styles.viewport} onFocus={followFocus}>
         <div ref={contentRef} className={styles.content}>
-          {children}
+          <CanvasMoveContext.Provider value={subscribeToMoves}>
+            {children}
+          </CanvasMoveContext.Provider>
         </div>
       </div>
       <div

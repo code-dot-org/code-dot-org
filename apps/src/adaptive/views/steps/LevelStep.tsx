@@ -3,17 +3,21 @@
 // shares among levels naming the same project template, so a sandbox level
 // and a project level differ only in what levelbuilder says about them.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {Suspense, useEffect, useMemo, useState} from 'react';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   Lab2EntryPoint,
   LevelProperties,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {ExternalNavigationContext} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {buildTutorContext} from '../../ai/tutorContext';
@@ -36,21 +40,26 @@ interface LevelStepProps {
   onComplete: () => void;
 }
 
+/** A level step whose level the server resolved. */
+type PlayableLevelStep = LevelStepContent & {levelProperties: LevelProperties};
+
+const isPlayable = (step: LevelStepContent): step is PlayableLevelStep =>
+  step.levelProperties !== undefined;
+
 const LevelStep: React.FunctionComponent<LevelStepProps> = ({
   step,
   continueLabel,
   onComplete,
 }) => {
-  const {levelProperties} = step;
   const View =
-    levelProperties && lab2EntryPoints[levelProperties.appName]?.view;
+    step.levelProperties && lab2EntryPoints[step.levelProperties.appName]?.view;
 
-  if (!levelProperties || !View) {
+  if (!isPlayable(step) || !View) {
     return (
       <div className={styles.stepFallback}>
         <MuiTypography variant="body3" className={shared.muted}>
-          {levelProperties
-            ? `No lab here can play '${levelProperties.appName}' levels.`
+          {step.levelProperties
+            ? `No lab here can play '${step.levelProperties.appName}' levels.`
             : `Level '${step.level}' was not found.`}
         </MuiTypography>
         <MuiButton variant="contained" onClick={onComplete}>
@@ -62,28 +71,29 @@ const LevelStep: React.FunctionComponent<LevelStepProps> = ({
 
   return (
     <div className={styles.levelStep}>
-      <LevelPlayer step={step} levelProperties={levelProperties} View={View} />
-      <div className={styles.stepFooter}>
-        <MuiButton variant="contained" size="small" onClick={onComplete}>
-          {continueLabel}
-        </MuiButton>
-      </div>
+      <LevelPlayer
+        step={step}
+        View={View}
+        continueLabel={continueLabel}
+        onComplete={onComplete}
+      />
     </div>
   );
 };
 
-interface LevelPlayerProps {
-  step: LevelStepContent;
-  levelProperties: LevelProperties;
+type LevelPlayerProps = LevelStepProps & {
+  step: PlayableLevelStep;
   View: Lab2EntryPoint['view'];
-}
+};
 
 /** Loads the level's project, then mounts the lab view over it. */
 const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   step,
-  levelProperties,
   View,
+  continueLabel,
+  onComplete,
 }) => {
+  const {levelProperties} = step;
   const {currentSources, channel, projectManager, loadError} = useSources({
     levelProperties,
     defaultSources: EMPTY_SOURCES,
@@ -130,6 +140,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     });
     const own = levelProperties.levelSystemPrompt;
     return {
+      // Default to pinning, but let the level override if needed.
+      showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
       longInstructions: instructions,
@@ -145,6 +157,23 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectDescription,
     instructions,
   ]);
+
+  // The lab's own Continue button advances the step.
+  const navigation = useMemo(
+    () => ({
+      label: continueLabel,
+      enabled: true,
+      endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
+      onContinue: onComplete,
+    }),
+    [continueLabel, onComplete]
+  );
+
+  // Stands in for ProjectContainer's level-change reset, which steps bypass.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(resetProjectMetadata());
+  }, [dispatch]);
 
   // The lab saves through the registry, so the manager must be registered
   // before the lab mounts and reads it. The hook flushes saves on unmount.
@@ -186,13 +215,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   return (
     <div className={styles.levelHost}>
       {ready ? (
-        <Suspense fallback={<Loading isLoading />}>
-          <View
-            levelProperties={viewProperties}
-            initialSources={initialSources}
-            channel={channel}
-          />
-        </Suspense>
+        <ExternalNavigationContext.Provider value={navigation}>
+          <Suspense fallback={<Loading isLoading />}>
+            <View
+              levelProperties={viewProperties}
+              initialSources={initialSources}
+              channel={channel}
+            />
+          </Suspense>
+        </ExternalNavigationContext.Provider>
       ) : (
         <Loading isLoading loadingText={loadingText} />
       )}

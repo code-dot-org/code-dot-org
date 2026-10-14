@@ -83,6 +83,24 @@ describe('QuestionResultCard', () => {
     ).not.toBeInTheDocument();
   });
 
+  it("labels the selection as the student's answer for a teacher viewing a student", () => {
+    renderCard(
+      {selectedChoiceId: '2', correct: false, correctChoiceId: '1'},
+      {isViewingStudent: true}
+    );
+    expect(
+      within(choiceItem('Five')).getByText("Student's answer, incorrect")
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/Your answer/)).not.toBeInTheDocument();
+  });
+
+  it("labels an ungraded selection as the student's answer for a teacher viewing a student", () => {
+    renderCard({selectedChoiceId: '0'}, {isViewingStudent: true});
+    expect(
+      within(choiceItem('Three')).getByText("Student's answer", {exact: true})
+    ).toBeInTheDocument();
+  });
+
   it('marks no choice as selected when the question was skipped', () => {
     renderCard();
 
@@ -105,6 +123,15 @@ describe('QuestionResultCard', () => {
     expect(
       screen.queryByText('Your answer', {exact: true})
     ).not.toBeInTheDocument();
+  });
+
+  it('renders the question description as markdown', () => {
+    renderCard(
+      {},
+      {question: {...QUESTION, description: 'Count **carefully**.'}}
+    );
+
+    expect(screen.getByText('carefully').tagName).toBe('STRONG');
   });
 
   describe('answer explanation', () => {

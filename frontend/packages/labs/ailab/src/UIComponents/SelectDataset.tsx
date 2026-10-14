@@ -3,10 +3,11 @@ import classNames from 'classnames';
 
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
+import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {parseJSON} from '../jsonReaderWrapper';
+import {loadDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
@@ -53,15 +54,15 @@ const SelectDataset = () => {
       setSelectedCSV(csvPath);
       setSelectedJSON(jsonPath);
 
-      parseCSV(csvPath, true, false);
-
-      parseJSON(jsonPath);
+      invalidatePendingDatasetLoads();
+      loadDataset(csvPath, jsonPath);
     }
   };
 
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     resetState();
     setSelectedCSV(event.target.files![0]);
+    invalidatePendingDatasetLoads();
     parseCSV(event.target.files![0] as unknown as string, false, true);
   };
 
