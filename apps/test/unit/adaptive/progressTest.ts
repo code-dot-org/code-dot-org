@@ -137,6 +137,7 @@ describe('useProgress', () => {
   const fakeStore = (loaded: Progress = EMPTY_PROGRESS) => ({
     load: jest.fn().mockResolvedValue(loaded),
     saveStep: jest.fn().mockResolvedValue(undefined),
+    saveInstructions: jest.fn().mockResolvedValue(undefined),
     reset: jest.fn().mockResolvedValue(undefined),
   });
 
@@ -263,9 +264,7 @@ describe('useProgress', () => {
 
     expect(result.current.stepContextMap.try.generated).toEqual(generated);
     expect(result.current.statusMap.intro).toBe('available');
-    expect(store.saveStep).toHaveBeenCalledWith(key, 'try', {
-      generatedInstructions: generated,
-    });
+    expect(store.saveInstructions).toHaveBeenCalledWith(key, 'try', generated);
   });
 
   it('restores loaded generated instructions', async () => {

@@ -12,18 +12,22 @@ export interface ProgressKey {
   levelId: number;
 }
 
-/** One save of a step; a level step may carry only generatedInstructions. */
+/** One save of a non-level step; the server sets times only once. */
 export interface StepWrite {
   started?: true;
   completed?: true;
   timeSinceLastSave?: number;
   answers?: {questionId: number | string; list: Answer[]};
-  generatedInstructions?: GeneratedContent;
 }
 
 export interface ProgressStore {
   load(key: ProgressKey): Promise<Progress>;
   saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void>;
+  saveInstructions(
+    key: ProgressKey,
+    stepId: string,
+    content: GeneratedContent
+  ): Promise<void>;
   reset(key: ProgressKey): Promise<void>;
 }
 
@@ -45,6 +49,18 @@ export function createServerProgressStore(
     );
     return chain;
   };
+  const putStep = (
+    key: ProgressKey,
+    stepId: string,
+    route: string,
+    body: object
+  ) =>
+    http.put(
+      `/adaptive_progress/steps/${encodeURIComponent(stepId)}/${route}`,
+      JSON.stringify({...key, ...body}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
 
   return {
     async load(key) {
@@ -55,12 +71,15 @@ export function createServerProgressStore(
 
     saveStep(key, stepId, write) {
       return enqueue(`save ${stepId}`, () =>
-        http.put(
-          `/adaptive_progress/steps/${encodeURIComponent(stepId)}/progress`,
-          JSON.stringify({...key, ...write}),
-          true,
-          {'Content-Type': 'application/json'}
-        )
+        putStep(key, stepId, 'progress', write)
+      );
+    },
+
+    saveInstructions(key, stepId, content) {
+      return enqueue(`save instructions for ${stepId}`, () =>
+        putStep(key, stepId, 'generated_instructions', {
+          generatedInstructions: content,
+        })
       );
     },
 

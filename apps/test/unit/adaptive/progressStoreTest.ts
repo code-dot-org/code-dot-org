@@ -73,11 +73,11 @@ describe('createServerProgressStore', () => {
     const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
 
     store.saveStep(key, 'read', {started: true});
-    await store.saveStep(key, 'project', {generatedInstructions});
+    await store.saveInstructions(key, 'project', generatedInstructions);
 
     expect(http.put.mock.calls.map(call => call[0])).toEqual([
-      '/adaptive_progress/steps/read',
-      '/adaptive_progress/steps/project',
+      '/adaptive_progress/steps/read/progress',
+      '/adaptive_progress/steps/project/generated_instructions',
     ]);
     expect(JSON.parse(http.put.mock.calls[1][1])).toEqual({
       ...key,

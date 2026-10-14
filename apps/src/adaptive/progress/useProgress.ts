@@ -181,7 +181,7 @@ export function useProgress(
         ...entry,
         generatedInstructions: content,
       }));
-      store.saveStep({scriptId, levelId}, id, {generatedInstructions: content});
+      store.saveInstructions({scriptId, levelId}, id, content);
     },
     [updateStep, store, scriptId, levelId]
   );
