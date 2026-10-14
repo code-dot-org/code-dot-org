@@ -152,3 +152,38 @@ describe('train.cancel', () => {
     );
   });
 });
+
+describe('the accuracy-check split', () => {
+  // How train.init divides a dataset of this many rows.
+  const splitOf = rowCount => {
+    const store = createStore(rootReducer);
+    const rows = Array.from({length: rowCount}, (_unused, index) => ({
+      animal: index % 2 ? 'bird' : 'dog',
+      legs: String(index),
+    }));
+
+    store.dispatch(setImportedData(rows, false));
+    store.dispatch(setColumnsByDataType('animal', ColumnTypes.CATEGORICAL));
+    store.dispatch(setColumnsByDataType('legs', ColumnTypes.NUMERICAL));
+    train.init(store, {
+      ...initialProject,
+      labelColumn: 'animal',
+      selectedFeatures: ['legs'],
+    });
+
+    const {accuracyCheckExamples, trainingExamples} = store.getState();
+    return {
+      heldBack: accuracyCheckExamples.length,
+      trainedOn: trainingExamples.length,
+    };
+  };
+
+  test('rounds the held-back count up', () => {
+    expect(splitOf(21)).toEqual({heldBack: 3, trainedOn: 18});
+  });
+
+  // Rounding to nearest would leave a small dataset nothing to grade against.
+  test('holds a row back even when a tenth of the dataset is under one', () => {
+    expect(splitOf(4)).toEqual({heldBack: 1, trainedOn: 3});
+  });
+});

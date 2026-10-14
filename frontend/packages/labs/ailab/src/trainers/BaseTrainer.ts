@@ -76,9 +76,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   }
 
   /*
-    Builds the one model the given hyperparameters describe, rather than
-    sweeping for the best. A saved project records what its run settled on, and
-    re-running the sweep could answer differently if the candidates ever change.
+    Builds the one model the given hyperparameters describe.
   */
   rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined {
     const state = this.store.getState();

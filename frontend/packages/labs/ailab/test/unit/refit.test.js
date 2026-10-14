@@ -168,23 +168,36 @@ describe('train.refit', () => {
   });
 
   test('builds what the saved hyperparameters ask for, without sweeping again', () => {
-    const {saved} = trainAndSave(
+    const {run, saved} = trainAndSave(
       {trainer: 'decisionTree'},
       TestDataLocations.END,
     );
-    const shallower = {...saved, hyperparameters: {maxDepth: 1}};
+    // The sweep settles on maxDepth 1 for this fixture, so asking for a deeper
+    // tree is the only way to tell a rebuild apart from a second sweep.
+    const deeper = {...saved, hyperparameters: {maxDepth: 8}};
 
     train.reset();
     const refit = train.refit(
       loadedStore({trainer: 'decisionTree'}, TestDataLocations.END),
-      shallower,
+      deeper,
     );
 
-    expect(refit.hyperparameters).toEqual({maxDepth: 1});
+    expect(refit.hyperparameters).toEqual({maxDepth: 8});
+    expect(refit.trainedModel.toJSON()).not.toEqual(run.trainedModel.toJSON());
   });
 
   test('cannot rebuild a project that never trained', () => {
     const store = loadedStore(undefined, TestDataLocations.END);
     expect(train.refit(store, PROJECT)).toBeUndefined();
+  });
+
+  // Half a saved run is no more use than none: the hyperparameters say what to
+  // build and the row indices say what to build it on.
+  test.each([
+    ['hyperparameters', {accuracyCheckRowIndices: [18, 19]}],
+    ['the rows it was graded against', {hyperparameters: {k: 3}}],
+  ])('cannot rebuild a project saved without %s', (_missing, half) => {
+    const store = loadedStore(undefined, TestDataLocations.END);
+    expect(train.refit(store, {...PROJECT, ...half})).toBeUndefined();
   });
 });

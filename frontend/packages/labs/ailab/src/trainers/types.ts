@@ -31,7 +31,6 @@ export type TrainerId =
   | typeof TreeClassificationTrainer
   | typeof TreeRegressionTrainer;
 
-/* What one training run produces. */
 /* What a trainer makes of the data it was given. */
 export interface TrainerOutput {
   trainedModel: TrainedModel;
@@ -39,7 +38,7 @@ export interface TrainerOutput {
   historicResult: HistoricResult;
 }
 
-/* A whole run, as train.ts reports it: it owns the split, so it adds it. */
+/* What one training run produces. */
 export interface TrainingRun extends TrainerOutput {
   accuracyCheckRowIndices: number[];
 }
