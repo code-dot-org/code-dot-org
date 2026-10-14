@@ -137,6 +137,7 @@ class QuizAttemptsController < ApplicationController
         {
           quizQuestionId: result[:quiz_question_id],
           selectedChoiceId: result[:selected_choice_id],
+          answerText: result[:answer_text],
           correct: result[:correct],
           explanation: result[:explanation],
           correctChoiceId: result[:correct_choice_id]
@@ -146,7 +147,8 @@ class QuizAttemptsController < ApplicationController
       questionResultsInProgress: attempt.question_results_in_progress&.map do |question_result|
         {
           quizQuestionId: question_result[:quiz_question_id],
-          selectedChoiceId: question_result[:selected_choice_id]
+          selectedChoiceId: question_result[:selected_choice_id],
+          answerText: question_result[:answer_text]
         }
       end
     }

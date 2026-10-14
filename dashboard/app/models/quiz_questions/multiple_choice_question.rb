@@ -38,6 +38,10 @@ class MultipleChoiceQuestion < QuizQuestion
   end
 
   # response_data shape: {"selectedChoiceId" => "b"}
+  def answered?(response_data)
+    response_data['selectedChoiceId'].present?
+  end
+
   def grade(response_data)
     selected = response_data.is_a?(Hash) ? response_data['selectedChoiceId'] : nil
     correct = selected.present? && selected == content['correct_choice_id']
