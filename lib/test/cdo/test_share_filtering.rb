@@ -116,6 +116,20 @@ class ShareFilteringTest < Minitest::Test
     assert_nil ShareFiltering.find_share_failure(program, 'en', 'playlab', exceptions: true)
   end
 
+  def test_find_failure_skip_address
+    Gatekeeper.stubs(:allows).returns(true)
+    ProfanityFilter.stubs(:find_potential_profanity).returns(nil)
+    text = '1600 Pennsylvania Ave NW, Washington, DC 20500'
+    Geocoder.stubs(:find_potential_street_address).returns(text)
+
+    assert_equal ShareFiltering::FailureType::ADDRESS, ShareFiltering.find_failure(text, 'en').type
+    assert_nil ShareFiltering.find_failure(text, 'en', skip_address: true)
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
+      ShareFiltering.find_failure("#{text} 123-456-7890", 'en', skip_address: true)
+    )
+  end
+
   def test_find_share_failure_with_phone_number
     Geocoder.
       stubs(:find_potential_street_address).

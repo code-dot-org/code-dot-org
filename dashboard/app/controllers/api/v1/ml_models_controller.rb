@@ -27,7 +27,10 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
       profanity_or_pii = ShareFiltering.find_failure(
         model_data.except(:trainedModel).to_s,
         I18n.locale.to_s,
-        PROFANITY_FILTER_REPLACE_TEXT_LIST
+        PROFANITY_FILTER_REPLACE_TEXT_LIST,
+        # Curated dataset descriptions have read as street addresses to the geocoder.
+        # Skip the street address check to avoid false positives on ordinary text.
+        skip_address: true
       )
     rescue OpenURI::HTTPError => exception
       share_filtering_error = exception

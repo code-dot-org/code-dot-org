@@ -369,13 +369,19 @@ module ShareFiltering
   # @param [String] text The text to search through.
   # @param [String] locale a two-character ISO 639-1 language code
   # @param [Hash] A set of text to replace before performing a profanity check.
+  # @param [Boolean] skip_address skip the street address check.
   # @return [ShareFailure, nil]
-  def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
+  def self.find_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false, skip_address: false)
     # We only fail programs when the webpurity service is enabled
     return nil unless Gatekeeper.allows('webpurify', default: true)
 
     # First, check for PII issues
-    pii_failure = find_pii_failure(text, exceptions: exceptions)
+    pii_failure =
+      if skip_address
+        find_email_or_phone_failure(text, exceptions: exceptions)
+      else
+        find_pii_failure(text, exceptions: exceptions)
+      end
     return pii_failure if pii_failure
 
     # Search for profanity
