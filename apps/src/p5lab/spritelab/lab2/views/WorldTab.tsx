@@ -719,9 +719,12 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     1,
     Math.ceil(selections.length / paletteRows)
   );
-  const paletteStyle = {
+  // On the column, so the gap between New and the palette is the palette's.
+  const paletteVars = {
     '--palette-item': `${PALETTE_ITEM_PX}px`,
     '--palette-gap': `${PALETTE_GAP_PX}px`,
+  } as React.CSSProperties;
+  const paletteStyle = {
     gridTemplateRows: `repeat(${paletteRows}, ${PALETTE_ITEM_PX}px)`,
     width:
       paletteColumns * PALETTE_ITEM_PX + (paletteColumns - 1) * PALETTE_GAP_PX,
@@ -856,7 +859,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   };
   return (
     <div className={moduleStyles.worldTab}>
-      <div className={moduleStyles.worldPaletteColumn}>
+      <div className={moduleStyles.worldPaletteColumn} style={paletteVars}>
         {onNewPicture && (
           <button
             type="button"
