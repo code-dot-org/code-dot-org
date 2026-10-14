@@ -12,7 +12,7 @@ export interface Mode {
   // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
   lockFeatures?: boolean;
-  // Trains on `label` and `features` when the level loads. Requires both locks.
+  // Trains on `label` and `features` when the level loads. Requires both locks and `reserveLastRows`.
   pretrained?: boolean;
   // Opens on the results once pretrained, with no way back. Requires `pretrained`.
   hideDatasetView?: boolean;
@@ -21,8 +21,7 @@ export interface Mode {
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
-  // Unset reserves random rows. Must be false when `pretrained`.
-  randomizeTestData?: boolean;
+  reserveLastRows?: boolean;
   hideColumnClicking?: boolean;
 }
 

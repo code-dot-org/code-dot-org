@@ -15,7 +15,7 @@ export type BooleanModeKey =
   | 'hideDatasetView'
   | 'hideTestingView'
   | 'hideSave'
-  | 'randomizeTestData'
+  | 'reserveLastRows'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
@@ -26,7 +26,7 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideTestingView',
   'hideSave',
   'hideColumnClicking',
-  'randomizeTestData',
+  'reserveLastRows',
 ];
 
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
@@ -144,7 +144,7 @@ export function withoutLabelInFeatures(
 const SET_BY_PRETRAINED: ModeObject = {
   hideSelectLabel: true,
   lockFeatures: true,
-  randomizeTestData: false,
+  reserveLastRows: true,
   requireAccuracy: undefined,
   hideTestingView: undefined,
 };
@@ -183,7 +183,7 @@ export function isDisabledByHiddenTesting(
 ): boolean {
   return (
     mode.hideTestingView === true &&
-    (key in SET_BY_HIDDEN_TESTING || key === 'randomizeTestData')
+    (key in SET_BY_HIDDEN_TESTING || key === 'reserveLastRows')
   );
 }
 

@@ -48,8 +48,8 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
     label: 'Disable clicking and highlighting columns in the data table',
   },
   {
-    key: 'randomizeTestData',
-    label: 'Reserve random rows for testing instead of the last rows',
+    key: 'reserveLastRows',
+    label: 'Reserve the last rows for testing instead of random rows',
   },
 ];
 
@@ -60,7 +60,7 @@ const TRAINER_ITEMS = [
   {value: 'decisionTree', text: 'Decision tree'},
 ];
 
-const accuracyTextOf = (mode: ModeObject) =>
+const getAccuracyText = (mode: ModeObject) =>
   isValidAccuracy(mode.requireAccuracy) ? String(mode.requireAccuracy) : '';
 
 const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
@@ -69,7 +69,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   removed,
   onChange,
 }) => {
-  const [accuracyText, setAccuracyText] = useState(() => accuracyTextOf(mode));
+  const [accuracyText, setAccuracyText] = useState(() => getAccuracyText(mode));
 
   const selectedDataset = getSelectedDataset(mode);
   const {columns, failed: columnsFailed} = useDatasetColumns(
@@ -103,29 +103,22 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const changeMode = (newMode: ModeObject) =>
     onChange(withoutLabelInFeatures(newMode, columns?.defaultLabel));
 
-  const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => {
-    const defaultChecked = key === 'randomizeTestData';
-    return (
-      <Checkbox
-        name={`ailab_mode_${key}`}
-        label={checkboxLabel}
-        checked={(mode[key] ?? defaultChecked) === true}
-        disabled={
-          isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
-        }
-        onChange={e =>
-          changeMode(
-            setJsonObjectValue(
-              mode,
-              key,
-              e.target.checked === defaultChecked ? undefined : e.target.checked
-            )
-          )
-        }
-        size="s"
-      />
-    );
-  };
+  const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
+    <Checkbox
+      name={`ailab_mode_${key}`}
+      label={checkboxLabel}
+      checked={mode[key] === true}
+      disabled={
+        isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
+      }
+      onChange={e =>
+        changeMode(
+          setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
+        )
+      }
+      size="s"
+    />
+  );
 
   const handleAccuracyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text = e.target.value;
@@ -174,7 +167,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           mode={mode}
           columns={columns}
           onChange={newMode => {
-            setAccuracyText(accuracyTextOf(newMode));
+            setAccuracyText(getAccuracyText(newMode));
             changeMode(newMode);
           }}
         />

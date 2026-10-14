@@ -57,11 +57,11 @@ describe('loadLevel', () => {
     expect(store.getState().resetKeepsHistoricResults).toBe(false);
   });
 
-  test('reserves random rows for testing unless the mode turns them off', () => {
+  test('reserves random rows for testing unless the mode asks for the last rows', () => {
     loadLevel(undefined);
     expect(store.getState().reserveLocation).toBe('random');
 
-    loadLevel({randomizeTestData: false});
+    loadLevel({reserveLastRows: true});
     expect(store.getState().reserveLocation).toBe('end');
   });
 });

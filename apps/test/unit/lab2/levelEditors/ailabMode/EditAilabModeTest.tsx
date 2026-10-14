@@ -255,18 +255,18 @@ describe('EditAilabMode', () => {
 
   it('drops the training options saved with the testing view hidden', () => {
     const savedMode = renderEditor(
-      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "randomizeTestData": false}'
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "reserveLastRows": true}'
     );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
-      randomizeTestData: false,
+      reserveLastRows: true,
     });
   });
 
   it('clears and locks the training options while the testing view is hidden', () => {
     const savedMode = renderEditor(
-      '{"requireAccuracy": 70, "hideSave": true, "randomizeTestData": false}'
+      '{"requireAccuracy": 70, "hideSave": true, "reserveLastRows": true}'
     );
     const accuracy = screen.getByRole('spinbutton', {
       name: /Required accuracy/,
@@ -274,31 +274,31 @@ describe('EditAilabMode', () => {
     const hideSave = screen.getByRole('checkbox', {
       name: 'Hide the save model step',
     });
-    const randomRows = screen.getByRole('checkbox', {
-      name: 'Reserve random rows for testing instead of the last rows',
+    const lastRows = screen.getByRole('checkbox', {
+      name: 'Reserve the last rows for testing instead of random rows',
     });
     const hideTestingView = screen.getByRole('checkbox', {
       name: 'Hide training and testing so students only explore the dataset',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, randomRows].forEach(field =>
+    [accuracy, hideSave, lastRows].forEach(field =>
       expect(field).toBeDisabled()
     );
     expect(accuracy).toHaveValue(null);
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
-      randomizeTestData: false,
+      reserveLastRows: true,
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, randomRows].forEach(field =>
+    [accuracy, hideSave, lastRows].forEach(field =>
       expect(field).toBeEnabled()
     );
     expect(JSON.parse(savedMode())).toEqual({
       trainer: 'knn',
-      randomizeTestData: false,
+      reserveLastRows: true,
     });
   });
 
@@ -374,23 +374,6 @@ describe('EditAilabMode', () => {
       trainer: 'decisionTree',
       requireAccuracy: 90,
     });
-  });
-
-  it('reserves random test rows unless unchecked', () => {
-    const savedMode = renderEditor(null);
-    const randomRows = screen.getByRole('checkbox', {
-      name: 'Reserve random rows for testing instead of the last rows',
-    });
-    expect(randomRows).toBeChecked();
-
-    fireEvent.click(randomRows);
-    expect(JSON.parse(savedMode())).toEqual({
-      trainer: 'knn',
-      randomizeTestData: false,
-    });
-
-    fireEvent.click(randomRows);
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
   it('requires a dataset until one is chosen', () => {
@@ -675,16 +658,16 @@ describe('EditAilabMode', () => {
       expect(featuresLock()).toBeValid();
     });
 
-    it('pretrains with both locks in place of random test rows and a required accuracy, then restores them', async () => {
+    it('pretrains with both locks and the last rows in place of a required accuracy, then restores them', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "requireAccuracy": 80}'
       );
       await columnsLoaded();
       const labelLock = screen.getByRole('checkbox', {
         name: 'Lock the label so students cannot change it',
       });
-      const randomRows = screen.getByRole('checkbox', {
-        name: 'Reserve random rows for testing instead of the last rows',
+      const lastRows = screen.getByRole('checkbox', {
+        name: 'Reserve the last rows for testing instead of random rows',
       });
       const accuracy = screen.getByRole('spinbutton', {
         name: /Required accuracy/,
@@ -700,9 +683,9 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
-        randomizeTestData: false,
+        reserveLastRows: true,
       });
-      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+      [labelLock, featuresLock(), lastRows, accuracy].forEach(field =>
         expect(field).toBeDisabled()
       );
       expect(accuracy).toHaveValue(null);
@@ -714,13 +697,12 @@ describe('EditAilabMode', () => {
         trainer: 'knn',
         label: 'animal',
         features: ['legs'],
-        randomizeTestData: true,
         requireAccuracy: 80,
       });
-      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+      [labelLock, featuresLock(), lastRows, accuracy].forEach(field =>
         expect(field).toBeEnabled()
       );
-      expect(randomRows).toBeChecked();
+      expect(lastRows).not.toBeChecked();
       expect(accuracy).toHaveValue(80);
     });
 
@@ -810,14 +792,14 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
-        randomizeTestData: false,
+        reserveLastRows: true,
       });
       expect(pretrainedCheckbox()).toBeValid();
     });
 
     it('locks a saved pretrained level and drops the settings pretraining replaces', () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "reserveLastRows": false, "requireAccuracy": 80}'
       );
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
@@ -827,7 +809,7 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
-        randomizeTestData: false,
+        reserveLastRows: true,
       });
     });
 
