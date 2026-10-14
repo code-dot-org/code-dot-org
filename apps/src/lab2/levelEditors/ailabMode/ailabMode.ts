@@ -144,7 +144,7 @@ export function withoutLabelInFeatures(
 const SET_BY_PRETRAINED: ModeObject = {
   hideSelectLabel: true,
   lockFeatures: true,
-  randomizeTestData: undefined,
+  randomizeTestData: false,
   requireAccuracy: undefined,
   hideTestingView: undefined,
 };
@@ -169,17 +169,34 @@ export function setPretrained(
   } else {
     delete newMode.hideDatasetView;
   }
-  return withRandomTestData(newMode);
+  return newMode;
+}
+
+// Falls back to the defaults for a level saved pretrained, whose prior settings are unknown.
+export function restoreFromPretrained(
+  mode: ModeObject,
+  beforePretrained: ModeObject = {}
+): ModeObject {
+  const restored = Object.keys(SET_BY_PRETRAINED).reduce(
+    (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
+    setPretrained(mode, false)
+  );
+  return withRandomTestData(restored);
 }
 
 const SET_BY_HIDDEN_TESTING: ModeObject = {
   requireAccuracy: undefined,
   hideSave: undefined,
-  randomizeTestData: undefined,
 };
 
-export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
-  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
+export function isDisabledByHiddenTesting(
+  mode: ModeObject,
+  key: string
+): boolean {
+  return (
+    mode.hideTestingView === true &&
+    (key in SET_BY_HIDDEN_TESTING || key === 'randomizeTestData')
+  );
 }
 
 export function setHideTestingView(
@@ -194,7 +211,7 @@ export function setHideTestingView(
   if (hideTestingView) {
     Object.assign(newMode, SET_BY_HIDDEN_TESTING);
   }
-  return withRandomTestData(newMode);
+  return newMode;
 }
 
 export function isMissingPretrainedColumns(
@@ -223,11 +240,9 @@ export function withDefaultTrainer(mode: ModeObject): ModeObject {
     : mode;
 }
 
-// Unset means random, unless pretraining or a hidden testing view clears it.
+// The runtime reads an unset key as the last rows, so random rows are written out.
 export function withRandomTestData(mode: ModeObject): ModeObject {
-  return mode.randomizeTestData === undefined &&
-    !isSetByPretrained(mode, 'randomizeTestData') &&
-    !isSetByHiddenTesting(mode, 'randomizeTestData')
+  return mode.randomizeTestData === undefined
     ? setJsonObjectValue(mode, 'randomizeTestData', true)
     : mode;
 }

@@ -10,7 +10,7 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
-  isSetByHiddenTesting,
+  isDisabledByHiddenTesting,
   isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
@@ -61,15 +61,16 @@ const TRAINER_ITEMS = [
   {value: 'decisionTree', text: 'Decision tree'},
 ];
 
+const accuracyTextOf = (mode: ModeObject) =>
+  isValidAccuracy(mode.requireAccuracy) ? String(mode.requireAccuracy) : '';
+
 const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   mode,
   datasets,
   removed,
   onChange,
 }) => {
-  const [accuracyText, setAccuracyText] = useState(() =>
-    isValidAccuracy(mode.requireAccuracy) ? String(mode.requireAccuracy) : ''
-  );
+  const [accuracyText, setAccuracyText] = useState(() => accuracyTextOf(mode));
 
   const selectedDataset = getSelectedDataset(mode);
   const {columns, failed: columnsFailed} = useDatasetColumns(
@@ -108,7 +109,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
-      disabled={isSetByPretrained(mode, key) || isSetByHiddenTesting(mode, key)}
+      disabled={
+        isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
+      }
       onChange={e => changeMode(setBooleanMode(mode, key, e.target.checked))}
       size="s"
     />
@@ -161,7 +164,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           mode={mode}
           columns={columns}
           onChange={newMode => {
-            setAccuracyText('');
+            setAccuracyText(accuracyTextOf(newMode));
             changeMode(newMode);
           }}
         />
@@ -244,7 +247,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           onChange={handleAccuracyChange}
           disabled={
             isSetByPretrained(mode, 'requireAccuracy') ||
-            isSetByHiddenTesting(mode, 'requireAccuracy')
+            isDisabledByHiddenTesting(mode, 'requireAccuracy')
           }
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}

@@ -103,15 +103,6 @@ describe('ailabMode', () => {
         randomizeTestData: false,
       });
     });
-
-    it('leaves the rows unset when pretrained or testing is hidden', () => {
-      expect(withRandomTestData({pretrained: true})).toEqual({
-        pretrained: true,
-      });
-      expect(withRandomTestData({hideTestingView: true})).toEqual({
-        hideTestingView: true,
-      });
-    });
   });
 
   describe('setBooleanMode', () => {

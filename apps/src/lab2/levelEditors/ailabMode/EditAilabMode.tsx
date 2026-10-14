@@ -7,6 +7,7 @@ import {
   setHideTestingView,
   setPretrained,
   withDefaultTrainer,
+  withRandomTestData,
 } from './ailabMode';
 import AilabModeFields, {AilabDataset} from './AilabModeFields';
 
@@ -38,7 +39,9 @@ function prepareForFields(
     pretrainedMode.hideTestingView === true
   );
   return {
-    rawMode: serializeJsonObject(withDefaultTrainer(fieldsMode)),
+    rawMode: serializeJsonObject(
+      withRandomTestData(withDefaultTrainer(fieldsMode))
+    ),
     removed: parsedMode ? removed : ['the saved mode, which is not valid JSON'],
   };
 }
