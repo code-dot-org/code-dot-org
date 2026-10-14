@@ -1,4 +1,4 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -8,7 +8,9 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {navigateToNextLevelOrFinish} from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
+import QuizAttemptWorkspace, {
+  ANSWER_AUTOSAVE_DELAY_MS,
+} from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
@@ -1149,6 +1151,188 @@ describe('QuizAttemptWorkspace', () => {
       expect(
         screen.queryByRole('button', {name: 'Try again'})
       ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('free response questions', () => {
+    const FR_QUESTION = question({
+      id: 9,
+      type: 'FreeResponseQuestion',
+      questionTitle: 'Why does the loop stop?',
+      choices: undefined,
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('restores in-progress answer text', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 9,
+                questionType: 'FreeResponseQuestion',
+                responseData: {answerText: 'x > 3'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [FR_QUESTION],
+      });
+
+      expect(screen.getByRole('textbox', {name: /loop stop/})).toHaveValue(
+        'x > 3'
+      );
+    });
+
+    it('autosaves the answer only once typing pauses', async () => {
+      jest.useFakeTimers();
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x'}});
+      act(() => jest.advanceTimersByTime(ANSWER_AUTOSAVE_DELAY_MS - 1));
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      act(() => jest.advanceTimersByTime(ANSWER_AUTOSAVE_DELAY_MS - 1));
+      expect(submitQuestionResponse).not.toHaveBeenCalled();
+
+      act(() => jest.advanceTimersByTime(1));
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledWith(9, {
+          answerText: 'x > 3',
+        })
+      );
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(1);
+    });
+
+    it('saves the answer right away on blur', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledWith(9, {
+          answerText: 'x > 3',
+        })
+      );
+    });
+
+    it('does not save on blur when nothing changed', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+
+      fireEvent.blur(screen.getByRole('textbox', {name: /loop stop/}));
+
+      await Promise.resolve();
+      expect(submitQuestionResponse).not.toHaveBeenCalled();
+    });
+
+    it('keeps the typed answer when its save fails', async () => {
+      const submitQuestionResponse = jest
+        .fn()
+        .mockRejectedValue(new Error('offline'));
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+
+      await waitFor(() => expect(submitQuestionResponse).toHaveBeenCalled());
+      expect(textbox).toHaveValue('x > 3');
+    });
+
+    it('sends the answer text with submit and drops the pending autosave', async () => {
+      jest.useFakeTimers();
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      const finishAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+        quizQuestions: [question({id: 5}), FR_QUESTION],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      fireEvent.change(screen.getByRole('textbox', {name: /loop stop/}), {
+        target: {value: 'x > 3'},
+      });
+      fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+      await waitFor(() =>
+        expect(finishAttempt).toHaveBeenCalledWith({
+          5: {selectedChoiceId: 'b'},
+          9: {answerText: 'x > 3'},
+        })
+      );
+      act(() => jest.advanceTimersByTime(ANSWER_AUTOSAVE_DELAY_MS));
+      expect(submitQuestionResponse).not.toHaveBeenCalledWith(9, {
+        answerText: 'x > 3',
+      });
+    });
+
+    it('shows the submitted answer text in the results', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            submittedAt: '2026-10-14T00:00:00Z',
+            questionResults: [
+              {
+                quizQuestionId: 9,
+                questionType: 'FreeResponseQuestion',
+                responseData: {answerText: 'x > 3'},
+                correct: null,
+                explanation: null,
+                correctChoiceId: null,
+              },
+            ],
+          },
+        },
+        quizQuestions: [FR_QUESTION],
+      });
+
+      expect(screen.getByText('Why does the loop stop?')).toBeInTheDocument();
+      expect(screen.getByText('x > 3')).toBeInTheDocument();
+    });
+
+    it("shows a teacher the student's in-progress answer text", () => {
+      renderWorkspace({
+        viewAsUserId: 99,
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 9,
+                questionType: 'FreeResponseQuestion',
+                responseData: {answerText: 'x > 3'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [FR_QUESTION],
+      });
+
+      expect(screen.getByText("Student's answer")).toBeInTheDocument();
+      expect(screen.getByText('x > 3')).toBeInTheDocument();
+      expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
     });
   });
 });
