@@ -55,6 +55,14 @@ class MultipleChoiceQuestion < QuizQuestion
     )
   end
 
+  def placeholder_content
+    {
+      'question_title' => "Placeholder question #{key} - encryption key missing",
+      'choices' => [{'id' => 'a', 'text' => 'Placeholder choice A'}, {'id' => 'b', 'text' => 'Placeholder choice B'}],
+      'correct_choice_id' => 'a',
+    }
+  end
+
   def builder_content_json
     attempt_content_json.merge(correctChoiceId: content['correct_choice_id'])
   end
