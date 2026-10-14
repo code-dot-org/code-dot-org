@@ -60,9 +60,9 @@ describe('createServerProgressStore', () => {
     expect(
       http.put.mock.calls.map(call => [call[0], JSON.parse(call[1])])
     ).toEqual([
-      ['/adaptive_progress/steps/read', {...key, started: true}],
+      ['/adaptive_progress/steps/read/progress', {...key, started: true}],
       [
-        '/adaptive_progress/steps/read',
+        '/adaptive_progress/steps/read/progress',
         {...key, completed: true, timeSinceLastSave: 900},
       ],
     ]);
