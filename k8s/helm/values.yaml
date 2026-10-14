@@ -112,6 +112,8 @@ services:
 # These should match the docker image's USERNAME, UID and GID args
 #
 # NOTE: uid and gid are overridden to root by Skaffold due to a sync bug.
+# The chart refuses to render RAILS_ENV=production with uid or gid 0; see
+# templates/dashboard/_dashboard.yaml.
 user:
   username: cdo
   uid: 1000

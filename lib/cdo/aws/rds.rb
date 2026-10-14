@@ -154,6 +154,37 @@ module Cdo
     # integration's Maxwell table filter; the *desired* filter for a database is computed elsewhere
     # from the schema (see `AnalyticsExportable.zero_etl_data_filter`) and passed in here.
 
+    # Tag the CloudFormation Stack sets on the Integration it creates, keyed to the Stack's environment.
+    ZERO_ETL_ENVIRONMENT_TAG_KEY = 'environment'.freeze
+
+    # Find the ARN of the Zero ETL Integration belonging to an environment.
+    #
+    # @param environment_type [String] the environment whose Integration to find, e.g. "production".
+    # @param rds_client [Aws::RDS::Client] injectable for testing.
+    # @return [String] ARN of the matching Integration.
+    # @raise [ArgumentError] when no Integration, or more than one, carries the Tag.
+    def self.zero_etl_integration_arn(environment_type:, rds_client: nil)
+      rds_client ||= ::Aws::RDS::Client.new
+
+      matches = rds_client.describe_integrations.each_page.flat_map(&:integrations).select do |integration|
+        integration.tags.any? {|tag| tag.key == ZERO_ETL_ENVIRONMENT_TAG_KEY && tag.value == environment_type}
+      end
+
+      if matches.empty?
+        raise ArgumentError, "No Zero ETL Integration is tagged " \
+          "`#{ZERO_ETL_ENVIRONMENT_TAG_KEY}: #{environment_type}`."
+      end
+
+      # Refuse to guess: modifying the wrong Integration would change which tables another environment
+      # exports to Redshift.
+      if matches.size > 1
+        raise ArgumentError, "#{matches.size} Zero ETL Integrations are tagged " \
+          "`#{ZERO_ETL_ENVIRONMENT_TAG_KEY}: #{environment_type}`: #{matches.map(&:integration_name).join(', ')}."
+      end
+
+      matches.first.integration_arn
+    end
+
     # Reads the integration's current data_filter (RDS `describe_integrations`), reconciles the rules
     # for `db_name` against `desired_data_filter`, and — unless `dry_run` — writes the reconciled
     # filter back (RDS `modify_integration`). Rules for other databases are left untouched.

@@ -253,6 +253,41 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
+  it('drops the training options saved with the testing view hidden', () => {
+    const savedMode = renderEditor(
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true}'
+    );
+    expect(JSON.parse(savedMode())).toEqual({
+      hideTestingView: true,
+      trainer: 'knn',
+    });
+  });
+
+  it('clears and locks the training options while the testing view is hidden', () => {
+    const savedMode = renderEditor('{"requireAccuracy": 70, "hideSave": true}');
+    const accuracy = screen.getByRole('spinbutton', {
+      name: /Required accuracy/,
+    });
+    const hideSave = screen.getByRole('checkbox', {
+      name: 'Hide the save model step',
+    });
+    const hideTestingView = screen.getByRole('checkbox', {
+      name: 'Hide training and testing so students only explore the dataset',
+    });
+
+    fireEvent.click(hideTestingView);
+    [accuracy, hideSave].forEach(field => expect(field).toBeDisabled());
+    expect(accuracy).toHaveValue(null);
+    expect(JSON.parse(savedMode())).toEqual({
+      hideTestingView: true,
+      trainer: 'knn',
+    });
+
+    fireEvent.click(hideTestingView);
+    [accuracy, hideSave].forEach(field => expect(field).toBeEnabled());
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
   it('removes a key when its field is cleared', () => {
     const savedMode = renderEditor('{"hideSave": true, "requireAccuracy": 70}');
     fireEvent.click(
@@ -609,16 +644,16 @@ describe('EditAilabMode', () => {
       expect(featuresLock()).toBeValid();
     });
 
-    it('pretrains with both locks, in place of random test rows and a required accuracy', async () => {
+    it('pretrains with both locks and the last rows in place of a required accuracy, then restores them', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "requireAccuracy": 80}'
       );
       await columnsLoaded();
       const labelLock = screen.getByRole('checkbox', {
         name: 'Lock the label so students cannot change it',
       });
-      const randomRows = screen.getByRole('checkbox', {
-        name: 'Reserve random rows for testing instead of the last rows',
+      const lastRows = screen.getByRole('checkbox', {
+        name: 'Reserve the last rows for testing instead of random rows',
       });
       const accuracy = screen.getByRole('spinbutton', {
         name: /Required accuracy/,
@@ -634,21 +669,67 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
+        reserveLastRows: true,
       });
-      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+      [labelLock, featuresLock(), lastRows, accuracy].forEach(field =>
         expect(field).toBeDisabled()
       );
       expect(accuracy).toHaveValue(null);
 
       fireEvent.click(pretrainedCheckbox());
 
-      expect(JSON.parse(savedMode())).toMatchObject({
-        hideSelectLabel: true,
-        lockFeatures: true,
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        requireAccuracy: 80,
       });
-      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+      [labelLock, featuresLock(), lastRows, accuracy].forEach(field =>
         expect(field).toBeEnabled()
       );
+      expect(lastRows).not.toBeChecked();
+      expect(accuracy).toHaveValue(80);
+    });
+
+    it('restores the defaults when a level saved pretrained stops pretraining', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"]}'
+      );
+      await columnsLoaded();
+
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+      });
+    });
+
+    it('clears the training options again when pretraining restores a hidden testing view', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideTestingView": true}'
+      );
+      await columnsLoaded();
+      const hideSave = screen.getByRole('checkbox', {
+        name: 'Hide the save model step',
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+      fireEvent.click(hideSave);
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        hideTestingView: true,
+      });
+      expect(hideSave).not.toBeChecked();
+      expect(hideSave).toBeDisabled();
     });
 
     it('asks for a label and features students can choose to pretrain on', async () => {
@@ -697,13 +778,14 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
+        reserveLastRows: true,
       });
       expect(pretrainedCheckbox()).toBeValid();
     });
 
     it('locks a saved pretrained level and drops the settings pretraining replaces', () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "reserveLastRows": false, "requireAccuracy": 80}'
       );
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
@@ -713,6 +795,7 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
+        reserveLastRows: true,
       });
     });
 
@@ -737,6 +820,20 @@ describe('EditAilabMode', () => {
       fireEvent.click(pretrainedCheckbox());
       expect(hideDatasetView()).not.toBeInTheDocument();
       expect(JSON.parse(savedMode())).not.toHaveProperty('hideDatasetView');
+    });
+
+    it('replaces a hidden testing view', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideTestingView": true}'
+      );
+      await columnsLoaded();
+      const hideTestingView = screen.getByRole('checkbox', {
+        name: 'Hide training and testing so students only explore the dataset',
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+      expect(hideTestingView).toBeDisabled();
+      expect(JSON.parse(savedMode())).not.toHaveProperty('hideTestingView');
     });
 
     it("reports a dataset whose columns don't load", async () => {
