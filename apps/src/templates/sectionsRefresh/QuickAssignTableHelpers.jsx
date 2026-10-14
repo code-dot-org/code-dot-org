@@ -86,12 +86,12 @@ function renderOfferings(
         </div>
         {course.ai_teaching_assistant_available &&
           !experiments.isEnabled('ta-teacher-panel') && (
-          <img
-            src={taImage}
-            className={moduleStyles.taImage}
-            alt="AI Teaching Assistant available"
-          />
-        )}
+            <img
+              src={taImage}
+              className={moduleStyles.taImage}
+              alt="AI Teaching Assistant available"
+            />
+          )}
       </div>
     );
   });
