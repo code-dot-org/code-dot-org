@@ -202,7 +202,6 @@ export function setHideTestingView(
   return newMode;
 }
 
-// Falls back to the defaults for a level saved pretrained, whose prior settings are unknown.
 export function restoreFromPretrained(
   mode: ModeObject,
   beforePretrained: ModeObject = {}
@@ -242,23 +241,22 @@ export function withDefaultTrainer(mode: ModeObject): ModeObject {
     : mode;
 }
 
-// The runtime reads an unset key as the last rows, so random rows are written out.
+// The runtime reads an unset key as the last rows.
 export function withRandomTestData(mode: ModeObject): ModeObject {
   return mode.randomizeTestData === undefined
     ? setJsonObjectValue(mode, 'randomizeTestData', true)
     : mode;
 }
 
-// Random test rows keep false, or the default would check them on the next load.
 export function setBooleanMode(
   mode: ModeObject,
   key: BooleanModeKey,
   checked: boolean
 ): ModeObject {
-  const keepsFalse = key === 'randomizeTestData';
+  const hasTrueDefault = key === 'randomizeTestData';
   return setJsonObjectValue(
     mode,
     key,
-    checked || keepsFalse ? checked : undefined
+    checked || hasTrueDefault ? checked : undefined
   );
 }

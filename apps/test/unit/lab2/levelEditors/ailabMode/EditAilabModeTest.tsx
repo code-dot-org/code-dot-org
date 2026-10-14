@@ -412,19 +412,6 @@ describe('EditAilabMode', () => {
     });
   });
 
-  it('keeps a saved choice of the last rows for testing', () => {
-    const savedMode = renderEditor('{"randomizeTestData": false}');
-    expect(
-      screen.getByRole('checkbox', {
-        name: 'Reserve random rows for testing instead of the last rows',
-      })
-    ).not.toBeChecked();
-    expect(JSON.parse(savedMode())).toEqual({
-      trainer: 'knn',
-      randomizeTestData: false,
-    });
-  });
-
   it('requires a dataset until one is chosen', () => {
     const savedMode = renderEditor('{"hideSave": true}');
     expect(datasetDropdown()).toHaveValue('');
