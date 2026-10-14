@@ -79,6 +79,12 @@ $modal-margin: 24px;
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
+@mixin modal-tabs {
+  // Tabs has no CodeAI brand override; these are the tokens it reads for text.
+  --text-brand-teal-primary: var(--text-selected-primary-inverse);
+  --text-neutral-tertiary: var(--text-neutral-quaternary);
+}
+
 @mixin modal-action-row {
   display: flex;
   justify-content: flex-end;

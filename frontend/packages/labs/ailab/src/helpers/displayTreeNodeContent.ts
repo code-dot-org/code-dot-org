@@ -1,7 +1,13 @@
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import {getLocalizedColumnName} from './columnDetails';
-import {formatNumber, type DisplayTreeNode} from './displayTree';
+import {
+  formatNumber,
+  THRESHOLD_SIGNS,
+  thresholdValue,
+  type DisplayTreeBranch,
+  type DisplayTreeNode,
+} from './displayTree';
 import {TREE_NODE_MAX_WIDTH} from './displayTreeLayout';
 import type {
   DisplayTreeCountsLookup,
@@ -31,6 +37,23 @@ export function displayNodeLabel(
   return typeof node.prediction === 'number'
     ? formatNumber(node.prediction)
     : String(getLocalizedValue(node.prediction, datasetId));
+}
+
+const orList = new Intl.ListFormat('en', {type: 'disjunction'});
+
+export function branchLabel(
+  branch: DisplayTreeBranch,
+  datasetId: string,
+): {sign?: string; text: string} {
+  return branch.kind === 'values'
+    ? {
+        text: orList.format(
+          branch.values.map(value =>
+            String(getLocalizedValue(value, datasetId)),
+          ),
+        ),
+      }
+    : {sign: THRESHOLD_SIGNS[branch.kind], text: thresholdValue(branch)};
 }
 
 export function rowCountText(counts: DisplayTreeNodeCounts): string {

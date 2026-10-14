@@ -16,9 +16,6 @@ import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
-  THRESHOLD_SIGNS,
-  thresholdValue,
-  type DisplayTreeBranch,
   type DisplayTreeNode,
   type DisplayTreeQuestion,
 } from '../helpers/displayTree';
@@ -33,6 +30,7 @@ import {
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
 import {
   ANSWER_DOT_SIZE,
+  branchLabel,
   COUNTS_GAP,
   displayNodeLabel,
   GRADE_ICON_GAP,
@@ -46,7 +44,6 @@ import {
   type Grade,
 } from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
-import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setPredictionPlaying} from '../redux';
@@ -64,8 +61,6 @@ import TreeCanvas from './TreeCanvas';
 
 import appStyles from '../app.module.scss';
 import styles from './decisionTree.module.scss';
-
-const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
 const TREE_NAME = "Your model's decision tree";
 
@@ -263,16 +258,6 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     }
   };
 
-  const valueText = (value: string): string =>
-    String(getLocalizedValue(value, datasetId));
-
-  const branchLabel = (
-    branch: DisplayTreeBranch
-  ): {sign?: string; text: string} =>
-    branch.kind === 'values'
-      ? {text: orList.format(branch.values.map(valueText))}
-      : {sign: THRESHOLD_SIGNS[branch.kind], text: thresholdValue(branch)};
-
   const columnText = (node: DisplayTreeQuestion): string =>
     getLocalizedColumnName(datasetId, node.column);
 
@@ -362,7 +347,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             </svg>
             {layout.nodes.map(placed => {
               const text = displayNodeLabel(placed.node, datasetId);
-              const label = placed.branch && branchLabel(placed.branch);
+              const label =
+                placed.branch && branchLabel(placed.branch, datasetId);
               const focusVisible = placed.id === focusVisibleId;
               const kind =
                 placed.answerIndex === undefined
