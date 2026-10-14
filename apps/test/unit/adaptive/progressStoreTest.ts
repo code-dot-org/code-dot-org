@@ -1,4 +1,9 @@
-import {createServerProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {
+  LocalProgressKey,
+  LocalStepContext,
+  createServerProgressStore,
+  localStorageProgressStore as localStore,
+} from '@cdo/apps/adaptive/progress/progressStore';
 
 const mockLogError = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -80,5 +85,67 @@ describe('createServerProgressStore', () => {
       '/adaptive_progress?scriptId=11&levelId=98263',
       true
     );
+  });
+});
+
+describe('localStorageProgressStore', () => {
+  const localKey: LocalProgressKey = {userId: 7, ...key, pathwayId: 'sample'};
+  const storageKey = 'adaptive-progress:7:11:98263';
+  const stepContext: LocalStepContext = {
+    s1: {generated: {instructions: 'Hi', inputsHash: 'ab', traceId: 't'}},
+  };
+
+  beforeEach(() => window.localStorage.clear());
+
+  it('reads back what it saved', async () => {
+    await localStore.save(localKey, stepContext);
+    expect(await localStore.load(localKey)).toEqual(stepContext);
+  });
+
+  it('has nothing for an unsaved key', async () => {
+    expect(await localStore.load(localKey)).toBeUndefined();
+  });
+
+  it('keeps students, units and levels apart', async () => {
+    await localStore.save(localKey, stepContext);
+    expect(await localStore.load({...localKey, userId: 8})).toBeUndefined();
+    expect(await localStore.load({...localKey, userId: null})).toBeUndefined();
+    expect(await localStore.load({...localKey, scriptId: 12})).toBeUndefined();
+    expect(await localStore.load({...localKey, levelId: 1})).toBeUndefined();
+  });
+
+  it('does not resume instructions saved for different content', async () => {
+    await localStore.save(localKey, stepContext);
+    expect(
+      await localStore.load({...localKey, pathwayId: 'other'})
+    ).toBeUndefined();
+  });
+
+  it('keeps only generated instructions from an older record', async () => {
+    window.localStorage.setItem(
+      storageKey,
+      JSON.stringify({
+        pathwayId: 'sample',
+        progress: {
+          completed: ['intro'],
+          started: [],
+          stepContext: {
+            ...stepContext,
+            quiz: {answers: {1: [{answerId: 'a', isCorrect: true}]}},
+          },
+        },
+      })
+    );
+    expect(await localStore.load(localKey)).toEqual(stepContext);
+  });
+
+  it('treats a corrupt or foreign record as nothing', async () => {
+    window.localStorage.setItem(storageKey, 'not json');
+    expect(await localStore.load(localKey)).toBeUndefined();
+    window.localStorage.setItem(
+      storageKey,
+      JSON.stringify({pathwayId: 'sample', progress: {stepContext: null}})
+    );
+    expect(await localStore.load(localKey)).toBeUndefined();
   });
 });

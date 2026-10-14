@@ -7,7 +7,10 @@ import {
   getStatusMap,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
-import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {
+  LocalStepContext,
+  ProgressStore,
+} from '@cdo/apps/adaptive/progress/progressStore';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -117,6 +120,7 @@ describe('useProgress', () => {
   } as unknown as Step;
   const read = panels('read');
   const hookPathway = {
+    id: 'p',
     checkpoints: [
       checkpoint('intro', undefined, [read, sandbox]),
       checkpoint('basics', ['intro'], [quiz]),
@@ -130,12 +134,23 @@ describe('useProgress', () => {
     reset: jest.fn().mockResolvedValue(undefined),
   });
 
+  const fakeLocalStore = (loaded?: LocalStepContext) => ({
+    load: jest.fn().mockResolvedValue(loaded),
+    save: jest.fn().mockResolvedValue(undefined),
+  });
+
   const renderProgress = async (
     store: ProgressStore,
-    reportLevelStep = jest.fn().mockResolvedValue(undefined)
+    reportLevelStep = jest.fn().mockResolvedValue(undefined),
+    localStore = fakeLocalStore()
   ) => {
     const hook = renderHook(() =>
-      useProgress(hookPathway, key, {store, reportLevelStep})
+      useProgress(hookPathway, key, {
+        store,
+        localStore,
+        userId: 7,
+        reportLevelStep,
+      })
     );
     await hook.waitForNextUpdate();
     return {...hook, reportLevelStep};
@@ -244,14 +259,36 @@ describe('useProgress', () => {
     });
   });
 
-  it('keeps generated instructions for the page without saving them', async () => {
+  it('saves generated instructions locally, not to the server', async () => {
     const store = fakeStore();
-    const {result} = await renderProgress(store);
+    const localStore = fakeLocalStore();
+    const {result} = await renderProgress(store, undefined, localStore);
     const generated = {instructions: 'Hi', inputsHash: 'ab'};
 
     act(() => result.current.updateStepContext('try', {generated}));
 
     expect(result.current.stepContextMap).toEqual({try: {generated}});
+    expect(localStore.save).toHaveBeenLastCalledWith(
+      {userId: 7, ...key, pathwayId: 'p'},
+      {try: {generated}}
+    );
     expect(store.saveStep).not.toHaveBeenCalled();
+  });
+
+  it('merges locally saved instructions with server answers', async () => {
+    const generated = {instructions: 'Hi', inputsHash: 'ab'};
+    const answers = {1: [{answerId: 'a', isCorrect: true}]};
+    const store = fakeStore({
+      steps: {quiz: {status: 'started', timeSpent: 0, answers}},
+    });
+    const {result} = await renderProgress(
+      store,
+      undefined,
+      fakeLocalStore({quiz: {generated}})
+    );
+
+    expect(result.current.stepContextMap).toEqual({
+      quiz: {answers, generated},
+    });
   });
 });

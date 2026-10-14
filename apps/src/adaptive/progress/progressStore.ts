@@ -1,11 +1,12 @@
 // Where a student's pathway progress lives: the server, keyed by the unit and
 // the adaptive level. Level steps are not written here; their progress is
-// their level's own, reported through milestones.
+// their level's own, reported through milestones. Generated instructions stay
+// in the browser's local storage until the server stores them.
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Answer, EMPTY_PROGRESS, Progress} from './model';
+import {Answer, EMPTY_PROGRESS, Progress, StepContext} from './model';
 
 export interface ProgressKey {
   scriptId: number;
@@ -72,3 +73,73 @@ export function createServerProgressStore(
 }
 
 export const serverProgressStore = createServerProgressStore();
+
+export interface LocalProgressKey extends ProgressKey {
+  /** Null for a signed-out student, who shares one record per browser. */
+  userId: number | null;
+  /** Guards the record: content swapped under the level is not resumed. */
+  pathwayId: string;
+}
+
+export type LocalStepContext = {
+  [stepId: string]: Pick<StepContext, 'generated'>;
+};
+
+export interface LocalProgressStore {
+  load(key: LocalProgressKey): Promise<LocalStepContext | undefined>;
+  save(key: LocalProgressKey, stepContext: LocalStepContext): Promise<void>;
+}
+
+interface StoredProgress {
+  pathwayId: string;
+  progress: {stepContext: LocalStepContext};
+  savedAt: string;
+}
+
+const storageKey = (key: LocalProgressKey) =>
+  `adaptive-progress:${key.userId ?? 'anonymous'}:${key.scriptId}:${
+    key.levelId
+  }`;
+
+/**
+ * Generated instructions in the browser's local storage. Unavailable storage
+ * (private windows, blocked site data) reads as none and drops writes.
+ */
+export const localStorageProgressStore: LocalProgressStore = {
+  async load(key) {
+    try {
+      const raw = window.localStorage.getItem(storageKey(key));
+      if (!raw) return undefined;
+      const stored = JSON.parse(raw) as Partial<StoredProgress>;
+      const stepContext = stored.progress?.stepContext;
+      if (
+        stored.pathwayId !== key.pathwayId ||
+        typeof stepContext !== 'object' ||
+        stepContext === null
+      ) {
+        return undefined;
+      }
+      // Older records also hold answers, which now come from the server.
+      const loaded: LocalStepContext = {};
+      for (const [id, context] of Object.entries(stepContext)) {
+        if (context?.generated) loaded[id] = {generated: context.generated};
+      }
+      return loaded;
+    } catch {
+      return undefined;
+    }
+  },
+
+  async save(key, stepContext) {
+    const stored: StoredProgress = {
+      pathwayId: key.pathwayId,
+      progress: {stepContext},
+      savedAt: new Date().toISOString(),
+    };
+    try {
+      window.localStorage.setItem(storageKey(key), JSON.stringify(stored));
+    } catch {
+      // Storage unavailable: instructions live for the session only.
+    }
+  },
+};

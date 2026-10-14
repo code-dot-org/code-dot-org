@@ -13,7 +13,6 @@ import {
   Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
-  GeneratedContent,
   PROJECT_STEP_ID,
   Progress,
   StepContext,
@@ -21,9 +20,12 @@ import {
   getStatusMap,
 } from './model';
 import {
+  LocalProgressStore,
+  LocalStepContext,
   ProgressKey,
   ProgressStore,
   StepWrite,
+  localStorageProgressStore,
   serverProgressStore,
 } from './progressStore';
 
@@ -43,6 +45,9 @@ export type LevelStepReporter = (
 
 interface ProgressOptions {
   store?: ProgressStore;
+  localStore?: LocalProgressStore;
+  /** Keys the local record; the server takes the user from the session. */
+  userId?: number | null;
   reportLevelStep?: LevelStepReporter;
 }
 
@@ -57,16 +62,20 @@ const logFailure = (what: string, error: unknown) =>
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
-  {store = serverProgressStore, reportLevelStep}: ProgressOptions = {}
+  {
+    store = serverProgressStore,
+    localStore = localStorageProgressStore,
+    userId = null,
+    reportLevelStep,
+  }: ProgressOptions = {}
 ) {
   // Undefined until the stored progress has been loaded.
   const [progress, setProgress] = useState<Progress>();
-  // Generated instructions live for the page only; they are not progress.
-  const [generated, setGenerated] = useState<{
-    [stepId: string]: GeneratedContent;
-  }>({});
+  // Generated instructions, kept locally until the server stores them.
+  const [localContext, setLocalContext] = useState<LocalStepContext>();
   // Destructure key so its members can be used as primitive deps.
   const {scriptId, levelId} = key;
+  const pathwayId = pathway.id;
 
   useEffect(() => {
     let cancelled = false;
@@ -84,6 +93,23 @@ export function useProgress(
       cancelled = true;
     };
   }, [store, scriptId, levelId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLocalContext(undefined);
+    localStore.load({userId, scriptId, levelId, pathwayId}).then(loaded => {
+      if (!cancelled) setLocalContext(loaded ?? {});
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [localStore, userId, scriptId, levelId, pathwayId]);
+
+  useEffect(() => {
+    if (localContext) {
+      localStore.save({userId, scriptId, levelId, pathwayId}, localContext);
+    }
+  }, [localStore, userId, scriptId, levelId, pathwayId, localContext]);
 
   const statusMap = useMemo(
     () => getStatusMap(pathway, progress ?? EMPTY_PROGRESS),
@@ -174,10 +200,8 @@ export function useProgress(
   );
 
   const updateStepContext = useCallback(
-    (id: string, patch: Pick<StepContext, 'generated'>) => {
-      const content = patch.generated;
-      if (content) setGenerated(g => ({...g, [id]: content}));
-    },
+    (id: string, patch: Pick<StepContext, 'generated'>) =>
+      setLocalContext(c => c && {...c, [id]: {...c[id], ...patch}}),
     []
   );
 
@@ -186,11 +210,11 @@ export function useProgress(
     for (const [id, entry] of Object.entries(progress?.steps ?? {})) {
       if (entry.answers) map[id] = {answers: entry.answers};
     }
-    for (const [id, content] of Object.entries(generated)) {
-      map[id] = {...map[id], generated: content};
+    for (const [id, context] of Object.entries(localContext ?? {})) {
+      map[id] = {...map[id], ...context};
     }
     return map;
-  }, [progress, generated]);
+  }, [progress, localContext]);
 
   return {
     progress,

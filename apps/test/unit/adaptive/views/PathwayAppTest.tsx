@@ -45,6 +45,10 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
     saveStep: jest.fn(),
     reset: jest.fn(),
   },
+  localStorageProgressStore: {
+    load: () => Promise.resolve(undefined),
+    save: () => Promise.resolve(),
+  },
 }));
 
 const step = (id: string) => ({

@@ -49,6 +49,7 @@ function parseLevelContent(properties: AdaptiveLevelProperties): Parsed {
 const AdaptiveView: React.FunctionComponent<
   LabProps<AdaptiveLevelProperties>
 > = ({levelProperties}) => {
+  const userId = useAppSelector(state => state.currentUser.userId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const parsed = useMemo(
     () => parseLevelContent(levelProperties),
@@ -79,7 +80,13 @@ const AdaptiveView: React.FunctionComponent<
     );
   }
 
-  return <PathwayApp pathway={parsed.pathway} progressKey={progressKey} />;
+  return (
+    <PathwayApp
+      pathway={parsed.pathway}
+      progressKey={progressKey}
+      userId={userId ?? null}
+    />
+  );
 };
 
 export default AdaptiveView;
