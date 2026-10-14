@@ -1,8 +1,7 @@
 /* Thumbnail of the trained decision tree, drawn without text. */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip} from '@mui/material';
 import {useMemo} from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import type {DisplayTreeNode} from '../helpers/displayTree';
 import {
@@ -36,9 +35,9 @@ const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
       layoutDisplayTree(
         tree,
         nodeWidthMeasurer(datasetId, counts),
-        MINI_ROW_GAP,
+        MINI_ROW_GAP
       ),
-    [tree, datasetId, counts],
+    [tree, datasetId, counts]
   );
 
   return (
@@ -61,7 +60,7 @@ const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
                 d={edgePath(placed.parent, placed, MINI_ROW_GAP / 2)}
                 className={styles.edge}
               />
-            ),
+            )
         )}
         {layout.nodes.map(placed => (
           <rect

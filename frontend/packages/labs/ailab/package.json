@@ -38,7 +38,6 @@
     "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"
   },
-  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },

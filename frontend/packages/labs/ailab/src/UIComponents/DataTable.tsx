@@ -35,7 +35,7 @@ const DataTable = ({
   const {project} = useProject();
   const data = useAppSelector(
     state => getTableData(state, project, !!useResultsData),
-    deepEqual,
+    deepEqual
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const labelColumn = project.labelColumn || 'unknown';

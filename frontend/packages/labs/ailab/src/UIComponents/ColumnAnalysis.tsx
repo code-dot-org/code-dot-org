@@ -1,9 +1,8 @@
 /* Panel describing the column selected in the data table. */
-import {IconButton, Typography} from '@mui/material';
-import classNames from 'classnames';
-
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Typography} from '@mui/material';
+import classNames from 'classnames';
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
 import {
@@ -40,7 +39,7 @@ const ColumnAnalysis = () => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || '');
   const columnDetails = useAppSelector(state =>
-    getCurrentColumnDetails(state, project),
+    getCurrentColumnDetails(state, project)
   );
   const categoricalDetails = useAppSelector(getCategoricalColumnDetails);
   const numericalDetails = useAppSelector(getNumericalColumnDetails);
@@ -65,7 +64,7 @@ const ColumnAnalysis = () => {
     if (common) {
       stats.push(
         {label: 'Most Common', value: localizedOption(common.mostCommon)},
-        {label: 'Least Common', value: localizedOption(common.leastCommon)},
+        {label: 'Least Common', value: localizedOption(common.leastCommon)}
       );
     }
   } else if (numericalDetails.extrema) {
@@ -73,7 +72,7 @@ const ColumnAnalysis = () => {
     stats.push(
       {label: 'Minimum', value: formatNumber(min)},
       {label: 'Maximum', value: formatNumber(max)},
-      {label: 'Range', value: formatNumber(range)},
+      {label: 'Range', value: formatNumber(range)}
     );
   }
 

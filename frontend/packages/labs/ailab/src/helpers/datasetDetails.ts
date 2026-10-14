@@ -22,7 +22,7 @@ export function getDatasetDetails(state: RootState): DatasetDetails {
 
 function getCardContextAttr(
   state: RootState,
-  attr: string,
+  attr: string
 ): string | undefined {
   if (
     state.metadata?.name &&

@@ -25,12 +25,12 @@ const SaveModel = () => {
   const {project} = useProject();
   const labelColumn = project.labelColumn;
   const columnDescriptions = useAppSelector(state =>
-    getSelectedColumnsDescriptions(state, project),
+    getSelectedColumnsDescriptions(state, project)
   );
   const dataDescription = useAppSelector(getDatasetDescription);
   const isUserUploaded = useAppSelector(isUserUploadedDataset);
   const datasetId = useAppSelector(
-    state => state.metadata && state.metadata.name,
+    state => state.metadata && state.metadata.name
   );
 
   const [showColumnDescriptions, setShowColumnDescriptions] =
@@ -43,7 +43,7 @@ const SaveModel = () => {
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: string,
-    isColumn: boolean,
+    isColumn: boolean
   ) => {
     dispatch(setTrainedModelDetail(field, event.target.value, isColumn));
   };
@@ -159,7 +159,7 @@ const SaveModel = () => {
                             {detail}
                           </li>
                         );
-                      },
+                      }
                     )}
                 </ul>
                 {!field.answer && (

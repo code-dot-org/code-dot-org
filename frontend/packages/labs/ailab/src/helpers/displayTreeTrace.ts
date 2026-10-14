@@ -36,7 +36,7 @@ export function traceDisplayTree(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
   inputs: number[],
-  row: DataRow,
+  row: DataRow
 ): DisplayTreeTrace {
   const path = [DISPLAY_TREE_ROOT_ID];
   const steps: DisplayTreeStep[] = [];
@@ -68,7 +68,7 @@ export function countDisplayTreeRows(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
   examples: number[][],
-  grades: string[],
+  grades: string[]
 ): Map<string, DisplayTreeNodeCounts> {
   const counts = new Map<string, DisplayTreeNodeCounts>();
 

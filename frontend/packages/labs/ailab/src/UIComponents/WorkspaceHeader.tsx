@@ -1,8 +1,8 @@
 /* Header row across the top of the lab's workspace. */
-import {Button, Tooltip, Typography} from '@mui/material';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {Button, Tooltip, Typography} from '@mui/material';
 
 import {isPanelEnabled} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -28,11 +28,11 @@ const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
   const dispatch = useAppDispatch();
   const currentPanel = useAppSelector(state => state.currentPanel);
   const showsOneView = useAppSelector(
-    state => getHideDatasetView(state) || getHideTestingView(state),
+    state => getHideDatasetView(state) || getHideTestingView(state)
   );
   const {project} = useProject();
   const canTest = useAppSelector(state =>
-    isPanelEnabled(state, project, 'results'),
+    isPanelEnabled(state, project, 'results')
   );
   const openTab = TABS.find(tab => tab.panel === currentPanel);
 

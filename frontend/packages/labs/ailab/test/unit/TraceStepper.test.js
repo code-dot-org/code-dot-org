@@ -1,9 +1,8 @@
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {useAppSelector} from '../../src/hooks';
 import I18n from '../../src/i18n';
@@ -32,10 +31,10 @@ const StoreStepper = ({project, trainedModel, onReplay}) =>
   createElement(TraceStepper, {
     key: useAppSelector(state => state.predictionCount),
     step: useAppSelector(state =>
-      getPredictionStep(state, project, trainedModel),
+      getPredictionStep(state, project, trainedModel)
     ),
     stepCount: useAppSelector(
-      state => getPredictionTrace(state, project, trainedModel).path.length,
+      state => getPredictionTrace(state, project, trainedModel).path.length
     ),
     onReplay,
   });
@@ -53,9 +52,9 @@ function renderStepper(onReplay = () => {}) {
       createElement(
         ThemeProvider,
         {theme: getMuiThemeForBrand(undefined)},
-        createElement(StoreStepper, {project, trainedModel, onReplay}),
-      ),
-    ),
+        createElement(StoreStepper, {project, trainedModel, onReplay})
+      )
+    )
   );
   return {store, project, trainedModel};
 }

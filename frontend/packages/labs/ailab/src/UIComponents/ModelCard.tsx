@@ -19,26 +19,26 @@ import styles from './modelCard.module.scss';
 
 const ModelCard = () => {
   const trainedModelDetails = useAppSelector(
-    state => state.trainedModelDetails,
+    state => state.trainedModelDetails
   );
   const {project} = useProject();
   const selectedFeatures = project.selectedFeatures;
   const percentCorrect = useAppSelector(state =>
-    getPercentCorrect(state, project),
+    getPercentCorrect(state, project)
   );
   const label = useAppSelector<ModelCardColumn>(
     state => getLabelToSave(state, project),
-    deepEqual,
+    deepEqual
   );
   const features = useAppSelector<ModelCardColumn[]>(
     state => getFeaturesToSave(state, project),
-    deepEqual,
+    deepEqual
   );
   const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
   const localizedFeatures = selectedFeatures.map(feature =>
-    getLocalizedColumnName(datasetDetails.name, feature),
+    getLocalizedColumnName(datasetDetails.name, feature)
   );
   const predictionStatement = I18n.t('predictionStatement', {
     output: localizedLabel,

@@ -61,13 +61,13 @@ export const THRESHOLD_SIGNS = {lessThan: '<', atLeast: '≥'};
 
 // Unrounded, so the threshold stays on the correct side of the student's input.
 export function thresholdValue(
-  branch: Extract<DisplayTreeBranch, {threshold: number}>,
+  branch: Extract<DisplayTreeBranch, {threshold: number}>
 ): string {
   return String(Number(branch.threshold.toPrecision(12)));
 }
 
 export function thresholdText(
-  branch: Extract<DisplayTreeBranch, {threshold: number}>,
+  branch: Extract<DisplayTreeBranch, {threshold: number}>
 ): string {
   return `${THRESHOLD_SIGNS[branch.kind]} ${thresholdValue(branch)}`;
 }
@@ -81,7 +81,7 @@ function isTreeModel(model: SerializedTree): boolean {
 
 export function buildDisplayTree(
   model: SerializedTree,
-  context: DisplayTreeContext,
+  context: DisplayTreeContext
 ): DisplayTreeNode | undefined {
   if (!isTreeModel(model)) {
     return undefined;
@@ -99,7 +99,7 @@ export function buildDisplayTree(
 function buildNode(
   node: SerializedTreeNode,
   context: DisplayTreeContext,
-  valuesByColumn: Record<string, string[]>,
+  valuesByColumn: Record<string, string[]>
 ): DisplayTreeNode {
   // ml-cart can leave split fields on a leaf, so only missing children denote a leaf
   if (!node.left || !node.right) {
@@ -132,7 +132,7 @@ function buildNode(
 
   const lesser = valuesByColumn[column].filter(value => key[value] < threshold);
   const greater = valuesByColumn[column].filter(
-    value => key[value] >= threshold,
+    value => key[value] >= threshold
   );
   return {
     type: 'question',
@@ -160,7 +160,7 @@ function buildNode(
 
 function getPrediction(
   node: SerializedTreeNode,
-  context: DisplayTreeContext,
+  context: DisplayTreeContext
 ): string | number {
   const {distribution} = node;
   if (typeof distribution === 'number') {

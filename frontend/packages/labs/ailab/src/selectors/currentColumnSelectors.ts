@@ -45,7 +45,7 @@ export const getCurrentColumnDetails = createSelector(
     isReadOnly: boolean,
     columnsByDataType: Record<string, string>,
     description: string | undefined,
-    isSelectable: boolean,
+    isSelectable: boolean
   ): CurrentColumnInspector | undefined => {
     if (currentColumn) {
       return {
@@ -56,14 +56,14 @@ export const getCurrentColumnDetails = createSelector(
         isSelectable: isSelectable,
       };
     }
-  },
+  }
 );
 
 export const isCurrentColumnReadOnly = createSelector(
   [getCurrentColumn, getMetadata],
   (currentColumn: string | undefined, metadata: Metadata): boolean => {
     return isColumnReadOnly(metadata, currentColumn!);
-  },
+  }
 );
 
 export const getCurrentColumnDescription = createSelector(
@@ -71,13 +71,13 @@ export const getCurrentColumnDescription = createSelector(
   (
     currentColumn: string | undefined,
     metadata: Metadata,
-    trainedModelDetails: TrainedModelDetailsSave,
+    trainedModelDetails: TrainedModelDetailsSave
   ): string | undefined => {
     return currentColumn
       ? (getColumnDescription(currentColumn, metadata, trainedModelDetails) ??
           undefined)
       : undefined;
-  },
+  }
 );
 
 export const isCurrentColumnSelectable = createSelector(
@@ -88,14 +88,14 @@ export const isCurrentColumnSelectable = createSelector(
   ],
   (selected: boolean, isValidData: boolean): boolean => {
     return !selected && isValidData;
-  },
+  }
 );
 
 export const isCurrentColumnSelected = createSelector(
   [getSelectedColumns, getCurrentColumn],
   (selectedColumns: string[], currentColumn: string | undefined): boolean => {
     return !!currentColumn && selectedColumns.includes(currentColumn);
-  },
+  }
 );
 
 export const isValidData = createSelector(
@@ -105,7 +105,7 @@ export const isValidData = createSelector(
   ],
   (isValidNumericalData: boolean, isValidCategoricalData: boolean): boolean => {
     return isValidNumericalData || isValidCategoricalData;
-  },
+  }
 );
 
 export const getNumericalColumnDetails = createSelector(
@@ -119,7 +119,7 @@ export const getNumericalColumnDetails = createSelector(
     currentColumn: string | undefined,
     isNumerical: boolean,
     extrema: Extrema,
-    containsOnlyNumbers: boolean,
+    containsOnlyNumbers: boolean
   ): NumericalColumnDetails => {
     const numericalColumnDetails: Partial<NumericalColumnDetails> & {
       id?: string;
@@ -130,38 +130,38 @@ export const getNumericalColumnDetails = createSelector(
       numericalColumnDetails.extrema = extrema;
     }
     return numericalColumnDetails as NumericalColumnDetails;
-  },
+  }
 );
 
 export const currentColumnIsNumerical = createSelector(
   [getCurrentColumn, getColumnsByDataType],
   (
     currentColumn: string | undefined,
-    columnsByDataType: Record<string, string>,
+    columnsByDataType: Record<string, string>
   ): boolean => {
     return columnsByDataType[currentColumn!] === ColumnTypes.NUMERICAL;
-  },
+  }
 );
 
 export const getExtremaCurrentColumn = createSelector(
   [getCurrentColumn, getData],
   (currentColumn: string | undefined, data: DataRow[]): Extrema => {
     return getExtrema(data, currentColumn!);
-  },
+  }
 );
 
 export const currentColumnContainsOnlyNumbers = createSelector(
   [getCurrentColumn, getData],
   (currentColumn: string | undefined, data: DataRow[]): boolean => {
     return containsOnlyNumbers(data, currentColumn!);
-  },
+  }
 );
 
 export const isValidNumericalData = createSelector(
   [currentColumnIsNumerical, currentColumnContainsOnlyNumbers],
   (isNumerical: boolean, containsOnlyNumbers: boolean): boolean => {
     return isNumerical && containsOnlyNumbers;
-  },
+  }
 );
 
 export const getCategoricalColumnDetails = createSelector(
@@ -175,7 +175,7 @@ export const getCategoricalColumnDetails = createSelector(
     currentColumn: string | undefined,
     isCategorical: boolean,
     uniqueOptions: string[],
-    uniqueOptionFrequencies: Record<string, number>,
+    uniqueOptionFrequencies: Record<string, number>
   ): CategoricalColumnDetails => {
     const categeoricalColumnDetails: Partial<CategoricalColumnDetails> & {
       id?: string;
@@ -186,21 +186,21 @@ export const getCategoricalColumnDetails = createSelector(
       categeoricalColumnDetails.frequencies = uniqueOptionFrequencies;
     }
     return categeoricalColumnDetails as CategoricalColumnDetails;
-  },
+  }
 );
 
 export const getUniqueOptionsCurrentColumn = createSelector(
   [getCurrentColumn, getData],
   (currentColumn: string | undefined, data: DataRow[]): string[] => {
     return getUniqueOptions(data, currentColumn!).map(String).sort();
-  },
+  }
 );
 
 export const getOptionFrequenciesCurrentColumn = createSelector(
   [getCurrentColumn, getData],
   (
     currentColumn: string | undefined,
-    data: DataRow[],
+    data: DataRow[]
   ): Record<string, number> => {
     const optionFrequencies: Record<string, number> = {};
     for (const row of data) {
@@ -211,29 +211,29 @@ export const getOptionFrequenciesCurrentColumn = createSelector(
       }
     }
     return optionFrequencies;
-  },
+  }
 );
 
 export const currentColumnIsCategorical = createSelector(
   [getCurrentColumn, getColumnsByDataType],
   (
     currentColumn: string | undefined,
-    columnsByDataType: Record<string, string>,
+    columnsByDataType: Record<string, string>
   ): boolean => {
     return columnsByDataType[currentColumn!] === ColumnTypes.CATEGORICAL;
-  },
+  }
 );
 
 export const hasTooManyUniqueOptions = createSelector(
   [getUniqueOptionsCurrentColumn, currentColumnIsCategorical],
   (uniqueOptions: string[], isCategorical: boolean): boolean => {
     return isCategorical && tooManyUniqueOptions(uniqueOptions.length);
-  },
+  }
 );
 
 export const isValidCategoricalData = createSelector(
   [currentColumnIsCategorical, getUniqueOptionsCurrentColumn],
   (isCategorical: boolean, uniqueOptions: string[]): boolean => {
     return isCategorical && !tooManyUniqueOptions(uniqueOptions.length);
-  },
+  }
 );

@@ -23,7 +23,7 @@ export type Grade = (typeof GRADES)[number];
 
 export function displayNodeLabel(
   node: DisplayTreeNode,
-  datasetId: string,
+  datasetId: string
 ): string {
   if (node.type === 'question') {
     return `${getLocalizedColumnName(datasetId, node.column)}?`;
@@ -40,7 +40,7 @@ export function rowCountText(counts: DisplayTreeNodeCounts): string {
 
 export function shownGrades(
   node: DisplayTreeNode,
-  counts: DisplayTreeNodeCounts,
+  counts: DisplayTreeNodeCounts
 ): Grade[] {
   return node.type === 'answer'
     ? GRADES.filter(grade => counts[grade] > 0)
@@ -50,10 +50,10 @@ export function shownGrades(
 function textMeasurer(): (
   variant: 'body3' | 'body4',
   weight: number,
-  text: string,
+  text: string
 ) => number {
   const rootFontSize = parseFloat(
-    getComputedStyle(document.documentElement).fontSize,
+    getComputedStyle(document.documentElement).fontSize
   );
   const context = document.createElement('canvas').getContext('2d')!;
   return (variant, weight, text) => {
@@ -66,13 +66,13 @@ function textMeasurer(): (
 
 export function nodeWidthMeasurer(
   datasetId: string,
-  counts: DisplayTreeCountsLookup,
+  counts: DisplayTreeCountsLookup
 ): (node: DisplayTreeNode, id: string) => number {
   const textWidth = textMeasurer();
 
   const countsWidth = (
     node: DisplayTreeNode,
-    nodeCounts: DisplayTreeNodeCounts,
+    nodeCounts: DisplayTreeNodeCounts
   ): number => {
     const shown = shownGrades(node, nodeCounts);
     if (shown.length === 0) {
@@ -84,7 +84,7 @@ export function nodeWidthMeasurer(
         GRADE_ICON_SIZE +
         GRADE_ICON_GAP +
         textWidth('body4', 600, String(nodeCounts[grade])),
-      COUNTS_GAP * (shown.length - 1),
+      COUNTS_GAP * (shown.length - 1)
     );
   };
 
@@ -98,7 +98,7 @@ export function nodeWidthMeasurer(
       countsWidth(node, nodeCounts);
     return Math.min(
       TREE_NODE_MAX_WIDTH,
-      Math.ceil(contentWidth + 2 * (NODE_PADDING_INLINE + PATH_NODE_BORDER)),
+      Math.ceil(contentWidth + 2 * (NODE_PADDING_INLINE + PATH_NODE_BORDER))
     );
   };
 }

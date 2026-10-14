@@ -58,7 +58,7 @@ export default class KNNTrainer extends BaseTrainer<number> {
         kValues.push(defaultRegressionK);
       } else {
         kValues = this.calculatePotentialKValues(state).filter(
-          (kValue: number) => kValue <= state.trainingExamples.length,
+          (kValue: number) => kValue <= state.trainingExamples.length
         );
       }
     } else {
@@ -76,7 +76,7 @@ export default class KNNTrainer extends BaseTrainer<number> {
     const oneThird = Math.round(datasetSize / 3);
     possibleKValues.push(oneThird);
     return possibleKValues.filter(
-      (kValue: number) => kValue <= trainingExamplesSize,
+      (kValue: number) => kValue <= trainingExamplesSize
     );
   }
 }

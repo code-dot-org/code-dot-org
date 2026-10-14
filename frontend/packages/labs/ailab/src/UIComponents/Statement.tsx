@@ -65,14 +65,14 @@ const Statement = ({
 
   const selectedFeaturesHTML = (
     selectedFeatures: string[],
-    currentPanel: string,
+    currentPanel: string
   ) => {
     return (
       <span>
         {selectedFeatures.map((selectedFeature, index) => {
           const localizedName = getLocalizedColumnName(
             datasetId!,
-            selectedFeature,
+            selectedFeature
           );
           return (
             <span key={index}>
@@ -159,7 +159,7 @@ const ConnectedStatement = () => {
   const {project, setLabelColumn, removeSelectedFeature} = useProject();
   const {labelColumn, selectedFeatures} = project;
   const datasetId = useAppSelector(
-    state => state.metadata && state.metadata.name,
+    state => state.metadata && state.metadata.name
   );
 
   return (

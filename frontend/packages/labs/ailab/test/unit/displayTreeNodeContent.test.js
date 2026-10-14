@@ -13,7 +13,7 @@ describe('nodeWidthMeasurer', () => {
     const nodeWidth = nodeWidthMeasurer('unknown', () => NO_ROWS);
 
     expect(nodeWidth(answer('Mammal'), '0')).toBeGreaterThan(
-      nodeWidth(answer('Fish'), '0'),
+      nodeWidth(answer('Fish'), '0')
     );
   });
 
@@ -25,7 +25,7 @@ describe('nodeWidthMeasurer', () => {
     const nodeWidth = nodeWidthMeasurer('unknown', id => counts.get(id));
 
     expect(nodeWidth(answer('Fish'), '0.1')).toBeGreaterThan(
-      nodeWidth(answer('Fish'), '0.0'),
+      nodeWidth(answer('Fish'), '0.0')
     );
   });
 

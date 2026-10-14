@@ -1,7 +1,6 @@
 /* Visible label for a Train panel field, with an info tooltip. */
-import {IconButton, Tooltip, Typography} from '@mui/material';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Tooltip, Typography} from '@mui/material';
 
 import styles from './fieldLabel.module.scss';
 

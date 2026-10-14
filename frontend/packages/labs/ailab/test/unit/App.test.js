@@ -20,7 +20,7 @@ function renderApp(mode) {
       onStartOver: () => {},
       onTrained,
     }),
-    {store, project},
+    {store, project}
   );
   return {store, onTrained, trainModel};
 }
@@ -88,7 +88,7 @@ describe('a pretrained level', () => {
         onStartOver: () => {},
         onTrained,
       }),
-      {store: storeSingleton, project: levelProject()},
+      {store: storeSingleton, project: levelProject()}
     );
     return {onTrained, trainingData};
   }
@@ -113,7 +113,7 @@ describe('a pretrained level', () => {
     act(() => {
       seedLevel(storeSingleton, PRETRAINED);
       storeSingleton.dispatch(
-        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
     expect(onTrained.mock.calls).toEqual([[100]]);
@@ -138,7 +138,7 @@ describe('a pretrained level', () => {
     act(() => {
       seedLevel(storeSingleton, hiding);
       storeSingleton.dispatch(
-        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
     expect(storeSingleton.getState().currentPanel).toBe('results');
