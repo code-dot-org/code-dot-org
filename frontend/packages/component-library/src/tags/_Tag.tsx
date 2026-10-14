@@ -1,4 +1,5 @@
 import {Tooltip} from '@mui/material';
+import classNames from 'classnames';
 import {
   FunctionComponent,
   MouseEvent,
@@ -20,11 +21,14 @@ type TagIconProps = FontAwesomeV6IconProps & {
   placement: 'left' | 'right';
 };
 
+export type TagColor = 'default' | 'pink';
+
 const TagIcon: FunctionComponent<TagIconProps> = memo(
-  ({iconName, iconStyle, title}) => (
+  ({iconName, iconStyle, iconFamily, title}) => (
     <FontAwesomeV6Icon
       iconName={iconName}
       iconStyle={iconStyle}
+      iconFamily={iconFamily}
       title={title}
     />
   ),
@@ -48,6 +52,8 @@ export interface BaseTagProps {
   icon?: TagIconProps;
   /** Unique key */
   key?: Key;
+  /** Tag colour. Defaults to the neutral tag. */
+  color?: TagColor;
 }
 
 export interface DefaultTagProps extends BaseTagProps {
@@ -72,6 +78,7 @@ const Tag: FunctionComponent<TagProps> = props => {
     tooltipContent,
     tooltipId,
     icon,
+    color = 'default',
     type = 'default',
   } = props;
   const tooltipWrapper = useCallback(
@@ -87,7 +94,7 @@ const Tag: FunctionComponent<TagProps> = props => {
   );
 
   const containerAttrs: HTMLAttributes<HTMLDivElement> = {
-    className: moduleStyles.tag,
+    className: classNames(moduleStyles.tag, moduleStyles[`tag-${color}`]),
     tabIndex: 0,
     'aria-label': ariaLabel,
   };

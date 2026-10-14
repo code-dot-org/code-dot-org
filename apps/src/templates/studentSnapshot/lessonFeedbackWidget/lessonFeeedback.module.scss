@@ -39,6 +39,33 @@ label.typographyLabelTwo {
   width: calc(100% - 30px);
 }
 
+// Pink content border on the feedback input, and the icon-only attribution
+// that replaces the banner. Both built in place.
+.feedbackTextBoxWrapperTa {
+  // The textarea itself carries no border of its own, so this adds one rather
+  // than recolouring. .inputWrapper is a different field (RecommendedActions).
+  .feedbackInputBox {
+    // 2px to match the Lesson Insight content border, which shows that much of
+    // its ::before through a 2px margin on the inner element.
+    border: 2px solid var(--border-accent-pink-mid);
+    border-radius: 4px;
+  }
+}
+
+.taAttribution {
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: var(--shape-sm, 0.375rem);
+  background: var(--background-accent-pink-light);
+  border: 1px solid var(--border-accent-pink-mid);
+
+  i {
+    font-size: 0.625rem;
+    color: var(--text-accent-pink-primary-fixed);
+  }
+}
+
 .inputWrapper {
   position: relative;
   background-color: white;

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -105,6 +106,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
+  // Only the pre-rebrand PNG reports a load; see showPulse below.
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
+
   const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
   const threadMessages = useAppSelector(
     state => state.aiDiffChat.threadMessages
@@ -200,8 +204,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       });
   }, [context, dispatch]);
 
-  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
-
   const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
   const [dragging, setDragging] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -287,7 +289,12 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     onDragEnd();
   };
 
-  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
+  // The TA rebrand -- new mark, pink disc, count-only badge -- ships with the
+  // rest of the new teacher panel. Without the experiment this is the old FAB,
+  // down to the pulse waiting on the PNG to load.
+  const showRebrandedIcon = experiments.isEnabled('ta-teacher-panel');
+  const showPulse =
+    canShowPulse && !hasOpened && (showRebrandedIcon || isFabImageLoaded);
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButtonRight;
@@ -341,8 +348,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     updateUnreadNotificationCount();
   };
 
-  const brand = document.documentElement.dataset.brand;
-
   return (
     <div
       id="fab-contained"
@@ -378,14 +383,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           }}
         >
           <Badge
+            // Rebranded, the badge is the unread count and nothing else: MUI
+            // hides it at zero, which covers both "no notifications" and
+            // "still loading". Before the rebrand it doubled as a 'TA' label.
             badgeContent={
               unreadNotificationCount === 'loading'
                 ? 0
-                : unreadNotificationCount > 0
+                : unreadNotificationCount > 0 || showRebrandedIcon
                 ? unreadNotificationCount
                 : 'TA'
             }
-            color="error"
+            color={showRebrandedIcon ? undefined : 'error'}
             overlap="circular"
             aria-label={
               unreadNotificationCount &&
@@ -396,31 +404,46 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
             sx={{
               height: '48px',
               width: '48px',
-              '& .MuiBadge-badge': {
-                backgroundColor:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--background-error-primary)'
-                    : 'var(--background-brand-aqua-primary)',
-                color:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0 ||
-                  brand === 'codeai-next'
-                    ? 'var(--text-neutral-white-fixed)'
-                    : 'var(--text-neutral-black-fixed)',
-                top: '5%',
-                right: '5%',
-              },
+              '& .MuiBadge-badge': showRebrandedIcon
+                ? {
+                    // Dark on light and light on dark: these invert with the
+                    // theme, unlike the -fixed variants.
+                    backgroundColor:
+                      'var(--background-neutral-primary-inverse)',
+                    color: 'var(--text-neutral-primary-inverse)',
+                    // The ring separates the count from the pink disc it
+                    // overlaps, so it matches the surface, not the badge.
+                    border: '2px solid var(--background-neutral-primary)',
+                    top: '5%',
+                    right: '18%',
+                  }
+                : {
+                    backgroundColor:
+                      unreadNotificationCount === 'loading' ||
+                      unreadNotificationCount > 0
+                        ? 'var(--background-error-primary)'
+                        : 'var(--background-brand-aqua-primary)',
+                    color: 'var(--text-neutral-white-fixed)',
+                    top: '5%',
+                    right: '5%',
+                  },
             }}
-            className={style.badge}
           >
-            <img
-              alt="AI bot - unread notifications"
-              src={aiFabWithoutText}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-              className={style.fabImageWithBadge}
-              draggable={false}
-            />
+            {showRebrandedIcon ? (
+              <FontAwesomeV6Icon
+                iconFamily="kit"
+                iconName="ta"
+                title={i18n.openOrCloseTeachingAssistant()}
+                className={style.fabIcon}
+              />
+            ) : (
+              <img
+                alt="AI bot - unread notifications"
+                src={aiFabWithoutText}
+                onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+                draggable={false}
+              />
+            )}
           </Badge>
         </button>
       )}

@@ -20,6 +20,8 @@ interface WidgetTemplateProps {
   loading?: boolean;
   settingsOptions?: DropdownOption[];
   id?: string;
+  /** Rendered in the header, between the name and the settings menu. */
+  headerContent?: React.ReactNode;
 }
 
 const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
@@ -31,6 +33,7 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
   loading = false,
   settingsOptions = [],
   id,
+  headerContent,
 }) => {
   return (
     <div
@@ -40,6 +43,9 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
     >
       <div className={styles.header}>
         <Typography variant="label1">{widgetName}</Typography>
+        {headerContent && (
+          <div className={styles.headerContent}>{headerContent}</div>
+        )}
         {settingsOptions.length > 0 && (
           <div>
             <ActionDropdown

@@ -66,6 +66,29 @@
   }
 }
 
+// Rebranded, the content border is solid pink rather than a rotating gradient.
+// Doubled on .widgetBody so it beats the ::before rule above on specificity
+// rather than on source order.
+.widgetBody.widgetBodyTa::before {
+  background: var(--border-accent-pink-primary);
+  animation: none;
+}
+
+// The icon-only attribution that replaces the footer label, built in place.
+.taAttribution {
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: var(--shape-sm, 0.375rem);
+  background: var(--background-accent-pink-light);
+  border: 1px solid var(--border-accent-pink-mid);
+
+  i {
+    font-size: 0.625rem;
+    color: var(--text-accent-pink-primary-fixed);
+  }
+}
+
 .aiGeneratedLabel {
   padding: 4px 8px;
   border-top: solid 1px var(--borders-neutral-light);

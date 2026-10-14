@@ -1,10 +1,13 @@
 import Alert from '@code-dot-org/component-library/alert';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import ActionButtons from './ActionButtons';
@@ -372,17 +375,26 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     return `Last ${action} ${dateStr} at ${timeStr}`;
   };
 
+  const showTaAttribution = experiments.isEnabled('ta-teacher-panel');
+
   // TO DO: Use Loading widget when needed here.
   const widgetContent = (
     <div className={styles.topContainer}>
-      <Alert
-        icon={{iconName: 'sparkles'}}
-        text={i18n.lessonFeedbackAlertText()}
-        type="aqua"
-        size="xs"
-        className={styles.alertBox}
-      />
-      <div className={styles.feedbackTextBoxWrapper}>
+      {!showTaAttribution && (
+        <Alert
+          icon={{iconName: 'sparkles'}}
+          text={i18n.lessonFeedbackAlertText()}
+          type="aqua"
+          size="xs"
+          className={styles.alertBox}
+        />
+      )}
+      <div
+        className={classNames(
+          styles.feedbackTextBoxWrapper,
+          showTaAttribution && styles.feedbackTextBoxWrapperTa
+        )}
+      >
         <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
         <FeedbackTextbox
           feedbackText={feedbackText}
@@ -416,6 +428,20 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       gridHeight={2}
       loading={isLoading}
       scrollable={true}
+      headerContent={
+        showTaAttribution ? (
+          <span
+            className={styles.taAttribution}
+            aria-label={i18n.createdByTeachingAssistant()}
+          >
+            <FontAwesomeV6Icon
+              iconName="ta"
+              iconFamily="kit"
+              title={i18n.createdByTeachingAssistant()}
+            />
+          </span>
+        ) : undefined
+      }
     >
       {widgetContent}
     </WidgetTemplate>

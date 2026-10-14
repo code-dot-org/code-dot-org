@@ -887,3 +887,22 @@ html body .sidebarActionTooltip {
 .fabContainedInline {
   display: contents;
 }
+
+// The TA logo in the floating action button: a white mark on a filled pink
+// disc, per the TA brand sheet. The button itself is a transparent 48px
+// circle, so the disc is drawn here rather than on the button, whose class
+// changes when the pulse animation is on.
+.fabIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: var(--background-accent-pink-primary);
+  color: var(--text-neutral-white-fixed);
+  // Sized against the 48px disc rather than to fill it, so the mark keeps a
+  // margin on all sides.
+  font-size: 1.25rem;
+  line-height: 1;
+}
