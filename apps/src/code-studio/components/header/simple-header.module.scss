@@ -31,16 +31,14 @@
   object-fit: cover;
 }
 
-// The two lines: name and label, then the bar and the saved-at. Grows to
-// its cap so the bar has room beside the saved-at, and shrinks with the
-// row: the names ellipsize and the bar fills what is left.
+// The two lines: name and label, then the saved-at. Shrinks with the row:
+// the names ellipsize.
 .text {
   margin-inline-start: 12px;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
-  max-width: 480px;
 }
 
 .title {
@@ -75,23 +73,9 @@
   flex: none;
 }
 
-.status {
-  height: 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.progress {
-  flex: 1 1 auto;
-  min-width: 60px;
-}
-
-// Holds the badge's width from the start, so the bar does not move when
-// "Saved" arrives.
+// A fixed line, so the row does not move when "Saved" arrives.
 .saved {
-  flex: none;
-  min-width: 160px;
+  height: 14px;
   display: flex;
   align-items: center;
   font-size: 12px;

@@ -5,9 +5,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {AichatContext} from '@cdo/apps/aichat/types';
-import {setSimpleProgress} from '@cdo/apps/code-studio/simpleProgressRedux';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
@@ -71,26 +69,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   } = useProgress(pathway, progressKey);
   const [view, setView] = useState<View>({kind: 'map'});
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
-  // On the map, the level header's simple progress shows the checkpoints
-  // complete; a playing checkpoint reports its own steps instead.
-  const dispatch = useAppDispatch();
-  const completedCount = progress?.completed.length ?? 0;
-  useEffect(() => {
-    if (view.kind !== 'map' || !progress) {
-      return;
-    }
-    dispatch(
-      setSimpleProgress({
-        label: pathway.title,
-        position: completedCount,
-        total: pathway.checkpoints.length,
-        valueText: `${completedCount} of ${pathway.checkpoints.length} checkpoints complete`,
-      })
-    );
-    return () => {
-      dispatch(setSimpleProgress(null));
-    };
-  }, [dispatch, view.kind, progress, pathway, completedCount]);
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
     setAiGatewayOptIn(isAdaptiveAiEnabled());

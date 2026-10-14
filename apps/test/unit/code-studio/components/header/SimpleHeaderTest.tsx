@@ -3,15 +3,15 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import SimpleHeader, {
+  currentHeaderLabel,
+} from '@cdo/apps/code-studio/components/header/SimpleHeader';
 
 import styles from '@cdo/apps/code-studio/components/header/simple-header.module.scss';
 
+let levels: unknown[] = [];
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
-  getCurrentLevels: () => [
-    {id: '1', headerLabel: 'Story', isCurrentLevel: true},
-    {id: '2', headerLabel: 'Story'},
-  ],
+  getCurrentLevels: () => levels,
 }));
 // Connected to stores of their own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
@@ -26,9 +26,6 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
 interface StoreState {
   isRtl: boolean;
   project?: {showProjectUpdatedAt: boolean};
-  simpleProgress?: {
-    progress: {label: string; position: number; total: number} | null;
-  };
 }
 
 function renderHeader(state: Partial<StoreState> = {}) {
@@ -44,12 +41,14 @@ function renderHeader(state: Partial<StoreState> = {}) {
 }
 
 describe('SimpleHeader', () => {
-  it('shows on mount', () => {
-    renderHeader();
-    expect(document.querySelector('#header_middle_content')).not.toBeNull();
+  beforeEach(() => {
+    levels = [
+      {id: '1', headerLabel: 'Story', isCurrentLevel: true},
+      {id: '2', headerLabel: 'Story'},
+    ];
   });
 
-  it('places the image, the name and label, the bar and the buttons', () => {
+  it('places the image, the name and label, and the buttons', () => {
     renderHeader();
     const row = document.querySelector('#header_middle_content') as HTMLElement;
     expect(row.classList.contains(styles.row)).toBe(true);
@@ -57,17 +56,19 @@ describe('SimpleHeader', () => {
     const name = document.querySelector('#unit_name_container') as HTMLElement;
     expect(name.getAttribute('href')).toBe('/s/hoai2026-dev');
     expect(name.textContent).toBe('hoai2026 dev');
-    expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
-      'Story'
-    );
-    expect(screen.getByRole('progressbar').getAttribute('aria-valuetext')).toBe(
-      'Level 1 of 2'
-    );
+    expect(screen.getByText('Story')).toBeTruthy();
     expect(
       document
         .querySelector('#project_info_container')
         ?.classList.contains(styles.projectInfo)
     ).toBe(true);
+  });
+
+  it('shows the name alone when the current level has no label', () => {
+    levels = [{id: '1', isCurrentLevel: true}];
+    renderHeader();
+    expect(screen.queryByText('·')).toBeNull();
+    expect(document.querySelector('#unit_name_container')).not.toBeNull();
   });
 
   it('shows the saved-at only once the project store asks for it', () => {
@@ -77,23 +78,22 @@ describe('SimpleHeader', () => {
     expect(screen.getByText('Saved')).toBeTruthy();
   });
 
-  it('prefers progress reported to the store over the levels', () => {
-    renderHeader({
-      simpleProgress: {
-        progress: {label: 'Introduction', position: 2, total: 4},
-      },
-    });
-    expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
-      'Introduction'
-    );
-    const bar = screen.getByRole('progressbar');
-    expect(bar.getAttribute('aria-valuenow')).toBe('2');
-    expect((bar.firstChild as HTMLElement).style.width).toBe('50%');
-  });
-
   it('marks the document as carrying the header', () => {
     delete document.documentElement.dataset.headerPresent;
     renderHeader();
     expect(document.documentElement.dataset.headerPresent).toBe('true');
+  });
+});
+
+describe('currentHeaderLabel', () => {
+  it("reads the current level's label, through a current sublevel", () => {
+    expect(
+      currentHeaderLabel([
+        {headerLabel: 'A'},
+        {headerLabel: 'B', sublevels: [{isCurrentLevel: true}]},
+      ])
+    ).toBe('B');
+    expect(currentHeaderLabel([{isCurrentLevel: true}])).toBeNull();
+    expect(currentHeaderLabel(undefined)).toBeNull();
   });
 });

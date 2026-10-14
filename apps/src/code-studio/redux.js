@@ -30,7 +30,6 @@ import lessonLock from './lessonLockRedux';
 import progress from './progressRedux';
 import project from './projectRedux';
 import responsive from './responsiveRedux';
-import simpleProgress from './simpleProgressRedux';
 import verifiedInstructor from './verifiedInstructorRedux';
 import viewAs from './viewAsRedux';
 
@@ -47,7 +46,6 @@ registerReducers({
   hiddenLesson,
   isRtl,
   responsive,
-  simpleProgress,
   frozenProjectInfoDialog,
   projects,
   verifiedInstructor,
