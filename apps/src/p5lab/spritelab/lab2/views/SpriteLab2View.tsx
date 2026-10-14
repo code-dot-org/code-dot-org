@@ -1,6 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography as MuiTypography} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -131,7 +130,8 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {blurAfterPointerClick, isPointerClick} from './blurAfterPointerClick';
-import EditorSwitch, {Editor} from './components/EditorSwitch';
+import EditorStrip from './components/EditorStrip';
+import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
@@ -2090,25 +2090,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <div ref={stageRef} className={moduleStyles.stage}>
             {editorsShown &&
               (activeTab === 'World' || activeTab === 'Code') && (
-                <div
-                  className={moduleStyles.editorStrip}
+                <EditorStrip
+                  editor={activeTab}
+                  onChange={handleEditorChange}
+                  disabledEditors={disabledEditors}
                   style={clearOfPreview}
-                >
-                  <MuiTypography
-                    component="h2"
-                    variant="overline2"
-                    className={moduleStyles.editorStripTitle}
-                  >
-                    {activeTab === 'World' ? 'World' : 'Workspace'}
-                  </MuiTypography>
-                  <div className={moduleStyles.editorStripEnd}>
-                    <EditorSwitch
-                      value={activeTab === 'World' ? 'World' : 'Code'}
-                      onChange={handleEditorChange}
-                      disabledEditors={disabledEditors}
-                    />
-                  </div>
-                </div>
+                />
               )}
             {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
