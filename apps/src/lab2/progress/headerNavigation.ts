@@ -22,23 +22,31 @@ function subscribeToOwners(listener: () => void) {
   };
 }
 
-/** Called by the header's Continue button. */
+/** Continues the lab as if its own Continue were clicked. */
 export function requestHeaderContinue() {
   window.dispatchEvent(new Event(HEADER_CONTINUE_EVENT));
 }
 
-/** Whether this component is the one that answers the header's Continue. */
-export function useOwnsHeaderNavigation(): boolean {
+/** Whether any component still wants to publish to the header. */
+export function hasHeaderNavigationOwner(): boolean {
+  return owners.length > 0;
+}
+
+/** Whether this component, while active, is the one that answers the header's Continue. */
+export function useOwnsHeaderNavigation(active: boolean): boolean {
   const token = useRef(Symbol('headerNavigationOwner')).current;
 
   useEffect(() => {
+    if (!active) {
+      return;
+    }
     owners = [...owners, token];
     notifyOwners();
     return () => {
       owners = owners.filter(owner => owner !== token);
       notifyOwners();
     };
-  }, [token]);
+  }, [active, token]);
 
   return useSyncExternalStore(
     subscribeToOwners,

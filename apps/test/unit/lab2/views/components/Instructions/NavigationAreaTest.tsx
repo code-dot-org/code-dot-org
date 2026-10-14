@@ -365,6 +365,112 @@ describe('NavigationArea', () => {
       expect(screen.getByText('Submit')).toBeInTheDocument();
       expect(store.getState().header.headerNavigation).toBeUndefined();
     });
+
+    it('keeps a Finish under its own question in the lab', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      renderDefault({
+        levelProperties: makeLevelProperties({useSecondaryFinishButton: true}),
+      });
+
+      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(store.getState().header.headerNavigation).toBeUndefined();
+    });
+
+    it('ignores the header while Continue is disabled', () => {
+      renderDefault({requireRun: true});
+
+      requestHeaderContinue();
+
+      expect(continueOrFinishLesson).not.toHaveBeenCalled();
+    });
+
+    it('republishes when the lab state changes', () => {
+      const {rerender} = renderDefault({requireRun: true});
+      expect(store.getState().header.headerNavigation.enabled).toBe(false);
+
+      rerender(
+        <ThemeProvider>
+          <Provider store={store}>
+            <NavigationArea
+              levelProperties={makeLevelProperties()}
+              isRunning={false}
+              hasRun
+              hasEdited={false}
+              requireRun
+            />
+          </Provider>
+        </ThemeProvider>
+      );
+
+      expect(store.getState().header.headerNavigation.enabled).toBe(true);
+    });
+
+    it('hands the header back when the newest area unmounts', () => {
+      renderDefault();
+      const {unmount} = renderDefault({requireRun: true});
+      expect(store.getState().header.headerNavigation.enabled).toBe(false);
+      let cleared = false;
+      store.subscribe(() => {
+        cleared ||= !store.getState().header.headerNavigation;
+      });
+
+      unmount();
+
+      expect(cleared).toBe(false);
+      expect(store.getState().header.headerNavigation.enabled).toBe(true);
+      requestHeaderContinue();
+      expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not let an opted-out area take the header', () => {
+      renderDefault();
+      renderDefault({keepContinueInLab: true});
+
+      expect(store.getState().header.headerNavigation).toMatchObject({
+        enabled: true,
+      });
+      requestHeaderContinue();
+      expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+
+    it("publishes a host's label and runs its action once", () => {
+      const onContinue = jest.fn();
+      render(
+        <ThemeProvider>
+          <Provider store={store}>
+            <ExternalNavigationContext.Provider
+              value={{label: 'Complete checkpoint', enabled: true, onContinue}}
+            >
+              <NavigationArea
+                levelProperties={makeLevelProperties()}
+                isRunning={false}
+                hasRun={false}
+                hasEdited={false}
+              />
+            </ExternalNavigationContext.Provider>
+          </Provider>
+        </ThemeProvider>
+      );
+
+      expect(store.getState().header.headerNavigation.label).toBe(
+        'Complete checkpoint'
+      );
+      requestHeaderContinue();
+      expect(onContinue).toHaveBeenCalledTimes(1);
+      expect(continueOrFinishLesson).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('with the header but no progress widget', () => {
+    it('keeps Continue in the lab and ignores the header', () => {
+      registerReducers({header});
+      renderDefault();
+
+      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(store.getState().header.headerNavigation).toBeUndefined();
+      requestHeaderContinue();
+      expect(continueOrFinishLesson).not.toHaveBeenCalled();
+    });
   });
 
   describe('null rendering', () => {
