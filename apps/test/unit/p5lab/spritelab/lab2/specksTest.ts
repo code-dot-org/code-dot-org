@@ -48,6 +48,21 @@ describe('SpriteLab2 clearMinorComponents', () => {
     expect(opaqueCount(data)).toBe(936);
   });
 
+  it('keeps a thin part clear of the edge, and clears the same line on it', () => {
+    // A 30x30 body and a 1x20 line under 10% of it: kept while it floats
+    // inside the picture, a stray once it lies along the edge.
+    const inside = picture([
+      [2, 2, 30, 30],
+      [36, 10, 1, 20],
+    ]);
+    expect(clearMinorComponents(inside, SIDE, SIDE, 64, 0.1)).toBe(0);
+    const onEdge = picture([
+      [2, 2, 30, 30],
+      [SIDE - 1, 10, 1, 20],
+    ]);
+    expect(clearMinorComponents(onEdge, SIDE, SIDE, 64, 0.1)).toBe(20);
+  });
+
   it('counts diagonal neighbours as one patch', () => {
     // Two pixels touching only at a corner, beside a body: together they
     // are one patch, and far too small to keep.

@@ -85,9 +85,8 @@ const BACKGROUND_PROMPT_CLAUSE =
 // The square is ground in a platform game, and the prompt says so: without
 // the game's meaning, "a block of gold" comes back as a picture of a gold
 // cube. Name no separate object ("block", "tile", "cube") — the model draws
-// it inside the square — describe the ground's face instead. The margin is
-// the named key colour; "a block of grass" once came back as a whole
-// three-tier hillside under a sky, hence the one-square clause.
+// it inside the square — describe the ground's face instead, and ask for
+// one square only, or a whole hillside under a sky can come back.
 function blockPromptClause(key: KeyColor): string {
   return `This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Draw exactly one such square: no sky above it, no scene around it, and no second tier, ledge or slope. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in ${key.name} (${key.hex}), one plain solid flat color that appears nowhere in the artwork, extending to the image edges. No background scene — just the artwork on that flat ${key.name}.`;
 }
@@ -278,11 +277,11 @@ async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
  */
 export function fullPromptFor(
   prompt: string,
-  options: GenerateImageOptions = {}
+  options: GenerateImageOptions = {},
+  key: KeyColor = chooseKeyColor(prompt)
 ): string {
   const {imageType = 'sprite', style = 'smooth'} = options;
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  const key = chooseKeyColor(prompt);
   // Read the prompt as a sentence before the clauses, without doubling the
   // punctuation a prompt may already end with.
   const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
@@ -313,7 +312,8 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  const fullPrompt = fullPromptFor(prompt, options);
+  const key = chooseKeyColor(prompt);
+  const fullPrompt = fullPromptFor(prompt, options, key);
 
   // The prompt judge and the image model run concurrently — generation is
   // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
@@ -381,9 +381,7 @@ export async function generateImage(
   // grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
-    blob = await removeKeyColor(blob, chooseKeyColor(prompt).rgb, {
-      soft: style === 'smooth',
-    });
+    blob = await removeKeyColor(blob, key.rgb, {soft: style === 'smooth'});
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites

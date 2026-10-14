@@ -46,80 +46,40 @@ function keySignature(
   return full - none;
 }
 
-// A pixel at or above this signature is background outright. Pixels in the
-// band below it that the background can reach — flooding out from the
-// outright pixels through the band — are background too: the darker
-// patches of a textured backdrop, and the anti-aliased edge where key and
-// character blend. The band's floor keeps a saturated costume out of reach
-// (keySignature's robe example scores 60).
+// A pixel at or above this signature is background outright. The band
+// below it floods from the cleared pixels: a textured backdrop's darker
+// patches and the anti-aliased edge. The band's floor keeps a saturated
+// costume out of reach (the robe above scores 60).
 const KEY_SIGNATURE = 150;
 const KEY_EDGE_SIGNATURE = 65;
 
 // A backdrop that came back duller than asked scores under KEY_SIGNATURE
-// everywhere, so no flood starts and all of it stays. The prompt puts the
-// backdrop on every edge: when the border is one flat colour (10th to 90th
-// percentile within the spread) scoring in the band, the outright cutoff
-// drops to just under its median. A border that scores under the floor,
-// varies, or is mostly transparent already leaves the cutoff alone.
+// everywhere; the border tells, since the prompt puts the backdrop on every
+// edge. When the border is one flat colour scoring in the band, pixels near
+// that colour are background outright and the edge ramp runs from just
+// under the border's median.
 const DULL_KEY_FLOOR = 90;
 const DULL_KEY_MARGIN = 24;
 const DULL_KEY_SPREAD = 40;
+const DULL_KEY_DISTANCE = 24;
 
-function outrightCutoff(
-  data: Uint8ClampedArray,
-  signature: Uint8ClampedArray,
-  width: number,
-  height: number
-): number {
-  const border: number[] = [];
-  let ring = 0;
-  const take = (p: number) => {
-    ring++;
-    if (data[p * 4 + 3] > 0) {
-      border.push(signature[p]);
-    }
-  };
-  for (let x = 0; x < width; x++) {
-    take(x);
-    if (height > 1) {
-      take((height - 1) * width + x);
-    }
-  }
-  for (let y = 1; y < height - 1; y++) {
-    take(y * width);
-    if (width > 1) {
-      take(y * width + width - 1);
-    }
-  }
-  if (border.length < ring / 2) {
-    return KEY_SIGNATURE;
-  }
-  border.sort((a, b) => a - b);
-  const median = border[border.length >> 1];
-  const spread =
-    border[Math.floor(border.length * 0.9)] -
-    border[Math.floor(border.length * 0.1)];
-  if (
-    median < DULL_KEY_FLOOR ||
-    median >= KEY_SIGNATURE ||
-    spread > DULL_KEY_SPREAD
-  ) {
-    return KEY_SIGNATURE;
-  }
-  return Math.max(
-    KEY_EDGE_SIGNATURE + DULL_KEY_MARGIN,
-    median - DULL_KEY_MARGIN
-  );
-}
-
-// A border that is one flat opaque colour scoring nothing against the key is
-// a backdrop the model drew in a colour of its own. That colour is keyed by
-// a flood from the edges, which an enclosed patch of it on the character
-// (a white shirt) never joins.
+// A border that is one flat opaque colour scoring nothing against the key
+// is a backdrop in a colour of the model's own: flooded from the edges, so
+// an enclosed patch of it on the character stays.
 const OFF_KEY_BORDER_SPREAD = 30;
 const OFF_KEY_LOW_DISTANCE = 30;
 const OFF_KEY_HIGH_DISTANCE = 90;
 const OFF_KEY_SOFT_ALPHA_FLOOR = 48;
+
+interface BorderRead {
+  // The opaque border pixels' key signature: median and 10th-to-90th
+  // percentile spread.
+  median: number;
+  spread: number;
+  // Their colour: per-channel median, and the widest channel spread.
+  color: [number, number, number];
+  colorSpread: number;
+}
 
 function borderPixels(width: number, height: number): number[] {
   const border: number[] = [];
@@ -133,33 +93,48 @@ function borderPixels(width: number, height: number): number[] {
   return border;
 }
 
-function offKeyBorderColor(
+// The border ring, or null when under half of it is opaque.
+function readBorder(
   data: Uint8ClampedArray,
   signature: Uint8ClampedArray,
   width: number,
   height: number
-): [number, number, number] | null {
+): BorderRead | null {
   const border = borderPixels(width, height);
   const opaque = border.filter(p => data[p * 4 + 3] > 0);
   if (opaque.length < border.length / 2) {
     return null;
   }
-  const scores = opaque.map(p => signature[p]).sort((a, b) => a - b);
-  if (scores[scores.length >> 1] >= DULL_KEY_FLOOR) {
-    return null;
-  }
-  const color: number[] = [];
-  for (let c = 0; c < 3; c++) {
-    const values = opaque.map(p => data[p * 4 + c]).sort((a, b) => a - b);
-    const spread =
-      values[Math.floor(values.length * 0.9)] -
-      values[Math.floor(values.length * 0.1)];
-    if (spread > OFF_KEY_BORDER_SPREAD) {
-      return null;
-    }
-    color.push(values[values.length >> 1]);
-  }
-  return color as [number, number, number];
+  const read = (pick: (p: number) => number) => {
+    const values = opaque.map(pick).sort((a, b) => a - b);
+    return {
+      median: values[values.length >> 1],
+      spread:
+        values[Math.floor(values.length * 0.9)] -
+        values[Math.floor(values.length * 0.1)],
+    };
+  };
+  const sig = read(p => signature[p]);
+  const channels = [0, 1, 2].map(c => read(p => data[p * 4 + c]));
+  return {
+    median: sig.median,
+    spread: sig.spread,
+    color: channels.map(c => c.median) as [number, number, number],
+    colorSpread: Math.max(...channels.map(c => c.spread)),
+  };
+}
+
+// Max per-channel difference between a pixel and a colour.
+function chromaDistance(
+  data: Uint8ClampedArray,
+  p: number,
+  color: [number, number, number]
+): number {
+  return Math.max(
+    Math.abs(data[p * 4] - color[0]),
+    Math.abs(data[p * 4 + 1] - color[1]),
+    Math.abs(data[p * 4 + 2] - color[2])
+  );
 }
 
 function floodOffKey(
@@ -170,18 +145,12 @@ function floodOffKey(
   soft: boolean
 ): void {
   const high = soft ? OFF_KEY_HIGH_DISTANCE : OFF_KEY_LOW_DISTANCE;
-  const distance = (p: number) =>
-    Math.max(
-      Math.abs(data[p * 4] - color[0]),
-      Math.abs(data[p * 4 + 1] - color[1]),
-      Math.abs(data[p * 4 + 2] - color[2])
-    );
   const visited = new Uint8Array(width * height);
   const stack = borderPixels(width, height);
   stack.forEach(p => (visited[p] = 1));
   while (stack.length) {
     const p = stack.pop()!;
-    const dist = distance(p);
+    const dist = chromaDistance(data, p, color);
     if (dist > high || data[p * 4 + 3] === 0) {
       continue;
     }
@@ -232,14 +201,37 @@ export function keyOutColor(
   for (let p = 0; p < total; p++) {
     signature[p] = keySignature(data, p * 4, key);
   }
-  const cutoff = outrightCutoff(data, signature, width, height);
-  const offKey = offKeyBorderColor(data, signature, width, height);
+  const border = readBorder(data, signature, width, height);
+  const dull =
+    border &&
+    border.median >= DULL_KEY_FLOOR &&
+    border.median < KEY_SIGNATURE &&
+    border.spread <= DULL_KEY_SPREAD
+      ? border
+      : null;
+  const offKey =
+    border &&
+    border.median < DULL_KEY_FLOOR &&
+    border.colorSpread <= OFF_KEY_BORDER_SPREAD
+      ? border.color
+      : null;
+  const cutoff = dull
+    ? Math.max(
+        KEY_EDGE_SIGNATURE + DULL_KEY_MARGIN,
+        dull.median - DULL_KEY_MARGIN
+      )
+    : KEY_SIGNATURE;
+  // The backdrop as drawn, which an edge pixel blended with.
+  const spill = dull ? dull.color : key;
   const queue: number[] = [];
   for (let p = 0; p < total; p++) {
     if (data[p * 4 + 3] === 0) {
       kind[p] = 1;
       queue.push(p);
-    } else if (signature[p] >= cutoff) {
+    } else if (
+      signature[p] >= KEY_SIGNATURE ||
+      (dull && chromaDistance(data, p, dull.color) <= DULL_KEY_DISTANCE)
+    ) {
       data[p * 4 + 3] = 0;
       kind[p] = 1;
       queue.push(p);
@@ -277,19 +269,16 @@ export function keyOutColor(
         touchesCharacter = true;
       }
     });
-    if (options.soft && touchesCharacter) {
-      const alpha = Math.min(
-        1,
-        (cutoff - signature[p]) / (cutoff - KEY_EDGE_SIGNATURE)
-      );
+    if (options.soft && touchesCharacter && signature[p] < cutoff) {
+      const alpha = (cutoff - signature[p]) / (cutoff - KEY_EDGE_SIGNATURE);
       // Despill: an edge pixel is the character's colour blended with the
-      // key by (1 - alpha); take the key's share back out, or the fringe
-      // keeps a tint of it and reads as a halo over any background.
+      // backdrop by (1 - alpha); take the backdrop's share back out, or the
+      // fringe keeps its tint and reads as a halo over any background.
       for (let c = 0; c < 3; c++) {
         const i = p * 4 + c;
         data[i] = Math.max(
           0,
-          Math.min(255, Math.round((data[i] - (1 - alpha) * key[c]) / alpha))
+          Math.min(255, Math.round((data[i] - (1 - alpha) * spill[c]) / alpha))
         );
       }
       data[p * 4 + 3] = Math.round(data[p * 4 + 3] * alpha);

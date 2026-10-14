@@ -128,6 +128,48 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(data, 15)).toBeLessThan(255);
     expect(alpha(data, 16)).toBe(255);
     expect(alpha(data, 14)).toBe(0);
+    // Despilled against the dull backdrop, the fringe reads as the red it
+    // blended from, not as a green cast.
+    expect(data[15 * 4]).toBe(255);
+    expect(data[15 * 4 + 1]).toBeLessThan(40);
+    expect(data[15 * 4 + 2]).toBeLessThan(40);
+  });
+
+  it('keeps a colour inside the character that only scores in the lowered band', () => {
+    // The dull ring again; the body wears a pink patch scoring 90, above
+    // the lowered cutoff but nothing like the backdrop as drawn.
+    const dull = [190, 29, 155];
+    const red = [255, 0, 0];
+    const pink = [200, 80, 170];
+    const edge = [dull, red, red, red, red, red, dull];
+    const middle = [dull, red, red, pink, red, red, dull];
+    const data = rgba([
+      ...Array(7).fill(dull),
+      ...edge,
+      ...middle,
+      ...edge,
+      ...Array(7).fill(dull),
+    ]);
+    keyOutColor(data, 7, 5, MAGENTA);
+    expect(alpha(data, 17)).toBe(255);
+    expect(alpha(data, 14)).toBe(0);
+  });
+
+  it('clears an enclosed pocket of a dull backdrop', () => {
+    const dull = [190, 29, 155];
+    const red = [255, 0, 0];
+    const edge = [dull, red, red, red, red, red, dull];
+    const middle = [dull, red, red, dull, red, red, dull];
+    const data = rgba([
+      ...Array(7).fill(dull),
+      ...edge,
+      ...middle,
+      ...edge,
+      ...Array(7).fill(dull),
+    ]);
+    keyOutColor(data, 7, 5, MAGENTA);
+    expect(alpha(data, 17)).toBe(0);
+    expect(alpha(data, 16)).toBe(255);
   });
 
   it('floods a backdrop drawn in a colour of its own from the edges', () => {

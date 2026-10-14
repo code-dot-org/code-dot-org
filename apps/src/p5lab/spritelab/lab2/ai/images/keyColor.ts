@@ -35,10 +35,12 @@ export function chooseKeyColor(prompt: string): KeyColor {
 
 /**
  * The prompt clause asking for the key colour as the whole background and
- * nowhere on the subject, which the prompt calls `subject` ("character",
- * "subject", "artwork").
+ * nowhere on the subject, by the word the prompt calls it.
  */
-export function keyClause(key: KeyColor, subject: string = 'character') {
+export function keyClause(
+  key: KeyColor,
+  subject: 'character' | 'subject' = 'character'
+) {
   const wear =
     subject === 'character'
       ? ' — not on clothes, hat, hair, skin or accessories; choose other colors for those'

@@ -39,10 +39,25 @@ describe('SpriteLab2 frameFacing', () => {
     expect(facingDistance(b, b, WIDTH, HEIGHT, false)).toBe(0);
     expect(facingDistance(mirror(b), b, WIDTH, HEIGHT, true)).toBe(0);
     // Mirrored, the figure matches the base only in the middle third: four
-    // of the six columns drawn in either are mismatches.
+    // of the six columns drawn in either are mismatches. Centred on the
+    // frame instead, every column is red against blue, which is worse.
     expect(facingDistance(mirror(b), b, WIDTH, HEIGHT, false)).toBeCloseTo(
       2 / 3
     );
+  });
+
+  it('compares the figures by their drawn centres, wherever each sits', () => {
+    // The base shifted two columns right is the same figure.
+    const shifted = new Uint8ClampedArray(WIDTH * HEIGHT * 4);
+    const b = base();
+    for (let y = 0; y < HEIGHT; y++) {
+      for (let x = 0; x < 4; x++) {
+        const from = (y * WIDTH + x) * 4;
+        shifted.set(b.subarray(from, from + 4), (y * WIDTH + x + 2) * 4);
+      }
+    }
+    expect(facingDistance(shifted, b, WIDTH, HEIGHT, false)).toBe(0);
+    expect(isMirrored(shifted, b, WIDTH, HEIGHT)).toBe(false);
   });
 
   it('calls a mirror image mirrored and a small change not', () => {

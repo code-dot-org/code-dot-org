@@ -1,40 +1,64 @@
 // Every frame of a character set is asked to face right, and the edit
 // model mostly obeys; now and then it draws a pose as a clean mirror
-// image. Nothing else about the frame is wrong, so the fix is to flip it
-// back, and the test for which way it faces is which of the base picture
-// or its mirror it is nearer to.
+// image. The test for which way a frame faces is which of the base picture
+// or its mirror it is nearer to, each placed as drawn or on the frame's
+// drawn centre, whichever fits better.
 
 // Alpha above this counts as drawn.
 const DRAWN_ALPHA = 64;
 
-// Measured over three strips: every rightly drawn pose was nearer the base
-// as drawn by at least 0.14, and the one mirrored pose was nearer the
-// mirror by 0.10.
+// How much nearer the mirror must be before a frame is called mirrored.
 const MIRROR_MARGIN = 0.05;
 
 // Unit colour distance: the RGB diagonal.
 const MAX_DISTANCE = Math.sqrt(3 * 255 * 255);
 
-/**
- * How far a frame is from the base picture (or from its mirror image),
- * 0–1: the mean over pixels drawn in either of the colour distance where
- * both are drawn, and 1 where only one is. Both must be the same size.
- */
-export function facingDistance(
+// The centre of the drawn pixels' bounds, or null when nothing is drawn.
+function drawnCenter(
+  data: Uint8ClampedArray,
+  width: number,
+  height: number
+): {x: number; y: number} | null {
+  let left = width;
+  let top = height;
+  let right = -1;
+  let bottom = -1;
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      if (data[(y * width + x) * 4 + 3] > DRAWN_ALPHA) {
+        left = Math.min(left, x);
+        top = Math.min(top, y);
+        right = Math.max(right, x);
+        bottom = Math.max(bottom, y);
+      }
+    }
+  }
+  return right < 0 ? null : {x: (left + right) / 2, y: (top + bottom) / 2};
+}
+
+// The distance with the base shifted by (dx, dy) in the frame's
+// coordinates.
+function shiftedDistance(
   frame: Uint8ClampedArray,
   base: Uint8ClampedArray,
   width: number,
   height: number,
-  mirrored: boolean
+  mirrored: boolean,
+  dx: number,
+  dy: number
 ): number {
+  const inFrame = (x: number, y: number) =>
+    x >= 0 && y >= 0 && x < width && y < height;
   let sum = 0;
   let count = 0;
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
+  for (let y = Math.min(0, dy); y < Math.max(height, height + dy); y++) {
+    for (let x = Math.min(0, dx); x < Math.max(width, width + dx); x++) {
+      const u = x - dx;
+      const v = y - dy;
       const f = (y * width + x) * 4;
-      const b = (y * width + (mirrored ? width - 1 - x : x)) * 4;
-      const frameDrawn = frame[f + 3] > DRAWN_ALPHA;
-      const baseDrawn = base[b + 3] > DRAWN_ALPHA;
+      const b = (v * width + (mirrored ? width - 1 - u : u)) * 4;
+      const frameDrawn = inFrame(x, y) && frame[f + 3] > DRAWN_ALPHA;
+      const baseDrawn = inFrame(u, v) && base[b + 3] > DRAWN_ALPHA;
       if (!frameDrawn && !baseDrawn) {
         continue;
       }
@@ -50,6 +74,38 @@ export function facingDistance(
     }
   }
   return count ? sum / count : 0;
+}
+
+/**
+ * How far a frame is from the base picture (or from its mirror image),
+ * 0–1: the mean over pixels drawn in either of the colour distance where
+ * both are drawn, and 1 where only one is. The base is compared where it
+ * is drawn and again shifted so its drawn centre sits on the frame's, and
+ * the nearer counts. Both must be the same size.
+ */
+export function facingDistance(
+  frame: Uint8ClampedArray,
+  base: Uint8ClampedArray,
+  width: number,
+  height: number,
+  mirrored: boolean
+): number {
+  const asDrawn = shiftedDistance(frame, base, width, height, mirrored, 0, 0);
+  const frameCenter = drawnCenter(frame, width, height);
+  const baseCenter = drawnCenter(base, width, height);
+  if (!frameCenter || !baseCenter) {
+    return asDrawn;
+  }
+  const baseX = mirrored ? width - 1 - baseCenter.x : baseCenter.x;
+  const dx = Math.round(frameCenter.x - baseX);
+  const dy = Math.round(frameCenter.y - baseCenter.y);
+  if (!dx && !dy) {
+    return asDrawn;
+  }
+  return Math.min(
+    asDrawn,
+    shiftedDistance(frame, base, width, height, mirrored, dx, dy)
+  );
 }
 
 /** Whether the frame is nearer the base's mirror image than the base. */
