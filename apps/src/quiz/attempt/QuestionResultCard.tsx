@@ -8,7 +8,11 @@ import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
 import QuestionDescription from './QuestionDescription';
-import {QuizQuestionResult} from './types';
+import {
+  isFreeResponseResponse,
+  isMultipleChoiceResponse,
+  QuizQuestionResult,
+} from './types';
 
 import styles from './question-result-card.module.scss';
 
@@ -29,13 +33,13 @@ function selectedAnswerLabel(isViewingStudent?: boolean): string {
 type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
 
 function selectedChoiceIdOf(result: QuizQuestionResult): string | null {
-  return result.questionType === 'MultipleChoiceQuestion'
+  return isMultipleChoiceResponse(result)
     ? result.responseData.selectedChoiceId ?? null
     : null;
 }
 
 function answerTextOf(result: QuizQuestionResult): string | null {
-  return result.questionType === 'FreeResponseQuestion'
+  return isFreeResponseResponse(result)
     ? result.responseData.answerText ?? null
     : null;
 }

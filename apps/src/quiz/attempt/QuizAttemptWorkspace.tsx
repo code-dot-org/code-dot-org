@@ -22,7 +22,12 @@ import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
-import {QuizAttemptData, QuizQuestionResult} from './types';
+import {
+  isFreeResponseResponse,
+  isMultipleChoiceResponse,
+  QuizAttemptData,
+  QuizQuestionResult,
+} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
@@ -143,18 +148,17 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const selectedChoices: Record<number, string> = {};
     const answerTexts: Record<number, string> = {};
     for (const result of attempt?.questionResultsInProgress ?? []) {
-      switch (result.questionType) {
-        case 'MultipleChoiceQuestion':
-          if (result.responseData.selectedChoiceId) {
-            selectedChoices[result.quizQuestionId] =
-              result.responseData.selectedChoiceId;
-          }
-          break;
-        case 'FreeResponseQuestion':
-          if (result.responseData.answerText) {
-            answerTexts[result.quizQuestionId] = result.responseData.answerText;
-          }
-          break;
+      if (
+        isMultipleChoiceResponse(result) &&
+        result.responseData.selectedChoiceId
+      ) {
+        selectedChoices[result.quizQuestionId] =
+          result.responseData.selectedChoiceId;
+      } else if (
+        isFreeResponseResponse(result) &&
+        result.responseData.answerText
+      ) {
+        answerTexts[result.quizQuestionId] = result.responseData.answerText;
       }
     }
     setSelectedChoicesByQuestionId(selectedChoices);

@@ -8,16 +8,32 @@ export interface FreeResponseResponseData {
   answerText?: string;
 }
 
-// Switch on questionType to narrow responseData.
+export interface MultipleChoiceQuestionResponse {
+  questionType: 'MultipleChoiceQuestion';
+  responseData: MultipleChoiceResponseData;
+}
+
+export interface FreeResponseQuestionResponse {
+  questionType: 'FreeResponseQuestion';
+  responseData: FreeResponseResponseData;
+}
+
+// Narrow with the type guards below to read responseData.
 export type QuizQuestionResponse =
-  | {
-      questionType: 'MultipleChoiceQuestion';
-      responseData: MultipleChoiceResponseData;
-    }
-  | {
-      questionType: 'FreeResponseQuestion';
-      responseData: FreeResponseResponseData;
-    };
+  | MultipleChoiceQuestionResponse
+  | FreeResponseQuestionResponse;
+
+export function isMultipleChoiceResponse(
+  response: QuizQuestionResponse
+): response is MultipleChoiceQuestionResponse {
+  return response.questionType === 'MultipleChoiceQuestion';
+}
+
+export function isFreeResponseResponse(
+  response: QuizQuestionResponse
+): response is FreeResponseQuestionResponse {
+  return response.questionType === 'FreeResponseQuestion';
+}
 
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
