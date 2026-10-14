@@ -50,7 +50,6 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
-import {ImageType} from '../ai/images/types';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
@@ -86,11 +85,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
-import {
-  PictureRequest,
-  requestPicture,
-  setPictureRequestHandler,
-} from '../picturePicker';
+import {requestPicture} from '../picturePicker';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -146,6 +141,8 @@ import ScenesGallery from './ScenesGallery';
 import SceneTabs from './SceneTabs';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useDocumentHidden from './useDocumentHidden';
+import usePicturesSheet from './usePicturesSheet';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -304,40 +301,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [levelProperties.levelMode, worldTabParamEnabled]);
   const worldTabEnabled = tabs.includes('World');
-  // The project's pictures, in a drawer over the workspace.
-  const picturesOffered = tabs.includes('Images');
-  const [picturesOpen, setPicturesOpen] = useState(false);
-  // The pictures drawer mounts once (idle pre-mount after seeding, or first
-  // opening) and stays mounted, so no opening pays the mount cost.
-  const [imagesMounted, setImagesMounted] = useState(false);
-  useEffect(() => {
-    if (picturesOpen) {
-      setImagesMounted(true);
-    }
-  }, [picturesOpen]);
-  // A block or the world palette asks for a picture: the new-image dialog
-  // opens on that kind, and the finished picture goes back to the asker.
-  // A level that withholds Pictures answers no request.
-  const [pickRequest, setPickRequest] = useState<PictureRequest | null>(null);
-  useEffect(() => {
-    if (!picturesOffered) {
-      return;
-    }
-    return setPictureRequestHandler(request => {
-      setPickRequest({...request});
-      setImagesMounted(true);
-    });
-  }, [picturesOffered]);
-  const handleImageCreated = useCallback(
-    (name: string, imageType: ImageType) => {
-      if (pickRequest) {
-        pickRequest.onPicked(name, imageType);
-        setPickRequest(null);
-      }
-    },
-    [pickRequest]
-  );
-  const handlePickCancel = useCallback(() => setPickRequest(null), []);
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
@@ -438,20 +401,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
 
-  // Idle pre-mount (see imagesMounted above).
-  useEffect(() => {
-    if (!animationsSeeded || imagesMounted) {
-      return;
-    }
-    if (typeof window.requestIdleCallback === 'function') {
-      const handle = window.requestIdleCallback(() => setImagesMounted(true), {
-        timeout: 3000,
-      });
-      return () => window.cancelIdleCallback(handle);
-    }
-    const handle = window.setTimeout(() => setImagesMounted(true), 1500);
-    return () => window.clearTimeout(handle);
-  }, [animationsSeeded, imagesMounted]);
+  // The project's pictures, in a sheet over the workspace.
+  const picturesOffered = tabs.includes('Images');
+  const pictures = usePicturesSheet({
+    offered: picturesOffered,
+    ready: animationsSeeded,
+  });
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
 
@@ -1308,17 +1263,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // A sheet over the editors and the stage: Pictures, or the map.
-  const stageCovered = picturesOpen || activeTab === 'Scenes';
-  // The hidden workspace stays mounted behind a clip-path, the closed
-  // drawer slid out of view, and a sheet covers the editors and the stage:
-  // hidden visually, but still in the tab order and the accessibility
-  // tree. Inert while hidden. Set via refs: React 18's JSX has no inert
-  // attribute. The mount flags are deps because a wrapper can first render
-  // after the last change.
+  const stageCovered = pictures.open || activeTab === 'Scenes';
+  // The hidden workspace stays mounted behind a clip-path, and a sheet
+  // covers the editors and the stage: hidden visually, but still in the
+  // tab order and the accessibility tree. Inert while hidden. Set via
+  // refs: React 18's JSX has no inert attribute. worldMounted is a dep
+  // because the world's wrapper can first render after the last change.
   const stageRef = useRef<HTMLDivElement>(null);
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const worldWrapperRef = useRef<HTMLDivElement>(null);
-  const imagesWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (stageRef.current) {
       stageRef.current.inert = stageCovered;
@@ -1329,35 +1282,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (worldWrapperRef.current) {
       worldWrapperRef.current.inert = activeTab !== 'World';
     }
-    if (imagesWrapperRef.current) {
-      // The dialog a pick opened renders inside the closed drawer, and
-      // inert would reach it: the drawer stays live for as long as the
-      // pick does (the dialog holds the focus meanwhile).
-      imagesWrapperRef.current.inert = !picturesOpen && !pickRequest;
-    }
-  }, [
-    stageCovered,
-    activeTab,
-    picturesOpen,
-    imagesMounted,
-    worldMounted,
-    pickRequest,
-  ]);
-  // Escape inside the drawer closes it. The image dialogs render in a
-  // portal, so their own Escape never reaches here.
-  useEffect(() => {
-    const drawer = imagesWrapperRef.current;
-    if (!drawer || !picturesOpen) {
-      return;
-    }
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setPicturesOpen(false);
-      }
-    };
-    drawer.addEventListener('keydown', onKeyDown);
-    return () => drawer.removeEventListener('keydown', onKeyDown);
-  }, [picturesOpen, imagesMounted]);
+  }, [stageCovered, activeTab, worldMounted]);
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -1878,18 +1803,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ? 'preview'
       : 'hidden';
 
+  const documentHidden = useDocumentHidden();
   // Freeze the game while nobody can see it: the stage under a sheet, or
   // the whole document hidden. (A hidden document stops drawing on its
   // own — the browser pauses animation frames — but the wall clock kept
   // running, so timers jumped forward on return.)
-  const [documentHidden, setDocumentHidden] = useState(
-    () => typeof document !== 'undefined' && document.hidden
-  );
-  useEffect(() => {
-    const onVisibility = () => setDocumentHidden(document.hidden);
-    document.addEventListener('visibilitychange', onVisibility);
-    return () => document.removeEventListener('visibilitychange', onVisibility);
-  }, []);
   useEffect(() => {
     engineRef.current?.setDrawPaused(
       playspaceMode === 'hidden' || stageCovered || documentHidden
@@ -1935,9 +1853,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
-    pickRequest,
-    onImageCreated: handleImageCreated,
-    onPickCancel: handlePickCancel,
+    pickRequest: pictures.pickRequest,
+    onImageCreated: pictures.onImageCreated,
+    onPickCancel: pictures.onPickCancel,
   };
 
   return (
@@ -2034,11 +1952,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 type="button"
                 className={classNames(
                   moduleStyles.picturesTab,
-                  picturesOpen && moduleStyles.picturesTabOpen
+                  pictures.open && moduleStyles.picturesTabOpen
                 )}
                 disabled={!picturesOffered || activeTab === 'Play'}
                 title={picturesOffered ? undefined : LOCKED_REASON}
-                aria-expanded={picturesOpen}
+                aria-expanded={pictures.open}
                 aria-controls={PICTURES_DRAWER_ID}
                 onClick={event => {
                   blurAfterPointerClick(event);
@@ -2046,7 +1964,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   if (activeTab === 'Scenes') {
                     sceneEditing.selectScene(activeScene.id);
                   }
-                  setPicturesOpen(open => !open);
+                  pictures.setOpen(open => !open);
                 }}
               >
                 <FontAwesomeV6Icon iconStyle="solid" iconName="images" />
@@ -2074,12 +1992,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 lockedReason={LOCKED_REASON}
                 allowCreate={scenesEditable || !!pinnedSceneId}
                 onSelectScene={sceneId => {
-                  setPicturesOpen(false);
+                  pictures.setOpen(false);
                   sceneEditing.selectScene(sceneId);
                 }}
                 onCreateScene={sceneEditing.createScene}
                 onManageScenes={() => {
-                  setPicturesOpen(false);
+                  pictures.setOpen(false);
                   sceneEditing.openGallery();
                 }}
               />
@@ -2213,13 +2131,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           the guide's frames, and remounting loses gallery state. Closed, it
           waits off to the right, where a pick's dialog can still open
           inside it. */}
-          {imagesMounted && (
+          {pictures.mounted && (
             <Sheet
-              ref={imagesWrapperRef}
+              ref={pictures.sheetRef}
               id={PICTURES_DRAWER_ID}
               title="Pictures"
-              closed={!picturesOpen}
-              onDone={() => setPicturesOpen(false)}
+              closed={!pictures.open}
+              onDone={() => pictures.setOpen(false)}
             >
               <GenerateImagePane {...imagePaneProps} />
             </Sheet>
