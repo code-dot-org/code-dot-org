@@ -413,12 +413,16 @@ describe('EditAilabMode', () => {
   });
 
   it('keeps a saved choice of the last rows for testing', () => {
-    renderEditor('{"randomizeTestData": false}');
+    const savedMode = renderEditor('{"randomizeTestData": false}');
     expect(
       screen.getByRole('checkbox', {
         name: 'Reserve random rows for testing instead of the last rows',
       })
     ).not.toBeChecked();
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: false,
+    });
   });
 
   it('requires a dataset until one is chosen', () => {
@@ -773,6 +777,31 @@ describe('EditAilabMode', () => {
         features: ['legs'],
         randomizeTestData: true,
       });
+    });
+
+    it('clears the training options again when pretraining restores a hidden testing view', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideTestingView": true}'
+      );
+      await columnsLoaded();
+      const hideSave = screen.getByRole('checkbox', {
+        name: 'Hide the save model step',
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+      fireEvent.click(hideSave);
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        hideTestingView: true,
+        randomizeTestData: true,
+      });
+      expect(hideSave).not.toBeChecked();
+      expect(hideSave).toBeDisabled();
     });
 
     it('asks for a label and features students can choose to pretrain on', async () => {

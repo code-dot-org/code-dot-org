@@ -172,18 +172,6 @@ export function setPretrained(
   return newMode;
 }
 
-// Falls back to the defaults for a level saved pretrained, whose prior settings are unknown.
-export function restoreFromPretrained(
-  mode: ModeObject,
-  beforePretrained: ModeObject = {}
-): ModeObject {
-  const restored = Object.keys(SET_BY_PRETRAINED).reduce(
-    (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
-    setPretrained(mode, false)
-  );
-  return withRandomTestData(restored);
-}
-
 const SET_BY_HIDDEN_TESTING: ModeObject = {
   requireAccuracy: undefined,
   hideSave: undefined,
@@ -212,6 +200,20 @@ export function setHideTestingView(
     Object.assign(newMode, SET_BY_HIDDEN_TESTING);
   }
   return newMode;
+}
+
+// Falls back to the defaults for a level saved pretrained, whose prior settings are unknown.
+export function restoreFromPretrained(
+  mode: ModeObject,
+  beforePretrained: ModeObject = {}
+): ModeObject {
+  const restored = Object.keys(SET_BY_PRETRAINED).reduce(
+    (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
+    setPretrained(mode, false)
+  );
+  return withRandomTestData(
+    setHideTestingView(restored, restored.hideTestingView === true)
+  );
 }
 
 export function isMissingPretrainedColumns(
