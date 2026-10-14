@@ -136,12 +136,16 @@ export function withoutLabelInFeatures(
   );
 }
 
-const LOCKED_BY_PRETRAINED = ['hideSelectLabel', 'lockFeatures'];
-const REPLACED_BY_PRETRAINED = ['randomizeTestData', 'requireAccuracy'];
-const SET_BY_PRETRAINED = [...LOCKED_BY_PRETRAINED, ...REPLACED_BY_PRETRAINED];
+// What pretraining sets each key to; undefined removes it.
+const SET_BY_PRETRAINED: ModeObject = {
+  hideSelectLabel: true,
+  lockFeatures: true,
+  randomizeTestData: undefined,
+  requireAccuracy: undefined,
+};
 
 export function isSetByPretrained(mode: ModeObject, key: string): boolean {
-  return mode.pretrained === true && SET_BY_PRETRAINED.includes(key);
+  return mode.pretrained === true && key in SET_BY_PRETRAINED;
 }
 
 export function setPretrained(
@@ -155,8 +159,7 @@ export function setPretrained(
     pretrained ? true : undefined
   );
   if (pretrained) {
-    LOCKED_BY_PRETRAINED.forEach(key => (newMode[key] = true));
-    REPLACED_BY_PRETRAINED.forEach(key => delete newMode[key]);
+    Object.assign(newMode, SET_BY_PRETRAINED);
     newMode.label = getStartingLabel(newMode, defaultLabel);
   }
   return newMode;
@@ -167,13 +170,17 @@ export function isMissingPretrainedColumns(
   selectable: string[] | undefined
 ): boolean {
   // Before the columns load, only a column's presence can be checked.
-  const offered = (column: unknown) =>
+  const isSelectable = (column: unknown) =>
     column !== undefined &&
     (!selectable || selectable.includes(column as string));
   const features = getFeatures(mode).filter(feature => feature !== mode.label);
   return (
     mode.pretrained === true &&
-    !(offered(mode.label) && features.length > 0 && features.every(offered))
+    !(
+      isSelectable(mode.label) &&
+      features.length > 0 &&
+      features.every(isSelectable)
+    )
   );
 }
 
