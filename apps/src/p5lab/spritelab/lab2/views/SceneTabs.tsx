@@ -28,17 +28,7 @@ interface SceneTabsProps {
   onCreateScene: (name: string, type: SceneType) => void;
   /** Opens the Scenes gallery; the row offers it only when given. */
   onManageScenes?: () => void;
-  /** The open scene's two editors, as segments inside its tab; absent
-      where the scene has only one. */
-  editor?: {value: Editor; onChange: (editor: Editor) => void};
 }
-
-export type Editor = 'World' | 'Code';
-
-const EDITORS: {editor: Editor; icon: string}[] = [
-  {editor: 'Code', icon: 'code'},
-  {editor: 'World', icon: 'table-cells'},
-];
 
 /**
  * The project's scenes as a row of tabs, each with its picture, so the
@@ -59,7 +49,6 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   onSelectScene,
   onCreateScene,
   onManageScenes,
-  editor,
 }) => {
   const [naming, setNaming] = useState(false);
   const activeRef = useRef<HTMLButtonElement>(null);
@@ -87,15 +76,13 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
       <div className={moduleStyles.sceneTabsRow}>
         {scenes.map((scene, index) => {
           const selected = !galleryOpen && scene.id === activeSceneId;
-          const open = selected && !!editor;
           const startsHere = index === 0 && scenes.length > 1;
           return (
             <div
               key={scene.id}
               className={classNames(
                 moduleStyles.sceneTab,
-                selected && moduleStyles.sceneTabActive,
-                open && moduleStyles.sceneTabOpen
+                selected && moduleStyles.sceneTabActive
               )}
             >
               <button
@@ -134,36 +121,6 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
                   {scene.name}
                 </span>
               </button>
-              {open && editor && (
-                <div
-                  className={moduleStyles.sceneTabEditors}
-                  role="group"
-                  aria-label="Edit"
-                >
-                  <div className={moduleStyles.sceneTabEditorsInner}>
-                    {EDITORS.map(({editor: choice, icon}) => (
-                      <button
-                        key={choice}
-                        type="button"
-                        aria-pressed={editor.value === choice}
-                        disabled={disabled}
-                        className={classNames(
-                          moduleStyles.sceneTabEditor,
-                          editor.value === choice &&
-                            moduleStyles.sceneTabEditorActive
-                        )}
-                        onClick={event => {
-                          blurAfterPointerClick(event);
-                          editor.onChange(choice);
-                        }}
-                      >
-                        <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
-                        {choice}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           );
         })}

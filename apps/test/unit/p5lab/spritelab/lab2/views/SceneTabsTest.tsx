@@ -49,20 +49,6 @@ describe('SceneTabs', () => {
     expect(onManageScenes).toHaveBeenCalled();
   });
 
-  it('holds Code | World inside the open scene tab only', () => {
-    const onChange = jest.fn();
-    renderTabs({editor: {value: 'Code', onChange}});
-    const group = screen.getByRole('group', {name: 'Edit'});
-    expect(
-      screen.getByRole('tab', {name: 'Cave'}).parentElement?.contains(group)
-    ).toBe(true);
-    expect(
-      screen.getByRole('button', {name: 'Code'}).getAttribute('aria-pressed')
-    ).toBe('true');
-    fireEvent.click(screen.getByRole('button', {name: 'World'}));
-    expect(onChange).toHaveBeenCalledWith('World');
-  });
-
   it('selects no scene while the map is open, and offers no way back', () => {
     renderTabs({galleryOpen: true});
     expect(selectedNames()).toEqual([]);

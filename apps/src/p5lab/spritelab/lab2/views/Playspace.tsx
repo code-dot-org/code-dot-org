@@ -205,8 +205,6 @@ interface PlayspaceProps {
   below?: React.ReactNode;
   /** Which edge the preview column sits at; the code keeps the rest. */
   side?: 'left' | 'right';
-  /** The instructions above the box in the column instead of under it. */
-  instructionsTop?: boolean;
   // How much of the width the preview's column takes, so the code can keep
   // the rest.
   onPreviewWidth?: (width: number) => void;
@@ -233,7 +231,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   playBar,
   below,
   side = 'right',
-  instructionsTop = false,
   onPreviewWidth,
   guideSize,
   getDefaultSpriteSize,
@@ -442,8 +439,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     x:
       (side === 'left' ? 0 : size.w - columnWidth) +
       (columnWidth - boxWidth) / 2,
-    // Under the instructions' card when they come first.
-    y: CARD_GAP + (below && instructionsTop ? need + CARD_GAP : 0),
+    y: CARD_GAP,
   };
   // The instructions have pushed the box under its floor: move them
   // beside it, in a column up to the larger share, if that gives the
@@ -482,7 +478,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     beside && side === 'left'
       ? previewPlacement.x + previewBoxSide + CARD_GAP
       : columnLeft + CARD_GAP;
-  const belowOnTop = instructionsTop && !beside;
   const belowRoomTop =
     previewPlacement.y + previewBoxSide + BAR_ROOM + CARD_GAP;
   const belowRoom = size.h - belowRoomTop - CARD_GAP;
@@ -493,13 +488,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         top: CARD_GAP,
         width: columnWidth - 3 * CARD_GAP - previewBoxSide,
         bottom: CARD_GAP,
-      }
-    : belowOnTop
-    ? {
-        left: belowLeft,
-        top: CARD_GAP,
-        width: columnWidth - 2 * CARD_GAP,
-        height: previewPlacement.y - 2 * CARD_GAP,
       }
     : belowNeed > 0
     ? {

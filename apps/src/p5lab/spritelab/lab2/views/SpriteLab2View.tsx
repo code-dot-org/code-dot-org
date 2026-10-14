@@ -118,7 +118,7 @@ import {
   toExternalSceneOptions,
 } from '../scenesApi';
 import {sceneMetadataFor} from '../sceneThumbnails';
-import {toolboxForSceneType, withLeadingRoom} from '../sceneToolbox';
+import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
@@ -173,12 +173,6 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The drawer the Pictures button controls.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
-// Room the ?editors=float switch takes above the editors' left strips
-// (the stylesheet's $editor-float-room).
-const EDITOR_FLOAT_ROOM_PX = 58;
-// The floating switch's gap from the preview column at the workspace's
-// right: room for the workspace's vertical scrollbar beside it.
-const EDITOR_FLOAT_RIGHT_GAP_PX = 28;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
@@ -514,7 +508,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // Which of the scene's two editors fills the main area. The choice is
   // offered where the scene has a world and the level has code.
-  const editorChoice = enabledTabs.includes('World') && tabs.includes('Code');
   // Every level with the tab shell shows the full lab's controls; what the
   // level withholds is disabled rather than missing, so the free play lab
   // holds no surprises. The switch shows wherever the scene has one editor.
@@ -526,51 +519,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ],
     [tabs, enabledTabs]
   );
-  // The switch sits at the end of the workspace's bar (?editors=stripleft:
-  // its start); ?editors=tab puts
-  // it inside the open scene's tab, ?editors=float in a pill floating at
-  // the workspace's top (its right, with the preview at the left),
-  // ?editors=floatright at the top-right whatever the preview's side.
-  const editorsPlacement = useMemo(() => {
-    const value = queryParams('editors');
-    return value === 'tab' ||
-      value === 'float' ||
-      value === 'floatright' ||
-      value === 'stripleft'
-      ? value
-      : 'strip';
-  }, []);
-  const editorsInStrip = editorsPlacement !== 'tab';
   // The preview column at the lab's left, before the toolbox;
   // ?preview=right puts it at the right.
   const previewSide = useMemo<'left' | 'right'>(
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
-  // ?instructions=left-top: the instructions above the preview in the
-  // column rather than under it.
-  const instructionsTop = useMemo(
-    () => queryParams('instructions') === 'left-top',
-    []
-  );
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
-  const editorStrip =
-    editorsShown &&
-    (editorsPlacement === 'strip' || editorsPlacement === 'stripleft');
-  // ?editors=stripleft: the switch at the bar's start instead of its end.
-  const editorStripStart = editorsPlacement === 'stripleft';
-  // With the preview at the left, the float pill's top-left would be the
-  // column's: it goes to the workspace's right instead, like floatright.
-  const editorFloat =
-    editorsShown && editorsPlacement === 'float' && previewSide !== 'left';
-  // ?editors=floatright: the same pill at the workspace's top-right, where
-  // nothing sits beneath it and nothing has to move down.
-  const editorFloatRight =
-    editorsShown &&
-    (editorsPlacement === 'floatright' ||
-      (editorsPlacement === 'float' && previewSide === 'left'));
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -579,7 +536,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (workspace) {
       Blockly.svgResize(workspace);
     }
-  }, [previewWidth, editorStrip]);
+  }, [previewWidth, editorsShown]);
   useEffect(() => {
     if (activeTab === 'World' && !enabledTabs.includes('World')) {
       dispatch(
@@ -589,11 +546,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [activeTab, enabledTabs, dispatch]);
   const sceneToolbox = useMemo(
     () =>
-      withLeadingRoom(
-        toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType),
-        editorFloat ? EDITOR_FLOAT_ROOM_PX : 0
-      ),
-    [levelProperties.toolboxDefinition, activeSceneType, editorFloat]
+      toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType),
+    [levelProperties.toolboxDefinition, activeSceneType]
   );
   // Blockly fixes a workspace's toolbox kind at injection, so reaching a
   // toolbox of the other kind takes a new workspace. Same-kind changes swap
@@ -2113,19 +2067,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onSelectScene={sceneEditing.selectScene}
                 onCreateScene={sceneEditing.createScene}
                 onManageScenes={sceneEditing.openGallery}
-                editor={
-                  editorChoice &&
-                  !editorsInStrip &&
-                  (activeTab === 'World' || activeTab === 'Code')
-                    ? {value: activeTab, onChange: handleEditorChange}
-                    : undefined
-                }
               />
             ) : undefined
           }
         >
           {WorkspaceAlert}
-          {editorStrip && (activeTab === 'World' || activeTab === 'Code') && (
+          {editorsShown && (activeTab === 'World' || activeTab === 'Code') && (
             <div className={moduleStyles.editorStrip} style={clearOfPreview}>
               <MuiTypography
                 component="h2"
@@ -2134,13 +2081,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               >
                 {activeTab === 'World' ? 'World' : 'Workspace'}
               </MuiTypography>
-              <div
-                className={
-                  editorStripStart
-                    ? moduleStyles.editorStripStart
-                    : moduleStyles.editorStripEnd
-                }
-              >
+              <div className={moduleStyles.editorStripEnd}>
                 <EditorSwitch
                   value={activeTab === 'World' ? 'World' : 'Code'}
                   onChange={handleEditorChange}
@@ -2150,37 +2091,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               </div>
             </div>
           )}
-          {(editorFloat || editorFloatRight) &&
-            (activeTab === 'World' || activeTab === 'Code') && (
-              <div
-                className={moduleStyles.editorFloat}
-                style={
-                  editorFloatRight
-                    ? {
-                        left: 'auto',
-                        right:
-                          (previewSide === 'right' ? previewWidth : 0) +
-                          EDITOR_FLOAT_RIGHT_GAP_PX,
-                      }
-                    : undefined
-                }
-              >
-                <EditorSwitch
-                  value={activeTab}
-                  onChange={handleEditorChange}
-                  disabledEditors={disabledEditors}
-                  disabledReason={LOCKED_REASON}
-                />
-              </div>
-            )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div
             ref={codeWrapperRef}
             className={classNames(
               moduleStyles.codeTabWrapper,
-              editorStrip && moduleStyles.underEditorStrip,
-              editorFloat && moduleStyles.underEditorFloat
+              editorsShown && moduleStyles.underEditorStrip
             )}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -2252,8 +2169,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               ref={worldWrapperRef}
               className={classNames(
                 moduleStyles.codeTabWrapper,
-                editorStrip && moduleStyles.underEditorStrip,
-                editorFloat && moduleStyles.underEditorFloat
+                editorsShown && moduleStyles.underEditorStrip
               )}
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
@@ -2277,7 +2193,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onNewPicture={
                   picturesOffered ? handleNewWorldPicture : undefined
                 }
-                paletteTopRoom={editorFloat ? EDITOR_FLOAT_ROOM_PX : 0}
               />
             </div>
           )}
@@ -2290,7 +2205,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             onPreviewWidth={setPreviewWidth}
             side={previewSide}
-            instructionsTop={instructionsTop}
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no
