@@ -21,8 +21,14 @@ const QUESTION: QuizQuestionSummary = {
   page: 1,
 };
 
-const BASE_RESULT: QuizQuestionResult = {
+type MultipleChoiceResult = Extract<
+  QuizQuestionResult,
+  {questionType: 'MultipleChoiceQuestion'}
+>;
+
+const BASE_RESULT: MultipleChoiceResult = {
   quizQuestionId: 1,
+  questionType: 'MultipleChoiceQuestion',
   responseData: {},
   correct: null,
   explanation: null,
@@ -30,7 +36,7 @@ const BASE_RESULT: QuizQuestionResult = {
 };
 
 const renderCard = (
-  resultOverrides: Partial<QuizQuestionResult> = {},
+  resultOverrides: Partial<MultipleChoiceResult> = {},
   props: Partial<QuestionResultCardProps> = {}
 ) =>
   render(
@@ -185,6 +191,7 @@ describe('QuestionResultCard', () => {
           question={FR_QUESTION}
           result={{
             ...BASE_RESULT,
+            questionType: 'FreeResponseQuestion',
             quizQuestionId: 2,
             responseData: {answerText: 'x > 3'},
           }}
@@ -200,7 +207,12 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
-          result={{...BASE_RESULT, quizQuestionId: 2}}
+          result={{
+            ...BASE_RESULT,
+            questionType: 'FreeResponseQuestion',
+            quizQuestionId: 2,
+            responseData: {},
+          }}
           isViewingStudent
         />
       );
@@ -215,6 +227,7 @@ describe('QuestionResultCard', () => {
           question={FR_QUESTION}
           result={{
             ...BASE_RESULT,
+            questionType: 'FreeResponseQuestion',
             quizQuestionId: 2,
             responseData: {answerText: 'x > 3'},
             explanation: 'The condition becomes false.',

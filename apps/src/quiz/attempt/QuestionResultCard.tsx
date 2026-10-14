@@ -28,11 +28,23 @@ function selectedAnswerLabel(isViewingStudent?: boolean): string {
 
 type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
 
+function selectedChoiceIdOf(result: QuizQuestionResult): string | null {
+  return result.questionType === 'MultipleChoiceQuestion'
+    ? result.responseData.selectedChoiceId ?? null
+    : null;
+}
+
+function answerTextOf(result: QuizQuestionResult): string | null {
+  return result.questionType === 'FreeResponseQuestion'
+    ? result.responseData.answerText ?? null
+    : null;
+}
+
 function getChoiceStatus(
   choiceId: string,
   result: QuizQuestionResult
 ): ChoiceStatus {
-  const isSelected = choiceId === result.responseData.selectedChoiceId;
+  const isSelected = choiceId === selectedChoiceIdOf(result);
   const isCorrectAnswer = choiceId === result.correctChoiceId;
 
   // showCorrectness off - still show what was picked, ungraded.
@@ -56,8 +68,7 @@ const ChoiceResults: React.FunctionComponent<{
   <ul className={styles.choices}>
     {(question.choices ?? []).map((choice, index) => {
       const status = getChoiceStatus(choice.id, result);
-      const isSelectedChoice =
-        choice.id === result.responseData.selectedChoiceId;
+      const isSelectedChoice = choice.id === selectedChoiceIdOf(result);
 
       return (
         <li
@@ -155,7 +166,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   >
     {question.type === 'FreeResponseQuestion' ? (
       <FreeResponseAnswer
-        answerText={result.responseData.answerText ?? null}
+        answerText={answerTextOf(result)}
         isViewingStudent={isViewingStudent}
       />
     ) : (

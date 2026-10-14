@@ -143,12 +143,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const selectedChoices: Record<number, string> = {};
     const answerTexts: Record<number, string> = {};
     for (const result of attempt?.questionResultsInProgress ?? []) {
-      const {selectedChoiceId, answerText} = result.responseData;
-      if (selectedChoiceId) {
-        selectedChoices[result.quizQuestionId] = selectedChoiceId;
-      }
-      if (answerText) {
-        answerTexts[result.quizQuestionId] = answerText;
+      switch (result.questionType) {
+        case 'MultipleChoiceQuestion':
+          if (result.responseData.selectedChoiceId) {
+            selectedChoices[result.quizQuestionId] =
+              result.responseData.selectedChoiceId;
+          }
+          break;
+        case 'FreeResponseQuestion':
+          if (result.responseData.answerText) {
+            answerTexts[result.quizQuestionId] = result.responseData.answerText;
+          }
+          break;
       }
     }
     setSelectedChoicesByQuestionId(selectedChoices);
@@ -471,11 +477,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             {attempt !== undefined &&
               renderQuestionResults(
                 quizQuestions.map(question => ({
-                  quizQuestionId: question.id,
-                  responseData:
-                    attempt?.questionResultsInProgress?.find(
-                      r => r.quizQuestionId === question.id
-                    )?.responseData ?? {},
+                  ...(attempt?.questionResultsInProgress?.find(
+                    r => r.quizQuestionId === question.id
+                  ) ?? {
+                    quizQuestionId: question.id,
+                    questionType: question.type,
+                    responseData: {},
+                  }),
                   correct: null,
                   explanation: null,
                   correctChoiceId: null,

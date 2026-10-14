@@ -170,7 +170,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
   end
 
   test "question_results returns the answer text for an ungraded free response question" do
-    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true)
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
     question = create(:free_response_question, explanation: 'Any function counts.')
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
@@ -185,6 +185,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     )
 
     result = attempt.question_results.first
+    assert_equal 'FreeResponseQuestion', result[:quiz_question_type]
     assert_equal({'answerText' => 'Because'}, result[:response_data])
     assert_nil result[:correct]
     assert_nil result[:correct_choice_id]
@@ -239,6 +240,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
+    assert_equal 'FreeResponseQuestion', result[:quiz_question_type]
     assert_equal({'answerText' => 'Because'}, result[:response_data])
   end
 
