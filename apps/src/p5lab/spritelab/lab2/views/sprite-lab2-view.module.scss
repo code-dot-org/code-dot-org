@@ -1,7 +1,7 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
-@use '../../../../lab2/views/components/layout/variables';
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .labRow {
   display: flex;
@@ -857,14 +857,14 @@ $editor-strip-height: 41px;
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.
-// Over the toolbox's own stacking (70), under the pictures drawer's (72):
-// the box slides back from the play view across the toolbox as the
-// workspace reappears, and must pass over it, not under. Clicks fall
-// through; the overlay paints only the column and the box.
+// Over the toolbox's own stacking (70), under the sheets: the box slides
+// back from the play view across the toolbox as the workspace reappears,
+// and must pass over it, not under. Clicks fall through; the overlay
+// paints only the column and the box.
 .playspaceOverlay {
   position: absolute;
   inset: 0;
-  z-index: 71;
+  z-index: variables.$z-index-overlay - 1;
   overflow: hidden;
   pointer-events: none;
 }

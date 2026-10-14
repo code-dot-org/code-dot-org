@@ -761,7 +761,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {playBar}
         </div>
       )}
-      {below && mode !== 'hidden' && visible && (
+      {below && visible && (
         <div ref={cardRef} className={cardClassName} style={cardStyle}>
           <div
             ref={belowContentRef}
