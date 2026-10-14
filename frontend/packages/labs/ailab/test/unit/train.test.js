@@ -379,4 +379,57 @@ describe('train.refit', () => {
     const store = loadedStore(undefined, TestDataLocations.END);
     expect(train.refit(store, {...PROJECT, ...half})).toBeUndefined();
   });
+
+  /*
+    A level's dataset can change under a saved project, leaving indices that
+    name rows it no longer has.
+  */
+  test.each([
+    ['names a row the dataset no longer has', [18, ROWS.length]],
+    ['names a row before the first', [-1, 19]],
+    ['names no rows at all', []],
+    ['leaves no rows to train on', ROWS.map((_unused, index) => index)],
+  ])('cannot rebuild from a split that %s', (_reason, indices) => {
+    const {saved} = trainAndSave(undefined, TestDataLocations.END);
+
+    train.reset();
+    const refit = train.refit(loadedStore(undefined, TestDataLocations.END), {
+      ...saved,
+      accuracyCheckRowIndices: indices,
+    });
+
+    expect(refit).toBeUndefined();
+  });
+
+  /*
+    An author can change a level's trainer after students have saved work, so
+    the saved hyperparameters need not be the ones this trainer understands.
+  */
+  describe('a project saved under the other trainer', () => {
+    const savedUnder = (mode, hyperparameters) => ({
+      ...trainAndSave(mode, TestDataLocations.END).saved,
+      hyperparameters,
+    });
+
+    test('is not rebuilt as a nearest neighbour model', () => {
+      const saved = savedUnder({trainer: 'decisionTree'}, {maxDepth: 3});
+
+      train.reset();
+      expect(
+        train.refit(loadedStore(undefined, TestDataLocations.END), saved),
+      ).toBeUndefined();
+    });
+
+    test('is not rebuilt as a decision tree', () => {
+      const saved = savedUnder(undefined, {k: 5});
+
+      train.reset();
+      expect(
+        train.refit(
+          loadedStore({trainer: 'decisionTree'}, TestDataLocations.END),
+          saved,
+        ),
+      ).toBeUndefined();
+    });
+  });
 });

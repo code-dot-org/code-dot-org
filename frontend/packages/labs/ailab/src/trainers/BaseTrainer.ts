@@ -51,8 +51,13 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  // The inverse of hyperparameters(), so a saved run can be rebuilt exactly.
-  protected abstract candidateFor(hyperparameters: Hyperparameters): Candidate;
+  /*
+    The inverse of hyperparameters(), so a saved run can be rebuilt exactly.
+    Undefined when the saved values belong to another algorithm.
+  */
+  protected abstract candidateFor(
+    hyperparameters: Hyperparameters,
+  ): Candidate | undefined;
 
   startTraining(): TrainerOutput | undefined {
     const optimalModel = this.getOptimalModelDetails(this.store.getState());
@@ -76,11 +81,17 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   }
 
   /*
-    Builds the one model the given hyperparameters describe.
+    Builds the one model the given hyperparameters describe, or nothing if they
+    describe no model this trainer can build.
   */
   rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined {
     const state = this.store.getState();
     const candidate = this.candidateFor(hyperparameters);
+
+    if (candidate === undefined) {
+      return undefined;
+    }
+
     const model = this.buildModel(state, candidate);
 
     return this.recordModel({

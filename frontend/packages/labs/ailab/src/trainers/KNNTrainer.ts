@@ -29,8 +29,8 @@ export default class KNNTrainer extends BaseTrainer<number> {
     return {k: kValue};
   }
 
-  protected candidateFor(hyperparameters: Hyperparameters): number {
-    return 'k' in hyperparameters ? hyperparameters.k : 1;
+  protected candidateFor(hyperparameters: Hyperparameters): number | undefined {
+    return 'k' in hyperparameters ? hyperparameters.k : undefined;
   }
 
   possibleKValues(state: RootState): number[] {

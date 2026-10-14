@@ -32,9 +32,7 @@ export default class DecisionTreeTrainer extends BaseTrainer<number> {
     return {maxDepth};
   }
 
-  protected candidateFor(hyperparameters: Hyperparameters): number {
-    return 'maxDepth' in hyperparameters
-      ? hyperparameters.maxDepth
-      : CANDIDATE_MAX_DEPTHS[0];
+  protected candidateFor(hyperparameters: Hyperparameters): number | undefined {
+    return 'maxDepth' in hyperparameters ? hyperparameters.maxDepth : undefined;
   }
 }

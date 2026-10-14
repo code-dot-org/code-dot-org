@@ -212,6 +212,25 @@ const onClickTrain = (): TrainingRun | undefined =>
   describeRun(trainingState.trainer?.startTraining());
 
 /*
+  Whether a saved split still describes this dataset: every index names a row,
+  and some rows are left over to train on. If the rowCount has changed, 
+  the split may no longer be valid.
+*/
+const describesDataset = (
+  accuracyCheckRowIndices: number[],
+  rowCount: number,
+): boolean => {
+  const reserved = new Set(accuracyCheckRowIndices);
+  return (
+    reserved.size > 0 &&
+    reserved.size < rowCount &&
+    [...reserved].every(
+      index => Number.isInteger(index) && index >= 0 && index < rowCount,
+    )
+  );
+};
+
+/*
   Rebuilds the model a saved project describes, on the split it was graded
   against. Not a run the student can cancel, so it leaves previousResults alone.
 */
@@ -220,7 +239,11 @@ const refit = (
   project: AilabProject,
 ): TrainingRun | undefined => {
   const {hyperparameters, accuracyCheckRowIndices} = project;
-  if (!hyperparameters || !accuracyCheckRowIndices) {
+  if (
+    !hyperparameters ||
+    !accuracyCheckRowIndices ||
+    !describesDataset(accuracyCheckRowIndices, store.getState().data.length)
+  ) {
     return undefined;
   }
   prepare(store, project, accuracyCheckRowIndices);
