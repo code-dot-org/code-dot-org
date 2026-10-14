@@ -57,7 +57,7 @@ describe('SimpleHeader', () => {
     const name = document.querySelector('#unit_name_container') as HTMLElement;
     expect(name.getAttribute('href')).toBe('/s/hoai2026-dev');
     expect(name.textContent).toBe('hoai2026 dev');
-    expect(screen.getByText('Story')).toBeTruthy();
+    expect(screen.getByText('Story').getAttribute('title')).toBe('Story');
     expect(
       document
         .querySelector('#project_info_container')

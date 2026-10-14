@@ -1,8 +1,7 @@
 // The level header's middle for a unit flagged simple_progress: the unit's
 // image, the unit name and the current level's header label on one line
 // with the project's saved-at under them, after the project's own controls.
-// One flex row, nothing measured. It shows on mount: HeaderMiddle's wait
-// for an app load has no signal under Lab2, the only place this is used.
+// One flex row, nothing measured, shown on mount.
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -11,7 +10,10 @@ import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import ProjectInfo from './ProjectInfo';
-import ProjectUpdatedAt from './ProjectUpdatedAt';
+import ProjectUpdatedAt, {
+  PROJECT_UPDATED_AT_HEIGHT,
+  PROJECT_UPDATED_AT_MIN_WIDTH,
+} from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 import styles from './simple-header.module.scss';
@@ -23,7 +25,8 @@ export interface ProgressLevel {
   sublevels?: {isCurrentLevel?: boolean}[];
 }
 
-// The current level's header label; a sublevel's parent is current.
+// The current level's header label. getCurrentLevel would return a current
+// sublevel itself; the label is its parent's.
 export function currentHeaderLabel(levels?: ProgressLevel[]): string | null {
   const current = levels?.find(
     l => l.isCurrentLevel || l.sublevels?.some(sub => sub.isCurrentLevel)
@@ -78,7 +81,10 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           className={styles.image}
         />
       )}
-      <div className={styles.text}>
+      <div
+        className={styles.text}
+        style={{minWidth: PROJECT_UPDATED_AT_MIN_WIDTH}}
+      >
         <div className={styles.title}>
           {scriptNameData && (
             <a
@@ -95,9 +101,18 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
               ·
             </span>
           )}
-          {label && <span className={styles.label}>{label}</span>}
+          {label && (
+            <span className={styles.label} title={label}>
+              {label}
+            </span>
+          )}
         </div>
-        <div className={styles.saved}>{showSaved && <ProjectUpdatedAt />}</div>
+        <div
+          className={styles.saved}
+          style={{height: PROJECT_UPDATED_AT_HEIGHT}}
+        >
+          {showSaved && <ProjectUpdatedAt />}
+        </div>
       </div>
     </div>
   );

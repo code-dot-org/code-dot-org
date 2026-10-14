@@ -31,14 +31,13 @@
   object-fit: cover;
 }
 
-// The two lines: name and label, then the saved-at. Shrinks with the row:
-// the names ellipsize.
+// Sized to the saved-at badge's minimum width, so the row does not move when
+// "Saved" arrives.
 .text {
   margin-inline-start: 12px;
   display: flex;
   flex-direction: column;
   flex: 0 1 auto;
-  min-width: 0;
 }
 
 .title {
@@ -73,15 +72,11 @@
   flex: none;
 }
 
-// A fixed line, so the row does not move when "Saved" arrives; the badge
-// sets its own type size. Clipped rather than spilling over the buttons
-// when the column is narrower than the badge's own minimum width.
+// The badge's height is reserved from the start; a save error's taller
+// badge may overflow it.
 .saved {
-  height: 14px;
   display: flex;
   align-items: center;
-  min-width: 0;
-  overflow: hidden;
   white-space: nowrap;
 }
 
