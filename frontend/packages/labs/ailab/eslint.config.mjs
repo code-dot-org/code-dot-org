@@ -11,6 +11,10 @@ import {globalIgnores} from 'eslint/config';
 const matchesApps = [
   {
     rules: {
+      // The shared config assumes the automatic JSX runtime; apps uses the
+      // classic one, which needs React in scope.
+      'react/react-in-jsx-scope': 'error',
+      'react/jsx-uses-react': 'error',
       // apps groups `@code-dot-org/*` with the other external packages rather
       // than giving it a block of its own.
       'import-x/order': [

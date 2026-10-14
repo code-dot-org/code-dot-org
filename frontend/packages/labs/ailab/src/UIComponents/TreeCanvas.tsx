@@ -8,7 +8,7 @@ import {
   type ZoomBehavior,
   type ZoomTransform,
 } from 'd3-zoom';
-import {
+import React, {
   createContext,
   type FocusEvent,
   type HTMLAttributes,

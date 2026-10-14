@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import type {ReactNode} from 'react';
+import React, {type ReactNode} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';

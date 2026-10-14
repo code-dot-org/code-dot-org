@@ -1,7 +1,7 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import {type CSSProperties, type ReactNode, useEffect} from 'react';
+import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
 
 import {colors} from './constants';
 import {reportPanelView} from './helpers/metrics';

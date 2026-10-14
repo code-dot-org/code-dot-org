@@ -1,7 +1,7 @@
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, Typography} from '@mui/material';
-import {useEffect, useId, useRef} from 'react';
+import React, {useEffect, useId, useRef} from 'react';
 
 import AllResults from './AllResults';
 import ResultsDetails from './ResultsDetails';

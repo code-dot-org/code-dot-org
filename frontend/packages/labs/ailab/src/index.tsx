@@ -1,5 +1,6 @@
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
+import React from 'react';
 import {createRoot, type Root} from 'react-dom/client';
 import {Provider} from 'react-redux';
 

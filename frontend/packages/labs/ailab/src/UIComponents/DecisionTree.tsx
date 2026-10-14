@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {
+import React, {
   type CSSProperties,
   type FocusEvent,
   type KeyboardEvent,

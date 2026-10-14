@@ -4,7 +4,7 @@ import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxD
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
-import type {ChangeEvent} from 'react';
+import React, {type ChangeEvent} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';

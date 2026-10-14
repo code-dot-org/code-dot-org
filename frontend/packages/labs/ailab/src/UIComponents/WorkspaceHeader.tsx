@@ -3,6 +3,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Button, Tooltip, Typography} from '@mui/material';
+import React from 'react';
 
 import {isPanelEnabled} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';

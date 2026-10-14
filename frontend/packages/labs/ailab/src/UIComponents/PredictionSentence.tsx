@@ -1,7 +1,7 @@
 /* The "Predict … based on …" sentence, with the label and features as tags. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useLayoutEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';

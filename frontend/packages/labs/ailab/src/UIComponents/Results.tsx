@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {TEST_PANEL_WIDTH} from '../constants';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';

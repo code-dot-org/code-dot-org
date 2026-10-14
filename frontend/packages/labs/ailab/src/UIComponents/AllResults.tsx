@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {formatAccuracy} from '../helpers/accuracy';
 import {useProject} from '../ProjectContext';
 import type {HistoricResult} from '../types';

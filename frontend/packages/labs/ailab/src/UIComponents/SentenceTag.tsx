@@ -1,6 +1,7 @@
 /* A label or feature slot in the "Predict … based on …" sentence. */
 import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
+import React from 'react';
 
 import styles from './sentenceTag.module.scss';
 

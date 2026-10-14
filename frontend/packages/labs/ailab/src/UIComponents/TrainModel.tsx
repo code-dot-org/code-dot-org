@@ -1,6 +1,6 @@
 /* React component to handle training. */
 import classNames from 'classnames';
-import {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 import {imageUrl} from '../assetPath';
 import {ANIMATION_TABLE_ROW_LIMIT, getFadeOpacity} from '../constants';
