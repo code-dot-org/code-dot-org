@@ -27,7 +27,7 @@ export function usePretrainOnLoad() {
     }
   }, [pretrained, dataLoaded, canTrain, trainedModel, beginRun]);
 
-  // Waits for the project to hold the run, which lands a render after the store does.
+  // beginRun() updates the project a render after the store; Results needs both.
   useEffect(() => {
     if (hideDatasetView && canTest) {
       dispatch(setCurrentPanel('results'));
