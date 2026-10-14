@@ -44,30 +44,3 @@ export function toolboxForSceneType(
     ),
   };
 }
-
-/**
- * The toolbox with empty room at the top of every flyout, so the first
- * block starts clear of a control floating over the pane's top-left while
- * the blocks still scroll under it. A leading separator is that room in
- * Blockly's own terms.
- */
-export function withLeadingRoom(
-  toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined,
-  gap: number
-): BlocklyCore.utils.toolbox.ToolboxInfo | undefined {
-  if (!toolbox || !gap) {
-    return toolbox;
-  }
-  const room = {kind: 'sep', gap} as BlocklyCore.utils.toolbox.ToolboxItemInfo;
-  if (toolbox.kind === 'categoryToolbox') {
-    return {
-      ...toolbox,
-      contents: (toolbox.contents as AuthoredCategory[]).map(category =>
-        category.contents
-          ? {...category, contents: [room, ...category.contents]}
-          : category
-      ) as BlocklyCore.utils.toolbox.ToolboxItemInfo[],
-    };
-  }
-  return {...toolbox, contents: [room, ...(toolbox.contents || [])]};
-}
