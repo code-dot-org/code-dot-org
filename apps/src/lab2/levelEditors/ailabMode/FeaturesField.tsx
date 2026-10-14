@@ -1,16 +1,18 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {CheckboxDropdown} from '@code-dot-org/component-library/dropdown';
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
 import {
   getFeatures,
   getStartingLabel,
+  isSetByPretrained,
   ModeObject,
   setFeatures,
 } from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
+import {useCheckboxValidity} from './useCheckboxValidity';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
 
@@ -27,7 +29,6 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
   helperMessage,
   onChange,
 }) => {
-  const lockRef = useRef<HTMLDivElement>(null);
   const savedFeatures = getFeatures(mode);
   const locked = mode.lockFeatures === true;
   const startingLabel = getStartingLabel(mode, columns?.defaultLabel);
@@ -59,10 +60,7 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
         )}.`
       : lockError;
 
-  // Checkbox does not forward refs; an invalid lock stops the level from saving.
-  useEffect(() => {
-    lockRef.current!.querySelector('input')!.setCustomValidity(lockError ?? '');
-  }, [lockError]);
+  const lockRef = useCheckboxValidity(lockError);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {value, checked} = e.target;
@@ -101,6 +99,7 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
           name="ailab_mode_lockFeatures"
           label="Lock the features so students cannot change them"
           checked={locked}
+          disabled={isSetByPretrained(mode, 'lockFeatures')}
           onChange={e =>
             onChange(
               setJsonObjectValue(

@@ -1,0 +1,10 @@
+name 'aif-y2-making-predictions-lesson4-level2-2026'
+display_name 'Compute Mean Squared Error'
+description 'Choose a machine learning model to evaluate by computing mean squared error.'
+
+sublevels
+level 'aif-y2-making-predictions-lesson4-level2-choice1-2026'
+level 'aif-y2-making-predictions-lesson4-level2-choice2-2026'
+level 'aif-y2-making-predictions-lesson4-level2-choice3-2026'
+
+uses_lab2

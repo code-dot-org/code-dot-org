@@ -29643,6 +29643,10 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-4:
+              display_name: End of Unit Assessment
           name: aif-year2-semester1-unit4
           title: Making Predictions
           description_audience: ''

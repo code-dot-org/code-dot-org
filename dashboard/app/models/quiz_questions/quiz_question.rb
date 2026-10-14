@@ -24,6 +24,10 @@ class QuizQuestion < ApplicationRecord
 
   after_initialize {self.type ||= self.class.sti_name}
 
+  # Set while loading from a file in self.setup, so the after_commit hook
+  # doesn't immediately write the just-read content back to the same file.
+  attr_accessor :skip_write_to_file
+
   # No FK; parent delete leaves a dangling id.
   belongs_to :fork_parent, class_name: 'QuizQuestion', optional: true
 
@@ -48,10 +52,17 @@ class QuizQuestion < ApplicationRecord
       Dir.glob("#{dashboard_root}/config/quiz_questions/**/*.json").each do |path|
         source = JSON.parse(File.read(path))
         question = source['type'].constantize.find_or_initialize_by(key: source['key'])
+        question.skip_write_to_file = true
         question.name = source['name']
-        decrypted = Encryption.decrypt_object(source['encrypted_content'])
-        question.content = decrypted['content']
-        question.explanation = decrypted['explanation']
+        begin
+          decrypted = Encryption.decrypt_object(source['encrypted_content'])
+          question.content = decrypted['content']
+          question.explanation = decrypted['explanation']
+        rescue Encryption::KeyMissingError
+          raise if rack_env?(:production)
+          puts "WARNING: quiz question '#{source['key']}' seeded with placeholder content due to missing CDO.properties_encryption_key"
+          question.content = question.placeholder_content
+        end
         question.save! if question.changed?
       rescue JSON::ParserError
         raise format('failed to parse %s', path)
@@ -77,11 +88,11 @@ class QuizQuestion < ApplicationRecord
   end
 
   def delete_file
-    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if write_to_file?
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if levelbuilder_mode?
   end
 
   def write_to_file?
-    Rails.application.config.levelbuilder_mode
+    levelbuilder_mode? && !skip_write_to_file
   end
 
   # published unit means preview/stable/sunsetting
@@ -128,6 +139,12 @@ class QuizQuestion < ApplicationRecord
   # Builds `content` from question builder request params.
   def self.content_from_builder_params(builder_params)
     raise ArgumentError, "#{name} does not accept editor params"
+  end
+
+  # A valid `content` for this subtype, used in place of real (encrypted)
+  # content when seeding without an encryption key.
+  def placeholder_content
+    raise NotImplementedError, "#{self.class.name} must implement placeholder_content"
   end
 
   # The `content` fields every subtype has. A blank description is omitted,
@@ -182,5 +199,9 @@ class QuizQuestion < ApplicationRecord
     end
 
     choice_ids
+  end
+
+  private def levelbuilder_mode?
+    Rails.application.config.levelbuilder_mode
   end
 end

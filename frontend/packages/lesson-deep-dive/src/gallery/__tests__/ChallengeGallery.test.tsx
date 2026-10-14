@@ -1,45 +1,37 @@
-import {
-  ChallengeResponse,
-  ChallengeResponseDetail,
-  getUnitCounts,
-  listChallengeResponses,
-  TutorGalleryData,
-} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {type Mock, vi} from 'vitest';
 
-import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
-import experiments from '@cdo/apps/util/experiments';
-
-const mockRequest = jest.fn();
-
-// ProjectView and ReactionChips call the package's own api module, which the
-// barrel mock below cannot reach; their requests surface at the transport.
-jest.mock('@code-dot-org/core/api', () => {
-  const client = {
-    transport: {request: (...args: unknown[]) => mockRequest(...args)},
-  };
+import {type ChallengeResponse} from '../../types';
+import {
+  addReaction,
+  getChallengeResponse,
+  getUnitCounts,
+  listChallengeResponses,
+  setApproved,
+} from '../api';
+import ChallengeGallery from '../ChallengeGallery';
+import {type ChallengeResponseDetail, type TutorGalleryData} from '../types';
+vi.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
   return {useApiClient: () => client};
 });
 
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  getUnitCounts: jest.fn(),
-  listChallengeResponses: jest.fn(),
+vi.mock('../api', () => ({
+  addReaction: vi.fn(),
+  getChallengeResponse: vi.fn(),
+  getUnitCounts: vi.fn(),
+  listChallengeResponses: vi.fn(),
+  setApproved: vi.fn(),
 }));
 
-const mockList = listChallengeResponses as jest.Mock;
-const mockUnitCounts = getUnitCounts as jest.Mock;
+const mockList = listChallengeResponses as Mock;
+const mockUnitCounts = getUnitCounts as Mock;
+const mockDetail = getChallengeResponse as Mock;
+const mockAddReaction = addReaction as Mock;
+const mockSetApproved = setApproved as Mock;
 const listParams = () =>
   mockList.mock.calls.map(([, params]) => params.toString());
-// Answers the project page's transport requests, keyed by method and path.
-const stubRequests = (responses: Record<string, unknown>) =>
-  mockRequest.mockImplementation(
-    async ({method, url}: {method: string; url: string}) =>
-      responses[`${method} ${url.split('?')[0]}`]
-  );
 
 const galleryData: TutorGalleryData = {
   currentUnitId: 100,
@@ -105,7 +97,7 @@ const whiteboardResponse: ChallengeResponse = {
 
 const stubFetches = (
   responses: ChallengeResponse[],
-  counts: Record<string, number> = {}
+  counts: Record<string, number> = {},
 ) => {
   mockList.mockResolvedValue(responses);
   mockUnitCounts.mockResolvedValue(counts);
@@ -124,15 +116,12 @@ describe('ChallengeGallery', () => {
   beforeEach(() => {
     mockList.mockReset();
     mockUnitCounts.mockReset();
-    mockRequest.mockReset();
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
+    mockDetail.mockReset();
+    mockAddReaction.mockReset();
+    mockSetApproved.mockReset();
     // Project navigation pushes ?project=<id>; start each test off a
     // clean URL.
     window.history.replaceState(null, '', '/');
-  });
-
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
   });
 
   it('fetches the first section and current unit, and groups projects', async () => {
@@ -141,7 +130,7 @@ describe('ChallengeGallery', () => {
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
 
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
     expect(listParams()).toContain('unit_id=100&section_id=5');
 
@@ -173,11 +162,11 @@ describe('ChallengeGallery', () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: /Unit 2: Foundations of AI Programming/,
-      })
+      }),
     );
 
     await waitFor(() =>
-      expect(listParams()).toContain('unit_id=200&section_id=5')
+      expect(listParams()).toContain('unit_id=200&section_id=5'),
     );
   });
 
@@ -186,7 +175,7 @@ describe('ChallengeGallery', () => {
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     fireEvent.change(screen.getByDisplayValue('Most recent'), {
@@ -194,7 +183,7 @@ describe('ChallengeGallery', () => {
     });
 
     await waitFor(() =>
-      expect(listParams()).toContain('unit_id=100&section_id=5&sort=oldest')
+      expect(listParams()).toContain('unit_id=100&section_id=5&sort=oldest'),
     );
   });
 
@@ -203,7 +192,7 @@ describe('ChallengeGallery', () => {
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     fireEvent.change(screen.getByDisplayValue('Section 1 - CS Period 3'), {
@@ -218,7 +207,7 @@ describe('ChallengeGallery', () => {
     stubFetches([]);
 
     render(
-      <ChallengeGallery tutorGalleryData={{...galleryData, sections: []}} />
+      <ChallengeGallery tutorGalleryData={{...galleryData, sections: []}} />,
     );
 
     await waitFor(() => expect(listParams()).toContain('unit_id=100'));
@@ -232,8 +221,8 @@ describe('ChallengeGallery', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText('No projects have been submitted for this unit yet.')
-      ).toBeInTheDocument()
+        screen.getByText('No projects have been submitted for this unit yet.'),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -245,8 +234,8 @@ describe('ChallengeGallery', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText(/We couldn't load the gallery/)
-      ).toBeInTheDocument()
+        screen.getByText(/We couldn't load the gallery/),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -256,16 +245,13 @@ describe('ChallengeGallery', () => {
       viewer_role: 'peer',
       question: 'Draw a network.',
     };
-    stubRequests({
-      'GET /challenge_responses/8': detail,
-      'GET /challenge_responses': [whiteboardResponse],
-    });
+    mockDetail.mockResolvedValue(detail);
     mockUnitCounts.mockResolvedValue({});
     mockList.mockResolvedValue([videoResponse, whiteboardResponse]);
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
 
     fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
@@ -273,19 +259,16 @@ describe('ChallengeGallery', () => {
     expect(window.location.search).toBe('?project=8');
     await waitFor(() =>
       expect(
-        screen.getByText('Project Prompt: Draw a network.')
-      ).toBeInTheDocument()
+        screen.getByText('Project Prompt: Draw a network.'),
+      ).toBeInTheDocument(),
     );
-    expect(mockRequest).toHaveBeenCalledWith({
-      method: 'GET',
-      url: '/challenge_responses/8',
-    });
+    expect(mockDetail).toHaveBeenCalledWith(expect.anything(), 8);
 
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
 
     expect(window.location.search).toBe('');
     await waitFor(() =>
-      expect(screen.getByText('Extension Activities')).toBeInTheDocument()
+      expect(screen.getByText('Extension Activities')).toBeInTheDocument(),
     );
   });
 
@@ -293,19 +276,23 @@ describe('ChallengeGallery', () => {
     stubFetches([]);
 
     const {rerender} = render(
-      <ChallengeGallery tutorGalleryData={teacherGalleryData} />
+      <ChallengeGallery tutorGalleryData={teacherGalleryData} />,
     );
 
     await waitFor(() =>
       expect(
-        screen.getByText(/By default, students can't see each other's projects/)
-      ).toBeInTheDocument()
+        screen.getByText(
+          /By default, students can't see each other's projects/,
+        ),
+      ).toBeInTheDocument(),
     );
 
     rerender(<ChallengeGallery tutorGalleryData={galleryData} />);
 
     expect(
-      screen.queryByText(/By default, students can't see each other's projects/)
+      screen.queryByText(
+        /By default, students can't see each other's projects/,
+      ),
     ).not.toBeInTheDocument();
   });
 
@@ -313,76 +300,65 @@ describe('ChallengeGallery', () => {
     stubFetches([videoResponse]);
 
     const {rerender} = render(
-      <ChallengeGallery tutorGalleryData={teacherGalleryData} />
+      <ChallengeGallery tutorGalleryData={teacherGalleryData} />,
     );
 
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
     expect(
-      screen.getByRole('checkbox', {name: /Visible for students/})
+      screen.getByRole('checkbox', {name: /Visible for students/}),
     ).toBeInTheDocument();
 
     rerender(<ChallengeGallery tutorGalleryData={galleryData} />);
 
     expect(
-      screen.queryByRole('checkbox', {name: /Visible for students/})
+      screen.queryByRole('checkbox', {name: /Visible for students/}),
     ).not.toBeInTheDocument();
   });
 
   it('calls the approve endpoint when a teacher toggles a card', async () => {
-    mockRequest.mockResolvedValue({});
+    mockSetApproved.mockResolvedValue(undefined);
     stubFetches([videoResponse]);
 
     render(<ChallengeGallery tutorGalleryData={teacherGalleryData} />);
 
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     await userEvent.click(
-      screen.getByRole('checkbox', {name: /Visible for students/})
+      screen.getByRole('checkbox', {name: /Visible for students/}),
     );
 
     await waitFor(() =>
-      expect(mockRequest).toHaveBeenCalledWith({
-        method: 'PATCH',
-        url: '/challenge_responses/7/approve',
-        body: {approved: true},
-      })
+      expect(mockSetApproved).toHaveBeenCalledWith(expect.anything(), 7, true),
     );
   });
 
   it('keeps a reaction made on the project page when returning to the gallery', async () => {
-    stubRequests({
-      'GET /challenge_responses/8': whiteboardDetail,
-      'GET /challenge_responses': [whiteboardResponse],
-      'POST /challenge_responses/8/reactions': {
-        reactions: [{emoji: 'heart', count: 1, reacted: true}],
-      },
-    });
+    mockDetail.mockResolvedValue(whiteboardDetail);
     mockUnitCounts.mockResolvedValue({});
     mockList.mockResolvedValue([whiteboardResponse]);
+    mockAddReaction.mockResolvedValue([
+      {emoji: 'heart', count: 1, reacted: true},
+    ]);
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
 
     // Open the project page and add a reaction there.
     fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
     await waitFor(() =>
       expect(
-        screen.getByText('Project Prompt: Draw a network.')
-      ).toBeInTheDocument()
+        screen.getByText('Project Prompt: Draw a network.'),
+      ).toBeInTheDocument(),
     );
     fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
-    expect(mockRequest).toHaveBeenCalledWith({
-      method: 'POST',
-      url: '/challenge_responses/8/reactions',
-      body: {emoji: 'heart'},
-    });
+    expect(mockAddReaction).toHaveBeenCalledWith(expect.anything(), 8, 'heart');
 
     // Back on the gallery, the card carries the reaction made on the project
     // page rather than the stale empty list from the initial fetch. The card
@@ -390,8 +366,8 @@ describe('ChallengeGallery', () => {
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
     await waitFor(() =>
       expect(
-        screen.getByRole('img', {name: /Heart, 1 reaction/})
-      ).toBeInTheDocument()
+        screen.getByRole('img', {name: /Heart, 1 reaction/}),
+      ).toBeInTheDocument(),
     );
   });
 });

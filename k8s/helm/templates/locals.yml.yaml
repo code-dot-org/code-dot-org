@@ -16,9 +16,8 @@ data:
   build_apps: "true"
   use_my_apps: "true"
 
-  # These are secrets that cause exceptions booting our dashbaord app in development
-  # We hope to get rid of needing these overrides soon, see:
-  # - https://codeai.slack.com/archives/C03CK49G9/p1773224406769729
+  {{- if .Values.localDev.stubSecrets }}
+  # Local boot must not resolve these credentials through Secrets Manager.
   cloudfront_key_pair_id: ""
   cloudfront_private_key: ""
   slack_bot_token: ""
@@ -40,6 +39,7 @@ data:
   # config/development.yml.erb.
   ai_gateway_auth_key: ""
   ai_gateway_auth_key_passphrase: ""
+  {{- end }}
 
   # Configuration for cluster local services in "development mode":
   {{- if .Values.services.mysql.enabled }}

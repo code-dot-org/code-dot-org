@@ -1,0 +1,10 @@
+name 'aif-y2-making-predictions-lesson8-level1-2026'
+display_name 'Scale Data'
+description 'Choose a classification model to improve by scaling data.'
+
+sublevels
+level 'aif-y2-making-predictions-lesson8-level1-choice1-2026'
+level 'aif-y2-making-predictions-lesson8-level1-choice2-2026'
+level 'aif-y2-making-predictions-lesson8-level1-choice3-2026'
+
+uses_lab2

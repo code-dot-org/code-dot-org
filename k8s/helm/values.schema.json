@@ -118,6 +118,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "stubSecrets": {"type": "boolean"},
         "mounts": {
           "type": "object",
           "additionalProperties": false,

@@ -10,6 +10,7 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
+  isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
   MIN_ACCURACY,
@@ -20,6 +21,7 @@ import {
 import {DatasetFiles} from './datasetColumns';
 import FeaturesField from './FeaturesField';
 import LabelField from './LabelField';
+import PretrainedField from './PretrainedField';
 import {useDatasetColumns} from './useDatasetColumns';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -103,6 +105,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
+      disabled={isSetByPretrained(mode, key)}
       onChange={e =>
         changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
@@ -153,6 +156,24 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           }
           size="s"
         />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <PretrainedField
+          mode={mode}
+          columns={columns}
+          onChange={newMode => {
+            setAccuracyText('');
+            changeMode(newMode);
+          }}
+        />
+        {mode.pretrained === true && (
+          <div className={moduleStyles.booleanField}>
+            {renderCheckbox(
+              'hideDatasetView',
+              'Hide the dataset view so students start on testing'
+            )}
+          </div>
+        )}
       </div>
       <div className={moduleStyles.fieldArea}>
         <LabelField
@@ -209,6 +230,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           step="any"
           value={accuracyText}
           onChange={handleAccuracyChange}
+          disabled={isSetByPretrained(mode, 'requireAccuracy')}
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
           size="s"
