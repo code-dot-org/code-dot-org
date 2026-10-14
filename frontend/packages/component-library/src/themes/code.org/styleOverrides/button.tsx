@@ -54,6 +54,70 @@ const SIZE_SPECS = {
   },
 };
 
+// Orange is a contained color. Outlined and text orange use these primary styles.
+const outlinedPrimaryStyles = {
+  backgroundColor: 'var(--background-neutral-primary)',
+  border: '1px solid var(--border-neutral-solid)',
+  color: 'var(--text-neutral-primary)',
+  '&:hover, &.force-hover, &[data-force-hover="true"]': {
+    backgroundColor: 'var(--background-neutral-tertiary)',
+    border: '1px solid var(--border-neutral-solid)',
+    color: 'var(--text-neutral-primary)',
+  },
+  '&:focus, a&:focus': {
+    color: 'var(--text-neutral-primary)',
+  },
+  '&:active, a&:active': {
+    backgroundColor: 'var(--background-neutral-tertiary)',
+    border: '1px solid var(--border-neutral-solid)',
+    color: 'var(--text-neutral-primary)',
+  },
+  '&.Mui-disabled': {
+    borderColor: 'var(--border-disabled-neutral)',
+    color: 'var(--text-disabled-neutral)',
+    backgroundColor: 'var(--background-neutral-primary)',
+  },
+  '&.MuiButton-loading': {
+    border: '1px solid var(--border-neutral-solid)',
+    backgroundColor: 'var(--background-neutral-primary)',
+    color: 'var(--text-neutral-primary)',
+  },
+  '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+    color: 'transparent',
+  },
+  '&.MuiButton-loading i': {
+    color: 'var(--text-neutral-primary)',
+  },
+};
+
+const textPrimaryStyles = {
+  color: 'var(--text-brand-primary)',
+  '&:hover, &.force-hover, &[data-force-hover="true"]': {
+    backgroundColor: 'var(--background-brand-light)',
+    color: 'var(--text-brand-primary)',
+  },
+  '&:focus, a&:focus': {
+    color: 'var(--text-brand-primary)',
+  },
+  '&:active, a&:active': {
+    backgroundColor: 'var(--background-brand-light)',
+    color: 'var(--text-brand-secondary)',
+  },
+  '&.Mui-disabled': {
+    color: 'var(--text-disabled-brand)',
+    backgroundColor: 'transparent',
+  },
+  '&.MuiButton-loading': {
+    color: 'var(--text-brand-primary)',
+  },
+  '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+    color: 'transparent',
+  },
+  '&.MuiButton-loading i': {
+    color: 'var(--text-brand-primary)',
+  },
+};
+
 export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
   defaultProps: {
     disableRipple: true,
@@ -345,40 +409,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
 
     {
       props: {variant: 'outlined', color: 'primary'},
-      style: {
-        backgroundColor: 'var(--background-neutral-primary)',
-        border: '1px solid var(--border-neutral-solid)',
-        color: 'var(--text-neutral-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-tertiary)',
-          border: '1px solid var(--border-neutral-solid)',
-          color: 'var(--text-neutral-primary)',
-        },
-        '&:focus, a&:focus': {
-          color: 'var(--text-neutral-primary)',
-        },
-        '&:active, a&:active': {
-          backgroundColor: 'var(--background-neutral-tertiary)',
-          border: '1px solid var(--border-neutral-solid)',
-          color: 'var(--text-neutral-primary)',
-        },
-        '&.Mui-disabled': {
-          borderColor: 'var(--border-disabled-neutral)',
-          color: 'var(--text-disabled-neutral)',
-          backgroundColor: 'var(--background-neutral-primary)',
-        },
-        '&.MuiButton-loading': {
-          border: '1px solid var(--border-neutral-solid)',
-          backgroundColor: 'var(--background-neutral-primary)',
-          color: 'var(--text-neutral-primary)',
-        },
-        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
-          color: 'transparent',
-        },
-        '&.MuiButton-loading i': {
-          color: 'var(--text-neutral-primary)',
-        },
-      },
+      style: outlinedPrimaryStyles,
+    },
+    {
+      props: {variant: 'outlined', color: 'orange'},
+      style: outlinedPrimaryStyles,
     },
     {
       props: {variant: 'outlined', color: 'secondary'},
@@ -529,33 +564,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
 
     {
       props: {variant: 'text', color: 'primary'},
-      style: {
-        color: 'var(--text-brand-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-light)',
-          color: 'var(--text-brand-primary)',
-        },
-        '&:focus, a&:focus': {
-          color: 'var(--text-brand-primary)',
-        },
-        '&:active, a&:active': {
-          backgroundColor: 'var(--background-brand-light)',
-          color: 'var(--text-brand-secondary)',
-        },
-        '&.Mui-disabled': {
-          color: 'var(--text-disabled-brand)',
-          backgroundColor: 'transparent',
-        },
-        '&.MuiButton-loading': {
-          color: 'var(--text-brand-primary)',
-        },
-        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
-          color: 'transparent',
-        },
-        '&.MuiButton-loading i': {
-          color: 'var(--text-brand-primary)',
-        },
-      },
+      style: textPrimaryStyles,
+    },
+    {
+      props: {variant: 'text', color: 'orange'},
+      style: textPrimaryStyles,
     },
     {
       props: {variant: 'text', color: 'secondary'},
