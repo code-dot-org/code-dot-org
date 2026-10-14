@@ -26,6 +26,7 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
 interface StoreState {
   isRtl: boolean;
   project?: {showProjectUpdatedAt: boolean};
+  headerLabel?: {label: string | null};
 }
 
 function renderHeader(state: Partial<StoreState> = {}) {
@@ -69,6 +70,12 @@ describe('SimpleHeader', () => {
     renderHeader();
     expect(screen.queryByText('·')).toBeNull();
     expect(document.querySelector('#unit_name_container')).not.toBeNull();
+  });
+
+  it("prefers a label set in the store over the level's", () => {
+    renderHeader({headerLabel: {label: 'Introduction'}});
+    expect(screen.getByText('Introduction')).toBeTruthy();
+    expect(screen.queryByText('Story')).toBeNull();
   });
 
   it('shows the saved-at only once the project store asks for it', () => {

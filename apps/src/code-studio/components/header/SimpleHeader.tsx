@@ -1,6 +1,7 @@
 // The level header's middle for a unit flagged simple_progress: the unit's
-// image, the unit name and the current level's header label on one line
-// with the project's saved-at under them, and the project's buttons after.
+// image, the unit name and a label on one line with the project's saved-at
+// under them, and the project's buttons after. The label is the current
+// level's header label, unless the page has set one in the store.
 // One flex row, nothing measured. It shows on mount: HeaderMiddle's wait
 // for an app load has no signal under Lab2, the only place this is used.
 
@@ -34,6 +35,7 @@ export function currentHeaderLabel(levels?: ProgressLevel[]): string | null {
 interface HeaderState {
   isRtl: boolean;
   project?: {showProjectUpdatedAt?: boolean};
+  headerLabel?: {label: string | null};
 }
 
 interface SimpleHeaderProps {
@@ -55,7 +57,10 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   const levels = useSelector(getCurrentLevels, isEqual) as
     | ProgressLevel[]
     | undefined;
-  const label = currentHeaderLabel(levels);
+  const setLabel = useSelector(
+    (state: HeaderState) => state.headerLabel?.label ?? null
+  );
+  const label = setLabel ?? currentHeaderLabel(levels);
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.
