@@ -8,7 +8,7 @@ import {
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {
-  LocalStepContext,
+  GeneratedInstructions,
   ProgressStore,
 } from '@cdo/apps/adaptive/progress/progressStore';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
@@ -131,10 +131,9 @@ describe('useProgress', () => {
   const fakeStore = (loaded: Progress = EMPTY_PROGRESS) => ({
     load: jest.fn().mockResolvedValue(loaded),
     saveStep: jest.fn().mockResolvedValue(undefined),
-    reset: jest.fn().mockResolvedValue(undefined),
   });
 
-  const fakeLocalStore = (loaded?: LocalStepContext) => ({
+  const fakeGeneratedStore = (loaded?: GeneratedInstructions) => ({
     load: jest.fn().mockResolvedValue(loaded),
     save: jest.fn().mockResolvedValue(undefined),
   });
@@ -142,12 +141,12 @@ describe('useProgress', () => {
   const renderProgress = async (
     store: ProgressStore,
     reportLevelStep = jest.fn().mockResolvedValue(undefined),
-    localStore = fakeLocalStore()
+    generatedStore = fakeGeneratedStore()
   ) => {
     const hook = renderHook(() =>
       useProgress(hookPathway, key, {
         store,
-        localStore,
+        generatedStore,
         userId: 7,
         reportLevelStep,
       })
@@ -261,16 +260,16 @@ describe('useProgress', () => {
 
   it('saves generated instructions locally, not to the server', async () => {
     const store = fakeStore();
-    const localStore = fakeLocalStore();
-    const {result} = await renderProgress(store, undefined, localStore);
+    const generatedStore = fakeGeneratedStore();
+    const {result} = await renderProgress(store, undefined, generatedStore);
     const generated = {instructions: 'Hi', inputsHash: 'ab'};
 
-    act(() => result.current.updateStepContext('try', {generated}));
+    act(() => result.current.saveGeneratedInstructions('try', generated));
 
     expect(result.current.stepContextMap).toEqual({try: {generated}});
-    expect(localStore.save).toHaveBeenLastCalledWith(
+    expect(generatedStore.save).toHaveBeenLastCalledWith(
       {userId: 7, ...key, pathwayId: 'p'},
-      {try: {generated}}
+      {try: generated}
     );
     expect(store.saveStep).not.toHaveBeenCalled();
   });
@@ -284,7 +283,7 @@ describe('useProgress', () => {
     const {result} = await renderProgress(
       store,
       undefined,
-      fakeLocalStore({quiz: {generated}})
+      fakeGeneratedStore({quiz: generated})
     );
 
     expect(result.current.stepContextMap).toEqual({

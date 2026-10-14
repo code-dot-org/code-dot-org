@@ -6,7 +6,7 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Answer, EMPTY_PROGRESS, Progress, StepContext} from './model';
+import {Answer, EMPTY_PROGRESS, GeneratedContent, Progress} from './model';
 
 export interface ProgressKey {
   scriptId: number;
@@ -24,7 +24,6 @@ export interface StepWrite {
 export interface ProgressStore {
   load(key: ProgressKey): Promise<Progress>;
   saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void>;
-  reset(key: ProgressKey): Promise<void>;
 }
 
 const query = ({scriptId, levelId}: ProgressKey) =>
@@ -32,7 +31,7 @@ const query = ({scriptId, levelId}: ProgressKey) =>
 
 /** Sends writes one at a time, in order; a failed one is logged and skipped. */
 export function createServerProgressStore(
-  http: Pick<typeof HttpClient, 'get' | 'put' | 'delete'> = HttpClient
+  http: Pick<typeof HttpClient, 'get' | 'put'> = HttpClient
 ): ProgressStore {
   let chain: Promise<void> = Promise.resolve();
   const enqueue = (label: string, request: () => Promise<unknown>) => {
@@ -63,40 +62,37 @@ export function createServerProgressStore(
         )
       );
     },
-
-    reset(key) {
-      return enqueue('reset', () =>
-        http.delete(`/adaptive_progress?${query(key)}`, true)
-      );
-    },
   };
 }
 
 export const serverProgressStore = createServerProgressStore();
 
-export interface LocalProgressKey extends ProgressKey {
+export interface LocalGeneratedInstructionsKey extends ProgressKey {
   /** Null for a signed-out student, who shares one record per browser. */
   userId: number | null;
   /** Guards the record: content swapped under the level is not resumed. */
   pathwayId: string;
 }
 
-export type LocalStepContext = {
-  [stepId: string]: Pick<StepContext, 'generated'>;
-};
+export type GeneratedInstructions = {[stepId: string]: GeneratedContent};
 
-export interface LocalProgressStore {
-  load(key: LocalProgressKey): Promise<LocalStepContext | undefined>;
-  save(key: LocalProgressKey, stepContext: LocalStepContext): Promise<void>;
+export interface LocalGeneratedInstructionsStore {
+  load(
+    key: LocalGeneratedInstructionsKey
+  ): Promise<GeneratedInstructions | undefined>;
+  save(
+    key: LocalGeneratedInstructionsKey,
+    generated: GeneratedInstructions
+  ): Promise<void>;
 }
 
 interface StoredProgress {
   pathwayId: string;
-  progress: {stepContext: LocalStepContext};
+  progress: {stepContext: {[stepId: string]: {generated: GeneratedContent}}};
   savedAt: string;
 }
 
-const storageKey = (key: LocalProgressKey) =>
+const storageKey = (key: LocalGeneratedInstructionsKey) =>
   `adaptive-progress:${key.userId ?? 'anonymous'}:${key.scriptId}:${
     key.levelId
   }`;
@@ -105,41 +101,48 @@ const storageKey = (key: LocalProgressKey) =>
  * Generated instructions in the browser's local storage. Unavailable storage
  * (private windows, blocked site data) reads as none and drops writes.
  */
-export const localStorageProgressStore: LocalProgressStore = {
-  async load(key) {
-    try {
-      const raw = window.localStorage.getItem(storageKey(key));
-      if (!raw) return undefined;
-      const stored = JSON.parse(raw) as Partial<StoredProgress>;
-      const stepContext = stored.progress?.stepContext;
-      if (
-        stored.pathwayId !== key.pathwayId ||
-        typeof stepContext !== 'object' ||
-        stepContext === null
-      ) {
+export const localGeneratedInstructionsStore: LocalGeneratedInstructionsStore =
+  {
+    async load(key) {
+      try {
+        const raw = window.localStorage.getItem(storageKey(key));
+        if (!raw) return undefined;
+        const stored = JSON.parse(raw) as Partial<StoredProgress>;
+        const stepContext = stored.progress?.stepContext;
+        if (
+          stored.pathwayId !== key.pathwayId ||
+          typeof stepContext !== 'object' ||
+          stepContext === null
+        ) {
+          return undefined;
+        }
+        return Object.fromEntries(
+          Object.entries(stepContext).map(([id, {generated}]) => [
+            id,
+            generated,
+          ])
+        );
+      } catch {
         return undefined;
       }
-      // Older records also hold answers, which now come from the server.
-      const loaded: LocalStepContext = {};
-      for (const [id, context] of Object.entries(stepContext)) {
-        if (context?.generated) loaded[id] = {generated: context.generated};
-      }
-      return loaded;
-    } catch {
-      return undefined;
-    }
-  },
+    },
 
-  async save(key, stepContext) {
-    const stored: StoredProgress = {
-      pathwayId: key.pathwayId,
-      progress: {stepContext},
-      savedAt: new Date().toISOString(),
-    };
-    try {
-      window.localStorage.setItem(storageKey(key), JSON.stringify(stored));
-    } catch {
-      // Storage unavailable: instructions live for the session only.
-    }
-  },
-};
+    async save(key, generated) {
+      const stepContext = Object.fromEntries(
+        Object.entries(generated).map(([id, content]) => [
+          id,
+          {generated: content},
+        ])
+      );
+      const stored: StoredProgress = {
+        pathwayId: key.pathwayId,
+        progress: {stepContext},
+        savedAt: new Date().toISOString(),
+      };
+      try {
+        window.localStorage.setItem(storageKey(key), JSON.stringify(stored));
+      } catch {
+        // Storage unavailable: instructions live for the session only.
+      }
+    },
+  };
