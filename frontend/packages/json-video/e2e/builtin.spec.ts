@@ -38,6 +38,15 @@ test.describe('built-in controls only', () => {
     await expect(timeDisplay).toBeHidden();
   });
 
+  test('the captions button is hidden when no scene has speech', async ({
+    page,
+  }) => {
+    const videoPage = await VideoPage.load(page, {video: 'noSpeech'});
+    const controls = new BuiltInControls(videoPage.video);
+
+    await expect(controls.captionsButton).toBeHidden();
+  });
+
   test('a broken video reports an error and disables the bar', async ({
     page,
   }) => {

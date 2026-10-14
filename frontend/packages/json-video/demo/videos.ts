@@ -24,5 +24,7 @@ export const VIDEOS: Record<string, string> = {
       scene('Scene 3', 'Third caption'),
     ],
   }),
+  // No scene has speech, so there are no captions to toggle.
+  noSpeech: dataUri({scenes: [scene('Silent 1'), scene('Silent 2')]}),
   broken: 'data:application/json,{not json',
 };
