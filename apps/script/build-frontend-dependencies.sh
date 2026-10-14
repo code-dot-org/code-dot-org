@@ -17,6 +17,7 @@ APPS_DEPENDENCIES=(
   --filter @code-dot-org/ailab
   --filter @code-dot-org/lesson-deep-dive
   --filter @code-dot-org/markdown
+  --filter @code-dot-org/shared-constants
 )
 
 cd ../frontend || exit 1
