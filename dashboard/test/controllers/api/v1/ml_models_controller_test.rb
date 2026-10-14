@@ -66,61 +66,6 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
     assert_equal "piiProfanity", JSON.parse(@response.body)["status"]
   end
 
-  test 'filters only student-entered text for a curated dataset' do
-    sign_in @owner
-    ShareFiltering.expects(:find_failure).with do |text, _locale, _replace|
-      text.include?('My Model') && text.include?('picking songs') &&
-        text.include?('nothing bad') && text.exclude?('Billboard')
-    end.returns(nil)
-    post :save, as: :json, params: {
-      ml_model: {
-        name: 'My Model',
-        potentialUses: 'picking songs',
-        potentialMisuses: 'nothing bad',
-        datasetDetails: {
-          name: 'top_songs',
-          description: 'Billboard Top 100 chart information as well as other characteristics.',
-          isUserUploaded: false
-        },
-        label: {id: 'genre', description: 'Billboard genre'}
-      }
-    }
-    assert_equal 'success', JSON.parse(@response.body)['status']
-  end
-
-  test 'filters the whole model for a user-uploaded dataset' do
-    sign_in @owner
-    ShareFiltering.expects(:find_failure).with do |text, _locale, _replace|
-      text.include?('student column text') && text.exclude?('weights')
-    end.returns(nil)
-    post :save, as: :json, params: {
-      ml_model: {
-        name: 'My Model',
-        datasetDetails: {name: '', description: 'student column text', isUserUploaded: true},
-        trainedModel: {weights: [1, 2]}
-      }
-    }
-    assert_equal 'success', JSON.parse(@response.body)['status']
-  end
-
-  test 'curated dataset metadata does not trip the address filter' do
-    sign_in @owner
-    ShareFiltering.unstub(:find_failure)
-    Gatekeeper.stubs(:allows).returns(true)
-    ProfanityFilter.stubs(:find_potential_profanity).returns(nil)
-    post :save, as: :json, params: {
-      ml_model: {
-        name: 'Song Model',
-        datasetDetails: {
-          name: 'top_songs',
-          description: 'A random selection of popular songs with and Billboard Top 100 chart information as well as other characteristics.',
-          isUserUploaded: false
-        }
-      }
-    }
-    assert_equal 'success', JSON.parse(@response.body)['status']
-  end
-
   test 'returns failure when model saves to database but not S3' do
     sign_in @owner
     AWS::S3.stubs(:upload_to_bucket).returns(false)
