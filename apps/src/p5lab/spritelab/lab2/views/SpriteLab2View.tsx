@@ -2035,6 +2035,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 aria-controls={PICTURES_DRAWER_ID}
                 onClick={event => {
                   blurAfterPointerClick(event);
+                  // From the map, Pictures takes its place.
+                  if (activeTab === 'Scenes') {
+                    sceneEditing.selectScene(activeScene.id);
+                  }
                   setPicturesOpen(open => !open);
                 }}
               >
