@@ -47,8 +47,99 @@ function getChoiceStatus(
   return isCorrectAnswer ? 'correct' : 'neutral';
 }
 
-// Read-only review of one submitted question, graded or not. Not a
-// RadioButton - these choices are no longer interactive.
+// Not a RadioButton - these choices are no longer interactive.
+const ChoiceResults: React.FunctionComponent<{
+  question: QuizQuestionSummary;
+  result: QuizQuestionResult;
+  isViewingStudent?: boolean;
+}> = ({question, result, isViewingStudent}) => (
+  <ul className={styles.choices}>
+    {(question.choices ?? []).map((choice, index) => {
+      const status = getChoiceStatus(choice.id, result);
+      const isSelectedChoice = choice.id === result.selectedChoiceId;
+
+      return (
+        <li
+          key={choice.id}
+          className={classNames(styles.option, {
+            [styles.optionCorrect]: status === 'correct',
+            [styles.optionIncorrect]: status === 'incorrect',
+            [styles.optionSelectedUngraded]: status === 'selected_ungraded',
+            [styles.optionNeutral]: status === 'neutral',
+          })}
+        >
+          <div className={styles.optionContent}>
+            <div
+              className={classNames(styles.radioVisual, {
+                [styles.radioVisualFilled]: isSelectedChoice,
+              })}
+              aria-hidden="true"
+            />
+            <Typography
+              variant="body2"
+              component="span"
+              className={styles.optionText}
+            >
+              <span className={styles.optionLetter}>
+                {formatChoiceLetter(index)}.
+              </span>{' '}
+              {choice.text}
+            </Typography>
+          </div>
+          {status === 'correct' && (
+            <>
+              <FontAwesomeV6Icon
+                iconName="check"
+                iconStyle="solid"
+                className={styles.correctIcon}
+              />
+              <span className={styles.srOnly}>Correct answer</span>
+            </>
+          )}
+          {status === 'incorrect' && (
+            <>
+              <FontAwesomeV6Icon
+                iconName="xmark"
+                iconStyle="solid"
+                className={styles.incorrectIcon}
+              />
+              <span className={styles.srOnly}>
+                {selectedAnswerLabel(isViewingStudent)}, incorrect
+              </span>
+            </>
+          )}
+          {status === 'selected_ungraded' && (
+            <span className={styles.srOnly}>
+              {selectedAnswerLabel(isViewingStudent)}
+            </span>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+);
+
+const FreeResponseAnswer: React.FunctionComponent<{
+  answerText: string | null;
+  isViewingStudent?: boolean;
+}> = ({answerText, isViewingStudent}) => (
+  <div className={styles.freeResponseAnswer}>
+    <Typography variant="overline2" className={styles.freeResponseLabel}>
+      {selectedAnswerLabel(isViewingStudent)}
+    </Typography>
+    {answerText ? (
+      <Typography variant="body2" className={styles.freeResponseText}>
+        {answerText}
+      </Typography>
+    ) : (
+      <Typography variant="body2" className={styles.freeResponseEmpty}>
+        No answer
+      </Typography>
+    )}
+  </div>
+);
+
+// Read-only review of one submitted question, graded or not.
 const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   question,
   questionLabel,
@@ -61,70 +152,18 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
     title={question.questionTitle}
     description={<QuestionDescription markdown={question.description} />}
   >
-    <ul className={styles.choices}>
-      {(question.choices ?? []).map((choice, index) => {
-        const status = getChoiceStatus(choice.id, result);
-        const isSelectedChoice = choice.id === result.selectedChoiceId;
-
-        return (
-          <li
-            key={choice.id}
-            className={classNames(styles.option, {
-              [styles.optionCorrect]: status === 'correct',
-              [styles.optionIncorrect]: status === 'incorrect',
-              [styles.optionSelectedUngraded]: status === 'selected_ungraded',
-              [styles.optionNeutral]: status === 'neutral',
-            })}
-          >
-            <div className={styles.optionContent}>
-              <div
-                className={classNames(styles.radioVisual, {
-                  [styles.radioVisualFilled]: isSelectedChoice,
-                })}
-                aria-hidden="true"
-              />
-              <Typography
-                variant="body2"
-                component="span"
-                className={styles.optionText}
-              >
-                <span className={styles.optionLetter}>
-                  {formatChoiceLetter(index)}.
-                </span>{' '}
-                {choice.text}
-              </Typography>
-            </div>
-            {status === 'correct' && (
-              <>
-                <FontAwesomeV6Icon
-                  iconName="check"
-                  iconStyle="solid"
-                  className={styles.correctIcon}
-                />
-                <span className={styles.srOnly}>Correct answer</span>
-              </>
-            )}
-            {status === 'incorrect' && (
-              <>
-                <FontAwesomeV6Icon
-                  iconName="xmark"
-                  iconStyle="solid"
-                  className={styles.incorrectIcon}
-                />
-                <span className={styles.srOnly}>
-                  {selectedAnswerLabel(isViewingStudent)}, incorrect
-                </span>
-              </>
-            )}
-            {status === 'selected_ungraded' && (
-              <span className={styles.srOnly}>
-                {selectedAnswerLabel(isViewingStudent)}
-              </span>
-            )}
-          </li>
-        );
-      })}
-    </ul>
+    {question.type === 'FreeResponseQuestion' ? (
+      <FreeResponseAnswer
+        answerText={result.answerText}
+        isViewingStudent={isViewingStudent}
+      />
+    ) : (
+      <ChoiceResults
+        question={question}
+        result={result}
+        isViewingStudent={isViewingStudent}
+      />
+    )}
     {revealAnswerExplanation && result.explanation && (
       <div className={styles.explanation}>
         <div className={styles.explanationHeader}>

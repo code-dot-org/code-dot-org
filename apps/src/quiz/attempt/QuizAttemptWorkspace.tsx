@@ -1,5 +1,5 @@
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
   sendStartedReportIfNotStarted,
@@ -26,6 +26,9 @@ import {QuizAttemptData, QuizQuestionResult} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
+
+// How long typing must pause before a free response answer autosaves.
+export const ANSWER_AUTOSAVE_DELAY_MS = 1000;
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
@@ -88,12 +91,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     (a, b) => a - b
   );
   const totalPages = pageNumbers.length || 1;
-  // TODO: Add support for other question types.
-  const mcQuestions = quizQuestions.filter(
-    question => question.type === 'MultipleChoiceQuestion'
-  );
   let resultQuestionNumber = 0;
-  const resultPages = groupByPage(mcQuestions).map(({page, questions}) => {
+  const resultPages = groupByPage(quizQuestions).map(({page, questions}) => {
     const firstQuestionNumber = resultQuestionNumber + 1;
     resultQuestionNumber += questions.length;
     return {
@@ -106,6 +105,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
+  const [answerTextsByQuestionId, setAnswerTextsByQuestionId] = useState<
+    Record<number, string>
+  >({});
   // Retake goes back through the intro screen rather than starting a new
   // attempt immediately.
   const [isRetakeIntroOpen, setIsRetakeIntroOpen] = useState(false);
@@ -115,6 +117,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const pendingWritesByQuestionIdRef = useRef<Record<number, Promise<unknown>>>(
     {}
   );
+  const answerAutosaveTimersRef = useRef<
+    Record<number, ReturnType<typeof setTimeout>>
+  >({});
+  const cancelAnswerAutosaves = useCallback(() => {
+    Object.values(answerAutosaveTimersRef.current).forEach(clearTimeout);
+    answerAutosaveTimersRef.current = {};
+  }, []);
   // The finish-time success report, so Next level can wait for it.
   const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
 
@@ -132,14 +141,24 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   useEffect(() => {
     const selectedChoices: Record<number, string> = {};
+    const answerTexts: Record<number, string> = {};
     for (const result of attempt?.questionResultsInProgress ?? []) {
-      selectedChoices[result.quizQuestionId] = result.selectedChoiceId;
+      if (result.selectedChoiceId) {
+        selectedChoices[result.quizQuestionId] = result.selectedChoiceId;
+      }
+      if (result.answerText) {
+        answerTexts[result.quizQuestionId] = result.answerText;
+      }
     }
     setSelectedChoicesByQuestionId(selectedChoices);
+    setAnswerTextsByQuestionId(answerTexts);
     setCurrentPageNumber(1);
     setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
-  }, [attempt?.id, attempt?.questionResultsInProgress]);
+    cancelAnswerAutosaves();
+  }, [attempt?.id, attempt?.questionResultsInProgress, cancelAnswerAutosaves]);
+
+  useEffect(() => cancelAnswerAutosaves, [cancelAnswerAutosaves]);
 
   const isAttemptInProgress =
     !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
@@ -190,11 +209,14 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const handleFinishAttempt = async () => {
     // Send the student's current answers with submit, so grading is based
     // on what they see on screen rather than whatever autosave last landed.
-    const responsesByQuestionId = Object.fromEntries(
-      Object.entries(selectedChoicesByQuestionId).map(
+    const responsesByQuestionId = Object.fromEntries([
+      ...Object.entries(selectedChoicesByQuestionId).map(
         ([questionId, choiceId]) => [questionId, {selectedChoiceId: choiceId}]
-      )
-    );
+      ),
+      ...Object.entries(answerTextsByQuestionId).map(
+        ([questionId, answerText]) => [questionId, {answerText}]
+      ),
+    ]);
     // Targets the level the attempt was for, not whichever quiz is current
     // by the time this resolves.
     const requestLevelId = levelId;
@@ -245,43 +267,75 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     beginAttempt,
   ]);
 
-  const handleSelectChoice = (questionId: number, choiceId: string) => {
-    const previousChoiceId = selectedChoicesByQuestionId[questionId];
-    setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
-
-    // Chain onto this question's own pending write, if any, so writes for
-    // the same question reach the server in the order they were made.
+  // Chains onto this question's own pending write, if any, so writes for
+  // the same question reach the server in the order they were made.
+  const queueResponseWrite = (
+    questionId: number,
+    responseData: Record<string, unknown>
+  ) => {
     const previousWrite =
       pendingWritesByQuestionIdRef.current[questionId] ?? Promise.resolve();
     const thisWrite = previousWrite
       .catch(() => {
         // An earlier write's failure shouldn't stop this one from sending.
       })
-      .then(() =>
-        submitQuestionResponse(questionId, {selectedChoiceId: choiceId})
-      )
-      .catch(() => {
-        // Already recorded as a user-facing error in useQuizAttempt. Only
-        // roll back if nothing newer has been picked since this write
-        // started - a later choice landing after this failure must stand.
-        setSelectedChoicesByQuestionId(prev => {
-          if (prev[questionId] !== choiceId) {
-            return prev;
-          }
-          const next = {...prev};
-          if (previousChoiceId === undefined) {
-            delete next[questionId];
-          } else {
-            next[questionId] = previousChoiceId;
-          }
-          return next;
-        });
-      });
+      .then(() => submitQuestionResponse(questionId, responseData));
     pendingWritesByQuestionIdRef.current[questionId] = thisWrite;
+    return thisWrite;
+  };
+
+  const handleSelectChoice = (questionId: number, choiceId: string) => {
+    const previousChoiceId = selectedChoicesByQuestionId[questionId];
+    setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
+
+    queueResponseWrite(questionId, {selectedChoiceId: choiceId}).catch(() => {
+      // Already recorded as a user-facing error in useQuizAttempt. Only
+      // roll back if nothing newer has been picked since this write
+      // started - a later choice landing after this failure must stand.
+      setSelectedChoicesByQuestionId(prev => {
+        if (prev[questionId] !== choiceId) {
+          return prev;
+        }
+        const next = {...prev};
+        if (previousChoiceId === undefined) {
+          delete next[questionId];
+        } else {
+          next[questionId] = previousChoiceId;
+        }
+        return next;
+      });
+    });
+  };
+
+  // Unlike a choice, a failed save keeps the text: rolling back would
+  // erase what the student typed.
+  const saveAnswerText = (questionId: number, answerText: string) => {
+    clearTimeout(answerAutosaveTimersRef.current[questionId]);
+    delete answerAutosaveTimersRef.current[questionId];
+    queueResponseWrite(questionId, {answerText}).catch(() => {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    });
+  };
+
+  const handleChangeAnswerText = (questionId: number, answerText: string) => {
+    setAnswerTextsByQuestionId(prev => ({...prev, [questionId]: answerText}));
+    clearTimeout(answerAutosaveTimersRef.current[questionId]);
+    answerAutosaveTimersRef.current[questionId] = setTimeout(
+      () => saveAnswerText(questionId, answerText),
+      ANSWER_AUTOSAVE_DELAY_MS
+    );
+  };
+
+  const handleBlurAnswerText = (questionId: number) => {
+    if (answerAutosaveTimersRef.current[questionId] !== undefined) {
+      saveAnswerText(questionId, answerTextsByQuestionId[questionId] ?? '');
+    }
   };
 
   const handleNext = async () => {
     if (currentPageNumber >= totalPages) {
+      // Submit sends every answer itself, so unsent autosaves are dropped.
+      cancelAnswerAutosaves();
       // Every answer must reach the server before it locks the attempt -
       // otherwise a still-in-flight write loses the race and is recorded
       // as skipped.
@@ -328,6 +382,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
+            answerText={answerTextsByQuestionId[question.id] ?? ''}
+            onChangeAnswerText={answerText =>
+              handleChangeAnswerText(question.id, answerText)
+            }
+            onBlur={() => handleBlurAnswerText(question.id)}
           />
         );
       default: {
@@ -361,9 +420,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   key={question.id}
                   question={question}
                   questionLabel={
-                    mcQuestions.length > 1
+                    quizQuestions.length > 1
                       ? `Question ${firstQuestionNumber + indexInPage} of ${
-                          mcQuestions.length
+                          quizQuestions.length
                         }`
                       : undefined
                   }
@@ -410,16 +469,19 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             {/* A student who hasn't started (attempt is null) shows teacher every question unanswered. */}
             {attempt !== undefined &&
               renderQuestionResults(
-                mcQuestions.map(question => ({
-                  quizQuestionId: question.id,
-                  selectedChoiceId:
-                    attempt?.questionResultsInProgress?.find(
-                      r => r.quizQuestionId === question.id
-                    )?.selectedChoiceId ?? null,
-                  correct: null,
-                  explanation: null,
-                  correctChoiceId: null,
-                }))
+                quizQuestions.map(question => {
+                  const inProgress = attempt?.questionResultsInProgress?.find(
+                    r => r.quizQuestionId === question.id
+                  );
+                  return {
+                    quizQuestionId: question.id,
+                    selectedChoiceId: inProgress?.selectedChoiceId ?? null,
+                    answerText: inProgress?.answerText ?? null,
+                    correct: null,
+                    explanation: null,
+                    correctChoiceId: null,
+                  };
+                })
               )}
           </div>
         ) : isIntroOpen ? (

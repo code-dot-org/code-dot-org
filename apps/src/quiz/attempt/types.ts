@@ -1,6 +1,7 @@
 export interface QuizQuestionResult {
   quizQuestionId: number;
   selectedChoiceId: string | null;
+  answerText: string | null;
   correct: boolean | null;
   explanation: string | null;
   correctChoiceId: string | null;
@@ -8,8 +9,9 @@ export interface QuizQuestionResult {
 
 export interface QuizQuestionInProgressResult {
   quizQuestionId: number;
-  // Unanswered questions are omitted from the map, so this is always set.
-  selectedChoiceId: string;
+  // Unanswered questions are omitted;
+  selectedChoiceId: string | null; // MultipleChoiceQuestion
+  answerText: string | null; // FreeResponseQuestion
 }
 
 export interface QuizAttemptData {
