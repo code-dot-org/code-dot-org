@@ -71,9 +71,8 @@ spec:
       labels:
         {{ .labels | nindent 8 }}
       annotations:
-        # The IRSA webhook reads the ServiceAccount's role annotation at pod
-        # admission, so an annotation change alone leaves running pods on the
-        # old role. Hash it into the pod template so the change rolls them.
+        # Hashing the ServiceAccount annotations here ensures that a change
+        # to the annotations triggers a rolling update of the pods.
         checksum/serviceaccount: {{ .Values.serviceAccount.annotations | toJson | sha256sum }}
     spec:
       serviceAccountName: {{ .Values.serviceAccount.name }}
