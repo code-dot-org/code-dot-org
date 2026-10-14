@@ -1,0 +1,43 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+// Wraps as one sentence: the description continues under the title.
+.heading {
+  margin: 0;
+}
+
+.title {
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: var(--text-neutral-quaternary);
+}
+
+.description {
+  color: var(--text-neutral-tertiary);
+}
+
+.scroller {
+  overflow-x: auto;
+}
+
+// Not sticky: there is one body row, and nothing to scroll under the headers.
+.table th {
+  position: static;
+}
+
+.emphasized {
+  font-weight: 600;
+}

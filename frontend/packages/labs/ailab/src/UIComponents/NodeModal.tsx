@@ -7,10 +7,14 @@ import {getDisplayTreePath, type DisplayTreeNode} from '../helpers/displayTree';
 import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {getDisplayTreeRows} from '../selectors/visualizationSelectors';
+import {
+  getDisplayTreeRows,
+  getPredictionTrace,
+} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
 import AccuracyCheckRowsPanel from './AccuracyCheckRowsPanel';
+import NodeExample from './NodeExample';
 import NodePath from './NodePath';
 import RowsPanel from './RowsPanel';
 
@@ -31,11 +35,20 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   const rows = useAppSelector(state =>
     getDisplayTreeRows(state, project, trainedModel)
   )(nodeId);
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, project, trainedModel),
+  );
   const [showAllColumns, setShowAllColumns] = useState(false);
 
   const path = getDisplayTreePath(tree, nodeId);
   const {node} = path[path.length - 1];
   const nodeLabel = displayNodeLabel(node, datasetId);
+  const answerPath =
+    trace?.path.includes(nodeId) &&
+    getDisplayTreePath(tree, trace.path[trace.path.length - 1]);
+  const examplePrediction =
+    answerPath &&
+    displayNodeLabel(answerPath[answerPath.length - 1].node, datasetId);
   const isAnswer = node.type === 'answer';
   const columnProps = {
     emphasizedColumn: isAnswer ? project.labelColumn : node.column,
@@ -62,6 +75,12 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
         <NodePath path={path} nodeLabel={nodeLabel} datasetId={datasetId} />
       )}
       <div className={styles.content}>
+        {examplePrediction && (
+          <NodeExample
+            prediction={examplePrediction}
+            emphasizedColumn={columnProps.emphasizedColumn}
+          />
+        )}
         <div className={styles.rowsTabs}>
           <Tabs
             name="ailab-node-rows"
