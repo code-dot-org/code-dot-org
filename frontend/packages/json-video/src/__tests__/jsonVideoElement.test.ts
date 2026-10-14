@@ -498,6 +498,26 @@ describe('JsonVideo', () => {
       expect(el.muted).toBe(false);
     });
 
+    it('adds state names to the button parts', async () => {
+      const el = await loadedVideo();
+      const part = (selector: string) =>
+        inShadow(el, selector).getAttribute('part');
+
+      await el.play();
+      el.muted = true;
+      el.textTracks[0].mode = 'showing';
+      expect(part('#play-btn')).toBe('play-button playing');
+      expect(part('#mute-btn')).toBe('mute-button muted');
+      expect(part('#cc-btn')).toBe('captions-button captions-on');
+
+      el.pause();
+      el.muted = false;
+      el.textTracks[0].mode = 'disabled';
+      expect(part('#play-btn')).toBe('play-button');
+      expect(part('#mute-btn')).toBe('mute-button');
+      expect(part('#cc-btn')).toBe('captions-button');
+    });
+
     it('renders children over the video through a slot', () => {
       const el = document.createElement('json-video');
       expect(el.shadowRoot?.querySelector('slot')).not.toBeNull();

@@ -3,6 +3,8 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import errorPosterImg from '@cdo/static/tutorVideo/tutor-video-did-not-load-2x.png';
 
+import './TutorVideo.css';
+
 interface TutorVideoProps {
   href: string;
 }
