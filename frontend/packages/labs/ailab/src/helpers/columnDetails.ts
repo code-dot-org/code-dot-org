@@ -4,6 +4,7 @@ import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
 import I18n from '../i18n';
 import type {RootState} from '../redux';
 import type {
+  AilabProject,
   DataRow,
   Metadata,
   MetadataField,
@@ -25,8 +26,8 @@ export function isColumnNumerical(state: RootState, column: string): boolean {
   return state.columnsByDataType[column] === ColumnTypes.NUMERICAL;
 }
 
-export function isRegression(state: RootState): boolean {
-  return isColumnNumerical(state, state.labelColumn!);
+export function isRegression(state: RootState, project: AilabProject): boolean {
+  return isColumnNumerical(state, project.labelColumn!);
 }
 
 export function filterColumnsByType(
@@ -44,6 +45,23 @@ export function filterColumnsByType(
 */
 export function tooManyUniqueOptions(uniqueOptionsCount: number): boolean {
   return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
+}
+
+// Columns a model can train on.
+export function selectableColumns(
+  data: DataRow[],
+  columnsByDataType: Record<string, string>,
+): string[] {
+  return Object.keys(data[0] ?? {}).filter(column => {
+    const dataType = columnsByDataType[column];
+    if (dataType === ColumnTypes.NUMERICAL) {
+      return containsOnlyNumbers(data, column);
+    }
+    if (dataType === ColumnTypes.CATEGORICAL) {
+      return !tooManyUniqueOptions(getUniqueOptions(data, column).length);
+    }
+    return false;
+  });
 }
 
 export function getUniqueOptions(

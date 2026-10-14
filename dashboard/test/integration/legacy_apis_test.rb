@@ -44,6 +44,17 @@ class LegacyAPIsTest < ActionDispatch::IntegrationTest
         _(request.statsig_stable_id).must_equal init_statsig_stable_id
         _(request.anon_user_id).must_equal init_anon_user_id
       end
+
+      it 'records Statsig cookie as anon_user_id without creating session' do
+        stable_id = SecureRandom.uuid
+        cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
+
+        get '/v3/channels'
+
+        must_respond_with :success
+        _(user_storage_ids_table.where(anon_user_id: stable_id).count).must_equal 1
+        _(response.headers['Set-Cookie'].to_s).wont_include '_learn_session_test='
+      end
     end
   end
 

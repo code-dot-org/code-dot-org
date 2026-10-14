@@ -20,10 +20,11 @@ describe('parseCSV', () => {
     Papa.parse.mockReset();
   });
 
-  test('imports the data when the download completes', () => {
-    parseCSV('cats.csv', true, false);
+  test('imports the data and resolves when the download completes', async () => {
+    const loaded = parseCSV('cats.csv', true, false);
     Papa.parse.mock.calls[0][1].complete(parseResult('cat'));
 
+    await loaded;
     expect(store.getState().data[0].animal).toBe('cat');
   });
 

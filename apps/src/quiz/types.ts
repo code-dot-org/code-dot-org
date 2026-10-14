@@ -10,10 +10,16 @@ export interface QuizViewContent {
   workspaceContent: React.ReactNode;
 }
 
+// STI class names; must match QuizQuestion::TYPES.
+// TODO: derive from SharedConstants.
+export type QuizQuestionType =
+  | 'MultipleChoiceQuestion'
+  | 'FreeResponseQuestion';
+
 // Answer fields (correctChoiceId, explanation) are deliberately excluded.
 export interface QuizQuestionSummary {
   id: number;
-  type: string;
+  type: QuizQuestionType;
   questionName: string;
   questionTitle: string;
   description?: string | null;

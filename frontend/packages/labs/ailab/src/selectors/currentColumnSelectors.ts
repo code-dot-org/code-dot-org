@@ -19,6 +19,7 @@ import {
   getTrainedModelDetails,
 } from '../selectors';
 import type {
+  AilabProject,
   DataRow,
   Metadata,
   TrainedModelDetailsSave,
@@ -36,7 +37,8 @@ export const getCurrentColumnDetails = createSelector(
     (state: RootState) => isCurrentColumnReadOnly(state),
     getColumnsByDataType,
     (state: RootState) => getCurrentColumnDescription(state),
-    (state: RootState) => isCurrentColumnSelectable(state),
+    (state: RootState, project: AilabProject) =>
+      isCurrentColumnSelectable(state, project),
   ],
   (
     currentColumn: string | undefined,
@@ -80,7 +82,8 @@ export const getCurrentColumnDescription = createSelector(
 
 export const isCurrentColumnSelectable = createSelector(
   [
-    (state: RootState) => isCurrentColumnSelected(state),
+    (state: RootState, project: AilabProject) =>
+      isCurrentColumnSelected(state, project),
     (state: RootState) => isValidData(state),
   ],
   (selected: boolean, isValidData: boolean): boolean => {

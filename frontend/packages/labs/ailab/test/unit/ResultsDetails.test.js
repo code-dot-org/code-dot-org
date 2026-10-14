@@ -9,7 +9,7 @@ import {
 } from '../../src/redux';
 import ResultsDetails from '../../src/UIComponents/ResultsDetails';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderScorecard() {
@@ -20,6 +20,7 @@ function renderScorecard() {
   renderWithProviders(createElement(ResultsDetails), {
     store,
     project: {
+      ...levelProject(),
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
