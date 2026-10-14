@@ -2025,6 +2025,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   loading={nowPlaying.loading}
                 />
               )}
+              {animationsSeeded && !isToolboxMode && activeTab !== 'Scenes' && (
+                // Up to the map of every scene, beside Pictures at the row's
+                // trailing end, so the student's own scenes lead the row.
+                <button
+                  type="button"
+                  className={moduleStyles.sceneTabBack}
+                  disabled={activeTab === 'Play' || !!pinnedSceneId}
+                  title={pinnedSceneId ? LOCKED_REASON : undefined}
+                  onClick={event => {
+                    blurAfterPointerClick(event);
+                    sceneEditing.openGallery();
+                  }}
+                >
+                  All scenes
+                </button>
+              )}
               <button
                 type="button"
                 className={classNames(
@@ -2066,7 +2082,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 allowCreate={scenesEditable || !!pinnedSceneId}
                 onSelectScene={sceneEditing.selectScene}
                 onCreateScene={sceneEditing.createScene}
-                onManageScenes={sceneEditing.openGallery}
               />
             ) : undefined
           }
