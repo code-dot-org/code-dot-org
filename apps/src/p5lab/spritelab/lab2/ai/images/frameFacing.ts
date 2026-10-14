@@ -1,8 +1,9 @@
 // Every frame of a character set is asked to face right, and the edit
 // model mostly obeys; now and then it draws a pose as a clean mirror
 // image. The test for which way a frame faces is which of the base picture
-// or its mirror it is nearer to, each placed as drawn or on the frame's
-// drawn centre, whichever fits better.
+// or its mirror it is nearer to, by mean colour distance over the pixels
+// drawn in either; each is placed as drawn and again on the frame's drawn
+// centre, and the smaller distance counts.
 
 // Alpha above this counts as drawn.
 const DRAWN_ALPHA = 64;
