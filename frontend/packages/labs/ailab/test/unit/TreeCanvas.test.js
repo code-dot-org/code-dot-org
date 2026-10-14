@@ -79,7 +79,11 @@ let followNode;
 // Fitted, the content's origin sits at (72, 102) at scale 0.5, in a frame from x = 72 to 448.
 function renderNodesAt(xs, props = {}, viewportWidth = 472) {
   const children = xs.map(x =>
-    createElement('button', {key: x, id: `node-${x}`}, `node at ${x}`)
+    createElement(
+      'button',
+      {key: x, id: `node-${x}`, type: 'button'},
+      `node at ${x}`
+    )
   );
   const {rerender} = renderCanvas(props, children);
   followNode = id => rerender(canvas({...props, followId: id}, children));
@@ -378,7 +382,7 @@ describe('TreeCanvas', () => {
   it('pans a node that takes keyboard focus clear of the hints', async () => {
     renderCanvas(
       {hints: createElement('span', {}, 'hint')},
-      createElement('button', {}, 'node')
+      createElement('button', {type: 'button'}, 'node')
     );
     resizeViewport(472, 360);
     const node = screen.getByText('node');
@@ -412,7 +416,11 @@ describe('TreeCanvas', () => {
   it('pans a label hanging off a node into view with it', async () => {
     renderCanvas(
       {},
-      createElement('button', {}, createElement('span', {}, 'label'))
+      createElement(
+        'button',
+        {type: 'button'},
+        createElement('span', {}, 'label')
+      )
     );
     resizeViewport(472, 360);
     const label = screen.getByText('label');
