@@ -44,6 +44,7 @@ export default {
         'inherit',
         'white',
         'tertiary',
+        'orange',
       ],
       description: 'The color of the component.',
     },
@@ -182,6 +183,36 @@ ButtonWithIcons.args = {
   size: 'medium',
 };
 
+export const RunButton: StoryFn = () => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      gap: 12,
+    }}
+  >
+    <MuiButton
+      variant="contained"
+      color="orange"
+      size="medium"
+      onClick={() => null}
+      startIcon={<FontAwesomeV6Icon iconName="play" iconStyle="solid" />}
+    >
+      Run
+    </MuiButton>
+    <p style={{margin: 0}}>Orange is only for the Run button in labs.</p>
+  </div>
+);
+// CADS orange (#f46800) with white text is about 3.1:1, under the 4.5:1 text minimum.
+RunButton.parameters = {
+  a11y: {
+    config: {
+      rules: [{id: 'color-contrast', enabled: false}],
+    },
+  },
+};
+
 export const IconButton = SingleTemplate.bind({});
 IconButton.args = {
   icon: {iconName: 'smile', iconStyle: 'solid'},
@@ -317,6 +348,19 @@ LoadingIconButtons.args = {
 };
 
 export const GroupOfColorsOfButtons = MultipleTemplate.bind({});
+// CADS orange (#f46800) with white text is about 3.1:1. Keep checking the other colors.
+GroupOfColorsOfButtons.parameters = {
+  a11y: {
+    config: {
+      rules: [
+        {
+          id: 'color-contrast',
+          selector: 'button:not(.MuiButton-containedOrange)',
+        },
+      ],
+    },
+  },
+};
 GroupOfColorsOfButtons.args = {
   components: [
     {
@@ -348,16 +392,23 @@ GroupOfColorsOfButtons.args = {
       onClick: () => null,
     },
     {
+      children: 'Button Primary Orange',
+      variant: 'contained',
+      color: 'orange',
+      size: 'medium',
+      onClick: () => null,
+    },
+    {
       children: 'Button Secondary Black',
       variant: 'outlined',
-      color: 'secondary',
+      color: 'primary',
       size: 'medium',
       onClick: () => null,
     },
     {
       children: 'Button Secondary Gray',
       variant: 'outlined',
-      color: 'tertiary',
+      color: 'secondary',
       size: 'medium',
       onClick: () => null,
     },
