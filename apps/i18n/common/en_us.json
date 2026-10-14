@@ -675,7 +675,6 @@
   "continueLesson": "Continue lesson",
   "continueToActivity": "Continue to activity",
   "continueToLevel": "Continue to Level {level}",
-  "simpleProgressLevelOf": "Level {position} of {total}",
   "continueWithoutGuide": "Continue without guide",
   "contractMatchBadDomainName": "One or more of your domain items has the wrong name.",
   "contractMatchBadDomainSize": "Your contract doesn't have the right number of items in the domain.",

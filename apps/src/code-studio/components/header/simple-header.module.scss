@@ -1,3 +1,5 @@
+@use "color.scss";
+
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -11,22 +13,81 @@
 .row {
   width: 100%;
   min-width: 0;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: fadein 0.4s;
 }
 
+.image {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid color.$white;
+  border-radius: 6px;
+  background-color: color.$black;
+  flex: none;
+  object-fit: cover;
+}
+
+// The two lines: name and label, then the saved-at. Shrinks with the row:
+// the names ellipsize.
+.text {
+  margin-inline-start: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  color: color.$white;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.unitName,
+.label {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unitName {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  flex: none;
+}
+
+// A fixed line, so the row does not move when "Saved" arrives; the badge
+// sets its own type size. Clipped rather than spilling over the buttons
+// when the column is narrower than the badge's own minimum width.
+.saved {
+  height: 14px;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 // The project buttons cannot shrink, and their container clips, so the
 // project info keeps its width and the names give way instead.
 .projectInfo {
   flex: none;
-}
-
-// Each name may shrink below its content; what it holds ellipsizes.
-.unitName,
-.progress {
-  flex: 0 1 auto;
-  min-width: 0;
-  margin: 0 5px;
+  margin-inline-start: 5px;
 }
