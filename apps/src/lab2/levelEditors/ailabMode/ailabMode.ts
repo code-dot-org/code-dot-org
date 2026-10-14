@@ -170,7 +170,7 @@ export function isMissingPretrainedColumns(
   const offered = (column: unknown) =>
     column !== undefined &&
     (!selectable || selectable.includes(column as string));
-  const features = getFeatures(mode);
+  const features = getFeatures(mode).filter(feature => feature !== mode.label);
   return (
     mode.pretrained === true &&
     !(offered(mode.label) && features.length > 0 && features.every(offered))

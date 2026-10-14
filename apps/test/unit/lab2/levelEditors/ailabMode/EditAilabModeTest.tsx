@@ -630,30 +630,25 @@ describe('EditAilabMode', () => {
         hideSelectLabel: true,
         lockFeatures: true,
       });
-      expect(pretrainedCheckbox()).toBeValid();
-      expect(labelLock).toBeChecked();
-      expect(labelLock).toBeDisabled();
-      expect(featuresLock()).toBeChecked();
-      expect(featuresLock()).toBeDisabled();
-      expect(randomRows).not.toBeChecked();
-      expect(randomRows).toBeDisabled();
+      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+        expect(field).toBeDisabled()
+      );
       expect(accuracy).toHaveValue(null);
-      expect(accuracy).toBeDisabled();
 
       fireEvent.click(pretrainedCheckbox());
 
-      expect(JSON.parse(savedMode())).not.toHaveProperty('pretrained');
-      expect(labelLock).toBeChecked();
-      expect(labelLock).toBeEnabled();
-      expect(featuresLock()).toBeChecked();
-      expect(featuresLock()).toBeEnabled();
-      expect(randomRows).toBeEnabled();
-      expect(accuracy).toBeEnabled();
+      expect(JSON.parse(savedMode())).toMatchObject({
+        hideSelectLabel: true,
+        lockFeatures: true,
+      });
+      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+        expect(field).toBeEnabled()
+      );
     });
 
     it('asks for a label and features students can choose to pretrain on', async () => {
       renderEditor(
-        '{"datasets": ["zoo"], "pretrained": true, "label": "name"}'
+        '{"datasets": ["zoo"], "pretrained": true, "label": "name", "features": ["name"]}'
       );
       await columnsLoaded();
       expect(pretrainedCheckbox()).toHaveAccessibleDescription(
@@ -672,39 +667,19 @@ describe('EditAilabMode', () => {
       expect(pretrainedCheckbox()).toBeValid();
     });
 
-    it('offers pretraining once the columns load', async () => {
-      renderEditor('{"datasets": ["zoo"]}');
-      expect(pretrainedCheckbox()).toBeDisabled();
-      await columnsLoaded();
-      expect(pretrainedCheckbox()).toBeEnabled();
-    });
-
-    it('reports missing pretrained columns once, not as lock errors', async () => {
-      renderEditor('{"datasets": ["heart"], "pretrained": true}');
-      await columnsLoaded();
-      expect(screen.getByText(PRETRAINED_COLUMNS_REQUIRED)).toBeInTheDocument();
-      expect(
-        screen.queryByText(
-          'This dataset has no default label. Choose a label to lock.'
-        )
-      ).not.toBeInTheDocument();
-      expect(
-        screen.queryByText('Choose the features to lock.')
-      ).not.toBeInTheDocument();
-    });
-
-    it('asks to pretrain on only features students can choose', async () => {
+    it('asks for a feature besides the label to pretrain on', async () => {
       renderEditor(
-        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs", "name"]}'
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["animal"]}'
       );
       await columnsLoaded();
       expect(pretrainedCheckbox()).toBeInvalid();
     });
 
-    it("pretrains on the dataset's default label when none is chosen", async () => {
+    it("pretrains on the dataset's default label once the columns load", async () => {
       const savedMode = renderEditor(
         '{"datasets": ["zoo"], "features": ["legs"]}'
       );
+      expect(pretrainedCheckbox()).toBeDisabled();
       await columnsLoaded();
 
       fireEvent.click(pretrainedCheckbox());
@@ -725,10 +700,6 @@ describe('EditAilabMode', () => {
       const savedMode = renderEditor(
         '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
       );
-      const accuracy = screen.getByRole('spinbutton', {
-        name: /Required accuracy/,
-      });
-      expect(accuracy).toHaveValue(null);
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',

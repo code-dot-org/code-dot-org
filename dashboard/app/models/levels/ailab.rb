@@ -225,7 +225,7 @@ class Ailab < Level
     if parsed_mode['pretrained'] == true
       label = parsed_mode['label']
       features = parsed_mode['features']
-      unless label.is_a?(String) && label.present? && features.is_a?(Array) && features.present?
+      unless label.is_a?(String) && label.present? && features.is_a?(Array) && (features - [label]).present?
         errors.add(:mode, 'must choose a label and features when pretrained.')
       end
       unless parsed_mode['hideSelectLabel'] == true && parsed_mode['lockFeatures'] == true
