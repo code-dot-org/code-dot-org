@@ -136,7 +136,8 @@ class QuizAttemptsController < ApplicationController
       )&.map do |result|
         {
           quizQuestionId: result[:quiz_question_id],
-          # Exactly as the client posted it; its shape depends on the question type.
+          questionType: result[:quiz_question_type],
+          # Its shape depends on questionType.
           responseData: result[:response_data],
           correct: result[:correct],
           explanation: result[:explanation],
@@ -147,6 +148,7 @@ class QuizAttemptsController < ApplicationController
       questionResultsInProgress: attempt.question_results_in_progress&.map do |question_result|
         {
           quizQuestionId: question_result[:quiz_question_id],
+          questionType: question_result[:quiz_question_type],
           responseData: question_result[:response_data]
         }
       end

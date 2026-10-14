@@ -73,6 +73,7 @@ class QuizAttempt < ApplicationRecord
       next unless response.quiz_question.answered?(response.response_data)
       {
         quiz_question_id: response.quiz_question_id,
+        quiz_question_type: response.quiz_question.type,
         response_data: response.response_data
       }
     end
@@ -95,6 +96,7 @@ class QuizAttempt < ApplicationRecord
       graded = response.score.present? && response.max_score.present?
       {
         quiz_question_id: response.quiz_question_id,
+        quiz_question_type: response.quiz_question.type,
         response_data: response.response_data,
         correct: (show_correctness && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,

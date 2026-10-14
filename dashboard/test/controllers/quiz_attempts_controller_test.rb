@@ -47,7 +47,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_nil body['questionResults']
-    assert_equal [{'quizQuestionId' => @question.id, 'responseData' => {'selectedChoiceId' => 'b'}}], body['questionResultsInProgress']
+    assert_equal [{'quizQuestionId' => @question.id, 'questionType' => 'MultipleChoiceQuestion', 'responseData' => {'selectedChoiceId' => 'b'}}], body['questionResultsInProgress']
   end
 
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do
@@ -217,6 +217,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['score']
     assert_equal 1, body['maxScore']
     fr_result = body['questionResults'].find {|r| r['quizQuestionId'] == fr_question.id}
+    assert_equal 'FreeResponseQuestion', fr_result['questionType']
     assert_equal({'answerText' => 'Because'}, fr_result['responseData'])
     assert_nil fr_result['correct']
     fr_response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: fr_question.id)

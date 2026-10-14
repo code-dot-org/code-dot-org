@@ -21,8 +21,14 @@ const QUESTION: QuizQuestionSummary = {
   page: 1,
 };
 
-const BASE_RESULT: QuizQuestionResult = {
+type MultipleChoiceResult = Extract<
+  QuizQuestionResult,
+  {questionType: 'MultipleChoiceQuestion'}
+>;
+
+const BASE_RESULT: MultipleChoiceResult = {
   quizQuestionId: 1,
+  questionType: 'MultipleChoiceQuestion',
   responseData: {},
   correct: null,
   explanation: null,
@@ -30,7 +36,7 @@ const BASE_RESULT: QuizQuestionResult = {
 };
 
 const renderCard = (
-  resultOverrides: Partial<QuizQuestionResult> = {},
+  resultOverrides: Partial<MultipleChoiceResult> = {},
   props: Partial<QuestionResultCardProps> = {}
 ) =>
   render(
