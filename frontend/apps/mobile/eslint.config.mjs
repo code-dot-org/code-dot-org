@@ -1,14 +1,6 @@
 import {globalIgnores} from 'eslint/config';
 
-import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import cdoNodeConfig from '@code-dot-org/lint-config/eslint/node.mjs';
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
-  globalIgnores([
-    'android',
-    'capacitor.config.ts',
-    'dist',
-    'vite.siteControls.config.ts',
-  ]),
-  ...cdoReactConfig,
-];
+export default [globalIgnores(['android']), ...cdoNodeConfig];

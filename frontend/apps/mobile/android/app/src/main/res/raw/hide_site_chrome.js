@@ -223,9 +223,9 @@
   // viewport carries it, which the WebView honors in wide-viewport mode
   // (MainActivity.kt). The old labs rewrite their viewport when they start,
   // so it is reapplied on every change. The level, a percentage, is in the
-  // codeai_zoom cookie. Debug builds of the app let it change: there,
-  // window.codeaiZoom is the header controls' interface. MainActivity.kt
-  // defines codeaiDebugBuild before this script.
+  // codeai_zoom cookie. Debug builds of the app let it change from the
+  // header controls below. MainActivity.kt defines codeaiDebugBuild before
+  // this script.
   var DEBUG_BUILD = window.codeaiDebugBuild === true;
   var ZOOM_LEVELS = [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200];
   var ZOOM_COOKIE = 'codeai_zoom';
@@ -271,21 +271,16 @@
     }
   }
 
-  if (DEBUG_BUILD) {
-    window.codeaiZoom = {
-      levels: ZOOM_LEVELS.slice(),
-      level: zoomLevel,
-      setLevel: function (level) {
-        if (ZOOM_LEVELS.indexOf(level) < 0) {
-          return;
-        }
-        document.cookie =
-          ZOOM_COOKIE + '=' + level + '; path=/; max-age=315569520; secure; samesite=lax';
-        zoom = level;
-        applyZoom();
-      },
-    };
+  function setZoomLevel(level) {
+    if (ZOOM_LEVELS.indexOf(level) < 0) {
+      return;
+    }
+    document.cookie =
+      ZOOM_COOKIE + '=' + level + '; path=/; max-age=315569520; secure; samesite=lax';
+    zoom = level;
+    applyZoom();
   }
+
   applyZoom();
   window.addEventListener('resize', applyZoom);
 
@@ -341,10 +336,8 @@
     }
   });
   var STYLE_ID = 'codeai-app-style';
-  // The header's zoom controls, in debug builds: a bundle the app serves
-  // from its own origin, built from entrypoints/siteControls.tsx.
-  var CONTROLS_URL = 'https://localhost/site-controls';
-  var CONTROLS_ID = 'codeai-site-controls-script';
+  // The header's zoom controls, in debug builds.
+  var CONTROLS_ID = 'codeai-site-controls';
   var REMOVED_ID = 'localize-widget';
 
   // Removed from the layout.
@@ -426,6 +419,27 @@
       .join(', ');
   }
 
+  // Laid over the right of .header_right, in the space its invisible sign-in
+  // and menu keep, and drawn like the site's own header buttons (.header_button:
+  // Rename, Share, Remix). The page has the CodeAI tokens and Font Awesome.
+  var CONTROLS_CSS =
+    ' #' + CONTROLS_ID + ' {' +
+    ' position: absolute; top: 50%; right: var(--spacing-p-xs);' +
+    ' display: flex; align-items: center; gap: var(--spacing-p-xxs);' +
+    ' transform: translateY(-50%); }' +
+    ' #' + CONTROLS_ID + ' button {' +
+    ' height: 2rem; padding: 0 var(--spacing-p-xs); margin: 0;' +
+    ' border: 1px solid var(--borders-neutral-white-fixed);' +
+    ' border-radius: var(--shape-md); background-color: transparent;' +
+    ' color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);' +
+    ' line-height: 1; cursor: pointer; }' +
+    ' #' + CONTROLS_ID + ' button:hover { background-color: var(--neutral-white-alpha-20); }' +
+    ' #' + CONTROLS_ID + ' button:active { background-color: var(--neutral-white-alpha-30); }' +
+    ' #' + CONTROLS_ID + ' button:focus-visible {' +
+    ' outline: 1px solid var(--borders-neutral-white-fixed); outline-offset: 2px; }' +
+    ' #' + CONTROLS_ID + ' button:disabled {' +
+    ' background-color: transparent; opacity: 0.5; cursor: default; }';
+
   var CSS =
     selectorList(HIDDEN) +
     ' { display: none !important; } ' +
@@ -440,7 +454,8 @@
     // The header controls sit over the right of this, in the space the
     // invisible items keep.
     selectorList(['.header_right']) +
-    ' { position: relative; }';
+    ' { position: relative; }' +
+    CONTROLS_CSS;
 
   function ensureStyle() {
     if (document.getElementById(STYLE_ID)) {
@@ -476,20 +491,49 @@
     }
   }
 
+  var controls = null;
+
+  function zoomButton(label, icon, step) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('data-label', label);
+    button.innerHTML = '<i class="fa-solid fa-' + icon + '" aria-hidden="true"></i>';
+    button.addEventListener('click', function () {
+      // From the page's level, which another page may have changed since.
+      setZoomLevel(ZOOM_LEVELS[ZOOM_LEVELS.indexOf(zoomLevel()) + step]);
+      refreshControls();
+    });
+    return button;
+  }
+
+  function refreshControls() {
+    var index = ZOOM_LEVELS.indexOf(zoomLevel());
+    var buttons = controls.children;
+    for (var i = 0; i < buttons.length; i++) {
+      var label = buttons[i].getAttribute('data-label') + ' (' + zoomLevel() + '%)';
+      buttons[i].setAttribute('aria-label', label);
+      buttons[i].title = label;
+    }
+    buttons[0].disabled = index <= 0;
+    buttons[1].disabled = index >= ZOOM_LEVELS.length - 1;
+  }
+
+  // The site may render or replace its header after this runs.
   function ensureControls() {
-    var head = document.head;
-    if (!DEBUG_BUILD || !head || document.getElementById(CONTROLS_ID)) {
+    if (!DEBUG_BUILD) {
       return;
     }
-    var style = document.createElement('link');
-    style.rel = 'stylesheet';
-    style.href = CONTROLS_URL + '.css';
-    var script = document.createElement('script');
-    script.id = CONTROLS_ID;
-    script.src = CONTROLS_URL + '.js';
-    script.async = true;
-    head.appendChild(style);
-    head.appendChild(script);
+    if (controls === null) {
+      controls = document.createElement('div');
+      controls.id = CONTROLS_ID;
+      controls.appendChild(zoomButton('Zoom out', 'magnifying-glass-minus', -1));
+      controls.appendChild(zoomButton('Zoom in', 'magnifying-glass-plus', 1));
+      refreshControls();
+    }
+    var headerRight = document.querySelector('.header_right');
+    if (headerRight && controls.parentElement !== headerRight) {
+      headerRight.appendChild(controls);
+    }
   }
 
   // Runs on every DOM change, so each step is a lookup or a no-op.
