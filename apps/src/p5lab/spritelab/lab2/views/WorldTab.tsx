@@ -724,10 +724,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     '--palette-item': `${PALETTE_ITEM_PX}px`,
     '--palette-gap': `${PALETTE_GAP_PX}px`,
   } as React.CSSProperties;
+  const paletteWidth =
+    paletteColumns * PALETTE_ITEM_PX + (paletteColumns - 1) * PALETTE_GAP_PX;
   const paletteStyle = {
     gridTemplateRows: `repeat(${paletteRows}, ${PALETTE_ITEM_PX}px)`,
-    width:
-      paletteColumns * PALETTE_ITEM_PX + (paletteColumns - 1) * PALETTE_GAP_PX,
+    width: paletteWidth,
   } as React.CSSProperties;
 
   // Dragging an item from the palette onto a cell. The moves and the
@@ -867,6 +868,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               moduleStyles.worldPaletteItem,
               moduleStyles.worldPaletteNew
             )}
+            // As wide as the palette, however many columns it has.
+            style={{width: paletteWidth}}
             onClick={onNewPicture}
           >
             <FontAwesomeV6Icon iconName="plus" />
