@@ -1,3 +1,5 @@
+Status: historical (2019)
+
 **Technical Design Proposal: Survey Summary Pipeline**
 
 Created: April 18, 2019\
