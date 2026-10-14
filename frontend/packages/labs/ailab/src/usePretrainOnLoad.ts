@@ -28,6 +28,7 @@ export function usePretrainOnLoad() {
   }, [pretrained, dataLoaded, canTrain, trainedModel, beginRun]);
 
   // The new run reaches `project` on the next render, so wait for canTest.
+  // TODO: Add loading state for before training finishes.
   useEffect(() => {
     if (hideDatasetView && canTest) {
       dispatch(setCurrentPanel('results'));
