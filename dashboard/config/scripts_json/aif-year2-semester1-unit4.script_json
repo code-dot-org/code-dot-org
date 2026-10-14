@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-13 01:32:48 UTC",
+    "serialized_at": "2026-10-14 03:33:36 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -21,14 +21,38 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-3",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "aif-year2-semester1-unit4"
       }
     }
@@ -90,12 +114,15 @@
     },
     {
       "key": "lesson-5",
-      "name": "Lesson 4",
+      "name": "Loss Functions",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**How do loss functions help us to compare models?**\n\nIn this lesson, students experiment with different loss functions for evaluating the quality of predictions. In addition to reviewing the role of absolute error, students are also introduced to squared error as a common way to evaluate predictions in machine learning models. Students calculate mean squared error manually on their own predictions, then write code to use mean squared error to compare two different machine learning models.",
+        "preparation": "- Print copies of the Animal Weights Activity Guide (one for each student)\n- Provide, or ask students to bring, calculators",
+        "student_overview": "**How do loss functions help us to compare models?**\n\nIn this lesson, you'll experiment with different loss functions for evaluating the quality of prediction. You'll calculate mean squared error manually on your own predictions, then write code to use mean squared error to compare two different machine learning models."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -159,12 +186,15 @@
     },
     {
       "key": "lesson-8",
-      "name": "Lesson 8",
+      "name": "Scaling Features",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "**Why does the scale of data matter to a machine learning model?**\n\nIn this lesson, students are introduced to feature scaling as a data preprocessing step for working with machine learning models. Students explore a nearest-neighbor classifier that works with multiple features and identify cases where the classifier might fail. Together, students work through a feature scaling process to improve the classifier’s performance. Then, students implement that logic in Python to build models that can perform more accurately.\n",
+        "preparation": "- Print copies of the Workout Activity Guide (one for each student)\n- Provide, or ask students to bring, calculators\n",
+        "student_overview": "**Why does the scale of data matter to a machine learning model?**\n\nIn this lesson, you'll explore feature scaling as a data preprocessing step for working with machine learning models. You'll then implement that logic in Python to build models that can perform more accurately.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -174,12 +204,15 @@
     },
     {
       "key": "lesson-9",
-      "name": "Lesson 9",
+      "name": "Evaluating Decision Trees",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**What kinds of rules result in better classifiers?**\n\nIn this lesson, students revisit decision trees and consider how to evaluate whether a particular question in a decision tree does a good job of splitting data into groups. Students explore the mathematical concept of impurity as a measure of how effective a particular question is. Students practice computing impurity both by hand and by writing Python code to determine impurity from a dataset.",
+        "preparation": "- Print copies of the Water Safety Activity Guide (one for each student)\n- Provide, or ask students to bring, calculators\n",
+        "student_overview": "**What kinds of rules result in better classifiers?**\n\nIn this lesson, you'll revisit decision trees and consider how to evaluate whether a particular question in a decision tree does a good job of splitting data into groups. You'll explore the mathematical concept of impurity as a measure of how effective a particular question is."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -189,12 +222,15 @@
     },
     {
       "key": "lesson-10",
-      "name": "Lesson 10",
+      "name": "Decision Tree Learning",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**How can a computer learn what decision tree is best?**\n\nIn this lesson, students learn to use decision trees as a machine learning tool for classification. Students start by exploring an algorithm that can be used to construct a decision tree by asking a series of questions that split data into pure groups. Students build a decision tree by hand, then write Python code to build a decision tree based on training data.",
+        "preparation": "- Print copies of the TV Preferences Activity Guide (one for each student)",
+        "student_overview": "**How can a computer learn what decision tree is best?**\n\nIn this lesson, you'll learn to use decision trees as a machine learning tool for classification. You'll use an algorithm to  build a decision tree by hand, then write Python code to build a decision tree based on training data."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -370,9 +406,39 @@
       "key": "53791444-7366-4d59-9b76-f9b37085047e",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "53791444-7366-4d59-9b76-f9b37085047e",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "b4407d8a-d706-4214-8829-3740862758c8",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "9692b32f-4375-479e-b798-29815bab0327",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9692b32f-4375-479e-b798-29815bab0327",
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
@@ -486,6 +552,132 @@
       "seeding_key": {
         "lesson_activity.key": "3c76a720-67ca-4f4d-8250-0ad0c8effe11",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "f619c922-a619-43ad-a95d-2e3997a97cbd",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "7cba2825-428e-4659-841d-63a48f5fe6f1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "afea0933-a31c-4155-aa03-b9682357b4c9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "afea0933-a31c-4155-aa03-b9682357b4c9",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "fd4823c6-c866-469b-93cc-81e92c0169bc",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd4823c6-c866-469b-93cc-81e92c0169bc",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "d6a36d98-6b67-4626-9990-9075f95712fa",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "ecfe213a-de5d-4ad7-97c7-41cdb02a00f5",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecfe213a-de5d-4ad7-97c7-41cdb02a00f5",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "75ca16f7-86b3-4b35-860b-2880aec85042",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75ca16f7-86b3-4b35-860b-2880aec85042",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "50a0d601-533d-4853-89ec-1934ece17b7c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50a0d601-533d-4853-89ec-1934ece17b7c",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }
@@ -1431,10 +1623,185 @@
       "key": "c917aa55-dd8a-480f-9012-9d766e03b837",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Two biologists predicted the weight of three different animals. Which biologist’s predictions are better?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students look at data and try to evaluate which set of predictions is “better” according to their own definition of “better.” Strong responses will make a claim and provide justification, but there isn’t one correct answer. Some students might reasonably say that Biologist 1 has the better predictions, beecause in two out of the three cases they had the closer guess to the actual weight. Some students might instead say that Biologist 2 has the better predictions because they’re never too far off the correct weight. Other students might calculate the absolute error for both biologists and claim that the biologists’ predictions are equally good because they each have the same total absolute error. If students aren’t sure what’s meant by “better,” encourage them to use their intuition: more formal definitions will come later in the lesson. Ask students to think about which biologist they’d be more likely to trust based on the data.\n"
       },
       "seeding_key": {
         "activity_section.key": "c917aa55-dd8a-480f-9012-9d766e03b837",
         "lesson_activity.key": "53791444-7366-4d59-9b76-f9b37085047e"
+      }
+    },
+    {
+      "key": "2f7ab5a9-080f-4de4-8915-9424238cce78",
+      "position": 2,
+      "properties": {
+        "description": "Today, we’ll get more precise about what it means for predictions to be better.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To make a connection to a previous lesson, you can remind students that they previously encountered a similar activity in Unit 2 Lesson 6 when predicting how much sleep students would get each night: students looked at predictions and actual values, using them to decide how good or bad predictions were."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2f7ab5a9-080f-4de4-8915-9424238cce78",
+        "lesson_activity.key": "53791444-7366-4d59-9b76-f9b37085047e"
+      }
+    },
+    {
+      "key": "337ec2c2-2bc8-4097-9103-435037a52bd8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "337ec2c2-2bc8-4097-9103-435037a52bd8",
+        "lesson_activity.key": "53791444-7366-4d59-9b76-f9b37085047e"
+      }
+    },
+    {
+      "key": "fad9b896-5cc3-44df-8016-594e16d2a90f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students are introduced to squared error as a way to calculate how good or bad a model’s predictions are. Students practice computing squared error on a small dataset of their own predictions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that one way to measure the quality of a prediction is with absolute error. Absolute error is computed by subtracting the predicted value from the actual value and then taking the absolute value (to make sure that the result is always positive).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that the absolute error could be used in machine learning models to measure loss: a measure of how wrong a model’s predictions are.\n",
+        "duration": "15",
+        "name": "Introducing Squared Error",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might ask about the difference between error and loss. In machine learning, they refer to similar concepts, but are technically different. Error generally refers to how far away an actual value is from a predicted value. Loss refers to a way to measure how bad it is for a model to get a certain error: it’s a value that can be used to optimize a machine learning model’s performance.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fad9b896-5cc3-44df-8016-594e16d2a90f",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "46a5ea8c-4bc0-4d12-999e-17b3380e97dc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _squared error_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce squared error as a common way that we measure error for machine learning models. Explain that squared error is calculated by subtracting the predicted value from the actual value, and then squaring the result.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might ask why programmers might choose squared error instead of absolute error. This lesson will give students the opportunity to explore the tradeoffs between the two, but at this point you can hint to students that part of the difference lies in the kinds of prediction mistakes that are penalized more or less by each different kind of error.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "46a5ea8c-4bc0-4d12-999e-17b3380e97dc",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "df460a77-d2ee-4320-b4cb-8987b7887dba",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _mean squared error_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that mean squared error is a common loss function used in machine learning models.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "df460a77-d2ee-4320-b4cb-8987b7887dba",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "9b72ebb6-20d4-4fb6-91c6-e2ec3eef3120",
+      "position": 4,
+      "properties": {
+        "description": "Now, you’ll have a chance to try making predictions and then calculating error based on those predictions. In the activity guide I’m about to hand out, don’t flip to the second page yet! You’ll make predictions on the first page and then check your answers on the second page.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b72ebb6-20d4-4fb6-91c6-e2ec3eef3120",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "c5c6f4c9-c42e-40a9-85fe-c42973f4e566",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Animal Weights Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Animal Weights Activity Guide. Remind students to complete the first page before looking at the second page (the second page contains answers to the questions asked on the first page).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students make their predictions and calculate error, help them with the logic of calculating absolute and squared error.\n- If students aren’t sure how to make the predictions on the first page, encourage them to guess! Students aren’t evaluated on whether their guesses are correct or not, so emphasize that this is a low-stakes prediction.\n- For students who struggle to compute the squared error, encourage them to calculate the absolute error first. Then, they can multiply those values by themselves to get the squared error.\n- Encourage students to use a calculator, particularly for squaring large numbers.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If two models have the same absolute error, will they have the same squared error? What kind of mistakes have the greatest impact on squared error?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on their experiences calculating their own mean absolute error and mean squared error and consider how the two compare. Strong responses will identify the fact that squared error tends to more harshly penalize large errors compared to absolute error. For example, absolute errors of 10 and 100 translate to values of 100 and 10,000, respectively, when the errors are squared. If students don’t identify this, ask them guiding questions to help lead them to this conclusion: you might invite students to think about their small errors and their large errors in their own predictions, comparing their absolute errors and then comparing their squared errors. Help students see that paying attention to squared error means focusing a lot on the predictions that are the most wrong."
+      },
+      "seeding_key": {
+        "activity_section.key": "c5c6f4c9-c42e-40a9-85fe-c42973f4e566",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "1c0fadc3-67f6-4321-9013-f63f547cdd22",
+      "position": 6,
+      "properties": {
+        "description": "Using mean squared error as a loss function means that small mistakes get penalized a little, but big mistakes get penalized much more. When machine learning models are trained, they use loss functions to figure out how to make predictions that are as good as possible. By using mean squared error, we can train machine learning models that learn as best as they can not to make big mistakes.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c0fadc3-67f6-4321-9013-f63f547cdd22",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "720a59c9-7670-4f9e-9a66-7a8c9471f689",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students write Python code to compute mean squared error and use the error to compare two models.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the sample code. The `scikit-learn` library has a function called `mean_squared_error` that computes the mean squared error. The function takes a list of actual values as a first argument and then a list of predicted values as a second argument. The function then computes and returns the mean squared error for those predictions.",
+        "duration": "15",
+        "name": "Computing Mean Squared Error"
+      },
+      "seeding_key": {
+        "activity_section.key": "720a59c9-7670-4f9e-9a66-7a8c9471f689",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "38478242-29ca-4c82-ae9c-a0f5697748a6",
+      "position": 8,
+      "properties": {
+        "progression_name": "Compute Mean Squared Error"
+      },
+      "seeding_key": {
+        "activity_section.key": "38478242-29ca-4c82-ae9c-a0f5697748a6",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "e1e782c2-f562-4fa5-95ec-1211b723b943",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1e782c2-f562-4fa5-95ec-1211b723b943",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "21a72079-d5e4-4fef-a95c-ad08f26ee9b2",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3.\n- Level 1: Students practice using a mean squared error function to compute loss.\n- Level 2: Students use mean squared error to compare the performance of two different machine learning models.\n- Level 3: Students complete a Check Your Understanding that asks students to consider the interpretation and importance of mean squared error.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through computing mean squared error, look for common errors.\n- The purpose of the first level is to serve as an opportunity to get familiar with the mean_squared_error library function. If students aren’t sure how to import and use it, refer them to the Coding Tip in the level to get the correct import statement. Then, remind students of the order of the arguments: the function takes two lists of values and outputs a computed error value that can be saved in a variable.\n- In the second level, a common struggle will likely be understanding the existing code. Unlike other programs students have seen that only involve one machine learning model, this level involves students looking at two different machine learning models. They’ll have to read the code to determine which variables are used for which purposes: which variables correspond to which models and which values are the test data. Help point them to relevant portions of the code if they get stuck.\n- If students finish early, encourage them to explore other topics related to loss functions and building machine learning models. For example, you might ask students to explore the behavior of the mean_squared_error function: does it matter what order the two arguments are in; would switching the order lead to a different result? You could also invite students to consider what might happen if a model was tested on the same data it was trained on: what would they expect the loss to look like? Students might also try training a new model on all of the available input and output data in Level 2 and seeing if the new model performs better or worse than their existing models.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 3 as a way to assess whether students understand that a high mean squared error is a sign that a model is making a lot of mistakes and likely can’t be relied upon for accurate predictions. If students struggle with this question, remind students about previous discuss about loss, how machine learning models try to minimize loss, and how loss helps us evaluate whether models are performing well or not.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21a72079-d5e4-4fef-a95c-ad08f26ee9b2",
+        "lesson_activity.key": "b4407d8a-d706-4214-8829-3740862758c8"
+      }
+    },
+    {
+      "key": "ad5b6edb-1b44-462c-afff-e221de51f47e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "ad5b6edb-1b44-462c-afff-e221de51f47e",
+        "lesson_activity.key": "9692b32f-4375-479e-b798-29815bab0327"
       }
     },
     {
@@ -2513,6 +2880,819 @@
       "seeding_key": {
         "activity_section.key": "1b6c824a-b35d-49c6-baae-643a23e9a892",
         "lesson_activity.key": "3c76a720-67ca-4f4d-8250-0ad0c8effe11"
+      }
+    },
+    {
+      "key": "07c27e9c-d678-423d-a92c-a2a17a88e967",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario that students will explore in the first part of the activity. Imagine building an app that needs to decide if a workout is a run or bicycle ride. Point out to students that this is an example of a classification problem: the input is information about the workout and the output is whether the workout is a run or a bicycle ride.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With students, work through the process of identifying whether the first workout or the second workout is the nearest neighbor to the third workout. Invite students to use a sheet of paper to write down their calculations. You can keep track of relevant information on the board as you calculate together.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "07c27e9c-d678-423d-a92c-a2a17a88e967",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "5facb337-0cda-4ffb-b52d-664f5d2b45be",
+      "position": 2,
+      "properties": {
+        "description": "To measure the “distance” between any two workouts, we’ll calculate the difference between their elevation changes, the difference between their speeds, the difference between their heart rates, and add the values up.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5facb337-0cda-4ffb-b52d-664f5d2b45be",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "34b7ef49-fb58-4278-8f97-b945e14c8ed2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to pull out a calculator, or distribute calculators to students. Students will likely find a calculator helpful for the activities throughout this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to compute the distance between the third workout and the run. After students have had a minute or so to work, call on a student to explain their answer. The difference between elevation changes is 10, the difference between speeds is 1, the difference between heart rate is 10, so the total distance is the sum: 21.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to compute the distance between the third workout and the bicycle ride.  After students have had a minute or so to work, call on a student to explain their answer. The difference between elevation changes is 20, the difference between speeds is 6, the difference between heart rate is 30, so the total distance is the sum: 56."
+      },
+      "seeding_key": {
+        "activity_section.key": "34b7ef49-fb58-4278-8f97-b945e14c8ed2",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "31c51fdd-699c-46d6-b05d-86e241a1e5a8",
+      "position": 4,
+      "properties": {
+        "description": "The distance to the run is smaller than the distance to the bicycle ride. As a result, a nearest-neighbor classifier might conclude that the third workout is a run.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "31c51fdd-699c-46d6-b05d-86e241a1e5a8",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "e4e77ee5-d13d-461a-b4fa-4c23f0a10e1a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Confirm that the third workout is, in fact, a run."
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e77ee5-d13d-461a-b4fa-4c23f0a10e1a",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "88ab4dd9-ff73-464f-9ef5-a5a65ff431b7",
+      "position": 6,
+      "properties": {
+        "description": "The classifier worked well this time, but today we’ll explore some cases where classifiers like this can run into problems that we need to solve.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In the last lesson, students were introduced to both Manhattan and Euclidean distance metrics. For simplicity, in this example, students use the Manhattan distance to compute distances.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "88ab4dd9-ff73-464f-9ef5-a5a65ff431b7",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "d08dfdc6-2b00-4d2e-a41d-4bc4a80861f3",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "d08dfdc6-2b00-4d2e-a41d-4bc4a80861f3",
+        "lesson_activity.key": "f619c922-a619-43ad-a95d-2e3997a97cbd"
+      }
+    },
+    {
+      "key": "de00084d-8332-4bcf-bbfe-2a1b51f1e55d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students work through an example together to motivate the need for feature scaling in machine learning models.\n",
+        "duration": "15",
+        "name": "Introducing Feature Scaling"
+      },
+      "seeding_key": {
+        "activity_section.key": "de00084d-8332-4bcf-bbfe-2a1b51f1e55d",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "0e8f058a-63c5-41c2-b662-3554939c6638",
+      "position": 2,
+      "properties": {
+        "description": "Let’s try another example to see how this nearest-neighbor classifier might work.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0e8f058a-63c5-41c2-b662-3554939c6638",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "69871867-fa00-447a-bec8-f2c93fd35530",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to work in partners or small groups to determine whether this new third workout has a shorter distance to the first workout or to the second workout. They should calculate distance by measuring how far apart two workouts are on each of the three features and then add those differences together.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to do the calculations on their own, then ask for volunteers to talk through the calculation process. The distance from the third workout to the run is 5 + 10 + 10 = 25. The distance from the third workout to the bicycle ride is 25 + 5 + 10 = 40. The distance is shorter to the run, so the algorithm would classify the third workout as a run.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out that the third workout was in fact a bicycle ride. (Intuitively, the speed might be a hint that this is a case.) Note to students that this time, the nearest-neighbor classifier got the answer wrong: the workout should have been classified as a bicycle ride, but it was classified as a run instead.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What went wrong with our algorithm? What could we do to make it better?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students talk through why the classifier made a mistake in this case. The main insight this discussion is meant to reveal is that the “Speed” features is out-of-balance with the other features. A strong response will notice that speed is measured in single or double-digit numbers, while elevation change and heart rate are measured in triple-digit numbers, so the elevation change and heart rate values end up mattering much more than the speed feature when determining nearest neighbors. Students’ proposed solutions might vary, but could be any approach that helps treat each feature equally. Students don’t need to have a precise mathematical answer for how to do that yet: the goal of the discussion is just to help students recognize the problem. There are multiple other reasons for the classifier’s failure students could suggest that would technically be accurate: for example, the training data only has one example from each category and could benefit from more data, or that having access to more features might help the classifier better tell the workouts apart. If students suggest these ideas, acknowledge their validity but encourage them to think about how the algorithm could have been improved even with the existing data as-is."
+      },
+      "seeding_key": {
+        "activity_section.key": "69871867-fa00-447a-bec8-f2c93fd35530",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "d2b1c508-0848-4cd6-b0fc-9d9f79f78bec",
+      "position": 4,
+      "properties": {
+        "description": "Because the scale of the speed number is usually smaller than the elevation change and heart rate numbers, the nearest-neighbor classifier ends up not caring about speed as much. What we want is some way to help our classifier care about all of the features.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d2b1c508-0848-4cd6-b0fc-9d9f79f78bec",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "1054beef-b9e7-4c06-98ef-7047310bdd4e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _feature scaling_.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1054beef-b9e7-4c06-98ef-7047310bdd4e",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "bc15e1a8-f6bd-4754-85f6-9ebde1ddb9a0",
+      "position": 6,
+      "properties": {
+        "description": "Data features can have very different scales: some features are larger than others, and some features span a wider range than others. When that happens, we can use feature scaling to make sure that features use a similar scale. This lets our algorithms work with different features more effectively.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bc15e1a8-f6bd-4754-85f6-9ebde1ddb9a0",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "65484552-637f-457f-9f09-6f50a2bb0dc9",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce min-max scaling as a way to scale features.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the algorithm for min-max scaling. The algorithm involves first finding the minimum and maximum values for a feature in the training data. Then, a formula allows translating any number into the scaled version of that number."
+      },
+      "seeding_key": {
+        "activity_section.key": "65484552-637f-457f-9f09-6f50a2bb0dc9",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "1e793dee-d5dc-4c0c-b0bf-117524fddf2d",
+      "position": 8,
+      "properties": {
+        "description": "You’ll now have a chance to try scaling a dataset so that it will work better in AI models.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1e793dee-d5dc-4c0c-b0bf-117524fddf2d",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "0232bd15-f6f5-4f27-9eeb-b9c71b3cef77",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Workouts Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the first feature in the activity guide together."
+      },
+      "seeding_key": {
+        "activity_section.key": "0232bd15-f6f5-4f27-9eeb-b9c71b3cef77",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "e8e40f1c-f119-436c-891c-963d75346191",
+      "position": 10,
+      "properties": {
+        "description": "Let’s try to use min-max scaling on our dataset of workouts so that it will work better with our classification algorithms. We’ll start by scaling the elevation change feature.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e8e40f1c-f119-436c-891c-963d75346191",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "534f91e8-506f-4b1f-ae95-7e2ae6f501e5",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Start with the “Elevation Change” column. Call on students to identify the minimum and maximum value for the elevation change feature.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Confirm that 200 is the minimum value and 320 is the maximum value.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the formula for scaling features: take each value, subtract the minimum, then divide by the difference between the maximum and the minimum. The slide shows a version of the formula with the minimum and maximum values for elevation change substituted.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite students to pick one of the four elevation change numbers and scale it according to the min-max scaling formula visible on the slide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a minute or so to determine the scaled value. Then, for each workout, ask a student to offer the scaled result. The correct answers should be: 0.00, 1.00, 0.58, and 0.25 (rounded to the nearest two decimal places).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the scaled values.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students what they notice about the scaled values. Help students identify that all values are between 0 and 1, that the smallest value from the dataset was assigned a scaled value of 0, that the largest value from the dataset was assigned a scaled value of 1, and that each value stays in the same order relative to the others.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the rest of the Workouts Activity Guide in pairs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the activity guide, keep an eye out for the following:\n- Students who aren’t sure how to apply the scaling formula. First, work with students to identify the minimum and maximum values for each feature. Then, walk through how to substitute the appropriate values into the formula to compute the scaled results for each feature. Verify that students are using the appropriate minimum and maximum value for each feature.\n- When students work with the new data, make sure they use the minimum and maximum value from the training data, not the minimum and maximum value from the new data. Help students see that when testing a model trained with scaled data, the test data needs to be scaled in exactly the same way as the original training data, otherwise the test data will have a different meaning than what the model was trained to work with."
+      },
+      "seeding_key": {
+        "activity_section.key": "534f91e8-506f-4b1f-ae95-7e2ae6f501e5",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "1769b361-c494-4dd3-8a40-ca9ecd0ff5ce",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students use `scikit-learn` to scale features and use those features to train a machine learning model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce how `scikit-learn` can be used to scale features. Point out to students that feature scaling is a pre-processing step: features are scaled before they’re provided as inputs to a machine learning model. Line 5 creates a new scaler. Line 6 “fits” the scaler to the training data (in other words, determines what the minimum and maximum values for each feature are) and then transforms the training input values into their scaled versions. Then line 9 uses the already-fitted scaler to apply the same transformation to the test data.",
+        "duration": "15",
+        "name": "Implementing Feature Scaling"
+      },
+      "seeding_key": {
+        "activity_section.key": "1769b361-c494-4dd3-8a40-ca9ecd0ff5ce",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "2a6ee012-b802-49af-ae97-1df592d5023b",
+      "position": 13,
+      "properties": {
+        "description": "We use the `fit_transform` method on the training data so that scaler learns what minimum and maximum values to use and then transforms the data into its scaled version. Then, we use the `transform` method so that the test data is scaled in exactly the same way as the training data.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2a6ee012-b802-49af-ae97-1df592d5023b",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "3efcbd31-cd89-46c5-9f3c-38eef75fb281",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students an opportunity to ask questions about the code for feature scaling.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, you could consider inviting students to think more deeply about why the test data must be scaled using the minimum and maximum values derived from the training data. Help students see that if a machine learning model is trained on scaled data, then to use the model effectively, the test data must be scaled in the same way. Otherwise, the model would be working with data that has a different meaning than the data that it was trained on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3efcbd31-cd89-46c5-9f3c-38eef75fb281",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "d9909e9c-31f6-4faa-ab1a-6874afe79f6a",
+      "position": 15,
+      "properties": {
+        "progression_name": "Scale Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9909e9c-31f6-4faa-ab1a-6874afe79f6a",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "4aa86197-1fcb-4c20-b22a-d5595ab3531c",
+      "position": 16,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4aa86197-1fcb-4c20-b22a-d5595ab3531c",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "5a5a3840-7f47-4d5f-9a2c-480bb28cf208",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-2.\n- Level 1: Students update a nearest-neighbor classifier to use feature scaling.\n- Level 2: Students complete a Check Your Understanding that asks students to reflect on their model’s performance and argue for why the performance changes due to feature scaling.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students implement feature scaling, look for common areas of confusion.\n- Students might need help with the syntax for using a `MinMaxScaler`. Show the previous slide again if needed, and help students to create a new `MinMaxScaler` and call its methods.\n- Students might be confused about the difference between `fit_transform` and `transform`. Remind students that the former both “fits” the scaler (that is, teaches it specifically what minimum/maximum values to use) and “transforms” the data (converts the data to use the scaled versions). The latter only transforms the data. When working with training data, it’s important to fit and transform the data; but when working with test data, students should only transform the data (the scaler has already been fit to use the minimum/maximum values from the training data).\n- An easy mistake for students to make is forgetting to use the scaled data both when training the model and testing the model. If students train their model with scaled data but test it with unscaled data, their model’s accuracy will likely be low: keep an eye out for this possibility if students are getting unexpected results.\n- It’s possible that students will see slightly different results each time they run the program. This is because the splitting of training and test data happens randomly. You might ask students to run the code multiple times to see whether the behavior they see is consistent.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 as an opportunity to evaluate whether students understand the impact that feature scaling has on the behavior of machine learning models. Effective responses should identify the different scales of features in the data students are working with, noting that a nearest-neighbor classifier on unscaled data might end up only focusing on the largest features. If students struggle with understanding the impact of feature scaling, it might be helpful to make the distance computation concrete by looking at the slide with both unscaled and scaled data. Talk with students about how a nearest-neighbor classifier would behave when computing distances based on unscaled data versus computing distances based on scaled data.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5a5a3840-7f47-4d5f-9a2c-480bb28cf208",
+        "lesson_activity.key": "7cba2825-428e-4659-841d-63a48f5fe6f1"
+      }
+    },
+    {
+      "key": "f91bad8f-7749-4641-9068-723878cb7ac2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "f91bad8f-7749-4641-9068-723878cb7ac2",
+        "lesson_activity.key": "afea0933-a31c-4155-aa03-b9682357b4c9"
+      }
+    },
+    {
+      "key": "c90a3f12-be0f-459c-af22-3e9b3f5141c7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario for the first part of today’s lesson. Students will play the role of data analysts at a water treatment plant, responsible for determining if samples of water are safe to drink.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c90a3f12-be0f-459c-af22-3e9b3f5141c7",
+        "lesson_activity.key": "fd4823c6-c866-469b-93cc-81e92c0169bc"
+      }
+    },
+    {
+      "key": "bf78d101-899c-42be-872c-0483f83c3e6d",
+      "position": 2,
+      "properties": {
+        "description": "Imagine that your team at the water treatment plant needs to look at each sample of water and decide on a safety rating: low risk or high risk.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bf78d101-899c-42be-872c-0483f83c3e6d",
+        "lesson_activity.key": "fd4823c6-c866-469b-93cc-81e92c0169bc"
+      }
+    },
+    {
+      "key": "a36c2bf1-632e-4394-953d-d9ddd3e1f85e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What patterns do you notice in the data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to explore patterns in the data to try to determine “rules” for whether a water sample is low risk or high risk. The patterns are subtle and there are only eight samples of data here, so students aren’t expected to identify patterns with certainty, but they should still look for possible ideas that could be worth investigating. For example, some students might notice that samples with high chlorine levels might be higher risk (the two samples with chlorine values of 4.3 and 4.1 are both high-risk). Other students might notice that sample with the highest pH (8.9) is high risk, and there are similar samples with a lower pH that are low risk, so pH values that exceed a certain threshold might be high risk too. Students might also identify that cloudiness does seem to increase risk in most cases: the average cloudiness among the high-risk samples is higher than the average cloudiness among the low-risk samples. If students aren’t sure of a pattern, encourage students to point out anything they observe in the data: the goal isn’t to get an exact answer for what defines low-risk or high-risk water samples, the goal is just to get students thinking about rules that might be useful for performing classifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "a36c2bf1-632e-4394-953d-d9ddd3e1f85e",
+        "lesson_activity.key": "fd4823c6-c866-469b-93cc-81e92c0169bc"
+      }
+    },
+    {
+      "key": "dc343a49-6466-4316-b625-62e0b8989c46",
+      "position": 4,
+      "properties": {
+        "description": "If we wanted to build a classifier to identify low-risk and high-risk water samples, we could use a nearest-neighbor classifier that would look for the closest water sample. But we could also try to figure out general rules that can help us perform classifications. For example, a rule like “chlorine values that are more than 4 are high risk” could be a good rule. That’s what we’ll explore today.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students ask and are curious, pH is measured on a 0-14 scale, cloudiness is measured in NTU (Nephelometric Turbidity Units), and chlorine is measured in mg/L. Students can complete the discussion and the activity without knowing the specific units for each.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc343a49-6466-4316-b625-62e0b8989c46",
+        "lesson_activity.key": "fd4823c6-c866-469b-93cc-81e92c0169bc"
+      }
+    },
+    {
+      "key": "d361f34a-195b-413e-924f-b86f9529d7d0",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "d361f34a-195b-413e-924f-b86f9529d7d0",
+        "lesson_activity.key": "fd4823c6-c866-469b-93cc-81e92c0169bc"
+      }
+    },
+    {
+      "key": "26c7a8b7-0138-4a6e-97a5-a32b65c4bb95",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students to impurity as a metric for evaluating whether a question in a decision tree is doing a good job of splitting data into groups. Students practice computing impurity for a group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students about decision trees, which they explored in Unit 1. A decision tree is a type of classifier. The decision tree asks questions and eventually picks a category based on the answers to those questions.",
+        "duration": "20",
+        "name": "Measuring Impurity"
+      },
+      "seeding_key": {
+        "activity_section.key": "26c7a8b7-0138-4a6e-97a5-a32b65c4bb95",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "1d6fe477-f17a-4df8-bf15-464a871e9a3b",
+      "position": 2,
+      "properties": {
+        "description": "When we last looked at decision trees, you built decision trees based on your own intuition. But how could you or a computer know if the rules in a decision tree are good or not? Today, we’ll explore ways to measure that.\n\nSay we wanted to build a decision tree to classify water samples as high-risk or low-risk. Here are two example decision trees that each have only one question.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d6fe477-f17a-4df8-bf15-464a871e9a3b",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "bd879990-59f7-4f4a-a73f-0b6fac0eb9d9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the two decision trees. For each answer to a decision tree’s question, students can see the results for how many examples in the training data are high-risk or low-risk.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which question is more useful for a classifier?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students see that Decision Tree 1 is much more useful for building a classifier. Strong responses will identify that the question in Decision Tree 1 does a pretty good job of splitting the data into high-risk and low-risk: when the answer is yes, most of the data is high-risk; when the answer is no, most of the data is low-risk. The same could be said for Decision Tree 2, but the split is less clean: each half of the decision tree still has a closer to even amount of high-risk and low-risk examples. If students struggle to identify why Decision Tree 1 does a better job, ask them how confident they would feel in saying that a water sample was high-risk if the answer to the decision tree’s question was “yes”. If students have trouble interpreting the data, explain how to interpret the high-risk and low-risk numbers present beneath each answer.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd879990-59f7-4f4a-a73f-0b6fac0eb9d9",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "08f98072-fa64-4973-801c-79dc9adcbdbe",
+      "position": 4,
+      "properties": {
+        "description": "When a question in a decision tree leads to groups that are very mixed between different categories, the question is probably not that helpful. But if a question leads to groups that have a lot of values from just one category, the question is helping us figure out that category is probably a good prediction.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might wonder about whether a decision tree that asks more than one question would be better. In general, that’s true. Today, students will focus on evaluating individual questions in a decision tree, but an effective decision tree will usually combine multiple questions to improve accuracy.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "08f98072-fa64-4973-801c-79dc9adcbdbe",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "9946a2eb-d3ef-43a3-af91-4c07de05e749",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _impurity_."
+      },
+      "seeding_key": {
+        "activity_section.key": "9946a2eb-d3ef-43a3-af91-4c07de05e749",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "1d7966ab-7fb6-4671-b363-16949b540374",
+      "position": 6,
+      "properties": {
+        "description": "Impurity lets us measure whether a dataset has a lot of mixed-up categories or if it’s mostly one category. We want questions in a decision tree that lead to a low impurity.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Another popular way to measure the how mixed-together a dataset’s categories is to measure entropy. This lesson focuses on impurity rather than entropy for mathematical simplicity.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d7966ab-7fb6-4671-b363-16949b540374",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "9f789bb4-7cc5-4267-9310-ced3b571c343",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the formula for measuring impurity. Take a dataset and count what proportion of the dataset belongs to Category 1. Then count what proportion of the dataset belongs to Category 2. Take the squares of each proportion and subtract them from 1 to get the impurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** To make the formula more concrete, you can demonstrate an example on the board and walk through it with students. Say there’s a dataset where 30% of the data belongs to Category 1 and 70% of the data belongs to Category 2. Then the impurity would be 1 - (0.3)^2 - (0.7)^2 = 0.42.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The specific of impurity measured here is known as Gini impurity. Some students might ask what happens if there are more than two categories: in that case, continue to subtract the square of the proportion of each additional category.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f789bb4-7cc5-4267-9310-ced3b571c343",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "8c74f044-c9ef-4a84-af1e-7c360cde79f3",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students some examples of impurity values. Students should notice that when all of the data falls in one group (the top row and the bottom row of the table), impurity is 0. When the data is more mixed up, the impurity value increases.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that the goal is for a group to have low impurity (also described as high purity). When a group has high purity, it’s easy to predict the category to which a member of the group belongs."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c74f044-c9ef-4a84-af1e-7c360cde79f3",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "6922b90f-6d4f-4bcc-8b4a-4338acb6c13d",
+      "position": 9,
+      "properties": {
+        "description": "In a moment, you’ll try applying this formula so that you can verify for yourself which question does a better job of classifying water samples.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6922b90f-6d4f-4bcc-8b4a-4338acb6c13d",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "a973374e-780c-42c9-9032-3e1e0a49fc08",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Water Safety Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the Water Safety Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the guide, help them with the logic for computing impurity.\n- For students who aren’t sure how to determine the high risk count and the low risk count, help them interpret the training data table. For example, to determine the high risk count for “Yes” in the chlorine split, students should find the rows of the training data table for which the chlorine value is “Yes” (there are two such rows) and add together the two high risk counts.\n- For students who don’t know how to fill in values for the proportions, remind them that proportions should always be between 0 and 1 and can be computed by dividing their “High Risk Count” or “Low Risk Count” value by the “Total Count” value.\n- Encourage students to use calculators for computing the impurity value and for computing proportions where the denominator doesn’t lend itself to simple mental math.\n- A potential source of confusion is that students compute two impurity values for each question. This is because each question splits the data into two groups: each group has its own impurity value that must be calculated separately.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students who are thinking particularly critically about this exercise might ask what would happen if a question resulted in two groups where one group had a higher impurity (compared to another question) and another group had a lower impurity (compared to that same other question). This is an important observation: in general, decision tree classifiers will want a question where both groups have lower impurity, so they might take a weighted average of the two impurity values (weighted by the size of each group). This nuance isn’t explored in this activity guide for simplicity, but is an interesting discussion topic for students feeling more comfortable with the material.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a973374e-780c-42c9-9032-3e1e0a49fc08",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "aac785d5-ed74-4dcf-b5a6-dcbbf49794c0",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students write Python code to work with a dataset and use it to compute impurity.\n",
+        "duration": "15",
+        "name": "Computing Impurity"
+      },
+      "seeding_key": {
+        "activity_section.key": "aac785d5-ed74-4dcf-b5a6-dcbbf49794c0",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "99509a23-393f-4683-9771-c8850135aaa6",
+      "position": 12,
+      "properties": {
+        "progression_name": "Evaluate Impurity"
+      },
+      "seeding_key": {
+        "activity_section.key": "99509a23-393f-4683-9771-c8850135aaa6",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "0d11c404-96b5-44f4-8de3-ccc78ea54f2a",
+      "position": 13,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d11c404-96b5-44f4-8de3-ccc78ea54f2a",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "08e5eeee-2a9c-450e-9844-545a45dc491d",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-2.\n- Level 1: Students write Python code to compute the impurity of a group.\n- Level 2: Students complete a Check Your Understanding that asks students about the importance of impurity in the context of decision trees.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through computing impurity, help them with common places where they might get stuck.\n- Students might struggle with counting the number of high risk and low risk entries. Since the data is organized as a list of dictionaries, help students think about the logic for iterating over the list. When they do, each iteration will give them a dictionary to work with, and students can write a conditional statement that accesses values in a dictionary to decide how to update the high-risk and low-risk variables.\n- Some students might not realize they need to check two different values in the dictionary. They need to consider both the pH value in the dictionary as well as the value that corresponds to which decision they’re choosing to explore (chlorine or pH).\n- Students might not know how to square a number in Python. The example solution uses Python’s exponentiation syntax (`**2`), but students aren’t expected to be familiar with this syntax. Instead, remind students that squaring a number is equivalent to multiplying it by itself, which students do know how to write in Python.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students ask whether machine learning engineers in practice need to manually calculate impurity, you can note that machine learning libraries will often do the calculation automatically when training certain kinds of models. Students will see an example of this in the next lesson.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 as an opportunity to evaluate whether students the relevance of impurity when it comes to building classifiers. Strong responses will identify that for a computer to know whether a decision tree is good or not, it needs to evaluate how well it splits data into groups, and groups are more reliable for making predictions when there’s less mixing of different categories.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "08e5eeee-2a9c-450e-9844-545a45dc491d",
+        "lesson_activity.key": "d6a36d98-6b67-4626-9990-9075f95712fa"
+      }
+    },
+    {
+      "key": "fa9d0c30-6fea-43d4-9fec-e5aa3a830ace",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "fa9d0c30-6fea-43d4-9fec-e5aa3a830ace",
+        "lesson_activity.key": "ecfe213a-de5d-4ad7-97c7-41cdb02a00f5"
+      }
+    },
+    {
+      "key": "0d5436b6-9d55-4071-955f-0881df24c568",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Your friend suggests a TV show for you to watch. What questions would you ask to decide if you think you’ll like it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start thinking about features they would use to solve a prediction problem. The number of possible answers is large: encourage students to think about what’s important to them and what kinds of features they would pay attention to. Examples of possible questions include questions that ask about any of the following: episode runtime (some people prefer shorter episodes), genre, live action vs. animation, number of seasons, number of episodes, cast size, TV network or streaming platform. Take a few ideas from students and then move on."
+      },
+      "seeding_key": {
+        "activity_section.key": "0d5436b6-9d55-4071-955f-0881df24c568",
+        "lesson_activity.key": "75ca16f7-86b3-4b35-860b-2880aec85042"
+      }
+    },
+    {
+      "key": "856eae33-ec55-4d6e-884f-415a0c5efc26",
+      "position": 2,
+      "properties": {
+        "description": "Whether or not you’ll like a TV show can be a classification problem: the input is information about the TV show and the output is a label that predicts whether you will or won’t like the show. Today, we’ll think about how a computer algorithm could figure out how to ask questions like the ones you just asked to make a prediction.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "856eae33-ec55-4d6e-884f-415a0c5efc26",
+        "lesson_activity.key": "75ca16f7-86b3-4b35-860b-2880aec85042"
+      }
+    },
+    {
+      "key": "cd9e9191-2b19-4344-8c30-ab37131b1c2c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd9e9191-2b19-4344-8c30-ab37131b1c2c",
+        "lesson_activity.key": "75ca16f7-86b3-4b35-860b-2880aec85042"
+      }
+    },
+    {
+      "key": "0708648a-863a-4afb-b436-98ca7f3a1331",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students build on their understanding of decision trees and impurity to consider an algorithm for learning decision trees. Students work through an activity where they build a decision tree by following the algorithm.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _decision tree learning_.",
+        "duration": "20",
+        "name": "Introducing Decision Tree Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "0708648a-863a-4afb-b436-98ca7f3a1331",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "866c6208-c36f-48db-9c4c-0a71e9c05b94",
+      "position": 2,
+      "properties": {
+        "description": "You’ve seen how decision trees can be used to make predictions. Today, we’ll look at an algorithm that computers can use to build a decision tree that can make predictions well.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "866c6208-c36f-48db-9c4c-0a71e9c05b94",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "5b642e0e-d773-4faa-b21e-ce5e52d4756e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show an example of a decision tree. This decision tree represents a classification task, where circles and squares represent the two categories. In this decision tree, the initial question splits the data into two sub-groups: one with all circles and one with all squares.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students about what purity and impurity mean in the context of a dataset: they measure how mixed-up the data is. A “pure” dataset contains only data from one category. An “impure” dataset contains data from multiple categories.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b642e0e-d773-4faa-b21e-ce5e52d4756e",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "f734d26a-f47d-4355-a3bc-78348a3d2d49",
+      "position": 4,
+      "properties": {
+        "description": "When we build a decision tree, we want the computer to look for questions that will result in groups that are pure. This decision tree has a question that splits the data into two completely pure groups: each group has items that are from only one category.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f734d26a-f47d-4355-a3bc-78348a3d2d49",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "0d62817e-578a-4f8c-80d7-256f453efa68",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show an example of a decision tree where the two groups are not totally pure. In this case, the branch on the right is pure, but the branch on the left has high impurity because it mixes together both colors. This question alone isn’t good enough to distinguish between the two categories."
+      },
+      "seeding_key": {
+        "activity_section.key": "0d62817e-578a-4f8c-80d7-256f453efa68",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "5e0acabc-aaff-40d5-88e0-f56f4dc4a0fb",
+      "position": 6,
+      "properties": {
+        "description": "We won’t always have a single question that can perfectly split up the data. What do you think a computer should do if it tries to build a decision tree but the question doesn’t result in perfectly pure groups?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5e0acabc-aaff-40d5-88e0-f56f4dc4a0fb",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "b804a9bf-ea60-4054-93db-994b1646b37d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few suggestions from students for possible strategies."
+      },
+      "seeding_key": {
+        "activity_section.key": "b804a9bf-ea60-4054-93db-994b1646b37d",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "ca49252b-58cd-465b-9ef7-86c0dc8725a9",
+      "position": 8,
+      "properties": {
+        "description": "If we have a decision tree where the groups aren’t all pure yet, we can add another question to the tree to split the data again. The computer can pick the question that will result in the most pure groups.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ca49252b-58cd-465b-9ef7-86c0dc8725a9",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "30b3ae67-c401-46a1-8229-256ad894cbc1",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce an algorithm that computers can use to build a decision tree. The algorithm starts with an impure dataset (a mix of different categories). It chooses the question that splits the data into groups that are as pure as possible, creating a new branch of the decision tree for each answer. For the dataset in each new branch, if the group isn’t perfectly pure yet, the process repeats."
+      },
+      "seeding_key": {
+        "activity_section.key": "30b3ae67-c401-46a1-8229-256ad894cbc1",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "402ccca9-bd72-46f5-8999-947e51ded095",
+      "position": 10,
+      "properties": {
+        "description": "Before, you built decision trees based on intuition. Now, we have an algorithm that we can give to a computer, and the computer could follow the algorithm to figure out how to build a decision tree on its own.\n\nNow, you’ll have a chance to try this algorithm and use it to build a decision tree, just like a computer would.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "402ccca9-bd72-46f5-8999-947e51ded095",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "215852f9-0322-4454-ac7f-8e6d9bb0c6d8",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TV Preferences Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the TV Preferences Activity Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the guide, help them with the logic for constructing their decision tree.\n- Students start by choosing the first question for their decision tree. The activity guide provides them with three candidate questions to consider. (In practice, a computer would consider more than just these three questions, but for time’s sake the activity picks a few questions that are worth exploring.) Students should use the training data to count up how often a television show is liked or disliked depending on the answer to each question. For students who are confused about what they are doing in this step and why, remind them that the purpose of a question in the decision tree is to use the answer to split the data into groups that help make a prediction. In this step, students are trying to evaluate whether the answer does a good job of splitting the television shows into likes and dislikes.\n- Students then need to pick which first question does the best job separating data into pure and impure groups. Some students might want to use the impurity formula from the previous lesson. It’s okay if students do this, though it’s not necessary in this case: you can encourage students to look at their results and pick which one looks like it’s the most pure. Help students see that the “Is the show a comedy?” question does a particularly good job of splitting the data: if the answer is yes, the viewer definitely likes the show. If the answer is no, the viewer probably dislikes the show, though there is one show in the training data where the viewer still liked it. None of the other questions do as good a job of splitting the data into pure groups.\n- Then, help students draw their decision trees and add a new question to complete the tree. Students might not be sure how and where to add an additional question. Help these students see which group is pure and which group is still impure: in this case, the impure group is the one where the show is not a comedy: the resulting data is a mix of both likes and dislikes. Help students pick a question that will split the remaining data cleanly into the two groups (multiple possible questions would work, but “Is the critics rating at least 8.5?” is one example).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "215852f9-0322-4454-ac7f-8e6d9bb0c6d8",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "df7d848b-4475-471a-86a5-9a43aeebd550",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students build a decision tree classifier model using Python and `scikit-learn`.\n",
+        "duration": "15",
+        "name": "Implementing Decision Tree Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "df7d848b-4475-471a-86a5-9a43aeebd550",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "d55174d9-012e-4810-bf67-0cbebf51b06c",
+      "position": 13,
+      "properties": {
+        "description": "You’ve already seen how we can use `scikit-learn` to train a classifier that uses nearest neighbor classification. We import `KNeighborsClassifier`, use it to create a model, and then fit the model to the training data.\n\nIf we want Python to use a decision tree to classify the data instead, we can just import `DecisionTreeClassifier` instead. We fit the model to the data and use the model in the exact same way as we did before.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d55174d9-012e-4810-bf67-0cbebf51b06c",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "d97b6e76-5812-419b-8229-19aa11a8d099",
+      "position": 14,
+      "properties": {
+        "progression_name": "Make Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "d97b6e76-5812-419b-8229-19aa11a8d099",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "be75e295-13b9-46ae-afad-3f9374fef8e2",
+      "position": 15,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "be75e295-13b9-46ae-afad-3f9374fef8e2",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "1d40cd71-b427-4520-a023-92e93e8fd978",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-2.\n- Level 1: Students use `scikit-learn`’s `DecisionTreeClassifier` to construct a decision tree.\n- Level 2: Students complete a Check Your Understanding that asks students about how their decision tree learned to classify.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through computing impurity, help them with common places where they might get stuck.\n- The first task for students is understanding the data available to them. Help students look at the CSV file provided to them and identify the features and labels. For students who aren’t sure, remind them that the label is what the model is trying to predict: in this case, the task is to predict whether a friend will like something or not, so the “liked” column is the label. All of the other columns are features: they are used as input to help make decisions.\n- If students get stuck about the syntax for building, training, and scoring a classifier, you can encourage them to ask AI Tutor. You can also remind students of the structure they used for training nearest neighbor classifiers: the code for building decision tree classifiers is very similar.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 as an opportunity to evaluate whether students understand what a decision tree is and how a computer comes up with one. Students should be able to identify questions that a decision tree asks and how those questions are used to help decide whether data belongs to one category or another. Students should also be able to identify the role that training data plays in helping the computer decide which questions will do the best job of splitting the data into categories. If students struggle here, it can be helpful to visualize the decision tree learning process: look at the visualizations generated by students’ code and talk with students about what the computer has learned and what process a computer would then follow to use the decision tree to make predictions.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d40cd71-b427-4520-a023-92e93e8fd978",
+        "lesson_activity.key": "17490b0b-3aba-4131-a7ff-ca0f3b70b789"
+      }
+    },
+    {
+      "key": "6cf05fda-9048-4e09-a5f6-0014f0f58460",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "6cf05fda-9048-4e09-a5f6-0014f0f58460",
+        "lesson_activity.key": "50a0d601-533d-4853-89ec-1934ece17b7c"
       }
     },
     {
@@ -3639,6 +4819,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Compute Mean Squared Error"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson4-level1-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "38478242-29ca-4c82-ae9c-a0f5697748a6"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson4-level1-2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Compute Mean Squared Error"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson4-level2-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "38478242-29ca-4c82-ae9c-a0f5697748a6"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson4-level2-2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson4-level3-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "e1e782c2-f562-4fa5-95ec-1211b723b943"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson4-level3-2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Splitting Data"
       },
       "bonus": false,
@@ -3656,7 +4902,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -3678,7 +4924,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3700,7 +4946,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3722,7 +4968,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3744,7 +4990,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3766,7 +5012,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3788,7 +5034,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -3810,7 +5056,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3832,7 +5078,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3854,7 +5100,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3876,7 +5122,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3898,7 +5144,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3920,7 +5166,139 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scale Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson8-level1-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "d9909e9c-31f6-4faa-ab1a-6874afe79f6a"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson8-level1-2026"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson8-level2-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "4aa86197-1fcb-4c20-b22a-d5595ab3531c"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson8-level2-2026"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Evaluate Impurity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson9-level1-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "99509a23-393f-4683-9771-c8850135aaa6"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson9-level1-2026"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson9-level2-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "0d11c404-96b5-44f4-8de3-ccc78ea54f2a"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson9-level2-2026"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Make Recommendations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson10-level1-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "d97b6e76-5812-419b-8229-19aa11a8d099"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson10-level1-2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson10-level2-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "be75e295-13b9-46ae-afad-3f9374fef8e2"
+      },
+      "level_keys": [
+        "aif-y2-making-predictions-lesson10-level2-2026"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3942,7 +5320,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3964,7 +5342,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3986,7 +5364,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4008,7 +5386,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4030,7 +5408,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4052,7 +5430,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4074,7 +5452,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4096,7 +5474,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4201,6 +5579,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4",
         "activity_section.key": "0a65441c-95ba-403b-8528-7e0f32f29ccf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson4-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson4-level1-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "38478242-29ca-4c82-ae9c-a0f5697748a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson4-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson4-level2-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "38478242-29ca-4c82-ae9c-a0f5697748a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson4-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson4-level3-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "e1e782c2-f562-4fa5-95ec-1211b723b943"
       }
     },
     {
@@ -4361,6 +5775,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson8-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson8-level1-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "d9909e9c-31f6-4faa-ab1a-6874afe79f6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson8-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson8-level2-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "4aa86197-1fcb-4c20-b22a-d5595ab3531c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson9-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson9-level1-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "99509a23-393f-4683-9771-c8850135aaa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson9-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson9-level2-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "0d11c404-96b5-44f4-8de3-ccc78ea54f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson10-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson10-level1-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "d97b6e76-5812-419b-8229-19aa11a8d099"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-making-predictions-lesson10-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-making-predictions-lesson10-level2-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4",
+        "activity_section.key": "be75e295-13b9-46ae-afad-3f9374fef8e2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-making-predictions-lesson11-level1-2026",
         "script_level.level_keys": [
           "aif-y2-making-predictions-lesson11-level1-2026"
@@ -4470,6 +5956,71 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] Animal Weights",
+      "url": "https://docs.google.com/document/d/12vkJyLNwgUo3IMWNHVYyrvh__uz2G4IT2bfHVUl00YA/edit?usp=sharing",
+      "key": "_exemplar_animal_weights",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_animal_weights"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] TV Preferences",
+      "url": "https://docs.google.com/document/d/1ibwkCiNeEDCb3rKa3S9iiy3FYFNh5aqmvAAj8WHqacE/edit?usp=sharing",
+      "key": "_exemplar_tv_preferences",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_tv_preferences"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Water Safety",
+      "url": "https://docs.google.com/document/d/1ZXoEu6mQTZo1Tf6_ZIUMr7wlwHS3l5c2Tv8Zraj3ACc/edit?usp=sharing",
+      "key": "_exemplar_water_safety",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_water_safety"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Workouts",
+      "url": "https://docs.google.com/document/d/18A1tPEACXk3l2vCFaqgryYRbvLy8v03Jp5PP-zrnv5U/edit?usp=sharing",
+      "key": "_exemplar_workouts",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_workouts"
+      }
+    },
+    {
+      "name": "Animal Weights",
+      "url": "https://docs.google.com/document/d/1vMO-XA1bv0x_Sk6P2WqFR-l35v__oWMSyAZEt9PEavM/edit?usp=sharing",
+      "key": "animal_weights",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "animal_weights"
+      }
+    },
+    {
       "name": "Classification Project",
       "url": "https://docs.google.com/presentation/d/1Se-KNnUqVycUvWfXd2-lNf0cw8Nb7KTIPiVb7juxqnI/edit?usp=sharing",
       "key": "classification_project",
@@ -4498,7 +6049,7 @@
       }
     },
     {
-      "name": "Classification Project",
+      "name": "[EXEMPLAR] Classification Project",
       "url": "https://docs.google.com/document/d/1YF876FYisXkcvpL-gi1U2EqgC54Ube6PpXu7r0TSCnU/edit?usp=sharing",
       "key": "classification_project_2",
       "properties": {
@@ -4509,6 +6060,19 @@
       },
       "seeding_key": {
         "resource.key": "classification_project_2"
+      }
+    },
+    {
+      "name": "Decision Tree Learning",
+      "url": "https://docs.google.com/presentation/d/16-4zHhscQIHCSduwBEeEm5Hv7kpc1tofhW5BlV7aq0s/edit?usp=sharing",
+      "key": "decision_tree_learning",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "decision_tree_learning"
       }
     },
     {
@@ -4540,7 +6104,7 @@
       }
     },
     {
-      "name": "Encodings",
+      "name": "[EXEMPLAR] Encodings",
       "url": "https://docs.google.com/document/d/1cohi2sN-_THRhVUCeTJPtzX9hYFiEzXvw7oXYZDU4nU/edit?usp=sharing",
       "key": "encodings_2",
       "properties": {
@@ -4551,6 +6115,19 @@
       },
       "seeding_key": {
         "resource.key": "encodings_2"
+      }
+    },
+    {
+      "name": "Evaluating Decision Trees",
+      "url": "https://docs.google.com/presentation/d/1yrpKtJzmhA4QXLGelnmbGLbuPvGiKhzrtp-Kwh8IP64/edit?usp=sharing",
+      "key": "evaluating_decision_trees",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "evaluating_decision_trees"
       }
     },
     {
@@ -4568,7 +6145,7 @@
       }
     },
     {
-      "name": "Grocery Shopping",
+      "name": "[EXEMPLAR] Grocery Shopping",
       "url": "https://docs.google.com/document/d/1WAuq4q1UDt2fWO1VUiZkI-4L_P3y_HMfdkp1u7qw-VA/edit?usp=sharing",
       "key": "grocery_shopping_1",
       "properties": {
@@ -4593,6 +6170,19 @@
       },
       "seeding_key": {
         "resource.key": "hyperparameters"
+      }
+    },
+    {
+      "name": "Loss Functions",
+      "url": "https://docs.google.com/presentation/d/17ZZkLpDWqRMGYwnb4EiwGVe6i9pc7TE20HsMtcdl4xI/edit?usp=sharing",
+      "key": "loss_functions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loss_functions"
       }
     },
     {
@@ -4652,7 +6242,7 @@
       }
     },
     {
-      "name": "Pet Classification",
+      "name": "[EXEMPLAR] Pet Classification",
       "url": "https://docs.google.com/document/d/1mfkPVHB6PhL7PpEYKb3WgH136nPleHHFfGu8-qyEZTw/edit?usp=sharing",
       "key": "pet_classification_1",
       "properties": {
@@ -4694,7 +6284,7 @@
       }
     },
     {
-      "name": "Regression Project",
+      "name": "[EXEMPLAR] Regression Project",
       "url": "https://docs.google.com/document/d/1ecBSbyBr7WM5e0aI5kzhsqOzGCCzMDCio7QRzVOJbuA/edit?tab=t.0",
       "key": "regression_project_2",
       "properties": {
@@ -4705,6 +6295,19 @@
       },
       "seeding_key": {
         "resource.key": "regression_project_2"
+      }
+    },
+    {
+      "name": "Scaling Features",
+      "url": "https://docs.google.com/presentation/d/1mS-6vJwiR-vYBJjzHhv0c4SibcCZAht47EfkPdw9tqo/edit?usp=sharing",
+      "key": "scaling_features",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "scaling_features"
       }
     },
     {
@@ -4722,7 +6325,7 @@
       }
     },
     {
-      "name": "Training and Test Sets",
+      "name": "[EXEMPLAR] Training and Test Sets",
       "url": "https://docs.google.com/document/d/1YgjIdu18V31WwCxqzEcGMCDiwsFcseXqbMx6bxMNLkU/edit?usp=sharing",
       "key": "training_and_test_sets_1",
       "properties": {
@@ -4764,7 +6367,7 @@
       }
     },
     {
-      "name": "Tuning Report",
+      "name": "[EXEMPLAR] Tuning Report",
       "url": "https://docs.google.com/document/d/1mWI9_GWsCEEhgdUNYNetir89062F721DYcs4BGyFl48/edit?usp=sharing",
       "key": "tuning_report_1",
       "properties": {
@@ -4778,7 +6381,46 @@
       }
     },
     {
-      "name": "Your First Client",
+      "name": "TV Preferences",
+      "url": "https://docs.google.com/document/d/1-QaHo9TvDTzYEEbigX7v5vaxqPuKx0WkzwZ-QgolTFs/edit?usp=sharing",
+      "key": "tv_preferences",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "tv_preferences"
+      }
+    },
+    {
+      "name": "Water Safety",
+      "url": "https://docs.google.com/document/d/1sSmR8SGr1aUuJTR1XW3LU1VF-19TVd0OPxJfVwY7Uco/edit?usp=sharing",
+      "key": "water_safety",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "water_safety"
+      }
+    },
+    {
+      "name": "Workouts",
+      "url": "https://docs.google.com/presentation/d/1mS-6vJwiR-vYBJjzHhv0c4SibcCZAht47EfkPdw9tqo/edit?usp=sharing",
+      "key": "workouts",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "workouts"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Your First Client",
       "url": "https://docs.google.com/document/u/0/d/1QPi1WTfoaD8p0VPC5Atc-7h_rJY7ODCyksWce4foly0/edit",
       "key": "your_first_client",
       "properties": {
@@ -4823,6 +6465,24 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "your_first_client_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_exemplar_tv_preferences"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "decision_tree_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "tv_preferences"
       }
     },
     {
@@ -4917,6 +6577,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_animal_weights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "animal_weights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "loss_functions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "regression_project"
       }
@@ -4950,6 +6628,42 @@
         "lesson.key": "lesson-7",
         "resource.key": "pet_classification_1"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_workouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "scaling_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "workouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_water_safety"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "evaluating_decision_trees"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "water_safety"
+      }
     }
   ],
   "scripts_resources": [
@@ -4967,6 +6681,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "decision_tree_learning",
+      "word": "decision tree learning",
+      "definition": "a classification method that learns what decision tree will best make predictions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decision_tree_learning"
       }
     },
     {
@@ -5000,6 +6724,16 @@
       }
     },
     {
+      "key": "feature_scaling",
+      "word": "feature scaling",
+      "definition": "resizing variables so that they use a similar numeric scale",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature_scaling"
+      }
+    },
+    {
       "key": "fit",
       "word": "fit",
       "definition": "to train a model on data",
@@ -5020,6 +6754,16 @@
       }
     },
     {
+      "key": "impurity",
+      "word": "impurity",
+      "definition": "a measure of how mixed together the categories in a dataset are",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "impurity"
+      }
+    },
+    {
       "key": "manhattan_distance",
       "word": "Manhattan distance",
       "definition": "the sum of the distances between individual features",
@@ -5027,6 +6771,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "manhattan_distance"
+      }
+    },
+    {
+      "key": "mean_squared_error",
+      "word": "mean squared error",
+      "definition": "a loss function that calculates the average of the squared error for all values in a dataset",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "mean_squared_error"
       }
     },
     {
@@ -5047,6 +6801,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "overfitting"
+      }
+    },
+    {
+      "key": "squared_error",
+      "word": "squared error",
+      "definition": "a measurement of error that squares the distance between a prediction and an actual value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "squared_error"
       }
     },
     {
@@ -5089,6 +6853,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "decision_tree_learning"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-11",
         "vocabulary.key": "hyperparameter"
       }
@@ -5143,6 +6913,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "mean_squared_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "squared_error"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "vocabulary.key": "euclidean_distance"
       }
@@ -5151,6 +6933,18 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "vocabulary.key": "manhattan_distance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "feature_scaling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "impurity"
       }
     }
   ],
@@ -5186,6 +6980,16 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "17e8f39c-1c76-4605-9c0f-4cdf31edcfb2"
+      }
+    },
+    {
+      "key": "21721a58-b41c-49cc-8e25-298aa897c7f5",
+      "properties": {
+        "description": "Write Python programs to evaluate rules in a decision tree."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "21721a58-b41c-49cc-8e25-298aa897c7f5"
       }
     },
     {
@@ -5239,6 +7043,16 @@
       }
     },
     {
+      "key": "5b875bf0-d2e8-4dbd-8453-fe5109f6cfb2",
+      "properties": {
+        "description": "Explain why features measured on different scales can hurt predictions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "5b875bf0-d2e8-4dbd-8453-fe5109f6cfb2"
+      }
+    },
+    {
       "key": "5ed3cb5e-f1d1-4ab0-94c3-6482400dc3e8",
       "properties": {
         "description": "Use a machine learning library to train models based on data"
@@ -5279,6 +7093,26 @@
       }
     },
     {
+      "key": "8f593891-d352-41b3-b89b-7851fa4cf257",
+      "properties": {
+        "description": "Evaluate the quality of a rule in a decision tree."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "8f593891-d352-41b3-b89b-7851fa4cf257"
+      }
+    },
+    {
+      "key": "9d4607cb-10b4-4f14-8d93-a5ac2bb3b54e",
+      "properties": {
+        "description": "Use an algorithmic process to construct decision trees."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "9d4607cb-10b4-4f14-8d93-a5ac2bb3b54e"
+      }
+    },
+    {
       "key": "9d8090f0-65d9-450a-9114-81e0a7dc3ad6",
       "properties": {
         "description": "Build and evaluate a classification model on a dataset"
@@ -5289,6 +7123,26 @@
       }
     },
     {
+      "key": "c464313f-c17e-4ef0-b45c-6f05cbe1c035",
+      "properties": {
+        "description": "Scale features in preparation for training a model."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "c464313f-c17e-4ef0-b45c-6f05cbe1c035"
+      }
+    },
+    {
+      "key": "c4adcbb5-cadc-40e3-8790-c6381065e1c5",
+      "properties": {
+        "description": "Explain different methods for measuring a model’s loss."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "c4adcbb5-cadc-40e3-8790-c6381065e1c5"
+      }
+    },
+    {
       "key": "cb610609-5355-4f62-95eb-dddc7f3d15cd",
       "properties": {
         "description": "Explain how adding features affects a model’s performance"
@@ -5296,6 +7150,26 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "cb610609-5355-4f62-95eb-dddc7f3d15cd"
+      }
+    },
+    {
+      "key": "cd81fcae-f1a0-4ad0-8477-cad55a8bc51e",
+      "properties": {
+        "description": "Use a machine learning library to measure a model’s loss."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "cd81fcae-f1a0-4ad0-8477-cad55a8bc51e"
+      }
+    },
+    {
+      "key": "d7743a75-e5a8-4b33-ba19-5e62840504b3",
+      "properties": {
+        "description": "Write Python code to train decision tree classifiers."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "d7743a75-e5a8-4b33-ba19-5e62840504b3"
       }
     },
     {
@@ -5359,6 +7233,15 @@
       }
     },
     {
+      "level_name": "aif-y2-making-predictions-lesson10-level1-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
       "level_name": "aif-y2-making-predictions-lesson11-level1-2026",
       "s3_config_dir": "",
       "seeding_key": {
@@ -5404,6 +7287,15 @@
       }
     },
     {
+      "level_name": "aif-y2-making-predictions-lesson4-level3-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
       "level_name": "aif-y2-making-predictions-lesson6-level5-2026",
       "s3_config_dir": "",
       "seeding_key": {
@@ -5417,6 +7309,24 @@
       "s3_config_dir": "",
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "level_name": "aif-y2-making-predictions-lesson8-level2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "level_name": "aif-y2-making-predictions-lesson9-level2-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }
@@ -5528,6 +7438,19 @@
       }
     },
     {
+      "key": "8d8e6657-d56a-4217-912a-39237056f347",
+      "position": 1,
+      "learning_goal": "Preparing Data for Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "8d8e6657-d56a-4217-912a-39237056f347",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
       "key": "9cbfd763-9713-4892-b2dd-3b32284a38c5",
       "position": 1,
       "learning_goal": "Preparing Data for Models",
@@ -5549,6 +7472,19 @@
       "seeding_key": {
         "learning_goal.key": "9de4338f-3600-4a4b-bf5d-ee03930e4616",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "a52a2455-4f79-4f37-93a5-af670c5bfaee",
+      "position": 1,
+      "learning_goal": "Evaluating and Improving Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "a52a2455-4f79-4f37-93a5-af670c5bfaee",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }
@@ -5580,6 +7516,19 @@
       }
     },
     {
+      "key": "ecd8cd93-078a-451d-8c40-a0fdcd61e94d",
+      "position": 1,
+      "learning_goal": "Building Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ecd8cd93-078a-451d-8c40-a0fdcd61e94d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
       "key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
       "position": 1,
       "learning_goal": "Preparing Data for Models",
@@ -5588,6 +7537,19 @@
       "seeding_key": {
         "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "key": "fb8f465e-3de2-43e3-a5b7-10f276afd302",
+      "position": 1,
+      "learning_goal": "Building Models",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "fb8f465e-3de2-43e3-a5b7-10f276afd302",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }
@@ -5980,6 +7942,54 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "Student either does not identify a performance difference from feature scaling or does not provide an argument for why feature scaling would affect model performance.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "8d8e6657-d56a-4217-912a-39237056f347",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student identifies that feature scaling improves the accuracy of models, but does not give a clear or accurate answer for why nearest-neighbor classifiers can have their performance negatively affected by unscaled data.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "8d8e6657-d56a-4217-912a-39237056f347",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student improves the accuracy of their model through feature scaling and gives an accurate argument for why nearest-neighbor classifiers might fail when working with unscaled data or why scaled data is easier for classifiers to work with.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "8d8e6657-d56a-4217-912a-39237056f347",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student quantifies the improvement in their model’s accuracy when using feature scaling. Additionally, student argues for why scaling data improved their model’s performance by making specific reference to the features and values in their chosen dataset.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "8d8e6657-d56a-4217-912a-39237056f347",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "Student does not attempt the question.",
       "ai_prompt": "",
       "seeding_key": {
@@ -6070,6 +8080,54 @@
         "understanding": 3,
         "learning_goal.key": "9de4338f-3600-4a4b-bf5d-ee03930e4616",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt to explain the role of mean squared error in evaluating a model.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "a52a2455-4f79-4f37-93a5-af670c5bfaee",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student recognizes that mean squared error is relevant for evaluating a model, but does not correctly explain the mechanics of how mean squared error is related to a model’s quality.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "a52a2455-4f79-4f37-93a5-af670c5bfaee",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student identifies the purpose of a loss function and explains how mean squared error can be interpreted to evaluate a model.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "a52a2455-4f79-4f37-93a5-af670c5bfaee",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student accurately describes the role of loss functions and mean squared error both in evaluating machine learning models. Student describes why mean squared error specifically is useful compared to other loss functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "a52a2455-4f79-4f37-93a5-af670c5bfaee",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }
@@ -6172,6 +8230,54 @@
     },
     {
       "understanding": 0,
+      "teacher_description": "Student incorrectly describes impurity or does not explain its relevance to decision trees.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ecd8cd93-078a-451d-8c40-a0fdcd61e94d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student identifies what it means for a group to have high impurity and notes its relationship to decision trees, but doesn’t fully explain why knowing the impurity would matter for the construction of decision trees.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ecd8cd93-078a-451d-8c40-a0fdcd61e94d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student accurately describes the interpretation of impurity as a metric and explains its relevance for constructing decision trees.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ecd8cd93-078a-451d-8c40-a0fdcd61e94d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student accurately describes what impurity means both mathematically and practically, and gives a detailed explanation for how impurity as a metric would be used by a computer constructing a decision tree.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ecd8cd93-078a-451d-8c40-a0fdcd61e94d",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "Student’s answer is nonexistent or unrelated.",
       "ai_prompt": "",
       "seeding_key": {
@@ -6214,6 +8320,54 @@
         "understanding": 3,
         "learning_goal.key": "f38106ff-7c29-49aa-893f-0ff6cc9464f0",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not identify features or labels, or does not attempt to fit a decision tree classifier to the training data.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "fb8f465e-3de2-43e3-a5b7-10f276afd302",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student identifies some of the features of the dataset and uses them to create and fit a decision tree classifier.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "fb8f465e-3de2-43e3-a5b7-10f276afd302",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student correctly identifies the features and labels of the dataset and uses them with appropriate scikit-learn abstractions to create, fit, and test a decision tree classifier.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "fb8f465e-3de2-43e3-a5b7-10f276afd302",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit4"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student correctly identifies the features and labels of the dataset and uses them in a decision tree classifier. Student uses appropriate scikit-learn abstractions and uses the library’s APIs to configure, fit, and test a model that is well-suited to the problem.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "fb8f465e-3de2-43e3-a5b7-10f276afd302",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit4"
       }

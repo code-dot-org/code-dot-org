@@ -28,7 +28,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.preprocessing import OneHotEncoder\n\nfrom helpers import create_matrix, print_linear_model, print_matrix\n\n# Data\ndata = [\n    {\"age\": 3, \"stained\": \"no\", \"type\": \"dress\", \"price\": 14},\n    {\"age\": 12, \"stained\": \"no\", \"type\": \"jacket\", \"price\": 42},\n    {\"age\": 1, \"stained\": \"yes\", \"type\": \"t-shirt\", \"price\": 5},\n    {\"age\": 25, \"stained\": \"no\", \"type\": \"jacket\", \"price\": 58},\n    {\"age\": 6, \"stained\": \"yes\", \"type\": \"dress\", \"price\": 14},\n]\n\n# TODO: Encodings\nage_encoding = []\nfor row in data:\n  age_encoding.append(row[\"age\"])\n\n# Inputs\nfeatures = [age_encoding]\ninputs = create_matrix(features)\nprint_matrix(inputs)\n\n# Outputs\noutputs = []\nfor row in data:\n  outputs.append(row[\"price\"])\n\n# Model\nmodel = LinearRegression()\nmodel.fit(inputs, outputs)\n\nprint_linear_model(model)",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.preprocessing import OneHotEncoder\n\nfrom helpers import create_matrix, print_linear_model, print_matrix\n\n# Data\ndata = [\n  {\"age\": 3, \"stained\": \"no\", \"type\": \"dress\", \"price\": 14},\n  {\"age\": 12, \"stained\": \"no\", \"type\": \"jacket\", \"price\": 42},\n  {\"age\": 1, \"stained\": \"yes\", \"type\": \"t-shirt\", \"price\": 5},\n  {\"age\": 25, \"stained\": \"no\", \"type\": \"jacket\", \"price\": 58},\n  {\"age\": 6, \"stained\": \"yes\", \"type\": \"dress\", \"price\": 14},\n]\n\n# TODO: Encodings\nage_encoding = []\nfor row in data:\n  age_encoding.append(row[\"age\"])\n\n# Inputs\nfeatures = [age_encoding]\ninputs = create_matrix(features)\nprint_matrix(inputs)\n\n# Outputs\noutputs = []\nfor row in data:\n  outputs.append(row[\"price\"])\n\n# Model\nmodel = LinearRegression()\nmodel.fit(inputs, outputs)\n\nprint_linear_model(model)",
           "folderId": "0",
           "active": true
         },
@@ -50,6 +50,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-10 20:03:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 20:04:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-10 20:03:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 20:04:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:09:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
