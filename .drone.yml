@@ -30,19 +30,23 @@ steps:
     image: curlimages/curl
     commands:
       - set +x
-      # If running on EC2, get hostname from ec2 metadata
+      # If running on EC2, get the instance id and region from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - "instance_id=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/instance-id)"
+      - "region=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/placement/region)"
       - |
         cat <<EOF
 
-        Running on hostname: $hostname
+        Running on instance: $instance_id ($region)
 
-        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
-        bin/drone/shell $hostname
+        Configure AWS in your development environment's shell to use the Development AWS account (where the workers run):
+        export AWS_PROFILE=codeorg-dev
+
+        To open a shell in this drone build (via AWS SSM), wait until the 'unit-tests' step starts and run:
+        bin/drone/shell $instance_id $region
 
         You can also open a VSCode tunnel into drone to edit live:
-        bin/drone/vscode $hostname
+        bin/drone/vscode $instance_id $region
         EOF
 
   # Restore the staging build we created in the `cache-staging-build` pipeline
@@ -140,19 +144,23 @@ steps:
     image: curlimages/curl
     commands:
       - set +x
-      # If running on EC2, get hostname from ec2 metadata
+      # If running on EC2, get the instance id and region from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - "instance_id=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/instance-id)"
+      - "region=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/placement/region)"
       - |
         cat <<EOF
 
-        Running on hostname: $hostname
+        Running on instance: $instance_id ($region)
 
-        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
-        bin/drone/shell $hostname
+        Configure AWS in your development environment's shell to use the Development AWS account (where the workers run):
+        export AWS_PROFILE=codeorg-dev
+
+        To open a shell in this drone build (via AWS SSM), wait until the 'ui-tests' step starts and run:
+        bin/drone/shell $instance_id $region
 
         You can also open a VSCode tunnel into drone to edit live:
-        bin/drone/vscode $hostname
+        bin/drone/vscode $instance_id $region
         EOF
 
   # Restore the staging build we created in the `cache-staging-build` pipeline
@@ -362,6 +370,6 @@ trigger:
 
 ---
 kind: signature
-hmac: b7c4aa7434ba8933cc99f6a2a3d4c5c403941f36c21d23b6896444aa3b507ed5
+hmac: 4f284233753d3d088438450591067cb23e8acf1546040b5881fd047b797cff7b
 
 ...
