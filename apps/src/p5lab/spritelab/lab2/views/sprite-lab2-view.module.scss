@@ -1025,14 +1025,16 @@ $editor-strip-height: 41px;
 // a transformed ancestor would become the containing block of the image
 // dialog, which the drawer's pane renders with fixed position, and the
 // dialog would slide out with it.
-// A sheet over the editors under the scene row, for Pictures and for the
-// map: it fills the editor pane beside the preview's column. Closed, the
+// A sheet under the scene row, for Pictures and for the map: it covers
+// the whole area below, the preview's column included. Closed, the
 // Pictures sheet sits off to the right rather than hidden, so a dialog
 // rendered inside it still shows.
 .sheet {
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
+  width: 100%;
   // Above the floating guide: the image dialog renders inside the sheet,
   // not in a portal, so it can be no higher than the sheet is.
   z-index: variables.$z-index-overlay;
@@ -1043,7 +1045,7 @@ $editor-strip-height: 41px;
 }
 
 .sheetClosed {
-  right: -110%;
+  left: 110%;
 }
 
 .sheetHeader {

@@ -2118,9 +2118,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {/* Kept mounted like the workspace: opening mid-transition eats
           the guide's frames, and remounting loses gallery state. */}
           {imagesMounted && (
-            // The sheet keeps clear of the preview's column like the editors;
-            // closed, it waits off to the right, where a pick's dialog can
-            // still open inside it.
+            // Closed, the sheet waits off to the right, where a pick's
+            // dialog can still open inside it.
             <div
               ref={imagesWrapperRef}
               id={PICTURES_DRAWER_ID}
@@ -2130,10 +2129,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 moduleStyles.sheet,
                 !picturesOpen && moduleStyles.sheetClosed
               )}
-              style={{
-                width: `calc(100% - ${previewWidth}px)`,
-                ...(picturesOpen ? clearOfPreview : {}),
-              }}
             >
               <div className={moduleStyles.sheetHeader}>
                 <span>Pictures</span>
@@ -2153,10 +2148,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           )}
 
           {activeTab === 'Scenes' && (
-            <div
-              className={moduleStyles.sheet}
-              style={{left: 0, right: 0, ...clearOfPreview}}
-            >
+            <div className={moduleStyles.sheet}>
               <div className={moduleStyles.sheetHeader}>
                 <span>All scenes</span>
                 <MuiButton
