@@ -33,12 +33,16 @@ const selectedNames = () =>
     .map(tab => tab.textContent?.trim());
 
 describe('SceneTabs', () => {
-  it('offers a way back to the map, then every scene as a tab, the current one selected', () => {
+  it('offers every scene as a tab, the current one selected, then New scene and the way back to the map', () => {
     renderTabs();
     expect(tabNames()).toEqual(['Forest', 'Cave']);
-    expect(screen.getByRole('button', {name: 'All scenes'})).toBeTruthy();
     expect(selectedNames()).toEqual(['Cave']);
-    expect(screen.getByRole('button', {name: 'New scene'})).toBeTruthy();
+    const buttons = screen
+      .getAllByRole('button')
+      .map(b => b.getAttribute('aria-label') || b.textContent?.trim());
+    expect(buttons.indexOf('New scene')).toBeLessThan(
+      buttons.indexOf('All scenes')
+    );
   });
 
   it('selects a scene and opens the gallery', () => {

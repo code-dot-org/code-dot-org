@@ -32,11 +32,9 @@ interface SceneTabsProps {
 
 /**
  * The project's scenes as a row of tabs, each with its picture, so the
- * scenes are in sight rather than inside a menu. "All scenes" at the head
- * goes back up to the map, and is gone while the map is open; the open
- * scene's tab holds its Code | World switch, so the choice sits inside
- * the scene it is about. Overflow hides under the row's end; the selected
- * tab scrolls into view.
+ * scenes are in sight rather than inside a menu, then New scene, then
+ * "All scenes" up to the map, gone while the map is open. Overflow hides
+ * under the row's end; the selected tab scrolls into view.
  */
 const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   scenes,
@@ -57,22 +55,6 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   }, [activeSceneId, scenes.length]);
   return (
     <div className={moduleStyles.sceneTabs} role="tablist" aria-label="Scenes">
-      {onManageScenes && !galleryOpen && (
-        <button
-          type="button"
-          disabled={disabled || locked}
-          title={locked ? lockedReason : undefined}
-          className={moduleStyles.sceneTabBack}
-          onClick={event => {
-            blurAfterPointerClick(event);
-            onManageScenes();
-          }}
-        >
-          <span className={moduleStyles.sceneTabName} data-label="All scenes">
-            All scenes
-          </span>
-        </button>
-      )}
       <div className={moduleStyles.sceneTabsRow}>
         {scenes.map((scene, index) => {
           const selected = !galleryOpen && scene.id === activeSceneId;
@@ -138,6 +120,22 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
           }}
         >
           <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+        </button>
+      )}
+      {onManageScenes && !galleryOpen && (
+        <button
+          type="button"
+          disabled={disabled || locked}
+          title={locked ? lockedReason : undefined}
+          className={moduleStyles.sceneTabBack}
+          onClick={event => {
+            blurAfterPointerClick(event);
+            onManageScenes();
+          }}
+        >
+          <span className={moduleStyles.sceneTabName} data-label="All scenes">
+            All scenes
+          </span>
         </button>
       )}
       {naming && (
