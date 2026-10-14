@@ -58,4 +58,11 @@ describe('TrainPanel', () => {
     expect(featuresButton().disabled).toBe(true);
     expect(labelOptions()).toEqual(['', 'animal']);
   });
+
+  test('never offers Train model on a pretrained level', () => {
+    renderPanel({
+      mode: {pretrained: true, hideSelectLabel: true, lockFeatures: true},
+    });
+    expect(trainButton()).toBeNull();
+  });
 });

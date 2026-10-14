@@ -5,7 +5,7 @@
 
 // Account-menu trigger (teal pill with the display name + chevron). Header-button
 // pill geometry matches the Rails header's `.header_button` under codeai-brand:
-// shorter + more rounded, semi-bold name, and a white alpha overlay for hover/press.
+// shorter, semi-bold name, and a white alpha overlay for hover/press.
 .accountTrigger {
   min-width: 0;
   height: 32px;
@@ -13,7 +13,6 @@
   column-gap: 8px;
   color: var(--text-neutral-white-fixed);
   border: 1px solid var(--neutral-base-white);
-  border-radius: 0.5rem;
   background-color: var(--background-brand-teal-primary);
   box-shadow: none;
   font-size: 14px;

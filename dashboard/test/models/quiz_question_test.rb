@@ -212,4 +212,38 @@ class QuizQuestionTest < ActiveSupport::TestCase
       assert_equal 'renamed', QuizQuestion.find_by!(key: key).name
     end
   end
+
+  test "setup seeds placeholder content and warns when the encryption key is missing outside production" do
+    CDO.stubs(:properties_encryption_key).returns(nil)
+
+    Dir.mktmpdir do |dir|
+      FileUtils.mkdir_p("#{dir}/config/quiz_questions")
+      key = SecureRandom.uuid
+      File.write(
+        "#{dir}/config/quiz_questions/#{key}.json",
+        JSON.generate('key' => key, 'type' => 'MultipleChoiceQuestion', 'name' => 'seeded_question', 'encrypted_content' => 'bogus')
+      )
+
+      assert_output(/WARNING.*seeded with placeholder content due to missing CDO.properties_encryption_key/) {QuizQuestion.setup(dir)}
+
+      question = MultipleChoiceQuestion.find_by!(key: key)
+      assert_equal question.placeholder_content, question.content
+    end
+  end
+
+  test "setup raises when the encryption key is missing in production" do
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    CDO.stubs(:rack_env).returns(:production)
+
+    Dir.mktmpdir do |dir|
+      FileUtils.mkdir_p("#{dir}/config/quiz_questions")
+      key = SecureRandom.uuid
+      File.write(
+        "#{dir}/config/quiz_questions/#{key}.json",
+        JSON.generate('key' => key, 'type' => 'MultipleChoiceQuestion', 'name' => 'seeded_question', 'encrypted_content' => 'bogus')
+      )
+
+      assert_raises(Encryption::KeyMissingError) {QuizQuestion.setup(dir)}
+    end
+  end
 end

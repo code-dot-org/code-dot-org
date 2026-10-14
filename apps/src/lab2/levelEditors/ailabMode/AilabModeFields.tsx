@@ -10,16 +10,20 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
+  isSetByHiddenTesting,
+  isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
   setDataset,
+  setHideTestingView,
   withoutLabelInFeatures,
 } from './ailabMode';
 import {DatasetFiles} from './datasetColumns';
 import FeaturesField from './FeaturesField';
 import LabelField from './LabelField';
+import PretrainedField from './PretrainedField';
 import {useDatasetColumns} from './useDatasetColumns';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -103,6 +107,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
+      disabled={isSetByPretrained(mode, key) || isSetByHiddenTesting(mode, key)}
       onChange={e =>
         changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
@@ -153,6 +158,37 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           }
           size="s"
         />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <PretrainedField
+          mode={mode}
+          columns={columns}
+          onChange={newMode => {
+            setAccuracyText('');
+            changeMode(newMode);
+          }}
+        />
+        {mode.pretrained === true && (
+          <div className={moduleStyles.booleanField}>
+            {renderCheckbox(
+              'hideDatasetView',
+              'Hide the dataset view so students start on testing'
+            )}
+          </div>
+        )}
+        <div className={moduleStyles.booleanField}>
+          <Checkbox
+            name="ailab_mode_hideTestingView"
+            label="Hide training and testing so students only explore the dataset"
+            checked={mode.hideTestingView === true}
+            disabled={isSetByPretrained(mode, 'hideTestingView')}
+            onChange={e => {
+              setAccuracyText('');
+              changeMode(setHideTestingView(mode, e.target.checked));
+            }}
+            size="s"
+          />
+        </div>
       </div>
       <div className={moduleStyles.fieldArea}>
         <LabelField
@@ -209,6 +245,10 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           step="any"
           value={accuracyText}
           onChange={handleAccuracyChange}
+          disabled={
+            isSetByPretrained(mode, 'requireAccuracy') ||
+            isSetByHiddenTesting(mode, 'requireAccuracy')
+          }
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
           size="s"

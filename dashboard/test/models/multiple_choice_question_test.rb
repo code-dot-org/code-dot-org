@@ -125,4 +125,10 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     )
     refute question.valid?
   end
+
+  test "placeholder_content is valid" do
+    question = build(:multiple_choice_question)
+    question.content = question.placeholder_content
+    assert question.valid?
+  end
 end
