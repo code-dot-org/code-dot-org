@@ -35,6 +35,7 @@
     "@tanstack/react-query": "catalog:",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
+    "classnames": "catalog:",
     "ky": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
@@ -45,6 +46,7 @@
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
@@ -56,6 +58,7 @@
     "jsdom": "catalog:",
     "msw": "catalog:",
     "prettier": "catalog:",
+    "sass": "catalog:",
     "typescript": "~5.9.3",
     "typescript-eslint": "catalog:",
     "vite": "catalog:",

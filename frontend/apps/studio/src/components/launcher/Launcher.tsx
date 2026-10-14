@@ -5,8 +5,9 @@ import {useState} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 
+import type {Curriculum} from '@/config/curricula';
+
 import AppHeader from './AppHeader';
-import type {Curriculum} from './curricula';
 
 import styles from './launcher.module.scss';
 
@@ -66,10 +67,7 @@ function CurriculumCard({curriculum, onOpen}: CurriculumCardProps) {
         )}
       </div>
       <div className={styles.info}>
-        <Tags
-          className={styles.tags}
-          tagsList={tagsFor(topics, curriculum.id)}
-        />
+        <Tags className={styles.tags} tagsList={tagsFor(topics, curriculum.id)} />
         <Typography variant="h4" component="h2" className={styles.title}>
           {title}
         </Typography>

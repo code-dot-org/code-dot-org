@@ -2,7 +2,8 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {describe, it, expect, vi} from 'vitest';
 
-import {CURRICULA, type Curriculum} from '../curricula';
+import {CURRICULA, type Curriculum} from '@/config/curricula';
+
 import Launcher from '../Launcher';
 
 const curriculum: Curriculum = {

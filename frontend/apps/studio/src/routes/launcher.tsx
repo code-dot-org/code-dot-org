@@ -1,13 +1,13 @@
 import {useEffect, useState} from 'react';
 
-import Congratulations from './Congratulations';
+import Launcher from '@/components/launcher/Launcher';
+import Congratulations from '@/components/launcher/Congratulations';
 import {
   CURRICULA,
   curriculumForCourse,
   firstLevelUrl,
   type Curriculum,
-} from './curricula';
-import Launcher from './Launcher';
+} from '@/config/curricula';
 
 // MainActivity.kt opens #finished=<course> when a curriculum reaches its
 // certificate page; the course is empty when unknown.
