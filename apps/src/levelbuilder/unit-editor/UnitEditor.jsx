@@ -442,6 +442,7 @@ class UnitEditor extends React.Component {
             <input
               type="checkbox"
               checked={this.state.simpleProgress}
+              disabled={this.state.progressWidget}
               style={styles.checkbox}
               onChange={e => this.setState({simpleProgress: e.target.checked})}
             />
@@ -471,6 +472,7 @@ class UnitEditor extends React.Component {
             <input
               type="checkbox"
               checked={this.state.progressWidget}
+              disabled={this.state.simpleProgress}
               style={styles.checkbox}
               onChange={e => this.setState({progressWidget: e.target.checked})}
             />

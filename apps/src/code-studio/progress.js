@@ -294,8 +294,10 @@ progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
     fetchURL = `/api/script_structure/courses/${courseName}/units/${unitPosition}`;
   }
   return $.getJSON(fetchURL, scriptData => {
-    initializeStoreWithProgress(store, scriptData, currentLevelId, true);
-    queryUserProgress(store, scriptData, currentLevelId);
+    // Lab2 may have changed level in page while this was in flight.
+    const levelId = store.getState().progress.currentLevelId ?? currentLevelId;
+    initializeStoreWithProgress(store, scriptData, levelId, true);
+    queryUserProgress(store, scriptData, levelId);
   });
 };
 

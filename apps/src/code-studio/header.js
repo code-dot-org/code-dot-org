@@ -133,6 +133,13 @@ header.build = function (
       <ProgressWidgetHeader
         scriptData={scriptData}
         lessonName={scriptNameData?.name ?? lessonData.name}
+        onLessonMenuOpen={() =>
+          progress.retrieveProgress(
+            scriptData.name,
+            scriptData,
+            getStore().getState().progress.currentLevelId
+          )
+        }
       />
     ) : scriptData.simpleProgress ? (
       <SimpleHeader scriptData={scriptData} scriptNameData={scriptNameData} />

@@ -4,7 +4,6 @@ import type {
 } from '@code-dot-org/component-library/progressWidget';
 
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 /** The fields of a getCurrentLevels entry the widget reads. */
@@ -20,7 +19,7 @@ export interface WidgetLevel {
   teacherFeedbackReviewState?: string | null;
   bonus?: boolean;
   usesLab2?: boolean;
-  sublevels?: {isCurrentLevel?: boolean}[];
+  sublevels?: WidgetLevel[];
 }
 
 const bubbleStatusByLevelStatus: Record<string, ProgressBubbleStatus> = {
@@ -34,13 +33,13 @@ const bubbleStatusByLevelStatus: Record<string, ProgressBubbleStatus> = {
   [LevelStatus.review_rejected]: 'error',
 };
 
-const statusLabel: Record<ProgressBubbleStatus, () => string> = {
-  notStarted: () => commonI18n.progressWidgetStatusNotStarted(),
-  inProgress: () => commonI18n.progressWidgetStatusInProgress(),
-  passed: () => commonI18n.progressWidgetStatusPassed(),
-  completed: () => commonI18n.progressWidgetStatusCompleted(),
-  keepWorking: () => commonI18n.progressWidgetStatusKeepWorking(),
-  error: () => commonI18n.progressWidgetStatusRejected(),
+const statusLabel: Record<ProgressBubbleStatus, string> = {
+  notStarted: 'not started',
+  inProgress: 'in progress',
+  passed: 'passed',
+  completed: 'completed',
+  keepWorking: 'keep working',
+  error: 'rejected',
 };
 
 export function bubbleStatus(level: WidgetLevel): ProgressBubbleStatus {
@@ -67,11 +66,9 @@ export function isActive(level: WidgetLevel): boolean {
 }
 
 export function bubbleAriaLabel(level: WidgetLevel): string {
-  const status = level.isLocked
-    ? commonI18n.progressWidgetStatusLocked()
-    : statusLabel[bubbleStatus(level)]();
-  const params = {levelNumber: level.levelNumber ?? '', status};
+  const status = level.isLocked ? 'locked' : statusLabel[bubbleStatus(level)];
+  const levelNumber = level.levelNumber ?? '';
   return isAssessment(level)
-    ? commonI18n.progressWidgetAssessmentLevel(params)
-    : commonI18n.progressWidgetLevel(params);
+    ? `Level ${levelNumber}, assessment, ${status}`
+    : `Level ${levelNumber}, ${status}`;
 }
