@@ -238,5 +238,13 @@ class Ailab < Level
     if parsed_mode['hideDatasetView'] == true && parsed_mode['pretrained'] != true
       errors.add(:mode, 'cannot hide the dataset view unless pretrained.')
     end
+
+    if parsed_mode['hideTestingView'] == true
+      if parsed_mode['pretrained'] == true
+        errors.add(:mode, 'cannot hide the testing view when pretrained.')
+      elsif parsed_mode.key?('requireAccuracy')
+        errors.add(:mode, 'cannot require an accuracy when the testing view is hidden.')
+      end
+    end
   end
 end

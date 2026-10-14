@@ -253,6 +253,50 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
+  it('drops the training options saved with the testing view hidden', () => {
+    const savedMode = renderEditor(
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "randomizeTestData": true}'
+    );
+    expect(JSON.parse(savedMode())).toEqual({
+      hideTestingView: true,
+      trainer: 'knn',
+    });
+  });
+
+  it('clears and locks the training options while the testing view is hidden', () => {
+    const savedMode = renderEditor(
+      '{"requireAccuracy": 70, "hideSave": true, "randomizeTestData": true}'
+    );
+    const accuracy = screen.getByRole('spinbutton', {
+      name: /Required accuracy/,
+    });
+    const hideSave = screen.getByRole('checkbox', {
+      name: 'Hide the save model step',
+    });
+    const randomRows = screen.getByRole('checkbox', {
+      name: 'Reserve random rows for testing instead of the last rows',
+    });
+    const hideTestingView = screen.getByRole('checkbox', {
+      name: 'Hide training and testing so students only explore the dataset',
+    });
+
+    fireEvent.click(hideTestingView);
+    [accuracy, hideSave, randomRows].forEach(field =>
+      expect(field).toBeDisabled()
+    );
+    expect(accuracy).toHaveValue(null);
+    expect(JSON.parse(savedMode())).toEqual({
+      hideTestingView: true,
+      trainer: 'knn',
+    });
+
+    fireEvent.click(hideTestingView);
+    [accuracy, hideSave, randomRows].forEach(field =>
+      expect(field).toBeEnabled()
+    );
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
   it('removes a key when its field is cleared', () => {
     const savedMode = renderEditor('{"hideSave": true, "requireAccuracy": 70}');
     fireEvent.click(
@@ -737,6 +781,20 @@ describe('EditAilabMode', () => {
       fireEvent.click(pretrainedCheckbox());
       expect(hideDatasetView()).not.toBeInTheDocument();
       expect(JSON.parse(savedMode())).not.toHaveProperty('hideDatasetView');
+    });
+
+    it('replaces a hidden testing view', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideTestingView": true}'
+      );
+      await columnsLoaded();
+      const hideTestingView = screen.getByRole('checkbox', {
+        name: 'Hide training and testing so students only explore the dataset',
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+      expect(hideTestingView).toBeDisabled();
+      expect(JSON.parse(savedMode())).not.toHaveProperty('hideTestingView');
     });
 
     it("reports a dataset whose columns don't load", async () => {

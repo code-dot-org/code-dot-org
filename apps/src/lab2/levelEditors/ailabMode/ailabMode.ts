@@ -13,6 +13,7 @@ export type BooleanModeKey =
   | 'lockFeatures'
   | 'pretrained'
   | 'hideDatasetView'
+  | 'hideTestingView'
   | 'hideSave'
   | 'randomizeTestData'
   | 'hideColumnClicking';
@@ -22,6 +23,7 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'lockFeatures',
   'pretrained',
   'hideDatasetView',
+  'hideTestingView',
   'hideSave',
   'hideColumnClicking',
   'randomizeTestData',
@@ -144,6 +146,7 @@ const SET_BY_PRETRAINED: ModeObject = {
   lockFeatures: true,
   randomizeTestData: undefined,
   requireAccuracy: undefined,
+  hideTestingView: undefined,
 };
 
 export function isSetByPretrained(mode: ModeObject, key: string): boolean {
@@ -165,6 +168,31 @@ export function setPretrained(
     newMode.label = getStartingLabel(newMode, defaultLabel);
   } else {
     delete newMode.hideDatasetView;
+  }
+  return newMode;
+}
+
+const SET_BY_HIDDEN_TESTING: ModeObject = {
+  requireAccuracy: undefined,
+  hideSave: undefined,
+  randomizeTestData: undefined,
+};
+
+export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
+  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
+}
+
+export function setHideTestingView(
+  mode: ModeObject,
+  hideTestingView: boolean
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'hideTestingView',
+    hideTestingView ? true : undefined
+  );
+  if (hideTestingView) {
+    Object.assign(newMode, SET_BY_HIDDEN_TESTING);
   }
   return newMode;
 }

@@ -41,6 +41,11 @@ describe('WorkspaceHeader', () => {
     expect(screen.queryByRole('group', {name: 'Workspace view'})).toBeNull();
   });
 
+  test('shows no tabs when the level hides the testing view', () => {
+    renderHeader({mode: {hideTestingView: true}});
+    expect(screen.queryByRole('group', {name: 'Workspace view'})).toBeNull();
+  });
+
   test('disables Testing until a model is trained', () => {
     renderHeader();
     expect(tab('Dataset').getAttribute('aria-pressed')).toBe('true');
