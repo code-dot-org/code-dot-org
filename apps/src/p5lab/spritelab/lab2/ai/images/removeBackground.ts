@@ -112,6 +112,103 @@ function outrightCutoff(
   );
 }
 
+// A border that is one flat opaque colour scoring nothing against the key is
+// a backdrop the model drew in a colour of its own. That colour is keyed by
+// a flood from the edges, which an enclosed patch of it on the character
+// (a white shirt) never joins.
+const OFF_KEY_BORDER_SPREAD = 30;
+const OFF_KEY_LOW_DISTANCE = 30;
+const OFF_KEY_HIGH_DISTANCE = 90;
+const OFF_KEY_SOFT_ALPHA_FLOOR = 48;
+
+function borderPixels(width: number, height: number): number[] {
+  const border: number[] = [];
+  for (let p = 0; p < width * height; p++) {
+    const x = p % width;
+    const y = (p - x) / width;
+    if (x === 0 || y === 0 || x === width - 1 || y === height - 1) {
+      border.push(p);
+    }
+  }
+  return border;
+}
+
+function offKeyBorderColor(
+  data: Uint8ClampedArray,
+  signature: Uint8ClampedArray,
+  width: number,
+  height: number
+): [number, number, number] | null {
+  const border = borderPixels(width, height);
+  const opaque = border.filter(p => data[p * 4 + 3] > 0);
+  if (opaque.length < border.length / 2) {
+    return null;
+  }
+  const scores = opaque.map(p => signature[p]).sort((a, b) => a - b);
+  if (scores[scores.length >> 1] >= DULL_KEY_FLOOR) {
+    return null;
+  }
+  const color: number[] = [];
+  for (let c = 0; c < 3; c++) {
+    const values = opaque.map(p => data[p * 4 + c]).sort((a, b) => a - b);
+    const spread =
+      values[Math.floor(values.length * 0.9)] -
+      values[Math.floor(values.length * 0.1)];
+    if (spread > OFF_KEY_BORDER_SPREAD) {
+      return null;
+    }
+    color.push(values[values.length >> 1]);
+  }
+  return color as [number, number, number];
+}
+
+function floodOffKey(
+  data: Uint8ClampedArray,
+  width: number,
+  height: number,
+  color: [number, number, number],
+  soft: boolean
+): void {
+  const high = soft ? OFF_KEY_HIGH_DISTANCE : OFF_KEY_LOW_DISTANCE;
+  const distance = (p: number) =>
+    Math.max(
+      Math.abs(data[p * 4] - color[0]),
+      Math.abs(data[p * 4 + 1] - color[1]),
+      Math.abs(data[p * 4 + 2] - color[2])
+    );
+  const visited = new Uint8Array(width * height);
+  const stack = borderPixels(width, height);
+  stack.forEach(p => (visited[p] = 1));
+  while (stack.length) {
+    const p = stack.pop()!;
+    const dist = distance(p);
+    if (dist > high || data[p * 4 + 3] === 0) {
+      continue;
+    }
+    if (dist <= OFF_KEY_LOW_DISTANCE) {
+      data[p * 4 + 3] = 0;
+    } else {
+      const alpha = Math.round(
+        (255 * (dist - OFF_KEY_LOW_DISTANCE)) / (high - OFF_KEY_LOW_DISTANCE)
+      );
+      data[p * 4 + 3] = alpha < OFF_KEY_SOFT_ALPHA_FLOOR ? 0 : alpha;
+    }
+    const x = p % width;
+    const y = (p - x) / width;
+    [
+      x > 0 ? p - 1 : -1,
+      x < width - 1 ? p + 1 : -1,
+      y > 0 ? p - width : -1,
+      y < height - 1 ? p + width : -1,
+    ].forEach(q => {
+      if (q >= 0 && !visited[q]) {
+        visited[q] = 1;
+        stack.push(q);
+      }
+    });
+  }
+}
+
 /**
  * Key out a KNOWN colour everywhere in RGBA data — enclosed gaps included,
  * with no dependence on what the corners hold. Pixels carrying the key's
@@ -119,6 +216,7 @@ function outrightCutoff(
  * or textured backdrop dissolves completely; band pixels that touch the
  * character are its edge and go too (sharp) or fade by their signature and
  * lose the key's tint (soft); stray specks the flood missed are cleared.
+ * A backdrop drawn in some other flat colour is flooded from the edges.
  */
 export function keyOutColor(
   data: Uint8ClampedArray,
@@ -135,6 +233,7 @@ export function keyOutColor(
     signature[p] = keySignature(data, p * 4, key);
   }
   const cutoff = outrightCutoff(data, signature, width, height);
+  const offKey = offKeyBorderColor(data, signature, width, height);
   const queue: number[] = [];
   for (let p = 0; p < total; p++) {
     if (data[p * 4 + 3] === 0) {
@@ -197,6 +296,9 @@ export function keyOutColor(
     } else {
       data[p * 4 + 3] = 0;
     }
+  }
+  if (offKey) {
+    floodOffKey(data, width, height, offKey, !!options.soft);
   }
   // Specks: a lone pixel the background surrounds is background too.
   for (let p = 0; p < total; p++) {

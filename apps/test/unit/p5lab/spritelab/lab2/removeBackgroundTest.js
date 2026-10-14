@@ -130,6 +130,70 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(data, 14)).toBe(0);
   });
 
+  it('floods a backdrop drawn in a colour of its own from the edges', () => {
+    // 7x5: a white ring the key never scores; inside, a red body with one
+    // white pixel enclosed in it that the flood cannot reach.
+    const white = [255, 255, 255];
+    const red = [255, 0, 0];
+    const edge = [white, red, red, red, red, red, white];
+    const middle = [white, red, white, red, red, red, white];
+    const data = rgba([
+      ...Array(7).fill(white),
+      ...edge,
+      ...middle,
+      ...edge,
+      ...Array(7).fill(white),
+    ]);
+    keyOutColor(data, 7, 5, MAGENTA);
+    const kept = [];
+    for (let i = 0; i < 35; i++) {
+      if (alpha(data, i) > 0) {
+        kept.push(i);
+      }
+    }
+    expect(kept).toEqual([
+      8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26,
+    ]);
+  });
+
+  it("feathers an off-key backdrop's fringe when soft", () => {
+    const white = [255, 255, 255];
+    const red = [255, 0, 0];
+    const fringe = [255, 200, 200];
+    const inner = [white, fringe, red, red, red, fringe, white];
+    const data = rgba([
+      ...Array(7).fill(white),
+      ...inner,
+      ...inner,
+      ...inner,
+      ...Array(7).fill(white),
+    ]);
+    keyOutColor(data, 7, 5, MAGENTA, {soft: true});
+    expect(alpha(data, 14)).toBe(0);
+    expect(alpha(data, 15)).toBeGreaterThan(0);
+    expect(alpha(data, 15)).toBeLessThan(255);
+    expect(alpha(data, 16)).toBe(255);
+  });
+
+  it('leaves an off-key border alone when it is not one flat colour', () => {
+    const white = [255, 255, 255];
+    const blue = [0, 0, 255];
+    const red = [255, 0, 0];
+    const ring = i => (i % 2 ? white : blue);
+    const inner = [white, red, red, red, red, red, blue];
+    const data = rgba([
+      ...Array.from({length: 7}, (_, i) => ring(i)),
+      ...inner,
+      ...inner,
+      ...inner,
+      ...Array.from({length: 7}, (_, i) => ring(i)),
+    ]);
+    keyOutColor(data, 7, 5, MAGENTA);
+    for (let i = 0; i < 35; i++) {
+      expect(alpha(data, i)).toBe(255);
+    }
+  });
+
   it('keeps the cutoff when the border varies', () => {
     // The same ring with the body crossing it: the border is not a flat
     // backdrop, so a dull pixel beside the body stays.
