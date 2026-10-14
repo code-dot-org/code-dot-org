@@ -24,6 +24,7 @@ const QUESTION: QuizQuestionSummary = {
 const BASE_RESULT: QuizQuestionResult = {
   quizQuestionId: 1,
   selectedChoiceId: null,
+  answerText: null,
   correct: null,
   explanation: null,
   correctChoiceId: null,
@@ -160,6 +161,61 @@ describe('QuestionResultCard', () => {
       renderCard({explanation: null}, {revealAnswerExplanation: true});
 
       expect(screen.queryByText('Answer explanation')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('free response', () => {
+    const FR_QUESTION: QuizQuestionSummary = {
+      id: 2,
+      type: 'FreeResponseQuestion',
+      questionName: 'Loop',
+      questionTitle: 'Why does the loop stop?',
+      page: 1,
+    };
+
+    it("shows the student's answer text, without a choice list", () => {
+      render(
+        <QuestionResultCard
+          question={FR_QUESTION}
+          result={{...BASE_RESULT, quizQuestionId: 2, answerText: 'x > 3'}}
+        />
+      );
+
+      expect(screen.getByText('Your answer')).toBeInTheDocument();
+      expect(screen.getByText('x > 3')).toBeInTheDocument();
+      expect(screen.queryByRole('list')).not.toBeInTheDocument();
+    });
+
+    it('says there is no answer when the question was skipped', () => {
+      render(
+        <QuestionResultCard
+          question={FR_QUESTION}
+          result={{...BASE_RESULT, quizQuestionId: 2}}
+          isViewingStudent
+        />
+      );
+
+      expect(screen.getByText("Student's answer")).toBeInTheDocument();
+      expect(screen.getByText('No answer')).toBeInTheDocument();
+    });
+
+    it('shows the explanation when revealed', () => {
+      render(
+        <QuestionResultCard
+          question={FR_QUESTION}
+          result={{
+            ...BASE_RESULT,
+            quizQuestionId: 2,
+            answerText: 'x > 3',
+            explanation: 'The condition becomes false.',
+          }}
+          revealAnswerExplanation
+        />
+      );
+
+      expect(
+        screen.getByText('The condition becomes false.')
+      ).toBeInTheDocument();
     });
   });
 });
