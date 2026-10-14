@@ -51,7 +51,7 @@ module Lti
             user: existing_user,
             event_name: 'lti_user_signin',
             metadata: metadata,
-            session: session,
+            request: request,
           )
           target_url = session[:user_return_to] || home_path
           flash[:notice] = I18n.t('lti.account_linking.successfully_linked')

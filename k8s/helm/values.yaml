@@ -119,10 +119,11 @@ user:
   home: /home/cdo
   allowSudo: false
 
-# Reserved for a future local dashboard profile. There is no Skaffold profile
-# that enables these mounts while the root docker family lacks an image with
-# the frontend assets.
 localDev:
+  # Local-only credentials and boot defaults; live deployments use external secrets.
+  stubSecrets: false
+
+  # Reserved for a future local dashboard profile with frontend assets.
   mounts:
     mountDotAWS: false
     mountDotConfigGcloud: false

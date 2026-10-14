@@ -7,7 +7,7 @@ import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {parseJSON} from '../jsonReaderWrapper';
+import {loadDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
@@ -55,9 +55,7 @@ const SelectDataset = () => {
       setSelectedJSON(jsonPath);
 
       invalidatePendingDatasetLoads();
-      parseCSV(csvPath, true, false);
-
-      parseJSON(jsonPath);
+      loadDataset(csvPath, jsonPath);
     }
   };
 

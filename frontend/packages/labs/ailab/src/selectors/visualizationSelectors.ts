@@ -28,6 +28,7 @@ import {
 } from '../selectors';
 import {getTrainerFamily} from '../trainers/ids';
 import type {
+  AilabProject,
   Coordinate,
   ScatterPlotData,
   CrossTabResult,
@@ -45,7 +46,8 @@ import {
 export const getScatterPlotData = createSelector(
   [
     getLabelColumn,
-    (state: RootState) => labelColumnIsNumerical(state),
+    (state: RootState, project: AilabProject) =>
+      labelColumnIsNumerical(state, project),
     getCurrentColumn,
     (state: RootState) => currentColumnIsNumerical(state),
     getData,
@@ -128,11 +130,13 @@ export const getScatterPlotData = createSelector(
 export const getCrossTabData = createSelector(
   [
     getLabelColumn,
-    (state: RootState) => labelColumnIsCategorical(state),
+    (state: RootState, project: AilabProject) =>
+      labelColumnIsCategorical(state, project),
     getCurrentColumn,
     (state: RootState) => currentColumnIsCategorical(state),
     getData,
-    (state: RootState) => getUniqueOptionsLabelColumn(state),
+    (state: RootState, project: AilabProject) =>
+      getUniqueOptionsLabelColumn(state, project),
     getDatasetId,
   ],
   (
@@ -248,9 +252,10 @@ export const getUniqueOptionsLabelColumn = createSelector(
 
 export const getDisplayTree = createSelector(
   [
-    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
     getTrainerFamily,
-    (state: RootState) => state.selectedFeatures,
+    (_state: RootState, project: AilabProject) => project.selectedFeatures,
     (state: RootState) => state.featureNumberKey,
     getLabelColumn,
   ],
@@ -275,7 +280,8 @@ export const getDisplayTree = createSelector(
 export const getPredictionTrace = createSelector(
   [
     getDisplayTree,
-    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
     (state: RootState) => state.prediction,
     (state: RootState) => state.predictionInputs,
     (state: RootState) => state.predictionTestData,
@@ -297,16 +303,19 @@ export const getPredictionTrace = createSelector(
 
 export function getPredictionStep(
   state: RootState,
+  project: AilabProject,
   trainedModel?: TrainedModel,
 ): number {
-  const pathLength = getPredictionTrace(state, trainedModel)?.path.length ?? 0;
+  const pathLength =
+    getPredictionTrace(state, project, trainedModel)?.path.length ?? 0;
   return state.predictionStep ?? pathLength - 1;
 }
 
 export const getDisplayTreeCounts = createSelector(
   [
     getDisplayTree,
-    (_state: RootState, trainedModel?: TrainedModel) => trainedModel,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
     (state: RootState) => state.accuracyCheckExamples,
     getAccuracyGrades,
   ],

@@ -9,8 +9,12 @@ email, account actions), **Educator Profile** (school information and educator
 role, educators only), and **Integrations** (linked accounts). The email
 opt-in lives in the Update email dialog, as in legacy.
 
-Integrations is hidden from accounts that can't manage linked accounts, the
-same accounts legacy hides its linked accounts section from.
+Integrations is hidden from accounts that can't manage linked accounts:
+accounts not yet migrated to multiple logins, and accounts in a
+district-restricted LMS deployment. Connecting and
+disconnecting a linked account are native form POSTs to the Rails OAuth and
+disconnect routes, and land on the Rails `/users/edit` page with its flash
+message, as unlinking an LMS login does.
 
 Each tab is its own form: one `FormProvider`, one `SaveBar`, one PATCH. School
 information is a modal flow instead, because it needs a zip search and a

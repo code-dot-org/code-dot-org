@@ -4,7 +4,12 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import {ProjectProvider, useProject} from '../../src/ProjectContext';
-import rootReducer, {resetState} from '../../src/redux';
+import rootReducer, {
+  resetState,
+  setImportedData,
+  setPresetColumns,
+} from '../../src/redux';
+import {initialProject} from '../../src/types';
 
 const run = (accuracy, hyperparameters) => ({
   hyperparameters,
@@ -20,8 +25,8 @@ const run = (accuracy, hyperparameters) => ({
 const FIRST = run('80.00', {k: 1});
 const SECOND = run('90.00', {k: 3});
 
-function renderContext(openWith) {
-  const store = createStore(rootReducer);
+function renderContext(openWith, seedStore) {
+  const store = seedStore ?? createStore(rootReducer);
   let context;
   const Probe = () => {
     context = useProject();
@@ -45,14 +50,12 @@ const accuracies = project =>
 describe('ProjectContext', () => {
   test('starts empty', () => {
     const {project} = renderContext();
-    expect(project()).toEqual({
-      hyperparameters: undefined,
-      historicResults: [],
-    });
+    expect(project()).toEqual(initialProject);
   });
 
   test('opens with a project it is handed', () => {
     const {project} = renderContext({
+      ...initialProject,
       hyperparameters: {k: 5},
       historicResults: [FIRST.historicResult],
     });
@@ -139,5 +142,108 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(accuracies(project())).toEqual([]);
+  });
+});
+
+describe('ProjectContext column choices', () => {
+  const imported = () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    return store;
+  };
+
+  test('a feature is added once, in the dataset\u2019s column order', () => {
+    const {project, context} = renderContext(undefined, imported());
+
+    act(() => context().addSelectedFeature('c'));
+    act(() => context().addSelectedFeature('a'));
+    act(() => context().addSelectedFeature('c'));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  test('removing a feature leaves the rest', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setSelectedFeatures(['a', 'b', 'c']));
+
+    act(() => context().removeSelectedFeature('b'));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  test('setting the features replaces them, in column order', () => {
+    const {project, context} = renderContext(undefined, imported());
+
+    act(() => context().setSelectedFeatures(['c', 'a']));
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+
+    act(() => context().setSelectedFeatures([]));
+    expect(project().selectedFeatures).toEqual([]);
+  });
+
+  test('leaves the array it was handed untouched', () => {
+    const {context} = renderContext(undefined, imported());
+    const features = ['c', 'a'];
+
+    act(() => context().setSelectedFeatures(features));
+
+    expect(features).toEqual(['c', 'a']);
+  });
+
+  // A run owns its own results, never the student's columns, so a cancel must
+  // not roll back a choice made after the run started.
+  test('a cancel keeps column changes made since the run', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setSelectedFeatures(['a']));
+    act(() => context().snapshotTrainingRun());
+    act(() => context().applyTrainingRun(FIRST));
+
+    act(() => context().setSelectedFeatures(['a', 'b']));
+    act(() => context().restoreTrainingRun());
+
+    expect(project().selectedFeatures).toEqual(['a', 'b']);
+    expect(accuracies(project())).toEqual([]);
+  });
+
+  test('a column cannot be both the label and a feature', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setSelectedFeatures(['a', 'b']));
+
+    act(() => context().setLabelColumn('a'));
+
+    expect(project().labelColumn).toBe('a');
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  /*
+    loadDataset works out what a level's mode fixes once the dataset is in,
+    and publishes it; applying it is this context's job. loadDataset.test.js
+    covers the working out.
+  */
+  test('takes the columns a dataset load fixed', () => {
+    const store = imported();
+    const {project} = renderContext(undefined, store);
+
+    act(() => {
+      store.dispatch(
+        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']}),
+      );
+    });
+
+    expect(project().labelColumn).toBe('b');
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  test('leaves the columns alone when a load fixes neither', () => {
+    const store = imported();
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().setSelectedFeatures(['a']));
+
+    act(() => {
+      store.dispatch(setPresetColumns({}));
+    });
+
+    expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual(['a']);
   });
 });

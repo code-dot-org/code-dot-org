@@ -76,6 +76,11 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         cd into dashboard and run <code>bundle exec rake db:drop</code> before trying <code>bundle exec rake install</code> again.
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
+    <details>
+        <summary>About the non-root <code>writer</code> and <code>reader</code> MySQL users</summary>
+        As part of <code>rake install</code>, the <code>db:provision_sql_users</code> task creates two non-root
+        application users, mirroring the ones the Custom::SQLUser CloudFormation Lambda provisions in AWS.
+    </details>
 
 1. fix your database timezone to match our servers
     - `bin/mysql-client-admin`
