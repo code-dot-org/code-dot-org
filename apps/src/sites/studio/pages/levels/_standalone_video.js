@@ -5,7 +5,10 @@ import ReactDom from 'react-dom';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
-import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
+import {
+  createVideoWithFallback,
+  wrapDownloadLink,
+} from '@cdo/apps/code-studio/videos';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -70,6 +73,9 @@ $(document).ready(() => {
       container
     );
   });
+
+  // Localize the existing rendered out download link
+  wrapDownloadLink($('.video-link a'));
 
   // Do some dynamic sizing of full width videos.
   if (videoFullWidth) {
