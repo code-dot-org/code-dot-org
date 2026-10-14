@@ -1,6 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {Typography as MuiTypography} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -136,6 +136,7 @@ import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
+import Sheet from './components/Sheet';
 import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
@@ -2222,65 +2223,39 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           </div>
 
           {/* Kept mounted like the workspace: opening mid-transition eats
-          the guide's frames, and remounting loses gallery state. */}
+          the guide's frames, and remounting loses gallery state. Closed, it
+          waits off to the right, where a pick's dialog can still open
+          inside it. */}
           {imagesMounted && (
-            // Closed, the sheet waits off to the right, where a pick's
-            // dialog can still open inside it.
-            <div
+            <Sheet
               ref={imagesWrapperRef}
               id={PICTURES_DRAWER_ID}
-              role="region"
-              aria-label="Pictures"
-              className={classNames(
-                moduleStyles.sheet,
-                !picturesOpen && moduleStyles.sheetClosed
-              )}
+              title="Pictures"
+              closed={!picturesOpen}
+              onDone={() => setPicturesOpen(false)}
             >
-              <div className={moduleStyles.sheetHeader}>
-                <span>Pictures</span>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="small"
-                  onClick={() => setPicturesOpen(false)}
-                >
-                  Done
-                </MuiButton>
-              </div>
-              <div className={moduleStyles.sheetBody}>
-                <GenerateImagePane {...imagePaneProps} />
-              </div>
-            </div>
+              <GenerateImagePane {...imagePaneProps} />
+            </Sheet>
           )}
 
           {activeTab === 'Scenes' && (
-            <div className={moduleStyles.sheet}>
-              <div className={moduleStyles.sheetHeader}>
-                <span>All scenes</span>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="small"
-                  onClick={() => sceneEditing.selectScene(activeScene.id)}
-                >
-                  Done
-                </MuiButton>
-              </div>
-              <div className={moduleStyles.sheetBody}>
-                <ScenesGallery
-                  scenes={sceneMetadata}
-                  activeSceneId={activeSceneId}
-                  editable={scenesEditable}
-                  links={links}
-                  onPlayGame={handlePlayGame}
-                  onOpenScene={sceneEditing.selectScene}
-                  onCreateScene={sceneEditing.createScene}
-                  onRenameScene={sceneEditing.renameScene}
-                  onDeleteScene={sceneEditing.deleteScene}
-                  onMakeStartScene={sceneEditing.makeStartScene}
-                />
-              </div>
-            </div>
+            <Sheet
+              title="All scenes"
+              onDone={() => sceneEditing.selectScene(activeScene.id)}
+            >
+              <ScenesGallery
+                scenes={sceneMetadata}
+                activeSceneId={activeSceneId}
+                editable={scenesEditable}
+                links={links}
+                onPlayGame={handlePlayGame}
+                onOpenScene={sceneEditing.selectScene}
+                onCreateScene={sceneEditing.createScene}
+                onRenameScene={sceneEditing.renameScene}
+                onDeleteScene={sceneEditing.deleteScene}
+                onMakeStartScene={sceneEditing.makeStartScene}
+              />
+            </Sheet>
           )}
         </LabShell>
       )}
