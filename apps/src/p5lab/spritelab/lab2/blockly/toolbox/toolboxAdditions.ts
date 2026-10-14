@@ -97,7 +97,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   },
   {
     // Scene-driven storytelling: place and size characters, speech, click and
-    // timer events, and scene jumps. No behaviours: those are for platform
+    // timer events, and scene jumps. No behaviors: those are for platform
     // scenes for now.
     name: 'Story',
     types: [

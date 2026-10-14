@@ -5,7 +5,7 @@ import {
   WANDER_STAND_EVERY,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/walkingOnBlocks';
 
-// The behaviours' runtime half is interpreted ES5 source, so the tests run
+// The behaviors' runtime half is interpreted ES5 source, so the tests run
 // the shipped string with stubbed lab commands. The stubs mirror the real
 // ones: platformSupportAhead is true when the point under the body's leading
 // edge (the body is 80% of the on-screen size) is inside a block,
@@ -35,7 +35,7 @@ interface WalkCase {
   random?: () => number;
   frames?: number;
   // A wall's left edge: after each tick the sprite is pushed back out of it,
-  // as the engine's collision does between behaviour ticks.
+  // as the engine's collision does between behavior ticks.
   wallAt?: number;
 }
 

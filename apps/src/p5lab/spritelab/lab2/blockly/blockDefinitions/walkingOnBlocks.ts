@@ -15,7 +15,7 @@ export const WALK_X_UNKNOWN = -1;
 export const WANDER_STAND_EVERY = 90;
 export const WANDER_STAND_TICKS: [number, number] = [8, 40];
 
-// A follower stops this close to the player, centre to centre: one cell,
+// A follower stops this close to the player, center to center: one cell,
 // so it stands beside the player rather than over it.
 export const FOLLOW_REACH_PX = 40;
 

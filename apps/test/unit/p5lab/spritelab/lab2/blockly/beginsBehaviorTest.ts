@@ -30,7 +30,7 @@ describe('beginsBehavior block', () => {
     ]);
   });
 
-  it('generates the begins call with the chosen behaviour', () => {
+  it('generates the begins call with the chosen behavior', () => {
     const block = {
       getFieldValue: (name: string) =>
         name === 'SPRITE' ? '"Sprite 1"' : 'wanderingOnBlocks',

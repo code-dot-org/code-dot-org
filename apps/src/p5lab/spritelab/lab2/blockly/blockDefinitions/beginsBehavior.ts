@@ -8,7 +8,7 @@ import {WALKERS_HELPER_CODE} from './walkingOnBlocks';
 
 export const BEGINS_BEHAVIOR_BLOCK_TYPE = 'spritelab2_beginsBehavior';
 
-/** The dropdown's behaviours: label, and the helper that makes one. */
+/** The dropdown's behaviors: label, and the helper that makes one. */
 export const BEHAVIOR_OPTIONS: [string, string][] = [
   ['patrolling left and right on blocks', 'patrollingOnBlocks'],
   ['wandering on blocks', 'wanderingOnBlocks'],
@@ -16,7 +16,7 @@ export const BEHAVIOR_OPTIONS: [string, string][] = [
   ['floating', 'floating'],
 ];
 
-/** "[sprite] begins [behaviour]" in one block, the behaviour chosen from a
+/** "[sprite] begins [behavior]" in one block, the behavior chosen from a
     dropdown rather than plugged in as a value block. */
 const definition: BlockJson = {
   type: BEGINS_BEHAVIOR_BLOCK_TYPE,
@@ -32,7 +32,7 @@ const definition: BlockJson = {
   tooltip: 'Give a sprite something to do on its own.',
 };
 
-// A sprite keeps one behaviour: the new one replaces whatever it had.
+// A sprite keeps one behavior: the new one replaces whatever it had.
 const generator: GeneratorFunction = block => {
   const sprite = `{costume: ${noteImageFieldValue(
     block.getFieldValue('SPRITE')
