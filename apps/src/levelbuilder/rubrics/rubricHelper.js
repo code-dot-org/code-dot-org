@@ -131,6 +131,28 @@ function resetPositionsOfLearningGoals(keyConceptList) {
   return keyConceptList;
 }
 
+export async function deleteRubric(rubricId) {
+  const csrfToken = document.querySelector('meta[name="csrf-token"]')
+    ? document.querySelector('meta[name="csrf-token"]').attributes['content']
+        .value
+    : null;
+  const response = await fetch(`/rubrics/${rubricId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrfToken,
+    },
+  });
+  if (!response.ok) {
+    const contentType = response.headers.get('Content-Type') || '';
+    const body = contentType.includes('application/json')
+      ? JSON.stringify(await response.json())
+      : await response.text();
+    throw new Error(`Error deleting rubric: ${response.status} ${body}`);
+  }
+  return response.json();
+}
+
 function clearNotification(setSaveNotificationText) {
   setTimeout(() => {
     setSaveNotificationText('');
@@ -146,5 +168,15 @@ export const styles = {
   bottomRow: {
     display: 'flex',
     justifyContent: 'end',
+  },
+  bottomRowSpread: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  addNewConceptButtonContainer: {
+    marginTop: 20,
+    display: 'flex',
+    justifyContent: 'flex-end',
   },
 };
