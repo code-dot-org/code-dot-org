@@ -210,9 +210,7 @@ export function restoreFromPretrained(
     (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
     setPretrained(mode, false)
   );
-  return withRandomTestData(
-    setHideTestingView(restored, restored.hideTestingView === true)
-  );
+  return setHideTestingView(restored, restored.hideTestingView === true);
 }
 
 export function isMissingPretrainedColumns(
@@ -241,11 +239,13 @@ export function withDefaultTrainer(mode: ModeObject): ModeObject {
     : mode;
 }
 
-// The runtime reads an unset key as the last rows.
-export function withRandomTestData(mode: ModeObject): ModeObject {
-  return mode.randomizeTestData === undefined
-    ? setJsonObjectValue(mode, 'randomizeTestData', true)
-    : mode;
+const hasTrueDefault = (key: BooleanModeKey) => key === 'randomizeTestData';
+
+export function isBooleanModeChecked(
+  mode: ModeObject,
+  key: BooleanModeKey
+): boolean {
+  return (mode[key] ?? hasTrueDefault(key)) === true;
 }
 
 export function setBooleanMode(
@@ -253,10 +253,9 @@ export function setBooleanMode(
   key: BooleanModeKey,
   checked: boolean
 ): ModeObject {
-  const hasTrueDefault = key === 'randomizeTestData';
   return setJsonObjectValue(
     mode,
     key,
-    checked || hasTrueDefault ? checked : undefined
+    checked === hasTrueDefault(key) ? undefined : checked
   );
 }

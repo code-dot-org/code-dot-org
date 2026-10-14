@@ -56,6 +56,14 @@ describe('loadLevel', () => {
 
     expect(store.getState().resetKeepsHistoricResults).toBe(false);
   });
+
+  test('reserves random rows for testing unless the mode turns them off', () => {
+    loadLevel(undefined);
+    expect(store.getState().reserveLocation).toBe('random');
+
+    loadLevel({randomizeTestData: false});
+    expect(store.getState().reserveLocation).toBe('end');
+  });
 });
 
 // The component suites render panels directly, so only this reaches the

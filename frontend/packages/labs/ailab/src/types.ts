@@ -21,6 +21,7 @@ export interface Mode {
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
+  // Unset reserves random rows. Must be false when `pretrained`.
   randomizeTestData?: boolean;
   hideColumnClicking?: boolean;
 }

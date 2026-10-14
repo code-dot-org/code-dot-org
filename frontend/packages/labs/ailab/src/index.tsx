@@ -125,9 +125,10 @@ export const instructionsDismissed = function (): void {
 const processMode = (mode: Mode | undefined): void => {
   const assetPath = getAssetPath();
 
-  const reserveLocation = mode?.randomizeTestData
-    ? TestDataLocations.RANDOM
-    : TestDataLocations.END;
+  const reserveLocation =
+    mode?.randomizeTestData === false
+      ? TestDataLocations.END
+      : TestDataLocations.RANDOM;
   store.dispatch(setReserveLocation(reserveLocation));
 
   // The dataset picker is hidden for now, so a mode without exactly one

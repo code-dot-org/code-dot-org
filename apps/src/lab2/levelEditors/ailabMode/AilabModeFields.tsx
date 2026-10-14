@@ -10,6 +10,7 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
+  isBooleanModeChecked,
   isDisabledByHiddenTesting,
   isSetByPretrained,
   isValidAccuracy,
@@ -108,7 +109,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     <Checkbox
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
-      checked={mode[key] === true}
+      checked={isBooleanModeChecked(mode, key)}
       disabled={
         isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
       }
