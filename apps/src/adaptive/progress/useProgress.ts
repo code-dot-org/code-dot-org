@@ -13,6 +13,7 @@ import {
   Answer,
   CheckpointStatus,
   EMPTY_PROGRESS,
+  GeneratedContent,
   PROJECT_STEP_ID,
   Progress,
   StepContext,
@@ -172,10 +173,8 @@ export function useProgress(
     [updateStep, store, scriptId, levelId]
   );
 
-  const updateStepContext = useCallback(
-    (id: string, patch: Pick<StepContext, 'generated'>) => {
-      const content = patch.generated;
-      if (!content) return;
+  const saveGeneratedInstructions = useCallback(
+    (id: string, content: GeneratedContent) => {
       updateStep(id, entry => ({
         timeSpent: 0,
         ...entry,
@@ -206,6 +205,6 @@ export function useProgress(
     completeStep,
     leaveStep,
     saveAnswers,
-    updateStepContext,
+    saveGeneratedInstructions,
   };
 }

@@ -14,6 +14,7 @@ import I18n from './i18n';
 import {useProject} from './ProjectContext';
 import {
   getHideDatasetView,
+  getHideTestingView,
   getPanelButtons,
   saveModel,
   setCurrentPanel,
@@ -252,6 +253,7 @@ const App = ({
   const {trainedModel} = useTrainingData();
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const hideDatasetView = useAppSelector(getHideDatasetView);
+  const hideTestingView = useAppSelector(getHideTestingView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   usePretrainOnLoad();
@@ -276,7 +278,9 @@ const App = ({
 
   return (
     <div className={styles.app} style={colorVariables}>
-      <WorkspaceHeader onStartOver={pretrained ? undefined : onStartOver} />
+      <WorkspaceHeader
+        onStartOver={pretrained || hideTestingView ? undefined : onStartOver}
+      />
 
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
@@ -292,13 +296,21 @@ const App = ({
       {currentPanel === 'datasetView' && !hideDatasetView && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
-            <ContainerLeft>
-              <DataDisplay />
-            </ContainerLeft>
+            {hideTestingView ? (
+              <ContainerFullWidth>
+                <DataDisplay />
+              </ContainerFullWidth>
+            ) : (
+              <>
+                <ContainerLeft>
+                  <DataDisplay />
+                </ContainerLeft>
 
-            <ContainerRight>
-              <TrainPanel />
-            </ContainerRight>
+                <ContainerRight>
+                  <TrainPanel />
+                </ContainerRight>
+              </>
+            )}
           </div>
           <ColumnAnalysis />
         </BodyContainer>

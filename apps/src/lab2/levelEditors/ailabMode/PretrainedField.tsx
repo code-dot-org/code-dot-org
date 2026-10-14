@@ -1,10 +1,11 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {Typography} from '@mui/material';
-import React, {useId} from 'react';
+import React, {useId, useRef} from 'react';
 
 import {
   isMissingPretrainedColumns,
   ModeObject,
+  restoreFromPretrained,
   setPretrained,
 } from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
@@ -28,6 +29,7 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
     : undefined;
   const checkboxRef = useCheckboxValidity(error);
   const errorId = useId();
+  const beforePretrainedRef = useRef<ModeObject>();
 
   return (
     <div ref={checkboxRef}>
@@ -38,9 +40,14 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
         disabled={!columns}
         aria-invalid={!!error}
         aria-describedby={error ? errorId : undefined}
-        onChange={e =>
-          onChange(setPretrained(mode, e.target.checked, columns?.defaultLabel))
-        }
+        onChange={e => {
+          if (e.target.checked) {
+            beforePretrainedRef.current = mode;
+            onChange(setPretrained(mode, true, columns?.defaultLabel));
+          } else {
+            onChange(restoreFromPretrained(mode, beforePretrainedRef.current));
+          }
+        }}
         size="s"
       />
       <Typography variant="body4" className={moduleStyles.descriptionText}>

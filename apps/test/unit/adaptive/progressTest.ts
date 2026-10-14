@@ -138,7 +138,6 @@ describe('useProgress', () => {
     load: jest.fn().mockResolvedValue(loaded),
     saveStep: jest.fn().mockResolvedValue(undefined),
     saveInstructions: jest.fn().mockResolvedValue(undefined),
-    reset: jest.fn().mockResolvedValue(undefined),
   });
 
   const renderProgress = async (
@@ -260,7 +259,7 @@ describe('useProgress', () => {
     const {result} = await renderProgress(store);
     const generated = {instructions: 'Hi', inputsHash: 'ab'};
 
-    act(() => result.current.updateStepContext('try', {generated}));
+    act(() => result.current.saveGeneratedInstructions('try', generated));
 
     expect(result.current.stepContextMap.try.generated).toEqual(generated);
     expect(result.current.statusMap.intro).toBe('available');

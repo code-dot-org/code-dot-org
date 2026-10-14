@@ -28,7 +28,6 @@ export interface ProgressStore {
     stepId: string,
     content: GeneratedContent
   ): Promise<void>;
-  reset(key: ProgressKey): Promise<void>;
 }
 
 const query = ({scriptId, levelId}: ProgressKey) =>
@@ -36,7 +35,7 @@ const query = ({scriptId, levelId}: ProgressKey) =>
 
 /** Sends writes one at a time, in order; a failed one is logged and skipped. */
 export function createServerProgressStore(
-  http: Pick<typeof HttpClient, 'get' | 'put' | 'delete'> = HttpClient
+  http: Pick<typeof HttpClient, 'get' | 'put'> = HttpClient
 ): ProgressStore {
   let chain: Promise<void> = Promise.resolve();
   const enqueue = (label: string, request: () => Promise<unknown>) => {
@@ -80,12 +79,6 @@ export function createServerProgressStore(
         putStep(key, stepId, 'generated_instructions', {
           generatedInstructions: content,
         })
-      );
-    },
-
-    reset(key) {
-      return enqueue('reset', () =>
-        http.delete(`/adaptive_progress?${query(key)}`, true)
       );
     },
   };

@@ -22,13 +22,11 @@ describe('createServerProgressStore', () => {
   const http = {
     get: jest.fn(),
     put: jest.fn(),
-    delete: jest.fn(),
   };
 
   beforeEach(() => {
     jest.resetAllMocks();
     http.put.mockResolvedValue({ok: true});
-    http.delete.mockResolvedValue({ok: true});
   });
 
   it('loads the steps for the unit and level', async () => {
@@ -90,12 +88,9 @@ describe('createServerProgressStore', () => {
     const store = createServerProgressStore(http);
 
     store.saveStep(key, 'read', {started: true});
-    await store.reset(key);
+    await store.saveStep(key, 'read', {completed: true});
 
     expect(mockLogError).toHaveBeenCalledTimes(1);
-    expect(http.delete).toHaveBeenCalledWith(
-      '/adaptive_progress?scriptId=11&levelId=98263',
-      true
-    );
+    expect(http.put).toHaveBeenCalledTimes(2);
   });
 });

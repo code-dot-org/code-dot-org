@@ -122,7 +122,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   startStep,
   completeStep,
   leaveStep,
-  updateStepContext,
+  saveGeneratedInstructions,
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
@@ -160,10 +160,17 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         checkpoint: playing,
         statusMap,
         stepContextMap,
-        updateStepContext,
+        saveGeneratedInstructions,
         aiContext,
       },
-    [pathway, playing, statusMap, stepContextMap, updateStepContext, aiContext]
+    [
+      pathway,
+      playing,
+      statusMap,
+      stepContextMap,
+      saveGeneratedInstructions,
+      aiContext,
+    ]
   );
 
   if (pathwayContext) {
