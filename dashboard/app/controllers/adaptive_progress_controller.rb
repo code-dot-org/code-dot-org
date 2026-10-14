@@ -12,12 +12,6 @@ class AdaptiveProgressController < ApplicationController
   # TestResults.LEVEL_STARTED in apps/src/constants.js.
   LEVEL_STARTED_RESULT = -150
 
-  PROGRESS_FIELDS = %w(started completed timeSinceLastSave answers).freeze
-  JSON_FIELDS = {
-    'generatedInstructions' => :generated_instructions,
-    'validationHistory' => :validation_history,
-  }.freeze
-  MAX_JSON_BYTES = 64.kilobytes
   MAX_TEXT_LENGTH = 10_000
 
   # GET /adaptive_progress?scriptId=&levelId=
@@ -27,17 +21,14 @@ class AdaptiveProgressController < ApplicationController
     render json: {steps: steps.merge(level_step_progress)}
   end
 
-  # PUT /adaptive_progress/steps/:step_id
-  def update_step
+  # PUT /adaptive_progress/steps/:step_id/progress
+  def update_progress
     body = request.request_parameters
     step = @level.find_step(params[:step_id])
     return head :unprocessable_entity unless step
 
     # Progress on level-backed steps is in UserLevel.
-    return head :unprocessable_entity if step['kind'] == 'level' && PROGRESS_FIELDS.any? {|field| body.key?(field)}
-
-    columns = JSON_FIELDS.filter_map {|field, column| [column, body[field]] if body.key?(field)}.to_h
-    return head :unprocessable_entity unless columns.values.all? {|value| valid_json_value?(value)}
+    return head :unprocessable_entity if step['kind'] == 'level'
 
     if body.key?('answers')
       answers = student_responses(step, body['answers'])
@@ -57,11 +48,20 @@ class AdaptiveProgressController < ApplicationController
       started: body['started'] == true,
       completed: body['completed'] == true,
       seconds: seconds,
-      answers: answers,
-      columns: columns
+      answers: answers
     )
 
-    render json: step_json(step, row)
+    render json: row.progress_json
+  end
+
+  # PUT /adaptive_progress/steps/:step_id/generated_instructions
+  def update_generated_instructions
+    render json: {error: 'Saving generated instructions is not implemented yet'}, status: :not_implemented
+  end
+
+  # PUT /adaptive_progress/steps/:step_id/validation_history
+  def update_validation_history
+    render json: {error: 'Saving validation history is not implemented yet'}, status: :not_implemented
   end
 
   private def load_adaptive
@@ -88,15 +88,11 @@ class AdaptiveProgressController < ApplicationController
     user_level
   end
 
-  # Step id => progress, for each of `levels` the student has a UserLevel on.
-  private def level_step_progress(levels = @level.step_levels)
+  # Step id => progress, for each level step the student has a UserLevel on.
+  private def level_step_progress
+    levels = @level.step_levels
     user_levels = UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: levels.values.map(&:id)).index_by(&:level_id)
     levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
-  end
-
-  private def step_json(step, row)
-    return row.progress_json unless step['kind'] == 'level'
-    level_step_progress(@level.step_levels.slice(step['id']))[step['id']] || {}
   end
 
   private def user_level_json(user_level)
@@ -104,10 +100,6 @@ class AdaptiveProgressController < ApplicationController
       'status' => user_level.passing? ? 'complete' : 'started',
       'timeSpent' => user_level.time_spent || 0,
     }
-  end
-
-  private def valid_json_value?(value)
-    (value.is_a?(Hash) || value.is_a?(Array)) && value.to_json.bytesize <= MAX_JSON_BYTES
   end
 
   private def time_spent_seconds(time_ms)

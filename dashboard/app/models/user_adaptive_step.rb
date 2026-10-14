@@ -33,9 +33,8 @@ class UserAdaptiveStep < ApplicationRecord
 
   validates :step_id, presence: true
 
-  def record_progress!(started: false, completed: false, seconds: nil, answers: nil, columns: {})
+  def record_progress!(started: false, completed: false, seconds: nil, answers: nil)
     with_lock do
-      assign_attributes(columns)
       merged = progress || {}
       now = Time.zone.now.utc.iso8601
       merged['startedAt'] ||= now if started
