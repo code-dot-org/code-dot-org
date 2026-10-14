@@ -59,8 +59,12 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
 }));
 jest.mock('@cdo/apps/code-studio/components/header/HeaderPopup', () => ({
   HeaderPopupPanel: require('react').forwardRef(
-    (_props: object, ref: React.Ref<HTMLDivElement>) =>
-      require('react').createElement('div', {ref}, 'lesson menu')
+    ({windowHeight}: {windowHeight: number}, ref: React.Ref<HTMLDivElement>) =>
+      require('react').createElement(
+        'div',
+        {ref, 'data-window-height': windowHeight},
+        'lesson menu'
+      )
   ),
 }));
 
@@ -262,6 +266,24 @@ describe('ProgressWidgetHeader', () => {
 
       expect(screen.queryByText('lesson menu')).toBe(null);
       expect(lessonButton()).toHaveFocus();
+    });
+
+    it('follows the window height while open', () => {
+      renderHeader();
+      fireEvent.click(lessonButton());
+
+      Object.defineProperty(document.documentElement, 'clientHeight', {
+        configurable: true,
+        value: 480,
+      });
+      act(() => {
+        window.dispatchEvent(new Event('resize'));
+      });
+
+      expect(screen.getByText('lesson menu')).toHaveAttribute(
+        'data-window-height',
+        '480'
+      );
     });
 
     it('closes when the level changes in page', () => {

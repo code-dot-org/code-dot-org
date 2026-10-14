@@ -24,6 +24,7 @@ import {getBubbleUrl} from '@cdo/apps/templates/progress/BubbleFactory';
 import {lessonExtrasHref} from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import useWindowSize from '@cdo/apps/util/hooks/useWindowSize';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {HeaderPopupPanel} from '../HeaderPopup';
@@ -139,6 +140,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
     (state: RootState) => state.header.headerNavigation
   );
   const saveProps = useSaveStatus();
+  const [, windowHeight] = useWindowSize();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const widgetRef = useRef<HTMLDivElement>(null);
@@ -284,7 +286,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
         <LessonMenuPanel
           ref={menuRef}
           scriptData={scriptData}
-          windowHeight={window.innerHeight}
+          windowHeight={windowHeight}
         />
       )}
     </div>
