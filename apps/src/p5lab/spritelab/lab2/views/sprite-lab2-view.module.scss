@@ -147,31 +147,6 @@ $tab-item-height: 34px;
   }
 }
 
-// The unveil in two steps: the tab makes room, then the two options fade
-// into it.
-$scene-tab-grow-ms: 320ms;
-$scene-tab-fade-ms: 260ms;
-
-@keyframes scene-tab-grow {
-  from {
-    grid-template-columns: 0fr;
-  }
-
-  to {
-    grid-template-columns: 1fr;
-  }
-}
-
-@keyframes scene-tab-fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .sceneTabName {
   display: block;
   min-width: 0;
