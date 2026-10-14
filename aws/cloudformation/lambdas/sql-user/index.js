@@ -135,6 +135,7 @@ exports.handler = async (event, context) => {
           name: dbCredentialSQLUser.username,
           clientHost: clientHost,
           password: dbCredentialSQLUser.password,
+          privilegeType: props.PrivilegeType,
           privileges: props.Privileges,
         });
         console.log(
@@ -184,7 +185,7 @@ exports.handler = async (event, context) => {
 
 const createOrUpdateSQLUser = async (
   connection,
-  { name, clientHost, password, privileges }
+  { name, clientHost, password, privilegeType, privileges }
 ) => {
   const createUser = `
         CREATE USER IF NOT EXISTS '${name}'@'${clientHost}'
@@ -199,23 +200,38 @@ const createOrUpdateSQLUser = async (
         BY ${connection.escape(password)};
     `;
   const updateResults = await queryPromise(connection, updateUser);
+  const grantPromises = [];
 
-  const databases = ["pegasus", "dashboard"];
-
-  const grantPromises = databases.map((database) => {
-    // The Rails ("Dashboard") and Sinatra ("Pegasus") database names can potentially be `dashboard`,
-    // `dashboard_[environment type]` or on the managed test server, numbered to support parallel execution of unit
-    // tests (`dashboard_test1`, `dashboard_test2`, etc. so grant permissions to `dashboard%.*` and `pegasus%.*`.
-    // Don't grant permissions to `*.*` because that would give access to the internal `mysql` database.
-    // In MySQL, backticks (`) appears to be the only way to quote a database name with a wildcard.
+  // Some SQL privileges are granted globally (*.*) instead of on specific tables in specific databases.
+  // TODO: Detect based on the type of privilege whether to apply to *.* vs a specific database.table so that
+  // we can provision SQL users with a mix of global and object-specific privileges. Or support a more complex
+  // syntax for the Privileges Resource Property that specifies both the privilege and the scope.
+  if (privilegeType === "GLOBAL") {
     const grantPrivileges = `
-            GRANT ${privileges.join(",")}
-            ON \`${database}%\`.*
-            TO \`${name}\`@\`${clientHost}\`;
-        `;
-    return queryPromise(connection, grantPrivileges);
-  });
+          GRANT ${privileges.join(",")}
+          ON *.*
+          TO \`${name}\`@\`${clientHost}\`;
+      `;
+    grantPromises.push(queryPromise(connection, grantPrivileges));
+  } else {
+    const databases = ["pegasus", "dashboard"];
 
+    grantPromises.push(
+      databases.map((database) => {
+        // The Rails ("Dashboard") and Sinatra ("Pegasus") database names can potentially be `dashboard`,
+        // `dashboard_[environment type]` or on the managed test server, numbered to support parallel execution of unit
+        // tests (`dashboard_test1`, `dashboard_test2`, etc. so grant permissions to `dashboard%.*` and `pegasus%.*`.
+        // Don't grant permissions to `*.*` because that would give access to the internal `mysql` database.
+        // In MySQL, backticks (`) appears to be the only way to quote a database name with a wildcard.
+        const grantPrivileges = `
+              GRANT ${privileges.join(",")}
+              ON \`${database}%\`.*
+              TO \`${name}\`@\`${clientHost}\`;
+          `;
+        return queryPromise(connection, grantPrivileges);
+      })
+    );
+  }
   const grantResultsArray = await Promise.all(grantPromises);
 
   return {
