@@ -12,7 +12,7 @@
           "startWithNewLine": false,
           "innerIndent": 3,
           "indent": 3,
-          "visible": "true",
+          "visible": "false",
           "elements": [
             {
               "type": "html",
@@ -24,7 +24,7 @@
               "name": "unit_name",
               "startWithNewLine": false,
               "defaultValueExpression": "{unit}",
-              "readOnly": false,
+              "readOnly": true,
               "choices": [
                 {
                   "value": "web_development",
@@ -132,19 +132,19 @@
           "rateValues": [
             {
               "value": 4,
-              "text": " All "
+              "text": " Usually "
             },
             {
               "value": 3,
-              "text": " Most"
+              "text": " Often "
             },
             {
               "value": 2,
-              "text": " Some"
+              "text": " Occasionally "
             },
             {
               "value": 1,
-              "text": " Few, or None"
+              "text": " Rarely "
             }
           ]
         },
@@ -160,19 +160,19 @@
               "rateValues": [
                 {
                   "value": 4,
-                  "text": " All "
+                  "text": " Usually "
                 },
                 {
                   "value": 3,
-                  "text": " Most"
+                  "text": " Often "
                 },
                 {
                   "value": 2,
-                  "text": " Some"
+                  "text": " Occasionally "
                 },
                 {
                   "value": 1,
-                  "text": " Few, or None"
+                  "text": " Rarely "
                 }
               ]
             },
@@ -183,19 +183,19 @@
               "rateValues": [
                 {
                   "value": 4,
-                  "text": " All "
+                  "text": " Usually "
                 },
                 {
                   "value": 3,
-                  "text": " Most"
+                  "text": " Often "
                 },
                 {
                   "value": 2,
-                  "text": " Some"
+                  "text": " Occasionally "
                 },
                 {
                   "value": 1,
-                  "text": " Few, or None"
+                  "text": " Rarely "
                 }
               ]
             },
