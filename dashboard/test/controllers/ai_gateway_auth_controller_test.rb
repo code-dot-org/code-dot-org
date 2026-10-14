@@ -155,6 +155,12 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
+  test 'names the Rails environment in a claim' do
+    claims = mint_and_capture_claims
+
+    assert_equal CDO.rack_env.to_s, claims[:rack_env]
+  end
+
   private def stub_turnstile_enforcement_mode(value)
     DCDO.stubs(:get).
       with(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT).

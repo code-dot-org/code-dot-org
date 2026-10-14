@@ -71,6 +71,8 @@ class AiGatewayAuthController < ApplicationController
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
+        # The gateway picks its stored provider keys by environment, as CDO secrets do.
+        rack_env: CDO.rack_env.to_s,
       },
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
