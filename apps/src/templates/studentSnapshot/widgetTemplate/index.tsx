@@ -20,7 +20,6 @@ interface WidgetTemplateProps {
   loading?: boolean;
   settingsOptions?: DropdownOption[];
   id?: string;
-  /** Rendered in the header, between the name and the settings menu. */
   headerContent?: React.ReactNode;
 }
 

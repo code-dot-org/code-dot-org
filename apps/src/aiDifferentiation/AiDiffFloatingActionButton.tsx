@@ -106,9 +106,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
-  // Only the pre-rebrand PNG reports a load; see showPulse below.
-  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
-
   const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
   const threadMessages = useAppSelector(
     state => state.aiDiffChat.threadMessages
@@ -203,6 +200,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         setCurriculumCourses([]);
       });
   }, [context, dispatch]);
+
+  // Only the pre-rebrand PNG reports a load; see showPulse below.
+  const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
   const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
   const [dragging, setDragging] = useState(false);
@@ -406,13 +406,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
               width: '48px',
               '& .MuiBadge-badge': showRebrandedIcon
                 ? {
-                    // Dark on light and light on dark: these invert with the
-                    // theme, unlike the -fixed variants.
                     backgroundColor:
                       'var(--background-neutral-primary-inverse)',
                     color: 'var(--text-neutral-primary-inverse)',
-                    // The ring separates the count from the pink disc it
-                    // overlaps, so it matches the surface, not the badge.
                     border: '2px solid var(--background-neutral-primary)',
                     top: '5%',
                     right: '18%',

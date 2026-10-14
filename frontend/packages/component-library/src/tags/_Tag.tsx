@@ -52,7 +52,7 @@ export interface BaseTagProps {
   icon?: TagIconProps;
   /** Unique key */
   key?: Key;
-  /** Tag colour. Defaults to the neutral tag. */
+  /** Tag color. Defaults to the neutral tag. */
   color?: TagColor;
 }
 

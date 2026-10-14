@@ -888,10 +888,6 @@ html body .sidebarActionTooltip {
   display: contents;
 }
 
-// The TA logo in the floating action button: a white mark on a filled pink
-// disc, per the TA brand sheet. The button itself is a transparent 48px
-// circle, so the disc is drawn here rather than on the button, whose class
-// changes when the pulse animation is on.
 .fabIcon {
   display: flex;
   align-items: center;

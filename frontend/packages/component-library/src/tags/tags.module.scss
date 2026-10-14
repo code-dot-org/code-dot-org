@@ -37,7 +37,7 @@
     }
   }
 
-  // Colours. The default tag keeps whatever the base rule sets. Each colour is
+  // Colors. The default tag keeps whatever the base rule sets. Each color is
   // doubled up on .tag so it outranks `.tags .tag` above, which sets a
   // background of its own, on specificity rather than on source order.
   .tag.tag-pink {
@@ -127,7 +127,7 @@
       }
     }
 
-    // Repeated here because this brand gives every tag a border and colours the
+    // Repeated here because this brand gives every tag a border and colors the
     // label on the span itself, both more specific than the block above.
     .tag.tag-pink {
       background: var(--background-accent-pink-light);
