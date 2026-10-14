@@ -73,13 +73,15 @@
   flex: none;
 }
 
-// A fixed line, so the row does not move when "Saved" arrives.
+// A fixed line, so the row does not move when "Saved" arrives; the badge
+// sets its own type size. Clipped rather than spilling over the buttons
+// when the column is narrower than the badge's own minimum width.
 .saved {
   height: 14px;
   display: flex;
   align-items: center;
-  font-size: 12px;
-  line-height: 14px;
+  min-width: 0;
+  overflow: hidden;
   white-space: nowrap;
 }
 

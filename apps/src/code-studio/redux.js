@@ -23,7 +23,6 @@ import projects from '../templates/projects/projectsRedux';
 import app from './appRedux';
 import calendar from './calendarRedux';
 import shareDialog from './components/shareDialogRedux';
-import headerLabel from './headerLabelRedux';
 import header from './headerRedux';
 import hiddenLesson from './hiddenLessonRedux';
 import isRtl from './isRtlRedux';
@@ -44,7 +43,6 @@ registerReducers({
   lessonLock,
   viewAs,
   shareDialog,
-  headerLabel,
   hiddenLesson,
   isRtl,
   responsive,

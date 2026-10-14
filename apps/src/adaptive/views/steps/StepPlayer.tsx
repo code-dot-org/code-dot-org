@@ -3,7 +3,7 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {setHeaderLabel} from '@cdo/apps/code-studio/headerLabelRedux';
+import {setSimpleHeaderLabel} from '@cdo/apps/code-studio/headerRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {Answer, StepAnswers} from '../../progress';
@@ -47,9 +47,9 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   // The level header names the checkpoint beside the unit name while it plays.
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(setHeaderLabel(checkpoint.title));
+    dispatch(setSimpleHeaderLabel(checkpoint.title));
     return () => {
-      dispatch(setHeaderLabel(null));
+      dispatch(setSimpleHeaderLabel(undefined));
     };
   }, [dispatch, checkpoint.title]);
   const last = index === steps.length - 1;

@@ -5,11 +5,12 @@
 // One flex row, nothing measured. It shows on mount: HeaderMiddle's wait
 // for an app load has no signal under Lab2, the only place this is used.
 
-import {isEqual} from 'lodash';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ProjectInfo from './ProjectInfo';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
@@ -32,16 +33,16 @@ export function currentHeaderLabel(levels?: ProgressLevel[]): string | null {
   return current?.headerLabel || null;
 }
 
+// The slices the typed root state leaves out.
 interface HeaderState {
   isRtl: boolean;
-  project?: {showProjectUpdatedAt?: boolean};
-  headerLabel?: {label: string | null};
+  project?: Partial<ProjectState>;
 }
 
 interface SimpleHeaderProps {
   scriptData: {simpleProgressImage?: string};
   /** The unit name and its link, as header.build receives them. */
-  scriptNameData?: {name: string; href: string; smallText?: boolean};
+  scriptNameData?: {name: string; href: string};
 }
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
@@ -52,15 +53,11 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   const showSaved = useSelector(
     (state: HeaderState) => !!state.project?.showProjectUpdatedAt
   );
-  // The selector builds a new array per call; compare by content or every
-  // store change re-renders the row.
-  const levels = useSelector(getCurrentLevels, isEqual) as
-    | ProgressLevel[]
-    | undefined;
-  const setLabel = useSelector(
-    (state: HeaderState) => state.headerLabel?.label ?? null
+  const pageLabel = useAppSelector(state => state.header.simpleHeaderLabel);
+  const levelLabel = useSelector((state: unknown) =>
+    currentHeaderLabel(getCurrentLevels(state) as ProgressLevel[] | undefined)
   );
-  const label = setLabel ?? currentHeaderLabel(levels);
+  const label = pageLabel ?? levelLabel;
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.

@@ -6,6 +6,8 @@ import {createStore} from 'redux';
 import SimpleHeader, {
   currentHeaderLabel,
 } from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
+import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import styles from '@cdo/apps/code-studio/components/header/simple-header.module.scss';
 
@@ -25,12 +27,12 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
 
 interface StoreState {
   isRtl: boolean;
-  project?: {showProjectUpdatedAt: boolean};
-  headerLabel?: {label: string | null};
+  project?: Partial<ProjectState>;
+  header?: Partial<HeaderReduxState>;
 }
 
 function renderHeader(state: Partial<StoreState> = {}) {
-  const store = createStore(() => ({isRtl: false, ...state}));
+  const store = createStore(() => ({isRtl: false, header: {}, ...state}));
   return render(
     <Provider store={store}>
       <SimpleHeader
@@ -73,7 +75,7 @@ describe('SimpleHeader', () => {
   });
 
   it("prefers a label set in the store over the level's", () => {
-    renderHeader({headerLabel: {label: 'Introduction'}});
+    renderHeader({header: {simpleHeaderLabel: 'Introduction'}});
     expect(screen.getByText('Introduction')).toBeTruthy();
     expect(screen.queryByText('Story')).toBeNull();
   });

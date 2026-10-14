@@ -18,6 +18,10 @@ export interface HeaderReduxState {
   getLevelBuilderChanges: (() => object) | undefined;
   overrideHeaderText: string | undefined;
   overrideOnSaveUrl: string | undefined;
+  // What the simple header shows beside the unit name when the page knows
+  // better than the lesson's levels: an adaptive pathway names the
+  // checkpoint a student is in.
+  simpleHeaderLabel: string | undefined;
 }
 
 const initialState: HeaderReduxState = {
@@ -25,6 +29,7 @@ const initialState: HeaderReduxState = {
   getLevelBuilderChanges: undefined,
   overrideHeaderText: undefined,
   overrideOnSaveUrl: undefined,
+  simpleHeaderLabel: undefined,
 };
 
 const headerSlice = createSlice({
@@ -65,6 +70,9 @@ const headerSlice = createSlice({
     clearHeader(state) {
       state.currentHeader = undefined;
     },
+    setSimpleHeaderLabel(state, action: PayloadAction<string | undefined>) {
+      state.simpleHeaderLabel = action.payload;
+    },
   },
 });
 
@@ -74,6 +82,7 @@ export const {
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
   clearHeader,
+  setSimpleHeaderLabel,
 } = headerSlice.actions;
 
 export default headerSlice.reducer;
