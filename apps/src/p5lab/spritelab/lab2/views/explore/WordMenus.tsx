@@ -7,6 +7,8 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import {playPreset} from '@cdo/apps/p5lab/spritelab/lab2/soundEffects';
+
 import {
   chainedSlotIds,
   Choices,
@@ -20,7 +22,6 @@ import {
   WORD_DRAG_TYPE,
   wordFor,
 } from './exploreSentences';
-import {playSound} from './exploreSounds';
 import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 
 import styles from './word-menus.module.scss';
@@ -68,7 +69,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
       return;
     }
     show(next);
-    playSound('flip');
+    playPreset('flip');
   };
 
   const chained = chainedSlotIds(sentence);
@@ -96,7 +97,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     const word = wordFor(sentence, slotId, wordId ?? choices[slotId]);
     setAnnouncement(word ? `${word.text} ${wordId ? 'added' : 'removed'}` : '');
     // A required word completes the sentence: a chime, not a tick.
-    playSound(!wordId ? 'unpick' : slots[at].required ? 'complete' : 'pick');
+    playPreset(!wordId ? 'unpick' : slots[at].required ? 'complete' : 'pick');
     // Clearing a required word locks the carousel on that word's set.
     if (!wordId && slots[at].required && at !== index) {
       goTo(at);
@@ -132,7 +133,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     if (index !== 0) {
       show(0);
     }
-    playSound('shuffle');
+    playPreset('shuffle');
   };
 
   // A chip takes a dragged word of its own slot.

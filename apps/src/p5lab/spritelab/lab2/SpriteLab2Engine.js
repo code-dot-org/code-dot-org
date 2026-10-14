@@ -58,6 +58,13 @@ import {
   wallBox,
 } from './platformPhysics';
 import {
+  asSoundEffect,
+  playPreset,
+  playSoundEffect,
+  stopSoundEffects,
+  synthPresetOf,
+} from './soundEffects';
+import {
   createWeather,
   drawWeather,
   isWeatherKind,
@@ -613,6 +620,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    const playSoundFile = library.commands.playSound;
+    library.commands.playSound = function (url) {
+      const preset = synthPresetOf(url);
+      if (preset) {
+        library.soundLog.push(url);
+        playPreset(preset);
+        return;
+      }
+      return playSoundFile.call(this, url);
+    };
+    library.commands.playSoundEffect = (wave, pitch, length, pattern) => {
+      const effect = asSoundEffect(wave, pitch, length, pattern);
+      if (effect) {
+        playSoundEffect(effect);
+      }
+    };
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -911,6 +934,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
+    stopSoundEffects();
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
@@ -959,6 +983,7 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   destroy() {
     this.destroyed_ = true;
+    stopSoundEffects();
     this.reset();
     this.stopTickTimer();
     this.imageWaitCancel_?.();
