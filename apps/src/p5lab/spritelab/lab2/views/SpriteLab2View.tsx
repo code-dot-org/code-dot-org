@@ -1,9 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  IconButton as MuiIconButton,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -1857,11 +1854,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // mode is unconstrained.
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
-  // The stage: the preview beside either editor, centered to play.
+  // The stage: the preview beside either editor and beside the map,
+  // centered to play.
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
       ? 'play'
-      : activeTab === 'Code' || activeTab === 'World'
+      : activeTab === 'Code' || activeTab === 'World' || activeTab === 'Scenes'
       ? 'preview'
       : 'hidden';
 
@@ -2064,9 +2062,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 locked={!!pinnedSceneId}
                 lockedReason={LOCKED_REASON}
                 allowCreate={scenesEditable || !!pinnedSceneId}
-                onSelectScene={sceneEditing.selectScene}
+                onSelectScene={sceneId => {
+                  setPicturesOpen(false);
+                  sceneEditing.selectScene(sceneId);
+                }}
                 onCreateScene={sceneEditing.createScene}
-                onManageScenes={sceneEditing.openGallery}
+                onManageScenes={() => {
+                  setPicturesOpen(false);
+                  sceneEditing.openGallery();
+                }}
               />
             ) : undefined
           }
@@ -2114,37 +2118,57 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {/* Kept mounted like the workspace: opening mid-transition eats
           the guide's frames, and remounting loses gallery state. */}
           {imagesMounted && (
+            // The sheet keeps clear of the preview's column like the editors;
+            // closed, it waits off to the right, where a pick's dialog can
+            // still open inside it.
             <div
               ref={imagesWrapperRef}
               id={PICTURES_DRAWER_ID}
               role="region"
               aria-label="Pictures"
               className={classNames(
-                moduleStyles.picturesDrawer,
-                !picturesOpen && moduleStyles.picturesDrawerClosed
+                moduleStyles.sheet,
+                !picturesOpen && moduleStyles.sheetClosed
               )}
+              style={{
+                width: `calc(100% - ${previewWidth}px)`,
+                ...(picturesOpen ? clearOfPreview : {}),
+              }}
             >
-              <div className={moduleStyles.picturesDrawerHeader}>
+              <div className={moduleStyles.sheetHeader}>
                 <span>Pictures</span>
-                <MuiIconButton
-                  variant="text"
+                <MuiButton
+                  variant="outlined"
                   color="secondary"
                   size="small"
-                  aria-label="Close pictures"
                   onClick={() => setPicturesOpen(false)}
                 >
-                  <FontAwesomeV6Icon iconName="xmark" />
-                </MuiIconButton>
+                  Done
+                </MuiButton>
               </div>
-              <div className={moduleStyles.picturesDrawerBody}>
+              <div className={moduleStyles.sheetBody}>
                 <GenerateImagePane {...imagePaneProps} />
               </div>
             </div>
           )}
 
           {activeTab === 'Scenes' && (
-            <div className={moduleStyles.codeTabWrapper}>
-              <div className={moduleStyles.imagesTab}>
+            <div
+              className={moduleStyles.sheet}
+              style={{left: 0, right: 0, ...clearOfPreview}}
+            >
+              <div className={moduleStyles.sheetHeader}>
+                <span>All scenes</span>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  onClick={() => sceneEditing.selectScene(activeScene.id)}
+                >
+                  Done
+                </MuiButton>
+              </div>
+              <div className={moduleStyles.sheetBody}>
                 <ScenesGallery
                   scenes={sceneMetadata}
                   activeSceneId={activeSceneId}

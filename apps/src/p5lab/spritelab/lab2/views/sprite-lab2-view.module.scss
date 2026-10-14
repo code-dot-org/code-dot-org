@@ -439,15 +439,6 @@ $editor-strip-height: 41px;
   height: 100%;
 }
 
-.imagesTab {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-}
-
 // Sidebar-only resource panel (guide-based instructions): no instruction
 // tabs render inside the nav, so its top border would read as a stray line.
 .resourceSidebar {
@@ -1034,33 +1025,28 @@ $editor-strip-height: 41px;
 // a transformed ancestor would become the containing block of the image
 // dialog, which the drawer's pane renders with fixed position, and the
 // dialog would slide out with it.
-$pictures-drawer-width: 480px;
-
-.picturesDrawer {
+// A sheet over the editors under the scene row, for Pictures and for the
+// map: it fills the editor pane beside the preview's column. Closed, the
+// Pictures sheet sits off to the right rather than hidden, so a dialog
+// rendered inside it still shows.
+.sheet {
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
-  // Above the floating guide: the image dialog renders inside the drawer,
-  // not in a portal, so it can be no higher than the drawer is.
+  // Above the floating guide: the image dialog renders inside the sheet,
+  // not in a portal, so it can be no higher than the sheet is.
   z-index: variables.$z-index-overlay;
   display: flex;
   flex-direction: column;
-  width: $pictures-drawer-width;
-  max-width: 100%;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-  border-left: 1px solid var(--borders-neutral-primary);
-  box-shadow: -8px 0 24px rgb(0 0 0 / 30%);
-  transition: right 0.25s ease;
 }
 
-.picturesDrawerClosed {
-  right: calc(-1 * #{$pictures-drawer-width} - 24px);
-  box-shadow: none;
+.sheetClosed {
+  right: -110%;
 }
 
-.picturesDrawerHeader {
+.sheetHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1071,7 +1057,7 @@ $pictures-drawer-width: 480px;
   font-weight: 600;
 }
 
-.picturesDrawerBody {
+.sheetBody {
   flex: 1 1 auto;
   min-height: 0;
   overflow: auto;
