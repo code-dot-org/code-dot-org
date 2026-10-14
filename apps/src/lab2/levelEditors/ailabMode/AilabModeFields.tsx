@@ -10,14 +10,12 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
-  isBooleanModeChecked,
   isDisabledByHiddenTesting,
   isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
-  setBooleanMode,
   setDataset,
   setHideTestingView,
   withoutLabelInFeatures,
@@ -105,18 +103,29 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const changeMode = (newMode: ModeObject) =>
     onChange(withoutLabelInFeatures(newMode, columns?.defaultLabel));
 
-  const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => (
-    <Checkbox
-      name={`ailab_mode_${key}`}
-      label={checkboxLabel}
-      checked={isBooleanModeChecked(mode, key)}
-      disabled={
-        isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
-      }
-      onChange={e => changeMode(setBooleanMode(mode, key, e.target.checked))}
-      size="s"
-    />
-  );
+  const renderCheckbox = (key: BooleanModeKey, checkboxLabel: string) => {
+    const defaultChecked = key === 'randomizeTestData';
+    return (
+      <Checkbox
+        name={`ailab_mode_${key}`}
+        label={checkboxLabel}
+        checked={(mode[key] ?? defaultChecked) === true}
+        disabled={
+          isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
+        }
+        onChange={e =>
+          changeMode(
+            setJsonObjectValue(
+              mode,
+              key,
+              e.target.checked === defaultChecked ? undefined : e.target.checked
+            )
+          )
+        }
+        size="s"
+      />
+    );
+  };
 
   const handleAccuracyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const text = e.target.value;

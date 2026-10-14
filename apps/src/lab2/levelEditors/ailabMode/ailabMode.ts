@@ -238,24 +238,3 @@ export function withDefaultTrainer(mode: ModeObject): ModeObject {
     ? setJsonObjectValue(mode, 'trainer', DEFAULT_TRAINER)
     : mode;
 }
-
-const hasTrueDefault = (key: BooleanModeKey) => key === 'randomizeTestData';
-
-export function isBooleanModeChecked(
-  mode: ModeObject,
-  key: BooleanModeKey
-): boolean {
-  return (mode[key] ?? hasTrueDefault(key)) === true;
-}
-
-export function setBooleanMode(
-  mode: ModeObject,
-  key: BooleanModeKey,
-  checked: boolean
-): ModeObject {
-  return setJsonObjectValue(
-    mode,
-    key,
-    checked === hasTrueDefault(key) ? undefined : checked
-  );
-}
