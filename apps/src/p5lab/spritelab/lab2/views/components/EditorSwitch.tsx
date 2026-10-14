@@ -13,10 +13,9 @@ interface EditorSwitchProps {
   onChange: (editor: Editor, event: React.MouseEvent<HTMLElement>) => void;
   /** Stacked, to fit within the editors' left strip. */
   vertical?: boolean;
-  /** Editors the level does not offer: shown, so the switch looks as it
-      will on later levels, but disabled, with the reason on hover. */
-  disabledEditors?: Editor[];
-  disabledReason?: string;
+  /** Editors not on offer, each with its reason on hover: shown disabled,
+      so the switch looks as it will once they are. */
+  disabledEditors?: Partial<Record<Editor, string>>;
 }
 
 const EDITORS: {editor: Editor; icon: string}[] = [
@@ -33,8 +32,7 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   value,
   onChange,
   vertical = false,
-  disabledEditors = [],
-  disabledReason,
+  disabledEditors = {},
 }) => (
   <div
     className={classNames(
@@ -49,8 +47,8 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
         key={editor}
         type="button"
         aria-pressed={value === editor}
-        disabled={disabledEditors.includes(editor)}
-        title={disabledEditors.includes(editor) ? disabledReason : undefined}
+        disabled={disabledEditors[editor] !== undefined}
+        title={disabledEditors[editor]}
         className={classNames(
           moduleStyles.editorSwitchButton,
           value === editor && moduleStyles.editorSwitchActive

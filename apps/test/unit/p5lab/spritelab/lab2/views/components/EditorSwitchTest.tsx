@@ -14,4 +14,20 @@ describe('EditorSwitch', () => {
     fireEvent.click(world);
     expect(onChange).toHaveBeenCalledWith('World', expect.anything());
   });
+
+  it('disables an editor not on offer, with its reason on hover', () => {
+    render(
+      <EditorSwitch
+        value="Code"
+        onChange={jest.fn()}
+        disabledEditors={{World: 'A story scene has no world.'}}
+      />
+    );
+    const world = screen.getByRole('button', {name: 'World'});
+    expect((world as HTMLButtonElement).disabled).toBe(true);
+    expect(world.getAttribute('title')).toBe('A story scene has no world.');
+    const code = screen.getByRole('button', {name: 'Code'});
+    expect((code as HTMLButtonElement).disabled).toBe(false);
+    expect(code.getAttribute('title')).toBeNull();
+  });
 });

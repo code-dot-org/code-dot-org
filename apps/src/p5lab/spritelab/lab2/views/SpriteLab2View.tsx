@@ -172,6 +172,8 @@ const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
+// On hover over World while a story scene is active.
+const STORY_NO_WORLD_REASON = 'A story scene has no world.';
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 // ?image-adlibs=<set> previews the adlib combos without a level change.
@@ -509,11 +511,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // level withholds is disabled rather than missing, so the free play lab
   // holds no surprises. The switch shows wherever the scene has one editor.
   const editorsShown = tabs.includes('Code') || enabledTabs.includes('World');
-  const disabledEditors = useMemo<Editor[]>(
-    () => [
-      ...(tabs.includes('Code') ? [] : (['Code'] as Editor[])),
-      ...(enabledTabs.includes('World') ? [] : (['World'] as Editor[])),
-    ],
+  const disabledEditors = useMemo<Partial<Record<Editor, string>>>(
+    () => ({
+      ...(tabs.includes('Code') ? {} : {Code: LOCKED_REASON}),
+      ...(enabledTabs.includes('World')
+        ? {}
+        : {
+            World: tabs.includes('World')
+              ? STORY_NO_WORLD_REASON
+              : LOCKED_REASON,
+          }),
+    }),
     [tabs, enabledTabs]
   );
   // The preview column at the lab's left, before the toolbox;
@@ -2113,7 +2121,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                       value={activeTab === 'World' ? 'World' : 'Code'}
                       onChange={handleEditorChange}
                       disabledEditors={disabledEditors}
-                      disabledReason={LOCKED_REASON}
                     />
                   </div>
                 </div>
