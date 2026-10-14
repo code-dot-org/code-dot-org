@@ -1,5 +1,4 @@
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
 
@@ -114,7 +113,7 @@ const PanelButtons = ({
   const loadSaveStatus = isSaveCompleteProp(saveStatus) ? (
     localizedSaveMessage(saveStatus)
   ) : (
-    <FontAwesomeIcon icon={faSpinner} />
+    <FontAwesomeV6Icon iconName="spinner" iconStyle="solid" />
   );
 
   const loadSaveResponseData = isSaveCompleteProp(saveStatus)
