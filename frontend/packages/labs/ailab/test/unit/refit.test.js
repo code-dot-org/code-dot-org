@@ -151,6 +151,22 @@ describe('train.refit', () => {
     expect(splitsSeen.size).toBeGreaterThan(1);
   });
 
+  // 200 runs reserve 400 rows between them, so a row that can be drawn will
+  // be. The last row is the one an off-by-one would quietly exclude.
+  test('can hold back any row, including the last one', () => {
+    const seen = new Set();
+    for (let attempt = 0; attempt < 200; attempt++) {
+      trainAndSave(
+        undefined,
+        TestDataLocations.RANDOM,
+      ).saved.accuracyCheckRowIndices.forEach(index => seen.add(index));
+    }
+
+    expect([...seen].sort((a, b) => a - b)).toEqual(
+      Array.from({length: ROWS.length}, (_unused, index) => index),
+    );
+  });
+
   test('builds what the saved hyperparameters ask for, without sweeping again', () => {
     const {saved} = trainAndSave(
       {trainer: 'decisionTree'},

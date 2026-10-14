@@ -96,9 +96,7 @@ const extractTrainingLabel = (
 };
 
 /*
-  Which rows a run holds back to grade itself on. Chosen as indices into the
-  dataset so the same split can be rebuilt later; splicing them out of the
-  examples would leave nothing to rebuild from.
+  Which rows a run holds back to grade itself on.
 */
 const reserveRowIndices = (rowCount: number, location: string): number[] => {
   const numToReserve = Math.ceil(rowCount * PERCENT_OF_DATASET_FOR_TESTING);
@@ -106,11 +104,12 @@ const reserveRowIndices = (rowCount: number, location: string): number[] => {
   if (location === TestDataLocations.RANDOM) {
     const reserved = new Set<number>();
     while (reserved.size < numToReserve && reserved.size < rowCount) {
-      reserved.add(getRandomInt(rowCount - 1));
+      reserved.add(getRandomInt(rowCount));
     }
     return [...reserved].sort((a, b) => a - b);
   }
 
+  // If the location is not random, reserve the last numToReserve rows.
   const firstReserved = Math.max(0, rowCount - numToReserve);
   return Array.from(
     {length: rowCount - firstReserved},

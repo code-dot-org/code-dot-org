@@ -66,7 +66,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
     /*
       Only a run the student asked for is worth a metric. A pretrained level
-      trains on load, and rebuild() refits a saved one, so neither reports.
+      trains on load.
     */
     if (!trainedState.mode?.pretrained) {
       logMetric('train-model', trainedState, this.project);
