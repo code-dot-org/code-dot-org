@@ -255,51 +255,37 @@ describe('EditAilabMode', () => {
 
   it('drops the training options saved with the testing view hidden', () => {
     const savedMode = renderEditor(
-      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "reserveLastRows": true}'
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true}'
     );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
-      reserveLastRows: true,
     });
   });
 
   it('clears and locks the training options while the testing view is hidden', () => {
-    const savedMode = renderEditor(
-      '{"requireAccuracy": 70, "hideSave": true, "reserveLastRows": true}'
-    );
+    const savedMode = renderEditor('{"requireAccuracy": 70, "hideSave": true}');
     const accuracy = screen.getByRole('spinbutton', {
       name: /Required accuracy/,
     });
     const hideSave = screen.getByRole('checkbox', {
       name: 'Hide the save model step',
     });
-    const lastRows = screen.getByRole('checkbox', {
-      name: 'Reserve the last rows for testing instead of random rows',
-    });
     const hideTestingView = screen.getByRole('checkbox', {
       name: 'Hide training and testing so students only explore the dataset',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, lastRows].forEach(field =>
-      expect(field).toBeDisabled()
-    );
+    [accuracy, hideSave].forEach(field => expect(field).toBeDisabled());
     expect(accuracy).toHaveValue(null);
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
-      reserveLastRows: true,
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, lastRows].forEach(field =>
-      expect(field).toBeEnabled()
-    );
-    expect(JSON.parse(savedMode())).toEqual({
-      trainer: 'knn',
-      reserveLastRows: true,
-    });
+    [accuracy, hideSave].forEach(field => expect(field).toBeEnabled());
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
   it('removes a key when its field is cleared', () => {

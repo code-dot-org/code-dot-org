@@ -177,14 +177,8 @@ const SET_BY_HIDDEN_TESTING: ModeObject = {
   hideSave: undefined,
 };
 
-export function isDisabledByHiddenTesting(
-  mode: ModeObject,
-  key: string
-): boolean {
-  return (
-    mode.hideTestingView === true &&
-    (key in SET_BY_HIDDEN_TESTING || key === 'reserveLastRows')
-  );
+export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
+  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
 }
 
 export function setHideTestingView(

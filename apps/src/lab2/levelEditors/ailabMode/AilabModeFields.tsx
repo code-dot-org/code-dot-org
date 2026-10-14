@@ -10,7 +10,7 @@ import {
   BooleanModeKey,
   DEFAULT_TRAINER,
   getSelectedDataset,
-  isDisabledByHiddenTesting,
+  isSetByHiddenTesting,
   isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
@@ -108,9 +108,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
-      disabled={
-        isSetByPretrained(mode, key) || isDisabledByHiddenTesting(mode, key)
-      }
+      disabled={isSetByPretrained(mode, key) || isSetByHiddenTesting(mode, key)}
       onChange={e =>
         changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
@@ -250,7 +248,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           onChange={handleAccuracyChange}
           disabled={
             isSetByPretrained(mode, 'requireAccuracy') ||
-            isDisabledByHiddenTesting(mode, 'requireAccuracy')
+            isSetByHiddenTesting(mode, 'requireAccuracy')
           }
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
