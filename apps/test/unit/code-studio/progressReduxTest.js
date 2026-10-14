@@ -5,6 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import reducer, {
   initProgress,
   mergeResults,
+  mergeUnitProgress,
   mergePeerReviewProgress,
   disablePostMilestone,
   setIsAge13Required,
@@ -387,6 +388,19 @@ describe('progressReduxTest', () => {
       });
       const nextState = reducer(state, action);
       assert.equal(nextState.levelResults['339'], TestResults.ALL_PASS);
+    });
+
+    it('keeps the best unit progress status when a weaker result arrives last', () => {
+      let state = reducer(
+        initialState,
+        mergeUnitProgress({levelId: 341, result: TestResults.ALL_PASS})
+      );
+      state = reducer(
+        state,
+        mergeUnitProgress({levelId: 341, result: TestResults.LEVEL_STARTED})
+      );
+      assert.equal(state.unitProgress[341].result, TestResults.ALL_PASS);
+      assert.equal(state.unitProgress[341].status, LevelStatus.perfect);
     });
 
     it('initially sets postMilestoneDisabled to false', () => {

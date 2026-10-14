@@ -231,10 +231,13 @@ const progressSlice = createSlice({
       const status = activityCssClass(result);
       const existing = state.unitProgress[levelId];
       if (existing) {
+        // Milestone responses can arrive out of order; a late weaker result
+        // must not repaint the bubble.
+        const mergedResult = mergeActivityResult(existing.result, result);
         state.unitProgress[levelId] = {
           ...existing,
-          result: mergeActivityResult(existing.result, result),
-          status,
+          result: mergedResult,
+          status: activityCssClass(mergedResult),
         };
       } else {
         state.unitProgress[levelId] = {
