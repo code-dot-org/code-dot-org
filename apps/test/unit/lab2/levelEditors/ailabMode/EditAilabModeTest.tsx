@@ -248,6 +248,11 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
+  it('drops a hidden dataset view saved without pretraining', () => {
+    const savedMode = renderEditor('{"hideDatasetView": true}');
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
   it('removes a key when its field is cleared', () => {
     const savedMode = renderEditor('{"hideSave": true, "requireAccuracy": 70}');
     fireEvent.click(
