@@ -15,7 +15,7 @@ export type BooleanModeKey =
   | 'hideDatasetView'
   | 'hideTestingView'
   | 'hideSave'
-  | 'randomizeTestData'
+  | 'reserveLastRows'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
@@ -26,7 +26,7 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideTestingView',
   'hideSave',
   'hideColumnClicking',
-  'randomizeTestData',
+  'reserveLastRows',
 ];
 
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
@@ -144,7 +144,7 @@ export function withoutLabelInFeatures(
 const SET_BY_PRETRAINED: ModeObject = {
   hideSelectLabel: true,
   lockFeatures: true,
-  randomizeTestData: undefined,
+  reserveLastRows: true,
   requireAccuracy: undefined,
   hideTestingView: undefined,
 };
@@ -175,7 +175,6 @@ export function setPretrained(
 const SET_BY_HIDDEN_TESTING: ModeObject = {
   requireAccuracy: undefined,
   hideSave: undefined,
-  randomizeTestData: undefined,
 };
 
 export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
@@ -195,6 +194,17 @@ export function setHideTestingView(
     Object.assign(newMode, SET_BY_HIDDEN_TESTING);
   }
   return newMode;
+}
+
+export function restoreFromPretrained(
+  mode: ModeObject,
+  beforePretrained: ModeObject = {}
+): ModeObject {
+  const restored = Object.keys(SET_BY_PRETRAINED).reduce(
+    (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
+    setPretrained(mode, false)
+  );
+  return setHideTestingView(restored, restored.hideTestingView === true);
 }
 
 export function isMissingPretrainedColumns(
