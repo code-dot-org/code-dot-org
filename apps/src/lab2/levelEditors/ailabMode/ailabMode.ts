@@ -169,7 +169,7 @@ export function setPretrained(
   } else {
     delete newMode.hideDatasetView;
   }
-  return newMode;
+  return withRandomTestData(newMode);
 }
 
 const SET_BY_HIDDEN_TESTING: ModeObject = {
@@ -194,7 +194,7 @@ export function setHideTestingView(
   if (hideTestingView) {
     Object.assign(newMode, SET_BY_HIDDEN_TESTING);
   }
-  return newMode;
+  return withRandomTestData(newMode);
 }
 
 export function isMissingPretrainedColumns(
@@ -221,4 +221,27 @@ export function withDefaultTrainer(mode: ModeObject): ModeObject {
   return mode.trainer === undefined
     ? setJsonObjectValue(mode, 'trainer', DEFAULT_TRAINER)
     : mode;
+}
+
+// Unset means random, unless pretraining or a hidden testing view clears it.
+export function withRandomTestData(mode: ModeObject): ModeObject {
+  return mode.randomizeTestData === undefined &&
+    !isSetByPretrained(mode, 'randomizeTestData') &&
+    !isSetByHiddenTesting(mode, 'randomizeTestData')
+    ? setJsonObjectValue(mode, 'randomizeTestData', true)
+    : mode;
+}
+
+// Random test rows keep false, or the default would check them on the next load.
+export function setBooleanMode(
+  mode: ModeObject,
+  key: BooleanModeKey,
+  checked: boolean
+): ModeObject {
+  const keepsFalse = key === 'randomizeTestData';
+  return setJsonObjectValue(
+    mode,
+    key,
+    checked || keepsFalse ? checked : undefined
+  );
 }

@@ -16,6 +16,7 @@ import {
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
+  setBooleanMode,
   setDataset,
   setHideTestingView,
   withoutLabelInFeatures,
@@ -108,11 +109,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       label={checkboxLabel}
       checked={mode[key] === true}
       disabled={isSetByPretrained(mode, key) || isSetByHiddenTesting(mode, key)}
-      onChange={e =>
-        changeMode(
-          setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
-        )
-      }
+      onChange={e => changeMode(setBooleanMode(mode, key, e.target.checked))}
       size="s"
     />
   );

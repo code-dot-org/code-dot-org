@@ -1,7 +1,9 @@
 import {
   cleanMode,
   getSelectedDataset,
+  setBooleanMode,
   withDefaultTrainer,
+  withRandomTestData,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
 const KNOWN = ['zoo', 'heart'];
@@ -88,6 +90,39 @@ describe('ailabMode', () => {
       expect(withDefaultTrainer({trainer: 'decisionTree'}).trainer).toBe(
         'decisionTree'
       );
+    });
+  });
+
+  describe('withRandomTestData', () => {
+    it('reserves random test rows when unset', () => {
+      expect(withRandomTestData({})).toEqual({randomizeTestData: true});
+    });
+
+    it('keeps a saved choice of the last rows', () => {
+      expect(withRandomTestData({randomizeTestData: false})).toEqual({
+        randomizeTestData: false,
+      });
+    });
+
+    it('leaves the rows unset when pretrained or testing is hidden', () => {
+      expect(withRandomTestData({pretrained: true})).toEqual({
+        pretrained: true,
+      });
+      expect(withRandomTestData({hideTestingView: true})).toEqual({
+        hideTestingView: true,
+      });
+    });
+  });
+
+  describe('setBooleanMode', () => {
+    it('removes an unchecked key', () => {
+      expect(setBooleanMode({hideSave: true}, 'hideSave', false)).toEqual({});
+    });
+
+    it('keeps random test rows unchecked', () => {
+      expect(
+        setBooleanMode({randomizeTestData: true}, 'randomizeTestData', false)
+      ).toEqual({randomizeTestData: false});
     });
   });
 });

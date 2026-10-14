@@ -196,13 +196,19 @@ describe('EditAilabMode', () => {
           }) as HTMLTextAreaElement
         ).value
       )
-    ).toEqual({hideSave: true, trainer: 'knn', datasets: ['zoo']});
+    ).toEqual({
+      hideSave: true,
+      trainer: 'knn',
+      randomizeTestData: true,
+      datasets: ['zoo'],
+    });
 
     lab2.set(true);
     expect(datasetDropdown()).toHaveValue('zoo');
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
       trainer: 'knn',
+      randomizeTestData: true,
       datasets: ['zoo'],
     });
   });
@@ -237,6 +243,7 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({
       requireAccuracy: 50,
       trainer: 'knn',
+      randomizeTestData: true,
     });
   });
 
@@ -245,12 +252,18 @@ describe('EditAilabMode', () => {
     expect(screen.getByText(/will be removed/)).toHaveTextContent(
       'not valid JSON'
     );
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: true,
+    });
   });
 
   it('drops a hidden dataset view saved without pretraining', () => {
     const savedMode = renderEditor('{"hideDatasetView": true}');
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: true,
+    });
   });
 
   it('drops the training options saved with the testing view hidden', () => {
@@ -294,7 +307,11 @@ describe('EditAilabMode', () => {
     [accuracy, hideSave, randomRows].forEach(field =>
       expect(field).toBeEnabled()
     );
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    expect(randomRows).toBeChecked();
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: true,
+    });
   });
 
   it('removes a key when its field is cleared', () => {
@@ -308,7 +325,10 @@ describe('EditAilabMode', () => {
         target: {value: ''},
       }
     );
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: true,
+    });
   });
 
   it('does not save an out-of-range accuracy', () => {
@@ -322,7 +342,10 @@ describe('EditAilabMode', () => {
     expect(
       screen.getByText('Enter a number from 0 to 100.')
     ).toBeInTheDocument();
-    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: true,
+    });
   });
 
   it('accepts a decimal accuracy and limits the input natively', () => {
@@ -338,6 +361,7 @@ describe('EditAilabMode', () => {
     expect(accuracy).toBeValid();
     expect(JSON.parse(savedMode())).toEqual({
       trainer: 'knn',
+      randomizeTestData: true,
       requireAccuracy: 99.5,
     });
 
@@ -351,6 +375,7 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({
       datasets: ['zoo'],
       trainer: 'knn',
+      randomizeTestData: true,
     });
   });
 
@@ -367,8 +392,32 @@ describe('EditAilabMode', () => {
     );
     expect(JSON.parse(savedMode())).toEqual({
       trainer: 'decisionTree',
+      randomizeTestData: true,
       requireAccuracy: 90,
     });
+  });
+
+  it('reserves random test rows unless unchecked', () => {
+    const savedMode = renderEditor(null);
+    const randomRows = screen.getByRole('checkbox', {
+      name: 'Reserve random rows for testing instead of the last rows',
+    });
+    expect(randomRows).toBeChecked();
+
+    fireEvent.click(randomRows);
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      randomizeTestData: false,
+    });
+  });
+
+  it('keeps a saved choice of the last rows for testing', () => {
+    renderEditor('{"randomizeTestData": false}');
+    expect(
+      screen.getByRole('checkbox', {
+        name: 'Reserve random rows for testing instead of the last rows',
+      })
+    ).not.toBeChecked();
   });
 
   it('requires a dataset until one is chosen', () => {
@@ -383,6 +432,7 @@ describe('EditAilabMode', () => {
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
       trainer: 'knn',
+      randomizeTestData: true,
       datasets: ['pizza_toy'],
     });
     expect(datasetDropdown()).toBeValid();
@@ -438,6 +488,7 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
+        randomizeTestData: true,
         label: 'animal',
         features: ['legs', 'wings'],
       });
@@ -448,6 +499,7 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
+        randomizeTestData: true,
       });
     });
 
@@ -492,6 +544,7 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['heart'],
         trainer: 'knn',
+        randomizeTestData: true,
       });
       await waitFor(() =>
         expect(optionsOf(labelDropdown())).toEqual(['None', 'age', 'sex'])
@@ -547,6 +600,7 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
+        randomizeTestData: true,
         hideSelectLabel: true,
       });
 
@@ -633,6 +687,7 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
         trainer: 'knn',
+        randomizeTestData: true,
         lockFeatures: true,
         features: ['legs'],
       });
@@ -689,7 +744,9 @@ describe('EditAilabMode', () => {
       expect(JSON.parse(savedMode())).toMatchObject({
         hideSelectLabel: true,
         lockFeatures: true,
+        randomizeTestData: true,
       });
+      expect(randomRows).toBeChecked();
       [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
         expect(field).toBeEnabled()
       );
