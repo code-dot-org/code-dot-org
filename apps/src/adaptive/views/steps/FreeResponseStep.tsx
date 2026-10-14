@@ -23,8 +23,8 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
   continueLabel,
   onComplete,
 }) => {
-  const {stepContextMap, updateStepContext} = usePathwayContext();
-  const saved = stepContextMap[step.id]?.freeResponse ?? '';
+  const {stepContextMap, saveAnswers} = usePathwayContext();
+  const saved = stepContextMap[step.id]?.answers?.[0]?.at(-1)?.text ?? '';
   const [text, setText] = useState(saved);
   const [submitted, setSubmitted] = useState(false);
 
@@ -35,15 +35,15 @@ const FreeResponseStep: React.FunctionComponent<FreeResponseStepProps> = ({
   useEffect(() => {
     if (text === persistedRef.current) return;
     const timer = setTimeout(() => {
-      updateStepContext(step.id, {freeResponse: text});
+      saveAnswers(step.id, 0, [{answerId: '', text}]);
       persistedRef.current = text;
     }, 500);
     return () => clearTimeout(timer);
-  }, [text, step.id, updateStepContext]);
+  }, [text, step.id, saveAnswers]);
 
   const handleSubmit = () => {
     // Flush the draft immediately rather than waiting for the debounce.
-    updateStepContext(step.id, {freeResponse: text});
+    saveAnswers(step.id, 0, [{answerId: '', text}]);
     persistedRef.current = text;
     setSubmitted(true);
     onComplete();

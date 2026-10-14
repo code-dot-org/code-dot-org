@@ -15,10 +15,11 @@ export type CheckpointStatus =
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
-/** One submitted answer. isCorrect is absent for a survey question. */
+/** One submitted answer. isCorrect is absent for a survey question; text is set for free-response questions. */
 export interface Answer {
   answerId: string;
   isCorrect?: boolean;
+  text?: string;
 }
 
 /** Submitted answers per question, oldest first; the last is current. */
@@ -32,8 +33,6 @@ export interface StepContext {
    */
   generated?: {instructions: string; inputsHash: string; traceId?: string};
   answers?: StepAnswers;
-  /** Student's free-text response for a freeResponse step. */
-  freeResponse?: string;
 }
 
 /**

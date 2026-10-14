@@ -18,14 +18,15 @@ const step: Step = {
 // Minimal context: only the fields FreeResponseStep reads.
 function makeContext(
   stepContextMap: {[stepId: string]: StepContext} = {},
-  updateStepContext = jest.fn()
+  saveAnswers = jest.fn()
 ) {
   return {
     pathway: {} as never,
     checkpoint: {} as never,
     statusMap: {},
     stepContextMap,
-    updateStepContext,
+    updateStepContext: jest.fn(),
+    saveAnswers,
     aiContext: {} as never,
   };
 }
@@ -35,14 +36,10 @@ function renderStep(
   continueLabel = 'Continue'
 ) {
   const onComplete = jest.fn();
-  const updateStepContext = jest.fn();
+  const saveAnswers = jest.fn();
 
-  // Mirror how PathwayApp propagates updateStepContext so tests can verify
-  // the call without needing full progress store wiring.
   render(
-    <PathwayContext.Provider
-      value={makeContext(stepContextMap, updateStepContext)}
-    >
+    <PathwayContext.Provider value={makeContext(stepContextMap, saveAnswers)}>
       <FreeResponseStep
         step={step}
         continueLabel={continueLabel}
@@ -51,7 +48,7 @@ function renderStep(
     </PathwayContext.Provider>
   );
 
-  return {onComplete, updateStepContext};
+  return {onComplete, saveAnswers};
 }
 
 describe('FreeResponseStep', () => {
@@ -88,15 +85,15 @@ describe('FreeResponseStep', () => {
     expect(screen.getByRole('button', {name: /Continue/})).toBeDisabled();
   });
 
-  it('calls updateStepContext then onComplete on submit', () => {
-    const {onComplete, updateStepContext} = renderStep();
+  it('calls saveAnswers then onComplete on submit', () => {
+    const {onComplete, saveAnswers} = renderStep();
     fireEvent.change(screen.getByRole('textbox'), {
       target: {value: 'I learned a lot.'},
     });
     fireEvent.click(screen.getByRole('button', {name: /Continue/}));
-    expect(updateStepContext).toHaveBeenCalledWith('reflect', {
-      freeResponse: 'I learned a lot.',
-    });
+    expect(saveAnswers).toHaveBeenCalledWith('reflect', 0, [
+      {answerId: '', text: 'I learned a lot.'},
+    ]);
     expect(onComplete).toHaveBeenCalledTimes(1);
   });
 
@@ -111,49 +108,49 @@ describe('FreeResponseStep', () => {
     afterEach(() => jest.useRealTimers());
 
     it('saves the draft 500 ms after typing stops', () => {
-      const {updateStepContext} = renderStep();
+      const {saveAnswers} = renderStep();
       fireEvent.change(screen.getByRole('textbox'), {
         target: {value: 'Draft text.'},
       });
-      expect(updateStepContext).not.toHaveBeenCalled();
+      expect(saveAnswers).not.toHaveBeenCalled();
       jest.advanceTimersByTime(500);
-      expect(updateStepContext).toHaveBeenCalledWith('reflect', {
-        freeResponse: 'Draft text.',
-      });
+      expect(saveAnswers).toHaveBeenCalledWith('reflect', 0, [
+        {answerId: '', text: 'Draft text.'},
+      ]);
     });
 
     it('resets the timer on each keystroke', () => {
-      const {updateStepContext} = renderStep();
+      const {saveAnswers} = renderStep();
       fireEvent.change(screen.getByRole('textbox'), {target: {value: 'A'}});
       jest.advanceTimersByTime(400);
       fireEvent.change(screen.getByRole('textbox'), {target: {value: 'AB'}});
       jest.advanceTimersByTime(400);
-      expect(updateStepContext).not.toHaveBeenCalled();
+      expect(saveAnswers).not.toHaveBeenCalled();
       jest.advanceTimersByTime(100);
-      expect(updateStepContext).toHaveBeenCalledTimes(1);
-      expect(updateStepContext).toHaveBeenCalledWith('reflect', {
-        freeResponse: 'AB',
-      });
+      expect(saveAnswers).toHaveBeenCalledTimes(1);
+      expect(saveAnswers).toHaveBeenCalledWith('reflect', 0, [
+        {answerId: '', text: 'AB'},
+      ]);
     });
 
     it('does not auto-save when text matches the restored value', () => {
-      const {updateStepContext} = renderStep({
-        reflect: {freeResponse: 'Previous answer.'},
+      const {saveAnswers} = renderStep({
+        reflect: {answers: {0: [{answerId: '', text: 'Previous answer.'}]}},
       });
       jest.advanceTimersByTime(1000);
-      expect(updateStepContext).not.toHaveBeenCalled();
+      expect(saveAnswers).not.toHaveBeenCalled();
     });
 
     it('flushes the draft immediately on submit without waiting for the timer', () => {
-      const {updateStepContext, onComplete} = renderStep();
+      const {saveAnswers, onComplete} = renderStep();
       fireEvent.change(screen.getByRole('textbox'), {
         target: {value: 'Draft text.'},
       });
       // Submit before the 500 ms debounce fires.
       fireEvent.click(screen.getByRole('button', {name: /Continue/}));
-      expect(updateStepContext).toHaveBeenCalledWith('reflect', {
-        freeResponse: 'Draft text.',
-      });
+      expect(saveAnswers).toHaveBeenCalledWith('reflect', 0, [
+        {answerId: '', text: 'Draft text.'},
+      ]);
       expect(onComplete).toHaveBeenCalledTimes(1);
     });
   });
@@ -168,7 +165,9 @@ describe('FreeResponseStep', () => {
   });
 
   it('restores a saved response from stepContextMap', () => {
-    renderStep({reflect: {freeResponse: 'Previous answer.'}});
+    renderStep({
+      reflect: {answers: {0: [{answerId: '', text: 'Previous answer.'}]}},
+    });
     expect(screen.getByRole('textbox')).toHaveValue('Previous answer.');
     expect(screen.getByRole('button', {name: /Continue/})).toBeEnabled();
   });
