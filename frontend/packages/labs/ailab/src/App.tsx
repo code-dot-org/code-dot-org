@@ -31,6 +31,7 @@ import SelectDataset from './UIComponents/SelectDataset';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
+import {usePretrainOnLoad} from './usePretrainOnLoad';
 
 import styles from './app.module.scss';
 
@@ -244,7 +245,10 @@ const App = ({
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
   const {trainedModel} = useTrainingData();
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
+
+  usePretrainOnLoad();
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -266,7 +270,7 @@ const App = ({
 
   return (
     <div className={styles.app} style={colorVariables}>
-      <WorkspaceHeader onStartOver={onStartOver} />
+      <WorkspaceHeader onStartOver={pretrained ? undefined : onStartOver} />
 
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
