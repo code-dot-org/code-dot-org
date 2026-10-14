@@ -1,5 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
+import {isEqual} from 'lodash';
 import React, {
   useCallback,
   useEffect,
@@ -66,6 +67,9 @@ const COMPACT_BELOW_PX = 560;
 // from the column's edges and from each other by this much, and the
 // preview card pads its box by it.
 const CARD_GAP = 12;
+// While the game plays the instructions' card narrows to the beside
+// layout's text width and takes the compact type, so the game can centre.
+const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
 const SLIDE_MS = 450;
@@ -502,13 +506,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         width: columnWidth - 2 * CARD_GAP,
         bottom: CARD_GAP,
       };
+  const playCardWidth = Math.min(belowCard.width as number, PLAY_CARD_WIDTH_PX);
+  const playCard: React.CSSProperties = {
+    ...belowCard,
+    width: playCardWidth,
+    left: side === 'left' ? belowCard.left : size.w - CARD_GAP - playCardWidth,
+  };
+  const cardStyle = mode === 'play' ? playCard : belowCard;
   // The card's edges, for the game to clear while playing: playPlacement
   // models a guide hung from a bottom corner, so the card is handed over
   // as the guide whose corner-hung size reaches the card's inner edge and
   // top.
-  const cardTop = belowCard.top as number;
-  const cardLeft = belowCard.left as number;
-  const cardRight = cardLeft + (belowCard.width as number);
+  const cardTop = cardStyle.top as number;
+  const cardLeft = cardStyle.left as number;
+  const cardRight = cardLeft + (cardStyle.width as number);
   const cardGuide =
     below && measured
       ? {
@@ -559,6 +570,48 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       );
     }
     // Only a mode change moves the bar; animate is derived for that render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode]);
+  // The card does not slide between its two sizes, which would reflow its
+  // text on the way: a copy at the old size fades out while the card fades
+  // in at the new one. The copy is the card's markup cloned for the fade
+  // and removed after it.
+  const cardRef = useRef<HTMLDivElement>(null);
+  const cardCompact = compact || mode === 'play';
+  const cardClassName = classNames(
+    moduleStyles.previewBelow,
+    cardCompact && moduleStyles.previewBelowCompact
+  );
+  const lastCard = useRef<{style: React.CSSProperties; className: string}>();
+  useEffect(() => {
+    lastCard.current = {style: cardStyle, className: cardClassName};
+  });
+  useLayoutEffect(() => {
+    const card = cardRef.current;
+    const last = lastCard.current;
+    if (!animate || !card || !last || isEqual(last.style, cardStyle)) {
+      return;
+    }
+    const copy = card.cloneNode(true) as HTMLElement;
+    copy.className = last.className;
+    copy.setAttribute('aria-hidden', 'true');
+    copy.style.pointerEvents = 'none';
+    for (const [key, value] of Object.entries(last.style)) {
+      copy.style.setProperty(
+        key,
+        typeof value === 'number' ? `${value}px` : String(value)
+      );
+    }
+    card.parentElement?.appendChild(copy);
+    const fade = {duration: SLIDE_MS, easing: 'ease'};
+    const out = copy.animate?.([{opacity: 1}, {opacity: 0}], fade);
+    if (out) {
+      out.onfinish = () => copy.remove();
+    } else {
+      copy.remove();
+    }
+    card.animate?.([{opacity: 0}, {opacity: 1}], fade);
+    // Only a mode change resizes the card; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
 
@@ -709,13 +762,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         </div>
       )}
       {below && mode !== 'hidden' && visible && (
-        <div
-          className={classNames(
-            moduleStyles.previewBelow,
-            compact && moduleStyles.previewBelowCompact
-          )}
-          style={belowCard}
-        >
+        <div ref={cardRef} className={cardClassName} style={cardStyle}>
           <div
             ref={belowContentRef}
             className={moduleStyles.previewBelowContent}
