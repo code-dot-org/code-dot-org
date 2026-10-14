@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-12 19:44:05 UTC",
+    "serialized_at": "2026-10-13 15:42:48 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -511,7 +511,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2_2026-dev"
+          "pl-aif1-u2-troubleshoot-software"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",
@@ -519,7 +519,7 @@
         "activity_section.key": "0e8f2665-8c4e-4eb3-a979-b704de0ae91f"
       },
       "level_keys": [
-        "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2_2026-dev"
+        "pl-aif1-u2-troubleshoot-software"
       ]
     },
     {
@@ -577,7 +577,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2_2026-dev"
+          "pl-aif1-U2-optimizing-software-choice"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",
@@ -585,35 +585,13 @@
         "activity_section.key": "a396817e-8a60-4c73-9b32-e8f3048470ce"
       },
       "level_keys": [
-        "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2_2026-dev"
+        "pl-aif1-U2-optimizing-software-choice"
       ]
     },
     {
       "chapter": 21,
       "position": 21,
       "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Optimizing Software"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2_2026-dev"
-        ],
-        "lesson.key": "Teaching AI and the Systems that Power It",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev",
-        "activity_section.key": "a396817e-8a60-4c73-9b32-e8f3048470ce"
-      },
-      "level_keys": [
-        "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 22,
-      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Optimizing Software"
@@ -633,8 +611,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -655,8 +633,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -677,8 +655,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -699,8 +677,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -709,7 +687,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson8-level2_v3-PL_v2_2026-dev"
+          "pl-aif2-processing-library-data"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",
@@ -717,12 +695,12 @@
         "activity_section.key": "d265ffc1-c74d-4dd7-a081-fe7d28712bfa"
       },
       "level_keys": [
-        "computer-systems-lesson8-level2_v3-PL_v2_2026-dev"
+        "pl-aif2-processing-library-data"
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -743,8 +721,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -765,8 +743,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -787,8 +765,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -809,8 +787,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -831,8 +809,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -853,8 +831,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1070,9 +1048,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2_2026-dev",
+        "level.key": "pl-aif1-u2-troubleshoot-software",
         "script_level.level_keys": [
-          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2_2026-dev"
+          "pl-aif1-u2-troubleshoot-software"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",
@@ -1106,21 +1084,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2_2026-dev",
+        "level.key": "pl-aif1-U2-optimizing-software-choice",
         "script_level.level_keys": [
-          "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2_2026-dev"
-        ],
-        "lesson.key": "Teaching AI and the Systems that Power It",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev",
-        "activity_section.key": "a396817e-8a60-4c73-9b32-e8f3048470ce"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2_2026-dev",
-        "script_level.level_keys": [
-          "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2_2026-dev"
+          "pl-aif1-U2-optimizing-software-choice"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",
@@ -1178,9 +1144,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson8-level2_v3-PL_v2_2026-dev",
+        "level.key": "pl-aif2-processing-library-data",
         "script_level.level_keys": [
-          "computer-systems-lesson8-level2_v3-PL_v2_2026-dev"
+          "pl-aif2-processing-library-data"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",

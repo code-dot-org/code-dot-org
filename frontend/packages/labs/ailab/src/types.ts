@@ -152,14 +152,24 @@ export interface HistoricResult {
   total: number;
 }
 
+/* Columns a level's mode fixes for the student, once a dataset has loaded. */
+export interface PresetColumns {
+  labelColumn?: string;
+  selectedFeatures?: string[];
+}
+
 /* Everything saved with a student's work and restored when the level loads
-   again. A work in progress; more will be added here. */
+   again. */
 export interface AilabProject {
+  labelColumn?: string;
+  selectedFeatures: string[];
   hyperparameters?: Hyperparameters;
   historicResults: HistoricResult[];
 }
 
 export const initialProject: AilabProject = {
+  labelColumn: undefined,
+  selectedFeatures: [],
   hyperparameters: undefined,
   historicResults: [],
 };

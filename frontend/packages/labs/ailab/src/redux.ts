@@ -17,6 +17,7 @@ import type {
   DataRow,
   Metadata,
   Mode,
+  PresetColumns,
   TrainedModelDetailsSave,
   SaveResponseData,
   PrevNextButtons,
@@ -37,10 +38,7 @@ export interface RootState {
   metadata: Metadata;
   removedRowsCount: number;
   highlightDataset: string | undefined;
-  highlightColumn: string | undefined;
   columnsByDataType: Record<string, string>;
-  selectedFeatures: string[];
-  labelColumn: string | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
@@ -70,6 +68,7 @@ export interface RootState {
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
+  presetColumns: PresetColumns | undefined;
   resetCount: number;
   resetKeepsHistoricResults: boolean;
   mode?: Mode;
@@ -110,10 +109,7 @@ export const initialState: RootState = {
   },
   removedRowsCount: 0,
   highlightDataset: undefined,
-  highlightColumn: undefined,
   columnsByDataType: {},
-  selectedFeatures: [],
-  labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
@@ -146,6 +142,7 @@ export const initialState: RootState = {
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
+  presetColumns: undefined,
   resetCount: 0,
   resetKeepsHistoricResults: false,
 };
@@ -190,6 +187,9 @@ const ailabSlice = createSlice({
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
     },
+    setPresetColumns(state, action: PayloadAction<PresetColumns>) {
+      state.presetColumns = action.payload;
+    },
     setRemovedRowsCount(state, action: PayloadAction<number>) {
       state.removedRowsCount = action.payload;
     },
@@ -204,32 +204,6 @@ const ailabSlice = createSlice({
       prepare(column: string, dataType: string) {
         return {payload: {column, dataType}};
       },
-    },
-    addSelectedFeature(state, action: PayloadAction<string>) {
-      if (!state.selectedFeatures.includes(action.payload)) {
-        const columns = Object.keys(state.data[0] ?? {});
-        state.selectedFeatures.push(action.payload);
-        state.selectedFeatures.sort(
-          (a, b) => columns.indexOf(a) - columns.indexOf(b),
-        );
-      }
-    },
-    removeSelectedFeature(state, action: PayloadAction<string>) {
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
-    },
-    setSelectedFeatures(state, action: PayloadAction<string[]>) {
-      const columns = Object.keys(state.data[0] ?? {});
-      state.selectedFeatures = [...action.payload].sort(
-        (a, b) => columns.indexOf(a) - columns.indexOf(b),
-      );
-    },
-    setLabelColumn(state, action: PayloadAction<string>) {
-      state.labelColumn = action.payload;
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -389,20 +363,6 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightColumn(state, action: PayloadAction<string>) {
-      const highlightColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
-        return;
-      }
-      if (
-        state.currentPanel === 'datasetView' &&
-        highlightColumn === state.labelColumn
-      ) {
-        return;
-      }
-      state.highlightColumn = highlightColumn;
-    },
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
@@ -454,12 +414,9 @@ export const {
   setInvalidData,
   setImportedData,
   setImportedMetadata,
+  setPresetColumns,
   setRemovedRowsCount,
   setColumnsByDataType,
-  addSelectedFeature,
-  removeSelectedFeature,
-  setSelectedFeatures,
-  setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
   setAccuracyCheckExamples,
@@ -477,7 +434,6 @@ export const {
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
-  setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
   replayTraining,
@@ -527,11 +483,14 @@ export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
-export function getPredictAvailable(state: RootState): boolean {
+export function getPredictAvailable(
+  state: RootState,
+  project: AilabProject,
+): boolean {
   return (
     Object.keys(state.testData).filter(
       value => state.testData[value] && state.testData[value] !== '',
-    ).length === state.selectedFeatures.length
+    ).length === project.selectedFeatures.length
   );
 }
 
@@ -545,18 +504,19 @@ export function getPanelButtons(
   return prevNextButtons(state, project);
 }
 
-export function readyToTrain(state: RootState): boolean {
-  return uniqLabelFeaturesSelected(state);
+export function readyToTrain(project: AilabProject): boolean {
+  return uniqLabelFeaturesSelected(project);
 }
 
 /* Functions for processing data to display. */
 
 export function getTableData(
   state: RootState,
+  project: AilabProject,
   useResultsData: boolean,
 ): DataRow[] {
   if (useResultsData) {
-    return getResultsDataInDataTableForm(state);
+    return getResultsDataInDataTableForm(state, project);
   } else {
     return state.data;
   }

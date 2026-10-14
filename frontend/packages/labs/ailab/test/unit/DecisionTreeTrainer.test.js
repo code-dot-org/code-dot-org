@@ -12,14 +12,13 @@ import {
 } from '../../src/helpers/valueConversion';
 import rootReducer, {
   setImportedData,
-  setLabelColumn,
-  addSelectedFeature,
   setColumnsByDataType,
   setMode,
   setTestData,
 } from '../../src/redux';
 import train from '../../src/train';
 import {buildTrainer} from '../../src/trainers';
+import {initialProject} from '../../src/types';
 
 function setUp(data, columns, label) {
   const store = createStore(rootReducer);
@@ -29,30 +28,31 @@ function setUp(data, columns, label) {
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type)),
   );
-  store.dispatch(setLabelColumn(label));
-  Object.keys(columns)
-    .filter(column => column !== label)
-    .forEach(column => store.dispatch(addSelectedFeature(column)));
+  const project = {
+    ...initialProject,
+    labelColumn: label,
+    selectedFeatures: Object.keys(columns).filter(column => column !== label),
+  };
 
   train.reset();
-  train.init(store);
+  train.init(store, project);
 
-  return {store, trainer: buildTrainer(store)};
+  return {store, project, trainer: buildTrainer(store, project)};
 }
 
 // Mirrors `prepareTestData` in train.ts, which is not exported.
-function predictWith(store, trainer, trainedModel, testValues) {
+function predictWith(store, project, trainer, trainedModel, testValues) {
   Object.entries(testValues).forEach(([feature, value]) =>
     store.dispatch(setTestData(feature, value)),
   );
   const state = store.getState();
   trainer.predict(
     trainedModel,
-    state.selectedFeatures.map(feature =>
-      convertValueForTraining(state, state.testData[feature], feature),
+    project.selectedFeatures.map(feature =>
+      convertValueForTraining(state, project, state.testData[feature], feature),
     ),
   );
-  return getConvertedPredictedLabel(store.getState());
+  return getConvertedPredictedLabel(store.getState(), project);
 }
 
 const NUMERICAL = ColumnTypes.NUMERICAL;
@@ -72,7 +72,7 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       {animal: 'snake', legs: '0', tail: 'yes'},
       {animal: 'dog', legs: '4', tail: 'yes'},
     ];
-    const {store, trainer} = setUp(
+    const {store, project, trainer} = setUp(
       data,
       {animal: CATEGORICAL, legs: NUMERICAL, tail: CATEGORICAL},
       'animal',
@@ -82,10 +82,13 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
 
     expect(trainedModel).toBeDefined();
     expect(
-      predictWith(store, trainer, trainedModel, {legs: 4, tail: 'yes'}),
+      predictWith(store, project, trainer, trainedModel, {
+        legs: 4,
+        tail: 'yes',
+      }),
     ).toBe('dog');
     expect(
-      predictWith(store, trainer, trainedModel, {legs: 0, tail: 'no'}),
+      predictWith(store, project, trainer, trainedModel, {legs: 0, tail: 'no'}),
     ).toBe('snake');
   });
 
@@ -195,7 +198,7 @@ describe('DecisionTreeTrainer: regression', () => {
       {price: '10', size: '1'},
       {price: '90', size: '9'},
     ];
-    const {store, trainer} = setUp(
+    const {store, project, trainer} = setUp(
       data,
       {price: NUMERICAL, size: NUMERICAL},
       'price',
@@ -203,7 +206,9 @@ describe('DecisionTreeTrainer: regression', () => {
 
     const {trainedModel} = trainer.startTraining();
 
-    const prediction = predictWith(store, trainer, trainedModel, {size: 1});
+    const prediction = predictWith(store, project, trainer, trainedModel, {
+      size: 1,
+    });
     const observedLabels = store.getState().trainingLabels.map(Number);
 
     expect(observedLabels).not.toContain(prediction);

@@ -2,12 +2,11 @@ import {createStore} from 'redux';
 
 import {ColumnTypes} from '../../src/constants';
 import rootReducer, {
-  addSelectedFeature,
   setColumnsByDataType,
   setImportedData,
-  setLabelColumn,
   setMode,
 } from '../../src/redux';
+import {initialProject} from '../../src/types';
 
 // `legs` fixes `animal`, so a trained model reaches 100%.
 export const ANIMALS = [
@@ -28,13 +27,7 @@ export const ANIMAL_COLUMNS = {
   legs: ColumnTypes.NUMERICAL,
 };
 
-// Every column except the label is selected as a feature.
-export function levelStore(
-  mode,
-  data = ANIMALS,
-  columns = ANIMAL_COLUMNS,
-  label = 'animal',
-) {
+export function levelStore(mode, data = ANIMALS, columns = ANIMAL_COLUMNS) {
   const store = createStore(rootReducer);
 
   store.dispatch(setMode(mode));
@@ -42,10 +35,15 @@ export function levelStore(
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type)),
   );
-  store.dispatch(setLabelColumn(label));
-  Object.keys(columns)
-    .filter(column => column !== label)
-    .forEach(column => store.dispatch(addSelectedFeature(column)));
 
   return store;
+}
+
+// The columns a level opens with: every one except the label is a feature.
+export function levelProject(columns = ANIMAL_COLUMNS, label = 'animal') {
+  return {
+    ...initialProject,
+    labelColumn: label,
+    selectedFeatures: Object.keys(columns).filter(column => column !== label),
+  };
 }

@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T17:59:19.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Friday Night Sports",
+    "long_instructions": "You are a sports team manager trying to predict how many people will turn out for your team’s Friday night games. You’re making predictions based on the team’s current win percentage and the forecast temperature for each Friday evening.\r\n\r\nYou have built two linear regression models trained on different datasets. You’d like to test to see which one performs the best on your test data.\r\n\r\n**☑️ Do This:**\r\n\r\n1. The code currently has Model 1 make predictions for each of the test inputs. Update the code so that Model 2 also makes predictions for each of the test inputs.\r\n2. Calculate the mean squared error for each model. In other words, for each model, calculate the loss by comparing its predictions for the test data against the actual outputs for the test data.\r\n3. Print the mean squared error for each model so that you can compare them.",
+    "bubble_choice_description": "Help a sports team test the performance of a model for predicting game attendance.",
+    "thumbnail_url": "https://images.code.org/98ead932b8771a4d3fc91c0dad7114d2-sports.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Input features: [win percentage, forecast temperature]\ninputs1  = [[30, 50], [55, 65], [70, 45], [90, 70], [25, 75]]\ninputs2 = [[40, 45], [60, 60], [35, 70], [85, 50], [75, 75]]\n\n# Output feature: game attendance\noutputs1 = [380, 560, 610, 780, 400]\noutputs2 = [350, 560, 640, 480, 760]\n\n# First model\nmodel1 = LinearRegression()\nmodel1.fit(inputs1, outputs1)\n\n# Second model\nmodel2 = LinearRegression()\nmodel2.fit(inputs2, outputs2)\n\n# Test data\ntest_inputs = [[85, 40], [30, 72], [95, 38], [45, 68], [65, 55]]\ntest_outputs = [360, 650, 350, 640, 510]\n\npredictions1 = model1.predict(test_inputs)\n# TODO 1: Have model 2 predict outputs for each of the test inputs\n\n# TODO 2: Calculate mean squared error for each model\n# TODO 3: Print the mean squared error for each model",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp2lufLShz1T0kl\n/sD54ghtJSJYgOcF9BEthz4jlFj5gdISWox4+CK0QYbflGXnF/VQFtWombTf\nO538kG/MUBYrenhr6Q3x6H1B23K8UtG/MKIIDHjHsc4xBgJcwSKXM30RS16k\nqiBZ8W6P9wdNL3nlkaDuFNkfbPYUbradUqYFar3JodGrt3j7JwWU28AgosKJ\nqeUnFY48W3byFweNGjj+ima2fMGO3vK4KjMkhLT7VJb2HHRQ5wGF8q6KyAoS\nInWYdvoIfCqyX2D173PRNeQKVkpmhci7OVCWIgnOoZ73aju2J6ZHU06moaQN\nmJyqNdQGzWNvMLHfnd6PYzploE6XwTiPbFb/QZyg6e6XofMQ1WMV3guOzEvX\nVvHwJ0o8MV4GGIcAapOZdtABiMyR382qUIXMfVwt23+U13SZ7FM4NHBkoAfb\npDqqWXlEfQrwuIMe+r/W2/3afpKsfHMWLwqK4focsknvpoR5eLonk3plUFll\nZcnKPsU1Nn/P83XVNs3R9pkO/O6hXkUfjS08KayvBWdQjnEPe9Fs1Wqwqr6e\nNS+gh6MGRG9eXXPVm3F7C3acrLzMgUiLzs8l1LlsJyVDkEovlOcqpfjYN/jr\nyRMMH4bTPl3TecSP7RBpjIFT1vT8Di8fairL4b8vw+BsEfTaGC8RbOhsOM0Z\nG+Mz3gSZT4jpJssy23skmwrESqPKa3j7SBPHlPTjHTBu3mAIngvjZF7AiNnb\nowP2xLWHyrbTtM5WqsgpWPkIDSMKHdU7F4j+gKQFMYUd3nTxa79K9vN1vZ+P\nJOma68bvYHsWgGL86u+8MYulF4MSG+WVSljAyR8TQHpT7aJlEsI2aSbxQcVd\nFTY+USBGKI9VURpLw7jq9LI3yahjrZ3oEcksRf7iFIiNNIBouRmjBP0OAbXN\nWDZZ2MyhNPvASWYhLjnKEQnWJzk6embtp/14BgJWpDWCwvUrQxiNjB7HBXcM\nWfxvgOcx0/ijflwR2Rnbp9JKr6bQKL1AmPjgF6mWIx/0xjkPYZu/3852jP0W\nDUNrUfMROvlT6LUOQhorHc6aWIZrnitQv3Y4FiXlE/aQf4N/sSX8T11uFLOP\nR+PHa3KIuUi3gPb9Y3u6gNs8ikpEc282Kzwe/9npu3SFsM05BxGT6BvgeCY0\nUJWW1qd+Jyp6zYGly3nJx/PHwQhb3aPugka/kgVfb1hnPUbNhCcd2ElSoyPp\n4xz68aEkKE2RyjkCQwk4vTULvl7clnVzq5MGRwuRnwBsa9yhxLsrzJdZpTXM\nYvYwv9mPfkRSvtv0ikuRcN1c9+UPzVr/U03YWhZkQT16r6ig+TPYYkcpOYog\nF+ZFzn+OmNvfMnOdxs34KuQn77HYlIaydZp5b0lbmaFeXvb7/cPi8HyUxlWd\n/X9aNQ3yvrWC6uN7VBQNMduX3uL3JHjYefZGRehBDqf17WKguxqKioLONWIM\ntf65/KNVNQHC3hxqeOWqINioEsUNJBGUcsPJu5H5dcTjSbSrbAeQj/3s4wJc\noQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 17:59:23 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 17:59:35 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

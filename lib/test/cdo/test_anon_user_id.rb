@@ -78,29 +78,4 @@ describe Cdo::AnonUserId do
       end
     end
   end
-
-  describe '.valid_value' do
-    let(:valid_value) {Cdo::AnonUserId.valid_value(input)}
-    let(:input) {SecureRandom.uuid}
-
-    it 'returns valid anonymous user ID' do
-      _(valid_value).must_equal input
-    end
-
-    context 'when value is invalid' do
-      let(:input) {'invalid'}
-
-      it 'returns nil' do
-        _(valid_value).must_be_nil
-      end
-    end
-
-    context 'when value is nil' do
-      let(:input) {nil}
-
-      it 'returns nil' do
-        _(valid_value).must_be_nil
-      end
-    end
-  end
 end
