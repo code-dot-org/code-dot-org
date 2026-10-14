@@ -240,8 +240,11 @@ class Ailab < Level
     end
 
     if parsed_mode['hideTestingView'] == true
-      errors.add(:mode, 'cannot hide the testing view when pretrained.') if parsed_mode['pretrained'] == true
-      errors.add(:mode, 'cannot require an accuracy when the testing view is hidden.') if parsed_mode.key?('requireAccuracy')
+      if parsed_mode['pretrained'] == true
+        errors.add(:mode, 'cannot hide the testing view when pretrained.')
+      elsif parsed_mode.key?('requireAccuracy')
+        errors.add(:mode, 'cannot require an accuracy when the testing view is hidden.')
+      end
     end
   end
 end

@@ -105,6 +105,10 @@ class AilabTest < ActiveSupport::TestCase
     refute level.valid?
     assert_equal ['cannot hide the testing view when pretrained.'], level.errors[:mode]
 
+    level = build(:ailab, uses_lab2: 'true', mode: pretrained.merge(hideTestingView: true, requireAccuracy: 70).to_json)
+    refute level.valid?
+    assert_equal ['cannot require an accuracy when pretrained.', 'cannot hide the testing view when pretrained.'], level.errors[:mode]
+
     level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideTestingView: true, requireAccuracy: 70}.to_json)
     refute level.valid?
     assert_equal ['cannot require an accuracy when the testing view is hidden.'], level.errors[:mode]

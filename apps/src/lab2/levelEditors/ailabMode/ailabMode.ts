@@ -172,16 +172,14 @@ export function setPretrained(
   return newMode;
 }
 
-const CLEARED_BY_HIDDEN_TESTING = [
-  'requireAccuracy',
-  'hideSave',
-  'randomizeTestData',
-];
+const SET_BY_HIDDEN_TESTING: ModeObject = {
+  requireAccuracy: undefined,
+  hideSave: undefined,
+  randomizeTestData: undefined,
+};
 
 export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
-  return (
-    mode.hideTestingView === true && CLEARED_BY_HIDDEN_TESTING.includes(key)
-  );
+  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
 }
 
 export function setHideTestingView(
@@ -194,7 +192,7 @@ export function setHideTestingView(
     hideTestingView ? true : undefined
   );
   if (hideTestingView) {
-    CLEARED_BY_HIDDEN_TESTING.forEach(key => delete newMode[key]);
+    Object.assign(newMode, SET_BY_HIDDEN_TESTING);
   }
   return newMode;
 }
