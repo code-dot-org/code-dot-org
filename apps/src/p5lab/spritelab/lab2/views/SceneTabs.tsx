@@ -54,8 +54,12 @@ const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
     activeRef.current?.scrollIntoView?.({block: 'nearest', inline: 'nearest'});
   }, [activeSceneId, scenes.length]);
   return (
-    <div className={moduleStyles.sceneTabs} role="tablist" aria-label="Scenes">
-      <div className={moduleStyles.sceneTabsRow}>
+    <div className={moduleStyles.sceneTabs}>
+      <div
+        className={moduleStyles.sceneTabsRow}
+        role="tablist"
+        aria-label="Scenes"
+      >
         {scenes.map((scene, index) => {
           const selected = !galleryOpen && scene.id === activeSceneId;
           const startsHere = index === 0 && scenes.length > 1;
