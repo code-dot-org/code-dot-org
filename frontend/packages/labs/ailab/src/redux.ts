@@ -487,6 +487,10 @@ export function getHideDatasetView(state: RootState): boolean {
   return !!state.mode?.hideDatasetView;
 }
 
+export function getHideTestingView(state: RootState): boolean {
+  return !!state.mode?.hideTestingView;
+}
+
 export function getPredictAvailable(
   state: RootState,
   project: AilabProject,

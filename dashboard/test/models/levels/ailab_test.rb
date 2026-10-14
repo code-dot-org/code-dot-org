@@ -97,6 +97,19 @@ class AilabTest < ActiveSupport::TestCase
     assert_equal ['cannot hide the dataset view unless pretrained.'], level.errors[:mode]
   end
 
+  test 'lab2 level hides the testing view only without pretraining or a required accuracy' do
+    assert build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideTestingView: true}.to_json).valid?
+
+    pretrained = {datasets: ['zoo'], pretrained: true, hideSelectLabel: true, lockFeatures: true, label: 'Type', features: ['Legs']}
+    level = build(:ailab, uses_lab2: 'true', mode: pretrained.merge(hideTestingView: true).to_json)
+    refute level.valid?
+    assert_equal ['cannot hide the testing view when pretrained.'], level.errors[:mode]
+
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideTestingView: true, requireAccuracy: 70}.to_json)
+    refute level.valid?
+    assert_equal ['cannot require an accuracy when the testing view is hidden.'], level.errors[:mode]
+  end
+
   test 'lab2 level derives validations from requireAccuracy' do
     level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: 70}.to_json)
     met, unmet = level.get_validations
