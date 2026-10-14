@@ -9,9 +9,9 @@ export interface QuizQuestionResult {
 
 export interface QuizQuestionInProgressResult {
   quizQuestionId: number;
-  // Unanswered questions are omitted;
-  selectedChoiceId: string | null; // MultipleChoiceQuestion
-  answerText: string | null; // FreeResponseQuestion
+  // Unanswered questions are omitted - each sets the field for its type.
+  selectedChoiceId: string | null;
+  answerText: string | null;
 }
 
 export interface QuizAttemptData {
