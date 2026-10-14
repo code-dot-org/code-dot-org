@@ -48,6 +48,10 @@ Route definitions use canonical paths (e.g. `/projects/$labType/$channelId/edit`
 - Rails: `get "frontend-studio(/*path)"` in `dashboard/config/routes.rb` catches SPA routes and serves the Haml shell.
 - Vite: `config/vite.json`'s `publicOutputDir: "frontend-studio"` makes `vite-plugin-ruby` set Vite's `base` to `/frontend-studio/`, so both the dev server and the production build live under that prefix.
 
+## Mobile build
+
+`yarn build:mobile` builds the same app with `vite.mobile.config.ts` (relative base, `dist-mobile/`, Latin fonts only) for the Capacitor app in [`apps/mobile`](../mobile). Its mode `mobile` makes the root skip auth, CSRF priming and site chrome, and `/launcher` answers not found in any other build. `yarn dev:mobile` serves it.
+
 ## Adding a lab
 
 See `frontend/docs/conventions/packages.md` (the `## Labs` section) for the full scaffolding steps. The short version — two Studio files must be updated, and a third is optional:

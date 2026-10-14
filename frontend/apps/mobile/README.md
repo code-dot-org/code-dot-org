@@ -1,15 +1,15 @@
 # @code-dot-org/mobile
 
 The CodeAI Android app for Amazon Fire tablets (Amazon Kids+), packaged with
-[Capacitor](https://capacitorjs.com). `vite.config.ts` bundles
-`entrypoints/main.tsx`, a signed-out landing page with no router, Rails
-config or auth, into `dist/`, and Capacitor copies that into `android/`.
+[Capacitor](https://capacitorjs.com). The landing page is [Studio](../studio)'s
+`/launcher` route; `yarn android:sync` builds it into Studio's `dist-mobile/`
+and Capacitor copies that into `android/`.
 
 The app is the landing page only, and everything runs in one WebView: the
 landing page, every studio.code.org page, `window.open` and `target=_blank`.
 Pages therefore share one browser session, so sessionStorage, session cookies
 and localStorage carry across every page load. It lists the Amazon Fire Kids
-Content Library, the 22 curricula in `src/curricula.ts`, as
+Content Library, the 22 curricula in Studio's `src/config/curricula.ts`, as
 cards laid out like the course catalog's (`CurriculumCatalogCard` in `apps/`),
 with the catalog's images, descriptions, topics, grades and durations; tapping
 one navigates the app's WebView to that curriculum's studio.code.org URL.
@@ -108,10 +108,7 @@ outlives the reset in the WebView.
 
 Debug builds add zoom out and zoom in to the right of the site header, where
 the invisible sign-in and menu keep their space, drawn like the site's own
-header buttons. They are a bundle built from
-`entrypoints/siteControls.tsx` by `vite.siteControls.config.ts` with
-MUI and the CodeAI theme, which the app serves to site pages from its own
-origin. They zoom as a browser does, reflowing the page, by setting each
+header buttons. They zoom as a browser does, reflowing the page, by setting each
 page's viewport, which the WebView honors in wide-viewport mode; the old labs
 set their own viewport, so the page script reapplies its own whenever the
 page changes it. Release builds show every page at 100%.
@@ -126,7 +123,7 @@ dsco.code.org allows its fonts to be used by studio.code.org but not by the
 landing page's local origin; the stored copies allow both.
 
 The launcher bundles only Geist and Barlow, in their Latin subsets as WOFF2,
-about 0.3MB. `vite.config.ts` drops the rest of the brand fonts and
+about 0.3MB. Studio's `vite.mobile.config.ts` drops the rest of the brand fonts and
 the per-language fonts `@code-dot-org/fonts` would otherwise add, about 21MB.
 Since they are local, text waits for them rather than being drawn in a
 fallback font and redrawn, and the landing page preloads the weights it uses.
@@ -144,10 +141,9 @@ Building needs JDK 21 and the Android SDK (platform 36); Gradle fetches the
 Kotlin compiler. From this directory:
 
 ```bash
-yarn android:sync     # build dist (landing page and zoom controls) and copy it into android/
+yarn android:sync     # build Studio's mobile output and copy it into android/
 cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.1.0-debug.apk
 yarn android:open     # or open the project in Android Studio
 ```
 
-`yarn dev` serves the landing page in a browser, and `yarn test` runs its
-tests.
+`yarn dev` serves the landing page in a browser.
