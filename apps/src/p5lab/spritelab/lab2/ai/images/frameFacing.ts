@@ -1,9 +1,12 @@
 // Every frame of a character set is asked to face right, and the edit
 // model mostly obeys; now and then it draws a pose as a clean mirror
-// image. The test for which way a frame faces is which of the base picture
-// or its mirror it is nearer to, by mean color distance over the pixels
-// drawn in either; each is placed as drawn and again on the frame's drawn
-// center, and the smaller distance counts.
+// image. To tell, the frame is laid over the base picture and over the
+// base's mirror image. At every pixel where either picture has something
+// drawn, the two are scored: 0 for the same color, up to 1 for colors as
+// different as they can be, and 1 where only one of them is drawn. The
+// average is the distance, and the frame faces like whichever picture it
+// is nearer to. Each overlay is tried as drawn and again with the base
+// moved onto the frame's drawn center, and the smaller distance counts.
 
 // Alpha above this counts as drawn.
 const DRAWN_ALPHA = 64;
@@ -38,7 +41,8 @@ function drawnCenter(
 }
 
 // The distance with the base shifted by (dx, dy) in the frame's
-// coordinates.
+// coordinates: the average over pixels drawn in either of the color
+// difference as a share of the RGB diagonal, or 1 where only one is drawn.
 function shiftedDistance(
   frame: Uint8ClampedArray,
   base: Uint8ClampedArray,
@@ -78,11 +82,8 @@ function shiftedDistance(
 }
 
 /**
- * How far a frame is from the base picture (or from its mirror image),
- * 0–1: the mean over pixels drawn in either of the color distance where
- * both are drawn, and 1 where only one is. The base is compared where it
- * is drawn and again shifted so its drawn center sits on the frame's, and
- * the nearer counts. Both must be the same size.
+ * How far a frame is from the base picture, or from its mirror image, 0 to
+ * 1 (see the file comment). Both must be the same size.
  */
 export function facingDistance(
   frame: Uint8ClampedArray,
