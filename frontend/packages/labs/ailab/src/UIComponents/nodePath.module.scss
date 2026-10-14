@@ -1,0 +1,97 @@
+$step-number-size: 18px;
+
+.path {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  margin: 0;
+  padding: 8px 24px;
+  list-style: none;
+  background-color: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+// Read for its steps' widths, never seen.
+.path.measure {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: max-content;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.step {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  color: var(--text-neutral-primary);
+}
+
+.currentStep {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.stepBody {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.caret {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--text-neutral-quaternary);
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: $step-number-size;
+  height: $step-number-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-round);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--text-neutral-tertiary);
+  background-color: var(--background-neutral-primary);
+}
+
+.currentStep .stepNumber {
+  border-color: transparent;
+  color: var(--text-neutral-primary-inverse);
+  background-color: var(--background-neutral-septenary);
+}
+
+.stepNumberButton {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  cursor: default;
+
+  &:hover {
+    border-color: var(--border-neutral-secondary);
+    color: var(--text-neutral-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-brand-primary);
+    outline-offset: 2px;
+  }
+}
+
+.stepText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

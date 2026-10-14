@@ -57,6 +57,7 @@ import {useTrainingData} from '../TrainingDataContext';
 
 import FullTextTooltip from './FullTextTooltip';
 import {leafColorStyle} from './leafColors';
+import NodeModal from './NodeModal';
 import TreeCanvas from './TreeCanvas';
 
 import appStyles from '../app.module.scss';
@@ -197,6 +198,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
   const [focusVisibleId, setFocusVisibleId] = useState<string>();
   const [entered, setEntered] = useState(false);
+  const [openNodeId, setOpenNodeId] = useState<string>();
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
   if (!tree || !layout) {
@@ -258,6 +260,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     }
   };
 
+  const openOnEnterOrSpace = (event: KeyboardEvent, id: string) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setOpenNodeId(id);
+    }
+  };
+
   const columnText = (node: DisplayTreeQuestion): string =>
     getLocalizedColumnName(datasetId, node.column);
 
@@ -291,7 +300,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                 Press Enter to explore the tree
               </KeyHint>
               <KeyHint id={keysHintId} shown={entered}>
-                Use the arrow keys to move, and Escape to exit
+                Use the arrow keys to move, Enter to see a node&apos;s rows, and
+                Escape to exit
               </KeyHint>
             </span>
           }
@@ -384,6 +394,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     .filter(Boolean)
                     .join(' ')}
                   aria-current={placed.id === currentId ? 'step' : undefined}
+                  aria-haspopup="dialog"
                   aria-expanded={placed.node.type === 'question' || undefined}
                   aria-level={placed.depth + 1}
                   aria-setsize={siblings.length}
@@ -398,7 +409,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     );
                   }}
                   onBlur={() => setFocusVisibleId(undefined)}
-                  onKeyDown={event => moveFocus(event, placed)}
+                  onKeyDown={event => {
+                    moveFocus(event, placed);
+                    openOnEnterOrSpace(event, placed.id);
+                  }}
+                  onClick={() => setOpenNodeId(placed.id)}
                   className={styles.nodeSlot}
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
@@ -477,6 +492,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           </div>
         )}
       </div>
+      {openNodeId && (
+        <NodeModal
+          tree={tree}
+          nodeId={openNodeId}
+          onClose={() => setOpenNodeId(undefined)}
+        />
+      )}
     </div>
   );
 };
