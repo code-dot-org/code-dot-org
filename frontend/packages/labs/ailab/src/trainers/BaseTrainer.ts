@@ -25,7 +25,7 @@ import type {
   TrainedModel,
 } from '../types';
 
-import type {Trainer, TrainingRun} from './types';
+import type {Trainer, TrainerOutput} from './types';
 
 export interface OptimalModelDetails<Candidate> {
   model: TrainedModel;
@@ -51,27 +51,50 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  startTraining(): TrainingRun | undefined {
-    const state = this.store.getState();
+  // The inverse of hyperparameters(), so a saved run can be rebuilt exactly.
+  protected abstract candidateFor(hyperparameters: Hyperparameters): Candidate;
 
-    const optimalModel = this.getOptimalModelDetails(state);
+  startTraining(): TrainerOutput | undefined {
+    const optimalModel = this.getOptimalModelDetails(this.store.getState());
 
     if (!optimalModel) {
       return undefined;
     }
 
+    const run = this.recordModel(optimalModel);
+
+    logMetric('train-model', this.store.getState(), this.project);
+
+    return run;
+  }
+
+  /*
+    Builds the one model the given hyperparameters describe, rather than
+    sweeping for the best. A saved project records what its run settled on, and
+    re-running the sweep could answer differently if the candidates ever change.
+  */
+  rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined {
+    const state = this.store.getState();
+    const candidate = this.candidateFor(hyperparameters);
+    const model = this.buildModel(state, candidate);
+
+    return this.recordModel({
+      model,
+      predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
+      candidate,
+    });
+  }
+
+  // Stores what grading a model needs, then describes the run it belongs to.
+  private recordModel(details: OptimalModelDetails<Candidate>): TrainerOutput {
     this.store.dispatch(
-      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
+      setAccuracyCheckPredictedLabels(details.predictedLabels),
     );
 
-    const trainedState = this.store.getState();
-
-    logMetric('train-model', trainedState, this.project);
-
     return {
-      trainedModel: optimalModel.model,
-      hyperparameters: this.hyperparameters(optimalModel.candidate),
-      historicResult: this.buildHistoricResult(trainedState),
+      trainedModel: details.model,
+      hyperparameters: this.hyperparameters(details.candidate),
+      historicResult: this.buildHistoricResult(this.store.getState()),
     };
   }
 

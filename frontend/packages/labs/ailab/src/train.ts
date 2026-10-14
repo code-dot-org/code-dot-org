@@ -18,7 +18,7 @@ import {
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
-import type {Trainer, TrainingRun} from './trainers/types';
+import type {Trainer, TrainerOutput, TrainingRun} from './trainers/types';
 import type {AilabProject, DataRow, TrainedModel} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
@@ -95,41 +95,58 @@ const extractTrainingLabel = (
   return convertValueForTraining(state, project, value, project.labelColumn!);
 };
 
+/*
+  Which rows a run holds back to grade itself on. Chosen as indices into the
+  dataset so the same split can be rebuilt later; splicing them out of the
+  examples would leave nothing to rebuild from.
+*/
+const reserveRowIndices = (rowCount: number, location: string): number[] => {
+  const numToReserve = Math.ceil(rowCount * PERCENT_OF_DATASET_FOR_TESTING);
+
+  if (location === TestDataLocations.RANDOM) {
+    const reserved = new Set<number>();
+    while (reserved.size < numToReserve && reserved.size < rowCount) {
+      reserved.add(getRandomInt(rowCount - 1));
+    }
+    return [...reserved].sort((a, b) => a - b);
+  }
+
+  const firstReserved = Math.max(0, rowCount - numToReserve);
+  return Array.from(
+    {length: rowCount - firstReserved},
+    (_unused, offset) => firstReserved + offset,
+  );
+};
+
+/*
+  Turns the dataset into the numbers a trainer works with, split into the rows
+  it trains on and the rows it is graded against.
+*/
 const prepareTrainingData = (
   store: Store<RootState>,
   project: AilabProject,
+  accuracyCheckRowIndices: number[],
 ): void => {
-  const updatedState = store.getState();
-  const trainingExamples = updatedState.data.map((row: DataRow) =>
-    extractTrainingExamples(updatedState, project, row),
-  );
-  const trainingLabels = updatedState.data.map((row: DataRow) =>
-    extractTrainingLabel(updatedState, project, row),
-  );
-  /*
-  Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
-  */
-  const numToReserve = Math.ceil(
-    trainingExamples.length * PERCENT_OF_DATASET_FOR_TESTING,
-  );
-  let accuracyCheckExamples: number[][] = [];
-  let accuracyCheckLabels: (number | string)[] = [];
-  if (updatedState.reserveLocation === TestDataLocations.END) {
-    const index = -1 * numToReserve;
-    accuracyCheckExamples = trainingExamples.splice(index);
-    accuracyCheckLabels = trainingLabels.splice(index);
-  }
-  if (updatedState.reserveLocation === TestDataLocations.RANDOM) {
-    let numReserved = 0;
-    while (numReserved < numToReserve) {
-      const randomIndex = getRandomInt(trainingExamples.length - 1);
-      accuracyCheckExamples.push(trainingExamples[randomIndex]);
-      trainingExamples.splice(randomIndex, 1);
-      accuracyCheckLabels.push(trainingLabels[randomIndex]);
-      trainingLabels.splice(randomIndex, 1);
-      numReserved++;
+  const state = store.getState();
+  const reserved = new Set(accuracyCheckRowIndices);
+
+  const trainingExamples: number[][] = [];
+  const trainingLabels: (number | string)[] = [];
+  const accuracyCheckExamples: number[][] = [];
+  const accuracyCheckLabels: (number | string)[] = [];
+
+  state.data.forEach((row: DataRow, index: number) => {
+    const example = extractTrainingExamples(state, project, row);
+    const label = extractTrainingLabel(state, project, row);
+    if (reserved.has(index)) {
+      accuracyCheckExamples.push(example);
+      accuracyCheckLabels.push(label);
+    } else {
+      trainingExamples.push(example);
+      trainingLabels.push(label);
     }
-  }
+  });
+
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
   store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
@@ -158,18 +175,57 @@ const prepareTestData = (
 const trainingState: {
   trainer?: Trainer;
   store?: Store<RootState>;
+  accuracyCheckRowIndices?: number[];
   previousResults?: TrainingResults;
 } = {};
-const init = (store: Store<RootState>, project: AilabProject): void => {
-  trainingState.previousResults = getTrainingResults(store.getState());
+
+// Everything a run needs in place before a trainer can look at it.
+const prepare = (
+  store: Store<RootState>,
+  project: AilabProject,
+  accuracyCheckRowIndices: number[],
+): void => {
   trainingState.store = store;
   trainingState.trainer = buildTrainer(store, project);
+  trainingState.accuracyCheckRowIndices = accuracyCheckRowIndices;
   buildOptionNumberKeysByFeature(store, project);
-  prepareTrainingData(store, project);
+  prepareTrainingData(store, project, accuracyCheckRowIndices);
 };
 
-const onClickTrain = (): TrainingRun | undefined => {
-  return trainingState.trainer?.startTraining();
+// A run the student started, on a split chosen fresh.
+const init = (store: Store<RootState>, project: AilabProject): void => {
+  const state = store.getState();
+  trainingState.previousResults = getTrainingResults(state);
+  prepare(
+    store,
+    project,
+    reserveRowIndices(state.data.length, state.reserveLocation),
+  );
+};
+
+const describeRun = (run?: TrainerOutput): TrainingRun | undefined =>
+  run && {
+    ...run,
+    accuracyCheckRowIndices: trainingState.accuracyCheckRowIndices ?? [],
+  };
+
+const onClickTrain = (): TrainingRun | undefined =>
+  describeRun(trainingState.trainer?.startTraining());
+
+/*
+  Rebuilds the model a saved project describes, on the split it was graded
+  against. Not a run the student can cancel, so it leaves previousResults alone.
+*/
+const refit = (
+  store: Store<RootState>,
+  project: AilabProject,
+): TrainingRun | undefined => {
+  const {hyperparameters, accuracyCheckRowIndices} = project;
+  if (!hyperparameters || !accuracyCheckRowIndices) {
+    return undefined;
+  }
+  prepare(store, project, accuracyCheckRowIndices);
+  return describeRun(trainingState.trainer?.rebuild(hyperparameters));
 };
 
 const onClickPredict = (
@@ -195,11 +251,13 @@ const cancel = (): void => {
 const reset = (): void => {
   trainingState.trainer = undefined;
   trainingState.store = undefined;
+  trainingState.accuracyCheckRowIndices = undefined;
   trainingState.previousResults = undefined;
 };
 
 export default {
   init,
+  refit,
   onClickTrain,
   onClickPredict,
   cancel,

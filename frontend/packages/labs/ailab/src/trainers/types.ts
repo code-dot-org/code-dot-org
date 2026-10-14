@@ -32,14 +32,21 @@ export type TrainerId =
   | typeof TreeRegressionTrainer;
 
 /* What one training run produces. */
-export interface TrainingRun {
+/* What a trainer makes of the data it was given. */
+export interface TrainerOutput {
   trainedModel: TrainedModel;
   hyperparameters: Hyperparameters;
   historicResult: HistoricResult;
 }
 
+/* A whole run, as train.ts reports it: it owns the split, so it adds it. */
+export interface TrainingRun extends TrainerOutput {
+  accuracyCheckRowIndices: number[];
+}
+
 export interface Trainer {
-  startTraining(): TrainingRun | undefined;
+  startTraining(): TrainerOutput | undefined;
+  rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined;
   predict(trainedModel: TrainedModel | undefined, testValues: number[]): void;
   batchPredict(
     trainedModel: TrainedModel | undefined,

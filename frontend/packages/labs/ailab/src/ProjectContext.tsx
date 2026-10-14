@@ -21,7 +21,7 @@ import {useResetSignal} from './useResetSignal';
 */
 type TrainingRunOutputs = Pick<
   AilabProject,
-  'hyperparameters' | 'historicResults'
+  'hyperparameters' | 'accuracyCheckRowIndices' | 'historicResults'
 >;
 
 interface ProjectContextValue {
@@ -144,13 +144,18 @@ export const ProjectProvider = ({
     setProject(previous => ({
       ...previous,
       hyperparameters: run.hyperparameters,
+      accuracyCheckRowIndices: run.accuracyCheckRowIndices,
       historicResults: [run.historicResult, ...previous.historicResults],
     }));
   }, []);
 
   const snapshotTrainingRun = useCallback(() => {
-    const {hyperparameters, historicResults} = project;
-    previousRun.current = {hyperparameters, historicResults};
+    const {hyperparameters, accuracyCheckRowIndices, historicResults} = project;
+    previousRun.current = {
+      hyperparameters,
+      accuracyCheckRowIndices,
+      historicResults,
+    };
   }, [project]);
 
   const restoreTrainingRun = useCallback(() => {

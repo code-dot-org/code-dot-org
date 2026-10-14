@@ -164,6 +164,9 @@ export interface AilabProject {
   labelColumn?: string;
   selectedFeatures: string[];
   hyperparameters?: Hyperparameters;
+  // The rows a training run held back to grade itself on. Saved because a
+  // random split can't be guessed again, and refitting needs the same one.
+  accuracyCheckRowIndices?: number[];
   historicResults: HistoricResult[];
 }
 
@@ -171,6 +174,7 @@ export const initialProject: AilabProject = {
   labelColumn: undefined,
   selectedFeatures: [],
   hyperparameters: undefined,
+  accuracyCheckRowIndices: undefined,
   historicResults: [],
 };
 
