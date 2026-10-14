@@ -17,7 +17,7 @@ const alpha = (data, i) => data[i * 4 + 3];
 describe('SpriteLab2 keyOutColor', () => {
   const MAGENTA = [255, 0, 255];
 
-  it('clears the key colour everywhere, enclosed gaps included', () => {
+  it('clears the key color everywhere, enclosed gaps included', () => {
     // red | magenta (enclosed by red on this row) | red
     const data = rgba([
       [255, 0, 0],
@@ -47,7 +47,7 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(soft[1 * 4]).toBe(255);
   });
 
-  it('leaves a fringe-coloured pixel alone when nothing keyed touches it', () => {
+  it('leaves a fringe-colored pixel alone when nothing keyed touches it', () => {
     const data = rgba([
       [255, 0, 0],
       [255, 0, 128],
@@ -57,7 +57,7 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(data, 1)).toBe(255);
   });
 
-  it('clears a shaded, textured key colour, not just the pure one', () => {
+  it('clears a shaded, textured key color, not just the pure one', () => {
     // Textured magenta background of varying shade around a purple robe pixel.
     const data = rgba([
       [255, 0, 255],
@@ -135,7 +135,7 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(data[15 * 4 + 2]).toBeLessThan(40);
   });
 
-  it('keeps a colour inside the character that only scores in the lowered band', () => {
+  it('keeps a color inside the character that only scores in the lowered band', () => {
     // The dull ring again; the body wears a pink patch scoring 90, above
     // the lowered cutoff but nothing like the backdrop as drawn.
     const dull = [190, 29, 155];
@@ -172,7 +172,7 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(data, 16)).toBe(255);
   });
 
-  it('floods a backdrop drawn in a colour of its own from the edges', () => {
+  it('floods a backdrop drawn in a color of its own from the edges', () => {
     // 7x5: a white ring the key never scores; inside, a red body with one
     // white pixel enclosed in it that the flood cannot reach.
     const white = [255, 255, 255];
@@ -217,7 +217,7 @@ describe('SpriteLab2 keyOutColor', () => {
     expect(alpha(data, 16)).toBe(255);
   });
 
-  it('leaves an off-key border alone when it is not one flat colour', () => {
+  it('leaves an off-key border alone when it is not one flat color', () => {
     const white = [255, 255, 255];
     const blue = [0, 0, 255];
     const red = [255, 0, 0];
@@ -253,7 +253,7 @@ describe('SpriteLab2 keyOutColor', () => {
   });
 
   it('keeps the cutoff when the border is mostly transparent already', () => {
-    // 5x5: a transparent ring, a red ring, and a dull magenta centre the
+    // 5x5: a transparent ring, a red ring, and a dull magenta center the
     // red ring walls off; the border says nothing about the backdrop.
     const red = [255, 0, 0];
     const dull = [190, 29, 155];

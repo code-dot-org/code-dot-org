@@ -60,7 +60,7 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
   );
 }
 
-// The named key colour the subject is keyed out against afterwards.
+// The named key color the subject is keyed out against afterwards.
 function spritePromptClause(key: KeyColor): string {
   return keyClause(key, 'subject');
 }
@@ -301,7 +301,7 @@ export function fullPromptFor(
 
 /**
  * Generate an image from a text prompt. Sprites and blocks are drawn on a
- * named key colour (keyColor.ts) that is keyed out afterwards.
+ * named key color (keyColor.ts) that is keyed out afterwards.
  */
 export async function generateImage(
   prompt: string,
@@ -375,7 +375,7 @@ export async function generateImage(
     };
   }
 
-  // Sprites and blocks get the named key colour removed the same way;
+  // Sprites and blocks get the named key color removed the same way;
   // blocks are then cropped to content and squared so grid-placed copies
   // tile seamlessly. Backgrounds are flattened opaque; pixel style gets
   // grid-normalized.

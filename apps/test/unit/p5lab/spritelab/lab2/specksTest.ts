@@ -63,7 +63,7 @@ describe('SpriteLab2 clearMinorComponents', () => {
     expect(clearMinorComponents(onEdge, SIDE, SIDE, 64, 0.1)).toBe(20);
   });
 
-  it('counts diagonal neighbours as one patch', () => {
+  it('counts diagonal neighbors as one patch', () => {
     // Two pixels touching only at a corner, beside a body: together they
     // are one patch, and far too small to keep.
     const data = picture([

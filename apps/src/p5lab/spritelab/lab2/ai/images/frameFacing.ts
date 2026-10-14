@@ -1,9 +1,9 @@
 // Every frame of a character set is asked to face right, and the edit
 // model mostly obeys; now and then it draws a pose as a clean mirror
 // image. The test for which way a frame faces is which of the base picture
-// or its mirror it is nearer to, by mean colour distance over the pixels
+// or its mirror it is nearer to, by mean color distance over the pixels
 // drawn in either; each is placed as drawn and again on the frame's drawn
-// centre, and the smaller distance counts.
+// center, and the smaller distance counts.
 
 // Alpha above this counts as drawn.
 const DRAWN_ALPHA = 64;
@@ -11,10 +11,10 @@ const DRAWN_ALPHA = 64;
 // How much nearer the mirror must be before a frame is called mirrored.
 const MIRROR_MARGIN = 0.05;
 
-// Unit colour distance: the RGB diagonal.
+// Unit color distance: the RGB diagonal.
 const MAX_DISTANCE = Math.sqrt(3 * 255 * 255);
 
-// The centre of the drawn pixels' bounds, or null when nothing is drawn.
+// The center of the drawn pixels' bounds, or null when nothing is drawn.
 function drawnCenter(
   data: Uint8ClampedArray,
   width: number,
@@ -79,9 +79,9 @@ function shiftedDistance(
 
 /**
  * How far a frame is from the base picture (or from its mirror image),
- * 0–1: the mean over pixels drawn in either of the colour distance where
+ * 0–1: the mean over pixels drawn in either of the color distance where
  * both are drawn, and 1 where only one is. The base is compared where it
- * is drawn and again shifted so its drawn centre sits on the frame's, and
+ * is drawn and again shifted so its drawn center sits on the frame's, and
  * the nearer counts. Both must be the same size.
  */
 export function facingDistance(

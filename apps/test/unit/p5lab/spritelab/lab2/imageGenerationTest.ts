@@ -155,7 +155,7 @@ describe('generateImage', () => {
     expect(object).toContain('flat background');
   });
 
-  it('names the key colour, green when the subject sounds pink', () => {
+  it('names the key color, green when the subject sounds pink', () => {
     const sprite = fullPromptFor('a chest', {imageType: 'sprite'});
     expect(sprite).toContain('pure magenta (#FF00FF)');
     expect(sprite).toContain('no pure magenta');

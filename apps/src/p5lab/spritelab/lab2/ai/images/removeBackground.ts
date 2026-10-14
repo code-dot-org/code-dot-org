@@ -1,7 +1,7 @@
 /**
  * Background removal (chroma key) for AI-generated images. Every prompt
- * names the flat colour it wants behind the subject (keyColor.ts), and the
- * keyer clears that colour wherever it is. Two matte styles: sharp (binary
+ * names the flat color it wants behind the subject (keyColor.ts), and the
+ * keyer clears that color wherever it is. Two matte styles: sharp (binary
  * alpha, what pixel art wants) and soft (a feathered, despilled edge, what
  * illustrated art wants). keyOutColor() holds the per-pixel decision
  * (unit-testable without a canvas); removeKeyColor() is the thin canvas
@@ -22,11 +22,11 @@ export interface MatteOptions {
   soft?: boolean;
 }
 
-// How much a pixel is the key colour, 0–255: the least of the channels the
+// How much a pixel is the key color, 0–255: the least of the channels the
 // key has full minus the most of the channels it has none of. Pure magenta
 // scores 255, and so does a shaded, textured or noisy magenta as long as
 // red and blue stay well above green — which is the point: a background the
-// model paints with texture instead of flat colour still keys out, where a
+// model paints with texture instead of flat color still keys out, where a
 // fixed distance from pure magenta left clouds of it behind. Nothing a
 // character wears scores high: a purple robe at (120, 60, 180) scores 60.
 function keySignature(
@@ -55,16 +55,16 @@ const KEY_EDGE_SIGNATURE = 65;
 
 // A backdrop that came back duller than asked scores under KEY_SIGNATURE
 // everywhere; the border tells, since the prompt puts the backdrop on every
-// edge. When the border is one flat colour scoring in the band, pixels near
-// that colour are background outright and the edge ramp runs from just
+// edge. When the border is one flat color scoring in the band, pixels near
+// that color are background outright and the edge ramp runs from just
 // under the border's median.
 const DULL_KEY_FLOOR = 90;
 const DULL_KEY_MARGIN = 24;
 const DULL_KEY_SPREAD = 40;
 const DULL_KEY_DISTANCE = 24;
 
-// A border that is one flat opaque colour scoring nothing against the key
-// is a backdrop in a colour of the model's own: flooded from the edges, so
+// A border that is one flat opaque color scoring nothing against the key
+// is a backdrop in a color of the model's own: flooded from the edges, so
 // an enclosed patch of it on the character stays.
 const OFF_KEY_BORDER_SPREAD = 30;
 const OFF_KEY_LOW_DISTANCE = 30;
@@ -76,7 +76,7 @@ interface BorderRead {
   // percentile spread.
   median: number;
   spread: number;
-  // Their colour: per-channel median, and the widest channel spread.
+  // Their color: per-channel median, and the widest channel spread.
   color: [number, number, number];
   colorSpread: number;
 }
@@ -124,7 +124,7 @@ function readBorder(
   };
 }
 
-// Max per-channel difference between a pixel and a colour.
+// Max per-channel difference between a pixel and a color.
 function chromaDistance(
   data: Uint8ClampedArray,
   p: number,
@@ -179,13 +179,13 @@ function floodOffKey(
 }
 
 /**
- * Key out a KNOWN colour everywhere in RGBA data — enclosed gaps included,
+ * Key out a KNOWN color everywhere in RGBA data — enclosed gaps included,
  * with no dependence on what the corners hold. Pixels carrying the key's
  * signature go transparent; the band below floods from them, so a shaded
  * or textured backdrop dissolves completely; band pixels that touch the
  * character are its edge and go too (sharp) or fade by their signature and
  * lose the key's tint (soft); stray specks the flood missed are cleared.
- * A backdrop drawn in some other flat colour is flooded from the edges.
+ * A backdrop drawn in some other flat color is flooded from the edges.
  */
 export function keyOutColor(
   data: Uint8ClampedArray,
@@ -237,7 +237,7 @@ export function keyOutColor(
       queue.push(p);
     }
   }
-  const neighbours = (p: number, visit: (q: number) => void) => {
+  const neighbors = (p: number, visit: (q: number) => void) => {
     const x = p % width;
     const y = (p - x) / width;
     for (let dy = -1; dy <= 1; dy++) {
@@ -252,7 +252,7 @@ export function keyOutColor(
   };
   // Flood the band from the cleared pixels.
   for (let head = 0; head < queue.length; head++) {
-    neighbours(queue[head], q => {
+    neighbors(queue[head], q => {
       if (kind[q] === 0 && signature[q] >= KEY_EDGE_SIGNATURE) {
         kind[q] = 2;
         queue.push(q);
@@ -264,14 +264,14 @@ export function keyOutColor(
       continue;
     }
     let touchesCharacter = false;
-    neighbours(p, q => {
+    neighbors(p, q => {
       if (kind[q] === 0) {
         touchesCharacter = true;
       }
     });
     if (options.soft && touchesCharacter && signature[p] < cutoff) {
       const alpha = (cutoff - signature[p]) / (cutoff - KEY_EDGE_SIGNATURE);
-      // Despill: an edge pixel is the character's colour blended with the
+      // Despill: an edge pixel is the character's color blended with the
       // backdrop by (1 - alpha); take the backdrop's share back out, or the
       // fringe keeps its tint and reads as a halo over any background.
       for (let c = 0; c < 3; c++) {
@@ -296,7 +296,7 @@ export function keyOutColor(
     }
     let clear = 0;
     let all = 0;
-    neighbours(p, q => {
+    neighbors(p, q => {
       all++;
       if (data[q * 4 + 3] === 0) {
         clear++;
@@ -308,7 +308,7 @@ export function keyOutColor(
   }
 }
 
-/** Remove a known key colour from an image Blob and return a new PNG Blob. */
+/** Remove a known key color from an image Blob and return a new PNG Blob. */
 export async function removeKeyColor(
   blob: Blob,
   key: [number, number, number],
