@@ -27,8 +27,7 @@ function prepareForFields(
 ): FieldsState {
   const parsedMode = parseJsonObject(rawMode);
   const {mode, removed} = cleanMode(parsedMode ?? {}, knownDatasetIds);
-  const fieldsMode =
-    mode.pretrained === true ? setPretrained(mode, true) : mode;
+  const fieldsMode = setPretrained(mode, mode.pretrained === true);
   return {
     rawMode: serializeJsonObject(withDefaultTrainer(fieldsMode)),
     removed: parsedMode ? removed : ['the saved mode, which is not valid JSON'],

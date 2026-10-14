@@ -14,6 +14,8 @@ export interface Mode {
   lockFeatures?: boolean;
   // Trains on `label` and `features` when the level loads. Requires both locks.
   pretrained?: boolean;
+  // Opens on the results once pretrained, with no way back. Requires `pretrained`.
+  hideDatasetView?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;

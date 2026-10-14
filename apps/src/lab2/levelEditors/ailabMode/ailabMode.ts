@@ -12,6 +12,7 @@ export type BooleanModeKey =
   | 'hideSelectLabel'
   | 'lockFeatures'
   | 'pretrained'
+  | 'hideDatasetView'
   | 'hideSave'
   | 'randomizeTestData'
   | 'hideColumnClicking';
@@ -20,6 +21,7 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
   'lockFeatures',
   'pretrained',
+  'hideDatasetView',
   'hideSave',
   'hideColumnClicking',
   'randomizeTestData',
@@ -161,6 +163,8 @@ export function setPretrained(
   if (pretrained) {
     Object.assign(newMode, SET_BY_PRETRAINED);
     newMode.label = getStartingLabel(newMode, defaultLabel);
+  } else {
+    delete newMode.hideDatasetView;
   }
   return newMode;
 }

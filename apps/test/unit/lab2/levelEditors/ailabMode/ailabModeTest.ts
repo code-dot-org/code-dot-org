@@ -16,6 +16,7 @@ describe('ailabMode', () => {
         hideSave: false,
         lockFeatures: true,
         pretrained: true,
+        hideDatasetView: true,
       };
       expect(cleanMode(mode, KNOWN)).toEqual({mode, removed: []});
     });
