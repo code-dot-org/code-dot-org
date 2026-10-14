@@ -609,11 +609,11 @@ describe('Theater', () => {
   });
 
   describe('describe', () => {
-    const fallbackSignal = {
+    const descriptionSignal = {
       value: TheaterSignalType.DESCRIPTION,
       detail: {summary: 'Still picture.', transcript: 'Shapes: a red circle.'},
     };
-    const fallbackDescription = {
+    const packageDescription = {
       status: 'ready',
       summary: 'Still picture.',
       detail: 'Shapes: a red circle.',
@@ -630,15 +630,15 @@ describe('Theater', () => {
     });
 
     it('falls back to the package description when the AI one fails or was never requested', async () => {
-      theater.handleSignal(fallbackSignal);
+      theater.handleSignal(descriptionSignal);
       theater.describe(Promise.reject(new Error('gateway down')));
       await Promise.resolve();
       await Promise.resolve();
-      expect(onDescriptionChange).toHaveBeenLastCalledWith(fallbackDescription);
+      expect(onDescriptionChange).toHaveBeenLastCalledWith(packageDescription);
 
       onDescriptionChange.mockClear();
       theater.describe();
-      expect(onDescriptionChange).toHaveBeenLastCalledWith(fallbackDescription);
+      expect(onDescriptionChange).toHaveBeenLastCalledWith(packageDescription);
     });
 
     it('reports unavailable when neither description exists', () => {
@@ -649,7 +649,7 @@ describe('Theater', () => {
     });
 
     it('clears the description on reset and drops a late answer', async () => {
-      theater.handleSignal(fallbackSignal);
+      theater.handleSignal(descriptionSignal);
       let resolve: (text: string) => void = () => {};
       theater.describe(new Promise<string>(r => (resolve = r)));
       theater.reset();

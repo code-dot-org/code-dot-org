@@ -132,8 +132,7 @@ export default class Theater extends MiniApp {
   private readonly audioSource: TrackedSource;
   // Bumped on reset and on each describe(), so a late answer is dropped.
   private descriptionGeneration: number;
-  // Grounds the AI description, and is read when none arrives.
-  private fallbackDescription: SceneDescription | null;
+  private packageDescription: SceneDescription | null;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -155,7 +154,7 @@ export default class Theater extends MiniApp {
     this.onMediaLoadError = onMediaLoadError;
     this.onDescriptionChange = onDescriptionChange;
     this.descriptionGeneration = 0;
-    this.fallbackDescription = null;
+    this.packageDescription = null;
     this.isVisualLoaded = false;
     this.isAudioReady = false;
     this.prompterUploadUrl = null;
@@ -215,7 +214,7 @@ export default class Theater extends MiniApp {
         break;
       }
       case TheaterSignalType.DESCRIPTION: {
-        this.fallbackDescription = data.detail.summary
+        this.packageDescription = data.detail.summary
           ? {summary: data.detail.summary, transcript: data.detail.transcript}
           : null;
         break;
@@ -367,16 +366,16 @@ export default class Theater extends MiniApp {
     this.clearDescription();
   }
 
-  getSceneDescription() {
-    return this.fallbackDescription;
+  getPackageDescription() {
+    return this.packageDescription;
   }
 
-  // Falls back when the promise rejects or is absent.
+  // Announces the AI description; the package's own if that fails or is absent.
   describe(description?: Promise<string>) {
     const generation = ++this.descriptionGeneration;
     const isCurrent = () => generation === this.descriptionGeneration;
     if (!description) {
-      this.publishFallbackDescription();
+      this.publishPackageDescription();
       return;
     }
     this.onDescriptionChange?.({status: 'pending'});
@@ -388,20 +387,20 @@ export default class Theater extends MiniApp {
       },
       () => {
         if (isCurrent()) {
-          this.publishFallbackDescription();
+          this.publishPackageDescription();
         }
       }
     );
   }
 
-  private publishFallbackDescription() {
-    const fallback = this.fallbackDescription;
+  private publishPackageDescription() {
+    const description = this.packageDescription;
     this.onDescriptionChange?.(
-      fallback
+      description
         ? {
             status: 'ready',
-            summary: fallback.summary,
-            detail: fallback.transcript,
+            summary: description.summary,
+            detail: description.transcript,
           }
         : {status: 'unavailable'}
     );
@@ -409,7 +408,7 @@ export default class Theater extends MiniApp {
 
   private clearDescription() {
     this.descriptionGeneration++;
-    this.fallbackDescription = null;
+    this.packageDescription = null;
     this.onDescriptionChange?.(null);
   }
 

@@ -20,7 +20,7 @@ interface TheaterVisualizationProps {
 function linesFor(description?: TheaterDescription | null): string[] {
   switch (description?.status) {
     case 'pending':
-      return ['Describing the stage.'];
+      return ['Generating a description of the stage.'];
     case 'ready':
       return [description.summary, ...(description.detail?.split('\n') ?? [])];
     case 'unavailable':

@@ -4,6 +4,7 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
+import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -63,6 +64,26 @@ Rules:
 
 export function isTheaterDescriptionEnabled(): boolean {
   return !!DCDO.get(THEATER_DESCRIPTIONS_DCDO_KEY, false);
+}
+
+// Mirrors the gateway token check (AiGatewayAuthController), so a request it
+// would refuse is skipped rather than counted as a failure.
+export function canUseTheaterDescriptionModel(): boolean {
+  const {currentUser, lab} = getStore().getState();
+  if (currentUser.isLevelbuilder) {
+    return true;
+  }
+  if (currentUser.usOnlyAichatModelsDisabled) {
+    return false;
+  }
+  const appName = lab.levelProperties?.appName;
+  return (
+    !!appName &&
+    areAiChatToolsEnabled({
+      appName,
+      aiChatAccessLevel: currentUser.aiChatAccessLevel,
+    })
+  );
 }
 
 export function getDescribableFiles(source: MultiFileSource): ProjectFile[] {
@@ -197,9 +218,18 @@ export function describeTheaterOutput(source: MultiFileSource) {
   if (!theater?.hasOutput()) {
     return;
   }
+  if (!isTheaterDescriptionEnabled()) {
+    theater.describe();
+    return;
+  }
+  if (!canUseTheaterDescriptionModel()) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('TheaterDescription.Skipped');
+    theater.describe();
+    return;
+  }
   theater.describe(
-    isTheaterDescriptionEnabled()
-      ? requestTheaterDescription(source, theater.getSceneDescription())
-      : undefined
+    requestTheaterDescription(source, theater.getPackageDescription())
   );
 }

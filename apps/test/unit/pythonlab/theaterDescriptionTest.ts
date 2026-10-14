@@ -4,6 +4,7 @@ import {
   MAX_CODE_CHARACTERS,
   MAX_RUN_CHARACTERS,
   buildDescriptionPrompt,
+  canUseTheaterDescriptionModel,
   cleanDescription,
   getDescribableFiles,
   requestTheaterDescription,
@@ -23,11 +24,22 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
     }),
   },
 }));
+const mockCurrentUser = {
+  isLevelbuilder: false,
+  usOnlyAichatModelsDisabled: false,
+  aiChatAccessLevel: 'enabled',
+};
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
     getState: () => ({
+      currentUser: mockCurrentUser,
       progress: {currentLevelId: '7', scriptId: null},
-      lab: {levelProperties: {longInstructions: 'Draw a sun.'}},
+      lab: {
+        levelProperties: {
+          appName: 'pythonlab',
+          longInstructions: 'Draw a sun.',
+        },
+      },
     }),
   }),
 }));
@@ -42,6 +54,39 @@ const file = (
 ) => ({id, name, contents, folderId: '0', type});
 
 describe('theaterDescription', () => {
+  describe('canUseTheaterDescriptionModel', () => {
+    afterEach(() => {
+      Object.assign(mockCurrentUser, {
+        isLevelbuilder: false,
+        usOnlyAichatModelsDisabled: false,
+        aiChatAccessLevel: 'enabled',
+      });
+    });
+
+    it('allows a user with AI access in the US', () => {
+      expect(canUseTheaterDescriptionModel()).toBe(true);
+    });
+
+    it('refuses a user without full AI access', () => {
+      mockCurrentUser.aiChatAccessLevel = 'essential_only';
+      expect(canUseTheaterDescriptionModel()).toBe(false);
+    });
+
+    it('refuses a user blocked from US-only models', () => {
+      mockCurrentUser.usOnlyAichatModelsDisabled = true;
+      expect(canUseTheaterDescriptionModel()).toBe(false);
+    });
+
+    it('always allows levelbuilders', () => {
+      Object.assign(mockCurrentUser, {
+        isLevelbuilder: true,
+        usOnlyAichatModelsDisabled: true,
+        aiChatAccessLevel: 'disabled',
+      });
+      expect(canUseTheaterDescriptionModel()).toBe(true);
+    });
+  });
+
   describe('getDescribableFiles', () => {
     it('keeps student and support python, and drops validation and system files', () => {
       const source = {
