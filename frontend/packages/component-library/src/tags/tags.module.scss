@@ -36,6 +36,25 @@
       padding-inline-end: 8px;
     }
   }
+
+  // Colours. The default tag keeps whatever the base rule sets. Each colour is
+  // doubled up on .tag so it outranks `.tags .tag` above, which sets a
+  // background of its own, on specificity rather than on source order.
+  .tag.tag-pink {
+    background: var(--background-accent-pink-light);
+    color: var(--text-accent-pink-secondary);
+    // The TA lettermark fills more of its box than the icons the base 2px gap
+    // was set for, so the label would otherwise sit against it.
+    gap: 6px;
+
+    span {
+      color: var(--text-accent-pink-secondary);
+    }
+
+    i {
+      color: var(--text-accent-pink-primary-fixed);
+    }
+  }
 }
 
 // Sizes
@@ -107,37 +126,12 @@
         color: var(--text-brand-secondary);
       }
     }
-  }
-}
 
-// Colours. The default tag keeps whatever the base rule sets. Each colour is
-// doubled up on .tag so it outranks the base `.tags .tag`, which sets a
-// background of its own, on specificity rather than on source order.
-.tags {
-  .tag.tag-pink {
-    background: var(--background-accent-pink-light);
-    color: var(--text-accent-pink-secondary);
-    // The TA lettermark fills more of its box than the icons the base 2px gap
-    // was set for, so the label would otherwise sit against it.
-    gap: 6px;
-
-    span {
-      color: var(--text-accent-pink-secondary);
-    }
-
-    i {
-      color: var(--text-accent-pink-primary-fixed);
-    }
-  }
-}
-
-// Repeated inside the CADS brand, which gives every tag a border and colours
-// the label on the span itself -- both more specific than the block above.
-[data-brand='codeai-next'] {
-  .tags {
+    // Repeated here because this brand gives every tag a border and colours the
+    // label on the span itself, both more specific than the block above.
     .tag.tag-pink {
       background: var(--background-accent-pink-light);
-      border-color: var(--border-accent-pink-mid);
+      border-color: var(--border-accent-pink-primary);
       color: var(--text-accent-pink-secondary);
 
       span {
