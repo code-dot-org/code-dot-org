@@ -2029,7 +2029,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   moduleStyles.picturesTab,
                   picturesOpen && moduleStyles.picturesTabOpen
                 )}
-                disabled={!picturesOffered}
+                disabled={!picturesOffered || activeTab === 'Play'}
                 title={picturesOffered ? undefined : LOCKED_REASON}
                 aria-expanded={picturesOpen}
                 aria-controls={PICTURES_DRAWER_ID}
