@@ -1,6 +1,6 @@
 // The level header's middle for a unit flagged simple_progress: the unit's
 // image, the unit name and a label on one line with the project's saved-at
-// under them, and the project's buttons after. The label is the current
+// under them, after the project's own controls. The label is the current
 // level's header label, unless the page has set one in the store.
 // One flex row, nothing measured. It shows on mount: HeaderMiddle's wait
 // for an app load has no signal under Lab2, the only place this is used.
@@ -72,6 +72,9 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
 
   return (
     <div id="header_middle_content" className={styles.row}>
+      <div id="project_info_container" className={styles.projectInfo}>
+        <ProjectInfo isRtl={isRtl} />
+      </div>
       {scriptData.simpleProgressImage && (
         <img
           src={scriptData.simpleProgressImage}
@@ -99,9 +102,6 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           {label && <span className={styles.label}>{label}</span>}
         </div>
         <div className={styles.saved}>{showSaved && <ProjectUpdatedAt />}</div>
-      </div>
-      <div id="project_info_container" className={styles.projectInfo}>
-        <ProjectInfo isRtl={isRtl} />
       </div>
     </div>
   );
