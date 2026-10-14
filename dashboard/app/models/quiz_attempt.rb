@@ -73,8 +73,7 @@ class QuizAttempt < ApplicationRecord
       next unless response.quiz_question.answered?(response.response_data)
       {
         quiz_question_id: response.quiz_question_id,
-        selected_choice_id: response.response_data['selectedChoiceId'],
-        answer_text: response.response_data['answerText']
+        response_data: response.response_data
       }
     end
   end
@@ -96,8 +95,7 @@ class QuizAttempt < ApplicationRecord
       graded = response.score.present? && response.max_score.present?
       {
         quiz_question_id: response.quiz_question_id,
-        selected_choice_id: response.response_data['selectedChoiceId'],
-        answer_text: response.response_data['answerText'],
+        response_data: response.response_data,
         correct: (show_correctness && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
         correct_choice_id: reveal_answer ? response.quiz_question.content['correct_choice_id'] : nil

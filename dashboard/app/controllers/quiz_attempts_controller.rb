@@ -136,8 +136,8 @@ class QuizAttemptsController < ApplicationController
       )&.map do |result|
         {
           quizQuestionId: result[:quiz_question_id],
-          selectedChoiceId: result[:selected_choice_id],
-          answerText: result[:answer_text],
+          # Exactly as the client posted it; its shape depends on the question type.
+          responseData: result[:response_data],
           correct: result[:correct],
           explanation: result[:explanation],
           correctChoiceId: result[:correct_choice_id]
@@ -147,8 +147,7 @@ class QuizAttemptsController < ApplicationController
       questionResultsInProgress: attempt.question_results_in_progress&.map do |question_result|
         {
           quizQuestionId: question_result[:quiz_question_id],
-          selectedChoiceId: question_result[:selected_choice_id],
-          answerText: question_result[:answer_text]
+          responseData: question_result[:response_data]
         }
       end
     }

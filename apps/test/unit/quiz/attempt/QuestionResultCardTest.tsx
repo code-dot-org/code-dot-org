@@ -23,8 +23,7 @@ const QUESTION: QuizQuestionSummary = {
 
 const BASE_RESULT: QuizQuestionResult = {
   quizQuestionId: 1,
-  selectedChoiceId: null,
-  answerText: null,
+  responseData: {},
   correct: null,
   explanation: null,
   correctChoiceId: null,
@@ -49,7 +48,7 @@ const choiceItem = (text: string) =>
 
 describe('QuestionResultCard', () => {
   it('marks the selected correct choice', () => {
-    renderCard({selectedChoiceId: '1', correct: true});
+    renderCard({responseData: {selectedChoiceId: '1'}, correct: true});
 
     expect(
       within(choiceItem('Four')).getByText('Correct answer')
@@ -63,7 +62,7 @@ describe('QuestionResultCard', () => {
   });
 
   it('marks the selected incorrect choice', () => {
-    renderCard({selectedChoiceId: '2', correct: false});
+    renderCard({responseData: {selectedChoiceId: '2'}, correct: false});
 
     expect(
       within(choiceItem('Five')).getByText('Your answer, incorrect')
@@ -73,7 +72,7 @@ describe('QuestionResultCard', () => {
   });
 
   it('shows a selected choice as ungraded when correctness is hidden', () => {
-    renderCard({selectedChoiceId: '0', correct: null});
+    renderCard({responseData: {selectedChoiceId: '0'}, correct: null});
 
     expect(
       within(choiceItem('Three')).getByText('Your answer', {exact: true})
@@ -86,7 +85,11 @@ describe('QuestionResultCard', () => {
 
   it("labels the selection as the student's answer for a teacher viewing a student", () => {
     renderCard(
-      {selectedChoiceId: '2', correct: false, correctChoiceId: '1'},
+      {
+        responseData: {selectedChoiceId: '2'},
+        correct: false,
+        correctChoiceId: '1',
+      },
       {isViewingStudent: true}
     );
     expect(
@@ -96,7 +99,10 @@ describe('QuestionResultCard', () => {
   });
 
   it("labels an ungraded selection as the student's answer for a teacher viewing a student", () => {
-    renderCard({selectedChoiceId: '0'}, {isViewingStudent: true});
+    renderCard(
+      {responseData: {selectedChoiceId: '0'}},
+      {isViewingStudent: true}
+    );
     expect(
       within(choiceItem('Three')).getByText("Student's answer", {exact: true})
     ).toBeInTheDocument();
@@ -177,7 +183,11 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
-          result={{...BASE_RESULT, quizQuestionId: 2, answerText: 'x > 3'}}
+          result={{
+            ...BASE_RESULT,
+            quizQuestionId: 2,
+            responseData: {answerText: 'x > 3'},
+          }}
         />
       );
 
@@ -206,7 +216,7 @@ describe('QuestionResultCard', () => {
           result={{
             ...BASE_RESULT,
             quizQuestionId: 2,
-            answerText: 'x > 3',
+            responseData: {answerText: 'x > 3'},
             explanation: 'The condition becomes false.',
           }}
           revealAnswerExplanation

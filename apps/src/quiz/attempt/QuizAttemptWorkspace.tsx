@@ -143,11 +143,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     const selectedChoices: Record<number, string> = {};
     const answerTexts: Record<number, string> = {};
     for (const result of attempt?.questionResultsInProgress ?? []) {
-      if (result.selectedChoiceId) {
-        selectedChoices[result.quizQuestionId] = result.selectedChoiceId;
+      const {selectedChoiceId, answerText} = result.responseData;
+      if (selectedChoiceId) {
+        selectedChoices[result.quizQuestionId] = selectedChoiceId;
       }
-      if (result.answerText) {
-        answerTexts[result.quizQuestionId] = result.answerText;
+      if (answerText) {
+        answerTexts[result.quizQuestionId] = answerText;
       }
     }
     setSelectedChoicesByQuestionId(selectedChoices);
@@ -469,19 +470,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             {/* A student who hasn't started (attempt is null) shows teacher every question unanswered. */}
             {attempt !== undefined &&
               renderQuestionResults(
-                quizQuestions.map(question => {
-                  const inProgress = attempt?.questionResultsInProgress?.find(
-                    r => r.quizQuestionId === question.id
-                  );
-                  return {
-                    quizQuestionId: question.id,
-                    selectedChoiceId: inProgress?.selectedChoiceId ?? null,
-                    answerText: inProgress?.answerText ?? null,
-                    correct: null,
-                    explanation: null,
-                    correctChoiceId: null,
-                  };
-                })
+                quizQuestions.map(question => ({
+                  quizQuestionId: question.id,
+                  responseData:
+                    attempt?.questionResultsInProgress?.find(
+                      r => r.quizQuestionId === question.id
+                    )?.responseData ?? {},
+                  correct: null,
+                  explanation: null,
+                  correctChoiceId: null,
+                }))
               )}
           </div>
         ) : isIntroOpen ? (

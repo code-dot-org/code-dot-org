@@ -363,16 +363,14 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
-              answerText: null,
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
-              answerText: null,
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -621,16 +619,14 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
-              answerText: null,
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
-              answerText: null,
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -748,7 +744,7 @@ describe('QuizAttemptWorkspace', () => {
         attempt: {
           ...ATTEMPT,
           questionResultsInProgress: [
-            {quizQuestionId: 1, selectedChoiceId: 'b', answerText: null},
+            {quizQuestionId: 1, responseData: {selectedChoiceId: 'b'}},
           ],
         },
       },
@@ -1029,8 +1025,7 @@ describe('QuizAttemptWorkspace', () => {
       questionResults: [
         {
           quizQuestionId: 1,
-          selectedChoiceId: 'b',
-          answerText: null,
+          responseData: {selectedChoiceId: 'b'},
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -1105,7 +1100,7 @@ describe('QuizAttemptWorkspace', () => {
           attempt: {
             ...ATTEMPT,
             questionResultsInProgress: [
-              {quizQuestionId: 1, selectedChoiceId: 'b', answerText: null},
+              {quizQuestionId: 1, responseData: {selectedChoiceId: 'b'}},
             ],
           },
         },
@@ -1164,7 +1159,7 @@ describe('QuizAttemptWorkspace', () => {
           attempt: {
             ...ATTEMPT,
             questionResultsInProgress: [
-              {quizQuestionId: 9, selectedChoiceId: null, answerText: 'x > 3'},
+              {quizQuestionId: 9, responseData: {answerText: 'x > 3'}},
             ],
           },
         },
@@ -1284,8 +1279,7 @@ describe('QuizAttemptWorkspace', () => {
             questionResults: [
               {
                 quizQuestionId: 9,
-                selectedChoiceId: null,
-                answerText: 'x > 3',
+                responseData: {answerText: 'x > 3'},
                 correct: null,
                 explanation: null,
                 correctChoiceId: null,
@@ -1307,7 +1301,7 @@ describe('QuizAttemptWorkspace', () => {
           attempt: {
             ...ATTEMPT,
             questionResultsInProgress: [
-              {quizQuestionId: 9, selectedChoiceId: null, answerText: 'x > 3'},
+              {quizQuestionId: 9, responseData: {answerText: 'x > 3'}},
             ],
           },
         },
