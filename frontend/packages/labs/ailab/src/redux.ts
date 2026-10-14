@@ -71,7 +71,15 @@ export interface RootState {
   presetColumns: PresetColumns | undefined;
   resetCount: number;
   resetKeepsHistoricResults: boolean;
+  // Set when a level load caused the reset, carrying the student's saved work
+  // if they have any. Absent for the resets a student causes.
+  resetLevelLoad: {project?: AilabProject} | undefined;
   mode?: Mode;
+}
+
+export interface ResetOptions {
+  keepHistoricResults?: boolean;
+  levelLoad?: {project?: AilabProject};
 }
 
 // What a training run writes to Redux, so a cancelled run can be undone. The
@@ -145,6 +153,7 @@ export const initialState: RootState = {
   presetColumns: undefined,
   resetCount: 0,
   resetKeepsHistoricResults: false,
+  resetLevelLoad: undefined,
 };
 
 const ailabSlice = createSlice({
@@ -285,18 +294,19 @@ const ailabSlice = createSlice({
       state.predictionPlaying = false;
     },
     resetState: {
-      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
+      reducer(state, action: PayloadAction<ResetOptions>) {
         return {
           ...initialState,
           mode: state.mode,
           reserveLocation: state.reserveLocation,
           instructionsEnabled: state.instructionsEnabled,
           resetCount: state.resetCount + 1,
-          resetKeepsHistoricResults: action.payload.keepHistoricResults,
+          resetKeepsHistoricResults: !!action.payload.keepHistoricResults,
+          resetLevelLoad: action.payload.levelLoad,
         };
       },
-      prepare(keepHistoricResults = false) {
-        return {payload: {keepHistoricResults}};
+      prepare(options: ResetOptions = {}) {
+        return {payload: options};
       },
     },
     setTrainedModelDetail: {

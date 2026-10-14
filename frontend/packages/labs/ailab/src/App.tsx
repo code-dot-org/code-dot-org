@@ -37,7 +37,7 @@ import SelectDataset from './UIComponents/SelectDataset';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
-import {usePretrainOnLoad} from './usePretrainOnLoad';
+import {useModelOnLoad} from './useModelOnLoad';
 
 import styles from './app.module.scss';
 
@@ -256,7 +256,7 @@ const App = ({
   const hideTestingView = useAppSelector(getHideTestingView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
-  usePretrainOnLoad();
+  useModelOnLoad();
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {

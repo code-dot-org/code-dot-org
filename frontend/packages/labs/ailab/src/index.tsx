@@ -24,11 +24,12 @@ import {
   setInstructionsDismissed,
   setInstructionsEnabled,
   resetState,
+  type ResetOptions,
 } from './redux';
 import {store} from './store';
 import train from './train';
 import {TrainingDataProvider} from './TrainingDataContext';
-import type {Mode} from './types';
+import type {AilabProject, Mode} from './types';
 
 let root: Root | undefined;
 
@@ -37,6 +38,8 @@ export interface MountOptions extends AppProps {
   assetPath: string;
   i18n?: Record<string, string>;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
+  /** Persist the student's work. Not called for a project loadLevel was given. */
+  onProjectChanged?: (project: AilabProject) => void;
 }
 
 export interface InitAllOptions extends MountOptions {
@@ -69,7 +72,7 @@ export const mount = function (options: MountOptions): void {
   // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <ProjectProvider>
+      <ProjectProvider onProjectChanged={options.onProjectChanged}>
         <TrainingDataProvider>
           <ThemeProvider
             theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
@@ -93,17 +96,20 @@ export const unmount = function (): void {
 /**
  * Prepare the lab for a level. Call this once per level after mount().
  */
-export const loadLevel = function (mode?: Mode): void {
-  reload(mode, /*keepHistoricResults*/ false);
+export const loadLevel = function (
+  mode?: Mode,
+  project?: AilabProject,
+): void {
+  reload(mode, {levelLoad: {project}});
 };
 
 export const startOver = function (): void {
-  reload(store.getState().mode, /*keepHistoricResults*/ true);
+  reload(store.getState().mode, {keepHistoricResults: true});
 };
 
-const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
+const reload = (mode: Mode | undefined, options: ResetOptions): void => {
   invalidatePendingDatasetLoads();
-  store.dispatch(resetState(keepHistoricResults));
+  store.dispatch(resetState(options));
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);
@@ -151,6 +157,7 @@ const processMode = (mode: Mode | undefined): void => {
 
 // Export a few types.
 export type {
+  AilabProject,
   InstructionsKey,
   Metadata,
   Mode,

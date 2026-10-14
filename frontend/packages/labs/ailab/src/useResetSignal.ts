@@ -5,14 +5,21 @@
 import {useEffect, useRef} from 'react';
 
 import {useAppSelector} from './hooks';
+import type {AilabProject} from './types';
 
-export function useResetSignal(
-  onReset: (keepsHistoricResults: boolean) => void,
-): void {
+export interface ResetSignal {
+  keepsHistoricResults: boolean;
+  // Set when a level load caused the reset, carrying the student's saved work
+  // if they have any.
+  levelLoad?: {project?: AilabProject};
+}
+
+export function useResetSignal(onReset: (signal: ResetSignal) => void): void {
   const resetCount = useAppSelector(state => state.resetCount);
   const keepsHistoricResults = useAppSelector(
     state => state.resetKeepsHistoricResults,
   );
+  const levelLoad = useAppSelector(state => state.resetLevelLoad);
   const appliedReset = useRef(resetCount);
 
   useEffect(() => {
@@ -21,6 +28,6 @@ export function useResetSignal(
       return;
     }
     appliedReset.current = resetCount;
-    onReset(keepsHistoricResults);
-  }, [resetCount, keepsHistoricResults, onReset]);
+    onReset({keepsHistoricResults, levelLoad});
+  }, [resetCount, keepsHistoricResults, levelLoad, onReset]);
 }

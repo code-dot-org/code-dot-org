@@ -10,9 +10,10 @@ import {
 } from 'react';
 
 import {useAppSelector} from './hooks';
+import {getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
 import {initialProject, type AilabProject, type DataRow} from './types';
-import {useResetSignal} from './useResetSignal';
+import {useResetSignal, type ResetSignal} from './useResetSignal';
 
 /*
   What will be stored when a training run is applied,
@@ -40,6 +41,13 @@ function sortByColumnOrder(features: string[], data: DataRow[]): string[] {
   return [...features].sort((a, b) => columns.indexOf(a) - columns.indexOf(b));
 }
 
+function sameColumns(columns: string[], others: string[]): boolean {
+  return (
+    columns.length === others.length &&
+    columns.every((column, index) => column === others[index])
+  );
+}
+
 const ProjectContext = createContext<ProjectContextValue | undefined>(
   undefined,
 );
@@ -47,24 +55,36 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 interface ProjectProviderProps {
   children: ReactNode;
   project?: AilabProject;
+  onProjectChanged?: (project: AilabProject) => void;
 }
 
 export const ProjectProvider = ({
   children,
   project: openWith,
+  onProjectChanged,
 }: ProjectProviderProps) => {
   const [project, setProject] = useState<AilabProject>(
     openWith ?? initialProject,
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  // The project the consumer last handed us or last saw, so that opening a
+  // level does not look like the student editing one.
+  const reported = useRef<AilabProject>(project);
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
+  const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
 
   useResetSignal(
-    useCallback((keepsHistoricResults: boolean) => {
+    useCallback(({keepsHistoricResults, levelLoad}: ResetSignal) => {
       previousRun.current = undefined;
+      if (levelLoad) {
+        const opening = levelLoad.project ?? initialProject;
+        reported.current = opening;
+        setProject(opening);
+        return;
+      }
       setProject(previous =>
         keepsHistoricResults
           ? {...initialProject, historicResults: previous.historicResults}
@@ -72,6 +92,14 @@ export const ProjectProvider = ({
       );
     }, []),
   );
+
+  useEffect(() => {
+    if (project === reported.current) {
+      return;
+    }
+    reported.current = project;
+    onProjectChanged?.(project);
+  }, [project, onProjectChanged]);
 
   const setLabelColumn = useCallback((labelColumn?: string) => {
     setProject(previous => ({
@@ -128,6 +156,9 @@ export const ProjectProvider = ({
     Handle the preset columns for the project. A locked column always
     wins, since the student has no way to change it. An unlocked one will
     never replace a choice already in the project.
+
+    This also runs against a project restored from a save, whose columns the
+    dataset need not still have.
   */
   useEffect(() => {
     if (!presetColumns) {
@@ -141,6 +172,9 @@ export const ProjectProvider = ({
       ) {
         labelColumn = presetColumns.labelColumn;
       }
+      if (labelColumn !== undefined && !selectableColumns.includes(labelColumn)) {
+        labelColumn = undefined;
+      }
 
       let features = previous.selectedFeatures;
       if (
@@ -150,16 +184,31 @@ export const ProjectProvider = ({
         features = presetColumns.selectedFeatures;
       }
 
+      const selectedFeatures = sortByColumnOrder(
+        features.filter(
+          feature =>
+            feature !== labelColumn && selectableColumns.includes(feature),
+        ),
+        data,
+      );
+
+      if (
+        labelColumn === previous.labelColumn &&
+        sameColumns(selectedFeatures, previous.selectedFeatures)
+      ) {
+        return previous;
+      }
+
       return {
         ...previous,
         labelColumn,
-        selectedFeatures: sortByColumnOrder(
-          features.filter(feature => feature !== labelColumn),
-          data,
-        ),
+        selectedFeatures,
+        // These columns are not the ones the saved model was built from.
+        hyperparameters: undefined,
+        accuracyCheckRowIndices: undefined,
       };
     });
-  }, [presetColumns, lockedLabel, lockedFeatures, data]);
+  }, [presetColumns, lockedLabel, lockedFeatures, data, selectableColumns]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {

@@ -3,9 +3,11 @@ import {createElement} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
+import {ColumnTypes} from '../../src/constants';
 import {ProjectProvider, useProject} from '../../src/ProjectContext';
 import rootReducer, {
   resetState,
+  setColumnsByDataType,
   setImportedData,
   setMode,
   setPresetColumns,
@@ -27,7 +29,7 @@ const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
 const FIRST = run('80.00', {k: 1}, [8, 9]);
 const SECOND = run('90.00', {k: 3}, [0, 5]);
 
-function renderContext(openWith, seedStore) {
+function renderContext(openWith, seedStore, onProjectChanged) {
   const store = seedStore ?? createStore(rootReducer);
   let context;
   const Probe = () => {
@@ -39,7 +41,11 @@ function renderContext(openWith, seedStore) {
     createElement(
       Provider,
       {store},
-      createElement(ProjectProvider, {project: openWith}, createElement(Probe)),
+      createElement(
+        ProjectProvider,
+        {project: openWith, onProjectChanged},
+        createElement(Probe),
+      ),
     ),
   );
 
@@ -134,12 +140,35 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(true));
+      store.dispatch(resetState({keepHistoricResults: true}));
     });
 
     expect(project().hyperparameters).toBeUndefined();
     expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual(['80.00']);
+  });
+
+  test('a level load opens with the work it is given', () => {
+    const saved = {...initialProject, historicResults: [FIRST.historicResult]};
+    const {store, project, context} = renderContext();
+    act(() => context().applyTrainingRun(SECOND));
+
+    act(() => {
+      store.dispatch(resetState({levelLoad: {project: saved}}));
+    });
+
+    expect(accuracies(project())).toEqual(['80.00']);
+  });
+
+  test('a level load with nothing saved opens empty', () => {
+    const {store, project, context} = renderContext();
+    act(() => context().applyTrainingRun(FIRST));
+
+    act(() => {
+      store.dispatch(resetState({levelLoad: {}}));
+    });
+
+    expect(project()).toEqual(initialProject);
   });
 
   test('a reset drops the snapshot a cancel would have used', () => {
@@ -156,10 +185,68 @@ describe('ProjectContext', () => {
   });
 });
 
+/*
+  What the consumer is told to save. A level opening is the consumer's own
+  doing, so reporting it back would turn every load into a save.
+*/
+describe('ProjectContext reporting', () => {
+  const SAVED = {...initialProject, historicResults: [FIRST.historicResult]};
+
+  test('says nothing about the project it opened with', () => {
+    const onProjectChanged = vi.fn();
+
+    renderContext(SAVED, undefined, onProjectChanged);
+
+    expect(onProjectChanged).not.toHaveBeenCalled();
+  });
+
+  test('says nothing about a project a level load handed in', () => {
+    const onProjectChanged = vi.fn();
+    const {store} = renderContext(undefined, undefined, onProjectChanged);
+
+    act(() => {
+      store.dispatch(resetState({levelLoad: {project: SAVED}}));
+    });
+
+    expect(onProjectChanged).not.toHaveBeenCalled();
+  });
+
+  test('reports what the student trained', () => {
+    const onProjectChanged = vi.fn();
+    const {context} = renderContext(undefined, undefined, onProjectChanged);
+
+    act(() => context().applyTrainingRun(FIRST));
+
+    expect(onProjectChanged).toHaveBeenCalledTimes(1);
+    expect(accuracies(onProjectChanged.mock.lastCall[0])).toEqual(['80.00']);
+  });
+
+  // Without this the save outlives the reset and comes back on the next load.
+  test('reports the empty project Start Over leaves behind', () => {
+    const onProjectChanged = vi.fn();
+    const {store, context} = renderContext(
+      undefined,
+      undefined,
+      onProjectChanged,
+    );
+    act(() => context().applyTrainingRun(FIRST));
+
+    act(() => {
+      store.dispatch(resetState({keepHistoricResults: true}));
+    });
+
+    expect(onProjectChanged.mock.lastCall[0].hyperparameters).toBeUndefined();
+  });
+});
+
 describe('ProjectContext column choices', () => {
-  const imported = () => {
+  // A column has to have a type before it counts as one a student can pick.
+  const imported = (rows = [{a: '1', b: '2', c: '3'}]) => {
     const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    store.dispatch(setImportedData(rows, false));
+    Object.keys(rows[0]).forEach(column =>
+      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL)),
+    );
     return store;
   };
 
@@ -329,6 +416,55 @@ describe('ProjectContext column choices', () => {
     preset(store, {selectedFeatures: ['c']});
 
     expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  /*
+    A level's dataset can change after a student saves work against it.
+  */
+  describe('a saved project the dataset has outgrown', () => {
+    const openSaved = columns => {
+      const store = imported([{a: '1', b: '2'}]);
+      const rendered = renderContext(
+        {
+          ...initialProject,
+          ...columns,
+          hyperparameters: {k: 3},
+          accuracyCheckRowIndices: [0],
+          historicResults: [FIRST.historicResult],
+        },
+        store,
+      );
+      preset(store, {});
+      return rendered;
+    };
+
+    test('loses the feature the dataset dropped', () => {
+      const {project} = openSaved({labelColumn: 'a', selectedFeatures: ['b', 'c']});
+
+      expect(project().selectedFeatures).toEqual(['b']);
+    });
+
+    test('loses the label the dataset dropped', () => {
+      const {project} = openSaved({labelColumn: 'c', selectedFeatures: ['b']});
+
+      expect(project().labelColumn).toBeUndefined();
+    });
+
+    // The saved model was graded on columns this dataset no longer has.
+    test('keeps its results but not the model they describe', () => {
+      const {project} = openSaved({labelColumn: 'a', selectedFeatures: ['b', 'c']});
+
+      expect(project().hyperparameters).toBeUndefined();
+      expect(project().accuracyCheckRowIndices).toBeUndefined();
+      expect(accuracies(project())).toEqual(['80.00']);
+    });
+
+    test('keeps the model when every column survived', () => {
+      const {project} = openSaved({labelColumn: 'a', selectedFeatures: ['b']});
+
+      expect(project().hyperparameters).toEqual({k: 3});
+      expect(project().accuracyCheckRowIndices).toEqual([0]);
+    });
   });
 
   test('an unlocked column still fills a gap the project left', () => {
