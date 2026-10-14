@@ -47,7 +47,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_nil body['questionResults']
-    assert_equal [{'quizQuestionId' => @question.id, 'selectedChoiceId' => 'b'}], body['questionResultsInProgress']
+    assert_equal [{'quizQuestionId' => @question.id, 'selectedChoiceId' => 'b', 'answerText' => nil}], body['questionResultsInProgress']
   end
 
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do
@@ -200,6 +200,27 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['maxScore']
     response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
     assert_equal 'b', response.response_data['selectedChoiceId']
+  end
+
+  test "update saves a free response answer ungraded and leaves it out of the score" do
+    fr_question = create(:free_response_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: fr_question)
+
+    sign_in @student
+    put :update, params: {
+      id: @attempt.id,
+      responses: {@question.id => {selectedChoiceId: 'b'}, fr_question.id => {answerText: 'Because'}}
+    }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    fr_result = body['questionResults'].find {|r| r['quizQuestionId'] == fr_question.id}
+    assert_equal 'Because', fr_result['answerText']
+    assert_nil fr_result['correct']
+    fr_response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: fr_question.id)
+    assert_equal 'ungraded', fr_response.grading_status
   end
 
   test "update falls back to stored data for a question missing from the submitted responses" do

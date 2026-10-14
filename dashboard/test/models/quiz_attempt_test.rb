@@ -169,6 +169,29 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:correct]
   end
 
+  test "question_results returns the answer text for an ungraded free response question" do
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true)
+    question = create(:free_response_question, explanation: 'Any function counts.')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'answerText' => 'Because'},
+      grading_status: 'ungraded',
+      score: nil,
+      max_score: nil
+    )
+
+    result = attempt.question_results.first
+    assert_equal 'Because', result[:answer_text]
+    assert_nil result[:selected_choice_id]
+    assert_nil result[:correct]
+    assert_nil result[:correct_choice_id]
+    assert_equal 'Any function counts.', result[:explanation]
+  end
+
   test "question_results_in_progress is nil once the attempt is submitted" do
     attempt = create(:quiz_attempt, submitted_at: Time.now)
     assert_nil attempt.question_results_in_progress
@@ -199,6 +222,34 @@ class QuizAttemptTest < ActiveSupport::TestCase
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
     create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: {})
+
+    assert_empty attempt.question_results_in_progress
+  end
+
+  test "question_results_in_progress returns the answer text for a free response question" do
+    quiz = create(:quiz)
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'answerText' => 'Because'}
+    )
+
+    result = attempt.question_results_in_progress.first
+    assert_equal question.id, result[:quiz_question_id]
+    assert_equal 'Because', result[:answer_text]
+    assert_nil result[:selected_choice_id]
+  end
+
+  test "question_results_in_progress omits a free response question with blank answer text" do
+    quiz = create(:quiz)
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: {'answerText' => ''})
 
     assert_empty attempt.question_results_in_progress
   end
