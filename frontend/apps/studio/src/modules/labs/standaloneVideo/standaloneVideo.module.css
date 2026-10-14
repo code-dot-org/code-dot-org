@@ -1,0 +1,67 @@
+.container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: var(--background-neutral-lab);
+}
+
+.stage {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+
+  /* Top-aligned to match production. On a tall viewport, the video stays
+     under the navigation instead of centered on the page. */
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.videoBox {
+  /* Fits a 16:9 box in a side margin, floored at 320px. Ported from
+     onResize() in apps/src/sites/studio/pages/levels/_standalone_video.js.
+
+     --side-margin matches that file's reduceAppWidth.
+
+     --above-video is the header, the level-navigation row, and this page's
+     own padding above the stage. This value was measured, not chosen.
+     Re-measure it if the navigation row changes height.
+
+     --below-video reserves room for the row under the video, which holds
+     the download link and the Continue button. Continue is absolutely
+     positioned, so without this space it would sit on the video. */
+  --side-margin: 50px;
+  --above-video: 108px;
+  --below-video: 52px;
+  position: relative;
+  width: max(
+    320px,
+    min(
+      min(100vw, 1280px) - var(--side-margin),
+      (100vh - var(--above-video) - var(--below-video)) * 16 / 9
+    )
+  );
+}
+
+/* Video has no slot in its footer row. Target the row directly to move the
+   download link left and reserve height for Continue. */
+.videoBox [class*='footer'] {
+  justify-content: flex-start;
+  align-items: center;
+  min-height: var(--below-video);
+
+  /* Production leaves about 18px between the video and its controls.
+     Without this gap, the taller Continue button would almost touch
+     the video. */
+  padding-top: 8px;
+}
+
+.continueButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
