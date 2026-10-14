@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import {isPanelEnabled} from './helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from './hooks';
 import {useProject} from './ProjectContext';
-import {readyToTrain, setCurrentPanel} from './redux';
+import {getHideDatasetView, readyToTrain, setCurrentPanel} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
@@ -13,9 +13,7 @@ export function usePretrainOnLoad() {
   const {trainedModel} = useTrainingData();
   const {beginRun} = useTrainingRun();
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
-  const hideDatasetView = useAppSelector(
-    state => !!state.mode?.hideDatasetView,
-  );
+  const hideDatasetView = useAppSelector(getHideDatasetView);
   // A level change empties the data at once but resets the project in a later effect.
   const dataLoaded = useAppSelector(state => state.data.length > 0);
   const canTrain = readyToTrain(project);

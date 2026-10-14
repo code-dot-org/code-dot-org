@@ -12,7 +12,12 @@ import {
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
 import {useProject} from './ProjectContext';
-import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import {
+  getHideDatasetView,
+  getPanelButtons,
+  saveModel,
+  setCurrentPanel,
+} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -246,9 +251,7 @@ const App = ({
   const showOverlay = useAppSelector(state => state.showOverlay);
   const {trainedModel} = useTrainingData();
   const pretrained = useAppSelector(state => !!state.mode?.pretrained);
-  const hideDatasetView = useAppSelector(
-    state => !!state.mode?.hideDatasetView,
-  );
+  const hideDatasetView = useAppSelector(getHideDatasetView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   usePretrainOnLoad();
