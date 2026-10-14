@@ -439,7 +439,10 @@ describe('ProjectContext column choices', () => {
     };
 
     test('loses the feature the dataset dropped', () => {
-      const {project} = openSaved({labelColumn: 'a', selectedFeatures: ['b', 'c']});
+      const {project} = openSaved({
+        labelColumn: 'a',
+        selectedFeatures: ['b', 'c'],
+      });
 
       expect(project().selectedFeatures).toEqual(['b']);
     });
@@ -452,7 +455,10 @@ describe('ProjectContext column choices', () => {
 
     // The saved model was graded on columns this dataset no longer has.
     test('keeps its results but not the model they describe', () => {
-      const {project} = openSaved({labelColumn: 'a', selectedFeatures: ['b', 'c']});
+      const {project} = openSaved({
+        labelColumn: 'a',
+        selectedFeatures: ['b', 'c'],
+      });
 
       expect(project().hyperparameters).toBeUndefined();
       expect(project().accuracyCheckRowIndices).toBeUndefined();

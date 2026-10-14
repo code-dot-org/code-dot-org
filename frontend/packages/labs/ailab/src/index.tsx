@@ -96,10 +96,7 @@ export const unmount = function (): void {
 /**
  * Prepare the lab for a level. Call this once per level after mount().
  */
-export const loadLevel = function (
-  mode?: Mode,
-  project?: AilabProject,
-): void {
+export const loadLevel = function (mode?: Mode, project?: AilabProject): void {
   reload(mode, {levelLoad: {project}});
 };
 

@@ -172,7 +172,10 @@ export const ProjectProvider = ({
       ) {
         labelColumn = presetColumns.labelColumn;
       }
-      if (labelColumn !== undefined && !selectableColumns.includes(labelColumn)) {
+      if (
+        labelColumn !== undefined &&
+        !selectableColumns.includes(labelColumn)
+      ) {
         labelColumn = undefined;
       }
 

@@ -3,9 +3,10 @@
   rebuilt; a pretrained level trains only when there is nothing to rebuild.
 */
 
+import {act} from '@testing-library/react';
 import {createElement} from 'react';
 
-import {resetState} from '../../src/redux';
+import {resetState, setPresetColumns} from '../../src/redux';
 import {store as storeSingleton} from '../../src/store';
 import {useModelOnLoad} from '../../src/useModelOnLoad';
 
@@ -78,6 +79,29 @@ describe('useModelOnLoad', () => {
       {...saved, accuracyCheckRowIndices: [98, 99]},
     );
 
+    expect(trainingData().trainedModel).toBeUndefined();
+  });
+
+  /*
+    The dataset arrives a render before the project's columns are reconciled
+    against it. Rebuilding in that gap reads a column the dataset does not
+    have, which trains on nothing at all rather than refusing.
+  */
+  test('waits for the columns to be reconciled with the dataset', () => {
+    const saved = savedProject({trainer: 'decisionTree'});
+    const {trainingData, project} = openLevel(
+      {trainer: 'decisionTree'},
+      {
+        ...saved,
+        selectedFeatures: [...saved.selectedFeatures, 'wings'],
+      },
+    );
+
+    act(() => {
+      storeSingleton.dispatch(setPresetColumns({}));
+    });
+
+    expect(project().selectedFeatures).toEqual(saved.selectedFeatures);
     expect(trainingData().trainedModel).toBeUndefined();
   });
 

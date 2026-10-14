@@ -48,7 +48,7 @@ export function useModelOnLoad() {
   const canTrain = readyToTrain(project);
 
   useEffect(() => {
-    if (!dataLoaded || !columnsInDataset) {
+    if (!dataLoaded || !columnsInDataset || trainedModel) {
       return;
     }
 
