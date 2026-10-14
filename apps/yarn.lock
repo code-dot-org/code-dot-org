@@ -4045,6 +4045,9 @@ __metadata:
   resolution: "@code-dot-org/lesson-deep-dive@portal:../frontend/packages/lesson-deep-dive/::locator=blockly-mooc%40workspace%3A."
   peerDependencies:
     "@code-dot-org/component-library": "*"
+    "@code-dot-org/core": "*"
+    "@mui/material": ^7.0.0
+    classnames: ^2.5.1
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: node
   linkType: soft

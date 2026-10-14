@@ -3,35 +3,49 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The Turing Test in Action
+# Formatted Strings (F-Strings)
 
-In Lesson 1, you'll walk the whole class through a slide-based version of the guessing game below.
+Sometimes you want to include a variable's value inside text you're printing, not just the variable on its own.
 
-Afterward, students debate their own stance on the Turing Test with an AI chatbot.
+## The Problem: This Doesn't Work
 
-**Try the simulator below yourself first**: *can you always tell which response was written by AI?*
+Here's what happens if you try the obvious way first.
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <div style="font-size: 14pt; line-height: 1.5;">
-    <strong>&#128214; Turing test:</strong> a test in which a machine is considered intelligent if you can't tell it apart from a human in conversation.
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+followers = 41<br>
+print("The user is followed by followers people.")
+  </div>
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
+The user is followed by followers people.
   </div>
 </div>
 
-<hr>
+<p>Python printed the word "followers" exactly as typed, it has no way of knowing you meant the variable, since it's just sitting inside a regular quoted string.</p>
 
-<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-  <iframe
-    src="https://amandadennard-dotcom.github.io/AIFY2/unit-1/turing-test-simulator.html"
-    width="100%"
-    height="920"
-    frameborder="0"
-    scrolling="no"
-    title="Sort AI examples into Rule-Based Logic or Learns from Data"
-    style="display:block; border-radius:10px;">
-  </iframe>
+## The Fix: F-Strings
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; F-string:</strong> a string that starts with the letter <code style="font-size:16px;">f</code> right before the opening quotation mark. Any variable name placed inside curly braces <code style="font-size:16px;">{ }</code> gets replaced with that variable's actual value.
+  </div>
 </div>
 
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+followers = 41<br>
+print(<span style="color:#ffffff; font-weight:700;">f</span>"The user is followed by <span style="color:#ffffff; font-weight:700;">{followers}</span> people.")
+  </div>
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
+The user is followed by 41 people.
+  </div>
 </div>
 
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> the syntax is small but easy to forget under pressure: an <code style="font-size:16px;">f</code> right before the quote, and curly braces around the variable name. Expect to remind students of exactly this when they hit it live.
+  </div>
+</div>
 
+<p>Next, you'll trace and build this same pattern yourself in the Python Lab, exactly the kind of program students write in Lesson 4.</p>
 MARKDOWN

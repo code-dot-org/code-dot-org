@@ -33,6 +33,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     create(:single_unit_course, unit: unit, name: 'jigsaw-session-cookie-test', published_state: 'stable')
     get "/courses/#{unit.name}/units/1/lessons/1"
     assert_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
   test 'session cookie not set in publicly cached level page' do
@@ -43,9 +44,10 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/courses/music-jam-2024/units/1/lessons/1/levels/1'
     assert_response :success
     assert_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
-  test 'session cookie is set in on non-cached level page' do
+  test 'session cookie is set on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
     unit = create(:unit, :with_levels, name: 'music-jam-2024')
     create(:single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable')
@@ -55,66 +57,86 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
       env: {'rack-cache.allow_reload' => true}
     assert_response :success
     refute_nil cookies['_learn_session_test']
+    assert_nil cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
   end
 
   describe 'request#statsig_stable_id' do
-    subject(:request_statsig_stable_id) {request.statsig_stable_id}
-
-    it 'persists through Rails, legacy API, sign-in, and sign-out requests' do
+    it 'is not assigned by page requests' do
       get '/'
-      _request_statsig_stable_id.must_match Cdo::AnonUserId::FORMAT
-      _(session[:statsig_stable_id]).must_equal request_statsig_stable_id
+      _(session[:statsig_stable_id]).must_be_nil
+    end
 
+    it 'persists through sign-in and rotates after sign-out' do
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      initial_stable_id = session[:statsig_stable_id]
+      _(initial_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+
+      get api_statsig_stable_id_path
+      _(body).must_equal initial_stable_id
 
       sign_in create(:user)
 
-      get '/'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      get api_statsig_stable_id_path
+      _(body).must_equal initial_stable_id
 
       get '/v3/channels'
-      _(request.statsig_stable_id).must_equal request_statsig_stable_id
+      _(request.statsig_stable_id).must_equal initial_stable_id
 
       get '/users/sign_out'
-      _(request.statsig_stable_id).wont_equal request_statsig_stable_id
-      _(request.statsig_stable_id).must_match Cdo::AnonUserId::FORMAT
-      _(session[:statsig_stable_id]).must_equal request.statsig_stable_id
+      _(cookies[:statsig_stable_id]).must_be_empty
+
+      get api_statsig_stable_id_path
+      _(body).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+      _(body).wont_equal initial_stable_id
     end
 
     context 'with Statsig cookie' do
       let(:cookies_statsig_stable_id) {SecureRandom.uuid}
 
+      def session_cookie_written?
+        response.headers['Set-Cookie'].to_s.include?('_learn_session_test=')
+      end
+
       before do
         cookies[:statsig_stable_id] = cookies_statsig_stable_id
       end
 
-      it 'stores Statsig cookie value in session' do
-        get '/'
-        _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-        _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
+      it 'does not create session' do
+        get api_statsig_stable_id_path
+
+        _(body).must_equal cookies_statsig_stable_id
+        _(session[:statsig_stable_id]).must_be_nil
+        _(session_cookie_written?).must_equal false
+        _(cookies['_learn_session_test']).must_be_nil
       end
 
-      it 'restores Statsig cookie value after session reset' do
+      it 'keeps Statsig cookie value after session reset' do
         get '/reset_session'
-        get '/'
+        get api_statsig_stable_id_path
 
-        _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-        _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
+        _(body).must_equal cookies_statsig_stable_id
+        _(session[:statsig_stable_id]).must_be_nil
       end
 
       context 'with conflicting session ID' do
-        let(:previous_session_value) {SecureRandom.uuid}
+        let(:session_stable_id) {session[:statsig_stable_id]}
 
         before do
-          get '/'
-          session[:statsig_stable_id] = previous_session_value
+          cookies.delete('statsig_stable_id')
+
+          get '/v3/channels'
+
+          _(session_cookie_written?).must_equal true
+          _(session_stable_id).must_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io
+          cookies[:statsig_stable_id] = cookies_statsig_stable_id
         end
 
-        it 'replaces session ID with Statsig cookie value' do
-          get '/'
-          _(request.statsig_stable_id).must_equal cookies_statsig_stable_id
-          _(session[:statsig_stable_id]).must_equal cookies_statsig_stable_id
+        it 'prefers Statsig cookie value without rewriting session' do
+          get api_statsig_stable_id_path, xhr: true
+
+          _(body).must_equal cookies_statsig_stable_id
+          _(session[:statsig_stable_id]).must_equal session_stable_id
+          _(session_cookie_written?).must_equal false
         end
       end
     end

@@ -15,6 +15,7 @@ const SignedOutUserButtons: FunctionComponent = () => (
     <Button
       href={AUTH_LINKS.signIn}
       color="inherit"
+      size="small"
       disableElevation
       className={moduleStyles.signIn}
     >
@@ -23,6 +24,7 @@ const SignedOutUserButtons: FunctionComponent = () => (
     <Button
       href={AUTH_LINKS.createAccount}
       color="inherit"
+      size="small"
       disableElevation
       className={moduleStyles.createAccount}
     >

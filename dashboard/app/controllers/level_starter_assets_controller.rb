@@ -27,6 +27,8 @@ class LevelStarterAssetsController < ApplicationController
     return head :not_found if starter_assets.nil_or_empty?
 
     uuid_name = starter_assets[friendly_name]
+    return head :not_found unless uuid_name
+
     get_file_and_send(uuid_name)
   end
 
@@ -131,9 +133,12 @@ class LevelStarterAssetsController < ApplicationController
   private def get_file_and_send(uuid_name)
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
     content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
+    body = LevelStarterAssetsHelper.read_file(file_obj)
 
     expires_in 1.hour, public: true
-    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
+    send_data body, type: content_type, disposition: 'inline'
+  rescue Aws::S3::Errors::NoSuchKey
+    head :not_found
   end
 
   private def upload_and_respond(uuid_name, upload_data)

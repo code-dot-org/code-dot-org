@@ -24,6 +24,7 @@ export type GallerySection = {
 
 export type TutorGalleryData = {
   currentUnitId: number;
+  is_teacher: boolean;
   units: GalleryUnit[];
   sections: GallerySection[];
 };

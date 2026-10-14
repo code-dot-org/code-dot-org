@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_09_170000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -427,6 +427,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "evaluation_status"
+    t.boolean "approved", default: false, null: false
     t.index ["challenge_id", "user_id", "created_at"], name: "index_challenge_responses_on_challenge_user_created"
     t.index ["user_id"], name: "index_challenge_responses_on_user_id"
   end
@@ -1238,13 +1239,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
-  end
-
-  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.bigint "level_id", null: false
-    t.bigint "skill_id", null: false
-    t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
-    t.index ["skill_id", "level_id"], name: "index_levels_skills_on_skill_id_and_level_id"
   end
 
   create_table "libraries", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2493,6 +2487,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.integer "avatar_emoji"
     t.string "ai_chat_access_level", default: "disabled"
     t.string "demo_type"
+    t.boolean "ai_tutor_enabled", default: false, null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
@@ -2533,16 +2528,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.string "anon_user_id", limit: 36
     t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at"
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
-  end
-
-  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "description", null: false
-    t.text "evaluation_criteria"
-    t.string "concept"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "key", null: false
-    t.index ["key"], name: "index_skills_on_key", unique: true
   end
 
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2607,7 +2592,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.integer "requester_id"
     t.integer "level_id"
     t.integer "unit_id"
-    t.integer "skill_id"
     t.integer "section_id"
     t.string "school_year"
     t.string "evaluator"
@@ -2737,6 +2721,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_30_144328) do
     t.integer "resource_id"
     t.index ["resource_id", "unit_group_id"], name: "index_ug_student_resources_on_resource_id_and_unit_group_id"
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
+  end
+
+  create_table "user_adaptive_steps", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_level_id", null: false, unsigned: true
+    t.string "step_id", null: false
+    t.json "progress"
+    t.json "validation_history"
+    t.json "generated_instructions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_level_id", "step_id"], name: "index_user_adaptive_steps_on_user_level_id_and_step_id", unique: true
   end
 
   create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

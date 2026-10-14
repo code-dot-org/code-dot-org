@@ -8,10 +8,16 @@ module QuizQuestionSerialization
 
   private def quiz_question_params
     params.permit(
-      :questionName, :stem, :correctChoiceId, :explanation, :page, :editMode,
+      :questionName, :questionTitle, :correctChoiceId, :explanation, :page, :editMode, :description, :type,
       choices: [:id, :text],
       standards: [:frameworkShortcode, :shortcode]
     )
+  end
+
+  private def quiz_question_class
+    type = quiz_question_params[:type]
+    raise ArgumentError, "unknown quiz question type #{type.inspect}" unless QuizQuestion::TYPES.include?(type)
+    type.constantize
   end
 
   # (frameworkShortcode, shortcode) is how a Standard crosses the
@@ -52,9 +58,7 @@ module QuizQuestionSerialization
       id: question.id,
       type: question.type,
       questionName: question.name,
-      stem: question.content['stem'],
-      choices: question.content['choices'],
-      correctChoiceId: question.content['correct_choice_id'],
+      **question.builder_content_json,
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
       attachedToOtherQuizzes:

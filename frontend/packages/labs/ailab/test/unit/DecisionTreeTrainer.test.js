@@ -12,14 +12,13 @@ import {
 } from '../../src/helpers/valueConversion';
 import rootReducer, {
   setImportedData,
-  setLabelColumn,
-  addSelectedFeature,
   setColumnsByDataType,
   setMode,
   setTestData,
 } from '../../src/redux';
 import train from '../../src/train';
 import {buildTrainer} from '../../src/trainers';
+import {initialProject} from '../../src/types';
 
 function setUp(data, columns, label) {
   const store = createStore(rootReducer);
@@ -29,29 +28,31 @@ function setUp(data, columns, label) {
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type)),
   );
-  store.dispatch(setLabelColumn(label));
-  Object.keys(columns)
-    .filter(column => column !== label)
-    .forEach(column => store.dispatch(addSelectedFeature(column)));
+  const project = {
+    ...initialProject,
+    labelColumn: label,
+    selectedFeatures: Object.keys(columns).filter(column => column !== label),
+  };
 
   train.reset();
-  train.init(store);
+  train.init(store, project);
 
-  return {store, trainer: buildTrainer(store)};
+  return {store, project, trainer: buildTrainer(store, project)};
 }
 
 // Mirrors `prepareTestData` in train.ts, which is not exported.
-function predictWith(store, trainer, testValues) {
+function predictWith(store, project, trainer, trainedModel, testValues) {
   Object.entries(testValues).forEach(([feature, value]) =>
     store.dispatch(setTestData(feature, value)),
   );
   const state = store.getState();
   trainer.predict(
-    state.selectedFeatures.map(feature =>
-      convertValueForTraining(state, state.testData[feature], feature),
+    trainedModel,
+    project.selectedFeatures.map(feature =>
+      convertValueForTraining(state, project, state.testData[feature], feature),
     ),
   );
-  return getConvertedPredictedLabel(store.getState());
+  return getConvertedPredictedLabel(store.getState(), project);
 }
 
 const NUMERICAL = ColumnTypes.NUMERICAL;
@@ -71,17 +72,24 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       {animal: 'snake', legs: '0', tail: 'yes'},
       {animal: 'dog', legs: '4', tail: 'yes'},
     ];
-    const {store, trainer} = setUp(
+    const {store, project, trainer} = setUp(
       data,
       {animal: CATEGORICAL, legs: NUMERICAL, tail: CATEGORICAL},
       'animal',
     );
 
-    trainer.startTraining();
+    const {trainedModel} = trainer.startTraining();
 
-    expect(store.getState().trainedModel).toBeDefined();
-    expect(predictWith(store, trainer, {legs: 4, tail: 'yes'})).toBe('dog');
-    expect(predictWith(store, trainer, {legs: 0, tail: 'no'})).toBe('snake');
+    expect(trainedModel).toBeDefined();
+    expect(
+      predictWith(store, project, trainer, trainedModel, {
+        legs: 4,
+        tail: 'yes',
+      }),
+    ).toBe('dog');
+    expect(
+      predictWith(store, project, trainer, trainedModel, {legs: 0, tail: 'no'}),
+    ).toBe('snake');
   });
 
   test('batchPredict returns no labels before training', () => {
@@ -94,7 +102,7 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       'animal',
     );
 
-    expect(trainer.batchPredict([[2]])).toEqual([]);
+    expect(trainer.batchPredict(undefined, [[2]])).toEqual([]);
   });
 });
 
@@ -123,13 +131,13 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       'label',
     );
 
-    trainer.startTraining();
+    const run = trainer.startTraining();
 
     const state = store.getState();
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
-    expect(state.hyperparameters).toEqual({maxDepth: 1});
+    expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
   /*
@@ -162,10 +170,10 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       'label',
     );
 
-    trainer.startTraining();
+    const run = trainer.startTraining();
 
     const state = store.getState();
-    expect(state.hyperparameters).toEqual({maxDepth: 2});
+    expect(run.hyperparameters).toEqual({maxDepth: 2});
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
@@ -190,15 +198,17 @@ describe('DecisionTreeTrainer: regression', () => {
       {price: '10', size: '1'},
       {price: '90', size: '9'},
     ];
-    const {store, trainer} = setUp(
+    const {store, project, trainer} = setUp(
       data,
       {price: NUMERICAL, size: NUMERICAL},
       'price',
     );
 
-    trainer.startTraining();
+    const {trainedModel} = trainer.startTraining();
 
-    const prediction = predictWith(store, trainer, {size: 1});
+    const prediction = predictWith(store, project, trainer, trainedModel, {
+      size: 1,
+    });
     const observedLabels = store.getState().trainingLabels.map(Number);
 
     expect(observedLabels).not.toContain(prediction);
@@ -237,9 +247,7 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
       'animal',
     );
 
-    trainer.startTraining();
-
-    const model = store.getState().trainedModel;
+    const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeClassifier, rows)).toEqual(
@@ -266,9 +274,7 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
       'price',
     );
 
-    trainer.startTraining();
-
-    const model = store.getState().trainedModel;
+    const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeRegression, rows)).toEqual(

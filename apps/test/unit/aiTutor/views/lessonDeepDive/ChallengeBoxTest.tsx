@@ -9,11 +9,6 @@ import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/crea
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
-jest.mock('@code-dot-org/core/api', () => {
-  const client = {transport: {}};
-  return {useApiClient: () => client};
-});
-
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
@@ -109,6 +104,7 @@ const fakeChallengeResponse = (
   student_feedback: null,
   evaluation_status: 'running',
   is_final: true,
+  approved: false,
   created_at: '2024-01-01T12:00:00Z',
   assets: [{id: 9, asset_type: 'whiteboard_image', download_url: null}],
   reactions: [],

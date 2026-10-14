@@ -10,6 +10,8 @@ require 'cdo/shared_constants'
 
 module Cdo
   module RequestExtension
+    STATSIG_STABLE_ID_FORMAT = /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/i
+
     TRUSTED_PROXIES = JSON.parse(File.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
       IPAddr.new(proxy)
     end
@@ -97,26 +99,39 @@ module Cdo
       env[:splat_path_info]
     end
 
-    # Statsig stable ID for use of anonymous (signed-out) user tracking.
+    # Statsig stable ID from the cookie or the session, without generating one.
     #
-    # @see apps/src/metrics/statsigHelpers.js
+    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
+    def existing_statsig_stable_id
+      # This cookie is used by the Statsig SDK for backend, frontend, and Marketing site
+      # See: apps/src/metrics/statsigHelpers.js
+      cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return cookies_stable_id if STATSIG_STABLE_ID_FORMAT.match?(cookies_stable_id)
+
+      session_stable_id = session[SharedConstants::STATSIG_STABLE_ID_KEY]
+      return session_stable_id if session_stable_id.is_a?(String) && STATSIG_STABLE_ID_FORMAT.match?(session_stable_id)
+
+      nil
+    end
+
+    # Statsig stable ID for use of anonymous (signed-out) user tracking.
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
-      @statsig_stable_id ||= begin
-        # This cookie is used by the Statsig SDK for both JS and Ruby.
-        cookies_stable_id = cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
-
-        if cookies_stable_id.is_a?(String) && !cookies_stable_id.empty?
-          session[SharedConstants::STATSIG_STABLE_ID_KEY] = cookies_stable_id
-        end
-
-        session[SharedConstants::STATSIG_STABLE_ID_KEY] ||= Cdo::AnonUserId.generate
-      end
+      @statsig_stable_id ||=
+        existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
     end
 
+    # Anonymous (signed-out) user ID for our own records, such as anonymous level progress.
+    #
+    # It reuses the Statsig stable ID, which already handles OneTrust consent, its cookie and the session.
+    # It is a separate method because our records need a stable anonymous identity, not Statsig as such:
+    # Statsig is only where the ID comes from today. Callers use this method, never statsig_stable_id,
+    # so if Statsig is removed or replaced, only this method changes, not every caller.
+    #
+    # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def anon_user_id
-      @anon_user_id ||= Cdo::AnonUserId.valid_value(statsig_stable_id)
+      statsig_stable_id
     end
 
     def user

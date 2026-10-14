@@ -199,6 +199,12 @@ spec:
             claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
         {{- end }}
             
+      # Production must never run as root. user.uid and user.gid are chart-wide
+      # and other environments (including local dev) set them to 0 on purpose,
+      # so gate on RAILS_ENV and refuse the render rather than trust the values.
+      {{- if and (or (eq (toString .Values.RAILS_ENV) "production") (eq (toString $railsEnv) "production")) (or (eq (int .Values.user.uid) 0) (eq (int .Values.user.gid) 0)) }}
+      {{- fail (printf "%s: RAILS_ENV=production must not run as root, but user.uid=%v user.gid=%v. Remove the user.uid/user.gid override from the production values (k8s-gitops: apps/codeai/envTypes/production.values.yaml, apps/codeai/deployments/production/values.yaml)." .name .Values.user.uid .Values.user.gid) }}
+      {{- end }}
       securityContext:
         runAsUser: {{ .Values.user.uid }}
         runAsGroup: {{ .Values.user.gid }}
@@ -206,6 +212,10 @@ spec:
 
       {{- if $isJob }}
       restartPolicy: {{ .restartPolicy | default "Never" }}
+      {{- end }}
+
+      {{- with .terminationGracePeriodSeconds }}
+      terminationGracePeriodSeconds: {{ . }}
       {{- end }}
 
       {{- with .Values.scheduling }}

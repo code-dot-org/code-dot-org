@@ -86,7 +86,10 @@ class DCDOBase < DynamicConfigBase
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
-      'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false)
+      'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
+      'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      # AI descriptions of Python Lab theater output; also gates the access token server-side.
+      'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false)
     }
   end
 end

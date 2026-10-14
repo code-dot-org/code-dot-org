@@ -310,10 +310,39 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
   describe '#can_access_aichat_chat_completion?' do
     let(:ai_chat_lab) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]}
     let(:ai_tutor) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]}
+    let(:adaptive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE]}
+    let(:theater_description) {SharedConstants::AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION]}
 
     before do
       allow(user).to receive(:has_aichat_access?).and_return(false)
       allow(user).to receive(:trust_chat_client?).and_return(false)
+    end
+
+    it 'returns false for ADAPTIVE until enabled via DCDO, even with access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(adaptive, 123)).must_equal false
+    end
+
+    it 'returns true for ADAPTIVE when enabled via DCDO and the user has access' do
+      allow(DCDO).to receive(:get).with("adaptive-ai-enabled", false).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(adaptive, 123)).must_equal true
+    end
+
+    it 'returns false for ADAPTIVE when enabled but the user lacks access' do
+      allow(DCDO).to receive(:get).with("adaptive-ai-enabled", false).and_return(true)
+      _(user.can_access_aichat_chat_completion?(adaptive, 123)).must_equal false
+    end
+
+    it 'returns false for THEATER_DESCRIPTION until enabled via DCDO, even with access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(theater_description, 123)).must_equal false
+    end
+
+    it 'returns true for THEATER_DESCRIPTION when enabled via DCDO and the user has access' do
+      allow(DCDO).to receive(:get).with("theater-ai-descriptions-enabled", false).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(theater_description, 123)).must_equal true
     end
 
     it 'returns false if AI_CHAT_LAB is blocked via DCDO' do
@@ -367,6 +396,29 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     it 'returns false otherwise' do
       _has_essential_aichat_access?.must_equal false
+    end
+  end
+
+  describe '#can_use_lesson_deep_dive?' do
+    subject(:can_use_lesson_deep_dive?) {user.can_use_lesson_deep_dive?}
+
+    it 'returns true for a student in an enabled section with a verified teacher' do
+      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+      allow(user).to receive(:sections_as_student).and_return([enabled_section])
+      _can_use_lesson_deep_dive?.must_equal true
+    end
+
+    it 'returns false for a student in an essential-only section with a verified teacher' do
+      essential_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+      allow(user).to receive(:sections_as_student).and_return([essential_section])
+      _can_use_lesson_deep_dive?.must_equal false
+    end
+
+    it 'returns false for a student in a disabled section with a verified teacher' do
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+      _can_use_lesson_deep_dive?.must_equal false
     end
   end
 end

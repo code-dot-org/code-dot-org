@@ -1,0 +1,38 @@
+.sentence {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+}
+
+.singleLine {
+  flex-wrap: nowrap;
+
+  .text {
+    white-space: nowrap;
+  }
+}
+
+.ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.mediumSentence {
+  gap: 4px 8px;
+
+  .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.sentence .text {
+  font-weight: 600;
+}

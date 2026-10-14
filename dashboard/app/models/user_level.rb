@@ -56,6 +56,8 @@ class UserLevel < ApplicationRecord
 
   belongs_to :user, optional: true
 
+  has_many :user_adaptive_steps, dependent: nil
+
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 

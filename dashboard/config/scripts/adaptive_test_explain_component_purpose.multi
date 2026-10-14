@@ -1,0 +1,14 @@
+name 'adaptive-test-explain-component-purpose'
+title 'TODO: title'
+description ''
+question 'What is the main goal of a hero section on a website?'
+right 'To capture attention and present the site\'s primary message.'
+wrong 'To list all available products or services.'
+wrong 'To provide navigation links to other pages.'
+wrong 'To display copyright information and legal disclaimers.'
+
+markdown <<MARKDOWN
+What is the main goal of a hero section on a website?
+MARKDOWN
+
+allow_multiple_attempts true

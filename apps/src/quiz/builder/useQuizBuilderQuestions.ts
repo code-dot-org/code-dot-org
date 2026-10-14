@@ -3,16 +3,21 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {QuizQuestionType} from '../types';
+
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
-  QuizQuestionEditableFields,
+  QuizQuestionDraft,
 } from './types';
 
 const NEW_QUESTION_DEFAULTS = {
   questionName: 'New question',
-  stem: 'New question',
+  questionTitle: 'New question',
+};
+
+const NEW_MULTIPLE_CHOICE_ANSWERS = {
   choices: [
     {id: '0', text: 'Option A'},
     {id: '1', text: 'Option B'},
@@ -58,23 +63,28 @@ export default function useQuizBuilderQuestions(
     load();
   }, [load]);
 
-  const addPendingQuestion = useCallback((page: number) => {
-    const id = nextPendingId.current--;
-    setQuestions(prev => [
-      ...prev,
-      {
+  const addPendingQuestion = useCallback(
+    (page: number, type: QuizQuestionType) => {
+      const id = nextPendingId.current--;
+      const shared = {
         id,
-        type: 'MultipleChoiceQuestion',
         ...NEW_QUESTION_DEFAULTS,
+        description: null,
         explanation: null,
         standards: [],
         attachedToOtherQuizzes: false,
         usedInPublishedUnit: false,
         page,
-      },
-    ]);
-    return id;
-  }, []);
+      };
+      const question: QuizBuilderQuestion =
+        type === 'MultipleChoiceQuestion'
+          ? {...shared, type, ...NEW_MULTIPLE_CHOICE_ANSWERS}
+          : {...shared, type};
+      setQuestions(prev => [...prev, question]);
+      return id;
+    },
+    []
+  );
 
   // Resolves with the saved question's id, which may differ from the one
   // passed in: a pending question (see isPendingQuestionId) is created
@@ -82,16 +92,18 @@ export default function useQuizBuilderQuestions(
   // forks a question that's used in a published unit rather than editing
   // it in place.
   const saveQuestion = useCallback(
-    async (id: number, payload: QuizQuestionEditableFields) => {
+    async (id: number, payload: QuizQuestionDraft) => {
       setError(null);
       setErrorQuestionId(null);
       try {
+        const question = questions.find(q => q.id === id);
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
               JSON.stringify({
                 ...payload,
-                page: questions.find(question => question.id === id)?.page ?? 1,
+                type: question?.type,
+                page: question?.page ?? 1,
               }),
               true,
               {'Content-Type': 'application/json'}

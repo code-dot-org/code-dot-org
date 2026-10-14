@@ -2,25 +2,36 @@ import {createSelector} from 'reselect';
 
 import {ColumnTypes} from './constants';
 import {
-  containsOnlyNumbers,
   filterColumnsByType,
+  getDecimalPlaces,
   getUniqueOptions,
   getExtrema,
   getColumnDescription,
-  tooManyUniqueOptions,
+  selectableColumns,
 } from './helpers/columnDetails';
 import {arrayIntersection} from './helpers/utils';
 import type {RootState} from './redux';
-import type {DataRow, Metadata, TrainedModelDetailsSave} from './types';
+import type {
+  AilabProject,
+  DataRow,
+  Metadata,
+  TrainedModelDetailsSave,
+} from './types';
 
 export const getData = (state: RootState): DataRow[] => state.data;
 export const getColumnsByDataType = (
   state: RootState,
 ): Record<string, string> => state.columnsByDataType;
-const getSelectedFeatures = (state: RootState): string[] =>
-  state.selectedFeatures;
-export const getLabelColumn = (state: RootState): string | undefined =>
-  state.labelColumn;
+// Reselect passes a selector's extra arguments to every input selector, so
+// taking the project here gives it to everything derived below.
+const getSelectedFeatures = (
+  _state: RootState,
+  project: AilabProject,
+): string[] => project.selectedFeatures;
+export const getLabelColumn = (
+  _state: RootState,
+  project: AilabProject,
+): string | undefined => project.labelColumn;
 export const getMetadata = (state: RootState): Metadata => state.metadata;
 export const getDatasetId = (state: RootState): string | undefined =>
   state.metadata && state.metadata.name;
@@ -80,21 +91,9 @@ export const getSelectedNumericalFeatures = createSelector(
   },
 );
 
-// Columns a model can train on: numbers-only numerical columns, and
-// categorical columns under the unique-options limit.
 export const getSelectableColumns = createSelector(
   [getData, getColumnsByDataType],
-  (data: DataRow[], columnsByDataType: Record<string, string>): string[] =>
-    Object.keys(data[0] ?? {}).filter(column => {
-      const dataType = columnsByDataType[column];
-      if (dataType === ColumnTypes.NUMERICAL) {
-        return containsOnlyNumbers(data, column);
-      }
-      if (dataType === ColumnTypes.CATEGORICAL) {
-        return !tooManyUniqueOptions(getUniqueOptions(data, column).length);
-      }
-      return false;
-    }),
+  selectableColumns,
 );
 
 export const getUniqueOptionsByColumn = createSelector(
@@ -126,6 +125,20 @@ export const getExtremaByColumn = createSelector(
     );
     return extremaByColumn;
   },
+);
+
+export const getDecimalPlacesByColumn = createSelector(
+  [getSelectedNumericalColumns, getData],
+  (
+    selectedNumericalColumns: string[],
+    data: DataRow[],
+  ): Record<string, number> =>
+    Object.fromEntries(
+      selectedNumericalColumns.map(column => [
+        column,
+        getDecimalPlaces(data, column),
+      ]),
+    ),
 );
 
 export const getSelectedColumnsDescriptions = createSelector(

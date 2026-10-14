@@ -11,7 +11,7 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import type {ModelDataToSave, Mode, SaveResponse} from './types';
 
-import {initAll, instructionsDismissed} from './index';
+import {initAll, instructionsDismissed, startOver} from './index';
 
 injectFontAwesome();
 
@@ -63,9 +63,7 @@ const sampleModes: Record<string, Mode> = {
     trainer: 'decisionTree',
   },
 
-  'final-project': {
-    randomizeTestData: true,
-  },
+  'final-project': {},
 
   'club-test': {
     datasets: [
@@ -156,4 +154,5 @@ initAll({
   saveTrainedModel: saveTrainedModelStub,
   setInstructionsKey: setInstructionsKeyStub,
   logMetric: logMetricStub,
+  onStartOver: startOver,
 });

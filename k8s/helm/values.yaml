@@ -1,6 +1,9 @@
 # Default configuration, overridden by:
 # - development.values.yml
 # - production.values.yml
+#
+# Keys are validated against values.schema.json; a key not listed there fails
+# the render. Add new keys to both files.
 # argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
 
 image: cdo-rails:latest
@@ -64,6 +67,12 @@ activeJobWorker:
   replicas: 1
   # Delayed Job priorities: high < 10, low >= 10; both leaves the range unrestricted.
   priorityMode: both
+  # Seconds between SIGTERM and SIGKILL when a pod is replaced or drained.
+  # delayed_job finishes its current job before exiting, so a job that
+  # outlives this window is killed and its row stays locked until
+  # Delayed::Worker.max_run_time (4 hours) expires. 60 matches the legacy
+  # launcher; environments that run long low-priority jobs override it.
+  terminationGracePeriodSeconds: 60
   # Custom commands and args are supported only with priorityMode: both.
   command: ["sh", "-c"]
   args: []
@@ -103,6 +112,8 @@ services:
 # These should match the docker image's USERNAME, UID and GID args
 #
 # NOTE: uid and gid are overridden to root by Skaffold due to a sync bug.
+# The chart refuses to render RAILS_ENV=production with uid or gid 0; see
+# templates/dashboard/_dashboard.yaml.
 user:
   username: cdo
   uid: 1000
@@ -110,10 +121,11 @@ user:
   home: /home/cdo
   allowSudo: false
 
-# Reserved for a future local dashboard profile. There is no Skaffold profile
-# that enables these mounts while the root docker family lacks an image with
-# the frontend assets.
 localDev:
+  # Local-only credentials and boot defaults; live deployments use external secrets.
+  stubSecrets: false
+
+  # Reserved for a future local dashboard profile with frontend assets.
   mounts:
     mountDotAWS: false
     mountDotConfigGcloud: false

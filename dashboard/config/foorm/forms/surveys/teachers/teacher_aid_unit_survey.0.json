@@ -12,7 +12,7 @@
           "startWithNewLine": false,
           "innerIndent": 3,
           "indent": 3,
-          "visible": "true",
+          "visible": "false",
           "elements": [
             {
               "type": "html",
@@ -24,7 +24,7 @@
               "name": "unit_name",
               "startWithNewLine": false,
               "defaultValueExpression": "{unit}",
-              "readOnly": false,
+              "readOnly": true,
               "choices": [
                 {
                   "value": "web_development",
@@ -84,7 +84,7 @@
         },
         {
           "type": "html",
-          "name": "unit_num_name_heading",
+          "name": "unit_name_heading",
           "visibleIf": "{unit_name} anyof ['aiml', 'devices_cp', 'devices_mb', 'data', 'animations_games', 'musiclab', 'design_process', 'thinking_critically_ai', 'web_development']",
           "html": "<h2>Unit: {unit_name}</h2>"
         },
@@ -132,19 +132,19 @@
           "rateValues": [
             {
               "value": 4,
-              "text": " All "
+              "text": " Usually "
             },
             {
               "value": 3,
-              "text": " Most"
+              "text": " Often "
             },
             {
               "value": 2,
-              "text": " Some"
+              "text": " Occasionally "
             },
             {
               "value": 1,
-              "text": " Few, or None"
+              "text": " Rarely "
             }
           ]
         },
@@ -160,19 +160,19 @@
               "rateValues": [
                 {
                   "value": 4,
-                  "text": " All "
+                  "text": " Usually "
                 },
                 {
                   "value": 3,
-                  "text": " Most"
+                  "text": " Often "
                 },
                 {
                   "value": 2,
-                  "text": " Some"
+                  "text": " Occasionally "
                 },
                 {
                   "value": 1,
-                  "text": " Few, or None"
+                  "text": " Rarely "
                 }
               ]
             },
@@ -183,19 +183,19 @@
               "rateValues": [
                 {
                   "value": 4,
-                  "text": " All "
+                  "text": " Usually "
                 },
                 {
                   "value": 3,
-                  "text": " Most"
+                  "text": " Often "
                 },
                 {
                   "value": 2,
-                  "text": " Some"
+                  "text": " Occasionally "
                 },
                 {
                   "value": 1,
-                  "text": " Few, or None"
+                  "text": " Rarely "
                 }
               ]
             },
@@ -253,7 +253,7 @@
           "type": "html",
           "name": "unit_specific_header",
           "visibleIf": "{unit_name} anyof ['aiml', 'devices_cp', 'devices_mb', 'data', 'animations_games', 'musiclab', 'design_process', 'thinking_critically_ai', 'web_development']",
-          "html": "<h2>Objectives: AI Discoveries Unit: {unit_name}</h2>\n<p>How effective were the lessons and materials in this unit in helping your students learn?</p><p><br/></p><p><strong>By the end of this unit how many of your students can...</strong></p>"
+          "html": "<h2>Objectives: AI Discoveries Unit: {unit_name}</h2>\n<p><font size=+1>How effective were the lessons and materials in this unit in helping your students learn?</font></p><p><br/></p><p><strong>By the end of this unit how many of your students can...</strong></p>"
         },
         {
           "type": "panel",
@@ -265,6 +265,121 @@
               "name": "header_unit_tcai",
               "visible": false,
               "html": "<h1>Unit: thinking critically about AI (hidden)</h1>"
+            },
+            {
+              "type": "rating",
+              "name": "tcai_identify_ai_daily",
+              "title": "Identify where AI exists in our daily lives and the different stakeholders that use it",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_ai_evaluation",
+              "title": "Implement verification strategies to evaluate AI outputs",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_stance_responsible_ai",
+              "title": "Take a stance on responsible AI use",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_analyze_privacy_risks",
+              "title": "Analyze privacy risks that exist when sharing information online",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tcai_create_chatbot",
+              "title": "Create a chatbot that uses context and a goal to direct AI towards a specific purpose",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
             }
           ]
         },
@@ -643,7 +758,7 @@
             {
               "type": "rating",
               "name": "determine_what_can_be_automated",
-              "title": "Determine how different aspects of the problem solving process could be automated",
+              "title": "Determine how different aspects of the problem-solving process could be automated",
               "rateValues": [
                 {
                   "value": 4,
@@ -959,13 +1074,128 @@
         },
         {
           "type": "panel",
+          "name": "panel_tools_weblab2",
+          "visibleIf": "{unit_name} = 'web_development'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "tools_preamble_weblab2",
+              "html": "<h2>Web Lab 2</h2>\n<p><font size=+1>Your students used Web Lab 2 to develop their coding assignments in this unit. How did it go? </font></p><p><br/></p><p><strong>By the end of this unit, how many of your students were able to...</strong></p>"
+            },
+            {
+              "type": "rating",
+              "name": "tools_understand_weblab2",
+              "title": "Understand how Web Lab 2 worked?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tools_demonstrate_learning_weblab2",
+              "title": "Use Web Lab 2 to demonstrate their learning in this unit?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "panel_tools_sketchlab",
+          "visibleIf": "{unit_name} = 'thinking_critically_ai'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "tools_preamble_sketchlab",
+              "html": "<h2>Sketch Lab</h2>\n<p><font size=+1>Your students used Sketch Lab to develop their coding assignments in this unit. How did it go? </font></p><p><br/></p><p><strong>By the end of this unit, how many of your students were able to...</strong></p>"
+            },
+            {
+              "type": "rating",
+              "name": "tools_understand_sketchlab",
+              "title": "Understand how Sketch Lab worked?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "tools_demonstrate_learning_sketchlab",
+              "title": "Use Sketch Lab to demonstrate their learning in this unit?",
+              "rateValues": [
+                {
+                  "value": 4,
+                  "text": " All "
+                },
+                {
+                  "value": 3,
+                  "text": " Most"
+                },
+                {
+                  "value": 2,
+                  "text": " Some"
+                },
+                {
+                  "value": 1,
+                  "text": " Few, or None"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
           "name": "panel1",
-          "visibleIf": "{unit_name} <>'musiclab'",
           "elements": [
             {
               "type": "html",
               "name": "adapt_lesson_preamble",
-              "html": "<font size=+1> <strong>Lesson adaptations</strong><br/>At several points in this unit, the curriculum encourages you to adapt lessons to your specific community and context.  If you made such an adaptation, we’d love to hear about it!  </font>"
+              "html": "<h2>Lesson Adaptations</h2>\n<p><font size=+1>At several points in this unit, the curriculum encourages you to adapt lessons to your specific community and context.  If you made such an adaptation, we’d love to hear about it!  </font>"
             },
             {
               "type": "radiogroup",

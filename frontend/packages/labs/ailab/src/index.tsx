@@ -7,12 +7,13 @@ import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
-import {parseCSV} from './csvReaderWrapper';
+import {invalidatePendingDatasetLoads} from './datasetLoad';
 import type {Dataset} from './datasetManifest';
-import {getDatasets} from './datasetManifest';
+import {getAvailableDatasets, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
-import {parseJSON} from './jsonReaderWrapper';
+import {loadDataset} from './loadDataset';
+import {ProjectProvider} from './ProjectContext';
 import {
   setMode,
   setCurrentPanel,
@@ -26,6 +27,7 @@ import {
 } from './redux';
 import {store} from './store';
 import train from './train';
+import {TrainingDataProvider} from './TrainingDataContext';
 import type {Mode} from './types';
 
 let root: Root | undefined;
@@ -67,11 +69,15 @@ export const mount = function (options: MountOptions): void {
   // Code Studio's MUI theme does not reach into this separate React root.
   root.render(
     <Provider store={store}>
-      <ThemeProvider
-        theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
-      >
-        <App {...options} />
-      </ThemeProvider>
+      <ProjectProvider>
+        <TrainingDataProvider>
+          <ThemeProvider
+            theme={getMuiThemeForBrand(document.documentElement.dataset.brand)}
+          >
+            <App {...options} />
+          </ThemeProvider>
+        </TrainingDataProvider>
+      </ProjectProvider>
     </Provider>,
   );
 };
@@ -88,7 +94,16 @@ export const unmount = function (): void {
  * Prepare the lab for a level. Call this once per level after mount().
  */
 export const loadLevel = function (mode?: Mode): void {
-  store.dispatch(resetState());
+  reload(mode, /*keepHistoricResults*/ false);
+};
+
+export const startOver = function (): void {
+  reload(store.getState().mode, /*keepHistoricResults*/ true);
+};
+
+const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
+  invalidatePendingDatasetLoads();
+  store.dispatch(resetState(keepHistoricResults));
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);
@@ -109,52 +124,43 @@ export const instructionsDismissed = function (): void {
 // Process an optional mode.
 const processMode = (mode: Mode | undefined): void => {
   const assetPath = getAssetPath();
-  let panelSet = false;
 
-  if (mode) {
-    // Load a single dataset immediately.
-    if (mode.datasets && mode.datasets.length === 1) {
-      const item = getDatasets().filter((item: Dataset) => {
-        return item.id === mode.datasets![0];
-      })[0];
-      store.dispatch(setSelectedName(item.name));
-      store.dispatch(setSelectedCSV(assetPath + item.path));
-      store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-      // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
-      // directly and are fire-and-forget, so an in-flight load from a prior
-      // level/dataset can resolve after a newer loadLevel and clobber state.
-      parseCSV(assetPath + item.path, true, false);
-
-      // Also retrieve model metadata and set column data types.
-      parseJSON(assetPath + item.metadataPath);
-
-      if (mode.hideSelectLabel) {
-        store.dispatch(setCurrentPanel('dataDisplayFeatures'));
-      } else {
-        store.dispatch(setCurrentPanel('dataDisplayLabel'));
-      }
-      panelSet = true;
-    }
-  }
-
-  const reserveLocation = mode?.randomizeTestData
-    ? TestDataLocations.RANDOM
-    : TestDataLocations.END;
+  const reserveLocation = mode?.reserveLastRows
+    ? TestDataLocations.END
+    : TestDataLocations.RANDOM;
   store.dispatch(setReserveLocation(reserveLocation));
 
-  if (!panelSet) {
-    store.dispatch(setCurrentPanel('selectDataset'));
+  // The dataset picker is hidden for now, so a mode without exactly one
+  // dataset loads the first one the picker would have listed.
+  const item =
+    mode?.datasets?.length === 1
+      ? getDatasets().find((item: Dataset) => item.id === mode.datasets![0])
+      : getAvailableDatasets(mode?.datasets)[0];
+  if (!item) {
+    console.error('AI Lab could not find a dataset to load.');
+    return;
   }
+
+  store.dispatch(setSelectedName(item.name));
+  store.dispatch(setSelectedCSV(assetPath + item.path));
+  store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
+  loadDataset(assetPath + item.path, assetPath + item.metadataPath);
+
+  store.dispatch(setCurrentPanel('datasetView'));
 };
 
 // Export a few types.
 export type {
   InstructionsKey,
+  Metadata,
   Mode,
   ModelDataToSave,
   SaveResponse,
 } from './types';
-export {CONTENT_PANELS, INSTRUCTIONS_KEYS} from './types';
+export {INSTRUCTIONS_KEYS} from './types';
+export {selectableColumns} from './helpers/columnDetails';
+export type {Lab2Instructions} from './lab2Instructions';
+export {LAB2_INSTRUCTIONS} from './lab2Instructions';
 export type {Dataset} from './datasetManifest';
 export {
   getAvailableDatasets,

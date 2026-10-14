@@ -257,7 +257,7 @@ class ScriptLevel < ApplicationRecord
       else
         script_lesson_extras_path(script.name, lesson_position)
       end
-    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor') && user&.can_use_lesson_deep_dive?
       # For lessons with Tutor+ available (AIF/AID courses), send students at
       # the end of the lesson to the lesson deep dive ("tutor") space instead of
       # the next-level / unit-overview redirect. This is the single choke point
@@ -450,6 +450,13 @@ class ScriptLevel < ApplicationRecord
 
       if named_level
         summary[:name] = level.display_name || level.name
+      end
+
+      # Shown in the level header when the unit uses simple progress.
+      if level.header_label.present?
+        summary[:header_label] =
+          level.get_localized_property(:header_label).presence ||
+          level.header_label
       end
 
       if bubble_choice?

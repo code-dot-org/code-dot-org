@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Investigating Computer Hardware\r\n\r\n1. Examine the computer hardware presented here. Click parts and attach them to the motherboard where they belong.\r\n2. Once added, **Power On** the computer to see if it boots up.\r\n3. Experiment by adding / removing parts while the computer is running or trying to start the computer without parts. What happens as a result?",
+    "long_instructions": "# Investigating Computer Hardware\r\n\r\nYour students will complete this activity in Lesson 2, after they learn the main parts of a computer. They will practice attaching parts to a motherboard to see how the pieces work together. Try it yourself first to see what they will experience.\r\n\r\n1. Examine the computer hardware presented here. Click parts and attach them to the motherboard where they belong.\r\n2. Once added, **Power On** the computer to see if it boots up.\r\n3. Experiment by adding or removing parts while the computer is running, or try to start the computer without certain parts. What happens as a result?\r\n\r\n<div style=\"background-color:#E4E2F8; border-radius:10px; padding:12px 16px; margin:20px 0;\">\r\n<div style=\"font-size:16px; color:#222222;\">\r\n<p><b>💡 Teacher tip:</b> Ask students to predict what will happen before they remove a part or power on the computer. Then have them compare their prediction with the result. This turns trial and error into a conversation about what each part does.</p>\r\n</div>\r\n</div>",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -66,6 +66,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-21T15:16:54.759+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson2-weblab-1\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson2-weblab-1\"},{\"changed_at\":\"2026-09-21 15:17:04 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-21T15:16:54.759+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson2-weblab-1\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson2-weblab-1\"},{\"changed_at\":\"2026-09-21 15:17:04 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-05 15:28:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

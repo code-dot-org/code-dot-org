@@ -24,11 +24,13 @@
     "level_mode": {
       "kind": "image",
       "imageType": "background",
-      "imageRole": "platform-background"
+      "imageRole": "platform-background",
+      "imageUi": "explore",
+      "sentence": "place-detail"
     },
     "guide_steps": [
       {
-        "text": "**Make a background for your game.** Pick the words for a place and click **Generate**."
+        "text": "**Make a background for your game.** Pick the words for a place and click **Generate**, or draw your own."
       },
       {
         "text": "**That sets the mood!** Click **Continue**.",
@@ -38,7 +40,8 @@
         }
       }
     ],
-    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**."
+    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**, or draw your own.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

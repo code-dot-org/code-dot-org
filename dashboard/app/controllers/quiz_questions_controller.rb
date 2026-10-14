@@ -69,7 +69,7 @@ class QuizQuestionsController < ApplicationController
 
   # PUT /quiz_questions/:id?quizLevelId=
   #
-  # MultipleChoiceQuestion-shaped params. TODO: other question types.
+  # Content params follow the question's own type; type itself can't change.
   #
   # quizLevelId's placement gets repointed at the fork, if any. editMode:
   # 'fork' forces a fork explicitly; used_in_published_unit? also forces one.
@@ -78,16 +78,12 @@ class QuizQuestionsController < ApplicationController
     level = find_quiz_level(params[:quizLevelId])
     placement = level&.placements&.find_by!(quiz_question_id: question.id)
     should_fork = question.used_in_published_unit? || quiz_question_params[:editMode] == 'fork'
-    target = should_fork ? MultipleChoiceQuestion.new(key: SecureRandom.uuid, fork_parent: question) : question
+    target = should_fork ? question.class.new(key: SecureRandom.uuid, fork_parent: question) : question
 
     ActiveRecord::Base.transaction(requires_new: true) do
       target.update!(
         name: quiz_question_params[:questionName],
-        content: {
-          stem: quiz_question_params[:stem],
-          choices: (quiz_question_params[:choices] || []).map(&:to_h),
-          correct_choice_id: quiz_question_params[:correctChoiceId],
-        },
+        content: question.class.content_from_builder_params(quiz_question_params),
         explanation: quiz_question_params[:explanation]
       )
 
