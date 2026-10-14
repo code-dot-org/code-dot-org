@@ -281,10 +281,8 @@ function arrowPath(from: Rect, to: Rect): string {
 }
 
 /**
- * The scenes map: every scene as a card (picture, name, actions), in play
- * order, with a "new scene" card first, arrows between the cards whose
- * code jumps between them, and Play game above. Opening a card goes to
- * that scene's code.
+ * The scenes map: every scene as a card in play order, arrows between the
+ * cards whose code jumps between them, and Play game above.
  */
 const ScenesGallery: React.FunctionComponent<ScenesGalleryProps> = ({
   scenes,

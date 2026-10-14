@@ -1,5 +1,4 @@
-// Filters a level's authored toolbox down to one scene type's blocks, and
-// gives its flyout leading room when a control floats over the pane.
+// Filters a level's authored toolbox down to one scene type's blocks.
 
 import * as BlocklyCore from 'blockly/core';
 

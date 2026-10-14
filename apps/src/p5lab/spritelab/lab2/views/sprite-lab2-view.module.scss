@@ -68,9 +68,7 @@ $tab-item-height: 34px;
 
 // --- Scene tabs ---
 
-// A row of the project's scenes; the selected one carries the underline a
-// tab does. Overflow hides under the row's end (the selected tab scrolls
-// into view) and "All scenes" opens the gallery.
+// The project's scenes as tabs; overflow hides under the row's end.
 .sceneTabs {
   display: flex;
   align-items: center;
@@ -88,8 +86,7 @@ $tab-item-height: 34px;
   overflow: hidden;
 }
 
-// A scene's tab: its picture and name, and, when it is the open scene,
-// its Code | World segments after them.
+// A scene's tab: its picture and name.
 .sceneTab {
   display: flex;
   align-items: stretch;
@@ -131,8 +128,7 @@ $tab-item-height: 34px;
 }
 
 .sceneTabActive {
-  // Trial: a filled tab, far stronger than the 2px underline, to see
-  // whether the open scene reads at a glance.
+  // Filled, not underlined, so the open scene reads at a glance.
   border-color: var(--borders-brand-teal-primary);
   background: var(--borders-brand-teal-primary);
   color: #fff;
@@ -154,9 +150,8 @@ $tab-item-height: 34px;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  // Selecting a tab bolds it, and bold text is a couple of px wider,
-  // enough to nudge every tab after it. This unpainted bold copy of the
-  // name sets the width at all times and adds no height.
+  // An unpainted bold copy of the name holds the width, so bolding the
+  // selected tab nudges nothing.
   &::after {
     content: attr(data-label);
     display: block;
@@ -167,8 +162,7 @@ $tab-item-height: 34px;
   }
 }
 
-// Back up to the map, after New scene: a plain button, never shrinking
-// under the overflow.
+// All scenes, after New scene: never shrinks under the overflow.
 .sceneTabBack {
   display: flex;
   align-items: center;
@@ -325,12 +319,9 @@ $tab-item-height: 34px;
   display: contents;
 }
 
-// The Code | World switch's strip at the top of the editor pane, the
-// ?editors=strip variant; the editors below start under it.
+// The editors start under the strip.
 $editor-strip-height: 41px;
 
-// The workspace's bar, as Music Lab's panel headers: the label centred,
-// the Code | World switch at its end.
 .editorStrip {
   position: absolute;
   top: 0;
@@ -364,8 +355,7 @@ $editor-strip-height: 41px;
   align-items: center;
 }
 
-// The Pictures button, the size of a scene tab, so the drawer's door
-// matches the row it sits in.
+// The Pictures button, the size of a scene tab.
 .picturesTab {
   display: flex;
   align-items: center;
@@ -834,13 +824,9 @@ $editor-strip-height: 41px;
   white-space: nowrap;
 }
 
-// The persistent playspace overlay: spans the tab content area; lets clicks
-// through to the content beneath (e.g. the Blockly workspace) except over the
-// box itself.
-// Over the toolbox's own stacking (70), under the sheets: the box slides
-// back from the play view across the toolbox as the workspace reappears,
-// and must pass over it, not under. Clicks fall through; the overlay
-// paints only the column and the box.
+// The persistent playspace overlay; clicks fall through except over the
+// box. Over the toolbox's stacking (70), under the sheets: the box slides
+// back across the toolbox as the workspace reappears.
 .playspaceOverlay {
   position: absolute;
   inset: 0;
@@ -858,8 +844,8 @@ $editor-strip-height: 41px;
   border-left: 1px solid var(--borders-neutral-primary);
 }
 
-// ?preview=left: the column at the lab's left, with no tint or edge of
-// its own: the workspace's ground continues under the two cards.
+// At the lab's left the column has no tint or edge: the workspace's
+// ground continues under the cards.
 .previewColumnLeft {
   background: transparent;
   border-left: none;
@@ -951,15 +937,12 @@ $editor-strip-height: 41px;
   }
 }
 
-// The column's lower section: the instructions, a band of their own from
-// under the bar to the column's foot, a shade apart from the preview's
-// section above and ruled off from it; a long step scrolls inside.
+// The instructions' card under the preview; a long step scrolls inside.
 .previewBelow {
   position: absolute;
   box-sizing: border-box;
   overflow: auto;
   pointer-events: auto;
-  // The instructions' card, the column's other.
   border-radius: 14px;
   background: var(--background-neutral-tertiary);
   border: 1px solid var(--borders-neutral-primary);
@@ -980,8 +963,7 @@ $editor-strip-height: 41px;
   line-height: 1.5;
 }
 
-// Short windows: the type the blocks and the header already use, so the
-// instructions take less of the column's height; the padding shrinks with it.
+// Short windows: the blocks' smaller type, and less padding.
 .previewBelowCompact .guideDocked {
   padding: 10px 14px;
   font-size: 12px;
@@ -1000,23 +982,17 @@ $editor-strip-height: 41px;
   font-size: 12px;
 }
 
-// The project's pictures, over the workspace's right side. Kept mounted and
-// slid out of view when closed. The slide moves `right`, not a transform:
-// a transformed ancestor would become the containing block of the image
-// dialog, which the drawer's pane renders with fixed position, and the
-// dialog would slide out with it.
-// A sheet under the scene row, for Pictures and for the map: it covers
-// the whole area below, the preview's column included. Closed, the
+// A sheet under the scene row, over the whole area below. Closed, the
 // Pictures sheet sits off to the right rather than hidden, so a dialog
-// rendered inside it still shows.
+// rendered inside it still shows; moved by `left`, not a transform, which
+// would become the containing block of the fixed-position image dialog.
 .sheet {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  // Above the floating guide: the image dialog renders inside the sheet,
-  // not in a portal, so it can be no higher than the sheet is.
+  // Topmost: the image dialog renders inside the sheet, not in a portal.
   z-index: variables.$z-index-overlay;
   display: flex;
   flex-direction: column;

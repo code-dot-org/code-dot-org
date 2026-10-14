@@ -18,9 +18,8 @@ interface SceneTabsProps {
   galleryOpen: boolean;
   /** While the game plays, switching scenes has no effect. */
   disabled?: boolean;
-  /** The level keeps its student to the selected scene: the row still
-      shows, so the full lab holds no surprises, but the way back, the
-      other tabs and New scene are disabled, with the reason on hover. */
+  /** The other tabs, New scene and All scenes are disabled, with the
+      reason on hover. */
   locked?: boolean;
   lockedReason?: string;
   allowCreate?: boolean;
@@ -31,10 +30,8 @@ interface SceneTabsProps {
 }
 
 /**
- * The project's scenes as a row of tabs, each with its picture, so the
- * scenes are in sight rather than inside a menu, then New scene, then
- * "All scenes" up to the map, gone while the map is open. Overflow hides
- * under the row's end; the selected tab scrolls into view.
+ * The project's scenes as a row of tabs, then New scene and All scenes;
+ * the selected tab scrolls into view.
  */
 const SceneTabs: React.FunctionComponent<SceneTabsProps> = ({
   scenes,

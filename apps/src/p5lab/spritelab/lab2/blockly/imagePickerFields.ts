@@ -42,9 +42,8 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
   ],
 ];
 
-// One button below the image grid: ask for a new picture of the field's
-// kind, which lands in the field once made. Doubles as the empty state's
-// affordance.
+// Asks for a new picture of the field's kind, which lands in the field
+// once made; also the empty state's affordance.
 function makeImageButtons(field: () => Lab2AnimationDropdown) {
   return [
     {

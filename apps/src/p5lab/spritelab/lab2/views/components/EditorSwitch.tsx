@@ -25,8 +25,7 @@ const EDITORS: {editor: Editor; icon: string}[] = [
 
 /**
  * Which of the scene's two editors fills the main area: its world or its
- * code. They are peers, each relying on the other's work, so the switch
- * gives them equal rank.
+ * code.
  */
 const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   value,

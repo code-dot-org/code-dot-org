@@ -1,7 +1,5 @@
-// A picture asked for from where it will be used: a block's image dropdown
-// or the world palette asks, the lab opens the pictures drawer on a new
-// picture, and the finished picture is handed back to the asker. Blockly
-// fields have no React context, so the lab registers its handler here.
+// Blockly fields have no React context, so the lab registers here the
+// handler that answers a block's or the world palette's picture request.
 
 import {ImageSubject, ImageType} from './ai/images/types';
 

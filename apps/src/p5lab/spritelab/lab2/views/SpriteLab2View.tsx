@@ -166,7 +166,7 @@ registerReducers({
 });
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
-// The drawer the Pictures button controls.
+// The sheet the Pictures button controls.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
@@ -327,9 +327,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
-  // Same for the World editor: inserting its grid costs far more than
-  // rendering it, because the consent script's autoblocker walks every
-  // added node.
+  // The world editor mounts at its first opening: inserting its grid is
+  // costly (the consent script's autoblocker walks every added node).
   const [worldMounted, setWorldMounted] = useState(false);
   useEffect(() => {
     if (activeTab === 'World') {
@@ -461,11 +460,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       activeSceneType === 'story' ? tabs.filter(tab => tab !== 'World') : tabs,
     [tabs, activeSceneType]
   );
-  // Which of the scene's two editors fills the main area. The choice is
-  // offered where the scene has a world and the level has code.
-  // Every level with the tab shell shows the full lab's controls; what the
-  // level withholds is disabled rather than missing, so the free play lab
-  // holds no surprises. The switch shows wherever the scene has one editor.
+  // What the level withholds is disabled rather than missing, so free play
+  // holds no surprises later.
   const editorsShown = tabs.includes('Code') || enabledTabs.includes('World');
   const disabledEditors = useMemo<Partial<Record<Editor, string>>>(
     () => ({
@@ -480,8 +476,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }),
     [tabs, enabledTabs]
   );
-  // The preview column at the lab's left, before the toolbox;
-  // ?preview=right puts it at the right.
+  // ?preview=right puts the preview column at the right.
   const previewSide = useMemo<'left' | 'right'>(
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
@@ -1264,11 +1259,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // A sheet over the editors and the stage: Pictures, or the map.
   const stageCovered = pictures.open || activeTab === 'Scenes';
-  // The hidden workspace stays mounted behind a clip-path, and a sheet
-  // covers the editors and the stage: hidden visually, but still in the
-  // tab order and the accessibility tree. Inert while hidden. Set via
-  // refs: React 18's JSX has no inert attribute. worldMounted is a dep
-  // because the world's wrapper can first render after the last change.
+  // Hidden content stays in the tab order and the accessibility tree:
+  // inert while hidden, via refs (React 18's JSX has no inert attribute).
+  // worldMounted: the world's wrapper can first render after the last change.
   const stageRef = useRef<HTMLDivElement>(null);
   const codeWrapperRef = useRef<HTMLDivElement>(null);
   const worldWrapperRef = useRef<HTMLDivElement>(null);
@@ -1715,9 +1708,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const links = useMemo(() => sceneLinks(scenes), [scenes]);
 
-  // Entering Play: from the start scene (Play game), or from the previewed
-  // scene. Previewing the first scene IS the beginning; keep the quiet
-  // default state.
+  // Entering Play from the start scene (null) or the previewed scene; the
+  // first scene IS the beginning, so it plays as the start.
   const playFrom = useCallback(
     (startSceneId: string | null) => {
       setPlayStartSceneId(startSceneId);
@@ -1804,16 +1796,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       : 'hidden';
 
   const documentHidden = useDocumentHidden();
-  // Freeze the game while nobody can see it: the stage under a sheet, or
-  // the whole document hidden. (A hidden document stops drawing on its
-  // own — the browser pauses animation frames — but the wall clock kept
-  // running, so timers jumped forward on return.)
+  // Freeze the game while nobody can see it: a hidden document stops
+  // drawing on its own, but its timers would jump forward on return.
   useEffect(() => {
     engineRef.current?.setDrawPaused(
       playspaceMode === 'hidden' || stageCovered || documentHidden
     );
-    // engineReady: a level that STARTS with the stage hidden (an images-only
-    // level) must pause the engine as soon as it exists.
+    // engineReady: pause an engine that appears while the stage is covered.
   }, [playspaceMode, stageCovered, documentHidden, engineReady]);
 
   // A typed scene says so up front; a scene made before scene types counts
@@ -1973,10 +1962,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             </>
           }
           sceneTabs={
-            // A toolbox has no scenes; "New scene" here would put the student
-            // default onto the canvas and into the saved toolbox. A pinned
-            // level shows its one scene's tab, or every scene's with the
-            // others locked, with the row's controls disabled.
+            // A toolbox has no scenes: New scene would put the student default
+            // into the saved toolbox.
             animationsSeeded && !isToolboxMode ? (
               <SceneTabs
                 scenes={
@@ -2036,8 +2023,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             </div>
 
             {/* Kept mounted like the workspace: inserting the grid is the
-          costly part. The world editor keeps clear of the preview's column
-          as the code does. */}
+          costly part. */}
             {worldTabEnabled && worldMounted && (
               <div
                 ref={worldWrapperRef}
@@ -2127,10 +2113,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             />
           </div>
 
-          {/* Kept mounted like the workspace: opening mid-transition eats
-          the guide's frames, and remounting loses gallery state. Closed, it
-          waits off to the right, where a pick's dialog can still open
-          inside it. */}
+          {/* Kept mounted: remounting loses gallery state. Closed, it waits
+          off to the right, where a pick's dialog can still open inside it. */}
           {pictures.mounted && (
             <Sheet
               ref={pictures.sheetRef}

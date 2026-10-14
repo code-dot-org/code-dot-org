@@ -19,8 +19,7 @@ export default function usePicturesSheet({
   ready,
 }: PicturesSheetOptions) {
   const [open, setOpen] = useState(false);
-  // The sheet mounts once (in an idle moment once the lab is ready, or at
-  // its first opening) and stays mounted, so no opening pays the mount cost.
+  // Mounted once and kept, so no opening pays the mount cost.
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     if (open) {
@@ -64,9 +63,8 @@ export default function usePicturesSheet({
   );
   const onPickCancel = useCallback(() => setPickRequest(null), []);
 
-  // The closed sheet, slid out of view, is still in the tab order and the
-  // accessibility tree: inert, except while a pick's dialog renders inside
-  // it. Set via a ref: React 18's JSX has no inert attribute.
+  // Inert while closed, except while a pick's dialog renders inside it
+  // (React 18's JSX has no inert attribute).
   const sheetRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (sheetRef.current) {

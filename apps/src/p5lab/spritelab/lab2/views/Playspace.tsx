@@ -37,38 +37,26 @@ const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
 // play area.
 const CANVAS = 400;
 const MARGIN = 12;
-// The box sits bare in its column, inset from its edges by the card gap,
-// so it lines up with the instructions' card under it.
-// The play bar under the box: one row of the design system's small
-// buttons (2rem at the root font size, plus their 1px borders) and its gap.
+// One row of the design system's small buttons (2rem plus 1px borders).
 const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
 export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
-// The preview's column takes this share of the browser's width; the code
-// keeps the rest.
+// The preview column's share of the browser's width.
 const PREVIEW_WIDTH_SHARE = 1 / 3;
-// The instructions are always whole: the box gives up height to them
-// first, and once it would go under this side the column widens instead,
-// up to this share, and the instructions move beside the box, where the
-// width buys the box height; their card keeps at least this width, and
-// the box at least the width its bar's two buttons need.
+// Under PREVIEW_MIN_PX the column widens, up to the max share, and the
+// instructions move beside the box.
 const PREVIEW_MIN_PX = 200;
 const PREVIEW_WIDTH_MAX_SHARE = 0.45;
 const BESIDE_TEXT_MIN_PX = 260;
 const BESIDE_BOX_MIN_PX = 280;
-// The least height of the instructions' card under the bar, with nothing
-// measured yet: a student can read with a small preview, not with no text.
+// A student can read beside a small preview, not beside no text.
 const BELOW_MIN_PX = 150;
 const CARD_BORDER_PX = 1;
-// Under this overlay height the instructions use the smaller type that the
-// blocks and the header already use.
+// Under this height the instructions take the blocks' smaller type.
 const COMPACT_BELOW_PX = 560;
-// The column's two cards, the preview's and the instructions', are inset
-// from the column's edges and from each other by this much, and the
-// preview card pads its box by it.
+// The column's two cards' inset from its edges and from each other.
 const CARD_GAP = 12;
-// While the game plays the instructions' card narrows to the beside
-// layout's text width and takes the compact type, so the game can centre.
+// While playing the instructions' card narrows so the game can centre.
 const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
@@ -97,13 +85,10 @@ function centeredIn(area: Size): Placement {
 }
 
 /**
- * Where the play view goes in an overlay of `size` with the guide pinned at
- * its bottom-right: centered in the whole overlay when that clears the
- * guide, else beside the guide or above it, whichever leaves the box
- * bigger (beside on a landscape window, above on a portrait one). It
- * shrinks rather than sliding under the guide. `reserveBelow` is room kept
- * under the box (the play bar), so it is the box plus bar that is centered
- * and kept clear of the guide.
+ * Where the play view goes in an overlay of `size`, clear of a guide hung
+ * from a bottom corner: centred when that clears the guide, else beside or
+ * above it, whichever leaves the box bigger. `reserveBelow` is room kept
+ * under the box (the play bar).
  */
 export function playPlacement(
   size: Size,
@@ -130,9 +115,8 @@ export function playPlacement(
   const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
   const clearsAbove =
     whole.y + CANVAS * whole.scale + reserveBelow <= guideTop - MARGIN;
-  // Beside the guide: scaled to the room on the guide's other side, and
-  // as near the centre as clearing the guide allows, not centred in that
-  // room, which would push the box further out than it needs to go.
+  // Beside the guide: as near the centre as clearing it allows, not centred
+  // in the room left, which would push the box further out.
   if (guideSide === 'left') {
     // The guide hangs from the left: the box clears it to its right.
     const guideRight = GUIDE_RIGHT_OFFSET_PX + guideSize.width;
@@ -198,19 +182,15 @@ interface PlayspaceProps {
   boxRef?: React.RefObject<HTMLDivElement>;
   /** The scene playing now is a platformer, so the controls apply. */
   platformScene?: boolean;
-  // Shown in the play area's top-right corner while playing (the restart
-  // buttons). Outside the box, so they keep their size whatever its scale.
+  // Over the play area's corner, outside the box so they keep their size.
   controls?: React.ReactNode;
-  // Shown under the box in every visible mode; the box is placed to leave
-  // it room.
+  // Under the box, which is placed to leave it room.
   playBar?: React.ReactNode;
-  // Shown under the bar in preview, in the column's remaining height; the
-  // preview shrinks to leave it at least BELOW_MIN_PX.
+  // Under the bar in preview; the preview shrinks to leave it BELOW_MIN_PX.
   below?: React.ReactNode;
   /** Which edge the preview column sits at; the code keeps the rest. */
   side?: 'left' | 'right';
-  // How much of the width the preview's column takes, so the code can keep
-  // the rest.
+  // The preview column's width, which the code keeps clear of.
   onPreviewWidth?: (width: number) => void;
 }
 
@@ -239,16 +219,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
-  // The height the docked instructions need, measured from their content
-  // (the card scrolls, so the content keeps its natural height).
+  // The height the docked instructions need, from their content.
   const [belowNeed, setBelowNeed] = useState(0);
   const belowObserver = useRef<ResizeObserver | null>(null);
   const belowContentRef = useCallback((el: HTMLDivElement | null) => {
     belowObserver.current?.disconnect();
     belowObserver.current = null;
-    // The last need stands while the card is away: the content rarely
-    // changes between visits, and a stale number beats a 0 that shrinks
-    // the card for a frame.
+    // The last need stands while the card is away: a stale number beats a
+    // 0 that shrinks the card for a frame.
     if (!el || typeof ResizeObserver === 'undefined') {
       return;
     }
@@ -408,23 +386,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  // The preview's layout is worked out whatever the mode: while playing,
-  // the instructions' card keeps the place the editing view gave it, and
-  // the game clears that place.
-  // The browser's width, not the playspace's: the panels left of the
-  // workspace count against the code, not the preview. A browser resize
-  // resizes the playspace too, so this reads fresh each time.
+  // Worked out in every mode: while playing, the card keeps the place the
+  // editing view gave it. The browser's width, not the playspace's: the
+  // panels left of the workspace count against the code, not the preview.
   const browserWidth = window.innerWidth || size.w;
   const share = Math.round(browserWidth * PREVIEW_WIDTH_SHARE);
-  // What the box leaves under itself for the instructions' card: the
-  // bar, the gap to the card, and the card itself. The placement's own
-  // margin covers the box's top gap and the card's bottom one.
+  // The room under the box: the bar, the gap and the card.
   const belowRoomFor = (card: number) =>
     (playBar ? BAR_ROOM : 0) + (below ? CARD_GAP + card : 0);
-  // The column keeps its share whatever the box needs: a taller need
-  // shrinks the box inside it, never the column (which would reflow the
-  // text taller again). The placement's margin is the box's inset from
-  // the column's edges, the same as the card's.
+  // A taller need shrinks the box, never widens the column, which would
+  // reflow the text taller again.
   let columnWidth = share;
   const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
   const inColumn = playPlacement(
@@ -441,11 +412,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       (columnWidth - boxWidth) / 2,
     y: CARD_GAP,
   };
-  // The instructions have pushed the box under its floor: move them
-  // beside it, in a column up to the larger share, if that gives the
-  // box more. The box then has the height, less its gaps, or what the
-  // column leaves after the text's card; it sits at the column's outer
-  // edge, the text's card inside it.
+  // The box pushed under its floor: the instructions move beside it, in a
+  // wider column, if that gives the box more.
   let beside = false;
   if (below && boxWidth < PREVIEW_MIN_PX) {
     const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
@@ -468,10 +436,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     }
   }
 
-  // The instructions' card, placed from the preview's layout: under the
-  // box, hugging its text and centred in the room the box leaves (the
-  // whole room until measured); beside the box on its inner side; or
-  // above the box when it comes first.
+  // The instructions' card: under the box, beside it on its inner side, or
+  // above it when it comes first.
   const previewBoxSide = CANVAS * previewPlacement.scale;
   const columnLeft = side === 'left' ? 0 : size.w - columnWidth;
   const belowLeft =
@@ -509,10 +475,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     left: side === 'left' ? belowCard.left : size.w - CARD_GAP - playCardWidth,
   };
   const cardStyle = mode === 'play' ? playCard : belowCard;
-  // The card's edges, for the game to clear while playing: playPlacement
-  // models a guide hung from a bottom corner, so the card is handed over
-  // as the guide whose corner-hung size reaches the card's inner edge and
-  // top.
+  // The card's edges for the game to clear, as the corner-hung guide
+  // playPlacement models.
   const cardTop = cardStyle.top as number;
   const cardLeft = cardStyle.left as number;
   const cardRight = cardLeft + (cardStyle.width as number);
@@ -541,18 +505,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => {
     reportPreviewWidth.current?.(previewWidth);
   }, [previewWidth]);
-  // Under the box, unscaled: at the box's width, or under a stacked
-  // preview at the column's less its gaps, so a box shrunk for the
-  // instructions never wraps the buttons.
+  // Under the box, unscaled; at the column's width under a stacked
+  // preview, so a shrunk box never wraps the buttons.
   const barLeft = previewWidth > 0 && !beside ? columnLeft + CARD_GAP : x;
   const barWidth =
     previewWidth > 0 && !beside ? previewWidth - 2 * CARD_GAP : boxSide;
   const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
   const compact = size.h < COMPACT_BELOW_PX;
   const visible = measured && mode !== 'hidden';
-  // The bar does not ride the slide: it waits, unseen, at its destination
-  // and fades in once the box has arrived. Before paint, so the jump is
-  // not seen.
+  // The bar waits unseen at its destination and fades in once the box arrives.
   const barRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     if (animate) {
@@ -568,10 +529,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     // Only a mode change moves the bar; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
-  // The card does not slide between its two sizes, which would reflow its
-  // text on the way: a copy at the old size fades out while the card fades
-  // in at the new one. The copy is the card's markup cloned for the fade
-  // and removed after it.
+  // The card fades between its two sizes rather than sliding, which would
+  // reflow its text: a copy at the old size fades out.
   const cardRef = useRef<HTMLDivElement>(null);
   const cardCompact = compact || mode === 'play';
   const cardClassName = classNames(
