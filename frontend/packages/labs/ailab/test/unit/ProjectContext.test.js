@@ -288,6 +288,52 @@ describe('ProjectContext column choices', () => {
     expect(features).toEqual(['c', 'a']);
   });
 
+  /*
+    A model belongs to the columns it was trained on. Leaving the fields that
+    describe it on a project whose columns have moved would have the next load
+    rebuild a model the student never trained.
+  */
+  describe('changing the columns drops the model they produced', () => {
+    const trained = () => {
+      const rendered = renderContext(undefined, imported());
+      act(() => rendered.context().setLabelColumn('a'));
+      act(() => rendered.context().setSelectedFeatures(['b']));
+      act(() => rendered.context().applyTrainingRun(FIRST));
+      return rendered;
+    };
+
+    const described = project => [
+      project.hyperparameters,
+      project.accuracyCheckRowIndices,
+    ];
+
+    test.each([
+      ['the label changes', context => context.setLabelColumn('c')],
+      ['a feature is added', context => context.addSelectedFeature('c')],
+      ['a feature is removed', context => context.removeSelectedFeature('b')],
+      [
+        'the features are replaced',
+        context => context.setSelectedFeatures(['c']),
+      ],
+    ])('when %s', (_change, change) => {
+      const {project, context} = trained();
+      expect(described(project())).toEqual([{k: 1}, [8, 9]]);
+
+      act(() => change(context()));
+
+      expect(described(project())).toEqual([undefined, undefined]);
+      expect(accuracies(project())).toEqual(['80.00']);
+    });
+
+    test('but not when the columns end up where they were', () => {
+      const {project, context} = trained();
+
+      act(() => context().setSelectedFeatures(['b']));
+
+      expect(described(project())).toEqual([{k: 1}, [8, 9]]);
+    });
+  });
+
   // A run owns its own results, never the student's columns, so a cancel must
   // not roll back a choice made after the run started.
   test('a cancel keeps column changes made since the run', () => {

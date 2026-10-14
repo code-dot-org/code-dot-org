@@ -48,6 +48,29 @@ function sameColumns(columns: string[], others: string[]): boolean {
   );
 }
 
+/*
+  Moves a project onto a different set of columns. Whatever model it described
+  was built from the old ones, so the fields naming that model go with them.
+*/
+function withColumns(
+  project: AilabProject,
+  columns: {labelColumn?: string; selectedFeatures: string[]},
+): AilabProject {
+  if (
+    columns.labelColumn === project.labelColumn &&
+    sameColumns(columns.selectedFeatures, project.selectedFeatures)
+  ) {
+    return project;
+  }
+
+  return {
+    ...project,
+    ...columns,
+    hyperparameters: undefined,
+    accuracyCheckRowIndices: undefined,
+  };
+}
+
 const ProjectContext = createContext<ProjectContextValue | undefined>(
   undefined,
 );
@@ -60,16 +83,15 @@ interface ProjectProviderProps {
 
 export const ProjectProvider = ({
   children,
-  project: openWith,
+  project: incomingProject,
   onProjectChanged,
 }: ProjectProviderProps) => {
   const [project, setProject] = useState<AilabProject>(
-    openWith ?? initialProject,
+    incomingProject ?? initialProject,
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
-  // The project the consumer last handed us or last saw, so that opening a
-  // level does not look like the student editing one.
-  const reported = useRef<AilabProject>(project);
+  // The project the consumer last handed us or last saw.
+  const reportedProject = useRef<AilabProject>(project);
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -80,9 +102,9 @@ export const ProjectProvider = ({
     useCallback(({keepsHistoricResults, levelLoad}: ResetSignal) => {
       previousRun.current = undefined;
       if (levelLoad) {
-        const opening = levelLoad.project ?? initialProject;
-        reported.current = opening;
-        setProject(opening);
+        const newProject = levelLoad.project ?? initialProject;
+        reportedProject.current = newProject;
+        setProject(newProject);
         return;
       }
       setProject(previous =>
@@ -94,22 +116,23 @@ export const ProjectProvider = ({
   );
 
   useEffect(() => {
-    if (project === reported.current) {
+    if (project === reportedProject.current) {
       return;
     }
-    reported.current = project;
+    reportedProject.current = project;
     onProjectChanged?.(project);
   }, [project, onProjectChanged]);
 
   const setLabelColumn = useCallback((labelColumn?: string) => {
-    setProject(previous => ({
-      ...previous,
-      labelColumn,
-      // A column can't be both the thing predicted and a thing predicted from.
-      selectedFeatures: previous.selectedFeatures.filter(
-        feature => feature !== labelColumn,
-      ),
-    }));
+    setProject(previous =>
+      withColumns(previous, {
+        labelColumn,
+        // A column can't be both the thing predicted and a thing predicted from.
+        selectedFeatures: previous.selectedFeatures.filter(
+          feature => feature !== labelColumn,
+        ),
+      }),
+    );
   }, []);
 
   const addSelectedFeature = useCallback(
@@ -118,36 +141,40 @@ export const ProjectProvider = ({
         feature === previous.labelColumn ||
         previous.selectedFeatures.includes(feature)
           ? previous
-          : {
-              ...previous,
+          : withColumns(previous, {
+              labelColumn: previous.labelColumn,
               selectedFeatures: sortByColumnOrder(
                 [...previous.selectedFeatures, feature],
                 data,
               ),
-            },
+            }),
       );
     },
     [data],
   );
 
   const removeSelectedFeature = useCallback((feature: string) => {
-    setProject(previous => ({
-      ...previous,
-      selectedFeatures: previous.selectedFeatures.filter(
-        selected => selected !== feature,
-      ),
-    }));
+    setProject(previous =>
+      withColumns(previous, {
+        labelColumn: previous.labelColumn,
+        selectedFeatures: previous.selectedFeatures.filter(
+          selected => selected !== feature,
+        ),
+      }),
+    );
   }, []);
 
   const setSelectedFeatures = useCallback(
     (features: string[]) => {
-      setProject(previous => ({
-        ...previous,
-        selectedFeatures: sortByColumnOrder(
-          features.filter(feature => feature !== previous.labelColumn),
-          data,
-        ),
-      }));
+      setProject(previous =>
+        withColumns(previous, {
+          labelColumn: previous.labelColumn,
+          selectedFeatures: sortByColumnOrder(
+            features.filter(feature => feature !== previous.labelColumn),
+            data,
+          ),
+        }),
+      );
     },
     [data],
   );
@@ -158,7 +185,7 @@ export const ProjectProvider = ({
     never replace a choice already in the project.
 
     This also runs against a project restored from a save, whose columns the
-    dataset need not still have.
+    dataset may no longer have.
   */
   useEffect(() => {
     if (!presetColumns) {
@@ -195,21 +222,7 @@ export const ProjectProvider = ({
         data,
       );
 
-      if (
-        labelColumn === previous.labelColumn &&
-        sameColumns(selectedFeatures, previous.selectedFeatures)
-      ) {
-        return previous;
-      }
-
-      return {
-        ...previous,
-        labelColumn,
-        selectedFeatures,
-        // These columns are not the ones the saved model was built from.
-        hyperparameters: undefined,
-        accuracyCheckRowIndices: undefined,
-      };
+      return withColumns(previous, {labelColumn, selectedFeatures});
     });
   }, [presetColumns, lockedLabel, lockedFeatures, data, selectableColumns]);
 
