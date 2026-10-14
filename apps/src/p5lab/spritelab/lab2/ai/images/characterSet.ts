@@ -17,7 +17,7 @@ import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
-import {isMirrored} from './frameFacing';
+import {drawnCenter, isMirrored} from './frameFacing';
 import {
   GeneratedImageResult,
   logicalGridFor,
@@ -327,22 +327,20 @@ async function composeStrip(
 
 /** A blob's pixels, for comparing frames. */
 async function rasterOf(blob: Blob): Promise<ImageData> {
-  const img = await loadImageFromBlob(blob);
-  const canvas = document.createElement('canvas');
-  canvas.width = img.width;
-  canvas.height = img.height;
-  const ctx = canvas.getContext('2d')!;
-  ctx.drawImage(img, 0, 0);
-  return ctx.getImageData(0, 0, img.width, img.height);
+  const {canvas, ctx} = await canvasFromBlob(blob);
+  return ctx.getImageData(0, 0, canvas.width, canvas.height);
 }
 
 /**
- * The keyed frame, flipped when it came back as a mirror image of the base
- * (frameFacing.ts). A frame of another size is left as it is.
+ * The keyed frame, flipped about its figure when it came back as a mirror
+ * image of the base (frameFacing.ts), so the figure keeps its place. A
+ * frame of another size is left as it is.
  */
 async function faceLikeBase(keyed: Blob, base: ImageData): Promise<Blob> {
   const frame = await rasterOf(keyed);
+  const center = drawnCenter(frame.data, frame.width, frame.height);
   if (
+    !center ||
     frame.width !== base.width ||
     frame.height !== base.height ||
     !isMirrored(frame.data, base.data, frame.width, frame.height)
@@ -359,7 +357,7 @@ async function faceLikeBase(keyed: Blob, base: ImageData): Promise<Blob> {
   const ctx = canvas.getContext('2d')!;
   ctx.translate(frame.width, 0);
   ctx.scale(-1, 1);
-  ctx.drawImage(upright, 0, 0);
+  ctx.drawImage(upright, frame.width - 1 - 2 * center.x, 0);
   return canvasToBlob(canvas);
 }
 
@@ -476,7 +474,7 @@ export async function generateCharacterSet(
     model: getCharacterSetImageModel(),
   });
   onProgress?.({done: 0, total, label: 'the character'});
-  let base = await requestFrameWithRetry(basePromptText, baseRequest(seed));
+  const base = await requestFrameWithRetry(basePromptText, baseRequest(seed));
   await promptVerdict;
   const baseVerdict = judgeFrame(base);
   let baseKeyed = await keyFrame(base);
@@ -499,9 +497,10 @@ export async function generateCharacterSet(
       const againVerdict = judgeFrame(again);
       const againKeyed = await keyFrame(again);
       await againVerdict;
-      base = again;
-      baseURI = bytesToDataURI(base.uint8Array, base.mediaType);
-      single = await oneFigure(againKeyed);
+      const againSingle = await oneFigure(againKeyed);
+      // Taken up together, once every step of the second try has passed.
+      baseURI = bytesToDataURI(again.uint8Array, again.mediaType);
+      single = againSingle;
     } catch {
       // A failed or flagged second try: the first base, cut down, still
       // makes a set.

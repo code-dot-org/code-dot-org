@@ -8,6 +8,8 @@
 // is nearer to. Each overlay is tried as drawn and again with the base
 // moved onto the frame's drawn center, and the smaller distance counts.
 
+import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+
 // Alpha above this counts as drawn.
 const DRAWN_ALPHA = 64;
 
@@ -17,27 +19,19 @@ const MIRROR_MARGIN = 0.05;
 // Unit color distance: the RGB diagonal.
 const MAX_DISTANCE = Math.sqrt(3 * 255 * 255);
 
-// The center of the drawn pixels' bounds, or null when nothing is drawn.
-function drawnCenter(
+export interface Center {
+  x: number;
+  y: number;
+}
+
+/** The center of the drawn pixels' bounds, or null when nothing is drawn. */
+export function drawnCenter(
   data: Uint8ClampedArray,
   width: number,
   height: number
-): {x: number; y: number} | null {
-  let left = width;
-  let top = height;
-  let right = -1;
-  let bottom = -1;
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
-      if (data[(y * width + x) * 4 + 3] > DRAWN_ALPHA) {
-        left = Math.min(left, x);
-        top = Math.min(top, y);
-        right = Math.max(right, x);
-        bottom = Math.max(bottom, y);
-      }
-    }
-  }
-  return right < 0 ? null : {x: (left + right) / 2, y: (top + bottom) / 2};
+): Center | null {
+  const b = findOpaqueBounds(data, width, height, DRAWN_ALPHA);
+  return b && {x: (b.left + b.right) / 2, y: (b.top + b.bottom) / 2};
 }
 
 // The distance with the base shifted by (dx, dy) in the frame's
@@ -90,11 +84,14 @@ export function facingDistance(
   base: Uint8ClampedArray,
   width: number,
   height: number,
-  mirrored: boolean
+  mirrored: boolean,
+  centers?: {frame: Center | null; base: Center | null}
 ): number {
   const asDrawn = shiftedDistance(frame, base, width, height, mirrored, 0, 0);
-  const frameCenter = drawnCenter(frame, width, height);
-  const baseCenter = drawnCenter(base, width, height);
+  const frameCenter = centers
+    ? centers.frame
+    : drawnCenter(frame, width, height);
+  const baseCenter = centers ? centers.base : drawnCenter(base, width, height);
   if (!frameCenter || !baseCenter) {
     return asDrawn;
   }
@@ -117,7 +114,11 @@ export function isMirrored(
   width: number,
   height: number
 ): boolean {
-  const asDrawn = facingDistance(frame, base, width, height, false);
-  const mirrored = facingDistance(frame, base, width, height, true);
+  const centers = {
+    frame: drawnCenter(frame, width, height),
+    base: drawnCenter(base, width, height),
+  };
+  const asDrawn = facingDistance(frame, base, width, height, false, centers);
+  const mirrored = facingDistance(frame, base, width, height, true, centers);
   return asDrawn - mirrored > MIRROR_MARGIN;
 }

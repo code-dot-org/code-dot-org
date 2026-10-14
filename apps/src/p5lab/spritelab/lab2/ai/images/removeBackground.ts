@@ -53,11 +53,8 @@ function keySignature(
 const KEY_SIGNATURE = 150;
 const KEY_EDGE_SIGNATURE = 65;
 
-// A backdrop that came back duller than asked scores under KEY_SIGNATURE
-// everywhere; the border tells, since the prompt puts the backdrop on every
-// edge. When the border is one flat color scoring in the band, pixels near
-// that color are background outright and the edge ramp runs from just
-// under the border's median.
+// A dull key: the border, where the prompt puts the backdrop, is one flat
+// color scoring in the band. Pixels near that color are background.
 const DULL_KEY_FLOOR = 90;
 const DULL_KEY_MARGIN = 24;
 const DULL_KEY_SPREAD = 40;
@@ -83,11 +80,16 @@ interface BorderRead {
 
 function borderPixels(width: number, height: number): number[] {
   const border: number[] = [];
-  for (let p = 0; p < width * height; p++) {
-    const x = p % width;
-    const y = (p - x) / width;
-    if (x === 0 || y === 0 || x === width - 1 || y === height - 1) {
-      border.push(p);
+  for (let x = 0; x < width; x++) {
+    border.push(x);
+    if (height > 1) {
+      border.push((height - 1) * width + x);
+    }
+  }
+  for (let y = 1; y < height - 1; y++) {
+    border.push(y * width);
+    if (width > 1) {
+      border.push(y * width + width - 1);
     }
   }
   return border;
@@ -97,10 +99,8 @@ function borderPixels(width: number, height: number): number[] {
 function readBorder(
   data: Uint8ClampedArray,
   signature: Uint8ClampedArray,
-  width: number,
-  height: number
+  border: number[]
 ): BorderRead | null {
-  const border = borderPixels(width, height);
   const opaque = border.filter(p => data[p * 4 + 3] > 0);
   if (opaque.length < border.length / 2) {
     return null;
@@ -137,30 +137,35 @@ function chromaDistance(
   );
 }
 
+// Pixels already transparent are crossed, not changed, so backdrop beyond
+// a line the key pass cleared is still reached.
 function floodOffKey(
   data: Uint8ClampedArray,
   width: number,
   height: number,
   color: [number, number, number],
-  soft: boolean
+  soft: boolean,
+  border: number[]
 ): void {
   const high = soft ? OFF_KEY_HIGH_DISTANCE : OFF_KEY_LOW_DISTANCE;
   const visited = new Uint8Array(width * height);
-  const stack = borderPixels(width, height);
+  const stack = border.slice();
   stack.forEach(p => (visited[p] = 1));
   while (stack.length) {
     const p = stack.pop()!;
-    const dist = chromaDistance(data, p, color);
-    if (dist > high || data[p * 4 + 3] === 0) {
-      continue;
-    }
-    if (dist <= OFF_KEY_LOW_DISTANCE) {
-      data[p * 4 + 3] = 0;
-    } else {
-      const alpha = Math.round(
-        (255 * (dist - OFF_KEY_LOW_DISTANCE)) / (high - OFF_KEY_LOW_DISTANCE)
-      );
-      data[p * 4 + 3] = alpha < OFF_KEY_SOFT_ALPHA_FLOOR ? 0 : alpha;
+    if (data[p * 4 + 3] > 0) {
+      const dist = chromaDistance(data, p, color);
+      if (dist > high) {
+        continue;
+      }
+      if (dist <= OFF_KEY_LOW_DISTANCE) {
+        data[p * 4 + 3] = 0;
+      } else {
+        const alpha = Math.round(
+          (255 * (dist - OFF_KEY_LOW_DISTANCE)) / (high - OFF_KEY_LOW_DISTANCE)
+        );
+        data[p * 4 + 3] = alpha < OFF_KEY_SOFT_ALPHA_FLOOR ? 0 : alpha;
+      }
     }
     const x = p % width;
     const y = (p - x) / width;
@@ -201,7 +206,8 @@ export function keyOutColor(
   for (let p = 0; p < total; p++) {
     signature[p] = keySignature(data, p * 4, key);
   }
-  const border = readBorder(data, signature, width, height);
+  const ring = borderPixels(width, height);
+  const border = readBorder(data, signature, ring);
   const dull =
     border &&
     border.median >= DULL_KEY_FLOOR &&
@@ -287,7 +293,7 @@ export function keyOutColor(
     }
   }
   if (offKey) {
-    floodOffKey(data, width, height, offKey, !!options.soft);
+    floodOffKey(data, width, height, offKey, !!options.soft, ring);
   }
   // Specks: a lone pixel the background surrounds is background too.
   for (let p = 0; p < total; p++) {
@@ -314,12 +320,7 @@ export async function removeKeyColor(
   key: [number, number, number],
   options: MatteOptions = {}
 ): Promise<Blob> {
-  const img = await loadImageFromBlob(blob);
-  const canvas = document.createElement('canvas');
-  canvas.width = img.width;
-  canvas.height = img.height;
-  const ctx = canvas.getContext('2d')!;
-  ctx.drawImage(img, 0, 0);
+  const {canvas, ctx} = await canvasFromBlob(blob);
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   keyOutColor(imageData.data, imageData.width, imageData.height, key, options);
   ctx.putImageData(imageData, 0, 0);
@@ -348,12 +349,7 @@ export function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
  * the bounds, or a line at the edge would hold the crop open.
  */
 export async function cropToContent(blob: Blob): Promise<Blob> {
-  const img = await loadImageFromBlob(blob);
-  const canvas = document.createElement('canvas');
-  canvas.width = img.width;
-  canvas.height = img.height;
-  const ctx = canvas.getContext('2d')!;
-  ctx.drawImage(img, 0, 0);
+  const {canvas, ctx} = await canvasFromBlob(blob);
 
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const counted = imageData.data.slice();
@@ -395,13 +391,9 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
 }
 
 /**
- * Crop an image Blob to a square of its shorter side and return a new PNG
- * Blob; the input unchanged when it is square already. A ground block is
- * shown in a square cell, scaled to fit, so a block that came back a little
- * taller than wide would leave a gap above and below every copy. A wide
- * block loses equal margins at the sides; a tall one keeps its top edge,
- * the surface a character stands on, and loses the bottom. Cropping keeps
- * a pixel block's grid where a stretch would not.
+ * Crop a block to a square of its shorter side, so it fills its cell: a
+ * wide block loses equal side margins, a tall one keeps its top edge, the
+ * surface a character stands on.
  */
 export async function cropToSquare(blob: Blob): Promise<Blob> {
   const img = await loadImageFromBlob(blob);
@@ -419,7 +411,6 @@ export async function cropToSquare(blob: Blob): Promise<Blob> {
   return canvasToBlob(canvas);
 }
 
-/** Decode an image Blob into an element ready to draw. */
 /** A blob drawn onto a fresh canvas of its own size. */
 export async function canvasFromBlob(
   blob: Blob
@@ -433,6 +424,7 @@ export async function canvasFromBlob(
   return {canvas, ctx};
 }
 
+/** Decode an image Blob into an element ready to draw. */
 export function loadImageFromBlob(blob: Blob): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();

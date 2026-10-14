@@ -60,9 +60,10 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
   );
 }
 
-// The named key color the subject is keyed out against afterwards.
-function spritePromptClause(key: KeyColor): string {
-  return keyClause(key, 'subject');
+// The named key color the subject is keyed out against afterwards; a
+// character also hears which of its parts must not wear it.
+function spritePromptClause(key: KeyColor, character: boolean): string {
+  return keyClause(key, character ? 'character' : 'subject');
 }
 
 // A still character faces the way an animated one does (characterSet.ts),
@@ -290,7 +291,10 @@ export function fullPromptFor(
     if (options.subject === 'character') {
       fullPrompt = `${fullPrompt} ${CHARACTER_FACING_CLAUSE}`;
     }
-    fullPrompt = `${fullPrompt} ${spritePromptClause(key)}`;
+    fullPrompt = `${fullPrompt} ${spritePromptClause(
+      key,
+      options.subject === 'character'
+    )}`;
   } else if (imageType === 'block') {
     fullPrompt = `${fullPrompt} ${blockPromptClause(key)}`;
   } else if (imageType === 'background') {
@@ -376,8 +380,8 @@ export async function generateImage(
   }
 
   // Sprites and blocks get the named key color removed the same way;
-  // blocks are then cropped to content and squared so grid-placed copies
-  // tile seamlessly. Backgrounds are flattened opaque; pixel style gets
+  // blocks are cropped to content and squared so grid-placed copies tile
+  // seamlessly. Backgrounds are flattened opaque; pixel style gets
   // grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
@@ -390,9 +394,6 @@ export async function generateImage(
   if (imageType === 'block' || (imageType === 'sprite' && style !== 'pixel')) {
     blob = await cropToContent(blob);
     trimmed = true;
-  }
-  if (imageType === 'block') {
-    blob = await cropToSquare(blob);
   }
   if (imageType === 'background') {
     blob = await flattenOntoGround(blob);
@@ -407,6 +408,10 @@ export async function generateImage(
     if (maxPx) {
       blob = await downscaleToFit(blob, maxPx);
     }
+  }
+  // After the pixel pass, so the square is cut on the art's own grid.
+  if (imageType === 'block') {
+    blob = await cropToSquare(blob);
   }
   await imageVerdict;
   return {
