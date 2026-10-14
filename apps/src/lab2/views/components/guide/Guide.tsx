@@ -18,8 +18,6 @@ interface GuideProps {
       animates (the panel transitions its width). */
   width?: 'normal' | 'narrow' | 'very-narrow' | number;
   position?: 'normal' | 'bottom';
-  /** Which side of the container the guide hangs from; right by default. */
-  side?: 'left' | 'right';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
   /** Shrink-wrap whatever is left showing, e.g. a single button. */
@@ -36,7 +34,6 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   children,
   width,
   position,
-  side,
   modal,
   cornerIcon,
   collapsed,
@@ -70,7 +67,6 @@ const Guide: React.FunctionComponent<GuideProps> = ({
             ? styles.guideBottomPosition
             : styles.guideNormalPosition,
           modal === 'gap' && styles.guideGap,
-          side === 'left' && styles.guideLeft,
           collapsed && styles.guideCollapsed
         )}
       >

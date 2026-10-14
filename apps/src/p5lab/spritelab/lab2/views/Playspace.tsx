@@ -212,9 +212,6 @@ interface PlayspaceProps {
   // How much of the width the preview's column takes, so the code can keep
   // the rest.
   onPreviewWidth?: (width: number) => void;
-  // The floating guide's footprint, pinned to the overlay's bottom-right
-  // (playPlacement).
-  guideSize?: {width: number; height: number} | null;
 }
 
 /**
@@ -236,7 +233,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   below,
   side = 'right',
   onPreviewWidth,
-  guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -433,7 +429,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
   const inColumn = playPlacement(
     size,
-    below ? null : guideSize,
+    null,
     belowRoomFor(need),
     size.w - columnWidth
   );
@@ -529,7 +525,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
               : size.w - cardLeft - GUIDE_RIGHT_OFFSET_PX,
           height: size.h - cardTop - GUIDE_BOTTOM_OFFSET_PX,
         }
-      : guideSize;
+      : null;
 
   const placement: Placement =
     mode === 'play'
