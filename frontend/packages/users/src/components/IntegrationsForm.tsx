@@ -49,7 +49,6 @@ export default function IntegrationsForm({settings}: {settings: UserSettings}) {
     }
   };
 
-  // Not a <form>: each linked account row is its own native form.
   return (
     <Box>
       {integrations.canManageLinkedAccounts && (
