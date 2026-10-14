@@ -66,7 +66,11 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         zip: school&.zip || '',
         professional_role: afe_params['primaryProfessionalRole'] || '',
         grades_teaching: afe_params['gradesTeaching'] || '',
-        privacy_permission: to_bool(afe_params['consentCSTA'])
+        privacy_permission: to_bool(afe_params['consentCSTA']),
+        nces_id: afe_params['schoolId'] || '',
+        ethnicity_race: Array(afe_params['ethnicityRace']),
+        gender_identity: afe_params['genderIdentity'] || '',
+        primary_chapter: afe_params['primaryChapter'] || ''
       )
     end
   rescue Services::AFEEnrollment::Error, Services::CSTAEnrollment::Error => exception
@@ -91,9 +95,25 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     'consentCSTA'
   ]
 
+  # When the CSTA JotForm v2 flag is on, grade bands becomes a multi-select
+  # array and the form picks up three new questions (ethnicity/race, gender
+  # identity, primary chapter). The flag flips once the marketing-sites UI
+  # has been updated to send the new param shape.
+  PERMITTED_PARAMETERS_V2 = [
+    *REQUIRED_PARAMETERS,
+    'primaryProfessionalRole',
+    'consentCSTA',
+    'genderIdentity',
+    'primaryChapter',
+    {'gradesTeaching' => []},
+    {'ethnicityRace' => []},
+  ]
+
   private def submit_params
+    permitted = DCDO.get(Services::CSTAEnrollment::CSTA_JOTFORM_V2_DCDO_KEY, false) ?
+      PERMITTED_PARAMETERS_V2 : PERMITTED_PARAMETERS
     params.require(:amazon_future_engineer).
-      permit(*PERMITTED_PARAMETERS).
+      permit(*permitted).
       tap {|p| p.require(REQUIRED_PARAMETERS)}
   end
 
