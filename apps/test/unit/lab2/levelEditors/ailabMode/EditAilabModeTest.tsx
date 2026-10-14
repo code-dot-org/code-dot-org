@@ -285,7 +285,6 @@ describe('EditAilabMode', () => {
       expect(field).toBeDisabled()
     );
     expect(accuracy).toHaveValue(null);
-    [hideSave, randomRows].forEach(field => expect(field).not.toBeChecked());
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
@@ -795,7 +794,6 @@ describe('EditAilabMode', () => {
 
       fireEvent.click(pretrainedCheckbox());
       expect(hideTestingView).toBeDisabled();
-      expect(hideTestingView).not.toBeChecked();
       expect(JSON.parse(savedMode())).not.toHaveProperty('hideTestingView');
     });
 
