@@ -29,4 +29,10 @@ class FreeResponseQuestionTest < ActiveSupport::TestCase
   test "description must be a string" do
     refute build(:free_response_question, content: {question_title: 'Why?', description: ['x']}).valid?
   end
+
+  test "placeholder_content is valid" do
+    question = build(:free_response_question)
+    question.content = question.placeholder_content
+    assert question.valid?
+  end
 end

@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-13T17:19:42.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "uses_lab2": "true",
+    "hide_share_and_remix": "false",
+    "mode": "{\r\n  \"datasets\": [\r\n    \"exoplanets\"\r\n  ],\r\n  \"trainer\": \"decisionTree\",\r\n  \"requireAccuracy\": 75\r\n}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-13T17:19:42.174+00:00\",\"changed\":[\"cloned from \\\"Allthethings AI Lab Lab2 Decision Tree\\\"\"],\"cloned_from\":\"Allthethings AI Lab Lab2 Decision Tree\"},{\"changed_at\":\"2026-10-13 17:19:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-13 19:38:35 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

@@ -12,7 +12,12 @@ import {
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
 import {useProject} from './ProjectContext';
-import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import {
+  getHideDatasetView,
+  getPanelButtons,
+  saveModel,
+  setCurrentPanel,
+} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -31,6 +36,7 @@ import SelectDataset from './UIComponents/SelectDataset';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
+import {usePretrainOnLoad} from './usePretrainOnLoad';
 
 import styles from './app.module.scss';
 
@@ -244,7 +250,11 @@ const App = ({
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
   const {trainedModel} = useTrainingData();
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
+  const hideDatasetView = useAppSelector(getHideDatasetView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
+
+  usePretrainOnLoad();
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -266,7 +276,7 @@ const App = ({
 
   return (
     <div className={styles.app} style={colorVariables}>
-      <WorkspaceHeader onStartOver={onStartOver} />
+      <WorkspaceHeader onStartOver={pretrained ? undefined : onStartOver} />
 
       {currentPanel === 'selectDataset' && (
         <BodyContainer>
@@ -279,7 +289,7 @@ const App = ({
         </BodyContainer>
       )}
 
-      {currentPanel === 'datasetView' && (
+      {currentPanel === 'datasetView' && !hideDatasetView && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
             <ContainerLeft>
