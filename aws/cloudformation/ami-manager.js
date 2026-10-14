@@ -6,8 +6,20 @@
 // This module is automatically provided to ZipFile-based Lambda functions.
 // Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-cfnresponsemodule
 var response = require('cfn-response');
-var AWS = require('aws-sdk');
-var ec2 = new AWS.EC2();
+var {
+  CreateImageCommand,
+  CreateTagsCommand,
+  DeleteSnapshotCommand,
+  DeregisterImageCommand,
+  DescribeImagesCommand,
+  DescribeSnapshotsCommand,
+  EC2Client,
+  waitUntilImageAvailable,
+  waitUntilInstanceStopped
+} = require('@aws-sdk/client-ec2');
+var {InvokeCommand, LambdaClient} = require('@aws-sdk/client-lambda');
+var ec2 = new EC2Client({});
+var lambda = new LambdaClient({});
 
 /** Takes an AWS CloudFormation stack name and instance id and returns the newly-created AMI ID. **/
 exports.handler = function (event, context) {
@@ -40,30 +52,49 @@ exports.handler = function (event, context) {
       event.ResponseData = responseData;
       event.PhysicalResourceId = physicalId;
       var currentlyWaiting = true;
+      var waitFn;
       var timer;
-      ec2.waitFor(waiter.state, waiter.params, function (err, data) {
+      if (waiter.state === 'imageAvailable') {
+        waitFn = waitUntilImageAvailable;
+      } else if (waiter.state === 'instanceStopped') {
+        waitFn = waitUntilInstanceStopped;
+      } else {
+        error(null, 'unsupported waiter state: ' + waiter.state);
+        return;
+      }
+
+      waitFn({
+        client: ec2,
+        maxWaitTime: Math.max(1, Math.floor(
+          (context.getRemainingTimeInMillis() - 5000) / 1000
+        ))
+      }, waiter.params).then(function (data) {
         if (currentlyWaiting) {
           if (timer) clearTimeout(timer);
-          if (err) {error(err, 'error waiting for ' + waiter.state);}
-          else {
-            success();
-          }
+          success();
         } else {
-          console.log("No longer waiting:", err, data);
+          console.log("No longer waiting:", data);
+        }
+      }).catch(function (err) {
+        if (currentlyWaiting) {
+          if (timer) clearTimeout(timer);
+          error(err, 'error waiting for ' + waiter.state);
+        } else {
+          console.log("No longer waiting:", err);
         }
       });
 
       timer = setTimeout(function () {
         console.log("Timeout reached, re-executing function. Params:\n", JSON.stringify(event));
         currentlyWaiting = false;
-        var lambda = new AWS.Lambda();
-        lambda.invoke({
+        lambda.send(new InvokeCommand({
           FunctionName: context.invokedFunctionArn,
           InvocationType: 'Event',
           Payload: JSON.stringify(event)
-        }, function (err, data) {
+        })).then(function () {
+          context.done();
+        }).catch(function (err) {
           if (err) { error(err, 'error in lambda recurse'); }
-          else context.done();
         });
       }, context.getRemainingTimeInMillis() - 5000);
     } catch (e) {
@@ -75,14 +106,14 @@ exports.handler = function (event, context) {
   // Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/crpg-ref-requesttypes.html
   console.log("REQUEST TYPE:", event.RequestType);
   if (event.waiter) {
-    ec2.describeImages({ImageIds: [ physicalId ]}, function (err, data) {
-      if (err) {
-        error(err, "DescribeImages call failed");
-      } else if (data.Images.length === 0) {
+    ec2.send(new DescribeImagesCommand({ImageIds: [physicalId]})).then(function (data) {
+      if (data.Images.length === 0) {
         error(null, "Image not found");
       } else {
         wait(event.waiter);
       }
+    }).catch(function (err) {
+        error(err, "DescribeImages call failed");
     });
   } else if (event.RequestType == "Delete") {
     if (physicalId.indexOf('ami-') !== 0) {
@@ -93,112 +124,112 @@ exports.handler = function (event, context) {
     var params = {
       ImageIds: [ physicalId ]
     };
-    ec2.describeImages(params, function (err, data) {
-      if (err) {
-        error(err, "DescribeImages call failed");
-      } else if (data.Images.length === 0) {
+    ec2.send(new DescribeImagesCommand(params)).then(function (data) {
+      if (data.Images.length === 0) {
         responseData.Info = "No snapshot to delete";
         success();
       } else if (data.Images.length == 1) {
         var imageId = data.Images[0].ImageId;
         console.log("DELETING:", imageId);
-        ec2.deregisterImage({ImageId: imageId}, function (err, data) {
-          if (err) {
-            error(err, "DeregisterImage call failed");
+        ec2.send(new DeregisterImageCommand({ImageId: imageId})).catch(function (err) {
+          error(err, "DeregisterImage call failed");
+          return false;
+        }).then(function (deregistered) {
+          if (deregistered === false) {
+            return null;
+          }
+          responseData.ImageId = imageId;
+          return ec2.send(new DescribeSnapshotsCommand({Filters: [{
+            Name: 'description',
+            Values: ["*" + imageId + "*"]
+          }]})).catch(function (err) {
+            error(err, "DescribeSnapshots call failed");
+            return null;
+          });
+        }).then(function (data) {
+          if (!data) {
+            return;
+          }
+          if (data.Snapshots.length === 0) {
+            responseData.Info = "No snapshot to delete";
+            success();
           } else {
-            responseData.ImageId = imageId;
-            ec2.describeSnapshots({Filters: [{
-              Name: 'description',
-              Values: ["*" + imageId + "*"]
-            }]}, function (err, data) {
-              if (err) {
-                error(err, "DescribeSnapshots call failed");
-              } else if (data.Snapshots.length === 0) {
-                responseData.Info = "No snapshot to delete";
-                success();
-              } else {
-                var snapshotId = data.Snapshots[0].SnapshotId;
-                console.log("DELETING SNAPSHOT:", snapshotId);
-                ec2.deleteSnapshot({SnapshotId: snapshotId}, function (err, data) {
-                  if (err) {
-                    error(err, "DeleteSnapshot call failed");
-                  } else {
-                    success();
-                  }
-                });
-              }
+            var snapshotId = data.Snapshots[0].SnapshotId;
+            console.log("DELETING SNAPSHOT:", snapshotId);
+            ec2.send(new DeleteSnapshotCommand({SnapshotId: snapshotId})).then(function () {
+              success();
+            }).catch(function (err) {
+              error(err, "DeleteSnapshot call failed");
             });
           }
         });
       } else {
         error(null, "DescribeImages returned multiple Images, expected one");
       }
+    }).catch(function (err) {
+        error(err, "DescribeImages call failed");
     });
   } else if (event.RequestType == "Create") {
     if (instanceId) {
       // Wait for instance to reach the 'stopped' state before creating image.
-      ec2.waitFor('instanceStopped', {InstanceIds: [instanceId]}, function (err, data) {
-        if (err) {
-          error(err, "waitFor instanceStopped failed");
-          return;
-        }
-
+      waitUntilInstanceStopped({client: ec2}, {InstanceIds: [instanceId]}).then(function () {
         var imageParams = {
           InstanceId: instanceId,
           Name: stackName + '-' + instanceId + '-' + event.RequestId
         };
-        ec2.createImage(imageParams, function (err, data) {
-          if (err) {
-            // An error-retry call may happen during the wait operation,
-            // so just continue to wait for the AMI to be available.
-            if (waitImageAvailable && err.code == 'InvalidAMIName.Duplicate') {
-              physicalId = err.message.match('already in use by AMI (.*)')[1];
-              responseData.ImageId = physicalId;
-              wait({state: 'imageAvailable', params: { ImageIds: [ physicalId ]}});
-            } else {
-              error(err, "CreateImage call failed");
-            }
-          } else {
-            var imageId = data.ImageId;
-            physicalId = imageId;
-            console.log('SUCCESS: ', "ImageId - " + imageId);
+        ec2.send(new CreateImageCommand(imageParams)).then(function (data) {
+          var imageId = data.ImageId;
+          physicalId = imageId;
+          console.log('SUCCESS: ', "ImageId - " + imageId);
 
-            var params = {
-              Resources: [imageId],
-              Tags: [
-                {
-                  Key: 'cloudformation:amimanager:stack-name',
-                  Value: stackName
-                },
-                {
-                  Key: 'cloudformation:amimanager:stack-id',
-                  Value: event.StackId
-                },
-                {
-                  Key: 'cloudformation:amimanager:logical-id',
-                  Value: event.LogicalResourceId
-                }
-              ]
-            };
-            ec2.createTags(params, function (err, data) {
-              if (err) {
-                error(err, "Create tags call failed");
-              } else {
-                responseData.ImageId = imageId;
-                if (waitImageAvailable) {
-                  wait({
-                    state: 'imageAvailable',
-                    params: {
-                      ImageIds: [ physicalId ]
-                    }
-                  });
-                } else {
-                  success();
-                }
+          var params = {
+            Resources: [imageId],
+            Tags: [
+              {
+                Key: 'cloudformation:amimanager:stack-name',
+                Value: stackName
+              },
+              {
+                Key: 'cloudformation:amimanager:stack-id',
+                Value: event.StackId
+              },
+              {
+                Key: 'cloudformation:amimanager:logical-id',
+                Value: event.LogicalResourceId
               }
-            });
+            ]
+          };
+          ec2.send(new CreateTagsCommand(params)).then(function () {
+            responseData.ImageId = imageId;
+            if (waitImageAvailable) {
+              wait({
+                state: 'imageAvailable',
+                params: {
+                  ImageIds: [ physicalId ]
+                }
+              });
+            } else {
+              success();
+            }
+          }).catch(function (err) {
+            error(err, "Create tags call failed");
+          });
+        }).catch(function (err) {
+          // An error-retry call may happen during the wait operation,
+          // so just continue to wait for the AMI to be available.
+          if (
+            waitImageAvailable &&
+            (err.code || err.name) == 'InvalidAMIName.Duplicate'
+          ) {
+            physicalId = err.message.match('already in use by AMI (.*)')[1];
+            responseData.ImageId = physicalId;
+            wait({state: 'imageAvailable', params: { ImageIds: [ physicalId ]}});
+          } else {
+            error(err, "CreateImage call failed");
           }
         });
+      }).catch(function (err) {
+          error(err, "waitFor instanceStopped failed");
       });
     } else {
       error(null, "InstanceId not specified");
