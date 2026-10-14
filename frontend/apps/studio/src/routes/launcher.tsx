@@ -1,7 +1,13 @@
-import {useEffect, useState} from 'react';
+import {
+  createFileRoute,
+  notFound,
+  useLocation,
+  useRouter,
+} from '@tanstack/react-router';
 
-import Launcher from '@/components/launcher/Launcher';
 import Congratulations from '@/components/launcher/Congratulations';
+import Launcher from '@/components/launcher/Launcher';
+import {isNativeBuild} from '@/config/buildMode';
 import {
   CURRICULA,
   curriculumForCourse,
@@ -11,7 +17,7 @@ import {
 
 // MainActivity.kt opens #finished=<course> when a curriculum reaches its
 // certificate page; the course is empty when unknown.
-const FINISHED_FRAGMENT = '#finished=';
+const FINISHED_FRAGMENT = 'finished=';
 // MainActivity.kt handles this link and never loads it: it erases the
 // session's progress and projects, then opens ?next= above the landing page.
 const RESET_URL = 'https://studio.code.org/codeai-app/reset';
@@ -37,18 +43,9 @@ function finishedCourseIn(hash: string): string | null {
  * child back. Finishing a curriculum brings them back to its congratulations.
  */
 export default function App() {
-  const [finishedCourse, setFinishedCourse] = useState(() =>
-    finishedCourseIn(window.location.hash),
-  );
-
-  // Back from the congratulations returns to the curricula.
-  useEffect(() => {
-    function onHashChange() {
-      setFinishedCourse(finishedCourseIn(window.location.hash));
-    }
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
+  const hash = useLocation({select: location => location.hash});
+  const router = useRouter();
+  const finishedCourse = finishedCourseIn(hash);
 
   if (finishedCourse !== null) {
     return (
@@ -56,9 +53,20 @@ export default function App() {
         curriculum={curriculumForCourse(finishedCourse)}
         onTryAgain={tryAgain}
         // The landing page without #finished is the entry before this one.
-        onChooseAnother={() => window.history.back()}
+        onChooseAnother={() => router.history.back()}
       />
     );
   }
   return <Launcher curricula={CURRICULA} onOpen={openCurriculum} />;
 }
+
+export const Route = createFileRoute('/launcher')({
+  // Only the native build serves this page; the web shell answers not found.
+  // Thrown from loader: router 1.139 hangs on a notFound thrown in beforeLoad.
+  loader: () => {
+    if (!isNativeBuild()) {
+      throw notFound();
+    }
+  },
+  component: App,
+});

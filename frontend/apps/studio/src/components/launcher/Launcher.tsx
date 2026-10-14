@@ -67,7 +67,10 @@ function CurriculumCard({curriculum, onOpen}: CurriculumCardProps) {
         )}
       </div>
       <div className={styles.info}>
-        <Tags className={styles.tags} tagsList={tagsFor(topics, curriculum.id)} />
+        <Tags
+          className={styles.tags}
+          tagsList={tagsFor(topics, curriculum.id)}
+        />
         <Typography variant="h4" component="h2" className={styles.title}>
           {title}
         </Typography>
