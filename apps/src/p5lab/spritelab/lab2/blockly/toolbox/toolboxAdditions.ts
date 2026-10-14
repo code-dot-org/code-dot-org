@@ -116,39 +116,9 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   },
 ];
 
-// Predefined behaviors (runtime implementations in NativeSpriteLab or
-// blockDefinitions). Levels typically list only a subset; we surface all.
-const PREDEFINED_BEHAVIOR_BLOCKS = [
-  'gamelab_draggable',
-  'gamelab_avoidingTargets',
-  'gamelab_followingTargets',
-  'gamelab_tumbling',
-  'gamelab_patrollingUpDown',
-  // Lab-owned (see blockDefinitions).
-  'spritelab2_movingLeft',
-  'spritelab2_movingWithArrowKeys',
-  'spritelab2_patrollingLeftRight',
-];
-
 // Block types present in a category (labels, buttons, etc. don't count).
 function presentIn(category: StaticCategoryInfo): Set<string | undefined> {
   return new Set(category.contents.filter(isBlockInfo).map(b => b.type));
-}
-
-// Fill an EMPTY authored "Behaviors" category with the predefined behavior
-// blocks. A level that lists its own behaviors is used as written, the same
-// contract the injected categories follow — a level teaching one behavior
-// must not have the whole set appear beside it.
-function ensurePredefinedBehaviors(def: ToolboxInfo): void {
-  const behaviors = findCategory(def.contents, 'Behaviors');
-  if (!behaviors || presentIn(behaviors).size > 0) {
-    return;
-  }
-  PREDEFINED_BEHAVIOR_BLOCKS.forEach(type => {
-    if (Blockly.Blocks[type]) {
-      behaviors.contents.push({kind: 'block', type});
-    }
-  });
 }
 
 // Append the scene blocks to the "Game Design" category.
@@ -222,13 +192,11 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
 }
 
 /**
- * Layer the lab additions onto the authored toolbox: the predefined
- * behaviors, the scene blocks, and the injected categories. Pure. Call
- * after blocks are installed.
+ * Layer the lab additions onto the authored toolbox: the scene blocks and
+ * the injected categories. Pure. Call after blocks are installed.
  */
 export function applyToolboxAdditions(def: ToolboxInfo): ToolboxInfo {
   const out = cloneDeep(def);
-  ensurePredefinedBehaviors(out);
   ensureSceneBlocks(out);
   ensureInjectedCategories(out);
   return out;
