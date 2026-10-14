@@ -16,7 +16,7 @@ export interface Mode {
   pretrained?: boolean;
   // Opens on the results once pretrained, with no way back. Requires `pretrained`.
   hideDatasetView?: boolean;
-  // Hides training too, leaving only the dataset. Excludes `pretrained` and `requireAccuracy`.
+  // Hides training, leaving only the dataset. Excludes `pretrained` and `requireAccuracy`.
   hideTestingView?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
