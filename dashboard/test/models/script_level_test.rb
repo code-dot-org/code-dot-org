@@ -878,6 +878,20 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
+  # The experiment alone does not send a student without deep dive access to the tutor.
+  test 'next_level_or_redirect_path_for_user skips lesson tutor without lesson deep dive access' do
+    student = create(:student)
+    stub_lesson_tutor_experiment(student)
+    student.stubs(:can_use_lesson_deep_dive?).returns(false)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    refute_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
   # Tutor takes precedence over lesson extras for tutor-available lessons.
   test 'next_level_or_redirect_path_for_user prefers lesson tutor over lesson extras at end of lesson' do
     student = create(:student)
@@ -1432,12 +1446,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
   end
 
-  # Enables the 'lesson-tutor-redirect' experiment for the given user and
-  # disables it for every other invocation, so the end-of-lesson tutor branch
-  # is gated exactly as it is in production.
+  # Enables the 'lesson-tutor' experiment and lesson deep dive access for the
+  # given user and disables the experiment for every other invocation, so the
+  # end-of-lesson tutor branch is gated exactly as it is in production.
   private def stub_lesson_tutor_experiment(user)
     Experiment.stubs(:enabled?).returns(false)
     Experiment.stubs(:enabled?).
       with(user: user, experiment_name: 'lesson-tutor').returns(true)
+    user.stubs(:can_use_lesson_deep_dive?).returns(true)
   end
 end

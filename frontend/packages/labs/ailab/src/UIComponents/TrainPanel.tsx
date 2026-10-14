@@ -10,17 +10,10 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
-import {
-  addSelectedFeature,
-  readyToTrain,
-  removeSelectedFeature,
-  setLabelColumn,
-  setSelectedFeatures,
-  setTrainingModalStep,
-} from '../redux';
+import {useProject} from '../ProjectContext';
+import {readyToTrain, setTrainingModalStep} from '../redux';
 import {getSelectableColumns} from '../selectors';
-import {store} from '../store';
-import train from '../train';
+import {useTrainingRun} from '../useTrainingRun';
 
 import FieldLabel from './FieldLabel';
 import PredictionSentence from './PredictionSentence';
@@ -31,19 +24,30 @@ import styles from './trainPanel.module.scss';
 const TrainPanel = () => {
   const dispatch = useAppDispatch();
   const datasetId = useAppSelector(state => state.metadata?.name || '');
-  const labelColumn = useAppSelector(state => state.labelColumn);
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
+  const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
-  const canTrain = useAppSelector(readyToTrain);
-  const hasTrainingResult = useAppSelector(hasCurrentTrainingResult);
+  const {
+    project,
+    setLabelColumn,
+    addSelectedFeature,
+    removeSelectedFeature,
+    setSelectedFeatures,
+  } = useProject();
+  const {labelColumn, selectedFeatures} = project;
+  const canTrain = readyToTrain(project);
+  const hasTrainingResult = hasCurrentTrainingResult(project);
+  const {beginRun} = useTrainingRun();
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
 
+  const labelColumns = featuresLocked
+    ? selectableColumns.filter(column => !selectedFeatures.includes(column))
+    : selectableColumns;
   const labelItems = [
     {value: '', text: 'Choose one', disabled: true},
-    ...selectableColumns.map(column => ({
+    ...labelColumns.map(column => ({
       value: column,
       text: columnName(column),
     })),
@@ -54,27 +58,28 @@ const TrainPanel = () => {
     .map(column => ({value: column, label: columnName(column)}));
 
   const onLabelChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setLabelColumn(event.target.value));
+    setLabelColumn(event.target.value);
   };
 
   const onFeatureChange = (event: ChangeEvent<HTMLInputElement>) => {
     const {value, checked} = event.target;
-    dispatch(
-      checked ? addSelectedFeature(value) : removeSelectedFeature(value),
-    );
+    if (checked) {
+      addSelectedFeature(value);
+    } else {
+      removeSelectedFeature(value);
+    }
   };
 
   const onSelectAllFeatures = () => {
-    dispatch(setSelectedFeatures(featureOptions.map(option => option.value)));
+    setSelectedFeatures(featureOptions.map(option => option.value));
   };
 
   const onRemoveAllFeatures = () => {
-    dispatch(setSelectedFeatures([]));
+    setSelectedFeatures([]);
   };
 
   const onTrain = () => {
-    train.init(store);
-    train.onClickTrain();
+    beginRun();
     dispatch(setTrainingModalStep('training'));
   };
 
@@ -132,6 +137,7 @@ const TrainPanel = () => {
                   clearAllText="Clear"
                   onClearAll={onRemoveAllFeatures}
                   onSelectAll={onSelectAllFeatures}
+                  disabled={featuresLocked}
                 />
               </DropdownProviderWrapper>
             </div>

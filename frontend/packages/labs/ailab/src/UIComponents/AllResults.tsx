@@ -1,5 +1,5 @@
 import {formatAccuracy} from '../helpers/accuracy';
-import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import type {HistoricResult} from '../types';
 
 import PredictionSentence from './PredictionSentence';
@@ -40,7 +40,8 @@ const ModelTable = ({heading, results}: ModelTableProps) => (
 );
 
 const AllResults = () => {
-  const [current, ...previous] = useAppSelector(state => state.historicResults);
+  const {project} = useProject();
+  const [current, ...previous] = project.historicResults;
 
   return (
     <div className={styles.groups}>

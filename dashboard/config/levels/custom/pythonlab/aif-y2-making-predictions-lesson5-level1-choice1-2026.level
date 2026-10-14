@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-11T00:03:44.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice1-2026 + template",
+    "long_instructions": "A beach concession stand wants to predict how many people will come every day. If it’s a slow day, they could be overstocked. If it’s busy, they may run out of concessions.\r\n\r\n**☑️ Do This:**\r\n- Import the `train_test_split` function.\r\n- Split the data into training and test sets. 20% of the data should be in the test set.\r\n\r\nSave TODOs 3–5 for the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that to use the `train_test_split` function, you should import it with:\r\n\r\n```\r\nfrom sklearn.model_selection import train_test_split\r\n```\r\n\r\nThe `train_test_split` function takes `input` and `output` as its first two arguments. To put 20% of the data in a test set, set the `test_size` parameter to `0.2`.\r\n\r\nThe return value will be four separate lists, always in this order: `train_inputs`, `test_inputs`, `train_outputs`, `test_outputs`. Be sure to unpack all four when you call the function, or you'll get an error.\r\n\r\n```\r\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\r\n  inputs, outputs, test_size=0.2\r\n)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqtmfikQMj6mzOo\neTLOcVGS3thlm3h6FETVMnuetcKv4zFTO/LuTUZFHxAQajdzamf2k9I+KoLR\nyDPXKf4uOnMJ7UPSp9t9/ussCTkQDZ+KVh+p7jZFtlL5GQ2LZTvsuMMgkLuW\nQm4xNGnNhZ2D+hpnjWUnDwXAI05a06VrDpi0h83PfVijIGNiiZsawKfiAZvD\nMcDGfBMXE+CwQs/cJ+dmTthxDlgV2HiecepadREsVy1gBi/U9QEA0/4+1SDs\nXvOIZ14PWzwz258sqc3i1w2BwY4glrtyCAcSJUpvt4v/BGEJQYaahRb7Zky8\nFQH+9xzjGOqKcKVhVu3tfaCzZ8HDxOox5u4Ho2Sv5uhdQHM38YQ0D7oh/BYf\nSy9H0ahWKjMTtNrPurlnteMf3QMSjglJKqjwJjxwNx2Z5TZ6lVeYolRNtRNR\nIf4cf4/+RQh/8uJphYJrye2LWlVsh+xVyWxfKPApSQp1aUyUjC/dsaOAUi71\nxgsQj99v1yvb3Nsl9VGqZfj+Te0mBaCm0KTZXY4KqI9GiSQ+TCjEdWEm7c1j\nYe3u9l/qVc+pVAZoooAUolL95WORwXgmzd1KAQaXk8PB7WaLpIZRPTK9rpMw\n34Q38IjUor/Z4luznaftS0OLFjNMhYm68H7aJj8mgKe1BZGjXveZ9UPJXKOa\nXYCpiUcHb30EbfMMVnqA3h9NSRCof+X1eiI0aJN7Jxm8lJrT7gFRKNv2ykws\n0ofkBX9dohkvpKO5dmVL5/uaSIqoDilMHjCHOfMG08k/cINmVZnigPw3Xxbu\nDciVbKgogpDPhcUtAxlGUYJfg8We7Y6p90S7nVGwOJLhz7RSfYJm5Kwm502r\no5Pz4O41JPw4OBRiyjvr/QKjPzDSgSBihV+I01Svi9iHBZstVOQZke/AHh+Q\nz9THBgZxPJ7CEzoO8lW8nMjyPYkelmfXKtIvooBk5vQpMHuLpAlRz1IljYEd\n1/184rPIxRwKFUVc+v08OLWuhmwM1YK6kSt3ojLPd5MjwMMs3qgiXj/OzfUR\nL48VrAarUoIgcJ1h7oXgFD5X3/R+nk6wraeOrGt55jdAcoqnkjUvqZY43TI2\ntzuFLLfYbFc8V8icxS/HLITIQ4Qh+giqKz1bVMHNj4+JZlFTaaBjSvOfvqk=\n",
+    "display_name": "Beach Days",
+    "bubble_choice_description": "Help a beach concession stand predict how many people will come every day.",
+    "thumbnail_url": "https://images.code.org/0f63c1903a0ac027ac8222e1433bb56f-concession.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:05:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:05:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:13:41 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:14:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:16:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:22:46 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
