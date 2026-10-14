@@ -1,3 +1,13 @@
-// Re-export the shared React + jsdom base. Swap to `mergeConfig(base, {...})`
-// when this package needs `setupFiles`, `resolve.alias`, or CSS-module options.
-export {default} from '@code-dot-org/lint-config/vitest/react.mjs';
+import {defineConfig, mergeConfig} from 'vitest/config';
+
+import base from '@code-dot-org/lint-config/vitest/react.mjs';
+
+export default mergeConfig(
+  base,
+  defineConfig({
+    test: {
+      // Playwright e2e specs (e2e/*.spec.ts) run under `test:ui`, not Vitest.
+      exclude: ['e2e/**', 'node_modules/**', 'dist/**'],
+    },
+  }),
+);
