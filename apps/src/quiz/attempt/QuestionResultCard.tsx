@@ -28,11 +28,17 @@ function selectedAnswerLabel(isViewingStudent?: boolean): string {
 
 type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
 
+function selectedChoiceIdOf(result: QuizQuestionResult): string | null {
+  return result.questionType === 'MultipleChoiceQuestion'
+    ? result.responseData.selectedChoiceId ?? null
+    : null;
+}
+
 function getChoiceStatus(
   choiceId: string,
   result: QuizQuestionResult
 ): ChoiceStatus {
-  const isSelected = choiceId === result.selectedChoiceId;
+  const isSelected = choiceId === selectedChoiceIdOf(result);
   const isCorrectAnswer = choiceId === result.correctChoiceId;
 
   // showCorrectness off - still show what was picked, ungraded.
@@ -64,7 +70,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
     <ul className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
         const status = getChoiceStatus(choice.id, result);
-        const isSelectedChoice = choice.id === result.selectedChoiceId;
+        const isSelectedChoice = choice.id === selectedChoiceIdOf(result);
 
         return (
           <li

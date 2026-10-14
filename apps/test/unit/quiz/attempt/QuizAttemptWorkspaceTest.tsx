@@ -361,14 +361,16 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -617,14 +619,16 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -742,7 +746,11 @@ describe('QuizAttemptWorkspace', () => {
         attempt: {
           ...ATTEMPT,
           questionResultsInProgress: [
-            {quizQuestionId: 1, selectedChoiceId: 'b'},
+            {
+              quizQuestionId: 1,
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
+            },
           ],
         },
       },
@@ -1014,7 +1022,7 @@ describe('QuizAttemptWorkspace', () => {
   });
 
   describe('when a teacher is viewing a student', () => {
-    const SUBMITTED = {
+    const SUBMITTED: QuizAttemptData = {
       ...ATTEMPT,
       submittedAt: '2026-01-01T00:00:00Z',
       score: 1,
@@ -1023,7 +1031,8 @@ describe('QuizAttemptWorkspace', () => {
       questionResults: [
         {
           quizQuestionId: 1,
-          selectedChoiceId: 'b',
+          questionType: 'MultipleChoiceQuestion',
+          responseData: {selectedChoiceId: 'b'},
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -1098,7 +1107,11 @@ describe('QuizAttemptWorkspace', () => {
           attempt: {
             ...ATTEMPT,
             questionResultsInProgress: [
-              {quizQuestionId: 1, selectedChoiceId: 'b'},
+              {
+                quizQuestionId: 1,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'b'},
+              },
             ],
           },
         },
