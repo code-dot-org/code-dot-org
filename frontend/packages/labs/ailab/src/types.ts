@@ -170,6 +170,7 @@ export interface AilabProject {
   labelColumn?: string;
   selectedFeatures: string[];
   hyperparameters?: Hyperparameters;
+  accuracyCheckRowIndices?: number[];
   historicResults: HistoricResult[];
 }
 
@@ -177,6 +178,7 @@ export const initialProject: AilabProject = {
   labelColumn: undefined,
   selectedFeatures: [],
   hyperparameters: undefined,
+  accuracyCheckRowIndices: undefined,
   historicResults: [],
 };
 
