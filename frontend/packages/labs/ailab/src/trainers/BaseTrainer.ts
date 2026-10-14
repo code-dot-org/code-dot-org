@@ -62,8 +62,15 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     }
 
     const run = this.recordModel(optimalModel);
+    const trainedState = this.store.getState();
 
-    logMetric('train-model', this.store.getState(), this.project);
+    /*
+      Only a run the student asked for is worth a metric. A pretrained level
+      trains on load, and rebuild() refits a saved one, so neither reports.
+    */
+    if (!trainedState.mode?.pretrained) {
+      logMetric('train-model', trainedState, this.project);
+    }
 
     return run;
   }

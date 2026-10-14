@@ -7,6 +7,7 @@ import {ProjectProvider, useProject} from '../../src/ProjectContext';
 import rootReducer, {
   resetState,
   setImportedData,
+  setMode,
   setPresetColumns,
 } from '../../src/redux';
 import {initialProject} from '../../src/types';
@@ -205,7 +206,7 @@ describe('ProjectContext column choices', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('a column cannot be both the label and a feature', () => {
+  test('choosing a label drops it from the features', () => {
     const {project, context} = renderContext(undefined, imported());
     act(() => context().setSelectedFeatures(['a', 'b']));
 
@@ -213,6 +214,25 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBe('a');
     expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('the label cannot be added as a feature', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('a'));
+
+    act(() => context().addSelectedFeature('a'));
+    act(() => context().addSelectedFeature('b'));
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('setting the features drops the label from them', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('b'));
+
+    act(() => context().setSelectedFeatures(['a', 'b', 'c']));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
   });
 
   /*
@@ -245,5 +265,69 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBeUndefined();
     expect(project().selectedFeatures).toEqual(['a']);
+  });
+
+  /*
+    A locked column is one the student has no way to change, so the level's
+    choice has to win. An unlocked one is only a starting point.
+  */
+  const chosen = store => {
+    const rendered = renderContext(undefined, store);
+    act(() => rendered.context().setLabelColumn('a'));
+    act(() => rendered.context().setSelectedFeatures(['b']));
+    return rendered;
+  };
+
+  const preset = (store, columns) =>
+    act(() => {
+      store.dispatch(setPresetColumns(columns));
+    });
+
+  test('a locked label replaces one the project already had', () => {
+    const store = imported();
+    store.dispatch(setMode({hideSelectLabel: true}));
+    const {project} = chosen(store);
+
+    preset(store, {labelColumn: 'c'});
+
+    expect(project().labelColumn).toBe('c');
+  });
+
+  test('an unlocked label leaves one the project already had', () => {
+    const store = imported();
+    const {project} = chosen(store);
+
+    preset(store, {labelColumn: 'c'});
+
+    expect(project().labelColumn).toBe('a');
+  });
+
+  test('locked features replace ones the project already had', () => {
+    const store = imported();
+    store.dispatch(setMode({lockFeatures: true}));
+    const {project} = chosen(store);
+
+    preset(store, {selectedFeatures: ['c']});
+
+    expect(project().selectedFeatures).toEqual(['c']);
+  });
+
+  test('unlocked features leave ones the project already had', () => {
+    const store = imported();
+    const {project} = chosen(store);
+
+    preset(store, {selectedFeatures: ['c']});
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('an unlocked column still fills a gap the project left', () => {
+    const store = imported();
+    const {project} = renderContext(undefined, store);
+
+    preset(store, {labelColumn: 'c', selectedFeatures: ['a', 'b']});
+
+    expect(project().labelColumn).toBe('c');
+    expect(project().selectedFeatures).toEqual(['a', 'b']);
   });
 });
