@@ -227,7 +227,7 @@ interface ScenesGalleryProps {
   onDeleteScene: (sceneId: string) => void;
   onMakeStartScene: (sceneId: string) => void;
   /** Plays the game from its start scene. */
-  onPlayGame?: () => void;
+  onPlayGame?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 interface Rect {

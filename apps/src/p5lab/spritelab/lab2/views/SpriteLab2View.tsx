@@ -1739,9 +1739,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
   });
 
-  // Entering Play by keyboard leaves focus on the button, where
-  // swallowOnControls eats every game key and the game can't be played.
-  const focusPlayspaceRef = useRef(false);
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
   const handleEditorChange = useCallback(
@@ -1798,38 +1795,50 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [handOffControlFocus]
   );
 
-  // Play game, from the map: from the start scene.
-  const handlePlayGame = useCallback(() => {
-    setPlayStartSceneId(null);
-    unlockGameAudioRef.current();
-    dispatch(setActiveTab('Play'));
-  }, [dispatch]);
   const links = useMemo(() => sceneLinks(scenes), [scenes]);
 
-  // Clicking the live preview opens Play on the scene being previewed.
-  // Previewing the first scene IS the beginning; keep the quiet default state.
-  const handlePreviewClick = useCallback(() => {
-    setPlayStartSceneId(
-      activeSceneId === defaultPlaySceneId ? null : activeSceneId
-    );
-    unlockGameAudioRef.current();
-    dispatch(setActiveTab('Play'));
-  }, [dispatch, activeSceneId, defaultPlaySceneId]);
-
-  // The Play button plays the previewed scene too. A keyboard activation
-  // wants focus on the playspace, which is only focusable once Play has
-  // rendered, so the hand-off waits for the tab (below).
+  // Entering Play: from the start scene (Play game), or from the previewed
+  // scene. Previewing the first scene IS the beginning; keep the quiet
+  // default state.
+  const playFrom = useCallback(
+    (startSceneId: string | null) => {
+      setPlayStartSceneId(startSceneId);
+      unlockGameAudioRef.current();
+      dispatch(setActiveTab('Play'));
+    },
+    [dispatch]
+  );
+  const handlePreviewClick = useCallback(
+    () => playFrom(activeSceneId === defaultPlaySceneId ? null : activeSceneId),
+    [playFrom, activeSceneId, defaultPlaySceneId]
+  );
+  // Focus must not stay on a play button (see handOffControlFocus), and
+  // the playspace is only focusable once Play has rendered, so a keyboard
+  // activation's hand-off waits for the tab (below).
   const focusPlayspaceOnPlayRef = useRef(false);
-  const handlePlayClick = useCallback(
+  const handOffPlayFocus = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
       if (isPointerClick(event)) {
         event.currentTarget.blur();
       } else {
         focusPlayspaceOnPlayRef.current = true;
       }
+    },
+    []
+  );
+  const handlePlayClick = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      handOffPlayFocus(event);
       handlePreviewClick();
     },
-    [handlePreviewClick]
+    [handOffPlayFocus, handlePreviewClick]
+  );
+  const handlePlayGame = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      handOffPlayFocus(event);
+      playFrom(null);
+    },
+    [handOffPlayFocus, playFrom]
   );
   useEffect(() => {
     if (activeTab === 'Play' && focusPlayspaceOnPlayRef.current) {
@@ -1895,14 +1904,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // engineReady: a level that STARTS with the stage hidden (an images-only
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, stageCovered, documentHidden, engineReady]);
-
-  // Once the playspace is focusable, which is the render after this one.
-  useEffect(() => {
-    if (playspaceMode === 'play' && focusPlayspaceRef.current) {
-      focusPlayspaceRef.current = false;
-      playspaceRef.current?.focus({preventScroll: true});
-    }
-  }, [playspaceMode]);
 
   // A typed scene says so up front; a scene made before scene types counts
   // once the engine runs it as a platformer.
