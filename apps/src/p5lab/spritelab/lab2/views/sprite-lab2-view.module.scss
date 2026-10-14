@@ -192,8 +192,8 @@ $scene-tab-fade-ms: 260ms;
   }
 }
 
-// Back up to the map, at the row's trailing end beside Pictures: a plain
-// button, never shrinking under the overflow.
+// Back up to the map, at the row's head: a plain button, never shrinking
+// under the overflow.
 .sceneTabBack {
   display: flex;
   align-items: center;

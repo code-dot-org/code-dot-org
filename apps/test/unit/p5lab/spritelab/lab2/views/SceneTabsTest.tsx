@@ -10,6 +10,7 @@ const SCENES = [
 
 function renderTabs(props = {}) {
   const onSelectScene = jest.fn();
+  const onManageScenes = jest.fn();
   render(
     <SceneTabs
       scenes={SCENES}
@@ -17,10 +18,11 @@ function renderTabs(props = {}) {
       galleryOpen={false}
       onSelectScene={onSelectScene}
       onCreateScene={jest.fn()}
+      onManageScenes={onManageScenes}
       {...props}
     />
   );
-  return {onSelectScene};
+  return {onSelectScene, onManageScenes};
 }
 
 const tabNames = () =>
@@ -31,22 +33,26 @@ const selectedNames = () =>
     .map(tab => tab.textContent?.trim());
 
 describe('SceneTabs', () => {
-  it('offers every scene as a tab, the current one selected', () => {
+  it('offers a way back to the map, then every scene as a tab, the current one selected', () => {
     renderTabs();
     expect(tabNames()).toEqual(['Forest', 'Cave']);
+    expect(screen.getByRole('button', {name: 'All scenes'})).toBeTruthy();
     expect(selectedNames()).toEqual(['Cave']);
     expect(screen.getByRole('button', {name: 'New scene'})).toBeTruthy();
   });
 
-  it('selects a scene', () => {
-    const {onSelectScene} = renderTabs();
+  it('selects a scene and opens the gallery', () => {
+    const {onSelectScene, onManageScenes} = renderTabs();
     fireEvent.click(screen.getByRole('tab', {name: 'Forest'}));
     expect(onSelectScene).toHaveBeenCalledWith('a');
+    fireEvent.click(screen.getByRole('button', {name: 'All scenes'}));
+    expect(onManageScenes).toHaveBeenCalled();
   });
 
-  it('selects no scene while the map is open', () => {
+  it('selects no scene while the map is open, and offers no way back', () => {
     renderTabs({galleryOpen: true});
     expect(selectedNames()).toEqual([]);
+    expect(screen.queryByRole('button', {name: 'All scenes'})).toBeNull();
   });
 
   it('withholds New scene when scenes cannot be made, and disables all while playing', () => {
