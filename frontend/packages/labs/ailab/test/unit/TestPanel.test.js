@@ -201,7 +201,8 @@ describe('TestPanel', () => {
     });
     afterEach(() => {
       vi.useRealTimers();
-      vi.unstubAllGlobals();
+      // jsdom has no matchMedia, so the reduced-motion case adds one.
+      delete window.matchMedia;
     });
 
     test('says nothing more while it plays or skips', () => {
@@ -234,9 +235,7 @@ describe('TestPanel', () => {
     });
 
     test('reads the first step on each Replay under reduced motion', () => {
-      vi.stubGlobal('matchMedia', query => ({
-        matches: query.includes('reduce'),
-      }));
+      window.matchMedia = query => ({matches: query.includes('reduce')});
       predictBird();
       const changes = watchStatus();
 

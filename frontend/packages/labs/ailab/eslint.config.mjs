@@ -93,7 +93,7 @@ export default [
     languageOptions: {globals: vitest.configs.env.languageOptions.globals},
   },
   {
-    files: ['src/**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}', 'test/**/*.{js,ts,tsx}'],
     rules: {
       // False positives: these AST-based rules can't model the `export =`
       // synthetic default that TypeScript accepts for CJS deps (react,
