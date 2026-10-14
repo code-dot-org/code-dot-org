@@ -1793,7 +1793,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
     onRenameImage: handleRenameImage,

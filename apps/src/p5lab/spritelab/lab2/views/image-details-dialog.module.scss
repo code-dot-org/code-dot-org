@@ -19,8 +19,8 @@
 .dialogHost .dialog {
   @include chrome.panel;
 
-  // One width for both views; the panel's max-width still shrinks it on
-  // narrow browsers.
+  // The details view's width (.dialogWide is the sentence view's); the
+  // panel's max-width still shrinks it on narrow browsers.
   width: 850px;
 }
 

@@ -486,25 +486,23 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             />
           </fieldset>
           <div className={moduleStyles.formRow}>
-            {
-              <label
-                className={classNames(
-                  moduleStyles.promptLabel,
-                  moduleStyles.wide
-                )}
-              >
-                <span>Or prompt</span>
-                <textarea
-                  className={moduleStyles.promptInput}
-                  value={prompt}
-                  rows={5}
-                  maxLength={MAX_PROMPT_LENGTH}
-                  placeholder={PROMPT_PLACEHOLDERS[imageType]}
-                  disabled={generating}
-                  onChange={e => setPrompt(e.target.value)}
-                />
-              </label>
-            }
+            <label
+              className={classNames(
+                moduleStyles.promptLabel,
+                moduleStyles.wide
+              )}
+            >
+              <span>Or prompt</span>
+              <textarea
+                className={moduleStyles.promptInput}
+                value={prompt}
+                rows={5}
+                maxLength={MAX_PROMPT_LENGTH}
+                placeholder={PROMPT_PLACEHOLDERS[imageType]}
+                disabled={generating}
+                onChange={e => setPrompt(e.target.value)}
+              />
+            </label>
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
                   level can lock the choice for new images too. */}

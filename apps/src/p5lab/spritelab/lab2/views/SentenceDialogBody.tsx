@@ -98,7 +98,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
           <button
             type="button"
             className={moduleStyles.button}
-            disabled={generating}
+            disabled={parts.busy}
             onClick={onCancel}
           >
             Cancel

@@ -155,6 +155,24 @@ describe('SentenceDialogBody', () => {
     expect(onKeep).toHaveBeenCalledWith(RESULT);
   });
 
+  it('holds Cancel while Keep is saving, so the picture cannot be discarded mid-save', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    let finishSave = () => {};
+    const {onKeep} = renderBody({
+      onKeep: () => new Promise<void>(resolve => (finishSave = resolve)),
+    });
+    void onKeep;
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Keep'}));
+    });
+    expect(screen.getByRole('button', {name: 'Cancel'})).toBeDisabled();
+    await act(async () => finishSave());
+  });
+
   it('hides the Type and Style choices while there is a picture, and shows them again for new words', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderBody();
