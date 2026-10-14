@@ -136,6 +136,11 @@ class QuizQuestion < ApplicationRecord
     false
   end
 
+  # Whether response_data holds an answer, as opposed to a skip.
+  def answered?(response_data)
+    raise NotImplementedError, "#{self.class.name} must implement answered?"
+  end
+
   # Builds `content` from question builder request params.
   def self.content_from_builder_params(builder_params)
     raise ArgumentError, "#{name} does not accept editor params"

@@ -63,9 +63,7 @@ const sampleModes: Record<string, Mode> = {
     trainer: 'decisionTree',
   },
 
-  'final-project': {
-    randomizeTestData: true,
-  },
+  'final-project': {},
 
   'club-test': {
     datasets: [
