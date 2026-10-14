@@ -7,6 +7,7 @@
 # 3. **@code-dot-org/core**: Core utilities and components
 # 4. **@code-dot-org/ailab**: AI Lab (Engine)
 # 5. **@code-dot-org/lesson-deep-dive**: AI Tutor+ post-lesson review views
+# 6. **@code-dot-org/json-video**: <json-video>, the AI Tutor video player
 
 set -x
 
@@ -17,6 +18,7 @@ APPS_DEPENDENCIES=(
   --filter @code-dot-org/ailab
   --filter @code-dot-org/lesson-deep-dive
   --filter @code-dot-org/markdown
+  --filter @code-dot-org/json-video
 )
 
 cd ../frontend || exit 1
