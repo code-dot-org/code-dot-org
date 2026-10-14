@@ -312,19 +312,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setImagesMounted(true);
     }
   }, [picturesOpen]);
-  // A block or the world palette asked for a picture: the new-image dialog
-  // opens on one of that kind, with the drawer staying as it was, and the
-  // finished picture goes back to the asker. The dialog renders in a
-  // portal, so the closed drawer's pane can host it.
+  // A block or the world palette asks for a picture: the new-image dialog
+  // opens on that kind, and the finished picture goes back to the asker.
+  // A level that withholds Pictures answers no request.
   const [pickRequest, setPickRequest] = useState<PictureRequest | null>(null);
-  useEffect(
-    () =>
-      setPictureRequestHandler(request => {
-        setPickRequest({...request});
-        setImagesMounted(true);
-      }),
-    []
-  );
+  useEffect(() => {
+    if (!picturesOffered) {
+      return;
+    }
+    return setPictureRequestHandler(request => {
+      setPickRequest({...request});
+      setImagesMounted(true);
+    });
+  }, [picturesOffered]);
   const handleImageCreated = useCallback(
     (name: string, imageType: ImageType) => {
       if (pickRequest) {
