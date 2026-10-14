@@ -46,9 +46,11 @@ class FollowersController < ApplicationController
 
     if current_user&.display_join_section_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
-      # Concatenate section code so user does not have to type section code again
-      # Note that @section will always be defined due to validations in load_section
-      redirection = request.path + '/' + @section.code
+      # Concatenate section code so user does not have to type section code again.
+      # @section may be nil when the request is POST /join without a section_code
+      # in the URL (load_section short-circuits in that case), so guard the append.
+      redirection = request.path
+      redirection += "/#{@section.code}" if @section&.code.present?
       redirect_to redirection
       return
     else
