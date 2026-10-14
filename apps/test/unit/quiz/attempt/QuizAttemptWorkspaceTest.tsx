@@ -361,14 +361,14 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -617,14 +617,14 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -742,7 +742,7 @@ describe('QuizAttemptWorkspace', () => {
         attempt: {
           ...ATTEMPT,
           questionResultsInProgress: [
-            {quizQuestionId: 1, selectedChoiceId: 'b'},
+            {quizQuestionId: 1, responseData: {selectedChoiceId: 'b'}},
           ],
         },
       },
@@ -1023,7 +1023,7 @@ describe('QuizAttemptWorkspace', () => {
       questionResults: [
         {
           quizQuestionId: 1,
-          selectedChoiceId: 'b',
+          responseData: {selectedChoiceId: 'b'},
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -1098,7 +1098,7 @@ describe('QuizAttemptWorkspace', () => {
           attempt: {
             ...ATTEMPT,
             questionResultsInProgress: [
-              {quizQuestionId: 1, selectedChoiceId: 'b'},
+              {quizQuestionId: 1, responseData: {selectedChoiceId: 'b'}},
             ],
           },
         },

@@ -1,6 +1,12 @@
+// As posted for the question; which field is set depends on its type.
+export interface QuizResponseData {
+  selectedChoiceId?: string;
+  answerText?: string;
+}
+
 export interface QuizQuestionResult {
   quizQuestionId: number;
-  selectedChoiceId: string | null;
+  responseData: QuizResponseData;
   correct: boolean | null;
   explanation: string | null;
   correctChoiceId: string | null;
@@ -8,8 +14,8 @@ export interface QuizQuestionResult {
 
 export interface QuizQuestionInProgressResult {
   quizQuestionId: number;
-  // Unanswered questions are omitted from the map, so this is always set.
-  selectedChoiceId: string;
+  // Unanswered questions are omitted.
+  responseData: QuizResponseData;
 }
 
 export interface QuizAttemptData {

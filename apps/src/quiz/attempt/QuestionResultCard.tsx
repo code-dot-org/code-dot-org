@@ -32,7 +32,7 @@ function getChoiceStatus(
   choiceId: string,
   result: QuizQuestionResult
 ): ChoiceStatus {
-  const isSelected = choiceId === result.selectedChoiceId;
+  const isSelected = choiceId === result.responseData.selectedChoiceId;
   const isCorrectAnswer = choiceId === result.correctChoiceId;
 
   // showCorrectness off - still show what was picked, ungraded.
@@ -64,7 +64,8 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
     <ul className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
         const status = getChoiceStatus(choice.id, result);
-        const isSelectedChoice = choice.id === result.selectedChoiceId;
+        const isSelectedChoice =
+          choice.id === result.responseData.selectedChoiceId;
 
         return (
           <li
