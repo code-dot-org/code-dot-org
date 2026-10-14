@@ -205,6 +205,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
       {/* A disabled button fires no events, so the tooltip listens here. */}
       <span>
         <Button
+          id="instructions-continue-button"
           variant="contained"
           color="secondary"
           size="extraSmall"
