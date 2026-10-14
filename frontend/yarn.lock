@@ -2246,9 +2246,8 @@ __metadata:
     "@capacitor/cli": "npm:^7.6.9"
     "@capacitor/core": "npm:^7.6.9"
     "@code-dot-org/component-library": "workspace:*"
-    "@code-dot-org/component-library-styles": "workspace:*"
-    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/studio": "workspace:*"
     "@emotion/cache": "npm:^11.14.0"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
@@ -2415,7 +2414,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/studio@workspace:apps/studio":
+"@code-dot-org/studio@workspace:*, @code-dot-org/studio@workspace:apps/studio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:

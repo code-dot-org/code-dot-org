@@ -8,7 +8,6 @@ export default [
     'android',
     'capacitor.config.ts',
     'dist',
-    'vite.config.ts',
     'vite.siteControls.config.ts',
   ]),
   ...cdoReactConfig,

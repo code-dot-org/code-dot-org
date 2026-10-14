@@ -6,8 +6,8 @@
   "scripts": {
     "android:open": "cap open android",
     "android:sync": "yarn build && cap sync android",
-    "build": "tsc -b && vite build && vite build --config vite.siteControls.config.ts",
-    "dev": "vite dev",
+    "build": "rm -rf dist && cp -r ../studio/dist-mobile dist && vite build --config vite.siteControls.config.ts",
+    "dev": "yarn workspace @code-dot-org/studio dev:mobile",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
@@ -23,8 +23,6 @@
     "@capacitor/android": "^7.6.9",
     "@capacitor/core": "^7.6.9",
     "@code-dot-org/component-library": "workspace:*",
-    "@code-dot-org/component-library-styles": "workspace:*",
-    "@code-dot-org/fonts": "workspace:*",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
@@ -35,6 +33,7 @@
   "devDependencies": {
     "@capacitor/cli": "^7.6.9",
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/studio": "workspace:*",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",

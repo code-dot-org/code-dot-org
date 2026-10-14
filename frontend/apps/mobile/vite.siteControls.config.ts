@@ -5,7 +5,7 @@ import path from 'node:path';
 // Builds the header controls the Android app puts in studio.code.org pages
 // (entrypoints/siteControls.tsx) as one script and one stylesheet, at fixed
 // names the app's page script loads: dist/site-controls.js and .css. Run
-// after vite.config.ts, which empties dist.
+// after `yarn build` copies studio's mobile output into dist; this adds to it.
 export default defineConfig({
   publicDir: false,
   // Library builds leave process.env alone; React and MUI read NODE_ENV.
