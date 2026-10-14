@@ -80,6 +80,39 @@ class AdaptiveTest < ActiveSupport::TestCase
     refute cached['checkpoints'][0]['steps'][0].key?('levelProperties')
   end
 
+  test "lab2 properties inline resolved video URLs for video steps" do
+    video = Video.create!(key: 'adaptive-test-video', youtube_code: 'abc123', download: 'https://videos.code.org/youtube/adaptive-test-video.mp4')
+    write_video_pathway
+
+    pathway = create(:adaptive, adaptive_id: 'video').summarize_for_lab2_properties(nil, nil, create(:student))[:pathway]
+
+    watch, panels = pathway['checkpoints'][0]['steps']
+    assert_equal 'video', watch['kind']
+    assert watch['src'].include?('abc123'), 'src must contain the youtube code'
+    assert_equal video.download, watch['download']
+    assert_equal video.thumbnail_url, watch['thumbnail']
+    refute panels.key?('src'), 'only video steps are resolved'
+  end
+
+  test "video step with unknown key passes through unresolved" do
+    write_video_pathway
+
+    pathway = create(:adaptive, adaptive_id: 'video').summarize_for_lab2_properties(nil, nil, create(:student))[:pathway]
+
+    watch = pathway['checkpoints'][0]['steps'][0]
+    refute watch.key?('src'), 'missing video key passes through unresolved'
+  end
+
+  test "resolving videos leaves the cached pathway untouched" do
+    Video.create!(key: 'adaptive-test-video', youtube_code: 'abc123', download: 'https://videos.code.org/youtube/adaptive-test-video.mp4')
+    write_video_pathway
+
+    create(:adaptive, adaptive_id: 'video').summarize_for_lab2_properties(nil, nil, create(:student))
+
+    cached = AdaptiveContent.load('video')
+    refute cached['checkpoints'][0]['steps'][0].key?('src')
+  end
+
   private def write_levels_pathway
     @dir.join('levels.json').write({
       'id' => 'levels',
@@ -89,6 +122,21 @@ class AdaptiveTest < ActiveSupport::TestCase
         'steps' => [
           {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-test-sandbox'},
           {'id' => 'ghost', 'kind' => 'level', 'level' => 'adaptive-test-missing'},
+          {'id' => 'read', 'kind' => 'panels', 'panels' => []},
+        ],
+      }],
+    }.to_json
+)
+    AdaptiveContent.reset_cache!
+  end
+
+  private def write_video_pathway
+    @dir.join('video.json').write({
+      'id' => 'video',
+      'checkpoints' => [{
+        'id' => 'intro',
+        'steps' => [
+          {'id' => 'watch', 'kind' => 'video', 'videoKey' => 'adaptive-test-video'},
           {'id' => 'read', 'kind' => 'panels', 'panels' => []},
         ],
       }],

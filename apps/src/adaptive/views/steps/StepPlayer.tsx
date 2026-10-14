@@ -10,6 +10,7 @@ import {usePathwayContext} from '../PathwayContext';
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
+import VideoStep from './VideoStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
@@ -67,6 +68,15 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             onSaveAnswers={(questionId, list) =>
               onSaveAnswers(step.id, questionId, list)
             }
+            onComplete={advance}
+          />
+        );
+      case 'video':
+        return (
+          <VideoStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
             onComplete={advance}
           />
         );
