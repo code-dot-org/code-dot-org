@@ -434,9 +434,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     resetSession();
   }, [pickRequest, resetSession]);
   const lockedImageType = pickRequest?.imageType ?? levelImageType;
-  const lockedImageSubject = pickRequest
-    ? pickRequest.subject
-    : levelImageSubject;
+  const lockedImageSubject = pickRequest?.subject ?? levelImageSubject;
   // The asker gets the picture and the dialog closes, instead of the
   // summary: the student is on their way back to the block or the world.
   const pickedRef = useRef(onImageCreated);
