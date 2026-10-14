@@ -672,6 +672,27 @@ describe('EditAilabMode', () => {
       expect(pretrainedCheckbox()).toBeValid();
     });
 
+    it('offers pretraining once the columns load', async () => {
+      renderEditor('{"datasets": ["zoo"]}');
+      expect(pretrainedCheckbox()).toBeDisabled();
+      await columnsLoaded();
+      expect(pretrainedCheckbox()).toBeEnabled();
+    });
+
+    it('reports missing pretrained columns once, not as lock errors', async () => {
+      renderEditor('{"datasets": ["heart"], "pretrained": true}');
+      await columnsLoaded();
+      expect(screen.getByText(PRETRAINED_COLUMNS_REQUIRED)).toBeInTheDocument();
+      expect(
+        screen.queryByText(
+          'This dataset has no default label. Choose a label to lock.'
+        )
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByText('Choose the features to lock.')
+      ).not.toBeInTheDocument();
+    });
+
     it('asks to pretrain on only features students can choose', async () => {
       renderEditor(
         '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs", "name"]}'

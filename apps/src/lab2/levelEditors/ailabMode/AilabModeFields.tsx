@@ -9,8 +9,8 @@ import {setJsonObjectValue} from '../jsonUtils';
 import {
   BooleanModeKey,
   DEFAULT_TRAINER,
-  FIXED_BY_PRETRAINED,
   getSelectedDataset,
+  isSetByPretrained,
   isValidAccuracy,
   MAX_ACCURACY,
   MIN_ACCURACY,
@@ -89,7 +89,6 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
-  const pretrained = mode.pretrained === true;
 
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
@@ -106,7 +105,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
-      disabled={pretrained && FIXED_BY_PRETRAINED.includes(key)}
+      disabled={isSetByPretrained(mode, key)}
       onChange={e =>
         changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
@@ -223,7 +222,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           step="any"
           value={accuracyText}
           onChange={handleAccuracyChange}
-          disabled={pretrained}
+          disabled={isSetByPretrained(mode, 'requireAccuracy')}
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
           size="s"

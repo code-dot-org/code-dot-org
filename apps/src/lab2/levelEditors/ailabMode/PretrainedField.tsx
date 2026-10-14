@@ -35,6 +35,7 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
         name="ailab_mode_pretrained"
         label="Pretrain the model"
         checked={mode.pretrained === true}
+        disabled={!columns}
         aria-invalid={!!error}
         aria-describedby={error ? errorId : undefined}
         onChange={e =>
@@ -44,8 +45,9 @@ const PretrainedField: React.FunctionComponent<PretrainedFieldProps> = ({
       />
       <Typography variant="body4" className={moduleStyles.descriptionText}>
         Students start with the model already trained on the label and features
-        below, and cannot change them. The model tests on the last rows, and the
-        level cannot require an accuracy.
+        below. They cannot change these columns, train the model again, or start
+        over. The model tests on the last rows, and the level cannot require an
+        accuracy.
       </Typography>
       {error && (
         <Typography

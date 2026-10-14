@@ -66,6 +66,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
     const trainedState = this.store.getState();
 
+    // A pretrained level trains on load, not because the student chose to.
     if (!trainedState.mode?.pretrained) {
       logMetric('train-model', trainedState, this.project);
     }

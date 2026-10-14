@@ -3,7 +3,7 @@ import React from 'react';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
-import {getStartingLabel, ModeObject} from './ailabMode';
+import {getStartingLabel, isSetByPretrained, ModeObject} from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
 
 const NO_LABEL = '';
@@ -54,7 +54,13 @@ const LabelField: React.FunctionComponent<LabelFieldProps> = ({
     error = "Could not load the dataset's columns.";
   } else if (savedLabelUnavailable) {
     error = `Students cannot choose "${savedLabel}" in this dataset.`;
-  } else if (columns && locked && shownLabel === undefined) {
+  } else if (
+    columns &&
+    locked &&
+    // PretrainedField reports a pretrained level's missing columns.
+    !isSetByPretrained(mode, 'hideSelectLabel') &&
+    shownLabel === undefined
+  ) {
     error = 'This dataset has no default label. Choose a label to lock.';
   }
 

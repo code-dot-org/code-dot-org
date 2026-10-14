@@ -138,10 +138,11 @@ export function withoutLabelInFeatures(
 
 const LOCKED_BY_PRETRAINED = ['hideSelectLabel', 'lockFeatures'];
 const REPLACED_BY_PRETRAINED = ['randomizeTestData', 'requireAccuracy'];
-export const FIXED_BY_PRETRAINED = [
-  ...LOCKED_BY_PRETRAINED,
-  ...REPLACED_BY_PRETRAINED,
-];
+const SET_BY_PRETRAINED = [...LOCKED_BY_PRETRAINED, ...REPLACED_BY_PRETRAINED];
+
+export function isSetByPretrained(mode: ModeObject, key: string): boolean {
+  return mode.pretrained === true && SET_BY_PRETRAINED.includes(key);
+}
 
 export function setPretrained(
   mode: ModeObject,
@@ -165,6 +166,7 @@ export function isMissingPretrainedColumns(
   mode: ModeObject,
   selectable: string[] | undefined
 ): boolean {
+  // Before the columns load, only a column's presence can be checked.
   const offered = (column: unknown) =>
     column !== undefined &&
     (!selectable || selectable.includes(column as string));

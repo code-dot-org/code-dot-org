@@ -7,6 +7,7 @@ import {setJsonObjectValue} from '../jsonUtils';
 import {
   getFeatures,
   getStartingLabel,
+  isSetByPretrained,
   ModeObject,
   setFeatures,
 } from './ailabMode';
@@ -30,7 +31,7 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
 }) => {
   const savedFeatures = getFeatures(mode);
   const locked = mode.lockFeatures === true;
-  const pretrained = mode.pretrained === true;
+  const lockedByPretrained = isSetByPretrained(mode, 'lockFeatures');
   const startingLabel = getStartingLabel(mode, columns?.defaultLabel);
   const selectable = columns?.selectable ?? [];
   const choices = selectable.filter(column => column !== startingLabel);
@@ -43,15 +44,14 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
     : [];
 
   let lockError: string | undefined;
-  if (columns && locked && startingFeatures.length === 0) {
-    lockError = 'Choose the features to lock.';
-  } else if (
-    columns &&
-    locked &&
-    selectable.every(column => startingFeatures.includes(column))
-  ) {
-    lockError =
-      'Leave a column out for students to predict, or choose a label.';
+  // PretrainedField reports a pretrained level's missing columns.
+  if (columns && locked && !lockedByPretrained) {
+    if (startingFeatures.length === 0) {
+      lockError = 'Choose the features to lock.';
+    } else if (selectable.every(column => startingFeatures.includes(column))) {
+      lockError =
+        'Leave a column out for students to predict, or choose a label.';
+    }
   }
   const error =
     skippedFeatures.length > 0
@@ -99,7 +99,7 @@ const FeaturesField: React.FunctionComponent<FeaturesFieldProps> = ({
           name="ailab_mode_lockFeatures"
           label="Lock the features so students cannot change them"
           checked={locked}
-          disabled={pretrained}
+          disabled={lockedByPretrained}
           onChange={e =>
             onChange(
               setJsonObjectValue(
