@@ -2226,8 +2226,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onPlay={handlePlayClick}
                 onStop={stopTab ? handleStopClick : undefined}
                 onPlayGame={handlePlayGame}
-                playGameDisabled={scenes.length < 2 || !!pinnedSceneId}
+                playGameDisabled={!!pinnedSceneId}
                 playGameReason={LOCKED_REASON}
+                playSceneHidden={
+                  !pinnedSceneId && activeScene.id === scenes[0].id
+                }
               />
             }
             below={
