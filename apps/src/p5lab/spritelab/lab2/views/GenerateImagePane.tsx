@@ -500,16 +500,16 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     if (!needsGridDetection || !detectSource) {
       return;
     }
-    let cancelled = false;
+    let canceled = false;
     cachedGridDetection(detectSource, frameSize)
       .then(size => {
-        if (!cancelled && size && size > 1) {
+        if (!canceled && size && size > 1) {
           setDetectedGrid({source: detectSource, size});
         }
       })
       .catch(() => {});
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [needsGridDetection, detectSource, frameSize]);
   const detectedGridSize =
@@ -742,7 +742,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (dialogTarget === 'new' && paintNewDraft) {
         const {name, imageType} = paintNewDraft;
         const sourceUrl = await uploadEdited(name, dataURI);
-        // The paint may have been cancelled (or the dialog moved on) while
+        // The paint may have been canceled (or the dialog moved on) while
         // the upload was out.
         if (persistIsStale(epoch, sourceUrl)) {
           return;
@@ -997,7 +997,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onReady={() => setPainting('active')}
           onSave={handleEditorSave}
           onCancel={() => {
-            // Orphan a save still uploading: cancelled means not applied.
+            // Orphan a save still uploading: canceled means not applied.
             sessionEpochRef.current++;
             setPainting('no');
           }}

@@ -1,4 +1,4 @@
-// The arrows on the scenes map: every go-to-scene block in a scene's code
+// The arrows in All scenes: every go-to-scene block in a scene's code
 // links it to the scene the block names.
 
 import {JsonBlockConfig} from '@cdo/apps/blockly/types';

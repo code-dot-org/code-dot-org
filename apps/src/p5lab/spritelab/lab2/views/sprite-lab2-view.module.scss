@@ -527,7 +527,7 @@ $editor-strip-height: 41px;
   font-size: 11px;
 }
 
-// --- Scenes map (the pictures gallery's card idiom) ---
+// --- All scenes (the pictures gallery's card idiom) ---
 
 .scenesMap {
   width: 100%;
@@ -537,7 +537,7 @@ $editor-strip-height: 41px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
 
-  // Wide gaps, so an arrow between neighbours has room to read.
+  // Wide gaps, so an arrow between neighbors has room to read.
   .imageGallery {
     position: relative;
     gap: 36px 48px;
@@ -551,7 +551,7 @@ $editor-strip-height: 41px;
 }
 
 // The arrows between cards whose code jumps between them, drawn over the
-// map and under nothing clickable.
+// gallery and under nothing clickable.
 .sceneLinks {
   position: absolute;
   inset: 0;

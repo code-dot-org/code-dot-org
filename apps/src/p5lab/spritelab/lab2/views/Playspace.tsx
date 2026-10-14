@@ -56,7 +56,7 @@ const CARD_BORDER_PX = 1;
 const COMPACT_BELOW_PX = 560;
 // The column's two cards' inset from its edges and from each other.
 const CARD_GAP = 12;
-// While playing the instructions' card narrows so the game can centre.
+// While playing the instructions' card narrows so the game can center.
 const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
@@ -86,7 +86,7 @@ function centeredIn(area: Size): Placement {
 
 /**
  * Where the play view goes in an overlay of `size`, clear of a guide hung
- * from a bottom corner: centred when that clears the guide, else beside or
+ * from a bottom corner: centered when that clears the guide, else beside or
  * above it, whichever leaves the box bigger. `reserveBelow` is room kept
  * under the box (the play bar).
  */
@@ -115,7 +115,7 @@ export function playPlacement(
   const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
   const clearsAbove =
     whole.y + CANVAS * whole.scale + reserveBelow <= guideTop - MARGIN;
-  // Beside the guide: as near the centre as clearing it allows, not centred
+  // Beside the guide: as near the center as clearing it allows, not centered
   // in the room left, which would push the box further out.
   if (guideSide === 'left') {
     // The guide hangs from the left: the box clears it to its right.

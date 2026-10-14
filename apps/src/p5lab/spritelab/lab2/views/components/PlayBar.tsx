@@ -75,7 +75,7 @@ const HoldKey: React.FunctionComponent<HoldKeyProps> = ({
       press();
     },
     // Focus must not stay on the button, where Space (a game key) would
-    // activate it on every press; cancelling pointerdown does not keep it
+    // activate it on every press; canceling pointerdown does not keep it
     // off in every browser.
     onPointerUp: (e: React.PointerEvent<HTMLElement>) => {
       release();

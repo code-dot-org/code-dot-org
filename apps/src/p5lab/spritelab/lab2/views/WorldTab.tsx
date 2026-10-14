@@ -741,7 +741,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     pointerId: number;
     startX: number;
     startY: number;
-    /** Set once the press has travelled far enough to be a drag. */
+    /** Set once the press has traveled far enough to be a drag. */
     grid: GridBox | null;
     stop: () => void;
   } | null>(null);

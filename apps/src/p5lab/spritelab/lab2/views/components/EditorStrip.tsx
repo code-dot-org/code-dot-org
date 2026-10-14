@@ -15,7 +15,7 @@ interface EditorStripProps {
 
 /**
  * The bar over the editors, as Music Lab's panel headers: the open editor's
- * name centred, the Code | World switch at its end.
+ * name centered, the Code | World switch at its end.
  */
 const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   editor,

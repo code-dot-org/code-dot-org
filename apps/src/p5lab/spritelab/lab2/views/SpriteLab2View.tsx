@@ -705,7 +705,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     seededLevelRef.current = levelProperties.id;
-    let cancelled = false;
+    let canceled = false;
     seedAnimationList(initialSources.animations);
     // Workspace injection only waits on a fetched list (section scenes, the
     // user's songs) when saved blocks hold values from it; the gated path
@@ -746,7 +746,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // Nothing waits on this list, so a slow response is simply used
       // whenever it lands instead of being discarded at the timeout.
       externalOptions(false).then(options => {
-        if (!cancelled) {
+        if (!canceled) {
           dispatch(setExternalScenes(options));
         }
       });
@@ -754,7 +754,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       musicSeededRef.current = true;
       Promise.all([externalOptions(true), musicOptions()]).then(
         ([external, music]) => {
-          if (cancelled) {
+          if (canceled) {
             return;
           }
           const known = new Set(external.map(o => o.key));
@@ -773,7 +773,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
     }
     return () => {
-      cancelled = true;
+      canceled = true;
     };
     // Re-seeds only when the level changes (seedAnimationList is stable,
     // initialSources is a ref-captured constant).
@@ -865,13 +865,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // run machinery no-ops, and no stray canvas mounts.
       return;
     }
-    let cancelled = false;
+    let canceled = false;
     const savedAnimations = initialSources.animations || EMPTY_ANIMATION_LIST;
 
     const setup = async () => {
       const engine = new SpriteLab2Engine(savedAnimations);
       await engine.initForLevel(levelProperties);
-      if (cancelled) {
+      if (canceled) {
         engine.destroy();
         return;
       }
@@ -882,7 +882,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setup();
 
     return () => {
-      cancelled = true;
+      canceled = true;
       setEngineReady(false);
       engineRef.current?.destroy();
       engineRef.current = null;
@@ -1218,10 +1218,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (musicSeededRef.current) {
       return;
     }
-    let cancelled = false;
+    let canceled = false;
     fetchMusicProjects()
       .then(projects => {
-        if (cancelled) {
+        if (canceled) {
           return;
         }
         dispatch(setMusicProjects(projects));
@@ -1240,7 +1240,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       })
       .catch(e => console.warn('music projects unavailable', e));
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
 
@@ -1257,7 +1257,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     musicProjects
   );
 
-  // A sheet over the editors and the stage: Pictures, or the map.
+  // A sheet over the editors and the stage: Pictures, or All scenes.
   const stageCovered = pictures.open || activeTab === 'Scenes';
   // Hidden content stays in the tab order and the accessibility tree:
   // inert while hidden, via refs (React 18's JSX has no inert attribute).
@@ -1371,7 +1371,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       restartSceneRef.current?.();
     };
     // Cover on jump start, fade on landing — but not while previewing, where
-    // the jump is cancelled (above) and the cover would just flash.
+    // the jump is canceled (above) and the cover would just flash.
     engine.onSceneJumpStart = () => {
       if (isPlayingRef.current) {
         setJumpCover(true);
@@ -1786,7 +1786,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // mode is unconstrained.
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
-  // The stage: the preview beside either editor and beside the map,
+  // The stage: the preview beside either editor and beside All scenes,
   // centered to play.
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
@@ -1949,7 +1949,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 aria-controls={PICTURES_DRAWER_ID}
                 onClick={event => {
                   blurAfterPointerClick(event);
-                  // From the map, Pictures takes its place.
+                  // From All scenes, Pictures takes its place.
                   if (activeTab === 'Scenes') {
                     sceneEditing.selectScene(activeScene.id);
                   }

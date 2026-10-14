@@ -258,7 +258,7 @@ function sameRects(a: Map<string, Rect>, b: Map<string, Rect>): boolean {
   return true;
 }
 
-// An arrow's path between two cards, in the map's coordinates: out of the
+// An arrow's path between two cards, in the gallery's coordinates: out of the
 // right side into the left side when the target is to the right on the
 // same row; otherwise out of the bottom (or top) into the top (or bottom).
 function arrowPath(from: Rect, to: Rect): string {
@@ -281,7 +281,7 @@ function arrowPath(from: Rect, to: Rect): string {
 }
 
 /**
- * The scenes map: every scene as a card in play order, arrows between the
+ * All scenes: every scene as a card in play order, arrows between the
  * cards whose code jumps between them, and Play game above.
  */
 const ScenesGallery: React.FunctionComponent<ScenesGalleryProps> = ({
@@ -297,11 +297,11 @@ const ScenesGallery: React.FunctionComponent<ScenesGalleryProps> = ({
   onPlayGame,
 }) => {
   const [naming, setNaming] = useState(false);
-  // Play game wears the Play buttons' colour (see PlayBar).
+  // Play game wears the Play buttons' color (see PlayBar).
   const setupBlockColor = useSetupBlockColor();
-  // The cards' boxes in the map's coordinates, remeasured when the map's
+  // The cards' boxes in the gallery's coordinates, remeasured when the gallery's
   // size or the cards change.
-  const mapRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
   const cards = useRef(new Map<string, HTMLDivElement>());
   const register = useCallback(
     (sceneId: string, element: HTMLDivElement | null) => {
@@ -315,11 +315,11 @@ const ScenesGallery: React.FunctionComponent<ScenesGalleryProps> = ({
   );
   const [rects, setRects] = useState<Map<string, Rect>>(new Map());
   const measure = useCallback(() => {
-    const map = mapRef.current;
-    if (!map) {
+    const gallery = galleryRef.current;
+    if (!gallery) {
       return;
     }
-    const origin = map.getBoundingClientRect();
+    const origin = gallery.getBoundingClientRect();
     const next = new Map<string, Rect>();
     cards.current.forEach((element, sceneId) => {
       const box = element.getBoundingClientRect();
@@ -335,12 +335,12 @@ const ScenesGallery: React.FunctionComponent<ScenesGalleryProps> = ({
   }, []);
   useLayoutEffect(measure, [measure, scenes, links]);
   useEffect(() => {
-    const map = mapRef.current;
-    if (!map || typeof ResizeObserver === 'undefined') {
+    const gallery = galleryRef.current;
+    if (!gallery || typeof ResizeObserver === 'undefined') {
       return;
     }
     const observer = new ResizeObserver(measure);
-    observer.observe(map);
+    observer.observe(gallery);
     return () => observer.disconnect();
   }, [measure]);
   const arrows = links.flatMap(link => {
@@ -366,7 +366,7 @@ const ScenesGallery: React.FunctionComponent<ScenesGalleryProps> = ({
           </MuiButton>
         </div>
       )}
-      <div ref={mapRef} className={moduleStyles.imageGallery}>
+      <div ref={galleryRef} className={moduleStyles.imageGallery}>
         {arrows.length > 0 && (
           <svg className={moduleStyles.sceneLinks} aria-hidden>
             <defs>
