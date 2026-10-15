@@ -19,7 +19,7 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
-  /** The key Rails signed `token` with, chosen by a DCDO flag during the rollout. */
+  /** The key Rails signed `token` with, chosen by a DCDO flag during the initial rollout. */
   signingKey: SigningKey;
 }
 
