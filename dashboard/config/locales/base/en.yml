@@ -170,6 +170,7 @@ en:
     migration_required: "Sorry, we cannot connect or disconnect accounts that are still using the old account experience. Please update to the new account experience."
     unable_to_connect_provider: "Unable to connect your Code.org account to your %{provider} account. Please try again."
     disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
+    disconnect_failed: "Sorry, we could not disconnect the external account from your Code.org account. Please contact support if you need help."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent."
