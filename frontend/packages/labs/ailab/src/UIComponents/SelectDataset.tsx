@@ -1,5 +1,6 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import classNames from 'classnames';
+import React from 'react';
 
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
@@ -7,7 +8,7 @@ import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {parseJSON} from '../jsonReaderWrapper';
+import {loadDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
@@ -55,9 +56,7 @@ const SelectDataset = () => {
       setSelectedJSON(jsonPath);
 
       invalidatePendingDatasetLoads();
-      parseCSV(csvPath, true, false);
-
-      parseJSON(jsonPath);
+      loadDataset(csvPath, jsonPath);
     }
   };
 
@@ -113,7 +112,7 @@ const SelectDataset = () => {
                   className={classNames(
                     'uitest-ailab-dataset-image',
                     shared.hoverGrow,
-                    styles.image,
+                    styles.image
                   )}
                   alt={`Select ${dataset.name} dataset`}
                 />

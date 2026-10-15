@@ -1,11 +1,12 @@
 /* React component to handle training. */
 import classNames from 'classnames';
-import {useState, useEffect, useRef, useCallback} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 
 import {imageUrl} from '../assetPath';
 import {ANIMATION_TABLE_ROW_LIMIT, getFadeOpacity} from '../constants';
 import {deepEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
+import {useProject} from '../ProjectContext';
 import {getTableData} from '../redux';
 
 import {TestingAnimationDescription} from './AnimationDescriptions';
@@ -22,9 +23,13 @@ interface GenerateResultsProps {
 }
 
 const GenerateResults = ({onFinished}: GenerateResultsProps) => {
-  const data = useAppSelector(state => getTableData(state, true), deepEqual);
+  const {project} = useProject();
+  const data = useAppSelector(
+    state => getTableData(state, project, true),
+    deepEqual
+  );
   const instructionsOverlayActive = useAppSelector(
-    state => state.instructionsOverlayActive,
+    state => state.instructionsOverlayActive
   );
   const [frame, setFrame] = useState(0);
   const [, setFinished] = useState(false);

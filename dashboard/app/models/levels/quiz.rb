@@ -25,10 +25,9 @@
 #  index_levels_on_type       (type)
 #
 class Quiz < Level
-  # custom_intro_text, if set, is shown once on the pre-attempt 'start quiz'
-  # screen before timer/attempt begins (blank falls back to default framing
-  # text on the frontend). Distinct from instructions, which stays available
-  # in the persistent Instructions panel throughout the attempt.
+  # custom_intro_text is the body of the pre-attempt intro screen, shown only
+  # while show_intro_screen is on; blank falls back to default text on the
+  # frontend. Unlike instructions, it isn't shown during the attempt.
   serialized_attrs %w(
     time_limit_minutes
     show_correctness
@@ -40,6 +39,8 @@ class Quiz < Level
     max_attempts
     show_questions_after_submit
   )
+
+  attr_accessor :serialized_placements
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
@@ -57,6 +58,39 @@ class Quiz < Level
   has_many :questions, through: :placements, source: :quiz_question
   # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
+
+  def serializable_hash(options = nil)
+    super.merge('placements' => placements.includes(:quiz_question).map(&:serializable_hash))
+  end
+
+  # Translates the key used in the .level file ("placements") to "serialized_placements",
+  # which we use to differentiate between the file's data and placements derived from the association.
+  def load_level_xml(xml_node)
+    hash = super
+    hash['serialized_placements'] = hash.delete('placements') if hash.key?('placements')
+    hash
+  end
+
+  def import_serialized_placements!
+    raise "quiz #{name.dump}: .level file is missing a placements list" if serialized_placements.nil?
+
+    questions_by_key = QuizQuestion.where(key: serialized_placements.map {|entry| entry['question_key']}).index_by(&:key)
+
+    desired = serialized_placements.map do |entry|
+      question = questions_by_key[entry['question_key']]
+      raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
+      {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
+    end
+
+    existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
+    return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
+
+    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
+    # the after commit hook that would otherwise circularly resave the quiz.
+    placements.delete_all
+    QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
+    placements.reset
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(

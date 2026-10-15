@@ -26,8 +26,11 @@ export type StepAnswers = {[questionId: number]: Answer[]};
 
 /** What a step has accumulated for a student, by concern. */
 export interface StepContext {
-  /** Any content that was dynamically generated for this step, keyed by generateInputsHash. */
-  generated?: {instructions: string; inputsHash: string};
+  /**
+   * Any content that was dynamically generated for this step, keyed by
+   * generateInputsHash. traceId is the Langfuse trace it was generated under.
+   */
+  generated?: {instructions: string; inputsHash: string; traceId?: string};
   answers?: StepAnswers;
 }
 

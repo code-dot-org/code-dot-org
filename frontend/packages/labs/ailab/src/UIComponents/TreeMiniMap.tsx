@@ -1,16 +1,16 @@
 /* Thumbnail of the trained decision tree, drawn without text. */
-import {IconButton, Tooltip} from '@mui/material';
-import {useMemo} from 'react';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Tooltip} from '@mui/material';
+import React, {useMemo} from 'react';
 
 import type {DisplayTreeNode} from '../helpers/displayTree';
 import {
   edgePath,
   layoutDisplayTree,
   TREE_NODE_HEIGHT,
-  TREE_NODE_WIDTH,
 } from '../helpers/displayTreeLayout';
+import {nodeWidthMeasurer} from '../helpers/displayTreeNodeContent';
+import type {DisplayTreeCountsLookup} from '../helpers/displayTreeTrace';
 
 import {leafColorStyle} from './leafColors';
 
@@ -24,11 +24,21 @@ const VIEW_MARGIN = 8;
 
 interface TreeMiniMapProps {
   tree: DisplayTreeNode;
+  datasetId: string;
+  counts: DisplayTreeCountsLookup;
   onReplay: () => void;
 }
 
-const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
-  const layout = useMemo(() => layoutDisplayTree(tree, MINI_ROW_GAP), [tree]);
+const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
+  const layout = useMemo(
+    () =>
+      layoutDisplayTree(
+        tree,
+        nodeWidthMeasurer(datasetId, counts),
+        MINI_ROW_GAP
+      ),
+    [tree, datasetId, counts]
+  );
 
   return (
     <div className={styles.miniMap}>
@@ -50,14 +60,14 @@ const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
                 d={edgePath(placed.parent, placed, MINI_ROW_GAP / 2)}
                 className={styles.edge}
               />
-            ),
+            )
         )}
         {layout.nodes.map(placed => (
           <rect
             key={placed.id}
             x={placed.x}
             y={placed.y}
-            width={TREE_NODE_WIDTH}
+            width={placed.width}
             height={TREE_NODE_HEIGHT}
             rx={NODE_CORNER_RADIUS}
             {...(placed.answerIndex === undefined

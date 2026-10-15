@@ -60,6 +60,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     question = MultipleChoiceQuestion.find(body['id'])
     assert_equal 'New question', question.name
     assert_equal 'b', question.content['correct_choice_id']
+    refute question.content.key?('description')
     placement = @quiz.placements.find_by!(quiz_question_id: question.id)
     assert_equal 3, placement.position
   end

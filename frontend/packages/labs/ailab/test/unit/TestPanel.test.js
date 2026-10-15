@@ -1,18 +1,14 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen, within} from '@testing-library/react';
+import {act, fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import {ColumnTypes} from '../../src/constants';
 import I18n from '../../src/i18n';
 import {setPrediction} from '../../src/redux';
-import train from '../../src/train';
 import TestPanel from '../../src/UIComponents/TestPanel';
 import {STEP_INTERVAL_MS} from '../../src/UIComponents/TraceStepper';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 const PENGUINS = [
   {species: 'Adelie', island: 'Torgersen', mass: '3750', bill: '39.1'},
@@ -27,27 +23,19 @@ const PENGUIN_COLUMNS = {
   bill: ColumnTypes.NUMERICAL,
 };
 
-function renderTestPanel(store) {
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(TestPanel),
-      ),
-    ),
-  );
+function renderTestPanel(store, project, trainingRun) {
+  renderWithProviders(createElement(TestPanel), {store, project, trainingRun});
 }
 
-function trainedAnimalStore(mode) {
+// Renders a panel whose model is trained and reachable from the context.
+function renderTrainedAnimalPanel(mode) {
   const store = levelStore(mode);
-  train.reset();
-  train.init(store);
-  train.onClickTrain();
+  const project = levelProject();
+  renderTestPanel(store, project, runTraining(store, project));
   return store;
 }
+
+const penguinProject = () => levelProject(PENGUIN_COLUMNS, 'species');
 
 function predictSnake() {
   fireEvent.change(screen.getByLabelText('legs'), {target: {value: '0'}});
@@ -85,7 +73,7 @@ function stepAnnouncement(index) {
 
 function pathAnnouncement(prediction) {
   const stepCount = within(screen.getByRole('list')).getAllByRole(
-    'listitem',
+    'listitem'
   ).length;
   return [
     `AI predicts ${prediction}`,
@@ -101,6 +89,7 @@ describe('TestPanel', () => {
   test('shows a field for each feature, in the order they were chosen', () => {
     renderTestPanel(
       levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species'),
+      penguinProject()
     );
 
     const fields = [...document.querySelectorAll('input, select')];
@@ -114,11 +103,11 @@ describe('TestPanel', () => {
 
   test('a dropdown offers each option after a disabled prompt, and sets its feature', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
-    renderTestPanel(store);
+    renderTestPanel(store, penguinProject());
     const island = screen.getByLabelText('island');
 
     expect(
-      [...island.options].map(option => [option.text, option.disabled]),
+      [...island.options].map(option => [option.text, option.disabled])
     ).toEqual([
       ['Choose one', true],
       ['Biscoe', false],
@@ -135,7 +124,7 @@ describe('TestPanel', () => {
   test('Random fills every feature, enables Predict, and clears the last prediction', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
     store.dispatch(setPrediction('Adelie', []));
-    renderTestPanel(store);
+    renderTestPanel(store, penguinProject());
     expect(predictButton().disabled).toBe(true);
 
     fireEvent.click(screen.getByRole('button', {name: 'Random'}));
@@ -150,25 +139,23 @@ describe('TestPanel', () => {
   });
 
   test('a decision tree lists each step to its prediction', () => {
-    const store = trainedAnimalStore({trainer: 'decisionTree'});
-    renderTestPanel(store);
+    renderTrainedAnimalPanel({trainer: 'decisionTree'});
 
     predictSnake();
 
     expect(
-      screen.getByRole('heading', {name: 'AI predicts snake'}),
+      screen.getByRole('heading', {name: 'AI predicts snake'})
     ).toBeTruthy();
     const steps = within(screen.getByRole('list')).getAllByRole('listitem');
     expect(steps.length).toBeGreaterThan(1);
     expect(steps[0].textContent).toMatch(/^1legs is [<≥] \d/);
     expect(steps[steps.length - 1].textContent).toBe(
-      `${steps.length}animal is snake`,
+      `${steps.length}animal is snake`
     );
   });
 
   test('a decision tree marks the step the stepper is on', () => {
-    const store = trainedAnimalStore({trainer: 'decisionTree'});
-    renderTestPanel(store);
+    renderTrainedAnimalPanel({trainer: 'decisionTree'});
     predictSnake();
     const steps = within(screen.getByRole('list')).getAllByRole('listitem');
     const current = () =>
@@ -182,8 +169,7 @@ describe('TestPanel', () => {
   });
 
   test('a decision tree announces its whole path, then each step taken by hand, but never its controls', () => {
-    const store = trainedAnimalStore({trainer: 'decisionTree'});
-    renderTestPanel(store);
+    renderTrainedAnimalPanel({trainer: 'decisionTree'});
     const nextStep = () => screen.getByRole('button', {name: 'Next step'});
     const textNodes = () => [...screen.getByRole('status').childNodes];
 
@@ -204,14 +190,14 @@ describe('TestPanel', () => {
   describe('a decision tree, as its path plays', () => {
     const replay = () =>
       fireEvent.click(
-        screen.getByRole('button', {name: 'Replay from the start'}),
+        screen.getByRole('button', {name: 'Replay from the start'})
       );
     const skip = () =>
       fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
 
     beforeEach(() => {
       vi.useFakeTimers();
-      renderTestPanel(trainedAnimalStore({trainer: 'decisionTree'}));
+      renderTrainedAnimalPanel({trainer: 'decisionTree'});
     });
     afterEach(() => {
       vi.useRealTimers();
@@ -267,17 +253,16 @@ describe('TestPanel', () => {
   });
 
   test('a KNN model shows its prediction without steps', () => {
-    const store = trainedAnimalStore(undefined);
-    renderTestPanel(store);
+    renderTrainedAnimalPanel(undefined);
 
     predictSnake();
 
     expect(
-      screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),
+      screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/})
     ).toBeTruthy();
     expect(screen.queryByRole('list')).toBeNull();
     expect(status()).toBe(
-      screen.getByRole('heading', {name: /^AI predicts/}).textContent,
+      screen.getByRole('heading', {name: /^AI predicts/}).textContent
     );
   });
 });
