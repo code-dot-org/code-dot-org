@@ -498,8 +498,10 @@ export function sendSuccessReportForLevel(
 }
 
 // Reports a step level, absent from the lesson, under the adaptive script level.
+// appType is the step level's app, not 'adaptive'.
 export function sendAdaptiveStepReport(
   levelId: number,
+  appType: string,
   result: number,
   timeMs: number
 ): AsyncProgressThunkAction {
@@ -510,7 +512,7 @@ export function sendAdaptiveStepReport(
       return;
     }
     const data: MilestoneReport = {
-      app: 'adaptive',
+      app: appType,
       result: true,
       testResult: result,
       timeSinceLastMilestone: timeMs,
