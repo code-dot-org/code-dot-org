@@ -653,7 +653,7 @@ google_gemini_ai_tutor_api_key: !Secret
 ai_gateway_auth_key: !Secret
 ai_gateway_auth_public_key: !Secret
 ai_gateway_auth_key_passphrase: !Secret
-# One key pair per environment; the gateway trusts the environment named by its kid.
+# One key pair per environment; the gateway trusts the environment named in the token's kid (key ID) header.
 ai_gateway_jwt_auth_key: !Secret
 ai_gateway_jwt_auth_public_key: !Secret
 ai_gateway_jwt_auth_key_passphrase: !Secret

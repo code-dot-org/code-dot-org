@@ -96,7 +96,7 @@ class AiGatewayAuthController < ApplicationController
     @signing_key ||= DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true ? SIGNING_KEY_ENVIRONMENT : SIGNING_KEY_LEGACY_SHARED
   end
 
-  # The gateway verifies a token with a kid only against that environment's public key.
+  # The gateway verifies a token whose kid (key ID) header names an environment only against that environment's public key.
   private def jwt_private_key_and_headers
     if signing_key == SIGNING_KEY_ENVIRONMENT
       [OpenSSL::PKey::RSA.new(CDO.ai_gateway_jwt_auth_key, CDO.ai_gateway_jwt_auth_key_passphrase), {kid: CDO.rack_env.to_s}]
