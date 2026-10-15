@@ -19,6 +19,7 @@ export function findReferenceProblems(pathway: Pathway): string[] {
     ...findQuestionProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
+    ...findEvidenceProblems(pathway),
   ];
 }
 
@@ -213,6 +214,82 @@ function findCheckpointProblems(pathway: Pathway): string[] {
   const stepIds = pathway.checkpoints.flatMap(c => c.steps.map(s => s.id));
   if (new Set(stepIds).size !== stepIds.length) {
     problems.push(`${where}: step ids must be unique across checkpoints`);
+  }
+  return problems;
+}
+
+/**
+ * Detects and returns any problems with evidence fields: a question's
+ * `measures` must name a known skill, take the graded form exactly when the
+ * question has a correct choice, list only real choice ids, and name only
+ * levels the skill describes in `evidenceLevels`; a checkpoint's
+ * `targetEvidenceLevel` must be one each of its skills describes; and
+ * `skippable` needs `skillIds`.
+ */
+function findEvidenceProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const checkLevel = (where: string, skillId: string, level: number) => {
+    const described = pathway.skills[skillId]?.evidenceLevels;
+    if (level > 0 && described && !(level in described)) {
+      problems.push(
+        `${where}: skill '${skillId}' describes no evidence level ${level}`
+      );
+    }
+  };
+
+  for (const checkpoint of pathway.checkpoints) {
+    const where = `checkpoints.${checkpoint.id}`;
+    if (checkpoint.skippable && !checkpoint.skillIds?.length) {
+      problems.push(`${where}: skippable needs skillIds`);
+    }
+    if (checkpoint.targetEvidenceLevel !== undefined) {
+      for (const skillId of checkpoint.skillIds || []) {
+        if (!pathway.skills[skillId]) continue;
+        checkLevel(
+          `${where}.targetEvidenceLevel`,
+          skillId,
+          checkpoint.targetEvidenceLevel
+        );
+      }
+    }
+
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (question.type !== 'MultipleChoiceQuestion' || !question.measures) {
+          return;
+        }
+        const {measures} = question;
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.questions.${index}.measures`;
+        if (!pathway.skills[measures.skillId]) {
+          problems.push(`${where}: unknown skill '${measures.skillId}'`);
+        }
+        const graded = question.correctChoiceId !== undefined;
+        if ('evidenceLevel' in measures) {
+          if (!graded) {
+            problems.push(
+              `${where}: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`
+            );
+          }
+          checkLevel(where, measures.skillId, measures.evidenceLevel);
+          return;
+        }
+        if (graded) {
+          problems.push(
+            `${where}: a question with a correctChoiceId measures one evidenceLevel, not evidenceLevels by choice`
+          );
+        }
+        const choiceIds = new Set(question.choices.map(c => c.id));
+        for (const [choiceId, level] of Object.entries(
+          measures.evidenceLevels
+        )) {
+          if (!choiceIds.has(choiceId)) {
+            problems.push(`${where}: '${choiceId}' is not one of its choices`);
+          }
+          checkLevel(`${where}.${choiceId}`, measures.skillId, level);
+        }
+      });
+    }
   }
   return problems;
 }
