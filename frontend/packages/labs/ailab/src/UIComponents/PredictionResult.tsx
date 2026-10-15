@@ -10,6 +10,7 @@ import type {DisplayTreeStep} from '../helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {
   getPredictionStep,
   getPredictionTrace,
@@ -23,14 +24,17 @@ import styles from './predictionResult.module.scss';
 
 const PredictionResult = () => {
   const datasetId = useAppSelector(state => state.metadata?.name || '');
-  const labelColumn = useAppSelector(state => state.labelColumn || '');
-  const predictedLabel = useAppSelector(getConvertedPredictedLabel);
+  const {project} = useProject();
+  const labelColumn = project.labelColumn || '';
+  const predictedLabel = useAppSelector(state =>
+    getConvertedPredictedLabel(state, project),
+  );
   const {trainedModel} = useTrainingData();
   const trace = useAppSelector(state =>
-    getPredictionTrace(state, trainedModel),
+    getPredictionTrace(state, project, trainedModel),
   );
   const currentStep = useAppSelector(state =>
-    getPredictionStep(state, trainedModel),
+    getPredictionStep(state, project, trainedModel),
   );
   const steppedByHand = useAppSelector(state => state.predictionStepByHand);
   const predictionCount = useAppSelector(state => state.predictionCount);

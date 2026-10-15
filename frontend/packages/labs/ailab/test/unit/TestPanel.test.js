@@ -7,8 +7,8 @@ import {setPrediction} from '../../src/redux';
 import TestPanel from '../../src/UIComponents/TestPanel';
 import {STEP_INTERVAL_MS} from '../../src/UIComponents/TraceStepper';
 
-import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 const PENGUINS = [
   {species: 'Adelie', island: 'Torgersen', mass: '3750', bill: '39.1'},
@@ -23,16 +23,19 @@ const PENGUIN_COLUMNS = {
   bill: ColumnTypes.NUMERICAL,
 };
 
-function renderTestPanel(store, trainedModel) {
-  renderWithProviders(createElement(TestPanel), {store, trainedModel});
+function renderTestPanel(store, project, trainingRun) {
+  renderWithProviders(createElement(TestPanel), {store, project, trainingRun});
 }
 
 // Renders a panel whose model is trained and reachable from the context.
 function renderTrainedAnimalPanel(mode) {
   const store = levelStore(mode);
-  renderTestPanel(store, trainModel(store));
+  const project = levelProject();
+  renderTestPanel(store, project, runTraining(store, project));
   return store;
 }
+
+const penguinProject = () => levelProject(PENGUIN_COLUMNS, 'species');
 
 function predictSnake() {
   fireEvent.change(screen.getByLabelText('legs'), {target: {value: '0'}});
@@ -86,6 +89,7 @@ describe('TestPanel', () => {
   test('shows a field for each feature, in the order they were chosen', () => {
     renderTestPanel(
       levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species'),
+      penguinProject(),
     );
 
     const fields = [...document.querySelectorAll('input, select')];
@@ -99,7 +103,7 @@ describe('TestPanel', () => {
 
   test('a dropdown offers each option after a disabled prompt, and sets its feature', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
-    renderTestPanel(store);
+    renderTestPanel(store, penguinProject());
     const island = screen.getByLabelText('island');
 
     expect(
@@ -120,7 +124,7 @@ describe('TestPanel', () => {
   test('Random fills every feature, enables Predict, and clears the last prediction', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
     store.dispatch(setPrediction('Adelie', []));
-    renderTestPanel(store);
+    renderTestPanel(store, penguinProject());
     expect(predictButton().disabled).toBe(true);
 
     fireEvent.click(screen.getByRole('button', {name: 'Random'}));

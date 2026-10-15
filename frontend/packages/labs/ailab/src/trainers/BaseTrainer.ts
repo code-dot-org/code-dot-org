@@ -17,15 +17,15 @@ import {
 } from '../helpers/accuracy';
 import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
-import {
-  setHyperparameters,
-  setPrediction,
-  setAccuracyCheckPredictedLabels,
-  setHistoricResult,
-} from '../redux';
-import type {Hyperparameters, TrainedModel} from '../types';
+import {setPrediction, setAccuracyCheckPredictedLabels} from '../redux';
+import type {
+  AilabProject,
+  HistoricResult,
+  Hyperparameters,
+  TrainedModel,
+} from '../types';
 
-import type {Trainer} from './types';
+import type {Trainer, TrainerOutput} from './types';
 
 export interface OptimalModelDetails<Candidate> {
   model: TrainedModel;
@@ -35,9 +35,11 @@ export interface OptimalModelDetails<Candidate> {
 
 export default abstract class BaseTrainer<Candidate> implements Trainer {
   protected readonly store: Store<RootState>;
+  protected readonly project: AilabProject;
 
-  constructor(store: Store<RootState>) {
+  constructor(store: Store<RootState>, project: AilabProject) {
     this.store = store;
+    this.project = project;
   }
 
   protected abstract candidates(state: RootState): Candidate[];
@@ -49,30 +51,73 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  startTraining(): TrainedModel | undefined {
-    const state = this.store.getState();
+  /*
+    The inverse of hyperparameters(), so a saved run can be rebuilt exactly.
+    Undefined when the saved values belong to another algorithm.
+  */
+  protected abstract candidateFor(
+    hyperparameters: Hyperparameters,
+  ): Candidate | undefined;
 
-    const optimalModel = this.getOptimalModelDetails(state);
+  startTraining(): TrainerOutput | undefined {
+    const optimalModel = this.getOptimalModelDetails(this.store.getState());
 
     if (!optimalModel) {
       return undefined;
     }
 
-    this.storeTrainingResults(optimalModel);
-
+    const run = this.recordModel(optimalModel);
     const trainedState = this.store.getState();
 
-    logMetric('train-model', trainedState);
+    /*
+      Only a run the student asked for is worth a metric. A pretrained level
+      trains on load.
+    */
+    if (!trainedState.mode?.pretrained) {
+      logMetric('train-model', trainedState, this.project);
+    }
 
-    this.storeHistoricResult(trainedState);
+    return run;
+  }
 
-    return optimalModel.model;
+  /*
+    Builds the one model the given hyperparameters describe, or nothing if they
+    describe no model this trainer can build.
+  */
+  rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined {
+    const state = this.store.getState();
+    const candidate = this.candidateFor(hyperparameters);
+
+    if (candidate === undefined) {
+      return undefined;
+    }
+
+    const model = this.buildModel(state, candidate);
+
+    return this.recordModel({
+      model,
+      predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
+      candidate,
+    });
+  }
+
+  // Stores what grading a model needs, then describes the run it belongs to.
+  private recordModel(details: OptimalModelDetails<Candidate>): TrainerOutput {
+    this.store.dispatch(
+      setAccuracyCheckPredictedLabels(details.predictedLabels),
+    );
+
+    return {
+      trainedModel: details.model,
+      hyperparameters: this.hyperparameters(details.candidate),
+      historicResult: this.buildHistoricResult(this.store.getState()),
+    };
   }
 
   getOptimalModelDetails(
     state: RootState,
   ): OptimalModelDetails<Candidate> | undefined {
-    const gradeOptions = getGradeOptions(state);
+    const gradeOptions = getGradeOptions(state, this.project);
     let best: OptimalModelDetails<Candidate> | undefined;
     let bestAccuracy = -1;
 
@@ -132,26 +177,14 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     }
   }
 
-  storeTrainingResults(optimalModel: OptimalModelDetails<Candidate>): void {
-    this.store.dispatch(
-      setHyperparameters(this.hyperparameters(optimalModel.candidate)),
-    );
-    this.store.dispatch(
-      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
-    );
-  }
-
-  storeHistoricResult(state: RootState): void {
-    const accuracy = getPercentCorrect(state);
-    const {correct, total} = getCorrectCount(state);
-    this.store.dispatch(
-      setHistoricResult(
-        state.labelColumn!,
-        state.selectedFeatures,
-        accuracy,
-        correct,
-        total,
-      ),
-    );
+  buildHistoricResult(state: RootState): HistoricResult {
+    const {correct, total} = getCorrectCount(state, this.project);
+    return {
+      label: this.project.labelColumn!,
+      features: this.project.selectedFeatures,
+      accuracy: getPercentCorrect(state, this.project),
+      correct,
+      total,
+    };
   }
 }

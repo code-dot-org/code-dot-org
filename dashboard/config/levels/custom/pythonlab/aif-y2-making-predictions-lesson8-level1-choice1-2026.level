@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T18:06:25.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Workouts",
+    "long_instructions": "You are building a nearest-neighbor classifier to identify whether workouts are runs or bicycle rides. You’re making predictions based on three features: elevation gain, workout duration, and average heart rate.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Run the starter code, which implements a simple classifier. Take note of its accuracy: you’ll answer a question about it later.\r\n2. Create a new `MinMaxScaler` to use for scaling the data.\r\n3. Use your scaler’s `fit_transform` method to fit the scaler and scale the training inputs.\r\n4. Use your scaler’s `transform` method to scale the test inputs.\r\n5. Train the model using the scaled training data instead of the unscaled training data.\r\n6. Test the model using the scaled test data instead of the unscaled test data.\r\n7. Run your updated code and take note of its new accuracy now: you’ll answer a question about it later.\r\n\r\nNote that the `model.score` function at the end is a convenient way to test how accurate a trained model performs on a specific set of inputs and outputs!",
+    "bubble_choice_description": "Build a nearest-neighbor classifier to identify whether workouts are runs or bicycle rides.",
+    "thumbnail_url": "https://images.code.org/19db121698d07b8775c14ba436b32ea4-bicycle.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Input features: [elevation gain (ft), distance (miles), average heart rate (bpm)]\ninputs = [\n  [40, 3.1, 158],\n  [420, 4.5, 164],\n  [120, 2.0, 150],\n  [650, 6.2, 168],\n  [80, 5.0, 155],\n  [300, 3.5, 161],\n  [60, 4.0, 118],\n  [900, 14.0, 142],\n  [350, 6.5, 128],\n  [1800, 22.0, 150],\n  [150, 8.0, 132],\n  [600, 11.0, 138],\n]\n\noutputs = [\n  \"walk\",\n  \"walk\",\n  \"walk\",\n  \"walk\",\n  \"walk\",\n  \"walk\",\n  \"bicycle\",\n  \"bicycle\",\n  \"bicycle\",\n  \"bicycle\",\n  \"bicycle\",\n  \"bicycle\",\n]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs,\n  outputs,\n  test_size=0.3,\n)\n\n# TODO 2: Create a new MinMaxScaler\n# TODO 3: Fit the scaler and scale the training inputs\n# TODO 4: Scale the test inputs\n\n# Train the classifier\n# TODO 5: Train the model using the scaled training inputs\nmodel = KNeighborsClassifier(n_neighbors=1)\nmodel.fit(train_inputs, train_outputs)\n\n# TODO 6: Test the model using the scaled test inputs\naccuracy = model.score(test_inputs, test_outputs)\nprint(f\"Model Accuracy: {accuracy}\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrt+e42mNT7VKOe\nlj+SXX8Zyll0/lhCzIbHfxyPfrYd3kuuJWumlmwB1uuGZffFdpcb1PQL0A7L\n/6/x8bqaG6xmzPm5+wxtIo3tCjS8v6kGSqGlYdQDgAzs9KALUPRrUgxGFvZD\n2N9rCvp2f7D0xHFnGRCInPkmsooIAPlXz4wv3eytKQVRLU/eZe28nh9RImV2\nkCmXX0mbhjSV2+eG7Zb4X3qegoJNqSL5jg5zoffaNn1n4d7PwlQOLE2v5j0S\n1K7gNc69Sqe+i+1OARyDctOyC4yEYuGR5Jx3vfrZFBdoUGNS86qrUtkoD4Hr\n+Ae0sAz0eBK1iV8rKcZUs6cdPWr32xJGuAqnBhRFUiR+47NWv2sKIU5QDJas\nx56Uv5ZfJ1R5P2EoDRqw28IiohjuFbT41NMt2muaicQIaswdI/ySIyR3J46b\njTf4ejAyIpe3HqLskzbDU2LTkqITn8LPwLB+vzxYYyEjzyrutCSyRn6V6AQz\nTVEdStIUtIqNOqIhYptyQSBBtVstPxvcgalUJQ0VlmKovsMXwmKxqNJfXnNd\n6vndG3cJvebMfOpcu+1+j/uSMu1W94iJuod1ErKlc6UMW+ONHk4Z68jQrJOJ\npmCRDtoWJgin7zQqs776bAeQC6j3EOTqLJLb4wBvavAuWCSfhc0xQt3BWcNR\nNFam2MCXF6L974XgRD8zidnAUWE4iSFTDdy62FHOBaeoBjf/xnH8ij1CyoaS\nL5T+5opOnZGFTwDMsG35NVkN1C48BSr6ynoJ65YFmxdrDuHkekqPOIJNKHtQ\nrW/hXx5XrFCi0hXX1ss7lV/bGLzw6dRmMZcxaXCxhF2XnF3Xv2pj5r7qd9C0\nnF9TrTobW7eLZeOYcdIRCfL0PX+N2mgWKymtPSUl1h8aqpR5OsENGP4EQzeo\nqyzMMEd/2VrRR8cLuT/k48wk2wg41QloEET+lmoPmPG/772xCI4jELcJ58uH\nNYazsFUAjXHzzXtkZegnEd7D+6BMkBuLLZ9mS1og3yc1TVoB/wbluK7m8Txi\nOBUl2Z+HgegDeaD/9DZmyaElX2AXdJU+bTcDNLUGUPPCSjxe4LPi7yoQ63xL\n3javxL/Fg/MOZYtMMo0cZrW1iqvZB/WmEHHy3CqeBgb6entexjmwGWq2OjZG\nArpb1IbxhYWUf6UZ854mbZUgi1byD49JM6iDZ2oqskeJOSI0Z0uBSC9LEDxt\nGt+hVOuxTZcFzbXE2sccyEiUPWvkKCil/Lv+CR2P7NOn8MYJi+DnohvrO8L3\nTS7Oe3OyyEF4LiecBYMsIQvqTVCKTgIG2lDYIDW+70iWJWZnX5SrMpAk6n/H\n1Zz5aLglQyWhPaXgsmLcnfxDWa/0r4Gqoz/kPYQNiiXSJ5haPkCDpZtnlAPU\nGoyOIlbskc2E94lRZneUoLYEMp5nJDFL3pk9wqMdOwdI5PQK+PE7lyhperYE\nwGPB/LOG5nY6QGEAKHUdCc8jEDNfgklUKnU4iRlpVY3okoqgZmRCaUSMJlFq\nGZjvHF/p9L1n8ZrIflZS+NYJCzeFBzsX7Q8/49BLMe3uzw/ZDNK5JuWikPe4\nbqzROhPDkgo5BKQoYs9Cgk6jgZox9z4b48CAA5YPwx1zOUGNl9yPSl+bzjc4\nxez4WBqJ0AM1mV2Q7hm4S1NhxiukmLY=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 18:06:39 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 18:07:04 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

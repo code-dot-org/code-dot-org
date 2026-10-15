@@ -75,11 +75,11 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 
   const [feedback, setFeedback] = useState<'correct' | 'incorrect'>();
 
-  const questionsRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const questionHeadingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    const headings = questionsRef.current?.querySelectorAll<HTMLElement>('h2');
     // The step title first, then each later question's own heading.
-    headings?.[index === 0 ? 0 : headings.length - 1]?.focus();
+    (index === 0 ? titleRef : questionHeadingRef).current?.focus();
   }, [index]);
 
   const completedRef = useRef(false);
@@ -160,6 +160,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
       return (
         <MultiChoiceQuestionContainer
           key={q.id}
+          headingRef={questionHeadingRef}
           question={q}
           questionLabel={questionLabel}
           selectedChoiceId={selectedChoiceId}
@@ -173,7 +174,12 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     }
     if (q.type === 'freeResponse') {
       return (
-        <AttemptCard key={q.id} label={questionLabel} title={q.text}>
+        <AttemptCard
+          key={q.id}
+          headingRef={questionHeadingRef}
+          label={questionLabel}
+          title={q.text}
+        >
           <textarea
             className={styles.freeResponseTextarea}
             value={freeResponseText}
@@ -191,9 +197,9 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   };
 
   return (
-    <div className={styles.questionsStep} ref={questionsRef}>
+    <div className={styles.questionsStep}>
       <div className={styles.questionsIntro}>
-        <MuiTypography variant="h2" tabIndex={-1}>
+        <MuiTypography variant="h2" tabIndex={-1} ref={titleRef}>
           {step.title}
         </MuiTypography>
         {step.description && (

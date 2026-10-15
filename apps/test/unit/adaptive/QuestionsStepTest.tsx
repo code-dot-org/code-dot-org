@@ -155,6 +155,25 @@ describe('QuestionsStep', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
       expect(onComplete).toHaveBeenCalledTimes(1);
     });
+
+    it('focuses the step title on the first question', () => {
+      renderStep({}, twoQuestionStep);
+      expect(
+        screen.getByRole('heading', {name: 'Quick questions'})
+      ).toHaveFocus();
+    });
+
+    it("focuses each later question's heading once it is reached", () => {
+      renderStep({}, twoQuestionStep);
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      act(() => {
+        jest.runAllTimers();
+      });
+      expect(
+        screen.getByRole('heading', {name: 'Second question'})
+      ).toHaveFocus();
+    });
   });
 
   describe('with a graded question', () => {

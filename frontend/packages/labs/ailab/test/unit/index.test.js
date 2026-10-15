@@ -2,12 +2,7 @@ import {act} from '@testing-library/react';
 
 import I18n from '../../src/i18n';
 import {initAll, loadLevel, startOver, unmount} from '../../src/index';
-import {
-  setAccuracyCheckExamples,
-  setCurrentPanel,
-  setHistoricResult,
-  setLabelColumn,
-} from '../../src/redux';
+import {setAccuracyCheckExamples, setCurrentPanel} from '../../src/redux';
 import {store} from '../../src/store';
 
 vi.mock('../../src/csvReaderWrapper');
@@ -19,24 +14,19 @@ afterEach(() => I18n.reset());
 describe('startOver', () => {
   beforeEach(() => {
     loadLevel(undefined);
-    store.dispatch(setLabelColumn('animal'));
     store.dispatch(setCurrentPanel('results'));
     store.dispatch(setAccuracyCheckExamples([[4]]));
-    store.dispatch(setHistoricResult('animal', ['legs'], '80.00'));
   });
 
-  test('keeps the results of models already trained', () => {
+  test('asks the reset to keep the results already earned', () => {
     startOver();
 
-    expect(store.getState().historicResults).toEqual([
-      {label: 'animal', features: ['legs'], accuracy: '80.00'},
-    ]);
+    expect(store.getState().resetKeepsHistoricResults).toBe(true);
   });
 
   test('resets everything else to the start of the level', () => {
     startOver();
 
-    expect(store.getState().labelColumn).toBeUndefined();
     expect(store.getState().currentPanel).toBe('datasetView');
     expect(store.getState().accuracyCheckExamples).toEqual([]);
   });
@@ -59,12 +49,20 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('clears the results of the previous level', () => {
-    store.dispatch(setHistoricResult('animal', ['legs'], '80.00'));
+  test('asks the reset to drop the previous level’s results', () => {
+    startOver();
 
     loadLevel(undefined);
 
-    expect(store.getState().historicResults).toEqual([]);
+    expect(store.getState().resetKeepsHistoricResults).toBe(false);
+  });
+
+  test('reserves random rows for testing unless the mode asks for the last rows', () => {
+    loadLevel(undefined);
+    expect(store.getState().reserveLocation).toBe('random');
+
+    loadLevel({reserveLastRows: true});
+    expect(store.getState().reserveLocation).toBe('end');
   });
 });
 

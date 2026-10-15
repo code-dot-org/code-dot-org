@@ -5,21 +5,22 @@ import I18n from '../../src/i18n';
 import {replayTraining, setTrainingModalStep} from '../../src/redux';
 import TrainingModal from '../../src/UIComponents/TrainingModal';
 
-import {levelStore} from './levelStore';
-import {renderWithProviders, trainModel} from './renderWithProviders';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 // Longer than either animation takes to finish.
 const ANIMATION_TIMEOUT_MS = 60000;
 
 function startTraining({replay = false} = {}) {
   const store = levelStore({});
-  const trainedModel = trainModel(store);
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
   store.dispatch(replay ? replayTraining() : setTrainingModalStep('training'));
-  const {trainingData} = renderWithProviders(createElement(TrainingModal), {
-    store,
-    trainedModel,
-  });
-  return {store, trainingData};
+  const {trainingData, project: projectValue} = renderWithProviders(
+    createElement(TrainingModal),
+    {store, project, trainingRun},
+  );
+  return {store, trainingData, project: projectValue};
 }
 
 const button = name => screen.queryByRole('button', {name});
@@ -48,15 +49,16 @@ describe('TrainingModal', () => {
   });
 
   test('Cancel closes the modal and discards the run', () => {
-    const {store, trainingData} = startTraining();
+    const {store, trainingData, project} = startTraining();
     fireEvent.click(button('Cancel'));
 
     const state = store.getState();
     expect(state.trainingModalStep).toBeUndefined();
-    expect(state.historicResults).toEqual([]);
+    expect(project().historicResults).toEqual([]);
     expect(trainingData().trainedModel).toBeUndefined();
-    expect(state.labelColumn).toBe('animal');
-    expect(state.selectedFeatures).toEqual(['legs']);
+    // A cancelled run undoes its own results, never the student's columns.
+    expect(project().labelColumn).toBe('animal');
+    expect(project().selectedFeatures).toEqual(['legs']);
   });
 
   test('a replay offers Back to dataset, not Cancel, at each step', () => {
@@ -72,13 +74,13 @@ describe('TrainingModal', () => {
   });
 
   test('closing a replay keeps the run', () => {
-    const {store} = startTraining({replay: true});
+    const {store, project} = startTraining({replay: true});
     fireEvent.click(button('Back to dataset'));
 
     const state = store.getState();
     expect(state.trainingModalStep).toBeUndefined();
     expect(state.isTrainingReplay).toBe(false);
-    expect(state.historicResults).toHaveLength(1);
+    expect(project().historicResults).toHaveLength(1);
   });
 
   test('a new run after a replay offers Cancel again', () => {
@@ -92,7 +94,7 @@ describe('TrainingModal', () => {
 
   test('Back to dataset keeps a finished run', () => {
     vi.useFakeTimers();
-    const {store, trainingData} = startTraining();
+    const {store, trainingData, project} = startTraining();
     act(() => {
       store.dispatch(setTrainingModalStep('testing'));
     });
@@ -103,7 +105,7 @@ describe('TrainingModal', () => {
 
     const state = store.getState();
     expect(state.trainingModalStep).toBeUndefined();
-    expect(state.historicResults).toHaveLength(1);
+    expect(project().historicResults).toHaveLength(1);
     expect(trainingData().trainedModel).toBeDefined();
   });
 });

@@ -13,13 +13,13 @@ import {
 } from './helpers/navigationValidation';
 import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
+  AilabProject,
   DataRow,
-  Hyperparameters,
   Metadata,
   Mode,
+  PresetColumns,
   TrainedModelDetailsSave,
   SaveResponseData,
-  HistoricResult,
   PrevNextButtons,
   InstructionsKey,
   SaveResponse,
@@ -38,10 +38,7 @@ export interface RootState {
   metadata: Metadata;
   removedRowsCount: number;
   highlightDataset: string | undefined;
-  highlightColumn: string | undefined;
   columnsByDataType: Record<string, string>;
-  selectedFeatures: string[];
-  labelColumn: string | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
@@ -65,20 +62,21 @@ export interface RootState {
   currentColumn: string | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
-  historicResults: HistoricResult[];
-  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
+  presetColumns: PresetColumns | undefined;
   resetCount: number;
+  resetKeepsHistoricResults: boolean;
   mode?: Mode;
 }
 
 // What a training run writes to Redux, so a cancelled run can be undone. The
-// model it also produces is undone by TrainingDataContext.
+// model and the project data it also produces are undone by their own
+// contexts.
 const TRAINING_RESULT_KEYS = [
   'featureNumberKey',
   'trainingExamples',
@@ -86,8 +84,6 @@ const TRAINING_RESULT_KEYS = [
   'accuracyCheckExamples',
   'accuracyCheckLabels',
   'accuracyCheckPredictedLabels',
-  'hyperparameters',
-  'historicResults',
 ] as const;
 
 export type TrainingResults = Pick<
@@ -113,10 +109,7 @@ export const initialState: RootState = {
   },
   removedRowsCount: 0,
   highlightDataset: undefined,
-  highlightColumn: undefined,
   columnsByDataType: {},
-  selectedFeatures: [],
-  labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
@@ -143,15 +136,15 @@ export const initialState: RootState = {
   // Additional data for a failed save response.  Currently contains
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
-  historicResults: [],
-  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
+  presetColumns: undefined,
   resetCount: 0,
+  resetKeepsHistoricResults: false,
 };
 
 const ailabSlice = createSlice({
@@ -193,14 +186,9 @@ const ailabSlice = createSlice({
     },
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
-      if (
-        state.mode &&
-        state.mode.datasets &&
-        state.mode.datasets.length > 1 &&
-        state.mode.hideSelectLabel
-      ) {
-        state.labelColumn = action.payload.defaultLabelColumn;
-      }
+    },
+    setPresetColumns(state, action: PayloadAction<PresetColumns>) {
+      state.presetColumns = action.payload;
     },
     setRemovedRowsCount(state, action: PayloadAction<number>) {
       state.removedRowsCount = action.payload;
@@ -216,32 +204,6 @@ const ailabSlice = createSlice({
       prepare(column: string, dataType: string) {
         return {payload: {column, dataType}};
       },
-    },
-    addSelectedFeature(state, action: PayloadAction<string>) {
-      if (!state.selectedFeatures.includes(action.payload)) {
-        const columns = Object.keys(state.data[0] ?? {});
-        state.selectedFeatures.push(action.payload);
-        state.selectedFeatures.sort(
-          (a, b) => columns.indexOf(a) - columns.indexOf(b),
-        );
-      }
-    },
-    removeSelectedFeature(state, action: PayloadAction<string>) {
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
-    },
-    setSelectedFeatures(state, action: PayloadAction<string[]>) {
-      const columns = Object.keys(state.data[0] ?? {});
-      state.selectedFeatures = [...action.payload].sort(
-        (a, b) => columns.indexOf(a) - columns.indexOf(b),
-      );
-    },
-    setLabelColumn(state, action: PayloadAction<string>) {
-      state.labelColumn = action.payload;
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -322,14 +284,20 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState(state) {
-      return {
-        ...initialState,
-        mode: state.mode,
-        reserveLocation: state.reserveLocation,
-        instructionsEnabled: state.instructionsEnabled,
-        resetCount: state.resetCount + 1,
-      };
+    resetState: {
+      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
+        return {
+          ...initialState,
+          mode: state.mode,
+          reserveLocation: state.reserveLocation,
+          instructionsEnabled: state.instructionsEnabled,
+          resetCount: state.resetCount + 1,
+          resetKeepsHistoricResults: action.payload.keepHistoricResults,
+        };
+      },
+      prepare(keepHistoricResults = false) {
+        return {payload: {keepHistoricResults}};
+      },
     },
     setTrainedModelDetail: {
       reducer(
@@ -395,20 +363,6 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightColumn(state, action: PayloadAction<string>) {
-      const highlightColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
-        return;
-      }
-      if (
-        state.currentPanel === 'datasetView' &&
-        highlightColumn === state.labelColumn
-      ) {
-        return;
-      }
-      state.highlightColumn = highlightColumn;
-    },
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
@@ -437,26 +391,6 @@ const ailabSlice = createSlice({
         return {payload: {status, data}};
       },
     },
-    setHistoricResult: {
-      reducer(state, action: PayloadAction<HistoricResult>) {
-        state.historicResults.unshift(action.payload);
-      },
-      prepare(
-        label: string,
-        features: string[],
-        accuracy: string,
-        correct: number,
-        total: number,
-      ) {
-        return {payload: {label, features, accuracy, correct, total}};
-      },
-    },
-    setHistoricResults(state, action: PayloadAction<HistoricResult[]>) {
-      state.historicResults = action.payload;
-    },
-    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
-      state.hyperparameters = action.payload;
-    },
     restoreTrainingResults(state, action: PayloadAction<TrainingResults>) {
       Object.assign(state, action.payload);
     },
@@ -480,12 +414,9 @@ export const {
   setInvalidData,
   setImportedData,
   setImportedMetadata,
+  setPresetColumns,
   setRemovedRowsCount,
   setColumnsByDataType,
-  addSelectedFeature,
-  removeSelectedFeature,
-  setSelectedFeatures,
-  setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
   setAccuracyCheckExamples,
@@ -503,14 +434,10 @@ export const {
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
-  setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
   replayTraining,
   setSaveStatus,
-  setHistoricResult,
-  setHistoricResults,
-  setHyperparameters,
   restoreTrainingResults,
   setInstructionsDismissed,
   setInstructionsEnabled,
@@ -526,10 +453,15 @@ export default ailabSlice.reducer;
 export const saveModel =
   (
     saveTrainedModel: SaveTrainedModel,
+    project: AilabProject,
     trainedModel?: TrainedModel,
   ): ThunkAction<void, RootState, unknown, AnyAction> =>
   (dispatch, getState) => {
-    const dataToSave = getTrainedModelDataToSave(getState(), trainedModel);
+    const dataToSave = getTrainedModelDataToSave(
+      getState(),
+      project,
+      trainedModel,
+    );
     dispatch(setSaveStatus('started'));
     saveTrainedModel(dataToSave, (response: SaveResponse) => {
       dispatch(setSaveStatus(response.status, response.data));
@@ -551,33 +483,48 @@ export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
-export function getPredictAvailable(state: RootState): boolean {
+export function getHideDatasetView(state: RootState): boolean {
+  return !!state.mode?.hideDatasetView;
+}
+
+export function getHideTestingView(state: RootState): boolean {
+  return !!state.mode?.hideTestingView;
+}
+
+export function getPredictAvailable(
+  state: RootState,
+  project: AilabProject,
+): boolean {
   return (
     Object.keys(state.testData).filter(
       value => state.testData[value] && state.testData[value] !== '',
-    ).length === state.selectedFeatures.length
+    ).length === project.selectedFeatures.length
   );
 }
 
 // Builds {prev, next} and reads the I18n global for button text, so it is not
 // memoized on Redux state. App selects it with a prev/next-aware equality fn so
 // the new object reference doesn't trigger unnecessary rerenders.
-export function getPanelButtons(state: RootState): PrevNextButtons {
-  return prevNextButtons(state);
+export function getPanelButtons(
+  state: RootState,
+  project: AilabProject,
+): PrevNextButtons {
+  return prevNextButtons(state, project);
 }
 
-export function readyToTrain(state: RootState): boolean {
-  return uniqLabelFeaturesSelected(state);
+export function readyToTrain(project: AilabProject): boolean {
+  return uniqLabelFeaturesSelected(project);
 }
 
 /* Functions for processing data to display. */
 
 export function getTableData(
   state: RootState,
+  project: AilabProject,
   useResultsData: boolean,
 ): DataRow[] {
   if (useResultsData) {
-    return getResultsDataInDataTableForm(state);
+    return getResultsDataInDataTableForm(state, project);
   } else {
     return state.data;
   }

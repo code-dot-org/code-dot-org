@@ -10,9 +10,7 @@ interface AddItemButtonProps {
   disabled?: boolean;
 }
 
-// A full-width, dashed-outlined row for appending an item to a list -
-// shared by "Add option" (AnswersTab) and each page's "Create question"
-// (QuizBuilderWorkspace).
+// A full-width, dashed-outlined row for appending an item to a list.
 const AddItemButton: React.FunctionComponent<AddItemButtonProps> = ({
   label,
   onClick,
