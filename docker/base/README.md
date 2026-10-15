@@ -5,7 +5,7 @@ images (build stage, runtime-web, runtime-worker, dev, ci) layer on top of
 this. The base carries runtime dependencies only: no build toolchain, no
 Node, no gems, no source tree.
 
-Contents: Ruby 3.2.11 (slim bookworm), the MySQL client + client libs,
+Contents: Ruby 3.3.12 (slim bookworm), the MySQL client + client libs,
 ImageMagick, jemalloc (preloaded via `LD_PRELOAD`), curl, CA certs, locales,
 and tzdata. Runs as the non-root `cdo` user (uid/gid 1000) with workdir
 `/code-dot-org`.
