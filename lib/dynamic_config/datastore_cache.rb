@@ -67,7 +67,7 @@ class DatastoreCache
   def set(key, value)
     raise ArgumentError unless key.is_a? String
     @datastore.set(key, value)
-    # An eventually consistent read here can miss the write just made.
+    # Use `consistent_read: true` for read-after-write
     populate_shared_cache(consistent_read: true)
     update_local_cache
   end
