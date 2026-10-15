@@ -7,6 +7,7 @@ import {QuizQuestionSummary} from '../types';
 import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import QuestionDescription from './QuestionDescription';
 import {QuizQuestionResult} from './types';
 
 import styles from './question-result-card.module.scss';
@@ -17,15 +18,27 @@ export interface QuestionResultCardProps {
   questionLabel?: string;
   result: QuizQuestionResult;
   revealAnswerExplanation?: boolean;
+  // A teacher viewing a student's attempt; the selected answer is the student's.
+  isViewingStudent?: boolean;
+}
+
+function selectedAnswerLabel(isViewingStudent?: boolean): string {
+  return isViewingStudent ? "Student's answer" : 'Your answer';
 }
 
 type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
+
+function selectedChoiceIdOf(result: QuizQuestionResult): string | null {
+  return result.questionType === 'MultipleChoiceQuestion'
+    ? result.responseData.selectedChoiceId ?? null
+    : null;
+}
 
 function getChoiceStatus(
   choiceId: string,
   result: QuizQuestionResult
 ): ChoiceStatus {
-  const isSelected = choiceId === result.selectedChoiceId;
+  const isSelected = choiceId === selectedChoiceIdOf(result);
   const isCorrectAnswer = choiceId === result.correctChoiceId;
 
   // showCorrectness off - still show what was picked, ungraded.
@@ -47,12 +60,17 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   questionLabel,
   result,
   revealAnswerExplanation,
+  isViewingStudent,
 }) => (
-  <AttemptCard label={questionLabel} title={question.questionTitle}>
+  <AttemptCard
+    label={questionLabel}
+    title={question.questionTitle}
+    description={<QuestionDescription markdown={question.description} />}
+  >
     <ul className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
         const status = getChoiceStatus(choice.id, result);
-        const isSelectedChoice = choice.id === result.selectedChoiceId;
+        const isSelectedChoice = choice.id === selectedChoiceIdOf(result);
 
         return (
           <li
@@ -99,11 +117,15 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
                   iconStyle="solid"
                   className={styles.incorrectIcon}
                 />
-                <span className={styles.srOnly}>Your answer, incorrect</span>
+                <span className={styles.srOnly}>
+                  {selectedAnswerLabel(isViewingStudent)}, incorrect
+                </span>
               </>
             )}
             {status === 'selected_ungraded' && (
-              <span className={styles.srOnly}>Your answer</span>
+              <span className={styles.srOnly}>
+                {selectedAnswerLabel(isViewingStudent)}
+              </span>
             )}
           </li>
         );

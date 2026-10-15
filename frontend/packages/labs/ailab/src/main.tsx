@@ -5,13 +5,12 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
 import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
-import queryString from 'query-string';
-
 import {injectFontAwesome} from '@code-dot-org/fonts';
+import queryString from 'query-string';
 
 import type {ModelDataToSave, Mode, SaveResponse} from './types';
 
-import {initAll, instructionsDismissed} from './index';
+import {initAll, instructionsDismissed, startOver} from './index';
 
 injectFontAwesome();
 
@@ -63,9 +62,7 @@ const sampleModes: Record<string, Mode> = {
     trainer: 'decisionTree',
   },
 
-  'final-project': {
-    randomizeTestData: true,
-  },
+  'final-project': {},
 
   'club-test': {
     datasets: [
@@ -115,7 +112,7 @@ function onContinueStub(): void {
 
 function saveTrainedModelStub(
   data: ModelDataToSave,
-  response: (result: SaveResponse) => void,
+  response: (result: SaveResponse) => void
 ): void {
   console.log('This would save a trained model.', data);
   setTimeout(() => response({id: 303, status: 'success'}), 2000);
@@ -123,14 +120,14 @@ function saveTrainedModelStub(
 
 function logMetricStub(
   eventName: string,
-  details: Record<string, unknown>,
+  details: Record<string, unknown>
 ): void {
   console.log(`This would log a metric for ${eventName}.`, details);
 }
 
 function setInstructionsKeyStub(
   instructionsKey: string,
-  options: {showOverlay?: boolean} | null,
+  options: {showOverlay?: boolean} | null
 ): void {
   const element = document.getElementById('instructions')!;
 
@@ -156,4 +153,5 @@ initAll({
   saveTrainedModel: saveTrainedModelStub,
   setInstructionsKey: setInstructionsKeyStub,
   logMetric: logMetricStub,
+  onStartOver: startOver,
 });

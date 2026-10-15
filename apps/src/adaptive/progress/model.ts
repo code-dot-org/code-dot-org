@@ -2,6 +2,8 @@
 // and the status each checkpoint takes from that. Nothing here touches React
 // or storage; useProgress and progressStore build on it.
 
+import {hashString} from '@cdo/apps/utils';
+
 import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
@@ -13,12 +15,45 @@ export type CheckpointStatus =
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
 
+/** One submitted answer. isCorrect is absent for a survey question. */
+export interface Answer {
+  answerId: string;
+  isCorrect?: boolean;
+}
+
+/** Submitted answers per question, oldest first; the last is current. */
+export type StepAnswers = {[questionId: number]: Answer[]};
+
+/** What a step has accumulated for a student, by concern. */
+export interface StepContext {
+  /**
+   * Any content that was dynamically generated for this step, keyed by
+   * generateInputsHash. traceId is the Langfuse trace it was generated under.
+   */
+  generated?: {instructions: string; inputsHash: string; traceId?: string};
+  answers?: StepAnswers;
+}
+
+/**
+ * Keys generated content to the full prompt it was made from, so a change
+ * to any input, the brief, the project, the authored text or our wording,
+ * regenerates it.
+ */
+export function generateInputsHash(prompt: string): string {
+  return hashString(prompt);
+}
+
 export interface Progress {
   completed: string[];
   started: string[];
+  stepContext: {[stepId: string]: StepContext};
 }
 
-export const EMPTY_PROGRESS: Progress = {completed: [], started: []};
+export const EMPTY_PROGRESS: Progress = {
+  completed: [],
+  started: [],
+  stepContext: {},
+};
 
 /** A checkpoint unlocks once every checkpoint it requires is complete. */
 export function checkpointStatus(

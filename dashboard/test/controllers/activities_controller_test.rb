@@ -653,14 +653,15 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
 
       it 'tracks progress using the Statsig cookie instead of a conflicting session ID' do
+        session_stable_id = Cdo::AnonUserId.generate
         cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = anon_user_id
-        session[:statsig_stable_id] = Cdo::AnonUserId.generate
+        session[:statsig_stable_id] = session_stable_id
         expect_anonymous_level_tracking(new_result: 100)
 
         post :milestone, params: @milestone_params.merge(user_id: 0)
 
         _(@response).must_be :successful?
-        _(session[:statsig_stable_id]).must_equal anon_user_id
+        _(session[:statsig_stable_id]).must_equal session_stable_id
       end
 
       it 'adds progress to an existing session' do

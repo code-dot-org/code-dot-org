@@ -6,13 +6,14 @@ import classNames from 'classnames';
 import React from 'react';
 
 import AddItemButton from '../AddItemButton';
-import {QuizQuestionEditableFields} from '../types';
+import {MultipleChoiceDraft, QuizQuestionDraft} from '../types';
 
 import styles from './quiz-question-card.module.scss';
+import builderCommonStyles from '../builder-common.module.scss';
 
 interface AnswersTabProps {
-  draft: QuizQuestionEditableFields;
-  onChange: (draft: QuizQuestionEditableFields) => void;
+  draft: QuizQuestionDraft;
+  onChange: (draft: QuizQuestionDraft) => void;
   disabled?: boolean;
 }
 
@@ -28,10 +29,15 @@ function nextChoiceId(existingIds: string[]): string {
   return String(n);
 }
 
-// The Answers tab: choices, which one is correct, and an optional
-// explanation. Only ever single-correct (radio, not checkbox) - the
-// backend has no way to store more than one correctChoiceId yet.
-const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
+interface ChoicesEditorProps {
+  draft: MultipleChoiceDraft;
+  onChange: (draft: MultipleChoiceDraft) => void;
+  disabled?: boolean;
+}
+
+// Only ever single-correct (radio, not checkbox) - the backend has no way
+// to store more than one correctChoiceId yet.
+const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
   draft,
   onChange,
   disabled,
@@ -60,7 +66,7 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   };
 
   return (
-    <div className={styles.tabContent}>
+    <>
       <div className={styles.optionsList}>
         {draft.choices.map(choice => {
           const isCorrect = draft.correctChoiceId === choice.id;
@@ -69,8 +75,9 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
               <TextField
                 name={`choice-${choice.id}`}
                 aria-label="Choice text"
-                size="m"
-                className={styles.optionText}
+                size="s"
+                color="gray"
+                className={classNames(styles.fullWidthField, styles.optionText)}
                 value={choice.text}
                 onChange={e => updateChoiceText(choice.id, e.target.value)}
                 disabled={disabled}
@@ -107,19 +114,31 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
         onClick={addChoice}
         disabled={disabled}
       />
-
-      <FormFieldWrapper label="Answer explanation (optional)">
-        <textarea
-          className={styles.textarea}
-          name="explanation"
-          rows={4}
-          value={draft.explanation ?? ''}
-          onChange={e => onChange({...draft, explanation: e.target.value})}
-          disabled={disabled}
-        />
-      </FormFieldWrapper>
-    </div>
+    </>
   );
 };
+
+const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
+  draft,
+  onChange,
+  disabled,
+}) => (
+  <div className={builderCommonStyles.section}>
+    {draft.type === 'MultipleChoiceQuestion' && (
+      <ChoicesEditor draft={draft} onChange={onChange} disabled={disabled} />
+    )}
+
+    <FormFieldWrapper label="Answer explanation (optional)">
+      <textarea
+        className={builderCommonStyles.textarea}
+        name="explanation"
+        rows={4}
+        value={draft.explanation ?? ''}
+        onChange={e => onChange({...draft, explanation: e.target.value})}
+        disabled={disabled}
+      />
+    </FormFieldWrapper>
+  </div>
+);
 
 export default AnswersTab;

@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-11T00:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Beach Days",
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice1-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Fit the model by calling `model.fit` with `train_inputs` and `train_outputs`.\r\n- Measure your model’s loss. First, call `model.predict` with `test_inputs`. Then, calculate the mean squared error of those predictions against the `test_outputs`.\r\n- Print your model’s loss. \r\n\r\n\r\n💻 Coding Tip\r\n\r\nRemember you can fit a model with:\r\n\r\n```\r\nmodel.fit(train_inputs, train_outputs)\r\n```\r\n\r\nTo measure your model’s loss on the test data, first use the fitted model to make predictions from the test inputs.\r\n\r\n```\r\npredictions = model.predict(test_inputs)\r\n```\r\n\r\nThen, compute the mean squared error by comparing those predictions with the actual test outputs.\r\n\r\n```\r\nmse = mean_squared_error(test_outputs, predictions)\r\n```\r\n\r\nConsider rounding the result as you print it.\r\n\r\n```\r\nprint(round(mse, 2))\r\n```\r\n",
+    "bubble_choice_description": "Help a beach concession stand predict how many people will come every day.",
+    "thumbnail_url": "https://images.code.org/0f63c1903a0ac027ac8222e1433bb56f-concession.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5mPCyuvzzhIhUA\nzmo9F/Zk6vwmfYYmOGXDSjMOcu6YZvtlNfuJZep4aqG/cJRkLmDy7PSPxNEI\n4VExpAYmpPCMk7XHiLwsqwNrUS6WcolHr2TwxI6tEalSYeVGdtxTJgEZYMGN\nKNNVL46H9GdhM1wAmZzJZbDhC/mbkPhbPlOEQYJio3RqE+vIWc0zyCZeFxt/\ntkV73kNQCXgiNXPrw2w2YtAITk7segZAkU37tSi6oz+cO554+qbJ7bj9HLrG\nHiaRTbpCE6b/d6Em4jYXTZBS1nfYKp5wFfv0IyHVyXVHIt2Zf9PR3baxcD8M\n11MgnL6GWmsXgm6g1ZEq4RMf3kLGHmiA+Tmn5l2YWEan0BSCwS72Gl1vnr2c\n7FHwccTJtkqKis/M7R07mC6w3mvkb0mw8lMLHbV/+esgZL1yQfW2flHOPjZE\nyABWyXzP+/SvwUXUxc36Ayf99oDAodKeRouUe03C3BupFRZiO48fggIFPA6d\nf6F4j0xUQrawXgS+WYLBT/F72vItsUOH5hbzi5p5iCcmwmI4BZno2m8p9zdV\nTIjiYoo82yYYaVx3N7flQz0A8eAlMBMlcfVEdyaLekxixPaw3+t44XgR5dTM\nFHZgACJCVFHp0OGhFNcWDgp6cEu6fV/75q1NJbGngoJiKLKUvaUQTu6KBSip\nFzOKux4yAnYNuGADOale61+F3+PcnEiQ0W6xjGmKowS4EyCclPVQ4yRy7LoR\nQboPzuM8d11tz2iYkdCVoX6AAKe8jlfylbzD4d9PUgQMgfDNYC8lkZMHOHU1\n3aaW2YQ/GUXkPYWyHv4MIUluaqS7pVJIQKzkYqwC5VTb3iDeuCMA5KwECUJu\nu4vr1aX72tH3DOXL+A9zOQmTuIXdC+RzDUfgJMyP2xwGIdhsIR4U44tZdiMd\nBhgR2jDjweGHbLMqlkPmsjw5C75USQ4oWbP2f8RRnjTvrp+QxQsluoBJE81y\nMuLXsKIpio3Bsa3GIiFROFP1K+BePxFYjRXskpZX3YN3pYkEe6GHZKjUe3rZ\nEQzl/sCTGFLD4MiuEnHpHBlKo4/sEDt5XM1N7VpVYyPGAmWYuJiwDWSMG4Nh\nghK7klDBDIck+JSAiWBfeK0n/WUCggFmIgGnXPh7A4h647qLc2G00aepvA7K\nGbQzqlukyMd7sYhu4hXPzi+cVHsIhXPAMsy7287FKGKcuFEBZEK6QmQtBafy\nlelXpQ9LhYxqGgftJBDottpOdvTeS0Je8SVL5sX0P+OASQmmGGYyLODbeRzn\n1rs7roH2KDG7mQNQUFYfImeLdDHcOmfhzgOgOOfty98GkBgOyGpwhFALqkAg\nAiqYt712cgh5tqm6gGioHsxz/WKjSIMivYAo5Klt9yivP0IkqhWvHXMZAVqy\n42RfGILNVGwlzk+fNuKJy9c6/8W/pvcQqfyOC4f3n71e/rAdsnxMxe4X56qH\np/aBIPmPEJ5u07khvqd02Pw5/ZZUAaev4yUN+vjb3Ut3AtMV6I7PgHfkGcuS\nnRp0zVhUf/HDrFVltCsWe/49KSz+SFguYxtKBGou1JgNg0zfLO2CWKUskCNQ\ntOATTaaymJtwst8F34hjsy2ZkVMUVd5yukTMBC/MLfabxSBGnAWYbM7GGFZ+\nF6Am46BfkosnFf2LAfmLdr99DLNCTkJTeqC1BBDIXcZw1NMklrybMppHZgXl\nM2rcnGBS7W66h45D6dMHn2IIgjTHT+1BLZ3/rsopPa5qbNnodyexAIKcRAZj\nEXupwHrlOGYjVHc1Ho5IoScb3k+c+zRYw2gX92qTUZMSrgnIZYAMNz6vUTwc\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:27:13 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:28:43 +0000\",\"changed\":[\"project_template_level_name\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:29:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:43:52 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

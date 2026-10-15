@@ -38,3 +38,10 @@
   background-color: var(--background-neutral-primary, white);
   box-shadow: var(--shadow-sm);
 }
+
+.hints {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  pointer-events: none;
+}

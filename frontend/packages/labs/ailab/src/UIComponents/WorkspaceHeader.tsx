@@ -1,11 +1,18 @@
 /* Header row across the top of the lab's workspace. */
-import {Tooltip, Typography} from '@mui/material';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {Button, Tooltip, Typography} from '@mui/material';
+import React from 'react';
 
 import {isPanelEnabled} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setCurrentPanel} from '../redux';
+import {useProject} from '../ProjectContext';
+import {
+  getHideDatasetView,
+  getHideTestingView,
+  setCurrentPanel,
+} from '../redux';
 
 import styles from './workspaceHeader.module.scss';
 
@@ -14,10 +21,20 @@ const TABS = [
   {panel: 'results', label: 'Testing', iconName: 'flask'},
 ] as const;
 
-const WorkspaceHeader = () => {
+interface WorkspaceHeaderProps {
+  onStartOver?: () => void;
+}
+
+const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
   const dispatch = useAppDispatch();
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const canTest = useAppSelector(state => isPanelEnabled(state, 'results'));
+  const showsOneView = useAppSelector(
+    state => getHideDatasetView(state) || getHideTestingView(state)
+  );
+  const {project} = useProject();
+  const canTest = useAppSelector(state =>
+    isPanelEnabled(state, project, 'results')
+  );
   const openTab = TABS.find(tab => tab.panel === currentPanel);
 
   const onTabChange = (value: string) => {
@@ -29,7 +46,7 @@ const WorkspaceHeader = () => {
 
   return (
     <div className={styles.header}>
-      {openTab && (
+      {openTab && !showsOneView && (
         <Tooltip
           title={
             canTest ? undefined : 'Train the model on these columns to test it'
@@ -46,7 +63,6 @@ const WorkspaceHeader = () => {
                 label: tab.label,
                 iconLeft: {iconName: tab.iconName, iconStyle: 'solid'},
                 disabled: tab.panel === 'results' && !canTest,
-                className: styles.tab,
               }))}
             />
           </div>
@@ -55,6 +71,20 @@ const WorkspaceHeader = () => {
       <Typography component="h2" variant="overline2" className={styles.title}>
         Workspace
       </Typography>
+      {onStartOver && (
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
+          startIcon={
+            <FontAwesomeV6Icon iconName="rotate-left" aria-hidden="true" />
+          }
+          onClick={onStartOver}
+          className={styles.startOver}
+        >
+          Start over
+        </Button>
+      )}
     </div>
   );
 };

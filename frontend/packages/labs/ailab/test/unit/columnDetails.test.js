@@ -61,7 +61,7 @@ describe('filter columns by datatype', () => {
   test('filter numerical columns', async () => {
     const result = filterColumnsByType(
       regressionState.columnsByDataType,
-      ColumnTypes.NUMERICAL,
+      ColumnTypes.NUMERICAL
     );
     expect(result).toEqual(['height']);
   });
@@ -69,7 +69,7 @@ describe('filter columns by datatype', () => {
   test('filter categorical columns', async () => {
     const result = filterColumnsByType(
       regressionState.columnsByDataType,
-      ColumnTypes.CATEGORICAL,
+      ColumnTypes.CATEGORICAL
     );
     expect(result).toEqual(['sun']);
   });
@@ -78,7 +78,7 @@ describe('filter columns by datatype', () => {
 describe('unique options', () => {
   const uniqueOptions = getUniqueOptions(
     classificationState.data,
-    'temp',
+    'temp'
   ).sort();
 
   test('get unique options', async () => {
@@ -149,7 +149,7 @@ describe('getColumnDescription', () => {
     const result = getColumnDescription(
       'mosquitoCount',
       premadeDatasetState.metadata,
-      {},
+      {}
     );
     expect(result).toEqual(mosquitoDescription);
   });
@@ -160,7 +160,7 @@ describe('getColumnDescription', () => {
     const result = getColumnDescription(
       'mosquitoCount',
       premadeDatasetState.metadata,
-      {},
+      {}
     );
     expect(result).toEqual('mosquitoCount description');
   });

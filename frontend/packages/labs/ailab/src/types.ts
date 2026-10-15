@@ -7,11 +7,21 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
+  label?: string;
+  features?: string[];
+  // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
+  lockFeatures?: boolean;
+  // Trains on `label` and `features` when the level loads. Requires both locks and `reserveLastRows`.
+  pretrained?: boolean;
+  // Opens on the results once pretrained, with no way back. Requires `pretrained`.
+  hideDatasetView?: boolean;
+  // Hides training, leaving only the dataset. Excludes `pretrained` and `requireAccuracy`.
+  hideTestingView?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
-  randomizeTestData?: boolean;
+  reserveLastRows?: boolean;
   hideColumnClicking?: boolean;
 }
 
@@ -144,7 +154,33 @@ export interface HistoricResult {
   label: string;
   features: string[];
   accuracy: string;
+  correct: number;
+  total: number;
 }
+
+/* Columns a level's mode fixes for the student, once a dataset has loaded. */
+export interface PresetColumns {
+  labelColumn?: string;
+  selectedFeatures?: string[];
+}
+
+/* Everything saved with a student's work and restored when the level loads
+   again. */
+export interface AilabProject {
+  labelColumn?: string;
+  selectedFeatures: string[];
+  hyperparameters?: Hyperparameters;
+  accuracyCheckRowIndices?: number[];
+  historicResults: HistoricResult[];
+}
+
+export const initialProject: AilabProject = {
+  labelColumn: undefined,
+  selectedFeatures: [],
+  hyperparameters: undefined,
+  accuracyCheckRowIndices: undefined,
+  historicResults: [],
+};
 
 export interface ModelDataToSave {
   name?: string;
@@ -162,7 +198,7 @@ export interface ModelDataToSave {
 
 export type SaveTrainedModel = (
   dataToSave: ModelDataToSave,
-  callback: (response: SaveResponse) => void,
+  callback: (response: SaveResponse) => void
 ) => void;
 
 export interface NavButton {

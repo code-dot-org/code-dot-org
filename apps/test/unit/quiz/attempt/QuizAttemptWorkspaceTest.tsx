@@ -3,23 +3,53 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {
-  navigateToNextLevel,
   sendStartedReportIfNotStarted,
   sendSuccessReportForLevel,
 } from '@cdo/apps/code-studio/progressRedux';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {navigateToNextLevelOrFinish} from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
 jest.mock('@cdo/apps/quiz/attempt/useQuizAttempt');
+
+// The real alert reads teacher-section and progress state this test has no store for.
+jest.mock('@cdo/apps/lab2/views/alerts/teacherViewingStudentProject', () => ({
+  __esModule: true,
+  default: ({
+    getAlertText,
+    type,
+  }: {
+    getAlertText?: (studentName: string | undefined) => React.ReactElement;
+    type?: string;
+  }) => (
+    <div role="note" data-type={type}>
+      {getAlertText?.('Aisha Khan')}
+    </div>
+  ),
+}));
 const mockUseQuizAttempt = jest.mocked(useQuizAttempt);
 
 const mockDispatch = jest.fn();
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   ...jest.requireActual('@cdo/apps/util/reduxHooks'),
   useAppDispatch: () => mockDispatch,
+  useAppSelector: (selector: (state: unknown) => unknown) => selector({}),
 }));
+
+jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
+  nextLevelId: jest.fn(),
+}));
+const mockNextLevelId = jest.mocked(nextLevelId);
+
+jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
+  navigateToNextLevelOrFinish: jest.fn(),
+}));
+const mockNavigateToNextLevelOrFinish = jest.mocked(
+  navigateToNextLevelOrFinish
+);
 
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
   sendSuccessReportForLevel: jest.fn((levelId, appName) => ({
@@ -31,13 +61,11 @@ jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
     type: 'SEND_STARTED_REPORT',
     appName,
   })),
-  navigateToNextLevel: jest.fn(() => ({type: 'NAVIGATE_TO_NEXT_LEVEL'})),
 }));
 const mockSendSuccessReportForLevel = jest.mocked(sendSuccessReportForLevel);
 const mockSendStartedReportIfNotStarted = jest.mocked(
   sendStartedReportIfNotStarted
 );
-const mockNavigateToNextLevel = jest.mocked(navigateToNextLevel);
 
 const ATTEMPT: QuizAttemptData = {
   id: 1,
@@ -106,6 +134,7 @@ function renderWorkspace({
   // per-question results list - only tests for the hidden-questions path
   // opt out.
   showQuestionsAfterSubmit = true,
+  viewAsUserId,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
@@ -116,6 +145,7 @@ function renderWorkspace({
   showCorrectness?: boolean;
   customIntroText?: string;
   showQuestionsAfterSubmit?: boolean;
+  viewAsUserId?: number;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
@@ -131,6 +161,7 @@ function renderWorkspace({
       showCorrectness={showCorrectness}
       customIntroText={customIntroText}
       showQuestionsAfterSubmit={showQuestionsAfterSubmit}
+      viewAsUserId={viewAsUserId}
     />
   );
 }
@@ -153,12 +184,14 @@ describe('QuizAttemptWorkspace', () => {
           typeof sendStartedReportIfNotStarted
         >)
     );
-    mockNavigateToNextLevel.mockImplementation(
+    mockNavigateToNextLevelOrFinish.mockImplementation(
       () =>
-        ({type: 'NAVIGATE_TO_NEXT_LEVEL'} as unknown as ReturnType<
-          typeof navigateToNextLevel
+        ({type: 'NAVIGATE_TO_NEXT_LEVEL_OR_FINISH'} as unknown as ReturnType<
+          typeof navigateToNextLevelOrFinish
         >)
     );
+    // Not the last level unless a test says otherwise.
+    mockNextLevelId.mockReturnValue(43);
     // clear, not reset: beginAttempt's resolved implementation has to
     // survive, since a no-intro render calls it from the auto-begin effect.
     jest.clearAllMocks();
@@ -328,14 +361,16 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -375,7 +410,7 @@ describe('QuizAttemptWorkspace', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('dispatches navigateToNextLevel when Next level is clicked', async () => {
+  it('dispatches navigateToNextLevelOrFinish when Next level is clicked', async () => {
     renderWorkspace({
       hookState: {
         attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
@@ -386,9 +421,29 @@ describe('QuizAttemptWorkspace', () => {
 
     // Waits on the (already-resolved, since nothing was submitted this
     // render) pending-report promise first.
-    await waitFor(() => expect(mockNavigateToNextLevel).toHaveBeenCalled());
+    await waitFor(() =>
+      expect(mockNavigateToNextLevelOrFinish).toHaveBeenCalled()
+    );
     expect(mockDispatch).toHaveBeenCalledWith(
-      mockNavigateToNextLevel.mock.results[0].value
+      mockNavigateToNextLevelOrFinish.mock.results[0].value
+    );
+  });
+
+  it('shows Finish level instead of Next level on the last level, and still finishes through the same path', async () => {
+    mockNextLevelId.mockReturnValue(undefined);
+    renderWorkspace({
+      hookState: {
+        attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'},
+      },
+    });
+
+    expect(
+      screen.queryByRole('button', {name: /Next level/})
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Finish level'}));
+
+    await waitFor(() =>
+      expect(mockNavigateToNextLevelOrFinish).toHaveBeenCalled()
     );
   });
 
@@ -442,10 +497,12 @@ describe('QuizAttemptWorkspace', () => {
     );
 
     fireEvent.click(screen.getByRole('button', {name: /Next level/}));
-    expect(mockNavigateToNextLevel).not.toHaveBeenCalled();
+    expect(mockNavigateToNextLevelOrFinish).not.toHaveBeenCalled();
 
     report.resolve(undefined);
-    await waitFor(() => expect(mockNavigateToNextLevel).toHaveBeenCalled());
+    await waitFor(() =>
+      expect(mockNavigateToNextLevelOrFinish).toHaveBeenCalled()
+    );
   });
 
   it('shows an open-ended attempt count when the quiz allows multiple attempts', () => {
@@ -562,14 +619,16 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -687,7 +746,11 @@ describe('QuizAttemptWorkspace', () => {
         attempt: {
           ...ATTEMPT,
           questionResultsInProgress: [
-            {quizQuestionId: 1, selectedChoiceId: 'b'},
+            {
+              quizQuestionId: 1,
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
+            },
           ],
         },
       },
@@ -951,5 +1014,141 @@ describe('QuizAttemptWorkspace', () => {
     expect(
       screen.queryByRole('button', {name: /Next|Submit|Finish/})
     ).not.toBeInTheDocument();
+  });
+
+  it('shows no viewing-student alert to a student taking their own quiz', () => {
+    renderWorkspace({hookState: {attempt: null}, showIntroScreen: true});
+    expect(screen.queryByRole('note')).not.toBeInTheDocument();
+  });
+
+  describe('when a teacher is viewing a student', () => {
+    const SUBMITTED: QuizAttemptData = {
+      ...ATTEMPT,
+      submittedAt: '2026-01-01T00:00:00Z',
+      score: 1,
+      maxScore: 1,
+      canRetake: true,
+      questionResults: [
+        {
+          quizQuestionId: 1,
+          questionType: 'MultipleChoiceQuestion',
+          responseData: {selectedChoiceId: 'b'},
+          correct: true,
+          explanation: 'Because 3 + 5 = 8.',
+          correctChoiceId: 'b',
+        },
+      ],
+    };
+
+    it("says the student's quiz is loading while the attempt loads", () => {
+      renderWorkspace({
+        hookState: {attempt: undefined, isLoading: true},
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent("Loading Aisha Khan's quiz...");
+      expect(alert).toHaveAttribute('data-type', 'info');
+    });
+
+    it('still shows the read-only alert when the attempt failed to load', () => {
+      renderWorkspace({
+        hookState: {attempt: undefined, isLoading: false, error: 'Oops'},
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByRole('note')).toHaveTextContent(
+        "You are viewing Aisha Khan's work in read only mode."
+      );
+    });
+
+    it("fetches the student's attempt rather than the teacher's own", () => {
+      renderWorkspace({viewAsUserId: 99});
+      expect(mockUseQuizAttempt).toHaveBeenCalledWith(
+        expect.objectContaining({userId: 99})
+      );
+    });
+
+    it('never starts an attempt, even for a quiz with no intro screen', () => {
+      const beginAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: null, beginAttempt},
+        showIntroScreen: false,
+        viewAsUserId: 99,
+      });
+
+      expect(beginAttempt).not.toHaveBeenCalled();
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent("Aisha Khan hasn't started this level.");
+      expect(alert).toHaveAttribute('data-type', 'info');
+    });
+
+    it("shows every question, unanswered and read-only, when the student hasn't started", () => {
+      renderWorkspace({
+        hookState: {attempt: null},
+        quizQuestions: [
+          question({id: 1, questionTitle: 'What is the value of x?'}),
+          question({id: 2, questionTitle: 'What is the value of y?', page: 2}),
+        ],
+        viewAsUserId: 99,
+      });
+
+      expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
+      expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
+      ).not.toBeInTheDocument();
+    });
+
+    it("shows the student's saved answers, ungraded and read-only, while in progress", () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 1,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'b'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [question({id: 1})],
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent(
+        'Aisha Khan is still working on this assessment.'
+      );
+      expect(alert).toHaveAttribute('data-type', 'warning');
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: /Next|Submit|Finish/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('shows score, question results, and the explanation even when the quiz hides them, without Try again', () => {
+      renderWorkspace({
+        hookState: {attempt: SUBMITTED},
+        quizQuestions: [question({id: 1})],
+        showCorrectness: false,
+        showQuestionsAfterSubmit: false,
+        viewAsUserId: 99,
+      });
+
+      const alert = screen.getByRole('note');
+      expect(alert).toHaveTextContent(
+        "You are viewing Aisha Khan's work in read only mode."
+      );
+      expect(alert).toHaveAttribute('data-type', 'info');
+      expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Try again'})
+      ).not.toBeInTheDocument();
+    });
   });
 });

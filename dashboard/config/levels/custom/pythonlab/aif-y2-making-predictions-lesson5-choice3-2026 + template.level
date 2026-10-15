@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-11T00:01:59.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# TODO 1: Import `train_test_split`\n\n# Read data\nf = open(\"gaming_data.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs\ninputs = []\nfor row in data:\n  inputs.append([\n    int(row[\"hours_practiced_per_week\"]),\n    int(row[\"reaction_time_ms\"]),\n    int(row[\"matches_played\"])\n  ])\n\n# Define outputs\noutputs = []\nfor row in data:\n  outputs.append(int(row[\"ranked_points\"]))\n\n# TODO 2: Split data using `train_test_split`\n\n# Create model\nmodel = LinearRegression()\n\n# TODO 3: Fit model\n\n# TODO 4: Measure loss\n\n# TODO 5: Print loss",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "gaming_data.csv",
+          "contents": "hours_practiced_per_week,reaction_time_ms,matches_played,ranked_points\n2,280,15,450\n15,180,120,2800\n5,250,40,900\n20,160,140,3200\n8,230,60,1300\n3,270,20,520\n12,190,100,2400\n6,240,50,1050\n18,170,130,3050\n1,290,10,350\n10,210,80,1900\n4,260,30,700\n16,185,110,2650\n7,235,55,1150\n14,195,95,2250\n2,275,18,480\n9,220,70,1600\n19,165,135,3100\n5,245,35,850\n11,205,85,2050",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:02:55 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:02:59 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:06:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:06:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:12:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-14 03:13:17 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

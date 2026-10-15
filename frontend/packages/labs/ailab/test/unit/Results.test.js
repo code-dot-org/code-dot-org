@@ -1,40 +1,17 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {render, screen} from '@testing-library/react';
+import {screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
-import train from '../../src/train';
 import Results from '../../src/UIComponents/Results';
 
-import {levelStore} from './levelStore';
-
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
-  train.reset();
-  train.init(store);
-  train.onClickTrain();
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(Results),
-      ),
-    ),
-  );
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
+  renderWithProviders(createElement(Results), {store, project, trainingRun});
 }
 
 function testPanel() {
@@ -49,12 +26,12 @@ describe('Results', () => {
     renderTrainedResults({trainer: 'decisionTree'});
 
     expect(
-      document.getElementById('uitest-decision-tree').contains(testPanel()),
+      document.getElementById('uitest-decision-tree').contains(testPanel())
     ).toBe(true);
     expect(
       screen
-        .getByRole('img', {name: "Diagram of your model's decision tree"})
-        .contains(testPanel()),
+        .getByRole('tree', {name: "Your model's decision tree"})
+        .contains(testPanel())
     ).toBe(false);
   });
 

@@ -560,6 +560,15 @@ Resources:
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dev"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+        - PolicyName: ManageZeroEtlIntegrationDataFilter
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 'rds:DescribeIntegrations'
+                Resource: '*' # Unscoped so a daemon can enumerate every Integration to find the match for the current environment type.
+              - Effect: Allow
+                Action: 'rds:ModifyIntegration'
+                Resource: !Ref ZeroETLIntegration
 <% end -%>
 <% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
@@ -618,19 +627,6 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
-        - PolicyName: DMSStartAndMonitorReplicationTasks
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action:
-                  - dms:DescribeReplicationTasks
-                Resource: "*"
-              - Effect: Allow
-                Action:
-                  - dms:DescribeTableStatistics
-                  - dms:ListTagsForResource
-                  - dms:StartReplicationTask
-                Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
 <% if rack_env?(:test) -%>
         # AWS Device Farm (Test Grid) access for UI test runners on the test daemon.

@@ -14,7 +14,7 @@
     text-wrap: nowrap;
     text-overflow: ellipsis;
 
-    button {
+    > button {
       width: 100%;
 
       span {
@@ -89,13 +89,10 @@
     background-color: var(--background-neutral-primary);
     border: 1px solid var(--borders-neutral-primary);
     border-radius: 4px;
-    -webkit-box-shadow:
-      rgb(0 0 0 / 0.1) 0 10px 15px -3px,
-      rgb(0 0 0 / 0.05) 0 4px 6px -2px;
-    box-shadow:
-      rgb(0 0 0 / 0.1) 0 10px 15px -3px,
-      rgb(0 0 0 / 0.05) 0 4px 6px -2px;
+    box-shadow: var(--shadow-md);
     background-clip: padding-box;
+    box-sizing: border-box;
+    min-width: 100%;
     white-space: nowrap;
 
     ul {
@@ -223,8 +220,10 @@
 
   .bottomButtonsContainer {
     display: flex;
-    align-items: flex-start;
+    flex-shrink: 0;
+    align-items: center;
     justify-content: space-between;
+    gap: 0.25rem;
     padding: 0.25rem;
 
     border-radius: 0 0 0.25rem 0.25rem;
@@ -235,6 +234,20 @@
 .dropdownContainer.open {
   .dropdownMenuContainer {
     display: block;
+
+    // Pins the action row so it's always visible.
+    &:has(.bottomButtonsContainer) {
+      display: flex;
+      flex-direction: column;
+      max-height: min(20rem, calc(100vh - 8rem));
+      overflow: hidden;
+
+      ul {
+        overflow-y: auto;
+        min-height: 0;
+        overscroll-behavior: contain;
+      }
+    }
   }
 }
 

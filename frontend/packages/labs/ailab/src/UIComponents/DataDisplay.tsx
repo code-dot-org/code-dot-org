@@ -1,5 +1,6 @@
 /* React component to handle displaying imported data. */
 import {Typography} from '@mui/material';
+import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppSelector} from '../hooks';

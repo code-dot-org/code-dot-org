@@ -1,13 +1,13 @@
 /* Modal that animates training, then testing, a newly trained model. */
-import {Button, Typography} from '@mui/material';
-import {useEffect, useState} from 'react';
-
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
+import React, {useEffect, useState} from 'react';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setCurrentPanel, setTrainingModalStep} from '../redux';
+import {useTrainingRun} from '../useTrainingRun';
 
 import GenerateResults from './GenerateResults';
 import TrainModel from './TrainModel';
@@ -20,7 +20,9 @@ const TITLE_ID = 'training-modal-title';
 const TrainingModal = () => {
   const dispatch = useAppDispatch();
   const step = useAppSelector(state => state.trainingModalStep);
+  const isReplay = useAppSelector(state => state.isTrainingReplay);
   const [testingFinished, setTestingFinished] = useState(false);
+  const {cancelRun} = useTrainingRun();
 
   // This component stays mounted between runs, so each run starts over.
   useEffect(() => {
@@ -34,16 +36,23 @@ const TrainingModal = () => {
   }
 
   const isTraining = step === 'training';
-  const closeModal = () => dispatch(setTrainingModalStep(undefined));
+  const isInProgress = !isReplay && (isTraining || !testingFinished);
+  const closeModal = () => {
+    if (isInProgress) {
+      cancelRun();
+    }
+    dispatch(setTrainingModalStep(undefined));
+  };
   const showTesting = () => dispatch(setTrainingModalStep('testing'));
   const showResults = () => dispatch(setCurrentPanel('results'));
+  const cancelLabel = isTraining ? 'Cancel Training' : 'Cancel Testing';
 
   return (
     <MuiCustomDialog
       className={styles.dialog}
       aria-labelledby={TITLE_ID}
       onClose={closeModal}
-      closeLabel="Close"
+      closeLabel={isInProgress ? cancelLabel : 'Close'}
     >
       <div className={styles.titleRow}>
         <Typography
@@ -60,7 +69,7 @@ const TrainingModal = () => {
         {I18n.t(
           isTraining
             ? 'animationDescriptionsTraining'
-            : 'animationDescriptionsTesting',
+            : 'animationDescriptionsTesting'
         )}
       </p>
       <div className={styles.content}>
@@ -72,7 +81,7 @@ const TrainingModal = () => {
       </div>
       <div className={styles.actionRow}>
         <Button variant="outlined" color="secondary" onClick={closeModal}>
-          Back to dataset
+          {isInProgress ? 'Cancel' : 'Back to dataset'}
         </Button>
         <Button
           variant="contained"

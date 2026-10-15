@@ -1,8 +1,7 @@
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import TreeCanvas from '../../src/UIComponents/TreeCanvas';
 
@@ -24,7 +23,7 @@ vi.stubGlobal(
     disconnect() {
       resizeCallbacks.delete(this.callback);
     }
-  },
+  }
 );
 
 function resizeViewport(width, height) {
@@ -32,18 +31,20 @@ function resizeViewport(width, height) {
   act(() => resizeCallbacks.forEach(callback => callback([])));
 }
 
-function renderCanvas(props = {}) {
-  render(
+function canvas(props = {}, children = 'tree') {
+  return createElement(
+    ThemeProvider,
+    {theme: getMuiThemeForBrand(undefined)},
     createElement(
-      ThemeProvider,
-      {theme: getMuiThemeForBrand(undefined)},
-      createElement(
-        TreeCanvas,
-        {contentWidth: 752, contentHeight: 312, ...props},
-        'tree',
-      ),
-    ),
+      TreeCanvas,
+      {contentWidth: 752, contentHeight: 312, ...props},
+      children
+    )
   );
+}
+
+function renderCanvas(props, children) {
+  return render(canvas(props, children));
 }
 
 function overlayRef(width, top = 0) {
@@ -55,6 +56,55 @@ function overlayRef(width, top = 0) {
     bottom: top + 200,
   });
   return {current: overlay};
+}
+
+function mockBoxes(boxes) {
+  vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
+    function () {
+      const {left, top, width = 0, height = 0} = boxes.get(this);
+      return {
+        left,
+        top,
+        width,
+        height,
+        right: left + width,
+        bottom: top + height,
+      };
+    }
+  );
+}
+
+let followNode;
+
+// Fitted, the content's origin sits at (72, 102) at scale 0.5, in a frame from x = 72 to 448.
+function renderNodesAt(xs, props = {}, viewportWidth = 472) {
+  const children = xs.map(x =>
+    createElement(
+      'button',
+      {key: x, id: `node-${x}`, type: 'button'},
+      `node at ${x}`
+    )
+  );
+  const {rerender} = renderCanvas(props, children);
+  followNode = id => rerender(canvas({...props, followId: id}, children));
+  resizeViewport(viewportWidth, 360);
+  const nodes = xs.map(x => screen.getByText(`node at ${x}`));
+  const boxes = new Map(
+    nodes.map((node, index) => [
+      node,
+      {left: 72 + xs[index] / 2, top: 202, width: 80, height: 20},
+    ])
+  );
+  const content = nodes[0].parentElement;
+  boxes.set(content, {left: 72, top: 102});
+  boxes.set(content.parentElement, {
+    left: 0,
+    top: 0,
+    width: viewportWidth,
+    height: 360,
+  });
+  mockBoxes(boxes);
+  return nodes;
 }
 
 function button(name) {
@@ -74,10 +124,10 @@ describe('TreeCanvas', () => {
     viewportSize = {width: 0, height: 0};
     resizeCallbacks = new Set();
     vi.spyOn(Element.prototype, 'clientWidth', 'get').mockImplementation(
-      () => viewportSize.width,
+      () => viewportSize.width
     );
     vi.spyOn(Element.prototype, 'clientHeight', 'get').mockImplementation(
-      () => viewportSize.height,
+      () => viewportSize.height
     );
     vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(
       () => ({
@@ -85,17 +135,17 @@ describe('TreeCanvas', () => {
         right: viewportSize.width,
         top: 0,
         bottom: viewportSize.height,
-      }),
+      })
     );
     vi.spyOn(HTMLElement.prototype, 'offsetLeft', 'get').mockImplementation(
       function () {
         return this.getAttribute('role') === 'group' ? TOOLBAR_LEFT : 0;
-      },
+      }
     );
     vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockImplementation(
       function () {
         return this.getAttribute('role') === 'group' ? TOOLBAR_WIDTH : 0;
-      },
+      }
     );
   });
   afterEach(() => vi.restoreAllMocks());
@@ -149,7 +199,7 @@ describe('TreeCanvas', () => {
     fireEvent.click(button('Zoom to fit'));
 
     await vi.waitFor(() =>
-      expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)'),
+      expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)')
     );
   });
 
@@ -194,7 +244,7 @@ describe('TreeCanvas', () => {
     fireEvent.click(button('Zoom to your path'));
 
     await vi.waitFor(() =>
-      expect(contentTransform()).toBe('translate(180px, -80px) scale(1)'),
+      expect(contentTransform()).toBe('translate(180px, -80px) scale(1)')
     );
   });
 
@@ -204,10 +254,191 @@ describe('TreeCanvas', () => {
     expect(button('Zoom to your path').disabled).toBe(true);
     expect(button('Zoom to your path').parentElement.tabIndex).toBe(0);
     expect(button('Zoom to your path').parentElement.title).toBe(
-      'Make a prediction to see your path',
+      'Make a prediction to see your path'
     );
     expect(button('Zoom in').parentElement.hasAttribute('tabindex')).toBe(
-      false,
+      false
+    );
+  });
+
+  it('takes its zoom buttons out of the tab order when asked', () => {
+    renderCanvas({toolbarTabbable: false});
+
+    expect(button('Zoom in').tabIndex).toBe(-1);
+    expect(button('Zoom to your path').parentElement.tabIndex).toBe(-1);
+  });
+
+  it('zooms to a readable scale and pans a node that takes keyboard focus into view', async () => {
+    const [node] = renderNodesAt([800]);
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)'
+      )
+    );
+  });
+
+  it('pans a node that takes keyboard focus clear of an overlay', async () => {
+    const [node] = renderNodesAt([800], {overlayRef: overlayRef(376)}, 848);
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)'
+      )
+    );
+  });
+
+  it('keeps the view on a node it panned to when the viewport resizes', async () => {
+    const [node] = renderNodesAt([800]);
+    act(() => node.focus());
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)'
+      )
+    );
+
+    resizeViewport(848, 360);
+
+    expect(node.parentElement.style.transform).toBe(
+      'translate(-512px, 2px) scale(1)'
+    );
+  });
+
+  it('tells only the focused node the scale, so its ring can keep a width on screen', async () => {
+    const [node] = renderNodesAt([800]);
+
+    act(() => node.focus());
+
+    expect(node.style.getPropertyValue('--tree-canvas-scale')).toBe('0.5');
+    await vi.waitFor(() =>
+      expect(node.style.getPropertyValue('--tree-canvas-scale')).toBe('1')
+    );
+    expect(
+      node.parentElement.style.getPropertyValue('--tree-canvas-scale')
+    ).toBe('');
+  });
+
+  it('leaves the view alone when focus shows no ring, as after a click', async () => {
+    const [node] = renderNodesAt([800]);
+    const matches = Element.prototype.matches;
+    vi.spyOn(Element.prototype, 'matches').mockImplementation(
+      function (selector) {
+        return selector === ':focus-visible'
+          ? false
+          : matches.call(this, selector);
+      }
+    );
+
+    act(() => node.focus());
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    expect(node.parentElement.style.transform).toBe(
+      'translate(72px, 102px) scale(0.5)'
+    );
+  });
+
+  it('pans from where the view is heading when focus moves again', async () => {
+    const [far, near] = renderNodesAt([800, 100]);
+
+    act(() => far.focus());
+    act(() => near.focus());
+
+    await vi.waitFor(() =>
+      expect(near.parentElement.style.transform).toBe(
+        'translate(-28px, 2px) scale(1)'
+      )
+    );
+  });
+
+  it('zooms to a readable scale and pans the node it follows into view', async () => {
+    const [node] = renderNodesAt([800]);
+
+    followNode('node-800');
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(-512px, 2px) scale(1)'
+      )
+    );
+  });
+
+  it('follows from where the view is heading when the node it follows changes', async () => {
+    const [, near] = renderNodesAt([800, 100]);
+
+    followNode('node-800');
+    followNode('node-100');
+
+    await vi.waitFor(() =>
+      expect(near.parentElement.style.transform).toBe(
+        'translate(-28px, 2px) scale(1)'
+      )
+    );
+  });
+
+  it('pans a node that takes keyboard focus clear of the hints', async () => {
+    renderCanvas(
+      {hints: createElement('span', {}, 'hint')},
+      createElement('button', {type: 'button'}, 'node')
+    );
+    resizeViewport(472, 360);
+    const node = screen.getByText('node');
+    const hints = screen.getByText('hint').parentElement;
+    mockBoxes(
+      new Map([
+        [node, {left: 122, top: 12, width: 80, height: 20}],
+        [node.parentElement, {left: 72, top: 102}],
+      ])
+    );
+    vi.spyOn(HTMLElement.prototype, 'offsetTop', 'get').mockImplementation(
+      function () {
+        return this === hints ? 8 : 0;
+      }
+    );
+    vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockImplementation(
+      function () {
+        return this === hints ? 28 : 0;
+      }
+    );
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(22px, 240px) scale(1)'
+      )
+    );
+  });
+
+  it('pans a label hanging off a node into view with it', async () => {
+    renderCanvas(
+      {},
+      createElement(
+        'button',
+        {type: 'button'},
+        createElement('span', {}, 'label')
+      )
+    );
+    resizeViewport(472, 360);
+    const label = screen.getByText('label');
+    const node = label.parentElement;
+    mockBoxes(
+      new Map([
+        [node, {left: 122, top: 40, width: 80, height: 20}],
+        [label, {left: 142, top: 12, width: 40, height: 9}],
+        [node.parentElement, {left: 72, top: 102}],
+      ])
+    );
+
+    act(() => node.focus());
+
+    await vi.waitFor(() =>
+      expect(node.parentElement.style.transform).toBe(
+        'translate(22px, 204px) scale(1)'
+      )
     );
   });
 });

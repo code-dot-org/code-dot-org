@@ -6,27 +6,20 @@ import {
 } from '@reduxjs/toolkit';
 
 import {TestDataLocations, ResultsGrades} from './constants';
-import {
-  getSummaryStat,
-  getResultsDataInDataTableForm,
-} from './helpers/accuracy';
-import {getColumnDataToSave} from './helpers/columnDetails';
-import {getDatasetDetails} from './helpers/datasetDetails';
+import {getResultsDataInDataTableForm} from './helpers/accuracy';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
-import {getTrainerId} from './trainers/ids';
+import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
+  AilabProject,
   DataRow,
-  Hyperparameters,
   Metadata,
   Mode,
+  PresetColumns,
   TrainedModelDetailsSave,
   SaveResponseData,
-  HistoricResult,
-  ModelCardColumn,
-  ModelDataToSave,
   PrevNextButtons,
   InstructionsKey,
   SaveResponse,
@@ -45,10 +38,7 @@ export interface RootState {
   metadata: Metadata;
   removedRowsCount: number;
   highlightDataset: string | undefined;
-  highlightColumn: string | undefined;
   columnsByDataType: Record<string, string>;
-  selectedFeatures: string[];
-  labelColumn: string | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
@@ -60,23 +50,51 @@ export interface RootState {
   prediction: number | string | undefined;
   predictionTestData: Record<string, string | number>;
   predictionInputs: number[];
-  trainedModel: TrainedModel | undefined;
+  // Undefined shows the whole path; a number shows it up to that step.
+  predictionStep: number | undefined;
+  predictionStepByHand: boolean;
+  predictionPlaying: boolean;
+  predictionCount: number;
   trainedModelDetails: TrainedModelDetailsSave;
   currentPanel: Panel;
   trainingModalStep: TrainingModalStep | undefined;
+  isTrainingReplay: boolean;
   currentColumn: string | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
-  historicResults: HistoricResult[];
-  resultsHighlightRow: number | undefined;
-  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
+  presetColumns: PresetColumns | undefined;
+  resetCount: number;
+  resetKeepsHistoricResults: boolean;
   mode?: Mode;
+}
+
+// What a training run writes to Redux, so a cancelled run can be undone. The
+// model and the project data it also produces are undone by their own
+// contexts.
+const TRAINING_RESULT_KEYS = [
+  'featureNumberKey',
+  'trainingExamples',
+  'trainingLabels',
+  'accuracyCheckExamples',
+  'accuracyCheckLabels',
+  'accuracyCheckPredictedLabels',
+] as const;
+
+export type TrainingResults = Pick<
+  RootState,
+  (typeof TRAINING_RESULT_KEYS)[number]
+>;
+
+export function getTrainingResults(state: RootState): TrainingResults {
+  return Object.fromEntries(
+    TRAINING_RESULT_KEYS.map(key => [key, state[key]])
+  ) as TrainingResults;
 }
 
 export const initialState: RootState = {
@@ -91,10 +109,7 @@ export const initialState: RootState = {
   },
   removedRowsCount: 0,
   highlightDataset: undefined,
-  highlightColumn: undefined,
   columnsByDataType: {},
-  selectedFeatures: [],
-  labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
@@ -106,10 +121,14 @@ export const initialState: RootState = {
   prediction: undefined,
   predictionTestData: {},
   predictionInputs: [],
-  trainedModel: undefined,
+  predictionStep: undefined,
+  predictionStepByHand: false,
+  predictionPlaying: false,
+  predictionCount: 0,
   trainedModelDetails: {},
   currentPanel: 'datasetView',
   trainingModalStep: undefined,
+  isTrainingReplay: false,
   currentColumn: undefined,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
@@ -117,15 +136,15 @@ export const initialState: RootState = {
   // Additional data for a failed save response.  Currently contains
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
-  historicResults: [],
-  resultsHighlightRow: undefined,
-  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
+  presetColumns: undefined,
+  resetCount: 0,
+  resetKeepsHistoricResults: false,
 };
 
 const ailabSlice = createSlice({
@@ -150,7 +169,7 @@ const ailabSlice = createSlice({
     setImportedData: {
       reducer(
         state,
-        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>,
+        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>
       ) {
         const {data, userUploadedData} = action.payload;
         if (state.currentPanel === 'selectDataset') {
@@ -167,14 +186,9 @@ const ailabSlice = createSlice({
     },
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
-      if (
-        state.mode &&
-        state.mode.datasets &&
-        state.mode.datasets.length > 1 &&
-        state.mode.hideSelectLabel
-      ) {
-        state.labelColumn = action.payload.defaultLabelColumn;
-      }
+    },
+    setPresetColumns(state, action: PayloadAction<PresetColumns>) {
+      state.presetColumns = action.payload;
     },
     setRemovedRowsCount(state, action: PayloadAction<number>) {
       state.removedRowsCount = action.payload;
@@ -182,7 +196,7 @@ const ailabSlice = createSlice({
     setColumnsByDataType: {
       reducer(
         state,
-        action: PayloadAction<{column: string; dataType: string}>,
+        action: PayloadAction<{column: string; dataType: string}>
       ) {
         state.columnsByDataType[action.payload.column] =
           action.payload.dataType;
@@ -190,26 +204,6 @@ const ailabSlice = createSlice({
       prepare(column: string, dataType: string) {
         return {payload: {column, dataType}};
       },
-    },
-    addSelectedFeature(state, action: PayloadAction<string>) {
-      if (!state.selectedFeatures.includes(action.payload)) {
-        const columns = Object.keys(state.data[0] ?? {});
-        state.selectedFeatures.push(action.payload);
-        state.selectedFeatures.sort(
-          (a, b) => columns.indexOf(a) - columns.indexOf(b),
-        );
-      }
-    },
-    removeSelectedFeature(state, action: PayloadAction<string>) {
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
-    },
-    setLabelColumn(state, action: PayloadAction<string>) {
-      state.labelColumn = action.payload;
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -220,7 +214,7 @@ const ailabSlice = createSlice({
     */
     setFeatureNumberKey(
       state,
-      action: PayloadAction<Record<string, Record<string, number>>>,
+      action: PayloadAction<Record<string, Record<string, number>>>
     ) {
       state.featureNumberKey = action.payload;
     },
@@ -235,7 +229,7 @@ const ailabSlice = createSlice({
     },
     setAccuracyCheckPredictedLabels(
       state,
-      action: PayloadAction<(number | string)[]>,
+      action: PayloadAction<(number | string)[]>
     ) {
       state.accuracyCheckPredictedLabels = action.payload;
     },
@@ -248,7 +242,7 @@ const ailabSlice = createSlice({
     setTestData: {
       reducer(
         state,
-        action: PayloadAction<{feature: string; value: string | number}>,
+        action: PayloadAction<{feature: string; value: string | number}>
       ) {
         state.testData[action.payload.feature] = action.payload.value;
         state.prediction = undefined;
@@ -264,26 +258,46 @@ const ailabSlice = createSlice({
     setPrediction: {
       reducer(
         state,
-        action: PayloadAction<{prediction: number | string; inputs: number[]}>,
+        action: PayloadAction<{prediction: number | string; inputs: number[]}>
       ) {
         state.prediction = action.payload.prediction;
         state.predictionTestData = {...state.testData};
         state.predictionInputs = action.payload.inputs;
+        state.predictionStep = undefined;
+        state.predictionStepByHand = false;
+        state.predictionPlaying = false;
+        state.predictionCount += 1;
       },
       prepare(prediction: number | string, inputs: number[]) {
         return {payload: {prediction, inputs}};
       },
     },
-    resetState(state) {
-      return {
-        ...initialState,
-        mode: state.mode,
-        reserveLocation: state.reserveLocation,
-        instructionsEnabled: state.instructionsEnabled,
-      };
+    playPredictionStep(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
+      state.predictionStepByHand = false;
     },
-    setTrainedModel(state, action: PayloadAction<TrainedModel>) {
-      state.trainedModel = action.payload;
+    setPredictionPlaying(state, action: PayloadAction<boolean>) {
+      state.predictionPlaying = action.payload;
+    },
+    stepPredictionByHand(state, action: PayloadAction<number>) {
+      state.predictionStep = action.payload;
+      state.predictionStepByHand = true;
+      state.predictionPlaying = false;
+    },
+    resetState: {
+      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
+        return {
+          ...initialState,
+          mode: state.mode,
+          reserveLocation: state.reserveLocation,
+          instructionsEnabled: state.instructionsEnabled,
+          resetCount: state.resetCount + 1,
+          resetKeepsHistoricResults: action.payload.keepHistoricResults,
+        };
+      },
+      prepare(keepHistoricResults = false) {
+        return {payload: {keepHistoricResults}};
+      },
     },
     setTrainedModelDetail: {
       reducer(
@@ -292,7 +306,7 @@ const ailabSlice = createSlice({
           field: string;
           value: string;
           isColumn: boolean;
-        }>,
+        }>
       ) {
         const {field, value, isColumn} = action.payload;
         const details = state.trainedModelDetails;
@@ -329,6 +343,7 @@ const ailabSlice = createSlice({
       }
       state.currentPanel = currentPanel;
       state.trainingModalStep = undefined;
+      state.isTrainingReplay = false;
       state.instructionsOverlayActive = showedOverlay;
       state.instructionsKey = currentPanel as InstructionsKey;
       state.showOverlay = showedOverlay;
@@ -348,36 +363,26 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightColumn(state, action: PayloadAction<string>) {
-      const highlightColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
-        return;
-      }
-      if (
-        state.currentPanel === 'datasetView' &&
-        highlightColumn === state.labelColumn
-      ) {
-        return;
-      }
-      state.highlightColumn = highlightColumn;
-    },
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
     setTrainingModalStep(
       state,
-      action: PayloadAction<TrainingModalStep | undefined>,
+      action: PayloadAction<TrainingModalStep | undefined>
     ) {
       state.trainingModalStep = action.payload;
+      if (action.payload !== 'testing') {
+        state.isTrainingReplay = false;
+      }
     },
-    setResultsHighlightRow(state, action: PayloadAction<number>) {
-      state.resultsHighlightRow = action.payload;
+    replayTraining(state) {
+      state.trainingModalStep = 'training';
+      state.isTrainingReplay = true;
     },
     setSaveStatus: {
       reducer(
         state,
-        action: PayloadAction<{status: string; data?: SaveResponseData}>,
+        action: PayloadAction<{status: string; data?: SaveResponseData}>
       ) {
         state.saveStatus = action.payload.status;
         state.saveResponseData = action.payload.data;
@@ -386,27 +391,8 @@ const ailabSlice = createSlice({
         return {payload: {status, data}};
       },
     },
-    setHistoricResult: {
-      reducer(
-        state,
-        action: PayloadAction<{
-          label: string;
-          features: string[];
-          accuracy: string;
-        }>,
-      ) {
-        state.historicResults.unshift({
-          label: action.payload.label,
-          features: action.payload.features,
-          accuracy: action.payload.accuracy,
-        });
-      },
-      prepare(label: string, features: string[], accuracy: string) {
-        return {payload: {label, features, accuracy}};
-      },
-    },
-    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
-      state.hyperparameters = action.payload;
+    restoreTrainingResults(state, action: PayloadAction<TrainingResults>) {
+      Object.assign(state, action.payload);
     },
     setInstructionsDismissed(state) {
       state.instructionsOverlayActive = false;
@@ -428,11 +414,9 @@ export const {
   setInvalidData,
   setImportedData,
   setImportedMetadata,
+  setPresetColumns,
   setRemovedRowsCount,
   setColumnsByDataType,
-  addSelectedFeature,
-  removeSelectedFeature,
-  setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
   setAccuracyCheckExamples,
@@ -443,18 +427,18 @@ export const {
   setTestData,
   setTestDataValues,
   setPrediction,
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
   resetState,
-  setTrainedModel,
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
-  setHighlightColumn,
   setHighlightDataset,
   setTrainingModalStep,
-  setResultsHighlightRow,
+  replayTraining,
   setSaveStatus,
-  setHistoricResult,
-  setHyperparameters,
+  restoreTrainingResults,
   setInstructionsDismissed,
   setInstructionsEnabled,
   setResultsTab,
@@ -469,16 +453,22 @@ export default ailabSlice.reducer;
 export const saveModel =
   (
     saveTrainedModel: SaveTrainedModel,
+    project: AilabProject,
+    trainedModel?: TrainedModel
   ): ThunkAction<void, RootState, unknown, AnyAction> =>
   (dispatch, getState) => {
-    const dataToSave = getTrainedModelDataToSave(getState());
+    const dataToSave = getTrainedModelDataToSave(
+      getState(),
+      project,
+      trainedModel
+    );
     dispatch(setSaveStatus('started'));
     saveTrainedModel(dataToSave, (response: SaveResponse) => {
       dispatch(setSaveStatus(response.status, response.data));
       dispatch(
         setCurrentPanel(
-          response.status === 'success' ? 'modelSummary' : 'saveModel',
-        ),
+          response.status === 'success' ? 'modelSummary' : 'saveModel'
+        )
       );
     });
   };
@@ -493,64 +483,49 @@ export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
-export function getPredictAvailable(state: RootState): boolean {
+export function getHideDatasetView(state: RootState): boolean {
+  return !!state.mode?.hideDatasetView;
+}
+
+export function getHideTestingView(state: RootState): boolean {
+  return !!state.mode?.hideTestingView;
+}
+
+export function getPredictAvailable(
+  state: RootState,
+  project: AilabProject
+): boolean {
   return (
     Object.keys(state.testData).filter(
-      value => state.testData[value] && state.testData[value] !== '',
-    ).length === state.selectedFeatures.length
+      value => state.testData[value] && state.testData[value] !== ''
+    ).length === project.selectedFeatures.length
   );
 }
 
 // Builds {prev, next} and reads the I18n global for button text, so it is not
 // memoized on Redux state. App selects it with a prev/next-aware equality fn so
 // the new object reference doesn't trigger unnecessary rerenders.
-export function getPanelButtons(state: RootState): PrevNextButtons {
-  return prevNextButtons(state);
+export function getPanelButtons(
+  state: RootState,
+  project: AilabProject
+): PrevNextButtons {
+  return prevNextButtons(state, project);
 }
 
-export function readyToTrain(state: RootState): boolean {
-  return uniqLabelFeaturesSelected(state);
+export function readyToTrain(project: AilabProject): boolean {
+  return uniqLabelFeaturesSelected(project);
 }
 
 /* Functions for processing data to display. */
 
 export function getTableData(
   state: RootState,
-  useResultsData: boolean,
+  project: AilabProject,
+  useResultsData: boolean
 ): DataRow[] {
   if (useResultsData) {
-    return getResultsDataInDataTableForm(state);
+    return getResultsDataInDataTableForm(state, project);
   } else {
     return state.data;
   }
-}
-
-/* Functions for processing data about a trained model to save. */
-export function getFeaturesToSave(state: RootState): ModelCardColumn[] {
-  const features = state.selectedFeatures.map(feature =>
-    getColumnDataToSave(state, feature),
-  );
-  return features;
-}
-
-export function getLabelToSave(state: RootState): ModelCardColumn {
-  return getColumnDataToSave(state, state.labelColumn!);
-}
-
-export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
-  const dataToSave: ModelDataToSave = {
-    name: state.trainedModelDetails.name,
-    datasetDetails: getDatasetDetails(state),
-    potentialUses: state.trainedModelDetails.potentialUses,
-    potentialMisuses: state.trainedModelDetails.potentialMisuses,
-    selectedTrainer: getTrainerId(state),
-    featureNumberKey: state.featureNumberKey,
-    label: getColumnDataToSave(state, state.labelColumn!),
-    features: getFeaturesToSave(state),
-    summaryStat: getSummaryStat(state),
-    trainedModel: state.trainedModel ? state.trainedModel.toJSON() : null,
-    hyperparameters: state.hyperparameters ?? null,
-  };
-
-  return dataToSave;
 }

@@ -70,6 +70,79 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'lab2 level pretrains only on a locked label and features, with no random rows or required accuracy' do
+    pretrained = {datasets: ['zoo'], pretrained: true, hideSelectLabel: true, lockFeatures: true, reserveLastRows: true, label: 'Type', features: ['Legs']}
+    assert build(:ailab, uses_lab2: 'true', mode: pretrained.to_json).valid?
+
+    no_columns = 'must choose a label and features when pretrained.'
+    no_locks = 'must lock the label and features when pretrained.'
+    [
+      [{label: nil}, no_columns], [{label: ''}, no_columns], [{features: nil}, no_columns], [{features: []}, no_columns], [{features: 'Legs'}, no_columns], [{features: ['Type']}, no_columns],
+      [{hideSelectLabel: nil}, no_locks], [{lockFeatures: nil}, no_locks],
+      [{reserveLastRows: nil}, 'must test on the last rows when pretrained.'], [{reserveLastRows: false}, 'must test on the last rows when pretrained.'],
+      [{requireAccuracy: 70}, 'cannot require an accuracy when pretrained.'],
+    ].each do |change, error|
+      level = build(:ailab, uses_lab2: 'true', mode: pretrained.merge(change).compact.to_json)
+      refute level.valid?, "expected pretraining with #{change.inspect} to be invalid"
+      assert_equal [error], level.errors[:mode]
+    end
+  end
+
+  test 'lab2 level hides the dataset view only when pretrained' do
+    pretrained = {datasets: ['zoo'], pretrained: true, hideSelectLabel: true, lockFeatures: true, reserveLastRows: true, label: 'Type', features: ['Legs']}
+    assert build(:ailab, uses_lab2: 'true', mode: pretrained.merge(hideDatasetView: true).to_json).valid?
+
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideDatasetView: true}.to_json)
+    refute level.valid?
+    assert_equal ['cannot hide the dataset view unless pretrained.'], level.errors[:mode]
+  end
+
+  test 'lab2 level hides the testing view only without pretraining or a required accuracy' do
+    assert build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideTestingView: true}.to_json).valid?
+
+    pretrained = {datasets: ['zoo'], pretrained: true, hideSelectLabel: true, lockFeatures: true, reserveLastRows: true, label: 'Type', features: ['Legs']}
+    level = build(:ailab, uses_lab2: 'true', mode: pretrained.merge(hideTestingView: true).to_json)
+    refute level.valid?
+    assert_equal ['cannot hide the testing view when pretrained.'], level.errors[:mode]
+
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], hideTestingView: true, requireAccuracy: 70}.to_json)
+    refute level.valid?
+    assert_equal ['cannot require an accuracy when the testing view is hidden.'], level.errors[:mode]
+  end
+
+  test 'lab2 level derives validations from requireAccuracy' do
+    level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], requireAccuracy: 70}.to_json)
+    met, unmet = level.get_validations
+    assert_equal [{'name' => 'ACCURACY_AT_LEAST', 'value' => 70}], met['conditions']
+    assert met['next']
+    assert_equal 'Train a model with at least 70% accuracy to continue.', unmet['message']
+    refute unmet['next']
+    assert level.validated?
+  end
+
+  test 'lab2 level without a positive requireAccuracy has no validations' do
+    [{datasets: ['zoo']}, {datasets: ['zoo'], requireAccuracy: 0}].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode.to_json)
+      assert_nil level.get_validations
+      refute level.validated?
+    end
+  end
+
+  test 'legacy level has no validations' do
+    level = build(:ailab, mode: {requireAccuracy: 70}.to_json)
+    assert_nil level.get_validations
+  end
+
+  test 'lab2 level is channel backed' do
+    level = build(:ailab, uses_lab2: 'true', mode: '{"datasets": ["zoo"]}')
+    assert level.channel_backed?
+  end
+
+  test 'legacy level is not channel backed' do
+    level = build(:ailab, mode: '{"hideSave": true}')
+    refute level.channel_backed?
+  end
+
   test 'legacy level does not require a dataset' do
     [nil, 'false'].each do |uses_lab2|
       level = build(:ailab, uses_lab2: uses_lab2, mode: '{"hideSave": true}')
