@@ -54,8 +54,15 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
           This is the prediction AI made based on your answers.
         </span>
       </Typography>
-      <div className={styles.scroller}>
+      <div
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can scroll a wide example
+        tabIndex={0}
+        role="group"
+        aria-labelledby={titleId}
+        className={styles.scroller}
+      >
         <table className={classNames(tableStyles.table, styles.table)}>
+          <colgroup span={features.length} />
           <thead>
             <tr>
               <th

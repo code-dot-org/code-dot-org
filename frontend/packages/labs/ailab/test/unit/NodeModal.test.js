@@ -185,6 +185,7 @@ describe('NodeModal', () => {
 
     fireEvent.click(answer('snake'));
     expect(within(example()).getByText('Your example')).toBeTruthy();
+    expect(within(example()).getByRole('group').tabIndex).toBe(0);
   });
 
   it('shows every answer and the prediction on each node of the path', () => {

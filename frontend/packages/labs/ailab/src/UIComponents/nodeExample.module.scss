@@ -30,6 +30,11 @@
 
 .scroller {
   overflow-x: auto;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-brand-primary);
+    outline-offset: 2px;
+  }
 }
 
 .table th {
