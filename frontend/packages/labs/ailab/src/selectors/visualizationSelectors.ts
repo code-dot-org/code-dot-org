@@ -21,6 +21,7 @@ import {
   type DisplayTreeRowsLookup,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
+import {splitRowIndices} from '../helpers/trainingSplit';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -361,14 +362,10 @@ export const getDisplayTreeRows = createSelector(
     if (!tree || !accuracyCheckRowIndices) {
       return () => NO_NODE_ROWS;
     }
-    // The split train.ts makes: dataset order, reserved rows to the test set.
-    const reserved = new Set(accuracyCheckRowIndices);
-    const testRows: number[] = [];
-    const trainedRows: number[] = [];
-    for (let row = 0; row < rowCount; row++) {
-      (reserved.has(row) ? testRows : trainedRows).push(row);
-    }
-
+    const {test: testRows, trained: trainedRows} = splitRowIndices(
+      rowCount,
+      accuracyCheckRowIndices,
+    );
     const {root} = trainedModel!.toJSON() as SerializedTree;
     const testGroups = groupDisplayTreeRows(tree, root!, accuracyCheckExamples);
     const trainedGroups = groupDisplayTreeRows(tree, root!, trainingExamples);
