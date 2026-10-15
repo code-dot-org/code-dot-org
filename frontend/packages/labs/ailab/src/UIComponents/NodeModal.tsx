@@ -26,7 +26,7 @@ interface RowsPanelProps {
   description: ReactNode;
   rows: number[];
   emphasizedColumn?: string;
-  // Replaces the row count.
+  // Replaces the row count, grouped with the columns button.
   aside?: ReactNode;
   allColumns: boolean;
   onToggleColumns: () => void;
@@ -52,25 +52,31 @@ const RowsPanel = ({
           {description}
         </Typography>
         <div className={styles.panelActions}>
-          {aside ?? (
-            <Typography variant="body3" component="span">
-              <strong>{rowCountText(rows.length)}</strong>
-            </Typography>
+          {!aside && (
+            <>
+              <Typography variant="body3" component="span">
+                <strong>{rowCountText(rows.length)}</strong>
+              </Typography>
+              <span className={styles.divider} />
+            </>
           )}
-          <Tooltip title={columnsLabel}>
-            <IconButton
-              aria-label={columnsLabel}
-              onClick={onToggleColumns}
-              size="extraSmall"
-              color="tertiary"
-              variant="outlined"
-            >
-              <FontAwesomeV6Icon
-                iconName="arrows-left-right-to-line"
-                aria-hidden="true"
-              />
-            </IconButton>
-          </Tooltip>
+          <div className={styles.actionGroup}>
+            {aside}
+            <Tooltip title={columnsLabel}>
+              <IconButton
+                aria-label={columnsLabel}
+                onClick={onToggleColumns}
+                size="extraSmall"
+                color="tertiary"
+                variant="outlined"
+              >
+                <FontAwesomeV6Icon
+                  iconName="arrows-left-right-to-line"
+                  aria-hidden="true"
+                />
+              </IconButton>
+            </Tooltip>
+          </div>
         </div>
       </div>
       <NodeRowsTable

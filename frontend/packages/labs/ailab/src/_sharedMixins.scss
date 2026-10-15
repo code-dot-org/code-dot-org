@@ -51,6 +51,12 @@ $data-table-row-height: 28px;
   color: var(--text-neutral-primary);
 }
 
+@mixin summary-divider {
+  width: 1px;
+  height: 10px;
+  background-color: var(--border-neutral-primary);
+}
+
 $modal-max-width: 800px;
 $modal-margin: 24px;
 
