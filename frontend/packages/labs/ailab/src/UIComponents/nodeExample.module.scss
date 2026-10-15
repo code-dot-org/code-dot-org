@@ -4,7 +4,7 @@
   gap: 8px;
 }
 
-// Wraps as one sentence: the description continues under the title.
+// The title and description wrap together, as one sentence.
 .heading {
   margin: 0;
 }
@@ -33,7 +33,7 @@
   overflow-x: auto;
 }
 
-// Not sticky: there is one body row, and nothing to scroll under the headers.
+// One body row, so the headers don't need to be sticky.
 .table th {
   position: static;
 }
