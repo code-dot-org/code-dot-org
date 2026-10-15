@@ -50,6 +50,25 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal [{'quizQuestionId' => @question.id, 'questionType' => 'MultipleChoiceQuestion', 'responseData' => {'selectedChoiceId' => 'b'}}], body['questionResultsInProgress']
   end
 
+  test "index returns a multiple select answer in progress" do
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question)
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceIds' => ['a']}
+    )
+    sign_in @student
+
+    get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id}
+
+    assert_response :success
+    result = JSON.parse(response.body)['questionResultsInProgress'].sole
+    assert_equal 'MultipleSelectQuestion', result['questionType']
+    assert_equal({'selectedChoiceIds' => ['a']}, result['responseData'])
+  end
+
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do
     other_student = create(:student)
     sign_in other_student
@@ -200,6 +219,48 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['maxScore']
     response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
     assert_equal 'b', response.response_data['selectedChoiceId']
+  end
+
+  test "update grades a submitted multiple select answer and reveals its correct choices" do
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz)
+
+    sign_in @student
+    put :update, as: :json, params: {id: attempt.id, responses: {question.id => {selectedChoiceIds: ['c', 'a']}}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    result = body['questionResults'].sole
+    assert_equal 'MultipleSelectQuestion', result['questionType']
+    assert_equal({'selectedChoiceIds' => ['c', 'a']}, result['responseData'])
+    assert result['correct']
+    assert_equal ['a', 'c'], result['correctChoiceIds']
+    refute result.key?('correctChoiceId')
+  end
+
+  test "update grades a multiple select answer cleared before submit, not the autosaved one" do
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question)
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceIds' => ['a', 'c']},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, as: :json, params: {id: @attempt.id, responses: {question.id => {selectedChoiceIds: []}}}
+
+    assert_response :success
+    response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: question.id)
+    assert_equal({'selectedChoiceIds' => []}, response.response_data)
+    assert_equal 0, response.score
   end
 
   test "update saves a free response answer ungraded and leaves it out of the score" do

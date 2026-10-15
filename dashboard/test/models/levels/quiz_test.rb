@@ -61,6 +61,17 @@ class QuizTest < ActiveSupport::TestCase
     assert quiz.valid?
   end
 
+  test "summarize_for_lab2_properties gives a multiple select question's choices but not its answer key" do
+    quiz = create(:quiz)
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+
+    quiz_question = quiz.summarize_for_lab2_properties(nil, nil, nil)[:quizQuestions].sole
+    assert_equal 'MultipleSelectQuestion', quiz_question[:type]
+    assert_equal %w(a b c), (quiz_question[:choices].map {|c| c['id']})
+    refute quiz_question.key?(:correctChoiceIds)
+  end
+
   test "questions come from placements" do
     quiz = create(:quiz)
     question = create(:quiz_question)

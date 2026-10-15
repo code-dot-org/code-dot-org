@@ -203,6 +203,22 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
+  test "update edits a multiple select question's correct choices" do
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
+
+    put :update, as: :json, params: {
+      id: question.id, quizLevelId: @quiz.id,
+      questionName: 'Evens', questionTitle: 'Which are even?',
+      choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+      correctChoiceIds: ['a', 'b', 'c']
+    }
+
+    assert_response :success
+    assert_equal ['a', 'b', 'c'], JSON.parse(response.body)['correctChoiceIds']
+    assert_equal ['a', 'b', 'c'], question.reload.content['correct_choice_ids']
+  end
+
   test "update stores the description, and omits a blank one" do
     params = {
       id: @question.id, quizLevelId: @quiz.id,
