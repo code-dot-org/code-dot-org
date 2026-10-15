@@ -1,3 +1,8 @@
+$deck-step: 10.5px;
+$deck-ease: cubic-bezier(0.32, 0.72, 0, 1);
+// Room for the cards that rise above the front one.
+$deck-top: 24px;
+
 .root {
   display: flex;
   flex: 1;
@@ -17,44 +22,35 @@
   background-color: var(--background-neutral-secondary);
 }
 
-// --deck-peek is set inline from DECK_PEEK.
 .deck {
-  --deck-step: 10.5px;
-  --deck-top: calc(var(--deck-peek) * var(--deck-step) + 3px);
-  --deck-ease: cubic-bezier(0.32, 0.72, 0, 1);
-
   position: relative;
   display: flex;
-  flex: 0 1 auto;
   flex-direction: column;
   width: min(100%, 400px);
   min-height: 0;
   max-height: 100%;
   box-sizing: border-box;
-  // Room for the cards that rise above the front one.
-  padding-top: var(--deck-top);
+  padding-top: $deck-top;
 }
 
 // 0 is the front card. Higher depths sit behind it and peek above.
 .slot {
   display: flex;
-  flex: 0 1 auto;
   flex-direction: column;
   z-index: calc(10 - var(--deck-depth));
   min-height: 0;
-  max-height: 100%;
   opacity: calc(1 - var(--deck-depth) * 0.15);
-  transform: translateY(calc(var(--deck-depth) * var(--deck-step) * -1))
+  transform: translateY(calc(var(--deck-depth) * -#{$deck-step}))
     scale(calc(1 - var(--deck-depth) * 0.05));
   transform-origin: top center;
   transition:
-    transform 280ms var(--deck-ease),
-    opacity 280ms var(--deck-ease);
+    transform 280ms $deck-ease,
+    opacity 280ms $deck-ease;
 
   // Out of flow, so only the front card sizes the deck.
   &[aria-hidden='true'] {
     position: absolute;
-    inset: var(--deck-top) 0 0;
+    inset: $deck-top 0 0;
     pointer-events: none;
   }
 }
@@ -69,29 +65,25 @@
   opacity: 0;
 }
 
-.ghost {
-  position: absolute;
-  inset: 0;
+.ghost,
+.card {
   box-sizing: border-box;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-lg);
   background-color: var(--background-neutral-primary);
 }
 
+.ghost {
+  flex: 1;
+}
+
 .card {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   gap: 16px;
-  box-sizing: border-box;
-  width: 100%;
   min-height: 0;
-  max-height: 100%;
   overflow: hidden;
-  padding: 16px 0 0;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-lg);
-  background-color: var(--background-neutral-primary);
+  padding-top: 16px;
   box-shadow: var(--shadow-lg);
 }
 
@@ -105,50 +97,46 @@
 .list {
   position: relative;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   min-height: 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: var(--scrollbar-width);
+    left: 0;
+    z-index: 1;
+    height: 48px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(var(--background-neutral-primary), transparent);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(transparent, var(--background-neutral-primary));
+  }
+
+  &[data-fade-top]::before,
+  &[data-fade-bottom]::after {
+    opacity: 1;
+  }
 }
 
 .details {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
   min-height: 0;
   margin: 0;
   padding-bottom: 16px;
   overflow-y: auto;
   overscroll-behavior: contain;
-}
-
-.fadeTop,
-.fadeBottom {
-  position: absolute;
-  right: var(--scrollbar-width);
-  left: 0;
-  z-index: 1;
-  height: 48px;
-  pointer-events: none;
-}
-
-.fadeTop {
-  top: 0;
-  background: linear-gradient(
-    to bottom,
-    var(--background-neutral-primary),
-    transparent
-  );
-}
-
-.fadeBottom {
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--background-neutral-primary)
-  );
 }
 
 .row {
@@ -172,59 +160,47 @@
   display: flex;
   align-items: center;
   gap: 6px;
-}
 
-.labelText {
-  min-width: 0;
-}
+  &[data-role]::after {
+    content: '';
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--shape-round);
+    background-color: var(--role-dot);
+  }
 
-.details .labelName {
-  color: var(--text-accent-pink-primary);
-}
+  &[data-role='label'] {
+    --role-dot: var(--background-accent-pink-primary);
 
-.details .featureName {
-  color: var(--text-info-primary);
-}
+    color: var(--text-accent-pink-primary);
+  }
 
-.dot {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: var(--shape-round);
-}
+  &[data-role='feature'] {
+    --role-dot: var(--background-info-primary);
 
-.dotLabel {
-  background-color: var(--background-accent-pink-primary);
-}
-
-.dotFeature {
-  background-color: var(--background-info-primary);
+    color: var(--text-info-primary);
+  }
 }
 
 .value {
   text-align: right;
 }
 
-.footer {
+.pager {
   display: flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 8px;
   border-top: 1px solid var(--border-neutral-primary);
   background-color: var(--background-neutral-primary);
 }
 
-.pager {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer .counter {
+.pager .counter {
   color: var(--text-neutral-tertiary);
   font-variant-numeric: tabular-nums;
-  text-align: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

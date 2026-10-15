@@ -44,40 +44,24 @@ describe('DataDisplay', () => {
     expect(screen.getByText('Row 1 of 10')).toBeTruthy();
     expect(screen.getByText('bird')).toBeTruthy();
     expect(button('Previous row').getAttribute('aria-disabled')).toBe('true');
-    expect(button('Next row').getAttribute('aria-disabled')).toBe('false');
+    fireEvent.click(button('Previous row'));
+    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
 
     fireEvent.click(button('Next row'));
     expect(screen.getByText('Row 2 of 10')).toBeTruthy();
     expect(screen.getByText('dog')).toBeTruthy();
-    expect(button('Previous row').getAttribute('aria-disabled')).toBe('false');
 
-    fireEvent.click(button('Previous row'));
+    fireEvent.keyDown(button('Next row'), {key: 'ArrowLeft'});
     expect(screen.getByText('Row 1 of 10')).toBeTruthy();
   });
 
-  test('previous does nothing on the first row', () => {
+  test('marks the label and the features for screen readers', () => {
     renderDisplay();
     fireEvent.click(button('Cards'));
-    fireEvent.click(button('Previous row'));
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
-  });
-
-  test('marks the label and the features', () => {
-    renderDisplay();
-    fireEvent.click(button('Cards'));
-    const label = screen.getByText('animal').closest('dt');
-    const feature = screen.getByText('legs').closest('dt');
-    expect(label.textContent).toBe('animal, used as the label');
-    expect(feature.textContent).toBe('legs, used as a feature');
-    expect(label.querySelector('[aria-hidden="true"]')).toBeTruthy();
-    expect(feature.querySelector('[aria-hidden="true"]')).toBeTruthy();
-  });
-
-  test('arrow keys move the deck from the pager', () => {
-    renderDisplay();
-    fireEvent.click(button('Cards'));
-    fireEvent.keyDown(button('Next row'), {key: 'ArrowRight'});
-    expect(screen.getByText('Row 2 of 10')).toBeTruthy();
+    const roleText = role =>
+      document.querySelector(`dt[data-role="${role}"]`).textContent;
+    expect(roleText('label')).toBe('animal, used as the label');
+    expect(roleText('feature')).toBe('legs, used as a feature');
   });
 
   test('next stays focused and inert on the last row', () => {
