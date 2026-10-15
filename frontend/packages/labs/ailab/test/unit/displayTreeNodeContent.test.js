@@ -3,6 +3,8 @@ import {nodeWidthMeasurer} from '../../src/helpers/displayTreeNodeContent';
 import {NO_ROWS} from '../../src/helpers/displayTreeTrace';
 import I18n from '../../src/i18n';
 
+import './stubTextMeasurement';
+
 describe('nodeWidthMeasurer', () => {
   const answer = prediction => ({type: 'answer', prediction});
 

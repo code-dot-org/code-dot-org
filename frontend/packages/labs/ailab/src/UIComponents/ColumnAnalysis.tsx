@@ -45,8 +45,9 @@ const ColumnAnalysis = () => {
   const categoricalDetails = useAppSelector(getCategoricalColumnDetails);
   const numericalDetails = useAppSelector(getNumericalColumnDetails);
   const tooManyOptions = useAppSelector(hasTooManyUniqueOptions);
+  const datasetLayout = useAppSelector(state => state.datasetLayout);
 
-  if (!columnDetails) {
+  if (!columnDetails || datasetLayout === 'cards') {
     return null;
   }
 
