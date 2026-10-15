@@ -35,23 +35,10 @@ export const freeResponseQuestionSchema = z.strictObject({
   placeholder: z.string().optional(),
 });
 
-export const scaleQuestionSchema = z.strictObject({
-  id: z.number().int().positive(),
-  type: z.literal('scale'),
-  text: z.string().min(1),
-  scale: z.strictObject({
-    min: z.number().int(),
-    max: z.number().int(),
-    minLabel: z.string().optional(),
-    maxLabel: z.string().optional(),
-  }),
-});
-
 /** One of a questions step's questions. */
 export const questionSchema = z.discriminatedUnion('type', [
   multipleChoiceDiagnosticQuestionSchema,
   freeResponseQuestionSchema,
-  scaleQuestionSchema,
 ]);
 
 /** A questions step, played one question at a time in order. */
