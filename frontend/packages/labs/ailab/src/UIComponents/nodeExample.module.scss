@@ -4,7 +4,6 @@
   gap: 8px;
 }
 
-// The title and description wrap together, as one sentence.
 .heading {
   margin: 0;
 }
@@ -33,7 +32,6 @@
   overflow-x: auto;
 }
 
-// One body row, so the headers don't need to be sticky.
 .table th {
   position: static;
 }
