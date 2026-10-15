@@ -2,7 +2,7 @@ import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement, Fragment} from 'react';
 
 import I18n from '../../src/i18n';
-import {setCurrentColumn, setSelectedName} from '../../src/redux';
+import {resetState, setCurrentColumn} from '../../src/redux';
 import ColumnAnalysis from '../../src/UIComponents/ColumnAnalysis';
 import DataDisplay from '../../src/UIComponents/DataDisplay';
 
@@ -79,14 +79,24 @@ describe('DataDisplay', () => {
     expect(screen.getByText('Row 10 of 10')).toBeTruthy();
   });
 
-  test('a new dataset starts the deck on its first row', () => {
+  test('a new level or dataset starts the deck on its first row', () => {
     const store = renderDisplay();
     fireEvent.click(button('Cards'));
     fireEvent.click(button('Next row'));
-    expect(screen.getByText('Row 2 of 10')).toBeTruthy();
+    expect(store.getState().datasetCardRow).toBe(1);
 
-    act(() => store.dispatch(setSelectedName('Other dataset')));
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    act(() => store.dispatch(resetState()));
+    expect(store.getState().datasetCardRow).toBe(0);
+  });
+
+  test('only the front card is in the tab order', () => {
+    renderDisplay();
+    fireEvent.click(button('Cards'));
+    fireEvent.click(button('Next row'));
+    const tabIndexes = [...document.querySelectorAll('dl')].map(
+      list => list.tabIndex
+    );
+    expect(tabIndexes).toEqual([-1, 0]);
   });
 
   test('cards hide the column analysis, and the table brings it back', () => {

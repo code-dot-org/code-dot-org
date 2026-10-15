@@ -63,6 +63,7 @@ export interface RootState {
   isTrainingReplay: boolean;
   currentColumn: string | undefined;
   datasetLayout: DatasetLayout;
+  datasetCardRow: number;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   viewedPanels: string[];
@@ -134,6 +135,7 @@ export const initialState: RootState = {
   isTrainingReplay: false,
   currentColumn: undefined,
   datasetLayout: 'table',
+  datasetCardRow: 0,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: 'notStarted',
@@ -362,6 +364,9 @@ const ailabSlice = createSlice({
     setDatasetLayout(state, action: PayloadAction<DatasetLayout>) {
       state.datasetLayout = action.payload;
     },
+    setDatasetCardRow(state, action: PayloadAction<number>) {
+      state.datasetCardRow = action.payload;
+    },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
       if (!getShowColumnClicking(state)) {
@@ -441,6 +446,7 @@ export const {
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
+  setDatasetCardRow,
   setDatasetLayout,
   setHighlightDataset,
   setTrainingModalStep,

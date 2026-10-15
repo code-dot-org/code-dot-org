@@ -1,7 +1,7 @@
 /* React component to handle displaying imported data. */
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Typography} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -17,11 +17,6 @@ const DataDisplay = () => {
   const rowCount = useAppSelector(state => state.data.length);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
-  const [rowIndex, setRowIndex] = useState(0);
-
-  useEffect(() => {
-    setRowIndex(0);
-  }, [datasetName]);
 
   if (rowCount === 0) {
     return null;
@@ -80,7 +75,7 @@ const DataDisplay = () => {
         </div>
       </div>
       {datasetLayout === 'cards' ? (
-        <DatasetRowCards rowIndex={rowIndex} onRowIndexChange={setRowIndex} />
+        <DatasetRowCards />
       ) : (
         <div className={styles.tableContainer}>
           <DataTable />

@@ -65,126 +65,12 @@ $deck-top: 24px;
   opacity: 0;
 }
 
-.ghost,
-.card {
+.ghost {
+  flex: 1;
   box-sizing: border-box;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-lg);
   background-color: var(--background-neutral-primary);
-}
-
-.ghost {
-  flex: 1;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  min-height: 0;
-  overflow: hidden;
-  padding-top: 16px;
-  box-shadow: var(--shadow-lg);
-}
-
-.card .title {
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0 20px;
-  font-weight: 600;
-}
-
-.list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    right: var(--scrollbar-width);
-    left: 0;
-    z-index: 1;
-    height: 48px;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  &::before {
-    top: 0;
-    background: linear-gradient(var(--background-neutral-primary), transparent);
-  }
-
-  &::after {
-    bottom: 0;
-    background: linear-gradient(transparent, var(--background-neutral-primary));
-  }
-
-  &[data-fade-top]::before,
-  &[data-fade-bottom]::after {
-    opacity: 1;
-  }
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 0;
-  margin: 0;
-  padding-bottom: 16px;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin: 0 20px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border-neutral-primary);
-}
-
-.label,
-.value {
-  min-width: 0;
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  &[data-role]::after {
-    content: '';
-    flex-shrink: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: var(--shape-round);
-    background-color: var(--role-dot);
-  }
-
-  &[data-role='label'] {
-    --role-dot: var(--background-accent-pink-primary);
-
-    color: var(--text-accent-pink-primary);
-  }
-
-  &[data-role='feature'] {
-    --role-dot: var(--background-info-primary);
-
-    color: var(--text-info-primary);
-  }
-}
-
-.value {
-  text-align: right;
 }
 
 .pager {
