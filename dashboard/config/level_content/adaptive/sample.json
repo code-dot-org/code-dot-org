@@ -257,7 +257,9 @@
       "description": "Add concrete details (layout, colors, content, purpose) so the prompt isn't vague",
       "skillIds": ["build"],
       "requires": ["introduction"],
-      "targetEvidenceLevel": 1,
+      "targetEvidenceLevels": {
+        "build": 1
+      },
       "skippable": true,
       "steps": [
         {
@@ -327,7 +329,9 @@
       "description": "Respond to what came back with a follow-up that targets one thing that's off",
       "skillIds": ["build"],
       "requires": ["introduction"],
-      "targetEvidenceLevel": 2,
+      "targetEvidenceLevels": {
+        "build": 2
+      },
       "skippable": true,
       "steps": [
         {
@@ -359,7 +363,9 @@
       "description": "Decide when a direct edit beats another prompt, and make it",
       "skillIds": ["build"],
       "requires": ["introduction"],
-      "targetEvidenceLevel": 2,
+      "targetEvidenceLevels": {
+        "build": 2
+      },
       "skippable": true,
       "steps": [
         {

@@ -223,8 +223,8 @@ function findCheckpointProblems(pathway: Pathway): string[] {
  * `measures` must name a known skill, take the graded form exactly when the
  * question has a correct choice, list only real choice ids, and name only
  * levels the skill describes in `evidenceLevels`; a checkpoint's
- * `targetEvidenceLevel` must be one each of its skills describes; and
- * `skippable` needs `skillIds`.
+ * `targetEvidenceLevels` must name only skills in its `skillIds`, at levels
+ * they describe; and `skippable` needs `skillIds`.
  */
 function findEvidenceProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
@@ -242,14 +242,15 @@ function findEvidenceProblems(pathway: Pathway): string[] {
     if (checkpoint.skippable && !checkpoint.skillIds?.length) {
       problems.push(`${where}: skippable needs skillIds`);
     }
-    if (checkpoint.targetEvidenceLevel !== undefined) {
-      for (const skillId of checkpoint.skillIds || []) {
-        if (!pathway.skills[skillId]) continue;
-        checkLevel(
-          `${where}.targetEvidenceLevel`,
-          skillId,
-          checkpoint.targetEvidenceLevel
+    for (const [skillId, level] of Object.entries(
+      checkpoint.targetEvidenceLevels || {}
+    )) {
+      if (!checkpoint.skillIds?.includes(skillId)) {
+        problems.push(
+          `${where}.targetEvidenceLevels: '${skillId}' is not in skillIds`
         );
+      } else if (pathway.skills[skillId]) {
+        checkLevel(`${where}.targetEvidenceLevels.${skillId}`, skillId, level);
       }
     }
 

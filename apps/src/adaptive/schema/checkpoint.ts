@@ -16,10 +16,12 @@ export const checkpointSourceSchema = z.strictObject({
   /** Checkpoint ids that must be complete before this one unlocks. */
   requires: z.array(z.string().min(1)).optional(),
   /**
-   * The evidence level, in each of this checkpoint's skills, at which a
-   * student has already demonstrated it. Defaults to 1.
+   * The evidence level, by skill in `skillIds`, at which a student has
+   * already demonstrated this checkpoint. A skill left out needs level 1.
    */
-  targetEvidenceLevel: z.number().int().min(1).optional(),
+  targetEvidenceLevels: z
+    .record(z.string().min(1), z.number().int().min(1))
+    .optional(),
   /**
    * Whether a student who has demonstrated this checkpoint may be placed
    * past it. Needs `skillIds`.

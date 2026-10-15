@@ -527,7 +527,7 @@ describe('evidence fields', () => {
     raw.checkpoints[1] = {
       ...raw.checkpoints[1],
       skippable: true,
-      targetEvidenceLevel: 2,
+      targetEvidenceLevels: {prompting: 2},
     };
     return raw;
   };
@@ -549,7 +549,7 @@ describe('evidence fields', () => {
     });
     expect(problemsOf(raw)).toHaveLength(1);
     const target = withEvidence();
-    target.checkpoints[1].targetEvidenceLevel = 0;
+    target.checkpoints[1].targetEvidenceLevels = {prompting: 0};
     expect(problemsOf(target)).toHaveLength(1);
   });
 
@@ -598,12 +598,12 @@ describe('evidence fields', () => {
     raw.checkpoints[2] = {
       ...raw.checkpoints[2],
       skippable: true,
-      targetEvidenceLevel: 2,
+      targetEvidenceLevels: {css: 2},
     };
     expect(problemsOf(raw)).toEqual([
       `${where}.0.measures: skill 'prompting' describes no evidence level 4`,
       `${where}.1.measures.b: skill 'prompting' describes no evidence level 5`,
-      "checkpoints.style.targetEvidenceLevel: skill 'css' describes no evidence level 2",
+      "checkpoints.style.targetEvidenceLevels.css: skill 'css' describes no evidence level 2",
     ]);
   });
 
@@ -620,6 +620,14 @@ describe('evidence fields', () => {
       measures: {skillId: 'prompting', evidenceLevel: 9},
     });
     expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags a target for a skill the checkpoint does not develop', () => {
+    const raw = withEvidence();
+    raw.checkpoints[1].targetEvidenceLevels = {css: 1};
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.targetEvidenceLevels: 'css' is not in skillIds",
+    ]);
   });
 
   it('flags skippable on a checkpoint with no skills', () => {
