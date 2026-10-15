@@ -71,7 +71,6 @@ class DynamoDBAdapter
         result[key] = value
       end
 
-      # An empty page does not mean the scan is done; only a nil key does.
       break if resp.last_evaluated_key.nil?
       last_evaluated = resp.last_evaluated_key
     end
