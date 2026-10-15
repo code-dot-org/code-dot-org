@@ -268,6 +268,32 @@ const splits = [
   ['a random selection of rows', TestDataLocations.RANDOM],
 ];
 
+describe('train.init', () => {
+  const runFrom = (project, reserveLocation = TestDataLocations.RANDOM) => {
+    train.reset();
+    train.init(loadedStore(undefined, reserveLocation), project);
+    return train.onClickTrain();
+  };
+
+  test('holds back the rows the project already holds back', () => {
+    const run = runFrom({...PROJECT, accuracyCheckRowIndices: [3, 7]});
+    expect(run.accuracyCheckRowIndices).toEqual([3, 7]);
+  });
+
+  test('repeats a run exactly when nothing else changes', () => {
+    const {run, saved} = trainAndSave(undefined, TestDataLocations.RANDOM);
+    expect(runFrom(saved).historicResult).toEqual(run.historicResult);
+  });
+
+  test('draws a new split when the saved one no longer fits the dataset', () => {
+    const run = runFrom(
+      {...PROJECT, accuracyCheckRowIndices: [18, ROWS.length]},
+      TestDataLocations.END,
+    );
+    expect(run.accuracyCheckRowIndices).toEqual([18, 19]);
+  });
+});
+
 /*
   A saved project carries no model. It is rebuilt from the dataset, the columns,
   the hyperparameters the run settled on, and the rows it was graded against.

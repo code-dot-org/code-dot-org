@@ -129,7 +129,7 @@ describe('ProjectContext', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('Start Over keeps the results but drops the rest', () => {
+  test('Start Over keeps the results and the rows they were graded on, but drops the rest', () => {
     const {store, project, context} = renderContext();
     act(() => context().applyTrainingRun(FIRST));
 
@@ -138,7 +138,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
-    expect(project().accuracyCheckRowIndices).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toEqual([8, 9]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 

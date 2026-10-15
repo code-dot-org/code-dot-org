@@ -191,29 +191,9 @@ const prepare = (
   prepareTrainingData(store, project, accuracyCheckRowIndices);
 };
 
-// A run the student started, without a predetermined split.
-const init = (store: Store<RootState>, project: AilabProject): void => {
-  const state = store.getState();
-  trainingState.previousResults = getTrainingResults(state);
-  prepare(
-    store,
-    project,
-    reserveRowIndices(state.data.length, state.reserveLocation),
-  );
-};
-
-const describeRun = (run?: TrainerOutput): TrainingRun | undefined =>
-  run && {
-    ...run,
-    accuracyCheckRowIndices: trainingState.accuracyCheckRowIndices ?? [],
-  };
-
-const onClickTrain = (): TrainingRun | undefined =>
-  describeRun(trainingState.trainer?.startTraining());
-
 /*
   Whether a saved split still describes this dataset: every index names a row,
-  and some rows are left over to train on. If the rowCount has changed, 
+  and some rows are left over to train on. If the rowCount has changed,
   the split may no longer be valid.
 */
 const describesDataset = (
@@ -229,6 +209,30 @@ const describesDataset = (
     )
   );
 };
+
+// A run the student started, graded on the project's split once it has one.
+const init = (store: Store<RootState>, project: AilabProject): void => {
+  const state = store.getState();
+  const rowCount = state.data.length;
+  const savedSplit = project.accuracyCheckRowIndices;
+  trainingState.previousResults = getTrainingResults(state);
+  prepare(
+    store,
+    project,
+    savedSplit && describesDataset(savedSplit, rowCount)
+      ? savedSplit
+      : reserveRowIndices(rowCount, state.reserveLocation),
+  );
+};
+
+const describeRun = (run?: TrainerOutput): TrainingRun | undefined =>
+  run && {
+    ...run,
+    accuracyCheckRowIndices: trainingState.accuracyCheckRowIndices ?? [],
+  };
+
+const onClickTrain = (): TrainingRun | undefined =>
+  describeRun(trainingState.trainer?.startTraining());
 
 /*
   Rebuilds the model a saved project describes, on the split it was graded

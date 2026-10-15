@@ -67,7 +67,11 @@ export const ProjectProvider = ({
       previousRun.current = undefined;
       setProject(previous =>
         keepsHistoricResults
-          ? {...initialProject, historicResults: previous.historicResults}
+          ? {
+              ...initialProject,
+              accuracyCheckRowIndices: previous.accuracyCheckRowIndices,
+              historicResults: previous.historicResults,
+            }
           : initialProject,
       );
     }, []),
