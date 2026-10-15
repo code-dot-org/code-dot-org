@@ -33,7 +33,7 @@ describe('I18n.t', () => {
       I18n.reset();
       I18n.initI18n(testTranslations);
       expect(I18n.t('keyDoesNotExist', {default: 'testDefault'})).toEqual(
-        'testDefault',
+        'testDefault'
       );
     });
 
@@ -55,7 +55,7 @@ describe('I18n.t', () => {
       I18n.reset();
       I18n.initI18n(testTranslations);
       expect(I18n.t('three', {scope: ['nested', 'two', 'one']})).toEqual(
-        undefined,
+        undefined
       );
     });
 

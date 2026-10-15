@@ -1,4 +1,5 @@
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import React from 'react';
 
 import {ResultsGrades} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';

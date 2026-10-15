@@ -14,17 +14,17 @@ import type {
 
 export function getFeaturesToSave(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): ModelCardColumn[] {
   const features = project.selectedFeatures.map(feature =>
-    getColumnDataToSave(state, feature),
+    getColumnDataToSave(state, feature)
   );
   return features;
 }
 
 export function getLabelToSave(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): ModelCardColumn {
   return getColumnDataToSave(state, project.labelColumn!);
 }
@@ -32,7 +32,7 @@ export function getLabelToSave(
 export function getTrainedModelDataToSave(
   state: RootState,
   project: AilabProject,
-  trainedModel?: TrainedModel,
+  trainedModel?: TrainedModel
 ): ModelDataToSave {
   const dataToSave: ModelDataToSave = {
     name: state.trainedModelDetails.name,

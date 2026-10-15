@@ -2,7 +2,7 @@
 
 export function getKeyByValue(
   object: Record<string, number>,
-  value: number,
+  value: number
 ): string | undefined {
   return Object.keys(object).find(key => object[key] === value);
 }
@@ -24,6 +24,7 @@ export function arrayIntersection<T>(array1: T[], array2: T[]): T[] {
   return array1.filter(value => array2.includes(value));
 }
 
+// Returns a random integer from 0 (inclusive) to max (exclusive).
 export function getRandomInt(max: number): number {
   return Math.floor(Math.random() * Math.floor(max));
 }

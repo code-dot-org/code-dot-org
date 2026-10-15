@@ -10,11 +10,11 @@ import {classificationState, classificationProject} from './testData';
 
 describe('converting categorical values', () => {
   const categoryOptionStrings = Object.keys(
-    classificationState.featureNumberKey[classificationProject.labelColumn],
+    classificationState.featureNumberKey[classificationProject.labelColumn]
   );
 
   const numbersForMLTraining = Object.values(
-    classificationState.featureNumberKey[classificationProject.labelColumn],
+    classificationState.featureNumberKey[classificationProject.labelColumn]
   );
 
   test('convert value for display', async () => {
@@ -24,7 +24,7 @@ describe('converting categorical values', () => {
         classificationState,
         classificationProject,
         number,
-        classificationProject.labelColumn,
+        classificationProject.labelColumn
       );
       expect(stringCategory).toBe(convertedValue);
     });
@@ -37,7 +37,7 @@ describe('converting categorical values', () => {
         classificationState,
         classificationProject,
         string,
-        classificationProject.labelColumn,
+        classificationProject.labelColumn
       );
       expect(machineLearningNumber).toBe(convertedValue);
     });
@@ -46,7 +46,7 @@ describe('converting categorical values', () => {
   test('convert predicted label for display', async () => {
     const predictedLabel = getConvertedPredictedLabel(
       classificationState,
-      classificationProject,
+      classificationProject
     );
     expect(predictedLabel).toBe('yes');
   });
@@ -55,7 +55,7 @@ describe('converting categorical values', () => {
     const labels = getConvertedLabels(
       classificationState,
       classificationProject,
-      classificationState.accuracyCheckLabels,
+      classificationState.accuracyCheckLabels
     );
     expect(labels).toEqual(['no', 'yes', 'yes', 'yes', 'yes', 'no']);
   });
@@ -63,7 +63,7 @@ describe('converting categorical values', () => {
   test('convert accuracy check examples for display', async () => {
     const examples = getConvertedAccuracyCheckExamples(
       classificationState,
-      classificationProject,
+      classificationProject
     );
     expect(examples).toEqual([
       ['cool', 'rainy'],

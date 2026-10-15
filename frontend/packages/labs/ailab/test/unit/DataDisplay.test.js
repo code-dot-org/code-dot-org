@@ -17,9 +17,9 @@ function renderDisplay() {
       Fragment,
       null,
       createElement(DataDisplay),
-      createElement(ColumnAnalysis),
+      createElement(ColumnAnalysis)
     ),
-    {store, project},
+    {store, project}
   );
   return store;
 }

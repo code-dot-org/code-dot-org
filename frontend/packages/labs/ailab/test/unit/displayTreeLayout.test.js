@@ -20,7 +20,7 @@ describe('layoutDisplayTree', () => {
 
   test('answers take one column each and parents center on children', () => {
     const layout = layoutDisplayTree(
-      question(question(answer(1), answer(2)), answer(3)),
+      question(question(answer(1), answer(2)), answer(3))
     );
     const [root, inner, first, second, third] = layout.nodes;
     const column = TREE_NODE_MAX_WIDTH + TREE_COLUMN_GAP;
@@ -33,7 +33,7 @@ describe('layoutDisplayTree', () => {
 
   test('answers are numbered from left to right', () => {
     const layout = layoutDisplayTree(
-      question(question(answer(1), answer(2)), answer(3)),
+      question(question(answer(1), answer(2)), answer(3))
     );
 
     expect(layout.nodes.map(placed => placed.answerIndex)).toEqual([
@@ -49,8 +49,8 @@ describe('layoutDisplayTree', () => {
     const layout = layoutDisplayTree(
       question(
         question(question(answer(1), answer(2)), answer(3)),
-        question(answer(4), question(answer(5), answer(6))),
-      ),
+        question(answer(4), question(answer(5), answer(6)))
+      )
     );
     const rows = {};
     layout.nodes.forEach(placed => {
@@ -70,7 +70,7 @@ describe('layoutDisplayTree', () => {
     const layout = layoutDisplayTree(
       question(question(answer(1), answer(2)), answer(3)),
       () => TREE_NODE_MAX_WIDTH,
-      rowGap,
+      rowGap
     );
     const [root, inner, first] = layout.nodes;
 
@@ -84,7 +84,7 @@ describe('layoutDisplayTree', () => {
 
   test('the bounds of every node are the size of the layout', () => {
     const layout = layoutDisplayTree(
-      question(question(answer(1), answer(2)), answer(3)),
+      question(question(answer(1), answer(2)), answer(3))
     );
 
     expect(getNodesBounds(layout.nodes)).toEqual({
@@ -97,7 +97,7 @@ describe('layoutDisplayTree', () => {
 
   test('the bounds of some nodes cover just those nodes', () => {
     const layout = layoutDisplayTree(
-      question(answer(1), question(answer(2), answer(3))),
+      question(answer(1), question(answer(2), answer(3)))
     );
     const [, , inner, , last] = layout.nodes;
 
@@ -115,19 +115,19 @@ describe('layoutDisplayTree', () => {
       question(
         answer(3, 120),
         question(answer(4, 70), answer(5, 150), 90),
-        100,
+        100
       ),
-      200,
+      200
     );
     const layout = layoutDisplayTree(tree, node => node.width);
     const placedById = Object.fromEntries(
-      layout.nodes.map(placed => [placed.id, placed]),
+      layout.nodes.map(placed => [placed.id, placed])
     );
     const center = placed => placed.x + placed.width / 2;
 
     test('each node takes its width', () => {
       layout.nodes.forEach(placed =>
-        expect(placed.width).toBe(placed.node.width),
+        expect(placed.width).toBe(placed.node.width)
       );
     });
 
@@ -140,7 +140,7 @@ describe('layoutDisplayTree', () => {
         sorted.slice(1).forEach((placed, index) => {
           const before = sorted[index];
           expect(placed.x - (before.x + before.width)).toBeGreaterThanOrEqual(
-            TREE_COLUMN_GAP,
+            TREE_COLUMN_GAP
           );
         });
       });
@@ -153,7 +153,7 @@ describe('layoutDisplayTree', () => {
           const first = placed.children[0];
           const last = placed.children[placed.children.length - 1];
           expect(center(placed)).toBeCloseTo(
-            (center(first) + center(last)) / 2,
+            (center(first) + center(last)) / 2
           );
         });
     });

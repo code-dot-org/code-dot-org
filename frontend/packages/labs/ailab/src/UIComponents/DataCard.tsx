@@ -1,4 +1,6 @@
 /* React component to show information about the currently-selected data set. */
+import React from 'react';
+
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
@@ -19,7 +21,7 @@ const DataCard = () => {
   const dataLengthLimit = 20000;
   if (dataLength > dataLengthLimit) {
     window.alert(
-      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit}),
+      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit})
     );
   }
 

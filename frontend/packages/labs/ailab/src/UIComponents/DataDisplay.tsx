@@ -1,8 +1,7 @@
 /* React component to handle displaying imported data. */
-import {Typography} from '@mui/material';
-import {useEffect, useState} from 'react';
-
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {Typography} from '@mui/material';
+import React, {useEffect, useState} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';

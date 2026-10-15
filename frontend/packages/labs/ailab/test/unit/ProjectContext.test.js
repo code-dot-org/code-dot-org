@@ -12,8 +12,9 @@ import rootReducer, {
 } from '../../src/redux';
 import {initialProject} from '../../src/types';
 
-const run = (accuracy, hyperparameters) => ({
+const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
   hyperparameters,
+  accuracyCheckRowIndices,
   historicResult: {
     label: 'animal',
     features: ['legs'],
@@ -23,8 +24,8 @@ const run = (accuracy, hyperparameters) => ({
   },
 });
 
-const FIRST = run('80.00', {k: 1});
-const SECOND = run('90.00', {k: 3});
+const FIRST = run('80.00', {k: 1}, [8, 9]);
+const SECOND = run('90.00', {k: 3}, [0, 5]);
 
 function renderContext(openWith, seedStore) {
   const store = seedStore ?? createStore(rootReducer);
@@ -38,8 +39,8 @@ function renderContext(openWith, seedStore) {
     createElement(
       Provider,
       {store},
-      createElement(ProjectProvider, {project: openWith}, createElement(Probe)),
-    ),
+      createElement(ProjectProvider, {project: openWith}, createElement(Probe))
+    )
   );
 
   return {store, project: () => context.project, context: () => context};
@@ -58,19 +59,24 @@ describe('ProjectContext', () => {
     const {project} = renderContext({
       ...initialProject,
       hyperparameters: {k: 5},
+      accuracyCheckRowIndices: [2, 7],
       historicResults: [FIRST.historicResult],
     });
     expect(project().hyperparameters).toEqual({k: 5});
+    expect(project().accuracyCheckRowIndices).toEqual([2, 7]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
-  test('a run records its hyperparameters and leads the results', () => {
+  // The hyperparameters and the split are what a reload needs to rebuild the
+  // model, so the latest run owns both.
+  test('a run records what rebuilding it needs and leads the results', () => {
     const {project, context} = renderContext();
 
     act(() => context().applyTrainingRun(FIRST));
     act(() => context().applyTrainingRun(SECOND));
 
     expect(project().hyperparameters).toEqual({k: 3});
+    expect(project().accuracyCheckRowIndices).toEqual([0, 5]);
     expect(accuracies(project())).toEqual(['90.00', '80.00']);
   });
 
@@ -94,6 +100,7 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toEqual({k: 1});
+    expect(project().accuracyCheckRowIndices).toEqual([8, 9]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
@@ -105,6 +112,7 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual([]);
   });
 
@@ -117,6 +125,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual([]);
   });
 
@@ -129,6 +138,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
@@ -246,7 +256,7 @@ describe('ProjectContext column choices', () => {
 
     act(() => {
       store.dispatch(
-        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']}),
+        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']})
       );
     });
 

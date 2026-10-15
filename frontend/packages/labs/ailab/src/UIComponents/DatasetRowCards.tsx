@@ -1,15 +1,14 @@
 /* One dataset row at a time, as the top card of a deck. */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, iconButtonClasses, Typography} from '@mui/material';
 import classNames from 'classnames';
-import {
+import React, {
   type CSSProperties,
   type KeyboardEvent,
   useEffect,
   useId,
   useRef,
 } from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
@@ -183,7 +182,7 @@ const RowCard = ({
       list.toggleAttribute('data-fade-top', el.scrollTop > 1);
       list.toggleAttribute(
         'data-fade-bottom',
-        el.scrollHeight - el.scrollTop - el.clientHeight > 1,
+        el.scrollHeight - el.scrollTop - el.clientHeight > 1
       );
     };
     update();

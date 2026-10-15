@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import type {ReactNode} from 'react';
+import React, {type ReactNode} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
@@ -19,16 +19,16 @@ interface ResultsTableProps {
 const featureHeader = classNames(
   tableStyles.header,
   tableStyles.headerFeature,
-  styles.columnHeader,
+  styles.columnHeader
 );
 const labelHeader = classNames(
   tableStyles.header,
   tableStyles.headerLabel,
-  styles.columnHeader,
+  styles.columnHeader
 );
 const featureCell = classNames(
   tableStyles.bodyCell,
-  tableStyles.bodyCellFeature,
+  tableStyles.bodyCellFeature
 );
 const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
 
@@ -43,7 +43,7 @@ const ResultsTable = ({results}: ResultsTableProps) => {
   const selectedFeatures = project.selectedFeatures;
   const labelColumn = project.labelColumn || 'unknown';
   const isRegressionMode = useAppSelector(state =>
-    isRegression(state, project),
+    isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 

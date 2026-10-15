@@ -31,19 +31,25 @@ export type TrainerId =
   | typeof TreeClassificationTrainer
   | typeof TreeRegressionTrainer;
 
-/* What one training run produces. */
-export interface TrainingRun {
+/* What a trainer makes of the data it was given. */
+export interface TrainerOutput {
   trainedModel: TrainedModel;
   hyperparameters: Hyperparameters;
   historicResult: HistoricResult;
 }
 
+/* What one training run produces. */
+export interface TrainingRun extends TrainerOutput {
+  accuracyCheckRowIndices: number[];
+}
+
 export interface Trainer {
-  startTraining(): TrainingRun | undefined;
+  startTraining(): TrainerOutput | undefined;
+  rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined;
   predict(trainedModel: TrainedModel | undefined, testValues: number[]): void;
   batchPredict(
     trainedModel: TrainedModel | undefined,
-    examples: number[][],
+    examples: number[][]
   ): (number | string)[];
 }
 

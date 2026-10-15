@@ -19,9 +19,9 @@ describe('getNodeForKey', () => {
       question(
         'right',
         answer('right.0'),
-        question('deep', answer('deep.0'), answer('deep.1')),
-      ),
-    ),
+        question('deep', answer('deep.0'), answer('deep.1'))
+      )
+    )
   );
   const named = name =>
     nodes.find(({node}) => (node.column ?? node.prediction) === name);

@@ -48,8 +48,8 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
     label: 'Disable clicking and highlighting columns in the data table',
   },
   {
-    key: 'randomizeTestData',
-    label: 'Reserve random rows for testing instead of the last rows',
+    key: 'reserveLastRows',
+    label: 'Reserve the last rows for testing instead of random rows',
   },
 ];
 
@@ -60,15 +60,16 @@ const TRAINER_ITEMS = [
   {value: 'decisionTree', text: 'Decision tree'},
 ];
 
+const getAccuracyText = (mode: ModeObject) =>
+  isValidAccuracy(mode.requireAccuracy) ? String(mode.requireAccuracy) : '';
+
 const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   mode,
   datasets,
   removed,
   onChange,
 }) => {
-  const [accuracyText, setAccuracyText] = useState(() =>
-    isValidAccuracy(mode.requireAccuracy) ? String(mode.requireAccuracy) : ''
-  );
+  const [accuracyText, setAccuracyText] = useState(() => getAccuracyText(mode));
 
   const selectedDataset = getSelectedDataset(mode);
   const {columns, failed: columnsFailed} = useDatasetColumns(
@@ -164,7 +165,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           mode={mode}
           columns={columns}
           onChange={newMode => {
-            setAccuracyText('');
+            setAccuracyText(getAccuracyText(newMode));
             changeMode(newMode);
           }}
         />
