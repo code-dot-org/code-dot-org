@@ -13,26 +13,25 @@ import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
-  // Dataset row numbers.
-  rows: number[];
+  rowIndices: number[];
   emphasizedColumn?: string;
-  allColumns: boolean;
+  showAllColumns: boolean;
   emptyText: string;
 }
 
 const NodeRowsTable = ({
-  rows,
+  rowIndices,
   emphasizedColumn,
-  allColumns,
+  showAllColumns,
   emptyText,
 }: NodeRowsTableProps) => {
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = allColumns
+  const columns = showAllColumns
     ? Object.keys(data[0] ?? {})
     : [...project.selectedFeatures, project.labelColumn || 'unknown'];
-  const shownRows = rows.slice(0, DATA_TABLE_ROW_LIMIT);
+  const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
 
   const isLabel = (column: string) => column === project.labelColumn;
   const isFeature = (column: string) =>
@@ -93,7 +92,7 @@ const NodeRowsTable = ({
               ))}
             </tbody>
           </table>
-          {rows.length === 0 && (
+          {rowIndices.length === 0 && (
             <Typography
               variant="body4"
               component="p"
@@ -104,7 +103,7 @@ const NodeRowsTable = ({
           )}
         </div>
       </div>
-      {rows.length > shownRows.length && (
+      {rowIndices.length > shownRows.length && (
         <Typography variant="body4" component="p" className={styles.note}>
           Showing the first {shownRows.length} rows.
         </Typography>

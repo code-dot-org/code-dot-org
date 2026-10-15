@@ -300,8 +300,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                 Press Enter to explore the tree
               </KeyHint>
               <KeyHint id={keysHintId} shown={entered}>
-                Use the arrow keys to move, Enter to see a node&apos;s rows, and
-                Escape to exit
+                Use the arrow keys to move, Enter or Space to see a node&apos;s
+                details, and Escape to exit
               </KeyHint>
             </span>
           }

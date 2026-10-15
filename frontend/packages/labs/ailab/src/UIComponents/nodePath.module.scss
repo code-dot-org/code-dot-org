@@ -72,10 +72,7 @@ $step-number-size: 18px;
   background-color: var(--background-neutral-septenary);
 }
 
-.stepNumberButton {
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
+.collapsedStepNumber {
   cursor: default;
 
   &:hover {

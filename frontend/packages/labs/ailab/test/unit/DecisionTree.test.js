@@ -279,7 +279,7 @@ describe('DecisionTree', () => {
 
   it('describes the canvas by how to go in, and the tree and its root by how to move', () => {
     const keysHint =
-      "Use the arrow keys to move, Enter to see a node's rows, and Escape to exit";
+      "Use the arrow keys to move, Enter or Space to see a node's details, and Escape to exit";
     const [root] = screen.getAllByRole('treeitem');
 
     expect(

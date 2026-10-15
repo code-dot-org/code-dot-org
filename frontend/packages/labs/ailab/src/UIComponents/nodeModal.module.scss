@@ -49,44 +49,6 @@
   box-shadow: inset 0 -1px 0 var(--border-neutral-primary);
 }
 
-.panel {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  min-height: 0;
-  gap: 8px;
-  padding-top: 10px;
-}
-
-.panelHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.panelText {
-  margin: 0;
-  color: var(--text-neutral-primary);
-}
-
-.panelActions {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 10px;
-}
-
-.divider {
-  @include mixins.summary-divider;
-}
-
-.actionGroup {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .actionRow {
   @include mixins.modal-action-row;
 }

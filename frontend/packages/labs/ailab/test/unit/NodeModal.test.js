@@ -98,7 +98,7 @@ describe('NodeModal', () => {
     expect(within(dialog()).getByText('1 Row')).toBeTruthy();
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
 
-    fireEvent.click(within(dialog()).getByRole('tab', {name: 'Trained rows'}));
+    fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
 
     expect(within(dialog()).getByText('9 Rows')).toBeTruthy();
     expect(shownRows().map(([number]) => number)).toEqual([
@@ -133,7 +133,7 @@ describe('NodeModal', () => {
     fireEvent.click(answer('snake'));
 
     const steps = pathSteps();
-    expect(title()).toBe('Predicts snake');
+    expect(title()).toBe('AI predicts snake');
     expect(steps.map(step => step.textContent)).toEqual([
       '1legs is < 1',
       '2AI predicts snake',
