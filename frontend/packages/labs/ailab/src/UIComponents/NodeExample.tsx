@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useId} from 'react';
+import React, {useId} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {displayValue} from '../helpers/displayTreeNodeContent';
@@ -25,7 +25,7 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
   const trace = useAppSelector(state =>
-    getPredictionTrace(state, project, trainedModel),
+    getPredictionTrace(state, project, trainedModel)
   );
   const testData = useAppSelector(state => state.predictionTestData);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
@@ -76,7 +76,7 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
                   scope="col"
                   className={classNames(
                     tableStyles.header,
-                    tableStyles.headerFeature,
+                    tableStyles.headerFeature
                   )}
                 >
                   <CellText>
@@ -88,7 +88,7 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
                 scope="col"
                 className={classNames(
                   tableStyles.header,
-                  tableStyles.headerLabel,
+                  tableStyles.headerLabel
                 )}
               >
                 <CellText>
@@ -104,7 +104,7 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
                   key={feature}
                   className={cellClassName(
                     feature,
-                    tableStyles.bodyCellFeature,
+                    tableStyles.bodyCellFeature
                   )}
                 >
                   <CellText>
@@ -115,7 +115,7 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
               <td
                 className={cellClassName(
                   labelColumn,
-                  tableStyles.bodyCellLabel,
+                  tableStyles.bodyCellLabel
                 )}
               >
                 <CellText>{prediction}</CellText>

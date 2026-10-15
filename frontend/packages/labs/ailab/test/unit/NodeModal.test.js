@@ -180,7 +180,7 @@ describe('NodeModal', () => {
     fireEvent.click(answer('dog'));
     expect(example()).toBeNull();
     fireEvent.click(
-      within(dialog()).getByRole('button', {name: 'Back to Testing'}),
+      within(dialog()).getByRole('button', {name: 'Back to Testing'})
     );
 
     fireEvent.click(answer('snake'));
@@ -197,7 +197,7 @@ describe('NodeModal', () => {
     fireEvent.click(root());
     expect(exampleRow()).toEqual(['0', 'snake']);
     fireEvent.click(
-      within(dialog()).getByRole('button', {name: 'Back to Testing'}),
+      within(dialog()).getByRole('button', {name: 'Back to Testing'})
     );
 
     fireEvent.click(answer('snake'));

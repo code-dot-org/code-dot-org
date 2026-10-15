@@ -38,7 +38,7 @@ export function displayNodeLabel(
 
 export function displayValue(
   value: string | number,
-  datasetId: string,
+  datasetId: string
 ): string {
   return typeof value === 'number'
     ? formatNumber(value)
