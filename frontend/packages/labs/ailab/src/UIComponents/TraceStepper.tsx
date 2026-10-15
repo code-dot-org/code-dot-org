@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, IconButton, iconButtonClasses} from '@mui/material';
 import classNames from 'classnames';
-import {useCallback, useEffect, useLayoutEffect} from 'react';
+import React, {useCallback, useEffect, useLayoutEffect} from 'react';
 
 import {prefersReducedMotion} from '../helpers/utils';
 import {useAppDispatch, useAppSelector} from '../hooks';

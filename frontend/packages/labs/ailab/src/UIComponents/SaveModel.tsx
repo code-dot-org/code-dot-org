@@ -1,6 +1,5 @@
 /* React component to handle saving a trained model. */
-import type React from 'react';
-import {useState} from 'react';
+import React, {useState} from 'react';
 
 import {ModelNameMaxLength} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';

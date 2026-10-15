@@ -4,7 +4,7 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button, Typography} from '@mui/material';
-import type {ChangeEvent} from 'react';
+import React, {type ChangeEvent} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getRandomPredictInputs} from '../helpers/randomPredictInputs';

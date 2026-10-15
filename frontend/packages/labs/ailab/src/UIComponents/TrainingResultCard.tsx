@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
-import {useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';

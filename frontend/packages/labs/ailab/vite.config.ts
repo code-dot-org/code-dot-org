@@ -83,7 +83,9 @@ export default defineConfig({
   // `publicDir` on would copy that ~12 MB tree wholesale into `dist/`.
   publicDir: false,
   plugins: [
-    react(),
+    // apps compiles JSX with the classic runtime; match it so components build
+    // the same way here and there.
+    react({jsxRuntime: 'classic'}),
     emitRuntimeAssets(),
     devRuntimeAssets(),
     // Emit `.d.ts` from the library entry.

@@ -1,5 +1,6 @@
 /* React component to handle displaying the model card. */
 import classNames from 'classnames';
+import React from 'react';
 
 import {imageUrl} from '../assetPath';
 import {getPercentCorrect} from '../helpers/accuracy';

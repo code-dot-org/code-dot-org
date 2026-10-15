@@ -1,7 +1,7 @@
 /* The model's latest prediction and, for a decision tree, the path to it. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';

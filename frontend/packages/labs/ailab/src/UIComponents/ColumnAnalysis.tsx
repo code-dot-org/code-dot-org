@@ -3,6 +3,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
+import React from 'react';
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
 import {

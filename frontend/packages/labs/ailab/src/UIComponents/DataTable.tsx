@@ -1,7 +1,7 @@
 /* React component to handle displaying imported data. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';

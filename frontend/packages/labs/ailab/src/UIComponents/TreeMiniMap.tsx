@@ -1,7 +1,7 @@
 /* Thumbnail of the trained decision tree, drawn without text. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip} from '@mui/material';
-import {useMemo} from 'react';
+import React, {useMemo} from 'react';
 
 import type {DisplayTreeNode} from '../helpers/displayTree';
 import {

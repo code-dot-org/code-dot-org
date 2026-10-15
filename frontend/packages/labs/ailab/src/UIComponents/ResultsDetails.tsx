@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {formatAccuracy, getResultsByGrade} from '../helpers/accuracy';
 import {deepEqual, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';

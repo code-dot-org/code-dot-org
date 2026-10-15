@@ -2,6 +2,7 @@
 It uses a list behind the scenes to make the data accessible to screen readers. */
 import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
+import React from 'react';
 
 import {getNiceAxisStep} from '../helpers/utils';
 
