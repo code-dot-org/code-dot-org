@@ -36,8 +36,7 @@ const DatasetRowCards = ({
   const {project} = useProject();
   const total = data.length;
   const columns = Object.keys(data[0]);
-  // Index into the dataset rows in state.data. For one render after a dataset
-  // change it can still point past the new dataset's end.
+  // A dataset row; for one render after the dataset changes it can be past the end.
   const rowIndex = Math.min(requestedIndex, total - 1);
   const atStart = rowIndex === 0;
   const atEnd = rowIndex === total - 1;
@@ -87,7 +86,7 @@ const DatasetRowCards = ({
           style={{'--deck-peek': DECK_PEEK} as CSSProperties}
         >
           {data.slice(windowStart, windowEnd).map((row, offset) => {
-            // Keyed by dataset row, so a flip only changes each slot's depth.
+            // Keyed by dataset row, so a flip animates instead of remounting.
             const datasetRow = windowStart + offset;
             const depth = datasetRow - rowIndex;
             return (
@@ -193,7 +192,7 @@ const RowCard = ({
     }
     const update = () => {
       setScrollbarWidth(el.offsetWidth - el.clientWidth);
-      // A pixel of slop, so a subpixel remainder doesn't leave a fade up at the end.
+      // Allow 1px for subpixel scroll positions.
       setFadeTop(el.scrollTop > 1);
       setFadeBottom(el.scrollHeight - el.scrollTop - el.clientHeight > 1);
     };

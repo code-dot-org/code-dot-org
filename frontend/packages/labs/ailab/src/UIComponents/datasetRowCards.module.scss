@@ -17,7 +17,7 @@
   background-color: var(--background-neutral-secondary);
 }
 
-// --deck-peek, the number of cards peeking, is set from DatasetRowCards.tsx.
+// --deck-peek is set inline from DECK_PEEK.
 .deck {
   --deck-step: 10.5px;
   --deck-top: calc(var(--deck-peek) * var(--deck-step) + 3px);
@@ -51,7 +51,7 @@
     transform 280ms var(--deck-ease),
     opacity 280ms var(--deck-ease);
 
-  // Off the front card, so only that card sets the deck's height.
+  // Out of flow, so only the front card sizes the deck.
   &[aria-hidden='true'] {
     position: absolute;
     inset: var(--deck-top) 0 0;

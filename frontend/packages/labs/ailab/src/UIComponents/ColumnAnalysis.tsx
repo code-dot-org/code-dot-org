@@ -47,7 +47,7 @@ const ColumnAnalysis = () => {
   const tooManyOptions = useAppSelector(hasTooManyUniqueOptions);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
 
-  // Cards show one whole row, so there is no selected column to describe.
+  // Cards have no selected column.
   if (!columnDetails || datasetLayout === 'cards') {
     return null;
   }
