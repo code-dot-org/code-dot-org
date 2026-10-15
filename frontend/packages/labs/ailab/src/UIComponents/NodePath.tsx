@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {type ReactNode, useLayoutEffect, useRef, useState} from 'react';
+import React, {type ReactNode, useLayoutEffect, useRef, useState} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {thresholdText, type DisplayTreePathStep} from '../helpers/displayTree';
@@ -12,7 +12,7 @@ import styles from './nodePath.module.scss';
 const pathSteps = (
   path: DisplayTreePathStep[],
   nodeLabel: string,
-  datasetId: string,
+  datasetId: string
 ): ReactNode[] =>
   path.map(({node}, index) => {
     if (node.type === 'answer') {
@@ -60,7 +60,7 @@ const NodePath = ({path, nodeLabel, datasetId}: NodePathProps) => {
     const fit = () => {
       // The hidden copy lists every step in full, then every step collapsed.
       const widths = [...measure.children].map(
-        item => (item as HTMLElement).offsetWidth,
+        item => (item as HTMLElement).offsetWidth
       );
       const full = widths.slice(0, widths.length / 2);
       const compact = widths.slice(widths.length / 2);
@@ -74,7 +74,7 @@ const NodePath = ({path, nodeLabel, datasetId}: NodePathProps) => {
         full.reduce(
           (sum, width, index) =>
             sum + (index < count ? compact[index] : width) + gap,
-          -gap,
+          -gap
         );
       let count = 0;
       while (count < full.length - 1 && widthWith(count) > available) {
@@ -117,7 +117,7 @@ const NodePath = ({path, nodeLabel, datasetId}: NodePathProps) => {
             <li key={`${collapsed}-${path[index].id}`} className={styles.step}>
               <NodePathStep step={step} index={index} collapsed={collapsed} />
             </li>
-          )),
+          ))
         )}
       </ol>
     </>

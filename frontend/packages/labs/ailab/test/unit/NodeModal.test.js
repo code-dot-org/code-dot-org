@@ -24,7 +24,7 @@ function renderTrainedTree() {
 // button styles are loaded, so role queries must not land on those elements.
 function treeItems() {
   return Array.from(
-    screen.getByRole('tree').querySelectorAll('[role="treeitem"]'),
+    screen.getByRole('tree').querySelectorAll('[role="treeitem"]')
   );
 }
 
@@ -36,7 +36,7 @@ function answer(prediction) {
   return treeItems().find(
     item =>
       item.querySelector(`.${moduleStyles.answer} .${moduleStyles.nodeText}`)
-        ?.textContent === prediction,
+        ?.textContent === prediction
   );
 }
 
@@ -76,7 +76,7 @@ describe('NodeModal', () => {
 
     expect(title()).toBe('legs?');
     expect(
-      within(dialog()).queryByRole('list', {name: 'Path to this node'}),
+      within(dialog()).queryByRole('list', {name: 'Path to this node'})
     ).toBeNull();
   });
 
@@ -124,7 +124,7 @@ describe('NodeModal', () => {
     expect(shownRows()).toEqual([['10', 'dog', '4']]);
 
     fireEvent.click(
-      within(panel()).getByLabelText('Show only features and label'),
+      within(panel()).getByLabelText('Show only features and label')
     );
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
   });
@@ -148,14 +148,14 @@ describe('NodeModal', () => {
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
 
     fireEvent.click(
-      within(dialog()).getByRole('button', {name: 'Incorrect (0)'}),
+      within(dialog()).getByRole('button', {name: 'Incorrect (0)'})
     );
 
     expect(
-      within(dialog()).getByText('No rows matched this filter'),
+      within(dialog()).getByText('No rows matched this filter')
     ).toBeTruthy();
     expect(
-      within(dialog()).getByRole('button', {name: 'Correct (1)'}),
+      within(dialog()).getByRole('button', {name: 'Correct (1)'})
     ).toBeTruthy();
   });
 });

@@ -1,5 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
+import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -48,7 +49,7 @@ const NodeRowsTable = ({
                   className={classNames(
                     tableStyles.indexCell,
                     tableStyles.indexHeader,
-                    styles.indexColumn,
+                    styles.indexColumn
                   )}
                   aria-label="Row"
                 />

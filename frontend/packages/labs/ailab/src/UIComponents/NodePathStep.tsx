@@ -1,8 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
-import type {ReactNode} from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import React, {type ReactNode} from 'react';
 
 import appStyles from '../app.module.scss';
 import styles from './nodePath.module.scss';

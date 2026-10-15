@@ -1,7 +1,6 @@
-import {IconButton, Tooltip, Typography} from '@mui/material';
-import type {ReactNode} from 'react';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Tooltip, Typography} from '@mui/material';
+import React, {type ReactNode} from 'react';
 
 import NodeRowsTable from './NodeRowsTable';
 

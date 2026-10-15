@@ -62,7 +62,7 @@ export interface DisplayTreePathStep {
 
 export function getDisplayTreePath(
   root: DisplayTreeNode,
-  nodeId: string,
+  nodeId: string
 ): DisplayTreePathStep[] {
   const path: DisplayTreePathStep[] = [{id: DISPLAY_TREE_ROOT_ID, node: root}];
   nodeId
