@@ -2,6 +2,8 @@ import {act, fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
+import {setTestData} from '../../src/redux';
+import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 
 import {levelProject, levelStore} from './levelStore';
@@ -17,6 +19,14 @@ function renderTrainedTree() {
     store,
     project,
     trainingRun,
+  });
+  return {store, project, trainedModel: trainingRun.trainedModel};
+}
+
+function predictSnake({store, project, trainedModel}) {
+  act(() => {
+    store.dispatch(setTestData('legs', '0'));
+    train.onClickPredict(trainedModel, project);
   });
 }
 
@@ -54,8 +64,8 @@ function cellTexts(row) {
 }
 
 function shownRows() {
-  const table = within(dialog()).getByRole('table');
-  const [, body] = within(table).getAllByRole('rowgroup');
+  const tables = within(dialog()).getAllByRole('table');
+  const [, body] = within(tables[tables.length - 1]).getAllByRole('rowgroup');
   return within(body).getAllByRole('row').map(cellTexts);
 }
 
@@ -64,10 +74,15 @@ function pathSteps() {
   return within(path).getAllByRole('listitem');
 }
 
+function example() {
+  return within(dialog()).queryByRole('region');
+}
+
 describe('NodeModal', () => {
+  let trained;
   beforeEach(() => {
     I18n.initI18n();
-    renderTrainedTree();
+    trained = renderTrainedTree();
   });
   afterEach(() => I18n.reset());
 
@@ -157,5 +172,36 @@ describe('NodeModal', () => {
     expect(
       within(dialog()).getByRole('button', {name: 'Correct (1)'})
     ).toBeTruthy();
+  });
+
+  it('shows your example only on the path of your prediction', () => {
+    predictSnake(trained);
+
+    fireEvent.click(answer('dog'));
+    expect(example()).toBeNull();
+    fireEvent.click(
+      within(dialog()).getByRole('button', {name: 'Back to Testing'})
+    );
+
+    fireEvent.click(answer('snake'));
+    expect(within(example()).getByText('Your example')).toBeTruthy();
+    expect(within(example()).getByRole('group').tabIndex).toBe(0);
+  });
+
+  it('shows every answer and the prediction on each node of the path', () => {
+    predictSnake(trained);
+    const exampleRow = () => {
+      const [, body] = within(example()).getAllByRole('rowgroup');
+      return cellTexts(within(body).getByRole('row'));
+    };
+
+    fireEvent.click(root());
+    expect(exampleRow()).toEqual(['0', 'snake']);
+    fireEvent.click(
+      within(dialog()).getByRole('button', {name: 'Back to Testing'})
+    );
+
+    fireEvent.click(answer('snake'));
+    expect(exampleRow()).toEqual(['0', 'snake']);
   });
 });

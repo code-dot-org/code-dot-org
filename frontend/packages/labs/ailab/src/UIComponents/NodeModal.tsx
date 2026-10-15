@@ -11,6 +11,7 @@ import {getDisplayTreeRows} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
 import AccuracyCheckRowsPanel from './AccuracyCheckRowsPanel';
+import NodeExample from './NodeExample';
 import NodePath from './NodePath';
 import RowsPanel from './RowsPanel';
 
@@ -62,6 +63,10 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
         <NodePath path={path} nodeLabel={nodeLabel} datasetId={datasetId} />
       )}
       <div className={styles.content}>
+        <NodeExample
+          nodeId={nodeId}
+          emphasizedColumn={columnProps.emphasizedColumn}
+        />
         <div className={styles.rowsTabs}>
           <Tabs
             name="ailab-node-rows"
