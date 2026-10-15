@@ -357,7 +357,7 @@ export const getDisplayTreeRows = createSelector(
     rowCount: number,
     trainingExamples: number[][],
     accuracyCheckExamples: number[][],
-    grades: string[],
+    grades: string[]
   ): DisplayTreeRowsLookup => {
     if (!tree || !accuracyCheckRowIndices) {
       return () => NO_NODE_ROWS;
@@ -368,7 +368,7 @@ export const getDisplayTreeRows = createSelector(
     const accuracyCheckGroups = groupDisplayTreeRows(
       tree,
       root!,
-      accuracyCheckExamples,
+      accuracyCheckExamples
     );
     const trainedGroups = groupDisplayTreeRows(tree, root!, trainingExamples);
     const accuracyCheckRowsWithGrade = (nodeId: string, grade: string) =>
@@ -379,8 +379,8 @@ export const getDisplayTreeRows = createSelector(
       correct: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.CORRECT),
       incorrect: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.INCORRECT),
       trained: (trainedGroups.get(nodeId) ?? []).map(
-        index => trainedRows[index],
+        index => trainedRows[index]
       ),
     });
-  },
+  }
 );

@@ -214,7 +214,7 @@ describe('countDisplayTreeRows', () => {
 describe('getDisplayTreeRows', () => {
   const nodeIds = (state, project, trainedModel) =>
     layoutDisplayTree(getDisplayTree(state, project, trainedModel)).nodes.map(
-      placed => placed.id,
+      placed => placed.id
     );
 
   test.each([TestDataLocations.END, TestDataLocations.RANDOM])(
@@ -236,11 +236,11 @@ describe('getDisplayTreeRows', () => {
         const {correct, incorrect, trained} = rows(nodeId);
 
         expect([...correct, ...incorrect].sort((a, b) => a - b)).toEqual(
-          reaching.filter(row => reserved.has(row)),
+          reaching.filter(row => reserved.has(row))
         );
         expect(trained).toEqual(reaching.filter(row => !reserved.has(row)));
       });
-    },
+    }
   );
 
   test('grades the accuracy check rows at each node as the node counts them', () => {

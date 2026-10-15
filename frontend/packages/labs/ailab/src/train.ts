@@ -130,7 +130,7 @@ const prepareTrainingData = (
   const state = store.getState();
   const {trained, accuracyCheck} = splitRowIndices(
     state.data.length,
-    accuracyCheckRowIndices,
+    accuracyCheckRowIndices
   );
   const examplesFor = (rows: number[]) =>
     rows.map(row => extractTrainingExamples(state, project, state.data[row]));
