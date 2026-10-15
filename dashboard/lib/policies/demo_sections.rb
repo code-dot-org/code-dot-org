@@ -8,8 +8,10 @@ class Policies::DemoSections
   # Use `DEMO_TYPES` for the active demo types that can be created.
   VALID_DEMO_TYPES = (DEMO_TYPES + [ARCHIVED_DEMO_TYPE]).freeze
 
-  ALLTHETHINGS_UNIT_NAME = 'allthethings'
-  ALLTHETHINGS_UNIT_GROUP_NAME = 'original-allthethings-course'
+  # The UI test environments seed only the UI test curriculum tree, so the
+  # preset they fall back to has to name UI test course and unit.
+  UI_TEST_UNIT_NAME = 'ui-test-all-the-levels'
+  UI_TEST_UNIT_GROUP_NAME = 'ui-test-original-all-the-levels'
 
   DEMO_SECTION_PRESETS = {
     elementary: {
@@ -37,8 +39,8 @@ class Policies::DemoSections
       login_type: 'word',
       participant_type: 'student',
       grades: %w[6 7 8],
-      unit_name: 'csd2-2026',
-      unit_group_name: 'csd-2026',
+      unit_name: 'web-development-2026',
+      unit_group_name: 'ai-discoveries-2026',
       # Pink fire: COLORS[1] = Pink, EMOJIS[0] = 🔥
       avatar_color: 1,
       avatar_emoji: 0,
@@ -46,10 +48,10 @@ class Policies::DemoSections
       student_snapshot_default_tour_lesson: 3,
       review_syllabus_quiz_lesson: 3,
       review_syllabus_quiz_options: [
-        {label: 'Level 4', correct: false},
-        {label: 'Level 5', correct: false},
-        {label: 'Level 8', correct: true},
-        {label: 'Level 11', correct: false},
+        {label: 'Level 1', correct: false},
+        {label: 'Level 2', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: true},
       ].freeze,
     }.freeze,
     high: {
@@ -197,8 +199,8 @@ class Policies::DemoSections
 
     if CDO.ci_webserver? || CDO.rack_env?(:test)
       return {
-        unit_name: ALLTHETHINGS_UNIT_NAME,
-        unit_group_name: ALLTHETHINGS_UNIT_GROUP_NAME,
+        unit_name: UI_TEST_UNIT_NAME,
+        unit_group_name: UI_TEST_UNIT_GROUP_NAME,
       }
     end
 

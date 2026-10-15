@@ -192,8 +192,20 @@ updates:
     open-pull-requests-limit: 0
     directories:
     - "/aws/offsite/aurora-snapshots-fargate"
-    - "/docker/dockerfiles"
-    - "/docker/developers"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+  # Image families under docker/. Globbed so a new image is covered without
+  # editing this file, and a separate entry from the one above because these
+  # want PRs rather than alerts only. Two dead paths were dropped from that
+  # entry to keep the two from overlapping, which dependabot rejects:
+  # docker/dockerfiles does not exist and docker/developers holds only compose
+  # files. Dependabot reads FROM lines, so ARGs are invisible to it; see
+  # docker/build/README.md.
+  - package-ecosystem: "docker"
+    open-pull-requests-limit: 5
+    directories:
+    - "/docker/*"
     schedule:
       interval: "weekly"
       day: "sunday"

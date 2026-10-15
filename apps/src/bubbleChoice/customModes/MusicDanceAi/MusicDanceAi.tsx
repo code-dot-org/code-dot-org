@@ -1,20 +1,31 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
+import React, {
+  memo,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
+import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {GENERATED_DANCER_STORAGE_KEY} from '@cdo/apps/dance/ai/constants';
 import {DanceProjectSources} from '@cdo/apps/dance/types';
 import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
+import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
 import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
 import {
   BubbleChoiceLevelData,
   Channel,
   LevelProperties,
 } from '@cdo/apps/lab2/types';
+import {ExternalNavigationContext} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {getTypedKeys} from '@cdo/apps/types/utils';
@@ -141,14 +152,17 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
         projectManager = ProjectManagerFactory.getProjectManager(
           channelId,
           // isStandaloneProjectLevel can always be false for subprojects, as it is only relevant for setting the page title.
-          false
+          false,
+          false,
+          getSourcesStoreForApp(appName)
         );
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
           false, // isStandaloneProjectLevel is always false here.
           userId || undefined,
-          scriptId || undefined
+          scriptId || undefined,
+          getSourcesStoreForApp(appName)
         );
       }
 
@@ -241,6 +255,25 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     loadData();
   }, [loadData]);
 
+  // Continue inside a sublevel records that sublevel, since the lesson's own
+  // report would name this bubble choice level, then continues the lesson.
+  const sublevelNavigation = useMemo(
+    () => ({
+      enabled: true,
+      onContinue: () => {
+        const sublevel =
+          currentTab && tabDataMap?.[currentTab]?.levelProperties;
+        if (sublevel) {
+          dispatch(
+            sendSuccessReportForLevel(sublevel.id.toString(), sublevel.appName)
+          );
+        }
+        dispatch(continueOrFinishLesson());
+      },
+    }),
+    [tabDataMap, currentTab, dispatch]
+  );
+
   if (!tabDataMap || !currentTab) {
     return null;
   }
@@ -304,9 +337,11 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
           )}
           <div className={styles.labsContainer}>
             <div className={classNames(styles.labContainer)}>
-              <Suspense fallback={<Loading isLoading={true} />}>
-                <LabView {...labProps} key={currentTab} />
-              </Suspense>
+              <ExternalNavigationContext.Provider value={sublevelNavigation}>
+                <Suspense fallback={<Loading isLoading={true} />}>
+                  <LabView {...labProps} key={currentTab} />
+                </Suspense>
+              </ExternalNavigationContext.Provider>
             </div>
           </div>
         </div>

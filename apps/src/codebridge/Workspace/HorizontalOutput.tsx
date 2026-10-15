@@ -11,7 +11,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BaseOutput from './BaseOutput';
 import {
-  DEFAULT_MINI_APP_SIZE,
+  DEFAULT_MINI_APP_HEIGHT,
+  DEFAULT_MINI_APP_WIDTH,
   MIN_MINI_APP_SIZE,
   MAX_MINI_APP_SIZE,
   MIN_CONSOLE_SIZE,
@@ -48,10 +49,10 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
   const appName = levelProperties.appName;
   const [isMaximized, setIsMaximized] = useState<boolean>(false);
   const [miniAppMinimizeWidth, setMiniAppMinimizeWidth] = useState(
-    DEFAULT_MINI_APP_SIZE
+    DEFAULT_MINI_APP_WIDTH
   );
   const [outputMinimizeHeight, setOutputMinimizeHeight] = useState<number>(
-    height || DEFAULT_MINI_APP_SIZE
+    height || DEFAULT_MINI_APP_HEIGHT
   );
   const [waitingForResize, setWaitingForResize] = useState<boolean>(false);
 
@@ -62,7 +63,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
     setPosition: setMiniAppWidth,
   } = useResizable({
     axis: 'x',
-    initial: DEFAULT_MINI_APP_SIZE,
+    initial: DEFAULT_MINI_APP_WIDTH,
     min: MIN_MINI_APP_SIZE,
     max: MAX_MINI_APP_SIZE,
     containerRef: resizeContainerRef,
@@ -115,7 +116,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         // The neighborhood's SVG maze is the only preview that scales to fit;
         // the theater image fits itself via CSS.
         if (miniAppName === MiniApps.Neighborhood) {
-          const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
+          const newHeight = desiredHeight || DEFAULT_MINI_APP_HEIGHT;
           const newWidth = newMiniAppWidth;
           const scale = scaleMiniApp(newHeight, newWidth);
           CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
@@ -135,7 +136,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
   const maximizeMiniApp = () => {
     setWaitingForResize(true);
     setMiniAppMinimizeWidth(adjustedMiniAppWidth);
-    setOutputMinimizeHeight(height || DEFAULT_MINI_APP_SIZE);
+    setOutputMinimizeHeight(height || DEFAULT_MINI_APP_HEIGHT);
     setOutputHeight(MAX_MINI_APP_SIZE);
     setMiniAppWidth(MAX_MINI_APP_SIZE);
     setIsMaximized(true);

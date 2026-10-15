@@ -614,6 +614,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.stubs(:get_storage_id).returns(123)
     Projects.stubs(:new).with(123).returns(mock_projects)
     Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).returns(0)
 
     # Stub remix_project to return predictable channel IDs.
     @controller.stubs(:remix_project).with(channel_id, project_type).returns(new_channel_id)
@@ -650,6 +651,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.stubs(:get_storage_id).returns(123)
     Projects.stubs(:new).with(123).returns(mock_projects)
     Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).returns(0)
     @controller.stubs(:remix_project).with(channel_id, project_type).returns(new_channel_id)
 
     get :remix, params: {key: project_type, channel_id: channel_id}
@@ -659,33 +661,72 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_nil updated_value['subprojects'], 'Expected subprojects to be removed'
   end
 
-  describe 'GET #create_new' do
-    include ActiveJob::TestHelper
+  test 'remix is forbidden when project abuse score meets threshold' do
+    sign_in_with_request @project_owner
+    channel_id = '123456'
+    project_type = 'applab'
 
-    subject(:get_create_project) {get :create_new, params: {key: project_type}}
+    Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).with(channel_id).returns(SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD)
+    @controller.expects(:remix_project).never
 
-    let(:project_type) {Game::SPRITELAB}
+    get :remix, params: {key: project_type, channel_id: channel_id}
+    assert_response :forbidden
+  end
 
-    it 'does not enqueue geo recording job for user project storage' do
-      assert_no_enqueued_jobs only: ProjectStorage::AnonymousGeoRecordingJob do
-        get_create_project
-      end
-    end
+  test 'remix is forbidden when bubble choice subproject abuse score meets threshold' do
+    sign_in_with_request @project_owner
+    channel_id = '123456'
+    project_type = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+    abusive_sub = 'sub_abusive'
+    subprojects = [
+      {"channel_id" => "sub_ok", "level_id" => "level_0"},
+      {"channel_id" => abusive_sub, "level_id" => "level_1"},
+    ]
 
-    context 'when signed out' do
-      before do
-        sign_out_with_request
-      end
+    mock_projects = mock('Projects')
+    mock_projects.stubs(:get).with(channel_id).returns({"subprojects" => subprojects, "projectType" => project_type})
+    mock_projects.stubs(:get).with("sub_ok").returns({"projectType" => "music"})
+    mock_projects.stubs(:get).with(abusive_sub).returns({"projectType" => "music"})
 
-      it 'enqueues geo recording job for anonymous project storage' do
-        get_create_project
+    @controller.stubs(:get_storage_id).returns(123)
+    Projects.stubs(:new).with(123).returns(mock_projects)
+    Projects.stubs(:in_restricted_share_mode).returns(false)
+    Projects.stubs(:get_abuse).with(channel_id).returns(0)
+    Projects.stubs(:get_abuse).with("sub_ok").returns(0)
+    Projects.stubs(:get_abuse).with(abusive_sub).returns(SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD)
+    # Parent and subprojects must not be remixed once a subproject is blocked.
+    @controller.expects(:remix_project).never
 
-        latest_project_storage = DASHBOARD_DB[:user_project_storage_ids].reverse_order(:id).first
+    get :remix, params: {key: project_type, channel_id: channel_id}
+    assert_response :forbidden
+  end
 
-        _(latest_project_storage[:user_id]).must_be_nil
-        assert_enqueued_with job: ProjectStorage::AnonymousGeoRecordingJob, args: [latest_project_storage[:id], request.ip]
-      end
-    end
+  test 'remix is forbidden when bubble choice subproject is in restricted share mode' do
+    sign_in_with_request @project_owner
+    channel_id = '123456'
+    project_type = SharedConstants::BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+    restricted_sub = 'sub_restricted'
+    subprojects = [
+      {"channel_id" => "sub_ok", "level_id" => "level_0"},
+      {"channel_id" => restricted_sub, "level_id" => "level_1"},
+    ]
+
+    mock_projects = mock('Projects')
+    mock_projects.stubs(:get).with(channel_id).returns({"subprojects" => subprojects, "projectType" => project_type})
+    mock_projects.stubs(:get).with("sub_ok").returns({"projectType" => "music"})
+    mock_projects.stubs(:get).with(restricted_sub).returns({"projectType" => "music"})
+
+    @controller.stubs(:get_storage_id).returns(123)
+    Projects.stubs(:new).with(123).returns(mock_projects)
+    Projects.stubs(:get_abuse).returns(0)
+    Projects.stubs(:in_restricted_share_mode).with(channel_id, project_type).returns(false)
+    Projects.stubs(:in_restricted_share_mode).with("sub_ok", "music").returns(false)
+    Projects.stubs(:in_restricted_share_mode).with(restricted_sub, "music").returns(true)
+    @controller.expects(:remix_project).never
+
+    get :remix, params: {key: project_type, channel_id: channel_id}
+    assert_response :forbidden
   end
 end
 # rubocop:enable CustomCops/PegasusDbUsage

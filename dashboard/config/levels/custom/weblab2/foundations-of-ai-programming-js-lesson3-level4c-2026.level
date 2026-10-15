@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-07-13T00:59:52.000Z",
   "level_num": "custom",
@@ -52,7 +51,7 @@
         "3": {
           "id": "3",
           "name": "prompt.md",
-          "contents": "1. Goal: What typography issue are you improving?\n\nAnswer:\n\n---\n\n2. Constraints: What must stay consistent with your brand and readability?\n\nAnswer:\n\n---\n\n3. Edge cases: What could go wrong if AI overdoes it?\n\nAnswer:\n",
+          "contents": "1. Goal: What typography issue are you improving?\n\nAnswer:\n\n---\n\n2. Constraints: What must stay consistent with your design and readability?\n\nAnswer:\n\n---\n\n3. Edge cases: What could go wrong if AI overdoes it?\n\nAnswer:\n",
           "folderId": "0",
           "active": true
         }
@@ -81,6 +80,7 @@
     "offer_browser_tts": "false",
     "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-13T00:59:52.113+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4c_-js-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4c_-js-2026\"},{\"changed_at\":\"2026-07-13 00:59:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-13T00:59:52.113+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level4c_-js-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level4c_-js-2026\"},{\"changed_at\":\"2026-07-13 00:59:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-24 18:18:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

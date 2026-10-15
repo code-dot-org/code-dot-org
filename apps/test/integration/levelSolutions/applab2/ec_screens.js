@@ -16,9 +16,13 @@ function validatePropertyRow(index, label, value, assert) {
   assert(container, 'has design properties container');
 
   var propertyRow = $('#propertyRowContainer > div').eq(index);
-  assert.equal(propertyRow.children(0).text(), label);
-  // second col has an input with val screen 2
-  assert.equal(propertyRow.children(1).children(0).val(), value);
+  // DSCO form fields render the description in the row's first <span> and the
+  // value in its input/textarea/select.
+  assert.equal(propertyRow.find('span').first().text(), label);
+  assert.equal(
+    propertyRow.find('input, textarea, select').first().val(),
+    value
+  );
 }
 
 function validateElementSelect(expected, assert) {
@@ -91,12 +95,12 @@ module.exports = {
           'expected default screen property row container'
         );
 
-        // Default button and delete button should not show up,
-        // Only the color picker button
+        // Neither the "Make Default" nor Delete button should show up for the
+        // sole default screen; only the color picker and image picker buttons.
         assert.equal(
           $('#propertyRowContainer button').length,
-          1,
-          'expected 1 button'
+          2,
+          'expected 2 buttons'
         );
         assert.equal(
           $("#propertyRowContainer button:contains('Delete')").length,
@@ -280,11 +284,12 @@ module.exports = {
         $('#design_screen1').click();
         validatePropertyRow(0, 'id', 'screen1', assert);
 
-        // Two buttons, first is duplicate, second is color picker
+        // Three property-tab buttons: duplicate, color picker, and image
+        // picker (the Events tab's insert buttons live in #eventsBody).
         assert.equal(
-          $('#design-properties button').length,
-          2,
-          'There should be two buttons'
+          $('#propertiesBody button').length,
+          3,
+          'There should be three buttons'
         );
         assert.equal(
           $("#design-properties button:contains('Delete')").length,
@@ -301,9 +306,9 @@ module.exports = {
 
         // Still can't delete
         assert.equal(
-          $('#design-properties button').length,
-          2,
-          'There should be two buttons'
+          $('#propertiesBody button').length,
+          3,
+          'There should be three buttons'
         );
         assert.equal(
           $("#design-properties button:contains('Delete')").length,
@@ -925,10 +930,9 @@ module.exports = {
         assert.equal(screenElement.children.length, 1);
 
         // duplicate screen1
-        ReactTestUtils.Simulate.change(
-          $('div#emptyTab').children().children('select')[0],
-          {target: {value: 'screen1'}}
-        );
+        ReactTestUtils.Simulate.change($('div#emptyTab').find('select')[0], {
+          target: {value: 'screen1'},
+        });
 
         validatePropertyRow(0, 'id', 'screen1', assert);
 
@@ -1026,8 +1030,8 @@ module.exports = {
           'design mode screen2 contains button2'
         );
         assert.equal(
-          $('#propertyRowContainer button').last().text(),
-          '',
+          $("#propertyRowContainer button:contains('Make Default')").length,
+          0,
           'First screen should have no default button'
         );
         assert.equal(

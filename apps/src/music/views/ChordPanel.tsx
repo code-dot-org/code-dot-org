@@ -132,9 +132,23 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         <div className={moduleStyles.optionsRow}>
           <select
             value={instrument}
-            onChange={event => setInstrument(event.target.value)}
+            // Stand-in for `disabled` while loading — the native attribute
+            // blurs the select and closes Blockly's DropDownDiv.
+            onChange={event => {
+              if (isLoading) {
+                return;
+              }
+              setInstrument(event.target.value);
+            }}
+            onKeyDown={event => {
+              if (isLoading && event.key !== 'Tab') {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+            }}
+            aria-disabled={isLoading}
+            data-loading={isLoading}
             className={moduleStyles.dropdown}
-            disabled={isLoading}
           >
             {instruments.map(([name, value]) => (
               <option key={value} value={value}>

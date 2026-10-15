@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-08-22T00:17:53.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Do This**\r\n\r\nAsk the AI to help you brainstorm possible questions that can help you tell apart your two categories of images.\r\n\r\n*Not sure what to ask?*\r\n\r\nTry a prompt like this:\r\n\r\n> I’m trying to think of yes/no questions that will help tell apart images of _ from images of _. What are some useful questions I might ask?",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an assistant helping a student annotate images with binary features for use in a classification model for telling apart two different categories of images. Help students brainstorm useful questions that could be useful features for distinguishing two categories.\n\nQuestions should always be binary yes/no questions that are specific and objective. Questions should not rely on prior knowledge of the two different image categories (for example, if telling apart different kinds of flowers, “does it look like a rose” is not a reasonable question). Each question on its own does not need to perfectly differentiate between the two categories without error, but ideally the answer to the question should be a useful signal that can be helpful for classifying.\n\nFor example, if the student were building a classifier to tell apart images of rivers from images of lakes, reasonable questions might be: “Are there white waves in the water?”, “Are there trees next to the edge of the water?”, “Does the sky touch the water in the image?”,  or “Is there land on both sides of the image?”\n\nYour responses should be clear, helpful, encouraging, engaging, and appropriate for high school students — explain concepts simply and use language that is suitable for a high school audience.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "published": true
+}]]></config>
+</Aichat>

@@ -3,7 +3,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
@@ -117,6 +116,10 @@ class TopInstructions extends Component {
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
     collapsible: PropTypes.bool,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
     displayDocumentationTab: PropTypes.bool,
     displayReviewTab: PropTypes.bool,
     initialSelectedTab: PropTypes.oneOf(Object.values(TabType)),
@@ -541,6 +544,10 @@ class TopInstructions extends Component {
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
           teacherViewingStudentWork={teacherViewingStudentWork}
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
         />
       );
     } else if (tabSelected === TabType.INSTRUCTIONS) {
@@ -626,26 +633,26 @@ class TopInstructions extends Component {
     const isCSF = !noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
 
-    const topInstructionsStyle = [
-      isRtl ? styles.mainRtl : styles.main,
-      noVisualization && styles.noViz,
-      mainStyle,
-      {
+    const topInstructionsStyle = {
+      ...(isRtl ? styles.mainRtl : styles.main),
+      ...(noVisualization ? styles.noViz : {}),
+      ...mainStyle,
+      ...{
         height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
       },
-      isEmbedView && styles.embedView,
-      dynamicInstructions &&
-        overlayVisible &&
-        styles.dynamicInstructionsWithOverlay,
-    ];
+      ...(isEmbedView ? styles.embedView : {}),
+      ...(dynamicInstructions && overlayVisible
+        ? styles.dynamicInstructionsWithOverlay
+        : {}),
+    };
 
-    const instructionsContainerStyle = [
-      isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
+    const instructionsContainerStyle = {
+      ...(isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
-        : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody,
-      tabSelected === TabType.REVIEW && styles.commitAndReview,
-    ];
+        : containerStyle || styles.body),
+      ...(isMinecraft ? craftStyles.instructionsBody : {}),
+      ...(tabSelected === TabType.REVIEW ? styles.commitAndReview : {}),
+    };
 
     // Only display the help tab when there are one or more videos or
     // additional resource links.
@@ -733,7 +740,9 @@ class TopInstructions extends Component {
             handleClickCollapser={this.handleClickCollapser}
             {...passThroughHeaderProps}
           />
-          <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
+          <div
+            style={isCollapsed && isCSDorCSP ? commonStyles.hidden : undefined}
+          >
             <div style={instructionsContainerStyle} id="scroll-container">
               {this.renderInstructions(isCSF)}
               {tabSelected === TabType.RESOURCES && (
@@ -897,7 +906,7 @@ const styles = {
 };
 // Note: usually the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
-export const UnconnectedTopInstructions = Radium(TopInstructions);
+export const UnconnectedTopInstructions = TopInstructions;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -957,4 +966,4 @@ export default connect(
   }),
   null,
   {forwardRef: true}
-)(Radium(TopInstructions));
+)(TopInstructions);

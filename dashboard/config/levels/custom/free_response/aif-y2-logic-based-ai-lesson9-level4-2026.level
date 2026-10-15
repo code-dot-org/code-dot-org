@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-28T03:11:19.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "\r\nYour friend is writing a Python program but they’re seeing this error message every time they try to run their program. What advice would you give to them to help them find and fix their bug?\r\n\r\n```\r\nTraceback (most recent call last):\r\n  File \"main.py\", line 8, in <module>\r\n    minutes = hours * 60\r\n              ^^^^^\r\nNameError: name 'hours' is not defined\r\n```",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "H9mfJ1eHEkhNaedmTEwSbZhU6ZhWnjnmLBS0K9NDLvHIBKCykigA1Ai2kgwg\ndfHlPab8LijEx1qfkGplrYAvnekthJc8MVg8jTghz9O12D29Vo9/tGqmCt90\nUc3k/zN3c6IeShfSpSr8yrGAplgfBO4rWIRVJtSrcQOqiNguXmMgv8GyIqYu\nnLBIKznmfb7qzfgtxfGZc6pM7Od6oBxvd5bSmYhoZHda4j8kkCY0cPQeRSac\nzUb3cY3nm7zCPRMk\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

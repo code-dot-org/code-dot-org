@@ -1,0 +1,40 @@
+.watchItem i,
+.watchInputSection i {
+  font-family: 'Font Awesome 6 Pro', sans-serif;
+}
+
+.watchItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.watchItemDescription {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.watchInputSection {
+  clear: both;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.watchTextField {
+  flex: 1;
+  min-width: 0;
+
+  .watchTextFieldInput {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    input {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

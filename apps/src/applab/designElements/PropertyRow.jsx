@@ -1,7 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import TextField from '@code-dot-org/component-library/textField';
+import {Box, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '../../util/color';
 import * as utils from '../../utils';
 
 import * as elementUtils from './elementUtils';
@@ -30,19 +33,21 @@ export default class PropertyRow extends React.Component {
 
   state = {
     value: this.props.initialValue,
-    isValidValue: true,
+    // Reason the current id value is invalid, or null when it's valid. Only
+    // ever set for id rows.
+    idError: null,
   };
 
   UNSAFE_componentWillReceiveProps(newProps) {
     this.setState({
       value: newProps.initialValue,
-      isValidValue: true,
+      idError: null,
     });
   }
 
-  isIdAvailable(value) {
+  getIdError(value) {
     if (value === this.props.initialValue) {
-      return true;
+      return null;
     }
 
     // Elements in divApplab must be allowed since divApplab may be stale
@@ -53,7 +58,7 @@ export default class PropertyRow extends React.Component {
       allowDesignElements: false,
       allowDesignPrefix: false,
     };
-    return elementUtils.isIdAvailable(value, options);
+    return elementUtils.getIdAvailabilityError(value, options);
   }
 
   handleChangeInternal = event => {
@@ -62,23 +67,23 @@ export default class PropertyRow extends React.Component {
     if (isIdRow) {
       value = value.replace(/\s+/g, '');
     }
-    const isValidValue = !isIdRow || this.isIdAvailable(value);
-    this.setValue(value, isValidValue);
+    const idError = isIdRow ? this.getIdError(value) : null;
+    this.setValue(value, idError);
   };
 
   /**
    * Updates this component's state, and calls the change handler
    * only if the new value is valid.
    * @param value {string} The new value of the property row.
-   * @param isValidValue {boolean} Whether the value is valid. Default: true.
+   * @param idError {?string} Reason the value is invalid, or null if valid.
+   *        Default: null.
    */
-  setValue(value, isValidValue) {
-    isValidValue = utils.valueOr(isValidValue, true);
+  setValue(value, idError = null) {
     this.setState({
       value: value,
-      isValidValue: isValidValue,
+      idError: idError,
     });
-    if (isValidValue) {
+    if (!idError) {
       this.props.handleChange(value);
     }
   }
@@ -92,80 +97,82 @@ export default class PropertyRow extends React.Component {
   };
 
   onIdRowBlur = () => {
-    if (!this.state.isValidValue) {
+    if (this.state.idError) {
       const value = this.props.initialValue;
       this.setValue(value);
     }
   };
 
   render() {
-    const idRowStyle = Object.assign(
-      {},
-      rowStyle.container,
-      rowStyle.maxWidth,
-      {
-        backgroundColor: color.light_purple,
-        paddingBottom: 10,
-      }
-    );
-    const inputStyle = Object.assign({}, rowStyle.input, {
-      backgroundColor: this.state.isValidValue ? null : '#ffcccc',
-    });
-
-    let inputElement;
-    if (this.props.isMultiLine) {
-      inputElement = (
-        <textarea
-          value={this.state.value}
-          onChange={this.handleChangeInternal}
-        />
-      );
-    } else {
-      let value = this.state.value;
-      // Number input will throw an error if we set its value to NaN.
-      // Fallback to empty string.
-      if (this.props.isNumber && isNaN(value)) {
-        value = '';
-      }
-
-      inputElement = (
-        <input
-          type={this.props.isNumber ? 'number' : undefined}
-          value={value}
-          onChange={this.handleChangeInternal}
-          onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
-          style={inputStyle}
-        />
-      );
-    }
-
-    const lockStyle = {
-      marginLeft: '5px',
+    const idRowStyle = {
+      ...rowStyle.container,
+      backgroundColor: 'var(--background-brand-purple-light)',
+      paddingBottom: 10,
     };
 
-    let lockIcon;
-    // state is either locked/unlocked or undefined (no icon)
-    if (this.props.lockState) {
-      const lockClass =
-        'fa fa-' +
-        (this.props.lockState === LockState.LOCKED ? 'lock' : 'unlock');
-      lockIcon = (
-        <i
-          className={lockClass}
-          style={lockStyle}
-          onClick={this.handleClickLock}
-        />
-      );
-    }
+    const buttonStyle = {
+      marginTop: '1.375rem',
+      height: '2rem',
+      width: '2rem',
+    };
 
     return (
-      <div style={this.props.isIdRow ? idRowStyle : rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
-          {inputElement}
-          {lockIcon}
-        </div>
-      </div>
+      <Box style={this.props.isIdRow ? idRowStyle : rowStyle.container}>
+        {this.props.isMultiLine ? (
+          <FormFieldWrapper color="black" size="s" label={this.props.desc}>
+            <textarea
+              name={''}
+              value={this.state.value}
+              onChange={this.handleChangeInternal}
+              style={{
+                boxSizing: 'border-box',
+                margin: 0,
+                width: '100%',
+              }}
+            />
+          </FormFieldWrapper>
+        ) : (
+          <>
+            <TextField
+              name={''}
+              label={this.props.desc}
+              inputType={this.props.isNumber ? 'number' : undefined}
+              value={
+                this.props.isNumber && isNaN(this.state.value)
+                  ? ''
+                  : this.state.value
+              }
+              onChange={this.handleChangeInternal}
+              onBlur={this.props.isIdRow ? this.onIdRowBlur : undefined}
+              size="s"
+              errorMessage={this.state.idError || undefined}
+              style={{
+                width: '100%',
+              }}
+            />
+            {this.props.lockState && (
+              <MuiIconButton
+                aria-label="Lock the field"
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
+                type="button"
+                style={buttonStyle}
+                onClick={this.handleClickLock}
+              >
+                <FontAwesomeV6Icon
+                  iconStyle="solid"
+                  iconName={
+                    this.props.lockState === LockState.LOCKED
+                      ? 'lock'
+                      : 'unlock'
+                  }
+                />
+              </MuiIconButton>
+            )}
+          </>
+        )}
+      </Box>
     );
   }
 }

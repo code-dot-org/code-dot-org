@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-08-17T14:32:41.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-generate-lesson-level1-4cc994a4-4a56-48d2-a476-ef7e3bac4e42",
+        "text": "Meet Byte, your new robot assistant! Byte is here to help you with all sorts of tasks.",
+        "imageUrl": "https://images.code.org/3759b2edc0fb91a9b3b5eb2bd5ece264-test-generate-lesson-level1-panel-1-31195324-bbe2-4de4-9f1b-75057c50dca8.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-generate-lesson-level1-752c6d09-62f9-490b-918f-9696b8a18e9b",
+        "text": "But for Byte to be truly helpful, it needs to understand what's happening around it. Is it sunny? Is the light on? Is the door open?",
+        "imageUrl": "https://images.code.org/5d4cf6eadc9b24b65a269532e733bcce-test-generate-lesson-level1-panel-2-11e505d6-631b-4ae1-bbc2-a1944681956f.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-generate-lesson-level1-bed6a88d-dd9b-4f96-9c18-c36bf6e5f339",
+        "text": "In programming, we need a way to describe these situations simply. We use answers like 'True' or 'False' to describe the state of something.",
+        "imageUrl": "https://images.code.org/935a6c12ad0684af0799e17862bb0568-test-generate-lesson-level1-panel-3-3bda3992-ebba-4b98-8a53-956e642cb620.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-generate-lesson-level1-70f93205-8146-4cbd-a563-a66ea9a9f9c3",
+        "text": "These 'True' or 'False' values are super important in programming! We call them *Booleans*, named after a mathematician named George Boole.",
+        "imageUrl": "https://images.code.org/f247e196b58bdb96e346bfe73a95e285-test-generate-lesson-level1-panel-4-68cf3542-e593-4c47-865c-5ce8615a14b9.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Scenario: Meet your Robot Assistant, Byte. For Byte to be helpful, it needs to understand the state of the world. In programming, we call these \"True\" or \"False\" values Booleans."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-17 14:33:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:33:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

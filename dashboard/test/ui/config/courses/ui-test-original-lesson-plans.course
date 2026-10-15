@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-original-lesson-plans",
+  "script_names": [
+    "ui-test-lesson-plans"
+  ],
+  "original_script_names": [
+    "ui-test-lesson-plans"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-original-lesson-plans",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

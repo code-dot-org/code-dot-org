@@ -1,0 +1,11 @@
+name 'csp_unit1_lesson29_choice_dev_27_28'
+display_name 'Modify: Random Effects'
+description '####Choose one effect to randomize, then use randint() to make your Theater project change each time it runs.'
+
+sublevels
+level 'csp_unit1_lesson29_level1_dev_27_28'
+level 'csp_unit1_lesson29_level2_dev_27_28'
+level 'csp_unit1_lesson29_level3_dev_27_28'
+level 'csp_unit1_lesson29_level4_dev_27_28'
+
+uses_lab2

@@ -1,0 +1,305 @@
+{
+  "script": {
+    "name": "ui-test-level-i18n",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-09-10 22:25:15 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-level-i18n"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Translated Levels",
+      "name": "Translated Levels",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ea427033-eb4a-4bb0-98a4-d0958778cfa1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea427033-eb4a-4bb0-98a4-d0958778cfa1",
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f4c33de8-7caf-4d48-a244-a315a0540b6a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a",
+        "lesson_activity.key": "ea427033-eb4a-4bb0-98a4-d0958778cfa1"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test frozen square loop 3x"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test frozen square loop 3x"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      },
+      "level_keys": [
+        "UI Test frozen square loop 3x"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test MC_HOC_2017_01_RETRY"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test MC_HOC_2017_01_RETRY"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      },
+      "level_keys": [
+        "UI Test MC_HOC_2017_01_RETRY"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      },
+      "level_keys": [
+        "UI Test AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test 2-3 Bee Functions 2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test 2-3 Bee Functions 2"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      },
+      "level_keys": [
+        "UI Test 2-3 Bee Functions 2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UI Test K-1 Happy Maps Multi 1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UI Test K-1 Happy Maps Multi 1"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      },
+      "level_keys": [
+        "UI Test K-1 Happy Maps Multi 1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "UI Test frozen square loop 3x",
+        "script_level.level_keys": [
+          "UI Test frozen square loop 3x"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test MC_HOC_2017_01_RETRY",
+        "script_level.level_keys": [
+          "UI Test MC_HOC_2017_01_RETRY"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color",
+        "script_level.level_keys": [
+          "UI Test AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test 2-3 Bee Functions 2",
+        "script_level.level_keys": [
+          "UI Test 2-3 Bee Functions 2"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "UI Test K-1 Happy Maps Multi 1",
+        "script_level.level_keys": [
+          "UI Test K-1 Happy Maps Multi 1"
+        ],
+        "lesson.key": "Translated Levels",
+        "lesson_group.key": "",
+        "script.name": "ui-test-level-i18n",
+        "activity_section.key": "f4c33de8-7caf-4d48-a244-a315a0540b6a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

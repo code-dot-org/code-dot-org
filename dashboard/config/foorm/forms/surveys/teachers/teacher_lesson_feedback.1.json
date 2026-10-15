@@ -29,7 +29,7 @@
         {
           "type": "comment",
           "name": "any_feedback_fr",
-          "title": "Do you have any feedback on this lesson for the Code.org curriculum team?",
+          "title": "Do you have any feedback on this lesson for the CodeAI curriculum team?",
           "isRequired": false
         }
       ]

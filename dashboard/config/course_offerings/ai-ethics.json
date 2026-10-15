@@ -3,7 +3,7 @@
   "display_name": "Our AI Code of Ethics",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Module",
+  "curriculum_type": "Standalone Unit",
   "marketing_initiative": null,
   "grade_levels": "7,8,9,10,11,12",
   "header": "teacher_led",
@@ -17,5 +17,7 @@
   "published_date": "2020-12-01 11:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

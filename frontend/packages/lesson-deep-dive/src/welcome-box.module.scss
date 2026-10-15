@@ -1,0 +1,26 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headline {
+  font-family: var(--font-family-heading);
+  font-size: clamp(3rem, 12vw, 4.375rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: #000;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+
+.subtitle {
+  font-family: var(--font-family-main);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  font-weight: 400;
+  color: rgb(0 0 0 / 0.7);
+  margin: 0;
+  line-height: 1.4;
+}

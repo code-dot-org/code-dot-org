@@ -5,7 +5,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import {
   setChatIsOpen,
   fetchThreadMessages,
-} from '@cdo/apps/aiDifferentiation/redux';
+  openDrawerToNav,
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -23,16 +24,11 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
-import {DRAWER_FAB_MARGIN, DRAWER_WIDTH} from './constants';
+import {DRAWER_FAB_MARGIN} from './constants';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
-
-const LazyAiDiffContainer = React.lazy(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  () => import('./AiDiffContainer' as any)
-);
 
 const LazyAiDiffDrawer = React.lazy(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -50,6 +46,27 @@ interface AiDiffFloatingActionButtonProps {
   canShowPulse?: boolean;
   canStartOpen?: boolean;
   canDefaultOpen?: boolean;
+  /**
+   * When set, clicking always opens the drawer straight to this nav label
+   * (see BottomNav's labels/AiDiffDrawer's activeNav switch) instead of the
+   * default toggle-open-to-whatever-was-last-active behavior. Used to
+   * repurpose this FAB as the entry point for a specific drawer screen, e.g.
+   * the rubrics-drawer experiment's Rubrics screen.
+   */
+  openToNav?: string;
+  /**
+   * Mounts the drawer (and all of its supporting data-fetching/websocket
+   * effects) without rendering the round AI-bot FAB icon itself. Used when
+   * some other UI element (e.g. TeacherPanelHandle's arrow tab) is meant to
+   * be the only visible entry point to the drawer.
+   */
+  hideButton?: boolean;
+  /**
+   * Lays the drawer out in the surrounding flow rather than over the page.
+   * Set by Lab2Wrapper, which hosts this component inside the lab's own
+   * component tree so the lab's layout accounts for the drawer directly.
+   */
+  inline?: boolean;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -69,6 +86,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
    * Does not prevent auto-opening if the user has interacted with the FAB before.
    */
   canDefaultOpen = true,
+  openToNav,
+  hideButton = false,
+  inline = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -91,10 +111,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   );
 
   const dispatch = useAppDispatch();
-
-  const drawerIsEnabled =
-    experiments.isEnabled('ai-diff-drawer') ||
-    DCDO.get('ai-diff-drawer', false);
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.
@@ -274,9 +290,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
-    : drawerIsEnabled
-    ? style.floatingActionButtonRight
-    : style.floatingActionButton;
+    : style.floatingActionButtonRight;
 
   const handleClick = () => {
     if (wasDraggingRef.current) {
@@ -296,21 +310,49 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
-    dispatch(setChatIsOpen(!chatIsOpen));
-    dispatch(
-      fetchThreadMessages({
-        contextType: context.type,
-        thread: 0,
-        curriculumCourses: curriculumCourses,
-      })
-    );
+    if (openToNav) {
+      dispatch(openDrawerToNav(openToNav));
+    } else {
+      dispatch(setChatIsOpen(!chatIsOpen));
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
     trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };
 
+  // Unlike handleClick, always closes rather than toggling/re-opening to
+  // openToNav — used by the drawer's own close (X) button, which must be
+  // able to close the drawer even when this FAB is configured with
+  // openToNav (where handleClick would otherwise just re-open it).
+  const closeDrawer = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_CLOSED, {
+      aiDiffChatContext: context,
+      scriptName,
+    });
+    trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    dispatch(setChatIsOpen(false));
+    trySetSessionStorage(SESSION_STORAGE_KEY, false.toString());
+    updateUnreadNotificationCount();
+  };
+
+  const brand = document.documentElement.dataset.brand;
+
   return (
-    <div id="fab-contained">
-      {(!chatIsOpen || !drawerIsEnabled) && (
+    <div
+      id="fab-contained"
+      // Hosted inside a dark Lab2 lab, the button would otherwise pick up that
+      // lab's theme; the drawer resets this for itself too. Light is the
+      // default theme, so this changes nothing on pages without one.
+      data-theme={inline ? 'Light' : undefined}
+      className={inline ? style.fabContainedInline : undefined}
+    >
+      {!hideButton && !chatIsOpen && (
         <button
           ref={buttonRef}
           id="ui-floatingActionButton"
@@ -324,16 +366,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           type="button"
           style={{
             touchAction: 'none',
-            ...(drawerIsEnabled
-              ? {
-                  right: chatIsOpen
-                    ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
-                    : `${DRAWER_FAB_MARGIN}px`,
-                  transition: chatIsOpen
-                    ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
-                    : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
-                }
-              : {}),
+            right: `${DRAWER_FAB_MARGIN}px`,
+            transition: 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
             ...(fabPosition
               ? {
                   top: `${fabPosition.top}px`,
@@ -370,7 +404,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                     : 'var(--background-brand-aqua-primary)',
                 color:
                   unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
+                  unreadNotificationCount > 0 ||
+                  brand === 'codeai-next'
                     ? 'var(--text-neutral-white-fixed)'
                     : 'var(--text-neutral-black-fixed)',
                 top: '5%',
@@ -390,31 +425,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         </button>
       )}
       <React.Suspense fallback={<div />}>
-        {drawerIsEnabled ? (
-          <LazyAiDiffDrawer
-            context={context}
-            closeTutor={handleClick}
-            curriculumCourses={curriculumCourses || ([] as string[])}
-            scriptName={scriptName}
-            unreadNotificationCount={
-              unreadNotificationCount === 'loading'
-                ? 0
-                : unreadNotificationCount
-            }
-          />
-        ) : (
-          <LazyAiDiffContainer
-            context={context}
-            closeTutor={handleClick}
-            curriculumCourses={curriculumCourses || ([] as string[])}
-            scriptName={scriptName}
-            unreadNotificationCount={
-              unreadNotificationCount === 'loading'
-                ? 0
-                : unreadNotificationCount
-            }
-          />
-        )}
+        <LazyAiDiffDrawer
+          context={context}
+          closeTutor={closeDrawer}
+          curriculumCourses={curriculumCourses || ([] as string[])}
+          scriptName={scriptName}
+          unreadNotificationCount={
+            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+          }
+          inline={inline}
+        />
       </React.Suspense>
     </div>
   );

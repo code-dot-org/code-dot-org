@@ -23,7 +23,7 @@ const FieldLabel: React.FunctionComponent<FieldLabelProps> = ({
           <Typography variant="strong">{label}</Typography>
         </Typography>
       </label>
-      <InfoTooltipIcon id={id} tooltipText={tooltipText} direction="onRight" />
+      <InfoTooltipIcon tooltipText={tooltipText} direction="onRight" />
     </div>
   );
 };

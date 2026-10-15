@@ -1,5 +1,7 @@
+- brand_name = Cdo::Brand.legal_name(request)
 - content_for :og do
-  = tag 'meta', property: 'og:title', content: t('share.title')
+  = tag 'meta', property: 'og:site_name', content: brand_name
+  = tag 'meta', property: 'og:title', content: t('share.title', brand_name: brand_name)
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 

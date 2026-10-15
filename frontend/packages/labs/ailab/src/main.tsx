@@ -1,20 +1,22 @@
+// Code Studio loads these for the published package; only the standalone page needs them.
+import '@code-dot-org/fonts/brands/code.org/index.css';
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import queryString from 'query-string';
 
-import type {ModelDataToSave, SaveResponse} from './types';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 
-import {initAll, instructionsDismissed} from './index';
+import type {ModelDataToSave, Mode, SaveResponse} from './types';
 
-interface SampleMode {
-  datasets?: string[];
-  hideSelectLabel?: boolean;
-  hideSave?: boolean;
-  requireAccuracy?: number;
-  hideInstructionsOverlay?: boolean;
-  randomizeTestData?: boolean;
-}
+import {initAll, instructionsDismissed, startOver} from './index';
+
+injectFontAwesome();
 
 // A list of sample modes.  Should match the dropdown in index.html.
-const sampleModes: Record<string, SampleMode> = {
+const sampleModes: Record<string, Mode> = {
   minimal: {
     datasets: ['tacos_toy'],
     hideSelectLabel: true,
@@ -56,9 +58,12 @@ const sampleModes: Record<string, SampleMode> = {
     datasets: ['zoo'],
   },
 
-  'final-project': {
-    randomizeTestData: true,
+  'zoo-decision-tree': {
+    datasets: ['zoo'],
+    trainer: 'decisionTree',
   },
+
+  'final-project': {},
 
   'club-test': {
     datasets: [
@@ -149,4 +154,5 @@ initAll({
   saveTrainedModel: saveTrainedModelStub,
   setInstructionsKey: setInstructionsKeyStub,
   logMetric: logMetricStub,
+  onStartOver: startOver,
 });

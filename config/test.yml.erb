@@ -23,7 +23,6 @@ device_farm_mobile_project_arn: !Secret
 <%= clear_secrets %>
 
 dashboard_honeybadger_api_key: '00000000'
-pegasus_honeybadger_api_key:   '00000000'
 google_safe_browsing_key: fake_api_key
 pusher_app_id:             fake_app_id
 pusher_application_key:    fake_application_key
@@ -46,9 +45,9 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
-db_credential_admin: {"username":"root", "password":""}
-db_credential_writer: {"username":"root", "password":""}
-db_credential_reader: {"username":"root", "password":""}
+db_credential_admin: {"username":"root", "password":"not-a-secret"}
+db_credential_writer: {"username":"writer", "password":"not-a-secret"}
+db_credential_reader: {"username":"reader", "password":"not-a-secret"}
 db_writer: 'mysql://root@localhost/'
 <% end -%>
 
@@ -140,9 +139,13 @@ redis_url: 'redis://ci-tests-redis:6379/0'
 netsim_redis_groups:
 - master: redis://ci-tests-redis:6379
 
-# custom database config for CI
+# Continuous Integration environment uses a custom database hostname.
 db_writer: 'mysql://root:not-a-secret@ci-tests-mysql/'
 db_reader: 'mysql://root:not-a-secret@ci-tests-mysql/'
+db_endpoint_writer: ci-tests-mysql
+db_endpoint_proxy_writer: ci-tests-mysql
+db_endpoint_proxy_reader: ci-tests-mysql
+db_endpoint_proxy_reporting: ci-tests-mysql
 
 # CI-specific S3 settings, to avoid collisions between concurrent CI jobs
 animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>

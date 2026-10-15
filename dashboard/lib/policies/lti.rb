@@ -168,7 +168,7 @@ class Policies::Lti
 
   # Returns true if any of the user's roles is the LTI instructor role
   def self.lti_teacher?(roles)
-    (Set.new(roles) & TEACHER_ROLES).any?
+    Set.new(roles).intersect?(TEACHER_ROLES)
   end
 
   def self.unverified_teacher?(user)

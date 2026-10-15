@@ -6,7 +6,7 @@ Feature: Model customizations and interactions in AI Chat Lab
 
   Background:
     Given I create a levelbuilder named "Simone"
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/2"
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/47/levels/2"
     And I click selector "button[aria-label='Close']" once I see it
     And I wait until element "button[aria-label='Close']" is not visible
     And I dismiss the teacher panel
@@ -16,7 +16,7 @@ Feature: Model customizations and interactions in AI Chat Lab
     And I wait until element "#uitest-chat-submit" is enabled
     And I click selector "#uitest-chat-submit"
     And I wait until element "[aria-label='AI bot chat message']" is visible
-    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(235, 255, 254)"
+    Then element "[aria-label='AI bot chat message']" has css property "background-color" equal to "rgb(228, 226, 248)"
 
     # Note that it's important that we use the word "Damn" here, as our stubbed version of our content moderation service
     # used in Drone is configured to flag this word.

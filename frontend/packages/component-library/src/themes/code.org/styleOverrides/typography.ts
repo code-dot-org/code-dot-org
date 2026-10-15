@@ -37,7 +37,7 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         marginBottom: theme.spacing(3), // 24px
       },
       '&:where(.MuiTypography-h2)': {
-        marginBottom: theme.spacing(2.125), // 17px
+        marginBottom: theme.spacing(2.375), // 19px
       },
       '&:where(.MuiTypography-h3)': {
         marginBottom: theme.spacing(1.75), // 14px
@@ -46,13 +46,13 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         marginBottom: theme.spacing(1.5), // 12px
       },
       '&:where(.MuiTypography-h5)': {
-        marginBottom: theme.spacing(1.25), // 10px
+        marginBottom: theme.spacing(1.375), // 11px
       },
       '&:where(.MuiTypography-h6)': {
-        marginBottom: theme.spacing(1), // 8px
+        marginBottom: theme.spacing(1.25), // 10px
       },
       '&:where(.MuiTypography-body1)': {
-        marginBottom: theme.spacing(2.5), // 20px
+        marginBottom: theme.spacing(2.25), // 18px
       },
       '&:where(.MuiTypography-body2)': {
         marginBottom: theme.spacing(2), // 16px
@@ -61,16 +61,16 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         marginBottom: theme.spacing(1.75), // 14px
       },
       '&:where(.MuiTypography-body4)': {
-        marginBottom: theme.spacing(1.625), // 13px
+        marginBottom: theme.spacing(1.5), // 12px
       },
       '&:where(.MuiTypography-overline1)': {
         marginBottom: theme.spacing(1.75), // 14px
       },
       '&:where(.MuiTypography-overline2)': {
-        marginBottom: theme.spacing(1.625), // 13px
+        marginBottom: theme.spacing(1.5), // 12px
       },
       '&:where(.MuiTypography-overline3)': {
-        marginBottom: theme.spacing(1.375), // 11px
+        marginBottom: theme.spacing(1.25), // 10px
       },
       '&:where(.MuiTypography-figcaption)': {
         marginBottom: theme.spacing(1.75), // 14px

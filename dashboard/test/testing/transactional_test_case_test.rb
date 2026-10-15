@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'securerandom'
 
 class ActiveSupport::Testing::TransactionalTestCaseTest < ActiveSupport::TestCase
   UNIT_NAMES = Array.new(10) {Faker::Lorem.unique.word.downcase}
@@ -59,6 +60,54 @@ class ActiveSupport::Testing::TransactionalTestCaseTest < ActiveSupport::TestCas
 
     context 'context block' do
       it_behaves_like 'shares root class context', transaction_count: 3
+    end
+  end
+
+  describe 'test case with stale connection' do
+    UNIT_NAME = "stale-connection-test-unit-#{SecureRandom.hex(8)}".freeze
+
+    # Simulates a connection object that was current while a test class was loaded,
+    # but is no longer the connection used by ActiveRecord when setup_all runs.
+    class StaleConnection
+      def begin_transaction(*)
+        @transaction_open = true
+      end
+
+      def rollback_transaction
+        @transaction_open = false
+      end
+    end
+
+    subject(:isolated_test_case_with_stale_connection) do
+      ActiveRecord::Base.stubs(:connection).returns(StaleConnection.new)
+
+      Class.new(ActiveSupport::TestCase) do
+        runnables.delete self
+
+        setup_all do
+          create(:unit, name: UNIT_NAME)
+        end
+
+        it 'sees setup_all record inside isolated test case stale transaction' do
+          _(Unit).must_be :exists?, name: UNIT_NAME
+        end
+      end
+    ensure
+      ActiveRecord::Base.unstub(:connection)
+    end
+
+    around do |test|
+      test.call
+    ensure
+      Unit.find_by(name: UNIT_NAME)&.destroy
+    end
+
+    it 'rolls back setup_all records' do
+      reporter = Minitest::StatisticsReporter.new
+      isolated_test_case_with_stale_connection.run reporter
+      raise reporter.results.first.failure unless reporter.passed?
+
+      _(Unit).wont_be :exists?, name: UNIT_NAME
     end
   end
 

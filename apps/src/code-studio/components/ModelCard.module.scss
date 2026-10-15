@@ -1,0 +1,50 @@
+.container {
+  color: var(--text-neutral-primary);
+  text-align: left;
+  background-color: var(--background-neutral-quinary);
+  border-radius: 5px;
+  padding: 20px;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+.header {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.subPanel {
+  background-color: var(--background-neutral-tertiary);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+
+.heading {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.feature {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.featureId {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.spacer {
+  margin-top: 12px;
+}

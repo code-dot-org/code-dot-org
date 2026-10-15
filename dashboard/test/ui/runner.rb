@@ -27,6 +27,7 @@ require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/ci_utils'
+require 'cdo/playwright_report'
 
 require 'haml'
 require 'json'
@@ -519,7 +520,8 @@ end
 # cross-page navigation row at the top of each status page. Each entry's
 # :filename must equal the value status_page_filename returns when that
 # page is being generated, so the active entry can be rendered unlinked.
-# The four entries are the four suites rake test:ui_all dispatches.
+# These three are the Selenium suites rake test:ui_all dispatches; the two
+# Playwright suites are appended in status_pages_navigation.
 STATUS_PAGES_NAVIGATION = [
   {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
   {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
@@ -531,11 +533,20 @@ def status_pages_navigation
   # so that the oncall engineer can quickly find all the pages they need to
   # check for UI test failures.
   return nil unless GIT_BRANCH == 'test'
-  STATUS_PAGES_NAVIGATION.map do |page|
+  pages = STATUS_PAGES_NAVIGATION.map do |page|
     page.merge(
       url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
     )
   end
+  # Appended here, not baked into the frozen constant, so that loading this file
+  # runs no S3 code. Playwright publishes its own reports, so these entries carry
+  # a url and no :filename; the keys are stable and always serve the latest run.
+  # The report names match run_playwright_suite in lib/rake/test.rake.
+  {'Playwright (latest run)' => 'playwright', 'Playwright Eyes (latest run)' => 'playwright-eyes'}.each do |display_name, name|
+    url = Cdo::PlaywrightReport.index_url(name: name)
+    pages << {display_name: display_name, url: url} if url
+  end
+  pages
 end
 
 # Status page filename per suite. Eyes keeps a stable name across providers.
@@ -769,6 +780,8 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
+  # Skip tests that are covered by Playwright. The Port Cucumber to Playwright Claude dynamic workflow adds this tag once the feature has been migrated.
+  arguments += skip_tag('@playwright')
 
   # If --eyes is specified, only run scenarios with the corresponding eyes tag.
   # Otherwise, do not call tag(), allowing any scenarios to run which are not

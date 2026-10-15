@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Map Levels
 
   # Map levels should render the reference guide content inside an iframe
@@ -7,7 +8,7 @@ Feature: Map Levels
     Given I create a student named "Lillian"
 
   Scenario: Map level displays content
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/35/levels/1?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/35/levels/1?noautoplay=true"
     Then I wait to see "#curriculum-reference"
     And I switch to the first iframe
     And I wait until "#body" contains text "Welcome to the Circuit Playground"

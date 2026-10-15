@@ -1,0 +1,34 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-27T15:54:51.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-logic-based-ai-lesson6 + template",
+    "long_instructions": "**To change the temperature, change what `turn` prints.**\r\n\r\n- `print(\"UP\")` will raise the temperature by one degree.\r\n- `print(\"DOWN\")` will lower the temperature by one degree.\r\n- `print(\"STAY\")` will keep the temperature the same.\r\n\r\n**☑️ Do This:**\r\n- Write a simple program that always turns the thermostat lower.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "display_name": "Turn the Thermostat",
+    "encrypted_exemplar_sources": "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\nZLNuVoY=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 15:58:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 17:57:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:13:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:09:25 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:12:27 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

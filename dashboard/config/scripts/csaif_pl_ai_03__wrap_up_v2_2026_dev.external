@@ -1,0 +1,13 @@
+name 'csaif_pl_ai_03_)wrap-up_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Everyday Systems Swap
+
+You have explored how computer systems, connected devices, and AI work together, and you have seen how a student project pulls those ideas into one design. Before you move on, add a short post and see how other teachers connect these ideas to everyday life.
+
+Your post can be a sentence or two. There are no wrong answers.
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/s024i22emji768gw5vct" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
+MARKDOWN

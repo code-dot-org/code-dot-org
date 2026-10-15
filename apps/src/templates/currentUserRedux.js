@@ -128,6 +128,7 @@ const initialState = {
   userCreatedAt: null,
   userSharingDisabled: false,
   hasSeenHomepageWelcome: false,
+  usOnlyAichatModelsDisabled: false,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -255,10 +256,12 @@ export default function currentUser(state = initialState, action) {
       created_at,
       is_verified_instructor,
       has_completed_ai_differentiation_welcome,
+      teacher_panel_v2_seen,
       educator_role,
       sharing_disabled,
       has_seen_homepage_welcome,
       ai_chat_access_level,
+      us_only_aichat_models_disabled,
     } = action.serverUser;
     // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
     // renamed to AnalyticsReporter.
@@ -288,6 +291,7 @@ export default function currentUser(state = initialState, action) {
       inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       hasCompletedAiDifferentiationWelcome:
         has_completed_ai_differentiation_welcome,
+      teacherPanelV2Seen: teacher_panel_v2_seen,
       childAccountComplianceState: child_account_compliance_state,
       countryCode: country_code,
       usStateCode: us_state_code,
@@ -297,6 +301,7 @@ export default function currentUser(state = initialState, action) {
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
       aiChatAccessLevel: ai_chat_access_level,
+      usOnlyAichatModelsDisabled: us_only_aichat_models_disabled ?? false,
     };
   }
 

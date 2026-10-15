@@ -1,5 +1,8 @@
 ## Updating FontAwesome Files
 
+The current steps, and an agent skill that automates them, are in `frontend/packages/fonts/README.md`.
+The list below is older and kept for reference.
+
 If you are looking to update the FontAwesome files in `font.scss`, you'll need to do the following:
 1. **Download css and webfont files from FontAwesome.**
    Sign in with our shared dev account, find our "Code.org Kit", then click "Download Web Files" from the "Self-Host on the Web" option.
@@ -15,7 +18,7 @@ If you are looking to update the FontAwesome files in `font.scss`, you'll need t
    - `cdo-dsco/assets/font-awesome-pro/1762452190/webfonts/custom-icons.woff2`
 6. **[Only necessary if starting from scratch, should apply by default to new uploads] Update CORS configuration on `cdo-dsco` bucket**
    to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
-   More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
+   More documentation on those changes are in [this Slack thread](https://codeai.slack.com/archives/C03CK49G9/p1681500978173639).
 7. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
 
 At time of writing, these files were referenced in the following places:

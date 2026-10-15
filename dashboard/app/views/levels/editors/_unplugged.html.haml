@@ -7,7 +7,7 @@
     = f.text_field :title
   .field
     = f.label :description
-    = f.text_area :description, rows: 6, class: 'input-block-level'
+    = f.text_area :description, rows: 6, class: 'form-control'
 
 = render partial: 'levels/editors/fields/video', locals: {f: f}
 = render partial: 'levels/editors/fields/callouts', locals: {f: f}

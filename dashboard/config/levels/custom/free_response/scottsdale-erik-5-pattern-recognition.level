@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-15T20:45:44.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "During the Website Gallery Walk, you viewed several AI-generated websites. What common patterns or recurring elements did you notice across your classmates' websites? Describe at least two patterns you observed in how AI constructed these pages or images.",
+    "placeholder": "Describe the common patterns you observed in the AI-generated websites.",
+    "encrypted_solution": "BZzbH7Gn3DksuWhDNG0x+hpaO2LDKogq/Kr5RNtYVDQkl0SlLXJ16AiIQ8Km\nkXVCrUOOMyjKfyuzrTLcydD7ElVMYE8GeU57In4Uo+HIgZrG0KpLqcmb2t7e\nB7EhSyv3jNMLNt44Pe4dGt/kZ/2PRWze90sCseCUH7ENtpxw2hGdRmw9al/S\n9k4Oe86meVLMOXovGJ2doOFlwvxv19tu7ziI0l0mbMcTV7TYVjvIz6xbg05/\nsQ5nnzEvec5dSExkPWYylGAAcZWwKiLIa6K2d6p4nGu/odRgwKupBZO8MJhE\nuuAlyROUcPi3UpUQGXLr+z66IxNnec+dySyQ4coKPZUFzOCip7mkLqw1Y+BE\nqml2EvID6QOiZwPCoppL7MHJ4zo2bzZQlhhwIDFTLGTiciapdC+3vCHFfAv1\nP3nOY3N3CzKEznj2vTjWjG+xJmH2Evpa7kb4ZAvK0AtK6UxSfwxwTYQEaYFY\nn4wcc5J6eWfQgMCfmwiGj8IQGVWEL5zZtwiXR0atipJ7MdxJjwo++vhSyvXp\nQqZB2e9QMajQwo/o4jropuw0cU1g4iremj7LQnU7gwYj4xzvc+ufIVOezUHq\nJ0QlzkaLfHJfkUO3mnVlroZAKSxBiiOl7IlNHdWXOUchqisrmvlx7zrJ/S/S\nM/Qm37eNyJu7uhRGplw5As8=\n",
+    "generate_outline": "Students circulate and view classmates' websites, looking for similar patterns. They describe each pattern in their activity guide, use tally marks to record how often they see it, and then enter and submit the most common patterns they noticed.",
+    "encrypted": "false",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:45:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:46:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:46:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:46:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:52:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

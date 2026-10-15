@@ -5,7 +5,12 @@ import I18n from './i18n';
 import modeHelpers from './modeHelpers';
 import soundLibrary from './models/soundLibrary';
 import {render as renderCanvas, stopRender} from './renderer';
-import {setInitialState, setSetStateCallback} from './state';
+import {
+  getState,
+  setInitialState,
+  setState,
+  setSetStateCallback,
+} from './state';
 import UI from './ui';
 
 export interface InitAllOptions {
@@ -20,9 +25,12 @@ export interface InitAllOptions {
   i18n?: Record<string, (opts?: Record<string, unknown>) => string>;
 }
 
-// Persist the React root across re-renders so we can call root.render()
-// rather than mount a fresh root on every state-set callback.
+// Persist the React root and its container across re-renders.  We only
+// call createRoot when the container DOM element changes (component
+// unmount→remount); reusing the same root on appMode changes avoids
+// React's "container already passed to createRoot" warning.
 let uiRoot: Root | null = null;
+let uiContainer: HTMLElement | null = null;
 
 //
 // Required in options:
@@ -65,20 +73,20 @@ export const initAll = function (options: InitAllOptions): void {
   setSetStateCallback(renderUI);
 };
 
-// Stop the canvas RAF loop without unmounting the React UI root. The root
-// is naturally orphaned when the container DOM node is removed.
 export const stopUIRerender = (): void => {
+  clearInterval(getState().guideTypingTimer);
+  setState({guideTypingTimer: undefined}, {skipCallback: true});
   stopRender();
 };
 
-// Tell React to explicitly render the UI.
 function renderUI(): void {
   const container = document.getElementById(OCEANS_UI_CONTAINER_ID);
   if (!container) {
     return;
   }
-  if (!uiRoot) {
+  if (container !== uiContainer) {
     uiRoot = createRoot(container);
+    uiContainer = container;
   }
-  uiRoot.render(<UI />);
+  uiRoot?.render(<UI />);
 }

@@ -14,6 +14,22 @@ export class LockoutPage extends BasePage {
   /** The .lockout-panel container; scope and visibility signal for the panel. */
   readonly panel: Locator;
 
+  /**
+   * The standalone /lockout page's form (LockoutPanel.tsx). Distinct from
+   * `panel`: this is the <form id="lockout-panel-form"> itself, used as a
+   * presence signal by the policy-compliance suite.
+   */
+  readonly panelForm: Locator;
+
+  /**
+   * The embedded linked-accounts lockout form (LockoutLinkedAccounts.jsx),
+   * mounted inline on /users/edit for accounts whose full session isn't
+   * locked but whose third-party account linking still requires parental
+   * permission. Shares #parent-email/#lockout-submit/#permission-status ids
+   * with `panelForm`.
+   */
+  readonly linkedAccountsForm: Locator;
+
   /** Panel heading; its text varies by state, asserted in the spec. */
   readonly heading: Locator;
 
@@ -39,6 +55,8 @@ export class LockoutPage extends BasePage {
   constructor(page: Page) {
     super(page);
     this.panel = page.locator('.lockout-panel');
+    this.panelForm = page.locator('#lockout-panel-form');
+    this.linkedAccountsForm = page.locator('#lockout-linked-accounts-form');
     this.heading = this.panel.getByRole('heading');
     this.parentEmailInput = page.getByRole('textbox', {
       name: /Parent\/Guardian Email/,

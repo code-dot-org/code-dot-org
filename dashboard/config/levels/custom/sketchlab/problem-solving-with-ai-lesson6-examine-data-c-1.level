@@ -1,0 +1,772 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-08-04T16:55:12.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Hiring Manager\r\n\r\nHiring Manager Dana Okafor has 6 applications for one Software Engineer opening — but time to interview only 2 candidates. \r\n\r\nUse your best judgement and rank the order of the applicants. Drag the numbers in the box to the left and place them at the top of the chart to indicate the order.\r\n\r\nFor your top applicant, write a justification as to why you chose them.\r\n\r\n\r\n",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "type": "group",
+            "position": {
+              "x": 308.426664613721,
+              "y": 118.0354365086927
+            },
+            "width": 3908.7258555696208,
+            "height": 841.4513442903298,
+            "zIndex": -1,
+            "data": {
+            },
+            "measured": {
+              "width": 3909,
+              "height": 841
+            }
+          },
+          {
+            "id": "0dabe058-bd4e-4a55-9248-3bee57d8ccda",
+            "type": "text",
+            "data": {
+              "text": "Jamal ",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 69.9167151885485,
+              "y": 31.155869261045638
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "5a7c230d-0e3d-4d2f-9c76-8b9d1854e5ec",
+            "type": "text",
+            "data": {
+              "text": "Jamal — Civil engineer with 5 years in urban infrastructure at the Chicago Transit Authority. Skilled in AutoCAD, Revit, and Civil 3D, with basic Python and SQL. National Engineering Excellence Award winner. Degree: Civil Engineering, UIUC.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 71.38525636372111,
+              "y": 116.51055517113738
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "94e37290-4301-4e10-90d7-3423fdf94fd2",
+            "type": "text",
+            "data": {
+              "text": "Hiring Manager \nResumes",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": 70,
+              "locked": false
+            },
+            "position": {
+              "x": 378.94813298597455,
+              "y": -320.45425738385984
+            },
+            "width": 960.9999999999995,
+            "height": 107.65053748988726,
+            "measured": {
+              "width": 961,
+              "height": 108
+            },
+            "dragging": false
+          },
+          {
+            "id": "c65de785-a3ea-4a81-9836-55206db7fe60",
+            "type": "text",
+            "data": {
+              "text": "Samantha",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 712.9655887048946,
+              "y": 22.437044165981717
+            },
+            "width": 179.79261866159345,
+            "height": 40,
+            "measured": {
+              "width": 180,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "8018b2f2-5ba5-4a32-8c3f-2a2f26ca4282",
+            "type": "text",
+            "data": {
+              "text": "David",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 1365.56174181755,
+              "y": 21.714900402113983
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "7c78d12c-a0b6-4630-98e4-aa96223419fa",
+            "type": "text",
+            "data": {
+              "text": "Eric",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 2032.9202476600706,
+              "y": 18.590012123202342
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "ddeca4ef-c6a1-4207-a509-498d17000da4",
+            "type": "text",
+            "data": {
+              "text": "Aisha",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 2726.2410315928296,
+              "y": 16.017078408894008
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "0748808a-97e0-4db3-be08-4310575043e7",
+            "type": "text",
+            "data": {
+              "text": "Priya",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 3374.4532297287465,
+              "y": 10
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "fb69acac-c8a6-45de-8a32-4065ba720119",
+            "type": "text",
+            "data": {
+              "text": "Examine the resumes that were submitted for each of the applicants below.\n\nUse your best judgement and rank the order of the applicants. Drag the numbers in the box to the right and place them at the top of the chart to indicate the order.\n\nFor your top applicant, write a justification as to why you chose them.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": false
+            },
+            "position": {
+              "x": 1418.2873968486897,
+              "y": -267.5703117774749
+            },
+            "width": 613.5944109084196,
+            "height": 72.65932818943324,
+            "measured": {
+              "width": 614,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "fb80cb7c-cc0b-4a91-869c-7764487ad441",
+            "type": "text",
+            "data": {
+              "text": "Directions:",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 1419.340514251828,
+              "y": -393.55058641557264
+            },
+            "width": 170.61476144703693,
+            "height": 83.65053748988726,
+            "measured": {
+              "width": 171,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "4daecd89-4992-4615-b6f1-29142aaf1606",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "#fbdae8",
+              "locked": true
+            },
+            "position": {
+              "x": 344.33661627922993,
+              "y": 93.94813203743456
+            },
+            "width": 3890.972257030364,
+            "height": 829.8955833881666,
+            "measured": {
+              "width": 3891,
+              "height": 830
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "bc9a883a-9326-401e-a02e-3820876a832b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "#fbdae8",
+              "locked": true
+            },
+            "position": {
+              "x": 2151.570057344976,
+              "y": -360.93641654139066
+            },
+            "width": 927.330501138018,
+            "height": 193.5166947198102,
+            "measured": {
+              "width": 927,
+              "height": 194
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "0134ba2f-2e89-45e6-9d12-15d9ef6225e6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/fb0bd0cd-7c53-43bb-a9eb-dcfad07f9687.png",
+              "altText": "circle-1"
+            },
+            "position": {
+              "x": 2173.9044874397973,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "14977f8e-b8b5-49c9-91d8-3d0c1f469f60",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/a2036130-c465-40d5-ac65-4b1a70a987c5.png",
+              "altText": "circle-2"
+            },
+            "position": {
+              "x": 2320.937876879418,
+              "y": -318.62591191264266
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "da48c459-6b42-4613-91a3-dda0fa82fd2f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/ca9d3352-778b-4806-b983-0de87ddb114b.png",
+              "altText": "circle-3"
+            },
+            "position": {
+              "x": 2458.7816794790606,
+              "y": -318.6259119126428
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a1e00cf2-1212-4e70-940e-de3500cb9310",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/733bb432-e02a-4a76-a78e-c6de842b1a2a.png",
+              "altText": "circle-4"
+            },
+            "position": {
+              "x": 2605.815068918682,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "81c363ea-3e98-4312-8bd0-d6e66cc40d69",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/ab928f5b-9771-48ca-bc3a-431f95c3433f.png",
+              "altText": "circle-5"
+            },
+            "position": {
+              "x": 2748.2536649383137,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5e2f2b50-906d-412c-9f82-236d388b6551",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/d0f79c64-7839-48a8-9430-2d526ee4e43f.png",
+              "altText": "circle-6"
+            },
+            "position": {
+              "x": 2890.692260957946,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "30407164-7fab-4a0c-b788-ed10356424bd",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "#fbdae8",
+              "locked": true
+            },
+            "position": {
+              "x": 3202.9599808226735,
+              "y": -358.6390198313966
+            },
+            "width": 927.330501138018,
+            "height": 381.90322493932365,
+            "measured": {
+              "width": 927,
+              "height": 382
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "87e535ee-2abd-4069-aee4-772051aa3d8e",
+            "type": "text",
+            "data": {
+              "text": "For your top applicant, write a justification as to why you chose them.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 3212.065564752033,
+              "y": -338.38789344905894
+            },
+            "width": 560.453259116216,
+            "height": 47.70550563296126,
+            "measured": {
+              "width": 560,
+              "height": 48
+            },
+            "dragging": false
+          },
+          {
+            "id": "154783b1-72ad-4848-a224-32f2b63bc508",
+            "type": "text",
+            "data": {
+              "text": "Write your response here...",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3221.3253823635923,
+              "y": -262.34897177709615
+            },
+            "width": 897.0000000000005,
+            "height": 263,
+            "measured": {
+              "width": 897,
+              "height": 263
+            },
+            "dragging": false
+          },
+          {
+            "id": "81f0f00f-79dd-4c7f-b709-ae97cbe89443",
+            "type": "text",
+            "data": {
+              "text": "Samantha — Software engineer with 4 years in full-stack development and machine learning at Google and Twitch. JavaScript, Python, Ruby, SQL; React, Django, Node.js. Hackathon winner. Degree: Computer Science, Columbia.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 708.9420228980377,
+              "y": 116.51055517113738
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "81aec42c-f4f9-4a89-ac2f-b3c36269278c",
+            "type": "text",
+            "data": {
+              "text": "David — Electrical engineer with 2 years in wearables and embedded systems at Fitbit and Tesla. C, C++, Python; Altium Designer, MATLAB. Published in an AI & Robotics journal. Degree: Electrical Engineering, Stanford.\n",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1362.4987894323547,
+              "y": 114.51055517113738
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "e298d40a-bf25-4a8b-917c-958e4333cd7d",
+            "type": "text",
+            "data": {
+              "text": "Eric — Full-stack engineer with 7 years building high-performance web apps at Spotify and BuzzFeed. JavaScript, TypeScript, Ruby, SQL; React, Ruby on Rails, Node.js. Spotify Employee of the Year. Degree: Computer Science, USC.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2030.0555559666711,
+              "y": 108.51055517113738
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "d71821cd-d996-4dd0-b83a-aabd51fa1fce",
+            "type": "text",
+            "data": {
+              "text": "Aisha — Cybersecurity analyst with 5 years at IBM plus an FBI internship. Penetration testing, Python, Wireshark, Metasploit, Linux. Volunteers as a cybersecurity instructor for a high school STEM program. Degree: Cybersecurity, UT Austin.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2727.6123225009874,
+              "y": 108.51055517113744
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "dab88bb8-615a-46bd-9c7f-5a416c117702",
+            "type": "text",
+            "data": {
+              "text": "Priya — Cloud engineer with 6 years at Amazon and Microsoft, specializing in scalable enterprise systems. Python, Java, JavaScript, Go; AWS, Kubernetes, Terraform. AWS Innovation Award winner. Degree: Computer Science, University of Washington.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3375.1690890353043,
+              "y": 110.51055517113738
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "b151142c-b98e-456f-878a-16ce2b19f57f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-c-1/uuid/3c14ff64-2b3f-47ee-9133-410c6f03fd67.png",
+              "altText": "1"
+            },
+            "position": {
+              "x": 10,
+              "y": 147.45134429032979
+            },
+            "width": 537.9999999999999,
+            "height": 683.9999999999999,
+            "measured": {
+              "width": 538,
+              "height": 684
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "9a32264b-b71d-4fe3-b6b3-40a6bcbceecf",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-c-1/uuid/616f70a4-acbe-481c-a255-c3a5ece09142.png",
+              "altText": "2"
+            },
+            "position": {
+              "x": 700.25,
+              "y": 201.45134429032979
+            },
+            "width": 482,
+            "height": 571.9999999999999,
+            "measured": {
+              "width": 482,
+              "height": 572
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "176164ad-49c8-4ffa-9cc5-0752762f3f23",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-c-1/uuid/62bbb390-40a8-4d31-952f-0a0c95933679.png",
+              "altText": "3"
+            },
+            "position": {
+              "x": 1348.2499999999998,
+              "y": 197.4513442903299
+            },
+            "width": 502,
+            "height": 577.9999999999999,
+            "measured": {
+              "width": 502,
+              "height": 578
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "a6da4b4c-2db4-4ff1-9547-2f8dc7772456",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-c-1/uuid/d2f36f4d-f370-48ca-a046-c55115c7d77f.png",
+              "altText": "4"
+            },
+            "position": {
+              "x": 2012.2499999999998,
+              "y": 189.4513442903299
+            },
+            "width": 556,
+            "height": 585.9999999999999,
+            "measured": {
+              "width": 556,
+              "height": 586
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "c0abc5eb-a549-48c6-8d9e-bd91daa1612c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-c-1/uuid/f6ab0be5-622e-4a48-93a9-de8ecdc7346d.png",
+              "altText": "5"
+            },
+            "position": {
+              "x": 2722.249999999999,
+              "y": 185.45134429032979
+            },
+            "width": 520,
+            "height": 589.9999999999999,
+            "measured": {
+              "width": 520,
+              "height": 590
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "d8360954-a895-4ed3-8c27-8fe2d49a4997",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-c-1/uuid/503d02ab-0e4e-4099-ac4c-f483bd7869d3.png",
+              "altText": "6"
+            },
+            "position": {
+              "x": 3356.249999999999,
+              "y": 185.45134429032979
+            },
+            "width": 502,
+            "height": 591.9999999999999,
+            "measured": {
+              "width": 502,
+              "height": 592
+            },
+            "dragging": false,
+            "parentId": "6844c855-4b29-4ca0-9b2f-a225818ca668",
+            "expandParent": true
+          },
+          {
+            "id": "c4d033c7-2a38-47dc-b4ed-18e378d17a54",
+            "type": "text",
+            "data": {
+              "text": "Alternate Link to Resume PDFs: https://drive.google.com/file/d/12qUo8sUyaD6lyfGxWfeFJRrP1knMScRp/view?usp=sharing",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": false
+            },
+            "position": {
+              "x": 343.0137149626286,
+              "y": 951.027046842067
+            },
+            "width": 1747.0512443199732,
+            "height": 72.65932818943324,
+            "measured": {
+              "width": 1747,
+              "height": 73
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -174.3504162214981,
+          "y": 321.42916633960573,
+          "zoom": 0.7578582832551994
+        }
+      }
+    },
+    "display_name": "Hiring Manager",
+    "bubble_choice_description": "Examine the resumes that were submitted for each of the promising applicants",
+    "thumbnail_url": "https://images.code.org/e9db556f031edb90c5147dee1257d757-slide-one.jpg",
+    "hide_share_and_remix": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-04T16:55:12.055+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-examine-data-b-1\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-examine-data-b-1\"},{\"changed_at\":\"2026-08-04 16:57:44 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 17:04:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 17:05:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 17:07:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 17:09:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

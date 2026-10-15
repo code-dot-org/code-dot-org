@@ -18,6 +18,8 @@ export const REACT_FLOW_CLASS = {
   node: 'react-flow__node',
   /** Wrapper around each edge. Carries `data-id`. */
   edge: 'react-flow__edge',
+  /** The drawn path inside an edge wrapper. */
+  edgePath: 'react-flow__edge-path',
   /** Connection point on a node. Carries `data-nodeid` / `data-handleid`. */
   handle: 'react-flow__handle',
   /** Bottom-right zoom/fit controls panel. */
@@ -58,6 +60,10 @@ export const reactFlowNodeSelector = (id: string): string =>
 /** Selector for a specific edge wrapper by its React Flow id. */
 export const reactFlowEdgeSelector = (id: string): string =>
   `${REACT_FLOW_SELECTOR.edge}[data-id="${CSS.escape(id)}"]`;
+
+/** Selector for the drawn path of the edge with the given id. */
+export const reactFlowEdgePathSelector = (id: string): string =>
+  `${reactFlowEdgeSelector(id)} .${REACT_FLOW_CLASS.edgePath}`;
 
 /** Selector for every handle belonging to the node with the given id. */
 export const reactFlowHandlesByNodeSelector = (nodeId: string): string =>

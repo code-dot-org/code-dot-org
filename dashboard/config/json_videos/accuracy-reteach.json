@@ -1,0 +1,13 @@
+{
+  "key": "accuracy-reteach",
+  "description": "Explains that AI predicts patterns rather than \"knowing\" facts, which can lead to hallucinations.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/accuracy-reteach.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "d5fa2ed3-cebe-497e-b58e-592746015d40"
+  ]
+}

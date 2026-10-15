@@ -123,6 +123,25 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'file: returns 404 for a filename the level does not have' do
+    LevelStarterAssetsHelper.expects(:get_object).never
+    level = create(:applab, starter_assets: {'ty.png' => @uuid_name})
+
+    get :file, params: {level_name: level.name, filename: 'other', format: 'png'}
+
+    assert_response :not_found
+  end
+
+  test 'file: returns 404 if the stored object is missing' do
+    LevelStarterAssetsHelper.expects(:get_object).with(@uuid_name).returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:read_file).with(@file_obj).raises(Aws::S3::Errors::NoSuchKey.new(nil, 'missing'))
+    level = create(:applab, starter_assets: {'ty.png' => @uuid_name})
+
+    get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
+
+    assert_response :not_found
+  end
+
   test 'file_by_uuid: returns requested file' do
     LevelStarterAssetsHelper.
       expects(:get_object).
@@ -142,25 +161,32 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file_by_uuid: returns file and CORS header for allowed origin' do
-    allowed_origin = "https://test.#{CDO.preview_codeprojects_hostname}"
-    @request.headers['Origin'] = allowed_origin
+    # Both sandboxed-preview domains stay allowed while the
+    # 'sandboxed-preview-domain' DCDO flag can select either.
+    allowed_origins = [
+      "https://test.#{CDO.preview_codeaiprojects_hostname}",
+      "https://test.#{CDO.preview_codeprojects_hostname}",
+    ]
+    allowed_origins.each do |allowed_origin|
+      @request.headers['Origin'] = allowed_origin
 
-    LevelStarterAssetsHelper.
-      expects(:get_object).
-      with(@uuid_name).
-      returns(@file_obj)
-    LevelStarterAssetsHelper.
-      expects(:read_file).
-      with(@file_obj).
-      returns('hello, world!')
+      LevelStarterAssetsHelper.
+        expects(:get_object).
+        with(@uuid_name).
+        returns(@file_obj)
+      LevelStarterAssetsHelper.
+        expects(:read_file).
+        with(@file_obj).
+        returns('hello, world!')
 
-    level = create(:weblab2)
-    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+      level = create(:weblab2)
+      get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
 
-    assert_response :success
-    assert_equal 'hello, world!', response.body
-    assert_equal 'image/png', response.headers['Content-Type']
-    assert_equal allowed_origin, response.headers['Access-Control-Allow-Origin']
+      assert_response :success
+      assert_equal 'hello, world!', response.body
+      assert_equal 'image/png', response.headers['Content-Type']
+      assert_equal allowed_origin, response.headers['Access-Control-Allow-Origin']
+    end
   end
 
   test 'file_by_uuid: no CORS header provided for disallowed origin' do

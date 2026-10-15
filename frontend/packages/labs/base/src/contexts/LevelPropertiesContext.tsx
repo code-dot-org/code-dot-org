@@ -1,10 +1,10 @@
 import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useMemo} from 'react';
 
-import type {LevelPropertiesMap} from '../types';
+import type {LevelPropertiesBase, LevelPropertiesMap} from '../types';
 
 interface LevelPropertiesContent {
-  levelProperties?: Record<string, unknown>;
+  levelProperties?: LevelPropertiesBase;
   levelPropertiesMap?: LevelPropertiesMap;
 }
 

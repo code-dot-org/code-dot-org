@@ -26,19 +26,19 @@ Throughout Chapter 2, students will explore sample apps to learn how computers i
 
 In order to solve problems, computers need to perform four different tasks:
 
-1) #### Take input
-2) #### Store information
-3) #### Process this information
-4) #### Output the results
+1) Take input
+2) Store information
+3) Process this information
+4) Output the results
 
 ## How will students use IOSP?
 
 Students will consider how computers that they interact with complete these four tasks. Throughout lessons 5, 6, and 7, students will see multiple examples of computers that input, output, store, and process (IOSP). For example, a GPS app might do the following:
 
-* ### **Input**: A user inputs a starting point and destination
-* ### **Storage**: The app stores the "Home" location for a user to use over and over
-* ### **Process**: The app uses the input to configure an optimal route
-* ### **Output**: The app displays the route on the screen, along with the ETA
+* **Input**: A user inputs a starting point and destination
+* **Storage**: The app stores the "Home" location for a user to use over and over
+* **Process**: The app uses the input to configure an optimal route
+* **Output**: The app displays the route on the screen, along with the ETA
 
 What other examples of IOSP can you think of?
 
@@ -46,5 +46,5 @@ What other examples of IOSP can you think of?
 ___
 
 ## Up Next
-In the next two levels, you will engage with student activities from <a href="https://studio.code.org/s/csd1-2025/lessons/6" target="blank" rel="noopener noreferrer">Lesson 6 - Processing</a> and <a href="https://studio.code.org/s/csd1-2025/lessons/7" target="blank" rel="noopener noreferrer">Lesson 7 - Storage</a>.
+In the next two levels, you will engage with student activities from <a href="https://studio.code.org/s/csd1-2026/lessons/6" target="blank" rel="noopener noreferrer">Lesson 6 - Processing</a> and <a href="https://studio.code.org/s/csd1-2026/lessons/7" target="blank" rel="noopener noreferrer">Lesson 7 - Storage</a>.
 MARKDOWN

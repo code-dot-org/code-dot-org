@@ -2,11 +2,16 @@ import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 export async function getPredictResponse(
   levelId: number,
-  scriptId: number
+  scriptId: number,
+  userId?: number
 ): Promise<string | null> {
   try {
+    let requestString = `/user_levels/level_source/${scriptId}/${levelId}`;
+    if (userId !== undefined) {
+      requestString += `/user/${userId}`;
+    }
     const response = await HttpClient.fetchJson<{data: string}>(
-      `/user_levels/level_source/${scriptId}/${levelId}`,
+      requestString,
       {}
     );
     // The program is the predict response.

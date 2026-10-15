@@ -64,10 +64,31 @@ describe('ExemplarCodeWidget', () => {
     });
   });
 
-  it('does not fetch when lessonId is null', () => {
+  it('does not fetch when lessonId is null, but still shows the loading state', () => {
     render(<ExemplarCodeWidget lessonId={null} />);
 
     expect(HttpClient.fetchJson).not.toHaveBeenCalled();
+    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+  });
+
+  it('renders nothing when the lesson has no exemplar code', async () => {
+    HttpClient.fetchJson.mockResolvedValue({
+      value: {id: 59486, name: 'lesson-name'},
+      response: new Response(),
+    });
+
+    const {container} = render(<ExemplarCodeWidget lessonId={1} />);
+
+    await waitFor(() => {
+      expect(HttpClient.fetchJson).toHaveBeenCalledWith(
+        '/student_snapshots/exemplar_code/1'
+      );
+    });
+
+    await waitFor(() => {
+      expect(container).toBeEmptyDOMElement();
+    });
+    expect(screen.queryByText('Exemplar Code')).not.toBeInTheDocument();
   });
 
   it('handles fetch errors gracefully', async () => {
@@ -84,6 +105,22 @@ describe('ExemplarCodeWidget', () => {
     });
 
     consoleErrorSpy.mockRestore();
+  });
+
+  it('keeps showing the loading state (never flashes hidden) when lessonId is supplied after mount', () => {
+    // Never resolves, so we can inspect the mid-flight render synchronously.
+    HttpClient.fetchJson.mockImplementation(() => new Promise(() => {}));
+
+    const {rerender} = render(<ExemplarCodeWidget lessonId={null} />);
+    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+    expect(HttpClient.fetchJson).not.toHaveBeenCalled();
+
+    rerender(<ExemplarCodeWidget lessonId={1} />);
+
+    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+    expect(HttpClient.fetchJson).toHaveBeenCalledWith(
+      '/student_snapshots/exemplar_code/1'
+    );
   });
 
   it('refetches when lessonId changes', async () => {

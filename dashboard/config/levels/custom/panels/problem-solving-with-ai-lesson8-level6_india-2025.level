@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-06-26T19:33:16.000Z",
   "level_num": "custom",
@@ -32,13 +33,13 @@
         "layout": "text-bottom-center"
       },
       {
-        "text": "# Reference\nMake sure to give AI **additional examples or resources**.\n\n### Example Prompt with Task\n>_\"Write a short story about two friends, **inspired by Kermit and Miss Piggy**.\"_",
-        "imageUrl": "https://images.code.org/509f26c295948b10ac6d08ed560fedfc-Screenshot 2025-03-20 at 1.56.05 PM.png",
+        "text": "# Reference\nMake sure to give AI **additional examples or resources**.\n\n### Example Prompt with Task\n>_\"Write a short story about two friends, **the famous Hindi cartoon show Motu and Patlu**.\"_",
+        "imageUrl": "https://images.code.org/93fe79b29f2bd44c070898b055b7a087-motu patlu.jpg",
         "key": "test-problem-solving-with-ai-lesson8-level1-panel-250d2def-1334-460b-9cf7-dbbdb0348e19",
         "layout": "text-top-right"
       },
       {
-        "text": "# Tone\nMake sure to give AI **a style in which to write the output**.\n\n### Example Prompt with Task\n>_\"Write a short story, **in the style of horror novelist Stephen King,** about two friends.\"_",
+        "text": "# Tone\nMake sure to give AI **a style in which to write the output**.\n\n### Example Prompt with Task\n>_\"Write a short story, about two friends, inspired by the writing style of **famous Hindi horror and crime thriller novelist Surendra Mohan Pathak**.\"_",
         "imageUrl": "https://images.code.org/42a56c81e9184366dbfd5f7f7445ecd0-Screenshot 2025-03-20 at 1.51.15 PM.png",
         "key": "test-problem-solving-with-ai-lesson8-level1-panel-6c3cabab-f5d0-428b-a14e-8d44a2c9e3e0",
         "layout": "text-top-left"
@@ -50,9 +51,9 @@
         "layout": "text-bottom-center"
       }
     ],
-    "name_suffix": "_india-2025"
+    "name_suffix": "_india-2025",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:16.417+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level6_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level6_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:16.417+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level6_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level6_2025\"},{\"changed_at\":\"2026-08-07 02:28:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"},{\"changed_at\":\"2026-08-07 02:34:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"},{\"changed_at\":\"2026-08-07 02:35:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Panels>

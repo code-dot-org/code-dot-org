@@ -1,5 +1,17 @@
 import {render, screen} from '@testing-library/react';
-import {describe, expect, it} from 'vitest';
+import type {ReactNode} from 'react';
+import {forwardRef} from 'react';
+import {describe, expect, it, vi} from 'vitest';
+
+vi.mock('@tanstack/react-router', () => ({
+  Link: forwardRef<HTMLAnchorElement, {to: string; children?: ReactNode}>(
+    ({to, children, ...rest}, ref) => (
+      <a ref={ref} href={to} {...rest}>
+        {children}
+      </a>
+    ),
+  ),
+}));
 
 import LevelNavigation from '../LevelNavigation';
 

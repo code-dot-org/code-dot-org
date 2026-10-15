@@ -26,13 +26,13 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "display_name": "Hair Stylist",
-    "bubble_choice_description": "You have a new booking! Add a late-breaking addition to the end of your social media feed.",
-    "thumbnail_url": "https://images.code.org/4ac9a3092bc225e39ed2d960898ca9d0-stylist.jpg",
+    "display_name": "New Task",
+    "bubble_choice_description": "When the user clicks Add New Task, a new task should be added to the end of the list.",
+    "thumbnail_url": "https://images.code.org/b4e424e166d093c61837ffb2401bea92-image-1784045227065.png",
     "level_system_prompt": "In this level, students will be using the PAIR Programming with AI framework--\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n* **Integrate:** Implement and test in the display.\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\nTherefore, you should propose two different methods to create the code that the user prompts you for so that they can compare, contrast, and test.",
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-24T03:57:59.037+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-array-method-choice-A\\\"\"],\"cloned_from\":\"pl-aif-2-U3-array-method-choice-A\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-24T03:57:59.037+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-array-method-choice-A\\\"\"],\"cloned_from\":\"pl-aif-2-U3-array-method-choice-A\"},{\"changed_at\":\"2026-07-14 16:07:53 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 16:08:57 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

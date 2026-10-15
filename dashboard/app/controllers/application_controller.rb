@@ -25,8 +25,6 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_stable_id
-
   before_action :persist_brand_params
 
   around_action :with_global_current_user
@@ -65,7 +63,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Persist brand selection as a cookie so the brand sticks across page navigations.
-  # Set brand:   ?brand=codeai
+  # Set brand:   ?brand=codeai-audit
   # Clear brand: ?brand-reset=1
   def persist_brand_params
     return unless DCDO.get('brand-router-enabled', false)
@@ -384,7 +382,10 @@ class ApplicationController < ActionController::Base
     # Locks out the user if they are not compliant with CAP, otherwise, do nothing.
     return unless Services::ChildAccount::LockoutHandler.call(user: current_user)
 
-    # URLs we should not redirect.
+    # URLs we should not redirect. Global Edition prefixes generated paths with
+    # the active region, even when the incoming API request is unprefixed.
+    # Compare the underlying paths so both forms match.
+    request_path = Cdo::GlobalEdition.unprefixed_path(request.path)
     return if Set[
       # Allow retrieval of current user data for event reporting
       api_v1_users_current_path,
@@ -404,11 +405,14 @@ class ApplicationController < ActionController::Base
       student_user_new_path,
       student_register_path,
       reset_session_path,
-    ].any? {|path| request.path.include?(path)}
+    ].any? do |path|
+      path = Cdo::GlobalEdition.unprefixed_path(path)
+      request_path.start_with?(path)
+    end
 
     redirect_to lockout_path
   rescue StandardError => exception
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: 'Failed to apply the Child Account Policy to the user',
       context: {
@@ -441,14 +445,6 @@ class ApplicationController < ActionController::Base
     redirect_to lti_v1_account_linking_landing_path
   end
 
-  # Creates a statsig stable id for use of signed-out user tracking.
-  # This cookie is used by the Statsig SDK for both JS and Ruby.
-  protected def initialize_statsig_stable_id
-    existing_stable_id = cookies[:statsig_stable_id]
-    session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
-    session[:statsig_stable_id] ||= SecureRandom.uuid
-  end
-
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
@@ -465,5 +461,13 @@ class ApplicationController < ActionController::Base
     super
     payload[:user_id] = current_user&.id
     payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
+  end
+
+  # Rails' open-redirect protection only trusts the request's own host. This override
+  # allows URLs from the root code.org domain instead of just the studio subdomain.
+  private def _url_host_allowed?(url)
+    super || URI(url.to_s).host == URI(CDO.code_org_url).host
+  rescue ArgumentError, URI::Error
+    false
   end
 end

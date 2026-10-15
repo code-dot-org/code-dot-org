@@ -1,3 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {IconButton as MuiIconButton} from '@mui/material';
 import Immutable from 'immutable';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,6 +13,8 @@ import i18n from '@cdo/locale';
 import {add, update, remove} from '../../../redux/watchedExpressions';
 
 import AutocompleteSelector from './AutocompleteSelector';
+
+import moduleStyles from './watchers.module.scss';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
@@ -28,8 +33,6 @@ const OPTIONS_GAMELAB = [
 ];
 
 const buttonSize = '28px';
-const valueAndInputWidth = 'calc(100% - 41px)';
-const inputElementHeight = 23;
 
 /**
  * A "watchers" window for our debugger.
@@ -332,69 +335,82 @@ class Watchers extends React.Component {
             const varName = wv.get('expression');
             const varValue = wv.get('lastValue');
             return (
-              <div className="debug-watch-item" key={wv.get('uuid')}>
-                <button
-                  style={styles.watchRemoveButton}
-                  onClick={() => this.props.remove(wv.get('expression'))}
-                  type="button"
+              <div
+                className={`debug-watch-item ${moduleStyles.watchItem}`}
+                key={wv.get('uuid')}
+              >
+                <div
+                  className={moduleStyles.watchItemDescription}
+                  style={styles.watchItemDescription}
                 >
-                  ×
-                </button>
-                <div style={styles.watchItemDescription}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
                 </div>
+                <MuiIconButton
+                  size="small"
+                  variant="contained"
+                  color="error"
+                  aria-label="Delete"
+                  onClick={() => this.props.remove(wv.get('expression'))}
+                >
+                  <FontAwesomeV6Icon iconName="xmark" />
+                </MuiIconButton>
               </div>
             );
           })}
-          <div style={styles.watchInputSection}>
-            <button
-              style={styles.watchAddButton}
-              onClick={this.addButtonClick}
-              type="button"
-            >
-              +
-            </button>
-            <TetherComponent
-              attachment="bottom left"
-              targetAttachment="top left"
-              constraints={[
-                {
-                  to: 'scrollParent',
-                  attachment: 'together',
-                },
-              ]}
-              style={styles.autocompleteDropdown}
-            >
-              <input
-                placeholder={i18n.debugWatchersPlaceholder()}
-                ref="debugInput"
-                onKeyDown={this.onKeyDown}
-                onChange={this.onChange}
-                onClick={() => this.setState({autocompleteOpen: true})}
-                value={this.state.text}
-                style={styles.watchInput}
-              />
-              {this.state.autocompleteOpen && (
-                <AutocompleteSelector
-                  options={this.state.autocompleteOptions}
-                  currentIndex={
-                    this.state.autocompleteSelecting
-                      ? this.state.autocompleteIndex
-                      : -1
-                  }
-                  onOptionClicked={this.onAutocompleteOptionClicked}
-                  onOptionHovered={index =>
-                    this.setState({
-                      autocompleteSelecting: true,
-                      autocompleteIndex: index,
-                    })
-                  }
-                  onClickOutside={this.closeAutocomplete}
+          <div className={moduleStyles.watchInputSection}>
+            <div className={moduleStyles.watchTextField}>
+              <TetherComponent
+                attachment="bottom left"
+                targetAttachment="top left"
+                constraints={[
+                  {
+                    to: 'scrollParent',
+                    attachment: 'together',
+                  },
+                ]}
+                style={styles.autocompleteDropdown}
+              >
+                <TextField
+                  name="watch-expression"
+                  placeholder={i18n.debugWatchersPlaceholder()}
+                  onKeyDown={this.onKeyDown}
+                  onChange={this.onChange}
+                  onClick={() => this.setState({autocompleteOpen: true})}
+                  value={this.state.text}
+                  size="s"
+                  className={moduleStyles.watchTextFieldInput}
                 />
-              )}
-            </TetherComponent>
+                {this.state.autocompleteOpen && (
+                  <AutocompleteSelector
+                    options={this.state.autocompleteOptions}
+                    currentIndex={
+                      this.state.autocompleteSelecting
+                        ? this.state.autocompleteIndex
+                        : -1
+                    }
+                    onOptionClicked={this.onAutocompleteOptionClicked}
+                    onOptionHovered={index =>
+                      this.setState({
+                        autocompleteSelecting: true,
+                        autocompleteIndex: index,
+                      })
+                    }
+                    onClickOutside={this.closeAutocomplete}
+                  />
+                )}
+              </TetherComponent>
+            </div>
+            <MuiIconButton
+              onClick={this.addButtonClick}
+              size="small"
+              variant="contained"
+              color="primary"
+              aria-label="Add"
+            >
+              <FontAwesomeV6Icon iconName="plus" />
+            </MuiIconButton>
           </div>
         </div>
       </div>
@@ -410,42 +426,10 @@ const styles = {
     width: '100%',
     height: '100%',
   },
-  watchRemoveButton: {
-    fontSize: 23,
-    float: 'right',
-    cursor: 'pointer',
-    width: buttonSize,
-    lineHeight: buttonSize,
-    height: buttonSize,
-    textAlign: 'center',
-    backgroundColor: '#be0712',
-    color: 'white',
-    margin: 0,
-    padding: 0,
-    border: 'none',
-    borderRadius: 0,
-  },
-  watchAddButton: {
-    fontSize: 20,
-    width: buttonSize,
-    lineHeight: buttonSize,
-    height: buttonSize,
-    textAlign: 'center',
-    float: 'right',
-    cursor: 'pointer',
-    backgroundColor: '#1e93cd',
-    color: 'white',
-    margin: 0,
-    padding: 0,
-    border: 'none',
-    borderRadius: 0,
-  },
   watchItemDescription: {
     whiteSpace: 'nowrap',
     minHeight: buttonSize,
     marginLeft: 3,
-    overflow: 'hidden',
-    width: valueAndInputWidth,
   },
   watchValueArray: {
     whiteSpace: 'normal',
@@ -454,14 +438,6 @@ const styles = {
     display: 'inline-flex',
     alignItems: 'center',
     minHeight: '28px',
-  },
-  watchInputSection: {
-    clear: 'both',
-  },
-  watchInput: {
-    width: valueAndInputWidth,
-    marginTop: 0,
-    height: inputElementHeight,
   },
 };
 

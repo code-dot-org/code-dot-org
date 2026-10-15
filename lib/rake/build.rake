@@ -104,7 +104,7 @@ namespace :build do
         # Additionally allow skipping when running in CI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
           ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
-              "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
+              "Until you manually run 'rake seed:default' or disable this flag, you won't\n" \
               "see changes to: videos, concepts, levels, scripts, prize providers, \n " \
               "callouts, hints, secret words, or secret pictures."
         else

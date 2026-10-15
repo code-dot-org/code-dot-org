@@ -25,6 +25,7 @@ import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import DesignWorkspace from './DesignWorkspace';
 import * as gridUtils from './gridUtils';
+import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import sanitizeHtml from './sanitizeHtml';
@@ -372,7 +373,9 @@ designMode.updateProperty = function (
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
+      backgroundImage.src = `${resolveAppLabImagePath(
+        value
+      )}${cacheBustSuffix}`;
       element.style.backgroundImage = 'url("' + backgroundImage.src + '")';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -397,7 +400,7 @@ designMode.updateProperty = function (
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
+        screenImage.src = `${resolveAppLabImagePath(value)}${cacheBustSuffix}`;
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url("' + url + '")';
@@ -420,7 +423,7 @@ designMode.updateProperty = function (
         element.src =
           value === ''
             ? '/blockly/media/1x1.gif'
-            : `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
+            : `${resolveAppLabImagePath(value)}${cacheBustSuffix}`;
       }
       break;
     case 'hidden':

@@ -52,7 +52,6 @@ module.exports = {
   globals: {
     $: 'readonly',
     ace: 'readonly',
-    addToHome: 'readonly',
     Applab: 'readonly',
     appOptions: 'readonly',
     Blockly: 'readonly',
@@ -203,6 +202,18 @@ module.exports = {
             name: '@code-dot-org/component-library/button',
             message:
               'DSCO Button is deprecated. Use MUI Button from @mui/material instead. Codemod available: cd frontend/packages/component-library && yarn codemod:buttons <path>',
+          },
+          {
+            name: '@code-dot-org/component-library/dialog',
+            importNames: [
+              'Dialog',
+              'CustomDialog',
+              'default',
+              'DialogProps',
+              'CustomDialogProps',
+            ],
+            message:
+              'DSCO Dialog is deprecated. Import MuiDialog / MuiCustomDialog (and MuiDialogProps / MuiCustomDialogProps) from the same path instead. Codemod available: cd frontend/packages/component-library && yarn codemod:dialog <path>',
           },
         ],
         patterns: [

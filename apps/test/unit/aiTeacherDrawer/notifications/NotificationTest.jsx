@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import Notification from '@cdo/apps/aiDifferentiation/notifications/Notification';
+import Notification from '@cdo/apps/aiTeacherDrawer/notifications/Notification';
 
 const mockNotification = {
   id: 'test-notification-1',

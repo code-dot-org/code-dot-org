@@ -1,14 +1,27 @@
-import type KNN from 'ml-knn';
-
 export type DataRow = Record<string, string | number>;
+
+export type TrainerFamily = 'knn' | 'decisionTree';
+
+export type Hyperparameters = {k: number} | {maxDepth: number};
 
 export interface Mode {
   datasets?: string[];
+  trainer?: TrainerFamily;
+  label?: string;
+  features?: string[];
+  // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
+  lockFeatures?: boolean;
+  // Trains on `label` and `features` when the level loads. Requires both locks and `reserveLastRows`.
+  pretrained?: boolean;
+  // Opens on the results once pretrained, with no way back. Requires `pretrained`.
+  hideDatasetView?: boolean;
+  // Hides training, leaving only the dataset. Excludes `pretrained` and `requireAccuracy`.
+  hideTestingView?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
-  randomizeTestData?: boolean;
+  reserveLastRows?: boolean;
   hideColumnClicking?: boolean;
 }
 
@@ -88,10 +101,10 @@ export interface Metadata {
   fields?: MetadataField[];
 }
 
-export interface KNNTrainedModelDetails {
-  model: KNN;
-  predictedLabels: (number | string)[];
-  kValue: number;
+/* What the lab needs from a trained model, whichever algorithm made it. */
+export interface TrainedModel {
+  predict(rows: number[][]): (number | string)[];
+  toJSON(): object;
 }
 
 export interface TrainedModelDetails {
@@ -141,7 +154,33 @@ export interface HistoricResult {
   label: string;
   features: string[];
   accuracy: string;
+  correct: number;
+  total: number;
 }
+
+/* Columns a level's mode fixes for the student, once a dataset has loaded. */
+export interface PresetColumns {
+  labelColumn?: string;
+  selectedFeatures?: string[];
+}
+
+/* Everything saved with a student's work and restored when the level loads
+   again. */
+export interface AilabProject {
+  labelColumn?: string;
+  selectedFeatures: string[];
+  hyperparameters?: Hyperparameters;
+  accuracyCheckRowIndices?: number[];
+  historicResults: HistoricResult[];
+}
+
+export const initialProject: AilabProject = {
+  labelColumn: undefined,
+  selectedFeatures: [],
+  hyperparameters: undefined,
+  accuracyCheckRowIndices: undefined,
+  historicResults: [],
+};
 
 export interface ModelDataToSave {
   name?: string;
@@ -154,7 +193,7 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
-  kValue: number | null;
+  hyperparameters: Hyperparameters | null;
 }
 
 export type SaveTrainedModel = (
@@ -173,23 +212,25 @@ export interface PrevNextButtons {
   next?: NavButton;
 }
 
-type ContentPanel =
-  | 'selectDataset'
-  | 'dataDisplayLabel'
-  | 'dataDisplayFeatures'
-  | 'trainModel'
-  | 'generateResults'
-  | 'results'
-  | 'saveModel'
-  | 'modelSummary';
+export const CONTENT_PANELS = [
+  'selectDataset',
+  'datasetView',
+  'results',
+  'saveModel',
+  'modelSummary',
+] as const;
+
+type ContentPanel = (typeof CONTENT_PANELS)[number];
 
 // Valid panels are content panels + Continue/Finish targets.
 export type Panel = ContentPanel | 'continue' | 'finish';
 
-export type InstructionsKey =
-  | ContentPanel
-  | 'uploadedDataset'
-  | 'selectedDataset'
-  | 'selectedFeatureNumerical'
-  | 'selectedFeatureCategorical'
-  | 'resultsDetails';
+export type TrainingModalStep = 'training' | 'testing';
+
+export const INSTRUCTIONS_KEYS = [
+  ...CONTENT_PANELS,
+  'uploadedDataset',
+  'selectedDataset',
+] as const;
+
+export type InstructionsKey = (typeof INSTRUCTIONS_KEYS)[number];

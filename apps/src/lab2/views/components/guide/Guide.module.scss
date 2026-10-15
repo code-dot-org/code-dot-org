@@ -1,9 +1,15 @@
 @use '../layout/variables.scss' as variables;
 @import '../../../../mixins.scss';
 
-$top-position: 62px;
-$bottom-position: 20px;
-$gap-height: 43px;
+// Where the guide floats and how much it pads, for siblings that lay out
+// around it.
+:root {
+  --guide-top-position: 62px;
+  --guide-bottom-position: 20px;
+  --guide-gap-height: 43px;
+  --guide-right-offset: 32px;
+  --guide-padding: 24px;
+}
 
 @keyframes slide-up {
   from {
@@ -37,7 +43,7 @@ $gap-height: 43px;
   z-index: 71;
 
   &Gap {
-    top: $gap-height;
+    top: var(--guide-gap-height);
   }
 }
 
@@ -45,9 +51,9 @@ $gap-height: 43px;
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 32px;
+  right: var(--guide-right-offset);
   border-radius: 14px;
-  padding: 24px;
+  padding: var(--guide-padding);
   border: 1px solid var(--borders-neutral-primary);
   filter: drop-shadow(0 0 0.75rem black);
   z-index: variables.$z-index-floating-ui;
@@ -57,6 +63,9 @@ $gap-height: 43px;
   line-height: 1.5;
   gap: 16px;
   container-type: inline-size;
+  // A width change (a lab narrowing the guide on one of its tabs) animates
+  // rather than jumps.
+  transition: width 0.45s ease;
 
   &NormalWidth {
     width: 40%;
@@ -71,18 +80,31 @@ $gap-height: 43px;
     width: 20%;
   }
 
+  // Collapsed: no content but the controls left showing, so the panel is
+  // only as big as they are. Declared after every width so it wins.
+  &Collapsed {
+    // inline-size containment sizes the box without looking at its contents,
+    // which makes an intrinsic width collapse to the padding; a collapsed
+    // guide has no container queries to serve.
+    container-type: normal;
+    width: max-content;
+    min-width: 0;
+    padding: 28px 12px 12px;
+    gap: 8px;
+  }
+
   &NormalPosition {
-    top: $top-position;
+    top: var(--guide-top-position);
     animation: 0.75s ease 1.5s backwards slide-up;
   }
 
   &BottomPosition {
-    bottom: $bottom-position;
+    bottom: var(--guide-bottom-position);
     animation: 0.75s ease 1.5s backwards slide-down;
   }
 
   &Gap {
-    top: $top-position - $gap-height;
+    top: calc(var(--guide-top-position) - var(--guide-gap-height));
   }
 }
 

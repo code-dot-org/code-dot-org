@@ -1,8 +1,13 @@
 import {lazy} from 'react';
 import type {ComponentType, LazyExoticComponent} from 'react';
 
-// Lab entrypoints are self-contained: the host renders them with no props.
-type LazyLabComponent = LazyExoticComponent<ComponentType>;
+/** Props the course route passes to a lab entrypoint. */
+export interface LabEntrypointProps {
+  /** Advance to the next level (reports a milestone, then navigates). */
+  onContinue?: () => void;
+}
+
+type LazyLabComponent = LazyExoticComponent<ComponentType<LabEntrypointProps>>;
 
 const appNameEntrypoints: Record<string, LazyLabComponent> = {
   fish: lazy(() => import('@/modules/labs/oceans')),

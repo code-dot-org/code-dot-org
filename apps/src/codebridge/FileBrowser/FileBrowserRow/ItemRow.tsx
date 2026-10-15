@@ -1,3 +1,4 @@
+import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import classNames from 'classnames';
@@ -45,17 +46,19 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
       className={classNames(moduleStyles.row, className)}
       id={`uitest-file-${item.id}-row`}
     >
-      <button
-        type="button"
-        className={moduleStyles.label}
-        onClick={() => openFunction(item.id)}
-        aria-describedby={dragAriaAttributes?.['aria-describedby']}
-        aria-roledescription={dragAriaAttributes?.['aria-roledescription']}
-        aria-pressed={dragAriaAttributes?.['aria-pressed']}
-      >
-        <IconComponent item={item} />
-        <NameComponent item={item} />
-      </button>
+      <OverflowTooltip title={item.name}>
+        <button
+          type="button"
+          className={moduleStyles.label}
+          onClick={() => openFunction(item.id)}
+          aria-describedby={dragAriaAttributes?.['aria-describedby']}
+          aria-roledescription={dragAriaAttributes?.['aria-roledescription']}
+          aria-pressed={dragAriaAttributes?.['aria-pressed']}
+        >
+          <IconComponent item={item} />
+          <NameComponent item={item} />
+        </button>
+      </OverflowTooltip>
       {enableMenu && (
         <PopUpButton
           iconName="ellipsis-v"

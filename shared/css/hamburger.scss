@@ -64,11 +64,11 @@ $arrow-size: 0.875rem;
     inset-inline-end: 0;
     min-width: 228px;
     max-width: 300px;
-    background: $light_white;
-    border: 1px solid $light_gray_200;
+    background: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
     border-radius: 0.25rem;
     padding: 0.375rem;
-    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+    box-shadow: 0 4px 6px -1px var(--neutral-black-alpha-10), 0 2px 4px -1px var(--neutral-black-alpha-5);
     // We want the z-index to be greater than the teacher panel, which is currently 1021.
     // Teacher panel z-index is defined in teacher-panel.scss
     z-index: 1022;
@@ -87,7 +87,7 @@ $arrow-size: 0.875rem;
       transition: background 0.2s ease-in-out;
 
       &:hover {
-        background: $lightest_gray;
+        background: var(--background-neutral-tertiary);
         border-radius: 4px;
       }
 
@@ -99,7 +99,7 @@ $arrow-size: 0.875rem;
       }
       a {
         @include main-font-regular;
-        color: $light_black;
+        color: var(--text-neutral-primary);
         font-size: 0.875rem;
         font-weight: 500;
         text-decoration: none;
@@ -130,7 +130,7 @@ $arrow-size: 0.875rem;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        color: $light_black;
+        color: var(--text-neutral-primary);
 
         html[dir=rtl], .rtl & {
           float: right;
@@ -139,7 +139,7 @@ $arrow-size: 0.875rem;
       .arrow-down,
       .arrow-up {
         font-size: $arrow-size;
-        color: $light_black;
+        color: var(--text-neutral-primary);
 
         html[dir=rtl], .rtl & {
           float: left;
@@ -164,7 +164,7 @@ $arrow-size: 0.875rem;
 
     .divider {
       height: 1px;
-      background: $light_gray_200;
+      background: var(--borders-neutral-primary);
       margin: 0.5rem 0;
 
       @media (min-width: 1269px) {
@@ -216,7 +216,7 @@ $arrow-size: 0.875rem;
       height: 3px;
       width: 25px;
       border-radius: 2px;
-      background: $white;
+      background: var(--background-neutral-white-fixed);
       position: absolute;
       display: block;
       content: '';
@@ -277,14 +277,14 @@ $arrow-size: 0.875rem;
     }
 
     .button-signin, #header_user_signin {
-      color: $light_black;
-      border-color: $light_black;
+      color: var(--text-neutral-primary);
+      border-color: var(--borders-neutral-solid);
     }
 
     .button-create-account, #header_user_create_account {
-      background-color: $light_secondary_500 !important;
-      color: $white;
-      border-color: $light_secondary_500;
+      background-color: var(--background-brand-purple-primary) !important;
+      color: var(--text-neutral-white-fixed);
+      border-color: var(--borders-brand-purple-primary);
       border-radius: 4px;
     }
   }

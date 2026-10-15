@@ -1,3 +1,6 @@
+require 'cdo/shared_constants'
+require 'omni_auth/strategies/google_oauth2_without_tokeninfo'
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -284,6 +287,7 @@ Devise.setup do |config|
     }
 
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
+    strategy_class: OmniAuth::Strategies::GoogleOauth2WithoutTokeninfo,
     include_granted_scopes: true,
     prompt: 'consent',
     setup: lambda do |env|
@@ -343,10 +347,8 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
-    # statsig_stable_id is set in the application controller so it's available for
-    # all users, both signed-in and signed-out. When the user logs out, we remove
-    # this cookie because it is user-specific.
-    auth.cookies[:statsig_stable_id] = {value: "", expires: Time.at(0), domain: :all}
+    # The Statsig stable ID cookie is user-specific; the next user in this browser gets a new one.
+    auth.cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = {value: "", expires: Time.at(0), domain: :all}
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user

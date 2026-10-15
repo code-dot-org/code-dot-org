@@ -1,0 +1,53 @@
+import React from 'react';
+
+import {LabProps} from '@cdo/apps/lab2/types';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {QuizLevelProperties, QuizViewContent} from '../types';
+
+import QuizAttemptWorkspace from './QuizAttemptWorkspace';
+
+export default function useQuizAttemptView({
+  levelProperties,
+}: LabProps): QuizViewContent {
+  const {
+    id: levelId,
+    appName,
+    name: levelName,
+    quizQuestions = [],
+    allowMultipleAttempts,
+    displayName,
+    customIntroText,
+    timeLimitMinutes,
+    showIntroScreen,
+    showCorrectness,
+    revealAnswerExplanation,
+    showQuestionsAfterSubmit,
+  } = levelProperties as QuizLevelProperties;
+
+  const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
+  const viewAsUserId =
+    useAppSelector(state => state.progress.viewAsUserId) ?? undefined;
+
+  return {
+    resourcePanelProps: {},
+    workspaceContent: (
+      <QuizAttemptWorkspace
+        levelId={levelId}
+        appName={appName}
+        levelName={levelName}
+        unitId={unitId}
+        viewAsUserId={viewAsUserId}
+        quizQuestions={quizQuestions}
+        allowMultipleAttempts={allowMultipleAttempts}
+        displayName={displayName}
+        customIntroText={customIntroText}
+        timeLimitMinutes={timeLimitMinutes}
+        showIntroScreen={showIntroScreen}
+        showCorrectness={showCorrectness}
+        revealAnswerExplanation={revealAnswerExplanation}
+        showQuestionsAfterSubmit={showQuestionsAfterSubmit}
+      />
+    ),
+  };
+}

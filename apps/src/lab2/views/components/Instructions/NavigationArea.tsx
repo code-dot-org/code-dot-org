@@ -1,26 +1,35 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+} from 'react';
 
 import {
   getCurrentLevel,
   getLessonCount,
   getNextLevel,
   getParentLevel,
+  levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
-import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';
 
 import ContinueButton from './ContinueButton';
+import {ExternalNavigationContext} from './ExternalNavigationContext';
 import {resourcePanelNavigationButtonElementId} from './ResourcePanel/constants';
 import SubmitButton from './SubmitButton';
 
@@ -33,13 +42,12 @@ interface NavigationAreaProps {
   hasRun: boolean;
   hasEdited: boolean;
   requireRun?: boolean;
+  validationTooltip?: string;
   hideContinueIfDisabled?: boolean;
   className?: string;
   markdownClassName?: string;
   overrideTheme?: Theme;
   styleAsBubble?: boolean;
-  /** Optional on continue/finish callback. */
-  onContinue?: () => void;
   /**
    * How to render the text of this navigation area. By default we render it
    * with the 'full' text. So, 'Continue to Level 3', etc.
@@ -58,13 +66,13 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   hasRun,
   hasEdited,
   requireRun,
+  validationTooltip,
   handleInstructionsTextClick,
   hideContinueIfDisabled,
   className,
   markdownClassName,
   overrideTheme,
   styleAsBubble = false,
-  onContinue,
   textVariant,
 }) => {
   const {
@@ -76,6 +84,17 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     disableEditRunForSubmission,
     offerBrowserTts,
   } = levelProperties;
+  // Navigation from outside the lab takes over Continue: its label, whether
+  // it is enabled, and what it does. Submit is untouched.
+  const externalNavigation = useContext(ExternalNavigationContext);
+  const dispatch = useAppDispatch();
+  const handleContinue = useCallback(() => {
+    if (externalNavigation) {
+      externalNavigation.onContinue();
+    } else {
+      dispatch(continueOrFinishLesson());
+    }
+  }, [externalNavigation, dispatch]);
   const hasValidationConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions
   );
@@ -93,35 +112,50 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => getNextLevel(state)?.id !== undefined
   );
 
+  // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
+  // only has one lesson. It's just 'Finish'!
+  const lessonCount = useAppSelector(state => getLessonCount(state));
+
   // Construct the button text.
   // For when we would go to another level, say 'Continue to Level {x}'
   // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
   // For when we are already at the end of a lesson, say 'Finish Lesson'
   const text = useAppSelector(state => {
-    const currentLevelNumber =
-      getParentLevel(state)?.levelNumber || getCurrentLevel(state)?.levelNumber;
-    const nextLevelNumber = getNextLevel(state)?.levelNumber;
-
-    return hasNextLevel
-      ? // Determine if the next level is not the same as the current level so
-        // as to craft the 'Continue to Level X' button text
-        // Otherise we're going to the parent perhaps, so we just say 'Continue'
-        currentLevelNumber !== nextLevelNumber
-        ? commonI18n.continueToLevel({level: nextLevelNumber})
-        : commonI18n.continue()
-      : lessonCount > 1
-      ? // If there's no level after this one, print 'Finish Lesson' or 'Finish'
-        // depending on if there is another lesson in the unit
-        commonI18n.finishLesson()
-      : commonI18n.finish();
+    // If there's no level after this one, print 'Finish Lesson' or 'Finish'
+    // depending on if there is another lesson in the unit
+    if (!hasNextLevel) {
+      return lessonCount > 1 ? commonI18n.finishLesson() : commonI18n.finish();
+    }
+    const nextLevel = getNextLevel(state);
+    const parentLevel = getParentLevel(state);
+    // Just say 'Continue' if we're going back to the parent.
+    if (parentLevel && nextLevel.id === parentLevel.id) {
+      return commonI18n.continue();
+    }
+    let nextLevelNumber = nextLevel.levelNumber;
+    if (nextLevel.parentLevelId) {
+      const nextLevelParent = levelById(
+        state.progress,
+        state.progress.currentLessonId,
+        nextLevel.parentLevelId
+      );
+      // If the next level parent can't be found for some reason, just 'Continue'.
+      if (!nextLevelParent) {
+        return commonI18n.continue();
+      }
+      nextLevelNumber = nextLevelParent.levelNumber;
+    }
+    return commonI18n.continueToLevel({level: nextLevelNumber});
   });
 
   // This supplies "simpler" text for the 'simple' text variant of the buttons
   const simpleText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
+  const buttonText = externalNavigation
+    ? externalNavigation.label ?? simpleText
+    : textVariant === 'simple'
+    ? simpleText
+    : text;
 
-  // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
-  // only has one lesson. It's just 'Finish'!
-  const lessonCount = useAppSelector(state => getLessonCount(state));
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const isAiTutorVersion = useAppSelector(
@@ -207,6 +241,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     if (submittable) {
       return [false, undefined] as const;
     }
+    if (externalNavigation) {
+      return [externalNavigation.enabled, externalNavigation.tooltip] as const;
+    }
     let action:
       | 'Validate'
       | 'SubmitPrediction'
@@ -235,14 +272,19 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         canContinue = hasEdited;
       }
     }
+    if (action === 'Validate' && validationTooltip) {
+      return [canContinue, validationTooltip];
+    }
     const key = action
       ? (`to${hasNextLevel ? 'Continue' : 'Finish'}${action}` as const)
       : undefined;
     return [canContinue, key ? lab2I18n[key]() : undefined];
   }, [
     submittable,
+    externalNavigation,
     isPredictLevel,
     hasValidationConditions,
+    validationTooltip,
     isAiTutorVersion,
     hasContinued,
     hasNextLevel,
@@ -304,12 +346,12 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               disabled={!continueEnabled}
               variant={variant}
               color={color}
-              endIcon={endIcon}
+              endIcon={externalNavigation?.endIcon ?? endIcon}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
-              onContinue={onContinue}
+              onContinue={handleContinue}
             >
-              {textVariant === 'simple' ? simpleText : text}
+              {buttonText}
             </ContinueButton>
           )}
         </div>

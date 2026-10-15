@@ -1,5 +1,6 @@
 import {Typography} from '@mui/material';
-import {createFileRoute, notFound} from '@tanstack/react-router';
+import {createFileRoute, notFound, useRouter} from '@tanstack/react-router';
+import {useCallback} from 'react';
 
 import {
   DashboardApiClient,
@@ -8,10 +9,18 @@ import {
 } from '@code-dot-org/core/api';
 import {Lab} from '@code-dot-org/lab/host';
 
+import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
-import {resolveCourseLevel} from '@/modules/labs/router/resolveCourseLevel';
+import {
+  CourseLevelNotFoundError,
+  nextDestination,
+  resolveCourseLevel,
+} from '@/modules/labs/router/resolveCourseLevel';
 import queryClient from '@/modules/router/queryClient';
+// Register fish/standalone_video level kinds before the loader fetches level
+// properties, so per-level fields (mode, displayName) survive the parse.
+import '@/modules/labs/oceans/levelKinds';
 
 // Lazy, once. Memoizing the promise — rather than a boolean flipped before the
 // await resolves — means concurrent callers await the same in-flight
@@ -39,6 +48,13 @@ export const Route = createFileRoute(
     const unitPosition = parseInt(params.unitPosition, 10);
     const lessonPosition = parseInt(lessonPosStr, 10);
     const levelPosition = parseInt(levelPosStr, 10);
+    if (
+      !Number.isInteger(unitPosition) ||
+      !Number.isInteger(lessonPosition) ||
+      !Number.isInteger(levelPosition)
+    ) {
+      throw notFound();
+    }
 
     if (import.meta.env.VITE_API_MODE === 'msw') {
       await registerCourseFixtures();
@@ -83,8 +99,13 @@ export const Route = createFileRoute(
           lessonPosition,
           levelPosition,
         );
-      } catch {
-        throw notFound();
+      } catch (error) {
+        // Only a genuine position-not-found becomes a 404; unexpected errors
+        // (bugs, malformed data) propagate instead of masquerading as notFound.
+        if (error instanceof CourseLevelNotFoundError) {
+          throw notFound();
+        }
+        throw error;
       }
     })();
 
@@ -93,6 +114,23 @@ export const Route = createFileRoute(
     );
 
     return {resolved, LabEntrypoint};
+  },
+  // The lab is full-bleed and fills the viewport itself (FullHeightLabFrame);
+  // suppress the global StudioFooter so it doesn't sit below the fold.
+  staticData: {hideFooter: true},
+  // Preserve the whole query string. The oceans lab reads its own URL flags
+  // (?guide, ?testFreeze, ?tts) straight from location.search, so we must not
+  // strip to a known subset — pass search through untouched.
+  validateSearch: (search: Record<string, unknown>) => search,
+  // Title is set here, not in a component effect: HeadContent manages it per
+  // matched route, so it needs no cleanup and is restored on navigation.
+  head: ({loaderData}) => {
+    const props = loaderData?.resolved.properties as
+      | {displayName?: string}
+      | undefined;
+    const name =
+      props?.displayName ?? loaderData?.resolved.scriptTitle ?? 'CodeAI';
+    return {meta: [{title: `${name} | CodeAI`}]};
   },
   component: CourseLevelRoute,
   notFoundComponent: () => (
@@ -105,9 +143,35 @@ export const Route = createFileRoute(
 
 function CourseLevelRoute() {
   const {resolved, LabEntrypoint} = Route.useLoaderData();
+  const router = useRouter();
+
+  const onContinue = useCallback(async () => {
+    try {
+      await DashboardApiClient.activities.reportMilestone({
+        // `userId` is a required positional segment of the milestone route that
+        // the controller never reads — identity comes from `current_user`
+        // (session). Pass 0 so the real id is never exposed in a network
+        // intercept. Dropping the segment from the route is a follow-up.
+        userId: 0,
+        scriptLevelId: resolved.scriptLevelId,
+        levelId: resolved.levelId,
+        result: true,
+      });
+    } catch {
+      // Progress is best-effort: a failed report must not strand the user, so
+      // fall through to navigation regardless.
+    }
+
+    const dest = nextDestination(resolved);
+    if ('to' in dest) {
+      router.navigate({to: dest.to});
+    } else {
+      window.location.href = dest.href;
+    }
+  }, [resolved, router]);
 
   return (
-    <>
+    <FullHeightLabFrame>
       <LevelNavigation
         currentPosition={resolved.position}
         levels={resolved.levels}
@@ -117,7 +181,7 @@ function CourseLevelRoute() {
         levelPropertiesMap={{[String(resolved.levelId)]: resolved.properties}}
       >
         {LabEntrypoint ? (
-          <LabEntrypoint />
+          <LabEntrypoint onContinue={onContinue} />
         ) : (
           // h1: this is the only heading visible when no lab entrypoint exists.
           <Typography variant="h6" component="h1" sx={{p: 4}}>
@@ -125,6 +189,6 @@ function CourseLevelRoute() {
           </Typography>
         )}
       </Lab>
-    </>
+    </FullHeightLabFrame>
   );
 }

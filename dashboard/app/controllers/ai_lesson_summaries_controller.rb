@@ -25,7 +25,7 @@ class AiLessonSummariesController < ApplicationController
     if podcast_script_json
       begin
         # Replace quotes and apostrophes with single tick quotes, and replace all newlines and double spaces with a single space
-        processed_podcast_script = podcast_script_json.script&.gsub(/\"|\’/, "'")&.squish
+        processed_podcast_script = podcast_script_json.script&.gsub(/"|’/, "'")&.squish
         render json: {podcast_script: processed_podcast_script}
       rescue => exception
         render json: {error: "Error parsing podcast script response: #{exception}"}, status: :internal_server_error

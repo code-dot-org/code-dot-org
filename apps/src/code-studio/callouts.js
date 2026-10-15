@@ -115,7 +115,7 @@ export function addCallouts(callouts) {
         text: callout.localized_text,
         title: {
           button: $(
-            '<div class="tooltip-x-close" tabindex="0" role="button" aria-label="Close tooltip"/>'
+            '<div class="tooltip-x-close" tabindex="0" role="button" aria-label="Close tooltip"><i class="fa-solid fa-xmark"></i></div>'
           )
             .on('keydown', function (e) {
               if (e.key === 'Enter') {

@@ -8,6 +8,7 @@ import ToolbarSection from './components/ToolbarSection';
 import ToolbarShell from './components/ToolbarShell';
 import AlignmentDropdownRow from './sections/AlignmentDropdownRow';
 import ColorDropdownRow from './sections/ColorDropdownRow';
+import FontFamilyDropdownRow from './sections/FontFamilyDropdownRow';
 import NodeActionsGroup from './sections/NodeActionsGroup';
 import RotationGroup from './sections/RotationGroup';
 import SizeDropdownRow from './sections/SizeDropdownRow';
@@ -15,6 +16,7 @@ import {
   BACKGROUND_PALETTE,
   DEFAULT_BACKGROUND_COLOR,
   DEFAULT_FONT_COLOR,
+  DEFAULT_FONT_FAMILY,
   DEFAULT_FONT_SIZE,
   DEFAULT_STROKE_COLOR,
   DEFAULT_TEXT_ALIGN,
@@ -28,7 +30,14 @@ interface ShapeNodeToolbarProps {
 
 export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<ShapeNodeType>(nodeId);
-  const {backgroundColor, strokeColor, fontSize, fontColor, textAlign} = data;
+  const {
+    backgroundColor,
+    strokeColor,
+    fontSize,
+    fontFamily,
+    fontColor,
+    textAlign,
+  } = data;
 
   return (
     <ToolbarShell
@@ -58,6 +67,10 @@ export default function ShapeNodeToolbar({nodeId}: ShapeNodeToolbarProps) {
             <SizeDropdownRow
               value={fontSize ?? DEFAULT_FONT_SIZE}
               onSelect={next => patchNodeData({fontSize: next})}
+            />
+            <FontFamilyDropdownRow
+              value={fontFamily ?? DEFAULT_FONT_FAMILY}
+              onSelect={next => patchNodeData({fontFamily: next})}
             />
             <AlignmentDropdownRow
               value={textAlign ?? DEFAULT_TEXT_ALIGN}

@@ -38,3 +38,10 @@ PLCourseCard.args = {
   ...examplePLCard,
   isProfessionalLearningCourse: true,
 };
+
+export const LongTitleCourseCard = Template.bind({});
+LongTitleCourseCard.args = {
+  ...exampleCard,
+  title:
+    'Computer Science Discoveries Computer Science Discoveries Computer Science Discoveries',
+};

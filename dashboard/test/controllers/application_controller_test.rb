@@ -60,6 +60,20 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute_redirect_to lockout_path
     end
 
+    context 'when a Global Edition region is active' do
+      before do
+        cookies[:ge_region] = 'cn'
+        cookies[:language_] = 'zh-CN'
+      end
+
+      it 'allows an unprefixed request to the policy consent API' do
+        post '/policy_compliance/child_account_consent', as: :json
+
+        # Missing parent_email proves the request reached the consent controller.
+        must_respond_with :bad_request
+      end
+    end
+
     it 'allows student change account information' do
       patch users_set_student_information_path
       refute_redirect_to lockout_path
@@ -178,13 +192,13 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     it 'does nothing when brand router is disabled' do
       DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
-      get root_path, params: {brand: 'codeai'}
+      get root_path, params: {brand: 'codeai-audit'}
       assert_nil cookies[cookie_key]
     end
 
     it 'sets brand cookie from URL param' do
-      get root_path, params: {brand: 'codeai'}
-      assert_equal 'codeai', response.cookies[cookie_key]
+      get root_path, params: {brand: 'codeai-audit'}
+      assert_equal 'codeai-audit', response.cookies[cookie_key]
     end
 
     it 'ignores unknown brand codes' do
@@ -193,7 +207,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'clears brand cookie on brand-reset' do
-      cookies[cookie_key] = 'codeai'
+      cookies[cookie_key] = 'codeai-audit'
       get root_path, params: {'brand-reset' => '1'}
       assert_nil response.cookies[cookie_key]
     end
@@ -208,6 +222,23 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     it 'gracefully handles UnsafeRedirectErrors' do
       Rails.logger.expects(:warn).once
       get home_set_locale_path, params: {locale: 'ar-SA', user_return_to: '../invalid/path'}
+      assert_response :not_found
+    end
+  end
+
+  describe 'open redirect protection' do
+    before do
+      sign_in create(:teacher)
+    end
+
+    it 'allows redirects to the code.org host' do
+      user_return_to = CDO.code_org_url('/afe', 'https:')
+      get api_v1_users_cached_page_auth_redirect_path, params: {user_return_to: user_return_to}
+      assert_redirected_to user_return_to
+    end
+
+    it 'rejects redirects to other hosts' do
+      get api_v1_users_cached_page_auth_redirect_path, params: {user_return_to: 'https://some-other-site.com/afe'}
       assert_response :not_found
     end
   end

@@ -1,5 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {
+  Breadcrumbs as MuiBreadcrumbs,
+  Button as MuiButton,
+  Link as MuiLink,
+  Typography,
+} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -15,7 +22,6 @@ import i18n from '@cdo/locale';
 
 import BackToFrontConfetti from '../BackToFrontConfetti';
 
-import LargeChevronLink from './LargeChevronLink';
 import SocialShare from './SocialShare';
 
 import style from './congrats.module.scss';
@@ -114,6 +120,7 @@ function Certificate(props) {
 
   const {
     responsiveSize,
+    isRtl,
     certificateId,
     randomDonorTwitter,
     under13,
@@ -175,6 +182,7 @@ function Certificate(props) {
   }, []);
 
   const courseName = certificateData[currentCertificateIndex]?.courseName;
+  const courseTitle = certificateData[currentCertificateIndex]?.courseTitle;
   const coursePath =
     certificateData[currentCertificateIndex]?.coursePath || `s/${courseName}`;
 
@@ -244,7 +252,22 @@ function Certificate(props) {
         </Typography>
       </div>
       {courseName && (
-        <LargeChevronLink link={coursePath} linkText={i18n.backToActivity()} />
+        <MuiBreadcrumbs
+          className={style.breadcrumbs}
+          separator={
+            <FontAwesomeV6Icon
+              iconName={isRtl ? 'chevron-left' : 'chevron-right'}
+            />
+          }
+          size="m"
+        >
+          <MuiLink href={coursePath} color="inherit" underline="none">
+            {courseTitle || i18n.backToActivity()}
+          </MuiLink>
+          <Typography component="span" variant="label2">
+            {i18n.certificates()}
+          </Typography>
+        </MuiBreadcrumbs>
       )}
       {showNameIsRequiredAlert && (
         <Alert
@@ -304,28 +327,24 @@ function Certificate(props) {
                   <Typography variant="h3" gutterBottom>
                     {i18n.congratsCertificatePersonalize()}
                   </Typography>
-                  <Typography
-                    className={style.enterName}
-                    variant="body3"
-                    gutterBottom
-                  >
-                    {i18n.enterYourName()}
-                  </Typography>
                   <div className={style.inputButtonContainer}>
-                    <input
-                      id="name"
-                      type="text"
-                      className={style.nameInput}
-                      placeholder={i18n.yourName()}
+                    <TextField
                       ref={nameInputRef}
+                      id="name"
+                      name="name"
+                      label={i18n.enterYourName()}
+                      placeholder={i18n.yourName()}
+                      size="m"
+                      className={style.nameInput}
                     />
-                    <button
-                      type="button"
-                      className={style.submit}
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
                       onClick={personalizeCertificate.bind(this, certificateId)}
                     >
                       {i18n.submit()}
-                    </button>
+                    </MuiButton>
                   </div>
                 </div>
               )}
@@ -373,6 +392,7 @@ Certificate.propTypes = {
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+  isRtl: PropTypes.bool,
   under13: PropTypes.bool,
   children: PropTypes.node,
   certificateData: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -384,4 +404,5 @@ Certificate.propTypes = {
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
+  isRtl: state.isRtl,
 }))(Certificate);

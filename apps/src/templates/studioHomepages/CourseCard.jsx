@@ -22,10 +22,11 @@ export default class CourseCard extends Component {
 
     return (
       <div className={styles.card}>
-        <div className={styles.header} />
-        <MuiTypography className={styles.title} component="h5" variant="h5">
-          {title}
-        </MuiTypography>
+        <div className={styles.header}>
+          <MuiTypography className={styles.title} component="h5" variant="h5">
+            {title}
+          </MuiTypography>
+        </div>
         <div className={styles.description}>
           <MuiTypography component="p" variant="body3" gutterBottom>
             {description}

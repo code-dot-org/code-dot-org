@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "intro_selfpaced_pd_equity_post",
-          "html": "<h1>Equity in CS Self-paced Online Professional Learning for Educators</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Equity in CS  - Post-Module Survey</h2>"
+          "html": "<h1>Equity in CS Self-paced Online Professional Learning for Educators</h1><h3><strong>Post-Module Survey</strong></h3>\n\n<p>CodeAI relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by CodeAI for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Equity in CS  - Post-Module Survey</h2>"
         },
         {
           "type": "html",
@@ -288,7 +288,7 @@
             },
             {
               "value": "forum_participation",
-              "text": "Sharing strategies in the Code.org forum."
+              "text": "Sharing strategies in the CodeAI forum."
             },
             {
               "value": "video_content",
@@ -336,24 +336,24 @@
         {
           "type": "comment",
           "name": "other_feedback",
-          "title": "Do you have any feedback about this module that you would like to share with the Code.org team?"
+          "title": "Do you have any feedback about this module that you would like to share with the CodeAI team?"
         },
         {
           "type": "radiogroup",
           "name": "permission_to_quote",
-          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
+          "title": "I give CodeAI permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
           "choices": [
             {
               "value": "yes",
-              "text": "Yes, I give Code.org permission to quote me and use my name."
+              "text": "Yes, I give CodeAI permission to quote me and use my name."
             },
             {
               "value": "yes_anon",
-              "text": "Yes, I give Code.org permission to quote me, but I want to be anonymous."
+              "text": "Yes, I give CodeAI permission to quote me, but I want to be anonymous."
             },
             {
               "value": "no",
-              "text": "No, I do not give Code.org my permission."
+              "text": "No, I do not give CodeAI my permission."
             }
           ]
         },
@@ -381,7 +381,7 @@
         {
           "type": "html",
           "name": "thank_you",
-          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from CodeAI for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
         }
       ]
     }

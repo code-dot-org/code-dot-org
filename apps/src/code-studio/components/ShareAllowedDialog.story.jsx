@@ -17,7 +17,6 @@ const defaultArgs = {
   isOpen: true,
   onClose: action('close'),
   openLibraryCreationDialog: action('open library creation dialog'),
-  hideBackdrop: true,
   shareUrl: 'https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ',
   isAbusive: false,
   channelId: 'some-id',
@@ -28,11 +27,7 @@ const defaultArgs = {
 
 const Template = args => (
   <Provider store={reduxStore({pageConstants, shareDialog, project})}>
-    {/* ShareAllowedDialog has a marginLeft of -360 so it shows up correctly on the page.
-        Nesting inside a div so it appears in storybook correctly */}
-    <div style={{marginLeft: 360}}>
-      <ShareAllowedDialog {...args} />
-    </div>
+    <ShareAllowedDialog {...args} />
   </Provider>
 );
 

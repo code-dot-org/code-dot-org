@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -79,7 +80,9 @@ describe('AssetManager', () => {
 
       // There should be a spinner
       expect(
-        wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(p => p.prop('iconName') === 'spinner')
       ).to.have.lengthOf(1);
     });
 
@@ -107,7 +110,9 @@ describe('AssetManager', () => {
 
       // There should be no spinner
       expect(
-        wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(p => p.prop('iconName') === 'spinner')
       ).to.have.lengthOf(0);
     });
 
@@ -121,7 +126,9 @@ describe('AssetManager', () => {
 
       // There should be no spinner
       expect(
-        wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(p => p.prop('iconName') === 'spinner')
       ).to.have.lengthOf(0);
     });
   });

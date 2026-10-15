@@ -1,15 +1,18 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSelectedCourseId,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {resumeLearnHowToEvaluateTour} from '../studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
@@ -40,6 +43,7 @@ function SectionProgressV2({
   isLoadingSectionData,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
+  aiChatAccessLevel,
 }) {
   const params = useParams();
   React.useEffect(() => {
@@ -103,6 +107,17 @@ function SectionProgressV2({
     setLoadedData,
   ]);
 
+  const galleryUrl = React.useMemo(() => {
+    const lessonPosition = unitData?.lessons?.[0]?.relative_position;
+    if (
+      !unitData?.path ||
+      lessonPosition === null ||
+      lessonPosition === undefined
+    )
+      return null;
+    return `${unitData.path}/lessons/${lessonPosition}/tutor/gallery`;
+  }, [unitData]);
+
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
       .filter(lesson => expandedLessonIds.includes(lesson.id))
@@ -138,17 +153,44 @@ function SectionProgressV2({
         sectionId={sectionId}
       />
       <div className={styles.title}>
-        <Typography className={styles.titleStudents} variant="h6" gutterBottom>
+        <Typography
+          className={styles.titleStudents}
+          variant="label1"
+          component="h6"
+          gutterBottom
+        >
           {i18n.students()}
         </Typography>
         <Typography
           className={styles.titleUnitSelector}
-          variant="h6"
+          variant="label1"
+          component="h6"
           gutterBottom
         >
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          {experiments.isEnabledAllowingQueryString(
+            experiments.LESSON_TUTOR_CHALLENGE
+          ) &&
+            canUseLessonDeepDive(aiChatAccessLevel) &&
+            galleryUrl && (
+              <Button
+                href={galleryUrl}
+                variant="outlined"
+                color="tertiary"
+                size="small"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconName="gallery-thumbnails"
+                    iconStyle="solid"
+                  />
+                }
+                className={styles.reviewExtensionActivitiesButton}
+              >
+                {i18n.reviewExtensionActivities()}
+              </Button>
+            )}
           <DownloadProgressCsv isLoading={isLoading} />
           <MoreOptionsDropdown />
         </Typography>
@@ -171,6 +213,7 @@ SectionProgressV2.propTypes = {
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
   hideTopHeading: PropTypes.bool,
+  aiChatAccessLevel: PropTypes.string,
 };
 
 export default connect(
@@ -191,6 +234,7 @@ export default connect(
       state.sectionProgress.expandedLessonIds[
         state.teacherSections.selectedSectionId
       ] || [],
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId) {

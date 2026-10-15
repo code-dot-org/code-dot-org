@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_1_5",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "After getting a vague first response from AI, what's the best next step to improve it?",
+  "solution": [
+    {"option": "Write it yourself.", "correct": false},
+    {"option": "Ask the same question again.", "correct": false},
+    {"option": "Add specific details based on what was missing from the first response.", "correct": true},
+    {"option": "Switch to a different AI Chat level.", "correct": false}
+  ],
+  "objective_keys": [
+    "1f6e6c20-6ff8-43d1-934b-e9d2987e274c"
+  ]
+}

@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T21:33:40.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "roadrunner-the-backpack-23dd341c-24a3-4f27-9d4c-98892da63666",
+        "text": "You've been doing a great job experimenting with different prompts! Sometimes you'll create a response you really like or want to use again.",
+        "imageUrl": "https://images.code.org/9d10e7a6bdcd5861fd9bbab4811c4d81-roadrunner-the-backpack-panel-1-99cd5591-24df-4c6e-99f2-320613d0cc9b.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "roadrunner-the-backpack-ca8661d0-d2c1-4dae-ab29-b7d90a575250",
+        "text": "That's where your 'Backpack' comes in handy! It's like a special folder where you can save your favorite AI conversations.",
+        "imageUrl": "https://images.code.org/edf9ac135f5b7bd313fce82bd6ea5a44-roadrunner-the-backpack-panel-2-fc73ca08-8aba-4661-b939-693cc87a1fde.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "roadrunner-the-backpack-cebe520b-89b1-46e4-a533-9a30c65fb111",
+        "text": "When you have a chat you want to keep, look for the 'save to Backpack' button or option. It's usually a small icon, perhaps a backpack or a star.",
+        "imageUrl": "https://images.code.org/35d6a7555fea277fa8015f6e4884878e-roadrunner-the-backpack-panel-3-86e0b600-7611-4b7e-815a-74e39fd17b09.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "roadrunner-the-backpack-22b2f39e-801b-4606-8d8e-7fd1f3d82f7a",
+        "text": "Saving chats helps you stay organized. You can easily find and revisit your best work, or even use parts of it in other projects later!",
+        "imageUrl": "https://images.code.org/fa976b3d17132982b9c8e0c2bab23e16-roadrunner-the-backpack-panel-4-27b39f80-bff7-47ff-81d1-8573498d312b.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Learn how to use the 'Backpack' feature to save and organize your most effective or interesting AI chat conversations for future use."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:34:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:34:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -202,20 +202,23 @@ export async function evaluatePrompt(
   try {
     // Gate 1: input text safety.
     currentGate = EvalGate.INPUT_TEXT;
-    if (!(await throttled(() => isTextSafe(item.prompt)))) {
+    if (!(await throttled(() => isTextSafe(item.prompt, 'input_filter')))) {
       return finish({outcome: EvalOutcome.BLOCKED, stoppedAtGate: currentGate});
     }
 
     // Gate 2: image generation.
     currentGate = EvalGate.GENERATION;
     const {text, files, finishReason} = await throttled(() =>
-      generateText({
-        model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE),
-        messages: [{role: 'user', content: item.prompt}] as ModelMessage[],
-        ...(options.temperature !== undefined
-          ? {temperature: options.temperature}
-          : {}),
-      })
+      generateText(
+        {
+          model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE),
+          messages: [{role: 'user', content: item.prompt}] as ModelMessage[],
+          ...(options.temperature !== undefined
+            ? {temperature: options.temperature}
+            : {}),
+        },
+        {phase: 'generation'}
+      )
     );
 
     if (['content-filter', 'other'].includes(finishReason)) {
@@ -303,7 +306,7 @@ export async function evaluatePrompt(
 
     // Gate 5: output text safety.
     currentGate = EvalGate.OUTPUT_TEXT;
-    if (!(await throttled(() => isTextSafe(text)))) {
+    if (!(await throttled(() => isTextSafe(text, 'output_filter')))) {
       return finish({
         outcome: EvalOutcome.BLOCKED,
         stoppedAtGate: currentGate,

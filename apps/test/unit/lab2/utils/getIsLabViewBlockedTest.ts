@@ -8,6 +8,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -20,6 +21,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           true, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -32,6 +34,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           true, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -44,6 +47,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           true // isProjectValidator
@@ -58,6 +62,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -70,6 +75,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           true, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -82,6 +88,7 @@ describe('getIsLabViewBlocked', () => {
           'share',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           true, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -94,6 +101,61 @@ describe('getIsLabViewBlocked', () => {
           'share',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
+          false, // isOwner
+          false, // isTeacherOfProjectOwner
+          true // isProjectValidator
+        );
+        expect(result).toBe(true);
+      });
+    });
+
+    describe('when project blocked because of a privacy/profanity violation', () => {
+      it('blocks access when user has no elevated privileges', () => {
+        const result = getIsLabViewBlocked(
+          'share',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          false, // isOwner
+          false, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(true);
+      });
+
+      it('blocks access for owner in share mode', () => {
+        const result = getIsLabViewBlocked(
+          'share',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          true, // isOwner
+          false, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(true);
+      });
+
+      it('blocks access for teacher of project owner in share mode', () => {
+        const result = getIsLabViewBlocked(
+          'share',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          false, // isOwner
+          true, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(true);
+      });
+
+      it('blocks access for project validator in share mode', () => {
+        const result = getIsLabViewBlocked(
+          'share',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           true // isProjectValidator
@@ -103,11 +165,12 @@ describe('getIsLabViewBlocked', () => {
     });
 
     describe('when project is not blocked', () => {
-      it('allows access when isBlockedAbuse false and projectSharingDisabled false', () => {
+      it('allows access when no blocking flags are set', () => {
         const result = getIsLabViewBlocked(
           'share',
           false, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -124,6 +187,7 @@ describe('getIsLabViewBlocked', () => {
           'view',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -136,6 +200,7 @@ describe('getIsLabViewBlocked', () => {
           'view',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           true, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -148,6 +213,7 @@ describe('getIsLabViewBlocked', () => {
           'view',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           true // isProjectValidator
@@ -161,6 +227,7 @@ describe('getIsLabViewBlocked', () => {
           'view',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -173,6 +240,7 @@ describe('getIsLabViewBlocked', () => {
           'view',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           true, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -185,6 +253,48 @@ describe('getIsLabViewBlocked', () => {
           'view',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
+          false, // isOwner
+          false, // isTeacherOfProjectOwner
+          true // isProjectValidator
+        );
+        expect(result).toBe(false);
+      });
+    });
+
+    describe('when project is blocked because of a privacy/profanity violation', () => {
+      it('blocks access when user has no elevated privileges', () => {
+        const result = getIsLabViewBlocked(
+          'view',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          false, // isOwner
+          false, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(true);
+      });
+
+      it('allows access for teacher of project owner in view mode', () => {
+        const result = getIsLabViewBlocked(
+          'view',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          false, // isOwner
+          true, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(false);
+      });
+
+      it('allows access for project validator in view mode', () => {
+        const result = getIsLabViewBlocked(
+          'view',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           true // isProjectValidator
@@ -194,11 +304,12 @@ describe('getIsLabViewBlocked', () => {
     });
 
     describe('when project is not blocked', () => {
-      it('allows access when isBlockedAbuse false and projectSharingDisabled false', () => {
+      it('allows access when no blocking flags are set', () => {
         const result = getIsLabViewBlocked(
           'view',
           false, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           false, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -215,6 +326,7 @@ describe('getIsLabViewBlocked', () => {
           'edit',
           true, // isBlockedAbuse
           false, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           true, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
@@ -228,11 +340,39 @@ describe('getIsLabViewBlocked', () => {
           'edit',
           false, // isBlockedAbuse
           true, // projectSharingDisabled
+          false, // hasPrivacyProfanityViolation
           true, // isOwner
           false, // isTeacherOfProjectOwner
           false // isProjectValidator
         );
         expect(result).toBe(false);
+      });
+    });
+    describe('when project is blocked because of a privacy/profanity violation', () => {
+      it('allows access for owner - only owner can edit', () => {
+        const result = getIsLabViewBlocked(
+          'edit',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          true, // isOwner
+          false, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(false);
+      });
+
+      it('blocks access when user has no elevated privileges', () => {
+        const result = getIsLabViewBlocked(
+          'edit',
+          false, // isBlockedAbuse
+          false, // projectSharingDisabled
+          true, // hasPrivacyProfanityViolation
+          false, // isOwner
+          false, // isTeacherOfProjectOwner
+          false // isProjectValidator
+        );
+        expect(result).toBe(true);
       });
     });
   });

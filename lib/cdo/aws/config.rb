@@ -12,6 +12,22 @@ begin
     profile: 'cdo',
     port: CDO.dashboard_port
   }.compact
+
+  # aws-google caches its session expiration in the AWS credentials file and
+  # reads it back as an epoch string (see CachedCredentials#initialize).
+  # aws-sigv4's presigner does `expiration - datetime` against a Time, so
+  # presigned URL generation raises NoMethodError with any non-Time value.
+  # Normalize at the reader until fixed upstream in the aws-google gem. The
+  # gem's own refresh logic reads the @expiration ivar directly and coerces
+  # with to_i, so it is unaffected.
+  Aws::Google.prepend(
+    Module.new do
+      def expiration
+        value = super
+        value.is_a?(Time) || value.nil? ? value : Time.at(value.to_i)
+      end
+    end
+  )
 rescue LoadError
   # ignore
 end

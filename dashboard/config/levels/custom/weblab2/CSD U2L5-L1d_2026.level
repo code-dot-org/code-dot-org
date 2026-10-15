@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Debug: Headings",
-    "long_instructions": "# Debug: Headings\r\n\r\nThere are a few issues with this page's headings. Can you fix them?\r\n\r\n# Do This\r\n1) Fix all of the pink errors.\r\n- Adjust the heading tags to be the appropriate size, if necessary.\r\n",
+    "long_instructions": "# Debug: Headings\r\n\r\nThere are a few issues with this page's headings. Can you fix them?\r\n\r\n# Do This\r\n1) Fix all of the HTML errors.\r\n- Adjust the heading tags to be the appropriate size, if necessary.\r\n",
     "bubble_choice_description": "Fix the bugs caused by incorrect heading tags.",
     "thumbnail_url": "https://images.code.org/9f4b35dc417ddb274faab244187edf9c-image-1585676309512.png",
     "submittable": "false",

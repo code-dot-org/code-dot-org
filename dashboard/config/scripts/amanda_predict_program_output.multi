@@ -1,0 +1,17 @@
+name 'amanda-predict-program-output'
+title 'TODO: title'
+description ''
+question 'What will be printed to the console when this Python code runs? Consider the use of variables and the `print()` function.'
+right 'The city is: New York
+Current temperature: 25 degrees Celsius.'
+wrong 'The city is: city
+Current temperature: temperature degrees Celsius.'
+wrong 'New York
+25'
+wrong 'Error: variable not defined'
+
+markdown <<MARKDOWN
+What will be printed to the console when this Python code runs? Consider the use of variables and the `print()` function.
+MARKDOWN
+
+allow_multiple_attempts true

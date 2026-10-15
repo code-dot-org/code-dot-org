@@ -1,0 +1,10 @@
+name 'aif-y2-working-with-data-level1-2026'
+display_name 'Explore Tabular Data'
+description 'Choose a dataset to explore'
+
+sublevels
+level 'aif-y2-working-with-data-level1-choice1-combined-2026'
+level 'aif-y2-working-with-data-level1-choice2-combined-2026'
+level 'aif-y2-working-with-data-level1-choice3-combined-2026'
+
+uses_lab2

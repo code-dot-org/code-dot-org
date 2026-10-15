@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
+import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
@@ -59,6 +60,23 @@ class TextResponsesTable extends Component {
       return <span className="uitest-name-cell">{name}</span>;
     }
   };
+
+  // Questions are often authored in markdown. Strip the formatting to plain
+  // text. markdownToTxt leaves a few things behind that we clean up ourselves:
+  //  - markdown images whose URL contains spaces aren't valid syntax, so they
+  //    survive as literal `![](...)` text;
+  //  - raw <img> tags authored as HTML;
+  //  - heading markers with no space after '#' (`##Foo`), which markdownToTxt
+  //    doesn't treat as a heading.
+
+  questionFormatter = question =>
+    question
+      ? markdownToTxt(question)
+          .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+          .replace(/<img[^>]*>/gi, '')
+          .replace(/^[ \t]*#+[ \t]*/gm, '')
+          .trim()
+      : question;
 
   responseFormatter = (_, {rowData}) => {
     const {response, url} = rowData;
@@ -158,6 +176,7 @@ class TextResponsesTable extends Component {
           transforms: [sortable],
         },
         cell: {
+          formatters: [this.questionFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,

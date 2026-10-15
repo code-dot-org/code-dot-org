@@ -1,8 +1,13 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import i18n from '@cdo/locale';
@@ -37,41 +42,50 @@ export class LibraryListItem extends React.Component {
             </a>
           </Tooltip>
           {library.userName && (
-            <div className={classNames(styles.author, styles.overflowEllipsis)}>
+            <MuiTypography
+              variant="body3"
+              component="div"
+              className={classNames(styles.author, styles.overflowEllipsis)}
+            >
               <InlineMarkdown
                 markdown={i18n.authorName({name: library.userName})}
               />
-            </div>
+            </MuiTypography>
           )}
         </div>
-        <div
+        <MuiTypography
+          variant="body2"
+          component="div"
           className={classNames(styles.description, styles.overflowEllipsis)}
         >
           {library.description}
-        </div>
+        </MuiTypography>
         <div className={styles.actions}>
           {this.props.onAdd && (
             <Tooltip text={i18n.add()} place="bottom">
-              <button
-                type="button"
-                key={'add-' + library.id}
+              <MuiIconButton
+                variant="text"
+                color="primary"
+                size="small"
+                aria-label={i18n.add()}
                 onClick={() => this.props.onAdd(library.id)}
-                className={classNames(styles.actionBtn, styles.addBtn)}
               >
-                <FontAwesome icon="plus" className={styles.iconPadding} />
-              </button>
+                <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+              </MuiIconButton>
             </Tooltip>
           )}
           {this.props.onUpdate && (
-            <button
-              type="button"
-              key={'update-' + library.id}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
               onClick={() => this.props.onUpdate(library.channelId)}
-              className={classNames(styles.actionBtn, styles.updateBtn)}
+              startIcon={
+                <FontAwesomeV6Icon iconName="arrows-rotate" iconStyle="solid" />
+              }
             >
-              <FontAwesome icon="arrows-rotate" className={styles.updateIcon} />
-              <span className={styles.updateText}>{i18n.update()}</span>
-            </button>
+              {i18n.update()}
+            </MuiButton>
           )}
           {this.props.onRemove && (
             <Tooltip
@@ -82,23 +96,17 @@ export class LibraryListItem extends React.Component {
               }
               place="bottom"
             >
-              <button
-                type="button"
-                key={'remove-' + library.id}
+              <MuiIconButton
+                className="ui-test-remove-library"
+                variant="text"
+                color="error"
+                size="small"
+                aria-label={i18n.removeFromProject()}
                 onClick={() => this.props.onRemove(library.channelId)}
-                className={classNames(
-                  'ui-test-remove-library',
-                  styles.actionBtn,
-                  styles.removeBtn
-                )}
                 disabled={!!library.fromLevelbuilder}
               >
-                <FontAwesome
-                  icon="trash-can"
-                  iconStyle="regular"
-                  className={styles.iconPadding}
-                />
-              </button>
+                <FontAwesomeV6Icon iconName="trash-can" iconStyle="regular" />
+              </MuiIconButton>
             </Tooltip>
           )}
         </div>

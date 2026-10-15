@@ -52,12 +52,12 @@
         {
           "type": "html",
           "name": "intro_k5pre",
-          "html": "<h1>Code.org Self-paced Online Professional Learning</h1><p><h2>Welcome to {survey_variable_name}!</h2></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Pre-Course Survey</h2>"
+          "html": "<h1>CodeAI Self-paced Online Professional Learning</h1><p><h2>Welcome to {survey_variable_name}!</h2></p>\n\n<p>CodeAI relies on surveys as a crucial tool through which we remain connected to teachers, to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by CodeAI for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Pre-Course Survey</h2>"
         },
         {
           "type": "radiogroup",
           "name": "first_time_csb",
-          "title": "Is this your first self-paced professional learning experience for teaching Code.org's K-5 Computer Science curriculum?",
+          "title": "Is this your first self-paced professional learning experience for teaching CodeAI's K-5 Computer Science curriculum?",
           "visibleIf": "{survey_variable_name}='csb'",
           "choices": [
             {
@@ -79,17 +79,17 @@
             {
               "value": "better_understand_course_csc",
               "visibleIf": "{survey_variable_name}='csc'",
-              "text": "Better understand Code.org's Computer Science Connections curriculum"
+              "text": "Better understand CodeAI's Computer Science Connections curriculum"
             },
             {
               "value": "better_understand_course",
               "visibleIf": "{survey_variable_name}='csb'",
-              "text": "Better understand Code.org's K-5 curriculum"
+              "text": "Better understand CodeAI's K-5 curriculum"
             },
             {
               "value": "better_understand_course_csf_maker_mb",
               "visibleIf": "{survey_variable_name}='csf_maker_mb'",
-              "text": "Better understand Code.org's Maker with micro:bit curriculum"
+              "text": "Better understand CodeAI's Maker with micro:bit curriculum"
             },
             {
               "value": "learn_programming",
@@ -113,11 +113,11 @@
           "choices": [
             {
               "value": "did_not_know",
-              "text": "I did not know that there was facilitator-led Code.org professional development"
+              "text": "I did not know that there was facilitator-led CodeAI professional development"
             },
             {
               "value": "not_available",
-              "text": "Facilitator-led Code.org professional development is not available in my region"
+              "text": "Facilitator-led CodeAI professional development is not available in my region"
             },
             {
               "value": "no_time",
@@ -214,7 +214,7 @@
         {
           "type": "radiogroup",
           "name": "plan_to_teach_csb",
-          "title": "Are you planning to teach Code.org's K-5 Computer Science content? ",
+          "title": "Are you planning to teach CodeAI's K-5 Computer Science content? ",
           "visibleIf": "{survey_variable_name}='csb' and {first_time_csb_name}='yes'",
           "choices": [
             {

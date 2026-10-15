@@ -2,8 +2,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
-
 import ChatBubbleTip from './ChatBubbleTip';
 import InlineAudio from './InlineAudio';
 import {shouldDisplayChatTips} from './utils';
@@ -23,7 +21,8 @@ var audioStyle = {
   },
 };
 
-const MINECRAFT_VERY_DARK_GRAY_COLOR = '#3B3B3B';
+const MINECRAFT_VERY_DARK_GRAY_COLOR =
+  'var(--background-neutral-primary-inverse)';
 
 const ChatBubble = ({
   children,
@@ -36,10 +35,10 @@ const ChatBubble = ({
   ttsMessage,
   textToSpeechEnabled,
 }) => {
-  borderColor = borderColor || color.white;
+  borderColor ||= 'var(--borders-neutral-white-fixed)';
   backgroundColor = isMinecraft
     ? MINECRAFT_VERY_DARK_GRAY_COLOR
-    : backgroundColor || color.white;
+    : backgroundColor || 'var(--background-neutral-white-fixed)';
   isDashed = isDashed || false;
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 

@@ -20,6 +20,7 @@
   margin: 8px 0;
   font-size: 14;
   display: inline-block;
+  color: var(--text-neutral-primary);
 }
 
 .pagination {
@@ -40,4 +41,21 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 5px;
+}
+
+.pickerDialog {
+  :global(#x-close) {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--text-neutral-primary) !important;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--text-brand-purple-primary) !important;
+    }
+  }
+}
+
+:global(.modal-content):has(> .pickerDialog) {
+  background-color: var(--background-neutral-primary);
 }

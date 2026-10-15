@@ -1,10 +1,11 @@
 /* React component to show information about the currently-selected data set. */
-import {styles} from '../constants';
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 
 import ScrollableContent from './ScrollableContent';
+
+import shared from '../shared.module.scss';
 
 const DataCard = () => {
   const name = useAppSelector(state => state.name);
@@ -29,31 +30,31 @@ const DataCard = () => {
 
   return (
     dataLength !== 0 && (
-      <div id="data-card" style={{...styles.panel, ...styles.rightPanel}}>
-        <div style={styles.largeText}>
+      <div id="data-card" className={shared.panel}>
+        <div className={shared.largeText}>
           {name || I18n.t('dataCardDefaultHeader')}
         </div>
         <ScrollableContent>
           {card && (
             <div>
-              <div style={styles.cardRow}>{datasetDetails.description}</div>
-              <div style={styles.cardRow}>
-                <span style={styles.italic}>
+              <div className={shared.cardRow}>{datasetDetails.description}</div>
+              <div className={shared.cardRow}>
+                <span className={shared.italic}>
                   {I18n.t('dataCardSource')}
                   <br />
                   {metadata.card.source}
                 </span>
               </div>
-              <div style={styles.cardRow}>
-                <span style={styles.italic}>
+              <div className={shared.cardRow}>
+                <span className={shared.italic}>
                   {I18n.t('dataCardRowCount')}
                   <br />
                   {dataLength}
                 </span>
               </div>
               {metadata.card.lastUpdated && (
-                <div style={styles.cardRow}>
-                  <span style={styles.italic}>
+                <div className={shared.cardRow}>
+                  <span className={shared.italic}>
                     {I18n.t('dataCardLastUpdated')}
                     <br />
                     {metadata.card.lastUpdated}
@@ -62,21 +63,21 @@ const DataCard = () => {
               )}
 
               {metadata.card.context?.potentialUses && (
-                <div style={styles.cardRow}>
-                  <div style={styles.bold}>
+                <div className={shared.cardRow}>
+                  <div className={shared.bold}>
                     {I18n.t('dataCardPotentialUses')}
                   </div>
-                  <div style={styles.italic}>
+                  <div className={shared.italic}>
                     {datasetDetails.potentialUses}
                   </div>
                 </div>
               )}
               {metadata.card.context?.potentialMisuses && (
-                <div style={styles.cardRow}>
-                  <div style={styles.bold}>
+                <div className={shared.cardRow}>
+                  <div className={shared.bold}>
                     {I18n.t('dataCardPotentialMisuses')}
                   </div>
-                  <div style={styles.italic}>
+                  <div className={shared.italic}>
                     {datasetDetails.potentialMisuses}
                   </div>
                 </div>
@@ -86,11 +87,11 @@ const DataCard = () => {
           {!card && dataLength > 0 && (
             <div>
               <br />
-              <div style={styles.cardRow}>
-                <div style={styles.bold}>{I18n.t('dataCardRowCount')}</div>
+              <div className={shared.cardRow}>
+                <div className={shared.bold}>{I18n.t('dataCardRowCount')}</div>
                 {dataLength}
               </div>
-              <div style={styles.cardRow}>
+              <div className={shared.cardRow}>
                 {removedRowsMsg && (
                   <span>
                     &nbsp;

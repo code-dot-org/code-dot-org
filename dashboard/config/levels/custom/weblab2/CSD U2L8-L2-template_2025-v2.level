@@ -66,14 +66,12 @@
       },
       "openFiles": [
         "1",
-        "2",
-        "3",
-        "4"
+        "2"
       ]
     },
     "name_suffix": "_2025-v2"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:26.919+00:00\",\"changed\":[\"cloned from \\\"CSD U2L8-L2-template-2025\\\"\"],\"cloned_from\":\"CSD U2L8-L2-template-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:26.919+00:00\",\"changed\":[\"cloned from \\\"CSD U2L8-L2-template-2025\\\"\"],\"cloned_from\":\"CSD U2L8-L2-template-2025\"},{\"changed_at\":\"2026-07-26 22:11:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

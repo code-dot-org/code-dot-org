@@ -1,8 +1,6 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 import * as BlocklyCore from 'blockly/core';
 
-import color from '@cdo/apps/util/color';
-
 import {
   arrayToMap,
   CustomMenuGenerator,
@@ -21,8 +19,6 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   private imageWidth_: number;
   private imageHeight_: number;
   private whiteBackground: boolean;
-  private primaryColour_?: string;
-  private borderColour_?: string;
   private focusColour_?: string;
   private config: string | null | undefined;
 
@@ -47,11 +43,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     super(
       () => fixMenuGenerator(menuGenerator, width, height),
       undefined /* validator */,
-      {
-        columns: numColumns,
-        primaryColour: color.white,
-        borderColour: color.white,
-      }
+      {columns: numColumns}
     );
 
     this.buttons_ = buttons;
@@ -83,14 +75,16 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 
       const colorSourceBlock = isShadow ? parent! : block;
       if (this.whiteBackground) {
-        this.primaryColour_ = color.white;
         this.focusColour_ = colorSourceBlock.style.colourTertiary;
+        // Empty strings keep the themed panel from cdoCss.
+        Blockly.DropDownDiv.setColour('', '');
       } else {
-        this.primaryColour_ = colorSourceBlock.style.colourTertiary;
-        // Use the default focusColour_, a semi-transparent black.
+        // White images need the block's colours or they disappear.
+        Blockly.DropDownDiv.setColour(
+          colorSourceBlock.style.colourTertiary,
+          colorSourceBlock.style.colourPrimary
+        );
       }
-      this.borderColour_ = colorSourceBlock.style.colourPrimary;
-      Blockly.DropDownDiv.setColour(this.primaryColour_, this.borderColour_);
     }
 
     const gridItems: HTMLElement[] = Array.from(

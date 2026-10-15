@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-08-06T15:16:08.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Day Three, Reflection Two",
+    "long_instructions": "Name one place in your project where AI genuinely made your launch better.",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "placeholder": "write answer here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:16:08.700+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-reflection-question-5\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-reflection-question-5\"},{\"changed_at\":\"2026-08-06 15:16:43 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 15:17:00 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

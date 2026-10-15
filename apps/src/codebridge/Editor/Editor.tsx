@@ -14,9 +14,11 @@ import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 
+import {AudioPlayer} from '@cdo/apps/codebridge/components/AudioPlayer';
 import {CodebridgeEmptyState} from '@cdo/apps/codebridge/components/CodebridgeEmptyState';
 import emptyFilesPlaceholderImage from '@cdo/apps/codebridge/images/empty-files-placeholder.svg';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {SUPPORTED_AUDIO_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -24,6 +26,7 @@ import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {htmlLinter} from '@cdo/apps/weblab2/htmlLinter';
 
 import {editableFileType, viewableImageFileType} from '../utils';
 
@@ -50,10 +53,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     state => state.lab2Project.projectSourceBeforeAiTutorVersion
   );
 
-  const allowUnifiedDiffView = experiments.isEnabledAllowingQueryString(
-    experiments.ACCEPT_REJECT_UNIFIED_DIFF
-  );
-
   const allowSplitDiffView = experiments.isEnabledAllowingQueryString(
     experiments.ACCEPT_REJECT_SPLIT_DIFF
   );
@@ -69,19 +68,16 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     [dispatch, activeFile?.id]
   );
 
-  // Only show unified diff view when experiment flag is turned on, we are in AI tutor mode,
-  // and have projectSourceBeforeAiTutorVersion along with an active file.
-  // Used in key so we remount CodeEditor when this becomes true.
+  // Show unified diff view whenever we are in AI tutor mode and
+  // have the version of the file before the AI tutor changes as well as an active file.
   const hasUnifiedDiffView = useMemo(() => {
     return !!(
-      allowUnifiedDiffView &&
       !allowSplitDiffView &&
       isAiTutorVersion &&
       projectSourceBeforeAiTutorVersion &&
       activeFile?.name
     );
   }, [
-    allowUnifiedDiffView,
     allowSplitDiffView,
     isAiTutorVersion,
     projectSourceBeforeAiTutorVersion,
@@ -150,6 +146,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
         extensions.push(linter(esLint(new eslint.Linter(), config)));
         extensions.push(lintGutter());
+      } else if (fileExt === 'html') {
+        extensions.push(htmlLinter);
+        extensions.push(lintGutter());
       } else if (fileExt === 'css') {
         // Add css color picker and remove white outline from color indicator.
         extensions.push(colorPicker);
@@ -162,10 +161,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         );
       }
     }
-    if (fileExt === 'md' || fileExt === 'txt') {
-      // Wrap lines for markdown and plain text files.
-      extensions.push(EditorView.lineWrapping);
-    }
     if (hasUnifiedDiffView) {
       // For new files that don't exist in the original version, we still want
       // to show diff highlighting so will assign an empty string to the original contents.
@@ -174,6 +169,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         unifiedMergeView({
           original: activeOriginalFileContents,
           mergeControls: false,
+          collapseUnchanged: {margin: 3, minSize: 4},
         })
       );
       // For new files (empty original), hide deletion markers so only green additions show.
@@ -205,12 +201,18 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     return <img src={activeFile.url} alt={activeFile.name} tabIndex={0} />;
   }
 
+  if (activeFile?.url && SUPPORTED_AUDIO_EXTENSIONS.includes(activeFileExt)) {
+    return <AudioPlayer src={activeFile.url} fileName={activeFile.name} />;
+  }
+
   if (activeFile && !editableFileType(activeFileExt, editableFileTypes)) {
     return (
       <div>{codebridgeI18n.cannotEditFile({language: activeFileExt})}</div>
     );
   }
 
+  // We use the diff view toggle in the CodeEditor key so that we remount
+  // when we switch in and out of viewing diffs from AI Tutor.
   return (
     <div className={moduleStyles.editorContainer}>
       {activeFile ? (

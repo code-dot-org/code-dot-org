@@ -1,0 +1,12 @@
+name 'ai-and-the-systems-that-power-it-lesson3-chat-choice'
+display_name 'Technical Chat'
+description 'These AI Chat levels will assume the persona of the character that you are trying to help. Work as a technical professional to help them troubleshoot and find the solution to their issue.'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson3-chat-amara'
+level 'ai-and-the-systems-that-power-it-lesson3-chat-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson3-chat-denise'
+level 'ai-and-the-systems-that-power-it-lesson3-chat-marcus'
+level 'ai-and-the-systems-that-power-it-lesson3-chat-layla'
+
+uses_lab2

@@ -2,18 +2,21 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {Panel, PanelLayout} from '@cdo/apps/panels/types';
-import {createUuid} from '@cdo/apps/utils';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {LevelContext} from '../../curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
+import {Panel, PanelLayout} from '@cdo/apps/panels/types';
+import {createUuid} from '@cdo/apps/utils';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {uploadLevelAsset} from '../levelApi';
 
 // Exported so the slides generator (which also produces Panels-app
@@ -83,6 +86,7 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
     'band or audience, in which case follow it. Each panel needs short',
     'overlay text (1-3 sentences, markdown allowed) and an image prompt for',
     'a single 16:9 illustration with no embedded text.',
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',

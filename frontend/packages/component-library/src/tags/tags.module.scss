@@ -45,7 +45,6 @@
       @include typography.overline-one;
       line-height: 1.5;
       margin-bottom: 0;
-      margin-top: 1.5px;
     }
 
     i {
@@ -63,7 +62,6 @@
       @include typography.overline-two;
       line-height: 1.54;
       margin-bottom: 0;
-      margin-top: 2px;
     }
 
     i {
@@ -77,11 +75,11 @@
 
 .tags-s {
   .tag {
+    min-height: 24px;
     span {
       @include typography.overline-three;
       line-height: 1.8;
       margin-bottom: 0;
-      margin-top: 1px;
     }
 
     i {
@@ -89,6 +87,25 @@
       line-height: 1.25;
       width: 1rem;
       height: 0.8125rem;
+    }
+  }
+}
+
+// CodeAI (CADS) brand overrides.
+[data-brand='codeai-next'] {
+  .tags {
+    .tag {
+      background: var(--background-brand-light);
+      border: 1px solid var(--border-brand-mid);
+      border-radius: var(--shape-sm, 0.375rem);
+      color: var(--text-brand-secondary);
+
+      span {
+        // CADS tags use the Label style, not an overline.
+        text-transform: none;
+        letter-spacing: normal;
+        color: var(--text-brand-secondary);
+      }
     }
   }
 }

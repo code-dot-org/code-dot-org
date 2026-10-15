@@ -54,9 +54,8 @@ class TransactionTest < ActiveSupport::TestCase
 
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     include ActiveSupport::Testing::TransactionalTestCase
-    fixtures :callout
 
-    def test_create_fixture
+    def test_record_count
       TransactionTest.count = Callout.count
     end
   end
@@ -67,18 +66,17 @@ class TransactionTest < ActiveSupport::TestCase
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     include ActiveSupport::Testing::TransactionalTestCase
 
-    fixtures :callout
-
-    def test_fixture_created
+    def test_record_created
       assert_equal TransactionTest.count, Callout.count
-      Callout.last.destroy
+      FactoryBot.create(:callout)
+      assert_equal TransactionTest.count + 1, Callout.count
     end
   end
 
   class TransactionalTestCasePostTest < ActiveSupport::TestCase
     runnables.delete self
 
-    def test_fixture_rolled_back
+    def test_record_rolled_back
       assert_equal TransactionTest.count, Callout.count
     end
   end

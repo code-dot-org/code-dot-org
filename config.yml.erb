@@ -30,6 +30,7 @@ dashboard_clever_key:           !Secret
 dashboard_clever_secret:        !Secret
 dashboard_classlink_key:        !Secret
 dashboard_classlink_secret:     !Secret
+classlink_roster_api_key:       ''
 
 # Recaptcha
 recaptcha_site_key: !Secret
@@ -148,7 +149,6 @@ pardot_client_secret:
 honeybadger_api_token:
 cronjobs_honeybadger_api_key:  !Secret
 dashboard_honeybadger_api_key: !Secret
-pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
 zendesk_dev_token: !Secret
@@ -298,6 +298,9 @@ user_content_s3_bucket: <%=
     'staging'      => 'org.code.staging-studio.user-content',
     'test'         => 'org.code.test-studio.user-content',
     'levelbuilder' => 'org.code.levelbuilder-studio.user-content',
+    # Development has no bucket of its own; borrow the test bucket. Requires
+    # AWS credentials with access to it (see aws_credentials in locals.yml).
+    'development'  => 'org.code.test-studio.user-content',
   }[env]
 %>
 
@@ -438,17 +441,16 @@ dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
 puma_control_server_token: !Secret
 
-# Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
-dashboard_session_ttl_days: 40
+# Session timeout in days. Controls both the Devise timeout and the Rails
+# session store (Redis) TTL. Targeting a little over two weeks, so students
+# should remain authenticated through winter break.
+dashboard_session_ttl_days: 18
 
 # Pegasus
 override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
 pegasus_hostname: 'code.org'
 pegasus_host:
-pegasus_sock:
 pegasus_port:
-pegasus_web_server_name: pegasus
-pegasus_workers: 8
 sinatra_session_secret:
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
@@ -640,6 +642,8 @@ tutor_langfuse_secret_key: !Secret
 tutor_langfuse_public_key: !Secret
 ta_langfuse_secret_key: !Secret
 ta_langfuse_public_key: !Secret
+adaptive_langfuse_secret_key: !Secret
+adaptive_langfuse_public_key: !Secret
 
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
@@ -679,6 +683,15 @@ active_job_queues:
   :default: :default
   :mailers: :mailers
   :mailjet: :mailjet
+  :low_priority: :low_priority
+
+# Delayed Job priority per ActiveJob queue. Lower numbers run first.
+# See dashboard/config/initializers/delayed_job_config.rb.
+active_job_queue_priorities:
+  :mailers: 0
+  :mailjet: 0
+  :default: 0
+  :low_priority: 10
 
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job

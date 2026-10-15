@@ -49,7 +49,16 @@ class UserLevelsController < ApplicationController
   def get_level_source
     level = Level.find_by(id: params[:level_id])
     level_ids = level ? response_level_ids(level) : [params[:level_id]]
-    user_levels = UserLevel.where(user_id: current_user.id, level_id: level_ids, script_id: params[:script_id])
+    # A teacher viewing a student's work passes the student's user_id; only
+    # that student's teacher may read it. Without a user_id, read the current
+    # user's own most recent attempt.
+    if params[:user_id].present?
+      user = User.find_by(id: params[:user_id])
+      return head :forbidden unless user&.student_of?(current_user)
+    else
+      user = current_user
+    end
+    user_levels = UserLevel.where(user_id: user.id, level_id: level_ids, script_id: params[:script_id])
     most_recent_user_level = user_levels.order(updated_at: :desc).first
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
   end

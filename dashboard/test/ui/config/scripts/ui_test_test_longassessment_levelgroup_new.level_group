@@ -1,0 +1,8 @@
+name 'UI Test Test longassessment levelgroup new'
+
+page
+level 'UI Test K-1 Happy Maps Multi 1'
+level 'UI Test Multi Horizontal Scroll Test'
+level 'UI Test Choose 2 Test'
+level 'UI Test CSD U3 drawSprites placement match'
+level 'UI Test CSD U3 - conditionals - Matching_2018'

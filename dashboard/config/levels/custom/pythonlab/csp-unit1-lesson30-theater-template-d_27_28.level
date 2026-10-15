@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-10T19:20:36.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "minimal/editorial",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# ---------- SAMPLE DATA (for testing only — replace with your variables and calculations) ----------\nname = \"NAME\"\nsubject = \"SUBJECT\"\nlabel_1 = \"LABEL 1\"\nvalue_1 = \"VALUE 1\"\nlabel_2 = \"LABEL 2\"\nvalue_2 = \"VALUE 2\"\nclosing_line = \"CLOSING LINE\"\n\n# ---------- THE REVEAL ----------\nfrom theater import Scene, play_scenes, Font, FontStyle\n\nscene = Scene()\nscene.remove_stroke_color()\n\n# ----- CARD 1: COVER -----\nscene.clear(\"#F7F4EE\")\nscene.set_text_style(Font.SANS, FontStyle.NORMAL)\nscene.set_text_color(\"#8A3324\")\nscene.set_text_height(14)\nscene.draw_text(\"A WRAPPED STORY\", 40, 100)\nscene.set_text_style(Font.SERIF, FontStyle.ITALIC)\nscene.set_text_color(\"#1B1B2F\")\nscene.set_text_height(38)\nscene.draw_text(subject, 40, 160)\nscene.set_text_style(Font.SERIF, FontStyle.NORMAL)\nscene.set_text_height(16)\nscene.draw_text(\"by \" + name, 40, 195)\nscene.pause(1.4)\n\n# ----- CARD 2: STAT 1 -----\nscene.clear(\"#F7F4EE\")\nscene.set_text_style(Font.SANS, FontStyle.NORMAL)\nscene.set_text_color(\"#8A3324\")\nscene.set_text_height(14)\nscene.draw_text(label_1, 40, 90)\nscene.set_text_style(Font.SERIF, FontStyle.BOLD)\nscene.set_text_color(\"#1B1B2F\")\nscene.set_text_height(50)\nscene.draw_text(str(value_1), 40, 160)\nscene.set_fill_color(\"#8A3324\")\nscene.draw_rectangle(40, 175, 100, 2)\nscene.play_note(64, 0.4)\nscene.pause(1.4)\n\n# ----- CARD 3: STAT 2 -----\nscene.clear(\"#F7F4EE\")\nscene.set_text_style(Font.SANS, FontStyle.NORMAL)\nscene.set_text_color(\"#8A3324\")\nscene.set_text_height(14)\nscene.draw_text(label_2, 40, 90)\nscene.set_text_style(Font.SERIF, FontStyle.BOLD)\nscene.set_text_color(\"#1B1B2F\")\nscene.set_text_height(50)\nscene.draw_text(str(value_2), 40, 160)\nscene.set_fill_color(\"#8A3324\")\nscene.draw_rectangle(40, 175, 100, 2)\nscene.play_note(67, 0.4)\nscene.pause(1.4)\n\n# ----- CARD 4: SHARE CARD -----\nscene.clear(\"#F7F4EE\")\nscene.set_text_style(Font.SERIF, FontStyle.ITALIC)\nscene.set_text_color(\"#1B1B2F\")\nscene.set_text_height(22)\nscene.draw_text(name + \"'s \" + subject + \" Wrapped\", 40, 50)\nscene.set_fill_color(\"#8A3324\")\nscene.draw_rectangle(40, 60, 320, 2)\nscene.set_text_style(Font.SANS, FontStyle.NORMAL)\nscene.set_text_color(\"#1B1B2F\")\nscene.set_text_height(16)\nscene.draw_text(label_1 + \": \" + str(value_1), 40, 100)\nscene.draw_text(label_2 + \": \" + str(value_2), 40, 130)\nscene.set_fill_color(\"#8A3324\")\nscene.draw_rectangle(40, 155, 320, 2)\nscene.set_text_style(Font.SERIF, FontStyle.ITALIC)\nscene.set_text_color(\"#8A3324\")\nscene.set_text_height(15)\nscene.draw_text(closing_line, 40, 185)\nscene.play_note(60, 0.2)\nscene.pause(0.2)\nscene.play_note(64, 0.2)\nscene.pause(0.2)\nscene.play_note(67, 0.5)\n\nplay_scenes(scene)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-10T19:20:36.009+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-template-c_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-template-c_27_28\"},{\"changed_at\":\"2026-09-10 19:20:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:22:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:41:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

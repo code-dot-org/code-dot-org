@@ -57,7 +57,7 @@ const styles = {
     color: 'var(--text-success-primary)',
   },
   hover: {
-    color: 'var(--text-warning-primary)',
+    color: 'var(--text-accent-orange-primary)',
   },
   smallStack: {
     width: '1em',

@@ -5,8 +5,6 @@ module CAP
   class LockoutJob < ApplicationJob
     MAX_RESCHEDULING_ATTEMPTS = 1
 
-    rescue_from StandardError, with: :report_exception
-
     # Schedules the user lockout based on their estimated lockout date.
     # @param user [User] the student account
     # @param reschedules [Integer] the number of times the job can be rescheduled

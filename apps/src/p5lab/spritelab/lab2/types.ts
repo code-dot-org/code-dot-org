@@ -1,9 +1,19 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
-// The animation-list category marking an image as a background rather than a
-// costume.
+import {AddBlockEntry} from './addBlocks';
+import {ImageGenerationMetadata} from './ai/images/types';
+import {AnimationPoses} from './characterAnimations';
+import {ImageRoleDefaults} from './imageRoleDefaults';
+import {LevelMode} from './levelMode';
+import {Tab} from './redux/spriteLab2Redux';
+import {World} from './world';
+
+/** The animation-list category marking an image as a background, not a costume. */
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
+/** The category marking an image as a square tile for platform pieces. */
+export const BLOCKS_CATEGORY = 'blocks';
 
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
 // `SerializedAnimationProps` typedef in p5lab/shapes.js (which is plain JS, so
@@ -17,8 +27,18 @@ export interface SerializedAnimationProps {
   frameDelay: number;
   version?: string;
   categories?: string[];
-  // Physical pixels per art pixel; absent on non-pixel-art animations.
+  /** Physical pixels per art pixel; absent on non-pixel-art animations. */
   pixelGridSize?: number;
+  /** Pixel-editor recently-used colors, in first-seen order. */
+  recentColors?: RGBA[];
+  /** The stored image is already cropped to its content. */
+  trimmed?: boolean;
+  /** What the image level that made it was for (level_mode.imageRole). */
+  role?: string;
+  /** Present on AI-generated images. */
+  generation?: ImageGenerationMetadata;
+  /** Present on a character set: where each pose lives in the sheet. */
+  poses?: AnimationPoses;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
@@ -38,50 +58,107 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
-// One Items-tab gallery entry; the image lives in the project asset bucket
-// and, once in the animationList, is an ordinary costume/background.
-export interface SpriteLab2ItemEntry {
-  name: string;
-  filename: string;
-  prompt?: string;
-  itemType?: 'sprite' | 'background';
-}
+/** What a scene is for: the blocks it offers and how big its sprites are. */
+export type SceneType = 'story' | 'platform';
 
-// Standalone world-grid editor state. Persisted but not yet wired into the
-// p5.play runtime (see plan, World tab).
-export interface SpriteLab2World {
-  id: string;
-  grid: string[][];
-}
-
-// A named code workspace. The id is the source of truth (the go-to-scene
-// block stores it); scenes[0] is the default scene Play starts at.
-export interface SpriteLab2Scene {
+/**
+ * A named code workspace. The id is the source of truth, being what the
+ * go-to-scene block stores; scenes[0] is where Play starts.
+ */
+export interface Scene {
   id: string;
   name: string;
-  // This scene's Blockly workspace serialization.
+  /** Absent on scenes created before scene types. */
+  type?: SceneType;
+  /** This scene's Blockly workspace serialization. */
   source?: WorkspaceSerialization;
+  /** Starter sprite and block placements, spawned ahead of the program. */
+  world?: World;
+  /** The scene's first frame as last captured (sceneThumbnails.ts): a
+      project asset, and the fingerprint of the scene it shows. */
+  thumbnail?: SceneThumbnail;
 }
 
-// The single ProjectSources.source JSON for a SpriteLab2 project.
-export interface SpriteLab2Source extends ProjectSources {
-  // Sprite Lab costumes + backgrounds, classic serialized animationList shape.
+export interface SceneThumbnail {
+  url: string;
+  fingerprint: string;
+}
+
+/** The single ProjectSources.source JSON for a SpriteLab2 project. */
+export interface Sources extends ProjectSources {
+  /** Costumes and backgrounds, in the classic animationList shape. */
   animations?: SerializedAnimationList;
-  // Scenes UI variant: per-scene code workspaces. When present, `source`
-  // mirrors scenes[0].source so projects still open with the variant off.
-  scenes?: SpriteLab2Scene[];
-  // World tab state.
-  worlds?: SpriteLab2World[];
-  activeWorldId?: string;
-  // Items tab gallery metadata.
-  items?: SpriteLab2ItemEntry[];
+  /** Per-scene code workspaces. */
+  scenes?: Scene[];
+}
+
+/**
+ * One stage of a level's floating-guide instructions. `text` is markdown;
+ * `after` is what must hold to reach this step from the one before it, every
+ * listed clause of it (the first step needs none).
+ */
+export interface GuideStep {
+  text: string;
+  /** A short line the guide keeps when the student collapses it, so the
+      Continue button does not sit there alone. */
+  collapsedText?: string;
+  /** Offer the Continue button to the next level while on this step. */
+  showContinue?: boolean;
+  /**
+   * Image counts are measured from what the project held when the level
+   * opened, so a level gates on the images made on it, not the ones it
+   * inherited from earlier levels.
+   */
+  after?: {
+    /** At least this many block-kind cells placed in the World. */
+    worldBlocks?: number;
+    /** At least this many sprite-kind cells placed in the World. */
+    worldSprites?: number;
+    /** At least this many images made on this level. */
+    images?: number;
+    /** At least this many sprite-type images made on this level. */
+    spriteImages?: number;
+    /** At least this many background-type images made on this level. */
+    backgroundImages?: number;
+    /** At least this many block-type images made on this level. */
+    blockImages?: number;
+    /** This tab is active. */
+    tab?: Tab;
+  };
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
-  guideMode?: 'instructions' | 'aiCodeGenerate';
-  aiCodeGenerateAdlib?: string;
-  aiCodeGenerateText?: boolean;
-  // XML string representation of toolbox blocks.
-  // TODO: deprecate in favor of the JSON toolbox definition.
+  /** What kind of level this is; decides the tabs and the image controls. */
+  levelMode?: LevelMode;
+  /** The one scene this level edits, created on first load if the project
+      lacks it. The id is the key the go-to-scene block stores; the name is
+      what the student sees, applied only at creation. The id must not be
+      'scene-1' (the id synthesized for sources saved before scenes). */
+  pinnedScene?: {
+    id: string;
+    name: string;
+    type?: SceneType;
+  };
+  /** Staged text for the floating guide, in order. */
+  guideSteps?: GuideStep[];
+  /** Premade world for the pinned scene, one string per playfield row
+      anchored to the floor. 'B' cells take the block image the student made
+      most recently, 'S' the image_role_defaults sprite, else their first
+      character. */
+  /** Rows of a premade world (worldStartPattern.ts), or several such
+      layouts, one of which the project draws by its channel id. */
+  worldStartPattern?: string[] | string[][];
+  /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
+      image levels record through level_mode.imageRole. */
+  imageRoleDefaults?: ImageRoleDefaults;
+  /** Blocks added to the pinned scene when the student arrives and the
+      scene has none of that type (addBlocks.ts), in Blockly's block
+      state form: an event to fill in, a placeholder shadow on its `next`.
+      An entry with `attachTo` instead hangs its shadow on the end of the
+      stack already there whose top block has that type. */
+  addBlocks?: AddBlockEntry[];
+  /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
+  /** Runtime libraries the level opts into (see usesPlatformPhysics). */
+  helperLibraries?: string[];
 }

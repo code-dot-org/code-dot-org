@@ -1,5 +1,5 @@
 {
-  "title": "Satisfaction Survey for Code.org's Professional Development Workshop",
+  "title": "Satisfaction Survey for CodeAI's Professional Development Workshop",
   "logoPosition": "right",
   "pages": [
     {
@@ -14,20 +14,20 @@
         {
           "type": "html",
           "name": "intro_text",
-          "html": "<p><strong>Well done, you've completed Code.org's professional development workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>"
+          "html": "<p><strong>Well done, you've completed CodeAI's professional development workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by CodeAI, our Regional Partners, and our facilitators for program improvement.</li></ul>"
         },
         {
           "type": "radiogroup",
           "name": "cdo_teaching_experience",
-          "title": "Which of the following options best captures your previous experience using Code.org in the classroom?",
+          "title": "Which of the following options best captures your previous experience using CodeAI in the classroom?",
           "choices": [
             {
               "value": "cs_teaching",
-              "text": " I use Code.org to teach a computer science course"
+              "text": " I use CodeAI to teach a computer science course"
             },
             {
               "value": "co_curricular_teaching",
-              "text": " I use Code.org to introduce computer science when teaching other content"
+              "text": " I use CodeAI to introduce computer science when teaching other content"
             },
             {
               "value": "hoc",
@@ -35,7 +35,7 @@
             },
             {
               "value": "not_used",
-              "text": "I have not used Code.org in my classroom yet"
+              "text": "I have not used CodeAI in my classroom yet"
             }
           ]
         },
@@ -168,7 +168,7 @@
           "category": "engagement",
           "type": "rating",
           "name": "likelihood_other_pd",
-          "title": "How likely would you be to attend other workshops in the future that cover other areas of Code.org computer science curriculum?",
+          "title": "How likely would you be to attend other workshops in the future that cover other areas of CodeAI computer science curriculum?",
           "shortText": "Likely to attend again (%)",
           "rateCount": 7,
           "rateMax": 7,
@@ -381,7 +381,7 @@
         {
           "type": "radiogroup",
           "name": "permission_quote",
-          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "title": "I give CodeAI permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
           "choices": [
             {
               "value": "yes_with_name",
@@ -400,7 +400,7 @@
         {
           "type": "radiogroup",
           "name": "can_contact",
-          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Computer Science professional learning to the Code.org team?",
+          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Computer Science professional learning to the CodeAI team?",
           "choices": [
             {
               "value": "yes",
@@ -445,7 +445,7 @@
         {
           "type": "html",
           "name": "thank_you",
-          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from CodeAI for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
         }
       ]
     }

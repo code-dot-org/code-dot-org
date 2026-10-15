@@ -3,8 +3,9 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor]
-  before_action :authenticate_user!, only: [:tutor]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_gallery]
+  before_action :authenticate_user!, only: [:tutor, :tutor_gallery]
+  before_action(only: [:tutor, :tutor_gallery]) {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -94,15 +95,12 @@ class LessonsController < ApplicationController
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/tutor
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor
+  # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/*path (deep-dive screen sub-routes)
   def tutor
     view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
-
-    @lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
-    end
-    return render_404 unless @lesson&.lesson_tutor_available?
+    return render_404 unless find_tutor_lesson(script)
     unit_group_unit = unit_context[:unit_group_unit]
     unit_label = unit_group_unit ? "Unit #{unit_group_unit.position}" : nil
     json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
@@ -120,6 +118,25 @@ class LessonsController < ApplicationController
       timeSpentSeconds: lesson_time_spent(@lesson.id, current_user&.id),
       unitLabel: unit_label
     }
+    @tutor_gallery_data = build_tutor_gallery_data(script, unit_context)
+    render 'tutor'
+  end
+
+  # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/gallery
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/tutor/gallery
+  #
+  # The Tutor+ project gallery: the class section's submitted challenge work,
+  # browsable by section and unit. This action only bootstraps the page —
+  # the signed-in user's sections and the course's units; the submissions
+  # themselves come from GET /challenge_responses.
+  def tutor_gallery
+    view_options(full_width: true, no_padding_container: true, no_footer: true)
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    return render_404 unless find_tutor_lesson(script)
+
+    @tutor_gallery_data = build_tutor_gallery_data(script, unit_context)
+    render 'tutor'
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/edit
@@ -291,6 +308,20 @@ class LessonsController < ApplicationController
 
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
   # work for both of them to prepare the data for editing
+  # Sets @lesson from the request params and returns true if it exists and has
+  # tutor content available; returns false otherwise (caller should render 404).
+  private def find_tutor_lesson(script)
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    @lesson&.lesson_tutor_available?
+  end
+
+  private def build_tutor_gallery_data(script, unit_context)
+    unit_group = unit_context[:unit_group] || script.original_unit_group
+    @lesson.summarize_for_tutor_gallery(current_user, unit_group)
+  end
+
   private def setup_edit
     @lesson_data = @lesson.summarize_for_lesson_edit
     # Return an empty list, because computing the list of related lessons here

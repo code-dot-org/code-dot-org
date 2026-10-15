@@ -1,5 +1,5 @@
 {
-  "title": "Code.org Teacher Onboarding Feedback",
+  "title": "CodeAI Teacher Onboarding Feedback",
   "description": "Thanks for taking the time to share your experience with us!",
   "logoPosition": "right",
   "pages": [
@@ -69,7 +69,7 @@
         {
           "type": "html",
           "name": "customer_feedback",
-          "html": "<h3>Your Code.org onboarding experience was {enjoy_passthrough}</h3>"
+          "html": "<h3>Your CodeAI onboarding experience was {enjoy_passthrough}</h3>"
         },
         {
           "type": "comment",

@@ -2,33 +2,9 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import color from '@cdo/apps/util/color';
-
 import {standardShape} from './lessonPlanShapes';
 
-import moduleStyles from './lesson-standards.module.scss';
-
-export const styles = {
-  frameworkName: {
-    ...fontConstants['main-font-semi-bold'],
-    color: color.dark_charcoal,
-  },
-  categoryShortcode: {
-    ...fontConstants['main-font-bold'],
-    color: color.link_color,
-  },
-  standardShortcode: {
-    ...fontConstants['main-font-semi-bold'],
-    color: color.dark_charcoal,
-  },
-  summary: {
-    padding: 3,
-  },
-  standard: {
-    padding: 3,
-  },
-};
+import styles from './lesson-plan.module.scss';
 
 export const ExpandMode = {
   NONE: 'none',
@@ -112,8 +88,8 @@ class Framework extends PureComponent {
       .value();
     return (
       <div>
-        <span style={styles.frameworkName}>{name}</span>
-        <ul style={{listStyleType: 'none'}}>
+        <span className={styles.frameworkName}>{name}</span>
+        <ul className={styles.noBullets}>
           {Object.keys(standardsByCategory).map((categoryShortcode, index) => {
             const standards = standardsByCategory[categoryShortcode];
             const expandMode = getChildExpandMode(this.props.expandMode, index);
@@ -150,17 +126,12 @@ class ParentCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary style={styles.summary}>
-            <span
-              style={styles.categoryShortcode}
-              className={moduleStyles.categoryShortcode}
-            >
-              {shortcode}
-            </span>
+          <summary className={styles.summary}>
+            <span className={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
-          <ul style={{listStyleType: 'none'}}>
+          <ul className={styles.noBullets}>
             {Object.keys(standardsByCategory).map(
               (categoryShortcode, index) => {
                 const standards = standardsByCategory[categoryShortcode];
@@ -199,13 +170,8 @@ class Category extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary style={styles.summary}>
-            <span
-              style={styles.categoryShortcode}
-              className={moduleStyles.categoryShortcode}
-            >
-              {shortcode}
-            </span>
+          <summary className={styles.summary}>
+            <span className={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
@@ -230,8 +196,8 @@ class Standard extends PureComponent {
   render() {
     const {standard} = this.props;
     return (
-      <li key={standard.shortcode} style={styles.standard}>
-        <span style={styles.standardShortcode}>{standard.shortcode}</span>
+      <li key={standard.shortcode} className={styles.standard}>
+        <span className={styles.standardShortcode}>{standard.shortcode}</span>
         {' - '}
         {standard.description}
       </li>

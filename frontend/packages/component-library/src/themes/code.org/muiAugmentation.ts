@@ -8,6 +8,11 @@
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
+import '@mui/material/Tooltip';
+
+import type {CSSInterpolation, Theme} from '@mui/material/styles';
+
+import type {Theme as DataThemeMode} from '@/common/contexts';
 
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
@@ -20,6 +25,8 @@ declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     white: true;
     tertiary: true;
+    /** Contained only. Outlined and text orange use that variant's primary styles. */
+    orange: true;
   }
 }
 
@@ -60,6 +67,14 @@ declare module '@mui/material/IconButton' {
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
     size?: 'xs' | 's' | 'm' | 'l';
+  }
+}
+
+// The tooltip portals out of any surrounding `data-theme` subtree, so callers
+// pass the theme to its slot explicitly. See styleOverrides/tooltip.ts.
+declare module '@mui/material/Tooltip' {
+  interface TooltipTooltipSlotPropsOverrides {
+    'data-theme'?: DataThemeMode;
   }
 }
 
@@ -113,8 +128,6 @@ declare module '@mui/material/Typography' {
     em: true;
   }
 }
-
-import type {CSSInterpolation, Theme} from '@mui/material/styles';
 
 // Slot values accept either a plain style object or a theme callback.
 type SlotOverride =

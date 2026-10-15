@@ -1,4 +1,5 @@
-import {Button as MuiButton} from '@mui/material';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -114,14 +115,19 @@ class EditTableRow extends React.Component {
         {this.props.columnNames.map(columnName => (
           <td key={columnName} className={dataStyles.cell}>
             {this.state.isEditing && columnName !== 'id' ? (
-              <input
-                className={dataStyles.input}
+              <TextField
+                name={columnName}
+                className={dataStyles.dataField}
+                color="gray"
+                size="s"
                 value={this.state.newInput[columnName] || ''}
                 onChange={event => this.handleChange(columnName, event)}
                 onKeyUp={this.handleKeyUp}
               />
             ) : (
-              displayableValue(this.props.record[columnName])
+              <Typography variant="body2" component="span">
+                {displayableValue(this.props.record[columnName])}
+              </Typography>
             )}
           </td>
         ))}

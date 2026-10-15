@@ -3,6 +3,8 @@ import React, {useMemo, useState, useEffect} from 'react';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {CodeWidgetLevelInfo} from './types';
+
 import CodeWidget from './';
 
 interface StudentCodeWidgetProps {
@@ -11,20 +13,25 @@ interface StudentCodeWidgetProps {
   selectedUnitId: number;
   selectedLessonId: number | null;
   selectedStudentId: number | null;
+  // Whether the lesson has a level that could produce student code. Hide the
+  // widget only when this is false, not merely because the student hasn't
+  // written any code yet.
+  hasCodeLevel: boolean;
 }
 
 interface StudentCodeData {
   studentCode: Record<string, string>;
+  instructions?: string;
 }
 
 const getStudentCode = (
   unitId: number,
   lessonId: number,
   studentId: number
-): Promise<Record<string, string>> => {
+): Promise<StudentCodeData> => {
   return HttpClient.fetchJson<StudentCodeData>(
     `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
-  ).then(response => response?.value?.studentCode || {});
+  ).then(response => response?.value || {studentCode: {}});
 };
 
 const StudentCodeWidget = ({
@@ -33,27 +40,48 @@ const StudentCodeWidget = ({
   selectedUnitId,
   selectedLessonId,
   selectedStudentId,
+  hasCodeLevel,
 }: StudentCodeWidgetProps) => {
-  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [studentCodeData, setStudentCodeData] = useState<StudentCodeData>({
+    studentCode: {},
+  });
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
+      let isCancelled = false;
       setIsLoading(true);
       getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
-        .then(code => {
-          setStudentCode(code);
+        .then(data => {
+          if (!isCancelled) {
+            setStudentCodeData(data);
+          }
         })
         .catch(error => {
-          console.error('Error fetching student code:', error);
-          setStudentCode({});
+          if (!isCancelled) {
+            console.error('Error fetching student code:', error);
+            setStudentCodeData({studentCode: {}});
+          }
         })
         .finally(() => {
-          setIsLoading(false);
+          if (!isCancelled) {
+            setIsLoading(false);
+          }
         });
+
+      return () => {
+        isCancelled = true;
+      };
     } else {
-      setStudentCode({});
+      setStudentCodeData({studentCode: {}});
     }
   }, [selectedUnitId, selectedLessonId, selectedStudentId]);
+
+  const studentCode = studentCodeData.studentCode;
+
+  const levelInfo: CodeWidgetLevelInfo | undefined =
+    studentCodeData.instructions
+      ? {instructions: studentCodeData.instructions}
+      : undefined;
 
   const codeData = useMemo<MultiFileSource | undefined>(() => {
     if (!studentCode || Object.keys(studentCode).length === 0) {
@@ -90,6 +118,10 @@ const StudentCodeWidget = ({
     } as MultiFileSource;
   }, [studentCode]);
 
+  if (!hasCodeLevel && !isLoading) {
+    return null;
+  }
+
   return (
     <CodeWidget
       codeData={codeData}
@@ -97,6 +129,8 @@ const StudentCodeWidget = ({
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={isLoading}
+      levelInfo={levelInfo}
+      emptyMessage="No student response"
     />
   );
 };

@@ -60,8 +60,10 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({answers, response}) => {
               aria-disabled
             >
               <Typography variant="body4">{LETTERS_LABELS[index]}.</Typography>
-              <SafeMarkdown unwrapped markdown={answer.text} />
-              {isCorrect && (
+              <Typography variant="body4">
+                <SafeMarkdown unwrapped markdown={answer.text} />
+              </Typography>
+              {isCorrect && !!studentResult && (
                 <FontAwesomeV6Icon
                   iconName="check"
                   iconStyle="solid"

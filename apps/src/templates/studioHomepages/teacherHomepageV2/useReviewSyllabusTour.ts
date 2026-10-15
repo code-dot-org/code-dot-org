@@ -1,16 +1,16 @@
 import {useCallback, useEffect} from 'react';
 import Shepherd, {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {attachOnboardingAnalytics} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
-import {
-  DemoType,
-  Section,
-} from '../../teacherDashboard/types/teacherSectionTypes';
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createReviewSyllabusHomepageSteps,
@@ -21,10 +21,15 @@ import {
 
 export {REVIEW_SYLLABUS_ONBOARDING_STEP_KEY};
 
+const TOUR_NAME = 'view_syllabus';
+
 export const recordViewSyllabusCompletion = () => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_COMPLETED, {
+    tour_name: TOUR_NAME,
+  });
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
-    JSON.stringify({tour_name: 'view_syllabus'}),
+    JSON.stringify({tour_name: TOUR_NAME}),
     true,
     {'Content-Type': 'application/json'}
   ).catch(err => console.error('Failed to record tour completion:', err));
@@ -71,7 +76,7 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     stepClass: 'custom-shepherd-onboarding-container',
   });
   tour.addSteps(
-    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig)
+    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig, TOUR_NAME)
   );
 
   if (tour.steps.length === 0) {
@@ -79,21 +84,27 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     return;
   }
 
+  attachOnboardingAnalytics(
+    tour,
+    TOUR_NAME,
+    REVIEW_SYLLABUS_ONBOARDING_STEP_KEY
+  );
+
   const clearStep = () =>
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
   tour.on('complete', () => {
     clearStep();
     recordViewSyllabusCompletion();
   });
-  tour.on('cancel', clearStep);
+  tour.on('cancel', () => {
+    clearStep();
+  });
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];
   tour.show(startStep.id);
 };
 
-const useReviewSyllabusTour = (demoSection: Section | null) => {
-  const demoType = demoSection?.demoType ?? null;
-
+const useReviewSyllabusTour = (demoType: DemoType | null) => {
   const demoPresets = useAppSelector(
     state => state.teacherSections.demoPresets
   );
@@ -131,7 +142,8 @@ const useReviewSyllabusTour = (demoSection: Section | null) => {
         ? createReviewSyllabusHomepageSteps(
             tour,
             REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-            demoType
+            demoType,
+            TOUR_NAME
           )
         : [],
     [demoType]
@@ -140,6 +152,7 @@ const useReviewSyllabusTour = (demoSection: Section | null) => {
   const {tour} = useOnboardingTour({
     getSteps,
     sessionStorageKey: REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+    tourName: TOUR_NAME,
   });
 
   return tour;

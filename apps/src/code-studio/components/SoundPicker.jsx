@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,7 +10,6 @@ import {
   DEFAULT_SOUND_PATH_PREFIX,
 } from '../../assetManagement/assetPrefix';
 import Sounds from '../../Sounds';
-import color from '../../util/color';
 
 import AssetManager from './AssetManager';
 import {RecordingFileType} from './recorders';
@@ -78,28 +78,33 @@ export default class SoundPicker extends React.Component {
     if (isFileMode) {
       headerStyles.soundModeToggle = {
         ...headerStyles.soundModeToggle,
-        color: color.light_gray,
+        color: 'var(--text-neutral-quaternary)',
       };
 
       headerStyles.fileModeToggle = {
         ...headerStyles.fileModeToggle,
         ...fontConstants['main-font-semi-bold'],
+        color: 'var(--text-brand-purple-primary)',
       };
     } else {
       headerStyles.soundModeToggle = {
         ...headerStyles.soundModeToggle,
         ...fontConstants['main-font-semi-bold'],
+        color: 'var(--text-brand-purple-primary)',
       };
       headerStyles.fileModeToggle = {
         ...headerStyles.fileModeToggle,
-        color: color.light_gray,
+        color: 'var(--text-neutral-quaternary)',
       };
     }
 
-    let modeSwitch;
-    let title = <p>{i18n.chooseSounds()}</p>;
+    let title = (
+      <MuiTypography variant="h3" gutterBottom>
+        {i18n.chooseSounds()}
+      </MuiTypography>
+    );
 
-    modeSwitch = (
+    const modeSwitch = (
       <div id="modeSwitch">
         <button
           type="button"
@@ -140,10 +145,19 @@ export default class SoundPicker extends React.Component {
         {!this.props.libraryOnly && (
           <div>
             {this.props.showUnderageWarning && (
-              <p style={styles.warning}>
+              <MuiTypography
+                variant="body4"
+                component="span"
+                sx={{
+                  display: 'block',
+                  color: 'var(--text-error-primary)',
+                  fontWeight: 'bold',
+                  marginBottom: '0.75em',
+                }}
+              >
                 Warning: Do not upload anything that contains personal
                 information.
-              </p>
+              </MuiTypography>
             )}
             {modeSwitch}
           </div>
@@ -160,12 +174,7 @@ const styles = {
     margin: '0 0 0 5px',
   },
   divider: {
-    borderColor: color.purple,
+    borderColor: 'var(--borders-brand-purple-primary)',
     margin: '5px 0',
-  },
-  warning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold',
   },
 };

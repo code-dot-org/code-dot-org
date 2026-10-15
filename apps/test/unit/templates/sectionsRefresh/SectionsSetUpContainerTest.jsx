@@ -5,6 +5,8 @@ import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -226,6 +228,30 @@ describe('SectionsSetUpContainer', () => {
     fireEvent.click(screen.getByText(i18n.addAnotherClassSection()));
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('sends Section Setup Completed with the created section id', async () => {
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(true);
+    jest.spyOn(windowUtils, 'navigateToHref').mockImplementation(() => {});
+    const sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(() => {});
+
+    renderContainer();
+    // The section create POST responds with the summarized section, id included.
+    fetchSpy.mockImplementation(() =>
+      Promise.resolve({ok: true, json: () => Promise.resolve({id: 123})})
+    );
+    fireEvent.click(screen.getByText(i18n.finishCreatingSections()));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.SECTION_SETUP_COMPLETED,
+        expect.objectContaining({sectionId: 123})
+      )
+    );
   });
 
   it('redirects to defaultRedirectUrl after save', async () => {

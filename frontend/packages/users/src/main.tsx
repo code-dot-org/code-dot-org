@@ -2,14 +2,19 @@
 // tokens, CdoTheme) so the page looks like code.org outside the host.
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 
 import {CssBaseline, ThemeProvider} from '@mui/material';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {
+  getMuiThemeForBrand,
+  resolveBrand,
+} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
@@ -106,9 +111,17 @@ function ScenarioSwitcher({value}: {value: UsersScenarioTag}) {
 const scenario = activeScenario();
 await bootMocks(scenario);
 
+// In studio, Rails puts data-brand on <html> and the app reads it; nothing sets
+// it here, so default to the brand production defaults to. `?brand=` overrides
+// it for a side-by-side against the legacy tokens.
+const brand = resolveBrand(
+  new URLSearchParams(window.location.search).get('brand'),
+);
+document.documentElement.dataset.brand = brand;
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider theme={CdoTheme}>
+    <ThemeProvider theme={getMuiThemeForBrand(brand)}>
       <FontLoader locale="en-US" />
       <CssBaseline />
       <QueryClientProvider>

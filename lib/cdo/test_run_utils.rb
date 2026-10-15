@@ -37,6 +37,7 @@ module TestRunUtils
     # Data:
     # - All fixture files
     # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
+    # - Game::GAMES_BY_INDEX
     #
     # Config:
     # - schema.rb
@@ -48,6 +49,7 @@ module TestRunUtils
         push(dashboard_dir('config/videos.csv')).
         push("#{fixture_path}/schools.tsv").
         push(dashboard_dir('lib/tasks/seed.rake')).
+        push(dashboard_dir('app/models/game.rb')).
         select {|filename| File.file?(filename)}.
         sort.
         map {|filename| Digest::MD5.file(filename)}.
@@ -76,7 +78,7 @@ module TestRunUtils
     database = writer.path[1..]
     writer.path = ''
     opts = MysqlConsoleHelper.options(writer)
-    mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
+    mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF --no-tablespaces"
 
     if seed_data
       File.write(seed_file, seed_data)
@@ -181,9 +183,7 @@ module TestRunUtils
         # Strangely, during our CI process, this is taken care of by the
         # prepare_dbs step in shared/rake/test.rake which works because shared
         # tests run before pegasus tests.
-        with_rack_env(:test) do
-          RakeUtils.rake_stream_output 'db:ensure_created'
-        end
+        RakeUtils.rake_stream_output 'db:ensure_created', env: {RAILS_ENV: 'test', RACK_ENV: 'test'}
         RakeUtils.rake_stream_output 'test'
       end
     end

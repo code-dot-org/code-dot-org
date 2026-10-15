@@ -1,0 +1,31 @@
+name 'csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Wrapping Up Troubleshooting</h1>
+
+<img src="https://images.code.org/65a1930c29f18c356c0b61822358df2f-image-1742310097775.png" alt="Clipboard with a flowchart" style="border-radius:10px; float: right; height: 150px; margin: 0px 20px 0px 20px;">
+
+<p>Now that you've explored the troubleshooting process your students will go through, take a moment to reflect on what they'll experience.</p>
+
+<p>This activity walks them through the <b>SNOT strategy</b>, a structured approach to problem-solving, encouraging them to use self-reflection, peer discussion, and online resources before turning to AI for assistance.</p>
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Key Takeaways for Teaching This Lesson:</strong></p>
+<p style="margin: 8px 0 0 0;">• <b>Model deductive reasoning:</b> students may need help narrowing down their solutions. Consider demonstrating how to eliminate unlikely causes based on new information.</p>
+<p style="margin: 8px 0 0 0;">• <b>Encourage thoughtful AI interactions:</b> students will refine their analysis using the AI chatbot. Remind them it isn't just giving answers, it's simulating a conversation that requires critical thinking and logical questioning.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>➡️ This activity is from LESSON 3. You can find more details in the full <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">lesson plan</a>.</p>
+</div>
+
+
+
+
+
+
+MARKDOWN

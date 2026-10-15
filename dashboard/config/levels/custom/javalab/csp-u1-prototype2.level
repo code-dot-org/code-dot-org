@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2026-08-11T17:07:03.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "uses_lab2": "false",
+    "csa_view_mode": "theater",
+    "predict_settings": {
+      "isPredictLevel": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11 17:07:09 +0000\",\"changed\":[\"encrypted_examples\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Javalab>

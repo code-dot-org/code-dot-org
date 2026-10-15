@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:32:44.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Add an Image\r\n\r\nUse AI Chat to help plan ideas for improving the playground.\r\n\r\n### Do This:\r\n1. **Write a prompt** that asks AI Chat to suggest some improvements to a playground. In your prompt, describe some features of a typical playground. *Don't have a prompt? That's ok! You can copy one from below the instructions.*\r\n3. Press **Send**.\r\n4. **Add an image** of a playground from the Library to your prompt.\r\n5. **Write a prompt** that asks AI Chat for help improving the playground in the picture you've attached.\r\n3. Press **Send**.\r\n5. Then read and compare **AI Chat's responses**.\r\n\r\n---\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I’m a Parks and Rec worker looking for a project to improve a playground with swings, slides, and benches. Give me some ideas for how to improve an existing playground? \r\n:::\r\n",
+    "long_instructions": "## Add an Image\r\n\r\nUse AI Chat to help plan ideas for improving the playground.\r\n\r\n### Do This:\r\n1. **Write a prompt** that asks AI Chat to suggest some improvements to a playground. In your prompt, describe some features of a typical playground. *Don't have a prompt? That's ok! You can copy one from below the instructions.*\r\n3. Press **Send**.\r\n4. **Add an image** of a playground from the Library to your prompt.\r\n5. **Write a prompt** that asks AI Chat for help improving the playground in the picture you've attached.\r\n3. Press **Send**.\r\n5. Then read and compare **AI Chat's responses**.\r\n\r\n---\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I work for the local municipal park department and want to improve a neighbourhood playground. It already has swings, slides, and benches. What ideas could make it safer, more inclusive, and more enjoyable for children? \r\n:::\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -52,7 +53,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:32:44.563+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level3_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:32:44.563+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level3_2025\"},{\"changed_at\":\"2026-07-30 02:41:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

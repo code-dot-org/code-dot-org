@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-19T21:06:56.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "display_name": "Sleeping In",
+    "bubble_choice_description": "Predict how many hours of sleep students will get.",
+    "thumbnail_url": "https://images.code.org/bb9099a02a08b01168f5db8f4f538555-jaymantri-pillows-820149_1920.jpg",
+    "encrypted": "false",
+    "long_instructions": "Predict how many hours of sleep a student will get, given a certain number of hours of homework.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `loss` function. Prompt AI to help you if you need it.\r\n- Run your code.\r\n- Test your loss function on both the `predict_sleep_1` model and the `predict_sleep_2` model by changing which model is given to `visualize_model`. Compare the loss calculated for both models.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "buildPython",
+        "debug",
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import visualize_model\n\ndef loss(actual, predicted):\n  # TODO: Write a loss function\n  return 0\n\n# First model\ndef predict_sleep_1(homework_hours):\n  return -0.6 * homework_hours + 9.1\n\n# Second model\ndef predict_sleep_2(homework_hours):\n  return -0.3 * homework_hours + 9\n\nvisualize_model(predict_sleep_1, loss)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# Dataset: (hours of homework, hours of sleep)\nDATA = [\n    (0, 9),\n    (1, 8.5),\n    (2, 8.5),\n    (3, 7),\n    (4, 7),\n    (5, 6),\n    (6, 5.5),\n]\n\nX_LABEL = \"Hours of homework\"\nY_LABEL = \"Hours of sleep\"\n\n\ndef _total_error(model, error):\n    \"\"\"Add up the student's loss function results across every data point.\"\"\"\n    total = 0\n    for x, actual in DATA:\n        predicted = model(x)\n        total += error(actual, predicted)\n    return total\n\n\ndef visualize_model(model, error):\n    \"\"\"Score the model with the student's loss function and draw the chart.\"\"\"\n    # Calculate loss\n    total_error = _total_error(model, error)\n\n    # Set up plot\n    fig, ax = plt.subplots()\n\n    # Plot data points\n    xs = [x for x, _ in DATA]\n    ys = [y for _, y in DATA]\n    ax.scatter(xs, ys, color=\"black\", zorder=3, label=\"Data\")\n\n    # Draw model's line\n    line_xs = [min(xs), max(xs)]\n    line_ys = [model(x) for x in line_xs]\n    ax.plot(\n        line_xs,\n        line_ys,\n        linestyle=\"-\",\n        color=\"#1f77b4\",\n        label=\"Model\",\n    )\n    ax.legend()\n\n    # Display the model's loss\n    ax.set_title(f\"Total loss: {total_error:.2f}\")\n\n    # Add labels, show plot\n    ax.set_xlabel(X_LABEL)\n    ax.set_ylabel(Y_LABEL)\n    plt.show()",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\noF9ATz/TO4kP8NxhoaVjZm9nc5rC4OqZOZnI\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-19 21:19:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:24:33 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:45:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:46:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 22:28:31 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:17:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:17:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

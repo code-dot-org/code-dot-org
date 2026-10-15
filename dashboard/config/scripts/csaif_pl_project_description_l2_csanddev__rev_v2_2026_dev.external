@@ -1,0 +1,73 @@
+name 'csaif_pl_project-description-L2-CSandDev_-rev_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sustainable Systems Project
+
+<div style="display:flex; align-items:center; justify-content:center; gap:24px; flex-wrap:wrap; margin:20px 0;">
+<div style="flex:1; min-width:260px;">
+<p>This is the end-of-unit project. Over 3 days, your students choose a community issue, connect it to a United Nations Sustainable Development Goal (SDG), and design an AI-infused computer system that could help address it.</p>
+<p>Students create two things: a <b>system diagram in Sketch Lab</b>, with descriptions, labels, and reflections, and a <b>completed project guide</b>.</p>
+</div>
+<img src="https://images.code.org/7db28bc9b3ce8d905ef520e44bb2c503-image-1742581125951.png" alt="The United Nations Sustainable Development Goals wheel" style="width:200px; height:auto; border-radius:10px; display:block;">
+</div>
+
+## The Three-Day Project Arc
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; margin:20px 0;">
+<div style="flex:1; min-width:220px; background-color:#F7F7FB; border:1px solid #E4E2F8; border-radius:10px; padding:16px;">
+<div style="display:inline-block; background-color:#4C42CF; color:#FFFFFF; border-radius:8px; padding:4px 12px; font-size:16px; font-weight:bold;">Day 1</div>
+<div style="font-size:16px; font-weight:bold; color:#1F1976; margin:8px 0;">Plan</div>
+<p>Choose a community issue, research its SDG target, and sketch a rapid prototype.</p>
+<div style="font-size:16px; color:#1F1976;">Student Levels 1 and 2</div>
+</div>
+<div style="flex:1; min-width:220px; background-color:#F7F7FB; border:1px solid #E4E2F8; border-radius:10px; padding:16px;">
+<div style="display:inline-block; background-color:#4C42CF; color:#FFFFFF; border-radius:8px; padding:4px 12px; font-size:16px; font-weight:bold;">Day 2</div>
+<div style="font-size:16px; font-weight:bold; color:#1F1976; margin:8px 0;">Build</div>
+<p>Describe how the system uses data, then build the system diagram.</p>
+<div style="font-size:16px; color:#1F1976;">Student Level 3</div>
+</div>
+<div style="flex:1; min-width:220px; background-color:#F7F7FB; border:1px solid #E4E2F8; border-radius:10px; padding:16px;">
+<div style="display:inline-block; background-color:#4C42CF; color:#FFFFFF; border-radius:8px; padding:4px 12px; font-size:16px; font-weight:bold;">Day 3</div>
+<div style="font-size:16px; font-weight:bold; color:#1F1976; margin:8px 0;">Refine</div>
+<p>Share the diagram, reflect on ethics, and get AI feedback.</p>
+<div style="font-size:16px; color:#1F1976;">Student Levels 4 and 5</div>
+</div>
+</div>
+
+## What Students Need to Show
+
+Students design a system and show evidence of four things:
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; margin:20px 0;">
+<div style="flex:1; min-width:220px; background-color:#D5EFFF; color:#06338D; border-radius:10px; padding:14px 16px;">
+<div style="font-size:16px; font-weight:bold;">Hardware</div>
+<p>Identify the hardware in the system and how it interacts with other parts.</p>
+</div>
+<div style="flex:1; min-width:220px; background-color:#E4E2F8; color:#1F1976; border-radius:10px; padding:14px 16px;">
+<div style="font-size:16px; font-weight:bold;">Software</div>
+<p>Describe how software enables key functions and processes data.</p>
+</div>
+</div>
+<div style="display:flex; gap:16px; flex-wrap:wrap; margin:20px 0;">
+<div style="flex:1; min-width:220px; background-color:#CCF1D0; color:#003F25; border-radius:10px; padding:14px 16px;">
+<div style="font-size:16px; font-weight:bold;">Communication</div>
+<p>Explain how the system sends and receives data across devices, networks, or the cloud.</p>
+</div>
+<div style="flex:1; min-width:220px; background-color:#F7F7FB; color:#222222; border-radius:10px; padding:14px 16px;">
+<div style="font-size:16px; font-weight:bold;">Ethical Considerations</div>
+<p>Reflect on ethical issues in the system and suggest ways to improve it.</p>
+</div>
+</div>
+
+The project rubric rates each of these areas as Extensive, Convincing, Limited, or No evidence. Students find it on page 6 of the project guide.
+
+<div style="background-color:#E4E2F8; color:#222222; border-radius:10px; padding:14px 16px; margin:20px 0;">
+<p><strong>💡 Teacher tip:</strong> Before student Level 5, students save their system diagram to the backpack so they can import it into AI Chat for feedback. They open the backpack in the left panel, then select Save Sketch to Backpack.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>➡️ Find the full details in the <a href="LESSON-13-URL" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">Lesson 13 lesson plan: Sustainable Systems Project</a>.</p>
+</div>
+MARKDOWN

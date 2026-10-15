@@ -1,28 +1,14 @@
-/* Scroll the tablist (DSCO's first child div), not the panel; pad for the focus ring. */
-.tabs > div:first-of-type {
-  overflow-x: auto;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  scrollbar-width: none;
-}
-
-.tabs > div:first-of-type::-webkit-scrollbar {
-  display: none;
-}
-
+/* DSCO's second child div is the tab panel container. */
 .tabs > div:nth-of-type(2) {
-  padding-top: 24px;
+  padding-top: 30px;
 }
 
-/* Teal active label, dark inactive; the tripled class beats DSCO's :disabled selector. */
-.tabs.tabs.tabs button[role='tab'] {
-  color: var(--text-neutral-primary);
+/* The CADS mock runs the tab strip's rule across the content column. */
+.tabs.tabs ul {
+  min-width: 100%;
 }
 
-.tabs.tabs.tabs button[role='tab']:disabled {
-  color: var(--text-neutral-primary);
-}
-
+/* The selected label takes the brand colour; tripled to beat DSCO's tab rules. */
 .tabs.tabs.tabs button[role='tab'][aria-selected='true'] {
   color: var(--text-brand-teal-secondary);
 }

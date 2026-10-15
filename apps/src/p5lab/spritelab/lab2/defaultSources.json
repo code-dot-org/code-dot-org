@@ -1,9 +1,10 @@
 {
+  "animations": {"orderedKeys": [], "propsByKey": {}},
   "source": {
     "blocks": {
       "blocks": [
         {
-          "type": "when_run",
+          "type": "spritelab2_whenRun",
           "x": 20,
           "y": 20,
           "deletable": false,

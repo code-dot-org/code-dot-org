@@ -147,7 +147,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
-        Honeybadger.notify(
+        Observability::Errors.report(
           error_class: 'User creation required multiple attempts',
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
@@ -170,7 +170,7 @@ class RegistrationsController < Devise::RegistrationsController
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: 'Failed to add user to welcome series',
             context: {
@@ -203,7 +203,7 @@ class RegistrationsController < Devise::RegistrationsController
           user: current_user,
           event_name: 'lti_user_created',
           metadata: metadata,
-          session: session,
+          request: request,
         )
       end
       has_school = current_user.school_info&.school_id.present?
@@ -215,7 +215,7 @@ class RegistrationsController < Devise::RegistrationsController
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,
-        session: session,
+        request: request,
       )
     end
   end
@@ -386,6 +386,7 @@ class RegistrationsController < Devise::RegistrationsController
   def set_user_type
     return head(:bad_request) if params[:user].nil?
     return head(:bad_request) if params[:user][:user_type].nil?
+    return head(:bad_request) unless current_user.can_change_own_user_type?
 
     previous_user_type = current_user.user_type
 
@@ -420,7 +421,7 @@ class RegistrationsController < Devise::RegistrationsController
           from_user_type: previous_user_type,
           to_user_type: current_user.user_type
         },
-        session: session
+        request: request
       )
     end
 
@@ -462,8 +463,7 @@ class RegistrationsController < Devise::RegistrationsController
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
-    @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
-    @personal_account_linking_enabled = false if current_user.student? && (@is_usa && current_user.country_code.nil?)
+    @personal_account_linking_enabled = Policies::ChildAccount.personal_account_linking_enabled?(current_user, request_in_usa: @is_usa)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)

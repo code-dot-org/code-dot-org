@@ -47,7 +47,7 @@ class FreeResponsesAssessmentsContainer extends Component {
         {(studentId === ALL_STUDENT_FILTER || currentStudentHasResponses) && (
           <div>
             {freeResponseQuestions.length > 0 && (
-              <Typography variant="h2">
+              <Typography variant="h6" component="h2">
                 {i18n.studentFreeResponseAnswers()}
               </Typography>
             )}

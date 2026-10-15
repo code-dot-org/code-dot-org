@@ -15,7 +15,6 @@ import {
 } from '@cdo/apps/lab2/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
 import {ShapeNodeData, ShapeType} from '../types';
 
@@ -24,6 +23,11 @@ import {
   mapBackgroundColor,
   mapStrokeColor,
 } from './excalidrawColorTheme';
+import {uploadBase64ToUrl} from './uploadBase64ToUrl';
+
+// This is the last piece of functionality that relies on the @excalidraw package.
+// If we ever decide to stop supporting migrating from excalidraw, we can remove
+// the @excalidraw dependency from the repo.
 
 function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {
   if (el.type === 'rectangle') return 'rectangle';

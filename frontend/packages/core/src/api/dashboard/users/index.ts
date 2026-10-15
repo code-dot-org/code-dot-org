@@ -1,3 +1,4 @@
+export * from './buildSchoolData';
 export * from './users.api';
 export * from './users.keys';
 export * from './users.query';

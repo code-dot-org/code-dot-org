@@ -1,14 +1,27 @@
 export const DEFAULT_NODE_WIDTH = 160;
 export const DEFAULT_NODE_HEIGHT = 120;
 
+// Text boxes start a single line tall: one line of the default 16px font at
+// 1.3 line-height, plus the text node's 8px padding and 2px border per side.
+export const DEFAULT_TEXT_NODE_HEIGHT = 40;
+
 export const MIN_NODE_WIDTH = 80;
 export const MIN_NODE_HEIGHT = 60;
+
+// Text boxes can shrink to their single-line starting height.
+export const MIN_TEXT_NODE_HEIGHT = DEFAULT_TEXT_NODE_HEIGHT;
+
+export const ELEMENT_BORDER_PX = 2;
 
 // Default rotation in degrees.
 export const DEFAULT_ROTATION = 0;
 
 export const KEYBOARD_RESIZE_STEP = 20;
 export const KEYBOARD_MOVE_STEP = 10;
+
+// Screen pixels the viewport shifts per arrow-key press when panning the
+// workspace with the keyboard in hand mode.
+export const KEYBOARD_PAN_STEP = 50;
 
 // Side length of the hidden node that anchors a line endpoint.
 export const LINE_ANCHOR_SIZE_PX = 10;
@@ -18,6 +31,15 @@ export const LINE_DEFAULT_LENGTH_PX = 220;
 // Magnetic snap radius (in screen pixels) used when reconnecting an edge
 // endpoint to a node handle. Applies to mouse drags.
 export const LINE_RECONNECT_SNAP_RADIUS_PX = 40;
+
+// Width of the invisible band along an edge that accepts clicks and drags.
+// Wider than React Flow's 20px default so a line is easy to grab; the
+// selected/focused state paints this band so the grab area is visible.
+export const LINE_INTERACTION_WIDTH_PX = 40;
+
+// How far (in screen pixels) the pointer must travel before a mousedown counts
+// as a drag rather than a click, so hand jitter doesn't move or select anything.
+export const DRAG_THRESHOLD_PX = 4;
 
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
@@ -43,6 +65,16 @@ export const MIN_ZOOM = 0.1;
 
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
+
+// data-* attribute the onboarding tour targets to highlight a set of related
+// buttons as one unit.
+export const TOUR_GROUP_ATTR = 'data-tour-group';
+export const TOUR_GROUP = {
+  selectionTools: 'selection-tools',
+  shapeTools: 'shape-tools',
+  undoRedo: 'undo-redo',
+  zoom: 'zoom',
+} as const;
 
 // Padding (px) added around child nodes when computing initial group bounds.
 // This is consistent with the padding used by React Flow's built-in group node.

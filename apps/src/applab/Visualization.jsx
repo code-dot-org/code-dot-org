@@ -12,7 +12,6 @@ import {
   isResponsiveFromState,
 } from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
-import color from '../util/color';
 
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
@@ -117,10 +116,10 @@ const styles = {
   },
   phoneFrame: {
     marginBottom: 0,
-    borderColor: color.lighter_gray,
+    borderColor: 'var(--background-neutral-quinary)',
   },
   phoneFrameRunning: {
-    borderColor: color.charcoal,
+    borderColor: 'var(--background-neutral-octonary)',
   },
   screenBlock: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',

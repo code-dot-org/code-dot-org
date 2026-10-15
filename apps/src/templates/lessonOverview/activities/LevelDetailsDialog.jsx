@@ -1,3 +1,5 @@
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -18,6 +20,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {windowOpen} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+import styles from '../lesson-plan.module.scss';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -57,7 +61,7 @@ class LevelDetailsDialog extends Component {
   getComponentContent = level => {
     if (level.type === 'External') {
       return (
-        <div style={styles.scrollContainer}>
+        <div className={styles.scrollContainer}>
           <SafeMarkdown markdown={level.markdown} />
           {level.videoOptions && (
             <div
@@ -70,7 +74,7 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'StandaloneVideo') {
       return (
-        <div style={styles.scrollContainer}>
+        <div className={styles.scrollContainer}>
           {level.longInstructions && (
             <SafeMarkdown markdown={level.longInstructions} />
           )}
@@ -99,7 +103,7 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'Match' || level.type === 'Multi') {
       return (
-        <div style={styles.scrollContainer}>
+        <div className={styles.scrollContainer}>
           {level.content.map((content, i) => (
             <SafeMarkdown key={i} markdown={content} />
           ))}
@@ -109,7 +113,9 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'BubbleChoice') {
       return (
-        <div style={{...styles.scrollContainer, ...styles.sublevelCards}}>
+        <div
+          className={classNames(styles.scrollContainer, styles.sublevelCards)}
+        >
           {this.props.scriptLevel.sublevels.map(sublevel => (
             <SublevelCard
               isLessonExtra={false}
@@ -272,9 +278,7 @@ class LevelDetailsDialog extends Component {
     const hasVideo =
       level.type === 'StandaloneVideo' ||
       (level.type === 'External' && !!level.videoOptions);
-    const levelSpecificStyling = hasVideo
-      ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-      : {};
+    const levelSpecificStyling = hasVideo ? {width: VIDEO_MODAL_WIDTH} : {};
     const baseUrl = level.url || scriptLevel.url;
     const url = `${baseUrl}?no_redirect=1`;
     return (
@@ -284,7 +288,9 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        <h1>{level.display_name || scriptLevel.name || level.name}</h1>
+        <Typography variant="h1" component="h2">
+          {level.display_name || scriptLevel.name || level.name}
+        </Typography>
         {this.renderBubbleChoiceBubbles()}
         <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
@@ -292,7 +298,7 @@ class LevelDetailsDialog extends Component {
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
-            style={{margin: 5}}
+            className={styles.dialogButton}
           />
           <Button
             onClick={e => {
@@ -302,24 +308,13 @@ class LevelDetailsDialog extends Component {
             color={'orange'}
             href={url}
             __useDeprecatedTag
-            style={{margin: 5}}
+            className={styles.dialogButton}
           />
         </DialogFooter>
       </BaseDialog>
     );
   }
 }
-
-const styles = {
-  sublevelCards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  scrollContainer: {
-    maxHeight: '60vh',
-    overflow: 'auto',
-  },
-};
 
 export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
 

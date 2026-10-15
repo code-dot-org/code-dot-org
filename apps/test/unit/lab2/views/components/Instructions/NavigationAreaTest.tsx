@@ -1,11 +1,12 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import lab, {setValidationState} from '@cdo/apps/lab2/lab2Redux';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import lab2Project, {
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -13,6 +14,10 @@ import predictLevel, {
   setHasSubmittedResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  ExternalNavigation,
+  ExternalNavigationContext,
+} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
 import {
   getStore,
@@ -21,6 +26,7 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import commonI18n from '@cdo/locale';
 
 // Minimal prop shapes for mock child components.
 interface ContinueButtonMockProps {
@@ -28,6 +34,8 @@ interface ContinueButtonMockProps {
   disabled?: boolean;
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
+  endIcon?: React.ReactNode;
+  onContinue: () => void;
 }
 interface SubmitButtonMockProps {
   enabled: boolean;
@@ -44,17 +52,26 @@ jest.mock(
       children,
       disabled,
       tooltipMessage,
+      endIcon,
+      onContinue,
     }: ContinueButtonMockProps) => (
       <button
         type="button"
         data-disabled={String(disabled)}
         data-tooltip={tooltipMessage}
+        onClick={onContinue}
       >
+        {endIcon}
         {children}
       </button>
     ),
   })
 );
+
+jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () => ({
+  __esModule: true,
+  default: jest.fn(() => ({type: 'test/continueOrFinishLesson'})),
+}));
 
 jest.mock('@cdo/apps/lab2/views/components/Instructions/SubmitButton', () => ({
   __esModule: true,
@@ -89,12 +106,15 @@ const mockGetCurrentLevel: jest.Mock = jest.fn(() => ({
 }));
 const mockGetParentLevel: jest.Mock = jest.fn(() => undefined);
 const mockGetLessonCount: jest.Mock = jest.fn(() => 1);
+const mockLevelById: jest.Mock = jest.fn(() => undefined);
 
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
   getNextLevel: (state: unknown) => mockGetNextLevel(state),
   getCurrentLevel: (state: unknown) => mockGetCurrentLevel(state),
   getParentLevel: (state: unknown) => mockGetParentLevel(state),
   getLessonCount: (state: unknown) => mockGetLessonCount(state),
+  levelById: (state: unknown, lessonId: unknown, levelId: unknown) =>
+    mockLevelById(state, lessonId, levelId),
 }));
 
 // Mock queryParams — no URL overrides in the default test environment.
@@ -119,7 +139,10 @@ describe('NavigationArea', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({lab, lab2Project, predictLevel});
+    // The component reads state.progress.currentLessonId directly (the
+    // selectors themselves are mocked), so register a stub progress slice.
+    const progress = (state = {currentLessonId: 1}) => state;
+    registerReducers({lab, lab2Project, predictLevel, progress});
     store = getStore();
     mockGetNextLevel.mockReturnValue({id: 2, levelNumber: 2});
     mockGetCurrentLevel.mockReturnValue({
@@ -129,6 +152,7 @@ describe('NavigationArea', () => {
     });
     mockGetParentLevel.mockReturnValue(undefined);
     mockGetLessonCount.mockReturnValue(1);
+    mockLevelById.mockReturnValue(undefined);
     mockQueryParams.mockReturnValue(null);
   });
 
@@ -154,6 +178,115 @@ describe('NavigationArea', () => {
       </ThemeProvider>
     );
   }
+
+  describe('with external navigation', () => {
+    function renderWithHost(
+      navigation: ExternalNavigation,
+      props: Partial<Parameters<typeof NavigationArea>[0]> = {}
+    ) {
+      const defaultProps = {
+        levelProperties: makeLevelProperties(),
+        isRunning: false,
+        hasRun: false,
+        hasEdited: false,
+      };
+      return render(
+        <ThemeProvider>
+          <Provider store={store}>
+            <ExternalNavigationContext.Provider value={navigation}>
+              <NavigationArea {...defaultProps} {...props} />
+            </ExternalNavigationContext.Provider>
+          </Provider>
+        </ThemeProvider>
+      );
+    }
+
+    it("shows the host's label, or the lesson's own Continue or Finish without one", () => {
+      const {unmount} = renderWithHost({
+        label: 'Complete checkpoint',
+        enabled: true,
+        onContinue: jest.fn(),
+      });
+      expect(screen.getByRole('button')).toHaveTextContent(
+        'Complete checkpoint'
+      );
+      unmount();
+
+      renderWithHost({enabled: true, onContinue: jest.fn()});
+      expect(screen.getByRole('button')).toHaveTextContent(
+        commonI18n.continue()
+      );
+    });
+
+    it("follows the host's gate instead of the level's rules", () => {
+      // Validation unsatisfied would disable Continue without a host.
+      store.dispatch(
+        setValidationState({
+          hasConditions: true,
+          satisfied: false,
+          message: null,
+          index: 0,
+        })
+      );
+      const {unmount} = renderWithHost({enabled: true, onContinue: jest.fn()});
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'data-disabled',
+        'false'
+      );
+      unmount();
+
+      renderWithHost({
+        enabled: false,
+        tooltip: 'Check your work first',
+        onContinue: jest.fn(),
+      });
+      const button = screen.getByRole('button');
+      expect(button).toHaveAttribute('data-disabled', 'true');
+      expect(button).toHaveAttribute('data-tooltip', 'Check your work first');
+    });
+
+    it("shows the host's end icon, or the lesson's own without one", () => {
+      const {unmount} = renderWithHost({
+        enabled: true,
+        endIcon: <span role="img" aria-label="host icon" />,
+        onContinue: jest.fn(),
+      });
+      expect(screen.getByRole('img', {name: 'host icon'})).toBeInTheDocument();
+      unmount();
+
+      // The lesson's own icon is the arrow it shows when a level follows.
+      renderWithHost({enabled: true, onContinue: jest.fn()});
+      expect(screen.queryByRole('img', {name: 'host icon'})).toBeNull();
+    });
+
+    it("runs the host's action instead of continuing the lesson", () => {
+      const hostContinue = jest.fn();
+      renderWithHost({enabled: true, onContinue: hostContinue});
+
+      fireEvent.click(screen.getByRole('button'));
+
+      expect(hostContinue).toHaveBeenCalledTimes(1);
+      expect(continueOrFinishLesson).not.toHaveBeenCalled();
+    });
+
+    it('leaves a submittable level to its Submit button', () => {
+      renderWithHost(
+        {enabled: true, onContinue: jest.fn()},
+        {levelProperties: makeLevelProperties({submittable: true})}
+      );
+      expect(screen.getByRole('button')).toHaveTextContent('Submit');
+    });
+  });
+
+  describe('continuing without external navigation', () => {
+    it('continues the lesson', () => {
+      renderDefault();
+
+      fireEvent.click(screen.getByRole('button'));
+
+      expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+  });
 
   describe('null rendering', () => {
     it('returns null when hideContinueIfDisabled=true, continue disabled, no feedback', () => {
@@ -245,6 +378,19 @@ describe('NavigationArea', () => {
       const btn = getContinueButton();
       expect(btn.dataset.disabled).toBe('true');
       expect(btn.dataset.tooltip).toBe('To continue, validate your code');
+    });
+
+    it('shows validationTooltip in place of toContinueValidate', () => {
+      store.dispatch(
+        setValidationState({
+          hasConditions: true,
+          satisfied: false,
+          message: null,
+          index: 0,
+        })
+      );
+      renderDefault({validationTooltip: 'Train a model'});
+      expect(getContinueButton().dataset.tooltip).toBe('Train a model');
     });
 
     it('is enabled when validation is satisfied', () => {
@@ -521,12 +667,8 @@ describe('NavigationArea', () => {
       ).toBeInTheDocument();
     });
 
-    it('renders "Continue" when next level has the same number (sublevel to parent)', () => {
-      mockGetCurrentLevel.mockReturnValue({
-        id: '1',
-        levelNumber: 2,
-        status: undefined,
-      });
+    it('renders "Continue" when the next level is the parent level (sublevel to parent)', () => {
+      mockGetParentLevel.mockReturnValue({id: 2, levelNumber: 2});
       mockGetNextLevel.mockReturnValue({id: 2, levelNumber: 2});
       renderDefault();
       expect(
@@ -541,14 +683,66 @@ describe('NavigationArea', () => {
       ).toBeInTheDocument();
     });
 
-    it('uses parent level number when getParentLevel returns a level', () => {
-      mockGetParentLevel.mockReturnValue({levelNumber: 3});
-      mockGetNextLevel.mockReturnValue({id: 2, levelNumber: 5});
+    it('renders the next level number when on a sublevel and the next level is not the parent', () => {
+      mockGetParentLevel.mockReturnValue({id: 3, levelNumber: 3});
+      mockGetNextLevel.mockReturnValue({id: 4, levelNumber: 5});
       renderDefault();
-      // parent levelNumber=3, next levelNumber=5: different → 'Continue to Level 5'
       expect(
         screen.getByRole('button', {name: 'Continue to Level 5'})
       ).toBeInTheDocument();
+    });
+
+    it("renders the parent's level number when the next level is a sublevel", () => {
+      // Next level is a sublevel; its levelNumber is a position within its
+      // parent bubble choice level, so the parent's number is shown instead.
+      mockGetNextLevel.mockReturnValue({
+        id: 5,
+        levelNumber: 2,
+        parentLevelId: 9,
+      });
+      mockLevelById.mockReturnValue({id: 9, levelNumber: 4});
+      renderDefault();
+      expect(
+        screen.getByRole('button', {name: 'Continue to Level 4'})
+      ).toBeInTheDocument();
+      // The parent is looked up by the sublevel's parentLevelId.
+      expect(mockLevelById).toHaveBeenCalledWith(expect.anything(), 1, 9);
+    });
+
+    it('renders plain "Continue" when the next level is a sublevel whose parent is not found', () => {
+      mockGetNextLevel.mockReturnValue({
+        id: 5,
+        levelNumber: 2,
+        parentLevelId: 9,
+      });
+      mockLevelById.mockReturnValue(undefined);
+      renderDefault();
+      expect(
+        screen.getByRole('button', {name: 'Continue'})
+      ).toBeInTheDocument();
+    });
+
+    it('renders "Finish" on the last level of a single-lesson unit', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      mockGetLessonCount.mockReturnValue(1);
+      renderDefault();
+      expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
+    });
+
+    it('renders "Finish Lesson" on the last level of a multi-lesson unit', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      mockGetLessonCount.mockReturnValue(3);
+      renderDefault();
+      expect(
+        screen.getByRole('button', {name: 'Finish Lesson'})
+      ).toBeInTheDocument();
+    });
+
+    it('renders "Finish" when textVariant="simple" and there is no next level', () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      mockGetLessonCount.mockReturnValue(3);
+      renderDefault({textVariant: 'simple'});
+      expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
     });
   });
 });

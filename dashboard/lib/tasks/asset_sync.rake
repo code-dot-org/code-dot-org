@@ -46,12 +46,6 @@ Rerun `assets:precompile` to regenerate new assets and try again."
     raise
   end
 
-  # Precompile application.js with js_compressor.
-  timed_task_with_logging precompile_application_js: :environment do
-    Rails.application.config.assets.js_compressor = :uglifier
-    manifest.compile('application.js')
-  end
-
   # Patch Sprockets to skip digesting already-digested webpack ('wp') assets.
   # Webpack adds its own hash to various files and doesn't have any
   # knowledge of Sprockets digests, so the Sprockets processed-asset digest
@@ -77,13 +71,15 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   end
   Sprockets::Manifest.prepend UnDigestManifest
 
-  # The webpack hash can be either a 20- or 32-character hexadecimal string.
-  # Search `apps/webpack*.js` for [hash] and [contenthash] to
-  # see when webpack might generate content hashes of each length.
-  WP_REGEX = /wp\h{20,32}/
+  # The bundler hash is a 16- to 32-character hexadecimal string: webpack
+  # emits 20 or 32, rspack always 16 (its xxhash64 digest is 16 hex, so
+  # even an explicit [contenthash:20] comes out 16).  Search
+  # `apps/webpack*.js` and
+  # `apps/rspack.config.js` for [hash] and [contenthash] to see when each
+  # length is generated.
+  WP_REGEX = /wp\h{16,32}/
 end
 
 Rake::Task['assets:precompile'].enhance([:record_manifest_files]) do
-  Rake::Task['assets:precompile_application_js'].invoke
   Rake::Task['assets:sync'].invoke if CDO.cdn_enabled
 end

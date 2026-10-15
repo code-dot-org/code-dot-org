@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-11T07:35:14.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Grace Hopper\n\n### Programming Language Pioneer\n\n*Image attribution: [Official portrait of Grace Hopper](https://commons.wikimedia.org/wiki/File:Grace_Hopper.jpg) by James S. Davis, U.S. Navy, via Wikimedia Commons. Public domain.*\n",
+        "imageUrl": "https://images.code.org/8de4a497673fe52ff3b5e4d021558750-hopper.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What She Contributed\n\nHopper was a mathematician and Navy officer who became one of the most important figures in the history of programming. She helped develop one of the first compilers — programs that translate human-readable code into machine instructions — and was a driving force behind COBOL, a widely used business programming language.<sup>1</sup>\n\n*Image attribution: [Grace Hopper and UNIVAC](https://www.flickr.com/photos/8212496@N06/493885707), unknown author, via Flickr.*\n",
+        "imageUrl": "https://images.code.org/5a4a3f13f3f03bd4c99045e80d1b1d7f-hopper_univac.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Connection to AI History\n\nHopper’s contributions belong to the computing foundations that made AI possible. Before compilers and higher-level languages, programming required working directly in machine code — a barrier that limited who could use computers and what they could do.<sup>2</sup>\n\n*Image attribution: [The first computer bug](https://www.history.navy.mil/our-collections/photography/numerical-list-of-images/nhhc-series/nh-series/NH-96000/NH-96566-KN.html), courtesy of the Naval Surface Warfare Center, Dahlgren, Virginia.*\n",
+        "imageUrl": "https://images.code.org/30749ab6c4861eaa9d04903c84838051-bug.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Why It Matters\n\nBy advocating for word-based programming languages, Hopper helped make computers usable by far more people. Her work opened computing — and eventually AI — to developers who were not specialists in machine-level code, expanding who could participate in building these technologies.<sup>1</sup>\n\n*Image attribution: [Photo](https://unsplash.com/photos/woman-with-glasses-coding-on-a-laptop-computer-YZ_V9z8NEqY) by [Compagnons](https://unsplash.com/@sigmund) on Unsplash.*\n\n**Sources**\n\n1. [National Women’s History Museum — Grace Hopper](https://www.womenshistory.org/education-resources/biographies/grace-hopper)\n2. [Britannica — Grace Hopper](https://www.britannica.com/biography/Grace-Hopper)\n",
+        "imageUrl": "https://images.code.org/433b30e6b469e7b782b1cbb976af16a6-programming.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026-dev",
+    "display_name": "Grace Hopper",
+    "bubble_choice_description": "Choose Grace Hopper to explore how her work on compilers and COBOL made programming more accessible and helped build the computing foundations for AI.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/8de4a497673fe52ff3b5e4d021558750-hopper.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11T07:35:14.835+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1c-v3-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1c-v3-2026\"},{\"changed_at\":\"2026-08-11 07:40:45 +0000\",\"changed\":[\"panels\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>

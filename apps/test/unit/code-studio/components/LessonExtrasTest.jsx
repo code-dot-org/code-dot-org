@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -40,5 +41,20 @@ describe('LessonExtras', () => {
   it('renders BonusLevels area', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
     expect(1).toEqual(wrapper.find('BonusLevels').length);
+  });
+
+  it('renders a design system button for the next lesson', () => {
+    const wrapper = shallow(
+      <LessonExtras {...DEFAULT_PROPS} nextLevelPath="/lessons/2" />
+    );
+    const button = wrapper.find(MuiButton);
+
+    expect(button.props()).toMatchObject({
+      href: '/lessons/2',
+      variant: 'contained',
+      color: 'primary',
+      size: 'large',
+    });
+    expect(button.text()).toBe('Go on to Lesson 2');
   });
 });

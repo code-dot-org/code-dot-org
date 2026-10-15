@@ -1,4 +1,5 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Box} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -23,18 +24,16 @@ export default class BooleanPropertyRow extends React.Component {
 
   render() {
     return (
-      <div style={rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
-          <FontAwesomeV6Icon
-            iconName={this.state.isChecked ? 'square-check' : 'square'}
-            iconStyle="regular"
-            className="custom-checkbox"
-            style={rowStyle.checkbox}
-            onClick={this.handleClick}
-          />
-        </div>
-      </div>
+      <Box style={rowStyle.container}>
+        <Checkbox
+          checked={this.state.isChecked}
+          name={''}
+          size="s"
+          label={this.props.desc}
+          onChange={this.handleClick}
+          textThickness="thick"
+        />
+      </Box>
     );
   }
 }

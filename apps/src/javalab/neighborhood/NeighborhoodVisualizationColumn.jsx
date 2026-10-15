@@ -15,6 +15,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
     // populated by redux
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isCollapsed: PropTypes.bool,
+    isRunning: PropTypes.bool,
     toggleVisualizationCollapsed: PropTypes.func,
   };
 
@@ -23,7 +24,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
   };
 
   render() {
-    const {displayTheme, isCollapsed, toggleVisualizationCollapsed} =
+    const {displayTheme, isCollapsed, isRunning, toggleVisualizationCollapsed} =
       this.props;
     const {isFullscreen} = this.state;
 
@@ -44,6 +45,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
         <NeighborhoodVisualization
           isDarkMode={displayTheme === DisplayTheme.DARK}
           className={visualizationClassName}
+          isRunning={isRunning}
         />
       </div>
     );
@@ -54,6 +56,7 @@ export default connect(
   state => ({
     displayTheme: state.javalabView.displayTheme,
     isCollapsed: state.javalabView.isVisualizationCollapsed,
+    isRunning: state.javalab.isRunning,
   }),
   dispatch => ({
     toggleVisualizationCollapsed() {

@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
+import Tags from '@code-dot-org/component-library/tags';
 import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -31,13 +32,19 @@ const CourseRow = ({
     </td>
     <td>
       {percent_completed === 100 ? (
-        <Typography
-          className={styles.completePill}
-          variant="body4"
-          gutterBottom
-        >
-          {i18n.selfPacedPlCompleted()}
-        </Typography>
+        <Tags
+          tagsList={[
+            {
+              label: i18n.selfPacedPlCompleted(),
+              icon: {
+                iconName: 'check',
+                iconStyle: 'solid',
+                placement: 'left',
+              },
+            },
+          ]}
+          size="s"
+        />
       ) : (
         <div className={styles.progressWrapper}>
           <Typography variant="body3" gutterBottom>

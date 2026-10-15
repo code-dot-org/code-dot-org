@@ -127,9 +127,9 @@ export default function UnitCalendarGrid({
                 </div>
                 <div className={styles.keyCell}>
                   <FontAwesomeV6Icon
-                    iconName="circle-check"
+                    iconName="star"
                     style={{
-                      color: 'var(--text-brand-purple-primary)',
+                      color: 'var(--text-neutral-primary)',
                     }}
                     className={styles.keyIcon}
                   />

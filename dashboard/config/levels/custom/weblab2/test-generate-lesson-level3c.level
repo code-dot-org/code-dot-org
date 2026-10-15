@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-17T14:35:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "889539bf-d8f9-4cf0-9473-15df3dbf66fc": {
+          "id": "889539bf-d8f9-4cf0-9473-15df3dbf66fc",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Byte's Weather App</title>\n    <style>\n        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; text-align: center; background-color: #e0f2f7; color: #2c3e50; }\n        h1 { color: #0288d1; margin-bottom: 20px; }\n        p { margin-bottom: 25px; font-size: 1.1em; }\n        .console-hint { background-color: #b3e5fc; padding: 10px; border-radius: 5px; display: inline-block; margin-top: 20px; font-size: 0.9em; border: 1px solid #81d4fa; }\n    </style>\n</head>\n<body>\n    <h1>Byte's Weather Reporter</h1>\n    <p>Help Byte report the current weather conditions. Open the console to see the weather info!</p>\n    <div class=\"console-hint\">Remember to open your browser's console (F12) to see output from `script.js`.</div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "8aabc68a-8ed2-48e0-adc4-53f8d8ce0d9c": {
+          "id": "8aabc68a-8ed2-48e0-adc4-53f8d8ce0d9c",
+          "name": "script.js",
+          "contents": "// Welcome to Byte's Weather App!\n// We need to tell Byte about the current weather conditions.\n\n// Your task: Create two variables for the weather report.\n\n// 1. Create a variable called `city_name`.\n//    This variable should store a String value, like \"London\", \"Tokyo\", or \"New York\".\n//    Example: let city_name = \"San Francisco\";\n\n// 2. Create a variable called `current_temp`.\n//    This variable should store an Integer (whole number) value, representing the temperature in degrees.\n//    Example: let current_temp = 68;\n\n// Write your code below this line:\n// --- Your code starts here ---\n\n\n// --- Your code ends here ---\n\n// Let's check the weather details!\nconsole.log(\"--- Weather Report ---\");\nconsole.log(\"City: \" + city_name);\nconsole.log(\"Temperature: \" + current_temp + \"°C\");\nconsole.log(\"----------------------\");\n\n// If you see 'undefined' or an error, double-check that you've created both variables correctly.",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "889539bf-d8f9-4cf0-9473-15df3dbf66fc",
+        "8aabc68a-8ed2-48e0-adc4-53f8d8ce0d9c"
+      ]
+    },
+    "long_instructions": "Welcome to Byte's Weather App! Your robot assistant, Byte, is learning to report the weather. To do this, it needs to know what city it's in and what the current temperature is.\r\n\r\nIn this level, you'll continue practicing creating variables to store different types of information.\r\n\r\n1.  **Open `script.js`.** Inside this file, you'll find comments guiding you on what to add.\r\n2.  **Create a variable named `city_name`.** This variable should store a **String** (text) value, like `\"London\"`, `\"Tokyo\"`, or `\"New York\"`. Remember to put your chosen city name inside double quotes!\r\n3.  **Create a variable named `current_temp`.** This variable should store an **Integer** (whole number) value, representing the current temperature in degrees, like `25`, `72`, or `-5`. This should be a number without quotes.\r\n4.  **Save `script.js`** and refresh `index.html` in your browser. Open your browser's console (usually by pressing `F12` or right-clicking and selecting \"Inspect\" then \"Console\") to see if your weather details are displayed correctly. Byte will print out the values you assigned!",
+    "generate_outline": "Scenario: The Weather App\r\n\r\nTask: Create variables for city_name (String) and current_temp (Integer)."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-17 14:35:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:35:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:36:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

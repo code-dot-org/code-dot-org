@@ -1,0 +1,12 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#ai-evaluation-settings-container"}}
+  AI Evaluation
+
+#ai-evaluation-settings-container.in.collapse
+  #ai-evaluation-settings-editor
+  = f.text_field :additional_ai_evaluation_instructions, type: 'hidden'
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_ai_evaluation.js'),
+        data: {aievaluationdata: {levelId: @level.id, systemPrompt: AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
+      @level, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    ), additionalAiEvaluationInstructions: @level.additional_ai_evaluation_instructions}.to_json}}

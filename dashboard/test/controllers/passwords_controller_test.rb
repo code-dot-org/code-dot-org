@@ -8,6 +8,7 @@ class PasswordsControllerTest < ActionController::TestCase
   test "new" do
     get :new
     assert_response :success
+    assert_select '.g-recaptcha', count: 1
   end
 
   test "new allows admins" do

@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
-
 /**
  * A component for displaying a sound category.
  */
@@ -26,13 +24,13 @@ export default class SoundCategory extends React.Component {
 
 const styles = {
   category: {
-    backgroundColor: color.cyan,
+    backgroundColor: 'var(--background-brand-purple-primary)',
     border: 'solid 0px',
     borderRadius: 5,
     width: 175,
     padding: 10,
     margin: 10,
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     float: 'left',
     cursor: 'pointer',
   },

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-01 20:21:41 UTC",
+    "serialized_at": "2026-08-04 22:15:02 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -328,12 +328,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-video-intro"
+        ],
         "progression": "Intro"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-video-intro"
+          "UI Test mix-move-ai-video-intro"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -341,7 +344,7 @@
         "activity_section.key": "d8d74c97-519f-4883-a2d6-fd797b76340f"
       },
       "level_keys": [
-        "mix-move-ai-video-intro"
+        "UI Test mix-move-ai-video-intro"
       ]
     },
     {
@@ -350,12 +353,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-dance-background"
+        ],
         "progression": "Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-dance-background"
+          "UI Test mix-move-ai-dance-background"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -363,7 +369,7 @@
         "activity_section.key": "38302e79-7b96-4734-8448-2bffa8e50912"
       },
       "level_keys": [
-        "mix-move-ai-dance-background"
+        "UI Test mix-move-ai-dance-background"
       ]
     },
     {
@@ -372,12 +378,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-dancer-prompt-1-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-dancer-prompt-1-input"
+          "UI Test mix-move-ai-dancer-prompt-1-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -385,7 +394,7 @@
         "activity_section.key": "38302e79-7b96-4734-8448-2bffa8e50912"
       },
       "level_keys": [
-        "mix-move-ai-dancer-prompt-1-input"
+        "UI Test mix-move-ai-dancer-prompt-1-input"
       ]
     },
     {
@@ -394,12 +403,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-dancer-prompt-2-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-dancer-prompt-2-input"
+          "UI Test mix-move-ai-dancer-prompt-2-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -407,7 +419,7 @@
         "activity_section.key": "38302e79-7b96-4734-8448-2bffa8e50912"
       },
       "level_keys": [
-        "mix-move-ai-dancer-prompt-2-input"
+        "UI Test mix-move-ai-dancer-prompt-2-input"
       ]
     },
     {
@@ -416,12 +428,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-panels-image-generation"
+        ],
         "progression": "Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-panels-image-generation"
+          "UI Test mix-move-ai-panels-image-generation"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -429,7 +444,7 @@
         "activity_section.key": "38302e79-7b96-4734-8448-2bffa8e50912"
       },
       "level_keys": [
-        "mix-move-ai-panels-image-generation"
+        "UI Test mix-move-ai-panels-image-generation"
       ]
     },
     {
@@ -438,12 +453,15 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-dancer-prompt-4-input"
+        ],
         "progression": "Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-dancer-prompt-4-input"
+          "UI Test mix-move-ai-dancer-prompt-4-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -451,7 +469,7 @@
         "activity_section.key": "38302e79-7b96-4734-8448-2bffa8e50912"
       },
       "level_keys": [
-        "mix-move-ai-dancer-prompt-4-input"
+        "UI Test mix-move-ai-dancer-prompt-4-input"
       ]
     },
     {
@@ -460,12 +478,15 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-dance-move"
+        ],
         "progression": "Design"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-dance-move"
+          "UI Test mix-move-ai-dance-move"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -473,7 +494,7 @@
         "activity_section.key": "38302e79-7b96-4734-8448-2bffa8e50912"
       },
       "level_keys": [
-        "mix-move-ai-dance-move"
+        "UI Test mix-move-ai-dance-move"
       ]
     },
     {
@@ -482,12 +503,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-panels-music-intro"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-panels-music-intro"
+          "UI Test mix-move-ai-panels-music-intro"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -495,7 +519,7 @@
         "activity_section.key": "c31a14ba-e7c8-451f-a46c-8f2562945fcf"
       },
       "level_keys": [
-        "mix-move-ai-panels-music-intro"
+        "UI Test mix-move-ai-panels-music-intro"
       ]
     },
     {
@@ -504,12 +528,15 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-sequence"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-sequence"
+          "UI Test mix-move-ai-sequence"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -517,7 +544,7 @@
         "activity_section.key": "c31a14ba-e7c8-451f-a46c-8f2562945fcf"
       },
       "level_keys": [
-        "mix-move-ai-sequence"
+        "UI Test mix-move-ai-sequence"
       ]
     },
     {
@@ -526,12 +553,15 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-play-together"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-play-together"
+          "UI Test mix-move-ai-play-together"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -539,7 +569,7 @@
         "activity_section.key": "c31a14ba-e7c8-451f-a46c-8f2562945fcf"
       },
       "level_keys": [
-        "mix-move-ai-play-together"
+        "UI Test mix-move-ai-play-together"
       ]
     },
     {
@@ -548,12 +578,15 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-music-prompt-2-input"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-music-prompt-2-input"
+          "UI Test mix-move-ai-music-prompt-2-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -561,7 +594,7 @@
         "activity_section.key": "c31a14ba-e7c8-451f-a46c-8f2562945fcf"
       },
       "level_keys": [
-        "mix-move-ai-music-prompt-2-input"
+        "UI Test mix-move-ai-music-prompt-2-input"
       ]
     },
     {
@@ -570,12 +603,15 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-panels-code-generation"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-panels-code-generation"
+          "UI Test mix-move-ai-panels-code-generation"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -583,7 +619,7 @@
         "activity_section.key": "c31a14ba-e7c8-451f-a46c-8f2562945fcf"
       },
       "level_keys": [
-        "mix-move-ai-panels-code-generation"
+        "UI Test mix-move-ai-panels-code-generation"
       ]
     },
     {
@@ -592,12 +628,15 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-music-prompt-3-input"
+        ],
         "progression": "Mix"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-music-prompt-3-input"
+          "UI Test mix-move-ai-music-prompt-3-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -605,7 +644,7 @@
         "activity_section.key": "c31a14ba-e7c8-451f-a46c-8f2562945fcf"
       },
       "level_keys": [
-        "mix-move-ai-music-prompt-3-input"
+        "UI Test mix-move-ai-music-prompt-3-input"
       ]
     },
     {
@@ -614,12 +653,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test mix-move-ai-dance-freeplay"
+        ],
         "progression": "Move"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "mix-move-ai-dance-freeplay"
+          "UI Test mix-move-ai-dance-freeplay"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -627,16 +669,16 @@
         "activity_section.key": "3b24559c-77d1-489c-98a5-51fe48134e46"
       },
       "level_keys": [
-        "mix-move-ai-dance-freeplay"
+        "UI Test mix-move-ai-dance-freeplay"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-video-intro",
+        "level.key": "UI Test mix-move-ai-video-intro",
         "script_level.level_keys": [
-          "mix-move-ai-video-intro"
+          "UI Test mix-move-ai-video-intro"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -646,9 +688,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-dance-background",
+        "level.key": "UI Test mix-move-ai-dance-background",
         "script_level.level_keys": [
-          "mix-move-ai-dance-background"
+          "UI Test mix-move-ai-dance-background"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -658,9 +700,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-dancer-prompt-1-input",
+        "level.key": "UI Test mix-move-ai-dancer-prompt-1-input",
         "script_level.level_keys": [
-          "mix-move-ai-dancer-prompt-1-input"
+          "UI Test mix-move-ai-dancer-prompt-1-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -670,9 +712,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-dancer-prompt-2-input",
+        "level.key": "UI Test mix-move-ai-dancer-prompt-2-input",
         "script_level.level_keys": [
-          "mix-move-ai-dancer-prompt-2-input"
+          "UI Test mix-move-ai-dancer-prompt-2-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -682,9 +724,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-panels-image-generation",
+        "level.key": "UI Test mix-move-ai-panels-image-generation",
         "script_level.level_keys": [
-          "mix-move-ai-panels-image-generation"
+          "UI Test mix-move-ai-panels-image-generation"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -694,9 +736,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-dancer-prompt-4-input",
+        "level.key": "UI Test mix-move-ai-dancer-prompt-4-input",
         "script_level.level_keys": [
-          "mix-move-ai-dancer-prompt-4-input"
+          "UI Test mix-move-ai-dancer-prompt-4-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -706,9 +748,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-dance-move",
+        "level.key": "UI Test mix-move-ai-dance-move",
         "script_level.level_keys": [
-          "mix-move-ai-dance-move"
+          "UI Test mix-move-ai-dance-move"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -718,9 +760,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-panels-music-intro",
+        "level.key": "UI Test mix-move-ai-panels-music-intro",
         "script_level.level_keys": [
-          "mix-move-ai-panels-music-intro"
+          "UI Test mix-move-ai-panels-music-intro"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -730,9 +772,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-sequence",
+        "level.key": "UI Test mix-move-ai-sequence",
         "script_level.level_keys": [
-          "mix-move-ai-sequence"
+          "UI Test mix-move-ai-sequence"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -742,9 +784,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-play-together",
+        "level.key": "UI Test mix-move-ai-play-together",
         "script_level.level_keys": [
-          "mix-move-ai-play-together"
+          "UI Test mix-move-ai-play-together"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -754,9 +796,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-music-prompt-2-input",
+        "level.key": "UI Test mix-move-ai-music-prompt-2-input",
         "script_level.level_keys": [
-          "mix-move-ai-music-prompt-2-input"
+          "UI Test mix-move-ai-music-prompt-2-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -766,9 +808,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-panels-code-generation",
+        "level.key": "UI Test mix-move-ai-panels-code-generation",
         "script_level.level_keys": [
-          "mix-move-ai-panels-code-generation"
+          "UI Test mix-move-ai-panels-code-generation"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -778,9 +820,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-music-prompt-3-input",
+        "level.key": "UI Test mix-move-ai-music-prompt-3-input",
         "script_level.level_keys": [
-          "mix-move-ai-music-prompt-3-input"
+          "UI Test mix-move-ai-music-prompt-3-input"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",
@@ -790,9 +832,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "mix-move-ai-dance-freeplay",
+        "level.key": "UI Test mix-move-ai-dance-freeplay",
         "script_level.level_keys": [
-          "mix-move-ai-dance-freeplay"
+          "UI Test mix-move-ai-dance-freeplay"
         ],
         "lesson.key": "Mix & Move with AI",
         "lesson_group.key": "",

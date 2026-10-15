@@ -18,10 +18,22 @@ class UnitGroupTest < ActiveSupport::TestCase
       @@course_cache ||= UnitGroup.course_cache_to_cache
       UnitGroup.course_cache
 
-      # NOTE: ActiveRecord collection association still references an active DB connection,
-      # even when the data is already eager loaded.
-      # Best we can do is ensure that no queries are executed on the active connection.
-      ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
+      # Rails 7.1 renamed the underlying method from `execute` to
+      # `raw_execute`, so temporarily support both versions.
+      # TODO infra: simplify this once we're fully updated to Rails 7.1
+      execute_method_name =
+        if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0
+          :execute
+        elsif Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 1
+          :raw_execute
+        else
+          throw "remove this temporary transitional logic before upgrading beyond Rails 7.1"
+        end
+
+      # ActiveRecord collection association still references an active DB
+      # connection, even when the data is already eager loaded. Best we can do
+      # is ensure that no queries are executed on the active connection.
+      ActiveRecord::Base.connection.stubs(execute_method_name).raises('Database disconnected')
     end
 
     test "get_from_cache uses cache" do
@@ -569,7 +581,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :description_teacher, :version_title, :scripts, :teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path,
-                  :ai_chat_tools_dependency], summary.keys
+                  :ai_chat_tools_dependency, :requires_inaccessible_ai_models], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -1193,6 +1205,20 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert unit_group.has_ai_chat_tools?
     assert unit_group.requires_ai_chat_tools?
+  end
+
+  # Bandaid: a course whose only Web Lab 2 unit is exempt reports AVAILABLE
+  # rather than ESSENTIAL, which is what quiets the alerts stating the stronger
+  # claim. This test goes away with the exemption.
+  test 'ai_chat_tools_dependency is available, not essential, for a course whose only Web Lab 2 unit is exempt' do
+    unit = create(:script, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    refute unit_group.requires_ai_chat_tools?
+    assert unit_group.has_ai_chat_tools?
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], unit_group.ai_chat_tools_dependency
   end
 
   describe '#link' do

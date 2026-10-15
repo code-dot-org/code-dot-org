@@ -1,11 +1,13 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
+import classNames from 'classnames';
+
 import {getAssetPath} from '../assetPath';
-import {styles} from '../constants';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
+import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {parseJSON} from '../jsonReaderWrapper';
+import {loadDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
@@ -16,6 +18,9 @@ import {
 } from '../redux';
 
 import ScrollableContent from './ScrollableContent';
+
+import shared from '../shared.module.scss';
+import styles from './selectDataset.module.scss';
 
 const SelectDataset = () => {
   const dispatch = useAppDispatch();
@@ -49,15 +54,15 @@ const SelectDataset = () => {
       setSelectedCSV(csvPath);
       setSelectedJSON(jsonPath);
 
-      parseCSV(csvPath, true, false);
-
-      parseJSON(jsonPath);
+      invalidatePendingDatasetLoads();
+      loadDataset(csvPath, jsonPath);
     }
   };
 
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     resetState();
     setSelectedCSV(event.target.files![0]);
+    invalidatePendingDatasetLoads();
     parseCSV(event.target.files![0] as unknown as string, false, true);
   };
 
@@ -82,18 +87,15 @@ const SelectDataset = () => {
   const assetPath = getAssetPath();
 
   return (
-    <div id="select-dataset" style={styles.panel}>
+    <div id="select-dataset" className={shared.panel}>
       <ScrollableContent tinted={true}>
-        {datasets.map((dataset, index) => {
+        {datasets.map(dataset => {
           return (
             <div
-              style={{
-                ...styles.selectDatasetItem,
-                ...(highlightDataset === dataset.name &&
-                  styles.selectDatasetItemHighlighted),
-                ...(name === dataset.name && styles.selectDatasetItemSelected),
-                ...(index % 3 === 0 && {clear: 'both'}),
-              }}
+              className={classNames(styles.item, {
+                [styles.highlighted]: highlightDataset === dataset.name,
+                [styles.selected]: name === dataset.name,
+              })}
               key={dataset.id}
               onClick={() => handleDatasetClick(dataset.id)}
               onKeyDown={() => handleDatasetClick(dataset.id)}
@@ -102,23 +104,26 @@ const SelectDataset = () => {
               role="button"
               tabIndex={0}
             >
-              <div style={styles.selectDatasetItemContainer}>
+              <div className={styles.imageFrame}>
                 <img
                   src={assetPath + dataset.imagePath}
-                  style={styles.selectDatasetImage}
                   draggable={false}
-                  className="uitest-ailab-dataset-image ailab-image-hover"
+                  className={classNames(
+                    'uitest-ailab-dataset-image',
+                    shared.hoverGrow,
+                    styles.image,
+                  )}
                   alt={`Select ${dataset.name} dataset`}
                 />
-                <div style={styles.selectDatasetText}>{dataset.name}</div>
+                <div className={styles.name}>{dataset.name}</div>
               </div>
             </div>
           );
         })}
       </ScrollableContent>
       {!specifiedDatasets && (
-        <div style={styles.contentsCsvButton}>
-          <label style={styles.uploadCsvButton}>
+        <div className={classNames(shared.contents, styles.upload)}>
+          <label className={styles.uploadButton}>
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
             {/* Setting value to empty here allows us to receive an
                 onChange event for the same file as previously selected,
@@ -126,18 +131,16 @@ const SelectDataset = () => {
                 existing dataset, and then reupload the same file. */}
             <input
               className="csv-input"
+              style={{display: 'none'}}
               type="file"
               accept=".csv,text/csv,application/vnd.ms-excel"
               name="file"
               placeholder={undefined}
               onChange={handleUploadSelect}
-              style={styles.csvInput}
               value=""
             />
           </label>
-          <span style={styles.invalidDataMessageContainer}>
-            {getInvalidDataMessage()}
-          </span>
+          <span className={styles.invalidData}>{getInvalidDataMessage()}</span>
         </div>
       )}
     </div>

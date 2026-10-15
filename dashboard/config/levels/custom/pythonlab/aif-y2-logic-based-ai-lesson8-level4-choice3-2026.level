@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T17:35:10.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Simulating Food Safety",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Choose a limit to your simulation’s growth.\r\n- Prompt AI to update your simulation so that it uses logistic growth with your limit.\r\n- Run your code and check your results.\r\n  - Does your simulation approach, but not exceed, the limit?\r\n\r\n🖥️ Coding Tip:\r\n\r\nMake sure your `target` is less than your limit—otherwise, you’ll find your program stuck in an infinite loop.\r\n",
+    "bubble_choice_description": "Simulate bacteria reaching unsafe levels on food.",
+    "thumbnail_url": "https://images.code.org/4fd8566df20293d15749ab9fbc3ad74e-bacterial-growth.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def simulate(cfu, growth, target):\n  hours = 0\n  print(f\"Hour {hours}: {cfu} CFU\")\n\n  while cfu < target:\n    cfu += cfu * growth\n    hours += 1\n    print(f\"Hour {hours}: {cfu} CFU\")\n\n\nsimulate(100, 7, 100000)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr4+yle2emSsTwU\nH4MovYzV4Jx/plDWvFg0UGo7vrZFT3K+u3wfRFraxMUjXw1U0hCGBRPMt6cH\npNjfMjbXney24O+7CDSZW+Z/+tX6bya/liKenozWeMlmgPy7eeLAltbaw3Em\nIQA3d/HKaSOQMUwSISL6mFe0XZhoXyy6pvfViY5eosMontIB30fxynvZr0cQ\nys7rIs0NGSK8LEMpFWBXv6n/DWfIhX8HAxDSD+SUvD0dnR38nc4hvDybtVHp\nXTYbg/Kaj2MZ97DHD4RSc3niL+W0701bHPjzQo6caH1Q8/eHRRkmW2DQ4dEV\ntEfETnXADGO80xgiQ7r1BRjIB4jGBO103TpeE50Rbn3Mq8m17LspYAqaJFa/\nu/GDDWw/B4tAy+OIwFMCa0M6hHnDEClYdwKext2357/vyRMP4pri4W2vw1D/\nyH7MToZYaBywKjc=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 17:37:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:37:53 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:38:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:38:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:24:20 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:17:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:17:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

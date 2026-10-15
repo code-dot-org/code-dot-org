@@ -1,0 +1,36 @@
+name 'csaif_pl_troubleshoot-about-L14-CSandDev_-rev_v2_2026-dev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Troubleshooting Software</h1>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Troubleshooting</b> is a form of problem-solving that involves using a logical and systematic search for the source of a problem.</p>
+</div>
+
+<img src="https://images.code.org/ace0755238190c151c48930178b033da-image-1791903240924.png" alt="CS Discoveries students" width="180px" style="border-radius:10px; float:right; margin: 20px 0 40px 40px;">
+<br>
+
+<p>In the next level, students will solve 2-3 real software problems on a simulated Chromebook, slow performance, a crash, a missing file, a network error, or a permission error, following troubleshooting advice that appears in a simulated browser.</p>
+
+<h2>Guidance for the Activity</h2>
+
+<p>The five troubleshooting scenarios each have a real, specific cause, a game running at 8 to 30 FPS because background apps are eating memory, a crash from a buggy version reading old cache files, a missing level file sitting in the Trash, a weak hotspot instead of a strong home network, a disabled storage permission. Students follow the advice in the simulated browser to diagnose and fix each one.</p>
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><strong>💡 Teacher tip:</strong> each scenario is designed so students can trace the problem back to one specific, identifiable cause, not guesswork. If a student gets stuck, ask what the simulated browser's advice actually said before jumping to a fix.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>➡️ This activity is from Lesson 5. You can find more details in the full <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/3/lessons/5" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">lesson plan</a>.</p>
+</div>
+
+<h2>Let's Try It!</h2>
+
+<p>Students will work through real system issues on a simulated Chromebook, using troubleshooting advice to diagnose and fix each one.</p>
+
+
+MARKDOWN

@@ -11,7 +11,7 @@ module Services
           full_path = SCHOOL_DATA_DIR.join(filename)
           JSON.parse(File.read(full_path)).freeze
         rescue Errno::ENOENT, JSON::ParserError => exception
-          Honeybadger.notify(
+          Observability::Errors.report(
             exception,
             error_message: "Error loading JSON for #{full_path}: #{exception.message}"
           )

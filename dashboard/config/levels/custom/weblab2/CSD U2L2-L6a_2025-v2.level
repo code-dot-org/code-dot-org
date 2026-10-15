@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:46:03.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Creating Paragraphs",
-    "long_instructions": "# Create your own Paragraphs\r\n\r\nNow that we know how to add `<p>` tags to our code, let's re-do the first level from this lesson and write our name, favorite color, and favorite animal on separate lines\r\n\r\n# Do This\r\n\r\n1) Use `<p>` and `</p>` tags to write your name, your favorite color, and your favorite animal on separate lines\r\n\t- Don't forget to type these in between the `<body>` and `</body>` tags!\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n![](https://images.code.org/77eb29fd0f890f5cf42673d3c11491f9-image-1767228794428.gif)\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n:::\r\n",
+    "long_instructions": "# Create your own Paragraphs\r\n\r\nNow that we know how to add `<p>` tags to our code, let's re-do the first level from this lesson and write our name, favorite color, and favorite animal on separate lines\r\n\r\n# Do This\r\n\r\n1) Use `<p>` and `</p>` tags to write your name, your favorite color, and your favorite animal on separate lines\r\n\t- Don't forget to type these in between the `<body>` and `</body>` tags!\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n![](https://images.code.org/77eb29fd0f890f5cf42673d3c11491f9-image-1767228794428.gif)\r\n\r\n:::\r\n",
     "bubble_choice_description": "Revisit the first level from this lesson to write your name, favorite color, and favorite animal using paragraph tags",
     "submittable": "false",
     "hide_share_and_remix": "true",
@@ -58,9 +59,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:03.301+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2-L6a-2025\\\"\"],\"cloned_from\":\"CSD U2L2-L6a-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:03.301+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2-L6a-2025\\\"\"],\"cloned_from\":\"CSD U2L2-L6a-2025\"},{\"changed_at\":\"2026-07-24 00:15:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

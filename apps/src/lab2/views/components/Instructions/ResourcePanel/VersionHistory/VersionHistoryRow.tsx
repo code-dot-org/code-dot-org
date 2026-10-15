@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography, Button as MuiButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -14,7 +13,7 @@ import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
   versionId: string;
-  label: string;
+  timestamp?: string;
   isLatest: boolean;
   isSelected: boolean;
   comment?: string;
@@ -36,7 +35,7 @@ const VersionHistoryRow: React.FunctionComponent<
   VersionHistoryRowProps & RestoreVersionButtonProps
 > = ({
   versionId,
-  label,
+  timestamp,
   isLatest,
   isSelected,
   comment,
@@ -50,8 +49,11 @@ const VersionHistoryRow: React.FunctionComponent<
   className,
   alwaysShowAutoSaves = false,
 }) => {
+  let label;
   if (isLatest) {
     label = commonI18n.currentVersion();
+  } else if (versionId === INITIAL_VERSION_ID) {
+    label = lab2I18n.initialVersion();
   }
 
   let ariaLabel;
@@ -98,14 +100,23 @@ const VersionHistoryRow: React.FunctionComponent<
             className={moduleStyles.versionLabel}
             name={versionId}
             value={versionId}
-            label={label}
+            label={label || timestamp}
             onChange={onChange}
             checked={isSelected}
-            ariaLabel={ariaLabel}
+            ariaLabel={
+              ariaLabel && timestamp ? `${ariaLabel}, ${timestamp}` : ariaLabel
+            }
             textThickness={isBoldtype ? 'thick' : 'thin'}
             disabled={disabled}
             size="s"
-          />
+          >
+            {label && timestamp && (
+              <Typography variant="body3" component="span">
+                <span className={moduleStyles.separator}>{'·'}</span>
+                {timestamp}
+              </Typography>
+            )}
+          </RadioButton>
           {showRestoreButton && (
             <MuiButton
               variant="outlined"
@@ -128,35 +139,25 @@ const VersionHistoryRow: React.FunctionComponent<
             </MuiButton>
           )}
           {aiSavedComment && !showRestoreButton && (
-            <WithTooltip
-              tooltipProps={{
-                text: 'AI Version Save',
-                size: 's',
-                tooltipId: `${versionId}-ai-saved-tooltip`,
-                direction: 'onBottom',
-              }}
-            >
-              <FontAwesomeV6Icon
-                iconFamily="kit"
-                iconName="ai-head-solid"
-                className={moduleStyles.aiSaveIcon}
-              />
-            </WithTooltip>
+            <Tooltip title="AI Version Save" placement="bottom">
+              <span role="img" aria-label="AI Version Save">
+                <FontAwesomeV6Icon
+                  iconFamily="kit"
+                  iconName="ai-head-solid"
+                  className={moduleStyles.aiSaveIcon}
+                />
+              </span>
+            </Tooltip>
           )}
           {showAutoSavedIcon && !showRestoreButton && (
-            <WithTooltip
-              tooltipProps={{
-                text: lab2I18n.autosavedVersion(),
-                size: 's',
-                tooltipId: `${versionId}-autosaved-tooltip`,
-                direction: 'onBottom',
-              }}
-            >
-              <FontAwesomeV6Icon
-                iconName={'cloud-check'}
-                className={moduleStyles.autoSavedIcon}
-              />
-            </WithTooltip>
+            <Tooltip title={lab2I18n.autosavedVersion()} placement="bottom">
+              <span role="img" aria-label={lab2I18n.autosavedVersion()}>
+                <FontAwesomeV6Icon
+                  iconName={'cloud-check'}
+                  className={moduleStyles.autoSavedIcon}
+                />
+              </span>
+            </Tooltip>
           )}
         </div>
         {children}

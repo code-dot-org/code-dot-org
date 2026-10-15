@@ -48,6 +48,8 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
         _(body).must_include 'can_delete_own_account'
         _(body).must_include 'authentication_options'
         _(body).must_include 'dependent_students_count'
+        _(body).must_include 'gender'
+        _([true, false]).must_include body['is_usa']
       end
 
       it 'sets Cache-Control no-store' do
@@ -69,6 +71,14 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
         _(body['user_type']).must_equal 'student'
         _(body['age']).must_equal user.age
         _(body['us_state']).must_equal 'WA'
+      end
+
+      it 'round-trips the student gender input' do
+        user.update!(gender_student_input: 'Example gender')
+
+        get_settings
+
+        _(body['gender']).must_equal 'Example gender'
       end
     end
 
@@ -128,12 +138,12 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
 
       before {sign_in user}
 
-      it 'exposes only credential_type and email, never id or hashed_email' do
+      it 'exposes only id, credential_type and email, never hashed_email' do
         get_settings
 
         option = body['authentication_options'].find {|o| o['credential_type'] == AuthenticationOption::GOOGLE}
         _(option).wont_be_nil
-        _(option.keys.sort).must_equal %w[credential_type email].sort
+        _(option.keys.sort).must_equal %w[credential_type email id].sort
       end
 
       it 'leaks no tokens, credential ids, password hashes, or secret words' do

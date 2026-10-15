@@ -89,14 +89,17 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'show includes correct SEO data' do
-    unit = create(:unit, name: 'allthelessonplans')
+    unit = create(:unit, name: 'ui-test-lesson-plans')
     unit_group = create(:single_unit_course, unit: unit, published_state: PUBLISHED_STATE.stable)
     get :show, params: {
       course_course_name: unit_group.name,
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_includes(@response.body, "<title>Unit: UI Test Lesson Plans - #{brand_name} [test]</title>")
+    assert_select "meta[property='og:site_name'][content='#{brand_name}']"
+    assert_select "meta[property='og:title'][content='Unit: UI Test Lesson Plans - #{brand_name} [test]']"
     assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
@@ -487,7 +490,6 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
@@ -1806,6 +1808,52 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal "/courses/#{course.name}/units/1/edit", data[:editUnitUrl]
   end
 
+  # ---- /listing (levelbuilder level overview page) ----
+
+  test "listing redirects signed-out users" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    get :listing, params: {id: @single_unit_2023.name}
+    assert_redirected_to_sign_in
+  end
+
+  test "listing forbids non-levelbuilders" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:teacher)
+    get :listing, params: {id: @single_unit_2023.name}
+    assert_response :forbidden
+  end
+
+  test "listing renders lessons and links to each level via /s/ URL" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true, name: 'My First Lesson')
+    level = create(:level, name: 'my_first_level')
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    get :listing, params: {id: unit.name}
+    assert_response :ok
+    assert_select 'li.lesson', text: /My First Lesson/
+    # This unit lives in a single-unit course, so build_script_level_path emits
+    # the modular /courses/.../units/N path rather than a legacy /s/ one.
+    assert_select "li.level a[href*=?]", "/units/1/lessons/#{lesson.relative_position}/levels/#{script_level.position}", text: 'my_first_level'
+  end
+
+  test "listing works via /courses/ URL" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    course = @migrated_unit.original_unit_group
+    lesson_group = create(:lesson_group, script: @migrated_unit)
+    create(:lesson, script: @migrated_unit, lesson_group: lesson_group, has_lesson_plan: true, name: 'Course Path Lesson')
+
+    get :listing, params: {course_course_name: course.name, position: 1}
+    assert_response :ok
+    assert_select 'li.lesson', text: /Course Path Lesson/
+  end
+
   # ---- PUT /lesson_outlines (bulk-write endpoint) ----
 
   test "update_lesson_outlines refuses unmigrated units" do
@@ -1856,6 +1904,25 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
     @migrated_unit.reload
     assert_equal 'unit-level prompt', @migrated_unit.generate_outline
+  end
+
+  test "update_lesson_outlines persists course rules when supplied" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [{key: 'a', name: 'A'}],
+      generateDraftingRules: 'pair vocab with a check',
+      generateAuthoringRules: 'no CSS',
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    assert_equal 'pair vocab with a check', @migrated_unit.generate_drafting_rules
+    assert_equal 'no CSS', @migrated_unit.generate_authoring_rules
+    assert_equal 'pair vocab with a check', JSON.parse(response.body)['generateDraftingRules']
   end
 
   test "update_lesson_outlines leaves unit generate_outline alone when omitted" do

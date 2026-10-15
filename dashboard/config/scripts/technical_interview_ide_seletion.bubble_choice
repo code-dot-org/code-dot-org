@@ -1,0 +1,10 @@
+name 'technical-interview-ide-seletion'
+display_name 'Select an IDE'
+description '####Choose the programming language you would like to use for this technical interview challenge. You will write and run your code in the IDE you select.'
+
+sublevels
+level 'technical-interview-python'
+level 'technical-interview-javascript'
+level 'technical-interview-javaa'
+
+uses_lab2

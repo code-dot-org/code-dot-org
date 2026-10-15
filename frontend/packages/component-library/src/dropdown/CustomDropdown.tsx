@@ -90,8 +90,9 @@ export interface CustomDropdownProps extends AriaAttributes {
   errorMessage?: string;
   /** Style the dropdown as a form field */
   styleAsFormField?: boolean;
-  /** (used with styleAsFormField: true) Selected value text */
-  selectedValueText?: string;
+  /** (used with styleAsFormField: true) Selected value content — usually a
+   * string, but any renderable node is accepted (e.g. an icon + label) */
+  selectedValueText?: React.ReactNode;
 }
 
 /**

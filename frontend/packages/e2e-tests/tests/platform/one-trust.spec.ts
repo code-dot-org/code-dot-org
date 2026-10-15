@@ -34,6 +34,18 @@ test.describe('OneTrust integration', () => {
       await expect(oneTrust.banner).toBeVisible({
         timeout: OT_BANNER_TIMEOUT_MS,
       });
+      // OneTrust moves focus to the banner a beat after rendering it, drawing
+      // a 1px focus outline — and the GDPR modal's focus management can then
+      // steal it back at a variable delay, so waiting for the outline is not
+      // enough either. Wait for OneTrust's one-shot focus move (so it cannot
+      // land mid-capture), then blur to pin the no-outline state.
+      await expect(oneTrust.banner).toBeFocused({
+        timeout: OT_BANNER_TIMEOUT_MS,
+      });
+      await page.evaluate(() => {
+        (document.activeElement as HTMLElement | null)?.blur();
+      });
+      await expect(oneTrust.banner).not.toBeFocused();
       await waitForVisualStability(page, oneTrust.banner);
       await visualCheck('onetrust-pop-up-code-org', {fully: false});
     },

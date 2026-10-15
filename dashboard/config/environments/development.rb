@@ -21,6 +21,9 @@ Dashboard::Application.configure do
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
   config.hosts << /[^.]+\.preview\.localhost\.codeprojects\.org/
+  # Web Lab 2 / pyodide preview origin (migrated off codeprojects.org).
+  config.hosts << "localhost.codeaiprojects.org"
+  config.hosts << /[^.]+\.preview\.localhost\.codeaiprojects\.org/
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -79,6 +82,8 @@ Dashboard::Application.configure do
   config.experiment_cache_time_seconds = 0
 
   config.after_initialize do
+    next unless Gem.loaded_specs.key?('prosopite')
+
     # Writes to dashboard/log/development.log
     # Prosopite.rails_logger = true
 

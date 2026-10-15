@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {http, HttpResponse} from 'msw';
 import {afterEach, describe, expect, it} from 'vitest';
 import {axe} from 'vitest-axe';
@@ -16,13 +16,13 @@ import UsersSettingsPage from '../UsersSettingsPage';
 
 // Audit the whole document: MUI Dialogs portal to document.body, outside the
 // render container.
-function renderPage(tag: string) {
+function renderPage(tag: string, tab = 'account-details') {
   registerUsersFixtures();
   setActiveScenario({labKey: USERS_LAB_KEY, tag});
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
-      <UsersSettingsPage tab="account-details" onTabChange={() => {}} />
+      <UsersSettingsPage tab={tab} onTabChange={() => {}} />
     </QueryClientProvider>,
   );
 }
@@ -36,14 +36,84 @@ function auditBody() {
 afterEach(() => resetUsersFixtures());
 
 describe('UsersSettingsPage — accessibility', () => {
-  it.each(['teacher', 'student', 'sso-teacher', 'sso-student', 'minimal'])(
-    'has no axe violations on the loaded page (%s)',
+  it.each([
+    'teacher',
+    'student',
+    'sso-teacher',
+    'sso-student',
+    'minimal',
+    'teacher-no-school',
+  ])('has no axe violations on the loaded page (%s)', async tag => {
+    renderPage(tag);
+    await screen.findByRole('tablist');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it.each(['teacher', 'teacher-no-school'])(
+    'has no axe violations on the Educator Profile tab (%s)',
     async tag => {
-      renderPage(tag);
-      await screen.findByRole('tablist');
+      renderPage(tag, 'educator-profile');
+      await screen.findByRole('heading', {level: 2, name: 'Role'});
       expect(await auditBody()).toHaveNoViolations();
     },
   );
+
+  it.each([
+    'multi-sso-teacher',
+    'lti-teacher',
+    'lti-only-teacher',
+    'restricted-lti-teacher',
+    'rostered-student',
+    'cap-locked-student',
+    'all-connected-teacher',
+    'minimal',
+  ])('has no axe violations on the Integrations tab (%s)', async tag => {
+    renderPage(tag, 'integrations');
+    await screen.findByRole('tabpanel');
+    await screen.findAllByRole('heading', {level: 2});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the unlink dialog open', async () => {
+    renderPage('lti-teacher', 'integrations');
+    fireEvent.click(
+      await screen.findByRole('button', {name: /^disconnect canvas/i}),
+    );
+    await screen.findByRole('alertdialog');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-school dialog open', async () => {
+    renderPage('teacher-no-school', 'educator-profile');
+    await screen.findByRole('heading', {level: 2, name: 'Role'});
+    fireEvent.click(screen.getByRole('button', {name: 'Update my school'}));
+    await screen.findByRole('dialog', {
+      name: 'Update your school information',
+    });
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-school dialog on the US school list', async () => {
+    renderPage('teacher', 'educator-profile');
+    await screen.findByRole('heading', {level: 2, name: 'Role'});
+    fireEvent.click(screen.getByRole('button', {name: 'Update my school'}));
+    const dialog = await screen.findByRole('dialog', {
+      name: 'Update your school information',
+    });
+    fireEvent.change(within(dialog).getByRole('textbox', {name: /zip code/i}), {
+      target: {value: '98101'},
+    });
+    await within(dialog).findByRole('option', {name: 'Example Middle School'});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the dirty save bar shown', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+    await screen.findByRole('button', {name: 'Save changes'});
+    expect(await auditBody()).toHaveNoViolations();
+  });
 
   it('has no axe violations in the error state', async () => {
     registerUsersFixtures();
@@ -61,6 +131,70 @@ describe('UsersSettingsPage — accessibility', () => {
       </QueryClientProvider>,
     );
     await screen.findByRole('alert');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-email modal open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: 'Update email'}));
+    await screen.findByRole('dialog', {name: /update email/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-password modal open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: 'Update password'}));
+    await screen.findByRole('dialog', {name: /update password/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the create-password modal open (sso)', async () => {
+    renderPage('sso-teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: /create password/i}));
+    await screen.findByRole('dialog', {name: /create password/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the account-type alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'student'},
+    });
+    await screen.findByRole('alertdialog', {name: /change account type/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the delete-account alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: /delete my account/i}));
+    await screen.findByRole('alertdialog', {name: /delete/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the sign-out-sessions alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(
+      screen.getByRole('button', {name: /sign out all other sessions/i}),
+    );
+    await screen.findByRole('alertdialog', {
+      name: /sign out all other sessions/i,
+    });
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the parent-email dialog open (student)', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
+    await screen.findByRole('dialog', {name: /parent\/guardian email/i});
     expect(await auditBody()).toHaveNoViolations();
   });
 });

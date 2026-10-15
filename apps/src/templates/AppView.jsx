@@ -21,6 +21,10 @@ class AppView extends React.Component {
     hideSource: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
@@ -44,7 +48,12 @@ class AppView extends React.Component {
           {this.props.visualizationColumn}
         </div>
         <VisualizationResizeBar />
-        <InstructionsWithWorkspace>
+        <InstructionsWithWorkspace
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
+        >
           <CodeWorkspace />
           <ModalFunctionEditor />
         </InstructionsWithWorkspace>

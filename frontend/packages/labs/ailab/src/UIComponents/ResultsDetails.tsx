@@ -1,49 +1,47 @@
-/* React component to handle displaying accuracy results. */
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {useCallback} from 'react';
+import {formatAccuracy, getResultsByGrade} from '../helpers/accuracy';
+import {deepEqual, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 
-import {ResultsGrades, styles} from '../constants';
-import {
-  getPercentCorrect,
-  getCorrectResults,
-  getIncorrectResults,
-} from '../helpers/accuracy';
-import {useAppDispatch, useAppSelector} from '../hooks';
-import {setShowResultsDetails} from '../redux';
-
+import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
 
+import styles from './resultsDetails.module.scss';
+
 const ResultsDetails = () => {
-  const dispatch = useAppDispatch();
-  const resultsTab = useAppSelector(state => state.resultsTab);
-  const percentCorrect = useAppSelector(getPercentCorrect);
-  const correctResults = useAppSelector(getCorrectResults);
-  const incorrectResults = useAppSelector(getIncorrectResults);
-
-  const onClose = useCallback(() => {
-    dispatch(setShowResultsDetails(false));
-  }, [dispatch]);
-
-  const results =
-    resultsTab === ResultsGrades.CORRECT ? correctResults : incorrectResults;
+  const {project} = useProject();
+  const currentResult = project.historicResults[0];
+  const hasPredictions = useAppSelector(
+    state => state.accuracyCheckPredictedLabels.length > 0,
+  );
+  const results = useAppSelector(
+    state => getResultsByGrade(state, project, state.resultsTab),
+    deepEqual,
+  );
 
   return (
-    <div style={styles.panelPopupContainer}>
-      <div id="results-details" style={styles.panelPopup}>
-        <div
-          onClick={onClose}
-          onKeyDown={onClose}
-          style={styles.popupClose}
-          role="button"
-          tabIndex={0}
-        >
-          <FontAwesomeIcon icon={faTimes} />
+    <div className={styles.details}>
+      <div className={styles.modelRow}>
+        <PredictionSentence
+          label={currentResult.label}
+          features={currentResult.features}
+          size="m"
+          singleLine
+          className={styles.sentence}
+        />
+        <div className={styles.summary}>
+          <span className={styles.accuracy}>
+            {formatAccuracy(currentResult.accuracy)} Accuracy
+          </span>
+          {hasPredictions && (
+            <>
+              <span className={styles.divider} />
+              <ResultsToggle />
+            </>
+          )}
         </div>
-        {!isNaN(Number(percentCorrect)) && <ResultsToggle />}
-        <ResultsTable results={results} />
       </div>
+      <ResultsTable results={results} />
     </div>
   );
 };

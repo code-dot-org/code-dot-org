@@ -166,7 +166,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
-    real_script = Unit.starwars_unit
+    real_script = create(:script)
     fake_script = create(:script)
 
     user_script_1 = create(:user_script, user: @user, script: real_script)

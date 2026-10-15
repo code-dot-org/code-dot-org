@@ -1,0 +1,59 @@
+import {Typography} from '@mui/material';
+import React from 'react';
+
+import styles from './attempt-card.module.scss';
+
+export interface AttemptCardProps {
+  label?: string;
+  title: string;
+  description?: React.ReactNode;
+  children?: React.ReactNode;
+  // A bordered row between the body and the footer.
+  beforeFooterBorderedRow?: React.ReactNode;
+  footer?: React.ReactNode;
+  // For moving focus to this card's heading.
+  headingRef?: React.Ref<HTMLHeadingElement>;
+}
+
+// Shared card shell for the intro screen and every question type.
+const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
+  label,
+  title,
+  description,
+  children,
+  beforeFooterBorderedRow,
+  footer,
+  headingRef,
+}) => (
+  <div className={styles.card}>
+    <div className={styles.content}>
+      <div className={styles.headerRow}>
+        <div className={styles.header}>
+          {label && (
+            <Typography variant="overline2" className={styles.label}>
+              {label}
+            </Typography>
+          )}
+          <Typography
+            ref={headingRef}
+            variant="h4"
+            component="h2"
+            tabIndex={-1}
+          >
+            {title}
+          </Typography>
+        </div>
+        {description}
+      </div>
+      {children && <div className={styles.body}>{children}</div>}
+    </div>
+    {beforeFooterBorderedRow && (
+      <div className={styles.beforeFooterBorderedRow}>
+        {beforeFooterBorderedRow}
+      </div>
+    )}
+    {footer && <div className={styles.actionRow}>{footer}</div>}
+  </div>
+);
+
+export default AttemptCard;

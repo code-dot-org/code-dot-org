@@ -10,7 +10,7 @@ import {
   addThreadMessage,
   setThreadTitle,
   setArtifactType,
-} from '@cdo/apps/aiDifferentiation/redux';
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {

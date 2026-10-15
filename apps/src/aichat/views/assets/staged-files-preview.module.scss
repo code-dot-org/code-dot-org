@@ -47,16 +47,6 @@ $preview-image-size: 32px;
   }
 }
 
-.closeTooltipOverlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.closeTooltip {
-  @include fade-in(0.3s);
-}
-
 .preview-file {
   @extend %preview;
   display: flex;

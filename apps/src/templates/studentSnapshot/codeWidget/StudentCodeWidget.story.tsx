@@ -40,6 +40,11 @@ const meta: Meta<typeof StudentCodeWidget> = {
       control: 'number',
       description: 'Selected student ID',
     },
+    hasCodeLevel: {
+      control: 'boolean',
+      description:
+        'Whether the lesson has a level that could produce student code.',
+    },
   },
   decorators: [
     Story => {
@@ -60,6 +65,7 @@ export const SingleFile: Story = {
     selectedUnitId: 1,
     selectedLessonId: 1,
     selectedStudentId: 1,
+    hasCodeLevel: true,
   },
   decorators: [
     Story => {
@@ -80,6 +86,7 @@ export const MultipleFiles: Story = {
     selectedUnitId: 1,
     selectedLessonId: 1,
     selectedStudentId: 1,
+    hasCodeLevel: true,
   },
   decorators: [
     Story => {
@@ -100,6 +107,7 @@ export const NoFiles: Story = {
     selectedUnitId: 1,
     selectedLessonId: 1,
     selectedStudentId: 1,
+    hasCodeLevel: true,
   },
   decorators: [
     Story => {
@@ -113,4 +121,38 @@ export const NoFiles: Story = {
       return <Story />;
     },
   ],
+};
+
+export const WithInstructions: Story = {
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
+    hasCodeLevel: true,
+  },
+  decorators: [
+    Story => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (HttpClient as any).fetchJson = async () => {
+        return {
+          value: {
+            studentCode: SAMPLE_STUDENT_CODE,
+            instructions:
+              '## Instructions\n\nCreate three variables below, one of each data type, then use at least one operation to compute total calories.',
+          },
+          response: new Response(),
+        };
+      };
+      return <Story />;
+    },
+  ],
+};
+
+export const Hidden: Story = {
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
+    hasCodeLevel: false,
+  },
 };

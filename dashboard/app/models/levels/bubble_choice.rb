@@ -312,15 +312,21 @@ class BubbleChoice < DSLDefined
     # if our existing sublevels already match the given names, do nothing
     return if sublevels.map(&:name) == sublevel_names
 
-    # otherwise, update sublevels to match
-    levels_child_levels.sublevel.destroy_all
-    Level.where(name: sublevel_names).find_each do |new_sublevel|
-      ParentLevelsChildLevel.create!(
-        child_level: new_sublevel,
-        kind: ParentLevelsChildLevel::SUBLEVEL,
-        parent_level: self,
-        position: sublevel_names.index(new_sublevel.name)
-      )
+    # otherwise, update sublevels to match.
+    #
+    # Use a transaction so that the database is not modified if any child level
+    # validations fail. requires_new is necessary to ensure that the database is
+    # restored to its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      levels_child_levels.sublevel.destroy_all
+      Level.where(name: sublevel_names).find_each do |new_sublevel|
+        ParentLevelsChildLevel.create!(
+          child_level: new_sublevel,
+          kind: ParentLevelsChildLevel::SUBLEVEL,
+          parent_level: self,
+          position: sublevel_names.index(new_sublevel.name)
+        )
+      end
     end
 
     reload

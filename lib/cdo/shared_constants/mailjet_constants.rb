@@ -30,7 +30,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     },
     regional_partner_workshop_reminder: {
       template_id: {
@@ -39,7 +39,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     },
     teacher_workshop_detail_change_notification: {
       template_id: {
@@ -48,7 +48,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     },
     regional_partner_workshop_detail_change_notification: {
       template_id: {
@@ -57,7 +57,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     },
     teacher_post_workshop_survey: {
       template_id: {
@@ -66,7 +66,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     },
     facilitator_post_workshop_survey: {
       template_id: {
@@ -75,7 +75,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     },
     inactive_teacher_deletion_warning: {
       template_id: {
@@ -84,7 +84,7 @@ module MailjetConstants
         }
       },
       from_address: 'noreply@code.org',
-      from_name: 'Code.org',
+      from_name: 'CodeAI',
     }
   }.freeze
 

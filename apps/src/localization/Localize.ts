@@ -372,7 +372,7 @@ declare global {
   }
 }
 
-export {LocalizeJS};
+export type {LocalizeJS};
 
 const Localize = typeof window !== 'undefined' ? window.Localize : undefined;
 

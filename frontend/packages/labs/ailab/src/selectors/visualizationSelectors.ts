@@ -1,10 +1,23 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
+import {getAccuracyGrades} from '../helpers/accuracy';
 import {
   getUniqueOptions,
   getLocalizedColumnName,
 } from '../helpers/columnDetails';
+import {
+  buildDisplayTree,
+  type DisplayTreeNode,
+  type SerializedTree,
+} from '../helpers/displayTree';
+import {
+  countDisplayTreeRows,
+  NO_ROWS,
+  traceDisplayTree,
+  type DisplayTreeCountsLookup,
+  type DisplayTreeTrace,
+} from '../helpers/displayTreeTrace';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -13,12 +26,15 @@ import {
   getColumnsByDataType,
   getDatasetId,
 } from '../selectors';
+import {getTrainerFamily} from '../trainers/ids';
 import type {
+  AilabProject,
   Coordinate,
   ScatterPlotData,
   CrossTabResult,
   CrossTabData,
   DataRow,
+  TrainedModel,
 } from '../types';
 
 import {
@@ -30,7 +46,8 @@ import {
 export const getScatterPlotData = createSelector(
   [
     getLabelColumn,
-    (state: RootState) => labelColumnIsNumerical(state),
+    (state: RootState, project: AilabProject) =>
+      labelColumnIsNumerical(state, project),
     getCurrentColumn,
     (state: RootState) => currentColumnIsNumerical(state),
     getData,
@@ -113,11 +130,13 @@ export const getScatterPlotData = createSelector(
 export const getCrossTabData = createSelector(
   [
     getLabelColumn,
-    (state: RootState) => labelColumnIsCategorical(state),
+    (state: RootState, project: AilabProject) =>
+      labelColumnIsCategorical(state, project),
     getCurrentColumn,
     (state: RootState) => currentColumnIsCategorical(state),
     getData,
-    (state: RootState) => getUniqueOptionsLabelColumn(state),
+    (state: RootState, project: AilabProject) =>
+      getUniqueOptionsLabelColumn(state, project),
     getDatasetId,
   ],
   (
@@ -228,5 +247,89 @@ export const getUniqueOptionsLabelColumn = createSelector(
   [getLabelColumn, getData],
   (labelColumn: string | undefined, data: DataRow[]): string[] => {
     return getUniqueOptions(data, labelColumn!).map(String).sort();
+  },
+);
+
+export const getDisplayTree = createSelector(
+  [
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
+    getTrainerFamily,
+    (_state: RootState, project: AilabProject) => project.selectedFeatures,
+    (state: RootState) => state.featureNumberKey,
+    getLabelColumn,
+  ],
+  (
+    trainedModel,
+    trainerFamily,
+    features: string[],
+    featureNumberKey: Record<string, Record<string, number>>,
+    labelColumn: string | undefined,
+  ): DisplayTreeNode | undefined => {
+    if (!trainedModel || !labelColumn || trainerFamily !== 'decisionTree') {
+      return undefined;
+    }
+    return buildDisplayTree(trainedModel.toJSON() as SerializedTree, {
+      features,
+      featureNumberKey,
+      labelColumn,
+    });
+  },
+);
+
+export const getPredictionTrace = createSelector(
+  [
+    getDisplayTree,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
+    (state: RootState) => state.prediction,
+    (state: RootState) => state.predictionInputs,
+    (state: RootState) => state.predictionTestData,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    prediction: number | string | undefined,
+    inputs: number[],
+    testData: DataRow,
+  ): DisplayTreeTrace | undefined => {
+    if (!tree || !trainedModel || prediction === undefined) {
+      return undefined;
+    }
+    const {root} = trainedModel.toJSON() as SerializedTree;
+    return traceDisplayTree(tree, root!, inputs, testData);
+  },
+);
+
+export function getPredictionStep(
+  state: RootState,
+  project: AilabProject,
+  trainedModel?: TrainedModel,
+): number {
+  const pathLength =
+    getPredictionTrace(state, project, trainedModel)?.path.length ?? 0;
+  return state.predictionStep ?? pathLength - 1;
+}
+
+export const getDisplayTreeCounts = createSelector(
+  [
+    getDisplayTree,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
+    (state: RootState) => state.accuracyCheckExamples,
+    getAccuracyGrades,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    examples: number[][],
+    grades: string[],
+  ): DisplayTreeCountsLookup => {
+    if (!tree) {
+      return () => NO_ROWS;
+    }
+    const {root} = trainedModel!.toJSON() as SerializedTree;
+    const counts = countDisplayTreeRows(tree, root!, examples, grades);
+    return nodeId => counts.get(nodeId) ?? NO_ROWS;
   },
 );

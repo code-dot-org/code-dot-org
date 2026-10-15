@@ -2,6 +2,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
+import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './dance-view.module.scss';
@@ -26,6 +28,8 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
     useAppSelector(
       state => state.dance.isLoading || state.dance.runIsStarting
     ) || disabled;
+  // Follows the "when run" block color under Blockly accessibility themes.
+  const setupBlockColor = useSetupBlockColor();
 
   return (
     <div className={moduleStyles.controlsContainer}>
@@ -37,6 +41,9 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
         className={moduleStyles.controlButton}
         onClick={isRunning ? onReset : onRun}
         type="button"
+        // Orange as Run; as Reset (while running) it keeps the standard
+        // primary style, like Reset in every other lab.
+        sx={isRunning ? undefined : getRunButtonSx(setupBlockColor)}
         startIcon={
           <FontAwesomeV6Icon iconName={isRunning ? 'rotate-right' : 'play'} />
         }

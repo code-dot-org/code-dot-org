@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T02:42:18.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Movie Recommendations",
+    "long_instructions": "You’re building a program that recommends movies for users to watch.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `print_recommendation` to print a movie recommendation that includes the `movie` parameter and the `genre` parameter.\r\n2. The program currently prints two movie recommendations. Add your own third movie to recommend! You can pick what movie and genre to recommend.",
+    "bubble_choice_description": "Build a program that recommends movies for users to watch.",
+    "thumbnail_url": "https://images.code.org/d9780ae1ca2f04ef8afb534d60f825cb-movie.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def print_recommendation(movie, genre):\n  # TODO 1: Fill in the message to let the user know the movie and genre\n  print(f\"\")\n\nprint_recommendation(\"Wonder Woman\", \"superhero\")\nprint_recommendation(\"Interstellar\", \"science fiction\")\n\n# TODO 2: Add a recommendation for a third movie.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMq7nL7fOa4RuVWE\n4KqVadRh8kNeV2ql+bmExFVtW3vIz9QzKK2vuI0J6xXd0hakY+bbXNkXdvLd\nFgW2ltaz4/rkQ63TUSNbH+nhOe4eof3ViqJEElWCbx6JRBWG+tZU6+pM22Tj\nOufWTtwhqsPf/i6Jr9JKHlBoNS+BXaj0uK/mUxIpEn3qhksQcDIvJ+OV33yX\nfy4HPBOq6ti6CSHgmMht5tukF5yzLW5nxUqu+/TmPII8GX5tol/OFnfG3BWp\nsFRC/SBDcjwmUyFkqX2JtwKCqlOXGmMf2uhyY/yhxZfzO1qUD/1Sa78jJZPp\nSCDUu9AtW6aNNXdYBNJs8onsT2dQp4dKRteFk/pGpk8mA5AKThBOXgq7n0Ea\n1hePYf5AFfj+FzG+LaURCEuozMy7+MQtr2fl/ipHa4keB1Ae5dJlr7EzEca7\n2FVJH/FuQcovhK+a2utf2/7eZ7WryUmcYNpj\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:42:22 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:31 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:08:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:09:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,10 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
-import color from '@cdo/apps/util/color';
 
 class PauseButton extends React.Component {
   static propTypes = {
@@ -29,70 +30,23 @@ class PauseButton extends React.Component {
   };
 
   render() {
-    const buttonStyle = {
-      ...styles.button,
-      ...(this.props.marginRight && {marginRight: this.props.marginRight}),
-    };
-    const iconStyle = {
-      ...styles.icon,
-      ...(this.props.isAttached && styles.inactiveColor),
-      ...(this.props.isRunning && styles.runningColor),
-      ...(this.props.isPaused && styles.pausedColor),
-    };
-
     return (
-      <button
+      <MuiIconButton
         type="button"
+        variant={
+          this.props.isRunning && this.props.isPaused ? 'contained' : 'outlined'
+        }
+        color="primary"
         onClick={this.togglePause}
-        style={buttonStyle}
         disabled={!this.props.isRunning}
-        className="no-focus-outline"
         id="pauseButton"
         aria-label={this.props.isPaused ? 'Play' : 'Pause'}
       >
-        <div style={styles.container}>
-          <i
-            style={iconStyle}
-            className={
-              this.props.isPaused
-                ? 'fa-solid fa-fw fa-circle-play'
-                : 'fa-solid fa-fw fa-circle-pause'
-            }
-          />
-        </div>
-      </button>
+        <FontAwesomeV6Icon iconName={this.props.isPaused ? 'play' : 'pause'} />
+      </MuiIconButton>
     );
   }
 }
-
-const styles = {
-  icon: {
-    lineHeight: 'inherit',
-    fontSize: 48,
-  },
-  container: {
-    width: 40,
-    height: 40,
-    lineHeight: '40px',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  button: {
-    minWidth: 0,
-    padding: 0,
-    borderRadius: '100%',
-    backgroundColor: color.white,
-  },
-  inactiveColor: {
-    color: '#C7C7C7',
-  },
-  runningColor: {
-    color: color.cyan,
-  },
-  pausedColor: {
-    color: color.orange,
-  },
-};
 
 export default connect(
   state => ({

@@ -1,8 +1,7 @@
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 
@@ -102,23 +101,34 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
 
   const canRecord = recorderRef.current?.canRecord();
 
+  const micButton = (
+    <div className={styles.flexContainer} tabIndex={canRecord ? undefined : 0}>
+      <MuiIconButton
+        variant="outlined"
+        size="extraSmall"
+        aria-label={isRecording ? 'Stop recording' : 'Start recording'}
+        onClick={isRecording ? () => onEndRecording() : onStartRecording}
+        disabled={!canRecord || isTranscribing || disabled}
+        color={isRecording ? 'white' : 'secondary'}
+        className={classNames(isRecording && styles.recording)}
+      >
+        <FontAwesomeV6Icon {...iconProps} />
+      </MuiIconButton>
+    </div>
+  );
+
   return (
     <div className={styles.row}>
       {errorMessage && (
         <div className={styles.iconContainer}>
-          <WithTooltip
-            tooltipProps={{
-              size: 'xs',
-              tooltipId: 'error-tooltip',
-              text: errorMessage,
-              direction: 'onLeft',
-            }}
-          >
-            <FontAwesomeV6Icon
-              className={styles.error}
-              iconName="exclamation-circle"
-            />
-          </WithTooltip>
+          <Tooltip title={errorMessage} placement="left">
+            <span role="img" aria-label={errorMessage}>
+              <FontAwesomeV6Icon
+                className={styles.error}
+                iconName="exclamation-circle"
+              />
+            </span>
+          </Tooltip>
         </div>
       )}
       {isRecording && !isTranscribing && (
@@ -131,31 +141,16 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       )}
       <div className={styles.buttonContainer}>
         {isRecording && <div className={styles.ping} />}
-        <WithTooltip
-          tooltipProps={{
-            size: 'xs',
-            tooltipId: 'error-tooltip',
-            text: !canRecord
-              ? 'Audio recording is not supported on your device.'
-              : undefined,
-            direction: 'onLeft',
-            className: classNames(canRecord && styles.hide),
-          }}
-          tooltipOverlayClassName={styles.flexContainer}
-        >
-          <div className={styles.flexContainer}>
-            <MuiIconButton
-              variant="outlined"
-              size="extraSmall"
-              onClick={isRecording ? () => onEndRecording() : onStartRecording}
-              disabled={!canRecord || isTranscribing || disabled}
-              color={isRecording ? 'white' : 'secondary'}
-              className={classNames(isRecording && styles.recording)}
-            >
-              <FontAwesomeV6Icon {...iconProps} />
-            </MuiIconButton>
-          </div>
-        </WithTooltip>
+        {canRecord ? (
+          micButton
+        ) : (
+          <Tooltip
+            title="Audio recording is not supported on your device."
+            placement="left"
+          >
+            {micButton}
+          </Tooltip>
+        )}
       </div>
     </div>
   );

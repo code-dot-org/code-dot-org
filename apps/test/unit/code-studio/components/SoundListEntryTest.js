@@ -37,10 +37,7 @@ describe('SoundListEntry', () => {
     const wrapper = shallow(
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
-    // First child is a icon control for pause and play
-    expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa-solid fa-circle-play fa-2x'
-    );
+    expect(wrapper.find('[aria-label="Play sound"]')).toHaveLength(1);
   });
 
   it('renders a pause button when playing', () => {
@@ -48,10 +45,7 @@ describe('SoundListEntry', () => {
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
     wrapper.setState({isPlaying: true});
-    // First child is a icon control for pause and play
-    expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa-solid fa-circle-pause fa-2x'
-    );
+    expect(wrapper.find('[aria-label="Pause sound"]')).toHaveLength(1);
   });
 
   it('stops playing the sound when deselected', () => {

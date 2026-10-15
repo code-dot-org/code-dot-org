@@ -149,7 +149,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('input').at(1).props().disabled).to.equal(false);
     expect(wrapper.find('input').at(2).props().disabled).to.equal(false);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(13);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(14);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
     expect(wrapper.find('ProgrammingExpressionsEditor').length).to.equal(1);
@@ -194,7 +194,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('input').length).to.equal(8);
     expect(wrapper.find('select').length).to.equal(2);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(4);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(5);
     expect(wrapper.find('ResourcesEditor').length).to.equal(0);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });

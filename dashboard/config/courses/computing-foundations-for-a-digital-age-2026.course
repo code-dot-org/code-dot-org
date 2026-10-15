@@ -23,6 +23,19 @@
   },
   "resources": [
     {
+      "name": "2026 Changelog",
+      "url": "https://docs.google.com/document/d/1GC4PUju6DxqHYEJi4U-ENBdqKp-eafPbHPEFjNBNE6g/",
+      "key": "2026_changelog",
+      "properties": {
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "2026_changelog"
+      }
+    },
+    {
       "name": "AI Chat FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_faq",
@@ -64,6 +77,39 @@
       },
       "seeding_key": {
         "resource.key": "aif_teacher_forum"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/computing-foundations-for-a-digital-age-2026/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/computing-foundations-for-a-digital-age-2026/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/computing-foundations-for-a-digital-age-2026/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {

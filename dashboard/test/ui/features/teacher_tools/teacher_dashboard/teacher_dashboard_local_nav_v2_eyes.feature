@@ -7,9 +7,9 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Scenario: Local navigation on Progress v2
     When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1
+    Given I am assigned to course "ui-test-all-the-levels" unit 1
 
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
+    And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/10/levels/1?noautoplay=true"
     Then I wait for 3 seconds
     And I wait until element ".submitButton" is visible
     And I press ".answerbutton[index=1]" using jQuery
@@ -43,22 +43,25 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     And I close my eyes
 
+  # This scenario needs the section assigned to a course with more than one
+  # unit. The unit overview renders its link to the course overview only when
+  # the assigned course is not single-unit: Section#concise_summarize supplies
+  # the flag, and UnitOverview.jsx consumes it.
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-csp-2025" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
-    And I get levelbuilder access
 
     When I click selector "#task-button-View-progress-New-Section" once I see it
     Given I wait until element "#ui-test-teacher-sidebar" is visible
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
-    And I wait until element "h1:contains('All the Things!')" is visible
+    And I wait until element "h1:contains('Applab')" is visible
     Then I see no difference for "unit overview"
 
-    When I click selector "a:contains('allthethingscourse')" once I see it
-    And I wait until element "h2:contains('allthethingscourse')" is visible
+    When I click selector "a:contains('UI Test CSP')" once I see it
+    And I wait until element "h2:contains('UI Test CSP')" is visible
     Then I see no difference for "course overview"
 
     And I close my eyes

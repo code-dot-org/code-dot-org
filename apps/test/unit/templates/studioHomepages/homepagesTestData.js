@@ -150,6 +150,16 @@ export const joinedSections = [
     hidden: false,
     participantType: 'student',
   },
+  {
+    name: 'Period 5 (ClassLink)',
+    teacherName: 'Ms. Frizzle',
+    assignedTitle: 'Course 5',
+    linkToAssigned: 'https://studio.code.org/courses/course5',
+    login_type: 'classlink',
+    code: 'OrThisAsWell',
+    hidden: false,
+    participantType: 'student',
+  },
 ];
 
 export const joinedStorySections = [

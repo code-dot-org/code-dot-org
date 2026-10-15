@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-08-14T03:37:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "A student says:\r\n\r\n> A column’s data type only changes its label. It does not affect how the data can be analyzed.\r\n\r\nIs this explanation accurate? Use one example from the lesson to support your answer.",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_-js-2026",
+    "teacher_markdown": "The explanation is not accurate. A column’s data type determines how pandas can interpret, organize, and analyze its values.\r\n\r\nAccept responses that use an accurate example, such as:\r\n\r\n* Dates stored as `object` may be treated like text. Converting them to `datetime` allows pandas to order and analyze them as dates.\r\n* Numerical types allow pandas to calculate statistics such as the mean, minimum, and maximum.\r\n* Converting decimal values to `int64` removes the decimal portion, which can change the data and affect later analysis."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-14T03:37:05.280+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson3-level5-2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson3-level5-2026\"},{\"changed_at\":\"2026-08-14 03:37:43 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

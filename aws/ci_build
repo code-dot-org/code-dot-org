@@ -172,7 +172,7 @@ def main
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
         msg = "***#{DevelopersTopic.dotd_mention} See instructions in " \
-          "<https://codedotorg.slack.com/archives/C03CM903Y/p1760475342261049|this document> " \
+          "<https://codeai.slack.com/archives/C03CM903Y/p1760475342261049|this document> " \
           "for current guidance on tracking flaky tests.***"
         ChatClient.log msg, color: 'yellow'
       end

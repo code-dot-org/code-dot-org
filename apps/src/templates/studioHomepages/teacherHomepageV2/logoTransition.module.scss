@@ -42,11 +42,13 @@
 }
 
 // Stage hosts the morph. The viewBox crops the demo's full 1053x396
-// canvas to the wordmark's actual final-frame bounds — the squares
-// start a bit lower and never leave the visible band — so the stage
+// canvas to the wordmark's actual final-frame bounds, so the stage
 // aspect matches the landed logo's instead of having empty rows above
 // and below. The aspect is ~5.80:1; the static SVG we hand off to is
-// 5.91:1, close enough that the swap reads as continuous.
+// 5.91:1, close enough that the swap reads as continuous. Mid-cycle
+// the keyframes swing the squares well outside that cropped viewBox
+// (out to the demo's full 1053x396), so overflow: visible below is
+// load-bearing.
 .stage {
   position: absolute;
   inset: 0;
@@ -56,7 +58,12 @@
   max-width: 100%;
   max-height: 100%;
   aspect-ratio: 1021 / 176;
-  overflow: visible;
+
+  // Doubled class out-specifies Bootstrap 3 normalize's
+  // `svg:not(:root) { overflow: hidden }` (0,1,1 beats one class's 0,1,0).
+  &.stage {
+    overflow: visible;
+  }
 
   // The morph ends with black tiles + white letter cutouts; the static
   // SVG we hand off to draws white tile-shapes with transparent letter

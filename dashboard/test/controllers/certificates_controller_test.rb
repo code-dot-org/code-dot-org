@@ -8,6 +8,7 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'can show given name and course' do
+    create_hourofcode_unit_and_levels
     data = {name: 'student', course: 'hourofcode'}
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
@@ -81,7 +82,8 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_response :success
     expected_image_url = CDO.studio_url('/blockly/media/certificates/hour_of_ai_certificate.png')
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal 'hourofcode', response_data['courseName']
+    assert_nil response_data['courseName']
+    assert_equal I18n.t('certificate_hour_of_code'), response_data['courseTitle']
     assert_equal expected_image_url, response_data['imageUrl']
   end
 
@@ -98,5 +100,12 @@ class CertificatesControllerTest < ActionController::TestCase
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'oceans', response_data['courseName']
     assert_equal expected_image_url, response_data['imageUrl']
+  end
+
+  test 'batch page rejects an explicitly requested course that is not seeded' do
+    sign_in @teacher
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :batch, params: {course: Base64.urlsafe_encode64('hourofcode')}
+    end
   end
 end

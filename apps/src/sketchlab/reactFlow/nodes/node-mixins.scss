@@ -1,0 +1,7 @@
+// Keyboard focus ring shared by the rotatable wrapper of each node type.
+// Applied on the rotated layer so the ring turns with the node.
+@mixin node-focus-ring {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

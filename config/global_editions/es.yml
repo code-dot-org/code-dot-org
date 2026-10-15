@@ -24,7 +24,8 @@ header:
         url: /es-ES/global
       - title: hour_of_ai
         id: header-hoa
-        url: https://csforall.org/es-ES/hour-of-ai
+        domain: code.org
+        url: /hour-of-ai
 
     student:
       - title: my_dashboard

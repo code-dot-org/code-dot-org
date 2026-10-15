@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
@@ -11,6 +12,11 @@ export interface SuggestedLesson {
   url?: string;
   podcast_url?: string | null;
   completed_unit?: boolean;
+  timestamp?: string;
+}
+
+export interface SuggestedLessonEntry extends SuggestedLesson {
+  date: string;
 }
 
 type AudioStatus = 'loading' | 'ready' | 'unavailable';
@@ -27,6 +33,10 @@ interface SectionPodcastCardProps {
   avatarEmoji: number;
   // undefined = suggested_lessons fetch still in flight
   lesson: SuggestedLesson | null | undefined;
+  onSectionClick?: () => void;
+  // true when this section is the one currently in view on a section-specific
+  // page (progress, roster, etc.) elsewhere in dashboard
+  isActiveSection?: boolean;
 }
 
 const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
@@ -34,6 +44,8 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
   avatarColor,
   avatarEmoji,
   lesson,
+  onSectionClick,
+  isActiveSection,
 }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -84,13 +96,47 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
   // so there is no layout shift when audio becomes ready.
   const hasPodcast = !!lesson?.podcast_url;
 
+  const sectionRowInner = (
+    <>
+      <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
+      <div className={styles.sectionInfo}>
+        <div className={styles.sectionNameRow}>
+          <span className={styles.sectionName}>{sectionName}</span>
+          {isActiveSection && (
+            <Tags
+              size="s"
+              className={styles.activeTag}
+              tagsList={[{label: 'Active'}]}
+            />
+          )}
+        </div>
+        {lesson?.completed_unit ? (
+          <span className={styles.lessonName}>
+            Your students are finishing this unit! Consider assigning a new one.
+          </span>
+        ) : (
+          lesson?.name && (
+            <span className={styles.lessonName}>{lesson.name}</span>
+          )
+        )}
+      </div>
+      <FontAwesomeV6Icon iconName="chevron-right" />
+    </>
+  );
+
   return (
     <div className={styles.sectionGroup}>
-      <div className={styles.sectionRow}>
-        <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
-        <span className={styles.sectionName}>{sectionName}</span>
-        <FontAwesomeV6Icon iconName="chevron-right" />
-      </div>
+      {onSectionClick ? (
+        <button
+          type="button"
+          className={styles.sectionRow}
+          onClick={onSectionClick}
+        >
+          {sectionRowInner}
+        </button>
+      ) : (
+        <div className={styles.sectionRow}>{sectionRowInner}</div>
+      )}
       {hasPodcast && (
         <div className={styles.podcastRow}>
           <button

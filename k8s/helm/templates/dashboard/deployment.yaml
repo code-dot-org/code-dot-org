@@ -1,3 +1,4 @@
+{{- if .Values.dashboard.enabled }}
 # See _dashboard.yaml for `kind: Deployment` details
 {{- include "dashboard" 
   (merge (dict 
@@ -8,6 +9,7 @@
     "selectorLabels" (include "cdo.selectorLabels" (merge (dict "component" "dashboard") .))
   ) .)
 }}
+{{- end }}
 
 {{- if or (eq .Values.RAILS_ENV "") (not .Values.RAILS_ENV) }}
 {{- fail (printf "Error: RAILS_ENV is not set by values.yaml (current value: '%s').\n\nHint: if you're trying to do local dev with skaffold, try the -p flag, e.g. `skaffold -p development` sets RAILS_ENV=development.\n" .Values.RAILS_ENV) }}

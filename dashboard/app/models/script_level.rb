@@ -72,6 +72,7 @@ class ScriptLevel < ApplicationRecord
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
+  validate :levels_stay_within_ui_test_partition
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -91,6 +92,33 @@ class ScriptLevel < ApplicationRecord
     if activity_section && !activity_section_position
       errors.add(:script_level, 'activity_section_position is required when activity_section is present')
     end
+  end
+
+  # A unit and the levels it references must be on the same side of the
+  # "UI Test " partition. See dashboard/test/ui/config/README.md.
+  def levels_stay_within_ui_test_partition
+    offending = cross_partition_level_keys(level_keys || [])
+    return if offending.empty?
+    errors.add(:script_level, cross_partition_levels_message(offending))
+  end
+
+  # Returns those level keys on the wrong side of the "UI Test " partition for
+  # this script_level's unit.
+  def cross_partition_level_keys(keys)
+    # Ignore deprecated blockly levels, which are allowed in any unit.
+    keys = keys.compact.reject {|key| key.start_with?('blockly:')}
+    return [] if keys.empty?
+    ui_test_script = ui_test_script?
+    keys.reject {|key| Level.ui_test_name?(key) == ui_test_script}
+  end
+
+  def cross_partition_levels_message(offending_level_keys)
+    "a unit and its levels must be on the same side of the \"UI Test \" " \
+      "partition, but \"#{script&.name}\" references: #{offending_level_keys.join(', ')}"
+  end
+
+  def ui_test_script?
+    script&.name&.start_with?('ui-test-')
   end
 
   serialized_attrs %w(
@@ -217,7 +245,7 @@ class ScriptLevel < ApplicationRecord
       else
         script_completion_redirect(user, script, unit_group_unit: unit_group_unit)
       end
-    elsif bubble_choice? && !bubble_choice_parent && level.try(:navigation_type) != SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES[:NEXT_LEVEL]
+    elsif bubble_choice? && !bubble_choice_parent && (!level.try(:navigation_type) || level.try(:navigation_type) == SharedConstants::BUBBLE_CHOICE_NAVIGATION_TYPES[:PARENT])
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self, unit_group_unit: unit_group_unit)
     elsif bonus
@@ -229,6 +257,13 @@ class ScriptLevel < ApplicationRecord
       else
         script_lesson_extras_path(script.name, lesson_position)
       end
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor') && user&.can_use_lesson_deep_dive?
+      # For lessons with Tutor+ available (AIF/AID courses), send students at
+      # the end of the lesson to the lesson deep dive ("tutor") space instead of
+      # the next-level / unit-overview redirect. This is the single choke point
+      # for both lab2 (finishUrl) and legacy (next_level_url) navigation, so it
+      # takes precedence over lesson extras and the unit overview dialog.
+      lesson.lesson_tutor_path
     else
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
@@ -417,6 +452,13 @@ class ScriptLevel < ApplicationRecord
         summary[:name] = level.display_name || level.name
       end
 
+      # Shown in the level header when the unit uses simple progress.
+      if level.header_label.present?
+        summary[:header_label] =
+          level.get_localized_property(:header_label).presence ||
+          level.header_label
+      end
+
       if bubble_choice?
         summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end
@@ -476,15 +518,27 @@ class ScriptLevel < ApplicationRecord
     summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
-      {
+      entry = {
         id: level.id.to_s,
         name: level.name,
         url: edit_level_path(id: level.id),
         type: level.type,
-        # Recorded by the AI lesson generator; surfaced here so the
-        # /generate page can re-populate the prompt for an existing level.
-        generateOutline: level.try(:generate_outline),
+        # Level#generate_fields: state the AI lesson generator persisted,
+        # surfaced so the /generate page can re-populate its form.
+        **level.generate_fields,
       }
+      if level.is_a?(BubbleChoice)
+        entry[:sublevels] = level.sublevels.map do |sub|
+          {
+            id: sub.id.to_s,
+            name: sub.name,
+            url: edit_level_path(id: sub.id),
+            type: sub.type,
+            **sub.generate_fields,
+          }
+        end
+      end
+      entry
     end
 
     # For now, the lesson edit page does not allow modification of level
@@ -725,6 +779,11 @@ class ScriptLevel < ApplicationRecord
       Level.find(level_data['id'])
     end
 
+    # Explicitly enforce UI Test partition rules, because the levels HABTM
+    # rows are written directly without triggering model validations.
+    offending = cross_partition_level_keys(levels.map(&:key))
+    raise cross_partition_levels_message(offending) if offending.any?
+
     # Unit levels containing anonymous levels must be assessments.
     if levels.any? {|l| l.properties["anonymous"] == "true"}
       self.assessment = true
@@ -740,13 +799,19 @@ class ScriptLevel < ApplicationRecord
     raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
     existing_level = levels.first
 
-    levels << new_level
-    update!(
-      level_keys: levels.map(&:key),
-      variants: {
-        existing_level.name => {"active" => false}
-      }
-    )
+    # Use a transaction so that the database is not modified if any validations
+    # fail: the append writes the join row immediately, before update! runs
+    # them. requires_new is necessary to ensure that the database is restored to
+    # its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      levels << new_level
+      update!(
+        level_keys: levels.map(&:key),
+        variants: {
+          existing_level.name => {"active" => false}
+        }
+      )
+    end
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
     end

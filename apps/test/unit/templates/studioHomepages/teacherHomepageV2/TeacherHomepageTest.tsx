@@ -294,6 +294,15 @@ describe('TeacherHomepage', () => {
     });
   });
 
+  it('requests teaching profile data as JSON', async () => {
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(globalThis.fetch).toHaveBeenCalledWith('/teaching_profile_data', {
+      headers: {Accept: 'application/json'},
+    });
+  });
+
   it('sends analytics event when visiting page after login', async () => {
     trySetSessionStorage('logged_teacher_session', 'true');
     renderComponent();

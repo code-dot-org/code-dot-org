@@ -1,0 +1,143 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2026-08-03T00:22:28.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Sample Music \r\nTime to explore! In this level, see what you can discover about how AI makes music.\r\n\r\n1. Click the black box on the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to open the drum grid.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n2. Add some beats to the grid, then see what new options appear.\r\n3. Experiment! Try anything you're curious about.\r\n4. Press [Run](#clickable=run-button) to hear your work. \r\n\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "That sounds great!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_generated_patterns_ai",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-jam-ai_aa2b5bf0-1d71-4dbe-b835-888f9fde291c",
+        "message": "Click on the blank box in the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block, choose a few beats, then click \"Generate\".",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_patterns_ai",
+            "value": 1
+          }
+        ],
+        "callout": "id-left:play_pattern_ai_at_current_location_simple2"
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Click on the blank box in the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate a new beat. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_empty_patterns_ai",
+            "value": 1
+          }
+        ],
+        "callout": "id-left:play_pattern_ai_at_current_location_simple2"
+      },
+      {
+        "key": "music-ai-skill-aibeats_2ec51257-daa4-40af-b5d4-4b42a2cfaf11",
+        "message": "No sounds have played yet. ",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "hideAiTemperature": true,
+      "showAiGenerateAgainHelp": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_pattern_ai_at_current_location_simple2",
+              "id": "play_pattern_ai_at_current_location_simple2",
+              "x": 10,
+              "y": 230,
+              "disabledReasons": [
+                "ORPHANED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "pattern_ai": {
+                  "length": 2,
+                  "events": [
+
+                  ],
+                  "ai": true,
+                  "instrument": "drums"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "includeAi": true,
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout",
+        "addFunctionCalls": true
+      },
+      "library": "launch2024",
+      "blockMode": "Simple2"
+    },
+    "name_suffix": "_2026_dev",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-03T00:22:28.657+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level1_v2_2026_dev\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level1_v2_2026_dev\"},{\"changed_at\":\"2026-08-03 00:23:07 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:24:36 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:25:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:26:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:26:25 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:27:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

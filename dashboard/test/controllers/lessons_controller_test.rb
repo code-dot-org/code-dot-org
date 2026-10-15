@@ -31,6 +31,7 @@ class LessonsControllerTest < ActionController::TestCase
       has_lesson_plan: false,
     )
 
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     # The lesson tutor deep dive is scoped to AIF/AID student courses, so tutor
     # tests need a course whose offering carries an AI marketing initiative.
     @ai_script = create(:script, name: 'ai-unit-1')
@@ -146,6 +147,11 @@ class LessonsControllerTest < ActionController::TestCase
   # tutor is not available outside AIF/AID student courses
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor in a non-AI course'
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :not_found, name: 'teacher cannot view tutor in a non-AI course'
+
+  # the tutor gallery follows the same access rules as tutor
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: nil, response: :redirect, name: 'signed out user is redirected to sign in for tutor gallery'
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor gallery in an AIF/AID course'
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor gallery in a non-AI course'
 
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
@@ -277,6 +283,20 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :level_properties_by_id, params: -> {{id: @lesson.id}}, user: nil, response: :success
 
   test_user_gets_response_for :level_properties_by_id, user: nil, response: :success, params: -> {{id: @lesson2.id}}, name: 'anyone can fetch lesson level properties by ID on a lesson without a lesson plan'
+
+  test 'tutor is forbidden without lesson deep dive access' do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+    sign_in create(:student)
+    get :tutor, params: {course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}
+    assert_response :forbidden
+  end
+
+  test 'tutor gallery is forbidden without lesson deep dive access' do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+    sign_in create(:student)
+    get :tutor_gallery, params: {course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}
+    assert_response :forbidden
+  end
 
   test 'show includes correct SEO data' do
     get :show, params: {

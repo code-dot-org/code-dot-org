@@ -2,7 +2,7 @@ import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {AichatLabState} from '@cdo/apps/aichatLab/redux/state';
-import {AiDiffChatState} from '@cdo/apps/aiDifferentiation/redux';
+import {AiDiffChatState} from '@cdo/apps/aiTeacherDrawer/redux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';

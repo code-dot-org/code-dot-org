@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:15:31.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n \nfile_1 = open(\"bus_1.csv\")\nreader_1 = csv.DictReader(file_1)\nbus_1_times = []\nfor row in reader_1:\n    time = row[\"wait_time\"]\n    bus_1_times.append(time)\nfile_1.close()\n\nfile_2 = open(\"bus_2.csv\")\nreader_2 = csv.DictReader(file_2)\nbus_2_times = []\nfor row in reader_2:\n    time = row[\"wait_time\"]\n    bus_2_times.append(time)\nfile_2.close()\n\nprint(bus_1_times)\nprint(bus_2_times)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "bus_1.csv",
+          "contents": "day,wait_time\n1,1.5\n2,17.2\n3,3.8\n4,19.6\n5,2.1\n6,15.4\n7,4.7\n8,0.8\n9,18.9\n10,3.2\n11,16.7\n12,2.6\n13,14.8\n14,4.1\n15,1.9",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "bus_2.csv",
+          "contents": "day,wait_time\n1,11.6\n2,12.1\n3,11.8\n4,12.4\n5,11.5\n6,12.2\n7,11.9\n8,12.0\n9,11.7\n10,12.3\n11,11.6\n12,12.1\n13,11.8\n14,12.2\n15,11.9",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:19:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:19:43 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -9,14 +9,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {
-  setThreadId,
-  setThreadTitle,
-  setThreadType,
-  setThreadMessages,
-  setInitialChatMessage,
-} from '@cdo/apps/aiDifferentiation/redux';
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import AiDiffChat from '@cdo/apps/aiTeacherDrawer/AiDiffChat';
 import {THREAD_TYPES} from '@cdo/apps/aiTeacherDrawer/constants';
 import {
@@ -33,6 +25,14 @@ import {
   AIF_MATERIALS_MENU,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiTeacherDrawer/predefinedPrompts';
+import {
+  setThreadId,
+  setThreadTitle,
+  setThreadType,
+  setThreadMessages,
+  setInitialChatMessage,
+} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -264,7 +264,7 @@ describe('AiDiffChat', () => {
     expect(message).toHaveTextContent("Beep boop I'm a bot");
   });
 
-  it.skip('Selecting a 2-stage APCSP suggested prompt gives response and adds second set of prompts to thread messages', async () => {
+  it('Selecting a 2-stage APCSP suggested prompt gives response and adds second set of prompts to thread messages', async () => {
     const overrideThreadMessages = [
       {
         role: Role.ASSISTANT,
@@ -374,7 +374,7 @@ describe('AiDiffChat', () => {
     });
   });
 
-  it.skip('Selecting a 2-stage AIF suggested prompt gives response and adds second set of prompts to thread messages', async () => {
+  it('Selecting a 2-stage AIF suggested prompt gives response and adds second set of prompts to thread messages', async () => {
     const overrideThreadMessages = [
       {
         role: Role.ASSISTANT,

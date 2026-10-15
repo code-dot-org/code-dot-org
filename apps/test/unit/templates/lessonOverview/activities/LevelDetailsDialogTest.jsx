@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -77,7 +78,9 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     expect(wrapper.contains('This is some text.')).to.be.true;
-    expect(wrapper.find('h1').contains('External Markdown Level')).to.be.true;
+    // The title keeps the h1 look but renders as an h2; the lesson plan behind
+    // the dialog owns the page's h1.
+    expect(wrapper.find('h2').contains('External Markdown Level')).to.be.true;
   });
 
   it('can display the video and teacher markdown for an external markdown level', () => {
@@ -241,7 +244,7 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.find('SafeMarkdown').first().props().markdown).to.equal(
       'Markdown1'
     );
-    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
+    expect(wrapper.find(Typography).contains('Choice 1')).to.be.true;
   });
 
   it('can display a bubble choice sublevel with example solutions', () => {
@@ -277,7 +280,7 @@ describe('LevelDetailsDialogTest', () => {
       .instance()
       .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
     expect(wrapper.find('SublevelCard').length).to.equal(0);
-    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
+    expect(wrapper.find(Typography).contains('Choice 1')).to.be.true;
     expect(wrapper.find('TopInstructions').length).to.equal(1);
     expect(
       wrapper.find('TopInstructions').props().exampleSolutions[0]

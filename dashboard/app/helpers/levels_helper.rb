@@ -4,7 +4,6 @@ require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'image_size'
 require 'cdo/firehose'
-require 'cdo/languages'
 require 'net/http'
 require 'uri'
 require 'json'
@@ -460,6 +459,7 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.widget_app_options
+    app_options[:level].merge! level_view_options(@level.id).camelize_keys
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options
@@ -559,7 +559,7 @@ module LevelsHelper
     level_options = app_options[:level] ||= Hash.new
 
     level_options[:lastAttempt] = @last_attempt
-    level_options.merge! @level.properties.camelize_keys
+    level_options.merge! @level.student_properties.camelize_keys
 
     unless current_user && (current_user.teachers.any? ||
         (@level.try(:peer_reviewable?) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
@@ -723,6 +723,7 @@ module LevelsHelper
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
     end
     app_options[:share] = level_options[:share] if level_options[:share]
+    app_options[:is_building_quiz_questions] = level_options[:is_building_quiz_questions] if level_options[:is_building_quiz_questions]
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
@@ -1029,7 +1030,7 @@ module LevelsHelper
       begin
         body = s3.get_object(s3_args)[:body].read
       rescue => exception
-        Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        Observability::Errors.report(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
       student_code = nil

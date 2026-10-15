@@ -1,14 +1,8 @@
 import {makeBackpackImageImportHandler} from '@cdo/apps/sketchlab/reactFlow/utils/handleBackpackImageImport';
-import {uploadImageAsset} from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset';
-
-jest.mock('@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset');
-
-const mockUploadImageAsset = uploadImageAsset as jest.MockedFunction<
-  typeof uploadImageAsset
->;
 
 describe('makeBackpackImageImportHandler', () => {
   const file = new File(['data'], 'my-sketch.png', {type: 'image/png'});
+  let uploadImage: jest.Mock;
   let addImageNode: jest.Mock;
   let getFile: jest.Mock;
   let notifySuccess: jest.Mock;
@@ -16,8 +10,7 @@ describe('makeBackpackImageImportHandler', () => {
 
   function runImport() {
     const handler = makeBackpackImageImportHandler({
-      levelName: 'level-1',
-      channelId: 'channel-1',
+      uploadImage,
       addImageNode,
     });
     return handler({
@@ -29,22 +22,24 @@ describe('makeBackpackImageImportHandler', () => {
   }
 
   beforeEach(() => {
+    // Successful upload: hand the asset URL to the continuation.
+    uploadImage = jest.fn(async ({onUploaded}) =>
+      onUploaded('/v3/assets/channel-1/abc.png', false)
+    );
     addImageNode = jest.fn();
     getFile = jest.fn().mockResolvedValue(file);
     notifySuccess = jest.fn();
     notifyError = jest.fn();
-    mockUploadImageAsset.mockReset();
   });
 
   it('uploads the file as a project asset and adds an image node', async () => {
-    mockUploadImageAsset.mockResolvedValue('/v3/assets/channel-1/abc.png');
-
     await runImport();
 
-    expect(mockUploadImageAsset).toHaveBeenCalledWith(file, {
-      levelName: 'level-1',
-      channelId: 'channel-1',
-    });
+    // Backpack images were moderated when saved to the Backpack, so the
+    // re-upload skips moderation.
+    expect(uploadImage).toHaveBeenCalledWith(
+      expect.objectContaining({file, skipModeration: true})
+    );
     // altText drops the file extension.
     expect(addImageNode).toHaveBeenCalledWith({
       src: '/v3/assets/channel-1/abc.png',
@@ -55,7 +50,7 @@ describe('makeBackpackImageImportHandler', () => {
   });
 
   it('reports an error and adds nothing when the upload cannot proceed', async () => {
-    mockUploadImageAsset.mockResolvedValue(null);
+    uploadImage.mockImplementation(async ({onError}) => onError());
 
     await runImport();
 
@@ -69,7 +64,7 @@ describe('makeBackpackImageImportHandler', () => {
 
     await runImport();
 
-    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+    expect(uploadImage).not.toHaveBeenCalled();
     expect(addImageNode).not.toHaveBeenCalled();
     expect(notifyError).toHaveBeenCalledWith(expect.any(String));
   });

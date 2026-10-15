@@ -1,3 +1,5 @@
+@use './node-mixins.scss' as mixins;
+
 .shapeNode {
   position: relative;
   width: 100%;
@@ -6,13 +8,17 @@
   color: var(--text-neutral-primary);
 }
 
-// Rotatable layer that contains only the visual content (shape + label).
-// React Flow's NodeResizer, toolbar, and ConnectionHandles sit outside this
-// wrapper so resize math and edge attachment stay axis-aligned.
+// Rotatable layer holding the visual content (shape + label), the selection
+// box + resize handles, and the connection handles, so all of them rotate
+// together. The toolbar sits outside since it stays upright.
 .rotatable {
   position: absolute;
   inset: 0;
   transform-origin: center;
+}
+
+:global(.react-flow__node-shape:focus-visible) .rotatable {
+  @include mixins.node-focus-ring;
 }
 
 .shapeSvg {

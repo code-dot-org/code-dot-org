@@ -1,20 +1,45 @@
-@import "color.scss";
-
-$min-table-width: 600px;
-
 .addColumnHeader {
-  width: 19px;
+  width: 40px;
 }
 
 .table {
-  min-width: $min-table-width;
+  min-width: 600px;
+}
+
+.pagination {
+  padding: 10px;
+
+  // Vertically center the "Page:" label against the page-number buttons and
+  // add space after it. The shared PaginationWrapper floats both and lets its
+  // list collapse to zero height, so the shorter label sits above the buttons'
+  // center. Scope the fix here so other PaginationWrapper consumers are
+  // unaffected.
+  :global(.paginationControl) {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  :global(.paginationControl) > span {
+    float: none;
+    margin-right: 8px;
+    color: var(--text-neutral-primary);
+  }
+
+  :global(.pagination) {
+    display: flex;
+    align-items: center;
+
+    a {
+      float: none;
+    }
+  }
 }
 
 .plusIcon {
   align-items: center;
   border-radius: 2px;
-  background-color: white;
-  color: $teal;
+  background-color: var(--background-neutral-white-fixed);
+  color: var(--text-brand-teal-primary-fixed);
   cursor: pointer;
   display: inline-flex;
   height: 18px;

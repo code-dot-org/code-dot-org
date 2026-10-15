@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  text-align: center;
+  cursor: default;
+  background-color: var(--background-neutral-secondary);
+}
+
+.iconCircle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  background-color: var(--background-neutral-septenary);
+  color: var(--background-neutral-primary);
+}

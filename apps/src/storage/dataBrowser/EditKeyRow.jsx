@@ -1,5 +1,6 @@
 /** @overview Component for editing a key/value pair row. */
-import {Button as MuiButton} from '@mui/material';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -96,18 +97,25 @@ class EditKeyRow extends React.Component {
     return (
       <tr className={classNames(dataStyles.row, 'uitest-kv-table-row')}>
         <td className={dataStyles.cell}>
-          {JSON.stringify(this.props.keyName)}
+          <Typography variant="body2" component="span">
+            {JSON.stringify(this.props.keyName)}
+          </Typography>
         </td>
         <td className={dataStyles.cell}>
           {this.state.isEditing ? (
-            <input
-              className={dataStyles.input}
+            <TextField
+              name="value"
+              className={dataStyles.dataField}
+              color="gray"
+              size="s"
               value={this.state.newValue || ''}
               onChange={this.handleChange}
               onKeyUp={this.handleKeyUp}
             />
           ) : (
-            displayableValue(this.props.value)
+            <Typography variant="body2" component="span">
+              {displayableValue(this.props.value)}
+            </Typography>
           )}
         </td>
         <td className={classNames(dataStyles.cell, dataStyles.editButton)}>

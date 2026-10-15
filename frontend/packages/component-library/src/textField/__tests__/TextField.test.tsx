@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {useState, ChangeEvent} from 'react';
+import {useState, ChangeEvent, createRef} from 'react';
 import {vi} from 'vitest';
 
 import TextField, {TextFieldProps} from './../index';
@@ -134,5 +134,23 @@ describe('Design System - TextField', () => {
     expect(document.getElementById(errorId as string)).toHaveTextContent(
       'Required.',
     );
+  });
+
+  it('forwards ref to the underlying input, so callers can focus it', () => {
+    const ref = createRef<HTMLInputElement>();
+    render(
+      <TextField
+        ref={ref}
+        name="test-textfield-name"
+        value=""
+        onChange={() => {}}
+      />,
+    );
+
+    expect(ref.current).toBeInstanceOf(HTMLInputElement);
+    expect(ref.current).toHaveAttribute('name', 'test-textfield-name');
+
+    ref.current?.focus();
+    expect(ref.current).toHaveFocus();
   });
 });

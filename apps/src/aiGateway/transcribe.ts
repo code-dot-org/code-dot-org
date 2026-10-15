@@ -10,12 +10,16 @@ import AichatContextManager from '../aichat/aichatContextManager';
 
 import {
   CURRENT_SCHEMA_VERSION,
-  GatewayTranscribeResponseV1Schema,
-  type GatewayTranscribeResponseV1,
+  CurrentGatewayTranscribeResponseSchema,
+  type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileToken,
+  turnstileErrorTags,
+  turnstileHeaders,
+} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -32,10 +36,12 @@ async function transcribeThroughGateway(
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
     try {
-      const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
-        fetchTurnstileTokenIfEnabled(),
-      ]);
+      // Serialized, not parallel: the access token response carries the
+      // Turnstile mode that decides whether a challenge is needed at all.
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const formData = new FormData();
       formData.append('token', token);
@@ -53,13 +59,14 @@ async function transcribeThroughGateway(
         false,
         {
           'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+          'x-ai-gateway-phase': 'transcription',
           ...turnstileHeaders(turnstileToken),
         }
       );
 
       const rawResponse = await response.json();
       const parseResult =
-        GatewayTranscribeResponseV1Schema.safeParse(rawResponse);
+        CurrentGatewayTranscribeResponseSchema.safeParse(rawResponse);
       if (!parseResult.success) {
         await reportGatewayError(
           parseResult.error,
@@ -74,7 +81,7 @@ async function transcribeThroughGateway(
       }
       const wire = parseResult.success
         ? parseResult.data
-        : (rawResponse as GatewayTranscribeResponseV1);
+        : (rawResponse as CurrentGatewayTranscribeResponse);
 
       return {
         ...wire,
@@ -85,7 +92,8 @@ async function transcribeThroughGateway(
         await reportGatewayError(
           error,
           'transcribeThroughGateway',
-          modelString
+          modelString,
+          turnstileErrorTags(error)
         );
       }
       throw error;

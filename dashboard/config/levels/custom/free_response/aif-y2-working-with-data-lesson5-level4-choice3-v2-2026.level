@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-07T19:36:10.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "**☑️ Do This:**\r\n\r\nUsing the values you found for App 1 and App 2, answer these questions.\r\n\r\n- Which app is faster? Name the statistic you used, and support your conclusion with it.\r\n- Which app is more consistent? Name the statistic you used, and support your conclusion with it.\r\n- Which app would you use? Why? Consider your analysis’s strengths and limitations.\r\n",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "display_name": "Delivery Apps",
+    "bubble_choice_description": "Compare how quickly two delivery apps deliver food.",
+    "thumbnail_url": "https://images.code.org/9f39ea8e24eac2cc2ec7c116848b97bb-delivery.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 19:41:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 19:44:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 19:07:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

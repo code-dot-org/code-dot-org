@@ -21,6 +21,7 @@ describe('ProjectRemix', () => {
         getCurrentId: () => {},
         getCurrentName: () => {},
         serverSideRemix: () => {},
+        exceedsAbuseThreshold: () => false,
       },
     });
 
@@ -38,6 +39,18 @@ describe('ProjectRemix', () => {
 
   it('renders', () => {
     shallow(<ProjectRemix {...defaultProps} />);
+  });
+
+  it('does not render when project exceeds abuse threshold', () => {
+    const wrapper = shallow(
+      <ProjectRemix {...defaultProps} exceedsAbuseThreshold />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
+  it('does not render when lab2 project is blocked for abuse', () => {
+    const wrapper = shallow(<ProjectRemix {...defaultProps} isBlockedAbuse />);
+    expect(wrapper.isEmptyRender()).to.be.true;
   });
 
   it('will attempt serverside remix when possible', () => {

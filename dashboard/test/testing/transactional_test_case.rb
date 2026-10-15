@@ -26,9 +26,8 @@ module ActiveSupport
         # @warning This keeps a transaction open for the whole test class.
         #          Writes from other connections, for example Sequel, can wait on locks or hit a MySQL deadlock.
         private def setup_all(*args, &block)
-          self.db_connection = ActiveRecord::Base.connection
-
           super(*args) do
+            self.db_connection = ActiveRecord::Base.connection
             db_connection.begin_transaction(joinable: false)
             instance_exec(&block) if block
           end

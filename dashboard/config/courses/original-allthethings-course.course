@@ -1,12 +1,10 @@
 {
   "name": "original-allthethings-course",
   "script_names": [
-    "allthethings",
-    "allthehiddenthings"
+    "allthethings"
   ],
   "original_script_names": [
-    "allthethings",
-    "allthehiddenthings"
+    "allthethings"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

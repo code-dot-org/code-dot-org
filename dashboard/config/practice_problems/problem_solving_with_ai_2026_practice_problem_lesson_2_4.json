@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_4",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "A student first asked AI Chat for room decorating suggestions using only a text description, then asked again after adding a photo of the room. What would you expect to happen to AI's response?",
+  "solution": [
+    {"option": "The response stays exactly the same regardless of input type.", "correct": false},
+    {"option": "AI ignores the photo and responds only to the text.", "correct": false},
+    {"option": "AI's response becomes more specific and tailored to the details visible in the photo.", "correct": true},
+    {"option": "AI refuses to answer once an image is added.", "correct": false}
+  ],
+  "objective_keys": [
+    "970d4574-32a3-41bc-b9fd-70acc72cfa9b"
+  ]
+}

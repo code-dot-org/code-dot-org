@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-24 22:42:04 UTC",
+    "serialized_at": "2026-07-08 07:02:58 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -63,29 +63,29 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U1L1 Student Lesson Introduction"
+          "UI Test U1L1 Student Lesson Introduction"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L1 Student Lesson Introduction"
+          "UI Test U1L1 Student Lesson Introduction"
         ],
         "lesson.key": "Lesson",
         "lesson_group.key": "lg_1",
         "script.name": "ui-test-script-in-course-2017"
       },
       "level_keys": [
-        "U1L1 Student Lesson Introduction"
+        "UI Test U1L1 Student Lesson Introduction"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "U1L1 Student Lesson Introduction",
+        "level.key": "UI Test U1L1 Student Lesson Introduction",
         "script_level.level_keys": [
-          "U1L1 Student Lesson Introduction"
+          "UI Test U1L1 Student Lesson Introduction"
         ],
         "lesson.key": "Lesson",
         "lesson_group.key": "lg_1",
@@ -121,6 +121,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

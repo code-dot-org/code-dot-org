@@ -1,15 +1,24 @@
 import {ResultsGrades, MLTypes} from '../../src/constants';
 import {
+  formatAccuracy,
   getAccuracyRegression,
   getAccuracyClassification,
+  gradeAccuracy,
+  getGradeOptions,
   getAccuracyGrades,
+  getCorrectCount,
   getResultsByGrade,
   getPercentCorrect,
   getResultsDataInDataTableForm,
   getSummaryStat,
 } from '../../src/helpers/accuracy';
 
-import {classificationState, regressionState} from './testData';
+import {
+  classificationState,
+  classificationProject,
+  regressionState,
+  regressionProject,
+} from './testData';
 
 const regressionGrades = [
   ResultsGrades.INCORRECT,
@@ -99,24 +108,28 @@ const gradesTestCases = [
   {
     case: 'getResultsByGrade - correct, regression',
     state: regressionState,
+    project: regressionProject,
     grades: regressionGrades,
     gradeType: ResultsGrades.CORRECT,
   },
   {
     case: 'getResultsByGrade - incorrect, regression',
     state: regressionState,
+    project: regressionProject,
     grades: regressionGrades,
     gradeType: ResultsGrades.INCORRECT,
   },
   {
     case: 'getResultsByGrade - correct, classification',
     state: classificationState,
+    project: classificationProject,
     grades: mixedGrades,
     gradeType: ResultsGrades.CORRECT,
   },
   {
     case: 'getResultsByGrade - incorrect, classification',
     state: classificationState,
+    project: classificationProject,
     grades: mixedGrades,
     gradeType: ResultsGrades.INCORRECT,
   },
@@ -151,7 +164,7 @@ describe('get accuracy', () => {
   });
 
   test('regression', async () => {
-    const accuracy = getAccuracyRegression(regressionState);
+    const accuracy = getAccuracyRegression(regressionState, regressionProject);
     expect(accuracy.grades).toEqual(regressionGrades);
     expect(accuracy.percentCorrect).toBe(regressionPercent);
   });
@@ -160,14 +173,19 @@ describe('get accuracy', () => {
 describe('get grades', () => {
   classificationTestCases.forEach(testCase => {
     test(testCase.case, async () => {
-      classificationState['accuracyCheckPredictedLabels'] = testCase.results;
-      const grades = getAccuracyGrades(classificationState);
+      const grades = getAccuracyGrades(
+        {
+          ...classificationState,
+          accuracyCheckPredictedLabels: testCase.results,
+        },
+        classificationProject,
+      );
       expect(grades).toEqual(testCase.grades);
     });
   });
 
   test('regression', async () => {
-    const grades = getAccuracyGrades(regressionState);
+    const grades = getAccuracyGrades(regressionState, regressionProject);
     expect(grades).toEqual(regressionGrades);
   });
 });
@@ -176,21 +194,51 @@ describe('get percent correct', () => {
   classificationTestCases.forEach(testCase => {
     test(testCase.case, async () => {
       classificationState['accuracyCheckPredictedLabels'] = testCase.results;
-      const percentCorrect = getPercentCorrect(classificationState);
+      const percentCorrect = getPercentCorrect(
+        classificationState,
+        classificationProject,
+      );
       expect(percentCorrect).toEqual(testCase.percent);
     });
   });
 
   test('regression', async () => {
-    const percentCorrect = getPercentCorrect(regressionState);
+    const percentCorrect = getPercentCorrect(
+      regressionState,
+      regressionProject,
+    );
     expect(percentCorrect).toEqual(regressionPercent);
+  });
+});
+
+describe('getCorrectCount', () => {
+  test('classification', () => {
+    const state = {
+      ...classificationState,
+      accuracyCheckPredictedLabels: mostlyAccurateResults,
+    };
+    expect(getCorrectCount(state, classificationProject)).toEqual({
+      correct: 5,
+      total: 6,
+    });
+  });
+
+  test('regression', () => {
+    expect(getCorrectCount(regressionState, regressionProject)).toEqual({
+      correct: 4,
+      total: 6,
+    });
   });
 });
 
 describe('get results', () => {
   gradesTestCases.forEach(testCase => {
     test(testCase.case, async () => {
-      const results = getResultsByGrade(testCase.state, testCase.gradeType);
+      const results = getResultsByGrade(
+        testCase.state,
+        testCase.project,
+        testCase.gradeType,
+      );
       const resultsCount = results.examples.length;
       const expectedCount = testCase.grades.filter(
         grade => grade === testCase.gradeType,
@@ -200,14 +248,22 @@ describe('get results', () => {
   });
 
   test('regression - all', async () => {
-    const results = getResultsByGrade(regressionState, ResultsGrades.ALL);
+    const results = getResultsByGrade(
+      regressionState,
+      regressionProject,
+      ResultsGrades.ALL,
+    );
     const resultsCount = results.examples.length;
     const expectedCount = regressionGrades.length;
     expect(resultsCount).toEqual(expectedCount);
   });
 
   test('classification - all', async () => {
-    const results = getResultsByGrade(classificationState, ResultsGrades.ALL);
+    const results = getResultsByGrade(
+      classificationState,
+      classificationProject,
+      ResultsGrades.ALL,
+    );
     const resultsCount = results.examples.length;
     const expectedCount = mixedGrades.length;
     expect(resultsCount).toEqual(expectedCount);
@@ -216,26 +272,127 @@ describe('get results', () => {
 
 describe('get results data in data table form', () => {
   test('regression', async () => {
-    const resultsData = getResultsDataInDataTableForm(regressionState);
+    const resultsData = getResultsDataInDataTableForm(
+      regressionState,
+      regressionProject,
+    );
     expect(resultsData).toEqual(regressionDataForTable);
   });
 
   test('classification', async () => {
-    const resultsData = getResultsDataInDataTableForm(classificationState);
+    const resultsData = getResultsDataInDataTableForm(
+      classificationState,
+      classificationProject,
+    );
     expect(resultsData).toEqual(classificationDataForTable);
   });
 });
 
 describe('get summary stat', () => {
   test('classification', async () => {
-    const summaryStat = getSummaryStat(classificationState);
+    const summaryStat = getSummaryStat(
+      classificationState,
+      classificationProject,
+    );
     expect(summaryStat.stat).toBe(lowAccuracyPercent);
     expect(summaryStat.type).toBe(MLTypes.CLASSIFICATION);
   });
 
   test('regression', async () => {
-    const summaryStat = getSummaryStat(regressionState);
+    const summaryStat = getSummaryStat(regressionState, regressionProject);
     expect(summaryStat.stat).toBe(regressionPercent);
     expect(summaryStat.type).toBe(MLTypes.REGRESSION);
+  });
+});
+
+describe('gradeAccuracy', () => {
+  test('with no tolerance, a label must match exactly', () => {
+    const result = gradeAccuracy(['red', 'blue', 'red'], ['red', 'red', 'red']);
+
+    expect(result.grades).toEqual([
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT,
+      ResultsGrades.CORRECT,
+    ]);
+    expect(result.percentCorrect).toBe('66.67');
+  });
+
+  test('a number and its string form match', () => {
+    // Both sides go through toString, as they did before this function existed.
+    expect(gradeAccuracy([1, '0'], ['1', 0]).percentCorrect).toBe('100.00');
+  });
+
+  test('with a tolerance, a label may differ by that much', () => {
+    const result = gradeAccuracy([10, 10], [10.1, 12], {tolerance: 0.5});
+
+    expect(result.grades).toEqual([
+      ResultsGrades.CORRECT,
+      ResultsGrades.INCORRECT,
+    ]);
+    expect(result.percentCorrect).toBe('50.00');
+  });
+
+  test('a difference exactly at the tolerance is correct', () => {
+    expect(gradeAccuracy([10], [10.5], {tolerance: 0.5}).percentCorrect).toBe(
+      '100.00',
+    );
+  });
+
+  test('an empty prediction list reports NaN', () => {
+    // The KNN sweep depends on this string losing the accuracy comparison.
+    expect(gradeAccuracy([], [])).toEqual({percentCorrect: 'NaN', grades: []});
+  });
+
+  test('a missing prediction list reports NaN', () => {
+    expect(gradeAccuracy(undefined, []).percentCorrect).toBe('NaN');
+  });
+});
+
+describe('getGradeOptions', () => {
+  test('a categorical label grades on an exact match', () => {
+    expect(getGradeOptions(classificationState, classificationProject)).toEqual(
+      {},
+    );
+  });
+
+  test('a numerical label grades on 5% of the label range', () => {
+    // The fixture heights run 0.9 to 3.9, so the range is 3 and 5% of it is 0.15.
+    const {tolerance} = getGradeOptions(regressionState, regressionProject);
+    expect(tolerance).toBeCloseTo(0.15, 10);
+  });
+
+  test('the regression selector uses that same tolerance', () => {
+    const viaSelector = getAccuracyRegression(
+      regressionState,
+      regressionProject,
+    );
+    const viaGrade = gradeAccuracy(
+      regressionState.accuracyCheckPredictedLabels,
+      regressionState.accuracyCheckLabels,
+      getGradeOptions(regressionState, regressionProject),
+    );
+
+    expect(viaSelector).toEqual(viaGrade);
+  });
+
+  test('the classification selector uses that same rule', () => {
+    expect(getAccuracyClassification(classificationState)).toEqual(
+      gradeAccuracy(
+        classificationState.accuracyCheckPredictedLabels,
+        classificationState.accuracyCheckLabels,
+        getGradeOptions(classificationState, classificationProject),
+      ),
+    );
+  });
+});
+
+describe('formatAccuracy', () => {
+  test('drops trailing zeros from the stored two decimals', () => {
+    expect(formatAccuracy('80.00')).toBe('80%');
+    expect(formatAccuracy('66.67')).toBe('66.67%');
+  });
+
+  test('shows a dash when there was nothing to grade', () => {
+    expect(formatAccuracy('NaN')).toBe('—');
   });
 });

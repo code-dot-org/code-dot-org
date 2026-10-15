@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,8 +6,6 @@ import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
-
-import color from '../../util/color';
 
 import AssetManager, {ImageMode} from './AssetManager';
 import IconLibrary from './IconLibrary';
@@ -102,30 +101,34 @@ export default class ImagePicker extends React.Component {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        color: this.state.mode === ImageMode.FILE ? null : '#999',
+        color:
+          this.state.mode === ImageMode.FILE
+            ? 'var(--text-brand-purple-primary)'
+            : 'var(--text-neutral-quaternary)',
         fontSize: '16px',
         cursor: 'pointer',
       },
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        color: this.state.mode === ImageMode.ICON ? null : '#999',
+        color:
+          this.state.mode === ImageMode.ICON
+            ? 'var(--text-brand-purple-primary)'
+            : 'var(--text-neutral-quaternary)',
         cursor: 'pointer',
       },
       urlModeToggle: {
         margin: '0 20px 0 0',
         fontSize: '16px',
-        color: this.state.mode === ImageMode.URL ? null : '#999',
+        color:
+          this.state.mode === ImageMode.URL
+            ? 'var(--text-brand-purple-primary)'
+            : 'var(--text-neutral-quaternary)',
         cursor: 'pointer',
       },
       divider: {
-        borderColor: color.purple,
+        borderColor: 'var(--borders-brand-purple-primary)',
         margin: '5px 0',
-      },
-      warning: {
-        color: color.red,
-        fontSize: 13,
-        fontWeight: 'bold',
       },
     };
 
@@ -152,9 +155,13 @@ export default class ImagePicker extends React.Component {
 
     let modeSwitch,
       title = this.props.assetChosen ? (
-        <p className="dialog-title">{i18n.chooseAssets()}</p>
+        <MuiTypography variant="h3" gutterBottom className="dialog-title">
+          {i18n.chooseAssets()}
+        </MuiTypography>
       ) : (
-        <p className="dialog-title">{i18n.manageAssets()}</p>
+        <MuiTypography variant="h3" gutterBottom className="dialog-title">
+          {i18n.manageAssets()}
+        </MuiTypography>
       );
 
     const imageTypeFilter =
@@ -203,9 +210,18 @@ export default class ImagePicker extends React.Component {
       <div className="modal-content" style={styles.root}>
         {title}
         {this.props.showUnderageWarning && (
-          <p style={styles.warning}>
+          <MuiTypography
+            variant="body4"
+            component="span"
+            sx={{
+              display: 'block',
+              color: 'var(--text-error-primary)',
+              fontWeight: 'bold',
+              marginBottom: '0.75em',
+            }}
+          >
             {i18n.warningUploadingPersonalInformation()}
-          </p>
+          </MuiTypography>
         )}
         {modeSwitch}
         {this.getBody(disableAudio, levelName, isStartMode)}

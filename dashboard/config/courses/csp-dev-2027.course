@@ -1,0 +1,31 @@
+{
+  "name": "csp-dev-2027",
+  "script_names": [
+    "csp-unit1-dev-27-28",
+    "csp-unit2-dev-27-28",
+    "csp-unit3-dev-27-28",
+    "csp-unit4-dev-27-28",
+    "csp-unit5-dev-27-28"
+  ],
+  "original_script_names": [
+    "csp-unit1-dev-27-28",
+    "csp-unit2-dev-27-28",
+    "csp-unit3-dev-27-28",
+    "csp-unit4-dev-27-28",
+    "csp-unit5-dev-27-28"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csp-dev-2027",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

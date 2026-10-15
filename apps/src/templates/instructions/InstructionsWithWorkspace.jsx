@@ -24,6 +24,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     instructionsStyle: PropTypes.object,
     workspaceStyle: PropTypes.object,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
@@ -142,7 +146,13 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
     return (
       <span>
-        <TopInstructions mainStyle={instructionsStyle} />
+        <TopInstructions
+          mainStyle={instructionsStyle}
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
+        />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
           style={{

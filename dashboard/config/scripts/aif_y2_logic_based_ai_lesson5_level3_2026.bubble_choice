@@ -1,0 +1,9 @@
+name 'aif-y2-logic-based-ai-lesson5-level3-2026'
+display_name 'Write a Function'
+description "Choose what kind of program you'd like to build."
+sublevels
+level 'aif-y2-logic-based-ai-lesson5-level3-choice1--2026'
+level 'aif-y2-logic-based-ai-lesson5-level3-choice2-2026'
+level 'aif-y2-logic-based-ai-lesson5-level3-choice3-2026'
+
+uses_lab2

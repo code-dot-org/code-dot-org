@@ -1,11 +1,9 @@
-import {Typography} from '@mui/material';
-import _ from 'lodash';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import color from '@cdo/apps/util/color';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -156,9 +154,9 @@ export default class LibraryPublisher extends React.Component {
     const {libraryName} = this.state;
     return (
       <div>
-        <input
-          style={styles.textInput}
-          type="text"
+        <TextField
+          aria-labelledby="library-name-label"
+          name="libraryName"
           value={libraryName}
           onChange={this.setLibraryName}
           onBlur={event =>
@@ -167,7 +165,9 @@ export default class LibraryPublisher extends React.Component {
             })
           }
         />
-        <div style={styles.info}>{i18n.libraryNameRequirements()}</div>
+        <Typography variant="body3" component="div">
+          {i18n.libraryNameRequirements()}
+        </Typography>
       </div>
     );
   };
@@ -188,9 +188,10 @@ export default class LibraryPublisher extends React.Component {
     return (
       <textarea
         id="ui-test-library-description"
+        aria-labelledby="library-description-label"
         rows="2"
         cols="200"
-        style={{...styles.textInput, ...styles.description}}
+        style={styles.description}
         placeholder={i18n.libraryDescriptionPlaceholder()}
         value={libraryDescription}
         onChange={event => {
@@ -241,31 +242,32 @@ export default class LibraryPublisher extends React.Component {
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
       const checked = selectedFunctions[functionName] || false;
-      const functionId = _.uniqueId(`${functionName}-`);
 
       return (
-        <div key={functionName}>
-          <div style={styles.functionSelector}>
-            <input
-              style={styles.largerCheckbox}
-              type="checkbox"
-              id={functionId}
-              disabled={!this.isFunctionValid(sourceFunction)}
-              name={functionName}
-              checked={checked}
-              onChange={() => this.boxChecked(sourceFunction)}
-            />
-            <label htmlFor={functionId} style={styles.functionLabel}>
-              {functionName}
-            </label>
-          </div>
+        <div key={functionName} style={styles.functionBlock}>
+          <Checkbox
+            name={functionName}
+            label={functionName}
+            size="l"
+            disabled={!this.isFunctionValid(sourceFunction)}
+            checked={checked}
+            onChange={() => this.boxChecked(sourceFunction)}
+          />
           {!this.hasComment(sourceFunction) && (
-            <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
+            <Typography
+              variant="body3"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
+              {i18n.libraryExportNoCommentError()}
+            </Typography>
           )}
           {this.duplicateFunction(sourceFunction) && (
-            <p style={styles.alert}>
+            <Typography
+              variant="body3"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               {i18n.libraryExportDuplicationFunctionError()}
-            </p>
+            </Typography>
           )}
           <pre style={styles.textInput}>{comment}</pre>
         </div>
@@ -306,7 +308,9 @@ export default class LibraryPublisher extends React.Component {
     }
     return (
       <div>
-        <p style={styles.alert}>{errorMessage}</p>
+        <Typography variant="body3" sx={{color: 'var(--text-error-primary)'}}>
+          {errorMessage}
+        </Typography>
       </div>
     );
   };
@@ -366,62 +370,73 @@ export default class LibraryPublisher extends React.Component {
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
     const {onShareTeacherLibrary} = this.props;
-    const selectAllCheckboxId = _.uniqueId('func-select-all-');
 
     return (
       <div>
-        <Typography variant="h2" gutterBottom>
+        <Typography
+          id="library-name-label"
+          variant="h4"
+          gutterBottom
+          sx={styles.sectionHeader}
+        >
           {i18n.libraryName()}
         </Typography>
         {this.displayNameInput()}
-        <Typography variant="h2" gutterBottom>
+        <Typography
+          id="library-description-label"
+          variant="h4"
+          gutterBottom
+          sx={styles.sectionHeader}
+        >
           {i18n.description()}
         </Typography>
         {this.displayDescription()}
-        <Typography variant="h2" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={styles.sectionHeader}>
           {i18n.catProcedures()}
         </Typography>
-        <div style={styles.functionSelector}>
-          <input
-            style={styles.largerCheckbox}
-            type="checkbox"
-            id={selectAllCheckboxId}
-            checked={this.allFunctionsSelected()}
-            onChange={this.toggleAllFunctionsSelected}
-          />
-          <label
-            htmlFor={selectAllCheckboxId}
-            style={styles.selectAllFunctionsLabel}
-          >
-            {i18n.selectAllFunctions()}
-          </label>
-        </div>
+        <Checkbox
+          name="selectAllFunctions"
+          label={i18n.selectAllFunctions()}
+          size="l"
+          textThickness="thick"
+          checked={this.allFunctionsSelected()}
+          onChange={this.toggleAllFunctionsSelected}
+        />
         {this.displayFunctions()}
-        <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
+        <Typography variant="body3" component="div">
+          {i18n.libraryFunctionRequirements()}
+        </Typography>
         <div style={{position: 'relative'}}>
-          <Button
+          <MuiButton
             id="ui-test-publish-library"
-            style={styles.button}
+            variant="contained"
+            color="primary"
             onClick={this.validateAndPublish}
-            text={alreadyPublished ? i18n.update() : i18n.publish()}
-          />
+            sx={{marginTop: '20px'}}
+          >
+            {alreadyPublished ? i18n.update() : i18n.publish()}
+          </MuiButton>
           {onShareTeacherLibrary && (
-            <Button
+            <MuiButton
               id="ui-test-manage-libraries"
-              style={{...styles.button, marginLeft: 10}}
+              variant="outlined"
+              color="secondary"
               onClick={onShareTeacherLibrary}
-              text={i18n.manageLibraries()}
-              color={Button.ButtonColor.gray}
-            />
+              sx={{marginTop: '20px', marginLeft: '10px'}}
+            >
+              {i18n.manageLibraries()}
+            </MuiButton>
           )}
           {alreadyPublished && (
-            <Button
+            <MuiButton
               id="ui-test-unpublish-library"
-              style={{...styles.button, ...styles.unpublishButton}}
+              variant="contained"
+              color="error"
               onClick={this.unpublish}
-              text={i18n.unpublish()}
-              color={Button.ButtonColor.red}
-            />
+              sx={{marginTop: '20px', position: 'absolute', right: 0}}
+            >
+              {i18n.unpublish()}
+            </MuiButton>
           )}
         </div>
         {this.displayError()}
@@ -431,50 +446,26 @@ export default class LibraryPublisher extends React.Component {
 }
 
 const styles = {
-  alert: {
-    color: color.red,
-    width: '90%',
-    paddingTop: 8,
-    fontStyle: 'italic',
+  sectionHeader: {
+    marginTop: '24px',
   },
-  functionSelector: {
-    display: 'flex',
-    alignItems: 'center',
+  functionBlock: {
     margin: '10px 10px 10px 0',
-  },
-  largerCheckbox: {
-    width: 20,
-    height: 20,
-  },
-  selectAllFunctionsLabel: {
-    margin: 0,
-    fontSize: 20,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  functionLabel: {
-    margin: 0,
-    fontSize: 20,
-  },
-  info: {
-    fontSize: 12,
-    fontStyle: 'italic',
-    lineHeight: 1.2,
   },
   textInput: {
     fontSize: 14,
     padding: 6,
-    color: color.dimgray,
+    color: 'var(--text-neutral-secondary)',
   },
   description: {
     width: '98%',
     resize: 'vertical',
-  },
-  unpublishButton: {
-    right: 0,
-    position: 'absolute',
-  },
-  button: {
-    margin: 0,
-    marginTop: 20,
+    fontFamily: 'inherit',
+    fontSize: '1rem',
+    padding: '0.5rem 0.75rem',
+    color: 'var(--text-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
+    border: '1px solid var(--borders-neutral-solid)',
+    borderRadius: '0.25rem',
   },
 };

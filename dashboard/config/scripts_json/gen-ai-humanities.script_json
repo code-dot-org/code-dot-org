@@ -21,7 +21,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:30:15 UTC",
+    "serialized_at": "2026-08-03 20:52:10 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -906,6 +907,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/gen-ai-humanities/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/gen-ai-humanities/units/1/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/gen-ai-humanities/units/1/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Guide to ChatGPT",
       "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/edit",
       "key": "guide_for_working_with_chatgpt",
@@ -1032,6 +1066,24 @@
     {
       "seeding_key": {
         "resource.key": "ai_chatbot_prompting_guide",
+        "script.name": "gen-ai-humanities"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "gen-ai-humanities"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "gen-ai-humanities"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "gen-ai-humanities"
       }
     },
@@ -1253,6 +1305,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

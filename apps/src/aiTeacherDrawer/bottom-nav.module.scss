@@ -1,33 +1,44 @@
-@import 'color';
-
 .nav {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   flex-shrink: 0;
-  background: $neutral_white;
+  background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-right: 0.125rem solid $neutral_dark;
-  border-bottom: 0.125rem solid $neutral_dark;
-  border-left: 0.125rem solid $neutral_dark;
+  border-right: 0.125rem solid var(--borders-neutral-solid);
+  border-bottom: 0.125rem solid var(--borders-neutral-solid);
+  border-left: 0.125rem solid var(--borders-neutral-solid);
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .item {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-brand-purple-primary);
+}
+
+// Sized to its icon + label content (not the full-width .item button) so the
+// active pill hugs the content instead of stretching across the nav column.
+.itemContent {
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  flex: 1;
-  padding: 0.625rem 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: $neutral_dark60;
+  margin: 6px 0;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  color: inherit;
 
   &.active {
-    color: $neutral_dark;
+    background: var(--background-selected-primary);
+    color: var(--text-selected-primary);
 
     .label {
       font-weight: 700;

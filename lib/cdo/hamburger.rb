@@ -109,6 +109,8 @@ class Hamburger
     hamburger_links = ge_hamburger_config[:teacher] || {}
     if options[:user_type] == "student"
       hamburger_links = ge_hamburger_config[:student] || {}
+    elsif options[:marketing_nav] && !is_teacher_or_student
+      hamburger_links = ge_hamburger_config[:signed_out_marketing] || ge_hamburger_config[:teacher] || {}
     end
     hamburger_items = hamburger_links.map {|item| item[:title]}
 
@@ -228,7 +230,12 @@ class Hamburger
     ge_config = Cdo::GlobalEdition.region_config(options[:ge_region], :header) || {}
     ge_top_config = ge_config[:top] || {}
 
-    links = ge_top_config[:signed_out] || []
+    links =
+      if options[:marketing_nav]
+        ge_top_config[:signed_out_marketing] || ge_top_config[:signed_out] || []
+      else
+        ge_top_config[:signed_out] || []
+      end
     if options[:user_type] == "teacher"
       links = ge_top_config[:teacher] || []
     elsif options[:user_type] == "student"

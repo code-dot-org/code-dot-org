@@ -7,10 +7,13 @@
  * so when moving things preserve the include order as much as possible.
  */
 import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
+import 'bootstrap-sass';
 import React from 'react';
 
 import hashEmail from '@cdo/apps/code-studio/hashEmail';

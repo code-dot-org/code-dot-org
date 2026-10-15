@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-29 00:19:55 UTC",
+    "serialized_at": "2026-10-08 16:00:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -49,7 +49,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Other",
+      "name": "Technical Interview",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -58,6 +58,36 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Theater Playground",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "CSP Unit 2 Project Examples",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
@@ -75,6 +105,42 @@
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
+    },
+    {
+      "key": "256ff5f8-1cd5-49ad-925f-b38888d61af6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "256ff5f8-1cd5-49ad-925f-b38888d61af6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
+    },
+    {
+      "key": "89081eb2-c3c3-45c1-a493-ee182e75181d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
+    },
+    {
+      "key": "79b990b3-1124-44a9-aebf-97ece668d745",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79b990b3-1124-44a9-aebf-97ece668d745",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -86,6 +152,62 @@
       "seeding_key": {
         "activity_section.key": "4f9233f1-6c51-44a3-b0f4-d80f01a4aee8",
         "lesson_activity.key": "709803fe-32f6-440e-b282-907ad101c251"
+      }
+    },
+    {
+      "key": "cabff993-9f23-4d17-951c-fc18b1a1c359",
+      "position": 1,
+      "properties": {
+        "name": "Pick an IDE",
+        "progression_name": "IDE Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359",
+        "lesson_activity.key": "256ff5f8-1cd5-49ad-925f-b38888d61af6"
+      }
+    },
+    {
+      "key": "e65a825e-3bdd-4df2-9dac-466e0f749be1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Angelina"
+      },
+      "seeding_key": {
+        "activity_section.key": "e65a825e-3bdd-4df2-9dac-466e0f749be1",
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
+      }
+    },
+    {
+      "key": "eb0830cb-bd87-41f8-a4b6-3734445c4c4e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Micah"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb0830cb-bd87-41f8-a4b6-3734445c4c4e",
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
+      }
+    },
+    {
+      "key": "bc2159d3-a151-4d06-ad64-158ca00f57fb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Joi"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc2159d3-a151-4d06-ad64-158ca00f57fb",
+        "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
+      }
+    },
+    {
+      "key": "924b4360-6f84-4a7e-9b95-261a69a39cdf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf",
+        "lesson_activity.key": "79b990b3-1124-44a9-aebf-97ece668d745"
       }
     }
   ],
@@ -209,6 +331,182 @@
       "level_keys": [
         "aif-cyber-l2-app5"
       ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "IDE Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "technical-interview-ide-seletion"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359"
+      },
+      "level_keys": [
+        "technical-interview-ide-seletion"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Angelina"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-angelina-theater-unit2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "e65a825e-3bdd-4df2-9dac-466e0f749be1"
+      },
+      "level_keys": [
+        "joi-sandbox-angelina-theater-unit2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Micah"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-micah-theater-unit2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "eb0830cb-bd87-41f8-a4b6-3734445c4c4e"
+      },
+      "level_keys": [
+        "joi-sandbox-micah-theater-unit2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Joi"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-joi-theater-unit2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "bc2159d3-a151-4d06-ad64-158ca00f57fb"
+      },
+      "level_keys": [
+        "joi-sandbox-joi-theater-unit2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-A"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-A"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-B"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-B"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-C"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-C"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-D"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-D"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -271,6 +569,102 @@
         "script.name": "joi-playground",
         "activity_section.key": "4f9233f1-6c51-44a3-b0f4-d80f01a4aee8"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "technical-interview-ide-seletion",
+        "script_level.level_keys": [
+          "technical-interview-ide-seletion"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-angelina-theater-unit2",
+        "script_level.level_keys": [
+          "joi-sandbox-angelina-theater-unit2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "e65a825e-3bdd-4df2-9dac-466e0f749be1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-micah-theater-unit2",
+        "script_level.level_keys": [
+          "joi-sandbox-micah-theater-unit2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "eb0830cb-bd87-41f8-a4b6-3734445c4c4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-joi-theater-unit2",
+        "script_level.level_keys": [
+          "joi-sandbox-joi-theater-unit2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "bc2159d3-a151-4d06-ad64-158ca00f57fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-A",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-A"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-B",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-B"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-C",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-C"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-D",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-D"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
     }
   ],
   "resources": [
@@ -301,6 +695,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

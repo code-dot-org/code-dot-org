@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-10 15:52:45 UTC",
+    "serialized_at": "2026-09-16 17:58:29 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -584,6 +584,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d82a3c64-fecf-4761-a931-6aeb71167fb2",
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026"
+      }
+    },
+    {
+      "key": "e8f5d33d-e272-4fb6-b8a1-1d6e698ee627",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8f5d33d-e272-4fb6-b8a1-1d6e698ee627",
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026"
@@ -2033,6 +2045,17 @@
       "seeding_key": {
         "activity_section.key": "887da80c-6048-45e8-8875-2a3cb84bd0cc",
         "lesson_activity.key": "d82a3c64-fecf-4761-a931-6aeb71167fb2"
+      }
+    },
+    {
+      "key": "2889b4fc-4f43-4687-b5e4-79fad6a00d5a",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "2889b4fc-4f43-4687-b5e4-79fad6a00d5a",
+        "lesson_activity.key": "e8f5d33d-e272-4fb6-b8a1-1d6e698ee627"
       }
     },
     {
@@ -4488,6 +4511,28 @@
     },
     {
       "chapter": 33,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-choice"
+        ],
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026",
+        "activity_section.key": "2889b4fc-4f43-4687-b5e4-79fad6a00d5a"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson5-choice"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4509,7 +4554,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4531,7 +4576,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4553,7 +4598,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4575,7 +4620,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4597,7 +4642,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4619,7 +4664,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4641,7 +4686,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4663,7 +4708,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4685,7 +4730,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4707,7 +4752,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4729,7 +4774,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4751,7 +4796,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4773,7 +4818,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4795,7 +4840,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4817,7 +4862,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4839,7 +4884,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4861,7 +4906,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4883,7 +4928,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4905,7 +4950,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4927,7 +4972,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4949,7 +4994,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4971,7 +5016,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4993,7 +5038,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5015,7 +5060,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5037,7 +5082,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5059,7 +5104,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5081,7 +5126,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5103,7 +5148,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5125,7 +5170,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5147,7 +5192,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5169,7 +5214,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5578,6 +5623,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson5-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-choice"
+        ],
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026",
+        "activity_section.key": "2889b4fc-4f43-4687-b5e4-79fad6a00d5a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson6-level2_v2_2026",
         "script_level.level_keys": [
           "computer-systems-lesson6-level2_v2_2026"
@@ -5964,7 +6021,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1B564B7VVxuGwiYfi1YQBLMzoS6eqT8d8DvixrwaqBTs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Dato9dFitzLp4ba51-oy8mAov2HxxqJH9873QlPmUvQ/edit?usp=sharing",
       "key": "_exemplar_sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6181,7 +6238,7 @@
     },
     {
       "name": "[KEY] User Testing",
-      "url": "https://docs.google.com/document/d/16g2XhVwTbsWxpGug-uzS2b3CkL91lB3dX3pWeZuNXG4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1uKchorQvM--IFoPcoBlNNvLinVydVTm8CdL13M4PK1M/edit?usp=drive_link",
       "key": "_key_user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -6195,7 +6252,7 @@
     },
     {
       "name": "AI and Emerging Technology Slide Template",
-      "url": "https://docs.google.com/presentation/d/16ABliORG5aD5QeuA2Q70Cy8y2I8idJcRL0v3-oA7hrk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MxMLZUpOq8ovgR5G0kdON9CF6LeOQH05WIBs9vHDGaQ/edit?usp=sharing",
       "key": "ai_and_emerging_technology_slide_template",
       "properties": {
         "audience": "Student",
@@ -6483,20 +6540,6 @@
       }
     },
     {
-      "name": "How AI Uses Data",
-      "url": "https://docs.google.com/presentation/d/1cfi44CMWhHfUI9nRuSwR1NsnzEsIkCHIxyzMJAYNhgY/edit?usp=sharing",
-      "key": "how_ai_uses_data_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_uses_data_2"
-      }
-    },
-    {
       "name": "How Computers Work: Hardware and Software",
       "url": "https://youtu.be/DKGZlaPlVLY?si=nAAc-e14ctDiqfN8",
       "key": "how_computers_work_hardware_and_software",
@@ -6575,7 +6618,7 @@
     },
     {
       "name": "Ownership and Ethics",
-      "url": "https://docs.google.com/document/d/1jVY2xsIXiucY_HspsGghRi6Z8N8Yn-P5ABjJuLVXBSc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1XLXq0hnSJlaImTAxhIkJ-jsdNrCivOKAcgZQ0oRkfOM/edit?usp=sharing",
       "key": "ownership_and_ethics",
       "properties": {
         "audience": "Student",
@@ -6681,7 +6724,7 @@
     },
     {
       "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Q2XZY-7HUOAboldM5sTE30bTjTCqpjYSGacgy1GQ-TY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-bJOm3T_O1e4wljgCmbJFhvnDCoEHeZEV4TgLfHVDrw/edit?usp=sharing",
       "key": "sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -6722,10 +6765,11 @@
     },
     {
       "name": "Technology Ethics Discussion Guide",
-      "url": "https://docs.google.com/document/d/1IfC_-shBbZUB-5DMYhrC86JsgJI4AC5KnddIaRvGYnM/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1IfC_-shBbZUB-5DMYhrC86JsgJI4AC5KnddIaRvGYnM/edit?usp=drive_link",
       "key": "technology_ethics_discussion_guide",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6822,7 +6866,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/document/d/1zr6ATCilcHCnksBFyJYjMpnXp7qnGjBYasWn-9tTCHI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Nqb8_xopj7cL8vE5XUARg4L-3PCY9GcporaBdUKHHXw/edit?usp=drive_link",
       "key": "user_testing_1",
       "properties": {
         "audience": "Student",
@@ -7369,12 +7413,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
         "resource.key": "how_ai_uses_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "how_ai_uses_data_2"
       }
     }
   ],

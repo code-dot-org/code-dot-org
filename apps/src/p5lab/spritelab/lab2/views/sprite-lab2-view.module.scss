@@ -1,4 +1,30 @@
+@use './imageTile' as tile;
+@use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
+
+.labRow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  .tabShell {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+// Instructions column width when the full panel shows (no guide).
+.instructionsArea {
+  flex: 0;
+  min-width: 25%;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
 
 .tabShell {
   display: flex;
@@ -13,28 +39,63 @@
 // 1px outlines).
 $tab-item-height: 34px;
 
+.tabContainer {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  justify-content: space-between;
+}
+
 .tabBar {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  gap: 4px;
-  padding: 6px 8px;
-  // Design-system tokens so the chrome is legible in both Light and Dark.
-  background: var(--background-neutral-secondary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
+  // The tabs are distinct destinations, not a continuous strip: separate them
+  // enough to be told apart at a glance.
+  gap: 10px;
+  // Tab labels and controls, not text to copy. code-studio.css sets
+  // `p, pre, span` back to selectable, so the labels are named too.
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
 }
 
 .tab {
   height: $tab-item-height;
   padding: 0 16px;
-  // A subtle outline gives every tab item the same "button" structure, so
-  // the Code+scene segmented group reads coherently next to plain tabs.
-  border: 1px solid var(--borders-neutral-primary);
+  // Cancel the legacy global button margin so hover fills the group.
+  margin: 0;
+  // Every tab item carries the same "button" structure, so the scene group
+  // reads coherently next to plain tabs. The outer edges are the stronger
+  // border; dividers inside a group stay subtle (see .tabGroup).
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
-  background: transparent;
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
+
+  // Selecting a tab bolds it, and bold text is a couple of px wider — enough
+  // to nudge every tab after it along. Hold the bold width at all times: this
+  // copy of the label is never painted and adds no height, it only sets how
+  // wide the button wants to be.
+  &::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
 
   &:disabled {
     opacity: 0.4;
@@ -46,13 +107,18 @@ $tab-item-height: 34px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  // Already here: clicking does nothing, so don't promise otherwise.
+  cursor: default;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-primary);
+  }
 }
 
-// The Code tab + scene picker as one segmented control (scenes UI variant):
-// the group carries the tab pill's shape and active background; the button
-// and select inside are transparent segments split by a divider. Both
-// segments get the same explicit height so their text shares a centerline.
-// Segments sit inside the group's 1px outline.
+// The scene selector plus the tabs that edit that scene, as one segmented
+// control: the selector leads, the tabs follow. Segments share this explicit
+// height so their text sits on one centerline inside the group's outline.
 $tab-segment-height: $tab-item-height - 2px;
 
 .tabGroup {
@@ -60,58 +126,77 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   box-sizing: border-box;
   height: $tab-item-height;
-  // The whole group activates the Code tab when it isn't active.
-  cursor: pointer;
-  // The group carries the single outline; the segments inside are borderless
-  // except for the divider between them.
-  border: 1px solid var(--borders-neutral-primary);
+  // The arrow, not the I-beam `auto` gives over the scene name's text.
+  cursor: default;
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
 
   .tab {
     height: $tab-segment-height;
     border: none;
-    border-radius: 4px 0 0 0;
+    border-radius: 0;
+    // Dividers between segments; the group draws the outer edge.
+    border-left: 1px solid var(--borders-neutral-primary);
+
+    &:first-child {
+      border-left: none;
+    }
+
+    // The group can't clip (its dropdown menu hangs below it), so the last
+    // segment rounds its own corner to match the group's.
+    &:last-child {
+      border-radius: 0 3px 0 0;
+    }
   }
 
-  // The group paints the active background so both segments share it.
   .tabActive {
     background: transparent;
+
+    &:hover:not(:disabled) {
+      background: transparent;
+    }
+  }
+
+  // The trigger is the group's first segment; the group's own radius shows
+  // through where the segment is transparent, so the segment has none.
+  .sceneDropdown {
+    height: $tab-segment-height;
   }
 }
 
-.tabGroupActive {
-  background: var(--background-neutral-primary);
-}
-
-.sceneSelect {
-  height: $tab-segment-height;
-  max-width: 160px;
-  margin: 0;
-  // Native (appearance: auto) selects paint their own UA box when disabled,
-  // which read as a stray grey pill. Take over rendering entirely: no
-  // appearance, our own chevron, and disabled = the same content dimmed.
-  appearance: none;
-  padding: 0 26px 0 10px;
-  border: none;
-  border-left: 1px solid var(--borders-neutral-primary);
-  border-radius: 0 4px 0 0;
-  background: transparent
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>")
-    no-repeat right 9px center;
-  color: var(--text-neutral-primary);
-  // Match the tab buttons.
-  font-size: 14px;
+// Set while a click on the group's non-tab area would open one of its tabs.
+.tabGroupOpensTab {
   cursor: pointer;
-
-  &:disabled {
-    opacity: 0.4;
-    // Disabled controls swallow clicks entirely; let them fall through so
-    // clicking the dropdown area activates the Code tab (see tabGroup).
-    pointer-events: none;
-    // Chrome re-applies a UA background-color on :disabled; keep ours.
-    background-color: transparent;
-  }
 }
+
+// The Scenes gallery is open: the picker takes the selected tab's underline.
+.tabGroupActive .sceneDropdown {
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+}
+
+// The song a playing game is using, sized to sit among the tab controls.
+.musicBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: $tab-item-height;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  line-height: 1.2;
+  max-width: 220px;
+}
+
+.musicBarTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
 .tabContent {
   position: relative;
@@ -131,7 +216,7 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 100%;
 }
 
-.itemsTab {
+.imagesTab {
   width: 100%;
   height: 100%;
   min-height: 0;
@@ -140,69 +225,12 @@ $tab-segment-height: $tab-item-height - 2px;
   color: var(--text-neutral-primary);
 }
 
-.generatePane {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 680px;
-  padding: 16px;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-}
-
-.generateHeading {
-  font-size: 15px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  // Drop the global <label> bottom margin: flex counts it in the line's cross
-  // size, so it would push the (margin-less) Generate button below the inputs.
-  margin: 0;
-  font-size: 12px;
-
-  span {
-    color: var(--text-neutral-secondary);
+// Sidebar-only resource panel (guide-based instructions): no instruction
+// tabs render inside the nav, so its top border would read as a stray line.
+.resourceSidebar {
+  :global(#resource-panel-tabs) {
+    border-top: 0;
   }
-
-  input,
-  select {
-    width: 100%;
-    height: 32px;
-    // Drop the global form-control bottom margin so the label box ends at the
-    // input; otherwise the flex-end row aligns the Generate button to that
-    // phantom space instead of to the inputs.
-    margin: 0;
-    padding: 4px 8px;
-    box-sizing: border-box;
-  }
-}
-
-.fieldGrow {
-  flex: 1 1 auto;
-}
-
-.fieldRow {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-// MUI Button owns its own typography/padding/color; we only pin the height so
-// it matches the 32px Name/Type inputs beside it (the flex-end row then aligns
-// their bottoms).
-.generateButton {
-  height: 32px;
-  white-space: nowrap;
-}
-
-.generateError {
-  // Legible on the guide's dark panel; the old dark red vanished into it.
-  color: #ff9d9d;
-  font-size: 13px;
-  font-weight: 600;
 }
 
 .imagesManager {
@@ -213,14 +241,10 @@ $tab-segment-height: $tab-item-height - 2px;
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  // Generous row spacing so the cards read as rows, not a dense grid.
+  // Generous row spacing so the cards read as rows, not a dense grid; the
+  // bottom padding lets the last row scroll clear of the Guide overlay.
   gap: 28px 14px;
-  padding: 28px 16px 24px;
-}
-
-.galleryEmpty {
-  color: var(--text-neutral-secondary);
-  font-size: 13px;
+  padding: 28px 16px 220px;
 }
 
 .imageCard {
@@ -237,46 +261,40 @@ $tab-segment-height: $tab-item-height - 2px;
   @include buttons.quiet-button(22px, 11px);
 }
 
-.imageThumb {
+// The trailing "new image" card: a blank tile with a plus. Same footprint as
+// a thumbnail so the gallery grid stays regular.
+.newImageCard {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   width: 104px;
   height: 104px;
-  // The thumb is a button (click to edit); neutralize global button styles.
   margin: 0;
   padding: 0;
+  gap: 2px;
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 4px;
   background-color: transparent;
   box-shadow: none;
+  color: var(--text-neutral-secondary);
   cursor: pointer;
-  border: 1px solid var(--borders-neutral-primary);
-  // Hover: grow subtly (like Music Lab's album covers) instead of the
-  // global button > img dim-until-hover treatment.
-  transition: transform 0.15s ease;
+  font-size: 32px;
+  line-height: 1;
 
   &:hover {
-    z-index: 1;
-    transform: scale(1.12);
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
   }
-  // Subtle checkerboard: enough to signal transparency without competing
-  // with the sprite (translucent grey works on light and dark themes).
-  $check: rgb(128 128 128 / 16%);
+}
 
-  background-image: linear-gradient(45deg, $check 25%, transparent 25%),
-    linear-gradient(-45deg, $check 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, $check 75%),
-    linear-gradient(-45deg, transparent 75%, $check 75%);
-  background-size: 16px 16px;
-  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+.newImageLabel {
+  font-size: 12px;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    // Full quality always: undo the global `button > img` dimming (class +
-    // element outranks the global's two elements).
-    opacity: 1;
-  }
+.imageThumb {
+  @include tile.image-tile(104px);
 }
 
 .imageName {
@@ -295,25 +313,383 @@ $tab-segment-height: $tab-item-height - 2px;
   transition: height 0.25s ease;
 }
 
-.guideBody {
+// The scene dropdown, styled as the first segment of the tab group: no box
+// of its own, one divider on its right. The design-system trigger is an
+// MUI text button; its own hover/focus styling stays.
+.sceneDropdown {
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
+
+  // Higher specificity than the dropdown's own black/gray container rules.
+  .tabGroup & > button.sceneTrigger,
+  > button.sceneTrigger {
+    height: 100%;
+    min-width: 0;
+    max-width: 200px;
+    margin: 0;
+    padding: 0 10px;
+    gap: 8px;
+    border: none;
+    border-right: 1px solid var(--borders-neutral-primary);
+    border-radius: 3px 0 0 0;
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+
+    // Unusable off the scene tabs, but not dimmed: it reads as one of the
+    // group's labels, and those stay bright when their tab isn't the active
+    // one. MUI already drops pointer-events, so the click reaches the group
+    // and opens the Code tab.
+    &:disabled {
+      color: var(--text-neutral-primary);
+    }
+  }
+}
+
+.sceneTriggerName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Square, like the stage. Sized for the menu; `small` fits the tab bar.
+.sceneThumb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background: var(--background-neutral-tertiary);
+  color: var(--text-neutral-secondary);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sceneThumbSmall {
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  font-size: 11px;
+}
+
+.sceneMenu {
+  margin: 0;
+  padding: 4px 0;
+  user-select: none;
+  min-width: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+.sceneMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
+
+.sceneMenuItemActive {
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover {
+    background: var(--background-brand-teal-primary);
+  }
+
+  .sceneThumb {
+    color: var(--text-neutral-white-fixed);
+    background: rgb(255 255 255 / 25%);
+  }
+}
+
+.sceneMenuName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Stands where a thumbnail would, so the labels line up.
+.sceneMenuIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.sceneMenuDivider {
+  height: 1px;
+  margin: 4px 0;
+  background: var(--borders-neutral-primary);
+}
+
+// --- Scenes gallery (the Images tab's card idiom) ---
+
+// A dim card groups a scene's picture and controls. Cards in a row stretch
+// to one height, and the footer pins to the bottom.
+.sceneCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 152px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--background-neutral-secondary);
+}
+
+// Square, like the stage; the tile is a button that opens the scene.
+.sceneTile {
+  @include tile.image-tile(128px);
+
+  position: relative;
+  border-radius: 4px;
+  color: var(--text-neutral-secondary);
+  font-size: 28px;
+}
+
+.sceneTilePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sceneCardActive .sceneTile {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+// Where Play begins: a small label inset from the picture's top-left corner.
+.sceneStartBadge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+// The name with its pencil, or the field with save and cancel; one height
+// either way so the card does not jump.
+.sceneNameRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 28px;
+}
+
+// The chip's size, so the name reads the same here as in the bar.
+.sceneName {
+  min-width: 0;
+  padding: 0 2px;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Smaller than MUI's small, to sit beside 14px text rather than over it.
+.sceneNameIconButton {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.sceneNameField {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Delete, or its confirmation, pinned to the card's bottom.
+.sceneCardFooter {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 14px;
+  margin-top: auto;
+}
+
+.sceneDeleteQuestion {
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  text-align: center;
+}
+
+.sceneDeleteChoices {
+  display: flex;
+  gap: 6px;
+}
+
+// Fills its card, so the row of cards reads as one height.
+.newSceneCard {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 128px;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-neutral-primary);
+  font-size: 28px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+}
+
+// The new-scene dialog: name above the type choice.
+.newSceneFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sceneTypeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  // The global legend style carries a fixed dark color and a full-width
+  // underline, neither of which suits a themed dialog. Sized to read as a
+  // peer of the name field's label above it.
+  legend {
+    width: auto;
+    margin-bottom: 4px;
+    padding: 0;
+    border: none;
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+    line-height: inherit;
+  }
+}
+
+.guideBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+
+  // The shared read-aloud button paints a ~17x20 icon and sets no box; WCAG
+  // 2.2 target size (SC 2.5.8) wants 24x24.
+  button[aria-pressed] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 .guideInstructions {
-  line-height: 1.45;
+  line-height: 1.6;
 
   // Markdown output brings document-level margins; keep it compact inside
   // the guide, and keep links readable on the dark panel.
+  // Size and line height sit on the elements, not just the container:
+  // dashboard's scaffolds.scss styles `p, ol, ul, td` directly.
   p,
   ul,
   ol {
-    margin: 0 0 6px;
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.6;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  // List markers need this inset back: a global reset zeroes it, this
+  // margin shorthand zeroes the compensating margin, and the outside
+  // markers then draw past the guide's overflow clip — numbered lists
+  // showed items with no numbers.
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
+  li + li {
+    margin-top: 4px;
+  }
+
+  // A leading heading sits flush with the panel's own padding; one that
+  // follows other content keeps a little separation.
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 6px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
     }
   }
 
@@ -322,113 +698,18 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-.guideDivider {
-  width: 100%;
-  margin: 2px 0;
-  border: none;
-  border-top: 1px solid rgb(255 255 255 / 20%);
-}
-
-.guideRow {
+// The Continue button once the level's task is done.
+.guideContinue {
   display: flex;
-  gap: 8px;
-
-  // The input and button read as one control pair: same height, radius, and
-  // type size. The zeroed margin and shadow undo dashboard's global element
-  // styles (button {margin: 5px}, input {margin-bottom: 10px} + inset
-  // shadow), which otherwise knock the pair out of alignment.
-  input,
-  button {
-    box-sizing: border-box;
-    height: 36px;
-    margin: 0;
-    border: 1px solid rgb(255 255 255 / 25%);
-    border-radius: 6px;
-    box-shadow: none;
-    font-size: 14px;
-  }
-
-  input {
-    flex: 1 1 auto;
-    min-width: 0;
-    padding: 0 10px;
-  }
-
-  button {
-    flex: 0 0 auto;
-    appearance: none;
-    padding: 0 16px;
-    background-color: rgb(255 255 255 / 92%);
-    color: #1b2029;
-    font-weight: 600;
-    cursor: pointer;
-
-    &:hover:not(:disabled) {
-      background-color: #fff;
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: default;
-    }
-  }
+  justify-content: flex-end;
+  margin-top: 10px;
 }
 
-.worldTab {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  padding: 8px;
-  gap: 8px;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-}
-
-.worldPalette {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
-  }
-}
-
-.brushActive {
-  outline: 2px solid #1565c0;
-}
-
-.brushSwatch {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--borders-neutral-strong);
-}
-
-.worldGrid {
-  display: grid;
-  width: min(100%, 480px);
-  aspect-ratio: 1;
-  border: 1px solid var(--borders-neutral-strong);
-  user-select: none;
-}
-
-.worldCell {
-  border: 1px solid var(--borders-neutral-primary);
-  cursor: pointer;
-
-  &:hover {
-    outline: 1px solid var(--borders-neutral-strong);
-    outline-offset: -1px;
-  }
+// Room for the corner icon on its right; the collapsed panel is otherwise
+// only as wide as its button.
+.guideCollapsedText {
+  margin: 0 28px 0 0;
+  white-space: nowrap;
 }
 
 // The persistent playspace overlay: spans the tab content area; lets clicks
@@ -455,11 +736,120 @@ $tab-segment-height: $tab-item-height - 2px;
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
   // fades the box in on appearance.
+
+  // Keyboard focus ring for the play-mode game region; an outline so the
+  // 400x400 geometry the transform and pointer math rely on is untouched.
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: 2px;
+  }
+}
+
+// The Play/Stop and arrow bar under the playspace box. Only its buttons
+// take pointer events: the bar spans the box's width, and over the corner
+// preview that strip would otherwise sit on the Blockly workspace.
+.playBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: none;
+
+  button {
+    pointer-events: auto;
+  }
+}
+
+.arrowKeys {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// A held key acts on the touch itself: no scroll or double-tap wait, and
+// no selection or callout under a long press.
+.holdKey {
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+// Restart buttons in the play area's top-right corner, clear of the game
+// wherever the canvas lands. The overlay ignores pointer events; these
+// buttons accept them.
+.playControls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.playControl {
+  height: $tab-item-height;
+  padding: 0 12px;
+  // Cancel the legacy global button margin; the column's gap spaces these.
+  margin: 0;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.92;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .playspaceCanvas {
   width: 400px;
   height: 400px;
+}
+
+// Click-to-play catcher over the live preview. Transparent until hover/focus,
+// when a faint veil + play glyph signal that clicking opens Play on this scene.
+// pointer-events: auto re-enables it over the otherwise-inert preview box.
+.previewClickCatch {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: pointer;
+
+  &::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(0 0 0 / 28%);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: -2px;
+  }
 }
 
 // Location-picker hover ghost: the sprite being placed, previewed at the
@@ -543,3 +933,21 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// Visually hidden: the playspace's how-to-play text.
+.srOnly {
+  @include chrome.sr-only;
+}
+
+// The lab's own ground, which the dance generator also sits on: black in
+// dark mode, so the panel and the floating guide read as the level itself.
+.imageLevelArea {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 24px 16px;
+  overflow: auto;
+  background-color: var(--background-neutral-primary);
+}

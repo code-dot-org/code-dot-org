@@ -3,46 +3,24 @@ import React from 'react';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing';
 import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialog';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 describe('PairingDialog', () => {
-  it('renders a dialog containing the Pairing component', () => {
+  it('renders nothing until opened', () => {
     const wrapper = shallow(<PairingDialog source="Any old test string" />);
-
-    expect(
-      wrapper.containsMatchingElement(
-        <BaseDialog isOpen={false}>
-          <Pairing source="Any old test string" />
-        </BaseDialog>
-      )
-    ).toBe(true);
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
-  it('can be opened and closed with public methods', () => {
+  it('renders the Pairing component when opened, and unmounts on close', () => {
     const wrapper = shallow(<PairingDialog source="Another test string" />);
 
-    expect(() => {
-      wrapper.instance().open();
-    }).not.toThrow();
-
+    wrapper.instance().open();
+    wrapper.update();
     expect(
-      wrapper.containsMatchingElement(
-        <BaseDialog isOpen={true}>
-          <Pairing source="Another test string" />
-        </BaseDialog>
-      )
+      wrapper.containsMatchingElement(<Pairing source="Another test string" />)
     ).toBe(true);
 
-    expect(() => {
-      wrapper.instance().close();
-    }).not.toThrow();
-
-    expect(
-      wrapper.containsMatchingElement(
-        <BaseDialog isOpen={false}>
-          <Pairing source="Another test string" />
-        </BaseDialog>
-      )
-    ).toBe(true);
+    wrapper.instance().close();
+    wrapper.update();
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 });

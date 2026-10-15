@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-24T03:58:08.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Filter Logic with ECHO\r\n\r\nWe will use the **ECHO** framework to build our movie filters: **E**xplore, **C**o-Create, **H**ighlight, **O**wn.\r\n\r\n### 1. Explore (Ask AI)\r\nFirst, we need to find only \"Sci-Fi\" movies. Ask the AI:\r\n> *\"Show me two different ways to create a filter that returns only movies where genre === 'Sci-Fi' using .map() and conditionals.\"*\r\n\r\n**Compare:** Which one looks cleaner? \r\n\r\n### 2. Co-Create (Refine Logic)\r\nChoose **one version** and paste it into the `genreBtn` event listener.\r\n1.  **Test:** Does it work?\r\n2.  **Refine:** Ask AI: *\"Can you make this version show both 'Sci-Fi' and 'Comedy' movies?\"*\r\n3.  **Edge Case:** Ask AI: *\"What happens if a movie is missing a genre property? How do I fix that?\"*\r\n4.  **Update:** Update your code with the fixes.\r\n\r\n### 3. Highlight (Best Practices)\r\nLook at your final code in `genreBtn`. Note the strong practices:\r\n* **Start with empty array**\r\n* **Handle missing values**\r\n* **Clean Output**\r\n\r\n### 4. Own (Build Your Own)\r\nNow, move to the `yearBtn` listener. Write this logic **yourself**:\r\n1.  **Goal:** Filter the list to show only movies released **after 2020**.\r\n2.  **Write Code:** Use the pattern you highlighted above (empty array + map + if).\r\n3.  **Validate:** Ask AI: *\"Generate 3 test cases to verify my year filter logic, including one edge case.\"*",
+    "long_instructions": "## **Complete the Action Filter**\r\n\r\nWhen the user clicks **Action**, only movies with the genre **Action** should appear.\r\n\r\n#### **Do This:**\r\n\r\n1. Use AI to help you complete the `filterActionMovies` function.\r\n\r\n2. In the function, use `.map()` to go through each movie in `movies`.\r\n\r\n3. Inside the `.map()`, use an `if` statement to check whether the movie’s genre is `\"Action\"`.\r\n\r\n4. If the movie’s genre is `\"Action\"`, use `.push()` to add that movie to `displayMovies`.\r\n\r\n5. Call `renderMovies()` as the last line of the `filterActionMovies` function.\r\n\r\n6. Use your function as the event handler for the **Action** button.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -17,53 +18,177 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
       },
       "files": {
         "1": {
           "id": "1",
-          "name": "index.html",
-          "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Movie Night Picker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div id=\"screen\">\n    <h1>🍿 Movie Picker</h1>\n    <p>Filter your watchlist</p>\n    \n    <div class=\"controls\">\n      <label>By Genre:</label>\n      <button id=\"genreBtn\">Show \"Sci-Fi\" Movies</button>\n      \n      <label>By Year:</label>\n      <button id=\"yearBtn\" class=\"secondary\">Show Recent (> 2020)</button>\n    </div>\n    \n    <div class=\"display-area\">\n      <h3>Results:</h3>\n      <ul id=\"results\">\n        <li><em>Movies will appear here...</em></li>\n      </ul>\n    </div>\n  </div>\n\n</body>\n</html>",
-          "active": false,
-          "folderId": "0"
+          "name": "movie1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/bd4773a0-9038-4d1c-ab59-9a7675c39376.png",
+          "type": "starter",
+          "active": false
         },
         "2": {
           "id": "2",
-          "name": "script.js",
-          "language": "js",
-          "contents": "const movies = [\n  { title: \"Galaxy Wars\", genre: \"Sci-Fi\", year: 2017 },\n  { title: \"Love in the City\", genre: \"Romance\", year: 2018 },\n  { title: \"Space Trek\", genre: \"Sci-Fi\", year: 2018 },\n  { title: \"The Funny Guy\", genre: \"Comedy\", year: 2019 },\n  { title: \"Mystery Mansion\", genre: \"Mystery\", year: 2021 },\n  { title: \"Cosmic Voyage\", genre: \"Sci-Fi\", year: 2023 }\n];\n\nconst genreBtn = document.querySelector(\"#genreBtn\");\nconst yearBtn = document.querySelector(\"#yearBtn\");\nconst resultsList = document.querySelector(\"#results\");\n\nconst filterByGenre = (movies, genre) => {\n  \n};\n\n\ngenreBtn.addEventListener(\"click\", () => {\n  const matchedMovies = filterByGenre(movies, \"Sci-Fi\")\n  updateScreen(matchedMovies);\n});\n\nconst filterByYear = (movies, year) => {\n  \n}\nyearBtn.addEventListener(\"click\", () => {\n  const post2020Movies = filterByYear(movies, 2020);\n  updateScreen(post2020Movies);\n});\n\nfunction updateScreen(items) {\n  resultsList.innerHTML = \"\";\n  items.map((item) => {\n    resultsList.innerHTML += `<li>${item.title} (${item.year})</li>`;\n  });\n}",
-          "folderId": "0",
-          "active": true
+          "name": "movie2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/a48325aa-9c6e-4a6c-b673-9a852f5836d9.png",
+          "type": "starter",
+          "active": false
         },
         "3": {
           "id": "3",
-          "name": "style.css",
-          "language": "css",
-          "contents": "/* Google Fonts */\n@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');\n\n:root {\n  --bg-dark: #0b0c10;\n  --card-dark: #1f2833;\n  --neon-blue: #66fcf1;\n  --muted-text: #c5c6c7;\n  --action-green: #45a29e;\n  --action-purple: #9d00ff; /* New color for secondary action */\n}\n\nbody {\n  font-family: 'Space Grotesk', sans-serif;\n  background-color: var(--bg-dark);\n  color: white;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  margin: 0;\n}\n\n#screen {\n  background-color: var(--card-dark);\n  padding: 2rem;\n  border-radius: 12px;\n  width: 340px;\n  box-shadow: 0 0 20px rgba(102, 252, 241, 0.1);\n  border: 1px solid #333;\n}\n\nh1 {\n  margin: 0;\n  color: var(--neon-blue);\n  font-size: 1.8rem;\n  text-align: center;\n}\n\np {\n  color: var(--muted-text);\n  text-align: center;\n  margin-top: 0.5rem;\n  font-size: 0.9rem;\n  margin-bottom: 1.5rem;\n}\n\n.controls {\n  display: flex;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\nlabel {\n  font-size: 0.75rem;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  color: var(--muted-text);\n  margin-top: 0.5rem;\n}\n\nbutton {\n  background-color: var(--action-green);\n  color: #fff;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 8px;\n  font-family: inherit;\n  font-weight: bold;\n  font-size: 1rem;\n  cursor: pointer;\n  width: 100%;\n  transition: 0.2s;\n}\n\n/* Secondary button style for the \"Student Task\" */\nbutton.secondary {\n  background-color: transparent;\n  border: 2px solid var(--action-green);\n  color: var(--action-green);\n}\n\nbutton:hover {\n  filter: brightness(1.2);\n  transform: translateY(-2px);\n}\n\nbutton.secondary:hover {\n  background-color: var(--action-green);\n  color: white;\n}\n\n.display-area {\n  margin-top: 1.5rem;\n  background: rgba(0,0,0,0.2);\n  padding: 1rem;\n  border-radius: 8px;\n  min-height: 100px;\n}\n\nh3 {\n  margin: 0 0 0.5rem 0;\n  font-size: 1rem;\n  color: var(--muted-text);\n  border-bottom: 1px solid #444;\n  padding-bottom: 0.5rem;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\nli {\n  padding: 0.4rem 0;\n  border-bottom: 1px solid #333;\n  font-size: 0.95rem;\n}\n\nli:last-child {\n  border-bottom: none;\n}",
+          "name": "movie3.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/98cc82e1-03ba-439e-b4e7-7a76f87b5d55.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "movie4.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/d1322616-e01c-4a97-9e33-0f0084ddb287.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "movie5.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/d4e0ae42-1aa1-45f9-bce3-4f7f16eca13a.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "movie6.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/41a66c90-0eed-4c21-9eff-a4e26509e015.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "movie7.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/6576bad1-5920-4dac-82f9-18f720e8771c.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "movie8.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/pl-aif-2-U3-filter-weblab-5_2026/uuid/42d09dd1-63e7-41a7-8687-ba49a79abfe9.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "data.js",
+          "contents": "const movies = [\n  {\n    id: 1,\n    title: \"Night Run\",\n    genre: \"Action\",\n    year: 2021,\n    rating: 8.1,\n    image: \"images/movie1.png\",\n    alt: \"Night Run movie poster\",\n    isNew: true\n  },\n  {\n    id: 2,\n    title: \"Space Camp\",\n    genre: \"Sci-Fi\",\n    year: 2023,\n    rating: 8.6,\n    image: \"images/movie2.png\",\n    alt: \"Space Camp movie poster\",\n    isNew: true\n  },\n  {\n    id: 3,\n    title: \"The Last Slice\",\n    genre: \"Comedy\",\n    year: 2019,\n    rating: 7.4,\n    image: \"images/movie3.png\",\n    alt: \"The Last Slice movie poster\",\n    isNew: false\n  },\n  {\n    id: 4,\n    title: \"Final Round\",\n    genre: \"Action\",\n    year: 2018,\n    rating: 7.9,\n    image: \"images/movie4.png\",\n    alt: \"Final Round movie poster\",\n    isNew: false\n  },\n  {\n    id: 5,\n    title: \"Quiet Signal\",\n    genre: \"Drama\",\n    year: 2020,\n    rating: 8.3,\n    image: \"images/movie5.png\",\n    alt: \"Quiet Signal movie poster\",\n    isNew: false\n  },\n  {\n    id: 6,\n    title: \"Weekend Weirdos\",\n    genre: \"Comedy\",\n    year: 2022,\n    rating: 7.8,\n    image: \"images/movie6.png\",\n    alt: \"Weekend Weirdos movie poster\",\n    isNew: true\n  },\n  {\n    id: 7,\n    title: \"Deep Orbit\",\n    genre: \"Sci-Fi\",\n    year: 2017,\n    rating: 7.1,\n    image: \"images/movie7.png\",\n    alt: \"Deep Orbit movie poster\",\n    isNew: false\n  },\n  {\n    id: 8,\n    title: \"Chase Mode\",\n    genre: \"Action\",\n    year: 2024,\n    rating: 8.4,\n    image: \"images/movie8.png\",\n    alt: \"Chase Mode movie poster\",\n    isNew: true\n  }\n];",
           "folderId": "0",
           "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "helpers.js",
+          "contents": "const createMovieCard = (movie) => {\n  const movieGrid = document.getElementById(\"movieGrid\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"movie-card\";\n  card.id = \"movieCard\" + movie.id;\n\n  const posterWrap = document.createElement(\"div\");\n  posterWrap.className = \"poster-wrap\";\n  posterWrap.id = \"posterWrap\" + movie.id;\n\n  const image = document.createElement(\"img\");\n  image.className = \"poster-image\";\n  image.id = \"movieImage\" + movie.id;\n  image.src = movie.image;\n  image.alt = movie.alt;\n\n  posterWrap.appendChild(image);\n\n  if (movie.isNew === true) {\n    const badge = document.createElement(\"span\");\n    badge.className = \"movie-badge\";\n    badge.id = \"movieBadge\" + movie.id;\n    badge.textContent = \"NEW\";\n\n    posterWrap.appendChild(badge);\n  }\n\n  const info = document.createElement(\"div\");\n  info.className = \"movie-info\";\n  info.id = \"movieInfo\" + movie.id;\n\n  const title = document.createElement(\"h2\");\n  title.className = \"movie-title\";\n  title.id = \"movieTitle\" + movie.id;\n  title.textContent = movie.title;\n\n  const meta = document.createElement(\"p\");\n  meta.className = \"movie-meta\";\n  meta.id = \"movieMeta\" + movie.id;\n  meta.textContent = movie.genre + \" / \" + movie.year;\n\n  const rating = document.createElement(\"p\");\n  rating.className = \"movie-rating\";\n  rating.id = \"movieRating\" + movie.id;\n  rating.textContent = movie.rating + \" match\";\n\n  info.appendChild(title);\n  info.appendChild(meta);\n  info.appendChild(rating);\n\n  card.appendChild(posterWrap);\n  card.appendChild(info);\n\n  movieGrid.appendChild(card);\n};\n\n// Shows all movies.\nconst showAllMovies = () => {\n  displayMovies = [];\n\n  movies.map((movie) => {\n    displayMovies.push(movie);\n  });\n\n  renderMovies();\n};\n\ndocument.getElementById(\"showAllBtn\").addEventListener(\"click\", showAllMovies);",
+          "folderId": "0",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Streamline</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n\n<body id=\"mainBody\">\n  <div id=\"appShell\" class=\"app-shell\">\n\n    <header id=\"siteHeader\" class=\"site-header\">\n      <h1 id=\"siteLogo\" class=\"logo\">STREAMLINE</h1>\n\n      <nav id=\"mainNav\" class=\"main-nav\">\n        <span id=\"navHome\">Home</span>\n        <span id=\"navMovies\">Movies</span>\n        <span id=\"navTrending\">Trending</span>\n        <span id=\"navMyList\">My List</span>\n      </nav>\n    </header>\n\n    <section id=\"heroSection\" class=\"hero-section\">\n      <p id=\"heroEyebrow\" class=\"hero-eyebrow\">Tonight’s picks</p>\n      <h2 id=\"heroTitle\" class=\"hero-title\">Find a movie that fits your mood.</h2>\n      <p id=\"heroText\" class=\"hero-text\">\n        Use filters to narrow the list. A filter keeps movies that match a condition.\n      </p>\n    </section>\n\n    <section id=\"filterSection\" class=\"filter-section\">\n      <div id=\"filterControls\" class=\"filter-controls\">\n        <button id=\"showAllBtn\" class=\"filter-chip\" type=\"button\">All Movies</button>\n        <button id=\"filterActionBtn\" class=\"filter-chip\" type=\"button\">Action</button>\n        <button id=\"filterComedyBtn\" class=\"filter-chip\" type=\"button\">Comedy</button>\n        <button id=\"filterRecentBtn\" class=\"filter-chip\" type=\"button\">Recent Movies</button>\n        <button id=\"filterHighRatedBtn\" class=\"filter-chip\" type=\"button\">High Rated</button>\n      </div>\n\n      <p id=\"movieCount\" class=\"movie-count\">0 movies found</p>\n    </section>\n\n    <main id=\"movieGrid\" class=\"movie-grid\" aria-live=\"polite\"></main>\n\n  </div>\n\n  <script src=\"data.js\"></script>\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "script.js",
+          "contents": "const movieGrid = document.getElementById(\"movieGrid\");\nconst movieCount = document.getElementById(\"movieCount\");\n\n// This array controls which movies are currently shown.\nlet displayMovies = movies;\n\n// Displays the current movies on the page.\nconst renderMovies = () => {\n  movieGrid.innerHTML = \"\";\n  movieCount.textContent = displayMovies.length + \" movies found\";\n\n  displayMovies.map((movie) => {\n    createMovieCard(movie);\n  });\n};\n\nrenderMovies();\n\n// Shows only action movies.\nconst filterActionMovies = () => {\n\n\n\n\n\n\n};",
+          "folderId": "0",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, sans-serif;\n  background-color: #050505;\n  color: white;\n}\n\n.app-shell {\n  width: 100%;\n  max-width: 400px;\n  margin: 0 auto;\n  padding: 0 14px 32px;\n}\n\n/* Header */\n.site-header {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n  padding: 18px 0 14px;\n}\n\n.logo {\n  color: #e50914;\n  font-size: 22px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  flex-shrink: 0;\n}\n\n.main-nav {\n  display: flex;\n  gap: 12px;\n  color: #d7d7d7;\n  font-size: 12px;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n\n.main-nav span {\n  cursor: default;\n  flex-shrink: 0;\n}\n\n/* Hero */\n.hero-section {\n  min-height: 170px;\n  padding: 28px 18px 22px;\n  background:\n    linear-gradient(to right, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 1)),\n    linear-gradient(135deg, #2c0f16, #111827, #050505);\n  border-radius: 16px;\n  margin-bottom: 18px;\n}\n\n.hero-eyebrow {\n  color: #e50914;\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  font-size: 11px;\n  margin-bottom: 10px;\n}\n\n.hero-title {\n  font-size: 28px;\n  line-height: 1.05;\n  margin-bottom: 12px;\n}\n\n.hero-text {\n  color: #d4d4d4;\n  font-size: 13px;\n  line-height: 1.45;\n}\n\n/* Filters */\n.filter-section {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 11px;\n  margin-bottom: 16px;\n}\n\n.filter-controls {\n  width: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 8px;\n  overflow-x: auto;\n  padding-bottom: 4px;\n}\n\n.filter-chip {\n  flex-shrink: 0;\n  border: 1px solid #444;\n  background-color: #171717;\n  color: white;\n  border-radius: 999px;\n  padding: 8px 13px;\n  font-size: 13px;\n  cursor: pointer;\n}\n\n.filter-chip:hover {\n  background-color: #2b2b2b;\n  border-color: #777;\n}\n\n.filter-chip:focus {\n  background-color: #e50914;\n  border-color: #e50914;\n  outline: none;\n}\n\n.movie-count {\n  color: #b8b8b8;\n  font-size: 12px;\n  white-space: nowrap;\n}\n\n/* Movie Grid */\n.movie-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.movie-card {\n  background-color: #151515;\n  border-radius: 9px;\n  overflow: hidden;\n  transition: transform 0.2s, background-color 0.2s;\n}\n\n.movie-card:hover {\n  transform: scale(1.02);\n  background-color: #202020;\n}\n\n.poster-wrap {\n  position: relative;\n  aspect-ratio: 2 / 3;\n  background-color: #222;\n  overflow: hidden;\n}\n\n.poster-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.movie-badge {\n  position: absolute;\n  top: 8px;\n  left: 8px;\n  background-color: #e50914;\n  color: white;\n  font-size: 10px;\n  font-weight: 800;\n  padding: 3px 6px;\n  border-radius: 4px;\n}\n\n.movie-info {\n  padding: 9px;\n}\n\n.movie-title {\n  font-size: 14px;\n  line-height: 1.25;\n  margin-bottom: 6px;\n}\n\n.movie-meta {\n  color: #b8b8b8;\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n\n.movie-rating {\n  color: #46d369;\n  font-size: 12px;\n  font-weight: 700;\n}\n\n/* Extra-small windows */\n@media (max-width: 330px) {\n  .app-shell {\n    padding: 0 10px 28px;\n  }\n\n  .site-header {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 8px;\n  }\n\n  .hero-title {\n    font-size: 24px;\n  }\n\n  .movie-grid {\n    gap: 10px;\n  }\n\n  .movie-title {\n    font-size: 13px;\n  }\n}\n\n/* Wider preview windows */\n@media (min-width: 520px) {\n  .app-shell {\n    max-width: 760px;\n    padding: 0 22px 44px;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 16px;\n  }\n\n  .hero-title {\n    font-size: 36px;\n  }\n}\n\n@media (min-width: 900px) {\n  .app-shell {\n    max-width: 1100px;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n    gap: 18px;\n  }\n}",
+          "folderId": "0",
+          "active": true
         }
       },
       "openFiles": [
         "1",
         "2",
-        "3"
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
       ]
     },
     "encrypted_exemplar_sources": "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\n0CDTM8xc8phm1TXVBcwbLgJeYXMeIWSt\n",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-24T03:58:08.276+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-filter-weblab-5\\\"\"],\"cloned_from\":\"pl-aif-2-U3-filter-weblab-5\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-24T03:58:08.276+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-filter-weblab-5\\\"\"],\"cloned_from\":\"pl-aif-2-U3-filter-weblab-5\"},{\"changed_at\":\"2026-07-20 18:15:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-20 18:15:24 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-20 18:16:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-27T20:57:40.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n- Complete `simulate` to simulate a viral post over any number of days.\r\n  - Ensure that, for each day, `simulate` prints a message in the format: `\"Day {day}: {views} views\"`. Start with day 0.\r\n- Choose the starting conditions for your post and call `simulate`.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that Python’s `for` loop can repeat code a certain number of times. For example:\r\n\r\n```python\r\niterations = 10\r\nfor i in range(iterations):\r\n    print(i)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-27 21:01:02 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

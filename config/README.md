@@ -39,8 +39,8 @@ CDO properties are not really needed for the following use-cases (though they ha
 
 - Fixed constants that never change
    - Use a standard Ruby module/class constant.
-- Global namespace for general-purpose utility objects/functions, e.g., `CDO.cache`
-   - Use a different namespace/constant to contain the object, e.g., `Cdo.cache` or `CDO_CACHE`.
+- Global namespace for general-purpose utility objects/functions, e.g., `CDO.shared_cache`
+   - Use a different namespace/constant to contain the object, e.g., `Cdo.shared_cache` or `CDO_SHARED_CACHE`.
 - Other custom logic that combines values from other CDO properties
    - Define a class method in another module/class containing the logic.
 

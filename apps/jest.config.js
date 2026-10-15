@@ -10,12 +10,15 @@ const jestAliases = {
   ...LOCALE_ALIASES,
   // Force module uuid to resolve with the CJS entry point, because Jest does not support package.json.exports. See https://github.com/uuidjs/uuid/issues/451
   uuid: require.resolve('uuid'),
-  // Pin react to use the apps version of react when used in conjunction with linked npm packages
+  // Pin react and react-dom to the apps versions when used in conjunction with linked npm packages
   '^react$': require.resolve('react'),
+  '^react-dom$': require.resolve('react-dom'),
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
   '^firmata$': 'mock-firmata/mock-firmata',
+  // Stub out core's api module, since it carries in ESM-only packages which don't play well with apps' CommonJS build.
+  '^@code-dot-org/core/api$': '<rootDir>/test/util/stubCoreApi.ts',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };
 
@@ -124,7 +127,13 @@ const config = {
   moduleNameMapper: jestAliases,
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+  // Builds place a second pyodide package under build/package/js — the
+  // @pyodide/webpack-plugin copy patterns ship the npm dist, package.json
+  // included — and jest's haste map then either errors on the duplicate
+  // or resolves the copy instead of node_modules.  Only pyodide is
+  // hidden: setupJest.js requires locale files from build/ by path, so
+  // build/ cannot be ignored wholesale.
+  modulePathIgnorePatterns: ['<rootDir>/build/.*/pyodide/'],
 
   // Activates notifications for test results
   // notify: false,
@@ -231,8 +240,32 @@ const config = {
     '^.+\\.tsx?$': [
       'ts-jest',
       {
+        // Transpile only, no type-checking (mirrors ts-loader's transpileOnly
+        // in webpack.config.js). With type-checking on, every jest worker built
+        // a TS program spanning all of src/ and test/ (~3 GB heap, ~20s CPU per
+        // worker), pinning CI workers near the default ~4 GB V8 heap limit; the
+        // resulting GC stalls made unrelated async tests exceed their timeouts.
+        // Type errors are still caught by ForkTsCheckerWebpackPlugin in `yarn
+        // start` and `yarn build`, in development and CI alike.
+        //
+        // Transpile-only is enabled by isolatedModules in tsconfig.build.json.
+        // Do not remove it there, or performance problems may come back.
+
         tsconfig: {
           target: 'es6',
+
+          // Keeps dynamic import() working in jest: it compiles import() down
+          // to require, which jest's CJS runtime executes natively, so
+          // React.lazy(() => import(...)) components load in tests. (The
+          // inherited module: node16 would emit real import() calls, which
+          // jest's VM only supports behind --experimental-vm-modules.)
+          module: 'commonjs',
+
+          // The inherited moduleResolution: node16 is invalid next to
+          // module: commonjs (TS5110), so override it with a compatible
+          // value. No effect beyond satisfying validation, since jest
+          // resolves imports itself.
+          moduleResolution: 'node',
         },
       },
     ],

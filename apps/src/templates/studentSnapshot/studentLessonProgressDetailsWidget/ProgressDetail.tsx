@@ -44,7 +44,9 @@ const ProgressDetail: React.FC<ProgressDetailProps> = ({
           )}
         >
           <Typography variant="overline3">{detailTitle}</Typography>
-          <Typography variant="h4">{selectedStudentDetail}</Typography>
+          <Typography variant="h6" component="h4">
+            {selectedStudentDetail}
+          </Typography>
           <div
             className={classNames(
               styles.classAvgInfo,

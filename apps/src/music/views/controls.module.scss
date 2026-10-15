@@ -57,18 +57,11 @@
   }
 }
 
+// Layout only; the run button is a MUI Button and takes its colors and
+// shape from the shared run-button styles (templates/runButtonSx.ts).
 .runButton {
-  @extend %control-button;
   flex: 2;
-  background-color: var(--accent-orange-60);
-  color: var(--text-neutral-white-fixed);
   margin: 0;
-  gap: 10px;
-
-  .text,
-  .icon {
-    transition-delay: 0.2s; // Transition after a delay to avoid flickering
-  }
 }
 
 .skipButton {

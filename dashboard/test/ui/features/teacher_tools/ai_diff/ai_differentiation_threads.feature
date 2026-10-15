@@ -15,7 +15,6 @@ Feature: Read and create AI diff threads
     And I wait until element "#teacher-home-header" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
     And I am on "http://studio.code.org/courses/ui-test-artist/units/1"
-    And I wait until element "#ui-floatingActionButton" is visible
 
     # Was asked to disable the AITA welcome experience without removing any code.
     # Commenting out references to welcome experience until further notice
@@ -63,7 +62,7 @@ Feature: Read and create AI diff threads
     Then I see no difference for "ai diff threads display old thread"
 
     # Clicking "suggest prompts" gives another set of prompts
-    And I click selector "button:contains(Suggest prompts)"
+    And I click selector "button[aria-label='Suggest prompts']"
     And I click selector "button:contains(Create)"
     And I click selector "button:contains(Write a lesson hook)" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)

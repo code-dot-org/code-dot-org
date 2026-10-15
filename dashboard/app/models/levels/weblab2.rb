@@ -86,8 +86,9 @@ class Weblab2 < Level
     # then startSources will come from the files in the repo, rather than
     # that serialized into the level file.
     widget2_id = properties.dig("widget2", "id") || widget2_start_sources
-    if widget2_id
-      properties_camelized[:startSources] = get_widget2_sources(widget2_id)
+    widget2_sources = widget2_id && get_widget2_sources(widget2_id)
+    if widget2_sources
+      properties_camelized[:startSources] = widget2_sources
 
       # Also, don't attempt to load project sources, since we always want to use
       # startSources.

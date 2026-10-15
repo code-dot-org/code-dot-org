@@ -28,7 +28,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
       reset_password
       _(mail).wont_be_nil
       _(mail.to).must_equal [email]
-      _(mail.subject).must_equal 'Code.org reset password instructions'
+      _(mail.subject).must_equal 'CodeAI reset password instructions'
     end
 
     it 'tracks PasswordResetEmailSuccessful metric' do
@@ -54,7 +54,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         reset_password
         _(mail).wont_be_nil
         _(mail.to).must_equal [email]
-        _(mail.subject).must_equal 'Code.org reset password instructions'
+        _(mail.subject).must_equal 'CodeAI reset password instructions'
       end
 
       it 'tracks PasswordResetEmailSuccessful metric' do
@@ -113,7 +113,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           reset_password
           _(mail).wont_be_nil
           _(mail.to).must_equal [email]
-          _(mail.subject).must_equal 'Code.org reset password instructions'
+          _(mail.subject).must_equal 'CodeAI reset password instructions'
         end
 
         it 'tracks PasswordResetEmailSuccessful metric' do
@@ -169,7 +169,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
           reset_password
           _(mail).wont_be_nil
           _(mail.to).must_equal [email]
-          _(mail.subject).must_equal 'Code.org reset password instructions'
+          _(mail.subject).must_equal 'CodeAI reset password instructions'
         end
 
         it 'tracks PasswordResetEmailSuccessful metric' do

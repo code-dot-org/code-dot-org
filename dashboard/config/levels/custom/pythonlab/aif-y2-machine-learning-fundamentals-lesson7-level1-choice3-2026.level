@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T21:25:05.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Basketball Points",
+    "long_instructions": "You’re a sports researcher exploring a dataset used to predict how many points adults can score in basketball based on their height.\r\n\r\n**☑️ Do This:**\r\n\r\nThe code currently prints each value in the `heights` list. Write another for loop to print each value in the `scores` list.\r\n",
+    "bubble_choice_description": "Work with a dataset used to predict basketball points based on height.",
+    "thumbnail_url": "https://images.code.org/9926fb607fd382c23fca889914ecab27-basketball.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "heights = [64, 72, 74, 78, 80, 82, 84, 86] \nscores = [2, 3, 5, 6, 9, 5, 10, 6]\n\nprint(\"Here are the heights in the dataset:\")\nfor height in heights:\n  print(height)\n\n# TODO: Print each value in the scores list",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpAdxZWwAZby/Cg\nRPBfD5rGc2UWGEsMZWQXuSYq28ku0gBjTkVbRiJZs+TC+0RZx1uQi9CDjhJE\nC7mgJNdvK4B0rG4iGOEr73adE6BBX03Hxoo9LGp1pNlWqMWAJZbWb+ZOP2rG\nIgGZJYzer7/iWt9RxLGGyGjKv30VTlwnmDYKD9C7lt9GdolSIWEw1327SJoc\n8wHtGdEuufJiAupdKDDQAdavRkMt1bndKL0POpQ9bjZRXGCngla4C5MP8H/h\nWwSN65n1x+LnZtzDwTSQ6VTe7MJTlPddqNY3XpWrMK62v3jr2mfLECulASkG\nfbJnkhvU6XjvZg2x3J2m3KjQoQVcu37ntd/9t96/2eV0ixXic4fcqDrs3jtP\nT2ws4ktXnBtZI+wAecK1zFvZO0+zIIB/BOtV9HctGVb8Mzy5FQE2kjTXjHeW\nqSi1rcDTnr80y+fw/rPz4cGcHunhV0LKoHu+\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:25:15 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:25:25 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

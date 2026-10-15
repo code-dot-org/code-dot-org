@@ -22,6 +22,8 @@ export interface UseReorderableListOptions<TSpec> {
   // Receives the pre-patch spec, the freshly-merged spec, and the patch
   // that produced it; returns the final spec to store.
   onAfterPatch?: (prev: TSpec, next: TSpec, patch: Partial<TSpec>) => TSpec;
+  // Replaces the default `{...spec, ...patch}` merge.
+  merge?: (prev: TSpec, patch: Partial<TSpec>) => TSpec;
 }
 
 export interface UseReorderableListResult<TSpec> {
@@ -36,7 +38,7 @@ export interface UseReorderableListResult<TSpec> {
 export function useReorderableList<TSpec>(
   options: UseReorderableListOptions<TSpec>
 ): UseReorderableListResult<TSpec> {
-  const {initial, getKey, newSpec, onAfterPatch} = options;
+  const {initial, getKey, newSpec, onAfterPatch, merge} = options;
   const [specs, setSpecs] = useState<TSpec[]>(initial);
 
   const updateSpec = useCallback(
@@ -44,12 +46,12 @@ export function useReorderableList<TSpec>(
       setSpecs(current =>
         current.map(s => {
           if (getKey(s) !== key) return s;
-          const next = {...s, ...patch};
+          const next = merge ? merge(s, patch) : {...s, ...patch};
           return onAfterPatch ? onAfterPatch(s, next, patch) : next;
         })
       );
     },
-    [getKey, onAfterPatch]
+    [getKey, onAfterPatch, merge]
   );
 
   const removeSpec = useCallback(

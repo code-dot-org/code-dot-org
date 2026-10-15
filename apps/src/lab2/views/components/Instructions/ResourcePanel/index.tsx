@@ -2,10 +2,16 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon, {
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
+import React, {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+  useCallback,
+  useRef,
+} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -13,7 +19,9 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
+import {getLabShortcuts} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   isTourAvailableOnLevel,
@@ -37,11 +45,12 @@ import {useRubric} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
@@ -49,8 +58,8 @@ import NavigationArea from '../NavigationArea';
 
 import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
-import BackpackPanel from './Backpack/BackpackPanel';
 import type {AddFileHandler} from './Backpack/types';
+import UnifiedBackpackPanel from './Backpack/UnifiedBackpackPanel';
 import {
   AI_TUTOR_DOT_SEEN_KEY_PREFIX,
   resourcePanelInstructionsElementId,
@@ -63,21 +72,13 @@ import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
 import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
-import {Tabs} from './types';
+import {ExtraTab, Setting, Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
 } from './Validation/ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
-
-export interface Setting {
-  id: string;
-  label: string;
-  options: {value: string; text: string}[];
-  selectedValue: string | undefined;
-  onChange: (value: string) => void;
-}
 
 interface VersionHistoryProps {
   startSources: ProjectSources;
@@ -99,10 +100,7 @@ export interface BackpackProps {
   findIdForFileName: (fileName: string) => string | undefined;
   saveToBackpackButton?: {
     text: string;
-    onClick: (
-      fileList: string[],
-      errorCallback: (error: string) => void
-    ) => Promise<void>;
+    onClick: (notify: BackpackNotify) => Promise<void>;
   };
   supportedFileTypes: string[];
   /** Custom tooltip text to display for the Add File button. */
@@ -111,7 +109,7 @@ export interface BackpackProps {
   addFileHandler?: AddFileHandler;
 }
 
-const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
+const builtInTabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.StudentRubric]: {
@@ -137,6 +135,19 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
 };
 
+function filterExtraTabs(extraTabs: ExtraTab[] | undefined): ExtraTab[] {
+  const builtInTabIds = Object.values(Tabs) as string[];
+  return (extraTabs ?? []).filter(tab => {
+    if (builtInTabIds.includes(tab.id)) {
+      console.warn(
+        `ResourcePanel: extra tab "${tab.id}" was filtered out because its id collides with a built-in tab.`
+      );
+      return false;
+    }
+    return true;
+  });
+}
+
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
@@ -155,17 +166,21 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  /** Show the collapse/expand control. Defaults to standalone project levels. */
+  collapsible?: boolean;
+  hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
   hasInstructionsDrawer?: boolean;
   validationSettings?: ValidationSettings;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
+  // Hide navigation entirely, in both the Instructions tab and the footer.
+  // hideNavigation alone only controls the Instructions tab navigation.
+  hideAllNavigation?: boolean;
+  extraTabs?: ExtraTab[];
+  // Callback that reports whether any tab ended up available.
+  onHasTabsChange?: (hasTabs: boolean) => void;
 };
 
 /**
@@ -189,18 +204,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
+  collapsible,
+  hideCollapsedTabBorder = false,
   backpackProps,
-  onImageFlagged,
   hasInstructionsDrawer,
   validationSettings,
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
+  extraTabs,
+  hideAllNavigation = false,
+  onHasTabsChange,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
+  const [currentTab, setCurrentTab] = useState<string | undefined>(undefined);
   const userId = useAppSelector(state => state.currentUser.userId);
   const aiTutorDotSeenKey = userId
     ? `${AI_TUTOR_DOT_SEEN_KEY_PREFIX}_${userId}`
@@ -213,10 +232,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isFloatingSettingsOpen, setIsFloatingSettingsOpen] = useState(false);
-  const hasAutoCollapsedNoTabs = useRef(false);
+  const hasAutoCollapsed = useRef(false);
   const settingsButtonRef = useRef<HTMLDivElement | null>(null);
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
-  const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
+  const visiblePaneRef = useRef<HTMLDivElement | null>(null);
+  const selectedTabWithKeyboard = useRef(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -235,9 +255,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.lab.validationState?.hasConditions
   );
   const levelName = instructionsProps.levelProperties.name;
+  const levelSystemPrompt = instructionsProps.levelProperties.levelSystemPrompt;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
+  const isCollapsible = collapsible ?? isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const isPredictLevel =
     instructionsProps.levelProperties.predictSettings?.isPredictLevel;
@@ -245,10 +267,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.predictLevel.hasSubmittedResponse
   );
   const dispatch = useAppDispatch();
-  const setBackpackTabAsActive = useCallback(
-    () => setCurrentTab(Tabs.Backpack),
-    []
-  );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
@@ -270,6 +288,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
   const aiChatDisabledState = useAiChatDisabledState({
     appName,
+    clientType: AiChatClientTypes.AI_TUTOR,
+    selectedModelId: aiTutorModelId,
     isPredictLevel: !!isPredictLevel,
     hasSubmittedPredictResponse,
   });
@@ -307,23 +327,36 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hiddenContextCallback &&
     hasInstructions;
 
+  // The AI Tutor tab, with its instructions drawer open to begin with,
+  // stands in for the Instructions tab. Predict levels keep their own layout.
+  const instructionsInAiTutor =
+    !!levelProperties.showInstructionsInAiTutor &&
+    usesSharedInstructionsDrawer &&
+    !isPredictLevel;
+
+  const validExtraTabs = useMemo(() => filterExtraTabs(extraTabs), [extraTabs]);
+
   // Build available tabs based on level information.
-  const availableTabs = useMemo(() => {
+  const buildAvailableTabs = () => {
     if (sidebarOnly) {
       return {};
     }
-    const tabMap: {[key in Tabs]?: React.ReactNode} = {};
+    const tabMap: Record<string, React.ReactNode> = {};
 
     const instructionsContent = hasInstructions ? (
       <Instructions
         {...instructionsProps}
-        hideNavigation={hideInstructionsNavigation}
+        hideNavigation={hideAllNavigation || hideInstructionsNavigation}
       />
     ) : null;
 
-    if (hasInstructions) {
+    if (hasInstructions && !instructionsInAiTutor) {
       tabMap[Tabs.Instructions] = instructionsContent;
     }
+
+    validExtraTabs.forEach(tab => {
+      tabMap[tab.id] = tab.content;
+    });
 
     if (validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
@@ -333,7 +366,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       const aiTutorProps = {
         hiddenContextCallback,
         aiTutorMultimodalEnabled,
+        levelId,
         levelName,
+        levelSystemPrompt,
         channelId,
         aiTutorChatButtonData,
         aiTutorSystemPrompt,
@@ -351,6 +386,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             instructionsContent={instructionsContent}
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
+            instructionsInitiallyOpen={instructionsInAiTutor}
           />
         );
       } else {
@@ -387,11 +423,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (showBackpack) {
       tabMap[Tabs.Backpack] = (
-        <BackpackPanel
+        <UnifiedBackpackPanel
           {...backpackProps}
-          openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
-          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -409,70 +443,55 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (levelTours.length > 0 || otherAvailableTours.length > 0) {
+    const shortcuts = getLabShortcuts(levelProperties.appName as AppName);
+    if (
+      levelTours.length > 0 ||
+      otherAvailableTours.length > 0 ||
+      !!shortcuts
+    ) {
       tabMap[Tabs.StudentResources] = (
         <StudentResourcesPanel
           levelTours={levelTours}
           otherAvailableTours={otherAvailableTours}
+          shortcuts={shortcuts}
         />
       );
     }
 
     return tabMap;
-  }, [
-    sidebarOnly,
-    levelProperties,
-    instructionsProps,
-    hideInstructionsNavigation,
-    validationSettings,
-    hasValidationConditions,
-    hiddenContextCallback,
-    aiTutorVisible,
-    isPermanentlyReadOnly,
-    viewAsUserId,
-    isWidgetView,
-    isReadOnlyPredict,
-    versionHistoryProps,
-    showRubric,
-    showBackpack,
-    isUserTeacher,
-    levelTours,
-    otherAvailableTours,
-    aiTutorMultimodalEnabled,
-    levelName,
-    channelId,
-    aiTutorChatButtonData,
-    aiTutorSystemPrompt,
-    aiTutorResponseSchemaSettings,
-    tutorVideos,
-    aiChatDisabledState,
-    onAssetUploaded,
-    onAssetRemoved,
-    initialWelcomeMessage,
-    usesSharedInstructionsDrawer,
-    isPredictLevel,
-    selectedVersion,
-    levelId,
-    isTemporarilyReadOnly,
-    isViewingOldVersion,
-    currentTab,
-    backpackProps,
-    setBackpackTabAsActive,
-    backpackRefreshKey,
-    onImageFlagged,
-    hasInstructions,
-  ]);
+  };
+  const availableTabs = buildAvailableTabs();
 
-  const hasTabs = useMemo(() => {
-    return Object.keys(availableTabs).length > 0;
-  }, [availableTabs]);
+  const extraTabInfo = useMemo(() => {
+    const info: {[id: string]: {title: string; icon: string}} = {};
+    validExtraTabs.forEach(tab => {
+      info[tab.id] = {title: tab.title, icon: tab.icon};
+    });
+    return info;
+  }, [validExtraTabs]);
 
-  const hasOnlyVersionHistoryTab = useMemo(() => {
-    return (
-      Object.keys(availableTabs).length === 1 &&
-      availableTabs[Tabs.VersionHistory] !== undefined
-    );
-  }, [availableTabs]);
+  const getTabInfo = (tab: string): {title: string; icon: string} => {
+    if (Object.hasOwn(builtInTabInfo, tab)) {
+      return builtInTabInfo[tab as Tabs];
+    }
+    return extraTabInfo[tab];
+  };
+
+  const hasTabs = Object.keys(availableTabs).length > 0;
+
+  const displayedTab =
+    currentTab !== undefined && Object.hasOwn(availableTabs, currentTab)
+      ? currentTab
+      : getTypedKeys(availableTabs)[0];
+
+  // useLayoutEffect, not useEffect, so a caller sizing its own layout
+  // around this panel (see onHasTabsChange) sees the right value on the
+  // very first paint instead of a frame later.
+  useLayoutEffect(() => {
+    onHasTabsChange?.(hasTabs);
+  }, [hasTabs, onHasTabsChange]);
+
+  const hasAiTutorTab = availableTabs[Tabs.AiTutor] !== undefined;
 
   const floatingSettingsPanelStyles = usePanelPosition(
     isFloatingSettingsOpen,
@@ -482,23 +501,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
 
   useEffect(() => {
-    // Auto-collapse on initial mount if on a standalone project and there are no available tabs.
-    // Also auto-collapse if the only available tab is version history.
-    // Only run this once to allow user to toggle the panel.
-    if (
-      !hasAutoCollapsedNoTabs.current &&
-      isProjectLevel &&
-      (!hasTabs || hasOnlyVersionHistoryTab)
-    ) {
+    // On a standalone project, auto-collapse the panel on initial mount unless
+    // it offers the AI Tutor tab, which is worth keeping open by default.
+    // Only run this once to allow the user to toggle the panel.
+    if (!hasAutoCollapsed.current && isProjectLevel && !hasAiTutorTab) {
       dispatch(setIsStandaloneCollapsed(true));
-      hasAutoCollapsedNoTabs.current = true;
+      hasAutoCollapsed.current = true;
     }
-  }, [isProjectLevel, hasTabs, dispatch, hasOnlyVersionHistoryTab]);
+  }, [isProjectLevel, hasAiTutorTab, dispatch]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
-    } else if (currentTab && !(currentTab in availableTabs)) {
+    } else if (currentTab && !Object.hasOwn(availableTabs, currentTab)) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
     }
   }, [currentTab, availableTabs]);
@@ -508,34 +523,43 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
-  // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
+  // Clear the dot and update storage whenever the AI Tutor tab is opened.
   useEffect(() => {
-    if (currentTab === Tabs.AiTutor || currentTab === Tabs.VersionHistory) {
-      const panelContent = tabContentRefs.current[currentTab];
-      if (panelContent) {
-        // Use setTimeout to ensure the panel is rendered and visible before focusing.
-        const timeoutId = setTimeout(() => {
-          const focusableElement =
-            currentTab === Tabs.AiTutor
-              ? panelContent.querySelector<HTMLTextAreaElement>(
-                  '#uitest-chat-textarea'
-                )
-              : findFirstFocusableElement(panelContent);
-          // preventScroll: focusing the chat input must not scroll an ancestor
-          // to bring it into view, which momentarily shifts the whole panel up
-          // while the chat is still animating open.
-          if (focusableElement) {
-            focusableElement.focus({preventScroll: true});
-          } else {
-            // If no focusable element exists, make the panel content focusable and focus it
-            panelContent.setAttribute('tabindex', '-1');
-            panelContent.focus({preventScroll: true});
-          }
-        }, 0);
-        return () => clearTimeout(timeoutId);
-      }
+    if (currentTab !== Tabs.AiTutor || !showAiTutorNotificationDot) return;
+    setShowAiTutorNotificationDot(false);
+    if (aiTutorDotSeenKey) trySetLocalStorage(aiTutorDotSeenKey, 'yes');
+  }, [currentTab, showAiTutorNotificationDot, aiTutorDotSeenKey]);
+
+  // Move focus into the pane a keyboard tab selection just revealed, since the
+  // tab buttons sit outside it. AI Tutor focuses its chat input either way.
+  useEffect(() => {
+    const selectedWithKeyboard = selectedTabWithKeyboard.current;
+    selectedTabWithKeyboard.current = false;
+    const isAiTutor = currentTab === Tabs.AiTutor;
+    const panelContent = visiblePaneRef.current;
+    if (!panelContent || (!selectedWithKeyboard && !isAiTutor)) {
+      return;
     }
-  }, [currentTab]);
+    // Use setTimeout to ensure the panel is rendered and visible before focusing.
+    const timeoutId = setTimeout(() => {
+      const chatInput = isAiTutor
+        ? panelContent.querySelector<HTMLTextAreaElement>(
+            '#uitest-chat-textarea'
+          )
+        : null;
+      // preventScroll: focusing the chat input must not scroll an ancestor
+      // to bring it into view, which momentarily shifts the whole panel up
+      // while the chat is still animating open.
+      if (chatInput) {
+        chatInput.focus({preventScroll: true});
+      } else {
+        // Focus the pane, not a control inside it, so a reader starts at the top.
+        panelContent.setAttribute('tabindex', '-1');
+        panelContent.focus({preventScroll: true});
+      }
+    }, 0);
+    return () => clearTimeout(timeoutId);
+  }, [currentTab, isStandaloneCollapsed]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
@@ -549,25 +573,24 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [setShowExtraLinksButton]);
 
   const onClickTab = useCallback(
-    (tab: Tabs) => {
+    (tab: string, event: React.MouseEvent<HTMLElement>) => {
+      // Enter or space leaves the button focus-visible; a mouse click does not.
+      // A no-op activation would never reach the effect that clears this.
+      selectedTabWithKeyboard.current =
+        (tab !== currentTab || !!isStandaloneCollapsed) &&
+        event.currentTarget.matches(':focus-visible');
       if (currentTab && currentTab !== tab) {
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
           resourcePanelTabClickedFrom: currentTab,
         });
       }
-      if (tab === Tabs.AiTutor) {
-        setShowAiTutorNotificationDot(false);
-        if (aiTutorDotSeenKey) {
-          trySetLocalStorage(aiTutorDotSeenKey, 'yes');
-        }
-      }
       setCurrentTab(tab);
       if (isStandaloneCollapsed) {
         dispatch(setIsStandaloneCollapsed(false));
       }
     },
-    [currentTab, dispatch, isStandaloneCollapsed, aiTutorDotSeenKey]
+    [currentTab, dispatch, isStandaloneCollapsed]
   );
 
   const onClickSettingsButton = useCallback(() => {
@@ -601,14 +624,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   ]);
 
   // A tab's content pane: hidden (inert + transparent) unless it's the current
-  // tab. refTab, when given, exposes the pane via tabContentRefs for focus
-  // management. The shared instructions/AI Tutor pane reuses this with its own
+  // tab. The shared instructions/AI Tutor pane reuses this with its own
   // visibility rule, since one instance serves both tabs.
   const renderTabContentPane = (
     key: string,
     content: React.ReactNode,
-    hidden: boolean,
-    refTab?: Tabs
+    hidden: boolean
   ) => (
     <div
       key={key}
@@ -619,9 +640,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       ref={el => {
         if (el) {
           el.inert = hidden;
-        }
-        if (refTab) {
-          tabContentRefs.current[refTab] = el;
+          if (!hidden) {
+            visiblePaneRef.current = el;
+          }
+        } else {
+          // Without this a collapse would leave a removed node here.
+          visiblePaneRef.current = null;
         }
       }}
     >
@@ -638,29 +662,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <div
           className={classNames(
             styles.sidebar,
-            isStandaloneCollapsed && styles.collapsed
+            isStandaloneCollapsed && styles.collapsed,
+            hideCollapsedTabBorder && styles.hideCollapsedTabBorder
           )}
         >
           <div className={styles.topSection}>
             <div className={styles.collapseButtonContainer}>
               {/*
-              For standalone projects with at least one tab, we display the collapse/expand.
-              We hide this button for standalone projects with no tabs, but the bottom buttons
-              will still be available for users to access the settings panel, etc.
+              Hidden when there are no tabs; footer buttons still reach settings.
             */}
-              {isProjectLevel && hasTabs && (
-                <WithTooltip
-                  tooltipProps={{
-                    text: isStandaloneCollapsed
+              {isCollapsible && hasTabs && (
+                <Tooltip
+                  title={
+                    isStandaloneCollapsed
                       ? lab2I18n.expand()
-                      : lab2I18n.collapse(),
-                    tooltipId: 'tooltip-collapse',
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
-                  }}
-                  hideDelayMs={hideTooltipDelayMs}
-                  hideOnFirstLeave={true}
+                      : lab2I18n.collapse()
+                  }
+                  placement="right"
+                  leaveDelay={hideTooltipDelayMs}
+                  disableInteractive
+                  slotProps={
+                    theme ? {tooltip: {'data-theme': theme}} : undefined
+                  }
                 >
                   <MuiIconButton
                     variant="text"
@@ -685,21 +708,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       }
                     />
                   </MuiIconButton>
-                </WithTooltip>
+                </Tooltip>
               )}
             </div>
             <nav id={resourcePanelTabsElementId} className={styles.tabs}>
               {getTypedKeys(availableTabs).map(tab => (
-                <WithTooltip
-                  tooltipProps={{
-                    text: tabInfo[tab].title,
-                    tooltipId: `tooltip-${tab}`,
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
-                  }}
-                  hideDelayMs={hideTooltipDelayMs}
-                  hideOnFirstLeave={true}
+                <Tooltip
+                  title={getTabInfo(tab).title}
+                  placement="right"
+                  leaveDelay={hideTooltipDelayMs}
+                  disableInteractive
+                  slotProps={
+                    theme ? {tooltip: {'data-theme': theme}} : undefined
+                  }
                   key={`tooltip-${tab}`}
                 >
                   <div
@@ -716,19 +737,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       size="medium"
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected,
+                        tab === displayedTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       id={`resource-panel-tab-button-${tab}`}
-                      onClick={() => onClickTab(tab)}
-                      aria-label={tabInfo[tab].title}
+                      onClick={event => onClickTab(tab, event)}
+                      aria-label={getTabInfo(tab).title}
                       type="button"
                       key={tab}
                     >
                       <FontAwesomeV6Icon
-                        iconName={tabInfo[tab].icon}
+                        iconName={getTabInfo(tab).icon}
                         iconFamily={
-                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                          kitIcons.has(getTabInfo(tab).icon) ? 'kit' : undefined
                         }
                       />
                     </MuiIconButton>
@@ -744,7 +765,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                         />
                       )}
                   </div>
-                </WithTooltip>
+                </Tooltip>
               ))}
             </nav>
           </div>
@@ -760,7 +781,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 icon={{iconName: 'book', iconStyle: 'solid'}}
                 variant="text"
                 color="tertiary"
-                tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
@@ -776,7 +796,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 icon={{iconName: 'gear'}}
                 variant="text"
                 color="tertiary"
-                tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
@@ -788,13 +807,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         {!isStandaloneCollapsed && hasTabs && (
           <div className={styles.panels}>
             <PanelContainer
-              id={currentTab || 'resource-panel'}
-              headerContent={currentTab && tabInfo[currentTab].title}
+              id={displayedTab || 'resource-panel'}
+              headerContent={displayedTab && getTabInfo(displayedTab).title}
               headerClassName={headerClassName}
               rightHeaderContent={
-                currentTab === Tabs.AiTutor ? (
+                displayedTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
-                ) : currentTab === Tabs.Backpack ? (
+                ) : displayedTab === Tabs.Backpack ? (
                   <BackpackHeaderButtons
                     incrementBackpackRefreshKey={() =>
                       setBackpackRefreshKey(prev => prev + 1)
@@ -813,9 +832,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   renderTabContentPane(
                     'instructions-aitutor-shared',
                     availableTabs[Tabs.AiTutor],
-                    currentTab !== Tabs.Instructions &&
-                      currentTab !== Tabs.AiTutor,
-                    Tabs.AiTutor
+                    displayedTab !== Tabs.Instructions &&
+                      displayedTab !== Tabs.AiTutor
                   )}
                 {getTypedKeys(availableTabs).map(tab => {
                   if (
@@ -824,20 +842,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   ) {
                     return null;
                   }
-                  const refTab =
-                    tab === Tabs.AiTutor || tab === Tabs.VersionHistory
-                      ? tab
-                      : undefined;
                   return renderTabContentPane(
                     tab,
                     availableTabs[tab],
-                    tab !== currentTab,
-                    refTab
+                    tab !== displayedTab
                   );
                 })}
               </div>
-              {(hideInstructionsNavigation ||
-                currentTab !== Tabs.Instructions) &&
+              {!hideAllNavigation &&
+                (hideInstructionsNavigation ||
+                  displayedTab !== Tabs.Instructions) &&
                 !isProjectLevel && (
                   <NavigationArea
                     {...instructionsProps}

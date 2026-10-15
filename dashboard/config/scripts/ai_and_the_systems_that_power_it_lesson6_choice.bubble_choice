@@ -1,0 +1,13 @@
+name 'ai-and-the-systems-that-power-it-lesson6-choice'
+display_name 'Meet Your Clients'
+description 'Each of these people needs a computer built for the career that they have. Pick one client. You will design a system that fits their job, their budget, and the place where they work.'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson6-amara'
+level 'ai-and-the-systems-that-power-it-lesson6-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson6-denise'
+level 'ai-and-the-systems-that-power-it-lesson6-marcus'
+level 'ai-and-the-systems-that-power-it-lesson6-layla'
+level 'ai-and-the-systems-that-power-it-lesson6-you'
+
+uses_lab2

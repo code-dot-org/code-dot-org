@@ -94,7 +94,7 @@ export function useConnectMode({
       announce(
         `Connect mode: ${
           node ? getNodeLabel(node) : nodeId
-        } selected as source. Tab to a target node and press Enter to connect. Press Escape or C to cancel.`
+        } selected as source. Tab to a target node and press Enter or C to connect. Press Escape to cancel.`
       );
     },
     [getNode, announce]

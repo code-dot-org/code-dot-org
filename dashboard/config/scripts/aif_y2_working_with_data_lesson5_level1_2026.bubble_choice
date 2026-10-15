@@ -1,0 +1,12 @@
+name 'aif-y2-working-with-data-lesson5-level1-2026'
+display_name 'Analyzing Numerical Data'
+description 'Choose a context to analyze numerical data in.'
+
+sublevels
+level 'aif-y2-working-with-data-lesson5-level1-choice1-2026'
+level 'aif-y2-working-with-data-lesson5-level1-choice2-2026'
+level 'aif-y2-working-with-data-lesson5-level1-choice3-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

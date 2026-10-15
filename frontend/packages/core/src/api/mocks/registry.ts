@@ -14,6 +14,7 @@
 
 import type {Channel} from '../dashboard/channels';
 import type {
+  AppOptions,
   LevelPropertiesMap,
   LevelProperties,
   LevelPropertiesBaseInput,
@@ -36,6 +37,7 @@ export type LabFixture = {
   channel?: Channel;
   sources?: ProjectSourcesAny;
   levelProperties?: LevelPropertiesMap;
+  appOptions?: AppOptions;
   theme?: UserThemeSettings | null;
 };
 
@@ -63,6 +65,13 @@ function readOnlyRoutes(fixture: LabFixture): MockRoute[] {
     for (const path of LEVEL_PROPERTIES_PATHS) {
       routes.push({path, respond: body});
     }
+  }
+
+  if (fixture.appOptions) {
+    routes.push({
+      path: '*/levels/:levelId/app_options',
+      respond: fixture.appOptions,
+    });
   }
 
   if (fixture.theme !== undefined) {

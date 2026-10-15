@@ -1,0 +1,20 @@
+name 'problem-solving-with-ai-lesson12-level1c_v2_2026_dev'
+title 'AI in Public Transportation'
+display_name 'AI In Public Transportation'
+thumbnail_url 'https://images.code.org/4f71f8004793cde292dd34a4c3369d33-public-transport.png'
+
+markdown <<MARKDOWN
+##AI In Public Transportation
+Examine the following news articles, crafted by CodeAI, but modeled after real world events.
+
+[Article 1](https://drive.google.com/file/d/11v5ibPsr1CMPIeZIGBEMwRcozLGYSyqa/view?usp=sharing)
+
+[Article 2](https://drive.google.com/file/d/1pRQnK9mosplqZadOrAdkY7tIWa7t_9Gn/view?usp=sharing)
+
+[Article 3](https://drive.google.com/file/d/13OKulQmqH38HmFL3L41-xrZbz9VA-_TO/view?usp=sharing)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Note**: If Google Drive access is restricted, students can access these articles on the following level. Click "Add file" -> "From Library" -> then open each article individually.
+MARKDOWN

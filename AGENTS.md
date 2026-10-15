@@ -11,7 +11,17 @@
 
 ## Technical Writing Style
 
-IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
+IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Exact does not mean dense: write for a competent colleague outside the subsystem, and if a comment or PR description needs a spec citation or insider vocabulary to parse, rewrite it in plain words. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
+
+## Comments
+
+Never narrate what the code does. Comment only a fact a reader cannot recover from the code. One line each; never a paragraph.
+
+A complex file may open with a short orienting paragraph. A file of independent helpers may not.
+
+## Pull requests
+
+Write PR descriptions to `.github/pull_request_template.md` and `.github/PULL_REQUEST_GUIDELINES.md`. Never write in the first person: "I" and "me" are the PR author's. Refer to the author by name or GitHub username.
 
 ## A few other useful docs:
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX. ALWAYS read @apps/README.md before working with frontend code.
@@ -36,6 +46,7 @@ and architecture.
 
 ## Rails Tips and Tricks:
 - As previously mentioned, see `dashboard/` directory for a conventional rails app with the usual directories (i.e. with dashboard/app/controllers, dashboard/app/models, dashboard/bin/rails, etc)
+- We typically avoid foreign keys unless there's a specific reason to add them - they can cause issues down the road if migrations or data need to change.
 - Some non-rails ruby code also lives in `lib/`
 - We use CanCanCan for authorization and Devise for authentication
 - Use `bundle exec` to run ruby commands (exception: most ./bin/* commands automatically load the rails environment)

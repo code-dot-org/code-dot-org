@@ -9,25 +9,36 @@ import {
   DashboardApiClient,
   useUserSettings,
   useCurrentUser,
+  type UserSettings,
 } from '@code-dot-org/core/api';
 
+import EducatorProfileForm from './components/EducatorProfileForm';
+import IntegrationsForm from './components/IntegrationsForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
+const EDUCATOR_PROFILE_TAB = 'educator-profile';
+const INTEGRATIONS_TAB = 'integrations';
 
-// Account Details is the only functional tab; the rest are disabled placeholders
-// (legacy parity). Educator Profile is hidden for students.
-const TAB_META = [
+const ACCOUNT_TABS: {
+  value: string;
+  text: string;
+  isVisible?: (settings: UserSettings) => boolean;
+}[] = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
   {
-    value: 'educator-profile',
+    value: EDUCATOR_PROFILE_TAB,
     text: 'Educator Profile',
-    disabled: true,
-    educatorOnly: true,
+    isVisible: settings => settings.userType !== 'student',
   },
-  {value: 'communications', text: 'Communications', disabled: true},
-  {value: 'integrations', text: 'Integrations', disabled: true},
+  {
+    value: INTEGRATIONS_TAB,
+    text: 'Integrations',
+    isVisible: ({integrations}) =>
+      integrations.canManageLinkedAccounts ||
+      integrations.ltiRosterSyncEnabled !== undefined,
+  },
 ];
 
 const NO_OP = () => {};
@@ -54,16 +65,27 @@ export default function UsersSettingsPage({
   const currentUser = useCurrentUser(DashboardApiClient);
   const settings = useUserSettings(DashboardApiClient);
 
-  const isStudent = settings.data?.userType === 'student';
-  const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent));
+  // Until settings load every tab counts as visible, so a requested tab survives.
+  const visibleTabs = ACCOUNT_TABS.filter(
+    t => !settings.data || !t.isVisible || t.isVisible(settings.data),
+  );
 
   const activeTab =
-    tab && TAB_META.some(t => t.value === tab && !t.disabled)
-      ? tab
-      : ACCOUNT_DETAILS_TAB;
+    tab && visibleTabs.some(t => t.value === tab) ? tab : ACCOUNT_DETAILS_TAB;
+
+  // A requested tab can disappear under the user (an educator switches to
+  // student). DSCO's Tabs falls back to the first tab without telling the host,
+  // leaving its URL pointing at a tab that no longer exists.
+  useEffect(() => {
+    if (tab && tab !== activeTab) onTabChange?.(activeTab);
+  }, [tab, activeTab, onTabChange]);
 
   const isPending = currentUser.isPending || settings.isPending;
-  const isError = currentUser.isError || settings.isError;
+  // Only until first data: a failed background refetch keeps the cached
+  // settings, because unmounting the tabs would discard form state.
+  const isError =
+    (currentUser.isError && !currentUser.data) ||
+    (settings.isError && !settings.data);
 
   const retry = () => {
     if (currentUser.isError) void currentUser.refetch();
@@ -82,26 +104,57 @@ export default function UsersSettingsPage({
     wasError.current = isError;
   }, [isPending, isError, settings.data]);
 
-  // Only Account Details carries content; the placeholders render an empty panel.
+  const tabContent = (value: string) => {
+    const data = settings.data;
+    if (!data) return null;
+
+    if (value === ACCOUNT_DETAILS_TAB) {
+      return (
+        <FormProvider
+          initialValues={{
+            given_name: data.givenName ?? '',
+            family_name: data.familyName ?? '',
+            name: data.displayName,
+            username: data.username ?? '',
+            age: data.age != null ? String(data.age) : '',
+            us_state: data.usState ?? '',
+            gender: data.gender ?? '',
+          }}
+        >
+          <UsersDetailsForm settings={data} />
+        </FormProvider>
+      );
+    }
+
+    if (value === EDUCATOR_PROFILE_TAB) {
+      return (
+        <FormProvider initialValues={{educator_role: data.educatorRole ?? ''}}>
+          <EducatorProfileForm settings={data} />
+        </FormProvider>
+      );
+    }
+
+    if (value === INTEGRATIONS_TAB) {
+      return (
+        <FormProvider
+          initialValues={{
+            lti_roster_sync_enabled: String(
+              data.integrations.ltiRosterSyncEnabled ?? false,
+            ),
+          }}
+        >
+          <IntegrationsForm settings={data} />
+        </FormProvider>
+      );
+    }
+
+    return null;
+  };
+
   const tabs: TabModel[] = visibleTabs.map(t => ({
     value: t.value,
     text: t.text,
-    disabled: t.disabled,
-    tabContent:
-      t.value === ACCOUNT_DETAILS_TAB && settings.data ? (
-        <FormProvider
-          initialValues={{
-            given_name: settings.data.givenName ?? '',
-            family_name: settings.data.familyName ?? '',
-            name: settings.data.displayName,
-            username: settings.data.username ?? '',
-            age: settings.data.age != null ? String(settings.data.age) : '',
-            us_state: settings.data.usState ?? '',
-          }}
-        >
-          <UsersDetailsForm />
-        </FormProvider>
-      ) : null,
+    tabContent: tabContent(t.value),
   }));
 
   return (
@@ -110,16 +163,16 @@ export default function UsersSettingsPage({
       aria-labelledby="account-page-heading"
       aria-busy={isPending}
       sx={{
-        // Legacy parity: .container caps at 970px, fluid below.
-        maxWidth: 970,
+        maxWidth: 1008,
         mx: 'auto',
         px: {xs: 2, sm: 3},
-        py: 3,
+        pt: 8,
+        pb: 3,
         color: 'var(--text-neutral-primary)',
       }}
     >
       <Typography
-        variant="h3"
+        variant="h1"
         component="h1"
         id="account-page-heading"
         ref={headingRef}
@@ -145,14 +198,18 @@ export default function UsersSettingsPage({
         </Box>
       )}
 
+      {/* Every toast here confirms a save the user just asked for, so it waits its
+          turn instead of interrupting the screen reader; failures surface inline
+          on the field or in the dialog, not as a toast. */}
       {!isPending && !isError && settings.data && (
-        <ToastProvider>
-          <Box className={styles.tabs} sx={{mt: 3}}>
+        <ToastProvider politeness="polite">
+          <Box className={styles.tabs} sx={{mt: 4}}>
             <Tabs
               name="account-settings"
               type="primary"
               mode="light"
               size="m"
+              scrollable
               tabs={tabs}
               defaultSelectedTabValue={activeTab}
               onChange={onTabChange ?? NO_OP}

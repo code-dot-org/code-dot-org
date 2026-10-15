@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-10T18:14:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# ---------- THE VARIABLES  ----------\n\n\n\n# ---------- THE MATH ----------\n\n\n\n\n# ---------- OUTPUT ----------",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "#The Setup\r\n\r\nMake Anything Wrapped. Pick a topic — sports, grades, a hobby, anything that has numbers behind it. Your program will collect the story, then turn it into a personalized recap.\r\n\r\n1. **Your Variables:** Use `input()` to collect your name, topic, and the raw numbers you'll need.\r\n2. **The Math:** Calculate at least 2 meaningful values. Give each one a comment describing what it is.\r\n3. **The Output:** Test your calucations by printing them to the console\r\n4. **Save to your Backpack:** Once everything is working as expected, save your python file to your backpack. See instructions below.\r\n\r\n::: details [**How do I save to my Backpack?**]\r\n1. Click the 3 dots next to the `main.py` file.\r\n2. Select the \"Save to Backpack\"\r\n   \r\n<img src=\"https://images.code.org/d77df737aa8638aaf5fb1219dd6ee182-Screenshot 2026-09-10 113239.png\" width=\"200px\">\r\n:::",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-10 18:17:15 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 18:19:27 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 18:27:23 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 18:36:29 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 18:37:52 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

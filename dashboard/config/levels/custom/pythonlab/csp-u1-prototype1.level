@@ -1,0 +1,46 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-11T17:02:48.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# ---------------- Vacation Wrapped: Console Prototype ----------------\n# Unit 1 concepts only: sequencing, variables, strings, input/output,\n# arithmetic expressions (no conditionals, no loops, no custom functions)\n\ndestination = input(\"Where did you go on your trip? \")\ntrip_cost = float(input(\"How much did the whole trip cost, in dollars? \"))\nnum_days = int(input(\"How many days was the trip? \"))\ntravel_minutes = int(input(\"About how many total minutes did you spend traveling (flights, drives, layovers, etc.)? \"))\n\n# --- Money math: cost per day of the trip ---\ncost_per_day = trip_cost / num_days\n\n# --- Time math: convert total travel minutes into hours + leftover minutes ---\ntravel_hours = travel_minutes // 60\nleftover_minutes = travel_minutes % 60\n\n# --- \"Was it worth it\" math: cost per hour spent traveling ---\ntravel_hours_decimal = travel_minutes / 60\ncost_per_travel_hour = trip_cost / travel_hours_decimal\n\n# --- Build the Wrapped-style summary using string concatenation ---\nsummary = destination + \" Wrapped: \" + str(num_days) + \" days, $\" + str(round(cost_per_day, 2)) + \" per day.\"\ntravel_summary = \"You spent \" + str(travel_hours) + \" hours and \" + str(leftover_minutes) + \" minutes just traveling.\"\nworth_it_summary = \"That travel time cost you about $\" + str(round(cost_per_travel_hour, 2)) + \" per hour.\"\n\nprint(summary)\nprint(travel_summary)\nprint(worth_it_summary)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-11 17:03:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-11 17:05:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,4 @@
+.craftDialog {
+  box-shadow: inset 0px 0px 0px 2px #000,inset 5px 5px 0px 0px #fff,inset -5px -5px 0px 0px #888,inset 0px 0px 0px 12px #ddd,inset -14px -14px 0px 0px #888,inset 14px 14px 0px 0px #000;
+  padding: 24px;
+}

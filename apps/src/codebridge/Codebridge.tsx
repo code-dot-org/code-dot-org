@@ -1,9 +1,5 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {
-  useFlaggedImage,
-  useSyncValidationOverride,
-  useZoomTracker,
-} from '@codebridge/hooks';
+import {useSyncValidationOverride, useZoomTracker} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -22,15 +18,16 @@ import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledSt
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 
@@ -56,7 +53,6 @@ type CodebridgeProps = {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
-  secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   aiTutorInitialWelcomeMessage?: string;
@@ -81,7 +77,6 @@ export const Codebridge = React.memo(
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     tutorVideos,
-    secondaryBackpackAppNames,
     onAssetUploaded,
     onAssetRemoved,
     aiTutorInitialWelcomeMessage,
@@ -92,12 +87,13 @@ export const Codebridge = React.memo(
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
-    const currentUserId = useAppSelector(state => state.currentUser.userId);
     const hasSubmittedPredictResponse = useAppSelector(
       state => state.predictLevel.hasSubmittedResponse
     );
     const {disabled: aiTutorDisabled} = useAiChatDisabledState({
       appName,
+      clientType: AiChatClientTypes.AI_TUTOR,
+      selectedModelId: aiTutorModelId,
       isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
       hasSubmittedPredictResponse,
     });
@@ -180,26 +176,6 @@ export const Codebridge = React.memo(
       isWidgetView,
     ]);
 
-    const backpackContext = useMemo(() => {
-      // The backpack api does not work for signed-out users (it redirects to sign-in),
-      // so we don't create the api instance if there is no current user.
-      if (currentUserId) {
-        const primaryApi = new BackpackClientApi(appName, null);
-        if (secondaryBackpackAppNames && secondaryBackpackAppNames.length > 0) {
-          const secondaryApis: {[key: string]: BackpackClientApi} = {};
-          secondaryBackpackAppNames.forEach(secondaryAppName => {
-            secondaryApis[secondaryAppName] = new BackpackClientApi(
-              secondaryAppName,
-              null
-            );
-          });
-          return {primaryApi, secondaryApis};
-        }
-        return {primaryApi};
-      }
-      return null;
-    }, [appName, currentUserId, secondaryBackpackAppNames]);
-
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
@@ -247,21 +223,19 @@ export const Codebridge = React.memo(
           enableUserAddedSelectionContext,
         }}
       >
-        <BackpackAPIContext.Provider value={backpackContext}>
-          <div className={classNames(moduleStyles.codebridgeContainer)}>
-            {flaggedImageData && (
-              <FlaggedImageModal
-                onAccept={handleAcceptFlaggedImage}
-                onCancel={handleCancelFlaggedImage}
-                appName={appName}
-              />
-            )}
-            <InnerLayout
-              isProjectLevel={levelProperties.isProjectLevel}
-              isWidgetView={levelProperties.widgetView}
+        <div className={classNames(moduleStyles.codebridgeContainer)}>
+          {flaggedImageData && (
+            <FlaggedImageModal
+              onAccept={handleAcceptFlaggedImage}
+              onCancel={handleCancelFlaggedImage}
+              appName={appName}
             />
-          </div>
-        </BackpackAPIContext.Provider>
+          )}
+          <InnerLayout
+            isProjectLevel={levelProperties.isProjectLevel}
+            isWidgetView={levelProperties.widgetView}
+          />
+        </div>
       </CodebridgeContextProvider>
     );
   }

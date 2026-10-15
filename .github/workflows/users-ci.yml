@@ -1,0 +1,80 @@
+# Common workflow for execution of continuous integration for the users package
+# (the account-settings page Studio lazy-loads). Two jobs: build (turbo build +
+# lint + typecheck + unit test) and e2e (Playwright against the package's own
+# standalone MSW host, which its playwright.config starts).
+#
+# No LFS steps here, unlike markdown-ci: nothing under packages/users or its
+# dependencies is LFS-tracked, so there are no assets to fetch and no hash to
+# match.
+name: Users-CI
+
+on:
+  workflow_call:
+    inputs:
+      playwright-image-tag:
+        required: true
+        type: string
+        description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/users
+        working-directory: ./frontend
+
+  e2e:
+    # Sequence after build so the turbo cache is warm.
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      # The specs run against `yarn dev`, which resolves workspace dependencies
+      # to their dist output, so those have to exist first.
+      - name: Build
+        run: yarn turbo run build --filter=@code-dot-org/users
+        working-directory: ./frontend
+
+      - name: E2E tests
+        # test:ui:ci sets CI, which turns off reuseExistingServer so Playwright
+        # starts its own MSW host. HOME=/root is Playwright's in-container fix.
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          HOME: /root
+        run: yarn workspace @code-dot-org/users test:ui:ci
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        # Upload on flakes too (passing-on-retry leaves the job green). The name
+        # is package-scoped because artifact names must be unique per run, and
+        # sibling package workflows upload in the same run.
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-users
+          path: |
+            frontend/packages/users/playwright-report/
+            frontend/packages/users/test-results/
+          retention-days: 7

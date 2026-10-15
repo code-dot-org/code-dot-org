@@ -134,6 +134,9 @@ class FieldSounds extends BlocklyCore.Field {
     this.newDiv_.style.width = '600px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
+    // The panel inside is a fixed 600px (soundsPanel.module.scss), so this
+    // width must not absorb the padding.
+    this.newDiv_.style.boxSizing = 'content-box';
 
     return this.newDiv_;
   }

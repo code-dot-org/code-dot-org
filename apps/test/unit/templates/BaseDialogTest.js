@@ -13,10 +13,53 @@ describe('BaseDialog', function () {
 
     it('has 90% width and -45% left margin if fullWidth is provided', function () {
       const result = mount(<BaseDialog isOpen fullWidth />);
-      expect(result.find('.modal').props().style).toEqual({
+      expect(result.find('.modal-dialog').props().style).toEqual({
         width: '90%',
-        marginLeft: '-45%',
       });
+    });
+  });
+
+  describe('style option', function () {
+    it('applies box styles to the visible .modal-content box', function () {
+      const result = mount(
+        <BaseDialog
+          isOpen
+          useUpdatedStyles
+          style={{padding: 20, color: 'red'}}
+        />
+      );
+      expect(result.find('.modal-content').props().style).toEqual({
+        padding: 20,
+        color: 'red',
+      });
+      expect(result.find('.modal-dialog').props().style).toEqual({
+        width: 700,
+      });
+    });
+
+    it('moves width and top onto the .modal-dialog wrapper', function () {
+      const result = mount(
+        <BaseDialog isOpen style={{width: 740, top: '20%', padding: 20}} />
+      );
+      expect(result.find('.modal-dialog').props().style).toEqual({
+        width: 740,
+        top: '20%',
+      });
+      expect(result.find('.modal-content').props().style).toEqual({
+        padding: 20,
+      });
+    });
+
+    it('lets style.width override fixedWidth', function () {
+      const result = mount(
+        <BaseDialog
+          isOpen
+          useUpdatedStyles
+          fixedWidth={300}
+          style={{width: 740}}
+        />
+      );
+      expect(result.find('.modal-dialog').props().style.width).toBe(740);
     });
   });
 });

@@ -1,0 +1,11 @@
+name 'aif-y2-machine-learning-fundamentals-lesson9-level1-2026'
+display_name 'Tuning Classifiers'
+description 'Choose a classifier to tune.'
+
+sublevels
+level 'aif-y2-machine-learning-fundamentals-lesson9-level1-choice1-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson9-level1-choice2-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

@@ -22,9 +22,6 @@
       # in source code. We set the value of the Secret manually in production.
       hash[:db_endpoint_writer] = 'PLACEHOLDER'
       hash[:db_endpoint_writer_port] = '3306'
-      # We haven't yet provisioned the Writer and Reader Proxy Endpoints in production.
-      hash[:db_endpoint_proxy_writer] = 'PLACEHOLDER'
-      hash[:db_endpoint_proxy_reader] = 'PLACEHOLDER'
     end
     if !database
       hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
@@ -233,6 +230,39 @@
           Type: CNAME
           TTL: <%= DNS_TTL %>
           ResourceRecords: [ !GetAtt ReportingDBProxyEndpoint.Endpoint ]
+  DBProxy:
+    Type: AWS::RDS::DBProxy
+    DependsOn: [WriterSQLUser, ReaderSQLUser]
+    Properties:
+      DBProxyName: !Ref AWS::StackName
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretWriter, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  ReaderDBProxyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
+      DBProxyName: !Ref DBProxy
+      TargetRole: READ_ONLY
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  DBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+<%  unless rack_env?(:production)%>
+    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1).
+    # Database Instances are not yet provisioned by the production Stack.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%  end -%>
+    Properties:
+      DBProxyName: !Ref DBProxy
+      DBClusterIdentifiers: [<%=DATABASE_CONFIGURATION[:db_cluster_id]%>]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10
   ReportingDBProxyEndpoint:
     Type: AWS::RDS::DBProxyEndpoint
     Properties:
@@ -245,12 +275,12 @@
     Type: AWS::RDS::DBProxyTargetGroup
 <%  unless rack_env?(:production)%>
     # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
-    # These Database Instances are not yet provisioned by this Stack.
+    # Database Instances are not yet provisioned by the production Stack.
     DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
 <%  end -%>
     Properties:
       DBProxyName: !Ref ReportingDBProxy
-      DBClusterIdentifiers: [<%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>]
+      DBClusterIdentifiers: [<%=DATABASE_CONFIGURATION[:db_cluster_id]%>]
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
@@ -277,6 +307,7 @@
       DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretWriter
+      # KEEP THESE PERMISSIONS IN SYNC with Cdo::SqlUserProvisioner in `lib/cdo/sql_user_provisioner.rb`
       Privileges:
         - SELECT
         - INSERT
@@ -312,6 +343,7 @@
       DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
+      # KEEP THESE PERMISSIONS IN SYNC with Cdo::SqlUserProvisioner in `lib/cdo/sql_user_provisioner.rb`
       Privileges: ['SELECT']
 <% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
   ZeroETLIntegration:
@@ -321,8 +353,9 @@
       Description: "Export transactional tables from MySQL to Redshift via Zero-ETL integration."
       SourceArn: !Sub
         - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
-        - ClusterId: <%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster' %>
+        - ClusterId: <%=DATABASE_CONFIGURATION[:db_cluster_id]%>
       TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
+      # PLACEHOLDER - The include/exclude list is managed by `Cdo::RDS`.
       DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
       Tags:
         - Key: environment
@@ -357,6 +390,18 @@
 <%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%    end -%>
+      # Database Insights + Enhanced Monitoring settings.
+<%    insights = {mode: 'standard', retention: 7, monitoring_interval: 60}
+      insights = {mode: 'advanced', retention: 465, monitoring_interval: 1} if rack_env?(:production)
+      if rack_env?(:production, :test)
+-%>
+      PerformanceInsightsEnabled: true
+      DatabaseInsightsMode: <%=insights[:mode]%>
+      PerformanceInsightsRetentionPeriod: <%=insights[:retention]%>
+      MonitoringInterval: <%=insights[:monitoring_interval]%>
+      # rds-monitoring-role was provisioned manually in 2015.
+      MonitoringRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/rds-monitoring-role"
+<%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
@@ -368,40 +413,6 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
-<%      if rack_env?(:production) || rack_env?(:test) -%>
-      EnablePerformanceInsights: true
-      PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
-<%      end -%>
 <%    end -%>
-  DBProxy:
-    Type: AWS::RDS::DBProxy
-    DependsOn: [WriterSQLUser, ReaderSQLUser]
-    Properties:
-      DBProxyName: !Ref AWS::StackName
-      EngineFamily: MYSQL
-      RoleArn: !GetAtt DBProxyRole.Arn
-      Auth:
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretWriter, IAMAuth: DISABLED}
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
-      VpcSubnetIds: <%=subnets.to_json%>
-      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
-  ReaderDBProxyEndpoint:
-    Type: AWS::RDS::DBProxyEndpoint
-    Properties:
-      DBProxyEndpointName: !Sub "${AWS::StackName}-reader"
-      DBProxyName: !Ref DBProxy
-      TargetRole: READ_ONLY
-      VpcSubnetIds: <%=subnets.to_json%>
-      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
-  DBProxyTargetGroup:
-    Type: AWS::RDS::DBProxyTargetGroup
-    # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
-    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
-    Properties:
-      DBProxyName: !Ref DBProxy
-      DBClusterIdentifiers: [!Ref AuroraCluster]
-      TargetGroupName: default
-      ConnectionPoolConfigurationInfo:
-        ConnectionBorrowTimeout: 10
 <%  end -%>
 <%end -%>

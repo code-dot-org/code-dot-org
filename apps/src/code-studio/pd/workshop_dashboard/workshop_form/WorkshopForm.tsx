@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import React, {
   FC,

@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-28T06:28:04.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Predict & Run\r\n\r\nLook at the code in the workspace. Each variable stores a value, but not\r\nevery value has the same data type — some are text, one is a whole\r\nnumber, and one is either True or False. \r\n\r\nWhen you print more than one\r\nvalue, separate them with commas. \r\n\r\nIf a user types \"Math\" when asked for their favorite subject, what will the program print?\r\n\r\nWrite your prediction.\r\n\r\nPress Run to check your answer.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "name = \"Jordan\"\nage = 16\nis_a_student = True\nfavorite_subject = input(\"What's your favorite subject? \")\nprint(\"Name:\", name, \"Age:\", age)\nprint(\"Is a student:\", is_a_student, \"Favorite subject:\", favorite_subject)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoOqbfr9qesPAhx\nK+PG0zYyLftADKq3kxHxpeysaqyWcvAVcBAL5rdPL16wTj6wJgTfjK4FswXT\nKY1k1ZuGwRacVhRfGcV/+b9yvwmjPZO4wYaHxg2FfOP2cSQA1ekuMJ02tCHU\nb4yIiu3rHG0BTMpIS1gq9frx9R8iApHFrfApKI8nGkNbJbnen2KXFjWZ2bIT\nJOIXD0PWKwXWoG5NnMXAi7RfIDaem07kVcY35CLiLGKLfNsoAzEbF7uzrI02\n4G9wqe2tTvFujV8EFVhbfCGdL6vrziPrn5jx5Ec8V+V+V7xvSL9jC++y7wkp\nY4G66TTa5Aw08WhPJR38l2ZTVYQ3RyaZYwwEef/GDOTLEPnt8x+quHK46Q1n\negwNUqgxO/7LiaHtw8jxHVjA1VIsFQm+IoW9YtN5LuKb2k6VZWx+kg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-28T06:28:04.914+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson19-predict_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson19-predict_27_28\"},{\"changed_at\":\"2026-08-28 06:29:48 +0000\",\"changed\":[\"serialized_maze\",\"mini_app\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:31:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:31:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:32:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:33:31 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-28 06:34:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-29 01:14:13 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-29 01:15:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 04:12:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 04:13:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-02 04:17:36 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

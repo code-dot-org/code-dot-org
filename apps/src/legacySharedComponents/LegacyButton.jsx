@@ -96,38 +96,38 @@ export const BUTTON_TYPES = {
   },
   cancel: {
     style: {
-      backgroundColor: color.neutral_white,
+      backgroundColor: 'var(--background-neutral-primary)',
       borderWidth: 2,
       borderStyle: 'solid',
-      borderColor: color.neutral_dark,
-      color: color.neutral_dark,
+      borderColor: 'var(--borders-neutral-strong)',
+      color: 'var(--text-neutral-primary)',
       ':hover': {
-        backgroundColor: color.neutral_dark20,
+        backgroundColor: 'var(--background-neutral-tertiary)',
         boxShadow: 'none',
       },
       ':focus': {
-        backgroundColor: color.neutral_dark20,
+        backgroundColor: 'var(--background-neutral-tertiary)',
         boxShadow: 'none',
       },
     },
   },
   primary: {
     style: {
-      backgroundColor: color.brand_secondary_default,
-      borderColor: color.brand_secondary_default,
-      color: color.neutral_white,
+      backgroundColor: 'var(--background-brand-purple-primary)',
+      borderColor: 'var(--background-brand-purple-primary)',
+      color: 'var(--text-neutral-white-fixed)',
       ':hover': {
-        backgroundColor: color.brand_secondary_dark,
-        borderColor: color.brand_secondary_dark,
+        backgroundColor: 'var(--background-brand-purple-strong)',
+        borderColor: 'var(--background-brand-purple-strong)',
         boxShadow: 'none',
       },
     },
   },
   legacyPrimary: {
     style: {
-      backgroundColor: color.orange,
-      borderColor: color.orange,
-      color: color.neutral_white,
+      backgroundColor: 'var(--background-brand-purple-primary)',
+      borderColor: 'var(--background-brand-purple-primary)',
+      color: 'var(--text-neutral-white-fixed)',
     },
   },
   danger: {

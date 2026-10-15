@@ -25,6 +25,10 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "allowJs": true,
+    // tell the type-checker to enforce extra rules to ensure the codebase is
+    // safe to compile one file at a time. this also tells ts-jest to skip an
+    // expensive type-checking step (see apps/jest.config.js).
+    "isolatedModules": true,
     "baseUrl": "./",
     "preserveSymlinks": true,
     "paths": {

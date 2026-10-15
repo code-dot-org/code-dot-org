@@ -1,10 +1,12 @@
 import {
   drawCircle,
+  drawRect,
   floodFill,
   Raster,
   RGBA,
   stamp,
   stampLine,
+  TRANSPARENT,
 } from '@cdo/apps/pixelEditor/tools';
 
 // A blank raster (transparent black), like a fresh ImageData.
@@ -88,6 +90,112 @@ describe('pixelEditor tools', () => {
       const before = raster.data.slice();
       floodFill(raster, 1, 1, BLUE);
       expect(raster.data).toEqual(before);
+    });
+  });
+
+  describe('drawRect', () => {
+    it('solid rectangles fill the interior with hard corners', () => {
+      const raster = makeRaster(10, 10);
+      drawRect(raster, 2, 3, 7, 6, 1, RED, true);
+      expect(pixel(raster, 2, 3)).toEqual(RED); // corner is hard
+      expect(pixel(raster, 7, 6)).toEqual(RED);
+      expect(pixel(raster, 4, 4)).toEqual(RED);
+      expect(countOpaque(raster)).toBe(6 * 4);
+    });
+
+    it('outline rectangles leave the interior empty', () => {
+      const raster = makeRaster(10, 10);
+      drawRect(raster, 1, 1, 8, 8, 1, RED, false);
+      expect(pixel(raster, 1, 1)).toEqual(RED);
+      expect(pixel(raster, 8, 1)).toEqual(RED);
+      expect(pixel(raster, 4, 1)).toEqual(RED);
+      expect(pixel(raster, 4, 4)).toEqual([0, 0, 0, 0]);
+    });
+
+    it('normalizes corners given in any order', () => {
+      const a = makeRaster(10, 10);
+      const b = makeRaster(10, 10);
+      drawRect(a, 7, 6, 2, 3, 1, RED, true);
+      drawRect(b, 2, 3, 7, 6, 1, RED, true);
+      expect(a.data).toEqual(b.data);
+    });
+  });
+
+  describe('floodFill tolerance', () => {
+    // A "solid" region with the tiny per-pixel variation AI output carries.
+    function noisyRaster(): Raster {
+      const raster = makeRaster(6, 6);
+      for (let y = 0; y < 6; y++) {
+        for (let x = 0; x < 6; x++) {
+          const i = (y * 6 + x) * 4;
+          raster.data[i] = 100 + ((x + y) % 3); // 100..102
+          raster.data[i + 1] = 100;
+          raster.data[i + 2] = 100;
+          raster.data[i + 3] = 255;
+        }
+      }
+      return raster;
+    }
+
+    it('fills across small variations within the tolerance', () => {
+      const raster = noisyRaster();
+      floodFill(raster, 0, 0, RED, 8);
+      expect(countOpaque(raster)).toBe(36);
+      expect(pixel(raster, 5, 5)).toEqual(RED);
+    });
+
+    it('exact matching (tolerance 0) splinters the same region', () => {
+      const raster = noisyRaster();
+      floodFill(raster, 0, 0, RED, 0);
+      const redPixels = [];
+      for (let i = 0; i < raster.data.length; i += 4) {
+        if (raster.data[i] === RED[0] && raster.data[i + 1] === RED[1]) {
+          redPixels.push(i);
+        }
+      }
+      expect(redPixels.length).toBeLessThan(36);
+    });
+
+    it('stops at strong edges despite the tolerance', () => {
+      const raster = noisyRaster();
+      // A hard vertical wall at x=3.
+      stampLine(raster, 3, 0, 3, 5, 1, [0, 0, 0, 255]);
+      floodFill(raster, 0, 0, RED, 8);
+      expect(pixel(raster, 3, 2)).toEqual([0, 0, 0, 255]);
+      expect(pixel(raster, 5, 2)).not.toEqual(RED);
+    });
+
+    it('terminates when the fill color matches the region', () => {
+      const raster = noisyRaster();
+      // A fill color inside the region's own tolerance band: without the
+      // visited bitmap, painted pixels keep matching and the walk never ends.
+      floodFill(raster, 0, 0, [101, 100, 100, 255], 8);
+      expect(pixel(raster, 5, 5)).toEqual([101, 100, 100, 255]);
+    });
+  });
+
+  describe('transparent color', () => {
+    it('stamping transparent clears pixels like the eraser', () => {
+      const raster = makeRaster(4, 4);
+      stamp(raster, 1, 1, 4, RED);
+      stamp(raster, 1, 1, 2, TRANSPARENT);
+      expect(pixel(raster, 1, 1)).toEqual([0, 0, 0, 0]);
+      expect(pixel(raster, 3, 3)).toEqual(RED);
+    });
+
+    it('flood-filling with transparent clears the region', () => {
+      const raster = makeRaster(4, 4);
+      stamp(raster, 1, 1, 4, RED);
+      floodFill(raster, 0, 0, TRANSPARENT);
+      expect(countOpaque(raster)).toBe(0);
+    });
+
+    it('shapes drawn transparent write transparent pixels', () => {
+      const raster = makeRaster(10, 10);
+      drawRect(raster, 0, 0, 9, 9, 1, RED, true);
+      drawRect(raster, 2, 2, 7, 7, 1, TRANSPARENT, true);
+      expect(pixel(raster, 4, 4)).toEqual([0, 0, 0, 0]);
+      expect(pixel(raster, 0, 0)).toEqual(RED);
     });
   });
 

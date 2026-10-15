@@ -1,17 +1,14 @@
 require 'base64'
+require 'json'
+require 'cdo/rack/request'
+
+# rubocop:disable CustomCops/DashboardRequires
+require_relative '../../../dashboard/legacy/middleware/helpers/projects'
+# rubocop:enable CustomCops/DashboardRequires
 
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
-  storage_id = create_storage_id_for_user(nil)
-
-  if defined?(Dashboard::Application)
-    begin
-      ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
-    rescue StandardError => exception
-      raise exception unless rack_env?(:production)
-      Observability::Errors.capture_exception(exception)
-    end
-  end
+  storage_id = create_storage_id_for_user(anon_user_id: request.anon_user_id)
 
   response.set_cookie(
     storage_id_cookie_name,
@@ -222,9 +219,9 @@ def update_annoymous_user_storage_id(storage_id, user_id)
   user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: user_id)
 end
 
-def create_storage_id_for_user(user_id)
+def create_storage_id_for_user(user_id = nil, anon_user_id: nil)
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id: user_id)
+  user_storage_ids_table.insert(user_id:, anon_user_id:)
 rescue Sequel::UniqueConstraintViolation
   # We lost a race against someone performing the same operation. The row
   # we're looking for should now be in the database.

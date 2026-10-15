@@ -682,6 +682,46 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     assert_equal @sublevel2.id, result_id
   end
 
+  test 'a bubble choice and its sublevels must be on the same side of the UI Test partition' do
+    ui_test_sublevel = create(:level, name: 'UI Test BubbleChoiceTest sublevel')
+    create(:level, name: 'BubbleChoiceTest prod sublevel')
+
+    input_dsl = <<~DSL
+      name 'BubbleChoiceTest prod parent'
+
+      sublevels
+      level 'UI Test BubbleChoiceTest sublevel'
+    DSL
+
+    e = assert_raises do
+      BubbleChoice.create_from_level_builder({}, {name: 'BubbleChoiceTest prod parent', dsl_text: input_dsl})
+    end
+    assert_includes e.message, 'UI Test BubbleChoiceTest sublevel'
+
+    input_dsl = <<~DSL
+      name 'UI Test BubbleChoiceTest parent'
+
+      sublevels
+      level 'BubbleChoiceTest prod sublevel'
+    DSL
+
+    e = assert_raises do
+      BubbleChoice.create_from_level_builder({}, {name: 'UI Test BubbleChoiceTest parent', dsl_text: input_dsl})
+    end
+    assert_includes e.message, 'BubbleChoiceTest prod sublevel'
+
+    # same-side sublevels are fine
+    input_dsl = <<~DSL
+      name 'UI Test BubbleChoiceTest parent'
+
+      sublevels
+      level 'UI Test BubbleChoiceTest sublevel'
+    DSL
+
+    level = BubbleChoice.create_from_level_builder({}, {name: 'UI Test BubbleChoiceTest parent', dsl_text: input_dsl})
+    assert_equal [ui_test_sublevel], level.sublevels
+  end
+
   # A migrated predict sublevel keeps its contained level (for reading back
   # pre-migration responses) but records new progress on itself.
   private def create_migrated_predict_sublevel(name)

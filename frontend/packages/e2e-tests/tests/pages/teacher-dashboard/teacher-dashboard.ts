@@ -1,5 +1,7 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {DemoSectionCardComponent} from '../../components/demo-section-card';
+import {LogoTransitionComponent} from '../../components/logo-transition';
 import {BasePage} from '../base-page';
 
 /** Page object for the teacher dashboard home (/teacher_dashboard/home). */
@@ -10,15 +12,29 @@ export class TeacherDashboardPage extends BasePage {
   /** Promotions right-panel; absent in the FA Global Edition region. */
   readonly promotionsPanel: Locator;
 
+  /** Practice-section card; only rendered for teachers with zero sections. */
+  readonly demoSectionCard: DemoSectionCardComponent;
+
+  /** First-run logo animation; owns the header logo until it settles. */
+  readonly logoTransition: LogoTransitionComponent;
+
   constructor(page: Page) {
     super(page);
     this.homeHeader = page.locator('#teacher-home-header');
     this.promotionsPanel = page.locator('#ui-test-teacher-promotions');
+    this.demoSectionCard = new DemoSectionCardComponent(page);
+    this.logoTransition = new LogoTransitionComponent(page);
   }
 
-  /** Navigate to /teacher_dashboard/home and wait for the header. */
-  async goto(): Promise<void> {
-    await this.page.goto('/teacher_dashboard/home');
+  /** Navigate to /teacher_dashboard/home, optionally enabling an experiment. */
+  async goto({
+    experiment,
+    globalRegion,
+  }: {experiment?: string; globalRegion?: string} = {}): Promise<void> {
+    const query = experiment
+      ? `?${new URLSearchParams({enableExperiments: experiment})}`
+      : '';
+    await super.goto({path: `/teacher_dashboard/home${query}`, globalRegion});
     await expect(this.homeHeader).toBeVisible();
   }
 

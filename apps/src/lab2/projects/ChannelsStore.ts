@@ -48,6 +48,10 @@ export class ChannelsStore {
     return channelsApi.fetchSharingDisabled(channel.id);
   }
 
+  getShareFailure(channel: Channel) {
+    return channelsApi.fetchShareFailure(channel.id);
+  }
+
   getIsTeacherOfProjectOwner(channel: Channel) {
     return channelsApi.fetchIsTeacherOfProjectOwner(channel.id);
   }

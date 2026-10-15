@@ -1,10 +1,11 @@
 // Warning dialog that says if you upload, you can no longer share and remix,
 // and you confirm you will not upload PII.
-import classNames from 'classnames';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import Modal from '@code-dot-org/component-library/modal';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import msg from '@cdo/locale';
 
 import styles from './image-upload-warning.module.scss';
@@ -29,60 +30,57 @@ export default function ImageUploadModal({
     cancelUpload();
   };
 
+  if (!isOpen) {
+    return null;
+  }
+
   return (
-    <BaseDialog isOpen={isOpen} handleClose={onCancel}>
-      <div>
-        <h1 className={styles.modalHeader}>
-          {msg.animationPicker_restrictedShareRulesHeader()}
-        </h1>
-        <label className={styles.checkboxLabel}>
-          <input
-            type="checkbox"
+    <Modal
+      title={msg.animationPicker_restrictedShareRulesHeader()}
+      onClose={onCancel}
+      customContent={
+        <div className={styles.modalContent}>
+          <Checkbox
+            name="noPIIConfirmed"
             checked={noPIIConfirmed}
             onChange={() => setNoPIIConfirmed(!noPIIConfirmed)}
+            label={msg.animationPicker_confirmNoPII()}
           />
-          {msg.animationPicker_confirmNoPII()}
-        </label>
-        {!isTeacher && (
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
+          {!isTeacher && (
+            <Checkbox
+              name="restrictedShareConfirmed"
               checked={restrictedShareConfirmed}
               onChange={() =>
                 setRestrictedShareConfirmed(!restrictedShareConfirmed)
               }
+              label={msg.animationPicker_confirmRestrictedShare()}
             />
-            {msg.animationPicker_confirmRestrictedShare()}
-          </label>
-        )}
-        <p className={styles.modalDetails}>
-          {isTeacher && (
-            <>
-              {msg.animationPicker_warnNoRemix()}
-              <br />
-            </>
           )}
-          {msg.animationPicker_undoRestrictedShareInstructions()}
-        </p>
-      </div>
-      <div className={styles.modalButtonRow}>
-        <button
-          className={classNames(styles.modalButton, styles.cancelButton)}
-          type="button"
-          onClick={onCancel}
-        >
-          {msg.dialogCancel()}
-        </button>
-        <button
-          className={classNames(styles.modalButton, styles.confirmButton)}
-          type="button"
-          onClick={confirmUploadWarning}
-          disabled={!isConfirmButtonEnabled}
-        >
-          {msg.dialogOK()}
-        </button>
-      </div>
-    </BaseDialog>
+          <Typography
+            id="dsco-dialog-description"
+            variant="body4"
+            className={styles.modalDetails}
+          >
+            {isTeacher && (
+              <>
+                {msg.animationPicker_warnNoRemix()}
+                <br />
+              </>
+            )}
+            {msg.animationPicker_undoRestrictedShareInstructions()}
+          </Typography>
+        </div>
+      }
+      primaryButtonProps={{
+        children: msg.dialogOK(),
+        onClick: confirmUploadWarning,
+        disabled: !isConfirmButtonEnabled,
+      }}
+      secondaryButtonProps={{
+        children: msg.dialogCancel(),
+        onClick: onCancel,
+      }}
+    />
   );
 }
 

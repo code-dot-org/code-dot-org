@@ -10,7 +10,8 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
+import {setChatIsOpen} from '@cdo/apps/aiTeacherDrawer/redux';
+import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -46,27 +47,12 @@ const LocationElement = () => {
   return <div>{location.pathname} path</div>;
 };
 
-// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
 jest.mock('@react-pdf/renderer', () => ({
   PDFDownloadLink: () => null,
   StyleSheet: {
     create: () => null,
   },
 }));
-
-jest.mock('@cdo/apps/aiDifferentiation/AiDiffContainer', () => {
-  const React = require('react');
-  const {useSelector} = require('react-redux');
-  const MockContainer = () => {
-    const chatIsOpen = useSelector(state => state.aiDiffChat.chatIsOpen);
-    return (
-      <div style={chatIsOpen ? undefined : {display: 'none'}}>
-        <span>AI Teaching Assistant</span>
-      </div>
-    );
-  };
-  return {__esModule: true, default: MockContainer};
-});
 
 jest.mock('@cdo/apps/aiTeacherDrawer/AiDiffDrawer', () => {
   const React = require('react');
@@ -136,6 +122,34 @@ describe('TeacherNavigationBar', () => {
       unitPosition: 1,
       participantType: 'student',
     },
+    // Assigned a course that cannot be completed without AI chat tools, using
+    // models the teacher's region blocks. Unfixable from AI settings.
+    {
+      id: 17,
+      name: 'Period 6',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: true,
+      ai_chat_access_level: 'enabled',
+    },
+    // Same essential course, but the tools are switched off for the section.
+    // Fixable from AI settings.
+    {
+      id: 18,
+      name: 'Period 7',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: false,
+      ai_chat_access_level: 'disabled',
+    },
   ];
   const serverSections = sections.map(serverSectionFromSection);
 
@@ -155,6 +169,11 @@ describe('TeacherNavigationBar', () => {
       currentUser,
       aiDiffChat: aiDiffChatReducer,
     });
+    // The redux store persists across tests in this file (no restoreRedux
+    // call), and now that the FAB always mounts (regardless of the ai diff
+    // preference), an earlier test's drawer-open state would otherwise leak
+    // into this render.
+    store.dispatch(setChatIsOpen(false));
     store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
     store.dispatch(
       setInitialData({
@@ -295,6 +314,7 @@ describe('TeacherNavigationBar', () => {
     screen.getByText(i18n.assessments());
     screen.getByText(i18n.teacherTabStats());
     screen.getByText(i18n.studentProjects());
+    screen.getByText('Student Snapshot');
     screen.getByText(i18n.roster());
     screen.getByText(i18n.settings());
   });
@@ -383,6 +403,35 @@ describe('TeacherNavigationBar', () => {
     expect(screen.queryByText(i18n.aiSettings())).toBeNull();
   });
 
+  // The sidebar option carrying the error icon tells the teacher where to go
+  // to understand the problem, so which option carries it is the behavior
+  // under test.
+  const errorIconOwner = () => {
+    const icon = document.querySelector('.errorIcon');
+    return icon?.closest('a')?.textContent ?? null;
+  };
+
+  test('flags the Course option when assigned models are unavailable in the region', async () => {
+    renderDefault(17, `/teacher_dashboard/sections/17/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.course());
+  });
+
+  test('flags AI Settings, not Course, when essential AI tools are switched off', async () => {
+    renderDefault(18, `/teacher_dashboard/sections/18/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.aiSettings());
+  });
+
+  test('flags nothing when the assigned course has no AI problem', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toBeNull();
+  });
+
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
     // mock experiment is disabled
     experiments.isEnabled = jest.fn(() => false);
@@ -393,10 +442,17 @@ describe('TeacherNavigationBar', () => {
     ).toBeNull();
   });
 
-  test('does not render AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+  test('still renders AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+    // Prevents the FAB from auto-opening on what it thinks is the user's
+    // first session, same as the 'renders AiDiffFloatingActionButton
+    // component' test below — otherwise the drawer opens immediately and
+    // hides the closed-state round button this test is asserting on.
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     // mock experiment is enabled
     experiments.isEnabled = jest.fn(() => true);
-    // mock user preference disabled
+    // mock user preference disabled: the FAB should render regardless, since
+    // the preference only trims content within the drawer (see AiDiffDrawer)
+    // rather than preventing it from mounting.
     renderDefault(
       13,
       `/teacher_dashboard/sections/13/unit/csd3-2022`,
@@ -405,8 +461,10 @@ describe('TeacherNavigationBar', () => {
     );
 
     expect(
-      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
-    ).toBeNull();
+      await screen.findByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      })
+    ).toBeVisible();
   });
 
   test('renders AiDiffFloatingActionButton component', async () => {

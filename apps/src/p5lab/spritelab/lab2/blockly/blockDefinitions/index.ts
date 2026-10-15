@@ -1,14 +1,66 @@
+import category from '@cdo/apps/blockly/blockDefinitions/category';
+import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import burst from './burst';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
+import makePlatformBlocks from './makePlatformBlocks';
+import makePlatformPlayer from './makePlatformPlayer';
+import makeSpriteAtGrid from './makeSpriteAtGrid';
+import makeSpriteAtPosition from './makeSpriteAtPosition';
+import movingLeft from './movingLeft';
+import movingWithArrowKeys from './movingWithArrowKeys';
+import patrollingLeftRight from './patrollingLeftRight';
+import patrollingOnBlocks from './patrollingOnBlocks';
+import placeholder from './placeholder';
+import playMusic from './playMusic';
+import playSound from './playSound';
+import restartScene from './restartScene';
+import setAsPlatformPlayer from './setAsPlatformPlayer';
+import setCameraZoom from './setCameraZoom';
+import setPlatformGravity from './setPlatformGravity';
+import setWeather from './setWeather';
+import thePlayer from './thePlayer';
+import whenRun from './whenRun';
 
-// Scenes UI variant blocks, defined client-side (not in the DB block pool)
-// because their dropdown options are the project's scenes, which only this
-// lab knows.
-const sceneBlockDefinitions: {
+// Lab-owned blocks, defined client-side rather than in the DB block pool. A
+// block whose runtime half is interpreted code exports it as helperCode.
+const labBlockDefinitions: {
   definition: BlockJson;
   generator: GeneratorFunction;
-}[] = [goToScene, goToExternalScene];
+  helperCode?: string;
+}[] = [
+  goToScene,
+  playMusic,
+  playSound,
+  whenRun,
+  goToExternalScene,
+  restartScene,
+  movingLeft,
+  movingWithArrowKeys,
+  patrollingLeftRight,
+  patrollingOnBlocks,
+  makePlatformPlayer,
+  makeSpriteAtGrid,
+  makeSpriteAtPosition,
+  makePlatformBlocks,
+  setPlatformGravity,
+  setAsPlatformPlayer,
+  setCameraZoom,
+  setWeather,
+  burst,
+  thePlayer,
+  placeholder,
+  // Toolbox edit mode's category marker blocks.
+  category,
+  custom_category,
+];
 
-export default sceneBlockDefinitions;
+export default labBlockDefinitions;
+
+// The interpreted runtime half, prepended to user code by the engine (shaped
+// like level sharedBlocks entries — P5Lab reads .helperCode off each).
+export const SPRITELAB2_HELPER_CODE = labBlockDefinitions
+  .filter(({helperCode}) => helperCode)
+  .map(({helperCode}) => ({helperCode}));

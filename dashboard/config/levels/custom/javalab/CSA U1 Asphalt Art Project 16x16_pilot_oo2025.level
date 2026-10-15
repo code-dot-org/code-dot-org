@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-12T23:28:01.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "display_name": "16x16 Neighborhood",
     "mini_rubric": "false",
     "submittable": "true",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
     "serialized_maze": [
       [
@@ -1336,9 +1337,15 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": "false"
+    "ai_tutor_available": "false",
+    "encrypted_examples": [
+
+    ],
+    "uses_lab2": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T23:28:01.345+00:00\",\"changed\":[\"cloned from \\\"CSA U1 Asphalt Art Project 16x16_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1 Asphalt Art Project 16x16_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T23:28:01.345+00:00\",\"changed\":[\"cloned from \\\"CSA U1 Asphalt Art Project 16x16_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1 Asphalt Art Project 16x16_pilot-2025\"},{\"changed_at\":\"2026-09-30 21:03:28 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Javalab>

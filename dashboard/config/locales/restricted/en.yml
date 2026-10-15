@@ -2,7 +2,7 @@ en:
   devise:
     mailer:
       reset_password_instructions:
-        subject: "Code.org reset password instructions"
+        subject: "CodeAI reset password instructions"
         hello: "Hello %{user_email}!"
         change_password_for: "Change password for %{user_name}:"
         change_my_password: "Change my password:"

@@ -132,6 +132,25 @@ DialogWithSecondaryButton.args = {
   onClose: () => console.log('Dialog with secondary button closed'),
 };
 
+export const DialogWithLongText = SingleTemplate.bind({});
+DialogWithLongText.args = {
+  title: 'A title long enough to wrap onto a second line in the dialog',
+  description:
+    'Both the heading and this description stay centered when they wrap. ' +
+    'You cannot edit your survey after submitting it. To preserve anonymity, ' +
+    'your responses will also be cleared from this page. Are you sure you ' +
+    'want to submit?',
+  primaryButtonProps: {
+    children: 'Okay',
+    onClick: () => alert('Primary button clicked!'),
+  },
+  secondaryButtonProps: {
+    children: 'Cancel',
+    onClick: () => alert('Secondary button clicked!'),
+  },
+  onClose: () => console.log('Dialog with long text closed'),
+};
+
 export const DialogWithCustomContent = SingleTemplate.bind({});
 DialogWithCustomContent.args = {
   title: 'Dialog with Custom Content',

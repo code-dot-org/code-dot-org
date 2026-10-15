@@ -1,0 +1,11 @@
+name 'datasciencewithpython-lesson5-level5-v1-2026'
+display_name 'Matplotlib Practice'
+description 'Choose a dataset and create line and bar charts with Matplotlib.'
+
+sublevels
+level 'datasciencewithpython-lesson5-level5a-v1-2026'
+level 'datasciencewithpython-lesson5-level5b-v1-2026'
+level 'datasciencewithpython-lesson5-level5c-v1-2026'
+level 'datasciencewithpython-lesson5-level5d-v1-2026'
+
+uses_lab2

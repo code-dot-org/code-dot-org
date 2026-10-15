@@ -72,6 +72,9 @@ module Cdo
     end
 
     def self.before_worker_boot(host:, worker_index: nil)
+      # This is a child puma process and will not itself fork.
+      CDO.preforking_parent = false
+
       require 'cdo/aws/metrics'
       Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: host})
 
@@ -104,8 +107,6 @@ module Cdo
         ).start
       end
 
-      # Statsig is initialized here for managed environments. For development, it is
-      # initialized in config/initializers/statsig.rb
       require 'cdo/statsig'
       Cdo::StatsigInitializer.init
     end
@@ -157,7 +158,7 @@ module Cdo
     end
 
     # Prefork RSS is the copy-on-write baseline every worker forks from, hence the ceiling on
-    # per-worker CoW erosion. Runs in the master's fork path, so failures are swallowed rather
+    # per-worker CoW erosion. Runs in the parent's fork path, so failures are swallowed rather
     # than allowed to abort forking.
     def self.publish_prefork_memory_metric
       return unless CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)

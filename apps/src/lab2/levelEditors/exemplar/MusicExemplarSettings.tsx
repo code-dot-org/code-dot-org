@@ -3,7 +3,7 @@ import React from 'react';
 
 import {
   ExemplarValidationMode,
-  MusicExemplarSettings,
+  type MusicExemplarSettings,
 } from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 

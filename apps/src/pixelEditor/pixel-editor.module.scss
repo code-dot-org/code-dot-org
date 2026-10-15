@@ -1,57 +1,42 @@
-// Self-contained styles for the pixel editor modal. Dark theme to sit
-// comfortably over Lab2's full-screen labs.
+// Self-contained styles for the pixel editor modal, following the page's
+// light/dark theme. The panel chrome is shared with SpriteLab2's image
+// dialog (dialogChrome.scss).
 
-$border-subtle: rgb(255 255 255 / 12%);
+@use './dialogChrome' as chrome;
+
+$border-subtle: chrome.$border-subtle;
 
 // Wraps CustomDialog without affecting layout; the parent selector gives the
 // panel styles below higher specificity than CustomDialog's own class
 // (stylesheet order must not matter).
 .dialogHost {
   display: contents;
+
+  // The host carries data-theme; the chrome colors follow it.
+  @include chrome.theme;
+}
+
+// One high-contrast keyboard focus ring for everything the editor renders,
+// in the modal or in a host's panel; UA defaults are hard to see on dark.
+.dialogHost :focus-visible {
+  @include chrome.focus-ring;
 }
 
 .dialogHost .modal {
-  display: flex;
-  flex-direction: column;
-  max-width: calc(100vw - 32px);
-  max-height: calc(100vh - 32px);
-  border: 1px solid $border-subtle;
-  border-radius: 10px;
-  background-color: #333a47;
-  box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
-  color: #f0f2f6;
   // The panel mounts already at its final size (after the image decodes);
-  // a quick scale-fade makes that arrival feel deliberate.
-  animation: modal-enter 0.14s ease-out;
+  // the chrome's quick scale-fade makes that arrival feel deliberate.
+  @include chrome.panel;
 }
 
 // Screen-reader-only text (the dialog description CustomDialog expects).
 .srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  @include chrome.sr-only;
 }
 
-@keyframes modal-enter {
-  from {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+@include chrome.keyframes;
 
 .header {
-  padding: 12px 16px;
-  border-bottom: 1px solid $border-subtle;
-  font-size: 15px;
-  font-weight: 600;
+  @include chrome.header;
 }
 
 .body {
@@ -61,21 +46,20 @@ $border-subtle: rgb(255 255 255 / 12%);
   padding: 12px;
 }
 
+// The tool grid at the top, undo/redo pushed to the bottom of the column.
 .toolbar {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  align-items: center;
 }
 
-// The design-system tooltip portals to <body> at z-index 10, which is under
-// CustomDialog's overlay ($zindex-modal-backdrop, 1040); lift ours above it.
-// The nudge right puts the bubble's left edge 4px past the canvas edge, so
-// the tail reads against the image being edited rather than the dark toolbar
-// gap.
-.pixelTooltip {
-  z-index: 1200;
-  margin-left: 16px;
+// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
+// rectangles), then the four brush sizes as two more rows, then the color.
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 34px);
+  gap: 4px;
+  align-content: start;
+  justify-items: center;
 }
 
 .toolButton {
@@ -90,31 +74,35 @@ $border-subtle: rgb(255 255 255 / 12%);
   border: 1px solid transparent;
   border-radius: 6px;
   background: none;
-  color: #cdd3de;
+  color: var(--dialog-text-secondary);
   cursor: pointer;
 
-  svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
+  i {
+    font-size: 15px;
   }
 
-  &:hover {
-    background-color: rgb(255 255 255 / 8%);
+  &:hover:not(:disabled) {
+    background-color: var(--dialog-hover-bg);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
   }
 }
 
 .toolActive {
-  border-color: rgb(255 255 255 / 35%);
-  background-color: rgb(255 255 255 / 14%);
-  color: #fff;
+  border-color: var(--dialog-control-border-strong);
+  background-color: var(--dialog-active-bg);
+  color: var(--dialog-panel-text);
 }
 
 .toolbarDivider {
-  width: 22px;
+  grid-column: 1 / -1;
+  justify-self: stretch;
   height: 1px;
   margin: 4px 0;
-  background-color: rgb(255 255 255 / 15%);
+  background-color: var(--dialog-active-bg);
 }
 
 .brushDot {
@@ -125,6 +113,60 @@ $border-subtle: rgb(255 255 255 / 12%);
 // Pixel-mode swatches are square because the brush stamps hard squares.
 .brushDotSquare {
   border-radius: 1px;
+}
+
+// Undo/redo, anchored to the bottom of the toolbar column.
+.historyRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+// The toolbar as one wrapping row: tools, sizes and undo/redo on the
+// first line, the color control on the second, the palette opening
+// downward.
+.toolbarRow {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  .toolGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .toolbarDivider {
+    width: 1px;
+    height: 26px;
+    margin: 0 4px;
+  }
+
+  .historyRow {
+    margin-top: 0;
+    margin-left: auto;
+    padding-top: 0;
+  }
+
+  .colorRow {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .colorPicker {
+    width: 64px;
+  }
+
+  .spectrumPopover {
+    top: calc(100% + 8px);
+    bottom: auto;
+    left: 0;
+  }
 }
 
 .canvasArea {
@@ -138,7 +180,14 @@ $border-subtle: rgb(255 255 255 / 12%);
   border-radius: 6px;
   // The transparency checkerboard is painted INTO the display canvas (so it
   // can align with the art-pixel grid); the surround stays quiet.
-  background-color: #2b313d;
+  background-color: var(--dialog-inset-bg);
+}
+
+// Shrink-wraps the canvas so the keyboard-cursor overlay positions against
+// the canvas's own box.
+.canvasWrap {
+  display: flex;
+  position: relative;
 }
 
 .displayCanvas {
@@ -150,83 +199,188 @@ $border-subtle: rgb(255 255 255 / 12%);
   image-rendering: pixelated;
   cursor: crosshair;
   touch-action: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--dialog-focus-ring);
+    outline-offset: 3px;
+  }
+}
+
+// Keyboard paint cursor, pixel mode: the exact brush footprint. White core
+// with a black halo inside and out, so it reads against any artwork.
+.kbCursorRect {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 80%),
+    inset 0 0 0 1px rgb(0 0 0 / 80%);
+  pointer-events: none;
+}
+
+// Keyboard paint cursor, smooth mode: a crosshair with an open center. The
+// container is a zero-size point at the cursor; the four arms hang off it,
+// with --stroke thickness and --gap center clearance set inline from the
+// brush size.
+.kbCursorCross {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);
+  }
+
+  // Up, down, left, right arms.
+  span:nth-child(1) {
+    bottom: var(--gap);
+    left: calc(var(--stroke) / -2);
+    width: var(--stroke);
+    height: 12px;
+  }
+
+  span:nth-child(2) {
+    top: var(--gap);
+    left: calc(var(--stroke) / -2);
+    width: var(--stroke);
+    height: 12px;
+  }
+
+  span:nth-child(3) {
+    top: calc(var(--stroke) / -2);
+    right: var(--gap);
+    width: 12px;
+    height: var(--stroke);
+  }
+
+  span:nth-child(4) {
+    top: calc(var(--stroke) / -2);
+    left: var(--gap);
+    width: 12px;
+    height: var(--stroke);
+  }
 }
 
 .loadError {
   padding: 40px;
-  color: #ff9d9d;
+  color: var(--dialog-danger-text);
 }
 
 .footer {
-  display: flex;
-  gap: 8px;
-  justify-content: flex-end;
-  padding: 12px 16px;
-  border-top: 1px solid $border-subtle;
+  @include chrome.footer;
 
   button {
-    box-sizing: border-box;
-    height: 34px;
-    margin: 0;
-    padding: 0 18px;
-    border: 1px solid rgb(255 255 255 / 25%);
-    border-radius: 6px;
-    background: none;
-    box-shadow: none;
-    color: #f0f2f6;
-    font-size: 14px;
-    cursor: pointer;
-
-    &:hover:not(:disabled) {
-      background-color: rgb(255 255 255 / 8%);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: default;
-    }
+    @include chrome.plain-button;
   }
 }
 
 .savePrimary {
-  // !important: the page's global button CSS (background/box-shadow) has
-  // higher effective specificity inside the modal and bleeds in without it.
-  border-color: transparent;
-  background-color: rgb(255 255 255 / 92%) !important;
-  color: #1b2029 !important;
-  font-weight: 600;
+  @include chrome.primary-button;
+}
 
-  &:hover:not(:disabled) {
-    background-color: #fff !important;
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.paletteSwatch {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--dialog-control-border-strong);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--dialog-panel-text);
   }
 }
 
+.paletteSwatchActive {
+  box-shadow:
+    0 0 0 2px var(--dialog-inset-bg),
+    0 0 0 3px var(--dialog-panel-text);
+}
+
+// Spans both toolbar columns; the popover offset below is measured from its
+// full-row width.
 .colorPicker {
+  display: flex;
   position: relative;
+  grid-column: 1 / -1;
+  justify-self: stretch;
+
+  // The swatch is the only in-flow child; stretch it to the toolbar width.
+  > * {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }
 
 .swatch {
   box-sizing: border-box;
-  width: 30px;
+  // Fills the toolbar's width (the picker row spans both columns).
+  width: 100%;
   height: 30px;
   margin: 0;
   padding: 0;
-  border: 2px solid rgb(255 255 255 / 60%);
+  border: 2px solid var(--dialog-control-border-strong);
   border-radius: 6px;
   cursor: pointer;
+}
+
+// A small checkerboard stands in for "no color" on transparent swatches.
+.swatchTransparent {
+  background:
+    repeating-conic-gradient(
+      rgb(160 166 178) 0% 25%,
+      rgb(255 255 255) 0% 50%
+    )
+    0 0 / 10px 10px;
+}
+
+// The recently-used row, under the spectrum: transparent first, then
+// most-recent colors.
+.recentRow {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.recentSwatch {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--dialog-control-border-strong);
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--dialog-panel-text);
+  }
 }
 
 .spectrumPopover {
   position: absolute;
   bottom: 0;
-  // Same 4px-past-the-canvas-edge alignment as .pixelTooltip (the why lives
-  // there); the two offsets move together with the toolbar/body-gap metrics.
-  left: 48px;
+  // The picker row spans the full toolbar width, so 100% + the 12px body gap
+  // + 4px lands just inside the image.
+  left: calc(100% + 16px);
   z-index: 10;
   padding: 6px;
-  border: 1px solid rgb(255 255 255 / 15%);
+  border: 1px solid var(--dialog-border-subtle);
   border-radius: 8px;
-  background-color: #262c36;
+  background-color: var(--dialog-inset-bg);
   box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
 
   canvas {
@@ -234,5 +388,32 @@ $border-subtle: rgb(255 255 255 / 12%);
     border-radius: 4px;
     cursor: crosshair;
     touch-action: none;
+
+    &:focus-visible {
+      outline: 2px solid var(--dialog-focus-ring);
+      outline-offset: 2px;
+    }
   }
+}
+
+// Shrink-wraps the spectrum so the sample cursor positions against it.
+.spectrumWrap {
+  display: flex;
+  position: relative;
+}
+
+// Where the current color was sampled from. White ring with a black halo,
+// so it reads anywhere on the spectrum.
+.spectrumCursor {
+  position: absolute;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 70%),
+    inset 0 0 0 1px rgb(0 0 0 / 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-08-10T14:46:23.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aif2-pl-updating-the-DOM",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "long_instructions": "<h2>DOM Update</h2>\r\n\r\n<p>Let's take a look at what the steps to make a DOM update look like in code. In this example, the text inside a box changes when a button is clicked.</p>\r\n\r\n<img src=\"https://images.code.org/2e8aec64b2c5cd684feae4a7345f7c3a-image-1761933082814.png\" alt=\"Sample output showing a button and a text box below it\" width=\"550px\" style=\"display: block; margin-left: 0;\">\r\n\r\n<h2>Activity Preview</h2>\r\n\r\n<p>The video below walks through a similar example, adding an event listener so a button updates text in a text box, step by step in code. It's not the exact activity you'll complete next, the button, the text, and the specific task will be different, but it follows the same pattern: select the element, listen for the click, respond by updating the DOM. Watching this first should make it easier to follow what's happening once you're doing it yourself.</p>\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-08-10T14:46:23.211+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-updating-DOM-video_2026\\\"\"],\"cloned_from\":\"pl-aif-2-U2-updating-DOM-video_2026\"},{\"changed_at\":\"2026-08-10 15:22:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

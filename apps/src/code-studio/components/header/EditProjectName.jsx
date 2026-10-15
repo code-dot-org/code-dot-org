@@ -94,9 +94,10 @@ class UnconnectedEditProjectName extends React.Component {
           <div className="project_name_wrapper header_text">
             <input
               type="text"
-              className="project_name header_input"
+              className="project_name header_input form-control"
               maxLength="100"
               defaultValue={this.props.projectName}
+              aria-label={i18n.projectName()}
               ref={input => {
                 this.nameChangeInput = input;
               }}

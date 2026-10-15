@@ -1,9 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
-
-import color from '../../util/color';
 
 import * as elementUtils from './elementUtils';
 
@@ -22,26 +21,16 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
       return false;
     }
 
-    const buttonStyle = {
-      paddingTop: '5px',
-      paddingBottom: '5px',
-      fontSize: '14px',
-    };
-
-    const defaultButtonStyle = Object.assign({}, buttonStyle, {
-      backgroundColor: '#0aa',
-      color: color.white,
-    });
-
     return (
-      <div style={{marginLeft: 15}}>
-        <button
-          type="button"
-          style={defaultButtonStyle}
+      <div style={{marginLeft: 20}}>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={this.handleMakeDefault}
         >
           {applabMsg.designWorkspace_makeDefaultButton()}
-        </button>
+        </MuiButton>
       </div>
     );
   }

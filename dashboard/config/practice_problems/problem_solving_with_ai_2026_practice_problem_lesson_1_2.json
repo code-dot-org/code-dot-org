@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_1_2",
+  "problem_type": "scramble",
+  "active": true,
+  "problem_text": "If AI was trained on thousands of restaurant reviews and asked to finish \"The food was ___,\" which word would it most likely generate? Sort the options in order of likelihood",
+  "solution": [
+    {"option": "Delicious", "correct": 0},
+    {"option": "Purple", "correct": 1},
+    {"option": "Loud", "correct": 2},
+    {"option": "Sunshine", "correct": 3}
+  ],
+  "objective_keys": [
+    "37720a96-51be-4114-8c86-cb55f0d9b70a"
+  ]
+}

@@ -36,9 +36,11 @@ export const AutocompleteInput = memo(
     focusInputOnSelect = true,
     placeholder = 'Type to see results',
     debounceDelay = 300,
+    'aria-label': ariaLabel,
   }: {
     id: string;
     label?: string;
+    'aria-label'?: string;
     name: string;
     size: TextFieldProps['size'];
     className: string;
@@ -197,6 +199,7 @@ export const AutocompleteInput = memo(
           onFocus={handleFocus}
           onBlur={handleBlur}
           autoComplete="off"
+          aria-label={label ? undefined : ariaLabel}
           role="combobox"
           aria-autocomplete="list"
           aria-controls={listboxId}

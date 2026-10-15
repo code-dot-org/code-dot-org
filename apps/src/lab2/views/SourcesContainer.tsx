@@ -13,13 +13,12 @@ import React, {
 import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
   BlocklyLevelProperties,
   LabProps,
+  LevelProperties,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import StartOverDialog, {
@@ -29,10 +28,15 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectManager from '../projects/ProjectManager';
-import getInitialSources from '../utils/getInitialSources';
+import getInitialSources, {
+  getStartOverSources,
+} from '../utils/getInitialSources';
 
-const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+const getToolboxEditSources = (levelProperties: LevelProperties) => ({
+  source: toolboxToWorkspaceBlocks(
+    (levelProperties as BlocklyLevelProperties).toolboxDefinition
+  ),
+});
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
@@ -87,7 +91,12 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   onMeaningfulSourceChange,
 }) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
-    () => getInitialSources(levelProperties, initialSources) || defaultSources
+    () =>
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
   );
 
   // When we use this value to decide whether to save sources or not,
@@ -136,24 +145,24 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
 
   useEffect(() => {
     reinitializeSources(
-      getInitialSources(levelProperties, initialSources) || defaultSources
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
     );
   }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
-  const startOverSources: ProjectSources = useMemo(() => {
-    const {templateSources, startSources} = levelProperties;
-    if (isToolboxMode) {
-      return {
-        source: toolboxToWorkspaceBlocks(
-          (levelProperties as BlocklyLevelProperties).toolboxDefinition
-        ),
-      };
-    }
-    return isStartMode
-      ? defaultSources
-      : ((templateSources || startSources || defaultSources) as ProjectSources);
-  }, [defaultSources, levelProperties]);
+  const startOverSources: ProjectSources = useMemo(
+    () =>
+      getStartOverSources(
+        levelProperties,
+        defaultSources,
+        getToolboxEditSources(levelProperties)
+      ),
+    [defaultSources, levelProperties]
+  );
 
   // In order to avoid possible stale state updates,
   // we support passing a function that can take in the most up-to-date state as an argument

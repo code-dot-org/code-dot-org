@@ -29,7 +29,7 @@ $breakpoint: 993px;
   }
 
   .contentWrapper {
-    width: 50%;
+    width: calc(50% + 1.5rem);
     padding-block: 1.25rem 1.5rem;
     padding-inline: 0 1.5rem;
 

@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-07-13T00:16:57.000Z",
   "level_num": "custom",
@@ -48,7 +47,7 @@
         "5": {
           "id": "5",
           "name": "prompt.md",
-          "contents": "1. What is the goal?\nWhat should your website look and feel like after styling? What mood or tone should it communicate?\n\nAnswer:\n\n---\n\n2. What are the constraints?\n- What brand colors and fonts must be used?\n- Which sections must be styled consistently (header, nav, main content, footer)?\n- Are there any readability or usability requirements?\n\nAnswer:\n\n---\n\n3. What are the edge cases?\nWhat styling problems should be avoided? For example: low contrast text, hard-to-read fonts, inconsistent spacing, etc.\n\nAnswer:\n",
+          "contents": "1. What is the goal?\nWhat should your website look and feel like after styling? What mood or tone should it communicate?\n\nAnswer:\n\n---\n\n2. What are the constraints?\n- What colors and fonts must be used?\n- Which sections must be styled consistently (header, nav, main content, footer)?\n- Are there any readability or usability requirements?\n\nAnswer:\n\n---\n\n3. What are the edge cases?\nWhat styling problems should be avoided? For example: low contrast text, hard-to-read fonts, inconsistent spacing, etc.\n\nAnswer:\n",
           "folderId": "0",
           "active": true
         }
@@ -76,6 +75,7 @@
     "offer_browser_tts": "false",
     "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-13T00:16:57.863+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1-template_-js-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1-template_-js-2026\"},{\"changed_at\":\"2026-07-13 00:17:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-13T00:16:57.863+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1-template_-js-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1-template_-js-2026\"},{\"changed_at\":\"2026-07-13 00:17:00 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-24 18:17:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

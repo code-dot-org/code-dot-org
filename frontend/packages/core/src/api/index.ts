@@ -6,7 +6,12 @@ export {DashboardApiClient};
 export * from './client';
 export * from './contexts';
 export * from './bootstrapApiClient';
-export {setSpaCsrfToken, getSpaCsrfToken, refreshCsrfToken} from './csrfToken';
+export {
+  setSpaCsrfToken,
+  getSpaCsrfToken,
+  refreshCsrfToken,
+  resolveCsrfToken,
+} from './csrfToken';
 export {default as QueryClientProvider} from './QueryClientProvider';
 export {createQueryClient} from './createQueryClient';
 export * from './transports';
@@ -18,3 +23,8 @@ export type {QueryClient};
 
 import {useQueryClient} from '@tanstack/react-query';
 export {useQueryClient};
+
+// Re-exported so labs can wrap their host boundary without depending on
+// @tanstack/react-query directly, and so they share this package's react-query
+// context (a QueryErrorResetBoundary must sit under the same provider).
+export {QueryErrorResetBoundary} from '@tanstack/react-query';

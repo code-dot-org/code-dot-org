@@ -1,0 +1,11 @@
+name 'csp_unit1_lesson15_cfu1_dev_27_28'
+title 'Training an Auto-Caption App'
+
+question 'A team builds an app that automatically adds captions to videos. To collect recordings for training the app, the team only asks coworkers to record themselves, and almost all of them speak with the same accent. After the app is released, it makes far more mistakes for people with other accents. Which of the following best explains what happened?'
+
+wrong 'The app is prejudiced against people with other accents and chooses to make more mistakes for them.'
+wrong 'People with other accents need to speak more clearly in order for the app to work correctly.'
+right 'The team chose which recordings to collect, so the data left out many accents and the app worked less well for those users.'
+wrong 'An app can only be biased if its programmers meant to treat some users unfairly.'
+
+allow_multiple_attempts true

@@ -1,0 +1,25 @@
+<Weblab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2026-08-06T20:30:13.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "validation_enabled": "true",
+    "display_name": "Web Lab ",
+    "long_instructions": "#Lesson 1 Web Lab",
+    "bubble_choice_description": "To add: description",
+    "thumbnail_url": "https://images.code.org/5c5fc80c710b857bc2301fbc6397876a-web-lab-icon.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06 20:34:29 +0000\",\"changed\":[\"encrypted_examples\",\"validation_enabled\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab>

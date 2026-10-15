@@ -8,7 +8,5 @@ module.exports = {
      * https://github.com/code-dot-org/code-dot-org/pull/34463
      */
     maxWidth: 1000,
-    marginLeft: 0,
-    transform: 'translate(-50%, 0)',
   },
 };

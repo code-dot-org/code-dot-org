@@ -1,5 +1,6 @@
 class PracticeProblemsController < ApplicationController
   before_action :authenticate_user!
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   load_and_authorize_resource only: [:index, :show]
   before_action :require_levelbuilder_mode_or_test_env, only: [:create, :update, :destroy, :generate]
   authorize_resource only: [:create, :update, :destroy, :generate]
@@ -103,7 +104,7 @@ class PracticeProblemsController < ApplicationController
   # selection since Rails drops truly-empty array params.
   private def set_lesson_objectives(problem)
     return unless params.key?(:objective_ids)
-    chosen = Objective.where(id: Array(params[:objective_ids]).reject(&:blank?))
+    chosen = Objective.where(id: Array(params[:objective_ids]).compact_blank)
     lesson = Lesson.find_by(id: params[:lesson_id])
     problem.objectives =
       if lesson

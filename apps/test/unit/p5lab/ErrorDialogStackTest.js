@@ -72,7 +72,8 @@ describe('ErrorDialogStack', function () {
           'It looks like we are having trouble loading your animation'
         );
         expect(dialog.text()).toContain('https://code.org/contact');
-        expect(dialog.find('Button')).toHaveLength(2);
+        expect(dialog.text()).toContain('Reload Page');
+        expect(dialog.text()).toContain('Delete');
       });
 
       it('does not display additional message and buttons for a generic error', function () {
@@ -89,8 +90,8 @@ describe('ErrorDialogStack', function () {
         expect(dialog.text()).not.toContain(
           'It looks like we are having trouble loading your animation'
         );
-        // only shows the close dialog 'X' button
-        expect(dialog.find('Button')).toHaveLength(1);
+        expect(dialog.text()).not.toContain('Reload Page');
+        expect(dialog.text()).not.toContain('Delete');
       });
     });
 

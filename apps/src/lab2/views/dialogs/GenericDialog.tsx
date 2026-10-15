@@ -1,5 +1,4 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton} from '@mui/material';
@@ -113,8 +112,6 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
 }) => {
   const dialogControl = useDialogControl();
 
-  const {theme} = useTheme();
-
   const cancelCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'cancel',
@@ -196,7 +193,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           ? {
               onClick: cancelCallback,
               disabled: buttons.cancel.disabled,
-              color: theme === 'Dark' ? 'white' : 'tertiary',
+              color: 'tertiary',
               children: buttons.cancel.text || commonI18n.cancel(),
             }
           : undefined

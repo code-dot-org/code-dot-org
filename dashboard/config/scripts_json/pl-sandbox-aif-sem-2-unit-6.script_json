@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-10 18:31:25 UTC",
+    "serialized_at": "2026-07-13 18:10:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -118,6 +118,17 @@
       },
       "seeding_key": {
         "activity_section.key": "26991e76-9a9a-4ad9-b147-c16ac6569fb2",
+        "lesson_activity.key": "91be9717-d5d7-4be8-a7c7-df71ee4a0a49"
+      }
+    },
+    {
+      "key": "e1530d27-6a61-49af-89dd-ae02612d75c1",
+      "position": 6,
+      "properties": {
+        "progression_name": "AI Chat explore "
+      },
+      "seeding_key": {
+        "activity_section.key": "e1530d27-6a61-49af-89dd-ae02612d75c1",
         "lesson_activity.key": "91be9717-d5d7-4be8-a7c7-df71ee4a0a49"
       }
     }
@@ -540,6 +551,28 @@
       "level_keys": [
         "pl-aif-2-U6-final-level-18"
       ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat explore "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-chat-gamified-playground"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-6",
+        "activity_section.key": "e1530d27-6a61-49af-89dd-ae02612d75c1"
+      },
+      "level_keys": [
+        "ai-chat-gamified-playground"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -769,6 +802,18 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-6",
         "activity_section.key": "26991e76-9a9a-4ad9-b147-c16ac6569fb2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-chat-gamified-playground",
+        "script_level.level_keys": [
+          "ai-chat-gamified-playground"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-6",
+        "activity_section.key": "e1530d27-6a61-49af-89dd-ae02612d75c1"
       }
     }
   ],

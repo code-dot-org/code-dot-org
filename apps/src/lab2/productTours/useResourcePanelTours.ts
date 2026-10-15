@@ -1,4 +1,4 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -83,6 +83,18 @@ const useResourcePanelTours = ({
         'no'
       ) === 'yes'
   );
+  // show writes this key without complete/cancel; re-read after level change.
+  useEffect(() => {
+    if (
+      tryGetLocalStorage(
+        RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+        'no'
+      ) === 'yes'
+    ) {
+      setOnboardingTourSeen(true);
+    }
+  }, [levelProperties, isLevelLoading]);
+
   const onOnboardingTourComplete = useCallback(() => {
     onTourComplete(ONBOARDING_FLOW_NAME)();
     setOnboardingTourSeen(true);

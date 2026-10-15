@@ -1,16 +1,21 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
+import {UnconnectedMarkdownInstructions} from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 import {setExternalGlobals} from '../../../util/testUtils';
 
 describe('MarkdownInstructions', function () {
   setExternalGlobals();
 
+  const defaultProps = {
+    openImageDialog: () => {},
+  };
+
   it('standard case had top padding and no left margin', function () {
     const wrapper = shallow(
-      <MarkdownInstructions
+      <UnconnectedMarkdownInstructions
+        {...defaultProps}
         markdown="md"
         markdownClassicMargins={false}
         inTopPane={false}
@@ -29,7 +34,8 @@ describe('MarkdownInstructions', function () {
 
   it('inTopPane has no top padding', function () {
     const wrapper = shallow(
-      <MarkdownInstructions
+      <UnconnectedMarkdownInstructions
+        {...defaultProps}
         markdown="md"
         inTopPane={true}
         noInstructionsWhenCollapsed={true}
@@ -37,5 +43,27 @@ describe('MarkdownInstructions', function () {
     );
     const element = wrapper.find('.instructions-markdown').first();
     expect(element.props().style.paddingTop).toBe(0);
+  });
+
+  it('renders EnhancedSafeMarkdown for non-blockly content', function () {
+    const wrapper = shallow(
+      <UnconnectedMarkdownInstructions {...defaultProps} markdown="md" />
+    );
+    expect(wrapper.find('EnhancedSafeMarkdown').exists()).toBe(true);
+    expect(wrapper.find('BlocklyMarkdown').exists()).toBe(false);
+  });
+
+  it('renders BlocklyMarkdown for blockly content', function () {
+    const wrapper = shallow(
+      <UnconnectedMarkdownInstructions
+        {...defaultProps}
+        markdown="md"
+        isBlockly
+      />
+    );
+    const blocklyMarkdown = wrapper.find('BlocklyMarkdown').first();
+    expect(blocklyMarkdown.exists()).toBe(true);
+    expect(blocklyMarkdown.props().content).toBe('md');
+    expect(wrapper.find('EnhancedSafeMarkdown').exists()).toBe(false);
   });
 });

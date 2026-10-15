@@ -1,0 +1,20 @@
+name 'problem-solving-with-ai-lesson12-level1d_v2_2026_dev'
+title 'AI in Schools'
+display_name 'AI in Schools'
+thumbnail_url 'https://images.code.org/f1ad19993cb7089a1998cb3a246e31e0-education.png'
+
+markdown <<MARKDOWN
+##AI In Schools
+Examine the following news articles, crafted by CodeAI, but modeled after real world events.
+
+[Article 1](https://drive.google.com/file/d/1NRxw6G48VWcytlOCYLiiyZ7FSqeLSQA0/view?usp=sharing)
+
+[Article 2](https://drive.google.com/file/d/1_xegi32MLGTEqpy6_myWz2_KuN-2BM-f/view?usp=sharing)
+
+[Article 3](https://drive.google.com/file/d/1tklOkP3A_G72DRo14HEdQkiUytYBFK-m/view?usp=sharing)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Note**: If Google Drive access is restricted, students can access these articles on the following level. Click "Add file" -> "From Library" -> then open each article individually.
+MARKDOWN

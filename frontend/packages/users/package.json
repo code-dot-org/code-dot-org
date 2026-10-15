@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "clean": "rimraf dist",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -35,6 +36,7 @@
     "preview": "vite preview",
     "test": "vitest --run",
     "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -43,6 +45,7 @@
   },
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/shared-constants": "workspace:*",
     "@mui/utils": "catalog:",
     "tabbable": "^6.5.0"
   },
@@ -55,7 +58,7 @@
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
@@ -71,10 +74,12 @@
     "prettier": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "rimraf": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
+    "vite-plugin-lib-inject-css": "catalog:",
     "vitest": "catalog:",
     "vitest-axe": "^0.1.0",
     "zod": "catalog:"

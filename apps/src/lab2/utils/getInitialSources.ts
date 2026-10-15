@@ -1,4 +1,3 @@
-import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {
   getAppOptionsEditBlocks,
@@ -6,8 +5,8 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  BlocklyLevelProperties,
   LevelProperties,
+  MultiFileSource,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 
@@ -17,15 +16,31 @@ const isEditingExemplar = getAppOptionsEditingExemplar();
 const isViewingExemplar = getAppOptionsViewingExemplar();
 
 /**
- * Computes which initial sources to present based on level and project information
+ * A level's start, template or exemplar sources as ProjectSources. Levels
+ * store these either as ProjectSources (Dance, Music, Sprite Lab) or as the
+ * bare source (Web Lab 2, Python Lab); the two shapes differ on exactly one
+ * key. A ProjectSources passes through unchanged.
  */
-export default function <T extends ProjectSources>(
+export function asProjectSources<T extends ProjectSources>(
+  sources: ProjectSources | MultiFileSource | undefined
+): T | undefined {
+  if (!sources) return undefined;
+  return ('source' in sources ? sources : {source: sources}) as T;
+}
+
+/**
+ * The sources a level starts from: the saved project sources when there are
+ * any, otherwise the level's own, subject to the level edit mode. Always
+ * ProjectSources, or undefined when the level has none.
+ */
+export default function getInitialSources<T extends ProjectSources>(
   levelProperties: LevelProperties,
-  projectSources?: T
-) {
-  const startSources = levelProperties.startSources as T | undefined;
-  const templateSources = levelProperties.templateSources as T | undefined;
-  const exemplarSources = levelProperties.exemplarSources as T | undefined;
+  projectSources?: T,
+  toolboxEditSources?: T
+): T | undefined {
+  const startSources = asProjectSources<T>(levelProperties.startSources);
+  const templateSources = asProjectSources<T>(levelProperties.templateSources);
+  const exemplarSources = asProjectSources<T>(levelProperties.exemplarSources);
   const predictSettings = levelProperties.predictSettings;
 
   if (isStartMode) {
@@ -33,11 +48,7 @@ export default function <T extends ProjectSources>(
   }
 
   if (isToolboxMode) {
-    return {
-      source: toolboxToWorkspaceBlocks(
-        (levelProperties as BlocklyLevelProperties).toolboxDefinition
-      ),
-    };
+    return asProjectSources<T>(toolboxEditSources);
   }
 
   if (isEditingExemplar || isViewingExemplar) {
@@ -54,4 +65,27 @@ export default function <T extends ProjectSources>(
   }
 
   return projectSources || templateSources || startSources;
+}
+
+/**
+ * Returns the sources to be used when clicking "Start Over".
+ * This can be the level's template or start sources (subject to level
+ * edit mode), or defaultSources when the level has none.
+ */
+export function getStartOverSources<T extends ProjectSources>(
+  levelProperties: LevelProperties,
+  defaultSources: T,
+  toolboxEditSources?: T
+): T {
+  if (isToolboxMode) {
+    return asProjectSources<T>(toolboxEditSources) ?? defaultSources;
+  }
+  if (isStartMode) {
+    return defaultSources;
+  }
+  return (
+    asProjectSources<T>(levelProperties.templateSources) ||
+    asProjectSources<T>(levelProperties.startSources) ||
+    defaultSources
+  );
 }

@@ -9,7 +9,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   setInitialChatMessage,
   setThreadMessages,
-} from '@cdo/apps/aiDifferentiation/redux';
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {

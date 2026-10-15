@@ -140,11 +140,6 @@ Resources:
           FromPort: 9000
           ToPort: 9000
           CidrIp: 0.0.0.0/0
-        # Forward HTTP requests directly to Pegasus Puma on Web Application Server ("Front End") EC2 Instances.
-        - IpProtocol: tcp
-          FromPort: 9001
-          ToPort: 9001
-          CidrIp: 0.0.0.0/0
   # Used by legacy Load Balancers that only serve traffic directly from the public internet (codeprojects.org).
   ELBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -176,11 +171,6 @@ Resources:
           FromPort: 9000
           ToPort: 9000
           CidrIp: 0.0.0.0/0
-        # Forward HTTP requests directly to Pegasus Puma on Web Application Server ("Front End") EC2 Instances.
-        - IpProtocol: tcp
-          FromPort: 9001
-          ToPort: 9001
-          CidrIp: 0.0.0.0/0
   FrontendSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -201,11 +191,6 @@ Resources:
         - IpProtocol: tcp
           FromPort: 9000
           ToPort: 9000
-          SourceSecurityGroupId: {Ref: ELBSecurityGroup}
-        # Enable Pegasus Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
-        - IpProtocol: tcp
-          FromPort: 9001
-          ToPort: 9001
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
         - IpProtocol: tcp
           FromPort: 22
@@ -284,14 +269,6 @@ Resources:
       FromPort: 3306
       ToPort: 3306
       IpProtocol: tcp
-  DBSecurityGroupIngressDMS:
-    Type: AWS::EC2::SecurityGroupIngress
-    Properties:
-      GroupId: {Ref: DBSecurityGroup}
-      SourceSecurityGroupId: {Ref: DMSSecurityGroup}
-      FromPort: 3306
-      ToPort: 3306
-      IpProtocol: tcp
   DBSubnetGroup:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
@@ -312,33 +289,6 @@ Resources:
           FromPort: 5439
           ToPort: 5439
           CidrIp: 0.0.0.0/0
-  DMSSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Outbound database access for DMS replication instance.
-      VpcId: {Ref: VPC}
-      SecurityGroupEgress:
-        - IpProtocol: tcp
-          FromPort: 3306
-          ToPort: 3306
-          DestinationSecurityGroupId: {Ref: DBSecurityGroup}
-        - IpProtocol: tcp
-          FromPort: 5439
-          ToPort: 5439
-          DestinationSecurityGroupId: {Ref: RedshiftSecurityGroup}
-        - Description: Permit Replication Instance to store intermediate data in S3.
-          IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          # Managed prefix list for AWS S3 in us-east-1
-          # https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html
-          DestinationPrefixListId: pl-63a5400a
-  DMSSubnetGroup:
-    Type: AWS::DMS::ReplicationSubnetGroup
-    Properties:
-      ReplicationSubnetGroupDescription: DMS Private Subnet Group.
-      ReplicationSubnetGroupIdentifier: VPC-DMSSubnetGroup
-      SubnetIds: <%=availability_zone_suffixes.map{|az| {Ref: "Subnet#{az}"}}.to_json%>
 Outputs:
   VpcId:
     Description: VPC ID
@@ -388,14 +338,6 @@ Outputs:
     Description: Security group for EFS
     Value: {'Fn::GetAtt': [EFSSecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-EFSSecurityGroup"}
-  DMSSubnetGroup:
-    Description: Subnet group for DMS
-    Value: !Ref DMSSubnetGroup
-    Export: {Name: !Sub "${AWS::StackName}-DMSSubnetGroup"}
-  DMSSecurityGroup:
-    Description: Security group for DMS
-    Value: !Ref DMSSecurityGroup
-    Export: {Name: !Sub "${AWS::StackName}-DMSSecurityGroup"}
   DaemonSecurityGroup:
     Description: Security group for Daemon
     Value: !Ref DaemonSecurityGroup

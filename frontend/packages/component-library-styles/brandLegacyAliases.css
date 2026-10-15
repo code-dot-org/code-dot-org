@@ -1,0 +1,215 @@
+/* Legacy token aliases for the CADS-schema brands.
+ *
+ * Under [data-brand='codeai-next'] every legacy semantic token
+ * (colors.css) must resolve to a CodeAI value, so that code which has not
+ * yet migrated to the CADS token schema (colors_codeAi.css) is still
+ * rebranded. This file maps each legacy token name onto its CADS
+ * successor. Tokens whose names are identical in both schemas are NOT
+ * listed here: the brand's own token file (brandCodeAiNext.css,
+ * brandCodeAiAudit.css) already redefines those in its scope.
+ *
+ * The same mapping is scoped to [data-brand='codeai-audit'], where the
+ * CADS successors are pink (brandCodeAiAudit.css) and legacy names
+ * therefore go pink too. That is the only reason the audit brand needs
+ * to know legacy names exist: deleting this file after call-site
+ * migration retires them from the audit brand as well, with no edit to
+ * brandCodeAiAudit.css.
+ *
+ * Aliases point at CADS *semantic* tokens, which switch with
+ * [data-theme] on their own — one brand-scoped block therefore covers
+ * both Light and Dark. The few aliases that point at primitives are
+ * theme-fixed by design and commented as such.
+ *
+ * Mapping decisions that involved judgment (design sign-off tracked in
+ * the color-bridge spec):
+ *   - The three legacy brand families (aqua, teal, purple) collapse into
+ *     the single CADS brand family.
+ *   - Legacy background ramp steps extra-light/light (and purple-hover)
+ *     both map to CADS light; CADS mid is a net-new darker step. Legacy
+ *     border ramps only had one "light" step and map to CADS light
+ *     directly.
+ *   - accent-strawberry maps to accent-pink (nearest CADS accent).
+ *   - background-neutral-lab maps to background-neutral-primary; the
+ *     legacy Dark value (#121212) equals the CADS Dark primary exactly.
+ *
+ * Same-name tokens whose MEANING shifted are silently owned by the CADS
+ * definition and cannot be fixed here (one name, one value per scope):
+ * e.g. legacy --background-error-light was a 20-level fill, CADS -light
+ * is a 5-level wash (the 20-level equivalent is now -mid). Call sites
+ * that need the heavier step migrate to -mid during call-site migration.
+ *
+ * Delete this file at brand cutover cleanup, when call sites have been
+ * migrated to CADS token names.
+ */
+
+/* Selector notes: the :root / [data-theme] compounds keep specificity at
+ * (0,2,0) so these aliases beat the legacy colors.css declarations
+ * (0,1,0) for the same names. The [data-theme] entries are required for
+ * correctness, not just precedence: var() chains in custom properties
+ * are substituted on the element that declares them and inherit as
+ * resolved values, so the aliases must be re-declared on theme-carrying
+ * elements (e.g. Lab2's nested data-theme='Dark' div) to pick up that
+ * element's CADS values. */
+[data-brand='codeai-next']:root,
+[data-brand='codeai-next'][data-theme='Light'],
+[data-brand='codeai-next'][data-theme='Dark'],
+[data-brand='codeai-next'] [data-theme='Light'],
+[data-brand='codeai-next'] [data-theme='Dark'],
+[data-brand='codeai-audit']:root,
+[data-brand='codeai-audit'][data-theme='Light'],
+[data-brand='codeai-audit'][data-theme='Dark'],
+[data-brand='codeai-audit'] [data-theme='Light'],
+[data-brand='codeai-audit'] [data-theme='Dark'] {
+  /* Backgrounds — brand families collapse to the CADS brand ramp */
+  --background-brand-aqua-extra-light: var(--background-brand-light);
+  --background-brand-aqua-light: var(--background-brand-light);
+  --background-brand-aqua-primary: var(--background-brand-primary);
+  --background-brand-aqua-strong: var(--background-brand-strong);
+  --background-brand-purple-extra-light: var(--background-brand-light);
+  --background-brand-purple-hover: var(--background-brand-light);
+  --background-brand-purple-light: var(--background-brand-light);
+  --background-brand-purple-primary: var(--background-brand-primary);
+
+  /* -fixed means "same in both themes": alias to the primitive, which is
+     theme-fixed by definition (legacy value was purple-50 in both themes) */
+  --background-brand-purple-primary-fixed: var(--brand-purple-50);
+  --background-brand-purple-strong: var(--background-brand-strong);
+  --background-brand-teal-extra-light: var(--background-brand-light);
+  --background-brand-teal-light: var(--background-brand-light);
+  --background-brand-teal-primary: var(--background-brand-primary);
+  --background-brand-teal-strong: var(--background-brand-strong);
+
+  /* Backgrounds — strawberry accent retires in favor of pink */
+  --background-accent-strawberry-light: var(--background-accent-pink-light);
+  --background-accent-strawberry-primary: var(--background-accent-pink-primary);
+  --background-accent-strawberry-strong: var(--background-accent-pink-strong);
+
+  /* Backgrounds — sentiment extra-light becomes light */
+  --background-error-extra-light: var(--background-error-light);
+  --background-info-extra-light: var(--background-info-light);
+  --background-success-extra-light: var(--background-success-light);
+  --background-warning-extra-light: var(--background-warning-light);
+
+  /* Backgrounds — neutral one-offs */
+  --background-neutral-disabled: var(--background-disabled-neutral);
+  --background-neutral-lab: var(--background-neutral-primary);
+
+  /* Borders — CADS drops the plural; brand families collapse */
+  --borders-brand-aqua-light: var(--border-brand-light);
+  --borders-brand-aqua-primary: var(--border-brand-primary);
+  --borders-brand-aqua-strong: var(--border-brand-strong);
+  --borders-brand-purple-light: var(--border-brand-light);
+  --borders-brand-purple-primary: var(--border-brand-primary);
+  --borders-brand-purple-strong: var(--border-brand-strong);
+  --borders-brand-teal-light: var(--border-brand-light);
+  --borders-brand-teal-primary: var(--border-brand-primary);
+  --borders-brand-teal-strong: var(--border-brand-strong);
+  --borders-error-light: var(--border-error-light);
+  --borders-error-primary: var(--border-error-primary);
+  --borders-error-strong: var(--border-error-strong);
+  --borders-info-light: var(--border-info-light);
+  --borders-info-primary: var(--border-info-primary);
+  --borders-info-strong: var(--border-info-strong);
+  --borders-success-light: var(--border-success-light);
+  --borders-success-primary: var(--border-success-primary);
+  --borders-success-strong: var(--border-success-strong);
+  --borders-warning-light: var(--border-warning-light);
+  --borders-warning-primary: var(--border-warning-primary);
+  --borders-warning-strong: var(--border-warning-strong);
+  --borders-neutral-disabled: var(--border-disabled-neutral);
+
+  /* legacy neutral border ramp light(gray-10)/primary(gray-20)/strong(gray-40)
+     lands on the CADS primary/secondary pair; light has no lighter CADS
+     step and joins primary */
+  --borders-neutral-light: var(--border-neutral-primary);
+  --borders-neutral-primary: var(--border-neutral-primary);
+  --borders-neutral-solid: var(--border-neutral-solid);
+  --borders-neutral-strong: var(--border-neutral-secondary);
+  --borders-neutral-white-fixed: var(--border-neutral-white-fixed);
+
+  /* Text — brand families collapse */
+  --text-brand-aqua-primary: var(--text-brand-primary);
+  --text-brand-aqua-primary-fixed: var(--text-brand-primary-fixed);
+  --text-brand-aqua-secondary: var(--text-brand-secondary);
+  --text-brand-purple-primary: var(--text-brand-primary);
+  --text-brand-purple-primary-fixed: var(--text-brand-primary-fixed);
+  --text-brand-purple-secondary: var(--text-brand-secondary);
+  --text-brand-teal-primary: var(--text-brand-primary);
+  --text-brand-teal-primary-fixed: var(--text-brand-primary-fixed);
+  --text-brand-teal-secondary: var(--text-brand-secondary);
+
+  /* Text — renamed neutrals */
+  --text-neutral-disabled: var(--text-disabled-neutral);
+  --text-neutral-disabled-inverse: var(--text-disabled-neutral-inverse);
+  --text-neutral-inverse: var(--text-neutral-primary-inverse);
+}
+
+/* Legacy primitives with no CADS successor. Direct primitive usage is
+   rare (~30 call sites for the colored families) but must not fall
+   through to the legacy :root values under this brand. Same-step
+   mapping into the successor family; step 100 retires, CADS tops out
+   at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
+   brand-purple-5–90) are already redefined by the brand's own token
+   file (brandCodeAiNext.css, brandCodeAiAudit.css).
+
+   Unlike the aliases above, primitives do not vary by theme, so this
+   one root-level block covers both. Do not re-declare these rows on
+   [data-theme] elements: brandLegacyShim.css defines the same pairs
+   in the opposite direction there (--brand-orange-60 from
+   --accent-orange-60), and when both directions apply to the same
+   element, CSS treats the definitions as circular and blanks both
+   variables. */
+[data-brand='codeai-next']:root,
+[data-brand='codeai-next'],
+[data-brand='codeai-audit']:root,
+[data-brand='codeai-audit'] {
+  --brand-aqua-10: var(--brand-purple-10);
+  --brand-aqua-20: var(--brand-purple-20);
+  --brand-aqua-30: var(--brand-purple-30);
+  --brand-aqua-40: var(--brand-purple-40);
+  --brand-aqua-50: var(--brand-purple-50);
+  --brand-aqua-60: var(--brand-purple-60);
+  --brand-aqua-70: var(--brand-purple-70);
+  --brand-aqua-80: var(--brand-purple-80);
+  --brand-aqua-90: var(--brand-purple-90);
+  --brand-aqua-100: var(--brand-purple-95);
+  --brand-teal-5: var(--brand-purple-5);
+  --brand-teal-10: var(--brand-purple-10);
+  --brand-teal-20: var(--brand-purple-20);
+  --brand-teal-30: var(--brand-purple-30);
+  --brand-teal-40: var(--brand-purple-40);
+  --brand-teal-50: var(--brand-purple-50);
+  --brand-teal-60: var(--brand-purple-60);
+  --brand-teal-70: var(--brand-purple-70);
+  --brand-teal-80: var(--brand-purple-80);
+  --brand-teal-90: var(--brand-purple-90);
+  --brand-teal-100: var(--brand-purple-95);
+  --brand-purple-100: var(--brand-purple-95);
+  --accent-strawberry-10: var(--brand-pink-10);
+  --accent-strawberry-20: var(--brand-pink-20);
+  --accent-strawberry-30: var(--brand-pink-30);
+  --accent-strawberry-40: var(--brand-pink-40);
+  --accent-strawberry-50: var(--brand-pink-50);
+  --accent-strawberry-60: var(--brand-pink-60);
+  --accent-strawberry-70: var(--brand-pink-70);
+  --accent-strawberry-80: var(--brand-pink-80);
+  --accent-strawberry-90: var(--brand-pink-90);
+  --accent-strawberry-100: var(--brand-pink-95);
+  --accent-orange-10: var(--brand-orange-10);
+  --accent-orange-20: var(--brand-orange-20);
+  --accent-orange-30: var(--brand-orange-30);
+  --accent-orange-40: var(--brand-orange-40);
+  --accent-orange-50: var(--brand-orange-50);
+  --accent-orange-60: var(--brand-orange-60);
+  --accent-orange-70: var(--brand-orange-70);
+  --accent-orange-80: var(--brand-orange-80);
+  --accent-orange-90: var(--brand-orange-90);
+  --accent-orange-100: var(--brand-orange-95);
+
+  /* legacy gray-99 (#121212) equals the CADS base black exactly */
+  --neutral-gray-99: var(--neutral-base-black);
+  --sentiment-error-100: var(--sentiment-error-95);
+  --sentiment-information-100: var(--sentiment-information-95);
+  --sentiment-success-100: var(--sentiment-success-95);
+  --sentiment-warning-100: var(--sentiment-warning-95);
+}

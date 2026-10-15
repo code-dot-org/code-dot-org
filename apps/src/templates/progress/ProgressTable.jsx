@@ -33,7 +33,7 @@ class ProgressTable extends React.Component {
     const padding = 80;
     $('.container.main').css({
       width: 'initial',
-      maxWidth: 940 + 2 * padding,
+      maxWidth: 940 + 4 * padding,
       paddingLeft: padding,
       paddingRight: padding,
     });

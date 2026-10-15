@@ -14,7 +14,7 @@ module AiSystemPrompts::SystemPromptHelper
   end
 
   def self.get_level_instructions(level)
-    level_instructions = level.properties["long_instructions"]
+    level_instructions = level.try(:generated_long_instructions) || level.properties["long_instructions"]
     "Your students have been given the following instructions: \n\n #{level_instructions} \n"
   end
 
@@ -47,7 +47,7 @@ module AiSystemPrompts::SystemPromptHelper
     if level_id
       level = begin Level.find(level_id)
       rescue ActiveRecord::RecordNotFound
-        Honeybadger.notify(exception,
+        Observability::Errors.report(exception,
             error_message: 'Invalid level_id in system prompt helper',
             context: {
               level_id: level_id,

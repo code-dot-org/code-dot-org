@@ -15,23 +15,20 @@ From `frontend/`:
 `TARGET_URL` overrides the default target (`test-studio.code.org`). With no
 `TARGET_URL`, `test:ui` runs against test-studio.
 
-## Why GitHub Actions, and why not (just) Drone
+## functional and eyes
 
-This suite runs in three places, each with a distinct purpose:
+- **functional** — every test without the `@visual` tag. A failure stops the build.
+- **eyes** — visual differences are checked with a third-party provider,
+  Applitools.
 
-- **GitHub Actions** (`e2e-tests-ci.yml`) — runs against the deployed
-  `test-studio.code.org` with no CDO secrets and no local Rails build. It proves
-  the suite is portable: runnable outside Drone/DTT by external contributors or
-  sandboxed agents, and horizontally shardable. It gates on changes to this
-  package (and the Playwright version), not on a PR's product code — that code
-  is not visible on test-studio.
-- **Drone** — runs the suite against the PR's own locally-built dashboard + apps,
-  after the Cucumber tests. This is where a PR's code changes are gated.
-- **DTT** — runs the suite against test-studio's dashboard + apps, after the
-  Cucumber tests.
+## Where these tests run
 
-GitHub Actions is not a stepping stone to Drone; it is a parallel track that
-keeps the suite secret-free and independently runnable.
+- **Drone** — both suites, against the build the PR makes, before the Cucumber
+  tests. Runs `chromium` only. To add browsers, see the commit tags in
+  [dashboard/test/ui/README.md](../../../dashboard/test/ui/README.md). A visual
+  difference does not fail the build until we can develop a PR-level visual diff
+  strategy.
+- **DTT** — the functional suite in all three browsers, against test-studio. Visual diffs runs only on chromium against test-studio. A visual difference fails the DTT.
 
 ## Agent skill setup
 

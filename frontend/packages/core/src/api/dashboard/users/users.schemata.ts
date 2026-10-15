@@ -40,6 +40,7 @@ export const CurrentUserResponseSignedInSchema = z.object({
 
   // AI gating
   ai_chat_access_level: z.union([z.string(), z.number()]),
+  us_only_aichat_models_disabled: z.boolean(),
   ai_rubrics_disabled: z.boolean().nullable(),
   ai_differentiation_enabled: z.boolean(),
   has_seen_ai_assessments_announcement: z.boolean(),
@@ -141,6 +142,7 @@ export const HasDismissedPersonalizationAlertSchema = z
 // --- My Account settings (GET /api/v1/users/me/settings) ---
 
 const AuthenticationOptionSchema = z.object({
+  id: z.number(),
   credential_type: z.string(),
   email: z.string().nullable(),
 });
@@ -149,6 +151,52 @@ const AuthenticationOptionSchema = z.object({
 // (User::AGE_DROPDOWN_OPTIONS, User.us_state_dropdown_options) so the client
 // doesn't duplicate them.
 const DropdownOptionSchema = z.object({value: z.string(), text: z.string()});
+
+// `category` groups the roles for display ('educator' | 'admin' | 'other'
+// today) but stays an open string: a category Rails adds later must not fail
+// the whole settings read.
+const EducatorRoleOptionSchema = z.object({
+  value: z.string(),
+  text: z.string(),
+  category: z.string(),
+});
+
+const SchoolInfoSchema = z
+  .object({
+    school_name: z.string().nullable(),
+    school_type: z.string().nullable(),
+    school_id: z.string().nullable(),
+    school_zip: z.string().nullable(),
+    country: z.string().nullable(),
+  })
+  .transform(s => ({
+    schoolName: s.school_name,
+    schoolType: s.school_type,
+    schoolId: s.school_id,
+    schoolZip: s.school_zip,
+    country: s.country,
+  }));
+
+// lti_roster_sync_enabled is absent where legacy hides the setting.
+const IntegrationsSchema = z
+  .object({
+    can_manage_linked_accounts: z.boolean(),
+    is_google_classroom_student: z.boolean(),
+    is_clever_student: z.boolean(),
+    personal_account_linking_enabled: z.boolean(),
+    lms_name: z.string().nullable(),
+    lti_roster_sync_enabled: z.boolean().optional(),
+  })
+  .transform(i => ({
+    canManageLinkedAccounts: i.can_manage_linked_accounts,
+    isGoogleClassroomStudent: i.is_google_classroom_student,
+    isCleverStudent: i.is_clever_student,
+    personalAccountLinkingEnabled: i.personal_account_linking_enabled,
+    lmsName: i.lms_name,
+    ...(i.lti_roster_sync_enabled !== undefined && {
+      ltiRosterSyncEnabled: i.lti_roster_sync_enabled,
+    }),
+  }));
 
 // Wire (snake_case) shape of GET /api/v1/users/me/settings, transformed to the
 // camelCase model the page consumes.
@@ -172,10 +220,19 @@ export const UserSettingsResponseSchema = z
     // them for students on save, and a blank save surfaces the server's error.
     age: z.union([z.number(), z.string()]).nullable(),
     us_state: z.string().nullable(),
+    // Raw free-text gender the student entered; null when unset.
+    gender: z.string().nullable(),
+    // Request resolves to the USA; the client gates the US-state field on it.
+    is_usa: z.boolean(),
     parent_email: z.string().nullable(),
     dependent_students_count: z.number(),
     age_options: z.array(DropdownOptionSchema),
     us_state_options: z.array(DropdownOptionSchema),
+    // Teacher-only: absent from a student's payload, not null.
+    educator_role: z.string().nullable().optional(),
+    educator_role_options: z.array(EducatorRoleOptionSchema).optional(),
+    school_info: SchoolInfoSchema.nullable().optional(),
+    integrations: IntegrationsSchema,
   })
   .transform(r => ({
     userType: r.user_type,
@@ -190,6 +247,7 @@ export const UserSettingsResponseSchema = z
     shouldSeeAddPasswordForm: r.should_see_add_password_form,
     shouldSeeEditEmailLink: r.should_see_edit_email_link,
     authenticationOptions: r.authentication_options.map(option => ({
+      id: option.id,
       credentialType: option.credential_type,
       email: option.email,
     })),
@@ -197,8 +255,16 @@ export const UserSettingsResponseSchema = z
     canDeleteOwnAccount: r.can_delete_own_account,
     age: r.age,
     usState: r.us_state,
+    gender: r.gender,
+    isUsa: r.is_usa,
     parentEmail: r.parent_email,
     dependentStudentsCount: r.dependent_students_count,
     ageOptions: r.age_options,
     usStateOptions: r.us_state_options,
+    ...(r.educator_role !== undefined && {educatorRole: r.educator_role}),
+    ...(r.educator_role_options !== undefined && {
+      educatorRoleOptions: r.educator_role_options,
+    }),
+    ...(r.school_info !== undefined && {schoolInfo: r.school_info}),
+    integrations: r.integrations,
   }));

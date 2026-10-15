@@ -17,6 +17,23 @@ Transforms `Button` and `LinkButton` components from `@code-dot-org/component-li
 - Updates imports automatically
 - Handles both regular buttons and icon-only buttons
 
+### `dialog-to-mui-dialog.ts`
+
+Moves `Dialog` and `CustomDialog` imports from `@code-dot-org/component-library/dialog` to `MuiDialog` and `MuiCustomDialog`. The props are unchanged, so only imports and `jest.mock` factories change. See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
+
+**What it does:**
+
+- Rewrites default and named imports, including the `*Props` types, keeping local names
+- Adds the `Mui` keys to `jest.mock` factories
+- Reports Enzyme string selectors and import shapes it cannot rewrite
+- Idempotent; parses `.ts` files with the `ts` parser
+
+Build the package first via `yarn build`
+
+```bash
+yarn codemod:dialog [--dry --print] <path>
+```
+
 ## Usage
 
 ### Prerequisites

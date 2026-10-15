@@ -7,10 +7,14 @@
 // while to load; and a sad bee when things go wrong.
 
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {ToastProvider} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
+// The drawer's own weight sits behind a lazy boundary inside this component,
+// so importing it here does not pull the drawer into every lab2 page.
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
@@ -30,6 +34,7 @@ import {
   setUserRoleInCourse,
 } from '@cdo/apps/templates/currentUserRedux';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
+import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
@@ -42,6 +47,7 @@ import {PartialUserAppOptions} from '../types';
 import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import {LabContentWidthProvider} from './LabContentWidth';
 import LevelPropertiesWrapper from './LevelPropertiesWrapper';
 import Loading from './Loading';
 import {ProjectBlockedUI} from './ProjectBlockedUI';
@@ -58,6 +64,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading) || !levelPropertiesMap;
   const isPageError: boolean = useSelector(hasPageError);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const hasPrivacyProfanityViolation = useAppSelector(
+    state => !!state.lab.shareFailure
+  );
   const projectSharingDisabled = useAppSelector(
     state => state.lab.projectSharingDisabled
   );
@@ -71,6 +80,21 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       dispatch(setPermissions(data));
     });
   }, [dispatch]);
+
+  // The lab lays itself out against this rather than against the window: the
+  // drawer below is a sibling, so the two differ whenever it is open.
+  // useElementSize reports 0 until it has measured, which a lab must not read
+  // as a zero-width box -- unmeasured is absent, and the lab falls back.
+  const labContentRef = useRef<HTMLDivElement>(null);
+  const [measuredLabWidth] = useElementSize(labContentRef);
+  const labContentWidth = measuredLabWidth || undefined;
+
+  // Rendering the drawer here, rather than at the page's own mount point, is
+  // what lets the lab treat it as part of its layout. levels/show.js still
+  // decides whether there should be one; see HostedDrawerConfig.
+  const hostedDrawerConfig = useAppSelector(
+    state => state.aiDiffChat?.hostedDrawerConfig
+  );
   const errorMessage: string | undefined = useSelector(
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
@@ -147,6 +171,8 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 
   const blockedType = isBlockedAbuse
     ? 'projectAbuse'
+    : hasPrivacyProfanityViolation
+    ? 'privacyProfanity'
     : projectSharingDisabled
     ? 'projectSharingDisabled'
     : undefined;
@@ -170,22 +196,31 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {levelPropertiesMap && (
-          // Don't display children (including lab views) until we have loaded level properties.
-          <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
-            {children}
-          </LevelPropertiesWrapper>
-        )}
-        <Loading isLoading={isLoading} />
+        <div ref={labContentRef} className={moduleStyles.labContent}>
+          <LabContentWidthProvider value={labContentWidth}>
+            <ToastProvider className={moduleStyles.labToast}>
+              {levelPropertiesMap && (
+                // Don't display children (including lab views) until we have loaded level properties.
+                <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
+                  {children}
+                </LevelPropertiesWrapper>
+              )}
+              <Loading isLoading={isLoading} bounded />
 
-        {isPageError && <ErrorUI message={errorMessage} />}
-        {blockedType && (
-          <ProjectBlockedUI
-            blockedType={blockedType}
-            isProjectValidator={isProjectValidator}
-          />
+              {isPageError && <ErrorUI message={errorMessage} />}
+              {blockedType && (
+                <ProjectBlockedUI
+                  blockedType={blockedType}
+                  isProjectValidator={isProjectValidator}
+                />
+              )}
+              <ScreenAnalyticsOverlay />
+            </ToastProvider>
+          </LabContentWidthProvider>
+        </div>
+        {hostedDrawerConfig && (
+          <AiDiffFloatingActionButton inline {...hostedDrawerConfig} />
         )}
-        <ScreenAnalyticsOverlay />
       </div>
     </ErrorBoundary>
   );

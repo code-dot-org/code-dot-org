@@ -1,8 +1,12 @@
 name 'pl-aif-2-U3-array-method-choice-level_2026'
-display_name 'Social Media Scheduler'
-description '#### Choose one of the professions below and assist with updating their social media scheduler based on unique events that occur.'
+display_name 'Task List'
+description '#### Select the level below to add a new task to the task list app. **Optional:**  Continue through the sequence to add a priority task.'
 
 sublevels
-level 'pl-aif-2-U3-array-method-choice-A_2026'
-level 'pl-aif-2-U3-array-method-choice-B_2026'
-level 'pl-aif-2-U3-array-method-choice-C_2026'
+level 'pl-aif2-U3-add-new-task'
+level 'pl-aif2-U3-add-priority-task'
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

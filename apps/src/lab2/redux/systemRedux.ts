@@ -6,6 +6,7 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 // states, and therefore may not set these values).
 export interface Lab2SystemState {
   loadedCodeEnvironment: boolean;
+  codeEnvironmentError: string | null;
   isRunning: boolean;
   hasRun: boolean;
   isValidating: boolean;
@@ -15,6 +16,7 @@ export interface Lab2SystemState {
 
 const initialState: Lab2SystemState = {
   loadedCodeEnvironment: false,
+  codeEnvironmentError: null,
   isRunning: false,
   hasRun: false,
   isValidating: false,
@@ -29,6 +31,9 @@ const systemSlice = createSlice({
   reducers: {
     setLoadedCodeEnvironment(state, action: PayloadAction<boolean>) {
       state.loadedCodeEnvironment = action.payload;
+    },
+    setCodeEnvironmentError(state, action: PayloadAction<string | null>) {
+      state.codeEnvironmentError = action.payload;
     },
     setIsRunning(state, action: PayloadAction<boolean>) {
       state.isRunning = action.payload;
@@ -50,6 +55,7 @@ const systemSlice = createSlice({
 
 export const {
   setLoadedCodeEnvironment,
+  setCodeEnvironmentError,
   setIsRunning,
   setHasRun,
   setIsValidating,

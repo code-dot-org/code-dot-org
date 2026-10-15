@@ -6,13 +6,16 @@ export * from './levels';
 export * from './metrics';
 export * from './preferences';
 export * from './projects';
+export * from './schools';
 export * from './sections';
 export * from './sources';
 export {usersKeys} from './users/users.keys';
+export {buildSchoolData} from './users/buildSchoolData';
 export {
   useCurrentUser,
   useUserSettings,
   useUpdateProfile,
+  useUpdateSchoolInfo,
   useUpdateEmail,
   useUpdatePassword,
   useCreatePassword,
@@ -21,6 +24,7 @@ export {
   useRemoveParentEmail,
   useDeleteUser,
   useSignOutOtherSessions,
+  useUnlinkLtiAccount,
 } from './users/users.query';
 export {
   CurrentUserSchema,
@@ -34,12 +38,18 @@ export type {
   UserSettings,
   AuthenticationOptionSummary,
   UserType,
+  EducatorRoleOption,
+  SchoolInfoSummary,
+  IntegrationsSettings,
+  SchoolInfoRequest,
   UpdateProfileParams,
+  UpdateSchoolInfoParams,
   UpdateEmailParams,
   UpdatePasswordParams,
   CreatePasswordParams,
   UpdateUserTypeParams,
   DeleteUserParams,
-  ParentEmailOptIn,
+  EmailOptIn,
   UpdateParentEmailParams,
+  UnlinkLtiAccountParams,
 } from './users/users.types';

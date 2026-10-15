@@ -218,6 +218,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
         text={text}
         pendingText={text}
         isPending={isLoading}
+        color={Button.ButtonColor.brandSecondaryDefault}
         disabled={!!requestError}
         onClick={() => {}}
       />

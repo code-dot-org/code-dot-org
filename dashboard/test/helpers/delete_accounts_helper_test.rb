@@ -540,6 +540,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.user_adaptive_steps
+  #
+
+  test "deletes user_adaptive_steps, including under soft-deleted user_levels" do
+    user = create(:student)
+    live = create(:user_level, user: user)
+    deleted = create(:user_level, user: user)
+    UserAdaptiveStep.create!(user_level: live, step_id: 'intro', progress: {'answers' => {}})
+    UserAdaptiveStep.create!(user_level: deleted, step_id: 'intro')
+    deleted.destroy
+    other = UserAdaptiveStep.create!(user_level: create(:user_level), step_id: 'intro')
+
+    purge_user user
+
+    assert_empty UserAdaptiveStep.where(user_level_id: [live.id, deleted.id])
+    assert UserAdaptiveStep.exists?(other.id)
+    assert_logged "Deleted 2 UserAdaptiveStep"
+  end
+
+  #
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
   #
@@ -2231,16 +2251,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     # confirm the old teacher account is purged
     assert teacher_old.purged_at
-  end
-
-  test 'deletes contact rollups final data' do
-    teacher = create(:teacher)
-    teacher_email = teacher.email
-    create(:contact_rollups_final, email: teacher_email)
-
-    assert ContactRollupsFinal.find_by_email(teacher_email)
-    purge_user teacher
-    assert_nil ContactRollupsFinal.find_by_email(teacher_email)
   end
 
   test 'marks contact rollups pardot memory for deletion' do

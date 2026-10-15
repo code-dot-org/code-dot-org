@@ -87,7 +87,8 @@ module ViewOptionsHelper
     :pairing_attempt,
     :pairing_channel_id,
     :project_type,
-    :validation
+    :validation,
+    :is_building_quiz_questions,
   )
   # Sets custom level options to be used by the view layer. The option hash is
   # frozen once read. Accepts a level_id argument. If an option isn't naturally

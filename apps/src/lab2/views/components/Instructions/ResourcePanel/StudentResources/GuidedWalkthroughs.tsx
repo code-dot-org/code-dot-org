@@ -104,7 +104,6 @@ const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
   return (
     <div>
       <Typography variant="body3" className={styles.sectionHeading}>
-        <FontAwesomeV6Icon iconName="route" />
         <strong>Guided walkthroughs</strong>
       </Typography>
       <Typography variant="body4" className={styles.sectionDescription}>

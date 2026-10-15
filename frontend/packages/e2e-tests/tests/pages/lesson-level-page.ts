@@ -1,8 +1,19 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
-import {cssColorMatchesVar} from '../shared/colors';
+import {IntroVideoModalComponent} from '../components/intro-video-modal';
+import {LevelDialogComponent} from '../components/level-dialog';
+import {progressBubbleShows} from '../shared/progress';
+import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+import {waitUntilStable} from '../shared/stability';
 
 import {BasePage} from './base-page';
+
+/**
+ * Uitest hook for the per-lesson progress card, one per lesson — the same
+ * component tree (HeaderPopup -> MiniView -> ProgressTable -> ProgressLesson)
+ * rendered here (inside the header popup) and on UnitOverviewPage.
+ */
+export const PROGRESS_LESSON_SELECTOR = '.uitest-progress-lesson';
 
 /**
  * A level played within a lesson — multi levels, Blockly labs, etc. Owns the
@@ -11,12 +22,67 @@ import {BasePage} from './base-page';
  * sign-in, or dashboards.
  */
 export class LessonLevelPage extends BasePage {
+  /** Lesson-progress strip; a11y scans scope here, not the shared chrome. */
+  readonly progressSelector = '.header_level .react_stage';
+
+  /** Header popup container; a11y scans scope here once it's open. */
+  readonly headerPopupSelector = '.header_popup';
+
   /** Lesson-progress strip; one bubble link per level. */
   readonly lessonProgress: Locator;
 
+  /**
+   * The whole lesson header block: title, save-status timestamp, progress
+   * bubbles.
+   */
+  readonly lessonHeaderInfo: Locator;
+
+  /** Header "More"/"Less" toggle that mounts the lesson-progress summary popup. */
+  readonly headerPopupButton: Locator;
+
+  /**
+   * Per-lesson progress cards inside the header popup, one per lesson.
+   * Absent from the DOM entirely until headerPopupButton is clicked. No
+   * accessible role/name is exposed, so addressed by its uitest hook class.
+   */
+  readonly progressLessons: Locator;
+
+  /** Intro video-tutorial overlay — any level type can autoplay it on first load. */
+  readonly introVideoModal: IntroVideoModalComponent;
+
+  /** The level's own content dialog (instructions, results). */
+  readonly dialog: LevelDialogComponent;
+
   constructor(page: Page) {
     super(page);
-    this.lessonProgress = page.locator('.header_level .react_stage');
+    this.introVideoModal = new IntroVideoModalComponent(page);
+    this.dialog = new LevelDialogComponent(page);
+    this.lessonProgress = page.locator(this.progressSelector);
+    this.lessonHeaderInfo = page.locator('.header_level');
+    this.headerPopupButton = page.locator('button.header_popup_link');
+    this.progressLessons = page.locator(PROGRESS_LESSON_SELECTOR);
+  }
+
+  /** Navigate to a lab level. */
+  async gotoLevel(params: LabLevelUrlParams): Promise<void> {
+    await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+  }
+
+  /**
+   * The server sends .header_level empty and a separate React mount fills it
+   * about 800ms after domcontentloaded. header.waitForSettled() reports settled
+   * before that, because the shared header sets its flags earlier, so a
+   * screenshot taken then shows a blank lesson header.
+   */
+  async waitForLessonHeaderRendered(): Promise<void> {
+    await expect(this.lessonProgress).toBeVisible();
+    await waitUntilStable(this.lessonProgress);
+  }
+
+  /** Open the header popup and wait for its progress cards to render. */
+  async openHeaderPopup(): Promise<void> {
+    await this.headerPopupButton.click();
+    await expect(this.progressLessons.first()).toBeVisible();
   }
 
   /** Progress bubble for a 1-based level number (see progress.rb header_bubble_selector). */
@@ -27,23 +93,19 @@ export class LessonLevelPage extends BasePage {
       .locator('.progress-bubble');
   }
 
-  /**
-   * Whether the level's bubble shows 'perfect', comparing its colors to the DSCO
-   * success tokens the way progress.rb verify_progress does (it keys off color).
-   */
+  /** Whether the level's header bubble shows 'perfect' (see progress.rb verify_progress). */
   async isProgressBubblePerfect(levelNum: number): Promise<boolean> {
-    const bubble = this.headerProgressBubble(levelNum);
-    return (
-      (await cssColorMatchesVar({
-        locator: bubble,
-        colorProperty: 'background-color',
-        cssVar: '--background-success-primary',
-      })) &&
-      (await cssColorMatchesVar({
-        locator: bubble,
-        colorProperty: 'border-top-color',
-        cssVar: '--borders-success-primary',
-      }))
-    );
+    return progressBubbleShows({
+      bubble: this.headerProgressBubble(levelNum),
+      state: 'perfect',
+    });
+  }
+
+  /** Whether the level's header bubble shows 'not_tried' (see progress.rb verify_progress). */
+  async isProgressBubbleNotTried(levelNum: number): Promise<boolean> {
+    return progressBubbleShows({
+      bubble: this.headerProgressBubble(levelNum),
+      state: 'not_tried',
+    });
   }
 }

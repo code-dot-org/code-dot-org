@@ -1,0 +1,108 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-04T15:36:31.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## Web Lab\n Welcome to **Web Lab,** an integrated development space that allows you to collaborate with AI while building web applications. \n\n💡 *Note: Web Lab is continuously updated and improved, so some features or menus in the tutorial may look slightly different from the current version.*",
+        "imageUrl": "https://images.code.org/73b87528351d601dd5098e6d636b32fa-WebLab Panels .png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Sidebar Panel\n The left **Sidebar Panel** toggles between instructions, AI Chat, and Version History. \n\n## Instructions Panel\nClick on the `i` icon to find the instructions for the web lab level.",
+        "imageUrl": "https://images.code.org/f182691d2dea9fe41d97fae038939cf6-WebLab Panels  (1).png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## AI Chat\nTo access AI Chat, click the AI bot icon in the side panel. You can use it to get hints, debug code, or ask for explanations while you work.",
+        "imageUrl": "https://images.code.org/79a4a2275a9e40c17c5786e68f12a5f8-WebLab Panels  (2).png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Version History\nUse Version History to save snapshots of your project and return to any previous version at any time. \n\nEncourage students to save versions regularly as they make updates or experiment with their code.",
+        "imageUrl": "https://images.code.org/3194238fc650fc7d422be276fa759669-WebLab Panels  (3).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-f545a3f8-80df-47e7-a398-659a35ae4b5b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Rubric\nThe Rubric tab contains the project rubric used for assessment. Students can view the expectations and success criteria as they work, while teachers can use the rubric to provide feedback and evaluate student progress.",
+        "imageUrl": "https://images.code.org/572035cf4af70d73d827a85f247469aa-WebLab Panels  (4).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-31887a3d-5ad5-424f-a333-ceecdb0181f9",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Backpack\nThe Backpack allows students to carry files, code, and other project assets between levels. This makes it easy to reuse previous work and access important resources throughout a project.",
+        "imageUrl": "https://images.code.org/9ee198cd45e47439dc36de9eda5f355a-WebLab Panels  (5).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-f9a89711-4b6e-4fbc-ae64-71f41573296a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Teaching Tips\nEvery Web Lab level has a Teaching Tips area of the left sidebar which only appears for verified teachers.\n\nOpen it to see more details about the level itself, questions to ask while circulating, and potential misconceptions.\n\n*This feature is available when you have an assigned class section. It's not available in the professional learning module*.",
+        "imageUrl": "https://images.code.org/00809b9bf1abd677b34c161a6337b51e-WebLab Panels  (6).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-67b1bc1c-c8e0-44fe-9857-090e9ced07de",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Walkthrough\nThe walkthrough gives a quick tour of the features in web lab.\n\nGo over it with students on the first use of web lab.",
+        "imageUrl": "https://images.code.org/ecb800737f8ce7d91cc0ca5c55f22888-WebLab Panels  (7).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-dfcc7b7e-a0ad-4469-ab26-aac04e539e63",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##AI Teaching Assistant\nThe AI Teaching Assistant is available as a pop-up tool for certified teachers who are logged in and have a class section.\n\nIt provides support with tasks such as grading student work, differentiating instruction, generating feedback, answering curriculum questions, and offering teaching strategies and explanations.",
+        "imageUrl": "https://images.code.org/b98a29274de399c3e869943a0ecb0798-WebLab Panels  (8).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-edb21ef4-8bfb-4378-ba12-301667dd274b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Settings\nThe Settings feature, accessed by clicking the gear icon in the bottom-left corner, lets you customize your workspace by adjusting the language, font size, and theme.",
+        "imageUrl": "https://images.code.org/a2c4bd82047db6f407aa22de617fd057-WebLab Panels  (13).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-06cf4529-4198-452a-9c02-38d08054e531",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Files\nFiles for the project can be found in the middle section and across the top of the workspace. The file column is collapsible and can be closed to save space.",
+        "imageUrl": "https://images.code.org/f736d5a3dfa4085ee1c9403fd669d4a9-WebLab Panels  (9).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-7730e206-b9e6-4903-9b33-b8fa5d6acf52",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# The Workspace \nThe Workspace panel is the main space where you build your project. You can toggle between **Code, Preview, and Split View** while you work.\n## Code View\nIn Code view, you can see the different files that make up your project. Here, you’ll see an HTML file and a CSS file. As you build, you’ll switch between the two to write and style your code.",
+        "imageUrl": "https://images.code.org/55bd0df445c944c8ebae6835410420b6-WebLab Panels  (10).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-1381dbb9-2fdf-4433-9c6a-2610b745cb36",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Preview \nPreview lets you see what your project looks like as it runs—showing the output of your code in real time.\n\n## Response View Toggle\nThe Mobile/Desktop View Toggle lets you see how your project looks on different devices. Switch between views to preview your site on a phone or a computer screen.",
+        "imageUrl": "https://images.code.org/2e040261402c16ff612c571e2b6e5671-WebLab Panels  (11).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-ddc7c7da-1060-4c21-9dd6-9b7845350c55",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Debug Panel\nTo access the console for debugging or testing, click on the bug icon on the top right.",
+        "imageUrl": "https://images.code.org/4b46b30535f9fbe08cdbbcb7d938b895-WebLab Panels  (14).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-079c8368-7644-4194-ab9e-d8d6d31d71a3",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Split View\nSplit View lets you see your code and the live output next to each other, so you can easily test and adjust as you build.\n\n**Tip:** Need more space? Drag the divider between panels to resize each window.\n",
+        "imageUrl": "https://images.code.org/f6f24b1d71ab9dc652636eca51ae262f-WebLab Panels  (12).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-b8a0d511-d93e-4d1f-9fe8-7eb46274e42e",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-04T15:36:31.024+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-weblab-panels_10_2026\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-weblab-panels_10_2026\"},{\"changed_at\":\"2026-08-04 15:38:02 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

@@ -2,7 +2,7 @@ import codeOrgLogo from '@public/images/code-org-logo.png';
 import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
 import {Meta, StoryObj} from '@storybook/react-vite';
-import {within, expect} from 'storybook/test';
+import {within, expect, waitFor} from 'storybook/test';
 import {MINIMAL_VIEWPORTS} from 'storybook/viewport';
 
 import Video from '@/video';
@@ -77,6 +77,14 @@ export const WithVideo: Story = {
     await expect(
       canvas.getByLabelText('Play video Watch our intro video'),
     ).toBeInTheDocument();
+
+    // Video swaps to YouTube's larger poster once that image loads. Wait for
+    // the swap, so a screenshot cannot catch the smaller poster first.
+    await waitFor(() =>
+      expect(
+        canvas.getByAltText('Play video Watch our intro video'),
+      ).toHaveAttribute('src', expect.stringContaining('maxresdefault')),
+    );
   },
 };
 

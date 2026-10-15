@@ -1,0 +1,13 @@
+{
+  "key": "ai-privacy-ethics",
+  "description": "Highlights the risks of AI pinpointing personal details from background clues in shared media.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/ai-privacy-ethics.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "882555b1-9534-4550-882c-5ac97ae02012"
+  ]
+}

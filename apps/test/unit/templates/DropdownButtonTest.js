@@ -44,4 +44,41 @@ describe('DropdownButton', () => {
     // dropdown is closed
     expect(wrapper.find('a').length).toEqual(0);
   });
+
+  it('keeps dropdown open when clicking a no-navigation child', () => {
+    const props = {
+      ...defaultProps,
+      children: [
+        <a onClick={() => {}} className="no-navigation">
+          section
+        </a>,
+        <a href="foo">lesson</a>,
+      ],
+    };
+    const wrapper = shallow(<DropdownButton {...props} />);
+    wrapper.find('Button').simulate('click');
+    expect(wrapper.find('a').length).toBe(2);
+
+    wrapper.find('a').at(0).simulate('click');
+    // dropdown stays open so nested sections can expand/collapse
+    expect(wrapper.find('a').length).toBe(2);
+  });
+
+  it('keeps dropdown open when no-navigation is combined with other classes', () => {
+    const props = {
+      ...defaultProps,
+      children: [
+        <a onClick={() => {}} className="no-navigation some-style-class">
+          section
+        </a>,
+        <a href="foo">lesson</a>,
+      ],
+    };
+    const wrapper = shallow(<DropdownButton {...props} />);
+    wrapper.find('Button').simulate('click');
+
+    wrapper.find('a').at(0).simulate('click');
+    // the no-navigation marker is honored even alongside a style class
+    expect(wrapper.find('a').length).toBe(2);
+  });
 });

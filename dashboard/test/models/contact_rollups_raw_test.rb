@@ -50,6 +50,74 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert_equal [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSF], courses
   end
 
+  test 'extract_sections_taught aggregates to one row per teacher' do
+    teacher = create(:teacher)
+    # Two sections in different CSD units (sections with a script must also
+    # carry the script's unit group), plus one section assigned directly to
+    # a csp-named course.
+    2.times do
+      csd_script = create(:csd_script)
+      create(:unit_group_unit, unit_group: create(:unit_group), script: csd_script, position: 1)
+      create(:section, user: teacher, script_id: csd_script.id)
+    end
+    create(:section, user: teacher, course_id: create(:unit_group, name: 'csp-2020').id)
+
+    ContactRollupsRaw.extract_sections_taught
+
+    records = ContactRollupsRaw.where(email: teacher.email, sources: 'dashboard.sections')
+    assert_equal 1, records.count
+    data = records.first.data
+    assert_equal 'CSD', data['curriculum_umbrellas']
+    assert_equal 'csp', data['course_name_prefixes']
+  end
+
+  test 'extract_sections_taught emits a row even without curriculum matches' do
+    teacher = create(:teacher)
+    # A script with no curriculum umbrella, in a course whose name matches
+    # no curriculum prefix (the unit_group factory default).
+    script = create(:script)
+    create(:unit_group_unit, unit_group: create(:unit_group), script: script, position: 1)
+    create(:section, user: teacher, script_id: script.id)
+
+    ContactRollupsRaw.extract_sections_taught
+
+    record = ContactRollupsRaw.find_by(email: teacher.email, sources: 'dashboard.sections')
+    refute_nil record
+    assert_nil record.data['curriculum_umbrellas']
+    assert_nil record.data['course_name_prefixes']
+  end
+
+  test 'extract_users_and_geos takes only the latest geo record per user' do
+    teacher = create(:teacher)
+    base_time = Time.now.utc
+    create(:user_geo, user: teacher, city: 'Old Town', state: 'Washington',
+      updated_at: base_time - 2.days
+)
+    create(:user_geo, user: teacher, city: 'Newville', state: 'Oregon',
+      updated_at: base_time
+)
+
+    ContactRollupsRaw.extract_users_and_geos
+
+    records = ContactRollupsRaw.where(email: teacher.email, sources: 'dashboard.users')
+    assert_equal 1, records.count
+    data = records.first.data
+    assert_equal teacher.id, data['user_id']
+    assert_equal 'Newville', data['city']
+    assert_equal 'Oregon', data['state']
+  end
+
+  test 'extract_users_and_geos includes teachers without geo records' do
+    teacher = create(:teacher)
+
+    ContactRollupsRaw.extract_users_and_geos
+
+    record = ContactRollupsRaw.find_by(email: teacher.email, sources: 'dashboard.users')
+    refute_nil record
+    assert_equal teacher.id, record.data['user_id']
+    assert_nil record.data['city']
+  end
+
   test 'get_extraction_query can import when no data column is given' do
     email_preference = create(:email_preference)
 

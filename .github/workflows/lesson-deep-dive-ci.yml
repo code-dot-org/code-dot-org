@@ -1,0 +1,26 @@
+# Common workflow for execution of continuous integration for the lesson-deep-dive package.
+# One job: `release:dryrun` fans out to build, lint, test, and — via the shared
+# `lint` task's dependsOn — prettier, stylelint, and typecheck. The package owns
+# no Playwright suite, so there is no e2e job.
+name: Lesson-Deep-Dive-CI
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/lesson-deep-dive
+        working-directory: ./frontend

@@ -28,9 +28,17 @@ Parameters:
     Type: String
     Default: <%=CDO.hostedzone_id('codeprojects.org') %>
     Description: Route 53 Hosted Zone ID for Codeprojects base domain name.
+  CodeaiprojectsBaseDomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'codeaiprojects.org' : "#{stack_name}.codeaiprojects.org" %>
+    Description: Base domain name for the Web Lab 2 / pyodide preview origin (migrated off codeprojects.org).
+  CodeaiprojectsHostedZoneId:
+    Type: String
+    Default: <%=CDO.hostedzone_id('codeaiprojects.org') %>
+    Description: Route 53 Hosted Zone ID for the codeaiprojects base domain name.
   InstanceType:
     Type: String
-    Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
+    Default: <%=rack_env?(:production) ? 'm8i.8xlarge' : 't3.2xlarge'%>
   Branch:
     Type: String
     Default: <%=branch%>
@@ -540,12 +548,27 @@ Resources:
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${ClusterNamespace}/etl_client"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # Legacy Database Migration Service exports Learning Platform tables to the `dashboard` database.
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dashboard"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # Zero ETL exports Learning Platform tables to the `[environment type]_learningplatform_mysql_zeroetl` database.
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/<%=rack_env%>_learningplatform_mysql_zeroetl"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # We provision Materialized Views on Zero ETL tables in the `dev` database.
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dev"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+        - PolicyName: ManageZeroEtlIntegrationDataFilter
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 'rds:DescribeIntegrations'
+                Resource: '*' # Unscoped so a daemon can enumerate every Integration to find the match for the current environment type.
+              - Effect: Allow
+                Action: 'rds:ModifyIntegration'
+                Resource: !Ref ZeroETLIntegration
 <% end -%>
 <% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
@@ -604,19 +627,6 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
-        - PolicyName: DMSStartAndMonitorReplicationTasks
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action:
-                  - dms:DescribeReplicationTasks
-                Resource: "*"
-              - Effect: Allow
-                Action:
-                  - dms:DescribeTableStatistics
-                  - dms:ListTagsForResource
-                  - dms:StartReplicationTask
-                Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
 <% if rack_env?(:test) -%>
         # AWS Device Farm (Test Grid) access for UI test runners on the test daemon.
@@ -872,9 +882,14 @@ Resources:
 
 <% if cdn_enabled -%>
   # ---------------------------------------------
-  # Codeprojects Resources
+  # Codeprojects Resources (legacy Web Lab: bare codeprojects.org apex)
   # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
+
+  # ---------------------------------------------
+  # Codeaiprojects Resources (Web Lab 2 / pyodide preview origin)
+  # ---------------------------------------------
+<%= resource_component 'codeaiprojects_resources' %>
 <% end -%>
   # ---------------------------------------------
   # Custom Chef Configuration Secret
@@ -899,6 +914,9 @@ Outputs:
   PreviewCodeprojectsURL:
     Description: Codeprojects URL
     Value: !Sub preview.${CodeprojectsBaseDomainName}
+  PreviewCodeaiprojectsURL:
+    Description: Web Lab 2 / pyodide preview origin
+    Value: !Sub preview.${CodeaiprojectsBaseDomainName}
 <% end -%>
 <% if rack_env?(:adhoc) -%>
   DaemonSSHCommand:

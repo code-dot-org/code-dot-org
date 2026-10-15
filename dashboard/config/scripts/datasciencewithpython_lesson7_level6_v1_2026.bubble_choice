@@ -1,0 +1,11 @@
+name 'datasciencewithpython-lesson7-level6-v1-2026'
+display_name 'Accessing and Grouping Practice'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datasciencewithpython-lesson7-level6a-v1-2026'
+level 'datasciencewithpython-lesson7-level6b-v1-2026'
+level 'datasciencewithpython-lesson7-level6c-v1-2026'
+level 'datasciencewithpython-lesson7-level6d-v1-2026'
+
+uses_lab2

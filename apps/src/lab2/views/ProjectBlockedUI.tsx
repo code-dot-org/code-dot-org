@@ -2,15 +2,29 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React, {useState} from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
-import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
+import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import Lab2Registry from '../Lab2Registry';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
 
-type BlockedType = 'projectAbuse' | 'projectSharingDisabled';
+export type BlockedType =
+  | 'projectAbuse'
+  | 'privacyProfanity'
+  | 'projectSharingDisabled';
+
+export const PRIVACY_PROFANITY_OWNER_ALERT =
+  "This project contains content that can't be shared, such as profanity " +
+  "or personal information. Others won't be able to view it until that " +
+  'content is removed.';
+
+export const PRIVACY_PROFANITY_BLOCKED_MESSAGE =
+  "This project contains content that can't be shared with others, such " +
+  'as profanity or personal information. Please contact the project owner ' +
+  'to remove it.';
 
 export const ProjectBlockedUI: React.FunctionComponent<{
   blockedType: BlockedType;
@@ -28,38 +42,46 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const hasViewOrEditAccess =
     isProjectValidator || isOwner || isTeacherOfProjectOwner;
 
+  // Reset show alert flag on level change.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    setShowAlert(true);
+  });
+
   const alertText =
     blockedType === 'projectAbuse'
       ? i18n.tosWithoutLink()
+      : blockedType === 'privacyProfanity'
+      ? PRIVACY_PROFANITY_OWNER_ALERT
       : i18n.sharingDisabledAlert(); // This will be displayed in /view for project validators if project sharing is disabled for owner.
+
+  const blockedMessage =
+    blockedType === 'projectAbuse'
+      ? i18n.tosLong({url: 'http://code.org/tos'})
+      : blockedType === 'privacyProfanity'
+      ? isOwner
+        ? PRIVACY_PROFANITY_OWNER_ALERT
+        : PRIVACY_PROFANITY_BLOCKED_MESSAGE
+      : i18n.sharingDisabled({
+          sign_in_url: 'https://studio.code.org/users/sign_in',
+        });
 
   const abuseExclamationProps = {
     canViewFlaggedProject,
     isOwner,
-    i18n:
-      blockedType === 'projectAbuse'
-        ? {
-            tos: i18n.tosLong({url: 'http://code.org/tos'}),
-            contact_us: i18n.contactUs({
-              url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+    i18n: {
+      tos: blockedMessage,
+      contact_us: i18n.contactUs({
+        url:
+          blockedType === 'projectAbuse'
+            ? `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
                 `Abuse error for project at url: ${shareUrl}`
-              )}`,
-            }),
-            edit_project: i18n.editProject(),
-            view_project: i18n.viewProject(),
-            go_to_code_studio: i18n.goToCodeStudio(),
-          }
-        : {
-            tos: i18n.sharingDisabled({
-              sign_in_url: 'https://studio.code.org/users/sign_in',
-            }),
-            contact_us: i18n.contactUs({
-              url: 'https://support.code.org/hc/en-us/requests/new',
-            }),
-            edit_project: i18n.editProject(),
-            view_project: i18n.viewProject(),
-            go_to_code_studio: i18n.goToCodeStudio(),
-          },
+              )}`
+            : 'https://support.code.org/hc/en-us/requests/new',
+      }),
+      edit_project: i18n.editProject(),
+      view_project: i18n.viewProject(),
+      go_to_code_studio: i18n.goToCodeStudio(),
+    },
   };
 
   // If sharing is disabled and user is project owner or project owner's teacher, no need to render any project blocked UI.

@@ -1,3 +1,5 @@
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import {Box} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -33,20 +35,22 @@ export default class OptionsSelectRow extends React.Component {
   };
 
   render() {
-    const textAreaStyle = Object.assign({}, rowStyle.input, {
-      height: 40,
-    });
     return (
-      <div style={rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
+      <Box style={rowStyle.container}>
+        <FormFieldWrapper color="black" size="s" label={this.props.desc}>
           <textarea
-            onChange={this.handleChangeInternal}
+            className="form-control"
+            name={''}
             value={this.state.value}
-            style={textAreaStyle}
+            onChange={this.handleChangeInternal}
+            style={{
+              boxSizing: 'border-box',
+              margin: 0,
+              width: '100%',
+            }}
           />
-        </div>
-      </div>
+        </FormFieldWrapper>
+      </Box>
     );
   }
 }

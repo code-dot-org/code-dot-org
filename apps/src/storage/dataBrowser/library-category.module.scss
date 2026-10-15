@@ -1,26 +1,26 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 .categoryName {
   @include main-font-bold;
   cursor: pointer;
-  color: $dark_charcoal;
+  color: var(--text-neutral-primary);
+
+  // The legacy global a:hover rule (apps/style/common.scss) outranks the bare
+  // class and would turn this teal; restate the color to keep it neutral.
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
 }
 
 .tableNumber {
   @include main-font-regular;
   float: right;
-  color: $light_gray;
+  color: var(--text-neutral-secondary);
 }
 
 .categoryDescription {
   @include main-font-regular;
-  color: $dark_charcoal;
-}
-
-.tableName {
-  @include main-font-semi-bold;
-  color: $cyan;
+  color: var(--text-neutral-primary);
 }
 
 .collapsibleContainer {

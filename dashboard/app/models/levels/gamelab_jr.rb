@@ -39,11 +39,21 @@ class GamelabJr < Gamelab
     standalone_app_name
     enable_big_playspace
     uses_lab2
-    guide_mode
+    level_mode
+    image_role_defaults
+    add_blocks
+    pinned_scene
+    world_start_pattern
+    guide_steps
   )
 
   def shared_blocks
     Block.for(*block_pools.presence || type)
+  end
+
+  # Lab2 Sprite Lab starter assets are always uploaded by UUID.
+  def add_starter_asset!(_, _)
+    true
   end
 
   def self.standalone_app_names

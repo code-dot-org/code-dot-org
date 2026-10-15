@@ -6,7 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import ProgressBubble from './ProgressBubble';
-import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import {DOT_SIZE} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 
 import moduleStyles from './progress-bubble-set.module.scss';
@@ -45,9 +45,6 @@ class ProgressBubbleSet extends React.Component {
 
     const backgroundStyleProp = {
       ...inlineStyles.background,
-      ...(level.isConceptLevel && inlineStyles.backgroundDiamond),
-      ...(isSublevel && inlineStyles.backgroundSublevel),
-      ...(level.isUnplugged && inlineStyles.backgroundPill),
       ...(!isSublevel && index === 0 && backgroundFirstStyle),
       ...(!isSublevel &&
         !level.sublevels &&
@@ -58,8 +55,6 @@ class ProgressBubbleSet extends React.Component {
     const containerStyleProp = {
       ...inlineStyles.container,
       ...(level.isUnplugged && inlineStyles.pillContainer),
-      ...(level.isConceptLevel && inlineStyles.diamondContainer),
-      ...(isSublevel && inlineStyles.containerSublevel),
     };
 
     return (
@@ -106,6 +101,12 @@ class ProgressBubbleSet extends React.Component {
   }
 }
 
+// Height of a bubble row: full circle bubble (dot plus 2px borders) plus its
+// 3px top and bottom margins. Every bubble — pills, diamonds, circles and
+// small sublevel dots alike — is centered within this height so all shapes
+// share one vertical center.
+const ROW_HEIGHT = DOT_SIZE + 4 + 6;
+
 const inlineStyles = {
   background: {
     height: 10,
@@ -113,18 +114,7 @@ const inlineStyles = {
     position: 'absolute',
     left: 0,
     right: 0,
-    // dot size, plus borders, plus margin, minus our height of "background"
-    top: (DOT_SIZE + 4 + 6 - 10) / 2,
-  },
-  backgroundDiamond: {
-    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2,
-  },
-  backgroundPill: {
-    // pill has height of 18, border of 2, padding of 6, margin of 3
-    top: (18 + 4 + 12 + 6 - 10) / 2,
-  },
-  backgroundSublevel: {
-    top: 9,
+    top: (ROW_HEIGHT - 10) / 2,
   },
   backgroundFirst: {
     left: 15,
@@ -134,18 +124,12 @@ const inlineStyles = {
   },
   container: {
     position: 'relative',
-  },
-  containerSublevel: {
-    top: 5,
-  },
-  diamondContainer: {
-    // Height needed only by IE to get diamonds to line up properly
-    height: 36,
+    height: ROW_HEIGHT,
+    display: 'flex',
+    alignItems: 'center',
   },
   pillContainer: {
     marginRight: 2,
-    // Height needed only by IE to get pill to line up properly
-    height: 37,
   },
 };
 

@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T15:10:36.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "NFL Athletes",
+    "long_instructions": "For a sports science project, you’re trying to determine if NFL players that weigh more are faster or slower than players that weigh less. At the NFL Combine, athletes are measured and timed in the 40-yard dash. You have a file of wide receiver results.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Import the `csv` module.\r\n2. Call the `open` function to open the `combine.csv` file.\r\n3. Read the file with `csv.DictReader`.\r\n4. Loop through the data. The `weight` value is already printed for you. Add a line to print the `time` value too. Compare your printed output to the CSV file. Do the numbers match?\r\n5. Close the file.\r\n",
+    "bubble_choice_description": "Read a dataset about football players.",
+    "thumbnail_url": "https://images.code.org/c1c840e5ada4538f917a7deee3ca4e21-american-football.png",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Import the csv module\n\n# TODO 2: Open combine.csv\n\n# TODO 3: Read the file with csv.DictReader\n\nfor row in reader:\n  weight = row[\"weight\"] \n  print(f\"Athlete weighs {weight} lbs.\")\n  # TODO 4: Print the time value too \n\n#TODO 5: Close the file",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "combine.csv",
+          "contents": "weight,time\n165,4.22\n168,4.38\n176,4.41\n193,4.36\n202,4.44\n205,4.34\n209,4.33\n213,4.61",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY7Zu88RjfkXoRRZ\n6FEuLI3t47lGxOjURHA5IlQ988hv46oMgaCXQ+qmP5YYvTSjOYdbvXWCYtl/\nhAPgb/GfSHyvZdZb2tCzstMTGDZebzbxynca3wLbzvqZL+aV2IwLYiVInA6L\nKXrfHqWHsNslv9dG3X2Wuqv2BSbHxs5O+K10DDamGs9cKj+XIi6q4e/fJyNZ\n3ZICZhlk78C/hOO5E0ptjYPlFyb4p1S4VABvWZCdH6sK720IC6nT0xKuwebt\nqu0sTHiIZtTOBA4JrYboALAjA5AXc+twbHPlkbgJiYPXwNMCjAbqbchrKWQ2\nI5ocyMNB/vkMNvZeEVtV8rP+R1qJKj7IBtfb4BoECTcpB5wUjDj7ZOAUY8Ln\nGQTBNp//bMZF8XIM1PX/x4HEdY5vMENwluIEi3AmZeuezCUDWdTVYeyANQKr\nK/nrI+1BR9Bk5A2vbd3zJTCavAE7j6//pem+BMzTVC2/ob1Rvt1L5bk48VfB\nwA2t/PZj0OHrYUyCsQZpDIVgUXCyBKH5auNWeW+uA6X+9oldSapRlpUpZdIi\nk6RYde77qwqJhL6jMxnBIoyDgSj5W0PoDtY8B4TcQTq8yAzvrNsyc4KZoU9a\nj/wIl6DlLNXmBli/MeOswfmInnfq0OYkhWrcH1i+nuukYImb\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 15:10:58 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:11:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-15 21:46:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

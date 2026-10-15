@@ -1,0 +1,48 @@
+# Computes the dependency-layer content key from the current checkout, so a consumer
+# pulls the dependency layer matching its own inputs. One definition of the
+# input set, shared by the publisher and every consumer.
+
+name: cdo-deps key
+description: Compute the content key that names the published dependency layer for this checkout
+
+outputs:
+  key:
+    description: The bundle-<hash> tag for this checkout's dependency inputs
+    value: ${{ steps.key.outputs.key }}
+
+runs:
+  using: composite
+  steps:
+    - id: key
+      shell: bash
+      # sha256sum, not hashFiles(): hashFiles is unavailable in composite
+      # actions and takes only literal arguments, so its list could not be
+      # the one below. Full rationale: docker/deps/README.md.
+      run: |
+        set -euo pipefail
+        cd "$GITHUB_WORKSPACE"
+
+        # Everything that decides what lands in the layer; the Gemfile is
+        # here because group moves leave Gemfile.lock byte-identical.
+        inputs=(
+          .ruby-version
+          Gemfile
+          Gemfile.lock
+          .python-version
+          pyproject.toml
+          uv.lock
+          docker/build/Dockerfile
+          docker/deps/Dockerfile
+        )
+
+        # A partial set would hash to a key that fails far away, nameless.
+        missing=0
+        for f in "${inputs[@]}"; do
+          test -f "$f" || { echo "cdo-deps-key: missing key input $f" >&2; missing=1; }
+        done
+        test "$missing" = 0 || exit 1
+
+        # Contents only, in the order listed: renaming an input must not
+        # move the key, since paths do not decide what lands in the bundle.
+        digest="$(cat "${inputs[@]}" | sha256sum | cut -d' ' -f1)"
+        echo "key=bundle-$digest" >> "$GITHUB_OUTPUT"

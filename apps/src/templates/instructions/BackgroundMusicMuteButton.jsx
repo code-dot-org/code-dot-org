@@ -65,10 +65,10 @@ function BackgroundMusicMuteButton({
     <PaneButton
       id={className}
       headerHasFocus={true}
-      iconClass={
+      iconProps={
         isBackgroundMusicMuted
-          ? 'fa-solid fa-volume-xmark'
-          : 'fa-solid fa-music'
+          ? {iconName: 'volume-xmark', iconStyle: 'solid'}
+          : {iconName: 'music', iconStyle: 'solid'}
       }
       label={
         isBackgroundMusicMuted
@@ -79,14 +79,6 @@ function BackgroundMusicMuteButton({
       isMinecraft={isMinecraft}
       isDisabled={isSavingMutePreference}
       onClick={isSavingMutePreference ? () => {} : handleMuteMusicTabClick}
-      style={{
-        ...styles.button,
-        ...(!isMinecraft
-          ? isBackgroundMusicMuted
-            ? styles.musicOff
-            : styles.musicOn
-          : {}),
-      }}
     />
   );
 }
@@ -102,21 +94,6 @@ BackgroundMusicMuteButton.propTypes = {
   currentUserBackgroundMusicMuted: PropTypes.bool.isRequired,
   muteBackgroundMusic: PropTypes.func.isRequired,
   unmuteBackgroundMusic: PropTypes.func.isRequired,
-};
-
-export const styles = {
-  button: {
-    whiteSpace: 'nowrap',
-    minWidth: 'fit-content',
-  },
-  musicOn: {
-    color: 'rgb(118, 101, 160)',
-    backgroundColor: 'rgb(255, 255, 255)',
-  },
-  musicOff: {
-    color: 'rgb(255, 255, 255)',
-    backgroundColor: 'rgb(166, 155, 193)',
-  },
 };
 
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;

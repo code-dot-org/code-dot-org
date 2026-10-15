@@ -301,8 +301,8 @@ export interface JsonBlockConfig {
   fields?: {
     [key: string]: {name: string; type: string; id?: string} | string | number;
   };
-  inputs?: {[key: string]: {block: JsonBlockConfig}};
-  next?: {block: JsonBlockConfig};
+  inputs?: {[key: string]: {block: JsonBlockConfig; shadow?: JsonBlockConfig}};
+  next?: {block: JsonBlockConfig; shadow?: JsonBlockConfig};
   kind?: string;
 }
 
@@ -444,11 +444,26 @@ export interface BlockJson<BlockType extends string = string> {
   nextStatement?: string | string[] | null;
   output?: string | string[] | null;
   tooltip?: string;
+  extensions?: string[];
+  mutator?: string;
   helpUrl?: string;
 }
 
 // Add more field/input definitions as needed
-type ArgumentJson = FieldJson | FieldInput | FieldDropdown;
+type ArgumentJson =
+  | FieldJson
+  | FieldInput
+  | FieldDropdown
+  | FieldNumber
+  | FieldImageJson;
+
+interface FieldImageJson extends FieldJson {
+  type: 'field_image';
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
 
 interface FieldJson {
   type: string;
@@ -457,6 +472,14 @@ interface FieldJson {
 
 interface FieldInput extends FieldJson {
   type: 'field_input';
+}
+
+interface FieldNumber extends FieldJson {
+  type: 'field_number';
+  value?: number;
+  min?: number;
+  max?: number;
+  precision?: number;
 }
 
 interface FieldDropdown extends FieldJson {

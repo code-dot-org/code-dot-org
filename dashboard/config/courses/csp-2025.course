@@ -29,6 +29,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "ac432f11-79b3-45dc-aac0-bf36bc9b08c2",
+        "notice": "Looking for the 26-27 version of CSP? You are in the right place! There are no changes to the curriculum for this year and this is the current version.",
+        "details": "",
+        "link": "",
+        "type": "course",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": ""
+      }
+    ],
     "family_name": "csp",
     "has_verified_resources": true,
     "numbered_units": "auto",

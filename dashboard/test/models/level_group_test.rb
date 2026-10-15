@@ -87,6 +87,23 @@ MARKDOWN
     assert_equal pages[2].page_number, 3
   end
 
+  # A level_group with no pages (or that failed to seed due to missing
+  # properties_encryption_key) has no levels_and_texts_per_page property at all.
+  # Lesson#summarize -> ScriptLevel.summarize_extra_puzzle_pages ->
+  # LevelGroup#pages must read it as a group with no pages rather than raising.
+  test 'an unseeded level group reports no pages instead of raising' do
+    level_group = create(:level_group)
+    assert_nil level_group.properties['levels_and_texts_per_page']
+
+    assert_empty level_group.pages
+    assert_empty level_group.levels
+    assert_empty level_group.levels_and_texts
+
+    # summarize_extra_puzzle_pages only needs the level id from the summary; it
+    # reads the rest of the hash once there is a second page to describe.
+    assert_empty ScriptLevel.summarize_extra_puzzle_pages({ids: [level_group.id]})
+  end
+
   # Test that a level_group can't be created if it has duplicate levels.
   test 'level group fail on duplicate levels' do
     # DSL for the level_group, with a duplicate level.
@@ -643,5 +660,34 @@ level 'level1_copy2'"
       LevelGroup.create_from_level_builder({}, {name: 'level group', dsl_text: dsl_text})
     end
     assert_includes e.message, 'LevelGroup cannot contain level type bubble_choice'
+  end
+
+  test 'a level group and its sublevels must be on the same side of the UI Test partition' do
+    ui_test_sublevel = create(:sublevel, name: 'UI Test LevelGroupTest sublevel')
+    prod_sublevel = create(:sublevel, name: 'LevelGroupTest prod sublevel')
+
+    prod_level_group = create(:level_group, name: 'LevelGroupTest prod parent')
+    e = assert_raises do
+      prod_level_group.update_levels_and_texts_by_page([[ui_test_sublevel]])
+    end
+    assert_includes e.message, ui_test_sublevel.name
+
+    ui_test_level_group = create(:level_group, name: 'UI Test LevelGroupTest parent')
+    e = assert_raises do
+      ui_test_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    end
+    assert_includes e.message, prod_sublevel.name
+
+    # same-side sublevels are fine in both partitions
+    ui_test_level_group.update_levels_and_texts_by_page([[ui_test_sublevel]])
+    assert_equal [ui_test_sublevel], ui_test_level_group.reload.all_child_levels
+    prod_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    assert_equal [prod_sublevel], prod_level_group.reload.all_child_levels
+
+    # a refused update leaves the existing sublevels in place
+    assert_raises ActiveRecord::RecordInvalid do
+      ui_test_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    end
+    assert_equal [ui_test_sublevel], ui_test_level_group.reload.all_child_levels
   end
 end

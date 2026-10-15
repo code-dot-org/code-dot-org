@@ -221,3 +221,25 @@ export const checkIfYouTubeIsBlocked = async () => {
 
   return isYouTubeBlocked || isYouTubeNoCookieBlocked;
 };
+
+/**
+ * MUI placement for a legacy DSCO direction. `none` and an unset direction
+ * both mean no preference, so they take the caller's fallback.
+ */
+export type MuiPlacement = 'top' | 'right' | 'bottom' | 'left';
+
+const MUI_PLACEMENT: Record<
+  Exclude<ComponentPlacementDirection, 'none'>,
+  MuiPlacement
+> = {
+  onTop: 'top',
+  onRight: 'right',
+  onBottom: 'bottom',
+  onLeft: 'left',
+};
+
+export const muiPlacementFor = (
+  direction?: ComponentPlacementDirection,
+  fallback: MuiPlacement = 'top',
+): MuiPlacement =>
+  direction && direction !== 'none' ? MUI_PLACEMENT[direction] : fallback;

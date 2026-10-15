@@ -121,6 +121,15 @@ namespace :ci do
     check_for_new_file_changes
   end
 
+  # Drone exports the Applitools variables (.drone.yml).
+  timed_task_with_logging playwright_eyes: 'test:playwright_install' do
+    if ENV['VISUAL_PROVIDER'].blank?
+      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
+      next
+    end
+    run_playwright_suite(:eyes, blocking: false)
+  end
+
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_ui_tests do
     unless CI::Utils.ci_job_ui_tests?
@@ -170,6 +179,28 @@ namespace :ci do
     #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
 
+    # Playwright runs before cucumber. The ensure block raises any playwright
+    # failure later, after Cucumber also runs. The drone logs then show both results,
+    # regardless of whether the playwright suite passed or failed.
+
+    ENV['TARGET_URL'] = 'http://localhost-studio.code.org:3000'
+    playwright_browsers = playwright_browsers_to_run
+    playwright_failure =
+      if playwright_browsers.empty?
+        # An empty --project list runs every project, including the visual ones.
+        ChatClient.log 'Playwright functional tests skipped: no browsers selected.'
+        nil
+      else
+        ENV['PLAYWRIGHT_BROWSERS'] = playwright_browsers.join(' ')
+        begin
+          Rake::Task['test:playwright_ui'].invoke
+          nil
+        rescue StandardError => exception
+          exception
+        end
+      end
+    Rake::Task['ci:playwright_eyes'].invoke
+
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -214,6 +245,17 @@ namespace :ci do
     end
     close_sauce_connect if needs_sauce_connect
     RakeUtils.system_stream_output 'sleep 10'
+  ensure
+    # Cucumber's output hides the Playwright result. $! holds Cucumber's error.
+    playwright_lines = PLAYWRIGHT_ROLLUP.values_at(:functional, :eyes).compact
+    unless playwright_lines.empty?
+      cucumber = $! ? "❌ Cucumber: #{$!.message}." : '✅ Cucumber: passed.'
+      ChatClient.log ['UI suites:', *playwright_lines, cucumber].join("\n")
+    end
+
+    # After the log reads $!, and only if nothing else failed. A raise here
+    # replaces the current error.
+    raise playwright_failure if playwright_failure && $!.nil?
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
@@ -274,6 +316,17 @@ def device_farm_browsers_to_run
   browsers
 end
 
+# @return [Array<String>] Playwright projects for this run, from the same tags as
+#   the browsers above. There is no iPad or iPhone project. Its webkit is
+#   Safari's engine, not Safari.
+def playwright_browsers_to_run
+  browsers = []
+  browsers << 'chromium' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'firefox' if CI::Utils.tagged?(TEST_FIREFOX_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'webkit' if CI::Utils.tagged?(TEST_SAFARI_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers
+end
+
 # @return [Array<String>] names of browser configurations for this test run
 def saucelabs_browsers_to_run
   browsers = []
@@ -306,10 +359,34 @@ def check_for_new_file_changes
     ChatClient.log 'No changes to schema.rb detected.'
   end
 
+  # db:migrate regenerates these templates only in development, and CI runs in test.
+  Dir.chdir('dashboard') do
+    RakeUtils.rake_stream_output 'analytics_export:generate_materialized_view_templates'
+  end
+  zeroetl_dir = 'aws/redshift/zeroetl_materialized_views'
+  if GitUtils.file_changed_from_git?(zeroetl_dir)
+    RakeUtils.system_stream_output("git status --short -- #{zeroetl_dir} | cat")
+    RakeUtils.system_stream_output("git diff -- #{zeroetl_dir} | cat")
+    raise "Unexpected change to #{zeroetl_dir} - Make sure you run your migration (or `rake analytics_export:generate_materialized_view_templates`) locally and commit the regenerated templates into your branch. See #{zeroetl_dir}/README.md before merging."
+  else
+    ChatClient.log "No changes to #{zeroetl_dir} detected."
+  end
+
   if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/app/models/**/*'])
     RakeUtils.system_stream_output('git diff -- dashboard/app/models | cat')
     raise 'Unexpected change to dashboard/app/models - Make sure you run your migration locally and push those changes into your branch.'
   else
     ChatClient.log 'No changes to dashboard/app/models detected.'
+  end
+
+  # rake build may have skipped the apps build (apps/build/commit_hash cache),
+  # so regenerate here rather than rely on it.
+  RakeUtils.system_stream_output('bundle exec ruby apps/script/generateSharedConstants.rb')
+  shared_constants_file = 'frontend/packages/shared-constants/src/sharedConstants.ts'
+  if GitUtils.file_changed_from_git?(shared_constants_file)
+    RakeUtils.system_stream_output("git diff -- #{shared_constants_file} | cat")
+    raise "Unexpected change to #{shared_constants_file} - Make sure you run apps/script/generateSharedConstants.rb locally and commit those changes into your branch."
+  else
+    ChatClient.log "No changes to #{shared_constants_file} detected."
   end
 end

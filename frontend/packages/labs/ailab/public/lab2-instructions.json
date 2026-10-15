@@ -1,0 +1,12 @@
+[
+  {
+    "key": "datasetView",
+    "name": "Dataset",
+    "defaultText": "Choose one column to predict, and one or more columns to help make the prediction."
+  },
+  {
+    "key": "results",
+    "name": "Testing",
+    "defaultText": "Review the results."
+  }
+]

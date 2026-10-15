@@ -2,7 +2,7 @@
 import type React from 'react';
 import {useState} from 'react';
 
-import {styles, ModelNameMaxLength} from '../constants';
+import {ModelNameMaxLength} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   getDatasetDescription,
@@ -10,16 +10,23 @@ import {
 } from '../helpers/datasetDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
+import {useProject} from '../ProjectContext';
 import {setTrainedModelDetail} from '../redux';
 import {getSelectedColumnsDescriptions} from '../selectors';
 
 import ScrollableContent from './ScrollableContent';
 import Statement from './Statement';
 
+import shared from '../shared.module.scss';
+import styles from './saveModel.module.scss';
+
 const SaveModel = () => {
   const dispatch = useAppDispatch();
-  const labelColumn = useAppSelector(state => state.labelColumn);
-  const columnDescriptions = useAppSelector(getSelectedColumnsDescriptions);
+  const {project} = useProject();
+  const labelColumn = project.labelColumn;
+  const columnDescriptions = useAppSelector(state =>
+    getSelectedColumnsDescriptions(state, project),
+  );
   const dataDescription = useAppSelector(getDatasetDescription);
   const isUserUploaded = useAppSelector(isUserUploadedDataset);
   const datasetId = useAppSelector(
@@ -118,13 +125,13 @@ const SaveModel = () => {
   const columnCount = getColumnFields().length;
 
   return (
-    <div id="uitest-model-card-form" style={styles.panel}>
+    <div id="uitest-model-card-form" className={shared.panel}>
       <Statement />
       <ScrollableContent tinted={true}>
-        <div key={nameField.id} style={styles.cardRow}>
-          <span style={styles.bold}>{nameField.text}</span>
+        <div key={nameField.id} className={shared.cardRow}>
+          <span className={shared.bold}>{nameField.text}</span>
           &nbsp;
-          <span style={styles.italic}>
+          <span className={shared.italic}>
             ({I18n.t('saveModelFieldRequired')})
           </span>
           <div>
@@ -140,15 +147,15 @@ const SaveModel = () => {
         <div>
           {getUsesFields().map(field => {
             return (
-              <div key={field.id} style={styles.cardRow}>
-                <div style={styles.bold}>{field.text}</div>
+              <div key={field.id} className={shared.cardRow}>
+                <div className={shared.bold}>{field.text}</div>
                 <div>{field.description}</div>
                 <ul>
                   {field.descriptionDetails &&
                     field.descriptionDetails.map(
                       (detail: string | undefined, index: number) => {
                         return (
-                          <li style={styles.regularText} key={index}>
+                          <li className={styles.detail} key={index}>
                             {detail}
                           </li>
                         );
@@ -163,7 +170,7 @@ const SaveModel = () => {
                         handleChange(event, field.id, !!field.isColumn)
                       }
                       placeholder={field.placeholder}
-                      style={styles.saveInputsWidth}
+                      className={styles.answer}
                     />
                   </div>
                 )}
@@ -172,8 +179,8 @@ const SaveModel = () => {
             );
           })}
         </div>
-        <div key={dataDescriptionField.id} style={styles.cardRow}>
-          <div style={styles.bold}>{dataDescriptionField.text}</div>
+        <div key={dataDescriptionField.id} className={shared.cardRow}>
+          <div className={shared.bold}>{dataDescriptionField.text}</div>
           {isUserUploaded && (
             <div>
               <textarea
@@ -182,7 +189,7 @@ const SaveModel = () => {
                   handleChange(event, dataDescriptionField.id, false)
                 }
                 placeholder={dataDescriptionField.placeholder}
-                style={styles.saveInputsWidth}
+                className={styles.answer}
               />
             </div>
           )}
@@ -192,25 +199,25 @@ const SaveModel = () => {
           <span
             onClick={toggleColumnDescriptions}
             onKeyDown={toggleColumnDescriptions}
-            style={styles.saveModelToggle}
+            className={styles.toggle}
             role="button"
             tabIndex={0}
           >
             <i className={arrowIcon} />
             &nbsp;
-            <span style={styles.bold}>
+            <span className={shared.bold}>
               {I18n.t('saveModelColumnCountLabel')}
             </span>
             &nbsp; ({columnCount})
           </span>
           {showColumnDescriptions && (
-            <div style={styles.saveModelToggleContents}>
+            <div className={styles.toggleContents}>
               {getColumnFields().map(field => {
                 return (
-                  <div key={field.id} style={styles.cardRow}>
+                  <div key={field.id} className={shared.cardRow}>
                     <div>
-                      <span style={styles.bold}>{field.localizedName}</span> (
-                      {field.columnType})
+                      <span className={shared.bold}>{field.localizedName}</span>{' '}
+                      ({field.columnType})
                     </div>
                     {isUserUploaded && (
                       <div>
@@ -221,7 +228,7 @@ const SaveModel = () => {
                           }
                           placeholder={field.placeholder}
                           value={field.answer || ''}
-                          style={styles.saveInputsWidth}
+                          className={styles.answer}
                         />
                       </div>
                     )}

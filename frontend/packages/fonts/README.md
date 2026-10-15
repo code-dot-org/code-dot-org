@@ -28,6 +28,9 @@ Font Awesome allows us to include a wide variety of icon types such as:
 
 ## Updating FontAwesome Files
 
+An agent skill automates everything after the browser download: `.agents/skills/update-fontawesome-kit/SKILL.md`.
+The manual steps below remain the reference.
+
 If you are looking to update the FontAwesome files in the `injectFontAwesome` function in `loader/index.ts`, you'll need to do the following steps.
 If you want more information on how FontAwesome expects us to set things up, see the "Host Yourself - Webfonts" instructions [here](https://fontawesome.com/docs/web/setup/host-yourself/webfonts), and supplement with the "Version 4 Compatibility" instructions listed there as well. [link](https://fontawesome.com/docs/web/setup/host-yourself/webfonts#version-4-compatibility)
 
@@ -59,7 +62,7 @@ If you want more information on how FontAwesome expects us to set things up, see
 - [frontend/packages/fonts/src/loader/index.ts](/frontend/packages/fonts/src/loader/index.ts)
 - [shared/css/font.scss](/shared/css/font.scss)
 
-If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
+If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codeai.slack.com/archives/C03CK49G9/p1681500978173639).
 
 As of April 2026, these files were referenced in the following places:
 

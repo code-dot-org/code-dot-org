@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_3",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "When AI Chat was given an image to describe, it noticed details like the time of day and possible location. What does this reveal about AI's image interpretation abilities?",
+  "solution": [
+    {"option": "AI can only see the exact objects in an image, nothing more.", "correct": false},
+    {"option": "AI can infer additional context clues beyond the literal objects in an image.", "correct": true},
+    {"option": "AI cannot process images at all.", "correct": false},
+    {"option": "AI describes every image the same way regardless of content.", "correct": false}
+  ],
+  "objective_keys": [
+    "aa988ebf-db14-4b02-bf20-49a810b81531"
+  ]
+}

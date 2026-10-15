@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-27T23:49:31.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "What's Your Name?",
+    "long_instructions": "You’re building a chatbot that asks for the user’s name and says hello to them.\r\n\r\n**☑️ Do This:**\r\n\r\nPrint a message that greets the user by name.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "name = input(\"What's your name? \")\n\n# TODO: Print a message that greets the user by name",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMphGHaW263UUrje\nLoMqEz33KNAHQm9WaDJY9SBNaYAgLJwncNgcG9g/n361kYd7G1RHczs6YJ4W\nTO48paeF6EIrd0Vlvd9uGIBEEFqPb+XREFedxnS5RaZLu7gIWOMd89o/2lVy\nkbcUPqIsKlj22Qti0LSzBD+v09Ijb1svI5+Mcu/3s5AoyIMoPC0N8PETMPjF\npnZ9m50GYYG7Fn0Mc1OO\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 23:49:35 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:34:29 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,14 @@
+name 'aif-y2-machine-learning-fundamentals-lesson13-level2-choice1-2026'
+title 'Build Your Own Dataset'
+display_name 'Build Your Own Dataset'
+bubble_choice_description 'Pick any two categories and search for images to populate your dataset'
+
+markdown <<MARKDOWN
+## Build Your Own Dataset
+
+1. [Open this document](https://docs.google.com/document/d/1T9J1A7aBCu9Eloew_Cn-DOAqFtyEiMrcrd0U3DVL83Y/edit?usp=sharing) to access a blank dataset template in Google Docs.
+2. Go to **File → Make a copy** to make your own copy of the dataset template.
+3. Search for at least six images for each of your two categories. Add each image to your document. Label each image with an image number and the category name.
+4. Look at your questions from Step 2 of the Project Planning Guide. Think about how well they work for the images in your dataset. Add or edit questions on the list based on your observations.
+
+MARKDOWN

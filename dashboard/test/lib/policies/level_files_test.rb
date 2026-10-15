@@ -67,6 +67,42 @@ module Policies
       refute(Policies::LevelFiles.write_to_file?(writable_level))
     end
 
+    test 'default path for UI Test levels is in the test/ui tree' do
+      level = create(:level, name: 'UI Test LevelFiles default path')
+      expected_file_path = Rails.root.join(
+        'test/ui/config/levels/custom',
+        level.game.app,
+        "#{level.name}.level"
+      )
+      refute(File.exist?(expected_file_path))
+      assert_equal(expected_file_path, Policies::LevelFiles.level_file_path(level))
+    end
+
+    test 'level_file_glob selects the tree by name prefix' do
+      assert_equal('./config/levels/**/Regular Level.level', Policies::LevelFiles.level_file_glob('Regular Level'))
+      assert_equal('./test/ui/config/levels/**/UI Test Level.level', Policies::LevelFiles.level_file_glob('UI Test Level'))
+      # the prefix is case-insensitive, and only counts as a prefix
+      assert_equal('./test/ui/config/levels/**/ui test lowercase.level', Policies::LevelFiles.level_file_glob('ui test lowercase'))
+      assert_equal('./config/levels/**/My UI Test Level.level', Policies::LevelFiles.level_file_glob('My UI Test Level'))
+      # without a name, tree: picks which tree to enumerate
+      assert_equal('./config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil))
+      assert_equal('./test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, tree: :ui_test))
+      assert_equal('/custom/root/test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, '/custom/root', tree: :ui_test))
+    end
+
+    test 'a UI Test level never resolves to a file in the production tree' do
+      level = create(:level, name: 'UI Test LevelFiles wrong tree')
+      level_file = Rails.root.join('config/levels/custom', "#{level.name}.level")
+      FileUtils.mkdir_p(File.dirname(level_file))
+      FileUtils.touch(level_file)
+
+      # the production-tree file is ignored; we get the test/ui default path
+      expected_file_path = Rails.root.join('test/ui/config/levels/custom', level.game.app, "#{level.name}.level")
+      assert_equal(expected_file_path, Policies::LevelFiles.level_file_path(level))
+    ensure
+      FileUtils.rm_f(level_file)
+    end
+
     test 'will only write certain levels to file' do
       Rails.application.config.stubs(:levelbuilder_mode).returns(true)
 

@@ -1,4 +1,5 @@
 /** @overview Component for adding a key/value pair row. */
+import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -84,8 +85,11 @@ class AddKeyRow extends React.Component {
     return (
       <tr id="uitest-addKeyValuePairRow" className={dataStyles.row}>
         <td className={dataStyles.cell}>
-          <input
-            className={dataStyles.input}
+          <TextField
+            name="key"
+            className={dataStyles.dataField}
+            color="gray"
+            size="s"
             onChange={this.handleKeyChange}
             onKeyUp={this.handleKeyUp}
             placeholder={msg.enterText()}
@@ -93,8 +97,11 @@ class AddKeyRow extends React.Component {
           />
         </td>
         <td className={dataStyles.cell}>
-          <input
-            className={dataStyles.input}
+          <TextField
+            name="value"
+            className={dataStyles.dataField}
+            color="gray"
+            size="s"
             onChange={this.handleValueChange}
             onKeyUp={this.handleKeyUp}
             placeholder={msg.enterText()}

@@ -1,14 +1,19 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {assetButtonStyles} from './AddAssetButtonRow';
-import {AudioErrorType} from './AssetManager';
 import getRecorder, {RecordingFileType} from './recorders';
+
+export const AudioErrorType = {
+  NONE: 'none',
+  INITIALIZE: 'initialize',
+  SAVE: 'save',
+};
 
 const RECORD_MAX_TIME = 30000;
 
@@ -112,47 +117,61 @@ export default class AudioRecorder extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.root}>
         <div style={styles.buttonRow}>
-          <input
-            type="text"
+          <TextField
+            name="audioName"
+            size="s"
             placeholder={i18n.soundName()}
             onChange={this.onNameChange}
             value={this.state.audioName}
           />
           {this.state.recording && (
-            <span style={assetButtonStyles.button}>
-              <i style={styles.recordingIcon} className="fa-solid fa-circle" />
-              {i18n.recording()}
+            <span style={styles.recordingIndicator}>
+              <FontAwesomeV6Icon
+                iconName="circle"
+                iconStyle="solid"
+                style={styles.recordingIcon}
+              />
+              <MuiTypography variant="body2" component="span">
+                {i18n.recording()}
+              </MuiTypography>
             </span>
           )}
-          <span>
+          <span style={styles.actionGroup}>
             {this.state.loading && this.state.audioName.length > 0 && (
-              <div style={styles.spinner}>
-                <i
-                  className="fa-solid fa-spinner fa-spin"
-                  style={{fontSize: '20px'}}
-                />
-              </div>
+              <FontAwesomeV6Icon
+                iconName="spinner"
+                animationType="spin"
+                style={{fontSize: '20px'}}
+              />
             )}
-            <Button
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
               onClick={this.toggleRecord}
               id="start-stop-record"
-              style={assetButtonStyles.button}
-              color={Button.ButtonColor.blue}
-              icon={this.state.recording ? 'stop' : 'circle'}
-              text={this.state.recording ? i18n.stop() : i18n.record()}
-              size="large"
               disabled={this.state.audioName.length === 0 || this.state.loading}
-            />
-            <Button
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName={this.state.recording ? 'stop' : 'circle'}
+                  iconStyle="solid"
+                />
+              }
+            >
+              {this.state.recording ? i18n.stop() : i18n.record()}
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
               onClick={this.onCancel}
               id="cancel-record"
-              style={assetButtonStyles.button}
-              color={Button.ButtonColor.gray}
-              text={i18n.cancel()}
-              size="large"
-            />
+              type="button"
+            >
+              {i18n.cancel()}
+            </MuiButton>
           </span>
         </div>
       </div>
@@ -161,24 +180,26 @@ export default class AudioRecorder extends React.Component {
 }
 
 const styles = {
+  root: {
+    marginBottom: 16,
+  },
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  recordingIndicator: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 6,
+  },
   recordingIcon: {
-    color: 'red',
-    margin: 5,
+    color: 'var(--text-error-primary)',
   },
-  warning: {
-    textAlign: 'left',
-    color: color.red,
-  },
-  spinner: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    marginTop: '16px',
-    marginRight: '10px',
+  actionGroup: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 10,
   },
 };

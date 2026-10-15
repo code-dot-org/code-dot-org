@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-19T21:06:43.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "display_name": "Penalty Shootout",
+    "bubble_choice_description": "Predict how many penalty kicks a soccer player will make.",
+    "thumbnail_url": "https://images.code.org/3110b2a5094f79d5652ecff9584d3642-planet_fox-football-7095188.jpg",
+    "encrypted": "false",
+    "long_instructions": "Predict the percentage of penalty kicks a soccer player make, based on the number of years they've practiced.\r\n\r\n**☑️ Do This:**\r\n- Complete the `loss` function. Prompt AI to help you if you need it.\r\n- Run your code.\r\n- Test your loss function on both the `predict_kicks_1` model and the `predict_kicks_2` model by changing which model is given to `visualize_model`. Compare the loss calculated for both models.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "buildPython",
+        "debug",
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import visualize_model\n\ndef loss(actual, predicted):\n  # TODO: Write a loss function\n  return 0\n\n# First model\ndef predict_percent_made_1(practice_years):\n  return 4 * practice_years + 49\n\n# Second model\ndef predict_percent_made_2(practice_years):\n  return 6 * practice_years + 45\n\nvisualize_model(predict_percent_made_1, loss)",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# Dataset: (years of practice, percent of penalty kicks made)\nDATA = [\n    (1, 52),\n    (2, 58),\n    (3, 61),\n    (4, 68),\n    (5, 71),\n    (6, 75),\n    (7, 79),\n    (8, 81),\n]\n\nX_LABEL = \"Years of practice\"\nY_LABEL = \"Penalty kicks made (%)\"\n\n\ndef _total_error(model, error):\n    \"\"\"Add up the student's loss function results across every data point.\"\"\"\n    total = 0\n    for x, actual in DATA:\n        predicted = model(x)\n        total += error(actual, predicted)\n    return total\n\n\ndef visualize_model(model, error):\n    \"\"\"Score the model with the student's loss function and draw the chart.\"\"\"\n    # Calculate loss\n    total_error = _total_error(model, error)\n\n    # Set up plot\n    fig, ax = plt.subplots()\n\n    # Plot data points\n    xs = [x for x, _ in DATA]\n    ys = [y for _, y in DATA]\n    ax.scatter(xs, ys, color=\"black\", zorder=3, label=\"Data\")\n\n    # Draw model's line\n    line_xs = [min(xs), max(xs)]\n    line_ys = [model(x) for x in line_xs]\n    ax.plot(\n        line_xs,\n        line_ys,\n        linestyle=\"-\",\n        color=\"#1f77b4\",\n        label=\"Model\",\n    )\n    ax.legend()\n\n    # Display the model's loss\n    ax.set_title(f\"Total loss: {total_error:.2f}\")\n\n    # Add labels, show plot\n    ax.set_xlabel(X_LABEL)\n    ax.set_ylabel(Y_LABEL)\n    plt.show()",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-19 21:19:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:25:31 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:34:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 21:38:31 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-19 22:27:55 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:16:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:16:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -68,9 +68,13 @@ export const submitPredictResponse =
 export const isPredictResponseSubmitted = (state: RootState) =>
   state.predictLevel.hasSubmittedResponse;
 
-// The predict answer is locked if the user has already submitted a response.
+// The predict answer is locked if the user has already submitted a response,
+// or if a teacher is viewing a student's work.
 export const isPredictAnswerLocked = (state: RootState) => {
-  return state.predictLevel.hasSubmittedResponse;
+  return (
+    state.predictLevel.hasSubmittedResponse ||
+    state.progress.viewAsUserId !== null
+  );
 };
 
 // REDUCER

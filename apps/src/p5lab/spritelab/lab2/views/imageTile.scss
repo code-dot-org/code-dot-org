@@ -1,0 +1,42 @@
+@use "checkerboard";
+// One look for image tiles — the Images tab's gallery and the image
+// dialog's Alternatives strip. Colors read the dialog chrome's variables
+// where present and fall back to the gallery's own.
+
+@mixin image-tile($size) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: $size;
+  height: $size;
+  // The tile is a button; neutralize global button styles.
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+  border: 1px solid var(--dialog-control-border, var(--borders-neutral-primary));
+  // Grow subtly on hover instead of the page's global image dimming.
+  transition: transform 0.15s ease;
+
+  &:hover {
+    z-index: 1;
+    transform: scale(1.12);
+  }
+
+  // Subtle checkerboard: enough to signal transparency without competing
+  // with the image.
+  @include checkerboard.checkerboard(
+    16px,
+    var(--dialog-checker-tint, rgb(128 128 128 / 16%)),
+    var(--dialog-checker-bg, transparent)
+  );
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    // Full quality always: undo the global `button > img` dimming (class +
+    // element outranks the global's two elements).
+    opacity: 1;
+  }
+}

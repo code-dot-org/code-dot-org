@@ -62,9 +62,9 @@
   .field
     = f.label :start_blocks, 'Edit Starting JavaScript Program'
     .row
-      .span8
+      .col-md-8
         ~ f.text_area :start_blocks, placeholder: 'Start Blocks', rows: 4, value: @level.uses_droplet? ? @level.start_blocks : @level.pretty_block('start')
-      #start-preview.span4
+      #start-preview.col-md-4
 
 :ruby
   script_data = {

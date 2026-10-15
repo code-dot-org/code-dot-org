@@ -11,11 +11,11 @@ source docker/ci/scripts/prepare_ci_env.sh
 # in the cache-staging-build pipeline, and the ui pipeline re-uses that cache.
 
 bundle exec rake build
+
+# The cache cannot carry forward the restored MySQL data directory, which holds the users and grants staging had
+# when the cache was built. Ensure non-root `writer` and `reader` SQL users are provisioned and have the latest
+# permissions applied from the current feature branch.
+(cd dashboard && bundle exec rake db:provision_sql_users)
+
 bundle exec rake ci:seed_ui_test
 bundle exec rake ci:run_ui_tests
-
-# Puma is still live from ci:run_ui_tests; run the Playwright e2e suite against
-# it via the shared rake task (which also uploads the report and logs the link).
-# The task warns on failure; `|| true` keeps it non-blocking here.
-TARGET_URL=http://localhost-studio.code.org:3000 \
-  bundle exec rake test:playwright_ui || true

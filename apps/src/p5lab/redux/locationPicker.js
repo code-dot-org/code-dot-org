@@ -17,7 +17,7 @@ export default function locationPicker(state, action) {
       return {
         ...state,
         mode: LocationPickerMode.SELECTING,
-        lastSelection: undefined,
+        lastSelection: action.value,
         requestTime: Date.now(),
       };
     case CANCEL_LOCATION_SELECTION:
@@ -43,9 +43,10 @@ export default function locationPicker(state, action) {
   }
 }
 
-export function requestLocation() {
+export function requestLocation(initialValue) {
   return {
     type: REQUEST_LOCATION,
+    value: initialValue,
   };
 }
 
@@ -73,12 +74,12 @@ export function isPickingLocation(state) {
   return state.mode === LocationPickerMode.SELECTING;
 }
 
-export function getLocation(candidateHandler, completeHandler) {
+export function getLocation(initialValue, candidateHandler, completeHandler) {
   candidateHandler = candidateHandler || (() => {});
   completeHandler = completeHandler || (() => {});
 
   const store = getStore();
-  store.dispatch(requestLocation());
+  store.dispatch(requestLocation(initialValue));
   const unsubscribe = store.subscribe(() => {
     const state = store.getState();
     if (state.locationPicker.mode === LocationPickerMode.SELECTING) {

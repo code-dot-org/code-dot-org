@@ -1,3 +1,6 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import Modal from '@code-dot-org/component-library/modal';
+import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
@@ -5,8 +8,6 @@ import commonI18n from '@cdo/locale';
 
 import {setWorkspaceTheme} from '../blockly/utils';
 import UserPreferences from '../lib/util/UserPreferences';
-
-import styles from './settings.module.scss';
 
 const themeOptions = [
   {value: Themes.MODERN, text: commonI18n.blocklyModernTheme()},
@@ -16,8 +17,8 @@ const themeOptions = [
   {value: Themes.TRITANOPIA, text: commonI18n.blocklyTritanopiaTheme()},
 ];
 
-const SettingsModal = () => {
-  const [selectedTheme, setSelectedTheme] = useState(undefined);
+const SettingsModal = ({onClose}) => {
+  const [selectedTheme, setSelectedTheme] = useState('');
 
   useEffect(() => {
     new UserPreferences()
@@ -39,23 +40,29 @@ const SettingsModal = () => {
   };
 
   return (
-    <div className="modal-content" style={{margin: 0}}>
-      <h5 className="dialog-title">{commonI18n.settings()}</h5>
-      <div className={styles.settingsRow}>
-        <p>{commonI18n.blocklyTheme()}</p>
-        <select
-          value={selectedTheme}
+    <Modal
+      title={commonI18n.settings()}
+      onClose={onClose}
+      customContent={
+        <SimpleDropdown
+          id="dsco-dialog-description"
+          name="blockly-theme"
+          labelText={commonI18n.blocklyTheme()}
+          selectedValue={selectedTheme}
           onChange={e => handleChange(e.target.value)}
-        >
-          {themeOptions.map(opt => (
-            <option key={opt.value} value={opt.value}>
-              {opt.text}
-            </option>
-          ))}
-        </select>
-      </div>
-    </div>
+          items={themeOptions}
+        />
+      }
+      primaryButtonProps={{
+        children: commonI18n.closeDialog(),
+        onClick: onClose,
+      }}
+    />
   );
+};
+
+SettingsModal.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default SettingsModal;

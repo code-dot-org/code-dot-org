@@ -1,0 +1,24 @@
+# CI for the shared-constants package: build, lint, typecheck. No tests (the
+# package has no behavior of its own) and no e2e (it renders nothing).
+name: Shared-Constants-CI
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/shared-constants
+        working-directory: ./frontend

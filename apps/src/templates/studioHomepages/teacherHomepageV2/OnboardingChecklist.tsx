@@ -5,9 +5,15 @@ import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {
+  createDemoSection,
+  DemoSectionCreationError,
+} from '../../teacherDashboard/teacherSectionsRedux';
 import {
   DemoType,
   Section,
@@ -27,7 +33,15 @@ const CHECKLIST_ITEMS = [
   {id: 'create_class_section', label: 'Create a class section'},
 ];
 
-const recordTourStart = (tourName: string, demoType: DemoType) => {
+const recordTourStart = (
+  tourName: string,
+  demoType: DemoType,
+  previouslyStartedNotFinished: boolean
+) => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_STARTED, {
+    tour_name: tourName,
+    previously_started_not_finished: previouslyStartedNotFinished,
+  });
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
     JSON.stringify({
@@ -53,25 +67,36 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   isHidden,
   onHide,
 }) => {
+  const dispatch = useAppDispatch();
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
   );
   const createSectionTour = useCreateSectionTour(gradesTeaching);
-  const reviewSyllabusTour = useReviewSyllabusTour(demoSection);
-  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSection);
+  const reviewSyllabusTour = useReviewSyllabusTour(demoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoType);
 
   const [completedTourNames, setCompletedTourNames] = React.useState<
     Set<string>
   >(new Set());
+  const [startedTourNames, setStartedTourNames] = React.useState<Set<string>>(
+    new Set()
+  );
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
   const [resetFailed, setResetFailed] = React.useState(false);
+  const [creationError, setCreationError] = React.useState(false);
 
   const stalenessCheck = React.useRef<Promise<boolean>>(Promise.resolve(false));
 
   React.useEffect(() => {
     HttpClient.get('/dashboardapi/v1/user_product_tours', true)
-      .then(response => response.json() as Promise<string[]>)
-      .then(names => setCompletedTourNames(new Set(names)))
+      .then(
+        response =>
+          response.json() as Promise<{completed: string[]; started: string[]}>
+      )
+      .then(({completed, started}) => {
+        setCompletedTourNames(new Set(completed));
+        setStartedTourNames(new Set(started));
+      })
       .catch(err =>
         console.error('Failed to fetch tour completion status:', err)
       );
@@ -83,6 +108,29 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     stalenessCheck.current = confirmDemoSectionSettings(demoSectionId);
   }, [demoSectionId]);
 
+  // When there is no real demo section yet, create one before starting the
+  // tour so the tour has a real section ID to work with. A freshly created
+  // section is never stale, so we skip the staleness check in that case.
+  const ensureDemoSection = async (): Promise<boolean> => {
+    if (demoSection?.id) return true;
+    setCreationError(false);
+    try {
+      const section = await dispatch(createDemoSection(demoType));
+      if (!section?.id) {
+        setCreationError(true);
+        return false;
+      }
+      stalenessCheck.current = Promise.resolve(false);
+      return true;
+    } catch (error) {
+      if (!(error instanceof DemoSectionCreationError)) {
+        console.error('Failed to create demo section:', error);
+      }
+      setCreationError(true);
+      return false;
+    }
+  };
+
   const startTourOrBlock = async (tour: Tour | null) => {
     if (await stalenessCheck.current) {
       setPendingTour(tour);
@@ -91,8 +139,11 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     }
   };
 
-  const handleButtonClick = (tourName: string) => {
-    recordTourStart(tourName, demoType);
+  const handleButtonClick = async (tourName: string) => {
+    if (!(await ensureDemoSection())) return;
+    const previouslyStartedNotFinished =
+      startedTourNames.has(tourName) && !completedTourNames.has(tourName);
+    recordTourStart(tourName, demoType, previouslyStartedNotFinished);
     if (tourName === 'create_class_section') {
       createSectionTour?.start();
     } else if (tourName === 'view_syllabus') {
@@ -156,6 +207,19 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           size="m"
           text="We couldn't reset your demo section. Please try again."
           onClose={() => setResetFailed(false)}
+        />
+      </Snackbar>
+      <Snackbar
+        open={creationError}
+        autoHideDuration={6000}
+        onClose={() => setCreationError(false)}
+        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+      >
+        <Alert
+          type="danger"
+          size="m"
+          text="Couldn't create your practice section. Please try again."
+          onClose={() => setCreationError(false)}
         />
       </Snackbar>
       <div

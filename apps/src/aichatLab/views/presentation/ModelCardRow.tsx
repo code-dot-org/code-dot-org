@@ -59,11 +59,7 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
               >
                 {title}
               </Typography>
-              <InfoTooltipIcon
-                id={title}
-                tooltipText={tooltipText}
-                direction="onRight"
-              />
+              <InfoTooltipIcon tooltipText={tooltipText} direction="onRight" />
             </div>
           }
         >

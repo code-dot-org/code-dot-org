@@ -1,0 +1,29 @@
+.wrapper {
+  height: 100%;
+  overflow-y: auto;
+
+  // TeacherPanelContainer applies a global .teacher-panel class that uses
+  // position:fixed to dock it to the right edge of the viewport. Inside the
+  // drawer we need normal document flow instead.
+  :global(.teacher-panel) {
+    position: static;
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    border: none;
+    border-radius: 0;
+    opacity: 1;
+    background: var(--background-neutral-primary, #fff);
+    z-index: auto;
+    transition: none;
+  }
+
+  // The slide-in/out chevron handles are for the floating panel UX and serve
+  // no purpose inside the drawer.
+  :global(.hide-handle),
+  :global(.show-handle) {
+    display: none;
+  }
+}

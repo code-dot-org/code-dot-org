@@ -1,0 +1,26 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-22T01:11:13.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-machine-learning-fundamentals-lesson13-project-template",
+    "long_instructions": "To use a nearest-neighbor algorithm for your project, you’ll need to compare how similar or different two images are. The “distance” between two images is how many features they have that are different. If all features are the same, the distance is `0`. If all three features are different, the distance is `3`.\r\n\r\n**☑️ Do This:**\r\n\r\nComplete the `distance` function. It should accept two dictionaries of features as input, compare all of the features, and return a number based on how different they are.\r\n\r\n**💻 Coding Tip**\r\n\r\nEach feature name is a key in a dictionary. If you want to check if two images have different feature values, you can use logic like:\r\n\r\n```python\r\nif image1[\"trees\"] != image2[\"trees\"]:\r\n    # Code that should run if feature values are different\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "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\nfCSe/vo4R72j9yY=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-22 01:11:46 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:22:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,14 +1,26 @@
 import cookies from 'js-cookie';
 
-import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
+import {
+  StatsigStableIdKey,
+  StatsigStableIdPattern,
+} from '@cdo/generated-scripts/sharedConstants';
+import {api_statsig_stable_id_url} from '@cdo/generated-scripts/studioRoutes';
 
-const STABLE_ID_KEY = 'statsig_stable_id';
-const LOCAL_STORAGE_KEY = STABLE_ID_KEY.toUpperCase();
+import {
+  getEnvironment,
+  isDevelopmentEnvironment,
+  isProductionEnvironment,
+  createUuid,
+} from '../utils';
+
+const STABLE_ID_KEY = StatsigStableIdKey;
+const STABLE_ID_FORMAT = new RegExp(`^${StatsigStableIdPattern}$`, 'i');
+const STABLE_ID_TIMEOUT_MS = 3000;
 const COOKIE_OPTIONS = {
   path: '/',
   domain: '.code.org',
   sameSite: 'Lax',
-  secure: true,
+  secure: !isDevelopmentEnvironment(),
 };
 
 // Performance cookies (C0002). You can see what categories are enabled in OneTrust
@@ -26,29 +38,53 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
-export function findOrCreateStableId() {
-  const cookieId = cookies.get(STABLE_ID_KEY);
-  const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
-  let stableId;
+/**
+ * Check whether a value matches the shared Statsig stable ID format.
+ *
+ * Matching is case-insensitive and does not restrict the variant nibble.
+ *
+ * @param {*} value - The value to validate.
+ * @returns {boolean} Whether the value matches the Statsig stable ID format.
+ */
+export function isValidStableId(value) {
+  return typeof value === 'string' && STABLE_ID_FORMAT.test(value);
+}
 
-  if (cookieId) {
-    // Prefer the cookie value if it exists
-    stableId = cookieId;
-  } else if (localStorageId) {
-    stableId = localStorageId;
-  } else {
-    stableId = createUuid();
-  }
-
+export async function findOrCreateStableId() {
   if (consentAllowsStatsigCookie()) {
+    let stableId = cookies.get(STABLE_ID_KEY);
+
+    if (!isValidStableId(stableId)) {
+      try {
+        const response = await fetch(api_statsig_stable_id_url(), {
+          signal: AbortSignal.timeout(STABLE_ID_TIMEOUT_MS),
+        });
+
+        if (!response.ok) {
+          throw new Error(`${response.status}: ${await response.text()}`);
+        }
+
+        stableId = await response.text();
+      } catch (error) {
+        console.error('Failed to fetch Statsig stable ID:', error);
+      }
+    }
+
+    if (!isValidStableId(stableId)) {
+      stableId = createUuid();
+    }
+
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);
-    localStorage.setItem(LOCAL_STORAGE_KEY, stableId);
     return stableId;
   } else {
     // Ensure any existing cookie is removed to satisfy OneTrust
     // (must pass same attributes used when setting the cookie)
     cookies.remove(STABLE_ID_KEY, {path: '/', domain: '.code.org'});
-    localStorage.removeItem(LOCAL_STORAGE_KEY);
+
+    // Remove the legacy localStorage value written by earlier Studio versions.
+    // See: https://github.com/code-dot-org/code-dot-org/pull/69708
+    localStorage.removeItem(STABLE_ID_KEY.toUpperCase());
+
     // Return undefined to let Statsig set it's own stableID
     return undefined;
   }

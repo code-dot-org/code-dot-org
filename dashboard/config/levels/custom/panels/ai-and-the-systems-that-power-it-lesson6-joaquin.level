@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-11T16:11:18.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Coach & Athletic Trainer",
+    "bubble_choice_description": "Joaquin works with young athletes to help them master their game and to prevent them from getting injured.",
+    "thumbnail_url": "https://images.code.org/d8efafa68ed45f66dddd779b94ce719d-joaquin.jpg",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Job**: Middle school soccer coach and athletic trainer\n\n**Purpose**: Filming every practice and game with two cameras. Joaquin runs the footage through software that tracks how players move, so he can spot an athlete who is slowing down or running in a way that could lead to injury. Then he cuts short clips to send home to players and families.",
+        "imageUrl": "https://images.code.org/669272bf15e31702209cb8dddc4685ff-joaquin-pane-1.jpg",
+        "key": "undefined-42e502a3-e175-46f1-b693-dc6455a6cdd6"
+      },
+      {
+        "text": "**Budget**: $1,400\n\nCovers the entire system, including the operating system and peripherals.",
+        "imageUrl": "https://images.code.org/583908bf1051bcd0d90b7ebcfddbab45-joaquin-pane-2.jpg",
+        "key": "undefined-ff576ae3-1788-4ada-b264-7238ac25cc64"
+      },
+      {
+        "text": "**Important Info**: Joaquin works out of a shared equipment room with one outlet and a small desk. The computer gets moved a few times each season.\n\n**Preferences**:\n\n* A graphics card that speeds up video exporting, so clips are ready before the next practice\n* A smaller case that fits a crowded desk and is not too heavy to carry\n* Enough storage to hold a full season of game footage",
+        "imageUrl": "https://images.code.org/5aa842f9e7582e34e6a7e5920878a453-joaquin-pane-3.jpg",
+        "key": "undefined-035ce7ea-43d7-45a0-8f29-87a9fa949a04",
+        "layout": "text-top-left"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11T16:11:18.337+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson6-amara\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson6-amara\"},{\"changed_at\":\"2026-09-11 16:12:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 16:13:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 16:33:30 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -66,7 +66,7 @@ export interface UnitLevelPropertiesRequestParams {
 
 export interface ProjectLevelPropertiesRequestParams {
   levelId?: never;
-  standaloneProjectType?: string;
+  standaloneProjectType: string;
   scriptName?: never;
   lessonPosition?: never;
 }

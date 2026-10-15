@@ -1,0 +1,15 @@
+name 'aif-y2-working-with-data-lesson6-level1-choice3-2026'
+title 'Boba Shop'
+display_name 'Boba Shop'
+bubble_choice_description 'Help a boba shop learn from its sales data.'
+thumbnail_url 'https://images.code.org/dc196d19c9c3b97ae94ec6a3e7a327ce-boba.png'
+
+markdown <<MARKDOWN
+You are helping a boba shop learn from its sales data.
+
+**☑️ Do This:**
+- Open [this spreadsheet](https://drive.google.com/file/d/1VLxxwZLiKwF4k-EVJYHFvNUJG6_Q0bT9/view?usp=sharing) containing data for the boba shop.
+- Look at a few different rows of data in the dataset, exploring each row’s values.
+- In **Step 2** of your Project Planning Guide, write down at least three questions that could be answered by the dataset. Choose questions for which the answers might be useful to the boba shop!
+
+MARKDOWN

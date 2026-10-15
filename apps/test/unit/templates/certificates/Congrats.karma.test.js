@@ -63,17 +63,17 @@ describe('Congrats', () => {
 
   it('renders curriculum catalog button, for teachers', () => {
     const wrapper = shallow(<Congrats {...hocProps} userType="teacher" />);
-    expect(wrapper.find('a[href="/catalog"]').exists()).to.be.true;
+    expect(wrapper.find('[href="/catalog"]').exists()).to.be.true;
   });
 
   it('renders two learning for ages buttons, for students', () => {
     const wrapper = shallow(<Congrats {...hocProps} userType="student" />);
 
     expect(
-      wrapper.find('a[href="https://code.org/student/elementary"]').exists()
+      wrapper.find('[href="https://code.org/student/elementary"]').exists()
     ).to.be.true;
     expect(
-      wrapper.find('a[href="https://code.org/student/middle-high"]').exists()
+      wrapper.find('[href="https://code.org/student/middle-high"]').exists()
     ).to.be.true;
   });
 
@@ -106,16 +106,16 @@ describe('Congrats', () => {
     expect(
       wrapper
         .find(
-          'a[href="https://code.org/educate/professional-development-online"]'
+          '[href="https://code.org/educate/professional-development-online"]'
         )
         .exists()
     ).to.be.true;
     expect(
       wrapper
-        .find('a[href="https://code.org/professional-development-workshops"]')
+        .find('[href="https://code.org/professional-development-workshops"]')
         .exists()
     ).to.be.true;
-    expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
+    expect(wrapper.find('[href="https://code.org/apply"]').exists()).to.be
       .false;
   });
 
@@ -124,17 +124,16 @@ describe('Congrats', () => {
     expect(
       wrapper
         .find(
-          'a[href="https://code.org/educate/professional-development-online"]'
+          '[href="https://code.org/educate/professional-development-online"]'
         )
         .exists()
     ).to.be.true;
     expect(
       wrapper
-        .find('a[href="https://code.org/professional-development-workshops"]')
+        .find('[href="https://code.org/professional-development-workshops"]')
         .exists()
     ).to.be.false;
-    expect(wrapper.find('a[href="https://code.org/apply"]').exists()).to.be
-      .true;
+    expect(wrapper.find('[href="https://code.org/apply"]').exists()).to.be.true;
   });
 
   it('renders SuggestedAssignableCourses when there are assignable course suggestions', () => {

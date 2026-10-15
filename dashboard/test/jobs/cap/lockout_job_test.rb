@@ -100,23 +100,5 @@ class CAP::LockoutJobTest < ActiveJob::TestCase
         end
       end
     end
-
-    context 'when something went wrong during user locking out' do
-      let(:exception) {StandardError.new('expected_exception')}
-
-      before do
-        Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).raises(exception)
-      end
-
-      it 'reports exception to Honeybadger' do
-        Honeybadger.expects(:notify).with(exception, anything).once
-
-        perform_enqueued_jobs do
-          _ {described_class.perform_later(user_id: user.id)}.must_raise exception.class
-        end
-
-        assert_performed_jobs 1
-      end
-    end
   end
 end

@@ -20,7 +20,7 @@ import {
 function getProjectLevelPropertiesUrl(
   params: ProjectLevelPropertiesRequestParams,
 ) {
-  return `/projects/${params.standaloneProjectType}/level_properties`;
+  return `/api/v1/projects/${params.standaloneProjectType}/level_properties`;
 }
 
 /**
@@ -46,7 +46,7 @@ export function createLevelsApi(transport: Transport) {
   return {
     /**
      * GET /levels/:levelId/level_properties
-     * GET /projects/:standaloneProjectType/level_properties
+     * GET /api/v1/projects/:standaloneProjectType/level_properties
      * GET /s/:scriptName/lessons/:lessonPosition/level_properties
      */
     async getLevelProperties(
@@ -142,14 +142,14 @@ export function createLevelsApi(transport: Transport) {
     },
 
     /**
-     * GET /levels/:levelId/app_options
+     * GET /api/v1/levels/:levelId/app_options
      */
     async getAppOptions(params: {levelId: number}) {
       const {levelId} = params;
 
       const raw = await transport.request<unknown>({
         method: 'GET',
-        url: `/levels/${levelId}/app_options`,
+        url: `/api/v1/levels/${levelId}/app_options`,
       });
 
       return AppOptionsSchema.parse(raw);

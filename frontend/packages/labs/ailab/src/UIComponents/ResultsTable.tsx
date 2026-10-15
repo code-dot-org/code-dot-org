@@ -1,148 +1,114 @@
-/* React component to handle displaying test data and A.I. Bot's guesses. */
-import {useCallback} from 'react';
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
+import type {ReactNode} from 'react';
 
-import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
+import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppDispatch, useAppSelector} from '../hooks';
-import I18n from '../i18n';
-import {setResultsHighlightRow} from '../redux';
+import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
+
+import tableStyles from './dataTable.module.scss';
+import styles from './resultsTable.module.scss';
 
 interface ResultsTableProps {
   results: ResultsData;
 }
 
+const featureHeader = classNames(
+  tableStyles.header,
+  tableStyles.headerFeature,
+  styles.columnHeader,
+);
+const labelHeader = classNames(
+  tableStyles.header,
+  tableStyles.headerLabel,
+  styles.columnHeader,
+);
+const featureCell = classNames(
+  tableStyles.bodyCell,
+  tableStyles.bodyCellFeature,
+);
+const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
+
+const CellText = ({children}: {children: ReactNode}) => (
+  <Typography component="span" variant="body4" className={tableStyles.cellText}>
+    {children}
+  </Typography>
+);
+
 const ResultsTable = ({results}: ResultsTableProps) => {
-  const dispatch = useAppDispatch();
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
-  const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
-  const isRegressionMode = useAppSelector(isRegression);
-  const resultsHighlightRow = useAppSelector(
-    state => state.resultsHighlightRow,
+  const {project} = useProject();
+  const selectedFeatures = project.selectedFeatures;
+  const labelColumn = project.labelColumn || 'unknown';
+  const isRegressionMode = useAppSelector(state =>
+    isRegression(state, project),
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
-  const highlightRow = (row: number | undefined) =>
-    dispatch(setResultsHighlightRow(row as number));
-
-  const getRowCellStyle = useCallback(
-    (index: number) => {
-      return {
-        ...styles.tableCell,
-        ...(index === resultsHighlightRow && styles.resultsCellHighlight),
-      };
-    },
-    [resultsHighlightRow],
-  );
-
-  const featureCount = selectedFeatures.length;
+  const columnName = (column: string) =>
+    getLocalizedColumnName(datasetId, column);
+  const cellValue = (value: string | number) =>
+    getLocalizedValue(value, datasetId);
 
   return (
-    <div style={styles.panel}>
+    <div className={styles.scroller}>
       {isRegressionMode && (
-        <div style={styles.smallTextRight}>
-          {I18n.t('resultsTablePredictionRange', {
-            percentage: REGRESSION_ERROR_TOLERANCE,
-          })}
-        </div>
+        <p className={styles.rangeNote}>
+          Predictions are +/- {REGRESSION_ERROR_TOLERANCE}% of range
+        </p>
       )}
-
-      <div style={styles.tableParent}>
-        <table style={styles.displayTable}>
-          <thead>
-            <tr>
-              <th
-                colSpan={featureCount}
-                style={{
-                  ...styles.tableHeader,
-                  ...styles.resultsTableFirstHeader,
-                }}
-              >
-                {I18n.t('resultsTableFeatureHeader')}
+      <table className={classNames(tableStyles.table, styles.table)}>
+        <colgroup span={selectedFeatures.length} />
+        <thead>
+          <tr>
+            <th
+              scope="colgroup"
+              colSpan={selectedFeatures.length}
+              className={tableStyles.header}
+            >
+              <CellText>Feature</CellText>
+            </th>
+            <th scope="col" className={tableStyles.header}>
+              <CellText>Actual</CellText>
+            </th>
+            <th scope="col" className={tableStyles.header}>
+              <CellText>AI Prediction</CellText>
+            </th>
+          </tr>
+          <tr>
+            {selectedFeatures.map(feature => (
+              <th key={feature} scope="col" className={featureHeader}>
+                <CellText>{columnName(feature)}</CellText>
               </th>
-              <th
-                style={{
-                  ...styles.tableHeader,
-                  ...styles.resultsTableFirstHeader,
-                }}
-              >
-                {I18n.t('resultsTableActualValueHeader')}
-              </th>
-              <th
-                style={{
-                  ...styles.tableHeader,
-                  ...styles.resultsTableFirstHeader,
-                }}
-              >
-                {I18n.t('resultsTablePredictedValueHeader')}
-              </th>
+            ))}
+            <th scope="col" className={labelHeader}>
+              <CellText>{columnName(labelColumn)}</CellText>
+            </th>
+            <th scope="col" className={labelHeader}>
+              <CellText>{columnName(labelColumn)}</CellText>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {results.examples.map((example, index) => (
+            <tr key={index} className={tableStyles.row}>
+              {example.map((value, column) => (
+                <td key={column} className={featureCell}>
+                  <CellText>{cellValue(value)}</CellText>
+                </td>
+              ))}
+              <td className={labelCell}>
+                <CellText>{cellValue(results.labels[index])}</CellText>
+              </td>
+              <td className={labelCell}>
+                <CellText>{cellValue(results.predictedLabels[index])}</CellText>
+              </td>
             </tr>
-            <tr>
-              {selectedFeatures.map((feature, index) => {
-                return (
-                  <th
-                    style={{
-                      ...styles.tableHeader,
-                      backgroundColor: colors.feature,
-                      ...styles.resultsTableSecondHeader,
-                    }}
-                    key={index}
-                  >
-                    {getLocalizedColumnName(datasetId, feature)}
-                  </th>
-                );
-              })}
-              <th
-                style={{
-                  ...styles.tableHeader,
-                  backgroundColor: colors.label,
-                  ...styles.resultsTableSecondHeader,
-                }}
-              >
-                {getLocalizedColumnName(datasetId, labelColumn)}
-              </th>
-              <th
-                style={{
-                  ...styles.tableHeader,
-                  backgroundColor: colors.label,
-                  ...styles.resultsTableSecondHeader,
-                }}
-              >
-                {getLocalizedColumnName(datasetId, labelColumn)}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.examples.map((examples, index) => {
-              return (
-                <tr
-                  key={index}
-                  onMouseEnter={() => highlightRow(index)}
-                  onMouseLeave={() => highlightRow(undefined)}
-                >
-                  {examples.map((example, i) => {
-                    return (
-                      <td style={getRowCellStyle(index)} key={i}>
-                        {getLocalizedValue(example, datasetId)}
-                      </td>
-                    );
-                  })}
-                  <td style={getRowCellStyle(index)}>
-                    {getLocalizedValue(results.labels[index], datasetId)}
-                  </td>
-                  <td style={getRowCellStyle(index)}>
-                    {getLocalizedValue(
-                      results.predictedLabels[index],
-                      datasetId,
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

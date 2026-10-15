@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-08-06T15:13:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Day Two, Reflection One",
+    "long_instructions": "Quote one answer your chatbot invented. Which system prompt component permitted the error, and what exactly did you change in it?",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "placeholder": "write answer here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06T15:13:07.977+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-reflection-question-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-reflection-question-2\"},{\"changed_at\":\"2026-08-06 15:13:30 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

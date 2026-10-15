@@ -23,7 +23,7 @@ module LessonImportHelper
     raise unless [:development, :adhoc, :levelbuilder].include? rack_env
 
     # course version id should always be present for CSF/CSD/CSP 2020 courses and hoc courses.
-    if (['Vocabulary', 'Resource'] & models_to_import).any?
+    if ['Vocabulary', 'Resource'].intersect?(models_to_import)
       course_version_id = lesson.script&.get_course_version&.id
       raise "Unit must have course version" unless course_version_id
     end

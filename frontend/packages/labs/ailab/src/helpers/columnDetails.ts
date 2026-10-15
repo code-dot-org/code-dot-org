@@ -4,6 +4,7 @@ import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
 import I18n from '../i18n';
 import type {RootState} from '../redux';
 import type {
+  AilabProject,
   DataRow,
   Metadata,
   MetadataField,
@@ -25,8 +26,8 @@ export function isColumnNumerical(state: RootState, column: string): boolean {
   return state.columnsByDataType[column] === ColumnTypes.NUMERICAL;
 }
 
-export function isRegression(state: RootState): boolean {
-  return isColumnNumerical(state, state.labelColumn!);
+export function isRegression(state: RootState, project: AilabProject): boolean {
+  return isColumnNumerical(state, project.labelColumn!);
 }
 
 export function filterColumnsByType(
@@ -46,6 +47,23 @@ export function tooManyUniqueOptions(uniqueOptionsCount: number): boolean {
   return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 
+// Columns a model can train on.
+export function selectableColumns(
+  data: DataRow[],
+  columnsByDataType: Record<string, string>,
+): string[] {
+  return Object.keys(data[0] ?? {}).filter(column => {
+    const dataType = columnsByDataType[column];
+    if (dataType === ColumnTypes.NUMERICAL) {
+      return containsOnlyNumbers(data, column);
+    }
+    if (dataType === ColumnTypes.CATEGORICAL) {
+      return !tooManyUniqueOptions(getUniqueOptions(data, column).length);
+    }
+    return false;
+  });
+}
+
 export function getUniqueOptions(
   data: DataRow[],
   column: string,
@@ -54,6 +72,27 @@ export function getUniqueOptions(
   return Array.from(new Set(columnData)).filter(
     option => option !== undefined && option !== '',
   );
+}
+
+// Ties go to the option that comes first in `options`.
+export function getMostAndLeastCommon(
+  options: string[],
+  frequencies: Record<string, number>,
+): {mostCommon: string; leastCommon: string} | undefined {
+  if (options.length === 0) {
+    return undefined;
+  }
+  let mostCommon = options[0];
+  let leastCommon = options[0];
+  for (const option of options) {
+    if (frequencies[option] > frequencies[mostCommon]) {
+      mostCommon = option;
+    }
+    if (frequencies[option] < frequencies[leastCommon]) {
+      leastCommon = option;
+    }
+  }
+  return {mostCommon, leastCommon};
 }
 
 export function isColumnReadOnly(metadata: Metadata, column: string): boolean {
@@ -82,6 +121,16 @@ export function getExtrema(data: DataRow[], column: string): Extrema {
   extrema.range = Math.abs(extrema.max - extrema.min);
 
   return extrema;
+}
+
+function countDecimalPlaces(cell: string | number): number {
+  const [coefficient, exponent = '0'] = String(cell).toLowerCase().split('e');
+  const fractionDigits = coefficient.split('.')[1]?.length ?? 0;
+  return Math.max(0, fractionDigits - Number(exponent));
+}
+
+export function getDecimalPlaces(data: DataRow[], column: string): number {
+  return Math.max(...getColumnData(data, column).map(countDecimalPlaces));
 }
 
 export function containsOnlyNumbers(data: DataRow[], column: string): boolean {

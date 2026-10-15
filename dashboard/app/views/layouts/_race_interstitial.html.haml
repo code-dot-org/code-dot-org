@@ -4,7 +4,7 @@
       %h2.custom-h2= t('race_interstitial.title')
 
       %p= t('race_interstitial.message')
-      .left.full-width
+      .full-width
         = form_for(current_user, as: :user, url: registration_url('user'), html: {id: 'edit_user_race_form'}) do |f|
           .form-group
             - Policies::Races::DISPLAY_RACES.map do |race|

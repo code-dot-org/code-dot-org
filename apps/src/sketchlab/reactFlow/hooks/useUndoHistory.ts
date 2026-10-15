@@ -71,6 +71,13 @@ export function useUndoHistory() {
     return snapshot;
   }, []);
 
+  const clearHistory = useCallback(() => {
+    historyRef.current = [];
+    futureRef.current = [];
+    setCanUndo(false);
+    setCanRedo(false);
+  }, []);
+
   const redo = useCallback((): HistorySnapshot | null => {
     const future = futureRef.current;
     if (future.length === 0) return null;
@@ -90,5 +97,5 @@ export function useUndoHistory() {
     return snapshot;
   }, []);
 
-  return {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo};
+  return {syncRefs, pushSnapshot, clearHistory, undo, redo, canUndo, canRedo};
 }

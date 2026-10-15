@@ -1,0 +1,381 @@
+require 'test_helper'
+
+class QuizAttemptsControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
+  setup do
+    @student = create(:student)
+    # show_correctness: true - these tests are about grading, not that gate.
+    @quiz = create(:quiz, show_correctness: true)
+    @question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: @question)
+    @attempt = create(:quiz_attempt, user: @student, level: @quiz)
+  end
+
+  test "index returns null when the user has no attempt yet" do
+    other_quiz = create(:quiz)
+    sign_in @student
+
+    get :index, params: {levelId: other_quiz.id, unitId: @attempt.unit_id}
+
+    assert_response :success
+    assert_nil JSON.parse(response.body)
+  end
+
+  test "index returns the latest attempt without creating one" do
+    sign_in @student
+
+    assert_no_difference 'QuizAttempt.count' do
+      get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id}
+    end
+
+    assert_response :success
+    assert_equal @attempt.id, JSON.parse(response.body)['id']
+  end
+
+  test "index returns question results in progress without correctness data while in progress" do
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'}
+    )
+    sign_in @student
+
+    get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['questionResults']
+    assert_equal [{'quizQuestionId' => @question.id, 'questionType' => 'MultipleChoiceQuestion', 'responseData' => {'selectedChoiceId' => 'b'}}], body['questionResultsInProgress']
+  end
+
+  test "index is forbidden when viewing another user's attempt without a teacher relationship" do
+    other_student = create(:student)
+    sign_in other_student
+
+    get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id, userId: @student.id}
+
+    assert_response :forbidden
+  end
+
+  test "index allows a teacher to view their student's attempt" do
+    teacher = create(:teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    assert_equal @attempt.id, JSON.parse(response.body)['id']
+  end
+
+  test "index omits score and maxScore for a submitted attempt when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    sign_in @student
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['score']
+    assert_nil body['maxScore']
+  end
+
+  test "index still shows a verified teacher the score, correctness, and explanation even when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    teacher = create(:authorized_teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_equal 'because math', result['explanation']
+    assert_equal 'b', result['correctChoiceId']
+  end
+
+  test "index shows an unverified teacher correctness but not the correctanswer nor explanation, even for their own student" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    # Plain :teacher is self-declared at signup, with no verification.
+    teacher = create(:teacher)
+    create(:follower, student_user: @student, user: teacher)
+    sign_in teacher
+
+    get :index, params: {levelId: quiz.id, unitId: attempt.unit_id, userId: @student.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_nil result['explanation']
+    assert_nil result['correctChoiceId']
+  end
+
+  test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
+    # response_data ('b') is correct, but score starts stale at 0 - only
+    # re-grading (not just backfilling missing responses) fixes it to 1.
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 0,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    off_quiz_question = create(:multiple_choice_question)
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: off_quiz_question,
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: @attempt.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    assert_equal 1, @attempt.reload.score
+    assert_equal 1, @attempt.max_score
+  end
+
+  test "update grades from the submitted responses, overriding whatever was already stored" do
+    # Autosave stored an old, wrong pick - the client's submitted answer is
+    # what the student actually sees on screen, so that's what should grade.
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'a'},
+      score: 0,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: @attempt.id, responses: {@question.id => {selectedChoiceId: 'b'}}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
+    assert_equal 'b', response.response_data['selectedChoiceId']
+  end
+
+  test "update saves a free response answer ungraded and leaves it out of the score" do
+    fr_question = create(:free_response_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: fr_question)
+
+    sign_in @student
+    put :update, params: {
+      id: @attempt.id,
+      responses: {@question.id => {selectedChoiceId: 'b'}, fr_question.id => {answerText: 'Because'}}
+    }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+    fr_result = body['questionResults'].find {|r| r['quizQuestionId'] == fr_question.id}
+    assert_equal 'FreeResponseQuestion', fr_result['questionType']
+    assert_equal({'answerText' => 'Because'}, fr_result['responseData'])
+    assert_nil fr_result['correct']
+    fr_response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: fr_question.id)
+    assert_equal 'ungraded', fr_response.grading_status
+  end
+
+  test "update falls back to stored data for a question missing from the submitted responses" do
+    create(
+      :quiz_question_response,
+      quiz_attempt: @attempt,
+      quiz_question: @question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    # responses is present but doesn't mention @question - shouldn't erase it.
+    put :update, params: {id: @attempt.id, responses: {}}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    assert_equal 1, body['maxScore']
+  end
+
+  test "update omits score and maxScore from the response when the quiz does not show correctness" do
+    quiz = create(:quiz, show_correctness: false)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, user: @student, level: quiz)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      score: 1,
+      max_score: 1,
+      grading_status: 'auto_graded'
+    )
+
+    sign_in @student
+    put :update, params: {id: attempt.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['score']
+    assert_nil body['maxScore']
+    # Grading still happens for real - only the response withholds it.
+    assert_equal 1, attempt.reload.score
+    assert_equal 1, attempt.max_score
+  end
+
+  test "create redirects to sign in when not signed in" do
+    post :create, params: {levelId: @quiz.id, unitId: @attempt.unit_id}
+    assert_redirected_to_sign_in
+  end
+
+  test "create starts an attempt when the level is a Quiz in the given unit" do
+    unit = create_unit_with_quiz(@quiz)
+    sign_in @student
+
+    assert_difference 'QuizAttempt.count', 1 do
+      post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    end
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    attempt = QuizAttempt.find(body['id'])
+    assert_equal @student.id, attempt.user_id
+    assert_equal @quiz.id, attempt.level_id
+    assert_equal unit.id, attempt.unit_id
+    assert_equal 1, attempt.attempt_number
+  end
+
+  test "create resumes the existing attempt instead of making a second one" do
+    unit = create_unit_with_quiz(@quiz)
+    sign_in @student
+
+    post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    assert_response :created
+    first_id = JSON.parse(response.body)['id']
+
+    assert_no_difference 'QuizAttempt.count' do
+      post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    end
+
+    assert_response :ok
+    assert_equal first_id, JSON.parse(response.body)['id']
+  end
+
+  test "create retries and resumes when a concurrent request wins the unique index" do
+    unit = create_unit_with_quiz(@quiz)
+    sign_in @student
+
+    # Mocha 1.2 ignores a block on stubs; with+raises is the invocation hook.
+    QuizAttempt.stubs(:create!).with do |attributes|
+      QuizAttempt.new(attributes).save!
+      true
+    end.raises(ActiveRecord::RecordNotUnique, "Duplicate entry 'x' for key 'index_quiz_attempts_on_user_level_unit_attempt'")
+    assert_difference 'QuizAttempt.count', 1 do
+      post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    end
+
+    assert_response :ok
+    body = JSON.parse(response.body)
+    attempt = QuizAttempt.find(body['id'])
+    assert_equal @student.id, attempt.user_id
+    assert_equal @quiz.id, attempt.level_id
+    assert_equal unit.id, attempt.unit_id
+    assert_equal 1, attempt.attempt_number
+  end
+
+  test "create rejects a level that is not a Quiz" do
+    unit = create(:unit)
+    level = create(:level)
+    lesson = create(:lesson, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [level])
+    sign_in @student
+
+    assert_no_difference 'QuizAttempt.count' do
+      post :create, params: {levelId: level.id, unitId: unit.id}
+    end
+
+    assert_response :bad_request
+  end
+
+  test "create rejects a Quiz that is not in the given unit" do
+    other_unit = create(:unit)
+    sign_in @student
+
+    assert_no_difference 'QuizAttempt.count' do
+      post :create, params: {levelId: @quiz.id, unitId: other_unit.id}
+    end
+
+    assert_response :bad_request
+  end
+
+  test "create does not let a second unitId mint another attempt at the same quiz" do
+    unit = create_unit_with_quiz(@quiz)
+    sign_in @student
+
+    post :create, params: {levelId: @quiz.id, unitId: unit.id}
+    assert_response :created
+
+    other_unit = create(:unit)
+    assert_no_difference 'QuizAttempt.count' do
+      post :create, params: {levelId: @quiz.id, unitId: other_unit.id}
+    end
+
+    assert_response :bad_request
+  end
+
+  private def create_unit_with_quiz(quiz)
+    unit = create(:unit)
+    lesson = create(:lesson, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [quiz])
+    unit
+  end
+end

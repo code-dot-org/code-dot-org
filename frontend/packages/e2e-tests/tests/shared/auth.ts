@@ -31,6 +31,12 @@ export interface CreateUserOptions {
    * (TestController#create_user's `OmniAuth::AuthHash.new({provider: sso, ...})`).
    */
   sso?: 'clever' | 'google_oauth2';
+  /**
+   * Omit email/password/password_confirmation from the create_user body, for
+   * teacher-managed accounts that have no personal credentials (provider is set
+   * via extraFields). Also skips the post-create sign-in.
+   */
+  omitCredentials?: boolean;
   /** Extra fields merged into the `user` body sent to /api/test/create_user. */
   extraFields?: Record<string, string | number | boolean>;
 }
@@ -54,6 +60,7 @@ export async function createUser(
     email: emailOverride,
     signInAfterCreate = true,
     sso,
+    omitCredentials = false,
     extraFields,
   }: CreateUserOptions,
 ): Promise<UserCredentials> {
@@ -70,8 +77,10 @@ export async function createUser(
     {
       user: {
         user_type: type,
-        email,
-        ...(password ? {password, password_confirmation: password} : {}),
+        ...(omitCredentials ? {} : {email}),
+        ...(password && !omitCredentials
+          ? {password, password_confirmation: password}
+          : {}),
         name,
         age,
         terms_of_service_version: '1',
@@ -89,7 +98,7 @@ export async function createUser(
     throw new Error(`create_user failed: ${status}`);
   }
 
-  if (signInAfterCreate && password) {
+  if (signInAfterCreate && password && !omitCredentials) {
     await signIn(page, {email, password});
   }
 
@@ -138,6 +147,13 @@ export interface CreateStudentOptions {
    * create_user); 'clever' is passed through unchanged.
    */
   sso?: 'clever' | 'google';
+  /**
+   * Provision as a teacher-managed "sponsored" account: no personal
+   * email/password, provider='sponsored'. Mirrors section_management_steps.rb's
+   * "sponsored student" clause. Implies signInAfterCreate:false — a sponsored
+   * account has no password to sign in with.
+   */
+  sponsored?: boolean;
   /** Extra fields merged into the create_user body after the derived ones. */
   extraFields?: Record<string, string | number | boolean>;
 }
@@ -160,6 +176,7 @@ export async function createStudent(
     parentCreated = false,
     signInAfterCreate = true,
     sso,
+    sponsored = false,
     extraFields,
   }: CreateStudentOptions = {},
 ): Promise<UserCredentials> {
@@ -171,6 +188,9 @@ export async function createStudent(
     email,
     signInCount,
     signInAfterCreate,
+    // Sponsored accounts carry no personal email/password; omitting them also
+    // skips the post-create sign-in.
+    omitCredentials: sponsored,
     sso: sso === 'google' ? 'google_oauth2' : sso,
     extraFields: {
       age,
@@ -191,6 +211,7 @@ export async function createStudent(
             parent_email_preference_source: 'ACCOUNT_SIGN_UP',
           }
         : {}),
+      ...(sponsored ? {provider: 'sponsored'} : {}),
       ...extraFields,
     },
   });
@@ -214,6 +235,17 @@ export async function signIn(
 
 export type CreateTeacherAssociatedStudentOptions = {
   studentName: string;
+  /**
+   * Enroll the teacher in a PLC course before the section is created, granting
+   * them "authorized teacher" status. Mirrors section_management_steps.rb's
+   * "an authorized teacher-associated ... student" clause.
+   */
+  authorized?: boolean;
+  /**
+   * Runs under the teacher's session once the section exists, before the
+   * student joins, for section settings only its teacher may change.
+   */
+  onSectionCreated?: (section: {id: number; code: string}) => Promise<void>;
 } & Omit<CreateStudentOptions, 'name' | 'signInAfterCreate' | 'extraFields'>;
 
 /**
@@ -223,7 +255,12 @@ export type CreateTeacherAssociatedStudentOptions = {
  */
 export async function createTeacherAssociatedStudent(
   page: Page,
-  {studentName, ...studentOpts}: CreateTeacherAssociatedStudentOptions,
+  {
+    studentName,
+    authorized = false,
+    onSectionCreated,
+    ...studentOpts
+  }: CreateTeacherAssociatedStudentOptions,
 ): Promise<{sectionCode: string} & UserCredentials> {
   // createUser signs the teacher in; the /dashboardapi/sections POST needs that
   // session, so reload to pick up the teacher's CSRF token before posting.
@@ -232,6 +269,17 @@ export async function createTeacherAssociatedStudent(
     name: `Teacher_${studentName}`,
   });
   await page.goto('/');
+
+  if (authorized) {
+    const enroll = await requestWithCsrf(
+      page,
+      'POST',
+      '/api/test/enroll_in_plc_course',
+    );
+    if (!enroll.ok) {
+      throw new Error(`enroll_in_plc_course failed: ${enroll.status}`);
+    }
+  }
 
   const section = await requestWithCsrf(
     page,
@@ -245,7 +293,11 @@ export async function createTeacherAssociatedStudent(
   if (!section.ok) {
     throw new Error(`sections POST failed: ${section.status}`);
   }
-  const {code: sectionCode} = JSON.parse(section.body) as {code: string};
+  const {id: sectionId, code: sectionCode} = JSON.parse(section.body) as {
+    id: number;
+    code: string;
+  };
+  await onSectionCreated?.({id: sectionId, code: sectionCode});
 
   // createUser signs the student in, replacing the teacher session; reload to
   // pick up the student's CSRF token before enrolling via /join.
@@ -258,6 +310,22 @@ export async function createTeacherAssociatedStudent(
   }
 
   return {sectionCode, ...teacher};
+}
+
+/**
+ * Simulate the parent's approval of a pending permission request via the
+ * test-only /api/test/accept_parental_request endpoint, using the currently
+ * signed-in (student) session.
+ */
+export async function acceptParentalRequest(page: Page): Promise<void> {
+  const {ok, status} = await requestWithCsrf(
+    page,
+    'POST',
+    '/api/test/accept_parental_request',
+  );
+  if (!ok) {
+    throw new Error(`accept_parental_request failed: ${status}`);
+  }
 }
 
 /**

@@ -1,40 +1,49 @@
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
 import msg from '@cdo/locale';
 
-import blankImg from '../../static/common_images/1x1.gif';
-import commonStyles from '../commonStyles';
-
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import {getRunButtonSx} from './runButtonSx';
 import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
-  <button type="button" id="finishButton" className="share">
-    <img src="/blockly/media/1x1.gif" alt="" />
+  <MuiButton
+    id="finishButton"
+    variant="contained"
+    size="medium"
+    color="primary"
+  >
     {msg.finish()}
-  </button>
+  </MuiButton>
 );
 
-export const RunButton = Radium(props => (
-  <button
-    type="button"
-    id={props.id || 'runButton'}
-    className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
-    style={props.style}
-  >
-    <div>{props.runButtonText || msg.runProgram()}</div>
-    <img src={blankImg} className="run26" alt="" />
-  </button>
-));
+export const RunButton = props => {
+  const setupBlockColor = useSetupBlockColor();
+  return (
+    <MuiButton
+      id={props.id || 'runButton'}
+      variant="contained"
+      size="medium"
+      color="primary"
+      className={props.hidden ? 'hide' : ''}
+      sx={getRunButtonSx(setupBlockColor)}
+      startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
+    >
+      {props.runButtonText || msg.runProgram()}
+    </MuiButton>
+  );
+};
 RunButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
+  icon: PropTypes.node,
 };
 RunButton.displayName = 'RunButton';
 
@@ -42,28 +51,25 @@ RunButton.displayName = 'RunButton';
 // then shown either by passing in style props to override
 // or imperatively by selecting the DOM node by ID
 // elsewhere in our code base (eg, StudioApp)
-export const ResetButton = Radium(props => (
-  <button
-    type="button"
+export const ResetButton = props => (
+  <MuiButton
     id={props.id || 'resetButton'}
-    // See apps/style/common.scss for these class definitions
-    className={classNames([
-      'launch',
-      'blocklyLaunch',
-      props.hideText && 'hideText',
-      props.hidden && 'hide',
-    ])}
-    style={[commonStyles.hidden, props.style]}
+    variant="contained"
+    size="medium"
+    color="primary"
+    className={props.hidden ? 'hide' : ''}
+    style={{display: 'none', ...props.style}}
+    startIcon={props.icon ?? <FontAwesomeV6Icon iconName="rotate-right" />}
   >
-    <div>{!props.hideText && msg.resetProgram()}</div>
-    <img src={blankImg} className="reset26" alt="" />
-  </button>
-));
+    {!props.hideText && msg.resetProgram()}
+  </MuiButton>
+);
 ResetButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   hideText: PropTypes.bool,
+  icon: PropTypes.node,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -77,10 +83,14 @@ export const UnconnectedGameButtons = props => (
       {!props.noRunResetButton && (
         <>
           <RunButton
-            hidden={props.hideRunButton}
             runButtonText={props.runButtonText}
+            icon={props.runButtonIcon}
+            hidden={props.hideRunButton}
           />
-          <ResetButton hidden={props.hideResetButton} />
+          <ResetButton
+            hidden={props.hideResetButton}
+            icon={props.resetButtonIcon}
+          />
         </>
       )}
       {
@@ -98,6 +108,8 @@ UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
   hideResetButton: PropTypes.bool,
   runButtonText: PropTypes.string,
+  runButtonIcon: PropTypes.node,
+  resetButtonIcon: PropTypes.node,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,

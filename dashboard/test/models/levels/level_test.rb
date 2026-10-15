@@ -70,6 +70,33 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, maze_level
   end
 
+  test 'with_essential_us_only_ai_models returns Aichat levels configured with a US only model and Weblab2 levels' do
+    us_only_aichat_level = Level.create(
+      name: 'us_only_aichat',
+      type: 'Aichat',
+      properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}}
+    )
+    openai_aichat_level = Level.create(
+      name: 'openai_aichat',
+      type: 'Aichat',
+      properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}}
+    )
+    # AI Tutor has no per-level model and always uses a US only model, which
+    # blocks Weblab2, where the tutor is essential.
+    weblab2_level = Level.create(name: 'weblab2_us_only', type: 'Weblab2')
+    # Elsewhere the tutor is optional, so a blocked tutor still leaves the level
+    # completable.
+    ai_tutor_level = Level.create(name: 'ai_tutor_us_only', properties: {'ai_tutor_available' => 'true'})
+    maze_level = Level.create(name: 'maze_us_only', type: 'Maze')
+
+    result = Level.with_essential_us_only_ai_models
+    assert_includes result, us_only_aichat_level
+    assert_includes result, weblab2_level
+    refute_includes result, ai_tutor_level
+    refute_includes result, openai_aichat_level
+    refute_includes result, maze_level
+  end
+
   test 'types marked as having ideal level sources' do
     raise_unless_specifies_ideal_level_source(Level)
   end
@@ -1216,20 +1243,18 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get search options" do
+    unit = create(:script)
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
+      "All types", "Adaptive", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
       "Craft", "CurriculumReference", "Dancelab", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
-      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "Sketchlab", "StandaloneVideo",
+      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "Quiz", "Sketchlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab", "Weblab2"
     ]
-    scripts = [
-      "All scripts", "20-hour", "algebra", "artist", "flappy",
-      "frozen", "hourofcode", "jigsaw", "playlab", "starwars"
-    ]
+    scripts = ["All scripts", unit.name]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
@@ -1471,6 +1496,27 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil properties["showRubric"]
   end
 
+  test "summarize_for_lab2_properties omits levelbuilder generator state" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:pythonlab, properties: {generate_outline: 'author prompt', generate_supplied_code: 'print("secret")', long_instructions: 'Do it.'})
+    script_level = create(:script_level, lesson: lesson, script: script, levels: [level])
+
+    properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal 'Do it.', properties["longInstructions"]
+    assert_nil properties["generateOutline"]
+    assert_nil properties["generateSuppliedCode"]
+  end
+
+  test "student_properties drops every generate_* property and generate_fields keeps them" do
+    level = create(:pythonlab, properties: {generate_outline: 'author prompt', generate_supplied_code: 'print("secret")', long_instructions: 'Do it.'})
+
+    assert_equal({'long_instructions' => 'Do it.'}, level.student_properties.slice('long_instructions', 'generate_outline', 'generate_supplied_code'))
+    assert_equal({generateOutline: 'author prompt', generateSuppliedCode: 'print("secret")'}, level.generate_fields)
+  end
+
   test "summarize_for_lab2_properties shows rubric if level matches lesson rubric level" do
     script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
@@ -1686,5 +1732,76 @@ class LevelTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'ui_test_name? detects the "UI Test " prefix' do
+    assert Level.ui_test_name?('UI Test Some Level')
+    assert Level.ui_test_name?('ui test lowercase')
+    refute Level.ui_test_name?('Some Level')
+    refute Level.ui_test_name?('My UI Test Level')
+    refute Level.ui_test_name?('UI Testless')
+    refute Level.ui_test_name?(nil)
+
+    assert create(:level, name: 'UI Test predicate probe').ui_test?
+    refute create(:level, name: 'Regular predicate probe').ui_test?
+  end
+
+  test 'cannot rename a level across the UI Test boundary while used by a script' do
+    level = create(:level, name: 'LevelTest boundary rename')
+    create(:script_level, levels: [level])
+
+    level.name = 'UI Test LevelTest boundary rename'
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, 'UI Test'
+
+    # renames within the same partition are unaffected
+    level.reload.name = 'LevelTest boundary rename 2'
+    assert level.valid?
+  end
+
+  test 'can rename a level across the UI Test boundary when not used by a script' do
+    level = create(:level, name: 'LevelTest free rename')
+    level.name = 'UI Test LevelTest free rename'
+    assert level.valid?
+  end
+
+  test 'UI test levels cannot be created, edited, or destroyed on levelbuilder' do
+    ui_test_level = create(:level, name: 'UI Test LevelTest levelbuilder guard')
+    prod_level = create(:level, name: 'LevelTest levelbuilder guard')
+
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+
+    refute build(:level, name: 'UI Test LevelTest levelbuilder create').valid?
+
+    ui_test_level.notes = 'edited'
+    refute ui_test_level.valid?
+    assert_includes ui_test_level.errors.full_messages.first, 'levelbuilder'
+
+    # renaming a UI Test level to a production name is still an edit
+    ui_test_level.reload.name = 'LevelTest levelbuilder rename'
+    refute ui_test_level.valid?
+
+    refute ui_test_level.reload.destroy
+    refute ui_test_level.destroyed?
+
+    # production levels are unaffected
+    prod_level.notes = 'edited'
+    assert prod_level.valid?
+    assert prod_level.destroy
+  end
+
+  test 'cannot rename a level across the UI Test boundary while attached to another level' do
+    child = create(:level, name: 'LevelTest attached child')
+    parent = create(:level, name: 'LevelTest attached parent', child_levels: [child])
+
+    # a child with no script_levels of its own is still pinned by its parent
+    child.name = 'UI Test LevelTest attached child'
+    refute child.valid?
+    assert_includes child.errors[:name].first, 'UI Test'
+
+    # and a parent is pinned by its children
+    parent.name = 'UI Test LevelTest attached parent'
+    refute parent.valid?
+    assert_includes parent.errors[:name].first, 'UI Test'
   end
 end

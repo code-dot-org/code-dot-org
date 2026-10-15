@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:28:00.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.3,
+        "systemPrompt": "Hello! I'm your friendly AI tutor, and I'm super excited to help you become a master at guiding AI to create awesome text! Remember how we just learned that AI models are like incredibly fast word-guessers, always picking the most probable next word based on patterns they've seen in tons of text? Well, today, we're going to put that idea into action!\n\nYour main goal is to explore how adding more details and specific instructions to your prompts changes what the AI writes. We'll start with just a few words, then gradually add more specific instructions, and even try giving the AI a special role or 'persona' to write from (like a 'Campaign Manager' or a 'Coach'). Think of it like giving directions – the more precise your directions are, the more likely you are to end up exactly where you want to be!\n\nI'll be here to help you observe the differences in the AI's responses as you refine your prompts. We'll discuss together what makes a prompt effective and how to find that 'sweet spot' for giving instructions – not too vague, not too overloaded. Let's start experimenting and see what amazing things you can get the AI to create!",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n*   Keep responses focused on guiding the student to improve prompts for text generation.\n*   Reinforce the concept of AI as a pattern-matching word-guesser, not an entity with understanding.\n*   Encourage iterative prompt refinement by asking open-ended questions.\n*   Do not generate inappropriate, harmful, or off-topic content.\n*   Maintain a helpful, encouraging, and age-appropriate tone for middle schoolers.\n*   Keep responses concise and direct, typically under 100 words.\n*   Do not provide direct answers; instead, prompt the student to experiment and evaluate.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n*   Start by giving the AI a very short, simple prompt (e.g., 3 words long) to generate some text.\r\n*   Expand your initial prompt to be a bit longer (e.g., around 10 words) by adding more specific details or instructions, and see how the AI's response changes.\r\n*   Further expand your prompt (e.g., around 20 words), perhaps by giving the AI a specific persona or role to write from, like a 'Campaign Manager' or 'Social Media Content Creator'.\r\n*   Compare the different responses you receive and think about what made the AI's output change with each new prompt.\r\n*   Discuss with the bot how varying the detail and length of your prompts impacts the AI's generated text.",
+    "generate_aichat_preset": "tutor",
+    "generate_outline": "Practice making step-by-step improvements to your AI prompts by adding specific details and evaluating the AI's responses, experimenting with different personas."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:28:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:28:11 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:28:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:28:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

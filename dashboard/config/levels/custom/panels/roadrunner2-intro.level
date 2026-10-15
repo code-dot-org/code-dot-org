@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T21:45:58.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "roadrunner2-intro-f45e3074-ef46-4247-a17e-bdb3545ae25f",
+        "text": "AI systems can analyze massive amounts of information, finding hidden connections and patterns.",
+        "imageUrl": "https://images.code.org/471f1eea2f3d794d979605c72bed8d6e-roadrunner2-intro-panel-1-70292a5e-be16-406c-a9be-7e9bb78052bf.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "roadrunner2-intro-d70f264c-5359-4113-b63a-66d3f0199df8",
+        "text": "Much of the data AI uses comes from public sources, like social media posts, news articles, and open databases.",
+        "imageUrl": "https://images.code.org/2f4af366e7de8b8452f0d76d33b31843-roadrunner2-intro-panel-2-22ed2113-9e8d-4e88-be79-4c13a815849c.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "roadrunner2-intro-1d66de98-e478-4e83-a792-c57e91059036",
+        "text": "By understanding these patterns in public data, AI can make predictions or draw conclusions, sometimes even about groups of people.",
+        "imageUrl": "https://images.code.org/b5511808d9bec5cbe93abf77a1d072af-roadrunner2-intro-panel-3-f127580d-4897-4554-9ef2-c4d08e72d8c8.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "roadrunner2-intro-1eb07219-0596-4cf7-814a-d527c37fae34",
+        "text": "This powerful ability makes it crucial for us to understand privacy and safety when interacting with AI systems.",
+        "imageUrl": "https://images.code.org/8036d010d8be3e72add99d3a5e2cce33-roadrunner2-intro-panel-4-f70cbcbd-05b1-4118-bfec-d9c47e550ed6.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "roadrunner2-intro-d4ba513d-53b9-4b76-8a99-75eca12c4c0f",
+        "text": "Learning about what information is public versus private helps us use AI responsibly and keep ourselves safe in the digital world.",
+        "imageUrl": "https://images.code.org/a8711588a605ccbb2c9a21512cc3bf2b-roadrunner2-intro-panel-5-abfc4e0f-6449-4233-9a3f-af1e5bfd0acb.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Introduce AI's ability to find patterns in public data and why understanding privacy and safety is crucial when interacting with AI systems."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:46:42 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:46:43 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,13 +1,14 @@
-import {Button as MuiButton} from '@mui/material';
-import classNames from 'classnames';
+import {
+  Box,
+  Button as MuiButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import msg from '@cdo/locale';
 
 import ChatBubble from './ChatBubble';
-
-import styles from './hint-prompt.module.scss';
 
 const HintPrompt = ({
   onConfirm,
@@ -29,31 +30,39 @@ const HintPrompt = ({
       skinId={skinId}
       textToSpeechEnabled={textToSpeechEnabled}
     >
-      <p id={'hint-prompt-message'}>{message}</p>
-      <MuiButton
-        variant="contained"
-        color="white"
-        size="medium"
-        className={classNames(styles.button, styles.buttonYes)}
-        id="hint-prompt-yes-button"
-        onClick={onConfirm}
-        aria-label={msg.yes()}
-        type="button"
+      <MuiTypography variant="body4" id="hint-prompt-message">
+        {message}
+      </MuiTypography>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: 1,
+        }}
       >
-        {msg.yes()}
-      </MuiButton>
-      <MuiButton
-        variant="contained"
-        color="white"
-        size="medium"
-        className={classNames(styles.button)}
-        id="hint-prompt-no-button"
-        onClick={onDismiss}
-        aria-label={msg.no()}
-        type="button"
-      >
-        {msg.no()}
-      </MuiButton>
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          id="hint-prompt-yes-button"
+          onClick={onConfirm}
+          aria-label={msg.yes()}
+          type="button"
+        >
+          {msg.yes()}
+        </MuiButton>
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          id="hint-prompt-no-button"
+          onClick={onDismiss}
+          aria-label={msg.no()}
+          type="button"
+        >
+          {msg.no()}
+        </MuiButton>
+      </Box>
     </ChatBubble>
   );
 };

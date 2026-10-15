@@ -74,10 +74,22 @@ class UnitTest < ActiveSupport::TestCase
       CourseOffering.get_from_cache(name)
     end
 
-    # NOTE: ActiveRecord collection association still references an active DB connection,
-    # even when the data is already eager loaded.
-    # Best we can do is ensure that no queries are executed on the active connection.
-    ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
+    # Rails 7.1 renamed the underlying method from `execute` to
+    # `raw_execute`, so temporarily support both versions.
+    # TODO infra: simplify this once we're fully updated to Rails 7.1
+    execute_method_name =
+      if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0
+        :execute
+      elsif Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 1
+        :raw_execute
+      else
+        throw "remove this temporary transitional logic before upgrading beyond Rails 7.1"
+      end
+
+    # ActiveRecord collection association still references an active DB
+    # connection, even when the data is already eager loaded. Best we can do
+    # is ensure that no queries are executed on the active connection.
+    ActiveRecord::Base.connection.stubs(execute_method_name).raises('Database disconnected')
   end
 
   test 'can setup migrated unit with new models' do
@@ -143,14 +155,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
-    artist = Unit.find_by_name('artist')
-    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
+    unit = create(:unit, :with_levels)
+    assert unit.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
-    flappy = Unit.find_by_name('flappy')
-    frozen = Unit.find_by_name('frozen')
+    flappy = create(:unit, name: 'flappy')
+    frozen = create(:unit, name: 'frozen')
     # ...and ID lookups.
     flappy_id = flappy.id
     frozen_id = frozen.id
@@ -464,13 +476,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'banner image' do
-    assert_nil Unit.find_by_name('flappy').banner_image
-    assert_nil Unit.find_by_name('csf1').banner_image
+    assert_nil create(:unit).banner_image
+    assert_nil @csf_unit.banner_image
   end
 
   test 'old_professional_learning_course?' do
-    refute Unit.find_by_name('flappy').old_professional_learning_course?
-    assert Unit.find_by_name('ECSPD').old_professional_learning_course?
+    refute create(:unit).old_professional_learning_course?
+    old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
+    assert old_pl_course_unit.old_professional_learning_course?
   end
 
   test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
@@ -700,6 +713,8 @@ class UnitTest < ActiveSupport::TestCase
       age_13_required: false,
       show_sign_in_callout: false,
       hasUnnumberedLessons: false,
+      simpleProgress: false,
+      simpleProgressImage: nil,
       course_name: unit_group.name,
       course_id: unit_group.id,
       unit_position: unit_group_unit.position,
@@ -1024,6 +1039,48 @@ class UnitTest < ActiveSupport::TestCase
     summary = unit.summarize
     assert_equal 1, summary[:teacher_resources].count
     assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
+  end
+
+  # A unit can be reused in more than one unit group. Rollup resources ("All
+  # Resources" etc.) store a single URL baked to the unit's original course, so
+  # when summarized in the context of a different unit group we rewrite that URL
+  # to the viewing course and position. Otherwise the resource page breadcrumb
+  # sends teachers back to the wrong course.
+  test 'summarize rewrites rollup resource urls to the viewing unit group' do
+    Policies::Courses.stubs(:modularity_enabled?).returns(true)
+    unit = create(:unit)
+    # The first unit group created becomes the unit's original_unit_group; its
+    # position (3) is where the rollup url is baked.
+    original_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: original_group, script: unit, position: 3)
+    reused_group = create(:unit_group)
+    reused_ugu = create(:unit_group_unit, unit_group: reused_group, script: unit, position: 1)
+    unit.reload
+
+    rollup = create(
+      :resource,
+      name: 'All Resources',
+      url: "/courses/#{original_group.name}/units/3/resources",
+      is_rollup: true
+    )
+    plain = create(:resource, name: 'Plain Handout', url: 'https://example.com/handout')
+    unit.resources = [rollup, plain]
+
+    summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: reused_ugu)
+    resources = summary[:teacher_resources]
+
+    rewritten = resources.find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{reused_group.name}/units/1/resources", rewritten[:url]
+
+    # Non-rollup resources keep their url untouched.
+    untouched = resources.find {|r| r[:name] == 'Plain Handout'}
+    assert_equal 'https://example.com/handout', untouched[:url]
+
+    # Summarized in its original context, the rollup url is unchanged.
+    original_ugu = unit.unit_group_units.find {|ugu| ugu.unit_group == original_group}
+    original_summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: original_ugu)
+    original_rollup = original_summary[:teacher_resources].find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{original_group.name}/units/3/resources", original_rollup[:url]
   end
 
   test 'summarize defaults to original unit group when no unit group unit is provided' do
@@ -1715,7 +1772,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", @csf_unit.name, @csf_unit_2019.name],
+      [@csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
@@ -2350,6 +2407,75 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_ai.has_ai_chat_tools?
   end
 
+  # Bandaid: 'csd2-2026' is in
+  # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
+  # away with the exemption.
+  test 'with_essential_ai_chat_tools excludes an exempt unit' do
+    unit = create(:script, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+
+    refute_includes Unit.with_essential_ai_chat_tools, unit
+    refute unit.requires_ai_chat_tools?
+    # The tutor is still there, so the unit still reports it as available.
+    assert unit.has_ai_chat_tools?
+  end
+
+  test 'with_essential_us_only_ai_models returns only units holding a level that needs a US only model' do
+    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+
+    unit_with_us_only = create(:script, name: 'unit-with-us-only')
+    us_only_lesson = create(:lesson, :with_lesson_group, script: unit_with_us_only)
+    create(:script_level, script: unit_with_us_only, lesson: us_only_lesson, levels: [us_only_level])
+
+    unit_without_us_only = create(:script, name: 'unit-without-us-only')
+    openai_lesson = create(:lesson, :with_lesson_group, script: unit_without_us_only)
+    create(:script_level, script: unit_without_us_only, lesson: openai_lesson, levels: [openai_level])
+
+    result = Unit.with_essential_us_only_ai_models
+    assert_includes result, unit_with_us_only
+    refute_includes result, unit_without_us_only
+
+    # Both still count as AI chat units; only the model differs.
+    assert unit_without_us_only.has_ai_chat_tools?
+  end
+
+  test 'requires_inaccessible_ai_models? is only true for a restricted user on a unit that needs blocked models' do
+    teacher = create(:teacher)
+    gemini_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+    # AI Tutor has no per-level model, so it is always US only, but a unit that
+    # merely offers the tutor is still completable without it.
+    tutor_level = create(:level, properties: {'ai_tutor_available' => 'true'})
+
+    essential_us_only = create(:script, name: 'unit-essential-us-only')
+    create(:script_level, script: essential_us_only, lesson: create(:lesson, :with_lesson_group, script: essential_us_only), levels: [gemini_level])
+
+    essential_reachable = create(:script, name: 'unit-essential-reachable')
+    create(:script_level, script: essential_reachable, lesson: create(:lesson, :with_lesson_group, script: essential_reachable), levels: [openai_level])
+
+    optional_us_only = create(:script, name: 'unit-optional-us-only')
+    create(:script_level, script: optional_us_only, lesson: create(:lesson, :with_lesson_group, script: optional_us_only), levels: [tutor_level])
+
+    # The user can reach US only models, so nothing is blocked. The method also
+    # returns before querying the unit's levels, but stubbing Unit.where to
+    # prove that breaks unrelated teardown, so only the result is asserted.
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    refute essential_us_only.requires_inaccessible_ai_models?(teacher)
+
+    User.any_instance.unstub(:us_only_aichat_models_disabled?)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    assert essential_us_only.requires_inaccessible_ai_models?(teacher)
+    # Reachable models, so the unit is completable.
+    refute essential_reachable.requires_inaccessible_ai_models?(teacher)
+    # A blocked tutor is optional here, so the unit is still completable.
+    refute optional_us_only.requires_ai_chat_tools?
+    refute optional_us_only.requires_inaccessible_ai_models?(teacher)
+    # A signed out visitor has no restrictions to apply.
+    refute essential_us_only.requires_inaccessible_ai_models?(nil)
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
@@ -2534,6 +2660,29 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal 'unit prompt', unit.summarize_for_unit_generate[:generateOutline]
   end
 
+  test 'summarize_for_unit_generate exposes course rules for round-trip' do
+    unit = create(:script)
+    unit.update!(properties: unit.properties.merge('generate_drafting_rules' => 'draft', 'generate_authoring_rules' => 'author'))
+    summary = unit.summarize_for_unit_generate
+    assert_equal 'draft', summary[:generateDraftingRules]
+    assert_equal 'author', summary[:generateAuthoringRules]
+  end
+
+  test 'update_lesson_outlines persists course rules; a missing key leaves them alone and empty clears' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    unit.update_lesson_outlines([], generateDraftingRules: 'draft', generateAuthoringRules: 'author')
+    unit.reload
+    assert_equal 'draft', unit.generate_drafting_rules
+    assert_equal 'author', unit.generate_authoring_rules
+
+    unit.update_lesson_outlines([], generateAuthoringRules: '')
+    unit.reload
+    assert_equal 'draft', unit.generate_drafting_rules
+    assert_nil unit.generate_authoring_rules
+  end
+
   test 'update_lesson_outlines creates new lessons in the order given' do
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -2587,7 +2736,7 @@ class UnitTest < ActiveSupport::TestCase
   test 'update_lesson_outlines persists supplied unit-level outline' do
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], 'overall prompt')
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], generateOutline: 'overall prompt')
     assert_equal 'overall prompt', unit.reload.generate_outline
   end
 
@@ -2595,7 +2744,7 @@ class UnitTest < ActiveSupport::TestCase
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     unit.update!(properties: unit.properties.merge('generate_outline' => 'pre'))
-    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], nil)
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}])
     assert_equal 'pre', unit.reload.generate_outline
   end
 

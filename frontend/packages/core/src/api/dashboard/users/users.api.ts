@@ -1,5 +1,6 @@
 import {refreshCsrfToken} from '../../csrfToken';
 import type {Transport} from '../../transports/types';
+import {buildSchoolData} from './buildSchoolData';
 import {
   ContactDetailsSchema,
   CurrentPermissionsSchema,
@@ -21,6 +22,8 @@ import type {
   UpdateParentEmailParams,
   UpdatePasswordParams,
   UpdateProfileParams,
+  UpdateSchoolInfoParams,
+  UnlinkLtiAccountParams,
   UpdateUserTypeParams,
   UserSettings,
 } from './users.types';
@@ -312,19 +315,6 @@ export function createUsersApi(transport: Transport) {
     },
 
     /**
-     * POST /dashboardapi/v1/users/me/verify_captcha
-     */
-    async verifyCaptcha(params: {recaptchaResponse: string}) {
-      const {recaptchaResponse} = params;
-
-      return transport.request<unknown>({
-        method: 'POST',
-        url: '/dashboardapi/v1/users/me/verify_captcha',
-        body: {'g-recaptcha-response': recaptchaResponse},
-      });
-    },
-
-    /**
      * GET /api/v1/users/has_dismissed_personalization_alert
      */
     async getHasDismissedPersonalizationAlert() {
@@ -399,8 +389,42 @@ export function createUsersApi(transport: Transport) {
             ...(params.username !== undefined && {username: params.username}),
             ...(params.age !== undefined && {age: params.age}),
             ...(params.usState !== undefined && {us_state: params.usState}),
+            ...(params.gender !== undefined && {
+              gender_student_input: params.gender,
+            }),
+            ...(params.educatorRole !== undefined && {
+              educator_role: params.educatorRole,
+            }),
+            ...(params.ltiRosterSyncEnabled !== undefined && {
+              lti_roster_sync_enabled: params.ltiRosterSyncEnabled,
+            }),
           },
         },
+      });
+    },
+
+    /** POST /lti/v1/account_linking/unlink */
+    async unlinkLtiAccount(params: UnlinkLtiAccountParams): Promise<void> {
+      await transport.request<unknown>({
+        method: 'POST',
+        url: '/lti/v1/account_linking/unlink',
+        headers: JSON_ACCEPT,
+        body: {authentication_option_id: params.authenticationOptionId},
+      });
+    },
+
+    /** PATCH /api/v1/user_school_infos — a no-op when the form state builds no school data. */
+    async updateSchoolInfo(params: UpdateSchoolInfoParams): Promise<void> {
+      const schoolData = buildSchoolData(params);
+      if (!schoolData) {
+        return;
+      }
+
+      await transport.request<unknown>({
+        method: 'PATCH',
+        url: '/api/v1/user_school_infos',
+        headers: JSON_ACCEPT,
+        body: {user: {school_info_attributes: schoolData}},
       });
     },
 
@@ -446,6 +470,9 @@ export function createUsersApi(transport: Transport) {
             email: params.newEmail,
             hashed_email: params.hashedEmail,
             current_password: params.currentPassword,
+            ...(params.emailOptIn && {
+              email_preference_opt_in: params.emailOptIn,
+            }),
           },
         },
       });

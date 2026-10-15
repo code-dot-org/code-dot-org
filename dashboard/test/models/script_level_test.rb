@@ -261,12 +261,17 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'summarize with custom route' do
     create_hourofcode_unit_and_levels
-    summary = Unit.hoc_2014_unit.script_levels.first.summarize
+    hourofcode = Unit.get_from_cache(Unit::HOC_NAME)
+    summary = hourofcode.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
+
+    # Later chapters keep the custom route too; this is what the client's
+    # continue-to-next-level navigation consumes.
+    assert_equal "#{CDO.studio_url}/hoc/2", hourofcode.script_levels.second.summarize[:url]
   end
 
   test 'named level summarize' do
@@ -301,6 +306,21 @@ class ScriptLevelTest < ActiveSupport::TestCase
       summary = sl.summarize
       assert_equal sl.progression, summary[:progression]
       assert_equal 'progresión 1', summary[:progression_display_name]
+    end
+  end
+
+  test 'summarize carries the header label, localized when a translation exists' do
+    sl = create(:script_level)
+    assert_nil sl.summarize[:header_label]
+
+    sl.level.update!(header_label: 'Story')
+    assert_equal 'Story', sl.summarize[:header_label]
+
+    with_locale('es-MX') do
+      I18n.backend.store_translations 'es-MX', {
+        'data' => {'header_label' => {sl.level.name => 'Historia'}}
+      }
+      assert_equal 'Historia', sl.summarize[:header_label]
     end
   end
 
@@ -752,7 +772,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
   end
 
-  # Bubble Choice sublevels redirect to their parent level.
+  # Bubble Choice sublevels redirect to their parent level when
+  # navigation_type is unset or 'parent'.
   test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels' do
     student = create(:student)
     student.stubs(:has_pilot_experiment?).returns true
@@ -761,8 +782,52 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = false
-    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/levels/1",
+    parent_path = "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/levels/1"
+    assert_equal parent_path,
                  script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent, unit_group_unit: script_level.script.original_unit_group_unit)
+
+    bubble_choice_level.update!(navigation_type: 'parent')
+    assert_equal parent_path,
+                 script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Bubble Choice sublevels with next_level or next_sublevel navigation skip
+  # the parent redirect and go to the next level mid-lesson.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels with next navigation - mid lesson' do
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+    script = create(:script, :in_single_unit_course, name: 'script1')
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create(:lesson_group, script: script)
+    sublevel = create(:level, name: 'choice1')
+    bubble_choice_level = create(:bubble_choice_level, sublevels: [sublevel])
+    levels = [bubble_choice_level, create(:level)]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: script, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    script_levels[0].stubs(:end_of_lesson?).returns false
+    %w(next_level next_sublevel).each do |navigation_type|
+      bubble_choice_level.update!(navigation_type: navigation_type)
+      assert_equal script_levels[1].path,
+                   script_levels[0].next_level_or_redirect_path_for_user(student, bubble_choice_parent: false)
+    end
+  end
+
+  # Bubble Choice sublevels with next_sublevel navigation at the end of a
+  # lesson get the lesson-end redirect, not the parent page.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels with next_sublevel navigation - end of lesson' do
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+    sublevel = create(:level, name: 'choice1')
+    bubble_choice_level = create(:bubble_choice_level, sublevels: [sublevel])
+    bubble_choice_level.update!(navigation_type: 'next_sublevel')
+    script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1?completedLessonNumber=1",
+                 script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: false, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # For script where show_unit_overview_between_lessons? == true
@@ -783,6 +848,84 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/extras",
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # For lessons with Tutor+ available (AIF/AID), the end of lesson goes to the
+  # lesson deep dive instead of the unit overview / dialog redirect.
+  test 'next_level_or_redirect_path_for_user goes to lesson tutor at end of tutor-available lesson' do
+    student = create(:student)
+    stub_lesson_tutor_experiment(student)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    assert_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Without the experiment, a tutor-available lesson falls back to the normal
+  # end-of-lesson redirect (the unit overview dialog), not the tutor path.
+  test 'next_level_or_redirect_path_for_user skips lesson tutor when experiment disabled' do
+    student = create(:student)
+    Experiment.stubs(:enabled?).returns(false)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    refute_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # The experiment alone does not send a student without deep dive access to the tutor.
+  test 'next_level_or_redirect_path_for_user skips lesson tutor without lesson deep dive access' do
+    student = create(:student)
+    stub_lesson_tutor_experiment(student)
+    student.stubs(:can_use_lesson_deep_dive?).returns(false)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    refute_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Tutor takes precedence over lesson extras for tutor-available lessons.
+  test 'next_level_or_redirect_path_for_user prefers lesson tutor over lesson extras at end of lesson' do
+    student = create(:student)
+    stub_lesson_tutor_experiment(student)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    script_level.script.stubs(:lesson_extras_available).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    assert_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Tutor navigation only applies at the end of a lesson, not mid-lesson.
+  test 'next_level_or_redirect_path_for_user goes to next level mid-lesson even if tutor available' do
+    script = create(:script, :in_single_unit_course, name: 'tutorscript')
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create(:lesson_group, script: script)
+
+    levels = create_list(:level, 2)
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: script, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    script_levels[0].stubs(:end_of_lesson?).returns false
+    script_levels[0].lesson.stubs(:lesson_tutor_available?).returns true
+
+    student = create(:student)
+    stub_lesson_tutor_experiment(student)
+
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
   end
 
   # For script where show_unit_overview_between_lessons? == true
@@ -855,8 +998,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
-    assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
+    unit = create(:unit, :with_levels, levels_count: 2)
+    script_level = ScriptLevel.cache_find(unit.script_levels[0].id)
+    assert_equal(unit.script_levels[0], script_level)
 
     multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
     script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)
@@ -1196,6 +1340,88 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
+  test 'add_variant refuses a UI Test variant in a prod script and leaves no join row' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create(:script, :in_single_unit_course, is_migrated: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    level = create(:level)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest variant')
+
+    assert_raises ActiveRecord::RecordInvalid do
+      script_level.add_variant ui_test_level
+    end
+    assert_equal [level], script_level.reload.levels.to_a
+  end
+
+  test 'add_variant refuses a prod variant in a UI Test script and leaves no join row' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create(:script, :in_single_unit_course, is_migrated: true, name: 'ui-test-script-level-variant')
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest kept variant')
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [ui_test_level])
+
+    assert_raises ActiveRecord::RecordInvalid do
+      script_level.add_variant create(:level, name: 'ScriptLevelTest prod variant')
+    end
+    assert_equal [ui_test_level], script_level.reload.levels.to_a
+  end
+
+  test 'level_keys and their script must be on the same side of the UI Test partition' do
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest level')
+    prod_level = create(:level, name: 'ScriptLevelTest prod level')
+
+    script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-test'))
+    script_level.level_keys = [ui_test_level.key]
+    assert script_level.valid?, script_level.errors.full_messages.to_s
+    script_level.level_keys = [prod_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, prod_level.name
+
+    script_level = create(:script_level, script: create(:script, name: 'script-level-test-prod'))
+    script_level.level_keys = [prod_level.key]
+    assert script_level.valid?, script_level.errors.full_messages.to_s
+    script_level.level_keys = [ui_test_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, ui_test_level.name
+  end
+
+  test 'deprecated blockly levels are exempt from the UI Test partition' do
+    blockly_level = create(:level, level_num: 'script_level_test_maze', game: Game.find_by_name('maze'))
+    assert_equal 'blockly:Maze:script_level_test_maze', blockly_level.key
+
+    ['ui-test-script-level-blockly', 'script-level-blockly-prod'].each do |script_name|
+      script_level = create(:script_level, script: create(:script, name: script_name))
+      script_level.level_keys = [blockly_level.key]
+      assert script_level.valid?, script_level.errors.full_messages.to_s
+    end
+  end
+
+  test 'update_levels enforces the UI Test partition in both directions' do
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest attach')
+    prod_level = create(:level, name: 'ScriptLevelTest prod attach')
+
+    prod_script_level = create(:script_level, script: create(:script, name: 'script-level-attach-prod'))
+    error = assert_raises RuntimeError do
+      prod_script_level.update_levels([{'id' => ui_test_level.id}])
+    end
+    assert_includes error.message, ui_test_level.name
+    prod_script_level.update_levels([{'id' => prod_level.id}])
+    assert_equal [prod_level], prod_script_level.levels.to_a
+
+    ui_test_script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-attach'))
+    error = assert_raises RuntimeError do
+      ui_test_script_level.update_levels([{'id' => prod_level.id}])
+    end
+    assert_includes error.message, prod_level.name
+    ui_test_script_level.update_levels([{'id' => ui_test_level.id}])
+    assert_equal [ui_test_level], ui_test_script_level.levels.to_a
+  end
+
   private def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
@@ -1218,5 +1444,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @user = create(:teacher)
     user_course_enrollment = create(:plc_user_course_enrollment, plc_course: @plc_course_unit.plc_course, user: @user)
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
+  end
+
+  # Enables the 'lesson-tutor' experiment and lesson deep dive access for the
+  # given user and disables the experiment for every other invocation, so the
+  # end-of-lesson tutor branch is gated exactly as it is in production.
+  private def stub_lesson_tutor_experiment(user)
+    Experiment.stubs(:enabled?).returns(false)
+    Experiment.stubs(:enabled?).
+      with(user: user, experiment_name: 'lesson-tutor').returns(true)
+    user.stubs(:can_use_lesson_deep_dive?).returns(true)
   end
 end

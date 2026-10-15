@@ -1,11 +1,11 @@
 /** @file Upload button wrapping a hidden uploader component. */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import {assetButtonStyles} from './AddAssetButtonRow';
 import HiddenUploader from './HiddenUploader.jsx';
 
 /**
@@ -46,16 +46,17 @@ export default class AssetUploader extends React.Component {
           onUploadDone={uploadDone}
           onUploadError={this.props.onUploadError}
         />
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={this.fileUploadClicked}
-          className="share"
           id="upload-asset"
           disabled={!this.props.uploadsEnabled}
-          icon="upload"
-          text={i18n.uploadFile()}
-          style={assetButtonStyles.button}
-          size="large"
-        />
+          startIcon={<FontAwesomeV6Icon iconName="upload" iconStyle="solid" />}
+        >
+          {i18n.uploadFile()}
+        </MuiButton>
       </span>
     );
   }

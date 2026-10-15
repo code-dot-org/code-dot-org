@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 18:32:59 UTC",
+    "serialized_at": "2026-08-26 17:09:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6697,6 +6697,21 @@
       }
     },
     {
+      "name": "Answering A Data Question",
+      "url": "https://docs.google.com/document/d/1VQdAbsIQbaOy10GuB8Bz0cOIwyDdQxcC36ToJh6ji20/",
+      "key": "answering_a_data_question",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "answering_a_data_question"
+      }
+    },
+    {
       "name": "Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1-6K-naoslwsVFXmkZ6mHVZdky8r0yJoh-tETk-tE1hc/edit?usp=drive_link",
       "key": "cleaning_data",
@@ -6734,6 +6749,20 @@
       },
       "seeding_key": {
         "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
+      "name": "Data Collection Methods",
+      "url": "https://docs.google.com/document/d/1haNDyY-9rcbURHiJo3_3dSTWf7mIdiTDZHqbPf1tRJs/",
+      "key": "data_collection_methods",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_collection_methods"
       }
     },
     {
@@ -6837,6 +6866,21 @@
       }
     },
     {
+      "name": "Ethical Data Collection",
+      "url": "https://docs.google.com/presentation/d/1O6KKdwFNCpWrkLYD9UixqvqocZB8gbb7p-gyjYFbEzY/",
+      "key": "ethical_data_collection",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ethical_data_collection"
+      }
+    },
+    {
       "name": "Guide to Anchor Charts and Word Walls",
       "url": "https://docs.google.com/document/d/1vbXbb8Yd3YQ7nIBgXO5IC9nFmRgeZmtNnLD6RzY2xUI/edit?tab=t.0",
       "key": "guide_to_anchor_charts_and_word_walls",
@@ -6854,6 +6898,20 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_language_routines"
+      }
+    },
+    {
+      "name": "Insights from Data and AI Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/19C1INdm23V2PBKQROV66hHMIQTs_CTvMpbKaO2DtqfI/",
+      "key": "insights_from_data_and_ai_dataset",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_dataset"
       }
     },
     {
@@ -6892,6 +6950,21 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_data_visualization"
+      }
+    },
+    {
+      "name": "Making Sense of Data",
+      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/",
+      "key": "making_sense_of_data",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_sense_of_data"
       }
     },
     {
@@ -7136,6 +7209,36 @@
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Data Science",
         "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making Sense of Data",
+        "resource.key": "answering_a_data_question"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making Sense of Data",
+        "resource.key": "insights_from_data_and_ai_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making Sense of Data",
+        "resource.key": "making_sense_of_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Ethical Data Collection",
+        "resource.key": "data_collection_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Ethical Data Collection",
+        "resource.key": "ethical_data_collection"
       }
     },
     {

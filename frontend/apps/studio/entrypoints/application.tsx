@@ -4,6 +4,7 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {initializeCore} from '@code-dot-org/core';
+import {consentPlugin} from '@code-dot-org/core/plugins/consent';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
 import {injectFontAwesome} from '@code-dot-org/fonts';
@@ -16,7 +17,9 @@ import queryClient from '@/modules/router/queryClient';
 const mount = document.getElementById('vite-root');
 
 if (typeof window !== 'undefined') {
-  initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
+  initializeCore({
+    plugins: [localizationPlugin, observabilityPlugin, consentPlugin],
+  });
   // Import FontAwesome into the `base` layer (declared below `mui` in
   // __root.tsx) so MUI's layered styleOverrides win over FA's base icon rules.
   injectFontAwesome({layer: 'base'});

@@ -28,6 +28,7 @@
 #  avatar_emoji         :integer
 #  ai_chat_access_level :string(255)      default("disabled")
 #  demo_type            :string(255)
+#  ai_tutor_enabled     :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -197,17 +198,18 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at suggested_lesson)
+  serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
 
-  SUGGESTED_LESSON_TTL = 1.hour
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+  SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10
 
   def suggested_lesson_stale?
     data = suggested_lesson
     return true if data.nil?
+    return true if suggested_lesson_history.nil?
     timestamp = data['timestamp']
     return true if timestamp.blank?
-    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+    Time.parse(timestamp.to_s).to_date < Time.zone.today
   rescue ArgumentError
     true
   end
@@ -225,7 +227,10 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
-    numbered_lessons = unit.lessons.select(&:numbered_lesson?)
+    # A lesson with no lesson plan has nothing for a teacher to prep, so it's
+    # never something this feature can suggest - drop it from the sequence
+    # entirely rather than let it turn up as next_lesson/coming_up.
+    numbered_lessons = unit.lessons.select {|lesson| lesson.numbered_lesson? && lesson.has_lesson_plan}
     checked_last_lesson = false
     threshold = [section_students.size / 2.0, 3].min
 
@@ -265,13 +270,32 @@ class Section < ApplicationRecord
                     lessons.first
                   end
 
-    update!(
-      suggested_lesson: if finished_unit
-                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
-                        else
-                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
-                        end
-    )
+    new_value = if finished_unit
+                  {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                else
+                  {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                end
+
+    coming_up = if finished_unit
+                  # derived from new_value, not a separate literal, so this can never
+                  # disagree with what suggested_lesson itself says for today.
+                  new_value.except('timestamp')
+                else
+                  idx = numbered_lessons.index(next_lesson)
+                  next_next = numbered_lessons[idx + 1]
+                  next_next ? {'lesson_id' => next_next.id} : {'completed_unit' => true}
+                end
+
+    today = Time.zone.today.iso8601
+    cutoff = (Time.zone.today - SUGGESTED_LESSON_HISTORY_MAX_DAYS).iso8601
+    history = (suggested_lesson_history || []).
+      reject {|entry| entry['date'] == today || entry['date'] < cutoff}
+    # coming_up is only ever read for the current day (see suggested_lessons
+    # in SectionsController), so it's stored on suggested_lesson itself
+    # rather than duplicated into every history entry.
+    history << new_value.merge('date' => today)
+
+    update!(suggested_lesson: new_value.merge('coming_up' => coming_up), suggested_lesson_history: history)
   end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
@@ -281,12 +305,14 @@ class Section < ApplicationRecord
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_CLASSLINK = 'classlink'.freeze,
     LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
   ]
 
   LOGIN_TYPES_OAUTH = [
     LOGIN_TYPE_GOOGLE_CLASSROOM,
-    LOGIN_TYPE_CLEVER
+    LOGIN_TYPE_CLEVER,
+    LOGIN_TYPE_CLASSLINK
   ]
 
   TYPES = [
@@ -400,7 +426,7 @@ class Section < ApplicationRecord
     return unless unit_group
     MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
   rescue => exception
-    Honeybadger.notify(exception)
+    Observability::Errors.report(exception)
   end
 
   # return a version of self.students in which all students' names are
@@ -593,6 +619,7 @@ class Section < ApplicationRecord
   # This is only needed for the teacher dashboard SELECTED section.
   def selected_section_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
+      ai_chat_dependency = assigned_ai_chat_tools_dependency
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
       if login_type == LOGIN_TYPE_LTI_V1
         issuer = lti_course.lti_integration.issuer
@@ -630,7 +657,8 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
-        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+        assigned_ai_chat_tools_dependency: ai_chat_dependency,
+        assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
         ai_chat_access_level: ai_chat_access_level,
       }
     end
@@ -639,8 +667,13 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the student homepage.
   # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
-  def summarize(include_students: true)
-    ActiveRecord::Base.connected_to(role: :reading) do
+  #
+  # role: defaults to :reading (replica), but callers that just wrote data this same request
+  # (e.g. right after Section#add_student) should pass :writing to read their own write back
+  # from the primary, since the replica may not have caught up yet.
+  def summarize(include_students: true, role: :reading)
+    ActiveRecord::Base.connected_to(role: role) do
+      ai_chat_dependency = assigned_ai_chat_tools_dependency
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =
@@ -718,7 +751,8 @@ class Section < ApplicationRecord
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
-          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+          assigned_ai_chat_tools_dependency: ai_chat_dependency,
+          assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
           ai_chat_access_level: ai_chat_access_level,
         }
       )
@@ -842,17 +876,25 @@ class Section < ApplicationRecord
   end
 
   # Returns true if any student in the section has ever made progress on any unit
-  # in any course that the instructor of the section can be an instructor for.
+  # in any course whose progress the instructor of the section is allowed to see.
   def any_student_has_progress?
     units = Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)})
     unit_groups = units.map(&:unit_groups).flatten.uniq
-    unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
+    unit_groups.any? {|unit_group| unit_group.course_progress_viewable?(user)}
   end
 
   def assigned_ai_chat_tools_dependency
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
     SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
+  end
+
+  # Whether this section's assigned unit or course has levels required
+  # AI chat tools that are going to be blocked due to the teacher's region
+  def required_inaccessible_ai_models?(dependency = assigned_ai_chat_tools_dependency)
+    return false unless dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]
+    assigned = script || unit_group
+    !!assigned&.requires_inaccessible_ai_models?(user)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

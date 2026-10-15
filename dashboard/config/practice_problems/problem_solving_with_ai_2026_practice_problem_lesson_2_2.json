@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_2",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "A friend wants help identifying a bird species. Which combination of inputs would likely give an AI model the most complete information to work with?",
+  "solution": [
+    {"option": "Only a written description.", "correct": false},
+    {"option": "Only a video with no sound.", "correct": false},
+    {"option": "A picture and a written description together.", "correct": true},
+    {"option": "Nothing, since AI cannot identify birds.", "correct": false}
+  ],
+  "objective_keys": [
+    "beaec579-1df2-4014-bfc7-8df13308ced1"
+  ]
+}

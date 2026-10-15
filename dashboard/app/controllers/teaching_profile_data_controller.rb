@@ -1,4 +1,5 @@
 class TeachingProfileDataController < ApplicationController
+  before_action :force_json
   before_action :authenticate_user!
 
   # GET /teaching_profile_data
@@ -39,5 +40,9 @@ class TeachingProfileDataController < ApplicationController
     else
       render status: :not_found, json: "No teaching profile data found to update. Please create data first."
     end
+  end
+
+  private def force_json
+    request.format = :json
   end
 end

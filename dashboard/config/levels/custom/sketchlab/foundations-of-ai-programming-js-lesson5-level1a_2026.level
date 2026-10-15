@@ -26,7 +26,8 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "var(--sketchlab-stroke-default)"
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "locked": true
             },
             "measured": {
               "width": 774,
@@ -42,21 +43,21 @@
             "id": "Z7XqbIyy3wiM7mH-3yT4X",
             "type": "text",
             "position": {
-              "x": -313.5743045772573,
-              "y": -37.27804254924514
+              "x": -595.4751849075016,
+              "y": -147.18931910068142
             },
             "data": {
               "text": "Add wireframe components or pre-built sections\nto create your pages below",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
+              "fontSize": 62,
               "showHandles": false
             },
             "measured": {
-              "width": 548,
+              "width": 1428,
               "height": 95
             },
             "dragging": false,
-            "width": 548,
+            "width": 1427.5727321003637,
             "height": 95,
             "resizing": false
           },
@@ -84,99 +85,6 @@
             "zIndex": -4
           },
           {
-            "id": "FpNEJgFlN1Xbo3L-h7aYO",
-            "type": "text",
-            "position": {
-              "x": 258.01470306213355,
-              "y": 10.148829187469303
-            },
-            "data": {
-              "text": "Page 1",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 81,
-              "height": 47
-            }
-          },
-          {
-            "id": "k6N3a3hmJZUnB-QaTJCVJ",
-            "type": "text",
-            "position": {
-              "x": 998.9634828296096,
-              "y": 8.442881909669723
-            },
-            "data": {
-              "text": "Page 2",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
-            }
-          },
-          {
-            "id": "TIBRtnhBQpMbqvds0h3ur",
-            "type": "text",
-            "position": {
-              "x": -550.6242596391037,
-              "y": 422.71824988519353
-            },
-            "data": {
-              "text": "Images, Videos, & Icons",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 251,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "7rTlalsCE0rjvfT-fCasc",
-            "type": "text",
-            "position": {
-              "x": -545.9389438369483,
-              "y": 110.22204345533106
-            },
-            "data": {
-              "text": "Wireframe Components",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 255,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "FbgxPT6yV_KF6GFOkKfPk",
-            "type": "text",
-            "position": {
-              "x": -301.61559941787084,
-              "y": 1681.5973095432269
-            },
-            "data": {
-              "text": "Gallery Card",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 139,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
             "id": "AGeQVlOHk3etO0ryuxnQB",
             "type": "text",
             "position": {
@@ -199,30 +107,11 @@
             "dragging": false
           },
           {
-            "id": "7bBlsG55ju0q-Vkn5GKVw",
-            "type": "text",
-            "position": {
-              "x": -744.1088127735593,
-              "y": 1681.7525270992587
-            },
-            "data": {
-              "text": "Hero Section",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 148,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
             "id": "Nbg0dpcgyiuhohNYZrLb2",
             "type": "shape",
             "position": {
-              "x": -546.2047976631457,
-              "y": 1269.8513149849953
+              "x": -621.7047976631457,
+              "y": 1205.8513149849953
             },
             "style": {
               "width": 176.55484068627447,
@@ -244,8 +133,8 @@
             "id": "MXpn2_CPMZ9-T2unTody_",
             "type": "shape",
             "position": {
-              "x": -551.3151490612345,
-              "y": 1314.0738499077238
+              "x": -652.8151490612345,
+              "y": 1262.5738499077238
             },
             "style": {
               "width": 310.6081495098033,
@@ -267,8 +156,8 @@
             "id": "A7PtDhLqFIS37X-J040fd",
             "type": "shape",
             "position": {
-              "x": -546.7610553224595,
-              "y": 1348.495213848379
+              "x": -653.2610553224595,
+              "y": 1285.495213848379
             },
             "style": {
               "width": 310.6081495098033,
@@ -290,8 +179,8 @@
             "id": "7S1vcXjhex8jr8oEsHnNQ",
             "type": "shape",
             "position": {
-              "x": -544.6609162330639,
-              "y": 1381.3319552474977
+              "x": -653.533774410886,
+              "y": 1309.4547284893238
             },
             "style": {
               "width": 265.0773590686267,
@@ -306,82 +195,6 @@
             "measured": {
               "width": 265,
               "height": 12
-            },
-            "dragging": false
-          },
-          {
-            "id": "GZ798EwTOo8h_zMxM6VT5",
-            "type": "text",
-            "position": {
-              "x": -690.5019336806422,
-              "y": 1269.6813265383275
-            },
-            "data": {
-              "text": "(Title)",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 60,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "T8EdXQDQ9JT7H1Tpx1_1t",
-            "type": "text",
-            "position": {
-              "x": -699.88402783297,
-              "y": 1343.3999449402943
-            },
-            "data": {
-              "text": "(Body Text)",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 100,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "Uf0tLSpxVEoNZGEg5iDxR",
-            "type": "text",
-            "position": {
-              "x": -674.5957036807681,
-              "y": 1174.023756896391
-            },
-            "data": {
-              "text": "Text Blocks",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 129,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "lbx9w9gvgrmjWwTT4G5ur",
-            "type": "text",
-            "position": {
-              "x": -539.2005019953557,
-              "y": 169.4187420301894
-            },
-            "data": {
-              "text": "Navigation / Header",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 217,
-              "height": 47
             },
             "dragging": false
           },
@@ -433,8 +246,8 @@
             "id": "VaVWwkAQLKNEMQiZ-Eroy",
             "type": "shape",
             "position": {
-              "x": -734.4278568135607,
-              "y": 238.50882332982303
+              "x": -493.53730082449596,
+              "y": 287.6182506864254
             },
             "style": {
               "width": 164.87851581501013,
@@ -451,294 +264,6 @@
               "height": 67
             },
             "dragging": false
-          },
-          {
-            "id": "FehqbfiByo0chx10s6k7K",
-            "type": "text",
-            "position": {
-              "x": -466.76628566411773,
-              "y": 243.63334023133274
-            },
-            "data": {
-              "text": "Header",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 90,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "4o8MDMWlVABcOMhLv9tCE",
-            "type": "text",
-            "position": {
-              "x": -490.7543331385879,
-              "y": 325.4874094813052
-            },
-            "data": {
-              "text": "Navigation",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 125,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "a0THxKWmm_0ZRAedwCQo9",
-            "type": "text",
-            "position": {
-              "x": -224.28935789709527,
-              "y": 242.89031479308477
-            },
-            "data": {
-              "text": "Link",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 58,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "QYnfJWM-pWbWnSqCvq3Cl",
-            "type": "shape",
-            "position": {
-              "x": -318.46178106376624,
-              "y": 1173.7876949585734
-            },
-            "style": {
-              "width": 102.36618498818295,
-              "height": 102.36618498818295
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "var(--sketchlab-stroke-default)"
-            },
-            "measured": {
-              "width": 102,
-              "height": 102
-            },
-            "dragging": false,
-            "zIndex": 2
-          },
-          {
-            "id": "JraPN4rzcaAhiz7t42S1_",
-            "type": "text",
-            "position": {
-              "x": -572.5925680971574,
-              "y": 1439.1693754779835
-            },
-            "data": {
-              "text": "Pre-Built Wireframe Sections",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 303,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "QAEFXLh6L0nqeDCViqW-m",
-            "type": "text",
-            "position": {
-              "x": -525.2708095881638,
-              "y": 1522.5882528874452
-            },
-            "data": {
-              "text": "Navigation Bar",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 163,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "P0Y9Dt7vHaGNI67yqVyNE",
-            "type": "text",
-            "position": {
-              "x": -460.75163751650143,
-              "y": 2017.0814315980151
-            },
-            "data": {
-              "text": "Footer",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 83,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "rBZH2TySf8ighzBGSIOJ1",
-            "type": "text",
-            "position": {
-              "x": 251.22939113979214,
-              "y": 1104.904697069577
-            },
-            "data": {
-              "text": "Page 3",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
-            }
-          },
-          {
-            "id": "ujlY9MuwgObgfQn1hdVWi",
-            "type": "text",
-            "position": {
-              "x": 992.1781709072682,
-              "y": 1103.1987497917776
-            },
-            "data": {
-              "text": "Page 4",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 86,
-              "height": 47
-            }
-          },
-          {
-            "id": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
-            "type": "lineAnchor",
-            "position": {
-              "x": -306.4977850117635,
-              "y": 1199.7433960687026
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
-            "type": "lineAnchor",
-            "position": {
-              "x": -248.92105695639594,
-              "y": 1199.7433960687026
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
-            "type": "lineAnchor",
-            "position": {
-              "x": -306.4977850117634,
-              "y": 1223.280439282731
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
-            "type": "lineAnchor",
-            "position": {
-              "x": -248.9210569563959,
-              "y": 1223.280439282731
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
-            "type": "lineAnchor",
-            "position": {
-              "x": -306.4977850117634,
-              "y": 1248.9450721999494
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
-            "type": "lineAnchor",
-            "position": {
-              "x": -248.9210569563959,
-              "y": 1248.9450721999494
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
           },
           {
             "id": "12e82a02-950f-4636-b103-1b13fdfe4ebd",
@@ -1442,8 +967,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -370.08880914184283,
-              "y": 317.79960981003825
+              "x": -672.1117873849478,
+              "y": 296.9281031834823
             },
             "width": 80,
             "height": 60,
@@ -1464,8 +989,8 @@
               "rotation": 180
             },
             "position": {
-              "x": -565.0739480154585,
-              "y": 317.7996098100382
+              "x": -724.6795869244164,
+              "y": 296.92810318348216
             },
             "width": 80,
             "height": 60,
@@ -1605,14 +1130,14 @@
               "showHandles": false
             },
             "position": {
-              "x": -738.7716764037275,
-              "y": 1910.0273817910238
+              "x": -737.8258544848264,
+              "y": 2062.4754857847583
             },
-            "width": 653,
-            "height": 362,
+            "width": 690.2071124460741,
+            "height": 88.86651251283456,
             "measured": {
-              "width": 653,
-              "height": 362
+              "width": 690,
+              "height": 89
             },
             "dragging": false,
             "resizing": false
@@ -1626,14 +1151,14 @@
               "showHandles": false
             },
             "position": {
-              "x": -779.0044720801668,
-              "y": 1526.5313232208462
+              "x": -756.4965070008791,
+              "y": 1526.1085547137786
             },
-            "width": 715,
-            "height": 168,
+            "width": 719.2280721622456,
+            "height": 85.97536134327993,
             "measured": {
-              "width": 715,
-              "height": 168
+              "width": 719,
+              "height": 86
             },
             "dragging": false,
             "resizing": false,
@@ -1669,13 +1194,13 @@
             },
             "position": {
               "x": -782.4554342948511,
-              "y": 1698.0179997212422
+              "y": 1736.0706491814522
             },
-            "width": 450,
-            "height": 310,
+            "width": 471.98596234062444,
+            "height": 271.94735053979025,
             "measured": {
-              "width": 450,
-              "height": 310
+              "width": 472,
+              "height": 272
             },
             "dragging": false,
             "resizing": false
@@ -1773,36 +1298,578 @@
             },
             "dragging": false,
             "zIndex": -5
+          },
+          {
+            "id": "6e94a587-2d97-4d38-98d9-fb2b3b7e06c3",
+            "type": "text",
+            "data": {
+              "text": "Wireframe Components",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -588.2210653355841,
+              "y": 97.82177361162996
+            },
+            "width": 363.44464570988976,
+            "height": 71.43230876377083,
+            "measured": {
+              "width": 363,
+              "height": 71
+            },
+            "dragging": false
+          },
+          {
+            "id": "cfc18a6f-524a-4db7-ba3a-01d780489b2b",
+            "type": "text",
+            "data": {
+              "text": "Navigation",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -788.2694614133679,
+              "y": 241.63924643219795
+            },
+            "width": 281.2566907859241,
+            "height": 60.98217356012418,
+            "measured": {
+              "width": 281,
+              "height": 61
+            },
+            "dragging": false
+          },
+          {
+            "id": "6fe21152-f001-4718-8194-f03064d1fc58",
+            "type": "text",
+            "data": {
+              "text": "Logo",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -553.2885588852736,
+              "y": 239.85832633153763
+            },
+            "width": 295.9895189929048,
+            "height": 60,
+            "measured": {
+              "width": 296,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "75dcaa20-5ef5-4abe-ab95-9f7f70d6c5e5",
+            "type": "text",
+            "data": {
+              "text": "Links",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -203.5233275470193,
+              "y": 248.075527857403
+            },
+            "width": 100.09981453824372,
+            "height": 60,
+            "measured": {
+              "width": 100,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "094c07c7-e593-4677-af4a-d0fb80f4b344",
+            "type": "text",
+            "data": {
+              "text": "Images, Videos, & Icons",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -596.0488694835501,
+              "y": 408.05811502790084
+            },
+            "width": 378.4932970039654,
+            "height": 60,
+            "measured": {
+              "width": 379,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "f4366bbb-1367-4b6d-b9c2-e921f511f1fc",
+            "type": "text",
+            "data": {
+              "text": "Navigation / Header",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -586.958446380637,
+              "y": 151.8421437038926
+            },
+            "width": 363.44464570988976,
+            "height": 71.43230876377083,
+            "measured": {
+              "width": 363,
+              "height": 71
+            },
+            "dragging": false
+          },
+          {
+            "id": "49f94034-9c92-4a8f-a023-5d2f129cff03",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/137c2789-b97e-47eb-a6c7-3fdb730acfa8.png",
+              "altText": "Size=Large, Type=Solid",
+              "showHandles": false
+            },
+            "position": {
+              "x": -235.3371028829063,
+              "y": 294.7227639035519
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "8ae1b8e4-1f2e-438e-9530-73537cd621c3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/4e55470e-4adb-46ef-8568-c311c6498405.png",
+              "altText": "Size=Large, Type=Outline",
+              "showHandles": false
+            },
+            "position": {
+              "x": -144.2383301361063,
+              "y": 293.9153177277608
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "0207c392-f724-471c-af61-6bbde0edaa26",
+            "type": "text",
+            "position": {
+              "x": -508.7175911602632,
+              "y": 1140.6843469072112
+            },
+            "data": {
+              "text": "Text Blocks",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 191,
+              "height": 60
+            },
+            "width": 191,
+            "height": 60,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "25231274-68e4-4f73-8a8a-6d28af15380c",
+            "type": "text",
+            "data": {
+              "text": "(Title)"
+            },
+            "position": {
+              "x": -721.2935953987842,
+              "y": 1190.2193807478627
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "1bfe11fb-fbdb-4c30-a555-39e133ebbf5a",
+            "type": "text",
+            "data": {
+              "text": "(Body Text)"
+            },
+            "position": {
+              "x": -722.2935953987842,
+              "y": 1252.2193807478627
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "7c6d1c0f-ff7d-43b1-b4da-91e731119297",
+            "type": "text",
+            "position": {
+              "x": -619.8948057114059,
+              "y": 1422.1843469072112
+            },
+            "data": {
+              "text": "Pre-Built Wireframe Section",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 419,
+              "height": 63
+            },
+            "width": 418.5999755859375,
+            "height": 63.20001220703125,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "bf37698d-6fa1-42b5-bfe2-fe3c2368c587",
+            "type": "text",
+            "position": {
+              "x": -503.01601360011455,
+              "y": 1474.7020477246074
+            },
+            "data": {
+              "text": "Navigation Bar",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 191,
+              "height": 60
+            },
+            "width": 191,
+            "height": 60,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "f76e136f-c4bb-4ae2-a6f6-e87a2a5429a4",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": -292.5805203033759,
+              "y": 1177.6321220486864
+            },
+            "width": 238.2975394114728,
+            "height": 196.13897660835437,
+            "measured": {
+              "width": 238,
+              "height": 196
+            },
+            "dragging": false
+          },
+          {
+            "id": "fe508fc4-0060-401d-9f5d-0e15f9087290",
+            "type": "lineAnchor",
+            "position": {
+              "x": -246.38198378485995,
+              "y": 1287.1850360752424
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "887564e1-fefd-4dd4-87f3-c20673ee10b7",
+            "type": "lineAnchor",
+            "position": {
+              "x": -99.89153332453596,
+              "y": 1287.1850360752424
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "104eb88d-c9ff-4730-a78b-a78a7dc11b2a",
+            "type": "lineAnchor",
+            "position": {
+              "x": -248.60754494895704,
+              "y": 1315.409399211908
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "4ac62a80-ccbe-492c-9445-1344c67045d6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -97.8890223263875,
+              "y": 1314.3523811713467
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "4bfe233e-1c25-415b-9a35-013ccb48861b",
+            "type": "lineAnchor",
+            "position": {
+              "x": -234.924583798809,
+              "y": 1226.3798238498598
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "548d00f3-e845-46f1-8755-b1716d680ed4",
+            "type": "lineAnchor",
+            "position": {
+              "x": -104.33518192455747,
+              "y": 1227.257414201745
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "5161087c-562f-4ebd-8c1f-0d862b5aef43",
+            "type": "lineAnchor",
+            "position": {
+              "x": -110.48066932563906,
+              "y": 1259.3685066419528
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            },
+            "dragging": false
+          },
+          {
+            "id": "baf78455-1c9f-45be-b1b1-8c655cf06dcf",
+            "type": "lineAnchor",
+            "position": {
+              "x": -230.08597523179142,
+              "y": 1258.6958398345125
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "8f921382-7b10-4856-bdec-78d0c8495646",
+            "type": "text",
+            "data": {
+              "text": "Hero Section",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -639.4103165047263,
+              "y": 1655.4030813558327
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d8b2168a-a7f5-461a-b137-25efffea1e08",
+            "type": "text",
+            "data": {
+              "text": "Gallery Card",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -238.87668011127877,
+              "y": 1660.8875616644782
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "0521bedb-733d-4d94-8569-a1669f85ab3b",
+            "type": "text",
+            "data": {
+              "text": "Footer",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -477.38022527739895,
+              "y": 2021.2686315924966
+            },
+            "width": 182.83156387002134,
+            "height": 60,
+            "measured": {
+              "width": 183,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "5664fcae-7be3-4cd9-9ae3-d52df90961fd",
+            "type": "text",
+            "data": {
+              "text": "Page 1",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 265.0104287267134,
+              "y": 4.855655193967145
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "23328e3a-1ef7-4308-985c-63279d8a6607",
+            "type": "text",
+            "data": {
+              "text": "Page 2",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 969.9467238848445,
+              "y": 4.855655193967145
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "00f438c2-c695-4a4d-98a6-72a3d7eac3b7",
+            "type": "text",
+            "data": {
+              "text": "Page 3",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 252.0858228702263,
+              "y": 1084.7901975742145
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "273abee5-6a94-49df-baf5-103d25d1d1c4",
+            "type": "text",
+            "data": {
+              "text": "Page 4",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 957.0221180283572,
+              "y": 1091.415562864891
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
           }
         ],
         "edges": [
-          {
-            "id": "9873ab05-56b8-41d0-9d30-cb4131e953bc",
-            "source": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
-            "target": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)"
-            }
-          },
-          {
-            "id": "252c5383-b02a-4576-a3ce-ac8684963e86",
-            "source": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
-            "target": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)"
-            }
-          },
-          {
-            "id": "42f3b23c-5003-4daa-a21e-503bed5b64f1",
-            "source": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
-            "target": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
-            "type": "straight",
-            "style": {
-              "stroke": "var(--sketchlab-stroke-default)"
-            }
-          },
           {
             "id": "7810001e-6b8e-4fc3-ba86-b0e77196d518",
             "source": "4dfe0997-22a1-4de9-ac57-cd4931fc3b00",
@@ -1832,12 +1899,62 @@
               "stroke": "var(--sketchlab-stroke-default)",
               "strokeWidth": 5
             }
+          },
+          {
+            "id": "abe26649-4722-468d-9f58-86580598aded",
+            "source": "fe508fc4-0060-401d-9f5d-0e15f9087290",
+            "target": "887564e1-fefd-4dd4-87f3-c20673ee10b7",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            }
+          },
+          {
+            "id": "c55313dc-a07b-4e78-a5e2-41d6344cc78c",
+            "source": "104eb88d-c9ff-4730-a78b-a78a7dc11b2a",
+            "target": "4ac62a80-ccbe-492c-9445-1344c67045d6",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target"
+          },
+          {
+            "id": "c78f82de-c789-4ce7-8006-2442eaf9aaf5",
+            "source": "4bfe233e-1c25-415b-9a35-013ccb48861b",
+            "target": "548d00f3-e845-46f1-8755-b1716d680ed4",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "sourceHandle": "line-anchor-source",
+            "targetHandle": "line-anchor-target",
+            "data": {
+              "rotation": 26
+            }
+          },
+          {
+            "id": "95a42636-562a-457f-90ff-f756d363853a",
+            "source": "5161087c-562f-4ebd-8c1f-0d862b5aef43",
+            "target": "baf78455-1c9f-45be-b1b1-8c655cf06dcf",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "data": {
+              "rotation": 159
+            }
           }
         ],
         "viewport": {
-          "x": 465.9075662096251,
-          "y": 21.590400710858148,
-          "zoom": 0.35713591088452074
+          "x": 550.5175639534316,
+          "y": 115.13290820788325,
+          "zoom": 0.33171128514929044
         }
       }
     },
@@ -6714,8 +6831,9 @@
         }
       }
     },
-    "name_suffix": "_-js-2026"
+    "name_suffix": "_-js-2026",
+    "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-13T04:45:33.406+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_-js-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_-js-2026\"},{\"changed_at\":\"2026-07-13 04:45:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-13T04:45:33.406+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_-js-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_-js-2026\"},{\"changed_at\":\"2026-07-13 04:45:36 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-24 19:02:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:03:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:14:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:15:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

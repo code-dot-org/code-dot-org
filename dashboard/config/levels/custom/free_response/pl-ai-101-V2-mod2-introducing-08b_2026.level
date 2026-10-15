@@ -21,7 +21,7 @@
     "stay_on_level_after_submit": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:17:15.036+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-introducing-08b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-introducing-08b\"},{\"changed_at\":\"2026-05-21 13:58:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:17:15.036+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-introducing-08b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-introducing-08b\"},{\"changed_at\":\"2026-05-21 13:58:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-09-11 15:59:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2026-09-11 16:14:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -46,13 +46,17 @@ module Scrapbook
     def self.verify_token(token)
       message = Base64.urlsafe_decode64(token.to_s)
       payload = verifier.verify(message, purpose: TOKEN_PURPOSE)
+      return nil unless payload.is_a?(Hash) && payload.key?('user_id') && payload.key?('filename')
       {user_id: payload['user_id'], filename: payload['filename']}
     rescue StandardError
       nil
     end
 
     def self.verifier
-      Rails.application.message_verifier(TOKEN_PURPOSE)
+      ActiveSupport::MessageVerifier.new(
+        Rails.application.key_generator.generate_key(TOKEN_PURPOSE),
+        serializer: JSON
+      )
     end
 
     # Sniffs the image type from the leading bytes rather than trusting the

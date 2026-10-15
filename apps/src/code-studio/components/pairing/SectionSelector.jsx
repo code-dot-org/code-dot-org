@@ -1,3 +1,4 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,40 +10,44 @@ import {studentsShape} from './types';
 /**
  * Section selector component, for students in multiple sections.
  */
-export default class SectionSelector extends React.Component {
-  static propTypes = {
-    sections: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number,
-        name: PropTypes.string,
-        students: studentsShape,
-      })
-    ),
-    selectedSectionId: PropTypes.number,
-    handleChange: PropTypes.func.isRequired,
-  };
-
-  render() {
-    if (this.props.sections.length === 0 || this.props.sections.length === 1) {
-      return null;
-    }
-
-    const sections = sortSectionsList(this.props.sections);
-    return (
-      <select
-        name="sectionId"
-        value={this.props.selectedSectionId}
-        onChange={this.props.handleChange}
-      >
-        <option key="blank" value="">
-          {i18n.chooseSection()}
-        </option>
-        {sections.map(section => (
-          <option key={section.id} value={section.id}>
-            {section.name}
-          </option>
-        ))}
-      </select>
-    );
+export default function SectionSelector({
+  sections,
+  selectedSectionId,
+  handleChange,
+}) {
+  if (sections.length === 0 || sections.length === 1) {
+    return null;
   }
+
+  const sortedSections = sortSectionsList(sections);
+  const items = [
+    {value: '', text: i18n.chooseSection()},
+    ...sortedSections.map(section => ({
+      value: String(section.id),
+      text: section.name,
+    })),
+  ];
+
+  return (
+    <SimpleDropdown
+      name="sectionId"
+      labelText={i18n.chooseSection()}
+      isLabelVisible={false}
+      items={items}
+      selectedValue={String(selectedSectionId ?? '')}
+      onChange={handleChange}
+    />
+  );
 }
+
+SectionSelector.propTypes = {
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      students: studentsShape,
+    })
+  ),
+  selectedSectionId: PropTypes.number,
+  handleChange: PropTypes.func.isRequired,
+};

@@ -105,7 +105,10 @@ export function useFocusManagement(
       setLastFocusedEntry(entry);
       setNodeOrEdgeFocused(true);
       element.focus();
-      panToEntryIfNeeded(entry, element);
+      // Only pan for keyboard events, not pointer clicks.
+      if (!focusFromPointerRef.current) {
+        panToEntryIfNeeded(entry, element);
+      }
     },
     [panToEntryIfNeeded, setLastFocusedEntry, setNodeOrEdgeFocused]
   );

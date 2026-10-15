@@ -40,6 +40,7 @@ export enum BlockStyles {
   TEXT = 'text_blocks',
   COLOR = 'colour_blocks',
   BEHAVIOR = 'behavior_blocks',
+  SPRITE = 'sprite_blocks',
   LAB_BLOCKS = 'lab_blocks',
 }
 

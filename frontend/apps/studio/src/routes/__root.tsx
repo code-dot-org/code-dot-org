@@ -1,8 +1,10 @@
 // Ensure critical fonts are loaded very early.
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 
 import {
   Box,
@@ -14,18 +16,31 @@ import {
   createRootRoute,
   HeadContent,
   Outlet,
+  useMatches,
   useRouter,
 } from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {
+  getMuiThemeForBrand,
+  resolveBrand,
+} from '@code-dot-org/component-library/themes';
+import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import SiteHeader from '@/components/header';
-import {fetchAuthOutcome, useAuth} from '@/modules/auth';
+import {
+  fetchAuthOutcome,
+  primeCsrfToken,
+  primeCurrentUser,
+  useAuth,
+} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
+import {queryClient} from '@/modules/queryClient';
+
+import {shouldHideFooter} from './shouldHideFooter';
 
 /**
  * Maps auth status to the route content area.
@@ -66,6 +81,7 @@ function RootContent() {
   const auth = useAuth();
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
+  const hideFooter = shouldHideFooter(useMatches());
 
   return (
     <>
@@ -77,7 +93,7 @@ function RootContent() {
       <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
         {renderRouteArea(auth, onRetry)}
       </Box>
-      <StudioFooter />
+      {!hideFooter && <StudioFooter />}
       <TanStackRouterDevtools />
     </>
   );
@@ -97,30 +113,44 @@ const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
 );
 
+// frontend_studio/index.html.haml stamps data-brand; the Vite dev shell does not.
+document.documentElement.dataset.brand = resolveBrand(
+  document.documentElement.dataset.brand,
+);
+
+const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
+
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
-    <StyledEngineProvider enableCssLayer>
-      <HeadContent />
-      {cssLayerOrder}
-      <ThemeProvider theme={CdoTheme}>
-        {responsiveFloorStyles}
-        <Bootstrap locale="en-US">
-          <RootContent />
-        </Bootstrap>
-      </ThemeProvider>
-    </StyledEngineProvider>
+    <QueryClientProvider client={queryClient}>
+      <StyledEngineProvider enableCssLayer>
+        <HeadContent />
+        {cssLayerOrder}
+        <ThemeProvider theme={theme}>
+          {responsiveFloorStyles}
+          <Bootstrap locale="en-US">
+            <RootContent />
+          </Bootstrap>
+        </ThemeProvider>
+      </StyledEngineProvider>
+    </QueryClientProvider>
   );
 }
 
 /**
  * TanStack Router root route definition.
  * `beforeLoad` fetches auth once per navigation before any component renders,
- * eliminating the useEffect bootstrap pattern and StrictMode double-fetch.
+ * eliminating the useEffect bootstrap pattern and StrictMode double-fetch. The
+ * resolved user primes the shared query cache so feature modules read it via
+ * `useCurrentUser` without a second request.
  */
 export const Route = createRootRoute({
   // Declared here, not in the Rails haml or index.html, so it covers every serving mode.
   head: () => ({
+    // Default document title; leaf routes override it via their own `head`.
+    // HeadContent restores this when navigating back to a title-less route.
+    meta: [{title: 'CodeAI'}],
     links: [
       {
         rel: 'icon',
@@ -134,6 +164,13 @@ export const Route = createRootRoute({
       },
     ],
   }),
-  beforeLoad: async () => ({auth: await fetchAuthOutcome()}),
+  beforeLoad: async () => {
+    const auth = await fetchAuthOutcome();
+    primeCurrentUser(queryClient, auth);
+    // Prime a CSRF token when the shell lacks the meta, so mutations work on a
+    // hard load of a subroute (and after the sign-in redirect returns here).
+    await primeCsrfToken();
+    return {auth};
+  },
   component: RootLayout,
 });

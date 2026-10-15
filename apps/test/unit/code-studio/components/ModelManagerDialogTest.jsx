@@ -1,3 +1,5 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Modal from '@code-dot-org/component-library/modal';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -32,13 +34,11 @@ describe('ModelManagerDialog', () => {
         models: [],
       });
 
-      // Get the main modal.
-      let modal = wrapper.find('BaseDialog').first();
+      const modal = wrapper.find(Modal).first();
+      const customContent = shallow(modal.prop('customContent'));
 
-      let message = modal.find('select + div').first();
-
-      expect(modal.find('h1').text()).to.contain('i18n-header');
-      expect(message.text()).to.contain('i18n-nomodel');
+      expect(modal.prop('title')).to.contain('i18n-header');
+      expect(customContent.text()).to.contain('i18n-nomodel');
     });
 
     it('is used when there are models', () => {
@@ -81,17 +81,24 @@ describe('ModelManagerDialog', () => {
         ],
       });
 
-      // Get the main modal.
-      let modal = wrapper.find('BaseDialog').first();
+      const modal = wrapper.find(Modal).first();
+      const customContent = shallow(modal.prop('customContent'));
 
-      let importButton = modal.find('Button').first();
-      let deleteButton = modal.find('Button').at(1);
+      expect(modal.prop('title')).to.contain('i18n-header');
+      expect(customContent.text()).to.not.contain('i18n-nomodel');
+      expect(modal.prop('primaryButtonProps').children).to.contain(
+        'i18n-import'
+      );
+      expect(modal.prop('secondaryButtonProps').children).to.contain(
+        'i18n-delete'
+      );
 
-      expect(modal.find('h1').text()).to.contain('i18n-header');
-      expect(modal.find('select + div').exists()).to.equal(false);
-      expect(importButton.prop('text')).to.contain('i18n-import');
-      expect(importButton.prop('pendingText')).to.contain('i18n-importing');
-      expect(deleteButton.prop('text')).to.contain('i18n-delete');
+      // Pending import swaps the primary button label to the importing text.
+      wrapper.setState({isImportPending: true});
+      const pendingModal = wrapper.find(Modal).first();
+      expect(pendingModal.prop('primaryButtonProps').children).to.contain(
+        'i18n-importing'
+      );
     });
 
     it('is used within the delete confirmation modal', () => {
@@ -116,19 +123,25 @@ describe('ModelManagerDialog', () => {
         />
       );
 
-      // Get the delete confirm modal.
-      let modal = wrapper.find('BaseDialog').at(1);
+      wrapper.setState({confirmDialogOpen: true});
 
-      // Find the confirm modal header.
-      let noButton = modal.find('Button').first();
-      let deleteButton = modal.find('Button').at(1);
-      let message = modal.find('p').first();
+      const dialog = wrapper.find(Modal).at(1);
 
-      expect(modal.find('h1').text()).to.contain('i18n-delete-confirm');
-      expect(message.text()).to.contain('i18n-delete-message');
-      expect(noButton.prop('text')).to.contain('i18n-no');
-      expect(deleteButton.prop('text')).to.contain('i18n-delete');
-      expect(deleteButton.prop('pendingText')).to.contain('i18n-deleting');
+      expect(dialog.prop('title')).to.contain('i18n-delete-confirm');
+      expect(dialog.prop('description')).to.contain('i18n-delete-message');
+      expect(dialog.prop('secondaryButtonProps').children).to.contain(
+        'i18n-no'
+      );
+      expect(dialog.prop('primaryButtonProps').children).to.contain(
+        'i18n-delete'
+      );
+
+      // Pending delete swaps the primary button label to the deleting text.
+      wrapper.setState({isDeletePending: true});
+      const pendingDialog = wrapper.find(Modal).at(1);
+      expect(pendingDialog.prop('primaryButtonProps').children).to.contain(
+        'i18n-deleting'
+      );
     });
 
     it('is used within the delete confirmation modal to display the delete model failure message', () => {
@@ -158,6 +171,7 @@ describe('ModelManagerDialog', () => {
 
       wrapper.setState({
         isModelListPending: false,
+        confirmDialogOpen: true,
         selectedModel: {
           id: '0',
           name: 'Model 1',
@@ -174,14 +188,10 @@ describe('ModelManagerDialog', () => {
         ],
       });
 
-      // Get the delete confirm modal.
-      let modal = wrapper.find('BaseDialog').at(1);
+      // Trigger the delete via the primary button.
+      const dialog = wrapper.find(Modal).at(1);
+      dialog.prop('primaryButtonProps').onClick();
 
-      // Click on Delete button to check that the failure message is localized.
-      let deleteButton = modal.find('Button').at(1);
-      deleteButton.prop('onClick')();
-
-      // Ensure that the request responds with a failure.
       let headers = {'Content-Type': 'application/json'};
       let response = JSON.stringify({
         id: '0',
@@ -191,17 +201,16 @@ describe('ModelManagerDialog', () => {
       lastRequest.respond(200, headers, response);
       wrapper.setState({});
 
-      // Get the updated delete confirm modal.
-      modal = wrapper.find('BaseDialog').at(1);
-
-      // Ensure it is passed the id for the localization.
+      // Ensure the id was passed to the localization key.
       expect(
         commonI18n.aiTrainedModelsDeleteModelFailed
       ).to.have.been.calledWith(sinon.match.has('id', '0'));
 
-      // Find and compare the status string.
-      let deleteMessage = modal.find('p').at(1);
-      expect(deleteMessage.text()).to.contain('i18n-delete-fail');
+      // The failure message renders inside the dialog's customContent as an Alert.
+      const updatedDialog = wrapper.find(Modal).at(1);
+      const alert = shallow(updatedDialog.prop('customContent')).find(Alert);
+      expect(alert.prop('text')).to.contain('i18n-delete-fail');
+      expect(alert.prop('type')).to.equal('danger');
     });
   });
 });

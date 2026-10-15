@@ -1,42 +1,51 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import '@testing-library/jest-dom';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import PermanentPromotions from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/PermanentPromotions';
 
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+
 describe('PermanentPromotions', () => {
+  const permanentPromotion = {
+    id: 'explore-pl',
+    title: 'Grow your knowledge',
+    description:
+      'Empower your teaching with workshops and self-paced learning.',
+    buttonLabel: 'Explore professional learning',
+    buttonTarget: '/my-professional-learning',
+  };
+
   beforeEach(() => {
+    jest.clearAllMocks();
     render(<PermanentPromotions />);
   });
 
   it('renders the first promotion with correct title, description, and link', () => {
-    expect(screen.getByText('Grow your knowledge')).toBeInTheDocument();
+    expect(screen.getByText(permanentPromotion.title)).toBeInTheDocument();
     expect(
-      screen.getByText(
-        'Empower your teaching with workshops and self-paced learning.'
-      )
+      screen.getByText(permanentPromotion.description)
     ).toBeInTheDocument();
 
     const link = screen.getByRole('link', {
-      name: 'Explore professional learning',
+      name: permanentPromotion.buttonLabel,
     });
-    expect(link).toHaveAttribute('href', '/my-professional-learning');
+    expect(link).toHaveAttribute('href', permanentPromotion.buttonTarget);
   });
 
-  it('renders the second promotion with correct title, description, and link', () => {
-    expect(screen.getByText('Help improve CodeAI')).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        'Participate in user research to help us improve our platform for everyone.'
-      )
-    ).toBeInTheDocument();
+  it('tracks when the promotion link is clicked', () => {
+    fireEvent.click(
+      screen.getByRole('link', {name: permanentPromotion.buttonLabel})
+    );
 
-    const link = screen.getByRole('link', {
-      name: 'Join the user research program',
-    });
-    expect(link).toHaveAttribute(
-      'href',
-      'https://greatquestion.co/codedotorg/userresearch'
+    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
+      EVENTS.PERMANENT_PROMOTION_CLICKED,
+      {id: permanentPromotion.id}
     );
   });
 });

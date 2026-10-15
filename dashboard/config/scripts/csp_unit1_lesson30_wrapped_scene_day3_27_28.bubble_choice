@@ -1,0 +1,14 @@
+name 'csp-unit1-lesson30-wrapped-scene-day3_27_28'
+display_name 'Finish Your Wrapped Scene Cards'
+description '####Pick the same option from last class to continue and finish building your Wrapped program.'
+
+sublevels
+level 'csp-unit1-lesson30-theater-day3-a1_27_28'
+level 'csp-unit1-lesson30-theater-day3-b_27_28'
+level 'csp-unit1-lesson30-theater-day3-c_27_28'
+level 'csp-unit1-lesson30-theater-day3-d_27_28'
+
+uses_lab2
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

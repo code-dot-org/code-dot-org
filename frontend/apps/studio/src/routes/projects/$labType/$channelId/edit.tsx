@@ -2,6 +2,7 @@ import {createFileRoute, notFound} from '@tanstack/react-router';
 
 import {Lab} from '@code-dot-org/lab/host';
 
+import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
 
@@ -9,6 +10,9 @@ import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
 // There is no need to manually edit this, it is done via the Tanstack Router Vite plugin
 // See: https://tanstack.com/router/latest/docs/framework/react/routing/routing-concepts#anatomy-of-a-route
 export const Route = createFileRoute('/projects/$labType/$channelId/edit')({
+  // The lab is full-bleed and fills the viewport itself (FullHeightLabFrame);
+  // suppress the global StudioFooter so it doesn't sit below the fold.
+  staticData: {hideFooter: true},
   loader: async ({params: {labType, channelId}}) => {
     // Lazy load each lab's entrypoint to ensure each lab's code is only loaded when needed.
     // This causes each lab to be code-split into its own chunk.
@@ -42,8 +46,10 @@ function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
 
   return (
-    <Lab>
-      <LabEntrypoint />
-    </Lab>
+    <FullHeightLabFrame>
+      <Lab>
+        <LabEntrypoint />
+      </Lab>
+    </FullHeightLabFrame>
   );
 }

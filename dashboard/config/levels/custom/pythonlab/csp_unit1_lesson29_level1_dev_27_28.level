@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T14:34:52.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Sound Designer\r\n\r\nMake the program play a different note each time it runs.\r\n\r\n1. Review the code and ask AI Tutor how `play_note()` works.\r\n2. Use `randint()` to store a random note in the variable. Notes can be from 48 to 84.\r\n3. Update the `play_note()` command to use your variable.\r\n4. Run the program several times and listen for what changes.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\nfrom random import randint\n\n# Sound\nplay_note(60, 10)\n\n# Background\nset_fill_color(\"indigo\")\ndraw_rectangle(0, 0, 400, 400)\n\n# Decorative icons\nset_text_color(\"aqua\")\nset_text_height(34)\ndraw_text(\"♪\", 45, 80)\ndraw_text(\"♫\", 310, 95)\ndraw_text(\"♪\", 340, 250)\ndraw_text(\"♫\", 35, 285)\n\n# Cassette body\nset_fill_color(\"pink\")\ndraw_rectangle(70, 130, 260, 145)\n\n# Cassette label\nset_fill_color(\"ivory\")\ndraw_rectangle(95, 150, 210, 38)\n\n# Cassette reels\nset_fill_color(\"white\")\ndraw_ellipse(105, 190, 65, 65)\ndraw_ellipse(230, 190, 65, 65)\n\nset_fill_color(\"black\")\ndraw_ellipse(125, 210, 25, 25)\ndraw_ellipse(250, 210, 25, 25)\n\n# Tape window\nset_fill_color(\"gray\")\ndraw_rectangle(165, 210, 70, 20)\n\n# Bottom details\nset_fill_color(\"purple\")\ndraw_rectangle(105, 250, 190, 12)\n\nset_text_color(\"black\")\nset_text_height(20)\ndraw_text(\"MIX TAPE\", 150, 176)\n\nset_text_color(\"white\")\nset_text_height(26)\ndraw_text(\"Random Note\", 120, 330)\n\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqCB9MrYKIimDUm\nq2ISI6y/1uKnqGacEtRrJRnWgHQFe+RDpQo+SI7uiaOpL/RmZ3efhyN73ftq\nzcXhmB8t0FnQOVJ4mZqXPUM/Nm7cAkFdfm3khW2iy7RzLgkFMYWnbPKflI51\nNrmnzuVkYxi0hTpMIIbISJ17LeZwfifXo5MBnlOqPa5iejXmc2CTluVr4HKR\nE5luzqj6K4XLzAsj2S6hBIRNis3X5PH+CoZHvMuk0Wdo82BgK2HhbS+HYmMO\nGI8ZKFPiMjYO+PTrdgq9AXC8fFd4+Xjr8DntTA6Aa5dZ61GzTSHzh8z4vTA9\nljhDyV6B1G/PF46Kvz0vjJuJZwYs2Mjzpqbe633+k+vhdxl8lnR+Vf/UAFHL\nNW3ahAqIKWK9afC2LJhHiIKDKp4jf0OnOfDJ9Yw2FJ8An24CMixFxSDMNSEs\nsCeXmBJjWRceUewV3aCz7qzVgUAaczVpZ6iQxKq1RYMLW48rJJgxPbQYnDdx\n547ZIuCO+P8hQpjL3Y32cDOXY6+K+3YT+mI5Kb9CqCfvGf2owi12LS6WsGWk\n1bM/9wAsmNFuHya6lIpKmh64xqLER1GgDAkyiK25zOj6Bm76l2I5IjLVWal6\nVOBSu0mOkQa1/xx3U+A/0/7U16oY1AXVJpwY9H2YKJP8noDXoymVXjelxEBu\nJnF2g+W00BiFw5AWnMEUtQ1y/goqwYkMBqCXu+kFdgxf3g/5IEz4gbgl6AFF\nRt4WjlOh7R5lnQeRMrR1NZrB5LJ2imaH+OOxrDt8vcuQNiCflvw/q9Cldeo8\nrVe3HSZ1l8aUxVTanMuprt2nlxO8CF9yS/gjYNBQn0YClpaGPHniFI518ODR\nEtyX80/Hcrdwvn6xHghQHOphO7omvIDELE2LHPQZg69u9WnAVMYig6xPcFmI\nkaDfENR4wpV1b+Rlu4ma1bS81pbDlgAhZD+p+pT93xsExz+/qcVQWINaJ4u3\nviemR7ho4m1MQkdEWWRAp1pcJcipEzuZgq0k6fW1/N9w8DdQ4By+ql9Xoibn\nxPKiFTCkoYWtpsLVQKbRPDxEaHck0zcIvFICPsrpzl8UQu6Q/6dikwNTiXO0\n0lH6w1p1jTVH3UfZ34LNl+6C3nPS6ctlpSS03mGCQXFZjxqMGby9KUXFxCVX\nqiJqf6IDSKg5bCkflOK21WiNgzm9i+AKzUa/NbpARM2ZH311xxU+93PNL5OJ\nr05XkIBIkiyMQgQeBlod/qccHaBfH6m/pLvUjw/acPBs4k7UDRaPXCH5GeXS\n4g06RbYzwD6uXrNdtz4//p7MxF0LtPBLOGBt7Z60MtTtFwqLM3k4IEwpjb+r\n4zaHB++hda2yPlmWGAjMvnVjlshfhIFJPzXgMMVh41GPXZtjf1chPDLP01E/\nLFiqhWuxKlyB3p9xa4T7UCgYz9LKKI2rW1S0zOWFR1Zq12GXMgDIdR5OyuwU\n8BENYQIopp9Nto6h9gyPvFjBcP3y/tEnxphE8TTTRwKIMys3WRO70twReqJY\npkgs91mGLKz/Kr3edRNWTDp/b3x0SspkVZb2PF7T4AvyF81eBIM6ZEUheqpi\nCKtqUA==\n",
+    "display_name": "Sound Designer",
+    "bubble_choice_description": "Make the program play a different note each time it runs.",
+    "thumbnail_url": "https://images.code.org/06f43725803c35118a5726aeea420f9c-800b26df-7e7b-4273-b102-5b31c85b30c9.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02 14:42:50 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:41:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:46:35 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:52:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:52:17 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:53:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:56:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:57:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 15:58:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:02:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 16:02:24 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 20:22:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:06:07 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:07:57 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:40:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

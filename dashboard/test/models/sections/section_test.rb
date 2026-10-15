@@ -9,6 +9,11 @@ class SectionTest < ActiveSupport::TestCase
     @section = create(:section, teacher: @teacher)
 
     @default_attrs = {user: @teacher, name: 'test-section'}
+
+    @jigsaw_unit = create(:unit, name: 'jigsaw')
+    @jigsaw_course = create(:single_unit_course, name: 'jigsaw', family_name: 'jigsaw', unit: @jigsaw_unit)
+    CourseOffering.add_course_offering(@jigsaw_course)
+    @jigsaw_unit.reload
   end
 
   test "sections are soft-deleted" do
@@ -538,7 +543,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with a single-unit course assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -586,7 +591,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     CourseOffering.add_course_offering(script.original_unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -640,7 +645,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -826,6 +831,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -837,7 +843,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'selected_section_summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -862,6 +868,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -996,6 +1003,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1007,7 +1015,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -1058,6 +1066,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1069,7 +1078,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     CourseOffering.add_course_offering(script.original_unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -1126,6 +1135,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1136,9 +1146,8 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with both a course and a script' do
-    # TODO: TEACH-1788 This test will probably need to be updated when we update fixtures
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1194,6 +1203,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1253,6 +1263,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1388,7 +1399,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1402,7 +1413,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1412,6 +1423,21 @@ class SectionTest < ActiveSupport::TestCase
     student = create(:follower, section: section).student_user
     UserScript.create!(user: student, script: script)
 
+    assert section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress in a sunsetting course' do
+    script = @jigsaw_unit
+    unit_group = create(:unit_group, name: 'sunsetcourse', version_year: '1991', family_name: 'sunset-family', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create(:section, script: script, unit_group: unit_group)
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    refute unit_group.course_assignable?(section.user)
     assert section.any_student_has_progress?
   end
 
@@ -1629,7 +1655,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section grants access to AI Chat when DCDO flag enabled' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     section = create(:section, unit_group: unit_group)
@@ -1744,21 +1770,36 @@ class SectionTest < ActiveSupport::TestCase
   # suggested_lesson
 
   test 'suggested_lesson_stale? returns true when suggested_lesson is nil' do
+    @section.update!(suggested_lesson: nil, suggested_lesson_history: nil)
     assert @section.suggested_lesson_stale?
   end
 
   test 'suggested_lesson_stale? returns true when timestamp is missing' do
-    @section.update!(suggested_lesson: {'lesson_id' => 1})
+    @section.update!(suggested_lesson: {'lesson_id' => 1}, suggested_lesson_history: nil)
     assert @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns false for a fresh timestamp' do
-    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601})
+  test 'suggested_lesson_stale? returns false when timestamp is from today' do
+    @section.update!(
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => 1, 'date' => Time.zone.today.iso8601}]
+    )
     refute @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns true for a stale timestamp' do
-    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.hours.ago.utc.iso8601})
+  test 'suggested_lesson_stale? returns true when suggested_lesson_history is nil despite timestamp from today' do
+    @section.update!(
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: nil
+    )
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true when timestamp is from a previous day' do
+    @section.update!(
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.zone.yesterday.end_of_day.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => 1, 'date' => Time.zone.yesterday.iso8601}]
+    )
     assert @section.suggested_lesson_stale?
   end
 
@@ -1783,6 +1824,23 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
   end
 
+  test 'compute_suggested_lesson skips a lesson with no lesson plan' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: false)
+    lesson3 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    create(:script_level, lesson: lesson2, script: unit)
+    create(:script_level, lesson: lesson3, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    assert_equal lesson3.id, section.reload.suggested_lesson['lesson_id']
+  end
+
   test 'compute_suggested_lesson sets completed_unit when all lessons are completed' do
     unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
     create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
@@ -1804,7 +1862,7 @@ class SectionTest < ActiveSupport::TestCase
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
     pre_assessment = create(:lesson, script: unit, lesson_group: lesson_group, lockable: true, has_lesson_plan: false)
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
     sl_pre = create(:script_level, lesson: pre_assessment, script: unit)
     create(:script_level, lesson: lesson1, script: unit)
     section = create(:section, teacher: @teacher, script: unit)
@@ -1836,11 +1894,207 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
   end
 
+  # suggested_lesson_history
+
+  test 'compute_suggested_lesson creates a history entry with today date' do
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert_equal 1, history.length
+    assert_equal Time.zone.today.iso8601, history.first['date']
+    assert_equal lesson1.id, history.first['lesson_id']
+  end
+
+  test 'compute_suggested_lesson appends a new entry on a different day' do
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    yesterday = (Time.zone.today - 1).iso8601
+    section.update!(suggested_lesson_history: [{'lesson_id' => 99, 'timestamp' => yesterday + 'T10:00:00Z', 'date' => yesterday}])
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert_equal 2, history.length
+    assert(history.any? {|e| e['date'] == yesterday})
+    assert(history.any? {|e| e['date'] == Time.zone.today.iso8601})
+  end
+
+  test 'compute_suggested_lesson replaces an existing history entry for today' do
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    today = Time.zone.today.iso8601
+    section.update!(suggested_lesson_history: [{'lesson_id' => 99, 'timestamp' => today + 'T00:00:00Z', 'date' => today}])
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert_equal 1, history.length
+    assert_equal lesson1.id, history.first['lesson_id']
+  end
+
+  test 'compute_suggested_lesson removes history entries more than 10 days old' do
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    eleven_days_ago = (Time.zone.today - 11).iso8601
+    ten_days_ago = (Time.zone.today - 10).iso8601
+    section.update!(
+      suggested_lesson_history: [
+        {'lesson_id' => 1, 'timestamp' => eleven_days_ago + 'T10:00:00Z', 'date' => eleven_days_ago},
+        {'lesson_id' => 2, 'timestamp' => ten_days_ago + 'T10:00:00Z', 'date' => ten_days_ago},
+      ]
+    )
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert history.none? {|e| e['date'] == eleven_days_ago}, 'entry 11 days old should be removed'
+    assert history.any? {|e| e['date'] == ten_days_ago}, 'entry exactly 10 days old should be kept'
+  end
+
+  test 'compute_suggested_lesson history entry includes the computed lesson_id' do
+    unit, _lesson1, lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert_equal lesson2.id, entry['lesson_id']
+    assert entry['timestamp'].present?
+  end
+
+  test 'compute_suggested_lesson history entry reflects completed_unit state' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert entry['completed_unit']
+    assert_nil entry['lesson_id']
+  end
+
+  test 'compute_suggested_lesson stores coming_up with next lesson id on suggested_lesson' do
+    _unit, _lesson1, lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    assert_equal lesson2.id, section.reload.suggested_lesson.dig('coming_up', 'lesson_id')
+  end
+
+  test 'compute_suggested_lesson coming_up has completed_unit when current is the last numbered lesson' do
+    unit, _lesson1, _lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    # lesson2 is last; no further lesson exists
+    assert section.reload.suggested_lesson.dig('coming_up', 'completed_unit')
+  end
+
+  test 'compute_suggested_lesson coming_up has completed_unit when unit is finished' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    assert section.reload.suggested_lesson.dig('coming_up', 'completed_unit')
+  end
+
+  test 'compute_suggested_lesson coming_up matches suggested_lesson when unit is finished' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    suggested_lesson = section.reload.suggested_lesson
+    assert suggested_lesson['completed_unit']
+    assert_equal suggested_lesson.except('timestamp', 'coming_up'), suggested_lesson['coming_up']
+  end
+
+  test 'compute_suggested_lesson does not store coming_up in the history entry' do
+    _unit, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert_nil entry['coming_up']
+  end
+
+  test 'compute_suggested_lesson creates a history entry for each day the unit stays completed' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    dates = (0..2).map {|days_ago| Time.zone.today - days_ago}
+    dates.reverse_each do |date|
+      Timecop.freeze(date.to_time) {section.compute_suggested_lesson}
+    end
+
+    history = section.reload.suggested_lesson_history
+    dates.each do |date|
+      entry = history.find {|e| e['date'] == date.iso8601}
+      assert entry, "expected a history entry for #{date.iso8601}"
+      assert entry['completed_unit'], "expected #{date.iso8601}'s entry to show completed_unit"
+    end
+  end
+
+  # Bandaid: a section assigned an exempt unit reports AVAILABLE, which is what
+  # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
+  # This test goes away with the exemption.
+  test 'assigned_ai_chat_tools_dependency is available, not essential, for an exempt unit' do
+    # The unit needs a course: Section validates that a section with a script
+    # has a course_id, and the factory takes that from the unit's course.
+    unit = create(:script, :in_single_unit_course, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+    section = create(:section, teacher: @teacher, script: unit)
+
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
+  end
+
+  test 'required_inaccessible_ai_models? is only true when the instructor has US only models disabled and the curriculum needs them' do
+    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+
+    us_only_unit = create(:script, :in_single_unit_course, name: 'section-us-only-unit')
+    us_only_lesson = create(:lesson, :with_lesson_group, script: us_only_unit)
+    create(:script_level, script: us_only_unit, lesson: us_only_lesson, levels: [us_only_level])
+
+    openai_unit = create(:script, :in_single_unit_course, name: 'section-openai-unit')
+    openai_lesson = create(:lesson, :with_lesson_group, script: openai_unit)
+    create(:script_level, script: openai_unit, lesson: openai_lesson, levels: [openai_level])
+
+    us_only_section = create(:section, teacher: @teacher, script: us_only_unit)
+    openai_section = create(:section, teacher: @teacher, script: openai_unit)
+    no_course_section = create(:section, teacher: @teacher)
+
+    # The instructor can use US only models, so nothing is inaccessible. The
+    # assigned unit is still asked; it is the one that returns early without
+    # scanning levels.
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    refute us_only_section.required_inaccessible_ai_models?
+    refute openai_section.required_inaccessible_ai_models?
+
+    # The instructor has US only models disabled, so it depends on the curriculum.
+    User.any_instance.unstub(:us_only_aichat_models_disabled?)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    assert us_only_section.required_inaccessible_ai_models?
+    refute openai_section.required_inaccessible_ai_models?
+    refute no_course_section.required_inaccessible_ai_models?
+  end
+
+  test 'required_inaccessible_ai_models? follows the assigned unit, not the rest of its course' do
+    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+
+    unit_group = create(:unit_group, name: 'section-mixed-course')
+    reachable_unit = create(:script, name: 'section-mixed-reachable-unit')
+    create(:script_level, script: reachable_unit, lesson: create(:lesson, :with_lesson_group, script: reachable_unit), levels: [openai_level])
+    blocked_unit = create(:script, name: 'section-mixed-blocked-unit')
+    create(:script_level, script: blocked_unit, lesson: create(:lesson, :with_lesson_group, script: blocked_unit), levels: [us_only_level])
+    create(:unit_group_unit, unit_group: unit_group, script: reachable_unit, position: 1)
+    create(:unit_group_unit, unit_group: unit_group, script: blocked_unit, position: 2)
+
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+
+    # Assigned the whole course, so any blocked unit in it counts.
+    course_section = create(:section, teacher: @teacher, unit_group: unit_group)
+    assert course_section.required_inaccessible_ai_models?
+
+    # Assigned one unit of that course. The section works through that unit
+    # alone, so its sibling's blocked models are not this section's problem.
+    reachable_section = create(:section, teacher: @teacher, unit_group: unit_group, script: reachable_unit)
+    refute reachable_section.required_inaccessible_ai_models?
+
+    blocked_section = create(:section, teacher: @teacher, unit_group: unit_group, script: blocked_unit)
+    assert blocked_section.required_inaccessible_ai_models?
+  end
+
   private def build_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
     sl1 = create(:script_level, lesson: lesson1, script: unit)
     sl2 = create(:script_level, lesson: lesson2, script: unit)
     section = create(:section, teacher: @teacher, script: unit)

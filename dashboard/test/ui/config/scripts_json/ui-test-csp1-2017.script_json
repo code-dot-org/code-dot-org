@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 00:47:34 UTC",
+    "serialized_at": "2026-08-10 22:38:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -119,11 +119,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test Applab test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Applab test"
+          "UI Test Applab test"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -131,7 +134,7 @@
         "activity_section.key": "de9bb4e2-d2fe-4f9c-9625-6b67cdc23473"
       },
       "level_keys": [
-        "Applab test"
+        "UI Test Applab test"
       ]
     },
     {
@@ -140,11 +143,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test allthethings design mode elements"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "allthethings design mode elements"
+          "UI Test allthethings design mode elements"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -152,16 +158,16 @@
         "activity_section.key": "506741c2-cfc9-4571-9ebe-b05a9f19e69b"
       },
       "level_keys": [
-        "allthethings design mode elements"
+        "UI Test allthethings design mode elements"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "Applab test",
+        "level.key": "UI Test Applab test",
         "script_level.level_keys": [
-          "Applab test"
+          "UI Test Applab test"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -171,9 +177,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "allthethings design mode elements",
+        "level.key": "UI Test allthethings design mode elements",
         "script_level.level_keys": [
-          "allthethings design mode elements"
+          "UI Test allthethings design mode elements"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -210,6 +216,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

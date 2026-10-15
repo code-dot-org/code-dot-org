@@ -1,4 +1,4 @@
-export type {AiDiffChatState} from './state';
+export type {AiDiffChatState, HostedDrawerConfig} from './state';
 export * from './thunks';
 export {
   setChatIsOpen,
@@ -15,4 +15,7 @@ export {
   setArtifactType,
   setPendingArtifactMessage,
   clearPendingArtifactMessage,
+  openDrawerToNav,
+  clearRequestedNav,
+  setHostedDrawerConfig,
 } from './slice';

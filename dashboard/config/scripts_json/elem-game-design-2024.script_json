@@ -38,7 +38,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-07 04:54:14 UTC",
+    "serialized_at": "2026-07-13 22:27:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2928,12 +2928,13 @@
       }
     },
     {
-      "name": "CSF - Course E - Slides",
-      "url": "https://docs.google.com/presentation/d/1ITQJowykWuEy4hb8SkS6L4f_GE5Hkbtdb_x0TO1HbCE/template/preview",
+      "name": "Game Design Slides",
+      "url": "https://docs.google.com/presentation/d/1nO2v42eOZ0XwX71solFQaa9_OWFAvBcHrnbsUCRsQDY/template/preview",
       "key": "csf_-_course_e_-_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ITQJowykWuEy4hb8SkS6L4f_GE5Hkbtdb_x0TO1HbCE/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1nO2v42eOZ0XwX71solFQaa9_OWFAvBcHrnbsUCRsQDY/export/pdf",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3533,6 +3534,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

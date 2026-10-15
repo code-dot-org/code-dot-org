@@ -15,8 +15,6 @@ export default class ProjectHeader extends React.Component {
   };
 
   render() {
-    // Verify background image works for both LTR and RTL languages.
-    const backgroundUrl = '/shared/images/banners/project-banner.png';
     return (
       <div>
         <HeaderBanner
@@ -24,8 +22,7 @@ export default class ProjectHeader extends React.Component {
           subHeadingText={i18n.projectsSubHeadingMillions({
             project_count: this.props.projectCount,
           })}
-          backgroundUrl={backgroundUrl}
-          backgroundImageStyling={{backgroundPosition: '90% 40%'}}
+          backgroundColor="var(--brand-purple-95)"
         />
         <div className={'container main'}>
           <ProjectsPromo />

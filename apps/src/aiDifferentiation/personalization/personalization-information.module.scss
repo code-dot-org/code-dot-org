@@ -61,10 +61,11 @@
   flex: 1 0 0;
 
   .answer {
-    width: 36px;
+    width: 60px;
     height: 40px;
-    padding: 8px 12px;
+    padding: 8px;
     font-size: 20px !important;
+    margin-top: -12px;
   }
 
   .bodyText {
@@ -146,6 +147,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  margin-left: -30px;
 }
 
 .revealHeader {
@@ -222,7 +224,8 @@
       position: absolute;
       bottom: 5px;
       width: 157px;
-      padding-left: 28px;
+      padding-left: 16px;
+      font-size: 1.25rem;
     }
   }
 
@@ -237,8 +240,9 @@
     .aiCanHelpText {
       position: absolute;
       bottom: 5px;
-      width: 174px;
+      width: 300px;
       padding-left: 114px;
+      font-size: 1.25rem;
       color: var(--text-neutral-white-fixed, #fff);
     }
   }

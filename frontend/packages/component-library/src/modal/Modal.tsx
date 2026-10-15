@@ -6,7 +6,7 @@ import {
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import CustomDialog from '@/dialog/CustomDialog';
+import CustomDialog from '@/dialog/MuiCustomDialog';
 
 import moduleStyles from './modal.module.scss';
 

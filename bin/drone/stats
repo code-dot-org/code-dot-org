@@ -2,6 +2,7 @@
 
 require "json"
 require "time"
+require "active_support/isolated_execution_state"
 require "active_support/time"
 require "optparse"
 require "parallel"

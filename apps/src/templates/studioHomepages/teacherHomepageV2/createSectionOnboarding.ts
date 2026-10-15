@@ -2,6 +2,7 @@ import {StepOptions, Tour} from 'shepherd.js';
 
 import {
   nextButton,
+  recordOnboardingNavigation,
   withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
@@ -88,7 +89,8 @@ const highlightAttachedElement = (selector: string) => ({
 export const createHomepageSteps = (
   tour: Tour,
   gradesTeaching: string[] | null | undefined,
-  sessionStorageKey: string
+  sessionStorageKey: string,
+  tourName: string
 ): StepOptions[] => {
   const loginSelector = getLoginSelector(gradesTeaching);
 
@@ -154,6 +156,7 @@ export const createHomepageSteps = (
             dialogDismissObserver?.disconnect();
             dialogDismissObserver = null;
             trySetSessionStorage(sessionStorageKey, SECTIONS_NEW_FIRST_STEP_ID);
+            recordOnboardingNavigation(tourName, 'sections/new');
             sectionTypeButtons.forEach(el =>
               el.removeEventListener('click', loginClickHandler!)
             );

@@ -2,6 +2,7 @@ import {
   default as FontAwesomeV6Icon,
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -30,10 +31,13 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   pathKey,
   showErrorIcon,
 }) => {
+  const option = LABELED_TEACHER_NAVIGATION_PATHS[pathKey];
+  // Only some options carry a status tag (e.g. "Beta").
+  const tag = 'tag' in option ? option.tag : undefined;
   return (
     <NavLink
-      key={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
-      to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
+      key={option.label}
+      to={generatePath(option.absoluteUrl, {
         sectionId: sectionId,
         courseVersionName: courseVersionName,
         unitPosition: unitPosition,
@@ -46,12 +50,8 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       <div className={styles.iconContainer}>
         <FontAwesomeV6Icon
           className={styles.optionIcon}
-          iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
-          iconFamily={
-            kitIcons.has(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || '')
-              ? 'kit'
-              : undefined
-          }
+          iconName={option.icon || ''}
+          iconFamily={kitIcons.has(option.icon || '') ? 'kit' : undefined}
         />
       </div>
       <Typography
@@ -61,8 +61,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
         variant="body2"
         gutterBottom
       >
-        {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
+        {option.label}
       </Typography>
+      {tag && (
+        <Tags className={styles.navTag} tagsList={[{label: tag}]} size="s" />
+      )}
       {showErrorIcon && (
         <FontAwesomeV6Icon
           iconName="triangle-exclamation"

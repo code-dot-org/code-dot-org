@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-28T02:52:08.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "display_name": "Movie Recommendations",
+    "long_instructions": "Your friend is writing code to recommend two different movies. Unfortunately, the code doesn’t work. Read your friend’s code, explain what the problem is, and suggest how you would fix it.\r\n\r\n```python\r\ndef print_recommendation(movie, genre):\r\n    print(f\"You might like {movie}, a {genre} movie.\")\r\n\r\nprint_recommendation(\"Wonder Woman\")\r\nprint_recommendation(\"superhero\")\r\nprint_recommendation(\"Interstellar\")\r\nprint_recommendation(\"science fiction\")\r\n```",
+    "bubble_choice_description": "Build a program that recommends movies for users to watch.",
+    "thumbnail_url": "https://images.code.org/8e8460be5fdf8222a3e683a174b18f2c-movie.png",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "kMrCryiPOL1+kS8sdP3O5TeyjrItmaI0WN3xCtbpOUEwSRxyhl20ww7v+Ufs\nlPPDsAlsEAC7t01u5gyGUa72+hIUvmgaz08Ap+CZ0hpb0voXjMaicZmqczoY\nhXAfMnsrQUoo2ANpfIKj/Q+9T3b1ozgYPwvCQXu4uT8xC0JHXm4hSTFcdKpv\nOWo2N57fBsc0/0ChS046RIjs4r/RQSqSLA==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

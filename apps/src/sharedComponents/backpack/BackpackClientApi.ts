@@ -1,34 +1,19 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {
+  BackpackEvent,
+  BackpackEventListener,
+  ErrorCallback,
+  FileMetadata,
+  FilesObject,
+} from './types';
+
 const REQUEST_RETRY_COUNT = 1;
 
-interface FilesObject {
-  [filename: string]: {
-    text: string;
-  };
-}
-interface FileMetadata {
-  filename: string;
-  category?: string;
-  size: number;
-  timestamp: string;
-}
-
-type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
-
-// Events that can a listener can subscribe to.
-export enum BackpackEvent {
-  FileAdded = 'fileAdded',
-  FileDeleted = 'fileDeleted',
-  UploadStarted = 'uploadStarted',
-  UploadFailed = 'uploadFailed',
-}
-
-type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
   appType: string;
@@ -155,13 +140,12 @@ export default class BackpackClientApi {
 
   /**
    * Takes a file name and contents and saves to the backpack.
-   * Used in Codebridge labs to save a file.
    * @param {String} filename
    * @param {String} fileContents Contents of file to be saved to the backpack.
    * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
-  saveCodebridgeFile(
+  saveFile(
     filename: string,
     fileContents: string,
     onError: ErrorCallback,
@@ -180,7 +164,7 @@ export default class BackpackClientApi {
   /**
    * Save a file to the backpack from the given URL.
    */
-  async saveCodebridgeFileFromUrl(
+  async saveFileFromUrl(
     filename: string,
     fileUrl: string,
     onError?: ErrorCallback,
@@ -190,7 +174,6 @@ export default class BackpackClientApi {
       if (!this.channelId) {
         throw new Error('Missing channel id for backpack');
       }
-      this.sendUploadStartedEvent(filename);
       const fileResponse = await HttpClient.get(fileUrl);
       if (fileResponse.ok) {
         const responseBlob = await fileResponse.blob();
@@ -202,11 +185,10 @@ export default class BackpackClientApi {
           fileToUpload
         );
         Object.values(this.eventListeners).forEach(listener =>
-          listener(BackpackEvent.FileAdded, filename)
+          listener(BackpackEvent.FileAdded, filename, this.appType)
         );
         onSuccess?.();
       } else {
-        this.sendUploadFailedEvent(filename);
         const error = new Error('Failed to fetch file from url');
         if (onError) {
           onError(error);
@@ -215,7 +197,6 @@ export default class BackpackClientApi {
         throw error;
       }
     } catch (error) {
-      this.sendUploadFailedEvent(filename);
       if (onError) {
         onError(error as Error);
         return;
@@ -235,16 +216,14 @@ export default class BackpackClientApi {
       onError();
       return;
     }
-    this.sendUploadStartedEvent(filename);
     try {
       await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
     } catch (error) {
       onError(error as Error);
-      this.sendUploadFailedEvent(filename);
       return;
     }
     Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.FileAdded, filename)
+      listener(BackpackEvent.FileAdded, filename, this.appType)
     );
     onSuccess();
   }
@@ -333,15 +312,11 @@ export default class BackpackClientApi {
     fileContents: string,
     onError: ErrorCallback,
     onSuccess: () => void,
-    retryCount: number,
-    sendUploadStartedEvent: boolean = true
+    retryCount: number
   ) {
     if (!this.channelId) {
       onError();
       return;
-    }
-    if (sendUploadStartedEvent) {
-      this.sendUploadStartedEvent(filename);
     }
     try {
       await HttpClient.put(
@@ -363,8 +338,7 @@ export default class BackpackClientApi {
           fileContents,
           onError,
           onSuccess,
-          retryCount - 1,
-          false /* don't resend upload started event on retry */
+          retryCount - 1
         );
       } else {
         // Record failure and check if all files are done attempting upload/uploading
@@ -458,10 +432,8 @@ export default class BackpackClientApi {
     }
     if (!failedFileList.includes(filename)) {
       Object.values(this.eventListeners).forEach(listener =>
-        listener(requestType, filename)
+        listener(requestType, filename, this.appType)
       );
-    } else if (requestType === BackpackEvent.FileAdded) {
-      this.sendUploadFailedEvent(filename);
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
@@ -480,17 +452,5 @@ export default class BackpackClientApi {
     if (this.eventListeners[id]) {
       delete this.eventListeners[id];
     }
-  }
-
-  sendUploadStartedEvent(filename: string) {
-    Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.UploadStarted, filename)
-    );
-  }
-
-  sendUploadFailedEvent(filename: string) {
-    Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.UploadFailed, filename)
-    );
   }
 }

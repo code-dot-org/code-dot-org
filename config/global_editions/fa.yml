@@ -36,7 +36,8 @@ header:
         url: /global/fa/csf
       - title: hour_of_ai
         id: header-hoa
-        url: https://csforall.org/fa/hour-of-ai
+        domain: code.org
+        url: /hour-of-ai
       - title: videos
         id: header-videos
         domain: code.org

@@ -71,44 +71,48 @@
 
 @mixin heading-xxl {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
+  font-family: $heading-font;
+  font-weight: $semi-bold-font-weight;
   font-size: 3rem;
-  line-height: 1.16;
+  line-height: 1.08;
+  letter-spacing: -0.03rem;
 }
 
 @mixin heading-xl {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
-  font-size: 2.125rem;
-  line-height: 1.24;
+  font-family: $heading-font;
+  font-weight: $semi-bold-font-weight;
+  font-size: 2.375rem;
+  line-height: 1.05;
+  letter-spacing: -0.03rem;
 }
 
 @mixin heading-lg {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
+  @include main-font-semi-bold;
   font-size: 1.75rem;
-  line-height: 1.28;
+  line-height: 1.29;
 }
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-medium;
+  @include main-font-semi-bold;
   font-size: 1.5rem;
-  line-height: 1.32;
+  line-height: 1.33;
 }
 
 @mixin heading-sm {
   @include heading-common;
   @include main-font-semi-bold;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.375rem;
+  line-height: 1.36;
 }
 
 @mixin heading-xs {
   @include heading-common;
   @include main-font-semi-bold;
-  font-size: 1rem;
-  line-height: 1.48;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 // Paragraph styles

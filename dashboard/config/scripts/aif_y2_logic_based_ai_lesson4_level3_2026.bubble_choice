@@ -1,0 +1,10 @@
+name 'aif-y2-logic-based-ai-lesson4-level3-2026'
+display_name 'Build a Chatbot - Tell Me More'
+description "Chatbots can provide people with information about lots of different topics. Pick a topic that you'd like your chatbot to help with."
+
+sublevels
+level 'aif-y2-logic-based-ai-lesson4-level3-choice1-2026'
+level 'aif-y2-logic-based-ai-lesson4-level3-choice2-2026'
+level 'aif-y2-logic-based-ai-lesson4-level3-choice3-2026'
+
+uses_lab2

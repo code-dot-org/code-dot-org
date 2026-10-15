@@ -1,0 +1,15 @@
+.dialog {
+  box-sizing: border-box;
+  width: min(90vw, 640px);
+  padding: 24px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-weight: bold;
+}
+
+.body {
+  max-height: 70vh;
+  overflow-y: auto;
+}

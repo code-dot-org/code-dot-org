@@ -1,9 +1,12 @@
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import React, {Component} from 'react';
 
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
 import {activityShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import styles from '../lesson-plan.module.scss';
 
 export default class Activity extends Component {
   static propTypes = {
@@ -15,7 +18,16 @@ export default class Activity extends Component {
 
     return (
       <div>
-        <h2 style={styles.activityHeader} id={`activity-${activity.key}`}>
+        {/* An activity is a subsection of the "Teaching Guide" h2, so h3. */}
+        <Typography
+          variant="h4"
+          component="h3"
+          className={classNames(
+            styles.activityHeader,
+            styles.headingWithMargins
+          )}
+          id={`activity-${activity.key}`}
+        >
           {activity.displayName}
           {activity.duration > 0 && (
             <span>
@@ -24,7 +36,7 @@ export default class Activity extends Component {
               })}
             </span>
           )}
-        </h2>
+        </Typography>
         {activity.activitySections.map(item => {
           return <ActivitySection key={item.key} section={item} />;
         })}
@@ -32,9 +44,3 @@ export default class Activity extends Component {
     );
   }
 }
-
-const styles = {
-  activityHeader: {
-    color: color.purple,
-  },
-};

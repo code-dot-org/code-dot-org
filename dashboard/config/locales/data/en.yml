@@ -941,6 +941,8 @@ en:
         pl-aif2-displaying-data-UI: 'Displaying Data '
         pl-aif2-dot-notation-api: Accessing Data in APIs
         pl-aif2-u5-try-catch: Try and Catch Blocks
+        pl-aif2-filtering-data-movies-U3: Filtering Data
+        pl-aif2-building-pipelines-u3: Building Pipelines
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

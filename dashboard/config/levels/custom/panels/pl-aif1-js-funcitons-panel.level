@@ -1,0 +1,54 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-11T15:34:59.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## What is a Function?\nA function is a block of reusable code that performs a single action. It's a way to name a piece of behavior once, so it can be reused anywhere it's needed instead of being rewritten each time.",
+        "imageUrl": "https://images.code.org/a62c1a7c548dc0204fafed093c577725-functions.png",
+        "key": "pl-aif1-js-funcitons-panel-750e7cc8-6561-4ce8-ac76-918c8e90e484",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Defining a Function\nThis line creates the function and gives it a name, `addNotification` . It works the same way variables did last lesson: `const` is used because the value being stored, the function itself, should never change.",
+        "imageUrl": "https://images.code.org/880b6d24e83f0412475e1a884491357d-functions (1).png",
+        "key": "pl-aif1-js-funcitons-panel-daa48fd9-2e6c-419c-bad3-b1aeeb19ac65",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Arrow Functions\nThe empty parentheses followed by the arrow, an equals sign and a greater-than symbol together, are what make this an arrow function. The parentheses are where information would go if the function needed any input; this one doesn't, so they're empty.",
+        "imageUrl": "https://images.code.org/e11d88ce880f537c4e509de9867f6093-functions (2).png",
+        "key": "pl-aif1-js-funcitons-panel-c553b418-0d32-44cc-ab3b-ec1c1a5d7329",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Code Inside a Function\nEverything inside the curly braces is the code that actually runs, but only once the function is called. Defining a function doesn't run it, it just makes the behavior available for later.",
+        "imageUrl": "https://images.code.org/4ba0e7e10db321d67c190e3be271d1f0-functions (3).png",
+        "key": "pl-aif1-js-funcitons-panel-da141d71-f80d-4aac-a23c-9c5eabc2f90f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Calling a Function\nA named function can be called anywhere it's needed. Here, two different buttons both call `addNotification`, so the same behavior runs for either one without writing it twice. Notice it's passed by name only, no parentheses.",
+        "imageUrl": "https://images.code.org/1d8a457cd9f2d24df79c1587932985f5-functions (4).png",
+        "key": "pl-aif1-js-funcitons-panel-b842d58b-1871-4493-801a-9ab7d91adb5d",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Return Values\nNot every function changes the page directly. Some calculate a value and hand it back using return. Here, `getNextCount` works out what the next count should be and returns it, so that value can be stored in a variable, displayed on the page, or used anywhere else in the program.",
+        "imageUrl": "https://images.code.org/218e78b30f13c628a642beb168b79754-functions (5).png",
+        "key": "pl-aif1-js-funcitons-panel-94d838ea-cf2b-4fd1-90b1-628e6665955c",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11T15:34:59.227+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-arrow-functions-panel_2026\\\"\"],\"cloned_from\":\"pl-aif-2-U2-arrow-functions-panel_2026\"},{\"changed_at\":\"2026-08-11 15:46:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

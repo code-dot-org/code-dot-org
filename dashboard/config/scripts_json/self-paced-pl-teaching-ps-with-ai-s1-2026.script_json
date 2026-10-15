@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-12 16:23:54 UTC",
+    "serialized_at": "2026-08-03 21:02:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -143,6 +143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_00-new_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -165,6 +168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_02-new_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -187,6 +193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_03b_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -209,6 +218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_-rev_v2_2026"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -231,6 +243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_02_-rev_v2_2026"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -253,6 +268,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_04_-rev_v2_2026"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -275,6 +293,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_05_-rev_v2_2026"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -297,6 +318,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_07b_-rev_v2_2026"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -319,6 +343,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01-rev-01_v2_2026"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -341,6 +368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_-rev_v2_2026"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -363,6 +393,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02b_-rev_v2_2026"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -385,6 +418,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_05b_-rev_v2_2026"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -407,6 +443,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_06b_-rev_v2_2026"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -429,6 +468,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_07_-rev_v2_2026"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -451,6 +493,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_08_-rev_v2_2026"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -473,6 +518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03c_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -495,6 +543,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_02b_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -517,6 +568,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_03d_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -539,6 +593,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_05_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -561,6 +618,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_06_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -583,6 +643,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_08b_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -605,6 +668,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_09b_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -627,6 +693,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_10b_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -649,6 +718,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_11x_-rev_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -671,6 +743,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01-rev-02_v2_2026"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -693,6 +768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_01_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -715,6 +793,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_01B_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -737,6 +818,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_02_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -759,6 +843,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_03_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -781,6 +868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_wrap-up_v2_2026"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -803,6 +893,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif1-01-Closing_v2_2026"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -1222,6 +1315,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

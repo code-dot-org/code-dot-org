@@ -1,7 +1,8 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
-  "created_at": "2026-03-09T16:16:09.000Z",
+  "created_at": "2026-02-24T18:12:12.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -41,22 +42,22 @@
             "id": "Z7XqbIyy3wiM7mH-3yT4X",
             "type": "text",
             "position": {
-              "x": -313.5743045772573,
-              "y": -37.27804254924514
+              "x": -556.5920287411885,
+              "y": -169.95499857256792
             },
             "data": {
               "text": "Add wireframe components or pre-built sections\nto create your pages below",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
+              "fontSize": 62,
               "showHandles": false
             },
             "measured": {
-              "width": 548,
-              "height": 95
+              "width": 1491,
+              "height": 187
             },
             "dragging": false,
-            "width": 548,
-            "height": 95,
+            "width": 1491.4805761658508,
+            "height": 187.2269207267696,
             "resizing": false
           },
           {
@@ -83,104 +84,11 @@
             "zIndex": -4
           },
           {
-            "id": "FpNEJgFlN1Xbo3L-h7aYO",
-            "type": "text",
-            "position": {
-              "x": 258.01470306213355,
-              "y": 10.148829187469303
-            },
-            "data": {
-              "text": "Page 1",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 81,
-              "height": 47
-            }
-          },
-          {
-            "id": "k6N3a3hmJZUnB-QaTJCVJ",
-            "type": "text",
-            "position": {
-              "x": 998.9634828296096,
-              "y": 8.442881909669723
-            },
-            "data": {
-              "text": "Page 2",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
-            }
-          },
-          {
-            "id": "TIBRtnhBQpMbqvds0h3ur",
-            "type": "text",
-            "position": {
-              "x": -550.6242596391037,
-              "y": 422.71824988519353
-            },
-            "data": {
-              "text": "Images, Videos, & Icons",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 251,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "7rTlalsCE0rjvfT-fCasc",
-            "type": "text",
-            "position": {
-              "x": -545.9389438369483,
-              "y": 110.22204345533106
-            },
-            "data": {
-              "text": "Wireframe Components",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 255,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "FbgxPT6yV_KF6GFOkKfPk",
-            "type": "text",
-            "position": {
-              "x": -301.61559941787084,
-              "y": 1681.5973095432269
-            },
-            "data": {
-              "text": "Gallery Card",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 139,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
             "id": "AGeQVlOHk3etO0ryuxnQB",
             "type": "text",
             "position": {
-              "x": -517.5200456666632,
-              "y": 829.2921782454221
+              "x": -494.33844545855436,
+              "y": 827.4125890393592
             },
             "data": {
               "text": "Buttons & Inputs",
@@ -198,30 +106,11 @@
             "dragging": false
           },
           {
-            "id": "7bBlsG55ju0q-Vkn5GKVw",
-            "type": "text",
-            "position": {
-              "x": -744.1088127735593,
-              "y": 1681.7525270992587
-            },
-            "data": {
-              "text": "Hero Section",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 148,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
             "id": "Nbg0dpcgyiuhohNYZrLb2",
             "type": "shape",
             "position": {
-              "x": -546.2047976631457,
-              "y": 1269.8513149849953
+              "x": -649.5822039966039,
+              "y": 1201.5595738313773
             },
             "style": {
               "width": 176.55484068627447,
@@ -243,8 +132,8 @@
             "id": "MXpn2_CPMZ9-T2unTody_",
             "type": "shape",
             "position": {
-              "x": -551.3151490612345,
-              "y": 1314.0738499077238
+              "x": -649.6803175118584,
+              "y": 1257.0596439904832
             },
             "style": {
               "width": 310.6081495098033,
@@ -266,8 +155,8 @@
             "id": "A7PtDhLqFIS37X-J040fd",
             "type": "shape",
             "position": {
-              "x": -546.7610553224595,
-              "y": 1348.495213848379
+              "x": -648.8854021852092,
+              "y": 1295.2401863432642
             },
             "style": {
               "width": 310.6081495098033,
@@ -289,8 +178,8 @@
             "id": "7S1vcXjhex8jr8oEsHnNQ",
             "type": "shape",
             "position": {
-              "x": -544.6609162330639,
-              "y": 1381.3319552474977
+              "x": -648.6648523018764,
+              "y": 1331.8361061545086
             },
             "style": {
               "width": 265.0773590686267,
@@ -305,82 +194,6 @@
             "measured": {
               "width": 265,
               "height": 12
-            },
-            "dragging": false
-          },
-          {
-            "id": "GZ798EwTOo8h_zMxM6VT5",
-            "type": "text",
-            "position": {
-              "x": -690.5019336806422,
-              "y": 1269.6813265383275
-            },
-            "data": {
-              "text": "(Title)",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 60,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "T8EdXQDQ9JT7H1Tpx1_1t",
-            "type": "text",
-            "position": {
-              "x": -699.88402783297,
-              "y": 1343.3999449402943
-            },
-            "data": {
-              "text": "(Body Text)",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 100,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "Uf0tLSpxVEoNZGEg5iDxR",
-            "type": "text",
-            "position": {
-              "x": -674.5957036807681,
-              "y": 1174.023756896391
-            },
-            "data": {
-              "text": "Text Blocks",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 129,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "lbx9w9gvgrmjWwTT4G5ur",
-            "type": "text",
-            "position": {
-              "x": -539.2005019953557,
-              "y": 169.4187420301894
-            },
-            "data": {
-              "text": "Navigation / Header",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 217,
-              "height": 47
             },
             "dragging": false
           },
@@ -432,8 +245,8 @@
             "id": "VaVWwkAQLKNEMQiZ-Eroy",
             "type": "shape",
             "position": {
-              "x": -734.4278568135607,
-              "y": 238.50882332982303
+              "x": -512.636330498141,
+              "y": 264.8230722147033
             },
             "style": {
               "width": 164.87851581501013,
@@ -452,68 +265,11 @@
             "dragging": false
           },
           {
-            "id": "FehqbfiByo0chx10s6k7K",
-            "type": "text",
-            "position": {
-              "x": -466.76628566411773,
-              "y": 243.63334023133274
-            },
-            "data": {
-              "text": "Header",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 90,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "4o8MDMWlVABcOMhLv9tCE",
-            "type": "text",
-            "position": {
-              "x": -490.7543331385879,
-              "y": 325.4874094813052
-            },
-            "data": {
-              "text": "Navigation",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 125,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "a0THxKWmm_0ZRAedwCQo9",
-            "type": "text",
-            "position": {
-              "x": -224.28935789709527,
-              "y": 242.89031479308477
-            },
-            "data": {
-              "text": "Link",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 58,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
             "id": "QYnfJWM-pWbWnSqCvq3Cl",
             "type": "shape",
             "position": {
-              "x": -318.46178106376624,
-              "y": 1173.7876949585734
+              "x": -174.98647166763314,
+              "y": 1181.9325815181792
             },
             "style": {
               "width": 102.36618498818295,
@@ -533,104 +289,11 @@
             "zIndex": 2
           },
           {
-            "id": "JraPN4rzcaAhiz7t42S1_",
-            "type": "text",
-            "position": {
-              "x": -572.5925680971574,
-              "y": 1439.1693754779835
-            },
-            "data": {
-              "text": "Pre-Built Wireframe Sections",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 303,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "QAEFXLh6L0nqeDCViqW-m",
-            "type": "text",
-            "position": {
-              "x": -525.2708095881638,
-              "y": 1522.5882528874452
-            },
-            "data": {
-              "text": "Navigation Bar",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 163,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "P0Y9Dt7vHaGNI67yqVyNE",
-            "type": "text",
-            "position": {
-              "x": -460.75163751650143,
-              "y": 2017.0814315980151
-            },
-            "data": {
-              "text": "Footer",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 83,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "rBZH2TySf8ighzBGSIOJ1",
-            "type": "text",
-            "position": {
-              "x": 251.22939113979214,
-              "y": 1104.904697069577
-            },
-            "data": {
-              "text": "Page 3",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
-            }
-          },
-          {
-            "id": "ujlY9MuwgObgfQn1hdVWi",
-            "type": "text",
-            "position": {
-              "x": 992.1781709072682,
-              "y": 1103.1987497917776
-            },
-            "data": {
-              "text": "Page 4",
-              "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 86,
-              "height": 47
-            }
-          },
-          {
             "id": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
             "type": "lineAnchor",
             "position": {
-              "x": -306.4977850117635,
-              "y": 1199.7433960687026
+              "x": -159.2632972035047,
+              "y": 1203.5025744808283
             },
             "style": {
               "width": 10,
@@ -648,8 +311,8 @@
             "id": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
             "type": "lineAnchor",
             "position": {
-              "x": -248.92105695639594,
-              "y": 1199.7433960687026
+              "x": -101.68656914813715,
+              "y": 1203.5025744808283
             },
             "style": {
               "width": 10,
@@ -667,7 +330,7 @@
             "id": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
             "type": "lineAnchor",
             "position": {
-              "x": -306.4977850117634,
+              "x": -158.01023773279599,
               "y": 1223.280439282731
             },
             "style": {
@@ -686,7 +349,7 @@
             "id": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
             "type": "lineAnchor",
             "position": {
-              "x": -248.9210569563959,
+              "x": -100.43350967742845,
               "y": 1223.280439282731
             },
             "style": {
@@ -705,8 +368,8 @@
             "id": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
             "type": "lineAnchor",
             "position": {
-              "x": -306.4977850117634,
-              "y": 1248.9450721999494
+              "x": -159.88982693885887,
+              "y": 1251.4511911413665
             },
             "style": {
               "width": 10,
@@ -724,8 +387,8 @@
             "id": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
             "type": "lineAnchor",
             "position": {
-              "x": -248.9210569563959,
-              "y": 1248.9450721999494
+              "x": -102.31309888349134,
+              "y": 1251.4511911413665
             },
             "style": {
               "width": 10,
@@ -1441,8 +1104,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -370.08880914184283,
-              "y": 317.79960981003825
+              "x": -695.257741790721,
+              "y": 278.3282364827177
             },
             "width": 80,
             "height": 60,
@@ -1463,8 +1126,8 @@
               "rotation": 180
             },
             "position": {
-              "x": -565.0739480154585,
-              "y": 317.7996098100382
+              "x": -785.6124148601697,
+              "y": 276.44864727665475
             },
             "width": 80,
             "height": 60,
@@ -1604,14 +1267,14 @@
               "showHandles": false
             },
             "position": {
-              "x": -738.7716764037275,
-              "y": 1910.0273817910238
+              "x": -737.3427403597032,
+              "y": 2063.2047772227374
             },
-            "width": 653,
-            "height": 362,
+            "width": 642.0041201048617,
+            "height": 75.32357744892124,
             "measured": {
-              "width": 653,
-              "height": 362
+              "width": 642,
+              "height": 75
             },
             "dragging": false,
             "resizing": false
@@ -1625,14 +1288,14 @@
               "showHandles": false
             },
             "position": {
-              "x": -779.0044720801668,
-              "y": 1526.5313232208462
+              "x": -766.473877373081,
+              "y": 1530.2905016329719
             },
-            "width": 715,
-            "height": 168,
+            "width": 736.5526381923238,
+            "height": 90.31031281606761,
             "measured": {
-              "width": 715,
-              "height": 168
+              "width": 737,
+              "height": 90
             },
             "dragging": false,
             "resizing": false,
@@ -1772,6 +1435,385 @@
             },
             "dragging": false,
             "zIndex": -5
+          },
+          {
+            "id": "ee627ae2-9ab8-4c72-9c1a-9b4a69d0de65",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/137c2789-b97e-47eb-a6c7-3fdb730acfa8.png",
+              "altText": "Size=Large, Type=Solid",
+              "showHandles": false
+            },
+            "position": {
+              "x": -245.83007557554342,
+              "y": 269.8485327427655
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "e6d497ba-e6d9-4a90-b6be-7428899d482e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/4e55470e-4adb-46ef-8568-c311c6498405.png",
+              "altText": "Size=Large, Type=Outline",
+              "showHandles": false
+            },
+            "position": {
+              "x": -141.19960977137652,
+              "y": 270.6316949119584
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "f91c65f5-42e5-47fd-9acd-ddbf726537a3",
+            "type": "text",
+            "data": {
+              "text": "Wireframe Components",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -579.1438947840273,
+              "y": 91.13092573295353
+            },
+            "width": 369.01038089873657,
+            "height": 75.39107519470627,
+            "measured": {
+              "width": 369,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "5dfa366b-377a-4659-918d-054693eff331",
+            "type": "text",
+            "data": {
+              "text": "Navigation"
+            },
+            "position": {
+              "x": -777.1272911559839,
+              "y": 233.8328507997202
+            },
+            "width": 162.50611894141718,
+            "height": 60,
+            "measured": {
+              "width": 163,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "fda2b4f4-f201-4902-866b-727f7f939d84",
+            "type": "text",
+            "data": {
+              "text": "Logo"
+            },
+            "position": {
+              "x": -510.617236145754,
+              "y": 214.41042900373708
+            },
+            "width": 162.50611894141718,
+            "height": 60,
+            "measured": {
+              "width": 163,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "2cb160ef-f5f0-401b-9e21-2394b450a5e1",
+            "type": "text",
+            "data": {
+              "text": "Links"
+            },
+            "position": {
+              "x": -224.05822960418683,
+              "y": 226.31449397546868
+            },
+            "width": 162.50611894141718,
+            "height": 60,
+            "measured": {
+              "width": 163,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "5c02e58b-de8f-440c-944a-3561b5ae81fe",
+            "type": "text",
+            "data": {
+              "text": "Navigation / Header",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -544.4498418548859,
+              "y": 156.1431636157879
+            },
+            "width": 235.68482262307083,
+            "height": 60,
+            "measured": {
+              "width": 236,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "2096c0ea-7c8c-4ae4-9745-8bf2251e1678",
+            "type": "text",
+            "data": {
+              "text": "Images, Videos, & Icons",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -583.5296029315073,
+              "y": 408.1549718222257
+            },
+            "width": 309.3647042045995,
+            "height": 60,
+            "measured": {
+              "width": 309,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "3456067e-49d5-4ee7-be89-476d423df884",
+            "type": "text",
+            "data": {
+              "text": "Text Blocks",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -485.7909642162376,
+              "y": 1125.5315188028912
+            },
+            "width": 158.49631333901357,
+            "height": 74.8898590544909,
+            "measured": {
+              "width": 159,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "b999d131-76dd-49fb-9eac-da4401d735a6",
+            "type": "text",
+            "data": {
+              "text": "(Title)"
+            },
+            "position": {
+              "x": -747.6803935943321,
+              "y": 1186.3049031322576
+            },
+            "width": 87.82372859877711,
+            "height": 60,
+            "measured": {
+              "width": 88,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "66126750-4808-4109-a152-9c7ce59c5bab",
+            "type": "text",
+            "data": {
+              "text": "(Body Text)"
+            },
+            "position": {
+              "x": -746.3177684744476,
+              "y": 1260.2354119040642
+            },
+            "width": 87.82372859877711,
+            "height": 60,
+            "measured": {
+              "width": 88,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "772f4831-6d30-45a2-b4e5-22409ac2e29f",
+            "type": "text",
+            "data": {
+              "text": "Pre-Built Wireframe Section",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -617.9887383759934,
+              "y": 1428.771910714369
+            },
+            "width": 463.74156981135286,
+            "height": 66.87028609002391,
+            "measured": {
+              "width": 464,
+              "height": 67
+            },
+            "dragging": false
+          },
+          {
+            "id": "213565d8-23e7-4ca1-91a4-036755fe1161",
+            "type": "text",
+            "data": {
+              "text": "Navigation Bar",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -506.4664454829293,
+              "y": 1487.6657058376725
+            },
+            "width": 198.09296202113262,
+            "height": 60,
+            "measured": {
+              "width": 198,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "adf4b078-568d-4251-a0e5-dc4da14af867",
+            "type": "text",
+            "data": {
+              "text": "Hero Section",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -673.0137894379951,
+              "y": 1673.7450372378976
+            },
+            "width": 198.09296202113262,
+            "height": 60,
+            "measured": {
+              "width": 198,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "223a6e22-e553-48a8-95bd-92ff8f041720",
+            "type": "text",
+            "data": {
+              "text": "Gallery Card",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -261.9007173964029,
+              "y": 1676.2511561793149
+            },
+            "width": 198.09296202113262,
+            "height": 60,
+            "measured": {
+              "width": 198,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "77cbbb88-e169-470e-bb10-7038ffd12875",
+            "type": "text",
+            "data": {
+              "text": "Footer",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -513.4577606094966,
+              "y": 2016.924850101316
+            },
+            "width": 198.09296202113262,
+            "height": 60,
+            "measured": {
+              "width": 198,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "eab2d32e-2ac2-451f-9e79-9343491950ed",
+            "type": "text",
+            "data": {
+              "text": "Page 1",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 281.30395471948015,
+              "y": 31.55727341918395
+            },
+            "width": 187.16071721464664,
+            "height": 60,
+            "measured": {
+              "width": 187,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "6e6042ca-0904-4d34-8040-3356027afc59",
+            "type": "text",
+            "data": {
+              "text": "Page 2",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 943.7787500782865,
+              "y": 31.55727341918395
+            },
+            "width": 187.16071721464664,
+            "height": 60,
+            "measured": {
+              "width": 187,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "568628d2-329a-4872-8bac-c4fa8049f1ed",
+            "type": "text",
+            "data": {
+              "text": "Page 3",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 246.42642713744806,
+              "y": 1114.4156619731716
+            },
+            "width": 187.16071721464664,
+            "height": 60,
+            "measured": {
+              "width": 187,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "df9e28ef-6bdc-4c6c-9d26-aa5c3aa028a4",
+            "type": "text",
+            "data": {
+              "text": "Page 4",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 908.9012224962545,
+              "y": 1112.6287669425544
+            },
+            "width": 187.16071721464664,
+            "height": 60,
+            "measured": {
+              "width": 187,
+              "height": 60
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -1834,9 +1876,9 @@
           }
         ],
         "viewport": {
-          "x": 465.9075662096251,
-          "y": 21.590400710858148,
-          "zoom": 0.35713591088452074
+          "x": 681.5738782079852,
+          "y": 119.08960424173046,
+          "zoom": 0.5596299630732249
         }
       }
     },
@@ -6713,9 +6755,9 @@
         }
       }
     },
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 20:41:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:23:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-18 18:04:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:13:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:17:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:19:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:25:34 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:03 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:27 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:17:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-24 12:47:29 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 20:41:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:23:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-18 18:04:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:13:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:17:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:19:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:25:34 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:03 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:27 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:17:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-24 12:47:29 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:08:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:14:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-24 19:15:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

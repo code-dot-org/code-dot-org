@@ -50,17 +50,10 @@ class LevelSource < ApplicationRecord
     self.md5 = Digest::MD5.hexdigest(data)
   end
 
-  def self.cache_key(level_id, md5)
-    "#{level_id}-#{md5}"
-  end
-
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
-
-    Rails.cache.fetch(cache_key(level.id, md5)) do
-      LevelSource.where(level: level, md5: md5).first_or_create do |ls|
-        ls.data = data
-      end
+    LevelSource.where(level:, md5:).first_or_create do |level_source|
+      level_source.data = data
     end
   end
 

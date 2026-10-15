@@ -1,6 +1,6 @@
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import ReactPlayer from 'react-player';
 import {JsonLd} from 'react-schemaorg';
 import type {VideoObject} from 'schema-dts';
@@ -40,11 +40,45 @@ const Video: React.FC<VideoProps> = ({
   errorBody,
   className,
   isYouTubeCookieAllowed,
+  posterThumbnailFallback,
 }: VideoProps) => {
   const youtubeVideoUrl = `https://www.youtube-nocookie.com/watch?v=${youTubeId}`;
 
   const [renderState, setRenderState] = useState<RenderState>('facade');
-  const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
+  // YouTube's maxres poster is 1280x720, but many videos do not have one and
+  // YouTube answers 404 for those. Show a poster that is certain to load,
+  // then swap to maxres once it loads. Showing maxres first would leave a
+  // blank box on every video without one.
+  //
+  // posterThumbnailFallback lets a caller supply an image that loads on a
+  // network that blocks YouTube's image host. Without one, use hqdefault,
+  // which YouTube always has.
+  //
+  // Latch the id, so swapping youTubeId re-probes the new video.
+  const posterBase =
+    posterThumbnailFallback ?? `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
+  const [maxResLoadedFor, setMaxResLoadedFor] = useState<string | undefined>();
+
+  useEffect(() => {
+    const probe = new Image();
+    // YouTube answers 404 for a missing maxres poster, but the body is still
+    // a valid 120x90 image. Some browsers decode it and report a load. Check
+    // the size, and upgrade only for an image larger than hqdefault.
+    probe.onload = () => {
+      if (probe.naturalWidth > 480) {
+        setMaxResLoadedFor(youTubeId);
+      }
+    };
+    probe.src = `//i.ytimg.com/vi/${youTubeId}/maxresdefault.jpg`;
+    return () => {
+      probe.onload = null;
+    };
+  }, [youTubeId]);
+
+  const resolvedPosterThumbnail =
+    maxResLoadedFor === youTubeId
+      ? `//i.ytimg.com/vi/${youTubeId}/maxresdefault.jpg`
+      : posterBase;
 
   const handleError = (
     event: string | Event | undefined,
@@ -88,14 +122,14 @@ const Video: React.FC<VideoProps> = ({
         return (
           <Facade
             label={`Play video ${videoTitle}`}
-            posterThumbnail={posterThumbnail}
+            posterThumbnail={resolvedPosterThumbnail}
             onClick={handleFacadeClick}
           />
         );
       case 'youtube':
         return (
           <YouTubeVideo
-            posterThumbnail={posterThumbnail}
+            posterThumbnail={resolvedPosterThumbnail}
             videoTitle={videoTitle}
             src={youtubeVideoUrl}
             onError={error => {
@@ -111,7 +145,7 @@ const Video: React.FC<VideoProps> = ({
       case 'native':
         return (
           <NativeVideo
-            posterThumbnail={posterThumbnail}
+            posterThumbnail={resolvedPosterThumbnail}
             videoTitle={videoTitle}
             src={videoFallback}
             className={className}
@@ -196,14 +230,14 @@ const Video: React.FC<VideoProps> = ({
       </div>
       {/* JSON-LD for structured data. Needed for Google SEO.
       (see https://developers.google.com/search/docs/appearance/structured-data/video#json-ld) */}
-      {videoTitle && posterThumbnail && uploadDate && (
+      {videoTitle && resolvedPosterThumbnail && uploadDate && (
         <JsonLd<VideoObject>
           item={{
             '@context': 'https://schema.org',
             '@type': 'VideoObject',
             name: videoTitle,
             description: videoDesc,
-            thumbnailUrl: posterThumbnail,
+            thumbnailUrl: resolvedPosterThumbnail,
             uploadDate: uploadDate,
             embedUrl: youtubeVideoUrl,
             contentUrl: videoFallback,

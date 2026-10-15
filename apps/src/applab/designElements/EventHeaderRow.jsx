@@ -1,17 +1,16 @@
+import {Typography as MuiTypography} from '@mui/material';
 import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
-
-import color from '../../util/color';
 
 import * as rowStyle from './rowStyle';
 
 export default class EventHeaderRow extends React.Component {
   render() {
-    const style = Object.assign({}, rowStyle.container, rowStyle.maxWidth, {
-      color: color.charcoal,
-    });
-
-    return <div style={style}>{applabMsg.addEventHeader()}</div>;
+    return (
+      <MuiTypography style={rowStyle.container} variant="body4">
+        {applabMsg.addEventHeader()}
+      </MuiTypography>
+    );
   }
 }

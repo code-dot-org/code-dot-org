@@ -36,6 +36,14 @@ export interface ExpandableImagesOptions {
    * activated. When omitted, the image renders inline without expand behavior.
    */
   onExpand?: (url: string, alt: string) => void;
+  /**
+   * Applied to every element this extension generates for an expandable image —
+   * the <button> when `onExpand` is supplied, the wrapping <span> otherwise.
+   * Joins the extension's own class and any class the author wrote in the
+   * markdown; it does not replace either. Spans that are not expandable images
+   * (no usable `data-url`) pass through untouched.
+   */
+  className?: string;
 }
 
 interface SpanProps {
@@ -92,7 +100,7 @@ const textOf = (children: ReactNode): string => {
 };
 
 const makeExpandableImage =
-  ({onExpand}: ExpandableImagesOptions) =>
+  ({onExpand, className: extensionClassName}: ExpandableImagesOptions) =>
   (props: SpanProps) => {
     const {children, className, style} = props;
     const rawUrl = props['data-url'] ?? props.dataUrl;
@@ -114,7 +122,10 @@ const makeExpandableImage =
     // With no handler, show the image but do not make it interactive.
     if (!onExpand) {
       return (
-        <span className={className} style={style}>
+        <span
+          className={classNames(extensionClassName, className)}
+          style={style}
+        >
           {image}
         </span>
       );
@@ -123,7 +134,11 @@ const makeExpandableImage =
     return (
       <button
         type="button"
-        className={classNames(moduleStyles.trigger, className)}
+        className={classNames(
+          moduleStyles.trigger,
+          extensionClassName,
+          className,
+        )}
         style={style}
         aria-label={alt ? `Expand image: ${alt}` : 'Expand image'}
         onClick={() => onExpand(url, alt)}
@@ -142,8 +157,9 @@ const makeExpandableImage =
  * `<span data-url="url">A cat</span>`); the syntax transformer rewrites it into
  * a span whose url becomes the image source and whose text becomes the alt.
  * Supply `onExpand` to receive `(url, alt)` on click; without it, the image
- * renders inline and non-interactive. The schema half lets `data-url` survive
- * sanitization and reach the component.
+ * renders inline and non-interactive. Supply `className` to style every
+ * generated element. The schema half lets `data-url` survive sanitization and
+ * reach the component.
  */
 export const expandableImages = (
   options: ExpandableImagesOptions = {},
