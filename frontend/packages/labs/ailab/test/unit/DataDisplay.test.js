@@ -67,8 +67,8 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Cards'));
     const label = screen.getByText('animal').closest('dt');
     const feature = screen.getByText('legs').closest('dt');
-    expect(label.getAttribute('aria-label')).toBe('animal, label');
-    expect(feature.getAttribute('aria-label')).toBe('legs, feature');
+    expect(label.textContent).toBe('animal, used as the label');
+    expect(feature.textContent).toBe('legs, used as a feature');
     expect(label.querySelector('[aria-hidden="true"]')).toBeTruthy();
     expect(feature.querySelector('[aria-hidden="true"]')).toBeTruthy();
   });

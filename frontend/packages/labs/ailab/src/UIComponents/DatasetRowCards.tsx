@@ -12,23 +12,34 @@ import {
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
+import {
+  type ColumnRole,
+  getColumnRole,
+  getLocalizedColumnName,
+} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import type {AilabProject, DataRow} from '../types';
 
+import appStyles from '../app.module.scss';
 import styles from './datasetRowCards.module.scss';
 
 const DECK_PEEK = 2;
 
+const ROLE_DESCRIPTIONS: Record<ColumnRole, string> = {
+  label: 'used as the label',
+  feature: 'used as a feature',
+};
+
 interface DatasetRowCardsProps {
+  // Index into state.data.
   rowIndex: number;
   onRowIndexChange: (rowIndex: number) => void;
 }
 
 const DatasetRowCards = ({
-  rowIndex: requestedIndex,
+  rowIndex,
   onRowIndexChange,
 }: DatasetRowCardsProps) => {
   const data = useAppSelector(state => state.data);
@@ -36,8 +47,6 @@ const DatasetRowCards = ({
   const {project} = useProject();
   const total = data.length;
   const columns = Object.keys(data[0]);
-  // A dataset row; for one render after the dataset changes it can be past the end.
-  const rowIndex = Math.min(requestedIndex, total - 1);
   const atStart = rowIndex === 0;
   const atEnd = rowIndex === total - 1;
   // The card that just left, the front card, the ones peeking, and one waiting to fade in.
@@ -74,13 +83,13 @@ const DatasetRowCards = ({
   };
 
   return (
-    <div className={styles.root}>
-      <div
-        className={styles.stage}
-        role="region"
-        aria-roledescription="carousel"
-        aria-label="Dataset rows"
-      >
+    <div
+      className={styles.root}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Dataset rows"
+    >
+      <div className={styles.stage}>
         <div
           className={styles.deck}
           style={{'--deck-peek': DECK_PEEK} as CSSProperties}
@@ -239,17 +248,21 @@ const RowCard = ({
                     [styles.labelName]: isLabel,
                     [styles.featureName]: isFeature,
                   })}
-                  aria-label={role ? `${name}, ${role}` : undefined}
                 >
                   <span className={styles.labelText}>{name}</span>
                   {role && (
-                    <span
-                      className={classNames(styles.dot, {
-                        [styles.dotLabel]: isLabel,
-                        [styles.dotFeature]: isFeature,
-                      })}
-                      aria-hidden="true"
-                    />
+                    <>
+                      <span
+                        className={classNames(styles.dot, {
+                          [styles.dotLabel]: isLabel,
+                          [styles.dotFeature]: isFeature,
+                        })}
+                        aria-hidden="true"
+                      />
+                      <span className={appStyles.visuallyHidden}>
+                        {`, ${ROLE_DESCRIPTIONS[role]}`}
+                      </span>
+                    </>
                   )}
                 </Typography>
                 <Typography
