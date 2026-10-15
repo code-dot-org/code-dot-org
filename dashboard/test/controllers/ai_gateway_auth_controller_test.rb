@@ -15,6 +15,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
+    CDO.stubs(:ai_gateway_jwt_auth_key).returns(nil)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -155,10 +156,26 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
-  test 'names the Rails environment in a claim' do
-    claims = mint_and_capture_claims
+  test 'signs with the environment key pair and names the environment in kid' do
+    CDO.stubs(:ai_gateway_jwt_auth_key).returns('environment private key')
+    CDO.stubs(:ai_gateway_jwt_auth_key_passphrase).returns('environment passphrase')
+    environment_key = OpenSSL::PKey::RSA.generate(2048)
 
-    assert_equal CDO.rack_env.to_s, claims[:rack_env]
+    mint_and_capture_claims do
+      OpenSSL::PKey::RSA.stubs(:new).with('environment private key', 'environment passphrase').returns(environment_key)
+    end
+
+    assert_same environment_key, @captured_key
+    assert_equal({kid: CDO.rack_env.to_s}, @captured_headers)
+  end
+
+  test 'signs with the shared key and no kid while the environment has no key pair' do
+    CDO.stubs(:ai_gateway_jwt_auth_key).raises(Cdo::Secrets::NOT_FOUND.new(nil, 'not found'))
+
+    mint_and_capture_claims
+
+    assert_same @signing_key, @captured_key
+    assert_equal({}, @captured_headers)
   end
 
   private def stub_turnstile_enforcement_mode(value)
@@ -177,10 +194,13 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     # stubbed below, so the key is never actually used to sign anything.
     @signing_key ||= OpenSSL::PKey::RSA.generate(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@signing_key)
+    yield if block_given?
 
     captured = nil
-    JWT.stubs(:encode).with do |claims, _key, _algorithm|
+    JWT.stubs(:encode).with do |claims, key, _algorithm, headers = {}|
       captured = claims
+      @captured_key = key
+      @captured_headers = headers
       true
     end.returns('fake.jwt.token')
 

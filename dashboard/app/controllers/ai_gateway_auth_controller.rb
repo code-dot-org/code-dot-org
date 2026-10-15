@@ -1,4 +1,5 @@
 require 'jwt'
+require 'cdo/secrets'
 require 'securerandom' unless defined?(SecureRandom)
 
 class AiGatewayAuthController < ApplicationController
@@ -49,6 +50,8 @@ class AiGatewayAuthController < ApplicationController
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
+    signing_key, signing_headers = jwt_signing_key_and_headers
+
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
     user_log_token = current_user.log_token(destination: User::LogToken::SENTRY)
@@ -71,13 +74,25 @@ class AiGatewayAuthController < ApplicationController
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
-        # The gateway picks its stored provider keys by environment, as CDO secrets do.
-        rack_env: CDO.rack_env.to_s,
       },
-      OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
-      'RS256'
+      signing_key,
+      'RS256',
+      signing_headers
     )
     render json: {token: token, turnstileEnforcementMode: enforcement_mode}
+  end
+
+  # Until this environment has its own key pair, signs with the shared key and no kid.
+  private def jwt_signing_key_and_headers
+    key = CDO.ai_gateway_jwt_auth_key
+    return shared_jwt_signing_key_and_headers if key.blank?
+    [OpenSSL::PKey::RSA.new(key, CDO.ai_gateway_jwt_auth_key_passphrase), {kid: CDO.rack_env.to_s}]
+  rescue Cdo::Secrets::NOT_FOUND
+    shared_jwt_signing_key_and_headers
+  end
+
+  private def shared_jwt_signing_key_and_headers
+    [OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE), {}]
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
