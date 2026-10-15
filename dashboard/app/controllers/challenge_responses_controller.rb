@@ -24,7 +24,8 @@ class ChallengeResponsesController < ApplicationController
   # and instructors. With user_id it is that student's submissions (the
   # project page's version switcher), uncollapsed, listed only for the
   # student themselves and their teachers. The AI feedback stays private:
-  # student_feedback is only included on the caller's own rows.
+  # student_feedback is only included on the caller's own rows. Students
+  # see only successfully evaluated submissions (see gallery_scope).
   def index
     responses = gallery_scope.
       order(created_at: params[:sort] == 'oldest' ? :asc : :desc).
@@ -74,7 +75,8 @@ class ChallengeResponsesController < ApplicationController
   # The project page detail. What is included depends on who is looking:
   # the response's author gets their constructive feedback; the author's
   # teachers additionally get the scored rubric evaluation and the
-  # challenge's rubric; section peers get the work itself only. Every
+  # challenge's rubric; section peers get the work itself only, and only
+  # once it is successfully evaluated (see Ability). Every
   # viewer gets the challenge question and their own viewer_role so the
   # page can pick the right layout.
   def show
@@ -131,16 +133,21 @@ class ChallengeResponsesController < ApplicationController
   # (section_id) collapses per student per challenge; "My Projects" (the
   # caller's own work) collapses per challenge. Only the per-student version
   # switcher (user_id) is left uncollapsed: it lists every submission.
+  #
+  # Students see only successfully evaluated submissions, filtered before
+  # collapsing so a flagged resubmission falls back to the last good one.
+  # Teachers listing their students see every status.
   private def gallery_scope
     scope = ChallengeResponse.where(is_final: true)
     if params[:user_id].present?
       student = User.find(params[:user_id])
       authorize_student_listing! student
-      return scope.where(user_id: student.id)
+      scope = scope.where(user_id: student.id)
+      return student.id == current_user.id ? scope.evaluation_success : scope
     end
     # Final submissions are immutable, so the max id per group is the newest.
     if params[:section_id].blank?
-      own_scope = scope.where(user_id: current_user.id)
+      own_scope = scope.evaluation_success.where(user_id: current_user.id)
       return ChallengeResponse.where(id: own_scope.group(:challenge_id).select('MAX(id)'))
     end
 
@@ -148,6 +155,7 @@ class ChallengeResponsesController < ApplicationController
     authorize! :list_projects, section
     section_scope = scope.where(user_id: section.students.select(:id))
     unless current_user.students.exists?(id: section.students.select(:id))
+      section_scope = section_scope.evaluation_success
       section_scope = section_scope.where(approved: true).or(section_scope.where(user_id: current_user.id))
     end
     ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))

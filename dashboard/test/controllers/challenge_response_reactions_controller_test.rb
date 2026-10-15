@@ -8,7 +8,7 @@ class ChallengeResponseReactionsControllerTest < ActionController::TestCase
   let(:outsider) {create(:student)}
 
   let(:challenge) {create(:challenge)}
-  let(:challenge_response) {create(:challenge_response, challenge:, user: student, is_final: true)}
+  let(:challenge_response) {create(:challenge_response, :evaluated, challenge:, user: student, is_final: true)}
 
   let(:response_json) {JSON.parse(response.body)}
 

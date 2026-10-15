@@ -352,23 +352,20 @@ class Ability
       can [:index, :show, :starter_image], Challenge
 
       # Students create and read their own challenge responses; teachers read
-      # their students' responses; section peers read each other's final
-      # submissions. Asset access mirrors response access.
+      # their students' responses; section peers read each other's final,
+      # successfully evaluated submissions. Asset access mirrors response
+      # access.
       can :create, ChallengeResponse
       can :read, ChallengeResponse do |challenge_response|
         challenge_response.user_id == user.id ||
           user.students.exists?(id: challenge_response.user_id) ||
-          (challenge_response.is_final &&
+          (challenge_response.is_final && challenge_response.evaluation_success? &&
             Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: challenge_response.user_id))
       end
       # Only the response's owner triggers AI evaluation of it.
       can :evaluate, ChallengeResponse, user_id: user.id
       can :read, ChallengeResponseAsset do |asset|
-        response = asset.challenge_response
-        response.user_id == user.id ||
-          user.students.exists?(id: response.user_id) ||
-          (response.is_final &&
-            Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: response.user_id))
+        can? :read, asset.challenge_response
       end
       # Only the response's owner uploads asset bytes.
       can :upload, ChallengeResponseAsset, challenge_response: {user_id: user.id}

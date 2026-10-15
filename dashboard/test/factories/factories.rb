@@ -1490,6 +1490,10 @@ FactoryBot.define do
   factory :challenge_response do
     association :challenge
     association :user, factory: :student
+
+    trait :evaluated do
+      evaluation_status {:success}
+    end
   end
 
   factory :challenge_response_asset do
