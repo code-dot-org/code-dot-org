@@ -328,6 +328,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     });
   };
 
+  // Debounced - saves after typing pauses, not every keystroke.
   const handleChangeAnswerText = (questionId: number, answerText: string) => {
     setAnswerTextsByQuestionId(prev => ({...prev, [questionId]: answerText}));
     clearTimeout(answerAutosaveTimersRef.current[questionId]);

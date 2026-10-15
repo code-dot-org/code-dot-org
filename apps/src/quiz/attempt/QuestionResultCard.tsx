@@ -30,7 +30,11 @@ function selectedAnswerLabel(isViewingStudent?: boolean): string {
   return isViewingStudent ? "Student's answer" : 'Your answer';
 }
 
-type ChoiceStatus = 'correct' | 'incorrect' | 'selected_ungraded' | 'neutral';
+type MultipleChoiceStatus =
+  | 'correct'
+  | 'incorrect'
+  | 'selected_ungraded'
+  | 'neutral';
 
 function selectedChoiceIdOf(result: QuizQuestionResult): string | null {
   return isMultipleChoiceResponse(result)
@@ -44,10 +48,10 @@ function answerTextOf(result: QuizQuestionResult): string | null {
     : null;
 }
 
-function getChoiceStatus(
+function getMultipleChoiceStatus(
   choiceId: string,
   result: QuizQuestionResult
-): ChoiceStatus {
+): MultipleChoiceStatus {
   const isSelected = choiceId === selectedChoiceIdOf(result);
   const isCorrectAnswer = choiceId === result.correctChoiceId;
 
@@ -64,14 +68,14 @@ function getChoiceStatus(
 }
 
 // Not a RadioButton - these choices are no longer interactive.
-const ChoiceResults: React.FunctionComponent<{
+const MultipleChoiceResults: React.FunctionComponent<{
   question: QuizQuestionSummary;
   result: QuizQuestionResult;
   isViewingStudent?: boolean;
 }> = ({question, result, isViewingStudent}) => (
   <ul className={styles.choices}>
     {(question.choices ?? []).map((choice, index) => {
-      const status = getChoiceStatus(choice.id, result);
+      const status = getMultipleChoiceStatus(choice.id, result);
       const isSelectedChoice = choice.id === selectedChoiceIdOf(result);
 
       return (
@@ -174,7 +178,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
         isViewingStudent={isViewingStudent}
       />
     ) : (
-      <ChoiceResults
+      <MultipleChoiceResults
         question={question}
         result={result}
         isViewingStudent={isViewingStudent}
