@@ -32,7 +32,7 @@ export const NO_ROWS: DisplayTreeNodeCounts = {correct: 0, incorrect: 0};
 
 export type DisplayTreeCountsLookup = (nodeId: string) => DisplayTreeNodeCounts;
 
-// Indices into the dataset of the rows that reach a node, test rows by grade.
+// Dataset row numbers of the rows that reach a node. Accuracy check rows are split by grade.
 export interface DisplayTreeNodeRows {
   correct: number[];
   incorrect: number[];
@@ -79,7 +79,7 @@ export function traceDisplayTree(
   return {path, steps, prediction: node.prediction};
 }
 
-// Maps each node to the indices, into examples, of the examples that reach it.
+// For each node, which examples reach it, by their position in `examples`.
 export function groupDisplayTreeRows(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,

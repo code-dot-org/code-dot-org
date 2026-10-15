@@ -128,19 +128,19 @@ const prepareTrainingData = (
   accuracyCheckRowIndices: number[],
 ): void => {
   const state = store.getState();
-  const {trained, test} = splitRowIndices(
+  const {trained, accuracyCheck} = splitRowIndices(
     state.data.length,
     accuracyCheckRowIndices,
   );
-  const examples = (rows: number[]) =>
+  const examplesFor = (rows: number[]) =>
     rows.map(row => extractTrainingExamples(state, project, state.data[row]));
-  const labels = (rows: number[]) =>
+  const labelsFor = (rows: number[]) =>
     rows.map(row => extractTrainingLabel(state, project, state.data[row]));
 
-  store.dispatch(setTrainingExamples(examples(trained)));
-  store.dispatch(setTrainingLabels(labels(trained)));
-  store.dispatch(setAccuracyCheckExamples(examples(test)));
-  store.dispatch(setAccuracyCheckLabels(labels(test)));
+  store.dispatch(setTrainingExamples(examplesFor(trained)));
+  store.dispatch(setTrainingLabels(labelsFor(trained)));
+  store.dispatch(setAccuracyCheckExamples(examplesFor(accuracyCheck)));
+  store.dispatch(setAccuracyCheckLabels(labelsFor(accuracyCheck)));
 };
 
 const prepareTestData = (

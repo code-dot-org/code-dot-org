@@ -243,7 +243,7 @@ describe('getDisplayTreeRows', () => {
     },
   );
 
-  test('grades the test rows at each node as the node counts them', () => {
+  test('grades the accuracy check rows at each node as the node counts them', () => {
     const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
     const rows = getDisplayTreeRows(state, project, trainedModel);
     const counts = getDisplayTreeCounts(state, project, trainedModel);

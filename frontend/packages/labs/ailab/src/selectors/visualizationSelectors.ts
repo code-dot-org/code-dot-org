@@ -362,20 +362,22 @@ export const getDisplayTreeRows = createSelector(
     if (!tree || !accuracyCheckRowIndices) {
       return () => NO_NODE_ROWS;
     }
-    const {test: testRows, trained: trainedRows} = splitRowIndices(
-      rowCount,
-      accuracyCheckRowIndices,
-    );
+    const {accuracyCheck: accuracyCheckRows, trained: trainedRows} =
+      splitRowIndices(rowCount, accuracyCheckRowIndices);
     const {root} = trainedModel!.toJSON() as SerializedTree;
-    const testGroups = groupDisplayTreeRows(tree, root!, accuracyCheckExamples);
+    const accuracyCheckGroups = groupDisplayTreeRows(
+      tree,
+      root!,
+      accuracyCheckExamples,
+    );
     const trainedGroups = groupDisplayTreeRows(tree, root!, trainingExamples);
-    const testRowsWithGrade = (nodeId: string, grade: string) =>
-      (testGroups.get(nodeId) ?? [])
+    const accuracyCheckRowsWithGrade = (nodeId: string, grade: string) =>
+      (accuracyCheckGroups.get(nodeId) ?? [])
         .filter(index => grades[index] === grade)
-        .map(index => testRows[index]);
+        .map(index => accuracyCheckRows[index]);
     return nodeId => ({
-      correct: testRowsWithGrade(nodeId, ResultsGrades.CORRECT),
-      incorrect: testRowsWithGrade(nodeId, ResultsGrades.INCORRECT),
+      correct: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.CORRECT),
+      incorrect: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.INCORRECT),
       trained: (trainedGroups.get(nodeId) ?? []).map(
         index => trainedRows[index],
       ),

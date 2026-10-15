@@ -1,18 +1,17 @@
 export interface RowSplit {
-  // Dataset row indices, in dataset order; the examples and labels follow it.
+  // Dataset row numbers, in dataset order.
   trained: number[];
-  test: number[];
+  accuracyCheck: number[];
 }
 
-// The rows a run trains on, and the rows it holds back to grade itself on.
 export function splitRowIndices(
   rowCount: number,
   accuracyCheckRowIndices: number[],
 ): RowSplit {
   const reserved = new Set(accuracyCheckRowIndices);
-  const split: RowSplit = {trained: [], test: []};
+  const split: RowSplit = {trained: [], accuracyCheck: []};
   for (let row = 0; row < rowCount; row++) {
-    (reserved.has(row) ? split.test : split.trained).push(row);
+    (reserved.has(row) ? split.accuracyCheck : split.trained).push(row);
   }
   return split;
 }
