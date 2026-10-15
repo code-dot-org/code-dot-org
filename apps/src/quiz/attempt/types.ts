@@ -15,6 +15,8 @@ export type QuizQuestionResponse =
   | MultipleChoiceQuestionResponse
   | FreeResponseQuestionResponse;
 
+export type QuizQuestionResponseData = QuizQuestionResponse['responseData'];
+
 export function isMultipleChoiceResponse(
   response: QuizQuestionResponse
 ): response is MultipleChoiceQuestionResponse {

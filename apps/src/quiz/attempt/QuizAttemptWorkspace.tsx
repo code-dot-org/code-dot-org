@@ -26,6 +26,7 @@ import {
   isFreeResponseResponse,
   isMultipleChoiceResponse,
   QuizAttemptData,
+  QuizQuestionResponseData,
   QuizQuestionResult,
 } from './types';
 import useQuizAttempt from './useQuizAttempt';
@@ -220,14 +221,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const handleFinishAttempt = async () => {
     // Send the student's current answers with submit, so grading is based
     // on what they see on screen rather than whatever autosave last landed.
-    const responsesByQuestionId = Object.fromEntries([
-      ...Object.entries(selectedChoicesByQuestionId).map(
-        ([questionId, choiceId]) => [questionId, {selectedChoiceId: choiceId}]
-      ),
-      ...Object.entries(answerTextsByQuestionId).map(
-        ([questionId, answerText]) => [questionId, {answerText}]
-      ),
-    ]);
+    const responsesByQuestionId: Record<number, QuizQuestionResponseData> = {};
+    for (const [id, choiceId] of Object.entries(selectedChoicesByQuestionId)) {
+      responsesByQuestionId[Number(id)] = {selectedChoiceId: choiceId};
+    }
+    for (const [id, answerText] of Object.entries(answerTextsByQuestionId)) {
+      responsesByQuestionId[Number(id)] = {answerText};
+    }
     // Targets the level the attempt was for, not whichever quiz is current
     // by the time this resolves.
     const requestLevelId = levelId;
@@ -282,7 +282,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // the same question reach the server in the order they were made.
   const queueResponseWrite = (
     questionId: number,
-    responseData: Record<string, unknown>
+    responseData: QuizQuestionResponseData
   ) => {
     const previousWrite =
       pendingWritesByQuestionIdRef.current[questionId] ?? Promise.resolve();
