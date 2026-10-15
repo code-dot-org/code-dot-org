@@ -372,6 +372,7 @@ $editor-strip-height: 41px;
 
 .editorStripTitle {
   grid-column: 2;
+  grid-row: 1;
   margin: 0;
   white-space: nowrap;
   color: var(--text-neutral-quaternary);
@@ -379,6 +380,7 @@ $editor-strip-height: 41px;
 
 .editorStripEnd {
   grid-column: 3;
+  grid-row: 1;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -390,7 +392,8 @@ $editor-strip-height: 41px;
   padding: 0 8px;
 }
 
-// ?editors=stripleft: the switch at the bar's start.
+// Every cell names its row: auto-placement would otherwise start a new row
+// for a cell that comes after one in a later column.
 .editorStripStart {
   grid-column: 1;
   grid-row: 1;
