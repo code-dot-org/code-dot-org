@@ -12,10 +12,16 @@ export interface Mode {
   // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
   lockFeatures?: boolean;
+  // Trains on `label` and `features` when the level loads. Requires both locks and `reserveLastRows`.
+  pretrained?: boolean;
+  // Opens on the results once pretrained, with no way back. Requires `pretrained`.
+  hideDatasetView?: boolean;
+  // Hides training, leaving only the dataset. Excludes `pretrained` and `requireAccuracy`.
+  hideTestingView?: boolean;
   hideSave?: boolean;
   requireAccuracy?: number;
   hideInstructionsOverlay?: boolean;
-  randomizeTestData?: boolean;
+  reserveLastRows?: boolean;
   hideColumnClicking?: boolean;
 }
 
@@ -164,6 +170,7 @@ export interface AilabProject {
   labelColumn?: string;
   selectedFeatures: string[];
   hyperparameters?: Hyperparameters;
+  accuracyCheckRowIndices?: number[];
   historicResults: HistoricResult[];
 }
 
@@ -171,6 +178,7 @@ export const initialProject: AilabProject = {
   labelColumn: undefined,
   selectedFeatures: [],
   hyperparameters: undefined,
+  accuracyCheckRowIndices: undefined,
   historicResults: [],
 };
 

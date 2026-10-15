@@ -25,7 +25,7 @@ import type {
   TrainedModel,
 } from '../types';
 
-import type {Trainer, TrainingRun} from './types';
+import type {Trainer, TrainerOutput} from './types';
 
 export interface OptimalModelDetails<Candidate> {
   model: TrainedModel;
@@ -51,27 +51,66 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  startTraining(): TrainingRun | undefined {
-    const state = this.store.getState();
+  /*
+    The inverse of hyperparameters(), so a saved run can be rebuilt exactly.
+    Undefined when the saved values belong to another algorithm.
+  */
+  protected abstract candidateFor(
+    hyperparameters: Hyperparameters,
+  ): Candidate | undefined;
 
-    const optimalModel = this.getOptimalModelDetails(state);
+  startTraining(): TrainerOutput | undefined {
+    const optimalModel = this.getOptimalModelDetails(this.store.getState());
 
     if (!optimalModel) {
       return undefined;
     }
 
-    this.store.dispatch(
-      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
-    );
-
+    const run = this.recordModel(optimalModel);
     const trainedState = this.store.getState();
 
-    logMetric('train-model', trainedState, this.project);
+    /*
+      Only a run the student asked for is worth a metric. A pretrained level
+      trains on load.
+    */
+    if (!trainedState.mode?.pretrained) {
+      logMetric('train-model', trainedState, this.project);
+    }
+
+    return run;
+  }
+
+  /*
+    Builds the one model the given hyperparameters describe, or nothing if they
+    describe no model this trainer can build.
+  */
+  rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined {
+    const state = this.store.getState();
+    const candidate = this.candidateFor(hyperparameters);
+
+    if (candidate === undefined) {
+      return undefined;
+    }
+
+    const model = this.buildModel(state, candidate);
+
+    return this.recordModel({
+      model,
+      predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
+      candidate,
+    });
+  }
+
+  // Stores what grading a model needs, then describes the run it belongs to.
+  private recordModel(details: OptimalModelDetails<Candidate>): TrainerOutput {
+    this.store.dispatch(
+      setAccuracyCheckPredictedLabels(details.predictedLabels),
+    );
 
     return {
-      trainedModel: optimalModel.model,
-      hyperparameters: this.hyperparameters(optimalModel.candidate),
-      historicResult: this.buildHistoricResult(trainedState),
+      trainedModel: details.model,
+      hyperparameters: this.hyperparameters(details.candidate),
+      historicResult: this.buildHistoricResult(this.store.getState()),
     };
   }
 

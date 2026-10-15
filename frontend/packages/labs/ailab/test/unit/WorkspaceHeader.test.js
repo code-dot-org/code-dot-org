@@ -11,8 +11,9 @@ function renderHeader({
   panel = 'datasetView',
   trained = false,
   onStartOver,
+  mode = {},
 } = {}) {
-  const store = levelStore({});
+  const store = levelStore(mode);
   const project = levelProject();
   const trainingRun = trained ? runTraining(store, project) : undefined;
   store.dispatch(setCurrentPanel(panel));
@@ -28,6 +29,20 @@ const tab = name => screen.getByRole('button', {name});
 describe('WorkspaceHeader', () => {
   test('shows no tabs outside the dataset and testing panels', () => {
     renderHeader({panel: 'selectDataset'});
+    expect(screen.queryByRole('group', {name: 'Workspace view'})).toBeNull();
+  });
+
+  test('shows no tabs when the level hides the dataset view', () => {
+    renderHeader({
+      panel: 'results',
+      trained: true,
+      mode: {pretrained: true, hideDatasetView: true},
+    });
+    expect(screen.queryByRole('group', {name: 'Workspace view'})).toBeNull();
+  });
+
+  test('shows no tabs when the level hides the testing view', () => {
+    renderHeader({mode: {hideTestingView: true}});
     expect(screen.queryByRole('group', {name: 'Workspace view'})).toBeNull();
   });
 

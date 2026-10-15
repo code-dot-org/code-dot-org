@@ -33,15 +33,16 @@ const TrainingResultCard = () => {
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const testButton = useRef<HTMLButtonElement>(null);
   const isVisible = hasResult && (!isModalOpen || isReplaying);
 
   // The card replaces the Train model button, which previously received focus.
   useEffect(() => {
-    if (isVisible && document.activeElement === document.body) {
+    if (isVisible && !pretrained && document.activeElement === document.body) {
       testButton.current?.focus();
     }
-  }, [isVisible]);
+  }, [isVisible, pretrained]);
 
   if (!isVisible) {
     return null;
