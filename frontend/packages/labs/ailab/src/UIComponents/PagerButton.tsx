@@ -23,7 +23,6 @@ const PagerButton = ({
     color="secondary"
     size="small"
     aria-label={label}
-    // Not disabled, which would drop focus from the button at either end.
     aria-disabled={disabled}
     className={classNames({[iconButtonClasses.disabled]: disabled})}
     onClick={onClick}
