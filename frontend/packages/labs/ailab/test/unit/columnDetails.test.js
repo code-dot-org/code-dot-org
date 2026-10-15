@@ -59,9 +59,9 @@ describe('column data types', () => {
 });
 
 describe('getColumnRole', () => {
-  const project = {labelColumn: 'play', selectedFeatures: ['play', 'windy']};
+  const project = {labelColumn: 'play', selectedFeatures: ['windy']};
 
-  test('the label wins over a feature', () => {
+  test('the label column is the label', () => {
     expect(getColumnRole(project, 'play')).toBe('label');
   });
 

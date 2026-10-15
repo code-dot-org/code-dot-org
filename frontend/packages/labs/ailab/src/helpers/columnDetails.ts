@@ -32,7 +32,6 @@ export function isRegression(state: RootState, project: AilabProject): boolean {
 
 export type ColumnRole = 'label' | 'feature';
 
-// A column chosen as both the label and a feature counts as the label.
 export function getColumnRole(
   project: AilabProject,
   column: string,
