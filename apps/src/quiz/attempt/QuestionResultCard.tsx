@@ -5,7 +5,7 @@ import {QuizQuestionSummary} from '../types';
 
 import AttemptCard from './AttemptCard';
 import FreeResponseAnswer from './FreeResponseAnswer';
-import MultipleChoiceResults from './MultipleChoiceResults';
+import MultipleChoiceAnswer from './MultipleChoiceAnswer';
 import QuestionDescription from './QuestionDescription';
 import {
   isFreeResponseResponse,
@@ -45,7 +45,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
       />
     )}
     {isMultipleChoiceResponse(result) && (
-      <MultipleChoiceResults
+      <MultipleChoiceAnswer
         question={question}
         result={result}
         isViewingStudent={isViewingStudent}

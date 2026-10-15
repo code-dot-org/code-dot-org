@@ -8,7 +8,7 @@ import {formatChoiceLetter, selectedAnswerLabel} from '../utils';
 
 import {MultipleChoiceQuestionResponse, QuizQuestionResult} from './types';
 
-import styles from './multiple-choice-results.module.scss';
+import styles from './multiple-choice-answer.module.scss';
 
 type MultipleChoiceStatus =
   | 'correct'
@@ -38,7 +38,7 @@ function getMultipleChoiceStatus(
 }
 
 // Not a RadioButton - these choices are no longer interactive.
-const MultipleChoiceResults: React.FunctionComponent<{
+const MultipleChoiceAnswer: React.FunctionComponent<{
   question: QuizQuestionSummary;
   result: MultipleChoiceResult;
   isViewingStudent?: boolean;
@@ -110,4 +110,4 @@ const MultipleChoiceResults: React.FunctionComponent<{
   </ul>
 );
 
-export default MultipleChoiceResults;
+export default MultipleChoiceAnswer;
