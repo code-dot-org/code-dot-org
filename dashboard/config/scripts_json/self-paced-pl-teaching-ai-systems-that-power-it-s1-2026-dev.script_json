@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-13 15:42:48 UTC",
+    "serialized_at": "2026-10-14 15:09:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -789,28 +789,6 @@
     {
       "chapter": 30,
       "position": 30,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Preparing for the Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2_2026-dev"
-        ],
-        "lesson.key": "Teaching AI and the Systems that Power It",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev",
-        "activity_section.key": "a21b773e-5bd7-4e9d-aff0-b02a4fc21ce3"
-      },
-      "level_keys": [
-        "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2_2026-dev"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 31,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -831,8 +809,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1195,18 +1173,6 @@
         "level.key": "csaif_pl_3-day-project-L3-CSandDev_-rev_v2_2026-dev",
         "script_level.level_keys": [
           "csaif_pl_3-day-project-L3-CSandDev_-rev_v2_2026-dev"
-        ],
-        "lesson.key": "Teaching AI and the Systems that Power It",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev",
-        "activity_section.key": "a21b773e-5bd7-4e9d-aff0-b02a4fc21ce3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2_2026-dev",
-        "script_level.level_keys": [
-          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2_2026-dev"
         ],
         "lesson.key": "Teaching AI and the Systems that Power It",
         "lesson_group.key": "",
