@@ -2,6 +2,7 @@
 // surfaces a student sees, and the image controls they get.
 
 import {ImageAdlibSet} from './ai/images/imageAdlibs';
+import {ImageSource} from './ai/images/imageCache';
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
@@ -22,6 +23,9 @@ export interface LevelMode {
   imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
+  /** Where the level's pictures come from (imageCache.ts); the model when
+      unset. */
+  imageSource?: ImageSource;
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
@@ -77,4 +81,9 @@ export function adlibSetForMode(
   mode: LevelMode | undefined
 ): ImageAdlibSet | undefined {
   return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
+}
+
+/** The source a mode's pictures come from: the model unless named. */
+export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
+  return mode?.imageSource ?? 'live';
 }

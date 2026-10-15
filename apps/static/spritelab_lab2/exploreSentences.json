@@ -261,32 +261,32 @@
     ],
     "placeDetails": [
       {
-        "id": "glowing-mushrooms",
+        "id": "mushrooms",
         "text": "glowing mushrooms",
         "emoji": "🍄"
       },
       {
-        "id": "floating-lanterns",
+        "id": "lanterns",
         "text": "floating lanterns",
         "emoji": "🏮"
       },
       {
-        "id": "distant-mountains",
+        "id": "mountains",
         "text": "distant mountains",
         "emoji": "🏔️"
       },
       {
-        "id": "falling-leaves",
+        "id": "leaves",
         "text": "falling leaves",
         "emoji": "🍂"
       },
       {
-        "id": "twinkling-lights",
+        "id": "lights",
         "text": "twinkling lights",
         "emoji": "✨"
       },
       {
-        "id": "drifting-fog",
+        "id": "fog",
         "text": "drifting fog",
         "emoji": "🌁"
       }
@@ -325,27 +325,27 @@
     ],
     "blockDetails": [
       {
-        "id": "glowing-cracks",
+        "id": "cracks",
         "text": "glowing cracks",
         "emoji": "✨"
       },
       {
-        "id": "tiny-gems",
+        "id": "gems",
         "text": "tiny gems",
         "emoji": "💎"
       },
       {
-        "id": "moss-on-top",
+        "id": "moss",
         "text": "moss on top",
         "emoji": "🍀"
       },
       {
-        "id": "metal-bolts",
+        "id": "bolts",
         "text": "metal bolts",
         "emoji": "🔩"
       },
       {
-        "id": "carved-patterns",
+        "id": "patterns",
         "text": "carved patterns",
         "emoji": "🔷"
       }
@@ -416,22 +416,22 @@
     ],
     "treasureDetails": [
       {
-        "id": "a-glow",
+        "id": "glow",
         "text": "a glow",
         "emoji": "💡"
       },
       {
-        "id": "tiny-sparkles",
+        "id": "sparkles",
         "text": "tiny sparkles",
         "emoji": "✨"
       },
       {
-        "id": "a-ribbon",
+        "id": "ribbon",
         "text": "a ribbon",
         "emoji": "🎀"
       },
       {
-        "id": "a-crack",
+        "id": "crack",
         "text": "a crack",
         "emoji": "⚡"
       }

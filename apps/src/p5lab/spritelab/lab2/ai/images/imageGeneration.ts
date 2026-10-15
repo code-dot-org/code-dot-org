@@ -9,6 +9,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {CachedImage} from './imageCache';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
 import {
   ASSUMED_BLOCK,
@@ -140,6 +141,10 @@ export type GenerateImageOptions = Partial<
    * data URI, not raw bytes: the request body is JSON.
    */
   inputImageDataURI?: string;
+  /** Take the model's output from the cache instead of asking it. The
+      sidecar's grid replaces the one given, and the record carries no
+      seed. Reviewed before upload: no judges run. */
+  cached?: CachedImage;
 };
 
 export interface GeneratedImageResult {
@@ -304,50 +309,59 @@ export async function generateImage(
   prompt: string,
   options: GenerateImageOptions = {}
 ): Promise<GeneratedImageResult> {
-  const {imageType = 'sprite', style = 'smooth'} = options;
+  const {imageType = 'sprite', style = 'smooth', cached} = options;
+  const sidecar = cached ? await cached.sidecar() : undefined;
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
-  const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  const fullPrompt = fullPromptFor(prompt, options);
+  const {temperature} = options;
+  const pixelBlock = pixelBlockFor(
+    imageType,
+    sidecar?.pixelGrid ?? options.pixelGrid
+  );
 
-  // The prompt judge and the image model run concurrently — generation is
-  // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
-  // a generation failure, and its image is discarded unseen.
-  const [promptVerdict, rawResult] = await Promise.allSettled([
-    checkPromptSafety(prompt),
-    requestImage(
-      options.inputImageDataURI
-        ? `Modify the provided image: ${fullPrompt}`
-        : fullPrompt,
-      {
-        seed,
-        temperature: options.temperature,
-        references: options.inputImageDataURI
-          ? [options.inputImageDataURI]
-          : [],
-      }
-    ),
-  ]);
-  if (promptVerdict.status === 'rejected') {
-    throw promptVerdict.reason;
+  let raw: RawImage;
+  if (cached) {
+    raw = await cached.raw('single');
+  } else {
+    const fullPrompt = fullPromptFor(prompt, options);
+    // The prompt judge and the image model run concurrently — generation is
+    // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
+    // a generation failure, and its image is discarded unseen.
+    const [promptVerdict, rawResult] = await Promise.allSettled([
+      checkPromptSafety(prompt),
+      requestImage(
+        options.inputImageDataURI
+          ? `Modify the provided image: ${fullPrompt}`
+          : fullPrompt,
+        {
+          seed,
+          temperature,
+          references: options.inputImageDataURI
+            ? [options.inputImageDataURI]
+            : [],
+        }
+      ),
+    ]);
+    if (promptVerdict.status === 'rejected') {
+      throw promptVerdict.reason;
+    }
+    if (rawResult.status === 'rejected') {
+      throw rawResult.reason;
+    }
+    raw = rawResult.value;
   }
-  if (rawResult.status === 'rejected') {
-    throw rawResult.reason;
-  }
-  const raw = rawResult.value;
   // Judge the pixels while the local pipeline crops and downscales them.
-  const imageVerdict = markHandled(checkImageSafety(raw));
+  const imageVerdict = cached
+    ? Promise.resolve()
+    : markHandled(checkImageSafety(raw));
 
   const generation: ImageGenerationMetadata = {
     prompt,
     imageType,
     ...(options.subject && {subject: options.subject}),
     style,
-    seed,
-    ...(options.temperature !== undefined && {
-      temperature: options.temperature,
-    }),
+    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
     ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),
