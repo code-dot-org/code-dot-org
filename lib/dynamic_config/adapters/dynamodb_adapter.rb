@@ -51,9 +51,11 @@ class DynamoDBAdapter
     result = {}
     last_evaluated = nil
     loop do
+      # Called right after a put_item; an eventually consistent scan can miss that write.
       resp = @client.scan(
         {
           table_name: @table_name,
+          consistent_read: true,
           exclusive_start_key: last_evaluated
         }
       )
@@ -69,7 +71,8 @@ class DynamoDBAdapter
         result[key] = value
       end
 
-      break if resp.count == 0 || resp.last_evaluated_key.nil?
+      # An empty page does not mean the scan is done; only a nil key does.
+      break if resp.last_evaluated_key.nil?
       last_evaluated = resp.last_evaluated_key
     end
 
