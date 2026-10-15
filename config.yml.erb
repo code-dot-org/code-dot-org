@@ -576,6 +576,9 @@ db_credential_admin: !StackSecret
 db_credential_writer: !StackSecret
 db_credential_reader: !StackSecret
 
+# ActiveRecord role for `rails console`; console servers use the read-only reporting replica to spare the writer.
+console_active_record_role: <%= 'reporting' if name&.include?('console') %>
+
 # mysql:// URI (including credentials) to connect to ProxySQL administrative interface (which emulates a MySQL server)
 db_proxy_admin:
 
