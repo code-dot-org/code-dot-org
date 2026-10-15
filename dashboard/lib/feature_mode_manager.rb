@@ -15,10 +15,12 @@
 # emergency:
 #     Same as Scale, plus all progress tracking and sharing disabled.
 
+require 'dynamic_config/gatekeeper'
+require 'dynamic_config/dcdo'
 require 'cdo/chat_client'
 
 class FeatureModeManager
-  # A map from mode symbol to gatekeeper and dcdo settings. The gatekeeper settings are
+  # A map from mode symbol to Gatekeeper and DCDO settings. The Gatekeeper settings are
   # broken down into gatekeeper_general_settings (which apply to all tutorials) and
   # gatekeeper_hoc_tutorial_settings (which apply to high-scale HOC tutorials only).
   MODE_SETTINGS_MAP = {
@@ -140,48 +142,48 @@ class FeatureModeManager
   MODES = MODE_SETTINGS_MAP.keys
 
   # Updates the feature mode to the given mode.
-  def self.set_mode(mode, gatekeeper, dcdo, hoc_script_names, csf_script_names)
+  def self.set_mode(mode, hoc_script_names, csf_script_names)
     settings = MODE_SETTINGS_MAP[mode]
     raise "Invalid mode '#{mode}'" if settings.nil?
 
     settings[:dcdo_settings].each do |key, value|
-      dcdo.set(key, value)
+      DCDO.set(key, value)
     end
 
     settings[:gatekeeper_general_settings].each do |feature, value|
-      gatekeeper.set(feature,  value: value)
+      Gatekeeper.set(feature,  value: value)
     end
 
     settings[:gatekeeper_hoc_tutorial_settings].each do |feature, value|
       hoc_script_names.each do |script_name|
-        gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
+        Gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
       end
     end
 
     settings[:gatekeeper_csf_tutorial_settings].each do |feature, value|
       csf_script_names.each do |script_name|
-        gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
+        Gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
       end
     end
 
     ChatClient.log "Set scale feature mode for environment #{Rails.env} to #{mode}"
   end
 
-  # Returns the matching mode if the dcdo and gatekeeper settings match
+  # Returns the matching mode if the DCDO and Gatekeeper settings match
   # a predefined mode for all of the specified HOC script names, or nil otherwise.
-  def self.get_mode(gatekeeper, dcdo, hoc_script_names, csf_script_names)
+  def self.get_mode(hoc_script_names, csf_script_names)
     MODES.detect do |mode|
-      dcdo_matches_mode?(dcdo, mode) &&
-        gatekeeper_general_settings_match_mode?(gatekeeper, mode) &&
-        gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names) &&
-        gatekeeper_csf_tutorials_match_mode?(gatekeeper, mode, csf_script_names)
+      dcdo_matches_mode?(mode) &&
+        gatekeeper_general_settings_match_mode?(mode) &&
+        gatekeeper_hoc_tutorials_match_mode?(mode, hoc_script_names) &&
+        gatekeeper_csf_tutorials_match_mode?(mode, csf_script_names)
     end
   end
 
   # Returns true if the feature mode manager allows the `feature` in `mode` for hoc tutorial
   # `script`, falling through to the value from the Gatekeeper if the manager doesn't
   # specify a value.  (If script is nil, only considers general settings.)
-  def self.allows(gatekeeper, mode, feature, script)
+  def self.allows(mode, feature, script)
     # Use the value from the mode settings map, if defined.
     settings = MODE_SETTINGS_MAP[mode]
     if settings
@@ -197,39 +199,39 @@ class FeatureModeManager
     end
 
     # Otherwise use the value from the Gatekeeper.
-    gatekeeper.allows(feature, where: (script ? {script_name: script} : {}))
+    Gatekeeper.allows(feature, where: (script ? {script_name: script} : {}))
   end
 
-  def self.dcdo_matches_mode?(dcdo, mode)
+  def self.dcdo_matches_mode?(mode)
     expected_settings = MODE_SETTINGS_MAP[mode][:dcdo_settings]
     expected_settings.all? do |key, expected_value|
-      expected_value == dcdo.get(key, nil)
+      expected_value == DCDO.get(key, nil)
     end
   end
 
-  def self.gatekeeper_general_settings_match_mode?(gatekeeper, mode)
+  def self.gatekeeper_general_settings_match_mode?(mode)
     expected_settings = MODE_SETTINGS_MAP[mode][:gatekeeper_general_settings]
     expected_settings.all? do |feature, expected_value|
-      expected_value == gatekeeper.allows(feature)
+      expected_value == Gatekeeper.allows(feature)
     end
   end
 
-  def self.gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names)
-    gatekeeper_tutorials_match_mode?(gatekeeper, hoc_script_names,
+  def self.gatekeeper_hoc_tutorials_match_mode?(mode, hoc_script_names)
+    gatekeeper_tutorials_match_mode?(hoc_script_names,
       MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings]
     )
   end
 
-  def self.gatekeeper_csf_tutorials_match_mode?(gatekeeper, mode, csf_script_names)
-    gatekeeper_tutorials_match_mode?(gatekeeper, csf_script_names,
+  def self.gatekeeper_csf_tutorials_match_mode?(mode, csf_script_names)
+    gatekeeper_tutorials_match_mode?(csf_script_names,
       MODE_SETTINGS_MAP[mode][:gatekeeper_csf_tutorial_settings]
     )
   end
 
-  def self.gatekeeper_tutorials_match_mode?(gatekeeper, script_names, expected_settings)
+  def self.gatekeeper_tutorials_match_mode?(script_names, expected_settings)
     expected_settings.all? do |feature, expected_value|
       script_names.all? do |script|
-        expected_value == gatekeeper.allows(feature, where: {script_name: script})
+        expected_value == Gatekeeper.allows(feature, where: {script_name: script})
       end
     end
   end
