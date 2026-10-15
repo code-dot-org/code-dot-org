@@ -1,0 +1,864 @@
+{
+  "formatVersion": 4,
+  "id": "hoai-destinations",
+  "title": "Build a website with AI: destinations",
+  "objective": "Build a one-page site with an AI build partner in one hour. Five shared levels teach the moves every builder needs; each of four destinations (Interactive elements, Style and design, Story and message, Under the hood) adds three levels of its own. Placeholder content: each checkpoint lists its planned steps.",
+  "project": {
+    "templateLevel": "adaptive-web-template",
+    "description": "A one-page site for something of yours: a club finder, a decision wheel, an event, a cause. Every level happens inside this project; there is no practice outside it."
+  },
+  "skills": {
+    "build": {
+      "id": "build",
+      "title": "Build with AI",
+      "description": "Steering AI toward what you intend, and deciding what to do with what comes back."
+    },
+    "language": {
+      "id": "language",
+      "title": "Language of web dev",
+      "description": "Naming the parts of a page and understanding how they work."
+    },
+    "debug": {
+      "id": "debug",
+      "title": "Debug with AI",
+      "description": "Describing a problem so AI can help, and checking that the fix worked."
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "welcome",
+      "title": "Welcome",
+      "description": "Introduction, part 1 of 3. The student arrives, with an idea or without one.",
+      "steps": [
+        {
+          "id": "welcome-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "welcome-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The student arrives, with an idea or without one."
+            },
+            {
+              "key": "welcome-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): What you will build today, what a destination is, and the one-hour plan. Short video and three panels."
+            },
+            {
+              "key": "welcome-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Nothing yet. Continue to find your idea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "find-your-idea",
+      "title": "Find Your Idea",
+      "description": "Introduction, part 2 of 3. You need a site idea you care about, and a destination to lean toward.",
+      "requires": [
+        "welcome"
+      ],
+      "steps": [
+        {
+          "id": "find-your-idea-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "find-your-idea-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You need a site idea you care about, and a destination to lean toward."
+            },
+            {
+              "key": "find-your-idea-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): One question: do you already have an idea? With an idea: name it and describe it. Without one: a quick brainstorm with the AI, then name and describe it. Then pick a destination."
+            },
+            {
+              "key": "find-your-idea-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Answer the project name and description questions. The project is seeded from them."
+            },
+            {
+              "key": "find-your-idea-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A project name, a one-line description and a chosen destination."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "your-first-prompt",
+      "title": "Your First Prompt",
+      "description": "Introduction, part 3 of 3: the diagnostic. The project opens for the first time.",
+      "requires": [
+        "find-your-idea"
+      ],
+      "steps": [
+        {
+          "id": "your-first-prompt-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "your-first-prompt-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The project opens for the first time."
+            },
+            {
+              "key": "your-first-prompt-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): A short skills check, then write your first prompt in your own words."
+            },
+            {
+              "key": "your-first-prompt-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Write the first prompt and get the first version back."
+            },
+            {
+              "key": "your-first-prompt-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: The first prompt, used to place the student on the map. Not graded."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l1-steer-it",
+      "title": "L1 Steer It",
+      "description": "Shared level, in every destination. The first version comes back and is a bit off.",
+      "skillIds": [
+        "build"
+      ],
+      "requires": [
+        "your-first-prompt"
+      ],
+      "steps": [
+        {
+          "id": "l1-steer-it-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "l1-steer-it-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The first version comes back and is a bit off."
+            },
+            {
+              "key": "l1-steer-it-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Two moves: add a detail (layout, colors, content or purpose), or change one thing and say what to keep the same."
+            },
+            {
+              "key": "l1-steer-it-contexts",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "In each destination: Interactive elements: Describe what the visitor does and what happens. Style and design: Describe colors, type and layout for one block. Story and message: Describe the tone and message of one section. Under the hood: Ask for one small piece of code and ask the AI to explain it."
+            },
+            {
+              "key": "l1-steer-it-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Write a prompt with 2 or more details, or a follow-up that changes one thing."
+            },
+            {
+              "key": "l1-steer-it-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A prompt with 2+ specific details, or a follow-up that changes one thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l2-use-the-lingo",
+      "title": "L2 Use the Lingo",
+      "description": "Shared level, in every destination. You point at part of your page in your own words and the AI changes the wrong thing.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "your-first-prompt"
+      ],
+      "steps": [
+        {
+          "id": "l2-use-the-lingo-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "l2-use-the-lingo-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You point at part of your page in your own words and the AI changes the wrong thing."
+            },
+            {
+              "key": "l2-use-the-lingo-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Your page has blocks: the hero, feature cards, an interactive canvas and a call-to-action. Each one has a job."
+            },
+            {
+              "key": "l2-use-the-lingo-contexts",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "In each destination: Interactive elements: Name the canvas and its controls, and say what each is for. Style and design: Name the hero, cards and button, and say what each is for. Story and message: Name the headline, card text and call-to-action, and say what each should say. Under the hood: Tell structure, style and behavior apart."
+            },
+            {
+              "key": "l2-use-the-lingo-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Name a block and say its job when you ask for a change."
+            },
+            {
+              "key": "l2-use-the-lingo-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A prompt that names a block and its job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l3-keep-or-redirect",
+      "title": "L3 Keep or Redirect",
+      "description": "Shared level, in every destination. The AI changes something and it only half fits your plan.",
+      "skillIds": [
+        "build"
+      ],
+      "requires": [
+        "l1-steer-it"
+      ],
+      "steps": [
+        {
+          "id": "l3-keep-or-redirect-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "l3-keep-or-redirect-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The AI changes something and it only half fits your plan."
+            },
+            {
+              "key": "l3-keep-or-redirect-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Compare it with your plan: what matches, what doesn't. Then keep it, redirect it with a new prompt, or edit it by hand when the change is small and exact."
+            },
+            {
+              "key": "l3-keep-or-redirect-contexts",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "In each destination: Interactive elements: Does it act the way you planned? Keep it, redirect it or edit it. Style and design: Does it look the way you planned? Keep it, redirect it or edit it. Story and message: Does it sound the way you planned? Keep it, redirect it or rewrite it yourself. Under the hood: Does the code do what you planned? Keep it, redirect it or edit the line yourself."
+            },
+            {
+              "key": "l3-keep-or-redirect-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Say whether you keep, redirect or edit it, and why."
+            },
+            {
+              "key": "l3-keep-or-redirect-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A decision with a reason."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l4-give-context",
+      "title": "L4 Give Context",
+      "description": "Shared level, in every destination. Something breaks or looks wrong.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "your-first-prompt"
+      ],
+      "steps": [
+        {
+          "id": "l4-give-context-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "l4-give-context-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: Something breaks or looks wrong."
+            },
+            {
+              "key": "l4-give-context-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Say what you expected, what happened and where."
+            },
+            {
+              "key": "l4-give-context-contexts",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "In each destination: Interactive elements: Which click, what happened, what you expected. Style and design: Which block, what looks off, what you expected. Story and message: Which section, what reads wrong, what you expected. Under the hood: Which line or error, what happened, what you expected."
+            },
+            {
+              "key": "l4-give-context-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Report the problem with all three."
+            },
+            {
+              "key": "l4-give-context-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: All three in one message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l5-check-the-fix",
+      "title": "L5 Check the Fix",
+      "description": "Shared level, in every destination. The AI offers a fix.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "l4-give-context"
+      ],
+      "steps": [
+        {
+          "id": "l5-check-the-fix-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "l5-check-the-fix-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The AI offers a fix."
+            },
+            {
+              "key": "l5-check-the-fix-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Check that the problem is gone, then look for anything new that broke."
+            },
+            {
+              "key": "l5-check-the-fix-contexts",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "In each destination: Interactive elements: Click everything again to check nothing else broke. Style and design: Check phone size and the rest of the page. Story and message: Read the page top to bottom and check the flow still works. Under the hood: Check the fix and that nothing else broke."
+            },
+            {
+              "key": "l5-check-the-fix-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Say how you checked."
+            },
+            {
+              "key": "l5-check-the-fix-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A stated check, such as \"I reloaded and the image appears.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ia1-list-and-random-pick",
+      "title": "IA1 A list and a random pick",
+      "description": "Own level: Interactive elements. You want the page to choose for the visitor.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "ia1-list-and-random-pick-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "ia1-list-and-random-pick-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You want the page to choose for the visitor."
+            },
+            {
+              "key": "ia1-list-and-random-pick-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): A list holds the options, a random pick chooses one, and the animation is just how it looks."
+            },
+            {
+              "key": "ia1-list-and-random-pick-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Describe the list and the random pick to the AI."
+            },
+            {
+              "key": "ia1-list-and-random-pick-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: Explains that the page picks one item from a list by chance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ia2-number-and-rule",
+      "title": "IA2 A number and a rule",
+      "description": "Own level: Interactive elements. You want the page to count, score or end a round.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "ia2-number-and-rule-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "ia2-number-and-rule-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You want the page to count, score or end a round."
+            },
+            {
+              "key": "ia2-number-and-rule-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): A number changes when something happens, and a rule says if this, then that."
+            },
+            {
+              "key": "ia2-number-and-rule-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Describe the number and the rule to the AI."
+            },
+            {
+              "key": "ia2-number-and-rule-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: Names the number that changes and the rule that uses it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ia3-remember-and-show",
+      "title": "IA3 Remember and show",
+      "description": "Own level: Interactive elements. You want a click to stay selected and to show a result right away.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "ia3-remember-and-show-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "ia3-remember-and-show-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You want a click to stay selected and to show a result right away."
+            },
+            {
+              "key": "ia3-remember-and-show-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): A list holds the choices, the page remembers what is picked, and a click can change what shows, such as a preview or a progress bar."
+            },
+            {
+              "key": "ia3-remember-and-show-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Describe what the page should remember and what should show."
+            },
+            {
+              "key": "ia3-remember-and-show-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: Names what is remembered and what changes on screen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sd1-layout-and-spacing",
+      "title": "SD1 Layout and spacing",
+      "description": "Own level: Style and design. The page feels crowded or unbalanced.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "sd1-layout-and-spacing-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "sd1-layout-and-spacing-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The page feels crowded or unbalanced."
+            },
+            {
+              "key": "sd1-layout-and-spacing-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Space, alignment and order, described with block names."
+            },
+            {
+              "key": "sd1-layout-and-spacing-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Describe the layout change for a block."
+            },
+            {
+              "key": "sd1-layout-and-spacing-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A prompt that names blocks and says how they should be arranged."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sd2-style-and-consistency",
+      "title": "SD2 Style and consistency",
+      "description": "Own level: Style and design. You change one block and the style starts to drift.",
+      "skillIds": [
+        "build"
+      ],
+      "requires": [
+        "l1-steer-it"
+      ],
+      "steps": [
+        {
+          "id": "sd2-style-and-consistency-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "sd2-style-and-consistency-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You change one block and the style starts to drift."
+            },
+            {
+              "key": "sd2-style-and-consistency-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Name the style in your own words and repeat it when you ask for changes."
+            },
+            {
+              "key": "sd2-style-and-consistency-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Keep the style across two or more changes."
+            },
+            {
+              "key": "sd2-style-and-consistency-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A follow-up that restates the style while changing one thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sd3-readable-and-clear",
+      "title": "SD3 Readable and clear",
+      "description": "Own level: Style and design. Some text or a button is hard to read.",
+      "skillIds": [
+        "build"
+      ],
+      "requires": [
+        "l3-keep-or-redirect"
+      ],
+      "steps": [
+        {
+          "id": "sd3-readable-and-clear-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "sd3-readable-and-clear-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: Some text or a button is hard to read."
+            },
+            {
+              "key": "sd3-readable-and-clear-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Size, contrast and wording make a block easier to read."
+            },
+            {
+              "key": "sd3-readable-and-clear-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Ask for readability changes."
+            },
+            {
+              "key": "sd3-readable-and-clear-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A prompt that names a block and a readability change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm1-say-it-in-your-voice",
+      "title": "SM1 Say it in your voice",
+      "description": "Own level: Story and message. You change one line and the tone drifts.",
+      "skillIds": [
+        "build"
+      ],
+      "requires": [
+        "l1-steer-it"
+      ],
+      "steps": [
+        {
+          "id": "sm1-say-it-in-your-voice-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "sm1-say-it-in-your-voice-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You change one line and the tone drifts."
+            },
+            {
+              "key": "sm1-say-it-in-your-voice-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Name the tone in your own words and repeat it when you ask for changes."
+            },
+            {
+              "key": "sm1-say-it-in-your-voice-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Keep the tone across two or more changes."
+            },
+            {
+              "key": "sm1-say-it-in-your-voice-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A follow-up that restates the tone while changing one thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm2-lead-with-the-point",
+      "title": "SM2 Lead with the point",
+      "description": "Own level: Story and message. A visitor could not tell what the site is for.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "sm2-lead-with-the-point-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "sm2-lead-with-the-point-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: A visitor could not tell what the site is for."
+            },
+            {
+              "key": "sm2-lead-with-the-point-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): The headline and first line should say what the site is for."
+            },
+            {
+              "key": "sm2-lead-with-the-point-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Rewrite the headline and first line so they say it."
+            },
+            {
+              "key": "sm2-lead-with-the-point-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A prompt or edit that states the site's purpose in the headline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm3-make-the-ask-clear",
+      "title": "SM3 Make the ask clear",
+      "description": "Own level: Story and message. The call-to-action is vague.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "sm3-make-the-ask-clear-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "sm3-make-the-ask-clear-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The call-to-action is vague."
+            },
+            {
+              "key": "sm3-make-the-ask-clear-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): The call-to-action should say exactly what to do next."
+            },
+            {
+              "key": "sm3-make-the-ask-clear-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Rewrite the call-to-action."
+            },
+            {
+              "key": "sm3-make-the-ask-clear-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: A call-to-action with a clear verb and next step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uh1-read-the-console",
+      "title": "UH1 Read the console",
+      "description": "Own level: Under the hood. Something breaks and the page shows nothing helpful.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "l4-give-context"
+      ],
+      "steps": [
+        {
+          "id": "uh1-read-the-console-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "uh1-read-the-console-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: Something breaks and the page shows nothing helpful."
+            },
+            {
+              "key": "uh1-read-the-console-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): The browser console shows errors and where they come from."
+            },
+            {
+              "key": "uh1-read-the-console-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Open the console and say what an error points to."
+            },
+            {
+              "key": "uh1-read-the-console-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: Says which keyword or line the error points to."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uh2-find-it-in-the-code",
+      "title": "UH2 Find it in the code",
+      "description": "Own level: Under the hood. You want to edit one block by hand.",
+      "skillIds": [
+        "language"
+      ],
+      "requires": [
+        "l2-use-the-lingo"
+      ],
+      "steps": [
+        {
+          "id": "uh2-find-it-in-the-code-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "uh2-find-it-in-the-code-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: You want to edit one block by hand."
+            },
+            {
+              "key": "uh2-find-it-in-the-code-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Blocks have names in the code, and you can search for them."
+            },
+            {
+              "key": "uh2-find-it-in-the-code-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Find the line or rule on your own."
+            },
+            {
+              "key": "uh2-find-it-in-the-code-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: Points to the line or rule for a named block."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uh3-undo-to-find-the-cause",
+      "title": "UH3 Undo to find the cause",
+      "description": "Own level: Under the hood. Several changes have been made and something broke.",
+      "skillIds": [
+        "debug"
+      ],
+      "requires": [
+        "l5-check-the-fix"
+      ],
+      "steps": [
+        {
+          "id": "uh3-undo-to-find-the-cause-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "uh3-undo-to-find-the-cause-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: Several changes have been made and something broke."
+            },
+            {
+              "key": "uh3-undo-to-find-the-cause-introduced",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Introduced (info panel or video): Undo one change at a time and check after each."
+            },
+            {
+              "key": "uh3-undo-to-find-the-cause-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Find the cause and say how you found it."
+            },
+            {
+              "key": "uh3-undo-to-find-the-cause-evidence",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Evidence the tutor sees: Names the change that caused the problem and how they found it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "show-it-off",
+      "title": "Show it off",
+      "description": "Finish. Shared by every destination. The build works well enough to share.",
+      "requires": [
+        "your-first-prompt"
+      ],
+      "steps": [
+        {
+          "id": "show-it-off-plan",
+          "title": "Planned steps",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "show-it-off-moment",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "The moment in your project: The build works well enough to share."
+            },
+            {
+              "key": "show-it-off-used",
+              "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png",
+              "text": "Used in your project (do it on your own): Share what you built."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

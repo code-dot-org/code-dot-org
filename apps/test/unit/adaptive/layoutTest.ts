@@ -316,4 +316,38 @@ describe('layoutCity', () => {
       new Set(Object.values(cells).map(c => `${c.col},${c.row}`)).size
     ).toBe(8);
   });
+
+  it('lays an opening chain down a column and grows from where it branches', () => {
+    const chained = [
+      checkpoint('welcome'),
+      checkpoint('idea', ['welcome']),
+      checkpoint('prompt', ['idea']),
+      checkpoint('a', ['prompt']),
+      checkpoint('b', ['prompt']),
+      checkpoint('c', ['prompt']),
+      checkpoint('d', ['a', 'b']),
+    ];
+    const layout = layoutCity(chained);
+    const origin = layout.nodes.welcome;
+    const cell = (id: string) => ({
+      col: (layout.nodes[id].x - origin.x) / layout.spacing.column,
+      row: (layout.nodes[id].y - origin.y) / layout.spacing.row,
+    });
+    expect(cell('idea')).toEqual({col: 0, row: 1});
+    expect(cell('prompt')).toEqual({col: 0, row: 2});
+    for (const id of ['a', 'b', 'c']) {
+      expect(touching(cell(id), cell('prompt'))).toBe(true);
+      // Edges of the branch point, none of them back up the spine.
+      expect(cell(id).col === 0 || cell(id).row === 2).toBe(true);
+      expect(cell(id)).not.toEqual({col: 0, row: 1});
+    }
+    expect(touching(cell('d'), cell('a'))).toBe(true);
+    expect(touching(cell('d'), cell('b'))).toBe(true);
+  });
+
+  it('grows around the start itself when it branches at once', () => {
+    const cells = cellsOf(layoutCity(pathway));
+    // A child above the start: no spine was laid.
+    expect(cells.details).toEqual({col: 0, row: -1});
+  });
 });

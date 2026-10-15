@@ -169,19 +169,26 @@ const adjacent = (a: Cell, b: Cell) => chebyshev(a, b) === 1;
  * takes an edge and leaves the corners between for children of two parents,
  * and a ring fills before the next starts. A cell touching no parent is a
  * last resort, taken nearest the parents. `row` is the grid row.
+ *
+ * A pathway that starts as a chain (each checkpoint the only child of the
+ * one before) lays that chain down a column first, and the rest grows from
+ * where it starts to branch, so the spine reads as an approach to the city
+ * rather than its centre.
  */
 export function layoutCity(
   checkpoints: Checkpoint[],
   spacing = NORMAL_SPACING
 ): MapLayout {
   const byId = new Map(checkpoints.map(c => [c.id, c]));
-  const origin: Cell = {col: 0, row: 0};
   const placed = new Map<string, Cell>();
   const taken = new Set<string>();
   const place = (id: string, cell: Cell) => {
     placed.set(id, cell);
     taken.add(cellKey(cell));
   };
+  const spine = spineOf(checkpoints);
+  spine.forEach((id, row) => place(id, {col: 0, row}));
+  const origin: Cell = {col: 0, row: Math.max(0, spine.length - 1)};
   // Free cells in rings around `center`, nearest first.
   const nearestFree = (center: Cell): Cell => {
     for (let k = 0; ; k++) {
@@ -195,6 +202,7 @@ export function layoutCity(
 
   for (const ids of depthRows(checkpoints)) {
     for (const id of ids) {
+      if (placed.has(id)) continue;
       const parents = (byId.get(id)?.requires || [])
         .map(p => placed.get(p))
         .filter((c): c is Cell => !!c);
@@ -242,6 +250,34 @@ export function layoutCity(
 
   const cells = checkpoints.map(c => placed.get(c.id)!);
   return gridLayout(checkpoints, cells, spacing);
+}
+
+/**
+ * The chain from the sole root up to and including the first checkpoint
+ * with other than exactly one child, each link the only child of the one
+ * before and requiring nothing else. Empty with no root or more than one.
+ */
+function spineOf(checkpoints: Checkpoint[]): string[] {
+  const byId = new Map(checkpoints.map(c => [c.id, c]));
+  const children = new Map<string, string[]>();
+  for (const {from, to} of edgesOf(checkpoints)) {
+    children.set(from, [...(children.get(from) || []), to]);
+  }
+  const roots = checkpoints.filter(
+    c => !(c.requires || []).some(r => byId.has(r))
+  );
+  if (roots.length !== 1) return [];
+  const spine = [roots[0].id];
+  for (;;) {
+    const kids = children.get(spine[spine.length - 1]) || [];
+    if (kids.length !== 1 || spine.includes(kids[0])) break;
+    const requires = (byId.get(kids[0])?.requires || []).filter(r =>
+      byId.has(r)
+    );
+    if (requires.length !== 1) break;
+    spine.push(kids[0]);
+  }
+  return spine;
 }
 
 /**
