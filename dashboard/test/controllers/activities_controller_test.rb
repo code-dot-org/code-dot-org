@@ -665,7 +665,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
 
       it 'adds progress to an existing session' do
-        client_state.set_level_progress(@script_level_prev, 50)
+        create(:anonymous_level_progress, anon_user_id:, script: @script, level: @script_level_prev.level, best_result: 50)
         expect_anonymous_level_tracking(new_result: 100)
 
         assert_creates(LevelSource) do
@@ -695,14 +695,14 @@ class ActivitiesControllerTest < ActionController::TestCase
           end
         end
 
-        _(client_state.level_progress(@script_level)).must_equal 0
+        _(client_state.level_progress(script_id: @script.id, level_id: @level.id)).must_equal 0
 
         _(@response).must_be :successful?
         assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
       end
 
       it 'saves an image' do
-        client_state.set_level_progress(@script_level_prev, 50)
+        create(:anonymous_level_progress, anon_user_id:, script: @script, level: @script_level_prev.level, best_result: 50)
         expect_anonymous_level_tracking(new_result: 100)
         expect_s3_upload
 
@@ -725,7 +725,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
 
       it 'does not save an image when its upload fails' do
-        client_state.set_level_progress(@script_level_prev, 50)
+        create(:anonymous_level_progress, anon_user_id:, script: @script, level: @script_level_prev.level, best_result: 50)
         expect_anonymous_level_tracking(new_result: 100)
         expect_s3_upload_failure
 

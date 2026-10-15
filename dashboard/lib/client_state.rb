@@ -1,60 +1,32 @@
-# A class for reading and writing application state persisted in client cookies.
-# Currently this state is in the session cookie but some it will migrate to
-# unencrypted cookies in a subsequent PR. (To allow rollback of the release
-# without loss of progress, this implementation also includes code to migrate
-# state from unencrypted cookies back into the session cookie.)
+# A class for reading and writing application state for signed-out users.
+# Level progress comes from AnonymousLevel::Progress records; the rest lives in the session.
 class ClientState
-  attr_reader :session, :cookies
+  attr_reader :request
 
-  def initialize(session, cookies)
-    @session = session
-    @cookies = cookies
+  delegate :anon_user_id, :session, to: :request
+
+  def initialize(request:)
+    @request = request
   end
 
-  # Resets all client state (level progress, videos seen, etc.)
+  # Resets all client state (videos seen, etc.)
   def reset
-    cookies[:progress] = nil
     session[:videos_seen] = nil
     session[:callouts_seen] = nil
   end
 
-  # Returns the progress value for the given level_id, or 0 if there
-  # has been no progress.
+  # Returns the best result for the given script level, or 0 if there has been no progress.
   # @param [ScriptLevel] script_level
   # return [Integer]
-  def level_progress(script_level)
-    migrate_cookies
-    progress_hash.fetch(script_level.script.name, {}).fetch(script_level.level_id.to_s, 0)
+  def level_progress(script_id:, level_id:)
+    AnonymousLevel::Progress.find_by(anon_user_id:, script_id:, level_id:)&.best_result || 0
   end
 
-  # Sets the progress for the given level_id for the current session.
-  # @param [ScriptLevel] script_level
-  # @param [Integer] progress_value
-  def set_level_progress(script_level, progress_value)
-    migrate_cookies
-    updated_progress = progress_hash.deep_merge(script_level.script.name => {script_level.level_id.to_s => progress_value})
-    cookies.permanent[:progress] = JSON.generate(updated_progress)
-  end
-
-  # Returns true if there has been no progress in completing levels for
-  # the current session.
-  def level_progress_is_empty_for_test
-    progress_hash.empty?
-  end
-
-  # Adds 'script' to the set of scripts completed for the current session.
-  # @param [Integer] script_id
-  def add_script(script_id)
-    s = scripts
-    s << script_id.to_i unless s.include?(script_id)
-    session[:scripts] = s
-  end
-
-  # Returns an array of ids of the scripts completed in the current session.
-  # Callers should not mutate the array.
+  # Returns an array of ids of the scripts with progress.
   # @return [Array<Integer>]
   def scripts
-    session[:scripts] || []
+    return [] unless anon_user_id
+    AnonymousLevel::Progress.where(anon_user_id:).distinct.pluck(:script_id)
   end
 
   # Returns a read-only set of the videos seen in the current user session,
@@ -105,21 +77,5 @@ class ClientState
     session[:callouts_seen] << callout_key
     # Rotate the list to only a certain number of the newest items
     session[:callouts_seen].shift(session[:callouts_seen].length - 20) if session[:callouts_seen].length > 20
-  end
-
-  private def progress_hash
-    migrate_cookies
-    progress = cookies[:progress]
-    progress ? JSON.parse(progress) : {}
-  rescue JSON::ParserError
-    return {}
-  end
-
-  # Migrates session state to unencrypted cookies.
-  private def migrate_cookies
-    if session[:progress]
-      cookies.permanent[:progress] = JSON.generate(session[:progress])
-      session[:progress] = nil
-    end
   end
 end

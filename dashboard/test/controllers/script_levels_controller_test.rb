@@ -1107,8 +1107,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "reset for hoc when not logged in clears client state and redirects back through /hoc/1" do
     create_hourofcode_unit_and_levels
-    client_state.set_level_progress(create(:script_level), 10)
-    refute client_state.level_progress_is_empty_for_test
+    script_level = create(:script_level)
+    create(:anonymous_level_progress, anon_user_id: request.anon_user_id, script: script_level.script, level: script_level.level, best_result: 10)
+    assert_equal 10, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
 
     get :reset, params: {script_id: Unit::HOC_NAME}
     assert_response 200
@@ -1117,7 +1118,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # build_script_level_path, not the /s/ form.
     assert_equal '/hoc/1', assigns(:redirect_path)
 
-    assert client_state.level_progress_is_empty_for_test
+    assert_nil session[:statsig_stable_id]
     refute session['warden.user.user.key']
   end
 
@@ -1129,15 +1130,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
-    client_state.set_level_progress(create(:script_level), 10)
-    refute client_state.level_progress_is_empty_for_test
+    script_level = create(:script_level)
+    create(:anonymous_level_progress, anon_user_id: request.anon_user_id, script: script_level.script, level: script_level.level, best_result: 10)
+    assert_equal 10, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
 
     script = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
     get :reset, params: {course_course_name: script.original_unit_group.name, unit_position: 1}
 
     assert_response 200
 
-    assert client_state.level_progress_is_empty_for_test
+    assert_nil session[:statsig_stable_id]
     refute session['warden.user.user.key']
   end
 
@@ -1178,13 +1180,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
-    client_state.set_level_progress(create(:script_level), 10)
-    refute client_state.level_progress_is_empty_for_test
+    script_level = create(:script_level)
+    create(:anonymous_level_progress, anon_user_id: request.anon_user_id, script: script_level.script, level: script_level.level, best_result: 10)
+    assert_equal 10, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
 
     get :reset, params: {course_course_name: 'laurel', unit_position: 1}
     assert_response 200
 
-    assert client_state.level_progress_is_empty_for_test
+    assert_nil session[:statsig_stable_id]
     refute session['warden.user.user.key']
   end
 

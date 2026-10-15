@@ -175,9 +175,9 @@ module ApplicationHelper
     end
   end
 
-  # Returns a client state object for the current session and cookies.
+  # Returns a client state object for the current signed-out user.
   def client_state
-    @client_state ||= ClientState.new(session, cookies)
+    @client_state ||= ClientState.new(request:)
   end
 
   # Check to see if we disabled signin from Gatekeeper

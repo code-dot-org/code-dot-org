@@ -181,7 +181,8 @@ class ActivitiesController < ApplicationController
           unit_group: @unit_group
         )
       else
-        track_progress_in_session
+        old_result = client_state.level_progress(script_id: @script_level.script_id, level_id: @level.id)
+        @new_level_completed = !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
 
         Services::AnonymousLevel::ProgressTracker.call(
           anon_user_id: request.anon_user_id,
@@ -249,20 +250,6 @@ class ActivitiesController < ApplicationController
           attempt: params[:attempt]
         )
       end
-    end
-  end
-
-  private def track_progress_in_session
-    # track scripts
-    if @script_level.try(:script).try(:id)
-      test_result = params[:testResult].to_i
-      old_result = client_state.level_progress(@script_level)
-
-      if !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
-        @new_level_completed = true
-      end
-
-      client_state.add_script(@script_level.script_id)
     end
   end
 end
