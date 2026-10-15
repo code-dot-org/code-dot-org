@@ -49,6 +49,12 @@ $tab-item-height: 34px;
   justify-content: space-between;
 }
 
+// ?bar=bottom: the same bar under the workspace, ruled off above instead.
+.tabContainerBottom {
+  border-bottom: none;
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
 .tabBar {
   display: flex;
   align-items: center;

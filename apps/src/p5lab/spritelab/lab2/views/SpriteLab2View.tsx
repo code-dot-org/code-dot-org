@@ -481,6 +481,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
+  // ?bar=bottom: the scene row, with Pictures, under the workspace.
+  const barAtBottom = useMemo(() => queryParams('bar') === 'bottom', []);
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
@@ -1929,6 +1931,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         </div>
       ) : (
         <LabShell
+          barAtBottom={barAtBottom}
           rightExtra={
             <>
               {activeTab === 'Play' && nowPlaying && (

@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
@@ -7,6 +8,8 @@ interface LabShellProps {
   sceneTabs?: React.ReactNode;
   /** Rendered at the bar's right. */
   rightExtra?: React.ReactNode;
+  /** The bar under the workspace instead of over it. */
+  barAtBottom?: boolean;
   children: React.ReactNode;
 }
 
@@ -17,15 +20,27 @@ interface LabShellProps {
 const LabShell: React.FunctionComponent<LabShellProps> = ({
   sceneTabs,
   rightExtra,
+  barAtBottom = false,
   children,
-}) => (
-  <div className={moduleStyles.tabShell}>
-    <div className={moduleStyles.tabContainer}>
+}) => {
+  const bar = (
+    <div
+      className={classNames(
+        moduleStyles.tabContainer,
+        barAtBottom && moduleStyles.tabContainerBottom
+      )}
+    >
       <div className={moduleStyles.tabBar}>{sceneTabs}</div>
       <div className={moduleStyles.tabBar}>{rightExtra}</div>
     </div>
-    <div className={moduleStyles.tabContent}>{children}</div>
-  </div>
-);
+  );
+  return (
+    <div className={moduleStyles.tabShell}>
+      {!barAtBottom && bar}
+      <div className={moduleStyles.tabContent}>{children}</div>
+      {barAtBottom && bar}
+    </div>
+  );
+};
 
 export default LabShell;
