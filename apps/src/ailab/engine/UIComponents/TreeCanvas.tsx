@@ -304,7 +304,6 @@ const TreeCanvas = ({
       className={classNames(styles.treeCanvas, className)}
       onScroll={undoScroll}
     >
-      {}
       <div ref={viewportRef} className={styles.viewport} onFocus={followFocus}>
         <div ref={contentRef} className={styles.content}>
           <CanvasMoveContext.Provider value={subscribeToMoves}>
