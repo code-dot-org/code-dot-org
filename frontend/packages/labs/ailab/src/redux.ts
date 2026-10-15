@@ -29,6 +29,8 @@ import type {
   TrainingModalStep,
 } from './types';
 
+export type DatasetLayout = 'table' | 'cards';
+
 export interface RootState {
   name: string | undefined;
   csvfile: string | undefined;
@@ -60,6 +62,7 @@ export interface RootState {
   trainingModalStep: TrainingModalStep | undefined;
   isTrainingReplay: boolean;
   currentColumn: string | undefined;
+  datasetLayout: DatasetLayout;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   viewedPanels: string[];
@@ -130,6 +133,7 @@ export const initialState: RootState = {
   trainingModalStep: undefined,
   isTrainingReplay: false,
   currentColumn: undefined,
+  datasetLayout: 'table',
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: 'notStarted',
@@ -355,6 +359,9 @@ const ailabSlice = createSlice({
         state.currentColumn = undefined;
       }
     },
+    setDatasetLayout(state, action: PayloadAction<DatasetLayout>) {
+      state.datasetLayout = action.payload;
+    },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
       if (!getShowColumnClicking(state)) {
@@ -434,6 +441,7 @@ export const {
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
+  setDatasetLayout,
   setHighlightDataset,
   setTrainingModalStep,
   replayTraining,

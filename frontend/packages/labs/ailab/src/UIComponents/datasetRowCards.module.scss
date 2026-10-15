@@ -1,0 +1,234 @@
+.root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.stage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: var(--background-neutral-secondary);
+}
+
+// --deck-peek, the number of cards peeking, is set from DatasetRowCards.tsx.
+.deck {
+  --deck-step: 10.5px;
+  --deck-top: calc(var(--deck-peek) * var(--deck-step) + 3px);
+  --deck-ease: cubic-bezier(0.32, 0.72, 0, 1);
+
+  position: relative;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  width: min(100%, 400px);
+  min-height: 0;
+  max-height: 100%;
+  box-sizing: border-box;
+  // Room for the cards that rise above the front one.
+  padding-top: var(--deck-top);
+}
+
+// 0 is the front card. Higher depths sit behind it and peek above.
+.slot {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  z-index: calc(10 - var(--deck-depth));
+  min-height: 0;
+  max-height: 100%;
+  opacity: calc(1 - var(--deck-depth) * 0.15);
+  transform: translateY(calc(var(--deck-depth) * var(--deck-step) * -1))
+    scale(calc(1 - var(--deck-depth) * 0.05));
+  transform-origin: top center;
+  transition:
+    transform 280ms var(--deck-ease),
+    opacity 280ms var(--deck-ease);
+
+  // Off the front card, so only that card sets the deck's height.
+  &[aria-hidden='true'] {
+    position: absolute;
+    inset: var(--deck-top) 0 0;
+    pointer-events: none;
+  }
+}
+
+.dealt {
+  z-index: 11;
+  opacity: 0;
+  transform: translateY(28px) scale(1.03);
+}
+
+.waiting {
+  opacity: 0;
+}
+
+.ghost {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background-color: var(--background-neutral-primary);
+}
+
+.card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 16px 0 0;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-lg);
+  background-color: var(--background-neutral-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.card .title {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0 20px;
+  font-weight: 600;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.details {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding-bottom: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.fadeTop,
+.fadeBottom {
+  position: absolute;
+  right: var(--scrollbar-width);
+  left: 0;
+  z-index: 1;
+  height: 48px;
+  pointer-events: none;
+}
+
+.fadeTop {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--background-neutral-primary),
+    transparent
+  );
+}
+
+.fadeBottom {
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--background-neutral-primary)
+  );
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 20px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.label,
+.value {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.labelText {
+  min-width: 0;
+}
+
+.details .labelName {
+  color: var(--text-accent-pink-primary);
+}
+
+.details .featureName {
+  color: var(--text-info-primary);
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--shape-round);
+}
+
+.dotLabel {
+  background-color: var(--background-accent-pink-primary);
+}
+
+.dotFeature {
+  background-color: var(--background-info-primary);
+}
+
+.value {
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-top: 1px solid var(--border-neutral-primary);
+  background-color: var(--background-neutral-primary);
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer .counter {
+  color: var(--text-neutral-tertiary);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slot {
+    transition: none;
+  }
+}
