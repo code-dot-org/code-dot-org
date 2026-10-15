@@ -15,7 +15,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
-    stub_environment_signing_key(false)
+    stub_environment_key_enabled(false)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -165,7 +165,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   end
 
   test 'signs with the environment key and names the environment in kid while the flag is on' do
-    stub_environment_signing_key(true)
+    stub_environment_key_enabled(true)
     CDO.stubs(:ai_gateway_jwt_auth_key).returns('environment private key')
     CDO.stubs(:ai_gateway_jwt_auth_key_passphrase).returns('environment passphrase')
     environment_key = OpenSSL::PKey::RSA.generate(2048)
@@ -180,7 +180,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   end
 
   test 'reports and refuses to mint when the flag is on and the environment key cannot be loaded' do
-    stub_environment_signing_key(true)
+    stub_environment_key_enabled(true)
     CDO.stubs(:ai_gateway_jwt_auth_key).raises(RuntimeError, 'secret not found')
     Observability::Errors.expects(:report).once
     sign_in(@authorized_teacher)
@@ -193,8 +193,8 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal 'environment_key', JSON.parse(response.body)['signingKey']
   end
 
-  private def stub_environment_signing_key(value)
-    DCDO.stubs(:get).with(AiGatewayAuthController::ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false).returns(value)
+  private def stub_environment_key_enabled(value)
+    DCDO.stubs(:get).with('ai-gateway-environment-key-enabled', false).returns(value)
   end
 
   private def stub_turnstile_enforcement_mode(value)

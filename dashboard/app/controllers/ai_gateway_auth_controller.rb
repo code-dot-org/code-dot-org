@@ -23,9 +23,6 @@ class AiGatewayAuthController < ApplicationController
   TURNSTILE_ENFORCEMENT_MODES = %w[disabled monitor enforce].freeze
   TURNSTILE_ENFORCEMENT_MODE_DEFAULT = 'disabled'.freeze
 
-  # Temporary rollout flag; when every environment runs with it on, remove it and the legacy shared key.
-  ENVIRONMENT_SIGNING_KEY_DCDO_KEY = 'ai-gateway-environment-signing-key'.freeze
-
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
@@ -52,7 +49,8 @@ class AiGatewayAuthController < ApplicationController
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
-    use_environment_key = DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true
+    # Temporary rollout flag; when every environment runs with it on, remove it and the legacy shared key.
+    use_environment_key = DCDO.get('ai-gateway-environment-key-enabled', false) == true
 
     begin
       if use_environment_key
