@@ -1,21 +1,13 @@
-// Response data is what was posted for the question. Its fields are
+// responseData is what was posted for the question. Its fields are
 // optional because a skipped question is saved as {}.
-export interface MultipleChoiceResponseData {
-  selectedChoiceId?: string;
-}
-
-export interface FreeResponseResponseData {
-  answerText?: string;
-}
-
 export interface MultipleChoiceQuestionResponse {
   questionType: 'MultipleChoiceQuestion';
-  responseData: MultipleChoiceResponseData;
+  responseData: {selectedChoiceId?: string};
 }
 
 export interface FreeResponseQuestionResponse {
   questionType: 'FreeResponseQuestion';
-  responseData: FreeResponseResponseData;
+  responseData: {answerText?: string};
 }
 
 // Narrow with the type guards below to read responseData.
