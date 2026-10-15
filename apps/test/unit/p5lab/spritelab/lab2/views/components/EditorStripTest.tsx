@@ -25,4 +25,19 @@ describe('EditorStrip', () => {
     const heading = screen.getByRole('heading', {name: 'Workspace'});
     expect(heading.parentElement!.firstElementChild).toBe(heading);
   });
+
+  it('offers undo and redo across from the switch, each live only with history', () => {
+    const history = {
+      canUndo: true,
+      canRedo: false,
+      undo: jest.fn(),
+      redo: jest.fn(),
+    };
+    render(
+      <EditorStrip editor="Code" onChange={jest.fn()} history={history} />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Undo'}));
+    expect(history.undo).toHaveBeenCalled();
+    expect(screen.getByRole('button', {name: 'Redo'})).toBeDisabled();
+  });
 });

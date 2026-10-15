@@ -941,6 +941,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     loadCode,
     subscribeToChanges,
     refreshToolbox,
+    canUndo,
+    canRedo,
+    undo,
+    redo,
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
@@ -2047,6 +2051,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   editors={editors}
                   disabledEditors={disabledEditors}
                   switchAtStart={editorsAtStart}
+                  history={
+                    activeTab === 'Code'
+                      ? {canUndo, canRedo, undo, redo}
+                      : undefined
+                  }
                   style={clearOfPreview}
                 />
               )}

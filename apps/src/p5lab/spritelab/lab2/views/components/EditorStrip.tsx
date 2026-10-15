@@ -1,9 +1,20 @@
 import {Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
+
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 
 import EditorSwitch, {Editor} from './EditorSwitch';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
+
+/** The workspace's undo and redo, offered across from the switch. */
+export interface EditHistory {
+  canUndo: boolean;
+  canRedo: boolean;
+  undo: () => void;
+  redo: () => void;
+}
 
 interface EditorStripProps {
   /** The open editor; with onChange, the switch shows too. */
@@ -15,6 +26,7 @@ interface EditorStripProps {
   title?: string;
   /** The switch at the bar's start instead of its end. */
   switchAtStart?: boolean;
+  history?: EditHistory;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
 }
@@ -30,9 +42,45 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   disabledEditors,
   title,
   switchAtStart = false,
+  history,
   style,
 }) => (
   <div className={moduleStyles.editorStrip} style={style}>
+    {history && (
+      <div
+        className={classNames(
+          moduleStyles.editorStripHistory,
+          switchAtStart
+            ? moduleStyles.editorStripEnd
+            : moduleStyles.editorStripStart
+        )}
+      >
+        <IconButtonWithTooltip
+          id="spritelab2-undo"
+          label="Undo"
+          icon={{iconName: 'undo', iconStyle: 'solid'}}
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          tooltipDirection="onBottom"
+          hideTooltipTail
+          disabled={!history.canUndo}
+          onClick={history.undo}
+        />
+        <IconButtonWithTooltip
+          id="spritelab2-redo"
+          label="Redo"
+          icon={{iconName: 'redo', iconStyle: 'solid'}}
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          tooltipDirection="onBottom"
+          hideTooltipTail
+          disabled={!history.canRedo}
+          onClick={history.redo}
+        />
+      </div>
+    )}
     <MuiTypography
       component="h2"
       variant="overline2"

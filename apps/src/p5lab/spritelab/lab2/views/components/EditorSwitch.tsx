@@ -60,7 +60,9 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
         }}
       >
         <FontAwesomeV6Icon iconName={ICONS[editor]} iconStyle="solid" />
-        {editor}
+        <span className={moduleStyles.editorSwitchLabel} data-label={editor}>
+          {editor}
+        </span>
       </button>
     ))}
   </div>

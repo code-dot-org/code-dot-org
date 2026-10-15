@@ -242,6 +242,22 @@ $tab-item-height: 34px;
   }
 }
 
+// A hidden bold copy sets the label's width, so bolding the active editor
+// moves none of the others.
+.editorSwitchLabel {
+  display: inline-grid;
+  justify-items: start;
+
+  &::after {
+    content: attr(data-label);
+    grid-area: 1 / 1;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
+}
+
 .editorSwitchActive {
   font-weight: 600;
   box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
@@ -366,6 +382,12 @@ $editor-strip-height: 41px;
   display: flex;
   justify-content: end;
   align-items: center;
+}
+
+// Undo and redo, across from the switch.
+.editorStripHistory {
+  gap: 4px;
+  padding: 0 8px;
 }
 
 // ?editors=stripleft: the switch at the bar's start.
