@@ -64,9 +64,10 @@ export function isPanelEnabled(
 function isPanelAvailable(state: RootState, panelId: string): boolean {
   const mode = state.mode;
 
-  // Hidden for now; the dataset picker will come back later.
   if (panelId === 'selectDataset') {
-    return false;
+    if (mode && mode.datasets && mode.datasets.length === 1) {
+      return false;
+    }
   }
 
   if (panelId === 'saveModel') {

@@ -193,16 +193,28 @@ describe('prevNextButtons on the data panels', () => {
   });
 
   test.each([undefined, {datasets: ['a', 'b']}])(
-    'datasetView never goes back to the hidden dataset picker with mode %o',
+    'datasetView goes back to the dataset picker with mode %o',
     mode => {
       const {prev, next} = prevNextButtons(
         {...dataUploadedState, currentPanel: 'datasetView', mode},
         selectedFeaturesProject,
       );
-      expect(prev).toBeUndefined();
+      expect(prev.panel).toBe('selectDataset');
       expect(next).toBeUndefined();
     },
   );
+
+  test('has no back button when the mode fixes the dataset', () => {
+    const {prev} = prevNextButtons(
+      {
+        ...dataUploadedState,
+        currentPanel: 'datasetView',
+        mode: {datasets: ['tacos_toy']},
+      },
+      selectedFeaturesProject,
+    );
+    expect(prev).toBeUndefined();
+  });
 
   test.each([{}, {hideSelectLabel: true}])(
     'selectDataset moves on to datasetView with mode %o',

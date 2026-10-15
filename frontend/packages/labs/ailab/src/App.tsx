@@ -1,5 +1,6 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Button} from '@mui/material';
 import classNames from 'classnames';
 import {type CSSProperties, type ReactNode, useEffect} from 'react';
 
@@ -125,14 +126,15 @@ const PanelButtons = ({
     <div className={styles.navigation}>
       {panelButtons.prev && (
         <div className={styles.previous}>
-          <button
-            type="button"
-            className={styles.navButton}
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={onClickPrev}
             disabled={!panelButtons.prev.enabled}
           >
             {panelButtons.prev.text}
-          </button>
+          </Button>
         </div>
       )}
 
@@ -150,15 +152,16 @@ const PanelButtons = ({
 
       {panelButtons.next && (
         <div className={styles.next}>
-          <button
-            type="button"
+          <Button
             id="uitest-continue-button"
-            className={styles.navButton}
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={onClickNext}
             disabled={!panelButtons.next.enabled}
           >
             {panelButtons.next.text}
-          </button>
+          </Button>
         </div>
       )}
     </div>
@@ -283,13 +286,15 @@ const App = ({
       />
 
       {currentPanel === 'selectDataset' && (
-        <BodyContainer>
-          <ContainerLeft>
-            <SelectDataset />
-          </ContainerLeft>
-          <ContainerRight>
-            <DataCard />
-          </ContainerRight>
+        <BodyContainer flush>
+          <div className={styles.panelRow}>
+            <ContainerLeft>
+              <SelectDataset />
+            </ContainerLeft>
+            <ContainerRight>
+              <DataCard />
+            </ContainerRight>
+          </div>
         </BodyContainer>
       )}
 

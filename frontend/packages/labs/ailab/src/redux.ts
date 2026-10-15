@@ -126,7 +126,7 @@ export const initialState: RootState = {
   predictionPlaying: false,
   predictionCount: 0,
   trainedModelDetails: {},
-  currentPanel: 'datasetView',
+  currentPanel: 'selectDataset',
   trainingModalStep: undefined,
   isTrainingReplay: false,
   currentColumn: undefined,
