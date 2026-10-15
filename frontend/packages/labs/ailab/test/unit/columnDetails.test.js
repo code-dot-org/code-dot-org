@@ -12,6 +12,7 @@ import {
   containsOnlyNumbers,
   getColumnDescription,
   getMostAndLeastCommon,
+  getColumnRole,
 } from '../../src/helpers/columnDetails';
 import I18n from '../../src/i18n';
 
@@ -54,6 +55,22 @@ describe('column data types', () => {
   test('column is not numerical', async () => {
     const result = isColumnNumerical(classificationState, 'play');
     expect(result).toBe(false);
+  });
+});
+
+describe('getColumnRole', () => {
+  const project = {labelColumn: 'play', selectedFeatures: ['windy']};
+
+  test('the label column is the label', () => {
+    expect(getColumnRole(project, 'play')).toBe('label');
+  });
+
+  test('a selected column is a feature', () => {
+    expect(getColumnRole(project, 'windy')).toBe('feature');
+  });
+
+  test('any other column has no role', () => {
+    expect(getColumnRole(project, 'outlook')).toBeUndefined();
   });
 });
 

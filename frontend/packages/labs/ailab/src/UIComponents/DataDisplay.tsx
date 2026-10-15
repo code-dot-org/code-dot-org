@@ -1,17 +1,22 @@
 /* React component to handle displaying imported data. */
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Typography} from '@mui/material';
 import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
-import {useAppSelector} from '../hooks';
+import {useAppDispatch, useAppSelector} from '../hooks';
+import {setDatasetLayout} from '../redux';
 
+import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
 
 import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
+  const dispatch = useAppDispatch();
   const rowCount = useAppSelector(state => state.data.length);
   const datasetName = useAppSelector(state => state.name);
+  const datasetLayout = useAppSelector(state => state.datasetLayout);
 
   if (rowCount === 0) {
     return null;
@@ -19,28 +24,63 @@ const DataDisplay = () => {
 
   const rowCountText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
   const rowCountMessage =
-    rowCount > DATA_TABLE_ROW_LIMIT
+    datasetLayout === 'table' && rowCount > DATA_TABLE_ROW_LIMIT
       ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
       : rowCountText;
+
+  const onLayoutChange = (value: string) => {
+    if (value === 'table' || value === 'cards') {
+      dispatch(setDatasetLayout(value));
+    }
+  };
 
   return (
     <div id="data-display" className={styles.panel}>
       <div className={styles.header}>
-        <Typography component="h3" variant="label2" className={styles.title}>
-          {datasetName || 'Dataset'}
-        </Typography>
-        <span className={styles.separator} aria-hidden="true" />
-        <Typography
-          component="span"
-          variant="body4"
-          className={styles.rowCount}
+        <div className={styles.summary}>
+          <Typography component="h3" variant="label2" className={styles.title}>
+            {datasetName || 'Dataset'}
+          </Typography>
+          <span className={styles.separator} aria-hidden="true" />
+          <Typography
+            component="span"
+            variant="body4"
+            className={styles.rowCount}
+          >
+            {rowCountMessage}
+          </Typography>
+        </div>
+        <div
+          role="group"
+          aria-label="Dataset view"
+          className={styles.viewToggle}
         >
-          {rowCountMessage}
-        </Typography>
+          <SegmentedButtons
+            size="xs"
+            selectedButtonValue={datasetLayout}
+            onChange={onLayoutChange}
+            buttons={[
+              {
+                value: 'table',
+                label: 'Table',
+                iconLeft: {iconName: 'table', iconStyle: 'solid'},
+              },
+              {
+                value: 'cards',
+                label: 'Cards',
+                iconLeft: {iconName: 'cards-blank', iconStyle: 'solid'},
+              },
+            ]}
+          />
+        </div>
       </div>
-      <div className={styles.tableContainer}>
-        <DataTable />
-      </div>
+      {datasetLayout === 'cards' ? (
+        <DatasetCardDeck />
+      ) : (
+        <div className={styles.tableContainer}>
+          <DataTable />
+        </div>
+      )}
     </div>
   );
 };
