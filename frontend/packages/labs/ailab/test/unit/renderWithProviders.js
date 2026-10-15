@@ -41,6 +41,7 @@ function applyRun({trainingData, project}, run) {
 }
 
 // Seeds a run made outside the module, and keeps both context values reachable.
+// eslint-disable-next-line react/prop-types
 const ContextProbe = ({trainingRun, report}) => {
   const trainingData = useTrainingData();
   const project = useProject();

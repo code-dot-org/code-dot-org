@@ -1,5 +1,4 @@
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
 
@@ -114,7 +113,11 @@ const PanelButtons = ({
   const loadSaveStatus = isSaveCompleteProp(saveStatus) ? (
     localizedSaveMessage(saveStatus)
   ) : (
-    <FontAwesomeIcon icon={faSpinner} />
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
   );
 
   const loadSaveResponseData = isSaveCompleteProp(saveStatus)
@@ -263,6 +266,9 @@ const App = ({
     if (instructionsKey) {
       setInstructionsKey?.(instructionsKey, {showOverlay});
     }
+    // The consumer passes a fresh closure each render; depending on it would
+    // re-notify on every render rather than on a key change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instructionsKey, showOverlay]);
 
   // Report panel view on every panel change.
@@ -274,6 +280,8 @@ const App = ({
     if (latestResult) {
       onTrained?.(Number(latestResult.accuracy));
     }
+    // As above: report a result once, not once per render of the consumer.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
 
   return (

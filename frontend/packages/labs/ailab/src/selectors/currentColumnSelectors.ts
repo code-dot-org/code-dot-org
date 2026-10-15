@@ -1,8 +1,8 @@
 import {createSelector} from 'reselect';
 
 import {ColumnTypes} from '../constants';
-import type {Extrema} from '../helpers/columnDetails';
 import {
+  type Extrema,
   getUniqueOptions,
   getExtrema,
   isColumnReadOnly,
