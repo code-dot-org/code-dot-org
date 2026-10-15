@@ -131,6 +131,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const answerAutosaveTimersRef = useRef<
     Record<number, ReturnType<typeof setTimeout>>
   >({});
+  // Answer text not yet confirmed saved, kept apart from the timers so a
+  // failed save is retried on blur.
+  const unsavedAnswerTextsRef = useRef<Record<number, string>>({});
   const cancelAnswerAutosaves = useCallback(() => {
     Object.values(answerAutosaveTimersRef.current).forEach(clearTimeout);
     answerAutosaveTimersRef.current = {};
@@ -172,6 +175,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     setCurrentPageNumber(1);
     setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
+    unsavedAnswerTextsRef.current = {};
     cancelAnswerAutosaves();
   }, [attempt?.id, attempt?.questionResultsInProgress, cancelAnswerAutosaves]);
 
@@ -328,14 +332,22 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const saveAnswerText = (questionId: number, answerText: string) => {
     clearTimeout(answerAutosaveTimersRef.current[questionId]);
     delete answerAutosaveTimersRef.current[questionId];
-    queueResponseWrite(questionId, {answerText}).catch(() => {
-      // Already recorded as a user-facing error in useQuizAttempt.
-    });
+    queueResponseWrite(questionId, {answerText})
+      .then(() => {
+        // A newer edit made while this was in flight is still unsaved.
+        if (unsavedAnswerTextsRef.current[questionId] === answerText) {
+          delete unsavedAnswerTextsRef.current[questionId];
+        }
+      })
+      .catch(() => {
+        // Already recorded as a user-facing error in useQuizAttempt.
+      });
   };
 
   // Debounced - saves after typing pauses, not every keystroke.
   const handleChangeAnswerText = (questionId: number, answerText: string) => {
     setAnswerTextsByQuestionId(prev => ({...prev, [questionId]: answerText}));
+    unsavedAnswerTextsRef.current[questionId] = answerText;
     clearTimeout(answerAutosaveTimersRef.current[questionId]);
     answerAutosaveTimersRef.current[questionId] = setTimeout(
       () => saveAnswerText(questionId, answerText),
@@ -344,8 +356,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   const handleBlurAnswerText = (questionId: number) => {
-    if (answerAutosaveTimersRef.current[questionId] !== undefined) {
-      saveAnswerText(questionId, answerTextsByQuestionId[questionId] ?? '');
+    const unsavedText = unsavedAnswerTextsRef.current[questionId];
+    if (unsavedText !== undefined) {
+      saveAnswerText(questionId, unsavedText);
     }
   };
 

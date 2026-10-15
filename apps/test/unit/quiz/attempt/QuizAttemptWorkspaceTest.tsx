@@ -1287,6 +1287,42 @@ describe('QuizAttemptWorkspace', () => {
       expect(textbox).toHaveValue('x > 3');
     });
 
+    it('retries a failed save on the next blur, then stops once it succeeds', async () => {
+      const submitQuestionResponse = jest
+        .fn()
+        .mockRejectedValueOnce(new Error('offline'))
+        .mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(1)
+      );
+
+      // No edit in between - the unsaved text alone triggers the retry.
+      fireEvent.blur(textbox);
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
+      );
+      expect(submitQuestionResponse).toHaveBeenLastCalledWith(9, {
+        answerText: 'x > 3',
+      });
+
+      // Saved now, so a further blur sends nothing. A macrotask tick lets
+      // the whole write chain settle first.
+      const settle = () =>
+        act(() => new Promise(resolve => setTimeout(resolve, 0)));
+      await settle();
+      fireEvent.blur(textbox);
+      await settle();
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(2);
+    });
+
     it('sends the answer text with submit and drops the pending autosave', async () => {
       jest.useFakeTimers();
       const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
