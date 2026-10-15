@@ -42,6 +42,41 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
     assert_equal 1, created.max_score
   end
 
+  test "create auto-grades a multiple select response sent as JSON" do
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question)
+    sign_in @student
+
+    post :create, as: :json, params: {
+      quizAttemptId: @attempt.id,
+      quizQuestionId: question.id,
+      responseData: {selectedChoiceIds: ['c', 'a']}
+    }
+
+    assert_response :success
+    created = QuizQuestionResponse.find(JSON.parse(response.body)['id'])
+    assert_equal({'selectedChoiceIds' => ['c', 'a']}, created.response_data)
+    assert_equal 1, created.score
+  end
+
+  # An empty array must arrive as [] - form encoding would drop the key.
+  test "create stores a multiple select response with every choice cleared" do
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question)
+    sign_in @student
+
+    post :create, as: :json, params: {
+      quizAttemptId: @attempt.id,
+      quizQuestionId: question.id,
+      responseData: {selectedChoiceIds: []}
+    }
+
+    assert_response :success
+    created = QuizQuestionResponse.find(JSON.parse(response.body)['id'])
+    assert_equal({'selectedChoiceIds' => []}, created.response_data)
+    assert_equal 0, created.score
+  end
+
   # A response can be resubmitted freely before final submit so returning
   # score/maxScore here would let a student try each choice and watch score flip
   # to max_score - bypassing show_correctness: false.
