@@ -59,7 +59,7 @@ class QuizzesControllerTest < ActionController::TestCase
       content: {
         question_title: 'Pick B',
         choices: [{id: 'a', text: 'A'}, {id: 'b', text: 'B'}],
-        correct_choice_id: 'b'
+        correct_choice_ids: ['b']
       },
       explanation: 'Because B.'
     )
@@ -76,7 +76,7 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal [first.id, second.id, third.id], (questions.map {|q| q['id']})
 
     first_json = questions.first
-    assert_equal 'b', first_json['correctChoiceId']
+    assert_equal ['b'], first_json['correctChoiceIds']
     assert_equal 'Because B.', first_json['explanation']
     assert_equal 1, first_json['page']
     assert_equal [standard.shortcode], (first_json['standards'].map {|s| s['shortcode']})

@@ -122,7 +122,7 @@ class Quiz < Level
   end
 
   # Adds quiz_questions into levelProperties so the frontend can render and
-  # answer them. Correct-answer and explanation fields (e.g. correct_choice_id)
+  # answer them. Correct-answer and explanation fields (e.g. correct_choice_ids)
   # are deliberately excluded so grading stays server-side.
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties_camelized = super

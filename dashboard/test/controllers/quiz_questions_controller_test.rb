@@ -193,7 +193,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
-      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
     }
 
     assert_response :success
@@ -207,7 +207,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     params = {
       id: @question.id, quizLevelId: @quiz.id,
       questionName: 'Name', questionTitle: 'Title',
-      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
     }
 
     put :update, params: params.merge(description: 'Think about **x**.')
@@ -231,7 +231,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id,
         questionName: 'Forked name', questionTitle: 'Forked title',
-        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
       }
     end
 
@@ -254,7 +254,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id, editMode: 'fork',
         questionName: 'Forked by request', questionTitle: 'Title',
-        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
       }
     end
 
@@ -271,7 +271,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
       put :update, params: {
         id: @question.id, quizLevelId: @quiz.id,
         questionName: 'Forked name', questionTitle: 'Forked title',
-        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a'],
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
       }
     end
@@ -299,7 +299,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
-      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
     }
 
     assert_response :success
@@ -314,7 +314,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
-      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a'],
       standards: [{frameworkShortcode: new_standard.framework.shortcode, shortcode: new_standard.shortcode}]
     }
 
@@ -329,7 +329,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     put :update, params: {
       id: @question.id, quizLevelId: @quiz.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
-      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a'],
       standards: []
     }, as: :json
 
@@ -343,7 +343,7 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     put :update, params: {
       id: unattached.id,
       questionName: 'Edited name', questionTitle: 'Edited title',
-      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
     }
 
     assert_response :success

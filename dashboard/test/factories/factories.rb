@@ -2524,8 +2524,19 @@ FactoryBot.define do
       {
         question_title: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
-        correct_choice_id: 'b'
+        correct_choice_ids: ['b']
       }
+    end
+
+    trait :select_multiple do
+      content do
+        {
+          question_title: 'Which are odd?',
+          choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}, {id: 'c', text: '3'}],
+          correct_choice_ids: ['a', 'c'],
+          select_multiple: true
+        }
+      end
     end
   end
 

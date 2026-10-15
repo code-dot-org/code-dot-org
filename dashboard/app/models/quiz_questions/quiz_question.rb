@@ -19,7 +19,7 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
-  # Every concrete question subtype. TODO: P0 - add MultipleSelectQuestion, MatchQuestion.
+  # Every concrete question subtype. TODO: P0 - add MatchQuestion.
   TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion).freeze
 
   after_initialize {self.type ||= self.class.sti_name}
@@ -158,6 +158,17 @@ class QuizQuestion < ApplicationRecord
     content = {question_title: params[:questionTitle]}
     content[:description] = params[:description] if params[:description].present?
     content
+  end
+
+  # The answer key fields shown with submitted results. Values are nilled,
+  # not omitted, when the key is hidden.
+  def answer_key_json
+    {}
+  end
+
+  # The JSON fields every subtype has.
+  def shared_content_json
+    {questionTitle: content['question_title'], description: content['description']}
   end
 
   # Subtype-specific fields for the quiz builder, answer key included.

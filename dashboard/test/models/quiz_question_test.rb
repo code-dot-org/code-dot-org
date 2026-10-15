@@ -168,7 +168,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
           'type' => 'MultipleChoiceQuestion',
           'name' => 'seeded_question',
           'encrypted_content' => Encryption.encrypt_object(
-            'content' => {'question_title' => 'Title', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
+            'content' => {'question_title' => 'Title', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_ids' => ['a']},
             'explanation' => 'an explanation'
           )
         )
@@ -196,7 +196,7 @@ class QuizQuestionTest < ActiveSupport::TestCase
             'type' => 'MultipleChoiceQuestion',
             'name' => name,
             'encrypted_content' => Encryption.encrypt_object(
-              'content' => {'question_title' => 'Title', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_id' => 'a'},
+              'content' => {'question_title' => 'Title', 'choices' => [{'id' => 'a', 'text' => 'A'}, {'id' => 'b', 'text' => 'B'}], 'correct_choice_ids' => ['a']},
               'explanation' => ''
             )
           )

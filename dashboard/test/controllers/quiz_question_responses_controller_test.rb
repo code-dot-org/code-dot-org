@@ -15,7 +15,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
     post :create, params: {
       quizAttemptId: @attempt.id,
       quizQuestionId: @question.id,
-      responseData: {selectedChoiceId: 'b'}
+      responseData: {selectedChoiceIds: ['b']}
     }
     assert_redirected_to_sign_in
   end
@@ -27,7 +27,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
       post :create, params: {
         quizAttemptId: @attempt.id,
         quizQuestionId: @question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 
@@ -49,7 +49,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
     sign_in @student
     post :create, params: {
       quizAttemptId: @attempt.id, quizQuestionId: @question.id,
-      responseData: {selectedChoiceId: 'b'}
+      responseData: {selectedChoiceIds: ['b']}
     }
 
     assert_response :success
@@ -62,13 +62,13 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
     sign_in @student
     post :create, params: {
       quizAttemptId: @attempt.id, quizQuestionId: @question.id,
-      responseData: {selectedChoiceId: 'a'}
+      responseData: {selectedChoiceIds: ['a']}
     }
 
     assert_no_difference 'QuizQuestionResponse.count' do
       post :create, params: {
         quizAttemptId: @attempt.id, quizQuestionId: @question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 
@@ -85,7 +85,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
       post :create, params: {
         quizAttemptId: @attempt.id,
         quizQuestionId: other_question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 
@@ -102,7 +102,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
       post :create, params: {
         quizAttemptId: @attempt.id,
         quizQuestionId: other_question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 
@@ -117,7 +117,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
       post :create, params: {
         quizAttemptId: other_attempt.id,
         quizQuestionId: @question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 
@@ -132,7 +132,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
       post :create, params: {
         quizAttemptId: @attempt.id,
         quizQuestionId: @question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 
@@ -148,7 +148,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
       post :create, params: {
         quizAttemptId: @attempt.id,
         quizQuestionId: @question.id,
-        responseData: {selectedChoiceId: 'b'}
+        responseData: {selectedChoiceIds: ['b']}
       }
     end
 

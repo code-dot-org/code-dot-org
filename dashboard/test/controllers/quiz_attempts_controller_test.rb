@@ -38,7 +38,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
-      response_data: {'selectedChoiceId' => 'b'}
+      response_data: {'selectedChoiceIds' => ['b']}
     )
     sign_in @student
 
@@ -47,7 +47,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_nil body['questionResults']
-    assert_equal [{'quizQuestionId' => @question.id, 'questionType' => 'MultipleChoiceQuestion', 'responseData' => {'selectedChoiceId' => 'b'}}], body['questionResultsInProgress']
+    assert_equal [{'quizQuestionId' => @question.id, 'questionType' => 'MultipleChoiceQuestion', 'responseData' => {'selectedChoiceIds' => ['b']}}], body['questionResultsInProgress']
   end
 
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do
@@ -92,7 +92,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: attempt,
       quiz_question: question,
-      response_data: {'selectedChoiceId' => 'b'},
+      response_data: {'selectedChoiceIds' => ['b']},
       grading_status: 'auto_graded',
       score: 1,
       max_score: 1
@@ -110,7 +110,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     result = body['questionResults'].first
     assert result['correct']
     assert_equal 'because math', result['explanation']
-    assert_equal 'b', result['correctChoiceId']
+    assert_equal ['b'], result['correctChoiceIds']
   end
 
   test "index shows an unverified teacher correctness but not the correctanswer nor explanation, even for their own student" do
@@ -122,7 +122,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: attempt,
       quiz_question: question,
-      response_data: {'selectedChoiceId' => 'b'},
+      response_data: {'selectedChoiceIds' => ['b']},
       grading_status: 'auto_graded',
       score: 1,
       max_score: 1
@@ -141,7 +141,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     result = body['questionResults'].first
     assert result['correct']
     assert_nil result['explanation']
-    assert_nil result['correctChoiceId']
+    assert_nil result['correctChoiceIds']
   end
 
   test "update re-grades stored responses when none are submitted, and only scores questions on the quiz" do
@@ -151,7 +151,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
-      response_data: {'selectedChoiceId' => 'b'},
+      response_data: {'selectedChoiceIds' => ['b']},
       score: 0,
       max_score: 1,
       grading_status: 'auto_graded'
@@ -185,21 +185,21 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
-      response_data: {'selectedChoiceId' => 'a'},
+      response_data: {'selectedChoiceIds' => ['a']},
       score: 0,
       max_score: 1,
       grading_status: 'auto_graded'
     )
 
     sign_in @student
-    put :update, params: {id: @attempt.id, responses: {@question.id => {selectedChoiceId: 'b'}}}
+    put :update, params: {id: @attempt.id, responses: {@question.id => {selectedChoiceIds: ['b']}}}
 
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal 1, body['score']
     assert_equal 1, body['maxScore']
     response = @attempt.reload.quiz_question_responses.find_by!(quiz_question_id: @question.id)
-    assert_equal 'b', response.response_data['selectedChoiceId']
+    assert_equal ['b'], response.response_data['selectedChoiceIds']
   end
 
   test "update saves a free response answer ungraded and leaves it out of the score" do
@@ -209,7 +209,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     sign_in @student
     put :update, params: {
       id: @attempt.id,
-      responses: {@question.id => {selectedChoiceId: 'b'}, fr_question.id => {answerText: 'Because'}}
+      responses: {@question.id => {selectedChoiceIds: ['b']}, fr_question.id => {answerText: 'Because'}}
     }
 
     assert_response :success
@@ -229,7 +229,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: @attempt,
       quiz_question: @question,
-      response_data: {'selectedChoiceId' => 'b'},
+      response_data: {'selectedChoiceIds' => ['b']},
       score: 1,
       max_score: 1,
       grading_status: 'auto_graded'
@@ -254,7 +254,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
       :quiz_question_response,
       quiz_attempt: attempt,
       quiz_question: question,
-      response_data: {'selectedChoiceId' => 'b'},
+      response_data: {'selectedChoiceIds' => ['b']},
       score: 1,
       max_score: 1,
       grading_status: 'auto_graded'

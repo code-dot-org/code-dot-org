@@ -50,7 +50,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
         questionName: 'New question',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
-        correctChoiceId: 'b',
+        correctChoiceIds: ['b'],
         page: 1
       }
     end
@@ -59,7 +59,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     question = MultipleChoiceQuestion.find(body['id'])
     assert_equal 'New question', question.name
-    assert_equal 'b', question.content['correct_choice_id']
+    assert_equal ['b'], question.content['correct_choice_ids']
     refute question.content.key?('description')
     placement = @quiz.placements.find_by!(quiz_question_id: question.id)
     assert_equal 3, placement.position
@@ -67,7 +67,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
 
   test "create returns bad_request when required fields are missing" do
     assert_no_difference 'QuizQuestion.count' do
-      post :create, params: {level_id: @quiz.id, type: 'MultipleChoiceQuestion', questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
+      post :create, params: {level_id: @quiz.id, type: 'MultipleChoiceQuestion', questionName: '', questionTitle: '', choices: [], correctChoiceIds: ['']}
     end
 
     assert_response :bad_request
@@ -82,7 +82,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
         questionName: 'Orphan risk',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
-        correctChoiceId: 'b',
+        correctChoiceIds: ['b'],
         standards: [{frameworkShortcode: 'not-a-real-framework', shortcode: 'not-a-real-standard'}]
       }
     end
@@ -115,7 +115,7 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
         questionName: 'No type',
         questionTitle: 'What is 2 + 2?',
         choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
-        correctChoiceId: 'b'
+        correctChoiceIds: ['b']
       }
     end
 
