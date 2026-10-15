@@ -7,7 +7,7 @@ class DynamicConfigBase
   include Singleton
 
   def self.datastore_cache
-    @@datastore_cache ||= EnvironmentAwareDynamicConfigHelper.create_datastore_cache(cache_identifier)
+    @datastore_cache ||= EnvironmentAwareDynamicConfigHelper.create_datastore_cache(cache_identifier)
   end
 
   def self.cache_identifier
