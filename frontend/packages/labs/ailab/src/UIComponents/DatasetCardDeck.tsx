@@ -11,12 +11,12 @@ import {setDatasetCardRow} from '../redux';
 import DatasetRowCard from './DatasetRowCard';
 import PagerButton from './PagerButton';
 
-import styles from './datasetRowCards.module.scss';
+import styles from './datasetCardDeck.module.scss';
 
 // Blank cards visible behind the current one.
 const DECK_PEEK = 2;
 
-const DatasetRowCards = () => {
+const DatasetCardDeck = () => {
   const dispatch = useAppDispatch();
   const data = useAppSelector(state => state.data);
   const rowIndex = useAppSelector(state => state.datasetCardRow);
@@ -109,4 +109,4 @@ const DatasetRowCards = () => {
   );
 };
 
-export default DatasetRowCards;
+export default DatasetCardDeck;

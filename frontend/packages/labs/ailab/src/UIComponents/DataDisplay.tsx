@@ -7,7 +7,7 @@ import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
 
-import DatasetRowCards from './DatasetRowCards';
+import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
 
 import styles from './dataDisplay.module.scss';
@@ -75,7 +75,7 @@ const DataDisplay = () => {
         </div>
       </div>
       {datasetLayout === 'cards' ? (
-        <DatasetRowCards />
+        <DatasetCardDeck />
       ) : (
         <div className={styles.tableContainer}>
           <DataTable />
