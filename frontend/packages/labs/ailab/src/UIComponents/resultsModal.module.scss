@@ -11,9 +11,7 @@ $content-height: 416px;
 }
 
 .tabRow {
-  // Tabs has no CodeAI brand override; these are the tokens it reads for text.
-  --text-brand-teal-primary: var(--text-selected-primary-inverse);
-  --text-neutral-tertiary: var(--text-neutral-quaternary);
+  @include mixins.modal-tabs;
 
   padding: 10px 14px 0;
   background-color: var(--background-neutral-secondary);
