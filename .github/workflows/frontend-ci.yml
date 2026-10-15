@@ -31,6 +31,7 @@ jobs:
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
+      mobile-changed: ${{ steps.changes.outputs.mobile }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
       markdown-changed: ${{ steps.changes.outputs.markdown }}
       users-changed: ${{ steps.changes.outputs.users }}
@@ -58,6 +59,10 @@ jobs:
               - '.github/**'
             studio:
               - 'frontend/apps/studio/**'
+              - 'frontend/*'
+              - '.github/**'
+            mobile:
+              - 'frontend/apps/mobile/**'
               - 'frontend/*'
               - '.github/**'
             oceans:
@@ -103,6 +108,13 @@ jobs:
     if: ${{ needs.setup.outputs.studio-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/studio-ci.yml
+    secrets: inherit
+
+  # Start the mobile app CI workflow
+  mobile:
+    if: ${{ needs.setup.outputs.mobile-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/mobile-ci.yml
     secrets: inherit
 
   # Start the component library CI workflow

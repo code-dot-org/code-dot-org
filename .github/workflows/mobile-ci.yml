@@ -1,0 +1,28 @@
+name: Mobile-CI
+
+on:
+  workflow_call:
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./frontend
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      # Builds the web assets and checks them; the Android project is not built.
+      - name: Dryrun Release
+        run: yarn release:dryrun --filter @code-dot-org/mobile
