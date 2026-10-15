@@ -41,4 +41,10 @@ describe('the train-model metric', () => {
       trainer: 'treeClassify',
     });
   });
+
+  test('is not logged when a pretrained level trains on load', () => {
+    expect(
+      trainAndCapture({trainer: 'decisionTree', pretrained: true}),
+    ).toEqual([]);
+  });
 });

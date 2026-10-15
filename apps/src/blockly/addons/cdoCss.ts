@@ -120,6 +120,10 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyScrollbarHandle {
       fill: var(--background-neutral-quinary) !important;
     }
+    /* Dropdowns render inside the injection div; don't clip them on small screens. */
+    .injectionDiv:not(.readOnlyBlockSpace) {
+      overflow: visible;
+    }
     /* Not !important: fields override this inline to stay legible. */
     .blocklyDropDownDiv {
       background-color: var(--background-neutral-primary);

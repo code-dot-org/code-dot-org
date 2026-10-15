@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-14T19:10:24.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "In a **platform game**, you run and jump across platforms. \n\n**Let's build it!**",
+        "imageUrl": "https://images.code.org/82839c921f2eef012ed92a00b77576c8-pixel-platform-adventure.gif",
+        "key": "HoAI26-transition-panels-052d6fa0-112d-4a74-a6bb-310fb041eccb"
+      },
+      {
+        "text": "**Add a treasure** for your character to find.",
+        "imageUrl": "https://images.code.org/fd02bdfa33bd3b2efa83eadea238ab10-pixel-platform-find-treasure.gif",
+        "key": "HoAI26-transition-panels-2a13669b-02bb-4535-8749-8a0922b189b7"
+      },
+      {
+        "text": "**Bring back your second character.**\n\nChoose what happens when they meet.",
+        "imageUrl": "https://images.code.org/4d44a7c864c1671d8c62382532993b23-pixel-platform-meet-character.gif",
+        "key": "HoAI26-transition-panels-c2b14162-a595-41cb-a5d8-7ab5fed6a241"
+      },
+      {
+        "text": "**Link your story to your game.**\n\nMake your scene change from story to platformer after a few seconds.",
+        "imageUrl": "https://images.code.org/c9bfbf935fff1884c67977a2d2bd58ba-pixel-platform-link-scenes (1).gif",
+        "key": "HoAI26-transition-panels-847e3bb1-bd18-458b-adb8-5769d419f4dd"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-14T19:10:24.111+00:00\",\"changed\":[\"cloned from \\\"HoAI26-training-data-animations\\\"\"],\"cloned_from\":\"HoAI26-training-data-animations\"},{\"changed_at\":\"2026-10-14 19:16:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 19:16:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 19:27:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
