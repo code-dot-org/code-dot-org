@@ -370,6 +370,8 @@ $editor-strip-height: 41px;
   border-top: none;
 }
 
+// Every cell names its row: auto-placement would otherwise start a new row
+// for a cell that comes after one in a later column.
 .editorStripTitle {
   grid-column: 2;
   grid-row: 1;
@@ -392,8 +394,8 @@ $editor-strip-height: 41px;
   padding: 0 8px;
 }
 
-// Every cell names its row: auto-placement would otherwise start a new row
-// for a cell that comes after one in a later column.
+// The cell at the bar's start: the undo pair, or with ?editors=stripleft
+// the switch.
 .editorStripStart {
   grid-column: 1;
   grid-row: 1;
