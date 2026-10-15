@@ -109,7 +109,7 @@ describe('useProgress', () => {
     title: 'Try',
     kind: 'level',
     level: 'sandbox',
-    levelProperties: {id: 42},
+    levelProperties: {id: 42, appName: 'weblab2'},
   } as Step;
   const project: Step = {...sandbox, id: 'project'} as Step;
   const quiz: Step = {
@@ -212,9 +212,9 @@ describe('useProgress', () => {
     act(() => result.current.completeStep(project, 500));
 
     expect(reportLevelStep.mock.calls).toEqual([
-      [42, TestResults.LEVEL_STARTED, 0],
-      [42, TestResults.LEVEL_STARTED, 2000],
-      [42, TestResults.FREE_PLAY, 500],
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 0],
+      [42, 'weblab2', TestResults.LEVEL_STARTED, 2000],
+      [42, 'weblab2', TestResults.ALL_PASS, 500],
     ]);
     expect(store.saveStep).not.toHaveBeenCalled();
     expect(result.current.statusMap.intro).toBe('complete');

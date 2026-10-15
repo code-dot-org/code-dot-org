@@ -66,8 +66,8 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const reportLevelStep = useCallback(
-    (levelId: number, result: number, timeMs: number) =>
-      dispatch(sendAdaptiveStepReport(levelId, result, timeMs)),
+    (levelId: number, appType: string, result: number, timeMs: number) =>
+      dispatch(sendAdaptiveStepReport(levelId, appType, result, timeMs)),
     [dispatch]
   );
   const {progress, statusMap, ...actions} = useProgress(pathway, progressKey, {
