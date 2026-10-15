@@ -1,6 +1,5 @@
 /* React component to display a statement about our model. */
-import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -56,7 +55,7 @@ const Statement = ({
           >
             <div className={styles.deleteCircle} />
             <div className={styles.deleteX}>
-              <FontAwesomeIcon icon={faTimesCircle} />
+              <FontAwesomeV6Icon iconName="circle-xmark" iconStyle="solid" />
             </div>
           </div>
         )}
@@ -90,7 +89,10 @@ const Statement = ({
                   >
                     <div className={styles.deleteCircle} />
                     <div className={styles.deleteX}>
-                      <FontAwesomeIcon icon={faTimesCircle} />
+                      <FontAwesomeV6Icon
+                        iconName="circle-xmark"
+                        iconStyle="solid"
+                      />
                     </div>
                   </div>
                 )}

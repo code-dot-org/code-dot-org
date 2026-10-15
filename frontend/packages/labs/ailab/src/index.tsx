@@ -8,8 +8,11 @@ import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
 import {invalidatePendingDatasetLoads} from './datasetLoad';
-import type {Dataset} from './datasetManifest';
-import {getAvailableDatasets, getDatasets} from './datasetManifest';
+import {
+  type Dataset,
+  getAvailableDatasets,
+  getDatasets,
+} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {loadDataset} from './loadDataset';

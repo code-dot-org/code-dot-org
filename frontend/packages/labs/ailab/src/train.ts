@@ -7,8 +7,9 @@ import {buildOptionNumberKey} from './helpers/columnDetails';
 import {splitRowIndices} from './helpers/trainingSplit';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
-import type {RootState, TrainingResults} from './redux';
 import {
+  type RootState,
+  type TrainingResults,
   getTrainingResults,
   restoreTrainingResults,
   setFeatureNumberKey,
