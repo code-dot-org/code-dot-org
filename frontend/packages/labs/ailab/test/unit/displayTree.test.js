@@ -1,6 +1,7 @@
 import {
   buildDisplayTree,
   getChildNodeId,
+  getDisplayTreePath,
   thresholdText,
 } from '../../src/helpers/displayTree';
 import {getDisplayTree} from '../../src/selectors/visualizationSelectors';
@@ -166,6 +167,38 @@ describe('buildDisplayTree', () => {
         threshold: 52.5,
         child: {type: 'answer', prediction: 90},
       },
+    ]);
+  });
+});
+
+describe('getDisplayTreePath', () => {
+  const answer = prediction => ({type: 'answer', prediction});
+  const inner = {
+    type: 'question',
+    column: 'Legs',
+    branches: [
+      {kind: 'values', values: ['0'], child: answer('Fish')},
+      {kind: 'values', values: ['2'], child: answer('Bird')},
+    ],
+  };
+  const root = {
+    type: 'question',
+    column: 'Legs',
+    branches: [
+      {kind: 'values', values: ['4'], child: answer('Mammal')},
+      {kind: 'values', values: ['0', '2'], child: inner},
+    ],
+  };
+
+  test('the root is a path of one step, with no branch', () => {
+    expect(getDisplayTreePath(root, '0')).toEqual([{id: '0', node: root}]);
+  });
+
+  test('each step names the branch taken into it', () => {
+    expect(getDisplayTreePath(root, '0.1.0')).toEqual([
+      {id: '0', node: root},
+      {id: '0.1', node: inner, branch: root.branches[1]},
+      {id: '0.1.0', node: answer('Fish'), branch: inner.branches[0]},
     ]);
   });
 });

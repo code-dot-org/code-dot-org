@@ -53,6 +53,34 @@ export function getChildNodeId(parentId: string, branchIndex: number): string {
   return `${parentId}.${branchIndex}`;
 }
 
+export interface DisplayTreePathStep {
+  id: string;
+  node: DisplayTreeNode;
+  // The branch taken into this node.
+  branch?: DisplayTreeBranch;
+}
+
+export function getDisplayTreePath(
+  root: DisplayTreeNode,
+  nodeId: string
+): DisplayTreePathStep[] {
+  const path: DisplayTreePathStep[] = [{id: DISPLAY_TREE_ROOT_ID, node: root}];
+  nodeId
+    .split('.')
+    .slice(1)
+    .forEach(index => {
+      const parent = path[path.length - 1];
+      const branchIndex = Number(index);
+      const branch = (parent.node as DisplayTreeQuestion).branches[branchIndex];
+      path.push({
+        id: getChildNodeId(parent.id, branchIndex),
+        node: branch.child,
+        branch,
+      });
+    });
+  return path;
+}
+
 export function formatNumber(value: number): string {
   return String(Number(value.toFixed(2)));
 }
