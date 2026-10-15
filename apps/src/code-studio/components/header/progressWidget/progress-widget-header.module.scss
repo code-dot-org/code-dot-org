@@ -26,3 +26,8 @@
   min-width: 0;
   margin: 0 5px;
 }
+
+// legacy.scss turns header links white; a bubble's icon takes the bubble's ink.
+:global(.header-wrapper .header) .widget a:is(:link, :visited) {
+  color: var(--ink);
+}
