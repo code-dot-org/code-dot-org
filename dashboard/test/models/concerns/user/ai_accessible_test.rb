@@ -420,5 +420,13 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       allow(user).to receive(:teachers).and_return([qualified_teacher])
       _can_use_lesson_deep_dive?.must_equal false
     end
+
+    it 'returns false for a student in an enabled section when disabled via DCDO' do
+      allow(DCDO).to receive(:get).with('lesson-deep-dive-enabled', true).and_return(false)
+      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+      allow(user).to receive(:sections_as_student).and_return([enabled_section])
+      _can_use_lesson_deep_dive?.must_equal false
+    end
   end
 end
