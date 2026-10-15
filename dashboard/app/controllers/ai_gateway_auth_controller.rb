@@ -1,5 +1,4 @@
 require 'jwt'
-require 'cdo/secrets'
 require 'securerandom' unless defined?(SecureRandom)
 
 class AiGatewayAuthController < ApplicationController
@@ -24,8 +23,13 @@ class AiGatewayAuthController < ApplicationController
   TURNSTILE_ENFORCEMENT_MODES = %w[disabled monitor enforce].freeze
   TURNSTILE_ENFORCEMENT_MODE_DEFAULT = 'disabled'.freeze
 
+  # Temporary rollout flag; when every environment runs with it on, remove it and the legacy shared key.
+  ENVIRONMENT_SIGNING_KEY_DCDO_KEY = 'ai-gateway-environment-signing-key'.freeze
+  SIGNING_KEY_ENVIRONMENT = 'environment_key'.freeze
+  SIGNING_KEY_LEGACY_SHARED = 'legacy_shared_key'.freeze
+
   rescue_from CanCan::AccessDenied do
-    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
+    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out', signingKey: signing_key}
   end
 
   # POST /ai_gateway/access_token
@@ -35,7 +39,7 @@ class AiGatewayAuthController < ApplicationController
     aichat_context = params[:aichatContext]
 
     unless current_user.can_access_aichat_chat_completion?(aichat_context[:clientType], aichat_context[:currentLevelId])
-      return render status: :forbidden, json: {user_type: current_user.user_type}
+      return render status: :forbidden, json: {user_type: current_user.user_type, signingKey: signing_key}
     end
 
     # The gateway serves Gemini for generation (see shouldUseAiGateway), and the
@@ -43,14 +47,19 @@ class AiGatewayAuthController < ApplicationController
     # be replayed against another. Refuse to mint at all when Gemini is blocked
     # rather than trusting a client-supplied model id we cannot enforce later.
     if current_user.us_only_aichat_models_disabled?
-      return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
+      return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, signingKey: signing_key}
     end
 
     # Resolve the Turnstile mode once. Both the claim and the response field
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
-    signing_key, signing_headers = jwt_signing_key_and_headers
+    begin
+      private_key, jwt_headers = jwt_private_key_and_headers
+    rescue => exception
+      Observability::Errors.report(exception, error_message: 'AI Gateway signing key could not be loaded', context: {signing_key: signing_key, rack_env: CDO.rack_env.to_s})
+      return render status: :internal_server_error, json: {error: 'AI Gateway signing key unavailable', signingKey: signing_key}
+    end
 
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
@@ -75,24 +84,25 @@ class AiGatewayAuthController < ApplicationController
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
       },
-      signing_key,
+      private_key,
       'RS256',
-      signing_headers
+      jwt_headers
     )
-    render json: {token: token, turnstileEnforcementMode: enforcement_mode}
+    render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key}
   end
 
-  # Until this environment has its own key pair, signs with the shared key and no kid.
-  private def jwt_signing_key_and_headers
-    key = CDO.ai_gateway_jwt_auth_key
-    return shared_jwt_signing_key_and_headers if key.blank?
-    [OpenSSL::PKey::RSA.new(key, CDO.ai_gateway_jwt_auth_key_passphrase), {kid: CDO.rack_env.to_s}]
-  rescue Cdo::Secrets::NOT_FOUND
-    shared_jwt_signing_key_and_headers
+  # Read once per request, so the token and the signingKey response field always agree.
+  private def signing_key
+    @signing_key ||= DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true ? SIGNING_KEY_ENVIRONMENT : SIGNING_KEY_LEGACY_SHARED
   end
 
-  private def shared_jwt_signing_key_and_headers
-    [OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE), {}]
+  # The gateway verifies a token with a kid only against that environment's public key.
+  private def jwt_private_key_and_headers
+    if signing_key == SIGNING_KEY_ENVIRONMENT
+      [OpenSSL::PKey::RSA.new(CDO.ai_gateway_jwt_auth_key, CDO.ai_gateway_jwt_auth_key_passphrase), {kid: CDO.rack_env.to_s}]
+    else
+      [OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE), {}]
+    end
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded

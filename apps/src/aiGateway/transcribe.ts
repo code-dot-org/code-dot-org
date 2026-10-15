@@ -14,6 +14,12 @@ import {
   type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
+import {
+  recordGatewayRequestError,
+  recordGatewayRequestOk,
+  recordTokenNotIssued,
+  type SigningKey,
+} from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
   fetchTurnstileToken,
@@ -35,10 +41,18 @@ async function transcribeThroughGateway(
 
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
+    // Undefined until Rails issues a token; failures before that are not gateway requests.
+    let signingKey: SigningKey | undefined;
+    let outcomeRecorded = false;
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const access = await fetchAccessToken().catch(async (error: unknown) => {
+        await recordTokenNotIssued(error);
+        throw error;
+      });
+      signingKey = access.signingKey;
+      const {token, turnstileEnforcementMode} = access;
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );
@@ -63,6 +77,8 @@ async function transcribeThroughGateway(
           ...turnstileHeaders(turnstileToken),
         }
       );
+      recordGatewayRequestOk(signingKey);
+      outcomeRecorded = true;
 
       const rawResponse = await response.json();
       const parseResult =
@@ -88,6 +104,9 @@ async function transcribeThroughGateway(
         warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
       } as unknown as TranscriptionResult;
     } catch (error) {
+      if (!outcomeRecorded && signingKey !== undefined) {
+        await recordGatewayRequestError(signingKey, error);
+      }
       if (!schemaErrorReported) {
         await reportGatewayError(
           error,

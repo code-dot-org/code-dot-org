@@ -2,6 +2,7 @@ import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
 import HttpClient from '../util/HttpClient';
 
+import {parseSigningKey, type SigningKey} from './requestMetric';
 import {
   parseTurnstileEnforcementMode,
   type TurnstileEnforcementMode,
@@ -18,6 +19,8 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
+  /** The key Rails signed `token` with, chosen by a DCDO flag during the rollout. */
+  signingKey: SigningKey;
 }
 
 // Use the provided AichatContext or fall back to the default context.
@@ -38,12 +41,14 @@ export async function fetchAccessToken(
   const value = (await response.json()) as {
     token: string;
     turnstileEnforcementMode?: unknown;
+    signingKey?: unknown;
   };
   return {
     token: value.token,
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
       value.turnstileEnforcementMode
     ),
+    signingKey: parseSigningKey(value.signingKey),
   };
 }
 
