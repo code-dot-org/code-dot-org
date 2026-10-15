@@ -11,5 +11,5 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "public/datasets-manifest.json", "i18n/mlPlayground.json"]
+  "include": ["src"]
 }

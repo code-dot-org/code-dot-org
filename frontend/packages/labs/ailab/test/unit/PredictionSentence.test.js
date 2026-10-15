@@ -10,20 +10,18 @@ import PredictionSentence from '../../src/UIComponents/PredictionSentence';
 let sentenceWidth;
 const resizeCallbacks = new Set();
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    constructor(callback) {
-      this.callback = callback;
-    }
-    observe() {
-      resizeCallbacks.add(this.callback);
-    }
-    disconnect() {
-      resizeCallbacks.delete(this.callback);
-    }
+// Replaces the inert setup-file stub: these tests drive the resize callbacks.
+global.ResizeObserver = class {
+  constructor(callback) {
+    this.callback = callback;
   }
-);
+  observe() {
+    resizeCallbacks.add(this.callback);
+  }
+  disconnect() {
+    resizeCallbacks.delete(this.callback);
+  }
+};
 
 function renderSentence(props) {
   return render(

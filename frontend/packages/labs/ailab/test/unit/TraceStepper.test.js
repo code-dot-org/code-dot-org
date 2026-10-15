@@ -84,7 +84,8 @@ describe('TraceStepper', () => {
   });
   afterEach(() => {
     vi.useRealTimers();
-    vi.unstubAllGlobals();
+    // jsdom has no matchMedia, so the reduced-motion cases add one.
+    delete window.matchMedia;
     I18n.reset();
   });
 
@@ -192,9 +193,7 @@ describe('TraceStepper', () => {
 
   describe('with reduced motion', () => {
     beforeEach(() => {
-      vi.stubGlobal('matchMedia', query => ({
-        matches: query.includes('reduce'),
-      }));
+      window.matchMedia = query => ({matches: query.includes('reduce')});
     });
 
     it('shows the whole path at once', () => {

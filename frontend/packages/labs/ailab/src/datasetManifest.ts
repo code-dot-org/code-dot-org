@@ -1,5 +1,4 @@
-import datasetsManifest from '../public/datasets-manifest.json';
-
+import datasetsManifest from './datasets-manifest.json';
 import I18n from './i18n';
 
 export interface Dataset {

@@ -43,13 +43,6 @@ declare module 'ml-knn' {
   }
 }
 
-declare module 'query-string' {
-  export function parse(
-    query: string
-  ): Record<string, string | string[] | null | undefined>;
-  export function stringify(obj: Record<string, unknown>): string;
-}
-
 declare module 'messageformat' {
   export default class MessageFormat {
     constructor(locale: string);
