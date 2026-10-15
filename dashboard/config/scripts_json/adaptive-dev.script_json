@@ -4,7 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "simple_progress": true,
+      "simple_progress_image": "/blockly/media/hoai2026/logo.png"
     },
     "new_name": null,
     "family_name": null,

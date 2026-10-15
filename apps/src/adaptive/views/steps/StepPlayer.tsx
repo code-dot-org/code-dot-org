@@ -1,7 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
+import {setSimpleHeaderLabel} from '@cdo/apps/code-studio/headerRedux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
@@ -41,6 +44,14 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   const [index, setIndex] = useState(0);
   const steps = checkpoint.steps;
   const step = steps[index];
+  // The level header names the checkpoint beside the unit name while it plays.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setSimpleHeaderLabel(checkpoint.title));
+    return () => {
+      dispatch(setSimpleHeaderLabel(undefined));
+    };
+  }, [dispatch, checkpoint.title]);
   const last = index === steps.length - 1;
   const continueLabel = last ? finishLabel : 'Continue';
   const advance = () => (last ? onFinish() : setIndex(index + 1));
