@@ -4,16 +4,10 @@ import {Button, Typography} from '@mui/material';
 import React, {useId, useState} from 'react';
 
 import {getDisplayTreePath, type DisplayTreeNode} from '../helpers/displayTree';
-import {
-  displayNodeLabel,
-  displayValue,
-} from '../helpers/displayTreeNodeContent';
+import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {
-  getDisplayTreeRows,
-  getPredictionTrace,
-} from '../selectors/visualizationSelectors';
+import {getDisplayTreeRows} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
 import AccuracyCheckRowsPanel from './AccuracyCheckRowsPanel';
@@ -38,16 +32,11 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   const rows = useAppSelector(state =>
     getDisplayTreeRows(state, project, trainedModel)
   )(nodeId);
-  const trace = useAppSelector(state =>
-    getPredictionTrace(state, project, trainedModel),
-  );
   const [showAllColumns, setShowAllColumns] = useState(false);
 
   const path = getDisplayTreePath(tree, nodeId);
   const {node} = path[path.length - 1];
   const nodeLabel = displayNodeLabel(node, datasetId);
-  const examplePrediction =
-    trace?.path.includes(nodeId) && displayValue(trace.prediction, datasetId);
   const isAnswer = node.type === 'answer';
   const columnProps = {
     emphasizedColumn: isAnswer ? project.labelColumn : node.column,
@@ -74,12 +63,10 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
         <NodePath path={path} nodeLabel={nodeLabel} datasetId={datasetId} />
       )}
       <div className={styles.content}>
-        {examplePrediction && (
-          <NodeExample
-            prediction={examplePrediction}
-            emphasizedColumn={columnProps.emphasizedColumn}
-          />
-        )}
+        <NodeExample
+          nodeId={nodeId}
+          emphasizedColumn={columnProps.emphasizedColumn}
+        />
         <div className={styles.rowsTabs}>
           <Tabs
             name="ailab-node-rows"

@@ -3,9 +3,12 @@ import classNames from 'classnames';
 import {useId} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getPredictionTrace} from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
 
 import CellText from './CellText';
 
@@ -13,15 +16,25 @@ import tableStyles from './dataTable.module.scss';
 import styles from './nodeExample.module.scss';
 
 interface NodeExampleProps {
-  prediction: string;
+  nodeId: string;
   emphasizedColumn?: string;
 }
 
-const NodeExample = ({prediction, emphasizedColumn}: NodeExampleProps) => {
+const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
   const titleId = useId();
   const {project} = useProject();
+  const {trainedModel} = useTrainingData();
+  const trace = useAppSelector(state =>
+    getPredictionTrace(state, project, trainedModel),
+  );
   const testData = useAppSelector(state => state.predictionTestData);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+
+  if (!trace?.path.includes(nodeId)) {
+    return null;
+  }
+
+  const prediction = displayValue(trace.prediction, datasetId);
   const features = project.selectedFeatures;
   const labelColumn = project.labelColumn || 'unknown';
 
