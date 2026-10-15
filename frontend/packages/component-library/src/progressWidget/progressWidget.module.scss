@@ -59,6 +59,13 @@ $narrow: 991.98px;
   border-inline: 1px solid var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
 
+  // Without an action the bubbles end the widget and take its corners.
+  &:last-child {
+    border-inline-end: 0;
+    border-start-end-radius: calc(var(--shape-md) - 1px);
+    border-end-end-radius: calc(var(--shape-md) - 1px);
+  }
+
   // Only when some bubble is current, so the row is never left empty.
   @media (max-width: $narrow) {
     &:has(> [aria-current]) > :not([aria-current]) {
