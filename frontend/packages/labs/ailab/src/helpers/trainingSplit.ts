@@ -1,5 +1,4 @@
 export interface RowSplit {
-  // Dataset row numbers, in dataset order.
   trained: number[];
   accuracyCheck: number[];
 }

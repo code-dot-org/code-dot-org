@@ -32,7 +32,7 @@ export const NO_ROWS: DisplayTreeNodeCounts = {correct: 0, incorrect: 0};
 
 export type DisplayTreeCountsLookup = (nodeId: string) => DisplayTreeNodeCounts;
 
-// Dataset row numbers of the rows that reach a node. Accuracy check rows are split by grade.
+// Dataset row numbers of the rows that reach a node.
 export interface DisplayTreeNodeRows {
   correct: number[];
   incorrect: number[];
