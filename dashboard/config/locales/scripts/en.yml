@@ -27143,7 +27143,7 @@ en:
               name: The Final Verdict
           lesson_groups: {}
           name: 6-12-aid-thinking-critically-about-ai-2026
-          title: "[DEV] AID Thinking Critically About AI"
+          title: "[DEV] AI Discoveries SC0: Thinking Critically About AI"
           description_audience: ''
           description_short: ''
           description: ''
@@ -31064,6 +31064,48 @@ en:
           lesson_groups: {}
           name: hoai2026-adaptive
           title: Hour of AI 2026 - Adaptive Weblab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-aid-data-makes-ai-2026:
+          lessons:
+            lesson-1:
+              name: Sorting by Rules
+            lesson-2:
+              name: How Does the Model Decide?
+            lesson-3:
+              name: Instructions vs. Experience
+            lesson-4:
+              name: Learning From Examples
+            lesson-5:
+              name: Curating Your Own Dataset
+            lesson-6:
+              name: Balanced vs. Unbalanced Data
+            lesson-7:
+              name: How to Train Your Decision Tree
+            lesson-8:
+              name: Testing and Tracing Predictions
+            lesson-9:
+              name: Refining the Model
+            lesson-10:
+              name: Accuracy ≠ Fairness
+            lesson-11:
+              name: Tracing Bias to Outcome
+            lesson-12:
+              name: Data Makes AI Unit Project
+          lesson_groups: {}
+          name: 6-12-aid-data-makes-ai-2026
+          title: "[DEV] AI Discoveries SC1: Data Makes AI"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-aid-ai-in-your-program-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-aid-ai-in-your-program-2026
+          title: "[DEV] AI Discoveries SC2: AI in Your Program"
           description_audience: ''
           description_short: ''
           description: ''
