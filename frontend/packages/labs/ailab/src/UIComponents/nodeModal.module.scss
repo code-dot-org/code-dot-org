@@ -42,7 +42,7 @@
 .tabRow {
   @include mixins.modal-tabs;
 
-  // Primary tabs draw the selected tab in these.
+  // Primary tabs read these tokens for the selected tab.
   --text-neutral-primary: var(--text-selected-primary-inverse);
   --borders-brand-teal-primary: var(--border-selected-primary);
 

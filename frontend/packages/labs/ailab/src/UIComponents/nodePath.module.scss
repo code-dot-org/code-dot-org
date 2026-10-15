@@ -13,7 +13,7 @@ $step-number-size: 18px;
   border-bottom: 1px solid var(--border-neutral-primary);
 }
 
-// Read for its steps' widths, never seen.
+// A hidden copy, measured to decide which steps collapse.
 .path.measure {
   position: fixed;
   top: 0;

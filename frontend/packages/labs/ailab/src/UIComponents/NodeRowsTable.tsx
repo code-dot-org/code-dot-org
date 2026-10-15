@@ -13,10 +13,10 @@ import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
-  // Indices into the dataset.
+  // Dataset row numbers.
   rows: number[];
   emphasizedColumn?: string;
-  // Otherwise only the model's features and label.
+  // When false, only the model's features and label.
   allColumns: boolean;
   emptyText: string;
 }

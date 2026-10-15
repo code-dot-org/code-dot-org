@@ -12,7 +12,7 @@ import styles from './nodePath.module.scss';
 
 interface Step {
   content: ReactNode;
-  // A collapsed step's accessible name.
+  // The step as plain text, read out when it is collapsed.
   text: string;
 }
 
@@ -53,7 +53,7 @@ interface StepContentProps {
   step: Step;
   index: number;
   collapsed: boolean;
-  // The off-screen copy has no button or tooltip.
+  // The hidden copy has no button or tooltip.
   measuring?: boolean;
 }
 
@@ -105,8 +105,8 @@ interface NodePathProps {
   datasetId: string;
 }
 
-// Steps that don't fit collapse to their numbers, earliest first; the
-// current step keeps its text and truncates once it stands alone.
+// When the steps don't fit, the earliest collapse to just their numbers.
+// The current step always keeps its text, truncated if it has to be.
 const NodePath = ({path, nodeLabel, datasetId}: NodePathProps) => {
   const listRef = useRef<HTMLOListElement>(null);
   const measureRef = useRef<HTMLOListElement>(null);
@@ -118,7 +118,7 @@ const NodePath = ({path, nodeLabel, datasetId}: NodePathProps) => {
     const list = listRef.current!;
     const measure = measureRef.current!;
     const fit = () => {
-      // The copy holds every step in full, then every step collapsed.
+      // The hidden copy lists every step in full, then every step collapsed.
       const widths = [...measure.children].map(
         item => (item as HTMLElement).offsetWidth,
       );

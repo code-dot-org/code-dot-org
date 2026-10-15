@@ -115,7 +115,7 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   const nodeLabel = displayNodeLabel(node, datasetId);
   const isAnswer = node.type === 'answer';
   const emphasizedColumn = isAnswer ? project.labelColumn : node.column;
-  const testRows = isAnswer
+  const accuracyCheckRows = isAnswer
     ? rows[grade]
     : [...rows.correct, ...rows.incorrect].sort((a, b) => a - b);
 
@@ -142,13 +142,13 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
           <Tabs
             name="ailab-node-rows"
             size="s"
-            defaultSelectedTabValue="test"
+            defaultSelectedTabValue="accuracyCheck"
             onChange={() => {}}
             tabsContainerClassName={styles.tabRow}
             tabPanelsContainerClassName={styles.panels}
             tabs={[
               {
-                value: 'test',
+                value: 'accuracyCheck',
                 text: 'Test rows',
                 tabContent: (
                   <RowsPanel
@@ -158,7 +158,7 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
                         reached this step.
                       </>
                     }
-                    rows={testRows}
+                    rows={accuracyCheckRows}
                     emphasizedColumn={emphasizedColumn}
                     {...columnsToggle}
                     emptyText={

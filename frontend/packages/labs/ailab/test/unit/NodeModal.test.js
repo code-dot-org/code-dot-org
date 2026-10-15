@@ -142,7 +142,7 @@ describe('NodeModal', () => {
     expect(steps[0].hasAttribute('aria-current')).toBe(false);
   });
 
-  it("splits an answer's test rows by whether the AI got them right", () => {
+  it("splits an answer's accuracy check rows by whether the AI got them right", () => {
     fireEvent.click(answer('dog'));
 
     expect(shownRows()).toEqual([['10', '4', 'dog']]);

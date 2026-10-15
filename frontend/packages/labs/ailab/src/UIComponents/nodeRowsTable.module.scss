@@ -9,10 +9,10 @@ $min-visible-rows: 2;
   // A header and ten body rows, as in Figma.
   flex: 0 1 ($visible-rows + 1) * mixins.$data-table-row-height;
   flex-direction: column;
-  // Kept in view on a short screen.
+  // At least a header and two rows, even on a short screen.
   min-height: ($min-visible-rows + 1) * mixins.$data-table-row-height;
 
-  // Above the sticky header cells, which would otherwise cover the edge.
+  // Drawn on top, so the sticky header cells can't cover the border.
   &::after {
     content: '';
     position: absolute;
@@ -29,7 +29,7 @@ $min-visible-rows: 2;
   overflow: auto;
 }
 
-// Fits its numbers, so spare width goes to the data columns.
+// As narrow as its numbers allow, so spare width goes to the data columns.
 .indexColumn {
   width: 1px;
 }
