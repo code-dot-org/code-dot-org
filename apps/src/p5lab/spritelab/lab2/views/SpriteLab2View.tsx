@@ -495,6 +495,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       picturesInEditor ? ['Pictures', 'Code', 'World'] : ['Code', 'World'],
     [picturesInEditor]
   );
+  // pictures.open: the sheet's Escape and the scene tabs close it; as an
+  // editor it stays open while its tab is.
   const setPicturesOpen = pictures.setOpen;
   useEffect(() => {
     if (picturesInEditor) {
@@ -507,7 +509,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
   // ?preview-bar=true: a Preview bar across the stage column's top.
-  const previewBar = useMemo(() => queryParams('preview-bar') === 'true', []);
+  const previewBarShown = useMemo(
+    () => queryParams('preview-bar') === 'true',
+    []
+  );
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
@@ -1789,10 +1794,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // first one; a level that is only Play has no Stop.
   const [lastEditTab, setLastEditTab] = useState<Tab | null>(null);
   useEffect(() => {
-    if (activeTab === 'Code' || activeTab === 'World') {
+    if (
+      activeTab === 'Code' ||
+      activeTab === 'World' ||
+      (picturesInEditor && activeTab === 'Images')
+    ) {
       setLastEditTab(activeTab);
     }
-  }, [activeTab]);
+  }, [activeTab, picturesInEditor]);
   const stopTab =
     lastEditTab && tabs.includes(lastEditTab)
       ? lastEditTab
@@ -2075,13 +2084,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 className={classNames(
                   moduleStyles.codeTabWrapper,
                   moduleStyles.picturesEditor,
-                  editorsShown && moduleStyles.underEditorStrip
+                  editorsShown && moduleStyles.underEditorStrip,
+                  activeTab !== 'Images' && moduleStyles.picturesEditorParked
                 )}
-                style={
-                  activeTab === 'Images'
-                    ? clearOfPreview
-                    : {left: '110%', right: 'auto', width: '100%'}
-                }
+                style={activeTab === 'Images' ? clearOfPreview : undefined}
               >
                 <GenerateImagePane {...imagePaneProps} />
               </div>
@@ -2126,7 +2132,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               platformScene={playingPlatformer}
               mode={playspaceMode}
               columnHeader={
-                previewBar ? <EditorStrip title="Preview" /> : undefined
+                previewBarShown ? <EditorStrip title="Preview" /> : undefined
               }
               onPreviewWidth={setPreviewWidth}
               side={previewSide}

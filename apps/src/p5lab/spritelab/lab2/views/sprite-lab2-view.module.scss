@@ -383,6 +383,7 @@ $editor-strip-height: 41px;
   position: absolute;
   top: 0;
   height: $editor-strip-height;
+  // The overlay passes pointer events through; the bar takes its own.
   pointer-events: auto;
 }
 
@@ -433,6 +434,14 @@ $editor-strip-height: 41px;
 // After .codeTabWrapper: its inset shorthand would otherwise win the top.
 .underEditorStrip {
   top: $editor-strip-height;
+}
+
+// After .codeTabWrapper too. ?pictures=editor: the pictures pane off to the
+// right while another editor shows, as a closed sheet waits.
+.picturesEditorParked {
+  left: 110%;
+  right: auto;
+  width: 100%;
 }
 
 .blocklyDiv {
