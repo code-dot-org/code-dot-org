@@ -30,4 +30,22 @@ describe('EditorSwitch', () => {
     expect((code as HTMLButtonElement).disabled).toBe(false);
     expect(code.getAttribute('title')).toBeNull();
   });
+
+  it('offers the editors it is given, in order', () => {
+    render(
+      <EditorSwitch
+        value="Pictures"
+        onChange={jest.fn()}
+        editors={['Pictures', 'Code', 'World']}
+      />
+    );
+    expect(
+      screen.getAllByRole('button').map(b => b.textContent?.trim())
+    ).toEqual(['Pictures', 'Code', 'World']);
+    expect(
+      screen
+        .getByRole('button', {name: 'Pictures'})
+        .getAttribute('aria-pressed')
+    ).toBe('true');
+  });
 });

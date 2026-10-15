@@ -15,4 +15,14 @@ describe('EditorStrip', () => {
     rerender(<EditorStrip editor="World" onChange={onChange} />);
     expect(screen.getByRole('heading', {name: 'World'})).toBeTruthy();
   });
+
+  it('names a bare pane with no switch, and can put the switch first', () => {
+    const {unmount} = render(<EditorStrip title="Preview" />);
+    expect(screen.getByRole('heading', {name: 'Preview'})).toBeTruthy();
+    expect(screen.queryByRole('button')).toBeNull();
+    unmount();
+    render(<EditorStrip editor="Code" onChange={jest.fn()} switchAtStart />);
+    const heading = screen.getByRole('heading', {name: 'Workspace'});
+    expect(heading.parentElement!.firstElementChild).toBe(heading);
+  });
 });

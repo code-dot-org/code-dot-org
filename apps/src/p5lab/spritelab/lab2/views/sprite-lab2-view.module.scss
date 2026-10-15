@@ -49,6 +49,13 @@ $tab-item-height: 34px;
   justify-content: space-between;
 }
 
+// ?pictures=editor: the pictures list as an editor pane, scrolling on its own.
+.picturesEditor {
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
 // ?bar=bottom: the same bar under the workspace, ruled off above instead.
 .tabContainerBottom {
   border-bottom: none;
@@ -359,6 +366,24 @@ $editor-strip-height: 41px;
   display: flex;
   justify-content: end;
   align-items: center;
+}
+
+// ?editors=stripleft: the switch at the bar's start.
+.editorStripStart {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+// ?preview-bar=true: the same bar over the preview's column; the
+// playspace keeps the bar's height clear (COLUMN_HEADER_PX).
+.columnHeader {
+  position: absolute;
+  top: 0;
+  height: $editor-strip-height;
+  pointer-events: auto;
 }
 
 // The Pictures button, the size of a scene tab.

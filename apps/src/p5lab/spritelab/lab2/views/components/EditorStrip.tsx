@@ -6,21 +6,30 @@ import EditorSwitch, {Editor} from './EditorSwitch';
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
 interface EditorStripProps {
-  editor: Editor;
-  onChange: (editor: Editor) => void;
+  /** The open editor; with onChange, the switch shows too. */
+  editor?: Editor;
+  onChange?: (editor: Editor) => void;
+  editors?: Editor[];
   disabledEditors?: Partial<Record<Editor, string>>;
+  /** The name in the middle; the open editor's unless given. */
+  title?: string;
+  /** The switch at the bar's start instead of its end. */
+  switchAtStart?: boolean;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
 }
 
 /**
- * The bar over the editors, as Lab2's panel headers: the open editor's
- * name centered, the Code | World switch at its end.
+ * The bar over a pane, as Lab2's panel headers: the pane's name centered,
+ * and over the editors the Code | World switch at its end.
  */
 const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   editor,
   onChange,
+  editors,
   disabledEditors,
+  title,
+  switchAtStart = false,
   style,
 }) => (
   <div className={moduleStyles.editorStrip} style={style}>
@@ -29,15 +38,24 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       variant="overline2"
       className={moduleStyles.editorStripTitle}
     >
-      {editor === 'World' ? 'World' : 'Workspace'}
+      {title ?? (editor === 'Code' ? 'Workspace' : editor)}
     </MuiTypography>
-    <div className={moduleStyles.editorStripEnd}>
-      <EditorSwitch
-        value={editor}
-        onChange={onChange}
-        disabledEditors={disabledEditors}
-      />
-    </div>
+    {editor && onChange && (
+      <div
+        className={
+          switchAtStart
+            ? moduleStyles.editorStripStart
+            : moduleStyles.editorStripEnd
+        }
+      >
+        <EditorSwitch
+          value={editor}
+          onChange={onChange}
+          editors={editors}
+          disabledEditors={disabledEditors}
+        />
+      </div>
+    )}
   </div>
 );
 

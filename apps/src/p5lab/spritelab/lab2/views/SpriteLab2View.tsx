@@ -465,6 +465,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const editorsShown = tabs.includes('Code') || enabledTabs.includes('World');
   const disabledEditors = useMemo<Partial<Record<Editor, string>>>(
     () => ({
+      ...(picturesOffered ? {} : {Pictures: LOCKED_REASON}),
       ...(tabs.includes('Code') ? {} : {Code: LOCKED_REASON}),
       ...(enabledTabs.includes('World')
         ? {}
@@ -474,7 +475,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               : LOCKED_REASON,
           }),
     }),
-    [tabs, enabledTabs]
+    [tabs, enabledTabs, picturesOffered]
   );
   // ?preview=right puts the preview column at the right.
   const previewSide = useMemo<'left' | 'right'>(
@@ -483,6 +484,30 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // ?bar=bottom: the scene row, with Pictures, under the workspace.
   const barAtBottom = useMemo(() => queryParams('bar') === 'bottom', []);
+  // ?pictures=editor: Pictures leaves the scene row for the switch, a third
+  // editor beside Code and World, its list in the workspace area.
+  const picturesInEditor = useMemo(
+    () => queryParams('pictures') === 'editor',
+    []
+  );
+  const editors = useMemo<Editor[]>(
+    () =>
+      picturesInEditor ? ['Pictures', 'Code', 'World'] : ['Code', 'World'],
+    [picturesInEditor]
+  );
+  const setPicturesOpen = pictures.setOpen;
+  useEffect(() => {
+    if (picturesInEditor) {
+      setPicturesOpen(activeTab === 'Images');
+    }
+  }, [picturesInEditor, activeTab, pictures.open, setPicturesOpen]);
+  // ?editors=stripleft: the switch at the workspace bar's start.
+  const editorsAtStart = useMemo(
+    () => queryParams('editors') === 'stripleft',
+    []
+  );
+  // ?preview-bar=true: a Preview bar across the stage column's top.
+  const previewBar = useMemo(() => queryParams('preview-bar') === 'true', []);
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
@@ -1260,7 +1285,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // A sheet over the editors and the stage: Pictures, or All scenes.
-  const stageCovered = pictures.open || activeTab === 'Scenes';
+  const stageCovered =
+    (pictures.open && !picturesInEditor) || activeTab === 'Scenes';
   // Hidden content stays in the tab order and the accessibility tree:
   // inert while hidden, via refs (React 18's JSX has no inert attribute).
   // worldMounted: the world's wrapper can first render after the last change.
@@ -1655,7 +1681,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
   const handleEditorChange = useCallback(
-    (editor: 'World' | 'Code') => dispatch(setActiveTab(editor)),
+    (editor: Editor) =>
+      dispatch(setActiveTab(editor === 'Pictures' ? 'Images' : editor)),
     [dispatch]
   );
 
@@ -1793,7 +1820,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
       ? 'play'
-      : activeTab === 'Code' || activeTab === 'World' || activeTab === 'Scenes'
+      : activeTab === 'Code' ||
+        activeTab === 'World' ||
+        activeTab === 'Scenes' ||
+        (picturesInEditor && activeTab === 'Images')
       ? 'preview'
       : 'hidden';
 
@@ -1940,28 +1970,30 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   loading={nowPlaying.loading}
                 />
               )}
-              <button
-                type="button"
-                className={classNames(
-                  moduleStyles.picturesTab,
-                  pictures.open && moduleStyles.picturesTabOpen
-                )}
-                disabled={!picturesOffered || activeTab === 'Play'}
-                title={picturesOffered ? undefined : LOCKED_REASON}
-                aria-expanded={pictures.open}
-                aria-controls={PICTURES_DRAWER_ID}
-                onClick={event => {
-                  blurAfterPointerClick(event);
-                  // From All scenes, Pictures takes its place.
-                  if (activeTab === 'Scenes') {
-                    sceneEditing.selectScene(activeScene.id);
-                  }
-                  pictures.setOpen(open => !open);
-                }}
-              >
-                <FontAwesomeV6Icon iconStyle="solid" iconName="images" />
-                Pictures
-              </button>
+              {!picturesInEditor && (
+                <button
+                  type="button"
+                  className={classNames(
+                    moduleStyles.picturesTab,
+                    pictures.open && moduleStyles.picturesTabOpen
+                  )}
+                  disabled={!picturesOffered || activeTab === 'Play'}
+                  title={picturesOffered ? undefined : LOCKED_REASON}
+                  aria-expanded={pictures.open}
+                  aria-controls={PICTURES_DRAWER_ID}
+                  onClick={event => {
+                    blurAfterPointerClick(event);
+                    // From All scenes, Pictures takes its place.
+                    if (activeTab === 'Scenes') {
+                      sceneEditing.selectScene(activeScene.id);
+                    }
+                    pictures.setOpen(open => !open);
+                  }}
+                >
+                  <FontAwesomeV6Icon iconStyle="solid" iconName="images" />
+                  Pictures
+                </button>
+              )}
             </>
           }
           sceneTabs={
@@ -1997,11 +2029,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {WorkspaceAlert}
           <div ref={stageRef} className={moduleStyles.stage}>
             {editorsShown &&
-              (activeTab === 'World' || activeTab === 'Code') && (
+              (activeTab === 'World' ||
+                activeTab === 'Code' ||
+                (picturesInEditor && activeTab === 'Images')) && (
                 <EditorStrip
-                  editor={activeTab}
+                  editor={activeTab === 'Images' ? 'Pictures' : activeTab}
                   onChange={handleEditorChange}
+                  editors={editors}
                   disabledEditors={disabledEditors}
+                  switchAtStart={editorsAtStart}
                   style={clearOfPreview}
                 />
               )}
@@ -2027,6 +2063,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
             {/* Kept mounted like the workspace: inserting the grid is the
           costly part. */}
+            {/* Pictures as an editor: kept mounted, and off to the right
+            rather than clipped while another editor shows, where a pick's
+            dialog can still open inside it. */}
+            {picturesInEditor && pictures.mounted && (
+              <div
+                ref={pictures.sheetRef}
+                id={PICTURES_DRAWER_ID}
+                role="region"
+                aria-label="Pictures"
+                className={classNames(
+                  moduleStyles.codeTabWrapper,
+                  moduleStyles.picturesEditor,
+                  editorsShown && moduleStyles.underEditorStrip
+                )}
+                style={
+                  activeTab === 'Images'
+                    ? clearOfPreview
+                    : {left: '110%', right: 'auto', width: '100%'}
+                }
+              >
+                <GenerateImagePane {...imagePaneProps} />
+              </div>
+            )}
             {worldTabEnabled && worldMounted && (
               <div
                 ref={worldWrapperRef}
@@ -2066,6 +2125,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               boxRef={playspaceRef}
               platformScene={playingPlatformer}
               mode={playspaceMode}
+              columnHeader={
+                previewBar ? <EditorStrip title="Preview" /> : undefined
+              }
               onPreviewWidth={setPreviewWidth}
               side={previewSide}
               controls={
@@ -2118,7 +2180,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
           {/* Kept mounted: remounting loses gallery state. Closed, it waits
           off to the right, where a pick's dialog can still open inside it. */}
-          {pictures.mounted && (
+          {!picturesInEditor && pictures.mounted && (
             <Sheet
               ref={pictures.sheetRef}
               id={PICTURES_DRAWER_ID}

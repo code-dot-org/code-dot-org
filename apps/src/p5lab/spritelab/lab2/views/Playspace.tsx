@@ -56,6 +56,9 @@ const CARD_BORDER_PX = 1;
 const COMPACT_BELOW_PX = 560;
 // The column's two cards' inset from its edges and from each other.
 const CARD_GAP = 12;
+// A header over the column keeps this much of its top clear: the editor
+// strip's height ($editor-strip-height).
+const COLUMN_HEADER_PX = 41;
 // While playing the instructions' card narrows so the game can center.
 const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // The box's slide between its two placements, and the fade of whatever
@@ -186,6 +189,8 @@ interface PlayspaceProps {
   controls?: React.ReactNode;
   // Under the box, which is placed to leave it room.
   playBar?: React.ReactNode;
+  // Across the top of the column in preview; the box is placed under it.
+  columnHeader?: React.ReactNode;
   // Under the bar in preview; the preview shrinks to leave it BELOW_MIN_PX.
   below?: React.ReactNode;
   /** Which edge the preview column sits at; the code keeps the rest. */
@@ -210,6 +215,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   platformScene = false,
   controls,
   playBar,
+  columnHeader,
   below,
   side = 'right',
   onPreviewWidth,
@@ -397,9 +403,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // A taller need shrinks the box, never widens the column, which would
   // reflow the text taller again.
   let columnWidth = share;
+  const topRoom = columnHeader ? COLUMN_HEADER_PX : 0;
   const need = Math.max(BELOW_MIN_PX, belowNeed + 2 * CARD_BORDER_PX);
   const inColumn = playPlacement(
-    size,
+    {w: size.w, h: size.h - topRoom},
     null,
     belowRoomFor(need),
     size.w - columnWidth
@@ -410,7 +417,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     x:
       (side === 'left' ? 0 : size.w - columnWidth) +
       (columnWidth - boxWidth) / 2,
-    y: CARD_GAP,
+    y: topRoom + CARD_GAP,
   };
   // The box pushed under its floor: the instructions move beside it, in a
   // wider column, if that gives the box more.
@@ -418,7 +425,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   if (below && boxWidth < PREVIEW_MIN_PX) {
     const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
     const besideWidth = Math.min(
-      size.h - 2 * CARD_GAP - (playBar ? BAR_ROOM : 0),
+      size.h - topRoom - 2 * CARD_GAP - (playBar ? BAR_ROOM : 0),
       maxColumn - BESIDE_TEXT_MIN_PX - 3 * CARD_GAP
     );
     if (besideWidth > boxWidth && besideWidth >= BESIDE_BOX_MIN_PX) {
@@ -431,7 +438,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       previewPlacement = {
         scale: boxWidth / CANVAS,
         x: side === 'left' ? CARD_GAP : size.w - CARD_GAP - boxWidth,
-        y: CARD_GAP,
+        y: topRoom + CARD_GAP,
       };
     }
   }
@@ -451,7 +458,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const belowCard: React.CSSProperties = beside
     ? {
         left: belowLeft,
-        top: CARD_GAP,
+        top: topRoom + CARD_GAP,
         width: columnWidth - 3 * CARD_GAP - previewBoxSide,
         bottom: CARD_GAP,
       }
@@ -701,6 +708,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {mode === 'play' && controls && (
         <div className={moduleStyles.playControls}>{controls}</div>
+      )}
+      {mode === 'preview' && columnHeader && measured && (
+        <div
+          className={moduleStyles.columnHeader}
+          style={{left: columnLeft, width: columnWidth}}
+        >
+          {columnHeader}
+        </div>
       )}
       {playBar && (
         <div

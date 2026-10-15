@@ -6,11 +6,13 @@ import {blurAfterPointerClick} from '../blurAfterPointerClick';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
-export type Editor = 'World' | 'Code';
+export type Editor = 'Pictures' | 'World' | 'Code';
 
 interface EditorSwitchProps {
   value: Editor;
   onChange: (editor: Editor, event: React.MouseEvent<HTMLElement>) => void;
+  /** The editors on offer, in order; Code and World unless told otherwise. */
+  editors?: Editor[];
   /** Stacked, to fit within the editors' left strip. */
   vertical?: boolean;
   /** Editors not on offer, each with its reason on hover: shown disabled,
@@ -18,18 +20,18 @@ interface EditorSwitchProps {
   disabledEditors?: Partial<Record<Editor, string>>;
 }
 
-const EDITORS: {editor: Editor; icon: string}[] = [
-  {editor: 'Code', icon: 'code'},
-  {editor: 'World', icon: 'table-cells'},
-];
+const DEFAULT_EDITORS: Editor[] = ['Code', 'World'];
+const ICONS: Record<Editor, string> = {
+  Pictures: 'images',
+  Code: 'code',
+  World: 'table-cells',
+};
 
-/**
- * Which of the scene's two editors fills the main area: its world or its
- * code.
- */
+/** Which of the scene's editors fills the main area. */
 const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   value,
   onChange,
+  editors = DEFAULT_EDITORS,
   vertical = false,
   disabledEditors = {},
 }) => (
@@ -41,7 +43,7 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
     role="group"
     aria-label="Edit"
   >
-    {EDITORS.map(({editor, icon}) => (
+    {editors.map(editor => (
       <button
         key={editor}
         type="button"
@@ -57,7 +59,7 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
           onChange(editor, event);
         }}
       >
-        <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+        <FontAwesomeV6Icon iconName={ICONS[editor]} iconStyle="solid" />
         {editor}
       </button>
     ))}
