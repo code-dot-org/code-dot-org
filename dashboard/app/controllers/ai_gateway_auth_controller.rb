@@ -54,11 +54,18 @@ class AiGatewayAuthController < ApplicationController
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
-    # Read once, so the key the token is signed with and the signingKey field below agree.
-    signing_key = DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true ? SIGNING_KEY_ENVIRONMENT : SIGNING_KEY_LEGACY_SHARED
+    use_environment_key = DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true
 
     begin
-      private_key, jwt_headers = jwt_private_key_and_headers(signing_key)
+      if use_environment_key
+        signing_key = SIGNING_KEY_ENVIRONMENT
+        private_key = OpenSSL::PKey::RSA.new(CDO.ai_gateway_jwt_auth_key, CDO.ai_gateway_jwt_auth_key_passphrase)
+        jwt_headers = {kid: CDO.rack_env.to_s}
+      else
+        signing_key = SIGNING_KEY_LEGACY_SHARED
+        private_key = OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE)
+        jwt_headers = {}
+      end
     rescue => exception
       Observability::Errors.report(exception, error_message: 'AI Gateway signing key could not be loaded', context: {signing_key: signing_key, rack_env: CDO.rack_env.to_s})
       return render status: :internal_server_error, json: {error: 'AI Gateway signing key unavailable', signingKey: signing_key}
@@ -92,15 +99,6 @@ class AiGatewayAuthController < ApplicationController
       jwt_headers
     )
     render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key}
-  end
-
-  # The gateway verifies a token whose kid (key ID) header names an environment only against that environment's public key.
-  private def jwt_private_key_and_headers(signing_key)
-    if signing_key == SIGNING_KEY_ENVIRONMENT
-      [OpenSSL::PKey::RSA.new(CDO.ai_gateway_jwt_auth_key, CDO.ai_gateway_jwt_auth_key_passphrase), {kid: CDO.rack_env.to_s}]
-    else
-      [OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE), {}]
-    end
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
