@@ -1,13 +1,17 @@
+import {TestDataLocations} from '../../src/constants';
 import {buildDisplayTree, getChildNodeId} from '../../src/helpers/displayTree';
 import {layoutDisplayTree} from '../../src/helpers/displayTreeLayout';
 import {
   countDisplayTreeRows,
+  groupDisplayTreeRows,
   traceDisplayTree,
 } from '../../src/helpers/displayTreeTrace';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import {playPredictionStep, setTestData} from '../../src/redux';
 import {
   getDisplayTree,
+  getDisplayTreeCounts,
+  getDisplayTreeRows,
   getPredictionStep,
   getPredictionTrace,
 } from '../../src/selectors/visualizationSelectors';
@@ -177,6 +181,18 @@ describe('countDisplayTreeRows', () => {
     {features: ['x'], featureNumberKey: {}, labelColumn: 'y'}
   );
 
+  test('groups each row at every node on its path', () => {
+    const groups = groupDisplayTreeRows(tree, model, [[0], [1], [2], [3]]);
+
+    expect(Object.fromEntries(groups)).toEqual({
+      0: [0, 1, 2, 3],
+      '0.0': [0],
+      0.1: [1, 2, 3],
+      '0.1.0': [1],
+      '0.1.1': [2, 3],
+    });
+  });
+
   test('counts each row at every node on its path, by its grade', () => {
     const counts = countDisplayTreeRows(
       tree,
@@ -191,6 +207,66 @@ describe('countDisplayTreeRows', () => {
       0.1: {correct: 2, incorrect: 1},
       '0.1.0': {correct: 0, incorrect: 1},
       '0.1.1': {correct: 2, incorrect: 0},
+    });
+  });
+});
+
+describe('getDisplayTreeRows', () => {
+  const nodeIds = (state, project, trainedModel) =>
+    layoutDisplayTree(getDisplayTree(state, project, trainedModel)).nodes.map(
+      placed => placed.id,
+    );
+
+  test.each([TestDataLocations.END, TestDataLocations.RANDOM])(
+    'lists the dataset rows whose path reaches each node, reserving at %s',
+    reserveLocation => {
+      const {state, project, trainedModel} = trainDataset('zoo', {
+        ...zooOptions,
+        reserveLocation,
+      });
+      const rows = getDisplayTreeRows(state, project, trainedModel);
+      const traces = rowTraces(state, project, trainedModel);
+      const reserved = new Set(project.accuracyCheckRowIndices);
+
+      nodeIds(state, project, trainedModel).forEach(nodeId => {
+        const reaching = traces
+          .map((trace, row) => (trace.path.includes(nodeId) ? row : undefined))
+          .filter(row => row !== undefined);
+
+        const {correct, incorrect, trained} = rows(nodeId);
+
+        expect([...correct, ...incorrect].sort((a, b) => a - b)).toEqual(
+          reaching.filter(row => reserved.has(row)),
+        );
+        expect(trained).toEqual(reaching.filter(row => !reserved.has(row)));
+      });
+    },
+  );
+
+  test('grades the accuracy check rows at each node as the node counts them', () => {
+    const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
+    const rows = getDisplayTreeRows(state, project, trainedModel);
+    const counts = getDisplayTreeCounts(state, project, trainedModel);
+
+    nodeIds(state, project, trainedModel).forEach(nodeId => {
+      const {correct, incorrect} = rows(nodeId);
+      expect({
+        correct: correct.length,
+        incorrect: incorrect.length,
+      }).toEqual(counts(nodeId));
+    });
+  });
+
+  test('a KNN model has no rows at any node', () => {
+    const {state, project, trainedModel} = trainDataset('zoo', {
+      ...zooOptions,
+      mode: {},
+    });
+
+    expect(getDisplayTreeRows(state, project, trainedModel)('0')).toEqual({
+      correct: [],
+      incorrect: [],
+      trained: [],
     });
   });
 });

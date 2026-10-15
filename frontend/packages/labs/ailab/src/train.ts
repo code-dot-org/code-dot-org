@@ -4,6 +4,7 @@ import type {Store} from 'redux';
 
 import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
+import {splitRowIndices} from './helpers/trainingSplit';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
 import type {RootState, TrainingResults} from './redux';
@@ -127,29 +128,19 @@ const prepareTrainingData = (
   accuracyCheckRowIndices: number[]
 ): void => {
   const state = store.getState();
-  const reservedIndices = new Set(accuracyCheckRowIndices);
+  const {trained, accuracyCheck} = splitRowIndices(
+    state.data.length,
+    accuracyCheckRowIndices,
+  );
+  const examplesFor = (rows: number[]) =>
+    rows.map(row => extractTrainingExamples(state, project, state.data[row]));
+  const labelsFor = (rows: number[]) =>
+    rows.map(row => extractTrainingLabel(state, project, state.data[row]));
 
-  const trainingExamples: number[][] = [];
-  const trainingLabels: (number | string)[] = [];
-  const accuracyCheckExamples: number[][] = [];
-  const accuracyCheckLabels: (number | string)[] = [];
-
-  state.data.forEach((row: DataRow, index: number) => {
-    const example = extractTrainingExamples(state, project, row);
-    const label = extractTrainingLabel(state, project, row);
-    if (reservedIndices.has(index)) {
-      accuracyCheckExamples.push(example);
-      accuracyCheckLabels.push(label);
-    } else {
-      trainingExamples.push(example);
-      trainingLabels.push(label);
-    }
-  });
-
-  store.dispatch(setTrainingExamples(trainingExamples));
-  store.dispatch(setTrainingLabels(trainingLabels));
-  store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
-  store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
+  store.dispatch(setTrainingExamples(examplesFor(trained)));
+  store.dispatch(setTrainingLabels(labelsFor(trained)));
+  store.dispatch(setAccuracyCheckExamples(examplesFor(accuracyCheck)));
+  store.dispatch(setAccuracyCheckLabels(labelsFor(accuracyCheck)));
 };
 
 const prepareTestData = (

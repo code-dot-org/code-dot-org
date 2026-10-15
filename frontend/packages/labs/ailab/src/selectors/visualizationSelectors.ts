@@ -1,6 +1,6 @@
 import {createSelector} from 'reselect';
 
-import {ColumnTypes} from '../constants';
+import {ColumnTypes, ResultsGrades} from '../constants';
 import {getAccuracyGrades} from '../helpers/accuracy';
 import {
   getUniqueOptions,
@@ -13,11 +13,15 @@ import {
 } from '../helpers/displayTree';
 import {
   countDisplayTreeRows,
+  groupDisplayTreeRows,
+  NO_NODE_ROWS,
   NO_ROWS,
   traceDisplayTree,
   type DisplayTreeCountsLookup,
+  type DisplayTreeRowsLookup,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
+import {splitRowIndices} from '../helpers/trainingSplit';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -332,4 +336,51 @@ export const getDisplayTreeCounts = createSelector(
     const counts = countDisplayTreeRows(tree, root!, examples, grades);
     return nodeId => counts.get(nodeId) ?? NO_ROWS;
   }
+);
+
+export const getDisplayTreeRows = createSelector(
+  [
+    getDisplayTree,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
+    (_state: RootState, project: AilabProject) =>
+      project.accuracyCheckRowIndices,
+    (state: RootState) => state.data.length,
+    (state: RootState) => state.trainingExamples,
+    (state: RootState) => state.accuracyCheckExamples,
+    getAccuracyGrades,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    accuracyCheckRowIndices: number[] | undefined,
+    rowCount: number,
+    trainingExamples: number[][],
+    accuracyCheckExamples: number[][],
+    grades: string[],
+  ): DisplayTreeRowsLookup => {
+    if (!tree || !accuracyCheckRowIndices) {
+      return () => NO_NODE_ROWS;
+    }
+    const {accuracyCheck: accuracyCheckRows, trained: trainedRows} =
+      splitRowIndices(rowCount, accuracyCheckRowIndices);
+    const {root} = trainedModel!.toJSON() as SerializedTree;
+    const accuracyCheckGroups = groupDisplayTreeRows(
+      tree,
+      root!,
+      accuracyCheckExamples,
+    );
+    const trainedGroups = groupDisplayTreeRows(tree, root!, trainingExamples);
+    const accuracyCheckRowsWithGrade = (nodeId: string, grade: string) =>
+      (accuracyCheckGroups.get(nodeId) ?? [])
+        .filter(index => grades[index] === grade)
+        .map(index => accuracyCheckRows[index]);
+    return nodeId => ({
+      correct: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.CORRECT),
+      incorrect: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.INCORRECT),
+      trained: (trainedGroups.get(nodeId) ?? []).map(
+        index => trainedRows[index],
+      ),
+    });
+  },
 );

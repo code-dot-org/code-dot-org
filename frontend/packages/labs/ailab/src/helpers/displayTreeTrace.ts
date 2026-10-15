@@ -32,6 +32,21 @@ export const NO_ROWS: DisplayTreeNodeCounts = {correct: 0, incorrect: 0};
 
 export type DisplayTreeCountsLookup = (nodeId: string) => DisplayTreeNodeCounts;
 
+// Dataset row numbers of the rows that reach a node.
+export interface DisplayTreeNodeRows {
+  correct: number[];
+  incorrect: number[];
+  trained: number[];
+}
+
+export const NO_NODE_ROWS: DisplayTreeNodeRows = {
+  correct: [],
+  incorrect: [],
+  trained: [],
+};
+
+export type DisplayTreeRowsLookup = (nodeId: string) => DisplayTreeNodeRows;
+
 export function traceDisplayTree(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
@@ -64,6 +79,25 @@ export function traceDisplayTree(
   return {path, steps, prediction: node.prediction};
 }
 
+// For each node, which examples reach it, by their position in `examples`.
+export function groupDisplayTreeRows(
+  root: DisplayTreeNode,
+  modelRoot: SerializedTreeNode,
+  examples: number[][],
+): Map<string, number[]> {
+  const groups = new Map<string, number[]>();
+
+  examples.forEach((inputs, index) => {
+    traceDisplayTree(root, modelRoot, inputs, {}).path.forEach(nodeId => {
+      const group = groups.get(nodeId) ?? [];
+      group.push(index);
+      groups.set(nodeId, group);
+    });
+  });
+
+  return groups;
+}
+
 export function countDisplayTreeRows(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
@@ -72,14 +106,11 @@ export function countDisplayTreeRows(
 ): Map<string, DisplayTreeNodeCounts> {
   const counts = new Map<string, DisplayTreeNodeCounts>();
 
-  examples.forEach((inputs, index) => {
-    const grade =
-      grades[index] === ResultsGrades.CORRECT ? 'correct' : 'incorrect';
-    traceDisplayTree(root, modelRoot, inputs, {}).path.forEach(nodeId => {
-      const nodeCounts = counts.get(nodeId) ?? {...NO_ROWS};
-      nodeCounts[grade]++;
-      counts.set(nodeId, nodeCounts);
-    });
+  groupDisplayTreeRows(root, modelRoot, examples).forEach((indices, nodeId) => {
+    const correct = indices.filter(
+      index => grades[index] === ResultsGrades.CORRECT,
+    ).length;
+    counts.set(nodeId, {correct, incorrect: indices.length - correct});
   });
 
   return counts;

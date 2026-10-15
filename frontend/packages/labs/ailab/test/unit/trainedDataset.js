@@ -26,7 +26,12 @@ const DIR = path.join(__dirname, '../../public/datasets');
 
 export function trainDataset(
   id,
-  {label, features, mode = {trainer: 'decisionTree'}} = {}
+  {
+    label,
+    features,
+    mode = {trainer: 'decisionTree'},
+    reserveLocation = TestDataLocations.END,
+  } = {}
 ) {
   const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
   const metadata = JSON.parse(
@@ -45,7 +50,7 @@ export function trainDataset(
       setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
     )
   );
-  store.dispatch(setReserveLocation(TestDataLocations.END));
+  store.dispatch(setReserveLocation(reserveLocation));
   const labelColumn = label || metadata.defaultLabelColumn;
   const project = {
     ...initialProject,
