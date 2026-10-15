@@ -9,14 +9,14 @@ class DynamoDBAdapterTest < Minitest::Test
     @adapter = DynamoDBAdapter.new('dcdo_test')
   end
 
-  def test_all_uses_consistent_read
+  def test_all_passes_consistent_read
     @client.stub_responses(:scan, {items: [], count: 0, last_evaluated_key: nil})
 
     @adapter.all
+    @adapter.all(consistent_read: true)
 
     scans = @client.api_requests.select {|r| r[:operation_name] == :scan}
-    assert_equal 1, scans.length
-    assert_equal true, scans.first[:params][:consistent_read]
+    assert_equal([false, true], scans.map {|r| r[:params][:consistent_read]})
   end
 
   def test_all_continues_past_empty_page

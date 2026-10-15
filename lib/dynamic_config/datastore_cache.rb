@@ -67,7 +67,8 @@ class DatastoreCache
   def set(key, value)
     raise ArgumentError unless key.is_a? String
     @datastore.set(key, value)
-    populate_shared_cache
+    # An eventually consistent read here can miss the write just made.
+    populate_shared_cache(consistent_read: true)
     update_local_cache
   end
 
@@ -86,10 +87,10 @@ class DatastoreCache
   # Pulls all values from the datastore and populates the shared cache. Should
   # only be called infrequently, as we need to query DynamoDB for each
   # individual record.
-  def populate_shared_cache
+  def populate_shared_cache(consistent_read: false)
     tries ||= 3
     begin
-      CDO.shared_cache.write(shared_cache_key, @datastore.all)
+      CDO.shared_cache.write(shared_cache_key, @datastore.all(consistent_read: consistent_read))
     rescue => exception
       retry unless (tries -= 1).zero?
       Observability::Errors.report(exception)

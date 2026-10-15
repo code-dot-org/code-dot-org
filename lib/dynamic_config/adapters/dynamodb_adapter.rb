@@ -45,17 +45,17 @@ class DynamoDBAdapter
     )
   end
 
+  # @param consistent_read [Boolean] strongly consistent scan, at twice the read cost
   # @returns [Hash]
   # @raise if DynamoDB is unavailable
-  def all
+  def all(consistent_read: false)
     result = {}
     last_evaluated = nil
     loop do
-      # Called right after a put_item; an eventually consistent scan can miss that write.
       resp = @client.scan(
         {
           table_name: @table_name,
-          consistent_read: true,
+          consistent_read: consistent_read,
           exclusive_start_key: last_evaluated
         }
       )
