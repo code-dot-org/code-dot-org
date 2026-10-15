@@ -1,16 +1,35 @@
-export interface QuizQuestionResult {
+// Response data is what was posted for the question. Its fields are
+// optional because a skipped question is saved as {}.
+export interface MultipleChoiceResponseData {
+  selectedChoiceId?: string;
+}
+
+export interface FreeResponseResponseData {
+  answerText?: string;
+}
+
+// Switch on questionType to narrow responseData.
+export type QuizQuestionResponse =
+  | {
+      questionType: 'MultipleChoiceQuestion';
+      responseData: MultipleChoiceResponseData;
+    }
+  | {
+      questionType: 'FreeResponseQuestion';
+      responseData: FreeResponseResponseData;
+    };
+
+export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
-  selectedChoiceId: string | null;
   correct: boolean | null;
   explanation: string | null;
   correctChoiceId: string | null;
-}
+};
 
-export interface QuizQuestionInProgressResult {
+// Unanswered questions are omitted.
+export type QuizQuestionInProgressResult = QuizQuestionResponse & {
   quizQuestionId: number;
-  // Unanswered questions are omitted from the map, so this is always set.
-  selectedChoiceId: string;
-}
+};
 
 export interface QuizAttemptData {
   id: number;

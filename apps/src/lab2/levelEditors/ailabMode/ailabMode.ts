@@ -12,17 +12,21 @@ export type BooleanModeKey =
   | 'hideSelectLabel'
   | 'lockFeatures'
   | 'pretrained'
+  | 'hideDatasetView'
+  | 'hideTestingView'
   | 'hideSave'
-  | 'randomizeTestData'
+  | 'reserveLastRows'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
   'lockFeatures',
   'pretrained',
+  'hideDatasetView',
+  'hideTestingView',
   'hideSave',
   'hideColumnClicking',
-  'randomizeTestData',
+  'reserveLastRows',
 ];
 
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
@@ -140,8 +144,9 @@ export function withoutLabelInFeatures(
 const SET_BY_PRETRAINED: ModeObject = {
   hideSelectLabel: true,
   lockFeatures: true,
-  randomizeTestData: undefined,
+  reserveLastRows: true,
   requireAccuracy: undefined,
+  hideTestingView: undefined,
 };
 
 export function isSetByPretrained(mode: ModeObject, key: string): boolean {
@@ -161,8 +166,45 @@ export function setPretrained(
   if (pretrained) {
     Object.assign(newMode, SET_BY_PRETRAINED);
     newMode.label = getStartingLabel(newMode, defaultLabel);
+  } else {
+    delete newMode.hideDatasetView;
   }
   return newMode;
+}
+
+const SET_BY_HIDDEN_TESTING: ModeObject = {
+  requireAccuracy: undefined,
+  hideSave: undefined,
+};
+
+export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
+  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
+}
+
+export function setHideTestingView(
+  mode: ModeObject,
+  hideTestingView: boolean
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'hideTestingView',
+    hideTestingView ? true : undefined
+  );
+  if (hideTestingView) {
+    Object.assign(newMode, SET_BY_HIDDEN_TESTING);
+  }
+  return newMode;
+}
+
+export function restoreFromPretrained(
+  mode: ModeObject,
+  beforePretrained: ModeObject = {}
+): ModeObject {
+  const restored = Object.keys(SET_BY_PRETRAINED).reduce(
+    (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
+    setPretrained(mode, false)
+  );
+  return setHideTestingView(restored, restored.hideTestingView === true);
 }
 
 export function isMissingPretrainedColumns(

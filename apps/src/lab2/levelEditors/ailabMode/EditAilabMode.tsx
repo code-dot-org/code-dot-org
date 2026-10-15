@@ -2,7 +2,12 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {parseJsonObject, serializeJsonObject} from '../jsonUtils';
 
-import {cleanMode, setPretrained, withDefaultTrainer} from './ailabMode';
+import {
+  cleanMode,
+  setHideTestingView,
+  setPretrained,
+  withDefaultTrainer,
+} from './ailabMode';
 import AilabModeFields, {AilabDataset} from './AilabModeFields';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -27,8 +32,11 @@ function prepareForFields(
 ): FieldsState {
   const parsedMode = parseJsonObject(rawMode);
   const {mode, removed} = cleanMode(parsedMode ?? {}, knownDatasetIds);
-  const fieldsMode =
-    mode.pretrained === true ? setPretrained(mode, true) : mode;
+  const pretrainedMode = setPretrained(mode, mode.pretrained === true);
+  const fieldsMode = setHideTestingView(
+    pretrainedMode,
+    pretrainedMode.hideTestingView === true
+  );
   return {
     rawMode: serializeJsonObject(withDefaultTrainer(fieldsMode)),
     removed: parsedMode ? removed : ['the saved mode, which is not valid JSON'],

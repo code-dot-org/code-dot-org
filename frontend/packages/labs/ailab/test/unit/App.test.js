@@ -17,6 +17,7 @@ function renderApp(mode) {
     createElement(App, {
       onContinue: () => {},
       saveTrainedModel: () => {},
+      onStartOver: () => {},
       onTrained,
     }),
     {store, project},
@@ -47,6 +48,21 @@ describe('onTrained', () => {
       store.dispatch(setMode({}));
     });
     expect(onTrained).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('a level that hides the testing view', () => {
+  beforeEach(() => I18n.initI18n());
+
+  test('shows the dataset without the Train panel', () => {
+    renderApp({hideTestingView: true});
+    expect(screen.getByRole('table')).toBeTruthy();
+    expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
+  });
+
+  test('hides Start over', () => {
+    renderApp({hideTestingView: true});
+    expect(screen.queryByRole('button', {name: 'Start over'})).toBeNull();
   });
 });
 
@@ -101,6 +117,31 @@ describe('a pretrained level', () => {
       );
     });
     expect(onTrained.mock.calls).toEqual([[100]]);
+  });
+
+  test('stays on the dataset view once trained', () => {
+    renderLevel(PRETRAINED);
+    expect(storeSingleton.getState().currentPanel).toBe('datasetView');
+  });
+
+  test('shows no dataset view while it loads, then opens on the results', () => {
+    const hiding = {...PRETRAINED, hideDatasetView: true};
+    renderLevel({trainer: 'decisionTree'});
+
+    act(() => {
+      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(setMode(hiding));
+    });
+    expect(storeSingleton.getState().currentPanel).toBe('datasetView');
+    expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
+
+    act(() => {
+      seedLevel(storeSingleton, hiding);
+      storeSingleton.dispatch(
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+      );
+    });
+    expect(storeSingleton.getState().currentPanel).toBe('results');
   });
 
   test('hides Start over', () => {
