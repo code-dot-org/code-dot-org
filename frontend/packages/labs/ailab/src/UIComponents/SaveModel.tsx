@@ -10,6 +10,7 @@ import {
 } from '../helpers/datasetDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
+import {useProject} from '../ProjectContext';
 import {setTrainedModelDetail} from '../redux';
 import {getSelectedColumnsDescriptions} from '../selectors';
 
@@ -21,8 +22,11 @@ import styles from './saveModel.module.scss';
 
 const SaveModel = () => {
   const dispatch = useAppDispatch();
-  const labelColumn = useAppSelector(state => state.labelColumn);
-  const columnDescriptions = useAppSelector(getSelectedColumnsDescriptions);
+  const {project} = useProject();
+  const labelColumn = project.labelColumn;
+  const columnDescriptions = useAppSelector(state =>
+    getSelectedColumnsDescriptions(state, project),
+  );
   const dataDescription = useAppSelector(getDatasetDescription);
   const isUserUploaded = useAppSelector(isUserUploadedDataset);
   const datasetId = useAppSelector(

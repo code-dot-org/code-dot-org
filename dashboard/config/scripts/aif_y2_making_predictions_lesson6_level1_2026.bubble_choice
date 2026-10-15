@@ -1,0 +1,12 @@
+name 'aif-y2-making-predictions-lesson6-level1-2026'
+display_name 'Encoding'
+description 'Choose the business you would like to help.'
+
+sublevels
+level 'aif-y2-making-predictions-lesson6-level1-choice1-2026'
+level 'aif-y2-making-predictions-lesson6-level1-choice2-2026'
+level 'aif-y2-making-predictions-lesson6-level1-choice3-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

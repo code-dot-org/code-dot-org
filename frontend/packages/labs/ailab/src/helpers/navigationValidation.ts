@@ -1,6 +1,6 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
-import type {NavButton, PrevNextButtons} from '../types';
+import type {AilabProject, NavButton, PrevNextButtons} from '../types';
 
 import {areArraysEqual} from './utils';
 /*
@@ -23,7 +23,11 @@ const panelList = [
 
 // Is a panel ready to be visited?  This determines whether a visible
 // nav button is enabled or disabled.
-export function isPanelEnabled(state: RootState, panelId: string): boolean {
+export function isPanelEnabled(
+  state: RootState,
+  project: AilabProject,
+  panelId: string,
+): boolean {
   if (panelId === 'datasetView') {
     if (!isDataUploaded(state)) {
       return false;
@@ -31,13 +35,13 @@ export function isPanelEnabled(state: RootState, panelId: string): boolean {
   }
 
   if (panelId === 'selectFeatures') {
-    if (!minOneFeatureSelected(state)) {
+    if (project.selectedFeatures.length === 0) {
       return false;
     }
   }
 
   if (panelId === 'results') {
-    if (!resultsAvailable(state)) {
+    if (!resultsAvailable(state, project)) {
       return false;
     }
   }
@@ -78,38 +82,33 @@ function isDataUploaded(state: RootState): boolean {
   return state.data.length > 0 && !state.invalidData;
 }
 
-function minOneFeatureSelected(state: RootState): boolean {
-  return state.selectedFeatures.length !== 0;
-}
-
-function labelSelected(state: RootState): boolean {
-  return !!state.labelColumn;
-}
-
-export function uniqLabelFeaturesSelected(state: RootState): boolean {
+export function uniqLabelFeaturesSelected(project: AilabProject): boolean {
+  const {labelColumn, selectedFeatures} = project;
   return (
-    minOneFeatureSelected(state) &&
-    labelSelected(state) &&
-    !state.selectedFeatures.includes(state.labelColumn!)
+    selectedFeatures.length !== 0 &&
+    !!labelColumn &&
+    !selectedFeatures.includes(labelColumn)
   );
 }
 
-function isTrainedOnCurrentColumns(state: RootState): boolean {
-  const latestResult = state.historicResults[0];
+function isTrainedOnCurrentColumns(project: AilabProject): boolean {
+  const latestResult = project.historicResults[0];
   return (
     !!latestResult &&
-    latestResult.label === state.labelColumn &&
-    areArraysEqual(latestResult.features, state.selectedFeatures)
+    latestResult.label === project.labelColumn &&
+    areArraysEqual(latestResult.features, project.selectedFeatures)
   );
 }
 
-export function hasCurrentTrainingResult(state: RootState): boolean {
-  return isTrainedOnCurrentColumns(state) && state.historicResults[0].total > 0;
+export function hasCurrentTrainingResult(project: AilabProject): boolean {
+  return (
+    isTrainedOnCurrentColumns(project) && project.historicResults[0].total > 0
+  );
 }
 
-function resultsAvailable(state: RootState): boolean {
+function resultsAvailable(state: RootState, project: AilabProject): boolean {
   return (
-    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(state)
+    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(project)
   );
 }
 
@@ -134,7 +133,10 @@ function isModelNamed(state: RootState): boolean {
 }
 
 // Given the current panel, return the appropriate previous & next buttons.
-export function prevNextButtons(state: RootState): PrevNextButtons {
+export function prevNextButtons(
+  state: RootState,
+  project: AilabProject,
+): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
 
   if (state.currentPanel === 'selectDataset') {
@@ -161,10 +163,10 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
   }
 
   if (prev) {
-    prev.enabled = isPanelEnabled(state, prev.panel);
+    prev.enabled = isPanelEnabled(state, project, prev.panel);
   }
   if (next) {
-    next.enabled = isPanelEnabled(state, next.panel);
+    next.enabled = isPanelEnabled(state, project, next.panel);
   }
 
   return {prev, next};

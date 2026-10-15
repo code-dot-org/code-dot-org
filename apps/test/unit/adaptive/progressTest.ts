@@ -98,10 +98,9 @@ describe('useProgress', () => {
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
     );
-    expect(result.current.isLoading).toBe(true);
     expect(result.current.progress).toBeUndefined();
     await waitForNextUpdate();
-    expect(result.current.isLoading).toBe(false);
+    expect(result.current.progress).toBeDefined();
     expect(result.current.statusMap).toEqual({
       intro: 'complete',
       basics: 'available',
