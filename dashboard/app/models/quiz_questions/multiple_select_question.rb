@@ -61,12 +61,16 @@ class MultipleSelectQuestion < QuizQuestion
     }
   end
 
+  def answer_key_json
+    {correctChoiceIds: content['correct_choice_ids']}
+  end
+
   def builder_content_json
-    attempt_content_json.merge(correctChoiceIds: content['correct_choice_ids'])
+    attempt_content_json.merge(answer_key_json)
   end
 
   def attempt_content_json
-    {questionTitle: content['question_title'], description: content['description'], choices: content['choices']}
+    shared_content_json.merge(choices: content['choices'])
   end
 
   private def validate_question_shape

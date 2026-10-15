@@ -160,6 +160,17 @@ class QuizQuestion < ApplicationRecord
     content
   end
 
+  # The answer key fields shown with submitted results. Values are nilled,
+  # not omitted, when the key is hidden.
+  def answer_key_json
+    {}
+  end
+
+  # The JSON fields every subtype has.
+  def shared_content_json
+    {questionTitle: content['question_title'], description: content['description']}
+  end
+
   # Subtype-specific fields for the quiz builder, answer key included.
   def builder_content_json
     raise NotImplementedError, "#{self.class.name} must implement builder_content_json"

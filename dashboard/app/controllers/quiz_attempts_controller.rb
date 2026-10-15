@@ -141,7 +141,8 @@ class QuizAttemptsController < ApplicationController
           responseData: result[:response_data],
           correct: result[:correct],
           explanation: result[:explanation],
-          correctChoiceId: result[:correct_choice_id]
+          # Its fields depend on questionType.
+          **result[:answer_key]
         }
       end,
       # nil once submitted - use questionResults instead.

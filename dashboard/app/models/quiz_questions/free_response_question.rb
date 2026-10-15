@@ -49,7 +49,7 @@ class FreeResponseQuestion < QuizQuestion
   end
 
   def attempt_content_json
-    {questionTitle: content['question_title'], description: content['description']}
+    shared_content_json
   end
 
   private def validate_question_shape
