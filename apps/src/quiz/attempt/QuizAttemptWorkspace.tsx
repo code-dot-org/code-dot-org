@@ -26,6 +26,7 @@ import {
   isFreeResponseResponse,
   isMultipleChoiceResponse,
   QuizAttemptData,
+  QuizQuestionResponse,
   QuizQuestionResponseData,
   QuizQuestionResult,
 } from './types';
@@ -109,10 +110,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     };
   });
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
-    useState<Record<number, string>>({});
-  const [answerTextsByQuestionId, setAnswerTextsByQuestionId] = useState<
-    Record<number, string>
+  // The student's answer to each question, as on screen.
+  const [responsesByQuestionId, setResponsesByQuestionId] = useState<
+    Record<number, QuizQuestionResponse>
   >({});
   // Retake goes back through the intro screen rather than starting a new
   // attempt immediately.
@@ -154,24 +154,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [levelId]);
 
   useEffect(() => {
-    const selectedChoices: Record<number, string> = {};
-    const answerTexts: Record<number, string> = {};
+    const responses: Record<number, QuizQuestionResponse> = {};
     for (const result of attempt?.questionResultsInProgress ?? []) {
-      if (
-        isMultipleChoiceResponse(result) &&
-        result.responseData.selectedChoiceId
-      ) {
-        selectedChoices[result.quizQuestionId] =
-          result.responseData.selectedChoiceId;
-      } else if (
-        isFreeResponseResponse(result) &&
-        result.responseData.answerText
-      ) {
-        answerTexts[result.quizQuestionId] = result.responseData.answerText;
-      }
+      responses[result.quizQuestionId] = result;
     }
-    setSelectedChoicesByQuestionId(selectedChoices);
-    setAnswerTextsByQuestionId(answerTexts);
+    setResponsesByQuestionId(responses);
     setCurrentPageNumber(1);
     setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
@@ -230,18 +217,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const handleFinishAttempt = async () => {
     // Send the student's current answers with submit, so grading is based
     // on what they see on screen rather than whatever autosave last landed.
-    const responsesByQuestionId: Record<number, QuizQuestionResponseData> = {};
-    for (const [id, choiceId] of Object.entries(selectedChoicesByQuestionId)) {
-      responsesByQuestionId[Number(id)] = {selectedChoiceId: choiceId};
-    }
-    for (const [id, answerText] of Object.entries(answerTextsByQuestionId)) {
-      responsesByQuestionId[Number(id)] = {answerText};
+    const responseDataByQuestionId: Record<number, QuizQuestionResponseData> =
+      {};
+    for (const [id, response] of Object.entries(responsesByQuestionId)) {
+      responseDataByQuestionId[Number(id)] = response.responseData;
     }
     // Targets the level the attempt was for, not whichever quiz is current
     // by the time this resolves.
     const requestLevelId = levelId;
     try {
-      await finishAttempt(responsesByQuestionId);
+      await finishAttempt(responseDataByQuestionId);
       pendingReportRef.current = Promise.resolve(
         dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
       );
@@ -305,22 +290,26 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   const handleSelectChoice = (questionId: number, choiceId: string) => {
-    const previousChoiceId = selectedChoicesByQuestionId[questionId];
-    setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
+    const previousResponse = responsesByQuestionId[questionId];
+    const response: QuizQuestionResponse = {
+      questionType: 'MultipleChoiceQuestion',
+      responseData: {selectedChoiceId: choiceId},
+    };
+    setResponsesByQuestionId(prev => ({...prev, [questionId]: response}));
 
-    queueResponseWrite(questionId, {selectedChoiceId: choiceId}).catch(() => {
+    queueResponseWrite(questionId, response.responseData).catch(() => {
       // Already recorded as a user-facing error in useQuizAttempt. Only
       // roll back if nothing newer has been picked since this write
       // started - a later choice landing after this failure must stand.
-      setSelectedChoicesByQuestionId(prev => {
-        if (prev[questionId] !== choiceId) {
+      setResponsesByQuestionId(prev => {
+        if (prev[questionId] !== response) {
           return prev;
         }
         const next = {...prev};
-        if (previousChoiceId === undefined) {
+        if (previousResponse === undefined) {
           delete next[questionId];
         } else {
-          next[questionId] = previousChoiceId;
+          next[questionId] = previousResponse;
         }
         return next;
       });
@@ -346,7 +335,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   // Debounced - saves after typing pauses, not every keystroke.
   const handleChangeAnswerText = (questionId: number, answerText: string) => {
-    setAnswerTextsByQuestionId(prev => ({...prev, [questionId]: answerText}));
+    setResponsesByQuestionId(prev => ({
+      ...prev,
+      [questionId]: {
+        questionType: 'FreeResponseQuestion',
+        responseData: {answerText},
+      },
+    }));
     unsavedAnswerTextsRef.current[questionId] = answerText;
     clearTimeout(answerAutosaveTimersRef.current[questionId]);
     answerAutosaveTimersRef.current[questionId] = setTimeout(
@@ -401,6 +396,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             quizQuestions.findIndex(q => q.id === question.id) + 1
           } of ${quizQuestions.length}`
         : undefined;
+    const response = responsesByQuestionId[question.id];
     switch (question.type) {
       case 'MultipleChoiceQuestion':
         return (
@@ -409,7 +405,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
-            selectedChoiceId={selectedChoicesByQuestionId[question.id] ?? null}
+            selectedChoiceId={
+              (response &&
+                isMultipleChoiceResponse(response) &&
+                response.responseData.selectedChoiceId) ||
+              null
+            }
             onSelectChoice={choiceId =>
               handleSelectChoice(question.id, choiceId)
             }
@@ -423,7 +424,12 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
-            answerText={answerTextsByQuestionId[question.id] ?? ''}
+            answerText={
+              (response &&
+                isFreeResponseResponse(response) &&
+                response.responseData.answerText) ||
+              ''
+            }
             onChangeAnswerText={answerText =>
               handleChangeAnswerText(question.id, answerText)
             }
