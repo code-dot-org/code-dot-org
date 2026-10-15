@@ -5,12 +5,14 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
+import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
 
 import {Answer, StepAnswers} from '../../progress';
 import {
+  FreeResponseQuestion,
   MultipleChoiceDiagnosticQuestion,
   QuestionsStep as QuestionsStepContent,
 } from '../../types';
@@ -34,30 +36,43 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
-  const questions = useMemo(
-    () =>
-      step.questions.filter(
-        (q): q is MultipleChoiceDiagnosticQuestion =>
-          q.type === 'MultipleChoiceQuestion'
-      ),
-    [step.questions]
-  );
+  const {questions} = step;
   const [index, setIndex] = useState(0);
-  const question = questions[index] as
-    | MultipleChoiceDiagnosticQuestion
-    | undefined;
+  const question = questions[index];
   const isLastQuestion = index >= questions.length - 1;
-  const correctChoiceId = question?.correctChoiceId;
-  // Picks stay local until submitted; only submitted answers are saved.
+
+  // MC state: last pick per question, restored from saved answers on mount.
   const [selectedChoiceIds, setSelectedChoiceIds] = useState(() => {
     const restored: {[questionId: number]: string} = {};
     for (const q of questions) {
+      if (q.type !== 'MultipleChoiceQuestion') continue;
       const last = answers[q.id]?.slice(-1)[0];
       if (last) restored[q.id] = last.answerId;
     }
     return restored;
   });
-  const selectedChoiceId = question && selectedChoiceIds[question.id];
+
+  // FR state: text per question, restored from saved answers on mount.
+  const [freeResponseTexts, setFreeResponseTexts] = useState(() => {
+    const restored: {[questionId: number]: string} = {};
+    for (const q of questions) {
+      if (q.type !== 'freeResponse') continue;
+      const text = answers[q.id]?.at(-1)?.text;
+      if (text) restored[q.id] = text;
+    }
+    return restored;
+  });
+
+  const selectedChoiceId =
+    question?.type === 'MultipleChoiceQuestion'
+      ? selectedChoiceIds[question.id] ?? null
+      : null;
+
+  const freeResponseText =
+    question?.type === 'freeResponse'
+      ? freeResponseTexts[question.id] ?? ''
+      : '';
+
   const [feedback, setFeedback] = useState<'correct' | 'incorrect'>();
 
   const questionsRef = useRef<HTMLDivElement>(null);
@@ -90,30 +105,87 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   }, [feedback]);
 
   const isAdvancing = feedback === 'correct';
+
   const handleSubmit = () => {
-    if (isAdvancing || completedRef.current || !question || !selectedChoiceId) {
-      return;
+    if (isAdvancing || completedRef.current || !question) return;
+
+    if (question.type === 'MultipleChoiceQuestion') {
+      if (!selectedChoiceId) return;
+      const correctChoiceId = question.correctChoiceId;
+      const savedAnswers = answers[question.id] ?? [];
+      // Resubmitting the last saved pick is not a new try.
+      if (savedAnswers.slice(-1)[0]?.answerId !== selectedChoiceId) {
+        const answer: Answer = {
+          answerId: selectedChoiceId,
+          isCorrect: correctChoiceId
+            ? selectedChoiceId === correctChoiceId
+            : undefined,
+        };
+        // Graded questions keep every try; survey questions only the last.
+        onSaveAnswers(
+          question.id,
+          correctChoiceId ? [...savedAnswers, answer] : [answer]
+        );
+      }
+      if (!correctChoiceId) {
+        advance();
+      } else {
+        setFeedback(
+          selectedChoiceId === correctChoiceId ? 'correct' : 'incorrect'
+        );
+      }
+    } else if (question.type === 'freeResponse') {
+      if (!freeResponseText.trim()) return;
+      onSaveAnswers(question.id, [{answerId: '', text: freeResponseText}]);
+      advance();
     }
-    const savedAnswers = answers[question.id] ?? [];
-    // Resubmitting the last saved pick is not a new try.
-    if (savedAnswers.slice(-1)[0]?.answerId !== selectedChoiceId) {
-      const answer = {
-        answerId: selectedChoiceId,
-        isCorrect: correctChoiceId
-          ? selectedChoiceId === correctChoiceId
-          : undefined,
-      };
-      // Graded questions keep every try; survey questions only the last.
-      onSaveAnswers(
-        question.id,
-        correctChoiceId ? [...savedAnswers, answer] : [answer]
+  };
+
+  const isDisabled =
+    question?.type === 'MultipleChoiceQuestion'
+      ? !selectedChoiceId
+      : question?.type === 'freeResponse'
+      ? !freeResponseText.trim()
+      : true;
+
+  const questionLabel =
+    questions.length > 1
+      ? `${index + 1}/${questions.length} questions`
+      : undefined;
+
+  const renderQuestion = (
+    q: MultipleChoiceDiagnosticQuestion | FreeResponseQuestion
+  ) => {
+    if (q.type === 'MultipleChoiceQuestion') {
+      return (
+        <MultiChoiceQuestionContainer
+          key={q.id}
+          question={q}
+          questionLabel={questionLabel}
+          selectedChoiceId={selectedChoiceId}
+          onSelectChoice={choiceId => {
+            setFeedback(undefined);
+            setSelectedChoiceIds(prev => ({...prev, [q.id]: choiceId}));
+          }}
+          selectedChoiceStatus={feedback}
+        />
       );
     }
-    if (!correctChoiceId) {
-      advance();
-    } else {
-      setFeedback(
-        selectedChoiceId === correctChoiceId ? 'correct' : 'incorrect'
+    if (q.type === 'freeResponse') {
+      return (
+        <AttemptCard key={q.id} label={questionLabel} title={q.text}>
+          <textarea
+            className={styles.freeResponseTextarea}
+            value={freeResponseText}
+            onChange={e =>
+              setFreeResponseTexts(prev => ({
+                ...prev,
+                [q.id]: e.target.value,
+              }))
+            }
+            placeholder={q.placeholder}
+          />
+        </AttemptCard>
       );
     }
   };
@@ -128,23 +200,10 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           <MuiTypography variant="body2">{step.description}</MuiTypography>
         )}
       </div>
-      {question && (
-        <MultiChoiceQuestionContainer
-          key={question.id}
-          question={question}
-          questionLabel={
-            questions.length > 1
-              ? `${index + 1}/${questions.length} questions`
-              : undefined
-          }
-          selectedChoiceId={selectedChoiceId ?? null}
-          onSelectChoice={choiceId => {
-            setFeedback(undefined);
-            setSelectedChoiceIds(prev => ({...prev, [question.id]: choiceId}));
-          }}
-          selectedChoiceStatus={feedback}
-        />
-      )}
+      {question &&
+        renderQuestion(
+          question as MultipleChoiceDiagnosticQuestion | FreeResponseQuestion
+        )}
       <div className={styles.questionsActions}>
         <MuiTypography
           variant="body2"
@@ -166,7 +225,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           endIcon={
             !isLastQuestion && <FontAwesomeV6Icon iconName="arrow-right" />
           }
-          disabled={!selectedChoiceId}
+          disabled={isDisabled}
           // Not disabled while advancing: that would drop keyboard focus.
           aria-disabled={isAdvancing}
           onClick={handleSubmit}

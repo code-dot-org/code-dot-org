@@ -7,7 +7,7 @@ import {createContext} from 'react';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 
-import {Answer, CheckpointStatusMap, StepContext} from '../progress/model';
+import {CheckpointStatusMap, StepContext} from '../progress/model';
 import {Checkpoint, Pathway} from '../types';
 
 export interface PathwayContextValue {
@@ -16,7 +16,6 @@ export interface PathwayContextValue {
   statusMap: CheckpointStatusMap;
   stepContextMap: {[stepId: string]: StepContext};
   updateStepContext: (stepId: string, patch: StepContext) => void;
-  saveAnswers: (stepId: string, questionId: number, answers: Answer[]) => void;
   /** What the shell's own AI calls present for an access token. */
   aiContext: AichatContext;
 }

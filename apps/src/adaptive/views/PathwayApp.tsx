@@ -147,18 +147,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         statusMap,
         stepContextMap: progress.stepContext,
         updateStepContext,
-        saveAnswers,
         aiContext,
       },
-    [
-      pathway,
-      playing,
-      statusMap,
-      progress,
-      updateStepContext,
-      saveAnswers,
-      aiContext,
-    ]
+    [pathway, playing, statusMap, progress, updateStepContext, aiContext]
   );
 
   if (pathwayContext) {

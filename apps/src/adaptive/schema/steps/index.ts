@@ -2,7 +2,6 @@ import {z} from 'zod';
 
 import {questionsStepSchema} from '../question';
 
-import {freeResponseStepSchema} from './freeResponse';
 import {levelStepSchema, levelStepSourceSchema} from './level';
 import {panelsStepSchema} from './panels';
 
@@ -10,7 +9,6 @@ import {panelsStepSchema} from './panels';
 export const stepSourceSchema = z.discriminatedUnion('kind', [
   panelsStepSchema,
   questionsStepSchema,
-  freeResponseStepSchema,
   levelStepSourceSchema,
 ]);
 
@@ -18,10 +16,8 @@ export const stepSourceSchema = z.discriminatedUnion('kind', [
 export const stepSchema = z.discriminatedUnion('kind', [
   panelsStepSchema,
   questionsStepSchema,
-  freeResponseStepSchema,
   levelStepSchema,
 ]);
 
-export * from './freeResponse';
 export * from './level';
 export * from './panels';
