@@ -7,12 +7,14 @@ import {ProjectProvider, useProject} from '../../src/ProjectContext';
 import rootReducer, {
   resetState,
   setImportedData,
+  setMode,
   setPresetColumns,
 } from '../../src/redux';
 import {initialProject} from '../../src/types';
 
-const run = (accuracy, hyperparameters) => ({
+const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
   hyperparameters,
+  accuracyCheckRowIndices,
   historicResult: {
     label: 'animal',
     features: ['legs'],
@@ -22,8 +24,8 @@ const run = (accuracy, hyperparameters) => ({
   },
 });
 
-const FIRST = run('80.00', {k: 1});
-const SECOND = run('90.00', {k: 3});
+const FIRST = run('80.00', {k: 1}, [8, 9]);
+const SECOND = run('90.00', {k: 3}, [0, 5]);
 
 function renderContext(openWith, seedStore) {
   const store = seedStore ?? createStore(rootReducer);
@@ -57,19 +59,24 @@ describe('ProjectContext', () => {
     const {project} = renderContext({
       ...initialProject,
       hyperparameters: {k: 5},
+      accuracyCheckRowIndices: [2, 7],
       historicResults: [FIRST.historicResult],
     });
     expect(project().hyperparameters).toEqual({k: 5});
+    expect(project().accuracyCheckRowIndices).toEqual([2, 7]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
-  test('a run records its hyperparameters and leads the results', () => {
+  // The hyperparameters and the split are what a reload needs to rebuild the
+  // model, so the latest run owns both.
+  test('a run records what rebuilding it needs and leads the results', () => {
     const {project, context} = renderContext();
 
     act(() => context().applyTrainingRun(FIRST));
     act(() => context().applyTrainingRun(SECOND));
 
     expect(project().hyperparameters).toEqual({k: 3});
+    expect(project().accuracyCheckRowIndices).toEqual([0, 5]);
     expect(accuracies(project())).toEqual(['90.00', '80.00']);
   });
 
@@ -93,6 +100,7 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toEqual({k: 1});
+    expect(project().accuracyCheckRowIndices).toEqual([8, 9]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
@@ -104,6 +112,7 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual([]);
   });
 
@@ -116,6 +125,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual([]);
   });
 
@@ -128,6 +138,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
@@ -205,7 +216,7 @@ describe('ProjectContext column choices', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('a column cannot be both the label and a feature', () => {
+  test('choosing a label drops it from the features', () => {
     const {project, context} = renderContext(undefined, imported());
     act(() => context().setSelectedFeatures(['a', 'b']));
 
@@ -213,6 +224,25 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBe('a');
     expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('the label cannot be added as a feature', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('a'));
+
+    act(() => context().addSelectedFeature('a'));
+    act(() => context().addSelectedFeature('b'));
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('setting the features drops the label from them', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('b'));
+
+    act(() => context().setSelectedFeatures(['a', 'b', 'c']));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
   });
 
   /*
@@ -245,5 +275,69 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBeUndefined();
     expect(project().selectedFeatures).toEqual(['a']);
+  });
+
+  /*
+    A locked column is one the student has no way to change, so the level's
+    choice has to win. An unlocked one is only a starting point.
+  */
+  const chosen = store => {
+    const rendered = renderContext(undefined, store);
+    act(() => rendered.context().setLabelColumn('a'));
+    act(() => rendered.context().setSelectedFeatures(['b']));
+    return rendered;
+  };
+
+  const preset = (store, columns) =>
+    act(() => {
+      store.dispatch(setPresetColumns(columns));
+    });
+
+  test('a locked label replaces one the project already had', () => {
+    const store = imported();
+    store.dispatch(setMode({hideSelectLabel: true}));
+    const {project} = chosen(store);
+
+    preset(store, {labelColumn: 'c'});
+
+    expect(project().labelColumn).toBe('c');
+  });
+
+  test('an unlocked label leaves one the project already had', () => {
+    const store = imported();
+    const {project} = chosen(store);
+
+    preset(store, {labelColumn: 'c'});
+
+    expect(project().labelColumn).toBe('a');
+  });
+
+  test('locked features replace ones the project already had', () => {
+    const store = imported();
+    store.dispatch(setMode({lockFeatures: true}));
+    const {project} = chosen(store);
+
+    preset(store, {selectedFeatures: ['c']});
+
+    expect(project().selectedFeatures).toEqual(['c']);
+  });
+
+  test('unlocked features leave ones the project already had', () => {
+    const store = imported();
+    const {project} = chosen(store);
+
+    preset(store, {selectedFeatures: ['c']});
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('an unlocked column still fills a gap the project left', () => {
+    const store = imported();
+    const {project} = renderContext(undefined, store);
+
+    preset(store, {labelColumn: 'c', selectedFeatures: ['a', 'b']});
+
+    expect(project().labelColumn).toBe('c');
+    expect(project().selectedFeatures).toEqual(['a', 'b']);
   });
 });

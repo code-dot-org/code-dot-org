@@ -11,16 +11,22 @@ export type ModeObject = Record<string, unknown>;
 export type BooleanModeKey =
   | 'hideSelectLabel'
   | 'lockFeatures'
+  | 'pretrained'
+  | 'hideDatasetView'
+  | 'hideTestingView'
   | 'hideSave'
-  | 'randomizeTestData'
+  | 'reserveLastRows'
   | 'hideColumnClicking';
 
 export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
   'hideSelectLabel',
   'lockFeatures',
+  'pretrained',
+  'hideDatasetView',
+  'hideTestingView',
   'hideSave',
   'hideColumnClicking',
-  'randomizeTestData',
+  'reserveLastRows',
 ];
 
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
@@ -131,6 +137,92 @@ export function withoutLabelInFeatures(
   return setFeatures(
     mode,
     getFeatures(mode).filter(feature => feature !== startingLabel)
+  );
+}
+
+// What pretraining sets each key to; undefined removes it.
+const SET_BY_PRETRAINED: ModeObject = {
+  hideSelectLabel: true,
+  lockFeatures: true,
+  reserveLastRows: true,
+  requireAccuracy: undefined,
+  hideTestingView: undefined,
+};
+
+export function isSetByPretrained(mode: ModeObject, key: string): boolean {
+  return mode.pretrained === true && key in SET_BY_PRETRAINED;
+}
+
+export function setPretrained(
+  mode: ModeObject,
+  pretrained: boolean,
+  defaultLabel?: string
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'pretrained',
+    pretrained ? true : undefined
+  );
+  if (pretrained) {
+    Object.assign(newMode, SET_BY_PRETRAINED);
+    newMode.label = getStartingLabel(newMode, defaultLabel);
+  } else {
+    delete newMode.hideDatasetView;
+  }
+  return newMode;
+}
+
+const SET_BY_HIDDEN_TESTING: ModeObject = {
+  requireAccuracy: undefined,
+  hideSave: undefined,
+};
+
+export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {
+  return mode.hideTestingView === true && key in SET_BY_HIDDEN_TESTING;
+}
+
+export function setHideTestingView(
+  mode: ModeObject,
+  hideTestingView: boolean
+): ModeObject {
+  const newMode = setJsonObjectValue(
+    mode,
+    'hideTestingView',
+    hideTestingView ? true : undefined
+  );
+  if (hideTestingView) {
+    Object.assign(newMode, SET_BY_HIDDEN_TESTING);
+  }
+  return newMode;
+}
+
+export function restoreFromPretrained(
+  mode: ModeObject,
+  beforePretrained: ModeObject = {}
+): ModeObject {
+  const restored = Object.keys(SET_BY_PRETRAINED).reduce(
+    (newMode, key) => setJsonObjectValue(newMode, key, beforePretrained[key]),
+    setPretrained(mode, false)
+  );
+  return setHideTestingView(restored, restored.hideTestingView === true);
+}
+
+export function isMissingPretrainedColumns(
+  mode: ModeObject,
+  selectable: string[] | undefined
+): boolean {
+  // Before the columns load, only a column's presence can be checked.
+  const isSelectable = (column: unknown) =>
+    column !== undefined &&
+    (!selectable || selectable.includes(column as string));
+  const features = getFeatures(mode).filter(feature => feature !== mode.label);
+  return (
+    mode.pretrained === true &&
+    !(
+      isSelectable(mode.label) &&
+      features.length > 0 &&
+      features.every(isSelectable)
+    )
   );
 }
 

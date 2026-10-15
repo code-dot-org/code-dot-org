@@ -31,8 +31,17 @@ class FreeResponseQuestion < QuizQuestion
   # "description" is optional rich text.
   validate :validate_question_shape
 
+  # response_data shape: {"answerText" => "..."}
+  def answered?(response_data)
+    response_data['answerText'].present?
+  end
+
   def self.content_from_builder_params(params)
     shared_content(params)
+  end
+
+  def placeholder_content
+    {'question_title' => "Placeholder question #{key} - encryption key missing"}
   end
 
   def builder_content_json
