@@ -22,7 +22,7 @@ vi.stubGlobal(
     disconnect() {
       resizeCallbacks.delete(this.callback);
     }
-  },
+  }
 );
 
 function renderSentence(props) {
@@ -30,8 +30,8 @@ function renderSentence(props) {
     createElement(
       Provider,
       {store: createStore(rootReducer)},
-      createElement(PredictionSentence, props),
-    ),
+      createElement(PredictionSentence, props)
+    )
   );
 }
 
@@ -41,10 +41,10 @@ function layOutSentence(width) {
     function () {
       const right = this.textContent.length * 10;
       return {left: 0, top: 0, right, bottom: 0, width: right, height: 0};
-    },
+    }
   );
   vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockImplementation(
-    () => sentenceWidth,
+    () => sentenceWidth
   );
 }
 
@@ -83,13 +83,13 @@ describe('PredictionSentence', () => {
     });
 
     expect(
-      screen.getByText('Predict species based on island, mass'),
+      screen.getByText('Predict species based on island, mass')
     ).toBeTruthy();
     const [readable, ...pieces] = container.firstChild.children;
     expect(readable.getAttribute('aria-hidden')).toBeNull();
     expect(pieces.length).toBeGreaterThan(0);
     pieces.forEach(piece =>
-      expect(piece.getAttribute('aria-hidden')).toBe('true'),
+      expect(piece.getAttribute('aria-hidden')).toBe('true')
     );
   });
 
@@ -119,7 +119,7 @@ describe('PredictionSentence', () => {
       '+1',
     ]);
     expect(
-      screen.getByText('Predict species based on island, mass, sex'),
+      screen.getByText('Predict species based on island, mass, sex')
     ).toBeTruthy();
 
     const overflowTag = screen.getByText('+1');

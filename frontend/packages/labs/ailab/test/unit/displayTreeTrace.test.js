@@ -40,10 +40,10 @@ describe('traceDisplayTree on a shipped dataset', () => {
           expect(step.value).toBe(row[step.column]);
           expect(step.nodeId).toBe(path[index]);
           expect(path[index + 1]).toBe(
-            getChildNodeId(step.nodeId, step.branchIndex),
+            getChildNodeId(step.nodeId, step.branchIndex)
           );
         });
-      },
+      }
     );
   });
 
@@ -51,8 +51,8 @@ describe('traceDisplayTree on a shipped dataset', () => {
     const {state, project, trainedModel} = trainDataset('zoo', zooOptions);
     const placedById = Object.fromEntries(
       layoutDisplayTree(getDisplayTree(state, project, trainedModel)).nodes.map(
-        placed => [placed.id, placed],
-      ),
+        placed => [placed.id, placed]
+      )
     );
 
     rowTraces(state, project, trainedModel).forEach(({path, prediction}) => {
@@ -130,25 +130,25 @@ describe('traceDisplayTree', () => {
 
   test('the model inputs choose each branch, not the row', () => {
     expect(
-      traceDisplayTree(legs, legsModel.root, [0], {Legs: '6'}),
+      traceDisplayTree(legs, legsModel.root, [0], {Legs: '6'})
     ).toMatchObject({path: ['0', '0.0'], prediction: 'Mammal'});
   });
 
   test('an input at the split value goes down the second branch', () => {
     expect(
-      traceDisplayTree(size, sizeModel.root, [52.4], {size: '52.4'}),
+      traceDisplayTree(size, sizeModel.root, [52.4], {size: '52.4'})
     ).toMatchObject({path: ['0', '0.0'], prediction: 10});
     expect(
-      traceDisplayTree(size, sizeModel.root, [52.5], {size: '52.5'}),
+      traceDisplayTree(size, sizeModel.root, [52.5], {size: '52.5'})
     ).toMatchObject({path: ['0', '0.1'], prediction: 90});
   });
 
   test('an input with no number goes down the second branch, as ml-cart does', () => {
     expect(
-      traceDisplayTree(legs, legsModel.root, [undefined], {Legs: '7'}).path,
+      traceDisplayTree(legs, legsModel.root, [undefined], {Legs: '7'}).path
     ).toEqual(['0', '0.1', '0.1.1']);
     expect(
-      traceDisplayTree(size, sizeModel.root, [NaN], {size: ''}).path,
+      traceDisplayTree(size, sizeModel.root, [NaN], {size: ''}).path
     ).toEqual(['0', '0.1']);
   });
 
@@ -178,7 +178,7 @@ describe('countDisplayTreeRows', () => {
   };
   const tree = buildDisplayTree(
     {name: 'DTClassifier', root: model},
-    {features: ['x'], featureNumberKey: {}, labelColumn: 'y'},
+    {features: ['x'], featureNumberKey: {}, labelColumn: 'y'}
   );
 
   test('groups each row at every node on its path', () => {
@@ -198,7 +198,7 @@ describe('countDisplayTreeRows', () => {
       tree,
       model,
       [[0], [1], [2], [3]],
-      ['correct', 'incorrect', 'correct', 'correct'],
+      ['correct', 'incorrect', 'correct', 'correct']
     );
 
     expect(Object.fromEntries(counts)).toEqual({
@@ -214,7 +214,7 @@ describe('countDisplayTreeRows', () => {
 describe('getDisplayTreeRows', () => {
   const nodeIds = (state, project, trainedModel) =>
     layoutDisplayTree(getDisplayTree(state, project, trainedModel)).nodes.map(
-      placed => placed.id,
+      placed => placed.id
     );
 
   test.each([TestDataLocations.END, TestDataLocations.RANDOM])(
@@ -236,11 +236,11 @@ describe('getDisplayTreeRows', () => {
         const {correct, incorrect, trained} = rows(nodeId);
 
         expect([...correct, ...incorrect].sort((a, b) => a - b)).toEqual(
-          reaching.filter(row => reserved.has(row)),
+          reaching.filter(row => reserved.has(row))
         );
         expect(trained).toEqual(reaching.filter(row => !reserved.has(row)));
       });
-    },
+    }
   );
 
   test('grades the accuracy check rows at each node as the node counts them', () => {
@@ -276,7 +276,7 @@ describe('getPredictionTrace', () => {
   const mammal = {Legs: '4', Feathers: 'No', Milk: 'Yes', Fins: 'No'};
   const predictWith = (values, project, trainedModel) => {
     Object.entries(values).forEach(([feature, value]) =>
-      store.dispatch(setTestData(feature, value)),
+      store.dispatch(setTestData(feature, value))
     );
     train.onClickPredict(trainedModel, project);
     return store.getState();
@@ -289,14 +289,14 @@ describe('getPredictionTrace', () => {
 
     const predicted = predictWith(
       Object.fromEntries(
-        zooOptions.features.map(feature => [feature, String(row[feature])]),
+        zooOptions.features.map(feature => [feature, String(row[feature])])
       ),
       project,
-      trainedModel,
+      trainedModel
     );
 
     expect(getPredictionTrace(predicted, project, trainedModel)).toEqual(
-      rowTraces(state, project, trainedModel)[0],
+      rowTraces(state, project, trainedModel)[0]
     );
   });
 
@@ -304,18 +304,18 @@ describe('getPredictionTrace', () => {
     const {project, trainedModel} = trainDataset('zoo', zooOptions);
     predictWith(fish, project, trainedModel);
     expect(
-      getPredictionTrace(store.getState(), project, trainedModel),
+      getPredictionTrace(store.getState(), project, trainedModel)
     ).toBeDefined();
 
     store.dispatch(setTestData('Legs', '4'));
     expect(
-      getPredictionTrace(store.getState(), project, trainedModel),
+      getPredictionTrace(store.getState(), project, trainedModel)
     ).toBeUndefined();
 
     train.onClickPredict(trainedModel, project);
     const state = store.getState();
     expect(getPredictionTrace(state, project, trainedModel).prediction).toBe(
-      getConvertedPredictedLabel(state, project),
+      getConvertedPredictedLabel(state, project)
     );
   });
 
@@ -328,8 +328,8 @@ describe('getPredictionTrace', () => {
       getPredictionTrace(
         {...predicted, testData: mammal},
         project,
-        trainedModel,
-      ),
+        trainedModel
+      )
     ).toEqual(trace);
   });
 
@@ -350,13 +350,13 @@ describe('getPredictionStep', () => {
     const {project, trainedModel} = trainDataset('zoo', zooOptions);
     const fish = {Legs: '0', Feathers: 'No', Milk: 'No', Fins: 'Yes'};
     Object.entries(fish).forEach(([feature, value]) =>
-      store.dispatch(setTestData(feature, value)),
+      store.dispatch(setTestData(feature, value))
     );
     train.onClickPredict(trainedModel, project);
     const {path} = getPredictionTrace(store.getState(), project, trainedModel);
 
     expect(getPredictionStep(store.getState(), project, trainedModel)).toBe(
-      path.length - 1,
+      path.length - 1
     );
 
     store.dispatch(playPredictionStep(0));

@@ -111,7 +111,7 @@ const SelectDataset = () => {
                   className={classNames(
                     'uitest-ailab-dataset-image',
                     shared.hoverGrow,
-                    styles.image,
+                    styles.image
                   )}
                   alt={`Select ${dataset.name} dataset`}
                 />

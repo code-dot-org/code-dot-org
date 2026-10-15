@@ -27,14 +27,14 @@ const PredictionResult = () => {
   const {project} = useProject();
   const labelColumn = project.labelColumn || '';
   const predictedLabel = useAppSelector(state =>
-    getConvertedPredictedLabel(state, project),
+    getConvertedPredictedLabel(state, project)
   );
   const {trainedModel} = useTrainingData();
   const trace = useAppSelector(state =>
-    getPredictionTrace(state, project, trainedModel),
+    getPredictionTrace(state, project, trainedModel)
   );
   const currentStep = useAppSelector(state =>
-    getPredictionStep(state, project, trainedModel),
+    getPredictionStep(state, project, trainedModel)
   );
   const steppedByHand = useAppSelector(state => state.predictionStepByHand);
   const predictionCount = useAppSelector(state => state.predictionCount);
@@ -133,7 +133,7 @@ const PredictionResult = () => {
         <span role="status" className={appStyles.visuallyHidden}>
           {announcement()}
         </span>,
-        document.body,
+        document.body
       )}
     </>
   );

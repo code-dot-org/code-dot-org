@@ -3,7 +3,7 @@ vi.stubGlobal(
   class {
     observe() {}
     disconnect() {}
-  },
+  }
 );
 
 HTMLCanvasElement.prototype.getContext = () => ({

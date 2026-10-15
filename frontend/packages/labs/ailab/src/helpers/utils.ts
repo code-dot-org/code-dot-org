@@ -2,7 +2,7 @@
 
 export function getKeyByValue(
   object: Record<string, number>,
-  value: number,
+  value: number
 ): string | undefined {
   return Object.keys(object).find(key => object[key] === value);
 }

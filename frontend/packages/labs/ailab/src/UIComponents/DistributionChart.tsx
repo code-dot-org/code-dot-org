@@ -35,7 +35,7 @@ const DistributionChart = ({columnName, bars}: DistributionChartProps) => {
   const axisMax = Math.max(step, Math.ceil(maxCount / step) * step);
   const ticks = Array.from(
     {length: axisMax / step + 1},
-    (_, index) => index * step,
+    (_, index) => index * step
   );
   const colorClass = (index: number) => BAR_COLOR_CLASSES[index];
 

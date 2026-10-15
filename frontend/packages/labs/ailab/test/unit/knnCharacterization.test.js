@@ -62,7 +62,7 @@ const SAVED_MODEL_KEYS = [
 function load(id, features) {
   const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
   const metadata = JSON.parse(
-    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8'),
+    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
   store.dispatch(resetState());
@@ -74,8 +74,8 @@ function load(id, features) {
   store.dispatch(setImportedMetadata(metadata));
   metadata.fields.forEach(field =>
     store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL),
-    ),
+      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
+    )
   );
   // Set explicitly rather than relying on the initial state, so a change of
   // default cannot silently make these tests non-deterministic.
@@ -87,7 +87,7 @@ function load(id, features) {
     selectedFeatures:
       features ||
       Object.keys(store.getState().data[0]).filter(
-        column => column !== metadata.defaultLabelColumn,
+        column => column !== metadata.defaultLabelColumn
       ),
   };
 

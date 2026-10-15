@@ -49,7 +49,7 @@ export interface Trainer {
   predict(trainedModel: TrainedModel | undefined, testValues: number[]): void;
   batchPredict(
     trainedModel: TrainedModel | undefined,
-    examples: number[][],
+    examples: number[][]
   ): (number | string)[];
 }
 

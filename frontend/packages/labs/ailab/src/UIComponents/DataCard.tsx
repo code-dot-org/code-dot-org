@@ -19,7 +19,7 @@ const DataCard = () => {
   const dataLengthLimit = 20000;
   if (dataLength > dataLengthLimit) {
     window.alert(
-      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit}),
+      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit})
     );
   }
 

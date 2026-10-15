@@ -14,7 +14,7 @@ const Results = () => {
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
   const hasTree = useAppSelector(
-    state => !!getDisplayTree(state, project, trainedModel),
+    state => !!getDisplayTree(state, project, trainedModel)
   );
 
   return (

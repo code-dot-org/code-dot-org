@@ -12,11 +12,11 @@ const ResultsDetails = () => {
   const {project} = useProject();
   const currentResult = project.historicResults[0];
   const hasPredictions = useAppSelector(
-    state => state.accuracyCheckPredictedLabels.length > 0,
+    state => state.accuracyCheckPredictedLabels.length > 0
   );
   const results = useAppSelector(
     state => getResultsByGrade(state, project, state.resultsTab),
-    deepEqual,
+    deepEqual
   );
 
   return (

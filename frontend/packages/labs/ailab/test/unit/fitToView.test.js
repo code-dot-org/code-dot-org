@@ -47,13 +47,13 @@ describe('panIntoView', () => {
 
   test('leaves a rect inside the frame where it is', () => {
     expect(panIntoView({x: 20, y: 240, width: 100, height: 40}, frame)).toEqual(
-      {x: 0, y: 0},
+      {x: 0, y: 0}
     );
   });
 
   test('pans just far enough to bring an edge inside', () => {
     expect(
-      panIntoView({x: -50, y: 300, width: 100, height: 40}, frame),
+      panIntoView({x: -50, y: 300, width: 100, height: 40}, frame)
     ).toEqual({x: 70, y: -60});
   });
 

@@ -26,10 +26,10 @@ const GenerateResults = ({onFinished}: GenerateResultsProps) => {
   const {project} = useProject();
   const data = useAppSelector(
     state => getTableData(state, project, true),
-    deepEqual,
+    deepEqual
   );
   const instructionsOverlayActive = useAppSelector(
-    state => state.instructionsOverlayActive,
+    state => state.instructionsOverlayActive
   );
   const [frame, setFrame] = useState(0);
   const [, setFinished] = useState(false);

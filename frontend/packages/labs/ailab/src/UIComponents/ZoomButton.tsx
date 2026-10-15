@@ -1,6 +1,5 @@
-import {IconButton, Tooltip} from '@mui/material';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Tooltip} from '@mui/material';
 
 interface ZoomButtonProps {
   label: string;

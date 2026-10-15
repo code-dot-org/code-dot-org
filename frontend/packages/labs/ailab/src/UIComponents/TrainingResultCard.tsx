@@ -1,7 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import {useEffect, useRef} from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
@@ -26,10 +25,10 @@ const TrainingResultCard = () => {
   const latestResult = project.historicResults[0];
   const {trainedModel} = useTrainingData();
   const tree = useAppSelector(state =>
-    getDisplayTree(state, project, trainedModel),
+    getDisplayTree(state, project, trainedModel)
   );
   const counts = useAppSelector(state =>
-    getDisplayTreeCounts(state, project, trainedModel),
+    getDisplayTreeCounts(state, project, trainedModel)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);

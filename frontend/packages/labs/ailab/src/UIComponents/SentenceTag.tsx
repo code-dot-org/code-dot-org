@@ -22,7 +22,7 @@ const SentenceTag = ({
   const className = classNames(
     styles.tag,
     size === 'm' && styles.mediumTag,
-    text ? styles[`${variant}Tag`] : styles.placeholderTag,
+    text ? styles[`${variant}Tag`] : styles.placeholderTag
   );
 
   if (!tooltip) {

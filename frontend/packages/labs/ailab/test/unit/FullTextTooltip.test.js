@@ -13,14 +13,14 @@ function label({focused = false, subscribeToMoves = () => () => {}} = {}) {
     createElement(
       FullTextTooltip,
       {title: TEXT, focused, placement: 'top'},
-      createElement('span', null, TEXT),
-    ),
+      createElement('span', null, TEXT)
+    )
   );
 }
 
 function textWidth(scrollWidth) {
   vi.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(
-    scrollWidth,
+    scrollWidth
   );
   vi.spyOn(Element.prototype, 'clientWidth', 'get').mockReturnValue(60);
 }

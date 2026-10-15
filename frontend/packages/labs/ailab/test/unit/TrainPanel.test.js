@@ -21,7 +21,7 @@ function renderPanel({trained = false, mode = {}} = {}) {
 const trainButton = () => screen.queryByRole('button', {name: 'Train model'});
 const labelOptions = () =>
   Array.from(screen.getByRole('combobox', {name: 'Predict'}).options).map(
-    option => option.value,
+    option => option.value
   );
 const featuresButton = () => screen.getByRole('button', {name: /^Using/});
 
