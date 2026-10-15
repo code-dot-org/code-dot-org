@@ -27,6 +27,7 @@ export function projectFromRun(project, run) {
   return {
     ...project,
     hyperparameters: run?.hyperparameters,
+    accuracyCheckRowIndices: run?.accuracyCheckRowIndices,
     historicResults: run ? [run.historicResult] : [],
   };
 }
