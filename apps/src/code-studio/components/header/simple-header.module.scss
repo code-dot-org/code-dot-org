@@ -1,3 +1,5 @@
+@use "color.scss";
+
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -11,22 +13,78 @@
 .row {
   width: 100%;
   min-width: 0;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: fadein 0.4s;
 }
 
+.image {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid color.$white;
+  border-radius: 6px;
+  background-color: color.$black;
+  flex: none;
+  object-fit: cover;
+}
+
+// Sized to the saved-at badge's minimum width, so the row does not move when
+// "Saved" arrives.
+.text {
+  margin-inline-start: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  color: color.$white;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.unitName,
+.label {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unitName {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.separator {
+  flex: none;
+}
+
+// The badge's height is reserved from the start, and the line height set
+// with it: the header's inherited line height is taller than the badge, and
+// would push its text below the slot. A save error's taller badge may
+// overflow it.
+.saved {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 // The project buttons cannot shrink, and their container clips, so the
 // project info keeps its width and the names give way instead.
 .projectInfo {
   flex: none;
-}
-
-// Each name may shrink below its content; what it holds ellipsizes.
-.unitName,
-.progress {
-  flex: 0 1 auto;
-  min-width: 0;
-  margin: 0 5px;
+  margin-inline-end: 5px;
 }

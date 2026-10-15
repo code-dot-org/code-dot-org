@@ -1,31 +1,36 @@
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import SimpleHeader, {
+  currentHeaderLabel,
+} from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import styles from '@cdo/apps/code-studio/components/header/simple-header.module.scss';
 
+let levels: unknown[] = [];
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
-  getCurrentLevels: () => [
-    {id: '1', headerLabel: 'Story', isCurrentLevel: true},
-    {id: '2', headerLabel: 'Story'},
-  ],
+  getCurrentLevels: () => levels,
 }));
 // Connected to stores of their own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
 }));
-jest.mock('@cdo/apps/code-studio/components/header/ScriptName', () => ({
+jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
   __esModule: true,
-  default: (props: {name: string; href: string}) =>
-    require('react').createElement('a', {href: props.href}, props.name),
+  default: () => require('react').createElement('span', null, 'Saved'),
 }));
 
-function renderHeader() {
-  const store = createStore(() => ({isRtl: false}));
+interface StoreState {
+  isRtl: boolean;
+  project?: Partial<ProjectState>;
+}
+
+function renderHeader(state: Partial<StoreState> = {}) {
+  const store = createStore(() => ({isRtl: false, ...state}));
   return render(
     <Provider store={store}>
       <SimpleHeader
@@ -37,32 +42,59 @@ function renderHeader() {
 }
 
 describe('SimpleHeader', () => {
-  it('shows on mount', () => {
-    renderHeader();
-    expect(document.querySelector('#header_middle_content')).not.toBeNull();
+  beforeEach(() => {
+    levels = [
+      {id: '1', headerLabel: 'Story', isCurrentLevel: true},
+      {id: '2', headerLabel: 'Story'},
+    ];
   });
 
-  it('places each part of the row under its class', () => {
+  it('places the image, the name and label, and the buttons', () => {
     renderHeader();
-    const has = (id: string, className: string) =>
-      (document.querySelector(`#${id}`) as HTMLElement).classList.contains(
-        className
-      );
-    expect(has('header_middle_content', styles.row)).toBe(true);
-    expect(has('project_info_container', styles.projectInfo)).toBe(true);
-    expect(has('unit_name_container', styles.unitName)).toBe(true);
-    expect(has('simple_progress_container', styles.progress)).toBe(true);
-    expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
-      'Story'
-    );
+    const row = document.querySelector('#header_middle_content') as HTMLElement;
+    expect(row.classList.contains(styles.row)).toBe(true);
+    expect(row.querySelector('img')?.getAttribute('src')).toBe('/logo.png');
+    const name = document.querySelector('#unit_name_container') as HTMLElement;
+    expect(name.getAttribute('href')).toBe('/s/hoai2026-dev');
+    expect(name.textContent).toBe('hoai2026 dev');
+    expect(screen.getByText('Story').getAttribute('title')).toBe('Story');
     expect(
-      document.querySelector('a[href="/s/hoai2026-dev"]')?.textContent
-    ).toBe('hoai2026 dev');
+      document
+        .querySelector('#project_info_container')
+        ?.classList.contains(styles.projectInfo)
+    ).toBe(true);
+  });
+
+  it('shows the name alone when the current level has no label', () => {
+    levels = [{id: '1', isCurrentLevel: true}];
+    renderHeader();
+    expect(screen.queryByText('·')).toBeNull();
+    expect(document.querySelector('#unit_name_container')).not.toBeNull();
+  });
+
+  it('shows the saved-at only once the project store asks for it', () => {
+    renderHeader();
+    expect(screen.queryByText('Saved')).toBeNull();
+    renderHeader({project: {showProjectUpdatedAt: true}});
+    expect(screen.getByText('Saved')).toBeTruthy();
   });
 
   it('marks the document as carrying the header', () => {
     delete document.documentElement.dataset.headerPresent;
     renderHeader();
     expect(document.documentElement.dataset.headerPresent).toBe('true');
+  });
+});
+
+describe('currentHeaderLabel', () => {
+  it("reads the current level's label, through a current sublevel", () => {
+    expect(
+      currentHeaderLabel([
+        {headerLabel: 'A'},
+        {headerLabel: 'B', sublevels: [{isCurrentLevel: true}]},
+      ])
+    ).toBe('B');
+    expect(currentHeaderLabel([{isCurrentLevel: true}])).toBeNull();
+    expect(currentHeaderLabel(undefined)).toBeNull();
   });
 });
