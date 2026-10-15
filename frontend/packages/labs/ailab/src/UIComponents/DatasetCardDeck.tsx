@@ -71,7 +71,7 @@ const DatasetCardDeck = () => {
                   <div className={styles.ghost} />
                 ) : (
                   <DatasetRowCard
-                    front={depth === 0}
+                    isCurrent={depth === 0}
                     rowNumber={datasetRow + 1}
                     row={row}
                   />

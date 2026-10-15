@@ -11,13 +11,12 @@ import appStyles from '../app.module.scss';
 import styles from './datasetRowCard.module.scss';
 
 interface DatasetRowCardProps {
-  // False while the card animates off the deck.
-  front: boolean;
+  isCurrent: boolean;
   rowNumber: number;
   row: DataRow;
 }
 
-const DatasetRowCard = ({front, rowNumber, row}: DatasetRowCardProps) => {
+const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const {project} = useProject();
   const titleId = useId();
@@ -25,10 +24,10 @@ const DatasetRowCard = ({front, rowNumber, row}: DatasetRowCardProps) => {
 
   // Coming back to a row would otherwise keep where its list was scrolled.
   useEffect(() => {
-    if (front && detailsRef.current) {
+    if (isCurrent && detailsRef.current) {
       detailsRef.current.scrollTop = 0;
     }
-  }, [front]);
+  }, [isCurrent]);
 
   // Fade the list's top and bottom edges while there is more to scroll to,
   // and keep the fades clear of the scrollbar.
@@ -79,7 +78,7 @@ const DatasetRowCard = ({front, rowNumber, row}: DatasetRowCardProps) => {
           ref={detailsRef}
           className={styles.details}
           // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so keyboard users can scroll a long row
-          tabIndex={front ? 0 : -1}
+          tabIndex={isCurrent ? 0 : -1}
         >
           {Object.keys(row).map(column => {
             const role = getColumnRole(project, column);
