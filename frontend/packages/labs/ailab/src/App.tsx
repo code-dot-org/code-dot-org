@@ -113,7 +113,11 @@ const PanelButtons = ({
   const loadSaveStatus = isSaveCompleteProp(saveStatus) ? (
     localizedSaveMessage(saveStatus)
   ) : (
-    <FontAwesomeV6Icon iconName="spinner" iconStyle="solid" />
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
   );
 
   const loadSaveResponseData = isSaveCompleteProp(saveStatus)
