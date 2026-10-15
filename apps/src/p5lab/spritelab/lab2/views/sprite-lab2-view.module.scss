@@ -909,11 +909,12 @@ $editor-strip-height: 41px;
   border-left: 1px solid var(--borders-neutral-primary);
 }
 
-// At the lab's left the column has no tint or edge: the workspace's
-// ground continues under the cards.
+// At the lab's left the column has no tint: the workspace's ground
+// continues under the cards, and a rule marks the workspace's edge.
 .previewColumnLeft {
   background: transparent;
   border-left: none;
+  border-right: 1px solid var(--borders-neutral-primary);
 }
 
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
