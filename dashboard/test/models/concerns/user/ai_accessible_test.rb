@@ -312,10 +312,23 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:ai_tutor) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]}
     let(:adaptive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE]}
     let(:theater_description) {SharedConstants::AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION]}
+    let(:lesson_deep_dive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE]}
 
     before do
       allow(user).to receive(:has_aichat_access?).and_return(false)
       allow(user).to receive(:trust_chat_client?).and_return(false)
+    end
+
+    it 'returns false for LESSON_DEEP_DIVE when the user cannot use lesson deep dive, even with access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      allow(user).to receive(:can_use_lesson_deep_dive?).and_return(false)
+      _(user.can_access_aichat_chat_completion?(lesson_deep_dive, nil)).must_equal false
+    end
+
+    it 'returns true for LESSON_DEEP_DIVE when the user can use lesson deep dive and has access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      allow(user).to receive(:can_use_lesson_deep_dive?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(lesson_deep_dive, nil)).must_equal true
     end
 
     it 'returns false for ADAPTIVE until enabled via DCDO, even with access' do
