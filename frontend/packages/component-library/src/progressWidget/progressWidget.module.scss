@@ -60,7 +60,8 @@ $narrow: 991.98px;
   background-color: var(--background-neutral-primary);
 
   // Without an action the bubbles end the widget and take its corners.
-  &:last-child {
+  &:last-child,
+  &:has(+ .action:empty) {
     border-inline-end: 0;
     border-start-end-radius: calc(var(--shape-md) - 1px);
     border-end-end-radius: calc(var(--shape-md) - 1px);
@@ -79,4 +80,9 @@ $narrow: 991.98px;
   align-items: center;
   padding-block: 0;
   padding-inline: 3px;
+
+  // An action component may render nothing.
+  &:empty {
+    display: none;
+  }
 }

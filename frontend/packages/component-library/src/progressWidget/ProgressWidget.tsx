@@ -118,7 +118,7 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
     >
       {children}
     </div>
-    {action && <div className={moduleStyles.action}>{action}</div>}
+    {action ? <div className={moduleStyles.action}>{action}</div> : null}
   </div>
 );
 

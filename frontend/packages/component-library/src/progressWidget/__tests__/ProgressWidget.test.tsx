@@ -103,4 +103,9 @@ describe('ProgressWidget', () => {
     renderWidget({action: <button>Continue</button>});
     expect(screen.getByRole('button', {name: 'Continue'})).toBeInTheDocument();
   });
+
+  it('draws nothing for a falsy action', () => {
+    renderWidget({action: 0});
+    expect(screen.queryByText('0')).not.toBeInTheDocument();
+  });
 });
