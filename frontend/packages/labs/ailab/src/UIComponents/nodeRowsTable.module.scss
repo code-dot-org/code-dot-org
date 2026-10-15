@@ -6,10 +6,8 @@ $min-visible-rows: 2;
 .frame {
   position: relative;
   display: flex;
-  // A header and ten body rows, as in Figma.
   flex: 0 1 ($visible-rows + 1) * mixins.$data-table-row-height;
   flex-direction: column;
-  // At least a header and two rows, even on a short screen.
   min-height: ($min-visible-rows + 1) * mixins.$data-table-row-height;
 
   // Drawn on top, so the sticky header cells can't cover the border.

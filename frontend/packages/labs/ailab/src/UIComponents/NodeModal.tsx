@@ -26,7 +26,6 @@ interface RowsPanelProps {
   description: ReactNode;
   rows: number[];
   emphasizedColumn?: string;
-  // Replaces the row count, grouped with the columns button.
   aside?: ReactNode;
   allColumns: boolean;
   onToggleColumns: () => void;

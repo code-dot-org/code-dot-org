@@ -56,7 +56,7 @@ export function getChildNodeId(parentId: string, branchIndex: number): string {
 export interface DisplayTreePathStep {
   id: string;
   node: DisplayTreeNode;
-  // The branch taken into this node; absent at the root.
+  // The branch taken into this node.
   branch?: DisplayTreeBranch;
 }
 

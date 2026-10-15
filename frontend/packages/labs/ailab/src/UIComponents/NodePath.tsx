@@ -12,7 +12,6 @@ import styles from './nodePath.module.scss';
 
 interface Step {
   content: ReactNode;
-  // The step as plain text, read out when it is collapsed.
   text: string;
 }
 
@@ -53,7 +52,6 @@ interface StepContentProps {
   step: Step;
   index: number;
   collapsed: boolean;
-  // The hidden copy has no button or tooltip.
   measuring?: boolean;
 }
 

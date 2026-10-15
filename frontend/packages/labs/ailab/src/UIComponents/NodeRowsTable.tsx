@@ -16,7 +16,6 @@ interface NodeRowsTableProps {
   // Dataset row numbers.
   rows: number[];
   emphasizedColumn?: string;
-  // When false, only the model's features and label.
   allColumns: boolean;
   emptyText: string;
 }
