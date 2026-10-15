@@ -293,6 +293,9 @@ const TreeCanvas = ({
     if (followId) {
       showReadably(document.getElementById(followId)!);
     }
+    // showReadably is rebuilt every render; depending on it would re-pan the
+    // canvas continuously instead of once per followId change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [followId]);
 
   return (

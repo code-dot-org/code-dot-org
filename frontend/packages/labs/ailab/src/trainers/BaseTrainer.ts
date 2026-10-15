@@ -16,8 +16,11 @@ import {
   getPercentCorrect,
 } from '../helpers/accuracy';
 import {logMetric} from '../helpers/metrics';
-import type {RootState} from '../redux';
-import {setPrediction, setAccuracyCheckPredictedLabels} from '../redux';
+import {
+  type RootState,
+  setPrediction,
+  setAccuracyCheckPredictedLabels,
+} from '../redux';
 import type {
   AilabProject,
   HistoricResult,

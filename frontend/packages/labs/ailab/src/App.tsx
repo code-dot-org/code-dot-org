@@ -263,6 +263,9 @@ const App = ({
     if (instructionsKey) {
       setInstructionsKey?.(instructionsKey, {showOverlay});
     }
+    // The consumer passes a fresh closure each render; depending on it would
+    // re-notify on every render rather than on a key change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instructionsKey, showOverlay]);
 
   // Report panel view on every panel change.
@@ -274,6 +277,8 @@ const App = ({
     if (latestResult) {
       onTrained?.(Number(latestResult.accuracy));
     }
+    // As above: report a result once, not once per render of the consumer.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
 
   return (

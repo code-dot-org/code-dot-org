@@ -1,4 +1,4 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import FullTextTooltip from '../../src/UIComponents/FullTextTooltip';
@@ -77,7 +77,8 @@ describe('FullTextTooltip', () => {
     textWidth(120);
     const {container} = render(label({focused: true}));
 
-    fireEvent.mouseLeave(container.querySelector('span'));
+    // The open tooltip repeats TEXT, but it portals outside `container`.
+    fireEvent.mouseLeave(within(container).getByText(TEXT));
     settle();
 
     expect(tooltip().textContent).toBe(TEXT);

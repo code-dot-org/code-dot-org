@@ -27,6 +27,7 @@ function predictBird(store, project, trainedModel) {
   });
 }
 
+// eslint-disable-next-line react/prop-types
 const StoreStepper = ({project, trainedModel, onReplay}) =>
   createElement(TraceStepper, {
     key: useAppSelector(state => state.predictionCount),

@@ -1,5 +1,4 @@
-import type {ParseResult} from 'papaparse';
-import Papa from 'papaparse';
+import Papa, {type ParseResult} from 'papaparse';
 
 import {ColumnTypes} from './constants';
 import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';

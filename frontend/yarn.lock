@@ -1717,6 +1717,7 @@ __metadata:
     d3-transition: "npm:^3.0.1"
     d3-zoom: "npm:^3.0.0"
     eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
     jsdom: "catalog:"
     messageformat: "npm:^2.3.0"
     ml-cart: "npm:2.1.1"

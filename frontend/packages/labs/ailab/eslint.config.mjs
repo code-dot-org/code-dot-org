@@ -1,6 +1,7 @@
 import cdoLabConfig from '@code-dot-org/lint-config/eslint/lab.mjs';
 import vitest from '@vitest/eslint-plugin';
 import {globalIgnores} from 'eslint/config';
+import reactHooks from 'eslint-plugin-react-hooks';
 
 /*
   This package is moving into the main repo's `apps/` directory, which lints
@@ -15,6 +16,11 @@ const matchesApps = [
       // classic one, which needs React in scope.
       'react/react-in-jsx-scope': 'error',
       'react/jsx-uses-react': 'error',
+      'react/button-has-type': 'error',
+      'react/prop-types': 'error',
+      // The shared config allows a type-only and a value import of the same
+      // module side by side; apps' `no-duplicate-imports` does not.
+      'no-duplicate-imports': 'error',
       // apps groups `@code-dot-org/*` with the other external packages rather
       // than giving it a block of its own.
       'import-x/order': [
@@ -39,6 +45,34 @@ const matchesApps = [
           ],
           alphabetize: {order: 'asc', caseInsensitive: true},
           pathGroupsExcludedImportTypes: ['builtin', 'object'],
+        },
+      ],
+    },
+  },
+  {
+    // The shared config carries no react-hooks plugin; apps errors on both.
+    plugins: {'react-hooks': reactHooks},
+    rules: {
+      'react-hooks/exhaustive-deps': 'error',
+      'react-hooks/rules-of-hooks': 'error',
+    },
+  },
+  {
+    // Types stand in for prop types, as they do in apps.
+    files: ['**/*.{ts,tsx}'],
+    rules: {'react/prop-types': 'off'},
+  },
+  {
+    files: ['test/**'],
+    rules: {
+      // Mirrors apps' rule steering tests toward accessible queries.
+      'no-restricted-properties': [
+        'error',
+        {
+          object: 'container',
+          property: 'querySelector',
+          message:
+            'Tests should resemble how the user interacts with the application. See https://testing-library.com/docs/queries/about/#priority',
         },
       ],
     },
