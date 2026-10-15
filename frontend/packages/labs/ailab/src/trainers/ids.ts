@@ -40,7 +40,7 @@ export function getTrainerFamily(state: RootState): TrainerFamily {
 
 export function getTrainerId(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): TrainerId {
   const ids = idsByFamily[getTrainerFamily(state)];
   return isRegression(state, project) ? ids.regress : ids.classify;

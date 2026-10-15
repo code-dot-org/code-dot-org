@@ -93,7 +93,7 @@ export type TrainingResults = Pick<
 
 export function getTrainingResults(state: RootState): TrainingResults {
   return Object.fromEntries(
-    TRAINING_RESULT_KEYS.map(key => [key, state[key]]),
+    TRAINING_RESULT_KEYS.map(key => [key, state[key]])
   ) as TrainingResults;
 }
 
@@ -169,7 +169,7 @@ const ailabSlice = createSlice({
     setImportedData: {
       reducer(
         state,
-        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>,
+        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>
       ) {
         const {data, userUploadedData} = action.payload;
         if (state.currentPanel === 'selectDataset') {
@@ -196,7 +196,7 @@ const ailabSlice = createSlice({
     setColumnsByDataType: {
       reducer(
         state,
-        action: PayloadAction<{column: string; dataType: string}>,
+        action: PayloadAction<{column: string; dataType: string}>
       ) {
         state.columnsByDataType[action.payload.column] =
           action.payload.dataType;
@@ -214,7 +214,7 @@ const ailabSlice = createSlice({
     */
     setFeatureNumberKey(
       state,
-      action: PayloadAction<Record<string, Record<string, number>>>,
+      action: PayloadAction<Record<string, Record<string, number>>>
     ) {
       state.featureNumberKey = action.payload;
     },
@@ -229,7 +229,7 @@ const ailabSlice = createSlice({
     },
     setAccuracyCheckPredictedLabels(
       state,
-      action: PayloadAction<(number | string)[]>,
+      action: PayloadAction<(number | string)[]>
     ) {
       state.accuracyCheckPredictedLabels = action.payload;
     },
@@ -242,7 +242,7 @@ const ailabSlice = createSlice({
     setTestData: {
       reducer(
         state,
-        action: PayloadAction<{feature: string; value: string | number}>,
+        action: PayloadAction<{feature: string; value: string | number}>
       ) {
         state.testData[action.payload.feature] = action.payload.value;
         state.prediction = undefined;
@@ -258,7 +258,7 @@ const ailabSlice = createSlice({
     setPrediction: {
       reducer(
         state,
-        action: PayloadAction<{prediction: number | string; inputs: number[]}>,
+        action: PayloadAction<{prediction: number | string; inputs: number[]}>
       ) {
         state.prediction = action.payload.prediction;
         state.predictionTestData = {...state.testData};
@@ -306,7 +306,7 @@ const ailabSlice = createSlice({
           field: string;
           value: string;
           isColumn: boolean;
-        }>,
+        }>
       ) {
         const {field, value, isColumn} = action.payload;
         const details = state.trainedModelDetails;
@@ -368,7 +368,7 @@ const ailabSlice = createSlice({
     },
     setTrainingModalStep(
       state,
-      action: PayloadAction<TrainingModalStep | undefined>,
+      action: PayloadAction<TrainingModalStep | undefined>
     ) {
       state.trainingModalStep = action.payload;
       if (action.payload !== 'testing') {
@@ -382,7 +382,7 @@ const ailabSlice = createSlice({
     setSaveStatus: {
       reducer(
         state,
-        action: PayloadAction<{status: string; data?: SaveResponseData}>,
+        action: PayloadAction<{status: string; data?: SaveResponseData}>
       ) {
         state.saveStatus = action.payload.status;
         state.saveResponseData = action.payload.data;
@@ -454,21 +454,21 @@ export const saveModel =
   (
     saveTrainedModel: SaveTrainedModel,
     project: AilabProject,
-    trainedModel?: TrainedModel,
+    trainedModel?: TrainedModel
   ): ThunkAction<void, RootState, unknown, AnyAction> =>
   (dispatch, getState) => {
     const dataToSave = getTrainedModelDataToSave(
       getState(),
       project,
-      trainedModel,
+      trainedModel
     );
     dispatch(setSaveStatus('started'));
     saveTrainedModel(dataToSave, (response: SaveResponse) => {
       dispatch(setSaveStatus(response.status, response.data));
       dispatch(
         setCurrentPanel(
-          response.status === 'success' ? 'modelSummary' : 'saveModel',
-        ),
+          response.status === 'success' ? 'modelSummary' : 'saveModel'
+        )
       );
     });
   };
@@ -493,11 +493,11 @@ export function getHideTestingView(state: RootState): boolean {
 
 export function getPredictAvailable(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): boolean {
   return (
     Object.keys(state.testData).filter(
-      value => state.testData[value] && state.testData[value] !== '',
+      value => state.testData[value] && state.testData[value] !== ''
     ).length === project.selectedFeatures.length
   );
 }
@@ -507,7 +507,7 @@ export function getPredictAvailable(
 // the new object reference doesn't trigger unnecessary rerenders.
 export function getPanelButtons(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): PrevNextButtons {
   return prevNextButtons(state, project);
 }
@@ -521,7 +521,7 @@ export function readyToTrain(project: AilabProject): boolean {
 export function getTableData(
   state: RootState,
   project: AilabProject,
-  useResultsData: boolean,
+  useResultsData: boolean
 ): DataRow[] {
   if (useResultsData) {
     return getResultsDataInDataTableForm(state, project);

@@ -1,8 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, IconButton, iconButtonClasses} from '@mui/material';
 import classNames from 'classnames';
-import {useCallback, useEffect, useLayoutEffect} from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import React, {useCallback, useEffect, useLayoutEffect} from 'react';
 
 import {prefersReducedMotion} from '../helpers/utils';
 import {useAppDispatch, useAppSelector} from '../hooks';
@@ -83,7 +82,9 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
           variant="outlined"
           color="secondary"
           size="extraSmall"
-          startIcon={<FontAwesomeV6Icon iconName="forward-step" aria-hidden="true" />}
+          startIcon={
+            <FontAwesomeV6Icon iconName="forward-step" aria-hidden="true" />
+          }
           aria-label="Skip to the answer"
           onClick={skip}
         >

@@ -2,7 +2,7 @@ import I18n from '../i18n';
 
 export function getLocalizedValue(
   value: string | number,
-  datasetId: string,
+  datasetId: string
 ): string | number {
   if (typeof value === 'number') {
     return value;

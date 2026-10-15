@@ -1,6 +1,6 @@
 import {Tooltip, type TooltipProps} from '@mui/material';
 import type {Instance} from '@popperjs/core';
-import {
+import React, {
   type ReactElement,
   useContext,
   useEffect,

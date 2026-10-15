@@ -40,7 +40,7 @@ beforeEach(() => {
           store.dispatch(setImportedData(ROWS, false));
           resolve();
         };
-      }),
+      })
   );
   parseJSON.mockImplementation(
     () =>
@@ -52,7 +52,7 @@ beforeEach(() => {
           }
           resolve();
         };
-      }),
+      })
   );
 });
 
@@ -86,7 +86,7 @@ describe('loadDataset', () => {
         labelColumn: 'animal',
         selectedFeatures: ['legs'],
       });
-    },
+    }
   );
 
   test("locks the dataset's default label when no label is set", async () => {
@@ -95,7 +95,7 @@ describe('loadDataset', () => {
 
   test('locks the label in place of the default', async () => {
     expect(
-      (await load({hideSelectLabel: true, label: 'legs'})).labelColumn,
+      (await load({hideSelectLabel: true, label: 'legs'})).labelColumn
     ).toBe('legs');
   });
 
@@ -105,7 +105,7 @@ describe('loadDataset', () => {
 
   test('drops the label from the features', async () => {
     expect(await load({label: 'animal', features: ['animal', 'legs']})).toEqual(
-      {labelColumn: 'animal', selectedFeatures: ['legs']},
+      {labelColumn: 'animal', selectedFeatures: ['legs']}
     );
   });
 
@@ -115,7 +115,7 @@ describe('loadDataset', () => {
       .mockImplementation(() => {});
 
     expect(
-      await load({label: 'name', features: ['name', 'legs', 'wings']}),
+      await load({label: 'name', features: ['name', 'legs', 'wings']})
     ).toEqual({labelColumn: undefined, selectedFeatures: ['legs']});
     expect(consoleError.mock.calls.map(([message]) => message)).toEqual([
       'AI Lab mode: "name" is not a selectable column of this dataset.',

@@ -43,12 +43,12 @@ describe('getDisplayTree on shipped datasets', () => {
       expect(tree).toBeDefined();
       expect(countQuestions(tree)).toBeGreaterThan(0);
       expect(state.data.map(row => routeByLabels(tree, row))).toEqual(
-        traces.map(trace => trace.path),
+        traces.map(trace => trace.path)
       );
       expect(traces.map(trace => trace.prediction)).toEqual(
-        modelPredictions(state, project, trainedModel),
+        modelPredictions(state, project, trainedModel)
       );
-    },
+    }
   );
 
   test('a KNN model has no display tree', () => {
@@ -80,7 +80,7 @@ describe('buildDisplayTree', () => {
 
   test('a model that is not a tree has no display tree', () => {
     expect(
-      buildDisplayTree({name: 'KNN', root: {}}, legsContext),
+      buildDisplayTree({name: 'KNN', root: {}}, legsContext)
     ).toBeUndefined();
   });
 
@@ -100,7 +100,7 @@ describe('buildDisplayTree', () => {
           },
         },
       },
-      legsContext,
+      legsContext
     );
 
     expect(tree.branches.map(b => b.values)).toEqual([['4'], ['0', '2', '6']]);
@@ -120,7 +120,7 @@ describe('buildDisplayTree', () => {
         name: 'DTClassifier',
         root: {splitColumn: 0, splitValue: 0.5, ...leaf(3)},
       },
-      legsContext,
+      legsContext
     );
 
     expect(tree).toEqual({type: 'answer', prediction: 'Bug'});
@@ -129,7 +129,7 @@ describe('buildDisplayTree', () => {
   test('a tie goes to the first class, as ml-cart predicts', () => {
     const tree = buildDisplayTree(
       {name: 'DTClassifier', root: {distribution: [[0, 0.5, 0.5]]}},
-      legsContext,
+      legsContext
     );
 
     expect(tree.prediction).toBe('Fish');
@@ -137,7 +137,7 @@ describe('buildDisplayTree', () => {
 
   test('a leaf with no distribution throws, as ml-cart does', () => {
     expect(() =>
-      buildDisplayTree({name: 'DTClassifier', root: {}}, legsContext),
+      buildDisplayTree({name: 'DTClassifier', root: {}}, legsContext)
     ).toThrow();
   });
 
@@ -152,7 +152,7 @@ describe('buildDisplayTree', () => {
           right: {distribution: 90},
         },
       },
-      {features: ['size'], featureNumberKey: {}, labelColumn: 'price'},
+      {features: ['size'], featureNumberKey: {}, labelColumn: 'price'}
     );
 
     expect(tree.branches).toEqual([
@@ -173,10 +173,10 @@ describe('buildDisplayTree', () => {
 describe('thresholdText', () => {
   test('drops float noise from a split midpoint', () => {
     expect(
-      thresholdText({kind: 'lessThan', threshold: (39.1 + 39.2) / 2}),
+      thresholdText({kind: 'lessThan', threshold: (39.1 + 39.2) / 2})
     ).toBe('< 39.15');
     expect(thresholdText({kind: 'atLeast', threshold: (3.3 + 3.4) / 2})).toBe(
-      '≥ 3.35',
+      '≥ 3.35'
     );
   });
 

@@ -8,7 +8,7 @@ import {
   type ZoomBehavior,
   type ZoomTransform,
 } from 'd3-zoom';
-import {
+import React, {
   createContext,
   type FocusEvent,
   type HTMLAttributes,
@@ -56,7 +56,7 @@ function overlayInset(viewport: HTMLElement, overlay: HTMLElement | null) {
 function viewFrame(
   viewport: HTMLElement,
   toolbar: HTMLElement,
-  {top = 0, right = 0} = {},
+  {top = 0, right = 0} = {}
 ): Rect {
   const frameLeft = toolbar.offsetLeft + toolbar.offsetWidth + FRAME_PADDING;
   const frameTop = top + FRAME_PADDING;
@@ -72,14 +72,14 @@ function fitTransform(
   viewport: HTMLElement,
   toolbar: HTMLElement,
   overlay: HTMLElement | null,
-  rect: Rect,
+  rect: Rect
 ) {
   const insetRight = overlayInset(viewport, overlay);
   const fitted =
     fitToView(
       rect,
       viewFrame(viewport, toolbar, {right: insetRight}),
-      FIT_MAX_SCALE,
+      FIT_MAX_SCALE
     ) ?? fitToView(rect, viewFrame(viewport, toolbar), FIT_MAX_SCALE);
   return (
     fitted && zoomIdentity.translate(fitted.x, fitted.y).scale(fitted.scale)
@@ -88,7 +88,7 @@ function fitTransform(
 
 function boundingBox(element: Element): Rect {
   const boxes = [element, ...element.children].map(part =>
-    part.getBoundingClientRect(),
+    part.getBoundingClientRect()
   );
   const left = Math.min(...boxes.map(box => box.left));
   const top = Math.min(...boxes.map(box => box.top));
@@ -109,7 +109,7 @@ function undoScroll({currentTarget}: UIEvent<HTMLElement>) {
 type SubscribeToMoves = (onMove: () => void) => () => void;
 
 export const CanvasMoveContext = createContext<SubscribeToMoves>(
-  () => () => {},
+  () => () => {}
 );
 
 interface TreeCanvasProps extends HTMLAttributes<HTMLDivElement> {
@@ -146,7 +146,7 @@ const TreeCanvas = ({
   const moveListenersRef = useRef(new Set<() => void>());
   const contentRect = useMemo(
     () => ({x: 0, y: 0, width: contentWidth, height: contentHeight}),
-    [contentWidth, contentHeight],
+    [contentWidth, contentHeight]
   );
 
   useLayoutEffect(() => {
@@ -164,7 +164,7 @@ const TreeCanvas = ({
         if (focused instanceof HTMLElement && content.contains(focused)) {
           focused.style.setProperty(SCALE_PROPERTY, String(transform.k));
         }
-      },
+      }
     );
     viewport.call(zoomRef.current).on('dblclick.zoom', null);
     return () => {
@@ -181,7 +181,7 @@ const TreeCanvas = ({
         viewport,
         toolbarRef.current!,
         overlayRef?.current ?? null,
-        contentRect,
+        contentRect
       );
       if (!fitted) {
         return;
@@ -210,7 +210,7 @@ const TreeCanvas = ({
 
   const animateToward = <T,>(
     targetRef: MutableRefObject<T | undefined>,
-    target: T,
+    target: T
   ) => {
     targetRef.current = target;
     return animate().on('end interrupt cancel', () => {
@@ -236,7 +236,7 @@ const TreeCanvas = ({
       viewportRef.current!,
       toolbarRef.current!,
       overlayRef?.current ?? null,
-      rect,
+      rect
     );
     if (fitted) {
       zoomRef.current!.transform(animate(), fitted);

@@ -1,6 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {
+import React, {
   type CSSProperties,
   type FocusEvent,
   type KeyboardEvent,
@@ -10,8 +11,6 @@ import {
   useRef,
   useState,
 } from 'react';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -167,19 +166,19 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
   const tree = useAppSelector(state =>
-    getDisplayTree(state, project, trainedModel),
+    getDisplayTree(state, project, trainedModel)
   );
   const trace = useAppSelector(state =>
-    getPredictionTrace(state, project, trainedModel),
+    getPredictionTrace(state, project, trainedModel)
   );
   const step = useAppSelector(state =>
-    getPredictionStep(state, project, trainedModel),
+    getPredictionStep(state, project, trainedModel)
   );
   const isStepping = useAppSelector(
-    state => state.predictionStep !== undefined,
+    state => state.predictionStep !== undefined
   );
   const counts = useAppSelector(state =>
-    getDisplayTreeCounts(state, project, trainedModel),
+    getDisplayTreeCounts(state, project, trainedModel)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const layout = useMemo(
@@ -187,12 +186,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
       tree
         ? layoutDisplayTree(tree, nodeWidthMeasurer(datasetId, counts))
         : undefined,
-    [tree, datasetId, counts],
+    [tree, datasetId, counts]
   );
   const pathIds = useMemo(() => new Set(trace?.path), [trace]);
   const reachedIds = useMemo(
     () => new Set(trace?.path.slice(0, step + 1)),
-    [trace, step],
+    [trace, step]
   );
   const currentId = trace?.path[step];
   const nextId = trace?.path[step + 1];
@@ -268,7 +267,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     String(getLocalizedValue(value, datasetId));
 
   const branchLabel = (
-    branch: DisplayTreeBranch,
+    branch: DisplayTreeBranch
   ): {sign?: string; text: string} =>
     branch.kind === 'values'
       ? {text: orList.format(branch.values.map(valueText))}
@@ -283,7 +282,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
 
   // Marks draw over every edge, so an unmarked sibling cannot cover the stub they share.
   const edges = layout.nodes.flatMap(placed =>
-    placed.parent ? [{id: placed.id, d: edgePath(placed.parent, placed)}] : [],
+    placed.parent ? [{id: placed.id, d: edgePath(placed.parent, placed)}] : []
   );
 
   return (
@@ -409,7 +408,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     setFocusVisibleId(
                       event.currentTarget.matches(':focus-visible')
                         ? placed.id
-                        : undefined,
+                        : undefined
                     );
                   }}
                   onBlur={() => setFocusVisibleId(undefined)}

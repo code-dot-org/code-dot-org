@@ -4,6 +4,7 @@ import type {Store} from 'redux';
 
 import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
+import {splitRowIndices} from './helpers/trainingSplit';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
 import type {RootState, TrainingResults} from './redux';
@@ -40,7 +41,7 @@ import type {AilabProject, DataRow, TrainedModel} from './types';
 
 const buildOptionNumberKeysByFeature = (
   store: Store<RootState>,
-  project: AilabProject,
+  project: AilabProject
 ): void => {
   const state = store.getState();
   const optionsMappedToNumbersByFeature: Record<
@@ -49,14 +50,14 @@ const buildOptionNumberKeysByFeature = (
   > = {};
   const categoricalColumnsToConvert = getSelectedCategoricalColumns(
     state,
-    project,
+    project
   );
   categoricalColumnsToConvert.forEach(
     (feature: string) =>
       (optionsMappedToNumbersByFeature[feature] = buildOptionNumberKey(
         state,
-        feature,
-      )),
+        feature
+      ))
   );
   store.dispatch(setFeatureNumberKey(optionsMappedToNumbersByFeature));
 };
@@ -75,13 +76,13 @@ const buildOptionNumberKeysByFeature = (
 const extractTrainingExamples = (
   state: RootState,
   project: AilabProject,
-  row: DataRow,
+  row: DataRow
 ): number[] => {
   const exampleValues: number[] = [];
   project.selectedFeatures.forEach((feature: string) =>
     exampleValues.push(
-      convertValueForTraining(state, project, row[feature], feature),
-    ),
+      convertValueForTraining(state, project, row[feature], feature)
+    )
   );
   return exampleValues;
 };
@@ -89,7 +90,7 @@ const extractTrainingExamples = (
 const extractTrainingLabel = (
   state: RootState,
   project: AilabProject,
-  row: DataRow,
+  row: DataRow
 ): number | string => {
   const value = row[project.labelColumn!];
   return convertValueForTraining(state, project, value, project.labelColumn!);
@@ -113,7 +114,7 @@ const reserveRowIndices = (rowCount: number, location: string): number[] => {
   const firstReserved = Math.max(0, rowCount - numToReserve);
   return Array.from(
     {length: rowCount - firstReserved},
-    (_unused, offset) => firstReserved + offset,
+    (_unused, offset) => firstReserved + offset
   );
 };
 
@@ -124,37 +125,27 @@ const reserveRowIndices = (rowCount: number, location: string): number[] => {
 const prepareTrainingData = (
   store: Store<RootState>,
   project: AilabProject,
-  accuracyCheckRowIndices: number[],
+  accuracyCheckRowIndices: number[]
 ): void => {
   const state = store.getState();
-  const reservedIndices = new Set(accuracyCheckRowIndices);
+  const {trained, accuracyCheck} = splitRowIndices(
+    state.data.length,
+    accuracyCheckRowIndices
+  );
+  const examplesFor = (rows: number[]) =>
+    rows.map(row => extractTrainingExamples(state, project, state.data[row]));
+  const labelsFor = (rows: number[]) =>
+    rows.map(row => extractTrainingLabel(state, project, state.data[row]));
 
-  const trainingExamples: number[][] = [];
-  const trainingLabels: (number | string)[] = [];
-  const accuracyCheckExamples: number[][] = [];
-  const accuracyCheckLabels: (number | string)[] = [];
-
-  state.data.forEach((row: DataRow, index: number) => {
-    const example = extractTrainingExamples(state, project, row);
-    const label = extractTrainingLabel(state, project, row);
-    if (reservedIndices.has(index)) {
-      accuracyCheckExamples.push(example);
-      accuracyCheckLabels.push(label);
-    } else {
-      trainingExamples.push(example);
-      trainingLabels.push(label);
-    }
-  });
-
-  store.dispatch(setTrainingExamples(trainingExamples));
-  store.dispatch(setTrainingLabels(trainingLabels));
-  store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
-  store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
+  store.dispatch(setTrainingExamples(examplesFor(trained)));
+  store.dispatch(setTrainingLabels(labelsFor(trained)));
+  store.dispatch(setAccuracyCheckExamples(examplesFor(accuracyCheck)));
+  store.dispatch(setAccuracyCheckLabels(labelsFor(accuracyCheck)));
 };
 
 const prepareTestData = (
   store: Store<RootState>,
-  project: AilabProject,
+  project: AilabProject
 ): number[] => {
   const updatedState = store.getState();
   const testValues: number[] = [];
@@ -164,9 +155,9 @@ const prepareTestData = (
         updatedState,
         project,
         updatedState.testData[feature],
-        feature,
-      ),
-    ),
+        feature
+      )
+    )
   );
   return testValues;
 };
@@ -182,7 +173,7 @@ const trainingState: {
 const prepare = (
   store: Store<RootState>,
   project: AilabProject,
-  accuracyCheckRowIndices: number[],
+  accuracyCheckRowIndices: number[]
 ): void => {
   trainingState.store = store;
   trainingState.trainer = buildTrainer(store, project);
@@ -198,7 +189,7 @@ const init = (store: Store<RootState>, project: AilabProject): void => {
   prepare(
     store,
     project,
-    reserveRowIndices(state.data.length, state.reserveLocation),
+    reserveRowIndices(state.data.length, state.reserveLocation)
   );
 };
 
@@ -218,14 +209,14 @@ const onClickTrain = (): TrainingRun | undefined =>
 */
 const describesDataset = (
   accuracyCheckRowIndices: number[],
-  rowCount: number,
+  rowCount: number
 ): boolean => {
   const reserved = new Set(accuracyCheckRowIndices);
   return (
     reserved.size > 0 &&
     reserved.size < rowCount &&
     [...reserved].every(
-      index => Number.isInteger(index) && index >= 0 && index < rowCount,
+      index => Number.isInteger(index) && index >= 0 && index < rowCount
     )
   );
 };
@@ -236,7 +227,7 @@ const describesDataset = (
 */
 const refit = (
   store: Store<RootState>,
-  project: AilabProject,
+  project: AilabProject
 ): TrainingRun | undefined => {
   const {hyperparameters, accuracyCheckRowIndices} = project;
   if (
@@ -252,7 +243,7 @@ const refit = (
 
 const onClickPredict = (
   trainedModel: TrainedModel | undefined,
-  project: AilabProject,
+  project: AilabProject
 ): void => {
   const {trainer, store} = trainingState;
   if (trainer && store) {

@@ -44,7 +44,7 @@ describe('the train-model metric', () => {
 
   test('is not logged when a pretrained level trains on load', () => {
     expect(
-      trainAndCapture({trainer: 'decisionTree', pretrained: true}),
+      trainAndCapture({trainer: 'decisionTree', pretrained: true})
     ).toEqual([]);
   });
 });
