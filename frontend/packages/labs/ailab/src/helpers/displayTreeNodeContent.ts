@@ -43,14 +43,14 @@ const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
 export function branchLabel(
   branch: DisplayTreeBranch,
-  datasetId: string,
+  datasetId: string
 ): {sign?: string; text: string} {
   return branch.kind === 'values'
     ? {
         text: orList.format(
           branch.values.map(value =>
-            String(getLocalizedValue(value, datasetId)),
-          ),
+            String(getLocalizedValue(value, datasetId))
+          )
         ),
       }
     : {sign: THRESHOLD_SIGNS[branch.kind], text: thresholdValue(branch)};

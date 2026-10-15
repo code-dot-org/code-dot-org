@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material';
-import type {ReactNode} from 'react';
+import React, {type ReactNode} from 'react';
 
 import tableStyles from './dataTable.module.scss';
 
