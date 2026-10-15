@@ -193,17 +193,6 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal 'environment_key', JSON.parse(response.body)['signingKey']
   end
 
-  test 'names the signing key on a refusal too' do
-    stub_environment_signing_key(true)
-    sign_in(@authorized_teacher)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
-
-    post :get_access_token, params: @params, as: :json
-
-    assert_response :forbidden
-    assert_equal 'environment_key', JSON.parse(response.body)['signingKey']
-  end
-
   private def stub_environment_signing_key(value)
     DCDO.stubs(:get).with(AiGatewayAuthController::ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false).returns(value)
   end

@@ -7,8 +7,9 @@ const REQUEST_METRIC = 'ai-gateway.request';
 
 /**
  * The key Rails signed the request's token with, as Rails reported it.
- * `not_reported` means no Rails response named one: the token request failed
- * before Rails answered, or its answer could not be read.
+ * `not_reported` means no Rails response named one: Rails refused the user
+ * (403) before choosing a key, the request failed before Rails answered, or
+ * its answer could not be read.
  */
 export type SigningKey =
   | 'environment_key'

@@ -29,7 +29,7 @@ class AiGatewayAuthController < ApplicationController
   SIGNING_KEY_LEGACY_SHARED = 'legacy_shared_key'.freeze
 
   rescue_from CanCan::AccessDenied do
-    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out', signingKey: signing_key}
+    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
 
   # POST /ai_gateway/access_token
@@ -39,7 +39,7 @@ class AiGatewayAuthController < ApplicationController
     aichat_context = params[:aichatContext]
 
     unless current_user.can_access_aichat_chat_completion?(aichat_context[:clientType], aichat_context[:currentLevelId])
-      return render status: :forbidden, json: {user_type: current_user.user_type, signingKey: signing_key}
+      return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
     # The gateway serves Gemini for generation (see shouldUseAiGateway), and the
@@ -47,15 +47,18 @@ class AiGatewayAuthController < ApplicationController
     # be replayed against another. Refuse to mint at all when Gemini is blocked
     # rather than trusting a client-supplied model id we cannot enforce later.
     if current_user.us_only_aichat_models_disabled?
-      return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, signingKey: signing_key}
+      return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
     # Resolve the Turnstile mode once. Both the claim and the response field
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
+    # Read once, so the key the token is signed with and the signingKey field below agree.
+    signing_key = DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true ? SIGNING_KEY_ENVIRONMENT : SIGNING_KEY_LEGACY_SHARED
+
     begin
-      private_key, jwt_headers = jwt_private_key_and_headers
+      private_key, jwt_headers = jwt_private_key_and_headers(signing_key)
     rescue => exception
       Observability::Errors.report(exception, error_message: 'AI Gateway signing key could not be loaded', context: {signing_key: signing_key, rack_env: CDO.rack_env.to_s})
       return render status: :internal_server_error, json: {error: 'AI Gateway signing key unavailable', signingKey: signing_key}
@@ -91,13 +94,8 @@ class AiGatewayAuthController < ApplicationController
     render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key}
   end
 
-  # Read once per request, so the token and the signingKey response field always agree.
-  private def signing_key
-    @signing_key ||= DCDO.get(ENVIRONMENT_SIGNING_KEY_DCDO_KEY, false) == true ? SIGNING_KEY_ENVIRONMENT : SIGNING_KEY_LEGACY_SHARED
-  end
-
   # The gateway verifies a token whose kid (key ID) header names an environment only against that environment's public key.
-  private def jwt_private_key_and_headers
+  private def jwt_private_key_and_headers(signing_key)
     if signing_key == SIGNING_KEY_ENVIRONMENT
       [OpenSSL::PKey::RSA.new(CDO.ai_gateway_jwt_auth_key, CDO.ai_gateway_jwt_auth_key_passphrase), {kid: CDO.rack_env.to_s}]
     else
