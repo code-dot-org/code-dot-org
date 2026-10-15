@@ -29,6 +29,10 @@ export default class KNNTrainer extends BaseTrainer<number> {
     return {k: kValue};
   }
 
+  protected candidateFor(hyperparameters: Hyperparameters): number | undefined {
+    return 'k' in hyperparameters ? hyperparameters.k : undefined;
+  }
+
   possibleKValues(state: RootState): number[] {
     const datasetSize = state.data.length;
     const smallDatasetSize = 10;
@@ -40,18 +44,21 @@ export default class KNNTrainer extends BaseTrainer<number> {
     const defaultRegressionK =
       datasetSize < mediumDatasetSize ? minimalK : smallK;
     const defaultClassificationK = Math.round(datasetSize / 3);
-    const defaultK = isRegression(state)
+    const defaultK = isRegression(state, this.project)
       ? defaultRegressionK
       : defaultClassificationK;
 
     if (state.accuracyCheckExamples.length > 0) {
-      if (datasetSize <= smallDatasetSize && !isRegression(state)) {
+      if (
+        datasetSize <= smallDatasetSize &&
+        !isRegression(state, this.project)
+      ) {
         kValues.push(datasetSize);
-      } else if (isRegression(state)) {
+      } else if (isRegression(state, this.project)) {
         kValues.push(defaultRegressionK);
       } else {
         kValues = this.calculatePotentialKValues(state).filter(
-          (kValue: number) => kValue <= state.trainingExamples.length,
+          (kValue: number) => kValue <= state.trainingExamples.length
         );
       }
     } else {
@@ -69,7 +76,7 @@ export default class KNNTrainer extends BaseTrainer<number> {
     const oneThird = Math.round(datasetSize / 3);
     possibleKValues.push(oneThird);
     return possibleKValues.filter(
-      (kValue: number) => kValue <= trainingExamplesSize,
+      (kValue: number) => kValue <= trainingExamplesSize
     );
   }
 }

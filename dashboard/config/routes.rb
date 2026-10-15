@@ -1499,6 +1499,7 @@ Dashboard::Application.routes.draw do
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
+    post '/adaptive/traces', to: 'adaptive_traces#create'
 
     resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
@@ -1545,6 +1546,7 @@ Dashboard::Application.routes.draw do
       end
       member do
         post :evaluate
+        patch :approve
       end
       # The signed-in viewer's emoji reactions on this response. The emoji
       # name (e.g. "heart") is the member id, so removing a reaction is a

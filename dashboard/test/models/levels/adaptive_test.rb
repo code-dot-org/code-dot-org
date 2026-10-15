@@ -80,6 +80,36 @@ class AdaptiveTest < ActiveSupport::TestCase
     refute cached['checkpoints'][0]['steps'][0].key?('levelProperties')
   end
 
+  test "find_step finds authored steps and the project screen's step" do
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+
+    assert_equal 'level', level.find_step('try')['kind']
+    assert_equal 'panels', level.find_step('read')['kind']
+    project = level.find_step('project')
+    assert_equal 'level', project['kind']
+    assert_equal 'adaptive-test-template', project['level']
+    assert_nil level.find_step('unknown')
+  end
+
+  test "step_levels lists each existing level step's level by step id" do
+    template = create(:weblab2, name: 'adaptive-test-template')
+    sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
+    write_levels_pathway
+    level = create(:adaptive, adaptive_id: 'levels')
+
+    assert_equal({'try' => sandbox}, level.step_levels)
+    assert level.step_level?(sandbox)
+    refute level.step_level?(template), "the project's template level is not a step level"
+  end
+
+  test "lookups are empty without content" do
+    level = build(:adaptive, adaptive_id: 'levels')
+
+    assert_nil level.find_step('try')
+    assert_empty level.step_levels
+  end
+
   private def write_levels_pathway
     @dir.join('levels.json').write({
       'id' => 'levels',

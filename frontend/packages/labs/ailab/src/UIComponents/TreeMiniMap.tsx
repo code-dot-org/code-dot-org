@@ -1,16 +1,18 @@
 /* Thumbnail of the trained decision tree, drawn without text. */
-import {IconButton, Tooltip} from '@mui/material';
-import {useMemo} from 'react';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton, Tooltip} from '@mui/material';
+import React, {useMemo} from 'react';
 
 import type {DisplayTreeNode} from '../helpers/displayTree';
 import {
   edgePath,
   layoutDisplayTree,
   TREE_NODE_HEIGHT,
-  TREE_NODE_WIDTH,
 } from '../helpers/displayTreeLayout';
+import {nodeWidthMeasurer} from '../helpers/displayTreeNodeContent';
+import type {DisplayTreeCountsLookup} from '../helpers/displayTreeTrace';
+
+import {leafColorStyle} from './leafColors';
 
 import styles from './treeMiniMap.module.scss';
 
@@ -19,24 +21,24 @@ const MINI_ROW_GAP = 32;
 const NODE_CORNER_RADIUS = 12;
 // Room for the half of each border that falls outside its node.
 const VIEW_MARGIN = 8;
-const LEAF_COLOR_CLASSES = [
-  styles.leafColor0,
-  styles.leafColor1,
-  styles.leafColor2,
-  styles.leafColor3,
-  styles.leafColor4,
-  styles.leafColor5,
-  styles.leafColor6,
-];
 
 interface TreeMiniMapProps {
   tree: DisplayTreeNode;
+  datasetId: string;
+  counts: DisplayTreeCountsLookup;
   onReplay: () => void;
 }
 
-const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
-  const layout = useMemo(() => layoutDisplayTree(tree, MINI_ROW_GAP), [tree]);
-  let leafCount = 0;
+const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
+  const layout = useMemo(
+    () =>
+      layoutDisplayTree(
+        tree,
+        nodeWidthMeasurer(datasetId, counts),
+        MINI_ROW_GAP
+      ),
+    [tree, datasetId, counts]
+  );
 
   return (
     <div className={styles.miniMap}>
@@ -58,21 +60,22 @@ const TreeMiniMap = ({tree, onReplay}: TreeMiniMapProps) => {
                 d={edgePath(placed.parent, placed, MINI_ROW_GAP / 2)}
                 className={styles.edge}
               />
-            ),
+            )
         )}
         {layout.nodes.map(placed => (
           <rect
             key={placed.id}
             x={placed.x}
             y={placed.y}
-            width={TREE_NODE_WIDTH}
+            width={placed.width}
             height={TREE_NODE_HEIGHT}
             rx={NODE_CORNER_RADIUS}
-            className={
-              placed.node.type === 'answer'
-                ? LEAF_COLOR_CLASSES[leafCount++ % LEAF_COLOR_CLASSES.length]
-                : styles.question
-            }
+            {...(placed.answerIndex === undefined
+              ? {className: styles.question}
+              : {
+                  className: styles.answer,
+                  style: leafColorStyle(placed.answerIndex),
+                })}
           />
         ))}
       </svg>

@@ -1,10 +1,11 @@
+$sentence-min-width: 280px;
+
 .bar {
   position: sticky;
   top: 0;
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 8px 16px;
   flex-wrap: wrap;
   padding: 8px;
@@ -12,6 +13,11 @@
   background-color: var(--background-neutral-primary);
   border-bottom: 1px solid var(--border-neutral-primary);
   font-family: var(--font-family-main);
+}
+
+.sentence {
+  flex: 1 1 $sentence-min-width;
+  min-width: 0;
 }
 
 .buttons {

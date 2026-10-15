@@ -21,16 +21,22 @@ const QUESTION: QuizQuestionSummary = {
   page: 1,
 };
 
-const BASE_RESULT: QuizQuestionResult = {
+type MultipleChoiceResult = Extract<
+  QuizQuestionResult,
+  {questionType: 'MultipleChoiceQuestion'}
+>;
+
+const BASE_RESULT: MultipleChoiceResult = {
   quizQuestionId: 1,
-  selectedChoiceId: null,
+  questionType: 'MultipleChoiceQuestion',
+  responseData: {},
   correct: null,
   explanation: null,
   correctChoiceId: null,
 };
 
 const renderCard = (
-  resultOverrides: Partial<QuizQuestionResult> = {},
+  resultOverrides: Partial<MultipleChoiceResult> = {},
   props: Partial<QuestionResultCardProps> = {}
 ) =>
   render(
@@ -48,7 +54,7 @@ const choiceItem = (text: string) =>
 
 describe('QuestionResultCard', () => {
   it('marks the selected correct choice', () => {
-    renderCard({selectedChoiceId: '1', correct: true});
+    renderCard({responseData: {selectedChoiceId: '1'}, correct: true});
 
     expect(
       within(choiceItem('Four')).getByText('Correct answer')
@@ -62,7 +68,7 @@ describe('QuestionResultCard', () => {
   });
 
   it('marks the selected incorrect choice', () => {
-    renderCard({selectedChoiceId: '2', correct: false});
+    renderCard({responseData: {selectedChoiceId: '2'}, correct: false});
 
     expect(
       within(choiceItem('Five')).getByText('Your answer, incorrect')
@@ -72,7 +78,7 @@ describe('QuestionResultCard', () => {
   });
 
   it('shows a selected choice as ungraded when correctness is hidden', () => {
-    renderCard({selectedChoiceId: '0', correct: null});
+    renderCard({responseData: {selectedChoiceId: '0'}, correct: null});
 
     expect(
       within(choiceItem('Three')).getByText('Your answer', {exact: true})
@@ -81,6 +87,31 @@ describe('QuestionResultCard', () => {
     expect(
       screen.queryByText('Your answer, incorrect')
     ).not.toBeInTheDocument();
+  });
+
+  it("labels the selection as the student's answer for a teacher viewing a student", () => {
+    renderCard(
+      {
+        responseData: {selectedChoiceId: '2'},
+        correct: false,
+        correctChoiceId: '1',
+      },
+      {isViewingStudent: true}
+    );
+    expect(
+      within(choiceItem('Five')).getByText("Student's answer, incorrect")
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/Your answer/)).not.toBeInTheDocument();
+  });
+
+  it("labels an ungraded selection as the student's answer for a teacher viewing a student", () => {
+    renderCard(
+      {responseData: {selectedChoiceId: '0'}},
+      {isViewingStudent: true}
+    );
+    expect(
+      within(choiceItem('Three')).getByText("Student's answer", {exact: true})
+    ).toBeInTheDocument();
   });
 
   it('marks no choice as selected when the question was skipped', () => {
@@ -105,6 +136,15 @@ describe('QuestionResultCard', () => {
     expect(
       screen.queryByText('Your answer', {exact: true})
     ).not.toBeInTheDocument();
+  });
+
+  it('renders the question description as markdown', () => {
+    renderCard(
+      {},
+      {question: {...QUESTION, description: 'Count **carefully**.'}}
+    );
+
+    expect(screen.getByText('carefully').tagName).toBe('STRONG');
   });
 
   describe('answer explanation', () => {

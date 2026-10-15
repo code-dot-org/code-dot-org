@@ -3,12 +3,13 @@ import reducer, {
   initialState,
   setCurrentPanel,
   setCurrentColumn,
-  setLabelColumn,
   setColumnsByDataType,
   setInstructionsEnabled,
-  addSelectedFeature,
   setTestData,
   setPrediction,
+  playPredictionStep,
+  setPredictionPlaying,
+  stepPredictionByHand,
   setMode,
   setReserveLocation,
   setImportedData,
@@ -17,6 +18,7 @@ import reducer, {
   saveModel,
   setTrainingModalStep,
 } from '../../src/redux';
+import {initialProject} from '../../src/types';
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
@@ -72,17 +74,13 @@ describe('ailab reducer', () => {
 
   describe('setCurrentPanel per-panel resets', () => {
     test.each([{}, {hideSelectLabel: true}])(
-      'datasetView keeps the label and features but clears the current column, mode %o',
+      'datasetView clears the current column, mode %o',
       mode => {
         let state = reducer(initialState, setMode(mode));
-        state = reducer(state, setLabelColumn('lbl'));
-        state = reducer(state, addSelectedFeature('a'));
         state = reducer(state, setCurrentColumn('a'));
         const next = reducer(state, setCurrentPanel('datasetView'));
-        expect(next.labelColumn).toBe('lbl');
-        expect(next.selectedFeatures).toEqual(['a']);
         expect(next.currentColumn).toBeUndefined();
-      },
+      }
     );
 
     test('results clears prediction state but keeps the current column', () => {
@@ -97,39 +95,6 @@ describe('ailab reducer', () => {
     });
   });
 
-  describe('addSelectedFeature', () => {
-    test('appends a new feature', () => {
-      const next = reducer(initialState, addSelectedFeature('a'));
-      expect(next.selectedFeatures).toEqual(['a']);
-    });
-
-    test('is idempotent for an already-selected feature', () => {
-      const once = reducer(initialState, addSelectedFeature('a'));
-      const twice = reducer(once, addSelectedFeature('a'));
-      expect(twice.selectedFeatures).toEqual(['a']);
-    });
-
-    test('keeps features in table order, whatever the order picked', () => {
-      let state = reducer(
-        initialState,
-        setImportedData([{a: '1', b: '2', c: '3'}], false),
-      );
-      state = reducer(state, addSelectedFeature('c'));
-      state = reducer(state, addSelectedFeature('a'));
-      expect(state.selectedFeatures).toEqual(['a', 'c']);
-    });
-  });
-
-  describe('setLabelColumn', () => {
-    test('removes the new label from the selected features', () => {
-      let state = reducer(initialState, addSelectedFeature('a'));
-      state = reducer(state, addSelectedFeature('b'));
-      const next = reducer(state, setLabelColumn('a'));
-      expect(next.labelColumn).toBe('a');
-      expect(next.selectedFeatures).toEqual(['b']);
-    });
-  });
-
   describe('setCurrentColumn', () => {
     test('selects, then deselects on a repeated click', () => {
       const selected = reducer(initialState, setCurrentColumn('a'));
@@ -139,10 +104,9 @@ describe('ailab reducer', () => {
     });
 
     test('selects the label column on the dataset view', () => {
-      let state = reducer(initialState, setLabelColumn('lbl'));
-      state = reducer(
-        state,
-        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL),
+      let state = reducer(
+        initialState,
+        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL)
       );
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('lbl'));
@@ -154,6 +118,53 @@ describe('ailab reducer', () => {
       const state = reducer(initialState, setMode({hideColumnClicking: true}));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBeUndefined();
+    });
+  });
+
+  describe('setPrediction', () => {
+    test('shows the whole of the new path, not the step of the last one', () => {
+      const stepped = reducer(initialState, playPredictionStep(2));
+      const next = reducer(stepped, setPrediction(1, [0]));
+      expect(next.predictionStep).toBeUndefined();
+    });
+
+    test('stops the last path playing', () => {
+      const playing = reducer(initialState, setPredictionPlaying(true));
+      const next = reducer(playing, setPrediction(1, [0]));
+      expect(next.predictionPlaying).toBe(false);
+    });
+
+    test('counts each prediction, even one that repeats the last', () => {
+      const first = reducer(initialState, setPrediction(1, [0]));
+      const next = reducer(first, setPrediction(1, [0]));
+      expect(next.predictionCount).toBe(first.predictionCount + 1);
+    });
+
+    test('forgets that the student stepped the last path by hand', () => {
+      const stepped = reducer(initialState, stepPredictionByHand(1));
+      const next = reducer(stepped, setPrediction(1, [0]));
+      expect(next.predictionStepByHand).toBe(false);
+    });
+  });
+
+  describe('stepping a prediction', () => {
+    test('marks a step taken by hand', () => {
+      const next = reducer(initialState, stepPredictionByHand(1));
+      expect(next.predictionStep).toBe(1);
+      expect(next.predictionStepByHand).toBe(true);
+    });
+
+    test('clears the mark when playback sets the step', () => {
+      const stepped = reducer(initialState, stepPredictionByHand(1));
+      const next = reducer(stepped, playPredictionStep(0));
+      expect(next.predictionStep).toBe(0);
+      expect(next.predictionStepByHand).toBe(false);
+    });
+
+    test('stops playback when the student steps by hand', () => {
+      const playing = reducer(initialState, setPredictionPlaying(true));
+      const next = reducer(playing, stepPredictionByHand(1));
+      expect(next.predictionPlaying).toBe(false);
     });
   });
 
@@ -170,12 +181,12 @@ describe('ailab reducer', () => {
     test('preserves mode and reserveLocation, resets the rest', () => {
       let state = reducer(initialState, setMode({datasets: ['d1']}));
       state = reducer(state, setReserveLocation('random'));
-      state = reducer(state, addSelectedFeature('a'));
+      state = reducer(state, setCurrentColumn('a'));
       state = reducer(state, setCurrentPanel('results'));
       const next = reducer(state, resetState());
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
-      expect(next.selectedFeatures).toEqual([]);
+      expect(next.currentColumn).toBeUndefined();
       expect(next.currentPanel).toBe('datasetView');
     });
 
@@ -206,7 +217,7 @@ describe('ailab reducer', () => {
     test('selecting a feature column leaves the instructions alone', () => {
       let state = reducer(
         initialState,
-        setColumnsByDataType('a', ColumnTypes.NUMERICAL),
+        setColumnsByDataType('a', ColumnTypes.NUMERICAL)
       );
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('a'));
@@ -226,19 +237,27 @@ describe('ailab reducer', () => {
   // saveModel is a thunk; invoke its inner (dispatch, getState) directly with a
   // recording dispatch and a stub save callback — no store/middleware needed.
   describe('saveModel thunk', () => {
-    const runSaveModel = saveResponse => {
-      const state = reducer(initialState, setLabelColumn('a'));
+    const runSaveModel = (saveResponse, trainedModel) => {
+      const state = initialState;
       const actions = [];
-      const save = (_dataToSave, callback) => callback(saveResponse);
-      saveModel(save)(
+      const saved = [];
+      const save = (dataToSave, callback) => {
+        saved.push(dataToSave);
+        callback(saveResponse);
+      };
+      saveModel(
+        save,
+        {...initialProject, labelColumn: 'a'},
+        trainedModel
+      )(
         action => actions.push(action),
-        () => state,
+        () => state
       );
-      return actions;
+      return {actions, saved};
     };
 
     test('marks the save started, then applies a success response', () => {
-      const actions = runSaveModel({status: 'success'});
+      const {actions} = runSaveModel({status: 'success'});
       expect(setSaveStatus.match(actions[0])).toBe(true);
       expect(actions[0].payload.status).toBe('started');
       expect(actions[1].payload.status).toBe('success');
@@ -247,8 +266,17 @@ describe('ailab reducer', () => {
     });
 
     test('an error response returns to the save panel', () => {
-      const actions = runSaveModel({status: 'error'});
+      const {actions} = runSaveModel({status: 'error'});
       expect(actions[actions.length - 1].payload).toBe('saveModel');
+    });
+
+    test('saves the model it is handed, which Redux no longer holds', () => {
+      const model = {toJSON: () => ({name: 'KNN'}), predict: () => []};
+      const {saved} = runSaveModel({status: 'success'}, model);
+      expect(saved[0].trainedModel).toEqual({name: 'KNN'});
+
+      const {saved: untrained} = runSaveModel({status: 'success'});
+      expect(untrained[0].trainedModel).toBeNull();
     });
   });
 });

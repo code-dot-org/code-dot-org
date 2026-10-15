@@ -28,7 +28,6 @@
 class Ailab < Level
   serialized_attrs %w(
     start_sources
-    hide_share_and_remix
     is_project_level
     mode
     dynamic_instructions
@@ -148,6 +147,10 @@ class Ailab < Level
     JSONValue.value(uses_lab2) == true
   end
 
+  def channel_backed?
+    super || uses_lab2?
+  end
+
   def get_validations
     return nil unless uses_lab2?
 
@@ -216,6 +219,31 @@ class Ailab < Level
       accuracy = parsed_mode['requireAccuracy']
       unless accuracy.is_a?(Numeric) && REQUIRE_ACCURACY_RANGE.cover?(accuracy)
         errors.add(:mode, 'must have a required accuracy from 0 to 100.')
+      end
+    end
+
+    if parsed_mode['pretrained'] == true
+      label = parsed_mode['label']
+      features = parsed_mode['features']
+      unless label.is_a?(String) && label.present? && features.is_a?(Array) && (features - [label]).present?
+        errors.add(:mode, 'must choose a label and features when pretrained.')
+      end
+      unless parsed_mode['hideSelectLabel'] == true && parsed_mode['lockFeatures'] == true
+        errors.add(:mode, 'must lock the label and features when pretrained.')
+      end
+      errors.add(:mode, 'must test on the last rows when pretrained.') unless parsed_mode['reserveLastRows'] == true
+      errors.add(:mode, 'cannot require an accuracy when pretrained.') if parsed_mode.key?('requireAccuracy')
+    end
+
+    if parsed_mode['hideDatasetView'] == true && parsed_mode['pretrained'] != true
+      errors.add(:mode, 'cannot hide the dataset view unless pretrained.')
+    end
+
+    if parsed_mode['hideTestingView'] == true
+      if parsed_mode['pretrained'] == true
+        errors.add(:mode, 'cannot hide the testing view when pretrained.')
+      elsif parsed_mode.key?('requireAccuracy')
+        errors.add(:mode, 'cannot require an accuracy when the testing view is hidden.')
       end
     end
   end

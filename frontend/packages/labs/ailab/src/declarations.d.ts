@@ -36,7 +36,7 @@ declare module 'ml-knn' {
     constructor(
       dataset: number[][],
       labels: (number | string)[],
-      options?: {k?: number},
+      options?: {k?: number}
     );
     predict(dataset: number[][]): (number | string)[];
     toJSON(): object;
@@ -45,7 +45,7 @@ declare module 'ml-knn' {
 
 declare module 'query-string' {
   export function parse(
-    query: string,
+    query: string
   ): Record<string, string | string[] | null | undefined>;
   export function stringify(obj: Record<string, unknown>): string;
 }

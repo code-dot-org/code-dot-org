@@ -1,0 +1,19 @@
+name 'pl-aif2-processing-library-data'
+display_name 'Processing Library Data'
+description 'Below are several library scenarios where data needs to be processed to solve problems and make decisions. Choose a scenario to analyze and create a computer system solution. As a teacher, feel free to explore using the activity guide from the last level, or simply click through a scenario to see what it looks like. You are welcome to complete one fully, but can move on whenever ready.'
+
+
+
+
+
+
+sublevels
+level 'computer-systems-lesson8-level2b_v2_2026-dev'
+level 'computer-systems-lesson8-level2c_v2_2026-dev'
+level 'computer-systems-lesson8-level2d_v2_2026-dev'
+level 'computer-systems-lesson8-level2e_v2_2026-dev'
+level 'computer-systems-lesson8-level2f_v2_2026-dev'
+
+uses_lab2
+
+

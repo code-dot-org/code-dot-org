@@ -1,5 +1,6 @@
 /* React component to handle displaying the model card. */
 import classNames from 'classnames';
+import React from 'react';
 
 import {imageUrl} from '../assetPath';
 import {getPercentCorrect} from '../helpers/accuracy';
@@ -8,7 +9,9 @@ import {getDatasetDetails} from '../helpers/datasetDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {getLabelToSave, getFeaturesToSave} from '../redux';
+import {useProject} from '../ProjectContext';
+import {getLabelToSave, getFeaturesToSave} from '../selectors/saveSelectors';
+import type {ModelCardColumn} from '../types';
 
 import Statement from './Statement';
 
@@ -17,17 +20,26 @@ import styles from './modelCard.module.scss';
 
 const ModelCard = () => {
   const trainedModelDetails = useAppSelector(
-    state => state.trainedModelDetails,
+    state => state.trainedModelDetails
   );
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
-  const percentCorrect = useAppSelector(getPercentCorrect);
-  const label = useAppSelector(getLabelToSave, deepEqual);
-  const features = useAppSelector(getFeaturesToSave, deepEqual);
+  const {project} = useProject();
+  const selectedFeatures = project.selectedFeatures;
+  const percentCorrect = useAppSelector(state =>
+    getPercentCorrect(state, project)
+  );
+  const label = useAppSelector<ModelCardColumn>(
+    state => getLabelToSave(state, project),
+    deepEqual
+  );
+  const features = useAppSelector<ModelCardColumn[]>(
+    state => getFeaturesToSave(state, project),
+    deepEqual
+  );
   const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
   const localizedFeatures = selectedFeatures.map(feature =>
-    getLocalizedColumnName(datasetDetails.name, feature),
+    getLocalizedColumnName(datasetDetails.name, feature)
   );
   const predictionStatement = I18n.t('predictionStatement', {
     output: localizedLabel,

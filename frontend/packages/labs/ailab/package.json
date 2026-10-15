@@ -38,7 +38,6 @@
     "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"
   },
-  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
@@ -70,6 +69,7 @@
     "d3-transition": "^3.0.1",
     "d3-zoom": "^3.0.0",
     "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
     "jsdom": "catalog:",
     "messageformat": "^2.3.0",
     "ml-cart": "2.1.1",

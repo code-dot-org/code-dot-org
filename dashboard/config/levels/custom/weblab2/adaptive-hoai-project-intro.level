@@ -1,0 +1,14 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-09T22:59:26.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-hoai-template",
+    "hide_share_and_remix": true,
+    "initial_view_mode": "preview",
+    "long_instructions": "**Write your first prompt.** Tell the AI what you want to build. What you write shapes where your path begins."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

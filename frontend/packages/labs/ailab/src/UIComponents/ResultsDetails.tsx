@@ -1,5 +1,8 @@
+import React from 'react';
+
 import {formatAccuracy, getResultsByGrade} from '../helpers/accuracy';
 import {deepEqual, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 
 import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
@@ -8,13 +11,14 @@ import ResultsToggle from './ResultsToggle';
 import styles from './resultsDetails.module.scss';
 
 const ResultsDetails = () => {
-  const currentResult = useAppSelector(state => state.historicResults[0]);
+  const {project} = useProject();
+  const currentResult = project.historicResults[0];
   const hasPredictions = useAppSelector(
-    state => state.accuracyCheckPredictedLabels.length > 0,
+    state => state.accuracyCheckPredictedLabels.length > 0
   );
   const results = useAppSelector(
-    state => getResultsByGrade(state, state.resultsTab),
-    deepEqual,
+    state => getResultsByGrade(state, project, state.resultsTab),
+    deepEqual
   );
 
   return (

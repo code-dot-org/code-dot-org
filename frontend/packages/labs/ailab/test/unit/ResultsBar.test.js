@@ -1,32 +1,17 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import I18n from '../../src/i18n';
-import {setHistoricResult} from '../../src/redux';
 import ResultsBar from '../../src/UIComponents/ResultsBar';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders} from './renderWithProviders';
 
 function renderBar(results) {
-  const store = levelStore();
-  results.forEach(({label, features, accuracy}) =>
-    store.dispatch(setHistoricResult(label, features, accuracy)),
-  );
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(ResultsBar),
-      ),
-    ),
-  );
+  renderWithProviders(createElement(ResultsBar), {
+    store: levelStore(),
+    project: {...levelProject(), historicResults: [...results].reverse()},
+  });
 }
 
 function allResultsButton() {
@@ -59,7 +44,7 @@ describe('ResultsBar', () => {
 
     expect(screen.getByText('Predict legs based on animal')).toBeTruthy();
     expect(
-      screen.getByRole('button', {name: 'View 80% Accuracy details'}),
+      screen.getByRole('button', {name: 'View 80% Accuracy details'})
     ).toBeTruthy();
   });
 
@@ -74,7 +59,7 @@ describe('ResultsBar', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
 
     fireEvent.click(
-      screen.getByRole('button', {name: 'View 80% Accuracy details'}),
+      screen.getByRole('button', {name: 'View 80% Accuracy details'})
     );
 
     expect(selectedTab()).toBe('Scorecard');
@@ -88,7 +73,7 @@ describe('ResultsBar', () => {
     fireEvent.click(allResultsButton());
 
     expect(document.activeElement).toBe(
-      screen.getByRole('tab', {name: 'All results'}),
+      screen.getByRole('tab', {name: 'All results'})
     );
   });
 
@@ -104,11 +89,11 @@ describe('ResultsBar', () => {
     expect(selectedTab()).toBe('All results');
     const [current, previous] = screen.getAllByRole('table');
     expect(
-      within(current).getByRole('columnheader', {name: 'Current'}),
+      within(current).getByRole('columnheader', {name: 'Current'})
     ).toBeTruthy();
     expect(modelRows(current)).toEqual([expect.stringContaining('70%')]);
     expect(
-      within(previous).getByRole('columnheader', {name: 'Previous'}),
+      within(previous).getByRole('columnheader', {name: 'Previous'})
     ).toBeTruthy();
     expect(modelRows(previous)).toEqual([
       expect.stringContaining('60%'),
