@@ -1,5 +1,6 @@
 class ChallengeResponsesController < ApplicationController
   before_action :authenticate_user!
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   # `create` builds the response and its nested assets by hand, so skip
   # CanCanCan's automatic resource loading for it (it would otherwise try to
   # build ChallengeResponse from `challenge_response_params`, which includes the

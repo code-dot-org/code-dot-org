@@ -23,4 +23,15 @@ class QuizQuestionPlacement < ApplicationRecord
   default_scope {order(:page, :position)}
 
   validates :position, presence: true
+
+  after_commit :write_to_quiz_file!
+
+  def serializable_hash(options = nil)
+    super.except('id', 'level_id', 'quiz_question_id', 'created_at', 'updated_at').
+      merge('question_key' => quiz_question.key)
+  end
+
+  private def write_to_quiz_file!
+    level.with_lock {level.save!} if level.is_a?(Quiz) && !level.destroyed?
+  end
 end

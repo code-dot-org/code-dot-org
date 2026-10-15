@@ -140,6 +140,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     });
     const own = levelProperties.levelSystemPrompt;
     return {
+      // Default to pinning, but let the level override if needed.
+      showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
       longInstructions: instructions,

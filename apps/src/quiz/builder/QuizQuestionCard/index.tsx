@@ -1,14 +1,13 @@
-import Alert from '@code-dot-org/component-library/alert';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import isEqual from 'lodash/isEqual';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
+import BuilderCard from '../BuilderCard';
+import {QUESTION_TYPE_LABELS_ICONS} from '../constants';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
-  QuizQuestionEditableFields,
+  QuizQuestionDraft,
 } from '../types';
 
 import AnswersTab from './AnswersTab';
@@ -24,21 +23,26 @@ interface QuizQuestionCardProps {
   error?: string | null;
   onSave: (
     id: number,
-    payload: QuizQuestionEditableFields
+    payload: QuizQuestionDraft
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
 }
 
-function toEditableFields(
-  question: QuizBuilderQuestion
-): QuizQuestionEditableFields {
-  return {
+function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
+  const shared = {
     questionName: question.questionName,
     questionTitle: question.questionTitle,
-    choices: question.choices,
-    correctChoiceId: question.correctChoiceId,
+    description: question.description,
     explanation: question.explanation,
   };
+  return question.type === 'MultipleChoiceQuestion'
+    ? {
+        ...shared,
+        type: question.type,
+        choices: question.choices,
+        correctChoiceId: question.correctChoiceId,
+      }
+    : {...shared, type: question.type};
 }
 
 // One row of the quiz outline. Collapsed, it's a read-only preview; expanded,
@@ -52,22 +56,32 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   onSave,
   onRemove,
 }) => {
-  const [draft, setDraft] = useState(() => toEditableFields(question));
+  const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
+  const nameFieldRef = useRef<HTMLInputElement>(null);
   const isBusy = isSaving || isRemoving;
   // A pending question (see isPendingQuestionId) doesn't exist on the
   // server yet, so it counts as dirty even untouched - otherwise Save
   // would start out disabled with nothing to enable it.
   const isDirty =
-    isPendingQuestionId(question.id) ||
-    !isEqual(draft, toEditableFields(question));
+    isPendingQuestionId(question.id) || !isEqual(draft, toDraft(question));
 
   // A save can fork the question into a new id (see
   // useQuizBuilderQuestions#saveQuestion) - resync the draft whenever the
   // identity of the question this card is editing changes.
+  // Picking a type in the create dropdown disables or unmounts it, so
+  // focus moves to new question's first field.
   useEffect(() => {
-    setDraft(toEditableFields(question));
+    if (isPendingQuestionId(question.id) && isExpanded) {
+      nameFieldRef.current?.focus();
+    }
+    // Mount only: a later expand of an existing card shouldn't steal focus.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    setDraft(toDraft(question));
   }, [question]);
 
   const handleSave = async () => {
@@ -80,7 +94,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   };
 
   const handleDiscard = () => {
-    setDraft(toEditableFields(question));
+    setDraft(toDraft(question));
   };
 
   const handleRemove = async () => {
@@ -90,138 +104,56 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.headerPreview}>
-          <FontAwesomeV6Icon
-            iconName="list-check"
-            className={styles.typeIcon}
-          />
-          <Typography variant="strong" component="span">
-            {draft.questionName}
-          </Typography>
-          <Typography
-            variant="body3"
-            component="span"
-            className={styles.questionTitlePreview}
-          >
-            {draft.questionTitle}
-          </Typography>
-        </div>
-        {isDirty && (
-          <Tooltip title="Unsaved changes">
-            <div className={styles.unsavedBadge} aria-label="Unsaved changes">
-              <FontAwesomeV6Icon
-                iconName="triangle-exclamation"
-                iconStyle="solid"
+    <BuilderCard
+      iconName={QUESTION_TYPE_LABELS_ICONS[question.type].iconName}
+      name={draft.questionName}
+      preview={draft.questionTitle}
+      itemLabel="question"
+      isExpanded={isExpanded}
+      onExpandedChange={onExpandedChange}
+      isDirty={isDirty}
+      isSaving={isSaving}
+      isRemoving={isRemoving}
+      error={error}
+      onSave={handleSave}
+      onDiscard={handleDiscard}
+      onRemove={handleRemove}
+    >
+      <Tabs
+        name={`question-${question.id}-tabs`}
+        defaultSelectedTabValue="question"
+        tabsContainerClassName={styles.tabsRow}
+        tabPanelsContainerClassName={styles.tabPanels}
+        size="s"
+        tabs={[
+          {
+            value: 'question',
+            text: 'Question',
+            tabContent: (
+              <QuestionTab
+                draft={draft}
+                onChange={setDraft}
+                disabled={isBusy}
+                nameFieldRef={nameFieldRef}
               />
-            </div>
-          </Tooltip>
-        )}
-        <IconButton
-          aria-label={isExpanded ? 'Collapse question' : 'Edit question'}
-          size="extraSmall"
-          variant="outlined"
-          color="secondary"
-          type="button"
-          onClick={() => onExpandedChange(!isExpanded)}
-        >
-          <FontAwesomeV6Icon
-            iconName={isExpanded ? 'chevron-up' : 'chevron-down'}
-          />
-        </IconButton>
-      </div>
-
-      {isExpanded && (
-        <>
-          <Tabs
-            name={`question-${question.id}-tabs`}
-            defaultSelectedTabValue="question"
-            tabsContainerClassName={styles.tabsRow}
-            tabPanelsContainerClassName={styles.tabPanels}
-            tabs={[
-              {
-                value: 'question',
-                text: 'Question',
-                tabContent: (
-                  <QuestionTab
-                    draft={draft}
-                    onChange={setDraft}
-                    disabled={isBusy}
-                  />
-                ),
-              },
-              {
-                value: 'answers',
-                text: 'Answers',
-                tabContent: (
-                  <AnswersTab
-                    draft={draft}
-                    onChange={setDraft}
-                    disabled={isBusy}
-                  />
-                ),
-              },
-              {
-                value: 'usage',
-                text: 'Usage',
-                tabContent: <UsageTab question={question} />,
-              },
-            ]}
-            onChange={() => {}}
-          />
-
-          {error && (
-            <Alert
-              type="danger"
-              size="xs"
-              text={error}
-              className={styles.saveError}
-            />
-          )}
-
-          <div className={styles.footer}>
-            <Button
-              variant="outlined"
-              color="error"
-              size="extraSmall"
-              type="button"
-              disabled={isBusy}
-              loading={isRemoving}
-              onClick={handleRemove}
-            >
-              Remove from quiz
-            </Button>
-            <div className={styles.footerActions}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                onClick={handleDiscard}
-              >
-                Discard changes
-              </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                loading={isSaving}
-                onClick={handleSave}
-                startIcon={
-                  <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
-                }
-              >
-                Save
-              </Button>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
+            ),
+          },
+          {
+            value: 'answers',
+            text: 'Answers',
+            tabContent: (
+              <AnswersTab draft={draft} onChange={setDraft} disabled={isBusy} />
+            ),
+          },
+          {
+            value: 'usage',
+            text: 'Usage',
+            tabContent: <UsageTab question={question} />,
+          },
+        ]}
+        onChange={() => {}}
+      />
+    </BuilderCard>
   );
 };
 

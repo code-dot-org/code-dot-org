@@ -6,7 +6,12 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import {isPanelEnabled} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setCurrentPanel} from '../redux';
+import {useProject} from '../ProjectContext';
+import {
+  getHideDatasetView,
+  getHideTestingView,
+  setCurrentPanel,
+} from '../redux';
 
 import styles from './workspaceHeader.module.scss';
 
@@ -22,7 +27,13 @@ interface WorkspaceHeaderProps {
 const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
   const dispatch = useAppDispatch();
   const currentPanel = useAppSelector(state => state.currentPanel);
-  const canTest = useAppSelector(state => isPanelEnabled(state, 'results'));
+  const showsOneView = useAppSelector(
+    state => getHideDatasetView(state) || getHideTestingView(state),
+  );
+  const {project} = useProject();
+  const canTest = useAppSelector(state =>
+    isPanelEnabled(state, project, 'results'),
+  );
   const openTab = TABS.find(tab => tab.panel === currentPanel);
 
   const onTabChange = (value: string) => {
@@ -34,7 +45,7 @@ const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
 
   return (
     <div className={styles.header}>
-      {openTab && (
+      {openTab && !showsOneView && (
         <Tooltip
           title={
             canTest ? undefined : 'Train the model on these columns to test it'

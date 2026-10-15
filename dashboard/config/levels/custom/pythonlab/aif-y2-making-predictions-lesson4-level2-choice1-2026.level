@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T17:55:13.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Cookie Bakery",
+    "long_instructions": "You are running a cookie bakery and are trying to predict how big cookies will be (in centimeters) based on the amount of butter you use and the number of minutes you let the dough chill.\r\n\r\nYou have built two linear regression models trained on different datasets. You’d like to test to see which one performs the best on your test data.\r\n\r\n**☑️ Do This:**\r\n\r\n1. The code currently has Model 1 make predictions for each of the test inputs. Update the code so that Model 2 also makes predictions for each of the test inputs.\r\n2. Calculate the mean squared error for each model. In other words, for each model, calculate the loss by comparing its predictions for the test data against the actual outputs for the test data.\r\n3. Print the mean squared error for each model so that you can compare them.",
+    "bubble_choice_description": "Help a cookie bakery test the performance of a model for predicting cookie size.",
+    "thumbnail_url": "https://images.code.org/7bc05c8e22560fa3c630d2c7d863df14-cookies.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Input features: [grams of butter, minutes chilled]\ninputs1 = [[40, 10], [60, 30], [80, 15], [100, 45], [45, 60]]\ninputs2 = [[50, 15], [70, 35], [55, 55], [95, 25], [85, 70]]\n\n# Output feature: cookie size\noutputs1 = [6.3, 7.4, 9.2, 10.1, 5.7]\noutputs2 = [10.2, 8.6, 6.6, 9.7, 5.6]\n\n# First model\nmodel1 = LinearRegression()\nmodel1.fit(inputs1, outputs1)\n\n# Second model\nmodel2 = LinearRegression()\nmodel2.fit(inputs2, outputs2)\n\n# Test data\ntest_inputs = [[100, 70], [40, 0], [95, 55], [50, 5], [110, 65]]\ntest_outputs = [5.9, 11.2, 7.0, 10.8, 6.3]\n\npredictions1 = model1.predict(test_inputs)\n# TODO 1: Have model 2 predict outputs for each of the test inputs\n\n# TODO 2: Calculate mean squared error for each model\n# TODO 3: Print the mean squared error for each model",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqAHLlcPPB3Fw8Q\n2F0WG16OYpDgvYSRz1d0fSV9evZFP/VV2eCT2m+hSVpr4bgEQfOHpqEbQ+i6\nVBl0uBj0toExfQkTz7mq7BJcp/4OT01WYRwB6hUgNCc03a+oEFPanGtf1MIt\nR6tVH5bJcyWNUzEDMR4Z79Sa9YioQIvxLsFbTE+spT/c8xbAolK/4jgMV6ov\nLWTF6YUU1SL55fxCFRZNxZv8a8dCvUej62rbwwgIcRT8k0k6CD+px8CcflQj\nPrGZSylHacopntTkTybhazRNNxLubMLYvjYXm2aSxQE8pyxC8Yxe2Vpr7WhR\niq79KBNvlz6PAMdpri0tYYtmGOjcZks2XKUuqUSDDc+7xtD354adH4vHntCA\nmSJ2GMFm9AJ4UJ7BbyYbhGuxzHZY9EtwcGitVCsHryl32UeWdWANkbKXALmp\nNZt5Mc0XsJsDGXSThhstuqgw7TVaGlCAfbL/uoQHNRVXbIJqRSHBLFJ263/B\nUH6NYqHjOexI2wijKSaEK3LTf6SgiizluMBBfQKo6A3RQRMxOeAqsqmAdyOw\nS3kmn/3xj1dweHpz3S+shtfuHY8EraQx6NDxGbnR8+yKE3gxjclHdtweZmQW\nsLh+Daf01d5XQlCPIqC78+1oaJ7XcX+WRS7mY/rNQThGhD+BLbCVgGMsdhU/\nkv+0AVbsYtRmBHZJ14m11xJisNS/uZYGn2C8YeYcdcWJbnb3M7U8/L3EDQnl\nxDVKF7uZ/+N3BtaOrNeGDm44c37ssmM8xgEL+2SCPnsAJtI6C9h/nrvYs0uI\nNxOHgq1uV8MaFXQFuTklyqUqaJEyRMA+wWpyUprkHEjMsHUMJIoA+NvH1/c+\nDZNxNxZD5nLolr3O4YawEUtRI5BVHV0UtWgOjYsYsa/y7BrcX+2KtXZoLmdJ\nvpomW1JEZKlcuED6LpXzLuZ+Nmb6CVO3W/gsvI+b4hS4ZiuJyJGyhqKieT0c\nCswFwlnPiIH9/czGNTt+halAnfmzVt6pgvNJ7OzeM472o12EWmwoKMkwSxon\nkGsCAD7mm/Z5afatgmIOMpgK5wSGP22MdJUTsEK1ZYXn3/Q6bdPr94VxrbIn\nWVteyf+YtGbjjcCr9BU9QxZYL6YArNcb/N/QPq47Iaym0QFGzWGamzv+/j59\nEd8jlHKv8EJVhCCWf0dUlLIdar663BTqgk6t7Avwpf66IhE/lQYexmBejdsU\n12rJ0mP7LBFbZ5ymtMG6Dfkxz4WJTfTRYClzE2WkWcxq4E8jtboCf86av+cZ\ndwZxdFjtM+UhREUdNh3L0usQTc9xJOZF40mp+FV9JNv06qc1J2zfzcsZAEqx\nwRp+VbX2jne+d8rs9u8VcDXQWa8NKmvndbyLQm0H2Y6HjQC3VFcHPknjoHqb\nDo4VTIdxJU4mN9PIb+JCCohO1IiIkBUt+py1GCbgRenKxmTRUyNm2CY61oBh\n3/pegoab1v4MBwWad402Dhhk9Ns2Uc2eyARfJcTq\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 17:55:33 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 17:55:42 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

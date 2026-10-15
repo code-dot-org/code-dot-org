@@ -36,9 +36,9 @@ describe('getDisplayTree on shipped datasets', () => {
   ])(
     'every row of %s follows the labels down the model route to its answer',
     (id, options) => {
-      const state = trainDataset(id, options);
-      const tree = getDisplayTree(state);
-      const traces = rowTraces(state);
+      const {state, project, trainedModel} = trainDataset(id, options);
+      const tree = getDisplayTree(state, project, trainedModel);
+      const traces = rowTraces(state, project, trainedModel);
 
       expect(tree).toBeDefined();
       expect(countQuestions(tree)).toBeGreaterThan(0);
@@ -46,16 +46,19 @@ describe('getDisplayTree on shipped datasets', () => {
         traces.map(trace => trace.path),
       );
       expect(traces.map(trace => trace.prediction)).toEqual(
-        modelPredictions(state),
+        modelPredictions(state, project, trainedModel),
       );
     },
   );
 
   test('a KNN model has no display tree', () => {
-    const state = trainDataset('zoo', {label: 'Class', mode: {}});
+    const {state, project, trainedModel} = trainDataset('zoo', {
+      label: 'Class',
+      mode: {},
+    });
 
-    expect(state.trainedModel).toBeDefined();
-    expect(getDisplayTree(state)).toBeUndefined();
+    expect(trainedModel).toBeDefined();
+    expect(getDisplayTree(state, project, trainedModel)).toBeUndefined();
   });
 });
 

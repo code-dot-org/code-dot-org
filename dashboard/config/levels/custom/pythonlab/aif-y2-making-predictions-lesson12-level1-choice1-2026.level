@@ -1,0 +1,58 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T23:32:47.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Look at the data given to you in `fishing.csv`.\r\n- Run the program to visualize this data in `matplotlib`. The program is already written for you.\r\n- In your Project Planning Guide, respond to the questions in **Step 3: Visualizing Your Problem**.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nimport matplotlib.pyplot as plt\n\n# Data\nwith open(\"fishing.csv\") as f:\n  data = list(csv.DictReader(f))\n\ntimes = [\"dawn\", \"midday\", \"dusk\"]\n\n# Styling\nplt.rcParams.update({\"font.size\": 11, \"figure.dpi\": 140})\nstyles = {\n  \"caught\": {\n    \"marker\": \"o\",\n    \"color\": \"#0072B2\",\n    \"label\": \"Caught\"\n  },\n  \"not caught\": {\n    \"marker\": \"^\",\n    \"color\": \"#E69F00\",\n    \"label\": \"Not Caught\"\n  },\n}\n\n# Plotting\nfigure, axes_list = plt.subplots(\n  3,\n  1,\n  figsize=(6, 12),\n  sharex=True,\n  sharey=True\n)\n\nfor axes, time_of_day in zip(axes_list, times):\n  subset = [row for row in data if row[\"time-of-day\"] == time_of_day]\n\n  for outcome, style in styles.items():\n    x = [float(row[\"temp\"]) for row in subset if row[\"outcome\"] == outcome]\n    y = [\n      float(row[\"turbidity\"]) for row in subset if row[\"outcome\"] == outcome\n    ]\n    axes.scatter(\n      x,\n      y,\n      marker=style[\"marker\"],\n      color=style[\"color\"],\n      s=55,\n      edgecolors=\"black\",\n      linewidths=0.5,\n      label=style[\"label\"],\n    )\n\n  axes.set_title(f\"{time_of_day.title()} (n={len(subset)})\")\n  axes.set_ylabel(\"Turbidity (NTU)\")\n  axes.grid(True, linestyle=\":\", alpha=0.6)\n\naxes_list[-1].set_xlabel(\"Water Temperature (℉)\")\naxes_list[0].legend(title=\"Outcome\", loc=\"upper right\")\n\nfigure.suptitle(\"Bass Fishing\")\nfigure.tight_layout()\nplt.show()\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "fishing.csv",
+          "contents": "temp,turbidity,time-of-day,outcome\n80.9,26.5,dusk,caught\n63.8,59.2,midday,not caught\n73.4,8.3,midday,caught\n63.6,9.4,dawn,caught\n71.1,15.6,midday,caught\n68.7,30.0,dusk,caught\n64.2,3.7,dawn,caught\n69.3,17.3,midday,caught\n77.3,4.9,dawn,caught\n61.4,3.3,dawn,caught\n60.4,39.8,dusk,caught\n55.6,8.4,dusk,not caught\n74.7,23.1,dusk,caught\n81.3,4.2,dawn,caught\n61.9,15.5,midday,not caught\n62.0,53.7,dusk,not caught\n67.5,20.7,dawn,caught\n51.2,46.0,dawn,not caught\n53.9,42.6,midday,not caught\n74.8,50.4,dusk,not caught\n68.0,1.1,dusk,caught\n67.5,7.6,midday,caught\n71.9,43.2,dawn,not caught\n67.9,24.2,dusk,caught\n66.8,7.7,dawn,caught\n61.4,24.4,dusk,not caught\n59.1,51.0,midday,not caught\n64.5,10.4,dawn,caught\n74.6,85.6,dawn,not caught\n51.3,14.0,midday,not caught\n60.0,1.3,dawn,not caught\n79.0,8.3,dusk,caught\n53.7,1.1,dusk,not caught\n61.3,11.3,dusk,caught\n58.0,55.3,dusk,not caught\n58.2,15.8,midday,not caught\n66.2,9.6,dusk,caught\n79.9,26.5,dawn,caught\n53.0,70.4,midday,not caught\n79.4,49.4,dusk,not caught\n69.9,3.3,dawn,caught\n70.6,9.0,dusk,caught\n56.4,35.4,midday,not caught\n52.8,8.2,midday,not caught\n69.3,95,midday,not caught\n75.8,8.4,dawn,caught\n69.4,1.5,midday,caught\n70.4,23.3,midday,caught\n64.5,59.6,dusk,not caught\n74.4,8.6,dawn,caught\n74.8,69.4,dusk,not caught\n57.1,6.8,dawn,not caught\n61.2,17.6,dawn,caught\n77.8,30.1,dusk,caught\n82.4,90.9,midday,not caught\n56.0,33.5,dawn,not caught\n66.8,4.9,midday,caught\n70.9,18.0,dusk,caught\n59.4,5.9,midday,not caught\n68.7,3.0,dusk,caught\n67.4,26.1,dawn,caught\n74.3,8.7,midday,caught\n67.9,24.3,midday,caught\n68.2,1.5,dusk,caught\n70.9,82.1,midday,not caught\n87.0,42.1,dawn,not caught\n80.4,1.9,dusk,caught\n77.5,17.8,midday,caught\n54.0,7.7,dawn,not caught\n66.9,3.0,midday,caught\n61.8,1.0,dawn,caught\n82.2,21.9,midday,not caught\n80.3,8.8,dusk,caught\n55.6,6.9,dusk,not caught\n53.8,55.1,dawn,not caught\n72.2,31.0,dusk,caught\n68.1,36.2,dusk,caught\n62.6,35.8,dusk,caught\n82.9,49.8,dusk,not caught\n64.2,54.8,dusk,not caught\n60.2,42.5,midday,not caught\n74.4,4.9,dawn,caught\n75.8,27.2,dusk,caught\n68.8,33.6,midday,caught\n74.9,48.2,midday,not caught\n70.8,29.6,midday,caught\n52.5,48.4,dawn,not caught\n54.0,21.2,dusk,not caught\n75.5,12.3,midday,caught\n73.8,4.4,dawn,caught\n87.1,5.2,midday,not caught\n62.9,2.2,dusk,caught\n71.4,1.3,midday,caught\n84.7,12.4,midday,not caught\n60.5,46.3,midday,not caught\n57.5,13.7,dusk,not caught\n56.5,25.6,midday,not caught\n76.7,3.4,dawn,caught\n82.4,19.7,dawn,caught\n63.4,11.0,dusk,caught\n65.6,7.7,dawn,caught\n75.7,31.6,midday,caught\n81.0,17.9,midday,not caught\n80.2,18.2,midday,not caught\n71.9,27.4,dawn,caught\n62.6,9.7,midday,not caught\n78.0,8.5,midday,not caught\n64.6,1.7,dusk,caught\n58.2,40.2,dusk,not caught\n60.7,3.4,dawn,caught\n63.0,10.9,dusk,caught\n62.9,51.9,midday,not caught\n69.4,11.0,dawn,caught\n65.8,2.2,dawn,caught\n55.2,17.7,dawn,not caught\n66.1,12.2,dusk,caught\n62.5,1.6,midday,not caught\n68.0,42.8,dusk,not caught\n70.8,23.3,dawn,caught\n53.4,4.4,dusk,not caught\n76.7,29.3,midday,caught\n62.1,8.7,midday,not caught\n64.9,8.3,dawn,caught\n60.0,41.9,dawn,not caught\n59.6,35.0,dawn,not caught\n56.3,7.7,dawn,not caught\n42.0,6.6,dawn,not caught\n58.8,3.2,dawn,caught\n67.2,5.1,dusk,caught\n43.6,71.8,midday,not caught\n75.0,34.2,dusk,caught\n58.1,25.0,midday,not caught\n55.2,14.8,dawn,not caught\n67.2,24.4,midday,not caught\n61.1,3.0,dawn,caught\n72.4,7.6,midday,caught\n72.2,25.3,midday,caught\n55.7,11.0,midday,not caught\n55.4,13.3,dawn,not caught\n87.0,20.1,dusk,not caught\n65.7,13.5,dawn,caught\n66.3,48.4,midday,not caught\n51.4,7.5,dawn,not caught\n70.4,7.5,dusk,caught\n56.6,43.7,midday,not caught\n65.9,50.9,dawn,not caught\n67.0,9.1,midday,caught\n82.2,5.6,dawn,caught\n71.1,14.9,midday,caught\n71.9,74.2,dusk,not caught\n82.5,43.7,dawn,not caught\n73.4,9.9,dusk,caught\n67.0,3.3,dawn,caught\n69.0,26.5,dawn,caught\n67.3,3.3,dusk,caught\n64.9,16.2,midday,not caught\n58.7,31.9,midday,not caught\n75.5,28.1,midday,caught\n82.8,23.0,midday,not caught\n70.3,17.2,dawn,caught\n59.0,16.9,dawn,not caught\n62.8,15.5,midday,not caught\n72.9,5.6,midday,caught\n78.7,12.9,dawn,caught\n79.5,9.9,dusk,caught\n72.8,30.9,dawn,caught\n57.1,6.5,dawn,not caught\n64.3,19.2,dusk,caught\n66.0,13.0,dusk,caught\n64.1,6.1,dawn,caught\n70.0,95,midday,not caught\n63.4,4.0,dusk,caught\n78.9,3.1,dusk,caught\n78.1,9.5,dusk,caught\n60.5,43.2,dusk,not caught\n59.7,4.3,dawn,caught\n57.8,9.1,dusk,not caught\n59.1,15.5,midday,not caught\n75.4,41.0,dusk,not caught\n67.8,11.7,midday,caught\n60.9,50.0,dawn,not caught\n67.0,16.7,dawn,caught\n64.4,22.5,dawn,caught\n51.4,4.3,midday,not caught\n83.5,29.6,midday,not caught\n68.3,16.6,midday,caught\n63.3,50.5,dawn,not caught\n68.4,7.6,dawn,caught\n63.4,2.9,dawn,caught\n68.4,29.0,dawn,caught\n50.8,11.1,dawn,not caught\n63.8,7.6,dusk,caught\n69.9,81.4,dusk,not caught\n63.6,7.6,midday,not caught\n82.2,65.6,midday,not caught\n68.9,24.7,midday,caught\n82.8,9.2,midday,not caught\n81.3,34.2,dawn,caught\n71.9,55.6,dusk,not caught\n61.1,4.9,dusk,caught\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Fishing for Bass",
+    "thumbnail_url": "https://images.code.org/9fb03f3f3a4b51f3563859702c37fea0-fishing.jpg",
+    "bubble_choice_description": "Will the bass be out today?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 23:34:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:34:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:35:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:35:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:39:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:41:13 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:44:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:23:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-14 03:24:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-14 03:24:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-14 03:25:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

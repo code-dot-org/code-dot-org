@@ -67,6 +67,22 @@ describe('handleTheaterMedia', () => {
     expect(blobs.map(blob => blob.type)).toEqual(['image/gif', 'audio/wav']);
   });
 
+  it('sends the description ahead of the media when the package gave one', () => {
+    handleTheaterMedia(
+      new Uint8Array([1, 2, 3]),
+      undefined,
+      1000,
+      'Still picture.',
+      'Shapes: a red circle.'
+    );
+
+    expect(handleSignal).toHaveBeenCalledTimes(3);
+    expect(handleSignal).toHaveBeenNthCalledWith(1, {
+      value: TheaterSignalType.DESCRIPTION,
+      detail: {summary: 'Still picture.', transcript: 'Shapes: a red circle.'},
+    });
+  });
+
   it('does nothing when no theater is registered', () => {
     jest.spyOn(CodebridgeRegistry, 'getInstance').mockReturnValue({
       getTheater: () => null,

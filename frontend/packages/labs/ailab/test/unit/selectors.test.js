@@ -12,7 +12,12 @@ import {
   getSelectableColumns,
 } from '../../src/selectors';
 
-import {classificationState, allNumericalState} from './testData';
+import {
+  classificationState,
+  classificationProject,
+  allNumericalState,
+  allNumericalProject,
+} from './testData';
 
 describe('selecting columns by data type', () => {
   test('gets selected categorical features', async () => {
@@ -22,7 +27,7 @@ describe('selecting columns by data type', () => {
     expect(categoricalColumns).toEqual(['play', 'temp', 'weather']);
     const result = getSelectedCategoricalFeatures.resultFunc(
       categoricalColumns,
-      classificationState.selectedFeatures,
+      classificationProject.selectedFeatures,
     );
     expect(result).toEqual(['temp', 'weather']);
   });
@@ -34,7 +39,7 @@ describe('selecting columns by data type', () => {
     expect(numericalColumns).toEqual(['batCount', 'mosquitoCount']);
     const result = getSelectedNumericalFeatures.resultFunc(
       numericalColumns,
-      allNumericalState.selectedFeatures,
+      allNumericalProject.selectedFeatures,
     );
     expect(result).toEqual(['batCount']);
   });
@@ -46,8 +51,8 @@ describe('getting category options', () => {
       .resultFunc(classificationState.columnsByDataType)
       .sort();
     const selectedColumns = getSelectedColumns.resultFunc(
-      classificationState.selectedFeatures,
-      classificationState.labelColumn,
+      classificationProject.selectedFeatures,
+      classificationProject.labelColumn,
     );
     const selectedCategoricalColumns = getSelectedCategoricalColumns.resultFunc(
       categoricalColumns,
@@ -73,8 +78,8 @@ describe('getting extrema', () => {
       allNumericalState.columnsByDataType,
     );
     const selectedColumns = getSelectedColumns.resultFunc(
-      allNumericalState.selectedFeatures,
-      allNumericalState.labelColumn,
+      allNumericalProject.selectedFeatures,
+      allNumericalProject.labelColumn,
     );
     const selectedNumericalColumns = getSelectedNumericalColumns.resultFunc(
       numericalColumns,
