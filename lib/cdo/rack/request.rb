@@ -118,8 +118,7 @@ module Cdo
     #
     # @return [String] the anonymous (signed-out) user ID in UUID v4 format
     def statsig_stable_id
-      @statsig_stable_id ||=
-        existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
+      existing_statsig_stable_id || (session[SharedConstants::STATSIG_STABLE_ID_KEY] = Cdo::AnonUserId.generate)
     end
 
     # Anonymous (signed-out) user ID for our own records, such as anonymous level progress.

@@ -1106,6 +1106,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset for hoc when not logged in clears client state and redirects back through /hoc/1" do
+    anon_user_id = request.anon_user_id
+    assert_match Cdo::AnonUserId::FORMAT, anon_user_id
+
     create_hourofcode_unit_and_levels
     script_level = create(:script_level)
     create(:anonymous_level_progress, anon_user_id: request.anon_user_id, script: script_level.script, level: script_level.level, best_result: 10)
@@ -1118,7 +1121,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # build_script_level_path, not the /s/ form.
     assert_equal '/hoc/1', assigns(:redirect_path)
 
-    assert_nil session[:statsig_stable_id]
+    refute_equal anon_user_id, request.anon_user_id
     refute session['warden.user.user.key']
   end
 
@@ -1130,6 +1133,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should reset session when not logged in" do
+    anon_user_id = request.anon_user_id
+    assert_match Cdo::AnonUserId::FORMAT, anon_user_id
+
     script_level = create(:script_level)
     create(:anonymous_level_progress, anon_user_id: request.anon_user_id, script: script_level.script, level: script_level.level, best_result: 10)
     assert_equal 10, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
@@ -1139,7 +1145,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response 200
 
-    assert_nil session[:statsig_stable_id]
+    refute_equal anon_user_id, request.anon_user_id
     refute session['warden.user.user.key']
   end
 
@@ -1180,6 +1186,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset resets for custom scripts" do
+    anon_user_id = request.anon_user_id
+    assert_match Cdo::AnonUserId::FORMAT, anon_user_id
+
     script_level = create(:script_level)
     create(:anonymous_level_progress, anon_user_id: request.anon_user_id, script: script_level.script, level: script_level.level, best_result: 10)
     assert_equal 10, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
@@ -1187,8 +1196,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :reset, params: {course_course_name: 'laurel', unit_position: 1}
     assert_response 200
 
-    assert_nil session[:statsig_stable_id]
+    refute_equal anon_user_id, request.anon_user_id
     refute session['warden.user.user.key']
+  end
+
+  test "reset clears anonymous user ID from Statsig cookie when not logged in" do
+    anon_user_id = Cdo::AnonUserId.generate
+    request.cookies[Cdo::AnonUserId::KEY] = anon_user_id
+
+    script_level = create(:script_level)
+    create(:anonymous_level_progress, anon_user_id:, script: script_level.script, level: script_level.level, best_result: 10)
+    assert_equal 10, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
+
+    get :reset, params: {course_course_name: 'laurel', unit_position: 1}
+    assert_response 200
+
+    assert_includes response.header['Set-Cookie'], "#{Cdo::AnonUserId::KEY}=;"
+    refute_equal anon_user_id, request.anon_user_id
+    @client_state = nil # `get` replaced `request`, so rebuild the client state on the new one
+    assert_equal 0, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
   end
 
   test "reset redirects for custom scripts for signed in users" do

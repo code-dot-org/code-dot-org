@@ -78,4 +78,21 @@ describe Cdo::AnonUserId do
       end
     end
   end
+
+  describe '.clear' do
+    let(:anon_user_id) {Cdo::AnonUserId.generate}
+    let(:cookies) {{Cdo::AnonUserId::KEY => anon_user_id}}
+    let(:session) {{Cdo::AnonUserId::KEY => anon_user_id}}
+    let(:cookie_jar) {mock('cookie_jar')}
+    let(:request) {stub(cookies:, cookie_jar:, session:)}
+
+    it 'deletes anonymous user ID from cookies and session' do
+      cookie_jar.expects(:delete).with(Cdo::AnonUserId::KEY, domain: :all)
+
+      Cdo::AnonUserId.clear(request)
+
+      _(cookies).wont_include Cdo::AnonUserId::KEY
+      _(session).wont_include Cdo::AnonUserId::KEY
+    end
+  end
 end

@@ -1,3 +1,5 @@
+require 'cdo/anon_user_id'
+
 # A class for reading and writing application state for signed-out users.
 # Level progress comes from AnonymousLevel::Progress records; the rest lives in the session.
 class ClientState
@@ -9,8 +11,9 @@ class ClientState
     @request = request
   end
 
-  # Resets all client state (videos seen, etc.)
+  # Resets all client state (anonymous user ID, videos seen, etc.)
   def reset
+    Cdo::AnonUserId.clear(request)
     session[:videos_seen] = nil
     session[:callouts_seen] = nil
   end

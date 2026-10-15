@@ -189,17 +189,6 @@ class RequestTest
       end
     end
 
-    def test_statsig_stable_id_is_memoized
-      session = {}
-      request = MockRequest.new(session)
-      stable_id = request.statsig_stable_id
-      session.expects(:[]).never
-      session.expects(:[]=).never
-
-      assert_equal stable_id, request.statsig_stable_id
-      assert_equal stable_id, request.anon_user_id
-    end
-
     def test_statsig_stable_id_uses_session_for_blank_cookie
       session_id = SecureRandom.uuid
       session = {SharedConstants::STATSIG_STABLE_ID_KEY => session_id}
@@ -243,6 +232,26 @@ class RequestTest
         assert_equal stable_id, request.anon_user_id
         assert_equal stable_id, MockRequest.new(session).statsig_stable_id
       end
+    end
+
+    def test_anon_user_id_is_new_after_clear
+      anon_user_id = Cdo::AnonUserId.generate
+      cookies = {Cdo::AnonUserId::KEY => anon_user_id}
+      session = {Cdo::AnonUserId::KEY => anon_user_id}
+      cookie_jar = mock('cookie_jar')
+      cookie_jar.expects(:delete).with(Cdo::AnonUserId::KEY, domain: :all)
+      request = MockRequest.new(session)
+      request.stubs(:cookies).returns(cookies)
+      request.stubs(:cookie_jar).returns(cookie_jar)
+      assert_equal anon_user_id, request.anon_user_id
+
+      Cdo::AnonUserId.clear(request)
+      refute cookies.key?(Cdo::AnonUserId::KEY)
+      refute session.key?(Cdo::AnonUserId::KEY)
+
+      new_id = request.anon_user_id
+      assert_match Cdo::AnonUserId::FORMAT, new_id
+      refute_equal anon_user_id, new_id
     end
 
     def test_anon_user_id_replaces_invalid_session_value
