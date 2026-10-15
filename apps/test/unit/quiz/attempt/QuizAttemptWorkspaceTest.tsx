@@ -818,6 +818,31 @@ describe('QuizAttemptWorkspace', () => {
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
+  it('finishes the attempt only once when Submit is clicked again while submitting', async () => {
+    const pendingWrite = deferred<void>();
+    const submitQuestionResponse = jest
+      .fn()
+      .mockReturnValue(pendingWrite.promise);
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+      quizQuestions: [question({id: 5})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/}));
+    const submitButton = screen.getByRole('button', {name: /Submit|Finish/});
+    fireEvent.click(submitButton);
+    fireEvent.click(submitButton);
+    expect(submitButton).toHaveAttribute('aria-disabled', 'true');
+
+    pendingWrite.resolve();
+    await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
+    await waitFor(() =>
+      expect(submitButton).toHaveAttribute('aria-disabled', 'false')
+    );
+    expect(finishAttempt).toHaveBeenCalledTimes(1);
+  });
+
   it('does not render the footer outside of an in-progress attempt', () => {
     renderWorkspace({
       hookState: {
@@ -1287,6 +1312,38 @@ describe('QuizAttemptWorkspace', () => {
       expect(submitQuestionResponse).not.toHaveBeenCalledWith(9, {
         answerText: 'x > 3',
       });
+    });
+
+    it('locks answers while submitting, so the answer on screen at Submit is the one sent', async () => {
+      const choiceWrite = deferred<void>();
+      const submitQuestionResponse = jest
+        .fn()
+        .mockResolvedValueOnce(undefined) // answer text, on blur
+        .mockReturnValueOnce(choiceWrite.promise); // choice, still in flight
+      const finishAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+        quizQuestions: [question({id: 5}), FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+      // Submit is waiting on the choice write; no answer can change meanwhile.
+      expect(textbox).toBeDisabled();
+      expect(screen.getByRole('radio', {name: /5/})).toBeDisabled();
+      expect(finishAttempt).not.toHaveBeenCalled();
+
+      choiceWrite.resolve();
+      await waitFor(() =>
+        expect(finishAttempt).toHaveBeenCalledWith({
+          5: {selectedChoiceId: 'b'},
+          9: {answerText: 'x > 3'},
+        })
+      );
     });
 
     it('shows the submitted answer text in the results', () => {

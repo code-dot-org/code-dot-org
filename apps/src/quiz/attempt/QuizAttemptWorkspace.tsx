@@ -117,6 +117,11 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // Retake goes back through the intro screen rather than starting a new
   // attempt immediately.
   const [isRetakeIntroOpen, setIsRetakeIntroOpen] = useState(false);
+  // Answers are locked from the Submit click until it settles, so what was
+  // on screen at the click is what gets sent.
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  // State lags a render behind, so a fast second click checks this instead.
+  const isSubmittingRef = useRef(false);
   // One chained promise per question, so a rapid second pick waits for the
   // first write to settle instead of racing it, and finishAttempt can wait
   // for all of them before the server locks the attempt.
@@ -346,15 +351,25 @@ const QuizAttemptWorkspace: React.FunctionComponent<
 
   const handleNext = async () => {
     if (currentPageNumber >= totalPages) {
-      // Submit sends every answer itself, so unsent autosaves are dropped.
-      cancelAnswerAutosaves();
-      // Every answer must reach the server before it locks the attempt -
-      // otherwise a still-in-flight write loses the race and is recorded
-      // as skipped.
-      await Promise.allSettled(
-        Object.values(pendingWritesByQuestionIdRef.current)
-      );
-      await handleFinishAttempt();
+      if (isSubmittingRef.current) {
+        return;
+      }
+      isSubmittingRef.current = true;
+      setIsSubmitting(true);
+      try {
+        // Submit sends every answer itself, so unsent autosaves are dropped.
+        cancelAnswerAutosaves();
+        // Every answer must reach the server before it locks the attempt -
+        // otherwise a still-in-flight write loses the race and is recorded
+        // as skipped.
+        await Promise.allSettled(
+          Object.values(pendingWritesByQuestionIdRef.current)
+        );
+        await handleFinishAttempt();
+      } finally {
+        isSubmittingRef.current = false;
+        setIsSubmitting(false);
+      }
     } else {
       setCurrentPageNumber(currentPageNumber + 1);
     }
@@ -385,6 +400,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             onSelectChoice={choiceId =>
               handleSelectChoice(question.id, choiceId)
             }
+            disabled={isSubmitting}
           />
         );
       case 'FreeResponseQuestion':
@@ -399,6 +415,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               handleChangeAnswerText(question.id, answerText)
             }
             onBlur={() => handleBlurAnswerText(question.id)}
+            disabled={isSubmitting}
           />
         );
       default: {
@@ -564,6 +581,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           onNavigateToPage={setCurrentPageNumber}
           onNext={handleNext}
           finishButtonLabel={allowMultipleAttempts ? 'Finish' : 'Submit'}
+          isSubmitting={isSubmitting}
         />
       )}
     </div>

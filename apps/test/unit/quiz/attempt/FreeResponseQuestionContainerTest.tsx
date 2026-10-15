@@ -47,4 +47,17 @@ describe('FreeResponseQuestionContainer', () => {
     expect(onChangeAnswerText).toHaveBeenCalledWith('x');
     expect(onBlur).toHaveBeenCalledTimes(1);
   });
+
+  it('disables the textbox when disabled', () => {
+    render(
+      <FreeResponseQuestionContainer
+        question={QUESTION}
+        answerText="x > 3"
+        onChangeAnswerText={jest.fn()}
+        disabled
+      />
+    );
+
+    expect(screen.getByRole('textbox')).toBeDisabled();
+  });
 });

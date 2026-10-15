@@ -15,6 +15,7 @@ export interface FreeResponseQuestionContainerProps {
   onChangeAnswerText: (answerText: string) => void;
   onBlur?: () => void;
   headingRef?: React.Ref<HTMLHeadingElement>;
+  disabled?: boolean;
 }
 
 const FreeResponseQuestionContainer: React.FunctionComponent<
@@ -26,6 +27,7 @@ const FreeResponseQuestionContainer: React.FunctionComponent<
   onChangeAnswerText,
   onBlur,
   headingRef,
+  disabled,
 }) => (
   <AttemptCard
     label={questionLabel}
@@ -41,6 +43,7 @@ const FreeResponseQuestionContainer: React.FunctionComponent<
       value={answerText}
       onChange={e => onChangeAnswerText(e.target.value)}
       onBlur={onBlur}
+      disabled={disabled}
     />
   </AttemptCard>
 );
