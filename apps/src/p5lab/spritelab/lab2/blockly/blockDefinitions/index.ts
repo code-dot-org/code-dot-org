@@ -21,7 +21,9 @@ import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setWeather from './setWeather';
+import showChoices from './showChoices';
 import thePlayer from './thePlayer';
+import whenChoice from './whenChoice';
 import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -52,6 +54,8 @@ const labBlockDefinitions: {
   burst,
   thePlayer,
   placeholder,
+  showChoices,
+  whenChoice,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

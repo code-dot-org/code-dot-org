@@ -59,6 +59,9 @@ import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 const JUMP_EVENT_FRAMES = 4;
 const JUMP_IMPULSE_FRAMES = 8;
 
+// The player's choice, as a library event.
+const CHOICE_EVENT = 'choice';
+
 const NOOP = () => {};
 
 // How long a run waits for the project's images before going ahead without
@@ -171,6 +174,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // Fires with the words of a "show choices" block when it runs, and with
+    // null once the player picks one or a run starts; the pick comes back
+    // through chooseOption.
+    this.onChoicesWanted = null;
+    this.choicesWanted_ = null;
+    this.choiceMadeThisFrame_ = null;
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
@@ -326,8 +335,51 @@ export default class SpriteLab2Engine extends SpriteLab {
    * library per (re)run is also what clears background/input events between
    * scenes.
    */
+  /** The player picked this; the next frame's "when choice" handler for it
+      runs, and the choices go. */
+  chooseOption(choice) {
+    this.choiceMadeThisFrame_ = String(choice);
+    this.setChoicesWanted_(null);
+  }
+
+  setChoicesWanted_(choices) {
+    this.choicesWanted_ = choices;
+    if (this.onChoicesWanted) {
+      this.onChoicesWanted(choices);
+    }
+  }
+
+  // The choice blocks. "when choice" handlers are events the library runs
+  // each frame: the one for the picked word fires on the frame after the
+  // pick, on the interpreter's tick like every event.
+  installChoiceCommands_(library) {
+    library.commands.showChoices = choices => {
+      this.setChoicesWanted_(
+        Array.isArray(choices) && choices.length ? choices.map(String) : null
+      );
+    };
+    library.commands.whenChoice = (choice, callback) => {
+      library.addEvent(CHOICE_EVENT, {choice: String(choice)}, callback);
+    };
+    const callbackArgs = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent => {
+      if (inputEvent.type === CHOICE_EVENT) {
+        return this.choiceMadeThisFrame_ === inputEvent.args.choice ? [{}] : [];
+      }
+      return callbackArgs(inputEvent);
+    };
+    const runEvents = library.runEvents.bind(library);
+    library.runEvents = () => {
+      runEvents();
+      this.choiceMadeThisFrame_ = null;
+    };
+  }
+
   createLibrary(args) {
     const library = super.createLibrary(args);
+    this.choiceMadeThisFrame_ = null;
+    this.setChoicesWanted_(null);
+    this.installChoiceCommands_(library);
     // Fixed for the run: the scene type is set before the run begins.
     const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike

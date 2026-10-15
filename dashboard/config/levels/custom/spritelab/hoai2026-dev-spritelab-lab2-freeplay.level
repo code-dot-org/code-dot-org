@@ -239,6 +239,20 @@
               "type": "spritelab2_goToExternalScene"
             }
           ]
+        },
+        {
+          "kind": "category",
+          "name": "Choices",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_showChoices"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenChoice"
+            }
+          ]
         }
       ]
     },

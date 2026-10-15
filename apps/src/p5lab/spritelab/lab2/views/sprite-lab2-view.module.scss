@@ -951,3 +951,31 @@ $tab-segment-height: $tab-item-height - 2px;
   overflow: auto;
   background-color: var(--background-neutral-primary);
 }
+
+// The choices' strip over the foot of the game while playing.
+.playspaceInside {
+  position: absolute;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+  background: rgb(0 0 0 / 55%);
+}
+
+.choiceBar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.choiceButton {
+  min-width: 0;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
