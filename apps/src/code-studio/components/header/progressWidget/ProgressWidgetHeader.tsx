@@ -133,6 +133,9 @@ const ProgressWidgetHeader: React.FunctionComponent<
   const extrasUrl = useAppSelector((state: RootState) =>
     lessonExtrasUrl(state.progress, state.progress.currentLessonId)
   ) as string | undefined;
+  const currentPageNumber = useAppSelector(
+    (state: RootState) => state.progress.currentPageNumber
+  );
   const isLessonExtras = useAppSelector(
     (state: RootState) => state.progress.isLessonExtras
   );
@@ -204,7 +207,7 @@ const ProgressWidgetHeader: React.FunctionComponent<
   const bubbles = levels
     .filter(level => !level.bonus)
     .map((level, index) => {
-      const active = isActive(level);
+      const active = isActive(level, currentPageNumber);
       const navigatesInPage = canChangeLevelInPage(currentLevel, level);
       return (
         <ProgressBubble
