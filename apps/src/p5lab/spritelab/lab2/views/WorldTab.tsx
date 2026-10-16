@@ -5,8 +5,10 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {ImageType} from '../ai/images/types';
+import {imageTypeFromCategories} from '../imageGallery';
 import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
-import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
+import {BACKGROUNDS_CATEGORY} from '../types';
 import {createEmptyWorld, World, WorldCell} from '../world';
 
 import {PREVIEW_CLEARANCE} from './Playspace';
@@ -229,6 +231,12 @@ interface PaletteItem extends WorldCell {
   thumb?: string;
 }
 
+// The cell kind an image type places: tiles by their own kind, anything
+// else as a sprite.
+function cellKind(type: ImageType): Kind {
+  return type === 'block' || type === 'ladder' ? type : 'sprite';
+}
+
 // What the palette can choose: a placeable cell, or the eraser.
 type PaletteSelection = WorldCell | 'erase';
 
@@ -319,9 +327,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         .filter(props => !props.categories?.includes(BACKGROUNDS_CATEGORY))
         .map(props => ({
           image: props.name,
-          kind: props.categories?.includes(BLOCKS_CATEGORY)
-            ? ('block' as const)
-            : ('sprite' as const),
+          kind: cellKind(imageTypeFromCategories(props.categories)),
           thumb:
             getImageThumbnail(props.name) || props.dataURI || props.sourceUrl,
         })),
@@ -339,7 +345,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const lockedKinds = useMemo(() => {
     const offered = new Set(palette.map(item => item.kind));
     return new Set<Kind>(
-      (['block', 'sprite'] as const).filter(kind => !offered.has(kind))
+      (['block', 'sprite', 'ladder'] as const).filter(
+        kind => !offered.has(kind)
+      )
     );
   }, [palette]);
   // The palette plus Erase, in keyboard order. Placing one thing has no

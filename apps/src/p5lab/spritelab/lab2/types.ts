@@ -14,6 +14,8 @@ import {World} from './world';
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
 /** The category marking an image as a square tile for platform pieces. */
 export const BLOCKS_CATEGORY = 'blocks';
+/** The animation category that marks a climbable ladder tile. */
+export const LADDERS_CATEGORY = 'ladders';
 
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
 // `SerializedAnimationProps` typedef in p5lab/shapes.js (which is plain JS, so

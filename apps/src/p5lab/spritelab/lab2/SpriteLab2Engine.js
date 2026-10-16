@@ -42,6 +42,7 @@ import {
   CONTACT_EPSILON,
   hasSupportAhead,
   isAtEdge,
+  isOnLadder,
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
@@ -101,6 +102,8 @@ const PLATFORM_SCENE_MARKERS = [
   'setAsPlatformPlayer(',
   "'walls'",
 ];
+// The world prelude's ladder spawns: a scene with any has ladders to climb.
+const LADDER_SCENE_MARKER = "'ladders'";
 
 /**
  * Stand-in for the StudioApp singleton: exactly the members the classic
@@ -261,10 +264,16 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   // What the weather lands on this frame, on top of the view: the tiles,
-  // and every other sprite as a body.
+  // and every other sprite as a body. Ladders are open between their
+  // rungs, so nothing lands on them.
   weatherScene_(view) {
     const bodies = Object.values(this.library.nativeSpriteMap)
-      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
+      .filter(
+        sprite =>
+          sprite.group !== 'walls' &&
+          sprite.group !== 'ladders' &&
+          !sprite.removed
+      )
       .map(bodyBox);
     return {
       ...view,
@@ -508,13 +517,18 @@ export default class SpriteLab2Engine extends SpriteLab {
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player has footing.
+    const anyClimbing = () =>
+      library
+        .getSpriteArray({group: 'players'})
+        .some(sprite => sprite.__slab2Climbing);
+    // Jump against gravity if any player has footing or a ladder; a jump
+    // from a ladder lets go of it.
     library.commands.platformJump = speed => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group: 'players'}, isSupported)) {
+      if (!anyClimbing() && !footing({group: 'players'}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
@@ -528,6 +542,29 @@ export default class SpriteLab2Engine extends SpriteLab {
           y: sprite.position.y,
         });
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
+        if (sprite.__slab2Climbing) {
+          sprite.__slab2OffLadder = true;
+        }
+      });
+    };
+    library.commands.platformOnLadder = anyClimbing;
+    // The up and down arrows: steering at zero gravity, climbing on a
+    // ladder. Pressing them grabs a ladder the player overlaps, a jump off
+    // it included.
+    library.commands.platformClimb = (direction, speed) => {
+      const dy = (direction === 'up' ? -1 : 1) * Math.abs(Number(speed) || 0);
+      const p5 = this.p5Wrapper.p5;
+      const ladders = this.groupThisFrame_(library, 'ladders');
+      const view = {width: p5.width, height: p5.height};
+      library.getSpriteArray({group: 'players'}).forEach(sprite => {
+        if (
+          this.platformGravity_ === 0 ||
+          sprite.__slab2Climbing ||
+          isOnLadder(sprite, ladders, view, this.platformGravity_)
+        ) {
+          sprite.__slab2OffLadder = false;
+          sprite.position.y += dy;
+        }
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform
@@ -727,6 +764,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.onControlsChange({
         platformer: this.usesPlatformPhysics_ && this.isPlatformScene(),
         gravity: this.platformGravity_,
+        ladders: (this.userCode || '').includes(LADDER_SCENE_MARKER),
       });
     }
   }
@@ -1197,8 +1235,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       {group: 'walls'}
     );
     const walls = this.library.getSpriteArray({group: 'walls'});
+    const ladders = this.library.getSpriteArray({group: 'ladders'});
     const view = {width: p5.width, height: p5.height};
-    resolvePlatformPhysics(players, walls, view, this.platformGravity_);
+    resolvePlatformPhysics(
+      players,
+      walls,
+      view,
+      this.platformGravity_,
+      ladders
+    );
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
@@ -1239,21 +1284,26 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   // The walls, gathered once per frame — the footing commands ask several
-  // times a frame (behaviors run per sprite). Keyed on the library too, so
-  // a re-run's fresh library never reads the old scene's walls.
+  // times a frame (behaviors run per sprite).
   wallsThisFrame_(library) {
+    return this.groupThisFrame_(library, 'walls');
+  }
+
+  // A group's sprites, gathered once per frame. Keyed on the library too,
+  // so a re-run's fresh library never reads the old scene's sprites.
+  groupThisFrame_(library, group) {
     const p5 = this.p5Wrapper.p5;
     if (
-      this.wallsCache_?.frame !== p5.frameCount ||
-      this.wallsCache_.library !== library
+      this.groupCache_?.frame !== p5.frameCount ||
+      this.groupCache_.library !== library
     ) {
-      this.wallsCache_ = {
-        frame: p5.frameCount,
-        library,
-        walls: library.getSpriteArray({group: 'walls'}),
-      };
+      this.groupCache_ = {frame: p5.frameCount, library, groups: new Map()};
     }
-    return this.wallsCache_.walls;
+    const {groups} = this.groupCache_;
+    if (!groups.has(group)) {
+      groups.set(group, library.getSpriteArray({group}));
+    }
+    return groups.get(group);
   }
 
   // Marked sprites keep a little downward pull at zero gravity, so
@@ -1343,6 +1393,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.characterState ||
         (sprite.characterState = {
           x: sprite.position.x,
+          y: sprite.position.y,
           facing: sprite.startFacing || 'right',
           key: null,
           tick: 0,
@@ -1350,13 +1401,19 @@ export default class SpriteLab2Engine extends SpriteLab {
           teetering: false,
         });
       const dx = sprite.position.x - state.x;
+      const dy = sprite.position.y - state.y;
       state.x = sprite.position.x;
+      state.y = sprite.position.y;
       state.facing = nextFacing(state.facing, dx);
-      const moving = isMoving(dx);
       const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      // Climbing shows the walk, up or down as well as across.
+      const climbing = player && !!sprite.__slab2Climbing;
+      const moving = isMoving(dx) || (climbing && isMoving(dy));
       const airborne =
-        player && !isSupported(sprite, walls, view, this.platformGravity_);
-      if (moving || airborne) {
+        player &&
+        !climbing &&
+        !isSupported(sprite, walls, view, this.platformGravity_);
+      if (moving || airborne || climbing) {
         state.teetering = false;
       } else if (
         state.moving &&

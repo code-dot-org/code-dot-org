@@ -88,6 +88,7 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
   sprite: 'e.g. a friendly green dragon',
   background: 'e.g. a misty forest at sunrise',
   block: 'e.g. a mossy stone brick',
+  ladder: 'e.g. a rope ladder with wooden rungs',
 };
 
 // The advanced form's pixel Resolution choices, as divisors of the type's
@@ -104,6 +105,7 @@ const IMAGE_KINDS: {
   {value: 'character', imageType: 'sprite', subject: 'character'},
   {value: 'object', imageType: 'sprite', subject: 'object'},
   {value: 'block', imageType: 'block'},
+  {value: 'ladder', imageType: 'ladder'},
 ];
 
 type GenerateMode = 'prompt' | 'generating';

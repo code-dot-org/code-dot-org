@@ -329,7 +329,8 @@ export async function removeBackground(
   ctx.drawImage(img, 0, 0);
 
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  keyOutBackground(imageData.data, imageData.width, imageData.height, options);
+  const {data, width, height} = imageData;
+  keyOutBackground(data, width, height, options);
   ctx.putImageData(imageData, 0, 0);
 
   return canvasToBlob(canvas);

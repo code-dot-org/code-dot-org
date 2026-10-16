@@ -692,6 +692,104 @@
         ]
       },
       "variantCount": 1
+    },
+    "ladder-simple": {
+      "template": "A ladder made of {material}",
+      "options": {
+        "material": [
+          {
+            "id": "wood",
+            "text": "wood"
+          },
+          {
+            "id": "rope",
+            "text": "rope"
+          },
+          {
+            "id": "metal",
+            "text": "metal"
+          },
+          {
+            "id": "vines",
+            "text": "vines"
+          },
+          {
+            "id": "bone",
+            "text": "bone"
+          },
+          {
+            "id": "ice",
+            "text": "ice"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "ladder-expanded": {
+      "template": "A ladder made of {material} with {detail}",
+      "options": {
+        "material": [
+          {
+            "id": "wood",
+            "text": "wood"
+          },
+          {
+            "id": "rope",
+            "text": "rope"
+          },
+          {
+            "id": "metal",
+            "text": "metal"
+          },
+          {
+            "id": "vines",
+            "text": "vines"
+          },
+          {
+            "id": "bone",
+            "text": "bone"
+          },
+          {
+            "id": "ice",
+            "text": "ice"
+          },
+          {
+            "id": "bamboo",
+            "text": "bamboo"
+          },
+          {
+            "id": "crystal",
+            "text": "crystal"
+          }
+        ],
+        "detail": [
+          {
+            "id": "glowing-rungs",
+            "text": "glowing rungs"
+          },
+          {
+            "id": "carved-patterns",
+            "text": "carved patterns"
+          },
+          {
+            "id": "moss",
+            "text": "moss"
+          },
+          {
+            "id": "metal-bolts",
+            "text": "metal bolts"
+          },
+          {
+            "id": "tiny-gems",
+            "text": "tiny gems"
+          },
+          {
+            "id": "ancient-runes",
+            "text": "ancient runes"
+          }
+        ]
+      },
+      "variantCount": 1
     }
   }
 }
