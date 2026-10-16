@@ -248,6 +248,12 @@ interface SpriteLab2ViewProps {
   sourcesReinitializedCount: number;
 }
 
+// ?layout=N picks a world layout by index, for seeing each one on demand.
+function layoutOverrideParam(): number | undefined {
+  const value = parseInt(String(queryParams('layout') ?? ''), 10);
+  return Number.isNaN(value) ? undefined : value;
+}
+
 const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   levelProperties,
   currentSources,
@@ -528,6 +534,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useWorldStartPattern({
     pattern: levelProperties.worldStartPattern,
     channelId,
+    layoutOverride: layoutOverrideParam(),
     pinnedSceneId,
     enabled: animationsSeeded,
     animations: animationList,
