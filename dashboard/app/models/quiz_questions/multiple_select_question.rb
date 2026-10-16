@@ -19,6 +19,8 @@
 #  index_quiz_questions_on_name        (name)
 #
 class MultipleSelectQuestion < QuizQuestion
+  include ChoiceQuestion
+
   # One or more correct answers chosen from a list of choices.
   #
   # `content` shape:
