@@ -38,7 +38,7 @@ const EDGE_CORNER_RADIUS = 10;
 export function edgePath(
   parent: PlacedTreeNode,
   child: PlacedTreeNode,
-  bendDrop = EDGE_BEND_DROP,
+  bendDrop = EDGE_BEND_DROP
 ): string {
   const startX = parent.x + parent.width / 2;
   const startY = parent.y + TREE_NODE_HEIGHT;
@@ -101,7 +101,7 @@ export function layoutDisplayTree(
   root: DisplayTreeNode,
   nodeWidth: (node: DisplayTreeNode, id: string) => number = () =>
     TREE_NODE_MAX_WIDTH,
-  rowGap = TREE_ROW_GAP,
+  rowGap = TREE_ROW_GAP
 ): DisplayTreeLayout {
   const boxes = new Map<string, SubtreeBox>();
 
@@ -109,7 +109,7 @@ export function layoutDisplayTree(
     const children =
       node.type === 'question'
         ? node.branches.map((branch, index) =>
-            measure(branch.child, getChildNodeId(id, index)),
+            measure(branch.child, getChildNodeId(id, index))
           )
         : [];
     const box = boxAround(nodeWidth(node, id), children);
@@ -127,7 +127,7 @@ export function layoutDisplayTree(
     depth: number,
     left: number,
     parent?: PlacedTreeNode,
-    branch?: DisplayTreeBranch,
+    branch?: DisplayTreeBranch
   ): PlacedTreeNode => {
     const {nodeWidth: width, nodeCenter, childLefts} = boxes.get(id)!;
     const placed: PlacedTreeNode = {
@@ -155,8 +155,8 @@ export function layoutDisplayTree(
           depth + 1,
           left + childLefts[index],
           placed,
-          childBranch,
-        ),
+          childBranch
+        )
       );
     }
     return placed;

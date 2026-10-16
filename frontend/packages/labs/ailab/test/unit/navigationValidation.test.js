@@ -95,7 +95,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       dataUploadedState,
       selectedLabelProject,
-      'selectFeatures',
+      'selectFeatures'
     );
     expect(result).toBe(false);
   });
@@ -104,7 +104,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       dataUploadedState,
       selectedFeaturesProject,
-      'selectFeatures',
+      'selectFeatures'
     );
     expect(result).toBe(true);
   });
@@ -113,7 +113,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       dataUploadedState,
       selectedFeaturesProject,
-      'results',
+      'results'
     );
     expect(result).toBe(false);
   });
@@ -132,7 +132,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       savingModelState,
       trainedProject,
-      'modelSummary',
+      'modelSummary'
     );
     expect(result).toBe(false);
   });
@@ -141,7 +141,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       savedModelState,
       trainedProject,
-      'modelSummary',
+      'modelSummary'
     );
     expect(result).toBe(true);
   });
@@ -182,7 +182,7 @@ describe('isPanelEnabled for results after training', () => {
     ['feature order', {selectedFeatures: ['name', 'house']}],
   ])('disabled when the %s changed since training', (_, changes) => {
     expect(
-      isPanelEnabled(trainedState, {...project, ...changes}, 'results'),
+      isPanelEnabled(trainedState, {...project, ...changes}, 'results')
     ).toBe(false);
   });
 });
@@ -197,11 +197,11 @@ describe('prevNextButtons on the data panels', () => {
     mode => {
       const {prev, next} = prevNextButtons(
         {...dataUploadedState, currentPanel: 'datasetView', mode},
-        selectedFeaturesProject,
+        selectedFeaturesProject
       );
       expect(prev).toBeUndefined();
       expect(next).toBeUndefined();
-    },
+    }
   );
 
   test.each([{}, {hideSelectLabel: true}])(
@@ -209,16 +209,16 @@ describe('prevNextButtons on the data panels', () => {
     mode => {
       const {next} = prevNextButtons(
         {...dataUploadedState, currentPanel: 'selectDataset', mode},
-        noProject,
+        noProject
       );
       expect(next.panel).toBe('datasetView');
-    },
+    }
   );
 
   test('results has neither button; the Dataset tab goes back', () => {
     const {prev, next} = prevNextButtons(
       {...resultsState, currentPanel: 'results'},
-      trainedProject,
+      trainedProject
     );
     expect(prev).toBeUndefined();
     expect(next).toBeUndefined();

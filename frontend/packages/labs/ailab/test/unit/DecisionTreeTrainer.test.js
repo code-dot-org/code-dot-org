@@ -26,7 +26,7 @@ function setUp(data, columns, label) {
   store.dispatch(setMode({trainer: 'decisionTree'}));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type)),
+    store.dispatch(setColumnsByDataType(column, type))
   );
   const project = {
     ...initialProject,
@@ -43,14 +43,14 @@ function setUp(data, columns, label) {
 // Mirrors `prepareTestData` in train.ts, which is not exported.
 function predictWith(store, project, trainer, trainedModel, testValues) {
   Object.entries(testValues).forEach(([feature, value]) =>
-    store.dispatch(setTestData(feature, value)),
+    store.dispatch(setTestData(feature, value))
   );
   const state = store.getState();
   trainer.predict(
     trainedModel,
     project.selectedFeatures.map(feature =>
-      convertValueForTraining(state, project, state.testData[feature], feature),
-    ),
+      convertValueForTraining(state, project, state.testData[feature], feature)
+    )
   );
   return getConvertedPredictedLabel(store.getState(), project);
 }
@@ -75,7 +75,7 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
     const {store, project, trainer} = setUp(
       data,
       {animal: CATEGORICAL, legs: NUMERICAL, tail: CATEGORICAL},
-      'animal',
+      'animal'
     );
 
     const {trainedModel} = trainer.startTraining();
@@ -85,10 +85,10 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
       predictWith(store, project, trainer, trainedModel, {
         legs: 4,
         tail: 'yes',
-      }),
+      })
     ).toBe('dog');
     expect(
-      predictWith(store, project, trainer, trainedModel, {legs: 0, tail: 'no'}),
+      predictWith(store, project, trainer, trainedModel, {legs: 0, tail: 'no'})
     ).toBe('snake');
   });
 
@@ -99,7 +99,7 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
         {animal: 'dog', legs: '4'},
       ],
       {animal: CATEGORICAL, legs: NUMERICAL},
-      'animal',
+      'animal'
     );
 
     expect(trainer.batchPredict(undefined, [[2]])).toEqual([]);
@@ -128,14 +128,14 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     const {store, trainer} = setUp(
       data,
       {label: CATEGORICAL, value: NUMERICAL, noise: NUMERICAL},
-      'label',
+      'label'
     );
 
     const run = trainer.startTraining();
 
     const state = store.getState();
     expect(state.accuracyCheckPredictedLabels).toEqual(
-      state.accuracyCheckLabels,
+      state.accuracyCheckLabels
     );
     expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
@@ -167,7 +167,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     const {store, trainer} = setUp(
       data,
       {label: CATEGORICAL, x: NUMERICAL, y: NUMERICAL},
-      'label',
+      'label'
     );
 
     const run = trainer.startTraining();
@@ -175,7 +175,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     const state = store.getState();
     expect(run.hyperparameters).toEqual({maxDepth: 2});
     expect(state.accuracyCheckPredictedLabels).toEqual(
-      state.accuracyCheckLabels,
+      state.accuracyCheckLabels
     );
   });
 });
@@ -201,7 +201,7 @@ describe('DecisionTreeTrainer: regression', () => {
     const {store, project, trainer} = setUp(
       data,
       {price: NUMERICAL, size: NUMERICAL},
-      'price',
+      'price'
     );
 
     const {trainedModel} = trainer.startTraining();
@@ -244,14 +244,14 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
     const {store, trainer} = setUp(
       data,
       {animal: CATEGORICAL, legs: NUMERICAL, tail: CATEGORICAL},
-      'animal',
+      'animal'
     );
 
     const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeClassifier, rows)).toEqual(
-      model.predict(rows),
+      model.predict(rows)
     );
   });
 
@@ -271,14 +271,14 @@ describe('DecisionTreeTrainer: JSON round-trip', () => {
     const {store, trainer} = setUp(
       data,
       {price: NUMERICAL, size: NUMERICAL},
-      'price',
+      'price'
     );
 
     const {trainedModel: model} = trainer.startTraining();
     const rows = store.getState().trainingExamples;
 
     expect(roundTrip(model, DecisionTreeRegression, rows)).toEqual(
-      model.predict(rows),
+      model.predict(rows)
     );
   });
 });

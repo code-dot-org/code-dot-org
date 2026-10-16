@@ -32,7 +32,7 @@ function rowsIn(rowgroup) {
   return within(rowgroup)
     .getAllByRole('row')
     .map(row =>
-      Array.from(row.querySelectorAll('th, td'), cell => cell.textContent),
+      Array.from(row.querySelectorAll('th, td'), cell => cell.textContent)
     );
 }
 
@@ -79,7 +79,7 @@ describe('ResultsDetails', () => {
     expect(
       screen
         .getByRole('button', {name: 'Incorrect'})
-        .getAttribute('aria-pressed'),
+        .getAttribute('aria-pressed')
     ).toBe('true');
   });
 });

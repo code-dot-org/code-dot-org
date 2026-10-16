@@ -3,7 +3,7 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {QuizAttemptData} from './types';
+import {QuizAttemptData, QuizQuestionResponseData} from './types';
 
 interface UseQuizAttemptArgs {
   levelId: number;
@@ -22,12 +22,12 @@ interface UseQuizAttemptState {
   beginAttempt: () => Promise<QuizAttemptData>;
   submitQuestionResponse: (
     quizQuestionId: number,
-    responseData: Record<string, unknown>
+    responseData: QuizQuestionResponseData
   ) => Promise<void>;
   // responsesByQuestionId is the student's current answer for every
   // question they've answered.
   finishAttempt: (
-    responsesByQuestionId: Record<number, Record<string, unknown>>
+    responsesByQuestionId: Record<number, QuizQuestionResponseData>
   ) => Promise<QuizAttemptData>;
 }
 
@@ -119,7 +119,7 @@ export default function useQuizAttempt({
   }, [levelId, unitId, userId]);
 
   const submitQuestionResponse = useCallback(
-    async (quizQuestionId: number, responseData: Record<string, unknown>) => {
+    async (quizQuestionId: number, responseData: QuizQuestionResponseData) => {
       if (!currentAttempt) {
         return;
       }
@@ -144,7 +144,7 @@ export default function useQuizAttempt({
   );
 
   const finishAttempt = useCallback(
-    async (responsesByQuestionId: Record<number, Record<string, unknown>>) => {
+    async (responsesByQuestionId: Record<number, QuizQuestionResponseData>) => {
       if (!currentAttempt) {
         throw new Error('No attempt to finalize.');
       }

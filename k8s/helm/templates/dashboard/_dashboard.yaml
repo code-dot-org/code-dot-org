@@ -70,7 +70,13 @@ spec:
     metadata:
       labels:
         {{ .labels | nindent 8 }}
+      annotations:
+        # Hashing the ServiceAccount annotations here ensures that a change
+        # to the annotations triggers a rolling update of the pods.
+        checksum/serviceaccount: {{ .Values.serviceAccount.annotations | toJson | sha256sum }}
     spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      automountServiceAccountToken: false
       containers:
       - name: {{ .shortName | default "dashboard" }}
         image: "{{ .Values.image }}"

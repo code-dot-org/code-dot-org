@@ -39,9 +39,7 @@ $summary-one-line-min-width: 320px;
 }
 
 .divider {
-  width: 1px;
-  height: 10px;
-  background-color: var(--border-neutral-primary);
+  @include mixins.summary-divider;
 }
 
 @container (width < #{$summary-one-line-min-width}) {
