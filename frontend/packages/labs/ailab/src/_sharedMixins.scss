@@ -42,6 +42,44 @@
 }
 
 $data-table-row-height: 28px;
+$data-table-visible-rows: 10;
+$data-table-min-visible-rows: 2;
+
+// Drawn on top, so sticky header cells can't cover the border.
+@mixin data-table-frame {
+  position: relative;
+  display: flex;
+  flex: 0 1 ($data-table-visible-rows + 1) * $data-table-row-height;
+  flex-direction: column;
+  min-height: ($data-table-min-visible-rows + 1) * $data-table-row-height;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border: 1px solid var(--border-neutral-primary);
+    pointer-events: none;
+  }
+}
+
+@mixin data-table-scroller {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+@mixin data-table-empty-note {
+  margin: 0;
+  padding: 10px;
+  color: var(--text-neutral-tertiary);
+}
+
+@mixin action-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 @mixin accuracy-readout {
   font-size: 14px;

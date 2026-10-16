@@ -1,9 +1,11 @@
 @use '../sharedMixins' as mixins;
 
+.frame {
+  @include mixins.data-table-frame;
+}
+
 .scroller {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
+  @include mixins.data-table-scroller;
 }
 
 .rangeNote {
@@ -15,4 +17,8 @@
 
 .table .columnHeader {
   top: mixins.$data-table-row-height;
+}
+
+.emptyNote {
+  @include mixins.data-table-empty-note;
 }

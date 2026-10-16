@@ -49,7 +49,7 @@ const NodeRowsTable = ({
                   className={classNames(
                     tableStyles.indexCell,
                     tableStyles.indexHeader,
-                    styles.indexColumn
+                    tableStyles.indexColumn
                   )}
                   aria-label="Row"
                 />
