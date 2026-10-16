@@ -434,7 +434,6 @@ const PLAN_SCHEMA = {
         required: {type: 'boolean', description: 'MUST be true unless some propMap entry\'s consumerChange is rewrite (per-site judgment). none and rename are mechanical; drop means the transform skips the call sites passing that prop and lists them. The import and JSX name swap is always mechanical.'},
         rationale: {type: 'string'},
         script: {type: 'string', description: `Path under ${CODEMODS_DIR}, e.g. ${CODEMODS_DIR}/${component}-to-mui.ts, or ""`},
-        yarnScript: {type: 'string', description: `Script name to add to ${LIB}/package.json, e.g. codemod:${component}, or ""`},
         transforms: {type: 'array', items: {type: 'string'}, description: 'Each rewrite the codemod performs, one line each (import specifier, JSX name, prop rename, prop value mapping)'},
         expectedResidue: {type: 'array', items: {type: 'string'}, description: 'What the codemod knowingly leaves for hand work: SCSS specificity against MUI classes, snapshot updates, dropped props, tests that find() the old component'},
       },
@@ -711,17 +710,18 @@ const EXECUTE_SCHEMA = {
         },
       },
     },
-    codemodCommand: {type: 'string', description: `The yarn script consumers run from ${LIB} with a path argument, or "" when the plan required no codemod`},
+    codemodCommand: {type: 'string', description: `The full jscodeshift command consumers run from ${LIB}, paths appended (TS_NODE_TRANSPILE_ONLY=true yarn jscodeshift -t ./codemods/<file>.ts --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register), or "" when the plan required no codemod`},
     deviations: {type: 'array', items: {type: 'string'}, description: 'Every place the code departs from the plan doc, also written into its Deviations section'},
     checks: {
       type: 'object',
-      required: ['vitest', 'typecheck', 'lint', 'build', 'storybookBuild', 'codemodDryRun'],
+      required: ['vitest', 'typecheck', 'lint', 'build', 'storybookBuild', 'storybookTests', 'codemodDryRun'],
       properties: {
         vitest: {type: 'string', description: 'pass, or the failing test names'},
         typecheck: {type: 'string'},
         lint: {type: 'string'},
         build: {type: 'string'},
         storybookBuild: {type: 'string'},
+        storybookTests: {type: 'string', description: "yarn test-storybook --run on the component's stories: pass, or the failing story names"},
         codemodDryRun: {type: 'string', description: 'Result of --dry --print on three consumers, or "n/a"'},
       },
     },
@@ -770,25 +770,50 @@ Do, in order:
    order cannot decide it. Set box-sizing explicitly where a width rule assumes it:
    Storybook and studio lack Bootstrap's global border-box reset.
 3. Stories: one MUI story per twin, same visual state, same launcher pattern as the DSCO
-   story. Keep the DSCO stories untouched. Confirm every muiStoryId in
+   story. Copy the DSCO story's parameters.a11y overrides, with their comments, onto its
+   twin. Keep the DSCO stories untouched. Confirm every muiStoryId in
    dist/component-library-storybook/index.json after building Storybook.
-4. Tests: vitest coverage for every propMap entry and every sharedGlobals rule (for a
+4. Tests: vitest covers behavior: every propMap entry, every sharedGlobals rule (for a
    shared scroll lock: open a legacy and an MUI instance, close them out of order, assert
-   the body state), plus the legacy defect fixes; keep the legacy tests running.
-5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts modeled on
-   button-to-mui-button.ts implementing exactly the planned transforms; a yarn script in
-   ${LIB}/package.json; an entry in ${CODEMODS_DIR}/README.md. Dry-run it with
+   the body state), roles, ids and focus, and the legacy defect fixes that change
+   behavior (an alt text, a prop honored). Keep the legacy tests running. Assert what the
+   user perceives (role, aria-*, toBeVisible, focus), never the class or declaration that
+   causes it: no compiling SCSS, no asserting class names, selectors or declarations.
+   Styling and the CSS-only defect fixes are verified in Storybook, where the twins and
+   eyes show them; a fix the default viewport cannot show (a narrow-viewport overflow)
+   gets its own MUI story with that viewport and a play function asserting the rendered
+   geometry. That story has no DSCO twin: leave it out of muiStories, which holds twins
+   only; test-storybook in step 7 runs it.
+5. Codemod, if the plan requires it: ${CODEMODS_DIR}/${component}-to-mui.ts implementing
+   exactly the planned transforms, and an entry in ${CODEMODS_DIR}/README.md: one or two
+   sentences, at most four one-line bullets, and the command with a <path> placeholder,
+   never hard-coded paths. Import-shape rules and caveats go in the codemod's header comment and the
+   plan doc, not the README. No ${LIB}/package.json
+   script: a codemod runs once per migration. Run it as TS_NODE_TRANSPILE_ONLY=true yarn
+   jscodeshift -t <file> --parser=tsx --extensions=js,jsx,ts,tsx --require ts-node/register,
+   and have the transform pick the ts parser for .ts files (api.jscodeshift.withParser),
+   since tsx rejects the <T>x casts valid there. Dry-run it with
    jscodeshift --dry --print on three consumers from this list and check the output:
    ${JSON.stringify(discover.consumers.filter(c => c.kind === 'apps').slice(0, 6).map(c => c.file))}
    --dry only: reverting a real run would need git checkout, which is forbidden here.
 6. Docs planned for this phase: @deprecated JSDoc on the legacy component naming the
-   replacement; ${COMPONENT_DIR}/README.md documenting the MUI version first and the legacy
-   path as deprecated, with the prop map; the component's row in ${STATUS_DOC} set to In
+   replacement; JSDoc on every prop of the MUI props interface, carrying what a
+   reader needs (element, default, edge cases), since Storybook autodocs renders the
+   props table from it; ${COMPONENT_DIR}/README.md as short as its neighbours' (the
+   import, which component to use, pointers to ${PLAN_DOC}, the codemod's README entry if step 5 wrote one,
+   and Storybook), with no prop table and no restated command; the component's row in ${STATUS_DOC} set to In
    Progress with the override file; the STYLE_OVERRIDES block there if you registered an
    override. Write every departure from the plan into the Deviations section of ${PLAN_DOC}.
 7. Checks, from ${LIB} unless noted: yarn test; yarn typecheck; ../../node_modules/.bin/eslint .;
    ../../node_modules/.bin/prettier --check on touched files; yarn stylelint; yarn build.
-   Then yarn build in ${STORYBOOK}. Fix what you broke; report each check's result.
+   Then, in ${STORYBOOK}: yarn build, and yarn test-storybook --run
+   ../../packages/component-library/src/${component}, which runs every story of the
+   component in a browser with its play function and axe, as CI's ui-test job does; yarn build
+   alone runs no play function. If Playwright has no browser, run node_modules/.bin/playwright install
+   --only-shell chromium in frontend/. A failing DSCO story you did not touch is not yours to
+   fix: if it also fails on origin/${base}, or passes when rerun alone (a timeout under
+   load), name it in notes and leave it out of storybookTests. Fix what you broke; report
+   each check's result.
 
 Return the structured result.`,
   {schema: EXECUTE_SCHEMA, label: 'execute', phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
@@ -807,7 +832,8 @@ Files touched so far: ${JSON.stringify(exec.filesTouched)}
 Plan doc: ${PLAN_DOC}
 
 Re-run every check (yarn test / typecheck / eslint / prettier --check / stylelint / build
-in ${LIB}; yarn build in ${STORYBOOK}) and report. filesTouched = the list above plus your
+in ${LIB}; yarn build and yarn test-storybook --run ../../packages/component-library/src/${component}
+in ${STORYBOOK}) and report. filesTouched = the list above plus your
 changes. Copy muiStories, codemodCommand and deviations from the previous result unless
 you changed them: ${JSON.stringify({muiStories: exec.muiStories, codemodCommand: exec.codemodCommand, deviations: exec.deviations})}`
 
@@ -947,8 +973,9 @@ PLAN (intended deviations are NOT to be reverted): ${JSON.stringify(plan.legacyD
 Look at each listed baseline/mui/diff PNG with the Read tool before changing anything. Fix
 the override or wrapper, not the story, unless the story fails to reproduce the DSCO
 story's state. Record any new departure from the plan in ${PLAN_DOC}'s Deviations section.
-Re-run yarn test / typecheck / eslint / prettier --check / stylelint / build in ${LIB} and
-yarn build in ${STORYBOOK}. Report every file touched and the checks.`,
+Re-run yarn test / typecheck / eslint / prettier --check / stylelint / build in ${LIB}, and
+yarn build and yarn test-storybook --run ../../packages/component-library/src/${component}
+in ${STORYBOOK}. Report every file touched and the checks.`,
     {schema: EXECUTE_SCHEMA, label: `parity-fix-${parityAttempt}`, phase: 'Execute', model: WORK_MODEL, effort: DEEP_EFFORT},
   )
   if (fix) {
@@ -1128,8 +1155,8 @@ step: run it, report what changed, edit nothing by hand.
 
 ${TREE_RULES}
 
-From ${LIB}, run \`${exec.codemodCommand} <path>\` (see ${CODEMODS_DIR}/README.md for path
-conventions; paths are relative to that directory or absolute) over exactly these files,
+From ${LIB}, run \`${exec.codemodCommand} <path>\` (paths are relative to ${LIB}
+or absolute) over exactly these files,
 in batches if the tool accepts several paths:
 ${JSON.stringify(consumerSourceFiles)}
 Then git status --porcelain and git diff --stat to report which of them changed. A consumer
@@ -1432,7 +1459,7 @@ STATE
   The note also names the deferred behaviors (${plan.deferredChanges.map(d => d.behavior).join(', ')}),
   links the "Deferred changes" section of ${PLAN_DOC}, and says they are lifecycle step 5.` : ''}
   ${SKILL_DOC}: ${fullyMigrated ? `move ${componentTitle} into the "Use MUI" list with the import to use and out of "Use DSCO".` : `leave ${componentTitle} under "Use DSCO"; consumers remain.`}
-  ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the replacement${exec.codemodCommand ? ' and the codemod command' : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
+  ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' to its paths list, message naming the replacement${exec.codemodCommand ? ` and the codemod file under ${CODEMODS_DIR}` : ''}. If any non-legacy export still lives at that path, ban only the legacy names with importNames: ${JSON.stringify(legacyExports)}.` : 'No eslint rule: consumers remain on the legacy component.'}
   ${PLAN_DOC}: append an "Outcome" section: consumers migrated/left, verify result, parity
   result, apps parity result, codemod files rewritten/untouched.
   Run prettier from ${LIB} on the markdown you changed.
