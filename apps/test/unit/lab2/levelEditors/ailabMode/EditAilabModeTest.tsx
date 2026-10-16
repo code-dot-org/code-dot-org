@@ -400,13 +400,19 @@ describe('EditAilabMode', () => {
         features: ['legs'],
         hideSelectLabel: true,
         lockFeatures: true,
+        pretrained: true,
+        hideDatasetView: true,
         hideSave: true,
       })
     );
 
     chooseDataset('');
 
-    expect(JSON.parse(savedMode())).toEqual({hideSave: true, trainer: 'knn'});
+    expect(JSON.parse(savedMode())).toEqual({
+      hideSave: true,
+      reserveLastRows: true,
+      trainer: 'knn',
+    });
   });
 
   it('lists regular datasets before toy datasets', () => {
