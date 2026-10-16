@@ -17,8 +17,8 @@ module Cdo
     end
 
     def self.clear(request)
-      request.cookies.delete(KEY)
       request.cookie_jar.delete(KEY, domain: :all)
+      request.cookies.delete(KEY)
       request.session.delete(KEY)
     end
   end

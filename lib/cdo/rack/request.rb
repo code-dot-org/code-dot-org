@@ -133,6 +133,13 @@ module Cdo
       statsig_stable_id
     end
 
+    # Anonymous (signed-out) user ID, without generating one.
+    #
+    # @return [String, nil] the anonymous (signed-out) user ID in UUID v4 format
+    def existing_anon_user_id
+      existing_statsig_stable_id
+    end
+
     def user
       env['warden']&.user
     end

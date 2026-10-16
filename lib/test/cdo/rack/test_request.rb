@@ -254,6 +254,21 @@ class RequestTest
       refute_equal anon_user_id, new_id
     end
 
+    def test_existing_anon_user_id_returns_existing_statsig_stable_id
+      session_id = SecureRandom.uuid
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => session_id}
+      session.expects(:[]=).never
+
+      assert_equal session_id, MockRequest.new(session).existing_anon_user_id
+    end
+
+    def test_existing_anon_user_id_returns_nil_without_generating
+      session = {}
+      session.expects(:[]=).never
+
+      assert_nil MockRequest.new(session).existing_anon_user_id
+    end
+
     def test_anon_user_id_replaces_invalid_session_value
       request = MockRequest.new(SharedConstants::STATSIG_STABLE_ID_KEY => 'invalid')
 

@@ -123,6 +123,14 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal_unordered [script1.id, script2.id, script5.id], client_state.scripts
   end
 
+  test 'client state reads progress without creating anonymous user ID' do
+    script_level = create(:script_level)
+
+    assert_equal 0, client_state.level_progress(script_id: script_level.script_id, level_id: script_level.level_id)
+    assert_equal [], client_state.scripts
+    assert_nil request.existing_anon_user_id
+  end
+
   test 'video_seen' do
     refute client_state.videos_seen_for_test?
     refute client_state.video_seen? 'foo'

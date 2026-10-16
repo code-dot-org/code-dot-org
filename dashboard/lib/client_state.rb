@@ -5,7 +5,7 @@ require 'cdo/anon_user_id'
 class ClientState
   attr_reader :request
 
-  delegate :anon_user_id, :session, to: :request
+  delegate :session, :existing_anon_user_id, to: :request, private: true
 
   def initialize(request:)
     @request = request
@@ -18,18 +18,20 @@ class ClientState
     session[:callouts_seen] = nil
   end
 
-  # Returns the best result for the given script level, or 0 if there has been no progress.
-  # @param [ScriptLevel] script_level
-  # return [Integer]
+  # Returns the best result for the given level in the given script, or 0 if there has been no progress.
+  #
+  # @param [Integer] script_id
+  # @param [Integer] level_id
+  # @return [Integer]
   def level_progress(script_id:, level_id:)
-    AnonymousLevel::Progress.find_by(anon_user_id:, script_id:, level_id:)&.best_result || 0
+    anon_user_level_progresses.where(script_id:, level_id:).pick(:best_result) || 0
   end
 
   # Returns an array of ids of the scripts with progress.
+  #
   # @return [Array<Integer>]
   def scripts
-    return [] unless anon_user_id
-    AnonymousLevel::Progress.where(anon_user_id:).distinct.pluck(:script_id)
+    anon_user_level_progresses.distinct.pluck(:script_id)
   end
 
   # Returns a read-only set of the videos seen in the current user session,
@@ -80,5 +82,10 @@ class ClientState
     session[:callouts_seen] << callout_key
     # Rotate the list to only a certain number of the newest items
     session[:callouts_seen].shift(session[:callouts_seen].length - 20) if session[:callouts_seen].length > 20
+  end
+
+  private def anon_user_level_progresses
+    anon_user_id = existing_anon_user_id
+    anon_user_id ? AnonymousLevel::Progress.where(anon_user_id:) : AnonymousLevel::Progress.none
   end
 end
