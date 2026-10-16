@@ -116,6 +116,15 @@ describe('NodeModal', () => {
     expect(document.activeElement).toBe(root());
   });
 
+  it('takes focus into the dialog when opened below the root', () => {
+    act(() => answer('snake').focus());
+    fireEvent.keyDown(answer('snake'), {key: 'Enter'});
+
+    expect(document.activeElement).toBe(
+      dialog().querySelector('[role="tab"][aria-selected="true"]')
+    );
+  });
+
   it('lists the rows tested on that reach the node, then the rows trained on', () => {
     fireEvent.click(root());
 
