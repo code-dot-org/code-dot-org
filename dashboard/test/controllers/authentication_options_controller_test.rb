@@ -271,8 +271,9 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     )
   end
 
-  # A Clever or ClassLink record as sign-up stores it for a student: no email
-  # at all, since those providers' emails are not trusted.
+  # Create an auth option with blank email and hashed email to simulate
+  # ClassLink or Clever sign-ups, or an email auth option created to match an email
+  # address from Clever or Classlink.
   private def create_blank_email_option(user, credential_type, version:)
     create(
       :authentication_option,
