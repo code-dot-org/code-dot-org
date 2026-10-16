@@ -1,8 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-import IdleTimer from 'react-idle-timer';
+import React, {useCallback, useEffect, useState} from 'react';
+
+import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
@@ -16,15 +17,6 @@ import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
 
 const NO_ANSWERS: StepAnswers = {};
-
-// Lab2IdleTimer's threshold. Its timer is not shared: every milestone resets it.
-const IDLE_AFTER_MS = 1000 * 60 * 2;
-
-interface StepClock {
-  from: number;
-  idleMs: number;
-  idleFrom?: number;
-}
 
 interface StepPlayerProps {
   checkpoint: Checkpoint;
@@ -61,18 +53,12 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   const last = index === steps.length - 1;
   const continueLabel = last ? finishLabel : 'Continue';
 
-  // Counts from when the current step was shown or its time last reported.
-  const clock = useRef<StepClock>({from: Date.now(), idleMs: 0});
+  // Lab2IdleTimer, mounted above every Lab2 lab, keeps this clock's idle time.
   const takeElapsed = useCallback(() => {
-    const {from, idleMs, idleFrom} = clock.current;
-    const now = Date.now();
-    const idle = idleMs + (idleFrom === undefined ? 0 : now - idleFrom);
-    clock.current = {
-      from: now,
-      idleMs: 0,
-      idleFrom: idleFrom === undefined ? undefined : now,
-    };
-    return now - from - idle;
+    const clock = Lab2ProgressTimer.getInstance();
+    const elapsed = clock.getTimeSinceLastMilestone();
+    clock.resetMilestoneTimer();
+    return elapsed;
   }, []);
 
   useEffect(() => {
@@ -128,18 +114,6 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
 
   return (
     <div className={styles.player}>
-      <IdleTimer
-        timeout={IDLE_AFTER_MS}
-        onIdle={() => {
-          clock.current.idleFrom ??= Date.now();
-        }}
-        onActive={() => {
-          const c = clock.current;
-          if (c.idleFrom === undefined) return;
-          c.idleMs += Date.now() - c.idleFrom;
-          c.idleFrom = undefined;
-        }}
-      />
       <div className={styles.playerBar}>
         <MuiButton
           variant="outlined"
