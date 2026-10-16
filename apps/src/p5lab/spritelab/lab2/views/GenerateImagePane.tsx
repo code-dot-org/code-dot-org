@@ -36,6 +36,7 @@ import {
   trimAnimationListImages,
 } from '../imageTrim';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
+import {PictureRequest} from '../picturePicker';
 
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
 import {
@@ -207,6 +208,13 @@ interface GenerateImagePaneProps {
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
+  /** A picture asked for from a block or the world palette: opens the
+      new-image dialog on its kind. A new object each time. */
+  pickRequest?: PictureRequest | null;
+  /** A new image was made (generated or painted), by name and kind. */
+  onImageCreated?: (name: string, imageType: ImageType) => void;
+  /** The dialog a pick opened was closed without a picture. */
+  onPickCancel?: () => void;
 }
 
 /**
@@ -245,12 +253,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
   onDeleteImage,
-  lockedImageType,
-  lockedImageSubject,
+  lockedImageType: levelImageType,
+  lockedImageSubject: levelImageSubject,
   imageRole,
   advanced,
   defaultStyle,
   paintDisabled,
+  pickRequest = null,
+  onImageCreated,
+  onPickCancel,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -399,6 +410,37 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     },
     [resetSession]
   );
+  // A pick opens the new-image dialog on the asker's kind; while it is
+  // open, that kind is the locked one.
+  useEffect(() => {
+    if (!pickRequest) {
+      return;
+    }
+    sessionEpochRef.current++;
+    triggerRef.current = null;
+    setDialogTarget('new');
+    setPaintNewDraft(null);
+    resetSession();
+  }, [pickRequest, resetSession]);
+  const lockedImageType = pickRequest?.imageType ?? levelImageType;
+  const lockedImageSubject = pickRequest?.subject ?? levelImageSubject;
+  // The asker gets the picture and the dialog closes, instead of the
+  // summary: the student is on their way back to the block or the world.
+  const pickedRef = useRef(onImageCreated);
+  pickedRef.current = onImageCreated;
+  const finishNew = useCallback(
+    (key: string, name: string, imageType: ImageType) => {
+      pickedRef.current?.(name, imageType);
+      if (pickRequest) {
+        setDialogTarget(null);
+        setPainting('no');
+        endSession();
+      } else {
+        setDialogTarget(key);
+      }
+    },
+    [pickRequest, endSession]
+  );
 
   const closeDialog = useCallback(() => {
     sessionEpochRef.current++;
@@ -406,8 +448,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('no');
     setPaintNewDraft(null);
     endSession();
+    if (pickRequest) {
+      onPickCancel?.();
+    }
     triggerRef.current?.focus();
-  }, [endSession]);
+  }, [endSession, pickRequest, onPickCancel]);
 
   // Leaving the tab mid-session must still reclaim the session's leftover
   // assets (and orphan any in-flight persist), exactly as closing would.
@@ -444,16 +489,16 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     if (!needsGridDetection || !detectSource) {
       return;
     }
-    let cancelled = false;
+    let canceled = false;
     cachedGridDetection(detectSource, frameSize)
       .then(size => {
-        if (!cancelled && size && size > 1) {
+        if (!canceled && size && size > 1) {
           setDetectedGrid({source: detectSource, size});
         }
       })
       .catch(() => {});
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [needsGridDetection, detectSource, frameSize]);
   const detectedGridSize =
@@ -588,7 +633,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        setDialogTarget(key);
+        finishNew(key, newName, result.generation.imageType);
         return;
       }
 
@@ -612,6 +657,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       noteAsset(previousUrl);
     },
     [
+      finishNew,
       dialogTarget,
       imageRole,
       targetProps,
@@ -685,7 +731,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (dialogTarget === 'new' && paintNewDraft) {
         const {name, imageType} = paintNewDraft;
         const sourceUrl = await uploadEdited(name, dataURI);
-        // The paint may have been cancelled (or the dialog moved on) while
+        // The paint may have been canceled (or the dialog moved on) while
         // the upload was out.
         if (persistIsStale(epoch, sourceUrl)) {
           return;
@@ -710,7 +756,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         setPaintNewDraft(null);
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        setDialogTarget(key);
+        finishNew(key, name, imageType);
         return;
       }
 
@@ -757,6 +803,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       noteAsset(previousUrl);
     },
     [
+      finishNew,
       dialogTarget,
       imageRole,
       targetProps,
@@ -925,7 +972,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onReady={() => setPainting('active')}
           onSave={handleEditorSave}
           onCancel={() => {
-            // Orphan a save still uploading: cancelled means not applied.
+            // Orphan a save still uploading: canceled means not applied.
             sessionEpochRef.current++;
             setPainting('no');
           }}

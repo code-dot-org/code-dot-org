@@ -27,18 +27,9 @@
       "imageRole": "friend",
       "sentence": "friend"
     },
-    "guide_steps": [
-      {
-        "text": "**Make another character.** A friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own."
-      },
-      {
-        "text": "**Your new character is ready.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "spriteImages": 1
-        }
-      }
-    ],
+    "objectives": {
+      "title": "**Make another character.** A friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own."
+    },
     "long_instructions": "# Make another character\nA friend, a rival, a sidekick: your story needs one more. Pick the words and click **Generate**, or draw your own.",
     "header_label": "Make a story"
   }

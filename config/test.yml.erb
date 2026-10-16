@@ -45,9 +45,9 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
-db_credential_admin: {"username":"root", "password":""}
-db_credential_writer: {"username":"root", "password":""}
-db_credential_reader: {"username":"root", "password":""}
+db_credential_admin: {"username":"root", "password":"not-a-secret"}
+db_credential_writer: {"username":"writer", "password":"not-a-secret"}
+db_credential_reader: {"username":"reader", "password":"not-a-secret"}
 db_writer: 'mysql://root@localhost/'
 <% end -%>
 
@@ -124,6 +124,7 @@ use_my_studio: true
 skip_seed_all: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.
+contentful_hour_of_ai_access_token: <%= ENV['CONTENTFUL_HOUR_OF_AI_ACCESS_TOKEN'] %>
 contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
 saucelabs_authkey: <%= ENV['SAUCE_ACCESS_KEY'] %>
 saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
@@ -139,9 +140,13 @@ redis_url: 'redis://ci-tests-redis:6379/0'
 netsim_redis_groups:
 - master: redis://ci-tests-redis:6379
 
-# custom database config for CI
+# Continuous Integration environment uses a custom database hostname.
 db_writer: 'mysql://root:not-a-secret@ci-tests-mysql/'
 db_reader: 'mysql://root:not-a-secret@ci-tests-mysql/'
+db_endpoint_writer: ci-tests-mysql
+db_endpoint_proxy_writer: ci-tests-mysql
+db_endpoint_proxy_reader: ci-tests-mysql
+db_endpoint_proxy_reporting: ci-tests-mysql
 
 # CI-specific S3 settings, to avoid collisions between concurrent CI jobs
 animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>

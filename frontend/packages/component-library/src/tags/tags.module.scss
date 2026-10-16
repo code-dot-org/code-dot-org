@@ -36,6 +36,25 @@
       padding-inline-end: 8px;
     }
   }
+
+  // Colors. The default tag keeps whatever the base rule sets. Each color is
+  // doubled up on .tag so it outranks `.tags .tag` above, which sets a
+  // background of its own, on specificity rather than on source order.
+  .tag.tag-pink {
+    background: var(--background-accent-pink-light);
+    color: var(--text-accent-pink-secondary);
+    // The TA lettermark fills more of its box than the icons the base 2px gap
+    // was set for, so the label would otherwise sit against it.
+    gap: 6px;
+
+    span {
+      color: var(--text-accent-pink-secondary);
+    }
+
+    i {
+      color: var(--text-accent-pink-primary-fixed);
+    }
+  }
 }
 
 // Sizes
@@ -105,6 +124,22 @@
         text-transform: none;
         letter-spacing: normal;
         color: var(--text-brand-secondary);
+      }
+    }
+
+    // Repeated here because this brand gives every tag a border and colors the
+    // label on the span itself, both more specific than the block above.
+    .tag.tag-pink {
+      background: var(--background-accent-pink-light);
+      border-color: var(--border-accent-pink-primary);
+      color: var(--text-accent-pink-secondary);
+
+      span {
+        color: var(--text-accent-pink-secondary);
+      }
+
+      i {
+        color: var(--text-accent-pink-primary-fixed);
       }
     }
   }

@@ -1,0 +1,27 @@
+name 'aif-y2-making-predictions-postassessment-levelgroup-2026'
+title 'Making Predictions Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'aif-y2-making-predictions-postassessment-intro-2026'
+level 'aif-y2-making-predictions-postassessment-q1-2026'
+level 'aif-y2-making-predictions-postassessment-q2-2026'
+level 'aif-y2-making-predictions-postassessment-q3-2026'
+level 'aif-y2-making-predictions-postassessment-q4-2026'
+level 'aif-y2-making-predictions-postassessment-q5-2026'
+
+page
+level 'aif-y2-making-predictions-postassessment-q6-2026'
+level 'aif-y2-making-predictions-postassessment-q7-2026'
+level 'aif-y2-making-predictions-postassessment-q8-2026'
+level 'aif-y2-making-predictions-postassessment-q9-2026'
+level 'aif-y2-making-predictions-postassessment-q10-2026'
+
+page
+level 'aif-y2-making-predictions-postassessment-q11-2026'
+level 'aif-y2-making-predictions-postassessment-q12-2026'
+level 'aif-y2-making-predictions-postassessment-q13-2026'
+level 'aif-y2-making-predictions-postassessment-q14-2026'
+level 'aif-y2-making-predictions-postassessment-q15-2026'

@@ -2,14 +2,16 @@
 
 $path-ring-width: 3px;
 $path-color: var(--border-selected-primary);
-$path-node-background: var(--background-brand-light);
 $path-node-text-color: var(--text-selected-primary-inverse);
 $off-path-color: var(--background-neutral-septenary);
 $focus-ring-width: 2px;
 $focus-ring-gap: 2px;
 $focus-color: var(--border-focused-primary);
 $node-radius: 6px;
-$answer-dot-size: 12px;
+$count-color: var(--text-neutral-tertiary);
+$path-count-color: var(--text-brand-secondary);
+$correct-color: var(--text-success-primary-fixed);
+$incorrect-color: var(--text-error-primary-fixed);
 $branch-height: 22px;
 $canvas-scale: var(--tree-canvas-scale, 1);
 $overlay-float-min-width: 600px;
@@ -128,33 +130,17 @@ $overlay-float-min-width: 600px;
 
 .nodeSlot {
   position: absolute;
-  width: var(--tree-node-width);
+  width: max-content;
+  max-width: var(--tree-node-max-width);
   height: var(--tree-node-height);
+  translate: -50%;
   border-radius: $node-radius;
+  cursor: pointer;
 
   &:focus-visible {
     z-index: 1;
-    height: auto;
     outline: calc(#{$focus-ring-width} / #{$canvas-scale}) solid $focus-color;
-    outline-offset: calc(
-      #{$path-ring-width} + #{$focus-ring-gap} / #{$canvas-scale}
-    );
-
-    .node {
-      padding-block: 2px;
-    }
-
-    .nodeText {
-      -webkit-line-clamp: unset;
-    }
-
-    .branch {
-      width: max-content;
-      height: auto;
-      transform: translate(-50%, calc(-100% + #{$branch-height * 0.5}));
-      white-space: normal;
-      overflow-wrap: anywhere;
-    }
+    outline-offset: calc(#{$focus-ring-gap} / #{$canvas-scale});
   }
 }
 
@@ -165,14 +151,11 @@ $overlay-float-min-width: 600px;
   min-height: var(--tree-node-height);
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 8px;
+  gap: var(--tree-node-gap);
+  padding: 8px var(--tree-node-padding-inline);
   border-width: 1.5px;
   border-style: solid;
   border-radius: $node-radius;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.2;
   transition:
     border-color mixins.$mark-transition,
     background-color mixins.$mark-transition,
@@ -188,15 +171,33 @@ $overlay-float-min-width: 600px;
 
 .pathNode {
   border-color: $path-color;
-  border-width: 2px;
-  background-color: $path-node-background;
+  border-width: var(--tree-path-node-border);
   color: $path-node-text-color;
+}
+
+.nodeSlot:hover .node {
+  background-color: var(--background-neutral-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.nodeSlot:hover .pathNode {
+  background-color: var(--background-brand-light);
+}
+
+.nodeSlot:active .node {
+  box-shadow: var(--shadow-sm);
+  scale: 0.98;
+}
+
+.nodeSlot:focus-visible .node {
+  background-color: var(--background-neutral-primary);
+  box-shadow: none;
 }
 
 .answerDot {
   flex-shrink: 0;
-  width: $answer-dot-size;
-  height: $answer-dot-size;
+  width: var(--tree-answer-dot-size);
+  height: var(--tree-answer-dot-size);
   border-radius: 50%;
   box-sizing: border-box;
   border: 2px solid transparent;
@@ -204,11 +205,49 @@ $overlay-float-min-width: 600px;
 }
 
 .nodeText {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   overflow: hidden;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.node .nodeText {
+  font-weight: var(--font-weight-semi-bold);
+  color: inherit;
+}
+
+.counts {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--tree-counts-gap);
+  margin-left: var(--tree-counts-gap);
+}
+
+.node .counts {
+  color: $count-color;
+}
+
+.pathNode .counts {
+  color: $path-count-color;
+}
+
+.correct,
+.incorrect {
+  display: flex;
+  align-items: center;
+  gap: var(--tree-grade-icon-gap);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.gradeIcon {
+  font-size: var(--tree-grade-icon-size);
+}
+
+.correct {
+  color: $correct-color;
+}
+
+.incorrect {
+  color: $incorrect-color;
 }
 
 .branch {
@@ -224,6 +263,7 @@ $overlay-float-min-width: 600px;
   border-radius: var(--shape-round);
   background-color: var(--background-neutral-secondary);
   font-size: 12px;
+  font-weight: var(--font-weight-semi-bold);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -233,15 +273,20 @@ $overlay-float-min-width: 600px;
 .pathBranch {
   background-color: var(--background-selected-primary);
   color: var(--text-selected-primary);
-  font-weight: 600;
 }
 
 .nextBranch {
-  background-color: var(--background-neutral-primary);
-  box-shadow: inset 0 0 0 1px $path-color;
+  box-shadow: inset 0 0 0 2px $path-color;
+  color: var(--text-brand-secondary);
 }
 
 @media (forced-colors: active) {
+  .nodeSlot:focus-visible {
+    outline-offset: calc(
+      #{$path-ring-width} + #{$focus-ring-gap} / #{$canvas-scale}
+    );
+  }
+
   .pathNode,
   .pathBranch {
     outline: $path-ring-width solid;

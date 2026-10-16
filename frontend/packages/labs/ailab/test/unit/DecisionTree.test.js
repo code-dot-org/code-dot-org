@@ -1,10 +1,7 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, screen, waitFor} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-
+import {getCorrectCount} from '../../src/helpers/accuracy';
 import I18n from '../../src/i18n';
 import {
   playPredictionStep,
@@ -15,36 +12,29 @@ import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 import {leafColorStyle} from '../../src/UIComponents/leafColors';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
 
-function predictSnake(store) {
+function predictSnake({store, project, trainedModel}) {
   act(() => {
     store.dispatch(setTestData('legs', '0'));
-    train.onClickPredict();
+    train.onClickPredict(trainedModel, project);
   });
 }
 
 function renderTrainedTree() {
   I18n.initI18n();
   const store = levelStore({trainer: 'decisionTree'});
-  train.reset();
-  train.init(store);
-  train.onClickTrain();
-  render(createElement(DecisionTree), {
-    wrapper: ({children}) =>
-      createElement(
-        Provider,
-        {store},
-        createElement(
-          ThemeProvider,
-          {theme: getMuiThemeForBrand(undefined)},
-          children,
-        ),
-      ),
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
+  renderWithProviders(createElement(DecisionTree), {
+    store,
+    project,
+    trainingRun,
   });
-  return store;
+  return {store, project, trainedModel: trainingRun.trainedModel};
 }
 
 function zoomToPathButton() {
@@ -85,9 +75,9 @@ function slotPosition(node) {
 }
 
 describe('DecisionTree', () => {
-  let store;
+  let trained;
   beforeEach(() => {
-    store = renderTrainedTree();
+    trained = renderTrainedTree();
   });
   afterEach(() => I18n.reset());
 
@@ -98,7 +88,7 @@ describe('DecisionTree', () => {
         ? 'question'
         : node.classList.contains(moduleStyles.answer)
           ? 'answer'
-          : 'neither',
+          : 'neither'
     );
 
     expect(kinds).toContain('question');
@@ -109,7 +99,7 @@ describe('DecisionTree', () => {
   it('dots each answer in its leaf color, left to right', () => {
     const nodes = [...document.getElementsByClassName(moduleStyles.node)];
     const answers = nodes.filter(node =>
-      node.classList.contains(moduleStyles.answer),
+      node.classList.contains(moduleStyles.answer)
     );
     const dotColor = node =>
       node
@@ -117,37 +107,37 @@ describe('DecisionTree', () => {
         ?.style.getPropertyValue('--leaf-color');
 
     expect(answers.map(dotColor)).toEqual(
-      answers.map((_, index) => leafColorStyle(index)['--leaf-color']),
+      answers.map((_, index) => leafColorStyle(index)['--leaf-color'])
     );
     expect(
       document.querySelectorAll(
-        `.${moduleStyles.question} .${moduleStyles.answerDot}`,
-      ),
+        `.${moduleStyles.question} .${moduleStyles.answerDot}`
+      )
     ).toHaveLength(0);
   });
 
   it('marks no path before a prediction', () => {
     expect(document.getElementsByClassName(moduleStyles.pathNode)).toHaveLength(
-      0,
+      0
     );
     expect(document.getElementsByClassName(moduleStyles.pathEdge)).toHaveLength(
-      0,
+      0
     );
     expect(
-      document.getElementsByClassName(moduleStyles.pathBranch),
+      document.getElementsByClassName(moduleStyles.pathBranch)
     ).toHaveLength(0);
   });
 
   it('offers zooming to the path only once there is a prediction', () => {
     expect(zoomToPathButton().disabled).toBe(true);
 
-    predictSnake(store);
+    predictSnake(trained);
 
     expect(zoomToPathButton().disabled).toBe(false);
   });
 
   it('marks the path from the root to the answer the model predicts', () => {
-    predictSnake(store);
+    predictSnake(trained);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
     const [marks] = document.getElementsByClassName(moduleStyles.marks);
@@ -160,19 +150,22 @@ describe('DecisionTree', () => {
 
     expect(marked.length).toBeGreaterThan(1);
     expect(slotPosition(marked[0])[1]).toBe(0);
-    expect(marked[marked.length - 1].textContent).toBe('snake');
+    expect(
+      marked[marked.length - 1].querySelector(`.${moduleStyles.nodeText}`)
+        .textContent
+    ).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
     expect(marks.parentElement.lastElementChild).toBe(marks);
     expect(pathEdges.every(edge => edge.parentElement === marks)).toBe(true);
     expect(pathBranches).toHaveLength(marked.length - 1);
     expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
-      marked.slice(1),
+      marked.slice(1)
     );
   });
 
   it('marks the path only up to the chosen step, and dashes the way on', () => {
-    predictSnake(store);
-    showStep(store, 0);
+    predictSnake(trained);
+    showStep(trained.store, 0);
 
     const [marks] = marked(moduleStyles.marks);
     const nextEdges = marked(moduleStyles.nextEdge);
@@ -184,7 +177,7 @@ describe('DecisionTree', () => {
     expect(nextEdges[0].parentElement).toBe(marks);
     expect(marked(moduleStyles.nextBranch)).toHaveLength(1);
 
-    showStep(store, 1);
+    showStep(trained.store, 1);
 
     expect(marked(moduleStyles.pathNode)).toHaveLength(2);
     expect(marked(moduleStyles.pathEdge)).toHaveLength(1);
@@ -241,19 +234,19 @@ describe('DecisionTree', () => {
   it('marks each question open on its answers, and no answer at all', () => {
     const items = screen.getAllByRole('treeitem');
     const questions = items.filter(item =>
-      item.querySelector(`.${moduleStyles.question}`),
+      item.querySelector(`.${moduleStyles.question}`)
     );
     const answers = items.filter(item =>
-      item.querySelector(`.${moduleStyles.answer}`),
+      item.querySelector(`.${moduleStyles.answer}`)
     );
 
     expect(questions.length).toBeGreaterThan(0);
     expect(answers.length).toBeGreaterThan(0);
     questions.forEach(item =>
-      expect(item.getAttribute('aria-expanded')).toBe('true'),
+      expect(item.getAttribute('aria-expanded')).toBe('true')
     );
     answers.forEach(item =>
-      expect(item.hasAttribute('aria-expanded')).toBe(false),
+      expect(item.hasAttribute('aria-expanded')).toBe(false)
     );
   });
 
@@ -272,7 +265,7 @@ describe('DecisionTree', () => {
     expect(
       screen.getByRole('treeitem', {
         name: 'legs is less than 1 , predicts snake',
-      }),
+      })
     ).toBe(firstChild);
   });
 
@@ -280,23 +273,26 @@ describe('DecisionTree', () => {
     const [, , secondChild] = screen.getAllByRole('treeitem');
 
     expect(
-      screen.getByRole('treeitem', {name: /^legs is at least 1 , then legs/}),
+      screen.getByRole('treeitem', {name: /^legs is at least 1 , then legs/})
     ).toBe(secondChild);
   });
 
   it('describes the canvas by how to go in, and the tree and its root by how to move', () => {
-    const keysHint = 'Use the arrow keys to move, and Escape to exit';
+    const keysHint =
+      "Use the arrow keys to move, Enter or Space to see a node's details, and Escape to exit";
     const [root] = screen.getAllByRole('treeitem');
 
     expect(
       screen.getByRole('group', {
         description: 'Press Enter to explore the tree',
-      }),
+      })
     ).toBe(canvasGroup());
     expect(screen.getByRole('tree', {description: keysHint})).toBe(
-      screen.getByRole('tree'),
+      screen.getByRole('tree')
     );
-    expect(screen.getByRole('treeitem', {description: keysHint})).toBe(root);
+    expect(
+      screen.getByRole('treeitem', {description: new RegExp(`^${keysHint}`)})
+    ).toBe(root);
   });
 
   it("shows each branch's whole text on its pill", () => {
@@ -304,11 +300,111 @@ describe('DecisionTree', () => {
 
     expect(pills.map(pill => pill.textContent)).toContain('< 1');
     expect(pills.map(pill => pill.textContent)).toContain('≥ 1');
-    pills.forEach(pill => expect(pill.textContent).toBe(pill.title));
+  });
+
+  it('shows and describes how many held-out rows reach a question', () => {
+    const [root] = screen.getAllByRole('treeitem');
+
+    expect(root.querySelector(`.${moduleStyles.counts}`).textContent).toBe(
+      '1 test row'
+    );
+    expect(
+      screen.getAllByRole('treeitem', {description: /\b1 test row$/})
+    ).toContain(root);
+  });
+
+  it('counts zero test rows on an answer no held-out row reaches', () => {
+    const missed = [...document.getElementsByClassName(moduleStyles.answer)]
+      .map(answer => answer.querySelector(`.${moduleStyles.counts}`))
+      .filter(
+        counts =>
+          !counts.querySelector(
+            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`
+          )
+      );
+
+    expect(missed.length).toBeGreaterThan(0);
+    missed.forEach(counts => expect(counts.textContent).toBe('0 test rows'));
+  });
+
+  it('shows and describes how many held-out rows each answer gets right and wrong', () => {
+    const {correct, total} = getCorrectCount(
+      trained.store.getState(),
+      trained.project
+    );
+    const answers = [...document.getElementsByClassName(moduleStyles.answer)];
+    const shown = grade =>
+      answers.reduce(
+        (sum, answer) =>
+          sum +
+          parseInt(
+            answer.querySelector(`.${moduleStyles[grade]}`)?.textContent ?? 0
+          ),
+        0
+      );
+    const described = screen.getAllByRole('treeitem', {
+      description: /\d+ (correct|incorrect)/,
+    });
+
+    expect(shown('correct')).toBe(correct);
+    expect(shown('incorrect')).toBe(total - correct);
+    expect(described).toEqual(
+      answers
+        .filter(answer =>
+          answer.querySelector(
+            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`
+          )
+        )
+        .map(answer => answer.parentElement)
+    );
+  });
+
+  describe('with every name cut off', () => {
+    beforeEach(() => {
+      vi.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(100);
+      vi.spyOn(Element.prototype, 'clientWidth', 'get').mockReturnValue(50);
+    });
+    afterEach(() => vi.restoreAllMocks());
+
+    // jsdom lays nothing out, so Popper sees every anchor as clipped and hides its tooltip.
+    const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
+
+    it('shows the keyboard-focused name whole in a tooltip', () => {
+      const root = focusRoot();
+      const name = root.querySelector(`.${moduleStyles.nodeText}`);
+
+      expect(tooltip().textContent).toBe(name.textContent);
+    });
+
+    it('closes the tooltip on the first Escape and leaves the tree on the next', async () => {
+      const root = focusRoot();
+
+      fireEvent.keyDown(root, {key: 'Escape'});
+      await waitFor(() => expect(tooltip()).toBeNull());
+      expect(document.activeElement).toBe(root);
+
+      fireEvent.keyDown(root, {key: 'Escape'});
+      expect(document.activeElement).toBe(canvasGroup());
+    });
+
+    it('shows no tooltip when a click focuses a node', () => {
+      const matches = Element.prototype.matches;
+      vi.spyOn(Element.prototype, 'matches').mockImplementation(
+        function (selector) {
+          return selector === ':focus-visible'
+            ? false
+            : matches.call(this, selector);
+        }
+      );
+
+      focusRoot();
+
+      expect(tooltip()).toBeNull();
+    });
   });
 
   it('describes each node on the path as on it', () => {
-    predictSnake(store);
+    predictSnake(trained);
 
     const marked = [...document.getElementsByClassName(moduleStyles.pathNode)];
     const described = screen.getAllByRole('treeitem', {
@@ -319,8 +415,8 @@ describe('DecisionTree', () => {
   });
 
   it('tells screen readers how far the path goes at the chosen step', () => {
-    predictSnake(store);
-    showStep(store, 0);
+    predictSnake(trained);
+    showStep(trained.store, 0);
 
     const [root] = screen.getAllByRole('treeitem');
     const described = screen.getAllByRole('treeitem', {
@@ -360,18 +456,18 @@ describe('DecisionTree', () => {
     const root = focusRoot();
 
     expect(fireEvent.keyDown(root, {key: 'ArrowDown', altKey: true})).toBe(
-      true,
+      true
     );
     expect(document.activeElement).toBe(root);
   });
 
   describe('while a prediction plays', () => {
-    const playing = () => store.getState().predictionPlaying;
+    const playing = () => trained.store.getState().predictionPlaying;
 
     beforeEach(() => {
-      predictSnake(store);
+      predictSnake(trained);
       act(() => {
-        store.dispatch(setPredictionPlaying(true));
+        trained.store.dispatch(setPredictionPlaying(true));
       });
     });
 

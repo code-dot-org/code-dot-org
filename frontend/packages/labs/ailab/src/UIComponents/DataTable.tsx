@@ -1,12 +1,13 @@
 /* React component to handle displaying imported data. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
-import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
 
 import styles from './dataTable.module.scss';
@@ -31,13 +32,14 @@ const DataTable = ({
   maxRows = DATA_TABLE_ROW_LIMIT,
 }: DataTableProps) => {
   const dispatch = useAppDispatch();
+  const {project} = useProject();
   const data = useAppSelector(
-    state => getTableData(state, !!useResultsData),
-    deepEqual,
+    state => getTableData(state, project, !!useResultsData),
+    deepEqual
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const labelColumn = project.labelColumn || 'unknown';
+  const selectedFeatures = project.selectedFeatures;
   const currentColumn = useAppSelector(state => state.currentColumn);
   const showColumnClicking = useAppSelector(getShowColumnClicking);
   const headerButtons = useRef<Record<string, HTMLButtonElement | null>>({});
@@ -57,22 +59,24 @@ const DataTable = ({
   const showRowNumbers = !reducedColumns;
   const isClickable = !reducedColumns && showColumnClicking;
 
-  const getColumnHeaderClassName = (key: string) =>
-    classNames(styles.header, {
-      [styles.headerLabel]: key === labelColumn,
-      [styles.headerFeature]:
-        key !== labelColumn && selectedFeatures.includes(key),
+  const getColumnHeaderClassName = (key: string) => {
+    const role = getColumnRole(project, key);
+    return classNames(styles.header, {
+      [styles.headerLabel]: role === 'label',
+      [styles.headerFeature]: role === 'feature',
       [styles.headerSelected]: !reducedColumns && key === currentColumn,
       [styles.clickable]: isClickable,
     });
+  };
 
   const getColumnCellClassName = (key: string) => {
+    const role = getColumnRole(project, key);
     let variant;
-    if (hideLabel && key === labelColumn) {
+    if (hideLabel && role === 'label') {
       variant = styles.bodyCellHidden;
-    } else if (key === labelColumn) {
+    } else if (role === 'label') {
       variant = styles.bodyCellLabel;
-    } else if (selectedFeatures.includes(key)) {
+    } else if (role === 'feature') {
       variant = styles.bodyCellFeature;
     }
 

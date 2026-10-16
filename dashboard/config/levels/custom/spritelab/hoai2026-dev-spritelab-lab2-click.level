@@ -32,18 +32,26 @@
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Talk later.** The **at [6] seconds** event is ready for your new character. Drag a **say** block onto the dotted outline under it. Click **Play** and wait for it."
-      },
-      {
-        "text": "**Right on time!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Talk later.**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "data": "at-6"
+          }
+        },
+        {
+          "text": "Click **Play** and wait for it.",
+          "check": {
+            "kind": "play",
+            "seconds": 6
+          }
         }
-      }
-    ],
+      ]
+    },
     "long_instructions": "# Talk later\nDrag a **say** block onto the dotted outline under **at [6] seconds**. Your new character speaks 6 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

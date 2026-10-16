@@ -1,6 +1,7 @@
 import type {Store} from 'redux';
 
 import type {RootState} from '../redux';
+import type {AilabProject} from '../types';
 
 import DecisionTreeTrainer from './DecisionTreeTrainer';
 import {getTrainerFamily} from './ids';
@@ -12,6 +13,12 @@ const trainersByFamily: Record<TrainerFamily, TrainerConstructor> = {
   decisionTree: DecisionTreeTrainer,
 };
 
-export function buildTrainer(store: Store<RootState>): Trainer {
-  return new trainersByFamily[getTrainerFamily(store.getState())](store);
+export function buildTrainer(
+  store: Store<RootState>,
+  project: AilabProject
+): Trainer {
+  return new trainersByFamily[getTrainerFamily(store.getState())](
+    store,
+    project
+  );
 }

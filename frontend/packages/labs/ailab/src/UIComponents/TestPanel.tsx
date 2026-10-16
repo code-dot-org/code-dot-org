@@ -1,15 +1,16 @@
 /* Panel for trying a trained model on new inputs. */
-import {Button, Typography} from '@mui/material';
-import type {ChangeEvent} from 'react';
 
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button, Typography} from '@mui/material';
+import React, {type ChangeEvent} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getRandomPredictInputs} from '../helpers/randomPredictInputs';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
 import {getPredictAvailable, setTestData, setTestDataValues} from '../redux';
 import {
   getDecimalPlacesByColumn,
@@ -19,6 +20,7 @@ import {
   getUniqueOptionsByColumn,
 } from '../selectors';
 import train from '../train';
+import {useTrainingData} from '../TrainingDataContext';
 
 import PredictionResult from './PredictionResult';
 
@@ -27,18 +29,32 @@ import styles from './testPanel.module.scss';
 const TestPanel = () => {
   const dispatch = useAppDispatch();
   const datasetId = useAppSelector(state => state.metadata?.name || '');
-  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const {project} = useProject();
+  const selectedFeatures = project.selectedFeatures;
   const testData = useAppSelector(state => state.testData);
-  const numericalFeatures = useAppSelector(getSelectedNumericalFeatures);
-  const categoricalFeatures = useAppSelector(getSelectedCategoricalFeatures);
-  const extremaByColumn = useAppSelector(getExtremaByColumn);
-  const decimalPlacesByColumn = useAppSelector(getDecimalPlacesByColumn);
-  const uniqueOptionsByColumn = useAppSelector(getUniqueOptionsByColumn);
-  const predictAvailable = useAppSelector(getPredictAvailable);
+  const numericalFeatures = useAppSelector(state =>
+    getSelectedNumericalFeatures(state, project)
+  );
+  const categoricalFeatures = useAppSelector(state =>
+    getSelectedCategoricalFeatures(state, project)
+  );
+  const extremaByColumn = useAppSelector(state =>
+    getExtremaByColumn(state, project)
+  );
+  const decimalPlacesByColumn = useAppSelector(state =>
+    getDecimalPlacesByColumn(state, project)
+  );
+  const uniqueOptionsByColumn = useAppSelector(state =>
+    getUniqueOptionsByColumn(state, project)
+  );
+  const predictAvailable = useAppSelector(state =>
+    getPredictAvailable(state, project)
+  );
+  const {trainedModel} = useTrainingData();
 
   const onChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    feature: string,
+    feature: string
   ) => {
     dispatch(setTestData(feature, event.target.value));
   };
@@ -52,8 +68,8 @@ const TestPanel = () => {
           extremaByColumn,
           decimalPlacesByColumn,
           uniqueOptionsByColumn,
-        }),
-      ),
+        })
+      )
     );
   };
 
@@ -118,7 +134,7 @@ const TestPanel = () => {
             color="primary"
             size="small"
             disabled={!predictAvailable}
-            onClick={train.onClickPredict}
+            onClick={() => train.onClickPredict(trainedModel, project)}
           >
             Predict
           </Button>
