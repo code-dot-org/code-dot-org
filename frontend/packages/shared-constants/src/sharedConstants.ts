@@ -665,6 +665,7 @@ export const AllowedHostnameSuffixes = [
   "worldclockapi.com",
   "worldtimeapi.org",
   "api.mathjs.org",
+  "number-trivia.com",
   "qrng.anu.edu.au",
   "random.org",
   "api.wolframalpha.com",
