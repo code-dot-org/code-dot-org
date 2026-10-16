@@ -385,8 +385,6 @@ module ShareFiltering
   # @param [String] text The text to search through.
   # @return [ShareFailure, nil]
   def self.find_address_failure(text, exceptions: false)
-    return nil unless Gatekeeper.allows('webpurify', default: true)
-
     candidate = Geocoder.extract_address_candidate(text)
     return nil unless candidate
     street_address = Geocoder.find_potential_street_address(candidate)

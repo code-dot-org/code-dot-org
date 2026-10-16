@@ -140,9 +140,6 @@ class ShareFilteringTest < Minitest::Test
     )
     assert_raises(PIIFilterException) {ShareFiltering.find_address_failure(address, exceptions: true)}
     assert_nil ShareFiltering.find_address_failure('My Model')
-
-    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(false)
-    assert_nil ShareFiltering.find_address_failure(address)
   end
 
   def test_find_share_failure_with_phone_number
