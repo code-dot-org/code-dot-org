@@ -10,6 +10,7 @@ This package exports one styled React component: [IconDropdown](IconDropdown.tsx
 import {IconDropdown} from '@code-dot-org/component-library/dropdown';
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [Design System / Icon Dropdown](http://localhost:9001/?path=/story/designsystem-dropdown-icon-dropdown--default-icon-dropdown).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-dropdown-icon-dropdown--docs).
+Or run storybook locally and go
+to [DesignSystem / Dropdown / Icon Dropdown](http://localhost:6006/?path=/docs/designsystem-dropdown-icon-dropdown--docs).

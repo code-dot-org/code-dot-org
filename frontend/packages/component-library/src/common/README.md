@@ -1,4 +1,4 @@
-# `dsco/common`
+# `component-library/common`
 
 This package contains all ComponentLibrary (DSCO) common helpers, types, functions, logic, etc. These are made available
 as `.ts, .tsx` files.
@@ -10,7 +10,7 @@ as `.ts, .tsx` files.
 Common constants.
 
 ```ts
-import {componentSizeToBodyTextSizeMap} from '@code-dot-org/dsco/common/constants';
+import {componentSizeToBodyTextSizeMap} from '@code-dot-org/component-library/common/constants';
 // ...
 // ...
 // ...
@@ -22,12 +22,15 @@ const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 Common contexts.
 
 ```tsx
-import {DropdownContext} from '@code-dot-org/dsco/common/contexts';
+import {
+  DropdownProviderWrapper,
+  useDropdownContext,
+} from '@code-dot-org/component-library/common/contexts';
 // ...
 
-<DropdownContext.Provider value={dropdownContextValue}>
-  {children}
-</DropdownContext.Provider>;
+<DropdownProviderWrapper>{children}</DropdownProviderWrapper>;
+// ...
+const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
 ```
 
 ## [helpers](helpers)
@@ -35,7 +38,7 @@ import {DropdownContext} from '@code-dot-org/dsco/common/contexts';
 Common helpers.
 
 ```ts
-import {updatePositionedElementStyles} from '@code-dot-org/dsco/common/helpers';
+import {updatePositionedElementStyles} from '@code-dot-org/component-library/common/helpers';
 ```
 
 ## [hooks](hooks)
@@ -43,9 +46,7 @@ import {updatePositionedElementStyles} from '@code-dot-org/dsco/common/helpers';
 Common hooks.
 
 ```tsx
-import {useBodyScrollLock} from '@code-dot-org/dsco/common/hooks';
-// OR
-import useBodyScrollLock from '@code-dot-org/dsco/common/hooks/useBodyScrollLock';
+import {useBodyScrollLock} from '@code-dot-org/component-library/common/hooks';
 
 // ...
 // ...
@@ -58,7 +59,7 @@ useBodyScrollLock();
 Common types.
 
 ```ts
-import {ComponentSizeXSToL} from '@code-dot-org/dsco/common/types';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 // ...
 // ...
 // ...

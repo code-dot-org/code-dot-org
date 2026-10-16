@@ -72,9 +72,8 @@ This will render a popover with title and content positioned at the bottom right
 ---
 
 For guidelines on how to use these components and the features they
-offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-popover--docs).
 Or run storybook locally and go
-to [Design System / Popover Component](http://localhost:9001/?path=/docs/designsystem-popover--docs).
+to [DesignSystem / Popover](http://localhost:6006/?path=/docs/designsystem-popover--docs).
 
 ---
