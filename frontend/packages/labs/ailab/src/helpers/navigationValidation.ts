@@ -26,7 +26,7 @@ const panelList = [
 export function isPanelEnabled(
   state: RootState,
   project: AilabProject,
-  panelId: string,
+  panelId: string
 ): boolean {
   if (panelId === 'datasetView') {
     if (!isDataUploaded(state)) {
@@ -64,9 +64,10 @@ export function isPanelEnabled(
 function isPanelAvailable(state: RootState, panelId: string): boolean {
   const mode = state.mode;
 
-  // Hidden for now; the dataset picker will come back later.
   if (panelId === 'selectDataset') {
-    return false;
+    if (mode && mode.datasets && mode.datasets.length === 1) {
+      return false;
+    }
   }
 
   if (panelId === 'saveModel') {
@@ -135,7 +136,7 @@ function isModelNamed(state: RootState): boolean {
 // Given the current panel, return the appropriate previous & next buttons.
 export function prevNextButtons(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
 

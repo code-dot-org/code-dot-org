@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-14T15:27:25.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**AI finds patterns that repeat across its training data.**\n\nWhy would repeating patterns be useful for making something new?",
+        "imageUrl": "https://images.code.org/21dc8bc583c9ef2c63d3d6f50276bcf3-codeai-scanner-learning-box-16x9.gif",
+        "key": "adaptive-test-debug-panel-935f641d-7a93-44e8-81ce-6ded8f68ea2e",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "For example, this training data includes many different cats.\n\nColors and markings vary, but some features repeat.\n\n**AI learns shared patterns, like pointed ears.**\n",
+        "imageUrl": "https://images.code.org/a2b43d0612d01a0b36a1af06686fb1ba-codeai-cat-pattern-grid-16x9.gif",
+        "key": "adaptive-test-debug-panel-b1f698e8-6cee-47e4-9b38-59e7d8253e5b",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "AI uses your prompt and patterns it learned to make a new image.\n\n---\n\n**Something to think about:** Who chooses the training data, and what might be missing from it?",
+        "imageUrl": "https://images.code.org/dd5379f1ec65be075369af4c08a672f2-codeai-prompt-cat-noise-16x9.gif",
+        "key": "adaptive-test-debug-panel-5b46df30-8529-4368-84d7-7e9d4c52c78c",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-14T15:27:25.879+00:00\",\"changed\":[\"cloned from \\\"adaptive-test-debug-panel\\\"\"],\"cloned_from\":\"adaptive-test-debug-panel\"},{\"changed_at\":\"2026-10-14 15:28:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 15:35:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 15:38:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 18:43:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 22:31:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 22:38:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

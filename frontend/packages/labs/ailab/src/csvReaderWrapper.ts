@@ -1,5 +1,4 @@
-import type {ParseResult} from 'papaparse';
-import Papa from 'papaparse';
+import Papa, {type ParseResult} from 'papaparse';
 
 import {ColumnTypes} from './constants';
 import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
@@ -17,7 +16,7 @@ import type {DataRow} from './types';
 export const parseCSV = (
   csvfile: string,
   download: boolean,
-  useDefaultColumnDataType: boolean,
+  useDefaultColumnDataType: boolean
 ): Promise<void> =>
   new Promise(resolve => {
     // `csvfile` is either a URL to fetch (download) or a raw CSV string. These
@@ -88,7 +87,7 @@ const isCellValid = (cell: string | undefined): boolean => {
 const updateData = (
   result: ParseResult<Record<string, string>>,
   useDefaultColumnDataType: boolean,
-  userUploadedData: boolean,
+  userUploadedData: boolean
 ): void => {
   const data = result.data;
   const cleanedData = cleanData(data);
@@ -110,7 +109,7 @@ const updateData = (
 
 const countRemovedRows = (
   originalData: Record<string, string>[],
-  cleanedData: DataRow[],
+  cleanedData: DataRow[]
 ): void => {
   const removedRowsCount = originalData.length - cleanedData.length;
   store.dispatch(setRemovedRowsCount(removedRowsCount));

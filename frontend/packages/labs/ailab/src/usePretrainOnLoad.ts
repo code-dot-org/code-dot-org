@@ -18,7 +18,7 @@ export function usePretrainOnLoad() {
   const dataLoaded = useAppSelector(state => state.data.length > 0);
   const canTrain = readyToTrain(project);
   const canTest = useAppSelector(state =>
-    isPanelEnabled(state, project, 'results'),
+    isPanelEnabled(state, project, 'results')
   );
 
   useEffect(() => {

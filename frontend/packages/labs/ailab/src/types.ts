@@ -198,7 +198,7 @@ export interface ModelDataToSave {
 
 export type SaveTrainedModel = (
   dataToSave: ModelDataToSave,
-  callback: (response: SaveResponse) => void,
+  callback: (response: SaveResponse) => void
 ) => void;
 
 export interface NavButton {

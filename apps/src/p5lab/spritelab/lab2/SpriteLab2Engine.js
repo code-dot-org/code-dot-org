@@ -184,8 +184,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
     // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images).
+    // (external scenes carry their own images). One list per project: its
+    // identity tells the caches below apart.
     this.preloadAnimationsOverride = null;
+    // Decoded images for this project and for the external project visited
+    // last; whichever is running is the p5 wrapper's cache.
+    this.ownPreloads_ = {};
+    this.externalPreloads_ = null;
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -995,12 +1000,25 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
+    // Decoded images are reused by name across re-runs, and another
+    // project's names collide with this one's, so each project runs from
+    // its own cache.
+    const external = this.isExternalList_(animationList);
+    if (external && this.externalPreloads_?.list !== animationList) {
+      this.externalPreloads_ = {list: animationList, cache: {}};
+    }
+    this.p5Wrapper.preloadedSprites = external
+      ? this.externalPreloads_.cache
+      : this.ownPreloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(scoped, animationNames(animationList))
+        await trimAnimationListImages(scoped, {
+          keepNames: animationNames(animationList),
+          thumbnails: !external,
+        })
       ),
       {multiFrame: true}
     );
@@ -1024,6 +1042,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
+  isExternalList_(animationList) {
+    return animationList === this.preloadAnimationsOverride;
+  }
+
   // Decode one animation by name, mid-run: the escape hatch for a costume
   // name built dynamically, which the scene-scoped preload cannot see.
   async decodeAnimationOnDemand_(name) {
@@ -1041,7 +1063,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(single, animationNames(list))
+        await trimAnimationListImages(single, {
+          keepNames: animationNames(list),
+          thumbnails: !this.isExternalList_(list),
+        })
       ),
       {multiFrame: true}
     );

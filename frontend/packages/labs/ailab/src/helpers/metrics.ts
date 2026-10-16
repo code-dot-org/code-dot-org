@@ -10,7 +10,7 @@ import {isUserUploadedDataset} from './datasetDetails';
 
 function getModelMetrics(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): Record<string, unknown> {
   const modelMetrics: Record<string, unknown> = {};
   modelMetrics.userUploaded = isUserUploadedDataset(state);
@@ -34,7 +34,7 @@ export function setMetricsLogger(logger: MetricsLogger) {
 export function logMetric(
   action: string,
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): void {
   if (metricsLogger) {
     metricsLogger(action, getModelMetrics(state, project));

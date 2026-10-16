@@ -11,7 +11,7 @@ interface PredictInputColumns {
 function randomNumberBetween(
   min: number,
   max: number,
-  decimalPlaces: number,
+  decimalPlaces: number
 ): string {
   const scale = 10 ** decimalPlaces;
   const steps = Math.round((max - min) * scale);
@@ -35,7 +35,7 @@ export function getRandomPredictInputs({
       randomNumberBetween(
         extremaByColumn[feature].min,
         extremaByColumn[feature].max,
-        decimalPlacesByColumn[feature],
+        decimalPlacesByColumn[feature]
       ),
     ]),
     ...categoricalFeatures.map(feature => [

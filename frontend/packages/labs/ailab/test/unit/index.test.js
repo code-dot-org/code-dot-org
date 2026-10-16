@@ -27,7 +27,7 @@ describe('startOver', () => {
   test('resets everything else to the start of the level', () => {
     startOver();
 
-    expect(store.getState().currentPanel).toBe('datasetView');
+    expect(store.getState().currentPanel).toBe('selectDataset');
     expect(store.getState().accuracyCheckExamples).toEqual([]);
   });
 
@@ -77,6 +77,7 @@ describe('mount', () => {
     act(() => {
       initAll({
         assetPath: './',
+        mode: {datasets: ['songs']},
         onContinue: () => {},
         saveTrainedModel: () => {},
       });

@@ -1,9 +1,8 @@
 /* Modal that animates training, then testing, a newly trained model. */
-import {Button, Typography} from '@mui/material';
-import {useEffect, useState} from 'react';
-
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
+import React, {useEffect, useState} from 'react';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
@@ -70,7 +69,7 @@ const TrainingModal = () => {
         {I18n.t(
           isTraining
             ? 'animationDescriptionsTraining'
-            : 'animationDescriptionsTesting',
+            : 'animationDescriptionsTesting'
         )}
       </p>
       <div className={styles.content}>

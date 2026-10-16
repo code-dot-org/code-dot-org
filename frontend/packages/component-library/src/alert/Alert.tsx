@@ -15,7 +15,8 @@ type AlertType =
   | 'warning'
   | 'info'
   | 'gray'
-  | 'aqua';
+  | 'aqua'
+  | 'pink';
 
 export const alertTypes: {[key in AlertType]: AlertType} = {
   primary: 'primary',
@@ -25,6 +26,7 @@ export const alertTypes: {[key in AlertType]: AlertType} = {
   info: 'info',
   gray: 'gray',
   aqua: 'aqua',
+  pink: 'pink',
 };
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {

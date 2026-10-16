@@ -73,7 +73,7 @@ function stepAnnouncement(index) {
 
 function pathAnnouncement(prediction) {
   const stepCount = within(screen.getByRole('list')).getAllByRole(
-    'listitem',
+    'listitem'
   ).length;
   return [
     `AI predicts ${prediction}`,
@@ -89,7 +89,7 @@ describe('TestPanel', () => {
   test('shows a field for each feature, in the order they were chosen', () => {
     renderTestPanel(
       levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species'),
-      penguinProject(),
+      penguinProject()
     );
 
     const fields = [...document.querySelectorAll('input, select')];
@@ -107,7 +107,7 @@ describe('TestPanel', () => {
     const island = screen.getByLabelText('island');
 
     expect(
-      [...island.options].map(option => [option.text, option.disabled]),
+      [...island.options].map(option => [option.text, option.disabled])
     ).toEqual([
       ['Choose one', true],
       ['Biscoe', false],
@@ -144,13 +144,13 @@ describe('TestPanel', () => {
     predictSnake();
 
     expect(
-      screen.getByRole('heading', {name: 'AI predicts snake'}),
+      screen.getByRole('heading', {name: 'AI predicts snake'})
     ).toBeTruthy();
     const steps = within(screen.getByRole('list')).getAllByRole('listitem');
     expect(steps.length).toBeGreaterThan(1);
     expect(steps[0].textContent).toMatch(/^1legs is [<≥] \d/);
     expect(steps[steps.length - 1].textContent).toBe(
-      `${steps.length}animal is snake`,
+      `${steps.length}animal is snake`
     );
   });
 
@@ -190,7 +190,7 @@ describe('TestPanel', () => {
   describe('a decision tree, as its path plays', () => {
     const replay = () =>
       fireEvent.click(
-        screen.getByRole('button', {name: 'Replay from the start'}),
+        screen.getByRole('button', {name: 'Replay from the start'})
       );
     const skip = () =>
       fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
@@ -201,7 +201,8 @@ describe('TestPanel', () => {
     });
     afterEach(() => {
       vi.useRealTimers();
-      vi.unstubAllGlobals();
+      // jsdom has no matchMedia, so the reduced-motion case adds one.
+      delete window.matchMedia;
     });
 
     test('says nothing more while it plays or skips', () => {
@@ -234,9 +235,7 @@ describe('TestPanel', () => {
     });
 
     test('reads the first step on each Replay under reduced motion', () => {
-      vi.stubGlobal('matchMedia', query => ({
-        matches: query.includes('reduce'),
-      }));
+      window.matchMedia = query => ({matches: query.includes('reduce')});
       predictBird();
       const changes = watchStatus();
 
@@ -258,11 +257,11 @@ describe('TestPanel', () => {
     predictSnake();
 
     expect(
-      screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),
+      screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/})
     ).toBeTruthy();
     expect(screen.queryByRole('list')).toBeNull();
     expect(status()).toBe(
-      screen.getByRole('heading', {name: /^AI predicts/}).textContent,
+      screen.getByRole('heading', {name: /^AI predicts/}).textContent
     );
   });
 });
