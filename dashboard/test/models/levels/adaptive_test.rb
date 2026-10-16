@@ -142,6 +142,29 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_equal 'Edited', level.content['title']
   end
 
+  test "a failed content write stops the save with an error" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+    level = create(:adaptive, adaptive_id: 'sample')
+    AdaptiveContent.stubs(:write).raises(Errno::EACCES)
+    Services::LevelFiles.expects(:write_custom_level_file).never
+
+    refute level.update(notes: 'changed', adaptive_content_json: '{"id": "sample", "title": "Edited"}')
+    assert_match(/could not be written/, level.errors[:adaptive_content_json].first)
+    refute_equal 'changed', level.reload.notes
+  end
+
+  test "a rolled-back save restores the content file" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+    level = create(:adaptive, adaptive_id: 'sample')
+    original = @dir.join('sample.json').read
+    Services::LevelFiles.stubs(:write_custom_level_file).raises(Errno::ENOSPC)
+
+    assert_raises(Errno::ENOSPC) do
+      level.update(adaptive_content_json: '{"id": "sample", "title": "Edited"}')
+    end
+    assert_equal original, @dir.join('sample.json').read
+  end
+
   test "saving without submitted content leaves the file alone" do
     Rails.application.config.stubs(:levelbuilder_mode).returns(true)
     AdaptiveContent.expects(:write).never

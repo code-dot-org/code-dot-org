@@ -106,12 +106,13 @@ class AdaptiveContentTest < ActiveSupport::TestCase
     assert_equal mtime.to_i, File.mtime(file).to_i
   end
 
-  test "write replaces the file without leaving a temp file" do
+  test "write replaces the file without leaving a temp file, keeping its mode" do
+    File.chmod(0o664, @dir.join('alpha.json'))
     AdaptiveContent.write('alpha', '{"title": "Alpha v2"}')
 
     assert_equal 'Alpha v2', AdaptiveContent.load('alpha')['title']
     assert_equal ['Not Valid.json', 'alpha.json', 'beta-2.json'], @dir.children.map {|child| child.basename.to_s}.sort
-    assert_equal 0o644, File.stat(@dir.join('alpha.json')).mode & 0o777
+    assert_equal 0o664, File.stat(@dir.join('alpha.json')).mode & 0o777
   end
 
   test "write raises for an invalid id" do

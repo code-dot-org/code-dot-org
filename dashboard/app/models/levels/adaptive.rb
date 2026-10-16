@@ -40,7 +40,10 @@ class Adaptive < Level
   validate :adaptive_content_exists
   validate :adaptive_content_json_matches
 
-  after_save :write_adaptive_content
+  # Before save, so a failed write stops the save ahead of the .level file.
+  before_save :write_adaptive_content
+  after_rollback :restore_adaptive_content
+  after_commit {@replaced_adaptive_content = nil}
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -101,14 +104,15 @@ class Adaptive < Level
     properties
   end
 
-  # Only the file's existence is checked; the content is validated in CI.
+  # Only the file's existence is checked. Content saved from the editor is
+  # checked in the browser; the repo's files are checked in CI.
   private def adaptive_content_exists
     return if adaptive_id.blank?
     return if AdaptiveContent.exist?(adaptive_id)
     errors.add(:adaptive_id, "has no content file under #{AdaptiveContent.content_dir}")
   end
 
-  # Backstop for requests that skip the browser's schema check.
+  # Backstop for requests that skip the browser's checks.
   private def adaptive_content_json_matches
     return if adaptive_content_json.nil?
     content = JSON.parse(adaptive_content_json)
@@ -123,9 +127,21 @@ class Adaptive < Level
   end
 
   private def write_adaptive_content
+    @replaced_adaptive_content = nil
     return if adaptive_content_json.nil?
     return unless Rails.application.config.levelbuilder_mode
-    AdaptiveContent.write(adaptive_id, adaptive_content_json)
+    previous = File.read(AdaptiveContent.path(adaptive_id))
+    @replaced_adaptive_content = previous if AdaptiveContent.write(adaptive_id, adaptive_content_json)
+  rescue SystemCallError, IOError => exception
+    errors.add(:adaptive_content_json, "could not be written: #{exception.message}")
+    throw :abort
+  end
+
+  # The file is outside the transaction, so a rollback must undo the write.
+  private def restore_adaptive_content
+    return unless @replaced_adaptive_content
+    File.atomic_write(AdaptiveContent.path(adaptive_id)) {|file| file.write(@replaced_adaptive_content)}
+    @replaced_adaptive_content = nil
   end
 
   # A copy of `pathway` with each referenced level's properties, as returned

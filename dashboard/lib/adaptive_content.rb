@@ -46,16 +46,7 @@ module AdaptiveContent
     file = path(id)
     normalized = "#{text.gsub("\r\n", "\n").rstrip}\n"
     return false if File.file?(file) && File.read(file) == normalized
-    temp = Tempfile.create([".#{id}", '.json'], content_dir)
-    begin
-      temp.write(normalized)
-      temp.close
-      File.chmod(0o644, temp.path)
-      File.rename(temp.path, file)
-    rescue
-      FileUtils.rm_f(temp.path)
-      raise
-    end
+    File.atomic_write(file) {|temp| temp.write(normalized)}
     true
   end
 

@@ -2,13 +2,21 @@ import $ from 'jquery';
 
 import {
   AdaptiveContentError,
+  findReferenceProblems,
   parsePathwaySource,
 } from '@cdo/apps/adaptive/schema';
 
-function contentProblems(text) {
+// What contentFilesTest.ts checks in CI, short of the level files.
+function contentProblems(text, adaptiveId) {
   try {
-    parsePathwaySource(JSON.parse(text));
-    return [];
+    const source = parsePathwaySource(JSON.parse(text));
+    const problems = findReferenceProblems(source);
+    if (source.id !== adaptiveId) {
+      problems.unshift(
+        `id: '${source.id}' does not match the Content ID '${adaptiveId}'`
+      );
+    }
+    return problems;
   } catch (error) {
     return error instanceof AdaptiveContentError
       ? error.problems
@@ -44,10 +52,11 @@ $(document).ready(() => {
     if (textarea.disabled) {
       return true;
     }
-    const problems = contentProblems(textarea.value);
+    const problems = contentProblems(textarea.value, savedId);
     if (problems.length === 0) {
       return true;
     }
+    window.saving = false;
     $('.publishLevelErrorMessage').show();
     $('#validation-error')
       .empty()
