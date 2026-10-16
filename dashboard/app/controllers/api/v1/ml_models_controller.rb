@@ -14,6 +14,10 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     sex: ''
   }
 
+  # The fields a student types; the rest of a model trained on a curated
+  # dataset is our own dataset metadata.
+  STUDENT_TEXT_FIELDS = %w[name potentialUses potentialMisuses].freeze
+
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
@@ -21,19 +25,17 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
 
+    text = model_data.except(:trainedModel).to_s
     is_user_uploaded = ActiveModel::Type::Boolean.new.cast(model_data.dig(:datasetDetails, :isUserUploaded))
+    # Curated dataset descriptions have read as street addresses to the
+    # geocoder. A missing flag is treated as an upload.
+    address_text = is_user_uploaded == false ? model_data.slice(*STUDENT_TEXT_FIELDS).values.join(' ') : text
 
     # If there's a PII/profanity API error, we rescue the exception and the save
     # will succeed. The saved model will bypass the PII/profanity filters.
     begin
-      profanity_or_pii = ShareFiltering.find_failure(
-        model_data.except(:trainedModel).to_s,
-        I18n.locale.to_s,
-        PROFANITY_FILTER_REPLACE_TEXT_LIST,
-        # Curated dataset descriptions have read as street addresses to the
-        # geocoder. A missing flag is treated as an upload.
-        skip_address: is_user_uploaded == false
-      )
+      profanity_or_pii = ShareFiltering.find_failure(text, I18n.locale.to_s, PROFANITY_FILTER_REPLACE_TEXT_LIST, skip_address: true)
+      profanity_or_pii = ShareFiltering.find_address_failure(address_text) if profanity_or_pii.nil?
     rescue OpenURI::HTTPError => exception
       share_filtering_error = exception
     end

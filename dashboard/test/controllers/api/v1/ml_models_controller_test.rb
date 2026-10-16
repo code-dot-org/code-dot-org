@@ -14,6 +14,7 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
     AWS::S3.stubs(:delete_from_bucket).returns(true)
     AWS::S3.stubs(:upload_to_bucket).returns(true)
     ShareFiltering.stubs(:find_failure).returns(nil)
+    ShareFiltering.stubs(:find_address_failure).returns(nil)
     @owner = create(:student)
     @model = create(:user_ml_model, user: @owner)
     @not_owner = create(:student)
@@ -66,23 +67,36 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
     assert_equal "piiProfanity", JSON.parse(@response.body)["status"]
   end
 
-  test 'skips the street address check for a curated dataset' do
+  test 'address checks only student text for a curated dataset' do
     sign_in @owner
     ShareFiltering.expects(:find_failure).with(anything, anything, anything, skip_address: true).returns(nil)
-    post :save, as: :json, params: {ml_model: {name: 'Model Name', datasetDetails: {isUserUploaded: false}}}
+    ShareFiltering.expects(:find_address_failure).with('Model Name picking songs').returns(nil)
+    post :save, as: :json, params: {
+      ml_model: {
+        name: 'Model Name',
+        potentialUses: 'picking songs',
+        datasetDetails: {description: 'Billboard Top 100 chart information', isUserUploaded: false}
+      }
+    }
     assert_equal "success", JSON.parse(@response.body)["status"]
   end
 
-  test 'keeps the street address check for an uploaded dataset' do
+  test 'address checks the whole model for an uploaded dataset' do
     sign_in @owner
-    ShareFiltering.expects(:find_failure).with(anything, anything, anything, skip_address: false).returns(nil)
-    post :save, as: :json, params: {ml_model: {name: 'Model Name', datasetDetails: {isUserUploaded: true}}}
+    ShareFiltering.expects(:find_address_failure).with do |text|
+      text.include?('Model Name') && text.include?('student description')
+    end.returns(nil)
+    post :save, as: :json, params: {
+      ml_model: {name: 'Model Name', datasetDetails: {description: 'student description', isUserUploaded: true}}
+    }
     assert_equal "success", JSON.parse(@response.body)["status"]
   end
 
-  test 'keeps the street address check when the upload flag is missing' do
+  test 'address checks the whole model when the upload flag is missing' do
     sign_in @owner
-    ShareFiltering.expects(:find_failure).with(anything, anything, anything, skip_address: false).returns(nil)
+    ShareFiltering.expects(:find_address_failure).with do |text|
+      text != 'Model Name' && text.include?('Model Name')
+    end.returns(nil)
     post :save, params: {"ml_model" => {"name" => "Model Name"}}
     assert_equal "success", JSON.parse(@response.body)["status"]
   end

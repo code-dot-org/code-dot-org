@@ -226,19 +226,8 @@ module ShareFiltering
   # @param [String] text The text to search through.
   # @return [ShareFailure, nil]
   def self.find_pii_failure(text, exceptions: false)
-    failure = find_email_or_phone_failure(text, exceptions: exceptions)
-    return failure if failure
-
-    candidate = Geocoder.extract_address_candidate(text)
-    return nil unless candidate
-    street_address = Geocoder.find_potential_street_address(candidate)
-    if street_address
-      failure = ShareFailure.new(FailureType::ADDRESS, street_address)
-      raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
-      return failure
-    end
-
-    nil
+    find_email_or_phone_failure(text, exceptions: exceptions) ||
+      find_street_address_failure(text, exceptions: exceptions)
   end
 
   # Searches for profanity in text.
@@ -389,6 +378,30 @@ module ShareFiltering
     return profanity_failure if profanity_failure
 
     nil
+  end
+
+  # Searches for a street address in text. Only the first multi-digit number
+  # and the words after it are geocoded.
+  # @param [String] text The text to search through.
+  # @return [ShareFailure, nil]
+  def self.find_address_failure(text, exceptions: false)
+    return nil unless Gatekeeper.allows('webpurify', default: true)
+
+    find_street_address_failure(text, exceptions: exceptions)
+  end
+
+  # Unlike find_address_failure, ignores the webpurify gatekeeper, as
+  # find_pii_failure always has.
+  # @return [ShareFailure, nil]
+  private_class_method def self.find_street_address_failure(text, exceptions: false)
+    candidate = Geocoder.extract_address_candidate(text)
+    return nil unless candidate
+    street_address = Geocoder.find_potential_street_address(candidate)
+    return nil unless street_address
+
+    failure = ShareFailure.new(FailureType::ADDRESS, street_address)
+    raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
+    failure
   end
 
   # Checks text for email or phone number PII.

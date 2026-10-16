@@ -130,6 +130,21 @@ class ShareFilteringTest < Minitest::Test
     )
   end
 
+  def test_find_address_failure
+    address = '1600 Pennsylvania Ave NW, Washington, DC 20500'
+    Geocoder.stubs(:find_potential_street_address).returns(address)
+
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::ADDRESS, address),
+      ShareFiltering.find_address_failure(address)
+    )
+    assert_raises(PIIFilterException) {ShareFiltering.find_address_failure(address, exceptions: true)}
+    assert_nil ShareFiltering.find_address_failure('My Model')
+
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(false)
+    assert_nil ShareFiltering.find_address_failure(address)
+  end
+
   def test_find_share_failure_with_phone_number
     Geocoder.
       stubs(:find_potential_street_address).
