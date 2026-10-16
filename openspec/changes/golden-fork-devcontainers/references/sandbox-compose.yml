@@ -1,0 +1,24 @@
+services:
+  db:
+    image: cdo-spike-f-db:latest
+    networks: [default]
+
+  redis:
+    image: redis:7
+    networks: [default]
+
+  app:
+    image: cdo-spike-c-rails:latest
+    entrypoint: ["sleep", "infinity"]
+    working_dir: ${APP_WORKDIR:-/repo/wt-sandbox1}
+    volumes:
+      - cdo-spike-f-repo:/repo
+    networks: [default]
+    depends_on: [db, redis]
+
+networks:
+  default: {}
+
+volumes:
+  cdo-spike-f-repo:
+    external: true

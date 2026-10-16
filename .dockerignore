@@ -1,0 +1,35 @@
+# Prevent BuildKit from syncing the entire worktree tree (171 GB observed
+# when nested worktrees exist under .claude/worktrees/).
+
+# Git internals and worktrees
+.git
+.claude/worktrees
+
+# Build artifacts
+apps/build
+apps/node_modules
+frontend/node_modules
+node_modules
+dashboard/tmp
+dashboard/log
+
+# Large data directories
+dashboard/config/blocks
+dashboard/config/scripts
+dashboard/config/courses
+dashboard/config/scripts_json
+dashboard/config/course_offerings
+
+# CI/IDE/OS
+.drone.yml
+.github
+.vscode
+*.swp
+*.swo
+*~
+
+# Docker-in-docker
+docker-compose.yml
+
+# Pegasus (deprecated, large)
+pegasus

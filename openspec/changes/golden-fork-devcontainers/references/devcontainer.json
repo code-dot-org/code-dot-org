@@ -1,0 +1,9 @@
+{
+  "name": "cdo-spike-hc-rails-smoke",
+  "image": "cdo-spike-c-rails:latest",
+  "workspaceFolder": "/code-dot-org",
+  "workspaceMount": "source=/var/home/sliang/git-workspaces/code-dot-org-full/.claude/worktrees/hc-rails,target=/code-dot-org,type=bind",
+  "remoteUser": "cdo",
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+  "forwardPorts": [3000]
+}
