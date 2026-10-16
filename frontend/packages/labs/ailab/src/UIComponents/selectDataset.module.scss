@@ -1,71 +1,71 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.panel;
+}
+
+.header {
+  @include mixins.panel-header;
+
+  justify-content: center;
+}
+
+.header .title {
+  @include mixins.panel-header-title;
+}
+
+.content {
+  @include mixins.panel-content;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+  gap: 8px;
+  background-color: var(--background-neutral-secondary);
+}
+
 .item {
-  width: calc(33.33% - 4px);
-  padding: 10px;
-  float: left;
-  box-sizing: border-box;
-  border: solid 4px var(--ailab-background);
+  @include mixins.card;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 8px;
+  border-width: 2px;
+  text-align: start;
   cursor: pointer;
-  background-color: white;
-  margin: 2px;
-  position: relative;
 }
 
 .highlighted {
-  border: solid 4px rgb(85 217 255 / 0.6);
+  border-color: var(--border-brand-mid);
 }
 
 .selected {
-  border: solid 4px rgb(85 217 255);
-}
-
-.item:nth-child(3n + 1) {
-  clear: both;
-}
-
-.imageFrame {
-  width: 100%;
-  // This assumes that all dataset images have a 1.5 aspect ratio, e.g. 720x480.
-  padding-top: calc(100% / 1.5);
+  border-color: var(--border-brand-primary);
 }
 
 .image {
   display: block;
-  width: calc(100% - 20px);
-  position: absolute;
-  top: 10px;
-}
-
-.name {
-  font-size: 14px;
-  margin-top: 5px;
-  margin-right: 20px;
-  position: absolute;
-  bottom: 23px;
-  left: 20px;
-  color: white;
-  background-color: rgb(0 0 0 / 0.3);
-  padding: 3px 5px;
-  border-radius: 3px;
+  width: 100%;
+  // This assumes that all dataset images have a 1.5 aspect ratio, e.g. 720x480.
+  aspect-ratio: 1.5;
+  border-radius: var(--shape-sm);
 }
 
 .upload {
-  margin-top: 20px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background-color: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
 }
 
-.uploadButton {
-  font-size: 14px;
-  margin: 0;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: var(--ailab-teal);
-  color: white;
-  padding: 10px 20px;
-  display: inline-block;
+.upload .fileInput {
+  display: none;
 }
 
-.invalidData {
-  margin: 20px;
+.upload .invalidData {
+  color: var(--text-error-primary);
 }

@@ -3,6 +3,7 @@ import {createStore} from 'redux';
 import {ColumnTypes} from '../../src/constants';
 import rootReducer, {
   setColumnsByDataType,
+  setCurrentPanel,
   setImportedData,
   setMode,
 } from '../../src/redux';
@@ -34,6 +35,7 @@ export function seedLevel(
   columns = ANIMAL_COLUMNS
 ) {
   store.dispatch(setMode(mode));
+  store.dispatch(setCurrentPanel('datasetView'));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type))

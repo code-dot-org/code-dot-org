@@ -55,7 +55,7 @@ Take care that each column is correctly listed in the `.json` file, and test tha
 
 #### Select dataset
 
-This is usually the first scene, and can offer selection of both "pre-canned" datasets, which have accompanying metadata, or user-uploaded CSV. The tiles use an art style somewhat consistent with that used elsewhere in our product. There is a fun "grow" animation on tile hover, just to feel a little more interactive, which is reused for the A.I. bot head elsewhere in the app.
+This is usually the first scene, and can offer selection of both "pre-canned" datasets, which have accompanying metadata, or user-uploaded CSV. The tiles use an art style somewhat consistent with that used elsewhere in our product.
 
 #### Data display (label & features)
 

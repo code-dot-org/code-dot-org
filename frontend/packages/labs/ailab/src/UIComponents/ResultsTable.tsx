@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {isRegression} from '../helpers/columnDetails';
@@ -8,10 +8,11 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
+import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
-import RowsTableHeader from './RowsTableHeader';
+import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
@@ -32,28 +33,60 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
   const selectedFeatures = project.selectedFeatures;
   const labelColumn = project.labelColumn || 'unknown';
   const data = useAppSelector(state => state.data);
+  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
   const isRegressionMode = useAppSelector(state =>
     isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = showAllColumns
-    ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
-    : selectedFeatures;
+  const columns = useMemo(
+    () =>
+      showAllColumns
+        ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
+        : selectedFeatures,
+    [showAllColumns, data, labelColumn, selectedFeatures]
+  );
+
+  const rowValues = useMemo(
+    () =>
+      results.examples.map((example, index) => {
+        const row = results.rowIndices[index];
+        // Only feature values are known for an example without a dataset row number.
+        const columnValue = (column: string) => {
+          const feature = selectedFeatures.indexOf(column);
+          if (feature !== -1) {
+            return example[feature];
+          }
+          return row === undefined ? '' : (data[row]?.[column] ?? '');
+        };
+        return {
+          ...Object.fromEntries(
+            columns.map(column => [column, columnValue(column)])
+          ),
+          [labelColumn]: results.labels[index],
+          [PREDICTION_COLUMN]: results.predictedLabels[index],
+        };
+      }),
+    [results, columns, selectedFeatures, labelColumn, data]
+  );
+  const viewColumns = useMemo(
+    () => [...columns, labelColumn, PREDICTION_COLUMN],
+    [columns, labelColumn]
+  );
+  const viewColumnTypes = useMemo(
+    () => ({
+      ...columnsByDataType,
+      [PREDICTION_COLUMN]: columnsByDataType[labelColumn],
+    }),
+    [columnsByDataType, labelColumn]
+  );
+  const view = useTableView({
+    data: rowValues,
+    columns: viewColumns,
+    columnTypes: viewColumnTypes,
+  });
 
   const cellValue = (value: string | number) =>
     getLocalizedValue(value, datasetId);
-  // Only feature values are known for an example without a dataset row number.
-  const columnValue = (
-    example: (string | number)[],
-    row: number | undefined,
-    column: string
-  ) => {
-    const feature = selectedFeatures.indexOf(column);
-    if (feature !== -1) {
-      return cellValue(example[feature]);
-    }
-    return row === undefined ? '' : cellValue(data[row]?.[column] ?? '');
-  };
 
   return (
     <>
@@ -67,12 +100,15 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
           <thead>
             <RowsTableHeader
               columns={[...columns, labelColumn]}
+              view={view}
               showPrediction
+              predictionByRow
             />
           </thead>
           <tbody>
-            {results.examples.map((example, index) => {
+            {view.rows.map(index => {
               const row = results.rowIndices[index];
+              const values = rowValues[index];
               return (
                 <tr key={index} className={tableStyles.row}>
                   <th scope="row" className={tableStyles.indexCell}>
@@ -87,16 +123,14 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                           : tableStyles.bodyCell
                       }
                     >
-                      <CellText>{columnValue(example, row, column)}</CellText>
+                      <CellText>{cellValue(values[column])}</CellText>
                     </td>
                   ))}
                   <td className={labelCell}>
-                    <CellText>{cellValue(results.labels[index])}</CellText>
+                    <CellText>{cellValue(values[labelColumn])}</CellText>
                   </td>
                   <td className={labelCell}>
-                    <CellText>
-                      {cellValue(results.predictedLabels[index])}
-                    </CellText>
+                    <CellText>{cellValue(values[PREDICTION_COLUMN])}</CellText>
                   </td>
                 </tr>
               );

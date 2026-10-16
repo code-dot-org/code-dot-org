@@ -187,7 +187,7 @@ describe('ailab reducer', () => {
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
       expect(next.currentColumn).toBeUndefined();
-      expect(next.currentPanel).toBe('datasetView');
+      expect(next.currentPanel).toBe('selectDataset');
     });
 
     test('preserves instructionsEnabled through reset', () => {
@@ -226,10 +226,9 @@ describe('ailab reducer', () => {
     });
 
     test('importing a dataset records uploaded vs selected', () => {
-      const onPicker = {...initialState, currentPanel: 'selectDataset'};
-      const uploaded = reducer(onPicker, setImportedData([], true));
+      const uploaded = reducer(initialState, setImportedData([], true));
       expect(uploaded.instructionsKey).toBe('uploadedDataset');
-      const selected = reducer(onPicker, setImportedData([], false));
+      const selected = reducer(initialState, setImportedData([], false));
       expect(selected.instructionsKey).toBe('selectedDataset');
     });
   });

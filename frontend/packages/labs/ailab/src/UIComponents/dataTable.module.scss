@@ -69,6 +69,37 @@
   }
 }
 
+.header.headerWithControls:not(.clickable),
+.headerWithControls .headerButton {
+  padding-right: 28px;
+}
+
+.sortControl {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  opacity: 0;
+}
+
+// Until its column is sorted, the button shows only on hover or focus.
+.headerWithControls:hover .sortControl,
+.headerWithControls:focus-within .sortControl,
+.sortControl.sorted {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .sortControl {
+    opacity: 1;
+  }
+}
+
+.sortTooltip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .headerButton {
   display: block;
   width: 100%;

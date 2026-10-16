@@ -4,17 +4,29 @@ import React from 'react';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import type {TableView} from '../useTableView';
 
 import CellText from './CellText';
+import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
 
+export const PREDICTION_COLUMN = 'AI prediction';
+
 interface RowsTableHeaderProps {
   columns: string[];
+  view: TableView;
   showPrediction?: boolean;
+  // Each row has its own prediction, so the view can sort by it.
+  predictionByRow?: boolean;
 }
 
-const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
+const RowsTableHeader = ({
+  columns,
+  view,
+  showPrediction,
+  predictionByRow,
+}: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const labelColumn = project.labelColumn || 'unknown';
@@ -29,27 +41,34 @@ const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
         )}
         aria-label="Row"
       />
-      {columns.map(column => (
-        <th
-          key={column}
-          scope="col"
-          className={classNames(tableStyles.header, {
-            [tableStyles.headerLabel]: column === labelColumn,
-            [tableStyles.headerFeature]:
-              column !== labelColumn &&
-              project.selectedFeatures.includes(column),
-          })}
-        >
-          <CellText>{getLocalizedColumnName(datasetId, column)}</CellText>
-        </th>
-      ))}
+      {columns.map(column => {
+        const columnName = getLocalizedColumnName(datasetId, column);
+        return (
+          <ColumnHeader
+            key={column}
+            column={column}
+            name={columnName}
+            view={view}
+            className={classNames(tableStyles.header, {
+              [tableStyles.headerLabel]: column === labelColumn,
+              [tableStyles.headerFeature]:
+                column !== labelColumn &&
+                project.selectedFeatures.includes(column),
+            })}
+          >
+            <CellText>{columnName}</CellText>
+          </ColumnHeader>
+        );
+      })}
       {showPrediction && (
-        <th
-          scope="col"
+        <ColumnHeader
+          column={PREDICTION_COLUMN}
+          name={PREDICTION_COLUMN}
+          view={predictionByRow ? view : undefined}
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >
           <CellText>AI predicts</CellText>
-        </th>
+        </ColumnHeader>
       )}
     </tr>
   );
