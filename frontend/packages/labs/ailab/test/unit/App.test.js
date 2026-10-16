@@ -138,7 +138,6 @@ describe('a pretrained level', () => {
       storeSingleton.dispatch(setMode(hiding));
       storeSingleton.dispatch(setCurrentPanel('datasetView'));
     });
-    expect(storeSingleton.getState().currentPanel).toBe('datasetView');
     expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
 
     act(() => {

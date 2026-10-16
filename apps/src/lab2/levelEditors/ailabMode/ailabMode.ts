@@ -107,7 +107,6 @@ export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   return newMode;
 }
 
-// Without a dataset, students choose one or upload a CSV, so there are no columns to set.
 const SET_BY_DATASET = [
   'label',
   'features',

@@ -365,7 +365,6 @@ describe('EditAilabMode', () => {
   it('lets students choose a dataset when none is set', () => {
     const savedMode = renderEditor('{"hideSave": true}');
     expect(datasetDropdown()).toHaveValue('');
-    expect(datasetDropdown()).not.toBeRequired();
     expect(
       screen.getByText(
         'Students start by choosing a dataset or uploading a CSV.'

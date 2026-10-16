@@ -39,7 +39,6 @@ class Ailab < Level
 
   REQUIRE_ACCURACY_RANGE = (0..100)
 
-  # A mode without a dataset lets students choose one or upload a CSV, so it has no columns to set.
   DATASET_COLUMN_MODE_KEYS = %w(label features hideSelectLabel lockFeatures pretrained).freeze
 
   validate :validate_lab2_mode
