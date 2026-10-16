@@ -1,6 +1,6 @@
 /* React component to handle training. */
 import classNames from 'classnames';
-import {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 import {imageUrl} from '../assetPath';
 import {ANIMATION_TABLE_ROW_LIMIT, getFadeOpacity} from '../constants';
@@ -26,7 +26,7 @@ const TrainModel = ({onFinished}: TrainModelProps) => {
   const {project} = useProject();
   const data = useAppSelector(state => getTableData(state, project, false));
   const instructionsOverlayActive = useAppSelector(
-    state => state.instructionsOverlayActive,
+    state => state.instructionsOverlayActive
   );
   const [frame, setFrame] = useState(0);
   const [headOpen, setHeadOpen] = useState(false);

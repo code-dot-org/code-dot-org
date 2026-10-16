@@ -46,7 +46,7 @@ describe('getScatterPlotData', () => {
       labelColumnIsNumerical,
       allNumericalState.currentColumn,
       currentColumnIsNumerical,
-      allNumericalState.data,
+      allNumericalState.data
     );
     expect(expected).toEqual(scatterPlotData);
   });
@@ -65,7 +65,7 @@ describe('getCrossTabData', () => {
       classificationState.currentColumn,
       currentColumnIsCategorical,
       classificationState.data,
-      getUniqueOptionsLabelColumn,
+      getUniqueOptionsLabelColumn
     );
     expect(crossTabData.labelName).toEqual('play');
     expect(crossTabData.featureNames).toEqual(['temp']);
@@ -77,7 +77,7 @@ describe('getting category options', () => {
   test('gets unique options label column', async () => {
     const uniqueOptions = getUniqueOptionsLabelColumn.resultFunc(
       classificationProject.labelColumn,
-      classificationState.data,
+      classificationState.data
     );
     expect(uniqueOptions).toEqual(['no', 'yes']);
   });

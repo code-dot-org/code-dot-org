@@ -1,4 +1,10 @@
-import {createServerProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {get: jest.fn(), put: jest.fn()},
+}));
 
 const mockLogError = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -18,10 +24,10 @@ const deferred = () => {
   return {promise, resolve};
 };
 
-describe('createServerProgressStore', () => {
+describe('ProgressStore', () => {
   const http = {
-    get: jest.fn(),
-    put: jest.fn(),
+    get: HttpClient.get as jest.Mock,
+    put: HttpClient.put as jest.Mock,
   };
 
   beforeEach(() => {
@@ -32,7 +38,7 @@ describe('createServerProgressStore', () => {
   it('loads the steps for the unit and level', async () => {
     const steps = {read: {status: 'complete', timeSpent: 4}};
     http.get.mockResolvedValue({json: async () => ({steps})});
-    const store = createServerProgressStore(http);
+    const store = new ProgressStore();
 
     expect(await store.load(key)).toEqual({steps});
     expect(http.get).toHaveBeenCalledWith(
@@ -43,7 +49,7 @@ describe('createServerProgressStore', () => {
   it('sends writes one at a time, in order', async () => {
     const first = deferred();
     http.put.mockReturnValueOnce(first.promise);
-    const store = createServerProgressStore(http);
+    const store = new ProgressStore();
 
     const saves = [
       store.saveStep(key, 'read', {started: true}),
@@ -67,7 +73,7 @@ describe('createServerProgressStore', () => {
   });
 
   it('sends generated instructions on the same chain', async () => {
-    const store = createServerProgressStore(http);
+    const store = new ProgressStore();
     const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
 
     store.saveStep(key, 'read', {started: true});
@@ -85,7 +91,7 @@ describe('createServerProgressStore', () => {
 
   it('logs a failed write and still sends the next', async () => {
     http.put.mockRejectedValueOnce(new Error('500'));
-    const store = createServerProgressStore(http);
+    const store = new ProgressStore();
 
     store.saveStep(key, 'read', {started: true});
     await store.saveStep(key, 'read', {completed: true});

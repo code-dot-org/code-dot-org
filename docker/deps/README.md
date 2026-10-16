@@ -163,11 +163,13 @@ build in a pipeline, so a builder stage and a final stage cannot land on
 different bytes. Each platform resolves its own image through that digest.
 
 `.github/workflows/cdo-deps-image.yml` builds and smoke-tests on docker and
-podman, on amd64 and arm64, for every PR touching the key inputs, and
-publishes from staging. It also gates `docker/build`, since every job there
-builds `cdo-build` anyway. The workflow is chained off `cdo-base-image`
-rather than scheduled, so this layer rebuilds on the base that just shipped
-and a failed base rebuilds nothing.
+podman, on amd64 and arm64. Normally, `cdo-base` is pulled from the published
+GHCR registry avoiding an expensive build. However, if its underlying context
+changes (this is automatically detected), `cdo-base` will be built from source
+in the PR. The workflow publishes from staging and also gates `docker/build`,
+since every job there builds `cdo-build` anyway. It is chained off
+`cdo-base-image` rather than scheduled, so this layer rebuilds on the base that
+just shipped and a failed base rebuilds nothing.
 
 ## Things that will bite
 

@@ -46,7 +46,7 @@ describe('train functions', () => {
 
     const predictedValue = getConvertedPredictedLabel(
       store.getState(),
-      project,
+      project
     );
 
     expect(predictedValue).toBe(20);
@@ -83,7 +83,7 @@ describe('train functions', () => {
 
     const predictedLabel = getConvertedPredictedLabel(
       store.getState(),
-      project,
+      project
     );
 
     expect(predictedLabel).toBe('green');
@@ -150,7 +150,7 @@ describe('train.cancel', () => {
     train.onClickPredict(trainedModel, onLegs);
 
     expect(getConvertedPredictedLabel(store.getState(), onLegs)).toBe(
-      predicted,
+      predicted
     );
   });
 });
@@ -235,7 +235,7 @@ function loadedStore(mode, reserveLocation) {
   store.dispatch(setMode(mode));
   store.dispatch(setImportedData(ROWS, false));
   Object.entries(COLUMNS).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type)),
+    store.dispatch(setColumnsByDataType(column, type))
   );
   store.dispatch(setReserveLocation(reserveLocation));
   return store;
@@ -283,7 +283,7 @@ describe('train.refit', () => {
         const refit = train.refit(loadedStore(mode, reserveLocation), saved);
 
         expect(refit.trainedModel.predict(probes)).toEqual(
-          run.trainedModel.predict(probes),
+          run.trainedModel.predict(probes)
         );
       });
 
@@ -307,7 +307,7 @@ describe('train.refit', () => {
 
         const after = refitStore.getState();
         expect(after.accuracyCheckExamples).toEqual(
-          before.accuracyCheckExamples,
+          before.accuracyCheckExamples
         );
         expect(after.accuracyCheckLabels).toEqual(before.accuracyCheckLabels);
         expect(after.trainingExamples).toEqual(before.trainingExamples);
@@ -323,8 +323,8 @@ describe('train.refit', () => {
       splitsSeen.add(
         trainAndSave(
           undefined,
-          TestDataLocations.RANDOM,
-        ).saved.accuracyCheckRowIndices.join(),
+          TestDataLocations.RANDOM
+        ).saved.accuracyCheckRowIndices.join()
       );
     }
     expect(splitsSeen.size).toBeGreaterThan(1);
@@ -337,19 +337,19 @@ describe('train.refit', () => {
     for (let attempt = 0; attempt < 200; attempt++) {
       trainAndSave(
         undefined,
-        TestDataLocations.RANDOM,
+        TestDataLocations.RANDOM
       ).saved.accuracyCheckRowIndices.forEach(index => seen.add(index));
     }
 
     expect([...seen].sort((a, b) => a - b)).toEqual(
-      Array.from({length: ROWS.length}, (_unused, index) => index),
+      Array.from({length: ROWS.length}, (_unused, index) => index)
     );
   });
 
   test('builds what the saved hyperparameters ask for, without sweeping again', () => {
     const {run, saved} = trainAndSave(
       {trainer: 'decisionTree'},
-      TestDataLocations.END,
+      TestDataLocations.END
     );
     // The sweep settles on maxDepth 1 for this fixture, so asking for a deeper
     // tree is the only way to tell a rebuild apart from a second sweep.
@@ -358,7 +358,7 @@ describe('train.refit', () => {
     train.reset();
     const refit = train.refit(
       loadedStore({trainer: 'decisionTree'}, TestDataLocations.END),
-      deeper,
+      deeper
     );
 
     expect(refit.hyperparameters).toEqual({maxDepth: 8});
@@ -416,7 +416,7 @@ describe('train.refit', () => {
 
       train.reset();
       expect(
-        train.refit(loadedStore(undefined, TestDataLocations.END), saved),
+        train.refit(loadedStore(undefined, TestDataLocations.END), saved)
       ).toBeUndefined();
     });
 
@@ -427,8 +427,8 @@ describe('train.refit', () => {
       expect(
         train.refit(
           loadedStore({trainer: 'decisionTree'}, TestDataLocations.END),
-          saved,
-        ),
+          saved
+        )
       ).toBeUndefined();
     });
   });

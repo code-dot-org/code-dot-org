@@ -1,10 +1,10 @@
 /* Panel for trying a trained model on new inputs. */
-import {Button, Typography} from '@mui/material';
-import type {ChangeEvent} from 'react';
 
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button, Typography} from '@mui/material';
+import React, {type ChangeEvent} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getRandomPredictInputs} from '../helpers/randomPredictInputs';
@@ -33,28 +33,28 @@ const TestPanel = () => {
   const selectedFeatures = project.selectedFeatures;
   const testData = useAppSelector(state => state.testData);
   const numericalFeatures = useAppSelector(state =>
-    getSelectedNumericalFeatures(state, project),
+    getSelectedNumericalFeatures(state, project)
   );
   const categoricalFeatures = useAppSelector(state =>
-    getSelectedCategoricalFeatures(state, project),
+    getSelectedCategoricalFeatures(state, project)
   );
   const extremaByColumn = useAppSelector(state =>
-    getExtremaByColumn(state, project),
+    getExtremaByColumn(state, project)
   );
   const decimalPlacesByColumn = useAppSelector(state =>
-    getDecimalPlacesByColumn(state, project),
+    getDecimalPlacesByColumn(state, project)
   );
   const uniqueOptionsByColumn = useAppSelector(state =>
-    getUniqueOptionsByColumn(state, project),
+    getUniqueOptionsByColumn(state, project)
   );
   const predictAvailable = useAppSelector(state =>
-    getPredictAvailable(state, project),
+    getPredictAvailable(state, project)
   );
   const {trainedModel} = useTrainingData();
 
   const onChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    feature: string,
+    feature: string
   ) => {
     dispatch(setTestData(feature, event.target.value));
   };
@@ -68,8 +68,8 @@ const TestPanel = () => {
           extremaByColumn,
           decimalPlacesByColumn,
           uniqueOptionsByColumn,
-        }),
-      ),
+        })
+      )
     );
   };
 

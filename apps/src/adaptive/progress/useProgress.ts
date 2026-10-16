@@ -37,6 +37,7 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
 /** Records a result on a level step's level; see sendAdaptiveStepReport. */
 export type LevelStepReporter = (
   levelId: number,
+  appType: string,
   result: number,
   timeMs: number
 ) => Promise<void>;
@@ -101,10 +102,11 @@ export function useProgress(
         store.saveStep({scriptId, levelId}, step.id, write);
         return;
       }
-      const stepLevelId = step.levelProperties?.id;
-      if (stepLevelId === undefined || !reportLevelStep) return;
+      const properties = step.levelProperties;
+      if (!properties || !reportLevelStep) return;
       reportLevelStep(
-        stepLevelId,
+        properties.id,
+        properties.appName,
         levelResult,
         write.timeSinceLastSave ?? 0
       ).catch(error => logFailure(`report ${step.id}`, error));
@@ -136,7 +138,7 @@ export function useProgress(
       send(
         step,
         {completed: true, timeSinceLastSave: timeMs},
-        TestResults.FREE_PLAY
+        TestResults.ALL_PASS
       );
     },
     [updateStep, send]

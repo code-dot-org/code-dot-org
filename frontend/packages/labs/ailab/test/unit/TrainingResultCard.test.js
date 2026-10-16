@@ -62,7 +62,7 @@ describe('TrainingResultCard', () => {
   test('shows the tree mini map after decision tree training', () => {
     renderCard();
     expect(
-      screen.getByRole('button', {name: 'Replay training'}),
+      screen.getByRole('button', {name: 'Replay training'})
     ).not.toBeNull();
   });
 
@@ -88,7 +88,7 @@ describe('TrainingResultCard', () => {
       store.dispatch(setTrainingModalStep(undefined));
     });
     expect(document.activeElement).toBe(
-      screen.getByRole('button', {name: 'Test model'}),
+      screen.getByRole('button', {name: 'Test model'})
     );
   });
 

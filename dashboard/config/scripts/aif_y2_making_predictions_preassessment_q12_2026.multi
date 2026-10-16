@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q12-2026'
+
+right '10 high risk, 0 low risk'
+wrong '7 high risk, 3 low risk'
+wrong '5 high risk, 5 low risk'
+wrong '3 high risk, 7 low risk'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A decision tree asks a question that splits water samples into groups of ten. Which group has the lowest impurity?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Evaluating Decision Trees
+MARKDOWN

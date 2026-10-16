@@ -2098,24 +2098,25 @@ describe('progressReduxTest', () => {
       dispatch.mockReset();
     });
 
-    it('posts under the adaptive script level with the step time', async () => {
+    it('posts the step level under the adaptive script level', async () => {
       jest
         .spyOn(progressReduxSelectors, 'getCurrentScriptLevelId')
         .mockReturnValue(77);
 
-      await sendAdaptiveStepReport(12, TestResults.FREE_PLAY, 4500)(
-        dispatch,
-        getState,
-        undefined
-      );
+      await sendAdaptiveStepReport(
+        12,
+        'weblab2',
+        TestResults.ALL_PASS,
+        4500
+      )(dispatch, getState, undefined);
 
       expect(fetchSpy).toHaveBeenCalledTimes(1);
       const [url, options] = fetchSpy.mock.calls[0];
       expect(url).toBe('/milestone/0/77/12');
       expect(JSON.parse(options.body)).toEqual({
-        app: 'adaptive',
+        app: 'weblab2',
         result: true,
-        testResult: TestResults.FREE_PLAY,
+        testResult: TestResults.ALL_PASS,
         timeSinceLastMilestone: 4500,
       });
       expect(dispatch).not.toHaveBeenCalled();
@@ -2126,11 +2127,12 @@ describe('progressReduxTest', () => {
         .spyOn(progressReduxSelectors, 'getCurrentScriptLevelId')
         .mockReturnValue(undefined);
 
-      await sendAdaptiveStepReport(12, TestResults.LEVEL_STARTED, 0)(
-        dispatch,
-        getState,
-        undefined
-      );
+      await sendAdaptiveStepReport(
+        12,
+        'weblab2',
+        TestResults.LEVEL_STARTED,
+        0
+      )(dispatch, getState, undefined);
 
       expect(fetchSpy).not.toHaveBeenCalled();
     });
@@ -2142,11 +2144,12 @@ describe('progressReduxTest', () => {
       fetchSpy.mockResolvedValue({ok: false, status: 403});
 
       await expect(
-        sendAdaptiveStepReport(12, TestResults.FREE_PLAY, 0)(
-          dispatch,
-          getState,
-          undefined
-        )
+        sendAdaptiveStepReport(
+          12,
+          'weblab2',
+          TestResults.ALL_PASS,
+          0
+        )(dispatch, getState, undefined)
       ).rejects.toThrow('403');
     });
   });

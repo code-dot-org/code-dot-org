@@ -10,12 +10,28 @@
 .header {
   @include mixins.panel-header;
 
+  justify-content: space-between;
   gap: 8px;
   padding-left: 10px;
 }
 
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.header .viewToggle {
+  @include mixins.segmented-buttons-xs;
+
+  flex-shrink: 0;
 }
 
 .separator {

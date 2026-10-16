@@ -20,68 +20,61 @@ export interface StepWrite {
   answers?: {questionId: number | string; list: Answer[]};
 }
 
-export interface ProgressStore {
-  load(key: ProgressKey): Promise<Progress>;
-  saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void>;
-  saveInstructions(
-    key: ProgressKey,
-    stepId: string,
-    content: GeneratedContent
-  ): Promise<void>;
-}
-
 const query = ({scriptId, levelId}: ProgressKey) =>
   `scriptId=${scriptId}&levelId=${levelId}`;
 
 /** Sends writes one at a time, in order; a failed one is logged and skipped. */
-export function createServerProgressStore(
-  http: Pick<typeof HttpClient, 'get' | 'put'> = HttpClient
-): ProgressStore {
-  let chain: Promise<void> = Promise.resolve();
-  const enqueue = (label: string, request: () => Promise<unknown>) => {
-    chain = chain.then(request).then(
+export class ProgressStore {
+  private chain: Promise<void> = Promise.resolve();
+
+  async load(key: ProgressKey): Promise<Progress> {
+    const response = await HttpClient.get(`/adaptive_progress?${query(key)}`);
+    const body = (await response.json()) as Partial<Progress>;
+    return {...EMPTY_PROGRESS, ...body};
+  }
+
+  saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void> {
+    return this.enqueue(`save ${stepId}`, () =>
+      this.putStep(key, stepId, 'progress', write)
+    );
+  }
+
+  saveInstructions(
+    key: ProgressKey,
+    stepId: string,
+    content: GeneratedContent
+  ): Promise<void> {
+    return this.enqueue(`save instructions for ${stepId}`, () =>
+      this.putStep(key, stepId, 'generated_instructions', {
+        generatedInstructions: content,
+      })
+    );
+  }
+
+  private putStep(
+    key: ProgressKey,
+    stepId: string,
+    route: string,
+    body: object
+  ) {
+    return HttpClient.put(
+      `/adaptive_progress/steps/${encodeURIComponent(stepId)}/${route}`,
+      JSON.stringify({...key, ...body}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+  }
+
+  private enqueue(label: string, request: () => Promise<unknown>) {
+    this.chain = this.chain.then(request).then(
       () => undefined,
       error =>
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError(`Adaptive progress: ${label} failed`, error as Error)
     );
-    return chain;
-  };
-  const putStep = (
-    key: ProgressKey,
-    stepId: string,
-    route: string,
-    body: object
-  ) =>
-    http.put(
-      `/adaptive_progress/steps/${encodeURIComponent(stepId)}/${route}`,
-      JSON.stringify({...key, ...body}),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-
-  return {
-    async load(key) {
-      const response = await http.get(`/adaptive_progress?${query(key)}`);
-      const body = (await response.json()) as Partial<Progress>;
-      return {...EMPTY_PROGRESS, ...body};
-    },
-
-    saveStep(key, stepId, write) {
-      return enqueue(`save ${stepId}`, () =>
-        putStep(key, stepId, 'progress', write)
-      );
-    },
-
-    saveInstructions(key, stepId, content) {
-      return enqueue(`save instructions for ${stepId}`, () =>
-        putStep(key, stepId, 'generated_instructions', {
-          generatedInstructions: content,
-        })
-      );
-    },
-  };
+    return this.chain;
+  }
 }
 
-export const serverProgressStore = createServerProgressStore();
+export const serverProgressStore = new ProgressStore();

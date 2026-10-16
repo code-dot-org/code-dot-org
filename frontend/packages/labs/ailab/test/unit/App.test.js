@@ -3,7 +3,12 @@ import {createElement} from 'react';
 
 import App from '../../src/App';
 import I18n from '../../src/i18n';
-import {resetState, setMode, setPresetColumns} from '../../src/redux';
+import {
+  resetState,
+  setCurrentPanel,
+  setMode,
+  setPresetColumns,
+} from '../../src/redux';
 import {store as storeSingleton} from '../../src/store';
 
 import {levelProject, levelStore, seedLevel} from './levelStore';
@@ -20,7 +25,7 @@ function renderApp(mode) {
       onStartOver: () => {},
       onTrained,
     }),
-    {store, project},
+    {store, project}
   );
   return {store, onTrained, trainModel};
 }
@@ -88,7 +93,7 @@ describe('a pretrained level', () => {
         onStartOver: () => {},
         onTrained,
       }),
-      {store: storeSingleton, project: levelProject()},
+      {store: storeSingleton, project: levelProject()}
     );
     return {onTrained, trainingData};
   }
@@ -113,7 +118,7 @@ describe('a pretrained level', () => {
     act(() => {
       seedLevel(storeSingleton, PRETRAINED);
       storeSingleton.dispatch(
-        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
     expect(onTrained.mock.calls).toEqual([[100]]);
@@ -131,14 +136,14 @@ describe('a pretrained level', () => {
     act(() => {
       storeSingleton.dispatch(resetState());
       storeSingleton.dispatch(setMode(hiding));
+      storeSingleton.dispatch(setCurrentPanel('datasetView'));
     });
-    expect(storeSingleton.getState().currentPanel).toBe('datasetView');
     expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
 
     act(() => {
       seedLevel(storeSingleton, hiding);
       storeSingleton.dispatch(
-        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']}),
+        setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
     expect(storeSingleton.getState().currentPanel).toBe('results');

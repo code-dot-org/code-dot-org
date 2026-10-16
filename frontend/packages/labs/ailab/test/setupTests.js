@@ -1,11 +1,6 @@
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    observe() {}
-    disconnect() {}
-  },
-);
+import './unit/stubTextMeasurement';
 
-HTMLCanvasElement.prototype.getContext = () => ({
-  measureText: text => ({width: text.length * 8}),
-});
+global.ResizeObserver = class {
+  observe() {}
+  disconnect() {}
+};
