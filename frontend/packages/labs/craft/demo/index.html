@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./js/phaser.js"></script>
+  <script src="./main.js"></script>
+  <script src="./levels.js"></script>
+  <script src="./js/jquery-1.7.min.js"></script>
+  <script src="./js/soundEffects.js"></script>
+  <title>2D Craft Playground</title>
+</head>
+<body>
+
+<div id="phaser-game"></div>
+
+<p>
+  <button id="reset-button">Reset</button>
+  <select id="level-load">
+  </select>
+</p>
+
+<p id="speed-display">Speed: 1x</p>
+<input type="range" min="0" value="1" max="5" step=".01" name="speed-slider" id="speed-slider" style="width: 200px"/>
+
+<p id="entity-select">
+  Controlling:
+  <input type="radio" name="target" value="Player" checked> Player
+  <input type="radio" name="target" value="PlayerAgent"> Agent
+</p>
+
+<p>
+  Currently placing:
+  <select id="block-type">
+    <option>rails</option>
+    <option>railsUnpowered</option>
+    <option>railsRedstoneTorch</option>
+    <option>redstoneWire</option>
+    <option>pressurePlateUp</option>
+    <option>grass</option>
+    <option>cobblestone</option>
+    <option>pistonRight</option>
+    <option>pistonLeft</option>
+    <option>prismarine</option>
+  </select>
+</p>
+
+<p>Move with <kbd>w</kbd> <kbd>a</kbd> <kbd>s</kbd> <kbd>d</kbd>. Place blocks with <kbd>Enter</kbd>. Destroy blocks with <kbd>Backspace</kbd>. Switch target with <kbd>Shift</kbd>.</p>
+
+<script src="./demo.js"></script>
+
+</body>
+</html>
