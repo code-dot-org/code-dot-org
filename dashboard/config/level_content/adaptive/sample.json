@@ -33,14 +33,8 @@
         {
           "id": "intro-video",
           "title": "Intro - video",
-          "kind": "panels",
-          "panels": [
-            {
-              "key": "intro-video-1",
-              "imageUrl": "https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png",
-              "text": "Click continue after your class watches the introduction video."
-            }
-          ]
+          "kind": "video",
+          "videoKey": "maze_intro"
         },
         {
           "id": "intro-panels",

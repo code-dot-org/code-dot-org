@@ -41,6 +41,13 @@ const panels = (id: string): Step => ({
   panels: [{key: `${id}-1`, imageUrl: 'hello.png', text: 'Hello'}],
 });
 
+const video = (id: string): Step => ({
+  id,
+  title: id,
+  kind: 'video',
+  videoKey: `${id}-key`,
+});
+
 const served = (): Raw => ({
   formatVersion: 4,
   id: 'sample',
@@ -85,6 +92,7 @@ const served = (): Raw => ({
             },
           ],
         },
+        video('intro-watch'),
       ],
     },
     {
@@ -234,6 +242,18 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a video step with resolved URLs', () => {
+    const raw = served();
+    const watch = raw.checkpoints[0].steps[2];
+    if (watch.kind !== 'video') throw new Error('fixture changed');
+    Object.assign(watch, {
+      src: 'https://www.youtube-nocookie.com/embed/abc123',
+      download: 'https://videos.code.org/youtube/some.mp4',
+      thumbnail: 'https://videos.code.org/youtube/some.jpg',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
   it('accepts a level step the server could not resolve', () => {
     const raw = served();
     const build = raw.checkpoints[1].steps[0];
@@ -303,6 +323,18 @@ describe('parsePathwaySource', () => {
       expect.stringMatching(/^skills\.prompting\.standards\.0:/),
       expect.stringMatching(/^checkpoints\.1\.steps\.0:/),
       expect.stringMatching(/^checkpoints\.1\.steps\.1:/),
+    ]);
+  });
+
+  it('rejects video URL fields in an authored file', () => {
+    const raw = source();
+    const watch = raw.checkpoints[0].steps[2];
+    if (watch.kind !== 'video') throw new Error('fixture changed');
+    Object.assign(watch, {
+      src: 'https://www.youtube-nocookie.com/embed/abc123',
+    });
+    expect(sourceProblemsOf(raw)).toEqual([
+      expect.stringMatching(/^checkpoints\.0\.steps\.2:/),
     ]);
   });
 
