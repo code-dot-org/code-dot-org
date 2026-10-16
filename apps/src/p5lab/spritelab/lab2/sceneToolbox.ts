@@ -10,8 +10,9 @@ const CATEGORY_FOR_TYPE: Record<SceneType, string> = {
   platform: 'Platform',
 };
 
-/** Offered in every scene: jumping between scenes belongs to neither type. */
-const SHARED_CATEGORY = 'Link';
+/** Offered in every scene: jumping between scenes belongs to neither type,
+    nor do the player's choices. */
+const SHARED_CATEGORIES = ['Link', 'Choices'];
 
 // Blockly's own CategoryInfo is a union that does not carry these directly.
 interface AuthoredCategory {
@@ -35,7 +36,7 @@ export function toolboxForSceneType(
   if (!categories.some(entry => entry.name === CATEGORY_FOR_TYPE[sceneType])) {
     return toolbox;
   }
-  const wanted = [CATEGORY_FOR_TYPE[sceneType], SHARED_CATEGORY];
+  const wanted = [CATEGORY_FOR_TYPE[sceneType], ...SHARED_CATEGORIES];
   return {
     kind: 'flyoutToolbox',
     contents: wanted.flatMap(

@@ -26,6 +26,10 @@ import {
   SoundDropdown,
 } from './blockDefinitions/playSound';
 import {
+  ChoiceDropdown,
+  FIELD_CHOICE_DROPDOWN_TYPE,
+} from './blockDefinitions/whenChoice';
+import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
 } from './externalSceneDropdown';
@@ -78,6 +82,7 @@ function installLabBlocks(): void {
     return;
   }
   Blockly.fieldRegistry.register(FIELD_SCENE_DROPDOWN_TYPE, SceneDropdown);
+  Blockly.fieldRegistry.register(FIELD_CHOICE_DROPDOWN_TYPE, ChoiceDropdown);
   Blockly.fieldRegistry.register(
     FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
     ExternalSceneDropdown

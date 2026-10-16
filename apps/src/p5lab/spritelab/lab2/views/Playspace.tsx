@@ -47,6 +47,8 @@ export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 // buttons (2rem at the root font size, plus their 1px borders) and its gap.
 const SMALL_BUTTON_PX = 34;
 const BAR_GAP = 12;
+// The strip at the box's foot that holds the choices while playing.
+const INSIDE_HEIGHT = 48;
 export const BAR_ROOM = SMALL_BUTTON_PX + BAR_GAP;
 // The box's slide between its two placements, and the fade of whatever
 // appears in place.
@@ -138,6 +140,8 @@ interface PlayspaceProps {
   // Shown under the box in both visible modes (Play, or Stop and the arrow
   // keys); the box is placed to leave it room.
   playBar?: React.ReactNode;
+  /** Laid over the bottom of the box while playing: the choices. */
+  inside?: React.ReactNode;
   // The floating guide's footprint, pinned to the overlay's bottom-right
   // (playPlacement).
   guideSize?: {width: number; height: number} | null;
@@ -159,6 +163,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   platformScene = false,
   controls,
   playBar,
+  inside,
   guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -476,6 +481,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       {mode === 'play' && controls && (
         <div className={moduleStyles.playControls}>{controls}</div>
+      )}
+      {mode === 'play' && inside && visible && (
+        <div
+          className={moduleStyles.playspaceInside}
+          style={{left: x, top: y + boxSide - INSIDE_HEIGHT, width: boxSide}}
+        >
+          {inside}
+        </div>
       )}
       {playBar && (
         <div

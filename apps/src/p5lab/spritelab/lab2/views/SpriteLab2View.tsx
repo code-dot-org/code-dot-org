@@ -121,6 +121,7 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {isPointerClick} from './blurAfterPointerClick';
+import ChoiceBar from './components/ChoiceBar';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
@@ -399,6 +400,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [channelId, levelProperties.name]);
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
+  // A "show choices" block ran: its words, until the player picks one.
+  const [choices, setChoices] = useState<string[] | null>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
   // Jump transition: the cover blanks the playspace while the target loads;
@@ -1368,6 +1371,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
     engine.onPlayMusic = playMusic;
+    engine.onChoicesWanted = setChoices;
     engine.onControlsChange = (state: ControlsState) =>
       setArrowSet(arrowSetFor(state));
   }, [
@@ -2019,6 +2023,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             boxRef={playspaceRef}
             platformScene={playingPlatformer}
             mode={playspaceMode}
+            inside={
+              choices ? (
+                <ChoiceBar
+                  choices={choices}
+                  onChoose={choice => engineRef.current?.chooseOption(choice)}
+                />
+              ) : undefined
+            }
             controls={
               <PlayControls
                 // On a pinned-scene level the game IS the one scene, so no
