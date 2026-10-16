@@ -41,15 +41,9 @@ class AuthenticationOptionsController < ApplicationController
     current_user.authentication_options.where(credential_type: auth_option.credential_type).to_a
   end
 
-  # The option that takes over as primary_contact_info once removed_primary is
-  # destroyed: the remaining option with the same email, else a new EMAIL
-  # option that keeps the address on the account.
-  #
-  # Clever and ClassLink students have no email on record. For them that EMAIL
-  # option would carry a blank authentication_id, which is unique per
-  # credential type, so it clashes with the first one ever saved. Any remaining
-  # option serves instead, and a student with none left keeps no
-  # primary_contact_info, which the User model allows.
+  # Chooses the new primary_contact_info auth option. Can return nil if the auth option
+  # has no hashed_email, such as for Clever and ClassLink. Otherwise, it prefers an auth
+  # option with the same hashed_email, and falls back to creating a new email option.
   private def replacement_primary_contact_info(removed_primary)
     remaining = current_user.authentication_options
     return remaining.order(:created_at, :id).first if removed_primary.hashed_email.blank?
