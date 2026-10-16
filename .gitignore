@@ -118,5 +118,5 @@ CLAUDE.local.md
 .agents/skills/*.local
 
 # playwright-best-practices: managed by skills-lock.json, not vendored.
-# Restore with `npx skills experimental_install` (see e2e-tests/README.md).
+# Restore with `npx skills experimental_install` (see frontend/packages/e2e-tests/README.md).
 .agents/skills/playwright-best-practices/
