@@ -128,10 +128,13 @@ describe('useProgress', () => {
   } as Pathway;
   const key = {scriptId: 3, levelId: 5};
 
-  const fakeStore = (loaded: Progress = EMPTY_PROGRESS) => ({
-    load: jest.fn().mockResolvedValue(loaded),
-    saveStep: jest.fn().mockResolvedValue(undefined),
-  });
+  const fakeStore = (loaded: Progress = EMPTY_PROGRESS) => {
+    const store = {
+      load: jest.fn().mockResolvedValue(loaded),
+      saveStep: jest.fn().mockResolvedValue(undefined),
+    };
+    return store as typeof store & ProgressStore;
+  };
 
   const fakeGeneratedStore = (loaded?: GeneratedInstructions) => ({
     load: jest.fn().mockResolvedValue(loaded),
