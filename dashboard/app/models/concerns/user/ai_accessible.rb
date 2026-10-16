@@ -21,6 +21,11 @@ module User::AiAccessible
     levelbuilder?
   end
 
+  # Whether this user is allowed to bypass content-safety checks.
+  def can_disable_aichat_safety_checks?
+    levelbuilder?
+  end
+
   def teacher_can_access_aichat?
     teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self) || SingleUserExperiment.enabled?(user: self, experiment_name: TEACHER_PREVERIFICATION_PILOT))
   end
