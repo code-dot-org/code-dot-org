@@ -1,0 +1,282 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+#
+# Fetch historical "Top SQL" data from RDS Performance Insights. The Performance
+# Insights web console was retired (2026-07-31); the PI *API* outlives the
+# console, so this stays useful for pulling a durable local copy of per-digest
+# load and SQL statistics.
+#
+# For each Aurora cluster member, over a single time window, it fetches the top
+# tokenized SQL digests ranked by database load (Average Active Sessions) plus
+# the per-digest statistics the console "Top SQL" tab shows -- calls, average
+# latency, rows examined, select scan, sort scan, lock time -- and each digest's
+# heaviest wait events, and writes one flat CSV. This reconstructs that tab via a
+# single API call:
+#   DescribeDimensionKeys(Metric = db.load.avg,
+#                         GroupBy = db.sql_tokenized,
+#                         AdditionalMetrics = [ ...SQL statistics... ],
+#                         PartitionBy = db.wait_event)
+# `Total` is the digest's average db.load.avg (AAS) over the window; each
+# AdditionalMetrics value is that stat averaged over the same window; each
+# Partition is the digest's load attributed to one wait event.
+#
+# Read-only. Uses the standard AWS credential chain; point it at credentials
+# that can read Performance Insights and describe RDS in the production account.
+#
+# To run (defaults to the late-April representative high-usage window below):
+#   AWS_PROFILE=prod bin/oneoff/pi_top_sql_export
+#
+# To pull a different window (start/end are interpreted in the machine's local
+# timezone; set TZ to be explicit, e.g. TZ=America/Los_Angeles):
+#   bin/oneoff/pi_top_sql_export --start '2025-10-23 05:00:00' --end '2025-10-23 16:00:00'
+#
+# See --help for all switches.
+
+require 'csv'
+require 'time'
+require 'optparse'
+
+begin
+  require 'aws-sdk-rds'
+  require 'aws-sdk-pi'
+rescue LoadError => exception
+  abort "Missing gem (#{exception.message}).\nRun `bundle install` (aws-sdk-pi and aws-sdk-rds are in the Gemfile).\n"
+end
+
+# Ranking metric: Average Active Sessions (database load).
+LOAD_METRIC = 'db.load.avg'
+
+# Per-digest SQL statistics -> CSV column name. Performance Insights allows at
+# most 10 AdditionalMetrics per request; this list is exactly 10. Metric
+# identifiers per the Aurora MySQL SQL-statistics reference. The trailing `.avg`
+# is the aggregate suffix DescribeDimensionKeys requires for AdditionalMetrics
+# (`.avg` is the only supported statistic); responses key on the same string.
+STAT_METRICS = [
+  ['db.sql_tokenized.stats.count_star_per_sec.avg',         'calls_per_sec'],
+  ['db.sql_tokenized.stats.sum_timer_wait_per_call.avg',    'avg_latency_ms_per_call'],
+  ['db.sql_tokenized.stats.sum_rows_examined_per_sec.avg',  'rows_examined_per_sec'],
+  ['db.sql_tokenized.stats.sum_rows_examined_per_call.avg', 'rows_examined_per_call'],
+  ['db.sql_tokenized.stats.sum_select_scan_per_sec.avg',    'select_scan_per_sec'],
+  ['db.sql_tokenized.stats.sum_select_scan_per_call.avg',   'select_scan_per_call'],
+  ['db.sql_tokenized.stats.sum_sort_scan_per_sec.avg',      'sort_scan_per_sec'],
+  ['db.sql_tokenized.stats.sum_sort_scan_per_call.avg',     'sort_scan_per_call'],
+  ['db.sql_tokenized.stats.sum_lock_time_per_sec.avg',      'lock_time_ms_per_sec'],
+  ['db.sql_tokenized.stats.sum_lock_time_per_call.avg',     'lock_time_ms_per_call'],
+].freeze
+
+DIMENSIONS = [
+  'db.sql_tokenized.id',        # Performance Insights digest id
+  'db.sql_tokenized.db_id',     # native MySQL digest id
+  'db.sql_tokenized.statement', # tokenized SQL text (values replaced by ?)
+].freeze
+
+# "Top Waits": partition each digest's load by wait event in the same request.
+# WAIT_PARTITION_LIMIT caps the global set of wait events broken out; the CSV
+# reports the TOP_WAITS_PER_SQL heaviest of those for each digest.
+WAIT_DIMENSION       = 'db.wait_event'
+WAIT_NAME_DIMENSION  = 'db.wait_event.name'
+WAIT_PARTITION_LIMIT = 7
+TOP_WAITS_PER_SQL    = 3
+
+# Default window: a representative high-usage stretch, 05:00-16:00 Pacific on
+# Tuesday, Apr 28 2026. Given as bare local-time strings (see TIME_FORMAT).
+TIME_FORMAT   = '%Y-%m-%d %H:%M:%S'
+DEFAULT_START = '2026-04-28 05:00:00'
+DEFAULT_END   = '2026-04-28 16:00:00'
+
+# Parse a 'YYYY-MM-DD HH:MM:SS' string as local time (the string carries no zone,
+# so the machine's timezone applies -- set TZ to control it).
+def parse_time(str)
+  Time.strptime(str, TIME_FORMAT)
+rescue ArgumentError
+  abort "Invalid date/time #{str.inspect}; expected '#{TIME_FORMAT}' (e.g. '#{DEFAULT_START}')."
+end
+
+# Default output filename encodes the captured window (local wall-clock), so the
+# file names itself after its data rather than the moment the export ran.
+def default_output(start_time, end_time)
+  "pi_top_sql_export_#{start_time.strftime('%Y%m%dT%H%M%S')}-#{end_time.strftime('%Y%m%dT%H%M%S')}.csv"
+end
+
+def parse_options(argv)
+  options = {
+    region:    ENV.fetch('AWS_REGION', 'us-east-1'),
+    cluster:   'autoscale-prod-cluster',
+    instances: [],  # empty => all current cluster members
+    top_n:     25,  # Performance Insights per-request maximum for a dimension group
+    start:     parse_time(DEFAULT_START),
+    end:       parse_time(DEFAULT_END),
+    output:    nil, # nil => timestamped filename
+  }
+
+  parser = OptionParser.new do |opts|
+    opts.banner = <<~BANNER
+      Usage: #{File.basename(__FILE__)} [options]
+
+      Export RDS Performance Insights "Top SQL" (load + SQL statistics) to CSV.
+
+      Options:
+    BANNER
+
+    opts.on('-r', '--region REGION', "AWS region (default #{options[:region]})") do |v|
+      options[:region] = v
+    end
+
+    opts.on('-c', '--cluster ID', "Aurora DB cluster identifier (default #{options[:cluster]})") do |v|
+      options[:cluster] = v
+    end
+
+    opts.on('-i', '--instances a,b,c', Array,
+      'DBInstanceIdentifiers to export (default: all current cluster members)'
+    ) do |v|
+      options[:instances] = v
+    end
+
+    opts.on('-n', '--top-n N', Integer, "Top SQL digests per instance (default #{options[:top_n]}, max 25)") do |v|
+      options[:top_n] = v
+    end
+
+    opts.on('-s', '--start "YYYY-MM-DD HH:MM:SS"', "Window start, local time (default '#{DEFAULT_START}')") do |v|
+      options[:start] = parse_time(v)
+    end
+
+    opts.on('-e', '--end "YYYY-MM-DD HH:MM:SS"', "Window end, local time (default '#{DEFAULT_END}')") do |v|
+      options[:end] = parse_time(v)
+    end
+
+    opts.on('-o', '--output FILE', 'Output CSV path (default: pi_top_sql_export_<start>-<end>.csv)') do |v|
+      options[:output] = v
+    end
+
+    opts.on('-h', '--help', 'Prints this help message') do
+      puts opts
+      exit
+    end
+  end
+
+  parser.parse!(argv)
+
+  abort "--start (#{options[:start]}) must be before --end (#{options[:end]})." unless options[:start] < options[:end]
+  options[:output] ||= default_output(options[:start], options[:end])
+  options
+rescue OptionParser::ParseError => exception
+  abort "#{exception.message} (run with --help for usage)."
+end
+
+def round6(value)
+  value&.round(6)
+end
+
+# Format a digest's heaviest wait events as "event=load; event=load; ...".
+# key.partitions aligns positionally with wait_names (the response partition keys).
+def top_waits(key, wait_names, limit)
+  return nil if wait_names.empty?
+
+  wait_names.zip(key.partitions || []).
+    reject {|_name, load| load.nil? || load.zero?}.
+    sort_by {|_name, load| -load}.
+    first(limit).
+    map {|name, load| "#{name}=#{round6(load)}"}.
+    join('; ')
+end
+
+# Resolve cluster members to the {id, role, resource_id} the PI API needs. PI
+# keys on DbiResourceId, not the instance name.
+#
+# CAVEAT for autoscaling clusters: this only reaches instances that exist right
+# now. A reader that autoscaling launched after -- or terminated since -- a
+# historical window cannot be matched by discovering current members; its PI
+# data is only reachable by its old db-XXXX resource id.
+def discover_instances(rds, cluster_id, restrict_to)
+  cluster = rds.describe_db_clusters(db_cluster_identifier: cluster_id).db_clusters.first
+  abort "Cluster not found: #{cluster_id}" if cluster.nil?
+
+  members = cluster.db_cluster_members
+  members = members.select {|m| restrict_to.include?(m.db_instance_identifier)} unless restrict_to.empty?
+
+  members.map do |m|
+    instance = rds.describe_db_instances(db_instance_identifier: m.db_instance_identifier).db_instances.first
+    {
+      id:          m.db_instance_identifier,
+      role:        m.is_cluster_writer ? 'writer' : 'reader',
+      resource_id: instance.dbi_resource_id,
+      pi_enabled:  instance.performance_insights_enabled,
+    }
+  end
+end
+
+def main(options)
+  rds = Aws::RDS::Client.new(region: options[:region])
+  pi  = Aws::PI::Client.new(region: options[:region])
+
+  instances = discover_instances(rds, options[:cluster], options[:instances])
+  abort "No matching instances in #{options[:cluster]} (--instances #{options[:instances].inspect})." if instances.empty?
+
+  warn "Cluster #{options[:cluster]} (#{options[:region]}); exporting #{instances.size} instance(s):"
+  instances.each do |i|
+    warn "  #{i[:role].ljust(6)} #{i[:id]}  #{i[:resource_id]}  PI=#{i[:pi_enabled] ? 'on' : 'OFF'}"
+  end
+
+  header = %w[
+    window_start window_end cluster_id
+    db_instance_identifier role
+    rank sql_tokenized_statement sql_tokenized_id sql_digest_db_id
+    db_load_avg_aas top_waits
+  ] + STAT_METRICS.map(&:last)
+
+  window_start = options[:start].iso8601
+  window_end   = options[:end].iso8601
+  total_rows   = 0
+
+  CSV.open(options[:output], 'w') do |csv|
+    csv << header
+
+    instances.each do |inst|
+      unless inst[:pi_enabled]
+        warn "  ! #{inst[:id]}: Performance Insights not enabled -- skipping."
+        next
+      end
+
+      begin
+        resp = pi.describe_dimension_keys(
+          service_type:       'RDS',
+          identifier:         inst[:resource_id],
+          start_time:         options[:start],
+          end_time:           options[:end],
+          metric:             LOAD_METRIC,
+          group_by:           {group: 'db.sql_tokenized', dimensions: DIMENSIONS, limit: options[:top_n]},
+          additional_metrics: STAT_METRICS.map(&:first),
+          partition_by:       {group: WAIT_DIMENSION, dimensions: [WAIT_NAME_DIMENSION], limit: WAIT_PARTITION_LIMIT},
+        )
+      rescue Aws::PI::Errors::ServiceError => exception
+        warn "  ! #{inst[:id]}: #{exception.class} #{exception.message} -- skipping."
+        next
+      end
+
+      wait_names = resp.partition_keys.map {|pk| pk.dimensions[WAIT_NAME_DIMENSION]}
+
+      resp.keys.each_with_index do |key, idx|
+        dims = key.dimensions
+        csv << [
+          window_start, window_end, options[:cluster],
+          inst[:id], inst[:role],
+          idx + 1,
+          dims['db.sql_tokenized.statement'],
+          dims['db.sql_tokenized.id'],
+          dims['db.sql_tokenized.db_id'],
+          round6(key.total),
+          top_waits(key, wait_names, TOP_WAITS_PER_SQL),
+          *STAT_METRICS.map {|mid, _| round6(key.additional_metrics[mid])},
+        ]
+      end
+
+      total_rows += resp.keys.size
+      warn "  #{inst[:id]}: #{resp.keys.size} digest(s)."
+    end
+  end
+
+  warn "\nWrote #{total_rows} row(s) for #{window_start} .. #{window_end} to #{options[:output]}"
+end
+
+main(parse_options(ARGV)) if $PROGRAM_NAME == __FILE__
