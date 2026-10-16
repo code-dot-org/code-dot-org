@@ -219,12 +219,10 @@ class Ailab < Level
       return
     end
 
-    if parsed_mode.key?('datasets')
-      datasets = parsed_mode['datasets']
-      unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
-        errors.add(:mode, 'must select exactly one dataset.')
-      end
-    elsif DATASET_COLUMN_MODE_KEYS.any? {|key| parsed_mode[key].present?}
+    datasets = parsed_mode['datasets'] || []
+    if !datasets.is_a?(Array) || datasets.length > 1 || (datasets - self.class.dataset_ids).any?
+      errors.add(:mode, 'must select no more than one known dataset.')
+    elsif datasets.empty? && DATASET_COLUMN_MODE_KEYS.any? {|key| parsed_mode[key].present?}
       errors.add(:mode, 'must select a dataset to choose, lock, or pretrain on its columns.')
     end
 
