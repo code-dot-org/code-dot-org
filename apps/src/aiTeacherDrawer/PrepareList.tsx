@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
@@ -12,6 +13,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {sendTaEvent} from './analytics';
 import LessonSummaryScreen from './LessonSummaryScreen';
 import PrepareEmptyState, {PrepareEmptyStateType} from './PrepareEmptyState';
 import SectionPodcastCard, {
@@ -22,6 +24,13 @@ import SectionPodcastCard, {
 import styles from './prepare-list.module.scss';
 
 const COMING_UP = 'coming_up';
+
+// The dropdown lists real dates, but only three of them mean anything to
+// someone reading a funnel, so report the relationship rather than the date.
+function dateFilterLabel(date: string, todayISO: string): string {
+  if (date === COMING_UP) return COMING_UP;
+  return date === todayISO ? 'today' : 'past';
+}
 
 const TEACHER_DASHBOARD_HOME_PATH = `${TEACHER_NAVIGATION_BASE_URL}/${TEACHER_NAVIGATION_PATHS.home}`;
 
@@ -226,7 +235,18 @@ const PrepareList: React.FC<PrepareListProps> = ({onNavigateToChats}) => {
           labelText="Show prep content for"
           name="date-picker"
           selectedValue={selectedDate}
-          onChange={e => setSelectedDate(e.target.value)}
+          onChange={e => {
+            const filter = dateFilterLabel(e.target.value, todayISO);
+            sendTaEvent(
+              EVENTS.AI_TA_PREP_DATE_FILTER_CHANGED,
+              {
+                date_filter: filter,
+                previous_filter: dateFilterLabel(selectedDate, todayISO),
+              },
+              filter
+            );
+            setSelectedDate(e.target.value);
+          }}
         />
       </div>
       {emptyStateSection && emptyStateType ? (
@@ -249,9 +269,23 @@ const PrepareList: React.FC<PrepareListProps> = ({onNavigateToChats}) => {
               lesson={lesson}
               onSectionClick={
                 sectionEmptyStateType
-                  ? () => setEmptyStateSectionId(section.id)
+                  ? () => {
+                      sendTaEvent(EVENTS.AI_TA_PREP_SECTION_CLICKED, {
+                        empty_state_type: sectionEmptyStateType,
+                        has_lesson: false,
+                      });
+                      setEmptyStateSectionId(section.id);
+                    }
                   : lesson
-                  ? () => setDetailInfo({lesson, sectionName: section.name})
+                  ? () => {
+                      sendTaEvent(EVENTS.AI_TA_PREP_SECTION_CLICKED, {
+                        has_lesson: true,
+                        has_podcast: !!lesson.podcast_url,
+                        lesson_id: lesson.lesson_id,
+                        date_filter: dateFilterLabel(selectedDate, todayISO),
+                      });
+                      setDetailInfo({lesson, sectionName: section.name});
+                    }
                   : undefined
               }
             />

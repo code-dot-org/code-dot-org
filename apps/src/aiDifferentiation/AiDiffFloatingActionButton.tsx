@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
+  noteTaPanelEntryPoint,
+  sendTaEvent,
+  takeTaPanelEntryPoint,
+} from '@cdo/apps/aiTeacherDrawer/analytics';
+import {
   setChatIsOpen,
   fetchThreadMessages,
   openDrawerToNav,
@@ -299,6 +304,29 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButtonRight;
 
+  // Every path that opens the drawer ends in chatIsOpen going true, including
+  // the automatic open above and the teacher panel handle, which never touch
+  // handleClick. Report the open from the transition and let whoever caused it
+  // leave their name behind (see noteTaPanelEntryPoint).
+  const wasChatOpenRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    const wasOpen = wasChatOpenRef.current;
+    wasChatOpenRef.current = chatIsOpen;
+    if (wasOpen === null || wasOpen === chatIsOpen || !chatIsOpen) {
+      return;
+    }
+    const entryPoint = takeTaPanelEntryPoint();
+    sendTaEvent(
+      EVENTS.AI_TA_PANEL_OPENED,
+      {
+        entry_point: entryPoint,
+        context_type: context.type,
+        script_name: scriptName,
+      },
+      entryPoint
+    );
+  }, [chatIsOpen, context.type, scriptName]);
+
   const handleClick = () => {
     if (wasDraggingRef.current) {
       wasDraggingRef.current = false;
@@ -316,6 +344,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    }
+    if (!chatIsOpen) {
+      noteTaPanelEntryPoint(openToNav ? 'nav_shortcut' : 'fab');
     }
     if (openToNav) {
       dispatch(openDrawerToNav(openToNav));

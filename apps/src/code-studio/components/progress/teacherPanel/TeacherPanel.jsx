@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {sendTaEvent} from '@cdo/apps/aiTeacherDrawer/analytics';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
@@ -29,6 +30,7 @@ import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getExampleSolutionLink} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
@@ -52,6 +54,9 @@ class TeacherPanel extends React.Component {
   static propTypes = {
     scriptId: PropTypes.number,
     unitName: PropTypes.string,
+    // Set when this panel is the TA drawer's Roster tab. The same panel also
+    // renders standalone beside a level, where these events do not apply.
+    inTaDrawer: PropTypes.bool,
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
@@ -137,10 +142,22 @@ class TeacherPanel extends React.Component {
     });
   };
 
-  onSelectUser = id => {
+  onSelectUser = (id, source) => {
     const isAsync =
       this.props.isCurrentLevelLab2 ||
       this.props.pageType === pageTypes.scriptOverview;
+    if (this.props.inTaDrawer) {
+      sendTaEvent(
+        source === 'iterator'
+          ? EVENTS.AI_TA_ROSTER_STUDENT_NAVIGATED
+          : EVENTS.AI_TA_ROSTER_STUDENT_CLICKED,
+        {
+          // A null id is the whole class rather than one student.
+          student_selected: id !== null,
+          student_count: this.props.students?.length ?? 0,
+        }
+      );
+    }
     this.props.selectUser(id, isAsync);
   };
 
@@ -166,6 +183,7 @@ class TeacherPanel extends React.Component {
       exampleSolutions,
       isCurrentLevelLab2,
       lab2ExampleSolutions,
+      inTaDrawer,
     } = this.props;
 
     const selectedUserId = this.getSelectedUserId();
@@ -217,6 +235,15 @@ class TeacherPanel extends React.Component {
                   href={example}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={
+                    inTaDrawer
+                      ? () =>
+                          sendTaEvent(EVENTS.AI_TA_EXAMPLE_SOLUTION_CLICKED, {
+                            example_position: index,
+                            example_count: exampleSolutionsToParse.length,
+                          })
+                      : undefined
+                  }
                 />
               ))}
             </div>
@@ -230,6 +257,14 @@ class TeacherPanel extends React.Component {
               <SectionSelector
                 className={moduleStyles.sectionSelector}
                 reloadOnChange={true}
+                onSectionChange={
+                  inTaDrawer
+                    ? () =>
+                        sendTaEvent(EVENTS.AI_TA_ROSTER_SECTION_CHANGED, {
+                          previous_section_id: sectionId,
+                        })
+                    : undefined
+                }
               />
               {selectedSection && (
                 <a

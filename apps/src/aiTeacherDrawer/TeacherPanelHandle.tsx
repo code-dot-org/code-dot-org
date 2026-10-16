@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {noteTaPanelEntryPoint} from '@cdo/apps/aiTeacherDrawer/analytics';
 import {openDrawerToNav} from '@cdo/apps/aiTeacherDrawer/redux';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
@@ -55,7 +56,10 @@ const TeacherPanelHandle: React.FC = () => {
     >
       <div
         className="show-handle"
-        onClick={() => dispatch(openDrawerToNav('Roster'))}
+        onClick={() => {
+          noteTaPanelEntryPoint('teacher_panel_handle');
+          dispatch(openDrawerToNav('Roster'));
+        }}
       >
         <FontAwesome
           icon="chevron-left"
