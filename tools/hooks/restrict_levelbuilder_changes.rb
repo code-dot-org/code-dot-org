@@ -7,6 +7,11 @@ LIBRARIES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/libraries', __FIL
 # As written, SCRIPTS_DIR also covers dashboard/config/scripts_json
 SCRIPTS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).freeze
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/levels', __FILE__).freeze
+# The two trees a levelbuilder save can write under config/standalone_projects.
+# standalone_projects.yml sits beside them and stays blocked: it is engineering
+# config, edited only in a pull request.
+STANDALONE_PROJECT_LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/standalone_projects/levels', __FILE__).freeze
+STANDALONE_PROJECT_SCRIPTS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/standalone_projects/scripts', __FILE__).freeze
 COURSES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/courses', __FILE__).freeze
 COURSE_OFFERINGS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/course_offerings', __FILE__).freeze
 DATA_DOCS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/data_docs', __FILE__).freeze
@@ -35,6 +40,6 @@ staged_files = HooksUtils.get_staged_files
 
 staged_files.each do |filename|
   raise "#{ERROR_MESSAGE}\nFile blocked: #{filename}" unless filename.start_with?(
-    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, SCRIPTS_DIR, LEVELS_DIR, COURSES_DIR, COURSE_OFFERINGS_DIR, DATA_DOCS_DIR, REFERENCE_GUIDES_DIR, PROGRAMMING_CLASSES_DIR, PROGRAMMING_ENVIRONMENTS_DIR, PROGRAMMING_EXPRESSIONS_DIR, VIDEO_THUMBNAILS_DIR, FOORM_DIR, QUIZ_QUESTIONS_DIR
+    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, SCRIPTS_DIR, LEVELS_DIR, STANDALONE_PROJECT_LEVELS_DIR, STANDALONE_PROJECT_SCRIPTS_DIR, COURSES_DIR, COURSE_OFFERINGS_DIR, DATA_DOCS_DIR, REFERENCE_GUIDES_DIR, PROGRAMMING_CLASSES_DIR, PROGRAMMING_ENVIRONMENTS_DIR, PROGRAMMING_EXPRESSIONS_DIR, VIDEO_THUMBNAILS_DIR, FOORM_DIR, QUIZ_QUESTIONS_DIR
   ) || ALLOWED_FILES.include?(filename)
 end

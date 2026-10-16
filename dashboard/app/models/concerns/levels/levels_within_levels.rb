@@ -43,7 +43,7 @@ module Levels
         through: :levels_child_levels
 
       before_validation :sanitize_contained_level_names
-      validate :children_stay_within_ui_test_partition
+      validate :children_stay_within_partition
       after_save :setup_contained_levels
       after_save :setup_project_template_level
     end
@@ -199,15 +199,15 @@ module Levels
       project_template_level || self
     end
 
-    # A parent level and its children must be on the same side of the
-    # "UI Test " partition; see dashboard/test/ui/config/README.md.
+    # A parent level and its children must be in the same partition; see
+    # dashboard/test/ui/config/README.md.
     #
     # The row-level check lives on ParentLevelsChildLevel, where it covers
     # every path that writes parent/child rows. This validation is the
     # name-based complement for the two relationships whose child names live
     # in properties, contained levels and project templates: unlike the row
     # check, it also catches names which resolve to no level at all.
-    def children_stay_within_ui_test_partition
+    def children_stay_within_partition
       offending = cross_partition_child_names(
         Array(contained_level_names) + [try(:project_template_level_name)]
       )
@@ -215,15 +215,15 @@ module Levels
       errors.add(:base, cross_partition_children_message(offending))
     end
 
-    # Of the given child level names, those on the opposite side of the
-    # "UI Test " partition from this level. Ignores nil entries.
+    # Of the given child level names, those in a different partition from
+    # this level. Ignores nil entries.
     def cross_partition_child_names(child_names)
-      child_names.compact.reject {|child_name| Level.ui_test_name?(child_name) == ui_test?}
+      child_names.compact.reject {|child_name| Policies::LevelFiles.same_tree?(child_name, name)}
     end
 
     def cross_partition_children_message(offending_child_names)
-      "level \"#{name}\" and its child levels must be on the same side " \
-        "of the \"UI Test \" partition; offending children: #{offending_child_names.join(', ')}"
+      "level \"#{name}\" and its child levels must be in the same partition " \
+        "(\"UI Test \", standalone project, or production); offending children: #{offending_child_names.join(', ')}"
     end
 
     def sanitize_contained_level_names

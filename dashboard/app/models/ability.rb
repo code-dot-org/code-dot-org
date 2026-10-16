@@ -438,7 +438,7 @@ class Ability
     # They don't necessarily have a model, permissions and redirects are run
     # through ProjectsController and their view/edit requirements are defined
     # there.
-    ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
+    Policies::StandaloneProjects.all.each_pair do |project_type_key, project_type_props|
       if project_type_props[:levelbuilder_required]
         can :load_project, project_type_key if user.persisted? && user.levelbuilder?
       elsif project_type_props[:login_required]

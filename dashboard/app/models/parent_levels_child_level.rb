@@ -61,18 +61,18 @@ class ParentLevelsChildLevel < ApplicationRecord
     scope kind, -> {where(kind: kind)}
   end
 
-  # A parent level and its children must be on the same side of the
-  # "UI Test " partition; see dashboard/test/ui/config/README.md. Validating
-  # here covers every path that writes parent/child rows. Level's
-  # children_stay_within_ui_test_partition validation is the name-based
-  # complement, catching names which resolve to no level at all.
-  validate :validate_within_ui_test_partition
-  def validate_within_ui_test_partition
+  # A parent level and its children must be in the same partition; see
+  # dashboard/test/ui/config/README.md. Validating here covers every path
+  # that writes parent/child rows. Level's children_stay_within_partition
+  # validation is the name-based complement, catching names which resolve to
+  # no level at all.
+  validate :validate_within_partition
+  def validate_within_partition
     return unless parent_level && child_level
-    return if parent_level.ui_test? == child_level.ui_test?
+    return if Policies::LevelFiles.same_tree?(parent_level.name, child_level.name)
     add_child_error(
-      "level #{parent_level.name.dump} and its child levels must be on the same side " \
-      "of the \"UI Test \" partition; offending child: #{child_level.name.dump}"
+      "level #{parent_level.name.dump} and its child levels must be in the same partition " \
+      "(\"UI Test \", standalone project, or production); offending child: #{child_level.name.dump}"
     )
   end
 
