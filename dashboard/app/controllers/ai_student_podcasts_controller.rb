@@ -1,5 +1,6 @@
 class AiStudentPodcastsController < ApplicationController
   before_action :authenticate_user!
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
 
   # GET /ai_student_podcasts/show?lesson_id=1&objective_ids[]=2
   def show

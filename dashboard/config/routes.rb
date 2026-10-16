@@ -1499,6 +1499,7 @@ Dashboard::Application.routes.draw do
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
+    post '/adaptive/traces', to: 'adaptive_traces#create'
 
     resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
@@ -1532,6 +1533,11 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :quiz_attempts, only: [:index, :create, :update]
+    resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
+      put 'steps/:step_id/progress', action: :update_progress, as: :step_progress
+      put 'steps/:step_id/generated_instructions', action: :update_generated_instructions, as: :step_generated_instructions
+      put 'steps/:step_id/validation_history', action: :update_validation_history, as: :step_validation_history
+    end
     resources :quiz_question_responses, only: [:create]
 
     resources :challenges, only: [:index, :show] do

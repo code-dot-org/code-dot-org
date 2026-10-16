@@ -13,6 +13,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
   let(:response_json) {JSON.parse(response.body)}
 
   before do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
     AWS::S3.stubs(:presigned_download_url).returns('https://s3.example/download')
   end
@@ -526,6 +527,21 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
   describe 'POST #evaluate' do
     let(:challenge) {create(:challenge, :with_rubric)}
     let(:challenge_response) {create(:challenge_response, challenge:, user: student, is_final: true)}
+
+    context 'when signed in without lesson deep dive access' do
+      before do
+        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+        sign_in student
+      end
+
+      it 'does not enqueue an evaluation job' do
+        assert_no_enqueued_jobs do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :forbidden
+      end
+    end
 
     context 'when signed in as the owner student' do
       before {sign_in student}

@@ -14,6 +14,7 @@ import {
 } from '../constants';
 import {isRegression} from '../helpers/columnDetails';
 import type {RootState} from '../redux';
+import type {AilabProject} from '../types';
 
 import type {TrainerFamily, TrainerId} from './types';
 
@@ -37,7 +38,10 @@ export function getTrainerFamily(state: RootState): TrainerFamily {
     : DEFAULT_TRAINER_FAMILY;
 }
 
-export function getTrainerId(state: RootState): TrainerId {
+export function getTrainerId(
+  state: RootState,
+  project: AilabProject
+): TrainerId {
   const ids = idsByFamily[getTrainerFamily(state)];
-  return isRegression(state) ? ids.regress : ids.classify;
+  return isRegression(state, project) ? ids.regress : ids.classify;
 }

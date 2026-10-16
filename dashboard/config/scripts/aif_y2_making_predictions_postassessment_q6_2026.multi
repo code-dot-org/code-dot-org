@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q6-2026'
+
+right 'The model memorized the training data instead of learning the general pattern'
+wrong 'The test set is too small for the score to mean anything'
+wrong 'The training data was not scaled before training'
+wrong 'The model learned the pattern well and will score 99% on new data too'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A model scores 99% accuracy on its training data but 60% on its test data. What is the most likely explanation?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Training and Test Sets
+MARKDOWN

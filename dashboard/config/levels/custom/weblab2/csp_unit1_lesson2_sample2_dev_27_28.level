@@ -1,0 +1,204 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-16T05:21:30.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "require_edit_to_continue": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "style.css",
+          "contents": ":root {\n  --indigo: #3743c4;\n  --indigo-dark: #2a3399;\n  --indigo-tint: #e8eafc;\n  --ink: #1c2233;\n  --muted: #3f4a5e;\n  --surface: #ffffff;\n  --page: #eef1f6;\n  --border: #7a869c;\n  --success-border: #2f7d4f;\n  --warn-border: #b42318;\n  --warn-bg: #fdecec;\n  --warn-ink: #7f1d1d;\n  --radius: 0.75rem;\n}\n\n[hidden] {\n  display: none !important;\n}\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  padding: 1rem;\n  background: var(--page);\n  color: var(--ink);\n  font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif;\n  font-size: 1rem;\n  line-height: 1.45;\n}\n\n.app {\n  width: 100%;\n  max-width: 28rem;\n  min-height: 36rem;\n  display: flex;\n  flex-direction: column;\n  background: var(--surface);\n  border-radius: 1.5rem;\n  box-shadow: 0 8px 24px rgba(28, 34, 51, 0.18);\n  overflow: hidden;\n}\n\n.app-header {\n  padding: 1rem 1.25rem;\n  background: var(--indigo);\n  color: #ffffff;\n}\n\n.app-title {\n  margin: 0;\n  font-size: 1.25rem;\n  line-height: 1.2;\n}\n\n.notice {\n  margin: 1rem 1.25rem 0;\n  padding: 0.75rem 1rem;\n  border-radius: var(--radius);\n  background: var(--warn-bg);\n  color: var(--warn-ink);\n  font-weight: 600;\n}\n\n.screen {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 0.875rem;\n  padding: 1.25rem;\n}\n\n.screen h2 {\n  margin: 0;\n  font-size: 1.5rem;\n  line-height: 1.25;\n}\n\n.screen h2:focus {\n  outline: none;\n}\n\n.screen p {\n  margin: 0;\n}\n\n.progress {\n  color: var(--muted);\n  font-size: 0.9375rem;\n  font-weight: 700;\n}\n\n.feature-image {\n  display: block;\n  width: 100%;\n  height: auto;\n  aspect-ratio: 4 / 3;\n  object-fit: cover;\n  border-radius: var(--radius);\n  background: #e2e8f0;\n}\n\n.answer-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 0.75rem;\n}\n\n.answer-button {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 0.5rem;\n  min-height: 2.75rem;\n  padding: 0.75rem;\n  border: 2px solid var(--border);\n  border-radius: var(--radius);\n  background: var(--surface);\n  color: var(--ink);\n  font: inherit;\n  text-align: center;\n  cursor: pointer;\n}\n\n.answer-button:hover {\n  background: var(--indigo-tint);\n}\n\n.answer-image {\n  width: 100%;\n  max-width: 7rem;\n  height: auto;\n  aspect-ratio: 1 / 1;\n  object-fit: contain;\n}\n\n.answer-label {\n  font-weight: 700;\n}\n\n.screen-actions {\n  display: flex;\n  justify-content: center;\n  margin-top: auto;\n  padding-top: 0.5rem;\n}\n\n.primary-button {\n  min-width: 8rem;\n  min-height: 2.75rem;\n  padding: 0.5rem 1.5rem;\n  border: 2px solid var(--indigo);\n  border-radius: var(--radius);\n  background: var(--indigo);\n  color: #ffffff;\n  font: inherit;\n  font-weight: 700;\n  cursor: pointer;\n}\n\n.primary-button:hover {\n  background: var(--indigo-dark);\n  border-color: var(--indigo-dark);\n}\n\n.primary-button:focus-visible,\n.answer-button:focus-visible {\n  outline: 3px solid var(--indigo);\n  outline-offset: 2px;\n}\n\n.result {\n  text-align: center;\n  border-top: 6px solid var(--border);\n}\n\n.result-win {\n  border-top-color: var(--success-border);\n}\n\n.result-lose {\n  border-top-color: var(--warn-border);\n}\n\n@media (max-width: 22rem) {\n  body {\n    padding: 0;\n  }\n\n  .app {\n    border-radius: 0;\n  }\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "contents": "const byId = (id) => document.getElementById(id);\n\nfunction showScreen(screenId) {\n  document.querySelectorAll('.screen').forEach((screen) => {\n    screen.hidden = screen.id !== screenId;\n  });\n  window.scrollTo(0, 0);\n  byId(screenId).querySelector('h2').focus();\n}\n\nfunction answerQuestion(button) {\n  if (button.dataset.correct === 'true') {\n    showScreen(button.closest('.screen').dataset.next);\n  } else {\n    showScreen('screen-lose');\n  }\n}\n\nfunction init() {\n  byId('begin-button').addEventListener('click', () => showScreen('screen-question-1'));\n  document.querySelectorAll('.answer-button').forEach((button) => {\n    button.addEventListener('click', () => answerQuestion(button));\n  });\n  document.querySelectorAll('[data-restart]').forEach((button) => {\n    button.addEventListener('click', () => showScreen('screen-start'));\n  });\n}\n\ntry {\n  init();\n} catch (error) {\n  byId('app-error').hidden = false;\n  document.querySelectorAll('.screen').forEach((screen) => {\n    screen.hidden = true;\n  });\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Bird Quiz</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"app\">\n    <header class=\"app-header\">\n      <h1 class=\"app-title\">Bird Quiz</h1>\n    </header>\n\n    <noscript><p class=\"notice\">This app needs JavaScript to run.</p></noscript>\n    <p id=\"app-error\" class=\"notice\" hidden>Something went wrong loading this app. Please refresh the page.</p>\n\n    <section id=\"screen-start\" class=\"screen\" aria-labelledby=\"start-heading\">\n      <h2 id=\"start-heading\" tabindex=\"-1\">Think you know birds?</h2>\n      <p>Time to test your knowledge.</p>\n      <img class=\"feature-image\" src=\"bird-cover-image.jpg\" width=\"320\" height=\"240\" alt=\"\">\n      <div class=\"screen-actions\">\n        <button type=\"button\" id=\"begin-button\" class=\"primary-button\">Begin</button>\n      </div>\n    </section>\n\n    <section id=\"screen-question-1\" class=\"screen\" data-next=\"screen-question-2\" aria-labelledby=\"question-1-heading\" hidden>\n      <p class=\"progress\">Question 1 of 3</p>\n      <h2 id=\"question-1-heading\" tabindex=\"-1\">What bird is the fastest on land?</h2>\n      <div class=\"answer-grid\" role=\"group\" aria-labelledby=\"question-1-heading\">\n          <button type=\"button\" class=\"answer-button\" data-correct=\"true\">\n            <img class=\"answer-image\" src=\"ostrich.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Ostrich</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"emu.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Emu</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"falcon.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Peregrine Falcon</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"penguin.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Penguin</span>\n          </button>\n      </div>\n    </section>\n\n    <section id=\"screen-question-2\" class=\"screen\" data-next=\"screen-question-3\" aria-labelledby=\"question-2-heading\" hidden>\n      <p class=\"progress\">Question 2 of 3</p>\n      <h2 id=\"question-2-heading\" tabindex=\"-1\">What bird can live the longest?</h2>\n      <div class=\"answer-grid\" role=\"group\" aria-labelledby=\"question-2-heading\">\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"swan.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Swan</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"budgie.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Budgie</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\" data-correct=\"true\">\n            <img class=\"answer-image\" src=\"parrot.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Parrot</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"eagle.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Eagle</span>\n          </button>\n      </div>\n    </section>\n\n    <section id=\"screen-question-3\" class=\"screen\" data-next=\"screen-win\" aria-labelledby=\"question-3-heading\" hidden>\n      <p class=\"progress\">Question 3 of 3</p>\n      <h2 id=\"question-3-heading\" tabindex=\"-1\">What bird can fly backwards?</h2>\n      <div class=\"answer-grid\" role=\"group\" aria-labelledby=\"question-3-heading\">\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"robin.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Robin</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\" data-correct=\"true\">\n            <img class=\"answer-image\" src=\"hummingbird.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Hummingbird</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"woodpecker.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Woodpecker</span>\n          </button>\n          <button type=\"button\" class=\"answer-button\">\n            <img class=\"answer-image\" src=\"bluejay.png\" width=\"112\" height=\"112\" alt=\"\">\n            <span class=\"answer-label\">Blue Jay</span>\n          </button>\n      </div>\n    </section>\n\n    <section id=\"screen-lose\" class=\"screen result result-lose\" aria-labelledby=\"lose-heading\" hidden>\n      <h2 id=\"lose-heading\" tabindex=\"-1\">You lose!</h2>\n      <img class=\"feature-image\" src=\"lose-image.jpg\" width=\"320\" height=\"240\" alt=\"\">\n      <div class=\"screen-actions\">\n        <button type=\"button\" class=\"primary-button\" data-restart>Try Again</button>\n      </div>\n    </section>\n\n    <section id=\"screen-win\" class=\"screen result result-win\" aria-labelledby=\"win-heading\" hidden>\n      <h2 id=\"win-heading\" tabindex=\"-1\">You win!</h2>\n      <p>You are a bird expert.</p>\n      <img class=\"feature-image\" src=\"win-image.jpg\" width=\"320\" height=\"240\" alt=\"\">\n      <div class=\"screen-actions\">\n        <button type=\"button\" class=\"primary-button\" data-restart>Play Again</button>\n      </div>\n    </section>\n  </main>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "woodpecker.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/ccc9b27c-c987-40ee-863b-6d6e7da29680.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "parrot.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/cd16866e-cc0d-4ad5-8714-0da21c5982ed.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "lose-image.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/d09a3759-792f-4709-8185-f8c7e59b7642.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "ostrich.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/6f53adad-1bb8-4558-aeee-7d829f496aab.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "hummingbird.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/f2b77e24-5001-405b-972d-cddfd1e8a969.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "robin.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/5210bd9c-3313-4c9f-9092-446fa5fd54ee.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "swan.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/09fda73e-c311-42b4-8a0d-29f38cbf2f4a.png",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "penguin.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/3a4761a6-27d7-498b-b678-e25929d9fb9e.png",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "win-image.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/4b7c2f4c-2f47-47a1-8d24-b1101f7da404.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "bluejay.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/aeb1ba04-fe71-4ec0-8e6f-9dd54510b379.png",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "eagle.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/18ec753e-07a2-4ec0-a664-ca1eefce1187.png",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "falcon.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/9e4e9ab4-e653-4049-9dab-84d8834b6ca6.png",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "bird-cover-image.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/73cf3cd4-9ea5-4825-bc9c-7e784b9e9890.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "emu.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/5b814587-de7c-4b13-9a7a-717e359231f5.png",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "budgie.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample2_dev_27_28/uuid/5094b172-5aba-4e71-945e-d6a879d37ed7.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "long_instructions": "### Do This\r\n\r\nWith a partner, explore the app. Try every button and picture you can find. Then discuss:\r\n\r\n- How does the user interact with the app?\r\n- What is the purpose of this app?\r\n- Who is the target audience?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16T05:21:30.122+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson2_sample1_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson2_sample1_dev_27_28\"},{\"changed_at\":\"2026-10-16 05:21:33 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:38:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:40:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:40:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:40:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:40:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:40:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 05:40:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 06:59:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 07:00:15 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

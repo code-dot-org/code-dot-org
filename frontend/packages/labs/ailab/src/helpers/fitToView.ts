@@ -14,7 +14,7 @@ export interface ViewTransform {
 export function fitToView(
   rect: Rect,
   frame: Rect,
-  maxScale: number,
+  maxScale: number
 ): ViewTransform | undefined {
   if (frame.width <= 0 || frame.height <= 0) {
     return undefined;
@@ -22,7 +22,7 @@ export function fitToView(
   const scale = Math.min(
     maxScale,
     frame.width / rect.width,
-    frame.height / rect.height,
+    frame.height / rect.height
   );
   return {
     x: frame.x + frame.width / 2 - scale * (rect.x + rect.width / 2),
@@ -33,7 +33,7 @@ export function fitToView(
 
 export function panIntoView(
   rect: Rect,
-  frame: Rect,
+  frame: Rect
 ): {x: number; y: number} | undefined {
   if (frame.width <= 0 || frame.height <= 0) {
     return undefined;
@@ -48,7 +48,7 @@ function panAxis(
   start: number,
   size: number,
   frameStart: number,
-  frameSize: number,
+  frameSize: number
 ): number {
   if (start < frameStart || size > frameSize) {
     return frameStart - start;

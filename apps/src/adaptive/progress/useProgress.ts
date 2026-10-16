@@ -106,16 +106,13 @@ export function useProgress(
     []
   );
 
-  const reset = useCallback(() => setProgress(EMPTY_PROGRESS), []);
-
   return {
+    /** Undefined until the stored progress has loaded. */
     progress,
-    isLoading: progress === undefined,
     statusMap,
     markStarted,
     markComplete,
     updateStepContext,
     saveAnswers,
-    reset,
   };
 }

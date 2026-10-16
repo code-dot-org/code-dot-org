@@ -1,0 +1,83 @@
+@use '../explore/sr-only' as *;
+
+$mark-size: 22px;
+$text-size: 16px;
+$line-height: 1.4;
+
+.objectives {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+// The read-aloud button sits in the top corner; the first line leaves it
+// room, as the platform's instructions panel does.
+.tts {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+}
+
+.withTts > :first-child {
+  margin-inline-end: 1.5rem;
+}
+
+// The title's size sits on its paragraph: dashboard's scaffolds style `p`
+// at 13px.
+.title p {
+  margin: 0;
+  font-size: 18px;
+  line-height: $line-height;
+}
+
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mark {
+  flex: none;
+  width: $mark-size;
+  height: $mark-size;
+  border-radius: 50%;
+  border: 2px solid var(--borders-neutral-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // Centered on the text's first line; later lines wrap below.
+  margin-top: calc(($text-size * $line-height - $mark-size) / 2);
+  color: var(--neutral-base-white);
+  font-size: 12px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.itemDone .mark {
+  background-color: var(--sentiment-success-50);
+  border-color: var(--sentiment-success-50);
+}
+
+// Inline markdown: the size sits on the span itself.
+.text {
+  flex: 1;
+  min-width: 0;
+  font-size: $text-size;
+  line-height: $line-height;
+}
+
+.srOnly {
+  @include sr-only;
+}

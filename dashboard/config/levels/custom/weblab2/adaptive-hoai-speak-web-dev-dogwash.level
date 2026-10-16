@@ -36,7 +36,7 @@
       ]
     },
     "hide_share_and_remix": true,
-    "long_instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nRun your page after each fix to check it."
+    "long_instructions": "**Do This**\n\nThis page has three problems. Fix each one in the right file.\n\n1.  The heading has a typo.\n2.  The button is gray. Make it pink.\n3.  The button’s message says “Error.” Change it to “Booked!”\n\nCheck the preview after each fix."
   },
   "published": true
 }]]></config>

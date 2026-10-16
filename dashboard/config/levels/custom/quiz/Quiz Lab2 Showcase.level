@@ -8,6 +8,7 @@
   "properties": {
     "encrypted": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02 20:17:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-02 20:17:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]",
+  "placements": []
 }]]></config>
 </Quiz>

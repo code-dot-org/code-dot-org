@@ -11,6 +11,7 @@ name: cdo-deps-image
 on:
   pull_request:
     paths:
+      - 'docker/base/**'
       - 'docker/deps/**'
       - 'docker/build/**'
       - 'Gemfile'
@@ -117,6 +118,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
+            docker/base
             docker/build
             docker/deps
             dashboard/engines
@@ -131,7 +133,29 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      # Detect whether to use the published `cdo-base` image or to build
+      # `cdo-base` from scratch. For most cases, we will use the published image
+      # to leverage caching. In some cases, such as Ruby upgrades, we will need
+      # to build `cdo-base` from source because `cdo-base` in itself has changed.
+      - name: Pick the base image to use
+        id: base
+        run: |
+          set -euo pipefail
+          git fetch -q --depth=1 origin "${{ github.base_ref }}"
+          # Detect whether the docker image needs to be rebuilt in CI
+          if git diff --quiet FETCH_HEAD HEAD -- docker/base; then
+            echo "image=$BASE_IMAGE" >> "$GITHUB_OUTPUT"
+          else
+            echo "image=cdo-base:ci" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build cdo-base from the checkout with ${{ matrix.engine }}
+        if: steps.base.outputs.image == 'cdo-base:ci'
+        run: ${{ matrix.engine }} build -t cdo-base:ci docker/base/
+
       - name: Build cdo-build with ${{ matrix.engine }}
+        env:
+          BASE_IMAGE: ${{ steps.base.outputs.image }}
         run: |
           ${{ matrix.engine }} build \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
@@ -142,6 +166,8 @@ jobs:
         run: ./docker/build/smoke-test.sh cdo-build:ci ${{ matrix.engine }}
 
       - name: Build cdo-deps with ${{ matrix.engine }}
+        env:
+          BASE_IMAGE: ${{ steps.base.outputs.image }}
         run: |
           ${{ matrix.engine }} build \
             -f docker/deps/Dockerfile \
