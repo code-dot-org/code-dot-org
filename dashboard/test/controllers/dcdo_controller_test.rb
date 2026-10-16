@@ -41,4 +41,11 @@ class DcdoControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to action: 'show'
     assert_equal DCDO.get('foo', false), 'bar'
   end
+
+  test 'parses JSON values without building Ruby objects' do
+    sign_in(@admin)
+    patch dcdo_path, params: {key: 'foo', data_type: 'Hash', value: '{"^o":"Object"}'}
+    assert_redirected_to action: 'show'
+    assert_equal({'^o' => 'Object'}, DCDO.get('foo', false))
+  end
 end

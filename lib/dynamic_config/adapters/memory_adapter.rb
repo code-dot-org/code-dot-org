@@ -15,7 +15,7 @@ class MemoryAdapter
 
   def get(key)
     return nil unless @hash.key?(key)
-    Oj.load(@hash[key])
+    Oj.load(@hash[key], mode: :strict)
   rescue => exception
     Observability::Errors.report(exception)
     nil
