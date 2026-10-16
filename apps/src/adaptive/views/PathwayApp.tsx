@@ -108,7 +108,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   initialView,
   initialCheckpointId,
   markStarted,
-  markComplete,
+  completeCheckpoint,
   updateStepContext,
   saveAnswers,
   reset,
@@ -117,6 +117,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   useEffect(() => {
     if (initialCheckpointId) markStarted(initialCheckpointId);
   }, [initialCheckpointId, markStarted]);
+  // The verdict is only logged for now; nothing acts on it yet.
+  const {lastRouting} = progress;
+  useEffect(() => {
+    if (lastRouting) console.log('[adaptive router]', lastRouting);
+  }, [lastRouting]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
@@ -169,7 +174,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
               })
             }
             onFinish={() => {
-              if (!isProject) markComplete(checkpoint.id);
+              if (!isProject) completeCheckpoint(checkpoint.id);
               setView({kind: 'map'});
             }}
           />

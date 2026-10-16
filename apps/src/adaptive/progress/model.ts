@@ -4,6 +4,7 @@
 
 import {hashString} from '@cdo/apps/utils';
 
+import type {RoutingRecord} from '../routing/completeCheckpoint';
 import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
@@ -48,6 +49,8 @@ export interface Progress {
   completed: string[];
   started: string[];
   stepContext: {[stepId: string]: StepContext};
+  /** The router's last run, from completing a checkpoint that asked for one. */
+  lastRouting?: RoutingRecord;
 }
 
 export const EMPTY_PROGRESS: Progress = {

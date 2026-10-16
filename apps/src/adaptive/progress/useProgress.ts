@@ -3,6 +3,7 @@
 
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {completeCheckpoint as completeCheckpointInProgress} from '../routing/completeCheckpoint';
 import {Pathway} from '../types';
 
 import {
@@ -62,13 +63,14 @@ export function useProgress(
     );
   }, []);
 
-  const markComplete = useCallback((id: string) => {
-    setProgress(p =>
-      !p || p.completed.includes(id)
-        ? p
-        : {...p, completed: [...p.completed, id]}
-    );
-  }, []);
+  // A functional update, so the completion sees answers saved by the same
+  // click and the router reads them.
+  const completeCheckpoint = useCallback(
+    (id: string) => {
+      setProgress(p => p && completeCheckpointInProgress(pathway, p, id));
+    },
+    [pathway]
+  );
 
   /** Merges into a step's context, so one concern's write keeps the others. */
   const updateStepContext = useCallback((id: string, patch: StepContext) => {
@@ -113,7 +115,7 @@ export function useProgress(
     progress,
     statusMap,
     markStarted,
-    markComplete,
+    completeCheckpoint,
     updateStepContext,
     saveAnswers,
     reset,

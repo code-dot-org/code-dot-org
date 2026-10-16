@@ -119,7 +119,7 @@ describe('useProgress', () => {
     await waitForNextUpdate();
     const savesAfterLoad = store.saved.length;
     act(() => result.current.markStarted('intro'));
-    act(() => result.current.markComplete('intro'));
+    act(() => result.current.completeCheckpoint('intro'));
     expect(store.saved.slice(savesAfterLoad)).toEqual([
       progressOf([], ['intro']),
       progressOf(['intro'], ['intro']),
