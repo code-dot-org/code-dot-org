@@ -41,8 +41,9 @@ module AWS
       end
     end
 
-    # Creates an S3 client using the the official AWS SDK for Ruby v2 and
-    # the credentials specified in the CDO config.
+    # Creates an S3 client using the AWS SDK and the credentials specified in the CDO config. When invoked after the `s3`
+    # attribute has already been initialized, the existing client's configuration will be updated with the current
+    # DCDO configuration settings.
     # @return [Aws::S3::Client]
     def self.connect_v2!
       self.s3 ||= if CDO.aws_s3_emulated
@@ -57,17 +58,20 @@ module AWS
                     Aws::S3::Client.new
                   end
 
-      # Adjust s3_timeout using a dynamic variable,
-      # updating the S3 client if the variable changes.
+      # When executing within a web application server, adjust the timeouts for opening an HTTP connection and waiting
+      # for a response to short values to ensure we fail fast when S3 is slow instead tying up the fixed number of HTTP
+      # worker threads we provision per vCPU. Code executing in cron jobs, ActiveJobs, irb (dashboard-console),
+      # and Ruby shell scripts do not need these short timeouts.
       timeout = DCDO.get('s3_timeout', 15)
-      if timeout != s3.config.http_open_timeout
+      connection_pool_timeout = DCDO.get('s3_connection_pool_timeout', 5)
+      notify_timeout = DCDO.get('s3_slow_request', timeout)  # Threshold for tracking slow S3 responses.
+      if CDO.running_web_application? && timeout != s3.config.http_open_timeout
         s3.config.http_open_timeout = timeout
         s3.config.http_read_timeout = timeout
-        s3.config.http_idle_timeout = timeout / 2
+        s3.config.http_idle_timeout = connection_pool_timeout # Keep unused connections in the client HTTP pool for re-use.
+        # Custom client setting for our `SlowAwsResponseNotifier` Class.
+        s3.config.notify_timeout = notify_timeout if notify_timeout != s3.config.notify_timeout
       end
-
-      notify_timeout = DCDO.get('s3_slow_request', timeout)
-      s3.config.notify_timeout = notify_timeout if s3.config.notify_timeout != notify_timeout
 
       s3
     end
