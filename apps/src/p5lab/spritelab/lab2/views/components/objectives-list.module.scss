@@ -23,17 +23,14 @@ $line-height: 1.4;
   margin-inline-end: 1.5rem;
 }
 
-// Sizes sit on the paragraphs: dashboard's scaffolds style `p` at 13px.
-.title p,
-.text p {
+// The title's size sits on its paragraph: dashboard's scaffolds style `p`
+// at 13px.
+.title p {
   margin: 0;
-  font-size: $text-size;
+  font-size: 18px;
   line-height: $line-height;
 }
 
-.title p {
-  font-size: 18px;
-}
 
 .list {
   list-style: none;
@@ -73,9 +70,12 @@ $line-height: 1.4;
   border-color: var(--sentiment-success-50);
 }
 
+// Inline markdown: the size sits on the span itself.
 .text {
   flex: 1;
   min-width: 0;
+  font-size: $text-size;
+  line-height: $line-height;
 }
 
 .srOnly {
