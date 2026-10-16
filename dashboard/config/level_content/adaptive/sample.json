@@ -46,6 +46,7 @@
       "id": "introduction",
       "title": "Introduction",
       "description": "An introduction to the Web Dev Tutorial.",
+      "routeAfterCompletion": true,
       "steps": [
         {
           "id": "intro-video",

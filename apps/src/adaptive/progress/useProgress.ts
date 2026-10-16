@@ -7,7 +7,8 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {Pathway, Step} from '../types';
+import {routeAfterCompletion} from '../routing/routeAfterCompletion';
+import {Checkpoint, Pathway, Step} from '../types';
 
 import {
   Answer,
@@ -183,6 +184,13 @@ export function useProgress(
     [reportStepProgress]
   );
 
+  // A functional update, so the router sees the step completion and answers
+  // saved by the same click.
+  const finishCheckpoint = useCallback(
+    (checkpoint: Checkpoint) =>
+      setProgress(p => p && routeAfterCompletion(pathway, p, checkpoint)),
+    [pathway]
+  );
   const saveGeneratedInstructions = useCallback(
     (id: string, content: GeneratedContent) => {
       updateStep(id, entry => ({
@@ -204,5 +212,6 @@ export function useProgress(
     leaveStep,
     saveAnswers,
     saveGeneratedInstructions,
+    finishCheckpoint,
   };
 }
