@@ -8,8 +8,6 @@ class AidiffArtifactsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
 
     create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
-    create(:single_user_experiment, min_user_id: @teacher_sans_experiment.id, name: 'ai-differentiation')
-    create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-artifact')
 
     @unit_group = create(:unit_group, family_name: 'beepboop')
     @course_offering = create(:course_offering, display_name: 'Course Name')
