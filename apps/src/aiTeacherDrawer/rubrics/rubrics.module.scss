@@ -684,16 +684,27 @@ p.errorMessage {
   flex-direction: column;
   align-self: stretch;
   gap: 1rem;
+  // Without this the block is floored at its content's natural width, which
+  // the confidence bars alone push past the drawer (see .aiAssessmentInfoRow).
+  min-width: 0;
 }
 
 .aiAssessmentInfoRow {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-self: stretch;
   gap: 0.5rem;
+  min-width: 0;
 
   p {
     margin: 0;
+  }
+
+  // The bars are a fixed 3.25rem each and the label does not wrap, so this
+  // block cannot share a line with the score at drawer width. Give it its own.
+  .aiConfidenceBox {
+    flex-basis: 100%;
   }
 }
 
@@ -701,6 +712,8 @@ p.aiAssessmentScoreText {
   strong::after {
     content: ' ';
   }
+  flex: 1;
+  min-width: 0;
   max-width: 280px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -711,6 +724,21 @@ p.aiAssessmentEvidenceBlock {
 
   + ul li p {
     margin: 0;
+  }
+}
+
+.aiAssessmentEvidence {
+  min-width: 0;
+
+  ul {
+    margin: 0;
+    padding-inline-start: 1.5rem;
+  }
+
+  // Evidence quotes identifiers and line references that have no break
+  // opportunity of their own.
+  li p {
+    overflow-wrap: break-word;
   }
 }
 
