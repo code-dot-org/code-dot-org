@@ -10,8 +10,10 @@ import {VideoStep as VideoStepContent} from '../../types';
 import styles from './stepPlayer.module.scss';
 
 const VIDEO_ASPECT_RATIO = 16 / 9;
-// Minimum room reserved below the video for the continue button.
-const BUTTON_AREA_HEIGHT = 60;
+// Match the margins PanelsView uses so the video is the same size as a panel image.
+const HORIZONTAL_MARGIN = 40;
+const VERTICAL_MARGIN = 50;
+const BUTTON_AREA_HEIGHT = 70;
 
 interface VideoStepProps {
   step: VideoStepContent;
@@ -28,13 +30,14 @@ const VideoStep: React.FunctionComponent<VideoStepProps> = ({
   const host = useRef<HTMLDivElement>(null);
   const [width, height] = useElementSize(host);
 
-  const videoAreaHeight = height - BUTTON_AREA_HEIGHT;
+  const effectiveWidth = width - HORIZONTAL_MARGIN * 2;
+  const effectiveHeight = height - VERTICAL_MARGIN * 2 - BUTTON_AREA_HEIGHT;
   let videoWidth: number, videoHeight: number;
-  if (width / videoAreaHeight > VIDEO_ASPECT_RATIO) {
-    videoHeight = videoAreaHeight;
+  if (effectiveWidth / effectiveHeight > VIDEO_ASPECT_RATIO) {
+    videoHeight = effectiveHeight;
     videoWidth = VIDEO_ASPECT_RATIO * videoHeight;
   } else {
-    videoWidth = width;
+    videoWidth = effectiveWidth;
     videoHeight = videoWidth / VIDEO_ASPECT_RATIO;
   }
 
