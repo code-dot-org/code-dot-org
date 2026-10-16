@@ -2,6 +2,7 @@ import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import beginsBehavior from './beginsBehavior';
 import burst from './burst';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
@@ -12,7 +13,6 @@ import makeSpriteAtPosition from './makeSpriteAtPosition';
 import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
-import patrollingOnBlocks from './patrollingOnBlocks';
 import placeholder from './placeholder';
 import playMusic from './playMusic';
 import playSound from './playSound';
@@ -40,7 +40,7 @@ const labBlockDefinitions: {
   movingLeft,
   movingWithArrowKeys,
   patrollingLeftRight,
-  patrollingOnBlocks,
+  beginsBehavior,
   makePlatformPlayer,
   makeSpriteAtGrid,
   makeSpriteAtPosition,
