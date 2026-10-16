@@ -40,6 +40,19 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 };
 
 describe('SummaryEntryPoint', () => {
+  it('strips sublevel suffix from summary url', () => {
+    window.history.pushState(
+      {},
+      '',
+      '/courses/my-course/units/1/lessons/1/levels/5/sublevel/2'
+    );
+    const wrapper = setUpWrapper();
+    expect(wrapper.find('a').prop('href')).toBe(
+      '/courses/my-course/units/1/lessons/1/levels/5/summary'
+    );
+    window.history.pushState({}, '', '/');
+  });
+
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 
