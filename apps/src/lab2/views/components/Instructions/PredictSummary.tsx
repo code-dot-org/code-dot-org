@@ -17,7 +17,8 @@ const PredictSummary: React.FunctionComponent = () => {
     `viewAs=${ViewType.Participant}`,
     `viewAs=${ViewType.Instructor}`
   );
-  const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
+  const pathname = document.location.pathname.replace(/\/sublevel\/\d+$/, '');
+  const summaryUrl = pathname + SUMMARY_PATH + params;
   const currentSectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
   );

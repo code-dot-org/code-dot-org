@@ -17,7 +17,8 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
     `viewAs=${ViewType.Participant}`,
     `viewAs=${ViewType.Instructor}`
   );
-  const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
+  const pathname = document.location.pathname.replace(/\/sublevel\/\d+$/, '');
+  const summaryUrl = pathname + SUMMARY_PATH + params;
 
   let className = styles.summaryEntryPoint;
   if (!scriptData.is_contained_level) {
