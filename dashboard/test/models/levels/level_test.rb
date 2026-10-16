@@ -1790,6 +1790,71 @@ class LevelTest < ActiveSupport::TestCase
     assert prod_level.destroy
   end
 
+  test 'levelbuilder treats standalone tree levels like production levels' do
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+
+    # the seed creates new levels with import!, which runs validations
+    Level.import!([{name: 'LevelTest Levelbuilder Seeded Subproject'}, {name: 'New LevelTest Levelbuilder Seeded Project'}])
+
+    project = create(:level, name: 'New LevelTest Levelbuilder Project')
+    project.notes = 'edited'
+    assert project.valid?
+    project.name = 'LevelTest Levelbuilder Plain'
+    assert project.valid?
+    assert project.reload.destroy
+  end
+
+  test 'cannot rename a level into or out of the standalone tree while attached to another level' do
+    child = create(:level, name: 'LevelTest Attached Subproject')
+    parent = create(:level, name: 'New LevelTest Attached Project', child_levels: [child])
+
+    child.name = 'LevelTest Attached Plain Child'
+    refute child.valid?
+    assert_includes child.errors[:name].first, 'another partition'
+
+    parent.name = 'LevelTest Attached Plain Parent'
+    refute parent.valid?
+
+    # renames within the standalone tree are unaffected
+    child.reload.name = 'LevelTest Attached Renamed Subproject'
+    assert child.valid?
+  end
+  test 'a name may match only one partition rule' do
+    ['UI Test LevelTest Probe Subproject', 'ui test levelTest lowercase subproject'].each do |name|
+      level = build(:level, name: name)
+      refute level.valid?
+      assert_includes level.errors[:name].first, 'only one partition rule'
+    end
+
+    level = create(:level, name: 'LevelTest one rule probe')
+    level.name = 'UI Test LevelTest Probe Subproject'
+    refute level.valid?
+  end
+
+  test 'a level named in standalone_projects.yml cannot be renamed or destroyed' do
+    name = Policies::StandaloneProjects.level_names.first
+    level = Level.find_by(name: name) || create(:level, name: name)
+
+    level.name = 'LevelTest renamed config level'
+    refute level.valid?
+    assert_includes level.errors[:name].first, 'config/standalone_projects/standalone_projects.yml'
+
+    level.reload.notes = 'edited'
+    assert level.valid?
+
+    refute level.destroy
+    refute level.destroyed?
+    assert_includes level.errors[:base].first, 'config/standalone_projects/standalone_projects.yml'
+    e = assert_raises(ActiveRecord::RecordNotDestroyed) {level.destroy!}
+    assert_includes e.record.errors[:base].first, 'config/standalone_projects/standalone_projects.yml'
+
+    # a standalone-tree level not named in the config is unaffected
+    unlisted = create(:level, name: 'New LevelTest Unlisted Project')
+    unlisted.name = 'New LevelTest Unlisted Renamed Project'
+    assert unlisted.valid?
+    assert unlisted.destroy
+  end
+
   test 'cannot rename a level across the UI Test boundary while attached to another level' do
     child = create(:level, name: 'LevelTest attached child')
     parent = create(:level, name: 'LevelTest attached parent', child_levels: [child])

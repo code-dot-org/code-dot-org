@@ -46,3 +46,29 @@ export async function waitForVisualStability(
     await waitUntilStable(locator);
   }
 }
+
+/**
+ * Resolve once no finite CSS animation or transition under the locator is still
+ * running. An axe scan during an entrance animation reads half-faded colors;
+ * infinite animations (spinners) are ignored so they cannot block forever.
+ */
+export async function waitForAnimationsToFinish(
+  locator: Locator,
+): Promise<void> {
+  await expect
+    .poll(
+      () =>
+        locator.evaluate(
+          el =>
+            el
+              .getAnimations({subtree: true})
+              .filter(
+                a =>
+                  a.playState === 'running' &&
+                  a.effect?.getComputedTiming().iterations !== Infinity,
+              ).length,
+        ),
+      {message: 'CSS animations still running'},
+    )
+    .toBe(0);
+}

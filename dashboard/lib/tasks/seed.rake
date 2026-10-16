@@ -183,6 +183,7 @@ namespace :seed do
     :child_dsls,
     :quiz_questions,
     :custom_levels,
+    :standalone_project_levels,
     :parent_dsls,
     :code_docs,
     :blocks,
@@ -313,12 +314,24 @@ namespace :seed do
     end
   end
 
+  # The levels behind /projects/<key> and their sublevels, seeded in every
+  # environment. .level files first so the BubbleChoice finds its sublevels.
+  # See dashboard/config/standalone_projects/README.md.
+  STANDALONE_PROJECT_PARENT_DSL_FILES = dsl_files('config/standalone_projects/scripts', PARENT_DSL_TYPES).freeze
+
+  timed_task_with_logging standalone_project_levels: :environment do
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, tree: :standalone_project)
+    DSLDefined.transaction do
+      parse_dsl_files(STANDALONE_PROJECT_PARENT_DSL_FILES, PARENT_DSL_TYPES)
+    end
+  end
+
   # Allow developers to seed just one dsl-defined level, e.g.
   # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = %w(config/scripts test/ui/config/scripts).flat_map do |scripts_dir|
+      dsl_files = %w(config/scripts test/ui/config/scripts config/standalone_projects/scripts).flat_map do |scripts_dir|
         Dir.glob("#{CURRICULUM_CONTENT_DIR}/#{scripts_dir}/**/#{ENV.fetch('DSL_FILENAME', nil)}")
       end
 
@@ -343,12 +356,14 @@ namespace :seed do
         md5 = Digest::MD5.hexdigest(contents)
         data, _i18n = dsl_class.parse(contents, filename)
 
-        # A file must sit in the tree its level name selects, or seeding the
-        # other tree would quietly pick it up; see
-        # dashboard/test/ui/config/README.md.
+        # A file must sit in the tree its level name selects, or seeding
+        # another tree would quietly pick it up; see
+        # dashboard/test/ui/config/README.md and
+        # dashboard/config/standalone_projects/README.md.
         if Policies::LevelFiles.tree_for_name(data[:name]) != Policies::LevelFiles.tree_for_path(filename)
           raise "level #{data[:name].dump} does not belong in #{filename}: \"UI Test \" levels " \
-            "live under test/ui/config/scripts, all others under config/scripts"
+            "live under test/ui/config/scripts, standalone project levels (\"New ... Project\", " \
+            "\"... Subproject\") under config/standalone_projects/scripts, all others under config/scripts"
         end
 
         # Skip any files which have not been updated since last seed. To force a
@@ -590,5 +605,5 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed only dashboard data required for tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :standalone_project_levels, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end

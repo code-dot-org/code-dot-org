@@ -831,7 +831,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should prevent rename of stanadalone project level" do
-    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    level_name = Policies::StandaloneProjects.all.values.first[:name]
     create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
