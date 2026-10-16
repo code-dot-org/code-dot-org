@@ -88,11 +88,9 @@ export function getResultsByGrade(
     project,
     state.accuracyCheckPredictedLabels
   ).filter((_label, index) => keep(index));
-  const datasetRows = accuracyCheckDatasetRows(state, project);
-  const rowIndices =
-    datasetRows.length === convertedExamples.length
-      ? datasetRows.filter((_row, index) => keep(index))
-      : [];
+  const rowIndices = accuracyCheckDatasetRows(state, project).filter(
+    (_row, index) => keep(index)
+  );
   return {examples, labels, predictedLabels, rowIndices};
 }
 

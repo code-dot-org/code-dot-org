@@ -43,17 +43,13 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
 
   const cellValue = (value: string | number) =>
     getLocalizedValue(value, datasetId);
-  // rowIndices is empty when the project has no saved row numbers, so only feature values are known.
   const columnValue = (
     example: (string | number)[],
-    row: number | undefined,
+    row: number,
     column: string
   ) => {
     const feature = selectedFeatures.indexOf(column);
-    if (feature !== -1) {
-      return cellValue(example[feature]);
-    }
-    return row === undefined ? '' : cellValue(data[row]?.[column] ?? '');
+    return cellValue(feature === -1 ? data[row][column] : example[feature]);
   };
 
   return (
@@ -78,7 +74,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                 return (
                   <tr key={index} className={tableStyles.row}>
                     <th scope="row" className={tableStyles.indexCell}>
-                      <CellText>{row === undefined ? '' : row + 1}</CellText>
+                      <CellText>{row + 1}</CellText>
                     </th>
                     {columns.map(column => (
                       <td

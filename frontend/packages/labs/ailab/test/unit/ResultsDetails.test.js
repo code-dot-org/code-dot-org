@@ -21,7 +21,6 @@ const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
 function renderScorecard({
   data,
   predictedLabels = ['bird', 'dog', 'bird'],
-  accuracyCheckRowIndices = [0, 1, 2],
 } = {}) {
   const store = levelStore();
   if (data) {
@@ -34,7 +33,7 @@ function renderScorecard({
     store,
     project: {
       ...levelProject(),
-      accuracyCheckRowIndices,
+      accuracyCheckRowIndices: [0, 1, 2],
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
@@ -116,13 +115,5 @@ describe('ResultsDetails', () => {
     fireEvent.click(screen.getByLabelText('Show only features and label'));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
-  });
-
-  test('keeps feature values in all columns when rows have no row number', () => {
-    renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: null});
-
-    fireEvent.click(screen.getByLabelText('Show all columns'));
-
-    expect(bodyRows()[0]).toEqual(['', '', '2', 'bird', 'bird']);
   });
 });
