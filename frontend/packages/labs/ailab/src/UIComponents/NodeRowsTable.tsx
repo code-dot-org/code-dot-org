@@ -10,6 +10,7 @@ import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 
 import CellText from './CellText';
+import DataTableFrame from './DataTableFrame';
 import RowsTableHeader from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
@@ -45,69 +46,61 @@ const NodeRowsTable = ({
 
   return (
     <>
-      <div className={styles.frame}>
-        <div
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can scroll a wide table
-          tabIndex={0}
-          role="group"
-          aria-labelledby={labelId}
-          className={styles.scroller}
-        >
-          <table className={tableStyles.table}>
-            <thead>
-              <RowsTableHeader
-                columns={columns}
-                showPrediction={showPrediction}
-              />
-            </thead>
-            <tbody>
-              {shownRows.map(row => (
-                <tr key={row} className={tableStyles.row}>
-                  <th scope="row" className={tableStyles.indexCell}>
-                    <CellText>{row + 1}</CellText>
-                  </th>
-                  {columns.map(column => {
-                    const role = getColumnRole(project, column);
-                    return (
-                      <td
-                        key={column}
-                        className={classNames(tableStyles.bodyCell, {
-                          [tableStyles.bodyCellLabel]: role === 'label',
-                          [tableStyles.bodyCellFeature]: role === 'feature',
-                          [styles.emphasized]: column === emphasizedColumn,
-                        })}
-                      >
-                        <CellText>
-                          {getLocalizedValue(data[row][column], datasetId)}
-                        </CellText>
-                      </td>
-                    );
-                  })}
-                  {showPrediction && (
+      <DataTableFrame labelId={labelId}>
+        <table className={tableStyles.table}>
+          <thead>
+            <RowsTableHeader
+              columns={columns}
+              showPrediction={showPrediction}
+            />
+          </thead>
+          <tbody>
+            {shownRows.map(row => (
+              <tr key={row} className={tableStyles.row}>
+                <th scope="row" className={tableStyles.indexCell}>
+                  <CellText>{row + 1}</CellText>
+                </th>
+                {columns.map(column => {
+                  const role = getColumnRole(project, column);
+                  return (
                     <td
-                      className={classNames(
-                        tableStyles.bodyCell,
-                        tableStyles.bodyCellLabel
-                      )}
+                      key={column}
+                      className={classNames(tableStyles.bodyCell, {
+                        [tableStyles.bodyCellLabel]: role === 'label',
+                        [tableStyles.bodyCellFeature]: role === 'feature',
+                        [styles.emphasized]: column === emphasizedColumn,
+                      })}
                     >
-                      <CellText>{displayValue(prediction, datasetId)}</CellText>
+                      <CellText>
+                        {getLocalizedValue(data[row][column], datasetId)}
+                      </CellText>
                     </td>
-                  )}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          {rowIndices.length === 0 && (
-            <Typography
-              variant="body4"
-              component="p"
-              className={styles.emptyNote}
-            >
-              {emptyText}
-            </Typography>
-          )}
-        </div>
-      </div>
+                  );
+                })}
+                {showPrediction && (
+                  <td
+                    className={classNames(
+                      tableStyles.bodyCell,
+                      tableStyles.bodyCellLabel
+                    )}
+                  >
+                    <CellText>{displayValue(prediction, datasetId)}</CellText>
+                  </td>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {rowIndices.length === 0 && (
+          <Typography
+            variant="body4"
+            component="p"
+            className={styles.emptyNote}
+          >
+            {emptyText}
+          </Typography>
+        )}
+      </DataTableFrame>
       {rowIndices.length > shownRows.length && (
         <Typography variant="body4" component="p" className={styles.note}>
           Showing the first {shownRows.length} rows.
