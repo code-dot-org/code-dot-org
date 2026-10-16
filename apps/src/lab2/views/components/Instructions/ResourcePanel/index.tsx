@@ -166,6 +166,8 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  /** Lab-defined buttons in the footer column, ahead of the built-in ones. */
+  footerButtons?: React.ReactNode;
   /** Show the collapse/expand control. Defaults to standalone project levels. */
   collapsible?: boolean;
   hideCollapsedTabBorder?: boolean;
@@ -204,6 +206,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
+  footerButtons,
   collapsible,
   hideCollapsedTabBorder = false,
   backpackProps,
@@ -774,6 +777,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             className={classNames(styles.bottomTabs)}
           >
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+            {footerButtons}
             {documentationUrl && (
               <IconButtonWithTooltip
                 id="documentation"
