@@ -14,12 +14,16 @@ class AnalyticsReporter {
     }
   }
 
-  sendEvent(eventName, payload, includeProjectProperties = false) {
+  // `value` populates Statsig's own event value field, which Statsig breaks
+  // results down by automatically when it has fewer than eight distinct
+  // values. Callers that omit it get the historical behavior: the event name
+  // repeated into that field.
+  sendEvent(eventName, payload, includeProjectProperties = false, value) {
     // Include project properties in Statsig events.
     const statsigPayload = includeProjectProperties
       ? {...payload, ...this.projectContext}
       : payload;
-    statsigReporter.sendEvent(eventName, statsigPayload);
+    statsigReporter.sendEvent(eventName, statsigPayload, value);
   }
 }
 

@@ -34,6 +34,9 @@ const sharedPropTypes = {
   requireSelection: PropTypes.bool,
   alwaysShow: PropTypes.bool,
   reloadOnChange: PropTypes.bool,
+  // Fires with the new section id before the selection is acted on, which on
+  // the query-param path means before a page reload.
+  onSectionChange: PropTypes.func,
 
   // redux provided
   sections: PropTypes.arrayOf(
@@ -52,6 +55,7 @@ function SectionDropdown({
   sections,
   selectedSectionId,
   onSelectSection,
+  onSectionChange,
 }) {
   const items = (
     requireSelection
@@ -68,7 +72,10 @@ function SectionDropdown({
       isLabelVisible={false}
       items={items}
       selectedValue={String(selectedSectionId || NO_SELECTED_SECTION_VALUE)}
-      onChange={event => onSelectSection(event.target.value)}
+      onChange={event => {
+        onSectionChange?.(event.target.value);
+        onSelectSection(event.target.value);
+      }}
     />
   );
 }
@@ -79,6 +86,7 @@ SectionDropdown.propTypes = {
   sections: sharedPropTypes.sections,
   selectedSectionId: sharedPropTypes.selectedSectionId,
   onSelectSection: PropTypes.func.isRequired,
+  onSectionChange: sharedPropTypes.onSectionChange,
 };
 
 function QueryParamSectionSelector({reloadOnChange, selectSection, ...props}) {
@@ -139,6 +147,7 @@ function RoutedSectionSelector(props) {
       sections={props.sections}
       selectedSectionId={props.selectedSectionId}
       onSelectSection={onSelectSection}
+      onSectionChange={props.onSectionChange}
     />
   );
 }

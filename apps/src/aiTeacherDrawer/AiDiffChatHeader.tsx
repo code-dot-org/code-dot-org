@@ -11,9 +11,12 @@ import {PDFDownloadLink} from '@react-pdf/renderer';
 import React, {useCallback, useMemo, useState} from 'react';
 
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AiDiffPdf from './AiDiffPdf';
+import {sendTaEvent, truncateForStatsig} from './analytics';
 import {ChatItem, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -73,6 +76,7 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
 }) => {
   const [suggestPromptsHovered, setSuggestPromptsHovered] = useState(false);
   const [suggestPromptsMenuOpen, setSuggestPromptsMenuOpen] = useState(false);
+  const threadId = useAppSelector(state => state.aiDiffChat.threadId);
 
   // ActionDropdown calls setActiveDropdownName('') on the outer DropdownContext,
   // but CustomDropdown reads its own inner DropdownProviderWrapper — they don't
@@ -136,7 +140,17 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
       });
     }
 
-    return baseOptions;
+    return baseOptions.map((option, index) => ({
+      ...option,
+      onClick: () => {
+        sendTaEvent(
+          EVENTS.AI_TA_PROMPT_CATEGORY_CLICKED,
+          {category_position: index},
+          truncateForStatsig(option.label)
+        );
+        option.onClick?.();
+      },
+    }));
   }, [onSuggestPrompts, personalizationData?.matchedPersona, closeDropdown]);
 
   return (
@@ -172,7 +186,15 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
             setSuggestPromptsHovered(false);
             setSuggestPromptsMenuOpen(false);
           }}
-          onClick={() => setSuggestPromptsMenuOpen(true)}
+          onClick={() => {
+            if (!suggestPromptsMenuOpen) {
+              sendTaEvent(EVENTS.AI_TA_SUGGEST_PROMPTS_OPENED, {
+                is_new_chat: threadId === 0,
+                message_count: messages.length,
+              });
+            }
+            setSuggestPromptsMenuOpen(true);
+          }}
         >
           <Tooltip
             title={commonI18n.aiDifferentiation_suggest_prompt()}

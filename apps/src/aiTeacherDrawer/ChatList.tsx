@@ -17,6 +17,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {sendTaEvent} from './analytics';
 import {ChatThread, Context} from './types';
 
 import styles from './ai-differentiation.module.scss';
@@ -89,6 +90,9 @@ const ChatList: React.FC<ChatListProps> = ({
   onChatSelect,
 }) => {
   const selectedThreadId = useAppSelector(state => state.aiDiffChat.threadId);
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
 
   const dispatch = useAppDispatch();
 
@@ -124,6 +128,14 @@ const ChatList: React.FC<ChatListProps> = ({
   });
 
   const onNewChatButtonClick = useCallback(() => {
+    sendTaEvent(
+      EVENTS.AI_TA_NEW_CHAT_STARTED,
+      {
+        entry_point: 'thread_list',
+        previous_thread_message_count: threadMessages.length,
+      },
+      'thread_list'
+    );
     dispatch(
       fetchThreadMessages({
         contextType: context.type,
@@ -132,7 +144,13 @@ const ChatList: React.FC<ChatListProps> = ({
       })
     );
     onChatSelect?.();
-  }, [curriculumCourses, context, dispatch, onChatSelect]);
+  }, [
+    curriculumCourses,
+    context,
+    dispatch,
+    onChatSelect,
+    threadMessages.length,
+  ]);
 
   return (
     <aside
