@@ -6,7 +6,7 @@
 - deployed in production as https://studio.code.org, but usually we call it "dashboard" internally
 - broadly contains teacher tools, student labs (=learning activities), and levelbuilder (curriculum authoring tool)
 - key directories:
-  - frontend is React, see apps/, particularly apps/src (most existing jsx/tsx), and frontend/ (some new modules)
+  - frontend is React, see apps/, particularly apps/src (most existing jsx/tsx), and frontend/ (an opt-in experiment in modular packages)
   - backend is Rails, see dashboard/ which is the root of a conventional Rails app
 
 ## Technical Writing Style
@@ -60,7 +60,7 @@ and architecture.
 
 ## React Tips and Tricks:
 - As previously mentioned, see `apps/` for most (but not all) of our existing JS/TS/JSX/TSX code
-- Some new code is being added in `frontend/`, using standalone/modular JS packages. In the future we plan to use this more and more.
+- New frontend code, labs included, goes in `apps/`. `frontend/` is an experiment in modular packages; use it only when the work has explicitly chosen it.
 - In contrast, `apps/` is basically one giant webpack bundle
 - Much of our javascript code is used to implement "labs", which you can think of as "game engines" for our various curriculum content.
   - A single lab will be used in lots of levels, each level is an educational experience written by our curriculum authors
