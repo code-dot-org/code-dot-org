@@ -2,7 +2,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useRef} from 'react';
 
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
@@ -28,6 +28,7 @@ const SelectDataset = () => {
   const name = useAppSelector(state => state.name);
   const highlightDataset = useAppSelector(state => state.highlightDataset);
   const invalidData = useAppSelector(state => state.invalidData);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const resetState = () => dispatch(resetStateAction());
   const setSelectedName = (datasetName: string) =>
@@ -127,29 +128,30 @@ const SelectDataset = () => {
       {!specifiedDatasets && (
         <div className={styles.upload}>
           <Button
-            component="label"
             variant="outlined"
             color="secondary"
             size="small"
             startIcon={
               <FontAwesomeV6Icon iconName="file-arrow-up" aria-hidden="true" />
             }
+            onClick={() => fileInputRef.current!.click()}
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
-            {/* Setting value to empty here allows us to receive an
-                onChange event for the same file as previously selected,
-                which allows the user to upload a file, then choose an
-                existing dataset, and then reupload the same file. */}
-            <input
-              className={classNames('csv-input', styles.fileInput)}
-              type="file"
-              accept=".csv,text/csv,application/vnd.ms-excel"
-              name="file"
-              placeholder={undefined}
-              onChange={handleUploadSelect}
-              value=""
-            />
           </Button>
+          {/* Setting value to empty here allows us to receive an
+              onChange event for the same file as previously selected,
+              which allows the user to upload a file, then choose an
+              existing dataset, and then reupload the same file. */}
+          <input
+            ref={fileInputRef}
+            className={classNames('csv-input', styles.fileInput)}
+            type="file"
+            accept=".csv,text/csv,application/vnd.ms-excel"
+            name="file"
+            placeholder={undefined}
+            onChange={handleUploadSelect}
+            value=""
+          />
           <Typography variant="body3" className={styles.invalidData}>
             {getInvalidDataMessage()}
           </Typography>
