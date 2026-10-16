@@ -106,6 +106,9 @@ function fakeLab2Checkbox() {
   };
 }
 
+const DEV_ONLY_WARNING =
+  'Warning: for development only. Letting students choose a dataset is not ready for real levels yet.';
+
 function datasetDropdown() {
   return screen.getByRole('combobox', {name: /^Dataset/});
 }
@@ -375,8 +378,11 @@ describe('EditAilabMode', () => {
     ).toBeDisabled();
     expect(featuresLock()).toBeDisabled();
     expect(pretrainedCheckbox()).toBeDisabled();
+    expect(screen.getByText(DEV_ONLY_WARNING)).toBeInTheDocument();
 
     chooseDataset('pizza_toy');
+
+    expect(screen.queryByText(DEV_ONLY_WARNING)).not.toBeInTheDocument();
 
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,

@@ -166,6 +166,12 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           }
           size="s"
         />
+        {!selectedDataset && (
+          <Typography variant="body4" className={moduleStyles.warningText}>
+            Warning: for development only. Letting students choose a dataset is
+            not ready for real levels yet.
+          </Typography>
+        )}
       </div>
       <div className={moduleStyles.fieldArea}>
         <PretrainedField
