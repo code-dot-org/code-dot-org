@@ -69,6 +69,33 @@
   }
 }
 
+.headerWithControls {
+  padding-right: 4px;
+
+  &.clickable {
+    padding-right: 4px;
+  }
+
+  .headerButton {
+    padding-right: 4px;
+  }
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 100%;
+}
+
+.headerName {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  align-self: stretch;
+  min-width: 0;
+}
+
 .headerButton {
   display: block;
   width: 100%;

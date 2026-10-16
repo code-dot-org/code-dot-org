@@ -9,6 +9,9 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
+import type {TableView} from '../useTableView';
+
+import ColumnHeader from './ColumnHeader';
 
 import styles from './dataTable.module.scss';
 
@@ -20,6 +23,7 @@ interface DataTableProps {
   hideLabel?: boolean;
   useResultsData?: boolean;
   maxRows?: number;
+  view?: TableView;
 }
 
 const DataTable = ({
@@ -30,6 +34,7 @@ const DataTable = ({
   hideLabel,
   useResultsData,
   maxRows = DATA_TABLE_ROW_LIMIT,
+  view,
 }: DataTableProps) => {
   const dispatch = useAppDispatch();
   const {project} = useProject();
@@ -99,15 +104,13 @@ const DataTable = ({
   };
 
   const getRows = () => {
-    if (data.length === 0) {
-      return [];
+    if (view) {
+      return view.rows.slice(0, maxRows);
     }
-
     if (singleRow !== undefined) {
-      return [data[Math.min(singleRow, data.length - 1)]];
-    } else {
-      return data.slice(0, maxRows);
+      return [Math.min(singleRow, data.length - 1)];
     }
+    return [...data.keys()].slice(0, maxRows);
   };
 
   const handleSetCurrentColumn = (columnId: string) => {
@@ -133,9 +136,11 @@ const DataTable = ({
           {getColumns().map(columnId => {
             const columnName = getLocalizedColumnName(datasetId, columnId);
             return (
-              <th
+              <ColumnHeader
                 key={columnId}
-                scope="col"
+                column={columnId}
+                name={columnName}
+                view={view}
                 className={getColumnHeaderClassName(columnId)}
               >
                 {isClickable ? (
@@ -165,7 +170,7 @@ const DataTable = ({
                     {columnName}
                   </Typography>
                 )}
-              </th>
+              </ColumnHeader>
             );
           })}
         </tr>
@@ -173,7 +178,7 @@ const DataTable = ({
       <tbody>
         {getRows().map((row, index) => {
           return (
-            <tr key={index} className={styles.row}>
+            <tr key={row} className={styles.row}>
               {showRowNumbers && (
                 <th scope="row" className={styles.indexCell}>
                   <Typography
@@ -181,7 +186,7 @@ const DataTable = ({
                     variant="body4"
                     className={styles.cellText}
                   >
-                    {index + 1}
+                    {row + 1}
                   </Typography>
                 </th>
               )}
@@ -199,7 +204,7 @@ const DataTable = ({
                     >
                       {startingRow !== undefined && index <= startingRow
                         ? ' '
-                        : getLocalizedValue(row[columnId], datasetId)}
+                        : getLocalizedValue(data[row][columnId], datasetId)}
                     </Typography>
                   </td>
                 );

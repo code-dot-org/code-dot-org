@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
@@ -7,8 +7,10 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
+import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
+import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
@@ -41,11 +43,46 @@ const ResultsTable = ({results}: ResultsTableProps) => {
     isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+
+  // Keyed by position, since Actual and AI Prediction share the label's name.
+  const sourceColumns = useMemo(
+    () => [...selectedFeatures, labelColumn, labelColumn],
+    [selectedFeatures, labelColumn]
+  );
+  const columns = useMemo(
+    () => sourceColumns.map((_, index) => String(index)),
+    [sourceColumns]
+  );
+  const columnTypes = useMemo(
+    () =>
+      Object.fromEntries(
+        sourceColumns.map((column, index) => [index, columnsByDataType[column]])
+      ),
+    [sourceColumns, columnsByDataType]
+  );
+  const data = useMemo(
+    () =>
+      results.examples.map((example, row) =>
+        Object.fromEntries(
+          [
+            ...example,
+            results.labels[row],
+            results.predictedLabels[row],
+          ].entries()
+        )
+      ),
+    [results]
+  );
+  const view = useTableView({data, columns, columnTypes});
+  const actualColumn = String(selectedFeatures.length);
+  const predictionColumn = String(selectedFeatures.length + 1);
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
   const cellValue = (value: string | number) =>
     getLocalizedValue(value, datasetId);
+  const labelName = columnName(labelColumn);
 
   return (
     <div className={styles.scroller}>
@@ -73,32 +110,48 @@ const ResultsTable = ({results}: ResultsTableProps) => {
             </th>
           </tr>
           <tr>
-            {selectedFeatures.map(feature => (
-              <th key={feature} scope="col" className={featureHeader}>
+            {selectedFeatures.map((feature, index) => (
+              <ColumnHeader
+                key={feature}
+                column={String(index)}
+                name={columnName(feature)}
+                view={view}
+                className={featureHeader}
+              >
                 <CellText>{columnName(feature)}</CellText>
-              </th>
+              </ColumnHeader>
             ))}
-            <th scope="col" className={labelHeader}>
-              <CellText>{columnName(labelColumn)}</CellText>
-            </th>
-            <th scope="col" className={labelHeader}>
-              <CellText>{columnName(labelColumn)}</CellText>
-            </th>
+            <ColumnHeader
+              column={actualColumn}
+              name={`Actual ${labelName}`}
+              view={view}
+              className={labelHeader}
+            >
+              <CellText>{labelName}</CellText>
+            </ColumnHeader>
+            <ColumnHeader
+              column={predictionColumn}
+              name={`AI Prediction ${labelName}`}
+              view={view}
+              className={labelHeader}
+            >
+              <CellText>{labelName}</CellText>
+            </ColumnHeader>
           </tr>
         </thead>
         <tbody>
-          {results.examples.map((example, index) => (
-            <tr key={index} className={tableStyles.row}>
-              {example.map((value, column) => (
+          {view.rows.map(row => (
+            <tr key={row} className={tableStyles.row}>
+              {results.examples[row].map((value, column) => (
                 <td key={column} className={featureCell}>
                   <CellText>{cellValue(value)}</CellText>
                 </td>
               ))}
               <td className={labelCell}>
-                <CellText>{cellValue(results.labels[index])}</CellText>
+                <CellText>{cellValue(results.labels[row])}</CellText>
               </td>
               <td className={labelCell}>
-                <CellText>{cellValue(results.predictedLabels[index])}</CellText>
+                <CellText>{cellValue(results.predictedLabels[row])}</CellText>
               </td>
             </tr>
           ))}

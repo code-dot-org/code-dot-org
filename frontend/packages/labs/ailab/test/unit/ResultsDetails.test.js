@@ -82,4 +82,21 @@ describe('ResultsDetails', () => {
         .getAttribute('aria-pressed')
     ).toBe('true');
   });
+
+  test('sorts by the AI prediction', () => {
+    renderScorecard();
+    const sortByPrediction = screen.getByRole('button', {
+      name: 'Sort by AI Prediction animal',
+    });
+    fireEvent.click(sortByPrediction);
+    fireEvent.click(sortByPrediction);
+
+    expect(sortByPrediction.closest('th').getAttribute('aria-sort')).toBe(
+      'descending'
+    );
+    expect(bodyRows()).toEqual([
+      ['4', 'dog', 'dog'],
+      ['2', 'bird', 'bird'],
+    ]);
+  });
 });

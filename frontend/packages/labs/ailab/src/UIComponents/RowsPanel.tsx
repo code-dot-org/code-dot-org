@@ -1,6 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip, Typography} from '@mui/material';
-import React, {type ReactNode} from 'react';
+import React, {type ReactNode, useMemo} from 'react';
+
+import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
+import {useTableView} from '../useTableView';
 
 import NodeRowsTable from './NodeRowsTable';
 
@@ -28,6 +32,23 @@ const RowsPanel = ({
   emptyText = 'No rows reached this step',
   resultsToggle,
 }: RowsPanelProps) => {
+  const {project} = useProject();
+  const {selectedFeatures, labelColumn} = project;
+  const data = useAppSelector(state => state.data);
+  const columnTypes = useAppSelector(state => state.columnsByDataType);
+  const columns = useMemo(
+    () =>
+      showAllColumns
+        ? Object.keys(data[0] ?? {})
+        : [...selectedFeatures, labelColumn || 'unknown'],
+    [showAllColumns, data, selectedFeatures, labelColumn]
+  );
+  const tableView = useTableView({
+    data,
+    columns,
+    columnTypes,
+    rows: rowIndices,
+  });
   const columnsLabel = showAllColumns
     ? 'Show only features and label'
     : 'Show all columns';
@@ -67,9 +88,9 @@ const RowsPanel = ({
         </div>
       </div>
       <NodeRowsTable
-        rowIndices={rowIndices}
+        view={tableView}
+        columns={columns}
         emphasizedColumn={emphasizedColumn}
-        showAllColumns={showAllColumns}
         emptyText={emptyText}
       />
     </div>

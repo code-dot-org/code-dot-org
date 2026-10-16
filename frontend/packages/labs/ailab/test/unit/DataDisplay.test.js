@@ -26,6 +26,9 @@ function renderDisplay() {
 
 const button = name => screen.getByRole('button', {name});
 
+const rowNumbers = () =>
+  Array.from(document.querySelectorAll('tbody th'), cell => cell.textContent);
+
 describe('DataDisplay', () => {
   beforeEach(() => I18n.initI18n());
 
@@ -109,5 +112,26 @@ describe('DataDisplay', () => {
 
     fireEvent.click(button('Table'));
     expect(screen.getByLabelText('Close column analysis')).toBeTruthy();
+  });
+
+  test('sorts by a column and keeps each row its dataset number', () => {
+    renderDisplay();
+    fireEvent.click(button('Sort by legs'));
+
+    expect(button('Sort by legs').closest('th').getAttribute('aria-sort')).toBe(
+      'ascending'
+    );
+    expect(rowNumbers()).toEqual([
+      '3',
+      '6',
+      '9',
+      '1',
+      '4',
+      '7',
+      '2',
+      '5',
+      '8',
+      '10',
+    ]);
   });
 });

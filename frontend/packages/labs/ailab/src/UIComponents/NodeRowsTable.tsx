@@ -7,32 +7,31 @@ import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import type {TableView} from '../useTableView';
 
 import CellText from './CellText';
+import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
-  rowIndices: number[];
+  view: TableView;
+  columns: string[];
   emphasizedColumn?: string;
-  showAllColumns: boolean;
   emptyText: string;
 }
 
 const NodeRowsTable = ({
-  rowIndices,
+  view,
+  columns,
   emphasizedColumn,
-  showAllColumns,
   emptyText,
 }: NodeRowsTableProps) => {
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = showAllColumns
-    ? Object.keys(data[0] ?? {})
-    : [...project.selectedFeatures, project.labelColumn || 'unknown'];
-  const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
+  const shownRows = view.rows.slice(0, DATA_TABLE_ROW_LIMIT);
 
   const isLabel = (column: string) => column === project.labelColumn;
   const isFeature = (column: string) =>
@@ -53,20 +52,23 @@ const NodeRowsTable = ({
                   )}
                   aria-label="Row"
                 />
-                {columns.map(column => (
-                  <th
-                    key={column}
-                    scope="col"
-                    className={classNames(tableStyles.header, {
-                      [tableStyles.headerLabel]: isLabel(column),
-                      [tableStyles.headerFeature]: isFeature(column),
-                    })}
-                  >
-                    <CellText>
-                      {getLocalizedColumnName(datasetId, column)}
-                    </CellText>
-                  </th>
-                ))}
+                {columns.map(column => {
+                  const columnName = getLocalizedColumnName(datasetId, column);
+                  return (
+                    <ColumnHeader
+                      key={column}
+                      column={column}
+                      name={columnName}
+                      view={view}
+                      className={classNames(tableStyles.header, {
+                        [tableStyles.headerLabel]: isLabel(column),
+                        [tableStyles.headerFeature]: isFeature(column),
+                      })}
+                    >
+                      <CellText>{columnName}</CellText>
+                    </ColumnHeader>
+                  );
+                })}
               </tr>
             </thead>
             <tbody>
@@ -93,7 +95,7 @@ const NodeRowsTable = ({
               ))}
             </tbody>
           </table>
-          {rowIndices.length === 0 && (
+          {view.rows.length === 0 && (
             <Typography
               variant="body4"
               component="p"
@@ -104,7 +106,7 @@ const NodeRowsTable = ({
           )}
         </div>
       </div>
-      {rowIndices.length > shownRows.length && (
+      {view.rows.length > shownRows.length && (
         <Typography variant="body4" component="p" className={styles.note}>
           Showing the first {shownRows.length} rows.
         </Typography>
