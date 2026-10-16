@@ -154,7 +154,7 @@ class QuizQuestion < ApplicationRecord
 
   # The `content` fields every subtype has. A blank description is omitted,
   # not stored as null.
-  def self.shared_content(params)
+  def self.shared_content_from_builder_params(params)
     content = {question_title: params[:questionTitle]}
     content[:description] = params[:description] if params[:description].present?
     content

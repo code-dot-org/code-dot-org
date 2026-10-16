@@ -47,7 +47,7 @@ class MultipleSelectQuestion < QuizQuestion
   end
 
   def self.content_from_builder_params(params)
-    shared_content(params).merge(
+    shared_content_from_builder_params(params).merge(
       choices: (params[:choices] || []).map(&:to_h),
       correct_choice_ids: params[:correctChoiceIds] || [],
     )

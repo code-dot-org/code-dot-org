@@ -37,7 +37,7 @@ class FreeResponseQuestion < QuizQuestion
   end
 
   def self.content_from_builder_params(params)
-    shared_content(params)
+    shared_content_from_builder_params(params)
   end
 
   def placeholder_content
