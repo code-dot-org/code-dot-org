@@ -1,0 +1,17 @@
+@import '@cdo/apps/mixins.scss';
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  color: var(--text-neutral-secondary);
+
+  button.thumbsUp {
+    @include icon-button(transparent, var(--background-success-light), var(--text-success-primary), var(--text-success-secondary));
+  }
+
+  button.thumbsDown {
+    @include icon-button(transparent, var(--background-error-light), var(--text-error-primary), var(--text-error-secondary));
+  }
+}

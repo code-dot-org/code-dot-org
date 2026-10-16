@@ -88,10 +88,18 @@
   }
 }
 
-.aiGeneratedLabel {
+.insightFooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 8px;
   padding: 4px 8px;
   border-top: solid 1px var(--borders-neutral-light);
+}
 
+.aiGeneratedLabel {
   i {
     color: var(--text-brand-aqua-primary);
   }
