@@ -7,7 +7,17 @@ export const possibleHeaders = {
   levelBuilderSave: 'levelBuilderSave',
 } as const;
 
+/** The lab's Continue button, as the progress widget draws it in the header. */
+export interface HeaderNavigation {
+  label: string;
+  enabled: boolean;
+  tooltip?: string;
+}
+
 export interface HeaderReduxState {
+  /** The header shows the progress widget, which takes over the lab's Continue button. */
+  progressWidget: boolean;
+  headerNavigation: HeaderNavigation | undefined;
   currentHeader: keyof typeof possibleHeaders | undefined;
   // In general, we should not put functions into redux, but in order to
   // maintain existing functionality we have a function here. When we add
@@ -21,6 +31,8 @@ export interface HeaderReduxState {
 }
 
 const initialState: HeaderReduxState = {
+  progressWidget: false,
+  headerNavigation: undefined,
   currentHeader: undefined,
   getLevelBuilderChanges: undefined,
   overrideHeaderText: undefined,
@@ -65,6 +77,15 @@ const headerSlice = createSlice({
     clearHeader(state) {
       state.currentHeader = undefined;
     },
+    showProgressWidget(state) {
+      state.progressWidget = true;
+    },
+    setHeaderNavigation(state, action: PayloadAction<HeaderNavigation>) {
+      state.headerNavigation = action.payload;
+    },
+    clearHeaderNavigation(state) {
+      state.headerNavigation = undefined;
+    },
   },
 });
 
@@ -74,6 +95,9 @@ export const {
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
   clearHeader,
+  showProgressWidget,
+  setHeaderNavigation,
+  clearHeaderNavigation,
 } = headerSlice.actions;
 
 export default headerSlice.reducer;
