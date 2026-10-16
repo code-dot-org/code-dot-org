@@ -135,6 +135,7 @@ $overlay-float-min-width: 600px;
   height: var(--tree-node-height);
   translate: -50%;
   border-radius: $node-radius;
+  cursor: pointer;
 
   &:focus-visible {
     z-index: 1;

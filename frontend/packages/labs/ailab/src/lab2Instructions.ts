@@ -1,5 +1,4 @@
-import lab2InstructionsJson from '../public/lab2-instructions.json';
-
+import lab2InstructionsJson from './lab2-instructions.json';
 import {INSTRUCTIONS_KEYS, type InstructionsKey} from './types';
 
 export interface Lab2Instructions {

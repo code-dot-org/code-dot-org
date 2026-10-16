@@ -16,8 +16,11 @@ import {
   getPercentCorrect,
 } from '../helpers/accuracy';
 import {logMetric} from '../helpers/metrics';
-import type {RootState} from '../redux';
-import {setPrediction, setAccuracyCheckPredictedLabels} from '../redux';
+import {
+  type RootState,
+  setPrediction,
+  setAccuracyCheckPredictedLabels,
+} from '../redux';
 import type {
   AilabProject,
   HistoricResult,
@@ -25,7 +28,7 @@ import type {
   TrainedModel,
 } from '../types';
 
-import type {Trainer, TrainingRun} from './types';
+import type {Trainer, TrainerOutput} from './types';
 
 export interface OptimalModelDetails<Candidate> {
   model: TrainedModel;
@@ -46,37 +49,76 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract buildModel(
     state: RootState,
-    candidate: Candidate,
+    candidate: Candidate
   ): TrainedModel;
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  startTraining(): TrainingRun | undefined {
-    const state = this.store.getState();
+  /*
+    The inverse of hyperparameters(), so a saved run can be rebuilt exactly.
+    Undefined when the saved values belong to another algorithm.
+  */
+  protected abstract candidateFor(
+    hyperparameters: Hyperparameters
+  ): Candidate | undefined;
 
-    const optimalModel = this.getOptimalModelDetails(state);
+  startTraining(): TrainerOutput | undefined {
+    const optimalModel = this.getOptimalModelDetails(this.store.getState());
 
     if (!optimalModel) {
       return undefined;
     }
 
-    this.store.dispatch(
-      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
-    );
-
+    const run = this.recordModel(optimalModel);
     const trainedState = this.store.getState();
 
-    logMetric('train-model', trainedState, this.project);
+    /*
+      Only a run the student asked for is worth a metric. A pretrained level
+      trains on load.
+    */
+    if (!trainedState.mode?.pretrained) {
+      logMetric('train-model', trainedState, this.project);
+    }
+
+    return run;
+  }
+
+  /*
+    Builds the one model the given hyperparameters describe, or nothing if they
+    describe no model this trainer can build.
+  */
+  rebuild(hyperparameters: Hyperparameters): TrainerOutput | undefined {
+    const state = this.store.getState();
+    const candidate = this.candidateFor(hyperparameters);
+
+    if (candidate === undefined) {
+      return undefined;
+    }
+
+    const model = this.buildModel(state, candidate);
+
+    return this.recordModel({
+      model,
+      predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
+      candidate,
+    });
+  }
+
+  // Stores what grading a model needs, then describes the run it belongs to.
+  private recordModel(details: OptimalModelDetails<Candidate>): TrainerOutput {
+    this.store.dispatch(
+      setAccuracyCheckPredictedLabels(details.predictedLabels)
+    );
 
     return {
-      trainedModel: optimalModel.model,
-      hyperparameters: this.hyperparameters(optimalModel.candidate),
-      historicResult: this.buildHistoricResult(trainedState),
+      trainedModel: details.model,
+      hyperparameters: this.hyperparameters(details.candidate),
+      historicResult: this.buildHistoricResult(this.store.getState()),
     };
   }
 
   getOptimalModelDetails(
-    state: RootState,
+    state: RootState
   ): OptimalModelDetails<Candidate> | undefined {
     const gradeOptions = getGradeOptions(state, this.project);
     let best: OptimalModelDetails<Candidate> | undefined;
@@ -86,12 +128,12 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
       const model = this.buildModel(state, candidate);
       const predictedLabels = this.predictRows(
         model,
-        state.accuracyCheckExamples,
+        state.accuracyCheckExamples
       );
       const {percentCorrect} = gradeAccuracy(
         predictedLabels,
         state.accuracyCheckLabels,
-        gradeOptions,
+        gradeOptions
       );
       const accuracy = parseFloat(percentCorrect);
 
@@ -110,14 +152,14 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   // ml-knn throws on an empty matrix; ml-cart returns no predictions.
   private predictRows(
     model: TrainedModel,
-    rows: number[][],
+    rows: number[][]
   ): (number | string)[] {
     return rows.length > 0 ? model.predict(rows) : [];
   }
 
   batchPredict(
     trainedModel: TrainedModel | undefined,
-    accuracyCheckExamples: number[][],
+    accuracyCheckExamples: number[][]
   ): (number | string)[] {
     if (!trainedModel) {
       return [];
@@ -125,7 +167,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
     const predictedLabels = this.predictRows(
       trainedModel,
-      accuracyCheckExamples,
+      accuracyCheckExamples
     );
     this.store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
     return predictedLabels;

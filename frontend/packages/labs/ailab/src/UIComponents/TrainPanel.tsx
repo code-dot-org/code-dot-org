@@ -1,11 +1,10 @@
 /* Panel for choosing a model's label and features, then training it. */
-import {Button, Typography} from '@mui/material';
-import classNames from 'classnames';
-import type {ChangeEvent} from 'react';
-
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxDropdown';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {Button, Typography} from '@mui/material';
+import classNames from 'classnames';
+import React, {type ChangeEvent} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
@@ -26,6 +25,7 @@ const TrainPanel = () => {
   const datasetId = useAppSelector(state => state.metadata?.name || '');
   const labelIsPreset = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const featuresLocked = useAppSelector(state => !!state.mode?.lockFeatures);
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const selectableColumns = useAppSelector(getSelectableColumns, deepEqual);
   const {
     project,
@@ -147,7 +147,7 @@ const TrainPanel = () => {
             features={selectedFeatures}
             className={styles.sentence}
           />
-          {!hasTrainingResult && (
+          {!hasTrainingResult && !pretrained && (
             <div className={styles.actionRow}>
               <Button
                 variant="contained"

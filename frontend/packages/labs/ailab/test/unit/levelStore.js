@@ -27,16 +27,23 @@ export const ANIMAL_COLUMNS = {
   legs: ColumnTypes.NUMERICAL,
 };
 
-export function levelStore(mode, data = ANIMALS, columns = ANIMAL_COLUMNS) {
-  const store = createStore(rootReducer);
-
+export function seedLevel(
+  store,
+  mode,
+  data = ANIMALS,
+  columns = ANIMAL_COLUMNS
+) {
   store.dispatch(setMode(mode));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type)),
+    store.dispatch(setColumnsByDataType(column, type))
   );
 
   return store;
+}
+
+export function levelStore(...level) {
+  return seedLevel(createStore(rootReducer), ...level);
 }
 
 // The columns a level opens with: every one except the label is a feature.

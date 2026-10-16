@@ -1,5 +1,6 @@
 /* A labeled statistic about a column, such as its type or range. */
 import {Typography} from '@mui/material';
+import React from 'react';
 
 import styles from './statCard.module.scss';
 

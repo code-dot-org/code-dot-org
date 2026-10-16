@@ -1,4 +1,4 @@
-import {
+import React, {
   createContext,
   useCallback,
   useContext,
@@ -21,7 +21,7 @@ import {useResetSignal} from './useResetSignal';
 */
 type TrainingRunOutputs = Pick<
   AilabProject,
-  'hyperparameters' | 'historicResults'
+  'hyperparameters' | 'accuracyCheckRowIndices' | 'historicResults'
 >;
 
 interface ProjectContextValue {
@@ -41,7 +41,7 @@ function sortByColumnOrder(features: string[], data: DataRow[]): string[] {
 }
 
 const ProjectContext = createContext<ProjectContextValue | undefined>(
-  undefined,
+  undefined
 );
 
 interface ProjectProviderProps {
@@ -54,11 +54,13 @@ export const ProjectProvider = ({
   project: openWith,
 }: ProjectProviderProps) => {
   const [project, setProject] = useState<AilabProject>(
-    openWith ?? initialProject,
+    openWith ?? initialProject
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
+  const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
+  const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
 
   useResetSignal(
     useCallback((keepsHistoricResults: boolean) => {
@@ -66,9 +68,9 @@ export const ProjectProvider = ({
       setProject(previous =>
         keepsHistoricResults
           ? {...initialProject, historicResults: previous.historicResults}
-          : initialProject,
+          : initialProject
       );
-    }, []),
+    }, [])
   );
 
   const setLabelColumn = useCallback((labelColumn?: string) => {
@@ -77,37 +79,34 @@ export const ProjectProvider = ({
       labelColumn,
       // A column can't be both the thing predicted and a thing predicted from.
       selectedFeatures: previous.selectedFeatures.filter(
-        feature => feature !== labelColumn,
+        feature => feature !== labelColumn
       ),
     }));
   }, []);
 
-  /*
-    TODO: Filter out the label column from the selected features
-    when adding or setting features.
-  */
   const addSelectedFeature = useCallback(
     (feature: string) => {
       setProject(previous =>
+        feature === previous.labelColumn ||
         previous.selectedFeatures.includes(feature)
           ? previous
           : {
               ...previous,
               selectedFeatures: sortByColumnOrder(
                 [...previous.selectedFeatures, feature],
-                data,
+                data
               ),
-            },
+            }
       );
     },
-    [data],
+    [data]
   );
 
   const removeSelectedFeature = useCallback((feature: string) => {
     setProject(previous => ({
       ...previous,
       selectedFeatures: previous.selectedFeatures.filter(
-        selected => selected !== feature,
+        selected => selected !== feature
       ),
     }));
   }, []);
@@ -116,26 +115,51 @@ export const ProjectProvider = ({
     (features: string[]) => {
       setProject(previous => ({
         ...previous,
-        selectedFeatures: sortByColumnOrder(features, data),
+        selectedFeatures: sortByColumnOrder(
+          features.filter(feature => feature !== previous.labelColumn),
+          data
+        ),
       }));
     },
-    [data],
+    [data]
   );
 
-  // Handle preset columns from the level once the dataset has loaded.
-  // TODO: ensure we don't override user selections with preset columns
-  // if the user has already made choices and the preset columns can be overwritten.
+  /*
+    Handle the preset columns for the project. A locked column always
+    wins, since the student has no way to change it. An unlocked one will
+    never replace a choice already in the project.
+  */
   useEffect(() => {
     if (!presetColumns) {
       return;
     }
-    if (presetColumns.selectedFeatures) {
-      setSelectedFeatures(presetColumns.selectedFeatures);
-    }
-    if (presetColumns.labelColumn !== undefined) {
-      setLabelColumn(presetColumns.labelColumn);
-    }
-  }, [presetColumns, setSelectedFeatures, setLabelColumn]);
+    setProject(previous => {
+      let labelColumn = previous.labelColumn;
+      if (
+        presetColumns.labelColumn !== undefined &&
+        (lockedLabel || previous.labelColumn === undefined)
+      ) {
+        labelColumn = presetColumns.labelColumn;
+      }
+
+      let features = previous.selectedFeatures;
+      if (
+        presetColumns.selectedFeatures &&
+        (lockedFeatures || previous.selectedFeatures.length === 0)
+      ) {
+        features = presetColumns.selectedFeatures;
+      }
+
+      return {
+        ...previous,
+        labelColumn,
+        selectedFeatures: sortByColumnOrder(
+          features.filter(feature => feature !== labelColumn),
+          data
+        ),
+      };
+    });
+  }, [presetColumns, lockedLabel, lockedFeatures, data]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
@@ -144,13 +168,18 @@ export const ProjectProvider = ({
     setProject(previous => ({
       ...previous,
       hyperparameters: run.hyperparameters,
+      accuracyCheckRowIndices: run.accuracyCheckRowIndices,
       historicResults: [run.historicResult, ...previous.historicResults],
     }));
   }, []);
 
   const snapshotTrainingRun = useCallback(() => {
-    const {hyperparameters, historicResults} = project;
-    previousRun.current = {hyperparameters, historicResults};
+    const {hyperparameters, accuracyCheckRowIndices, historicResults} = project;
+    previousRun.current = {
+      hyperparameters,
+      accuracyCheckRowIndices,
+      historicResults,
+    };
   }, [project]);
 
   const restoreTrainingRun = useCallback(() => {
@@ -180,7 +209,7 @@ export const ProjectProvider = ({
       applyTrainingRun,
       snapshotTrainingRun,
       restoreTrainingRun,
-    ],
+    ]
   );
 
   return (

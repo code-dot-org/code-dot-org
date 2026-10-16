@@ -29,6 +29,10 @@ export default class KNNTrainer extends BaseTrainer<number> {
     return {k: kValue};
   }
 
+  protected candidateFor(hyperparameters: Hyperparameters): number | undefined {
+    return 'k' in hyperparameters ? hyperparameters.k : undefined;
+  }
+
   possibleKValues(state: RootState): number[] {
     const datasetSize = state.data.length;
     const smallDatasetSize = 10;
@@ -54,7 +58,7 @@ export default class KNNTrainer extends BaseTrainer<number> {
         kValues.push(defaultRegressionK);
       } else {
         kValues = this.calculatePotentialKValues(state).filter(
-          (kValue: number) => kValue <= state.trainingExamples.length,
+          (kValue: number) => kValue <= state.trainingExamples.length
         );
       }
     } else {
@@ -72,7 +76,7 @@ export default class KNNTrainer extends BaseTrainer<number> {
     const oneThird = Math.round(datasetSize / 3);
     possibleKValues.push(oneThird);
     return possibleKValues.filter(
-      (kValue: number) => kValue <= trainingExamplesSize,
+      (kValue: number) => kValue <= trainingExamplesSize
     );
   }
 }

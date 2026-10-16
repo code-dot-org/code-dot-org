@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q14-2026'
+
+wrong "A player's time"
+right 'The 5 in `n_neighbors=5`'
+wrong "A player's score"
+wrong 'The accuracy the model scores on the test data'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A program creates a classifier with `KNeighborsClassifier(n_neighbors=5)` and trains it on each player's play time and score. Which of these numbers is a hyperparameter?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Hyperparameters
+MARKDOWN

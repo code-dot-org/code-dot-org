@@ -17,6 +17,7 @@ import currentUser, {
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -207,8 +208,56 @@ describe('AIDiffFloatingActionButton', () => {
     expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });
 
+  describe('notification badge', () => {
+    beforeEach(() => experiments.setEnabled('ta-teacher-panel', true));
+    afterEach(() => experiments.setEnabled('ta-teacher-panel', false));
+
+    // The count comes from /notifications; anything with a null readAt is
+    // unread. Other fetchJson callers in this component want the thread list.
+    const givenUnreadNotifications = count => {
+      const unread = Array.from({length: count}, (_, i) => ({
+        id: i,
+        readAt: null,
+      }));
+      HttpClient.fetchJson.mockImplementation(url =>
+        Promise.resolve({
+          value: url === '/notifications' ? unread : defaultThreadListResponse,
+          response: new Response(),
+        })
+      );
+    };
+
+    it('shows the number of unread notifications', async () => {
+      // Without this the drawer auto-opens and the button is not rendered.
+      localStorage.setItem('AiDiffHasOpenedKey', 'true');
+      givenUnreadNotifications(8);
+      renderDefault();
+
+      expect(await screen.findByText('8')).toBeVisible();
+    });
+
+    it('shows nothing where there are no notifications', async () => {
+      localStorage.setItem('AiDiffHasOpenedKey', 'true');
+      givenUnreadNotifications(0);
+      renderDefault();
+
+      await waitFor(() =>
+        expect(
+          screen.getByRole('button', {
+            name: i18n.openOrCloseTeachingAssistant(),
+          })
+        ).toBeVisible()
+      );
+      // The old badge read 'TA' when idle; now it is absent entirely.
+      expect(screen.queryByText('TA')).toBeNull();
+      expect(
+        document.querySelector('.MuiBadge-badge.MuiBadge-invisible')
+      ).not.toBeNull();
+    });
+  });
+
   describe('pulse animation', () => {
-    it('renders pulse animation when hasOpenedDiff is false and window is closed', async () => {
+    it('pulses once the pre-rebrand image has loaded', async () => {
       sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
       renderDefault({});
       await waitFor(() => {
@@ -228,11 +277,23 @@ describe('AIDiffFloatingActionButton', () => {
       });
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
 
-      const fabImage = screen.getByRole('img', {
-        name: 'AI bot - unread notifications',
-      });
-      fireEvent.load(fabImage);
+      fireEvent.load(
+        screen.getByRole('img', {name: 'AI bot - unread notifications'})
+      );
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
+    });
+
+    it('pulses immediately once rebranded, having no image to wait on', async () => {
+      experiments.setEnabled('ta-teacher-panel', true);
+      sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
+      renderDefault({});
+      await waitFor(() => expect(fetchStub).toHaveBeenCalled());
+
+      const fab = screen.getByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      });
+      expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
+      experiments.setEnabled('ta-teacher-panel', false);
     });
 
     it('does not render pulse animation when hasOpenedDiff is true', async () => {
@@ -251,10 +312,6 @@ describe('AIDiffFloatingActionButton', () => {
           }
         );
       });
-      const image = screen.getByRole('img', {
-        name: 'AI bot - unread notifications',
-      });
-      fireEvent.load(image);
       const fab = screen.getByRole('button', {
         name: i18n.openOrCloseTeachingAssistant(),
       });

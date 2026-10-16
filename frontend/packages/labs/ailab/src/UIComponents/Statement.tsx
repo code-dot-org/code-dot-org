@@ -1,6 +1,6 @@
 /* React component to display a statement about our model. */
-import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import React from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
@@ -55,7 +55,7 @@ const Statement = ({
           >
             <div className={styles.deleteCircle} />
             <div className={styles.deleteX}>
-              <FontAwesomeIcon icon={faTimesCircle} />
+              <FontAwesomeV6Icon iconName="circle-xmark" iconStyle="solid" />
             </div>
           </div>
         )}
@@ -65,14 +65,14 @@ const Statement = ({
 
   const selectedFeaturesHTML = (
     selectedFeatures: string[],
-    currentPanel: string,
+    currentPanel: string
   ) => {
     return (
       <span>
         {selectedFeatures.map((selectedFeature, index) => {
           const localizedName = getLocalizedColumnName(
             datasetId!,
-            selectedFeature,
+            selectedFeature
           );
           return (
             <span key={index}>
@@ -89,7 +89,10 @@ const Statement = ({
                   >
                     <div className={styles.deleteCircle} />
                     <div className={styles.deleteX}>
-                      <FontAwesomeIcon icon={faTimesCircle} />
+                      <FontAwesomeV6Icon
+                        iconName="circle-xmark"
+                        iconStyle="solid"
+                      />
                     </div>
                   </div>
                 )}
@@ -159,7 +162,7 @@ const ConnectedStatement = () => {
   const {project, setLabelColumn, removeSelectedFeature} = useProject();
   const {labelColumn, selectedFeatures} = project;
   const datasetId = useAppSelector(
-    state => state.metadata && state.metadata.name,
+    state => state.metadata && state.metadata.name
   );
 
   return (

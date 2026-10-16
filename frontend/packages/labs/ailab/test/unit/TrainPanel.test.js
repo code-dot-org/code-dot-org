@@ -21,7 +21,7 @@ function renderPanel({trained = false, mode = {}} = {}) {
 const trainButton = () => screen.queryByRole('button', {name: 'Train model'});
 const labelOptions = () =>
   Array.from(screen.getByRole('combobox', {name: 'Predict'}).options).map(
-    option => option.value,
+    option => option.value
   );
 const featuresButton = () => screen.getByRole('button', {name: /^Using/});
 
@@ -57,5 +57,12 @@ describe('TrainPanel', () => {
     renderPanel({mode: {lockFeatures: true}});
     expect(featuresButton().disabled).toBe(true);
     expect(labelOptions()).toEqual(['', 'animal']);
+  });
+
+  test('never offers Train model on a pretrained level', () => {
+    renderPanel({
+      mode: {pretrained: true, hideSelectLabel: true, lockFeatures: true},
+    });
+    expect(trainButton()).toBeNull();
   });
 });

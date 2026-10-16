@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {TEST_PANEL_WIDTH} from '../constants';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
@@ -14,7 +16,7 @@ const Results = () => {
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
   const hasTree = useAppSelector(
-    state => !!getDisplayTree(state, project, trainedModel),
+    state => !!getDisplayTree(state, project, trainedModel)
   );
 
   return (

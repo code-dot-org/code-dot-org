@@ -26,12 +26,12 @@ describe('Results', () => {
     renderTrainedResults({trainer: 'decisionTree'});
 
     expect(
-      document.getElementById('uitest-decision-tree').contains(testPanel()),
+      document.getElementById('uitest-decision-tree').contains(testPanel())
     ).toBe(true);
     expect(
       screen
         .getByRole('tree', {name: "Your model's decision tree"})
-        .contains(testPanel()),
+        .contains(testPanel())
     ).toBe(false);
   });
 
