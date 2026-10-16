@@ -5,7 +5,9 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {AichatContext} from '@cdo/apps/aichat/types';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
@@ -111,12 +113,14 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   markComplete,
   updateStepContext,
   saveAnswers,
-  reset,
 }) => {
+  const dispatch = useAppDispatch();
   const [view, setView] = useState<View>(initialView);
   useEffect(() => {
-    if (initialCheckpointId) markStarted(initialCheckpointId);
-  }, [initialCheckpointId, markStarted]);
+    if (!initialCheckpointId) return;
+    markStarted(initialCheckpointId);
+    dispatch(sendStartedReportIfNotStarted('adaptive'));
+  }, [initialCheckpointId, markStarted, dispatch]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
@@ -187,12 +191,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         onFocus={focusId => setView({kind: 'map', focusId})}
         onStart={id => {
           markStarted(id);
+          dispatch(sendStartedReportIfNotStarted('adaptive'));
           setView({kind: 'step', checkpointId: id});
         }}
-        onWorkOnProject={() => setView({kind: 'project'})}
-        onReset={() => {
-          reset();
-          setView({kind: 'map'});
+        onWorkOnProject={() => {
+          dispatch(sendStartedReportIfNotStarted('adaptive'));
+          setView({kind: 'project'});
         }}
       />
     </div>

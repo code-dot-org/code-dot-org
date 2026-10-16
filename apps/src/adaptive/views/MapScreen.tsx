@@ -32,7 +32,6 @@ interface MapScreenProps {
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
   onWorkOnProject: () => void;
-  onReset: () => void;
 }
 
 const MapScreen: React.FunctionComponent<MapScreenProps> = ({
@@ -42,7 +41,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   onFocus,
   onStart,
   onWorkOnProject,
-  onReset,
 }) => {
   const {theme, setTheme} = useTheme();
   // The project manager lives only while the map shows, so it never races a
@@ -118,15 +116,6 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             onChange={e => setTheme(e.target.value as Theme)}
             size="s"
           />
-          <MuiButton
-            variant="outlined"
-            size="small"
-            className={styles.resetButton}
-            onClick={onReset}
-          >
-            <FontAwesomeV6Icon iconName="rotate-right" />
-            &nbsp;Reset progress
-          </MuiButton>
         </div>
       </aside>
     </div>

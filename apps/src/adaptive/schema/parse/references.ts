@@ -214,5 +214,9 @@ function findCheckpointProblems(pathway: Pathway): string[] {
   if (new Set(stepIds).size !== stepIds.length) {
     problems.push(`${where}: step ids must be unique across checkpoints`);
   }
+  // The project screen plays a step of its own under this id.
+  if (stepIds.includes('project')) {
+    problems.push(`${where}: step id 'project' is reserved`);
+  }
   return problems;
 }

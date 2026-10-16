@@ -367,6 +367,14 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it("flags an authored step that takes the project screen's id", () => {
+    const raw = served();
+    raw.checkpoints[2].steps = [panels('project')];
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints: step id 'project' is reserved",
+    ]);
+  });
+
   it('flags duplicate checkpoint and step ids', () => {
     const raw = served();
     raw.checkpoints[2].id = 'basics';

@@ -65,6 +65,24 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_equal 3, placement.position
   end
 
+  test "create makes a multiple select question with its correct choice ids" do
+    post :create, params: {
+      level_id: @quiz.id,
+      type: 'MultipleSelectQuestion',
+      questionName: 'Evens',
+      questionTitle: 'Which of these are even?',
+      choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+      correctChoiceIds: ['a', 'c'],
+      page: 1
+    }
+
+    assert_response :created
+    body = JSON.parse(response.body)
+    assert_equal ['a', 'c'], body['correctChoiceIds']
+    question = MultipleSelectQuestion.find(body['id'])
+    assert_equal ['a', 'c'], question.content['correct_choice_ids']
+  end
+
   test "create returns bad_request when required fields are missing" do
     assert_no_difference 'QuizQuestion.count' do
       post :create, params: {level_id: @quiz.id, type: 'MultipleChoiceQuestion', questionName: '', questionTitle: '', choices: [], correctChoiceId: ''}
