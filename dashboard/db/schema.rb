@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_10_09_170000) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_15_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2621,6 +2621,29 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_09_170000) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["kind"], name: "index_survey_results_on_kind"
     t.index ["user_id"], name: "index_survey_results_on_user_id"
+  end
+
+  create_table "teacher_directory_verification_requests", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "school_id", limit: 12, null: false
+    t.string "school_name", null: false
+    t.string "email", null: false
+    t.string "status", default: "pending_confirmation", null: false
+    t.string "evidence_url", limit: 2048, null: false
+    t.string "evidence_title"
+    t.string "evidence_email", null: false
+    t.string "token_digest", limit: 64
+    t.datetime "token_expires_at"
+    t.datetime "confirmed_at"
+    t.string "ticket_external_id", limit: 36, null: false
+    t.string "zendesk_ticket_id"
+    t.datetime "purge_after", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["purge_after"], name: "idx_teacher_dir_verif_purge"
+    t.index ["ticket_external_id"], name: "idx_teacher_dir_verif_ticket", unique: true
+    t.index ["token_digest"], name: "idx_teacher_dir_verif_token", unique: true
+    t.index ["user_id"], name: "idx_teacher_dir_verif_user", unique: true
   end
 
   create_table "teacher_feedbacks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
