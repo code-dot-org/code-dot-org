@@ -26,10 +26,6 @@ built `FROM` an image containing its own output. cdo-deps compiles its
 bundle here and copies the result onto cdo-base, so the shipped image
 carries no toolchain.
 
-That ordering is also why cdo-build and cdo-dev cannot be merged even though
-their toolchains overlap: cdo-dev stacks *above* the gem layer to inherit
-the warm gem cache, and the builder has to sit below it.
-
 ## Not published
 
 Unlike cdo-base, this image is not pushed to a registry. It is materialized
@@ -64,8 +60,8 @@ file. That warning is cosmetic; the `Good signature` line and the exit status
 are the check.
 
 Node 20 reached EOL on 2026-04-30, so `20.20.2` is terminal. Moving to a
-supported major is a repo-wide change — chef, CI, cdo-dev, the `apps/`
-toolchain — not a bump here.
+supported major is a repo-wide change — chef, CI, the `apps/` toolchain —
+not a bump here.
 
 No yarn version is pinned. corepack reads it from each project's
 `package.json` `packageManager` field at use time, and the smoke test asserts
@@ -100,16 +96,12 @@ bumped by hand.
 cdo-base deliberately omits `BUNDLE_PATH`, `PATH`, and the
 `UID`/`GID`/`SRC`/`USERNAME` exports so that it stays gem-agnostic and
 usable by consumers with their own Gemfile, or none. cdo-build restores
-them, which is what makes it a drop-in for `feat/docker-thin`'s `build`
-stage.
+them for the stages that compile here.
 
-Two notes for that migration:
-
-- The user is `cdo` here, not `code-dot-org`. Anything keyed on the name —
-  helm `values.yaml`, volume ownership — has to move with it.
-- Downstream flavors that carry gems declare `BUNDLE_PATH` and `PATH` again
-  for themselves. The gems are copied out of this image; the environment is
-  not inherited, because those flavors build `FROM` cdo-base.
+cdo-deps declares `BUNDLE_PATH` again for itself; its `PATH` already
+includes `${BUNDLE_PATH}/bin` from the ruby base image. The gems are copied
+out of this image; the environment is not inherited, because cdo-deps builds
+its final stage `FROM` cdo-base. cdo-rails inherits it from cdo-deps.
 
 `${BUNDLE_PATH}/ruby/<abi>` is pre-created and chowned so a consumer can
 mount a BuildKit gem cache under it without root owning the parents. The ABI

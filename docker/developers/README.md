@@ -12,6 +12,9 @@ services, you can follow these instructions.
 
 ### Preparation
 
+Run the `docker compose` commands below from the repo root. The root
+`docker-compose.yml` includes the compose files in this directory.
+
 First, install docker using [the instructions below](#installing-docker). Then follow the
 normal [SETUP.md](../../SETUP.md) instructions for your platform. You can skip over any
 steps that are related to running MySQL and Redis.
@@ -77,6 +80,10 @@ When that service is running, you can log on to its dashboard on port `3001` at
 
 By default, the username is `local-development` and the password is `allstudents`.
 
+The S3 API itself listens on host port 9000: the `minio` service uses host
+networking, and `minio-contained` publishes `9000:9000`. The apps dev server
+(`yarn start` in `apps/`) also listens on port 9000, so the two collide.
+
 Once you are logged in, you can visit the "Object Browser" like so:
 
 ![The Object Browsers button on the left-hand navigation column](./minio.png)
@@ -93,8 +100,7 @@ minio install script via:
 docker compose run minio-install
 ```
 
-This will recreate any missing buckets corresponding to subdirectories found in
-[`docker/developers/utils/s3`](docker/developers/utils/s3).
+This will recreate any missing buckets listed in [`install-s3.sh`](install-s3.sh).
 
 ## Installing Docker
 
