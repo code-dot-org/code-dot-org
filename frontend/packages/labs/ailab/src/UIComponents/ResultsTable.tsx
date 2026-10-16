@@ -62,7 +62,13 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
         </p>
       )}
       <div className={styles.frame}>
-        <div className={styles.scroller}>
+        <div
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can scroll a wide table
+          tabIndex={0}
+          role="group"
+          aria-label="Results"
+          className={styles.scroller}
+        >
           <table className={tableStyles.table}>
             <thead>
               <RowsTableHeader

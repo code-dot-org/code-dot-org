@@ -61,6 +61,10 @@ $data-table-min-visible-rows: 2;
     border: 1px solid var(--border-neutral-primary);
     pointer-events: none;
   }
+
+  &:has(> :focus-visible)::after {
+    border: 2px solid var(--border-brand-primary);
+  }
 }
 
 @mixin data-table-scroller {
