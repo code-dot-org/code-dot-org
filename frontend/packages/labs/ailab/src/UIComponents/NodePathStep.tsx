@@ -10,9 +10,15 @@ interface NodePathStepProps {
   step: ReactNode;
   index: number;
   collapsed: boolean;
+  focusable?: boolean;
 }
 
-const NodePathStep = ({step, index, collapsed}: NodePathStepProps) => (
+const NodePathStep = ({
+  step,
+  index,
+  collapsed,
+  focusable = true,
+}: NodePathStepProps) => (
   <>
     {index > 0 && (
       <FontAwesomeV6Icon
@@ -26,7 +32,7 @@ const NodePathStep = ({step, index, collapsed}: NodePathStepProps) => (
       <Tooltip title={step} placement="bottom">
         <span
           // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can open the tooltip
-          tabIndex={0}
+          tabIndex={focusable ? 0 : undefined}
           className={classNames(styles.stepNumber, styles.collapsedStepNumber)}
         >
           {index + 1}
