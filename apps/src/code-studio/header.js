@@ -108,11 +108,9 @@ header.build = function (
     currentPageNumber
   );
 
-  // Continue moves into the header, which only Lab2 levels support.
   const showProgressWidget =
-    (scriptData.progressWidget ||
-      experiments.isEnabledAllowingQueryString(experiments.PROGRESS_WIDGET)) &&
-    lessonData.levels.every(level => level.uses_lab2);
+    scriptData.progressWidget ||
+    experiments.isEnabledAllowingQueryString(experiments.PROGRESS_WIDGET);
   if (showProgressWidget) {
     getStore().dispatch(showProgressWidgetAction());
   }

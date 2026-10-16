@@ -38,9 +38,10 @@ const mockLevels = [
 ];
 
 const mockCanChangeLevelInPage = jest.fn(() => false);
+const mockGetCurrentLevels = jest.fn((): object[] => mockLevels);
 
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
-  getCurrentLevels: () => mockLevels,
+  getCurrentLevels: () => mockGetCurrentLevels(),
   lessonExtrasUrl: () => '/extras',
 }));
 jest.mock('@cdo/apps/code-studio/browserNavigation', () => ({
@@ -77,14 +78,21 @@ interface ProjectProps {
 function renderHeader({
   headerNavigation,
   project = {},
+  currentPageNumber = -1,
 }: {
   headerNavigation?: HeaderNavigation;
   project?: ProjectProps;
+  currentPageNumber?: number;
 } = {}) {
   const dispatched: AnyAction[] = [];
   const initialState = {
     isRtl: false,
-    progress: {currentLevelId: '3', currentLessonId: 1, isLessonExtras: false},
+    progress: {
+      currentLevelId: '3',
+      currentLessonId: 1,
+      currentPageNumber,
+      isLessonExtras: false,
+    },
     header: {headerNavigation},
     project: {showProjectUpdatedAt: false, ...project},
   };
@@ -116,6 +124,7 @@ describe('ProgressWidgetHeader', () => {
   afterEach(() => {
     jest.clearAllMocks();
     mockCanChangeLevelInPage.mockReturnValue(false);
+    mockGetCurrentLevels.mockReturnValue(mockLevels);
   });
 
   it('names each bubble by number, assessment and status', () => {
@@ -140,6 +149,25 @@ describe('ProgressWidgetHeader', () => {
     const current = screen.getByLabelText('Level 3, in progress');
     expect(current).toHaveAttribute('aria-current', 'step');
     expect(current.tagName).not.toBe('A');
+  });
+
+  it('marks only the current page of a multi-page assessment', () => {
+    const page = (pageNumber: number) => ({
+      id: '9',
+      levelNumber: pageNumber,
+      kind: LevelKind.assessment,
+      isCurrentLevel: true,
+      pageNumber,
+      url: `/l/9/page/${pageNumber}`,
+    });
+    mockGetCurrentLevels.mockReturnValue([page(1), page(2)]);
+    renderHeader({currentPageNumber: 2});
+    expect(
+      screen.getByLabelText('Level 2, assessment, not started')
+    ).toHaveAttribute('aria-current', 'step');
+    expect(
+      screen.getByRole('link', {name: 'Level 1, assessment, not started'})
+    ).toHaveAttribute('href', '/l/9/page/1');
   });
 
   it('leaves bonus levels to the lesson extras flag, keeping the query', () => {

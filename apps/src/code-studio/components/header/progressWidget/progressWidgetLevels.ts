@@ -13,6 +13,7 @@ export interface WidgetLevel {
   kind?: string;
   status?: string;
   levelNumber?: number;
+  pageNumber?: number;
   isConceptLevel?: boolean;
   isCurrentLevel?: boolean;
   isLocked?: boolean;
@@ -58,11 +59,17 @@ export function isAssessment(level: WidgetLevel): boolean {
   return level.kind === LevelKind.assessment;
 }
 
-export function isActive(level: WidgetLevel): boolean {
-  return (
+export function isActive(
+  level: WidgetLevel,
+  currentPageNumber: number
+): boolean {
+  const current =
     !!level.isCurrentLevel ||
-    !!level.sublevels?.some(sublevel => sublevel.isCurrentLevel)
-  );
+    !!level.sublevels?.some(sublevel => sublevel.isCurrentLevel);
+  // Each page of a multi-page assessment is its own bubble for the same level.
+  return current && isAssessment(level)
+    ? currentPageNumber === level.pageNumber
+    : current;
 }
 
 export function bubbleAriaLabel(level: WidgetLevel): string {

@@ -478,10 +478,10 @@ class UnitEditor extends React.Component {
             />
             <HelpTip>
               <p>
-                Lessons whose levels all use Lab2 show the lesson menu, the
-                bubbles and the Continue button in the header. Other lessons
-                keep the progress bubbles. Cannot be combined with simple
-                progress.
+                Every lesson shows the lesson menu and the bubbles in the
+                header. On Lab2 levels the Continue button moves there too;
+                other levels keep their own buttons. Cannot be combined with
+                simple progress.
               </p>
             </HelpTip>
           </label>
