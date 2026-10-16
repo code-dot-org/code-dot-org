@@ -18,57 +18,10 @@ This .md file should only contain information which is specific to Code.org engi
 
 ## Open issues and workarounds:
 
-- Updating English-language strings from .script file doesn't automatically update localized strings ([#82514628](https://www.pivotaltracker.com/story/show/82514628)). Workarounds:
+- Updating English-language strings from .script file doesn't automatically update localized strings. Workarounds:
  1. After updating the description in the .script file, delete the entry for the script in scripts/en.yml, then run rake seed:scripts (or rake seed:all.
  1. Modify the entry in scripts/en.yml directly to update description text (you don't even need to modify the text in the .script file).
-- Renaming a level in LB keeps the old .level file around ([#78597388](https://www.pivotaltracker.com/story/show/78597388)). Workaround: Manually delete the old level after rename.
-
-## Record not found
-
-Did you get an error message like:
-
-````
-ActiveRecord::RecordNotFound: ActiveRecord::RecordNotFound, Level: {"name":"Course 4 Maze 1","stage":"Maze and Bee","concept_ids":null}, Script: course4
-````
-
-If so, one of two things might have happened:
-
-### .seeded file is out of sync
-
-Levelbuilder and staging only reseed scripts when script files have
-changed since the last time rake:seed was run. It keeps track of this
-using the .seeded file, but if a git pull was happening at the same
-time as a rake:seed the date could be wrong.
-
-To fix:
-
-````
-> cd dashboard
-> rm config/scripts/.seeded
-> rake seed:all
-````
-
-### you just pulled .level and .script files that were created by a different levelbuilder
-
-Levelbuilders by default do not read levels from files into the
-database. If you just pulled files from git that were created by a
-different levelbuilder environment, you need to force it to read in
-those new levels or they will be missing:
-
-To fix:
-
-````
-> cd dashboard
-> rake seed:all FORCE_CUSTOM_LEVELS=1
-````
-
-If you also need to rebuild levelbuilder:
-````
-> cd ..
-> touch build-started
-````
-
-(you may have to remove the .seeded file as above also).
+- Renaming a level in LB keeps the old .level file around. Workaround: Manually delete the old level after rename.
 
 ## Merge conflict with `dashboard/config/locales/dsls/en.yml`
 
