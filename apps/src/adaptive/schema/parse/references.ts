@@ -222,17 +222,21 @@ function findCheckpointProblems(pathway: Pathway): string[] {
  * Detects and returns any problems with evidence fields: a question's
  * `measures` must name a known skill, take the graded form exactly when the
  * question has a correct choice, list only real choice ids, and name only
- * levels the skill describes in `evidenceLevels`; a checkpoint's
- * `targetEvidenceLevels` must name only skills in its `skillIds`, at levels
- * they describe; and `skippable` needs `skillIds`.
+ * evidence levels the skill describes in `evidenceLevels`; a checkpoint's
+ * `targetEvidenceLevels` must name only skills in its `skillIds`, at evidence
+ * levels they describe; and `skippable` needs `skillIds`.
  */
 function findEvidenceProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
-  const checkLevel = (where: string, skillId: string, level: number) => {
+  const checkEvidenceLevel = (
+    where: string,
+    skillId: string,
+    evidenceLevel: number
+  ) => {
     const described = pathway.skills[skillId]?.evidenceLevels;
-    if (level > 0 && described && !(level in described)) {
+    if (evidenceLevel > 0 && described && !(evidenceLevel in described)) {
       problems.push(
-        `${where}: skill '${skillId}' describes no evidence level ${level}`
+        `${where}: skill '${skillId}' describes no evidence level ${evidenceLevel}`
       );
     }
   };
@@ -242,7 +246,7 @@ function findEvidenceProblems(pathway: Pathway): string[] {
     if (checkpoint.skippable && !checkpoint.skillIds?.length) {
       problems.push(`${where}: skippable needs skillIds`);
     }
-    for (const [skillId, level] of Object.entries(
+    for (const [skillId, evidenceLevel] of Object.entries(
       checkpoint.targetEvidenceLevels || {}
     )) {
       if (!checkpoint.skillIds?.includes(skillId)) {
@@ -250,7 +254,11 @@ function findEvidenceProblems(pathway: Pathway): string[] {
           `${where}.targetEvidenceLevels: '${skillId}' is not in skillIds`
         );
       } else if (pathway.skills[skillId]) {
-        checkLevel(`${where}.targetEvidenceLevels.${skillId}`, skillId, level);
+        checkEvidenceLevel(
+          `${where}.targetEvidenceLevels.${skillId}`,
+          skillId,
+          evidenceLevel
+        );
       }
     }
 
@@ -272,7 +280,7 @@ function findEvidenceProblems(pathway: Pathway): string[] {
               `${where}: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`
             );
           }
-          checkLevel(where, measures.skillId, measures.evidenceLevel);
+          checkEvidenceLevel(where, measures.skillId, measures.evidenceLevel);
           return;
         }
         if (graded) {
@@ -281,13 +289,17 @@ function findEvidenceProblems(pathway: Pathway): string[] {
           );
         }
         const choiceIds = new Set(question.choices.map(c => c.id));
-        for (const [choiceId, level] of Object.entries(
+        for (const [choiceId, evidenceLevel] of Object.entries(
           measures.evidenceLevels
         )) {
           if (!choiceIds.has(choiceId)) {
             problems.push(`${where}: '${choiceId}' is not one of its choices`);
           }
-          checkLevel(`${where}.${choiceId}`, measures.skillId, level);
+          checkEvidenceLevel(
+            `${where}.${choiceId}`,
+            measures.skillId,
+            evidenceLevel
+          );
         }
       });
     }

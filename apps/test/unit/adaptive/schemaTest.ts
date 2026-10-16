@@ -496,7 +496,7 @@ describe('findReferenceProblems', () => {
 });
 
 describe('evidence fields', () => {
-  // A survey question beside the fixture's graded one, and levels on both skills.
+  // A survey question beside the fixture's graded one, and evidence levels on both skills.
   const withEvidence = (): Raw => {
     const raw = served();
     raw.skills.prompting.evidenceLevels = {
@@ -538,11 +538,11 @@ describe('evidence fields', () => {
   };
   const where = 'checkpoints.intro.steps.quiz.questions';
 
-  it('accepts a graded level, survey levels by choice, and a skippable target', () => {
+  it('accepts a graded evidence level, survey evidence levels by choice, and a skippable target', () => {
     expect(problemsOf(withEvidence())).toEqual([]);
   });
 
-  it('rejects a level of 0 where a level is a claim', () => {
+  it('rejects evidence level 0 where an evidence level is a claim', () => {
     const raw = withEvidence();
     Object.assign(questionOf(raw), {
       measures: {skillId: 'prompting', evidenceLevel: 0},
@@ -563,7 +563,7 @@ describe('evidence fields', () => {
     ]);
   });
 
-  it('flags one level on a survey question and levels by choice on a graded one', () => {
+  it('flags one evidence level on a survey question and evidence levels by choice on a graded one', () => {
     const raw = withEvidence();
     Object.assign(questionOf(raw), {
       measures: {skillId: 'prompting', evidenceLevels: {a: 1}},
@@ -587,7 +587,7 @@ describe('evidence fields', () => {
     ]);
   });
 
-  it('flags levels the skill does not describe', () => {
+  it('flags evidence levels the skill does not describe', () => {
     const raw = withEvidence();
     Object.assign(questionOf(raw), {
       measures: {skillId: 'prompting', evidenceLevel: 4},
@@ -613,7 +613,7 @@ describe('evidence fields', () => {
     expect(problemsOf(raw)).toHaveLength(2);
   });
 
-  it('does not bound levels for a skill with no described evidence levels', () => {
+  it('does not bound evidence levels for a skill with no described evidence levels', () => {
     const raw = withEvidence();
     delete raw.skills.prompting.evidenceLevels;
     Object.assign(questionOf(raw), {

@@ -8,8 +8,8 @@ import {subsetOf} from './subsetOf';
 /**
  * What a question's answer says about one skill. A graded question, one with
  * `correctChoiceId`, measures `evidenceLevel` when answered correctly and
- * nothing otherwise; a survey question measures the level listed for the
- * chosen choice. Level 0 is no evidence.
+ * nothing otherwise; a survey question measures the evidence level listed
+ * for the chosen choice. Evidence level 0 is no evidence.
  */
 export const measuresSchema = z.union([
   z.strictObject({
@@ -18,7 +18,10 @@ export const measuresSchema = z.union([
   }),
   z.strictObject({
     skillId: z.string().min(1),
-    /** Evidence level by choice id. A choice left out measures nothing. */
+    /**
+     * The evidence level each choice shows, by choice id. A choice left out
+     * measures nothing.
+     */
     evidenceLevels: z.record(z.string().min(1), z.number().int().min(0)),
   }),
 ]);

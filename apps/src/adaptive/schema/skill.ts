@@ -11,9 +11,9 @@ export const skillSourceSchema = z.strictObject({
   title: z.string().min(1),
   description: z.string().min(1),
   /**
-   * What a student at each evidence level can do, by level. Level 0 is no
-   * evidence. When present, checkpoints and questions may only name levels
-   * described here, besides 0.
+   * What a student at each evidence level can do, keyed by evidence level.
+   * Evidence level 0 is no evidence. When present, checkpoints and questions
+   * may only name evidence levels described here, besides 0.
    */
   evidenceLevels: z
     .record(z.string().regex(/^(0|[1-9]\d*)$/), z.string().min(1))
