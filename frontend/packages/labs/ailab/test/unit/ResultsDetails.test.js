@@ -76,6 +76,12 @@ describe('ResultsDetails', () => {
     expect(headerRows()).toEqual([['', 'legs', 'animal', 'AI predicts']]);
   });
 
+  test('puts the results table in the tab order', () => {
+    renderScorecard();
+
+    expect(screen.getByRole('group', {name: 'Results'}).tabIndex).toBe(0);
+  });
+
   test('shows the rows the model got right, then the rows it missed', () => {
     renderScorecard();
 

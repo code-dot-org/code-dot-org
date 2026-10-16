@@ -10,6 +10,7 @@ import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
 
 import CellText from './CellText';
+import DataTableFrame from './DataTableFrame';
 import RowsTableHeader from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
@@ -61,65 +62,57 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
           Predictions are +/- {REGRESSION_ERROR_TOLERANCE}% of range
         </p>
       )}
-      <div className={styles.frame}>
-        <div
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can scroll a wide table
-          tabIndex={0}
-          role="group"
-          aria-label="Results"
-          className={styles.scroller}
-        >
-          <table className={tableStyles.table}>
-            <thead>
-              <RowsTableHeader
-                columns={[...columns, labelColumn]}
-                showPrediction
-              />
-            </thead>
-            <tbody>
-              {results.examples.map((example, index) => {
-                const row = results.rowIndices[index];
-                return (
-                  <tr key={index} className={tableStyles.row}>
-                    <th scope="row" className={tableStyles.indexCell}>
-                      <CellText>{row === undefined ? '' : row + 1}</CellText>
-                    </th>
-                    {columns.map(column => (
-                      <td
-                        key={column}
-                        className={
-                          selectedFeatures.includes(column)
-                            ? featureCell
-                            : tableStyles.bodyCell
-                        }
-                      >
-                        <CellText>{columnValue(example, row, column)}</CellText>
-                      </td>
-                    ))}
-                    <td className={labelCell}>
-                      <CellText>{cellValue(results.labels[index])}</CellText>
+      <DataTableFrame label="Results">
+        <table className={tableStyles.table}>
+          <thead>
+            <RowsTableHeader
+              columns={[...columns, labelColumn]}
+              showPrediction
+            />
+          </thead>
+          <tbody>
+            {results.examples.map((example, index) => {
+              const row = results.rowIndices[index];
+              return (
+                <tr key={index} className={tableStyles.row}>
+                  <th scope="row" className={tableStyles.indexCell}>
+                    <CellText>{row === undefined ? '' : row + 1}</CellText>
+                  </th>
+                  {columns.map(column => (
+                    <td
+                      key={column}
+                      className={
+                        selectedFeatures.includes(column)
+                          ? featureCell
+                          : tableStyles.bodyCell
+                      }
+                    >
+                      <CellText>{columnValue(example, row, column)}</CellText>
                     </td>
-                    <td className={labelCell}>
-                      <CellText>
-                        {cellValue(results.predictedLabels[index])}
-                      </CellText>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          {results.examples.length === 0 && (
-            <Typography
-              variant="body4"
-              component="p"
-              className={styles.emptyNote}
-            >
-              No rows matched this filter
-            </Typography>
-          )}
-        </div>
-      </div>
+                  ))}
+                  <td className={labelCell}>
+                    <CellText>{cellValue(results.labels[index])}</CellText>
+                  </td>
+                  <td className={labelCell}>
+                    <CellText>
+                      {cellValue(results.predictedLabels[index])}
+                    </CellText>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {results.examples.length === 0 && (
+          <Typography
+            variant="body4"
+            component="p"
+            className={styles.emptyNote}
+          >
+            No rows matched this filter
+          </Typography>
+        )}
+      </DataTableFrame>
     </>
   );
 };

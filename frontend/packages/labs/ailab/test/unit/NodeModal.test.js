@@ -128,8 +128,8 @@ describe('NodeModal', () => {
   it('puts the rows table in the tab order, named by its description', () => {
     fireEvent.click(root());
 
-    const tables = within(dialog()).getAllByRole('table');
-    const scroller = tables[tables.length - 1].parentElement;
+    const panel = dialog().querySelector("[role='tabpanel']:not([hidden])");
+    const scroller = panel.querySelector('[role="group"]');
     expect(scroller.tabIndex).toBe(0);
     expect(
       document.getElementById(scroller.getAttribute('aria-labelledby'))
