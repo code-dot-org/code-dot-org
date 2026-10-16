@@ -45,6 +45,70 @@ describe('ChatEventLogger', () => {
     expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);
   });
 
+  it('logs an event against the context supplied with it', async () => {
+    postLogChatEventSpy = jest
+      .spyOn(aichatApi, 'postLogChatEvent')
+      .mockResolvedValue(userChatMessage);
+    const originatingContext: AichatContext = {
+      ...aichatContext,
+      currentLevelId: 456,
+      channelId: 'other-channel',
+    };
+
+    chatEventLogger.logChatEvent(userChatMessage, originatingContext);
+
+    // The supplied context wins over the one the context manager currently
+    // holds, so a response that arrives after a level change is still filed
+    // under the level it was requested on.
+    expect(postLogChatEventSpy).toHaveBeenCalledWith(
+      userChatMessage,
+      originatingContext
+    );
+  });
+
+  it('resolves the current context per event rather than once per drain', async () => {
+    let resolveFirstSend = () => {};
+    postLogChatEventSpy = jest
+      .spyOn(aichatApi, 'postLogChatEvent')
+      .mockImplementationOnce(
+        () =>
+          new Promise(resolve => {
+            resolveFirstSend = () => resolve(userChatMessage);
+          })
+      )
+      .mockResolvedValue(userChatMessage);
+
+    chatEventLogger.logChatEvent(userChatMessage);
+    // Queued behind the first send, which has not resolved yet.
+    chatEventLogger.logChatEvent(userChatMessage);
+    expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);
+
+    // The user moves to another level while the first send is in flight.
+    const nextContext: AichatContext = {
+      ...aichatContext,
+      currentLevelId: 456,
+      channelId: 'next-channel',
+    };
+    AichatContextManager.setContext(nextContext);
+
+    resolveFirstSend();
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    expect(postLogChatEventSpy).toHaveBeenCalledTimes(2);
+    // The event dequeued before the change keeps the old context; the one
+    // dequeued after it picks up the new one.
+    expect(postLogChatEventSpy).toHaveBeenNthCalledWith(
+      1,
+      userChatMessage,
+      aichatContext
+    );
+    expect(postLogChatEventSpy).toHaveBeenNthCalledWith(
+      2,
+      userChatMessage,
+      nextContext
+    );
+  });
+
   it('logChatEvent waits to send second chat event when sending in process - postLogChatEvent eventually called twice', async () => {
     postLogChatEventSpy = jest
       .spyOn(aichatApi, 'postLogChatEvent')
