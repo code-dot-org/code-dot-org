@@ -7,7 +7,9 @@ import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/Navigat
 import {isFreeplayMode, LevelMode} from '../levelMode';
 import {SpriteLab2LevelProperties} from '../types';
 
+import ObjectivesList from './components/ObjectivesList';
 import {showTtsFor} from './showTts';
+import {ObjectivesState} from './useObjectives';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -42,34 +44,35 @@ function settledSize(
 
 interface GenerateSpriteLabProps {
   levelMode?: LevelMode;
+  /** Shown when the level declares no objectives. */
   instructions?: string;
-  /** Shown in place of the instructions while collapsed. */
-  collapsedText?: string;
   /** Fixed width in px; the default is the Guide's normal share. */
   width?: number;
   /** The size the panel is settling to, whenever it changes, for siblings
       that lay out around it. */
   onLayout?: (size: {width: number; height: number}) => void;
-  /** Offer the Continue button: the guide reached a step that marks the
-      level's task complete. */
-  showContinue?: boolean;
   /** For the Continue button's progression handling. */
   levelProperties: SpriteLab2LevelProperties;
+  /** The level's objectives: its text, its checklist, and the Continue
+      gate. */
+  objectives?: ObjectivesState;
 }
 
 /**
- * The Lab2 Guide overlay, modeled on Music Lab's: the level's staged
- * instructions, and the Continue button once a step says the task is done.
+ * The Lab2 Guide overlay, modeled on Music Lab's: the level's objectives,
+ * and the Continue button once every one holds.
  */
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   levelMode,
   instructions,
-  collapsedText,
   width,
   onLayout,
-  showContinue,
   levelProperties,
+  objectives,
 }) => {
+  const checklist = objectives?.active ? objectives : undefined;
+  const offerContinue = !!checklist?.allDone;
+  const collapsedText = checklist?.collapsedText;
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
 
@@ -81,7 +84,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     if (panel && onLayout) {
       onLayout(settledSize(panel, moduleStyles.guideAnimator));
     }
-  }, [onLayout, width, collapsed, instructions, collapsedText, showContinue]);
+  }, [onLayout, width, collapsed, instructions, checklist]);
   useEffect(() => {
     const panel = panelRef.current;
     if (!panel || !onLayout) {
@@ -109,12 +112,20 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   }, []);
 
   const showTts = showTtsFor(levelProperties);
-  const instructionsBlock = instructions && (
-    <MainInstructionsContent
-      instructionsText={instructions}
-      markdownClassName={moduleStyles.guideInstructions}
+  const instructionsBlock = checklist ? (
+    <ObjectivesList
+      title={checklist.title}
+      items={checklist.items}
       showTts={showTts}
     />
+  ) : (
+    instructions && (
+      <MainInstructionsContent
+        instructionsText={instructions}
+        markdownClassName={moduleStyles.guideInstructions}
+        showTts={showTts}
+      />
+    )
   );
 
   // Freeplay's guide sits over a full lab; the guided levels need theirs open.
@@ -143,7 +154,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
                 </p>
               )
             : instructionsBlock || 'Build a program, then press Run.'}
-          {showContinue && (
+          {offerContinue && (
             <div className={moduleStyles.guideContinue}>
               <NavigationArea
                 levelProperties={levelProperties}

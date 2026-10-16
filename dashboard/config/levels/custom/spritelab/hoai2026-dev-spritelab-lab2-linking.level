@@ -27,18 +27,26 @@
     "image_role_defaults": {
       "sprite": "friend"
     },
-    "guide_steps": [
-      {
-        "text": "**Link your scenes.** The **at [9] seconds** event is ready. Drag **go to scene** onto the dotted outline under it. Click **Play** and wait for it."
-      },
-      {
-        "text": "**Your scenes are connected!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Link your scenes.**",
+      "items": [
+        {
+          "text": "Drag **go to scene** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_goToScene",
+            "data": "at-9"
+          }
+        },
+        {
+          "text": "Click **Play** and wait for the jump.",
+          "check": {
+            "kind": "scene",
+            "id": "platform-scene"
+          }
         }
-      }
-    ],
+      ]
+    },
     "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

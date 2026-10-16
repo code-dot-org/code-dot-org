@@ -28,18 +28,9 @@
       "imageUi": "explore",
       "sentence": "place-detail"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a background for your game.** Pick the words for a place and click **Generate**, or draw your own."
-      },
-      {
-        "text": "**That sets the mood!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "backgroundImages": 1
-        }
-      }
-    ],
+    "objectives": {
+      "title": "**Make a background for your game.** Pick the words for a place and click **Generate**, or draw your own."
+    },
     "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**, or draw your own.",
     "header_label": "Make a platformer"
   }

@@ -171,6 +171,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // ({touching: image names, height: 0 floor to 1 top}) each frame a
+    // player exists.
+    this.onPlayerProgress = null;
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
@@ -1230,6 +1233,37 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Both the requested and the resolved positions are known here, so this
     // is where the observer is fed.
     this.observePlayer_(players, walls, view);
+    this.reportPlayerProgress_(players, view);
+  }
+
+  reportPlayerProgress_(players, view) {
+    if (!this.onPlayerProgress || !players.length) {
+      return;
+    }
+    const player = players[0].sprite;
+    const half = sprite => ({
+      w: (sprite.width * sprite.scale) / 2,
+      h: (sprite.height * sprite.scale) / 2,
+    });
+    const p = half(player);
+    const touching = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+        return;
+      }
+      const s = half(sprite);
+      if (
+        Math.abs(sprite.position.x - player.position.x) < p.w + s.w &&
+        Math.abs(sprite.position.y - player.position.y) < p.h + s.h
+      ) {
+        touching.push(sprite.getAnimationLabel());
+      }
+    });
+    const feet = player.position.y + p.h;
+    this.onPlayerProgress({
+      touching,
+      height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
+    });
   }
 
   /** The audio's observer of the player, or null. */
