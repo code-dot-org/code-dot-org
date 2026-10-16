@@ -616,6 +616,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :adaptive_pathways, only: [:show, :update], constraints: {id: /[a-z0-9][a-z0-9_-]{0,63}/}
+
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
       resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
         resources :jit_pl_exemplars, only: [:create, :update, :destroy]
