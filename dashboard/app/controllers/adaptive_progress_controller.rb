@@ -64,7 +64,7 @@ class AdaptiveProgressController < ApplicationController
     row = step_row(step)
     row.update!(generated_instructions: instructions)
 
-    render json: step_json(step, row)
+    render json: row_json(row)
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
@@ -108,12 +108,6 @@ class AdaptiveProgressController < ApplicationController
     levels = @level.step_levels
     user_levels = UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: levels.values.map(&:id)).index_by(&:level_id)
     levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
-  end
-
-  private def step_json(step, row)
-    entry = row_json(row) || {}
-    return entry unless step['kind'] == 'level'
-    entry.merge(level_step_progress[step['id']] || {})
   end
 
   # A row's progress and generated instructions, or nil when it has neither.

@@ -190,6 +190,8 @@ export function useProgress(
   const stepContextMap = useMemo(() => {
     const map: {[stepId: string]: StepContext} = {};
     for (const [id, entry] of Object.entries(progress?.steps ?? {})) {
+      // An entry here changes on every progress update, which reruns generation.
+      if (!entry.answers && !entry.generatedInstructions) continue;
       map[id] = {
         answers: entry.answers,
         generated: entry.generatedInstructions,

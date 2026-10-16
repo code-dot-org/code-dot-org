@@ -198,6 +198,7 @@ describe('useProgress', () => {
       timeSpent: 2,
     });
     expect(reportLevelStep).not.toHaveBeenCalled();
+    expect(result.current.stepContextMap.read).toBeUndefined();
   });
 
   it("reports level steps on their level and never the project screen's", async () => {
