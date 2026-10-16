@@ -18,7 +18,7 @@ function startTraining({replay = false} = {}) {
   store.dispatch(replay ? replayTraining() : setTrainingModalStep('training'));
   const {trainingData, project: projectValue} = renderWithProviders(
     createElement(TrainingModal),
-    {store, project, trainingRun},
+    {store, project, trainingRun}
   );
   return {store, trainingData, project: projectValue};
 }

@@ -3,7 +3,7 @@ import type {PlacedTreeNode} from './displayTreeLayout';
 export function getNodeForKey(
   nodes: PlacedTreeNode[],
   from: PlacedTreeNode,
-  key: string,
+  key: string
 ): PlacedTreeNode | undefined {
   // layoutDisplayTree places nodes in preorder, which is the tree's reading order.
   const index = nodes.indexOf(from);

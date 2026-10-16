@@ -120,4 +120,17 @@ describe('MultiChoiceQuestionContainer', () => {
     expect(screen.getByRole('radio', {name: /8.*Incorrect/})).toBeChecked();
     expect(screen.getAllByText('Incorrect')).toHaveLength(1);
   });
+
+  it('disables every option when disabled', () => {
+    render(
+      <MultiChoiceQuestionContainer
+        question={QUESTION}
+        selectedChoiceId="a"
+        onSelectChoice={jest.fn()}
+        disabled
+      />
+    );
+
+    screen.getAllByRole('radio').forEach(radio => expect(radio).toBeDisabled());
+  });
 });

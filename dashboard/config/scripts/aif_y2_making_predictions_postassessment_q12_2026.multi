@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q12-2026'
+
+wrong 'The pH split, because its two impurities are closer together'
+wrong 'The pH split, because higher impurity means the groups are more different'
+wrong 'The chlorine split, because 0.32 is the largest single impurity'
+right 'The chlorine split, because its groups are purer'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A decision tree splits water samples by chlorine or by pH. Splitting by chlorine leads to groups with impurities of 0.32 and 0.10, while splitting by pH leads to groups with impurities of 0.48 and 0.45. Which split should the tree use, and why?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Evaluating Decision Trees
+MARKDOWN

@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-10-15T07:23:30.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check Your Understanding",
-    "long_instructions": "Twitter found that its cropping algorithm favored some people over others. Imagine your team wants to keep automatic cropping but make it fairer.\r\n\r\n1. Pick one part to change: the training data, the rules the algorithm follows, or the design of the feature.\r\n2. Describe your change and the source of bias it addresses.\r\n3. Describe how you would retest it. What photos would you use, and what result would show it is fairer?\r\n\r\nOptional sentence frame: \r\n>I would change the ______ (training data, rules, or design of the feature) by ______. This would make the app fairer because ______.\r\n> \r\n>To retest it, I would use ______ photos, including ______. I would know it is fairer if ______.",
+    "long_instructions": "1. In your own words, explain the difference between a problem and an algorithm.\r\n2. What does sequencing mean, and why does the order of the steps matter in an algorithm?\r\n\r\nOptional sentence frame:\r\n>A problem is ______. An algorithm is ______.\r\n>\r\n>Sequencing means ______. The order of the steps matters because ______.",
     "stay_on_level_after_submit": "false",
     "height": "300",
     "allow_user_uploads": "false",
@@ -18,9 +19,10 @@
     "skip_dialog": true,
     "skip_sound": true,
     "name_suffix": "_2026",
-    "teacher_markdown": "- **Push for specificity.**  \r\n  If students write something vague like \"make the algorithm better,\" prompt them to name the exact part they would change (e.g., add more photos of people with different skin tones to the training data, change what the algorithm treats as important, let users preview and adjust the crop).\r\n\r\n- **Require connection to a source of bias.**  \r\n  Make sure students explain which source of bias their change addresses (e.g., unrepresentative training data, a rule that favors certain features), not just what they would change.\r\n\r\n- **Check that the retest includes the people affected.**  \r\n  If students say they would \"test it on more photos,\" redirect them to describe which photos and why. Ask: \"Would your test include the people the algorithm treated unfairly, and enough of them to see a pattern?\"\r\n\r\n- **Look for a measurable result.**  \r\n  Ask: \"What result would convince you the new version is fairer?\" Strong responses name something they could check, such as people from different groups being kept in the crop about equally often, not just \"it would look better.\""
+    "teacher_markdown": "- **Look for a problem described as a general task.**\r\n  A strong response says a problem is a general description of a task, such as \"draw this trail,\" without listing steps.\r\n\r\n- **Look for an algorithm described as specific steps.**\r\n  A strong response says an algorithm is a finite set of instructions that solves the task, and that many different algorithms can solve the same problem.\r\n\r\n- **Push on why order matters.**\r\n  If students only write \"sequencing is putting steps in order,\" ask: \"What would change if you swapped two steps?\" Strong responses give an example, such as moving forward and then turning right drawing a different trail than turning right and then moving forward.\r\n\r\n- **Watch for mixed-up terms.**\r\n  If students describe a problem as a list of steps, or an algorithm as a goal, ask: \"Which one tells what to do, and which one tells how to do it?\""
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-15T07:23:30.442+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson15_cfu3_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson15_cfu3_dev_27_28\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-15T07:23:30.442+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson15_cfu3_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson15_cfu3_dev_27_28\"},{\"changed_at\":\"2026-10-15 07:41:40 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

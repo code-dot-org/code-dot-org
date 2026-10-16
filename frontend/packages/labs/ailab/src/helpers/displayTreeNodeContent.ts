@@ -1,7 +1,13 @@
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import {getLocalizedColumnName} from './columnDetails';
-import {formatNumber, type DisplayTreeNode} from './displayTree';
+import {
+  formatNumber,
+  THRESHOLD_SIGNS,
+  thresholdValue,
+  type DisplayTreeBranch,
+  type DisplayTreeNode,
+} from './displayTree';
 import {TREE_NODE_MAX_WIDTH} from './displayTreeLayout';
 import type {
   DisplayTreeCountsLookup,
@@ -23,14 +29,37 @@ export type Grade = (typeof GRADES)[number];
 
 export function displayNodeLabel(
   node: DisplayTreeNode,
-  datasetId: string,
+  datasetId: string
 ): string {
-  if (node.type === 'question') {
-    return `${getLocalizedColumnName(datasetId, node.column)}?`;
-  }
-  return typeof node.prediction === 'number'
-    ? formatNumber(node.prediction)
-    : String(getLocalizedValue(node.prediction, datasetId));
+  return node.type === 'question'
+    ? `${getLocalizedColumnName(datasetId, node.column)}?`
+    : displayValue(node.prediction, datasetId);
+}
+
+export function displayValue(
+  value: string | number,
+  datasetId: string
+): string {
+  return typeof value === 'number'
+    ? formatNumber(value)
+    : String(getLocalizedValue(value, datasetId));
+}
+
+const orList = new Intl.ListFormat('en', {type: 'disjunction'});
+
+export function branchLabel(
+  branch: DisplayTreeBranch,
+  datasetId: string
+): {sign?: string; text: string} {
+  return branch.kind === 'values'
+    ? {
+        text: orList.format(
+          branch.values.map(value =>
+            String(getLocalizedValue(value, datasetId))
+          )
+        ),
+      }
+    : {sign: THRESHOLD_SIGNS[branch.kind], text: thresholdValue(branch)};
 }
 
 export function rowCountText(counts: DisplayTreeNodeCounts): string {
@@ -40,7 +69,7 @@ export function rowCountText(counts: DisplayTreeNodeCounts): string {
 
 export function shownGrades(
   node: DisplayTreeNode,
-  counts: DisplayTreeNodeCounts,
+  counts: DisplayTreeNodeCounts
 ): Grade[] {
   return node.type === 'answer'
     ? GRADES.filter(grade => counts[grade] > 0)
@@ -50,10 +79,10 @@ export function shownGrades(
 function textMeasurer(): (
   variant: 'body3' | 'body4',
   weight: number,
-  text: string,
+  text: string
 ) => number {
   const rootFontSize = parseFloat(
-    getComputedStyle(document.documentElement).fontSize,
+    getComputedStyle(document.documentElement).fontSize
   );
   const context = document.createElement('canvas').getContext('2d')!;
   return (variant, weight, text) => {
@@ -66,13 +95,13 @@ function textMeasurer(): (
 
 export function nodeWidthMeasurer(
   datasetId: string,
-  counts: DisplayTreeCountsLookup,
+  counts: DisplayTreeCountsLookup
 ): (node: DisplayTreeNode, id: string) => number {
   const textWidth = textMeasurer();
 
   const countsWidth = (
     node: DisplayTreeNode,
-    nodeCounts: DisplayTreeNodeCounts,
+    nodeCounts: DisplayTreeNodeCounts
   ): number => {
     const shown = shownGrades(node, nodeCounts);
     if (shown.length === 0) {
@@ -84,7 +113,7 @@ export function nodeWidthMeasurer(
         GRADE_ICON_SIZE +
         GRADE_ICON_GAP +
         textWidth('body4', 600, String(nodeCounts[grade])),
-      COUNTS_GAP * (shown.length - 1),
+      COUNTS_GAP * (shown.length - 1)
     );
   };
 
@@ -98,7 +127,7 @@ export function nodeWidthMeasurer(
       countsWidth(node, nodeCounts);
     return Math.min(
       TREE_NODE_MAX_WIDTH,
-      Math.ceil(contentWidth + 2 * (NODE_PADDING_INLINE + PATH_NODE_BORDER)),
+      Math.ceil(contentWidth + 2 * (NODE_PADDING_INLINE + PATH_NODE_BORDER))
     );
   };
 }

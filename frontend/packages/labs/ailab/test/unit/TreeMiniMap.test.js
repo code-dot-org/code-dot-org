@@ -29,18 +29,18 @@ describe('TreeMiniMap', () => {
         datasetId: 'unknown',
         counts: () => NO_ROWS,
         onReplay: () => {},
-      }),
+      })
     );
     const rects = [...document.getElementsByTagName('rect')];
     const answers = rects.filter(rect =>
-      rect.classList.contains(moduleStyles.answer),
+      rect.classList.contains(moduleStyles.answer)
     );
 
     expect(
-      rects.filter(rect => rect.classList.contains(moduleStyles.question)),
+      rects.filter(rect => rect.classList.contains(moduleStyles.question))
     ).toHaveLength(2);
     expect(
-      answers.map(rect => rect.style.getPropertyValue('--leaf-color')),
+      answers.map(rect => rect.style.getPropertyValue('--leaf-color'))
     ).toEqual([0, 1, 2].map(index => leafColorStyle(index)['--leaf-color']));
   });
 });

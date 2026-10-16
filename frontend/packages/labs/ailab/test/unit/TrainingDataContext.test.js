@@ -24,8 +24,8 @@ function renderContext() {
     createElement(
       Provider,
       {store},
-      createElement(TrainingDataProvider, null, createElement(Probe)),
-    ),
+      createElement(TrainingDataProvider, null, createElement(Probe))
+    )
   );
 
   return {store, trainingData: () => trainingData};

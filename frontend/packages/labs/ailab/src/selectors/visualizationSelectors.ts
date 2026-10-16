@@ -1,6 +1,6 @@
 import {createSelector} from 'reselect';
 
-import {ColumnTypes} from '../constants';
+import {ColumnTypes, ResultsGrades} from '../constants';
 import {getAccuracyGrades} from '../helpers/accuracy';
 import {
   getUniqueOptions,
@@ -13,11 +13,15 @@ import {
 } from '../helpers/displayTree';
 import {
   countDisplayTreeRows,
+  groupDisplayTreeRows,
+  NO_NODE_ROWS,
   NO_ROWS,
   traceDisplayTree,
   type DisplayTreeCountsLookup,
+  type DisplayTreeRowsLookup,
   type DisplayTreeTrace,
 } from '../helpers/displayTreeTrace';
+import {splitRowIndices} from '../helpers/trainingSplit';
 import {areArraysEqual} from '../helpers/utils';
 import type {RootState} from '../redux';
 import {
@@ -59,7 +63,7 @@ export const getScatterPlotData = createSelector(
     currentColumn: string | undefined,
     currentColumnIsNumerical: boolean,
     data: DataRow[],
-    datasetId: string | undefined,
+    datasetId: string | undefined
   ): ScatterPlotData | null => {
     if (!labelColumn || !currentColumn) {
       return null;
@@ -90,7 +94,7 @@ export const getScatterPlotData = createSelector(
       feature,
       coordinates,
     };
-  },
+  }
 );
 
 /* Returns an object with information for the CrossTab UI.
@@ -146,7 +150,7 @@ export const getCrossTabData = createSelector(
     currentColumnIsCategorical: boolean,
     data: DataRow[],
     uniqueOptionsLabelColumn: string[],
-    datasetId: string | undefined,
+    datasetId: string | undefined
   ): CrossTabData | null => {
     if (!labelColumn || !currentColumn) {
       return null;
@@ -197,7 +201,7 @@ export const getCrossTabData = createSelector(
       result.labelPercents = {};
       for (const key of Object.keys(result.labelCounts)) {
         result.labelPercents[key] = Math.round(
-          (result.labelCounts[key] / totalCount) * 100,
+          (result.labelCounts[key] / totalCount) * 100
         );
       }
     }
@@ -208,11 +212,11 @@ export const getCrossTabData = createSelector(
 
     const localizedLabelColumn = getLocalizedColumnName(
       datasetId ?? '',
-      labelColumn,
+      labelColumn
     );
     const localizedCurrentColumn = getLocalizedColumnName(
       datasetId ?? '',
-      currentColumn,
+      currentColumn
     );
     return {
       results,
@@ -220,34 +224,34 @@ export const getCrossTabData = createSelector(
       featureNames: [localizedCurrentColumn],
       labelName: localizedLabelColumn,
     };
-  },
+  }
 );
 
 export const labelColumnIsNumerical = createSelector(
   [getLabelColumn, getColumnsByDataType],
   (
     labelColumn: string | undefined,
-    columnsByDataType: Record<string, string>,
+    columnsByDataType: Record<string, string>
   ): boolean => {
     return columnsByDataType[labelColumn!] === ColumnTypes.NUMERICAL;
-  },
+  }
 );
 
 export const labelColumnIsCategorical = createSelector(
   [getLabelColumn, getColumnsByDataType],
   (
     labelColumn: string | undefined,
-    columnsByDataType: Record<string, string>,
+    columnsByDataType: Record<string, string>
   ): boolean => {
     return columnsByDataType[labelColumn!] === ColumnTypes.CATEGORICAL;
-  },
+  }
 );
 
 export const getUniqueOptionsLabelColumn = createSelector(
   [getLabelColumn, getData],
   (labelColumn: string | undefined, data: DataRow[]): string[] => {
     return getUniqueOptions(data, labelColumn!).map(String).sort();
-  },
+  }
 );
 
 export const getDisplayTree = createSelector(
@@ -264,7 +268,7 @@ export const getDisplayTree = createSelector(
     trainerFamily,
     features: string[],
     featureNumberKey: Record<string, Record<string, number>>,
-    labelColumn: string | undefined,
+    labelColumn: string | undefined
   ): DisplayTreeNode | undefined => {
     if (!trainedModel || !labelColumn || trainerFamily !== 'decisionTree') {
       return undefined;
@@ -274,7 +278,7 @@ export const getDisplayTree = createSelector(
       featureNumberKey,
       labelColumn,
     });
-  },
+  }
 );
 
 export const getPredictionTrace = createSelector(
@@ -291,20 +295,20 @@ export const getPredictionTrace = createSelector(
     trainedModel,
     prediction: number | string | undefined,
     inputs: number[],
-    testData: DataRow,
+    testData: DataRow
   ): DisplayTreeTrace | undefined => {
     if (!tree || !trainedModel || prediction === undefined) {
       return undefined;
     }
     const {root} = trainedModel.toJSON() as SerializedTree;
     return traceDisplayTree(tree, root!, inputs, testData);
-  },
+  }
 );
 
 export function getPredictionStep(
   state: RootState,
   project: AilabProject,
-  trainedModel?: TrainedModel,
+  trainedModel?: TrainedModel
 ): number {
   const pathLength =
     getPredictionTrace(state, project, trainedModel)?.path.length ?? 0;
@@ -323,7 +327,7 @@ export const getDisplayTreeCounts = createSelector(
     tree: DisplayTreeNode | undefined,
     trainedModel,
     examples: number[][],
-    grades: string[],
+    grades: string[]
   ): DisplayTreeCountsLookup => {
     if (!tree) {
       return () => NO_ROWS;
@@ -331,5 +335,52 @@ export const getDisplayTreeCounts = createSelector(
     const {root} = trainedModel!.toJSON() as SerializedTree;
     const counts = countDisplayTreeRows(tree, root!, examples, grades);
     return nodeId => counts.get(nodeId) ?? NO_ROWS;
-  },
+  }
+);
+
+export const getDisplayTreeRows = createSelector(
+  [
+    getDisplayTree,
+    (_state: RootState, _project: AilabProject, trainedModel?: TrainedModel) =>
+      trainedModel,
+    (_state: RootState, project: AilabProject) =>
+      project.accuracyCheckRowIndices,
+    (state: RootState) => state.data.length,
+    (state: RootState) => state.trainingExamples,
+    (state: RootState) => state.accuracyCheckExamples,
+    getAccuracyGrades,
+  ],
+  (
+    tree: DisplayTreeNode | undefined,
+    trainedModel,
+    accuracyCheckRowIndices: number[] | undefined,
+    rowCount: number,
+    trainingExamples: number[][],
+    accuracyCheckExamples: number[][],
+    grades: string[]
+  ): DisplayTreeRowsLookup => {
+    if (!tree || !accuracyCheckRowIndices) {
+      return () => NO_NODE_ROWS;
+    }
+    const {accuracyCheck: accuracyCheckRows, trained: trainedRows} =
+      splitRowIndices(rowCount, accuracyCheckRowIndices);
+    const {root} = trainedModel!.toJSON() as SerializedTree;
+    const accuracyCheckGroups = groupDisplayTreeRows(
+      tree,
+      root!,
+      accuracyCheckExamples
+    );
+    const trainedGroups = groupDisplayTreeRows(tree, root!, trainingExamples);
+    const accuracyCheckRowsWithGrade = (nodeId: string, grade: string) =>
+      (accuracyCheckGroups.get(nodeId) ?? [])
+        .filter(index => grades[index] === grade)
+        .map(index => accuracyCheckRows[index]);
+    return nodeId => ({
+      correct: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.CORRECT),
+      incorrect: accuracyCheckRowsWithGrade(nodeId, ResultsGrades.INCORRECT),
+      trained: (trainedGroups.get(nodeId) ?? []).map(
+        index => trainedRows[index]
+      ),
+    });
+  }
 );

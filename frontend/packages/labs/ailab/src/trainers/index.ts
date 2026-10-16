@@ -15,10 +15,10 @@ const trainersByFamily: Record<TrainerFamily, TrainerConstructor> = {
 
 export function buildTrainer(
   store: Store<RootState>,
-  project: AilabProject,
+  project: AilabProject
 ): Trainer {
   return new trainersByFamily[getTrainerFamily(store.getState())](
     store,
-    project,
+    project
   );
 }

@@ -14,7 +14,7 @@ export function convertValueForDisplay(
   state: RootState,
   project: AilabProject,
   value: string | number,
-  column: string,
+  column: string
 ): string | number {
   const convertedValue =
     getSelectedCategoricalColumns(state, project).includes(column) &&
@@ -29,10 +29,10 @@ export function convertValueForTraining(
   state: RootState,
   project: AilabProject,
   value: string | number,
-  column: string,
+  column: string
 ): number {
   const convertedValue = getSelectedCategoricalColumns(state, project).includes(
-    column,
+    column
   )
     ? state.featureNumberKey[column][String(value)]
     : parseFloat(String(value));
@@ -41,29 +41,29 @@ export function convertValueForTraining(
 
 export function getConvertedPredictedLabel(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): string | number {
   return convertValueForDisplay(
     state,
     project,
     state.prediction as string | number,
-    project.labelColumn!,
+    project.labelColumn!
   );
 }
 
 export function getConvertedLabels(
   state: RootState,
   project: AilabProject,
-  rawLabels: (number | string)[] = [],
+  rawLabels: (number | string)[] = []
 ): (string | number)[] {
   return rawLabels.map(label =>
-    convertValueForDisplay(state, project, label, project.labelColumn!),
+    convertValueForDisplay(state, project, label, project.labelColumn!)
   );
 }
 
 export function getConvertedAccuracyCheckExamples(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): (string | number)[][] {
   const convertedAccuracyCheckExamples: (string | number)[][] = [];
   let example: number[];
@@ -75,8 +75,8 @@ export function getConvertedAccuracyCheckExamples(
           state,
           project,
           example[i],
-          project.selectedFeatures[i],
-        ),
+          project.selectedFeatures[i]
+        )
       );
     }
     convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);

@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-15T17:27:07.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "TEST",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "true",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026",
+    "teacher_markdown": "- **Push for specificity.**  \r\n  If students write something vague like \"make the algorithm better,\" prompt them to name the exact part they would change (e.g., add more photos of people with different skin tones to the training data, change what the algorithm treats as important, let users preview and adjust the crop).\r\n\r\n- **Require connection to a source of bias.**  \r\n  Make sure students explain which source of bias their change addresses (e.g., unrepresentative training data, a rule that favors certain features), not just what they would change.\r\n\r\n- **Check that the retest includes the people affected.**  \r\n  If students say they would \"test it on more photos,\" redirect them to describe which photos and why. Ask: \"Would your test include the people the algorithm treated unfairly, and enough of them to see a pattern?\"\r\n\r\n- **Look for a measurable result.**  \r\n  Ask: \"What result would convince you the new version is fairer?\" Strong responses name something they could check, such as people from different groups being kept in the crop about equally often, not just \"it would look better.\""
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-15T17:27:07.664+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson15_cfu3_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson15_cfu3_dev_27_28\"},{\"changed_at\":\"2026-10-15 17:27:35 +0000\",\"changed\":[\"long_instructions\",\"allow_user_uploads\",\"allow_multiple_attempts\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

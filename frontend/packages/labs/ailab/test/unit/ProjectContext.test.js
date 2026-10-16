@@ -39,8 +39,8 @@ function renderContext(openWith, seedStore) {
     createElement(
       Provider,
       {store},
-      createElement(ProjectProvider, {project: openWith}, createElement(Probe)),
-    ),
+      createElement(ProjectProvider, {project: openWith}, createElement(Probe))
+    )
   );
 
   return {store, project: () => context.project, context: () => context};
@@ -256,7 +256,7 @@ describe('ProjectContext column choices', () => {
 
     act(() => {
       store.dispatch(
-        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']}),
+        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']})
       );
     });
 

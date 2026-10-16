@@ -16,8 +16,11 @@ import {
   getPercentCorrect,
 } from '../helpers/accuracy';
 import {logMetric} from '../helpers/metrics';
-import type {RootState} from '../redux';
-import {setPrediction, setAccuracyCheckPredictedLabels} from '../redux';
+import {
+  type RootState,
+  setPrediction,
+  setAccuracyCheckPredictedLabels,
+} from '../redux';
 import type {
   AilabProject,
   HistoricResult,
@@ -46,7 +49,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract buildModel(
     state: RootState,
-    candidate: Candidate,
+    candidate: Candidate
   ): TrainedModel;
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
@@ -56,7 +59,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     Undefined when the saved values belong to another algorithm.
   */
   protected abstract candidateFor(
-    hyperparameters: Hyperparameters,
+    hyperparameters: Hyperparameters
   ): Candidate | undefined;
 
   startTraining(): TrainerOutput | undefined {
@@ -104,7 +107,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   // Stores what grading a model needs, then describes the run it belongs to.
   private recordModel(details: OptimalModelDetails<Candidate>): TrainerOutput {
     this.store.dispatch(
-      setAccuracyCheckPredictedLabels(details.predictedLabels),
+      setAccuracyCheckPredictedLabels(details.predictedLabels)
     );
 
     return {
@@ -115,7 +118,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   }
 
   getOptimalModelDetails(
-    state: RootState,
+    state: RootState
   ): OptimalModelDetails<Candidate> | undefined {
     const gradeOptions = getGradeOptions(state, this.project);
     let best: OptimalModelDetails<Candidate> | undefined;
@@ -125,12 +128,12 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
       const model = this.buildModel(state, candidate);
       const predictedLabels = this.predictRows(
         model,
-        state.accuracyCheckExamples,
+        state.accuracyCheckExamples
       );
       const {percentCorrect} = gradeAccuracy(
         predictedLabels,
         state.accuracyCheckLabels,
-        gradeOptions,
+        gradeOptions
       );
       const accuracy = parseFloat(percentCorrect);
 
@@ -149,14 +152,14 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
   // ml-knn throws on an empty matrix; ml-cart returns no predictions.
   private predictRows(
     model: TrainedModel,
-    rows: number[][],
+    rows: number[][]
   ): (number | string)[] {
     return rows.length > 0 ? model.predict(rows) : [];
   }
 
   batchPredict(
     trainedModel: TrainedModel | undefined,
-    accuracyCheckExamples: number[][],
+    accuracyCheckExamples: number[][]
   ): (number | string)[] {
     if (!trainedModel) {
       return [];
@@ -164,7 +167,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
     const predictedLabels = this.predictRows(
       trainedModel,
-      accuracyCheckExamples,
+      accuracyCheckExamples
     );
     this.store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
     return predictedLabels;
