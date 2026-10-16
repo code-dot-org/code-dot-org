@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Exploring IoT Devices
 
-In Lesson 10, your students start an activity by comparing devices that work on their own with devices that connect to the Internet. Try the comparison yourself before you teach it.
+In Lesson 10, students start an activity by comparing devices that work on their own with devices that connect to the Internet. Try the comparison yourself before you teach it.
 
 <div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
 <p>📖 <strong>Internet of Things (IoT)</strong>: a network of smart devices that connect and share data over the Internet</p>
