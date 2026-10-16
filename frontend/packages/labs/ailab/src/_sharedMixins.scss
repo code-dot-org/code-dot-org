@@ -42,36 +42,6 @@
 }
 
 $data-table-row-height: 28px;
-$data-table-visible-rows: 10;
-$data-table-min-visible-rows: 2;
-
-@mixin data-table-frame {
-  position: relative;
-  display: flex;
-  flex: 0 1 ($data-table-visible-rows + 1) * $data-table-row-height;
-  flex-direction: column;
-  min-height: ($data-table-min-visible-rows + 1) * $data-table-row-height;
-
-  // The border. A border on the frame itself would sit under the sticky headers.
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    border: 1px solid var(--border-neutral-primary);
-    pointer-events: none;
-  }
-
-  &:has(> :focus-visible)::after {
-    border: 2px solid var(--border-brand-primary);
-  }
-}
-
-@mixin data-table-scroller {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-}
 
 @mixin data-table-empty-note {
   margin: 0;
