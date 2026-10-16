@@ -32,7 +32,6 @@ type View =
 interface PathwayAppProps {
   pathway: Pathway;
   progressKey: ProgressKey;
-  userId?: number | null;
 }
 
 /**
@@ -62,7 +61,6 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
 const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
-  userId,
 }) => {
   const dispatch = useAppDispatch();
   const reportLevelStep = useCallback(
@@ -71,7 +69,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     [dispatch]
   );
   const {progress, statusMap, ...actions} = useProgress(pathway, progressKey, {
-    userId,
     reportLevelStep,
   });
   if (!progress) {

@@ -7,10 +7,7 @@ import {
   getStatusMap,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
-import {
-  GeneratedInstructions,
-  ProgressStore,
-} from '@cdo/apps/adaptive/progress/progressStore';
+import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -91,6 +88,16 @@ describe('checkpointStatus', () => {
       'complete'
     );
   });
+
+  it('is not started by a step that holds only generated instructions', () => {
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+    const progress = {
+      steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
+    };
+    expect(checkpointStatus(pathway.checkpoints[0], pathway, progress)).toBe(
+      'available'
+    );
+  });
 });
 
 describe('getStatusMap', () => {
@@ -120,7 +127,6 @@ describe('useProgress', () => {
   } as unknown as Step;
   const read = panels('read');
   const hookPathway = {
-    id: 'p',
     checkpoints: [
       checkpoint('intro', undefined, [read, sandbox]),
       checkpoint('basics', ['intro'], [quiz]),
@@ -132,27 +138,17 @@ describe('useProgress', () => {
     const store = {
       load: jest.fn().mockResolvedValue(loaded),
       saveStep: jest.fn().mockResolvedValue(undefined),
+      saveInstructions: jest.fn().mockResolvedValue(undefined),
     };
     return store as typeof store & ProgressStore;
   };
 
-  const fakeGeneratedStore = (loaded?: GeneratedInstructions) => ({
-    load: jest.fn().mockResolvedValue(loaded),
-    save: jest.fn().mockResolvedValue(undefined),
-  });
-
   const renderProgress = async (
     store: ProgressStore,
-    reportLevelStep = jest.fn().mockResolvedValue(undefined),
-    generatedStore = fakeGeneratedStore()
+    reportLevelStep = jest.fn().mockResolvedValue(undefined)
   ) => {
     const hook = renderHook(() =>
-      useProgress(hookPathway, key, {
-        store,
-        generatedStore,
-        userId: 7,
-        reportLevelStep,
-      })
+      useProgress(hookPathway, key, {store, reportLevelStep})
     );
     await hook.waitForNextUpdate();
     return {...hook, reportLevelStep};
@@ -202,6 +198,7 @@ describe('useProgress', () => {
       timeSpent: 2,
     });
     expect(reportLevelStep).not.toHaveBeenCalled();
+    expect(result.current.stepContextMap.read).toBeUndefined();
   });
 
   it("reports level steps on their level and never the project screen's", async () => {
@@ -261,36 +258,27 @@ describe('useProgress', () => {
     });
   });
 
-  it('saves generated instructions locally, not to the server', async () => {
+  it('saves generated instructions with the step without starting it', async () => {
     const store = fakeStore();
-    const generatedStore = fakeGeneratedStore();
-    const {result} = await renderProgress(store, undefined, generatedStore);
+    const {result} = await renderProgress(store);
     const generated = {instructions: 'Hi', inputsHash: 'ab'};
 
     act(() => result.current.saveGeneratedInstructions('try', generated));
 
-    expect(result.current.stepContextMap).toEqual({try: {generated}});
-    expect(generatedStore.save).toHaveBeenLastCalledWith(
-      {userId: 7, ...key, pathwayId: 'p'},
-      {try: generated}
-    );
-    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(result.current.stepContextMap.try.generated).toEqual(generated);
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveInstructions).toHaveBeenCalledWith(key, 'try', generated);
   });
 
-  it('merges locally saved instructions with server answers', async () => {
-    const generated = {instructions: 'Hi', inputsHash: 'ab'};
-    const answers = {1: [{answerId: 'a', isCorrect: true}]};
+  it('restores loaded generated instructions', async () => {
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
     const store = fakeStore({
-      steps: {quiz: {status: 'started', timeSpent: 0, answers}},
+      steps: {project: {timeSpent: 0, generatedInstructions}},
     });
-    const {result} = await renderProgress(
-      store,
-      undefined,
-      fakeGeneratedStore({quiz: generated})
-    );
+    const {result} = await renderProgress(store);
 
-    expect(result.current.stepContextMap).toEqual({
-      quiz: {answers, generated},
-    });
+    expect(result.current.stepContextMap.project.generated).toEqual(
+      generatedInstructions
+    );
   });
 });

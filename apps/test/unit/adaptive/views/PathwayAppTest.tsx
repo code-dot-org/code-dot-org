@@ -43,10 +43,7 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
   serverProgressStore: {
     load: () => mockLoad(),
     saveStep: jest.fn(),
-  },
-  localGeneratedInstructionsStore: {
-    load: () => Promise.resolve(undefined),
-    save: () => Promise.resolve(),
+    saveInstructions: jest.fn(),
   },
 }));
 
