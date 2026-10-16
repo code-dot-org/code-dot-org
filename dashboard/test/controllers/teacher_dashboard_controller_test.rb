@@ -101,6 +101,22 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     assert_equal false, JSON.parse(response.body)['enabled']
   end
 
+  test 'get_drawer_data: reports showDiversitySurvey true when the user is eligible' do
+    sign_in @section_owner
+    @controller.expects(:show_diversity_survey?).with(SurveyResult::DIVERSITY_2026).returns(true)
+    get :get_drawer_data
+    assert_response :success
+    assert_equal true, JSON.parse(response.body)['showDiversitySurvey']
+  end
+
+  test 'get_drawer_data: reports showDiversitySurvey false when the user is ineligible' do
+    sign_in @section_owner
+    @controller.expects(:show_diversity_survey?).with(SurveyResult::DIVERSITY_2026).returns(false)
+    get :get_drawer_data
+    assert_response :success
+    assert_equal false, JSON.parse(response.body)['showDiversitySurvey']
+  end
+
   # The roster-provider payload includes classlink only when the DCDO flag is
   # enabled and the user holds a v2 auth option.
   # Visibility only — the rostering endpoints are not gated by the flag and

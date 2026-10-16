@@ -15,4 +15,9 @@ class SurveyResultTest < ActiveSupport::TestCase
         SurveyResult::NON_FREE_RESPONSE_ATTRS.include?(attr)
     end
   end
+
+  test 'Diversity2026 is a valid kind' do
+    assert_equal 'Diversity2026', SurveyResult::DIVERSITY_2026
+    assert SurveyResult.new(kind: SurveyResult::DIVERSITY_2026).valid?
+  end
 end
