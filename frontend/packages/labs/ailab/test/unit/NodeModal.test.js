@@ -116,6 +116,27 @@ describe('NodeModal', () => {
     expect(document.activeElement).toBe(root());
   });
 
+  it('takes focus into the dialog when opened below the root', () => {
+    act(() => answer('snake').focus());
+    fireEvent.keyDown(answer('snake'), {key: 'Enter'});
+
+    expect(document.activeElement).toBe(
+      dialog().querySelector('[role="tab"][aria-selected="true"]')
+    );
+  });
+
+  it('puts the rows table in the tab order, named by its description', () => {
+    fireEvent.click(root());
+
+    const panel = dialog().querySelector("[role='tabpanel']:not([hidden])");
+    const scroller = panel.querySelector('[role="group"]');
+    expect(scroller.tabIndex).toBe(0);
+    expect(
+      document.getElementById(scroller.getAttribute('aria-labelledby'))
+        .textContent
+    ).toBe('These are the rows AI tested on that reached this step.');
+  });
+
   it('lists the rows tested on that reach the node, then the rows trained on', () => {
     fireEvent.click(root());
 

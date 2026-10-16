@@ -115,7 +115,13 @@ const NodePath = ({path, nodeLabel, datasetId}: NodePathProps) => {
         {[false, true].map(collapsed =>
           steps.map((step, index) => (
             <li key={`${collapsed}-${path[index].id}`} className={styles.step}>
-              <NodePathStep step={step} index={index} collapsed={collapsed} />
+              {/* Dialog focus traps take the first [tabindex] match, even a hidden one. */}
+              <NodePathStep
+                step={step}
+                index={index}
+                collapsed={collapsed}
+                focusable={false}
+              />
             </li>
           ))
         )}

@@ -1,13 +1,5 @@
 @use '../sharedMixins' as mixins;
 
-.frame {
-  @include mixins.data-table-frame;
-}
-
-.scroller {
-  @include mixins.data-table-scroller;
-}
-
 .emphasized {
   font-weight: 600;
 }
