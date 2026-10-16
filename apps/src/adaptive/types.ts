@@ -4,6 +4,7 @@ import {LevelProperties} from '../lab2/types';
 
 import {
   checkpointSchema,
+  freeResponseQuestionSchema,
   levelStepSchema,
   multipleChoiceDiagnosticQuestionSchema,
   panelsStepSchema,
@@ -25,6 +26,7 @@ export type Question = z.infer<typeof questionSchema>;
 export type MultipleChoiceDiagnosticQuestion = z.infer<
   typeof multipleChoiceDiagnosticQuestionSchema
 >;
+export type FreeResponseQuestion = z.infer<typeof freeResponseQuestionSchema>;
 
 /** What a student has said about their project, as every adaptive surface reads it. */
 export interface PathwayProjectInfo {

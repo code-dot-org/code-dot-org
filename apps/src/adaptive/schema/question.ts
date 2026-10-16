@@ -28,26 +28,17 @@ export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
   })
 );
 
+export const freeResponseQuestionSchema = z.strictObject({
+  id: z.number().int().positive(),
+  type: z.literal('freeResponse'),
+  text: z.string().min(1),
+  placeholder: z.string().optional(),
+});
+
 /** One of a questions step's questions. */
 export const questionSchema = z.discriminatedUnion('type', [
   multipleChoiceDiagnosticQuestionSchema,
-  z.strictObject({
-    id: z.string().min(1),
-    type: z.literal('freeResponse'),
-    text: z.string().min(1),
-    placeholder: z.string().optional(),
-  }),
-  z.strictObject({
-    id: z.string().min(1),
-    type: z.literal('scale'),
-    text: z.string().min(1),
-    scale: z.strictObject({
-      min: z.number().int(),
-      max: z.number().int(),
-      minLabel: z.string().optional(),
-      maxLabel: z.string().optional(),
-    }),
-  }),
+  freeResponseQuestionSchema,
 ]);
 
 /** A questions step, played one question at a time in order. */
