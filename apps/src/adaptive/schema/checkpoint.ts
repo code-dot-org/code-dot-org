@@ -28,6 +28,12 @@ export const checkpointSourceSchema = z.strictObject({
    * past it. Needs `skillIds`.
    */
   skippable: z.boolean().optional(),
+  /**
+   * Whether completing this checkpoint runs the router over the evidence so
+   * far. Routing needs some evidence; with none, completion returns to the
+   * map as usual.
+   */
+  routeAfterCompletion: z.boolean().optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 
