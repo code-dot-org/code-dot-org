@@ -1,11 +1,5 @@
 @use '../sharedMixins' as mixins;
 
-.scroller {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-}
-
 .rangeNote {
   margin: 0 0 8px;
   font-size: 12px;
@@ -13,6 +7,6 @@
   color: var(--text-neutral-secondary);
 }
 
-.table .columnHeader {
-  top: mixins.$data-table-row-height;
+.emptyNote {
+  @include mixins.data-table-empty-note;
 }

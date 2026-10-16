@@ -1,11 +1,11 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip, Typography} from '@mui/material';
-import React, {type ReactNode, useMemo} from 'react';
+import {Typography} from '@mui/material';
+import React, {type ReactNode, useId, useMemo} from 'react';
 
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {useTableView} from '../useTableView';
 
+import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
 
 import styles from './rowsPanel.module.scss';
@@ -21,6 +21,7 @@ export interface RowsPanelProps {
   onToggleColumns: () => void;
   emptyText?: string;
   resultsToggle?: ReactNode;
+  prediction?: string | number;
 }
 
 const RowsPanel = ({
@@ -31,16 +32,21 @@ const RowsPanel = ({
   onToggleColumns,
   emptyText = 'No rows reached this step',
   resultsToggle,
+  prediction,
 }: RowsPanelProps) => {
+  const descriptionId = useId();
   const {project} = useProject();
-  const {selectedFeatures, labelColumn} = project;
+  const {selectedFeatures} = project;
+  const labelColumn = project.labelColumn || 'unknown';
   const data = useAppSelector(state => state.data);
   const columnTypes = useAppSelector(state => state.columnsByDataType);
   const columns = useMemo(
-    () =>
-      showAllColumns
-        ? Object.keys(data[0] ?? {})
-        : [...selectedFeatures, labelColumn || 'unknown'],
+    () => [
+      ...(showAllColumns
+        ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
+        : selectedFeatures),
+      labelColumn,
+    ],
     [showAllColumns, data, selectedFeatures, labelColumn]
   );
   const tableView = useTableView({
@@ -49,14 +55,16 @@ const RowsPanel = ({
     columnTypes,
     rows: rowIndices,
   });
-  const columnsLabel = showAllColumns
-    ? 'Show only features and label'
-    : 'Show all columns';
 
   return (
     <div className={styles.panel}>
       <div className={styles.header}>
-        <Typography variant="body3" component="p" className={styles.text}>
+        <Typography
+          id={descriptionId}
+          variant="body3"
+          component="p"
+          className={styles.text}
+        >
           {description}
         </Typography>
         <div className={styles.actions}>
@@ -70,28 +78,20 @@ const RowsPanel = ({
           )}
           <div className={styles.actionGroup}>
             {resultsToggle}
-            <Tooltip title={columnsLabel}>
-              <IconButton
-                aria-label={columnsLabel}
-                onClick={onToggleColumns}
-                size="extraSmall"
-                color="tertiary"
-                variant="outlined"
-              >
-                <FontAwesomeV6Icon
-                  iconName="arrows-left-right-to-line"
-                  aria-hidden="true"
-                />
-              </IconButton>
-            </Tooltip>
+            <ColumnsButton
+              showAllColumns={showAllColumns}
+              onToggle={onToggleColumns}
+            />
           </div>
         </div>
       </div>
       <NodeRowsTable
+        labelId={descriptionId}
         view={tableView}
         columns={columns}
         emphasizedColumn={emphasizedColumn}
         emptyText={emptyText}
+        prediction={prediction}
       />
     </div>
   );

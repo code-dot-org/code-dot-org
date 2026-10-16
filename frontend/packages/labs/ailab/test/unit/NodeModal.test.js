@@ -2,11 +2,11 @@ import {act, fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
-import {setTestData} from '../../src/redux';
+import {setImportedData, setTestData} from '../../src/redux';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 
-import {levelProject, levelStore} from './levelStore';
+import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
@@ -63,10 +63,19 @@ function cellTexts(row) {
   return Array.from(row.querySelectorAll('th, td'), cell => cell.textContent);
 }
 
-function shownRows() {
+function rowgroups() {
   const tables = within(dialog()).getAllByRole('table');
-  const [, body] = within(tables[tables.length - 1]).getAllByRole('rowgroup');
+  return within(tables[tables.length - 1]).getAllByRole('rowgroup');
+}
+
+function shownRows() {
+  const [, body] = rowgroups();
   return within(body).getAllByRole('row').map(cellTexts);
+}
+
+function shownHeaders() {
+  const [head] = rowgroups();
+  return within(head).getAllByRole('row').map(cellTexts);
 }
 
 function pathSteps() {
@@ -107,6 +116,27 @@ describe('NodeModal', () => {
     expect(document.activeElement).toBe(root());
   });
 
+  it('takes focus into the dialog when opened below the root', () => {
+    act(() => answer('snake').focus());
+    fireEvent.keyDown(answer('snake'), {key: 'Enter'});
+
+    expect(document.activeElement).toBe(
+      dialog().querySelector('[role="tab"][aria-selected="true"]')
+    );
+  });
+
+  it('puts the rows table in the tab order, named by its description', () => {
+    fireEvent.click(root());
+
+    const panel = dialog().querySelector("[role='tabpanel']:not([hidden])");
+    const scroller = panel.querySelector('[role="group"]');
+    expect(scroller.tabIndex).toBe(0);
+    expect(
+      document.getElementById(scroller.getAttribute('aria-labelledby'))
+        .textContent
+    ).toBe('These are the rows AI tested on that reached this step.');
+  });
+
   it('lists the rows tested on that reach the node, then the rows trained on', () => {
     fireEvent.click(root());
 
@@ -129,14 +159,22 @@ describe('NodeModal', () => {
     ]);
   });
 
-  it("shows the model's columns, then every column on request", () => {
+  it("shows the model's columns, then every column with the label last", () => {
+    act(() =>
+      trained.store.dispatch(
+        setImportedData(
+          ANIMALS.map((row, index) => ({name: `Pet ${index + 1}`, ...row})),
+          false
+        )
+      )
+    );
     fireEvent.click(root());
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
 
     const panel = () =>
       dialog().querySelector("[role='tabpanel']:not([hidden])");
     fireEvent.click(within(panel()).getByLabelText('Show all columns'));
-    expect(shownRows()).toEqual([['10', 'dog', '4']]);
+    expect(shownRows()).toEqual([['10', 'Pet 10', '4', 'dog']]);
 
     fireEvent.click(
       within(panel()).getByLabelText('Show only features and label')
@@ -160,7 +198,8 @@ describe('NodeModal', () => {
   it("splits an answer's accuracy check rows by whether the AI got them right", () => {
     fireEvent.click(answer('dog'));
 
-    expect(shownRows()).toEqual([['10', '4', 'dog']]);
+    expect(shownHeaders()).toEqual([['', 'legs', 'animal', 'AI predicts']]);
+    expect(shownRows()).toEqual([['10', '4', 'dog', 'dog']]);
 
     fireEvent.click(
       within(dialog()).getByRole('button', {name: 'Incorrect (0)'})
@@ -172,6 +211,13 @@ describe('NodeModal', () => {
     expect(
       within(dialog()).getByRole('button', {name: 'Correct (1)'})
     ).toBeTruthy();
+  });
+
+  it("leaves the AI's prediction off an answer's training rows", () => {
+    fireEvent.click(answer('dog'));
+    fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
+
+    expect(shownHeaders()).toEqual([['', 'legs', 'animal']]);
   });
 
   it('shows your example only on the path of your prediction', () => {

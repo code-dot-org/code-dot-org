@@ -7,13 +7,14 @@ import RowsPanel from '../../src/UIComponents/RowsPanel';
 import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
-function renderPanel() {
+function renderPanel(props = {}) {
   renderWithProviders(
     createElement(RowsPanel, {
       description: 'Rows at this step',
       rowIndices: [0, 1, 2, 3, 4],
       showAllColumns: true,
       onToggleColumns: () => {},
+      ...props,
     }),
     {store: levelStore(), project: levelProject()}
   );
@@ -29,5 +30,15 @@ describe('RowsPanel', () => {
     renderPanel();
     fireEvent.click(screen.getByRole('button', {name: 'Sort by legs'}));
     expect(rowNumbers()).toEqual(['3', '1', '4', '2', '5']);
+  });
+
+  test("offers no sort on a node's single prediction", () => {
+    renderPanel({prediction: 'bird'});
+    expect(
+      screen.getByRole('columnheader', {name: 'AI predicts'})
+    ).toBeTruthy();
+    expect(
+      screen.queryByRole('button', {name: 'Sort by AI prediction'})
+    ).toBeNull();
   });
 });

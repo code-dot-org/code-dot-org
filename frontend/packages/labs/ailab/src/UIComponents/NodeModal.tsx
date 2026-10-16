@@ -83,6 +83,7 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
                   <AccuracyCheckRowsPanel
                     rows={rows}
                     splitByGrade={isAnswer}
+                    prediction={isAnswer ? node.prediction : undefined}
                     {...columnProps}
                   />
                 ),

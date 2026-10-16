@@ -64,7 +64,7 @@ describe('ResultsBar', () => {
 
     expect(selectedTab()).toBe('Scorecard');
     const scorecard = screen.getByRole('tabpanel', {name: 'Scorecard'});
-    expect(within(scorecard).getByText('Actual')).toBeTruthy();
+    expect(within(scorecard).getByText('AI predicts')).toBeTruthy();
   });
 
   test('focuses the tab Results opened on', () => {
