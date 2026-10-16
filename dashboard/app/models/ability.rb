@@ -522,6 +522,7 @@ class Ability
         Video,
         Vocabulary,
         :foorm_editor,
+        :adaptive_pathway,
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,

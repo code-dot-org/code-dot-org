@@ -108,6 +108,14 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_empty level.step_levels
   end
 
+  test "sharing_levels lists every level with the same content id, by name" do
+    second = create(:adaptive, name: 'Adaptive B', adaptive_id: 'sample')
+    first = create(:adaptive, name: 'Adaptive A', adaptive_id: 'sample')
+    create(:adaptive, name: 'Adaptive C', adaptive_id: 'needs-skill')
+
+    assert_equal [first, second], second.sharing_levels
+  end
+
   private def write_levels_pathway
     @dir.join('levels.json').write({
       'id' => 'levels',
