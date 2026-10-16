@@ -14,6 +14,7 @@ module User::AiAccessible
 
   # Lesson deep dive is not tied to a level, so essential-only access does not unlock it.
   def can_use_lesson_deep_dive?
+    return false unless DCDO.get('lesson-deep-dive-enabled', true)
     ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ENABLED]
   end
 
@@ -58,6 +59,7 @@ module User::AiAccessible
     return false if client_type == AI_CHAT_CLIENT_TYPES[:AI_TUTOR] && DCDO.get("block_ai_tutor_chat_completion", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:ADAPTIVE] && !DCDO.get("adaptive-ai-enabled", false)
     return false if client_type == AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] && !DCDO.get("theater-ai-descriptions-enabled", false)
+    return false if client_type == AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] && !can_use_lesson_deep_dive?
 
     has_aichat_access?(level_id) || trust_chat_client?(client_type)
   end
