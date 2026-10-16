@@ -327,6 +327,20 @@ en:
     new_teacher_subject: 'Welcome to CodeAI!'
     delete_teacher_subject: 'CodeAI notification: Your account has been deleted'
     verified_teacher_subject: 'Verified Teacher Resources Unlocked: Your CodeAI Access is Ready!'
+    directory_verification_subject: 'Confirm your school directory verification request'
+    directory_verification_body: 'Your email address appears in the staff directory for %{school_name}. Confirm below if you want Code.org Support to review your teacher account.'
+    directory_verification_confirm: 'Confirm and send to Support'
+    directory_verification_expiry: 'This link expires in 48 hours.'
+  teacher_directory_verification:
+    title: 'Confirm your teacher verification request'
+    explanation: 'Your email appears in the staff directory for %{school_name}.'
+    email: 'Directory email: %{email}'
+    review_notice: 'If you continue, Code.org Support will review this evidence. This request does not automatically grant teacher permissions.'
+    retry_title: 'Your request still needs to be sent'
+    retry_body: 'Your confirmation was saved, but we could not queue the request. Try again.'
+    retry_confirm: 'Retry sending to Support'
+    submitted_title: 'Your request was sent to Support'
+    submitted_body: 'The support team will review your request and follow up with you.'
   section:
     your_section:
       one: 'Your section:'

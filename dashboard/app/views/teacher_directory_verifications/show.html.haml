@@ -1,0 +1,9 @@
+%main
+  - retrying = @verification_request.status == 'submitted'
+  %h1= t(retrying ? 'teacher_directory_verification.retry_title' : 'teacher_directory_verification.title')
+  %p= t(retrying ? 'teacher_directory_verification.retry_body' : 'teacher_directory_verification.explanation', school_name: @verification_request.school_name)
+  - unless retrying
+    %p= t('teacher_directory_verification.email', email: @verification_request.email)
+    %p= t('teacher_directory_verification.review_notice')
+  = form_with url: submit_teacher_directory_verification_path(token: params[:token]), method: :post, local: true do
+    = submit_tag t(retrying ? 'teacher_directory_verification.retry_confirm' : 'teacher_mailer.directory_verification_confirm')

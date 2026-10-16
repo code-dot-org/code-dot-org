@@ -12,6 +12,14 @@ class TeacherMailer < ApplicationMailer
     mail to: teacher.email, from: 'teacher@code.org', subject: I18n.t('teacher_mailer.verified_teacher_subject')
   end
 
+  def teacher_directory_verification_email(teacher, school_name, token)
+    @school_name = school_name
+    @verification_url = teacher_directory_verification_url(token: token)
+    mail to: teacher.email,
+      from: 'teacher@code.org',
+      subject: I18n.t('teacher_mailer.directory_verification_subject')
+  end
+
   def hoc_tutorial_email(teacher_name, teacher_email, lesson_plan_html_url)
     @teacher_name = teacher_name
     @lesson_plan_html_url = lesson_plan_html_url

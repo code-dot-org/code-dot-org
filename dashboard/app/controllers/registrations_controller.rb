@@ -185,6 +185,7 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id, locale: I18n.locale) if storage_id
       PartialRegistration.delete session
       auto_verify_teacher! current_user
+      Services::TeacherDirectoryVerification::Discovery.enqueue_for(current_user)
       if Policies::Lti.lti? current_user
         if session[:lti_deployment_id] && current_user.lti_user_identities.any?
           deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])

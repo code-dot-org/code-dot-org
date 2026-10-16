@@ -1,0 +1,4 @@
+# Each URL must be reviewed as an official staff directory before it is added.
+# Keys are NCES school or district IDs. Only these pages are fetched.
+schools: {}
+districts: {}
