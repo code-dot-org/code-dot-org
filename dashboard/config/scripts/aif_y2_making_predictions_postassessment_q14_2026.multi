@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q14-2026'
+
+wrong 'Scaling the features so that they share a numeric range'
+wrong 'Splitting the data into training and test sets'
+right 'Trying different hyperparameter values and keeping the ones that perform best'
+wrong 'Removing the hyperparameters a model does not need'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In machine learning, what is tuning?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Hyperparameters
+MARKDOWN

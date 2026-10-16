@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-14 19:10:30 UTC",
+    "serialized_at": "2026-10-15 23:22:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6608,6 +6608,27 @@
       "level_keys": [
         "HoAI26-transition-panels"
       ]
+    },
+    {
+      "chapter": 215,
+      "position": 17,
+      "activity_section_position": 17,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-training-data-animations-branded"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "HoAI26-training-data-animations-branded"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -9172,6 +9193,18 @@
         "level.key": "HoAI26-transition-panels",
         "script_level.level_keys": [
           "HoAI26-transition-panels"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-training-data-animations-branded",
+        "script_level.level_keys": [
+          "HoAI26-training-data-animations-branded"
         ],
         "lesson.key": "lesson-22",
         "lesson_group.key": "",
