@@ -45,6 +45,19 @@ export function getColumnRole(
   return undefined;
 }
 
+// Columns ahead of the label. The label itself is added by the table.
+export function dataColumnsFor(
+  data: DataRow[],
+  project: AilabProject,
+  showAllColumns: boolean
+): string[] {
+  if (!showAllColumns) {
+    return project.selectedFeatures;
+  }
+  const labelColumn = project.labelColumn || 'unknown';
+  return Object.keys(data[0] ?? {}).filter(column => column !== labelColumn);
+}
+
 export function filterColumnsByType(
   columnsByDataType: Record<string, string>,
   columnType: string

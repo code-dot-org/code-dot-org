@@ -3,7 +3,11 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
-import {isRegression} from '../helpers/columnDetails';
+import {
+  dataColumnsFor,
+  getColumnRole,
+  isRegression,
+} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
@@ -35,13 +39,11 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = showAllColumns
-    ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
-    : selectedFeatures;
+  const columns = dataColumnsFor(data, project, showAllColumns);
 
   const cellValue = (value: string | number) =>
     getLocalizedValue(value, datasetId);
-  // Only feature values are known for an example without a dataset row number.
+  // rowIndices is empty when the project has no saved row numbers, so only feature values are known.
   const columnValue = (
     example: (string | number)[],
     row: number | undefined,
@@ -82,7 +84,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                       <td
                         key={column}
                         className={
-                          selectedFeatures.includes(column)
+                          getColumnRole(project, column) === 'feature'
                             ? featureCell
                             : tableStyles.bodyCell
                         }

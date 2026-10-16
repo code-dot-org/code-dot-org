@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
+import {dataColumnsFor, getColumnRole} from '../helpers/columnDetails';
 import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
@@ -35,16 +36,10 @@ const NodeRowsTable = ({
   const labelColumn = project.labelColumn || 'unknown';
   const showPrediction = prediction !== undefined;
   const columns = [
-    ...(showAllColumns
-      ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
-      : project.selectedFeatures),
+    ...dataColumnsFor(data, project, showAllColumns),
     labelColumn,
   ];
   const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
-
-  const isLabel = (column: string) => column === labelColumn;
-  const isFeature = (column: string) =>
-    !isLabel(column) && project.selectedFeatures.includes(column);
 
   return (
     <>
@@ -63,20 +58,23 @@ const NodeRowsTable = ({
                   <th scope="row" className={tableStyles.indexCell}>
                     <CellText>{row + 1}</CellText>
                   </th>
-                  {columns.map(column => (
-                    <td
-                      key={column}
-                      className={classNames(tableStyles.bodyCell, {
-                        [tableStyles.bodyCellLabel]: isLabel(column),
-                        [tableStyles.bodyCellFeature]: isFeature(column),
-                        [styles.emphasized]: column === emphasizedColumn,
-                      })}
-                    >
-                      <CellText>
-                        {getLocalizedValue(data[row][column], datasetId)}
-                      </CellText>
-                    </td>
-                  ))}
+                  {columns.map(column => {
+                    const role = getColumnRole(project, column);
+                    return (
+                      <td
+                        key={column}
+                        className={classNames(tableStyles.bodyCell, {
+                          [tableStyles.bodyCellLabel]: role === 'label',
+                          [tableStyles.bodyCellFeature]: role === 'feature',
+                          [styles.emphasized]: column === emphasizedColumn,
+                        })}
+                      >
+                        <CellText>
+                          {getLocalizedValue(data[row][column], datasetId)}
+                        </CellText>
+                      </td>
+                    );
+                  })}
                   {showPrediction && (
                     <td
                       className={classNames(

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 
@@ -17,7 +17,6 @@ interface RowsTableHeaderProps {
 const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const labelColumn = project.labelColumn || 'unknown';
 
   return (
     <tr>
@@ -29,20 +28,21 @@ const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
         )}
         aria-label="Row"
       />
-      {columns.map(column => (
-        <th
-          key={column}
-          scope="col"
-          className={classNames(tableStyles.header, {
-            [tableStyles.headerLabel]: column === labelColumn,
-            [tableStyles.headerFeature]:
-              column !== labelColumn &&
-              project.selectedFeatures.includes(column),
-          })}
-        >
-          <CellText>{getLocalizedColumnName(datasetId, column)}</CellText>
-        </th>
-      ))}
+      {columns.map(column => {
+        const role = getColumnRole(project, column);
+        return (
+          <th
+            key={column}
+            scope="col"
+            className={classNames(tableStyles.header, {
+              [tableStyles.headerLabel]: role === 'label',
+              [tableStyles.headerFeature]: role === 'feature',
+            })}
+          >
+            <CellText>{getLocalizedColumnName(datasetId, column)}</CellText>
+          </th>
+        );
+      })}
       {showPrediction && (
         <th
           scope="col"
