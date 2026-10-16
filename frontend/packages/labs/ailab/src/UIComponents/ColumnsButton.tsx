@@ -16,7 +16,6 @@ const ColumnsButton = ({showAllColumns, onToggle}: ColumnsButtonProps) => {
     <Tooltip title={label}>
       <IconButton
         aria-label={label}
-        aria-pressed={showAllColumns}
         onClick={onToggle}
         size="extraSmall"
         color="tertiary"
