@@ -2,8 +2,9 @@ import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {useState} from 'react';
 
+import type {Curriculum} from '@/config/curricula';
+
 import AppHeader from './AppHeader';
-import type {Curriculum} from './curricula';
 
 import styles from './congratulations.module.scss';
 

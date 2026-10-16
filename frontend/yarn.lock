@@ -2245,35 +2245,12 @@ __metadata:
     "@capacitor/android": "npm:^7.6.9"
     "@capacitor/cli": "npm:^7.6.9"
     "@capacitor/core": "npm:^7.6.9"
-    "@code-dot-org/component-library": "workspace:*"
-    "@code-dot-org/component-library-styles": "workspace:*"
-    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
-    "@emotion/cache": "npm:^11.14.0"
-    "@emotion/react": "catalog:"
-    "@emotion/styled": "catalog:"
-    "@mui/material": "catalog:"
-    "@testing-library/dom": "catalog:"
-    "@testing-library/jest-dom": "catalog:"
-    "@testing-library/react": "catalog:"
-    "@testing-library/user-event": "npm:^14.6.1"
+    "@code-dot-org/studio": "workspace:*"
     "@types/node": "catalog:"
-    "@types/react": "catalog:"
-    "@types/react-dom": "catalog:"
-    "@vitejs/plugin-react": "catalog:"
     eslint: "catalog:"
-    eslint-plugin-react-hooks: "catalog:"
-    eslint-plugin-react-refresh: "catalog:"
-    globals: "catalog:"
-    jsdom: "catalog:"
     prettier: "catalog:"
-    react: "catalog:"
-    react-dom: "catalog:"
-    sass: "catalog:"
     typescript: "npm:~5.9.3"
-    typescript-eslint: "catalog:"
-    vite: "catalog:"
-    vitest: "catalog:"
   languageName: unknown
   linkType: soft
 
@@ -2415,7 +2392,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/studio@workspace:apps/studio":
+"@code-dot-org/studio@workspace:*, @code-dot-org/studio@workspace:apps/studio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
@@ -2440,10 +2417,12 @@ __metadata:
     "@testing-library/dom": "catalog:"
     "@testing-library/jest-dom": "catalog:"
     "@testing-library/react": "catalog:"
+    "@testing-library/user-event": "npm:^14.6.1"
     "@types/node": "catalog:"
     "@types/react": "catalog:"
     "@types/react-dom": "catalog:"
     "@vitejs/plugin-react": "catalog:"
+    classnames: "catalog:"
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
@@ -2454,6 +2433,7 @@ __metadata:
     prettier: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
+    sass: "catalog:"
     typescript: "npm:~5.9.3"
     typescript-eslint: "catalog:"
     vite: "catalog:"

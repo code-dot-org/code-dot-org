@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+import {tanstackRouter} from '@tanstack/router-plugin/vite';
 import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
 import path from 'node:path';
 
@@ -59,15 +60,22 @@ function englishFontsOnly(): Plugin {
   };
 }
 
-// Builds the landing page that Capacitor packages into the Android app. The
-// output is loaded from local files, so asset URLs are relative and index.html
-// sits at the root of dist, where Capacitor expects it.
+// Builds the shell that Capacitor packages into the Android app, starting at
+// /launcher. The output is loaded from local files, so asset URLs are
+// relative and index.html sits at the root of dist-mobile, where
+// apps/mobile expects it. vite.config.ts stays the Rails build.
 export default defineConfig({
+  // src/config/buildMode.ts reads this mode.
+  mode: 'mobile',
   base: './',
   publicDir: false,
   build: {
-    outDir: path.resolve(__dirname, 'dist'),
+    outDir: path.resolve(__dirname, 'dist-mobile'),
     emptyOutDir: true,
+  },
+  // TFJS (bundled via @code-dot-org/oceans-lab) references bare `global`.
+  define: {
+    global: 'globalThis',
   },
   server: {
     fs: {
@@ -80,5 +88,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [englishFontsOnly(), react()],
+  plugins: [
+    englishFontsOnly(),
+    tanstackRouter({target: 'react', autoCodeSplitting: true}),
+    react(),
+  ],
 });

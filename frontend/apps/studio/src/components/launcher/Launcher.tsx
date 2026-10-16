@@ -5,8 +5,9 @@ import {useState} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 
+import type {Curriculum} from '@/config/curricula';
+
 import AppHeader from './AppHeader';
-import type {Curriculum} from './curricula';
 
 import styles from './launcher.module.scss';
 

@@ -2,8 +2,13 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {describe, it, expect, vi} from 'vitest';
 
+import {
+  CURRICULA,
+  curriculumForCourse,
+  firstLevelUrl,
+} from '@/config/curricula';
+
 import Congratulations from '../Congratulations';
-import {CURRICULA, curriculumForCourse, firstLevelUrl} from '../curricula';
 
 const oceans = CURRICULA.find(curriculum => curriculum.id === 'oceans')!;
 
