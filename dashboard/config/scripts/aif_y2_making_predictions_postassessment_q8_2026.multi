@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q8-2026'
+
+wrong 'Encode data so that all values used in the model are numeric'
+right 'Update model parameters until they classify 100% of training inputs correctly'
+wrong 'Split the available data into a training set and a test set'
+wrong "Use a loss function to evaluate the model's performance on test data"
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is NOT usually a step in using machine learning to solve a problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Regression Project
+MARKDOWN
