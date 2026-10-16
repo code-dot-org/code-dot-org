@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
-import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
+import {isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
 
 import CellText from './CellText';
-import PredictionHeader from './PredictionHeader';
+import RowsTableHeader from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
@@ -35,29 +35,23 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  // The label is the Actual column, so it is not repeated in this list.
-  const datasetColumns = Object.keys(data[0] ?? {}).filter(
-    column => column !== labelColumn
-  );
+  const columns = showAllColumns
+    ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
+    : selectedFeatures;
 
-  const columnName = (column: string) =>
-    getLocalizedColumnName(datasetId, column);
   const cellValue = (value: string | number) =>
     getLocalizedValue(value, datasetId);
-  const isFeature = (column: string) => selectedFeatures.includes(column);
-  const datasetCell = (column: string) =>
-    isFeature(column) ? featureCell : tableStyles.bodyCell;
-  // Without a dataset row number only the example's feature values are known.
-  const datasetValue = (
+  // Only feature values are known for an example without a dataset row number.
+  const columnValue = (
     example: (string | number)[],
     row: number | undefined,
     column: string
   ) => {
-    if (row !== undefined) {
-      return cellValue(data[row]?.[column] ?? '');
-    }
     const feature = selectedFeatures.indexOf(column);
-    return feature === -1 ? '' : cellValue(example[feature]);
+    if (feature !== -1) {
+      return cellValue(example[feature]);
+    }
+    return row === undefined ? '' : cellValue(data[row]?.[column] ?? '');
   };
 
   return (
@@ -71,11 +65,9 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
         <div className={styles.scroller}>
           <table className={tableStyles.table}>
             <thead>
-              <PredictionHeader
-                columns={showAllColumns ? datasetColumns : selectedFeatures}
-                labelColumn={labelColumn}
-                columnName={columnName}
-                isFeature={isFeature}
+              <RowsTableHeader
+                columns={[...columns, labelColumn]}
+                showPrediction
               />
             </thead>
             <tbody>
@@ -86,19 +78,18 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                     <th scope="row" className={tableStyles.indexCell}>
                       <CellText>{row === undefined ? '' : row + 1}</CellText>
                     </th>
-                    {showAllColumns
-                      ? datasetColumns.map(column => (
-                          <td key={column} className={datasetCell(column)}>
-                            <CellText>
-                              {datasetValue(example, row, column)}
-                            </CellText>
-                          </td>
-                        ))
-                      : example.map((value, column) => (
-                          <td key={column} className={featureCell}>
-                            <CellText>{cellValue(value)}</CellText>
-                          </td>
-                        ))}
+                    {columns.map(column => (
+                      <td
+                        key={column}
+                        className={
+                          selectedFeatures.includes(column)
+                            ? featureCell
+                            : tableStyles.bodyCell
+                        }
+                      >
+                        <CellText>{columnValue(example, row, column)}</CellText>
+                      </td>
+                    ))}
                     <td className={labelCell}>
                       <CellText>{cellValue(results.labels[index])}</CellText>
                     </td>

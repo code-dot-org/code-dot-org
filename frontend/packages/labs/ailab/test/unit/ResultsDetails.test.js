@@ -13,42 +13,28 @@ import ResultsDetails from '../../src/UIComponents/ResultsDetails';
 import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
-function renderScorecard() {
-  const store = levelStore();
-  store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
-  store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
-  store.dispatch(setAccuracyCheckPredictedLabels(['bird', 'dog', 'bird']));
-  renderWithProviders(createElement(ResultsDetails), {
-    store,
-    project: {
-      ...levelProject(),
-      accuracyCheckRowIndices: [0, 1, 2],
-      historicResults: [
-        {label: 'animal', features: ['legs'], accuracy: '66.67'},
-      ],
-    },
-  });
-}
+const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
+  name: ['Tweety', 'Fido', 'Slither'][index] || row.animal,
+  ...row,
+}));
 
-function renderNamedScorecard(projectFields) {
+function renderScorecard({
+  data,
+  predictedLabels = ['bird', 'dog', 'bird'],
+  accuracyCheckRowIndices = [0, 1, 2],
+} = {}) {
   const store = levelStore();
-  store.dispatch(
-    setImportedData(
-      ANIMALS.map((row, index) => ({
-        name: ['Tweety', 'Fido', 'Slither'][index] || row.animal,
-        ...row,
-      })),
-      false
-    )
-  );
+  if (data) {
+    store.dispatch(setImportedData(data, false));
+  }
   store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
   store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
-  store.dispatch(setAccuracyCheckPredictedLabels(['bird', 'dog', 'bird']));
+  store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   renderWithProviders(createElement(ResultsDetails), {
     store,
     project: {
       ...levelProject(),
-      ...projectFields,
+      accuracyCheckRowIndices,
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
@@ -110,20 +96,7 @@ describe('ResultsDetails', () => {
   });
 
   test('says when the selected grade has no rows', () => {
-    const store = levelStore();
-    store.dispatch(setAccuracyCheckExamples([[2]]));
-    store.dispatch(setAccuracyCheckLabels(['bird']));
-    store.dispatch(setAccuracyCheckPredictedLabels(['bird']));
-    renderWithProviders(createElement(ResultsDetails), {
-      store,
-      project: {
-        ...levelProject(),
-        accuracyCheckRowIndices: [0],
-        historicResults: [
-          {label: 'animal', features: ['legs'], accuracy: '100'},
-        ],
-      },
-    });
+    renderScorecard({predictedLabels: ['bird', 'dog', 'snake']});
 
     fireEvent.click(screen.getByRole('button', {name: 'Incorrect (0)'}));
 
@@ -131,7 +104,7 @@ describe('ResultsDetails', () => {
   });
 
   test('shows the other dataset columns on request', () => {
-    renderNamedScorecard({accuracyCheckRowIndices: [0, 1, 2]});
+    renderScorecard({data: NAMED_ANIMALS});
 
     fireEvent.click(screen.getByLabelText('Show all columns'));
 
@@ -146,7 +119,7 @@ describe('ResultsDetails', () => {
   });
 
   test('keeps feature values in all columns when rows have no row number', () => {
-    renderNamedScorecard({});
+    renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: null});
 
     fireEvent.click(screen.getByLabelText('Show all columns'));
 
