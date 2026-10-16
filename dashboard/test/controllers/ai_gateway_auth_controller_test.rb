@@ -15,6 +15,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('allow_international_usage_all_models', anything).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     stub_turnstile_enforcement_mode(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT)
+    stub_environment_key_enabled(false)
     @params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -155,6 +156,47 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
+  test 'signs with the legacy shared key and no kid while the flag is off' do
+    mint_and_capture_claims
+
+    assert_same @signing_key, @captured_key
+    assert_equal({}, @captured_headers)
+    assert_equal 'legacy_shared_key', JSON.parse(response.body)['signingKey']
+  end
+
+  test 'signs with the environment key and names the environment in kid while the flag is on' do
+    stub_environment_key_enabled(true)
+    CDO.stubs(:ai_gateway_jwt_auth_key).returns('environment private key')
+    CDO.stubs(:ai_gateway_jwt_auth_key_passphrase).returns('environment passphrase')
+    environment_key = OpenSSL::PKey::RSA.generate(2048)
+
+    mint_and_capture_claims do
+      OpenSSL::PKey::RSA.stubs(:new).with('environment private key', 'environment passphrase').returns(environment_key)
+    end
+
+    assert_same environment_key, @captured_key
+    assert_equal({kid: CDO.rack_env.to_s}, @captured_headers)
+    assert_equal 'environment_key', JSON.parse(response.body)['signingKey']
+  end
+
+  test 'reports and refuses to mint when the flag is on and the environment key cannot be loaded' do
+    stub_environment_key_enabled(true)
+    CDO.stubs(:ai_gateway_jwt_auth_key).raises(RuntimeError, 'secret not found')
+    Observability::Errors.expects(:report).once
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    JWT.expects(:encode).never
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :internal_server_error
+    assert_equal 'environment_key', JSON.parse(response.body)['signingKey']
+  end
+
+  private def stub_environment_key_enabled(value)
+    DCDO.stubs(:get).with('ai-gateway-environment-key-enabled', false).returns(value)
+  end
+
   private def stub_turnstile_enforcement_mode(value)
     DCDO.stubs(:get).
       with(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT).
@@ -171,10 +213,13 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     # stubbed below, so the key is never actually used to sign anything.
     @signing_key ||= OpenSSL::PKey::RSA.generate(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@signing_key)
+    yield if block_given?
 
     captured = nil
-    JWT.stubs(:encode).with do |claims, _key, _algorithm|
+    JWT.stubs(:encode).with do |claims, key, _algorithm, headers = {}|
       captured = claims
+      @captured_key = key
+      @captured_headers = headers
       true
     end.returns('fake.jwt.token')
 

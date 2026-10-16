@@ -35,7 +35,22 @@ describe('fetchAccessToken', () => {
     expect(result).toEqual({
       token: 'jwt',
       turnstileEnforcementMode: 'disabled',
+      signingKey: 'not_reported',
     });
+  });
+
+  it('returns the signing key Rails reports', async () => {
+    mockPost.mockResolvedValue({
+      json: async () => ({
+        token: 'jwt',
+        turnstileEnforcementMode: 'disabled',
+        signingKey: 'environment_key',
+      }),
+    });
+
+    const result = await fetchAccessToken();
+
+    expect(result.signingKey).toBe('environment_key');
   });
 
   it('sends the given context instead when a caller passes one', async () => {

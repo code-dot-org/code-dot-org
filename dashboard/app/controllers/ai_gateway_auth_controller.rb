@@ -49,6 +49,24 @@ class AiGatewayAuthController < ApplicationController
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
+    # Temporary rollout flag; when every environment runs with it on, remove it and the legacy shared key.
+    use_environment_key = DCDO.get('ai-gateway-environment-key-enabled', false) == true
+
+    begin
+      if use_environment_key
+        signing_key_name = 'environment_key'
+        private_key = OpenSSL::PKey::RSA.new(CDO.ai_gateway_jwt_auth_key, CDO.ai_gateway_jwt_auth_key_passphrase)
+        jwt_headers = {kid: CDO.rack_env.to_s}
+      else
+        signing_key_name = 'legacy_shared_key'
+        private_key = OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE)
+        jwt_headers = {}
+      end
+    rescue => exception
+      Observability::Errors.report(exception, error_message: 'AI Gateway signing key could not be loaded', context: {signing_key_name: signing_key_name, rack_env: CDO.rack_env.to_s})
+      return render status: :internal_server_error, json: {error: 'AI Gateway signing key unavailable', signingKey: signing_key_name}
+    end
+
     token_id = SecureRandom.uuid
     hostname = CDO.dashboard_hostname
     user_log_token = current_user.log_token(destination: User::LogToken::SENTRY)
@@ -72,10 +90,11 @@ class AiGatewayAuthController < ApplicationController
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
       },
-      OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
-      'RS256'
+      private_key,
+      'RS256',
+      jwt_headers
     )
-    render json: {token: token, turnstileEnforcementMode: enforcement_mode}
+    render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key_name}
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
