@@ -163,6 +163,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
               name={`approved-${response.id}`}
               checked={response.approved}
               label="Visible for students"
+              disabled={response.evaluation_status !== 'success'}
               onChange={e => onApprovalChange?.(response.id, e.target.checked)}
               size="xs"
             />

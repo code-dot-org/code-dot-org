@@ -6,7 +6,9 @@ require 'cdo/share_filtering'
 #
 # The student's text and transcript are run through the PII and profanity
 # filters first; a hit records a violation status and nothing is sent to the
-# LLM. On success the parsed evaluation is stored in evaluation_result
+# LLM. The model's student_feedback goes through the same filters; a hit
+# records feedback_violation and stores nothing from the evaluation. On
+# success the parsed evaluation is stored in evaluation_result
 # (the scored rubric level, teacher-only) and its constructive,
 # score-free feedback is copied to student_feedback for the student. Neither
 # is displayed at submit time — teacher view and student gallery are future
@@ -77,6 +79,9 @@ class EvaluateChallengeResponseJob < ApplicationJob
     raise "OpenAI response had no message content for challenge_response #{challenge_response.id}" if content.blank?
 
     evaluation = JSON.parse(content)
+    if flagged_feedback?(evaluation['student_feedback'])
+      return challenge_response.update!(evaluation_status: :feedback_violation)
+    end
     challenge_response.update!(
       evaluation_result: evaluation,
       student_feedback: evaluation['student_feedback'],
@@ -98,5 +103,13 @@ class EvaluateChallengeResponseJob < ApplicationJob
     return if text.blank?
     ShareFiltering.find_pii_failure(text, exceptions: true)
     ShareFiltering.find_profanity_failure(text, 'en', exceptions: true)
+  end
+
+  # Without exceptions: the filter exceptions record a violation against the
+  # student, but this text was written by the model.
+  private def flagged_feedback?(feedback)
+    return false if feedback.blank?
+    ShareFiltering.find_pii_failure(feedback).present? ||
+      ShareFiltering.find_profanity_failure(feedback, 'en').present?
   end
 end

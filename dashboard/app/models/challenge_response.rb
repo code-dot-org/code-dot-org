@@ -36,6 +36,7 @@ class ChallengeResponse < ApplicationRecord
     failure: 1000,
     pii_violation: 1001,
     profanity_violation: 1002,
+    feedback_violation: 1003,
   }, _prefix: :evaluation
 
   # A response can be evaluated once it is a final submission and every

@@ -64,7 +64,7 @@ const baseResponse: Omit<ChallengeResponse, 'id' | 'user_name' | 'assets'> = {
   student_text: null,
   transcript: null,
   student_feedback: null,
-  evaluation_status: null,
+  evaluation_status: 'success',
   is_final: true,
   approved: false,
   created_at: '2026-08-10T12:00:00Z',
@@ -315,6 +315,19 @@ describe('ChallengeGallery', () => {
     expect(
       screen.queryByRole('checkbox', {name: /Visible for students/}),
     ).not.toBeInTheDocument();
+  });
+
+  it('disables the approval toggle for a response that was not successfully evaluated', async () => {
+    stubFetches([{...videoResponse, evaluation_status: 'pii_violation'}]);
+
+    render(<ChallengeGallery tutorGalleryData={teacherGalleryData} />);
+
+    await waitFor(() =>
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+    );
+    expect(
+      screen.getByRole('checkbox', {name: /Visible for students/})
+    ).toBeDisabled();
   });
 
   it('calls the approve endpoint when a teacher toggles a card', async () => {
