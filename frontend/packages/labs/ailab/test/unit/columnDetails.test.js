@@ -13,6 +13,7 @@ import {
   getColumnDescription,
   getMostAndLeastCommon,
   getColumnRole,
+  dataColumnsFor,
 } from '../../src/helpers/columnDetails';
 import I18n from '../../src/i18n';
 
@@ -71,6 +72,19 @@ describe('getColumnRole', () => {
 
   test('any other column has no role', () => {
     expect(getColumnRole(project, 'outlook')).toBeUndefined();
+  });
+});
+
+describe('dataColumnsFor', () => {
+  const project = {labelColumn: 'animal', selectedFeatures: ['legs']};
+  const data = [{name: 'Fido', legs: 4, animal: 'dog'}];
+
+  test('collapsed, the selected features', () => {
+    expect(dataColumnsFor(data, project, false)).toEqual(['legs']);
+  });
+
+  test('expanded, every column except the label', () => {
+    expect(dataColumnsFor(data, project, true)).toEqual(['name', 'legs']);
   });
 });
 

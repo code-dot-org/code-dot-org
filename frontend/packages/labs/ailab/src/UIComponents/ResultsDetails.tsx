@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import {formatAccuracy, getResultsByGrade} from '../helpers/accuracy';
+import {
+  formatAccuracy,
+  getCorrectCount,
+  getResultsByGrade,
+} from '../helpers/accuracy';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
 
+import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
@@ -19,10 +24,15 @@ const ResultsDetails = () => {
   );
   const resultsTab = useAppSelector(state => state.resultsTab);
   const dispatch = useAppDispatch();
+  const [showAllColumns, setShowAllColumns] = useState(false);
   const results = useAppSelector(
     state => getResultsByGrade(state, project, resultsTab),
     deepEqual
   );
+  const gradeCounts = useAppSelector(state => {
+    const {correct, total} = getCorrectCount(state, project);
+    return {correct, incorrect: total - correct};
+  }, deepEqual);
 
   return (
     <div className={styles.details}>
@@ -38,18 +48,23 @@ const ResultsDetails = () => {
           <span className={styles.accuracy}>
             {formatAccuracy(currentResult.accuracy)} Accuracy
           </span>
-          {hasPredictions && (
-            <>
-              <span className={styles.divider} />
+          <span className={styles.divider} />
+          <div className={styles.actionGroup}>
+            {hasPredictions && (
               <ResultsToggle
                 grade={resultsTab}
                 onChange={grade => dispatch(setResultsTab(grade))}
+                counts={gradeCounts}
               />
-            </>
-          )}
+            )}
+            <ColumnsButton
+              showAllColumns={showAllColumns}
+              onToggle={() => setShowAllColumns(shown => !shown)}
+            />
+          </div>
         </div>
       </div>
-      <ResultsTable results={results} />
+      <ResultsTable results={results} showAllColumns={showAllColumns} />
     </div>
   );
 };

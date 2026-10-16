@@ -29,6 +29,7 @@ export interface ResultsData {
   examples: (string | number)[][];
   labels: (string | number)[];
   predictedLabels: (string | number)[];
+  rowIndices: number[];
 }
 
 export interface CategoricalColumnDetails {

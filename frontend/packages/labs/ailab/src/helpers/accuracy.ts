@@ -13,10 +13,23 @@ import type {RootState} from '../redux';
 import type {AilabProject, ResultsData, DataRow} from '../types';
 
 import {getExtrema, isRegression} from './columnDetails';
+import {splitRowIndices} from './trainingSplit';
 import {
   getConvertedLabels,
   getConvertedAccuracyCheckExamples,
 } from './valueConversion';
+
+// Dataset row numbers, in the same order as the accuracy-check examples.
+function accuracyCheckDatasetRows(
+  state: RootState,
+  project: AilabProject
+): number[] {
+  if (!project.accuracyCheckRowIndices) {
+    return [];
+  }
+  return splitRowIndices(state.data.length, project.accuracyCheckRowIndices)
+    .accuracyCheck;
+}
 
 // Return results data so that it looks like regular data provided to the
 // DataTable.
@@ -61,26 +74,24 @@ export function getResultsByGrade(
   grade: string
 ): ResultsData {
   const accuracyGrades = getAccuracyGrades(state, project);
-  const examples = getConvertedAccuracyCheckExamples(state, project).filter(
-    (_example: (string | number)[], index: number) => {
-      return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
-    }
-  );
+  const keep = (index: number) =>
+    grade === ResultsGrades.ALL || grade === accuracyGrades[index];
+  const convertedExamples = getConvertedAccuracyCheckExamples(state, project);
+  const examples = convertedExamples.filter((_example, index) => keep(index));
   const labels = getConvertedLabels(
     state,
     project,
     state.accuracyCheckLabels
-  ).filter((_label: string | number, index: number) => {
-    return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
-  });
+  ).filter((_label, index) => keep(index));
   const predictedLabels = getConvertedLabels(
     state,
     project,
     state.accuracyCheckPredictedLabels
-  ).filter((_label: string | number, index: number) => {
-    return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
-  });
-  return {examples, labels, predictedLabels};
+  ).filter((_label, index) => keep(index));
+  const rowIndices = accuracyCheckDatasetRows(state, project).filter(
+    (_row, index) => keep(index)
+  );
+  return {examples, labels, predictedLabels, rowIndices};
 }
 
 export function getCorrectCount(
