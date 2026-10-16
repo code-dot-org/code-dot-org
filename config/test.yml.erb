@@ -45,11 +45,7 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
-# The database connection settings used when RAILS_ENV=test, but NOT the managed test server and NOT a Continuous
-# Integration environment. These settings are primarily used by unit tests executing on a development environment, so
-# they must match how `db:provision_sql_users` provisions the reader and writer SQL users on a development environment
-# because the SQL users on a development database server are used across both `dashboard_development` and `dashboard_test`
-# databases on that local server.
+# Match values from development.yml.erb, to support running unit tests in local development environments.
 db_credential_admin: {"username":"root", "password":""}
 db_credential_writer: {"username":"writer", "password":""}
 db_credential_reader: {"username":"reader", "password":""}
@@ -153,8 +149,7 @@ db_endpoint_proxy_writer: ci-tests-mysql
 db_endpoint_proxy_reader: ci-tests-mysql
 db_endpoint_proxy_reporting: ci-tests-mysql
 
-# The CI MySQL container is started with a root password, and `db:provision_sql_users` creates the writer and reader
-# with whatever it reads here, so these track MYSQL_ROOT_PASSWORD in .drone.yml.
+# Use custom database hostname and password for continuous integration environment, as specified by .drone.yml.
 db_credential_admin: {"username":"root", "password":"not-a-secret"}
 db_credential_writer: {"username":"writer", "password":"not-a-secret"}
 db_credential_reader: {"username":"reader", "password":"not-a-secret"}
