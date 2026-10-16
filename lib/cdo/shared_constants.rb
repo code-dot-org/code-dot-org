@@ -1107,7 +1107,7 @@ module SharedConstants
     # === MATH ===
     # SECURITY: Simple utility APIs with minimal security concerns
     'api.mathjs.org',           # Mathematical expressions - Public API
-    'number-trivia.com',        # Facts about numbers and dates (Numbers API), http only - Public API
+    'number-trivia.com',        # Facts about numbers and dates (Numbers API) - Public API, http only so reachable through the App Lab proxy, not from Web Lab 2 pages
     'qrng.anu.edu.au',          # Random numbers - Public API
     'random.org',               # Random number generation - API Key required 🔑
     'api.wolframalpha.com',     # Computational knowledge engine - API key required 🔑
