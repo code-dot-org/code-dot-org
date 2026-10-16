@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 module CdoContentful
-  module CsForAll
+  module HourOfAi
     module Entry
       module Tutorial
         include Base
 
-        self.content_type = 'curriculum'
+        self.content_type = 'activity'
 
         # Find a Tutorial entry by its custom `tutorialID` field
         #

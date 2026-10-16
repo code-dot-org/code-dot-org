@@ -26,6 +26,7 @@ data:
   # Same idea for the adhoc environment used by the ActiveJob worker and the
   # setup-db-minimal job.
   contentful_api_key: ""
+  contentful_hour_of_ai_access_token: ""
   contentful_cs_for_all_access_token: ""
   javabuilder_key_password: ""
   javabuilder_private_key: ""
