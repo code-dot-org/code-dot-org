@@ -667,3 +667,49 @@
 .drawerImage {
   width: 192px;
 }
+
+// Diversity survey (drawer). Fills column-first so tab order reads down the
+// left column, then the right.
+.diversitySurvey {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.diversitySurveyQuestion {
+  float: none;
+  width: auto;
+  margin-bottom: 16px;
+  padding: 0;
+  border: 0;
+  font-weight: 600;
+}
+
+.diversitySurveyGrid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 12px 32px;
+  justify-content: start;
+}
+
+.diversitySurveyField {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.diversitySurveyInput {
+  box-sizing: border-box;
+  width: 84px;
+  height: 44px;
+  margin: 0;
+  padding: 0 12px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background-color: var(--background-neutral-primary);
+}
