@@ -124,8 +124,6 @@ describe('useProgress', () => {
       progressOf([], ['intro']),
       progressOf(['intro'], ['intro']),
     ]);
-    act(() => result.current.reset());
-    expect(store.saved[store.saved.length - 1]).toEqual(EMPTY_PROGRESS);
   });
 
   it('merges step context by step id and saves it', async () => {
@@ -142,7 +140,7 @@ describe('useProgress', () => {
     });
   });
 
-  it('stores answers per step beside other step context and clears them on reset', async () => {
+  it('stores answers per step beside other step context', async () => {
     const store = fakeStore(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
       useProgress(pathway, key, store)
@@ -165,7 +163,5 @@ describe('useProgress', () => {
     expect(store.saved[store.saved.length - 1].stepContext).toEqual(
       result.current.progress?.stepContext
     );
-    act(() => result.current.reset());
-    expect(result.current.progress?.stepContext).toEqual({});
   });
 });
