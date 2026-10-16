@@ -25,6 +25,10 @@ export interface LevelMode {
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
+  /** Which scene tabs a pinned level shows: its own scene's (the default),
+      or every scene's, the others locked, where a level first shows the
+      student the scenes they have. */
+  sceneTabs?: 'pinned' | 'all';
   /** Which image-level layout to show; absent is the image dialog pane. */
   imageUi?: ImageUi;
   /** The explore layout's sentence, by id in exploreSentences.json; the
