@@ -125,6 +125,18 @@ describe('NodeModal', () => {
     );
   });
 
+  it('puts the rows table in the tab order, named by its description', () => {
+    fireEvent.click(root());
+
+    const tables = within(dialog()).getAllByRole('table');
+    const scroller = tables[tables.length - 1].parentElement;
+    expect(scroller.tabIndex).toBe(0);
+    expect(
+      document.getElementById(scroller.getAttribute('aria-labelledby'))
+        .textContent
+    ).toBe('These are the rows AI tested on that reached this step.');
+  });
+
   it('lists the rows tested on that reach the node, then the rows trained on', () => {
     fireEvent.click(root());
 

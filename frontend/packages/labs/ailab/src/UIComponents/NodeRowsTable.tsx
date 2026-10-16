@@ -16,6 +16,7 @@ import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
+  labelId: string;
   rowIndices: number[];
   emphasizedColumn?: string;
   showAllColumns: boolean;
@@ -24,6 +25,7 @@ interface NodeRowsTableProps {
 }
 
 const NodeRowsTable = ({
+  labelId,
   rowIndices,
   emphasizedColumn,
   showAllColumns,
@@ -44,7 +46,13 @@ const NodeRowsTable = ({
   return (
     <>
       <div className={styles.frame}>
-        <div className={styles.scroller}>
+        <div
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- focusable so a keyboard can scroll a wide table
+          tabIndex={0}
+          role="group"
+          aria-labelledby={labelId}
+          className={styles.scroller}
+        >
           <table className={tableStyles.table}>
             <thead>
               <RowsTableHeader
