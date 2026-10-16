@@ -17,6 +17,15 @@
   padding: 0 8px;
 }
 
+// Pushed to the right so it sits beside the settings menu rather than being
+// spread out by the header's space-between.
+.headerContent {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+  margin-inline-end: 8px;
+}
+
 .content {
   padding: 8px;
   color: var(--text-neutral-primary, #000);

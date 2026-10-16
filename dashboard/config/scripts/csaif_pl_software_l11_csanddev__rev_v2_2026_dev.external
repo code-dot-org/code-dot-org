@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Software and Operating Systems
 
-Software and hardware are like a team. 
+<p>In Lessons 4 and 5, students shift focus to hardware and software individually, and how the two work together like a team to run a computer system. The graphic below shows how these two pieces depend on each other.</p>
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
 <p>📖 <b>Hardware</b> performs the physical tasks, displaying images on a screen, printing a document, storing files, or running electrical signals through circuits.</p>

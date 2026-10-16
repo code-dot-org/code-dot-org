@@ -277,8 +277,13 @@ p.countText {
   color: var(--text-neutral-white-fixed);
   display: flex;
   flex-direction: row;
+  // Without this the children stretch, leaving the button off-centre against a
+  // label that has wrapped to two lines.
+  align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  // 1rem each side to match .learningGoalExpanded above, so the button's right
+  // edge lines up with the feedback box's.
+  padding: 0.5rem 1rem;
 }
 
 .rubricFooterContent {
@@ -301,6 +306,9 @@ p.countText {
   flex: 0 0 auto;
   flex-direction: column;
   align-items: flex-end;
+  // Stretching to the footer's height would otherwise pin the button to the
+  // top, whatever the footer's own align-items says.
+  justify-content: center;
   gap: 0.25rem;
   align-self: stretch;
 
@@ -912,16 +920,19 @@ em.aiFeedbackReceived {
 
 .selectors {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  // Stacked: side by side the two menus overflow the drawer's width.
+  flex-direction: column;
+  align-items: center;
   align-self: stretch;
   gap: 15px;
 }
 
 .studentInfoGroup {
   display: flex;
-  align-self: center;
+  // Stretch rather than centre so the group takes the drawer's width; sized to
+  // its content it grows past the edge instead of wrapping.
+  align-self: stretch;
+  min-width: 0;
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
@@ -929,6 +940,7 @@ em.aiFeedbackReceived {
 
   h3 {
     margin: 0;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -1039,11 +1051,21 @@ h5.learningGoalsHeaderTextBody {
   margin: 0 0 0.25rem;
   display: flex;
   flex-direction: row;
+  // Smaller than the default h5: at drawer width most goal names need the
+  // room, and the header has only the ring's height to spend.
+  font-size: 1rem;
+  line-height: 1.25;
 
   span {
     align-self: stretch;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    // Two lines before clipping, rather than one.
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    // Lets the span shrink below its content width so the clamp applies.
+    min-width: 0;
     overflow: hidden;
   }
 }
@@ -1252,8 +1274,10 @@ p.evidenceLevelHeaderText {
 
 .rubricTabGroup {
   padding-bottom: 8px;
-  justify-content: space-between;
+  // Stacked: beside the tabs the run button has no room at drawer width.
+  flex-direction: column;
   align-items: center;
+  gap: 8px;
   align-self: stretch;
   display: flex;
 }

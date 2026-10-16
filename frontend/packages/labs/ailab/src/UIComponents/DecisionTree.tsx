@@ -16,9 +16,6 @@ import {TEST_PANEL_WIDTH} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {
   DISPLAY_TREE_ROOT_ID,
-  THRESHOLD_SIGNS,
-  thresholdValue,
-  type DisplayTreeBranch,
   type DisplayTreeNode,
   type DisplayTreeQuestion,
 } from '../helpers/displayTree';
@@ -33,6 +30,7 @@ import {
 import {getNodeForKey} from '../helpers/displayTreeNavigation';
 import {
   ANSWER_DOT_SIZE,
+  branchLabel,
   COUNTS_GAP,
   displayNodeLabel,
   GRADE_ICON_GAP,
@@ -46,7 +44,6 @@ import {
   type Grade,
 } from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
-import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setPredictionPlaying} from '../redux';
@@ -60,12 +57,11 @@ import {useTrainingData} from '../TrainingDataContext';
 
 import FullTextTooltip from './FullTextTooltip';
 import {leafColorStyle} from './leafColors';
+import NodeModal from './NodeModal';
 import TreeCanvas from './TreeCanvas';
 
 import appStyles from '../app.module.scss';
 import styles from './decisionTree.module.scss';
-
-const orList = new Intl.ListFormat('en', {type: 'disjunction'});
 
 const TREE_NAME = "Your model's decision tree";
 
@@ -202,6 +198,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
   const [focusedId, setFocusedId] = useState(DISPLAY_TREE_ROOT_ID);
   const [focusVisibleId, setFocusVisibleId] = useState<string>();
   const [entered, setEntered] = useState(false);
+  const [openNodeId, setOpenNodeId] = useState<string>();
   const nodeElements = useRef(new Map<string, HTMLElement>());
 
   if (!tree || !layout) {
@@ -263,15 +260,12 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
     }
   };
 
-  const valueText = (value: string): string =>
-    String(getLocalizedValue(value, datasetId));
-
-  const branchLabel = (
-    branch: DisplayTreeBranch
-  ): {sign?: string; text: string} =>
-    branch.kind === 'values'
-      ? {text: orList.format(branch.values.map(valueText))}
-      : {sign: THRESHOLD_SIGNS[branch.kind], text: thresholdValue(branch)};
+  const openOnEnterOrSpace = (event: KeyboardEvent, id: string) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setOpenNodeId(id);
+    }
+  };
 
   const columnText = (node: DisplayTreeQuestion): string =>
     getLocalizedColumnName(datasetId, node.column);
@@ -306,7 +300,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                 Press Enter to explore the tree
               </KeyHint>
               <KeyHint id={keysHintId} shown={entered}>
-                Use the arrow keys to move, and Escape to exit
+                Use the arrow keys to move, Enter or Space to see a node&apos;s
+                details, and Escape to exit
               </KeyHint>
             </span>
           }
@@ -362,7 +357,8 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
             </svg>
             {layout.nodes.map(placed => {
               const text = displayNodeLabel(placed.node, datasetId);
-              const label = placed.branch && branchLabel(placed.branch);
+              const label =
+                placed.branch && branchLabel(placed.branch, datasetId);
               const focusVisible = placed.id === focusVisibleId;
               const kind =
                 placed.answerIndex === undefined
@@ -398,6 +394,7 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     .filter(Boolean)
                     .join(' ')}
                   aria-current={placed.id === currentId ? 'step' : undefined}
+                  aria-haspopup="dialog"
                   aria-expanded={placed.node.type === 'question' || undefined}
                   aria-level={placed.depth + 1}
                   aria-setsize={siblings.length}
@@ -412,7 +409,11 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
                     );
                   }}
                   onBlur={() => setFocusVisibleId(undefined)}
-                  onKeyDown={event => moveFocus(event, placed)}
+                  onKeyDown={event => {
+                    moveFocus(event, placed);
+                    openOnEnterOrSpace(event, placed.id);
+                  }}
+                  onClick={() => setOpenNodeId(placed.id)}
                   className={styles.nodeSlot}
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >
@@ -491,6 +492,13 @@ const DecisionTree = ({overlay}: DecisionTreeProps) => {
           </div>
         )}
       </div>
+      {openNodeId && (
+        <NodeModal
+          tree={tree}
+          nodeId={openNodeId}
+          onClose={() => setOpenNodeId(undefined)}
+        />
+      )}
     </div>
   );
 };

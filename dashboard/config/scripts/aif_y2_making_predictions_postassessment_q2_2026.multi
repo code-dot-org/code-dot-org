@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q2-2026'
+
+wrong 'It trains a machine learning model so that it can make predictions'
+right 'It uses an already-fitted model to make a new prediction'
+wrong 'It predicts the accuracy of the machine learning model'
+wrong 'It calculates the loss on the training data'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+When using a machine learning model in `scikit-learn`, what does the `model.predict` method do?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Machine Learning in Python
+MARKDOWN

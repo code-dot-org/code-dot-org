@@ -1,6 +1,6 @@
 import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {createElement} from 'react';
 
 import TreeCanvas from '../../src/UIComponents/TreeCanvas';
@@ -11,20 +11,18 @@ const TOOLBAR_WIDTH = 40;
 let viewportSize;
 let resizeCallbacks;
 
-vi.stubGlobal(
-  'ResizeObserver',
-  class {
-    constructor(callback) {
-      this.callback = callback;
-    }
-    observe() {
-      resizeCallbacks.add(this.callback);
-    }
-    disconnect() {
-      resizeCallbacks.delete(this.callback);
-    }
+// Replaces the inert setup-file stub: these tests drive the resize callbacks.
+global.ResizeObserver = class {
+  constructor(callback) {
+    this.callback = callback;
   }
-);
+  observe() {
+    resizeCallbacks.add(this.callback);
+  }
+  disconnect() {
+    resizeCallbacks.delete(this.callback);
+  }
+};
 
 function resizeViewport(width, height) {
   viewportSize = {width, height};
@@ -194,11 +192,11 @@ describe('TreeCanvas', () => {
     renderCanvas({overlayRef: overlayRef(376)});
     resizeViewport(848, 360);
     fireEvent.click(button('Zoom in'));
-    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+    await waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
 
     fireEvent.click(button('Zoom to fit'));
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(contentTransform()).toBe('translate(72px, 102px) scale(0.5)')
     );
   });
@@ -207,7 +205,7 @@ describe('TreeCanvas', () => {
     renderCanvas();
     resizeViewport(472, 360);
     fireEvent.click(button('Zoom in'));
-    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+    await waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
 
     resizeViewport(848, 360);
 
@@ -218,9 +216,9 @@ describe('TreeCanvas', () => {
     renderCanvas();
     resizeViewport(472, 360);
     fireEvent.click(button('Zoom in'));
-    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
+    await waitFor(() => expect(contentScale()).toBe(0.5 * 1.25));
     fireEvent.click(button('Zoom to fit'));
-    await vi.waitFor(() => expect(contentScale()).toBe(0.5));
+    await waitFor(() => expect(contentScale()).toBe(0.5));
 
     resizeViewport(848, 360);
 
@@ -234,7 +232,7 @@ describe('TreeCanvas', () => {
     fireEvent.click(button('Zoom in'));
     fireEvent.click(button('Zoom in'));
 
-    await vi.waitFor(() => expect(contentScale()).toBe(0.5 * 1.25 * 1.25));
+    await waitFor(() => expect(contentScale()).toBe(0.5 * 1.25 * 1.25));
   });
 
   it('zooms to the path beside the toolbar', async () => {
@@ -243,7 +241,7 @@ describe('TreeCanvas', () => {
 
     fireEvent.click(button('Zoom to your path'));
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(contentTransform()).toBe('translate(180px, -80px) scale(1)')
     );
   });
@@ -273,7 +271,7 @@ describe('TreeCanvas', () => {
 
     act(() => node.focus());
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
         'translate(-512px, 2px) scale(1)'
       )
@@ -285,7 +283,7 @@ describe('TreeCanvas', () => {
 
     act(() => node.focus());
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
         'translate(-512px, 2px) scale(1)'
       )
@@ -295,7 +293,7 @@ describe('TreeCanvas', () => {
   it('keeps the view on a node it panned to when the viewport resizes', async () => {
     const [node] = renderNodesAt([800]);
     act(() => node.focus());
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
         'translate(-512px, 2px) scale(1)'
       )
@@ -314,7 +312,7 @@ describe('TreeCanvas', () => {
     act(() => node.focus());
 
     expect(node.style.getPropertyValue('--tree-canvas-scale')).toBe('0.5');
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.style.getPropertyValue('--tree-canvas-scale')).toBe('1')
     );
     expect(
@@ -347,7 +345,7 @@ describe('TreeCanvas', () => {
     act(() => far.focus());
     act(() => near.focus());
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(near.parentElement.style.transform).toBe(
         'translate(-28px, 2px) scale(1)'
       )
@@ -359,7 +357,7 @@ describe('TreeCanvas', () => {
 
     followNode('node-800');
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
         'translate(-512px, 2px) scale(1)'
       )
@@ -372,7 +370,7 @@ describe('TreeCanvas', () => {
     followNode('node-800');
     followNode('node-100');
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(near.parentElement.style.transform).toBe(
         'translate(-28px, 2px) scale(1)'
       )
@@ -406,7 +404,7 @@ describe('TreeCanvas', () => {
 
     act(() => node.focus());
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
         'translate(22px, 240px) scale(1)'
       )
@@ -435,7 +433,7 @@ describe('TreeCanvas', () => {
 
     act(() => node.focus());
 
-    await vi.waitFor(() =>
+    await waitFor(() =>
       expect(node.parentElement.style.transform).toBe(
         'translate(22px, 204px) scale(1)'
       )

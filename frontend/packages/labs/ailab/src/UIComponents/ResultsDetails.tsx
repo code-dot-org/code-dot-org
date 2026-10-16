@@ -1,8 +1,9 @@
 import React from 'react';
 
 import {formatAccuracy, getResultsByGrade} from '../helpers/accuracy';
-import {deepEqual, useAppSelector} from '../hooks';
+import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {setResultsTab} from '../redux';
 
 import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
@@ -16,8 +17,10 @@ const ResultsDetails = () => {
   const hasPredictions = useAppSelector(
     state => state.accuracyCheckPredictedLabels.length > 0
   );
+  const resultsTab = useAppSelector(state => state.resultsTab);
+  const dispatch = useAppDispatch();
   const results = useAppSelector(
-    state => getResultsByGrade(state, project, state.resultsTab),
+    state => getResultsByGrade(state, project, resultsTab),
     deepEqual
   );
 
@@ -38,7 +41,10 @@ const ResultsDetails = () => {
           {hasPredictions && (
             <>
               <span className={styles.divider} />
-              <ResultsToggle />
+              <ResultsToggle
+                grade={resultsTab}
+                onChange={grade => dispatch(setResultsTab(grade))}
+              />
             </>
           )}
         </div>

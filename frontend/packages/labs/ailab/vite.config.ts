@@ -46,31 +46,6 @@ function emitRuntimeAssets(): Plugin {
   };
 }
 
-// In dev there is no consumer to serve those files, and `publicDir` is off
-// (see below), so the standalone host page (setAssetPathDev seeds `./`) would
-// 404 on `/datasets/*` and `/images/*`. Serve them straight off disk during
-// `vite` / `vite preview`, mirroring the production layout. The request path
-// is decoded, resolved, and confirmed to stay under `public/` so a `../`
-// request cannot escape the served roots.
-function devRuntimeAssets(): Plugin {
-  return {
-    name: 'dev-runtime-assets',
-    configureServer(server) {
-      server.middlewares.use((req, _res, next) => {
-        const url = req.url ?? '';
-        if (RUNTIME_ASSET_DIRS.some(dir => url.startsWith(`/${dir}/`))) {
-          const rel = decodeURIComponent(url.slice(1).split('?')[0]);
-          const file = path.resolve(PUBLIC_DIR, rel);
-          if (file.startsWith(PUBLIC_DIR + path.sep) && fs.existsSync(file)) {
-            req.url = `/@fs${file}`;
-          }
-        }
-        next();
-      });
-    },
-  };
-}
-
 export default defineConfig({
   // The lab reads/writes the asset-path global as `global.__ml_playground…`;
   // shim `global` to the browser global object.
@@ -87,7 +62,6 @@ export default defineConfig({
     // the same way here and there.
     react({jsxRuntime: 'classic'}),
     emitRuntimeAssets(),
-    devRuntimeAssets(),
     // Emit `.d.ts` from the library entry.
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     // Externalize peerDependencies only (react, react-dom, redux,

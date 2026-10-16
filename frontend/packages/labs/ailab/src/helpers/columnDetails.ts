@@ -30,6 +30,21 @@ export function isRegression(state: RootState, project: AilabProject): boolean {
   return isColumnNumerical(state, project.labelColumn!);
 }
 
+export type ColumnRole = 'label' | 'feature';
+
+export function getColumnRole(
+  project: AilabProject,
+  column: string
+): ColumnRole | undefined {
+  if (column === project.labelColumn) {
+    return 'label';
+  }
+  if (project.selectedFeatures.includes(column)) {
+    return 'feature';
+  }
+  return undefined;
+}
+
 export function filterColumnsByType(
   columnsByDataType: Record<string, string>,
   columnType: string

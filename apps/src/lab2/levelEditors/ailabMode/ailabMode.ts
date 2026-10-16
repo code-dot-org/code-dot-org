@@ -107,6 +107,26 @@ export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   return newMode;
 }
 
+const SET_BY_DATASET = [
+  'label',
+  'features',
+  'hideSelectLabel',
+  'lockFeatures',
+  'pretrained',
+  'hideDatasetView',
+];
+
+export function needsDataset(mode: ModeObject, key: string): boolean {
+  return getSelectedDataset(mode) === undefined && SET_BY_DATASET.includes(key);
+}
+
+export function clearDataset(mode: ModeObject): ModeObject {
+  const newMode = {...mode};
+  delete newMode.datasets;
+  SET_BY_DATASET.forEach(key => delete newMode[key]);
+  return newMode;
+}
+
 export function getFeatures(mode: ModeObject): string[] {
   return (mode.features as string[] | undefined) ?? [];
 }
