@@ -53,6 +53,7 @@ class FreeResponseQuestion < QuizQuestion
   end
 
   private def validate_question_shape
+    # Blank content already fails QuizQuestion's presence validation.
     return if content.blank?
     validate_shared_content(content.deep_stringify_keys)
   end

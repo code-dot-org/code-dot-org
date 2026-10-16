@@ -76,6 +76,7 @@ class MultipleSelectQuestion < QuizQuestion
   end
 
   private def validate_question_shape
+    # Blank content already fails QuizQuestion's presence validation.
     return if content.blank?
     q = content.deep_stringify_keys
     validate_shared_content(q)
