@@ -15,10 +15,6 @@
   color: var(--text-neutral-secondary);
 }
 
-.table .columnHeader {
-  top: mixins.$data-table-row-height;
-}
-
 .emptyNote {
   @include mixins.data-table-empty-note;
 }

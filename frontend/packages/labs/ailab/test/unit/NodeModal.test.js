@@ -63,10 +63,19 @@ function cellTexts(row) {
   return Array.from(row.querySelectorAll('th, td'), cell => cell.textContent);
 }
 
-function shownRows() {
+function rowgroups() {
   const tables = within(dialog()).getAllByRole('table');
-  const [, body] = within(tables[tables.length - 1]).getAllByRole('rowgroup');
+  return within(tables[tables.length - 1]).getAllByRole('rowgroup');
+}
+
+function shownRows() {
+  const [, body] = rowgroups();
   return within(body).getAllByRole('row').map(cellTexts);
+}
+
+function shownHeaders() {
+  const [head] = rowgroups();
+  return within(head).getAllByRole('row').map(cellTexts);
 }
 
 function pathSteps() {
@@ -160,7 +169,8 @@ describe('NodeModal', () => {
   it("splits an answer's accuracy check rows by whether the AI got them right", () => {
     fireEvent.click(answer('dog'));
 
-    expect(shownRows()).toEqual([['10', '4', 'dog']]);
+    expect(shownHeaders()).toEqual([['', 'legs', 'animal', 'AI predicts']]);
+    expect(shownRows()).toEqual([['10', '4', 'dog', 'dog']]);
 
     fireEvent.click(
       within(dialog()).getByRole('button', {name: 'Incorrect (0)'})
@@ -172,6 +182,13 @@ describe('NodeModal', () => {
     expect(
       within(dialog()).getByRole('button', {name: 'Correct (1)'})
     ).toBeTruthy();
+  });
+
+  it("leaves the AI's prediction off an answer's training rows", () => {
+    fireEvent.click(answer('dog'));
+    fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
+
+    expect(shownHeaders()).toEqual([['', 'legs', 'animal']]);
   });
 
   it('shows your example only on the path of your prediction', () => {

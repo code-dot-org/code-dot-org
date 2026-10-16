@@ -4,11 +4,13 @@ import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 
 import CellText from './CellText';
+import PredictionHeader from './PredictionHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
@@ -18,6 +20,7 @@ interface NodeRowsTableProps {
   emphasizedColumn?: string;
   showAllColumns: boolean;
   emptyText: string;
+  prediction?: string | number;
 }
 
 const NodeRowsTable = ({
@@ -25,18 +28,27 @@ const NodeRowsTable = ({
   emphasizedColumn,
   showAllColumns,
   emptyText,
+  prediction,
 }: NodeRowsTableProps) => {
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const labelColumn = project.labelColumn || 'unknown';
+  const showPrediction = prediction !== undefined;
   const columns = showAllColumns
-    ? Object.keys(data[0] ?? {})
-    : [...project.selectedFeatures, project.labelColumn || 'unknown'];
+    ? Object.keys(data[0] ?? {}).filter(
+        column => !(showPrediction && column === labelColumn)
+      )
+    : showPrediction
+      ? project.selectedFeatures
+      : [...project.selectedFeatures, labelColumn];
   const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
 
-  const isLabel = (column: string) => column === project.labelColumn;
+  const isLabel = (column: string) => column === labelColumn;
   const isFeature = (column: string) =>
     !isLabel(column) && project.selectedFeatures.includes(column);
+  const columnName = (column: string) =>
+    getLocalizedColumnName(datasetId, column);
 
   return (
     <>
@@ -44,30 +56,37 @@ const NodeRowsTable = ({
         <div className={styles.scroller}>
           <table className={tableStyles.table}>
             <thead>
-              <tr>
-                <th
-                  className={classNames(
-                    tableStyles.indexCell,
-                    tableStyles.indexHeader,
-                    tableStyles.indexColumn
-                  )}
-                  aria-label="Row"
+              {showPrediction ? (
+                <PredictionHeader
+                  columns={columns}
+                  labelColumn={labelColumn}
+                  columnName={columnName}
+                  isFeature={isFeature}
                 />
-                {columns.map(column => (
+              ) : (
+                <tr>
                   <th
-                    key={column}
-                    scope="col"
-                    className={classNames(tableStyles.header, {
-                      [tableStyles.headerLabel]: isLabel(column),
-                      [tableStyles.headerFeature]: isFeature(column),
-                    })}
-                  >
-                    <CellText>
-                      {getLocalizedColumnName(datasetId, column)}
-                    </CellText>
-                  </th>
-                ))}
-              </tr>
+                    className={classNames(
+                      tableStyles.indexCell,
+                      tableStyles.indexHeader,
+                      tableStyles.indexColumn
+                    )}
+                    aria-label="Row"
+                  />
+                  {columns.map(column => (
+                    <th
+                      key={column}
+                      scope="col"
+                      className={classNames(tableStyles.header, {
+                        [tableStyles.headerLabel]: isLabel(column),
+                        [tableStyles.headerFeature]: isFeature(column),
+                      })}
+                    >
+                      <CellText>{columnName(column)}</CellText>
+                    </th>
+                  ))}
+                </tr>
+              )}
             </thead>
             <tbody>
               {shownRows.map(row => (
@@ -89,6 +108,34 @@ const NodeRowsTable = ({
                       </CellText>
                     </td>
                   ))}
+                  {showPrediction && (
+                    <>
+                      <td
+                        className={classNames(
+                          tableStyles.bodyCell,
+                          tableStyles.bodyCellLabel,
+                          {
+                            [styles.emphasized]:
+                              emphasizedColumn === labelColumn,
+                          }
+                        )}
+                      >
+                        <CellText>
+                          {getLocalizedValue(data[row][labelColumn], datasetId)}
+                        </CellText>
+                      </td>
+                      <td
+                        className={classNames(
+                          tableStyles.bodyCell,
+                          tableStyles.bodyCellLabel
+                        )}
+                      >
+                        <CellText>
+                          {displayValue(prediction, datasetId)}
+                        </CellText>
+                      </td>
+                    </>
+                  )}
                 </tr>
               ))}
             </tbody>

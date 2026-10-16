@@ -17,6 +17,7 @@ export interface RowsPanelProps {
   onToggleColumns: () => void;
   emptyText?: string;
   resultsToggle?: ReactNode;
+  prediction?: string | number;
 }
 
 const RowsPanel = ({
@@ -27,6 +28,7 @@ const RowsPanel = ({
   onToggleColumns,
   emptyText = 'No rows reached this step',
   resultsToggle,
+  prediction,
 }: RowsPanelProps) => (
   <div className={styles.panel}>
     <div className={styles.header}>
@@ -56,6 +58,7 @@ const RowsPanel = ({
       emphasizedColumn={emphasizedColumn}
       showAllColumns={showAllColumns}
       emptyText={emptyText}
+      prediction={prediction}
     />
   </div>
 );
