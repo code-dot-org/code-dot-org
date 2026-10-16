@@ -110,6 +110,53 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_empty level.step_levels
   end
 
+  test "submitted content must be a JSON object whose id is the content id" do
+    level = build(:adaptive, adaptive_id: 'sample')
+
+    level.adaptive_content_json = '{"id": "sample",}'
+    refute level.valid?
+    assert_match(/not valid JSON/, level.errors[:adaptive_content_json].first)
+
+    level.adaptive_content_json = '[{"id": "sample"}]'
+    refute level.valid?
+    assert_equal ['must be a JSON object'], level.errors[:adaptive_content_json]
+
+    level.adaptive_content_json = '{"id": "needs-skill"}'
+    refute level.valid?
+    assert_match(/"needs-skill"/, level.errors[:adaptive_content_json].first)
+
+    level.adaptive_content_json = '{"id": "sample", "title": "Edited"}'
+    assert level.valid?
+  end
+
+  test "saving writes submitted content only in levelbuilder mode" do
+    level = create(:adaptive, adaptive_id: 'sample')
+    original = @dir.join('sample.json').read
+
+    level.update!(adaptive_content_json: '{"id": "sample", "title": "Edited"}')
+    assert_equal original, @dir.join('sample.json').read
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+    level.update!(adaptive_content_json: "{\"id\": \"sample\", \"title\": \"Edited\"}\r\n")
+    assert_equal "{\"id\": \"sample\", \"title\": \"Edited\"}\n", @dir.join('sample.json').read
+    assert_equal 'Edited', level.content['title']
+  end
+
+  test "saving without submitted content leaves the file alone" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+    AdaptiveContent.expects(:write).never
+
+    create(:adaptive, adaptive_id: 'sample').update!(notes: 'changed')
+  end
+
+  test "sharing_levels lists every level with the same content id, by name" do
+    second = create(:adaptive, name: 'Adaptive B', adaptive_id: 'sample')
+    first = create(:adaptive, name: 'Adaptive A', adaptive_id: 'sample')
+    create(:adaptive, name: 'Adaptive C', adaptive_id: 'needs-skill')
+
+    assert_equal [first, second], second.sharing_levels
+  end
+
   private def write_levels_pathway
     @dir.join('levels.json').write({
       'id' => 'levels',

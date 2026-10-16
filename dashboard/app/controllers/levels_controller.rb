@@ -729,7 +729,10 @@ class LevelsController < ApplicationController
       {song_selection: []},
 
       # Web Lab 2-specific
-      {available_ai_tutor_modes: []}
+      {available_ai_tutor_modes: []},
+
+      # Adaptive-specific
+      :adaptive_content_json,
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select

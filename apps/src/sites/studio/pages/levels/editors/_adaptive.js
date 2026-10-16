@@ -1,0 +1,61 @@
+import $ from 'jquery';
+
+import {
+  AdaptiveContentError,
+  parsePathwaySource,
+} from '@cdo/apps/adaptive/schema';
+
+function contentProblems(text) {
+  try {
+    parsePathwaySource(JSON.parse(text));
+    return [];
+  } catch (error) {
+    return error instanceof AdaptiveContentError
+      ? error.problems
+      : [error.message];
+  }
+}
+
+$(document).ready(() => {
+  const container = document.getElementById('adaptive-content-editor');
+  if (!container) {
+    return;
+  }
+  const textarea = document.getElementById('level_adaptive_content_json');
+  const select = document.getElementById('level_adaptive_id');
+  const lockNote = document.getElementById('adaptive-content-locked');
+  const savedId = container.dataset.savedAdaptiveId;
+
+  const editor = window.levelbuilder.initializeCodeMirror6(textarea, 'json');
+  const wrapper = editor.getWrapperElement();
+
+  // A disabled textarea is not submitted, so the file named by the old
+  // Content ID is never written under the new one.
+  $(select).on('change', () => {
+    const locked = select.value !== savedId;
+    textarea.disabled = locked;
+    wrapper.inert = locked;
+    wrapper.style.opacity = locked ? '0.5' : '';
+    lockNote.style.display = locked ? '' : 'none';
+  });
+
+  // jquery_ujs cancels the request when an ajax:before handler returns false.
+  $(textarea.form).on('ajax:before', () => {
+    if (textarea.disabled) {
+      return true;
+    }
+    const problems = contentProblems(textarea.value);
+    if (problems.length === 0) {
+      return true;
+    }
+    $('.publishLevelErrorMessage').show();
+    $('#validation-error')
+      .empty()
+      .show()
+      .append(
+        $('<p/>').text("Couldn't save: the adaptive content is invalid."),
+        $('<ul/>').append(problems.map(problem => $('<li/>').text(problem)))
+      );
+    return false;
+  });
+});

@@ -33,8 +33,14 @@ class Adaptive < Level
 
   PROJECT_STEP_ID = 'project'.freeze
 
+  # The content file's text as submitted from the edit form; not a property.
+  attr_accessor :adaptive_content_json
+
   validates :adaptive_id, presence: true
   validate :adaptive_content_exists
+  validate :adaptive_content_json_matches
+
+  after_save :write_adaptive_content
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -82,6 +88,10 @@ class Adaptive < Level
     step_levels.values.any? {|step_level| step_level.id == level.id}
   end
 
+  def sharing_levels
+    Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
+  end
+
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
     pathway = content
@@ -96,6 +106,26 @@ class Adaptive < Level
     return if adaptive_id.blank?
     return if AdaptiveContent.exist?(adaptive_id)
     errors.add(:adaptive_id, "has no content file under #{AdaptiveContent.content_dir}")
+  end
+
+  # Backstop for requests that skip the browser's schema check.
+  private def adaptive_content_json_matches
+    return if adaptive_content_json.nil?
+    content = JSON.parse(adaptive_content_json)
+    if !content.is_a?(Hash)
+      errors.add(:adaptive_content_json, 'must be a JSON object')
+    elsif content['id'] != adaptive_id
+      errors.add(:adaptive_content_json, "has id #{content['id'].inspect}, but the content ID is #{adaptive_id.inspect}")
+    end
+  rescue JSON::ParserError => exception
+    # The parser's message quotes the rest of the document.
+    errors.add(:adaptive_content_json, "is not valid JSON: #{exception.message.truncate(200)}")
+  end
+
+  private def write_adaptive_content
+    return if adaptive_content_json.nil?
+    return unless Rails.application.config.levelbuilder_mode
+    AdaptiveContent.write(adaptive_id, adaptive_content_json)
   end
 
   # A copy of `pathway` with each referenced level's properties, as returned

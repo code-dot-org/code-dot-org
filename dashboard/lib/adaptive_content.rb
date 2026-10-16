@@ -41,6 +41,24 @@ module AdaptiveContent
     pathway.merge('skills' => skills.transform_values {|skill| with_resolved_standards(skill)})
   end
 
+  # Returns false, writing nothing, when the file already holds the normalized text.
+  def self.write(id, text)
+    file = path(id)
+    normalized = "#{text.gsub("\r\n", "\n").rstrip}\n"
+    return false if File.file?(file) && File.read(file) == normalized
+    temp = Tempfile.create([".#{id}", '.json'], content_dir)
+    begin
+      temp.write(normalized)
+      temp.close
+      File.chmod(0o644, temp.path)
+      File.rename(temp.path, file)
+    rescue
+      FileUtils.rm_f(temp.path)
+      raise
+    end
+    true
+  end
+
   def self.reset_cache!
     @cache.clear
   end

@@ -88,6 +88,36 @@ class AdaptiveContentTest < ActiveSupport::TestCase
     assert_equal 'Alpha v2', AdaptiveContent.load('alpha')['title']
   end
 
+  test "write normalizes line endings and the trailing newline, keeping the rest" do
+    assert AdaptiveContent.write('alpha', "{\r\n  \"a\": [1, 2]\r\n}\n\n")
+    assert_equal "{\n  \"a\": [1, 2]\n}\n", @dir.join('alpha.json').read
+
+    assert AdaptiveContent.write('alpha', '{"a": [1, 2]}')
+    assert_equal "{\"a\": [1, 2]}\n", @dir.join('alpha.json').read
+  end
+
+  test "write leaves an unchanged file alone" do
+    file = @dir.join('alpha.json')
+    file.write("{}\n")
+    mtime = Time.now - 60
+    File.utime(mtime, mtime, file)
+
+    refute AdaptiveContent.write('alpha', "{}\r\n")
+    assert_equal mtime.to_i, File.mtime(file).to_i
+  end
+
+  test "write replaces the file without leaving a temp file" do
+    AdaptiveContent.write('alpha', '{"title": "Alpha v2"}')
+
+    assert_equal 'Alpha v2', AdaptiveContent.load('alpha')['title']
+    assert_equal ['Not Valid.json', 'alpha.json', 'beta-2.json'], @dir.children.map {|child| child.basename.to_s}.sort
+    assert_equal 0o644, File.stat(@dir.join('alpha.json')).mode & 0o777
+  end
+
+  test "write raises for an invalid id" do
+    assert_raises(ArgumentError) {AdaptiveContent.write('../alpha', '{}')}
+  end
+
   private def write_content(id, hash)
     @dir.join("#{id}.json").write(hash.to_json)
   end

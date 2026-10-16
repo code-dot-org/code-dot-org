@@ -1470,6 +1470,26 @@ class LevelsControllerTest < ActionController::TestCase
     refute_includes texts, '[t]oolbox'
   end
 
+  test "update writes submitted adaptive content and rejects a mismatched id" do
+    Dir.mktmpdir do |dir|
+      dir = Pathname.new(dir)
+      dir.join('sample.json').write("{\"id\": \"sample\"}\n")
+      AdaptiveContent.stubs(:content_dir).returns(dir)
+      level = create(:adaptive, adaptive_id: 'sample')
+
+      patch :update, params: {id: level, level: {adaptive_content_json: '{"id": "other"}'}}
+      assert_response :unprocessable_entity
+      assert JSON.parse(response.body).key?('adaptive_content_json')
+      assert_equal "{\"id\": \"sample\"}\n", dir.join('sample.json').read
+
+      patch :update, params: {id: level, level: {adaptive_content_json: '{"id": "sample", "title": "Edited"}'}}
+      assert_response :success
+      assert_equal "{\"id\": \"sample\", \"title\": \"Edited\"}\n", dir.join('sample.json').read
+    ensure
+      AdaptiveContent.reset_cache!
+    end
+  end
+
   private def extra_links_texts(level)
     get :extra_links, params: {id: level.id}
     assert_response :success
