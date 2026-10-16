@@ -227,7 +227,7 @@ module ShareFiltering
   # @return [ShareFailure, nil]
   def self.find_pii_failure(text, exceptions: false)
     find_email_or_phone_failure(text, exceptions: exceptions) ||
-      find_street_address_failure(text, exceptions: exceptions)
+      find_address_failure(text, exceptions: exceptions)
   end
 
   # Searches for profanity in text.
@@ -387,13 +387,6 @@ module ShareFiltering
   def self.find_address_failure(text, exceptions: false)
     return nil unless Gatekeeper.allows('webpurify', default: true)
 
-    find_street_address_failure(text, exceptions: exceptions)
-  end
-
-  # Unlike find_address_failure, ignores the webpurify gatekeeper, as
-  # find_pii_failure always has.
-  # @return [ShareFailure, nil]
-  private_class_method def self.find_street_address_failure(text, exceptions: false)
     candidate = Geocoder.extract_address_candidate(text)
     return nil unless candidate
     street_address = Geocoder.find_potential_street_address(candidate)
