@@ -134,15 +134,13 @@ describe('ResultsDetails', () => {
 
   test('sorts by the AI prediction', () => {
     renderScorecard();
-    const sortByPrediction = screen.getByRole('button', {
-      name: 'Sort by AI prediction',
-    });
-    fireEvent.click(sortByPrediction);
-    fireEvent.click(sortByPrediction);
+    const sortButton = name => screen.getByRole('button', {name});
+    fireEvent.click(sortButton('Sort by AI prediction A-Z'));
+    fireEvent.click(sortButton('Sort by AI prediction Z-A'));
 
-    expect(sortByPrediction.closest('th').getAttribute('aria-sort')).toBe(
-      'descending'
-    );
+    expect(
+      sortButton('Original order').closest('th').getAttribute('aria-sort')
+    ).toBe('descending');
     expect(bodyRows()).toEqual([
       ['2', '4', 'dog', 'dog'],
       ['1', '2', 'bird', 'bird'],

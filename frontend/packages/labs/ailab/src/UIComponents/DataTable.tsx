@@ -64,12 +64,14 @@ const DataTable = ({
   const showRowNumbers = !reducedColumns;
   const isClickable = !reducedColumns && showColumnClicking;
 
+  const isSelected = (key: string) => !reducedColumns && key === currentColumn;
+
   const getColumnHeaderClassName = (key: string) => {
     const role = getColumnRole(project, key);
     return classNames(styles.header, {
       [styles.headerLabel]: role === 'label',
       [styles.headerFeature]: role === 'feature',
-      [styles.headerSelected]: !reducedColumns && key === currentColumn,
+      [styles.headerSelected]: isSelected(key),
       [styles.clickable]: isClickable,
     });
   };
@@ -141,6 +143,7 @@ const DataTable = ({
                 column={columnId}
                 name={columnName}
                 view={view}
+                selected={isSelected(columnId)}
                 className={getColumnHeaderClassName(columnId)}
               >
                 {isClickable ? (

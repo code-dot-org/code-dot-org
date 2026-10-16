@@ -69,31 +69,35 @@
   }
 }
 
-.headerWithControls {
-  padding-right: 4px;
+.header.headerWithControls:not(.clickable),
+.headerWithControls .headerButton {
+  padding-right: 28px;
+}
 
-  &.clickable {
-    padding-right: 4px;
-  }
+.sortControl {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  opacity: 0;
+}
 
-  .headerButton {
-    padding-right: 4px;
+// Until its column is sorted, the button shows only on hover or focus.
+.headerWithControls:hover .sortControl,
+.headerWithControls:focus-within .sortControl,
+.sortControl.sorted {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .sortControl {
+    opacity: 1;
   }
 }
 
-.headerContent {
-  display: flex;
+.sortTooltip {
+  display: inline-flex;
   align-items: center;
-  gap: 2px;
-  height: 100%;
-}
-
-.headerName {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  align-self: stretch;
-  min-width: 0;
+  gap: 6px;
 }
 
 .headerButton {

@@ -17,6 +17,7 @@ interface TableSort {
 
 export interface TableView {
   rows: number[];
+  isNumerical: (column: string) => boolean;
   sortDirection: (column: string) => SortDirection | undefined;
   toggleSort: (column: string) => void;
 }
@@ -44,6 +45,16 @@ function compareValues(
     }
   }
   return collator.compare(String(a), String(b));
+}
+
+// Unsorted, then ascending, then descending, then unsorted again.
+export function nextSortDirection(
+  direction: SortDirection | undefined
+): SortDirection | undefined {
+  if (!direction) {
+    return 'ascending';
+  }
+  return direction === 'ascending' ? 'descending' : undefined;
 }
 
 export function useTableView({
@@ -74,17 +85,15 @@ export function useTableView({
 
   return {
     rows,
+    isNumerical: column => columnTypes[column] === ColumnTypes.NUMERICAL,
     sortDirection: column =>
       sort?.column === column ? sort.direction : undefined,
     toggleSort: column =>
       setSort(current => {
-        if (current?.column !== column) {
-          return {column, direction: 'ascending'};
-        }
-        if (current.direction === 'ascending') {
-          return {column, direction: 'descending'};
-        }
-        return undefined;
+        const direction = nextSortDirection(
+          current?.column === column ? current.direction : undefined
+        );
+        return direction && {column, direction};
       }),
   };
 }

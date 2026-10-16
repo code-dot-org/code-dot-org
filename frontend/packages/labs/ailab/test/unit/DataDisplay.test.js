@@ -116,11 +116,11 @@ describe('DataDisplay', () => {
 
   test('sorts by a column and keeps each row its dataset number', () => {
     renderDisplay();
-    fireEvent.click(button('Sort by legs'));
+    fireEvent.click(button('Sort by legs low to high'));
 
-    expect(button('Sort by legs').closest('th').getAttribute('aria-sort')).toBe(
-      'ascending'
-    );
+    expect(
+      button('Sort by legs high to low').closest('th').getAttribute('aria-sort')
+    ).toBe('ascending');
     expect(rowNumbers()).toEqual([
       '3',
       '6',
@@ -133,5 +133,22 @@ describe('DataDisplay', () => {
       '8',
       '10',
     ]);
+  });
+
+  test('the sort button names what the next click does', () => {
+    renderDisplay();
+    fireEvent.click(button('Sort by animal A-Z'));
+    fireEvent.click(button('Sort by animal Z-A'));
+
+    expect(
+      button('Original order').closest('th').getAttribute('aria-sort')
+    ).toBe('descending');
+    expect(rowNumbers().slice(0, 3)).toEqual(['3', '6', '9']);
+
+    fireEvent.click(button('Original order'));
+    expect(
+      button('Sort by animal A-Z').closest('th').hasAttribute('aria-sort')
+    ).toBe(false);
+    expect(rowNumbers().slice(0, 3)).toEqual(['1', '2', '3']);
   });
 });

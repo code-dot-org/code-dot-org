@@ -28,7 +28,9 @@ describe('RowsPanel', () => {
 
   test('sorts the rows and keeps each its dataset number', () => {
     renderPanel();
-    fireEvent.click(screen.getByRole('button', {name: 'Sort by legs'}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Sort by legs low to high'})
+    );
     expect(rowNumbers()).toEqual(['3', '1', '4', '2', '5']);
   });
 
@@ -38,7 +40,7 @@ describe('RowsPanel', () => {
       screen.getByRole('columnheader', {name: 'AI predicts'})
     ).toBeTruthy();
     expect(
-      screen.queryByRole('button', {name: 'Sort by AI prediction'})
+      screen.queryByRole('button', {name: /^Sort by AI prediction/})
     ).toBeNull();
   });
 });
