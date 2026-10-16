@@ -13,6 +13,7 @@ import initializeCodeMirror6 from './initializeCodeMirror6';
 // empty, delete this file. Classic-era flags and ai_code_generate_*
 // (Music Lab only so far) are left out on purpose.
 export const RAW_EDITABLE_PROPERTIES = [
+  'block_catalog',
   'guide_steps',
   'hide_custom_blocks',
   'image_role_defaults',

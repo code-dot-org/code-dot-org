@@ -25,6 +25,7 @@
     "level_mode": {
       "kind": "freeplay"
     },
+    "block_catalog": true,
     "image_role_defaults": {
       "sprite": "hero",
       "gamelab_addBehaviorSimple": [
@@ -52,7 +53,39 @@
           "contents": [
             {
               "kind": "block",
+              "type": "spritelab2_setPlatformGravity"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setCameraZoom"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setAsPlatformPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_thePlayer"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_checkTouching",
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -72,14 +105,6 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_setAsPlatformPlayer"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_thePlayer"
-            },
-            {
-              "kind": "block",
               "type": "gamelab_addBehaviorSimple",
               "inputs": {
                 "SPRITE": {
@@ -96,31 +121,7 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravity"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_setCameraZoom"
-            },
-            {
-              "kind": "block",
               "type": "spritelab2_restartScene"
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_checkTouching",
-              "inputs": {
-                "SPRITE1": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "SPRITE2": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
             },
             {
               "kind": "block",
@@ -144,7 +145,36 @@
           "contents": [
             {
               "kind": "block",
+              "type": "spritelab2_makeSpriteAtPosition"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_atTime",
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 3
+                    }
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -161,10 +191,6 @@
             {
               "kind": "block",
               "type": "spritelab2_burst"
-            },
-            {
-              "kind": "block",
-              "type": "spritelab2_makeSpriteAtPosition"
             },
             {
               "kind": "block",
@@ -195,31 +221,6 @@
                 "SPRITE": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_spriteClicked",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_atTime",
-              "inputs": {
-                "N": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 3
-                    }
                   }
                 }
               }

@@ -43,3 +43,27 @@ export function toolboxForSceneType(
     ),
   };
 }
+
+/** Which scene type each block in the authored toolbox is for; blocks in
+    the shared category, or in an untyped toolbox, are absent. */
+export function sceneTypesByBlock(
+  toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined
+): Map<string, SceneType> {
+  const types = new Map<string, SceneType>();
+  if (toolbox?.kind !== 'categoryToolbox') {
+    return types;
+  }
+  const categories = (toolbox.contents || []) as AuthoredCategory[];
+  (Object.keys(CATEGORY_FOR_TYPE) as SceneType[]).forEach(sceneType => {
+    const category = categories.find(
+      entry => entry.name === CATEGORY_FOR_TYPE[sceneType]
+    );
+    (category?.contents || []).forEach(entry => {
+      const type = (entry as {type?: string}).type;
+      if (type) {
+        types.set(type, sceneType);
+      }
+    });
+  });
+  return types;
+}
