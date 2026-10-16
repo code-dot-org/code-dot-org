@@ -58,7 +58,7 @@ const inputsHash = generateInputsHash(
 const resolve = (
   overrides: Partial<Parameters<typeof resolveStepInstructions>[0]> = {}
 ) => {
-  const updateStepContext = jest.fn();
+  const saveGeneratedInstructions = jest.fn();
   const result = resolveStepInstructions({
     pathway,
     checkpoint,
@@ -67,11 +67,11 @@ const resolve = (
     sources,
     authoredInstructions: 'Authored.',
     stepContext: undefined,
-    updateStepContext,
+    saveGeneratedInstructions,
     aichatContext: context,
     ...overrides,
   });
-  return {result, updateStepContext};
+  return {result, saveGeneratedInstructions};
 };
 
 describe('resolveStepInstructions', () => {
@@ -107,13 +107,15 @@ describe('resolveStepInstructions', () => {
       output: {instructions: 'Fresh.'},
       traceId: 'trace-1',
     });
-    const {result, updateStepContext} = resolve({
+    const {result, saveGeneratedInstructions} = resolve({
       stepContext: {generated: {instructions: 'Old.', inputsHash: 'deadbeef'}},
     });
 
     expect(await result).toBe('Fresh.');
-    expect(updateStepContext).toHaveBeenCalledWith('build', {
-      generated: {instructions: 'Fresh.', inputsHash, traceId: 'trace-1'},
+    expect(saveGeneratedInstructions).toHaveBeenCalledWith('build', {
+      instructions: 'Fresh.',
+      inputsHash,
+      traceId: 'trace-1',
     });
   });
 
@@ -138,9 +140,9 @@ describe('resolveStepInstructions', () => {
 
   it('returns the authored text and caches nothing when generation yields nothing', async () => {
     mockGenerate.mockResolvedValue({traceId: 'trace-1'});
-    const {result, updateStepContext} = resolve();
+    const {result, saveGeneratedInstructions} = resolve();
 
     expect(await result).toBe('Authored.');
-    expect(updateStepContext).not.toHaveBeenCalled();
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
   });
 });

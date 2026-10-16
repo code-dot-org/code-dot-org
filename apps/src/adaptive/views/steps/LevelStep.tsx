@@ -104,7 +104,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     checkpoint,
     statusMap,
     stepContextMap,
-    updateStepContext,
+    saveGeneratedInstructions,
     aiContext,
   } = usePathwayContext();
   // Keyed on the project's strings, not the channel, which changes on every save.
@@ -121,7 +121,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     sources: currentSources,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
     stepContext: stepContextMap[step.id],
-    updateStepContext,
+    saveGeneratedInstructions,
     aichatContext: aiContext,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus

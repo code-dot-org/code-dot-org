@@ -1,7 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import IdleTimer from 'react-idle-timer';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
@@ -16,14 +17,27 @@ import shared from '../shared.module.scss';
 
 const NO_ANSWERS: StepAnswers = {};
 
+// Lab2IdleTimer's threshold. Its timer is not shared: every milestone resets it.
+const IDLE_AFTER_MS = 1000 * 60 * 2;
+
+interface StepClock {
+  from: number;
+  idleMs: number;
+  idleFrom?: number;
+}
+
 interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  onStartStep: (step: Step) => void;
+  onCompleteStep: (step: Step, timeMs: number) => void;
+  onLeaveStep: (step: Step, timeMs: number) => void;
   onSaveAnswers: (
-    stepId: string,
+    step: Step,
     questionId: number,
-    answers: Answer[]
+    answers: Answer[],
+    timeMs: number
   ) => void;
   onExit: () => void;
   onFinish: () => void;
@@ -33,6 +47,9 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  onStartStep,
+  onCompleteStep,
+  onLeaveStep,
   onSaveAnswers,
   onExit,
   onFinish,
@@ -43,7 +60,31 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   const step = steps[index];
   const last = index === steps.length - 1;
   const continueLabel = last ? finishLabel : 'Continue';
-  const advance = () => (last ? onFinish() : setIndex(index + 1));
+
+  // Counts from when the current step was shown or its time last reported.
+  const clock = useRef<StepClock>({from: Date.now(), idleMs: 0});
+  const takeElapsed = useCallback(() => {
+    const {from, idleMs, idleFrom} = clock.current;
+    const now = Date.now();
+    const idle = idleMs + (idleFrom === undefined ? 0 : now - idleFrom);
+    clock.current = {
+      from: now,
+      idleMs: 0,
+      idleFrom: idleFrom === undefined ? undefined : now,
+    };
+    return now - from - idle;
+  }, []);
+
+  useEffect(() => {
+    takeElapsed(); // Restarts the clock for this step.
+    onStartStep(step);
+  }, [step, onStartStep, takeElapsed]);
+
+  const advance = () => {
+    onCompleteStep(step, takeElapsed());
+    if (last) onFinish();
+    else setIndex(index + 1);
+  };
 
   const renderStep = (step: Step) => {
     switch (step.kind) {
@@ -65,7 +106,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             step={step}
             answers={stepContextMap[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={(questionId, list) =>
-              onSaveAnswers(step.id, questionId, list)
+              onSaveAnswers(step, questionId, list, takeElapsed())
             }
             onComplete={advance}
           />
@@ -87,8 +128,27 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
 
   return (
     <div className={styles.player}>
+      <IdleTimer
+        timeout={IDLE_AFTER_MS}
+        onIdle={() => {
+          clock.current.idleFrom ??= Date.now();
+        }}
+        onActive={() => {
+          const c = clock.current;
+          if (c.idleFrom === undefined) return;
+          c.idleMs += Date.now() - c.idleFrom;
+          c.idleFrom = undefined;
+        }}
+      />
       <div className={styles.playerBar}>
-        <MuiButton variant="outlined" size="extraSmall" onClick={onExit}>
+        <MuiButton
+          variant="outlined"
+          size="extraSmall"
+          onClick={() => {
+            onLeaveStep(step, takeElapsed());
+            onExit();
+          }}
+        >
           <FontAwesomeV6Icon iconName="map" />
           &nbsp;Back to map
         </MuiButton>
