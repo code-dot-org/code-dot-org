@@ -39,6 +39,9 @@ class Ailab < Level
 
   REQUIRE_ACCURACY_RANGE = (0..100)
 
+  # A mode without a dataset lets students choose one or upload a CSV, so it has no columns to set.
+  DATASET_COLUMN_MODE_KEYS = %w(label features hideSelectLabel lockFeatures pretrained).freeze
+
   validate :validate_lab2_mode
 
   # Lab 2 levels generate their long instructions, so a stored value would only go stale.
@@ -196,23 +199,34 @@ class Ailab < Level
   end
 
   private def lab2_mode
+    parsed_lab2_mode || {}
+  end
+
+  private def parsed_lab2_mode
     parsed_mode = begin
       JSON.parse(mode.presence || '{}')
     rescue JSON::ParserError
       nil
     end
-    parsed_mode.is_a?(Hash) ? parsed_mode : {}
+    parsed_mode if parsed_mode.is_a?(Hash)
   end
 
   private def validate_lab2_mode
     return unless JSONValue.value(uses_lab2) == true
 
-    parsed_mode = lab2_mode
+    parsed_mode = parsed_lab2_mode
+    unless parsed_mode
+      errors.add(:mode, 'must be a JSON object.')
+      return
+    end
 
-    # The Lab 2 AI Lab currently requires exactly 1 dataset.
-    datasets = parsed_mode['datasets']
-    unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
-      errors.add(:mode, 'must select exactly one dataset.')
+    if parsed_mode.key?('datasets')
+      datasets = parsed_mode['datasets']
+      unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
+        errors.add(:mode, 'must select exactly one dataset.')
+      end
+    elsif DATASET_COLUMN_MODE_KEYS.any? {|key| parsed_mode[key].present?}
+      errors.add(:mode, 'must select a dataset to choose, lock, or pretrain on its columns.')
     end
 
     if parsed_mode.key?('requireAccuracy')

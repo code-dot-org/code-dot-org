@@ -8,6 +8,7 @@ import {setJsonObjectValue} from '../jsonUtils';
 
 import {
   BooleanModeKey,
+  clearDataset,
   DEFAULT_TRAINER,
   getSelectedDataset,
   isSetByHiddenTesting,
@@ -16,6 +17,7 @@ import {
   MAX_ACCURACY,
   MIN_ACCURACY,
   ModeObject,
+  needsDataset,
   setDataset,
   setHideTestingView,
   withoutLabelInFeatures,
@@ -53,7 +55,7 @@ const BOOLEAN_FIELDS: {key: BooleanModeKey; label: string}[] = [
   },
 ];
 
-const NO_DATASET = '';
+const STUDENTS_CHOOSE = '';
 
 const TRAINER_ITEMS = [
   {value: 'knn', text: 'k-nearest neighbors'},
@@ -76,11 +78,8 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
     datasets.find(dataset => dataset.id === selectedDataset)
   );
 
-  // A flat list, because a required select only treats a top-level empty option as unchosen.
   const datasetItems = [
-    ...(selectedDataset
-      ? []
-      : [{value: NO_DATASET, text: 'Choose a dataset', disabled: true}]),
+    {value: STUDENTS_CHOOSE, text: 'None: students choose one or upload a CSV'},
     ...[
       ...datasets.filter(dataset => !dataset.isToy),
       ...datasets.filter(dataset => dataset.isToy),
@@ -95,7 +94,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
-    columnsHelperMessage = 'Choose a dataset first.';
+    columnsHelperMessage = 'Choose a dataset to set its columns.';
   } else if (!columns && !columnsFailed) {
     columnsHelperMessage = "Loading the dataset's columns...";
   }
@@ -108,7 +107,11 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       name={`ailab_mode_${key}`}
       label={checkboxLabel}
       checked={mode[key] === true}
-      disabled={isSetByPretrained(mode, key) || isSetByHiddenTesting(mode, key)}
+      disabled={
+        isSetByPretrained(mode, key) ||
+        isSetByHiddenTesting(mode, key) ||
+        needsDataset(mode, key)
+      }
       onChange={e =>
         changeMode(
           setJsonObjectValue(mode, key, e.target.checked ? true : undefined)
@@ -145,17 +148,21 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       )}
       <div className={moduleStyles.fieldArea}>
         <SimpleDropdown
-          labelText="Dataset (required)"
+          labelText="Dataset"
           name="ailab_mode_dataset"
-          required
           items={datasetItems}
-          selectedValue={selectedDataset ?? NO_DATASET}
-          onChange={e => changeMode(setDataset(mode, e.target.value))}
-          helperMessage="Students start with this dataset loaded."
-          errorMessage={
+          selectedValue={selectedDataset ?? STUDENTS_CHOOSE}
+          onChange={e =>
+            changeMode(
+              e.target.value === STUDENTS_CHOOSE
+                ? clearDataset(mode)
+                : setDataset(mode, e.target.value)
+            )
+          }
+          helperMessage={
             selectedDataset
-              ? undefined
-              : 'Choose a dataset. The level cannot be saved without one.'
+              ? 'Students start with this dataset loaded.'
+              : 'Students start by choosing a dataset or uploading a CSV.'
           }
           size="s"
         />

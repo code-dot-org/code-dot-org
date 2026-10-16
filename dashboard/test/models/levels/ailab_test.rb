@@ -47,11 +47,34 @@ class AilabTest < ActiveSupport::TestCase
     assert level.valid?, level.errors.full_messages.join(', ')
   end
 
-  test 'lab2 level requires exactly one known dataset' do
-    ['', '{"hideSave": true}', '{"datasets": []}', '{"datasets": ["zoo", "heart"]}', '{"datasets": ["nope"]}', '{"datasets": "zoo"}', "{'datasets': ['zoo']}", '["zoo"]'].each do |mode|
+  test 'lab2 level without a dataset lets students choose one' do
+    ['', '{"hideSave": true}', '{"hideSelectLabel": false}'].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode)
+      assert level.valid?, "expected mode #{mode.inspect} to be valid: #{level.errors.full_messages.join(', ')}"
+    end
+  end
+
+  test 'lab2 level lists at most one known dataset' do
+    ['{"datasets": []}', '{"datasets": ["zoo", "heart"]}', '{"datasets": ["nope"]}', '{"datasets": "zoo"}'].each do |mode|
       level = build(:ailab, uses_lab2: 'true', mode: mode)
       refute level.valid?, "expected mode #{mode.inspect} to be invalid"
       assert_equal ['must select exactly one dataset.'], level.errors[:mode]
+    end
+  end
+
+  test 'lab2 level mode must be a JSON object' do
+    ["{'datasets': ['zoo']}", '["zoo"]'].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode)
+      refute level.valid?, "expected mode #{mode.inspect} to be invalid"
+      assert_equal ['must be a JSON object.'], level.errors[:mode]
+    end
+  end
+
+  test 'lab2 level without a dataset cannot set its columns' do
+    [{label: 'animal'}, {features: ['legs']}, {hideSelectLabel: true}, {lockFeatures: true}].each do |mode|
+      level = build(:ailab, uses_lab2: 'true', mode: mode.to_json)
+      refute level.valid?, "expected mode #{mode.inspect} to be invalid"
+      assert_equal ['must select a dataset to choose, lock, or pretrain on its columns.'], level.errors[:mode]
     end
   end
 

@@ -106,9 +106,6 @@ function fakeLab2Checkbox() {
   };
 }
 
-const DATASET_REQUIRED =
-  'Choose a dataset. The level cannot be saved without one.';
-
 function datasetDropdown() {
   return screen.getByRole('combobox', {name: /^Dataset/});
 }
@@ -362,12 +359,22 @@ describe('EditAilabMode', () => {
     });
   });
 
-  it('requires a dataset until one is chosen', () => {
+  it('lets students choose a dataset when none is set', () => {
     const savedMode = renderEditor('{"hideSave": true}');
     expect(datasetDropdown()).toHaveValue('');
-    expect(datasetDropdown()).toBeRequired();
-    expect(datasetDropdown()).toBeInvalid();
-    expect(screen.getByText(DATASET_REQUIRED)).toBeInTheDocument();
+    expect(datasetDropdown()).not.toBeRequired();
+    expect(
+      screen.getByText(
+        'Students start by choosing a dataset or uploading a CSV.'
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('checkbox', {
+        name: 'Lock the label so students cannot change it',
+      })
+    ).toBeDisabled();
+    expect(featuresLock()).toBeDisabled();
+    expect(pretrainedCheckbox()).toBeDisabled();
 
     chooseDataset('pizza_toy');
 
@@ -376,11 +383,24 @@ describe('EditAilabMode', () => {
       trainer: 'knn',
       datasets: ['pizza_toy'],
     });
-    expect(datasetDropdown()).toBeValid();
-    expect(screen.queryByText(DATASET_REQUIRED)).not.toBeInTheDocument();
-    expect(
-      screen.queryByRole('option', {name: 'Choose a dataset'})
-    ).not.toBeInTheDocument();
+    expect(featuresLock()).toBeEnabled();
+  });
+
+  it('drops the columns when switched to students choosing', () => {
+    const savedMode = renderEditor(
+      JSON.stringify({
+        datasets: ['zoo'],
+        label: 'animal',
+        features: ['legs'],
+        hideSelectLabel: true,
+        lockFeatures: true,
+        hideSave: true,
+      })
+    );
+
+    chooseDataset('');
+
+    expect(JSON.parse(savedMode())).toEqual({hideSave: true, trainer: 'knn'});
   });
 
   it('lists regular datasets before toy datasets', () => {
@@ -413,7 +433,9 @@ describe('EditAilabMode', () => {
       renderEditor(null);
       expect(labelDropdown()).toBeDisabled();
       expect(featuresDropdown()).toBeDisabled();
-      expect(screen.getAllByText('Choose a dataset first.')).toHaveLength(2);
+      expect(
+        screen.getAllByText('Choose a dataset to set its columns.')
+      ).toHaveLength(2);
     });
 
     it('sets the label and the features', async () => {
