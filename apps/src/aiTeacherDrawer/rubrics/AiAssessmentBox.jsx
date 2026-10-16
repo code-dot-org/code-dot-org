@@ -153,12 +153,12 @@ export default function AiAssessmentBox({
             <Typography variant="strong">{i18n.aiAssessmentScore()}</Typography>
             <span>{studentAchievement()}</span>
           </Typography>
-          {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
           <AiAssessmentFeedbackRadio
             onChosen={val => setAiFeedback(val)}
             aiEvalId={aiEvalInfo.id}
             setAiFeedbackId={setAiFeedbackId}
           />
+          {aiConfidence && <AiConfidenceBox aiConfidence={aiConfidence} />}
         </div>
       )}
       {isAiAssessed && aiFeedback === THUMBS_DOWN && (
@@ -168,7 +168,7 @@ export default function AiAssessmentBox({
         />
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
-        <div id="tour-ai-evidence">
+        <div id="tour-ai-evidence" className={style.aiAssessmentEvidence}>
           <Typography
             className={style.aiAssessmentEvidenceBlock}
             variant="body4"
