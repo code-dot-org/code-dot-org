@@ -1,0 +1,173 @@
+#!/usr/bin/env ruby
+
+# One-off: find and cleanse rows whose text/JSON columns contain NUL (U+0000) bytes.
+#
+# NUL is legal in MySQL text/json columns but breaks the Redshift SUPER analytics export (Zero ETL
+# load error 1224, "Input data not well formed JSON format for super data type"), which stalls the
+# whole table's replication. The SanitizesNullBytes concern stops NEW rows from storing NUL; this
+# script backfills rows written before that shipped (e.g. the ~64 aichat_requests rows found in
+# July 2026).
+#
+# Safety / performance:
+#   * The expensive full-table scan that finds candidate rows runs on the READER, via the
+#     :reporting ActiveRecord role, so it does not load the production writer. It uses `in_batches`
+#     (filtering within each batch) so every query scans a bounded number of rows (--scan-batch-size) and stays
+#     well under the role's 600s client read timeout.
+#   * Cleansing UPDATEs run on the writer, one row at a time by primary key (a tiny, targeted set).
+#   * Idempotent: it reads each row's current value and only writes when a NUL is actually present,
+#     so reprocessing a clean row is a no-op. Safe to re-run.
+#
+# Usage (dry run by default -- pass --actually-update to write):
+#   bin/oneoff/cleanse_null_bytes                          # dry run, AichatRequest
+#   bin/oneoff/cleanse_null_bytes --model SomeModel        # dry run, any AR model
+#   bin/oneoff/cleanse_null_bytes --actually-update        # perform the cleansing UPDATEs
+#   bin/oneoff/cleanse_null_bytes --scan-batch-size 25000  # tune the reader scan batch size
+
+require_relative '../../dashboard/config/environment'
+require 'optparse'
+
+# Route CDO.log to $stdout, the convention used by the bin/oneoff/backfill_data scripts: a single
+# CDO.log call is then leveled + timestamped, visible on an interactive run, AND captured when a
+# long run is backgrounded to a file. $stdout.sync so a backgrounded run streams progress rather
+# than block-buffering it until exit.
+$stdout.sync = true
+CDO.log = Logger.new($stdout)
+
+# The 6-character escape (backslash, u, 0, 0, 0, 0) that MySQL emits for an in-string NUL in a
+# serialized form -- what we match with INSTR. Built from 92.chr (backslash) so there is no literal
+# escape sequence (and thus no risk of a stray NUL) in this source file.
+NUL_ESCAPE = (92.chr + 'u0000').freeze
+
+# Default rows scanned per reader query in the find phase (overridable with --scan-batch-size). The
+# find phase is a full-table INSTR sweep (no index helps a substring search inside JSON), so we
+# window it with `in_batches` to keep each query well under the :reporting role's 600s read timeout.
+DEFAULT_SCAN_BATCH_SIZE = 10_000
+
+# Default model to cleanse (overridable with --model). aichat_requests is the table whose NUL bytes
+# stalled the Zero ETL export and prompted this script.
+DEFAULT_MODEL = 'AichatRequest'.freeze
+
+# Columns to scan/clean for the given model: the SanitizesNullBytes set if the model uses it,
+# otherwise every non-binary text/json column.
+def sanitizable_columns(model)
+  return model.null_byte_sanitizable_columns if model.respond_to?(:null_byte_sanitizable_columns)
+
+  model.columns.select {|column| SanitizesNullBytes::SANITIZABLE_COLUMN_TYPES.include?(column.type)}.map(&:name)
+end
+
+# Primary keys of rows containing a NUL in any of `columns`, scanned on the reader (:reporting role)
+# in `scan_batch_size`-row batches so no single query exceeds the role's read timeout. Column names
+# come from the schema, not user input, but are quoted.
+def find_null_byte_row_ids(model, columns, scan_batch_size)
+  pk = model.primary_key
+  predicate = columns.
+    map {|column| "INSTR(CAST(#{model.connection.quote_column_name(column)} AS CHAR), ?) > 0"}.
+    join(' OR ')
+  binds = [NUL_ESCAPE] * columns.length
+
+  found = []
+  batches = 0
+  ActiveRecord::Base.connected_to(role: :reporting) do
+    # Batch the UNFILTERED table (cheap PK-only id fetches), then apply the predicate to each
+    # batch's `id IN (...)` set. Putting the (highly selective) predicate on the batched relation
+    # instead would make each batch scan forward until it filled a batch of matches -- an unbounded
+    # per-query scan that can blow the :reporting role's 600s read timeout.
+    model.in_batches(of: scan_batch_size) do |batch|
+      found.concat(batch.where(predicate, *binds).pluck(pk))
+      batches += 1
+      CDO.log.info "scanned ~#{batches * scan_batch_size} rows; #{found.length} match(es) so far" if (batches % 50).zero?
+    end
+  end
+  found.sort
+end
+
+# Reloads each row from the writer, strips NUL from its columns, and writes back only the columns
+# that actually changed (update_columns: no callbacks, validations, or updated_at churn -- we have
+# already cleaned the data explicitly, and the concern's own callback is irrelevant here).
+def cleanse_rows(model, ids, columns, dry_run:)
+  cleansed = 0
+  already_clean = 0
+  errored = 0
+
+  ids.each_slice(100) do |id_batch|
+    model.where(model.primary_key => id_batch).each do |record|
+      updates = {}
+      columns.each do |column|
+        original = record[column]
+        cleaned = SanitizesNullBytes.deep_strip_null_bytes(original)
+        updates[column] = cleaned unless cleaned == original
+      end
+
+      if updates.empty?
+        already_clean += 1
+        next
+      end
+
+      verb = dry_run ? 'would cleanse' : 'cleansed'
+      CDO.log.info "#{verb} #{model}##{record.id} column(s): #{updates.keys.join(', ')}"
+      record.update_columns(updates) unless dry_run
+      cleansed += 1
+    rescue StandardError => exception
+      # One flaky write (a lock timeout, a deadlock) should not abort a run whose id list took a
+      # long reader scan to produce; log it and move on. The cleanse is idempotent, so a later run
+      # retries this row.
+      errored += 1
+      CDO.log.error "failed to cleanse #{model}##{record.id}: #{exception.class}: #{exception.message}"
+    end
+  end
+
+  [cleansed, already_clean, errored]
+end
+
+def cleanse_null_bytes
+  # Dry run by default; require an explicit flag to mutate production data (the bin/oneoff convention).
+  options = {actually_update: false, scan_batch_size: DEFAULT_SCAN_BATCH_SIZE, model: DEFAULT_MODEL}
+  OptionParser.new do |opts|
+    opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+    opts.on('-mNAME', '--model=NAME', "ActiveRecord model to cleanse (default #{DEFAULT_MODEL}).") do |name|
+      options[:model] = name
+    end
+    opts.on('-u', '--actually-update', 'Perform the cleansing UPDATEs. Without it, this is a dry run (no writes).') do
+      options[:actually_update] = true
+    end
+    opts.on('-bN', '--scan-batch-size=N', Integer, "Rows scanned per reader query (default #{DEFAULT_SCAN_BATCH_SIZE}).") do |n|
+      options[:scan_batch_size] = n
+    end
+    opts.on('-h', '--help', 'Print this help and exit.') do
+      puts opts
+      exit
+    end
+  end.parse!
+  dry_run = !options[:actually_update]
+
+  model = options[:model].safe_constantize
+  unless model.is_a?(Class) && model < ActiveRecord::Base
+    CDO.log.error "#{options[:model]} is not an ActiveRecord model"
+    exit 1
+  end
+
+  columns = sanitizable_columns(model)
+  if columns.empty?
+    CDO.log.error "#{model} has no text/JSON columns to scan"
+    exit 1
+  end
+
+  CDO.log.info "scanning #{model.table_name} column(s) #{columns.join(', ')} on the reader " \
+    "(:reporting role); this is a full-table scan and can take many minutes..."
+  ids = find_null_byte_row_ids(model, columns, options[:scan_batch_size])
+  CDO.log.info "found #{ids.length} candidate row(s)#{dry_run ? ' (DRY RUN, no writes)' : ''}."
+
+  if ids.empty?
+    CDO.log.info "nothing to cleanse."
+    return
+  end
+
+  cleansed, already_clean, errored = cleanse_rows(model, ids, columns, dry_run: dry_run)
+
+  CDO.log.info "done. #{cleansed} row(s) #{dry_run ? 'would be cleansed' : 'cleansed'}, " \
+    "#{already_clean} already clean (changed since the scan), #{errored} failed."
+  # Non-zero exit so a backgrounded run signals that some rows still need attention (re-run to retry).
+  exit 1 if errored.positive?
+end
+
+cleanse_null_bytes
