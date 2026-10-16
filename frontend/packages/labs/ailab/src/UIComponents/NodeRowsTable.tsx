@@ -34,12 +34,12 @@ const NodeRowsTable = ({
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const labelColumn = project.labelColumn || 'unknown';
   const showPrediction = prediction !== undefined;
-  const datasetColumns = showAllColumns
-    ? Object.keys(data[0] ?? {})
-    : [...project.selectedFeatures, labelColumn];
-  const columns = showPrediction
-    ? [...datasetColumns.filter(column => column !== labelColumn), labelColumn]
-    : datasetColumns;
+  const columns = [
+    ...(showAllColumns
+      ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
+      : project.selectedFeatures),
+    labelColumn,
+  ];
   const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
 
   const isLabel = (column: string) => column === labelColumn;

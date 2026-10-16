@@ -2,11 +2,11 @@ import {act, fireEvent, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '../../src/i18n';
-import {setTestData} from '../../src/redux';
+import {setImportedData, setTestData} from '../../src/redux';
 import train from '../../src/train';
 import DecisionTree from '../../src/UIComponents/DecisionTree';
 
-import {levelProject, levelStore} from './levelStore';
+import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 import moduleStyles from '../../src/UIComponents/decisionTree.module.scss';
@@ -138,14 +138,22 @@ describe('NodeModal', () => {
     ]);
   });
 
-  it("shows the model's columns, then every column on request", () => {
+  it("shows the model's columns, then every column with the label last", () => {
+    act(() =>
+      trained.store.dispatch(
+        setImportedData(
+          ANIMALS.map((row, index) => ({name: `Pet ${index + 1}`, ...row})),
+          false
+        )
+      )
+    );
     fireEvent.click(root());
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
 
     const panel = () =>
       dialog().querySelector("[role='tabpanel']:not([hidden])");
     fireEvent.click(within(panel()).getByLabelText('Show all columns'));
-    expect(shownRows()).toEqual([['10', 'dog', '4']]);
+    expect(shownRows()).toEqual([['10', 'Pet 10', '4', 'dog']]);
 
     fireEvent.click(
       within(panel()).getByLabelText('Show only features and label')
