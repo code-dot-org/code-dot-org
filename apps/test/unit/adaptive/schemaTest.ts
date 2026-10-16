@@ -495,6 +495,150 @@ describe('findReferenceProblems', () => {
   });
 });
 
+describe('evidence fields', () => {
+  // A survey question beside the fixture's graded one, and evidence levels on both skills.
+  const withEvidence = (): Raw => {
+    const raw = served();
+    raw.skills.prompting.evidenceLevels = {
+      1: 'Asks',
+      2: 'Specifies',
+      3: 'Judges',
+    };
+    raw.skills.css.evidenceLevels = {
+      0: 'Has not styled yet',
+      1: 'Spots a rule',
+    };
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 2},
+    });
+    const quiz = raw.checkpoints[0].steps[1];
+    if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
+    quiz.questions.push({
+      id: 2,
+      type: 'MultipleChoiceQuestion',
+      questionName: 'self-check',
+      questionTitle: 'Which sounds like you?',
+      choices: [
+        {id: 'a', text: 'New'},
+        {id: 'b', text: 'Some'},
+      ],
+      measures: {skillId: 'prompting', evidenceLevels: {a: 0, b: 1}},
+    });
+    raw.checkpoints[1] = {
+      ...raw.checkpoints[1],
+      skippable: true,
+      targetEvidenceLevels: {prompting: 2},
+    };
+    return raw;
+  };
+  const surveyOf = (raw: Raw) => {
+    const quiz = raw.checkpoints[0].steps[1];
+    if (quiz.kind !== 'questions') throw new Error('fixture has no quiz');
+    return quiz.questions[1];
+  };
+  const where = 'checkpoints.intro.steps.quiz.questions';
+
+  it('accepts a graded evidence level, survey evidence levels by choice, and a skippable target', () => {
+    expect(problemsOf(withEvidence())).toEqual([]);
+  });
+
+  it('rejects evidence level 0 where an evidence level is a claim', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 0},
+    });
+    expect(problemsOf(raw)).toHaveLength(1);
+    const target = withEvidence();
+    target.checkpoints[1].targetEvidenceLevels = {prompting: 0};
+    expect(problemsOf(target)).toHaveLength(1);
+  });
+
+  it('flags measures naming an unknown skill', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'html', evidenceLevel: 1},
+    });
+    expect(problemsOf(raw)).toEqual([
+      `${where}.0.measures: unknown skill 'html'`,
+    ]);
+  });
+
+  it('flags one evidence level on a survey question and evidence levels by choice on a graded one', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevels: {a: 1}},
+    });
+    Object.assign(surveyOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 1},
+    });
+    expect(problemsOf(raw)).toEqual([
+      `${where}.0.measures: a question with a correctChoiceId measures one evidenceLevel, not evidenceLevels by choice`,
+      `${where}.1.measures: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`,
+    ]);
+  });
+
+  it('flags a choice id that is not among the choices', () => {
+    const raw = withEvidence();
+    Object.assign(surveyOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevels: {a: 0, z: 1}},
+    });
+    expect(problemsOf(raw)).toEqual([
+      `${where}.1.measures: 'z' is not one of its choices`,
+    ]);
+  });
+
+  it('flags evidence levels the skill does not describe', () => {
+    const raw = withEvidence();
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 4},
+    });
+    Object.assign(surveyOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevels: {a: 0, b: 5}},
+    });
+    raw.checkpoints[2] = {
+      ...raw.checkpoints[2],
+      skippable: true,
+      targetEvidenceLevels: {css: 2},
+    };
+    expect(problemsOf(raw)).toEqual([
+      `${where}.0.measures: skill 'prompting' describes no evidence level 4`,
+      `${where}.1.measures.b: skill 'prompting' describes no evidence level 5`,
+      "checkpoints.style.targetEvidenceLevels.css: skill 'css' describes no evidence level 2",
+    ]);
+  });
+
+  it('rejects an evidence level key that is not a whole number', () => {
+    const raw = withEvidence();
+    raw.skills.css.evidenceLevels = {'1.5': 'Half', '-1': 'Less'};
+    expect(problemsOf(raw)).toHaveLength(2);
+  });
+
+  it('does not bound evidence levels for a skill with no described evidence levels', () => {
+    const raw = withEvidence();
+    delete raw.skills.prompting.evidenceLevels;
+    Object.assign(questionOf(raw), {
+      measures: {skillId: 'prompting', evidenceLevel: 9},
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags a target for a skill the checkpoint does not develop', () => {
+    const raw = withEvidence();
+    raw.checkpoints[1].targetEvidenceLevels = {css: 1};
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.targetEvidenceLevels: 'css' is not in skillIds",
+    ]);
+  });
+
+  it('flags skippable on a checkpoint with no skills', () => {
+    const raw = withEvidence();
+    raw.checkpoints[0] = {...raw.checkpoints[0], skippable: true};
+    expect(problemsOf(raw)).toEqual([
+      'checkpoints.intro: skippable needs skillIds',
+    ]);
+  });
+});
+
 describe('standards helpers', () => {
   it('referencedSkillIds lists skills once, in progression order rather than file order', () => {
     const raw = served();
