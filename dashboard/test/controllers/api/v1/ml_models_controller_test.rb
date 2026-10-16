@@ -66,9 +66,23 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
     assert_equal "piiProfanity", JSON.parse(@response.body)["status"]
   end
 
-  test 'filters the model without the street address check' do
+  test 'skips the street address check for a curated dataset' do
     sign_in @owner
     ShareFiltering.expects(:find_failure).with(anything, anything, anything, skip_address: true).returns(nil)
+    post :save, as: :json, params: {ml_model: {name: 'Model Name', datasetDetails: {isUserUploaded: false}}}
+    assert_equal "success", JSON.parse(@response.body)["status"]
+  end
+
+  test 'keeps the street address check for an uploaded dataset' do
+    sign_in @owner
+    ShareFiltering.expects(:find_failure).with(anything, anything, anything, skip_address: false).returns(nil)
+    post :save, as: :json, params: {ml_model: {name: 'Model Name', datasetDetails: {isUserUploaded: true}}}
+    assert_equal "success", JSON.parse(@response.body)["status"]
+  end
+
+  test 'keeps the street address check when the upload flag is missing' do
+    sign_in @owner
+    ShareFiltering.expects(:find_failure).with(anything, anything, anything, skip_address: false).returns(nil)
     post :save, params: {"ml_model" => {"name" => "Model Name"}}
     assert_equal "success", JSON.parse(@response.body)["status"]
   end

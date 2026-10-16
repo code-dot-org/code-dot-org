@@ -21,6 +21,8 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
 
+    is_user_uploaded = ActiveModel::Type::Boolean.new.cast(model_data.dig(:datasetDetails, :isUserUploaded))
+
     # If there's a PII/profanity API error, we rescue the exception and the save
     # will succeed. The saved model will bypass the PII/profanity filters.
     begin
@@ -28,9 +30,9 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
         model_data.except(:trainedModel).to_s,
         I18n.locale.to_s,
         PROFANITY_FILTER_REPLACE_TEXT_LIST,
-        # Curated dataset descriptions have read as street addresses to the geocoder.
-        # Skip the street address check to avoid false positives on ordinary text.
-        skip_address: true
+        # Curated dataset descriptions have read as street addresses to the
+        # geocoder. A missing flag is treated as an upload.
+        skip_address: is_user_uploaded == false
       )
     rescue OpenURI::HTTPError => exception
       share_filtering_error = exception
