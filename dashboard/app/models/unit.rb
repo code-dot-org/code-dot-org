@@ -205,6 +205,8 @@ class Unit < ApplicationRecord
 
   validates :link, presence: true
 
+  validate :one_header_progress_style
+
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
     raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
@@ -347,6 +349,7 @@ class Unit < ApplicationRecord
     generate_authoring_rules
     simple_progress
     simple_progress_image
+    progress_widget
   )
 
   def self.starwars_unit
@@ -1479,6 +1482,7 @@ class Unit < ApplicationRecord
         tts: tts?,
         simpleProgress: simple_progress?,
         simpleProgressImage: simple_progress_image,
+        progressWidget: progress_widget?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
@@ -1633,6 +1637,7 @@ class Unit < ApplicationRecord
       hasUnnumberedLessons: has_unnumbered_lessons?,
       simpleProgress: simple_progress?,
       simpleProgressImage: simple_progress_image,
+      progressWidget: progress_widget?,
       course_name: unit_group_unit&.unit_group&.name,
       course_id: unit_group_unit&.unit_group&.id,
       unit_position: unit_group_unit&.position,
@@ -1816,7 +1821,8 @@ class Unit < ApplicationRecord
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :enable_blockly_keyboard_navigation,
-      :simple_progress
+      :simple_progress,
+      :progress_widget
     ]
 
     result = {}
@@ -2164,5 +2170,10 @@ class Unit < ApplicationRecord
     when 'vocab'
       vocab_course_unit_path(course, position)
     end
+  end
+
+  private def one_header_progress_style
+    return unless simple_progress? && progress_widget?
+    errors.add(:base, 'cannot show both simple progress and the progress widget in the level header')
   end
 end

@@ -435,6 +435,7 @@ class ScriptsController < ApplicationController
       :enable_blockly_keyboard_navigation,
       :simple_progress,
       :simple_progress_image,
+      :progress_widget,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],

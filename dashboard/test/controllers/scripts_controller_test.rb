@@ -999,6 +999,44 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal true, unit.tts
   end
 
+  test 'update saves the progress widget flag' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit = create(:script)
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      progress_widget: true
+    }, as: :json
+
+    assert_response :success
+    assert unit.reload.progress_widget?
+  end
+
+  test 'update rejects simple progress together with the progress widget' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit = create(:script)
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      simple_progress: true,
+      progress_widget: true
+    }, as: :json
+
+    assert_response :not_acceptable
+    assert_includes response.body, 'progress widget'
+    refute unit.reload.progress_widget?
+  end
+
   test 'setting tts to false does not trigger generation of tts for the unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true

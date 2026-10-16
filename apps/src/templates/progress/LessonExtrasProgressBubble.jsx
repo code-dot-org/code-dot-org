@@ -13,6 +13,18 @@ import TooltipWithIcon from './TooltipWithIcon';
 const LARGE_FLAG_SIZE = 24;
 const SMALL_FLAG_SIZE = 16;
 
+/**
+ * The lesson extras URL with the current query (section, student) kept, minus
+ * the bonus level's own id, so it links back to the selection page.
+ */
+export function lessonExtrasHref(lessonExtrasUrl) {
+  const queryParams = queryString.parse(currentLocation().search);
+  delete queryParams.id;
+  return Object.keys(queryParams).length > 0
+    ? `${lessonExtrasUrl}?${queryString.stringify(queryParams)}`
+    : lessonExtrasUrl;
+}
+
 export default class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     lessonExtrasUrl: PropTypes.string.isRequired,
@@ -20,20 +32,8 @@ export default class LessonExtrasProgressBubble extends Component {
     isSelected: PropTypes.bool,
   };
 
-  /**
-   * we need to preserve query params for e.g. section and student id, but when
-   * we're on an actual bonus level (as opposed to the selection page), the
-   * level id is included in the params, so we need to remove it to allow this
-   * url to link back to the bonus level selection page.
-   */
   getUrl() {
-    let url = this.props.lessonExtrasUrl;
-    const queryParams = queryString.parse(currentLocation().search);
-    delete queryParams.id;
-    if (Object.keys(queryParams).length > 0) {
-      url = `${url}?${queryString.stringify(queryParams)}`;
-    }
-    return url;
+    return lessonExtrasHref(this.props.lessonExtrasUrl);
   }
 
   render() {

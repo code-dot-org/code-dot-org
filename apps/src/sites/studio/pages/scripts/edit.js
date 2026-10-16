@@ -76,6 +76,7 @@ export default function initPage(unitEditorData) {
         initialTts={scriptData.tts}
         initialSimpleProgress={scriptData.simpleProgress}
         initialSimpleProgressImage={scriptData.simpleProgressImage}
+        initialProgressWidget={scriptData.progressWidget}
         hasCourse={unitEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
         initialWeeklyInstructionalMinutes={

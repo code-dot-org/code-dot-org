@@ -1,0 +1,33 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  animation: fadein 0.4s;
+}
+
+.projectInfo {
+  flex: none;
+}
+
+.widget {
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0 5px;
+}
+
+// legacy.scss turns header links white; a bubble's icon takes the bubble's ink.
+:global(.header-wrapper .header) .widget a:is(:link, :visited) {
+  color: var(--ink);
+}

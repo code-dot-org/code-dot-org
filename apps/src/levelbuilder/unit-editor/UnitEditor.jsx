@@ -80,6 +80,7 @@ class UnitEditor extends React.Component {
     initialTts: PropTypes.bool,
     initialSimpleProgress: PropTypes.bool,
     initialSimpleProgressImage: PropTypes.string,
+    initialProgressWidget: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -140,6 +141,7 @@ class UnitEditor extends React.Component {
       tts: this.props.initialTts,
       simpleProgress: this.props.initialSimpleProgress,
       simpleProgressImage: this.props.initialSimpleProgressImage || '',
+      progressWidget: this.props.initialProgressWidget,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -252,6 +254,7 @@ class UnitEditor extends React.Component {
       tts: this.state.tts,
       simple_progress: this.state.simpleProgress,
       simple_progress_image: this.state.simpleProgressImage,
+      progress_widget: this.state.progressWidget,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -439,6 +442,7 @@ class UnitEditor extends React.Component {
             <input
               type="checkbox"
               checked={this.state.simpleProgress}
+              disabled={this.state.progressWidget}
               style={styles.checkbox}
               onChange={e => this.setState({simpleProgress: e.target.checked})}
             />
@@ -462,6 +466,25 @@ class UnitEditor extends React.Component {
               />
             </label>
           )}
+          <label>
+            Show the progress widget instead of progress bubbles in the level
+            header
+            <input
+              type="checkbox"
+              checked={this.state.progressWidget}
+              disabled={this.state.simpleProgress}
+              style={styles.checkbox}
+              onChange={e => this.setState({progressWidget: e.target.checked})}
+            />
+            <HelpTip>
+              <p>
+                Lessons whose levels all use Lab2 show the lesson menu, the
+                bubbles and the Continue button in the header. Other lessons
+                keep the progress bubbles. Cannot be combined with simple
+                progress.
+              </p>
+            </HelpTip>
+          </label>
           <label>
             Enable Text-to-Speech
             <input
