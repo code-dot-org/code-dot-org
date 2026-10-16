@@ -18,7 +18,7 @@ describe('derives details about current categorical column', () => {
   test('gets unique options current column', async () => {
     const uniqueOptions = getUniqueOptionsCurrentColumn.resultFunc(
       classificationState.currentColumn,
-      classificationState.data,
+      classificationState.data
     );
     expect(uniqueOptions).toEqual(['cool', 'hot', 'mild']);
   });
@@ -26,7 +26,7 @@ describe('derives details about current categorical column', () => {
   test('gets option frequencies current column', async () => {
     const optionFrequencies = getOptionFrequenciesCurrentColumn.resultFunc(
       classificationState.currentColumn,
-      classificationState.data,
+      classificationState.data
     );
     expect(optionFrequencies).toEqual({hot: 2, mild: 2, cool: 2});
   });
@@ -34,7 +34,7 @@ describe('derives details about current categorical column', () => {
   test('current column does not contain only numbers', () => {
     const containsOnlyNumbers = currentColumnContainsOnlyNumbers.resultFunc(
       classificationState.currentColumn,
-      classificationState.data,
+      classificationState.data
     );
     expect(containsOnlyNumbers).toBe(false);
   });
@@ -44,7 +44,7 @@ describe('derives details about current numerical column', () => {
   test('gets extrema current column', async () => {
     const extrema = getExtremaCurrentColumn.resultFunc(
       allNumericalState.currentColumn,
-      allNumericalState.data,
+      allNumericalState.data
     );
     expect(extrema.max).toBe(batCountMax);
     expect(extrema.min).toBe(batCountMin);
@@ -54,7 +54,7 @@ describe('derives details about current numerical column', () => {
   test('current column contains only numbers', () => {
     const containsOnlyNumbers = currentColumnContainsOnlyNumbers.resultFunc(
       allNumericalState.currentColumn,
-      allNumericalState.data,
+      allNumericalState.data
     );
     expect(containsOnlyNumbers).toBe(true);
   });
@@ -64,7 +64,7 @@ describe('derives details about current column', () => {
   test('current column is readOnly', async () => {
     const isReadOnly = isCurrentColumnReadOnly.resultFunc(
       premadeDatasetState.currentColumn,
-      premadeDatasetState.metadata,
+      premadeDatasetState.metadata
     );
     expect(isReadOnly).toBe(true);
   });
@@ -72,7 +72,7 @@ describe('derives details about current column', () => {
   test('current column is not readOnly', async () => {
     const isReadOnly = isCurrentColumnReadOnly.resultFunc(
       allNumericalState.currentColumn,
-      allNumericalState.metadata,
+      allNumericalState.metadata
     );
     expect(isReadOnly).toBe(false);
   });

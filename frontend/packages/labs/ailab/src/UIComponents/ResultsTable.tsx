@@ -1,6 +1,5 @@
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import type {ReactNode} from 'react';
+import React from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
@@ -8,6 +7,8 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
+
+import CellText from './CellText';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
@@ -19,31 +20,25 @@ interface ResultsTableProps {
 const featureHeader = classNames(
   tableStyles.header,
   tableStyles.headerFeature,
-  styles.columnHeader,
+  styles.columnHeader
 );
 const labelHeader = classNames(
   tableStyles.header,
   tableStyles.headerLabel,
-  styles.columnHeader,
+  styles.columnHeader
 );
 const featureCell = classNames(
   tableStyles.bodyCell,
-  tableStyles.bodyCellFeature,
+  tableStyles.bodyCellFeature
 );
 const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
-
-const CellText = ({children}: {children: ReactNode}) => (
-  <Typography component="span" variant="body4" className={tableStyles.cellText}>
-    {children}
-  </Typography>
-);
 
 const ResultsTable = ({results}: ResultsTableProps) => {
   const {project} = useProject();
   const selectedFeatures = project.selectedFeatures;
   const labelColumn = project.labelColumn || 'unknown';
   const isRegressionMode = useAppSelector(state =>
-    isRegression(state, project),
+    isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 

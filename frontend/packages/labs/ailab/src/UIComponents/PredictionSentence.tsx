@@ -1,7 +1,7 @@
 /* The "Predict … based on …" sentence, with the label and features as tags. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import {useLayoutEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -24,13 +24,13 @@ interface PredictionSentenceProps {
 function countFittingTags(
   row: HTMLElement,
   lead: HTMLElement,
-  ruler: HTMLElement,
+  ruler: HTMLElement
 ) {
   const rowStyle = getComputedStyle(row);
   const gap = parseFloat(rowStyle.columnGap) || 0;
   const widths = Array.from(
     ruler.children,
-    tag => tag.getBoundingClientRect().width,
+    tag => tag.getBoundingClientRect().width
   );
   const overflowTagWidth = widths.pop()!;
   const rowBox = row.getBoundingClientRect();
@@ -78,7 +78,7 @@ const PredictionSentence = ({
     const row = rowRef.current!;
     const fit = () =>
       setFittingCount(
-        countFittingTags(row, leadRef.current!, rulerRef.current!),
+        countFittingTags(row, leadRef.current!, rulerRef.current!)
       );
     fit();
     // Flushed, so a resize or a newly shown tab never paints a stale fit.
@@ -104,7 +104,7 @@ const PredictionSentence = ({
         styles.sentence,
         size === 'm' && styles.mediumSentence,
         singleLine && styles.singleLine,
-        className,
+        className
       )}
     >
       <span className={appStyles.visuallyHidden}>{readableSentence}</span>

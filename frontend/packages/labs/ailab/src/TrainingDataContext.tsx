@@ -2,7 +2,7 @@
   Training data: what a training run produces.
 */
 
-import {
+import React, {
   createContext,
   useCallback,
   useContext,
@@ -24,7 +24,7 @@ interface TrainingDataContextValue {
 }
 
 const TrainingDataContext = createContext<TrainingDataContextValue | undefined>(
-  undefined,
+  undefined
 );
 
 interface TrainingDataProviderProps {
@@ -39,7 +39,7 @@ export const TrainingDataProvider = ({children}: TrainingDataProviderProps) => {
     useCallback(() => {
       setTrainedModel(undefined);
       previousTrainedModel.current = undefined;
-    }, []),
+    }, [])
   );
 
   const snapshotTrainedModel = useCallback(() => {
@@ -57,7 +57,7 @@ export const TrainingDataProvider = ({children}: TrainingDataProviderProps) => {
       snapshotTrainedModel,
       restoreTrainedModel,
     }),
-    [trainedModel, snapshotTrainedModel, restoreTrainedModel],
+    [trainedModel, snapshotTrainedModel, restoreTrainedModel]
   );
 
   return (

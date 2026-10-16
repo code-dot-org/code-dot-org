@@ -88,7 +88,7 @@ describe('DecisionTree', () => {
         ? 'question'
         : node.classList.contains(moduleStyles.answer)
           ? 'answer'
-          : 'neither',
+          : 'neither'
     );
 
     expect(kinds).toContain('question');
@@ -99,7 +99,7 @@ describe('DecisionTree', () => {
   it('dots each answer in its leaf color, left to right', () => {
     const nodes = [...document.getElementsByClassName(moduleStyles.node)];
     const answers = nodes.filter(node =>
-      node.classList.contains(moduleStyles.answer),
+      node.classList.contains(moduleStyles.answer)
     );
     const dotColor = node =>
       node
@@ -107,24 +107,24 @@ describe('DecisionTree', () => {
         ?.style.getPropertyValue('--leaf-color');
 
     expect(answers.map(dotColor)).toEqual(
-      answers.map((_, index) => leafColorStyle(index)['--leaf-color']),
+      answers.map((_, index) => leafColorStyle(index)['--leaf-color'])
     );
     expect(
       document.querySelectorAll(
-        `.${moduleStyles.question} .${moduleStyles.answerDot}`,
-      ),
+        `.${moduleStyles.question} .${moduleStyles.answerDot}`
+      )
     ).toHaveLength(0);
   });
 
   it('marks no path before a prediction', () => {
     expect(document.getElementsByClassName(moduleStyles.pathNode)).toHaveLength(
-      0,
+      0
     );
     expect(document.getElementsByClassName(moduleStyles.pathEdge)).toHaveLength(
-      0,
+      0
     );
     expect(
-      document.getElementsByClassName(moduleStyles.pathBranch),
+      document.getElementsByClassName(moduleStyles.pathBranch)
     ).toHaveLength(0);
   });
 
@@ -152,14 +152,14 @@ describe('DecisionTree', () => {
     expect(slotPosition(marked[0])[1]).toBe(0);
     expect(
       marked[marked.length - 1].querySelector(`.${moduleStyles.nodeText}`)
-        .textContent,
+        .textContent
     ).toBe('snake');
     expect(pathEdges).toHaveLength(marked.length - 1);
     expect(marks.parentElement.lastElementChild).toBe(marks);
     expect(pathEdges.every(edge => edge.parentElement === marks)).toBe(true);
     expect(pathBranches).toHaveLength(marked.length - 1);
     expect(pathBranches.map(branch => branch.nextElementSibling)).toEqual(
-      marked.slice(1),
+      marked.slice(1)
     );
   });
 
@@ -234,19 +234,19 @@ describe('DecisionTree', () => {
   it('marks each question open on its answers, and no answer at all', () => {
     const items = screen.getAllByRole('treeitem');
     const questions = items.filter(item =>
-      item.querySelector(`.${moduleStyles.question}`),
+      item.querySelector(`.${moduleStyles.question}`)
     );
     const answers = items.filter(item =>
-      item.querySelector(`.${moduleStyles.answer}`),
+      item.querySelector(`.${moduleStyles.answer}`)
     );
 
     expect(questions.length).toBeGreaterThan(0);
     expect(answers.length).toBeGreaterThan(0);
     questions.forEach(item =>
-      expect(item.getAttribute('aria-expanded')).toBe('true'),
+      expect(item.getAttribute('aria-expanded')).toBe('true')
     );
     answers.forEach(item =>
-      expect(item.hasAttribute('aria-expanded')).toBe(false),
+      expect(item.hasAttribute('aria-expanded')).toBe(false)
     );
   });
 
@@ -265,7 +265,7 @@ describe('DecisionTree', () => {
     expect(
       screen.getByRole('treeitem', {
         name: 'legs is less than 1 , predicts snake',
-      }),
+      })
     ).toBe(firstChild);
   });
 
@@ -273,24 +273,25 @@ describe('DecisionTree', () => {
     const [, , secondChild] = screen.getAllByRole('treeitem');
 
     expect(
-      screen.getByRole('treeitem', {name: /^legs is at least 1 , then legs/}),
+      screen.getByRole('treeitem', {name: /^legs is at least 1 , then legs/})
     ).toBe(secondChild);
   });
 
   it('describes the canvas by how to go in, and the tree and its root by how to move', () => {
-    const keysHint = 'Use the arrow keys to move, and Escape to exit';
+    const keysHint =
+      "Use the arrow keys to move, Enter or Space to see a node's details, and Escape to exit";
     const [root] = screen.getAllByRole('treeitem');
 
     expect(
       screen.getByRole('group', {
         description: 'Press Enter to explore the tree',
-      }),
+      })
     ).toBe(canvasGroup());
     expect(screen.getByRole('tree', {description: keysHint})).toBe(
-      screen.getByRole('tree'),
+      screen.getByRole('tree')
     );
     expect(
-      screen.getByRole('treeitem', {description: new RegExp(`^${keysHint}`)}),
+      screen.getByRole('treeitem', {description: new RegExp(`^${keysHint}`)})
     ).toBe(root);
   });
 
@@ -305,10 +306,10 @@ describe('DecisionTree', () => {
     const [root] = screen.getAllByRole('treeitem');
 
     expect(root.querySelector(`.${moduleStyles.counts}`).textContent).toBe(
-      '1 test row',
+      '1 test row'
     );
     expect(
-      screen.getAllByRole('treeitem', {description: /\b1 test row$/}),
+      screen.getAllByRole('treeitem', {description: /\b1 test row$/})
     ).toContain(root);
   });
 
@@ -318,8 +319,8 @@ describe('DecisionTree', () => {
       .filter(
         counts =>
           !counts.querySelector(
-            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`,
-          ),
+            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`
+          )
       );
 
     expect(missed.length).toBeGreaterThan(0);
@@ -329,7 +330,7 @@ describe('DecisionTree', () => {
   it('shows and describes how many held-out rows each answer gets right and wrong', () => {
     const {correct, total} = getCorrectCount(
       trained.store.getState(),
-      trained.project,
+      trained.project
     );
     const answers = [...document.getElementsByClassName(moduleStyles.answer)];
     const shown = grade =>
@@ -337,9 +338,9 @@ describe('DecisionTree', () => {
         (sum, answer) =>
           sum +
           parseInt(
-            answer.querySelector(`.${moduleStyles[grade]}`)?.textContent ?? 0,
+            answer.querySelector(`.${moduleStyles[grade]}`)?.textContent ?? 0
           ),
-        0,
+        0
       );
     const described = screen.getAllByRole('treeitem', {
       description: /\d+ (correct|incorrect)/,
@@ -351,10 +352,10 @@ describe('DecisionTree', () => {
       answers
         .filter(answer =>
           answer.querySelector(
-            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`,
-          ),
+            `.${moduleStyles.correct}, .${moduleStyles.incorrect}`
+          )
         )
-        .map(answer => answer.parentElement),
+        .map(answer => answer.parentElement)
     );
   });
 
@@ -393,7 +394,7 @@ describe('DecisionTree', () => {
           return selector === ':focus-visible'
             ? false
             : matches.call(this, selector);
-        },
+        }
       );
 
       focusRoot();
@@ -455,7 +456,7 @@ describe('DecisionTree', () => {
     const root = focusRoot();
 
     expect(fireEvent.keyDown(root, {key: 'ArrowDown', altKey: true})).toBe(
-      true,
+      true
     );
     expect(document.activeElement).toBe(root);
   });

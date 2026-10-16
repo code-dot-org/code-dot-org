@@ -178,7 +178,7 @@ describe('get grades', () => {
           ...classificationState,
           accuracyCheckPredictedLabels: testCase.results,
         },
-        classificationProject,
+        classificationProject
       );
       expect(grades).toEqual(testCase.grades);
     });
@@ -196,7 +196,7 @@ describe('get percent correct', () => {
       classificationState['accuracyCheckPredictedLabels'] = testCase.results;
       const percentCorrect = getPercentCorrect(
         classificationState,
-        classificationProject,
+        classificationProject
       );
       expect(percentCorrect).toEqual(testCase.percent);
     });
@@ -205,7 +205,7 @@ describe('get percent correct', () => {
   test('regression', async () => {
     const percentCorrect = getPercentCorrect(
       regressionState,
-      regressionProject,
+      regressionProject
     );
     expect(percentCorrect).toEqual(regressionPercent);
   });
@@ -237,11 +237,11 @@ describe('get results', () => {
       const results = getResultsByGrade(
         testCase.state,
         testCase.project,
-        testCase.gradeType,
+        testCase.gradeType
       );
       const resultsCount = results.examples.length;
       const expectedCount = testCase.grades.filter(
-        grade => grade === testCase.gradeType,
+        grade => grade === testCase.gradeType
       ).length;
       expect(resultsCount).toBe(expectedCount);
     });
@@ -251,7 +251,7 @@ describe('get results', () => {
     const results = getResultsByGrade(
       regressionState,
       regressionProject,
-      ResultsGrades.ALL,
+      ResultsGrades.ALL
     );
     const resultsCount = results.examples.length;
     const expectedCount = regressionGrades.length;
@@ -262,7 +262,7 @@ describe('get results', () => {
     const results = getResultsByGrade(
       classificationState,
       classificationProject,
-      ResultsGrades.ALL,
+      ResultsGrades.ALL
     );
     const resultsCount = results.examples.length;
     const expectedCount = mixedGrades.length;
@@ -274,7 +274,7 @@ describe('get results data in data table form', () => {
   test('regression', async () => {
     const resultsData = getResultsDataInDataTableForm(
       regressionState,
-      regressionProject,
+      regressionProject
     );
     expect(resultsData).toEqual(regressionDataForTable);
   });
@@ -282,7 +282,7 @@ describe('get results data in data table form', () => {
   test('classification', async () => {
     const resultsData = getResultsDataInDataTableForm(
       classificationState,
-      classificationProject,
+      classificationProject
     );
     expect(resultsData).toEqual(classificationDataForTable);
   });
@@ -292,7 +292,7 @@ describe('get summary stat', () => {
   test('classification', async () => {
     const summaryStat = getSummaryStat(
       classificationState,
-      classificationProject,
+      classificationProject
     );
     expect(summaryStat.stat).toBe(lowAccuracyPercent);
     expect(summaryStat.type).toBe(MLTypes.CLASSIFICATION);
@@ -334,7 +334,7 @@ describe('gradeAccuracy', () => {
 
   test('a difference exactly at the tolerance is correct', () => {
     expect(gradeAccuracy([10], [10.5], {tolerance: 0.5}).percentCorrect).toBe(
-      '100.00',
+      '100.00'
     );
   });
 
@@ -351,7 +351,7 @@ describe('gradeAccuracy', () => {
 describe('getGradeOptions', () => {
   test('a categorical label grades on an exact match', () => {
     expect(getGradeOptions(classificationState, classificationProject)).toEqual(
-      {},
+      {}
     );
   });
 
@@ -364,12 +364,12 @@ describe('getGradeOptions', () => {
   test('the regression selector uses that same tolerance', () => {
     const viaSelector = getAccuracyRegression(
       regressionState,
-      regressionProject,
+      regressionProject
     );
     const viaGrade = gradeAccuracy(
       regressionState.accuracyCheckPredictedLabels,
       regressionState.accuracyCheckLabels,
-      getGradeOptions(regressionState, regressionProject),
+      getGradeOptions(regressionState, regressionProject)
     );
 
     expect(viaSelector).toEqual(viaGrade);
@@ -380,8 +380,8 @@ describe('getGradeOptions', () => {
       gradeAccuracy(
         classificationState.accuracyCheckPredictedLabels,
         classificationState.accuracyCheckLabels,
-        getGradeOptions(classificationState, classificationProject),
-      ),
+        getGradeOptions(classificationState, classificationProject)
+      )
     );
   });
 });

@@ -34,8 +34,8 @@ class Ailab < Level
     uses_lab2
   )
 
-  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'datasets-manifest.json')
-  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'lab2-instructions.json')
+  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'src', 'datasets-manifest.json')
+  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'src', 'lab2-instructions.json')
 
   REQUIRE_ACCURACY_RANGE = (0..100)
 
