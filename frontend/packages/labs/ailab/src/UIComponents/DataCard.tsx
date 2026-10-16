@@ -1,6 +1,6 @@
 /* React component to show information about the currently-selected data set. */
 import {Typography} from '@mui/material';
-import type {ReactNode} from 'react';
+import React, {type ReactNode} from 'react';
 
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {shallowEqual, useAppSelector} from '../hooks';
@@ -35,7 +35,7 @@ const DataCard = () => {
   const dataLengthLimit = 20000;
   if (dataLength > dataLengthLimit) {
     window.alert(
-      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit}),
+      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit})
     );
   }
 

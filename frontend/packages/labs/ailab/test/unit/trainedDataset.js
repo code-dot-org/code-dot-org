@@ -31,11 +31,11 @@ export function trainDataset(
     features,
     mode = {trainer: 'decisionTree'},
     reserveLocation = TestDataLocations.END,
-  } = {},
+  } = {}
 ) {
   const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
   const metadata = JSON.parse(
-    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8'),
+    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
   store.dispatch(resetState());
@@ -47,8 +47,8 @@ export function trainDataset(
   store.dispatch(setImportedMetadata(metadata));
   metadata.fields.forEach(field =>
     store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL),
-    ),
+      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
+    )
   );
   store.dispatch(setReserveLocation(reserveLocation));
   const labelColumn = label || metadata.defaultLabelColumn;
@@ -58,7 +58,7 @@ export function trainDataset(
     selectedFeatures:
       features ||
       Object.keys(store.getState().data[0]).filter(
-        column => column !== labelColumn,
+        column => column !== labelColumn
       ),
   };
 
@@ -75,8 +75,8 @@ export function trainDataset(
 export function modelInputs(state, project) {
   return state.data.map(row =>
     project.selectedFeatures.map(feature =>
-      convertValueForTraining(state, project, row[feature], feature),
-    ),
+      convertValueForTraining(state, project, row[feature], feature)
+    )
   );
 }
 
@@ -85,7 +85,7 @@ export function modelPredictions(state, project, trainedModel) {
   return trainedModel
     .predict(modelInputs(state, project))
     .map(prediction =>
-      labelKey ? getKeyByValue(labelKey, prediction) : prediction,
+      labelKey ? getKeyByValue(labelKey, prediction) : prediction
     );
 }
 
@@ -94,6 +94,6 @@ export function rowTraces(state, project, trainedModel) {
   const {root} = trainedModel.toJSON();
   const inputs = modelInputs(state, project);
   return state.data.map((row, index) =>
-    traceDisplayTree(tree, root, inputs[index], row),
+    traceDisplayTree(tree, root, inputs[index], row)
   );
 }

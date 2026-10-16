@@ -181,6 +181,15 @@ $sidebar-tooltip-z-index: 2010;
   border-style: solid;
 }
 
+.taMarkIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--text-accent-pink-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
 .aiBotHeader {
   position: relative;
   padding-right: 12px;
@@ -233,6 +242,21 @@ $sidebar-tooltip-z-index: 2010;
   align-self: stretch;
 }
 
+.aiDiffHeaderTa {
+  background: var(--background-brand-light);
+  color: var(--text-neutral-primary);
+  border-color: var(--background-brand-light);
+
+  .aiDiffHeaderLeftSide {
+    flex: 1;
+  }
+
+  .aiDiffHeaderText {
+    flex: 1;
+    text-align: center;
+  }
+}
+
 .aiDiffHeaderLeftSide {
   display: flex;
   gap: 0.25rem;
@@ -265,6 +289,17 @@ $sidebar-tooltip-z-index: 2010;
   display: flex;
   align-items: flex-start;
   align-self: stretch;
+}
+
+// Rebranded, the drawer's outline matches the header rather than the default
+// solid border. The header draws the top; this draws the sides.
+.fabBackgroundDrawer.fabBackgroundDrawerTa {
+  border-right-color: var(--background-brand-light);
+  border-left-color: var(--background-brand-light);
+
+  &:last-child {
+    border-bottom-color: var(--background-brand-light);
+  }
 }
 
 .fabBackground {

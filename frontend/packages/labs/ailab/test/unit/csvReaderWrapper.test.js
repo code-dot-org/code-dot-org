@@ -1,10 +1,11 @@
+import Papa from 'papaparse';
+
 import {parseCSV} from '../../src/csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '../../src/datasetLoad';
 import {resetState} from '../../src/redux';
 import {store} from '../../src/store';
 
-const Papa = vi.hoisted(() => ({parse: vi.fn()}));
-vi.mock('papaparse', () => ({default: Papa}));
+vi.mock('papaparse', () => ({default: {parse: vi.fn()}}));
 
 const parseResult = animal => ({
   data: [

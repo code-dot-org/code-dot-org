@@ -80,7 +80,7 @@ describe('ailab reducer', () => {
         state = reducer(state, setCurrentColumn('a'));
         const next = reducer(state, setCurrentPanel('datasetView'));
         expect(next.currentColumn).toBeUndefined();
-      },
+      }
     );
 
     test('results clears prediction state but keeps the current column', () => {
@@ -106,7 +106,7 @@ describe('ailab reducer', () => {
     test('selects the label column on the dataset view', () => {
       let state = reducer(
         initialState,
-        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL),
+        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL)
       );
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('lbl'));
@@ -217,7 +217,7 @@ describe('ailab reducer', () => {
     test('selecting a feature column leaves the instructions alone', () => {
       let state = reducer(
         initialState,
-        setColumnsByDataType('a', ColumnTypes.NUMERICAL),
+        setColumnsByDataType('a', ColumnTypes.NUMERICAL)
       );
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('a'));
@@ -247,10 +247,10 @@ describe('ailab reducer', () => {
       saveModel(
         save,
         {...initialProject, labelColumn: 'a'},
-        trainedModel,
+        trainedModel
       )(
         action => actions.push(action),
-        () => state,
+        () => state
       );
       return {actions, saved};
     };

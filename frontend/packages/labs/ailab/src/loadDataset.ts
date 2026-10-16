@@ -6,7 +6,7 @@ import {store} from './store';
 
 export const loadDataset = async (
   csvPath: string,
-  jsonPath: string,
+  jsonPath: string
 ): Promise<void> => {
   await Promise.all([parseCSV(csvPath, true, false), parseJSON(jsonPath)]);
   applyModeColumns();
@@ -21,7 +21,7 @@ const applyModeColumns = (): void => {
       return true;
     }
     console.error(
-      `AI Lab mode: "${column}" is not a selectable column of this dataset.`,
+      `AI Lab mode: "${column}" is not a selectable column of this dataset.`
     );
     return false;
   };
@@ -42,6 +42,6 @@ const applyModeColumns = (): void => {
       selectedFeatures: labelColumn
         ? features?.filter(feature => feature !== labelColumn)
         : features,
-    }),
+    })
   );
 };

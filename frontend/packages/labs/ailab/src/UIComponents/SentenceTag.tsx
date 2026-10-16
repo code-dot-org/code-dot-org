@@ -1,6 +1,7 @@
 /* A label or feature slot in the "Predict … based on …" sentence. */
 import {Tooltip, Typography} from '@mui/material';
 import classNames from 'classnames';
+import React from 'react';
 
 import styles from './sentenceTag.module.scss';
 
@@ -22,7 +23,7 @@ const SentenceTag = ({
   const className = classNames(
     styles.tag,
     size === 'm' && styles.mediumTag,
-    text ? styles[`${variant}Tag`] : styles.placeholderTag,
+    text ? styles[`${variant}Tag`] : styles.placeholderTag
   );
 
   if (!tooltip) {

@@ -1,15 +1,14 @@
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {ThemeProvider} from '@mui/material/styles';
+import React from 'react';
 import {createRoot, type Root} from 'react-dom/client';
 import {Provider} from 'react-redux';
-
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 
 import App, {type AppProps} from './App';
 import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
 import {invalidatePendingDatasetLoads} from './datasetLoad';
-import type {Dataset} from './datasetManifest';
-import {getDatasets} from './datasetManifest';
+import {type Dataset, getDatasets} from './datasetManifest';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {loadDataset} from './loadDataset';
@@ -53,7 +52,7 @@ export interface InitAllOptions extends MountOptions {
 export const mount = function (options: MountOptions): void {
   if (root) {
     console.warn(
-      'ailab already mounted; ignoring subsequent calls to mount().',
+      'ailab already mounted; ignoring subsequent calls to mount().'
     );
     return;
   }
@@ -78,7 +77,7 @@ export const mount = function (options: MountOptions): void {
           </ThemeProvider>
         </TrainingDataProvider>
       </ProjectProvider>
-    </Provider>,
+    </Provider>
   );
 };
 
@@ -137,9 +136,7 @@ const processMode = (mode: Mode | undefined): void => {
     return;
   }
 
-  const item = getDatasets().find(
-    (item: Dataset) => item.id === onlyDatasetId,
-  );
+  const item = getDatasets().find((item: Dataset) => item.id === onlyDatasetId);
   if (!item) {
     console.error('AI Lab could not find a dataset to load.');
     return;

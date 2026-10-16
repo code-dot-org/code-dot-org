@@ -5,7 +5,7 @@ export interface RowSplit {
 
 export function splitRowIndices(
   rowCount: number,
-  accuracyCheckRowIndices: number[],
+  accuracyCheckRowIndices: number[]
 ): RowSplit {
   const reserved = new Set(accuracyCheckRowIndices);
   const split: RowSplit = {trained: [], accuracyCheck: []};

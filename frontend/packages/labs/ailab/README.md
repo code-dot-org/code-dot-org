@@ -1,5 +1,7 @@
 # @code-dot-org/ailab
 
+TODO: This readme is out of date. Update it.
+
 This package is AI Lab from Code.org.
 
 It lives in this monorepo at `frontend/packages/labs/ailab` and is consumed by the main repo's `apps/` directory (CodeAI Studio). It was previously a standalone, separately-published repo, like [Dance Party](https://github.com/code-dot-org/dance-party) and [AI for Oceans](https://github.com/code-dot-org/ml-activities).

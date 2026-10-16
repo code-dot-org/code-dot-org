@@ -40,3 +40,8 @@ export function formatChoiceLetter(index: number): string {
   }
   return label;
 }
+
+// Labels the selected answer in a submitted question's results.
+export function selectedAnswerLabel(isViewingStudent?: boolean): string {
+  return isViewingStudent ? "Student's answer" : 'Your answer';
+}

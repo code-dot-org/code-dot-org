@@ -51,7 +51,7 @@ export function traceDisplayTree(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
   inputs: number[],
-  row: DataRow,
+  row: DataRow
 ): DisplayTreeTrace {
   const path = [DISPLAY_TREE_ROOT_ID];
   const steps: DisplayTreeStep[] = [];
@@ -83,7 +83,7 @@ export function traceDisplayTree(
 export function groupDisplayTreeRows(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
-  examples: number[][],
+  examples: number[][]
 ): Map<string, number[]> {
   const groups = new Map<string, number[]>();
 
@@ -102,13 +102,13 @@ export function countDisplayTreeRows(
   root: DisplayTreeNode,
   modelRoot: SerializedTreeNode,
   examples: number[][],
-  grades: string[],
+  grades: string[]
 ): Map<string, DisplayTreeNodeCounts> {
   const counts = new Map<string, DisplayTreeNodeCounts>();
 
   groupDisplayTreeRows(root, modelRoot, examples).forEach((indices, nodeId) => {
     const correct = indices.filter(
-      index => grades[index] === ResultsGrades.CORRECT,
+      index => grades[index] === ResultsGrades.CORRECT
     ).length;
     counts.set(nodeId, {correct, incorrect: indices.length - correct});
   });

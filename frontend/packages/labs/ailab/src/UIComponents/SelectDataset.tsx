@@ -1,8 +1,8 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
-
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import React from 'react';
 
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
@@ -113,7 +113,7 @@ const SelectDataset = () => {
                 draggable={false}
                 className={classNames(
                   'uitest-ailab-dataset-image',
-                  styles.image,
+                  styles.image
                 )}
                 alt=""
               />

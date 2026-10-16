@@ -1,23 +1,33 @@
-// Response data is what was posted for the question. Its fields are
+// responseData is what was posted for the question. Its fields are
 // optional because a skipped question is saved as {}.
-export interface MultipleChoiceResponseData {
-  selectedChoiceId?: string;
+export interface MultipleChoiceQuestionResponse {
+  questionType: 'MultipleChoiceQuestion';
+  responseData: {selectedChoiceId?: string};
 }
 
-export interface FreeResponseResponseData {
-  answerText?: string;
+export interface FreeResponseQuestionResponse {
+  questionType: 'FreeResponseQuestion';
+  responseData: {answerText?: string};
 }
 
-// Switch on questionType to narrow responseData.
+// Narrow with the type guards below to read responseData.
 export type QuizQuestionResponse =
-  | {
-      questionType: 'MultipleChoiceQuestion';
-      responseData: MultipleChoiceResponseData;
-    }
-  | {
-      questionType: 'FreeResponseQuestion';
-      responseData: FreeResponseResponseData;
-    };
+  | MultipleChoiceQuestionResponse
+  | FreeResponseQuestionResponse;
+
+export type QuizQuestionResponseData = QuizQuestionResponse['responseData'];
+
+export function isMultipleChoiceResponse(
+  response: QuizQuestionResponse
+): response is MultipleChoiceQuestionResponse {
+  return response.questionType === 'MultipleChoiceQuestion';
+}
+
+export function isFreeResponseResponse(
+  response: QuizQuestionResponse
+): response is FreeResponseQuestionResponse {
+  return response.questionType === 'FreeResponseQuestion';
+}
 
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;

@@ -1,4 +1,4 @@
-import {
+import React, {
   createContext,
   useCallback,
   useContext,
@@ -41,7 +41,7 @@ function sortByColumnOrder(features: string[], data: DataRow[]): string[] {
 }
 
 const ProjectContext = createContext<ProjectContextValue | undefined>(
-  undefined,
+  undefined
 );
 
 interface ProjectProviderProps {
@@ -54,7 +54,7 @@ export const ProjectProvider = ({
   project: openWith,
 }: ProjectProviderProps) => {
   const [project, setProject] = useState<AilabProject>(
-    openWith ?? initialProject,
+    openWith ?? initialProject
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const data = useAppSelector(state => state.data);
@@ -68,9 +68,9 @@ export const ProjectProvider = ({
       setProject(previous =>
         keepsHistoricResults
           ? {...initialProject, historicResults: previous.historicResults}
-          : initialProject,
+          : initialProject
       );
-    }, []),
+    }, [])
   );
 
   const setLabelColumn = useCallback((labelColumn?: string) => {
@@ -79,7 +79,7 @@ export const ProjectProvider = ({
       labelColumn,
       // A column can't be both the thing predicted and a thing predicted from.
       selectedFeatures: previous.selectedFeatures.filter(
-        feature => feature !== labelColumn,
+        feature => feature !== labelColumn
       ),
     }));
   }, []);
@@ -94,19 +94,19 @@ export const ProjectProvider = ({
               ...previous,
               selectedFeatures: sortByColumnOrder(
                 [...previous.selectedFeatures, feature],
-                data,
+                data
               ),
-            },
+            }
       );
     },
-    [data],
+    [data]
   );
 
   const removeSelectedFeature = useCallback((feature: string) => {
     setProject(previous => ({
       ...previous,
       selectedFeatures: previous.selectedFeatures.filter(
-        selected => selected !== feature,
+        selected => selected !== feature
       ),
     }));
   }, []);
@@ -117,11 +117,11 @@ export const ProjectProvider = ({
         ...previous,
         selectedFeatures: sortByColumnOrder(
           features.filter(feature => feature !== previous.labelColumn),
-          data,
+          data
         ),
       }));
     },
-    [data],
+    [data]
   );
 
   /*
@@ -155,7 +155,7 @@ export const ProjectProvider = ({
         labelColumn,
         selectedFeatures: sortByColumnOrder(
           features.filter(feature => feature !== labelColumn),
-          data,
+          data
         ),
       };
     });
@@ -209,7 +209,7 @@ export const ProjectProvider = ({
       applyTrainingRun,
       snapshotTrainingRun,
       restoreTrainingRun,
-    ],
+    ]
   );
 
   return (

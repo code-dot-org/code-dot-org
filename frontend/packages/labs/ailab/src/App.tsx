@@ -1,8 +1,7 @@
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button} from '@mui/material';
 import classNames from 'classnames';
-import {type CSSProperties, type ReactNode, useEffect} from 'react';
+import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
 
 import {colors} from './constants';
 import {reportPanelView} from './helpers/metrics';
@@ -95,7 +94,7 @@ const PanelButtons = ({
   };
 
   const saveResponseDataMessage = (
-    saveResponseData: SaveResponseData | undefined,
+    saveResponseData: SaveResponseData | undefined
   ): string | undefined => {
     // The list of known error types from share_filtering.rb.
     const errorTypes = ['email', 'address', 'phone', 'profanity'];
@@ -115,7 +114,11 @@ const PanelButtons = ({
   const loadSaveStatus = isSaveCompleteProp(saveStatus) ? (
     localizedSaveMessage(saveStatus)
   ) : (
-    <FontAwesomeIcon icon={faSpinner} />
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
   );
 
   const loadSaveResponseData = isSaveCompleteProp(saveStatus)
@@ -221,7 +224,7 @@ export interface AppProps {
   /** Optional callback invoked when the instructions key changes. */
   setInstructionsKey?: (
     key: InstructionsKey,
-    options: {showOverlay?: boolean} | null,
+    options: {showOverlay?: boolean} | null
   ) => void;
   onStartOver?: () => void;
   /** Optional callback invoked with the accuracy of each newly trained model. */
@@ -245,7 +248,7 @@ const App = ({
   const {project} = useProject();
   const panelButtons = useAppSelector<PrevNextButtons>(
     state => getPanelButtons(state, project),
-    panelButtonsEqual,
+    panelButtonsEqual
   );
   const currentPanel = useAppSelector(state => state.currentPanel);
   const saveStatus = useAppSelector(state => state.saveStatus);
@@ -266,6 +269,9 @@ const App = ({
     if (instructionsKey) {
       setInstructionsKey?.(instructionsKey, {showOverlay});
     }
+    // The consumer passes a fresh closure each render; depending on it would
+    // re-notify on every render rather than on a key change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instructionsKey, showOverlay]);
 
   // Report panel view on every panel change.
@@ -277,6 +283,8 @@ const App = ({
     if (latestResult) {
       onTrained?.(Number(latestResult.accuracy));
     }
+    // As above: report a result once, not once per render of the consumer.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
 
   return (

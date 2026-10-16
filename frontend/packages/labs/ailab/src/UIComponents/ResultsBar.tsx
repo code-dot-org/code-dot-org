@@ -1,7 +1,6 @@
-import {Button} from '@mui/material';
-import {useState} from 'react';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button} from '@mui/material';
+import React, {useState} from 'react';
 
 import {formatAccuracy} from '../helpers/accuracy';
 import {useProject} from '../ProjectContext';

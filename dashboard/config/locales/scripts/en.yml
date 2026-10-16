@@ -29640,6 +29640,10 @@ en:
               name: Lesson 11
             lesson-12:
               name: Lesson 12
+            lesson-13:
+              name: Pre-Assessment
+            lesson-14:
+              name: End of Unit Assessment
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -29655,6 +29659,16 @@ en:
             This unit introduces students to problems in the domain of supervised machine learning, inviting them to write Python code to train classification and regression models.
 
             Students introduced to industry-standard tools like `scikit-learn` that introduce helpful abstractions to facilitate the process of building machine learning systems. As students build their first AI systems, they make use of the machine learning fundamentals and data analysis skills from Unit 2 and Unit 3, writing code to split data into training and test sets, training machine learning models, and visualizing the results of their work.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how classification and regression algorithms can make effective predictions.
+            - Build classification models using training data to predict labels for new input data.
+            - Build linear regression models to predict numeric values.
+            - Use machine learning models to make predictions and decisions.
+            - Analyze and interpret the output of machine learning models.
+            - Use a loss function to measure the effectiveness of a machine learning model.
+            - Understand and contribute to a Python codebase that implements AI algorithms.
+            :::
           student_description: |-
             This unit introduces you to problems in the domain of supervised machine learning, inviting you to write Python code to train classification and regression models.
 
@@ -30416,6 +30430,12 @@ en:
               name: 'Lesson 15: Algorithmic Bias'
             lesson-28:
               name: 'Lesson 17: The Need for Programming Languages'
+            lesson-29:
+              name: 'Lesson 16: AI Lab'
+            lesson-30:
+              name: 'Lesson 18: Algorithms Solve Problems'
+            lesson-31:
+              name: 'Lesson 2: Intro to Apps'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs

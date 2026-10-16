@@ -26,7 +26,7 @@ const panelList = [
 export function isPanelEnabled(
   state: RootState,
   project: AilabProject,
-  panelId: string,
+  panelId: string
 ): boolean {
   if (panelId === 'datasetView') {
     if (!isDataUploaded(state)) {
@@ -136,7 +136,7 @@ function isModelNamed(state: RootState): boolean {
 // Given the current panel, return the appropriate previous & next buttons.
 export function prevNextButtons(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
 

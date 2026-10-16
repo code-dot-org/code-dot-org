@@ -32,13 +32,13 @@ export function seedLevel(
   store,
   mode,
   data = ANIMALS,
-  columns = ANIMAL_COLUMNS,
+  columns = ANIMAL_COLUMNS
 ) {
   store.dispatch(setMode(mode));
   store.dispatch(setCurrentPanel('datasetView'));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type)),
+    store.dispatch(setColumnsByDataType(column, type))
   );
 
   return store;
