@@ -972,6 +972,21 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{custom_script.original_unit_group.name}/units/1/lessons/#{last_level.lesson.absolute_position}/levels/#{last_level.position}"
   end
 
+  test "next when not logged in redirects to first non-unplugged non-passed level" do
+    anon_user_id = request.anon_user_id
+    custom_script = create(:script, :in_single_unit_course, name: 'coolscript')
+    lesson_group = create(:lesson_group, script: custom_script)
+    custom_lesson_1 = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'neat lesson', absolute_position: 1)
+    first_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 1)
+    create(:anonymous_level_progress, anon_user_id:, script: custom_script, level: first_level.level, best_result: Activity::MINIMUM_PASS_RESULT)
+    create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: custom_lesson_1, position: 2)
+    failed_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 3)
+    create(:anonymous_level_progress, anon_user_id:, script: custom_script, level: failed_level.level, best_result: Activity::MINIMUM_PASS_RESULT - 1)
+
+    get :next, params: {course_course_name: custom_script.original_unit_group.name, unit_position: 1}
+    assert_redirected_to "/courses/#{custom_script.original_unit_group.name}/units/1/lessons/#{failed_level.lesson.absolute_position}/levels/#{failed_level.position}"
+  end
+
   test "next skips entire unplugged lesson" do
     custom_script = create(:script, :in_single_unit_course, name: 'coolscript')
     lesson_group = create(:lesson_group, script: custom_script)
@@ -2583,6 +2598,137 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                               name: 'levelbuilder can view pl script level'
   ) do
     refute response.body.include? no_access_msg
+  end
+
+  describe 'GET /next' do
+    subject(:get_next) {get :next, params: {course_course_name: unit.original_unit_group.name, unit_position: 1}}
+
+    let(:anon_user_id) {Cdo::AnonUserId.generate}
+    let(:unit) {create(:script, :in_single_unit_course)}
+    let(:lesson) {create(:lesson, script: unit, lesson_group: create(:lesson_group, script: unit), absolute_position: 1)}
+    let(:levels_path) {"/courses/#{unit.original_unit_group.name}/units/1/lessons/1/levels"}
+
+    let!(:script_level1) {create(:script_level, script: unit, lesson:, position: 1)}
+    let!(:script_level2) {create(:script_level, script: unit, lesson:, position: 2)}
+    let!(:script_level3) {create(:script_level, script: unit, lesson:, position: 3)}
+
+    it 'redirects to first progression level' do
+      get_next
+
+      assert_redirected_to "#{levels_path}/#{script_level1.position}"
+    end
+
+    it 'does not create anonymous user ID' do
+      get_next
+
+      assert_nil session[Cdo::AnonUserId::KEY]
+      assert_nil request.existing_anon_user_id
+    end
+
+    context 'when anonymous user ID is in session' do
+      before do
+        session[Cdo::AnonUserId::KEY] = anon_user_id
+      end
+
+      it 'redirects to first progression level' do
+        get_next
+
+        assert_redirected_to "#{levels_path}/#{script_level1.position}"
+      end
+
+      context 'when anonymous user failed first level' do
+        before do
+          create(:anonymous_level_progress, anon_user_id:, script: unit, level: script_level1.level, best_result: Activity::MINIMUM_PASS_RESULT - 1)
+        end
+
+        it 'redirects to first level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level1.position}"
+        end
+      end
+
+      context 'when anonymous user passed first level' do
+        before do
+          create(:anonymous_level_progress, anon_user_id:, script: unit, level: script_level1.level, best_result: Activity::MINIMUM_PASS_RESULT)
+        end
+
+        it 'redirects to second level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level2.position}"
+        end
+      end
+
+      context 'when anonymous user passed first and third levels' do
+        before do
+          create(:anonymous_level_progress, anon_user_id:, script: unit, level: script_level1.level, best_result: Activity::MINIMUM_PASS_RESULT)
+          create(:anonymous_level_progress, anon_user_id:, script: unit, level: script_level3.level, best_result: Activity::MINIMUM_PASS_RESULT)
+        end
+
+        it 'redirects to second level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level2.position}"
+        end
+      end
+
+      context 'when anonymous user passed all levels' do
+        before do
+          [script_level1, script_level2, script_level3].each do |script_level|
+            create(:anonymous_level_progress, anon_user_id:, script: unit, level: script_level.level, best_result: Activity::MINIMUM_PASS_RESULT)
+          end
+        end
+
+        it 'redirects to first progression level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level1.position}"
+        end
+      end
+
+      context 'when other anonymous user passed first level' do
+        before do
+          create(:anonymous_level_progress, script: unit, level: script_level1.level, best_result: Activity::MINIMUM_PASS_RESULT)
+        end
+
+        it 'redirects to first level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level1.position}"
+        end
+      end
+
+      context 'when anonymous user passed first level in other unit' do
+        before do
+          create(:anonymous_level_progress, anon_user_id:, level: script_level1.level, best_result: Activity::MINIMUM_PASS_RESULT)
+        end
+
+        it 'redirects to first level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level1.position}"
+        end
+      end
+    end
+
+    context 'when anonymous user ID is in cookie' do
+      before do
+        request.cookies[Cdo::AnonUserId::KEY] = anon_user_id
+      end
+
+      context 'when anonymous user passed first level' do
+        before do
+          create(:anonymous_level_progress, anon_user_id:, script: unit, level: script_level1.level, best_result: Activity::MINIMUM_PASS_RESULT)
+        end
+
+        it 'redirects to second level' do
+          get_next
+
+          assert_redirected_to "#{levels_path}/#{script_level2.position}"
+        end
+      end
+    end
   end
 
   describe '#redirect_to_canonical_path' do

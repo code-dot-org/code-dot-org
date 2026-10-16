@@ -403,15 +403,23 @@ class ScriptLevelsController < ApplicationController
     if current_user
       current_user.next_unpassed_visible_progression_level(@script)
     else
-      find_next_level_for_session(@script)
+      next_anon_user_script_level(@script)
     end
   end
 
   # Attempts to find the next unpassed level for this session and script
-  private def find_next_level_for_session(script)
+  private def next_anon_user_script_level(script)
+    anon_user_id = request.existing_anon_user_id
+    return unless anon_user_id
+
+    passed_level_ids = AnonymousLevel::Progress.
+      where(anon_user_id:, script_id: script.id, best_result: Activity::MINIMUM_PASS_RESULT..).
+      pluck(:level_id).
+      to_set
+    return if passed_level_ids.empty?
+
     script.script_levels.detect do |sl|
-      sl.valid_progression_level? &&
-        (client_state.level_progress(script_id: sl.script_id, level_id: sl.level_id) < Activity::MINIMUM_PASS_RESULT)
+      sl.valid_progression_level? && passed_level_ids.exclude?(sl.level_id)
     end
   end
 
