@@ -111,6 +111,11 @@ class GatekeeperBase < DynamicConfigBase
     gatekeeper = {}
 
     @datastore_cache.all.each do |feature, rules|
+      # A stored value can be nil rather than a rule map: a datastore row whose
+      # value is literally `null` loads to nil, as does a value the adapter cannot
+      # parse (see DynamoDBAdapter#all/#get). feature_names already treats such a
+      # feature as absent; skip it here too instead of raising on `rules.each`.
+      next if rules.blank?
       gatekeeper[feature] = feature_details = []
       rules.each do |conditions, value|
         rule = {"rule" => nil}
@@ -149,6 +154,7 @@ class GatekeeperBase < DynamicConfigBase
   def property_values(condition_property)
     Set.new.tap do |result|
       @datastore_cache.all.each do |_feature, rules|
+        next if rules.blank?
         rules.each do |conditions, _value|
           JSON.parse(conditions).each do |property, value|
             result << value if property == condition_property

@@ -72,6 +72,33 @@ class GatekeeperTest < ActiveSupport::TestCase
     assert_equal Set.new(['postMilestone', 'shareEnabled']), Gatekeeper.feature_names
   end
 
+  # A datastore row can round-trip to nil rules (the DynamoDB adapter maps an
+  # unparseable value to nil). to_hash and property_values must skip it the way
+  # feature_names does, rather than raising NoMethodError and taking down the
+  # whole gatekeeper admin page.
+  test 'to_hash skips a feature whose rules are nil instead of raising' do
+    datastore_cache = Gatekeeper.instance_variable_get(:@datastore_cache)
+    datastore_cache.stubs(:all).returns(
+      'corrupt_feature' => nil,
+      'shareEnabled' => {Oj.dump([], mode: :strict) => true}
+    )
+
+    result = Gatekeeper.to_hash
+
+    refute result.key?('corrupt_feature')
+    assert_equal({'shareEnabled' => [{'rule' => nil, 'value' => true}]}, result)
+  end
+
+  test 'property_values skips a feature whose rules are nil instead of raising' do
+    datastore_cache = Gatekeeper.instance_variable_get(:@datastore_cache)
+    datastore_cache.stubs(:all).returns(
+      'corrupt_feature' => nil,
+      'shareEnabled' => {Oj.dump([['script_name', 'mc']], mode: :strict) => true}
+    )
+
+    assert_equal Set.new(['mc']), Gatekeeper.script_names
+  end
+
   test 'disallows' do
     feature_disallowed = 'test feature 1'
     feature_allowed = 'test feature 2'
