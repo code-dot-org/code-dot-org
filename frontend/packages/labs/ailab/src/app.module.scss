@@ -52,40 +52,23 @@
   position: relative;
   flex-shrink: 0;
   height: 50px;
-  margin: 0 10px 10px;
+  background-color: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
 }
 
 .previous,
 .next {
   position: absolute;
-  top: 7px;
-  font-size: 30px;
-  cursor: pointer;
+  top: 9px;
   z-index: 1001;
 }
 
 .previous {
-  left: 0;
+  left: 8px;
 }
 
 .next {
-  right: 0;
-}
-
-.navButton {
-  background-color: rgb(254 190 64);
-  color: white;
-  border-radius: 5px;
-  font-size: 24px;
-  border: initial;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin: 0;
-}
-
-.navButton:disabled {
-  opacity: 0.5;
-  cursor: pointer;
+  right: 8px;
 }
 
 .saveMessage {
