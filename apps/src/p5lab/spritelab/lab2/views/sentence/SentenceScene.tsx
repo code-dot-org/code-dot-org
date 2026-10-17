@@ -1,5 +1,6 @@
 // An image level laid out as two halves: the picture on the left, the
-// controls on the right. Reached by level_mode.imageUi or ?image-ui=explore.
+// controls on the right. A host with its own chrome (the image dialog)
+// passes a layout that places the same parts itself.
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
@@ -20,10 +21,15 @@ import {
   GenerateImageOptions,
   UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {
+  IMAGE_KINDS,
+  imageKindFor,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageKinds';
 import {ImageSafetyError} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
 import {defaultPixelGrid} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
+  imageKindLabel,
   ImageStyle,
   ImageSubject,
   ImageType,
@@ -39,30 +45,30 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import BehindTheScenes from './BehindTheScenes';
-import {pickFact} from './exploreFacts';
-import ExploreLayout from './ExploreLayout';
+import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
+import ResultActions, {Verdict, VerdictRow} from './ResultActions';
+import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
+import {pickFact} from './sentenceFacts';
+import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
   chosenBodyPlan,
   isComplete,
   promptText,
   sentenceFor,
-} from './exploreSentences';
-import {playSound} from './exploreSounds';
-import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
-import ResultActions, {Verdict} from './ResultActions';
-import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
-import SentenceReadOnly from './SentenceReadOnly';
+} from './sentences';
+import SentenceSceneLayout from './SentenceSceneLayout';
+import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
 import WordMenus from './WordMenus';
 
-import styles from './image-explore.module.scss';
+import styles from './sentence-scene.module.scss';
 
 const STYLES = Object.keys(IMAGE_STYLE_LABELS) as ImageStyle[];
 // The service's middle temperature.
 const TEMPERATURE = 1;
 
-type Mode = 'edit' | 'generating' | 'result' | 'paint';
+export type Mode = 'edit' | 'generating' | 'result' | 'paint';
 
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
 const PAINT_COLORS: readonly PaletteColor[] = [
@@ -89,7 +95,39 @@ interface Made {
   sent: SentPrompts;
 }
 
-interface ImageExploreSceneProps {
+/** What a host lays out. The nodes are ready to place; the callbacks and
+    flags let a host draw its own buttons. */
+export interface SentenceSceneParts {
+  mode: Mode;
+  busy: boolean;
+  /** Every word the sentence needs is chosen. */
+  complete: boolean;
+  panelRef: React.RefObject<HTMLElement>;
+  /** The picture, the spinner, or nothing. */
+  frame: React.ReactNode;
+  /** A made picture is showing in the frame. */
+  frameFilled: boolean;
+  /** Behind the scenes, once there is a picture. */
+  underFrame: React.ReactNode;
+  /** The screen reader's status line. */
+  status: React.ReactNode;
+  /** The Type dropdown, when the host offers the choice. */
+  typeChoice: React.ReactNode;
+  /** The word menus, or the sentence read back while busy. */
+  sentence: React.ReactNode;
+  styleChoice: React.ReactNode;
+  error: React.ReactNode;
+  fact: React.ReactNode;
+  /** The question and the thumbs, once there is a picture. */
+  verdict: React.ReactNode;
+  generate: () => void;
+  changeWords: () => void;
+  keep: () => void;
+  /** The style and the kind the host's own paint entry would start from. */
+  draft: {imageType: ImageType; subject?: ImageSubject; style: ImageStyle};
+}
+
+interface SentenceSceneProps {
   imageType: ImageType;
   imageSubject?: ImageSubject;
   /** The sentence to build, by id; the image type's own when unset. */
@@ -103,21 +141,43 @@ interface ImageExploreSceneProps {
   instructions?: string;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
+  /** Offer the Type dropdown; imageType and imageSubject are then where it
+      starts. */
+  typeChoice?: boolean;
+  /** Keep a made picture; the level's own saving when unset. */
+  onKeep?: (result: GeneratedImageResult) => Promise<void> | void;
+  /** A generation request is leaving. */
+  onGenerateStart?: () => void;
+  /** Analytics: which surface generated. */
+  method?: string;
+  /** Lay the parts out instead of the level's two halves. */
+  layout?: (parts: SentenceSceneParts) => React.ReactNode;
 }
 
-const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
-  imageType,
-  imageSubject,
+const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
+  imageType: initialImageType,
+  imageSubject: initialImageSubject,
   sentenceId,
   defaultStyle,
   imageRole,
   uploadImage,
   instructions,
   showTts,
+  typeChoice,
+  onKeep,
+  onGenerateStart,
+  method = 'scene',
+  layout,
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
   const [style, setStyle] = useState<ImageStyle>(defaultStyle);
+  const [kind, setKind] = useState(
+    () => imageKindFor(initialImageType, initialImageSubject).value
+  );
+  const {imageType, subject: imageSubject} = typeChoice
+    ? IMAGE_KINDS.find(k => k.value === kind) ?? IMAGE_KINDS[0]
+    : {imageType: initialImageType, subject: initialImageSubject};
   const sentence = sentenceFor(imageType, imageSubject, sentenceId);
   const [choices, setChoices] = useState<Choices>({});
   const complete = isComplete(sentence, choices);
@@ -147,7 +207,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
         promptText: prompt,
-        method: 'explore',
+        method,
         imageType,
         sentenceId: sentence.id,
         choices,
@@ -155,6 +215,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       },
       true
     );
+    onGenerateStart?.();
     setMode('generating');
     setVerdict(null);
     setError(null);
@@ -216,7 +277,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       }
       setMode('edit');
     }
-  }, [sentence, choices, imageType, imageSubject, style, canAnimate]);
+  }, [
+    sentence,
+    choices,
+    imageType,
+    imageSubject,
+    style,
+    canAnimate,
+    method,
+    onGenerateStart,
+  ]);
 
   const keep = useCallback(async () => {
     if (!made) {
@@ -224,12 +294,16 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     }
     setSaving(true);
     try {
-      await saveGeneratedImage(dispatch, made.result, {
-        uploadImage,
-        imageType,
-        imageRole,
-      });
-      dispatch(continueOrFinishLesson());
+      if (onKeep) {
+        await onKeep(made.result);
+      } else {
+        await saveGeneratedImage(dispatch, made.result, {
+          uploadImage,
+          imageType,
+          imageRole,
+        });
+        dispatch(continueOrFinishLesson());
+      }
     } catch (e) {
       console.error('Saving the image failed:', e);
       setError("Couldn't save the picture. Try again.");
@@ -237,7 +311,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
       // On the last level with no finish URL, the lesson does not move on.
       setSaving(false);
     }
-  }, [made, dispatch, uploadImage, imageType, imageRole]);
+  }, [made, onKeep, dispatch, uploadImage, imageType, imageRole]);
 
   const startPaint = useCallback(() => {
     setError(null);
@@ -351,7 +425,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         onSave={savePaint}
       >
         {parts => (
-          <ExploreLayout
+          <SentenceSceneLayout
             frameClassName={styles.paintFrame}
             frame={parts.canvas}
             frameAriaLabel="Your drawing"
@@ -380,11 +454,74 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
                 Save
               </MuiButton>
             </div>
-          </ExploreLayout>
+          </SentenceSceneLayout>
         )}
       </PixelEditor>
     );
   }
+
+  const typeChoiceNode = typeChoice ? (
+    <SimpleDropdown
+      name="sentence-type"
+      labelText="Type"
+      isLabelVisible={false}
+      size="s"
+      color={theme === 'Dark' ? 'white' : 'black'}
+      items={IMAGE_KINDS.map(k => ({
+        value: k.value,
+        text: imageKindLabel(k.imageType, k.subject),
+      }))}
+      selectedValue={kind}
+      disabled={busy}
+      onChange={e => {
+        setKind(e.target.value);
+        // A new sentence takes new words.
+        setChoices({});
+      }}
+    />
+  ) : null;
+  const styleChoice = (
+    <SimpleDropdown
+      name="sentence-style"
+      labelText="Style"
+      isLabelVisible={false}
+      size="s"
+      color={theme === 'Dark' ? 'white' : 'black'}
+      items={STYLES.map(s => ({value: s, text: IMAGE_STYLE_LABELS[s]}))}
+      selectedValue={style}
+      disabled={busy}
+      onChange={e => setStyle(e.target.value as ImageStyle)}
+    />
+  );
+  const statusNode = (
+    <div className={styles.srOnly} role="status">
+      {status}
+    </div>
+  );
+  const sentenceNode =
+    showingResult || generating ? (
+      <SentenceReadOnly sentence={sentence} choices={choices} />
+    ) : (
+      <WordMenus
+        sentence={sentence}
+        choices={choices}
+        onChange={setChoices}
+        disabled={busy}
+      />
+    );
+  const factNode = generating && fact && (
+    <aside
+      className={classNames(styles.factBox, styles.bottomRow)}
+      aria-label="Did you know?"
+    >
+      <FontAwesomeV6Icon
+        iconName="lightbulb"
+        className={styles.factIcon}
+        aria-hidden
+      />
+      <MuiTypography variant="body2">{fact}</MuiTypography>
+    </aside>
+  );
 
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
@@ -420,35 +557,55 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
     </>
   ) : null;
 
+  const underFrame = showingResult && made && (
+    <BehindTheScenes sent={made.sent} disabled={busy} />
+  );
+  const verdictNode = showingResult && made && (
+    <VerdictRow verdict={verdict} onJudge={judge} disabled={busy} />
+  );
+
+  if (layout) {
+    return (
+      <>
+        {layout({
+          mode,
+          busy,
+          complete,
+          panelRef,
+          frame,
+          frameFilled: !!made && !generating,
+          underFrame,
+          status: statusNode,
+          typeChoice: typeChoiceNode,
+          sentence: sentenceNode,
+          styleChoice,
+          error: errorLine,
+          fact: factNode,
+          verdict: verdictNode,
+          generate,
+          changeWords,
+          keep,
+          draft: {imageType, subject: imageSubject, style},
+        })}
+      </>
+    );
+  }
+
   return (
-    <ExploreLayout
+    <SentenceSceneLayout
       frameClassName={classNames(
         made && !generating && styles.imageFrameFilled
       )}
       frame={frame}
-      underFrame={
-        showingResult &&
-        made && <BehindTheScenes sent={made.sent} disabled={busy} />
-      }
+      underFrame={underFrame}
       frameAriaLabel="Your picture"
       panelAriaLabel="Make your picture"
       panelRef={panelRef}
       fillFrameHeight={!showingResult}
     >
-      <div className={styles.srOnly} role="status">
-        {status}
-      </div>
+      {statusNode}
       {instructionsBlock}
-      {showingResult || generating ? (
-        <SentenceReadOnly sentence={sentence} choices={choices} />
-      ) : (
-        <WordMenus
-          sentence={sentence}
-          choices={choices}
-          onChange={setChoices}
-          disabled={busy}
-        />
-      )}
+      {sentenceNode}
       {showingResult && made ? (
         <ResultActions
           verdict={verdict}
@@ -467,16 +624,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         </div>
       ) : (
         <div className={styles.generateRow}>
-          <SimpleDropdown
-            name="explore-style"
-            labelText="Style"
-            isLabelVisible={false}
-            size="s"
-            color={theme === 'Dark' ? 'white' : 'black'}
-            items={STYLES.map(s => ({value: s, text: IMAGE_STYLE_LABELS[s]}))}
-            selectedValue={style}
-            onChange={e => setStyle(e.target.value as ImageStyle)}
-          />
+          {styleChoice}
           <MuiButton
             className={classNames(
               styles.generateButton,
@@ -493,19 +641,7 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
         </div>
       )}
       {errorLine}
-      {generating && fact && (
-        <aside
-          className={classNames(styles.factBox, styles.bottomRow)}
-          aria-label="Did you know?"
-        >
-          <FontAwesomeV6Icon
-            iconName="lightbulb"
-            className={styles.factIcon}
-            aria-hidden
-          />
-          <MuiTypography variant="body2">{fact}</MuiTypography>
-        </aside>
-      )}
+      {factNode}
       {mode === 'edit' && (
         <div className={styles.bottomRow}>
           <hr className={styles.resultDivider} />
@@ -520,8 +656,8 @@ const ImageExploreScene: React.FunctionComponent<ImageExploreSceneProps> = ({
           </MuiButton>
         </div>
       )}
-    </ExploreLayout>
+    </SentenceSceneLayout>
   );
 };
 
-export default ImageExploreScene;
+export default SentenceScene;

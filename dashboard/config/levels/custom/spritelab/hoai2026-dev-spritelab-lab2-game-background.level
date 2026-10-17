@@ -25,7 +25,6 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "platform-background",
-      "imageUi": "explore",
       "sentence": "place-detail"
     },
     "objectives": {

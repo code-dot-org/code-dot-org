@@ -21,7 +21,7 @@ const TABS = [
 type Tab = (typeof TABS)[number][0];
 // Pose names as students read them.
 const POSE_NAMES: Record<string, string> = {idling: 'standing'};
-const PANEL_ID = 'explore-prompt-popover';
+const PANEL_ID = 'sentence-prompt-popover';
 
 interface BehindTheScenesProps {
   sent: SentPrompts;
@@ -48,7 +48,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
     e.preventDefault();
     const next: Tab = tab === 'picture' ? 'poses' : 'picture';
     setTab(next);
-    document.getElementById(`explore-prompt-tab-${next}`)?.focus();
+    document.getElementById(`sentence-prompt-tab-${next}`)?.focus();
   };
   useLayoutEffect(() => {
     if (!open) {
@@ -137,9 +137,9 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
                   key={id}
                   type="button"
                   role="tab"
-                  id={`explore-prompt-tab-${id}`}
+                  id={`sentence-prompt-tab-${id}`}
                   aria-selected={tab === id}
-                  aria-controls="explore-prompt-panel"
+                  aria-controls="sentence-prompt-panel"
                   tabIndex={tab === id ? 0 : -1}
                   className={styles.promptTab}
                   onClick={() => setTab(id)}
@@ -152,10 +152,10 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           )}
           {sent.poses && tab === 'poses' ? (
             <div
-              id="explore-prompt-panel"
+              id="sentence-prompt-panel"
               className={styles.promptText}
               role="tabpanel"
-              aria-labelledby="explore-prompt-tab-poses"
+              aria-labelledby="sentence-prompt-tab-poses"
               tabIndex={0}
             >
               <p className={styles.promptNote}>
@@ -187,11 +187,11 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             </div>
           ) : (
             <p
-              id="explore-prompt-panel"
+              id="sentence-prompt-panel"
               className={styles.promptText}
               role={sent.poses ? 'tabpanel' : undefined}
               aria-labelledby={
-                sent.poses ? 'explore-prompt-tab-picture' : undefined
+                sent.poses ? 'sentence-prompt-tab-picture' : undefined
               }
               tabIndex={0}
             >
