@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:22:37.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-0fabcd91-a15d-4eab-b9e0-a817bdb80c3c",
+        "text": "Every web page is made of different parts.",
+        "imageUrl": "https://images.code.org/e96e3780990834ef3974ef3d80947dfb-adaptive-HoAI26-use-the-lingo-4-panel-1-63cc02fd-4ac4-46cf-a853-c80dd9d66f8b.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-d0f02545-840a-4370-95c5-1425103a1f5d",
+        "text": "The 'hero' section is often at the top, grabbing attention.",
+        "imageUrl": "https://images.code.org/1c66a502e8fc40384085255313953c2a-adaptive-HoAI26-use-the-lingo-4-panel-2-8b4a4f57-e9ea-4b2a-a7f1-b86102b286c0.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-1774d6c3-2655-47d6-a5f8-adc23ff053d4",
+        "text": "Smaller 'feature cards' show key info or options.",
+        "imageUrl": "https://images.code.org/f8b20e8911206eebc0d69e2559402d81-adaptive-HoAI26-use-the-lingo-4-panel-3-e54b4963-c816-4228-b7de-8bf1f1d5d26d.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-7cf960b2-c941-4a0e-b99a-620e481caad4",
+        "text": "An 'interactive canvas' lets users play or create.",
+        "imageUrl": "https://images.code.org/913bc094ad84431911c2d2c71150ccf4-adaptive-HoAI26-use-the-lingo-4-panel-4-d971775e-0e4c-4b45-9026-8daff6302f23.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-72392717-95fb-44d8-82e3-9599f4c8b802",
+        "text": "A 'call-to-action' button guides you to the next step.",
+        "imageUrl": "https://images.code.org/0106677c91c70457e3eeefaa7d70a50c-adaptive-HoAI26-use-the-lingo-4-panel-5-8e3c5eec-92a8-41ad-8492-61f1a8b19f9d.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Watch an animated video that tours common web page parts. See how a page builds block by block, with each section popping in to reveal its name and function, such as hero, feature cards, or call-to-action."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:23:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:23:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
