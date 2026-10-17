@@ -25,7 +25,6 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "story-background",
-      "imageUi": "explore",
       "sentence": "place-time"
     },
     "objectives": {

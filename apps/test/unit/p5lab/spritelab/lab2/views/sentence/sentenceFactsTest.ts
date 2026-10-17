@@ -1,4 +1,4 @@
-import {pickFact} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreFacts';
+import {pickFact} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentenceFacts';
 
 const every = (context: {animated: boolean; pixel: boolean}) => {
   const seen = new Set<string>();
@@ -8,7 +8,7 @@ const every = (context: {animated: boolean; pixel: boolean}) => {
   return [...seen];
 };
 
-describe('exploreFacts', () => {
+describe('sentenceFacts', () => {
   it('keeps the pixel and animation facts for pictures that are those', () => {
     const smoothStill = every({animated: false, pixel: false});
     expect(smoothStill.some(f => /Pixel art/.test(f))).toBe(false);

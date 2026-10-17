@@ -25,7 +25,6 @@
       "kind": "image",
       "imageType": "sprite",
       "imageRole": "friend",
-      "imageUi": "explore",
       "sentence": "friend"
     },
     "objectives": {

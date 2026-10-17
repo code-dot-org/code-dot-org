@@ -25,7 +25,6 @@
       "kind": "image",
       "imageType": "block",
       "imageRole": "block",
-      "imageUi": "explore",
       "sentence": "block"
     },
     "objectives": {

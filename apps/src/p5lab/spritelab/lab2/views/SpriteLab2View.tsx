@@ -44,7 +44,6 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks} from '../addBlocks';
-import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -71,11 +70,9 @@ import {
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
-  adlibSetForMode,
   DEFAULT_IMAGE_STYLE,
   isFreeplayMode,
   isImageMode,
-  isImageUi,
   tabsForMode,
 } from '../levelMode';
 import {
@@ -143,13 +140,13 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
-import ImageExploreScene from './explore/ImageExploreScene';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesGallery from './ScenesGallery';
 import SceneTabs from './SceneTabs';
+import SentenceScene from './sentence/SentenceScene';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
@@ -185,25 +182,6 @@ const LOCKED_REASON = 'Unlocks later in the lesson.';
 // On hover over World while a story scene is active.
 const STORY_NO_WORLD_REASON = 'A story scene has no world.';
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
-
-// ?image-adlibs=<set> previews the adlib combos without a level change.
-function getImageAdlibSetParam(): ImageAdlibSet | undefined {
-  const value = queryParams('image-adlibs');
-  return isImageAdlibSet(value) ? value : undefined;
-}
-
-// ?image-free-text=true restores the free-text prompt box on adlib-only
-// levels, for internal testing.
-function getImageFreeTextParam(): boolean {
-  return queryParams('image-free-text') === 'true';
-}
-
-// ?image-ui=explore tries the two-half image scene on any image level; a
-// level opts in with level_mode.imageUi.
-function getImageUiParam() {
-  const value = queryParams('image-ui');
-  return isImageUi(value) ? value : undefined;
-}
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -295,8 +273,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => queryParams('world-tab') === 'true',
     []
   );
-  const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
-  const imageFreeTextParam = useMemo(getImageFreeTextParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one. Level edit modes author starter images, which needs the
   // naming controls.
@@ -1940,9 +1916,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  const imageUi = getImageUiParam() ?? levelProperties.levelMode?.imageUi;
-
-  // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
     onRenameImage: handleRenameImage,
@@ -1951,12 +1924,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedImageSubject: levelProperties.levelMode?.imageSubject,
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
-    adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
-    // Every level takes its words from the combos; the typed prompt box
-    // shows only behind ?image-free-text=true. Freeplay hands back the
-    // paint tools.
-    adlibOnly: !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
+    // Freeplay hands back the paint tools.
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
     pickRequest: pictures.pickRequest,
     onImageCreated: pictures.onImageCreated,
@@ -2017,35 +1986,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       />
       <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
-        // The image panel is the whole lab, with the floating guide over it.
+        // The sentence scene is the whole lab: its panel is the Guide,
+        // instructions included.
         <div className={moduleStyles.imageLevelArea}>
-          {imageUi ? (
-            // The explore scene is its own Guide, instructions included.
-            <ImageExploreScene
-              imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
-              imageSubject={levelProperties.levelMode?.imageSubject}
-              sentenceId={levelProperties.levelMode?.sentence}
-              defaultStyle={DEFAULT_IMAGE_STYLE}
-              imageRole={levelProperties.levelMode?.imageRole}
-              uploadImage={uploadImage}
-              instructions={
-                objectives.active
-                  ? objectives.title
-                  : levelProperties.longInstructions
-              }
-              showTts={showTtsFor(levelProperties)}
-            />
-          ) : (
-            <>
-              <GenerateImagePane imageLevel {...imagePaneProps} />
-              <GenerateSpriteLab
-                levelMode={levelProperties.levelMode}
-                instructions={levelProperties.longInstructions}
-                objectives={objectives}
-                levelProperties={levelProperties}
-              />
-            </>
-          )}
+          <SentenceScene
+            imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
+            imageSubject={levelProperties.levelMode?.imageSubject}
+            sentenceId={levelProperties.levelMode?.sentence}
+            defaultStyle={DEFAULT_IMAGE_STYLE}
+            imageRole={levelProperties.levelMode?.imageRole}
+            uploadImage={uploadImage}
+            instructions={
+              objectives.active
+                ? objectives.title
+                : levelProperties.longInstructions
+            }
+            showTts={showTtsFor(levelProperties)}
+          />
         </div>
       ) : (
         <LabShell

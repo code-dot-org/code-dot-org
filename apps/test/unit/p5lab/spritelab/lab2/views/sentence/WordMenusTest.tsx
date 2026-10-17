@@ -5,8 +5,8 @@ import {
   Choices,
   Sentence,
   sentenceFor,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/exploreSentences';
-import WordMenus from '@cdo/apps/p5lab/spritelab/lab2/views/explore/WordMenus';
+} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentences';
+import WordMenus from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/WordMenus';
 
 const CHARACTER_SENTENCE = sentenceFor('sprite');
 

@@ -30,7 +30,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
       sources: opts.sources,
       authoredInstructions: opts.authoredInstructions,
       stepContext: opts.stepContext,
-      updateStepContext: opts.updateStepContext,
+      saveGeneratedInstructions: opts.saveGeneratedInstructions,
       aichatContext: opts.aichatContext,
     }).then(instructions => {
       if (!cancelled) setResolved(instructions ?? NO_INSTRUCTIONS);
@@ -47,7 +47,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
     opts.sources,
     opts.authoredInstructions,
     opts.stepContext,
-    opts.updateStepContext,
+    opts.saveGeneratedInstructions,
     opts.aichatContext,
   ]);
   return {

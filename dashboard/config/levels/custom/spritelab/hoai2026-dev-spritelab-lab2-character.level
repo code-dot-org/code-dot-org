@@ -24,8 +24,7 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "hero",
-      "imageUi": "explore"
+      "imageRole": "hero"
     },
     "objectives": {
       "title": "**Make a character.** Use AI or draw your own."

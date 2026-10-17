@@ -9,12 +9,12 @@ import Guide, {
   GUIDE_RIGHT_OFFSET_PX,
 } from '@cdo/apps/lab2/views/components/guide/Guide';
 
-import styles from './image-explore.module.scss';
+import styles from './sentence-scene.module.scss';
 
 // The narrowest the Guide gets.
 const MIN_GUIDE_WIDTH_PX = 240;
 
-interface ExploreLayoutProps {
+interface SentenceSceneLayoutProps {
   frameClassName?: string;
   /** What the frame shows. */
   frame: React.ReactNode;
@@ -30,7 +30,9 @@ interface ExploreLayoutProps {
   children: React.ReactNode;
 }
 
-const ExploreLayout: React.FunctionComponent<ExploreLayoutProps> = ({
+const SentenceSceneLayout: React.FunctionComponent<
+  SentenceSceneLayoutProps
+> = ({
   frameClassName,
   frame,
   underFrame,
@@ -83,7 +85,7 @@ const ExploreLayout: React.FunctionComponent<ExploreLayoutProps> = ({
         </div>
       </section>
       <div ref={guideHostRef} className={styles.guideHost}>
-        <Guide id="explore-guide" width={guideWidth}>
+        <Guide id="sentence-guide" width={guideWidth}>
           <section
             ref={panelRef}
             tabIndex={-1}
@@ -99,4 +101,4 @@ const ExploreLayout: React.FunctionComponent<ExploreLayoutProps> = ({
   );
 };
 
-export default ExploreLayout;
+export default SentenceSceneLayout;

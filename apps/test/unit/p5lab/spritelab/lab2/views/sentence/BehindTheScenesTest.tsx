@@ -1,8 +1,8 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import BehindTheScenes from '@cdo/apps/p5lab/spritelab/lab2/views/explore/BehindTheScenes';
-import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/explore/sentPrompts';
+import BehindTheScenes from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/BehindTheScenes';
+import {sentPromptsFor} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/sentPrompts';
 
 const OPTIONS = {imageType: 'sprite', style: 'pixel', pixelGrid: 64} as const;
 

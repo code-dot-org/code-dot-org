@@ -4,7 +4,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import ImageExploreScene from '@cdo/apps/p5lab/spritelab/lab2/views/explore/ImageExploreScene';
+import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
 const generateImage = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration', () => ({
@@ -22,7 +22,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet', () => ({
 }));
 const saveGeneratedImage = jest.fn();
 jest.mock(
-  '@cdo/apps/p5lab/spritelab/lab2/views/explore/saveGeneratedImage',
+  '@cdo/apps/p5lab/spritelab/lab2/views/sentence/saveGeneratedImage',
   () => ({
     saveGeneratedImage: (...args: unknown[]) => saveGeneratedImage(...args),
   })
@@ -57,7 +57,7 @@ function renderScene(props = {}) {
   return render(
     <Provider store={store}>
       <ThemeProvider>
-        <ImageExploreScene imageType="sprite" defaultStyle="pixel" {...props} />
+        <SentenceScene imageType="sprite" defaultStyle="pixel" {...props} />
       </ThemeProvider>
     </Provider>
   );
@@ -68,7 +68,7 @@ const pickCreature = () => {
   fireEvent.click(screen.getByRole('button', {name: 'cat'}));
 };
 
-describe('ImageExploreScene', () => {
+describe('SentenceScene', () => {
   beforeEach(() => {
     generateImage.mockReset();
     generateCharacterSet.mockReset();
@@ -264,7 +264,7 @@ describe('ImageExploreScene', () => {
       'hoai2026-image-prompt',
       expect.objectContaining({
         promptText: 'A cat',
-        method: 'explore',
+        method: 'scene',
         sentenceId: 'character',
         choices: {creature: 'cat'},
       }),
