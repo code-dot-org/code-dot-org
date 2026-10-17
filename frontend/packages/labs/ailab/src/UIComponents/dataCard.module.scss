@@ -1,0 +1,29 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.side-panel;
+}
+
+.header {
+  @include mixins.panel-header;
+
+  justify-content: center;
+}
+
+.header .title {
+  @include mixins.panel-header-title;
+}
+
+.content {
+  @include mixins.panel-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}

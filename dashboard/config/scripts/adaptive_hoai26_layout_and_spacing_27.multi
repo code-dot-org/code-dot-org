@@ -1,0 +1,14 @@
+name 'adaptive-HoAI26-layout-and-spacing-27'
+title 'TODO: title'
+description ''
+question 'Which prompt best fixes a crowded layout of three club cards on a page?'
+wrong 'Make it nicer.'
+right 'Put more space between the three cards and line them up under the hero.'
+wrong 'Make the cards disappear.'
+wrong 'Make everything bigger.'
+
+markdown <<MARKDOWN
+Which prompt best fixes a crowded layout of three club cards on a page?
+MARKDOWN
+
+allow_multiple_attempts true

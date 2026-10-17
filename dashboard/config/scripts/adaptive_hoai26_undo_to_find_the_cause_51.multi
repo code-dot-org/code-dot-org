@@ -1,0 +1,14 @@
+name 'adaptive-HoAI26-undo-to-find-the-cause-51'
+title 'TODO: title'
+description ''
+question 'You made three changes to your project, and now something isn\'t working. What\'s the best first step to find which change caused the problem?'
+wrong 'Undo all three changes at once.'
+right 'Undo the newest change, then check if it\'s fixed.'
+wrong 'Undo the oldest change first.'
+wrong 'Do nothing and ask the AI for a new page.'
+
+markdown <<MARKDOWN
+You made three changes to your project, and now something isn't working. What's the best first step to find which change caused the problem?
+MARKDOWN
+
+allow_multiple_attempts true

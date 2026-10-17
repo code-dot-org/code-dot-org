@@ -548,8 +548,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     live = create(:user_level, user: user)
     deleted = create(:user_level, user: user)
     UserAdaptiveStep.create!(user_level: live, step_id: 'intro', progress: {'answers' => {}})
-    UserAdaptiveStep.create!(user_level: deleted, step_id: 'intro')
     deleted.destroy
+    # Stands in for a row that outlived its soft-deleted user level, e.g. one predating dependent: :delete_all.
+    UserAdaptiveStep.create!(user_level: deleted, step_id: 'intro')
     other = UserAdaptiveStep.create!(user_level: create(:user_level), step_id: 'intro')
 
     purge_user user
