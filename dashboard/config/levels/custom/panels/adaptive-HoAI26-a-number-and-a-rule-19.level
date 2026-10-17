@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:33:32.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-ff36aee4-9b28-4837-a8bb-cb1fe23c8685",
+        "text": "Many apps and games use numbers that change, like a score.",
+        "imageUrl": "https://images.code.org/aeebc17ac02e50017f19fc8ffe4de175-adaptive-HoAI26-a-number-and-a-rule-19-panel-1-20c45567-59fc-47d2-bd45-e97d88945fd5.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-702877e1-c14a-4232-8ae3-cd5ae406db3d",
+        "text": "A \"rule\" is a condition that tells the page what to do if that number changes in a certain way.",
+        "imageUrl": "https://images.code.org/2014bdb1cd8a9be84b1d70345cd6c7d0-adaptive-HoAI26-a-number-and-a-rule-19-panel-2-7f491cf3-518b-467a-aa00-ff47e09cf1b8.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-6d6c39d0-b187-4102-a6c3-78ed9f9616c4",
+        "text": "For example, a rule might say: \"If the score reaches 10...\"",
+        "imageUrl": "https://images.code.org/c0dc3fc3bef61b8a48f45031c07ca159-adaptive-HoAI26-a-number-and-a-rule-19-panel-3-09aa1c29-0607-4066-a4e3-6238e392f91f.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-a-number-and-a-rule-19-db452bd0-6f2d-42bf-b2ab-42c83c4cc1cb",
+        "text": "...then the game round ends.\" Numbers and rules make pages dynamic!",
+        "imageUrl": "https://images.code.org/c9d1d94e77d30778171c278698592d99-adaptive-HoAI26-a-number-and-a-rule-19-panel-4-80626462-918f-4c35-8397-7ec9ea1b63bf.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Watch a video explaining how numbers and rules work in programming. Observe a tiny game where a score changes, and a rule dictates an action based on that score, like ending a round when the score reaches a certain number."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:34:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:34:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
