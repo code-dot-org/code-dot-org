@@ -1,0 +1,32 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-16T07:43:02.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: An App's Purpose",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "Pick one of the sample apps you explored. Explain the app's purpose, describe one thing you did in the app that showed you its purpose, and name one person who might use it.\r\n\r\n> **Sentence frame (optional):**\r\n>\r\n> The purpose of the _ _ _ app is to _ _ _. I could tell because when I _ _ _, the app _ _ _. A person who might use this app is _ _ _ because _ _ _.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18935,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false",
+    "teacher_markdown": "**What to look for:**\r\n\r\n* The response states the app's purpose, meaning the goal or problem it helps with, not just what it looks like.\r\n* The response names a specific action the student took and what the app did in response, and connects it to the purpose (1.1.A.7).\r\n* The response names a believable user and explains why that person would want the app.\r\n\r\n**Common issues:**\r\n\r\n* Describing the screen (\"it has a bird picture\") instead of the purpose.\r\n* Naming an input and output but never connecting them to the purpose.\r\n* Naming a user so broad it says nothing (\"everyone\").\r\n\r\n**Sample response:**\r\nThe purpose of the Bird Quiz app is to teach people facts about birds. I could tell because when I clicked a wrong answer, the app sent me to a losing screen, so it was testing what I know about birds. A person who might use this app is a student who likes animals and wants to learn more about them."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-16T07:43:02.729+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson4_frq_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson4_frq_dev_27_28\"},{\"changed_at\":\"2026-10-16 07:50:53 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

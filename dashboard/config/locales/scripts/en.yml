@@ -10665,6 +10665,8 @@ en:
               name: HoAI26 Playtest 1
             lesson-22:
               name: WebLab Adaptive
+            lesson-23:
+              name: Adaptive Checkpoint Steps
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
