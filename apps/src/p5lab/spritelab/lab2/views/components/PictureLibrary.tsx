@@ -54,6 +54,9 @@ const STRIPS_MIN_PX = 320;
 const JUMBO_MIN_PX = 160;
 // Under the jumbo: the Delete row.
 const ACTIONS_PX = 48;
+// A tile and the gap between tiles (picture-library.module.scss).
+const TILE_PX = 104;
+const TILE_GAP_PX = 10;
 
 /**
  * The Pictures editor: the chosen picture large on one side, and on the
@@ -97,6 +100,20 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   const chosen = groups
     .flatMap(group => group.pictures)
     .find(picture => picture.key === chosenKey);
+  // With the jumbo at the right the strips take the width their rows fill,
+  // so the jumbo sits against the last tile: a wrapped flex box keeps the
+  // width it shrank to, not the width its tiles use.
+  let stripsWidth: number | undefined;
+  if (jumboSide === 'right' && jumboPx !== undefined) {
+    const room = size.w - GAP_PX - jumboPx;
+    const perRow = Math.max(
+      1,
+      Math.floor((room + TILE_GAP_PX) / (TILE_PX + TILE_GAP_PX))
+    );
+    const widest = Math.max(1, ...groups.map(group => group.pictures.length));
+    const columns = Math.min(perRow, widest);
+    stripsWidth = columns * TILE_PX + (columns - 1) * TILE_GAP_PX;
+  }
 
   return (
     <div
@@ -170,7 +187,7 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
           </div>
         )}
       </div>
-      <div className={moduleStyles.strips}>
+      <div className={moduleStyles.strips} style={{width: stripsWidth}}>
         <div>
           <MuiButton
             variant="outlined"
