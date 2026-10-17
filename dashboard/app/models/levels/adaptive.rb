@@ -71,15 +71,9 @@ class Adaptive < Level
 
   # Level step id => Level, leaving out steps whose level does not exist.
   def step_levels
-    pathway = content
-    return {} unless pathway
-    steps = level_steps(pathway)
-    levels = Level.where(name: steps.map {|step| step['level']}.uniq).index_by(&:name)
-    steps.filter_map {|step| [step['id'], levels[step['level']]] if levels[step['level']]}.to_h
-  end
-
-  def step_level?(level)
-    step_levels.values.any? {|step_level| step_level.id == level.id}
+    names = step_level_names
+    levels = Level.where(name: names.values.uniq).index_by(&:name)
+    names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
@@ -128,6 +122,18 @@ class Adaptive < Level
       steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
       steps.is_a?(Array) ? steps.select {|step| step.is_a?(Hash)} : []
     end
+  end
+
+  # Level step id => level name, the project's step included as find_step sees it.
+  private def step_level_names
+    pathway = content
+    return {} unless pathway
+    names = level_steps(pathway).to_h {|step| [step['id'], step['level']]}
+    template = pathway['project'].is_a?(Hash) ? pathway['project']['templateLevel'] : nil
+    if template.is_a?(String) && steps(pathway).none? {|step| step['id'] == PROJECT_STEP_ID}
+      names[PROJECT_STEP_ID] = template
+    end
+    names
   end
 
   private def level_steps(pathway)

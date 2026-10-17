@@ -52,7 +52,7 @@ const base: StepInstructionsOptions = {
   sources,
   authoredInstructions: 'Authored.',
   stepContext: undefined,
-  updateStepContext: jest.fn(),
+  saveGeneratedInstructions: jest.fn(),
   aichatContext,
 };
 

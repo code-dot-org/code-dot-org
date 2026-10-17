@@ -116,6 +116,32 @@
   color: var(--text-error-primary);
 }
 
+// Free response textarea (used by freeResponse questions inside the questions step)
+
+.freeResponseTextarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 0.25rem;
+  background: var(--background-neutral-primary);
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+  caret-color: var(--borders-brand-teal-primary);
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+    border-color: var(--borders-brand-teal-primary);
+  }
+}
+
 // Level step
 
 .levelStep {
