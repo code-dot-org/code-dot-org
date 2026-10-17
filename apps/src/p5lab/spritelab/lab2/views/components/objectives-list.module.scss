@@ -1,7 +1,8 @@
 @use '../sentence/sr-only' as *;
 
 $mark-size: 22px;
-$text-size: 16px;
+// The guide body's size, so the checklist reads as its instructions.
+$text-size: 15px;
 $line-height: 1.4;
 
 .objectives {

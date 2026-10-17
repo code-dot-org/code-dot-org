@@ -356,6 +356,9 @@ $editor-strip-height: 41px;
   top: 0;
   left: 0;
   right: 0;
+  // Slides with the column's edge as Pictures opens and closes
+  // (PANE_SLIDE_MS).
+  transition: left 0.3s ease;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr auto 1fr;

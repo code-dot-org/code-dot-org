@@ -2,7 +2,14 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -177,7 +184,10 @@ const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The sheet the Pictures button controls.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 /** The switch's editors, in order. */
-const EDITORS: Editor[] = ['Pictures', 'Code', 'World'];
+const EDITORS: Editor[] = ['Code', 'World', 'Pictures'];
+// The Pictures pane's slide between the column's edge and the full width;
+// the playspace fades for as long (HIDE_MS).
+const PANE_SLIDE_MS = 300;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 // On hover over World while a story scene is active.
@@ -479,6 +489,53 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     setPicturesOpen(activeTab === 'Images');
   }, [activeTab, setPicturesOpen]);
+  // The pane slides in from the column's edge to the full width as it
+  // opens, fading in, and back as it closes, then parks: parked → docked
+  // (at the edge, no transition) → full, and full → docked → parked. It is
+  // moved by a transform, so it holds its full size throughout and its
+  // contents lay out once, at that size. The column's last width is the
+  // edge, since the playspace reports none while hidden.
+  const picturesActive = activeTab === 'Images';
+  const [picturesStage, setPicturesStage] = useState<
+    'parked' | 'docked' | 'full'
+  >('parked');
+  const columnEdgeRef = useRef(0);
+  useEffect(() => {
+    if (previewWidth > 0) {
+      columnEdgeRef.current = previewWidth;
+    }
+  }, [previewWidth]);
+  useEffect(() => {
+    if (picturesActive) {
+      setPicturesStage(stage => (stage === 'parked' ? 'docked' : 'full'));
+    } else {
+      setPicturesStage(stage => (stage === 'full' ? 'docked' : stage));
+    }
+  }, [picturesActive]);
+  // Docked on the way in: let the browser take the docked position, so the
+  // slide starts from it rather than from parked.
+  const picturesPaneRef = pictures.sheetRef;
+  useLayoutEffect(() => {
+    if (picturesActive && picturesStage === 'docked') {
+      void picturesPaneRef.current?.getBoundingClientRect();
+      setPicturesStage('full');
+    }
+  }, [picturesActive, picturesStage, picturesPaneRef]);
+  const picturesSliding =
+    picturesStage === 'full' || (picturesStage === 'docked' && !picturesActive);
+  const picturesDocked = picturesStage === 'docked';
+  const picturesStyle: React.CSSProperties | undefined =
+    picturesStage === 'parked'
+      ? undefined
+      : {
+          transform: picturesDocked
+            ? `translateX(${columnEdgeRef.current}px)`
+            : 'none',
+          opacity: picturesDocked ? 0 : 1,
+          transition: picturesSliding
+            ? `transform ${PANE_SLIDE_MS}ms ease, opacity ${PANE_SLIDE_MS}ms ease`
+            : undefined,
+        };
   // ?jumbo=right: the chosen picture at the right of the strips.
   const jumboSide = useMemo<'left' | 'right'>(
     () => (queryParams('jumbo') === 'right' ? 'right' : 'left'),
@@ -2085,9 +2142,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   moduleStyles.codeTabWrapper,
                   moduleStyles.picturesEditor,
                   editorsShown && moduleStyles.underEditorStrip,
-                  activeTab !== 'Images' && moduleStyles.picturesEditorParked
+                  picturesStage === 'parked' &&
+                    moduleStyles.picturesEditorParked
                 )}
-                style={activeTab === 'Images' ? clearOfPreview : undefined}
+                style={picturesStyle}
+                onTransitionEnd={event => {
+                  if (
+                    event.target === event.currentTarget &&
+                    event.propertyName === 'transform' &&
+                    !picturesActive
+                  ) {
+                    setPicturesStage('parked');
+                  }
+                }}
               >
                 <GenerateImagePane {...imagePaneProps} jumboSide={jumboSide} />
               </div>

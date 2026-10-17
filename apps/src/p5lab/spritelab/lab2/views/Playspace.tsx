@@ -65,6 +65,9 @@ const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // appears in place.
 const SLIDE_MS = 450;
 const FADE_MS = 180;
+// The whole overlay's fade as the Pictures editor takes the width and
+// gives it back; the editor's slide takes as long (PANE_SLIDE_MS).
+const HIDE_MS = 300;
 
 interface Size {
   w: number;
@@ -519,7 +522,17 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     previewWidth > 0 && !beside ? previewWidth - 2 * CARD_GAP : boxSide;
   const barTransform = `translate(${barLeft}px, ${y + boxSide + BAR_GAP}px)`;
   const compact = size.h < COMPACT_BELOW_PX;
-  const visible = measured && mode !== 'hidden';
+  // Hidden settles after the fade, so the card and the bar stay through it.
+  const [settledHidden, setSettledHidden] = useState(mode === 'hidden');
+  useEffect(() => {
+    if (mode !== 'hidden') {
+      setSettledHidden(false);
+      return;
+    }
+    const timer = window.setTimeout(() => setSettledHidden(true), HIDE_MS);
+    return () => window.clearTimeout(timer);
+  }, [mode]);
+  const visible = measured && !settledHidden;
   // The bar waits unseen at its destination and fades in once the box arrives.
   const barRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
@@ -584,7 +597,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       // Use visibility (not display:none) so the overlay keeps its layout size
       // while hidden. Otherwise it measures 0 and, on reappearing, the box is
       // first placed with a stale size and then animates into the right spot.
-      style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
+      style={{
+        visibility: settledHidden ? 'hidden' : 'visible',
+        opacity: mode === 'hidden' ? 0 : 1,
+        transition: `opacity ${HIDE_MS}ms ease`,
+      }}
     >
       {previewWidth > 0 && (
         <div
