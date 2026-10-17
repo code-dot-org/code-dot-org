@@ -10,9 +10,11 @@
 
 .libraryJumboRight {
   flex-direction: row-reverse;
+  // Reversed, flex-end is the left edge: the strips press against it, the
+  // jumbo sits against their last tile, and the spare width is at the right.
+  justify-content: flex-end;
 
-  // The strips take their widest row, not the leftover, so the jumbo sits
-  // against the last tile; the spare width is at the far left.
+  // The strips take their widest row, not the leftover.
   .strips {
     flex: 0 1 auto;
   }
