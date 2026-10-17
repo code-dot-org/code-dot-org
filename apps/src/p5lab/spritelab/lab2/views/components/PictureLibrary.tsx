@@ -40,6 +40,8 @@ interface PictureLibraryProps {
   onNew: (event: React.MouseEvent<HTMLElement>) => void;
   /** Paint the chosen picture; absent when it cannot be painted. */
   onPaint?: () => void;
+  /** Delete the chosen picture; absent with nothing chosen. */
+  onDelete?: () => void;
   /** Which side the jumbo takes; the strips take the other. */
   jumboSide?: 'left' | 'right';
 }
@@ -50,6 +52,8 @@ const PAD_PX = 16;
 const GAP_PX = 24;
 const STRIPS_MIN_PX = 320;
 const JUMBO_MIN_PX = 160;
+// Under the jumbo: the Delete row.
+const ACTIONS_PX = 48;
 
 /**
  * The Pictures editor: the chosen picture large on one side, and on the
@@ -62,8 +66,12 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   onChoose,
   onNew,
   onPaint,
+  onDelete,
   jumboSide = 'left',
 }) => {
+  // Delete asks once; a new choice withdraws the question.
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  useEffect(() => setConfirmingDelete(false), [chosenKey]);
   // Measured: the jumbo is a square sized from the pane, which a flex
   // item's percentage height cannot give before layout.
   const rootRef = useRef<HTMLDivElement>(null);
@@ -81,7 +89,10 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
     return () => observer.disconnect();
   }, []);
   const jumboPx = size.w
-    ? Math.max(JUMBO_MIN_PX, Math.min(size.h, size.w - GAP_PX - STRIPS_MIN_PX))
+    ? Math.max(
+        JUMBO_MIN_PX,
+        Math.min(size.h - ACTIONS_PX, size.w - GAP_PX - STRIPS_MIN_PX)
+      )
     : undefined;
   const chosen = groups
     .flatMap(group => group.pictures)
@@ -96,30 +107,66 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
       )}
       style={{padding: PAD_PX, gap: GAP_PX}}
     >
-      <div
-        className={moduleStyles.jumbo}
-        style={{width: jumboPx, height: jumboPx}}
-        role="img"
-        aria-label={chosen?.name ?? 'No picture chosen'}
-      >
-        {chosen?.sheet ? (
-          <AnimatedSheetPreview {...chosen.sheet} />
-        ) : (
-          chosen?.src && <img src={chosen.src} alt="" />
-        )}
-        {chosen && onPaint && (
-          <div className={moduleStyles.jumboPaint}>
-            <IconButtonWithTooltip
-              id="spritelab2-paint-picture"
-              label="Edit with paint tools"
-              icon={{iconName: 'paintbrush', iconStyle: 'solid'}}
-              variant="contained"
-              color="secondary"
-              size="small"
-              tooltipDirection="onBottom"
-              hideTooltipTail
-              onClick={onPaint}
-            />
+      <div className={moduleStyles.jumboColumn}>
+        <div
+          className={moduleStyles.jumbo}
+          style={{width: jumboPx, height: jumboPx}}
+          role="img"
+          aria-label={chosen?.name ?? 'No picture chosen'}
+        >
+          {chosen?.sheet ? (
+            <AnimatedSheetPreview {...chosen.sheet} />
+          ) : (
+            chosen?.src && <img src={chosen.src} alt="" />
+          )}
+          {chosen && onPaint && (
+            <div className={moduleStyles.jumboPaint}>
+              <IconButtonWithTooltip
+                id="spritelab2-paint-picture"
+                label="Edit with paint tools"
+                icon={{iconName: 'paintbrush', iconStyle: 'solid'}}
+                variant="contained"
+                color="secondary"
+                size="small"
+                tooltipDirection="onBottom"
+                hideTooltipTail
+                onClick={onPaint}
+              />
+            </div>
+          )}
+        </div>
+        {chosen && onDelete && (
+          <div className={moduleStyles.jumboActions}>
+            {confirmingDelete ? (
+              <>
+                <span>Delete this picture?</span>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  onClick={() => setConfirmingDelete(false)}
+                >
+                  Cancel
+                </MuiButton>
+                <MuiButton
+                  variant="contained"
+                  color="error"
+                  size="small"
+                  onClick={onDelete}
+                >
+                  Delete
+                </MuiButton>
+              </>
+            ) : (
+              <MuiButton
+                variant="outlined"
+                color="error"
+                size="small"
+                onClick={() => setConfirmingDelete(true)}
+              >
+                Delete
+              </MuiButton>
+            )}
           </div>
         )}
       </div>

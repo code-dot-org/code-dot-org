@@ -33,6 +33,20 @@
   }
 }
 
+.jumboColumn {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jumboActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 36px;
+}
+
 .jumboPaint {
   position: absolute;
   top: 8px;

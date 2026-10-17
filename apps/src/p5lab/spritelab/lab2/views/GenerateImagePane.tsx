@@ -460,16 +460,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       ? detectedGrid.size
       : undefined;
 
-  const handleDelete = useCallback(() => {
-    if (dialogTarget && dialogTarget !== 'new') {
-      const removed =
-        getStore().getState().animationList.propsByKey[dialogTarget];
+  const deleteImage = useCallback(
+    (key: string) => {
+      const removed = getStore().getState().animationList.propsByKey[key];
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
-        deleteAnimation(
-          dialogTarget,
-          true /* isSpriteLab */
-        ) as unknown as AnyAction
+        deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
       );
       // The removal already happened; reclaim the asset if unreferenced now,
       // and take the blocks and World cells that pointed at the image along.
@@ -477,15 +473,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (removed?.name) {
         onDeleteImage(removed.name);
       }
+    },
+    [dispatch, deleteUnreferencedAsset, onDeleteImage]
+  );
+  const handleDelete = useCallback(() => {
+    if (dialogTarget && dialogTarget !== 'new') {
+      deleteImage(dialogTarget);
     }
     closeDialog();
-  }, [
-    dispatch,
-    dialogTarget,
-    closeDialog,
-    deleteUnreferencedAsset,
-    onDeleteImage,
-  ]);
+  }, [dialogTarget, deleteImage, closeDialog]);
 
   const handleRename = useCallback(
     (newName: string): string | null => {
@@ -859,6 +855,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         onChoose={setChosenKey}
         onNew={openNewDialog}
         onPaint={chosenPaintable ? paintChosen : undefined}
+        onDelete={chosen ? () => deleteImage(chosen.key) : undefined}
         jumboSide={jumboSide}
       />
 

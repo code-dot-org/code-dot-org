@@ -73,4 +73,34 @@ describe('PictureLibrary', () => {
     );
     expect(onPaint).toHaveBeenCalled();
   });
+
+  it('deletes only after asking, and withdraws the question on a new choice', () => {
+    const onDelete = jest.fn();
+    const {rerender} = render(
+      <PictureLibrary
+        groups={groups}
+        chosenKey="a"
+        onChoose={jest.fn()}
+        onNew={jest.fn()}
+        onDelete={onDelete}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
+    expect(onDelete).not.toHaveBeenCalled();
+    expect(screen.getByText('Delete this picture?')).toBeTruthy();
+    rerender(
+      <PictureLibrary
+        groups={groups}
+        chosenKey="b"
+        onChoose={jest.fn()}
+        onNew={jest.fn()}
+        onDelete={onDelete}
+      />
+    );
+    expect(screen.queryByText('Delete this picture?')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
+    // Asking swaps the button for Cancel and a confirming Delete.
+    fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
+    expect(onDelete).toHaveBeenCalled();
+  });
 });
