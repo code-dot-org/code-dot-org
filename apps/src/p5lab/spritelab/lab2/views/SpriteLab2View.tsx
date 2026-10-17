@@ -544,9 +544,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // ?rail=bar: the resource rail's buttons move to the scene row's end
   // and the rail goes, giving the lab its width.
   const railInBar = useMemo(() => queryParams('rail') === 'bar', []);
-  // ?jumbo=right: the chosen picture at the right of the strips.
+  // The chosen picture sits at the right of the strips; ?jumbo=left puts
+  // it at the left.
   const jumboSide = useMemo<'left' | 'right'>(
-    () => (queryParams('jumbo') === 'right' ? 'right' : 'left'),
+    () => (queryParams('jumbo') === 'left' ? 'left' : 'right'),
     []
   );
   // ?editors=stripleft: the switch at the workspace bar's start.

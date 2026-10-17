@@ -32,6 +32,11 @@ $line-height: 1.4;
   line-height: $line-height;
 }
 
+// After .title: a title with no items under it reads as instructions.
+.titleOnly p {
+  font-size: $text-size;
+}
+
 
 .list {
   list-style: none;

@@ -179,7 +179,7 @@ interface GenerateImagePaneProps {
   onImageCreated?: (name: string, imageType: ImageType) => void;
   /** The dialog a pick opened was closed without a picture. */
   onPickCancel?: () => void;
-  /** ?jumbo=right: the chosen picture at the right, the strips at the left. */
+  /** Which side the chosen picture takes; the right unless given. */
   jumboSide?: 'left' | 'right';
 }
 

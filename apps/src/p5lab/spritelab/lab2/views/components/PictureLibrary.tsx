@@ -75,7 +75,7 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   onNew,
   onPaint,
   onDelete,
-  jumboSide = 'left',
+  jumboSide = 'right',
 }) => {
   // The jumbo is the image dialog's pane, whose chrome colors follow the
   // theme it is given.

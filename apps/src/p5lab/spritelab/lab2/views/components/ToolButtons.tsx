@@ -7,6 +7,7 @@ import ResourcePanelExtraLinks from '@cdo/apps/lab2/views/components/Instruction
 import setFooterVisibility from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/setFooterVisibility';
 import SettingsPanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/SettingsPanel';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
+import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
@@ -33,12 +34,18 @@ const ToolButtons: React.FunctionComponent<ToolButtonsProps> = ({
   onStartOver,
 }) => {
   const [settingsOpen, setSettingsOpen] = useState(false);
-  // The page footer's language and copyright are here now, as the rail
-  // does: hide it while these buttons stand in for the rail.
+  // The page footer's language and copyright are here now, and so are the
+  // extra links: hide the footer and the floating Extra Links button while
+  // these buttons stand in for the rail, as the rail does.
+  const {setShowExtraLinksButton} = useExtraLinksButtonContext();
   useEffect(() => {
     setFooterVisibility(false);
-    return () => setFooterVisibility(true);
-  }, []);
+    setShowExtraLinksButton(false);
+    return () => {
+      setFooterVisibility(true);
+      setShowExtraLinksButton(true);
+    };
+  }, [setShowExtraLinksButton]);
   return (
     <div className={moduleStyles.toolButtons}>
       <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
