@@ -1,15 +1,16 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-
 import {ImageType} from '../../ai/images/types';
 import {AnimationPoses} from '../../characterAnimations';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
+import ImagePaneButton from '../ImagePaneButton';
 
 import moduleStyles from './picture-library.module.scss';
+import dialogStyles from '../image-details-dialog.module.scss';
 
 export interface LibraryPicture {
   key: string;
@@ -18,6 +19,8 @@ export interface LibraryPicture {
   thumb?: string;
   /** The full image for the jumbo. */
   src?: string;
+  /** Pixel art upscales with hard edges. */
+  pixelated?: boolean;
   /** Set for a character set: its sheet, played in the jumbo. */
   sheet?: {
     src: string;
@@ -54,9 +57,11 @@ const STRIPS_MIN_PX = 320;
 const JUMBO_MIN_PX = 160;
 // Under the jumbo: the Delete row.
 const ACTIONS_PX = 48;
-// A tile and the gap between tiles (picture-library.module.scss).
+// A tile, the gap between tiles, and the gap between groups on a row
+// (picture-library.module.scss).
 const TILE_PX = 104;
 const TILE_GAP_PX = 10;
+const GROUP_GAP_PX = 32;
 
 /**
  * The Pictures editor: the chosen picture large on one side, and on the
@@ -72,6 +77,11 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   onDelete,
   jumboSide = 'left',
 }) => {
+  // The jumbo is the image dialog's pane, whose chrome colors follow the
+  // theme it is given.
+  // Without a provider (tests) the pane keeps the light chrome.
+  const {theme} = useTheme(true);
+  const mode = theme === 'Dark' ? 'dark' : 'light';
   // Delete asks once; a new choice withdraws the question.
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   useEffect(() => setConfirmingDelete(false), [chosenKey]);
@@ -102,7 +112,8 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
     .find(picture => picture.key === chosenKey);
   // With the jumbo at the right the strips take the width their rows fill,
   // so the jumbo sits against the last tile: a wrapped flex box keeps the
-  // width it shrank to, not the width its tiles use.
+  // width it shrank to, not the width its groups use. The groups are packed
+  // as the browser packs them, greedily into rows of the room.
   let stripsWidth: number | undefined;
   if (jumboSide === 'right' && jumboPx !== undefined) {
     const room = size.w - GAP_PX - jumboPx;
@@ -110,9 +121,18 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
       1,
       Math.floor((room + TILE_GAP_PX) / (TILE_PX + TILE_GAP_PX))
     );
-    const widest = Math.max(1, ...groups.map(group => group.pictures.length));
-    const columns = Math.min(perRow, widest);
-    stripsWidth = columns * TILE_PX + (columns - 1) * TILE_GAP_PX;
+    const widths = groups.map(group => {
+      const columns = Math.min(perRow, Math.max(1, group.pictures.length));
+      return columns * TILE_PX + (columns - 1) * TILE_GAP_PX;
+    });
+    let row = 0;
+    stripsWidth = 0;
+    widths.forEach(width => {
+      const next = row ? row + GROUP_GAP_PX + width : width;
+      row = next <= room ? next : width;
+      stripsWidth = Math.max(stripsWidth ?? 0, row);
+    });
+    stripsWidth = Math.max(stripsWidth, TILE_PX);
   }
 
   return (
@@ -125,30 +145,43 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
       style={{padding: PAD_PX, gap: GAP_PX}}
     >
       <div className={moduleStyles.jumboColumn}>
+        {/* The dialog's pane, at the jumbo's side: a button into paint
+            where the picture can be painted, a plain pane otherwise. */}
         <div
-          className={moduleStyles.jumbo}
-          style={{width: jumboPx, height: jumboPx}}
-          role="img"
-          aria-label={chosen?.name ?? 'No picture chosen'}
+          className={classNames(dialogStyles.dialogHost, moduleStyles.jumbo)}
+          data-theme={mode}
+          style={{'--jumbo-side': `${jumboPx ?? 0}px`} as React.CSSProperties}
         >
-          {chosen?.sheet ? (
-            <AnimatedSheetPreview {...chosen.sheet} />
+          {chosen && onPaint ? (
+            <ImagePaneButton
+              thumb={chosen.src}
+              pixelated={chosen.pixelated}
+              iconName="pen"
+              label="Edit with paint tools"
+              onClick={onPaint}
+            />
           ) : (
-            chosen?.src && <img src={chosen.src} alt="" />
-          )}
-          {chosen && onPaint && (
-            <div className={moduleStyles.jumboPaint}>
-              <IconButtonWithTooltip
-                id="spritelab2-paint-picture"
-                label="Edit with paint tools"
-                icon={{iconName: 'paintbrush', iconStyle: 'solid'}}
-                variant="contained"
-                color="secondary"
-                size="small"
-                tooltipDirection="onBottom"
-                hideTooltipTail
-                onClick={onPaint}
-              />
+            <div
+              className={classNames(
+                dialogStyles.imagePane,
+                chosen && dialogStyles.imagePaneChecker
+              )}
+              role="img"
+              aria-label={chosen?.name ?? 'No picture chosen'}
+            >
+              {chosen?.sheet ? (
+                <AnimatedSheetPreview {...chosen.sheet} />
+              ) : (
+                chosen?.src && (
+                  <img
+                    src={chosen.src}
+                    alt=""
+                    className={classNames(
+                      chosen.pixelated && dialogStyles.pixelArt
+                    )}
+                  />
+                )
+              )}
             </div>
           )}
         </div>

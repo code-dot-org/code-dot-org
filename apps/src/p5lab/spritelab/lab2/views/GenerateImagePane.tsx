@@ -802,7 +802,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const chosenProps = chosen?.props;
   // Character sets are sheets of frames; the editor paints one image.
   const chosenPaintable =
-    !!chosen && !chosenProps?.poses && !paintDisabled && !!chosenProps?.dataURI;
+    !!chosen &&
+    !chosenProps?.poses &&
+    !paintDisabled &&
+    !!(chosenProps?.dataURI || chosenProps?.sourceUrl);
   const paintChosen = useCallback(() => {
     if (!chosen) {
       return;
@@ -828,6 +831,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         name: props?.name,
         thumb: getImageThumbnail(props?.name) || src,
         src,
+        pixelated: !!props?.pixelGridSize,
         sheet:
           props?.poses && src
             ? {src, frameSize: props.frameSize, poses: props.poses}

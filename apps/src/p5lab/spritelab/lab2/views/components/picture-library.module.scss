@@ -20,24 +20,15 @@
   }
 }
 
-// Square; its side is set inline from the measured pane. A sheet's player
-// positions against it.
+// The dialog's pane at the jumbo's side, set inline from the measured
+// pane. The host is display: contents, so the pane is the box.
 .jumbo {
-  position: relative;
-  display: flex;
   flex: none;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 8px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
-  background: var(--background-neutral-secondary);
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    image-rendering: pixelated;
+  > button,
+  > div {
+    width: var(--jumbo-side);
+    height: var(--jumbo-side);
   }
 }
 
@@ -55,26 +46,29 @@
   min-height: 36px;
 }
 
-.jumboPaint {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-
 .strips {
   display: flex;
   flex: 1 1 0;
-  flex-direction: column;
-  gap: 20px;
+  // The groups pack left to right and wrap, each as wide as its tiles, so
+  // two short groups share a row; the New image button has a row to itself.
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 20px 32px;
   min-width: 0;
   min-height: 0;
   overflow-y: auto;
+
+  > :first-child {
+    flex-basis: 100%;
+  }
 }
 
 .group {
   display: flex;
+  flex: 0 1 auto;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .groupTitle {

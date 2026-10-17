@@ -532,8 +532,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             ? `translateX(${columnEdgeRef.current}px)`
             : 'none',
           opacity: picturesDocked ? 0 : 1,
+          // The contents ease in over the arrival's second half, and out
+          // over the departure's first.
           transition: picturesSliding
-            ? `transform ${PANE_SLIDE_MS}ms ease, opacity ${PANE_SLIDE_MS}ms ease`
+            ? `transform ${PANE_SLIDE_MS}ms ease, opacity ${
+                PANE_SLIDE_MS / 2
+              }ms ease ${picturesActive ? PANE_SLIDE_MS / 2 : 0}ms`
             : undefined,
         };
   // ?jumbo=right: the chosen picture at the right of the strips.
@@ -1072,6 +1076,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
   const activeSceneIdRef = useRef<string | undefined>(undefined);
+  const activeSceneRef = useRef<Scene | undefined>(undefined);
   // Whether the scene the engine is running is a platformer, asked of the
   // engine wherever a run starts: the live preview, Play's start scene, and
   // each go-to-scene jump.
@@ -1080,6 +1085,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeWorldRef.current = worldFor(activeScene);
     activeSceneTypeRef.current = activeScene?.type;
     activeSceneIdRef.current = activeScene?.id;
+    activeSceneRef.current = activeScene;
   }, [activeScene, worldFor]);
 
   const requestThumbnail = useSceneThumbnails({
@@ -1104,6 +1110,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
+    }
+    if (activeSceneRef.current) {
+      currentPlayingRef.current = {
+        kind: 'local',
+        scene: activeSceneRef.current,
+      };
     }
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
     setPlayingPlatformer(engine.isPlatformScene());
@@ -1548,7 +1560,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeTab === 'Play') {
       runScene(playStartSceneId ?? defaultPlaySceneId);
     } else if (activeTab === 'Code' || activeTab === 'World') {
-      runScene(activeSceneId);
+      // Only when the stage shows something else: after Play, or after a
+      // jump or an external scene. Code, World and Pictures share one
+      // preview, so moving between them leaves it running.
+      const playing = currentPlayingRef.current;
+      const previewingActive =
+        playing?.kind === 'local' && playing.scene.id === activeSceneId;
+      if (prevTab === 'Play' || !previewingActive) {
+        runScene(activeSceneId);
+      }
     }
     // playStartSceneId is set in the same batch as the tab change; the
     // prevTab guard keeps its later changes from re-running the scene.
