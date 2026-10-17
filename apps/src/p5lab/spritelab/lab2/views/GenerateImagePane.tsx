@@ -38,6 +38,7 @@ import {
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 import {PictureRequest} from '../picturePicker';
 
+import PictureLibrary, {LibraryGroup} from './components/PictureLibrary';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
 import {
   AnimationPatch,
@@ -46,11 +47,7 @@ import {
   uploadOrEmbed,
 } from './imageSave';
 import type {NewImageDraft} from './SentenceDialogBody';
-import {
-  alternativeFromAnimation,
-  framesFromAnimation,
-  useImageSession,
-} from './useImageSession';
+import {framesFromAnimation, useImageSession} from './useImageSession';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -156,39 +153,6 @@ function repointAnimation(
   return current.propsByKey[key]?.sourceUrl;
 }
 
-interface GalleryCardProps {
-  animKey: string;
-  /** The image's name; the thumbnail's alt text. */
-  name?: string;
-  /** Name shown under the thumbnail; omitted in the student gallery. */
-  caption?: string;
-  thumb?: string;
-  onOpen: (key: string, trigger: HTMLElement) => void;
-}
-
-// Memoized: opening or closing the dialog re-renders the pane, and every
-// card would re-render with it. Thumbnail updates arrive as a changed prop.
-// Deliberately no title attribute: the card's label is the image's name
-// alone, and the full prompt lives in the image's dialog.
-// Exported for the label tests.
-export const GalleryCard = React.memo<GalleryCardProps>(
-  ({animKey, name, caption, thumb, onOpen}) => (
-    <div className={moduleStyles.imageCard}>
-      <button
-        type="button"
-        className={moduleStyles.imageThumb}
-        onClick={event => onOpen(animKey, event.currentTarget)}
-      >
-        {thumb && <img src={thumb} alt={name || 'image'} />}
-      </button>
-      {caption !== undefined && (
-        <div className={moduleStyles.imageName}>{caption}</div>
-      )}
-    </div>
-  )
-);
-GalleryCard.displayName = 'GalleryCard';
-
 interface GenerateImagePaneProps {
   uploadImage?: UploadImageFunction;
   /** Rename an image and every reference to it; error message or null. */
@@ -215,7 +179,16 @@ interface GenerateImagePaneProps {
   onImageCreated?: (name: string, imageType: ImageType) => void;
   /** The dialog a pick opened was closed without a picture. */
   onPickCancel?: () => void;
+  /** ?jumbo=right: the chosen picture at the right, the strips at the left. */
+  jumboSide?: 'left' | 'right';
 }
+
+/** The strips' titles, one per kind, in gallery order. */
+const GROUP_TITLES: Record<ImageType, string> = {
+  sprite: 'Characters',
+  background: 'Backgrounds',
+  block: 'Blocks',
+};
 
 /**
  * The Images tab: the project's image gallery. Clicking an image (or the
@@ -262,6 +235,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   pickRequest = null,
   onImageCreated,
   onPickCancel,
+  jumboSide,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -351,7 +325,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     reset: resetSession,
     end: endSession,
     push: pushAlternative,
-    setThumb: setAlternativeThumb,
     noteAsset,
     seedSourceUrl,
   } = useImageSession(deleteUnreferencedAsset);
@@ -379,25 +352,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       return true;
     },
     [deleteUnreferencedAsset]
-  );
-
-  const openDialog = useCallback(
-    (key: string, trigger: HTMLElement) => {
-      sessionEpochRef.current++;
-      triggerRef.current = trigger;
-      setDialogTarget(key);
-      setPaintNewDraft(null);
-      const seed = alternativeFromAnimation(
-        getStore().getState().animationList.propsByKey[key]
-      );
-      resetSession(seed);
-      if (seed) {
-        alternativeThumb(seed.thumb, seed.frames).then(thumb =>
-          setAlternativeThumb(seed.id, thumb)
-        );
-      }
-    },
-    [resetSession, setAlternativeThumb]
   );
 
   const openNewDialog = useCallback(
@@ -834,6 +788,59 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
+  // The jumbo's picture: the first until one is chosen, a picture made
+  // here as soon as it lands, and the first again when the chosen one goes.
+  const [chosenKey, setChosenKey] = useState<string | null>(null);
+  const knownKeysRef = useRef<Set<string> | null>(null);
+  useEffect(() => {
+    const keys = new Set(images.map(image => image.key));
+    const known = knownKeysRef.current;
+    knownKeysRef.current = keys;
+    const added = known && images.find(image => !known.has(image.key));
+    if (added) {
+      setChosenKey(added.key);
+    }
+  }, [images]);
+  const chosen =
+    images.find(image => image.key === chosenKey) ?? images[0] ?? null;
+  const chosenProps = chosen?.props;
+  // Character sets are sheets of frames; the editor paints one image.
+  const chosenPaintable =
+    !!chosen && !chosenProps?.poses && !paintDisabled && !!chosenProps?.dataURI;
+  const paintChosen = useCallback(() => {
+    if (!chosen) {
+      return;
+    }
+    // The editor saves against the dialog's target.
+    setDialogTarget(chosen.key);
+    setPaintNewDraft(null);
+    savingPaintRef.current = false;
+    setPainting('loading');
+  }, [chosen]);
+  const groups = useMemo<LibraryGroup[]>(() => {
+    const byType = new Map<ImageType, LibraryGroup>();
+    images.forEach(({key, props}) => {
+      const type = imageTypeFromCategories(props?.categories);
+      let group = byType.get(type);
+      if (!group) {
+        group = {type, title: GROUP_TITLES[type], pictures: []};
+        byType.set(type, group);
+      }
+      const src = props?.dataURI || props?.sourceUrl || undefined;
+      group.pictures.push({
+        key,
+        name: props?.name,
+        thumb: getImageThumbnail(props?.name) || src,
+        src,
+        sheet:
+          props?.poses && src
+            ? {src, frameSize: props.frameSize, poses: props.poses}
+            : undefined,
+      });
+    });
+    return [...byType.values()];
+  }, [images]);
+
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -841,38 +848,21 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     creating && paintNewDraft
       ? paintNewDraft.imageType
       : imageTypeFromCategories(targetProps?.categories);
+  // The details dialog opens for a new picture or a pick; a chosen picture
+  // shows in the jumbo instead, and paints straight into the editor.
+  const detailsDialogShown = creating || !!pickRequest;
   return (
     <div className={moduleStyles.imagesManager}>
-      <div className={moduleStyles.imageGallery}>
-        {/* First slot, so it never hides behind a scroll. */}
-        <div className={moduleStyles.imageCard}>
-          <button
-            type="button"
-            className={moduleStyles.newImageCard}
-            onClick={openNewDialog}
-          >
-            <span aria-hidden>+</span>
-            <span className={moduleStyles.newImageLabel}>New image</span>
-          </button>
-        </div>
-        {images.map(({key, props}) => (
-          <GalleryCard
-            key={key}
-            animKey={key}
-            name={props?.name}
-            caption={advanced ? props?.name : undefined}
-            thumb={
-              getImageThumbnail(props?.name) ||
-              props?.dataURI ||
-              props?.sourceUrl ||
-              undefined
-            }
-            onOpen={openDialog}
-          />
-        ))}
-      </div>
+      <PictureLibrary
+        groups={groups}
+        chosenKey={chosen?.key ?? null}
+        onChoose={setChosenKey}
+        onNew={openNewDialog}
+        onPaint={chosenPaintable ? paintChosen : undefined}
+        jumboSide={jumboSide}
+      />
 
-      {dialogTarget && painting !== 'active' && (
+      {detailsDialogShown && dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
           // Keyed by subject: when a paint-save turns 'new' into a real
           // image, the dialog remounts and opens on the summary view.

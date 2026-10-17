@@ -49,7 +49,7 @@ $tab-item-height: 34px;
   justify-content: space-between;
 }
 
-// ?pictures=editor: the pictures list as an editor pane, scrolling on its own.
+// The Pictures editor's pane.
 .picturesEditor {
   overflow: auto;
   background: var(--background-neutral-primary);
@@ -415,42 +415,6 @@ $editor-strip-height: 41px;
 }
 
 // The Pictures button, the size of a scene tab.
-.picturesTab {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: none;
-  box-sizing: border-box;
-  height: $tab-item-height;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-.picturesTabOpen {
-  border-color: var(--borders-brand-teal-primary);
-  background: var(--borders-brand-teal-primary);
-  color: #fff;
-
-  &:hover:not(:disabled) {
-    background: var(--borders-brand-teal-primary);
-  }
-}
-
 // Code tab is kept mounted; the parent toggles visibility with clip-path so the
 // Blockly workspace and flyout SVG keep their real dimensions across switches.
 .codeTabWrapper {
@@ -463,8 +427,8 @@ $editor-strip-height: 41px;
   top: $editor-strip-height;
 }
 
-// After .codeTabWrapper too. ?pictures=editor: the pictures pane off to the
-// right while another editor shows, as a closed sheet waits.
+// After .codeTabWrapper too: the pictures pane off to the right while
+// another editor shows, as a closed sheet waits.
 .picturesEditorParked {
   left: 110%;
   right: auto;
@@ -484,9 +448,11 @@ $editor-strip-height: 41px;
   }
 }
 
+// Full height, so the library inside can measure the pane.
 .imagesManager {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .imageGallery {
@@ -496,20 +462,6 @@ $editor-strip-height: 41px;
   // bottom padding lets the last row scroll clear of the Guide overlay.
   gap: 28px 14px;
   padding: 28px 16px 220px;
-}
-
-.imageCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  width: 125px;
-}
-
-// Compact, quiet delete: the image is the star of the card. (Scoped by
-// class — a bare `.imageCard button` would also hit the thumbnail button.)
-.deleteButton {
-  @include buttons.quiet-button(22px, 11px);
 }
 
 // The trailing "new image" card: a blank tile with a plus. Same footprint as
@@ -542,18 +494,6 @@ $editor-strip-height: 41px;
 
 .newImageLabel {
   font-size: 12px;
-}
-
-.imageThumb {
-  @include tile.image-tile(104px);
-}
-
-.imageName {
-  max-width: 100%;
-  overflow: hidden;
-  font-size: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 // Sized wrapper around .guideBody: an explicit pixel height (kept in sync

@@ -1,0 +1,75 @@
+@use '../imageTile' as tile;
+
+// The jumbo on one side, the strips on the other; padding and gap are set
+// inline from the same constants the jumbo's side is measured against.
+.library {
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.libraryJumboRight {
+  flex-direction: row-reverse;
+}
+
+// Square; its side is set inline from the measured pane. A sheet's player
+// positions against it.
+.jumbo {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: pixelated;
+  }
+}
+
+.jumboPaint {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.strips {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--text-neutral-quaternary);
+}
+
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tile {
+  @include tile.image-tile(104px);
+}
+
+.tileChosen {
+  border: 2px solid var(--borders-brand-teal-primary);
+}

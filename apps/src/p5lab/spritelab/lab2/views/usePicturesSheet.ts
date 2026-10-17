@@ -71,22 +71,6 @@ export default function usePicturesSheet({
       sheetRef.current.inert = !open && !pickRequest;
     }
   }, [open, pickRequest, mounted]);
-  // Escape inside the sheet closes it. The image dialogs render in a
-  // portal, so their own Escape never reaches here.
-  useEffect(() => {
-    const sheet = sheetRef.current;
-    if (!sheet || !open) {
-      return;
-    }
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setOpen(false);
-      }
-    };
-    sheet.addEventListener('keydown', onKeyDown);
-    return () => sheet.removeEventListener('keydown', onKeyDown);
-  }, [open, mounted]);
-
   return {
     open,
     setOpen,
