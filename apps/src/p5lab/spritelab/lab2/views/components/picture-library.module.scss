@@ -10,6 +10,12 @@
 
 .libraryJumboRight {
   flex-direction: row-reverse;
+
+  // The strips take their widest row, not the leftover, so the jumbo sits
+  // against the last tile; the spare width is at the far left.
+  .strips {
+    flex: 0 1 auto;
+  }
 }
 
 // Square; its side is set inline from the measured pane. A sheet's player
