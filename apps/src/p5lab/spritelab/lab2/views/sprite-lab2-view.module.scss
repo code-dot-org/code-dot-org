@@ -62,6 +62,31 @@ $tab-item-height: 34px;
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
+// ?rail=bar: the resource rail's buttons at the scene row's end.
+.toolButtons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.toolSettings {
+  position: relative;
+}
+
+// The settings panel drops from its button, over the editors.
+.toolSettingsPanel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: variables.$z-index-overlay + 1;
+  width: 320px;
+  margin-top: 6px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
+}
+
 .tabBar {
   display: flex;
   align-items: center;

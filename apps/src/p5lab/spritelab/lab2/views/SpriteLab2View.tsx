@@ -146,6 +146,7 @@ import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
+import ToolButtons from './components/ToolButtons';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
@@ -540,6 +541,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               }ms ease ${picturesActive ? PANE_SLIDE_MS / 2 : 0}ms`
             : undefined,
         };
+  // ?rail=bar: the resource rail's buttons move to the scene row's end
+  // and the rail goes, giving the lab its width.
+  const railInBar = useMemo(() => queryParams('rail') === 'bar', []);
   // ?jumbo=right: the chosen picture at the right of the strips.
   const jumboSide = useMemo<'left' | 'right'>(
     () => (queryParams('jumbo') === 'right' ? 'right' : 'left'),
@@ -2023,34 +2027,38 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         />
       )}
-      <ResourcePanel
-        levelProperties={levelProperties}
-        isRunning={isRunning}
-        hasRun={hasRun}
-        hasEdited={hasEdited}
-        settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
-        className={classNames(
-          !levelProperties.levelMode && moduleStyles.instructionsArea,
-          !!levelProperties.levelMode && moduleStyles.resourceSidebar
-        )}
-        sidebarOnly={!!levelProperties.levelMode}
-        footerButtons={
-          isEditable && (
-            <IconButtonWithTooltip
-              id="start-over"
-              label="Start Over"
-              icon={{iconName: 'refresh', iconStyle: 'solid'}}
-              variant="text"
-              color="tertiary"
-              tooltipDirection="onRight"
-              onClick={() => setShowStartOver(true)}
-              theme={theme}
-              size="small"
-            />
-          )
-        }
-      />
-      <div className={moduleStyles.divider} />
+      {!railInBar && (
+        <>
+          <ResourcePanel
+            levelProperties={levelProperties}
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
+            className={classNames(
+              !levelProperties.levelMode && moduleStyles.instructionsArea,
+              !!levelProperties.levelMode && moduleStyles.resourceSidebar
+            )}
+            sidebarOnly={!!levelProperties.levelMode}
+            footerButtons={
+              isEditable && (
+                <IconButtonWithTooltip
+                  id="start-over"
+                  label="Start Over"
+                  icon={{iconName: 'refresh', iconStyle: 'solid'}}
+                  variant="text"
+                  color="tertiary"
+                  tooltipDirection="onRight"
+                  onClick={() => setShowStartOver(true)}
+                  theme={theme}
+                  size="small"
+                />
+              )
+            }
+          />
+          <div className={moduleStyles.divider} />
+        </>
+      )}
       {isImageMode(levelProperties.levelMode) ? (
         // The sentence scene is the whole lab: its panel is the Guide,
         // instructions included.
@@ -2079,6 +2087,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 <SceneMusicBar
                   title={nowPlaying.title}
                   loading={nowPlaying.loading}
+                />
+              )}
+              {railInBar && (
+                <ToolButtons
+                  levelId={levelProperties.id}
+                  appName={levelProperties.appName}
+                  theme={theme}
+                  settings={[
+                    ...blocklySettings,
+                    themeSetting,
+                    ...gameAudio.settings,
+                  ]}
+                  onStartOver={
+                    isEditable ? () => setShowStartOver(true) : undefined
+                  }
                 />
               )}
             </>
