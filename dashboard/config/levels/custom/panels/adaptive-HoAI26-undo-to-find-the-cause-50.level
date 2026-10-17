@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:48:51.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-undo-to-find-the-cause-50-37af3dfc-0d7b-4abb-8b5d-517f315f0d0a",
+        "text": "You've made a few changes to your page, and now something isn't working right.",
+        "imageUrl": "https://images.code.org/03aa57cc525f0a7ce910023fe39385e3-adaptive-HoAI26-undo-to-find-the-cause-50-panel-1-6b572bec-f761-45cb-bb27-32e3437df76b.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-undo-to-find-the-cause-50-e68638d4-944c-44c1-899b-7bfb599853f5",
+        "text": "First, undo only the very last change you made to your code.",
+        "imageUrl": "https://images.code.org/a93626ba2503401fb9b4c82b41ffe6c0-adaptive-HoAI26-undo-to-find-the-cause-50-panel-2-7885b9c8-7ef7-4f6b-9e07-f2d629a7b20c.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-undo-to-find-the-cause-50-1ea4fc18-b29a-41b9-921d-5d578aac815b",
+        "text": "Reload your page and check carefully to see if the problem is gone.",
+        "imageUrl": "https://images.code.org/095a52e23aaa4652d3cb8ee3507c4d5c-adaptive-HoAI26-undo-to-find-the-cause-50-panel-3-60e52c3d-6b8d-4aa2-ab86-b55904b9f51b.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-undo-to-find-the-cause-50-48cc07a4-3731-4238-a9da-5778dc65f665",
+        "text": "If it's still broken, undo the next newest change, and check again.",
+        "imageUrl": "https://images.code.org/47c95c7f9db8bee245f6b07a5f13f635-adaptive-HoAI26-undo-to-find-the-cause-50-panel-4-95dc67bc-7701-47b8-a9fb-4fdd02198c0f.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-undo-to-find-the-cause-50-1076fe71-dc47-42f7-8811-e2ad1a730074",
+        "text": "Keep doing this until the page works correctly. The last change you undid was the problem!",
+        "imageUrl": "https://images.code.org/84b6ecdd23e3327cb8f217921db8fa06-adaptive-HoAI26-undo-to-find-the-cause-50-panel-5-f45108c3-7c77-427d-8777-e860b1403a1f.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Watch a video demonstrating a debugging technique: undoing changes one at a time. Learn how to revert the newest change, check for a fix, and repeat until the problem is resolved, pinpointing the cause."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:49:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:49:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

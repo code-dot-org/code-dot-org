@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:29:57.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-check-the-fix-13-c5c452e3-25a6-4544-94f0-066465f9f381",
+        "text": "After a fix, reload the page to see if the changes worked.",
+        "imageUrl": "https://images.code.org/a133066140c9b8d68a3d01e1f787e83c-adaptive-HoAI26-check-the-fix-13-panel-1-2067aefc-63e9-4ee1-a206-624e0f178c7e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-check-the-fix-13-865ee2e4-fc00-4ef6-a6ff-c5f556d5a66d",
+        "text": "Click on every button and link. Make sure all interactive elements still work.",
+        "imageUrl": "https://images.code.org/ace19efd2f34afa9f33dee9c18ba1c60-adaptive-HoAI26-check-the-fix-13-panel-2-043d2eea-94ea-4fa8-8b93-5b6426be27d4.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-check-the-fix-13-f3604f97-23aa-462d-8ff9-e9adf8b4a12c",
+        "text": "Carefully check the entire page for any new problems or broken parts.",
+        "imageUrl": "https://images.code.org/542886051630157fd45f85280de5b751-adaptive-HoAI26-check-the-fix-13-panel-3-053129bf-7835-4bb9-b09e-e8a97252f165.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Learn a three-step process to check AI fixes: reload and look, click everything again, and look for new problems. This helps ensure the fix works and doesn't introduce new issues."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:30:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:30:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

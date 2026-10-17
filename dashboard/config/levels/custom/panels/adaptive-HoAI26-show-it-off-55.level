@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:51:12.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-show-it-off-55-2f5f9564-b31d-42c8-baff-a62bd13446c0",
+        "text": "Your hard work has paid off! Let's review your journey and celebrate your new skills.",
+        "imageUrl": "https://images.code.org/d422654ff1c8ff7adf72682e38d9ad07-adaptive-HoAI26-show-it-off-55-panel-1-351f6d3b-94a8-4f3f-a475-cba15683808e.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-55-f83d3def-9ddf-4139-9c42-08552a3b8563",
+        "text": "See how your prompts grew more detailed and how many tries it took to get your perfect page.",
+        "imageUrl": "https://images.code.org/eb6a7baf0681fe80946d7d7c827f23b0-adaptive-HoAI26-show-it-off-55-panel-2-93f0a690-2d55-46cc-a4ec-92ef1bccb3bb.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-55-6dd9fe87-d7ce-4d9f-ba9a-8956b02ae277",
+        "text": "Replay your closeness ratings, showing how well AI results matched your vision every time.",
+        "imageUrl": "https://images.code.org/25d3fb2147a18ccc3e492384c79e55e9-adaptive-HoAI26-show-it-off-55-panel-3-d5aaee9e-8d47-4b52-8933-79699e392251.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-show-it-off-55-c086b13d-593e-4f31-bee9-4e9c5404e3f2",
+        "text": "Special badges will light up, recognizing the key moves you've mastered.",
+        "imageUrl": "https://images.code.org/d9cf8e2f3119aa7d3d79c291dc6e170a-adaptive-HoAI26-show-it-off-55-panel-4-56b5dd61-8794-4256-8a38-dcf0dd5c4e7c.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Celebrate your skills with a summary built from your project data. See animations of details per prompt, attempts to achieve desired results, and a replay of your closeness ratings."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:51:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:51:49 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
