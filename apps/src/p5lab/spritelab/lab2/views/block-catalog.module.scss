@@ -207,8 +207,8 @@ $footer-height: 44px;
 
 // Pinned inside the toolbox's lower-right corner: `left` is the toolbox
 // column's width, and the button hangs back from it by its own width.
-// Above Blockly's flyout (z 20), below its drag layer, so a block dragged
-// out still passes over the band.
+// Above Blockly's category list (z 70) and flyout (z 20), below its block
+// drag surface (z 80), so a block dragged out still passes over the band.
 .toolboxFooter {
   position: absolute;
   left: 0;
@@ -220,5 +220,30 @@ $footer-height: 44px;
   padding: 0 $corner-inset;
   box-sizing: border-box;
   background-color: var(--background-brand-light);
-  z-index: 21;
+  z-index: 71;
+}
+
+// Doubled to outrank the button's own padding.
+.compactButton.compactButton {
+  min-width: 0;
+  padding: 4px 10px;
+}
+
+// How many blocks wait in the catalog.
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  padding: 0 5px;
+  border-radius: 999px;
+  box-sizing: border-box;
+  // Fixed colors: the pill sits on the brand button in either theme.
+  background-color: var(--neutral-base-white);
+  color: var(--brand-purple-50);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
 }

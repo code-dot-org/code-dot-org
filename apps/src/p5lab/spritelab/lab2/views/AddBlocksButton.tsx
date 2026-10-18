@@ -16,6 +16,9 @@ import moduleStyles from './block-catalog.module.scss';
 const FOOTER_PX = 44;
 // Room in the flyout's margin for the dots beside added blocks.
 const MARGIN_FACTOR = 2;
+// A column narrower than this (a category list) gets the icon and the
+// count alone.
+const COMPACT_BELOW_PX = 180;
 
 interface AddBlocksButtonProps {
   /** Bumps when the workspace is re-injected. */
@@ -58,16 +61,27 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
   if (!width) {
     return null;
   }
+  const compact = width < COMPACT_BELOW_PX;
+  const count = remaining > 0 && (
+    <span className={moduleStyles.count} aria-hidden>
+      {remaining}
+    </span>
+  );
   return (
     <div className={moduleStyles.toolboxFooter} style={{width}}>
       <MuiButton
         variant="contained"
         color="primary"
         size="small"
-        startIcon={<FontAwesomeV6Icon iconName="plus" />}
+        className={compact ? moduleStyles.compactButton : undefined}
+        aria-label={
+          remaining > 0 ? `Add new blocks (${remaining} new)` : 'Add new blocks'
+        }
+        startIcon={compact ? undefined : <FontAwesomeV6Icon iconName="plus" />}
         onClick={onClick}
       >
-        {remaining > 0 ? `Add new blocks (${remaining})` : 'Add new blocks'}
+        {compact ? <FontAwesomeV6Icon iconName="plus" /> : 'Add new blocks'}
+        {count}
       </MuiButton>
     </div>
   );
