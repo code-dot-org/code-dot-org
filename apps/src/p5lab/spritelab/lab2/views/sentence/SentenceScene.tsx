@@ -116,7 +116,7 @@ export interface SentenceSceneParts {
   frameFilled: boolean;
   /** Behind the scenes, once there is a picture. */
   underFrame: React.ReactNode;
-  /** The session's other pictures, as tiles that swap into the frame. */
+  /** The session's pictures as tiles, the one in the frame marked. */
   alternatives: React.ReactNode;
   /** The screen reader's status line. */
   status: React.ReactNode;
@@ -430,7 +430,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     [amendMade, made, sentence, choices, imageType]
   );
 
-  // An earlier picture back into the frame; the one there joins the tiles.
+  // Another picture into the frame; a swap plays no reveal.
   const choosePicture = useCallback((id: string) => {
     setChosenId(id);
     setFreshId(null);
@@ -648,10 +648,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const underFrame = showingResult && made && (
     <BehindTheScenes sent={made.sent} disabled={busy} />
   );
-  const others = history.filter(m => m.id !== chosenId);
-  const alternativesNode = showingResult && others.length > 0 && (
+  const alternativesNode = showingResult && history.length > 1 && (
     <AlternativeThumbs
-      thumbs={others.map(m => ({
+      thumbs={history.map(m => ({
         id: m.id,
         src: m.dataURI,
         prompt: m.prompt,
@@ -663,6 +662,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           : undefined,
         pixelArt: !!m.result.pixelGridSize,
       }))}
+      chosenId={chosenId}
       onChoose={choosePicture}
       disabled={busy}
     />

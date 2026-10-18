@@ -363,7 +363,7 @@ describe('SentenceScene', () => {
     expect(generateCharacterSet.mock.calls[1][0]).toBe('A cat');
   });
 
-  it('offers the earlier pictures as tiles, and a tile swaps back into the frame', async () => {
+  it('shows every picture as a tile, the one in the frame marked, and a tile swaps it in', async () => {
     const SECOND = {
       ...RESULT,
       filename: 'cat2.png',
@@ -376,25 +376,26 @@ describe('SentenceScene', () => {
     renderScene();
     pickCreature();
     await generate();
-    expect(screen.queryByRole('group', {name: 'Earlier pictures'})).toBeNull();
+    expect(screen.queryByRole('group', {name: 'Your pictures'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Good'}));
     await generate('Regenerate');
-    const tiles = screen.getByRole('group', {name: 'Earlier pictures'});
-    expect(tiles.querySelectorAll('button')).toHaveLength(1);
+    const tiles = screen.getByRole('group', {name: 'Your pictures'});
+    expect(tiles.querySelectorAll('button')).toHaveLength(2);
+    const pressed = () =>
+      [...tiles.querySelectorAll('button')].map(b =>
+        b.getAttribute('aria-pressed')
+      );
+    expect(pressed()).toEqual(['false', 'true']);
     // The new picture has no verdict of its own yet.
     expect(
       screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
     ).toBe('false');
-    fireEvent.click(screen.getByRole('button', {name: 'Show A cat'}));
-    // The first picture is back, with its verdict, and the second is a tile.
+    fireEvent.click(screen.getByRole('button', {name: 'Picture 1: A cat'}));
+    // The first picture is back, with its verdict, and marked in the strip.
     expect(
       screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
     ).toBe('true');
-    expect(
-      screen
-        .getByRole('group', {name: 'Earlier pictures'})
-        .querySelectorAll('button')
-    ).toHaveLength(1);
+    expect(pressed()).toEqual(['true', 'false']);
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
     });

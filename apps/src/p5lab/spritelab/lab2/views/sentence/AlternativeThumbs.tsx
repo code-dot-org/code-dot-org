@@ -1,5 +1,5 @@
-// Under the frame: the session's other pictures as small tiles, each a
-// button that swaps it into the frame.
+// Under the frame: every picture of the session as small tiles in order,
+// the one in the frame marked; clicking another swaps it into the frame.
 
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
@@ -18,6 +18,8 @@ export interface AlternativeThumb {
 
 interface AlternativeThumbsProps {
   thumbs: AlternativeThumb[];
+  /** The picture in the frame. */
+  chosenId: string | null;
   onChoose: (id: string) => void;
   disabled?: boolean;
 }
@@ -87,16 +89,21 @@ const Tile: React.FunctionComponent<AlternativeThumb> = ({
 
 const AlternativeThumbs: React.FunctionComponent<AlternativeThumbsProps> = ({
   thumbs,
+  chosenId,
   onChoose,
   disabled,
 }) => (
-  <div className={styles.row} role="group" aria-label="Earlier pictures">
-    {thumbs.map(thumb => (
+  <div className={styles.row} role="group" aria-label="Your pictures">
+    {thumbs.map((thumb, i) => (
       <button
         key={thumb.id}
         type="button"
-        className={styles.button}
-        aria-label={`Show ${thumb.prompt}`}
+        className={classNames(
+          styles.button,
+          thumb.id === chosenId && styles.chosen
+        )}
+        aria-label={`Picture ${i + 1}: ${thumb.prompt}`}
+        aria-pressed={thumb.id === chosenId}
         disabled={disabled}
         onClick={() => onChoose(thumb.id)}
       >
