@@ -57,6 +57,11 @@
   min-width: 0;
   min-height: 0;
   overflow-y: auto;
+  // Room inside the scroll box for a hovered tile's growth, which the box
+  // would otherwise clip at its edges; the margin pulls the box back out,
+  // so the tiles sit where they did.
+  margin: 0 -8px;
+  padding: 0 8px 8px;
 
   > :first-child {
     flex-basis: 100%;
