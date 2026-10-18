@@ -44,7 +44,7 @@ class SurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'show diversity survey' do
-    current_survey = SurveyResult::DIVERSITY_2024
+    current_survey = SurveyResult::DIVERSITY_2026
 
     stubs(:language).returns "en"
     stubs(:request).returns(stub(location: stub(try: "RD")))
