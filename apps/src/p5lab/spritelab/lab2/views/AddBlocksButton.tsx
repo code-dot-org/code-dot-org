@@ -27,10 +27,10 @@ interface AddBlocksButtonProps {
 }
 
 /**
- * The button pinned in the toolbox's lower-right corner that opens the
- * new-block catalog. It sits inside the toolbox column, which is why its
- * position follows the column's width; the flyout gains room to scroll its
- * last block clear of it and a wider margin for the dots.
+ * The tinted band across the toolbox's foot, with the button that opens
+ * the new-block catalog at its right. It sits inside the toolbox column,
+ * which is why its width follows the column's; the flyout gains room to
+ * scroll its last block clear of it and a wider margin for the dots.
  */
 const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
   workspaceVersion,
@@ -59,7 +59,7 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
     return null;
   }
   return (
-    <div className={moduleStyles.toolboxCorner} style={{left: width}}>
+    <div className={moduleStyles.toolboxFooter} style={{width}}>
       <MuiButton
         variant="contained"
         color="primary"

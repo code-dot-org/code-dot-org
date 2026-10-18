@@ -6,6 +6,9 @@
 
 $list-width: 220px;
 $corner-inset: 8px;
+// The band's height: AddBlocksButton's FOOTER_PX, the room the flyout
+// keeps clear.
+$footer-height: 44px;
 
 .dialogHost {
   display: contents;
@@ -205,10 +208,17 @@ $corner-inset: 8px;
 // Pinned inside the toolbox's lower-right corner: `left` is the toolbox
 // column's width, and the button hangs back from it by its own width.
 // Above Blockly's flyout (z 20), below its drag layer, so a block dragged
-// out still passes over the button.
-.toolboxCorner {
+// out still passes over the band.
+.toolboxFooter {
   position: absolute;
-  bottom: $corner-inset;
-  transform: translateX(calc(-100% - #{$corner-inset}));
+  left: 0;
+  bottom: 0;
+  height: $footer-height;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 $corner-inset;
+  box-sizing: border-box;
+  background-color: var(--background-brand-light);
   z-index: 21;
 }
