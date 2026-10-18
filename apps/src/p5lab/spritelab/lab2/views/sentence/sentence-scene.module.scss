@@ -218,6 +218,8 @@ $window-allowance: 150px;
 .drawButton.drawButton {
   border-color: var(--border-neutral-secondary);
   color: var(--text-neutral-secondary);
+  font-size: 13px;
+  font-weight: 500;
 
   &:hover {
     border-color: var(--text-neutral-primary);
