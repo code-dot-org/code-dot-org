@@ -29,7 +29,7 @@ interface VerdictRowProps {
 }
 
 /** The question about the picture and the two thumbs; after a thumb down,
-    the two reasons it could be take the thumbs' place. */
+    the two reasons it could be, on a row under the question. */
 export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
   verdict,
   onJudge,
@@ -50,23 +50,25 @@ export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
       How did the AI do?
     </span>
     {verdict === 'down' ? (
-      VERDICT_REASONS.map(r => (
-        <MuiButton
-          key={r.value}
-          variant="outlined"
-          color="secondary"
-          size="small"
-          className={classNames(
-            styles.reasonButton,
-            reason === r.value && styles.reasonChosen
-          )}
-          aria-pressed={reason === r.value}
-          disabled={disabled || (!!reason && reason !== r.value)}
-          onClick={() => onReason(r.value)}
-        >
-          {r.text}
-        </MuiButton>
-      ))
+      <div className={styles.reasonRow}>
+        {VERDICT_REASONS.map(r => (
+          <MuiButton
+            key={r.value}
+            variant="outlined"
+            color="secondary"
+            size="small"
+            className={classNames(
+              styles.reasonButton,
+              reason === r.value && styles.reasonChosen
+            )}
+            aria-pressed={reason === r.value}
+            disabled={disabled || (!!reason && reason !== r.value)}
+            onClick={() => onReason(r.value)}
+          >
+            {r.text}
+          </MuiButton>
+        ))}
+      </div>
     ) : (
       <>
         <MuiIconButton

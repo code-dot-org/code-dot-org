@@ -315,14 +315,21 @@ $window-allowance: 150px;
   color: var(--text-neutral-primary);
 }
 
-// The question, then the thumbs, or after a thumb down the reasons in
-// their place; the reasons wrap under the question where the row is
-// narrow.
+// The question, then the thumbs, or after a thumb down the reasons on a
+// row of their own under it.
 .resultQuestionRow {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
+}
+
+.reasonRow {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
 }
 
 // The tip's box, when the question stands alone in a panel.
@@ -333,7 +340,6 @@ $window-allowance: 150px;
 // The chosen reason stays lit, the other goes quiet.
 .reasonButton.reasonButton {
   flex: none;
-  margin-left: 4px;
   white-space: nowrap;
 }
 
