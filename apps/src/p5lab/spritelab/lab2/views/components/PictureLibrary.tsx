@@ -59,11 +59,6 @@ const JUMBO_MIN_PX = 160;
 const JUMBO_MAX_SHARE = 0.4;
 // Under the jumbo: the Delete row.
 const ACTIONS_PX = 48;
-// A tile, the gap between tiles, and the gap between groups on a row
-// (picture-library.module.scss).
-const TILE_PX = 104;
-const TILE_GAP_PX = 10;
-const GROUP_GAP_PX = 32;
 
 /**
  * The Images editor: the chosen picture large on one side, and on the
@@ -116,31 +111,6 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   const chosen = groups
     .flatMap(group => group.pictures)
     .find(picture => picture.key === chosenKey);
-  // With the jumbo at the right the strips take the width their rows fill,
-  // so the jumbo sits against the last tile: a wrapped flex box keeps the
-  // width it shrank to, not the width its groups use. The groups are packed
-  // as the browser packs them, greedily into rows of the room.
-  let stripsWidth: number | undefined;
-  if (jumboSide === 'right' && jumboPx !== undefined) {
-    const room = size.w - GAP_PX - jumboPx;
-    const perRow = Math.max(
-      1,
-      Math.floor((room + TILE_GAP_PX) / (TILE_PX + TILE_GAP_PX))
-    );
-    const widths = groups.map(group => {
-      const columns = Math.min(perRow, Math.max(1, group.pictures.length));
-      return columns * TILE_PX + (columns - 1) * TILE_GAP_PX;
-    });
-    let row = 0;
-    stripsWidth = 0;
-    widths.forEach(width => {
-      const next = row ? row + GROUP_GAP_PX + width : width;
-      row = next <= room ? next : width;
-      stripsWidth = Math.max(stripsWidth ?? 0, row);
-    });
-    stripsWidth = Math.max(stripsWidth, TILE_PX);
-  }
-
   return (
     <div
       ref={rootRef}
@@ -226,7 +196,7 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
           </div>
         )}
       </div>
-      <div className={moduleStyles.strips} style={{width: stripsWidth}}>
+      <div className={moduleStyles.strips}>
         <div>
           <MuiButton
             variant="outlined"
