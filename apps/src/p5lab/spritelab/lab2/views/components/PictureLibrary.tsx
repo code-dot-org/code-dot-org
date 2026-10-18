@@ -50,11 +50,13 @@ interface PictureLibraryProps {
 }
 
 // The pane's padding, the gap between the halves, and the least the strips
-// keep: the jumbo takes what is left, up to the pane's height.
+// keep: the jumbo takes what is left, up to the pane's height and to its
+// share of the width, so a tall window does not starve the library.
 const PAD_PX = 16;
 const GAP_PX = 24;
 const STRIPS_MIN_PX = 320;
 const JUMBO_MIN_PX = 160;
+const JUMBO_MAX_SHARE = 0.4;
 // Under the jumbo: the Delete row.
 const ACTIONS_PX = 48;
 // A tile, the gap between tiles, and the gap between groups on a row
@@ -104,7 +106,11 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   const jumboPx = size.w
     ? Math.max(
         JUMBO_MIN_PX,
-        Math.min(size.h - ACTIONS_PX, size.w - GAP_PX - STRIPS_MIN_PX)
+        Math.min(
+          size.h - ACTIONS_PX,
+          size.w - GAP_PX - STRIPS_MIN_PX,
+          Math.floor(size.w * JUMBO_MAX_SHARE)
+        )
       )
     : undefined;
   const chosen = groups
