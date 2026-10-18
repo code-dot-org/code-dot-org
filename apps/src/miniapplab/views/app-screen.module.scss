@@ -1,0 +1,81 @@
+.screen {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  color: #222;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.element {
+  position: absolute;
+  box-sizing: border-box;
+
+  > * {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.design .element {
+  cursor: move;
+  user-select: none;
+
+  > * {
+    pointer-events: none;
+  }
+}
+
+.preview .element > * {
+  pointer-events: none;
+}
+
+.selected {
+  outline: 2px solid #0094ca;
+  outline-offset: 2px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.input {
+  padding: 6px 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font: inherit;
+  margin: 0;
+}
+
+.button {
+  background-color: #0094ca;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0;
+
+  &:active {
+    background-color: #007aa8;
+  }
+}
+
+.output {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

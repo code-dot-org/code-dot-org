@@ -130,6 +130,8 @@ Dashboard::Application.routes.draw do
     get "/musiclab/embed", to: "musiclab#embed"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
+    get "/miniapplab", to: "miniapplab#show"
+
     resources :activity_hints, only: [:update]
 
     resources :hint_view_requests, only: [:create]
