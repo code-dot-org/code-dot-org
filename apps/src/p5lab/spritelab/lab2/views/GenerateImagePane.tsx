@@ -206,6 +206,11 @@ interface GenerateImagePaneProps {
   advanced?: boolean;
   /** Style the generate form starts on for new images. */
   defaultStyle?: ImageStyle;
+  /** Generations the student has left on this level; unlimited when
+      unset. */
+  generationsLeft?: number;
+  /** A generation request is leaving the dialog. */
+  onGenerate?: () => void;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
   /** A picture asked for from a block or the world palette: opens the
@@ -258,6 +263,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   imageRole,
   advanced,
   defaultStyle,
+  generationsLeft,
+  onGenerate,
   paintDisabled,
   pickRequest = null,
   onImageCreated,
@@ -366,7 +373,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const generationEpochRef = useRef(0);
   const handleGenerateStart = useCallback(() => {
     generationEpochRef.current = sessionEpochRef.current;
-  }, []);
+    onGenerate?.();
+  }, [onGenerate]);
 
   // True when work stamped with `epoch` no longer matches the subject;
   // whatever the stale work uploaded is deleted, since nothing uses it.
@@ -920,6 +928,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           }
           advanced={advanced}
           defaultStyle={defaultStyle}
+          generationsLeft={generationsLeft}
           paintDisabled={paintDisabled}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.

@@ -524,7 +524,18 @@ $sentence-pane-size: 420px;
   }
 }
 
-// The Type choice stands a little apart from the sentence it decides.
+// The line above the sentence: what the student is doing, with the kind
+// as a dropdown in the line when it is theirs to pick.
+.sentenceHeadline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 6px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .sentenceType {
-  margin-bottom: 10px;
+  display: inline-flex;
 }

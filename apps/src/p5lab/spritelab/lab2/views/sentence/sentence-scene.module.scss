@@ -107,7 +107,7 @@ $window-allowance: 150px;
   image-rendering: pixelated;
 }
 
-// Fills what the fact at the bottom leaves, with the label in its middle.
+// Fills what the fact at the bottom leaves, with the steps in its middle.
 .generatingSpace {
   flex: 1 1 auto;
   display: flex;
@@ -115,15 +115,7 @@ $window-allowance: 150px;
   justify-content: center;
 }
 
-.generatingLabel {
-  margin: 0;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--text-neutral-primary);
-}
-
-// The style dropdown at the left, Generate at the right.
+// Generate at the right.
 .generateRow {
   display: flex;
   align-items: center;
@@ -201,9 +193,15 @@ $window-allowance: 150px;
   flex-direction: row;
 }
 
+// Under the frame, at its right.
+.underFrameRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
 // The quieter neutral: Generate is the main call to action.
 .drawButton.drawButton {
-  width: 100%;
   border-color: var(--border-neutral-secondary);
   color: var(--text-neutral-secondary);
 
@@ -225,6 +223,28 @@ $window-allowance: 150px;
   border: 0;
   border-radius: 10px;
   background-color: transparent;
+}
+
+// The outline sits over the canvas, which fills the frame; a canvas is
+// square, so the figure keeps its proportion inside it.
+.paintStack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.paintOutline {
+  position: absolute;
+  inset: 8%;
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+  pointer-events: none;
+  transition: opacity 0.4s ease-out;
+}
+
+.paintOutlineGone {
+  opacity: 0;
 }
 
 .paintActions {
@@ -281,10 +301,34 @@ $window-allowance: 150px;
   color: var(--text-neutral-primary);
 }
 
+.verdictBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .resultQuestionRow {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+// After a thumb down: the chosen reason stays lit, the other goes quiet.
+.reasonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reasonButton.reasonButton {
+  white-space: nowrap;
+}
+
+.reasonButton.reasonChosen,
+.reasonButton.reasonChosen:disabled {
+  border-color: var(--text-neutral-primary);
+  background-color: var(--text-neutral-primary);
+  color: var(--background-neutral-primary);
 }
 
 .resultQuestion {

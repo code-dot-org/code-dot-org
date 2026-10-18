@@ -28,7 +28,6 @@ import {
 import {ImageSafetyError} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
 import {defaultPixelGrid} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/modelHelpers';
 import {
-  IMAGE_STYLE_LABELS,
   imageKindLabel,
   ImageStyle,
   ImageSubject,
@@ -41,12 +40,18 @@ import {
 import PixelEditor, {PaletteColor} from '@cdo/apps/pixelEditor/PixelEditor';
 import {PixelTool} from '@cdo/apps/pixelEditor/toolDefinitions';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import BehindTheScenes from './BehindTheScenes';
+import GeneratingSteps from './GeneratingSteps';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
-import ResultActions, {Verdict, VerdictRow} from './ResultActions';
+import ResultActions, {
+  Verdict,
+  VerdictReason,
+  VerdictRow,
+} from './ResultActions';
 import {saveGeneratedImage, savePaintedImage} from './saveGeneratedImage';
 import {pickFact} from './sentenceFacts';
 import SentenceReadOnly from './SentenceReadOnly';
@@ -64,27 +69,24 @@ import WordMenus from './WordMenus';
 
 import styles from './sentence-scene.module.scss';
 
-const STYLES = Object.keys(IMAGE_STYLE_LABELS) as ImageStyle[];
+// Every picture is pixel art.
+const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
+// The last step's tick shows this long before the picture replaces it.
+const SETTLE_MS = 500;
 
 export type Mode = 'edit' | 'generating' | 'result' | 'paint';
 
 const PAINT_TOOLS: readonly PixelTool[] = ['pen', 'bucket', 'eraser'];
+// The pixel editor's own starting blue, then black and white.
 const PAINT_COLORS: readonly PaletteColor[] = [
+  {name: 'Blue', rgba: [0, 155, 233, 255]},
   {name: 'Black', rgba: [34, 34, 34, 255]},
-  {name: 'Gray', rgba: [158, 158, 158, 255]},
   {name: 'White', rgba: [255, 255, 255, 255]},
-  {name: 'Brown', rgba: [141, 85, 36, 255]},
-  {name: 'Red', rgba: [229, 57, 53, 255]},
-  {name: 'Orange', rgba: [251, 140, 0, 255]},
-  {name: 'Yellow', rgba: [253, 216, 53, 255]},
-  {name: 'Green', rgba: [67, 160, 71, 255]},
-  {name: 'Teal', rgba: [0, 172, 193, 255]},
-  {name: 'Blue', rgba: [30, 136, 229, 255]},
-  {name: 'Purple', rgba: [142, 36, 170, 255]},
-  {name: 'Pink', rgba: [236, 64, 122, 255]},
 ];
+// One brush: the finest on a pixel grid, the next one up on a smooth canvas.
+const PAINT_BRUSH_SIZES: readonly number[] = [STYLE === 'pixel' ? 1 : 2];
 
 interface Made {
   result: GeneratedImageResult;
@@ -115,11 +117,14 @@ export interface SentenceSceneParts {
   typeChoice: React.ReactNode;
   /** The word menus, or the sentence read back while busy. */
   sentence: React.ReactNode;
-  styleChoice: React.ReactNode;
   error: React.ReactNode;
+  /** The model's steps, while generating. */
+  progress: React.ReactNode;
   fact: React.ReactNode;
   /** The question and the thumbs, once there is a picture. */
   verdict: React.ReactNode;
+  /** The level's generations are used up: Generate stays off. */
+  exhausted: boolean;
   generate: () => void;
   changeWords: () => void;
   keep: () => void;
@@ -132,13 +137,15 @@ interface SentenceSceneProps {
   imageSubject?: ImageSubject;
   /** The sentence to build, by id; the image type's own when unset. */
   sentenceId?: string;
-  /** Style the controls start on. */
-  defaultStyle: ImageStyle;
   /** Recorded on the saved image. */
   imageRole?: string;
   uploadImage?: UploadImageFunction;
   /** The level's instructions, markdown, read at the top of the panel. */
   instructions?: string;
+  /** What the panel reads instead once a picture is made. */
+  resultInstructions?: string;
+  /** Generations the student has left; Generate goes off at none. */
+  generationsLeft?: number;
   /** Offer the read-aloud button on the instructions. */
   showTts?: boolean;
   /** Offer the Type dropdown; imageType and imageSubject are then where it
@@ -158,10 +165,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   imageType: initialImageType,
   imageSubject: initialImageSubject,
   sentenceId,
-  defaultStyle,
   imageRole,
   uploadImage,
   instructions,
+  resultInstructions,
+  generationsLeft,
   showTts,
   typeChoice,
   onKeep,
@@ -171,7 +179,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
-  const [style, setStyle] = useState<ImageStyle>(defaultStyle);
+  const style = STYLE;
   const [kind, setKind] = useState(
     () => imageKindFor(initialImageType, initialImageSubject).value
   );
@@ -190,6 +198,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
+  const [reason, setReason] = useState<VerdictReason | null>(null);
+  // The picture is back and the last step's tick is showing.
+  const [settling, setSettling] = useState(false);
   // The blank the student draws on, sized for the style.
   const [paintFrom, setPaintFrom] = useState<{
     dataURI: string;
@@ -200,6 +211,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   useEffect(() => () => void runRef.current++, []);
 
   const generate = useCallback(async () => {
+    if (generationsLeft !== undefined && generationsLeft <= 0) {
+      return;
+    }
     const run = ++runRef.current;
     const prompt = promptText(sentence, choices);
     // true attaches the project context for per-level breakdowns.
@@ -217,7 +231,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     );
     onGenerateStart?.();
     setMode('generating');
+    setSettling(false);
     setVerdict(null);
+    setReason(null);
     setError(null);
     setFact(current =>
       pickFact(
@@ -250,6 +266,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
             bodyPlan,
           })
         : await generateImage(prompt, options);
+      if (run !== runRef.current) {
+        return;
+      }
+      setSettling(true);
+      await new Promise(resolve => setTimeout(resolve, SETTLE_MS));
       if (run !== runRef.current) {
         return;
       }
@@ -286,6 +307,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     canAnimate,
     method,
     onGenerateStart,
+    generationsLeft,
   ]);
 
   const keep = useCallback(async () => {
@@ -367,9 +389,27 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     [made, sentence, choices, imageType]
   );
 
+  const explain = useCallback(
+    (next: VerdictReason) => {
+      setReason(next);
+      analyticsReporter.sendEvent(
+        EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
+        {
+          reason: next,
+          promptText: made ? promptText(sentence, choices) : undefined,
+          imageType,
+        },
+        true
+      );
+    },
+    [made, sentence, choices, imageType]
+  );
+
   const generating = mode === 'generating';
   const busy = generating || saving;
   const showingResult = mode === 'result' && !!made;
+  const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
+  const canGenerate = complete && !busy && !exhausted;
 
   // The control that changed the mode unmounts with it, so focus moves to
   // the panel; not on the first render, which is the level opening.
@@ -388,9 +428,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  const instructionsBlock = instructions && (
+  const instructionsText =
+    showingResult && resultInstructions ? resultInstructions : instructions;
+  const instructionsBlock = instructionsText && (
     <MainInstructionsContent
-      instructionsText={instructions}
+      instructionsText={instructionsText}
       markdownClassName={styles.instructions}
       showTts={showTts}
     />
@@ -416,6 +458,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         knownPixelGrid={paintFrom.pixelGridSize}
         tools={PAINT_TOOLS}
         palette={PAINT_COLORS}
+        brushSizes={PAINT_BRUSH_SIZES}
         fit="container"
         toolbarLayout="row"
         canvasClassName={styles.paintCanvas}
@@ -427,7 +470,24 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         {parts => (
           <SentenceSceneLayout
             frameClassName={styles.paintFrame}
-            frame={parts.canvas}
+            frame={
+              canAnimate ? (
+                // A dotted figure to draw over, gone at the first stroke.
+                <div className={styles.paintStack}>
+                  {parts.canvas}
+                  <img
+                    src={characterOutline}
+                    alt=""
+                    className={classNames(
+                      styles.paintOutline,
+                      parts.edited && styles.paintOutlineGone
+                    )}
+                  />
+                </div>
+              ) : (
+                parts.canvas
+              )
+            }
             frameAriaLabel="Your drawing"
             panelAriaLabel="Draw your picture"
             panelRef={panelRef}
@@ -480,19 +540,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       }}
     />
   ) : null;
-  const styleChoice = (
-    <SimpleDropdown
-      name="sentence-style"
-      labelText="Style"
-      isLabelVisible={false}
-      size="s"
-      color={theme === 'Dark' ? 'white' : 'black'}
-      items={STYLES.map(s => ({value: s, text: IMAGE_STYLE_LABELS[s]}))}
-      selectedValue={style}
-      disabled={busy}
-      onChange={e => setStyle(e.target.value as ImageStyle)}
-    />
-  );
   const statusNode = (
     <div className={styles.srOnly} role="status">
       {status}
@@ -509,6 +556,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         disabled={busy}
       />
     );
+  const progressNode = generating && <GeneratingSteps done={settling} />;
   const factNode = generating && fact && (
     <aside
       className={classNames(styles.factBox, styles.bottomRow)}
@@ -561,7 +609,27 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     <BehindTheScenes sent={made.sent} disabled={busy} />
   );
   const verdictNode = showingResult && made && (
-    <VerdictRow verdict={verdict} onJudge={judge} disabled={busy} />
+    <VerdictRow
+      verdict={verdict}
+      onJudge={judge}
+      reason={reason}
+      onReason={explain}
+      disabled={busy}
+    />
+  );
+  // Under the frame: the way to draw instead, while the words are open.
+  const drawButton = mode === 'edit' && (
+    <div className={styles.underFrameRow}>
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        className={styles.drawButton}
+        startIcon={<FontAwesomeV6Icon iconName="pen" aria-hidden />}
+        onClick={startPaint}
+      >
+        I'll draw it myself
+      </MuiButton>
+    </div>
   );
 
   if (layout) {
@@ -578,10 +646,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           status: statusNode,
           typeChoice: typeChoiceNode,
           sentence: sentenceNode,
-          styleChoice,
           error: errorLine,
+          progress: progressNode,
           fact: factNode,
           verdict: verdictNode,
+          exhausted,
           generate,
           changeWords,
           keep,
@@ -597,7 +666,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         made && !generating && styles.imageFrameFilled
       )}
       frame={frame}
-      underFrame={underFrame}
+      underFrame={underFrame || drawButton}
       frameAriaLabel="Your picture"
       panelAriaLabel="Make your picture"
       panelRef={panelRef}
@@ -610,30 +679,27 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         <ResultActions
           verdict={verdict}
           onJudge={judge}
+          reason={reason}
+          onReason={explain}
           onChangeWords={changeWords}
           onGenerateAgain={generate}
           onContinue={keep}
           disabled={busy}
+          regenerateDisabled={exhausted}
         />
       ) : generating ? (
-        // The status line above already reads this out.
-        <div className={styles.generatingSpace}>
-          <p className={styles.generatingLabel} aria-hidden>
-            Generating…
-          </p>
-        </div>
+        <div className={styles.generatingSpace}>{progressNode}</div>
       ) : (
         <div className={styles.generateRow}>
-          {styleChoice}
           <MuiButton
             className={classNames(
               styles.generateButton,
-              complete && !busy && styles.generateReady
+              canGenerate && styles.generateReady
             )}
             variant="contained"
             color="primary"
             startIcon={<FontAwesomeV6Icon iconName="sparkles" aria-hidden />}
-            disabled={!complete || busy}
+            disabled={!canGenerate}
             onClick={generate}
           >
             Generate
@@ -642,20 +708,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       )}
       {errorLine}
       {factNode}
-      {mode === 'edit' && (
-        <div className={styles.bottomRow}>
-          <hr className={styles.resultDivider} />
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            className={styles.drawButton}
-            startIcon={<FontAwesomeV6Icon iconName="pen" aria-hidden />}
-            onClick={startPaint}
-          >
-            I'll draw it myself
-          </MuiButton>
-        </div>
-      )}
     </SentenceSceneLayout>
   );
 };

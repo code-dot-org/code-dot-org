@@ -108,6 +108,9 @@ export interface ImageFormOptions {
   lockedImageSubject?: ImageSubject;
   /** Style the form starts on for new images (default smooth). */
   defaultStyle?: ImageStyle;
+  /** Generations the student has left on this level; unlimited when
+      unset. The student form's Generate goes off at none. */
+  generationsLeft?: number;
   /** A generation request is leaving; fires before the model call, so the
       caller can stamp what the eventual result belongs to. */
   onGenerateStart?: () => void;

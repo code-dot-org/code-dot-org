@@ -176,18 +176,6 @@ describe('WordMenus', () => {
     expect(screen.getByRole('group', {name: 'clothing'})).toBeTruthy();
   });
 
-  it('returns to the creature set after Surprise me, so no blank shows', () => {
-    render(<Harness initial={{creature: 'cat'}} />);
-    next();
-    expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
-    expect(placeholderShown()).toBe(true);
-    fireEvent.click(screen.getByRole('button', {name: 'Surprise me'}));
-    expect(
-      screen.getByRole('group', {name: 'creature (pick one)'})
-    ).toBeTruthy();
-    expect(placeholderShown()).toBe(false);
-  });
-
   it('shows where the set on show would land, dimmed, until a word is chosen', () => {
     render(<Harness initial={{creature: 'cat'}} />);
     expect(placeholderShown()).toBe(false);

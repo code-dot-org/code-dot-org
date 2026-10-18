@@ -24,12 +24,13 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "imageRole": "hero"
+      "imageRole": "hero",
+      "generatedInstructions": "**AI generated an image based on your prompt.**"
     },
     "objectives": {
-      "title": "**Make a character.** Use AI or draw your own."
+      "title": "**Prompt AI to make a character.**"
     },
-    "long_instructions": "# Make a character\nUse AI or draw your own.",
+    "long_instructions": "# Prompt AI to make a character",
     "header_label": "Make a story"
   }
 }]]></config>

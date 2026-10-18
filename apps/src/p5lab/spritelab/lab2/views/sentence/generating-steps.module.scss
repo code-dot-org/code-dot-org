@@ -1,0 +1,76 @@
+@use "sr-only";
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-neutral-primary);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: step-in 0.4s ease-out both;
+}
+
+// Holds the tick's place, so the text does not shift when it lands.
+.mark {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-brand-primary);
+  font-size: 13px;
+}
+
+.check {
+  animation: tick-in 0.3s ease-out both;
+}
+
+// The last tick lands as the picture arrives, with no wait of its own.
+.checkNow {
+  animation-delay: 0s;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
+}
+
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes tick-in {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step,
+  .check {
+    animation: none;
+  }
+}

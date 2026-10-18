@@ -6,7 +6,12 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
-import {ImageStyle, ImageSubject, ImageType} from '../ai/images/types';
+import {
+  imageKindLabel,
+  ImageStyle,
+  ImageSubject,
+  ImageType,
+} from '../ai/images/types';
 
 import ImagePaneButton from './ImagePaneButton';
 import SentenceScene, {SentenceSceneParts} from './sentence/SentenceScene';
@@ -27,7 +32,8 @@ interface SentenceDialogBodyProps {
   imageSubject?: ImageSubject;
   /** The dialog is making a new image: the Type is the student's choice. */
   typeChoice: boolean;
-  defaultStyle: ImageStyle;
+  /** Generations the student has left; Generate goes off at none. */
+  generationsLeft?: number;
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
   onCancel: () => void;
   /** New image only: open the paint editor on a blank canvas of this kind
@@ -40,7 +46,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
   imageType,
   imageSubject,
   typeChoice,
-  defaultStyle,
+  generationsLeft,
   onKeep,
   onCancel,
   onPaintManually,
@@ -49,6 +55,13 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
   const layout = (parts: SentenceSceneParts) => {
     const result = parts.mode === 'result';
     const generating = parts.mode === 'generating';
+    // The kind in the sentence at the top, as a dropdown when it is the
+    // student's choice.
+    const kindLabel = imageKindLabel(
+      parts.draft.imageType,
+      parts.draft.subject
+    ).toLowerCase();
+    const article = /^[aeiou]/.test(kindLabel) ? 'an' : 'a';
     return (
       <>
         <div className={moduleStyles.body}>
@@ -80,14 +93,25 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
             aria-label="Make your picture"
           >
             {parts.status}
-            {!result && !generating && parts.typeChoice && (
-              <div className={moduleStyles.sentenceType}>
-                {parts.typeChoice}
-              </div>
-            )}
+            <p className={moduleStyles.sentenceHeadline}>
+              {result ? (
+                'AI generated an image based on your prompt.'
+              ) : (
+                <>
+                  Prompt AI to create {article}{' '}
+                  {parts.typeChoice && !generating ? (
+                    <span className={moduleStyles.sentenceType}>
+                      {parts.typeChoice}
+                    </span>
+                  ) : (
+                    kindLabel
+                  )}
+                </>
+              )}
+            </p>
             {parts.sentence}
-            {!result && !generating && parts.styleChoice}
             {parts.error}
+            {parts.progress}
             {parts.fact}
           </section>
         </div>
@@ -111,16 +135,16 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
                 disabled={parts.busy}
                 onClick={parts.changeWords}
               >
-                Change words
+                Modify prompt
               </button>
               <button
                 type="button"
                 className={moduleStyles.button}
-                disabled={parts.busy}
+                disabled={parts.busy || parts.exhausted}
                 onClick={parts.generate}
               >
                 <FontAwesomeV6Icon iconName="sparkles" />
-                Generate again
+                Regenerate
               </button>
               <button
                 type="button"
@@ -136,7 +160,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
             <button
               type="button"
               className={moduleStyles.primaryButton}
-              disabled={!parts.complete || parts.busy}
+              disabled={!parts.complete || parts.busy || parts.exhausted}
               onClick={parts.generate}
             >
               <FontAwesomeV6Icon iconName="sparkles" />
@@ -152,8 +176,8 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
     <SentenceScene
       imageType={imageType}
       imageSubject={imageSubject}
-      defaultStyle={defaultStyle}
       typeChoice={typeChoice}
+      generationsLeft={generationsLeft}
       onKeep={onKeep}
       onGenerateStart={onGenerateStart}
       method="dialog"

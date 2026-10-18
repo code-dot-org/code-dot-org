@@ -120,6 +120,8 @@ interface PixelEditorParts {
   canvas: React.ReactNode;
   save: () => void;
   canSave: boolean;
+  /** A stroke has landed since the image opened. */
+  edited: boolean;
 }
 
 /** One color of a fixed palette, named for the screen reader. */
@@ -160,6 +162,9 @@ export interface PixelEditorProps {
   // One round swatch each, in place of the spectrum picker; the first is
   // the color the editor opens on.
   palette?: readonly PaletteColor[];
+  // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
+  // The editor opens on the first; one alone shows no size buttons.
+  brushSizes?: readonly number[];
   // The host lays the parts out, inside the editor's theme host.
   children: (parts: PixelEditorParts) => React.ReactNode;
 }
@@ -185,6 +190,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   toolbarLayout = 'column',
   canvasClassName,
   palette,
+  brushSizes,
   children,
 }) => {
   const {theme} = useTheme();
@@ -206,7 +212,15 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   if (tool !== 'eyedropper') {
     lastNonEyedropperToolRef.current = tool;
   }
-  const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1]);
+  const shownBrushSizes = brushSizes
+    ? BRUSH_SIZES.filter(size => brushSizes.includes(size))
+    : BRUSH_SIZES;
+  // For the window keydown listener, which is bound once.
+  const shownBrushSizesRef = useRef(shownBrushSizes);
+  shownBrushSizesRef.current = shownBrushSizes;
+  const [brushSize, setBrushSize] = useState(
+    brushSizes ? shownBrushSizes[0] ?? BRUSH_SIZES[0] : BRUSH_SIZES[1]
+  );
   const [color, setColor] = useState<RGBA>(
     () => palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
@@ -614,8 +628,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         return;
       }
       const digit = parseInt(e.key, 10);
-      if (digit >= 1 && digit <= BRUSH_SIZES.length) {
-        setBrushSize(BRUSH_SIZES[digit - 1]);
+      const sizes = shownBrushSizesRef.current;
+      if (sizes.length > 1 && digit >= 1 && digit <= sizes.length) {
+        setBrushSize(sizes[digit - 1]);
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -1369,6 +1384,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     ready: loaded || loadError,
     loadError,
     canSave: loaded,
+    edited: canUndo,
     save: handleSave,
     toolbar: (
       <div
@@ -1400,37 +1416,40 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
               </button>
             </PixelTooltip>
           ))}
-          <div className={moduleStyles.toolbarDivider} />
-          {BRUSH_SIZES.map((size, index) => (
-            <PixelTooltip
-              key={size}
-              tooltipId={`pixel-brush-${size}-tooltip`}
-              text={`Brush size ${size} (${index + 1})`}
-              fromLeftColumn={column && index % 2 === 0}
-            >
-              <button
-                type="button"
-                aria-label={`Brush size ${size} (${index + 1})`}
-                aria-pressed={brushSize === size}
-                className={classNames(
-                  moduleStyles.toolButton,
-                  brushSize === size && moduleStyles.toolActive
-                )}
-                onClick={() => setBrushSize(size)}
+          {shownBrushSizes.length > 1 && (
+            <div className={moduleStyles.toolbarDivider} />
+          )}
+          {shownBrushSizes.length > 1 &&
+            shownBrushSizes.map((size, index) => (
+              <PixelTooltip
+                key={size}
+                tooltipId={`pixel-brush-${size}-tooltip`}
+                text={`Brush size ${size} (${index + 1})`}
+                fromLeftColumn={column && index % 2 === 0}
               >
-                <span
+                <button
+                  type="button"
+                  aria-label={`Brush size ${size} (${index + 1})`}
+                  aria-pressed={brushSize === size}
                   className={classNames(
-                    moduleStyles.brushDot,
-                    pixelMode && moduleStyles.brushDotSquare
+                    moduleStyles.toolButton,
+                    brushSize === size && moduleStyles.toolActive
                   )}
-                  style={{
-                    width: brushDotPx(size),
-                    height: brushDotPx(size),
-                  }}
-                />
-              </button>
-            </PixelTooltip>
-          ))}
+                  onClick={() => setBrushSize(size)}
+                >
+                  <span
+                    className={classNames(
+                      moduleStyles.brushDot,
+                      pixelMode && moduleStyles.brushDotSquare
+                    )}
+                    style={{
+                      width: brushDotPx(size),
+                      height: brushDotPx(size),
+                    }}
+                  />
+                </button>
+              </PixelTooltip>
+            ))}
           {column && (
             <>
               <div className={moduleStyles.toolbarDivider} />

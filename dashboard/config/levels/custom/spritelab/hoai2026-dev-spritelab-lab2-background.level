@@ -25,12 +25,13 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "story-background",
-      "sentence": "place-time"
+      "sentence": "place-time",
+      "generatedInstructions": "**AI generated an image based on your prompt.**"
     },
     "objectives": {
-      "title": "**Make a background.** Pick the words for a place and click **Generate**, or draw your own."
+      "title": "**Prompt AI to make a background.**"
     },
-    "long_instructions": "# Make a background\nPick the words for a place and click **Generate**, or draw your own.",
+    "long_instructions": "# Prompt AI to make a background",
     "header_label": "Make a story"
   }
 }]]></config>

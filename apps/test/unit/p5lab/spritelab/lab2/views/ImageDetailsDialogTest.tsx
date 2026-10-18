@@ -23,7 +23,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/SentenceDialogBody', () => ({
       data-type-choice={String(props.typeChoice)}
       data-image-type={props.imageType}
       data-image-subject={props.imageSubject}
-      data-style={props.defaultStyle}
     />
   ),
 }));
@@ -130,7 +129,7 @@ describe('ImageDetailsDialog generate view', () => {
     ).toBe('false');
   });
 
-  it('reopens on the kind and style a cancelled paint had chosen', () => {
+  it('reopens on the kind a cancelled paint had chosen', () => {
     renderDialog({
       animKey: null,
       name: undefined,
@@ -145,7 +144,6 @@ describe('ImageDetailsDialog generate view', () => {
     const body = document.querySelector('[data-sentence-body]')!;
     expect(body.getAttribute('data-image-type')).toBe('sprite');
     expect(body.getAttribute('data-image-subject')).toBe('object');
-    expect(body.getAttribute('data-style')).toBe('smooth');
   });
 
   it('keeps the full form for the advanced dialog', () => {

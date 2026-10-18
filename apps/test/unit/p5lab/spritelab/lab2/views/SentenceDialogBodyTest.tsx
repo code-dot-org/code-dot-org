@@ -51,7 +51,6 @@ function renderBody(props = {}) {
         <SentenceDialogBody
           imageType="sprite"
           typeChoice
-          defaultStyle="pixel"
           onKeep={onKeep}
           onCancel={onCancel}
           onPaintManually={onPaintManually}
@@ -71,23 +70,44 @@ const footerNames = () =>
         'Cancel',
         'Generate',
         'Generating…',
-        'Change words',
-        'Generate again',
+        'Modify prompt',
+        'Regenerate',
         'Keep',
         'Good',
         'Not so good',
       ].includes(name || '')
     );
 
+// The last step's tick shows this long before the picture replaces it.
+const SETTLE_MS = 500;
+
+// Presses Generate and waits out the settle.
+const generate = async () => {
+  await act(async () => {
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+  });
+  await act(async () => {
+    jest.advanceTimersByTime(SETTLE_MS);
+  });
+};
+
 describe('SentenceDialogBody', () => {
   beforeEach(() => {
+    jest.useFakeTimers();
     generateImage.mockReset();
     generateCharacterSet.mockReset();
     sendEvent.mockReset();
   });
 
-  it('offers the Type choice, the words and the style, with Cancel and Generate in the footer', () => {
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('offers the Type choice in its headline and the words, with Cancel and Generate in the footer', () => {
     renderBody();
+    const headline = screen.getByText(/^Prompt AI to create a/);
+    expect(headline.textContent).toMatch(/^Prompt AI to create a /);
+    expect(headline.querySelector('select')).toBeTruthy();
     const type = screen.getByRole('combobox', {
       name: 'Type',
     }) as HTMLSelectElement;
@@ -98,6 +118,7 @@ describe('SentenceDialogBody', () => {
       'Block',
     ]);
     expect(type.value).toBe('character');
+    expect(screen.queryByRole('combobox', {name: 'Style'})).toBeNull();
     expect(footerNames()).toEqual(['Cancel', 'Generate']);
     expect(screen.getByRole('button', {name: 'Generate'})).toBeDisabled();
     // The blank pane opens the paint editor.
@@ -114,18 +135,32 @@ describe('SentenceDialogBody', () => {
     expect(screen.getByRole('button', {name: 'Generate'})).toBeDisabled();
   });
 
-  it('locks the Type when told to', () => {
+  it('names the locked kind in the headline, with its own article', () => {
     renderBody({typeChoice: false, imageType: 'block'});
     expect(screen.queryByRole('combobox', {name: 'Type'})).toBeNull();
+    expect(screen.getByText('Prompt AI to create a block')).toBeTruthy();
+  });
+
+  it('says an object, not a object', () => {
+    renderBody({
+      typeChoice: false,
+      imageType: 'sprite',
+      imageSubject: 'object',
+    });
+    expect(screen.getByText('Prompt AI to create an object')).toBeTruthy();
+  });
+
+  it('holds Generate once the generations are used up', () => {
+    renderBody({generationsLeft: 0});
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(screen.getByRole('button', {name: 'Generate'})).toBeDisabled();
   });
 
   it('animates every character, and names the dialog as the surface', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderBody();
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(generateCharacterSet).toHaveBeenCalled();
     expect(generateImage).not.toHaveBeenCalled();
     expect(sendEvent.mock.calls[0][1]).toMatchObject({
@@ -137,17 +172,18 @@ describe('SentenceDialogBody', () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     const {onKeep} = renderBody();
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(footerNames()).toEqual([
       'Good',
       'Not so good',
       'Cancel',
-      'Change words',
-      'Generate again',
+      'Modify prompt',
+      'Regenerate',
       'Keep',
     ]);
+    expect(
+      screen.getByText('AI generated an image based on your prompt.')
+    ).toBeTruthy();
     expect(screen.getByText('Behind the scenes')).toBeTruthy();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Keep'}));
@@ -163,9 +199,7 @@ describe('SentenceDialogBody', () => {
     });
     void onKeep;
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Keep'}));
     });
@@ -173,18 +207,14 @@ describe('SentenceDialogBody', () => {
     await act(async () => finishSave());
   });
 
-  it('hides the Type and Style choices while there is a picture, and shows them again for new words', async () => {
+  it('hides the Type choice while there is a picture, and shows it again for new words', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderBody();
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(screen.queryByRole('combobox', {name: 'Type'})).toBeNull();
-    expect(screen.queryByRole('combobox', {name: 'Style'})).toBeNull();
-    fireEvent.click(screen.getByRole('button', {name: 'Change words'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Modify prompt'}));
     expect(screen.getByRole('combobox', {name: 'Type'})).toBeTruthy();
-    expect(screen.getByRole('combobox', {name: 'Style'})).toBeTruthy();
   });
 
   it('starts the paint editor from the blank pane with the kind and style chosen', () => {

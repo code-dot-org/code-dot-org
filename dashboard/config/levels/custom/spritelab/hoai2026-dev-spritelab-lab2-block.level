@@ -25,12 +25,13 @@
       "kind": "image",
       "imageType": "block",
       "imageRole": "block",
-      "sentence": "block"
+      "sentence": "block",
+      "generatedInstructions": "**AI generated an image based on your prompt.**"
     },
     "objectives": {
-      "title": "**Make a block.** Platformers are built from blocks. Pick a material and click **Generate**, or draw your own."
+      "title": "**Prompt AI to make a block.**"
     },
-    "long_instructions": "# Make a block\nPlatformers are built from blocks. Pick a material and click **Generate**, or draw your own.",
+    "long_instructions": "# Prompt AI to make a block",
     "header_label": "Make a platformer"
   }
 }]]></config>

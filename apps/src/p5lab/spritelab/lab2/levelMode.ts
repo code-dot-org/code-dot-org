@@ -29,7 +29,13 @@ export interface LevelMode {
   /** The sentence scene's sentence, by id in sentences.json; the
       image type's own sentence when unset. */
   sentence?: string;
+  /** An image level's instructions once a picture is made, markdown, in
+      place of its objectives title. */
+  generatedInstructions?: string;
 }
+
+/** Generations a level before free play allows; free play has no limit. */
+export const GENERATION_LIMIT = 5;
 
 /** The style every generate form starts on; students can still switch. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
