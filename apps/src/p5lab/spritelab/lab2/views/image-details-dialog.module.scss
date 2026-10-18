@@ -491,7 +491,10 @@
 // Room for the word menus beside a larger picture; the panel's max-width
 // still shrinks it on narrow browsers.
 $sentence-dialog-width: 970px;
-$sentence-pane-size: 420px;
+// The pane gives way on a short window: the dialog's chrome (134px), the
+// strip of pictures and Behind the scenes under the pane, and the 32px the
+// dialog keeps from the window's edges must all fit a 605px window.
+$sentence-pane-size: min(420px, calc(100vh - 290px));
 
 .dialogHost .dialogWide {
   width: $sentence-dialog-width;
