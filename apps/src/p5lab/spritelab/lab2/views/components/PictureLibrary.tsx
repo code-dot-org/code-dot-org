@@ -165,7 +165,7 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
           <div className={moduleStyles.jumboActions}>
             {confirmingDelete ? (
               <>
-                <span>Delete this picture?</span>
+                <span>Delete this image?</span>
                 <MuiButton
                   variant="outlined"
                   color="secondary"

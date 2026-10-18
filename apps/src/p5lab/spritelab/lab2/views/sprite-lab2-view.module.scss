@@ -1,6 +1,5 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
-@use '../quiet-button.scss' as buttons;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .labRow {
@@ -49,7 +48,7 @@ $tab-item-height: 34px;
   justify-content: space-between;
 }
 
-// The Pictures editor's pane.
+// The Images editor's pane.
 .picturesEditor {
   overflow: auto;
   background: var(--background-neutral-primary);
@@ -381,7 +380,7 @@ $editor-strip-height: 41px;
   top: 0;
   left: 0;
   right: 0;
-  // Slides with the column's edge as Pictures opens and closes
+  // Slides with the column's edge as Images opens and closes
   // (PANE_SLIDE_MS).
   transition: left 0.3s ease;
   z-index: 1;
@@ -442,7 +441,6 @@ $editor-strip-height: 41px;
   pointer-events: auto;
 }
 
-// The Pictures button, the size of a scene tab.
 // Code tab is kept mounted; the parent toggles visibility with clip-path so the
 // Blockly workspace and flyout SVG keep their real dimensions across switches.
 .codeTabWrapper {
@@ -455,7 +453,7 @@ $editor-strip-height: 41px;
   top: $editor-strip-height;
 }
 
-// After .codeTabWrapper too: the pictures pane off to the right while
+// After .codeTabWrapper too: the Images pane off to the right while
 // another editor shows, as a closed sheet waits.
 .picturesEditorParked {
   left: 110%;

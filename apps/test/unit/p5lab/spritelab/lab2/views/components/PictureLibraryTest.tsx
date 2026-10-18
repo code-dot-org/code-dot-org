@@ -87,7 +87,7 @@ describe('PictureLibrary', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(onDelete).not.toHaveBeenCalled();
-    expect(screen.getByText('Delete this picture?')).toBeTruthy();
+    expect(screen.getByText('Delete this image?')).toBeTruthy();
     rerender(
       <PictureLibrary
         groups={groups}
@@ -97,7 +97,7 @@ describe('PictureLibrary', () => {
         onDelete={onDelete}
       />
     );
-    expect(screen.queryByText('Delete this picture?')).toBeNull();
+    expect(screen.queryByText('Delete this image?')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     // Asking swaps the button for Cancel and a confirming Delete.
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));

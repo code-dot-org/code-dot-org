@@ -191,8 +191,9 @@ const GROUP_TITLES: Record<ImageType, string> = {
 };
 
 /**
- * The Images tab: the project's image gallery. Clicking an image (or the
- * new-image card) opens the image dialog; painting happens from there.
+ * The Images editor: the project's pictures as a library, the chosen one
+ * large. New image opens the dialog; a chosen picture paints straight into
+ * the editor; a block's or the palette's pick opens the dialog on its kind.
  */
 // Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
 // the answer never changes for the same pixels, so it is cached across
