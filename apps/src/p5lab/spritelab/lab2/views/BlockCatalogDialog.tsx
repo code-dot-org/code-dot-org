@@ -11,7 +11,7 @@ import {SceneType} from '../types';
 
 import moduleStyles from './block-catalog.module.scss';
 
-const TITLE = 'Add new blocks';
+const TITLE = 'Discover blocks';
 
 // Where a block can be used, by the scene type whose toolbox offers it.
 const SCENE_TYPE_NOTES: Record<SceneType, string> = {
@@ -56,8 +56,9 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
         className={moduleStyles.dialog}
       >
         <div className={moduleStyles.header}>
+          {/* Not a plus: the tile is a sign, not a button. */}
           <div className={moduleStyles.headerIcon} aria-hidden="true">
-            <FontAwesomeV6Icon iconName="plus" />
+            <FontAwesomeV6Icon iconName="compass" />
           </div>
           <div>
             <h2>{TITLE}</h2>
