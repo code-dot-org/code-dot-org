@@ -363,7 +363,7 @@ describe('SentenceScene', () => {
     expect(generateCharacterSet.mock.calls[1][0]).toBe('A cat');
   });
 
-  it('shows every picture as a tile, the one in the frame marked, and a tile swaps it in', async () => {
+  it('shows every picture as a tile, the one in the frame marked, and a tile swaps it in and ends the question', async () => {
     const SECOND = {
       ...RESULT,
       filename: 'cat2.png',
@@ -391,11 +391,12 @@ describe('SentenceScene', () => {
       screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
     ).toBe('false');
     fireEvent.click(screen.getByRole('button', {name: 'Picture 1: A cat'}));
-    // The first picture is back, with its verdict, and marked in the strip.
-    expect(
-      screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
-    ).toBe('true');
+    // The first picture is back and marked in the strip; the question was
+    // for the picture just made, and is gone.
     expect(pressed()).toEqual(['true', 'false']);
+    expect(
+      screen.queryByRole('group', {name: 'How did the AI do?'})
+    ).toBeNull();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
     });

@@ -98,8 +98,6 @@ interface Made {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
-  verdict: Verdict | null;
-  reason: VerdictReason | null;
 }
 
 /** What a host lays out. The nodes are ready to place; the callbacks and
@@ -206,8 +204,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const [history, setHistory] = useState<Made[]>([]);
   const [chosenId, setChosenId] = useState<string | null>(null);
   const made = history.find(m => m.id === chosenId) ?? null;
-  // The picture just made plays the reveal; one swapped back in does not.
+  // The picture just made plays the reveal and takes the question about
+  // it; one swapped back in does neither.
   const [freshId, setFreshId] = useState<string | null>(null);
+  const [verdict, setVerdict] = useState<Verdict | null>(null);
+  const [reason, setReason] = useState<VerdictReason | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -244,6 +245,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     onGenerateStart?.();
     setMode('generating');
     setSettling(false);
+    setVerdict(null);
+    setReason(null);
     setError(null);
     setFact(current =>
       pickFact(
@@ -290,8 +293,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
-        verdict: null,
-        reason: null,
       };
       setHistory(current => [...current, entry]);
       setChosenId(entry.id);
@@ -388,19 +389,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setMode('edit');
   }, []);
 
-  // Updates the chosen picture's entry.
-  const amendMade = useCallback(
-    (change: Partial<Made>) => {
-      setHistory(current =>
-        current.map(m => (m.id === chosenId ? {...m, ...change} : m))
-      );
-    },
-    [chosenId]
-  );
-
   const judge = useCallback(
     (next: Verdict) => {
-      amendMade({verdict: next, reason: null});
+      setVerdict(next);
+      setReason(null);
       playSound(next === 'up' ? 'cheer' : 'hmm');
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
@@ -412,12 +404,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         true
       );
     },
-    [amendMade, made, sentence, choices, imageType]
+    [made, sentence, choices, imageType]
   );
 
   const explain = useCallback(
     (next: VerdictReason) => {
-      amendMade({reason: next});
+      setReason(next);
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
@@ -428,10 +420,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         true
       );
     },
-    [amendMade, made, sentence, choices, imageType]
+    [made, sentence, choices, imageType]
   );
 
-  // Another picture into the frame; a swap plays no reveal.
+  // Another picture into the frame; a swap plays no reveal and ends the
+  // question.
   const choosePicture = useCallback((id: string) => {
     setChosenId(id);
     setFreshId(null);
@@ -669,14 +662,24 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       disabled={busy}
     />
   );
-  const verdictNode = showingResult && made && (
+  // Asked of the picture just made, while it is in the frame.
+  const verdictNode = showingResult && made && made.id === freshId && (
     <VerdictRow
-      verdict={made.verdict}
+      verdict={verdict}
       onJudge={judge}
-      reason={made.reason}
+      reason={reason}
       onReason={explain}
       disabled={busy}
       boxed
+    />
+  );
+  const verdictPlain = showingResult && made && made.id === freshId && (
+    <VerdictRow
+      verdict={verdict}
+      onJudge={judge}
+      reason={reason}
+      onReason={explain}
+      disabled={busy}
     />
   );
   // Under the frame: the way to draw instead, while the words are open.
@@ -741,10 +744,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       {sentenceNode}
       {showingResult && made ? (
         <ResultActions
-          verdict={made.verdict}
-          onJudge={judge}
-          reason={made.reason}
-          onReason={explain}
+          verdict={verdictPlain}
           onChangeWords={changeWords}
           onGenerateAgain={generate}
           onContinue={keep}

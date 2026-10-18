@@ -97,7 +97,10 @@ export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
   </div>
 );
 
-interface ResultActionsProps extends VerdictRowProps {
+interface ResultActionsProps {
+  /** The question about the picture, while it is asked. */
+  verdict: React.ReactNode;
+  disabled?: boolean;
   onChangeWords: () => void;
   onGenerateAgain: () => void;
   onContinue: () => void;
@@ -107,9 +110,6 @@ interface ResultActionsProps extends VerdictRowProps {
 
 const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
   verdict,
-  onJudge,
-  reason,
-  onReason,
   onChangeWords,
   onGenerateAgain,
   onContinue,
@@ -119,13 +119,7 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
   <>
     <hr className={styles.resultDivider} />
     <div className={styles.resultActions}>
-      <VerdictRow
-        verdict={verdict}
-        onJudge={onJudge}
-        reason={reason}
-        onReason={onReason}
-        disabled={disabled}
-      />
+      {verdict}
       <div className={styles.resultButtons}>
         <MuiButton
           variant="outlined"

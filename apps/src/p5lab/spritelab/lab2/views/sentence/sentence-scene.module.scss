@@ -207,10 +207,10 @@ $window-allowance: 150px;
   flex-direction: row;
 }
 
-// Under the frame, at its right.
+// Under the frame, at its left.
 .underFrameRow {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: 8px;
 }
 
