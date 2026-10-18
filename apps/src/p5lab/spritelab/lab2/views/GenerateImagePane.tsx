@@ -384,18 +384,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // summary: the student is on their way back to the block or the world.
   const pickedRef = useRef(onImageCreated);
   pickedRef.current = onImageCreated;
+  // Keeping a new picture closes the dialog: the library shows it large.
   const finishNew = useCallback(
-    (key: string, name: string, imageType: ImageType) => {
+    (name: string, imageType: ImageType) => {
       pickedRef.current?.(name, imageType);
-      if (pickRequest) {
-        setDialogTarget(null);
-        setPainting('no');
-        endSession();
-      } else {
-        setDialogTarget(key);
-      }
+      setDialogTarget(null);
+      setPainting('no');
+      endSession();
     },
-    [pickRequest, endSession]
+    [endSession]
   );
 
   const closeDialog = useCallback(() => {
@@ -573,7 +570,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       noteAsset(sourceUrl);
 
       if (dialogTarget === 'new' && newName) {
-        const key = createNamedAnimation(dispatch, newName, {
+        createNamedAnimation(dispatch, newName, {
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           ...framesPatch(result.frames),
@@ -585,7 +582,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        finishNew(key, newName, result.generation.imageType);
+        finishNew(newName, result.generation.imageType);
         return;
       }
 
@@ -688,7 +685,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         if (persistIsStale(epoch, sourceUrl)) {
           return;
         }
-        const key = createNamedAnimation(dispatch, name, {
+        createNamedAnimation(dispatch, name, {
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           categories: categoriesForType(imageType),
@@ -708,7 +705,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         setPaintNewDraft(null);
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        finishNew(key, name, imageType);
+        finishNew(name, imageType);
         return;
       }
 
