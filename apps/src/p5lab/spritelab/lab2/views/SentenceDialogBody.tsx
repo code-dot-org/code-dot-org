@@ -98,22 +98,24 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
             aria-label="Make your picture"
           >
             {parts.status}
-            <p className={moduleStyles.sentenceHeadline}>
-              {result ? (
-                'AI generated an image based on your prompt.'
-              ) : (
-                <>
-                  Prompt AI to create {article}{' '}
-                  {parts.typeChoice && !generating ? (
-                    <span className={moduleStyles.sentenceType}>
-                      {parts.typeChoice}
-                    </span>
-                  ) : (
-                    kindLabel
-                  )}
-                </>
-              )}
-            </p>
+            {!generating && (
+              <p className={moduleStyles.sentenceHeadline}>
+                {result ? (
+                  'AI generated an image based on your prompt.'
+                ) : (
+                  <>
+                    Prompt AI to create {article}{' '}
+                    {parts.typeChoice ? (
+                      <span className={moduleStyles.sentenceType}>
+                        {parts.typeChoice}
+                      </span>
+                    ) : (
+                      kindLabel
+                    )}
+                  </>
+                )}
+              </p>
+            )}
             {parts.sentence}
             {parts.error}
             {parts.progress}

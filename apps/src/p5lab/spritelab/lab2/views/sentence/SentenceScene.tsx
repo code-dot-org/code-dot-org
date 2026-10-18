@@ -676,6 +676,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       reason={made.reason}
       onReason={explain}
       disabled={busy}
+      boxed
     />
   );
   // Under the frame: the way to draw instead, while the words are open.

@@ -2,6 +2,13 @@
 @use "sr-only";
 @use "../checkerboard";
 
+// A box set off from the panel: the tip, and the dialog's question.
+@mixin panel-box {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary);
+}
+
 // Between the frame and the Guide.
 $scene-gap: 24px;
 // The page above and below the frame: the header and the gap to each edge.
@@ -308,26 +315,25 @@ $window-allowance: 150px;
   color: var(--text-neutral-primary);
 }
 
-.verdictBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
+// The question, then the thumbs, or after a thumb down the reasons in
+// their place; the reasons wrap under the question where the row is
+// narrow.
 .resultQuestionRow {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 4px;
 }
 
-// After a thumb down: the chosen reason stays lit, the other goes quiet.
-.reasonRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+// The tip's box, when the question stands alone in a panel.
+.verdictBoxed {
+  @include panel-box;
 }
 
+// The chosen reason stays lit, the other goes quiet.
 .reasonButton.reasonButton {
+  flex: none;
+  margin-left: 4px;
   white-space: nowrap;
 }
 
@@ -389,12 +395,11 @@ $window-allowance: 150px;
 }
 
 .factBox {
+  @include panel-box;
+
   display: flex;
   gap: 16px;
   align-items: center;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background-color: var(--background-neutral-primary);
 }
 
 .factIcon {

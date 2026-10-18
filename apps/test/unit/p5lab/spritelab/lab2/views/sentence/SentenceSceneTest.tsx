@@ -258,14 +258,14 @@ describe('SentenceScene', () => {
     const down = screen.getByRole('button', {name: 'Not so good'});
     expect(up.getAttribute('aria-pressed')).toBe('false');
     fireEvent.click(down);
-    expect(down.getAttribute('aria-pressed')).toBe('true');
-    expect(up.getAttribute('aria-pressed')).toBe('false');
     expect(sendEvent).toHaveBeenCalledWith(
       'hoai2026-image-verdict',
       expect.objectContaining({verdict: 'down', promptText: 'A cat'}),
       true
     );
-    // A thumb down asks why, once.
+    // A thumb down asks why, once, in the thumbs' place.
+    expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Not so good'})).toBeNull();
     const mismatch = screen.getByRole('button', {
       name: "Doesn't match my prompt",
     });

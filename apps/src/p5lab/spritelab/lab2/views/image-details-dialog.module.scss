@@ -510,11 +510,11 @@ $sentence-pane-size: min(420px, calc(100vh - 220px));
   margin-right: -8px;
 }
 
-// The picture's column: the pane, and Behind the scenes under it.
+// The picture's column: the pane, and Behind the scenes close under it.
 .sentenceColumn {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
   flex-shrink: 0;
   width: $sentence-pane-size;
 
@@ -530,6 +530,11 @@ $sentence-pane-size: min(420px, calc(100vh - 220px));
   gap: 14px;
   flex: 1;
   min-width: 0;
+  // As tall as the pane, no taller for Behind the scenes under it, so a
+  // row held at the panel's bottom ends even with the picture.
+  align-self: flex-start;
+  min-height: $sentence-pane-size;
+  box-sizing: border-box;
 
   // Focus lands here on a mode change; the panel's edge is not the cue.
   &:focus {
@@ -540,7 +545,6 @@ $sentence-pane-size: min(420px, calc(100vh - 220px));
 // The question about the picture, held at the panel's bottom.
 .sentenceVerdict {
   margin-top: auto;
-  padding-top: 8px;
 }
 
 // The line above the sentence: what the student is doing, with the kind

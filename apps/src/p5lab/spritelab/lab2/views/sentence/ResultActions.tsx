@@ -24,71 +24,73 @@ interface VerdictRowProps {
   reason: VerdictReason | null;
   onReason: (reason: VerdictReason) => void;
   disabled?: boolean;
+  /** In the tip's box, for a panel that holds it alone. */
+  boxed?: boolean;
 }
 
 /** The question about the picture and the two thumbs; after a thumb down,
-    the two reasons it could be. */
+    the two reasons it could be take the thumbs' place. */
 export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
   verdict,
   onJudge,
   reason,
   onReason,
   disabled,
+  boxed,
 }) => (
   <div
-    className={styles.verdictBlock}
+    className={classNames(
+      styles.resultQuestionRow,
+      boxed && styles.verdictBoxed
+    )}
     role="group"
     aria-labelledby="sentence-result-label"
   >
-    <div className={styles.resultQuestionRow}>
-      <span id="sentence-result-label" className={styles.resultQuestion}>
-        How did the AI do?
-      </span>
-      <MuiIconButton
-        aria-label="Good"
-        aria-pressed={verdict === 'up'}
-        className={classNames(
-          styles.verdictButton,
-          verdict === 'up' && styles.verdictChosen
-        )}
-        disabled={disabled}
-        onClick={() => onJudge('up')}
-      >
-        <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
-      </MuiIconButton>
-      <MuiIconButton
-        aria-label="Not so good"
-        aria-pressed={verdict === 'down'}
-        className={classNames(
-          styles.verdictButton,
-          verdict === 'down' && styles.verdictChosen
-        )}
-        disabled={disabled}
-        onClick={() => onJudge('down')}
-      >
-        <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
-      </MuiIconButton>
-    </div>
-    {verdict === 'down' && (
-      <div className={styles.reasonRow}>
-        {VERDICT_REASONS.map(r => (
-          <MuiButton
-            key={r.value}
-            variant="outlined"
-            color="secondary"
-            size="small"
-            className={classNames(
-              styles.reasonButton,
-              reason === r.value && styles.reasonChosen
-            )}
-            aria-pressed={reason === r.value}
-            disabled={disabled || (!!reason && reason !== r.value)}
-            onClick={() => onReason(r.value)}
-          >
-            {r.text}
-          </MuiButton>
-        ))}
-      </div>
+    <span id="sentence-result-label" className={styles.resultQuestion}>
+      How did the AI do?
+    </span>
+    {verdict === 'down' ? (
+      VERDICT_REASONS.map(r => (
+        <MuiButton
+          key={r.value}
+          variant="outlined"
+          color="secondary"
+          size="small"
+          className={classNames(
+            styles.reasonButton,
+            reason === r.value && styles.reasonChosen
+          )}
+          aria-pressed={reason === r.value}
+          disabled={disabled || (!!reason && reason !== r.value)}
+          onClick={() => onReason(r.value)}
+        >
+          {r.text}
+        </MuiButton>
+      ))
+    ) : (
+      <>
+        <MuiIconButton
+          aria-label="Good"
+          aria-pressed={verdict === 'up'}
+          className={classNames(
+            styles.verdictButton,
+            verdict === 'up' && styles.verdictChosen
+          )}
+          disabled={disabled}
+          onClick={() => onJudge('up')}
+        >
+          <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
+        </MuiIconButton>
+        <MuiIconButton
+          aria-label="Not so good"
+          aria-pressed={false}
+          className={styles.verdictButton}
+          disabled={disabled}
+          onClick={() => onJudge('down')}
+        >
+          <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
+        </MuiIconButton>
+      </>
     )}
   </div>
 );
