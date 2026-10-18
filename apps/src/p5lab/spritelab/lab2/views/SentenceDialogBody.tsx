@@ -84,6 +84,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
                 {parts.frame}
               </div>
             )}
+            {parts.alternatives}
             {parts.underFrame}
           </div>
           <section

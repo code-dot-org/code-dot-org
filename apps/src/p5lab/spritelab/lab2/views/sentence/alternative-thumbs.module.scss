@@ -1,0 +1,55 @@
+@use "../checkerboard";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+// The tile's checkerboard shows the picture's transparency, as the frame
+// does.
+.button {
+  flex: none;
+  padding: 0;
+  border: 2px solid var(--border-neutral-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 0;
+  transition:
+    transform 0.15s ease-out,
+    border-color 0.15s ease-out;
+
+  @include checkerboard.checkerboard(
+    12px,
+    var(--neutral-gray-10),
+    var(--neutral-base-white)
+  );
+
+  &:hover:not(:disabled),
+  &:focus-visible {
+    border-color: var(--text-neutral-primary);
+    transform: scale(1.08);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+}
+
+.tile {
+  display: block;
+}
+
+.pixelArt {
+  image-rendering: pixelated;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

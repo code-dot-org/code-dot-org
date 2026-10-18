@@ -44,6 +44,7 @@ import characterOutline from '@cdo/static/spritelab_lab2/character-outline.svg';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
+import AlternativeThumbs from './AlternativeThumbs';
 import BehindTheScenes from './BehindTheScenes';
 import GeneratingSteps from './GeneratingSteps';
 import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
@@ -89,12 +90,16 @@ const PAINT_COLORS: readonly PaletteColor[] = [
 const PAINT_BRUSH_SIZES: readonly number[] = [STYLE === 'pixel' ? 1 : 2];
 
 interface Made {
+  /** The result's filename, unique per generation. */
+  id: string;
   result: GeneratedImageResult;
   dataURI: string;
   /** The student's sentence. */
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
+  verdict: Verdict | null;
+  reason: VerdictReason | null;
 }
 
 /** What a host lays out. The nodes are ready to place; the callbacks and
@@ -111,6 +116,8 @@ export interface SentenceSceneParts {
   frameFilled: boolean;
   /** Behind the scenes, once there is a picture. */
   underFrame: React.ReactNode;
+  /** The session's other pictures, as tiles that swap into the frame. */
+  alternatives: React.ReactNode;
   /** The screen reader's status line. */
   status: React.ReactNode;
   /** The Type dropdown, when the host offers the choice. */
@@ -193,12 +200,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const canAnimate = imageType === 'sprite' && imageSubject !== 'object';
 
   const [mode, setMode] = useState<Mode>('edit');
-  const [made, setMade] = useState<Made | null>(null);
+  // Every picture made this session; the chosen one shows in the frame
+  // and is what Keep saves.
+  const [history, setHistory] = useState<Made[]>([]);
+  const [chosenId, setChosenId] = useState<string | null>(null);
+  const made = history.find(m => m.id === chosenId) ?? null;
+  // The picture just made plays the reveal; one swapped back in does not.
+  const [freshId, setFreshId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [fact, setFact] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  const [verdict, setVerdict] = useState<Verdict | null>(null);
-  const [reason, setReason] = useState<VerdictReason | null>(null);
   // The picture is back and the last step's tick is showing.
   const [settling, setSettling] = useState(false);
   // The blank the student draws on, sized for the style.
@@ -232,8 +243,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     onGenerateStart?.();
     setMode('generating');
     setSettling(false);
-    setVerdict(null);
-    setReason(null);
     setError(null);
     setFact(current =>
       pickFact(
@@ -274,12 +283,18 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      setMade({
+      const entry: Made = {
+        id: result.filename,
         result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
-      });
+        verdict: null,
+        reason: null,
+      };
+      setHistory(current => [...current, entry]);
+      setChosenId(entry.id);
+      setFreshId(entry.id);
       setMode('result');
       playSound('reveal');
     } catch (e) {
@@ -372,9 +387,19 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setMode('edit');
   }, []);
 
+  // Updates the chosen picture's entry.
+  const amendMade = useCallback(
+    (change: Partial<Made>) => {
+      setHistory(current =>
+        current.map(m => (m.id === chosenId ? {...m, ...change} : m))
+      );
+    },
+    [chosenId]
+  );
+
   const judge = useCallback(
     (next: Verdict) => {
-      setVerdict(next);
+      amendMade({verdict: next, reason: null});
       playSound(next === 'up' ? 'cheer' : 'hmm');
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT,
@@ -386,12 +411,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         true
       );
     },
-    [made, sentence, choices, imageType]
+    [amendMade, made, sentence, choices, imageType]
   );
 
   const explain = useCallback(
     (next: VerdictReason) => {
-      setReason(next);
+      amendMade({reason: next});
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
@@ -402,8 +427,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         true
       );
     },
-    [made, sentence, choices, imageType]
+    [amendMade, made, sentence, choices, imageType]
   );
+
+  // An earlier picture back into the frame; the one there joins the tiles.
+  const choosePicture = useCallback((id: string) => {
+    setChosenId(id);
+    setFreshId(null);
+  }, []);
 
   const generating = mode === 'generating';
   const busy = generating || saving;
@@ -592,27 +623,55 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       )}
       {/* Keyed by picture, so each new one remounts and plays the reveal
           once. */}
-      <PixelReveal
-        key={`reveal-${made.result.filename}`}
-        src={made.dataURI}
-        crop={
-          sheet
-            ? {x: 0, y: 0, width: sheet.frameSize.x, height: sheet.frameSize.y}
-            : undefined
-        }
-      />
-      <SparkleBurst key={`burst-${made.result.filename}`} />
+      {made.id === freshId && (
+        <>
+          <PixelReveal
+            key={`reveal-${made.id}`}
+            src={made.dataURI}
+            crop={
+              sheet
+                ? {
+                    x: 0,
+                    y: 0,
+                    width: sheet.frameSize.x,
+                    height: sheet.frameSize.y,
+                  }
+                : undefined
+            }
+          />
+          <SparkleBurst key={`burst-${made.id}`} />
+        </>
+      )}
     </>
   ) : null;
 
   const underFrame = showingResult && made && (
     <BehindTheScenes sent={made.sent} disabled={busy} />
   );
+  const others = history.filter(m => m.id !== chosenId);
+  const alternativesNode = showingResult && others.length > 0 && (
+    <AlternativeThumbs
+      thumbs={others.map(m => ({
+        id: m.id,
+        src: m.dataURI,
+        prompt: m.prompt,
+        crop: m.result.frames?.poses
+          ? {
+              width: m.result.frames.frameSize.x,
+              height: m.result.frames.frameSize.y,
+            }
+          : undefined,
+        pixelArt: !!m.result.pixelGridSize,
+      }))}
+      onChoose={choosePicture}
+      disabled={busy}
+    />
+  );
   const verdictNode = showingResult && made && (
     <VerdictRow
-      verdict={verdict}
+      verdict={made.verdict}
       onJudge={judge}
-      reason={reason}
+      reason={made.reason}
       onReason={explain}
       disabled={busy}
     />
@@ -643,6 +702,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           frame,
           frameFilled: !!made && !generating,
           underFrame,
+          alternatives: alternativesNode,
           status: statusNode,
           typeChoice: typeChoiceNode,
           sentence: sentenceNode,
@@ -666,7 +726,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         made && !generating && styles.imageFrameFilled
       )}
       frame={frame}
-      underFrame={underFrame || drawButton}
+      underFrame={
+        underFrame ? (
+          <>
+            {alternativesNode}
+            {underFrame}
+          </>
+        ) : (
+          drawButton
+        )
+      }
       frameAriaLabel="Your picture"
       panelAriaLabel="Make your picture"
       panelRef={panelRef}
@@ -677,9 +746,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       {sentenceNode}
       {showingResult && made ? (
         <ResultActions
-          verdict={verdict}
+          verdict={made.verdict}
           onJudge={judge}
-          reason={reason}
+          reason={made.reason}
           onReason={explain}
           onChangeWords={changeWords}
           onGenerateAgain={generate}

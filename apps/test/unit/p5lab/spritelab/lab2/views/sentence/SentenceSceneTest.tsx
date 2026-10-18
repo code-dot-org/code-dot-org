@@ -363,6 +363,48 @@ describe('SentenceScene', () => {
     expect(generateCharacterSet.mock.calls[1][0]).toBe('A cat');
   });
 
+  it('offers the earlier pictures as tiles, and a tile swaps back into the frame', async () => {
+    const SECOND = {
+      ...RESULT,
+      filename: 'cat2.png',
+      generation: {...RESULT.generation, prompt: 'A cat'},
+    };
+    generateCharacterSet
+      .mockResolvedValueOnce(RESULT)
+      .mockResolvedValueOnce(SECOND);
+    saveGeneratedImage.mockResolvedValue('Sprite 1');
+    renderScene();
+    pickCreature();
+    await generate();
+    expect(screen.queryByRole('group', {name: 'Earlier pictures'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    await generate('Regenerate');
+    const tiles = screen.getByRole('group', {name: 'Earlier pictures'});
+    expect(tiles.querySelectorAll('button')).toHaveLength(1);
+    // The new picture has no verdict of its own yet.
+    expect(
+      screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
+    ).toBe('false');
+    fireEvent.click(screen.getByRole('button', {name: 'Show A cat'}));
+    // The first picture is back, with its verdict, and the second is a tile.
+    expect(
+      screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
+    ).toBe('true');
+    expect(
+      screen
+        .getByRole('group', {name: 'Earlier pictures'})
+        .querySelectorAll('button')
+    ).toHaveLength(1);
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    });
+    expect(saveGeneratedImage).toHaveBeenCalledWith(
+      expect.any(Function),
+      RESULT,
+      expect.anything()
+    );
+  });
+
   it('keeps the picture and moves on with Continue', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     saveGeneratedImage.mockResolvedValue('Sprite 1');
