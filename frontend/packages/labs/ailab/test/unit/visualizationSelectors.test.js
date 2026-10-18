@@ -11,7 +11,12 @@ import {
   getUniqueOptionsLabelColumn,
 } from '../../src/selectors/visualizationSelectors';
 
-import {allNumericalState, classificationState} from './testData';
+import {
+  allNumericalState,
+  allNumericalProject,
+  classificationState,
+  classificationProject,
+} from './testData';
 
 beforeEach(() => {
   I18n.initI18n();
@@ -37,11 +42,11 @@ describe('getScatterPlotData', () => {
   };
   test('gets scatter plot data', async () => {
     const scatterPlotData = getScatterPlotData.resultFunc(
-      allNumericalState.labelColumn,
+      allNumericalProject.labelColumn,
       labelColumnIsNumerical,
       allNumericalState.currentColumn,
       currentColumnIsNumerical,
-      allNumericalState.data,
+      allNumericalState.data
     );
     expect(expected).toEqual(scatterPlotData);
   });
@@ -55,12 +60,12 @@ describe('getCrossTabData', () => {
       labelPercents: {no: 50, yes: 50},
     };
     const crossTabData = getCrossTabData.resultFunc(
-      classificationState.labelColumn,
+      classificationProject.labelColumn,
       labelColumnIsCategorical,
       classificationState.currentColumn,
       currentColumnIsCategorical,
       classificationState.data,
-      getUniqueOptionsLabelColumn,
+      getUniqueOptionsLabelColumn
     );
     expect(crossTabData.labelName).toEqual('play');
     expect(crossTabData.featureNames).toEqual(['temp']);
@@ -71,8 +76,8 @@ describe('getCrossTabData', () => {
 describe('getting category options', () => {
   test('gets unique options label column', async () => {
     const uniqueOptions = getUniqueOptionsLabelColumn.resultFunc(
-      classificationState.labelColumn,
-      classificationState.data,
+      classificationProject.labelColumn,
+      classificationState.data
     );
     expect(uniqueOptions).toEqual(['no', 'yes']);
   });

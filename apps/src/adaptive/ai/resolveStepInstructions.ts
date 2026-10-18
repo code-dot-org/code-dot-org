@@ -6,12 +6,17 @@
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
-import {StepContext, generateInputsHash} from '../progress/model';
+import {
+  GeneratedContent,
+  StepContext,
+  generateInputsHash,
+} from '../progress/model';
 import {summarizeProjectFiles} from '../project/summarizeProjectFiles';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
 import {generate} from './generate';
 import {
+  INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
   generatedInstructionsSchema,
 } from './instructionsPrompt';
@@ -26,7 +31,10 @@ export interface StepInstructionsOptions {
   /** The step's own instructions, else the level's. */
   authoredInstructions: string | undefined;
   stepContext: StepContext | undefined;
-  updateStepContext: (stepId: string, patch: StepContext) => void;
+  saveGeneratedInstructions: (
+    stepId: string,
+    content: GeneratedContent
+  ) => void;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
 }
@@ -44,7 +52,7 @@ export async function resolveStepInstructions({
   sources,
   authoredInstructions,
   stepContext,
-  updateStepContext,
+  saveGeneratedInstructions,
   aichatContext,
 }: StepInstructionsOptions): Promise<string | undefined> {
   if (!step.instructionsPrompt || !step.project) return authoredInstructions;
@@ -62,14 +70,26 @@ export async function resolveStepInstructions({
     return stepContext.generated.instructions;
   }
 
-  const result = await generate({
+  const {output, traceId} = await generate({
     schema: generatedInstructionsSchema,
     prompt,
     context: aichatContext,
+    trace: {
+      name: 'adaptive-instructions',
+      metadata: {
+        pathwayId: pathway.id,
+        checkpointId: checkpoint.id,
+        stepId: step.id,
+        inputsHash,
+        promptVersion: INSTRUCTIONS_PROMPT_VERSION,
+      },
+    },
   });
-  if (!result) return authoredInstructions;
-  updateStepContext(step.id, {
-    generated: {instructions: result.instructions, inputsHash},
+  if (!output) return authoredInstructions;
+  saveGeneratedInstructions(step.id, {
+    instructions: output.instructions,
+    inputsHash,
+    traceId,
   });
-  return result.instructions;
+  return output.instructions;
 }

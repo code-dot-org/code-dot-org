@@ -15,6 +15,7 @@ const QUESTION: QuizBuilderQuestion = {
     {id: 'b', text: '4'},
   ],
   correctChoiceId: 'b',
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
@@ -88,6 +89,22 @@ describe('QuizQuestionCard', () => {
       expect.objectContaining({questionName: 'Renamed question'})
     );
     expect(screen.queryByRole('tab', {name: 'Question'})).toBeNull();
+  });
+
+  it('saves an edited description', async () => {
+    const {onSave} = renderCard({isExpanded: true});
+
+    fireEvent.change(screen.getByLabelText(/Description/), {
+      target: {value: 'Think about **lifecycle**.'},
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+    });
+
+    expect(onSave).toHaveBeenCalledWith(
+      7,
+      expect.objectContaining({description: 'Think about **lifecycle**.'})
+    );
   });
 
   it('disables Save and Discard until something is edited', () => {
@@ -179,5 +196,35 @@ describe('QuizQuestionCard', () => {
 
       expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
     });
+
+    it('focuses the Internal name field, since the create dropdown that made it loses focus', () => {
+      renderCard({question: PENDING_QUESTION, isExpanded: true});
+
+      expect(screen.getByLabelText('Internal name')).toHaveFocus();
+    });
+  });
+
+  it('does not take focus when an existing question opens expanded', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByLabelText('Internal name')).not.toHaveFocus();
+  });
+
+  it('opens a free response question saved without choices', () => {
+    // FreeResponseQuestion#builder_content_json sends no choices.
+    const {choices, correctChoiceId, ...shared} = QUESTION;
+    void choices;
+    void correctChoiceId;
+    renderCard({
+      question: {...shared, type: 'FreeResponseQuestion'},
+      isExpanded: true,
+    });
+
+    fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
+
+    expect(screen.queryByRole('button', {name: 'Add option'})).toBeNull();
+    expect(
+      screen.getByLabelText('Answer explanation (optional)')
+    ).toBeInTheDocument();
   });
 });

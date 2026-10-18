@@ -66,6 +66,11 @@ export const areAiChatToolsEnabled = ({
   return aiChatAccessLevel === AiChatAccessLevels.ENABLED;
 };
 
+// Lesson deep dive is not tied to a level, so essential-only access does not unlock it.
+export const canUseLessonDeepDive = (
+  aiChatAccessLevel: AiChatAccessLevel | undefined
+): boolean => aiChatAccessLevel === AiChatAccessLevels.ENABLED;
+
 /**
  * Returns true if the AI Chat essential alert should be shown for a section
  * in the Teacher Dashboard AI Settings.

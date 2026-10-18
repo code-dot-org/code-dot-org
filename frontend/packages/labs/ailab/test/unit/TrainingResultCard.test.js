@@ -1,45 +1,31 @@
-import {ThemeProvider} from '@mui/material/styles';
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
-import {Provider} from 'react-redux';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-
-import {
-  removeSelectedFeature,
-  setHistoricResult,
-  setLabelColumn,
-  setTrainingModalStep,
-} from '../../src/redux';
-import train from '../../src/train';
+import I18n from '../../src/i18n';
+import {setTrainingModalStep} from '../../src/redux';
 import TrainingResultCard from '../../src/UIComponents/TrainingResultCard';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
+import {renderWithProviders, runTraining} from './renderWithProviders';
 
-function renderCard({trained = true, trainer = 'decisionTree'} = {}) {
+function renderCard({trained = true, trainer = 'decisionTree', run} = {}) {
+  I18n.initI18n();
   const store = levelStore({trainer});
-  if (trained) {
-    train.reset();
-    train.init(store);
-    train.onClickTrain();
-  }
-  render(
-    createElement(
-      Provider,
-      {store},
-      createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
-        createElement(TrainingResultCard),
-      ),
-    ),
-  );
-  return store;
+  const project = levelProject();
+  const trainingRun =
+    run ?? (trained ? runTraining(store, project) : undefined);
+  return renderWithProviders(createElement(TrainingResultCard), {
+    store,
+    project,
+    trainingRun,
+  });
 }
 
 const accuracy = () => screen.queryByText('Accuracy');
 
 describe('TrainingResultCard', () => {
+  afterEach(() => I18n.reset());
+
   test('is empty before training', () => {
     renderCard({trained: false});
     expect(accuracy()).toBeNull();
@@ -52,16 +38,23 @@ describe('TrainingResultCard', () => {
   });
 
   test('shows the stored accuracy, not a rounded one', () => {
-    const store = renderCard({trained: false});
-    act(() => {
-      store.dispatch(setHistoricResult('animal', ['legs'], '83.33', 5, 6));
+    renderCard({
+      run: {
+        historicResult: {
+          label: 'animal',
+          features: ['legs'],
+          accuracy: '83.33',
+          correct: 5,
+          total: 6,
+        },
+      },
     });
     expect(screen.getByText('83.33%')).not.toBeNull();
     expect(screen.getByText('5/6')).not.toBeNull();
   });
 
   test('Test model opens the testing view', () => {
-    const store = renderCard();
+    const {store} = renderCard();
     fireEvent.click(screen.getByRole('button', {name: 'Test model'}));
     expect(store.getState().currentPanel).toBe('results');
   });
@@ -69,7 +62,7 @@ describe('TrainingResultCard', () => {
   test('shows the tree mini map after decision tree training', () => {
     renderCard();
     expect(
-      screen.getByRole('button', {name: 'Replay training'}),
+      screen.getByRole('button', {name: 'Replay training'})
     ).not.toBeNull();
   });
 
@@ -80,14 +73,14 @@ describe('TrainingResultCard', () => {
   });
 
   test('Replay training reopens the modal and keeps the card', () => {
-    const store = renderCard();
+    const {store} = renderCard();
     fireEvent.click(screen.getByRole('button', {name: 'Replay training'}));
     expect(store.getState().trainingModalStep).toBe('training');
     expect(accuracy()).not.toBeNull();
   });
 
   test('takes focus when the training modal closes and focus was lost', () => {
-    const store = renderCard();
+    const {store} = renderCard();
     act(() => {
       store.dispatch(setTrainingModalStep('training'));
     });
@@ -95,12 +88,12 @@ describe('TrainingResultCard', () => {
       store.dispatch(setTrainingModalStep(undefined));
     });
     expect(document.activeElement).toBe(
-      screen.getByRole('button', {name: 'Test model'}),
+      screen.getByRole('button', {name: 'Test model'})
     );
   });
 
   test('stays hidden while the training modal is open', () => {
-    const store = renderCard();
+    const {store} = renderCard();
     act(() => {
       store.dispatch(setTrainingModalStep('training'));
     });
@@ -108,18 +101,14 @@ describe('TrainingResultCard', () => {
   });
 
   test('hides once the features change', () => {
-    const store = renderCard();
-    act(() => {
-      store.dispatch(removeSelectedFeature('legs'));
-    });
+    const {projectActions} = renderCard();
+    act(() => projectActions().removeSelectedFeature('legs'));
     expect(accuracy()).toBeNull();
   });
 
   test('hides once the label changes', () => {
-    const store = renderCard();
-    act(() => {
-      store.dispatch(setLabelColumn('legs'));
-    });
+    const {projectActions} = renderCard();
+    act(() => projectActions().setLabelColumn('legs'));
     expect(accuracy()).toBeNull();
   });
 });

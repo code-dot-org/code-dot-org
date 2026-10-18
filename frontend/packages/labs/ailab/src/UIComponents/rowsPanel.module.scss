@@ -1,0 +1,39 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.text {
+  margin: 0;
+  color: var(--text-neutral-primary);
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.divider {
+  @include mixins.summary-divider;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

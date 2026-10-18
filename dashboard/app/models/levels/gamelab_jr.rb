@@ -44,7 +44,7 @@ class GamelabJr < Gamelab
     add_blocks
     pinned_scene
     world_start_pattern
-    guide_steps
+    objectives
     block_catalog
   )
 

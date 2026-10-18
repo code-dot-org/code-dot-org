@@ -9,6 +9,7 @@ import React, {Suspense, useEffect, useMemo, useState} from 'react';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   Lab2EntryPoint,
   LevelProperties,
@@ -16,6 +17,7 @@ import {
 } from '@cdo/apps/lab2/types';
 import {ExternalNavigationContext} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {buildTutorContext} from '../../ai/tutorContext';
@@ -102,7 +104,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     checkpoint,
     statusMap,
     stepContextMap,
-    updateStepContext,
+    saveGeneratedInstructions,
     aiContext,
   } = usePathwayContext();
   // Keyed on the project's strings, not the channel, which changes on every save.
@@ -119,7 +121,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     sources: currentSources,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
     stepContext: stepContextMap[step.id],
-    updateStepContext,
+    saveGeneratedInstructions,
     aichatContext: aiContext,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
@@ -138,6 +140,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     });
     const own = levelProperties.levelSystemPrompt;
     return {
+      // Default to pinning, but let the level override if needed.
+      showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
       longInstructions: instructions,
@@ -164,6 +168,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     }),
     [continueLabel, onComplete]
   );
+
+  // Stands in for ProjectContainer's level-change reset, which steps bypass.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(resetProjectMetadata());
+  }, [dispatch]);
 
   // The lab saves through the registry, so the manager must be registered
   // before the lab mounts and reads it. The hook flushes saves on unmount.

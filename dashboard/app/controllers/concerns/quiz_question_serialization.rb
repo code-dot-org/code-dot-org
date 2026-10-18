@@ -10,6 +10,7 @@ module QuizQuestionSerialization
     params.permit(
       :questionName, :questionTitle, :correctChoiceId, :explanation, :page, :editMode, :description, :type,
       choices: [:id, :text],
+      correctChoiceIds: [],
       standards: [:frameworkShortcode, :shortcode]
     )
   end

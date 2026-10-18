@@ -13,8 +13,8 @@ import {
 } from '@code-dot-org/core/api';
 
 import EducatorProfileForm from './components/EducatorProfileForm';
+import IntegrationsForm from './components/IntegrationsForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
-import LinkedAccounts from './sections/LinkedAccounts';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
@@ -35,7 +35,9 @@ const ACCOUNT_TABS: {
   {
     value: INTEGRATIONS_TAB,
     text: 'Integrations',
-    isVisible: settings => settings.integrations.canManageLinkedAccounts,
+    isVisible: ({integrations}) =>
+      integrations.canManageLinkedAccounts ||
+      integrations.ltiRosterSyncEnabled !== undefined,
   },
 ];
 
@@ -133,7 +135,17 @@ export default function UsersSettingsPage({
     }
 
     if (value === INTEGRATIONS_TAB) {
-      return <LinkedAccounts settings={data} />;
+      return (
+        <FormProvider
+          initialValues={{
+            lti_roster_sync_enabled: String(
+              data.integrations.ltiRosterSyncEnabled ?? false,
+            ),
+          }}
+        >
+          <IntegrationsForm settings={data} />
+        </FormProvider>
+      );
     }
 
     return null;

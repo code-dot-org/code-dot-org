@@ -1,5 +1,8 @@
 import {generate} from '@cdo/apps/adaptive/ai/generate';
-import {buildInstructionsPrompt} from '@cdo/apps/adaptive/ai/instructionsPrompt';
+import {
+  INSTRUCTIONS_PROMPT_VERSION,
+  buildInstructionsPrompt,
+} from '@cdo/apps/adaptive/ai/instructionsPrompt';
 import {resolveStepInstructions} from '@cdo/apps/adaptive/ai/resolveStepInstructions';
 import {generateInputsHash} from '@cdo/apps/adaptive/progress/model';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
@@ -55,7 +58,7 @@ const inputsHash = generateInputsHash(
 const resolve = (
   overrides: Partial<Parameters<typeof resolveStepInstructions>[0]> = {}
 ) => {
-  const updateStepContext = jest.fn();
+  const saveGeneratedInstructions = jest.fn();
   const result = resolveStepInstructions({
     pathway,
     checkpoint,
@@ -64,11 +67,11 @@ const resolve = (
     sources,
     authoredInstructions: 'Authored.',
     stepContext: undefined,
-    updateStepContext,
+    saveGeneratedInstructions,
     aichatContext: context,
     ...overrides,
   });
-  return {result, updateStepContext};
+  return {result, saveGeneratedInstructions};
 };
 
 describe('resolveStepInstructions', () => {
@@ -99,23 +102,47 @@ describe('resolveStepInstructions', () => {
     expect(mockGenerate).not.toHaveBeenCalled();
   });
 
-  it('generates, caches with the inputs hash, and returns the result when the cache is stale', async () => {
-    mockGenerate.mockResolvedValue({instructions: 'Fresh.'});
-    const {result, updateStepContext} = resolve({
+  it('generates, caches with the inputs hash and trace id, and returns the result when the cache is stale', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {instructions: 'Fresh.'},
+      traceId: 'trace-1',
+    });
+    const {result, saveGeneratedInstructions} = resolve({
       stepContext: {generated: {instructions: 'Old.', inputsHash: 'deadbeef'}},
     });
 
     expect(await result).toBe('Fresh.');
-    expect(updateStepContext).toHaveBeenCalledWith('build', {
-      generated: {instructions: 'Fresh.', inputsHash},
+    expect(saveGeneratedInstructions).toHaveBeenCalledWith('build', {
+      instructions: 'Fresh.',
+      inputsHash,
+      traceId: 'trace-1',
+    });
+  });
+
+  it('names the trace and passes the step ids and inputs hash as its metadata', async () => {
+    mockGenerate.mockResolvedValue({});
+    const {result} = resolve();
+    await result;
+
+    expect(mockGenerate.mock.calls[0][0]).toMatchObject({
+      trace: {
+        name: 'adaptive-instructions',
+        metadata: {
+          pathwayId: 'p',
+          checkpointId: 'basics',
+          stepId: 'build',
+          inputsHash,
+          promptVersion: INSTRUCTIONS_PROMPT_VERSION,
+        },
+      },
     });
   });
 
   it('returns the authored text and caches nothing when generation yields nothing', async () => {
-    mockGenerate.mockResolvedValue(undefined);
-    const {result, updateStepContext} = resolve();
+    mockGenerate.mockResolvedValue({traceId: 'trace-1'});
+    const {result, saveGeneratedInstructions} = resolve();
 
     expect(await result).toBe('Authored.');
-    expect(updateStepContext).not.toHaveBeenCalled();
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
   });
 });

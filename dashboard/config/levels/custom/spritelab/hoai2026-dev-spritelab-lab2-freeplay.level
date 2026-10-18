@@ -36,13 +36,10 @@
         "treasure"
       ]
     },
-    "guide_steps": [
-      {
-        "text": "**Free play!** Everything is unlocked. Finish your game, and finish the lesson when you're done.",
-        "collapsedText": "Enjoy free play!",
-        "showContinue": true
-      }
-    ],
+    "objectives": {
+      "title": "**Free play!** Everything is unlocked. Finish your game, and finish the lesson when you're done.",
+      "collapsedText": "Enjoy free play!"
+    },
     "long_instructions": "# Free play\nEverything is unlocked: all your images, scenes, and blocks. Finish your game!",
     "toolbox_definition": {
       "kind": "categoryToolbox",

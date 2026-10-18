@@ -2,9 +2,9 @@
 
 import {useEffect} from 'react';
 
-import {countWorldCells} from './guideSteps';
 import {imageTypeFromCategories} from './imageGallery';
 import {imageNamedForRole} from './imageRoleDefaults';
+import {countWorldCells} from './projectCounts';
 import {RuntimeAnimationList, Scene, Sources} from './types';
 import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 

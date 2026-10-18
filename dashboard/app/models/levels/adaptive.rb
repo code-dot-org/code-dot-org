@@ -31,6 +31,8 @@ class Adaptive < Level
     adaptive_id
   )
 
+  PROJECT_STEP_ID = 'project'.freeze
+
   validates :adaptive_id, presence: true
   validate :adaptive_content_exists
 
@@ -55,6 +57,23 @@ class Adaptive < Level
   # The served pathway for this level, or nil when its file is missing.
   def content
     AdaptiveContent.load(adaptive_id)
+  end
+
+  # The step with `step_id`, or nil; `project` finds the project screen's step.
+  def find_step(step_id)
+    pathway = content
+    return nil unless pathway
+    step = steps(pathway).find {|s| s['id'] == step_id}
+    return step if step
+    return nil unless step_id == PROJECT_STEP_ID
+    {'id' => PROJECT_STEP_ID, 'kind' => 'level', 'level' => pathway.dig('project', 'templateLevel')}
+  end
+
+  # Level step id => Level, leaving out steps whose level does not exist.
+  def step_levels
+    names = step_level_names
+    levels = Level.where(name: names.values.uniq).index_by(&:name)
+    names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
@@ -96,13 +115,29 @@ class Adaptive < Level
     resolved
   end
 
-  private def level_steps(pathway)
+  private def steps(pathway)
     checkpoints = pathway['checkpoints']
     return [] unless checkpoints.is_a?(Array)
     checkpoints.flat_map do |checkpoint|
       steps = checkpoint.is_a?(Hash) ? checkpoint['steps'] : nil
-      steps.is_a?(Array) ? steps.select {|step| level_step?(step)} : []
+      steps.is_a?(Array) ? steps.select {|step| step.is_a?(Hash)} : []
     end
+  end
+
+  # Level step id => level name, the project's step included as find_step sees it.
+  private def step_level_names
+    pathway = content
+    return {} unless pathway
+    names = level_steps(pathway).to_h {|step| [step['id'], step['level']]}
+    template = pathway['project'].is_a?(Hash) ? pathway['project']['templateLevel'] : nil
+    if template.is_a?(String) && steps(pathway).none? {|step| step['id'] == PROJECT_STEP_ID}
+      names[PROJECT_STEP_ID] = template
+    end
+    names
+  end
+
+  private def level_steps(pathway)
+    steps(pathway).select {|step| level_step?(step)}
   end
 
   private def level_step?(step)

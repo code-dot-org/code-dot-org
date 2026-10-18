@@ -1,0 +1,14 @@
+name 'csp_unit1_lesson18_cfu1_dev_27_28'
+title 'Two Robot Flowcharts'
+
+question 'Two students wrote flowcharts for the same robot, which starts on a grid facing north. Which of the following best describes the two flowcharts?'
+
+wrong 'The flowcharts solve different problems because Flowchart B has more steps.'
+wrong 'The flowcharts solve different problems because Flowchart A turns left and Flowchart B turns right.'
+wrong 'The flowcharts solve the same problem because both have two move forward steps.'
+right 'The flowcharts solve the same problem because the robot draws the same trail, even though the steps are different.'
+
+allow_multiple_attempts true
+markdown <<MARKDOWN
+<img src="https://images.code.org/26ab4e4edc82ae063edf8ddec4aab375-flowchart-mcq.png" alt="Flowchart A: Start, turn left, move forward, move forward, End. Flowchart B: Start, turn right, turn right, turn right, move forward, move forward, End.">
+MARKDOWN

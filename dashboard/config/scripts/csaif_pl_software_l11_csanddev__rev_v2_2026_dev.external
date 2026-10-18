@@ -5,25 +5,301 @@ description 'description here'
 markdown <<MARKDOWN
 # Software and Operating Systems
 
-Software and hardware are like a team. 
+<p>In Lessons 4 and 5, students shift focus to hardware and software individually, and how the two work together like a team to run a computer system. The graphic below shows how these two pieces depend on each other.</p>
 
-**Hardware** performs the physical tasks — displaying images on a screen, printing a document, storing files, or running electrical signals through circuits.
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Hardware</b> performs the physical tasks, displaying images on a screen, printing a document, storing files, or running electrical signals through circuits.</p>
+</div>
 
-**Software**  tells the hardware what to do and how to do it. It provides the instructions that guide the computer’s actions, from opening an app to saving a file.
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-top: 12px;">
+<p>📖 <b>Software</b> tells the hardware what to do and how to do it. It provides the instructions that guide the computer's actions, from opening an app to saving a file.</p>
+</div>
 
-<img src="https://images.code.org/3378f9afce385d56deb8bb6e38a41455-image-1742394518945.png" alt="diagram of the componets of a computer - hardware: input, outptu, storage, and internal and software: system software, application software, and utlity software" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
+<div style="width:100%; overflow-x:auto; margin:24px 0;">
+
+  <div role="group" aria-label="Diagram showing the components of a computer system. Computer hardware includes input devices, output devices, storage devices, and internal components. Computer software includes system software, application software, and utility software." style="min-width:900px; padding:24px; box-sizing:border-box; background-color:#FFFFFF; border:1px solid #E4E2F8; border-radius:12px; box-shadow:0 2px 7px rgba(0,0,0,0.10); font-family:Arial, Helvetica, sans-serif;">
+
+<!-- Main heading -->
+  <div style="width:330px; min-height:58px; margin:0 auto; padding:12px 18px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#F7F7FB; color:#000000; border:2px solid #ACA8EA; border-radius:10px; font-size:19px; font-weight:bold;">
+      Components of a Computer System
+    </div>
+
+  <!-- Main vertical connector -->
+  <div aria-hidden="true" style="width:2px; height:24px; margin:0 auto; background-color:#777777;"></div>
+
+   <!-- Main horizontal connector -->
+  <div aria-hidden="true" style="width:50%; height:2px; margin:0 auto; background-color:#777777;"></div>
+
+  <!-- Hardware and software branches -->
+  <div style="display:flex; align-items:flex-start; width:100%;">
+
+  <!-- HARDWARE BRANCH -->
+  <div style="width:50%; box-sizing:border-box; padding-right:12px;">
+
+   <!-- Vertical connector -->
+   <div aria-hidden="true" style="width:2px; height:20px; margin:0 auto; background-color:#777777;"></div>
+
+  <!-- Hardware heading -->
+  <div style="width:180px; min-height:58px; margin:0 auto; padding:10px 14px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#7CDB87; color:#000000; border:2px solid #34BD43; border-radius:10px; font-size:18px; font-weight:bold; line-height:1.2;">
+          Computer<br>Hardware
+        </div>
+
+  <!-- Connector to children -->
+   <div aria-hidden="true" style="width:2px; height:22px; margin:0 auto; background-color:#777777;"></div>
+
+   <div aria-hidden="true" style="width:75%; height:2px; margin:0 auto; background-color:#777777;"></div>
+
+   <!-- Hardware children -->
+   <div style="display:flex; align-items:stretch; gap:8px; width:100%;">
+
+   <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 6px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              Input<br>Devices
+            </div>
+          </div>
+     <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 6px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              Output<br>Devices
+            </div>
+          </div>
+     <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 6px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              Storage<br>Devices
+            </div>
+          </div>
+      <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 6px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              Internal<br>Components
+            </div>
+          </div>
+
+   </div>
+      </div>
+      
+  <!-- SOFTWARE BRANCH -->
+  <div style="width:50%; box-sizing:border-box; padding-left:12px;">
+
+   <!-- Vertical connector -->
+  <div aria-hidden="true" style="width:2px; height:20px; margin:0 auto; background-color:#777777;"></div>
+
+   <!-- Software heading -->
+   <div style="width:180px; min-height:58px; margin:0 auto; padding:10px 14px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#6FCAFF; color:#000000; border:2px solid #0099F3; border-radius:10px; font-size:18px; font-weight:bold; line-height:1.2;">
+          Computer<br>Software
+        </div>
+
+<!-- Connector to children -->
+   <div aria-hidden="true" style="width:2px; height:22px; margin:0 auto; background-color:#777777;"></div>
+
+  <div aria-hidden="true" style="width:66.66%; height:2px; margin:0 auto; background-color:#777777;"></div>
+    <!-- Software children -->
+        <div style="display:flex; align-items:stretch; gap:10px; width:100%;">
+    <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 8px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:2px solid #0099F3; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              System<br>Software
+            </div>
+          </div>
+      <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 8px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:2px solid #0099F3; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              Application<br>Software
+            </div>
+          </div>
+
+  <div style="flex:1; min-width:0;">
+            <div aria-hidden="true" style="width:2px; height:18px; margin:0 auto; background-color:#777777;"></div>
+            <div style="min-height:62px; padding:9px 8px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:2px solid #0099F3; border-radius:8px; font-size:16px; font-weight:bold; line-height:1.2;">
+              Utility<br>Software
+            </div>
+          </div>
+      </div>
+      </div>
+   </div>
+  </div>
+</div>
+
+---
 
 You can think of software as the “thoughts” or “commands” that control how the computer operates and what tasks it performs.
 
 Just as there are many types of hardware, there are also different types of software, each serving a specific purpose.
 
-<img src="https://images.code.org/5ee5ee363d83b7a2882235524c86b13d-image-1742394326783.png" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
 
-- **System Software**- Manages the computer’s hardware and basic operations.
-This includes the operating system (like Windows, macOS, ChromeOS, or Linux), which coordinates memory, processes, files, and devices so everything works together.
-- **Application Software**- Helps users perform specific tasks.
-Examples include word processors, web browsers, games, design tools, and educational apps.
-- **Utility Software**- Maintains, protects, and optimizes the computer system.
-Examples include antivirus programs, file compression tools, backup software, and disk cleanup utilities.
+<div style="width:100%; overflow-x:auto; margin:24px 0; font-family:Arial, Helvetica, sans-serif; color:#000000; box-sizing:border-box;">
+
+  <div style="min-width:860px; max-width:1050px; margin:0 auto; padding:24px 28px 20px; border:2px solid #1F1976; border-radius:12px; background-color:#FFFFFF; box-sizing:border-box;">
+
+  <!-- Main category -->
+  <div style="display:flex; justify-content:center;">
+      <div style="width:190px; padding:12px 16px; background-color:#6FCAFF; border:2px solid #06338D; border-radius:10px; text-align:center; font-size:20px; font-weight:700; line-height:1.2;">
+        Computer Software
+      </div>
+    </div>
+
+  <!-- Main connector -->
+  <div aria-hidden="true" style="width:3px; height:16px; margin:0 auto; background-color:#06338D;"></div>
+  <div aria-hidden="true" style="width:68%; height:3px; margin:0 auto; background-color:#06338D;"></div>
+
+  <!-- Branch connectors -->
+  <div aria-hidden="true" style="display:flex; justify-content:space-between; width:68%; margin:0 auto;">
+      <div style="width:3px; height:16px; background-color:#06338D;"></div>
+      <div style="width:3px; height:16px; background-color:#06338D;"></div>
+      <div style="width:3px; height:16px; background-color:#06338D;"></div>
+    </div>
+
+  <!-- Three software categories -->
+  <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:28px;">
+
+  <!-- System Software -->
+   <div style="width:31%; text-align:center;">
+
+  <div style="display:inline-block; min-width:150px; padding:10px 14px; background-color:#E4E2F8; border:2px solid #4C42CF; border-radius:8px; color:#1F1976; font-size:18px; font-weight:700; line-height:1.2; box-sizing:border-box;">
+          System Software
+        </div>
+
+   <div aria-hidden="true" style="width:3px; height:14px; margin:0 auto; background-color:#4C42CF;"></div>
+   <div aria-hidden="true" style="width:72%; height:3px; margin:0 auto; background-color:#4C42CF;"></div>
+
+   <div style="display:flex; justify-content:center; gap:8px;">
+     <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#4C42CF;"></div>
+            <div style="padding:10px 5px; background-color:#FFFFFF; border:2px solid #ACA8EA; border-radius:20px; font-size:16px; font-weight:700;">
+              Android
+            </div>
+          </div>
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#4C42CF;"></div>
+            <div style="padding:10px 5px; background-color:#FFFFFF; border:2px solid #ACA8EA; border-radius:20px; font-size:16px; font-weight:700;">
+              Windows
+            </div>
+          </div>
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#4C42CF;"></div>
+            <div style="padding:10px 5px; background-color:#FFFFFF; border:2px solid #ACA8EA; border-radius:20px; font-size:16px; font-weight:700;">
+              Apple iOS
+            </div>
+          </div>
+
+  </div>
+
+   <p style="margin:22px 8px 0; font-size:16px; line-height:1.35;">
+          Manages hardware and software and enables basic functionality.
+        </p>
+
+  </div>
+
+   <!-- Application Software -->
+   <div style="width:36%; text-align:center;">
+
+   <div style="display:inline-block; min-width:170px; padding:10px 14px; background-color:#D5EFFF; border:2px solid #0099F3; border-radius:8px; color:#06338D; font-size:18px; font-weight:700; line-height:1.2; box-sizing:border-box;">
+          Application Software
+        </div>
+
+   <div aria-hidden="true" style="width:3px; height:14px; margin:0 auto; background-color:#0099F3;"></div>
+    <div aria-hidden="true" style="width:80%; height:3px; margin:0 auto; background-color:#0099F3;"></div>
+
+   <div style="display:flex; justify-content:center; gap:7px;">
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#0099F3;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #6FCAFF; border-radius:20px; font-size:16px; font-weight:700;">
+              TikTok
+            </div>
+          </div>
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#0099F3;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #6FCAFF; border-radius:20px; font-size:16px; font-weight:700;">
+              Chrome
+            </div>
+          </div>
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#0099F3;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #6FCAFF; border-radius:20px; font-size:16px; font-weight:700;">
+              Instagram
+            </div>
+          </div>
+
+  <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#0099F3;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #6FCAFF; border-radius:20px; font-size:16px; font-weight:700;">
+              YouTube
+            </div>
+          </div>
+
+  </div>
+
+   <p style="margin:22px 8px 0; font-size:16px; line-height:1.35;">
+          Helps users perform specific tasks.
+        </p>
+
+   </div>
+
+   <!-- Utility Software -->
+<div style="width:31%; text-align:center;">
+
+   <div style="display:inline-block; min-width:150px; padding:10px 14px; background-color:#FBDAE8; border:2px solid #E62378; border-radius:8px; color:#921149; font-size:18px; font-weight:700; line-height:1.2; box-sizing:border-box;">
+          Utility Software
+        </div>
+
+   <div aria-hidden="true" style="width:3px; height:14px; margin:0 auto; background-color:#E62378;"></div>
+        <div aria-hidden="true" style="width:72%; height:3px; margin:0 auto; background-color:#E62378;"></div>
+
+   <div style="display:flex; justify-content:center; gap:8px;">
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#E62378;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #F07FB0; border-radius:20px; font-size:16px; font-weight:700;">
+              Disk Utility
+            </div>
+          </div>
+
+   <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#E62378;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #F07FB0; border-radius:20px; font-size:16px; font-weight:700;">
+              Bluetooth
+            </div>
+          </div>
+
+  <div style="flex:1;">
+            <div aria-hidden="true" style="width:3px; height:13px; margin:0 auto; background-color:#E62378;"></div>
+            <div style="padding:10px 4px; background-color:#FFFFFF; border:2px solid #F07FB0; border-radius:20px; font-size:16px; font-weight:700;">
+              Antivirus
+            </div>
+          </div>
+
+  </div>
+
+   <p style="margin:22px 8px 0; font-size:16px; line-height:1.35;">
+          Maintains, optimizes, and secures the system.
+        </p>
+
+   </div>
+
+  </div>
+
+  </div>
+</div>
+
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>System Software</b> manages the computer's hardware and basic operations. This includes the operating system (like Windows, macOS, ChromeOS, or Linux), which coordinates memory, processes, files, and devices so everything works together.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-top: 12px;">
+<p>📖 <b>Application Software</b> helps users perform specific tasks. Examples include word processors, web browsers, games, design tools, and educational apps.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-top: 12px;">
+<p>📖 <b>Utility Software</b> maintains, protects, and optimizes the computer system. Examples include antivirus programs, file compression tools, backup software, and disk cleanup utilities.</p>
+</div>
 
 MARKDOWN

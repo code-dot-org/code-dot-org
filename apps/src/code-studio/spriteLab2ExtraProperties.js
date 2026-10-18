@@ -14,7 +14,7 @@ import initializeCodeMirror6 from './initializeCodeMirror6';
 // (Music Lab only so far) are left out on purpose.
 export const RAW_EDITABLE_PROPERTIES = [
   'block_catalog',
-  'guide_steps',
+  'objectives',
   'hide_custom_blocks',
   'image_role_defaults',
   'level_mode',

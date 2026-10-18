@@ -1,6 +1,7 @@
 @use './imageTile' as tile;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .labRow {
   display: flex;
@@ -48,6 +49,19 @@ $tab-item-height: 34px;
   justify-content: space-between;
 }
 
+// ?pictures=editor: the pictures list as an editor pane, scrolling on its own.
+.picturesEditor {
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+// ?bar=bottom: the same bar under the workspace, ruled off above instead.
+.tabContainerBottom {
+  border-bottom: none;
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
 .tabBar {
   display: flex;
   align-items: center;
@@ -65,33 +79,56 @@ $tab-item-height: 34px;
   }
 }
 
-.tab {
+// --- Scene tabs ---
+
+// The project's scenes as tabs; overflow hides under the row's end.
+.sceneTabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
   height: $tab-item-height;
-  padding: 0 16px;
-  // Cancel the legacy global button margin so hover fills the group.
-  margin: 0;
-  // Every tab item carries the same "button" structure, so the scene group
-  // reads coherently next to plain tabs. The outer edges are the stronger
-  // border; dividers inside a group stay subtle (see .tabGroup).
+}
+
+.sceneTabsRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+// A scene's tab: its picture and name.
+.sceneTab {
+  display: flex;
+  align-items: stretch;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  min-width: 64px;
+  max-width: 180px;
   border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
+  overflow: hidden;
+}
+
+.sceneTabMain {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 auto;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0 10px;
+  border: none;
+  background: transparent;
+  color: inherit;
   cursor: pointer;
   font-size: 14px;
-
-  // Selecting a tab bolds it, and bold text is a couple of px wider — enough
-  // to nudge every tab after it along. Hold the bold width at all times: this
-  // copy of the label is never painted and adds no height, it only sets how
-  // wide the button wants to be.
-  &::after {
-    content: attr(data-label);
-    display: block;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    font-weight: 600;
-  }
 
   &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
@@ -103,76 +140,179 @@ $tab-item-height: 34px;
   }
 }
 
-.tabActive {
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-weight: 600;
-  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
-  // Already here: clicking does nothing, so don't promise otherwise.
-  cursor: default;
+.sceneTabActive {
+  // Filled, not underlined, so the open scene reads at a glance.
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--borders-brand-teal-primary);
+  color: #fff;
 
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-primary);
-  }
-}
-
-// The scene selector plus the tabs that edit that scene, as one segmented
-// control: the selector leads, the tabs follow. Segments share this explicit
-// height so their text sits on one centerline inside the group's outline.
-$tab-segment-height: $tab-item-height - 2px;
-
-.tabGroup {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  height: $tab-item-height;
-  // The arrow, not the I-beam `auto` gives over the scene name's text.
-  cursor: default;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px 4px 0 0;
-  background: var(--background-neutral-primary);
-
-  .tab {
-    height: $tab-segment-height;
-    border: none;
-    border-radius: 0;
-    // Dividers between segments; the group draws the outer edge.
-    border-left: 1px solid var(--borders-neutral-primary);
-
-    &:first-child {
-      border-left: none;
-    }
-
-    // The group can't clip (its dropdown menu hangs below it), so the last
-    // segment rounds its own corner to match the group's.
-    &:last-child {
-      border-radius: 0 3px 0 0;
-    }
-  }
-
-  .tabActive {
-    background: transparent;
+  .sceneTabMain {
+    font-weight: 600;
+    cursor: default;
 
     &:hover:not(:disabled) {
       background: transparent;
     }
   }
+}
 
-  // The trigger is the group's first segment; the group's own radius shows
-  // through where the segment is transparent, so the segment has none.
-  .sceneDropdown {
-    height: $tab-segment-height;
+.sceneTabName {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  // An unpainted bold copy of the name holds the width, so bolding the
+  // selected tab nudges nothing.
+  &::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
   }
 }
 
-// Set while a click on the group's non-tab area would open one of its tabs.
-.tabGroupOpensTab {
+// All scenes, after New scene: never shrinks under the overflow.
+.sceneTabBack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
   cursor: pointer;
+  font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
 }
 
-// The Scenes gallery is open: the picker takes the selected tab's underline.
-.tabGroupActive .sceneDropdown {
+// Code | World: the scene's two editors, as one segmented control.
+.editorSwitch {
+  display: flex;
+  flex: none;
+  height: $tab-item-height;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--background-neutral-primary);
+}
+
+.editorSwitchButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  margin: 0;
+  padding: 0 12px;
+  border: none;
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  // An editor the level withholds: present, dimmed, inert.
+  &:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+// A hidden bold copy sets the label's width, so bolding the active editor
+// moves none of the others.
+.editorSwitchLabel {
+  display: inline-grid;
+  justify-items: start;
+
+  &::after {
+    content: attr(data-label);
+    grid-area: 1 / 1;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
+}
+
+.editorSwitchActive {
+  font-weight: 600;
   box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  cursor: default;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+// Stacked: each editor its own row, dividers between rows.
+.editorSwitchVertical {
+  flex-direction: column;
+  height: auto;
+
+  .editorSwitchButton {
+    height: $tab-item-height - 2px;
+    border-left: none;
+    border-top: 1px solid var(--borders-neutral-primary);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .editorSwitchActive {
+    box-shadow: inset 3px 0 0 var(--borders-brand-teal-primary);
+  }
+}
+
+// New scene: a square beside the tabs.
+.sceneTabButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  box-sizing: border-box;
+  width: $tab-item-height;
+  height: $tab-item-height;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
 }
 
 // The song a playing game is using, sized to sit among the tab controls.
@@ -197,11 +337,118 @@ $tab-segment-height: $tab-item-height - 2px;
   white-space: nowrap;
 }
 
-
 .tabContent {
   position: relative;
   flex: 1 1 auto;
   min-height: 0;
+}
+
+// The editors and the stage, inert together while a sheet covers them.
+.stage {
+  display: contents;
+}
+
+// The editors start under the strip.
+$editor-strip-height: 41px;
+
+.editorStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  height: $editor-strip-height;
+  padding-inline: 0.5rem;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-quaternary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-top: none;
+}
+
+// Every cell names its row: auto-placement would otherwise start a new row
+// for a cell that comes after one in a later column.
+.editorStripTitle {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  white-space: nowrap;
+  color: var(--text-neutral-quaternary);
+}
+
+.editorStripEnd {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+// Undo and redo, across from the switch.
+.editorStripHistory {
+  gap: 4px;
+  padding: 0 8px;
+}
+
+// The cell at the bar's start: the undo pair, or with ?editors=stripleft
+// the switch.
+.editorStripStart {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+// ?preview-bar=true: the same bar over the preview's column; the
+// playspace keeps the bar's height clear (COLUMN_HEADER_PX).
+.columnHeader {
+  position: absolute;
+  top: 0;
+  height: $editor-strip-height;
+  // The overlay passes pointer events through; the bar takes its own.
+  pointer-events: auto;
+}
+
+// The Pictures button, the size of a scene tab.
+.picturesTab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.picturesTabOpen {
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--borders-brand-teal-primary);
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: var(--borders-brand-teal-primary);
+  }
 }
 
 // Code tab is kept mounted; the parent toggles visibility with clip-path so the
@@ -211,18 +458,22 @@ $tab-segment-height: $tab-item-height - 2px;
   inset: 0;
 }
 
+// After .codeTabWrapper: its inset shorthand would otherwise win the top.
+.underEditorStrip {
+  top: $editor-strip-height;
+}
+
+// After .codeTabWrapper too. ?pictures=editor: the pictures pane off to the
+// right while another editor shows, as a closed sheet waits.
+.picturesEditorParked {
+  left: 110%;
+  right: auto;
+  width: 100%;
+}
+
 .blocklyDiv {
   width: 100%;
   height: 100%;
-}
-
-.imagesTab {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
 }
 
 // Sidebar-only resource panel (guide-based instructions): no instruction
@@ -316,47 +567,6 @@ $tab-segment-height: $tab-item-height - 2px;
 // The scene dropdown, styled as the first segment of the tab group: no box
 // of its own, one divider on its right. The design-system trigger is an
 // MUI text button; its own hover/focus styling stays.
-.sceneDropdown {
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
-
-  // Higher specificity than the dropdown's own black/gray container rules.
-  .tabGroup & > button.sceneTrigger,
-  > button.sceneTrigger {
-    height: 100%;
-    min-width: 0;
-    max-width: 200px;
-    margin: 0;
-    padding: 0 10px;
-    gap: 8px;
-    border: none;
-    border-right: 1px solid var(--borders-neutral-primary);
-    border-radius: 3px 0 0 0;
-    color: var(--text-neutral-primary);
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: none;
-
-    // Unusable off the scene tabs, but not dimmed: it reads as one of the
-    // group's labels, and those stay bright when their tab isn't the active
-    // one. MUI already drops pointer-events, so the click reaches the group
-    // and opens the Code tab.
-    &:disabled {
-      color: var(--text-neutral-primary);
-    }
-  }
-}
-
-.sceneTriggerName {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 // Square, like the stage. Sized for the menu; `small` fits the tab bar.
 .sceneThumb {
   display: inline-flex;
@@ -384,82 +594,51 @@ $tab-segment-height: $tab-item-height - 2px;
   font-size: 11px;
 }
 
-.sceneMenu {
-  margin: 0;
-  padding: 4px 0;
-  user-select: none;
-  min-width: 200px;
-  max-height: 60vh;
-  overflow-y: auto;
+// --- All scenes (the pictures gallery's card idiom) ---
 
-  li {
-    list-style: none;
-    margin: 0;
-  }
-}
-
-.sceneMenuItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.scenesMap {
   width: 100%;
-  margin: 0;
-  padding: 4px 12px;
-  border: none;
-  border-radius: 0;
-  background: none;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-  font-size: 14px;
-  text-align: left;
-  cursor: pointer;
 
-  &:hover {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: -2px;
+  // Wide gaps, so an arrow between neighbors has room to read.
+  .imageGallery {
+    position: relative;
+    gap: 36px 48px;
   }
 }
 
-.sceneMenuItemActive {
-  background: var(--background-brand-teal-primary);
-  color: var(--text-neutral-white-fixed);
+.scenesMapHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 16px 0;
+}
 
-  &:hover {
-    background: var(--background-brand-teal-primary);
+// The arrows between cards whose code jumps between them, drawn over the
+// gallery and under nothing clickable.
+.sceneLinks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  fill: var(--borders-brand-teal-primary);
+  stroke: var(--borders-brand-teal-primary);
+
+  path {
+    fill: none;
+    stroke-width: 2px;
   }
 
-  .sceneThumb {
-    color: var(--text-neutral-white-fixed);
-    background: rgb(255 255 255 / 25%);
+  marker path {
+    fill: var(--borders-brand-teal-primary);
+    stroke: none;
   }
 }
-
-.sceneMenuName {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-// Stands where a thumbnail would, so the labels line up.
-.sceneMenuIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-}
-
-.sceneMenuDivider {
-  height: 1px;
-  margin: 4px 0;
-  background: var(--borders-neutral-primary);
-}
-
-// --- Scenes gallery (the Images tab's card idiom) ---
 
 // A dim card groups a scene's picture and controls. Cards in a row stretch
 // to one height, and the footer pins to the bottom.
@@ -702,7 +881,7 @@ $tab-segment-height: $tab-item-height - 2px;
 .guideContinue {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 // Room for the corner icon on its right; the collapsed panel is otherwise
@@ -712,15 +891,32 @@ $tab-segment-height: $tab-item-height - 2px;
   white-space: nowrap;
 }
 
-// The persistent playspace overlay: spans the tab content area; lets clicks
-// through to the content beneath (e.g. the Blockly workspace) except over the
-// box itself.
+// The persistent playspace overlay; clicks fall through except over the
+// box. Over the toolbox's stacking (70), under the sheets: the box slides
+// back across the toolbox as the workspace reappears.
 .playspaceOverlay {
   position: absolute;
   inset: 0;
-  z-index: 5;
+  z-index: variables.$z-index-overlay - 1;
   overflow: hidden;
   pointer-events: none;
+}
+
+// Tinted so the Code | World switch reads as the workspace's, not the column's.
+.previewColumn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--background-neutral-secondary);
+  border-left: 1px solid var(--borders-neutral-primary);
+}
+
+// At the lab's left the column has no tint: the workspace's ground
+// continues under the cards, and a rule marks the workspace's edge.
+.previewColumnLeft {
+  background: transparent;
+  border-left: none;
+  border-right: 1px solid var(--borders-neutral-primary);
 }
 
 // Fixed 400x400 (the engine canvas size); positioned via a transform so it can
@@ -807,6 +1003,90 @@ $tab-segment-height: $tab-item-height - 2px;
   &:hover {
     opacity: 1;
   }
+}
+
+// The instructions' card under the preview; a long step scrolls inside.
+.previewBelow {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: auto;
+  pointer-events: auto;
+  border-radius: 14px;
+  background: var(--background-neutral-tertiary);
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+// The measured wrapper: its own formatting context, so a child's margin
+// cannot collapse through it and escape the measurement.
+.previewBelowContent {
+  display: flow-root;
+}
+
+// The guide's body, in place rather than floating.
+.guideDocked {
+  box-sizing: border-box;
+  padding: 12px 18px;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+// Short windows: the blocks' smaller type, and less padding.
+.previewBelowCompact .guideDocked {
+  padding: 10px 14px;
+  font-size: 12px;
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+// The start scene's mark, when there is more than one scene.
+.sceneTabStart {
+  display: inline-flex;
+  flex: none;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+}
+
+// A sheet under the scene row, over the whole area below. Closed, the
+// Pictures sheet sits off to the right rather than hidden, so a dialog
+// rendered inside it still shows; moved by `left`, not a transform, which
+// would become the containing block of the fixed-position image dialog.
+.sheet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // Topmost: the image dialog renders inside the sheet, not in a portal.
+  z-index: variables.$z-index-overlay;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.sheetClosed {
+  left: 110%;
+}
+
+.sheetHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: none;
+  padding: 8px 8px 8px 16px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sheetBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
 }
 
 .playspaceCanvas {
