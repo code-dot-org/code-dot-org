@@ -385,7 +385,8 @@ $window-allowance: 150px;
   }
 }
 
-// Each button grows from its label's width, so no label wraps.
+// Each button grows from its label's width, so no label wraps; in a
+// narrow Guide (the dancer's threshold) they stack instead.
 .resultButtons {
   display: flex;
   gap: 12px;
@@ -393,6 +394,10 @@ $window-allowance: 150px;
   > * {
     flex: 1 1 auto;
     white-space: nowrap;
+  }
+
+  @container (max-width: 500px) {
+    flex-direction: column;
   }
 }
 
