@@ -31,7 +31,7 @@ interface AddBlocksButtonProps {
 
 /**
  * The tinted band across the toolbox's foot, with the button that opens
- * the new-block catalog at its right. It sits inside the toolbox column,
+ * the new-block catalog in its middle. It sits inside the toolbox column,
  * which is why its width follows the column's; the flyout gains room to
  * scroll its last block clear of it and a wider margin for the dots.
  */
