@@ -37,7 +37,8 @@ export interface LevelMode {
 /** Generations a level before free play allows; free play has no limit. */
 export const GENERATION_LIMIT = 5;
 
-/** The style every generate form starts on; students can still switch. */
+/** The style the advanced generate form starts on; the student form is
+    pixel art only. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
 /** The tabs a kind shows, the first being where the level opens. An image

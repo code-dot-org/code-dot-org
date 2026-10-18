@@ -12,7 +12,7 @@ export type Verdict = 'up' | 'down';
 /** Why the thumb went down; analytics only. */
 export type VerdictReason = 'mismatch' | 'wrong';
 
-export const VERDICT_REASONS: {value: VerdictReason; text: string}[] = [
+const VERDICT_REASONS: {value: VerdictReason; text: string}[] = [
   {value: 'mismatch', text: "Doesn't match my prompt"},
   {value: 'wrong', text: "Doesn't look right"},
 ];

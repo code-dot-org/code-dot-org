@@ -8,7 +8,7 @@ import React from 'react';
 
 import styles from './generating-steps.module.scss';
 
-export const GENERATING_STEPS = [
+const GENERATING_STEPS = [
   'Reading your prompt',
   'Using patterns in training data',
   'Predicting',

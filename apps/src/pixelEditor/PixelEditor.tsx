@@ -215,6 +215,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   const shownBrushSizes = brushSizes
     ? BRUSH_SIZES.filter(size => brushSizes.includes(size))
     : BRUSH_SIZES;
+  const brushChoice = shownBrushSizes.length > 1;
   // For the window keydown listener, which is bound once.
   const shownBrushSizesRef = useRef(shownBrushSizes);
   shownBrushSizesRef.current = shownBrushSizes;
@@ -1416,10 +1417,8 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
               </button>
             </PixelTooltip>
           ))}
-          {shownBrushSizes.length > 1 && (
-            <div className={moduleStyles.toolbarDivider} />
-          )}
-          {shownBrushSizes.length > 1 &&
+          {brushChoice && <div className={moduleStyles.toolbarDivider} />}
+          {brushChoice &&
             shownBrushSizes.map((size, index) => (
               <PixelTooltip
                 key={size}

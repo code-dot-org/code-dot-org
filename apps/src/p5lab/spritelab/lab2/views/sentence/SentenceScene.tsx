@@ -86,8 +86,8 @@ const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [34, 34, 34, 255]},
   {name: 'White', rgba: [255, 255, 255, 255]},
 ];
-// One brush: the finest on a pixel grid, the next one up on a smooth canvas.
-const PAINT_BRUSH_SIZES: readonly number[] = [STYLE === 'pixel' ? 1 : 2];
+// One brush, the finest on the pixel grid.
+const PAINT_BRUSH_SIZES: readonly number[] = [1];
 
 interface Made {
   /** The result's filename, unique per generation. */
@@ -222,9 +222,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // Counts runs; a superseded run's result is dropped.
   const runRef = useRef(0);
   useEffect(() => () => void runRef.current++, []);
+  const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
 
   const generate = useCallback(async () => {
-    if (generationsLeft !== undefined && generationsLeft <= 0) {
+    if (exhausted) {
       return;
     }
     const run = ++runRef.current;
@@ -324,7 +325,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     canAnimate,
     method,
     onGenerateStart,
-    generationsLeft,
+    exhausted,
   ]);
 
   const keep = useCallback(async () => {
@@ -433,7 +434,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const generating = mode === 'generating';
   const busy = generating || saving;
   const showingResult = mode === 'result' && !!made;
-  const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
   const canGenerate = complete && !busy && !exhausted;
 
   // The control that changed the mode unmounts with it, so focus moves to
@@ -662,26 +662,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       disabled={busy}
     />
   );
-  // Asked of the picture just made, while it is in the frame.
-  const verdictNode = showingResult && made && made.id === freshId && (
-    <VerdictRow
-      verdict={verdict}
-      onJudge={judge}
-      reason={reason}
-      onReason={explain}
-      disabled={busy}
-      boxed
-    />
-  );
-  const verdictPlain = showingResult && made && made.id === freshId && (
-    <VerdictRow
-      verdict={verdict}
-      onJudge={judge}
-      reason={reason}
-      onReason={explain}
-      disabled={busy}
-    />
-  );
+  // Asked of the picture just made, while it is in the frame; boxed in a
+  // host's own panel, plain among the level's buttons.
+  const verdictRow = (boxed: boolean) =>
+    showingResult &&
+    made &&
+    made.id === freshId && (
+      <VerdictRow
+        verdict={verdict}
+        onJudge={judge}
+        reason={reason}
+        onReason={explain}
+        disabled={busy}
+        boxed={boxed}
+      />
+    );
   // Under the frame: the way to draw instead, while the words are open.
   const drawButton = mode === 'edit' && (
     <div className={styles.underFrameRow}>
@@ -715,7 +710,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           error: errorLine,
           progress: progressNode,
           fact: factNode,
-          verdict: verdictNode,
+          verdict: verdictRow(true),
           exhausted,
           generate,
           changeWords,
@@ -744,7 +739,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       {sentenceNode}
       {showingResult && made ? (
         <ResultActions
-          verdict={verdictPlain}
+          verdict={verdictRow(false)}
           onChangeWords={changeWords}
           onGenerateAgain={generate}
           onContinue={keep}
