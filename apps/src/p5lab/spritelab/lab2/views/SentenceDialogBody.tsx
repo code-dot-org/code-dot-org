@@ -65,6 +65,11 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
     return (
       <>
         <div className={moduleStyles.body}>
+          {parts.alternatives && (
+            <div className={moduleStyles.alternativesColumn}>
+              {parts.alternatives}
+            </div>
+          )}
           <div className={moduleStyles.sentenceColumn}>
             {!parts.frame && onPaintManually ? (
               // The blank pane is itself the way into the paint editor.
@@ -84,7 +89,6 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
                 {parts.frame}
               </div>
             )}
-            {parts.alternatives}
             {parts.underFrame}
           </div>
           <section
@@ -114,12 +118,14 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
             {parts.error}
             {parts.progress}
             {parts.fact}
+            {parts.verdict && (
+              <div className={moduleStyles.sentenceVerdict}>
+                {parts.verdict}
+              </div>
+            )}
           </section>
         </div>
         <div className={moduleStyles.footer}>
-          {parts.verdict && (
-            <div className={moduleStyles.footerLeft}>{parts.verdict}</div>
-          )}
           <button
             type="button"
             className={moduleStyles.button}

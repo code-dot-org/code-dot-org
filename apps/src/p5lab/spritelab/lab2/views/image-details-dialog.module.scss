@@ -491,13 +491,23 @@
 // Room for the word menus beside a larger picture; the panel's max-width
 // still shrinks it on narrow browsers.
 $sentence-dialog-width: 970px;
-// The pane gives way on a short window: the dialog's chrome (134px), the
-// strip of pictures and Behind the scenes under the pane, and the 32px the
-// dialog keeps from the window's edges must all fit a 605px window.
-$sentence-pane-size: min(420px, calc(100vh - 290px));
+// The pane gives way on a short window. The dialog keeps 32px from the
+// window's edges, its header, body padding and footer take 134px, and
+// Behind the scenes under the pane takes 40px; all of it fits a 605px
+// window with a little to spare.
+$sentence-pane-size: min(420px, calc(100vh - 220px));
 
 .dialogHost .dialogWide {
   width: $sentence-dialog-width;
+}
+
+// The session's pictures, as tall as the pane, closer to it than the
+// body's gap.
+.alternativesColumn {
+  flex: none;
+  display: flex;
+  max-height: $sentence-pane-size;
+  margin-right: -8px;
 }
 
 // The picture's column: the pane, and Behind the scenes under it.
@@ -525,6 +535,12 @@ $sentence-pane-size: min(420px, calc(100vh - 290px));
   &:focus {
     outline: none;
   }
+}
+
+// The question about the picture, held at the panel's bottom.
+.sentenceVerdict {
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 // The line above the sentence: what the student is doing, with the kind

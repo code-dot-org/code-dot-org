@@ -168,7 +168,7 @@ describe('SentenceDialogBody', () => {
     });
   });
 
-  it('puts the verdict and the three choices in the footer once there is a picture, and Keep hands it to the host', async () => {
+  it('puts the verdict in the panel and the three choices in the footer once there is a picture, and Keep hands it to the host', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     const {onKeep} = renderBody();
     fireEvent.click(screen.getByRole('button', {name: 'cat'}));

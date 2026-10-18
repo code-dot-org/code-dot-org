@@ -16,6 +16,8 @@ const MIN_GUIDE_WIDTH_PX = 240;
 
 interface SentenceSceneLayoutProps {
   frameClassName?: string;
+  /** Down the left of the frame, no taller than it. */
+  beside?: React.ReactNode;
   /** What the frame shows. */
   frame: React.ReactNode;
   /** Below the frame, right-aligned. */
@@ -34,6 +36,7 @@ const SentenceSceneLayout: React.FunctionComponent<
   SentenceSceneLayoutProps
 > = ({
   frameClassName,
+  beside,
   frame,
   underFrame,
   frameAriaLabel,
@@ -73,6 +76,11 @@ const SentenceSceneLayout: React.FunctionComponent<
 
   return (
     <div className={styles.scene}>
+      {beside && (
+        <div className={styles.beside} style={{maxHeight: frameHeight}}>
+          {beside}
+        </div>
+      )}
       <section className={styles.imagePane} aria-label={frameAriaLabel}>
         <div className={styles.imageColumn}>
           <div

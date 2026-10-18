@@ -116,7 +116,8 @@ export interface SentenceSceneParts {
   frameFilled: boolean;
   /** Behind the scenes, once there is a picture. */
   underFrame: React.ReactNode;
-  /** The session's pictures as tiles, the one in the frame marked. */
+  /** The session's pictures as a column of tiles down the frame's left,
+      the one in the frame marked. */
   alternatives: React.ReactNode;
   /** The screen reader's status line. */
   status: React.ReactNode;
@@ -648,7 +649,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const underFrame = showingResult && made && (
     <BehindTheScenes sent={made.sent} disabled={busy} />
   );
-  const alternativesNode = showingResult && history.length > 1 && (
+  // Stays through editing and generating, so the frame does not shift.
+  const alternativesNode = mode !== 'paint' && history.length > 1 && (
     <AlternativeThumbs
       thumbs={history.map(m => ({
         id: m.id,
@@ -725,17 +727,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       frameClassName={classNames(
         made && !generating && styles.imageFrameFilled
       )}
+      beside={alternativesNode}
       frame={frame}
-      underFrame={
-        underFrame ? (
-          <>
-            {alternativesNode}
-            {underFrame}
-          </>
-        ) : (
-          drawButton
-        )
-      }
+      underFrame={underFrame || drawButton}
       frameAriaLabel="Your picture"
       panelAriaLabel="Make your picture"
       panelRef={panelRef}

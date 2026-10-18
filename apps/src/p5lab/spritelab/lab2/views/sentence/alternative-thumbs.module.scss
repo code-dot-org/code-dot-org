@@ -1,10 +1,15 @@
 @use "../checkerboard";
 
-.row {
+.column {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex: none;
   gap: 8px;
-  margin-top: 8px;
+  max-height: 100%;
+  overflow-y: auto;
+  // Room for the ring and the hover growth.
+  padding: 4px;
+  margin: -4px;
 }
 
 // The tile's checkerboard shows the picture's transparency, as the frame

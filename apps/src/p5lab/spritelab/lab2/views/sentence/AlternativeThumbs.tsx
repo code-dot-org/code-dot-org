@@ -1,5 +1,5 @@
-// Under the frame: every picture of the session as small tiles in order,
-// the one in the frame marked; clicking another swaps it into the frame.
+// Down the left of the frame: every picture of the session as small tiles
+// in order, the one in the frame marked; clicking another swaps it in.
 
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
@@ -24,7 +24,8 @@ interface AlternativeThumbsProps {
   disabled?: boolean;
 }
 
-// A tile's edge, px.
+// A tile's edge, px: a level's five tiles and their gaps stand within the
+// dialog's pane at its smallest; past that the column scrolls.
 const TILE_PX = 56;
 
 // Draws the picture, or its first frame, to fit the tile.
@@ -93,7 +94,7 @@ const AlternativeThumbs: React.FunctionComponent<AlternativeThumbsProps> = ({
   onChoose,
   disabled,
 }) => (
-  <div className={styles.row} role="group" aria-label="Your pictures">
+  <div className={styles.column} role="group" aria-label="Your pictures">
     {thumbs.map((thumb, i) => (
       <button
         key={thumb.id}

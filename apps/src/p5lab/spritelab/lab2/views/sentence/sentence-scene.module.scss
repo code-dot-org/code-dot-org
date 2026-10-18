@@ -17,6 +17,13 @@ $window-allowance: 150px;
   align-items: stretch;
 }
 
+// The pictures' column, as tall as the frame; the Guide gives it room.
+.beside {
+  flex: none;
+  display: flex;
+  margin-right: -8px;
+}
+
 // The frame takes the width the window's height allows, up to half; the
 // Guide takes the rest.
 .imagePane {
