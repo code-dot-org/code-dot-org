@@ -63,6 +63,11 @@
   }
 }
 
+// The scene row's text size (.sceneTab), so New image reads with All scenes.
+.strips .newButton {
+  font-size: 14px;
+}
+
 .group {
   display: flex;
   flex: 0 1 auto;

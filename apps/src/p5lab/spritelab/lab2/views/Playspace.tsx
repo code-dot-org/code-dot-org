@@ -65,7 +65,7 @@ const PLAY_CARD_WIDTH_PX = BESIDE_TEXT_MIN_PX;
 // appears in place.
 const SLIDE_MS = 450;
 const FADE_MS = 180;
-// The whole overlay's fade as the Pictures editor takes the width and
+// The whole overlay's fade as the Images editor takes the width and
 // gives it back; the editor's slide takes as long (PANE_SLIDE_MS).
 const HIDE_MS = 300;
 

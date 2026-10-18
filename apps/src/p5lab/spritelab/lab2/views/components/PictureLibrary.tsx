@@ -64,7 +64,7 @@ const TILE_GAP_PX = 10;
 const GROUP_GAP_PX = 32;
 
 /**
- * The Pictures editor: the chosen picture large on one side, and on the
+ * The Images editor: the chosen picture large on one side, and on the
  * other every picture as tiles in a strip per kind, under a New image
  * button, scrolling when they run past the bottom.
  */
@@ -225,6 +225,7 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
           <MuiButton
             variant="outlined"
             color="secondary"
+            className={moduleStyles.newButton}
             startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
             onClick={onNew}
           >

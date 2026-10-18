@@ -6,7 +6,7 @@ import {blurAfterPointerClick} from '../blurAfterPointerClick';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
-export type Editor = 'Pictures' | 'World' | 'Code';
+export type Editor = 'Images' | 'World' | 'Code';
 
 interface EditorSwitchProps {
   value: Editor;
@@ -22,7 +22,7 @@ interface EditorSwitchProps {
 
 const DEFAULT_EDITORS: Editor[] = ['Code', 'World'];
 const ICONS: Record<Editor, string> = {
-  Pictures: 'images',
+  Images: 'images',
   Code: 'code',
   World: 'table-cells',
 };

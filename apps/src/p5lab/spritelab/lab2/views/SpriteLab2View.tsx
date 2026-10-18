@@ -182,11 +182,11 @@ registerReducers({
 });
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
-// The sheet the Pictures button controls.
+// The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 /** The switch's editors, in order. */
-const EDITORS: Editor[] = ['Code', 'World', 'Pictures'];
-// The Pictures pane's slide between the column's edge and the full width;
+const EDITORS: Editor[] = ['Code', 'World', 'Images'];
+// The Images pane's slide between the column's edge and the full width;
 // the playspace fades for as long (HIDE_MS).
 const PANE_SLIDE_MS = 300;
 // On hover over a control a level withholds.
@@ -465,7 +465,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const editorsShown = tabs.includes('Code') || enabledTabs.includes('World');
   const disabledEditors = useMemo<Partial<Record<Editor, string>>>(
     () => ({
-      ...(picturesOffered ? {} : {Pictures: LOCKED_REASON}),
+      ...(picturesOffered ? {} : {Images: LOCKED_REASON}),
       ...(tabs.includes('Code') ? {} : {Code: LOCKED_REASON}),
       ...(enabledTabs.includes('World')
         ? {}
@@ -482,9 +482,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
-  // ?bar=bottom: the scene row, with Pictures, under the workspace.
+  // ?bar=bottom: the scene row under the workspace.
   const barAtBottom = useMemo(() => queryParams('bar') === 'bottom', []);
-  // Pictures is open while its tab is: the hook's open state drives the
+  // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
   useEffect(() => {
@@ -1566,7 +1566,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       runScene(playStartSceneId ?? defaultPlaySceneId);
     } else if (activeTab === 'Code' || activeTab === 'World') {
       // Only when the stage shows something else: after Play, or after a
-      // jump or an external scene. Code, World and Pictures share one
+      // jump or an external scene. Code, World and Images share one
       // preview, so moving between them leaves it running.
       const playing = currentPlayingRef.current;
       const previewingActive =
@@ -1811,8 +1811,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Set once the audio hook below exists; the handler is defined first.
   const unlockGameAudioRef = useRef<() => void>(() => undefined);
   const handleEditorChange = useCallback(
-    (editor: Editor) =>
-      dispatch(setActiveTab(editor === 'Pictures' ? 'Images' : editor)),
+    (editor: Editor) => dispatch(setActiveTab(editor)),
     [dispatch]
   );
 
@@ -1950,7 +1949,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const scenesEditable =
     !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
   // The stage: the preview beside Code and World and beside All scenes,
-  // centered to play; Pictures takes the whole width.
+  // centered to play; Images takes the whole width.
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play'
       ? 'play'
@@ -2138,7 +2137,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 activeTab === 'Code' ||
                 activeTab === 'Images') && (
                 <EditorStrip
-                  editor={activeTab === 'Images' ? 'Pictures' : activeTab}
+                  editor={activeTab}
                   onChange={handleEditorChange}
                   editors={EDITORS}
                   disabledEditors={disabledEditors}
@@ -2173,7 +2172,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
             {/* Kept mounted like the workspace: inserting the grid is the
           costly part. */}
-            {/* Pictures: kept mounted, and off to the right rather than
+            {/* Images: kept mounted, and off to the right rather than
             clipped while another editor shows, where a pick's dialog can
             still open inside it. */}
             {pictures.mounted && (
@@ -2181,7 +2180,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 ref={pictures.sheetRef}
                 id={PICTURES_DRAWER_ID}
                 role="region"
-                aria-label="Pictures"
+                aria-label="Images"
                 className={classNames(
                   moduleStyles.codeTabWrapper,
                   moduleStyles.picturesEditor,
