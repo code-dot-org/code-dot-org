@@ -223,10 +223,16 @@ $footer-height: 44px;
   z-index: 71;
 }
 
-// Doubled to outrank the button's own padding.
+// The band's button, doubled to outrank the button's own line height: the
+// label and the count pill center on the same line.
+.toolboxFooter .catalogButton.catalogButton {
+  line-height: 1;
+  padding: 8px 12px;
+}
+
 .compactButton.compactButton {
   min-width: 0;
-  padding: 4px 10px;
+  padding: 7px 10px;
 }
 
 // How many blocks wait in the catalog.

@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import * as BlocklyCore from 'blockly/core';
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {
@@ -73,7 +74,10 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
         variant="contained"
         color="primary"
         size="small"
-        className={compact ? moduleStyles.compactButton : undefined}
+        className={classNames(
+          moduleStyles.catalogButton,
+          compact && moduleStyles.compactButton
+        )}
         aria-label={
           remaining > 0
             ? `Discover blocks (${remaining} new)`
