@@ -183,12 +183,13 @@ interface GenerateImagePaneProps {
   jumboSide?: 'left' | 'right';
 }
 
-/** The strips' titles, one per kind, in gallery order. */
-const GROUP_TITLES: Record<ImageType, string> = {
-  sprite: 'Characters',
-  background: 'Backgrounds',
-  block: 'Blocks',
-};
+/** The strips, in order: a sprite made as an object has its own. */
+const GROUPS: {id: string; title: string}[] = [
+  {id: 'character', title: 'Characters'},
+  {id: 'object', title: 'Objects'},
+  {id: 'background', title: 'Backgrounds'},
+  {id: 'block', title: 'Blocks'},
+];
 
 /**
  * The Images editor: the project's pictures as a library, the chosen one
@@ -818,14 +819,21 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('loading');
   }, [chosen]);
   const groups = useMemo<LibraryGroup[]>(() => {
-    const byType = new Map<ImageType, LibraryGroup>();
+    const byId = new Map(
+      GROUPS.map(({id, title}) => [
+        id,
+        {id, title, pictures: []} as LibraryGroup,
+      ])
+    );
     images.forEach(({key, props}) => {
       const type = imageTypeFromCategories(props?.categories);
-      let group = byType.get(type);
-      if (!group) {
-        group = {type, title: GROUP_TITLES[type], pictures: []};
-        byType.set(type, group);
-      }
+      const id =
+        type === 'sprite'
+          ? props?.generation?.subject === 'object'
+            ? 'object'
+            : 'character'
+          : type;
+      const group = byId.get(id)!;
       const src = props?.dataURI || props?.sourceUrl || undefined;
       group.pictures.push({
         key,
@@ -839,7 +847,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             : undefined,
       });
     });
-    return [...byType.values()];
+    return [...byId.values()].filter(group => group.pictures.length > 0);
   }, [images]);
 
   const creating = dialogTarget === 'new';

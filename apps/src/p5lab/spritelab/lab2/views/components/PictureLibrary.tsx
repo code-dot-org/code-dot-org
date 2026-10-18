@@ -4,7 +4,6 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {ImageType} from '../../ai/images/types';
 import {AnimationPoses} from '../../characterAnimations';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import ImagePaneButton from '../ImagePaneButton';
@@ -30,7 +29,7 @@ export interface LibraryPicture {
 }
 
 export interface LibraryGroup {
-  type: ImageType;
+  id: string;
   title: string;
   pictures: LibraryPicture[];
 }
@@ -210,7 +209,7 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
         </div>
         {groups.map(group => (
           <section
-            key={group.type}
+            key={group.id}
             className={moduleStyles.group}
             aria-label={group.title}
           >

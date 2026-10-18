@@ -22,9 +22,9 @@ interface ToolButtonsProps {
 }
 
 /**
- * The resource rail's buttons, in the scene row instead (?rail=bar): extra
- * links, Start Over, copyright and settings, whose panel drops from its
- * button.
+ * The resource panel's buttons, in the scene row instead (?resources=bar):
+ * extra links, Start Over, copyright and settings, whose panel drops from
+ * its button.
  */
 const ToolButtons: React.FunctionComponent<ToolButtonsProps> = ({
   levelId,
@@ -36,7 +36,7 @@ const ToolButtons: React.FunctionComponent<ToolButtonsProps> = ({
   const [settingsOpen, setSettingsOpen] = useState(false);
   // The page footer's language and copyright are here now, and so are the
   // extra links: hide the footer and the floating Extra Links button while
-  // these buttons stand in for the rail, as the rail does.
+  // these buttons stand in for the panel, as the panel does.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
   useEffect(() => {
     setFooterVisibility(false);

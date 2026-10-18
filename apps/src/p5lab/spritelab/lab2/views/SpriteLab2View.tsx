@@ -541,9 +541,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               }ms ease ${picturesActive ? PANE_SLIDE_MS / 2 : 0}ms`
             : undefined,
         };
-  // ?rail=bar: the resource rail's buttons move to the scene row's end
-  // and the rail goes, giving the lab its width.
-  const railInBar = useMemo(() => queryParams('rail') === 'bar', []);
+  // ?resources=bar: the resource panel's buttons move to the scene row's
+  // end and the panel goes, giving the lab its width.
+  const resourcesInBar = useMemo(() => queryParams('resources') === 'bar', []);
   // The chosen picture sits at the right of the strips; ?jumbo=left puts
   // it at the left.
   const jumboSide = useMemo<'left' | 'right'>(
@@ -2027,7 +2027,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         />
       )}
-      {!railInBar && (
+      {!resourcesInBar && (
         <>
           <ResourcePanel
             levelProperties={levelProperties}
@@ -2089,7 +2089,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   loading={nowPlaying.loading}
                 />
               )}
-              {railInBar && (
+              {resourcesInBar && (
                 <ToolButtons
                   levelId={levelProperties.id}
                   appName={levelProperties.appName}

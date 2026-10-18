@@ -5,7 +5,7 @@ import PictureLibrary from '@cdo/apps/p5lab/spritelab/lab2/views/components/Pict
 
 const groups = [
   {
-    type: 'sprite' as const,
+    id: 'character',
     title: 'Characters',
     pictures: [
       {key: 'a', name: 'Sprite 1', thumb: 'data:a', src: 'data:a'},
@@ -13,7 +13,7 @@ const groups = [
     ],
   },
   {
-    type: 'background' as const,
+    id: 'background',
     title: 'Backgrounds',
     pictures: [
       {key: 'c', name: 'Background 1', thumb: 'data:c', src: 'data:c'},
