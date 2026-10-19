@@ -24,6 +24,7 @@ class Ability
       Rubric,
       :reports,
       :widget2, # levelbuilder only, see override below
+      :adaptive_pathway, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
