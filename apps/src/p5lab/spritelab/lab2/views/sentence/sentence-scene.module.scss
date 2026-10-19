@@ -129,12 +129,6 @@ $window-allowance: 150px;
   justify-content: center;
 }
 
-// Generate at the right, at the panel's bottom.
-.generateRow {
-  display: flex;
-  align-items: flex-end;
-}
-
 // Doubled to outrank the button's own padding and radius.
 .generateButton.generateButton {
   margin-left: auto;

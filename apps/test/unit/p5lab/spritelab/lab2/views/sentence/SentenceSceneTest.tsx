@@ -71,6 +71,17 @@ const pickCreature = () => {
 // The last step's tick shows this long before the picture replaces it.
 const SETTLE_MS = 500;
 
+// A generation that waits for the test to finish it.
+const pendingGeneration = () => {
+  let finish: (value: typeof RESULT) => void = () => {};
+  generateCharacterSet.mockReturnValueOnce(
+    new Promise(resolve => {
+      finish = resolve;
+    })
+  );
+  return (value: typeof RESULT) => finish(value);
+};
+
 // Presses Generate (or Regenerate) and waits out the settle.
 const generate = async (name = 'Generate') => {
   await act(async () => {
@@ -173,12 +184,7 @@ describe('SentenceScene', () => {
   });
 
   it('shows the steps and a fact while making the picture, then the two choices', async () => {
-    let finish: (value: typeof RESULT) => void = () => {};
-    generateCharacterSet.mockReturnValue(
-      new Promise(resolve => {
-        finish = resolve;
-      })
-    );
+    const finish = pendingGeneration();
     renderScene();
     pickCreature();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
@@ -300,12 +306,7 @@ describe('SentenceScene', () => {
     expect(panel.textContent).toMatch(/^Prompt AI to make a character\./);
     pickCreature();
     // While the picture is made, the steps have the panel.
-    let finish: (value: typeof RESULT) => void = () => {};
-    generateCharacterSet.mockReturnValueOnce(
-      new Promise(resolve => {
-        finish = resolve;
-      })
-    );
+    const finish = pendingGeneration();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(panel.textContent).not.toMatch(/Prompt AI/);
     await act(async () => {

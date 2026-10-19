@@ -755,7 +755,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       ) : (
         // Held at the panel's bottom, even with the frame's; an error reads
         // above the button.
-        <div className={classNames(styles.generateRow, styles.bottomRow)}>
+        <div className={styles.bottomRow}>
           {errorLine}
           <MuiButton
             className={classNames(
@@ -772,7 +772,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           </MuiButton>
         </div>
       )}
-      {(showingResult || generating) && errorLine}
+      {mode !== 'edit' && errorLine}
       {factNode}
     </SentenceSceneLayout>
   );
