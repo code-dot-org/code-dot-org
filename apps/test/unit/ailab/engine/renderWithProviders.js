@@ -1,7 +1,5 @@
-/* Renders a component under the providers the lab mounts in index.tsx. */
+/* Renders a component under the providers AilabEngine supplies. */
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-import {ThemeProvider} from '@mui/material/styles';
 import {act, render} from '@testing-library/react';
 import {createElement, useEffect, useRef} from 'react';
 import {Provider} from 'react-redux';
@@ -86,11 +84,7 @@ export function renderWithProviders(
             trainingRun,
             report: value => (contexts = value),
           }),
-          createElement(
-            ThemeProvider,
-            {theme: getMuiThemeForBrand(undefined)},
-            element
-          )
+          element
         )
       )
     )
