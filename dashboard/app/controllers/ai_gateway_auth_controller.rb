@@ -64,7 +64,7 @@ class AiGatewayAuthController < ApplicationController
       end
     rescue => exception
       Observability::Errors.report(exception, error_message: 'AI Gateway signing key could not be loaded', context: {signing_key_name: signing_key_name, rack_env: CDO.rack_env.to_s})
-      return render status: :internal_server_error, json: {error: 'AI Gateway signing key unavailable', signingKey: signing_key_name}
+      return render status: :internal_server_error, json: {error: 'AI Gateway signing key unavailable'}
     end
 
     token_id = SecureRandom.uuid

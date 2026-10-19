@@ -5,16 +5,8 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 // One metric for every outcome, so alert rules can divide errors by the total.
 const REQUEST_METRIC = 'ai-gateway.request';
 
-/**
- * The key Rails signed the request's token with, as Rails reported it.
- * `not_reported` means no Rails response named one: Rails refused the user
- * (403) before choosing a key, the request failed before Rails answered, or
- * its answer could not be read.
- */
-export type SigningKey =
-  | 'environment_key'
-  | 'legacy_shared_key'
-  | 'not_reported';
+/** The key Rails signed a token with, as its token response reported. */
+export type SigningKey = 'environment_key' | 'legacy_shared_key';
 
 /**
  * - `ok`: the gateway returned a response.
@@ -30,10 +22,17 @@ export type GatewayRequestOutcome =
   | 'gateway_error'
   | 'other_error';
 
-export function parseSigningKey(value: unknown): SigningKey {
-  return value === 'environment_key' || value === 'legacy_shared_key'
-    ? value
-    : 'not_reported';
+// Rails and this code ship together, so any other value is a bug.
+export function parseSigningKey(value: unknown): SigningKey | undefined {
+  if (value === 'environment_key' || value === 'legacy_shared_key') {
+    return value;
+  }
+  Observability.recordError(
+    new Error('AI Gateway token response has no recognized signingKey'),
+    {signingKey: value},
+    {feature: 'ai-gateway'}
+  );
+  return undefined;
 }
 
 async function errorBody(error: unknown): Promise<Record<string, unknown>> {
@@ -48,34 +47,35 @@ async function errorBody(error: unknown): Promise<Record<string, unknown>> {
   }
 }
 
-function count(signingKey: SigningKey, outcome: GatewayRequestOutcome) {
+function count(outcome: GatewayRequestOutcome, signingKey?: SigningKey) {
   Observability.metrics.count(REQUEST_METRIC, 1, {
-    signing_key: signingKey,
     outcome,
+    ...(signingKey && {signing_key: signingKey}),
   });
 }
 
-export function recordGatewayRequestOk(signingKey: SigningKey): void {
-  count(signingKey, 'ok');
+// No token exists, so there is no key to label it with.
+export function recordTokenNotIssued(): void {
+  count('token_not_issued');
 }
 
-// Rails names in its error body the key it meant to sign with.
-export async function recordTokenNotIssued(error: unknown): Promise<void> {
-  const body = await errorBody(error);
-  count(parseSigningKey(body.signingKey), 'token_not_issued');
+export function recordGatewayRequestOk(
+  signingKey: SigningKey | undefined
+): void {
+  count('ok', signingKey);
 }
 
 export async function recordGatewayRequestError(
-  signingKey: SigningKey,
+  signingKey: SigningKey | undefined,
   error: unknown
 ): Promise<void> {
   const body = await errorBody(error);
   const status = error instanceof NetworkError ? error.response.status : 0;
   if (status === 401 && body.reason !== 'turnstile') {
-    count(signingKey, 'token_rejected');
+    count('token_rejected', signingKey);
   } else if (status >= 500) {
-    count(signingKey, 'gateway_error');
+    count('gateway_error', signingKey);
   } else {
-    count(signingKey, 'other_error');
+    count('other_error', signingKey);
   }
 }

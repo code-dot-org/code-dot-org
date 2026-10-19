@@ -134,8 +134,8 @@ const generateTextThroughGateway = async <
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
       const access = await fetchAccessToken(aichatContext).catch(
-        async (error: unknown) => {
-          await recordTokenNotIssued(error);
+        (error: unknown) => {
+          recordTokenNotIssued();
           throw error;
         }
       );

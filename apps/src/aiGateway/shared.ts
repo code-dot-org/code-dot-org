@@ -20,7 +20,7 @@ export interface GatewayAccessToken {
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
   /** The key Rails signed `token` with, chosen by a DCDO flag during the initial rollout. */
-  signingKey: SigningKey;
+  signingKey: SigningKey | undefined;
 }
 
 // Use the provided AichatContext or fall back to the default context.

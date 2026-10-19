@@ -1,5 +1,6 @@
 jest.mock('@code-dot-org/core/plugins/observability', () => ({
   metrics: {count: jest.fn()},
+  recordError: jest.fn(),
 }));
 
 import * as Observability from '@code-dot-org/core/plugins/observability';
@@ -13,6 +14,7 @@ import {
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const countMock = Observability.metrics.count as jest.Mock;
+const recordErrorMock = Observability.recordError as jest.Mock;
 
 function networkError(status: number, body: unknown): NetworkError {
   return new NetworkError(
@@ -31,17 +33,20 @@ function lastTags() {
 
 beforeEach(() => {
   countMock.mockClear();
+  recordErrorMock.mockClear();
 });
 
 describe('parseSigningKey', () => {
   it('keeps the two keys Rails reports', () => {
     expect(parseSigningKey('environment_key')).toBe('environment_key');
     expect(parseSigningKey('legacy_shared_key')).toBe('legacy_shared_key');
+    expect(recordErrorMock).not.toHaveBeenCalled();
   });
 
-  it('reports anything else as not_reported', () => {
-    expect(parseSigningKey(undefined)).toBe('not_reported');
-    expect(parseSigningKey('production')).toBe('not_reported');
+  it('reports anything else as an error and names no key', () => {
+    expect(parseSigningKey(undefined)).toBeUndefined();
+    expect(parseSigningKey('production')).toBeUndefined();
+    expect(recordErrorMock).toHaveBeenCalledTimes(2);
   });
 });
 
@@ -57,24 +62,10 @@ describe('recordGatewayRequestOk', () => {
 });
 
 describe('recordTokenNotIssued', () => {
-  it('takes the signing key from the Rails error body', async () => {
-    await recordTokenNotIssued(
-      networkError(500, {signingKey: 'environment_key'})
-    );
+  it('counts token_not_issued without a signing key', () => {
+    recordTokenNotIssued();
 
-    expect(lastTags()).toEqual({
-      signing_key: 'environment_key',
-      outcome: 'token_not_issued',
-    });
-  });
-
-  it('reports not_reported when Rails gave no readable answer', async () => {
-    await recordTokenNotIssued(new Error('network down'));
-
-    expect(lastTags()).toEqual({
-      signing_key: 'not_reported',
-      outcome: 'token_not_issued',
-    });
+    expect(lastTags()).toEqual({outcome: 'token_not_issued'});
   });
 });
 
@@ -107,6 +98,15 @@ describe('recordGatewayRequestError', () => {
       signing_key: 'legacy_shared_key',
       outcome: 'gateway_error',
     });
+  });
+
+  it('counts without a signing key when the token response named none', async () => {
+    await recordGatewayRequestError(
+      undefined,
+      networkError(500, {error: 'Unknown Error'})
+    );
+
+    expect(lastTags()).toEqual({outcome: 'gateway_error'});
   });
 
   it('counts anything else as other_error', async () => {

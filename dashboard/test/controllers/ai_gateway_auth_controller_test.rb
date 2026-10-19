@@ -182,7 +182,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
   test 'reports and refuses to mint when the flag is on and the environment key cannot be loaded' do
     stub_environment_key_enabled(true)
     CDO.stubs(:ai_gateway_jwt_auth_key).raises(RuntimeError, 'secret not found')
-    Observability::Errors.expects(:report).once
+    Observability::Errors.expects(:report).with(instance_of(RuntimeError), has_entry(:context, has_entry(:signing_key_name, 'environment_key'))).once
     sign_in(@authorized_teacher)
     User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
     JWT.expects(:encode).never
@@ -190,7 +190,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     post :get_access_token, params: @params, as: :json
 
     assert_response :internal_server_error
-    assert_equal 'environment_key', JSON.parse(response.body)['signingKey']
+    assert_nil JSON.parse(response.body)['signingKey']
   end
 
   private def stub_environment_key_enabled(value)

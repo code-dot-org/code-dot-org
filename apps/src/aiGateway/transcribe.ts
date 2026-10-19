@@ -43,8 +43,8 @@ async function transcribeThroughGateway(
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const access = await fetchAccessToken().catch(async (error: unknown) => {
-        await recordTokenNotIssued(error);
+      const access = await fetchAccessToken().catch((error: unknown) => {
+        recordTokenNotIssued();
         throw error;
       });
       const {token, turnstileEnforcementMode} = access;
