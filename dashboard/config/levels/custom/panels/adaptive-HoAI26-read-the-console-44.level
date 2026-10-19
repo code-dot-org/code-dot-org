@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:45:36.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-read-the-console-44-9f5dbebe-f7db-4099-88dc-e4c8077c964a",
+        "text": "When your web page has a problem, the browser tells you in the console. Look for red messages!",
+        "imageUrl": "https://images.code.org/9239139758860ff8eb99c011025eb49e-adaptive-HoAI26-read-the-console-44-panel-1-443dcdb5-66f0-4e7c-955d-9afa22b55956.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-read-the-console-44-1a366fb1-0ee1-46b7-a440-c95f22f0bec3",
+        "text": "Each error message usually includes a keyword. This word helps you understand the type of problem.",
+        "imageUrl": "https://images.code.org/a7df55421ed495e37c630bf44874209e-adaptive-HoAI26-read-the-console-44-panel-2-9240ad6a-60d1-4d77-90c9-5c4065e72bab.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-read-the-console-44-b0471c8c-a563-4395-a761-b77888ad3865",
+        "text": "The message also points to a line number. This tells you the exact spot in your code where the error occurred.",
+        "imageUrl": "https://images.code.org/e412c57298f4fd938b95f7979de2cc1e-adaptive-HoAI26-read-the-console-44-panel-3-27c79e25-a2f5-4a5f-bec8-2f8e844ee3fc.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Watch a screen recording demonstrating how to read the console. Learn to open the console, locate red error messages, and identify the line number and keyword pointing to the problem."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:46:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:46:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

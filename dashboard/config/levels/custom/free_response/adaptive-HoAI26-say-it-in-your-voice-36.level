@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-10-16T21:42:19.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "You just learned how important tone words are for keeping your site consistent. Now, think about your own project: in three words, how should your site sound to visitors? For example, you might choose words like 'friendly, calm, or funny'.",
+    "placeholder": "Enter your three tone words...",
+    "encrypted_solution": "2qyeWhPngph/FUV4ic4vqsqO8Am2xCYkVjA2ePXKKqcVJymcT8oOPReJz+D3\nAtyEq8/zLdU4ZCBBnRrNQF0YSWawRxcoMCGjE371k4PJE9t0YieQtOtLUQOH\nusQqJ/QFhAzNi/c6RTqnU90wpEKIwfqhdy3DpQKaQW0MS7M4LwmWVWnh+q1N\nzTOhWZToMtV9vzs9y/e9k94jDELZkk20/hqFlJCah5zoEEbXDRonR7ez4+5A\napSnQ2hZZiaL8LYc\n",
+    "generate_outline": "Choose three words that describe the desired tone or voice of your site, such as 'friendly, calm, or funny'. These words will help guide the overall feeling of your content."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:42:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:42:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:42:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:42:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

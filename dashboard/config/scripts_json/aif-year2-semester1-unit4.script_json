@@ -9,8 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-15 18:39:34 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-10-18 04:20:03 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -3645,7 +3645,7 @@
       "key": "ca49252b-58cd-465b-9ef7-86c0dc8725a9",
       "position": 8,
       "properties": {
-        "description": "If we have a decision tree where the groups aren’t all pure yet, we can add another question to the tree to split the data again. The computer can pick the question that will result in the most pure groups.\n",
+        "description": "If we have a decision tree where the groups aren’t all pure yet, we can add another question to the tree to split the data again. The computer can pick the question that will result in the highest purity.\n",
         "remarks": true
       },
       "seeding_key": {

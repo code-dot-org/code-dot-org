@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:34:52.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-remember-and-show-23-60a73507-9342-4fa5-a250-17cda9d517ab",
+        "text": "The page can remember what happened.",
+        "imageUrl": "https://images.code.org/5bb00abc5cfda837a65a136643dc3af1-adaptive-HoAI26-remember-and-show-23-panel-1-bf0d0fa6-1a8d-4dc8-a94d-d70fa50529a7.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-remember-and-show-23-f84d3cc7-053c-47be-b86b-2c325cea5a74",
+        "text": "A click can save a pick.",
+        "imageUrl": "https://images.code.org/ce265e6b6345fa3caa0b8571cbea87c0-adaptive-HoAI26-remember-and-show-23-panel-2-ef0919eb-d177-4b05-9643-e8fd7b06befa.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-remember-and-show-23-2e31310f-67f4-4985-97b5-cb4e3737bf88",
+        "text": "Then it can show them again.",
+        "imageUrl": "https://images.code.org/ebb6ae5b5f40261db7b8c0ccff601099-adaptive-HoAI26-remember-and-show-23-panel-3-6ef9ca50-194c-4102-beeb-5fa10281c1e9.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-remember-and-show-23-fd44436a-8421-46e6-86fc-09e5d92ff1a7",
+        "text": "Showing can be a bar, a count, or a preview.",
+        "imageUrl": "https://images.code.org/87f19414e63b0d1c15a957cb16b1ded6-adaptive-HoAI26-remember-and-show-23-panel-4-58d0e39d-127e-4f8b-abd2-a77c730831b6.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Discover how web pages can remember and display information. Learn that clicks can save choices, and saved picks can be shown again, often as progress bars, counts, or previews."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:35:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:35:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

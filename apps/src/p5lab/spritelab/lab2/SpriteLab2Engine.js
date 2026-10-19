@@ -50,6 +50,7 @@ import {
   usesPlatformPhysics,
   wallBox,
 } from './platformPhysics';
+import {createPlayerActionTracker, isPlayerAction} from './playerActions';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -86,6 +87,8 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
+// The inputEvents type a when-player hat registers.
+const PLAYER_ACTION_EVENT = 'playerAction';
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -171,6 +174,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // ({touching: image names, height: 0 floor to 1 top}) each frame a
+    // player exists.
+    this.onPlayerProgress = null;
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
@@ -551,6 +557,28 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    // The physics pass records the player's actions; the events that fire
+    // on them run one frame later.
+    this.playerActionTracker_ = createPlayerActionTracker();
+    this.playerActions_ = new Set();
+    library.commands.whenPlayer = (action, callback) => {
+      if (isPlayerAction(action)) {
+        library.addEvent(PLAYER_ACTION_EVENT, {action}, callback);
+      }
+    };
+    const callbackArgs = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent => {
+      if (inputEvent.type !== PLAYER_ACTION_EVENT) {
+        return callbackArgs(inputEvent);
+      }
+      const fires = this.playerActions_.has(inputEvent.args.action);
+      // A burst in a jump handler starts where the player took off; the
+      // handler runs on the interpreter's next tick, so the frame is kept.
+      if (fires && inputEvent.args.action === 'jump' && this.p5Wrapper.p5) {
+        this.jumpEventFrame_ = this.p5Wrapper.p5.frameCount;
+      }
+      return fires ? [{}] : [];
+    };
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -1230,6 +1258,61 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Both the requested and the resolved positions are known here, so this
     // is where the observer is fed.
     this.observePlayer_(players, walls, view);
+    this.trackPlayerActions_(players, walls, view);
+    this.reportPlayerProgress_(players, view);
+  }
+
+  trackPlayerActions_(players, walls, view) {
+    if (!players.length) {
+      this.playerActionTracker_.forget();
+      this.playerActions_ = new Set();
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    const animation = sprite.animation;
+    this.playerActions_ = this.playerActionTracker_.observe(
+      {
+        sprite,
+        requestedX,
+        requestedY,
+        gravity: this.platformGravity_,
+        walls,
+        view,
+        animationFrame: animation ? animation.getFrame() : undefined,
+        animationFrames: animation ? animation.getLastFrame() + 1 : undefined,
+      },
+      Date.now()
+    );
+  }
+
+  reportPlayerProgress_(players, view) {
+    if (!this.onPlayerProgress || !players.length) {
+      return;
+    }
+    const player = players[0].sprite;
+    const half = sprite => ({
+      w: (sprite.width * sprite.scale) / 2,
+      h: (sprite.height * sprite.scale) / 2,
+    });
+    const p = half(player);
+    const touching = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+        return;
+      }
+      const s = half(sprite);
+      if (
+        Math.abs(sprite.position.x - player.position.x) < p.w + s.w &&
+        Math.abs(sprite.position.y - player.position.y) < p.h + s.h
+      ) {
+        touching.push(sprite.getAnimationLabel());
+      }
+    });
+    const feet = player.position.y + p.h;
+    this.onPlayerProgress({
+      touching,
+      height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
+    });
   }
 
   /** The audio's observer of the player, or null. */
