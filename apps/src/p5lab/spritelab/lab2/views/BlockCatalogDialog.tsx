@@ -1,11 +1,11 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Markdown} from '@code-dot-org/markdown';
 import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {CatalogEntry} from '../blockCatalog';
 import {SceneType} from '../types';
@@ -116,7 +116,10 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                       {selected.help.summary}
                     </p>
                     {selected.help.body && (
-                      <SafeMarkdown markdown={selected.help.body} />
+                      <Markdown
+                        content={selected.help.body}
+                        className={moduleStyles.body}
+                      />
                     )}
                   </div>
                 </div>

@@ -186,6 +186,12 @@ $footer-height: 44px;
   font-weight: 600;
 }
 
+// The markdown body's paragraph takes the dialog's color, not the
+// typography variant's.
+.body p {
+  color: inherit;
+}
+
 .addRow {
   margin-top: 16px;
 }
