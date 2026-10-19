@@ -60,7 +60,7 @@ describe('VideoStep', () => {
   it('shows a YouTube iframe when YouTube is available', () => {
     mockTestYouTubeAvailable.mockImplementation((_noCookie, cb) => cb(true));
     renderStep();
-    expect(screen.getByTitle('Video player')).toBeInTheDocument();
+    expect(screen.getByTitle('Simple Modal Video Player')).toBeInTheDocument();
     expect(
       screen.queryByRole('region', {name: 'VideoJS player'})
     ).not.toBeInTheDocument();
