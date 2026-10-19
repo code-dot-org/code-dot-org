@@ -17,13 +17,16 @@ const COLUMN_TYPES = {
 };
 
 const ALL_COLUMNS = Object.keys(COLUMN_TYPES);
+const ALL_ROWS = [0, 1, 2, 3];
+const valueAt = (row, column) => DATA[row][column];
 
 function renderView(source = {}) {
   return renderHook(props => useTableView(props), {
     initialProps: {
-      data: DATA,
+      rows: ALL_ROWS,
       columns: ALL_COLUMNS,
       columnTypes: COLUMN_TYPES,
+      valueAt,
       ...source,
     },
   });
@@ -64,9 +67,10 @@ describe('useTableView', () => {
   test('a numerical value that is not a number sorts as text', () => {
     const data = [{size: '10'}, {size: 'unknown'}, {size: '9'}];
     const {result} = renderView({
-      data,
+      rows: [0, 1, 2],
       columns: ['size'],
       columnTypes: {size: ColumnTypes.NUMERICAL},
+      valueAt: (row, column) => data[row][column],
     });
     act(() => result.current.toggleSort('size'));
     expect(result.current.rows).toEqual([2, 0, 1]);
@@ -85,14 +89,30 @@ describe('useTableView', () => {
     act(() => result.current.toggleSort('size'));
 
     const showOnlyName = {
-      data: DATA,
+      rows: ALL_ROWS,
       columns: ['name'],
       columnTypes: COLUMN_TYPES,
+      valueAt,
     };
     rerender(showOnlyName);
     expect(result.current.rows).toEqual([0, 1, 2, 3]);
 
     rerender({...showOnlyName, columns: ALL_COLUMNS});
     expect(result.current.rows).toEqual([0, 3, 2, 1]);
+  });
+
+  test('a symbol column never shares a sort with a named column', () => {
+    const negatedSize = Symbol('size');
+    const {result} = renderView({
+      columns: [...ALL_COLUMNS, negatedSize],
+      columnTypes: {...COLUMN_TYPES, [negatedSize]: ColumnTypes.NUMERICAL},
+      valueAt: (row, column) =>
+        column === negatedSize ? -DATA[row].size : DATA[row][column],
+    });
+    act(() => result.current.toggleSort(negatedSize));
+
+    expect(result.current.sortDirection(negatedSize)).toBe('ascending');
+    expect(result.current.sortDirection('size')).toBeUndefined();
+    expect(result.current.rows).toEqual([1, 2, 0, 3]);
   });
 });

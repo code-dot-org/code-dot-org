@@ -3,7 +3,11 @@ import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {type ReactNode} from 'react';
 
-import {nextSortDirection, type TableView} from '../useTableView';
+import {
+  type ColumnId,
+  nextSortDirection,
+  type TableView,
+} from '../useTableView';
 
 import tableStyles from './dataTable.module.scss';
 
@@ -18,7 +22,7 @@ const SORT_ORDERS = {
 };
 
 interface ColumnHeaderProps {
-  column: string;
+  column: ColumnId;
   name: string;
   view?: TableView;
   // The selected column's dark header needs the sort button in its own color.

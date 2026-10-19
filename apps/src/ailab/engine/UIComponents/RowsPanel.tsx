@@ -4,7 +4,7 @@ import React, {type ReactNode, useId, useMemo} from 'react';
 import {dataColumnsFor} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {useTableView} from '../useTableView';
+import {useDatasetValueAt, useTableView} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
@@ -46,11 +46,12 @@ const RowsPanel = ({
     ],
     [data, project, showAllColumns]
   );
+  const valueAt = useDatasetValueAt(data);
   const tableView = useTableView({
-    data,
+    rows: rowIndices,
     columns,
     columnTypes,
-    rows: rowIndices,
+    valueAt,
   });
 
   return (

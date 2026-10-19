@@ -3,31 +3,34 @@
   not applied, so it returns when that column is shown.
 */
 
-import {useMemo, useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
 import type {DataRow} from './types';
 
 export type SortDirection = 'ascending' | 'descending';
 
+// A column from outside the dataset takes a symbol, which no column name can match.
+export type ColumnId = string | symbol;
+
 interface TableSort {
-  column: string;
+  column: ColumnId;
   direction: SortDirection;
 }
 
 export interface TableView {
   rows: number[];
-  isNumerical: (column: string) => boolean;
-  sortDirection: (column: string) => SortDirection | undefined;
-  toggleSort: (column: string) => void;
+  isNumerical: (column: ColumnId) => boolean;
+  sortDirection: (column: ColumnId) => SortDirection | undefined;
+  toggleSort: (column: ColumnId) => void;
 }
 
 interface TableViewSource {
-  data: DataRow[];
-  columns: string[];
-  columnTypes: Record<string, string>;
-  // Defaults to every row of `data`.
-  rows?: number[];
+  rows: number[];
+  columns: ColumnId[];
+  columnTypes: Partial<Record<ColumnId, string>>;
+  // Keep it stable across renders, or every render sorts again.
+  valueAt: (row: number, column: ColumnId) => string | number;
 }
 
 const collator = new Intl.Collator('en', {numeric: true});
@@ -57,34 +60,37 @@ export function nextSortDirection(
   return direction === 'ascending' ? 'descending' : undefined;
 }
 
+// For a table whose columns all come from the dataset.
+export function useDatasetValueAt(data: DataRow[]) {
+  return useCallback(
+    (row: number, column: ColumnId) => data[row][column as string],
+    [data]
+  );
+}
+
 export function useTableView({
-  data,
+  rows,
   columns,
   columnTypes,
-  rows: sourceRows,
+  valueAt,
 }: TableViewSource): TableView {
   const [sort, setSort] = useState<TableSort>();
 
-  const allRows = useMemo(
-    () => sourceRows ?? [...data.keys()],
-    [data, sourceRows]
-  );
-
-  const rows = useMemo(() => {
+  const sortedRows = useMemo(() => {
     if (!sort || !columns.includes(sort.column)) {
-      return allRows;
+      return rows;
     }
     const {column, direction} = sort;
     const numerical = columnTypes[column] === ColumnTypes.NUMERICAL;
     const sign = direction === 'ascending' ? 1 : -1;
-    return [...allRows].sort(
+    return [...rows].sort(
       (a, b) =>
-        sign * compareValues(data[a][column], data[b][column], numerical)
+        sign * compareValues(valueAt(a, column), valueAt(b, column), numerical)
     );
-  }, [data, allRows, columns, columnTypes, sort]);
+  }, [rows, columns, columnTypes, valueAt, sort]);
 
   return {
-    rows,
+    rows: sortedRows,
     isNumerical: column => columnTypes[column] === ColumnTypes.NUMERICAL,
     sortDirection: column =>
       sort?.column === column ? sort.direction : undefined,
