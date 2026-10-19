@@ -1,6 +1,6 @@
 require_relative 'hooks_utils'
 
-REPO_DIR = File.expand_path('../../../', __FILE__).freeze
+REPO_DIR = File.expand_path('../..', __dir__).freeze
 BLOCKS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/blocks', __FILE__).freeze
 SHARED_FUNCTIONS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/shared_functions', __FILE__).freeze
 LIBRARIES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/libraries', __FILE__).freeze

@@ -4,7 +4,7 @@ require 'fileutils'
 
 module EyesUtils
   EYES_ACCESS_KEY_ENV_NAME = 'EYES_ACCESS_KEY'.freeze
-  TMP_UTIL_DIR = File.expand_path('../../../.tmputils', __FILE__).freeze
+  TMP_UTIL_DIR = File.expand_path('../../.tmputils', __dir__).freeze
 
   MERGE_UTIL_PATH = "#{TMP_UTIL_DIR}/applitools-merge.jar".freeze
   REMOTE_JAR_SOURCE = 'https://s3.amazonaws.com/cdo-circle-utils/applitools-merge.jar'.freeze

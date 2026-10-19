@@ -4,7 +4,7 @@ require_relative '../deployment'
 # Ensure all application secrets are loaded.
 CDO.cdo_secrets&.required! unless rack_env?(:development)
 
-require File.expand_path('../config/environment',  __FILE__)
+require File.expand_path('config/environment',  __dir__)
 
 use Rack::ContentLength
 require 'rack/ssl-enforcer'

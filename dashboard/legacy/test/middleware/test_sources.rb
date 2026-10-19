@@ -184,7 +184,7 @@ class SourcesTest < FilesApiTestBase
   def test_get_source_blocks_profanity_violations
     # Given a Play Lab program with a privacy violation
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-normal-source.json', __dir__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
@@ -212,7 +212,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_get_source_blocks_privacy_violations
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __dir__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
@@ -258,7 +258,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_policy_channel_api
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __dir__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
@@ -276,7 +276,7 @@ class SourcesTest < FilesApiTestBase
 
   def test_get_source_blocks_sketchlab_profanity_violations
     filename = MAIN_JSON
-    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
+    file_data = File.read(File.expand_path('../fixtures/privacy-profanity/sketchlab-normal-source.json', __dir__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     Projects.any_instance.stubs(:get).returns({projectType: 'sketchlab'})
     @api.put_object(filename, file_data, file_headers)
@@ -308,7 +308,7 @@ class SourcesTest < FilesApiTestBase
     Projects.any_instance.stubs(:get).returns({projectType: 'sketchlab'})
 
     # A phone number in a text node is a violation
-    violation_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-privacy-violation-source.json', __FILE__))
+    violation_data = File.read(File.expand_path('../fixtures/privacy-profanity/sketchlab-privacy-violation-source.json', __dir__))
     @api.put_object(filename, violation_data, file_headers)
     assert successful?
     policy_check_response = @api.channel_policy_violation
@@ -316,7 +316,7 @@ class SourcesTest < FilesApiTestBase
     assert_equal true, JSON.parse(policy_check_response)['has_violation']
 
     # A clean source is not
-    clean_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
+    clean_data = File.read(File.expand_path('../fixtures/privacy-profanity/sketchlab-normal-source.json', __dir__))
     @api.put_object(filename, clean_data, file_headers)
     assert successful?
     policy_check_response = @api.channel_policy_violation

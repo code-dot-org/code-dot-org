@@ -2,11 +2,11 @@ require 'simplecov'
 require_relative '../../lib/cdo/ci_utils'
 
 SimpleCov.start do
-  coverage_dir File.expand_path('../coverage', __FILE__)
+  coverage_dir File.expand_path('coverage', __dir__)
 
   add_filter do |source|
-    is_not_bin_file = !source.filename.start_with?(File.expand_path('../../', __FILE__))
-    is_bin_test_file = source.filename.start_with?(File.expand_path('../', __FILE__))
+    is_not_bin_file = !source.filename.start_with?(File.expand_path('..', __dir__))
+    is_bin_test_file = source.filename.start_with?(File.expand_path(__dir__))
     is_not_bin_file || is_bin_test_file
   end
 

@@ -1,5 +1,5 @@
-path = File.expand_path('../../deployment.rb', __FILE__)
-path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
+path = File.expand_path('../deployment.rb', __dir__)
+path = File.expand_path('../../deployment.rb', __dir__) unless File.file?(path)
 require path
 require 'concurrent' # Need for `:auto`
 CDO.execution_context = :web_application

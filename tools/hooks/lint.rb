@@ -3,7 +3,7 @@ require 'yaml'
 require_relative 'hooks_utils'
 require_relative '../../lib/cdo/python_venv'
 
-REPO_DIR = File.expand_path('../../../', __FILE__).freeze
+REPO_DIR = File.expand_path('../..', __dir__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
 FRONTEND_DIR = "#{REPO_DIR}/frontend".freeze
 PYTHON_DIR = "#{REPO_DIR}/python".freeze
