@@ -333,11 +333,8 @@ def dotd_menu(dotd_name)
         end
       end
       menu.choice(:L) do
-        if run_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
-          @logger.info 'commits content on levelbuilder'
-        else
-          @logger.info 'error attempting to commit content on levelbuilder'
-        end
+        run_interactively_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
+        @logger.info 'runs content-push on levelbuilder'
       end
       menu.choice(:DTL) {do_dtl(dotd_name)}
       menu.choice(:Q) do
@@ -441,6 +438,25 @@ def run_on(server_name, command)
   # Non-zero exit code from the command
   warn_and_confirm "There was an error running `#{command}` on #{server_name}"
   return false
+end
+
+# Runs command on server_name with a terminal attached, so the command can
+# prompt for input and stream its output as it goes.
+#
+# Under SSM the return value says nothing about the command: the Session Manager
+# plugin discards the remote exit status
+# (https://github.com/aws/session-manager-plugin/issues/59), so failures have to
+# be read out of the streamed output. Use #run_on when the result has to be
+# acted on.
+#
+# @param server_name [String] The server to run the command on.
+# @param command [String] The command to be run.
+def run_interactively_on(server_name, command)
+  if Cdo::Aws::SessionManager.available?
+    Cdo::Aws::SessionManager.start_interactive_command(server_name, command)
+  else
+    ssh_run_on(server_name, command)
+  end
 end
 
 def ssh_run_on(server_name, command)
