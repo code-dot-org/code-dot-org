@@ -96,8 +96,13 @@ export function useProgress(
   );
 
   // A level step's progress is its level's own, so it goes to a milestone.
-  const send = useCallback(
-    (step: Step, write: StepWrite, levelResult: number) => {
+  const reportStepProgress = useCallback(
+    (
+      step: Step,
+      change: (entry?: StepProgress) => StepProgress,
+      write: StepWrite
+    ) => {
+      updateStep(step.id, change);
       if (step.kind !== 'level') {
         store.saveStep({scriptId, levelId}, step.id, write);
         return;
@@ -107,72 +112,76 @@ export function useProgress(
       reportLevelStep(
         properties.id,
         properties.appName,
-        levelResult,
+        write.completed ? TestResults.ALL_PASS : TestResults.LEVEL_STARTED,
         write.timeSinceLastSave ?? 0
       ).catch(error => logFailure(`report ${step.id}`, error));
     },
-    [store, scriptId, levelId, reportLevelStep]
+    [updateStep, store, scriptId, levelId, reportLevelStep]
   );
 
   const startStep = useCallback(
     (step: Step) => {
       if (step.id === PROJECT_STEP_ID) return;
-      updateStep(step.id, entry => ({
-        timeSpent: 0,
-        ...entry,
-        status: entry?.status ?? 'started',
-      }));
-      send(step, {started: true}, TestResults.LEVEL_STARTED);
+      reportStepProgress(
+        step,
+        entry => ({
+          timeSpent: 0,
+          ...entry,
+          status: entry?.status ?? 'started',
+        }),
+        {started: true}
+      );
     },
-    [updateStep, send]
+    [reportStepProgress]
   );
 
   const completeStep = useCallback(
     (step: Step, timeMs: number) => {
       if (step.id === PROJECT_STEP_ID) return;
-      updateStep(step.id, entry => ({
-        ...entry,
-        status: 'complete',
-        timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
-      }));
-      send(
+      reportStepProgress(
         step,
-        {completed: true, timeSinceLastSave: timeMs},
-        TestResults.ALL_PASS
+        entry => ({
+          ...entry,
+          status: 'complete',
+          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+        }),
+        {completed: true, timeSinceLastSave: timeMs}
       );
     },
-    [updateStep, send]
+    [reportStepProgress]
   );
 
   /** Records the time on a step the student leaves without finishing it. */
   const leaveStep = useCallback(
     (step: Step, timeMs: number) => {
       if (step.id === PROJECT_STEP_ID) return;
-      updateStep(step.id, entry => ({
-        ...entry,
-        status: entry?.status ?? 'started',
-        timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
-      }));
-      send(step, {timeSinceLastSave: timeMs}, TestResults.LEVEL_STARTED);
+      reportStepProgress(
+        step,
+        entry => ({
+          ...entry,
+          status: entry?.status ?? 'started',
+          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+        }),
+        {timeSinceLastSave: timeMs}
+      );
     },
-    [updateStep, send]
+    [reportStepProgress]
   );
 
   const saveAnswers = useCallback(
-    (step: Step, questionId: number, answers: Answer[], timeMs: number) => {
-      updateStep(step.id, entry => ({
-        ...entry,
-        status: entry?.status ?? 'started',
-        submitted: true,
-        timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
-        answers: {...entry?.answers, [questionId]: answers},
-      }));
-      store.saveStep({scriptId, levelId}, step.id, {
-        answers: {questionId, list: answers},
-        timeSinceLastSave: timeMs,
-      });
-    },
-    [updateStep, store, scriptId, levelId]
+    (step: Step, questionId: number, answers: Answer[], timeMs: number) =>
+      reportStepProgress(
+        step,
+        entry => ({
+          ...entry,
+          status: entry?.status ?? 'started',
+          submitted: true,
+          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+          answers: {...entry?.answers, [questionId]: answers},
+        }),
+        {answers: {questionId, list: answers}, timeSinceLastSave: timeMs}
+      ),
+    [reportStepProgress]
   );
 
   const saveGeneratedInstructions = useCallback(

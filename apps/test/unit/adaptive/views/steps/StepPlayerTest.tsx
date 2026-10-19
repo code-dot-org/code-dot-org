@@ -1,4 +1,4 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {Checkpoint, Step} from '@cdo/apps/adaptive/types';
@@ -7,16 +7,9 @@ import {
   PathwayContextValue,
 } from '@cdo/apps/adaptive/views/PathwayContext';
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
+import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
-const mockIdleTimer: {onIdle?: () => void; onActive?: () => void} = {};
-jest.mock('react-idle-timer', () => ({
-  __esModule: true,
-  default: (props: {onIdle: () => void; onActive: () => void}) => {
-    mockIdleTimer.onIdle = props.onIdle;
-    mockIdleTimer.onActive = props.onActive;
-    return null;
-  },
-}));
+const timer = Lab2ProgressTimer.getInstance();
 
 // A kind the player has no view for, so it shows its own Continue button.
 const placeholder = (id: string) =>
@@ -98,11 +91,11 @@ describe('StepPlayer', () => {
     const {calls} = renderPlayer();
 
     now.mockReturnValue(2000);
-    act(() => mockIdleTimer.onIdle?.());
+    timer.startIdle();
     now.mockReturnValue(6000);
-    act(() => mockIdleTimer.onActive?.());
+    timer.endIdle();
     now.mockReturnValue(8000);
-    act(() => mockIdleTimer.onIdle?.());
+    timer.startIdle();
     now.mockReturnValue(9000);
     fireEvent.click(screen.getByRole('button', {name: /Back to map/}));
 
