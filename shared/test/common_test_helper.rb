@@ -97,8 +97,10 @@ module SetupTest
   def self.reset_dashboard_test_tables
     DASHBOARD_TEST_TABLES.each do |table|
       # rubocop:disable CustomCops/DashboardDbUsage
-      DASHBOARD_DB[table.to_sym].delete
-      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
+      DASHBOARD_DB.transaction(retry_on: Sequel::DatabaseDisconnectError) do
+        DASHBOARD_DB[table.to_sym].delete
+        DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
+      end
       # rubocop:enable CustomCops/DashboardDbUsage
     end
   end

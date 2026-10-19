@@ -65,11 +65,13 @@ module Poste
       path = emails_dir "#{name}#{extname}"
       next unless File.file? path
 
-      messages = POSTE_DB[:poste_messages]
-      unless messages.where(name: name).first
-        id = messages.insert(name: name)
-        raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger&.info "Registered new message template '#{name}' as #{id}"
+      POSTE_DB.transaction(retry_on: Sequel::DatabaseDisconnectError) do
+        messages = POSTE_DB[:poste_messages]
+        unless messages.where(name: name).first
+          id = messages.insert(name: name)
+          raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
+          logger&.info "Registered new message template '#{name}' as #{id}"
+        end
       end
 
       return path
