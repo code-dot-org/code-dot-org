@@ -453,8 +453,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  const instructionsText =
-    showingResult && resultInstructions ? resultInstructions : instructions;
+  // The steps have the panel while a picture is made.
+  const instructionsText = generating
+    ? undefined
+    : showingResult && resultInstructions
+    ? resultInstructions
+    : instructions;
   const instructionsBlock = instructionsText && (
     <MainInstructionsContent
       instructionsText={instructionsText}

@@ -299,7 +299,21 @@ describe('SentenceScene', () => {
     const panel = screen.getByRole('region', {name: 'Make your picture'});
     expect(panel.textContent).toMatch(/^Prompt AI to make a character\./);
     pickCreature();
-    await generate();
+    // While the picture is made, the steps have the panel.
+    let finish: (value: typeof RESULT) => void = () => {};
+    generateCharacterSet.mockReturnValueOnce(
+      new Promise(resolve => {
+        finish = resolve;
+      })
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(panel.textContent).not.toMatch(/Prompt AI/);
+    await act(async () => {
+      finish(RESULT);
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(SETTLE_MS);
+    });
     expect(panel.textContent).toMatch(/ready\.AI generated an image/);
     fireEvent.click(screen.getByRole('button', {name: 'Modify prompt'}));
     expect(panel.textContent).toMatch(/^Prompt AI to make a character\./);
