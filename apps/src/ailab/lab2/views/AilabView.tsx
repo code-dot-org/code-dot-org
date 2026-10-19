@@ -1,6 +1,14 @@
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
-import * as ailab from '@cdo/apps/ailab/engine';
+import {
+  AilabEngine,
+  type AilabEngineProps,
+  instructionsDismissed,
+  type InstructionsKey,
+  type Mode,
+  type SaveResponse,
+  startOver,
+} from '@cdo/apps/ailab/engine';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {LabProps} from '@cdo/apps/lab2/types';
@@ -24,8 +32,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
-    useState<ailab.InstructionsKey>();
-  const mode: ailab.Mode | undefined = useMemo(
+    useState<InstructionsKey>();
+  const mode: Mode | undefined = useMemo(
     () => (levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined),
     [levelProperties.mode]
   );
@@ -42,18 +50,18 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     dispatch(continueOrFinishLesson());
   };
 
-  const setInstructionsKey: ailab.AilabEngineProps['setInstructionsKey'] = (
+  const setInstructionsKey: AilabEngineProps['setInstructionsKey'] = (
     key,
     options
   ) => {
     setDynamicInstructionsKey(key);
     // Overlay is not shown in Lab2 AI Lab; dismiss immediately.
     if (options?.showOverlay) {
-      ailab.instructionsDismissed();
+      instructionsDismissed();
     }
   };
 
-  const saveTrainedModel: ailab.AilabEngineProps['saveTrainedModel'] = async (
+  const saveTrainedModel: AilabEngineProps['saveTrainedModel'] = async (
     dataToSave,
     callback
   ) => {
@@ -64,7 +72,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
         true,
         {'Content-Type': 'application/json'}
       );
-      const saveResponse = (await response.json()) as ailab.SaveResponse;
+      const saveResponse = (await response.json()) as SaveResponse;
       callback(saveResponse);
     } catch (error) {
       callback({status: 'error'});
@@ -76,7 +84,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   };
 
   const onStartOver = () => {
-    showDialog({type: DialogType.StartOver, handleConfirm: ailab.startOver});
+    showDialog({type: DialogType.StartOver, handleConfirm: startOver});
   };
 
   const onTrained = (accuracy: number) => {
@@ -118,7 +126,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       <div className={styles.divider} />
       <div className={styles.workspace}>
         <div className={styles.root}>
-          <ailab.AilabEngine
+          <AilabEngine
             assetPath="/blockly/media/skins/ailab/"
             mode={mode}
             levelId={levelProperties.id}
