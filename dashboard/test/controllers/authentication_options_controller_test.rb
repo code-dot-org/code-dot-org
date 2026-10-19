@@ -158,27 +158,27 @@ class AuthenticationOptionsControllerTest < ActionDispatch::IntegrationTest
     assert_includes teacher.authentication_options, classlink_option
   end
 
-  test 'disconnect: a Clever student with no email falls back to a remaining option as primary' do
+  test 'disconnect: a ClassLink student with no email falls back to a remaining option as primary' do
     student = create(:student, :without_email_auth_option)
-    pre_v3_option = create_blank_email_option(student, AuthenticationOption::CLEVER, version: nil)
-    v3_option = create_blank_email_option(student, AuthenticationOption::CLEVER, version: AuthenticationOption::Clever::VERSION[:v3])
+    pre_v2_option = create_blank_email_option(student, AuthenticationOption::CLASSLINK, version: nil)
+    v2_option = create_blank_email_option(student, AuthenticationOption::CLASSLINK, version: AuthenticationOption::Classlink::VERSION[:v2])
     google_option = create(:google_authentication_option, user: student, email: random_email)
-    student.update!(primary_contact_info: v3_option)
+    student.update!(primary_contact_info: v2_option)
     blank_email_option_for_another_user
     student.reload
 
     # Preconditions
-    assert_equal '', v3_option.hashed_email
-    assert_equal v3_option, student.primary_contact_info
+    assert_equal '', v2_option.hashed_email
+    assert_equal v2_option, student.primary_contact_info
 
     sign_in student
-    post "/users/auth/#{v3_option.id}/disconnect"
+    post "/users/auth/#{v2_option.id}/disconnect"
     assert_includes(flash[:notice], "Success!")
     assert_response :redirect
 
     student.reload
-    refute_includes student.authentication_options, pre_v3_option
-    refute_includes student.authentication_options, v3_option
+    refute_includes student.authentication_options, pre_v2_option
+    refute_includes student.authentication_options, v2_option
     assert_equal [google_option], student.authentication_options.to_a
     assert_equal google_option, student.primary_contact_info
   end
