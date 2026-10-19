@@ -5,13 +5,13 @@
 import {setMetricsLogger} from '../../src/helpers/metrics';
 import train from '../../src/train';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 
 function trainAndCapture(mode) {
   const calls = [];
   setMetricsLogger((action, details) => calls.push({action, details}));
 
-  train.init(levelStore(mode));
+  train.init(levelStore(mode), levelProject());
   train.onClickTrain();
 
   return calls;
@@ -40,5 +40,11 @@ describe('the train-model metric', () => {
       accuracy: '100.00',
       trainer: 'treeClassify',
     });
+  });
+
+  test('is not logged when a pretrained level trains on load', () => {
+    expect(
+      trainAndCapture({trainer: 'decisionTree', pretrained: true})
+    ).toEqual([]);
   });
 });

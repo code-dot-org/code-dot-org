@@ -12,7 +12,12 @@ import {
   getSelectableColumns,
 } from '../../src/selectors';
 
-import {classificationState, allNumericalState} from './testData';
+import {
+  classificationState,
+  classificationProject,
+  allNumericalState,
+  allNumericalProject,
+} from './testData';
 
 describe('selecting columns by data type', () => {
   test('gets selected categorical features', async () => {
@@ -22,19 +27,19 @@ describe('selecting columns by data type', () => {
     expect(categoricalColumns).toEqual(['play', 'temp', 'weather']);
     const result = getSelectedCategoricalFeatures.resultFunc(
       categoricalColumns,
-      classificationState.selectedFeatures,
+      classificationProject.selectedFeatures
     );
     expect(result).toEqual(['temp', 'weather']);
   });
 
   test('gets selected numerical features', async () => {
     const numericalColumns = getNumericalColumns.resultFunc(
-      allNumericalState.columnsByDataType,
+      allNumericalState.columnsByDataType
     );
     expect(numericalColumns).toEqual(['batCount', 'mosquitoCount']);
     const result = getSelectedNumericalFeatures.resultFunc(
       numericalColumns,
-      allNumericalState.selectedFeatures,
+      allNumericalProject.selectedFeatures
     );
     expect(result).toEqual(['batCount']);
   });
@@ -46,16 +51,16 @@ describe('getting category options', () => {
       .resultFunc(classificationState.columnsByDataType)
       .sort();
     const selectedColumns = getSelectedColumns.resultFunc(
-      classificationState.selectedFeatures,
-      classificationState.labelColumn,
+      classificationProject.selectedFeatures,
+      classificationProject.labelColumn
     );
     const selectedCategoricalColumns = getSelectedCategoricalColumns.resultFunc(
       categoricalColumns,
-      selectedColumns,
+      selectedColumns
     );
     const uniqueOptionsByColumn = getUniqueOptionsByColumn.resultFunc(
       selectedCategoricalColumns,
-      classificationState.data,
+      classificationState.data
     );
     expect(uniqueOptionsByColumn['play']).toEqual(['no', 'yes']);
     expect(uniqueOptionsByColumn['temp']).toEqual(['cool', 'hot', 'mild']);
@@ -70,19 +75,19 @@ describe('getting category options', () => {
 describe('getting extrema', () => {
   test('gets extrema by column', async () => {
     const numericalColumns = getNumericalColumns.resultFunc(
-      allNumericalState.columnsByDataType,
+      allNumericalState.columnsByDataType
     );
     const selectedColumns = getSelectedColumns.resultFunc(
-      allNumericalState.selectedFeatures,
-      allNumericalState.labelColumn,
+      allNumericalProject.selectedFeatures,
+      allNumericalProject.labelColumn
     );
     const selectedNumericalColumns = getSelectedNumericalColumns.resultFunc(
       numericalColumns,
-      selectedColumns,
+      selectedColumns
     );
     const extremaByColumn = getExtremaByColumn.resultFunc(
       selectedNumericalColumns,
-      allNumericalState.data,
+      allNumericalState.data
     );
     expect(extremaByColumn['batCount'].max).toBe(100);
     expect(extremaByColumn['batCount'].min).toBe(40);
@@ -95,7 +100,7 @@ describe('getting extrema', () => {
 
 describe('getSelectableColumns', () => {
   const tooManyOptions = Array.from({length: UNIQUE_OPTIONS_MAX + 1}, (_, i) =>
-    String(i),
+    String(i)
   );
   const data = tooManyOptions.map((id, index) => ({
     count: String(index),

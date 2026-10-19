@@ -4,13 +4,13 @@ import {createElement} from 'react';
 import I18n from '../../src/i18n';
 import ResultsBar from '../../src/UIComponents/ResultsBar';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderBar(results) {
   renderWithProviders(createElement(ResultsBar), {
     store: levelStore(),
-    project: {historicResults: [...results].reverse()},
+    project: {...levelProject(), historicResults: [...results].reverse()},
   });
 }
 
@@ -44,7 +44,7 @@ describe('ResultsBar', () => {
 
     expect(screen.getByText('Predict legs based on animal')).toBeTruthy();
     expect(
-      screen.getByRole('button', {name: 'View 80% Accuracy details'}),
+      screen.getByRole('button', {name: 'View 80% Accuracy details'})
     ).toBeTruthy();
   });
 
@@ -59,12 +59,12 @@ describe('ResultsBar', () => {
     renderBar([{label: 'animal', features: ['legs'], accuracy: '80.00'}]);
 
     fireEvent.click(
-      screen.getByRole('button', {name: 'View 80% Accuracy details'}),
+      screen.getByRole('button', {name: 'View 80% Accuracy details'})
     );
 
     expect(selectedTab()).toBe('Scorecard');
     const scorecard = screen.getByRole('tabpanel', {name: 'Scorecard'});
-    expect(within(scorecard).getByText('Actual')).toBeTruthy();
+    expect(within(scorecard).getByText('AI predicts')).toBeTruthy();
   });
 
   test('focuses the tab Results opened on', () => {
@@ -73,7 +73,7 @@ describe('ResultsBar', () => {
     fireEvent.click(allResultsButton());
 
     expect(document.activeElement).toBe(
-      screen.getByRole('tab', {name: 'All results'}),
+      screen.getByRole('tab', {name: 'All results'})
     );
   });
 
@@ -89,11 +89,11 @@ describe('ResultsBar', () => {
     expect(selectedTab()).toBe('All results');
     const [current, previous] = screen.getAllByRole('table');
     expect(
-      within(current).getByRole('columnheader', {name: 'Current'}),
+      within(current).getByRole('columnheader', {name: 'Current'})
     ).toBeTruthy();
     expect(modelRows(current)).toEqual([expect.stringContaining('70%')]);
     expect(
-      within(previous).getByRole('columnheader', {name: 'Previous'}),
+      within(previous).getByRole('columnheader', {name: 'Previous'})
     ).toBeTruthy();
     expect(modelRows(previous)).toEqual([
       expect.stringContaining('60%'),

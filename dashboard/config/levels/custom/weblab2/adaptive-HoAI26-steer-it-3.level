@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-10-16T21:21:53.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "What would you change first? \r\n\r\nAdd a detail or change one thing, and say what to keep. ",
+    "project_template_level_name": "adaptive-HoAI26-template-main-project",
+    "encrypted_exemplar_sources": "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\nwsoLqQjDgpkeZ2ln\n",
+    "generate_outline": "Apply your prompt-steering skills. Decide what you would change first in your project: add specific details, or change one element while retaining others. Your prompt should reflect this decision.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:22:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:22:27 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:22:36 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:22:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 22:08:24 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

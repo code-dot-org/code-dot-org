@@ -4,9 +4,12 @@
     "baseUrl": ".",
     "composite": true,
     "resolveJsonModule": true,
+    // apps compiles JSX with the classic runtime; match it here so the move
+    // does not have to touch every component.
+    "jsx": "react",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "public/datasets-manifest.json", "i18n/mlPlayground.json"]
+  "include": ["src"]
 }

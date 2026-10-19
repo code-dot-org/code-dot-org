@@ -7,7 +7,7 @@ import {setPrediction} from '../../src/redux';
 import TestPanel from '../../src/UIComponents/TestPanel';
 import {STEP_INTERVAL_MS} from '../../src/UIComponents/TraceStepper';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 const PENGUINS = [
@@ -23,16 +23,19 @@ const PENGUIN_COLUMNS = {
   bill: ColumnTypes.NUMERICAL,
 };
 
-function renderTestPanel(store, trainingRun) {
-  renderWithProviders(createElement(TestPanel), {store, trainingRun});
+function renderTestPanel(store, project, trainingRun) {
+  renderWithProviders(createElement(TestPanel), {store, project, trainingRun});
 }
 
 // Renders a panel whose model is trained and reachable from the context.
 function renderTrainedAnimalPanel(mode) {
   const store = levelStore(mode);
-  renderTestPanel(store, runTraining(store));
+  const project = levelProject();
+  renderTestPanel(store, project, runTraining(store, project));
   return store;
 }
+
+const penguinProject = () => levelProject(PENGUIN_COLUMNS, 'species');
 
 function predictSnake() {
   fireEvent.change(screen.getByLabelText('legs'), {target: {value: '0'}});
@@ -70,7 +73,7 @@ function stepAnnouncement(index) {
 
 function pathAnnouncement(prediction) {
   const stepCount = within(screen.getByRole('list')).getAllByRole(
-    'listitem',
+    'listitem'
   ).length;
   return [
     `AI predicts ${prediction}`,
@@ -86,6 +89,7 @@ describe('TestPanel', () => {
   test('shows a field for each feature, in the order they were chosen', () => {
     renderTestPanel(
       levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species'),
+      penguinProject()
     );
 
     const fields = [...document.querySelectorAll('input, select')];
@@ -99,11 +103,11 @@ describe('TestPanel', () => {
 
   test('a dropdown offers each option after a disabled prompt, and sets its feature', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
-    renderTestPanel(store);
+    renderTestPanel(store, penguinProject());
     const island = screen.getByLabelText('island');
 
     expect(
-      [...island.options].map(option => [option.text, option.disabled]),
+      [...island.options].map(option => [option.text, option.disabled])
     ).toEqual([
       ['Choose one', true],
       ['Biscoe', false],
@@ -120,7 +124,7 @@ describe('TestPanel', () => {
   test('Random fills every feature, enables Predict, and clears the last prediction', () => {
     const store = levelStore(undefined, PENGUINS, PENGUIN_COLUMNS, 'species');
     store.dispatch(setPrediction('Adelie', []));
-    renderTestPanel(store);
+    renderTestPanel(store, penguinProject());
     expect(predictButton().disabled).toBe(true);
 
     fireEvent.click(screen.getByRole('button', {name: 'Random'}));
@@ -140,13 +144,13 @@ describe('TestPanel', () => {
     predictSnake();
 
     expect(
-      screen.getByRole('heading', {name: 'AI predicts snake'}),
+      screen.getByRole('heading', {name: 'AI predicts snake'})
     ).toBeTruthy();
     const steps = within(screen.getByRole('list')).getAllByRole('listitem');
     expect(steps.length).toBeGreaterThan(1);
     expect(steps[0].textContent).toMatch(/^1legs is [<≥] \d/);
     expect(steps[steps.length - 1].textContent).toBe(
-      `${steps.length}animal is snake`,
+      `${steps.length}animal is snake`
     );
   });
 
@@ -186,7 +190,7 @@ describe('TestPanel', () => {
   describe('a decision tree, as its path plays', () => {
     const replay = () =>
       fireEvent.click(
-        screen.getByRole('button', {name: 'Replay from the start'}),
+        screen.getByRole('button', {name: 'Replay from the start'})
       );
     const skip = () =>
       fireEvent.click(screen.getByRole('button', {name: 'Skip to the answer'}));
@@ -197,7 +201,8 @@ describe('TestPanel', () => {
     });
     afterEach(() => {
       vi.useRealTimers();
-      vi.unstubAllGlobals();
+      // jsdom has no matchMedia, so the reduced-motion case adds one.
+      delete window.matchMedia;
     });
 
     test('says nothing more while it plays or skips', () => {
@@ -230,9 +235,7 @@ describe('TestPanel', () => {
     });
 
     test('reads the first step on each Replay under reduced motion', () => {
-      vi.stubGlobal('matchMedia', query => ({
-        matches: query.includes('reduce'),
-      }));
+      window.matchMedia = query => ({matches: query.includes('reduce')});
       predictBird();
       const changes = watchStatus();
 
@@ -254,11 +257,11 @@ describe('TestPanel', () => {
     predictSnake();
 
     expect(
-      screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/}),
+      screen.getByRole('heading', {name: /^AI predicts (bird|dog|snake)$/})
     ).toBeTruthy();
     expect(screen.queryByRole('list')).toBeNull();
     expect(status()).toBe(
-      screen.getByRole('heading', {name: /^AI predicts/}).textContent,
+      screen.getByRole('heading', {name: /^AI predicts/}).textContent
     );
   });
 });

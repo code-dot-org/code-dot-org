@@ -118,6 +118,11 @@ GroupOfTypesOfAlerts.args = {
       type: 'aqua',
       size: 'm',
     },
+    {
+      text: 'Pink Alert',
+      type: 'pink',
+      size: 'm',
+    },
   ],
 };
 

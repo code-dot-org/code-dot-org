@@ -56,7 +56,7 @@ class DCDO < DynamicConfigBase
       'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
-      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
+      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
@@ -80,7 +80,9 @@ class DCDO < DynamicConfigBase
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
-      'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false)
+      'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      # AI descriptions of Python Lab theater output; also gates the access token server-side.
+      'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false)
     }
   end
 end

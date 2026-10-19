@@ -19,6 +19,8 @@
 #  index_quiz_questions_on_name        (name)
 #
 class MultipleChoiceQuestion < QuizQuestion
+  include ChoiceQuestion
+
   # Exactly one correct answer chosen from a list of choices.
   #
   # `content` shape:
@@ -38,6 +40,10 @@ class MultipleChoiceQuestion < QuizQuestion
   end
 
   # response_data shape: {"selectedChoiceId" => "b"}
+  def answered?(response_data)
+    response_data['selectedChoiceId'].present?
+  end
+
   def grade(response_data)
     selected = response_data.is_a?(Hash) ? response_data['selectedChoiceId'] : nil
     correct = selected.present? && selected == content['correct_choice_id']
@@ -45,21 +51,34 @@ class MultipleChoiceQuestion < QuizQuestion
   end
 
   def self.content_from_builder_params(params)
-    shared_content(params).merge(
+    shared_content_from_builder_params(params).merge(
       choices: (params[:choices] || []).map(&:to_h),
       correct_choice_id: params[:correctChoiceId],
     )
   end
 
+  def placeholder_content
+    {
+      'question_title' => "Placeholder question #{key} - encryption key missing",
+      'choices' => [{'id' => 'a', 'text' => 'Placeholder choice A'}, {'id' => 'b', 'text' => 'Placeholder choice B'}],
+      'correct_choice_id' => 'a',
+    }
+  end
+
+  def answer_key_json
+    {correctChoiceId: content['correct_choice_id']}
+  end
+
   def builder_content_json
-    attempt_content_json.merge(correctChoiceId: content['correct_choice_id'])
+    attempt_content_json.merge(answer_key_json)
   end
 
   def attempt_content_json
-    {questionTitle: content['question_title'], description: content['description'], choices: content['choices']}
+    shared_content_json.merge(choices: content['choices'])
   end
 
   private def validate_question_shape
+    # Blank content already fails QuizQuestion's presence validation.
     return if content.blank?
     q = content.deep_stringify_keys
     validate_shared_content(q)

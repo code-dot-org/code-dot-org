@@ -12,6 +12,8 @@ import {
   containsOnlyNumbers,
   getColumnDescription,
   getMostAndLeastCommon,
+  getColumnRole,
+  dataColumnsFor,
 } from '../../src/helpers/columnDetails';
 import I18n from '../../src/i18n';
 
@@ -57,11 +59,40 @@ describe('column data types', () => {
   });
 });
 
+describe('getColumnRole', () => {
+  const project = {labelColumn: 'play', selectedFeatures: ['windy']};
+
+  test('the label column is the label', () => {
+    expect(getColumnRole(project, 'play')).toBe('label');
+  });
+
+  test('a selected column is a feature', () => {
+    expect(getColumnRole(project, 'windy')).toBe('feature');
+  });
+
+  test('any other column has no role', () => {
+    expect(getColumnRole(project, 'outlook')).toBeUndefined();
+  });
+});
+
+describe('dataColumnsFor', () => {
+  const project = {labelColumn: 'animal', selectedFeatures: ['legs']};
+  const data = [{name: 'Fido', legs: 4, animal: 'dog'}];
+
+  test('collapsed, the selected features', () => {
+    expect(dataColumnsFor(data, project, false)).toEqual(['legs']);
+  });
+
+  test('expanded, every column except the label', () => {
+    expect(dataColumnsFor(data, project, true)).toEqual(['name', 'legs']);
+  });
+});
+
 describe('filter columns by datatype', () => {
   test('filter numerical columns', async () => {
     const result = filterColumnsByType(
       regressionState.columnsByDataType,
-      ColumnTypes.NUMERICAL,
+      ColumnTypes.NUMERICAL
     );
     expect(result).toEqual(['height']);
   });
@@ -69,7 +100,7 @@ describe('filter columns by datatype', () => {
   test('filter categorical columns', async () => {
     const result = filterColumnsByType(
       regressionState.columnsByDataType,
-      ColumnTypes.CATEGORICAL,
+      ColumnTypes.CATEGORICAL
     );
     expect(result).toEqual(['sun']);
   });
@@ -78,7 +109,7 @@ describe('filter columns by datatype', () => {
 describe('unique options', () => {
   const uniqueOptions = getUniqueOptions(
     classificationState.data,
-    'temp',
+    'temp'
   ).sort();
 
   test('get unique options', async () => {
@@ -149,7 +180,7 @@ describe('getColumnDescription', () => {
     const result = getColumnDescription(
       'mosquitoCount',
       premadeDatasetState.metadata,
-      {},
+      {}
     );
     expect(result).toEqual(mosquitoDescription);
   });
@@ -160,7 +191,7 @@ describe('getColumnDescription', () => {
     const result = getColumnDescription(
       'mosquitoCount',
       premadeDatasetState.metadata,
-      {},
+      {}
     );
     expect(result).toEqual('mosquitoCount description');
   });

@@ -5,7 +5,7 @@ import I18n from '../../src/i18n';
 import {replayTraining, setTrainingModalStep} from '../../src/redux';
 import TrainingModal from '../../src/UIComponents/TrainingModal';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 // Longer than either animation takes to finish.
@@ -13,13 +13,14 @@ const ANIMATION_TIMEOUT_MS = 60000;
 
 function startTraining({replay = false} = {}) {
   const store = levelStore({});
-  const trainingRun = runTraining(store);
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
   store.dispatch(replay ? replayTraining() : setTrainingModalStep('training'));
-  const {trainingData, project} = renderWithProviders(
+  const {trainingData, project: projectValue} = renderWithProviders(
     createElement(TrainingModal),
-    {store, trainingRun},
+    {store, project, trainingRun}
   );
-  return {store, trainingData, project};
+  return {store, trainingData, project: projectValue};
 }
 
 const button = name => screen.queryByRole('button', {name});
@@ -55,8 +56,9 @@ describe('TrainingModal', () => {
     expect(state.trainingModalStep).toBeUndefined();
     expect(project().historicResults).toEqual([]);
     expect(trainingData().trainedModel).toBeUndefined();
-    expect(state.labelColumn).toBe('animal');
-    expect(state.selectedFeatures).toEqual(['legs']);
+    // A cancelled run undoes its own results, never the student's columns.
+    expect(project().labelColumn).toBe('animal');
+    expect(project().selectedFeatures).toEqual(['legs']);
   });
 
   test('a replay offers Back to dataset, not Cancel, at each step', () => {

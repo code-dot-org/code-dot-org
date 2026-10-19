@@ -7,7 +7,6 @@ import I18n from '../../src/i18n';
 
 const initialState = {
   data: [],
-  selectedFeatures: [],
   accuracyCheckExamples: [],
   saveStatus: 'notStarted',
   trainedModelDetails: {},
@@ -34,13 +33,21 @@ const dataUploadedState = {
   ],
 };
 
-const selectedLabelState = {
+const resultsState = {
   ...dataUploadedState,
-  labelColumn: 'isEvil',
+  accuracyCheckExamples: [0, 0],
 };
 
-const selectedFeaturesState = {
-  ...selectedLabelState,
+const noProject = {
+  labelColumn: undefined,
+  selectedFeatures: [],
+  historicResults: [],
+};
+
+const selectedLabelProject = {...noProject, labelColumn: 'isEvil'};
+
+const selectedFeaturesProject = {
+  ...selectedLabelProject,
   selectedFeatures: ['house'],
 };
 
@@ -49,20 +56,14 @@ const selectedFeaturesState = {
   be in, but it's important that the model training step happen only when
   features and label are unique.
 */
-const sameFeatureLabelState = {
-  ...dataUploadedState,
+const sameFeatureLabelProject = {
+  ...noProject,
   labelColumn: 'isEvil',
   selectedFeatures: ['isEvil'],
 };
 
-const resultsState = {
-  ...selectedFeaturesState,
-  accuracyCheckExamples: [0, 0],
-};
-
-const noProject = {historicResults: []};
-
 const trainedProject = {
+  ...selectedFeaturesProject,
   historicResults: [{label: 'isEvil', features: ['house'], accuracy: '100'}],
 };
 
@@ -92,24 +93,28 @@ describe('isPanelEnabled', () => {
 
   test('selectFeatures - disabled', async () => {
     const result = isPanelEnabled(
-      selectedLabelState,
-      noProject,
-      'selectFeatures',
+      dataUploadedState,
+      selectedLabelProject,
+      'selectFeatures'
     );
     expect(result).toBe(false);
   });
 
   test('selectFeatures - enabled', async () => {
     const result = isPanelEnabled(
-      selectedFeaturesState,
-      noProject,
-      'selectFeatures',
+      dataUploadedState,
+      selectedFeaturesProject,
+      'selectFeatures'
     );
     expect(result).toBe(true);
   });
 
   test('results - disabled', async () => {
-    const result = isPanelEnabled(selectedFeaturesState, noProject, 'results');
+    const result = isPanelEnabled(
+      dataUploadedState,
+      selectedFeaturesProject,
+      'results'
+    );
     expect(result).toBe(false);
   });
 
@@ -127,7 +132,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       savingModelState,
       trainedProject,
-      'modelSummary',
+      'modelSummary'
     );
     expect(result).toBe(false);
   });
@@ -136,7 +141,7 @@ describe('isPanelEnabled', () => {
     const result = isPanelEnabled(
       savedModelState,
       trainedProject,
-      'modelSummary',
+      'modelSummary'
     );
     expect(result).toBe(true);
   });
@@ -144,20 +149,20 @@ describe('isPanelEnabled', () => {
 
 describe('uniqLabelFeaturesSelected', () => {
   test('false when a feature is also the label', () => {
-    expect(uniqLabelFeaturesSelected(sameFeatureLabelState)).toBe(false);
+    expect(uniqLabelFeaturesSelected(sameFeatureLabelProject)).toBe(false);
   });
 
   test('true when the label and features differ', () => {
-    expect(uniqLabelFeaturesSelected(selectedFeaturesState)).toBe(true);
+    expect(uniqLabelFeaturesSelected(selectedFeaturesProject)).toBe(true);
   });
 });
 
 describe('isPanelEnabled for results after training', () => {
-  const trainedState = {
-    ...resultsState,
-    selectedFeatures: ['house', 'name'],
-  };
+  const trainedState = resultsState;
   const project = {
+    ...noProject,
+    labelColumn: 'isEvil',
+    selectedFeatures: ['house', 'name'],
     historicResults: [
       {label: 'isEvil', features: ['house', 'name'], accuracy: '100'},
     ],
@@ -177,7 +182,7 @@ describe('isPanelEnabled for results after training', () => {
     ['feature order', {selectedFeatures: ['name', 'house']}],
   ])('disabled when the %s changed since training', (_, changes) => {
     expect(
-      isPanelEnabled({...trainedState, ...changes}, project, 'results'),
+      isPanelEnabled(trainedState, {...project, ...changes}, 'results')
     ).toBe(false);
   });
 });
@@ -188,32 +193,44 @@ describe('prevNextButtons on the data panels', () => {
   });
 
   test.each([undefined, {datasets: ['a', 'b']}])(
-    'datasetView never goes back to the hidden dataset picker with mode %o',
+    'datasetView goes back to the dataset picker with mode %o',
     mode => {
       const {prev, next} = prevNextButtons(
-        {...selectedFeaturesState, currentPanel: 'datasetView', mode},
-        noProject,
+        {...dataUploadedState, currentPanel: 'datasetView', mode},
+        selectedFeaturesProject
       );
-      expect(prev).toBeUndefined();
+      expect(prev.panel).toBe('selectDataset');
       expect(next).toBeUndefined();
-    },
+    }
   );
+
+  test('has no back button when the mode fixes the dataset', () => {
+    const {prev} = prevNextButtons(
+      {
+        ...dataUploadedState,
+        currentPanel: 'datasetView',
+        mode: {datasets: ['tacos_toy']},
+      },
+      selectedFeaturesProject
+    );
+    expect(prev).toBeUndefined();
+  });
 
   test.each([{}, {hideSelectLabel: true}])(
     'selectDataset moves on to datasetView with mode %o',
     mode => {
       const {next} = prevNextButtons(
         {...dataUploadedState, currentPanel: 'selectDataset', mode},
-        noProject,
+        noProject
       );
       expect(next.panel).toBe('datasetView');
-    },
+    }
   );
 
   test('results has neither button; the Dataset tab goes back', () => {
     const {prev, next} = prevNextButtons(
       {...resultsState, currentPanel: 'results'},
-      trainedProject,
+      trainedProject
     );
     expect(prev).toBeUndefined();
     expect(next).toBeUndefined();

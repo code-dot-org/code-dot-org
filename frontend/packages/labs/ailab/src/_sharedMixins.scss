@@ -43,12 +43,30 @@
 
 $data-table-row-height: 28px;
 
+@mixin data-table-empty-note {
+  margin: 0;
+  padding: 10px;
+  color: var(--text-neutral-tertiary);
+}
+
+@mixin action-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 @mixin accuracy-readout {
   font-size: 14px;
   font-weight: 600;
   line-height: 22px;
   white-space: nowrap;
   color: var(--text-neutral-primary);
+}
+
+@mixin summary-divider {
+  width: 1px;
+  height: 10px;
+  background-color: var(--border-neutral-primary);
 }
 
 $modal-max-width: 800px;
@@ -77,6 +95,12 @@ $modal-margin: 24px;
   align-items: center;
   padding: 18px 56px 18px 24px;
   border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+@mixin modal-tabs {
+  // Tabs has no CodeAI brand override; these are the tokens it reads for text.
+  --text-brand-teal-primary: var(--text-selected-primary-inverse);
+  --text-neutral-tertiary: var(--text-neutral-quaternary);
 }
 
 @mixin modal-action-row {

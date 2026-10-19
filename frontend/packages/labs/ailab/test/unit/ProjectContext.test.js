@@ -4,10 +4,17 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import {ProjectProvider, useProject} from '../../src/ProjectContext';
-import rootReducer, {resetState} from '../../src/redux';
+import rootReducer, {
+  resetState,
+  setImportedData,
+  setMode,
+  setPresetColumns,
+} from '../../src/redux';
+import {initialProject} from '../../src/types';
 
-const run = (accuracy, hyperparameters) => ({
+const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
   hyperparameters,
+  accuracyCheckRowIndices,
   historicResult: {
     label: 'animal',
     features: ['legs'],
@@ -17,11 +24,11 @@ const run = (accuracy, hyperparameters) => ({
   },
 });
 
-const FIRST = run('80.00', {k: 1});
-const SECOND = run('90.00', {k: 3});
+const FIRST = run('80.00', {k: 1}, [8, 9]);
+const SECOND = run('90.00', {k: 3}, [0, 5]);
 
-function renderContext(openWith) {
-  const store = createStore(rootReducer);
+function renderContext(openWith, seedStore) {
+  const store = seedStore ?? createStore(rootReducer);
   let context;
   const Probe = () => {
     context = useProject();
@@ -32,8 +39,8 @@ function renderContext(openWith) {
     createElement(
       Provider,
       {store},
-      createElement(ProjectProvider, {project: openWith}, createElement(Probe)),
-    ),
+      createElement(ProjectProvider, {project: openWith}, createElement(Probe))
+    )
   );
 
   return {store, project: () => context.project, context: () => context};
@@ -45,28 +52,31 @@ const accuracies = project =>
 describe('ProjectContext', () => {
   test('starts empty', () => {
     const {project} = renderContext();
-    expect(project()).toEqual({
-      hyperparameters: undefined,
-      historicResults: [],
-    });
+    expect(project()).toEqual(initialProject);
   });
 
   test('opens with a project it is handed', () => {
     const {project} = renderContext({
+      ...initialProject,
       hyperparameters: {k: 5},
+      accuracyCheckRowIndices: [2, 7],
       historicResults: [FIRST.historicResult],
     });
     expect(project().hyperparameters).toEqual({k: 5});
+    expect(project().accuracyCheckRowIndices).toEqual([2, 7]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
-  test('a run records its hyperparameters and leads the results', () => {
+  // The hyperparameters and the split are what a reload needs to rebuild the
+  // model, so the latest run owns both.
+  test('a run records what rebuilding it needs and leads the results', () => {
     const {project, context} = renderContext();
 
     act(() => context().applyTrainingRun(FIRST));
     act(() => context().applyTrainingRun(SECOND));
 
     expect(project().hyperparameters).toEqual({k: 3});
+    expect(project().accuracyCheckRowIndices).toEqual([0, 5]);
     expect(accuracies(project())).toEqual(['90.00', '80.00']);
   });
 
@@ -90,6 +100,7 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toEqual({k: 1});
+    expect(project().accuracyCheckRowIndices).toEqual([8, 9]);
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
@@ -101,6 +112,7 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual([]);
   });
 
@@ -113,6 +125,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual([]);
   });
 
@@ -125,6 +138,7 @@ describe('ProjectContext', () => {
     });
 
     expect(project().hyperparameters).toBeUndefined();
+    expect(project().accuracyCheckRowIndices).toBeUndefined();
     expect(accuracies(project())).toEqual(['80.00']);
   });
 
@@ -139,5 +153,191 @@ describe('ProjectContext', () => {
     act(() => context().restoreTrainingRun());
 
     expect(accuracies(project())).toEqual([]);
+  });
+});
+
+describe('ProjectContext column choices', () => {
+  const imported = () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    return store;
+  };
+
+  test('a feature is added once, in the dataset\u2019s column order', () => {
+    const {project, context} = renderContext(undefined, imported());
+
+    act(() => context().addSelectedFeature('c'));
+    act(() => context().addSelectedFeature('a'));
+    act(() => context().addSelectedFeature('c'));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  test('removing a feature leaves the rest', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setSelectedFeatures(['a', 'b', 'c']));
+
+    act(() => context().removeSelectedFeature('b'));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  test('setting the features replaces them, in column order', () => {
+    const {project, context} = renderContext(undefined, imported());
+
+    act(() => context().setSelectedFeatures(['c', 'a']));
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+
+    act(() => context().setSelectedFeatures([]));
+    expect(project().selectedFeatures).toEqual([]);
+  });
+
+  test('leaves the array it was handed untouched', () => {
+    const {context} = renderContext(undefined, imported());
+    const features = ['c', 'a'];
+
+    act(() => context().setSelectedFeatures(features));
+
+    expect(features).toEqual(['c', 'a']);
+  });
+
+  // A run owns its own results, never the student's columns, so a cancel must
+  // not roll back a choice made after the run started.
+  test('a cancel keeps column changes made since the run', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setSelectedFeatures(['a']));
+    act(() => context().snapshotTrainingRun());
+    act(() => context().applyTrainingRun(FIRST));
+
+    act(() => context().setSelectedFeatures(['a', 'b']));
+    act(() => context().restoreTrainingRun());
+
+    expect(project().selectedFeatures).toEqual(['a', 'b']);
+    expect(accuracies(project())).toEqual([]);
+  });
+
+  test('choosing a label drops it from the features', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setSelectedFeatures(['a', 'b']));
+
+    act(() => context().setLabelColumn('a'));
+
+    expect(project().labelColumn).toBe('a');
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('the label cannot be added as a feature', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('a'));
+
+    act(() => context().addSelectedFeature('a'));
+    act(() => context().addSelectedFeature('b'));
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('setting the features drops the label from them', () => {
+    const {project, context} = renderContext(undefined, imported());
+    act(() => context().setLabelColumn('b'));
+
+    act(() => context().setSelectedFeatures(['a', 'b', 'c']));
+
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  /*
+    loadDataset works out what a level's mode fixes once the dataset is in,
+    and publishes it; applying it is this context's job. loadDataset.test.js
+    covers the working out.
+  */
+  test('takes the columns a dataset load fixed', () => {
+    const store = imported();
+    const {project} = renderContext(undefined, store);
+
+    act(() => {
+      store.dispatch(
+        setPresetColumns({labelColumn: 'b', selectedFeatures: ['a', 'c']})
+      );
+    });
+
+    expect(project().labelColumn).toBe('b');
+    expect(project().selectedFeatures).toEqual(['a', 'c']);
+  });
+
+  test('leaves the columns alone when a load fixes neither', () => {
+    const store = imported();
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().setSelectedFeatures(['a']));
+
+    act(() => {
+      store.dispatch(setPresetColumns({}));
+    });
+
+    expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual(['a']);
+  });
+
+  /*
+    A locked column is one the student has no way to change, so the level's
+    choice has to win. An unlocked one is only a starting point.
+  */
+  const chosen = store => {
+    const rendered = renderContext(undefined, store);
+    act(() => rendered.context().setLabelColumn('a'));
+    act(() => rendered.context().setSelectedFeatures(['b']));
+    return rendered;
+  };
+
+  const preset = (store, columns) =>
+    act(() => {
+      store.dispatch(setPresetColumns(columns));
+    });
+
+  test('a locked label replaces one the project already had', () => {
+    const store = imported();
+    store.dispatch(setMode({hideSelectLabel: true}));
+    const {project} = chosen(store);
+
+    preset(store, {labelColumn: 'c'});
+
+    expect(project().labelColumn).toBe('c');
+  });
+
+  test('an unlocked label leaves one the project already had', () => {
+    const store = imported();
+    const {project} = chosen(store);
+
+    preset(store, {labelColumn: 'c'});
+
+    expect(project().labelColumn).toBe('a');
+  });
+
+  test('locked features replace ones the project already had', () => {
+    const store = imported();
+    store.dispatch(setMode({lockFeatures: true}));
+    const {project} = chosen(store);
+
+    preset(store, {selectedFeatures: ['c']});
+
+    expect(project().selectedFeatures).toEqual(['c']);
+  });
+
+  test('unlocked features leave ones the project already had', () => {
+    const store = imported();
+    const {project} = chosen(store);
+
+    preset(store, {selectedFeatures: ['c']});
+
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('an unlocked column still fills a gap the project left', () => {
+    const store = imported();
+    const {project} = renderContext(undefined, store);
+
+    preset(store, {labelColumn: 'c', selectedFeatures: ['a', 'b']});
+
+    expect(project().labelColumn).toBe('c');
+    expect(project().selectedFeatures).toEqual(['a', 'b']);
   });
 });

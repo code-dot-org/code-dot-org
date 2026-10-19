@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T17:33:02.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A biologist predicted the weights of five different animals, and you’d like to calculate the mean squared error of their predictions to see how good or bad the predictions are.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Import the `mean_squared_error` function.\r\n2. Compute the mean squared error for the biologist’s predictions, saving the resulting loss in a variable.\r\n3. Print the value of the loss.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo use `scikit-learn`’s mean squared error function, first import it with:\r\n\r\n```python\r\nfrom sklearn.metrics import mean_squared_error\r\n```\r\nThen, call the function by passing in the actual values as the first argument and the predicted values as the second argument.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Import the mean_squared_error function\n\nactuals = [50, 100, 900, 400, 200]\npredictions = [100, 250, 600, 550, 350]\n\n# TODO 2: Compute the mean squared error\n# TODO 3: Print the mean squared error",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMquPGIqxs8YRu2F\njqOJOsoVKLN4YDyRTtsMkav4Mo3EsD7Px2+lPWSj8XjS2S5+7C3xjmLr3yK7\nCTSWwayOgF6MYvhYLEB8SKmMjABAk3Gr4R1M6GgT4zFG5KjnwVxpFURbP8M+\n91D8Zo/vvQJgE84SA0OfFRfHAB+Z1I90TQs+i8cXkwfTdF2SWFQ77ys/4cfy\nLYPTmv0YErCqcY6GmQ3mlJdvNDMt+cg8F5IZgrQqXa6wdE3D4h74wQB7a3Ja\nMTtRjuLygTymAO5eoJSGhafLR+7r775SSaY4mh3DQ9T5YAh27dj3Ya4X0KGE\nnP4XIZJOlb8lBk1oetyLoogS1cEAXeH7l/RGyUoI4bVihDmvwMHM3xNVdxix\nbPhuK9NTae0hWD+WchiK09sHlW/DTMOdWzaP+GF6zm08DqzdPgxZ6PeiP9Sh\nbLe0IwipQQgl2Qg=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 17:33:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 17:33:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

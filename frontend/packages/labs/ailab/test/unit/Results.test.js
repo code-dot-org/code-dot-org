@@ -4,13 +4,14 @@ import {createElement} from 'react';
 import I18n from '../../src/i18n';
 import Results from '../../src/UIComponents/Results';
 
-import {levelStore} from './levelStore';
+import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 function renderTrainedResults(mode) {
   const store = levelStore(mode);
-  const trainingRun = runTraining(store);
-  renderWithProviders(createElement(Results), {store, trainingRun});
+  const project = levelProject();
+  const trainingRun = runTraining(store, project);
+  renderWithProviders(createElement(Results), {store, project, trainingRun});
 }
 
 function testPanel() {
@@ -25,12 +26,12 @@ describe('Results', () => {
     renderTrainedResults({trainer: 'decisionTree'});
 
     expect(
-      document.getElementById('uitest-decision-tree').contains(testPanel()),
+      document.getElementById('uitest-decision-tree').contains(testPanel())
     ).toBe(true);
     expect(
       screen
         .getByRole('tree', {name: "Your model's decision tree"})
-        .contains(testPanel()),
+        .contains(testPanel())
     ).toBe(false);
   });
 

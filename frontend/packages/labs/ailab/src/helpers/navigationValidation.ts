@@ -26,7 +26,7 @@ const panelList = [
 export function isPanelEnabled(
   state: RootState,
   project: AilabProject,
-  panelId: string,
+  panelId: string
 ): boolean {
   if (panelId === 'datasetView') {
     if (!isDataUploaded(state)) {
@@ -35,7 +35,7 @@ export function isPanelEnabled(
   }
 
   if (panelId === 'selectFeatures') {
-    if (!minOneFeatureSelected(state)) {
+    if (project.selectedFeatures.length === 0) {
       return false;
     }
   }
@@ -64,9 +64,10 @@ export function isPanelEnabled(
 function isPanelAvailable(state: RootState, panelId: string): boolean {
   const mode = state.mode;
 
-  // Hidden for now; the dataset picker will come back later.
   if (panelId === 'selectDataset') {
-    return false;
+    if (mode && mode.datasets && mode.datasets.length === 1) {
+      return false;
+    }
   }
 
   if (panelId === 'saveModel') {
@@ -82,48 +83,33 @@ function isDataUploaded(state: RootState): boolean {
   return state.data.length > 0 && !state.invalidData;
 }
 
-function minOneFeatureSelected(state: RootState): boolean {
-  return state.selectedFeatures.length !== 0;
-}
-
-function labelSelected(state: RootState): boolean {
-  return !!state.labelColumn;
-}
-
-export function uniqLabelFeaturesSelected(state: RootState): boolean {
+export function uniqLabelFeaturesSelected(project: AilabProject): boolean {
+  const {labelColumn, selectedFeatures} = project;
   return (
-    minOneFeatureSelected(state) &&
-    labelSelected(state) &&
-    !state.selectedFeatures.includes(state.labelColumn!)
+    selectedFeatures.length !== 0 &&
+    !!labelColumn &&
+    !selectedFeatures.includes(labelColumn)
   );
 }
 
-function isTrainedOnCurrentColumns(
-  state: RootState,
-  project: AilabProject,
-): boolean {
+function isTrainedOnCurrentColumns(project: AilabProject): boolean {
   const latestResult = project.historicResults[0];
   return (
     !!latestResult &&
-    latestResult.label === state.labelColumn &&
-    areArraysEqual(latestResult.features, state.selectedFeatures)
+    latestResult.label === project.labelColumn &&
+    areArraysEqual(latestResult.features, project.selectedFeatures)
   );
 }
 
-export function hasCurrentTrainingResult(
-  state: RootState,
-  project: AilabProject,
-): boolean {
+export function hasCurrentTrainingResult(project: AilabProject): boolean {
   return (
-    isTrainedOnCurrentColumns(state, project) &&
-    project.historicResults[0].total > 0
+    isTrainedOnCurrentColumns(project) && project.historicResults[0].total > 0
   );
 }
 
 function resultsAvailable(state: RootState, project: AilabProject): boolean {
   return (
-    state.accuracyCheckExamples.length > 0 &&
-    isTrainedOnCurrentColumns(state, project)
+    state.accuracyCheckExamples.length > 0 && isTrainedOnCurrentColumns(project)
   );
 }
 
@@ -150,7 +136,7 @@ function isModelNamed(state: RootState): boolean {
 // Given the current panel, return the appropriate previous & next buttons.
 export function prevNextButtons(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): PrevNextButtons {
   let prev: NavButton | undefined, next: NavButton | undefined;
 

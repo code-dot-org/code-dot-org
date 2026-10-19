@@ -10,18 +10,34 @@ import {createSelector} from 'reselect';
 
 import {ResultsGrades, REGRESSION_ERROR_TOLERANCE, MLTypes} from '../constants';
 import type {RootState} from '../redux';
-import type {ResultsData, DataRow} from '../types';
+import type {AilabProject, ResultsData, DataRow} from '../types';
 
 import {getExtrema, isRegression} from './columnDetails';
+import {splitRowIndices} from './trainingSplit';
 import {
   getConvertedLabels,
   getConvertedAccuracyCheckExamples,
 } from './valueConversion';
 
+// Dataset row numbers, in the same order as the accuracy-check examples.
+function accuracyCheckDatasetRows(
+  state: RootState,
+  project: AilabProject
+): number[] {
+  if (!project.accuracyCheckRowIndices) {
+    return [];
+  }
+  return splitRowIndices(state.data.length, project.accuracyCheckRowIndices)
+    .accuracyCheck;
+}
+
 // Return results data so that it looks like regular data provided to the
 // DataTable.
-export function getResultsDataInDataTableForm(state: RootState): DataRow[] {
-  const resultsByGrades = getAllResults(state);
+export function getResultsDataInDataTableForm(
+  state: RootState,
+  project: AilabProject
+): DataRow[] {
+  const resultsByGrades = getAllResults(state, project);
 
   if (!resultsByGrades || resultsByGrades.examples.length === 0) {
     return [];
@@ -35,65 +51,78 @@ export function getResultsDataInDataTableForm(state: RootState): DataRow[] {
   for (let i = 0; i < numItems; i++) {
     results[i] = {};
 
-    state.selectedFeatures.map((feature: string, index: number) => {
+    project.selectedFeatures.map((feature: string, index: number) => {
       results[i][feature] = resultsByGrades.examples[i][index];
     });
 
-    results[i][state.labelColumn!] = resultsByGrades.predictedLabels[i];
+    results[i][project.labelColumn!] = resultsByGrades.predictedLabels[i];
   }
 
   return results;
 }
 
-export function getAllResults(state: RootState): ResultsData {
-  return getResultsByGrade(state, ResultsGrades.ALL);
+export function getAllResults(
+  state: RootState,
+  project: AilabProject
+): ResultsData {
+  return getResultsByGrade(state, project, ResultsGrades.ALL);
 }
 
 export function getResultsByGrade(
   state: RootState,
-  grade: string,
+  project: AilabProject,
+  grade: string
 ): ResultsData {
-  const accuracyGrades = getAccuracyGrades(state);
-  const examples = getConvertedAccuracyCheckExamples(state).filter(
-    (_example: (string | number)[], index: number) => {
-      return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
-    },
-  );
-  const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter(
-    (_label: string | number, index: number) => {
-      return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
-    },
-  );
+  const accuracyGrades = getAccuracyGrades(state, project);
+  const keep = (index: number) =>
+    grade === ResultsGrades.ALL || grade === accuracyGrades[index];
+  const convertedExamples = getConvertedAccuracyCheckExamples(state, project);
+  const examples = convertedExamples.filter((_example, index) => keep(index));
+  const labels = getConvertedLabels(
+    state,
+    project,
+    state.accuracyCheckLabels
+  ).filter((_label, index) => keep(index));
   const predictedLabels = getConvertedLabels(
     state,
-    state.accuracyCheckPredictedLabels,
-  ).filter((_label: string | number, index: number) => {
-    return grade === ResultsGrades.ALL || grade === accuracyGrades[index];
-  });
-  return {examples, labels, predictedLabels};
+    project,
+    state.accuracyCheckPredictedLabels
+  ).filter((_label, index) => keep(index));
+  const rowIndices = accuracyCheckDatasetRows(state, project).filter(
+    (_row, index) => keep(index)
+  );
+  return {examples, labels, predictedLabels, rowIndices};
 }
 
-export function getCorrectCount(state: RootState): {
-  correct: number;
-  total: number;
-} {
-  const grades = getAccuracyGrades(state);
+export function getCorrectCount(
+  state: RootState,
+  project: AilabProject
+): {correct: number; total: number} {
+  const grades = getAccuracyGrades(state, project);
   return {
     correct: grades.filter(grade => grade === ResultsGrades.CORRECT).length,
     total: grades.length,
   };
 }
 
-export function getSummaryStat(state: RootState): {type: string; stat: string} {
+export function getSummaryStat(
+  state: RootState,
+  project: AilabProject
+): {type: string; stat: string} {
   return {
-    type: isRegression(state) ? MLTypes.REGRESSION : MLTypes.CLASSIFICATION,
-    stat: getPercentCorrect(state),
+    type: isRegression(state, project)
+      ? MLTypes.REGRESSION
+      : MLTypes.CLASSIFICATION,
+    stat: getPercentCorrect(state, project),
   };
 }
 
-export function getPercentCorrect(state: RootState): string {
-  const percentCorrect = isRegression(state)
-    ? getAccuracyRegression(state).percentCorrect
+export function getPercentCorrect(
+  state: RootState,
+  project: AilabProject
+): string {
+  const percentCorrect = isRegression(state, project)
+    ? getAccuracyRegression(state, project).percentCorrect
     : getAccuracyClassification(state).percentCorrect;
   return percentCorrect;
 }
@@ -111,7 +140,7 @@ export interface AccuracyGrades {
 export function gradeAccuracy(
   predictedLabels: (number | string)[] | undefined,
   expectedLabels: (number | string)[],
-  options: AccuracyGradeOptions = {},
+  options: AccuracyGradeOptions = {}
 ): AccuracyGrades {
   const {tolerance} = options;
   const grades: string[] = [];
@@ -150,10 +179,10 @@ export const getGradeOptions = createSelector(
   [
     isRegression,
     (state: RootState) => state.data,
-    (state: RootState) => state.labelColumn,
+    (_state: RootState, project: AilabProject) => project.labelColumn,
   ],
   (regression, data, labelColumn): AccuracyGradeOptions =>
-    regression ? {tolerance: regressionTolerance(data, labelColumn!)} : {},
+    regression ? {tolerance: regressionTolerance(data, labelColumn!)} : {}
 );
 
 export const getAccuracyGrades = createSelector(
@@ -163,21 +192,24 @@ export const getAccuracyGrades = createSelector(
     getGradeOptions,
   ],
   (predictedLabels, labels, gradeOptions): string[] =>
-    gradeAccuracy(predictedLabels, labels, gradeOptions).grades,
+    gradeAccuracy(predictedLabels, labels, gradeOptions).grades
 );
 
 export function getAccuracyClassification(state: RootState): AccuracyGrades {
   return gradeAccuracy(
     state.accuracyCheckPredictedLabels,
-    state.accuracyCheckLabels,
+    state.accuracyCheckLabels
   );
 }
 
-export function getAccuracyRegression(state: RootState): AccuracyGrades {
+export function getAccuracyRegression(
+  state: RootState,
+  project: AilabProject
+): AccuracyGrades {
   return gradeAccuracy(
     state.accuracyCheckPredictedLabels,
     state.accuracyCheckLabels,
-    {tolerance: regressionTolerance(state.data, state.labelColumn!)},
+    {tolerance: regressionTolerance(state.data, project.labelColumn!)}
   );
 }
 

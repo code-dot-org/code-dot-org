@@ -1,7 +1,6 @@
-import {Button, Typography} from '@mui/material';
-import {useEffect, useRef} from 'react';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
+import React, {useEffect, useRef} from 'react';
 
 import {formatAccuracy} from '../helpers/accuracy';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
@@ -21,27 +20,28 @@ import styles from './trainingResultCard.module.scss';
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
   const {project} = useProject();
-  const hasResult = useAppSelector(state =>
-    hasCurrentTrainingResult(state, project),
-  );
+  const hasResult = hasCurrentTrainingResult(project);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
   const latestResult = project.historicResults[0];
   const {trainedModel} = useTrainingData();
-  const tree = useAppSelector(state => getDisplayTree(state, trainedModel));
+  const tree = useAppSelector(state =>
+    getDisplayTree(state, project, trainedModel)
+  );
   const counts = useAppSelector(state =>
-    getDisplayTreeCounts(state, trainedModel),
+    getDisplayTreeCounts(state, project, trainedModel)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const isReplaying = useAppSelector(state => state.isTrainingReplay);
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const testButton = useRef<HTMLButtonElement>(null);
   const isVisible = hasResult && (!isModalOpen || isReplaying);
 
   // The card replaces the Train model button, which previously received focus.
   useEffect(() => {
-    if (isVisible && document.activeElement === document.body) {
+    if (isVisible && !pretrained && document.activeElement === document.body) {
       testButton.current?.focus();
     }
-  }, [isVisible]);
+  }, [isVisible, pretrained]);
 
   if (!isVisible) {
     return null;

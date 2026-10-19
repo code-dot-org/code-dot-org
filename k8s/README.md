@@ -138,3 +138,33 @@ See the
 for cluster creation and the
 [`k8s-gitops` README](https://github.com/code-dot-org/k8s-gitops/blob/main/README.md)
 for Argo CD deployment structure.
+
+### AWS identity
+
+Every pod the chart runs (worker, dashboard, one-shot jobs) uses the
+ServiceAccount named by `serviceAccount.name`, `cdo-app` by default. The chart
+creates it unless `serviceAccount.create` is false. The name is fixed rather
+than derived from the release because the IAM trust policy spells it out as
+`system:serviceaccount:<namespace>:cdo-app`; the chart assumes one release per
+namespace.
+
+On EKS the pods get AWS credentials through IAM Roles for Service Accounts
+(IRSA). `k8s-gitops` creates one role per envType, `codeai-k8s-app-<envType>`,
+with Crossplane, and sets `serviceAccount.annotations` in the envType values to
+`eks.amazonaws.com/role-arn: <that role>`. The EKS pod identity webhook then
+injects `AWS_ROLE_ARN`, `AWS_WEB_IDENTITY_TOKEN_FILE`, and `AWS_REGION` into
+each container at admission, and the AWS SDK's default credential chain
+assumes the role. IMDS stays disabled (`AWS_EC2_METADATA_DISABLED`), so a pod
+without the annotation has no AWS credentials at all rather than the node's.
+
+The annotation is read only when a pod is admitted, so the chart hashes
+`serviceAccount.annotations` into the pod template; changing the role ARN rolls
+the pods. The Kubernetes API token is not mounted (`automountServiceAccountToken:
+false`); the webhook adds its own token volume for STS, independent of that
+setting.
+
+The role's policy lives in `k8s-gitops`
+(`apps/infra/standard-envtypes/chart/templates/aws/`). It is the legacy
+CloudFormation `CDOPolicy` minus what a worker never does, with S3 scoped to
+named buckets. Jobs that need a new AWS permission change that policy, not the
+chart.

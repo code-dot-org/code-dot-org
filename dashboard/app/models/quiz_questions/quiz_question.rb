@@ -19,10 +19,14 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
-  # Every concrete question subtype. TODO: P0 - add MultipleSelectQuestion, MatchQuestion.
-  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion).freeze
+  # Every concrete question subtype. TODO: P0 - add MatchQuestion.
+  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion MultipleSelectQuestion).freeze
 
   after_initialize {self.type ||= self.class.sti_name}
+
+  # Set while loading from a file in self.setup, so the after_commit hook
+  # doesn't immediately write the just-read content back to the same file.
+  attr_accessor :skip_write_to_file
 
   # No FK; parent delete leaves a dangling id.
   belongs_to :fork_parent, class_name: 'QuizQuestion', optional: true
@@ -48,10 +52,17 @@ class QuizQuestion < ApplicationRecord
       Dir.glob("#{dashboard_root}/config/quiz_questions/**/*.json").each do |path|
         source = JSON.parse(File.read(path))
         question = source['type'].constantize.find_or_initialize_by(key: source['key'])
+        question.skip_write_to_file = true
         question.name = source['name']
-        decrypted = Encryption.decrypt_object(source['encrypted_content'])
-        question.content = decrypted['content']
-        question.explanation = decrypted['explanation']
+        begin
+          decrypted = Encryption.decrypt_object(source['encrypted_content'])
+          question.content = decrypted['content']
+          question.explanation = decrypted['explanation']
+        rescue Encryption::KeyMissingError
+          raise if rack_env?(:production)
+          puts "WARNING: quiz question '#{source['key']}' seeded with placeholder content due to missing CDO.properties_encryption_key"
+          question.content = question.placeholder_content
+        end
         question.save! if question.changed?
       rescue JSON::ParserError
         raise format('failed to parse %s', path)
@@ -77,11 +88,11 @@ class QuizQuestion < ApplicationRecord
   end
 
   def delete_file
-    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if write_to_file?
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if levelbuilder_mode?
   end
 
   def write_to_file?
-    Rails.application.config.levelbuilder_mode
+    levelbuilder_mode? && !skip_write_to_file
   end
 
   # published unit means preview/stable/sunsetting
@@ -125,17 +136,39 @@ class QuizQuestion < ApplicationRecord
     false
   end
 
+  # Whether response_data holds an answer, as opposed to a skip.
+  def answered?(response_data)
+    raise NotImplementedError, "#{self.class.name} must implement answered?"
+  end
+
   # Builds `content` from question builder request params.
   def self.content_from_builder_params(builder_params)
     raise ArgumentError, "#{name} does not accept editor params"
   end
 
+  # A valid `content` for this subtype, used in place of real (encrypted)
+  # content when seeding without an encryption key.
+  def placeholder_content
+    raise NotImplementedError, "#{self.class.name} must implement placeholder_content"
+  end
+
   # The `content` fields every subtype has. A blank description is omitted,
   # not stored as null.
-  def self.shared_content(params)
+  def self.shared_content_from_builder_params(params)
     content = {question_title: params[:questionTitle]}
     content[:description] = params[:description] if params[:description].present?
     content
+  end
+
+  # The answer key fields shown with submitted results. Values are nilled,
+  # not omitted, when the key is hidden.
+  def answer_key_json
+    {}
+  end
+
+  # The JSON fields every subtype has.
+  def shared_content_json
+    {questionTitle: content['question_title'], description: content['description']}
   end
 
   # Subtype-specific fields for the quiz builder, answer key included.
@@ -159,28 +192,7 @@ class QuizQuestion < ApplicationRecord
     end
   end
 
-  # Shared by subtypes whose `content` includes a "choices" array. Returns
-  # the set of choice ids, or nil (after recording an error on `content`) if
-  # the shape is invalid.
-  protected def validate_choices(choices)
-    unless choices.is_a?(Array) && choices.length >= 2
-      errors.add(:content, 'must have at least 2 "choices"')
-      return nil
-    end
-
-    # id and text must both be non-blank, not just Strings - a blank text
-    # would render as an answer choice with no visible label.
-    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String) && c['text'].present?}
-      errors.add(:content, 'each choice must have a non-blank "id" and "text"')
-      return nil
-    end
-
-    choice_ids = choices.map {|c| c['id']}
-    unless choice_ids.uniq.length == choice_ids.length
-      errors.add(:content, '"choices" ids must be unique')
-      return nil
-    end
-
-    choice_ids
+  private def levelbuilder_mode?
+    Rails.application.config.levelbuilder_mode
   end
 end

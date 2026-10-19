@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q13-2026'
+
+wrong 'It asks about the first column in the dataset'
+wrong 'It picks the question with the most possible answers'
+wrong "It tries a random question and keeps it if the tree's accuracy improves"
+right 'It picks the question that splits the data into the purest groups'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+When a computer builds a decision tree from training data, how does it choose which question to ask first?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Decision Tree Learning
+MARKDOWN

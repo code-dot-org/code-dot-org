@@ -20,17 +20,18 @@ export interface TrainingRunControls {
 export function useTrainingRun(): TrainingRunControls {
   const {setTrainedModel, snapshotTrainedModel, restoreTrainedModel} =
     useTrainingData();
-  const {applyTrainingRun, snapshotTrainingRun, restoreTrainingRun} =
+  const {project, applyTrainingRun, snapshotTrainingRun, restoreTrainingRun} =
     useProject();
 
   const beginRun = useCallback(() => {
     snapshotTrainedModel();
     snapshotTrainingRun();
-    train.init(store);
+    train.init(store, project);
     const run = train.onClickTrain();
     setTrainedModel(run?.trainedModel);
     applyTrainingRun(run);
   }, [
+    project,
     snapshotTrainedModel,
     snapshotTrainingRun,
     setTrainedModel,

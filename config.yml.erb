@@ -441,8 +441,10 @@ dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
 puma_control_server_token: !Secret
 
-# Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
-dashboard_session_ttl_days: 40
+# Session timeout in days. Controls both the Devise timeout and the Rails
+# session store (Redis) TTL. Targeting a little over two weeks, so students
+# should remain authenticated through winter break.
+dashboard_session_ttl_days: 18
 
 # Pegasus
 override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
@@ -706,7 +708,13 @@ contentful_space_id: "90t6bu6vlf76"
 contentful_api_key: !Secret
 contentful_hostname: cdn.contentful.com
 
-# CDO Contentful engine configs for CSforALL space
+# CDO Contentful engine configs for Hour of AI space
+contentful_hour_of_ai_access_token: !Secret
+contentful_hour_of_ai_space: hwu8vzk5v0g2
+contentful_hour_of_ai_environment: master
+contentful_hour_of_ai_api_url: preview.contentful.com
+
+# CSforALL space, superseded by Hour of AI (INF-2233). Kept one deploy cycle for rollback.
 contentful_cs_for_all_access_token: !Secret
 contentful_cs_for_all_space: 27jkibac934d
 contentful_cs_for_all_namespace: master

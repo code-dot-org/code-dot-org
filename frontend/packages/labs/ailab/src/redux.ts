@@ -17,6 +17,7 @@ import type {
   DataRow,
   Metadata,
   Mode,
+  PresetColumns,
   TrainedModelDetailsSave,
   SaveResponseData,
   PrevNextButtons,
@@ -28,6 +29,8 @@ import type {
   TrainingModalStep,
 } from './types';
 
+export type DatasetLayout = 'table' | 'cards';
+
 export interface RootState {
   name: string | undefined;
   csvfile: string | undefined;
@@ -37,10 +40,7 @@ export interface RootState {
   metadata: Metadata;
   removedRowsCount: number;
   highlightDataset: string | undefined;
-  highlightColumn: string | undefined;
   columnsByDataType: Record<string, string>;
-  selectedFeatures: string[];
-  labelColumn: string | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
@@ -62,6 +62,8 @@ export interface RootState {
   trainingModalStep: TrainingModalStep | undefined;
   isTrainingReplay: boolean;
   currentColumn: string | undefined;
+  datasetLayout: DatasetLayout;
+  datasetCardRow: number;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
   viewedPanels: string[];
@@ -70,6 +72,7 @@ export interface RootState {
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
   resultsTab: string;
+  presetColumns: PresetColumns | undefined;
   resetCount: number;
   resetKeepsHistoricResults: boolean;
   mode?: Mode;
@@ -94,7 +97,7 @@ export type TrainingResults = Pick<
 
 export function getTrainingResults(state: RootState): TrainingResults {
   return Object.fromEntries(
-    TRAINING_RESULT_KEYS.map(key => [key, state[key]]),
+    TRAINING_RESULT_KEYS.map(key => [key, state[key]])
   ) as TrainingResults;
 }
 
@@ -110,10 +113,7 @@ export const initialState: RootState = {
   },
   removedRowsCount: 0,
   highlightDataset: undefined,
-  highlightColumn: undefined,
   columnsByDataType: {},
-  selectedFeatures: [],
-  labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
@@ -130,10 +130,12 @@ export const initialState: RootState = {
   predictionPlaying: false,
   predictionCount: 0,
   trainedModelDetails: {},
-  currentPanel: 'datasetView',
+  currentPanel: 'selectDataset',
   trainingModalStep: undefined,
   isTrainingReplay: false,
   currentColumn: undefined,
+  datasetLayout: 'table',
+  datasetCardRow: 0,
   // Possible values for saveStatus: "notStarted", "started", "success",
   // "piiProfanity", and "failure".
   saveStatus: 'notStarted',
@@ -146,6 +148,7 @@ export const initialState: RootState = {
   instructionsKey: null,
   showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
+  presetColumns: undefined,
   resetCount: 0,
   resetKeepsHistoricResults: false,
 };
@@ -172,7 +175,7 @@ const ailabSlice = createSlice({
     setImportedData: {
       reducer(
         state,
-        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>,
+        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>
       ) {
         const {data, userUploadedData} = action.payload;
         if (state.currentPanel === 'selectDataset') {
@@ -189,14 +192,9 @@ const ailabSlice = createSlice({
     },
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
-      if (
-        state.mode &&
-        state.mode.datasets &&
-        state.mode.datasets.length > 1 &&
-        state.mode.hideSelectLabel
-      ) {
-        state.labelColumn = action.payload.defaultLabelColumn;
-      }
+    },
+    setPresetColumns(state, action: PayloadAction<PresetColumns>) {
+      state.presetColumns = action.payload;
     },
     setRemovedRowsCount(state, action: PayloadAction<number>) {
       state.removedRowsCount = action.payload;
@@ -204,7 +202,7 @@ const ailabSlice = createSlice({
     setColumnsByDataType: {
       reducer(
         state,
-        action: PayloadAction<{column: string; dataType: string}>,
+        action: PayloadAction<{column: string; dataType: string}>
       ) {
         state.columnsByDataType[action.payload.column] =
           action.payload.dataType;
@@ -212,32 +210,6 @@ const ailabSlice = createSlice({
       prepare(column: string, dataType: string) {
         return {payload: {column, dataType}};
       },
-    },
-    addSelectedFeature(state, action: PayloadAction<string>) {
-      if (!state.selectedFeatures.includes(action.payload)) {
-        const columns = Object.keys(state.data[0] ?? {});
-        state.selectedFeatures.push(action.payload);
-        state.selectedFeatures.sort(
-          (a, b) => columns.indexOf(a) - columns.indexOf(b),
-        );
-      }
-    },
-    removeSelectedFeature(state, action: PayloadAction<string>) {
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
-    },
-    setSelectedFeatures(state, action: PayloadAction<string[]>) {
-      const columns = Object.keys(state.data[0] ?? {});
-      state.selectedFeatures = [...action.payload].sort(
-        (a, b) => columns.indexOf(a) - columns.indexOf(b),
-      );
-    },
-    setLabelColumn(state, action: PayloadAction<string>) {
-      state.labelColumn = action.payload;
-      state.selectedFeatures = state.selectedFeatures.filter(
-        item => item !== action.payload,
-      );
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -248,7 +220,7 @@ const ailabSlice = createSlice({
     */
     setFeatureNumberKey(
       state,
-      action: PayloadAction<Record<string, Record<string, number>>>,
+      action: PayloadAction<Record<string, Record<string, number>>>
     ) {
       state.featureNumberKey = action.payload;
     },
@@ -263,7 +235,7 @@ const ailabSlice = createSlice({
     },
     setAccuracyCheckPredictedLabels(
       state,
-      action: PayloadAction<(number | string)[]>,
+      action: PayloadAction<(number | string)[]>
     ) {
       state.accuracyCheckPredictedLabels = action.payload;
     },
@@ -276,7 +248,7 @@ const ailabSlice = createSlice({
     setTestData: {
       reducer(
         state,
-        action: PayloadAction<{feature: string; value: string | number}>,
+        action: PayloadAction<{feature: string; value: string | number}>
       ) {
         state.testData[action.payload.feature] = action.payload.value;
         state.prediction = undefined;
@@ -292,7 +264,7 @@ const ailabSlice = createSlice({
     setPrediction: {
       reducer(
         state,
-        action: PayloadAction<{prediction: number | string; inputs: number[]}>,
+        action: PayloadAction<{prediction: number | string; inputs: number[]}>
       ) {
         state.prediction = action.payload.prediction;
         state.predictionTestData = {...state.testData};
@@ -340,7 +312,7 @@ const ailabSlice = createSlice({
           field: string;
           value: string;
           isColumn: boolean;
-        }>,
+        }>
       ) {
         const {field, value, isColumn} = action.payload;
         const details = state.trainedModelDetails;
@@ -389,6 +361,12 @@ const ailabSlice = createSlice({
         state.currentColumn = undefined;
       }
     },
+    setDatasetLayout(state, action: PayloadAction<DatasetLayout>) {
+      state.datasetLayout = action.payload;
+    },
+    setDatasetCardRow(state, action: PayloadAction<number>) {
+      state.datasetCardRow = action.payload;
+    },
     setCurrentColumn(state, action: PayloadAction<string>) {
       const currentColumn = action.payload;
       if (!getShowColumnClicking(state)) {
@@ -397,26 +375,12 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightColumn(state, action: PayloadAction<string>) {
-      const highlightColumn = action.payload;
-      if (!getShowColumnClicking(state)) {
-        // If no column clicking, do nothing.
-        return;
-      }
-      if (
-        state.currentPanel === 'datasetView' &&
-        highlightColumn === state.labelColumn
-      ) {
-        return;
-      }
-      state.highlightColumn = highlightColumn;
-    },
     setHighlightDataset(state, action: PayloadAction<string>) {
       state.highlightDataset = action.payload;
     },
     setTrainingModalStep(
       state,
-      action: PayloadAction<TrainingModalStep | undefined>,
+      action: PayloadAction<TrainingModalStep | undefined>
     ) {
       state.trainingModalStep = action.payload;
       if (action.payload !== 'testing') {
@@ -430,7 +394,7 @@ const ailabSlice = createSlice({
     setSaveStatus: {
       reducer(
         state,
-        action: PayloadAction<{status: string; data?: SaveResponseData}>,
+        action: PayloadAction<{status: string; data?: SaveResponseData}>
       ) {
         state.saveStatus = action.payload.status;
         state.saveResponseData = action.payload.data;
@@ -462,12 +426,9 @@ export const {
   setInvalidData,
   setImportedData,
   setImportedMetadata,
+  setPresetColumns,
   setRemovedRowsCount,
   setColumnsByDataType,
-  addSelectedFeature,
-  removeSelectedFeature,
-  setSelectedFeatures,
-  setLabelColumn,
   setFeatureNumberKey,
   setReserveLocation,
   setAccuracyCheckExamples,
@@ -485,7 +446,8 @@ export const {
   setTrainedModelDetail,
   setCurrentPanel,
   setCurrentColumn,
-  setHighlightColumn,
+  setDatasetCardRow,
+  setDatasetLayout,
   setHighlightDataset,
   setTrainingModalStep,
   replayTraining,
@@ -506,21 +468,21 @@ export const saveModel =
   (
     saveTrainedModel: SaveTrainedModel,
     project: AilabProject,
-    trainedModel?: TrainedModel,
+    trainedModel?: TrainedModel
   ): ThunkAction<void, RootState, unknown, AnyAction> =>
   (dispatch, getState) => {
     const dataToSave = getTrainedModelDataToSave(
       getState(),
       project,
-      trainedModel,
+      trainedModel
     );
     dispatch(setSaveStatus('started'));
     saveTrainedModel(dataToSave, (response: SaveResponse) => {
       dispatch(setSaveStatus(response.status, response.data));
       dispatch(
         setCurrentPanel(
-          response.status === 'success' ? 'modelSummary' : 'saveModel',
-        ),
+          response.status === 'success' ? 'modelSummary' : 'saveModel'
+        )
       );
     });
   };
@@ -535,11 +497,22 @@ export function getShowColumnClicking(state: RootState): boolean {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
-export function getPredictAvailable(state: RootState): boolean {
+export function getHideDatasetView(state: RootState): boolean {
+  return !!state.mode?.hideDatasetView;
+}
+
+export function getHideTestingView(state: RootState): boolean {
+  return !!state.mode?.hideTestingView;
+}
+
+export function getPredictAvailable(
+  state: RootState,
+  project: AilabProject
+): boolean {
   return (
     Object.keys(state.testData).filter(
-      value => state.testData[value] && state.testData[value] !== '',
-    ).length === state.selectedFeatures.length
+      value => state.testData[value] && state.testData[value] !== ''
+    ).length === project.selectedFeatures.length
   );
 }
 
@@ -548,23 +521,24 @@ export function getPredictAvailable(state: RootState): boolean {
 // the new object reference doesn't trigger unnecessary rerenders.
 export function getPanelButtons(
   state: RootState,
-  project: AilabProject,
+  project: AilabProject
 ): PrevNextButtons {
   return prevNextButtons(state, project);
 }
 
-export function readyToTrain(state: RootState): boolean {
-  return uniqLabelFeaturesSelected(state);
+export function readyToTrain(project: AilabProject): boolean {
+  return uniqLabelFeaturesSelected(project);
 }
 
 /* Functions for processing data to display. */
 
 export function getTableData(
   state: RootState,
-  useResultsData: boolean,
+  project: AilabProject,
+  useResultsData: boolean
 ): DataRow[] {
   if (useResultsData) {
-    return getResultsDataInDataTableForm(state);
+    return getResultsDataInDataTableForm(state, project);
   } else {
     return state.data;
   }

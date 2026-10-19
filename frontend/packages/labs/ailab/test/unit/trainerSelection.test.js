@@ -24,9 +24,11 @@ const JEANS_COLUMNS = {
   size: ColumnTypes.NUMERICAL,
 };
 
-function savedTrainerId(store) {
-  return getTrainedModelDataToSave(store.getState(), initialProject)
-    .selectedTrainer;
+// The trainer id comes off the label column's type, so an untrained project
+// carrying the right label is enough.
+function savedTrainerId(store, label = 'animal') {
+  const project = {...initialProject, labelColumn: label};
+  return getTrainedModelDataToSave(store.getState(), project).selectedTrainer;
 }
 
 describe('trainer selection from mode', () => {
@@ -36,19 +38,19 @@ describe('trainer selection from mode', () => {
 
   test('a mode without a trainer gets the default family', () => {
     expect(buildTrainer(levelStore({datasets: ['zoo']}))).toBeInstanceOf(
-      KNNTrainer,
+      KNNTrainer
     );
   });
 
   test('a level naming the decision tree gets it', () => {
     expect(buildTrainer(levelStore({trainer: 'decisionTree'}))).toBeInstanceOf(
-      DecisionTreeTrainer,
+      DecisionTreeTrainer
     );
   });
 
   test('a level naming knn gets it', () => {
     expect(buildTrainer(levelStore({trainer: 'knn'}))).toBeInstanceOf(
-      KNNTrainer,
+      KNNTrainer
     );
   });
 
@@ -56,7 +58,7 @@ describe('trainer selection from mode', () => {
     'an unrecognized trainer %j falls back rather than throwing',
     trainer => {
       expect(buildTrainer(levelStore({trainer}))).toBeInstanceOf(KNNTrainer);
-    },
+    }
   );
 });
 
@@ -66,20 +68,23 @@ describe('the trainer id recorded on a saved model', () => {
 
     expect(savedTrainerId(levelStore(mode))).toBe('treeClassify');
     expect(
-      savedTrainerId(levelStore(mode, JEANS, JEANS_COLUMNS, 'price')),
+      savedTrainerId(levelStore(mode, JEANS, JEANS_COLUMNS, 'price'), 'price')
     ).toBe('treeRegress');
   });
 
   test('a knn level records the knn ids', () => {
     expect(savedTrainerId(levelStore(undefined))).toBe('knnClassify');
     expect(
-      savedTrainerId(levelStore(undefined, JEANS, JEANS_COLUMNS, 'price')),
+      savedTrainerId(
+        levelStore(undefined, JEANS, JEANS_COLUMNS, 'price'),
+        'price'
+      )
     ).toBe('knnRegress');
   });
 
   test('an unrecognized trainer records the default family ids', () => {
     expect(savedTrainerId(levelStore({trainer: 'randomForest'}))).toBe(
-      'knnClassify',
+      'knnClassify'
     );
   });
 });
