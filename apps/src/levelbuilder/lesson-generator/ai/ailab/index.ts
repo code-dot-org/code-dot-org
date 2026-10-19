@@ -1,12 +1,12 @@
-import {
-  INSTRUCTIONS_KEYS,
-  type InstructionsKey,
-  type Mode,
-} from '@code-dot-org/ailab';
 import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
+import {
+  INSTRUCTIONS_KEYS,
+  type InstructionsKey,
+  type Mode,
+} from '@cdo/apps/ailab/engine';
 import {
   authoringRulesLines,
   LevelContext,

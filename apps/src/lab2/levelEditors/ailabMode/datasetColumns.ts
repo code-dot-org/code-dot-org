@@ -1,6 +1,6 @@
-import {type Metadata, selectableColumns} from '@code-dot-org/ailab';
 import Papa from 'papaparse';
 
+import {type Metadata, selectableColumns} from '@cdo/apps/ailab/engine';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 const AILAB_ASSET_PATH = '/blockly/media/skins/ailab/';

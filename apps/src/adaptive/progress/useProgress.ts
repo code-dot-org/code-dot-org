@@ -16,17 +16,13 @@ import {
   GeneratedContent,
   PROJECT_STEP_ID,
   Progress,
-  StepContext,
   StepProgress,
   getStatusMap,
 } from './model';
 import {
-  LocalGeneratedInstructionsStore,
-  GeneratedInstructions,
   ProgressKey,
   ProgressStore,
   StepWrite,
-  localGeneratedInstructionsStore,
   serverProgressStore,
 } from './progressStore';
 
@@ -47,9 +43,6 @@ export type LevelStepReporter = (
 
 interface ProgressOptions {
   store?: ProgressStore;
-  generatedStore?: LocalGeneratedInstructionsStore;
-  /** Keys the local record; the server takes the user from the session. */
-  userId?: number | null;
   reportLevelStep?: LevelStepReporter;
 }
 
@@ -64,20 +57,12 @@ const logFailure = (what: string, error: unknown) =>
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
-  {
-    store = serverProgressStore,
-    generatedStore = localGeneratedInstructionsStore,
-    userId = null,
-    reportLevelStep,
-  }: ProgressOptions = {}
+  {store = serverProgressStore, reportLevelStep}: ProgressOptions = {}
 ) {
   // Undefined until the stored progress has been loaded.
   const [progress, setProgress] = useState<Progress>();
-  // Generated instructions, kept locally until the server stores them.
-  const [generated, setGenerated] = useState<GeneratedInstructions>();
   // Destructure key so its members can be used as primitive deps.
   const {scriptId, levelId} = key;
-  const pathwayId = pathway.id;
 
   useEffect(() => {
     let cancelled = false;
@@ -96,26 +81,17 @@ export function useProgress(
     };
   }, [store, scriptId, levelId]);
 
-  useEffect(() => {
-    let cancelled = false;
-    setGenerated(undefined);
-    generatedStore.load({userId, scriptId, levelId, pathwayId}).then(loaded => {
-      if (!cancelled) setGenerated(loaded ?? {});
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [generatedStore, userId, scriptId, levelId, pathwayId]);
-
-  useEffect(() => {
-    if (generated) {
-      generatedStore.save({userId, scriptId, levelId, pathwayId}, generated);
-    }
-  }, [generatedStore, userId, scriptId, levelId, pathwayId, generated]);
-
   const statusMap = useMemo(
     () => getStatusMap(pathway, progress ?? EMPTY_PROGRESS),
     [pathway, progress]
+  );
+
+  const updateStep = useCallback(
+    (stepId: string, change: (entry?: StepProgress) => StepProgress) =>
+      setProgress(
+        p => p && {...p, steps: {...p.steps, [stepId]: change(p.steps[stepId])}}
+      ),
+    []
   );
 
   // A level step's progress is its level's own, so it goes to a milestone.
@@ -125,10 +101,7 @@ export function useProgress(
       change: (entry?: StepProgress) => StepProgress,
       write: StepWrite
     ) => {
-      setProgress(
-        p =>
-          p && {...p, steps: {...p.steps, [step.id]: change(p.steps[step.id])}}
-      );
+      updateStep(step.id, change);
       if (step.kind !== 'level') {
         store.saveStep({scriptId, levelId}, step.id, write);
         return;
@@ -142,7 +115,7 @@ export function useProgress(
         write.timeSinceLastSave ?? 0
       ).catch(error => logFailure(`report ${step.id}`, error));
     },
-    [store, scriptId, levelId, reportLevelStep]
+    [updateStep, store, scriptId, levelId, reportLevelStep]
   );
 
   const startStep = useCallback(
@@ -150,7 +123,11 @@ export function useProgress(
       if (step.id === PROJECT_STEP_ID) return;
       reportStepProgress(
         step,
-        entry => entry ?? {status: 'started', timeSpent: 0},
+        entry => ({
+          timeSpent: 0,
+          ...entry,
+          status: entry?.status ?? 'started',
+        }),
         {started: true}
       );
     },
@@ -180,8 +157,8 @@ export function useProgress(
       reportStepProgress(
         step,
         entry => ({
-          status: 'started',
           ...entry,
+          status: entry?.status ?? 'started',
           timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
         }),
         {timeSinceLastSave: timeMs}
@@ -195,8 +172,8 @@ export function useProgress(
       reportStepProgress(
         step,
         entry => ({
-          status: 'started',
           ...entry,
+          status: entry?.status ?? 'started',
           submitted: true,
           timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
           answers: {...entry?.answers, [questionId]: answers},
@@ -207,27 +184,21 @@ export function useProgress(
   );
 
   const saveGeneratedInstructions = useCallback(
-    (id: string, content: GeneratedContent) =>
-      setGenerated(g => g && {...g, [id]: content}),
-    []
+    (id: string, content: GeneratedContent) => {
+      updateStep(id, entry => ({
+        timeSpent: 0,
+        ...entry,
+        generatedInstructions: content,
+      }));
+      store.saveInstructions({scriptId, levelId}, id, content);
+    },
+    [updateStep, store, scriptId, levelId]
   );
-
-  const stepContextMap = useMemo(() => {
-    const map: {[stepId: string]: StepContext} = {};
-    for (const [id, entry] of Object.entries(progress?.steps ?? {})) {
-      if (entry.answers) map[id] = {answers: entry.answers};
-    }
-    for (const [id, content] of Object.entries(generated ?? {})) {
-      map[id] = {...map[id], generated: content};
-    }
-    return map;
-  }, [progress, generated]);
 
   return {
     progress,
     isLoading: progress === undefined,
     statusMap,
-    stepContextMap,
     startStep,
     completeStep,
     leaveStep,

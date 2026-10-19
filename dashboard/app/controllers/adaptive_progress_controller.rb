@@ -12,13 +12,15 @@ class AdaptiveProgressController < ApplicationController
   # TestResults.LEVEL_STARTED in apps/src/constants.js.
   LEVEL_STARTED_RESULT = -150
 
+  MAX_JSON_BYTES = 64.kilobytes
   MAX_TEXT_LENGTH = 10_000
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
-    user_level = adaptive_user_level
-    steps = user_level ? user_level.user_adaptive_steps.where.not(progress: nil).to_h {|row| [row.step_id, row.progress_json]} : {}
-    render json: {steps: steps.merge(level_step_progress)}
+    rows = adaptive_user_level&.user_adaptive_steps || []
+    steps = rows.filter_map {|row| (entry = row_json(row)) && [row.step_id, entry]}.to_h
+    steps.merge!(level_step_progress) {|_step_id, entry, progress| entry.merge(progress)}
+    render json: {steps: steps}
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress
@@ -40,10 +42,7 @@ class AdaptiveProgressController < ApplicationController
       return head :unprocessable_entity unless seconds
     end
 
-    user_level = adaptive_user_level || start_adaptive_user_level
-    row = Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      UserAdaptiveStep.find_or_create_by!(user_level_id: user_level.id, step_id: step['id'])
-    end
+    row = step_row(step)
     row.record_progress!(
       started: body['started'] == true,
       completed: body['completed'] == true,
@@ -56,7 +55,17 @@ class AdaptiveProgressController < ApplicationController
 
   # PUT /adaptive_progress/steps/:step_id/generated_instructions
   def update_generated_instructions
-    render json: {error: 'Saving generated instructions is not implemented yet'}, status: :not_implemented
+    step = @level.find_step(params[:step_id])
+    # Only a project step with a prompt generates instructions.
+    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['instructionsPrompt'].present?
+
+    instructions = request.request_parameters['generatedInstructions']
+    return head :unprocessable_entity unless valid_json_value?(instructions)
+
+    row = step_row(step)
+    row.update!(generated_instructions: instructions)
+
+    render json: row_json(row)
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
@@ -72,6 +81,13 @@ class AdaptiveProgressController < ApplicationController
 
   private def adaptive_user_level
     UserLevel.find_by(user_id: current_user.id, level_id: @level.id, script_id: @unit.id)
+  end
+
+  private def step_row(step)
+    user_level = adaptive_user_level || start_adaptive_user_level
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      UserAdaptiveStep.find_or_create_by!(user_level_id: user_level.id, step_id: step['id'])
+    end
   end
 
   # Through the milestone path, so a racing Start milestone finds the same row.
@@ -95,11 +111,22 @@ class AdaptiveProgressController < ApplicationController
     levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
   end
 
+  private def row_json(row)
+    return nil unless row.progress || row.generated_instructions
+    entry = {'timeSpent' => 0}.merge(row.progress_json)
+    entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
+    entry
+  end
+
   private def user_level_json(user_level)
     {
       'status' => user_level.passing? ? 'complete' : 'started',
       'timeSpent' => user_level.time_spent || 0,
     }
+  end
+
+  private def valid_json_value?(value)
+    (value.is_a?(Hash) || value.is_a?(Array)) && value.to_json.bytesize <= MAX_JSON_BYTES
   end
 
   private def time_spent_seconds(time_ms)

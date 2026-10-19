@@ -66,7 +66,7 @@ const resolve = (
     projectInfo,
     sources,
     authoredInstructions: 'Authored.',
-    stepContext: undefined,
+    generatedInstructions: undefined,
     saveGeneratedInstructions,
     aichatContext: context,
     ...overrides,
@@ -95,7 +95,7 @@ describe('resolveStepInstructions', () => {
 
   it('returns cached instructions whose hash matches, without generating', async () => {
     const {result} = resolve({
-      stepContext: {generated: {instructions: 'Cached.', inputsHash}},
+      generatedInstructions: {instructions: 'Cached.', inputsHash},
     });
 
     expect(await result).toBe('Cached.');
@@ -108,7 +108,7 @@ describe('resolveStepInstructions', () => {
       traceId: 'trace-1',
     });
     const {result, saveGeneratedInstructions} = resolve({
-      stepContext: {generated: {instructions: 'Old.', inputsHash: 'deadbeef'}},
+      generatedInstructions: {instructions: 'Old.', inputsHash: 'deadbeef'},
     });
 
     expect(await result).toBe('Fresh.');
