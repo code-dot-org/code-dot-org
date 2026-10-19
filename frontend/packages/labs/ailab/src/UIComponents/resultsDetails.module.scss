@@ -8,7 +8,7 @@ $summary-one-line-min-width: 320px;
   box-sizing: border-box;
   flex: 1;
   min-height: 0;
-  padding: 16px 24px 24px;
+  padding: 20px 24px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -40,6 +40,10 @@ $summary-one-line-min-width: 320px;
 
 .divider {
   @include mixins.summary-divider;
+}
+
+.actionGroup {
+  @include mixins.action-group;
 }
 
 @container (width < #{$summary-one-line-min-width}) {

@@ -1,7 +1,7 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip, Typography} from '@mui/material';
-import React, {type ReactNode} from 'react';
+import {Typography} from '@mui/material';
+import React, {type ReactNode, useId} from 'react';
 
+import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
 
 import styles from './rowsPanel.module.scss';
@@ -17,6 +17,7 @@ export interface RowsPanelProps {
   onToggleColumns: () => void;
   emptyText?: string;
   resultsToggle?: ReactNode;
+  prediction?: string | number;
 }
 
 const RowsPanel = ({
@@ -27,15 +28,18 @@ const RowsPanel = ({
   onToggleColumns,
   emptyText = 'No rows reached this step',
   resultsToggle,
+  prediction,
 }: RowsPanelProps) => {
-  const columnsLabel = showAllColumns
-    ? 'Show only features and label'
-    : 'Show all columns';
-
+  const descriptionId = useId();
   return (
     <div className={styles.panel}>
       <div className={styles.header}>
-        <Typography variant="body3" component="p" className={styles.text}>
+        <Typography
+          id={descriptionId}
+          variant="body3"
+          component="p"
+          className={styles.text}
+        >
           {description}
         </Typography>
         <div className={styles.actions}>
@@ -49,28 +53,20 @@ const RowsPanel = ({
           )}
           <div className={styles.actionGroup}>
             {resultsToggle}
-            <Tooltip title={columnsLabel}>
-              <IconButton
-                aria-label={columnsLabel}
-                onClick={onToggleColumns}
-                size="extraSmall"
-                color="tertiary"
-                variant="outlined"
-              >
-                <FontAwesomeV6Icon
-                  iconName="arrows-left-right-to-line"
-                  aria-hidden="true"
-                />
-              </IconButton>
-            </Tooltip>
+            <ColumnsButton
+              showAllColumns={showAllColumns}
+              onToggle={onToggleColumns}
+            />
           </div>
         </div>
       </div>
       <NodeRowsTable
+        labelId={descriptionId}
         rowIndices={rowIndices}
         emphasizedColumn={emphasizedColumn}
         showAllColumns={showAllColumns}
         emptyText={emptyText}
+        prediction={prediction}
       />
     </div>
   );
