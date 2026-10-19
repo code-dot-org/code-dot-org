@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T18:09:41.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Dinosaurs",
+    "long_instructions": "You are building a nearest-neighbor classifier to identify whether dinosaurs are carnivores or herbivores. You’re making predictions based on three features: the dinosaur’s body mass, claw length, and top speed.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Run the starter code, which implements a simple classifier. Take note of its accuracy: you’ll answer a question about it later.\r\n2. Create a new `MinMaxScaler` to use for scaling the data.\r\n3. Use your scaler’s `fit_transform` method to fit the scaler and scale the training inputs.\r\n4. Use your scaler’s `transform` method to scale the test inputs.\r\n5. Train the model using the scaled training data instead of the unscaled training data.\r\n6. Test the model using the scaled test data instead of the unscaled test data.\r\n7. Run your updated code and take note of its new accuracy now: you’ll answer a question about it later.\r\n\r\nNote that the `model.score` function at the end is a convenient way to test how accurate a trained model performs on a specific set of inputs and outputs!",
+    "bubble_choice_description": "Build a nearest-neighbor classifier to identify whether dinosaurs are carnivores or herbivores.\r\n",
+    "thumbnail_url": "https://images.code.org/54f9cfe63707e1a37f564c116c490c7d-dinosaur.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Input features: [body mass (kg), claw length (cm), top speed (km/h)]\ninputs = [\n  [15, 6.5, 39],\n  [70, 13.0, 35],\n  [500, 24.0, 32],\n  [2000, 15.0, 32],\n  [7000, 20.0, 27],\n  [180, 3.0, 13],\n  [3500, 3.0, 8],\n  [6000, 4.0, 10],\n  [8000, 2.0, 19],\n  [50000, 8.0, 10],\n]\n\noutputs = [\n  \"carnivore\",\n  \"carnivore\",\n  \"carnivore\",\n  \"carnivore\",\n  \"carnivore\",\n  \"herbivore\",\n  \"herbivore\",\n  \"herbivore\",\n  \"herbivore\",\n  \"herbivore\",\n]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs,\n  outputs,\n  test_size=0.3,\n)\n\n# TODO 2: Create a new MinMaxScaler\n# TODO 3: Fit the scaler and scale the training inputs\n# TODO 4: Scale the test inputs\n\n# Train the classifier\n# TODO 5: Train the model using the scaled training inputs\nmodel = KNeighborsClassifier(n_neighbors=1)\nmodel.fit(train_inputs, train_outputs)\n\n# TODO 6: Test the model using the scaled test inputs\naccuracy = model.score(test_inputs, test_outputs)\nprint(f\"Model Accuracy: {accuracy}\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr2KOwnHRqDSk1J\nLKNjbSVC8wCKS/Cen5BR7N89L/WVXZX9i6t+Md2IXaQDlR7aIgoLbWGmhZ2D\nTea633G4k67g83UGvseTL9kKXZJN4pCqidX77RNWZvofB+2hFZihAFVUjlYA\nvm1K/pib5aymuDL7bLAkLxy89NFcivzRuC70EfWDh5HfF4R4IZIRba6YXYrL\nePCTQa5gWchPLznxgGoecM7AfjjupM/UvqgPJbcyr10DBhXQ1GWaFUjJDvy8\n/oN9xLjBeyFGzR09AIRC4JENVmsH3oFMptIeOXcmbcwSGH4egoj+QqVz/sS2\neRxn1C27pIOhVN4bRPkEIaiNYkHZlGZTWbxjP0O4eY6EX1FU61FBzfKXNPAi\nS8bJp+GxD3miu7PssQGodN4y0tnfajBnTi8l3hWjiomu1Lcrji9+MnSzF7Sk\nKn9QAb5nj5JAdr4g4vle2LQX4bSz5SacO5J8s+MhhG8WZkEKYKY+QS90uPAv\nJXbb8yb+5H+GYK9FimtvZauWzwbQ1WZ2J9RVHiykdLjGWTVoebGuijJ2PNx1\ntioJ+shXaN1QdxW4trIwdGU+YwocGZj9snqhXtF0UO0WGo1mhoVMDsdGExv7\nVgBEcGDLE+VhCdfXjcwbVS6hLvsf4dH/v0WcLQRENuzUIZykkraLLWkfWOQo\nxOMkF2YWv01GcCnnEbOHTZXN0GAdmVg1CyhOZ7Ij7HhKAT/R0m8aDziIuyBd\nYxV4zqkMmEUYaGkM8hy6W/16JdmyrRWnXqi4fxG9azWJvph0bFy2n+TTSrBJ\nrkmFzHFQsc53P+2dzZb1GfOXQqsk93O70AqADUWW8c+DdDjF3eGJ9FdlJwov\nvgusB5yspg8/6XarpMiAglLpnBYrjOTLztFHxjWR3IyOfTV3NBwwmUSUlXFf\nb7ZD8gsTh5FsFuhqX9i2ky3RQZWfFjiGqurzB5FgGtwfvJgIeiffjcllJrIN\nFxPwkqSs+TL6+LoXK9vlgorKJa9PqvjwOVrWZJY+EZjDb6zBxYVhPMw1E2Jv\nkes+ts9uVcFekgohXClGjc2+LBip9f+46OjcXcX09FM3rwESFa0A6t7+Ie4g\n0zfPRVJI+5OgUrXfnPlkXjfj5H7oY2zAkBt/0YCVcDVcUiEvThXVU0Bxiu9x\naN6qyJMtSCKPhiChBq/XrEKnO+qNTAVpnYPHHts6af74yjsFME5cqJ727mVB\nM9UY7XRSKMd7Cf/xybLJph/k71U/4j7AcgBwPUg4vRG90nPXH3oH1iTB7qks\n+L8NcGO39/zonyFnHgbt8lNEEyZQiUVq3rBJ7k81E/n//pEHs59tfM6lj/Ga\nxMeyrbVD1BjsgSfsyRe8hVOsZEgIWpvPFmNEeJYDCeyS+8UPFT5nVjwWP8He\nZXkYE2fPJpXLZwS8jRS3zGc9D0LHQayvXor68r/ZSrhoVI5XD4Rfa+3Fubw/\nFYSw18lYoE754uxN/2EXeRTOVkqFmgWlYChPRh6uFIkw4ydmlSLX5LCbwDVX\nGKDDDc7EP1FYui+hMrYLHOxZ4Gq4vW+pGqkLnB5F94OZ5S671XMPAccIXCYI\nNAJ2jpfHqzTqMl/9ux7cMgbwbtrdPfv6v1LHMA1NQwild88jMke/OMh5aPQp\nEneZhg2R8aIEkf48e2bdVOgEb/aAens=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 18:09:48 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 18:10:04 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,8 +1,3 @@
-@use 'sass:list';
-
-// Leaves cycle through this order, chosen so neighbors have good contrast for
-// colorblindness, including across the wrap from last to first.
-$leaf-colors: brand, accent-orange, info, error, warning, accent-pink, success;
 $mini-map-height: 80px;
 $edge-padding: 8px;
 // Keeps the tree centered in the space left of the replay button.
@@ -35,14 +30,10 @@ $button-clearance: 40px;
   stroke: var(--background-neutral-septenary);
 }
 
-@for $index from 1 through list.length($leaf-colors) {
-  $color: list.nth($leaf-colors, $index);
-
-  .leafColor#{$index - 1} {
-    vector-effect: non-scaling-stroke;
-    fill: var(--background-#{$color}-light);
-    stroke: var(--border-#{$color}-primary);
-  }
+.answer {
+  vector-effect: non-scaling-stroke;
+  fill: var(--leaf-color-light);
+  stroke: var(--leaf-color);
 }
 
 .miniMap .replayButton {

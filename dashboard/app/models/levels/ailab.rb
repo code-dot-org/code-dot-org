@@ -28,17 +28,18 @@
 class Ailab < Level
   serialized_attrs %w(
     start_sources
-    hide_share_and_remix
     is_project_level
     mode
     dynamic_instructions
     uses_lab2
   )
 
-  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'datasets-manifest.json')
-  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'public', 'lab2-instructions.json')
+  DATASETS_MANIFEST_PATH = frontend_dir('packages', 'labs', 'ailab', 'src', 'datasets-manifest.json')
+  LAB2_INSTRUCTIONS_PATH = frontend_dir('packages', 'labs', 'ailab', 'src', 'lab2-instructions.json')
 
   REQUIRE_ACCURACY_RANGE = (0..100)
+
+  DATASET_COLUMN_MODE_KEYS = %w(label features hideSelectLabel lockFeatures pretrained).freeze
 
   validate :validate_lab2_mode
 
@@ -148,6 +149,10 @@ class Ailab < Level
     JSONValue.value(uses_lab2) == true
   end
 
+  def channel_backed?
+    super || uses_lab2?
+  end
+
   def get_validations
     return nil unless uses_lab2?
 
@@ -193,29 +198,63 @@ class Ailab < Level
   end
 
   private def lab2_mode
+    parsed_lab2_mode || {}
+  end
+
+  private def parsed_lab2_mode
     parsed_mode = begin
       JSON.parse(mode.presence || '{}')
     rescue JSON::ParserError
       nil
     end
-    parsed_mode.is_a?(Hash) ? parsed_mode : {}
+    parsed_mode if parsed_mode.is_a?(Hash)
   end
 
   private def validate_lab2_mode
     return unless JSONValue.value(uses_lab2) == true
 
-    parsed_mode = lab2_mode
+    parsed_mode = parsed_lab2_mode
+    unless parsed_mode
+      errors.add(:mode, 'must be a JSON object.')
+      return
+    end
 
-    # The Lab 2 AI Lab currently requires exactly 1 dataset.
-    datasets = parsed_mode['datasets']
-    unless datasets.is_a?(Array) && datasets.length == 1 && self.class.dataset_ids.include?(datasets.first)
-      errors.add(:mode, 'must select exactly one dataset.')
+    datasets = parsed_mode['datasets'] || []
+    if !datasets.is_a?(Array) || datasets.length > 1 || (datasets - self.class.dataset_ids).any?
+      errors.add(:mode, 'must select no more than one known dataset.')
+    elsif datasets.empty? && DATASET_COLUMN_MODE_KEYS.any? {|key| parsed_mode[key].present?}
+      errors.add(:mode, 'must select a dataset to choose, lock, or pretrain on its columns.')
     end
 
     if parsed_mode.key?('requireAccuracy')
       accuracy = parsed_mode['requireAccuracy']
       unless accuracy.is_a?(Numeric) && REQUIRE_ACCURACY_RANGE.cover?(accuracy)
         errors.add(:mode, 'must have a required accuracy from 0 to 100.')
+      end
+    end
+
+    if parsed_mode['pretrained'] == true
+      label = parsed_mode['label']
+      features = parsed_mode['features']
+      unless label.is_a?(String) && label.present? && features.is_a?(Array) && (features - [label]).present?
+        errors.add(:mode, 'must choose a label and features when pretrained.')
+      end
+      unless parsed_mode['hideSelectLabel'] == true && parsed_mode['lockFeatures'] == true
+        errors.add(:mode, 'must lock the label and features when pretrained.')
+      end
+      errors.add(:mode, 'must test on the last rows when pretrained.') unless parsed_mode['reserveLastRows'] == true
+      errors.add(:mode, 'cannot require an accuracy when pretrained.') if parsed_mode.key?('requireAccuracy')
+    end
+
+    if parsed_mode['hideDatasetView'] == true && parsed_mode['pretrained'] != true
+      errors.add(:mode, 'cannot hide the dataset view unless pretrained.')
+    end
+
+    if parsed_mode['hideTestingView'] == true
+      if parsed_mode['pretrained'] == true
+        errors.add(:mode, 'cannot hide the testing view when pretrained.')
+      elsif parsed_mode.key?('requireAccuracy')
+        errors.add(:mode, 'cannot require an accuracy when the testing view is hidden.')
       end
     end
   end

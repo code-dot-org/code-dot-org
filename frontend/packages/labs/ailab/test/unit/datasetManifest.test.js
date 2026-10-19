@@ -24,7 +24,7 @@ describe('datasetManifest localizeDatasets', () => {
     I18n.reset();
     I18n.initI18n(premadeDatasetTranslations);
     expect(localizeDatasets(premadeDatasets)[0].name).toEqual(
-      premadeDatasetNameLocalized,
+      premadeDatasetNameLocalized
     );
   });
 });

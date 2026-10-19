@@ -1,6 +1,16 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
+require 'cdo/sql_user_provisioner'
 require "optparse"
+
+# `rake install` provisions the non-root `writer` and `reader` MySQL users. Check and warn if the users don't exist.
+def warn_unless_sql_users_provisioned
+  denied = Cdo::SqlUserProvisioner.unauthenticated_users
+  return if denied.empty?
+
+  warn "WARNING: MySQL will not authenticate the #{denied.join(' and ')} user#{'s' if denied.length > 1}."
+  warn "         Run `bundle exec rake db:provision_sql_users` from dashboard/ to provision #{denied.length > 1 ? 'them' : 'it'}."
+end
 
 def main
   options = {
@@ -11,6 +21,8 @@ def main
 
     opts.on("-v", "--verbose", "Print rails logs to stdout") {options[:verbose] = true}
   end.parse!
+
+  warn_unless_sql_users_provisioned if rack_env?(:development)
 
   rerun_dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
   rerun = ['rerun']

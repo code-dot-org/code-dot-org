@@ -61,12 +61,40 @@ module LangfuseHelper
     )
   end
 
+  # Traces a generation in the Adaptive Learning shell. The actual request is made
+  # by the browser over AI Gateway. This is a stopgap until Langfuse traces are handled
+  # by the gateway directly.
+  def self.trace_adaptive_generation(trace_id:, trace_name:, user_id:, model:, input:, output:, outcome:, error_message:, usage:, metadata:, start_time:, end_time:)
+    adaptive_client.create_trace_and_generation(
+      trace_id: trace_id,
+      trace_name: trace_name,
+      generation_name: "llm-call",
+      model: model,
+      user_id: user_id.to_s,
+      input: input,
+      output: output,
+      usage: usage,
+      metadata: metadata.merge(outcome: outcome),
+      tags: [trace_name, "adaptive", outcome],
+      level: outcome == "success" ? nil : "ERROR",
+      status_message: error_message,
+      start_time: start_time,
+      end_time: end_time,
+    )
+  rescue => exception
+    Rails.logger.warn("LangfuseHelper.trace_adaptive_generation failed: #{exception.message}")
+  end
+
   def self.tutor_client
     LangfuseClientHelper::Client.new(CDO.tutor_langfuse_secret_key, CDO.tutor_langfuse_public_key)
   end
 
   def self.ta_client
     LangfuseClientHelper::Client.new(CDO.ta_langfuse_secret_key, CDO.ta_langfuse_public_key)
+  end
+
+  def self.adaptive_client
+    LangfuseClientHelper::Client.new(CDO.adaptive_langfuse_secret_key, CDO.adaptive_langfuse_public_key)
   end
 
   def self.wrap_response(response)
@@ -77,5 +105,5 @@ module LangfuseHelper
     end
   end
 
-  private_class_method :tutor_client, :ta_client, :wrap_response, :trace_student_snapshot_call
+  private_class_method :tutor_client, :ta_client, :adaptive_client, :wrap_response, :trace_student_snapshot_call
 end

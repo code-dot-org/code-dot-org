@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:47:23.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-find-it-in-the-code-47-e0d52bb0-ebf1-473b-9b2f-b13ead044145",
+        "text": "Every block has a name in the code.",
+        "imageUrl": "https://images.code.org/dc9ec9cbc84420b8feec8793ff0639ff-adaptive-HoAI26-find-it-in-the-code-47-panel-1-bc867649-a555-4441-be77-d11ae3a15ca0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-find-it-in-the-code-47-e7d42de2-ef20-4863-9d17-fa9324c15094",
+        "text": "Find the name to find the block.",
+        "imageUrl": "https://images.code.org/2992abfbb6eafca13d368426cace8b0b-adaptive-HoAI26-find-it-in-the-code-47-panel-2-9424c1b6-45ad-41c5-9aa3-946618cd0cef.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-find-it-in-the-code-47-583b40f0-e348-44c0-b4fc-74d5af7279e4",
+        "text": "Search for the name.",
+        "imageUrl": "https://images.code.org/cc9827220fba241e1921dccc169b559b-adaptive-HoAI26-find-it-in-the-code-47-panel-3-9463d2f1-bd90-4e2c-a929-c42f227363cc.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Learn that every block on a web page has a name in the code. Understand how to use these names to find corresponding sections in the code, often by searching for the block's name."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:47:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:47:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

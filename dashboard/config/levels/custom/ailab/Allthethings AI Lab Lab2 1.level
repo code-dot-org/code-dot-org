@@ -9,7 +9,6 @@
     "encrypted": "false",
     "instructions_important": "false",
     "uses_lab2": "true",
-    "hide_share_and_remix": "false",
     "mode": "{\r\n  \"datasets\": [\r\n    \"exoplanets\"\r\n  ],\r\n  \"trainer\": \"knn\"\r\n}",
     "dynamic_instructions": "{\r\n  \"datasetView\": \"Train your model!\",\r\n  \"results\": \"Review and test your results!\"\r\n}"
   },

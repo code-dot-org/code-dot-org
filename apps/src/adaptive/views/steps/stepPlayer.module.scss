@@ -71,6 +71,77 @@
   min-height: 0;
 }
 
+.questionsStep {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px;
+  background: var(--background-neutral-secondary);
+}
+
+// Quiz's card clips its overflow, so a shrinking card would hide its choices.
+.questionsStep > * {
+  flex: none;
+}
+
+// Matches AttemptCard's width so the heading lines up with the card's left edge.
+.questionsIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+// Matches AttemptCard's width so the button sits under the cards' right edge.
+.questionsActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.feedbackCorrect {
+  color: var(--text-success-primary);
+}
+
+.feedbackIncorrect {
+  color: var(--text-error-primary);
+}
+
+// Free response textarea (used by freeResponse questions inside the questions step)
+
+.freeResponseTextarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 0.25rem;
+  background: var(--background-neutral-primary);
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+  caret-color: var(--borders-brand-teal-primary);
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+    border-color: var(--borders-brand-teal-primary);
+  }
+}
+
 // Level step
 
 .levelStep {
@@ -85,13 +156,4 @@
   position: relative;
   flex: 1;
   min-height: 0;
-}
-
-.stepFooter {
-  display: flex;
-  flex: none;
-  justify-content: flex-end;
-  padding: 8px 12px;
-  border-top: 1px solid var(--borders-neutral-primary);
-  background: var(--background-neutral-secondary);
 }

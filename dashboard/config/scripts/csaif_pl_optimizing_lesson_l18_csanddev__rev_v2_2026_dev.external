@@ -3,18 +3,78 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Optimizing Software
+<h1>Optimizing Software</h1>
 
+<p>Now that you've worked through troubleshooting system issues, it's time to tackle a different challenge: ensuring a computer system runs at its best for the task at hand.</p>
 
-Now that you've worked through troubleshooting system issues, it’s time to tackle a different challenge: ensuring your computer system runs at its best for the task at hand.
+<p>This process is called <b>optimization</b>, making adjustments to improve performance, rather than just fixing errors.</p>
 
-This process is called **optimization** —making adjustments to improve performance, rather than just fixing errors.
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>📖 <b>Optimization</b> is the process of making something run better, even if it's already working.</p>
+</div>
 
-## Troubleshooting vs. Optimization
-- **Troubleshooting** focuses on identifying and fixing problems when something is broken.
-- **Optimization** is about fine-tuning a system to run efficiently, even when nothing is wrong.
+<h2>Troubleshooting vs. Optimization</h2>
 
-***Example:*** *If a computer is slow, troubleshooting might involve fixing a software bug, while optimization could involve upgrading memory or adjusting system settings.*
+<p style="margin: 0 0 8px 0;">• <b>Troubleshooting</b> focuses on identifying and fixing problems when something is broken.</p>
+<p style="margin: 0;">• <b>Optimization</b> is about fine-tuning a system to run efficiently, even when nothing is wrong.</p>
+
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<p><b>Example:</b> If a computer is slow, troubleshooting might involve fixing a software bug, while optimization could involve upgrading memory or adjusting system settings.</p>
+</div>
+
+<h2>Meet the Clients</h2>
+
+<p>In Lesson 4, students revisit the same five clients from Lesson 1. Instead of troubleshooting a hardware problem, they'll choose one client and work through optimizing their software.</p>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin:20px 0;">
+<div style="flex:1 1 170px; max-width:200px; background-color:#F7F7FB; border-radius:10px; padding:10px;">
+<img src="https://images.code.org/98dd51673036f0dda8f22c3b0d840952-Amara.jpg" alt="A veterinarian checking a handheld device beside a truck at a farm" style="width:100%; height:auto; border-radius:10px;">
+<div style="font-size:16px;">
+<p><b>Amara Wanjiru</b></p>
+<p>Veterinary Software: help Amara optimize her Fieldvet tablet software that tracks her animal visits.</p>
+</div>
+</div>
+<div style="flex:1 1 170px; max-width:200px; background-color:#F7F7FB; border-radius:10px; padding:10px;">
+<img src="https://images.code.org/bc5dd713e9443613ea540a6e24dcd72c-Joaquin.jpg" alt="A coach holding a tablet while athletes run on a field behind him" style="width:100%; height:auto; border-radius:10px;">
+<div style="font-size:16px;">
+<p><b>Joaquín Silva</b></p>
+<p>Player Tracking Software: help Joaquín optimize his TeamTrack software that tracks the health and performance of his players.</p>
+</div>
+</div>
+<div style="flex:1 1 170px; max-width:200px; background-color:#F7F7FB; border-radius:10px; padding:10px;">
+<img src="https://images.code.org/73c28b3e33331edfaaeee5b1c37ccc3f-Denise.jpg" alt="A farmer holding a tablet in a field with a drone flying overhead" style="width:100%; height:auto; border-radius:10px;">
+<div style="font-size:16px;">
+<p><b>Denise Carter</b></p>
+<p>Drone Software: help Denise optimize her drone software that helps her track the health of her crops.</p>
+</div>
+</div>
+<div style="flex:1 1 170px; max-width:200px; background-color:#F7F7FB; border-radius:10px; padding:10px;">
+<img src="https://images.code.org/7676b550d756dd303d7799208583c0e3-Marcus.jpg" alt="A visualization supervisor drawing on a tablet in front of several monitors" style="width:100%; height:auto; border-radius:10px;">
+<div style="font-size:16px;">
+<p><b>Marcus Reyes</b></p>
+<p>Visualization Software: help Marcus optimize [NEED FULL TEXT].</p>
+</div>
+</div>
+<div style="flex:1 1 170px; max-width:200px; background-color:#F7F7FB; border-radius:10px; padding:10px;">
+<img src="https://images.code.org/acc07e0dc87ecaeb26fd4ed5958febc4-Layla.jpg" alt="A pharmacist scanning a medicine package at a pharmacy counter" style="width:100%; height:auto; border-radius:10px;">
+<div style="font-size:16px;">
+<p><b>Layla Haddad</b></p>
+<p>Pharmacy Software: help Layla optimize the ScriptCheck software that helps her enter prescription information into her system.</p>
+</div>
+</div>
+</div>
+
+<div style="background-color:#E4E2F8; border-radius:10px; padding:12px 16px; margin:20px 0;">
+<div style="font-size:16px; color:#222222;">
+<p><b>💡 Teacher tip:</b> optimization doesn't have one right answer the way troubleshooting does. Encourage students to think in terms of trade-offs, storage versus speed, quality versus efficiency, rather than searching for a single thing that's "broken."</p>
+</div>
+</div>
+
+<p>On the next level, you'll choose one of these clients and work through the activity guide to optimize their software.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;">
+<p>➡️ For full context on this activity, including the specific problems and solutions, see the <a href="https://docs.google.com/document/d/1B7ouAvwOxtIZBm0ljX2x4geEcscIk0xQwvzmmRL1D8g/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">activity guide</a>.</p>
+</div>
 
 
 MARKDOWN

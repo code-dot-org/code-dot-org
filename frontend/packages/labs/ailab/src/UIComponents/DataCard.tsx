@@ -1,11 +1,26 @@
 /* React component to show information about the currently-selected data set. */
+import {Typography} from '@mui/material';
+import React, {type ReactNode} from 'react';
+
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 
-import ScrollableContent from './ScrollableContent';
+import styles from './dataCard.module.scss';
 
-import shared from '../shared.module.scss';
+interface CardRowProps {
+  heading: string | undefined;
+  children: ReactNode;
+}
+
+const CardRow = ({heading, children}: CardRowProps) => (
+  <div className={styles.row}>
+    <Typography component="h4" variant="label3">
+      {heading}
+    </Typography>
+    <Typography variant="body3">{children}</Typography>
+  </div>
+);
 
 const DataCard = () => {
   const name = useAppSelector(state => state.name);
@@ -14,12 +29,13 @@ const DataCard = () => {
   const dataLength = useAppSelector(state => state.data.length);
   const removedRowsCount = useAppSelector(state => state.removedRowsCount);
 
-  const card = metadata?.card;
+  const card =
+    Object.keys(metadata.card).length > 0 ? metadata.card : undefined;
 
   const dataLengthLimit = 20000;
   if (dataLength > dataLengthLimit) {
     window.alert(
-      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit}),
+      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit})
     );
   }
 
@@ -30,78 +46,56 @@ const DataCard = () => {
 
   return (
     dataLength !== 0 && (
-      <div id="data-card" className={shared.panel}>
-        <div className={shared.largeText}>
-          {name || I18n.t('dataCardDefaultHeader')}
+      <div id="data-card" className={styles.panel}>
+        <div className={styles.header}>
+          <Typography
+            component="h3"
+            variant="overline2"
+            className={styles.title}
+          >
+            {name || I18n.t('dataCardDefaultHeader')}
+          </Typography>
         </div>
-        <ScrollableContent>
+        <div className={styles.content}>
           {card && (
-            <div>
-              <div className={shared.cardRow}>{datasetDetails.description}</div>
-              <div className={shared.cardRow}>
-                <span className={shared.italic}>
-                  {I18n.t('dataCardSource')}
-                  <br />
-                  {metadata.card.source}
-                </span>
-              </div>
-              <div className={shared.cardRow}>
-                <span className={shared.italic}>
-                  {I18n.t('dataCardRowCount')}
-                  <br />
-                  {dataLength}
-                </span>
-              </div>
-              {metadata.card.lastUpdated && (
-                <div className={shared.cardRow}>
-                  <span className={shared.italic}>
-                    {I18n.t('dataCardLastUpdated')}
-                    <br />
-                    {metadata.card.lastUpdated}
-                  </span>
-                </div>
-              )}
-
-              {metadata.card.context?.potentialUses && (
-                <div className={shared.cardRow}>
-                  <div className={shared.bold}>
-                    {I18n.t('dataCardPotentialUses')}
-                  </div>
-                  <div className={shared.italic}>
-                    {datasetDetails.potentialUses}
-                  </div>
-                </div>
-              )}
-              {metadata.card.context?.potentialMisuses && (
-                <div className={shared.cardRow}>
-                  <div className={shared.bold}>
-                    {I18n.t('dataCardPotentialMisuses')}
-                  </div>
-                  <div className={shared.italic}>
-                    {datasetDetails.potentialMisuses}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-          {!card && dataLength > 0 && (
-            <div>
-              <br />
-              <div className={shared.cardRow}>
-                <div className={shared.bold}>{I18n.t('dataCardRowCount')}</div>
+            <>
+              <Typography variant="body3">
+                {datasetDetails.description}
+              </Typography>
+              <CardRow heading={I18n.t('dataCardSource')}>
+                {card.source}
+              </CardRow>
+              <CardRow heading={I18n.t('dataCardRowCount')}>
                 {dataLength}
-              </div>
-              <div className={shared.cardRow}>
-                {removedRowsMsg && (
-                  <span>
-                    &nbsp;
-                    {removedRowsMsg}
-                  </span>
-                )}
-              </div>
-            </div>
+              </CardRow>
+              {card.lastUpdated && (
+                <CardRow heading={I18n.t('dataCardLastUpdated')}>
+                  {card.lastUpdated}
+                </CardRow>
+              )}
+              {card.context?.potentialUses && (
+                <CardRow heading={I18n.t('dataCardPotentialUses')}>
+                  {datasetDetails.potentialUses}
+                </CardRow>
+              )}
+              {card.context?.potentialMisuses && (
+                <CardRow heading={I18n.t('dataCardPotentialMisuses')}>
+                  {datasetDetails.potentialMisuses}
+                </CardRow>
+              )}
+            </>
           )}
-        </ScrollableContent>
+          {!card && (
+            <>
+              <CardRow heading={I18n.t('dataCardRowCount')}>
+                {dataLength}
+              </CardRow>
+              {removedRowsMsg && (
+                <Typography variant="body3">{removedRowsMsg}</Typography>
+              )}
+            </>
+          )}
+        </div>
       </div>
     )
   );

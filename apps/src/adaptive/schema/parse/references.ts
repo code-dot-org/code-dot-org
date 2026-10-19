@@ -1,6 +1,7 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, each level played by at most one step, and whether each level
-// step's `project` flag agrees with the level the server resolved for it.
+// shape, question and choice ids, each level played by at most one step, and whether
+// each level step's `project` flag agrees with the level the server resolved
+// for it.
 
 import {z} from 'zod';
 
@@ -15,8 +16,52 @@ export function findReferenceProblems(pathway: Pathway): string[] {
   return [
     ...findSkillProblems(pathway),
     ...findCheckpointProblems(pathway),
+    ...findQuestionProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
+  ];
+}
+
+/**
+ * Detects question ids used more than once, and multiple choice questions
+ * whose choice ids repeat or whose correct choice is not among them.
+ */
+function findQuestionProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const seen = new Set<string | number>();
+  const duplicates = new Set<string | number>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (seen.has(question.id)) duplicates.add(question.id);
+        seen.add(question.id);
+
+        if (question.type !== 'MultipleChoiceQuestion') return;
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.questions.${index}`;
+        const choiceIds = new Set<string>();
+        const repeated = new Set<string>();
+        for (const {id} of question.choices) {
+          if (choiceIds.has(id)) repeated.add(id);
+          choiceIds.add(id);
+        }
+        for (const id of repeated) {
+          problems.push(`${where}: choice id '${id}' is used more than once`);
+        }
+        const {correctChoiceId} = question;
+        if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
+          problems.push(
+            `${where}.correctChoiceId: '${correctChoiceId}' is not one of its choices`
+          );
+        }
+      });
+    }
+  }
+  return [
+    ...[...duplicates].map(
+      id => `checkpoints: question id '${id}' is used more than once`
+    ),
+    ...problems,
   ];
 }
 
@@ -53,15 +98,22 @@ function findLevelReuseProblems(pathway: Pathway): string[] {
 /**
  * Detects level steps whose `project` flag disagrees with their level: a
  * project step's level must share the pathway's project template, and a
- * sandbox step's must not. Steps whose level did not resolve are skipped.
+ * sandbox step's must not (skipped when the level did not resolve), and
+ * sandbox steps that ask for generated instructions.
  */
 function findLevelStepProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   const template = pathway.project.templateLevel;
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
-      if (step.kind !== 'level' || !step.levelProperties) continue;
+      if (step.kind !== 'level') continue;
       const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      if (step.instructionsPrompt && !step.project) {
+        problems.push(
+          `${where}: instructionsPrompt needs the student's project, so the step must be marked project`
+        );
+      }
+      if (!step.levelProperties) continue;
       const sharesProject =
         step.level === template ||
         step.levelProperties.projectTemplateLevelName === template;
@@ -161,6 +213,10 @@ function findCheckpointProblems(pathway: Pathway): string[] {
   const stepIds = pathway.checkpoints.flatMap(c => c.steps.map(s => s.id));
   if (new Set(stepIds).size !== stepIds.length) {
     problems.push(`${where}: step ids must be unique across checkpoints`);
+  }
+  // The project screen plays a step of its own under this id.
+  if (stepIds.includes('project')) {
+    problems.push(`${where}: step id 'project' is reserved`);
   }
   return problems;
 }

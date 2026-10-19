@@ -32,19 +32,26 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Add the background to your game.** Drag **set background** onto the dotted outline and pick your new background. Click **Play**."
-      },
-      {
-        "text": "**Now that's a game!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Add the background to your game.**",
+      "items": [
+        {
+          "text": "Drag **set background** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play**.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline and pick your new background.",
+      ]
+    },
+    "long_instructions": "# Add the background to your game\nDrag **set background** onto the dotted outline.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

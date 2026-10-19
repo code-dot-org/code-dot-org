@@ -9,19 +9,11 @@ import {
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import sparkUrl from '@cdo/static/spritelab_lab2/particles/spark.png';
 
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
-import {
-  createBurst,
-  drawBursts,
-  isBurstLook,
-  MAX_BURST_COUNT,
-  MAX_BURST_PARTICLES,
-  stepBurst,
-} from './bursts';
+import {burstBoxes} from './bursts';
 import {
   backgroundFrame,
   cameraFocus,
@@ -45,6 +37,7 @@ import {
   loadedAnimations,
   trimAnimationListImages,
 } from './imageTrim';
+import {ParticleLayer} from './particles';
 import {
   CONTACT_EPSILON,
   hasSupportAhead,
@@ -58,13 +51,14 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
-import {
-  createWeather,
-  drawWeather,
-  isWeatherKind,
-  stepWeather,
-} from './weather';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
+
+// A burst from the player starts at its take-off spot this many frames
+// after the jump event fires: the handler runs on the interpreter's next
+// tick, not inside the dispatch. The spot must come from an impulse this
+// recent, or a jump the tracker saw without one would serve a stale spot.
+const JUMP_EVENT_FRAMES = 4;
+const JUMP_IMPULSE_FRAMES = 8;
 
 const NOOP = () => {};
 
@@ -180,6 +174,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // ({touching: image names, height: 0 floor to 1 top}) each frame a
+    // player exists.
+    this.onPlayerProgress = null;
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
@@ -193,8 +190,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
     // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images).
+    // (external scenes carry their own images). One list per project: its
+    // identity tells the caches below apart.
     this.preloadAnimationsOverride = null;
+    // Decoded images for this project and for the external project visited
+    // last; whichever is running is the p5 wrapper's cache.
+    this.ownPreloads_ = {};
+    this.externalPreloads_ = null;
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -220,87 +222,37 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
-    // The run's weather kind, set by the set-weather block, and its live
-    // pool, built at the first paint after the kind changes.
-    this.weatherKind_ = 'none';
-    this.weather_ = null;
-    // Bursts in flight (see burstParticles); the spark image, loaded on
-    // the first burst, and a copy of it per palette colour (see sparkFor_).
-    this.bursts_ = [];
-    this.spark_ = null;
-    this.tintedSparks_ = new Map();
-    // The frame the particles last stepped in: a thumbnail capture paints
-    // twice in one frame, and the particles must move once.
-    this.particlesSteppedFrame_ = -1;
+    // The weather and the bursts in flight, drawn inside the paint.
+    this.particles_ = new ParticleLayer();
+    // Where each player stood as its last jump impulse was applied, the
+    // frame of that impulse, and the frame the jump event last fired (see
+    // burstParticles).
+    this.jumpStarts_ = null;
+    this.jumpImpulseFrame_ = -Infinity;
+    this.jumpEventFrame_ = -Infinity;
   }
 
-  // The spark image in one colour, made once per colour: this p5 recolours
-  // an image by rebuilding a canvas on every draw, too slow per particle.
-  // A p5.Image, not a p5.Graphics: a graphics canvas is scaled by the pixel
-  // density while image() reads it at its logical size, showing one corner.
-  sparkFor_(color) {
-    const image = this.spark_?.image;
-    if (!image) {
-      return undefined;
-    }
-    const key = color.join(',');
-    let tinted = this.tintedSparks_.get(key);
-    if (!tinted) {
-      tinted = this.p5Wrapper.p5.createImage(image.width, image.height);
-      const context = tinted.drawingContext;
-      // The spark is white, so the colour is the whole tint; the image
-      // keeps only its own alpha.
-      context.fillStyle = `rgb(${color.join(',')})`;
-      context.fillRect(0, 0, image.width, image.height);
-      context.globalCompositeOperation = 'destination-in';
-      context.drawImage(image.canvas, 0, 0);
-      this.tintedSparks_.set(key, tinted);
-    }
-    return tinted;
-  }
-
-  /**
-   * The burst block: fling sparks from each sprite the argument names, the
-   * count shared among them; from the stage centre when it names none.
-   * Capped so a block in a loop cannot flood the scene.
-   */
+  /** The burst block: particles from each sprite the argument names. Just
+      after the jump event fires, a player bursts from where it took off:
+      the event fires after the impulse has moved it. */
   burstParticles(count, look, spriteArg) {
     const view = this.particleView_();
-    if (!view) {
-      return;
+    if (view) {
+      const p5 = this.p5Wrapper.p5;
+      const justJumped =
+        p5.frameCount - this.jumpEventFrame_ <= JUMP_EVENT_FRAMES &&
+        p5.frameCount - this.jumpImpulseFrame_ <= JUMP_IMPULSE_FRAMES;
+      this.particles_.burst(
+        p5,
+        look,
+        count,
+        burstBoxes(
+          this.library.getSpriteArray(spriteArg),
+          justJumped ? this.jumpStarts_ : null
+        ),
+        view
+      );
     }
-    if (!this.spark_) {
-      this.spark_ = {image: null};
-      this.p5Wrapper.p5.loadImage(sparkUrl, image => {
-        this.spark_.image = image;
-      });
-    }
-    const origins = this.library
-      .getSpriteArray(spriteArg)
-      .map(sprite => ({x: sprite.position.x, y: sprite.position.y}));
-    if (!origins.length) {
-      origins.push({x: view.width / 2, y: view.height / 2});
-    }
-    const inFlight = this.bursts_.reduce((n, b) => n + b.particles.length, 0);
-    const wanted = Math.min(MAX_BURST_COUNT, Math.max(1, Number(count) || 0));
-    const allowed = Math.min(wanted, MAX_BURST_PARTICLES - inFlight);
-    const kind = isBurstLook(look) ? look : 'sparks';
-    // The allowance shared out exactly: the first origins take the extra.
-    const base = Math.floor(allowed / origins.length);
-    const extra = allowed % origins.length;
-    origins.forEach((origin, i) => {
-      const each = base + (i < extra ? 1 : 0);
-      if (each > 0) {
-        this.bursts_.push(createBurst(kind, each, origin, view.gravity));
-      }
-    });
-  }
-
-  /** The set-weather block: the scene's weather from now until the next
-      set or the end of the run. */
-  setWeather(kind) {
-    this.weatherKind_ = isWeatherKind(kind) ? kind : 'none';
-    this.weather_ = null;
   }
 
   // The world the particles fly through: its size and gravity; null before
@@ -335,31 +287,12 @@ export default class SpriteLab2Engine extends SpriteLab {
   // Runs inside the paint, after the sprites, so in a platform scene the
   // particles are in world space under the camera.
   stepAndDrawParticles_() {
-    const weatherOn = this.weatherKind_ !== 'none' || !!this.weather_;
-    if (!weatherOn && !this.bursts_.length) {
-      return;
-    }
     const view = this.particleView_();
-    if (!view) {
-      return;
+    if (view) {
+      this.particles_.stepAndDraw(this.p5Wrapper.p5, view, v =>
+        this.weatherScene_(v)
+      );
     }
-    const p5 = this.p5Wrapper.p5;
-    const step = this.particlesSteppedFrame_ !== p5.frameCount;
-    this.particlesSteppedFrame_ = p5.frameCount;
-    if (weatherOn) {
-      const scene = this.weatherScene_(view);
-      if (!this.weather_ || this.weather_.kind !== this.weatherKind_) {
-        this.weather_ = createWeather(this.weatherKind_, scene);
-      }
-      if (step) {
-        stepWeather(this.weather_, scene);
-      }
-      drawWeather(p5, this.weather_);
-    }
-    if (step) {
-      this.bursts_ = this.bursts_.filter(burst => stepBurst(burst, view));
-    }
-    drawBursts(p5, this.bursts_, color => this.sparkFor_(color));
   }
 
   /**
@@ -501,11 +434,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
-    // A fresh run starts with no weather and nothing in flight.
-    this.weatherKind_ = 'none';
-    this.weather_ = null;
-    this.bursts_ = [];
-    library.commands.setWeather = kind => this.setWeather(kind);
+    this.particles_.reset();
+    this.jumpStarts_ = null;
+    this.jumpImpulseFrame_ = -Infinity;
+    this.jumpEventFrame_ = -Infinity;
+    library.commands.setWeather = kind => this.particles_.setWeather(kind);
     library.commands.burstParticles = (count, look, spriteArg) =>
       this.burstParticles(count, look, spriteArg);
     // A new run starts the player's history over, so the spawn is not heard
@@ -596,7 +529,15 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
+      this.jumpStarts_ = new Map();
+      this.jumpImpulseFrame_ = this.p5Wrapper.p5
+        ? this.p5Wrapper.p5.frameCount
+        : -Infinity;
       library.getSpriteArray({group: 'players'}).forEach(sprite => {
+        this.jumpStarts_.set(sprite, {
+          x: sprite.position.x,
+          y: sprite.position.y,
+        });
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
@@ -1087,12 +1028,25 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
+    // Decoded images are reused by name across re-runs, and another
+    // project's names collide with this one's, so each project runs from
+    // its own cache.
+    const external = this.isExternalList_(animationList);
+    if (external && this.externalPreloads_?.list !== animationList) {
+      this.externalPreloads_ = {list: animationList, cache: {}};
+    }
+    this.p5Wrapper.preloadedSprites = external
+      ? this.externalPreloads_.cache
+      : this.ownPreloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(scoped, animationNames(animationList))
+        await trimAnimationListImages(scoped, {
+          keepNames: animationNames(animationList),
+          thumbnails: !external,
+        })
       ),
       {multiFrame: true}
     );
@@ -1116,6 +1070,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
+  isExternalList_(animationList) {
+    return animationList === this.preloadAnimationsOverride;
+  }
+
   // Decode one animation by name, mid-run: the escape hatch for a costume
   // name built dynamically, which the scene-scoped preload cannot see.
   async decodeAnimationOnDemand_(name) {
@@ -1133,7 +1091,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(single, animationNames(list))
+        await trimAnimationListImages(single, {
+          keepNames: animationNames(list),
+          thumbnails: !this.isExternalList_(list),
+        })
       ),
       {multiFrame: true}
     );
@@ -1298,6 +1259,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // is where the observer is fed.
     this.observePlayer_(players, walls, view);
     this.trackPlayerActions_(players, walls, view);
+    this.reportPlayerProgress_(players, view);
   }
 
   trackPlayerActions_(players, walls, view) {
@@ -1321,6 +1283,36 @@ export default class SpriteLab2Engine extends SpriteLab {
       },
       Date.now()
     );
+  }
+
+  reportPlayerProgress_(players, view) {
+    if (!this.onPlayerProgress || !players.length) {
+      return;
+    }
+    const player = players[0].sprite;
+    const half = sprite => ({
+      w: (sprite.width * sprite.scale) / 2,
+      h: (sprite.height * sprite.scale) / 2,
+    });
+    const p = half(player);
+    const touching = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+        return;
+      }
+      const s = half(sprite);
+      if (
+        Math.abs(sprite.position.x - player.position.x) < p.w + s.w &&
+        Math.abs(sprite.position.y - player.position.y) < p.h + s.h
+      ) {
+        touching.push(sprite.getAnimationLabel());
+      }
+    });
+    const feet = player.position.y + p.h;
+    this.onPlayerProgress({
+      touching,
+      height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
+    });
   }
 
   /** The audio's observer of the player, or null. */

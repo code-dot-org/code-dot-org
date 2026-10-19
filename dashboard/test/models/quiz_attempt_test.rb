@@ -113,16 +113,16 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     result = attempt.question_results.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
     assert_nil result[:correct]
     assert_nil result[:explanation]
-    assert_nil result[:correct_choice_id]
+    assert_equal({correctChoiceId: nil}, result[:answer_key])
 
     quiz.update!(show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
     result = attempt.reload.question_results.first
     assert result[:correct]
     assert_equal 'because math', result[:explanation]
-    assert_equal 'b', result[:correct_choice_id]
+    assert_equal({correctChoiceId: 'b'}, result[:answer_key])
   end
 
   test "question_results overrides can reveal correctness/explanation regardless of the quiz's own settings" do
@@ -147,7 +147,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     assert result[:correct]
     assert_equal 'because math', result[:explanation]
-    assert_equal 'b', result[:correct_choice_id]
+    assert_equal({correctChoiceId: 'b'}, result[:answer_key])
   end
 
   test "question_results reports correct as nil for a pending/ungraded response, even with show_correctness on" do
@@ -169,6 +169,55 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil result[:correct]
   end
 
+  test "question_results returns the answer text for an ungraded free response question" do
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
+    question = create(:free_response_question, explanation: 'Any function counts.')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'answerText' => 'Because'},
+      grading_status: 'ungraded',
+      score: nil,
+      max_score: nil
+    )
+
+    result = attempt.question_results.first
+    assert_equal 'FreeResponseQuestion', result[:quiz_question_type]
+    assert_equal({'answerText' => 'Because'}, result[:response_data])
+    assert_nil result[:correct]
+    assert_empty result[:answer_key]
+    assert_equal 'Any function counts.', result[:explanation]
+  end
+
+  test "question_results reveals a multiple select question's correct choice ids only per the quiz's settings" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceIds' => ['a', 'c']},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+
+    result = attempt.question_results.first
+    assert_equal 'MultipleSelectQuestion', result[:quiz_question_type]
+    assert_equal({'selectedChoiceIds' => ['a', 'c']}, result[:response_data])
+    assert_equal({correctChoiceIds: nil}, result[:answer_key])
+
+    quiz.update!(show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
+    result = attempt.reload.question_results.first
+    assert result[:correct]
+    assert_equal({correctChoiceIds: ['a', 'c']}, result[:answer_key])
+  end
+
   test "question_results_in_progress is nil once the attempt is submitted" do
     attempt = create(:quiz_attempt, submitted_at: Time.now)
     assert_nil attempt.question_results_in_progress
@@ -188,7 +237,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
 
     result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
     refute result.key?(:correct)
     refute result.key?(:explanation)
   end
@@ -199,6 +248,34 @@ class QuizAttemptTest < ActiveSupport::TestCase
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
     create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: {})
+
+    assert_empty attempt.question_results_in_progress
+  end
+
+  test "question_results_in_progress returns the answer text for a free response question" do
+    quiz = create(:quiz)
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'answerText' => 'Because'}
+    )
+
+    result = attempt.question_results_in_progress.first
+    assert_equal question.id, result[:quiz_question_id]
+    assert_equal 'FreeResponseQuestion', result[:quiz_question_type]
+    assert_equal({'answerText' => 'Because'}, result[:response_data])
+  end
+
+  test "question_results_in_progress omits a free response question with blank answer text" do
+    quiz = create(:quiz)
+    question = create(:free_response_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: nil)
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: {'answerText' => ''})
 
     assert_empty attempt.question_results_in_progress
   end
@@ -245,10 +322,10 @@ class QuizAttemptTest < ActiveSupport::TestCase
     refute attempt.retakeable?
     result = attempt.question_results.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
     assert_nil result[:correct]
     assert_nil result[:explanation]
-    assert_nil result[:correct_choice_id]
+    assert_equal({correctChoiceId: nil}, result[:answer_key])
   end
 
   test "disconnected (nil) level does not raise on question_results_in_progress" do
@@ -269,6 +346,6 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_nil attempt.level
     result = attempt.question_results_in_progress.first
     assert_equal question.id, result[:quiz_question_id]
-    assert_equal 'b', result[:selected_choice_id]
+    assert_equal({'selectedChoiceId' => 'b'}, result[:response_data])
   end
 end

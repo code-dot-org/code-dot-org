@@ -1,0 +1,198 @@
+# == Schema Information
+#
+# Table name: quiz_questions
+#
+#  id             :bigint           not null, primary key
+#  type           :string(255)      not null
+#  key            :string(36)       not null
+#  fork_parent_id :bigint
+#  name           :string(255)      not null
+#  content        :json             not null
+#  explanation    :text(65535)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+# Indexes
+#
+#  index_quiz_questions_on_created_at  (created_at)
+#  index_quiz_questions_on_key         (key)
+#  index_quiz_questions_on_name        (name)
+#
+class QuizQuestion < ApplicationRecord
+  # Every concrete question subtype. TODO: P0 - add MatchQuestion.
+  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion MultipleSelectQuestion).freeze
+
+  after_initialize {self.type ||= self.class.sti_name}
+
+  # Set while loading from a file in self.setup, so the after_commit hook
+  # doesn't immediately write the just-read content back to the same file.
+  attr_accessor :skip_write_to_file
+
+  # No FK; parent delete leaves a dangling id.
+  belongs_to :fork_parent, class_name: 'QuizQuestion', optional: true
+
+  has_many :quiz_question_standards, dependent: :destroy
+  has_many :standards, through: :quiz_question_standards
+
+  has_many :placements, class_name: 'QuizQuestionPlacement', dependent: :destroy
+  has_many :levels, through: :placements
+
+  # No cascade. Destroy checks this (and other placements) before hard-delete.
+  has_many :quiz_question_responses, dependent: nil
+
+  validates :key, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :content, presence: true
+
+  after_commit :write_to_file, on: %i(create update)
+  after_commit :delete_file, on: :destroy
+
+  def self.setup(dashboard_root = '.')
+    ActiveRecord::Base.transaction do
+      Dir.glob("#{dashboard_root}/config/quiz_questions/**/*.json").each do |path|
+        source = JSON.parse(File.read(path))
+        question = source['type'].constantize.find_or_initialize_by(key: source['key'])
+        question.skip_write_to_file = true
+        question.name = source['name']
+        begin
+          decrypted = Encryption.decrypt_object(source['encrypted_content'])
+          question.content = decrypted['content']
+          question.explanation = decrypted['explanation']
+        rescue Encryption::KeyMissingError
+          raise if rack_env?(:production)
+          puts "WARNING: quiz question '#{source['key']}' seeded with placeholder content due to missing CDO.properties_encryption_key"
+          question.content = question.placeholder_content
+        end
+        question.save! if question.changed?
+      rescue JSON::ParserError
+        raise format('failed to parse %s', path)
+      end
+    end
+  end
+
+  def formatted_for_file
+    JSON.pretty_generate(
+      'key' => key,
+      'type' => type,
+      'name' => name,
+      'encrypted_content' => Encryption.encrypt_object('content' => content, 'explanation' => explanation)
+    )
+  end
+
+  def write_to_file
+    if write_to_file?
+      file_path = Rails.root.join("config/quiz_questions/#{key}.json")
+      FileUtils.mkdir_p(File.dirname(file_path))
+      File.write(file_path, formatted_for_file)
+    end
+  end
+
+  def delete_file
+    FileUtils.rm_f(Rails.root.join("config/quiz_questions/#{key}.json")) if levelbuilder_mode?
+  end
+
+  def write_to_file?
+    levelbuilder_mode? && !skip_write_to_file
+  end
+
+  # published unit means preview/stable/sunsetting
+  def used_in_published_unit?
+    self.class.published_unit_usage([id]).fetch(id, false)
+  end
+
+  # Computes if group of question_ids are used in a published unit (see used_in_published_unit? for one question)
+  # Returns {question_id => bool}; a question_id with no placements, or
+  # none in a published unit, maps to false.
+  def self.published_unit_usage(question_ids)
+    return {} if question_ids.blank?
+
+    placements = QuizQuestionPlacement.where(quiz_question_id: question_ids).
+      includes(level: {script_levels: {script: :unit_group_units}})
+
+    # Grouped by level, not iterated per placement - Unit#launched? calls
+    # UnitGroup.get_from_cache (a separate id lookup, not covered by the
+    # includes above), so per-placement would repeat it once per placement
+    # on a shared level instead of once per unique level.
+    question_ids_by_level = placements.group_by(&:level).transform_values {|ps| ps.map(&:quiz_question_id)}
+    published_level_ids = question_ids_by_level.each_key.select do |level|
+      level.script_levels.any? do |sl|
+        unit = sl.script
+        unit && (unit.launched? || unit.get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+      end
+    end.to_set(&:id)
+
+    usage = question_ids.index_with {false}
+    question_ids_by_level.each do |level, ids|
+      next unless published_level_ids.include?(level.id)
+      ids.each {|id| usage[id] = true}
+    end
+    usage
+  end
+
+  # Overridden by subtypes that can grade themselves server-side
+  # Auto-ungradable types are stored with grading_status "ungraded"
+  # until manual/AI grading is built.
+  def auto_gradable?
+    false
+  end
+
+  # Whether response_data holds an answer, as opposed to a skip.
+  def answered?(response_data)
+    raise NotImplementedError, "#{self.class.name} must implement answered?"
+  end
+
+  # Builds `content` from question builder request params.
+  def self.content_from_builder_params(builder_params)
+    raise ArgumentError, "#{name} does not accept editor params"
+  end
+
+  # A valid `content` for this subtype, used in place of real (encrypted)
+  # content when seeding without an encryption key.
+  def placeholder_content
+    raise NotImplementedError, "#{self.class.name} must implement placeholder_content"
+  end
+
+  # The `content` fields every subtype has. A blank description is omitted,
+  # not stored as null.
+  def self.shared_content_from_builder_params(params)
+    content = {question_title: params[:questionTitle]}
+    content[:description] = params[:description] if params[:description].present?
+    content
+  end
+
+  # The answer key fields shown with submitted results. Values are nilled,
+  # not omitted, when the key is hidden.
+  def answer_key_json
+    {}
+  end
+
+  # The JSON fields every subtype has.
+  def shared_content_json
+    {questionTitle: content['question_title'], description: content['description']}
+  end
+
+  # Subtype-specific fields for the quiz builder, answer key included.
+  def builder_content_json
+    raise NotImplementedError, "#{self.class.name} must implement builder_content_json"
+  end
+
+  # Subtype-specific fields for a student attempt; must never include the answer key.
+  def attempt_content_json
+    raise NotImplementedError, "#{self.class.name} must implement attempt_content_json"
+  end
+
+  # Validates the `content` fields every subtype has.
+  protected def validate_shared_content(q)
+    unless q['question_title'].is_a?(String) && q['question_title'].present?
+      errors.add(:content, 'must have a non-blank "question_title"')
+    end
+
+    unless q['description'].nil? || q['description'].is_a?(String)
+      errors.add(:content, '"description" must be a String if given')
+    end
+  end
+
+  private def levelbuilder_mode?
+    Rails.application.config.levelbuilder_mode
+  end
+end
