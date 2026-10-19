@@ -1,5 +1,10 @@
 import {Typography} from '@mui/material';
-import React, {type ReactNode, useId} from 'react';
+import React, {type ReactNode, useId, useMemo} from 'react';
+
+import {dataColumnsFor} from '../helpers/columnDetails';
+import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
+import {useTableView} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
@@ -31,6 +36,23 @@ const RowsPanel = ({
   prediction,
 }: RowsPanelProps) => {
   const descriptionId = useId();
+  const {project} = useProject();
+  const data = useAppSelector(state => state.data);
+  const columnTypes = useAppSelector(state => state.columnsByDataType);
+  const columns = useMemo(
+    () => [
+      ...dataColumnsFor(data, project, showAllColumns),
+      project.labelColumn || 'unknown',
+    ],
+    [data, project, showAllColumns]
+  );
+  const tableView = useTableView({
+    data,
+    columns,
+    columnTypes,
+    rows: rowIndices,
+  });
+
   return (
     <div className={styles.panel}>
       <div className={styles.header}>
@@ -62,9 +84,9 @@ const RowsPanel = ({
       </div>
       <NodeRowsTable
         labelId={descriptionId}
-        rowIndices={rowIndices}
+        view={tableView}
+        columns={columns}
         emphasizedColumn={emphasizedColumn}
-        showAllColumns={showAllColumns}
         emptyText={emptyText}
         prediction={prediction}
       />

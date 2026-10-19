@@ -122,4 +122,19 @@ describe('ResultsDetails', () => {
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
   });
+
+  test('sorts by the AI prediction', () => {
+    renderScorecard();
+    const sortButton = name => screen.getByRole('button', {name});
+    fireEvent.click(sortButton('Sort by AI prediction A-Z'));
+    fireEvent.click(sortButton('Sort by AI prediction Z-A'));
+
+    expect(
+      sortButton('Original order').closest('th').getAttribute('aria-sort')
+    ).toBe('descending');
+    expect(bodyRows()).toEqual([
+      ['2', '4', 'dog', 'dog'],
+      ['1', '2', 'bird', 'bird'],
+    ]);
+  });
 });
