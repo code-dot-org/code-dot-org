@@ -550,11 +550,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             : undefined,
         };
   // The resource panel's buttons sit at the scene row's end and the panel
-  // is gone, giving the lab its width; ?resources=panel brings it back.
-  const resourcesInBar = useMemo(
-    () => queryParams('resources') !== 'panel',
-    []
-  );
+  // is gone, giving the lab its width, except with the scenes in the strip,
+  // which has no row for them; ?resources=panel or ?resources=bar decides
+  // either way.
+  const resourcesParam = useMemo(() => queryParams('resources'), []);
+  const resourcesInBar =
+    resourcesParam === 'bar' || (resourcesParam !== 'panel' && !scenesInStrip);
   // The chosen picture sits at the right of the strips; ?jumbo=left puts
   // it at the left.
   const jumboSide = useMemo<'left' | 'right'>(

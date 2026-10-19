@@ -485,8 +485,20 @@ $editor-strip-height: 41px;
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
-// The scene dropdown: its trigger reads as one of the bar's buttons. Higher
-// specificity than the dropdown's own container rules.
+// The scene dropdown's name is a control, not text to copy, wherever the
+// dropdown stands. code-studio.css sets `p, span` back to selectable, so
+// the name's span is named too.
+.sceneDropdown {
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
+}
+
+// The trigger reads as one of the bar's buttons. Higher specificity than
+// the dropdown's own container rules.
 .sceneDropdown > button.sceneTrigger {
   height: $tab-item-height;
   min-width: 0;
