@@ -229,14 +229,17 @@ module ShareFiltering
     failure = find_email_or_phone_failure(text, exceptions: exceptions)
     return failure if failure
 
-    candidate = Geocoder.extract_address_candidate(text)
-    return nil unless candidate
-    street_address = Geocoder.find_potential_street_address(candidate)
-    if street_address
-      failure = ShareFailure.new(FailureType::ADDRESS, street_address)
-      raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
-      return failure
-    end
+    # Temporarily disable address filtering to prevent false positives.
+    # TODO: re-enable this when we improve the user experience of the address filter.
+    # Jira: https://codedotorg.atlassian.net/browse/SL-2303
+    # candidate = Geocoder.extract_address_candidate(text)
+    # return nil unless candidate
+    # street_address = Geocoder.find_potential_street_address(candidate)
+    # if street_address
+    #   failure = ShareFailure.new(FailureType::ADDRESS, street_address)
+    #   raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
+    #   return failure
+    # end
 
     nil
   end
