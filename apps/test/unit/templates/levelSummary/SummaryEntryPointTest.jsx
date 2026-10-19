@@ -26,6 +26,7 @@ const setUpWrapper = (state = {}, jsData = {}) => {
   const store = createStore(
     combineReducers({
       teacherSections,
+      progress: (s = {}) => s,
     }),
     {...INITIAL_STATE, ...state}
   );
@@ -40,6 +41,32 @@ const setUpWrapper = (state = {}, jsData = {}) => {
 };
 
 describe('SummaryEntryPoint', () => {
+  it('strips sublevel suffix from summary url', () => {
+    window.history.pushState(
+      {},
+      '',
+      '/courses/my-course/units/1/lessons/1/levels/5/sublevel/2'
+    );
+    const wrapper = setUpWrapper();
+    expect(wrapper.find('a').prop('href')).toBe(
+      '/courses/my-course/units/1/lessons/1/levels/5/summary'
+    );
+    window.history.pushState({}, '', '/');
+  });
+
+  it('appends level_id to summary url on sublevel page when currentLevelId is known', () => {
+    window.history.pushState(
+      {},
+      '',
+      '/courses/my-course/units/1/lessons/1/levels/5/sublevel/2'
+    );
+    const wrapper = setUpWrapper({progress: {currentLevelId: 42}});
+    expect(wrapper.find('a').prop('href')).toBe(
+      '/courses/my-course/units/1/lessons/1/levels/5/summary?level_id=42'
+    );
+    window.history.pushState({}, '', '/');
+  });
+
   it('renders elements', () => {
     const wrapper = setUpWrapper();
 

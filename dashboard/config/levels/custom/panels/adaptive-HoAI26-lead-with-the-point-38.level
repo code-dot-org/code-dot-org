@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:43:03.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-lead-with-the-point-38-55f0cf0b-0ccb-46b4-ac54-245ba803ce69",
+        "text": "Visitors decide in a few seconds if they'll stay on your page.",
+        "imageUrl": "https://images.code.org/de0e2e4d720c53cbf6e8498277b2a523-adaptive-HoAI26-lead-with-the-point-38-panel-1-ecc76eae-0d74-439d-8970-ecc99e2350a6.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-lead-with-the-point-38-83e1d8d1-deb3-4653-8558-045145f45dac",
+        "text": "A vague headline doesn't tell them what your site is for.",
+        "imageUrl": "https://images.code.org/eade762cdc53d8b3d18dc0187bc36a0a-adaptive-HoAI26-lead-with-the-point-38-panel-2-52804333-382f-401c-ac98-1c088cd21968.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-lead-with-the-point-38-a770442b-cdd6-4ceb-8511-4c7c42c5cfec",
+        "text": "A clear headline says exactly what your site is about.",
+        "imageUrl": "https://images.code.org/b19768ebc9ebff1d2dfc8ff20ceafcd6-adaptive-HoAI26-lead-with-the-point-38-panel-3-8d09baa0-80d5-4f07-870e-badd940f8565.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-lead-with-the-point-38-909257ba-927c-4886-931a-7ddc1ef08f2e",
+        "text": "Lead with your main point to grab their attention right away.",
+        "imageUrl": "https://images.code.org/631315a1b290a4c53f66e0334f828ee5-adaptive-HoAI26-lead-with-the-point-38-panel-4-a8abda51-6705-4cb7-b66b-ffe56efe810e.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Watch a video that highlights the importance of leading with your main point. Compare a vague headline with one that clearly states the site's purpose, emphasizing how quickly visitors decide to stay or leave."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:43:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:43:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

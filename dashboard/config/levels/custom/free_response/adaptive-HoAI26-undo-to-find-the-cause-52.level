@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-10-16T21:49:42.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "You just learned that undoing changes one by one helps pinpoint problems. Now, imagine your project has a new bug after several recent changes. Which specific change do you *guess* might have caused the problem, and why?",
+    "placeholder": "I think [this change] broke it because [reason]...",
+    "encrypted_solution": "c2LWxTOuuo+zlG8rj/hsgTfu579aMN3eRBI5nXeAP+c6RMUir1WCIG8X5Ma6\npE7Q62D3f6EItQDjlnloaGfApXGO9db7nUlyYUjTf6JvaHnJwNKeojQXUG0J\n41gf8J/a6l40B4F0Ctvqpsr4Ngj/dSNKieo+qslYyp7SXzNe28bVComW8/nR\ncW9LL9zE4VKFfccZSBXAf3FeRN2TxbU3b8LlP8RULmRPVx6bURYHnBmw/Rrc\nf0fyPcWJPlUS4dxovWxCxbZLrDSPPKvrRIMBwRJXLpsiA756yBVUMEMLdus/\nyeNllYtIr9WOdu8TsxV9DjpCDBzaN5CMK2NLq1C6R97hhO5BmQQwi3ND7exu\njKxPvo2/3oHJQsxVeAP9OCPbjDJqj8AZe6PIsc634HumGVAVYq45TYT+/6H6\nZWC6f6n5PZJdDQIFMwIAOlyfpj+3\n",
+    "generate_outline": "After encountering a problem with multiple recent changes, guess which specific change you think caused the issue and explain your reasoning. Your answer doesn't need to be correct, just well-reasoned."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:49:47 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:50:07 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:50:07 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:50:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

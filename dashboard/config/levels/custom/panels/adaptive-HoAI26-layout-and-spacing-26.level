@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:36:45.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-layout-and-spacing-26-b8561ce0-5788-4c6f-bb4d-15242c2f59cd",
+        "text": "Crowded?",
+        "imageUrl": "https://images.code.org/567fc55326993bed0d2a2cab39e0e34d-adaptive-HoAI26-layout-and-spacing-26-panel-1-18b73091-4fad-4bab-a237-2e3d75eab473.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-layout-and-spacing-26-c5d19123-347f-4907-9eea-f01b4a70c5cb",
+        "text": "Space gives each part room.",
+        "imageUrl": "https://images.code.org/5f3e8da4f441f12dea40bc2ffe3855c9-adaptive-HoAI26-layout-and-spacing-26-panel-2-1a7b5cbf-ce8a-49d9-a499-d87f67d00f7d.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-layout-and-spacing-26-cd11d90c-e2d0-4105-ab67-d3a54d1b88a4",
+        "text": "Alignment makes it feel tidy.",
+        "imageUrl": "https://images.code.org/f5fb78fb43090051ccb9181ec7ef998c-adaptive-HoAI26-layout-and-spacing-26-panel-3-f5e784ea-db7c-4eaa-a1ad-ad24118ce52d.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-layout-and-spacing-26-6b38049a-14c4-4738-a592-7119c11ccfea",
+        "text": "Order guides the eye.",
+        "imageUrl": "https://images.code.org/7d9c97ead20a9def24eec5a60f038d67-adaptive-HoAI26-layout-and-spacing-26-panel-4-d449ba03-b656-419c-84b1-825476c6f17f.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Understand the importance of space, alignment, and order in web design. Learn how proper spacing gives elements room, alignment creates tidiness, and clear order guides the user's eye on a page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:37:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:37:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

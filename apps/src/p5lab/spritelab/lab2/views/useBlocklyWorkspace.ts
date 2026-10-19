@@ -65,6 +65,11 @@ interface UseBlocklyWorkspaceResult {
     onWorkspaceChange: (source: WorkspaceSerialization) => void,
     onIntermediateChange?: () => void
   ) => () => void;
+  /** Blockly's undo stacks: edits since the last load, and undone ones. */
+  canUndo: boolean;
+  canRedo: boolean;
+  undo: () => void;
+  redo: () => void;
 }
 
 /**
@@ -85,6 +90,7 @@ export default function useBlocklyWorkspace({
   themeRef.current = theme;
   // Tracks workspace loads (as opposed to user edits).
   const pendingLoadsRef = useRef(0);
+  const [history, setHistory] = useState({canUndo: false, canRedo: false});
   const currentBlocksRef = useRef<WorkspaceSerialization | null>(null);
   const onWorkspaceChangeRef = useRef<(source: WorkspaceSerialization) => void>(
     () => {}
@@ -153,8 +159,10 @@ export default function useBlocklyWorkspace({
     const onChange = (e: BlocklyCore.Events.Abstract) => {
       if (pendingLoadsRef.current > 0) {
         if (e.type === BlocklyCore.Events.FINISHED_LOADING) {
-          // This load's event stream is over.
+          // This load's event stream is over. A load is not an edit to
+          // undo: a scene's blocks never undo into the last scene's.
           pendingLoadsRef.current--;
+          workspaceRef.current?.clearUndo();
         }
         return;
       }
@@ -197,6 +205,22 @@ export default function useBlocklyWorkspace({
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    // After onChange, which clears the stacks when a load ends.
+    const onHistoryChange = () => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      const canUndo = workspace.getUndoStack().length > 0;
+      const canRedo = workspace.getRedoStack().length > 0;
+      setHistory(last =>
+        last.canUndo === canUndo && last.canRedo === canRedo
+          ? last
+          : {canUndo, canRedo}
+      );
+    };
+    workspaceRef.current.addChangeListener(onHistoryChange);
+    setHistory({canUndo: false, canRedo: false});
     // Levelbuilder lays a toolbox and start sources out by hand.
     const stopStackRoom =
       isToolboxMode || isStartMode
@@ -303,6 +327,9 @@ export default function useBlocklyWorkspace({
     []
   );
 
+  const undo = useCallback(() => workspaceRef.current?.undo(false), []);
+  const redo = useCallback(() => workspaceRef.current?.undo(true), []);
+
   return {
     workspaceVersion,
     getCode,
@@ -311,5 +338,9 @@ export default function useBlocklyWorkspace({
     loadCode,
     refreshToolbox,
     subscribeToChanges,
+    canUndo: history.canUndo,
+    canRedo: history.canRedo,
+    undo,
+    redo,
   };
 }

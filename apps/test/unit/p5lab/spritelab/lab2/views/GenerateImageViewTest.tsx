@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
@@ -21,7 +22,9 @@ type ViewProps = React.ComponentProps<typeof GenerateImageView>;
 
 function renderView(props: Partial<ViewProps> = {}) {
   return render(
-    <GenerateImageView onAccept={jest.fn()} onCancel={jest.fn()} {...props} />
+    <ThemeProvider>
+      <GenerateImageView onAccept={jest.fn()} onCancel={jest.fn()} {...props} />
+    </ThemeProvider>
   );
 }
 
@@ -33,9 +36,10 @@ describe('GenerateImageView character-set offer', () => {
 
   it('does not offer a set for an object: a set would give it limbs', () => {
     renderView({create: {isNameTaken: () => false}});
-    fireEvent.click(screen.getByRole('radio', {name: 'Object'}));
+    const type = screen.getByRole('combobox', {name: 'Type'});
+    fireEvent.change(type, {target: {value: 'object'}});
     expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
-    fireEvent.click(screen.getByRole('radio', {name: 'Character'}));
+    fireEvent.change(type, {target: {value: 'character'}});
     expect(screen.getByLabelText(SET_CHECKBOX)).toBeInTheDocument();
   });
 
@@ -46,22 +50,15 @@ describe('GenerateImageView character-set offer', () => {
   });
 
   it("locks a new sprite to the level's subject", () => {
-    // The student form drops a locked type group; the advanced form keeps
-    // it, so the locked subject shows there.
-    const {unmount} = renderView({
-      create: {isNameTaken: () => false},
-      lockedImageType: 'sprite',
-      lockedImageSubject: 'object',
-    });
-    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
-    unmount();
     renderView({
       advanced: true,
       create: {isNameTaken: () => false},
       lockedImageType: 'sprite',
       lockedImageSubject: 'object',
     });
-    expect(screen.getByRole('radio', {name: 'Object'})).toBeChecked();
+    const type = screen.getByRole('combobox', {name: 'Type'});
+    expect(type).toHaveValue('object');
+    expect(type).toBeDisabled();
     expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
   });
 
@@ -106,29 +103,30 @@ describe('GenerateImageView character-set offer', () => {
 });
 
 describe('GenerateImageView type choice', () => {
-  it('offers the type for a new image', () => {
-    renderView({create: {isNameTaken: () => false}});
-    expect(screen.getByRole('radio', {name: 'Character'})).toBeInTheDocument();
+  it('offers the type, the style and, for pixel art, the resolution as dropdowns', () => {
+    renderView({create: {isNameTaken: () => false}, defaultStyle: 'pixel'});
+    expect(screen.getByRole('combobox', {name: 'Type'})).toHaveValue(
+      'character'
+    );
+    expect(screen.getByRole('combobox', {name: 'Style'})).toHaveValue('pixel');
+    expect(screen.getByRole('combobox', {name: 'Resolution'})).toHaveValue('1');
+    fireEvent.change(screen.getByRole('combobox', {name: 'Style'}), {
+      target: {value: 'smooth'},
+    });
+    expect(screen.queryByRole('combobox', {name: 'Resolution'})).toBeNull();
   });
 
-  it('drops the group when the level locks the type, in the student form', () => {
-    renderView({
+  it('disables the type when the level locks it, and when regenerating', () => {
+    const {unmount} = renderView({
       create: {isNameTaken: () => false},
       lockedImageType: 'sprite',
     });
-    expect(
-      screen.queryByRole('radio', {name: 'Character'})
-    ).not.toBeInTheDocument();
-    // The style choice stays.
-    expect(screen.getByRole('radio', {name: 'Pixel art'})).toBeInTheDocument();
-  });
-
-  it('keeps the locked group visible, disabled, in the advanced form', () => {
-    renderView({
-      advanced: true,
-      create: {isNameTaken: () => false},
-      lockedImageType: 'sprite',
-    });
-    expect(screen.getByRole('radio', {name: 'Character'})).toBeDisabled();
+    expect(screen.getByRole('combobox', {name: 'Type'})).toBeDisabled();
+    expect(screen.getByRole('combobox', {name: 'Style'})).toBeEnabled();
+    unmount();
+    renderView({existing: {imageType: 'block', getDataURI: async () => null}});
+    const type = screen.getByRole('combobox', {name: 'Type'});
+    expect(type).toHaveValue('block');
+    expect(type).toBeDisabled();
   });
 });
