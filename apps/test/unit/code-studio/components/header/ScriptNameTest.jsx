@@ -13,7 +13,7 @@ describe('ScriptName', () => {
       maxWidth: '100%',
     });
     expect(wrapper.find('.script_name').prop('style').position).toBeUndefined();
-    // The badge, not its placeholder, fills the second line.
+    // The saved-at, not its placeholder, fills the second line.
     const column = wrapper.find('.script_name').childAt(0).childAt(0);
     expect(column.childAt(1).prop('style')).toBeUndefined();
     expect(column.childAt(1).prop('onContentUpdated')).toBeDefined();

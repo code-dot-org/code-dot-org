@@ -19,7 +19,8 @@ jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
 }));
-// The real module's constants size the slot; only the badge is stubbed.
+// The real module's constants size the slot; only the saved-at itself is
+// stubbed.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
   __esModule: true,
   ...jest.requireActual(

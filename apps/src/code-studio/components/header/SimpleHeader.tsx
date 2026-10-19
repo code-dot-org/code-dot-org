@@ -70,8 +70,8 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           className={styles.image}
         />
       )}
-      {/* Never narrower than the saved-at badge, so the centered row does
-          not shift sideways when "Saved" arrives under the names. */}
+      {/* Never narrower than the saved-at, so the centered row does not
+          shift sideways when it first shows under the names. */}
       <div
         className={styles.text}
         style={{minWidth: PROJECT_UPDATED_AT_MIN_WIDTH}}
@@ -98,9 +98,9 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
             </span>
           )}
         </div>
-        {/* The badge's height is reserved before it arrives, and the line
+        {/* The saved-at's height is reserved before it shows, and the line
             height set with it: the header's inherited line height is taller
-            than the badge and would push its text below the slot. */}
+            and would push the text below the slot. */}
         <div
           className={styles.saved}
           style={{
