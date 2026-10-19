@@ -70,8 +70,11 @@
   flex: none;
 }
 
-// A save error's taller message may overflow the slot.
+// The names set the column's width, never the saved-at: its text changes
+// length, and would slide the centered row each time. Long text overflows
+// to the right, and a save error's taller message past the slot.
 .saved {
+  contain: inline-size;
   display: flex;
   align-items: center;
   white-space: nowrap;

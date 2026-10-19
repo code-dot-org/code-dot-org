@@ -13,10 +13,7 @@ import {
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import ProjectInfo from './ProjectInfo';
-import ProjectUpdatedAt, {
-  PROJECT_UPDATED_AT_HEIGHT,
-  PROJECT_UPDATED_AT_MIN_WIDTH,
-} from './ProjectUpdatedAt';
+import ProjectUpdatedAt, {PROJECT_UPDATED_AT_HEIGHT} from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 import styles from './simple-header.module.scss';
@@ -70,12 +67,7 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           className={styles.image}
         />
       )}
-      {/* Never narrower than the saved-at, so the centered row does not
-          shift sideways when it first shows under the names. */}
-      <div
-        className={styles.text}
-        style={{minWidth: PROJECT_UPDATED_AT_MIN_WIDTH}}
-      >
+      <div className={styles.text}>
         <div className={styles.title}>
           {scriptNameData && (
             <a
