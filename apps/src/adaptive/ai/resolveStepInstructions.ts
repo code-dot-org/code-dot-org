@@ -6,11 +6,7 @@
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
-import {
-  GeneratedContent,
-  StepContext,
-  generateInputsHash,
-} from '../progress/model';
+import {GeneratedContent, generateInputsHash} from '../progress/model';
 import {summarizeProjectFiles} from '../project/summarizeProjectFiles';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
@@ -30,7 +26,8 @@ export interface StepInstructionsOptions {
   sources: ProjectSources | undefined;
   /** The step's own instructions, else the level's. */
   authoredInstructions: string | undefined;
-  stepContext: StepContext | undefined;
+  /** Saved instructions, reused while their inputsHash still matches. */
+  generatedInstructions: GeneratedContent | undefined;
   saveGeneratedInstructions: (
     stepId: string,
     content: GeneratedContent
@@ -51,7 +48,7 @@ export async function resolveStepInstructions({
   projectInfo,
   sources,
   authoredInstructions,
-  stepContext,
+  generatedInstructions,
   saveGeneratedInstructions,
   aichatContext,
 }: StepInstructionsOptions): Promise<string | undefined> {
@@ -66,9 +63,8 @@ export async function resolveStepInstructions({
     fallback: authoredInstructions,
   });
   const inputsHash = generateInputsHash(prompt);
-  if (stepContext?.generated?.inputsHash === inputsHash) {
-    return stepContext.generated.instructions;
-  }
+  if (generatedInstructions?.inputsHash === inputsHash)
+    return generatedInstructions.instructions;
 
   const {output, traceId} = await generate({
     schema: generatedInstructionsSchema,

@@ -51,7 +51,7 @@ const base: StepInstructionsOptions = {
   projectInfo: {name: 'Cat Corner', description: 'Cats.'},
   sources,
   authoredInstructions: 'Authored.',
-  stepContext: undefined,
+  generatedInstructions: undefined,
   saveGeneratedInstructions: jest.fn(),
   aichatContext,
 };
@@ -122,11 +122,11 @@ describe('useStepInstructions', () => {
     );
     await waitForNextUpdate();
 
-    // The cache write-back after a generation changes stepContext; the lab
+    // Saving a generation hands it back as `generatedInstructions`; the lab
     // must not lose its answer, and so unmount, while the hit is re-read.
     rerender({
       ...base,
-      stepContext: {generated: {instructions: 'First.', inputsHash: 'x'}},
+      generatedInstructions: {instructions: 'First.', inputsHash: 'x'},
     });
 
     expect(result.current.isResolved).toBe(true);

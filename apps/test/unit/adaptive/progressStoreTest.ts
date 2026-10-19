@@ -1,9 +1,4 @@
-import {
-  LocalGeneratedInstructionsKey,
-  GeneratedInstructions,
-  ProgressStore,
-  localGeneratedInstructionsStore as generatedStore,
-} from '@cdo/apps/adaptive/progress/progressStore';
+import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -77,6 +72,23 @@ describe('ProgressStore', () => {
     ]);
   });
 
+  it('sends generated instructions on the same chain', async () => {
+    const store = new ProgressStore();
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+
+    store.saveStep(key, 'read', {started: true});
+    await store.saveInstructions(key, 'project', generatedInstructions);
+
+    expect(http.put.mock.calls.map(call => call[0])).toEqual([
+      '/adaptive_progress/steps/read/progress',
+      '/adaptive_progress/steps/project/generated_instructions',
+    ]);
+    expect(JSON.parse(http.put.mock.calls[1][1])).toEqual({
+      ...key,
+      generatedInstructions,
+    });
+  });
+
   it('logs a failed write and still sends the next', async () => {
     http.put.mockRejectedValueOnce(new Error('500'));
     const store = new ProgressStore();
@@ -86,66 +98,5 @@ describe('ProgressStore', () => {
 
     expect(mockLogError).toHaveBeenCalledTimes(1);
     expect(http.put).toHaveBeenCalledTimes(2);
-  });
-});
-
-describe('localGeneratedInstructionsStore', () => {
-  const generatedKey: LocalGeneratedInstructionsKey = {
-    userId: 7,
-    ...key,
-    pathwayId: 'sample',
-  };
-  const storageKey = 'adaptive-progress:7:11:98263';
-  const content = {instructions: 'Hi', inputsHash: 'ab', traceId: 't'};
-  const generated: GeneratedInstructions = {s1: content};
-
-  beforeEach(() => window.localStorage.clear());
-
-  it('reads back what it saved', async () => {
-    await generatedStore.save(generatedKey, generated);
-    expect(await generatedStore.load(generatedKey)).toEqual(generated);
-  });
-
-  it('has nothing for an unsaved key', async () => {
-    expect(await generatedStore.load(generatedKey)).toBeUndefined();
-  });
-
-  it('keeps students, units and levels apart', async () => {
-    await generatedStore.save(generatedKey, generated);
-    expect(
-      await generatedStore.load({...generatedKey, userId: 8})
-    ).toBeUndefined();
-    expect(
-      await generatedStore.load({...generatedKey, userId: null})
-    ).toBeUndefined();
-    expect(
-      await generatedStore.load({...generatedKey, scriptId: 12})
-    ).toBeUndefined();
-    expect(
-      await generatedStore.load({...generatedKey, levelId: 1})
-    ).toBeUndefined();
-  });
-
-  it('does not resume instructions saved for different content', async () => {
-    await generatedStore.save(generatedKey, generated);
-    expect(
-      await generatedStore.load({...generatedKey, pathwayId: 'other'})
-    ).toBeUndefined();
-  });
-
-  it('stores each step under stepContext', async () => {
-    await generatedStore.save(generatedKey, generated);
-    const stored = JSON.parse(window.localStorage.getItem(storageKey)!);
-    expect(stored.progress).toEqual({stepContext: {s1: {generated: content}}});
-  });
-
-  it('treats a corrupt or foreign record as nothing', async () => {
-    window.localStorage.setItem(storageKey, 'not json');
-    expect(await generatedStore.load(generatedKey)).toBeUndefined();
-    window.localStorage.setItem(
-      storageKey,
-      JSON.stringify({pathwayId: 'sample', progress: {stepContext: null}})
-    );
-    expect(await generatedStore.load(generatedKey)).toBeUndefined();
   });
 });
