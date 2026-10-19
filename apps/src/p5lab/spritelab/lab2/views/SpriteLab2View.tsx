@@ -144,6 +144,7 @@ import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
+import SceneDropdown from './components/SceneDropdown';
 import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
 import ToolButtons from './components/ToolButtons';
@@ -483,12 +484,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
-  // The scene row sits under the workspace; ?bar=top puts it above, and
+  // The scene row sits under the workspace; ?bar=top puts it above.
   // ?bar=workspace replaces it with a bar at the editors' base holding a
-  // dropdown of the scenes.
+  // dropdown of the scenes; ?bar=workspace-top puts that dropdown at the
+  // workspace strip's start instead, undo and redo joining the switch.
   const barMode = useMemo(() => queryParams('bar'), []);
   const barAtBottom = barMode !== 'top';
   const barInWorkspace = barMode === 'workspace';
+  const scenesInStrip = barMode === 'workspace-top';
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
@@ -2118,7 +2121,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ) : (
         <LabShell
           barAtBottom={barAtBottom}
-          barHidden={barInWorkspace}
+          barHidden={barInWorkspace || scenesInStrip}
           rightExtra={
             <>
               {activeTab === 'Play' && nowPlaying && (
@@ -2162,11 +2165,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   editors={EDITORS}
                   disabledEditors={disabledEditors}
                   switchAtStart={editorsAtStart}
+                  start={
+                    scenesInStrip &&
+                    scenesOffered &&
+                    activeTab !== 'Images' && (
+                      <SceneDropdown {...sceneControls} />
+                    )
+                  }
                   history={
                     activeTab === 'Code'
                       ? {canUndo, canRedo, undo, redo}
                       : undefined
                   }
+                  historyAtEnd={scenesInStrip}
+                  // With no scene row, the resource buttons close a strip:
+                  // the Preview's when there is one.
+                  end={scenesInStrip && !previewBarShown && toolButtons}
                   style={clearOfPreview}
                 />
               )}
@@ -2264,7 +2278,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               platformScene={playingPlatformer}
               mode={playspaceMode}
               columnHeader={
-                previewBarShown ? <EditorStrip title="Preview" /> : undefined
+                previewBarShown ? (
+                  <EditorStrip
+                    title="Preview"
+                    end={scenesInStrip && toolButtons}
+                  />
+                ) : undefined
               }
               onPreviewWidth={setPreviewWidth}
               side={previewSide}

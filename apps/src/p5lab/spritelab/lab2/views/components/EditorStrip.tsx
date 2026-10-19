@@ -1,5 +1,4 @@
 import {Typography as MuiTypography} from '@mui/material';
-import classNames from 'classnames';
 import React, {useRef} from 'react';
 
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -26,7 +25,13 @@ interface EditorStripProps {
   title?: string;
   /** The switch at the bar's start instead of its end. */
   switchAtStart?: boolean;
+  /** Leads the bar's start cell. */
+  start?: React.ReactNode;
+  /** Closes the bar's end cell. */
+  end?: React.ReactNode;
   history?: EditHistory;
+  /** Undo and redo beside the switch at the end, not across from it. */
+  historyAtEnd?: boolean;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
 }
@@ -42,52 +47,66 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   disabledEditors,
   title,
   switchAtStart = false,
+  start,
+  end,
   history,
+  historyAtEnd = false,
   style,
 }) => {
   // Takes focus from a button that its own click disables.
   const historyRef = useRef<HTMLDivElement>(null);
+  const historyNode = history && (
+    <div
+      ref={historyRef}
+      tabIndex={-1}
+      className={moduleStyles.editorStripHistory}
+    >
+      <IconButtonWithTooltip
+        id="spritelab2-undo"
+        label="Undo"
+        icon={{iconName: 'undo', iconStyle: 'solid'}}
+        variant="text"
+        color="secondary"
+        size="extraSmall"
+        tooltipDirection="onBottom"
+        hideTooltipTail
+        disabled={!history.canUndo}
+        onClick={history.undo}
+        containerRef={historyRef}
+      />
+      <IconButtonWithTooltip
+        id="spritelab2-redo"
+        label="Redo"
+        icon={{iconName: 'redo', iconStyle: 'solid'}}
+        variant="text"
+        color="secondary"
+        size="extraSmall"
+        tooltipDirection="onBottom"
+        hideTooltipTail
+        disabled={!history.canRedo}
+        onClick={history.redo}
+        containerRef={historyRef}
+      />
+    </div>
+  );
+  const switchNode = editor && onChange && (
+    <EditorSwitch
+      value={editor}
+      onChange={onChange}
+      editors={editors}
+      disabledEditors={disabledEditors}
+    />
+  );
+  // The history sits across from the switch unless asked to join it.
+  const startNodes = switchAtStart
+    ? [start, switchNode]
+    : [start, !historyAtEnd && historyNode];
+  const endNodes = switchAtStart
+    ? [historyNode, end]
+    : [historyAtEnd && historyNode, switchNode, end];
   return (
     <div className={moduleStyles.editorStrip} style={style}>
-      {history && (
-        <div
-          ref={historyRef}
-          tabIndex={-1}
-          className={classNames(
-            moduleStyles.editorStripHistory,
-            switchAtStart
-              ? moduleStyles.editorStripEnd
-              : moduleStyles.editorStripStart
-          )}
-        >
-          <IconButtonWithTooltip
-            id="spritelab2-undo"
-            label="Undo"
-            icon={{iconName: 'undo', iconStyle: 'solid'}}
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            tooltipDirection="onBottom"
-            hideTooltipTail
-            disabled={!history.canUndo}
-            onClick={history.undo}
-            containerRef={historyRef}
-          />
-          <IconButtonWithTooltip
-            id="spritelab2-redo"
-            label="Redo"
-            icon={{iconName: 'redo', iconStyle: 'solid'}}
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            tooltipDirection="onBottom"
-            hideTooltipTail
-            disabled={!history.canRedo}
-            onClick={history.redo}
-            containerRef={historyRef}
-          />
-        </div>
-      )}
+      <div className={moduleStyles.editorStripStart}>{startNodes}</div>
       <MuiTypography
         component="h2"
         variant="overline2"
@@ -95,22 +114,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       >
         {title ?? (editor === 'Code' ? 'Workspace' : editor)}
       </MuiTypography>
-      {editor && onChange && (
-        <div
-          className={
-            switchAtStart
-              ? moduleStyles.editorStripStart
-              : moduleStyles.editorStripEnd
-          }
-        >
-          <EditorSwitch
-            value={editor}
-            onChange={onChange}
-            editors={editors}
-            disabledEditors={disabledEditors}
-          />
-        </div>
-      )}
+      <div className={moduleStyles.editorStripEnd}>{endNodes}</div>
     </div>
   );
 };
