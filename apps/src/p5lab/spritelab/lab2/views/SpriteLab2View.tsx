@@ -2,14 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
-import React, {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -138,6 +131,7 @@ import {
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
+import {readBarLayout} from './barLayout';
 import {isPointerClick} from './blurAfterPointerClick';
 import EditorStrip from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
@@ -160,6 +154,7 @@ import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useObjectives, usePlayProgress} from './useObjectives';
+import usePaneSlide from './usePaneSlide';
 import usePicturesSheet from './usePicturesSheet';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
@@ -188,9 +183,6 @@ const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 /** The switch's editors, in order. */
 const EDITORS: Editor[] = ['Code', 'World', 'Images'];
-// The Images pane's slide between the column's edge and the full width;
-// the playspace fades for as long (HIDE_MS).
-const PANE_SLIDE_MS = 300;
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 // On hover over World while a story scene is active.
@@ -479,104 +471,32 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }),
     [tabs, enabledTabs, picturesOffered]
   );
-  // ?preview=right puts the preview column at the right.
-  const previewSide = useMemo<'left' | 'right'>(
-    () => (queryParams('preview') === 'right' ? 'right' : 'left'),
-    []
-  );
-  // The scene row sits under the workspace; ?bar=top puts it above.
-  // ?bar=workspace replaces it with a bar at the editors' base holding a
-  // dropdown of the scenes; ?bar=workspace-top puts that dropdown at the
-  // workspace strip's start instead, undo and redo joining the switch; and
-  // ?bar=preview-top puts it at the Preview bar's start.
-  const barMode = useMemo(() => queryParams('bar'), []);
-  const barAtBottom = barMode !== 'top';
-  const barInWorkspace = barMode === 'workspace';
-  const scenesInStrip = barMode === 'workspace-top';
-  const scenesInPreviewBar = barMode === 'preview-top';
-  // The dropdown stands in a strip: no scene row, and no row for the
-  // resource buttons.
-  const scenesInAStrip = scenesInStrip || scenesInPreviewBar;
+  // The lab's optional layouts, chosen by query parameters.
+  const {
+    previewSide,
+    barAtBottom,
+    barInWorkspace,
+    scenesInStrip,
+    scenesInPreviewBar,
+    scenesInAStrip,
+    resourcesInBar,
+    previewBarShown,
+    jumboSide,
+    editorsAtStart,
+  } = useMemo(() => readBarLayout(), []);
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
   useEffect(() => {
     setPicturesOpen(activeTab === 'Images');
   }, [activeTab, setPicturesOpen]);
-  // The pane slides in from the column's edge to the full width as it
-  // opens, fading in, and back as it closes, then parks: parked → docked
-  // (at the edge, no transition) → full, and full → docked → parked. It is
-  // moved by a transform, so it holds its full size throughout and its
-  // contents lay out once, at that size. The column's last width is the
-  // edge, since the playspace reports none while hidden.
-  const picturesActive = activeTab === 'Images';
-  const [picturesStage, setPicturesStage] = useState<
-    'parked' | 'docked' | 'full'
-  >('parked');
-  const columnEdgeRef = useRef(0);
-  useEffect(() => {
-    if (previewWidth > 0) {
-      columnEdgeRef.current = previewWidth;
-    }
-  }, [previewWidth]);
-  useEffect(() => {
-    if (picturesActive) {
-      setPicturesStage(stage => (stage === 'parked' ? 'docked' : 'full'));
-    } else {
-      setPicturesStage(stage => (stage === 'full' ? 'docked' : stage));
-    }
-  }, [picturesActive]);
-  // Docked on the way in: let the browser take the docked position, so the
-  // slide starts from it rather than from parked.
-  const picturesPaneRef = pictures.sheetRef;
-  useLayoutEffect(() => {
-    if (picturesActive && picturesStage === 'docked') {
-      void picturesPaneRef.current?.getBoundingClientRect();
-      setPicturesStage('full');
-    }
-  }, [picturesActive, picturesStage, picturesPaneRef]);
-  const picturesSliding =
-    picturesStage === 'full' || (picturesStage === 'docked' && !picturesActive);
-  const picturesDocked = picturesStage === 'docked';
-  const picturesStyle: React.CSSProperties | undefined =
-    picturesStage === 'parked'
-      ? undefined
-      : {
-          transform: picturesDocked
-            ? `translateX(${columnEdgeRef.current}px)`
-            : 'none',
-          opacity: picturesDocked ? 0 : 1,
-          // The contents ease in over the arrival's second half, and out
-          // over the departure's first.
-          transition: picturesSliding
-            ? `transform ${PANE_SLIDE_MS}ms ease, opacity ${
-                PANE_SLIDE_MS / 2
-              }ms ease ${picturesActive ? PANE_SLIDE_MS / 2 : 0}ms`
-            : undefined,
-        };
-  // The resource panel's buttons sit at the scene row's end and the panel
-  // is gone, giving the lab its width, except with the scenes in the strip,
-  // which has no row for them; ?resources=panel or ?resources=bar decides
-  // either way.
-  const resourcesParam = useMemo(() => queryParams('resources'), []);
-  const resourcesInBar =
-    resourcesParam === 'bar' || (resourcesParam !== 'panel' && !scenesInAStrip);
-  // The chosen picture sits at the right of the strips; ?jumbo=left puts
-  // it at the left.
-  const jumboSide = useMemo<'left' | 'right'>(
-    () => (queryParams('jumbo') === 'left' ? 'left' : 'right'),
-    []
+  // The pane slides between the column's edge and the full width as its
+  // tab comes and goes.
+  const picturesSlide = usePaneSlide(
+    activeTab === 'Images',
+    previewWidth,
+    pictures.sheetRef
   );
-  // ?editors=stripleft: the switch at the workspace bar's start.
-  const editorsAtStart = useMemo(
-    () => queryParams('editors') === 'stripleft',
-    []
-  );
-  // A Preview bar across the stage column's top; ?preview-bar=false drops
-  // it, unless the scene dropdown stands there.
-  const previewBarShown =
-    useMemo(() => queryParams('preview-bar') !== 'false', []) ||
-    scenesInPreviewBar;
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
@@ -2226,19 +2146,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   moduleStyles.codeTabWrapper,
                   moduleStyles.picturesEditor,
                   editorsShown && moduleStyles.underEditorStrip,
-                  picturesStage === 'parked' &&
-                    moduleStyles.picturesEditorParked
+                  picturesSlide.parked && moduleStyles.picturesEditorParked
                 )}
-                style={picturesStyle}
-                onTransitionEnd={event => {
-                  if (
-                    event.target === event.currentTarget &&
-                    event.propertyName === 'transform' &&
-                    !picturesActive
-                  ) {
-                    setPicturesStage('parked');
-                  }
-                }}
+                style={picturesSlide.style}
+                onTransitionEnd={picturesSlide.onTransitionEnd}
               >
                 <GenerateImagePane {...imagePaneProps} jumboSide={jumboSide} />
               </div>
