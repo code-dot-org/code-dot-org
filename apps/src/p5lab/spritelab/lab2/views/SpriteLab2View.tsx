@@ -487,11 +487,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The scene row sits under the workspace; ?bar=top puts it above.
   // ?bar=workspace replaces it with a bar at the editors' base holding a
   // dropdown of the scenes; ?bar=workspace-top puts that dropdown at the
-  // workspace strip's start instead, undo and redo joining the switch.
+  // workspace strip's start instead, undo and redo joining the switch; and
+  // ?bar=preview-top puts it at the Preview bar's end.
   const barMode = useMemo(() => queryParams('bar'), []);
   const barAtBottom = barMode !== 'top';
   const barInWorkspace = barMode === 'workspace';
   const scenesInStrip = barMode === 'workspace-top';
+  const scenesInPreviewBar = barMode === 'preview-top';
+  // The dropdown stands in a strip: no scene row, and no row for the
+  // resource buttons.
+  const scenesInAStrip = scenesInStrip || scenesInPreviewBar;
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
@@ -555,7 +560,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // either way.
   const resourcesParam = useMemo(() => queryParams('resources'), []);
   const resourcesInBar =
-    resourcesParam === 'bar' || (resourcesParam !== 'panel' && !scenesInStrip);
+    resourcesParam === 'bar' || (resourcesParam !== 'panel' && !scenesInAStrip);
   // The chosen picture sits at the right of the strips; ?jumbo=left puts
   // it at the left.
   const jumboSide = useMemo<'left' | 'right'>(
@@ -567,11 +572,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => queryParams('editors') === 'stripleft',
     []
   );
-  // A Preview bar across the stage column's top; ?preview-bar=false drops it.
-  const previewBarShown = useMemo(
-    () => queryParams('preview-bar') !== 'false',
-    []
-  );
+  // A Preview bar across the stage column's top; ?preview-bar=false drops
+  // it, unless the scene dropdown stands there.
+  const previewBarShown =
+    useMemo(() => queryParams('preview-bar') !== 'false', []) ||
+    scenesInPreviewBar;
   // The room the editors keep clear of the column, on its side.
   const clearOfPreview =
     previewSide === 'left' ? {left: previewWidth} : {right: previewWidth};
@@ -2122,7 +2127,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ) : (
         <LabShell
           barAtBottom={barAtBottom}
-          barHidden={barInWorkspace || scenesInStrip}
+          barHidden={barInWorkspace || scenesInAStrip}
           rightExtra={
             <>
               {activeTab === 'Play' && nowPlaying && (
@@ -2181,7 +2186,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   historyAtEnd={scenesInStrip}
                   // With no scene row, the resource buttons close a strip:
                   // the Preview's when there is one.
-                  end={scenesInStrip && !previewBarShown && toolButtons}
+                  end={scenesInAStrip && !previewBarShown && toolButtons}
                   style={clearOfPreview}
                 />
               )}
@@ -2282,7 +2287,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 previewBarShown ? (
                   <EditorStrip
                     title="Preview"
-                    end={scenesInStrip && toolButtons}
+                    end={
+                      <>
+                        {scenesInPreviewBar && scenesOffered && (
+                          <SceneDropdown {...sceneControls} />
+                        )}
+                        {scenesInAStrip && toolButtons}
+                      </>
+                    }
                   />
                 ) : undefined
               }
