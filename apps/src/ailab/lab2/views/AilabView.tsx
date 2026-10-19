@@ -143,7 +143,6 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       <div className={styles.divider} />
       <div className={styles.workspace}>
         <div className={styles.root}>
-          {/* Scoped to the engine: everything outside reads the app store. */}
           <Provider store={store}>
             <ProjectProvider>
               <TrainingDataProvider>

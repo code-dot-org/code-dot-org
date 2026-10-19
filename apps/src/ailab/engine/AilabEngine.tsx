@@ -14,11 +14,6 @@ export interface AilabEngineProps extends AppProps {
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
 }
 
-/**
- * The lab. The host mounts the providers its components expect and owns level
- * loading. The Redux store is a module singleton, so only one of these can be
- * mounted at a time.
- */
 const AilabEngine = ({
   assetPath,
   i18n,
