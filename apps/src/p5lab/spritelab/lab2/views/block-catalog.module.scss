@@ -1,7 +1,7 @@
 // The new-block catalog: a list of blocks on the left, the chosen block's
 // help on the right, and the bar pinned over the toolbox that opens it.
 
-@use '../../../../pixelEditor/dialogChrome' as chrome;
+@use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 @use 'catalog-dot' as catalog;
 
 $list-width: 220px;

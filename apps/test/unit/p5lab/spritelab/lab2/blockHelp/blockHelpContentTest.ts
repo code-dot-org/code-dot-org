@@ -25,4 +25,13 @@ describe('BLOCK_HELP', () => {
       expect(help.summary.trim()).toMatch(/\.$/);
     });
   });
+
+  it('keeps a body to one sentence of markdown', () => {
+    Object.values(BLOCK_HELP).forEach(help => {
+      if (help.body) {
+        expect(help.body.trim()).toMatch(/\.$/);
+        expect(help.body).not.toMatch(/<\w+>/);
+      }
+    });
+  });
 });

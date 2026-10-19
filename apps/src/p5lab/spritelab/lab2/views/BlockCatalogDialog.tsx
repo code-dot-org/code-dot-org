@@ -5,6 +5,7 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {CatalogEntry} from '../blockCatalog';
 import {SceneType} from '../types';
@@ -114,7 +115,9 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                     <p className={moduleStyles.summary}>
                       {selected.help.summary}
                     </p>
-                    {selected.help.body}
+                    {selected.help.body && (
+                      <SafeMarkdown markdown={selected.help.body} />
+                    )}
                   </div>
                 </div>
                 <div className={moduleStyles.addRow}>
