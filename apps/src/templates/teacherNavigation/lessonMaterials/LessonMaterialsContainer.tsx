@@ -8,6 +8,11 @@ import {useSelector} from 'react-redux';
 
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {
+  AiLessonSummaryResponse,
+  LessonSummaryInfo,
+  parseLessonSummary,
+} from '@cdo/apps/aiTeacherDrawer/lessonSummary';
+import {
   setChatIsOpen,
   fetchThreadMessages,
 } from '@cdo/apps/aiTeacherDrawer/redux';
@@ -48,18 +53,6 @@ interface LessonMaterialsData {
   hasNumberedUnits: boolean;
   hasUnnumberedLessons: boolean;
   versionYear?: number;
-}
-
-interface LessonSummaryInfo {
-  learning_objective: string;
-  lesson_beats: string[];
-  misconceptions: string[];
-  tips: string[];
-}
-
-interface LessonSummaryInfoResponse {
-  lesson_summary: string;
-  script: string;
 }
 
 interface LessonSummariesEnabledResponse {
@@ -201,20 +194,17 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   React.useEffect(() => {
     if (selectedLesson && showAITALessonSummary) {
-      HttpClient.fetchJson<LessonSummaryInfoResponse>(
+      HttpClient.fetchJson<AiLessonSummaryResponse>(
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
           if (response.response.ok) {
-            if (response.value?.lesson_summary) {
-              setAITALessonSummaryInfo(
-                JSON.parse(response.value.lesson_summary)
-              );
-            }
+            const summary = parseLessonSummary(response.value);
+            setAITALessonSummaryInfo(summary);
             if (response.value?.script) {
               setAudioSummaryTranscript(response.value.script);
             }
-            setCanShowLessonSummaries(true);
+            setCanShowLessonSummaries(!!summary);
           } else {
             setAITALessonSummaryInfo(null);
             setCanShowLessonSummaries(false);
