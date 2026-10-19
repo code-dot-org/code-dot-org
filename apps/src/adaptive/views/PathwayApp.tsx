@@ -123,10 +123,16 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   completeStep,
   leaveStep,
   saveGeneratedInstructions,
+  finishCheckpoint,
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
   const [view, setView] = useState<View>(initialView);
+  // The verdict is only logged for now; nothing acts on it yet.
+  const {lastRouting} = progress;
+  useEffect(() => {
+    if (lastRouting) console.log('[adaptive router]', lastRouting);
+  }, [lastRouting]);
   useEffect(() => {
     if (initialCheckpointId)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
@@ -192,7 +198,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
                 focusId: isProject ? undefined : checkpoint.id,
               })
             }
-            onFinish={() => setView({kind: 'map'})}
+            onFinish={() => {
+              if (!isProject) finishCheckpoint(checkpoint);
+              setView({kind: 'map'});
+            }}
           />
         </PathwayContext.Provider>
       </div>
