@@ -333,6 +333,7 @@ export class JsonVideo extends HTMLElement {
         document.fullscreenElement === this ||
         document.webkitFullscreenElement === this;
       this.ui.fullscreenBtn.classList.toggle('fullscreen-active', isFs);
+      this._togglePartState(this.ui.fullscreenBtn, 'fullscreen', isFs);
       this.ui.fullscreenBtn.setAttribute(
         'aria-label',
         isFs ? 'Exit full screen' : 'Enter full screen',
@@ -506,6 +507,7 @@ export class JsonVideo extends HTMLElement {
     this.ui.volume.value = this._muted ? 0 : this._volume;
     const silent = this._muted || this._volume === 0;
     this.ui.muteBtn.classList.toggle('muted', silent);
+    this._togglePartState(this.ui.muteBtn, 'muted', silent);
     this.ui.muteBtn.setAttribute('aria-label', silent ? 'Unmute' : 'Mute');
   }
 
@@ -843,8 +845,19 @@ export class JsonVideo extends HTMLElement {
     pending.forEach(p => p.reject(error));
   }
 
+  // A page cannot see the classes inside the shadow root, so button states are
+  // also part names, styled from outside as e.g. ::part(mute-button muted).
+  _togglePartState(el, state, on) {
+    const names = (el.getAttribute('part') || '')
+      .split(/\s+/)
+      .filter(name => name && name !== state);
+    if (on) names.push(state);
+    el.setAttribute('part', names.join(' '));
+  }
+
   _syncPlayingUI() {
     this.classList.toggle('playing', !this._paused);
+    this._togglePartState(this.ui.playBtn, 'playing', !this._paused);
     this.ui.playBtn.setAttribute('aria-label', this._paused ? 'Play' : 'Pause');
   }
 
@@ -1054,6 +1067,7 @@ export class JsonVideo extends HTMLElement {
       this._captionTrack._cues.length === 0,
     );
     this.ui.ccBtn.setAttribute('aria-pressed', String(showing));
+    this._togglePartState(this.ui.ccBtn, 'captions-on', showing);
   }
 
   _handleSceneTransition(newIdx) {

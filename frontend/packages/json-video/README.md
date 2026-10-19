@@ -43,7 +43,28 @@ The built-in pieces carry `part` names (`controls-bar`, `play-button`,
 `mute-button`, `volume-slider`, `progress-bar`, `time-display`,
 `current-time`, `duration`, `captions-button`, `fullscreen-button`,
 `captions`, `caption-text`, `poster`, `scene`), so a page can restyle them
-with `::part()`.
+with `::part()`. The buttons also carry their state as a part name, since a
+page cannot see classes inside the shadow root: `play-button playing`,
+`mute-button muted`, `captions-button captions-on`, and
+`fullscreen-button fullscreen`. For example, to draw icon-font glyphs in
+place of the built-in icons (the page must load the font):
+
+```css
+json-video::part(play-button) {
+  background-image: none;
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 900;
+}
+json-video::part(play-button)::before {
+  content: '\f04b'; /* play */
+}
+json-video::part(play-button playing)::before {
+  content: '\f04c'; /* pause */
+}
+```
+
+`::part()` selectors all have the same specificity, so state rules must come
+after the base rules.
 
 ## Video JSON
 

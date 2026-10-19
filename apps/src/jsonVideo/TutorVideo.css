@@ -1,0 +1,50 @@
+/*
+ * Design-system Font Awesome icons for the <json-video> controls, in place of
+ * the element's built-in SVG icons. The element exposes each button and its
+ * state as part names; the page already loads Font Awesome Pro, and its fonts
+ * reach the shadow root. All ::part() rules have equal specificity, so each
+ * state rule must follow its base rule.
+ */
+json-video::part(play-button),
+json-video::part(mute-button),
+json-video::part(captions-button),
+json-video::part(fullscreen-button) {
+  background-image: none;
+  color: white;
+  font-family: 'Font Awesome 6 Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+}
+
+json-video::part(play-button)::before {
+  content: '\f04b'; /* play */
+}
+
+json-video::part(play-button playing)::before {
+  content: '\f04c'; /* pause */
+}
+
+json-video::part(mute-button)::before {
+  content: '\f028'; /* volume-high */
+}
+
+json-video::part(mute-button muted)::before {
+  content: '\f2e2'; /* volume-slash */
+}
+
+json-video::part(captions-button)::before {
+  content: '\e135'; /* closed-captioning-slash */
+}
+
+json-video::part(captions-button captions-on)::before {
+  content: '\f20a'; /* closed-captioning */
+}
+
+json-video::part(fullscreen-button)::before {
+  content: '\f065'; /* expand */
+}
+
+json-video::part(fullscreen-button fullscreen)::before {
+  content: '\f066'; /* compress */
+}
