@@ -198,7 +198,6 @@ describe('useProgress', () => {
       timeSpent: 2,
     });
     expect(reportLevelStep).not.toHaveBeenCalled();
-    expect(result.current.stepContextMap.read).toBeUndefined();
   });
 
   it("reports level steps on their level and never the project screen's", async () => {
@@ -249,9 +248,6 @@ describe('useProgress', () => {
       timeSpent: 1,
       answers: {1: [wrong, right], 2: [right]},
     });
-    expect(result.current.stepContextMap.quiz).toEqual({
-      answers: {1: [wrong, right], 2: [right]},
-    });
     expect(store.saveStep).toHaveBeenLastCalledWith(key, 'quiz', {
       answers: {questionId: 1, list: [wrong, right]},
       timeSinceLastSave: 0,
@@ -261,13 +257,21 @@ describe('useProgress', () => {
   it('saves generated instructions with the step without starting it', async () => {
     const store = fakeStore();
     const {result} = await renderProgress(store);
-    const generated = {instructions: 'Hi', inputsHash: 'ab'};
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
 
-    act(() => result.current.saveGeneratedInstructions('try', generated));
+    act(() =>
+      result.current.saveGeneratedInstructions('try', generatedInstructions)
+    );
 
-    expect(result.current.stepContextMap.try.generated).toEqual(generated);
+    expect(result.current.progress?.steps.try.generatedInstructions).toEqual(
+      generatedInstructions
+    );
     expect(result.current.statusMap.intro).toBe('available');
-    expect(store.saveInstructions).toHaveBeenCalledWith(key, 'try', generated);
+    expect(store.saveInstructions).toHaveBeenCalledWith(
+      key,
+      'try',
+      generatedInstructions
+    );
   });
 
   it('restores loaded generated instructions', async () => {
@@ -277,8 +281,8 @@ describe('useProgress', () => {
     });
     const {result} = await renderProgress(store);
 
-    expect(result.current.stepContextMap.project.generated).toEqual(
-      generatedInstructions
-    );
+    expect(
+      result.current.progress?.steps.project.generatedInstructions
+    ).toEqual(generatedInstructions);
   });
 });

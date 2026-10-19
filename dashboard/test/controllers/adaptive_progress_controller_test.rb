@@ -18,7 +18,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
             {'id' => 'why', 'type' => 'freeResponse', 'text' => 'Why?'},
             {'id' => 'how', 'type' => 'scale', 'text' => 'How much?', 'scale' => {'min' => 1, 'max' => 5}},
           ]},
-          {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
+          {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox', 'project' => true, 'instructionsPrompt' => 'Build on their page.'},
           {'id' => 'retry', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
         ],
       }],
@@ -146,25 +146,25 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
   end
 
-  test "generated instructions are saved on any step without starting it" do
+  test "generated instructions are saved on a project step with a prompt without starting it" do
     generated = {'instructions' => 'Do this.', 'inputsHash' => 'ab'}
 
     put_instructions 'try', generated
-    put_instructions 'project', generated
 
     assert_response :success
-    rows = UserAdaptiveStep.where(step_id: %w(try project)).index_by(&:step_id)
-    assert_equal generated, rows['try'].generated_instructions
-    assert_nil rows['try'].progress
-    assert_equal generated, rows['project'].generated_instructions
-    assert_equal({'timeSpent' => 0, 'generatedInstructions' => generated}, steps['project'])
-    refute steps['try'].key?('status'), 'a row without progress is not a started step'
+    row = UserAdaptiveStep.find_by(step_id: 'try')
+    assert_equal generated, row.generated_instructions
+    assert_nil row.progress
+    assert_equal({'timeSpent' => 0, 'generatedInstructions' => generated}, steps['try'])
   end
 
   test "refuses invalid generated instructions and stores nothing" do
     [
       ['nowhere', {'instructions' => 'Do this.'}],
-      ['read', 'text'],
+      ['read', {'instructions' => 'Do this.'}],
+      ['retry', {'instructions' => 'Do this.'}],
+      ['project', {'instructions' => 'Do this.'}],
+      ['try', 'text'],
       ['try', {'instructions' => 'x' * 70_000}],
     ].each do |step_id, generated|
       assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do

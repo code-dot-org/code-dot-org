@@ -79,7 +79,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     );
   }
   // Automatically start on the first checkpoint if there's no progress.
-  const noProgress = Object.keys(progress.steps).length === 0;
+  const noProgress = !Object.values(progress.steps).some(e => e.status);
   const initialCheckpointId = noProgress
     ? pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id
     : undefined;
@@ -115,8 +115,8 @@ type LoadedPathwayAppProps = PathwayAppProps &
 const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   pathway,
   progressKey,
+  progress,
   statusMap,
-  stepContextMap,
   initialView,
   initialCheckpointId,
   startStep,
@@ -159,7 +159,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         pathway,
         checkpoint: playing,
         statusMap,
-        stepContextMap,
+        progress,
         saveGeneratedInstructions,
         aiContext,
       },
@@ -167,7 +167,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       pathway,
       playing,
       statusMap,
-      stepContextMap,
+      progress,
       saveGeneratedInstructions,
       aiContext,
     ]

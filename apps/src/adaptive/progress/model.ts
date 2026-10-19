@@ -33,12 +33,6 @@ export interface GeneratedContent {
   traceId?: string;
 }
 
-/** What a step has accumulated for a student, by concern. */
-export interface StepContext {
-  generated?: GeneratedContent;
-  answers?: StepAnswers;
-}
-
 /**
  * Keys generated content to the full prompt it was made from, so a change
  * to any input, the brief, the project, the authored text or our wording,
@@ -53,7 +47,6 @@ export const PROJECT_STEP_ID = 'project';
 
 /** A step's state; a level step's comes from its level's own progress. */
 export interface StepProgress {
-  /** Absent until started; the entry may hold only generated instructions. */
   status?: 'started' | 'complete';
   /** Seconds on screen, summed across visits. */
   timeSpent: number;

@@ -56,7 +56,8 @@ class AdaptiveProgressController < ApplicationController
   # PUT /adaptive_progress/steps/:step_id/generated_instructions
   def update_generated_instructions
     step = @level.find_step(params[:step_id])
-    return head :unprocessable_entity unless step
+    # Only a project step with a prompt generates instructions.
+    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['instructionsPrompt'].present?
 
     instructions = request.request_parameters['generatedInstructions']
     return head :unprocessable_entity unless valid_json_value?(instructions)
@@ -110,7 +111,6 @@ class AdaptiveProgressController < ApplicationController
     levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
   end
 
-  # A row's progress and generated instructions, or nil when it has neither.
   private def row_json(row)
     return nil unless row.progress || row.generated_instructions
     entry = {'timeSpent' => 0}.merge(row.progress_json)
