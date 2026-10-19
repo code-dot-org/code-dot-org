@@ -8,12 +8,7 @@ require 'cdo/rake_utils'
 # This script looks for a separate git worktree at ../../staging that has the
 # staging branch checked out. It will pull the latest content, seed it into the
 # database, and then perform an instance refresh on the web application servers.
-#
-# The start/finish messages belong here rather than in bin/dotd because only
-# this half runs on production-daemon, where slack_log_room resolves to the
-# production room and hip_chat_logging is on. They also survive the DOTD's
-# session dropping mid-seed.
-ChatClient.wrap('STP (curriculum content from the staging branch)') do
+ChatClient.wrap('STP (Seed curriculum content from Staging To Production)') do
   Dir.chdir(dashboard_dir) do
     staging_dir = '../../staging'
     begin
