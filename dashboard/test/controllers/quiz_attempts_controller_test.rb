@@ -33,7 +33,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal @attempt.id, JSON.parse(response.body)['id']
   end
 
-  test "index returns question results in progress without correctness data while in progress" do
+  test "index returns a multiple choice answer in progress without correctness data" do
     create(
       :quiz_question_response,
       quiz_attempt: @attempt,
@@ -50,23 +50,20 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal [{'quizQuestionId' => @question.id, 'questionType' => 'MultipleChoiceQuestion', 'responseData' => {'selectedChoiceId' => 'b'}}], body['questionResultsInProgress']
   end
 
-  test "index returns a multiple select answer in progress" do
-    question = create(:multiple_select_question)
-    create(:quiz_question_placement, level: @quiz, quiz_question: question)
-    create(
-      :quiz_question_response,
-      quiz_attempt: @attempt,
-      quiz_question: question,
-      response_data: {'selectedChoiceIds' => ['a']}
-    )
+  test "index returns a multiple select answer in progress without correctness data, and omits one with every choice cleared" do
+    answered = create(:multiple_select_question)
+    cleared = create(:multiple_select_question)
+    [answered, cleared].each {|question| create(:quiz_question_placement, level: @quiz, quiz_question: question)}
+    create(:quiz_question_response, quiz_attempt: @attempt, quiz_question: answered, response_data: {'selectedChoiceIds' => ['a', 'c']})
+    create(:quiz_question_response, quiz_attempt: @attempt, quiz_question: cleared, response_data: {'selectedChoiceIds' => []})
     sign_in @student
 
     get :index, params: {levelId: @quiz.id, unitId: @attempt.unit_id}
 
     assert_response :success
-    result = JSON.parse(response.body)['questionResultsInProgress'].sole
-    assert_equal 'MultipleSelectQuestion', result['questionType']
-    assert_equal({'selectedChoiceIds' => ['a']}, result['responseData'])
+    body = JSON.parse(response.body)
+    assert_nil body['questionResults']
+    assert_equal [{'quizQuestionId' => answered.id, 'questionType' => 'MultipleSelectQuestion', 'responseData' => {'selectedChoiceIds' => ['a', 'c']}}], body['questionResultsInProgress']
   end
 
   test "index is forbidden when viewing another user's attempt without a teacher relationship" do

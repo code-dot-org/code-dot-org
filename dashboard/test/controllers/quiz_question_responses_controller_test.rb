@@ -20,7 +20,7 @@ class QuizQuestionResponsesControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "create auto-grades a question that belongs to the attempt's quiz" do
+  test "create auto-grades a multiple choice response to a question on the attempt's quiz" do
     sign_in @student
 
     assert_difference 'QuizQuestionResponse.count', 1 do
