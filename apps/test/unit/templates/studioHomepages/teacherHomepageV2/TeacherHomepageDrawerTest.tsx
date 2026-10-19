@@ -251,4 +251,61 @@ describe('TeacherHomepageDrawer', () => {
       'How likely are you to recommend CodeAI to a friend or colleague?'
     );
   });
+
+  const npsDismissal = {
+    simple_survey_form_id: 1,
+    user_id: 8,
+    answers: {nps_value: '-1'},
+    form_name: 'surveys/teachers/nps_survey',
+    form_version: 1,
+  };
+
+  function npsSubmissionPosts() {
+    return postSpy.mock.calls.filter(
+      ([url]) => url === '/dashboardapi/v1/foorm/simple_survey_submission'
+    );
+  }
+
+  it('posts an nps_value of -1 when the NPS survey is dismissed', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    postSpy.mockResolvedValue(new Response());
+    renderComponent(false, false, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    await act(
+      async () => await fireEvent.click(screen.getByText(i18n.dismiss()))
+    );
+
+    const posts = npsSubmissionPosts();
+    expect(posts).toHaveLength(1);
+    expect(JSON.parse(posts[0][1])).toEqual(npsDismissal);
+    expect(posts[0][2]).toBe(true);
+  });
+
+  it('posts an nps_value of -1 when the NPS survey is closed', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    postSpy.mockResolvedValue(new Response());
+    renderComponent(false, false, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    await act(
+      async () => await fireEvent.click(screen.getByLabelText('close button'))
+    );
+
+    const posts = npsSubmissionPosts();
+    expect(posts).toHaveLength(1);
+    expect(JSON.parse(posts[0][1])).toEqual(npsDismissal);
+  });
+
+  it('does not post an NPS dismissal when the survey was never shown', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    postSpy.mockResolvedValue(new Response());
+    renderComponent(true, false, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    await act(async () => await fireEvent.click(screen.getByText(i18n.save())));
+    await act(async () => await new Promise(process.nextTick));
+    await act(
+      async () => await fireEvent.click(screen.getByText(i18n.closeDialog()))
+    );
+
+    expect(npsSubmissionPosts()).toHaveLength(0);
+  });
 });

@@ -17,7 +17,9 @@ import i18n from '@cdo/locale';
 import SchoolDataInputs from '../../SchoolDataInputs';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
-import NpsSurveyContainer from './NpsSurveyContainer';
+import NpsSurveyContainer, {
+  submitNpsSurveyDismissal,
+} from './NpsSurveyContainer';
 import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
@@ -325,6 +327,9 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           'Content-Type': 'application/json',
         }
       ).catch(error => console.error(error));
+    } else if (NPSOpen && !success && npsProps) {
+      // A school info success message is shown in place of the survey.
+      submitNpsSurveyDismissal(npsProps).catch(error => console.error(error));
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
