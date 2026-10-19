@@ -3,12 +3,14 @@ import {createElement} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import {
   ProjectProvider,
   useProject,
 } from '@cdo/apps/ailab/engine/ProjectContext';
 import rootReducer, {
   resetState,
+  setColumnsByDataType,
   setImportedData,
   setMode,
   setPresetColumns,
@@ -342,5 +344,79 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBe('c');
     expect(project().selectedFeatures).toEqual(['a', 'b']);
+  });
+});
+
+describe('ProjectContext opening a saved project', () => {
+  const described = () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    ['a', 'b', 'c'].forEach(column =>
+      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+    );
+    return store;
+  };
+
+  const SAVED = {
+    labelColumn: 'a',
+    selectedFeatures: ['b', 'c'],
+    hyperparameters: {k: 3},
+    accuracyCheckRowIndices: [0],
+    historicResults: [FIRST.historicResult],
+  };
+
+  test('takes the columns and the run the project described', () => {
+    const {project, context} = renderContext(undefined, described());
+
+    act(() => context().openProject(SAVED));
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('drops columns this dataset does not offer', () => {
+    const {project, context} = renderContext(undefined, described());
+
+    act(() =>
+      context().openProject({
+        ...SAVED,
+        labelColumn: 'gone',
+        selectedFeatures: ['b', 'alsogone'],
+      })
+    );
+
+    expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('a locked label still beats the saved one', () => {
+    const store = described();
+    store.dispatch(setMode({hideSelectLabel: true}));
+    store.dispatch(setPresetColumns({labelColumn: 'c'}));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+
+    expect(project().labelColumn).toBe('c');
+  });
+
+  test('an unlocked preset leaves the saved label alone', () => {
+    const store = described();
+    store.dispatch(setPresetColumns({labelColumn: 'c'}));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+
+    expect(project().labelColumn).toBe('a');
+  });
+
+  test('drops the snapshot a cancel would have used', () => {
+    const {project, context} = renderContext(undefined, described());
+    act(() => context().applyTrainingRun(FIRST));
+    act(() => context().snapshotTrainingRun());
+
+    act(() => context().openProject(SAVED));
+    act(() => context().restoreTrainingRun());
+
+    expect(project().hyperparameters).toEqual(SAVED.hyperparameters);
   });
 });
