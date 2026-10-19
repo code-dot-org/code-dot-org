@@ -22,6 +22,8 @@ interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  /** Step ID to jump to on mount (from URL param). Falls back to step 0. */
+  initialStepId?: string;
   onStartStep: (step: Step) => void;
   onCompleteStep: (step: Step, timeMs: number) => void;
   onLeaveStep: (step: Step, timeMs: number) => void;
@@ -39,6 +41,7 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  initialStepId,
   onStartStep,
   onCompleteStep,
   onLeaveStep,
@@ -47,8 +50,12 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onFinish,
 }) => {
   const {stepContextMap} = usePathwayContext();
-  const [index, setIndex] = useState(0);
   const steps = checkpoint.steps;
+  const [index, setIndex] = useState(() => {
+    if (!initialStepId) return 0;
+    const i = steps.findIndex(s => s.id === initialStepId);
+    return i >= 0 ? i : 0;
+  });
   const step = steps[index];
   const last = index === steps.length - 1;
   const continueLabel = last ? finishLabel : 'Continue';
@@ -60,6 +67,13 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     clock.resetMilestoneTimer();
     return elapsed;
   }, []);
+
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    p.set('checkpoint', checkpoint.id);
+    p.set('step', step.id);
+    window.history.replaceState(null, '', `?${p.toString()}`);
+  }, [checkpoint.id, step.id]);
 
   useEffect(() => {
     takeElapsed(); // Restarts the clock for this step.

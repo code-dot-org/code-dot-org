@@ -83,9 +83,16 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   }
   // Automatically start on the first checkpoint if there's no progress.
   const noProgress = Object.keys(progress.steps).length === 0;
-  const initialCheckpointId = noProgress
+  const autoCheckpointId = noProgress
     ? pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id
     : undefined;
+
+  const params = new URLSearchParams(window.location.search);
+  const urlCheckpointId = params.get('checkpoint') ?? undefined;
+  const urlStepId = params.get('step') ?? undefined;
+
+  // URL target takes precedence over auto-start logic.
+  const initialCheckpointId = urlCheckpointId ?? autoCheckpointId;
   return (
     <LoadedPathwayApp
       pathway={pathway}
@@ -98,6 +105,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
           : {kind: 'map'}
       }
       initialCheckpointId={initialCheckpointId}
+      initialStepId={urlStepId}
       {...actions}
     />
   );
@@ -111,6 +119,8 @@ type LoadedPathwayAppProps = PathwayAppProps &
     initialView: View;
     /** A checkpoint the initial view opens, which starts the adaptive level. */
     initialCheckpointId?: string;
+    /** A step within that checkpoint to jump to directly (from URL). */
+    initialStepId?: string;
   };
 
 // The pathway once its progress is known. Reads initialView and
@@ -122,6 +132,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   stepContextMap,
   initialView,
   initialCheckpointId,
+  initialStepId,
   startStep,
   completeStep,
   leaveStep,
@@ -130,6 +141,18 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const [view, setView] = useState<View>(initialView);
+
+  const clearStepParams = useCallback(() => {
+    const p = new URLSearchParams(window.location.search);
+    p.delete('checkpoint');
+    p.delete('step');
+    const qs = p.toString();
+    window.history.replaceState(
+      null,
+      '',
+      qs ? `?${qs}` : window.location.pathname
+    );
+  }, []);
   useEffect(() => {
     if (initialCheckpointId)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
@@ -185,17 +208,22 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
+            initialStepId={isProject ? undefined : initialStepId}
             onStartStep={startStep}
             onCompleteStep={completeStep}
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
-            onExit={() =>
+            onExit={() => {
+              clearStepParams();
               setView({
                 kind: 'map',
                 focusId: isProject ? undefined : checkpoint.id,
-              })
-            }
-            onFinish={() => setView({kind: 'map'})}
+              });
+            }}
+            onFinish={() => {
+              clearStepParams();
+              setView({kind: 'map'});
+            }}
           />
         </PathwayContext.Provider>
       </div>
