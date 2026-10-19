@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import App, {type AppProps} from './App';
@@ -15,14 +15,9 @@ import type {Mode} from './types';
 export interface AilabEngineProps extends AppProps {
   /** Base path the consumer serves the lab's datasets/images from. */
   assetPath: string;
-  /**
-   * Each method returns the locale relevant string to display. If undefined,
-   * English strings are used.
-   */
   i18n?: Record<string, string>;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
   mode?: Mode;
-  /** Reloads the lab when it changes; the lab stays mounted across levels. */
   levelId?: string | number;
 }
 
@@ -51,9 +46,17 @@ const AilabEngine = ({
     store.dispatch(setInstructionsEnabled(!!appProps.setInstructionsKey));
   }
 
-  useEffect(() => {
+  // Likewise at render time: loading in an effect would let the lab render and
+  // paint a frame of the previous level's state.
+  const loaded = useRef<{levelId?: string | number; mode?: Mode}>(undefined);
+  if (
+    !loaded.current ||
+    loaded.current.levelId !== levelId ||
+    loaded.current.mode !== mode
+  ) {
+    loaded.current = {levelId, mode};
     loadLevel(mode);
-  }, [levelId, mode]);
+  }
 
   return (
     <Provider store={store}>

@@ -9,7 +9,6 @@ export {default as AilabEngine} from './AilabEngine';
 export type {AilabEngineProps} from './AilabEngine';
 export {startOver} from './levelLoad';
 
-// Export a few types.
 export type {
   InstructionsKey,
   Metadata,
