@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '@cdo/apps/jsonVideo/jsonVideoElement';
+import '@code-dot-org/json-video';
 import TutorVideo from './TutorVideo';
 
 const LinkWrapper: React.FunctionComponent<

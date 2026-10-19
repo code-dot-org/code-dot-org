@@ -2042,6 +2042,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/json-video@workspace:packages/json-video":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/json-video@workspace:packages/json-video"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    rimraf: "catalog:"
+    stylelint: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/lab@workspace:*, @code-dot-org/lab@workspace:packages/labs/base":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab@workspace:packages/labs/base"

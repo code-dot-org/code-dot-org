@@ -1,0 +1,25 @@
+# Common workflow for execution of continuous integration for the json-video package.
+# One job: `release:dryrun` fans out to build, lint, test, and — via the shared
+# `lint` task's dependsOn — prettier, stylelint, and typecheck.
+name: Json-Video-CI
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/json-video
+        working-directory: ./frontend
