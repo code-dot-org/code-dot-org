@@ -563,6 +563,7 @@ devinternal_db_writer: !Secret
 db_cluster_id: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_writer_port: !StackSecret
+db_proxy: !StackSecret # 'proxysql' or 'rdsproxy', no value means none.
 db_endpoint_proxy_writer: !StackSecret
 db_endpoint_proxy_writer_port: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
