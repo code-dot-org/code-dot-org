@@ -2017,6 +2017,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             resultInstructions={
               levelProperties.levelMode?.generatedInstructions
             }
+            paintInstructions={levelProperties.levelMode?.paintInstructions}
             generationsLeft={generationsLeft}
             onGenerateStart={countGeneration}
             showTts={showTtsFor(levelProperties)}

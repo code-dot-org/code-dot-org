@@ -26,7 +26,8 @@
       "imageType": "sprite",
       "imageRole": "friend",
       "sentence": "friend",
-      "generatedInstructions": "**AI generated an image based on your prompt.**"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw another character.**"
     },
     "objectives": {
       "title": "**Prompt AI to make another character.**"

@@ -26,7 +26,8 @@
       "imageType": "background",
       "imageRole": "story-background",
       "sentence": "place-time",
-      "generatedInstructions": "**AI generated an image based on your prompt.**"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background.**"
     },
     "objectives": {
       "title": "**Prompt AI to make a background.**"

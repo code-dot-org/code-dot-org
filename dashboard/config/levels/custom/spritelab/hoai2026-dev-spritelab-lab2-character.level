@@ -25,7 +25,8 @@
       "kind": "image",
       "imageType": "sprite",
       "imageRole": "hero",
-      "generatedInstructions": "**AI generated an image based on your prompt.**"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a character.**"
     },
     "objectives": {
       "title": "**Prompt AI to make a character.**"

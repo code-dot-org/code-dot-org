@@ -26,7 +26,8 @@
       "imageType": "block",
       "imageRole": "block",
       "sentence": "block",
-      "generatedInstructions": "**AI generated an image based on your prompt.**"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a block.**"
     },
     "objectives": {
       "title": "**Prompt AI to make a block.**"

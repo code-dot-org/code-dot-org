@@ -26,7 +26,8 @@
       "imageType": "background",
       "imageRole": "platform-background",
       "sentence": "place-detail",
-      "generatedInstructions": "**AI generated an image based on your prompt.**"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background for your game.**"
     },
     "objectives": {
       "title": "**Prompt AI to make a background for your game.**"

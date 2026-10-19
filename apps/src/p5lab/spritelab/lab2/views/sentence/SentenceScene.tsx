@@ -150,6 +150,9 @@ interface SentenceSceneProps {
   instructions?: string;
   /** What the panel reads instead once a picture is made. */
   resultInstructions?: string;
+  /** Instructions while the student draws, in place of `instructions`,
+      which never shows then. */
+  paintInstructions?: string;
   /** Generations the student has left; Generate goes off at none. */
   generationsLeft?: number;
   /** Offer the read-aloud button on the instructions. */
@@ -175,6 +178,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   uploadImage,
   instructions,
   resultInstructions,
+  paintInstructions,
   generationsLeft,
   showTts,
   typeChoice,
@@ -453,9 +457,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  // The steps have the panel while a picture is made.
+  // The steps have the panel while a picture is made, and the level's
+  // instructions ask for a prompt, so drawing shows its own or none.
   const instructionsText = generating
     ? undefined
+    : mode === 'paint'
+    ? paintInstructions
     : showingResult && resultInstructions
     ? resultInstructions
     : instructions;

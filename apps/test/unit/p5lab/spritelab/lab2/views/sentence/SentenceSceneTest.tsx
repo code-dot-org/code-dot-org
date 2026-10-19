@@ -159,6 +159,29 @@ describe('SentenceScene', () => {
     expect(screen.queryByRole('application')).toBeNull();
   });
 
+  it('reads the paint instructions in place of the level instructions while drawing', () => {
+    renderScene({
+      instructions: 'Prompt AI to make some treasure.',
+      paintInstructions: 'Draw some treasure.',
+    });
+    fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
+    const panel = screen.getByRole('region', {name: 'Draw your picture'});
+    expect(panel.textContent).toMatch(/^Draw some treasure\./);
+    expect(panel.textContent).not.toMatch(/Prompt AI/);
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(
+      screen.getByRole('region', {name: 'Make your picture'}).textContent
+    ).toMatch(/^Prompt AI to make some treasure\./);
+  });
+
+  it('drops the level instructions while drawing when the level gives none for it', () => {
+    renderScene({instructions: 'Prompt AI to make some treasure.'});
+    fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
+    expect(
+      screen.getByRole('region', {name: 'Draw your picture'}).textContent
+    ).not.toMatch(/Prompt AI/);
+  });
+
   it('makes one picture for an object', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene({imageSubject: 'object'});

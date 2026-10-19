@@ -27,7 +27,8 @@
       "imageSubject": "object",
       "imageRole": "treasure",
       "sentence": "treasure",
-      "generatedInstructions": "**AI generated an image based on your prompt.**"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw some treasure.**"
     },
     "objectives": {
       "title": "**Prompt AI to make some treasure.**"

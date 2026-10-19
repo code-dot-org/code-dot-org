@@ -32,6 +32,9 @@ export interface LevelMode {
   /** An image level's instructions once a picture is made, markdown, in
       place of its objectives title. */
   generatedInstructions?: string;
+  /** An image level's instructions while the student draws, markdown, in
+      place of its objectives title, which is gone while drawing either way. */
+  paintInstructions?: string;
 }
 
 /** Generations a level before free play allows; free play has no limit. */
