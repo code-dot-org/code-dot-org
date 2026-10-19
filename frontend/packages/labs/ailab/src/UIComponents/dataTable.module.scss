@@ -129,6 +129,11 @@
   }
 }
 
+// As narrow as its numbers allow, so spare width goes to the data columns.
+.indexColumn {
+  width: 1px;
+}
+
 .indexCell {
   min-width: 32px;
   font-weight: 600;

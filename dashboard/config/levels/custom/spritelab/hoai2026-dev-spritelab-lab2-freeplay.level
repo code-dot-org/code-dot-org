@@ -105,6 +105,10 @@
             },
             {
               "kind": "block",
+              "type": "spritelab2_whenPlayer"
+            },
+            {
+              "kind": "block",
               "type": "gamelab_checkTouching",
               "inputs": {
                 "SPRITE1": {
