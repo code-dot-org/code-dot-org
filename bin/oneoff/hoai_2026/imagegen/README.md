@@ -167,11 +167,18 @@ Paths are built from the choice ids in sentence slot order, which never
 contain dots; an empty optional slot is `none`:
 
 ```
-<source>/<id>/<style>/<choice ids>.<variant>.png
+<source>/<id>/<style>/<choice ids>.<variant>.<png|jpg>
 <source>/<id>/<style>/<choice ids>.<variant>.json
-<source>/<id>/<style>/animated/<choice ids>.<variant>.<pose>.png
+<source>/<id>/<style>/animated/<choice ids>.<variant>.<pose>.<png|jpg>
 <source>/<id>/<style>/animated/<choice ids>.<variant>.json
 ```
+
+The extension is the format the provider actually returned, read from the
+bytes rather than from the media type the response declared, because the two
+have disagreed. Gemini returns a JPEG as readily as a PNG; the file is
+stored as it arrived rather than re-encoded, since the lab reads either.
+Regenerating a frame that comes back in the other format removes the file it
+replaces, so the two never sit side by side.
 
 For example, `adlib/sprite-simple/pixel/brave.robot.00.png` and
 `explore/character/pixel/animated/none.blob.cape.00.base.png`. The `.json` file
@@ -203,8 +210,8 @@ If you only want to upload certain files:
 ### Validating
 
 You can run the `validate_images` script to check that every image in
-`image_output` is a square PNG and, where its metadata file says it was
-made transparent, has an alpha channel. A transparent sprite must also have
+`image_output` is square, really is the format its name claims, and, where
+its metadata file says it was made transparent, has an alpha channel. A transparent sprite must also have
 four transparent corners; a block may fill its frame, so it is not held to
 that. The same check runs before uploading.
 
