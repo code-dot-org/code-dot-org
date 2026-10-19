@@ -49,7 +49,7 @@ class AiGatewayAuthController < ApplicationController
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
 
-    # Temporary: once this flag is true in every dashboard environment's DCDO, remove it and the legacy shared key.
+    # Temporary: once production has run with this flag on, remove it and the legacy shared key.
     use_environment_key = DCDO.get('ai-gateway-environment-key-enabled', false) == true
 
     begin
