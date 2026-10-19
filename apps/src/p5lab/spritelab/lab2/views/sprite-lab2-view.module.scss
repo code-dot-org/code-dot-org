@@ -453,6 +453,121 @@ $editor-strip-height: 41px;
   top: $editor-strip-height;
 }
 
+// ?bar=workspace: the editors stop above the scene bar at their base.
+.aboveWorkspaceSceneBar {
+  bottom: $editor-strip-height;
+}
+
+// The scene bar at the editors' base, the strip's twin: the scene
+// controls at its start, the project-wide controls at its end.
+.workspaceSceneBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $editor-strip-height;
+  box-sizing: border-box;
+  // Above Blockly's category list (z 70) and flyout (z 20), so the menu
+  // opens over them; below its block drag surface (z 80).
+  z-index: 71;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  background: var(--background-neutral-secondary);
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+// The scene dropdown: its trigger reads as one of the bar's buttons. Higher
+// specificity than the dropdown's own container rules.
+.sceneDropdown {
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
+
+  > button.sceneTrigger {
+    height: $tab-item-height;
+    min-width: 0;
+    max-width: 220px;
+    margin: 0;
+    padding: 0 10px;
+    gap: 8px;
+    border-color: var(--borders-neutral-strong);
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+
+.sceneTriggerName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sceneMenu {
+  margin: 0;
+  padding: 4px 0;
+  user-select: none;
+  min-width: 200px;
+  max-height: 60vh;
+  overflow-y: auto;
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+.sceneMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
+
+.sceneMenuItemActive {
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover {
+    background: var(--background-brand-teal-primary);
+  }
+
+  .sceneThumb {
+    color: var(--text-neutral-white-fixed);
+    background: rgb(255 255 255 / 25%);
+  }
+}
+
+.sceneMenuName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 // After .codeTabWrapper too: the Images pane off to the right while
 // another editor shows, as a closed sheet waits.
 .picturesEditorParked {

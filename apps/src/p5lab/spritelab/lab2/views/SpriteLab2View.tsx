@@ -147,6 +147,7 @@ import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
 import ToolButtons from './components/ToolButtons';
+import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
@@ -482,8 +483,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
-  // The scene row sits under the workspace; ?bar=top puts it above.
-  const barAtBottom = useMemo(() => queryParams('bar') !== 'top', []);
+  // The scene row sits under the workspace; ?bar=top puts it above, and
+  // ?bar=workspace replaces it with a bar at the editors' base holding a
+  // dropdown of the scenes.
+  const barMode = useMemo(() => queryParams('bar'), []);
+  const barAtBottom = barMode !== 'top';
+  const barInWorkspace = barMode === 'workspace';
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
@@ -1989,6 +1994,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  // A pinned level shows its own scene alone, unless it asks for every one.
+  const shownScenes =
+    pinnedSceneId && levelProperties.levelMode?.sceneTabs !== 'all'
+      ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
+      : sceneMetadata;
+  // The resource panel's buttons, when they live in a bar.
+  const toolButtons = resourcesInBar && (
+    <ToolButtons
+      levelId={levelProperties.id}
+      appName={levelProperties.appName}
+      theme={theme}
+      settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
+      onStartOver={isEditable ? () => setShowStartOver(true) : undefined}
+    />
+  );
+
   const imagePaneProps = {
     uploadImage,
     onRenameImage: handleRenameImage,
@@ -2084,6 +2105,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ) : (
         <LabShell
           barAtBottom={barAtBottom}
+          barHidden={barInWorkspace}
           rightExtra={
             <>
               {activeTab === 'Play' && nowPlaying && (
@@ -2092,21 +2114,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   loading={nowPlaying.loading}
                 />
               )}
-              {resourcesInBar && (
-                <ToolButtons
-                  levelId={levelProperties.id}
-                  appName={levelProperties.appName}
-                  theme={theme}
-                  settings={[
-                    ...blocklySettings,
-                    themeSetting,
-                    ...gameAudio.settings,
-                  ]}
-                  onStartOver={
-                    isEditable ? () => setShowStartOver(true) : undefined
-                  }
-                />
-              )}
+              {toolButtons}
             </>
           }
           sceneTabs={
@@ -2114,12 +2122,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             // into the saved toolbox.
             animationsSeeded && !isToolboxMode ? (
               <SceneTabs
-                scenes={
-                  pinnedSceneId &&
-                  levelProperties.levelMode?.sceneTabs !== 'all'
-                    ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
-                    : sceneMetadata
-                }
+                scenes={shownScenes}
                 activeSceneId={activeSceneId}
                 galleryOpen={activeTab === 'Scenes'}
                 disabled={activeTab === 'Play'}
@@ -2135,6 +2138,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         >
           {WorkspaceAlert}
           <div ref={stageRef} className={moduleStyles.stage}>
+            {barInWorkspace &&
+              animationsSeeded &&
+              !isToolboxMode &&
+              editorsShown &&
+              (activeTab === 'Code' || activeTab === 'World') && (
+                <WorkspaceSceneBar
+                  scenes={shownScenes}
+                  activeSceneId={activeSceneId}
+                  locked={!!pinnedSceneId}
+                  lockedReason={LOCKED_REASON}
+                  allowCreate={scenesEditable || !!pinnedSceneId}
+                  onSelectScene={sceneEditing.selectScene}
+                  onCreateScene={sceneEditing.createScene}
+                  onManageScenes={sceneEditing.openGallery}
+                  rightExtra={toolButtons}
+                  style={clearOfPreview}
+                />
+              )}
             {editorsShown &&
               (activeTab === 'World' ||
                 activeTab === 'Code' ||
@@ -2159,7 +2180,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               ref={codeWrapperRef}
               className={classNames(
                 moduleStyles.codeTabWrapper,
-                editorsShown && moduleStyles.underEditorStrip
+                editorsShown && moduleStyles.underEditorStrip,
+                barInWorkspace && moduleStyles.aboveWorkspaceSceneBar
               )}
               style={{
                 clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -2210,7 +2232,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 ref={worldWrapperRef}
                 className={classNames(
                   moduleStyles.codeTabWrapper,
-                  editorsShown && moduleStyles.underEditorStrip
+                  editorsShown && moduleStyles.underEditorStrip,
+                  barInWorkspace && moduleStyles.aboveWorkspaceSceneBar
                 )}
                 style={{
                   clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
