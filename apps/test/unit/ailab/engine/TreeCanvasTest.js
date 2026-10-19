@@ -1,10 +1,9 @@
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-import {ThemeProvider} from '@mui/material/styles';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {createElement} from 'react';
 
 import TreeCanvas from '@cdo/apps/ailab/engine/UIComponents/TreeCanvas';
 
+import {withTheme} from './renderWithProviders';
 import './stubPseudoClasses';
 
 const TOOLBAR_LEFT = 8;
@@ -32,9 +31,7 @@ function resizeViewport(width, height) {
 }
 
 function canvas(props = {}, children = 'tree') {
-  return createElement(
-    ThemeProvider,
-    {theme: getMuiThemeForBrand(undefined)},
+  return withTheme(
     createElement(
       TreeCanvas,
       {contentWidth: 752, contentHeight: 312, ...props},

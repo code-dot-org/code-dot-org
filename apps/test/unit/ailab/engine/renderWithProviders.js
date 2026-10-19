@@ -1,5 +1,7 @@
-/* Renders a component under the providers AilabEngine supplies. */
+/* Renders a component under the providers the lab runs under in production. */
 
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
+import {ThemeProvider} from '@mui/material/styles';
 import {act, render} from '@testing-library/react';
 import {createElement, useEffect, useRef} from 'react';
 import {Provider} from 'react-redux';
@@ -13,6 +15,14 @@ import {
   TrainingDataProvider,
   useTrainingData,
 } from '@cdo/apps/ailab/engine/TrainingDataContext';
+
+export function withTheme(element) {
+  return createElement(
+    ThemeProvider,
+    {theme: getMuiThemeForBrand(undefined)},
+    element
+  );
+}
 
 // Trains the way clicking Train model does, and hands back the run so a test
 // can seed the contexts with it.
@@ -71,20 +81,22 @@ export function renderWithProviders(
 ) {
   let contexts;
   const result = render(
-    createElement(
-      Provider,
-      {store},
+    withTheme(
       createElement(
-        ProjectProvider,
-        {project},
+        Provider,
+        {store},
         createElement(
-          TrainingDataProvider,
-          null,
-          createElement(ContextProbe, {
-            trainingRun,
-            report: value => (contexts = value),
-          }),
-          element
+          ProjectProvider,
+          {project},
+          createElement(
+            TrainingDataProvider,
+            null,
+            createElement(ContextProbe, {
+              trainingRun,
+              report: value => (contexts = value),
+            }),
+            element
+          )
         )
       )
     )
