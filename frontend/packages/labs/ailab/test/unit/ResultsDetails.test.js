@@ -6,21 +6,34 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
+  setImportedData,
 } from '../../src/redux';
 import ResultsDetails from '../../src/UIComponents/ResultsDetails';
 
-import {levelProject, levelStore} from './levelStore';
+import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
-function renderScorecard() {
+const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
+  name: ['Tweety', 'Fido', 'Slither'][index] || row.animal,
+  ...row,
+}));
+
+function renderScorecard({
+  data,
+  predictedLabels = ['bird', 'dog', 'bird'],
+} = {}) {
   const store = levelStore();
+  if (data) {
+    store.dispatch(setImportedData(data, false));
+  }
   store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
   store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
-  store.dispatch(setAccuracyCheckPredictedLabels(['bird', 'dog', 'bird']));
+  store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   renderWithProviders(createElement(ResultsDetails), {
     store,
     project: {
       ...levelProject(),
+      accuracyCheckRowIndices: [0, 1, 2],
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
@@ -59,27 +72,54 @@ describe('ResultsDetails', () => {
   test('heads the feature, actual and predicted columns', () => {
     renderScorecard();
 
-    expect(headerRows()).toEqual([
-      ['Feature', 'Actual', 'AI Prediction'],
-      ['legs', 'animal', 'animal'],
-    ]);
+    expect(headerRows()).toEqual([['', 'legs', 'animal', 'AI predicts']]);
+  });
+
+  test('puts the results table in the tab order', () => {
+    renderScorecard();
+
+    expect(screen.getByRole('group', {name: 'Results'}).tabIndex).toBe(0);
   });
 
   test('shows the rows the model got right, then the rows it missed', () => {
     renderScorecard();
 
+    expect(screen.getByRole('button', {name: 'Correct (2)'})).toBeTruthy();
     expect(bodyRows()).toEqual([
-      ['2', 'bird', 'bird'],
-      ['4', 'dog', 'dog'],
+      ['1', '2', 'bird', 'bird'],
+      ['2', '4', 'dog', 'dog'],
     ]);
 
-    fireEvent.click(screen.getByRole('button', {name: 'Incorrect'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Incorrect (1)'}));
 
-    expect(bodyRows()).toEqual([['0', 'snake', 'bird']]);
+    expect(bodyRows()).toEqual([['3', '0', 'snake', 'bird']]);
     expect(
       screen
-        .getByRole('button', {name: 'Incorrect'})
+        .getByRole('button', {name: 'Incorrect (1)'})
         .getAttribute('aria-pressed')
     ).toBe('true');
+  });
+
+  test('says when the selected grade has no rows', () => {
+    renderScorecard({predictedLabels: ['bird', 'dog', 'snake']});
+
+    fireEvent.click(screen.getByRole('button', {name: 'Incorrect (0)'}));
+
+    expect(screen.getByText('No rows matched this filter')).toBeTruthy();
+  });
+
+  test('shows the other dataset columns on request', () => {
+    renderScorecard({data: NAMED_ANIMALS});
+
+    fireEvent.click(screen.getByLabelText('Show all columns'));
+
+    expect(headerRows()).toEqual([
+      ['', 'name', 'legs', 'animal', 'AI predicts'],
+    ]);
+    expect(bodyRows()[0]).toEqual(['1', 'Tweety', '2', 'bird', 'bird']);
+
+    fireEvent.click(screen.getByLabelText('Show only features and label'));
+
+    expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
   });
 });

@@ -8,7 +8,7 @@ import RowsPanel, {type RowsPanelProps} from './RowsPanel';
 
 type AccuracyCheckRowsPanelProps = Pick<
   RowsPanelProps,
-  'emphasizedColumn' | 'showAllColumns' | 'onToggleColumns'
+  'emphasizedColumn' | 'showAllColumns' | 'onToggleColumns' | 'prediction'
 > & {
   rows: DisplayTreeNodeRows;
   splitByGrade: boolean;
