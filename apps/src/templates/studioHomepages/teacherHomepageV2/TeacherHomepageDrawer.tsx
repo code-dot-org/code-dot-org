@@ -51,7 +51,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     React.useState(schoolInfoConfirmationOpenInitially);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
-  const [success, setSuccess] = React.useState(false);
+  const [schoolInfoSubmissionSuccess, setSchoolInfoSubmissionSuccess] =
+    React.useState(false);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
   const [NPSSuccess, setNPSSuccess] = React.useState(false);
@@ -60,14 +61,14 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     () =>
       schoolInfoInterstitialOpen ||
       schoolInfoConfirmationOpen ||
-      success ||
+      schoolInfoSubmissionSuccess ||
       AFEDrawerOpen ||
       NPSOpen ||
       NPSSuccess,
     [
       schoolInfoInterstitialOpen,
       schoolInfoConfirmationOpen,
-      success,
+      schoolInfoSubmissionSuccess,
       AFEDrawerOpen,
       NPSOpen,
       NPSSuccess,
@@ -97,7 +98,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.censusHeading();
     } else if (schoolInfoConfirmationOpen) {
       return i18n.reviewSchoolInfo();
-    } else if (success) {
+    } else if (schoolInfoSubmissionSuccess) {
       return i18n.thankYouForUpdatingYourSchool();
     } else if (AFEDrawerOpen) {
       return i18n.afeDrawerHeader();
@@ -115,7 +116,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
         {schoolName: existingSchoolName}
       )}`;
-    } else if (success) {
+    } else if (schoolInfoSubmissionSuccess) {
       return i18n.schoolInfoDrawerSuccess();
     } else if (AFEDrawerOpen) {
       return i18n.afeBannerParagraph();
@@ -179,7 +180,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           {i18n.imAtaNewSchool()}
         </MuiButton>
       );
-    } else if (success) {
+    } else if (schoolInfoSubmissionSuccess) {
       return (
         <MuiButton
           variant="contained"
@@ -222,7 +223,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           {i18n.imStillTeachingHere()}
         </MuiButton>
       );
-    } else if (success) {
+    } else if (schoolInfoSubmissionSuccess) {
       return null;
     } else if (AFEDrawerOpen) {
       return (
@@ -270,7 +271,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         attempt: showSchoolInfoUnknownError ? 2 : 1,
       });
 
-      setSuccess(true);
+      setSchoolInfoSubmissionSuccess(true);
       setSchoolInfoInterstitialOpen(false);
     } catch (error) {
       analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
@@ -289,7 +290,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   };
 
   const handlePrimaryButtonClick = async () => {
-    if (success) {
+    if (schoolInfoSubmissionSuccess) {
       // If the drawer is already showing success, we just want to close it.
       onDrawerClose();
     } else if (schoolInfoConfirmationOpen) {
@@ -327,13 +328,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           'Content-Type': 'application/json',
         }
       ).catch(error => console.error(error));
-    } else if (NPSOpen && !success && npsProps) {
-      // A school info success message is shown in place of the survey.
+    } else if (NPSOpen && !schoolInfoSubmissionSuccess && npsProps) {
       submitNpsSurveyDismissal(npsProps).catch(error => console.error(error));
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
-    setSuccess(false);
+    setSchoolInfoSubmissionSuccess(false);
     setAFEDrawerOpen(false);
     setNPSOpen(false);
     setNPSSuccess(false);
@@ -357,7 +357,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         />
       </div>
       <div className={styles.drawerText}>
-        {(success || NPSSuccess) && (
+        {(schoolInfoSubmissionSuccess || NPSSuccess) && (
           <img
             className={styles.drawerImage}
             src={drawerConfirmationImage}
