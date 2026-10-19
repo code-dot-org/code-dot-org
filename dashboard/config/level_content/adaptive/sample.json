@@ -11,17 +11,34 @@
     "build": {
       "id": "build",
       "title": "Build with AI",
-      "description": "Students move from asking for something, to specifying it, to judging what comes back."
+      "description": "Students move from asking for something, to specifying it, to judging what comes back.",
+      "evidenceLevels": {
+        "0": "Writes vague one-line prompts with no goal, constraint or edge case, accepts whatever comes back, and cannot say why a prompt produced its result.",
+        "1": "States a basic goal in the prompt, notices obvious mismatches with intent when they are visible or pointed out, and revises broadly, asking the AI to fix it or make it better.",
+        "2": "Names a goal, a constraint and an edge case before generating, compares the output against intent to find specific matches and mismatches, and revises by naming the exact element or behavior to change, explaining why the prompt produced what it did."
+      }
     },
     "language": {
       "id": "language",
       "title": "Language of web dev",
-      "description": "Students move from spotting the blocks, to explaining them, to using the vocabulary themselves."
+      "description": "Students move from spotting the blocks, to explaining them, to using the vocabulary themselves.",
+      "evidenceLevels": {
+        "0": "Sees a site as one flat idea; sketches are decorative rather than structural, and recurring components go unrecognized even when pointed out.",
+        "1": "Identifies basic components such as the nav bar, hero, cards and footer in an existing page when prompted, and fills in a heavily scaffolded wireframe or site map with inconsistent structure and no clear hierarchy.",
+        "2": "Breaks a multi-page product into pages and components with a clear hierarchy, strips detail away to show structure only and can say why, and lays out a site map or wireframe that supports a plausible user flow with patterns applied consistently.",
+        "3": "Anticipates navigation needs the task did not spell out, moves between site map and wireframe as a decision requires, and picks or adapts a layout pattern on purpose rather than defaulting to the first idea."
+      }
     },
     "debug": {
       "id": "debug",
       "title": "Debug with AI",
-      "description": "Students move from spotting the clue, to sharing it with AI, to verifying and diagnosing on their own."
+      "description": "Students move from spotting the clue, to sharing it with AI, to verifying and diagnosing on their own.",
+      "evidenceLevels": {
+        "0": "Avoids or dismisses error messages, cannot pick out the relevant part of one, and pastes whole code or applies any suggested fix without understanding it.",
+        "1": "Reads an error when prompted but treats it as a stop sign, identifies the literal text without connecting it to the code, and pastes it to the AI with no context.",
+        "2": "Treats an error as the start of a diagnosis, connects it to the line or element at fault and restates it in their own words, and gives the AI the error plus the intended behavior and what changed.",
+        "3": "Tests deliberately to surface errors as feedback, predicts likely causes from prior bugs before reading the full message, and fixes the bug from the AI's explanation, asking for a direct patch only as a check."
+      }
     }
   },
   "checkpoints": [
@@ -151,7 +168,17 @@
                   "text": "Add a button element that says “Click me.”"
                 },
                 { "id": "e", "text": "I’m not sure." }
-              ]
+              ],
+              "measures": {
+                "skillId": "build",
+                "evidenceLevels": {
+                  "a": 1,
+                  "b": 2,
+                  "c": 0,
+                  "d": 1,
+                  "e": 0
+                }
+              }
             },
             {
               "id": 103,
@@ -170,7 +197,55 @@
                   "text": "Use flexbox to lay out three card divs in a row."
                 },
                 { "id": "e", "text": "I’m not sure." }
-              ]
+              ],
+              "measures": {
+                "skillId": "language",
+                "evidenceLevels": {
+                  "a": 1,
+                  "b": 1,
+                  "c": 2,
+                  "d": 2,
+                  "e": 0
+                }
+              }
+            },
+            {
+              "id": 110,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-error",
+              "questionTitle": "Your heading looks wrong, and everything after it is huge too. You open the code and see this:\n\n<h1>Panda Fan Club\n<p>Welcome to the club!</p>\n\nWhich instruction to the AI would work best?",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "It’s broken. Fix it."
+                },
+                {
+                  "id": "b",
+                  "text": "Add a CSS rule to fix the heading color."
+                },
+                {
+                  "id": "c",
+                  "text": "Update the click handler so the heading changes."
+                },
+                {
+                  "id": "d",
+                  "text": "Close the h1 tag after “Panda Fan Club”."
+                },
+                {
+                  "id": "e",
+                  "text": "I’m not sure."
+                }
+              ],
+              "measures": {
+                "skillId": "debug",
+                "evidenceLevels": {
+                  "a": 0,
+                  "b": 1,
+                  "c": 1,
+                  "d": 2,
+                  "e": 0
+                }
+              }
             }
           ]
         }
@@ -182,6 +257,10 @@
       "description": "Add concrete details (layout, colors, content, purpose) so the prompt isn't vague",
       "skillIds": ["build"],
       "requires": ["introduction"],
+      "targetEvidenceLevels": {
+        "build": 1
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "add-details-video",
@@ -250,6 +329,10 @@
       "description": "Respond to what came back with a follow-up that targets one thing that's off",
       "skillIds": ["build"],
       "requires": ["introduction"],
+      "targetEvidenceLevels": {
+        "build": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "tweak-it-panel",
@@ -280,6 +363,10 @@
       "description": "Decide when a direct edit beats another prompt, and make it",
       "skillIds": ["build"],
       "requires": ["introduction"],
+      "targetEvidenceLevels": {
+        "build": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "edit-by-hand-fix",
@@ -324,7 +411,11 @@
                 { "id": "d", "text": "Write “Make it better”" },
                 { "id": "e", "text": "Fix both in the code by hand" }
               ],
-              "correctChoiceId": "c"
+              "correctChoiceId": "c",
+              "measures": {
+                "skillId": "build",
+                "evidenceLevel": 2
+              }
             }
           ]
         },
@@ -396,7 +487,11 @@
                 { "id": "c", "text": "Interactive canvas" },
                 { "id": "d", "text": "Feature cards" }
               ],
-              "correctChoiceId": "b"
+              "correctChoiceId": "b",
+              "measures": {
+                "skillId": "language",
+                "evidenceLevel": 1
+              }
             },
             {
               "id": 106,
@@ -409,7 +504,11 @@
                 { "id": "c", "text": "Call-to-action" },
                 { "id": "d", "text": "Interactive canvas" }
               ],
-              "correctChoiceId": "a"
+              "correctChoiceId": "a",
+              "measures": {
+                "skillId": "language",
+                "evidenceLevel": 1
+              }
             },
             {
               "id": 107,
@@ -422,7 +521,11 @@
                 { "id": "c", "text": "Both of them" },
                 { "id": "d", "text": "Neither of them" }
               ],
-              "correctChoiceId": "b"
+              "correctChoiceId": "b",
+              "measures": {
+                "skillId": "language",
+                "evidenceLevel": 1
+              }
             }
           ]
         },
@@ -467,7 +570,11 @@
                 { "id": "c", "text": "Interactive canvas" },
                 { "id": "d", "text": "Call-to-action" }
               ],
-              "correctChoiceId": "b"
+              "correctChoiceId": "b",
+              "measures": {
+                "skillId": "language",
+                "evidenceLevel": 2
+              }
             }
           ]
         },
@@ -543,7 +650,11 @@
                 { "id": "c", "text": "(Not Found)" },
                 { "id": "d", "text": "Nothing, just say “it’s broken”" }
               ],
-              "correctChoiceId": "b"
+              "correctChoiceId": "b",
+              "measures": {
+                "skillId": "debug",
+                "evidenceLevel": 1
+              }
             }
           ]
         },

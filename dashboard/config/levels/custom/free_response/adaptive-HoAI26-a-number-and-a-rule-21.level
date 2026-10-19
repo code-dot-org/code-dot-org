@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-10-16T21:34:17.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "You just identified what a 'rule' looks like. Now, think about your own page. What's one thing you want to happen only if a certain condition is met? Write that rule using 'if... then...' phrasing.",
+    "placeholder": "For example: If the button is clicked, then show a message.",
+    "encrypted_solution": "iJ9WCtkh/WNsiQQsC6qHnEr5AlP2sKMGbkcdRyWZFA+V9LrFDWOM6ekwt2M8\nE2gCJWFWKoihO8dxJd37y8eif7KhGvJE7i/IdB2PqZi4bIdBUOZ8VuHnW6+3\ne61K6v0OFC1bnpPOK0Aw8F7euurcfyUxUEFnZwOobUhKUd3+hr2TKpututGk\n5VH2zSwoe16cie4GXmzFhZ8GUGLE0aq2SjHMX6QelikXAnwC8eoRC7ZO2C/i\ngYqPxKGgh0Z7Sra6\n",
+    "generate_outline": "Write a rule for your page using an 'if... then...' structure. Your rule should state a condition and its resulting action."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:34:21 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:34:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:34:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:34:23 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -1,7 +1,7 @@
-import {INSTRUCTIONS_KEYS} from '@code-dot-org/ailab';
 import $ from 'jquery';
 import React from 'react';
 
+import {INSTRUCTIONS_KEYS} from '@cdo/apps/ailab/engine';
 import {getDefaultInstructions} from '@cdo/apps/ailab/lab2/defaultInstructions';
 import EditAilabDynamicInstructions from '@cdo/apps/lab2/levelEditors/ailabDynamicInstructions/EditAilabDynamicInstructions';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';

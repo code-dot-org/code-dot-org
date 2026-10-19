@@ -1,0 +1,48 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-16T21:19:56.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "cc872b33-cb6e-479a-b7e2-0887440c3249": {
+          "id": "cc872b33-cb6e-479a-b7e2-0887440c3249",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>My Starter Project</title><link rel=\"stylesheet\" href=\"style.css\"></head><body><header><h1>Welcome to Your Project</h1></header><main><p>This is a simple starting point. You can change anything here!</p><button id=\"actionButton\">Get Started</button></main><script src=\"script.js\"></script></body></html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "b449a5a8-2589-4d0d-8d94-7d3489929dbc": {
+          "id": "b449a5a8-2589-4d0d-8d94-7d3489929dbc",
+          "name": "style.css",
+          "contents": "body { font-family: sans-serif; margin: 20px; background-color: #f8f8f8; color: #333; line-height: 1.6; }header { text-align: center; padding: 20px; background-color: #eee; border-bottom: 1px solid #ccc; margin-bottom: 20px; }h1 { color: #0056b3; }main { max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }p { margin-bottom: 1em; }button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }button:hover { background-color: #0056b3; }",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "6a963fee-89b1-4bca-9a86-8af179c89c89": {
+          "id": "6a963fee-89b1-4bca-9a86-8af179c89c89",
+          "name": "script.js",
+          "contents": "// This is your JavaScript file.\n// You can add interactive features and logic here.\n\nconsole.log(\"script.js loaded successfully!\");",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "cc872b33-cb6e-479a-b7e2-0887440c3249",
+        "b449a5a8-2589-4d0d-8d94-7d3489929dbc",
+        "6a963fee-89b1-4bca-9a86-8af179c89c89"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:19:56 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Weblab2>

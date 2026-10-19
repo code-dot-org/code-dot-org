@@ -4,7 +4,7 @@
   keeps only keys Lab 2 AI Lab can show; anything else is dropped when the
   level is next saved.
 */
-import {LAB2_INSTRUCTIONS, type InstructionsKey} from '@code-dot-org/ailab';
+import {LAB2_INSTRUCTIONS, type InstructionsKey} from '@cdo/apps/ailab/engine';
 
 import {setJsonObjectValue} from '../jsonUtils';
 

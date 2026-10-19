@@ -11,7 +11,6 @@ import {
   setThreadTitle,
   setArtifactType,
 } from '@cdo/apps/aiTeacherDrawer/redux';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
@@ -169,11 +168,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         sendChatEvent(Role.USER, prompt, isPreset, threadId);
       }
 
-      if (
-        artifactType &&
-        experiments.isEnabled(experiments.AI_ARTIFACT) &&
-        !isPreset
-      ) {
+      if (artifactType && !isPreset) {
         sendArtifactEvent(
           threadId,
           EVENTS.AI_ARTIFACT_PROMPT_RESPONDED,
@@ -192,11 +187,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         presetChipText,
         ...(threadId === 0 ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
-        ...(artifactType &&
-        experiments.isEnabled(experiments.AI_ARTIFACT) &&
-        !isPreset
-          ? {artifactType}
-          : {}),
+        ...(artifactType && !isPreset ? {artifactType} : {}),
       });
 
       HttpClient.post(endpoint, body, true, {

@@ -11,17 +11,23 @@ import moduleStyles from './predict-summary.module.scss';
 const SUMMARY_PATH = '/summary';
 
 const PredictSummary: React.FunctionComponent = () => {
-  // If viewing the page as Participant, be sure to rewrite the link URL
-  // to view as Instructor, so we don't just get redirected back.
-  const params = document.location.search.replace(
-    `viewAs=${ViewType.Participant}`,
-    `viewAs=${ViewType.Instructor}`
-  );
-  const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
   const currentSectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
+  // If viewing the page as Participant, be sure to rewrite the link URL
+  // to view as Instructor, so we don't just get redirected back.
+  let params = document.location.search.replace(
+    `viewAs=${ViewType.Participant}`,
+    `viewAs=${ViewType.Instructor}`
+  );
+  const isOnSubLevel = /\/sublevel\/\d+/.test(document.location.pathname);
+  if (isOnSubLevel && currentLevelId) {
+    params += (params ? '&' : '?') + `level_id=${currentLevelId}`;
+  }
+  const pathname = document.location.pathname.replace(/\/sublevel\/\d+$/, '');
+  const summaryUrl = pathname + SUMMARY_PATH + params;
   const [responseCount, setResponseCount] = useState<number | null>(null);
   const [numStudents, setNumStudents] = useState<number | null>(null);
 
