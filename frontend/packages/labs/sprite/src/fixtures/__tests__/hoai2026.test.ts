@@ -31,7 +31,17 @@ describe('the hoai2026 free-play fixture', () => {
     ]);
   });
 
-  it('defines every block its toolbox names', () => {
+  // Blocks the course offers that this package has not ported yet. Apps grew
+  // them after the port began: setWeather and burst in #75703, whenPlayer in
+  // #75816. Blockly drops a toolbox entry whose type is undefined, so the
+  // level still loads without them. Delete a name here as its block lands.
+  const UNPORTED = [
+    'spritelab2_setWeather',
+    'spritelab2_burst',
+    'spritelab2_whenPlayer',
+  ];
+
+  it('defines every block its toolbox names, bar the unported ones', () => {
     const known = new Set([
       ...level.sharedBlocks.map(block => block.name),
       ...SPRITELAB2_BLOCKS.map(block => block.type),
@@ -39,6 +49,7 @@ describe('the hoai2026 free-play fixture', () => {
     const named = level.toolboxDefinition.contents.flatMap(category =>
       category.contents.map(entry => entry.type),
     );
-    expect(named.filter(type => !known.has(type))).toEqual([]);
+    const undefinedTypes = [...new Set(named.filter(type => !known.has(type)))];
+    expect(undefinedTypes.sort()).toEqual([...UNPORTED].sort());
   });
 });
