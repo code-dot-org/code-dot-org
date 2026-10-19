@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-# This script just ensures that the generated images are square PNGs, with
-# transparent backgrounds where their metadata file says they were asked for
-# one.
+# This script just ensures that each generated image is a square image of
+# the format its name claims, with a transparent background where its
+# metadata file says one was asked for.
 #
 # You can specify --delete to actually delete the invalid files.
 
@@ -55,6 +55,10 @@ Dir.glob(File.join(output_path, '**', '*.json')) do |json_path|
 
   metadata = JSON.parse(File.read(json_path))
   metadata['frames'].each do |frame|
+    # A frame has no file until its provider has answered, and the
+    # extension is whichever format that was.
+    next unless frame['file']
+
     path = File.join(directory, frame['file'])
     next unless File.exist?(path)
 

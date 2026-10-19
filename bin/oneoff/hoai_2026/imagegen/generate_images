@@ -54,6 +54,9 @@
 # cropping and pixel-grid normalization: the lab is meant to run that
 # pipeline on a cached image as it does on a live one.
 #
+# A file is named for the format its bytes are, which is not always a PNG:
+# Gemini returns a JPEG as readily, and the lab reads either.
+#
 # A character sprite can also be made as an animated set (the student
 # form's 'Generate animation'): a base image, then four poses that each send
 # the base image back as a reference. These cost five requests each and are
@@ -448,8 +451,20 @@ def object_stem(object)
   [*object[:job]['choiceIds'], object[:variant].to_s.rjust(2, '0')].join('.')
 end
 
-def frame_path(object, frame)
-  File.join(object_directory(object), "#{[object_stem(object), frame['pose']].compact.join('.')}.png")
+# A frame's path without its extension: which format a provider returns is
+# known only once it answers (see image_extension).
+def frame_stem(object, frame)
+  File.join(object_directory(object), [object_stem(object), frame['pose']].compact.join('.'))
+end
+
+def frame_path(object, frame, extension)
+  "#{frame_stem(object, frame)}.#{extension}"
+end
+
+# The frame's file as stored, whatever format it came back as, or nil.
+def find_frame(output_path, object, frame)
+  stem = File.join(output_path, frame_stem(object, frame))
+  IMAGE_EXTENSIONS.map {|extension| "#{stem}.#{extension}"}.find {|path| File.exist?(path)}
 end
 
 def metadata_path(object)
@@ -501,7 +516,11 @@ def image_from(response, &extract)
 
   b64 = yield(response.parsed_response)
   raise ImageRequestError, 'No image in the response' unless b64
-  Base64.decode64(b64)
+
+  bytes = Base64.decode64(b64)
+  extension = image_extension(bytes)
+  raise ImageRequestError, "Response is not a #{IMAGE_EXTENSIONS.join(' or ')}" unless extension
+  [bytes, extension]
 end
 
 def request_openai_image(options, job, frame, reference_path)
@@ -589,7 +608,7 @@ def request_image(options, job, frame, reference_path, seed)
   end
 end
 
-def metadata_for(options, object, generated, seed = nil)
+def metadata_for(options, object, output_path, generated, seed = nil)
   job = object[:job]
   {
     source: job['source'],
@@ -612,9 +631,12 @@ def metadata_for(options, object, generated, seed = nil)
     seed: seed,
     generated: generated,
     frames: job['frames'].map do |frame|
+      stored = find_frame(output_path, object, frame)
       {
         pose: frame['pose'],
-        file: File.basename(frame_path(object, frame)),
+        # Named for the format the provider returned, so absent until it
+        # has answered.
+        file: stored && File.basename(stored),
         prompt: frame_prompt(options, job, frame),
         reference: frame['reference'],
         seed: frame_seed(seed, job['frames'], frame),
@@ -650,19 +672,18 @@ else
   ) do |object|
     job = object[:job]
     frames = job['frames']
-    paths = frames.map {|frame| File.join(output_path, frame_path(object, frame))}
     json_path = File.join(output_path, metadata_path(object))
 
     # Images made with the other background setting are regenerated.
     recorded = File.exist?(json_path) ? JSON.parse(File.read(json_path)) : {}
     stale = recorded['generated'] && !!recorded['transparent'] != !!transparent?(options, job)
 
-    next true if !stale && paths.all? {|path| File.exist?(path)}
+    next true if !stale && frames.all? {|frame| find_frame(output_path, object, frame)}
 
     FileUtils.mkdir_p File.dirname(json_path)
 
     if options[:just_save_prompt]
-      File.write(json_path, JSON.pretty_generate(metadata_for(options, object, false)))
+      File.write(json_path, JSON.pretty_generate(metadata_for(options, object, output_path, false)))
       next true
     end
 
@@ -671,21 +692,24 @@ else
 
     begin
       Benchmark.measure do
-        frames.zip(paths).each do |frame, path|
-          next if !stale && File.exist?(path)
+        frames.each do |frame|
+          stored = find_frame(output_path, object, frame)
+          next if !stale && stored
 
           reference_path = nil
           if frame['reference']
             reference = frames.find {|f| f['pose'] == frame['reference']}
-            reference_path = File.join(output_path, frame_path(object, reference))
+            reference_path = find_frame(output_path, object, reference)
+            raise ImageRequestError, "#{frame['pose']}: its reference is missing" unless reference_path
           end
 
-          File.binwrite(
-            path,
-            request_image(options, job, frame, reference_path, frame_seed(seed, frames, frame))
-          )
+          bytes, extension = request_image(options, job, frame, reference_path, frame_seed(seed, frames, frame))
+          # A regenerated frame can come back in the other format; the file
+          # it replaces would otherwise linger beside it.
+          File.delete(stored) if stored && File.extname(stored) != ".#{extension}"
+          File.binwrite(File.join(output_path, frame_path(object, frame, extension)), bytes)
         end
-        File.write(json_path, JSON.pretty_generate(metadata_for(options, object, true, seed)))
+        File.write(json_path, JSON.pretty_generate(metadata_for(options, object, output_path, true, seed)))
       end.real
     rescue ImageRequestError => exception
       "#{metadata_path(object)}: #{exception.message}"
@@ -725,7 +749,9 @@ unless options[:just_save_prompt]
   ) do |object|
     frames = object[:job]['frames']
     json_path = File.join(output_path, metadata_path(object))
-    image_paths = frames.map {|frame| frame_path(object, frame)}
+    image_paths = frames.filter_map do |frame|
+      find_frame(output_path, object, frame)&.delete_prefix("#{output_path}/")
+    end
 
     # A job uploads whole or not at all: a set missing a pose is useless.
     # Validated against how the images were made, per the metadata file.
@@ -738,6 +764,8 @@ unless options[:just_save_prompt]
       )
       "#{path}: #{error}" if error
     end
+    missing = frames.length - image_paths.length
+    errors << "#{missing} frame file(s) missing" if missing > 0
     errors << "#{metadata_path(object)}: missing" unless metadata
     if errors.any?
       puts "Not uploading: #{metadata_path(object)}\n        Error: #{errors.join('; ')}"
@@ -752,7 +780,7 @@ unless options[:just_save_prompt]
           File.binread(File.join(output_path, path)),
           acl: 'public-read',
           no_random: true,
-          content_type: 'image/png'
+          content_type: IMAGE_CONTENT_TYPES[File.extname(path).delete('.')]
         )
       end
       AWS::S3.upload_to_bucket(
