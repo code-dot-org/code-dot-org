@@ -82,12 +82,16 @@ describe('dataColumnsFor', () => {
   const project = {labelColumn: 'animal', selectedFeatures: ['legs']};
   const data = [{name: 'Fido', legs: 4, animal: 'dog'}];
 
-  test('collapsed, the selected features', () => {
-    expect(dataColumnsFor(data, project, false)).toEqual(['legs']);
+  test('collapsed, the selected features, then the label', () => {
+    expect(dataColumnsFor(data, project, false)).toEqual(['legs', 'animal']);
   });
 
-  test('expanded, every column except the label', () => {
-    expect(dataColumnsFor(data, project, true)).toEqual(['name', 'legs']);
+  test('expanded, every column, with the label last', () => {
+    expect(dataColumnsFor(data, project, true)).toEqual([
+      'name',
+      'legs',
+      'animal',
+    ]);
   });
 });
 

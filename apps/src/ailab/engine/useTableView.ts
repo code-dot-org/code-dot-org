@@ -1,8 +1,8 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useState} from 'react';
 
 import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
-import type {DataRow} from './types';
+import {useAppSelector} from './hooks';
 
 export type SortDirection = 'ascending' | 'descending';
 
@@ -21,7 +21,6 @@ export interface TableView<Column extends ColumnId = ColumnId> {
   toggleSort: (column: ColumnId) => void;
 }
 
-// Keep rows and valueAt stable across renders, or every render sorts again.
 interface TableViewSource<Column extends ColumnId> {
   rows: number[];
   columns: Column[];
@@ -29,32 +28,28 @@ interface TableViewSource<Column extends ColumnId> {
   valueAt: (row: number, column: Column) => string | number;
 }
 
-interface SortKey {
-  row: number;
-  text: string;
-  number: number;
+function asNumber(value: string | number): number {
+  return String(value).trim() === '' ? NaN : Number(value);
 }
 
-function sortKey(
-  row: number,
-  value: string | number,
+function compareValues(
+  a: string | number,
+  b: string | number,
   numerical: boolean
-): SortKey {
-  const text = String(value);
-  const number = numerical && text.trim() !== '' ? Number(text) : NaN;
-  return {row, text, number};
-}
-
-function compareKeys(a: SortKey, b: SortKey): number {
-  const aIsNumber = !Number.isNaN(a.number);
-  const bIsNumber = !Number.isNaN(b.number);
-  if (aIsNumber && bIsNumber) {
-    return a.number - b.number;
+): number {
+  if (numerical) {
+    const aNumber = asNumber(a);
+    const bNumber = asNumber(b);
+    const aIsNumber = !Number.isNaN(aNumber);
+    const bIsNumber = !Number.isNaN(bNumber);
+    if (aIsNumber && bIsNumber) {
+      return aNumber - bNumber;
+    }
+    if (aIsNumber !== bIsNumber) {
+      return aIsNumber ? -1 : 1;
+    }
   }
-  if (aIsNumber !== bIsNumber) {
-    return aIsNumber ? -1 : 1;
-  }
-  return compareText(a.text, b.text);
+  return compareText(String(a), String(b));
 }
 
 export function nextSortDirection(
@@ -66,13 +61,6 @@ export function nextSortDirection(
   return direction === 'ascending' ? 'descending' : undefined;
 }
 
-export function useDatasetValueAt(data: DataRow[]) {
-  return useCallback(
-    (row: number, column: string) => data[row][column],
-    [data]
-  );
-}
-
 export function useTableView<Column extends ColumnId>({
   rows,
   columns,
@@ -80,24 +68,25 @@ export function useTableView<Column extends ColumnId>({
   valueAt,
 }: TableViewSource<Column>): TableView<Column> {
   const [sort, setSort] = useState<TableSort>();
+  const isNumerical = (column: ColumnId) =>
+    columnTypes[column] === ColumnTypes.NUMERICAL;
+  const sortColumn = columns.find(column => column === sort?.column);
 
-  const sortedRows = useMemo(() => {
-    const column = columns.find(shown => shown === sort?.column);
-    if (!sort || column === undefined) {
-      return rows;
-    }
-    const numerical = columnTypes[column] === ColumnTypes.NUMERICAL;
+  let sortedRows = rows;
+  if (sort && sortColumn !== undefined) {
     const sign = sort.direction === 'ascending' ? 1 : -1;
-    return rows
-      .map(row => sortKey(row, valueAt(row, column), numerical))
-      .sort((a, b) => sign * compareKeys(a, b))
-      .map(key => key.row);
-  }, [rows, columns, columnTypes, valueAt, sort]);
+    const numerical = isNumerical(sortColumn);
+    sortedRows = [...rows].sort(
+      (a, b) =>
+        sign *
+        compareValues(valueAt(a, sortColumn), valueAt(b, sortColumn), numerical)
+    );
+  }
 
   return {
     rows: sortedRows,
     columns,
-    isNumerical: column => columnTypes[column] === ColumnTypes.NUMERICAL,
+    isNumerical,
     sortDirection: column =>
       sort?.column === column ? sort.direction : undefined,
     toggleSort: column =>
@@ -108,4 +97,18 @@ export function useTableView<Column extends ColumnId>({
         return direction && {column, direction};
       }),
   };
+}
+
+export function useDatasetTableView(
+  rows: number[],
+  columns: string[]
+): TableView<string> {
+  const data = useAppSelector(state => state.data);
+  const columnTypes = useAppSelector(state => state.columnsByDataType);
+  return useTableView({
+    rows,
+    columns,
+    columnTypes,
+    valueAt: (row, column) => data[row][column],
+  });
 }

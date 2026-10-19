@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useMemo} from 'react';
+import React from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {
@@ -28,10 +28,6 @@ interface ResultsTableProps {
   showAllColumns: boolean;
 }
 
-const featureCell = classNames(
-  tableStyles.bodyCell,
-  tableStyles.bodyCellFeature
-);
 const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
 
 const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
@@ -44,45 +40,26 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = useMemo(
-    () => dataColumnsFor(data, project, showAllColumns),
-    [data, project, showAllColumns]
-  );
-  const rows = useMemo(() => [...results.examples.keys()], [results]);
-  const headerColumns = useMemo(
-    () => [...columns, labelColumn],
-    [columns, labelColumn]
-  );
-  const viewColumns = useMemo<ResultsColumn[]>(
-    () => [...headerColumns, PREDICTION_COLUMN],
-    [headerColumns]
-  );
-  const viewColumnTypes = useMemo(
-    () => ({
+  const columns = dataColumnsFor(data, project, showAllColumns);
+  const valueAt = (index: number, column: ResultsColumn) => {
+    if (column === PREDICTION_COLUMN) {
+      return results.predictedLabels[index];
+    }
+    if (column === labelColumn) {
+      return results.labels[index];
+    }
+    const feature = selectedFeatures.indexOf(column);
+    return feature === -1
+      ? data[results.rowIndices[index]][column]
+      : results.examples[index][feature];
+  };
+  const view = useTableView<ResultsColumn>({
+    rows: [...results.examples.keys()],
+    columns: [...columns, PREDICTION_COLUMN],
+    columnTypes: {
       ...columnsByDataType,
       [PREDICTION_COLUMN]: columnsByDataType[labelColumn],
-    }),
-    [columnsByDataType, labelColumn]
-  );
-  const valueAt = useCallback(
-    (index: number, column: ResultsColumn) => {
-      if (column === PREDICTION_COLUMN) {
-        return results.predictedLabels[index];
-      }
-      if (column === labelColumn) {
-        return results.labels[index];
-      }
-      const feature = selectedFeatures.indexOf(column);
-      return feature === -1
-        ? data[results.rowIndices[index]][column]
-        : results.examples[index][feature];
     },
-    [results, labelColumn, selectedFeatures, data]
-  );
-  const view = useTableView({
-    rows,
-    columns: viewColumns,
-    columnTypes: viewColumnTypes,
     valueAt,
   });
 
@@ -99,11 +76,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
       <DataTableFrame label="Results">
         <table className={tableStyles.table}>
           <thead>
-            <RowsTableHeader
-              columns={headerColumns}
-              view={view}
-              showPrediction
-            />
+            <RowsTableHeader columns={columns} view={view} showPrediction />
           </thead>
           <tbody>
             {view.rows.map(index => {
@@ -112,21 +85,20 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                   <th scope="row" className={tableStyles.indexCell}>
                     <CellText>{results.rowIndices[index] + 1}</CellText>
                   </th>
-                  {columns.map(column => (
-                    <td
-                      key={column}
-                      className={
-                        getColumnRole(project, column) === 'feature'
-                          ? featureCell
-                          : tableStyles.bodyCell
-                      }
-                    >
-                      <CellText>{cellValue(valueAt(index, column))}</CellText>
-                    </td>
-                  ))}
-                  <td className={labelCell}>
-                    <CellText>{cellValue(results.labels[index])}</CellText>
-                  </td>
+                  {columns.map(column => {
+                    const role = getColumnRole(project, column);
+                    return (
+                      <td
+                        key={column}
+                        className={classNames(tableStyles.bodyCell, {
+                          [tableStyles.bodyCellLabel]: role === 'label',
+                          [tableStyles.bodyCellFeature]: role === 'feature',
+                        })}
+                      >
+                        <CellText>{cellValue(valueAt(index, column))}</CellText>
+                      </td>
+                    );
+                  })}
                   <td className={labelCell}>
                     <CellText>
                       {cellValue(results.predictedLabels[index])}

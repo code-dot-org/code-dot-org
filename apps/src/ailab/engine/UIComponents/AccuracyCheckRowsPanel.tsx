@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useState} from 'react';
 
 import type {Grade} from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeRows} from '../helpers/displayTreeTrace';
@@ -26,16 +26,12 @@ const AccuracyCheckRowsPanel = ({
   ...columnProps
 }: AccuracyCheckRowsPanelProps) => {
   const [grade, setGrade] = useState<Grade>('correct');
-  const testedRows = useMemo(
-    () => [...rows.correct, ...rows.incorrect].sort((a, b) => a - b),
-    [rows]
-  );
 
   if (!splitByGrade) {
     return (
       <RowsPanel
         description={description}
-        rowIndices={testedRows}
+        rowIndices={[...rows.correct, ...rows.incorrect].sort((a, b) => a - b)}
         {...columnProps}
       />
     );

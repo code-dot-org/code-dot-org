@@ -1,10 +1,10 @@
 import {Typography} from '@mui/material';
-import React, {type ReactNode, useId, useMemo} from 'react';
+import React, {type ReactNode, useId} from 'react';
 
 import {dataColumnsFor} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {useDatasetValueAt, useTableView} from '../useTableView';
+import {useDatasetTableView} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
@@ -38,21 +38,10 @@ const RowsPanel = ({
   const descriptionId = useId();
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
-  const columnTypes = useAppSelector(state => state.columnsByDataType);
-  const columns = useMemo(
-    () => [
-      ...dataColumnsFor(data, project, showAllColumns),
-      project.labelColumn || 'unknown',
-    ],
-    [data, project, showAllColumns]
+  const tableView = useDatasetTableView(
+    rowIndices,
+    dataColumnsFor(data, project, showAllColumns)
   );
-  const valueAt = useDatasetValueAt(data);
-  const tableView = useTableView({
-    rows: rowIndices,
-    columns,
-    columnTypes,
-    valueAt,
-  });
 
   return (
     <div className={styles.panel}>
