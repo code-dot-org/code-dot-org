@@ -4,12 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@code-dot-org/json-video demo</title>
+    <style>
+      .custom-controls {
+        position: absolute;
+        inset: auto 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        color: white;
+        background: rgb(0 0 0 / 70%);
+      }
+      /* Lift the built-in captions above the custom bar. */
+      json-video::part(captions) {
+        bottom: 4rem;
+      }
+    </style>
   </head>
   <body style="margin: 16px; font-family: system-ui, sans-serif">
     <h1>&lt;json-video&gt; demo</h1>
     <p>
-      Query parameters: <code>video</code> (see demo/videos.ts) and
-      <code>width</code> (CSS pixels).
+      Query parameters: <code>video</code> (see demo/videos.ts),
+      <code>width</code> (CSS pixels), and <code>controls</code> (<code
+        >builtin</code
+      >
+      or <code>custom</code>; see demo/customControls.ts).
     </p>
     <main id="stage"></main>
     <script type="module" src="./main.ts"></script>

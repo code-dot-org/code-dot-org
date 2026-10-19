@@ -64,6 +64,18 @@ iframe {
     border-radius: 0.25rem;
 }
 
+/* Children of <json-video>, e.g. custom controls, laid over the video */
+#slot-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 15;
+}
+
+::slotted(*) {
+    pointer-events: auto;
+}
+
 /* Controls Bar */
 #controls-bar {
     position: absolute;

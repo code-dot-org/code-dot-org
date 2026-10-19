@@ -8,7 +8,7 @@ import {VARIANTS} from './variants';
 for (const variant of VARIANTS) {
   test.describe(`${variant.name} controls`, () => {
     test('play advances time and pause stops it', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
 
       await controls.play();
@@ -24,7 +24,7 @@ for (const variant of VARIANTS) {
     });
 
     test('playing to the end stops at the duration', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
 
       await controls.play();
@@ -37,7 +37,7 @@ for (const variant of VARIANTS) {
     });
 
     test('seeking shows the scene at that time', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
 
       await controls.seekTo(0.5);
@@ -50,7 +50,7 @@ for (const variant of VARIANTS) {
     });
 
     test('the volume slider sets the volume', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
 
       await controls.setVolume(0.5);
@@ -59,7 +59,7 @@ for (const variant of VARIANTS) {
     });
 
     test('unmuting restores the volume from before muting', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
       await controls.setVolume(0.4);
 
@@ -72,7 +72,7 @@ for (const variant of VARIANTS) {
     });
 
     test('captions follow the scene while shown', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
       await expect(controls.captionsButton).toHaveAttribute(
         'aria-pressed',
@@ -86,6 +86,7 @@ for (const variant of VARIANTS) {
         'true',
       );
       await expect(videoPage.captions).toHaveText('First caption');
+      expect(await videoPage.captionMode()).toBe('showing');
 
       await controls.seekTo(0.5);
       await expect(videoPage.captions).toBeHidden();
@@ -95,10 +96,11 @@ for (const variant of VARIANTS) {
 
       await controls.toggleCaptions();
       await expect(videoPage.captions).toBeHidden();
+      expect(await videoPage.captionMode()).toBe('disabled');
     });
 
     test('fullscreen can be entered and left', async ({page}) => {
-      const videoPage = await VideoPage.load(page);
+      const videoPage = await VideoPage.load(page, variant.options);
       const controls = variant.driver(videoPage);
 
       await controls.enterFullscreen();
