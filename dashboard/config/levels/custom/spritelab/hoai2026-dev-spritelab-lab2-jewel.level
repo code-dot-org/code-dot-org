@@ -29,6 +29,10 @@
       "sentence": "treasure",
       "generatedInstructions": "**AI generated an image based on your prompt.**"
     },
+    "objectives": {
+      "title": "**Prompt AI to make some treasure.**"
+    },
+    "long_instructions": "# Prompt AI to make some treasure",
     "header_label": "Make a platformer"
   }
 }]]></config>
