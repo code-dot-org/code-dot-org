@@ -7,6 +7,7 @@
   MYSQL_DAEMON_PORT = '3306'.freeze
   DATABASE_CONFIGURATION = {
     db_cluster_id: '!Ref AuroraCluster',
+    db_proxy: 'none',
     db_endpoint_writer: '!GetAtt AuroraCluster.Endpoint.Address',
     db_endpoint_writer_port: '!GetAtt AuroraCluster.Endpoint.Port',
     db_endpoint_proxy_writer: '!GetAtt DBProxy.Endpoint',
@@ -89,6 +90,12 @@
       Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
       Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
       SecretString: <%=DATABASE_CONFIGURATION[:db_cluster_id]%>
+  DBProxyConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Proxy type (`proxysql` or `rdsproxy`) to application configuration setting CDO.db_proxy'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_proxy"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_proxy]%>
   DBWriterEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
