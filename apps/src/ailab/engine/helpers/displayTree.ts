@@ -6,7 +6,7 @@
   the codes in `featureNumberKey`, so a categorical split sends a set of values
   down each branch. The view reads only the nodes built here, never the model.
 */
-import {getKeyByValue} from './utils';
+import {compareText, getKeyByValue} from './utils';
 
 export type DisplayTreeBranch =
   | {kind: 'values'; values: string[]; child: DisplayTreeNode}
@@ -215,5 +215,5 @@ function getPrediction(
 }
 
 function sortValues(values: string[]): string[] {
-  return [...values].sort((a, b) => a.localeCompare(b, 'en', {numeric: true}));
+  return [...values].sort(compareText);
 }

@@ -81,7 +81,6 @@
   opacity: 0;
 }
 
-// Until its column is sorted, the button shows only on hover or focus.
 .headerWithControls:hover .sortControl,
 .headerWithControls:focus-within .sortControl,
 .sortControl.sorted {

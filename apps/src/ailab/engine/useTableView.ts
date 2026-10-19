@@ -6,6 +6,7 @@
 import {useCallback, useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
+import {compareText} from './helpers/utils';
 import type {DataRow} from './types';
 
 export type SortDirection = 'ascending' | 'descending';
@@ -18,39 +19,52 @@ interface TableSort {
   direction: SortDirection;
 }
 
-export interface TableView {
+export interface TableView<Column extends ColumnId = ColumnId> {
   rows: number[];
+  columns: Column[];
   isNumerical: (column: ColumnId) => boolean;
   sortDirection: (column: ColumnId) => SortDirection | undefined;
   toggleSort: (column: ColumnId) => void;
 }
 
-interface TableViewSource {
+// Keep rows and valueAt stable across renders, or every render sorts again.
+interface TableViewSource<Column extends ColumnId> {
   rows: number[];
-  columns: ColumnId[];
+  columns: Column[];
   columnTypes: Partial<Record<ColumnId, string>>;
-  // Keep it stable across renders, or every render sorts again.
-  valueAt: (row: number, column: ColumnId) => string | number;
+  valueAt: (row: number, column: Column) => string | number;
 }
 
-const collator = new Intl.Collator('en', {numeric: true});
+interface SortKey {
+  row: number;
+  text: string;
+  number: number;
+}
 
-// Uploaded CSV values are strings, and a numerical column may hold a stray word.
-function compareValues(
-  a: string | number,
-  b: string | number,
+// Uploaded CSV values are strings, and a numerical column may hold a stray word or a blank.
+function sortKey(
+  row: number,
+  value: string | number,
   numerical: boolean
-): number {
-  if (numerical) {
-    const difference = Number(a) - Number(b);
-    if (!Number.isNaN(difference)) {
-      return difference;
-    }
-  }
-  return collator.compare(String(a), String(b));
+): SortKey {
+  const text = String(value);
+  const number = numerical && text.trim() !== '' ? Number(text) : NaN;
+  return {row, text, number};
 }
 
-// Unsorted, then ascending, then descending, then unsorted again.
+// Ranking every number before every word keeps the order transitive.
+function compareKeys(a: SortKey, b: SortKey): number {
+  const aIsNumber = !Number.isNaN(a.number);
+  const bIsNumber = !Number.isNaN(b.number);
+  if (aIsNumber && bIsNumber) {
+    return a.number - b.number;
+  }
+  if (aIsNumber !== bIsNumber) {
+    return aIsNumber ? -1 : 1;
+  }
+  return compareText(a.text, b.text);
+}
+
 export function nextSortDirection(
   direction: SortDirection | undefined
 ): SortDirection | undefined {
@@ -63,34 +77,35 @@ export function nextSortDirection(
 // For a table whose columns all come from the dataset.
 export function useDatasetValueAt(data: DataRow[]) {
   return useCallback(
-    (row: number, column: ColumnId) => data[row][column as string],
+    (row: number, column: string) => data[row][column],
     [data]
   );
 }
 
-export function useTableView({
+export function useTableView<Column extends ColumnId>({
   rows,
   columns,
   columnTypes,
   valueAt,
-}: TableViewSource): TableView {
+}: TableViewSource<Column>): TableView<Column> {
   const [sort, setSort] = useState<TableSort>();
 
   const sortedRows = useMemo(() => {
-    if (!sort || !columns.includes(sort.column)) {
+    const column = columns.find(shown => shown === sort?.column);
+    if (!sort || column === undefined) {
       return rows;
     }
-    const {column, direction} = sort;
     const numerical = columnTypes[column] === ColumnTypes.NUMERICAL;
-    const sign = direction === 'ascending' ? 1 : -1;
-    return [...rows].sort(
-      (a, b) =>
-        sign * compareValues(valueAt(a, column), valueAt(b, column), numerical)
-    );
+    const sign = sort.direction === 'ascending' ? 1 : -1;
+    return rows
+      .map(row => sortKey(row, valueAt(row, column), numerical))
+      .sort((a, b) => sign * compareKeys(a, b))
+      .map(key => key.row);
   }, [rows, columns, columnTypes, valueAt, sort]);
 
   return {
     rows: sortedRows,
+    columns,
     isNumerical: column => columnTypes[column] === ColumnTypes.NUMERICAL,
     sortDirection: column =>
       sort?.column === column ? sort.direction : undefined,

@@ -12,7 +12,7 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import type {ResultsData} from '../types';
-import {type ColumnId, useTableView} from '../useTableView';
+import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
@@ -20,6 +20,8 @@ import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
+
+type ResultsColumn = string | typeof PREDICTION_COLUMN;
 
 interface ResultsTableProps {
   results: ResultsData;
@@ -47,9 +49,13 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     [data, project, showAllColumns]
   );
   const rows = useMemo(() => [...results.examples.keys()], [results]);
-  const viewColumns = useMemo(
-    () => [...columns, labelColumn, PREDICTION_COLUMN],
+  const headerColumns = useMemo(
+    () => [...columns, labelColumn],
     [columns, labelColumn]
+  );
+  const viewColumns = useMemo<ResultsColumn[]>(
+    () => [...headerColumns, PREDICTION_COLUMN],
+    [headerColumns]
   );
   const viewColumnTypes = useMemo(
     () => ({
@@ -59,8 +65,8 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     [columnsByDataType, labelColumn]
   );
   const valueAt = useCallback(
-    (index: number, column: ColumnId) => {
-      if (typeof column === 'symbol') {
+    (index: number, column: ResultsColumn) => {
+      if (column === PREDICTION_COLUMN) {
         return results.predictedLabels[index];
       }
       if (column === labelColumn) {
@@ -94,10 +100,9 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
         <table className={tableStyles.table}>
           <thead>
             <RowsTableHeader
-              columns={[...columns, labelColumn]}
+              columns={headerColumns}
               view={view}
               showPrediction
-              predictionByRow
             />
           </thead>
           <tbody>

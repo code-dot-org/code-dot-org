@@ -1,7 +1,7 @@
 import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, Typography} from '@mui/material';
-import React, {useId, useState} from 'react';
+import React, {useId, useMemo, useState} from 'react';
 
 import {getDisplayTreePath, type DisplayTreeNode} from '../helpers/displayTree';
 import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
@@ -29,9 +29,10 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const rows = useAppSelector(state =>
+  const rowsAt = useAppSelector(state =>
     getDisplayTreeRows(state, project, trainedModel)
-  )(nodeId);
+  );
+  const rows = useMemo(() => rowsAt(nodeId), [rowsAt, nodeId]);
   const [showAllColumns, setShowAllColumns] = useState(false);
 
   const path = getDisplayTreePath(tree, nodeId);

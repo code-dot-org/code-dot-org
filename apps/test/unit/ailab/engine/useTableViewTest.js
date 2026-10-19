@@ -76,6 +76,18 @@ describe('useTableView', () => {
     expect(result.current.rows).toEqual([2, 0, 1]);
   });
 
+  test('a blank or a number-led word in a numerical column sorts after every number', () => {
+    const data = [{size: '-5'}, {size: '-7 cm'}, {size: ''}, {size: '-10'}];
+    const {result} = renderView({
+      rows: [0, 1, 2, 3],
+      columns: ['size'],
+      columnTypes: {size: ColumnTypes.NUMERICAL},
+      valueAt: (row, column) => data[row][column],
+    });
+    act(() => result.current.toggleSort('size'));
+    expect(result.current.rows).toEqual([3, 0, 2, 1]);
+  });
+
   test('sorts only the given rows', () => {
     const {result} = renderView({rows: [3, 1, 0]});
     expect(result.current.rows).toEqual([3, 1, 0]);

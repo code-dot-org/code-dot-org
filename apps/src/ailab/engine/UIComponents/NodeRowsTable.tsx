@@ -19,8 +19,7 @@ import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
   labelId: string;
-  view: TableView;
-  columns: string[];
+  view: TableView<string>;
   emphasizedColumn?: string;
   emptyText: string;
   prediction?: string | number;
@@ -29,11 +28,11 @@ interface NodeRowsTableProps {
 const NodeRowsTable = ({
   labelId,
   view,
-  columns,
   emphasizedColumn,
   emptyText,
   prediction,
 }: NodeRowsTableProps) => {
+  const {columns} = view;
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');

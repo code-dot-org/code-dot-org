@@ -10,30 +10,35 @@ import {
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
 
-import {ANIMALS, levelProject, levelStore} from './levelStore';
+import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
-  name: ['Tweety', 'Fido', 'Slither'][index] || row.animal,
+  name:
+    ['Tweety', 'Fido', 'Slither', 'Polly', 'Rex', 'Kaa'][index] || row.animal,
   ...row,
 }));
 
 function renderScorecard({
   data,
+  examples = [[2], [4], [0]],
+  labels = ['bird', 'dog', 'snake'],
   predictedLabels = ['bird', 'dog', 'bird'],
+  accuracyCheckRowIndices = [0, 1, 2],
+  project = levelProject(),
 } = {}) {
   const store = levelStore();
   if (data) {
     store.dispatch(setImportedData(data, false));
   }
-  store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
-  store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
+  store.dispatch(setAccuracyCheckExamples(examples));
+  store.dispatch(setAccuracyCheckLabels(labels));
   store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   renderWithProviders(createElement(ResultsDetails), {
     store,
     project: {
-      ...levelProject(),
-      accuracyCheckRowIndices: [0, 1, 2],
+      ...project,
+      accuracyCheckRowIndices,
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
@@ -56,6 +61,8 @@ function headerRows() {
 function bodyRows() {
   return rowsIn(screen.getAllByRole('rowgroup')[1]);
 }
+
+const sortButton = name => screen.getByRole('button', {name});
 
 describe('ResultsDetails', () => {
   beforeAll(() => {
@@ -125,7 +132,6 @@ describe('ResultsDetails', () => {
 
   test('sorts by the AI prediction', () => {
     renderScorecard();
-    const sortButton = name => screen.getByRole('button', {name});
     fireEvent.click(sortButton('Sort by AI prediction A-Z'));
     fireEvent.click(sortButton('Sort by AI prediction Z-A'));
 
@@ -135,6 +141,45 @@ describe('ResultsDetails', () => {
     expect(bodyRows()).toEqual([
       ['2', '4', 'dog', 'dog'],
       ['1', '2', 'bird', 'bird'],
+    ]);
+  });
+
+  test('sorts by a feature', () => {
+    renderScorecard();
+    fireEvent.click(sortButton('Sort by legs low to high'));
+    fireEvent.click(sortButton('Sort by legs high to low'));
+
+    expect(bodyRows()).toEqual([
+      ['2', '4', 'dog', 'dog'],
+      ['1', '2', 'bird', 'bird'],
+    ]);
+  });
+
+  test('sorts another dataset column by its own row', () => {
+    renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
+    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(sortButton('Sort by name A-Z'));
+    fireEvent.click(sortButton('Sort by name Z-A'));
+
+    expect(bodyRows()).toEqual([
+      ['5', 'Rex', '4', 'dog', 'dog'],
+      ['4', 'Polly', '2', 'bird', 'bird'],
+    ]);
+  });
+
+  test('sorts numerical predictions by value', () => {
+    renderScorecard({
+      project: levelProject(ANIMAL_COLUMNS, 'legs'),
+      examples: [['bird'], ['dog'], ['snake']],
+      labels: [1.5, 1.25, 10],
+      predictedLabels: [1.5, 1.25, 10],
+    });
+    fireEvent.click(sortButton('Sort by AI prediction low to high'));
+
+    expect(bodyRows()).toEqual([
+      ['2', 'dog', '1.25', '1.25'],
+      ['1', 'bird', '1.5', '1.5'],
+      ['3', 'snake', '10', '10'],
     ]);
   });
 });

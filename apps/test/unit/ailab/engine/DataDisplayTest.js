@@ -119,7 +119,7 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Sort by legs low to high'));
 
     expect(
-      button('Sort by legs high to low').closest('th').getAttribute('aria-sort')
+      screen.getByRole('columnheader', {name: 'legs'}).getAttribute('aria-sort')
     ).toBe('ascending');
     expect(rowNumbers()).toEqual([
       '3',

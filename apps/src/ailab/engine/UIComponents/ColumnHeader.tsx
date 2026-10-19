@@ -39,7 +39,7 @@ const ColumnHeader = ({
   className,
   children,
 }: ColumnHeaderProps) => {
-  if (!view) {
+  if (!view?.columns.includes(column)) {
     return (
       <th scope="col" className={className}>
         {children}
@@ -57,6 +57,8 @@ const ColumnHeader = ({
   return (
     <th
       scope="col"
+      // Keeps the sort button's label out of the name announced for each cell.
+      aria-label={name}
       aria-sort={sortDirection}
       className={classNames(className, tableStyles.headerWithControls)}
     >

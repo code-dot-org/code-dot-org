@@ -86,7 +86,6 @@ const RowsPanel = ({
       <NodeRowsTable
         labelId={descriptionId}
         view={tableView}
-        columns={columns}
         emphasizedColumn={emphasizedColumn}
         emptyText={emptyText}
         prediction={prediction}

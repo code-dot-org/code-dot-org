@@ -17,15 +17,12 @@ interface RowsTableHeaderProps {
   columns: string[];
   view: TableView;
   showPrediction?: boolean;
-  // Each row has its own prediction, so the view can sort by it.
-  predictionByRow?: boolean;
 }
 
 const RowsTableHeader = ({
   columns,
   view,
   showPrediction,
-  predictionByRow,
 }: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
@@ -62,7 +59,7 @@ const RowsTableHeader = ({
         <ColumnHeader
           column={PREDICTION_COLUMN}
           name="AI prediction"
-          view={predictionByRow ? view : undefined}
+          view={view}
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >
           <CellText>AI predicts</CellText>

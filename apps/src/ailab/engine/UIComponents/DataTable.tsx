@@ -23,7 +23,7 @@ interface DataTableProps {
   hideLabel?: boolean;
   useResultsData?: boolean;
   maxRows?: number;
-  view?: TableView;
+  view?: TableView<string>;
 }
 
 const DataTable = ({
@@ -93,6 +93,9 @@ const DataTable = ({
   };
 
   const getColumns = () => {
+    if (view) {
+      return view.columns;
+    }
     if (data.length === 0) {
       return [];
     }
