@@ -9,7 +9,6 @@ class AdaptivePathwaysControllerTest < ActionDispatch::IntegrationTest
     AdaptiveContent.stubs(:content_dir).returns(@dir)
     AdaptiveContent.reset_cache!
     Rails.application.config.stubs(:levelbuilder_mode).returns(true)
-    sign_in create(:levelbuilder)
   end
 
   teardown do
@@ -18,6 +17,7 @@ class AdaptivePathwaysControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "show returns the file's text unchanged" do
+    sign_in create(:levelbuilder)
     get '/adaptive_pathways/sample'
     assert_response :success
     assert_equal 'application/json', response.media_type
@@ -25,6 +25,7 @@ class AdaptivePathwaysControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "show and update 404 for a pathway with no file" do
+    sign_in create(:levelbuilder)
     get '/adaptive_pathways/missing'
     assert_response :not_found
     put '/adaptive_pathways/missing', params: '{"id": "missing"}', headers: json_headers
@@ -33,12 +34,14 @@ class AdaptivePathwaysControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "update writes the submitted text" do
+    sign_in create(:levelbuilder)
     put '/adaptive_pathways/sample', params: "{\"id\": \"sample\",\r\n \"title\": \"Edited\"}", headers: json_headers
     assert_response :no_content
     assert_equal "{\"id\": \"sample\",\n \"title\": \"Edited\"}\n", @dir.join('sample.json').read
   end
 
   test "update rejects content that is not a pathway for this id" do
+    sign_in create(:levelbuilder)
     ['{"id": "sample",', '[{"id": "sample"}]', '{"id": "other"}'].each do |text|
       put '/adaptive_pathways/sample', params: text, headers: json_headers
       assert_response :unprocessable_entity, text
@@ -48,6 +51,7 @@ class AdaptivePathwaysControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "update is refused outside levelbuilder mode" do
+    sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns(false)
     put '/adaptive_pathways/sample', params: '{"id": "sample"}', headers: json_headers
     assert_response :forbidden
