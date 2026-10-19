@@ -68,26 +68,18 @@ module Cdo
     end
 
     class StackSecret < Secret
-      # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
+      # The secret looked up first, which Cdo::Secrets#required prefetches: the stack-specific one, if in a Stack.
       def key
-        stack_specific_secret_path
+        stack_specific_secret_path || super
       end
 
-      # Extend the default lookup functionality to support checking for
-      # stack-specific secrets, defaulting to the original functionality if
-      # none are found.
       def lookup(secrets_manager)
-        # First try looking for a Stack-specific secret.
-        stack_specific_secret_path ? secrets_manager.get!(stack_specific_secret_path) : super
-      rescue ::Aws::SecretsManager::Errors::ValidationException
-        # We're likely executing in an environment that's not part of a
-        # CloudFormation Stack, so the secret name was invalid (nil). Fall back
-        # to looking up the environment type secret.
         super
       rescue ::Aws::SecretsManager::Errors::ResourceNotFoundException
+        raise unless stack_specific_secret_path
         # Fall back to looking up a secret shared by all deployments with the
         # same environment-type ('development', 'test', 'production', etc.).
-        super
+        secrets_manager.get!(SecretsConfig.secret_path(secret_prefix, secret_key))
       end
 
       # Generate path to a Secret that was provisioned for a specific
