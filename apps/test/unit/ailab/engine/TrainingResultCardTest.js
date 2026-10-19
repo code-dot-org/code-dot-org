@@ -7,6 +7,7 @@ import TrainingResultCard from '@cdo/apps/ailab/engine/UIComponents/TrainingResu
 
 import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
+import './stubTextMeasurement';
 
 function renderCard({trained = true, trainer = 'decisionTree', run} = {}) {
   I18n.initI18n();

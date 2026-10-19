@@ -9,6 +9,7 @@ import {STEP_INTERVAL_MS} from '@cdo/apps/ailab/engine/UIComponents/TraceStepper
 
 import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
+import './stubTextMeasurement';
 
 const PENGUINS = [
   {species: 'Adelie', island: 'Torgersen', mass: '3750', bill: '39.1'},

@@ -6,6 +6,7 @@ import Results from '@cdo/apps/ailab/engine/UIComponents/Results';
 
 import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
+import './stubTextMeasurement';
 
 function renderTrainedResults(mode) {
   const store = levelStore(mode);

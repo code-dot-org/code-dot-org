@@ -6,6 +6,8 @@ import I18n from '@cdo/apps/ailab/engine/i18n';
 import {leafColorStyle} from '@cdo/apps/ailab/engine/UIComponents/leafColors';
 import TreeMiniMap from '@cdo/apps/ailab/engine/UIComponents/TreeMiniMap';
 
+import './stubTextMeasurement';
+
 import moduleStyles from '@cdo/apps/ailab/engine/UIComponents/treeMiniMap.module.scss';
 
 const answer = prediction => ({type: 'answer', prediction});

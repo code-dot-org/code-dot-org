@@ -1,8 +1,8 @@
 /*
-  jsdom ships no canvas, so the decision tree's text measurer has nothing to
-  measure with and every node collapses to the same width. Give it a width
-  that grows with the text. Import this for its side effect in any suite whose
-  expectations depend on text width.
+  jest-canvas-mock measures every string at one pixel per character, narrow
+  enough that a node never reaches the tree's maximum width. Measure closer to
+  the real font so widths, and the cap on them, behave as they do in a browser.
+  Import this for its side effect in any suite that lays out tree nodes.
 */
 HTMLCanvasElement.prototype.getContext = () => ({
   measureText: text => ({width: text.length * 8}),

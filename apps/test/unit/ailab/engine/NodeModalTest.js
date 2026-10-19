@@ -8,6 +8,7 @@ import DecisionTree from '@cdo/apps/ailab/engine/UIComponents/DecisionTree';
 
 import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
+import './stubTextMeasurement';
 
 import moduleStyles from '@cdo/apps/ailab/engine/UIComponents/decisionTree.module.scss';
 

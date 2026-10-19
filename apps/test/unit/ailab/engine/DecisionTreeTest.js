@@ -15,6 +15,7 @@ import {leafColorStyle} from '@cdo/apps/ailab/engine/UIComponents/leafColors';
 import {levelProject, levelStore} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 import './stubPseudoClasses';
+import './stubTextMeasurement';
 
 import moduleStyles from '@cdo/apps/ailab/engine/UIComponents/decisionTree.module.scss';
 
