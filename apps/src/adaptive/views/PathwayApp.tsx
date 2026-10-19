@@ -14,7 +14,12 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {isAdaptiveAiEnabled} from '../ai/generate';
-import {PROJECT_STEP_ID, Progress, useProgress} from '../progress';
+import {
+  PROJECT_STEP_ID,
+  Progress,
+  resumeStepId,
+  useProgress,
+} from '../progress';
 import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
@@ -105,7 +110,8 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
           : {kind: 'map'}
       }
       initialCheckpointId={initialCheckpointId}
-      initialStepId={urlStepId}
+      urlCheckpointId={urlCheckpointId}
+      urlStepId={urlStepId}
       {...actions}
     />
   );
@@ -119,8 +125,10 @@ type LoadedPathwayAppProps = PathwayAppProps &
     initialView: View;
     /** A checkpoint the initial view opens, which starts the adaptive level. */
     initialCheckpointId?: string;
-    /** A step within that checkpoint to jump to directly (from URL). */
-    initialStepId?: string;
+    /** The checkpoint specified in the URL, if any; scopes urlStepId. */
+    urlCheckpointId?: string;
+    /** A step within urlCheckpointId to jump to directly (from URL). */
+    urlStepId?: string;
   };
 
 // The pathway once its progress is known. Reads initialView and
@@ -128,11 +136,13 @@ type LoadedPathwayAppProps = PathwayAppProps &
 const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   pathway,
   progressKey,
+  progress,
   statusMap,
   stepContextMap,
   initialView,
   initialCheckpointId,
-  initialStepId,
+  urlCheckpointId,
+  urlStepId,
   startStep,
   completeStep,
   leaveStep,
@@ -153,6 +163,17 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       qs ? `?${qs}` : window.location.pathname
     );
   }, []);
+
+  // URL step applies only to the URL-specified checkpoint; all other entries
+  // (including map clicks to in-progress checkpoints) resume from progress.
+  const getInitialStepId = useCallback(
+    (checkpointId: string): string | undefined => {
+      if (checkpointId === urlCheckpointId && urlStepId) return urlStepId;
+      const cp = pathway.checkpoints.find(c => c.id === checkpointId);
+      return cp ? resumeStepId(cp, progress) : undefined;
+    },
+    [urlCheckpointId, urlStepId, pathway.checkpoints, progress]
+  );
   useEffect(() => {
     if (initialCheckpointId)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
@@ -208,7 +229,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
-            initialStepId={isProject ? undefined : initialStepId}
+            initialStepId={
+              isProject ? undefined : getInitialStepId(checkpoint.id)
+            }
             onStartStep={startStep}
             onCompleteStep={completeStep}
             onLeaveStep={leaveStep}

@@ -7,10 +7,24 @@ import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
-  default: ({onWorkOnProject}: {onWorkOnProject: () => void}) => (
-    <button type="button" onClick={onWorkOnProject}>
-      map screen
-    </button>
+  default: ({
+    onStart,
+    onWorkOnProject,
+  }: {
+    onStart: (id: string) => void;
+    onWorkOnProject: () => void;
+  }) => (
+    <>
+      <button type="button" onClick={() => onStart('intro')}>
+        start intro
+      </button>
+      <button type="button" onClick={() => onStart('multi')}>
+        start multi
+      </button>
+      <button type="button" onClick={onWorkOnProject}>
+        map screen
+      </button>
+    </>
   ),
 }));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
@@ -86,6 +100,12 @@ const pathway: Pathway = {
       requires: ['intro'],
       steps: [step('next')],
     },
+    {
+      id: 'multi',
+      title: 'Multi',
+      description: 'Two steps.',
+      steps: [step('multi-a'), step('multi-b')],
+    },
   ],
 };
 const progressKey = {scriptId: 2, levelId: 3};
@@ -132,6 +152,24 @@ describe('PathwayApp', () => {
 
     act(() => screen.getByText('map screen').click());
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+  });
+
+  it('resumes at the step after the last completed one when opening an in-progress checkpoint', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'multi-a-step': {status: 'complete', timeSpent: 0},
+      },
+    });
+
+    await renderSettled();
+
+    // Has progress → map shown first.
+    expect(screen.getByText('map screen')).toBeTruthy();
+
+    act(() => screen.getByText('start multi').click());
+
+    expect(screen.getByText('playing Multi at multi-b-step')).toBeTruthy();
   });
 
   describe('URL parameters', () => {

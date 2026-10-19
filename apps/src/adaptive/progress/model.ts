@@ -68,6 +68,29 @@ export interface Progress {
 
 export const EMPTY_PROGRESS: Progress = {steps: {}};
 
+/**
+ * The step id to resume in a checkpoint: the one after the last completed
+ * step. Returns undefined when no steps are complete (start from the
+ * beginning) or all are complete (nothing left to resume).
+ */
+export function resumeStepId(
+  checkpoint: Checkpoint,
+  progress: Progress
+): string | undefined {
+  const lastCompleteIdx = checkpoint.steps.reduceRight(
+    (found, step, i) =>
+      found === -1 && progress.steps[step.id]?.status === 'complete'
+        ? i
+        : found,
+    -1
+  );
+  if (lastCompleteIdx === -1) return undefined;
+  const nextIdx = lastCompleteIdx + 1;
+  return nextIdx < checkpoint.steps.length
+    ? checkpoint.steps[nextIdx].id
+    : undefined;
+}
+
 const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
   const last = checkpoint.steps[checkpoint.steps.length - 1];
   return !!last && progress.steps[last.id]?.status === 'complete';

@@ -5,6 +5,7 @@ import {
   Progress,
   checkpointStatus,
   getStatusMap,
+  resumeStepId,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {
@@ -90,6 +91,51 @@ describe('checkpointStatus', () => {
     expect(statusOf({try: {status: 'complete', timeSpent: 3}})).toBe(
       'complete'
     );
+  });
+});
+
+describe('resumeStepId', () => {
+  const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
+  const multi = checkpoint('multi', undefined, [
+    panels('one'),
+    panels('two'),
+    level,
+  ]);
+
+  const resume = (steps: Progress['steps']) => resumeStepId(multi, {steps});
+
+  it('returns undefined when no steps are complete', () => {
+    expect(resume({})).toBeUndefined();
+    expect(resume({one: {status: 'started', timeSpent: 0}})).toBeUndefined();
+  });
+
+  it('returns the step after the last completed one', () => {
+    expect(resume({one: {status: 'complete', timeSpent: 1}})).toBe('two');
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+      })
+    ).toBe('try');
+  });
+
+  it('returns undefined when all steps are complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+        try: {status: 'complete', timeSpent: 3},
+      })
+    ).toBeUndefined();
+  });
+
+  it('uses the last complete step even when later ones are only started', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'started', timeSpent: 0},
+      })
+    ).toBe('two');
   });
 });
 
