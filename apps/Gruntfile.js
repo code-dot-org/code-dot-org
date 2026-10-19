@@ -96,7 +96,7 @@ module.exports = function (grunt) {
       // Later entries overwrite earlier ones, so anything that collides with
       // `static/` has to come before it. Legacy AI Lab's datasets are the only
       // such case: they share every path under skins/ailab/datasets with the
-      // copies `static/` now owns.
+      // copies `static/` owns.
       files: [
         {
           expand: true,
