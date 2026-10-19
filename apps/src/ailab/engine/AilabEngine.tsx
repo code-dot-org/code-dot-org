@@ -48,6 +48,8 @@ const AilabEngine = ({
 
   // Likewise at render time: loading in an effect would let the lab render and
   // paint a frame of the previous level's state.
+  // TODO: read level properties from lab2 redux rather than passing them into the store,
+  // and follow the standard lab2 patterns for level changes.
   const loaded = useRef<{levelId?: string | number; mode?: Mode}>(undefined);
   if (
     !loaded.current ||
