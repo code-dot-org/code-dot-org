@@ -480,27 +480,18 @@ $editor-strip-height: 41px;
 
 // The scene dropdown: its trigger reads as one of the bar's buttons. Higher
 // specificity than the dropdown's own container rules.
-.sceneDropdown {
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
-
-  > button.sceneTrigger {
-    height: $tab-item-height;
-    min-width: 0;
-    max-width: 220px;
-    margin: 0;
-    padding: 0 10px;
-    gap: 8px;
-    border-color: var(--borders-neutral-strong);
-    color: var(--text-neutral-primary);
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: none;
-  }
+.sceneDropdown > button.sceneTrigger {
+  height: $tab-item-height;
+  min-width: 0;
+  max-width: 220px;
+  margin: 0;
+  padding: 0 10px;
+  gap: 8px;
+  border-color: var(--borders-neutral-strong);
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
 }
 
 .sceneTriggerName {

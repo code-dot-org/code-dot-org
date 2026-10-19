@@ -184,7 +184,8 @@ interface GenerateImagePaneProps {
 }
 
 /** The strips, in order: a sprite made as an object has its own. */
-const GROUPS: {id: string; title: string}[] = [
+type GroupId = 'character' | 'object' | 'background' | 'block';
+const GROUPS: {id: GroupId; title: string}[] = [
   {id: 'character', title: 'Characters'},
   {id: 'object', title: 'Objects'},
   {id: 'background', title: 'Backgrounds'},
@@ -816,21 +817,18 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('loading');
   }, [chosen]);
   const groups = useMemo<LibraryGroup[]>(() => {
-    const byId = new Map(
-      GROUPS.map(({id, title}) => [
-        id,
-        {id, title, pictures: []} as LibraryGroup,
-      ])
+    const byId = new Map<GroupId, LibraryGroup>(
+      GROUPS.map(({id, title}) => [id, {id, title, pictures: []}])
     );
     images.forEach(({key, props}) => {
       const type = imageTypeFromCategories(props?.categories);
-      const id =
+      const id: GroupId =
         type === 'sprite'
           ? props?.generation?.subject === 'object'
             ? 'object'
             : 'character'
           : type;
-      const group = byId.get(id)!;
+      const group = byId.get(id) as LibraryGroup;
       const src = props?.dataURI || props?.sourceUrl || undefined;
       group.pictures.push({
         key,

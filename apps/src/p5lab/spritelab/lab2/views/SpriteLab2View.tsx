@@ -1994,11 +1994,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // A pinned level shows its own scene alone, unless it asks for every one.
-  const shownScenes =
-    pinnedSceneId && levelProperties.levelMode?.sceneTabs !== 'all'
-      ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
-      : sceneMetadata;
+  // A toolbox has no scenes: New scene would put the student default into
+  // the saved toolbox.
+  const scenesOffered = animationsSeeded && !isToolboxMode;
+  // The scene controls, for the scene row or the workspace bar: a pinned
+  // level shows its own scene alone, unless it asks for every one.
+  const sceneControls = {
+    scenes:
+      pinnedSceneId && levelProperties.levelMode?.sceneTabs !== 'all'
+        ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
+        : sceneMetadata,
+    activeSceneId,
+    locked: !!pinnedSceneId,
+    lockedReason: LOCKED_REASON,
+    allowCreate: scenesEditable || !!pinnedSceneId,
+    onSelectScene: sceneEditing.selectScene,
+    onCreateScene: sceneEditing.createScene,
+    onManageScenes: sceneEditing.openGallery,
+  };
   // The resource panel's buttons, when they live in a bar.
   const toolButtons = resourcesInBar && (
     <ToolButtons
@@ -2118,20 +2131,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             </>
           }
           sceneTabs={
-            // A toolbox has no scenes: New scene would put the student default
-            // into the saved toolbox.
-            animationsSeeded && !isToolboxMode ? (
+            scenesOffered ? (
               <SceneTabs
-                scenes={shownScenes}
-                activeSceneId={activeSceneId}
+                {...sceneControls}
                 galleryOpen={activeTab === 'Scenes'}
                 disabled={activeTab === 'Play'}
-                locked={!!pinnedSceneId}
-                lockedReason={LOCKED_REASON}
-                allowCreate={scenesEditable || !!pinnedSceneId}
-                onSelectScene={sceneEditing.selectScene}
-                onCreateScene={sceneEditing.createScene}
-                onManageScenes={sceneEditing.openGallery}
               />
             ) : undefined
           }
@@ -2139,19 +2143,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {WorkspaceAlert}
           <div ref={stageRef} className={moduleStyles.stage}>
             {barInWorkspace &&
-              animationsSeeded &&
-              !isToolboxMode &&
+              scenesOffered &&
               editorsShown &&
               (activeTab === 'Code' || activeTab === 'World') && (
                 <WorkspaceSceneBar
-                  scenes={shownScenes}
-                  activeSceneId={activeSceneId}
-                  locked={!!pinnedSceneId}
-                  lockedReason={LOCKED_REASON}
-                  allowCreate={scenesEditable || !!pinnedSceneId}
-                  onSelectScene={sceneEditing.selectScene}
-                  onCreateScene={sceneEditing.createScene}
-                  onManageScenes={sceneEditing.openGallery}
+                  {...sceneControls}
                   rightExtra={toolButtons}
                   style={clearOfPreview}
                 />

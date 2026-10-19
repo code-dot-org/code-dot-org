@@ -49,7 +49,7 @@ describe('WorkspaceSceneBar', () => {
     expect(onSelectScene).toHaveBeenCalledWith('a');
   });
 
-  it('opens the gallery from All scenes, and holds both buttons when locked', () => {
+  it('opens the gallery from All scenes', () => {
     const {onManageScenes} = renderBar();
     fireEvent.click(screen.getByRole('button', {name: 'All scenes'}));
     expect(onManageScenes).toHaveBeenCalled();
