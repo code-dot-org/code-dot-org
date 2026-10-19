@@ -32,6 +32,7 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   available: 'Ready to start',
   inProgress: 'In progress',
   complete: 'Complete',
+  skipped: 'Skipped',
 };
 
 /** Records a result on a level step's level; see sendAdaptiveStepReport. */
@@ -127,7 +128,11 @@ export function useProgress(
         entry => ({
           timeSpent: 0,
           ...entry,
-          status: entry?.status ?? 'started',
+          // Opening a skipped step is the student taking it up themselves.
+          status:
+            entry?.status && entry.status !== 'skipped'
+              ? entry.status
+              : 'started',
         }),
         {started: true}
       );
@@ -191,6 +196,19 @@ export function useProgress(
       setProgress(p => p && routeAfterCompletion(pathway, p, checkpoint)),
     [pathway]
   );
+  /** Completes a step on the student's behalf. Level steps are skipped here too, not by milestone. */
+  const skipStep = useCallback(
+    (step: Step) => {
+      if (step.id === PROJECT_STEP_ID) return;
+      updateStep(step.id, entry => ({
+        timeSpent: 0,
+        ...entry,
+        status: entry?.status === 'complete' ? 'complete' : 'skipped',
+      }));
+      store.saveStep({scriptId, levelId}, step.id, {skipped: true});
+    },
+    [updateStep, store, scriptId, levelId]
+  );
   const saveGeneratedInstructions = useCallback(
     (id: string, content: GeneratedContent) => {
       updateStep(id, entry => ({
@@ -211,6 +229,7 @@ export function useProgress(
     completeStep,
     leaveStep,
     saveAnswers,
+    skipStep,
     saveGeneratedInstructions,
     finishCheckpoint,
   };

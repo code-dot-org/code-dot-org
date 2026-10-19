@@ -19,6 +19,7 @@ const PILL_CLASSES: {[status in CheckpointStatus]: string | undefined} = {
   available: styles.pillAvailable,
   inProgress: styles.pillInProgress,
   complete: styles.pillComplete,
+  skipped: styles.pillSkipped,
 };
 
 const ACTION_LABELS: {
@@ -27,6 +28,7 @@ const ACTION_LABELS: {
   available: 'Start',
   inProgress: 'Continue',
   complete: 'Review',
+  skipped: 'Open anyway',
 };
 
 interface CheckpointCardProps {
@@ -89,7 +91,8 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
           <MuiTypography variant="strong">Requires</MuiTypography>
           <ul className={shared.plainList}>
             {requires.map(c => {
-              const done = statusMap[c.id] === 'complete';
+              const done =
+                statusMap[c.id] === 'complete' || statusMap[c.id] === 'skipped';
               return (
                 <li key={c.id} className={styles.requirement}>
                   <FontAwesomeV6Icon

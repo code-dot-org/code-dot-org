@@ -74,6 +74,17 @@ describe('checkpointStatus', () => {
     expect(status(0, progress)).toBe('complete');
   });
 
+  it('is skipped with its last step skipped, unlocks what follows, and is not in progress', () => {
+    const progress: Progress = {
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'a-step': {status: 'skipped', timeSpent: 0},
+      },
+    };
+    expect(status(1, progress)).toBe('skipped');
+    expect(status(2, progress)).toBe('available');
+  });
+
   it('is started by any step and complete only with its last step', () => {
     const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
     const multi = checkpoint('multi', undefined, [panels('one'), level]);
@@ -219,6 +230,27 @@ describe('useProgress', () => {
     expect(result.current.statusMap.intro).toBe('complete');
     expect(result.current.progress?.steps.try.timeSpent).toBe(3);
     expect(result.current.progress?.steps.project).toBeUndefined();
+  });
+
+  it('skips any step through the store, and starting it takes it back', async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+
+    act(() => result.current.skipStep(read));
+    act(() => result.current.skipStep(sandbox));
+    act(() => result.current.skipStep(project));
+
+    expect(store.saveStep.mock.calls).toEqual([
+      [key, 'read', {skipped: true}],
+      [key, 'try', {skipped: true}],
+    ]);
+    expect(reportLevelStep).not.toHaveBeenCalled();
+    expect(result.current.statusMap.intro).toBe('skipped');
+    expect(result.current.statusMap.basics).toBe('available');
+
+    act(() => result.current.startStep(read));
+    expect(result.current.progress?.steps.read.status).toBe('started');
+    expect(result.current.statusMap.intro).toBe('inProgress');
   });
 
   it('logs a failed level report', async () => {

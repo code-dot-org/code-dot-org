@@ -19,6 +19,7 @@ const ICONS: {[status in CheckpointStatus]: string} = {
   available: 'play',
   inProgress: 'ellipsis',
   complete: 'check',
+  skipped: 'forward',
 };
 
 // Height of the title box above each circle, so the circle's center lands
@@ -75,7 +76,9 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
               key={`${edge.from}-${edge.to}`}
               className={classNames(
                 styles.edge,
-                statusMap[edge.from] === 'complete' && styles.edgeActive
+                (statusMap[edge.from] === 'complete' ||
+                  statusMap[edge.from] === 'skipped') &&
+                  styles.edgeActive
               )}
               d={`M ${a.x} ${y1} C ${a.x} ${mid}, ${b.x} ${mid}, ${b.x} ${y2}`}
             />

@@ -29,8 +29,8 @@ class AdaptiveProgressController < ApplicationController
     step = @level.find_step(params[:step_id])
     return head :unprocessable_entity unless step
 
-    # Progress on level-backed steps is in UserLevel.
-    return head :unprocessable_entity if step['kind'] == 'level'
+    # Progress on level-backed steps is in UserLevel; only a skip is recorded here.
+    return head :unprocessable_entity if step['kind'] == 'level' && !skip_only?(body)
 
     if body.key?('answers')
       answers = student_responses(step, body['answers'])
@@ -46,6 +46,7 @@ class AdaptiveProgressController < ApplicationController
     row.record_progress!(
       started: body['started'] == true,
       completed: body['completed'] == true,
+      skipped: body['skipped'] == true,
       seconds: seconds,
       answers: answers
     )
@@ -127,6 +128,10 @@ class AdaptiveProgressController < ApplicationController
 
   private def valid_json_value?(value)
     (value.is_a?(Hash) || value.is_a?(Array)) && value.to_json.bytesize <= MAX_JSON_BYTES
+  end
+
+  private def skip_only?(body)
+    body['skipped'] == true && !body.keys.intersect?(%w[started completed timeSinceLastSave answers])
   end
 
   private def time_spent_seconds(time_ms)

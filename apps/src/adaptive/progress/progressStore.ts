@@ -16,6 +16,8 @@ export interface ProgressKey {
 export interface StepWrite {
   started?: true;
   completed?: true;
+  /** The only write a level step takes here; its other progress is its level's. */
+  skipped?: true;
   timeSinceLastSave?: number;
   answers?: {questionId: number | string; list: Answer[]};
 }

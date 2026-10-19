@@ -33,12 +33,13 @@ class UserAdaptiveStep < ApplicationRecord
 
   validates :step_id, presence: true
 
-  def record_progress!(started: false, completed: false, seconds: nil, answers: nil)
+  def record_progress!(started: false, completed: false, skipped: false, seconds: nil, answers: nil)
     with_lock do
       merged = progress || {}
       now = Time.zone.now.utc.iso8601
       merged['startedAt'] ||= now if started
       merged['completedAt'] ||= now if completed
+      merged['skipped'] = true if skipped
       merged['timeSpent'] = (merged['timeSpent'] || 0) + seconds if seconds&.positive?
       if answers
         merged['answers'] = (merged['answers'] || {}).merge(answers)
@@ -50,11 +51,18 @@ class UserAdaptiveStep < ApplicationRecord
     end
   end
 
+  # A skipped step was completed on the student's behalf; starting it themselves ends that.
   def progress_json
     return {} unless progress
     {
-      'status' => progress['completedAt'] ? 'complete' : 'started',
+      'status' => status,
       'timeSpent' => progress['timeSpent'] || 0,
     }.merge(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
+  end
+
+  private def status
+    return 'complete' if progress['completedAt']
+    return 'skipped' if progress['skipped'] && !progress['startedAt']
+    'started'
   end
 end

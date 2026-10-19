@@ -138,6 +138,9 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       ['quiz', {answers: {questionId: 'why', list: [{text: 'x' * 10_001}]}}],
       ['read', {timeSinceLastSave: 'soon'}],
       ['try', {}],
+      ['try', {skipped: true, started: true}],
+      ['try', {skipped: true, timeSinceLastSave: 1000}],
+      ['try', {skipped: false}],
     ].each do |step_id, body|
       assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
         put_step step_id, **body
@@ -180,6 +183,35 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
     assert_response :not_implemented
     assert JSON.parse(response.body)['error'].present?
+  end
+
+  test "a skipped step reads as skipped until the student starts it" do
+    put_step 'read', skipped: true
+
+    assert_response :success
+    assert_equal({'status' => 'skipped', 'timeSpent' => 0}, JSON.parse(response.body))
+    assert_equal 'skipped', steps['read']['status']
+
+    put_step 'read', started: true
+    assert_equal 'started', steps['read']['status']
+  end
+
+  test "a completed step stays complete when skipped" do
+    put_step 'read', started: true
+    put_step 'read', completed: true
+    put_step 'read', skipped: true
+
+    assert_equal 'complete', steps['read']['status']
+  end
+
+  test "a level step can be skipped, and its user level wins once the student opens it" do
+    put_step 'try', skipped: true
+
+    assert_response :success
+    assert_equal({'status' => 'skipped', 'timeSpent' => 0}, steps['try'])
+
+    create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 4)
+    assert_equal({'status' => 'started', 'timeSpent' => 4}, steps['try'])
   end
 
   test "level steps take their state from the step level's user level" do
