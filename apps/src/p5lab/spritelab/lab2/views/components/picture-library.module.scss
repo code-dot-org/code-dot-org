@@ -8,9 +8,16 @@
   height: 100%;
 }
 
-// The jumbo keeps to its edge; the library takes the rest.
 .libraryJumboRight {
   flex-direction: row-reverse;
+  // Reversed, flex-end is the left edge: the strips press against it, the
+  // jumbo sits against their last tile, and the spare width is at the right.
+  justify-content: flex-end;
+
+  // The strips take their widest row, not the leftover.
+  .strips {
+    flex: 0 1 auto;
+  }
 }
 
 // The dialog's pane at the jumbo's side, set inline from the measured
@@ -52,7 +59,9 @@
   overflow-y: auto;
   // Room inside the scroll box for a hovered tile's growth, which the box
   // would otherwise clip at its edges; the margin pulls the box back out,
-  // so the tiles sit where they did.
+  // so the tiles sit where they did. Content-box, so the width set inline
+  // from the tiles is the room the rows get.
+  box-sizing: content-box;
   margin: 0 -8px;
   padding: 0 8px 8px;
 

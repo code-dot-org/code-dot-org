@@ -2,7 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 import {AnimationPoses} from '../../characterAnimations';
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
@@ -110,6 +110,33 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
   const chosen = groups
     .flatMap(group => group.pictures)
     .find(picture => picture.key === chosenKey);
+  // With the jumbo at the right the strips take the width their rows fill,
+  // so the jumbo sits against the last tile: a wrapped flex box keeps the
+  // width it shrank to, not the width its groups use. The rows are laid out
+  // in the full room first and measured; the widest row's width is then
+  // set, which leaves every row where it was.
+  const hug = jumboSide === 'right';
+  const stripsRef = useRef<HTMLDivElement>(null);
+  const [stripsWidth, setStripsWidth] = useState<number | undefined>();
+  useLayoutEffect(() => {
+    setStripsWidth(undefined);
+  }, [groups, size, hug]);
+  useLayoutEffect(() => {
+    const el = stripsRef.current;
+    if (!hug || stripsWidth !== undefined || !el) {
+      return;
+    }
+    const left = el.getBoundingClientRect().left + el.clientLeft;
+    const padding = parseFloat(getComputedStyle(el).paddingLeft) || 0;
+    // The first child is the New image row, which spans whatever width the
+    // box has; the groups after it are what the rows are made of.
+    let widest = 0;
+    for (const child of [...el.children].slice(1)) {
+      widest = Math.max(widest, child.getBoundingClientRect().right - left);
+    }
+    setStripsWidth(Math.ceil(widest - padding));
+  }, [hug, stripsWidth, groups, size]);
+
   return (
     <div
       ref={rootRef}
@@ -195,7 +222,11 @@ const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
           </div>
         )}
       </div>
-      <div className={moduleStyles.strips}>
+      <div
+        ref={stripsRef}
+        className={moduleStyles.strips}
+        style={{width: stripsWidth}}
+      >
         <div>
           <MuiButton
             variant="outlined"
