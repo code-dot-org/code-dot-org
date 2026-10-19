@@ -50,6 +50,8 @@ Route files in `src/routes/` declare canonical paths (e.g. `/projects/$labType/$
 
 When a legacy Rails route eventually migrates to render the Vite shell at its canonical path, the migration will involve adding a Rails route + a separate Vite mount point under the canonical URL, not changing the basepath here.
 
+The mobile build (`vite.mobile.config.ts`, mode `mobile`, read by `src/config/buildMode.ts`) never calls Rails: the root skips auth, CSRF priming and site chrome, and `src/routes/launcher.tsx` is its home page.
+
 ## Route tree (auto-generated)
 
 TanStack Router's Vite plugin (`tanstackRouter({ autoCodeSplitting: true })`) scans `src/routes/` and writes `src/routeTree.gen.ts` on every build and `yarn dev` start. **Never edit `routeTree.gen.ts` by hand** — changes are overwritten. Add or rename files in `src/routes/` to change the route tree.

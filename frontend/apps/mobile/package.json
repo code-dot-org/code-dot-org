@@ -5,54 +5,26 @@
   "type": "module",
   "scripts": {
     "android:open": "cap open android",
-    "android:sync": "yarn build && cap sync android",
-    "build": "tsc -b && vite build && vite build --config vite.siteControls.config.ts",
-    "dev": "vite dev",
+    "android:sync": "yarn run -T turbo build:mobile --filter @code-dot-org/studio && cap sync android",
+    "dev": "yarn workspace @code-dot-org/studio dev:mobile",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "test": "vitest --run --passWithNoTests",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
-  "stylelint": {
-    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
-  },
   "dependencies": {
     "@capacitor/android": "^7.6.9",
-    "@capacitor/core": "^7.6.9",
-    "@code-dot-org/component-library": "workspace:*",
-    "@code-dot-org/component-library-styles": "workspace:*",
-    "@code-dot-org/fonts": "workspace:*",
-    "@emotion/cache": "^11.14.0",
-    "@emotion/react": "catalog:",
-    "@emotion/styled": "catalog:",
-    "@mui/material": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:"
+    "@capacitor/core": "^7.6.9"
   },
   "devDependencies": {
     "@capacitor/cli": "^7.6.9",
     "@code-dot-org/lint-config": "workspace:*",
-    "@testing-library/dom": "catalog:",
-    "@testing-library/jest-dom": "catalog:",
-    "@testing-library/react": "catalog:",
-    "@testing-library/user-event": "^14.6.1",
+    "@code-dot-org/studio": "workspace:*",
     "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
-    "eslint-plugin-react-hooks": "catalog:",
-    "eslint-plugin-react-refresh": "catalog:",
-    "globals": "catalog:",
-    "jsdom": "catalog:",
     "prettier": "catalog:",
-    "sass": "catalog:",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "catalog:",
-    "vite": "catalog:",
-    "vitest": "catalog:"
+    "typescript": "~5.9.3"
   }
 }

@@ -1,4 +1,4 @@
-import CodeAILogo from '@/assets/logo-codeai-inverse.svg';
+import CodeAILogo from '@/config/brand/assets/logo-codeai-inverse.svg';
 
 import styles from './launcher.module.scss';
 

@@ -1,4 +1,4 @@
-import SpriteLabIcon from '@/assets/sprite-lab-icon.webp';
+import SpriteLabIcon from '@/config/brand/assets/courses/sprite-lab-icon.webp';
 
 /** One hosted curriculum, shown as a card in the style of the course catalog. */
 export interface Curriculum {
