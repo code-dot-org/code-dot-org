@@ -29,8 +29,8 @@ const definition: BlockJson = {
   style: BlockStyles.EVENT,
   extensions: [EVENT_HAT_EXTENSION],
   tooltip:
-    'Runs the blocks below when the player does this. A jump, a landing or ' +
-    'a bump runs them once; walking runs them on every step.',
+    'Runs the blocks below when the player does this: once for a jump, a ' +
+    'landing or a bump, and on every step while walking.',
 };
 
 // The blocks below the hat are the handler; eventHat keeps them out of the
