@@ -26,10 +26,19 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
+// The providers and store are real so the view mounts them as it does in
+// production; the engine and the level load are not what these tests cover.
 jest.mock('@cdo/apps/ailab/engine', () => ({
   __esModule: true,
   AilabEngine: jest.fn(() => null),
   instructionsDismissed: jest.fn(),
+  loadLevel: jest.fn(),
+  store: jest.requireActual('@cdo/apps/ailab/engine/store').store,
+  ProjectProvider: jest.requireActual('@cdo/apps/ailab/engine/ProjectContext')
+    .ProjectProvider,
+  TrainingDataProvider: jest.requireActual(
+    '@cdo/apps/ailab/engine/TrainingDataContext'
+  ).TrainingDataProvider,
 }));
 
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({

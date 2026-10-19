@@ -7,7 +7,12 @@ export const instructionsDismissed = function (): void {
 
 export {default as AilabEngine} from './AilabEngine';
 export type {AilabEngineProps} from './AilabEngine';
-export {startOver} from './levelLoad';
+
+// The host mounts these around AilabEngine and drives level changes.
+export {store} from './store';
+export {loadLevel, startOver} from './levelLoad';
+export {ProjectProvider} from './ProjectContext';
+export {TrainingDataProvider} from './TrainingDataContext';
 
 export type {
   InstructionsKey,

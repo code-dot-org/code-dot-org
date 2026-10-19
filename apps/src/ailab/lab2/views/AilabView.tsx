@@ -1,13 +1,24 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from 'react';
+import {Provider} from 'react-redux';
 
 import {
   AilabEngine,
   type AilabEngineProps,
   instructionsDismissed,
   type InstructionsKey,
+  loadLevel,
   type Mode,
+  ProjectProvider,
   type SaveResponse,
   startOver,
+  store,
+  TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
@@ -45,6 +56,12 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   useEffect(() => {
     progressManager?.setValidator(validator);
   }, [progressManager, validator]);
+
+  // A layout effect, not a plain effect: it runs before the browser paints, so
+  // a level change never shows a frame of the previous level's state.
+  useLayoutEffect(() => {
+    loadLevel(mode);
+  }, [levelProperties.id, mode]);
 
   const onContinue = () => {
     dispatch(continueOrFinishLesson());
@@ -126,18 +143,23 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       <div className={styles.divider} />
       <div className={styles.workspace}>
         <div className={styles.root}>
-          <AilabEngine
-            assetPath="/blockly/media/skins/ailab/"
-            mode={mode}
-            levelId={levelProperties.id}
-            onContinue={onContinue}
-            setInstructionsKey={setInstructionsKey}
-            onTrained={onTrained}
-            i18n={{}} // TODO: Pass through localization map if necessary
-            saveTrainedModel={saveTrainedModel}
-            logMetric={logMetric}
-            onStartOver={onStartOver}
-          />
+          {/* Scoped to the engine: everything outside reads the app store. */}
+          <Provider store={store}>
+            <ProjectProvider>
+              <TrainingDataProvider>
+                <AilabEngine
+                  assetPath="/blockly/media/skins/ailab/"
+                  onContinue={onContinue}
+                  setInstructionsKey={setInstructionsKey}
+                  onTrained={onTrained}
+                  i18n={{}} // TODO: Pass through localization map if necessary
+                  saveTrainedModel={saveTrainedModel}
+                  logMetric={logMetric}
+                  onStartOver={onStartOver}
+                />
+              </TrainingDataProvider>
+            </ProjectProvider>
+          </Provider>
         </div>
       </div>
     </div>
