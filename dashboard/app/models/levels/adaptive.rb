@@ -76,6 +76,10 @@ class Adaptive < Level
     names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
+  def sharing_levels
+    Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
+  end
+
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
     pathway = content
@@ -85,7 +89,8 @@ class Adaptive < Level
     properties
   end
 
-  # Only the file's existence is checked; the content is validated in CI.
+  # Only the file's existence is checked. Content saved from the pathway
+  # editor is checked in the browser; the repo's files are checked in CI.
   private def adaptive_content_exists
     return if adaptive_id.blank?
     return if AdaptiveContent.exist?(adaptive_id)
