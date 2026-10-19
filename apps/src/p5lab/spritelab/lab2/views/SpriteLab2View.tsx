@@ -488,7 +488,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // ?bar=workspace replaces it with a bar at the editors' base holding a
   // dropdown of the scenes; ?bar=workspace-top puts that dropdown at the
   // workspace strip's start instead, undo and redo joining the switch; and
-  // ?bar=preview-top puts it at the Preview bar's end.
+  // ?bar=preview-top puts it at the Preview bar's start.
   const barMode = useMemo(() => queryParams('bar'), []);
   const barAtBottom = barMode !== 'top';
   const barInWorkspace = barMode === 'workspace';
@@ -2287,14 +2287,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 previewBarShown ? (
                   <EditorStrip
                     title="Preview"
-                    end={
-                      <>
-                        {scenesInPreviewBar && scenesOffered && (
-                          <SceneDropdown {...sceneControls} />
-                        )}
-                        {scenesInAStrip && toolButtons}
-                      </>
+                    start={
+                      scenesInPreviewBar &&
+                      scenesOffered && <SceneDropdown {...sceneControls} />
                     }
+                    end={scenesInAStrip && toolButtons}
                   />
                 ) : undefined
               }
