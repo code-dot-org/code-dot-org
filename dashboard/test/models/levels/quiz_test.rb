@@ -117,6 +117,21 @@ class QuizTest < ActiveSupport::TestCase
     assert QuizQuestionResponse.exists?(response.id)
   end
 
+  test "clone_with_name copies placements and shares questions" do
+    quiz = create(:quiz)
+    first_question = create(:quiz_question)
+    second_question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: first_question, page: 1, position: 1)
+    create(:quiz_question_placement, level: quiz, quiz_question: second_question, page: 2, position: 1)
+
+    copy = quiz.clone_with_name('Cloned quiz')
+
+    assert_equal 'Cloned quiz', copy.name
+    assert_equal [first_question, second_question], copy.questions
+    assert_equal [[1, 1], [2, 1]], (copy.placements.map {|p| [p.page, p.position]})
+    assert_equal 2, quiz.placements.count
+  end
+
   test "clone_with_suffix copies placements and shares questions" do
     quiz = create(:quiz)
     first_question = create(:quiz_question)
