@@ -482,8 +482,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => (queryParams('preview') === 'right' ? 'right' : 'left'),
     []
   );
-  // ?bar=bottom: the scene row under the workspace.
-  const barAtBottom = useMemo(() => queryParams('bar') === 'bottom', []);
+  // The scene row sits under the workspace; ?bar=top puts it above.
+  const barAtBottom = useMemo(() => queryParams('bar') !== 'top', []);
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
@@ -541,9 +541,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               }ms ease ${picturesActive ? PANE_SLIDE_MS / 2 : 0}ms`
             : undefined,
         };
-  // ?resources=bar: the resource panel's buttons move to the scene row's
-  // end and the panel goes, giving the lab its width.
-  const resourcesInBar = useMemo(() => queryParams('resources') === 'bar', []);
+  // The resource panel's buttons sit at the scene row's end and the panel
+  // is gone, giving the lab its width; ?resources=panel brings it back.
+  const resourcesInBar = useMemo(
+    () => queryParams('resources') !== 'panel',
+    []
+  );
   // The chosen picture sits at the right of the strips; ?jumbo=left puts
   // it at the left.
   const jumboSide = useMemo<'left' | 'right'>(
@@ -555,9 +558,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => queryParams('editors') === 'stripleft',
     []
   );
-  // ?preview-bar=true: a Preview bar across the stage column's top.
+  // A Preview bar across the stage column's top; ?preview-bar=false drops it.
   const previewBarShown = useMemo(
-    () => queryParams('preview-bar') === 'true',
+    () => queryParams('preview-bar') !== 'false',
     []
   );
   // The room the editors keep clear of the column, on its side.
