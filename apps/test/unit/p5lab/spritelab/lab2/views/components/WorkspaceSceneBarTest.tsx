@@ -26,15 +26,15 @@ function renderBar(props = {}) {
 }
 
 describe('WorkspaceSceneBar', () => {
-  it('names the current scene on the dropdown, then offers New scene, All scenes and the extra', () => {
+  it('names the current scene on the dropdown, then offers All scenes and the extra', () => {
     renderBar();
     expect(screen.getByRole('button', {name: 'Scene: Cave'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'New scene'})).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'New scene'})).toBeNull();
     expect(screen.getByRole('button', {name: 'All scenes'})).toBeTruthy();
     expect(screen.getByText('extra')).toBeTruthy();
   });
 
-  it('lists every scene in the menu, the current one marked, and a pick selects it', () => {
+  it('lists every scene in the menu, the current one marked, then New scene; a pick selects', () => {
     const {onSelectScene} = renderBar();
     fireEvent.click(screen.getByRole('button', {name: 'Scene: Cave'}));
     const items = screen
@@ -43,6 +43,7 @@ describe('WorkspaceSceneBar', () => {
     expect([...items].map(b => b.textContent?.trim())).toEqual([
       'Forest',
       'Cave',
+      'New scene…',
     ]);
     expect(items[1].getAttribute('aria-current')).toBe('true');
     fireEvent.click(items[0]);
@@ -57,7 +58,8 @@ describe('WorkspaceSceneBar', () => {
 
   it('holds New scene and All scenes when locked', () => {
     renderBar({locked: true, lockedReason: 'Not here'});
-    expect(screen.getByRole('button', {name: 'New scene'})).toBeDisabled();
     expect(screen.getByRole('button', {name: 'All scenes'})).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Scene: Cave'}));
+    expect(screen.getByRole('button', {name: 'New scene…'})).toBeDisabled();
   });
 });

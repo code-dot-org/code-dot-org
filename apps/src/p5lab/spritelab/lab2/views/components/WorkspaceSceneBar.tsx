@@ -19,6 +19,11 @@ interface SceneMenuProps {
   scenes: SceneMetadata[];
   activeSceneId: string | null;
   onSelectScene: (sceneId: string) => void;
+  /** The New scene option at the menu's foot, when offered. */
+  onNewScene?: () => void;
+  /** New scene is off, with the reason on hover. */
+  locked?: boolean;
+  lockedReason?: string;
 }
 
 // Rendered inside the dropdown, where its context closes the menu.
@@ -26,8 +31,15 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
   scenes,
   activeSceneId,
   onSelectScene,
+  onNewScene,
+  locked,
+  lockedReason,
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
+  const choose = (action: () => void) => () => {
+    setActiveDropdownName('');
+    action();
+  };
   // The dropdown closes itself on a bubbled mousedown outside. Blockly stops
   // pointerdown at the workspace and cancels it, so neither reaches the
   // document and a click on the blocks leaves the menu open. Listen in the
@@ -57,10 +69,7 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
               moduleStyles.sceneMenuItem,
               scene.id === activeSceneId && moduleStyles.sceneMenuItemActive
             )}
-            onClick={() => {
-              setActiveDropdownName('');
-              onSelectScene(scene.id);
-            }}
+            onClick={choose(() => onSelectScene(scene.id))}
           >
             <ScenePicture
               src={scene.thumbnail}
@@ -70,6 +79,25 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
           </button>
         </li>
       ))}
+      {onNewScene && (
+        <>
+          <li className={moduleStyles.sceneMenuDivider} role="presentation" />
+          <li>
+            <button
+              type="button"
+              className={moduleStyles.sceneMenuItem}
+              disabled={locked}
+              title={locked ? lockedReason : undefined}
+              onClick={choose(onNewScene)}
+            >
+              <span className={moduleStyles.sceneMenuIcon}>
+                <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+              </span>
+              <span className={moduleStyles.sceneMenuName}>New scene…</span>
+            </button>
+          </li>
+        </>
+      )}
     </ul>
   );
 };
@@ -93,8 +121,8 @@ interface WorkspaceSceneBarProps {
 
 /**
  * The bar across the base of the editors (?bar=workspace): a dropdown of
- * the scenes with their pictures, the current one marked, then New scene
- * and All scenes, with the project-wide controls at the end.
+ * the scenes with their pictures, the current one marked and New scene at
+ * its foot, then All scenes, with the project-wide controls at the end.
  */
 const WorkspaceSceneBar: React.FunctionComponent<WorkspaceSceneBarProps> = ({
   scenes,
@@ -147,23 +175,11 @@ const WorkspaceSceneBar: React.FunctionComponent<WorkspaceSceneBarProps> = ({
             scenes={scenes}
             activeSceneId={activeSceneId}
             onSelectScene={onSelectScene}
+            onNewScene={allowCreate ? () => setNaming(true) : undefined}
+            locked={locked}
+            lockedReason={lockedReason}
           />
         </CustomDropdown>
-        {allowCreate && (
-          <button
-            type="button"
-            className={moduleStyles.sceneTabButton}
-            aria-label="New scene"
-            title={locked && lockedReason ? lockedReason : 'New scene'}
-            disabled={locked}
-            onClick={event => {
-              blurAfterPointerClick(event);
-              setNaming(true);
-            }}
-          >
-            <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-          </button>
-        )}
         {onManageScenes && (
           <button
             type="button"

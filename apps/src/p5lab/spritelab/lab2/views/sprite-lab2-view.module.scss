@@ -559,6 +559,22 @@ $editor-strip-height: 41px;
   white-space: nowrap;
 }
 
+// Stands where a thumbnail would, so the labels line up.
+.sceneMenuIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.sceneMenuDivider {
+  height: 1px;
+  margin: 4px 0;
+  background: var(--borders-neutral-primary);
+}
+
 // After .codeTabWrapper too: the Images pane off to the right while
 // another editor shows, as a closed sheet waits.
 .picturesEditorParked {
