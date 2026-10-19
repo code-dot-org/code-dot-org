@@ -21,6 +21,10 @@ interface VideoProps {
   containerRef?: RefObject<HTMLElement>;
 }
 
+/**
+ * Renders a simple modal video player.
+ */
+
 const Video: React.FunctionComponent<VideoProps> = ({
   children,
   src,
@@ -28,9 +32,19 @@ const Video: React.FunctionComponent<VideoProps> = ({
   thumbnail,
   containerRef,
 }) => {
+  // Leave a margin to the left and the right of the video, to the edges
+  // of the screen.
   const horizontalMargin = 40;
+
+  // Leave a vertical margin above and below the video, to the edges of the
+  // screen.
   const verticalMargin = 50;
+
+  // We need room below the video for the children passed in.  This area
+  // can contain things like a download link and a Continue button.
   const childrenAreaHeight = 70;
+
+  // The aspect ratio of the video.
   const videoAspectRatio = 16 / 9;
 
   // When no external ref is supplied, measure the component's own container.
