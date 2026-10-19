@@ -25,7 +25,6 @@ interface ColumnHeaderProps {
   column: ColumnId;
   name: string;
   view?: TableView;
-  // The selected column's dark header needs the sort button in its own color.
   selected?: boolean;
   className?: string;
   children: ReactNode;
@@ -57,7 +56,6 @@ const ColumnHeader = ({
   return (
     <th
       scope="col"
-      // Keeps the sort button's label out of the name announced for each cell.
       aria-label={name}
       aria-sort={sortDirection}
       className={classNames(className, tableStyles.headerWithControls)}

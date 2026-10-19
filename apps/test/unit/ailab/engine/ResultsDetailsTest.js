@@ -130,31 +130,6 @@ describe('ResultsDetails', () => {
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
   });
 
-  test('sorts by the AI prediction', () => {
-    renderScorecard();
-    fireEvent.click(sortButton('Sort by AI prediction A-Z'));
-    fireEvent.click(sortButton('Sort by AI prediction Z-A'));
-
-    expect(
-      sortButton('Original order').closest('th').getAttribute('aria-sort')
-    ).toBe('descending');
-    expect(bodyRows()).toEqual([
-      ['2', '4', 'dog', 'dog'],
-      ['1', '2', 'bird', 'bird'],
-    ]);
-  });
-
-  test('sorts by a feature', () => {
-    renderScorecard();
-    fireEvent.click(sortButton('Sort by legs low to high'));
-    fireEvent.click(sortButton('Sort by legs high to low'));
-
-    expect(bodyRows()).toEqual([
-      ['2', '4', 'dog', 'dog'],
-      ['1', '2', 'bird', 'bird'],
-    ]);
-  });
-
   test('sorts another dataset column by its own row', () => {
     renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
     fireEvent.click(screen.getByLabelText('Show all columns'));

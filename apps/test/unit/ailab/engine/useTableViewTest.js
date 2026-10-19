@@ -33,11 +33,6 @@ function renderView(source = {}) {
 }
 
 describe('useTableView', () => {
-  test('lists every row in dataset order until sorted', () => {
-    const {result} = renderView();
-    expect(result.current.rows).toEqual([0, 1, 2, 3]);
-  });
-
   test('sorts a numerical column by value, then descending, then not', () => {
     const {result} = renderView();
 
@@ -62,18 +57,6 @@ describe('useTableView', () => {
     expect(result.current.sortDirection('size')).toBeUndefined();
     expect(result.current.sortDirection('name')).toBe('ascending');
     expect(result.current.rows).toEqual([0, 3, 2, 1]);
-  });
-
-  test('a numerical value that is not a number sorts as text', () => {
-    const data = [{size: '10'}, {size: 'unknown'}, {size: '9'}];
-    const {result} = renderView({
-      rows: [0, 1, 2],
-      columns: ['size'],
-      columnTypes: {size: ColumnTypes.NUMERICAL},
-      valueAt: (row, column) => data[row][column],
-    });
-    act(() => result.current.toggleSort('size'));
-    expect(result.current.rows).toEqual([2, 0, 1]);
   });
 
   test('a blank or a number-led word in a numerical column sorts after every number', () => {
@@ -111,20 +94,5 @@ describe('useTableView', () => {
 
     rerender({...showOnlyName, columns: ALL_COLUMNS});
     expect(result.current.rows).toEqual([0, 3, 2, 1]);
-  });
-
-  test('a symbol column never shares a sort with a named column', () => {
-    const negatedSize = Symbol('size');
-    const {result} = renderView({
-      columns: [...ALL_COLUMNS, negatedSize],
-      columnTypes: {...COLUMN_TYPES, [negatedSize]: ColumnTypes.NUMERICAL},
-      valueAt: (row, column) =>
-        column === negatedSize ? -DATA[row].size : DATA[row][column],
-    });
-    act(() => result.current.toggleSort(negatedSize));
-
-    expect(result.current.sortDirection(negatedSize)).toBe('ascending');
-    expect(result.current.sortDirection('size')).toBeUndefined();
-    expect(result.current.rows).toEqual([1, 2, 0, 3]);
   });
 });

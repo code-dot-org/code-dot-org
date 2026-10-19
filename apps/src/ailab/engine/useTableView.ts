@@ -1,8 +1,3 @@
-/*
-  Sorting for the data tables. A sort on a column not in `columns` is kept but
-  not applied, so it returns when that column is shown.
-*/
-
 import {useCallback, useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
@@ -11,7 +6,6 @@ import type {DataRow} from './types';
 
 export type SortDirection = 'ascending' | 'descending';
 
-// A column from outside the dataset takes a symbol, which no column name can match.
 export type ColumnId = string | symbol;
 
 interface TableSort {
@@ -41,7 +35,6 @@ interface SortKey {
   number: number;
 }
 
-// Uploaded CSV values are strings, and a numerical column may hold a stray word or a blank.
 function sortKey(
   row: number,
   value: string | number,
@@ -52,7 +45,6 @@ function sortKey(
   return {row, text, number};
 }
 
-// Ranking every number before every word keeps the order transitive.
 function compareKeys(a: SortKey, b: SortKey): number {
   const aIsNumber = !Number.isNaN(a.number);
   const bIsNumber = !Number.isNaN(b.number);
@@ -74,7 +66,6 @@ export function nextSortDirection(
   return direction === 'ascending' ? 'descending' : undefined;
 }
 
-// For a table whose columns all come from the dataset.
 export function useDatasetValueAt(data: DataRow[]) {
   return useCallback(
     (row: number, column: string) => data[row][column],
