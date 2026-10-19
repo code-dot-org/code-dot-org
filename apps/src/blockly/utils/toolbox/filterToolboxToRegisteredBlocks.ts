@@ -1,10 +1,8 @@
 import * as BlocklyCore from 'blockly/core';
-import {cloneDeep} from 'lodash';
 
-import {isBlockInfo, isStaticCategoryInfo} from './typeGuards';
+import {filterToolboxBlocks} from './filterToolboxBlocks';
 
 type ToolboxInfo = BlocklyCore.utils.toolbox.ToolboxInfo;
-type ToolboxItemInfo = BlocklyCore.utils.toolbox.ToolboxItemInfo;
 type BlockInfo = BlocklyCore.utils.toolbox.BlockInfo;
 type SerializedBlock = BlocklyCore.serialization.blocks.State;
 
@@ -42,21 +40,13 @@ function pruneSerializedBlock(block: BlockInfo | SerializedBlock): void {
  * registered in Blockly. Call after blocks are installed.
  */
 export function filterToolboxToRegisteredBlocks(def: ToolboxInfo): ToolboxInfo {
-  const out = cloneDeep(def);
-  const filterEntries = (entries: ToolboxItemInfo[]): ToolboxItemInfo[] =>
-    entries.filter(entry => {
-      if (isStaticCategoryInfo(entry)) {
-        entry.contents = filterEntries(entry.contents || []);
-        return true;
+  return filterToolboxBlocks(def, block => {
+    if (block.type) {
+      if (!Blockly.Blocks[block.type]) {
+        return false;
       }
-      if (isBlockInfo(entry) && entry.type) {
-        if (!Blockly.Blocks[entry.type]) {
-          return false;
-        }
-        pruneSerializedBlock(entry);
-      }
-      return true;
-    });
-  out.contents = filterEntries(out.contents);
-  return out;
+      pruneSerializedBlock(block);
+    }
+    return true;
+  });
 }

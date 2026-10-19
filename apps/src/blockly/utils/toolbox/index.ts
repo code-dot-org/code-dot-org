@@ -3,6 +3,7 @@ export {
   makeDynamicCategory,
   type NamedDynamicCategoryInfo,
 } from './factories';
+export {filterToolboxBlocks} from './filterToolboxBlocks';
 export {filterToolboxToRegisteredBlocks} from './filterToolboxToRegisteredBlocks';
 export {isBlockInfo, isStaticCategoryInfo} from './typeGuards';
 export {toolboxXmlToDefinition} from './toolboxXmlToDefinition';

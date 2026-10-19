@@ -27,6 +27,18 @@ class GamelabJrTest < ActiveSupport::TestCase
     assert_equal %w(spritelab2_burst gamelab_atTime), level.offered_block_types
   end
 
+  test 'a field or extra state carrying a type is not an offered block' do
+    toolbox = {
+      kind: 'categoryToolbox',
+      contents: [{kind: 'category', name: 'Platform', contents: [
+        {kind: 'block', type: 'gamelab_setProp', fields: {VAR: {id: 'v1', name: 'score', type: ''}}},
+        {kind: 'block', type: 'spritelab2_placeholder', extraState: {like: {type: 'gamelab_spriteSay'}}},
+      ]}]
+    }.to_json
+    level = create(:spritelab, properties: {'toolbox_definition' => toolbox})
+    assert_equal %w(gamelab_setProp spritelab2_placeholder), level.offered_block_types
+  end
+
   test 'a level with no toolbox offers nothing' do
     level = create(:spritelab)
     assert_equal [], level.offered_block_types

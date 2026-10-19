@@ -69,7 +69,10 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
     </span>
   );
   return (
-    <div className={moduleStyles.toolboxFooter} style={{width}}>
+    <div
+      className={moduleStyles.toolboxFooter}
+      style={{width, height: FOOTER_PX}}
+    >
       <MuiButton
         variant="contained"
         color="primary"

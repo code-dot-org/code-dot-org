@@ -1,4 +1,7 @@
-import {toolboxForSceneType} from '@cdo/apps/p5lab/spritelab/lab2/sceneToolbox';
+import {
+  sceneTypesByBlock,
+  toolboxForSceneType,
+} from '@cdo/apps/p5lab/spritelab/lab2/sceneToolbox';
 
 const categories = {
   kind: 'categoryToolbox',
@@ -92,5 +95,42 @@ describe('toolboxForSceneType', () => {
       kind: 'flyoutToolbox',
       contents: [{kind: 'block', type: 'say'}],
     });
+  });
+});
+
+describe('sceneTypesByBlock', () => {
+  it('types each block by its category and leaves out the shared ones', () => {
+    expect([...sceneTypesByBlock(categories)]).toEqual([
+      ['say', 'story'],
+      ['jump', 'platform'],
+    ]);
+  });
+
+  it('leaves out a block that both typed categories offer', () => {
+    const both = {
+      kind: 'categoryToolbox',
+      contents: [
+        {
+          kind: 'category',
+          name: 'Platform',
+          contents: [
+            {kind: 'block', type: 'jump'},
+            {kind: 'block', type: 'playSound'},
+          ],
+        },
+        {
+          kind: 'category',
+          name: 'Story',
+          contents: [
+            {kind: 'block', type: 'playSound'},
+            {kind: 'block', type: 'say'},
+          ],
+        },
+      ],
+    };
+    expect([...sceneTypesByBlock(both)]).toEqual([
+      ['say', 'story'],
+      ['jump', 'platform'],
+    ]);
   });
 });

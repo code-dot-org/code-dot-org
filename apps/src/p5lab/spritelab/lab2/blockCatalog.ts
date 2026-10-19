@@ -1,15 +1,10 @@
 // The free play level's catalog of new blocks: the unit's new blocks start
 // out of the toolbox and join it one at a time as the student adds them.
 
-import {cloneDeep} from 'lodash';
-
-import {
-  isBlockInfo,
-  isStaticCategoryInfo,
-} from '@cdo/apps/blockly/utils/toolbox';
+import {filterToolboxBlocks} from '@cdo/apps/blockly/utils/toolbox';
 
 import {BLOCK_HELP, BlockHelp} from './blockHelp/blockHelpContent';
-import {ToolboxInfo, ToolboxItemInfo} from './blockly/toolbox/types';
+import {ToolboxInfo} from './blockly/toolbox/types';
 import {sceneTypesByBlock} from './sceneToolbox';
 import {SceneType} from './types';
 
@@ -55,15 +50,8 @@ export function withoutBlockTypes(
   if (types.size === 0) {
     return toolbox;
   }
-  const out = cloneDeep(toolbox);
-  const keep = (entries: ToolboxItemInfo[]): ToolboxItemInfo[] =>
-    entries.filter(entry => {
-      if (isStaticCategoryInfo(entry)) {
-        entry.contents = keep(entry.contents || []);
-        return true;
-      }
-      return !(isBlockInfo(entry) && entry.type && types.has(entry.type));
-    });
-  out.contents = keep(out.contents);
-  return out;
+  return filterToolboxBlocks(
+    toolbox,
+    block => !(block.type && types.has(block.type))
+  );
 }

@@ -18,16 +18,9 @@ export function installFlyoutDots(
   workspace: BlocklyCore.WorkspaceSvg | null | undefined,
   dotFor: (blockType: string) => boolean
 ): () => void {
-  if (!workspace) {
-    return () => undefined;
-  }
-  const flyouts = new Set(
-    [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()].filter(
-      (f): f is BlocklyCore.IFlyout => !!f
-    )
-  );
-  const disposers = [...flyouts].map(flyout => decorateFlyout(flyout, dotFor));
-  return () => disposers.forEach(dispose => dispose());
+  // getFlyout covers a flyout the toolbox owns as well as a standalone one.
+  const flyout = workspace?.getFlyout();
+  return flyout ? decorateFlyout(flyout, dotFor) : () => undefined;
 }
 
 // How far down a block its first row's middle sits, in the block's own

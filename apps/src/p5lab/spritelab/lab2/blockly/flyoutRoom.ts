@@ -7,7 +7,8 @@ import * as BlocklyCore from 'blockly/core';
 function flyoutOf(
   workspace: BlocklyCore.WorkspaceSvg | null | undefined
 ): BlocklyCore.IFlyout | null {
-  return workspace?.getFlyout() ?? workspace?.getToolbox()?.getFlyout() ?? null;
+  // getFlyout covers a flyout the toolbox owns as well as a standalone one.
+  return workspace?.getFlyout() ?? null;
 }
 
 /**

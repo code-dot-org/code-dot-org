@@ -2219,7 +2219,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               {animationsSeeded && (
                 <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
               )}
-              {catalog.length > 0 && (
+              {catalog.length > 0 && isEditable && (
                 <AddBlocksButton
                   workspaceVersion={workspaceVersion}
                   getWorkspace={getMainWorkspace}

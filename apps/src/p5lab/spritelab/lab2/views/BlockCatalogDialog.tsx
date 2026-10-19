@@ -57,7 +57,6 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
         className={moduleStyles.dialog}
       >
         <div className={moduleStyles.header}>
-          {/* Not a plus: the tile is a sign, not a button. */}
           <div className={moduleStyles.headerIcon} aria-hidden="true">
             <FontAwesomeV6Icon iconName="compass" />
           </div>

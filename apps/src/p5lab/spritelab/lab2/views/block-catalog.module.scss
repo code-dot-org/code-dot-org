@@ -6,9 +6,6 @@
 
 $list-width: 220px;
 $corner-inset: 8px;
-// The band's height: AddBlocksButton's FOOTER_PX, the room the flyout
-// keeps clear.
-$footer-height: 44px;
 
 .dialogHost {
   display: contents;
@@ -44,8 +41,8 @@ $footer-height: 44px;
   }
 }
 
-// The same purple tile and plus as the toolbox's Add new blocks button,
-// tall enough to span the title and its line.
+// The tile that heads the dialog, tall enough to span the title and its
+// line.
 .headerIcon {
   flex: none;
   display: flex;
@@ -219,7 +216,6 @@ $footer-height: 44px;
   position: absolute;
   left: 0;
   bottom: 0;
-  height: $footer-height;
   display: flex;
   align-items: center;
   justify-content: center;

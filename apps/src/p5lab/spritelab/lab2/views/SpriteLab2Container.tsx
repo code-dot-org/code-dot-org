@@ -43,6 +43,17 @@ function getToolboxEditSources(
   return {source: toolboxToWorkspaceBlocks(definition)};
 }
 
+// The block catalog's bookkeeping is not a student edit: Continue and the
+// Run/Edit prompt read hasEdited.
+const CATALOG_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
+  'chosenBlocks',
+  'blockCatalogSeen',
+]);
+const isStudentEdit = (prev: Sources, next: Sources) =>
+  (Object.keys({...prev, ...next}) as (keyof Sources)[]).some(
+    key => !CATALOG_KEYS.has(key) && prev[key] !== next[key]
+  );
+
 const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
 > = ({levelProperties}) => {
@@ -66,6 +77,7 @@ const SpriteLab2Container: React.FunctionComponent<
       defaultSources,
       onReinitialize: handleReinitialize,
       getToolboxEditSources,
+      computeHasEdited: isStudentEdit,
     });
 
   // Set the project manager in the registry for external components that need it (e.g. header).

@@ -61,10 +61,10 @@ class GamelabJr < Gamelab
   # The block types this level's toolbox offers that no earlier level of the
   # unit offered: the ones a student meets here first.
   def new_block_types(script, script_level)
-    # Keyed on this level and the unit, as the localized options are: an
-    # earlier level's toolbox edit reaches it when the unit is republished.
-    Rails.cache.fetch("#{cache_key}/#{script.cache_key}/new_block_types", force: !Unit.should_cache?) do
-      earlier = script.script_levels.take_while {|sl| sl.id != script_level.id}
+    # Keyed on this level's and the unit's versions: an earlier level's
+    # toolbox edit reaches it when the unit is republished.
+    Rails.cache.fetch("#{cache_key_with_version}/#{script.cache_key_with_version}/new_block_types", force: !Unit.should_cache?) do
+      earlier = script.script_levels.includes(:levels).take_while {|sl| sl.id != script_level.id}
       seen = earlier.flat_map(&:levels).select {|level| level.is_a?(GamelabJr)}.flat_map(&:offered_block_types)
       offered_block_types - seen
     end
@@ -84,11 +84,18 @@ class GamelabJr < Gamelab
     end.uniq
   end
 
+  # Serialized state under a block that is not a block: a field's value, a
+  # mutator's extra state, an icon's.
+  NON_BLOCK_KEYS = %w(fields extraState icons).freeze
+
   def self.block_types_in(node, shadow: false)
     case node
     when Hash
       own = node['type'].is_a?(String) && !shadow && node['kind'] != 'category' ? [node['type']] : []
-      own + node.flat_map {|key, value| block_types_in(value, shadow: shadow || key == 'shadow')}
+      own + node.flat_map do |key, value|
+        next [] if NON_BLOCK_KEYS.include?(key)
+        block_types_in(value, shadow: shadow || key == 'shadow')
+      end
     when Array
       node.flat_map {|value| block_types_in(value, shadow: shadow)}
     else
