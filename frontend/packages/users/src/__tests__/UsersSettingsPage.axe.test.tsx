@@ -62,6 +62,7 @@ describe('UsersSettingsPage — accessibility', () => {
     'multi-sso-teacher',
     'lti-teacher',
     'lti-only-teacher',
+    'restricted-lti-teacher',
     'rostered-student',
     'cap-locked-student',
     'all-connected-teacher',
@@ -70,6 +71,15 @@ describe('UsersSettingsPage — accessibility', () => {
     renderPage(tag, 'integrations');
     await screen.findByRole('tabpanel');
     await screen.findAllByRole('heading', {level: 2});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the unlink dialog open', async () => {
+    renderPage('lti-teacher', 'integrations');
+    fireEvent.click(
+      await screen.findByRole('button', {name: /^disconnect canvas/i}),
+    );
+    await screen.findByRole('alertdialog');
     expect(await auditBody()).toHaveNoViolations();
   });
 

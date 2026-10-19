@@ -1,21 +1,49 @@
-import {Button, Typography} from '@mui/material';
-
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, Typography} from '@mui/material';
+import React, {useEffect, useRef} from 'react';
 
 import {formatAccuracy} from '../helpers/accuracy';
-import {isTrainedOnCurrentColumns} from '../helpers/navigationValidation';
+import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {setCurrentPanel} from '../redux';
+import {useProject} from '../ProjectContext';
+import {replayTraining, setCurrentPanel} from '../redux';
+import {
+  getDisplayTree,
+  getDisplayTreeCounts,
+} from '../selectors/visualizationSelectors';
+import {useTrainingData} from '../TrainingDataContext';
+
+import TreeMiniMap from './TreeMiniMap';
 
 import styles from './trainingResultCard.module.scss';
 
 const TrainingResultCard = () => {
   const dispatch = useAppDispatch();
-  const isTrained = useAppSelector(isTrainedOnCurrentColumns);
+  const {project} = useProject();
+  const hasResult = hasCurrentTrainingResult(project);
   const isModalOpen = useAppSelector(state => !!state.trainingModalStep);
-  const latestResult = useAppSelector(state => state.historicResults[0]);
+  const latestResult = project.historicResults[0];
+  const {trainedModel} = useTrainingData();
+  const tree = useAppSelector(state =>
+    getDisplayTree(state, project, trainedModel)
+  );
+  const counts = useAppSelector(state =>
+    getDisplayTreeCounts(state, project, trainedModel)
+  );
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const isReplaying = useAppSelector(state => state.isTrainingReplay);
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
+  const testButton = useRef<HTMLButtonElement>(null);
+  const isVisible = hasResult && (!isModalOpen || isReplaying);
 
-  if (!isTrained || isModalOpen || latestResult.total === 0) {
+  // The card replaces the Train model button, which previously received focus.
+  useEffect(() => {
+    if (isVisible && !pretrained && document.activeElement === document.body) {
+      testButton.current?.focus();
+    }
+  }, [isVisible, pretrained]);
+
+  if (!isVisible) {
     return null;
   }
 
@@ -23,12 +51,20 @@ const TrainingResultCard = () => {
 
   return (
     <div className={styles.card}>
+      {tree && (
+        <TreeMiniMap
+          tree={tree}
+          datasetId={datasetId}
+          counts={counts}
+          onReplay={() => dispatch(replayTraining())}
+        />
+      )}
       <div className={styles.results}>
         <div className={styles.result}>
           <Typography variant="body4" className={styles.label}>
             Accuracy
           </Typography>
-          <Typography variant="body2" className={styles.accuracyValue}>
+          <Typography variant="body2" className={styles.value}>
             {formatAccuracy(accuracy)}
           </Typography>
         </div>
@@ -43,6 +79,7 @@ const TrainingResultCard = () => {
       </div>
       <div className={styles.actionRow}>
         <Button
+          ref={testButton}
           variant="contained"
           color="primary"
           size="small"

@@ -1,6 +1,6 @@
 # Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL → Redshift materialized view" pipeline:
 #  analytics_export:zero_etl_data_filter[environment_type]                    # Print a table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL.
-#  analytics_export:update_zero_etl_filter[integration_arn,environment_type]  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
+#  analytics_export:update_zero_etl_filter[environment_type]                  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
 #  analytics_export:resync_zero_etl_table[table_names,environment_type]       # Resync one or more (space-separated, optionally `database.`-qualified) tables that failed to replicate via Zero ETL.
 #  analytics_export:zero_etl_export_status[environment_type]                  # Report the Zero ETL replication status of every table we export to analytics.
 #  analytics_export:configure_zero_etl_target_database[environment_type]      # Apply the required Zero ETL ingestion settings (ACCEPTINVCHARS, TRUNCATECOLUMNS) to the target database.
@@ -62,20 +62,23 @@ namespace :analytics_export do
     puts AnalyticsExportable.zero_etl_data_filter(db_name: "dashboard_#{args[:environment_type]}")
   end
 
-  # bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
-  # DRY_RUN=1 bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
+  # bundle exec rake 'analytics_export:update_zero_etl_filter[production]'
+  # DRY_RUN=1 bundle exec rake 'analytics_export:update_zero_etl_filter[production]'
   desc "Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`."
-  task :update_zero_etl_filter, [:integration_arn, :environment_type] => :environment do |_t, args|
-    abort "Usage: rake analytics_export:update_zero_etl_filter[ARN,environment_type]" if args[:integration_arn].blank? || args[:environment_type].blank?
+  task :update_zero_etl_filter, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:update_zero_etl_filter[environment_type]" if args[:environment_type].blank?
 
     require 'cdo/aws/rds'
 
     db_name = "dashboard_#{args[:environment_type]}"
     dry_run = ENV['DRY_RUN'].present?
+    integration_arn = Cdo::RDS.zero_etl_integration_arn(environment_type: args[:environment_type])
+    puts "Integration: #{integration_arn}"
+
     # AnalyticsExportable computes the desired filter from the schema; Cdo::RDS reads/reconciles/writes
     # it against the live integration via the RDS API.
     result = Cdo::RDS.update_zero_etl_integration!(
-      integration_arn: args[:integration_arn],
+      integration_arn: integration_arn,
       desired_data_filter: AnalyticsExportable.zero_etl_data_filter(db_name: db_name),
       db_name: db_name,
       dry_run: dry_run

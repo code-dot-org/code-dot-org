@@ -172,6 +172,21 @@
   width: 100%;
 }
 
+.toggleWithHelper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .toggleLabel {
   font-size: var(--font-size-body-sm, 14px);
   color: var(--text-neutral-primary, #121212);

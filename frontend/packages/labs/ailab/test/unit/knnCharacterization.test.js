@@ -23,18 +23,19 @@ import {parseCSV} from '../../src/csvReaderWrapper';
 import {getPercentCorrect} from '../../src/helpers/accuracy';
 import I18n from '../../src/i18n';
 import {
-  addSelectedFeature,
-  getTrainedModelDataToSave,
   resetState,
   setColumnsByDataType,
   setImportedMetadata,
-  setLabelColumn,
   setReserveLocation,
   setSelectedCSV,
   setSelectedJSON,
 } from '../../src/redux';
+import {getTrainedModelDataToSave} from '../../src/selectors/saveSelectors';
 import {store} from '../../src/store';
 import train from '../../src/train';
+import {initialProject} from '../../src/types';
+
+import {projectFromRun} from './renderWithProviders';
 
 // vitest runs with the package root as cwd; see vitest.config.ts.
 const DIR = path.join(process.cwd(), 'public', 'datasets');
@@ -61,7 +62,7 @@ const SAVED_MODEL_KEYS = [
 function load(id, features) {
   const csv = fs.readFileSync(path.join(DIR, `${id}.csv`), 'utf8');
   const metadata = JSON.parse(
-    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8'),
+    fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
   store.dispatch(resetState());
@@ -73,24 +74,30 @@ function load(id, features) {
   store.dispatch(setImportedMetadata(metadata));
   metadata.fields.forEach(field =>
     store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL),
-    ),
+      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
+    )
   );
   // Set explicitly rather than relying on the initial state, so a change of
   // default cannot silently make these tests non-deterministic.
   store.dispatch(setReserveLocation(TestDataLocations.END));
-  store.dispatch(setLabelColumn(metadata.defaultLabelColumn));
 
-  const chosen =
-    features ||
-    Object.keys(store.getState().data[0]).filter(
-      column => column !== metadata.defaultLabelColumn,
-    );
-  chosen.forEach(column => store.dispatch(addSelectedFeature(column)));
+  const project = {
+    ...initialProject,
+    labelColumn: metadata.defaultLabelColumn,
+    selectedFeatures:
+      features ||
+      Object.keys(store.getState().data[0]).filter(
+        column => column !== metadata.defaultLabelColumn
+      ),
+  };
 
-  train.init(store);
-  train.onClickTrain(store);
-  return store.getState();
+  train.init(store, project);
+  const run = train.onClickTrain();
+  return {
+    state: store.getState(),
+    trainedModel: run?.trainedModel,
+    project: projectFromRun(project, run),
+  };
 }
 
 /*
@@ -112,7 +119,7 @@ afterAll(() => {
 */
 describe('shipped dataset fingerprints', () => {
   test('shapes_v1_toy is 100 clean rows over 6 columns', () => {
-    const state = load('shapes_v1_toy');
+    const {state, project} = load('shapes_v1_toy');
 
     expect(state.data.length).toBe(100);
     expect(state.removedRowsCount).toBe(0);
@@ -124,26 +131,26 @@ describe('shipped dataset fingerprints', () => {
       'size',
       'shape',
     ]);
-    expect(state.labelColumn).toBe('shape');
+    expect(project.labelColumn).toBe('shape');
   });
 
   test('jeans is 80 clean rows with a numerical label', () => {
-    const state = load('jeans');
+    const {state, project} = load('jeans');
 
     expect(state.data.length).toBe(80);
     expect(state.removedRowsCount).toBe(0);
-    expect(state.labelColumn).toBe('Price in dollars');
-    expect(state.selectedFeatures.length).toBe(13);
+    expect(project.labelColumn).toBe('Price in dollars');
+    expect(project.selectedFeatures.length).toBe(13);
   });
 });
 
 describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
   test('records every feature selected', () => {
-    const state = load('shapes_v1_toy');
-    const saved = getTrainedModelDataToSave(state);
+    const {state, trainedModel, project} = load('shapes_v1_toy');
+    const saved = getTrainedModelDataToSave(state, project, trainedModel);
 
-    expect(state.hyperparameters).toEqual({k: 1});
-    expect(getPercentCorrect(state)).toBe('90.00');
+    expect(project.hyperparameters).toEqual({k: 1});
+    expect(getPercentCorrect(state, project)).toBe('90.00');
     expect(saved.selectedTrainer).toBe('knnClassify');
     expect(saved.hyperparameters).toEqual({k: 1});
     // Asserted here to prove `load` mirrors a level rather than a user upload;
@@ -159,39 +166,39 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
 
   test('records the accuracy the shapes level requires', () => {
     // `sides` fixes `shape` in this dataset: 0 circle, 3 triangle, 4 square.
-    // The curriculum level that loads it sets requireAccuracy to 100, so this
-    // number is the one that decides whether a student can continue.
-    const state = load('shapes_v1_toy', ['sides']);
+    // The curriculum level that loads it sets requireAccuracy to 100, and lab2
+    // keeps Continue disabled until the latest trained model reaches it.
+    const {state, project} = load('shapes_v1_toy', ['sides']);
 
-    expect(getPercentCorrect(state)).toBe('100.00');
-    expect(state.hyperparameters).toEqual({k: 1});
+    expect(getPercentCorrect(state, project)).toBe('100.00');
+    expect(project.hyperparameters).toEqual({k: 1});
   });
 
   test('records a sweep that does not choose the smallest k', () => {
-    const state = load('shapes_v1_toy', [
+    const {state, trainedModel, project} = load('shapes_v1_toy', [
       'sides',
       'border color',
       'fill color',
     ]);
 
-    expect(state.hyperparameters).toEqual({k: 7});
-    expect(getPercentCorrect(state)).toBe('100.00');
+    expect(project.hyperparameters).toEqual({k: 7});
+    expect(getPercentCorrect(state, project)).toBe('100.00');
 
-    const saved = getTrainedModelDataToSave(state);
+    const saved = getTrainedModelDataToSave(state, project, trainedModel);
     expect(saved.hyperparameters).toEqual({k: 7});
   });
 });
 
 describe('KNN characterization: jeans, a numerical label', () => {
   test('records the chosen k, the accuracy, and the predictions', () => {
-    const state = load('jeans');
-    const saved = getTrainedModelDataToSave(state);
+    const {state, trainedModel, project} = load('jeans');
+    const saved = getTrainedModelDataToSave(state, project, trainedModel);
 
     // A numerical label under 100 rows takes the minimal k, without a sweep.
-    expect(state.hyperparameters).toEqual({k: 1});
+    expect(project.hyperparameters).toEqual({k: 1});
     expect(saved.selectedTrainer).toBe('knnRegress');
     expect(saved.hyperparameters).toEqual({k: 1});
-    expect(getPercentCorrect(state)).toBe('62.50');
+    expect(getPercentCorrect(state, project)).toBe('62.50');
     expect(state.accuracyCheckLabels).toEqual([
       48, 48, 58, 48, 89.95, 92.95, 94.95, 94.95,
     ]);
@@ -203,21 +210,20 @@ describe('KNN characterization: jeans, a numerical label', () => {
   });
 
   test('records that the 13 features are unscaled', () => {
-    const state = load('jeans');
+    const {state, project} = load('jeans');
 
     // Nothing normalizes a feature, so `Cotton contents` (0-100) and the pocket
     // measurements (single digits) contribute to the distance at their own
     // scale. A trainer that scales features would move the accuracy above.
-    expect(state.selectedFeatures).toContain('Cotton contents');
-    expect(state.selectedFeatures).toContain('Front rivet height');
-    expect(getPercentCorrect(state)).toBe('62.50');
+    expect(project.selectedFeatures).toContain('Cotton contents');
+    expect(project.selectedFeatures).toContain('Front rivet height');
+    expect(getPercentCorrect(state, project)).toBe('62.50');
   });
 });
 
 describe('KNN characterization: save and reload', () => {
   test('a serialized model reloads and predicts identically', () => {
-    const state = load('shapes_v1_toy');
-    const model = state.trainedModel;
+    const {state, trainedModel: model} = load('shapes_v1_toy');
     const rows = state.accuracyCheckExamples;
 
     // JSON.parse(JSON.stringify(...)) is what the save path does to the model,

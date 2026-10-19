@@ -13,7 +13,7 @@ export const commands = {
         .then(modelData => {
           const predictParams = {
             ...modelData,
-            label: modelData.label.values
+            label: modelData.label?.values
               ? {
                   ...modelData.label,
                   values: modelData.label.values.map(value =>
@@ -24,7 +24,7 @@ export const commands = {
             testData: opts.testValues,
           };
           // We must localize the model data so that it will match the provided test values
-          predictParams.features = (predictParams.features || []).map(feature =>
+          predictParams.features = predictParams.features?.map(feature =>
             feature.values
               ? {
                   ...feature,
@@ -34,6 +34,10 @@ export const commands = {
                 }
               : feature
           );
+          predictParams.selectedFeatures = predictParams.selectedFeatures?.map(
+            feature => localization.translate(feature)
+          );
+
           // And then localize the keys that the model uses to map feature values to numerical values
           if (predictParams.featureNumberKey) {
             predictParams.featureNumberKey = Object.fromEntries(

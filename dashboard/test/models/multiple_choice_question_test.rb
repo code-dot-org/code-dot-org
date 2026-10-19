@@ -25,6 +25,19 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade({}))
   end
 
+  test "attempt_content_json omits the answer key" do
+    question = create(:multiple_choice_question)
+    refute question.attempt_content_json.key?(:correctChoiceId)
+    assert_equal 'b', question.builder_content_json[:correctChoiceId]
+  end
+
+  test "attempt and builder json both carry the description" do
+    question = create(:multiple_choice_question)
+    question.update!(content: question.content.merge('description' => 'Add them.'))
+    assert_equal 'Add them.', question.attempt_content_json[:description]
+    assert_equal 'Add them.', question.builder_content_json[:description]
+  end
+
   test "requires a non-blank question title" do
     question = build(
       :multiple_choice_question,
@@ -35,6 +48,16 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
       }
     )
     refute question.valid?
+  end
+
+  test "accepts a string description and rejects a non-string one" do
+    content = {
+      question_title: 'What is 2 + 2?',
+      choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}],
+      correct_choice_id: 'b'
+    }
+    assert build(:multiple_choice_question, content: content.merge(description: 'Add them.')).valid?
+    refute build(:multiple_choice_question, content: content.merge(description: ['Add them.'])).valid?
   end
 
   test "requires at least 2 choices" do
@@ -101,5 +124,18 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
       }
     )
     refute question.valid?
+  end
+
+  test "answered? is true only when a choice is selected" do
+    question = build(:multiple_choice_question)
+    assert question.answered?({'selectedChoiceId' => 'b'})
+    refute question.answered?({'selectedChoiceId' => ''})
+    refute question.answered?({})
+  end
+
+  test "placeholder_content is valid" do
+    question = build(:multiple_choice_question)
+    question.content = question.placeholder_content
+    assert question.valid?
   end
 end

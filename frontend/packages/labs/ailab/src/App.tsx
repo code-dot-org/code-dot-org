@@ -1,7 +1,7 @@
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button} from '@mui/material';
 import classNames from 'classnames';
-import {type CSSProperties, type ReactNode, useEffect} from 'react';
+import React, {type CSSProperties, type ReactNode, useEffect} from 'react';
 
 import {colors} from './constants';
 import {reportPanelView} from './helpers/metrics';
@@ -11,7 +11,15 @@ import {
 } from './helpers/navigationValidation';
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
-import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import {useProject} from './ProjectContext';
+import {
+  getHideDatasetView,
+  getHideTestingView,
+  getPanelButtons,
+  saveModel,
+  setCurrentPanel,
+} from './redux';
+import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
   Panel,
@@ -29,6 +37,7 @@ import SelectDataset from './UIComponents/SelectDataset';
 import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
+import {usePretrainOnLoad} from './usePretrainOnLoad';
 
 import styles from './app.module.scss';
 
@@ -85,7 +94,7 @@ const PanelButtons = ({
   };
 
   const saveResponseDataMessage = (
-    saveResponseData: SaveResponseData | undefined,
+    saveResponseData: SaveResponseData | undefined
   ): string | undefined => {
     // The list of known error types from share_filtering.rb.
     const errorTypes = ['email', 'address', 'phone', 'profanity'];
@@ -105,7 +114,11 @@ const PanelButtons = ({
   const loadSaveStatus = isSaveCompleteProp(saveStatus) ? (
     localizedSaveMessage(saveStatus)
   ) : (
-    <FontAwesomeIcon icon={faSpinner} />
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
   );
 
   const loadSaveResponseData = isSaveCompleteProp(saveStatus)
@@ -116,14 +129,15 @@ const PanelButtons = ({
     <div className={styles.navigation}>
       {panelButtons.prev && (
         <div className={styles.previous}>
-          <button
-            type="button"
-            className={styles.navButton}
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={onClickPrev}
             disabled={!panelButtons.prev.enabled}
           >
             {panelButtons.prev.text}
-          </button>
+          </Button>
         </div>
       )}
 
@@ -141,15 +155,16 @@ const PanelButtons = ({
 
       {panelButtons.next && (
         <div className={styles.next}>
-          <button
-            type="button"
+          <Button
             id="uitest-continue-button"
-            className={styles.navButton}
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={onClickNext}
             disabled={!panelButtons.next.enabled}
           >
             {panelButtons.next.text}
-          </button>
+          </Button>
         </div>
       )}
     </div>
@@ -209,8 +224,11 @@ export interface AppProps {
   /** Optional callback invoked when the instructions key changes. */
   setInstructionsKey?: (
     key: InstructionsKey,
-    options: {showOverlay?: boolean} | null,
+    options: {showOverlay?: boolean} | null
   ) => void;
+  onStartOver?: () => void;
+  /** Optional callback invoked with the accuracy of each newly trained model. */
+  onTrained?: (accuracy: number) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -219,21 +237,41 @@ export interface AppProps {
 const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
   shallowEqual(a.prev, b.prev) && shallowEqual(a.next, b.next);
 
-const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
+const App = ({
+  onContinue,
+  saveTrainedModel,
+  setInstructionsKey,
+  onStartOver,
+  onTrained,
+}: AppProps) => {
   const dispatch = useAppDispatch();
-  const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
+  const {project} = useProject();
+  const panelButtons = useAppSelector<PrevNextButtons>(
+    state => getPanelButtons(state, project),
+    panelButtonsEqual
+  );
   const currentPanel = useAppSelector(state => state.currentPanel);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
+  const latestResult = project.historicResults[0];
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
+  const {trainedModel} = useTrainingData();
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
+  const hideDatasetView = useAppSelector(getHideDatasetView);
+  const hideTestingView = useAppSelector(getHideTestingView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
+
+  usePretrainOnLoad();
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
     if (instructionsKey) {
       setInstructionsKey?.(instructionsKey, {showOverlay});
     }
+    // The consumer passes a fresh closure each render; depending on it would
+    // re-notify on every render rather than on a key change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instructionsKey, showOverlay]);
 
   // Report panel view on every panel change.
@@ -241,31 +279,51 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
     reportPanelView(currentPanel);
   }, [currentPanel]);
 
+  useEffect(() => {
+    if (latestResult) {
+      onTrained?.(Number(latestResult.accuracy));
+    }
+    // As above: report a result once, not once per render of the consumer.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [latestResult]);
+
   return (
     <div className={styles.app} style={colorVariables}>
-      <WorkspaceHeader />
+      <WorkspaceHeader
+        onStartOver={pretrained || hideTestingView ? undefined : onStartOver}
+      />
 
       {currentPanel === 'selectDataset' && (
-        <BodyContainer>
-          <ContainerLeft>
-            <SelectDataset />
-          </ContainerLeft>
-          <ContainerRight>
-            <DataCard />
-          </ContainerRight>
-        </BodyContainer>
-      )}
-
-      {currentPanel === 'datasetView' && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
             <ContainerLeft>
-              <DataDisplay />
+              <SelectDataset />
             </ContainerLeft>
-
             <ContainerRight>
-              <TrainPanel />
+              <DataCard />
             </ContainerRight>
+          </div>
+        </BodyContainer>
+      )}
+
+      {currentPanel === 'datasetView' && !hideDatasetView && (
+        <BodyContainer flush>
+          <div className={styles.panelRow}>
+            {hideTestingView ? (
+              <ContainerFullWidth>
+                <DataDisplay />
+              </ContainerFullWidth>
+            ) : (
+              <>
+                <ContainerLeft>
+                  <DataDisplay />
+                </ContainerLeft>
+
+                <ContainerRight>
+                  <TrainPanel />
+                </ContainerRight>
+              </>
+            )}
           </div>
           <ColumnAnalysis />
         </BodyContainer>
@@ -303,7 +361,9 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
           currentPanel={currentPanel}
           setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
           onContinue={onContinue}
-          startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
+          startSaveTrainedModel={() =>
+            dispatch(saveModel(saveTrainedModel, project, trainedModel))
+          }
           saveStatus={saveStatus}
           saveResponseData={saveResponseData}
           isSaveComplete={isSaveComplete}

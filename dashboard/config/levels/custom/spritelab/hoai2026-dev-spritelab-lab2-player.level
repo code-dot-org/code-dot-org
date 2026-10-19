@@ -44,18 +44,25 @@
       "..........",
       ".........."
     ],
-    "guide_steps": [
-      {
-        "text": "**Make your character the player.** Drag **set as player** onto the dotted outline under **when run** and pick your character. Click **Play**. Arrow keys: **left** and **right** to run, **up** to jump."
-      },
-      {
-        "text": "**You're in control!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Make your character the player.**",
+      "items": [
+        {
+          "text": "Drag **set as player** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_setAsPlatformPlayer",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
+      ]
+    },
     "long_instructions": "# Make your character the player\nDrag **set as player** onto the dotted outline and pick your character. Arrow keys: left and right to run, up to jump.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

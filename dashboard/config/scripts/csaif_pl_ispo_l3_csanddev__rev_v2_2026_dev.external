@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>The IPSO Model</h1>
 
-<p>The IPSO model describes how a computer system works in four steps:</p>
+<p>In Units 2 and 3, students start learning about hardware and how it works inside a computer system. To ground that, the next level introduces the IPSO model: a simple way to describe how a computer system works in four steps.</p>
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 20px auto;">
 

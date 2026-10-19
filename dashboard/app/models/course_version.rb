@@ -27,8 +27,6 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies, dependent: :destroy
   has_many :reference_guides, dependent: :destroy
 
-  attr_readonly :content_root_id
-
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates :key,

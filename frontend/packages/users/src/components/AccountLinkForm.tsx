@@ -3,7 +3,7 @@ import {useRef, type ReactNode} from 'react';
 import {resolveCsrfToken} from '@code-dot-org/core/api';
 
 /**
- * A native POST, as on the legacy page: the OAuth request phase and the
+ * A native POST: the OAuth request phase and the
  * disconnect action answer with redirects the browser must follow.
  */
 export default function AccountLinkForm({

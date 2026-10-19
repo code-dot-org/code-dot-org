@@ -62,6 +62,7 @@
         "enabled": {"type": "boolean"},
         "replicas": {"type": "integer", "minimum": 0},
         "priorityMode": {},
+        "terminationGracePeriodSeconds": {"type": "integer", "minimum": 0},
         "command": {"$ref": "#/definitions/stringList"},
         "args": {"$ref": "#/definitions/nullableStringList"},
         "RAILS_ENV": {"type": ["string", "null"]},
@@ -117,6 +118,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "stubSecrets": {"type": "boolean"},
         "mounts": {
           "type": "object",
           "additionalProperties": false,
@@ -133,6 +135,18 @@
               }
             }
           }
+        }
+      }
+    },
+    "serviceAccount": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "create": {"type": "boolean"},
+        "name": {"type": "string", "minLength": 1},
+        "annotations": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
         }
       }
     },

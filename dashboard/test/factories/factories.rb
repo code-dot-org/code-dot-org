@@ -2529,6 +2529,29 @@ FactoryBot.define do
     end
   end
 
+  factory :free_response_question, class: FreeResponseQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Free response question #{n}"}
+    content do
+      {
+        question_title: 'Give one specific example of an abstraction you used during this lesson.',
+        description: 'An example of an abstraction is a function or class that encapsulates a concept or behavior.'
+      }
+    end
+  end
+
+  factory :multiple_select_question, class: MultipleSelectQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple select question #{n}"}
+    content do
+      {
+        question_title: 'Which of these are even?',
+        choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+        correct_choice_ids: ['a', 'c']
+      }
+    end
+  end
+
   factory :quiz_question_standard do
     quiz_question
     standard

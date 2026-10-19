@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-04 02:11:42 UTC",
+    "serialized_at": "2026-10-16 21:56:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -350,6 +350,38 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "WebLab Adaptive",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+        "generate_outline": "Make a level for each of the following checkpoints. Label the level by the skill, checkpoint and tier. Decide what goes into the level based on what the student does. These should all be web lab levels and maybe some panels if needed to show info. \n\n\nSkill\nCheckpoint\nTier\nWhat the student can do\nEvidence the tutor sees\nLanguage of web dev\nRecognize\nGuided\nFind the hero section, feature cards, interactive canvas, and call-to-action on the target site\nLabeled or pointed-out blocks\nLanguage of web dev\nExplain purpose\nIndependent\nSay what each block is for\nA one-line purpose for each block\nLanguage of web dev\nAnalyze\nIndependent\nExplain why a block works well on the target site\nA claim plus a reason (\"the button stands out because...\")\nLanguage of web dev\nApply\nExtended\nUse block vocabulary in a prompt to get a more precise result\nA prompt that names blocks and their roles\nLanguage of web dev\nTransfer\nExtended\nUse the same vocabulary on a page they didn't build\nA short comparison or critique of two designs\nBuild with AI\nAsk\nGuided\nWrite a first prompt that names what they want built\nA prompt that names a section or a goal\nBuild with AI\nSpecify\nIndependent\nAdd concrete details so the prompt isn't vague\nA prompt with 2+ specific design details\nBuild with AI\nRefine\nIndependent\nFollow up on what came back, targeting one thing that's off\nA second prompt that refers to the first result\nBuild with AI\nJudge\nExtended\nCompare AI's output with what they wanted and decide whether to accept or redirect\nA stated decision with a reason\nBuild with AI\nOverride\nExtended\nDecide when editing by hand beats another prompt, and do it\nA manual change plus an explanation of why\nDebug with AI\nFind the clue\nGuided\nPoint to the part of an error message or broken page that shows what's wrong\nA highlighted keyword or element\nDebug with AI\nShare it\nGuided\nGive AI the error and get back an explanation and a fix\nThe error pasted into the tutor and a response received\nDebug with AI\nAdd context\nIndependent\nTell AI what they expected, what happened, and where\nA prompt that has all three\nDebug with AI\nVerify\nExtended\nCheck that the error is gone and nothing new broke\nA stated check (\"I reloaded and the image appears\")\nDebug with AI\nDiagnose first\nExtended\nGuess the cause before asking AI, then compare\nA written hypothesis plus a comparison with AI's answer"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "lesson-23",
+      "name": "Adaptive Checkpoint Steps",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 23,
+      "properties": {
+        "generate_outline": "Rules for every level\nCreate exactly 57 levels, numbered 1 to 57 as listed below. Do not add, merge or skip any.\nAudience: high school students, about 14 to 18, with no web development experience. Use plain, friendly wording.\nInfo panels: several panels per level, each with one image and one short line of text, about 15 words or fewer.\nVideos: one idea each, with the length given.\nInteractive widgets: small interactive experiences on a sample page or card, with no score. They can be practice.\nWeblab2: the student applies the skill in their own project only. The last level of every checkpoint is a Weblab2 level.\nMultiple choice: one question, four options, one best answer, with short feedback.\nFree response: one sentence.\nImage rules: AI is a system, never a creature. Never show a robot, mascot, face or assistant character. Show AI as a simple abstract node cluster or a spark, or show a student doing the work.\nShared checkpoints\n\nSteer It (objective 1: steer AI with specific prompts)\n\nSteer It, Level 1: Steer the AI (Video). A 60-second animated hook. A student types a vague order and gets a plain, generic page, then types a specific order and gets the page they pictured. The AI appears only as a node cluster that lights up and resolves into the page. It ends with the two moves: add a detail, or change one thing and say what to keep. Make it funny and fast.\nSteer It, Level 2: The prompt dial (Interactive widget). Toggles for who it is for, the feel, the parts and the content. Each toggle switched on changes a sample page from generic to specific, with a small animation and sound.\nSteer It, Level 3: Steer your first version (Weblab2). Prompt: “What would you change first? Add a detail or change one thing, and say what to keep.” Evidence: 2 or more specific details, or a follow-up that changes one thing.\n\nUse the Lingo (objective 3: web vocabulary)\n4. Use the Lingo, Level 1: Meet the page parts (Video). A 60-second animated tour. A page builds itself block by block, and each block pops in with its name and job: hero, feature cards, interactive canvas, call-to-action. Short, bright and a little silly.\n5. Use the Lingo, Level 2: Tap a block (Interactive widget). A sample page where each block wiggles and shows a name tag with its job when tapped.\n6. Use the Lingo, Level 3: Name a block in your project (Weblab2). Prompt: “Pick one part of your page and ask for a change. Name it and say its job.” Evidence: a prompt that names a block and its job.\n\nKeep or Redirect (objective 2: judge AI output)\n7. Keep or Redirect, Level 1: Match your plan (Video). A 60-second screen recording. A plan note sits beside an AI result. The narrator marks what matches and what doesn’t, then shows three choices: keep it, redirect it with a new prompt, or edit it by hand when the change is small and exact.\n8. Keep or Redirect, Level 2: Plan versus result (Interactive widget). The student taps the parts of a sample result that match a plan, then chooses keep, redirect or edit and watches the sample page respond.\n9. Keep or Redirect, Level 3: Decide on a real change (Weblab2). The student writes a one-sentence plan for a part of their page. When the AI changes something, the tutor shows the plan beside the result and asks: “Does this match? Keep it, redirect it or edit it, and say why.” Evidence: a decision with a reason that refers to the plan.\n\nGive Context (objective 4: describe a problem with context)\n10. Give Context, Level 1: Three questions (Video). A 60-second comedy sketch with a student. They type “It’s broken!” and get a vague reply shown as text beside a dimmed node cluster. They try again with a clear report and get a useful reply. It ends with three questions: what did you expect, what happened, and where?\n11. Give Context, Level 2: Build a bug report (Interactive widget). The student taps to add what was expected, what happened and where to a report about a sample broken page. After each part, a canned reply gets more useful.\n12. Give Context, Level 3: Report a problem in your project (Weblab2). Needs a real problem. Prompt: “Tell the AI what you expected, what happened and where.” Evidence: all three parts in one message.\n\nCheck the Fix (objective 5: verify a fix)\n13. Check the Fix, Level 1: Trust, then check (Info panels). Three panels. (1) A reload icon on a page: “Reload and look.” (2) A cursor clicking every button: “Click everything again.” (3) A page with a new problem circled: “Look for anything new that broke.”\n14. Check the Fix, Level 2: Before and after (Interactive widget). A slider across two versions of a sample page. It reveals a fixed bug and a new problem that appeared, and the student finds what changed.\n15. Check the Fix, Level 3: Check your fix (Weblab2). Prompt: “How did you check? Say what you tried.” Evidence: a stated check, such as “I reloaded and the image appears.”\n\nInteractive elements (all objective 3)\n\nA list and a random pick\n16. A list and a random pick, Level 1: Options in a list (Info panels). Three panels. (1) A list of five lunch places: “A list holds the options.” (2) An arrow picking one: “A random pick chooses one by chance.” (3) A wheel spinning: “The spinning is just how it looks.”\n17. A list and a random pick, Level 2: Edit the list, then pick (Interactive widget). The student adds or removes items on a sample list, presses Pick, and sees a different item each time.\n18. A list and a random pick, Level 3: Describe your list and your pick (Weblab2). Prompt: “What are your options, and how should the page choose one?” Evidence: explains that the page picks one item from a list by chance.\n\nA number and a rule\n19. A number and a rule, Level 1: Numbers and rules (Video). A 60-second video. A tiny game where a score goes up when something happens, and a rule says what happens next: if the score reaches 10, the round ends.\n20. A number and a rule, Level 2: Which one is the rule? (Multiple choice). Which sentence is a rule? A “The score is 7.” B “If the score reaches 10, the round ends.” C “The button is blue.” D “The page has a title.” Correct: B. Feedback: a rule says if this, then that.\n21. A number and a rule, Level 3: Say your rule (Free response). Prompt: “Write the rule for your page as if... then...” Accept any sensible rule that has a condition and a result.\n22. A number and a rule, Level 4: Add a number and a rule (Weblab2). Prompt: “What number will change, and what rule will use it?” The tutor shows the rule they wrote. Evidence: names the number that changes and the rule that uses it.\n\nRemember and show\n23. Remember and show, Level 1: The page remembers (Info panels). Four panels. (1) A wheel with three past picks listed: “The page can remember what happened.” (2) A click on a choice: “A click can save a pick.” (3) A list showing saved picks: “Then it can show them again.” (4) A progress bar filling: “Showing can be a bar, a count or a preview.”\n24. Remember and show, Level 2: What does the page remember? (Interactive widget). The student clicks choices on a sample page and watches a memory list and a display update together.\n25. Remember and show, Level 3: Remember and show in your project (Weblab2). Prompt: “What should your page remember, and what should show when it does?” Evidence: names what is remembered and what changes on screen.\n\nStyle and design\n\nLayout and spacing (objective 3)\n26. Layout and spacing, Level 1: Space, alignment and order (Info panels). Four panels. (1) A crowded page: “Crowded?” (2) The same page with more space: “Space gives each part room.” (3) Cards lined up under the hero: “Alignment makes it feel tidy.” (4) Parts in a clear order: “Order guides the eye.”\n27. Layout and spacing, Level 2: Which description fixes it? (Multiple choice). Three club cards feel crowded. Which prompt fixes it? A “Make it nicer.” B “Put more space between the three cards and line them up under the hero.” C “Make the cards disappear.” D “Make everything bigger.” Correct: B. Feedback: it names the blocks and says how to arrange them.\n28. Layout and spacing, Level 3: Describe a layout change (Weblab2). Prompt: “Which blocks need more room or a different order? Say how they should be arranged.” Evidence: names blocks and says how they should be arranged.\n\nStyle and consistency (objective 1)\n29. Style and consistency, Level 1: Name a style, keep it (Video). A 60-second video. A site drifts in style after three changes. The fix is to name the style in words and repeat it.\n30. Style and consistency, Level 2: Your style in three words (Free response). Prompt: “Name the style of your site in three words, like calm, clean, rounded.” The tutor saves the words and offers them back later. Accept any three words that describe the look, not the topic.\n31. Style and consistency, Level 3: Keep your style across two changes (Weblab2). Prompt: “Make your next change and say your style again.” The tutor checks a second change too. Evidence: a follow-up that restates the style while changing one thing.\n\nReadable and clear (objective 1)\n32. Readable and clear, Level 1: Size, contrast, wording (Info panels). Three panels. (1) Tiny text beside larger text: “Size: can you read it from across the table?” (2) Pale on pale beside dark on light: “Contrast: dark on light is easier.” (3) A confusing label beside a clear one: “Wording: short and plain.”\n33. Readable and clear, Level 2: Try the contrast (Interactive widget). Sliders change the text and background colors on a sample card and show a readable or hard-to-read indicator.\n34. Readable and clear, Level 3: Ask for a readability change (Weblab2). Prompt: “Which block is hardest to read? Ask for a change.” Evidence: names a block and a size, contrast or wording change.\n\nStory and message\n\nSay it in your voice (objective 1)\n35. Say it in your voice, Level 1: Tone words (Info panels). Four panels. The same headline in a playful, a calm and a bold tone, then a site with its tone words listed. Last text: “Name your tone, then repeat it.”\n36. Say it in your voice, Level 2: Your site’s tone in three words (Free response). Prompt: “Pick three words for how your site should sound.” The tutor saves them. Accept any three tone words, such as friendly, calm or funny.\n37. Say it in your voice, Level 3: Keep your tone across two changes (Weblab2). Prompt: “Make your next change and say your tone again.” Evidence: a follow-up that restates the tone while changing one thing.\n\nLead with the point (objective 3)\n38. Lead with the point, Level 1: Say it in the first line (Video). A 60-second video. A visitor decides in a few seconds, and the video compares a vague headline with one that says what the site is for.\n39. Lead with the point, Level 2: Which headline leads? (Multiple choice). Which headline tells a new student what the site is for? A “Welcome!” B “Find a club that fits you in two minutes.” C “Our school, our story.” D “Click here.” Correct: B. Feedback: it says what the site does and for whom.\n40. Lead with the point, Level 3: Rewrite your headline (Weblab2). Prompt: “What is your site for? Make the headline say it.” The student can ask the AI or edit by hand. Evidence: states the site’s purpose in the headline.\n\nMake the ask clear (objective 3)\n41. Make the ask clear, Level 1: A button that says what to do (Info panels). Three panels. (1) A button that says “Click here”: “Vague.” (2) A button that says “Find my club”: “Clear: a verb and a next step.” (3) The button under a short line: “Put it where eyes land.”\n42. Make the ask clear, Level 2: Fix the button (Interactive widget, practice). A sample page with a vague button that says “Click here.” The student types or picks a new label, and the page shows it in place with a friendly note on whether it has a clear verb and a next step. No score, and any label gets a friendly note.\n43. Make the ask clear, Level 3: Rewrite your call-to-action (Weblab2). Prompt: “What should a visitor do next? Make the button say it.” Evidence: a call-to-action with a clear verb and next step.\n\nUnder the hood\n\nRead the console (objective 4)\n44. Read the console, Level 1: What the console shows (Video). A 90-second screen recording. Open the console, find the red message, then point to the line number and the keyword.\n45. Read the console, Level 2: Where, what, which line (Info panels). Three panels. (1) A console with a red error: “Red means something went wrong.” (2) The keyword circled: “Which word does it name?” (3) The line number circled: “Which line does it point to?”\n46. Read the console, Level 3: Read your console (Weblab2). Needs a real error. Prompt: “Open the console. What does the error point to?” Evidence: says which keyword or line the error points to.\n\nFind it in the code (objective 3)\n47. Find it in the code, Level 1: Blocks have names (Info panels). Three panels. (1) The hero on the page: “Every block has a name in the code.” (2) Code with the hero line highlighted: “Find the name to find the block.” (3) A search box finding a word: “Search for the name.”\n48. Find it in the code, Level 2: Search the code (Interactive widget). The student types a block name into a search box on sample code, and matching lines highlight as they type.\n49. Find it in the code, Level 3: Find a line in your project (Weblab2). Prompt: “Pick a block and find its line in your code.” Evidence: points to the line or rule for a named block.\n\nUndo to find the cause (objective 5)\n50. Undo to find the cause, Level 1: Undo one at a time (Video). A 60-second video. Three changes were made and something broke. Undo the newest, check, and repeat until it works.\n51. Undo to find the cause, Level 2: What do you undo first? (Multiple choice). You made three changes and something broke. A “All three at once.” B “The newest change, then check.” C “The oldest change.” D “Nothing. Ask for a new page.” Correct: B. Feedback: undo one at a time and check after each, or you won’t know which one caused it.\n52. Undo to find the cause, Level 3: Guess the cause (Free response). Needs a real problem after more than one change. Prompt: “Which change do you think caused it, and why?” A good answer names one change and gives a reason. It doesn’t have to be right.\n53. Undo to find the cause, Level 4: Find the cause in your project (Weblab2). Prompt: “Undo your newest change. Did it fix it?” Repeat until it works. Evidence: names the change that caused the problem and how they found it.\n\nShow it off (the finish, not a checkpoint)\nShow it off, Level 1: Your hour, replayed (Interactive widget). A time-lapse of the student’s own site. A slider moves through its versions from the first prompt to the end. Badges pop up at the moments they were earned, such as the first named page part or the first fix they checked.\nShow it off, Level 2: Your skill summary (Interactive widget). A celebration built from the student’s own data. Bars and counters animate in: details per prompt (the first prompt beside a recent one), tries to get what they pictured, and a replay of the 1 to 5 closeness rating they tapped after each build. Badges unlock for the moves they used most: Steerer, Page Namer, Redirector, Bug Detective and Fix Checker. Badges are simple abstract shapes with a label, never characters. A try-next card points to the highlighted destination, and they can save it as a share card.\nShow it off, Level 3: Tell people about it (Free response). Prompt: “What is your site, who is it for, and what are you proudest of?” The sentences go on the share card. Accept any honest description.\nShow it off, Level 4: Show it off (Weblab2). The student publishes the site and copies the link, then shares it with the class: present it, post it, or both. The teacher chooses how. The share card goes with it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -714,6 +746,30 @@
       "seeding_key": {
         "lesson_activity.key": "6523f8fe-df43-4ad7-9e20-4f391487dce9",
         "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "680241f9-c69d-4850-89ce-f044f535d4e6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "680241f9-c69d-4850-89ce-f044f535d4e6",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground"
+      }
+    },
+    {
+      "key": "c410c326-d699-4a73-b2f7-0826f6169fa5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c410c326-d699-4a73-b2f7-0826f6169fa5",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "",
         "script.name": "katies-playground"
       }
@@ -1543,6 +1599,26 @@
       "seeding_key": {
         "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016",
         "lesson_activity.key": "6523f8fe-df43-4ad7-9e20-4f391487dce9"
+      }
+    },
+    {
+      "key": "891bad12-4466-4b83-b31e-67fb16c46410",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410",
+        "lesson_activity.key": "680241f9-c69d-4850-89ce-f044f535d4e6"
+      }
+    },
+    {
+      "key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5",
+        "lesson_activity.key": "c410c326-d699-4a73-b2f7-0826f6169fa5"
       }
     }
   ],
@@ -6234,6 +6310,1560 @@
       "level_keys": [
         "HoAI26-How-AI"
       ]
+    },
+    {
+      "chapter": 199,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-craft-ai-prompt"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-craft-ai-prompt"
+      ]
+    },
+    {
+      "chapter": 200,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-build-with-ai-and-override"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-build-with-ai-and-override"
+      ]
+    },
+    {
+      "chapter": 201,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-identify-web-components"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-identify-web-components"
+      ]
+    },
+    {
+      "chapter": 202,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-intro-web-anatomy"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-intro-web-anatomy"
+      ]
+    },
+    {
+      "chapter": 203,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-explain-component-purpose"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-explain-component-purpose"
+      ]
+    },
+    {
+      "chapter": 204,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-critique-web-design"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-critique-web-design"
+      ]
+    },
+    {
+      "chapter": 205,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-debug-with-ai"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-debug-with-ai"
+      ]
+    },
+    {
+      "chapter": 206,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-verify-and-diagnose"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-verify-and-diagnose"
+      ]
+    },
+    {
+      "chapter": 207,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-kickoff"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-kickoff"
+      ]
+    },
+    {
+      "chapter": 208,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-Refine1"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-Refine1"
+      ]
+    },
+    {
+      "chapter": 209,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-web-sections"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-web-sections"
+      ]
+    },
+    {
+      "chapter": 210,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-speak-web-dev"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-speak-web-dev"
+      ]
+    },
+    {
+      "chapter": 211,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-override"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-override"
+      ]
+    },
+    {
+      "chapter": 212,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-test-debug-panel"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "adaptive-test-debug-panel"
+      ]
+    },
+    {
+      "chapter": 213,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-training-data-animations"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "HoAI26-training-data-animations"
+      ]
+    },
+    {
+      "chapter": 214,
+      "position": 16,
+      "activity_section_position": 16,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-transition-panels"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "HoAI26-transition-panels"
+      ]
+    },
+    {
+      "chapter": 215,
+      "position": 17,
+      "activity_section_position": 17,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-training-data-animations-branded"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      },
+      "level_keys": [
+        "HoAI26-training-data-animations-branded"
+      ]
+    },
+    {
+      "chapter": 216,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-steer-it-1"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-steer-it-1"
+      ]
+    },
+    {
+      "chapter": 217,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-steer-it-2"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-steer-it-2"
+      ]
+    },
+    {
+      "chapter": 218,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-steer-it-3"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-steer-it-3"
+      ]
+    },
+    {
+      "chapter": 219,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-use-the-lingo-4"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-use-the-lingo-4"
+      ]
+    },
+    {
+      "chapter": 220,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-use-the-lingo-5"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-use-the-lingo-5"
+      ]
+    },
+    {
+      "chapter": 221,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-use-the-lingo-6"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-use-the-lingo-6"
+      ]
+    },
+    {
+      "chapter": 222,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-keep-or-redirect-7"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-keep-or-redirect-7"
+      ]
+    },
+    {
+      "chapter": 223,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-keep-or-redirect-8"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-keep-or-redirect-8"
+      ]
+    },
+    {
+      "chapter": 224,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-keep-or-redirect-9"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-keep-or-redirect-9"
+      ]
+    },
+    {
+      "chapter": 225,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-give-context-10"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-give-context-10"
+      ]
+    },
+    {
+      "chapter": 226,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-give-context-11"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-give-context-11"
+      ]
+    },
+    {
+      "chapter": 227,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-give-context-12"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-give-context-12"
+      ]
+    },
+    {
+      "chapter": 228,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-check-the-fix-13"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-check-the-fix-13"
+      ]
+    },
+    {
+      "chapter": 229,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-check-the-fix-14"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-check-the-fix-14"
+      ]
+    },
+    {
+      "chapter": 230,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-check-the-fix-15"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-check-the-fix-15"
+      ]
+    },
+    {
+      "chapter": 231,
+      "position": 16,
+      "activity_section_position": 16,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-list-and-a-random-pick-16"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-list-and-a-random-pick-16"
+      ]
+    },
+    {
+      "chapter": 232,
+      "position": 17,
+      "activity_section_position": 17,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-list-and-a-random-pick-17"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-list-and-a-random-pick-17"
+      ]
+    },
+    {
+      "chapter": 233,
+      "position": 18,
+      "activity_section_position": 18,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-list-and-a-random-pick-18"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-list-and-a-random-pick-18"
+      ]
+    },
+    {
+      "chapter": 234,
+      "position": 19,
+      "activity_section_position": 19,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-19"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-number-and-a-rule-19"
+      ]
+    },
+    {
+      "chapter": 235,
+      "position": 20,
+      "activity_section_position": 20,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-20"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-number-and-a-rule-20"
+      ]
+    },
+    {
+      "chapter": 236,
+      "position": 21,
+      "activity_section_position": 21,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-21"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-number-and-a-rule-21"
+      ]
+    },
+    {
+      "chapter": 237,
+      "position": 22,
+      "activity_section_position": 22,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-22"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-a-number-and-a-rule-22"
+      ]
+    },
+    {
+      "chapter": 238,
+      "position": 23,
+      "activity_section_position": 23,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-remember-and-show-23"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-remember-and-show-23"
+      ]
+    },
+    {
+      "chapter": 239,
+      "position": 24,
+      "activity_section_position": 24,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-remember-and-show-24"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-remember-and-show-24"
+      ]
+    },
+    {
+      "chapter": 240,
+      "position": 25,
+      "activity_section_position": 25,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-remember-and-show-25"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-remember-and-show-25"
+      ]
+    },
+    {
+      "chapter": 241,
+      "position": 26,
+      "activity_section_position": 26,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-layout-and-spacing-26"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-layout-and-spacing-26"
+      ]
+    },
+    {
+      "chapter": 242,
+      "position": 27,
+      "activity_section_position": 27,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-layout-and-spacing-27"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-layout-and-spacing-27"
+      ]
+    },
+    {
+      "chapter": 243,
+      "position": 28,
+      "activity_section_position": 28,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-layout-and-spacing-28"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-layout-and-spacing-28"
+      ]
+    },
+    {
+      "chapter": 244,
+      "position": 29,
+      "activity_section_position": 29,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-style-and-consistency-29"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-style-and-consistency-29"
+      ]
+    },
+    {
+      "chapter": 245,
+      "position": 30,
+      "activity_section_position": 30,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-style-and-consistency-30"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-style-and-consistency-30"
+      ]
+    },
+    {
+      "chapter": 246,
+      "position": 31,
+      "activity_section_position": 31,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-style-and-consistency-31"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-style-and-consistency-31"
+      ]
+    },
+    {
+      "chapter": 247,
+      "position": 32,
+      "activity_section_position": 32,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-readable-and-clear-32"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-readable-and-clear-32"
+      ]
+    },
+    {
+      "chapter": 248,
+      "position": 33,
+      "activity_section_position": 33,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-readable-and-clear-33"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-readable-and-clear-33"
+      ]
+    },
+    {
+      "chapter": 249,
+      "position": 34,
+      "activity_section_position": 34,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-readable-and-clear-34"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-readable-and-clear-34"
+      ]
+    },
+    {
+      "chapter": 250,
+      "position": 35,
+      "activity_section_position": 35,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-say-it-in-your-voice-35"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-say-it-in-your-voice-35"
+      ]
+    },
+    {
+      "chapter": 251,
+      "position": 36,
+      "activity_section_position": 36,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-say-it-in-your-voice-36"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-say-it-in-your-voice-36"
+      ]
+    },
+    {
+      "chapter": 252,
+      "position": 37,
+      "activity_section_position": 37,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-say-it-in-your-voice-37"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-say-it-in-your-voice-37"
+      ]
+    },
+    {
+      "chapter": 253,
+      "position": 38,
+      "activity_section_position": 38,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-lead-with-the-point-38"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-lead-with-the-point-38"
+      ]
+    },
+    {
+      "chapter": 254,
+      "position": 39,
+      "activity_section_position": 39,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-lead-with-the-point-39"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-lead-with-the-point-39"
+      ]
+    },
+    {
+      "chapter": 255,
+      "position": 40,
+      "activity_section_position": 40,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-lead-with-the-point-40"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-lead-with-the-point-40"
+      ]
+    },
+    {
+      "chapter": 256,
+      "position": 41,
+      "activity_section_position": 41,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-make-the-ask-clear-41"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-make-the-ask-clear-41"
+      ]
+    },
+    {
+      "chapter": 257,
+      "position": 42,
+      "activity_section_position": 42,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-make-the-ask-clear-42"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-make-the-ask-clear-42"
+      ]
+    },
+    {
+      "chapter": 258,
+      "position": 43,
+      "activity_section_position": 43,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-make-the-ask-clear-43"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-make-the-ask-clear-43"
+      ]
+    },
+    {
+      "chapter": 259,
+      "position": 44,
+      "activity_section_position": 44,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-read-the-console-44"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-read-the-console-44"
+      ]
+    },
+    {
+      "chapter": 260,
+      "position": 45,
+      "activity_section_position": 45,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-read-the-console-45"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-read-the-console-45"
+      ]
+    },
+    {
+      "chapter": 261,
+      "position": 46,
+      "activity_section_position": 46,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-read-the-console-46"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-read-the-console-46"
+      ]
+    },
+    {
+      "chapter": 262,
+      "position": 47,
+      "activity_section_position": 47,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-find-it-in-the-code-47"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-find-it-in-the-code-47"
+      ]
+    },
+    {
+      "chapter": 263,
+      "position": 48,
+      "activity_section_position": 48,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-find-it-in-the-code-48"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-find-it-in-the-code-48"
+      ]
+    },
+    {
+      "chapter": 264,
+      "position": 49,
+      "activity_section_position": 49,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-find-it-in-the-code-49"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-find-it-in-the-code-49"
+      ]
+    },
+    {
+      "chapter": 265,
+      "position": 50,
+      "activity_section_position": 50,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-50"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-undo-to-find-the-cause-50"
+      ]
+    },
+    {
+      "chapter": 266,
+      "position": 51,
+      "activity_section_position": 51,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-51"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-undo-to-find-the-cause-51"
+      ]
+    },
+    {
+      "chapter": 267,
+      "position": 52,
+      "activity_section_position": 52,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-52"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-undo-to-find-the-cause-52"
+      ]
+    },
+    {
+      "chapter": 268,
+      "position": 53,
+      "activity_section_position": 53,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-53"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-undo-to-find-the-cause-53"
+      ]
+    },
+    {
+      "chapter": 269,
+      "position": 54,
+      "activity_section_position": 54,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-54"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-show-it-off-54"
+      ]
+    },
+    {
+      "chapter": 270,
+      "position": 55,
+      "activity_section_position": 55,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-55"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-show-it-off-55"
+      ]
+    },
+    {
+      "chapter": 271,
+      "position": 56,
+      "activity_section_position": 56,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-56"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-show-it-off-56"
+      ]
+    },
+    {
+      "chapter": 272,
+      "position": 57,
+      "activity_section_position": 57,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-57"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      },
+      "level_keys": [
+        "adaptive-HoAI26-show-it-off-57"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8611,6 +10241,894 @@
         "lesson_group.key": "",
         "script.name": "katies-playground",
         "activity_section.key": "5302e1e6-0fb6-489e-9d71-3f0182f79016"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-craft-ai-prompt",
+        "script_level.level_keys": [
+          "adaptive-test-craft-ai-prompt"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-build-with-ai-and-override",
+        "script_level.level_keys": [
+          "adaptive-test-build-with-ai-and-override"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-identify-web-components",
+        "script_level.level_keys": [
+          "adaptive-test-identify-web-components"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-intro-web-anatomy",
+        "script_level.level_keys": [
+          "adaptive-test-intro-web-anatomy"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-explain-component-purpose",
+        "script_level.level_keys": [
+          "adaptive-test-explain-component-purpose"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-critique-web-design",
+        "script_level.level_keys": [
+          "adaptive-test-critique-web-design"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-debug-with-ai",
+        "script_level.level_keys": [
+          "adaptive-test-debug-with-ai"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-verify-and-diagnose",
+        "script_level.level_keys": [
+          "adaptive-test-verify-and-diagnose"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-kickoff",
+        "script_level.level_keys": [
+          "adaptive-test-kickoff"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-Refine1",
+        "script_level.level_keys": [
+          "adaptive-test-Refine1"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-web-sections",
+        "script_level.level_keys": [
+          "adaptive-test-web-sections"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-speak-web-dev",
+        "script_level.level_keys": [
+          "adaptive-test-speak-web-dev"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-override",
+        "script_level.level_keys": [
+          "adaptive-test-override"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-test-debug-panel",
+        "script_level.level_keys": [
+          "adaptive-test-debug-panel"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-training-data-animations",
+        "script_level.level_keys": [
+          "HoAI26-training-data-animations"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-transition-panels",
+        "script_level.level_keys": [
+          "HoAI26-transition-panels"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-training-data-animations-branded",
+        "script_level.level_keys": [
+          "HoAI26-training-data-animations-branded"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "891bad12-4466-4b83-b31e-67fb16c46410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-steer-it-1",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-steer-it-1"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-steer-it-2",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-steer-it-2"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-steer-it-3",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-steer-it-3"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-use-the-lingo-4",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-use-the-lingo-4"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-use-the-lingo-5",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-use-the-lingo-5"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-use-the-lingo-6",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-use-the-lingo-6"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-keep-or-redirect-7",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-keep-or-redirect-7"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-keep-or-redirect-8",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-keep-or-redirect-8"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-keep-or-redirect-9",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-keep-or-redirect-9"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-give-context-10",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-give-context-10"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-give-context-11",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-give-context-11"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-give-context-12",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-give-context-12"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-check-the-fix-13",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-check-the-fix-13"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-check-the-fix-14",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-check-the-fix-14"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-check-the-fix-15",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-check-the-fix-15"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-list-and-a-random-pick-16",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-list-and-a-random-pick-16"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-list-and-a-random-pick-17",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-list-and-a-random-pick-17"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-list-and-a-random-pick-18",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-list-and-a-random-pick-18"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-number-and-a-rule-19",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-19"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-number-and-a-rule-20",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-20"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-number-and-a-rule-21",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-21"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-a-number-and-a-rule-22",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-a-number-and-a-rule-22"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-remember-and-show-23",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-remember-and-show-23"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-remember-and-show-24",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-remember-and-show-24"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-remember-and-show-25",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-remember-and-show-25"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-layout-and-spacing-26",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-layout-and-spacing-26"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-layout-and-spacing-27",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-layout-and-spacing-27"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-layout-and-spacing-28",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-layout-and-spacing-28"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-style-and-consistency-29",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-style-and-consistency-29"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-style-and-consistency-30",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-style-and-consistency-30"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-style-and-consistency-31",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-style-and-consistency-31"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-readable-and-clear-32",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-readable-and-clear-32"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-readable-and-clear-33",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-readable-and-clear-33"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-readable-and-clear-34",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-readable-and-clear-34"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-say-it-in-your-voice-35",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-say-it-in-your-voice-35"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-say-it-in-your-voice-36",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-say-it-in-your-voice-36"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-say-it-in-your-voice-37",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-say-it-in-your-voice-37"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-lead-with-the-point-38",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-lead-with-the-point-38"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-lead-with-the-point-39",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-lead-with-the-point-39"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-lead-with-the-point-40",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-lead-with-the-point-40"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-make-the-ask-clear-41",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-make-the-ask-clear-41"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-make-the-ask-clear-42",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-make-the-ask-clear-42"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-make-the-ask-clear-43",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-make-the-ask-clear-43"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-read-the-console-44",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-read-the-console-44"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-read-the-console-45",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-read-the-console-45"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-read-the-console-46",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-read-the-console-46"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-find-it-in-the-code-47",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-find-it-in-the-code-47"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-find-it-in-the-code-48",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-find-it-in-the-code-48"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-find-it-in-the-code-49",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-find-it-in-the-code-49"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-undo-to-find-the-cause-50",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-50"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-undo-to-find-the-cause-51",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-51"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-undo-to-find-the-cause-52",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-52"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-undo-to-find-the-cause-53",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-undo-to-find-the-cause-53"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-show-it-off-54",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-54"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-show-it-off-55",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-55"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-show-it-off-56",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-56"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "adaptive-HoAI26-show-it-off-57",
+        "script_level.level_keys": [
+          "adaptive-HoAI26-show-it-off-57"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "5f0706f6-9841-4181-86d8-1eb460ca2bf5"
       }
     }
   ],

@@ -34,18 +34,25 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Put your treasure in the world.** Click a square your player can reach. Click another square to move it."
-      },
-      {
-        "text": "**It's in your world.** Click **Play** and go find it. Then click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "worldSprites": 2
+    "objectives": {
+      "title": "**Put your treasure in the world.**",
+      "items": [
+        {
+          "text": "Click a square your player can reach to put your treasure there.",
+          "check": {
+            "kind": "world",
+            "role": "treasure"
+          }
+        },
+        {
+          "text": "Click **Play** and go find it.",
+          "check": {
+            "kind": "reach",
+            "role": "treasure"
+          }
         }
-      }
-    ],
+      ]
+    },
     "long_instructions": "# Put your treasure in the world\nClick a square your player can reach. Click another square to move the treasure.",
     "header_label": "Make a platformer"
   }

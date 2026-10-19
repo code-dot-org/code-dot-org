@@ -1,11 +1,20 @@
 // Chooses which screen to show: the checkpoint map, one checkpoint's steps,
 // or the project on its own. Owns the progress they share.
 
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
+import {AichatContext} from '@cdo/apps/aichat/types';
+import {
+  sendAdaptiveStepReport,
+  sendStartedReportIfNotStarted,
+} from '@cdo/apps/code-studio/progressRedux';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {useProgress} from '../progress';
+import {isAdaptiveAiEnabled} from '../ai/generate';
+import {PROJECT_STEP_ID, Progress, useProgress} from '../progress';
 import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
@@ -23,6 +32,7 @@ type View =
 interface PathwayAppProps {
   pathway: Pathway;
   progressKey: ProgressKey;
+  userId?: number | null;
 }
 
 /**
@@ -37,7 +47,7 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
     description: pathway.project.description,
     steps: [
       {
-        id: 'project',
+        id: PROJECT_STEP_ID,
         title: 'Work on my Project',
         kind: 'level',
         level: pathway.project.templateLevel,
@@ -52,31 +62,119 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
 const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
+  userId,
 }) => {
-  const {statusMap, isLoading, markStarted, markComplete, reset} = useProgress(
-    pathway,
-    progressKey
+  const dispatch = useAppDispatch();
+  const reportLevelStep = useCallback(
+    (levelId: number, appType: string, result: number, timeMs: number) =>
+      dispatch(sendAdaptiveStepReport(levelId, appType, result, timeMs)),
+    [dispatch]
   );
-  const [view, setView] = useState<View>({kind: 'map'});
-  const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
-
-  const checkpoint =
-    view.kind === 'step'
-      ? pathway.checkpoints.find(c => c.id === view.checkpointId)
-      : undefined;
-  const playing = view.kind === 'project' ? project : checkpoint;
-  const pathwayContext = useMemo(
-    () => playing && {pathway, checkpoint: playing, statusMap},
-    [pathway, playing, statusMap]
-  );
-
-  if (isLoading) {
+  const {progress, statusMap, ...actions} = useProgress(pathway, progressKey, {
+    userId,
+    reportLevelStep,
+  });
+  if (!progress) {
     return (
       <div className={styles.app}>
         <Loading isLoading />
       </div>
     );
   }
+  // Automatically start on the first checkpoint if there's no progress.
+  const noProgress = Object.keys(progress.steps).length === 0;
+  const initialCheckpointId = noProgress
+    ? pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id
+    : undefined;
+  return (
+    <LoadedPathwayApp
+      pathway={pathway}
+      progressKey={progressKey}
+      progress={progress}
+      statusMap={statusMap}
+      initialView={
+        initialCheckpointId
+          ? {kind: 'step', checkpointId: initialCheckpointId}
+          : {kind: 'map'}
+      }
+      initialCheckpointId={initialCheckpointId}
+      {...actions}
+    />
+  );
+};
+
+/** What useProgress returns once the stored progress has loaded. */
+type LoadedProgress = ReturnType<typeof useProgress> & {progress: Progress};
+
+type LoadedPathwayAppProps = PathwayAppProps &
+  LoadedProgress & {
+    initialView: View;
+    /** A checkpoint the initial view opens, which starts the adaptive level. */
+    initialCheckpointId?: string;
+  };
+
+// The pathway once its progress is known. Reads initialView and
+// initialCheckpointId once, on mount.
+const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
+  pathway,
+  progressKey,
+  statusMap,
+  stepContextMap,
+  initialView,
+  initialCheckpointId,
+  startStep,
+  completeStep,
+  leaveStep,
+  saveGeneratedInstructions,
+  saveAnswers,
+}) => {
+  const dispatch = useAppDispatch();
+  const [view, setView] = useState<View>(initialView);
+  useEffect(() => {
+    if (initialCheckpointId)
+      dispatch(sendStartedReportIfNotStarted('adaptive'));
+  }, [initialCheckpointId, dispatch]);
+  const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
+  // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
+  useEffect(() => {
+    setAiGatewayOptIn(isAdaptiveAiEnabled());
+    return () => setAiGatewayOptIn(false);
+  }, []);
+
+  const checkpoint =
+    view.kind === 'step'
+      ? pathway.checkpoints.find(c => c.id === view.checkpointId)
+      : undefined;
+  const playing = view.kind === 'project' ? project : checkpoint;
+  // The shell's AI calls run as the adaptive level, not the step's level.
+  const aiContext = useMemo<AichatContext>(
+    () => ({
+      clientType: AiChatClientTypes.ADAPTIVE,
+      currentLevelId: progressKey.levelId,
+      scriptId: progressKey.scriptId,
+      channelId: undefined,
+    }),
+    [progressKey.levelId, progressKey.scriptId]
+  );
+  const pathwayContext = useMemo(
+    () =>
+      playing && {
+        pathway,
+        checkpoint: playing,
+        statusMap,
+        stepContextMap,
+        saveGeneratedInstructions,
+        aiContext,
+      },
+    [
+      pathway,
+      playing,
+      statusMap,
+      stepContextMap,
+      saveGeneratedInstructions,
+      aiContext,
+    ]
+  );
 
   if (pathwayContext) {
     const isProject = view.kind === 'project';
@@ -87,16 +185,17 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
+            onStartStep={startStep}
+            onCompleteStep={completeStep}
+            onLeaveStep={leaveStep}
+            onSaveAnswers={saveAnswers}
             onExit={() =>
               setView({
                 kind: 'map',
                 focusId: isProject ? undefined : checkpoint.id,
               })
             }
-            onFinish={() => {
-              if (!isProject) markComplete(checkpoint.id);
-              setView({kind: 'map'});
-            }}
+            onFinish={() => setView({kind: 'map'})}
           />
         </PathwayContext.Provider>
       </div>
@@ -111,13 +210,12 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
         focusId={view.kind === 'map' ? view.focusId : undefined}
         onFocus={focusId => setView({kind: 'map', focusId})}
         onStart={id => {
-          markStarted(id);
+          dispatch(sendStartedReportIfNotStarted('adaptive'));
           setView({kind: 'step', checkpointId: id});
         }}
-        onWorkOnProject={() => setView({kind: 'project'})}
-        onReset={() => {
-          reset();
-          setView({kind: 'map'});
+        onWorkOnProject={() => {
+          dispatch(sendStartedReportIfNotStarted('adaptive'));
+          setView({kind: 'project'});
         }}
       />
     </div>

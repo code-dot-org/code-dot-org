@@ -124,31 +124,36 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     });
   };
 
+  // A MergeView has two editors; each needs its own tab stop and key handlers.
   useEffect(() => {
-    let observer: MutationObserver | null = null;
-    let cleanup: (() => void) | null = null;
+    if (!editorView) {
+      return;
+    }
+    const views =
+      editorView instanceof MergeView
+        ? [
+            {view: editorView.a, label: 'Before AI Tutor changes. '},
+            {view: editorView.b, label: 'After AI Tutor changes. '},
+          ]
+        : [{view: editorView, label: ''}];
 
-    function setup() {
-      // This is not 'reacty' but we have to query them because CodeMirror
-      // manages these elements within the extension.
-      const cmScroller = document.querySelector(
-        '.cm-scroller'
-      ) as HTMLElement | null;
-      const cmContentDiv = document.querySelector(
-        '.cm-content'
-      ) as HTMLElement | null;
-      const cmGutters = document.querySelector(
-        '.cm-gutters'
-      ) as HTMLElement | null;
-      if (!cmScroller || !cmContentDiv) return false;
+    const cleanups = views.map(({view, label}, index) => {
+      const cmScroller = view.scrollDOM;
+      const cmContentDiv = view.contentDOM;
+      const cmGutters = view.dom.querySelector('.cm-gutters');
 
       // Make scroller part of tab order, make editor hidden from tab order, and
       // set labels on both elements
       cmContentDiv.setAttribute('tabIndex', '-1');
       cmScroller.setAttribute('tabIndex', '0');
-      cmContentDiv.setAttribute('aria-label', i18n.codeEditorEditing());
-      cmScroller.setAttribute('id', 'uitest-codebridge-editor');
-      cmScroller.setAttribute('aria-label', i18n.codeEditorDescription());
+      cmContentDiv.setAttribute('aria-label', label + i18n.codeEditorEditing());
+      if (index === 0) {
+        cmScroller.setAttribute('id', 'uitest-codebridge-editor');
+      }
+      cmScroller.setAttribute(
+        'aria-label',
+        label + i18n.codeEditorDescription()
+      );
 
       // CodeMirror hardcodes aria-hidden="true" on the gutter container.
       // Line numbers are informative content; expose them to AT.
@@ -182,30 +187,16 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       cmScroller.addEventListener('blur', onScrollerBlur);
 
       // Cleanup function
-      cleanup = () => {
+      return () => {
         cmScroller.removeEventListener('keydown', onScrollerKeyDown);
         cmContentDiv.removeEventListener('keydown', onContentKeyDown);
         cmScroller.removeEventListener('focus', onScrollerFocus);
         cmScroller.removeEventListener('blur', onScrollerBlur);
       };
+    });
 
-      return true;
-    }
-
-    if (!setup()) {
-      observer = new MutationObserver(() => {
-        if (setup()) {
-          observer?.disconnect();
-        }
-      });
-      observer.observe(document.body, {childList: true, subtree: true});
-    }
-
-    return () => {
-      observer?.disconnect();
-      cleanup?.();
-    };
-  }, []);
+    return () => cleanups.forEach(cleanup => cleanup());
+  }, [editorView]);
 
   useEffect(() => {
     if (!editorFontSizeLoaded || editorRef.current === null || didInit) {
