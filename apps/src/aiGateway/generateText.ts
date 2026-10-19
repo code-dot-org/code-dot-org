@@ -16,7 +16,6 @@ import {
   recordGatewayRequestError,
   recordGatewayRequestOk,
   recordTokenNotIssued,
-  type SigningKey,
 } from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
@@ -121,9 +120,6 @@ const generateTextThroughGateway = async <
   const execute = async (): Promise<
     GatewayGenerateTextResult<TOOLS, OUTPUT>
   > => {
-    // Undefined until Rails issues a token; failures before that are not gateway requests.
-    let signingKey: SigningKey | undefined;
-    let outcomeRecorded = false;
     try {
       const serializedOutput = await serializeOutputSchema(options.output);
 
@@ -143,7 +139,6 @@ const generateTextThroughGateway = async <
           throw error;
         }
       );
-      signingKey = access.signingKey;
       const {token, turnstileEnforcementMode} = access;
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
@@ -161,9 +156,11 @@ const generateTextThroughGateway = async <
         JSON.stringify({...payload, token}),
         false,
         headers
-      );
-      recordGatewayRequestOk(signingKey);
-      outcomeRecorded = true;
+      ).catch(async (error: unknown) => {
+        await recordGatewayRequestError(access.signingKey, error);
+        throw error;
+      });
+      recordGatewayRequestOk(access.signingKey);
 
       const rawResponse = await response.json();
       const parseResult =
@@ -187,9 +184,6 @@ const generateTextThroughGateway = async <
 
       return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
     } catch (error) {
-      if (!outcomeRecorded && signingKey !== undefined) {
-        await recordGatewayRequestError(signingKey, error);
-      }
       if (!schemaErrorReported) {
         await reportGatewayError(
           error,
