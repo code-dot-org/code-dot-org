@@ -9,7 +9,9 @@ reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
 
 # Which proxy, if any, the read replica pool connects through: 'proxysql', 'rdsproxy', or 'none'.
 proxysql_installed = !CDO.db_proxy_admin.nil?
-database_proxy = DCDO.get('database_proxy', proxysql_installed ? 'proxysql' : 'none')
+database_proxy = CDO.db_proxy.to_s.strip
+# An unset Secret preserves the current production functionality, rather than silently moving reads off ProxySQL.
+database_proxy = proxysql_installed ? 'proxysql' : 'none' if database_proxy.empty?
 database_proxy = 'none' if database_proxy == 'proxysql' && !proxysql_installed
 
 # Client database connection configuration settings for the primary (writer instance), replica (read replica
