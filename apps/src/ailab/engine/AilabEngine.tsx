@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import {Provider} from 'react-redux';
 
 import App, {type AppProps} from './App';
@@ -46,19 +46,13 @@ const AilabEngine = ({
     store.dispatch(setInstructionsEnabled(!!appProps.setInstructionsKey));
   }
 
-  // Likewise at render time: loading in an effect would let the lab render and
-  // paint a frame of the previous level's state.
+  // A layout effect, not a plain effect: it runs before the browser paints, so
+  // a level change never shows a frame of the previous level's state.
   // TODO: read level properties from lab2 redux rather than passing them into the store,
   // and follow the standard lab2 patterns for level changes.
-  const loaded = useRef<{levelId?: string | number; mode?: Mode}>(undefined);
-  if (
-    !loaded.current ||
-    loaded.current.levelId !== levelId ||
-    loaded.current.mode !== mode
-  ) {
-    loaded.current = {levelId, mode};
+  useLayoutEffect(() => {
     loadLevel(mode);
-  }
+  }, [levelId, mode]);
 
   return (
     <Provider store={store}>
