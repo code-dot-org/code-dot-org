@@ -374,6 +374,9 @@ $tab-item-height: 34px;
 
 // The editors start under the strip.
 $editor-strip-height: 41px;
+// Above Blockly's category list (z 70) and flyout (z 20), so a menu from a
+// bar opens over them; below its block drag surface (z 80).
+$z-over-blockly: 71;
 
 .editorStrip {
   position: absolute;
@@ -383,9 +386,7 @@ $editor-strip-height: 41px;
   // Slides with the column's edge as Images opens and closes
   // (PANE_SLIDE_MS).
   transition: left 0.3s ease;
-  // Above Blockly's category list (z 70) and flyout (z 20), so a menu
-  // from the strip opens over them; below its block drag surface (z 80).
-  z-index: 71;
+  z-index: $z-over-blockly;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -474,9 +475,7 @@ $editor-strip-height: 41px;
   right: 0;
   height: $editor-strip-height;
   box-sizing: border-box;
-  // Above Blockly's category list (z 70) and flyout (z 20), so the menu
-  // opens over them; below its block drag surface (z 80).
-  z-index: 71;
+  z-index: $z-over-blockly;
   display: flex;
   align-items: center;
   justify-content: space-between;

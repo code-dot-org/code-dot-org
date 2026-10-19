@@ -98,12 +98,29 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
     />
   );
   // The history sits across from the switch unless asked to join it.
-  const startNodes = switchAtStart
-    ? [start, switchNode]
-    : [start, !historyAtEnd && historyNode];
-  const endNodes = switchAtStart
-    ? [historyNode, end]
-    : [historyAtEnd && historyNode, switchNode, end];
+  const startNodes = switchAtStart ? (
+    <>
+      {start}
+      {switchNode}
+    </>
+  ) : (
+    <>
+      {start}
+      {!historyAtEnd && historyNode}
+    </>
+  );
+  const endNodes = switchAtStart ? (
+    <>
+      {historyNode}
+      {end}
+    </>
+  ) : (
+    <>
+      {historyAtEnd && historyNode}
+      {switchNode}
+      {end}
+    </>
+  );
   return (
     <div className={moduleStyles.editorStrip} style={style}>
       <div className={moduleStyles.editorStripStart}>{startNodes}</div>

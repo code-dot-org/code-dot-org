@@ -4,8 +4,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {SceneMetadata} from '../../redux/spriteLab2Redux';
-import {SceneType} from '../../types';
+import {SceneMetadata} from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
+import {SceneType} from '@cdo/apps/p5lab/spritelab/lab2/types';
+
 import NewSceneDialog from '../NewSceneDialog';
 import ScenePicture from '../ScenePicture';
 

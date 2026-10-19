@@ -4,7 +4,8 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
-import {AnimationPoses} from '../../characterAnimations';
+import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import ImagePaneButton from '../ImagePaneButton';
 
