@@ -34,6 +34,19 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
+  describe '#can_disable_aichat_safety_checks?' do
+    subject(:can_disable_aichat_safety_checks?) {user.can_disable_aichat_safety_checks?}
+
+    it 'returns true for a levelbuilder' do
+      allow(user).to receive(:levelbuilder?).and_return(true)
+      _can_disable_aichat_safety_checks?.must_equal true
+    end
+
+    it 'returns false otherwise' do
+      _can_disable_aichat_safety_checks?.must_equal false
+    end
+  end
+
   describe '#teacher_can_access_aichat?' do
     subject(:teacher_can_access_aichat?) {user.teacher_can_access_aichat?}
 

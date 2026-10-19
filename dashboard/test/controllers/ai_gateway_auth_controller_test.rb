@@ -155,6 +155,38 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
+  test 'levelbuilder requesting the safety-check bypass gets it granted in the token' do
+    levelbuilder = create(:levelbuilder)
+    sign_in(levelbuilder)
+
+    claims = mint_and_capture_claims(user: levelbuilder, disable_safety_checks: true)
+
+    assert_equal true, claims[:safety_checks_disabled]
+  end
+
+  test 'non-levelbuilder requesting the safety-check bypass is forbidden and gets no token' do
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    params = @params.deep_dup
+    params[:aichatContext][:disableSafetyChecks] = true
+
+    post :get_access_token, params: params, as: :json
+
+    assert_response :forbidden
+    response_json = JSON.parse(response.body)
+    assert_equal 'safety_checks_bypass_not_permitted', response_json['error']
+    assert_nil response_json['token']
+  end
+
+  test 'levelbuilder not requesting the bypass does not get it by default' do
+    levelbuilder = create(:levelbuilder)
+    sign_in(levelbuilder)
+
+    claims = mint_and_capture_claims(user: levelbuilder)
+
+    assert_equal false, claims[:safety_checks_disabled]
+  end
+
   private def stub_turnstile_enforcement_mode(value)
     DCDO.stubs(:get).
       with(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT).
@@ -163,7 +195,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
   # Mints a token and returns the claims handed to JWT.encode, so the signed
   # payload can be asserted without a signing key.
-  private def mint_and_capture_claims(user: @authorized_teacher)
+  private def mint_and_capture_claims(user: @authorized_teacher, disable_safety_checks: nil)
     sign_in(user)
     User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
     # The signing key is only configured outside the test environment. Generated
@@ -178,7 +210,10 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
       true
     end.returns('fake.jwt.token')
 
-    post :get_access_token, params: @params, as: :json
+    params = @params.deep_dup
+    params[:aichatContext][:disableSafetyChecks] = disable_safety_checks unless disable_safety_checks.nil?
+
+    post :get_access_token, params: params, as: :json
 
     assert_response :success
     captured
