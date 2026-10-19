@@ -4,6 +4,7 @@
 
 import {hashString} from '@cdo/apps/utils';
 
+import type {RoutingRecord} from '../routing/routeAfterCompletion';
 import {Checkpoint, Pathway} from '../types';
 
 export type CheckpointStatus =
@@ -59,6 +60,8 @@ export interface StepProgress {
 
 export interface Progress {
   steps: {[stepId: string]: StepProgress};
+  /** Temporary: logs the last routing verdict until the UI that applies it lands. Not stored. */
+  lastRouting?: RoutingRecord;
 }
 
 export const EMPTY_PROGRESS: Progress = {steps: {}};
