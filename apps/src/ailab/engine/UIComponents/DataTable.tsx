@@ -23,7 +23,7 @@ interface DataTableProps {
   hideLabel?: boolean;
   useResultsData?: boolean;
   maxRows?: number;
-  view?: TableView<string>;
+  view?: TableView;
 }
 
 const DataTable = ({

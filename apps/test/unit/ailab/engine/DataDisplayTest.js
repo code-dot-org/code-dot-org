@@ -121,18 +121,7 @@ describe('DataDisplay', () => {
     expect(
       screen.getByRole('columnheader', {name: 'legs'}).getAttribute('aria-sort')
     ).toBe('ascending');
-    expect(rowNumbers()).toEqual([
-      '3',
-      '6',
-      '9',
-      '1',
-      '4',
-      '7',
-      '2',
-      '5',
-      '8',
-      '10',
-    ]);
+    expect(rowNumbers().join(' ')).toBe('3 6 9 1 4 7 2 5 8 10');
   });
 
   test('the sort button names what the next click does', () => {

@@ -6,26 +6,24 @@ import {useAppSelector} from './hooks';
 
 export type SortDirection = 'ascending' | 'descending';
 
-export type ColumnId = string | symbol;
-
 interface TableSort {
-  column: ColumnId;
+  column: string;
   direction: SortDirection;
 }
 
-export interface TableView<Column extends ColumnId = ColumnId> {
+export interface TableView {
   rows: number[];
-  columns: Column[];
-  isNumerical: (column: ColumnId) => boolean;
-  sortDirection: (column: ColumnId) => SortDirection | undefined;
-  toggleSort: (column: ColumnId) => void;
+  columns: string[];
+  isNumerical: (column: string) => boolean;
+  sortDirection: (column: string) => SortDirection | undefined;
+  toggleSort: (column: string) => void;
 }
 
-interface TableViewSource<Column extends ColumnId> {
+interface TableViewSource {
   rows: number[];
-  columns: Column[];
-  columnTypes: Partial<Record<ColumnId, string>>;
-  valueAt: (row: number, column: Column) => string | number;
+  columns: string[];
+  columnTypes: Record<string, string>;
+  valueAt: (row: number, column: string) => string | number;
 }
 
 function asNumber(value: string | number): number {
@@ -37,19 +35,14 @@ function compareValues(
   b: string | number,
   numerical: boolean
 ): number {
-  if (numerical) {
-    const aNumber = asNumber(a);
-    const bNumber = asNumber(b);
-    const aIsNumber = !Number.isNaN(aNumber);
-    const bIsNumber = !Number.isNaN(bNumber);
-    if (aIsNumber && bIsNumber) {
-      return aNumber - bNumber;
-    }
-    if (aIsNumber !== bIsNumber) {
-      return aIsNumber ? -1 : 1;
-    }
+  const aNumber = numerical ? asNumber(a) : NaN;
+  const bNumber = numerical ? asNumber(b) : NaN;
+  if (Number.isNaN(aNumber) !== Number.isNaN(bNumber)) {
+    return Number.isNaN(aNumber) ? 1 : -1;
   }
-  return compareText(String(a), String(b));
+  return Number.isNaN(aNumber)
+    ? compareText(String(a), String(b))
+    : aNumber - bNumber;
 }
 
 export function nextSortDirection(
@@ -61,25 +54,24 @@ export function nextSortDirection(
   return direction === 'ascending' ? 'descending' : undefined;
 }
 
-export function useTableView<Column extends ColumnId>({
+export function useTableView({
   rows,
   columns,
   columnTypes,
   valueAt,
-}: TableViewSource<Column>): TableView<Column> {
+}: TableViewSource): TableView {
   const [sort, setSort] = useState<TableSort>();
-  const isNumerical = (column: ColumnId) =>
+  const isNumerical = (column: string) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
-  const sortColumn = columns.find(column => column === sort?.column);
 
   let sortedRows = rows;
-  if (sort && sortColumn !== undefined) {
-    const sign = sort.direction === 'ascending' ? 1 : -1;
-    const numerical = isNumerical(sortColumn);
+  if (sort && columns.includes(sort.column)) {
+    const {column, direction} = sort;
+    const sign = direction === 'ascending' ? 1 : -1;
+    const numerical = isNumerical(column);
     sortedRows = [...rows].sort(
       (a, b) =>
-        sign *
-        compareValues(valueAt(a, sortColumn), valueAt(b, sortColumn), numerical)
+        sign * compareValues(valueAt(a, column), valueAt(b, column), numerical)
     );
   }
 
@@ -102,7 +94,7 @@ export function useTableView<Column extends ColumnId>({
 export function useDatasetTableView(
   rows: number[],
   columns: string[]
-): TableView<string> {
+): TableView {
   const data = useAppSelector(state => state.data);
   const columnTypes = useAppSelector(state => state.columnsByDataType);
   return useTableView({

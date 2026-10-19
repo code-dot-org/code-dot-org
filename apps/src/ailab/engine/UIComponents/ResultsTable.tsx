@@ -16,12 +16,10 @@ import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
-import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
+import RowsTableHeader from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
-
-type ResultsColumn = string | typeof PREDICTION_COLUMN;
 
 interface ResultsTableProps {
   results: ResultsData;
@@ -41,10 +39,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const columns = dataColumnsFor(data, project, showAllColumns);
-  const valueAt = (index: number, column: ResultsColumn) => {
-    if (column === PREDICTION_COLUMN) {
-      return results.predictedLabels[index];
-    }
+  const valueAt = (index: number, column: string) => {
     if (column === labelColumn) {
       return results.labels[index];
     }
@@ -53,13 +48,10 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
       ? data[results.rowIndices[index]][column]
       : results.examples[index][feature];
   };
-  const view = useTableView<ResultsColumn>({
+  const view = useTableView({
     rows: [...results.examples.keys()],
-    columns: [...columns, PREDICTION_COLUMN],
-    columnTypes: {
-      ...columnsByDataType,
-      [PREDICTION_COLUMN]: columnsByDataType[labelColumn],
-    },
+    columns,
+    columnTypes: columnsByDataType,
     valueAt,
   });
 

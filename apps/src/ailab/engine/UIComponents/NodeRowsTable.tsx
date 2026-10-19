@@ -19,7 +19,7 @@ import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
   labelId: string;
-  view: TableView<string>;
+  view: TableView;
   emphasizedColumn?: string;
   emptyText: string;
   prediction?: string | number;

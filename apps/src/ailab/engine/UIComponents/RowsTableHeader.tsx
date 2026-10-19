@@ -11,8 +11,6 @@ import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
 
-export const PREDICTION_COLUMN = Symbol('AI prediction');
-
 interface RowsTableHeaderProps {
   columns: string[];
   view: TableView;
@@ -56,14 +54,12 @@ const RowsTableHeader = ({
         );
       })}
       {showPrediction && (
-        <ColumnHeader
-          column={PREDICTION_COLUMN}
-          name="AI prediction"
-          view={view}
+        <th
+          scope="col"
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >
           <CellText>AI predicts</CellText>
-        </ColumnHeader>
+        </th>
       )}
     </tr>
   );

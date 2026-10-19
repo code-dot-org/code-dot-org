@@ -4,16 +4,15 @@ import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import {useTableView} from '@cdo/apps/ailab/engine/useTableView';
 
 const DATA = [
-  {name: 'ant', size: '2', habitat: 'land'},
-  {name: 'whale', size: '10', habitat: 'sea'},
-  {name: 'crab', size: '9', habitat: 'sea'},
-  {name: 'bee', size: '2', habitat: ''},
+  {name: 'ant', size: '2'},
+  {name: 'whale', size: '10'},
+  {name: 'crab', size: '9'},
+  {name: 'bee', size: '2'},
 ];
 
 const COLUMN_TYPES = {
   name: ColumnTypes.CATEGORICAL,
   size: ColumnTypes.NUMERICAL,
-  habitat: ColumnTypes.CATEGORICAL,
 };
 
 const ALL_COLUMNS = Object.keys(COLUMN_TYPES);

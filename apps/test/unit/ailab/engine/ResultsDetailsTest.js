@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
 
-import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
+import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
@@ -21,23 +21,20 @@ const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
 
 function renderScorecard({
   data,
-  examples = [[2], [4], [0]],
-  labels = ['bird', 'dog', 'snake'],
   predictedLabels = ['bird', 'dog', 'bird'],
   accuracyCheckRowIndices = [0, 1, 2],
-  project = levelProject(),
 } = {}) {
   const store = levelStore();
   if (data) {
     store.dispatch(setImportedData(data, false));
   }
-  store.dispatch(setAccuracyCheckExamples(examples));
-  store.dispatch(setAccuracyCheckLabels(labels));
+  store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
+  store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
   store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   renderWithProviders(createElement(ResultsDetails), {
     store,
     project: {
-      ...project,
+      ...levelProject(),
       accuracyCheckRowIndices,
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
@@ -139,22 +136,6 @@ describe('ResultsDetails', () => {
     expect(bodyRows()).toEqual([
       ['5', 'Rex', '4', 'dog', 'dog'],
       ['4', 'Polly', '2', 'bird', 'bird'],
-    ]);
-  });
-
-  test('sorts numerical predictions by value', () => {
-    renderScorecard({
-      project: levelProject(ANIMAL_COLUMNS, 'legs'),
-      examples: [['bird'], ['dog'], ['snake']],
-      labels: [1.5, 1.25, 10],
-      predictedLabels: [1.5, 1.25, 10],
-    });
-    fireEvent.click(sortButton('Sort by AI prediction low to high'));
-
-    expect(bodyRows()).toEqual([
-      ['2', 'dog', '1.25', '1.25'],
-      ['1', 'bird', '1.5', '1.5'],
-      ['3', 'snake', '10', '10'],
     ]);
   });
 });
