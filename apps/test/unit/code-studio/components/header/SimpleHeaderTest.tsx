@@ -1,36 +1,42 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {combineReducers, createStore} from 'redux';
 
-import SimpleHeader, {
-  currentHeaderLabel,
-} from '@cdo/apps/code-studio/components/header/SimpleHeader';
-import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
+import SimpleHeader from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import projectReducer, {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import styles from '@cdo/apps/code-studio/components/header/simple-header.module.scss';
 
-let levels: unknown[] = [];
+let current: {headerLabel?: string} | undefined;
+let parent: {headerLabel?: string} | undefined;
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
-  getCurrentLevels: () => levels,
+  getCurrentLevel: () => current,
+  getParentLevel: () => parent,
 }));
 // Connected to stores of their own; stubbed to what the row places.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectInfo', () => ({
   __esModule: true,
   default: () => null,
 }));
+// The real module's constants size the slot; only the badge is stubbed.
 jest.mock('@cdo/apps/code-studio/components/header/ProjectUpdatedAt', () => ({
   __esModule: true,
+  ...jest.requireActual(
+    '@cdo/apps/code-studio/components/header/ProjectUpdatedAt'
+  ),
   default: () => require('react').createElement('span', null, 'Saved'),
 }));
 
-interface StoreState {
-  isRtl: boolean;
-  project?: Partial<ProjectState>;
-}
-
-function renderHeader(state: Partial<StoreState> = {}) {
-  const store = createStore(() => ({isRtl: false, ...state}));
+function renderHeader(project: Partial<ProjectState> = {}) {
+  const reducer = combineReducers({
+    isRtl: () => false,
+    project: projectReducer,
+  });
+  const store = createStore(reducer, {
+    isRtl: false,
+    project: {...projectReducer(undefined, {type: ''}), ...project},
+  });
   return render(
     <Provider store={store}>
       <SimpleHeader
@@ -43,10 +49,8 @@ function renderHeader(state: Partial<StoreState> = {}) {
 
 describe('SimpleHeader', () => {
   beforeEach(() => {
-    levels = [
-      {id: '1', headerLabel: 'Story', isCurrentLevel: true},
-      {id: '2', headerLabel: 'Story'},
-    ];
+    current = {headerLabel: 'Story'};
+    parent = undefined;
   });
 
   it('places the image, the name and label, and the buttons', () => {
@@ -65,17 +69,27 @@ describe('SimpleHeader', () => {
     ).toBe(true);
   });
 
+  it("reads a current sublevel's label from its parent", () => {
+    current = {};
+    parent = {headerLabel: 'Parent'};
+    renderHeader();
+    expect(screen.getByText('Parent')).toBeTruthy();
+  });
+
   it('shows the name alone when the current level has no label', () => {
-    levels = [{id: '1', isCurrentLevel: true}];
+    current = {};
     renderHeader();
     expect(screen.queryByText('·')).toBeNull();
     expect(document.querySelector('#unit_name_container')).not.toBeNull();
   });
 
-  it('shows the saved-at only once the project store asks for it', () => {
+  it('reserves the saved-at slot, and fills it once the project store asks', () => {
     renderHeader();
     expect(screen.queryByText('Saved')).toBeNull();
-    renderHeader({project: {showProjectUpdatedAt: true}});
+    const slot = document.querySelector('#unit_name_container')?.parentElement
+      ?.nextElementSibling as HTMLElement;
+    expect(slot.style.height).toBe('14px');
+    renderHeader({showProjectUpdatedAt: true});
     expect(screen.getByText('Saved')).toBeTruthy();
   });
 
@@ -83,18 +97,5 @@ describe('SimpleHeader', () => {
     delete document.documentElement.dataset.headerPresent;
     renderHeader();
     expect(document.documentElement.dataset.headerPresent).toBe('true');
-  });
-});
-
-describe('currentHeaderLabel', () => {
-  it("reads the current level's label, through a current sublevel", () => {
-    expect(
-      currentHeaderLabel([
-        {headerLabel: 'A'},
-        {headerLabel: 'B', sublevels: [{isCurrentLevel: true}]},
-      ])
-    ).toBe('B');
-    expect(currentHeaderLabel([{isCurrentLevel: true}])).toBeNull();
-    expect(currentHeaderLabel(undefined)).toBeNull();
   });
 });

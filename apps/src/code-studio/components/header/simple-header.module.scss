@@ -29,12 +29,10 @@
   background-color: color.$black;
   flex: none;
   object-fit: cover;
+  margin-inline-end: 12px;
 }
 
-// Sized to the saved-at badge's minimum width, so the row does not move when
-// "Saved" arrives.
 .text {
-  margin-inline-start: 12px;
   display: flex;
   flex-direction: column;
   flex: 0 1 auto;
@@ -72,10 +70,7 @@
   flex: none;
 }
 
-// The badge's height is reserved from the start, and the line height set
-// with it: the header's inherited line height is taller than the badge, and
-// would push its text below the slot. A save error's taller badge may
-// overflow it.
+// A save error's taller badge may overflow the slot.
 .saved {
   display: flex;
   align-items: center;

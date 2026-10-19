@@ -6,7 +6,10 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
-import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  getParentLevel,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import ProjectInfo from './ProjectInfo';
@@ -18,26 +21,10 @@ import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 import styles from './simple-header.module.scss';
 
-/** A lesson's level as the progress store gives it; only what this reads. */
-export interface ProgressLevel {
-  headerLabel?: string;
-  isCurrentLevel?: boolean;
-  sublevels?: {isCurrentLevel?: boolean}[];
-}
-
-// The current level's header label. getCurrentLevel would return a current
-// sublevel itself; the label is its parent's.
-export function currentHeaderLabel(levels?: ProgressLevel[]): string | null {
-  const current = levels?.find(
-    l => l.isCurrentLevel || l.sublevels?.some(sub => sub.isCurrentLevel)
-  );
-  return current?.headerLabel || null;
-}
-
 // The slices the typed root state leaves out.
 interface HeaderState {
   isRtl: boolean;
-  project?: Partial<ProjectState>;
+  project: ProjectState;
 }
 
 interface SimpleHeaderProps {
@@ -52,10 +39,12 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
   const showSaved = useSelector(
-    (state: HeaderState) => !!state.project?.showProjectUpdatedAt
+    (state: HeaderState) => state.project.showProjectUpdatedAt
   );
-  const label = useSelector((state: unknown) =>
-    currentHeaderLabel(getCurrentLevels(state) as ProgressLevel[] | undefined)
+  // A current sublevel's label is its parent's.
+  const label: string | undefined = useSelector(
+    (state: unknown) =>
+      (getParentLevel(state) ?? getCurrentLevel(state))?.headerLabel
   );
 
   // Eyes UI tests key on these to tell a page with this header from one with
@@ -81,6 +70,8 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
           className={styles.image}
         />
       )}
+      {/* Never narrower than the saved-at badge, so the centered row does
+          not shift sideways when "Saved" arrives under the names. */}
       <div
         className={styles.text}
         style={{minWidth: PROJECT_UPDATED_AT_MIN_WIDTH}}
@@ -107,6 +98,9 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
             </span>
           )}
         </div>
+        {/* The badge's height is reserved before it arrives, and the line
+            height set with it: the header's inherited line height is taller
+            than the badge and would push its text below the slot. */}
         <div
           className={styles.saved}
           style={{
