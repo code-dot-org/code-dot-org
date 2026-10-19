@@ -93,7 +93,24 @@ module.exports = function (grunt) {
       ],
     },
     static: {
+      // Later entries overwrite earlier ones, so anything that collides with
+      // `static/` has to come before it. Legacy AI Lab's datasets are the only
+      // such case: they share every path under skins/ailab/datasets with the
+      // copies `static/` now owns.
       files: [
+        {
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab',
+        },
+        {
+          // ml-playground images are emitted to dist/images, not dist/assets.
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist',
+          src: ['images/**'],
+          dest: 'build/package/media/skins/ailab',
+        },
         {
           expand: true,
           cwd: 'static/',
@@ -124,19 +141,6 @@ module.exports = function (grunt) {
           cwd: 'node_modules/@code-dot-org/ml-activities/dist',
           src: ['assets/**'],
           dest: 'build/package/media/skins/fish',
-        },
-        {
-          expand: true,
-          cwd: 'node_modules/@code-dot-org/ml-playground/dist/assets',
-          src: ['**'],
-          dest: 'build/package/media/skins/ailab',
-        },
-        {
-          // ml-playground images are emitted to dist/images, not dist/assets.
-          expand: true,
-          cwd: 'node_modules/@code-dot-org/ml-playground/dist',
-          src: ['images/**'],
-          dest: 'build/package/media/skins/ailab',
         },
 
         // We have to do some weird stuff to get our fallback video player working.
