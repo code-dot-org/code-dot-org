@@ -31,7 +31,7 @@ describe('StepPlayer', () => {
 
   afterEach(() => now.mockRestore());
 
-  const renderPlayer = () => {
+  const renderPlayer = (initialStepId?: string) => {
     const calls: unknown[][] = [];
     const record =
       (name: string) =>
@@ -45,6 +45,7 @@ describe('StepPlayer', () => {
       >
         <StepPlayer
           checkpoint={checkpoint}
+          initialStepId={initialStepId}
           onStartStep={record('start')}
           onCompleteStep={record('complete')}
           onLeaveStep={record('leave')}
@@ -103,5 +104,65 @@ describe('StepPlayer', () => {
       ['start', checkpoint.steps[0]],
       ['leave', checkpoint.steps[0], 3000],
     ]);
+  });
+
+  describe('URL parameters', () => {
+    let replaceState: jest.SpyInstance;
+    const originalUrl = window.location.href;
+
+    beforeEach(() => {
+      replaceState = jest.spyOn(window.history, 'replaceState');
+      window.history.replaceState({}, '', '/');
+    });
+
+    afterEach(() => {
+      replaceState.mockRestore();
+      window.history.replaceState({}, '', originalUrl);
+    });
+
+    it('writes checkpoint and step ids to the URL on mount', () => {
+      renderPlayer();
+
+      expect(replaceState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=one'
+      );
+    });
+
+    it('updates the URL when advancing to the next step', () => {
+      renderPlayer();
+      replaceState.mockClear();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+
+      expect(replaceState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=two'
+      );
+    });
+
+    it('starts on the step matching initialStepId', () => {
+      renderPlayer('two');
+
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(replaceState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=two'
+      );
+    });
+
+    it('falls back to step 0 when initialStepId is not found', () => {
+      renderPlayer('unknown-step');
+
+      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      expect(replaceState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=one'
+      );
+    });
   });
 });

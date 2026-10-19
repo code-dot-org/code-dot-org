@@ -15,8 +15,17 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
 }));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
-  default: ({checkpoint}: {checkpoint: {title: string}}) => (
-    <div>playing {checkpoint.title}</div>
+  default: ({
+    checkpoint,
+    initialStepId,
+  }: {
+    checkpoint: {title: string};
+    initialStepId?: string;
+  }) => (
+    <div>
+      playing {checkpoint.title}
+      {initialStepId ? ` at ${initialStepId}` : ''}
+    </div>
   ),
 }));
 jest.mock('@cdo/apps/lab2/views/Loading', () => ({
@@ -82,9 +91,16 @@ const pathway: Pathway = {
 const progressKey = {scriptId: 2, levelId: 3};
 
 describe('PathwayApp', () => {
+  const originalUrl = window.location.href;
+
   beforeEach(() => {
     mockDispatch.mockClear();
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
+    window.history.replaceState({}, '', '/');
+  });
+
+  afterEach(() => {
+    window.history.replaceState({}, '', originalUrl);
   });
 
   // Progress loads from a promise, so the first render settles after a tick.
@@ -116,5 +132,26 @@ describe('PathwayApp', () => {
 
     act(() => screen.getByText('map screen').click());
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+  });
+
+  describe('URL parameters', () => {
+    it('opens a URL-specified checkpoint even when there is existing progress', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      window.history.replaceState({}, '', '?checkpoint=next');
+
+      await renderSettled();
+
+      expect(screen.getByText('playing Next')).toBeTruthy();
+    });
+
+    it('passes the URL step id to StepPlayer', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
   });
 });
