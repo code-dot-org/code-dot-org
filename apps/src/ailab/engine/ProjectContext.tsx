@@ -49,14 +49,40 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 interface ProjectProviderProps {
   children: ReactNode;
   project?: AilabProject;
+  /*
+    Called with the project after the student changes it: choosing columns or
+    training a model. Not called for a level's preset columns, for a project
+    opened from a save, or for a reset, none of which are the student's work.
+  */
+  onEdited?: (project: AilabProject) => void;
 }
 
 export const ProjectProvider = ({
   children,
   project: openWith,
+  onEdited,
 }: ProjectProviderProps) => {
   const [project, setProject] = useState<AilabProject>(
     openWith ?? initialProject
+  );
+  // Read by edit() so two changes in one tick build on each other.
+  const latestProject = useRef(project);
+  latestProject.current = project;
+  const onEditedRef = useRef(onEdited);
+  onEditedRef.current = onEdited;
+
+  /*
+    Applies a change the student made, and reports it. Everything that writes
+    the project on their behalf goes through setProject directly instead.
+  */
+  const edit = useCallback(
+    (update: (previous: AilabProject) => AilabProject) => {
+      const next = update(latestProject.current);
+      latestProject.current = next;
+      setProject(next);
+      onEditedRef.current?.(next);
+    },
+    []
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   // A project handed to openProject before the dataset was described.
@@ -83,20 +109,23 @@ export const ProjectProvider = ({
     }, [])
   );
 
-  const setLabelColumn = useCallback((labelColumn?: string) => {
-    setProject(previous => ({
-      ...previous,
-      labelColumn,
-      // A column can't be both the thing predicted and a thing predicted from.
-      selectedFeatures: previous.selectedFeatures.filter(
-        feature => feature !== labelColumn
-      ),
-    }));
-  }, []);
+  const setLabelColumn = useCallback(
+    (labelColumn?: string) => {
+      edit(previous => ({
+        ...previous,
+        labelColumn,
+        // A column can't be both the thing predicted and a thing predicted from.
+        selectedFeatures: previous.selectedFeatures.filter(
+          feature => feature !== labelColumn
+        ),
+      }));
+    },
+    [edit]
+  );
 
   const addSelectedFeature = useCallback(
     (feature: string) => {
-      setProject(previous =>
+      edit(previous =>
         feature === previous.labelColumn ||
         previous.selectedFeatures.includes(feature)
           ? previous
@@ -109,21 +138,24 @@ export const ProjectProvider = ({
             }
       );
     },
-    [data]
+    [data, edit]
   );
 
-  const removeSelectedFeature = useCallback((feature: string) => {
-    setProject(previous => ({
-      ...previous,
-      selectedFeatures: previous.selectedFeatures.filter(
-        selected => selected !== feature
-      ),
-    }));
-  }, []);
+  const removeSelectedFeature = useCallback(
+    (feature: string) => {
+      edit(previous => ({
+        ...previous,
+        selectedFeatures: previous.selectedFeatures.filter(
+          selected => selected !== feature
+        ),
+      }));
+    },
+    [edit]
+  );
 
   const setSelectedFeatures = useCallback(
     (features: string[]) => {
-      setProject(previous => ({
+      edit(previous => ({
         ...previous,
         selectedFeatures: sortByColumnOrder(
           features.filter(feature => feature !== previous.labelColumn),
@@ -131,7 +163,7 @@ export const ProjectProvider = ({
         ),
       }));
     },
-    [data]
+    [data, edit]
   );
 
   useEffect(() => {
@@ -194,17 +226,20 @@ export const ProjectProvider = ({
     }
   }, [datasetDescribed, applyProject]);
 
-  const applyTrainingRun = useCallback((run?: TrainingRun) => {
-    if (!run) {
-      return;
-    }
-    setProject(previous => ({
-      ...previous,
-      hyperparameters: run.hyperparameters,
-      accuracyCheckRowIndices: run.accuracyCheckRowIndices,
-      historicResults: [run.historicResult, ...previous.historicResults],
-    }));
-  }, []);
+  const applyTrainingRun = useCallback(
+    (run?: TrainingRun) => {
+      if (!run) {
+        return;
+      }
+      edit(previous => ({
+        ...previous,
+        hyperparameters: run.hyperparameters,
+        accuracyCheckRowIndices: run.accuracyCheckRowIndices,
+        historicResults: [run.historicResult, ...previous.historicResults],
+      }));
+    },
+    [edit]
+  );
 
   const snapshotTrainingRun = useCallback(() => {
     const {hyperparameters, accuracyCheckRowIndices, historicResults} = project;
@@ -215,12 +250,13 @@ export const ProjectProvider = ({
     };
   }, [project]);
 
+  // Cancelling a run is as much a change to save as making one.
   const restoreTrainingRun = useCallback(() => {
     const previousOutputs = previousRun.current;
     if (previousOutputs) {
-      setProject(previous => ({...previous, ...previousOutputs}));
+      edit(previous => ({...previous, ...previousOutputs}));
     }
-  }, []);
+  }, [edit]);
 
   const value = useMemo(
     () => ({

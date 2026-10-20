@@ -9,9 +9,12 @@ export {default as AilabEngine} from './AilabEngine';
 export type {AilabEngineProps} from './AilabEngine';
 
 export {store} from './store';
-export {loadLevel, startOver} from './levelLoad';
+export {loadLevel} from './levelLoad';
 export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
+
+export {initialProject} from './types';
+export type {AilabProject} from './types';
 
 export type {
   InstructionsKey,

@@ -1,5 +1,5 @@
 import I18n from '@cdo/apps/ailab/engine/i18n';
-import {loadLevel, startOver} from '@cdo/apps/ailab/engine/levelLoad';
+import {loadLevel} from '@cdo/apps/ailab/engine/levelLoad';
 import {
   setAccuracyCheckExamples,
   setCurrentPanel,
@@ -12,7 +12,7 @@ jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
 beforeEach(() => I18n.initI18n());
 afterEach(() => I18n.reset());
 
-describe('startOver', () => {
+describe('loadLevel', () => {
   beforeEach(() => {
     loadLevel(undefined);
     store.dispatch(setCurrentPanel('results'));
@@ -20,40 +20,30 @@ describe('startOver', () => {
   });
 
   test('abandons a project waiting to be opened', () => {
-    startOver();
+    loadLevel(undefined);
 
     expect(store.getState().resetKeepsPendingProject).toBe(false);
   });
 
-  test('resets everything else to the start of the level', () => {
-    startOver();
+  test('resets the lab to the start of the level', () => {
+    loadLevel(undefined);
 
     expect(store.getState().currentPanel).toBe('selectDataset');
     expect(store.getState().accuracyCheckExamples).toEqual([]);
   });
 
-  test('counts the reset, so the training data context clears', () => {
+  test('counts the reset, so the contexts clear', () => {
     const before = store.getState().resetCount;
 
-    startOver();
+    loadLevel(undefined);
 
     expect(store.getState().resetCount).toBe(before + 1);
   });
 
-  test("reloads the level's mode", () => {
+  test("takes the level's mode", () => {
     loadLevel({hideSave: true});
 
-    startOver();
-
     expect(store.getState().mode).toEqual({hideSave: true});
-  });
-});
-
-describe('loadLevel', () => {
-  test('abandons a project waiting to be opened', () => {
-    loadLevel(undefined);
-
-    expect(store.getState().resetKeepsPendingProject).toBe(false);
   });
 
   test('reserves random rows for testing unless the mode asks for the last rows', () => {
