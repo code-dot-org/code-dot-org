@@ -217,9 +217,9 @@ props, with the same defaults as WS-15. When its `blocks` prop changes it
 sets the Driver's blocks (DEF-6). Later changes to its other props do
 nothing. It provides a context of `{driver, blocks, environment, setTheme}`,
 where `driver` is a React ref to the Driver and `setTheme(theme)` sets the
-Driver's theme. It constructs a new Driver on every render and keeps only
-the first; the others run their constructors (DEF-28), registering their
-global plugins, and are dropped. It never deconstructs the Driver it keeps.
+Driver's theme. It constructs the Driver once, so its plugins are
+registered once however often the provider renders. It never deconstructs
+the Driver.
 
 WS-27. `useBlocklyContext()` returns the context. Outside a provider it
 returns `{setTheme}`, with a `setTheme` that does nothing. Its type
@@ -284,7 +284,6 @@ with no focused node. The case needs the flyout, so its test is in
 7. WS-25: ship the stylesheet as the markdown, lab and music packages do
    (`vite-plugin-lib-inject-css`), and correct the hiding selector? Turning
    the rules on in the labs may change their layout.
-8. WS-26: a Driver per render is a bug.
-9. WS-27: should `useBlocklyContext<T>()` return `BlocklyContent<T>`?
-10. WS-15: should changing a mount-only prop be an error for all of them,
-    or for none?
+8. WS-27: should `useBlocklyContext<T>()` return `BlocklyContent<T>`?
+9. WS-15: should changing a mount-only prop be an error for all of them,
+   or for none?

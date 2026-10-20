@@ -84,3 +84,7 @@ these changes.
 7. The demo starts as one workspace over Blockly's own blocks. The lesson
    modes, theme menu and instructions panel of `ngfp/blockly`'s demo return
    with the parts they show.
+8. `BlocklyProvider` constructs its Driver once. `ngfp/blockly` constructed
+   one on every render and kept the first, so every render of a lab under
+   `lab-base`'s `BlocklyLab` ran a Driver constructor and initialized the
+   global plugins again. See `workspace.md`, WS-26.

@@ -6,6 +6,7 @@ import {
   useRef,
   useEffect,
   useContext,
+  useState,
 } from 'react';
 
 import Driver from '../Driver';
@@ -50,15 +51,17 @@ export const BlocklyProvider = <T extends Environment = Environment>({
   renderer,
   children,
 }: BlocklyProviderProps<T>) => {
-  // Create a Driver to handle all of the state
-  const driver = useRef<Driver<T>>(
-    new Driver<T>(
-      environment || ({} as unknown as T),
-      renderer || ThrasosRenderer,
-      theme || DefaultTheme,
-      plugins || [],
-    ),
+  // Built once; `useRef(new Driver(...))` would construct one on every render.
+  const [initialDriver] = useState(
+    () =>
+      new Driver<T>(
+        environment || ({} as unknown as T),
+        renderer || ThrasosRenderer,
+        theme || DefaultTheme,
+        plugins || [],
+      ),
   );
+  const driver = useRef<Driver<T>>(initialDriver);
 
   // Themes can be updated
   const setTheme = useCallback((newTheme: Theme | undefined) => {
