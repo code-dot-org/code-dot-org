@@ -116,6 +116,14 @@
   color: var(--text-error-primary);
 }
 
+// Video step — Video positions itself against the nearest positioned ancestor.
+.videoHost {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
 // Free response textarea (used by freeResponse questions inside the questions step)
 
 .freeResponseTextarea {

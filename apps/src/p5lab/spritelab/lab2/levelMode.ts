@@ -36,9 +36,19 @@ export interface LevelMode {
   /** The sentence scene's sentence, by id in sentences.json; the
       image type's own sentence when unset. */
   sentence?: string;
+  /** An image level's instructions once a picture is made, markdown, in
+      place of its objectives title. */
+  generatedInstructions?: string;
+  /** An image level's instructions while the student draws, markdown, in
+      place of its objectives title, which is gone while drawing either way. */
+  paintInstructions?: string;
 }
 
-/** The style every generate form starts on; students can still switch. */
+/** Generations a level before free play allows; free play has no limit. */
+export const GENERATION_LIMIT = 5;
+
+/** The style the advanced generate form starts on; the student form is
+    pixel art only. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
 /** The tabs a kind shows, the first being where the level opens. An image

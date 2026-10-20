@@ -25,12 +25,14 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "platform-background",
-      "sentence": "place-detail"
+      "sentence": "place-detail",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background for your game.**"
     },
     "objectives": {
-      "title": "**Make a background for your game**\n\nPick the words for a place and click **Generate**, or draw your own."
+      "title": "**Prompt AI to make a background for your game**"
     },
-    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**, or draw your own.",
+    "long_instructions": "# Prompt AI to make a background for your game",
     "header_label": "Make a platformer"
   }
 }]]></config>

@@ -155,9 +155,8 @@ interface PlayBarProps {
       that keeps to one scene still shows the button. */
   playGameDisabled?: boolean;
   playGameReason?: string;
-  /** On the start scene Play scene and Play game are the same thing: Play
-      scene keeps its room but is not shown, and Play game is the one
-      button. */
+  /** On the start scene Play scene and Play game are the same thing: one
+      button, Play, which plays the game. */
   playSceneHidden?: boolean;
 }
 
@@ -181,19 +180,18 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
     const playSceneAway = !!onPlayGame && playSceneHidden;
     return (
       <>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="small"
-          sx={getRunButtonSx(setupBlockColor)}
-          style={playSceneAway ? {visibility: 'hidden'} : undefined}
-          aria-hidden={playSceneAway || undefined}
-          tabIndex={playSceneAway ? -1 : undefined}
-          startIcon={<FontAwesomeV6Icon iconName="play" />}
-          onClick={onPlay}
-        >
-          {onPlayGame ? 'Play scene' : 'Play'}
-        </MuiButton>
+        {!playSceneAway && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
+            sx={getRunButtonSx(setupBlockColor)}
+            startIcon={<FontAwesomeV6Icon iconName="play" />}
+            onClick={onPlay}
+          >
+            {onPlayGame ? 'Play scene' : 'Play'}
+          </MuiButton>
+        )}
         {onPlayGame && (
           // A disabled button takes no pointer events, so the title sits on
           // a wrapper.
@@ -204,10 +202,14 @@ const PlayBar: React.FunctionComponent<PlayBarProps> = ({
               size="small"
               sx={playSceneAway ? getRunButtonSx(setupBlockColor) : undefined}
               disabled={playGameDisabled}
-              startIcon={<FontAwesomeV6Icon iconName="flag-checkered" />}
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName={playSceneAway ? 'play' : 'flag-checkered'}
+                />
+              }
               onClick={onPlayGame}
             >
-              Play game
+              {playSceneAway ? 'Play' : 'Play game'}
             </MuiButton>
           </span>
         )}

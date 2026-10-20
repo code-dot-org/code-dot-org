@@ -1,5 +1,3 @@
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
-import {ThemeProvider} from '@mui/material/styles';
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {Provider} from 'react-redux';
@@ -17,7 +15,7 @@ import TraceStepper, {
 } from '@cdo/apps/ailab/engine/UIComponents/TraceStepper';
 
 import {levelProject, levelStore} from './levelStore';
-import {runTraining} from './renderWithProviders';
+import {runTraining, withTheme} from './renderWithProviders';
 
 // A bird sits two questions deep whichever way the tree first splits legs.
 function predictBird(store, project, trainedModel) {
@@ -47,12 +45,10 @@ function renderStepper(onReplay = () => {}) {
   const {trainedModel} = runTraining(store, project);
   predictBird(store, project, trainedModel);
   render(
-    createElement(
-      Provider,
-      {store},
+    withTheme(
       createElement(
-        ThemeProvider,
-        {theme: getMuiThemeForBrand(undefined)},
+        Provider,
+        {store},
         createElement(StoreStepper, {project, trainedModel, onReplay})
       )
     )

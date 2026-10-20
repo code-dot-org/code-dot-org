@@ -4,17 +4,24 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import type {TableView} from '../useTableView';
 
 import CellText from './CellText';
+import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
 
 interface RowsTableHeaderProps {
   columns: string[];
+  view: TableView;
   showPrediction?: boolean;
 }
 
-const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
+const RowsTableHeader = ({
+  columns,
+  view,
+  showPrediction,
+}: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
@@ -30,17 +37,20 @@ const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
       />
       {columns.map(column => {
         const role = getColumnRole(project, column);
+        const columnName = getLocalizedColumnName(datasetId, column);
         return (
-          <th
+          <ColumnHeader
             key={column}
-            scope="col"
+            column={column}
+            name={columnName}
+            view={view}
             className={classNames(tableStyles.header, {
               [tableStyles.headerLabel]: role === 'label',
               [tableStyles.headerFeature]: role === 'feature',
             })}
           >
-            <CellText>{getLocalizedColumnName(datasetId, column)}</CellText>
-          </th>
+            <CellText>{columnName}</CellText>
+          </ColumnHeader>
         );
       })}
       {showPrediction && (

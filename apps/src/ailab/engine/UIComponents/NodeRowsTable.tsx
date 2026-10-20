@@ -3,11 +3,12 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
-import {dataColumnsFor, getColumnRole} from '../helpers/columnDetails';
+import {getColumnRole} from '../helpers/columnDetails';
 import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import type {TableView} from '../useTableView';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
@@ -18,31 +19,25 @@ import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
   labelId: string;
-  rowIndices: number[];
+  view: TableView;
   emphasizedColumn?: string;
-  showAllColumns: boolean;
   emptyText: string;
   prediction?: string | number;
 }
 
 const NodeRowsTable = ({
   labelId,
-  rowIndices,
+  view,
   emphasizedColumn,
-  showAllColumns,
   emptyText,
   prediction,
 }: NodeRowsTableProps) => {
+  const {columns} = view;
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const labelColumn = project.labelColumn || 'unknown';
   const showPrediction = prediction !== undefined;
-  const columns = [
-    ...dataColumnsFor(data, project, showAllColumns),
-    labelColumn,
-  ];
-  const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
+  const shownRows = view.rows.slice(0, DATA_TABLE_ROW_LIMIT);
 
   return (
     <>
@@ -51,6 +46,7 @@ const NodeRowsTable = ({
           <thead>
             <RowsTableHeader
               columns={columns}
+              view={view}
               showPrediction={showPrediction}
             />
           </thead>
@@ -91,7 +87,7 @@ const NodeRowsTable = ({
             ))}
           </tbody>
         </table>
-        {rowIndices.length === 0 && (
+        {view.rows.length === 0 && (
           <Typography
             variant="body4"
             component="p"
@@ -101,7 +97,7 @@ const NodeRowsTable = ({
           </Typography>
         )}
       </DataTableFrame>
-      {rowIndices.length > shownRows.length && (
+      {view.rows.length > shownRows.length && (
         <Typography variant="body4" component="p" className={styles.note}>
           Showing the first {shownRows.length} rows.
         </Typography>

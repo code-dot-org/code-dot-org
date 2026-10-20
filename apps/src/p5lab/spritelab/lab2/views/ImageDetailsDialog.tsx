@@ -138,6 +138,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   imageChanged,
   advanced,
   defaultStyle,
+  generationsLeft,
   paintDisabled,
   pixelated,
   resolution,
@@ -300,9 +301,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               : generation?.subject
           }
           typeChoice={isNew && !lockedImageType}
-          defaultStyle={
-            (isNew && newImageDraft?.style) || defaultStyle || 'smooth'
-          }
+          generationsLeft={generationsLeft}
           onKeep={async result => {
             await onAcceptGenerated(
               result,
