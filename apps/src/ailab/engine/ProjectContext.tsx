@@ -67,8 +67,7 @@ export const ProjectProvider = ({
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
   // The rows and the column types arrive separately, and a dataset is only
-  // described once both have. A described dataset may still offer no
-  // selectable column, which is not the same as not having loaded.
+  // described once both have.
   const columnTypesKnown = useAppSelector(
     state => Object.keys(state.columnsByDataType).length > 0
   );
@@ -177,9 +176,7 @@ export const ProjectProvider = ({
     Opens a saved project, which may name columns this dataset no longer has
     and predates any preset the level applies.
 
-    Waits for the dataset to be described before applying the project. A
-    described dataset that offers nothing selectable still applies: the columns
-    drop, but the historic results are kept.
+    Waits for the dataset to be described before applying the project.
   */
   const openProject = useCallback(
     (saved: AilabProject) => {
