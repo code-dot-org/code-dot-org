@@ -7,7 +7,6 @@ import {useAppSelector} from './hooks';
 
 export type SortDirection = 'ascending' | 'descending';
 
-// A column from outside the dataset takes a symbol, which no column name can match.
 export type ColumnId = string | symbol;
 
 interface TableSort<Column extends ColumnId> {
