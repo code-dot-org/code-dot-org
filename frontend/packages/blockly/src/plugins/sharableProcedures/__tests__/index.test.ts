@@ -2,7 +2,7 @@ import {blocks, isProcedureBlock} from '@blockly/block-shareable-procedures';
 import 'blockly/blocks';
 import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
-import {afterEach, beforeAll, describe, expect, it} from 'vitest';
+import {afterEach, beforeAll, describe, expect, it, vi} from 'vitest';
 
 import BaseBlocks from '../../../blocks';
 import Driver from '../../../Driver';
@@ -170,18 +170,31 @@ describe('procedures.md: the mutators', () => {
 });
 
 describe('procedures.md: saving', () => {
-  it('PRC-4, PRC-V3: a definition saved as JSON and loaded again has lost its parameters', () => {
+  it('PRC-4, PRC-V3: a definition saved as JSON and loaded again keeps its parameters', () => {
     makeDriver();
     workspace = new Blockly.Workspace();
     appendFoo(workspace);
     const saved = Blockly.serialization.workspaces.save(workspace);
-    expect(saved.procedures).toBeUndefined();
+    expect(saved.procedures).toEqual([
+      expect.objectContaining({
+        name: 'foo',
+        parameters: [expect.objectContaining({name: 'x'})],
+      }),
+    ]);
 
     const loaded = new Blockly.Workspace();
     Blockly.serialization.workspaces.load(saved, loaded);
     const [model] = loaded.getProcedureMap().getProcedures();
     expect(model.getName()).toBe('foo');
-    expect(model.getParameters()).toEqual([]);
+    expect(model.getParameters().map(p => p.getName())).toEqual(['x']);
     loaded.dispose();
+  });
+
+  it('PRC-4: registers the serializer again without a warning', () => {
+    const warn = vi.spyOn(console, 'warn');
+    plugin.initialize();
+    plugin.initialize();
+    expect(warn).not.toHaveBeenCalled();
+    warn.mockRestore();
   });
 });

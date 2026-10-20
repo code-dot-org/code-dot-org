@@ -27,14 +27,15 @@ may be called any number of times (DEF-23).
 PRC-3. A definition and its calls share one procedure model in the
 workspace's procedure map: renaming the definition renames its calls.
 
-PRC-4. The plugin registers no procedure serializer. A workspace saved as
-JSON carries no `procedures` key; the definition saves only its model's
-id, and its parameters survive only as variables. Loaded again, the
-definition gets a new model with its name and no parameters.
+PRC-4. It also registers the library's procedure serializer under
+`procedures`, replacing any registered there, as apps does
+(`apps/src/blockly/blocklyWrapper.ts`). A workspace saved as JSON then
+carries its procedure models, with their parameters, under `procedures`,
+the form apps saves.
 
 PRC-5. The plugin has no `uninitialize`. Once initialized, the shareable
-blocks stay defined after the Driver is deconstructed, for the life of the
-page.
+blocks and the serializer stay registered after the Driver is
+deconstructed, for the life of the page.
 
 PRC-6. `BaseBlocks` holds Blockly's own procedure blocks (CMN-11), since
 they are captured when the package is imported. A lab that registers those
@@ -79,8 +80,9 @@ PRC-V2 (PRC-7). A block with a `NAME` label, an `input_dummy` named
 and `procedure_callernoreturn_get_def_block_mixin` follows a definition's
 renaming as PRC-V1's call does. Music's function call block is this block.
 
-PRC-V3 (PRC-4). Saving PRC-V1's workspace and loading it into another
-gives one procedure named `foo` with no parameters.
+PRC-V3 (PRC-4). Saving PRC-V1's workspace gives `procedures` holding one
+procedure named `foo` with one parameter, `x`; loading that into another
+workspace gives the same.
 
 ## Not specified here
 
@@ -90,14 +92,11 @@ gives one procedure named `foo` with no parameters.
 
 ## Open questions
 
-1. PRC-4: register the library's procedure serializer, as apps does
-   (`apps/src/blockly/blocklyWrapper.ts`)? Without it a definition's
-   parameters do not survive a save.
-2. PRC-5: give the plugin an `uninitialize` that restores Blockly's
-   blocks?
-3. PRC-6: leave the stock procedure blocks out of `BaseBlocks`, since a
+1. PRC-5: give the plugin an `uninitialize` that restores Blockly's
+   blocks and removes the serializer?
+2. PRC-6: leave the stock procedure blocks out of `BaseBlocks`, since a
    lab with the plugin must not register them and one without it has
    Blockly's already?
-4. PRC-9: the mutators' state type is the library's base event JSON, not
+3. PRC-9: the mutators' state type is the library's base event JSON, not
    what the blocks save. And nothing in the package or its labs uses
    `LegacyProcedureBlock`. Drop it?
