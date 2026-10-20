@@ -4,11 +4,11 @@ const layout = (params: Record<string, string> = {}) =>
   readBarLayout(name => params[name]);
 
 describe('readBarLayout', () => {
-  it('defaults to the scene row under the workspace, with the Preview bar and the resource buttons in the row', () => {
+  it('defaults to the scene dropdown in a workspace bar, with the Preview bar and the resource buttons in the bar', () => {
     expect(layout()).toEqual({
       previewSide: 'left',
       barAtBottom: true,
-      barInWorkspace: false,
+      barInWorkspace: true,
       scenesInStrip: false,
       scenesInPreviewBar: false,
       scenesInAStrip: false,
@@ -29,11 +29,14 @@ describe('readBarLayout', () => {
     });
   });
 
-  it('puts the scene dropdown in a workspace bar', () => {
-    expect(layout({bar: 'workspace'})).toMatchObject({
-      barInWorkspace: true,
-      scenesInAStrip: false,
-      resourcesInBar: true,
+  it('brings back the scene row under or above the workspace on request', () => {
+    expect(layout({bar: 'bottom'})).toMatchObject({
+      barInWorkspace: false,
+      barAtBottom: true,
+    });
+    expect(layout({bar: 'top'})).toMatchObject({
+      barInWorkspace: false,
+      barAtBottom: false,
     });
   });
 
