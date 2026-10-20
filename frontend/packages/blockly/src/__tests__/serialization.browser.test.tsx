@@ -11,6 +11,7 @@ Blockly.defineBlocksWithJsonArray([
 ]);
 
 import {
+  cleanUp,
   getDefaultLocation,
   isBlockAtEdge,
   isOverlapping,
@@ -138,13 +139,65 @@ describe('layout.md: placing blocks', () => {
     expect(isOverlapping(boundsOf(setup), boundsOf(other))).toBe(false);
   });
 
-  it('LAY-11, LAY-V4: leaves overlapping blocks that both have positions', () => {
+  it('LAY-11, LAY-V4: moves a block beside the one it overlaps when there is room', () => {
     const a = addBlock('text_print');
     const b = addBlock('text_print');
     a.moveTo(at(100, 100));
     b.moveTo(at(110, 105));
     positionBlocksOnWorkspace(workspace);
-    expect(isOverlapping(boundsOf(a), boundsOf(b))).toBe(true);
+    expect(a.getRelativeToSurfaceXY()).toMatchObject({x: 100, y: 100});
+    expect(b.getRelativeToSurfaceXY()).toMatchObject({
+      x: 100 + a.getHeightWidth().width + 10,
+      y: 105,
+    });
+  });
+
+  it('LAY-11: moves a block down when the one it overlaps is not behind it', () => {
+    const a = addBlock('text_print');
+    const b = addBlock('text_print');
+    a.moveTo(at(110, 100));
+    b.moveTo(at(100, 105));
+    positionBlocksOnWorkspace(workspace);
+    expect(b.getRelativeToSurfaceXY()).toMatchObject({
+      x: 100,
+      y: 100 + a.getHeightWidth().height + 10,
+    });
+  });
+
+  it('LAY-11: moves a block down when there is no room beside', () => {
+    const {viewWidth} = workspace.getMetricsManager().getMetrics();
+    const a = addBlock('text_print');
+    const b = addBlock('text_print');
+    const width = a.getHeightWidth().width;
+    a.moveTo(at(viewWidth - width - 20, 100));
+    b.moveTo(at(viewWidth - width - 10, 105));
+    positionBlocksOnWorkspace(workspace);
+    expect(b.getRelativeToSurfaceXY()).toMatchObject({
+      x: viewWidth - width - 10,
+      y: 100 + a.getHeightWidth().height + 10,
+    });
+  });
+
+  it('LAY-11: does not move an immovable block', () => {
+    const a = addBlock('text_print');
+    const b = addBlock('text_print');
+    a.moveTo(at(100, 100));
+    b.moveTo(at(110, 105));
+    b.setMovable(false);
+    positionBlocksOnWorkspace(workspace);
+    expect(b.getRelativeToSurfaceXY()).toMatchObject({x: 110, y: 105});
+    expect(isOverlapping(boundsOf(a), boundsOf(b))).toBe(false);
+  });
+
+  it('LAY-13: cleanUp with includeImmovableBlocks moves immovable blocks too', () => {
+    const a = addBlock('text_print');
+    const b = addBlock('text_print');
+    a.moveTo(at(100, 100));
+    b.moveTo(at(110, 105));
+    a.setMovable(false);
+    b.setMovable(false);
+    cleanUp(workspace, true);
+    expect(isOverlapping(boundsOf(a), boundsOf(b))).toBe(false);
   });
 
   it('LAY-1: does nothing to a workspace that is not rendered', () => {
@@ -176,7 +229,7 @@ describe('layout.md: right to left', () => {
     expect(getDefaultLocation(rtl)).toEqual({defaultX: viewWidth, defaultY: 0});
   });
 
-  it('LAY-10, LAY-V3: a placed block can overlap a narrower block beside its start', () => {
+  it('LAY-10, LAY-V3: a placed block clears a narrower block beside its start', () => {
     const {viewWidth} = rtl.getMetricsManager().getMetrics();
     const narrow = Blockly.serialization.blocks.append(
       {type: 'math_number'},
@@ -198,6 +251,6 @@ describe('layout.md: right to left', () => {
 
     positionBlocksOnWorkspace(rtl);
 
-    expect(isOverlapping(boundsOf(narrow), boundsOf(wide))).toBe(true);
+    expect(isOverlapping(boundsOf(narrow), boundsOf(wide))).toBe(false);
   });
 });

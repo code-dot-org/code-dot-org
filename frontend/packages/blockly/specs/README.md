@@ -103,3 +103,9 @@ these changes.
 13. The procedures plugin registers the library's procedure serializer
     (PRC-4), as apps does. `ngfp/blockly` registered none, so a
     definition's parameters were lost when a workspace was saved as JSON.
+14. The layout measures a right-to-left block from its left edge, and
+    ends, as apps' does, by moving every movable block off any it
+    overlaps (`cleanUp`). `ngfp/blockly` measured from the right edge,
+    which left blocks of different widths overlapping, and had no
+    `cleanUp`, so overlapping blocks that both had positions stayed
+    overlapped. See `layout.md`, LAY-10 and LAY-11.

@@ -16,7 +16,7 @@ const WORKSPACE_PADDING = 16;
 const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
 const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
-const VERTICAL_SPACE_BETWEEN_BLOCKS = 10;
+const SPACE_BETWEEN_BLOCKS = 10;
 const SETUP_TYPES = ['when_run', 'Dancelab_whenSetup'];
 
 /**
@@ -27,8 +27,7 @@ const SETUP_TYPES = ['when_run', 'Dancelab_whenSetup'];
  */
 function getSpaceBetweenBlocks(block: Blockly.BlockSvg) {
   return (
-    VERTICAL_SPACE_BETWEEN_BLOCKS +
-    (isFunctionBlock(block) ? SVG_FRAME_TOP_PADDING : 0)
+    SPACE_BETWEEN_BLOCKS + (isFunctionBlock(block) ? SVG_FRAME_TOP_PADDING : 0)
   );
 }
 
@@ -216,7 +215,85 @@ export const positionBlocksOnWorkspace: (
   );
 
   adjustBlockPositions(orderedBlocksSetupFirst, workspace);
+  cleanUp(workspace);
 };
+
+/**
+ * Moves blocks off any block they overlap: to the side when the one they
+ * overlap is behind them in reading order and there is room, otherwise down.
+ * @param workspace - The workspace to clean up
+ * @param includeImmovableBlocks - Whether immovable blocks may be moved too
+ */
+export function cleanUp(
+  workspace: Blockly.WorkspaceSvg,
+  includeImmovableBlocks = false,
+) {
+  if (!workspace.rendered) {
+    return;
+  }
+
+  const blocks = workspace.getTopBlocks(SORT_BY_POSITION) as Blockly.BlockSvg[];
+  const orderedColliders: Collider[] = [];
+  const blocksToPlace: Blockly.BlockSvg[] = [];
+  blocks.forEach(block => {
+    if (includeImmovableBlocks || block.isMovable()) {
+      blocksToPlace.push(block);
+    } else {
+      insertCollider(orderedColliders, getCollider(block));
+    }
+  });
+
+  const {defaultX, defaultY} = getDefaultLocation(workspace);
+  blocksToPlace.forEach(block => {
+    let {x, y} = block.getRelativeToSurfaceXY();
+    if (x === defaultX) {
+      x = getXCoordinate(block, workspace);
+    }
+    if (y === defaultY) {
+      y = getYCoordinate(block);
+    }
+    block.moveTo(new Blockly.utils.Coordinate(x, y));
+    let collider = getCollider(block);
+
+    const {viewWidth = 0, contentWidth = 0} = workspace
+      .getMetricsManager()
+      .getMetrics();
+    const maximumX = Math.max(viewWidth, contentWidth) - WORKSPACE_PADDING;
+
+    orderedColliders.forEach(orderedCollider => {
+      if (!isOverlapping(collider, orderedCollider)) {
+        return;
+      }
+      const behind = workspace.RTL
+        ? orderedCollider.x > collider.x
+        : orderedCollider.x < collider.x;
+
+      let sideways: number | undefined;
+      if (behind) {
+        if (workspace.RTL) {
+          const right = orderedCollider.x - SPACE_BETWEEN_BLOCKS;
+          if (right - collider.width >= 0) {
+            sideways = right;
+          }
+        } else {
+          const left =
+            orderedCollider.x + orderedCollider.width + SPACE_BETWEEN_BLOCKS;
+          if (left + collider.width < maximumX) {
+            sideways = left;
+          }
+        }
+      }
+      if (sideways !== undefined) {
+        x = sideways;
+      } else {
+        y = orderedCollider.y + orderedCollider.height + SPACE_BETWEEN_BLOCKS;
+      }
+      block.moveTo(new Blockly.utils.Coordinate(x, y));
+      collider = getCollider(block);
+    });
+    insertCollider(orderedColliders, collider);
+  });
+}
 
 export function getDefaultLocation(workspaceOverride?: Blockly.WorkspaceSvg) {
   const workspace =
@@ -247,6 +324,11 @@ function getCollider(block: Blockly.BlockSvg): Collider {
     ...position,
     ...size,
   };
+
+  if ((block.workspace as Blockly.WorkspaceSvg).RTL) {
+    // The position of a right-to-left block is its right edge.
+    collider.x -= collider.width;
+  }
 
   // SVG frames require us to account for additional height and width
   if (isFunctionBlock(block)) {
