@@ -1,0 +1,92 @@
+{
+  "name": "@code-dot-org/blockly",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "blockly",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/blockly/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/blockly"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.mjs",
+      "require": "./dist/plugins/index.cjs"
+    },
+    "./renderers": {
+      "types": "./dist/renderers/index.d.ts",
+      "import": "./dist/renderers/index.mjs",
+      "require": "./dist/renderers/index.cjs"
+    },
+    "./renderers/thrasos": {
+      "types": "./dist/renderers/thrasos/index.d.ts",
+      "import": "./dist/renderers/thrasos/index.mjs",
+      "require": "./dist/renderers/thrasos/index.cjs"
+    },
+    "./themes/default": {
+      "types": "./dist/themes/default/index.d.ts",
+      "import": "./dist/themes/default/index.mjs",
+      "require": "./dist/themes/default/index.cjs"
+    },
+    "./blocks/types": {
+      "types": "./dist/blocks/types.d.ts"
+    }
+  },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "clean": "rimraf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "blockly": "^13.1.0",
+    "events": "^3.3.0"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@eslint/js": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "globals": "catalog:",
+    "jsdom": "catalog:",
+    "prettier": "catalog:",
+    "rimraf": "catalog:",
+    "typed-emitter": "^2.1.0",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  }
+}

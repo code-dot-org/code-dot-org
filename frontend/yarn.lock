@@ -1719,6 +1719,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/blockly@workspace:packages/blockly":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/blockly@workspace:packages/blockly"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@eslint/js": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@types/node": "catalog:"
+    blockly: "npm:^13.1.0"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    eslint-plugin-react-refresh: "catalog:"
+    events: "npm:^3.3.0"
+    globals: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    rimraf: "catalog:"
+    typed-emitter: "npm:^2.1.0"
+    typescript: "catalog:"
+    typescript-eslint: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/changelogs@workspace:*, @code-dot-org/changelogs@workspace:packages/changelogs":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/changelogs@workspace:packages/changelogs"
@@ -9480,6 +9507,15 @@ __metadata:
     buffers: "npm:~0.1.1"
     chainsaw: "npm:~0.1.0"
   checksum: 10c0/752c2c2ff9f23506b3428cc8accbfcc92fec07bf8a31a1953e9c7e2193eb5db8a67252034ab93e8adab2a1c43f3eeb3da0bacae0320e9814f3ca127942c55871
+  languageName: node
+  linkType: hard
+
+"blockly@npm:^13.1.0":
+  version: 13.4.0
+  resolution: "blockly@npm:13.4.0"
+  peerDependencies:
+    jsdom: ">=27.4.0 <31.0.0"
+  checksum: 10c0/c59c9732a7c289fe84007f24364727f95ad5e0f4d465829a95bc4225ba5ecc19ed63b394a319183b855c9b1ce406e1d95a441ca9b9f0ae380530aa35b96e85ea
   languageName: node
   linkType: hard
 
@@ -20466,6 +20502,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:*":
+  version: 7.8.2
+  resolution: "rxjs@npm:7.8.2"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 10c0/1fcd33d2066ada98ba8f21fcbbcaee9f0b271de1d38dc7f4e256bfbc6ffcdde68c8bfb69093de7eeb46f24b1fb820620bf0223706cff26b4ab99a7ff7b2e2c45
+  languageName: node
+  linkType: hard
+
 "rxjs@npm:^7.8.1":
   version: 7.8.1
   resolution: "rxjs@npm:7.8.1"
@@ -22756,6 +22801,18 @@ __metadata:
     is-typed-array: "npm:^1.1.13"
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/74253d7dc488eb28b6b2711cf31f5a9dcefc9c41b0681fd1c178ed0a1681b4468581a3626d39cd4df7aee3d3927ab62be06aa9ca74e5baf81827f61641445b77
+  languageName: node
+  linkType: hard
+
+"typed-emitter@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "typed-emitter@npm:2.1.0"
+  dependencies:
+    rxjs: "npm:*"
+  dependenciesMeta:
+    rxjs:
+      optional: true
+  checksum: 10c0/01fc354ba8e87bd39b1bf4fe1c96fe7ecff7fde83161003b0f8c7f4b285a368052e185ba655dd8c102c4445301b7a1e032c8972f181b440fc95bd810450f1314
   languageName: node
   linkType: hard
 
