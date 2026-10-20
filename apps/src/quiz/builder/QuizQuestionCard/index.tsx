@@ -35,14 +35,24 @@ function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
     description: question.description,
     explanation: question.explanation,
   };
-  return question.type === 'MultipleChoiceQuestion'
-    ? {
+  switch (question.type) {
+    case 'MultipleChoiceQuestion':
+      return {
         ...shared,
         type: question.type,
         choices: question.choices,
         correctChoiceId: question.correctChoiceId,
-      }
-    : {...shared, type: question.type};
+      };
+    case 'MultipleSelectQuestion':
+      return {
+        ...shared,
+        type: question.type,
+        choices: question.choices,
+        correctChoiceIds: question.correctChoiceIds,
+      };
+    case 'FreeResponseQuestion':
+      return {...shared, type: question.type};
+  }
 }
 
 // One row of the quiz outline. Collapsed, it's a read-only preview; expanded,
@@ -105,7 +115,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
 
   return (
     <BuilderCard
-      iconName={QUESTION_TYPE_LABELS_ICONS[question.type].iconName}
+      iconName={QUESTION_TYPE_LABELS_ICONS[draft.type].iconName}
       name={draft.questionName}
       preview={draft.questionTitle}
       itemLabel="question"
@@ -142,7 +152,12 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
             value: 'answers',
             text: 'Answers',
             tabContent: (
-              <AnswersTab draft={draft} onChange={setDraft} disabled={isBusy} />
+              <AnswersTab
+                draft={draft}
+                onChange={setDraft}
+                disabled={isBusy}
+                questionId={question.id}
+              />
             ),
           },
           {
