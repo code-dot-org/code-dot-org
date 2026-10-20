@@ -10,7 +10,6 @@ require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'honeybadger/ruby'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
@@ -106,7 +105,7 @@ def main
       end
     end
   rescue ActiveRecord::RecordNotFound => exception
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: "Error reading level '#{level.name}' for rollup tables."
     )
@@ -155,7 +154,7 @@ def main
       SQL
     end
   rescue => exception
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: "Error when writing contained_levels"
     )
@@ -178,7 +177,7 @@ def main
       SQL
     end
   rescue => exception
-    Honeybadger.notify(
+    Observability::Errors.report(
       exception,
       error_message: "Error when writing contained_level_answers"
     )
@@ -262,7 +261,7 @@ def insert_pd_applications_status_logs_rows(rows)
   SQL
 rescue => exception
   puts exception
-  Honeybadger.notify(
+  Observability::Errors.report(
     exception,
     error_message: "Error when writing pd_applications_status_logs"
   )

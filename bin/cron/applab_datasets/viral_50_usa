@@ -21,7 +21,7 @@ PROFANITY_LOCALE = 'en-US'
 def fetch_feed
   response = Net::HTTP.get_response(URI(ITUNES_TOP_SONGS_US_URL))
   if response.code != '200'
-    Honeybadger.notify_cronjob_error(
+    Observability::Errors.report(
       error: response.message,
       error_message: "Failed to retrieve iTunes chart data for App Lab dataset #{TABLE_NAME}.",
     )
@@ -30,7 +30,7 @@ def fetch_feed
 
   JSON.parse(response.body)
 rescue StandardError => exception
-  Honeybadger.notify_cronjob_error(
+  Observability::Errors.report(
     exception,
     error_message: "Failed to parse iTunes chart data for App Lab dataset #{TABLE_NAME}.",
   )
@@ -76,7 +76,7 @@ def fetch_records
 
   entries = payload.dig('feed', 'entry')
   unless entries.is_a?(Array) && entries.any?
-    Honeybadger.notify_cronjob_error(
+    Observability::Errors.report(
       error_message: "No chart entries returned from the iTunes feed for App Lab dataset #{TABLE_NAME}.",
     )
     return []
@@ -88,7 +88,7 @@ end
 def main
   records = fetch_records
   if records.empty?
-    Honeybadger.notify_cronjob_error(
+    Observability::Errors.report(
       error_message: "No records were built from the iTunes feed for App Lab dataset #{TABLE_NAME}.",
     )
     return

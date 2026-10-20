@@ -235,6 +235,11 @@ enable_opentelemetry: false
 enable_sentry: false
 # DSN for the Dashboard Rails backend Sentry project.
 dashboard_sentry_dsn: !Secret
+# Sentry Data Source Name (DSN) for the Cronjobs project.
+# See https://docs.sentry.io/concepts/key-terms/dsn-explainer/
+cronjobs_sentry_dsn: !Secret
+# DSN for the ActiveJob workers Sentry project. Not read yet.
+activejobs_sentry_dsn: !Secret
 # DSN for the apps/ webpack bundle Sentry project.
 frontend_apps_sentry_dsn: !Secret
 # DSN for the frontend/apps/studio Vite app Sentry project.
