@@ -329,10 +329,9 @@ def dotd_menu(dotd_name)
         run_interactively_on 'production-daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
         puts <<-OUTPUT.unindent
 
-          STP cannot report a result: the interactive session carries no exit
-          status back. The seed script posts success or failure to
-          Slack#infra-production, and prints any error and backtrace above.
-
+          STP completed. Check Slack#infra-production to confirm whether it
+          succeeded. On failure, the output above ends with a Ruby error and
+          stack trace.
         OUTPUT
         @logger.info 'seeds curriculum content from staging to production'
       end
