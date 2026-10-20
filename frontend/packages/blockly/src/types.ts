@@ -9,6 +9,7 @@ import type {
   BlockSvg,
   JavascriptBlockGenerator,
   OldBlockDefinition,
+  ProcedureBlock,
 } from './blocks/types';
 import type {Extension} from './extensions/types';
 import type {Mutator} from './mutators/types';
@@ -22,6 +23,7 @@ export type {
   BlockSvg,
   JavascriptBlockGenerator,
   OldBlockDefinition,
+  ProcedureBlock,
   Extension,
   Mutator,
 };
@@ -31,6 +33,15 @@ export interface BlocklySerialization {
     blocks?: Blockly.serialization.blocks.State[];
   };
 }
+
+/**
+ * A procedure block with some of the legacy callbacks included.
+ */
+export type LegacyProcedureBlock = ProcedureBlock & {
+  getProcedureCall: () => string;
+  renameProcedure: (p1: string, p2: string) => void;
+  getProcedureDef: () => [string, string[], boolean];
+};
 
 /**
  * Our encapsulation of block mixins, which just add methods and properties to

@@ -60,6 +60,8 @@ export default defineConfig({
         'src/index.ts',
         'src/contexts/index.ts',
         'src/plugins/index.ts',
+        'src/plugins/sharableProcedures/index.ts',
+        'src/mutators/index.ts',
         'src/renderers/index.ts',
         'src/renderers/thrasos/index.ts',
         'src/themes/index.ts',
