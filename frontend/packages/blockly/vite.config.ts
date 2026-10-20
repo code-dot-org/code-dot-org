@@ -78,6 +78,7 @@ export default defineConfig({
         'src/inputs/round.ts',
         'src/inputs/triangle.ts',
         'src/fields/fieldButton/index.ts',
+        'src/fields/miniToolbox/index.ts',
         'src/fields/fieldColour/index.ts',
         'src/blocks/types.ts',
       ],
