@@ -2,6 +2,7 @@ import {useState} from 'react';
 
 import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
+import {getLocalizedValue} from './helpers/valueDetails';
 import {useAppSelector} from './hooks';
 
 export type SortDirection = 'ascending' | 'descending';
@@ -97,10 +98,11 @@ export function useDatasetTableView(
 ): TableView {
   const data = useAppSelector(state => state.data);
   const columnTypes = useAppSelector(state => state.columnsByDataType);
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   return useTableView({
     rows,
     columns,
     columnTypes,
-    valueAt: (row, column) => data[row][column],
+    valueAt: (row, column) => getLocalizedValue(data[row][column], datasetId),
   });
 }

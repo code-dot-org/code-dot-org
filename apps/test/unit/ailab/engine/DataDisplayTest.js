@@ -140,4 +140,22 @@ describe('DataDisplay', () => {
     ).toBe(false);
     expect(rowNumbers().slice(0, 3)).toEqual(['1', '2', '3']);
   });
+
+  test('sorts text by the value it shows', () => {
+    I18n.initI18n({
+      datasets: {
+        unknown: {
+          values: {
+            bird: () => 'oiseau',
+            dog: () => 'chien',
+            snake: () => 'serpent',
+          },
+        },
+      },
+    });
+    renderDisplay();
+    fireEvent.click(button('Sort by animal A-Z'));
+
+    expect(rowNumbers().join(' ')).toBe('2 5 8 10 1 4 7 3 6 9');
+  });
 });

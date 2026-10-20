@@ -115,7 +115,7 @@ const DataTable = ({
     if (singleRow !== undefined) {
       return [Math.min(singleRow, data.length - 1)];
     }
-    return [...data.keys()].slice(0, maxRows);
+    return data.slice(0, maxRows).map((_row, index) => index);
   };
 
   const handleSetCurrentColumn = (columnId: string) => {

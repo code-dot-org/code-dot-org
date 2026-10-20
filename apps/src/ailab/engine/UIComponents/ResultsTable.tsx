@@ -39,7 +39,9 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const columns = dataColumnsFor(data, project, showAllColumns);
-  const valueAt = (index: number, column: string) => {
+  const cellValue = (value: string | number) =>
+    getLocalizedValue(value, datasetId);
+  const rawValueAt = (index: number, column: string) => {
     if (column === labelColumn) {
       return results.labels[index];
     }
@@ -48,15 +50,14 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
       ? data[results.rowIndices[index]][column]
       : results.examples[index][feature];
   };
+  const valueAt = (index: number, column: string) =>
+    cellValue(rawValueAt(index, column));
   const view = useTableView({
     rows: [...results.examples.keys()],
     columns,
     columnTypes: columnsByDataType,
     valueAt,
   });
-
-  const cellValue = (value: string | number) =>
-    getLocalizedValue(value, datasetId);
 
   return (
     <>
@@ -87,7 +88,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                           [tableStyles.bodyCellFeature]: role === 'feature',
                         })}
                       >
-                        <CellText>{cellValue(valueAt(index, column))}</CellText>
+                        <CellText>{valueAt(index, column)}</CellText>
                       </td>
                     );
                   })}
