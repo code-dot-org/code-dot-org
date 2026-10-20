@@ -110,6 +110,9 @@ export interface Theme {
       location_blocks: ThemeBlockStyle;
       // Formerly called dance_blocks, music_blocks
       lab_blocks: ThemeBlockStyle;
+      comment_blocks: ThemeBlockStyle;
+      // Used in Dance AI Edition
+      ai_blocks: ThemeBlockStyle;
     };
   } & Omit<
     InstanceType<typeof Blockly.Theme>,

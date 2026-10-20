@@ -71,6 +71,7 @@ const REQUIRED_STYLES = [
   'location_blocks',
   'lab_blocks',
   'comment_blocks',
+  'ai_blocks',
 ];
 
 describe('themes.md: the set', () => {

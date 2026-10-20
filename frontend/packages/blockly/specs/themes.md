@@ -51,9 +51,9 @@ their secondary colours (DEF-38, DEF-40). No light theme's name contains
 `dark`.
 
 THM-6. Every theme names a style for every key `definitions.md` requires
-(DEF-45), and also `comment_blocks`. `default` and `default-dark` lack
-`ai_blocks`, which the other eight define; Blockly draws a block whose
-style its theme does not define in black.
+(DEF-45). Blockly draws a block whose style its theme does not define in
+black, so the `Theme` type makes a missing style a compile error.
+`ai_blocks`, Dance AI Edition's, is `#566065` in every theme, as in apps.
 
 THM-7. A theme gives each style a primary colour only, and leaves the
 secondary and tertiary colours to the renderer, which darkens them under a
@@ -107,10 +107,7 @@ has the primary colour of apps' `protanopiaBlockStyles.loop_blocks`.
 
 ## Open questions
 
-1. THM-6: give `default` and `default-dark` apps' `ai_blocks` (`#566065`,
-   used by Dance AI Edition), and require `ai_blocks` and `comment_blocks`
-   in the `Theme` type, so that a theme missing a style fails to compile?
-2. THM-1: correct `tritanopia-dark`'s label to "Tritanopia Dark Theme".
-3. THM-7: copy `@blockly/theme-highcontrast`'s styles rather than change the
+1. THM-1: correct `tritanopia-dark`'s label to "Tritanopia Dark Theme".
+2. THM-7: copy `@blockly/theme-highcontrast`'s styles rather than change the
    module's own object?
-4. THM-9: drop `blackBackground`, or is something meant to read it?
+3. THM-9: drop `blackBackground`, or is something meant to read it?

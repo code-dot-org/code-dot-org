@@ -77,6 +77,10 @@ export const definition = {
     comment_blocks: {
       colourPrimary: '#aaaaaa',
     },
+    // Dance AI Edition's; the same in every theme, as in apps.
+    ai_blocks: {
+      colourPrimary: '#566065',
+    },
   },
   categoryStyles: {},
   componentStyles: {

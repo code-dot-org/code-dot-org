@@ -88,3 +88,6 @@ these changes.
    one on every render and kept the first, so every render of a lab under
    `lab-base`'s `BlocklyLab` ran a Driver constructor and initialized the
    global plugins again. See `workspace.md`, WS-26.
+9. The default themes define `ai_blocks`, which apps' do and
+   `ngfp/blockly`'s did not, and the `Theme` type requires it and
+   `comment_blocks`. See `themes.md`, THM-6.

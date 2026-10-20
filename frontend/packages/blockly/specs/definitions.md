@@ -378,7 +378,8 @@ settings menu; `blockLimits`; `trashcan`), and its `blockStyles` must name a
 style for each of: `default`, `setup_blocks`, `event_blocks`,
 `loop_blocks`, `logic_blocks`, `procedure_blocks`, `variable_blocks`,
 `math_blocks`, `text_blocks`, `colour_blocks`, `sprite_blocks`,
-`world_blocks`, `behavior_blocks`, `location_blocks` and `lab_blocks`. These
+`world_blocks`, `behavior_blocks`, `location_blocks`, `lab_blocks`,
+`comment_blocks` and `ai_blocks`. These
 are the names a definition's `style` uses. `instance` is the Blockly theme
 defined from the description over Blockly's classic theme. The default
 theme is named `default`; the other themes are in `themes.md`.
