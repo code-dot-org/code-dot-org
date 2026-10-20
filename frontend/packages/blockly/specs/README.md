@@ -39,7 +39,7 @@ what the code does, even where that is wrong.
 | 13   | `xml-toolbox.md`     | XML-   | XML to JSON, toolbox and code utilities                                  | 1a     | written |
 | 14   | `typed-variables.md` | TV-    | `createTypedVariable`                                                    | 1a     | written |
 | 15   | `flyout.md`          | FLY-   | `BlocklyFlyout`                                                          | 1b     | written |
-| 16   | `markdown.md`        | MD-    | blocks embedded in markdown                                              | 1b, 13 | planned |
+| 16   | `markdown.md`        | MD-    | blocks embedded in markdown                                              | 1b, 13 | written |
 | 17   | `mini-toolbox.md`    | MT-    | the mini-toolbox field                                                   | 1b, 6  | planned |
 
 The labs in the `ngfp` stack need parts 1a through 11, and the
