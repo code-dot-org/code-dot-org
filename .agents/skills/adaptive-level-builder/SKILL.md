@@ -117,9 +117,9 @@ https://github.com/code-dot-org/code-dot-org/tree/staging/apps/src/adaptive/sche
 - `repo.py ls dashboard/config/level_content/adaptive` — the pathway ids
   already taken.
 
-`$S/check_pathway.py` hard-codes the shapes and reference rules. If the
-schema has a key or rule the checker lacks, follow the schema, and tell
-the user the checker needs updating.
+The checker validates with this same schema, fetched from GitHub, so it
+never lags the format. Read the schema to learn the fields; let the
+checker enforce them.
 
 ### 3. Fetch the source
 
@@ -169,13 +169,19 @@ Then write, in this order:
 3. `<id>.tasks.md`, following `references/tasks.md`.
 4. `python3 $S/check_pathway.py <workspace>/<id>.json`
 
-Fix every `PROBLEM` line and rerun until it passes. The checker mirrors
-the schema and reference rules, checks the annotations, and checks that
-the task list covers every level, placeholder image, and TODO. It also
-looks up each level on GitHub to check its project template. The level
-index is cached for an hour; `rm -r ~/.cache/adaptive-level-builder` after
-a content push to see new levels sooner. Offline, it skips the level
-checks and says so.
+Fix every `PROBLEM` line and rerun until it passes. The checker runs the
+zod schema from `staging` (or `REPO_REF`) through `$S/validate_pathway.mjs`,
+the same parse CI's `contentFilesTest.ts` runs, so its schema messages are
+zod's own. It needs Node 18 or later; the first run fetches the schema and
+installs zod and esbuild under `~/.cache/adaptive-level-builder/zod`
+(about ten seconds), later runs take a fraction of a second. Without Node
+it says it skipped the schema and checks the rest; tell the user CI will
+catch what it missed. Besides the schema, it checks the annotations,
+that the task list covers every level, placeholder image, and TODO, and,
+on GitHub, each level's project template and each video key. The level
+index is cached for an hour; `rm ~/.cache/adaptive-level-builder/levels-*`
+after a content push to see new levels sooner. Offline, it skips the
+GitHub checks and says so.
 
 ### 5. Report
 

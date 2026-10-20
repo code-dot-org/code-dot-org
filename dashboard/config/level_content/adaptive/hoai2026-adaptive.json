@@ -429,11 +429,27 @@
           ]
         },
         {
-          "id": "check-the-fix-widget",
+          "id": "check-the-fix-check",
           "title": "Before and after",
-          "kind": "level",
-          "level": "adaptive-HoAI26-check-the-fix-14",
-          "instructions": "Drag a slider across two versions of a page to find what changed."
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 115,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "check-the-fix-q1",
+              "questionTitle": "The AI says it fixed your broken button. You reload the page and the button works. Which two things should you do next?",
+              "choices": [
+                { "id": "a", "text": "Move on, since the button works now." },
+                { "id": "b", "text": "Click through the rest of the page." },
+                { "id": "c", "text": "Ask the AI to confirm that everything works." },
+                { "id": "d", "text": "Look for anything that changed or broke." },
+                { "id": "e", "text": "Start over from your first version." },
+                { "id": "f", "text": "Both B and D" },
+                { "id": "g", "text": "Both A and D" }
+              ],
+              "correctChoiceId": "f"
+            }
+          ]
         },
         {
           "id": "check-the-fix-project",

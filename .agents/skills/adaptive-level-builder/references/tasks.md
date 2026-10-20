@@ -131,9 +131,10 @@ carries it to GitHub. Before that editor is deployed, a change takes
 another pull request. Say which after each change once F1 is done.
 
 If levelbuilder rejects the JSON ("Invalid adaptive content"), its
-deployed code may be older than `staging`: read the schema with
-`REPO_REF=levelbuilder` and say which fields it lacks; do not change the
-build to match without asking.
+deployed code may be older than `staging`: run the checker with
+`REPO_REF=levelbuilder` (the branch levelbuilder deploys) and compare. Say
+which fields the older schema lacks; do not change the build to match
+without asking.
 
 ## Updating
 

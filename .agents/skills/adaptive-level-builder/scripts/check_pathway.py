@@ -3,11 +3,11 @@
 
 usage: check_pathway.py WORKSPACE/<id>.json
 
-Reads <id>.annotated.jsonc and <id>.tasks.md beside the JSON. Mirrors the
-shape and reference rules of apps/src/adaptive/schema (not a substitute for
-the zod schema, which CI runs), checks every text line of the JSONC carries
-a well-formed tag, and that the task list covers every level the pathway
-names, every placeholder image, and every TODO. Levels are looked up on
+Reads <id>.annotated.jsonc and <id>.tasks.md beside the JSON. Validates the
+JSON with the zod schema itself through validate_pathway.mjs (needs Node;
+without it, only the structure the other checks read), checks every text
+line of the JSONC carries a well-formed tag, and that the task list covers
+every level the pathway names, every placeholder image, and every TODO. Levels are looked up on
 GitHub through repo.py; offline, those checks are skipped with a note.
 Video keys are checked against dashboard/config/videos.csv the same way.
 Exits nonzero on any PROBLEM. Prints TODO paths and task counts.
@@ -17,6 +17,8 @@ import io
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import urllib.error
 
@@ -39,235 +41,45 @@ TASK_LINE = re.compile(r'^\s*- \[( |x)\] (?:~~)?\*\*([A-Z]\d+)\*\*')
 REGISTRY_ROW = re.compile(r'^\|\s*`([^`]+)`\s*\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]*)\|')
 
 
-# Mirrors the strict zod objects: required keys (non-empty strings unless in
-# MAY_BE_EMPTY), then optional keys.
-SHAPES = {
-    'pathway': ({'formatVersion', 'id', 'title', 'objective', 'project', 'skills', 'checkpoints'}, set()),
-    'project': ({'templateLevel', 'description'}, set()),
-    'skill': ({'id', 'title', 'description'}, {'evidenceLevels', 'standards'}),
-    'checkpoint': ({'id', 'title', 'description', 'steps'},
-                   {'skillIds', 'requires', 'targetEvidenceLevels', 'skippable', 'routeAfterCompletion'}),
-    'panels': ({'id', 'title', 'kind', 'panels'}, set()),
-    'panel': ({'key', 'imageUrl', 'text'}, {'layout', 'typing', 'fadeInOverPrevious'}),
-    'questions': ({'id', 'title', 'kind', 'questions'}, {'description'}),
-    'MultipleChoiceQuestion': ({'id', 'type', 'questionName', 'questionTitle', 'choices'},
-                               {'correctChoiceId', 'measures'}),
-    'choice': ({'id', 'text'}, set()),
-    'freeResponse': ({'id', 'type', 'text'}, {'placeholder'}),
-    'level': ({'id', 'title', 'kind', 'level'}, {'instructions', 'instructionsPrompt', 'project'}),
-    'video': ({'id', 'title', 'kind', 'videoKey'}, set()),
-}
-STEP_KINDS = ('panels', 'questions', 'level', 'video')
-MAY_BE_EMPTY = {('panel', 'text'), ('freeResponse', 'placeholder'), ('questions', 'description')}
-LAYOUTS = {f'text-{v}-{h}' for v in ('top', 'bottom') for h in ('left', 'center', 'right')}
-EVIDENCE_KEY = re.compile(r'^(0|[1-9]\d*)$')
+def schema_problems(json_path):
+    """Problems from the zod schema itself (validate_pathway.mjs), or None,
+    with a note printed, when it cannot run."""
+    node = shutil.which('node')
+    if not node:
+        print('note: schema check skipped, Node is not installed; CI runs it (contentFilesTest.ts)')
+        return None
+    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'validate_pathway.mjs')
+    try:
+        out = subprocess.run([node, script, json_path], capture_output=True, text=True, timeout=600)
+        result = json.loads(out.stdout.strip().splitlines()[-1])
+    except (subprocess.TimeoutExpired, IndexError, ValueError) as e:
+        print(f'note: schema check skipped, the validator failed ({e}); CI runs it (contentFilesTest.ts)')
+        return None
+    if 'skipped' in result:
+        print(f'note: schema check skipped, {result["skipped"]}; CI runs it (contentFilesTest.ts)')
+        return None
+    return result['problems']
 
 
-def is_int(v, least):
-    return isinstance(v, int) and not isinstance(v, bool) and v >= least
-
-
-def shape_problems(p):
+def structure_problems(p):
+    """Only what the checks below need to read the file, for when the schema
+    check cannot run. Not a substitute for it."""
+    if not isinstance(p, dict) or not isinstance(p.get('checkpoints'), list):
+        return ['pathway: expected an object with a checkpoints list']
+    if not isinstance(p.get('project'), dict) or not isinstance(p['project'].get('templateLevel'), str):
+        return ['project.templateLevel: missing']
     problems = []
-
-    def check(obj, shape, where):
-        if not isinstance(obj, dict):
-            problems.append(f'{where}: expected an object')
-            return
-        required, optional = SHAPES[shape]
-        for key in sorted(required - obj.keys()):
-            problems.append(f'{where}.{key}: missing')
-        for key in sorted(obj.keys() - required - optional):
-            problems.append(f'{where}.{key}: not allowed')
-        for key, value in obj.items():
-            if isinstance(value, str) and not value and (shape, key) not in MAY_BE_EMPTY:
-                problems.append(f'{where}.{key}: empty')
-
-    check(p, 'pathway', 'pathway')
-    if p.get('formatVersion') != 4:
-        problems.append('pathway.formatVersion: must be 4')
-    check(p.get('project'), 'project', 'project')
-    for key, skill in (p.get('skills') or {}).items():
-        check(skill, 'skill', f'skills.{key}')
-        levels = skill.get('evidenceLevels') if isinstance(skill, dict) else None
-        if levels is not None:
-            if not isinstance(levels, dict):
-                problems.append(f'skills.{key}.evidenceLevels: expected an object')
-            else:
-                for level, text in levels.items():
-                    if not EVIDENCE_KEY.match(level):
-                        problems.append(f'skills.{key}.evidenceLevels.{level}: key must be a whole number')
-                    if not (isinstance(text, str) and text):
-                        problems.append(f'skills.{key}.evidenceLevels.{level}: must be non-empty text')
-    for i, c in enumerate(p.get('checkpoints') or []):
-        cw = f'checkpoints.{i}'
-        check(c, 'checkpoint', cw)
-        for key in ('skippable', 'routeAfterCompletion'):
-            if key in c and not isinstance(c[key], bool):
-                problems.append(f'{cw}.{key}: must be true or false')
-        targets = c.get('targetEvidenceLevels')
-        if targets is not None and not (isinstance(targets, dict) and all(is_int(v, 1) for v in targets.values())):
-            problems.append(f'{cw}.targetEvidenceLevels: must map skill ids to whole numbers of 1 or more')
-        for j, s in enumerate(c.get('steps') or []):
-            sw = f'{cw}.steps.{j}'
-            kind = s.get('kind')
-            if kind not in STEP_KINDS:
-                problems.append(f'{sw}.kind: unknown {kind!r}')
-                continue
-            check(s, kind, sw)
-            for k, panel in enumerate(s.get('panels') or []):
-                check(panel, 'panel', f'{sw}.panels.{k}')
-                if 'layout' in panel and panel['layout'] not in LAYOUTS:
-                    problems.append(f'{sw}.panels.{k}.layout: unknown {panel["layout"]!r}')
-            for k, q in enumerate(s.get('questions') or []):
-                qw = f'{sw}.questions.{k}'
-                qtype = q.get('type')
-                if qtype not in ('MultipleChoiceQuestion', 'freeResponse'):
-                    problems.append(f'{qw}.type: unknown {qtype!r}')
-                    continue
-                check(q, qtype, qw)
-                if not is_int(q.get('id'), 1):
-                    problems.append(f'{qw}.id: must be a positive integer')
-                if qtype == 'MultipleChoiceQuestion' and len(q.get('choices') or []) < 2:
-                    problems.append(f'{qw}.choices: needs at least 2')
-                for m, choice in enumerate(q.get('choices') or []):
-                    check(choice, 'choice', f'{qw}.choices.{m}')
-                if 'measures' in q:
-                    problems += measures_shape_problems(q['measures'], f'{qw}.measures')
-            if kind == 'level' and 'project' in s and s['project'] is not True:
-                problems.append(f'{sw}.project: must be true or absent')
-    return problems
-
-
-def measures_shape_problems(m, where):
-    """measuresSchema: a skillId with either one evidenceLevel (1 or more) or
-    evidenceLevels by choice id (0 or more), and nothing else."""
-    if not isinstance(m, dict):
-        return [f'{where}: expected an object']
-    problems = []
-    if not (isinstance(m.get('skillId'), str) and m['skillId']):
-        problems.append(f'{where}.skillId: missing')
-    rest = m.keys() - {'skillId'}
-    if rest == {'evidenceLevel'}:
-        if not is_int(m['evidenceLevel'], 1):
-            problems.append(f'{where}.evidenceLevel: must be a whole number of 1 or more')
-    elif rest == {'evidenceLevels'}:
-        levels = m['evidenceLevels']
-        if not (isinstance(levels, dict) and all(is_int(v, 0) for v in levels.values())):
-            problems.append(f'{where}.evidenceLevels: must map choice ids to whole numbers of 0 or more')
-    else:
-        problems.append(f'{where}: needs exactly one of evidenceLevel or evidenceLevels besides skillId')
-    return problems
-
-
-def reference_problems(p):
-    problems = []
-    for key, skill in p.get('skills', {}).items():
-        if skill.get('id') != key:
-            problems.append(f'skills.{key}: id does not match key')
-    cps = p['checkpoints']
-    ids = [c['id'] for c in cps]
-    if len(set(ids)) != len(ids):
-        problems.append('checkpoints: ids must be unique')
-    if not any(not c.get('requires') for c in cps):
-        problems.append('checkpoints: no root (every checkpoint has requires)')
-    requires = {c['id']: c.get('requires', []) for c in cps}
-    for c in cps:
-        for r in c.get('requires', []):
-            if r not in requires:
-                problems.append(f'checkpoints.{c["id"]}.requires: unknown {r}')
-        for s in c.get('skillIds', []):
-            if s not in p.get('skills', {}):
-                problems.append(f'checkpoints.{c["id"]}.skillIds: unknown {s}')
-
-    def reaches_root(cid, path):
-        if cid in path or cid not in requires:
-            return False
-        return all(reaches_root(r, path | {cid}) for r in requires[cid])
-
-    for c in cps:
-        if not reaches_root(c['id'], set()):
-            problems.append(f'checkpoints.{c["id"]}: can never unlock')
-
-    steps = [(c, s) for c in cps for s in c['steps']]
-    step_ids = [s['id'] for _, s in steps]
-    if len(set(step_ids)) != len(step_ids):
-        problems.append('checkpoints: step ids must be unique across checkpoints')
-    if 'project' in step_ids:
-        problems.append("checkpoints: step id 'project' is reserved")
-
-    question_ids = []
-    used_levels = {}
-    template = p['project']['templateLevel']
-    for c, s in steps:
-        where = f'{c["id"]}/{s["id"]}'
-        if s['kind'] == 'questions':
-            for q in s['questions']:
-                question_ids.append(q['id'])
-                if q['type'] != 'MultipleChoiceQuestion':
-                    continue
-                choice_ids = [ch['id'] for ch in q['choices']]
-                if len(set(choice_ids)) != len(choice_ids):
-                    problems.append(f'{where}: repeated choice id')
-                if 'correctChoiceId' in q and q['correctChoiceId'] not in choice_ids:
-                    problems.append(f'{where}: correctChoiceId not a choice')
-        if s['kind'] == 'level':
-            if s.get('instructionsPrompt') and not s.get('project'):
-                problems.append(f'{where}: instructionsPrompt on a non-project step')
-            if s['level'] == template:
-                problems.append(f'{where}: plays the template level, which only the project view plays')
-            if s['level'] in used_levels:
-                problems.append(f'{where}: level already played by {used_levels[s["level"]]}')
-            used_levels.setdefault(s['level'], where)
-    if len(set(map(repr, question_ids))) != len(question_ids):
-        problems.append('checkpoints: question ids must be unique')
-    return problems + evidence_problems(p)
-
-
-def evidence_problems(p):
-    """findEvidenceProblems in references.ts."""
-    problems = []
-    skills = p.get('skills', {})
-
-    def check_level(where, skill_id, level):
-        described = (skills.get(skill_id) or {}).get('evidenceLevels')
-        if level > 0 and described and str(level) not in described:
-            problems.append(f"{where}: skill '{skill_id}' describes no evidence level {level}")
-
-    for c in p['checkpoints']:
-        cw = f'checkpoints.{c["id"]}'
-        if c.get('skippable') and not c.get('skillIds'):
-            problems.append(f'{cw}: skippable needs skillIds')
-        for skill_id, level in (c.get('targetEvidenceLevels') or {}).items():
-            if skill_id not in c.get('skillIds', []):
-                problems.append(f"{cw}.targetEvidenceLevels: '{skill_id}' is not in skillIds")
-            elif skill_id in skills:
-                check_level(f'{cw}.targetEvidenceLevels.{skill_id}', skill_id, level)
-        for s in c['steps']:
-            if s['kind'] != 'questions':
-                continue
-            for i, q in enumerate(s['questions']):
-                m = q.get('measures')
-                if q['type'] != 'MultipleChoiceQuestion' or not m:
-                    continue
-                where = f'{cw}.steps.{s["id"]}.questions.{i}.measures'
-                if m['skillId'] not in skills:
-                    problems.append(f"{where}: unknown skill '{m['skillId']}'")
-                graded = 'correctChoiceId' in q
-                if 'evidenceLevel' in m:
-                    if not graded:
-                        problems.append(f'{where}: evidenceLevel needs a correctChoiceId; '
-                                        'a survey question lists evidenceLevels by choice')
-                    check_level(where, m['skillId'], m['evidenceLevel'])
-                    continue
-                if graded:
-                    problems.append(f'{where}: a question with a correctChoiceId measures one '
-                                    'evidenceLevel, not evidenceLevels by choice')
-                choice_ids = {ch['id'] for ch in q['choices']}
-                for choice_id, level in m['evidenceLevels'].items():
-                    if choice_id not in choice_ids:
-                        problems.append(f"{where}: '{choice_id}' is not one of its choices")
-                    check_level(f'{where}.{choice_id}', m['skillId'], level)
+    for i, c in enumerate(p['checkpoints']):
+        if not (isinstance(c, dict) and isinstance(c.get('steps'), list)):
+            problems.append(f'checkpoints.{i}: expected an object with a steps list')
+            continue
+        for j, s in enumerate(c['steps']):
+            if not (isinstance(s, dict) and 'kind' in s and 'id' in s):
+                problems.append(f'checkpoints.{i}.steps.{j}: expected an object with id and kind')
+            elif s['kind'] == 'level' and not isinstance(s.get('level'), str):
+                problems.append(f'checkpoints.{i}.steps.{j}.level: missing')
+            elif s['kind'] == 'video' and not isinstance(s.get('videoKey'), str):
+                problems.append(f'checkpoints.{i}.steps.{j}.videoKey: missing')
     return problems
 
 
@@ -436,15 +248,16 @@ def main(json_path):
     base = json_path[:-len('.json')]
     jsonc_path, tasks_path = base + '.annotated.jsonc', base + '.tasks.md'
     p = json.load(open(json_path, encoding='utf-8'))
-    problems = []
-    if p.get('id') != os.path.basename(base):
-        problems.append(f'id {p.get("id")!r} does not match the file name {os.path.basename(base)!r}')
-    problems += shape_problems(p)
+    problems = schema_problems(json_path)
+    if problems is None:
+        problems = structure_problems(p)
+        if isinstance(p, dict) and p.get('id') != os.path.basename(base):
+            problems.append(f'id {p.get("id")!r} does not match the file name {os.path.basename(base)!r}')
     if problems:
+        # The checks below assume a valid pathway.
         for problem in problems:
             print('PROBLEM', problem)
         sys.exit(1)
-    problems += reference_problems(p)
     try:
         files = repo.level_index()
         problems += level_problems(p, files)
