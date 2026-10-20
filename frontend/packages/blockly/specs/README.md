@@ -72,3 +72,7 @@ these changes.
    `clean` script. It declares `events`, which it imports but did not
    declare. Each part brings only the dependencies its code uses.
    `copy.mjs`, which nothing runs, is not carried over.
+5. The renderer computes dark-theme secondary colours for the theme being
+   set. `ngfp/blockly` computed them for the theme before it, so a
+   workspace that started dark had Blockly's colours, and one switched from
+   dark to light had the darkened ones. See `definitions.md`, DEF-38.

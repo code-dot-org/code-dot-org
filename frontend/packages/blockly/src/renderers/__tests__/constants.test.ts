@@ -64,7 +64,7 @@ describe('definitions.md: renderer constants', () => {
     ).toBe(provider.NOTCH);
   });
 
-  it('DEF-38: the secondary colour follows the previous setTheme', () => {
+  it('DEF-38: a dark theme darkens the secondary colour, from the first setTheme', () => {
     const theme = (name: string) =>
       Blockly.Theme.defineTheme(name, {
         name,
@@ -77,9 +77,9 @@ describe('definitions.md: renderer constants', () => {
       return provider.blockStyles.s.colourSecondary;
     };
 
-    expect(secondaryUnder('my-dark')).toBe('#ffffff');
-    expect(secondaryUnder('my-light')).toBe('#999999');
-    expect(secondaryUnder('my-dark')).toBe('#ffffff');
+    expect(secondaryUnder('my-dark')).toBe('#999999');
+    expect(secondaryUnder('my-light')).toBe('#ffffff');
+    expect(secondaryUnder('my-dark')).toBe('#999999');
   });
 
   it('DEF-40: a theme is dark when its name contains dark', () => {

@@ -317,14 +317,11 @@ DEF-37. For a value connection, `shapeFor` returns the shape mapped to the
 connection's first `check` type, if there is one, and otherwise Blockly's
 shape. For a statement connection it returns Blockly's shape.
 
-DEF-38. The constants provider computes a block style's secondary colour
-as `Blockly.utils.colour.blend('#000', primary, 0.4)`, which is 40% black and
-60% the primary colour, when its dark flag is set, and as Blockly does
-otherwise. Blockly computes these colours inside `setTheme`, and the provider
-sets its dark flag (DEF-40) only after that call returns. So the colours
-follow the theme given to the _previous_ `setTheme`: the first theme a
-provider receives always gets Blockly's colours, and after a change from a
-dark theme to a light one the light theme gets the darkened colours.
+DEF-38. Under a dark theme (DEF-40) a block style's secondary colour is
+`Blockly.utils.colour.blend('#000', primary, 0.4)`, which is 40% black and
+60% the primary colour. Otherwise it is Blockly's. Blockly computes these
+colours inside `setTheme`, so the provider decides whether the theme is dark
+before that call, and the colours always follow the theme being set.
 
 DEF-39. The package's renderer is Blockly's _thrasos_, named `cdo-thrasos`.
 It draws a disabled block with the class `blocklyDisabled` and without
@@ -414,7 +411,7 @@ and 2). A value connection checked `['A', 'C']` gets `A`'s shape; one checked
 
 DEF-V6 (DEF-38). A provider given a theme named `my-dark`, then `my-light`,
 then `my-dark` again, each with a primary colour of `#ffffff`, computes the
-secondary colours `#ffffff`, `#999999`, `#ffffff`.
+secondary colours `#999999`, `#ffffff`, `#999999`.
 
 DEF-V7 (DEF-26). An inject plugin made with `onReady` and disposed before
 its zero timeout fires never calls `onReady`, and calls `onDispose` once
@@ -462,11 +459,7 @@ cssconfig: undefined, contents: [{kind: 'block', type: 'controls_if', id:
 12. `Renderers` in `constants.ts` is used nowhere, and its `THRASOS` value
     (`cdo_renderer_thrasos`) is not the renderer's name (`cdo-thrasos`).
     Remove it?
-13. DEF-38: the dark flag should be set before Blockly computes the
-    colours. As things stand, a workspace that starts with a dark theme has
-    never had darkened secondary colours, and one switched from dark to light
-    has. This is a bug.
-14. Package conventions (`frontend/docs/conventions/packages.md`) ask for the
+13. Package conventions (`frontend/docs/conventions/packages.md`) ask for the
     shared ESLint preset and for external libraries as peer dependencies.
     The preset reports 53 problems across the package, mostly import order
     and its rejection of `_unused` parameters; `blockly` is a direct

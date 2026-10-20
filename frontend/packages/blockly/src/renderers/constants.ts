@@ -34,8 +34,9 @@ class CdoConstantsProvider extends Blockly.blockRendering.ConstantProvider {
   private isDarkTheme: boolean | undefined;
 
   setTheme(theme: Blockly.Theme) {
-    super.setTheme(theme);
+    // Blockly's setTheme computes the secondary colours, which read this flag.
     this.isDarkTheme = isDarkTheme(theme);
+    super.setTheme(theme);
   }
 
   /**
