@@ -72,8 +72,33 @@ function parseBlockXml(blockEl: Element): BlockState {
     block.y = parseInt(y, 10);
   }
 
+  // Blockly's own block attributes, in the form its JSON serialization takes.
+  if (blockEl.hasAttribute('inline')) {
+    block.inline = blockEl.getAttribute('inline') === 'true';
+  }
+  if (blockEl.getAttribute('collapsed') === 'true') {
+    block.collapsed = true;
+  }
+  if (blockEl.getAttribute('editable') === 'false') {
+    block.editable = false;
+  }
+  if (blockEl.getAttribute('disabled') === 'true') {
+    block.disabledReasons = ['MANUALLY_DISABLED'];
+  }
+
   // Collect user-defined attributes as extraState
-  const knownAttrs = new Set(['type', 'id', 'x', 'y', 'deletable', 'movable']);
+  const knownAttrs = new Set([
+    'type',
+    'id',
+    'x',
+    'y',
+    'deletable',
+    'movable',
+    'inline',
+    'collapsed',
+    'editable',
+    'disabled',
+  ]);
   const extraState: Record<string, string | number | boolean> = {};
   for (const attr of Array.from(blockEl.attributes)) {
     if (!knownAttrs.has(attr.name)) {
@@ -93,7 +118,9 @@ function parseBlockXml(blockEl: Element): BlockState {
     for (const fieldEl of fields) {
       const name = fieldEl.getAttribute('name');
       if (name) {
-        block.fields[name] = parseValue(fieldEl.textContent ?? '');
+        // Kept as text: the field's own loader converts it, and text such as
+        // `007` must survive.
+        block.fields[name] = fieldEl.textContent ?? '';
       }
     }
   }
@@ -107,23 +134,19 @@ function parseBlockXml(blockEl: Element): BlockState {
           const inputName = child.getAttribute('name');
           // The connected block is the direct-child <block>; a descendant search
           // could wrongly pick a <block> buried in a preceding <shadow>.
-          const subBlock = directChildBlock(child);
-          if (inputName && subBlock) {
+          const connection = parseConnection(child);
+          if (inputName && connection) {
             block.inputs ??= {};
-            block.inputs[inputName] = {
-              block: parseBlockXml(subBlock),
-            };
+            block.inputs[inputName] = connection;
           }
         }
         break;
 
       case 'next':
         {
-          const nextBlock = directChildBlock(child);
-          if (nextBlock) {
-            block.next = {
-              block: parseBlockXml(nextBlock),
-            };
+          const connection = parseConnection(child);
+          if (connection) {
+            block.next = connection;
           }
         }
         break;
@@ -137,7 +160,8 @@ function parseBlockXml(blockEl: Element): BlockState {
           block.extraState[key] = value;
         }
 
-        // Look for procedure arguments
+        // Look for procedure arguments. A definition's JSON form names each
+        // parameter in an object; a call's, by its name alone.
         for (const param of Array.from(child.querySelectorAll('arg'))) {
           const name = param.getAttribute('name');
           if (name === null) {
@@ -145,7 +169,12 @@ function parseBlockXml(blockEl: Element): BlockState {
           }
           block.extraState ??= {};
           block.extraState.params ??= [];
-          block.extraState.params.push(name);
+          const id = param.getAttribute('varid');
+          block.extraState.params.push(
+            PROCEDURE_DEFINITIONS.has(block.type)
+              ? {name, ...(id ? {id} : {})}
+              : name,
+          );
         }
 
         // Some specific legacy mutators also pull in attributes from the next
@@ -167,6 +196,27 @@ function parseBlockXml(blockEl: Element): BlockState {
   }
 
   return block;
+}
+
+const PROCEDURE_DEFINITIONS = new Set([
+  'procedures_defnoreturn',
+  'procedures_defreturn',
+]);
+
+// The block and shadow directly inside a <value>, <statement> or <next>, or
+// undefined when it holds neither.
+function parseConnection(container: Element) {
+  const blockEl = directChildBlock(container);
+  const shadowEl = Array.from(container.children).find(
+    el => el.tagName === 'shadow',
+  );
+  if (!blockEl && !shadowEl) {
+    return undefined;
+  }
+  return {
+    ...(blockEl ? {block: parseBlockXml(blockEl)} : {}),
+    ...(shadowEl ? {shadow: parseBlockXml(shadowEl)} : {}),
+  };
 }
 
 // The first direct-child <block> of a container element (<value>, <statement>,

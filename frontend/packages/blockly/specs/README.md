@@ -128,3 +128,10 @@ these changes.
     `#808080`, on loading and selection as well as creation.
     `ngfp/blockly` disabled orphans as if the student had, grayed only
     movable blocks as they were created, in `#888`.
+18. The XML converter keeps field text as text (XML-5), reads shadow
+    blocks (XML-6), gives Blockly's own `disabled`, `inline`, `collapsed`
+    and `editable` attributes their JSON form (XML-3), and writes a
+    procedure definition's parameters as `{name}` objects (XML-7).
+    `ngfp/blockly`'s turned field text such as `007` into numbers, dropped
+    shadows, buried those attributes in `extraState`, and gave definitions
+    parameter names that loaded as the wrong parameter.
