@@ -1,3 +1,4 @@
+export {default as BaseBlocks} from './blocks';
 export * from './constants';
 export * from './types';
 export * from './toolbox';
