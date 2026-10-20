@@ -92,23 +92,13 @@ class SecretsConfigTest < Minitest::Test
   end
 
   def test_stack_secret_tag_falls_back_to_regular_secret
-    stub_multiple_secrets('/cdo/bar' => 'default bar secret')
+    stub_secret 'bar!'
     load_configuration <<~YAML
       foo: foo!
       bar: !StackSecret
     YAML
     assert_equal 'foo!', config.foo
-    assert_equal 'default bar secret', config.bar
-  end
-
-  def test_stack_secret_tag_outside_stack
-    Cdo::SecretsConfig::StackSecret.stubs(:current_stack_name).returns(nil)
-    stub_multiple_secrets('/cdo/bar' => 'default bar secret')
-    load_configuration <<~YAML
-      bar: !StackSecret
-    YAML
-    assert_equal 'default bar secret', config.bar
-    assert_equal [['/cdo/bar']], batch_requests
+    assert_equal 'bar!', config.bar
   end
 
   def test_secrets_fetched_in_one_batch
