@@ -58,11 +58,16 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
 // the real video; StandaloneVideo requires a key that resolves on create.
 export const PLACEHOLDER_VIDEO_KEY = 'maze_intro';
 
-// Properties a lab type needs on the create POST itself.
+// Properties a lab type needs on the create POST itself. Full width is
+// what gives the lab2 video page its footer.
 export const CREATE_PROPERTIES_BY_LAB: Partial<
   Record<LabType, Record<string, unknown>>
 > = {
-  video: {video_key: PLACEHOLDER_VIDEO_KEY, uses_lab2: true},
+  video: {
+    video_key: PLACEHOLDER_VIDEO_KEY,
+    uses_lab2: true,
+    video_full_width: true,
+  },
 };
 
 // Labs whose starter files are code, so an author may supply it.
