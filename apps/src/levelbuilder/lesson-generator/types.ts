@@ -54,12 +54,10 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
   'bubbleChoice',
 ];
 
-// The first row of config/videos.csv stands in until the author swaps in
-// the real video; StandaloneVideo requires a key that resolves on create.
+// First row of config/videos.csv; the author swaps in the real video.
 export const PLACEHOLDER_VIDEO_KEY = 'maze_intro';
 
-// Properties a lab type needs on the create POST itself. Full width is
-// what gives the lab2 video page its footer.
+// Sent on the create POST: the key is validated at create, full width keeps the footer.
 export const CREATE_PROPERTIES_BY_LAB: Partial<
   Record<LabType, Record<string, unknown>>
 > = {
@@ -166,7 +164,7 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
       'replaces it. Use when the plan calls for a video explainer, demo, or',
       'story beat.',
     ],
-    chooseFor: 'video explainers to be produced',
+    chooseFor: 'videos still to be produced',
   },
   multi: {
     promptLabel: 'Multi',

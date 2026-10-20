@@ -39,6 +39,9 @@ export interface PriorEntry {
   output?: PriorOutput;
 }
 
+const longInstructionsOf = (props: LevelProperties): string =>
+  (props as {longInstructions?: string}).longInstructions || '';
+
 // Adapts /lessons/:id/level_properties output to the PriorOutput shape,
 // so skipped-and-existing levels feed continuity context the same way
 // freshly generated ones do.
@@ -81,8 +84,7 @@ export function priorOutputFromLevelProperties(
         multi: {
           dslText: '',
           summary,
-          longInstructions:
-            (props as {longInstructions?: string}).longInstructions || '',
+          longInstructions: longInstructionsOf(props),
         },
       };
     }
@@ -90,14 +92,12 @@ export function priorOutputFromLevelProperties(
       match: {
         dslText: '',
         summary,
-        longInstructions:
-          (props as {longInstructions?: string}).longInstructions || '',
+        longInstructions: longInstructionsOf(props),
       },
     };
   }
   if (labType === 'aichat') {
-    const longInstructions =
-      (props as {longInstructions?: string}).longInstructions || '';
+    const longInstructions = longInstructionsOf(props);
     const settings = (props as {aichatSettings?: unknown}).aichatSettings as
       | {
           initialCustomizations?: {systemPrompt?: string};
@@ -119,8 +119,7 @@ export function priorOutputFromLevelProperties(
     };
   }
   if (labType === 'freeResponse') {
-    const longInstructions =
-      (props as {longInstructions?: string}).longInstructions || '';
+    const longInstructions = longInstructionsOf(props);
     if (!longInstructions) return undefined;
     return {
       freeResponse: {
@@ -132,22 +131,19 @@ export function priorOutputFromLevelProperties(
     };
   }
   if (labType === 'video') {
-    const longInstructions =
-      (props as {longInstructions?: string}).longInstructions || '';
+    const longInstructions = longInstructionsOf(props);
     if (!longInstructions) return undefined;
     return {video: {longInstructions, teacherMarkdown: ''}};
   }
   if (labType === 'sketchlab') {
-    const longInstructions =
-      (props as {longInstructions?: string}).longInstructions || '';
+    const longInstructions = longInstructionsOf(props);
     if (!longInstructions) return undefined;
     return {sketchlab: {longInstructions}};
   }
   if (labType === 'ailab') {
     // Read mode + dynamic_instructions defensively — both round-trip
     // as JSON strings and may be hand-edited.
-    const longInstructions =
-      (props as {longInstructions?: string}).longInstructions || '';
+    const longInstructions = longInstructionsOf(props);
     const rawMode = (props as {mode?: unknown}).mode;
     const mode = typeof rawMode === 'string' ? tryParseJson(rawMode) : rawMode;
     const dynamicRaw = (props as {dynamicInstructions?: unknown})

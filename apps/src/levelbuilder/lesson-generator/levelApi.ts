@@ -32,8 +32,7 @@ export async function createOrFindLevel(
   if (existing) return {...existing, reused: true};
 
   try {
-    // Nested under `level`: Rails only auto-wraps column names, so
-    // property keys sent at the top level never reach level_params.
+    // Rails auto-wraps only column names into params[:level]; nest the rest.
     const response = await HttpClient.post(
       '/levels?do_not_redirect=true',
       JSON.stringify({

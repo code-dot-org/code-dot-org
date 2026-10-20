@@ -13,8 +13,7 @@ import {
   PROMPT_TAGS,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
 
-// A video level is created around a stand-in video; what the AI writes is
-// the brief for the video that will replace it.
+// The level's video is a stand-in; the AI writes the brief for the one to come.
 
 const videoPlanSchema = Output.object({
   schema: z.object({
@@ -102,10 +101,7 @@ export async function generateVideoLevel(
     prompt,
     output: videoPlanSchema,
   });
-  const plan = response.output as {
-    longInstructions: string;
-    teacherMarkdown: string;
-  };
+  const plan = response.output as VideoGeneration;
   logResponse(PROMPT_TAGS.VIDEO_PLAN, plan, logContext);
   if (!plan.longInstructions?.trim()) {
     throw new Error('Model returned no instructions');
