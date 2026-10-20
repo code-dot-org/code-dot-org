@@ -170,9 +170,8 @@ export const ProjectProvider = ({
     Opens a saved project, which may name columns this dataset no longer has
     and predates any preset the level applies.
 
-    Until the dataset is described, every column looks unselectable, so opening
-    one then would throw the whole project away. Such a project waits for the
-    dataset instead.
+    Waits for the dataset to exist (has at least one selectable column)
+    before applying the project.
   */
   const openProject = useCallback(
     (saved: AilabProject) => {
