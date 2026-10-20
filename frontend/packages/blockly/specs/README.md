@@ -146,3 +146,8 @@ these changes.
     `ngfp/blockly`'s kept targeting the workspace it first found, so after
     a `BlocklyWorkspace` remounted, a block dragged from the flyout went
     to a disposed workspace.
+21. `BlocklyMarkdown` makes the component that draws each `<xml>` once
+    and passes it the options by context (MD-6). `ngfp/blockly` made it
+    anew whenever an option changed identity, so a lab passing `blocks`
+    made during render remounted every embedded workspace on every
+    render.

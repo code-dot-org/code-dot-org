@@ -232,4 +232,19 @@ describe('markdown.md: BlocklyMarkdown', () => {
       interval: 50,
     });
   });
+
+  it('MD-6, MD-V2: keeps its embedded workspaces when the options change identity', async () => {
+    const {container, rerender} = render(
+      <BlocklyMarkdown content={MARKDOWN} blocks={[]} />,
+    );
+    await vi.waitFor(
+      () => expect(container.querySelector('svg')).not.toBeNull(),
+      {timeout: 5000, interval: 50},
+    );
+    const drawn = container.querySelector('svg')!.parentElement;
+
+    rerender(<BlocklyMarkdown content={MARKDOWN} blocks={[]} />);
+
+    expect(container.querySelector('svg')?.parentElement).toBe(drawn);
+  });
 });

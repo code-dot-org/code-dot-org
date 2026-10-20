@@ -1,6 +1,6 @@
 import type {Element} from 'hast';
 import {toHtml} from 'hast-util-to-html';
-import {useMemo} from 'react';
+import {createContext, useContext, useMemo} from 'react';
 
 import {Markdown} from '@code-dot-org/markdown';
 import type {MarkdownExtension, MarkdownProps} from '@code-dot-org/markdown';
@@ -40,70 +40,59 @@ interface WorkspaceOptions {
   draggable?: boolean;
 }
 
+// The options reach the drawing component through context, so that the
+// component, and every workspace it draws, survives a change of options.
+const WorkspaceOptionsContext = createContext<WorkspaceOptions>({});
+
 /*
- * An extension whose only job is to render each embedded `<xml>` as a live,
- * inline Blockly workspace. The `blockly` extension (composed ahead of this one)
- * has already widened the sanitizer allowlist so the `<xml>` subtree survives;
- * here we override its passthrough `xml` mapping with the real workspace.
+ * Renders each embedded `<xml>` as a live, inline Blockly workspace. The
+ * `blockly` extension (composed ahead of this one) has already widened the
+ * sanitizer allowlist so the `<xml>` subtree survives; here we override its
+ * passthrough `xml` mapping with the real workspace.
  *
  * The mapped component receives its source hast node (the pipeline runs with
  * passNode). We re-serialize that subtree to an XML string and parse it into the
  * workspace's start blocks — operating on the tree rather than walking rendered
  * React, which the markdown package documents as the fragile path it replaced.
  */
-const workspaceExtension = ({
-  blocks,
-  renderer,
-  plugins,
-  theme,
-  draggable,
-}: WorkspaceOptions): MarkdownExtension => {
-  const Workspace = ({node}: {node?: Element}) => {
-    if (!node) {
-      return null;
-    }
-    const xml = toHtml(node);
-    // Draggable: offer the embedded blocks for drag/keyboard placement into the
-    // enclosing provider's main workspace, rather than a read-only preview.
-    // containerRole="group" rather than the default "region": this flyout is
-    // inline in prose, not a standalone page section, so it must not create a
-    // landmark entry. A group + aria-label still announces name and role on
-    // focus; it just stays out of the screen-reader landmark navigation list.
-    // This also prevents multiple <xml> snippets in one document from
-    // producing identically-named "Block palette" region landmarks that are
-    // indistinguishable to AT users.
-    if (draggable) {
-      // inline: an <xml> can appear mid-paragraph in prose, so the flyout flows
-      // as an inline-block span (a block element would break the surrounding
-      // <p>), matching how the static inline preview renders.
-      return (
-        <BlocklyFlyout
-          containerRole="group"
-          inline
-          blocks={
-            convertBlocklyXmlToToolbox(parser, xml)
-              .blocks as BlocklyFlyoutProps['blocks']
-          }
-        />
-      );
-    }
+const Workspace = ({node}: {node?: Element}) => {
+  const {blocks, renderer, plugins, theme, draggable} = useContext(
+    WorkspaceOptionsContext,
+  );
+  if (!node) {
+    return null;
+  }
+  const xml = toHtml(node);
+  // containerRole="group" rather than the default "region": this flyout is
+  // inline in prose, not a page section, so it must not add a landmark.
+  if (draggable) {
     return (
-      <BlocklyWorkspace
-        blocks={blocks}
-        renderer={renderer}
-        plugins={plugins}
-        theme={theme}
+      <BlocklyFlyout
+        containerRole="group"
         inline
-        startBlocks={convertBlocklyXmlToJson(parser, xml)}
+        blocks={
+          convertBlocklyXmlToToolbox(parser, xml)
+            .blocks as BlocklyFlyoutProps['blocks']
+        }
       />
     );
-  };
-  Workspace.displayName = 'BlocklyMarkdownWorkspace';
+  }
+  return (
+    <BlocklyWorkspace
+      blocks={blocks}
+      renderer={renderer}
+      plugins={plugins}
+      theme={theme}
+      inline
+      startBlocks={convertBlocklyXmlToJson(parser, xml)}
+    />
+  );
+};
+Workspace.displayName = 'BlocklyMarkdownWorkspace';
 
-  return {
-    name: 'blockly-workspace',
-    components: {xml: Workspace} as MarkdownExtension['components'],
-  };
+const workspaceExtension: MarkdownExtension = {
+  name: 'blockly-workspace',
+  components: {xml: Workspace} as MarkdownExtension['components'],
 };
 
 /**
@@ -130,15 +119,19 @@ const BlocklyMarkdown = ({
   ...props
 }: BlocklyMarkdownProps) => {
   const markdownExtensions = useMemo(
-    () => [
-      blockly,
-      workspaceExtension({blocks, renderer, plugins, theme, draggable}),
-      ...(extraExtensions ?? []),
-    ],
-    [blocks, renderer, plugins, theme, draggable, extraExtensions],
+    () => [blockly, workspaceExtension, ...(extraExtensions ?? [])],
+    [extraExtensions],
+  );
+  const options = useMemo(
+    () => ({blocks, renderer, plugins, theme, draggable}),
+    [blocks, renderer, plugins, theme, draggable],
   );
 
-  return <Markdown {...props} extensions={markdownExtensions} />;
+  return (
+    <WorkspaceOptionsContext.Provider value={options}>
+      <Markdown {...props} extensions={markdownExtensions} />
+    </WorkspaceOptionsContext.Provider>
+  );
 };
 
 export default BlocklyMarkdown;
