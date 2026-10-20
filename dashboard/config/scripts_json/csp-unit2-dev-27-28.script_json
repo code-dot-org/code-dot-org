@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "has_unnumbered_lessons": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-04 18:28:08 UTC",
+    "serialized_at": "2026-10-18 18:58:43 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -64,7 +65,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Lesson 3",
+      "name": "Lesson 3: Boolean Expressions Unplugged - Day 1",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -79,7 +80,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Lesson 4",
+      "name": "Lesson 4: Boolean Expressions - Day 2",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +95,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Lesson 5",
+      "name": "Lesson 5: Boolean Expressions - Day 3",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -184,10 +185,74 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "dc02807b-2765-4251-802a-5829344747f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc02807b-2765-4251-802a-5829344747f7",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "432e9564-0ab3-4cee-ac5c-6ec7ccf3d919",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "432e9564-0ab3-4cee-ac5c-6ec7ccf3d919",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "0fcd243e-254d-49d8-bcb4-724de3becb0c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fcd243e-254d-49d8-bcb4-724de3becb0c",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "91ad16ed-2a36-4660-bfb4-2aa933aefb20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "91ad16ed-2a36-4660-bfb4-2aa933aefb20",
+        "lesson_activity.key": "dc02807b-2765-4251-802a-5829344747f7"
+      }
+    },
+    {
+      "key": "d59dde80-2787-4beb-ac76-7a184b24da4d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d59dde80-2787-4beb-ac76-7a184b24da4d",
+        "lesson_activity.key": "432e9564-0ab3-4cee-ac5c-6ec7ccf3d919"
+      }
+    },
+    {
+      "key": "98f1bcab-7425-4de2-b799-99ec26af2c6a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "98f1bcab-7425-4de2-b799-99ec26af2c6a",
+        "lesson_activity.key": "0fcd243e-254d-49d8-bcb4-724de3becb0c"
+      }
+    }
   ],
   "script_levels": [
 

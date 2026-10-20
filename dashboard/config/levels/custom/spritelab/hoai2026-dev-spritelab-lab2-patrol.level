@@ -32,19 +32,27 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Set them walking.** Drag **begins patrolling** onto the dotted outline and pick your second character. Click **Play**."
-      },
-      {
-        "text": "**They're on the move.** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Set them walking.**",
+      "items": [
+        {
+          "text": "Drag **begins patrolling** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_addBehaviorSimple",
+            "under": "spritelab2_whenRun",
+            "contains": "spritelab2_patrollingOnBlocks"
+          }
+        },
+        {
+          "text": "Click **Play** and watch them walk.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline and pick your second character. Click **Play**.",
+      ]
+    },
+    "long_instructions": "# Set them walking\nDrag **begins patrolling** onto the dotted outline. Click **Play**.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

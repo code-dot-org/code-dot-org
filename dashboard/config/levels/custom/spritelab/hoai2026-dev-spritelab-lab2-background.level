@@ -25,21 +25,11 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "story-background",
-      "imageUi": "explore",
       "sentence": "place-time"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a background.** Pick the words for a place and click **Generate**, or draw your own."
-      },
-      {
-        "text": "**That's your background!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "backgroundImages": 1
-        }
-      }
-    ],
+    "objectives": {
+      "title": "**Make a background.** Pick the words for a place and click **Generate**, or draw your own."
+    },
     "long_instructions": "# Make a background\nPick the words for a place and click **Generate**, or draw your own.",
     "header_label": "Make a story"
   }

@@ -92,15 +92,13 @@ class AdaptiveTest < ActiveSupport::TestCase
     assert_nil level.find_step('unknown')
   end
 
-  test "step_levels lists each existing level step's level by step id" do
+  test "step_levels lists each existing level step's level by step id, the project included" do
     template = create(:weblab2, name: 'adaptive-test-template')
     sandbox = create(:weblab2, name: 'adaptive-test-sandbox')
     write_levels_pathway
     level = create(:adaptive, adaptive_id: 'levels')
 
-    assert_equal({'try' => sandbox}, level.step_levels)
-    assert level.step_level?(sandbox)
-    refute level.step_level?(template), "the project's template level is not a step level"
+    assert_equal({'try' => sandbox, 'project' => template}, level.step_levels)
   end
 
   test "lookups are empty without content" do
@@ -108,6 +106,14 @@ class AdaptiveTest < ActiveSupport::TestCase
 
     assert_nil level.find_step('try')
     assert_empty level.step_levels
+  end
+
+  test "sharing_levels lists every level with the same content id, by name" do
+    second = create(:adaptive, name: 'Adaptive B', adaptive_id: 'sample')
+    first = create(:adaptive, name: 'Adaptive A', adaptive_id: 'sample')
+    create(:adaptive, name: 'Adaptive C', adaptive_id: 'needs-skill')
+
+    assert_equal [first, second], second.sharing_levels
   end
 
   private def write_levels_pathway

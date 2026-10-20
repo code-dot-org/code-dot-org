@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:39:37.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-readable-and-clear-32-17cc1b70-462d-44ac-bdcb-93d7fd1edc7f",
+        "text": "Size: can you read it from across the table?",
+        "imageUrl": "https://images.code.org/a895652cf0f9e594616b195573ff7c8f-adaptive-HoAI26-readable-and-clear-32-panel-1-c0dbab6c-9680-4603-88b3-74ed90073d8d.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-readable-and-clear-32-ec23ee87-9cb3-488f-b4c8-20ac96287a44",
+        "text": "Contrast: dark on light is easier.",
+        "imageUrl": "https://images.code.org/fb1197e068db9d9688d58ff70ef6e283-adaptive-HoAI26-readable-and-clear-32-panel-2-58feefbe-7755-4159-b506-551738e083d7.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-readable-and-clear-32-fe724db5-51e3-4045-95b1-5473f7cc8c7a",
+        "text": "Wording: short and plain.",
+        "imageUrl": "https://images.code.org/0d971c5e0585c47495587a19a82c5915-adaptive-HoAI26-readable-and-clear-32-panel-3-476bb623-85a7-44ae-a81e-10ef0e3a9037.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Learn the principles of readability and clarity: text size for distance viewing, high contrast for easy reading, and short, plain wording for clear understanding."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:40:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:40:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

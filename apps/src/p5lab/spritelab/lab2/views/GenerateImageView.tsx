@@ -1,13 +1,13 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import Adlib, {AdlibChoices} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
@@ -17,8 +17,6 @@ import aiBot3 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-3.png';
 import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
 import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
-import pixelSample from '@cdo/static/spritelab_lab2/style/pixel.png';
-import smoothSample from '@cdo/static/spritelab_lab2/style/smooth.png';
 
 import {
   CHARACTER_SET_PICTURE_COUNT,
@@ -26,16 +24,11 @@ import {
   generateCharacterSet,
 } from '../ai/images/characterSet';
 import {
-  ImageAdlibSet,
-  bodyPlanFor,
-  imageAdlibFor,
-  imageAdlibId,
-} from '../ai/images/imageAdlibs';
-import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {IMAGE_KINDS, imageKindFor} from '../ai/images/imageKinds';
 import {ImageSafetyError} from '../ai/images/imageSafety';
 import {defaultPixelGrid} from '../ai/images/modelHelpers';
 import {
@@ -56,6 +49,15 @@ import {
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import ImagePaneButton from './ImagePaneButton';
+import {
+  Choices,
+  chosenBodyPlan,
+  isComplete,
+  promptText as sentenceText,
+  sentenceFor,
+} from './sentence/sentences';
+import WordMenus from './sentence/WordMenus';
+import type {NewImageDraft} from './SentenceDialogBody';
 import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -94,27 +96,8 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
 // default grid (64/32/16 for a sprite, 128/64/32 for a background).
 const PIXEL_SCALES = [1, 2, 4];
 
-// The Type choice: a sprite is offered as a character or an object.
-const IMAGE_KINDS: {
-  value: string;
-  imageType: ImageType;
-  subject?: ImageSubject;
-}[] = [
-  {value: 'background', imageType: 'background'},
-  {value: 'character', imageType: 'sprite', subject: 'character'},
-  {value: 'object', imageType: 'sprite', subject: 'object'},
-  {value: 'block', imageType: 'block'},
-];
-
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
-
-/** What the new-image form has settled on, enough to start painting. */
-export interface NewImageDraft {
-  name: string;
-  imageType: ImageType;
-  style: ImageStyle;
-}
 
 /** Level and session choices the image dialog forwards to the generate
     view unchanged. */
@@ -123,10 +106,6 @@ export interface ImageFormOptions {
   lockedImageType?: ImageType;
   /** Level-imposed subject for new sprites. */
   lockedImageSubject?: ImageSubject;
-  /** Offer this tier of adlib prompt combos (student form only). */
-  adlibSet?: ImageAdlibSet;
-  /** The adlib is the only prompt input: hide the free-text box. */
-  adlibOnly?: boolean;
   /** Style the form starts on for new images (default smooth). */
   defaultStyle?: ImageStyle;
   /** A generation request is leaving; fires before the model call, so the
@@ -174,8 +153,6 @@ interface GenerateImageViewProps extends ImageFormOptions {
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
-  /** An image level, brand-new image: there is nowhere to cancel to. */
-  hideCancel?: boolean;
   /** Delete this image (existing images). */
   onDelete?: () => void;
 }
@@ -198,14 +175,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   lockedImageType,
   lockedImageSubject,
   advanced,
-  adlibSet,
-  adlibOnly,
   defaultStyle,
   onPaintManually,
   onGenerateStart,
   onAccept,
   onCancel,
-  hideCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
@@ -216,17 +190,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     'sprite';
   const initialSubject =
     existing?.generation?.subject || lockedImageSubject || 'character';
-  // Not seeded where the combo is the only prompt: typed text would hide it.
-  // The same test as the prompt box's, on the form's opening choices.
-  const combOnlyAtStart =
-    adlibOnly &&
-    !advanced &&
-    !!adlibSet &&
-    !!imageAdlibFor(initialImageType, adlibSet, initialSubject);
-  const [prompt, setPrompt] = useState(
-    combOnlyAtStart ? '' : existing?.generation?.prompt || ''
-  );
+  const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState(create?.initial?.name || '');
+  const {theme} = useTheme();
+  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
   const [imageType, setImageType] = useState<ImageType>(initialImageType);
   const [subject, setSubject] = useState<ImageSubject>(initialSubject);
   const [style, setStyle] = useState<ImageStyle>(
@@ -259,34 +226,19 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
   // Counts generate runs; progress callbacks from older runs are dropped.
   const progressEpochRef = useRef(0);
-  // Adlib prompt combos (student form): a sentence with word choices, an
-  // alternative to typing. Typed text wins while present.
-  const adlib =
-    adlibSet && !advanced
-      ? imageAdlibFor(imageType, adlibSet, subject)
-      : undefined;
-  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
-  const [adlibText, setAdlibText] = useState('');
-  const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);
-  // A fresh combo (opening, or a Type switch swapping templates) rolls its
-  // own choices, so not every sentence starts the same.
-  useEffect(() => {
-    if (adlib) {
-      setAdlibChoices(
-        Object.fromEntries(
-          Object.entries(adlib.options).map(([slot, options]) => [
-            slot,
-            options[Math.floor(Math.random() * options.length)].id,
-          ])
-        )
-      );
-    }
-  }, [adlib]);
+  // The sentence's word menus are the prompt; typed text wins while
+  // present.
+  const sentence = sentenceFor(imageType, subject);
+  const [choices, setChoices] = useState<Choices>({});
+  // A new sentence takes new words.
+  useEffect(() => setChoices({}), [sentence]);
   const freeTextEntered = !!prompt.trim();
-  // What Generate will send: typed text when present, else the combo's
-  // sentence.
-  const usingAdlib = !!adlib && !freeTextEntered;
-  const promptText = usingAdlib ? adlibText : prompt.trim();
+  const usingSentence = !freeTextEntered && isComplete(sentence, choices);
+  const promptText = freeTextEntered
+    ? prompt.trim()
+    : usingSentence
+    ? sentenceText(sentence, choices)
+    : '';
   // Sets are for characters drawn from a fresh base and the level's words;
   // an object, or a typed prompt, gets one picture.
   // The checkbox stays checked after it is hidden, so the request also
@@ -334,11 +286,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
         promptText,
-        method: usingAdlib ? 'adlib' : 'freeText',
+        method: usingSentence ? 'sentence' : 'freeText',
         imageType,
-        ...(usingAdlib && adlibSet
-          ? {adlibId: imageAdlibId(imageType, adlibSet, subject)}
-          : {}),
+        ...(usingSentence ? {sentenceId: sentence.id, choices} : {}),
       },
       true
     );
@@ -376,10 +326,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             style,
             temperature: options.temperature,
             pixelGrid: options.pixelGrid,
-            // The combo's creature word says how the character is built; a
-            // typed prompt is drawn upright.
-            bodyPlan: usingAdlib
-              ? bodyPlanFor(adlibChoices.creature)
+            // The sentence's creature word says how the character is built;
+            // a typed prompt is drawn upright.
+            bodyPlan: usingSentence
+              ? chosenBodyPlan(sentence, choices)
               : undefined,
           },
           p => {
@@ -416,9 +366,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     }
   }, [
     promptText,
-    usingAdlib,
-    adlibChoices.creature,
-    adlibSet,
+    usingSentence,
+    sentence,
+    choices,
     imageType,
     subject,
     style,
@@ -523,133 +473,96 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </div>
           )}
 
-          {adlib && (
-            // Native disable dims the combo while typed text wins.
-            <fieldset
-              className={moduleStyles.adlibGroup}
+          {/* Native disable dims the sentence while typed text wins. */}
+          <fieldset
+            className={moduleStyles.wordMenusGroup}
+            disabled={generating || freeTextEntered}
+          >
+            <WordMenus
+              sentence={sentence}
+              choices={choices}
+              onChange={setChoices}
               disabled={generating || freeTextEntered}
-            >
-              <Adlib
-                adlib={adlib}
-                adlibChoices={adlibChoices}
-                glowSpeed={freeTextEntered ? undefined : 'normal'}
-                onChoicesChange={setAdlibChoices}
-                onTextChange={handleAdlibText}
-              />
-            </fieldset>
-          )}
+            />
+          </fieldset>
           <div className={moduleStyles.formRow}>
-            {/* Adlib-only levels have no free-text box; the combo above is
-                the whole prompt. */}
-            {!(adlibOnly && adlib) && (
-              <label
-                className={classNames(
-                  moduleStyles.promptLabel,
-                  moduleStyles.wide
-                )}
-              >
-                <span>{adlib ? 'Or prompt' : 'Prompt'}</span>
-                <textarea
-                  className={moduleStyles.promptInput}
-                  value={prompt}
-                  rows={5}
-                  maxLength={MAX_PROMPT_LENGTH}
-                  placeholder={PROMPT_PLACEHOLDERS[imageType]}
-                  disabled={generating}
-                  onChange={e => setPrompt(e.target.value)}
-                />
-              </label>
-            )}
+            <label
+              className={classNames(
+                moduleStyles.promptLabel,
+                moduleStyles.wide
+              )}
+            >
+              <span>Or prompt</span>
+              <textarea
+                className={moduleStyles.promptInput}
+                value={prompt}
+                rows={5}
+                maxLength={MAX_PROMPT_LENGTH}
+                placeholder={PROMPT_PLACEHOLDERS[imageType]}
+                disabled={generating}
+                onChange={e => setPrompt(e.target.value)}
+              />
+            </label>
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
-                  level can lock the choice for new images too; the student
-                  form drops a locked group, which would only push Generate
-                  down. */}
-              {!(lockedImageType && !advanced) && (
-                <fieldset
-                  className={moduleStyles.radioGroup}
-                  disabled={generating || !!existing || !!lockedImageType}
-                >
-                  <legend>Type</legend>
-                  {IMAGE_KINDS.map(kind => (
-                    <RadioButton
-                      key={kind.value}
-                      name="generation-type"
-                      value={kind.value}
-                      label={imageKindLabel(kind.imageType, kind.subject)}
-                      size="s"
-                      checked={
-                        imageType === kind.imageType &&
-                        (kind.subject === undefined || subject === kind.subject)
-                      }
-                      onChange={() => {
-                        setImageType(kind.imageType);
-                        if (kind.subject) {
-                          setSubject(kind.subject);
-                        }
-                      }}
-                    />
-                  ))}
-                </fieldset>
-              )}
-              <fieldset
-                className={moduleStyles.radioGroup}
+                  level can lock the choice for new images too. */}
+              <SimpleDropdown
+                name="generation-type"
+                labelText="Type"
+                size="s"
+                color={dropdownColor}
+                items={IMAGE_KINDS.map(kind => ({
+                  value: kind.value,
+                  text: imageKindLabel(kind.imageType, kind.subject),
+                }))}
+                selectedValue={imageKindFor(imageType, subject).value}
+                disabled={generating || !!existing || !!lockedImageType}
+                onChange={e => {
+                  const kind = IMAGE_KINDS.find(
+                    k => k.value === e.target.value
+                  );
+                  if (kind) {
+                    setImageType(kind.imageType);
+                    if (kind.subject) {
+                      setSubject(kind.subject);
+                    }
+                  }
+                }}
+              />
+              <SimpleDropdown
+                name="generation-style"
+                labelText="Style"
+                size="s"
+                color={dropdownColor}
+                items={(['smooth', 'pixel'] as const).map(s => ({
+                  value: s,
+                  text: IMAGE_STYLE_LABELS[s],
+                }))}
+                selectedValue={style}
                 disabled={generating}
-              >
-                <legend>Style</legend>
-                {(['smooth', 'pixel'] as const).map(s => (
-                  <RadioButton
-                    key={s}
-                    name="generation-style"
-                    value={s}
-                    size="s"
-                    checked={style === s}
-                    onChange={() => setStyle(s)}
-                    className={moduleStyles.styleOption}
-                  >
-                    {/* The same star in each style, ahead of the label so
-                        the two rows line up. The label is ours, in the
-                        radio's own text size, so it can follow the sample. */}
-                    <span className={moduleStyles.styleSwatch}>
-                      <img
-                        src={s === 'pixel' ? pixelSample : smoothSample}
-                        alt=""
-                        className={classNames(
-                          s === 'pixel' && moduleStyles.pixelArt
-                        )}
-                      />
-                    </span>
-                    <MuiTypography variant="body3" component="span">
-                      {IMAGE_STYLE_LABELS[s]}
-                    </MuiTypography>
-                  </RadioButton>
-                ))}
-              </fieldset>
+                onChange={e => setStyle(e.target.value as ImageStyle)}
+              />
               {/* Internal knob: ask the model for a coarser grid than the
                   type's default, to survey what it returns at lower asks. */}
-              {advanced && style === 'pixel' && (
-                <fieldset
-                  className={moduleStyles.radioGroup}
-                  disabled={generating}
-                >
-                  <legend>Resolution</legend>
-                  {PIXEL_SCALES.map(scale => {
+              {style === 'pixel' && (
+                <SimpleDropdown
+                  name="generation-pixel-grid"
+                  labelText="Resolution"
+                  size="s"
+                  color={dropdownColor}
+                  items={PIXEL_SCALES.map(scale => {
                     const grid = defaultPixelGrid(imageType) / scale;
-                    return (
-                      <RadioButton
-                        key={scale}
-                        name="generation-pixel-grid"
-                        value={String(scale)}
-                        label={`${grid} × ${grid}${
-                          scale === 1 ? ' (default)' : ''
-                        }`}
-                        size="s"
-                        checked={pixelScale === scale}
-                        onChange={() => setPixelScale(scale)}
-                      />
-                    );
+                    return {
+                      value: String(scale),
+                      text: `${grid} × ${grid}${
+                        scale === 1 ? ' (default)' : ''
+                      }`,
+                    };
                   })}
-                </fieldset>
+                  selectedValue={String(pixelScale)}
+                  disabled={generating}
+                  onChange={e => setPixelScale(Number(e.target.value))}
+                />
               )}
             </div>
           </div>
@@ -801,16 +714,14 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </button>
           </div>
         )}
-        {!hideCancel && (
-          <button
-            type="button"
-            className={moduleStyles.button}
-            disabled={generating}
-            onClick={onCancel}
-          >
-            Cancel
-          </button>
-        )}
+        <button
+          type="button"
+          className={moduleStyles.button}
+          disabled={generating}
+          onClick={onCancel}
+        >
+          Cancel
+        </button>
         <button
           type="button"
           className={moduleStyles.primaryButton}

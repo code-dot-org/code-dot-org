@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:19:56.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-steer-it-1-17995faf-a664-4414-bc98-7431cd3241ef",
+        "text": "A vague idea leads to a generic page.",
+        "imageUrl": "https://images.code.org/a54b50240ea4cb7adf5e3024b375eeb4-adaptive-HoAI26-steer-it-1-panel-1-684c1d2b-fe79-42f0-bfdc-95bd4df873fe.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-steer-it-1-afd489af-a45b-446f-a338-ca930cab4beb",
+        "text": "Specific prompts create the page you pictured.",
+        "imageUrl": "https://images.code.org/7fcaab895404efc7593fd11bc89d9446-adaptive-HoAI26-steer-it-1-panel-2-05db347e-50e7-4e31-8eb8-22237a6c5b9e.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-steer-it-1-d8ddab96-9905-4f58-a542-c018b77acfb2",
+        "text": "Add details to make your vision clearer.",
+        "imageUrl": "https://images.code.org/8639fe1c24cf0d43b35e0ee23c827164-adaptive-HoAI26-steer-it-1-panel-3-261bf228-9191-4edb-89ed-a6ea705ef639.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-HoAI26-steer-it-1-0ae185a2-bd05-4498-a059-7ace18932f1a",
+        "text": "Or change one thing, clearly stating what to keep.",
+        "imageUrl": "https://images.code.org/2db8f93a3785ad9e7a9ce71b8925b0b9-adaptive-HoAI26-steer-it-1-panel-4-1d745ffa-6de7-4ca6-8d09-1a13108d4cef.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Watch an animated video demonstrating how specific prompts yield desired results from AI, contrasting with vague prompts. Learn two key moves: adding detail or changing one thing while specifying what to keep."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:20:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:20:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

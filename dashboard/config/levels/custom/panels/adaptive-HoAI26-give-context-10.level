@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:27:47.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-give-context-10-871d8e81-1266-415a-82b5-8330003b3e82",
+        "text": "I typed 'It's broken!' and got this.",
+        "imageUrl": "https://images.code.org/0a7ede68163f4c99a28620ec4da99d6b-adaptive-HoAI26-give-context-10-panel-1-5afd6e79-50b1-4dcd-9f6a-06a4d82b5d04.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-give-context-10-4436b64f-b9e2-4bbc-bfbd-5bb0738dd413",
+        "text": "But when I tried again with more details, the AI gave me a useful reply!",
+        "imageUrl": "https://images.code.org/9c5dcd07c30b0675c07d039c4bc51616-adaptive-HoAI26-give-context-10-panel-2-9543f87e-b3c9-45fc-82e2-10fbd113227a.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "adaptive-HoAI26-give-context-10-b6791e81-fea9-4823-8167-2435ed557756",
+        "text": "Good bug reports answer three questions: What did you expect? What happened? And where?",
+        "imageUrl": "https://images.code.org/e9799e472ee00a3229646b00aa007435-adaptive-HoAI26-give-context-10-panel-3-9dcf37e3-41a9-4ba6-b13c-c793013368d9.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "A comedy sketch where a student learns the importance of detailed bug reports. See how vague reports yield unhelpful replies, while clear reports lead to useful solutions. Understand the three key questions for reporting issues."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:28:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:28:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -13,15 +13,17 @@ import {
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
+import {
+  IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
+  sanitizeImageName,
+} from '../imageReferences';
 
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
-import GenerateImageView, {
-  ImageFormOptions,
-  NewImageDraft,
-} from './GenerateImageView';
+import GenerateImageView, {ImageFormOptions} from './GenerateImageView';
 import ImagePaneButton from './ImagePaneButton';
+import SentenceDialogBody, {NewImageDraft} from './SentenceDialogBody';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -63,9 +65,6 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   /** No paint entry points: the pane is a plain preview and new images
       offer no blank canvas. */
   paintDisabled?: boolean;
-  /** An image level: the panel sits in the page, not in a modal — no
-      overlay, no Done/Cancel exits. */
-  imageLevel?: boolean;
   /** Stored pixel size of the image (one frame of a sheet). */
   resolution?: {x: number; y: number};
   /** Pixel art's physical px per art pixel; sets the resolution row's
@@ -138,11 +137,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   lockedImageSubject,
   imageChanged,
   advanced,
-  adlibSet,
-  adlibOnly,
   defaultStyle,
   paintDisabled,
-  imageLevel,
   pixelated,
   resolution,
   pixelGridSize,
@@ -159,6 +155,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
+  // The student's generate view hosts the sentence scene; the advanced
+  // dialog keeps its full form. Both want room for the word menus.
+  const sentenceView = view === 'generate' && !advanced;
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState('');
   const [nameError, setNameError] = useState<string | null>(null);
@@ -205,92 +204,127 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           ? 'View, edit, rename, or delete this image.'
           : 'View, edit, or delete this image.'}
       </span>
-      {/* An image level drops the title bar: the section's aria-label still
-          names it, and the floating guide carries the instruction. */}
-      {!imageLevel && (
-        <div className={moduleStyles.header}>
-          {renaming ? (
-            <>
-              <TextField
-                name="imageName"
-                aria-label="Image name"
-                className={moduleStyles.headerNameField}
-                value={nameDraft}
-                aria-invalid={!!shownNameError || undefined}
-                aria-describedby={
-                  shownNameError ? 'rename-image-error' : undefined
+      <div className={moduleStyles.header}>
+        {renaming ? (
+          <>
+            <TextField
+              name="imageName"
+              aria-label="Image name"
+              className={moduleStyles.headerNameField}
+              value={nameDraft}
+              aria-invalid={!!shownNameError || undefined}
+              aria-describedby={
+                shownNameError ? 'rename-image-error' : undefined
+              }
+              maxLength={IMAGE_NAME_MAX_LENGTH}
+              onChange={e => {
+                setNameDraft(sanitizeImageName(e.target.value));
+                setNameError(null);
+              }}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && draftUsable) {
+                  commitRename();
+                } else if (e.key === 'Escape') {
+                  // Stop it here or the whole dialog closes.
+                  e.stopPropagation();
+                  cancelRename();
                 }
-                maxLength={IMAGE_NAME_MAX_LENGTH}
-                onChange={e => {
-                  setNameDraft(sanitizeImageName(e.target.value));
-                  setNameError(null);
-                }}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' && draftUsable) {
-                    commitRename();
-                  } else if (e.key === 'Escape') {
-                    // Stop it here or the whole dialog closes.
-                    e.stopPropagation();
-                    cancelRename();
-                  }
-                }}
-              />
-              <button
-                type="button"
-                className={moduleStyles.iconButton}
-                aria-label="Save name"
-                disabled={!draftUsable}
-                onClick={commitRename}
-              >
-                <FontAwesomeV6Icon iconName="check" />
-              </button>
-              <button
-                type="button"
-                className={moduleStyles.iconButton}
-                aria-label="Cancel rename"
-                onClick={cancelRename}
-              >
-                <FontAwesomeV6Icon iconName="xmark" />
-              </button>
-              {/* Beside the field: below it would change the header's height
+              }}
+            />
+            <button
+              type="button"
+              className={moduleStyles.iconButton}
+              aria-label="Save name"
+              disabled={!draftUsable}
+              onClick={commitRename}
+            >
+              <FontAwesomeV6Icon iconName="check" />
+            </button>
+            <button
+              type="button"
+              className={moduleStyles.iconButton}
+              aria-label="Cancel rename"
+              onClick={cancelRename}
+            >
+              <FontAwesomeV6Icon iconName="xmark" />
+            </button>
+            {/* Beside the field: below it would change the header's height
                   for the moment it shows. */}
-              {shownNameError && (
-                <span
-                  id="rename-image-error"
-                  role="status"
-                  className={moduleStyles.inlineFieldError}
-                >
-                  {shownNameError}
-                </span>
-              )}
-            </>
-          ) : (
-            <>
-              {/* Tabbable so the focus trap lands on the title first (the
-                  pixel editor's pattern). */}
-              {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-              <span className={moduleStyles.headerTitle} tabIndex={0}>
-                {title}
+            {shownNameError && (
+              <span
+                id="rename-image-error"
+                role="status"
+                className={moduleStyles.inlineFieldError}
+              >
+                {shownNameError}
               </span>
-              {advanced && !isNew && view === 'details' && (
-                <button
-                  type="button"
-                  className={moduleStyles.iconButton}
-                  aria-label="Rename"
-                  onClick={() => {
-                    setNameDraft(name || '');
-                    setNameError(null);
-                    setRenaming(true);
-                  }}
-                >
-                  <FontAwesomeV6Icon iconName="pencil" />
-                </button>
-              )}
-            </>
-          )}
-        </div>
-      )}
-      {view === 'generate' ? (
+            )}
+          </>
+        ) : (
+          <>
+            {/* Tabbable so the focus trap lands on the title first (the
+                  pixel editor's pattern). */}
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+            <span className={moduleStyles.headerTitle} tabIndex={0}>
+              {title}
+            </span>
+            {advanced && !isNew && view === 'details' && (
+              <button
+                type="button"
+                className={moduleStyles.iconButton}
+                aria-label="Rename"
+                onClick={() => {
+                  setNameDraft(name || '');
+                  setNameError(null);
+                  setRenaming(true);
+                }}
+              >
+                <FontAwesomeV6Icon iconName="pencil" />
+              </button>
+            )}
+          </>
+        )}
+      </div>
+      {sentenceView ? (
+        // The student form: the sentence scene's sentence and picture. A
+        // new image's name is the next free one for its type.
+        <SentenceDialogBody
+          imageType={
+            isNew
+              ? newImageDraft?.imageType ?? lockedImageType ?? 'sprite'
+              : imageType || 'sprite'
+          }
+          imageSubject={
+            isNew
+              ? newImageDraft?.subject ?? lockedImageSubject
+              : generation?.subject
+          }
+          typeChoice={isNew && !lockedImageType}
+          defaultStyle={
+            (isNew && newImageDraft?.style) || defaultStyle || 'smooth'
+          }
+          onKeep={async result => {
+            await onAcceptGenerated(
+              result,
+              isNew
+                ? nextImageName(result.generation.imageType, isNameTaken)
+                : undefined
+            );
+            setView('details');
+          }}
+          onCancel={onClose}
+          onPaintManually={
+            isNew && !paintDisabled && onPaintNew
+              ? draft =>
+                  onPaintNew({
+                    ...draft,
+                    name: nextImageName(draft.imageType, isNameTaken),
+                  })
+              : undefined
+          }
+          onGenerateStart={onGenerateStart}
+        />
+      ) : view === 'generate' ? (
         <GenerateImageView
           existing={
             isNew
@@ -308,8 +342,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           lockedImageType={lockedImageType}
           lockedImageSubject={lockedImageSubject}
           advanced={advanced}
-          adlibSet={adlibSet}
-          adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
           onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
           onGenerateStart={onGenerateStart}
@@ -319,7 +351,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           }}
           // A brand-new image has no summary to fall back to.
           onCancel={isNew ? onClose : () => setView('details')}
-          hideCancel={imageLevel && isNew}
           onDelete={isNew ? undefined : onDelete}
         />
       ) : (
@@ -420,15 +451,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               )}
             </div>
           </div>
-          {/* An image level's summary is a resting point, not a manager:
-              the guide's Continue is the only action, so no footer — no
-              delete, no second generate (the alternatives row above still
-              offers the session's variants). */}
-          {!imageLevel && (
-            <div className={moduleStyles.footer}>
-              <div className={moduleStyles.footerLeft}>
-                <DeleteImageButton onDelete={onDelete} />
-              </div>
+          <div className={moduleStyles.footer}>
+            <div className={moduleStyles.footerLeft}>
+              <DeleteImageButton onDelete={onDelete} />
+            </div>
+            {/* Students make a new image rather than replacing one in
+                  place; the regenerate path stays for the advanced dialog. */}
+            {advanced && (
               <button
                 type="button"
                 className={moduleStyles.button}
@@ -437,15 +466,15 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 <FontAwesomeV6Icon iconName="sparkles" />
                 Generate with AI
               </button>
-              <button
-                type="button"
-                className={moduleStyles.primaryButton}
-                onClick={onClose}
-              >
-                {imageChanged ? 'Accept' : 'Done'}
-              </button>
-            </div>
-          )}
+            )}
+            <button
+              type="button"
+              className={moduleStyles.primaryButton}
+              onClick={onClose}
+            >
+              {imageChanged ? 'Accept' : 'Done'}
+            </button>
+          </div>
         </>
       )}
     </>
@@ -455,26 +484,17 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     // data-theme drives both the chrome's own colors and the design
     // system's semantic colors inside the panel (the TextField reads them).
     <div className={moduleStyles.dialogHost} data-theme={mode}>
-      {imageLevel ? (
-        <section
-          aria-label={title}
-          className={classNames(
-            moduleStyles.dialog,
-            moduleStyles.imageLevelPanel
-          )}
-        >
-          {panelBody}
-        </section>
-      ) : (
-        <CustomDialog
-          aria-label={title}
-          onClose={onClose}
-          mode={mode}
-          className={moduleStyles.dialog}
-        >
-          {panelBody}
-        </CustomDialog>
-      )}
+      <CustomDialog
+        aria-label={title}
+        onClose={onClose}
+        mode={mode}
+        className={classNames(
+          moduleStyles.dialog,
+          view === 'generate' && moduleStyles.dialogWide
+        )}
+      >
+        {panelBody}
+      </CustomDialog>
     </div>
   );
 };

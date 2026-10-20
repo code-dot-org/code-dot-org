@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:41:41.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-say-it-in-your-voice-35-ff3f6180-7ec7-4a00-b462-f87de8f4de4b",
+        "text": "The same headline can sound playful...",
+        "imageUrl": "https://images.code.org/432405606dde54cf8ab3adc866538c15-adaptive-HoAI26-say-it-in-your-voice-35-panel-1-99ccd703-c794-4137-91ec-2507adaf933f.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-say-it-in-your-voice-35-da7a2f94-c842-4315-b6ed-8d5b5ce14690",
+        "text": "...or calm, with soft colors and smooth lines.",
+        "imageUrl": "https://images.code.org/226d310e0415b48adadec76c851364f6-adaptive-HoAI26-say-it-in-your-voice-35-panel-2-678d1219-29e1-4dcd-b8a3-f53089a10d57.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-say-it-in-your-voice-35-1d7cd456-4d4d-45e9-a2b9-3f1bf0333b42",
+        "text": "...or bold and direct, with strong colors.",
+        "imageUrl": "https://images.code.org/6c9816d0db3396046446849f7f6cc44e-adaptive-HoAI26-say-it-in-your-voice-35-panel-3-a7f47769-92c8-4a63-b96e-5908a98c006b.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-say-it-in-your-voice-35-b7ef8234-89ac-4314-8ceb-fe919d04fd89",
+        "text": "Name your tone, then repeat it to keep your site consistent.",
+        "imageUrl": "https://images.code.org/8a1f279e0e1d23a0de8e0c19b3a37c1d-adaptive-HoAI26-say-it-in-your-voice-35-panel-4-f969d9fa-f809-40bd-9eac-89d61c207dde.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Discover the concept of 'tone words' in web design. See how the same headline can convey playful, calm, or bold tones, and understand the importance of naming your site's tone and consistently applying it."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:42:19 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:42:19 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
