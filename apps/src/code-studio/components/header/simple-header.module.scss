@@ -1,5 +1,11 @@
 @use "color.scss";
 
+// The unit image is a square inside the header bar; the gaps are the row's own.
+$image-size: 32px;
+$image-radius: 6px;
+$image-gap: 12px;
+$title-gap: 6px;
+
 // The same fade HeaderMiddle's row has; keyframes are scoped to the module.
 @keyframes fadein {
   from {
@@ -13,7 +19,7 @@
 .row {
   width: 100%;
   min-width: 0;
-  height: 50px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,15 +27,15 @@
 }
 
 .image {
-  width: 32px;
-  height: 32px;
+  width: $image-size;
+  height: $image-size;
   box-sizing: border-box;
   border: 1px solid color.$white;
-  border-radius: 6px;
+  border-radius: $image-radius;
   background-color: color.$black;
   flex: none;
   object-fit: cover;
-  margin-inline-end: 12px;
+  margin-inline-end: $image-gap;
 }
 
 .text {
@@ -41,11 +47,11 @@
 .title {
   display: flex;
   align-items: baseline;
-  gap: 6px;
+  gap: $title-gap;
   min-width: 0;
   color: color.$white;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: var(--font-size-body-md);
+  line-height: 1.5;
   white-space: nowrap;
 }
 

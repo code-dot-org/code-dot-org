@@ -1,7 +1,7 @@
-// The level header's middle for a unit flagged simple_progress: the unit's
-// image, the unit name and the current level's header label on one line
-// with the project's saved-at under them, after the project's own controls.
-// One flex row, nothing measured, shown on mount.
+// The level header's middle for a unit whose simple_progress property is
+// set: the unit's image, the unit name and the current level's header label
+// on one line with the project's saved-at under them, after the project's
+// own controls.  One flex row, nothing measured, shown on mount.
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -18,7 +18,8 @@ import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 import styles from './simple-header.module.scss';
 
-// The slices the typed root state leaves out.
+// The header page's store has no typed root state; these are the two
+// slices this component reads.
 interface HeaderState {
   isRtl: boolean;
   project: ProjectState;
