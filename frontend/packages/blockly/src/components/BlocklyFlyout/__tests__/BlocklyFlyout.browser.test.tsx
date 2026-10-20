@@ -202,8 +202,8 @@ describe('flyout.md: BlocklyFlyout', () => {
         // ...and the container takes that height too. Blockly styles the flyout
         // svg position:absolute, which would leave it out of flow and collapse
         // the container despite the svg itself having a height.
-        const host = flyout!.parentElement!;
-        expect(host.getBoundingClientRect().height).toBeGreaterThan(0);
+        const element = flyout!.closest('[role="region"]')!;
+        expect(element.getBoundingClientRect().height).toBeGreaterThan(0);
       },
       {timeout: 5000, interval: 50},
     );
@@ -493,4 +493,53 @@ describe('flyout.md: BlocklyFlyout', () => {
       window.removeEventListener('error', onError);
     }
   });
+
+  it('FLY-10, FLY-V3: follows the main workspace when it is replaced', async () => {
+    const flyoutWorkspace = {current: null as Blockly.WorkspaceSvg | null};
+    const mainWorkspace = {current: null as Blockly.WorkspaceSvg | null};
+    const view = (key: number) => (
+      <StrictMode>
+        <BlocklyProvider>
+          <div style={{display: 'flex', width: 640, height: 480}}>
+            <div style={{flex: '0 0 200px'}}>
+              <BlocklyFlyout
+                blocks={FLYOUT_BLOCKS}
+                workspaceRef={flyoutWorkspace}
+              />
+            </div>
+            <div style={{flex: '1 1 auto'}}>
+              <BlocklyWorkspace key={key} workspaceRef={mainWorkspace} />
+            </div>
+          </div>
+        </BlocklyProvider>
+      </StrictMode>
+    );
+    const {rerender} = render(view(0));
+    const target = () =>
+      (flyoutWorkspace.current as unknown as {targetWorkspace?: unknown})
+        ?.targetWorkspace;
+    await vi.waitFor(
+      () => {
+        expect(mainWorkspace.current).not.toBeNull();
+        expect(target()).toBe(mainWorkspace.current);
+      },
+      {timeout: 5000, interval: 50},
+    );
+    const first = mainWorkspace.current;
+
+    rerender(view(1));
+
+    await vi.waitFor(
+      () => {
+        expect(mainWorkspace.current).not.toBe(first);
+        expect(target()).toBe(mainWorkspace.current);
+      },
+      {timeout: 5000, interval: 50},
+    );
+    expect(flyoutWorkspace.current?.getTopBlocks(false)).toHaveLength(1);
+  });
 });
+
+const FLYOUT_BLOCKS: Blockly.utils.toolbox.FlyoutDefinition = [
+  {kind: 'block', type: 'text'},
+];

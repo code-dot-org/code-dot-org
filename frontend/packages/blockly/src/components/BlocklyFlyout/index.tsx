@@ -252,7 +252,12 @@ export function BlocklyFlyout({
         // overlays its workspace). Out of flow, our container can't size to it
         // and collapses; relative puts it back in normal flow.
         svg.style.position = 'relative';
-        container.appendChild(svg);
+        // Disposing the flyout removes the element that holds its SVG, so give
+        // each flyout its own, and the container outlives it.
+        const host = document.createElement(inline ? 'span' : 'div');
+        host.style.display = 'contents';
+        host.appendChild(svg);
+        container.appendChild(host);
         // Mirror a dragged block with a click-through overlay clone so the drag
         // stays visible while the real block is still clipped to the canvas.
         // Capture phase: Blockly's block handler stops propagation, so a
@@ -337,16 +342,32 @@ export function BlocklyFlyout({
     };
     driverInstance.addListener(DriverEvent.ThemeChanged, onThemeChanged);
 
-    return () => {
-      disposed = true;
-      cancelAnimationFrame(frame);
-      driverInstance.removeListener(DriverEvent.ThemeChanged, onThemeChanged);
+    const unmountFlyout = () => {
       releaseFocus(flyoutRef.current?.getWorkspace());
       flyoutRef.current?.dispose();
       flyoutRef.current = null;
       if (workspaceRef) {
         workspaceRef.current = null;
       }
+    };
+
+    // A remounted BlocklyWorkspace replaces the main workspace; follow it.
+    const onRemoved = (workspace: Blockly.WorkspaceSvg) => {
+      if (flyoutRef.current?.targetWorkspace !== workspace) {
+        return;
+      }
+      unmountFlyout();
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(tryMount);
+    };
+    driverInstance.addListener(DriverEvent.Removed, onRemoved);
+
+    return () => {
+      disposed = true;
+      cancelAnimationFrame(frame);
+      driverInstance.removeListener(DriverEvent.ThemeChanged, onThemeChanged);
+      driverInstance.removeListener(DriverEvent.Removed, onRemoved);
+      unmountFlyout();
     };
     // Recreated only if the driver itself changes; block changes handled below.
     // eslint-disable-next-line react-hooks/exhaustive-deps

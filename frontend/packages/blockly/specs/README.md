@@ -141,3 +141,8 @@ these changes.
     `forciblyInsertTopBlock` makes its elements in the root's own document
     (XML-14), as apps does; `ngfp/blockly`'s made them in the page's HTML
     document, so they serialized in the XHTML namespace.
+20. `BlocklyFlyout` follows the main workspace when it is replaced
+    (FLY-10), drawing each flyout it makes in an element of its own.
+    `ngfp/blockly`'s kept targeting the workspace it first found, so after
+    a `BlocklyWorkspace` remounted, a block dragged from the flyout went
+    to a disposed workspace.
