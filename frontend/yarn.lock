@@ -1715,6 +1715,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/plugin-scroll-options@npm:^13.1.0":
+  version: 13.4.0
+  resolution: "@blockly/plugin-scroll-options@npm:13.4.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10c0/274fd9617d2a407901d35802260aa18f6240dc92f3cab35f5c7332d796f84c39234416559a8c2edba337ab221b580199dc46094731cb3b626fd7d0e9f6581f5d
+  languageName: node
+  linkType: hard
+
 "@blockly/theme-dark@npm:^8.0.3":
   version: 8.0.4
   resolution: "@blockly/theme-dark@npm:8.0.4"
@@ -1772,6 +1781,7 @@ __metadata:
   dependencies:
     "@blockly/block-shareable-procedures": "npm:^6.0.10"
     "@blockly/field-colour": "npm:^6.0.4"
+    "@blockly/plugin-scroll-options": "npm:^13.1.0"
     "@blockly/theme-dark": "npm:^8.0.3"
     "@blockly/theme-highcontrast": "npm:^7.0.3"
     "@code-dot-org/lint-config": "workspace:*"
