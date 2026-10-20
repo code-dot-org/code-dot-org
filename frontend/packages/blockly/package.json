@@ -36,6 +36,11 @@
       "import": "./dist/plugins/index.mjs",
       "require": "./dist/plugins/index.cjs"
     },
+    "./plugins/scrollOptions": {
+      "types": "./dist/plugins/scrollOptions/index.d.ts",
+      "import": "./dist/plugins/scrollOptions/index.mjs",
+      "require": "./dist/plugins/scrollOptions/index.cjs"
+    },
     "./plugins/sharableProcedures": {
       "types": "./dist/plugins/sharableProcedures/index.d.ts",
       "import": "./dist/plugins/sharableProcedures/index.mjs",
@@ -125,6 +130,7 @@
   "dependencies": {
     "@blockly/block-shareable-procedures": "^6.0.10",
     "@blockly/field-colour": "^6.0.4",
+    "@blockly/plugin-scroll-options": "^13.1.0",
     "@blockly/theme-dark": "^8.0.3",
     "@blockly/theme-highcontrast": "^7.0.3",
     "@mantine/hooks": "^8.3.13",

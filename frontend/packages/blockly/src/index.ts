@@ -8,6 +8,11 @@ export {defineExtension} from './extensions/defineExtension';
 export {defineMixin} from './mixins/defineMixin';
 export {defineMutator} from './mutators/defineMutator';
 export {createInjectPlugin, PluginType} from './plugins';
+export {TopLeftMetricsManager} from './metricsManager';
+// The dragger inject option that pairs with the scrollOptions plugin
+// (`@code-dot-org/blockly/plugins/scrollOptions`). Re-exported so consumers wire
+// it without depending on the plugin package directly.
+export {ScrollBlockDragger} from '@blockly/plugin-scroll-options';
 export type {
   Plugin,
   FieldPlugin,
