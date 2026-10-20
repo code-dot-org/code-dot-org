@@ -340,3 +340,56 @@ function getCollider(block: Blockly.BlockSvg): Collider {
 
   return collider;
 }
+
+/**
+ * Takes an XML DOM for the start blocks, and returns them with a particular
+ * top level block inserted in front of the first non-function block.  If we already
+ * have this block, does nothing.
+ */
+export function forciblyInsertTopBlock(root: Element, blockType: string) {
+  // Look for the given block in the starting blocks
+  if (root.querySelector(`block[type="${blockType}"]`)) {
+    return;
+  }
+
+  const topBlock = document.createElement('block');
+  topBlock.setAttribute('type', blockType);
+  topBlock.setAttribute('movable', 'false');
+  topBlock.setAttribute('deletable', 'false');
+  topBlock.setAttribute('id', 'topBlock');
+
+  let numChildren = root.childNodes ? root.childNodes.length : 0;
+
+  // find the first non-function definition block and extract it
+  let firstBlock = null,
+    i = 0;
+  while (i < numChildren && firstBlock === null) {
+    const child = root.childNodes[i];
+    // only look at element nodes
+    if (child.nodeType === 1) {
+      const childElement = child as Element;
+      const type = childElement.getAttribute('type');
+      if (
+        type !== 'procedures_defnoreturn' &&
+        type !== 'procedures_defreturn'
+      ) {
+        firstBlock = root.removeChild(childElement);
+        numChildren--;
+      }
+    }
+    i++;
+  }
+
+  if (firstBlock !== null) {
+    // when run -> next -> firstBlock
+    const next = document.createElement('next');
+    next.appendChild(firstBlock);
+    topBlock.appendChild(next);
+  }
+
+  if (numChildren > 0) {
+    root.insertBefore(topBlock, root.childNodes[0]);
+  } else {
+    root.appendChild(topBlock);
+  }
+}

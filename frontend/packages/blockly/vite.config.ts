@@ -58,6 +58,8 @@ export default defineConfig({
     lib: {
       entry: [
         'src/index.ts',
+        'src/xml/index.ts',
+        'src/utils/index.ts',
         'src/contexts/index.ts',
         'src/plugins/index.ts',
         'src/plugins/blockLimits/index.ts',

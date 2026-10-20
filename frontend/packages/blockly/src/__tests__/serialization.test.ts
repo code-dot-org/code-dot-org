@@ -2,6 +2,7 @@ import type * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
 import {
+  forciblyInsertTopBlock,
   insertCollider,
   isOverlapping,
   partitionJsonBlocksByType,
@@ -82,5 +83,59 @@ describe('layout.md: isOverlapping', () => {
     expect(isOverlapping(collider(0, 0, 10, 10), collider(10, 0, 10, 10))).toBe(
       false,
     );
+  });
+});
+
+describe('xml-toolbox.md: forciblyInsertTopBlock', () => {
+  // Build an <xml>-style root of <block type=...> children in the jsdom DOM.
+  const rootOf = (...types: string[]) => {
+    const root = document.createElement('xml');
+    for (const type of types) {
+      const el = document.createElement('block');
+      el.setAttribute('type', type);
+      root.appendChild(el);
+    }
+    return root;
+  };
+
+  const childTypes = (el: Element) =>
+    Array.from(el.children).map(c => c.getAttribute('type'));
+
+  it('XML-14: wraps the first block under a new immovable top block', () => {
+    const root = rootOf('foo');
+    forciblyInsertTopBlock(root, 'when_run');
+
+    expect(childTypes(root)).toEqual(['when_run']);
+    const top = root.children[0];
+    expect(top.getAttribute('id')).toBe('topBlock');
+    expect(top.getAttribute('movable')).toBe('false');
+    expect(top.getAttribute('deletable')).toBe('false');
+    // when_run -> next -> foo
+    expect(top.querySelector('next > block')?.getAttribute('type')).toBe('foo');
+  });
+
+  it('XML-14: does nothing when a block of that type is already present', () => {
+    const root = rootOf('when_run', 'foo');
+    forciblyInsertTopBlock(root, 'when_run');
+    expect(childTypes(root)).toEqual(['when_run', 'foo']);
+  });
+
+  it('XML-14: skips procedure definitions when choosing the block to wrap', () => {
+    const root = rootOf('procedures_defnoreturn', 'bar');
+    forciblyInsertTopBlock(root, 'when_run');
+
+    // the top block is inserted ahead of the surviving definition...
+    expect(childTypes(root)).toEqual(['when_run', 'procedures_defnoreturn']);
+    // ...and wraps the first non-definition block, not the definition.
+    expect(
+      root.children[0].querySelector('next > block')?.getAttribute('type'),
+    ).toBe('bar');
+  });
+
+  it('XML-14: appends a bare top block when the root is empty', () => {
+    const root = rootOf();
+    forciblyInsertTopBlock(root, 'when_run');
+    expect(childTypes(root)).toEqual(['when_run']);
+    expect(root.children[0].querySelector('next')).toBeNull();
   });
 });
