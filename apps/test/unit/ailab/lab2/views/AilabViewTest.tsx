@@ -28,9 +28,7 @@ import {
 
 jest.mock('@cdo/apps/ailab/engine', () => ({
   __esModule: true,
-  mount: jest.fn(),
-  unmount: jest.fn(),
-  loadLevel: jest.fn(),
+  AilabEngine: jest.fn(() => null),
   instructionsDismissed: jest.fn(),
 }));
 
@@ -47,7 +45,7 @@ jest.mock('@cdo/apps/lab2/views/components/Instructions/ResourcePanel', () =>
 const mockedAilab = jest.mocked(ailab);
 
 const train = (accuracy: number) =>
-  act(() => mockedAilab.mount.mock.lastCall?.[0].onTrained?.(accuracy));
+  act(() => mockedAilab.AilabEngine.mock.lastCall?.[0].onTrained?.(accuracy));
 
 const UNMET_MESSAGE = 'Train a model with at least 70% accuracy to continue.';
 

@@ -1,6 +1,14 @@
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
-import * as ailab from '@cdo/apps/ailab/engine';
+import {
+  AilabEngine,
+  type AilabEngineProps,
+  instructionsDismissed,
+  type InstructionsKey,
+  type Mode,
+  type SaveResponse,
+  startOver,
+} from '@cdo/apps/ailab/engine';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {LabProps} from '@cdo/apps/lab2/types';
@@ -24,8 +32,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
-    useState<ailab.InstructionsKey>();
-  const mode: ailab.Mode | undefined = useMemo(
+    useState<InstructionsKey>();
+  const mode: Mode | undefined = useMemo(
     () => (levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined),
     [levelProperties.mode]
   );
@@ -38,72 +46,52 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     progressManager?.setValidator(validator);
   }, [progressManager, validator]);
 
-  useEffect(() => {
-    const onContinue = () => {
-      dispatch(continueOrFinishLesson());
-    };
+  const onContinue = () => {
+    dispatch(continueOrFinishLesson());
+  };
 
-    const setInstructionsKey: ailab.InitAllOptions['setInstructionsKey'] = (
-      key,
-      options
-    ) => {
-      setDynamicInstructionsKey(key);
-      // Overlay is not shown in Lab2 AI Lab; dismiss immediately.
-      if (options?.showOverlay) {
-        ailab.instructionsDismissed();
-      }
-    };
+  const setInstructionsKey: AilabEngineProps['setInstructionsKey'] = (
+    key,
+    options
+  ) => {
+    setDynamicInstructionsKey(key);
+    // Overlay is not shown in Lab2 AI Lab; dismiss immediately.
+    if (options?.showOverlay) {
+      instructionsDismissed();
+    }
+  };
 
-    const saveTrainedModel: ailab.InitAllOptions['saveTrainedModel'] = async (
-      dataToSave,
-      callback
-    ) => {
-      try {
-        const response = await HttpClient.post(
-          '/api/v1/ml_models/save',
-          JSON.stringify(dataToSave),
-          true,
-          {'Content-Type': 'application/json'}
-        );
-        const saveResponse = (await response.json()) as ailab.SaveResponse;
-        callback(saveResponse);
-      } catch (error) {
-        callback({status: 'error'});
-      }
-    };
+  const saveTrainedModel: AilabEngineProps['saveTrainedModel'] = async (
+    dataToSave,
+    callback
+  ) => {
+    try {
+      const response = await HttpClient.post(
+        '/api/v1/ml_models/save',
+        JSON.stringify(dataToSave),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      const saveResponse = (await response.json()) as SaveResponse;
+      callback(saveResponse);
+    } catch (error) {
+      callback({status: 'error'});
+    }
+  };
 
-    const logMetric = (eventName: string, details: object) => {
-      analyticsReporter.sendEvent(eventName, {details});
-    };
+  const logMetric = (eventName: string, details: object) => {
+    analyticsReporter.sendEvent(eventName, {details});
+  };
 
-    const onStartOver = () => {
-      showDialog({type: DialogType.StartOver, handleConfirm: ailab.startOver});
-    };
+  const onStartOver = () => {
+    showDialog({type: DialogType.StartOver, handleConfirm: startOver});
+  };
 
-    const onTrained = (accuracy: number) => {
-      validator.latestAccuracy = accuracy;
-      progressManager?.resetValidation();
-      progressManager?.updateProgress();
-    };
-
-    ailab.mount({
-      assetPath: '/blockly/media/skins/ailab/',
-      onContinue,
-      setInstructionsKey,
-      onTrained,
-      i18n: {}, // TODO: Pass through localization map if necessary
-      saveTrainedModel,
-      logMetric,
-      onStartOver,
-    });
-
-    return () => ailab.unmount();
-  }, [dispatch, showDialog, progressManager, validator]);
-
-  // Reload whenever the level changes regardless of if the mode has changed.
-  useEffect(() => {
-    ailab.loadLevel(mode);
-  }, [levelProperties.id, mode]);
+  const onTrained = (accuracy: number) => {
+    validator.latestAccuracy = accuracy;
+    progressManager?.resetValidation();
+    progressManager?.updateProgress();
+  };
 
   const dynamicInstructionsContent = useMemo(() => {
     if (!dynamicInstructionsKey) {
@@ -137,7 +125,20 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       />
       <div className={styles.divider} />
       <div className={styles.workspace}>
-        <div id="root" className={styles.root} />
+        <div className={styles.root}>
+          <AilabEngine
+            assetPath="/blockly/media/skins/ailab/"
+            mode={mode}
+            levelId={levelProperties.id}
+            onContinue={onContinue}
+            setInstructionsKey={setInstructionsKey}
+            onTrained={onTrained}
+            i18n={{}} // TODO: Pass through localization map if necessary
+            saveTrainedModel={saveTrainedModel}
+            logMetric={logMetric}
+            onStartOver={onStartOver}
+          />
+        </div>
       </div>
     </div>
   );
