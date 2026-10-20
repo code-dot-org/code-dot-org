@@ -1,6 +1,11 @@
 import {Typography} from '@mui/material';
 import React, {type ReactNode, useId} from 'react';
 
+import {dataColumnsFor} from '../helpers/columnDetails';
+import {useAppSelector} from '../hooks';
+import {useProject} from '../ProjectContext';
+import {useDatasetTableView} from '../useTableView';
+
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
 
@@ -31,6 +36,13 @@ const RowsPanel = ({
   prediction,
 }: RowsPanelProps) => {
   const descriptionId = useId();
+  const {project} = useProject();
+  const data = useAppSelector(state => state.data);
+  const tableView = useDatasetTableView(
+    rowIndices,
+    dataColumnsFor(data, project, showAllColumns)
+  );
+
   return (
     <div className={styles.panel}>
       <div className={styles.header}>
@@ -62,9 +74,8 @@ const RowsPanel = ({
       </div>
       <NodeRowsTable
         labelId={descriptionId}
-        rowIndices={rowIndices}
+        view={tableView}
         emphasizedColumn={emphasizedColumn}
-        showAllColumns={showAllColumns}
         emptyText={emptyText}
         prediction={prediction}
       />
