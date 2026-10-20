@@ -37,7 +37,6 @@ type View =
 interface PathwayAppProps {
   pathway: Pathway;
   progressKey: ProgressKey;
-  userId?: number | null;
 }
 
 /**
@@ -67,7 +66,6 @@ function projectCheckpoint(pathway: Pathway): Checkpoint {
 const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
-  userId,
 }) => {
   const dispatch = useAppDispatch();
   const reportLevelStep = useCallback(
@@ -76,7 +74,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     [dispatch]
   );
   const {progress, statusMap, ...actions} = useProgress(pathway, progressKey, {
-    userId,
     reportLevelStep,
   });
   if (!progress) {
@@ -130,7 +127,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   progressKey,
   progress,
   statusMap,
-  stepContextMap,
   initialView,
   initialCheckpointId,
   urlCheckpointId,
@@ -139,6 +135,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   completeStep,
   leaveStep,
   saveGeneratedInstructions,
+  finishCheckpoint,
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
@@ -166,6 +163,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     },
     [urlCheckpointId, urlStepId, pathway.checkpoints, progress]
   );
+  // The verdict is only logged for now; nothing acts on it yet.
+  const {lastRouting} = progress;
+  useEffect(() => {
+    if (lastRouting) console.log('[adaptive router]', lastRouting);
+  }, [lastRouting]);
   useEffect(() => {
     if (initialCheckpointId)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
@@ -198,7 +200,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         pathway,
         checkpoint: playing,
         statusMap,
-        stepContextMap,
+        progress,
         saveGeneratedInstructions,
         aiContext,
       },
@@ -206,7 +208,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       pathway,
       playing,
       statusMap,
-      stepContextMap,
+      progress,
       saveGeneratedInstructions,
       aiContext,
     ]
@@ -237,6 +239,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             }}
             onFinish={() => {
               clearStepParams();
+              if (!isProject) finishCheckpoint(checkpoint);
               setView({kind: 'map'});
             }}
           />

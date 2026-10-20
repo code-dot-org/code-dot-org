@@ -12,6 +12,7 @@ import {usePathwayContext} from '../PathwayContext';
 import LevelStep from './LevelStep';
 import PanelsStep from './PanelsStep';
 import QuestionsStep from './QuestionsStep';
+import VideoStep from './VideoStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
@@ -49,7 +50,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onExit,
   onFinish,
 }) => {
-  const {stepContextMap} = usePathwayContext();
+  const {progress} = usePathwayContext();
   const steps = checkpoint.steps;
   const [index, setIndex] = useState(() => {
     if (!initialStepId) return 0;
@@ -104,10 +105,19 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
           <QuestionsStep
             key={step.id}
             step={step}
-            answers={stepContextMap[step.id]?.answers ?? NO_ANSWERS}
+            answers={progress.steps[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={(questionId, list) =>
               onSaveAnswers(step, questionId, list, takeElapsed())
             }
+            onComplete={advance}
+          />
+        );
+      case 'video':
+        return (
+          <VideoStep
+            key={step.id}
+            step={step}
+            continueLabel={continueLabel}
             onComplete={advance}
           />
         );

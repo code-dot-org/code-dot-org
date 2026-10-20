@@ -367,7 +367,8 @@ export const AiChatClientTypes = {
   "FLOW_LAB": "flow-lab",
   "LESSON_DEEP_DIVE": "lesson-deep-dive",
   "ADAPTIVE": "adaptive",
-  "THEATER_DESCRIPTION": "theater-description"
+  "THEATER_DESCRIPTION": "theater-description",
+  "CURRICULUM_GENERATOR": "curriculum-generator"
 } as const;
 
 export const AiChatReadTimeouts = {
@@ -376,7 +377,8 @@ export const AiChatReadTimeouts = {
   "flow-lab": 60,
   "lesson-deep-dive": 60,
   "adaptive": 30,
-  "theater-description": 30
+  "theater-description": 30,
+  "curriculum-generator": 30
 } as const;
 
 export const AiChatTeacherFeedback = {

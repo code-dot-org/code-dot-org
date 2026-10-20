@@ -5,9 +5,12 @@
 
 import {z} from 'zod';
 
-import {pathwaySchema} from '../pathway';
+import {pathwaySchema, pathwaySourceSchema} from '../pathway';
 
-type Pathway = z.infer<typeof pathwaySchema>;
+// A source has no resolved levels, so its project flags go unchecked.
+type Pathway =
+  | z.infer<typeof pathwaySchema>
+  | z.infer<typeof pathwaySourceSchema>;
 
 /**
  * Detects and returns any reference problems in a pathway.
@@ -114,7 +117,7 @@ function findLevelStepProblems(pathway: Pathway): string[] {
           `${where}: instructionsPrompt needs the student's project, so the step must be marked project`
         );
       }
-      if (!step.levelProperties) continue;
+      if (!('levelProperties' in step) || !step.levelProperties) continue;
       const sharesProject =
         step.level === template ||
         step.levelProperties.projectTemplateLevelName === template;

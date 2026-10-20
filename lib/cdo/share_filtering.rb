@@ -1,5 +1,4 @@
 require 'cdo/regexp'
-require 'cdo/geocoder'
 require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
 
@@ -221,24 +220,15 @@ module ShareFiltering
   #
   # * Emails
   # * Phone Numbers
-  # * Street Addresses
+  #
+  # Street addresses are temporarily not checked, to prevent false positives.
+  # TODO: re-enable this when we improve the user experience of the address filter.
+  # Jira: https://codedotorg.atlassian.net/browse/SL-2303
   #
   # @param [String] text The text to search through.
   # @return [ShareFailure, nil]
   def self.find_pii_failure(text, exceptions: false)
-    failure = find_email_or_phone_failure(text, exceptions: exceptions)
-    return failure if failure
-
-    candidate = Geocoder.extract_address_candidate(text)
-    return nil unless candidate
-    street_address = Geocoder.find_potential_street_address(candidate)
-    if street_address
-      failure = ShareFailure.new(FailureType::ADDRESS, street_address)
-      raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
-      return failure
-    end
-
-    nil
+    find_email_or_phone_failure(text, exceptions: exceptions)
   end
 
   # Searches for profanity in text.
@@ -363,8 +353,9 @@ module ShareFiltering
   #
   # * Emails
   # * Phone Numbers
-  # * Street Addresses
   # * Profanity
+  #
+  # Street addresses are temporarily not checked; see find_pii_failure.
   #
   # @param [String] text The text to search through.
   # @param [String] locale a two-character ISO 639-1 language code

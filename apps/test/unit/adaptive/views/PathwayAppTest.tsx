@@ -76,10 +76,7 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
   serverProgressStore: {
     load: () => mockLoad(),
     saveStep: jest.fn(),
-  },
-  localGeneratedInstructionsStore: {
-    load: () => Promise.resolve(undefined),
-    save: () => Promise.resolve(),
+    saveInstructions: jest.fn(),
   },
 }));
 
@@ -150,7 +147,22 @@ describe('PathwayApp', () => {
     expect(mockDispatch).not.toHaveBeenCalled();
   });
 
-  it('shows the map when the student has existing progress', async () => {
+  it('shows the map when the only entry holds generated instructions', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {
+        'intro-step': {
+          timeSpent: 0,
+          generatedInstructions: {instructions: 'Hi', inputsHash: 'ab'},
+        },
+      },
+    });
+
+    await renderSettled();
+
+    expect(screen.getByText('map screen')).toBeTruthy();
+  });
+
+  it('shows the map once anything has been started', async () => {
     mockLoad.mockResolvedValue({
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });

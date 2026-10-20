@@ -312,6 +312,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:ai_tutor) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]}
     let(:adaptive) {SharedConstants::AI_CHAT_CLIENT_TYPES[:ADAPTIVE]}
     let(:theater_description) {SharedConstants::AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION]}
+    let(:curriculum_generator) {SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR]}
 
     before do
       allow(user).to receive(:has_aichat_access?).and_return(false)
@@ -343,6 +344,24 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       allow(DCDO).to receive(:get).with("theater-ai-descriptions-enabled", false).and_return(true)
       allow(user).to receive(:has_aichat_access?).and_return(true)
       _(user.can_access_aichat_chat_completion?(theater_description, 123)).must_equal true
+    end
+
+    it 'returns false for CURRICULUM_GENERATOR when the user is not a levelbuilder, even with access' do
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(curriculum_generator, nil)).must_equal false
+    end
+
+    it 'returns true for CURRICULUM_GENERATOR when a levelbuilder has access' do
+      allow(user).to receive(:levelbuilder?).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(curriculum_generator, nil)).must_equal true
+    end
+
+    it 'does not block CURRICULUM_GENERATOR when the AI_CHAT_LAB DCDO flag is set' do
+      allow(DCDO).to receive(:get).with("block_aichat_lab_chat_completion", false).and_return(true)
+      allow(user).to receive(:levelbuilder?).and_return(true)
+      allow(user).to receive(:has_aichat_access?).and_return(true)
+      _(user.can_access_aichat_chat_completion?(curriculum_generator, nil)).must_equal true
     end
 
     it 'returns false if AI_CHAT_LAB is blocked via DCDO' do
