@@ -1686,6 +1686,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/field-colour@npm:^6.0.4":
+  version: 6.0.12
+  resolution: "@blockly/field-colour@npm:6.0.12"
+  dependencies:
+    "@blockly/field-grid-dropdown": "npm:^6.0.10"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/e20e84ab8645a3d440a9e07142660a1fa83471806ac79fd8364ffe82044aa0c14854e7d402fac3d1f3bbcbc07103b5c78b43c04141101022dd5d9e4b949255aa
+  languageName: node
+  linkType: hard
+
+"@blockly/field-grid-dropdown@npm:^6.0.10":
+  version: 6.0.10
+  resolution: "@blockly/field-grid-dropdown@npm:6.0.10"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/bcd16b2d12548946ed2f9c7c1d6141aa863cd0ea820715d2db0f3793c56b47d85a94787dc03531028f2be9cb2c5ca307ea80e1d9f46b6131d789047cad330be1
+  languageName: node
+  linkType: hard
+
 "@blockly/theme-dark@npm:^8.0.3":
   version: 8.0.4
   resolution: "@blockly/theme-dark@npm:8.0.4"
@@ -1741,6 +1761,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/blockly@workspace:packages/blockly"
   dependencies:
+    "@blockly/field-colour": "npm:^6.0.4"
     "@blockly/theme-dark": "npm:^8.0.3"
     "@blockly/theme-highcontrast": "npm:^7.0.3"
     "@code-dot-org/lint-config": "workspace:*"

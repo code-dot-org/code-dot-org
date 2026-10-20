@@ -1,8 +1,8 @@
 # Fields
 
 Fields ported from apps' Blockly layer (`apps/src/blockly/addons/`) that
-blocks shared by many labs use. This part has the dropdown; the colour and
-button fields follow in part 6.
+blocks shared by many labs use: the dropdown (part 5), and the colour and
+button fields (part 6).
 
 ## The dropdown
 
@@ -85,3 +85,85 @@ FLD-V4 (FLD-8). `printerStyleNumberRangeToList('1, 2,4-6, x')` is
 
 - Blockly's dropdown itself: menus, images in options, generated menus.
 - Which blocks use the field: `common-blocks.md`, and the labs.
+
+## The colour field
+
+### Why it exists
+
+Blockly moved its colour field and colour blocks out of its core into
+`@blockly/field-colour`. Levels and projects use `colour_picker` and its
+relatives, so a lab that offers them must install that plugin.
+
+### Requirements
+
+FLD-10. `fieldColourPlugin` is a field plugin named `field_colour` with no
+field class of its own (DEF-22): registering it registers
+`@blockly/field-colour`'s field and installs its `colour_picker`,
+`colour_rgb` and `colour_blend` blocks with their JavaScript generators.
+It installs `colour_random` too, unless a block of that type is already
+defined; the common blocks' `colour_random` (part 7), if registered first,
+is kept.
+
+FLD-11. The plugin has no `uninitialize`, so unregistering it removes
+nothing: the field and the four blocks stay defined for the life of the
+page.
+
+## The button field
+
+### Why it exists
+
+Some blocks hold a control rather than a value: a button that opens a
+picker, a toggle drawn as an icon. Blockly has no such field. Apps'
+`CdoFieldButton` is one; this is that field with the changes World Lab
+needed, below.
+
+### Requirements
+
+FLD-12. `new FieldButton({value, validator, onClick, transformText, icon,
+colorOverrides, allowReadOnlyClick})` makes a button that saves its value.
+`fromJson(options)` passes the options through, so a definition that uses
+it must supply `onClick` as a function. It is registered as the field
+plugin `field_button` (`fieldButtonPlugin`).
+
+FLD-13. Clicking the button calls `onClick` instead of opening an editor.
+With `allowReadOnlyClick`, a press calls `onClick` even on a block that
+cannot be edited, such as one in a flyout or a read-only workspace.
+
+FLD-14. The button's text is its value, passed through `transformText` if
+given. An empty value shows nothing on a button with an `icon`, and a
+non-breaking space otherwise, so that a text button still has something to
+click. Non-empty text is shown as it is: unlike Blockly's other fields, it
+is not cut short, its spaces are not made non-breaking, and on a
+right-to-left block it gets no right-to-left mark.
+
+FLD-15. An `icon` is an SVG `tspan` drawn inside the button's text, filled
+with `colorOverrides.icon` or the block style's primary colour. An icon
+button is as wide as the icon as drawn (`getComputedTextLength`), with the
+renderer's field padding on each side, because Blockly would measure the
+icon's character in the block's font, which lacks it. Once web fonts have
+loaded, a button still on a block draws itself again, so that the icon is
+measured in its own font.
+
+FLD-16. The button always states its colours, as an inline style that
+outranks Blockly's field classes: its background is
+`colorOverrides.button` or the renderer's field background colour
+(`FIELD_BORDER_RECT_COLOUR`), and its text `colorOverrides.text` or the
+block style's primary colour. So it looks the same wherever the block is.
+Apps' button paints only colours a caller gives.
+
+FLD-17. The button wears Blockly's `blocklyEditableField` class when its
+block can be edited and the field is enabled, and `blocklyNonEditableField`
+otherwise, whatever its own `EDITABLE` flag says. Callers clear that flag
+so the button is not treated as a value to edit, and Blockly's own
+`updateEditable` then stamps no class at all, which left a button built
+with its block (every button in a flyout) unstyled.
+
+### Test vectors
+
+FLD-V5 (FLD-14). A button with an icon and no value shows `''`; one with
+neither shows a non-breaking space; one with the value `rules` and
+`transformText: t => t.toUpperCase()` shows `RULES`.
+
+FLD-V6 (FLD-10, FLD-11). After registering `fieldColourPlugin` and then
+unregistering everything, `field_colour` is still a registered field and
+`colour_picker` still a defined block.

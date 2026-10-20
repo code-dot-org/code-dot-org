@@ -68,6 +68,8 @@ export default defineConfig({
         'src/inputs/rectangle.ts',
         'src/inputs/round.ts',
         'src/inputs/triangle.ts',
+        'src/fields/fieldButton/index.ts',
+        'src/fields/fieldColour/index.ts',
         'src/blocks/types.ts',
       ],
       name: 'blockly',

@@ -1,6 +1,10 @@
 export * from './createReactField';
 export * from './utils';
 
+export {plugin as fieldButtonPlugin, FieldButton} from './fieldButton';
+export type {FieldButtonOptions} from './fieldButton';
+export {plugin as fieldColourPlugin} from './fieldColour';
+
 export {
   plugin as cdoFieldDropdownPlugin,
   CdoFieldDropdown,
