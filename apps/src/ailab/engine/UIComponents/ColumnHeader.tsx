@@ -3,7 +3,8 @@ import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {type ReactNode} from 'react';
 
-import {nextSortDirection, type TableView} from '../useTableView';
+import type {ColumnId, TableView} from '../types';
+import {nextSortDirection} from '../useTableView';
 
 import tableStyles from './dataTable.module.scss';
 
@@ -18,7 +19,7 @@ const SORT_ORDERS = {
 };
 
 interface ColumnHeaderProps {
-  column: string;
+  column: ColumnId;
   name: string;
   view?: TableView;
   selected?: boolean;
@@ -34,7 +35,7 @@ const ColumnHeader = ({
   className,
   children,
 }: ColumnHeaderProps) => {
-  if (!view) {
+  if (!view?.columns.includes(column)) {
     return (
       <th scope="col" className={className}>
         {children}

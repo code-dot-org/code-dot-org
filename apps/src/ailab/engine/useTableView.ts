@@ -1,30 +1,27 @@
-import {useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
 import {getLocalizedValue} from './helpers/valueDetails';
 import {useAppSelector} from './hooks';
-
-export type SortDirection = 'ascending' | 'descending';
+import type {
+  ColumnId,
+  DatasetTableView,
+  SortDirection,
+  TableView,
+} from './types';
 
 interface TableSort {
-  column: string;
+  column: ColumnId;
   direction: SortDirection;
 }
 
-export interface TableView {
-  rows: number[];
-  columns: string[];
-  isNumerical: (column: string) => boolean;
-  sortDirection: (column: string) => SortDirection | undefined;
-  toggleSort: (column: string) => void;
-}
-
+// Keep each input stable across renders, or every render sorts the whole dataset again.
 interface TableViewSource {
   rows: number[];
-  columns: string[];
-  columnTypes: Record<string, string>;
-  valueAt: (row: number, column: string) => string | number;
+  columns: ColumnId[];
+  columnTypes: Partial<Record<ColumnId, string>>;
+  valueAt: (row: number, column: ColumnId) => string | number;
 }
 
 function asNumber(value: string | number): number {
@@ -62,19 +59,21 @@ export function useTableView({
   valueAt,
 }: TableViewSource): TableView {
   const [sort, setSort] = useState<TableSort>();
-  const isNumerical = (column: string) =>
+  const isNumerical = (column: ColumnId) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
 
-  let sortedRows = rows;
-  if (sort && columns.includes(sort.column)) {
+  const sortedRows = useMemo(() => {
+    if (!sort || !columns.includes(sort.column)) {
+      return rows;
+    }
     const {column, direction} = sort;
     const sign = direction === 'ascending' ? 1 : -1;
-    const numerical = isNumerical(column);
-    sortedRows = [...rows].sort(
-      (a, b) =>
-        sign * compareValues(valueAt(a, column), valueAt(b, column), numerical)
+    const numerical = columnTypes[column] === ColumnTypes.NUMERICAL;
+    const values = new Map(rows.map(row => [row, valueAt(row, column)]));
+    return [...rows].sort(
+      (a, b) => sign * compareValues(values.get(a)!, values.get(b)!, numerical)
     );
-  }
+  }, [rows, columns, columnTypes, valueAt, sort]);
 
   return {
     rows: sortedRows,
@@ -95,14 +94,14 @@ export function useTableView({
 export function useDatasetTableView(
   rows: number[],
   columns: string[]
-): TableView {
+): DatasetTableView {
   const data = useAppSelector(state => state.data);
   const columnTypes = useAppSelector(state => state.columnsByDataType);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  return useTableView({
-    rows,
-    columns,
-    columnTypes,
-    valueAt: (row, column) => getLocalizedValue(data[row][column], datasetId),
-  });
+  const valueAt = useCallback(
+    (row: number, column: ColumnId) =>
+      getLocalizedValue(data[row][column as string], datasetId),
+    [data, datasetId]
+  );
+  return {...useTableView({rows, columns, columnTypes, valueAt}), columns};
 }
