@@ -95,6 +95,12 @@ class QuizQuestion < ApplicationRecord
     levelbuilder_mode? && !skip_write_to_file
   end
 
+  # Placed on a quiz or answered in an attempt; such a question must not be
+  # hard-deleted.
+  def referenced?
+    levels.exists? || quiz_question_responses.exists?
+  end
+
   # published unit means preview/stable/sunsetting
   def used_in_published_unit?
     self.class.published_unit_usage([id]).fetch(id, false)
