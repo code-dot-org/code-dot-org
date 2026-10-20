@@ -100,3 +100,6 @@ these changes.
     stock blocks with more (`lists_create_with`, `lists_getIndex`, the
     procedure blocks, `text_prompt` and others) lost their extra state or
     failed to build once registered through a Driver.
+13. The procedures plugin registers the library's procedure serializer
+    (PRC-4), as apps does. `ngfp/blockly` registered none, so a
+    definition's parameters were lost when a workspace was saved as JSON.
