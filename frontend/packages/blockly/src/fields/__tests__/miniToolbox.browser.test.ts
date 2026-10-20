@@ -12,7 +12,7 @@
 
 import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
-import {beforeEach, describe, expect, it} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {addMiniToolbox, FieldFlyout} from '../miniToolbox';
 
@@ -154,8 +154,22 @@ describe('mini-toolbox.md: the toggle', () => {
   });
 });
 
+describe('mini-toolbox.md: pressing', () => {
+  it('MT-4: opens when the toggle is pressed with the pointer', () => {
+    const block = Blockly.serialization.blocks.append(
+      {type: MINI_HAT},
+      workspace,
+    ) as Blockly.BlockSvg;
+    const target = toggleField(block)!.getSvgRoot()!;
+    target.dispatchEvent(
+      new PointerEvent('pointerdown', {bubbles: true, isPrimary: true}),
+    );
+    expect(block.getInput('MINI_TOOLBOX_FLYOUT')).not.toBeNull();
+  });
+});
+
 describe('mini-toolbox.md: saving', () => {
-  it('MT-7: saves the toggle value and not whether the flyout is open', () => {
+  it('MT-7, MT-V2: saves an open flyout as apps does and loads it open', () => {
     const block = Blockly.serialization.blocks.append(
       {type: MINI_HAT},
       workspace,
@@ -163,13 +177,67 @@ describe('mini-toolbox.md: saving', () => {
     press(block);
 
     const saved = Blockly.serialization.blocks.save(block)!;
-    expect(saved.fields).toEqual({MINI_TOOLBOX_FLYOUT_TOGGLE: ''});
-    expect(saved.extraState).toBeUndefined();
+    expect(saved.fields).toBeUndefined();
+    expect(saved.extraState).toEqual({useDefaultIcon: false});
 
     const loaded = Blockly.serialization.blocks.append(
       saved,
       workspace,
     ) as Blockly.BlockSvg;
-    expect(loaded.getInput('MINI_TOOLBOX_FLYOUT')).toBeNull();
+    expect(loaded.getInput('MINI_TOOLBOX_FLYOUT')).not.toBeNull();
+  });
+
+  it('MT-7: saves nothing for a shut flyout', () => {
+    const block = Blockly.serialization.blocks.append(
+      {type: MINI_HAT},
+      workspace,
+    ) as Blockly.BlockSvg;
+    expect(Blockly.serialization.blocks.save(block)).not.toHaveProperty(
+      'extraState',
+    );
+    expect(Blockly.serialization.blocks.save(block)).not.toHaveProperty(
+      'fields',
+    );
+  });
+
+  it('MT-7: loads headless without a warning', () => {
+    const block = Blockly.serialization.blocks.append(
+      {type: MINI_HAT},
+      workspace,
+    ) as Blockly.BlockSvg;
+    press(block);
+    const saved = Blockly.serialization.blocks.save(block)!;
+    const warn = vi.spyOn(console, 'warn');
+    const headless = new Blockly.Workspace();
+    Blockly.serialization.blocks.append(saved, headless);
+    expect(warn).not.toHaveBeenCalled();
+    warn.mockRestore();
+    headless.dispose();
+  });
+
+  it("MT-7: keeps the block's own extra state", () => {
+    const OWN = 'test_mini_own';
+    Blockly.Blocks[OWN] = {
+      count: 0,
+      init(this: Blockly.BlockSvg) {
+        this.appendDummyInput().appendField('when');
+        addMiniToolbox(this, {blocks: [OFFERED]});
+      },
+      saveExtraState(this: {count: number}) {
+        return {count: this.count};
+      },
+      loadExtraState(this: {count: number}, state: {count: number}) {
+        this.count = state.count;
+      },
+    };
+    const block = Blockly.serialization.blocks.append(
+      {type: OWN, extraState: {count: 3}},
+      workspace,
+    ) as Blockly.BlockSvg;
+    press(block);
+    expect(Blockly.serialization.blocks.save(block)?.extraState).toEqual({
+      count: 3,
+      useDefaultIcon: false,
+    });
   });
 });

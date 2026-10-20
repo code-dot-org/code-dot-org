@@ -55,17 +55,21 @@ buttons with a gap after each, as tall as the tallest, on a rounded
 rectangle that also clips it, never scrolling, staying open after a drag,
 and never deleting a block dropped on it.
 
-MT-7. The block saves the toggle's value, `''`, under
-`MINI_TOOLBOX_FLYOUT_TOGGLE`. Loaded where the block has no toggle (MT-1),
-as on the headless workspace code is generated on, Blockly warns that the
-field does not exist. Whether the flyout is open is not saved: a block
-loads shut. Apps saves it as `extraState: {useDefaultIcon: false}` and
-loads the block open.
+MT-7. The toggle's value is not saved. Whether the flyout is open is, as
+apps saves it: an open flyout adds `useDefaultIcon: false` to the block's
+extra state, and a block loaded with it opens its flyout. A shut flyout
+adds nothing. A block's own `saveExtraState` and `loadExtraState` are kept
+and receive their own state; a block with only XML mutation hooks
+(`mutationToDom`) is left without this, since a JSON hook would replace
+them.
 
 ## Test vectors
 
 MT-V1 (MT-3). Two `test_hat` blocks with mini toolboxes register two keys,
 each holding the hat's own id.
+
+MT-V2 (MT-7). A hat with its flyout open saves `extraState:
+{useDefaultIcon: false}` and no `fields`, and loads open.
 
 ## Not specified here
 
@@ -74,7 +78,7 @@ each holding the hat's own id.
 
 ## Open questions
 
-1. MT-7: save the open state as apps does, `useDefaultIcon`, and stop
-   saving the toggle's value?
+1. MT-7: carry the open state through XML too, as apps' `mutationToDom`
+   does?
 2. MT-3: the registered contents callbacks outlive their blocks. Remove
    one when its block is disposed?
