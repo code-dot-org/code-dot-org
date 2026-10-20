@@ -36,6 +36,21 @@
       "import": "./dist/plugins/index.mjs",
       "require": "./dist/plugins/index.cjs"
     },
+    "./plugins/blockLimits": {
+      "types": "./dist/plugins/blockLimits/index.d.ts",
+      "import": "./dist/plugins/blockLimits/index.mjs",
+      "require": "./dist/plugins/blockLimits/index.cjs"
+    },
+    "./plugins/grayOutUndeletableBlocks": {
+      "types": "./dist/plugins/grayOutUndeletableBlocks/index.d.ts",
+      "import": "./dist/plugins/grayOutUndeletableBlocks/index.mjs",
+      "require": "./dist/plugins/grayOutUndeletableBlocks/index.cjs"
+    },
+    "./plugins/disableOrphans": {
+      "types": "./dist/plugins/disableOrphans/index.d.ts",
+      "import": "./dist/plugins/disableOrphans/index.mjs",
+      "require": "./dist/plugins/disableOrphans/index.cjs"
+    },
     "./plugins/toolboxTrashcan": {
       "types": "./dist/plugins/toolboxTrashcan/index.d.ts",
       "import": "./dist/plugins/toolboxTrashcan/index.mjs",

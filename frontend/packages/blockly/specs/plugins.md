@@ -2,7 +2,8 @@
 
 Workspace behaviours ported from apps' Blockly layer
 (`apps/src/blockly/`), each offered for a lab to opt into: scrolling
-(part 10) and the toolbox trashcan (part 11).
+(part 10), the toolbox trashcan (part 11), and block limits, disabled
+orphans and grayed undeletable blocks (part 12).
 
 ## Scrolling
 
@@ -178,3 +179,122 @@ the "not allowed" mark.
 ### Open questions
 
 1. PLG-9: draw apps' sprite instead, so the two look the same?
+
+## Block limits
+
+A level may allow only so many blocks of a type. Each such block in the
+flyout wears a bubble with the number the student may still add, and a red
+`!` once they have added too many. `@code-dot-org/blockly/plugins/blockLimits`
+is apps' feature (`apps/src/blockly/utils/legacy/blockLimits.ts`,
+`updateBlockLimits` in `apps/src/blockly/eventHandlers.ts`).
+
+### Why it exists
+
+Levels teach economy, or a loop in place of repetition, by allowing few
+blocks. Their toolboxes state the limits, and a lab that ignored them would
+let a student solve such a level the way it means to rule out.
+
+### Requirements
+
+PLG-14. `new BlockLimitMap(items, theme)` reads a limit for each block
+item of `items` that has `extraState.limit`, under the item's `type`. It
+reads only the items it is given, not those inside categories. The
+plugin gives it the workspace's toolbox contents
+(`options.languageTree.contents`).
+
+PLG-15. The map counts blocks per limited type, each count starting at 0:
+`set`, `increment`, `get` (0 for an unknown type), `clear` (every count back
+to 0), `size` (the number of limited types), `has(type)`, and
+`limitFor(type)`, which is the type's limit, or `Infinity` for a type
+without one or with a limit of 0. `remainingFor(type)` is the limit less the
+count, and `anyOver()` is true while some count exceeds its limit.
+`indicatorFor(type, block)` makes, once for each type and block id, the
+indicator of PLG-16 on that block, and returns the same one after.
+
+PLG-16. A `BlockLimitIndicator` is a rounded bubble drawn in the block's
+SVG, centred on its top left corner: 18 pixels across, or wider for a longer number. It
+shows the remaining count in the theme's `blockLimits.indicator` colours,
+or `!` in its `blockLimits.overLimit` colours when the count is negative.
+
+PLG-17. The module exports, as default and as `plugin`, an inject plugin.
+When the workspace changes a block, moves one, changes theme, or finishes
+loading, and once the workspace is laid out, it counts the workspace's
+enabled blocks of each limited type, and updates the indicator of each
+limited block in the workspace's flyout, making one where there is none.
+Creating or deleting a block does not, by itself, update them. A toolbox
+with no limits does nothing.
+
+### Test vectors
+
+PLG-V6 (PLG-17). A flyout of one `text_print` with `extraState: {limit: 2}`
+shows `2`; after an enabled `text_print` is added and moved, `1`.
+
+## Disabled orphans
+
+A block not attached to the program's top block does not run. Apps
+disables such orphans as soon as they come loose, and draws them faded.
+`@code-dot-org/blockly/plugins/disableOrphans` is apps' `disableOrphans`
+(`apps/src/blockly/eventHandlers.ts`), with Blockly's own
+`Events.disableOrphans` behind it.
+
+### Why it exists
+
+Students see at once which blocks will run. Blockly's own handler does
+nothing while a drag is under way, so a block only fades once dropped, and
+it does not survive procedure renames, which enable every call block.
+
+### Requirements
+
+PLG-18. The plugin is an inject plugin whose change listener is
+`disableOrphans(event)`. When a block is created or moved, or reports
+changing from disabled to enabled, the block is passed to
+`updateBlockEnabled(block)`: under an enabled parent, the block and all its
+descendants lose the disabled reason; otherwise, if it can attach to
+anything (it has an output or previous connection), it and the blocks after
+it gain it. The reason is Blockly's `MANUALLY_DISABLED`, the reason a
+student's own "Disable Block" sets. The block's opacity is then 0.5 if it
+is disabled and has no parent, and its default otherwise.
+
+PLG-19. A block reporting that it went from disabled to enabled is checked
+again, so that a call block a procedure rename enabled is disabled again if
+it is loose (blockly-samples issue 2035).
+
+PLG-20. When a procedure definition (`procedures_defnoreturn`) is dragged,
+`disableOrphanBlocks(workspace)` runs: every top-level
+`procedures_callnoreturn` is disabled with the reason `ORPHANED`, and
+every top block is passed to `updateBlockEnabled` with the reason
+`ORPHANED`, and has its opacity reset.
+
+## Grayed undeletable blocks
+
+A level's start blocks may be fixed in place or made undeletable. Apps
+grays the undeletable ones, so a student sees that they belong to the
+level. `@code-dot-org/blockly/plugins/grayOutUndeletableBlocks` is apps'
+`handleGrayUndeletableBlocks` (`apps/src/blockly/eventHandlers.ts`).
+
+### Requirements
+
+PLG-21. The plugin is an inject plugin whose change listener is
+`grayOutUndeletableBlocks(event)`. When a block is created, it and every
+block created with it, and when a block changes, that block, are colored
+`#888` if they cannot be deleted, can be moved, and the workspace is not
+read-only.
+
+### Not specified here
+
+- How a level's toolbox comes to carry `extraState.limit`: `xml-toolbox.md`.
+- What a lab does once `anyOver()` is true, such as refusing to run.
+
+### Open questions
+
+1. PLG-14: apps finds limits on blocks at any depth of the toolbox. Read
+   inside categories?
+2. PLG-15: a limit of 0 means no limit. Should it mean none may be used,
+   as in apps?
+3. PLG-17: count on creation, as apps does, and on deletion, which apps
+   does not?
+4. PLG-18: use `ORPHANED` throughout, as apps does, so a student's own
+   "Disable Block" survives attaching the block?
+5. PLG-21: apps grays every undeletable block except `when_run` and
+   procedure definitions, movable or not, in `#808080`, and again on
+   loading and on selection. Match it?
