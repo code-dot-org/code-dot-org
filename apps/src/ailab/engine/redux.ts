@@ -295,20 +295,15 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState: {
-      reducer(state, action: PayloadAction<{reason: ResetReason}>) {
-        return {
-          ...initialState,
-          mode: state.mode,
-          reserveLocation: state.reserveLocation,
-          instructionsEnabled: state.instructionsEnabled,
-          resetCount: state.resetCount + 1,
-          resetReason: action.payload.reason,
-        };
-      },
-      prepare(reason: ResetReason) {
-        return {payload: {reason}};
-      },
+    resetState(state, action: PayloadAction<ResetReason>) {
+      return {
+        ...initialState,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
+        resetCount: state.resetCount + 1,
+        resetReason: action.payload,
+      };
     },
     setTrainedModelDetail: {
       reducer(
