@@ -210,6 +210,157 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByLabelText('Internal name')).not.toHaveFocus();
   });
 
+  describe('answers', () => {
+    const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
+      id: 8,
+      type: 'MultipleSelectQuestion',
+      questionName: 'Even numbers',
+      questionTitle: 'Which are even?',
+      choices: [
+        {id: 'a', text: '2'},
+        {id: 'b', text: '3'},
+        {id: 'c', text: '4'},
+      ],
+      correctChoiceIds: ['a'],
+      description: null,
+      explanation: null,
+      standards: [],
+      attachedToOtherQuizzes: false,
+      usedInPublishedUnit: false,
+      page: 1,
+    };
+
+    const openAnswers = () =>
+      fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
+
+    it('marks the one correct choice of a multiple choice question with a radio button', async () => {
+      const {onSave} = renderCard({isExpanded: true});
+      openAnswers();
+
+      expect(
+        screen.getByRole('radio', {name: 'Option B is correct'})
+      ).toBeChecked();
+      fireEvent.click(screen.getByRole('radio', {name: 'Option A is correct'}));
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        7,
+        expect.objectContaining({correctChoiceId: 'a'})
+      );
+    });
+
+    it('marks any number of correct choices of a multiple select question with checkboxes', async () => {
+      const {onSave} = renderCard({
+        question: MULTIPLE_SELECT_QUESTION,
+        isExpanded: true,
+      });
+      openAnswers();
+
+      expect(
+        screen.getByRole('checkbox', {name: 'Option A is correct'})
+      ).toBeChecked();
+      fireEvent.click(
+        screen.getByRole('checkbox', {name: 'Option C is correct'})
+      );
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        8,
+        expect.objectContaining({
+          type: 'MultipleSelectQuestion',
+          correctChoiceIds: ['a', 'c'],
+        })
+      );
+    });
+
+    it('drops a deleted choice from the correct choices', async () => {
+      const {onSave} = renderCard({
+        question: MULTIPLE_SELECT_QUESTION,
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(
+        screen.getAllByRole('button', {name: 'Delete choice'})[0]
+      );
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        8,
+        expect.objectContaining({correctChoiceIds: []})
+      );
+    });
+
+    it('switches an unsaved question between multiple choice and multiple select, keeping its correct choice', async () => {
+      const {onSave} = renderCard({
+        question: {...QUESTION, id: -1},
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Multiple select'}));
+
+      expect(
+        screen.getByRole('checkbox', {name: 'Option B is correct'})
+      ).toBeChecked();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+      expect(onSave).toHaveBeenCalledWith(
+        -1,
+        expect.objectContaining({
+          type: 'MultipleSelectQuestion',
+          correctChoiceIds: ['b'],
+        })
+      );
+    });
+
+    it('keeps only the first correct choice when switching to multiple choice', () => {
+      renderCard({
+        question: {
+          ...MULTIPLE_SELECT_QUESTION,
+          id: -1,
+          correctChoiceIds: ['c', 'a'],
+        },
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Multiple choice'}));
+
+      expect(
+        screen.getByRole('radio', {name: 'Option C is correct'})
+      ).toBeChecked();
+      expect(
+        screen.getByRole('radio', {name: 'Option A is correct'})
+      ).not.toBeChecked();
+    });
+
+    it('saves a type change on a saved question with the new type', async () => {
+      const {onSave} = renderCard({isExpanded: true});
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Multiple select'}));
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        7,
+        expect.objectContaining({
+          type: 'MultipleSelectQuestion',
+          correctChoiceIds: ['b'],
+        })
+      );
+    });
+  });
+
   it('opens a free response question saved without choices', () => {
     // FreeResponseQuestion#builder_content_json sends no choices.
     const {choices, correctChoiceId, ...shared} = QUESTION;
