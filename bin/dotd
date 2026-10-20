@@ -269,16 +269,13 @@ def dotd_menu(dotd_name)
       menu.choice(:D) {show_full_menu = false}
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:C) {perform_self_check}
-      # Hidden rather than listed: HighLine resolves a unique prefix, so
-      # without this choice a bare "S" selects STP and seeds production
-      # without confirming.
+      # HighLine resolves a unique prefix, so without this choice,
+      # "S" selects STP and seeds production without confirming.
       menu.hidden(:S) do
         puts <<-OUTPUT.unindent
 
           The staging content push is gone. Content is committed on levelbuilder
           only, with #{bold 'L'}.
-
-          Nothing was run. Type #{bold 'STP'} in full to seed production from staging.
 
         OUTPUT
       end
