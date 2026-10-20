@@ -138,4 +138,17 @@ describe('xml-toolbox.md: forciblyInsertTopBlock', () => {
     expect(childTypes(root)).toEqual(['when_run']);
     expect(root.children[0].querySelector('next')).toBeNull();
   });
+
+  it("XML-14: builds its blocks in the root's own XML document", () => {
+    const root = new DOMParser().parseFromString(
+      '<xml><block type="a"/></xml>',
+      'text/xml',
+    ).documentElement;
+    forciblyInsertTopBlock(root, 'when_run');
+    const serialized = new XMLSerializer().serializeToString(root);
+    expect(serialized).toBe(
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock">' +
+        '<next><block type="a"/></next></block></xml>',
+    );
+  });
 });

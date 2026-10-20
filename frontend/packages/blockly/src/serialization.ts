@@ -352,7 +352,9 @@ export function forciblyInsertTopBlock(root: Element, blockType: string) {
     return;
   }
 
-  const topBlock = document.createElement('block');
+  // Elements of the root's own document, which may be XML rather than HTML.
+  const doc = root.ownerDocument;
+  const topBlock = doc.createElement('block');
   topBlock.setAttribute('type', blockType);
   topBlock.setAttribute('movable', 'false');
   topBlock.setAttribute('deletable', 'false');
@@ -382,7 +384,7 @@ export function forciblyInsertTopBlock(root: Element, blockType: string) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    const next = document.createElement('next');
+    const next = doc.createElement('next');
     next.appendChild(firstBlock);
     topBlock.appendChild(next);
   }
