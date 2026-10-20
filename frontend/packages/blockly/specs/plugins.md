@@ -2,7 +2,7 @@
 
 Workspace behaviours ported from apps' Blockly layer
 (`apps/src/blockly/`), each offered for a lab to opt into: scrolling
-(part 10).
+(part 10) and the toolbox trashcan (part 11).
 
 ## Scrolling
 
@@ -99,3 +99,86 @@ to (16, 2000) and a resize make only the vertical one visible.
    `ScrollBlockDragger`'s settings. Should disposing it undo them?
 2. The three pieces only work together. Should the plugin's README entry,
    or a helper returning the inject options, say so where a lab looks?
+
+## The toolbox trashcan
+
+Apps has no trashcan on the workspace. While a student drags a block out
+of the workspace, the toolbox's contents give way to a trashcan, and a
+block dropped there is deleted. `@code-dot-org/blockly/plugins/toolboxTrashcan`
+is that trashcan (`apps/src/blockly/addons/cdoTrashcan.ts`).
+
+### Why it exists
+
+Students learn to throw blocks away by dragging them back to where they
+came from. A lab without this either deletes silently over the toolbox, as
+Blockly does, or shows Blockly's trashcan in a corner apps never uses.
+
+### Requirements
+
+PLG-8. The module exports, as default and as `plugin`, an inject plugin
+whose class is `ToolboxTrashcan`, a Blockly `DeleteArea`. Constructed with
+a workspace and theme, it inserts an SVG element, hidden, just before the
+workspace's SVG, positioned over the toolbox: as tall as the view, as wide
+as the toolbox (`getToolboxWidth`: the category list's width, the flyout's
+for a toolbox without categories, or 0 without a toolbox), at the left, or
+right to left at the view's width. It registers itself with the
+workspace's component manager as a delete area, a drag target and a
+positionable element, with weight -1, so that it, not the toolbox, receives
+drags over the toolbox. Blockly repositions it when the workspace resizes.
+
+PLG-9. The trashcan is a body and a lid drawn as SVG shapes, filled with
+the theme's `trashcan.fill`, centred across the container and 40 pixels
+from its top, with a red circle and bar over it for "not allowed". Apps
+draws the same shapes from its sprite image instead, `trash.png` or
+`trash_dark.png`.
+
+PLG-10. On a block drag's start, unless the drag began in a flyout, the
+trashcan's container is shown and the toolbox's contents hidden: every
+flyout workspace not inside a block field
+(`.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace`) and every
+category list (`.blocklyToolboxCategoryGroup`). On the drag's end the
+container is hidden and they are shown. These are found in the whole
+document, so a drag in one workspace hides the toolboxes of every
+workspace on the page, as in apps. Other events change nothing.
+
+PLG-11. While the container is shown, the "not allowed" mark is shown if
+any dragged block can be neither deleted nor is a shadow block. Blockly
+reports a shadow block as undeletable although it is deleted with its
+parent.
+
+PLG-12. The lid opens while a block that would be deleted is over the
+trashcan, and closes when the block leaves, or 100 milliseconds after it is
+dropped; apps closes it at once on a drop. It swings to 45 degrees in
+fifths, 20 milliseconds apart, hinged on the side away from the toolbox,
+while the trashcan's opacity goes from 0.8 to 1.
+
+PLG-13. `dispose()` removes the drawing and cancels any lid animation, and
+removes from the component manager the component named `trashcan`. The
+trashcan sets no id of its own, so that is Blockly's trashcan, when the
+workspace has one, and not this one. It leaves the container in the page
+and its change listener on the workspace until the workspace is disposed,
+and a second `ToolboxTrashcan` on the same workspace throws, its id
+colliding with the first's.
+
+### Test vectors
+
+PLG-V4 (PLG-10). With a categorized toolbox, a drag start of a workspace
+block sets the category list's visibility to `hidden`, and the drag's end
+sets it to `visible`.
+
+PLG-V5 (PLG-11). A drag of one deletable and one undeletable block shows
+the "not allowed" mark.
+
+### Not specified here
+
+- Deleting the dropped block, which Blockly does for any delete area.
+- Blockly's own trashcan, which a lab may still turn on with the
+  `trashcan` inject option.
+
+### Open questions
+
+1. PLG-10: find the toolbox contents within the trashcan's own workspace
+   rather than the document?
+2. PLG-13: give the trashcan an id, and have `dispose` remove it, its
+   container and its listener?
+3. PLG-9: draw apps' sprite instead, so the two look the same?
