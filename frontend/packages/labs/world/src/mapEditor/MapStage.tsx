@@ -2954,377 +2954,385 @@ export const MapStage = ({
           </>
         )}
       </div>
-      <div className={styles.panels}>
-        {!appBuilder &&
-          panels.layers &&
-          (locked('map-layers') ? (
-            // The strip's place, kept: a list nobody can use yet is still where
-            // layers will be, and says which lesson brings them.
-            <div className={styles.layers} data-testid="layer-panel-locked">
-              <Typography variant="subtitle2" component="span">
-                Layers
-              </Typography>
-              {note('map-layers', 'strip')}
-            </div>
-          ) : (
-            <LayerPanel
-              layers={layersOf(map)}
-              selected={selectedLayer}
-              onSelect={id => {
-                setSelectedLayer(id);
-                setInspectingLayer(true);
-                setInspectingCamera(null);
-                setSelectedId(null);
-              }}
-              onAdd={() => {
-                const made = addLayer(mapRef.current);
-                commit(made.doc);
-                setSelectedLayer(made.id);
-                setInspectingLayer(true);
-                setSelectedId(null);
-              }}
-              onRemove={id => {
-                commit(removeLayer(mapRef.current, id));
-                setSelectedLayer(DEFAULT_LAYER);
-              }}
-              onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
-              isReadOnly={isReadOnly}
-            />
-          ))}
-        {/* The cameras of whatever is being edited: the world's on a main map
+      {/* ONE COLUMN down the left: the panels at the top and whichever
+          inspector is open at the foot, taking only the height the panels
+          leave. Positioned apart, a tall inspector ran up over the camera
+          list and took its clicks. */}
+      <div className={styles.leftColumn}>
+        <div className={styles.panels}>
+          {!appBuilder &&
+            panels.layers &&
+            (locked('map-layers') ? (
+              // The strip's place, kept: a list nobody can use yet is still where
+              // layers will be, and says which lesson brings them.
+              <div className={styles.layers} data-testid="layer-panel-locked">
+                <Typography variant="subtitle2" component="span">
+                  Layers
+                </Typography>
+                {note('map-layers', 'strip')}
+              </div>
+            ) : (
+              <LayerPanel
+                layers={layersOf(map)}
+                selected={selectedLayer}
+                onSelect={id => {
+                  setSelectedLayer(id);
+                  setInspectingLayer(true);
+                  setInspectingCamera(null);
+                  setSelectedId(null);
+                }}
+                onAdd={() => {
+                  const made = addLayer(mapRef.current);
+                  commit(made.doc);
+                  setSelectedLayer(made.id);
+                  setInspectingLayer(true);
+                  setSelectedId(null);
+                }}
+                onRemove={id => {
+                  commit(removeLayer(mapRef.current, id));
+                  setSelectedLayer(DEFAULT_LAYER);
+                }}
+                onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
+                isReadOnly={isReadOnly}
+              />
+            ))}
+          {/* The cameras of whatever is being edited: the world's on a main map
             with nothing selected, a placement's when one is — and nothing on
             a level `.map` with nothing selected, since a map has none
             (specs/SPACE_CAMERAS_PLAN.md). */}
-        {panels.cameras && cameras && (
-          <CameraPanel
-            cameras={cameras.list}
-            owner={cameras.owner}
-            onOpen={cameras.open}
-            inCode={cameras.inCode}
-            edits={
-              cameraEditor
-                ? {
-                    selected: inspectedCamera?.id ?? null,
-                    starting: cameraEditor.starting,
-                    onSelect: id => {
-                      setInspectingCamera(id);
-                      setInspectingLayer(false);
-                    },
-                    onAdd: () => {
-                      const id = cameraEditor.add();
-                      if (id) {
+          {panels.cameras && cameras && (
+            <CameraPanel
+              cameras={cameras.list}
+              owner={cameras.owner}
+              onOpen={cameras.open}
+              inCode={cameras.inCode}
+              edits={
+                cameraEditor
+                  ? {
+                      selected: inspectedCamera?.id ?? null,
+                      starting: cameraEditor.starting,
+                      onSelect: id => {
                         setInspectingCamera(id);
                         setInspectingLayer(false);
-                      }
-                    },
-                    onRemove: id => {
-                      cameraEditor.remove(id);
-                      setInspectingCamera(null);
-                    },
-                    isReadOnly,
-                  }
+                      },
+                      onAdd: () => {
+                        const id = cameraEditor.add();
+                        if (id) {
+                          setInspectingCamera(id);
+                          setInspectingLayer(false);
+                        }
+                      },
+                      onRemove: id => {
+                        cameraEditor.remove(id);
+                        setInspectingCamera(null);
+                      },
+                      isReadOnly,
+                    }
+                  : undefined
+              }
+            />
+          )}
+          <RecordPanel
+            records={records}
+            kinds={recordKinds}
+            selected={selectedId}
+            onSelect={id => {
+              setSelectedId(id);
+              setInspectingLayer(false);
+            }}
+            onAdd={addRecord}
+            onRemove={deleteActor}
+            isReadOnly={isReadOnly}
+            nameOf={kindName}
+          />
+        </div>
+        {inspectedCamera && cameraEditor && (
+          <CameraInspector
+            // Re-keyed on what the code says of it, so a change from outside —
+            // and a different camera — is what the fields show.
+            key={`${inspectedCamera.id}:${inspectedCamera.name}:${cameraEditor.starting}`}
+            id={inspectedCamera.id}
+            name={inspectedCamera.name}
+            starting={cameraEditor.starting === inspectedCamera.id}
+            traits={cameraEditor.traitsOf(inspectedCamera.id)}
+            choices={cameraEditor.choices}
+            valueOf={property =>
+              cameraEditor.valueOf(inspectedCamera.id, property)
+            }
+            kinds={Object.entries(kinds ?? {})
+              .map(([path, kind]) => [kind.name, path] as const)
+              .sort(([a], [b]) => a.localeCompare(b))}
+            onRename={name => cameraEditor.rename(inspectedCamera.id, name)}
+            onStarting={() => cameraEditor.setStarting(inspectedCamera.id)}
+            onTrait={(trait, elected) =>
+              cameraEditor.setTrait(inspectedCamera.id, trait, elected)
+            }
+            onValue={(property, value) =>
+              cameraEditor.setValue(inspectedCamera.id, property, value)
+            }
+            onClose={() => setInspectingCamera(null)}
+            looker={selectedActor ? 'This Viewport' : 'The world'}
+            // The world's main camera takes traits, stored on its main map; a
+            // Viewport's has its kind's.
+            mainTakesTraits={!selectedActor}
+            mainNote={
+              selectedActor
+                ? 'This Viewport’s own camera. What it follows is set in the ' +
+                  'Viewport’s properties; add a camera for another view.'
                 : undefined
             }
-          />
-        )}
-        <RecordPanel
-          records={records}
-          kinds={recordKinds}
-          selected={selectedId}
-          onSelect={id => {
-            setSelectedId(id);
-            setInspectingLayer(false);
-          }}
-          onAdd={addRecord}
-          onRemove={deleteActor}
-          isReadOnly={isReadOnly}
-          nameOf={kindName}
-        />
-      </div>
-      {inspectedCamera && cameraEditor && (
-        <CameraInspector
-          // Re-keyed on what the code says of it, so a change from outside —
-          // and a different camera — is what the fields show.
-          key={`${inspectedCamera.id}:${inspectedCamera.name}:${cameraEditor.starting}`}
-          id={inspectedCamera.id}
-          name={inspectedCamera.name}
-          starting={cameraEditor.starting === inspectedCamera.id}
-          traits={cameraEditor.traitsOf(inspectedCamera.id)}
-          choices={cameraEditor.choices}
-          valueOf={property =>
-            cameraEditor.valueOf(inspectedCamera.id, property)
-          }
-          kinds={Object.entries(kinds ?? {})
-            .map(([path, kind]) => [kind.name, path] as const)
-            .sort(([a], [b]) => a.localeCompare(b))}
-          onRename={name => cameraEditor.rename(inspectedCamera.id, name)}
-          onStarting={() => cameraEditor.setStarting(inspectedCamera.id)}
-          onTrait={(trait, elected) =>
-            cameraEditor.setTrait(inspectedCamera.id, trait, elected)
-          }
-          onValue={(property, value) =>
-            cameraEditor.setValue(inspectedCamera.id, property, value)
-          }
-          onClose={() => setInspectingCamera(null)}
-          looker={selectedActor ? 'This Viewport' : 'The world'}
-          // The world's main camera takes traits, stored on its main map; a
-          // Viewport's has its kind's.
-          mainTakesTraits={!selectedActor}
-          mainNote={
-            selectedActor
-              ? 'This Viewport’s own camera. What it follows is set in the ' +
-                'Viewport’s properties; add a camera for another view.'
-              : undefined
-          }
-          isReadOnly={isReadOnly}
-        />
-      )}
-      {!selectedActor && inspectingLayer && inspectedLayer && (
-        <LayerInspector
-          // Re-keyed on what the document says, so a change from outside —
-          // and a different layer — is what the fields show.
-          key={JSON.stringify(inspectedLayer)}
-          layer={inspectedLayer}
-          backgrounds={backgroundChoices ?? []}
-          onChange={change =>
-            commit(withLayer(mapRef.current, inspectedLayer.id, change))
-          }
-          onBackground={change =>
-            commit(withBackground(mapRef.current, inspectedLayer.id, change))
-          }
-          onClose={() => setInspectingLayer(false)}
-          isReadOnly={isReadOnly}
-        />
-      )}
-      {!selectedActor &&
-        !(inspectingLayer && inspectedLayer) &&
-        !inspectedCamera &&
-        world && (
-          <WorldInspector
-            // NOT re-keyed on the header, though that is the obvious way to
-            // make a change from outside show: a remount closes the rule
-            // groups and the vector popover, and a drag on the grid commits
-            // on every move. The inspector follows the header itself.
-            {...world}
-            // …and the theme, which is the WORLD's — its `use theme` row — and
-            // so its main map's: there is no difference to keep between them.
-            theme={world.header.theme}
-            themeOptions={themeOptions}
-            onTheme={path => world.onTheme?.(path)}
-            {...backgroundProps}
             isReadOnly={isReadOnly}
           />
         )}
-      {!selectedActor &&
-        !(inspectingLayer && inspectedLayer) &&
-        !inspectedCamera &&
-        !world && (
-          <MapInspector
-            modal={map.modal === true}
-            // `undefined` and not `false` for the off state: every map written
-            // before modality existed says nothing, and writing `false` into all
-            // of them would be a diff per map for no change in meaning
-            // (specs/MODALITY_PLAN.md).
-            onModal={modal =>
-              commit({...mapRef.current, modal: modal || undefined})
+        {!selectedActor && inspectingLayer && inspectedLayer && (
+          <LayerInspector
+            // Re-keyed on what the document says, so a change from outside —
+            // and a different layer — is what the fields show.
+            key={JSON.stringify(inspectedLayer)}
+            layer={inspectedLayer}
+            backgrounds={backgroundChoices ?? []}
+            onChange={change =>
+              commit(withLayer(mapRef.current, inspectedLayer.id, change))
             }
-            theme={map.theme}
-            themeOptions={themeOptions}
-            onTheme={path => commit({...mapRef.current, theme: path})}
-            {...backgroundProps}
+            onBackground={change =>
+              commit(withBackground(mapRef.current, inspectedLayer.id, change))
+            }
+            onClose={() => setInspectingLayer(false)}
             isReadOnly={isReadOnly}
           />
         )}
-      {/* `fields.narrow` below is what makes the design system's form widths
+        {!selectedActor &&
+          !(inspectingLayer && inspectedLayer) &&
+          !inspectedCamera &&
+          world && (
+            <WorldInspector
+              // NOT re-keyed on the header, though that is the obvious way to
+              // make a change from outside show: a remount closes the rule
+              // groups and the vector popover, and a drag on the grid commits
+              // on every move. The inspector follows the header itself.
+              {...world}
+              // …and the theme, which is the WORLD's — its `use theme` row — and
+              // so its main map's: there is no difference to keep between them.
+              theme={world.header.theme}
+              themeOptions={themeOptions}
+              onTheme={path => world.onTheme?.(path)}
+              {...backgroundProps}
+              isReadOnly={isReadOnly}
+            />
+          )}
+        {!selectedActor &&
+          !(inspectingLayer && inspectedLayer) &&
+          !inspectedCamera &&
+          !world && (
+            <MapInspector
+              modal={map.modal === true}
+              // `undefined` and not `false` for the off state: every map written
+              // before modality existed says nothing, and writing `false` into all
+              // of them would be a diff per map for no change in meaning
+              // (specs/MODALITY_PLAN.md).
+              onModal={modal =>
+                commit({...mapRef.current, modal: modal || undefined})
+              }
+              theme={map.theme}
+              themeOptions={themeOptions}
+              onTheme={path => commit({...mapRef.current, theme: path})}
+              {...backgroundProps}
+              isReadOnly={isReadOnly}
+            />
+          )}
+        {/* `fields.narrow` below is what makes the design system's form widths
           fit a panel this size — see `formFields.module.css`, which says what
           the overrides are for and what each one was found by. */}
-      {selectedActor && !inspectedCamera && (
-        <div className={`${styles.inspector} ${fields.narrow}`}>
-          <div className={styles.inspectorHead}>
-            <Typography variant="subtitle2" component="span">
-              {selectedActor.type.split('/').pop()}
-            </Typography>
-            {/* The four things to do from here, as the icons they wear
+        {selectedActor && !inspectedCamera && (
+          <div className={`${styles.inspector} ${fields.narrow}`}>
+            <div className={styles.inspectorHead}>
+              <Typography variant="subtitle2" component="span">
+                {selectedActor.type.split('/').pop()}
+              </Typography>
+              {/* The four things to do from here, as the icons they wear
                 elsewhere (`IconAction`). This placement's own code first;
                 then the two about its KIND, whose words still say which kind,
                 since a tick in Enhance or a block in its file changes every
                 one of them; and Delete last, apart. */}
-            <div className={styles.inspectorActions}>
-              {onEditScript && (
+              <div className={styles.inspectorActions}>
+                {onEditScript && (
+                  <IconAction
+                    label="Code"
+                    icon="puzzle-piece"
+                    className={withheldClass('map-scripts')}
+                    data-callout="map.script"
+                    {...orWithheld('map-scripts', 'inspector', () =>
+                      onEditScript(selectedActor.id),
+                    )}
+                  />
+                )}
+                {canOpenScript && eventsFor && (
+                  // A section for THIS actor, started from the event it
+                  // answers: the quick way to its own code, for the events
+                  // its kind can actually hear (`blockly/eventChoices`).
+                  <IconAction
+                    label="Add an event"
+                    icon="bolt"
+                    onClick={event => setEventMenu(event.currentTarget)}
+                  />
+                )}
+                {selectedKind && onEnhanceKind && (
+                  <IconAction
+                    label={`Enhance ${selectedKind.name}…`}
+                    icon="sparkles"
+                    disabled={isReadOnly}
+                    className={withheldClass('map-enhance')}
+                    data-callout="map.enhance"
+                    {...orWithheld('map-enhance', 'inspector', () =>
+                      onEnhanceKind(selectedActor.type),
+                    )}
+                  />
+                )}
+                {selectedKind && onOpenKind && (
+                  <IconAction
+                    label={`Open ${selectedKind.name}`}
+                    icon="arrow-up-right-from-square"
+                    className={withheldClass('map-open-kind')}
+                    data-callout="map.openKind"
+                    {...orWithheld('map-open-kind', 'inspector', () =>
+                      onOpenKind(selectedActor.type),
+                    )}
+                  />
+                )}
                 <IconAction
-                  label="Code"
-                  icon="puzzle-piece"
-                  className={withheldClass('map-scripts')}
-                  data-callout="map.script"
-                  {...orWithheld('map-scripts', 'inspector', () =>
-                    onEditScript(selectedActor.id),
-                  )}
-                />
-              )}
-              {canOpenScript && eventsFor && (
-                // A section for THIS actor, started from the event it
-                // answers: the quick way to its own code, for the events
-                // its kind can actually hear (`blockly/eventChoices`).
-                <IconAction
-                  label="Add an event"
-                  icon="bolt"
-                  onClick={event => setEventMenu(event.currentTarget)}
-                />
-              )}
-              {selectedKind && onEnhanceKind && (
-                <IconAction
-                  label={`Enhance ${selectedKind.name}…`}
-                  icon="sparkles"
+                  label="Delete"
+                  icon="trash"
+                  className={styles.inspectorDelete}
+                  onClick={() => deleteActor(selectedActor.id)}
                   disabled={isReadOnly}
-                  className={withheldClass('map-enhance')}
-                  data-callout="map.enhance"
-                  {...orWithheld('map-enhance', 'inspector', () =>
-                    onEnhanceKind(selectedActor.type),
-                  )}
                 />
-              )}
-              {selectedKind && onOpenKind && (
-                <IconAction
-                  label={`Open ${selectedKind.name}`}
-                  icon="arrow-up-right-from-square"
-                  className={withheldClass('map-open-kind')}
-                  data-callout="map.openKind"
-                  {...orWithheld('map-open-kind', 'inspector', () =>
-                    onOpenKind(selectedActor.type),
-                  )}
-                />
-              )}
-              <IconAction
-                label="Delete"
-                icon="trash"
-                className={styles.inspectorDelete}
-                onClick={() => deleteActor(selectedActor.id)}
-                disabled={isReadOnly}
-              />
-              {eventMenu && eventsFor && selectedActor && (
-                <Menu
-                  open
-                  anchorEl={eventMenu}
-                  onClose={() => setEventMenu(null)}
-                  slotProps={{paper: {style: {maxHeight: 420}}}}
-                >
-                  {eventRows(eventsFor(selectedActor.type), type => {
-                    setEventMenu(null);
-                    commit({
-                      ...mapRef.current,
-                      actors: mapRef.current.actors.map(actor =>
-                        actor.id === selectedActor.id
-                          ? withEventHandler(actor, type)
-                          : actor,
-                      ),
-                    });
-                    onEditScript?.(selectedActor.id);
-                  })}
-                </Menu>
-              )}
+                {eventMenu && eventsFor && selectedActor && (
+                  <Menu
+                    open
+                    anchorEl={eventMenu}
+                    onClose={() => setEventMenu(null)}
+                    slotProps={{paper: {style: {maxHeight: 420}}}}
+                  >
+                    {eventRows(eventsFor(selectedActor.type), type => {
+                      setEventMenu(null);
+                      commit({
+                        ...mapRef.current,
+                        actors: mapRef.current.actors.map(actor =>
+                          actor.id === selectedActor.id
+                            ? withEventHandler(actor, type)
+                            : actor,
+                        ),
+                      });
+                      onEditScript?.(selectedActor.id);
+                    })}
+                  </Menu>
+                )}
+              </div>
             </div>
-          </div>
-          {/* What a withheld one says about the lesson that brings it, under
+            {/* What a withheld one says about the lesson that brings it, under
               the row rather than inside it. */}
-          {onEditScript && note('map-scripts', 'inspector')}
-          {selectedKind && onEnhanceKind && note('map-enhance', 'inspector')}
-          {selectedKind && onOpenKind && note('map-open-kind', 'inspector')}
-          <TextField
-            name="actor-id"
-            label="ID"
-            size="s"
-            value={draft.id ?? ''}
-            disabled={isReadOnly}
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              editId(event.target.value)
-            }
-            onBlur={applyRename}
-            onKeyDown={blurOnEnter}
-          />
-          {/*
-           * WHICH EDGE IT KEEPS ITS DISTANCE FROM, when this map is loaded
-           * into a window that is not its own shape — a menu over a square
-           * level and over a phone-shaped one (specs/ANCHORS_PLAN.md).
-           * Beside the layer dropdown because it is the same kind of fact:
-           * not what the thing IS, but where in an arrangement it sits.
-           *
-           * "Anchored to" rather than "Holds on to", which was oblique out of
-           * context and was the one place in the lab not using the word the
-           * spec, the engine and the property all use.
-           */}
-          <SimpleDropdown
-            name="actor-anchor"
-            labelText="Anchored to"
-            size="s"
-            className={styles.inspectorDropdown}
-            disabled={isReadOnly}
-            selectedValue={selectedActor.anchor ?? ''}
-            items={[
-              {value: '', text: 'nothing'},
-              ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
-            ]}
-            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-              commit({
-                ...mapRef.current,
-                actors: mapRef.current.actors.map(actor =>
-                  actor.id === selectedActor.id
-                    ? withPlacementAnchor(actor, event.target.value)
-                    : actor,
-                ),
-              })
-            }
-          />
-          {!appBuilder && !locked('map-layers') && layersOf(map).length > 1 && (
+            {onEditScript && note('map-scripts', 'inspector')}
+            {selectedKind && onEnhanceKind && note('map-enhance', 'inspector')}
+            {selectedKind && onOpenKind && note('map-open-kind', 'inspector')}
+            <TextField
+              name="actor-id"
+              label="ID"
+              size="s"
+              value={draft.id ?? ''}
+              disabled={isReadOnly}
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                editId(event.target.value)
+              }
+              onBlur={applyRename}
+              onKeyDown={blurOnEnter}
+            />
+            {/*
+             * WHICH EDGE IT KEEPS ITS DISTANCE FROM, when this map is loaded
+             * into a window that is not its own shape — a menu over a square
+             * level and over a phone-shaped one (specs/ANCHORS_PLAN.md).
+             * Beside the layer dropdown because it is the same kind of fact:
+             * not what the thing IS, but where in an arrangement it sits.
+             *
+             * "Anchored to" rather than "Holds on to", which was oblique out of
+             * context and was the one place in the lab not using the word the
+             * spec, the engine and the property all use.
+             */}
             <SimpleDropdown
-              name="actor-layer"
-              labelText="Layer"
+              name="actor-anchor"
+              labelText="Anchored to"
               size="s"
               className={styles.inspectorDropdown}
               disabled={isReadOnly}
-              selectedValue={layerOfPlacement(selectedActor)}
-              items={[...layersOf(map)].reverse().map(layer => ({
-                value: layer.id,
-                text: layerName(layer),
-              }))}
+              selectedValue={selectedActor.anchor ?? ''}
+              items={[
+                {value: '', text: 'nothing'},
+                ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
+              ]}
               onChange={(event: ChangeEvent<HTMLSelectElement>) =>
                 commit({
                   ...mapRef.current,
                   actors: mapRef.current.actors.map(actor =>
                     actor.id === selectedActor.id
-                      ? withPlacementLayer(actor, event.target.value)
+                      ? withPlacementAnchor(actor, event.target.value)
                       : actor,
                   ),
                 })
               }
             />
-          )}
-          {selectedSchema.length > 0 && (
-            <Accordion
-              className={styles.inspectorAccordion}
-              items={selectedSchema.map(group => ({
-                id: group.trait,
-                label: group.traitName,
-                content: (
-                  <div className={styles.inspectorGroup}>
-                    {/* What the trait is FOR: a name like "Slows" says
+            {!appBuilder &&
+              !locked('map-layers') &&
+              layersOf(map).length > 1 && (
+                <SimpleDropdown
+                  name="actor-layer"
+                  labelText="Layer"
+                  size="s"
+                  className={styles.inspectorDropdown}
+                  disabled={isReadOnly}
+                  selectedValue={layerOfPlacement(selectedActor)}
+                  items={[...layersOf(map)].reverse().map(layer => ({
+                    value: layer.id,
+                    text: layerName(layer),
+                  }))}
+                  onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                    commit({
+                      ...mapRef.current,
+                      actors: mapRef.current.actors.map(actor =>
+                        actor.id === selectedActor.id
+                          ? withPlacementLayer(actor, event.target.value)
+                          : actor,
+                      ),
+                    })
+                  }
+                />
+              )}
+            {selectedSchema.length > 0 && (
+              <Accordion
+                className={styles.inspectorAccordion}
+                items={selectedSchema.map(group => ({
+                  id: group.trait,
+                  label: group.traitName,
+                  content: (
+                    <div className={styles.inspectorGroup}>
+                      {/* What the trait is FOR: a name like "Slows" says
                         little, and this is where its settings are. */}
-                    {group.traitDescription && (
-                      <Typography
-                        variant="body3"
-                        component="p"
-                        className={styles.inspectorNote}
-                      >
-                        {group.traitDescription}
-                      </Typography>
-                    )}
-                    {group.props.map(prop => renderProp(selectedActor, prop))}
-                  </div>
-                ),
-              }))}
-            />
-          )}
-        </div>
-      )}
+                      {group.traitDescription && (
+                        <Typography
+                          variant="body3"
+                          component="p"
+                          className={styles.inspectorNote}
+                        >
+                          {group.traitDescription}
+                        </Typography>
+                      )}
+                      {group.props.map(prop => renderProp(selectedActor, prop))}
+                    </div>
+                  ),
+                }))}
+              />
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

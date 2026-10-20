@@ -198,19 +198,35 @@
   text-align: right;
 }
 
-/* Inspector for the selected placed actor — bottom-left, opposite the toolbar.
-   Capped in height so a tall field set scrolls rather than overflowing the map. */
-.inspector {
+/* The column down the left of the canvas: the panels at its top, and the
+   open inspector at its foot. One column, so the two cannot overlap — when
+   each was positioned on its own, a tall inspector covered the camera list.
+   Clicks pass through its empty middle to the canvas. */
+.leftColumn {
   position: absolute;
+  top: 0.5rem;
   bottom: 0.5rem;
   left: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  pointer-events: none;
+}
+
+/* Inspector for whatever is selected — at the foot of the left column,
+   opposite the toolbar. It takes the height the panels leave and scrolls
+   within it rather than running up over them. */
+.inspector {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  gap: 0.5rem;
   width: 15rem;
-  max-height: calc(100% - 1rem);
+  min-height: 0;
+  margin-top: auto;
   overflow-x: hidden;
   overflow-y: auto;
+  pointer-events: auto;
   padding: 0.6rem;
   border-radius: 6px;
   background: color-mix(
@@ -446,11 +462,9 @@
    their toolbar buttons. Clicks fall through the column's empty space to the
    map. */
 .panels {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 0.5rem;
   max-height: 45%;
   overflow-y: auto;
