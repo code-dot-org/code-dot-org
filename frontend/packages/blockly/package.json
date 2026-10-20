@@ -46,6 +46,11 @@
       "import": "./dist/renderers/thrasos/index.mjs",
       "require": "./dist/renderers/thrasos/index.cjs"
     },
+    "./themes": {
+      "types": "./dist/themes/index.d.ts",
+      "import": "./dist/themes/index.mjs",
+      "require": "./dist/themes/index.cjs"
+    },
     "./themes/default": {
       "types": "./dist/themes/default/index.d.ts",
       "import": "./dist/themes/default/index.mjs",
@@ -78,6 +83,8 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@blockly/theme-dark": "^8.0.3",
+    "@blockly/theme-highcontrast": "^7.0.3",
     "@mantine/hooks": "^8.3.13",
     "blockly": "^13.1.0",
     "events": "^3.3.0"

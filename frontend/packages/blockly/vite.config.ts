@@ -62,6 +62,7 @@ export default defineConfig({
         'src/plugins/index.ts',
         'src/renderers/index.ts',
         'src/renderers/thrasos/index.ts',
+        'src/themes/index.ts',
         'src/themes/default/index.ts',
         'src/blocks/types.ts',
       ],

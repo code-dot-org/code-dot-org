@@ -1686,6 +1686,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/theme-dark@npm:^8.0.3":
+  version: 8.0.4
+  resolution: "@blockly/theme-dark@npm:8.0.4"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/c9a956df5628d42d9a3d8e2c90d7cfee8a7908889f3cd4ce6b4ff89abc12b58fd324fa308d6b40e84a2aab44c1d9d78c96e46ce127e831deb66aca58eb6baffb
+  languageName: node
+  linkType: hard
+
+"@blockly/theme-highcontrast@npm:^7.0.3":
+  version: 7.0.4
+  resolution: "@blockly/theme-highcontrast@npm:7.0.4"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/860b8afc0bab67bc41574fd2046d95e78c1add780d36b943df7d338f6fef735287f67a074c1a1c0455e479ff93fbc137d684630f16d25fe1b64c497ff2b60b59
+  languageName: node
+  linkType: hard
+
 "@code-dot-org/audio@workspace:packages/audio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/audio@workspace:packages/audio"
@@ -1723,6 +1741,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/blockly@workspace:packages/blockly"
   dependencies:
+    "@blockly/theme-dark": "npm:^8.0.3"
+    "@blockly/theme-highcontrast": "npm:^7.0.3"
     "@code-dot-org/lint-config": "workspace:*"
     "@eslint/js": "catalog:"
     "@mantine/hooks": "npm:^8.3.13"

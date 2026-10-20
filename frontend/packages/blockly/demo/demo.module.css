@@ -6,13 +6,16 @@
 }
 
 .header {
+  display: flex;
   flex: 0 0 auto;
+  gap: 24px;
+  align-items: center;
   padding: 8px 16px;
   border-bottom: 1px solid #ccc;
 }
 
 .title {
-  margin: 0;
+  margin: 0 auto 0 0;
   font-size: 16px;
 }
 
