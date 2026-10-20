@@ -1,4 +1,6 @@
 /* eslint-disable react/no-danger */
+import Dialog from '@code-dot-org/component-library/dialog';
+import {Box, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -6,16 +8,8 @@ import {connect} from 'react-redux';
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
-import Dialog, {
-  Body,
-  Buttons,
-  Confirm,
-  Cancel,
-} from '../legacySharedComponents/Dialog';
 import Sounds from '../Sounds';
-import MultiCheckboxSelector, {
-  styles as multiCheckboxStyles,
-} from '../templates/MultiCheckboxSelector';
+import MultiCheckboxSelector from '../templates/MultiCheckboxSelector';
 import color from '../util/color';
 
 import * as applabConstants from './constants';
@@ -24,6 +18,7 @@ import {
   importableScreenShape,
   importableProjectShape,
 } from './import';
+import moduleStyles from './importScreensDialog.module.css';
 import {toggleImportScreen, importIntoProject} from './redux/screens';
 
 const SCALE = 0.1;
@@ -61,10 +56,13 @@ class AssetListItemUnwrapped extends React.Component {
         <div style={combineStyles(styles.assetListItemText, styles.subtext)}>
           {asset.filename}
           {asset.willReplace && (
-            <p style={styles.warning}>
+            <MuiTypography
+              variant="body4"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               Warning: Importing this will replace your existing "
               {asset.filename}".
-            </p>
+            </MuiTypography>
           )}
         </div>
       </div>
@@ -98,24 +96,33 @@ class ScreenListItemUnwrapped extends React.Component {
           />
         </div>
         <div>
-          {screen.id}
+          <MuiTypography variant="body4">{screen.id}</MuiTypography>
           {screen.conflictingIds.length === 0 && screen.willReplace && (
-            <p style={styles.warning}>
+            <MuiTypography
+              variant="body4"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               Importing this will replace your existing screen: "{screen.id}".
-            </p>
+            </MuiTypography>
           )}
           {screen.conflictingIds.length === 0 &&
             screen.assetsToReplace.length > 0 && (
-              <p style={styles.warning}>
+              <MuiTypography
+                variant="body4"
+                sx={{color: 'var(--text-error-primary)'}}
+              >
                 Importing this will replace your existing assets:{' '}
                 {quotedCommaJoin(screen.assetsToReplace)}.
-              </p>
+              </MuiTypography>
             )}
           {screen.conflictingIds.length > 0 && (
-            <p style={styles.warning}>
+            <MuiTypography
+              variant="body4"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               Uses existing element or screen IDs:{' '}
               {quotedCommaJoin(screen.conflictingIds)}.
-            </p>
+            </MuiTypography>
           )}
         </div>
       </div>
@@ -147,6 +154,7 @@ export class ImportScreensDialog extends React.Component {
     if (!this.props.project) {
       return null;
     }
+
     const nonImportableScreens = this.props.project.screens.filter(
       s => !s.canBeImported
     );
@@ -155,44 +163,46 @@ export class ImportScreensDialog extends React.Component {
     );
     const canImport =
       importableScreens.length > 0 || this.props.project.otherAssets.length > 0;
-    const buttons = canImport ? (
-      <Buttons>
-        <Confirm
-          onClick={() =>
-            this.props.onImport(
-              this.props.project.id,
-              this.state.selectedScreens,
-              this.state.selectedAssets
-            )
-          }
-          disabled={this.props.isImporting}
-        >
-          {this.props.isImporting && (
-            <span className="fa-solid fa-spin fa-spinner" />
-          )}
-          {this.props.isImporting && ' '}
-          Import
-        </Confirm>
-      </Buttons>
-    ) : (
-      <Buttons>
-        <Cancel onClick={this.props.handleClose} />
-      </Buttons>
-    );
 
     return (
       <Dialog
         title={`Import from Project: ${this.props.project.name}`}
-        soundPlayer={this.sounds}
-        {...this.props}
-      >
-        <Body>
-          <div style={styles.scrollable}>
+        onClose={this.props.handleClose}
+        primaryButtonProps={
+          canImport
+            ? {
+                children: 'Import',
+                disabled: this.props.isImporting,
+                loading: this.props.isImporting,
+                loadingPosition: 'start',
+                onClick: () =>
+                  this.props.onImport(
+                    this.props.project.id,
+                    this.state.selectedScreens,
+                    this.state.selectedAssets
+                  ),
+              }
+            : {
+                children: 'Cancel',
+                onClick: this.props.handleClose,
+              }
+        }
+        customContent={
+          <Box style={styles.scrollable}>
+            <MuiTypography
+              variant="body2"
+              sx={{display: 'none'}}
+              id="dsco-dialog-description"
+            >
+              This dialog shows a list of screens from the linked project that
+              can be selected to be imported into this project.
+            </MuiTypography>
             {importableScreens.length > 0 && (
               <MultiCheckboxSelector
                 style={styles.section}
                 header="Screens"
                 items={importableScreens}
+                itemLabel={screen => screen.id}
                 selected={this.state.selectedScreens}
                 onChange={selectedScreens => this.setState({selectedScreens})}
                 itemPropName="screen"
@@ -206,6 +216,7 @@ export class ImportScreensDialog extends React.Component {
                 style={styles.section}
                 header="Other Assets"
                 items={this.props.project.otherAssets}
+                itemLabel={asset => asset.filename}
                 selected={this.state.selectedAssets}
                 onChange={selectedAssets => this.setState({selectedAssets})}
                 itemPropName="asset"
@@ -219,21 +230,30 @@ export class ImportScreensDialog extends React.Component {
             )}
             {nonImportableScreens.length > 0 && (
               <div style={styles.section}>
-                <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
-                <p style={styles.subtext}>{IMPORT_FAILURE_MESSAGE}</p>
-                <ul style={multiCheckboxStyles.list}>
+                <MuiTypography
+                  variant="h3"
+                  component="h2"
+                  sx={{
+                    borderBottom: '1px solid var(--borders-neutral-primary)',
+                  }}
+                >
+                  Cannot Import
+                </MuiTypography>
+                <MuiTypography variant="body2">
+                  {IMPORT_FAILURE_MESSAGE}
+                </MuiTypography>
+                <ul className={moduleStyles.list}>
                   {nonImportableScreens.map(screen => (
-                    <li key={screen.id} style={multiCheckboxStyles.listItem}>
+                    <li key={screen.id} className={moduleStyles.listItem}>
                       <ScreenListItem screen={screen} />
                     </li>
                   ))}
                 </ul>
               </div>
             )}
-          </div>
-        </Body>
-        {buttons}
-      </Dialog>
+          </Box>
+        }
+      />
     );
   }
 }
@@ -245,11 +265,6 @@ const combineStyles = (...styles) =>
 const styles = {
   section: {
     marginTop: MARGIN * 2,
-  },
-  warning: {
-    color: color.red,
-    fontSize: 'smaller',
-    margin: 0,
   },
   subtext: {
     color: color.black,
@@ -308,6 +323,7 @@ const styles = {
     overflow: 'hidden',
     overflowY: 'scroll',
     maxHeight: '400px',
+    width: '100%',
   },
 };
 

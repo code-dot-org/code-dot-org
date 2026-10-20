@@ -1,4 +1,6 @@
 /* eslint no-unused-vars: "error" */
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -9,12 +11,6 @@ import {
   IMPORT_FAILURE_MESSAGE,
 } from '@cdo/apps/applab/ImportScreensDialog';
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
-import Dialog, {
-  Body,
-  Buttons,
-  Confirm,
-  Cancel,
-} from '@cdo/apps/legacySharedComponents/Dialog';
 
 describe('AssetListItem', () => {
   var item;
@@ -162,256 +158,190 @@ describe('ScreenListItem', () => {
 });
 
 describe('ImportScreensDialog', () => {
-  let dialog, onImport;
+  const exampleHtml = `
+    <div>
+      <div class="screen" id="screen1">
+        <img src="https://code.org/images/fit-320/avatars/hadi_partovi.jpg"
+             data-canonical-image-url="asset1.png"
+             id="img2">
+      </div>
+    </div>`;
 
-  function getDialogButton() {
-    return dialog.children().at(1).children().at(0);
+  const screenFixture = overrides => ({
+    id: 'main_screen',
+    willReplace: false,
+    assetsToImport: [],
+    assetsToReplace: [],
+    canBeImported: true,
+    conflictingIds: [],
+    html: exampleHtml,
+    ...overrides,
+  });
+
+  let onImport, handleClose;
+
+  function renderDialog(project, props) {
+    onImport = jest.fn();
+    handleClose = jest.fn();
+    render(
+      <ImportScreensDialog
+        onImport={onImport}
+        handleClose={handleClose}
+        project={{id: 'some-project', name: 'Some Project', ...project}}
+        {...props}
+      />
+    );
+  }
+
+  // MultiCheckboxSelector names each item's checkbox after the screen id or
+  // asset filename it selects.
+  function checkboxFor(name) {
+    return screen.getByRole('checkbox', {name});
   }
 
   describe('When given a list of screens', () => {
     beforeEach(() => {
-      const exampleHtml = `
-        <div>
-          <div class="screen" id="screen1">
-            <img src="https://code.org/images/fit-320/avatars/hadi_partovi.jpg"
-                 data-canonical-image-url="asset1.png"
-                 id="img2">
-          </div>
-        </div>`;
-      onImport = jest.fn();
-      dialog = shallow(
-        <ImportScreensDialog
-          hideBackdrop
-          onImport={onImport}
-          project={{
-            id: 'some-project',
-            name: 'Some Project',
-            screens: [
-              {
-                id: 'main_screen',
-                willReplace: true,
-                assetsToImport: [],
-                assetsToReplace: [],
-                canBeImported: true,
-                conflictingIds: [],
-                html: exampleHtml,
-              },
-            ],
-            otherAssets: [],
-          }}
-        />
-      );
+      renderDialog({screens: [screenFixture()], otherAssets: []});
     });
 
     it('renders a dialog with the list of screens', () => {
-      expect(dialog.type()).toBe(Dialog);
-      expect(dialog.children().at(0).type()).toBe(Body);
-      expect(dialog.children().at(1).type()).toBe(Buttons);
-      expect(dialog.find('MultiCheckboxSelector').length).toBe(1);
+      expect(
+        screen.getByRole('heading', {
+          name: /Import from Project: Some Project/,
+        })
+      ).toBeDefined();
+      expect(screen.getByRole('heading', {name: 'Screens'})).toBeDefined();
+      expect(screen.getByText('main_screen')).toBeDefined();
     });
 
-    it('renders an Import button which calls onImport when clicked', () => {
-      const button = getDialogButton();
-      expect(button.type()).toBe(Confirm);
-      expect(button.matchesElement(<Confirm>Import</Confirm>)).toBe(true);
+    it('renders an Import button which calls onImport when clicked', async () => {
+      const user = userEvent.setup();
+
+      await user.click(screen.getByRole('button', {name: 'Import'}));
+
+      expect(onImport).toHaveBeenCalledWith('some-project', [], []);
     });
 
-    describe('the import button', () => {
-      it('calls the onImport prop when clicked', () => {
-        getDialogButton().simulate('click');
-        expect(onImport).toHaveBeenCalledWith('some-project', [], []);
-      });
+    it('passes the selected screens to the onImport prop function', async () => {
+      const user = userEvent.setup();
 
-      it('passes the selected screens to the onImport prop function', () => {
-        var checkboxSelector = dialog.find('MultiCheckboxSelector');
-        const newSelected = [checkboxSelector.prop('items')[0]];
-        checkboxSelector.prop('onChange')(newSelected);
-        dialog.update();
+      await user.click(checkboxFor('main_screen'));
+      await user.click(screen.getByRole('button', {name: 'Import'}));
 
-        getDialogButton().simulate('click');
-        expect(onImport).toHaveBeenCalledWith('some-project', newSelected, []);
-      });
+      expect(onImport).toHaveBeenCalledWith(
+        'some-project',
+        [expect.objectContaining({id: 'main_screen'})],
+        []
+      );
     });
 
-    describe('the list of screens', () => {
-      let checkboxSelector;
-      beforeEach(() => {
-        checkboxSelector = dialog.find('MultiCheckboxSelector');
-      });
+    it('should have no selected screens initially', () => {
+      expect(checkboxFor('main_screen').checked).toBe(false);
+    });
 
-      it('should have a Screens header', () => {
-        expect(checkboxSelector.prop('header')).toBe('Screens');
-      });
+    it('should keep track of the selected screens when they are changed', async () => {
+      const user = userEvent.setup();
 
-      it('should have no selected screens initially', () => {
-        expect(checkboxSelector.prop('selected')).toEqual([]);
-      });
+      await user.click(checkboxFor('main_screen'));
 
-      it('should keep track of the selected screens when they are changed', () => {
-        const newSelected = [checkboxSelector.prop('items')[0]];
-        checkboxSelector.prop('onChange')(newSelected);
-        dialog.update();
-        checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector.prop('selected')).toEqual(newSelected);
-      });
+      expect(checkboxFor('main_screen').checked).toBe(true);
     });
   });
 
   describe('When given other assets that can be imported', () => {
-    let checkboxSelector;
     beforeEach(() => {
-      onImport = jest.fn();
-      dialog = shallow(
-        <ImportScreensDialog
-          hideBackdrop
-          onImport={onImport}
-          project={{
-            id: 'some-project',
-            name: 'Some Project',
-            screens: [],
-            otherAssets: [
-              {filename: 'foo.png', category: 'image', willReplace: false},
-              {filename: 'bar.mov', category: 'video', willReplace: true},
-            ],
-          }}
-        />
+      renderDialog({
+        screens: [],
+        otherAssets: [
+          {filename: 'foo.png', category: 'image', willReplace: false},
+          {filename: 'bar.mov', category: 'video', willReplace: true},
+        ],
+      });
+    });
+
+    it('should have an Other Assets header', () => {
+      expect(screen.getByRole('heading', {name: 'Other Assets'})).toBeDefined();
+    });
+
+    it('should have no selected assets initially', () => {
+      expect(checkboxFor('foo.png').checked).toBe(false);
+      expect(checkboxFor('bar.mov').checked).toBe(false);
+    });
+
+    it('the import button passes the selected assets to the onImport prop function', async () => {
+      const user = userEvent.setup();
+
+      await user.click(checkboxFor('foo.png'));
+      await user.click(screen.getByRole('button', {name: 'Import'}));
+
+      expect(onImport).toHaveBeenCalledWith(
+        'some-project',
+        [],
+        [expect.objectContaining({filename: 'foo.png'})]
       );
-      checkboxSelector = dialog.find('MultiCheckboxSelector');
     });
 
-    it('the import button passes the selected assets to the onImport prop function', () => {
-      const newSelected = [checkboxSelector.prop('items')[0]];
-      checkboxSelector.prop('onChange')(newSelected);
-      dialog.update();
+    it('should keep track of the selected assets when they are changed', async () => {
+      const user = userEvent.setup();
 
-      getDialogButton().simulate('click');
-      expect(onImport).toHaveBeenCalledWith('some-project', [], newSelected);
-    });
+      await user.click(checkboxFor('foo.png'));
 
-    describe('the asset list', () => {
-      it('should have a Screens header', () => {
-        expect(checkboxSelector.prop('header')).toBe('Other Assets');
-      });
-
-      it('should have no selected screens initially', () => {
-        expect(checkboxSelector.prop('selected')).toEqual([]);
-      });
-
-      it('should keep track of the selected screens when they are changed', () => {
-        const newSelected = [checkboxSelector.prop('items')[0]];
-        checkboxSelector.prop('onChange')(newSelected);
-        dialog.update();
-        checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector.prop('selected')).toEqual(newSelected);
-      });
+      expect(checkboxFor('foo.png').checked).toBe(true);
+      expect(checkboxFor('bar.mov').checked).toBe(false);
     });
   });
 
   describe('When given screens that cannot be imported', () => {
     beforeEach(() => {
-      const exampleHtml = `
-        <div>
-          <div class="screen" id="screen1">
-            <img src="https://code.org/images/fit-320/avatars/hadi_partovi.jpg"
-                 data-canonical-image-url="asset1.png"
-                 id="img2">
-          </div>
-        </div>`;
-      onImport = jest.fn();
-      dialog = shallow(
-        <ImportScreensDialog
-          hideBackdrop
-          onImport={onImport}
-          project={{
-            id: 'some-project',
-            name: 'Some Project',
-            screens: [
-              {
-                id: 'main_screen',
-                willReplace: false,
-                assetsToImport: [],
-                assetsToReplace: [],
-                canBeImported: false,
-                conflictingIds: ['img2'],
-                html: exampleHtml,
-              },
-            ],
-            otherAssets: [],
-          }}
-        />
-      );
+      renderDialog({
+        screens: [
+          screenFixture({canBeImported: false, conflictingIds: ['img2']}),
+        ],
+        otherAssets: [],
+      });
     });
 
     it("renders a 'Cannot Import' section", () => {
+      const heading = screen.getByRole('heading', {name: 'Cannot Import'});
+
+      expect(heading).toBeDefined();
+      // getByText matches against whitespace-collapsed DOM text, so collapse
+      // the message's own indentation and newlines before comparing.
       expect(
-        dialog.matchesElement(
-          <Dialog>
-            <Body>
-              <div>
-                <div>
-                  <h2>Cannot Import</h2>
-                  <p>{IMPORT_FAILURE_MESSAGE}</p>
-                  <ul>
-                    <li>
-                      <ScreenListItem
-                        screen={dialog.prop('project').screens[0]}
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Body>
-            <Buttons>
-              <Cancel />
-            </Buttons>
-          </Dialog>
-        )
-      ).toBe(true);
+        screen.getByText(IMPORT_FAILURE_MESSAGE.trim().replace(/\s+/g, ' '))
+      ).toBeDefined();
+      expect(screen.getAllByRole('listitem')).toHaveLength(1);
+      expect(screen.getByText('main_screen')).toBeDefined();
+      // Nothing here can be selected, so there is no checkbox to select it.
+      expect(screen.queryByRole('checkbox')).toBeNull();
+    });
+
+    it('offers only a Cancel button, which closes the dialog', async () => {
+      const user = userEvent.setup();
+
+      expect(screen.queryByRole('button', {name: 'Import'})).toBeNull();
+      await user.click(screen.getByRole('button', {name: 'Cancel'}));
+
+      expect(handleClose).toHaveBeenCalled();
     });
   });
 
   describe('When importing', () => {
     beforeEach(() => {
-      const exampleHtml = `
-        <div>
-          <div class="screen" id="screen1">
-            <img src="https://code.org/images/fit-320/avatars/hadi_partovi.jpg"
-                 data-canonical-image-url="asset1.png"
-                 id="img2">
-          </div>
-        </div>`;
-      onImport = jest.fn();
-      dialog = shallow(
-        <ImportScreensDialog
-          hideBackdrop
-          onImport={onImport}
-          isImporting={true}
-          project={{
-            id: 'some-project',
-            name: 'Some Project',
-            screens: [
-              {
-                id: 'main_screen',
-                willReplace: true,
-                assetsToImport: [],
-                assetsToReplace: [],
-                canBeImported: true,
-                conflictingIds: [],
-                html: exampleHtml,
-              },
-            ],
-            otherAssets: [],
-          }}
-        />
+      renderDialog(
+        {screens: [screenFixture()], otherAssets: []},
+        {isImporting: true}
       );
     });
 
     it('should disable the confirmation button', () => {
-      expect(getDialogButton().prop('disabled')).toBe(true);
+      expect(screen.getByRole('button', {name: 'Import'}).disabled).toBe(true);
     });
 
     it('should disable the multi checkbox widget', () => {
-      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).toBe(true);
+      screen
+        .getAllByRole('checkbox')
+        .forEach(checkbox => expect(checkbox.disabled).toBe(true));
     });
   });
 });
