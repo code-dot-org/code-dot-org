@@ -26,6 +26,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
+    "./contexts": {
+      "types": "./dist/contexts/index.d.ts",
+      "import": "./dist/contexts/index.mjs",
+      "require": "./dist/contexts/index.cjs"
+    },
     "./plugins": {
       "types": "./dist/plugins/index.d.ts",
       "import": "./dist/plugins/index.mjs",
@@ -57,15 +62,23 @@
   "scripts": {
     "build": "vite build && tsc --noEmit",
     "clean": "rimraf dist",
+    "dev": "vite --config vite.demo.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
+    "test:browser": "vitest --run --config vitest.browser.config.ts",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
+    "@mantine/hooks": "^8.3.13",
     "blockly": "^13.1.0",
     "events": "^3.3.0"
   },
@@ -73,14 +86,24 @@
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "catalog:",
     "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "classnames": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
     "globals": "catalog:",
     "jsdom": "catalog:",
+    "playwright": "catalog:",
     "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "rimraf": "catalog:",
+    "stylelint": "catalog:",
     "typed-emitter": "^2.1.0",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
@@ -88,5 +111,10 @@
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
     "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "classnames": "^2.5.1",
+    "react": ">=16",
+    "react-dom": ">=16"
   }
 }

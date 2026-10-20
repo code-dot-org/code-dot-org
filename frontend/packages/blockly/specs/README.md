@@ -24,7 +24,7 @@ what the code does, even where that is wrong.
 | Part | Document             | Prefix | Contents                                                                 | Needs  | Status  |
 | ---- | -------------------- | ------ | ------------------------------------------------------------------------ | ------ | ------- |
 | 1a   | `definitions.md`     | DEF-   | definitions, Driver, Registry, plugins, renderer, toolbox, default theme | —      | written |
-| 1b   | `workspace.md`       | WS-    | Agent, contexts, `BlocklyWorkspace`, demo                                | 1a     | planned |
+| 1b   | `workspace.md`       | WS-    | Agent, contexts, `BlocklyWorkspace`, demo                                | 1a     | written |
 | 2    | `themes.md`          | THM-   | the other ten themes                                                     | 1a     | planned |
 | 3    | `inputs.md`          | INP-   | the rectangle, round and triangle notch shapes                           | 1a     | planned |
 | 4    | `react-fields.md`    | RF-    | `createReactField`, field utilities                                      | 1b     | planned |
@@ -69,10 +69,18 @@ these changes.
 4. The package follows `frontend/docs/conventions/packages.md` where it
    cheaply can: version `0.0.0`; no `"type": "module"`, so the ESLint
    configuration is `eslint.config.mjs`; `build.emptyOutDir: false` and a
-   `clean` script. It declares `events`, which it imports but did not
-   declare. Each part brings only the dependencies its code uses.
+   `clean` script. It declares `events` and `@vitejs/plugin-react`, which
+   it imports but did not declare. Each part brings only the dependencies its code uses.
    `copy.mjs`, which nothing runs, is not carried over.
 5. The renderer computes dark-theme secondary colours for the theme being
    set. `ngfp/blockly` computed them for the theme before it, so a
    workspace that started dark had Blockly's colours, and one switched from
    dark to light had the darkened ones. See `definitions.md`, DEF-38.
+6. `Agent.load` arranges loaded blocks through a `positionBlocks` hook,
+   which `BlocklyWorkspace` takes as a prop, instead of calling the
+   collision layout itself. The workspace part does not depend on the layout
+   part. Part 9 makes the collision layout the prop's default, which restores
+   `ngfp/blockly`'s behaviour for labs that pass nothing.
+7. The demo starts as one workspace over Blockly's own blocks. The lesson
+   modes, theme menu and instructions panel of `ngfp/blockly`'s demo return
+   with the parts they show.

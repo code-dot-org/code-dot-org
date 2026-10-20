@@ -22,4 +22,7 @@ export {default as Driver, DriverEvent} from './Driver';
 export type {WorkspaceAgent} from './Driver';
 export {isDarkTheme} from './themes/isDarkTheme';
 
+export * from './components';
+export * from './contexts';
+
 export * as Blockly from 'blockly/core';

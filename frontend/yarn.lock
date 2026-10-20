@@ -1725,17 +1725,28 @@ __metadata:
   dependencies:
     "@code-dot-org/lint-config": "workspace:*"
     "@eslint/js": "catalog:"
+    "@mantine/hooks": "npm:^8.3.13"
     "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    "@vitest/browser-playwright": "catalog:"
     blockly: "npm:^13.1.0"
+    classnames: "catalog:"
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
     events: "npm:^3.3.0"
     globals: "catalog:"
     jsdom: "catalog:"
+    playwright: "catalog:"
     prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
     rimraf: "catalog:"
+    stylelint: "catalog:"
     typed-emitter: "npm:^2.1.0"
     typescript: "catalog:"
     typescript-eslint: "catalog:"
@@ -1743,6 +1754,10 @@ __metadata:
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
     vitest: "catalog:"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
   languageName: unknown
   linkType: soft
 
@@ -5123,6 +5138,15 @@ __metadata:
   dependencies:
     buffer: "npm:^6.0.3"
   checksum: 10c0/24a257870b0548cfe430680c2ae1641751e6a6ec90c573eaf51bfe956839b6cfa462b4d2827157363b6d620872d32d69fa2f37210a864ba488f8ec7158436398
+  languageName: node
+  linkType: hard
+
+"@mantine/hooks@npm:^8.3.13":
+  version: 8.3.18
+  resolution: "@mantine/hooks@npm:8.3.18"
+  peerDependencies:
+    react: ^18.x || ^19.x
+  checksum: 10c0/3767cb33a3e1c4469f18f12536c4c6e42d714ebf5f6da032c8b38ebb24db9ad399978437c69e263c5689a61ea97f17f145719dfe2cdcfa1aa70270711d993b19
   languageName: node
   linkType: hard
 

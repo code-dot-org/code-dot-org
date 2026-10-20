@@ -58,6 +58,7 @@ export default defineConfig({
     lib: {
       entry: [
         'src/index.ts',
+        'src/contexts/index.ts',
         'src/plugins/index.ts',
         'src/renderers/index.ts',
         'src/renderers/thrasos/index.ts',

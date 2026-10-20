@@ -12,14 +12,12 @@ Driver also carries an _environment_, an object the lab defines, that block
 code receives in place of global state.
 
 The package is landing in parts. `specs/README.md` lists them and their
-order; each part's behaviour is specified in `specs/`. Until part 1b lands
-there is no workspace component, and the Driver is used on its own:
+order; each part's behaviour is specified in `specs/`.
 
-```ts
-import {Driver, defineBlock} from '@code-dot-org/blockly';
-import type {Environment} from '@code-dot-org/blockly';
-import ThrasosRenderer from '@code-dot-org/blockly/renderers/thrasos';
-import DefaultTheme from '@code-dot-org/blockly/themes/default';
+A lab renders a workspace with `BlocklyWorkspace`:
+
+```tsx
+import {BlocklyWorkspace, defineBlock} from '@code-dot-org/blockly';
 
 const moveForward = defineBlock({
   type: 'move_forward',
@@ -33,19 +31,27 @@ const moveForward = defineBlock({
   },
 });
 
-const driver = new Driver({} as Environment, ThrasosRenderer, DefaultTheme);
-driver.setBlocks([moveForward]);
-// Blockly now knows `move_forward` and how to generate its code.
-driver.deconstruct();
+export const Editor = () => (
+  <BlocklyWorkspace
+    blocks={[moveForward]}
+    toolbox={{name: 'Moves', blocks: ['move_forward']}}
+    onChange={event => console.log(event.type)}
+  />
+);
 ```
+
+Several workspaces that should share blocks, plugins and a theme sit inside
+one `BlocklyProvider`. A headless compile uses a `Driver` on its own.
 
 ## Commands
 
 Run from this directory, with Node 22:
 
 ```
-yarn build       # dist/, then a typecheck
-yarn test        # unit tests, under jsdom
+yarn dev            # the demo, in demo/
+yarn build          # dist/, then a typecheck
+yarn test           # unit tests, under jsdom
+yarn test:browser   # tests that need a real browser, in headless Chromium
 yarn typecheck
 yarn lint
 ```

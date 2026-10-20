@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.header {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.canvas {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}
