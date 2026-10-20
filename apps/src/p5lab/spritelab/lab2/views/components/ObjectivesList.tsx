@@ -35,7 +35,12 @@ const ObjectivesList: React.FunctionComponent<ObjectivesListProps> = ({
       {title && (
         <Markdown
           content={title}
-          className={styles.title}
+          // Over a checklist the title is its headline; alone it is the
+          // level's one line, at the body's size.
+          className={classNames(
+            styles.title,
+            items.length === 0 && styles.titleOnly
+          )}
           extensions={MARKDOWN_EXTENSIONS}
         />
       )}

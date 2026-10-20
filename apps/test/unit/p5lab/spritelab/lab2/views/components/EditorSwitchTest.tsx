@@ -34,18 +34,16 @@ describe('EditorSwitch', () => {
   it('offers the editors it is given, in order', () => {
     render(
       <EditorSwitch
-        value="Pictures"
+        value="Images"
         onChange={jest.fn()}
-        editors={['Pictures', 'Code', 'World']}
+        editors={['Images', 'Code', 'World']}
       />
     );
     expect(
       screen.getAllByRole('button').map(b => b.textContent?.trim())
-    ).toEqual(['Pictures', 'Code', 'World']);
+    ).toEqual(['Images', 'Code', 'World']);
     expect(
-      screen
-        .getByRole('button', {name: 'Pictures'})
-        .getAttribute('aria-pressed')
+      screen.getByRole('button', {name: 'Images'}).getAttribute('aria-pressed')
     ).toBe('true');
   });
 });
