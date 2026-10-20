@@ -131,7 +131,7 @@ describe('xml-toolbox.md: getAllGeneratedCode', () => {
     ).toBe("\n\n\nwindow.alert('a');\n");
   });
 
-  it('XML-11, XML-V4: joins a loose value block code and precedence', () => {
+  it('XML-11, XML-V4: generates a loose value block as a statement', () => {
     workspace = new Blockly.Workspace();
     Blockly.serialization.blocks.append(
       {type: 'math_number', fields: {NUM: 42}},
@@ -139,7 +139,7 @@ describe('xml-toolbox.md: getAllGeneratedCode', () => {
     );
     Blockly.serialization.blocks.append(print('a'), workspace);
     expect(getAllGeneratedCode({workspaces: [workspace]})).toBe(
-      "\n\n\n42,0\nwindow.alert('a');\n",
+      "\n\n\n42;\n\nwindow.alert('a');\n",
     );
   });
 });
@@ -165,5 +165,15 @@ describe('xml-toolbox.md: block helpers', () => {
       expect.arrayContaining([used, used.getChildren(false)[0]]),
     );
     expect(getAllUsedBlocks(workspace)).toHaveLength(2);
+  });
+});
+
+describe('xml-toolbox.md: generating from a source', () => {
+  it('XML-12: generates a loose value block in JSON as a statement', () => {
+    expect(
+      getCodeFromBlockJsonSource({
+        blocks: {blocks: [{type: 'math_number', fields: {NUM: 42}}]},
+      }),
+    ).toBe('\n\n\n42;\n');
   });
 });

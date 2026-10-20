@@ -7,6 +7,22 @@ import {simpleGenerator} from '../generators/simple';
 
 export * from './toolboxToWorkspaceBlocks';
 
+// A top block's code as Blockly's workspaceToCode gives it: a value block's
+// code alone, made a statement.
+function topBlockCode(
+  generator: {
+    blockToCode(block: Blockly.Block): string | [string, number];
+    scrubNakedValue(line: string): string;
+  },
+  block: Blockly.Block,
+): string {
+  const code = generator.blockToCode(block);
+  const line = Array.isArray(code) ? code[0] : code;
+  return line && block.outputConnection
+    ? generator.scrubNakedValue(line)
+    : line;
+}
+
 /**
  * Options for the `getAllGeneratedCode` method.
  */
@@ -49,14 +65,13 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
     if (workspace) {
       generator.init(workspace);
       const blocks = workspace.getTopBlocks(true);
-      const blocksCode: (string | [string, number])[] = [];
+      const blocksCode: string[] = [];
       blocks.forEach(block => {
         if (
           options?.startBlock === undefined ||
           options?.startBlock === block.type
         ) {
-          const blockCode = generator.blockToCode(block);
-          blocksCode.push(blockCode);
+          blocksCode.push(topBlockCode(generator, block));
         }
       });
       code += generator.finish(blocksCode.join('\n'));
@@ -207,8 +222,7 @@ export function getCodeFromBlockXmlSource(blockXmlString: string): string {
   javascriptGenerator.init(workspace);
 
   const blocks = workspace.getTopBlocks(true);
-  const code: (string | [string, number])[] = [];
-  blocks.forEach(block => code.push(javascriptGenerator.blockToCode(block)));
+  const code = blocks.map(block => topBlockCode(javascriptGenerator, block));
   const result = javascriptGenerator.finish(code.join('\n'));
   workspace.dispose();
   return result;
@@ -226,8 +240,7 @@ export function getCodeFromBlockJsonSource(json: {
     Blockly.serialization.blocks.append(jsonBlock, workspace);
   }
   const blocks = workspace.getTopBlocks(true);
-  const code: (string | [string, number])[] = [];
-  blocks.forEach(block => code.push(javascriptGenerator.blockToCode(block)));
+  const code = blocks.map(block => topBlockCode(javascriptGenerator, block));
   const result = javascriptGenerator.finish(code.join('\n'));
   workspace.dispose();
   return result;

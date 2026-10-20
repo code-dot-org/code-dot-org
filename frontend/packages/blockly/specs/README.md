@@ -135,3 +135,9 @@ these changes.
     `ngfp/blockly`'s turned field text such as `007` into numbers, dropped
     shadows, buried those attributes in `extraState`, and gave definitions
     parameter names that loaded as the wrong parameter.
+19. The code helpers generate a loose value block as a statement of its
+    code (XML-11), as Blockly's `workspaceToCode` does; `ngfp/blockly`'s,
+    like apps', wrote its code and precedence joined by a comma (`42,0`).
+    `forciblyInsertTopBlock` makes its elements in the root's own document
+    (XML-14), as apps does; `ngfp/blockly`'s made them in the page's HTML
+    document, so they serialized in the XHTML namespace.

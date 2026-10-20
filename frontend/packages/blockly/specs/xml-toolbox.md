@@ -94,7 +94,9 @@ generator, generates each top block in position order (only those of type
 The result is `options.extraCode`, then each workspace's code. The
 generator is the JavaScript one, or the simple one (DEF-14) for
 `language: 'simple'`. A top block that is a value, such as a loose number,
-gives its code and precedence joined by a comma (`42,0`).
+gives its code alone as a statement (`42;`), as Blockly's `workspaceToCode`
+does. Apps' `getCode.ts` joins such a block's code and precedence with a
+comma (`42,0`).
 
 XML-12. `getCodeFromBlockXmlSource(xml)` and
 `getCodeFromBlockJsonSource(json)` load the blocks into a new headless
@@ -115,7 +117,9 @@ XML-14. `serialization.forciblyInsertTopBlock(root, type)` changes an XML
 start-blocks element, unless it holds a block of `type` anywhere: it
 inserts at the front an immovable, undeletable block of `type` with the id
 `topBlock`, and moves into its `<next>` the first top-level block that is
-not a procedure definition. It is apps' `blockUtils.forceInsertTopBlock`
+not a procedure definition. Both elements are made by the root's own
+document, so in a parsed XML document they are XML elements, as the
+others are. It is apps' `blockUtils.forceInsertTopBlock`
 (`apps/src/block_utils.js`), which apps applies to a level that sets
 `forceInsertTopBlock`.
 
@@ -141,7 +145,7 @@ editable="false"` gives `disabledReasons: ['MANUALLY_DISABLED']`,
 `extraState`.
 
 XML-V4 (XML-11). A workspace holding a loose `math_number` of 42 and a
-`text_print` of `'a'` generates `\n\n\n42,0\nwindow.alert('a');\n`.
+`text_print` of `'a'` generates `\n\n\n42;\n\nwindow.alert('a');\n`.
 
 ## Not specified here
 
@@ -157,5 +161,3 @@ XML-V4 (XML-11). A workspace holding a loose `math_number` of 42 and a
 2. XML-7: map the attribute names of Blockly's other mutators
    (`lists_create_with`, `text_join`, `lists_getIndex` and so on), or
    leave legacy mutations to the workspace-based conversion?
-3. XML-11: generate a loose value block as Blockly's `workspaceToCode`
-   does, as a statement of its code alone?
