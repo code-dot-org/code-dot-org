@@ -56,9 +56,10 @@ class StandaloneVideo < Level
     true
   end
 
+  # The small footer: the full-width video wants it, and a Lab2 video takes
+  # the page like the other Lab2 levels, which the big footer would paint over.
   def enable_scrolling?
-    # ensures we have the small footer when in "full width" mode
-    video_full_width
+    video_full_width || uses_lab2?
   end
 
   def uses_lab2?
