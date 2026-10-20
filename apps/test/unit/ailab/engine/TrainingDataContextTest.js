@@ -3,6 +3,7 @@ import {createElement} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
+import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import rootReducer, {resetState} from '@cdo/apps/ailab/engine/redux';
 import {
   TrainingDataProvider,
@@ -74,7 +75,7 @@ describe('TrainingDataContext', () => {
     act(() => trainingData().setTrainedModel(MODEL));
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
     });
     expect(trainingData().trainedModel).toBeUndefined();
 

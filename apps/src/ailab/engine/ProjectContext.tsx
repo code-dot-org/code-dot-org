@@ -78,10 +78,9 @@ export const ProjectProvider = ({
     useCallback((reason: ResetReason) => {
       previousRun.current = undefined;
       /*
-        A project waiting for a dataset outlives the student choosing one: the
-        dataset it was saved against may be the one they pick, and its columns
-        are reconciled against whichever it turns out to be. Any other reset
-        abandons it.
+        Only keep the pending project on a dataset change, as the dataset
+        may be the one currently used by the project.
+        For other reasons (level load or start over), we always discard it.
       */
       if (reason !== ResetReasons.DATASET_CHANGE) {
         pendingProject.current = undefined;

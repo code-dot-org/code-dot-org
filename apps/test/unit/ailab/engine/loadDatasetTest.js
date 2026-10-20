@@ -1,3 +1,4 @@
+import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {parseJSON} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
 import {loadDataset} from '@cdo/apps/ailab/engine/loadDataset';
@@ -32,7 +33,7 @@ let finishCSV;
 let finishJSON;
 
 beforeEach(() => {
-  store.dispatch(resetState());
+  store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
   parseCSV.mockImplementation(
     () =>
       new Promise(resolve => {

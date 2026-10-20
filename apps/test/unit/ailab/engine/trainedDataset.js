@@ -1,7 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 
-import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
+import {
+  ColumnTypes,
+  ResetReasons,
+  TestDataLocations,
+} from '@cdo/apps/ailab/engine/constants';
 import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {traceDisplayTree} from '@cdo/apps/ailab/engine/helpers/displayTreeTrace';
 import {getKeyByValue} from '@cdo/apps/ailab/engine/helpers/utils';
@@ -38,7 +42,7 @@ export function trainDataset(
     fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
-  store.dispatch(resetState());
+  store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
   train.reset();
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));

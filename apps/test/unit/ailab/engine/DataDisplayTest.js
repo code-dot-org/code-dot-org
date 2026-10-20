@@ -1,6 +1,7 @@
 import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement, Fragment} from 'react';
 
+import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {resetState, setCurrentColumn} from '@cdo/apps/ailab/engine/redux';
 import ColumnAnalysis from '@cdo/apps/ailab/engine/UIComponents/ColumnAnalysis';
@@ -88,7 +89,7 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Next row'));
     expect(store.getState().datasetCardRow).toBe(1);
 
-    act(() => store.dispatch(resetState()));
+    act(() => store.dispatch(resetState(ResetReasons.LEVEL_LOAD)));
     expect(store.getState().datasetCardRow).toBe(0);
   });
 

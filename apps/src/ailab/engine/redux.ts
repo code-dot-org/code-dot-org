@@ -306,9 +306,7 @@ const ailabSlice = createSlice({
           resetReason: action.payload.reason,
         };
       },
-      // Defaults to the reason that clears the most, so only a caller that
-      // means something narrower has to say so.
-      prepare(reason: ResetReason = ResetReasons.LEVEL_LOAD) {
+      prepare(reason: ResetReason) {
         return {payload: {reason}};
       },
     },

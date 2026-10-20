@@ -2,6 +2,7 @@ import {act, screen} from '@testing-library/react';
 import {createElement} from 'react';
 
 import App from '@cdo/apps/ailab/engine/App';
+import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   resetState,
@@ -49,7 +50,7 @@ describe('onTrained', () => {
     const {store, onTrained, trainModel} = renderApp({trainer: 'decisionTree'});
     trainModel();
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
       store.dispatch(setMode({}));
     });
     expect(onTrained).toHaveBeenCalledTimes(1);
@@ -83,7 +84,7 @@ describe('a pretrained level', () => {
 
   // Auto-training goes through useTrainingRun, which trains the store singleton.
   function renderLevel(mode) {
-    storeSingleton.dispatch(resetState());
+    storeSingleton.dispatch(resetState(ResetReasons.LEVEL_LOAD));
     seedLevel(storeSingleton, mode);
     const onTrained = jest.fn();
     const {trainingData} = renderWithProviders(
@@ -110,7 +111,7 @@ describe('a pretrained level', () => {
     const {onTrained} = renderLevel({trainer: 'decisionTree'});
 
     act(() => {
-      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(resetState(ResetReasons.LEVEL_LOAD));
       storeSingleton.dispatch(setMode(PRETRAINED));
     });
     expect(onTrained).not.toHaveBeenCalled();
@@ -134,7 +135,7 @@ describe('a pretrained level', () => {
     renderLevel({trainer: 'decisionTree'});
 
     act(() => {
-      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(resetState(ResetReasons.LEVEL_LOAD));
       storeSingleton.dispatch(setMode(hiding));
       storeSingleton.dispatch(setCurrentPanel('datasetView'));
     });
