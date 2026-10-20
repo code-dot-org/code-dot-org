@@ -1319,8 +1319,6 @@ export const TILES: readonly Tile[] = [
       {kind: 'rule', id: 'camera'},
       {kind: 'rule', id: 'cameraFollow'},
       {kind: 'rule', id: 'cameraConfined'},
-      {kind: 'block', type: 'world_define_camera'},
-      {kind: 'block', type: 'world_use_camera'},
     ],
     check: {
       kind: 'outcome',
@@ -2860,8 +2858,6 @@ export const TILES: readonly Tile[] = [
     // arrive having done neither `place/camera` nor `place/layers`. The lesson
     // is the assembly; it grants none of the parts.
     offers: [
-      {kind: 'block', type: 'world_define_camera'},
-      {kind: 'block', type: 'world_use_camera'},
       {kind: 'block', type: 'world_set_background'},
       {kind: 'block', type: 'world_set_background_repeat'},
     ],
@@ -3021,7 +3017,7 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_remove_actor'},
     ],
     // Three lent blocks, all for the same reason `adventure/world` lends the
-    // camera's: Adventure is entered from Look and Place, so a learner can
+    // backdrop's: Adventure is entered from Look and Place, so a learner can
     // arrive here having done neither Logic (`if`) nor the Story tiles that
     // grant the two ways of reading what an event carried.
     offers: [

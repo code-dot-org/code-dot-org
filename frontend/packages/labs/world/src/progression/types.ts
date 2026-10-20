@@ -257,4 +257,14 @@ export interface Catalogue {
    */
   version: number;
   tiles: readonly Tile[];
+  /**
+   * Drawers kept shut though no tile grants anything in them.
+   *
+   * A drawer is otherwise gated only once a tile grants something in it, so a
+   * drawer nobody is given is open from the first lesson (`toolboxShelf`).
+   * That is right for a drawer no lesson has been written for yet, and wrong
+   * for one the tree means to keep back: a world's cameras are made in the
+   * map editor, so the camera blocks are not handed out, and not offered.
+   */
+  withheld?: readonly string[];
 }

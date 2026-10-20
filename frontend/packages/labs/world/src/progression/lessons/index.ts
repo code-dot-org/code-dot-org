@@ -36,6 +36,7 @@ import {
   useTrait,
   words,
 } from '../../actors/stock/workspace';
+import type {MainCameraSettings} from '../../blockly/placementCameras';
 import type {WorldScenario} from '../../fixtures/scenarios';
 import type {LessonProperties, TileId} from '../types';
 
@@ -1405,42 +1406,35 @@ one, sitting still.
 
 ### What you do
 
-1. Add **define camera ⟨Chase⟩** at the end of the world, with
-   **use trait ⟨Follows⟩** in it, and
-   **set actor to follow of ⟨this camera⟩ to ⟨any Hero⟩**.
-2. Add **look through camera ⟨Chase⟩** under it, and run. The view goes with
-   the Hero — off the end of the room, showing nothing.
-3. Add **use trait ⟨Confined to the Map⟩** to the camera. The view stops where
-   the room stops, and the Hero walks on out of shot.
-4. The camera is defined AFTER the actors, and it has to be: it is told to
-   follow \`any ⟨Hero⟩\`, and reading that before there is a Hero is a view
-   that never moves and never says why.
+1. In the map, open **Cameras** and choose **Main camera** — the one every
+   world has, and the one this world looks through.
+2. Under **Camera traits**, tick **Follows**, and set **Actor to follow** to
+   **any Hero**. Run: the view goes with the Hero — off the end of the room,
+   showing nothing.
+3. Tick **Confined to the Map** too. The view stops where the room stops, and
+   the Hero walks on out of shot.
 `.trim(),
 };
 
 // ── place/camera-feel ────────────────────────────────────────────────────────
 
-/** `define camera ⟨Chase⟩` following a kind, with whatever else it elects. */
-const chaseCamera = (follow: string, extra: object[] = []) => ({
-  type: 'world_define_camera',
-  id: 'chase',
-  fields: {NAME: 'Chase'},
-  inputs: {
-    DO: {
-      block: chainRows([
-        useTrait('Camera Follow#FollowsTrait'),
-        useTrait('Camera Confined#ConfinedToTheMapTrait'),
-        ...extra,
-        {
-          type: 'world_set_CameraFollow_ActorToFollowProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_camera'}},
-            VALUE: anyKind(follow),
-          },
-        },
-      ]),
+/**
+ * The main camera following a kind and kept in the room, as the map editor
+ * stores it on the world's main map (`placementCameras`): where the camera
+ * lesson leaves a learner, and where the lessons after it start.
+ */
+const followingCamera = (kind: string): MainCameraSettings => ({
+  traits: [
+    'Camera Follow#FollowsTrait',
+    'Camera Confined#ConfinedToTheMapTrait',
+  ],
+  values: [
+    {
+      setter: 'world_set_CameraFollow_ActorToFollowProperty',
+      type: 'actor',
+      value: actorPath(kind),
     },
-  },
+  ],
 });
 
 const cameraFeel: WorldScenario = {
@@ -1454,9 +1448,9 @@ const cameraFeel: WorldScenario = {
       rows: [
         placeInMap(actorPath('ground'), floorAcross(30)),
         addActor(actorPath('hero'), [placeAt(160, 272)]),
-        chaseCamera('hero'),
-        {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
       ],
+      // Where the last lesson left it.
+      mainCamera: followingCamera('hero'),
       actors: [
         {
           id: 'hero',
@@ -1493,13 +1487,12 @@ Two traits change how it FEELS, and neither changes where it ends up.
 
 ### What you do
 
-1. Add **use trait ⟨Eases⟩** to the camera and
-   **set smoothness of ⟨this camera⟩ to ⟨0.25⟩**. The view now catches up over
-   a few frames instead of arriving with you.
-2. Add **use trait ⟨Has a Deadzone⟩** and
-   **set slack of ⟨this camera⟩ to x ⟨64⟩ y ⟨32⟩**. Small movements no longer
-   move the view at all — you walk about inside the box, and only leaving it
-   pulls the camera along.
+1. In the map, open **Cameras** and choose **Main camera**. Under **Camera
+   traits**, tick **Eases**, and set its **Smoothness** to **0.25**. The view
+   now catches up over a few frames instead of arriving with you.
+2. Tick **Has a Deadzone**, and set its **Slack** to **64** across and **32**
+   down. Small movements no longer move the view at all — you walk about
+   inside the box, and only leaving it pulls the camera along.
 3. Turn the smoothness up until it feels like treacle, then back. There is no
    right number, which is the point: this is the part you tune by playing.
 `.trim(),
@@ -1540,14 +1533,10 @@ const layers: WorldScenario = {
           placed('Hill3', 720, 272),
         ]),
         placeInMap(actorPath('score'), [placed('Score', 60, 30)]),
-        // …and the Hero, whom the camera below is told to follow as the world
-        // is built. The map is loaded before these rows, so the Hero is there
-        // to be named (specs/MAP_BEFORE_ROWS_PLAN.md); until it was, this one
-        // actor had to stay a block.
+        // …and the Hero, whom the main camera follows.
         placeInMap(actorPath('hero'), [placed('Hero', 160, 272)]),
-        chaseCamera('hero'),
-        {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
       ],
+      mainCamera: followingCamera('hero'),
       actors: [
         {
           id: 'hero',
@@ -3124,9 +3113,8 @@ const level: WorldScenario = {
             inputs: {ACTOR: me(), VALUE: num(6)},
           },
         ]),
-        chaseCamera('hero'),
-        {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
       ],
+      mainCamera: followingCamera('hero'),
       actors: [
         {
           id: 'hero',
@@ -4969,10 +4957,9 @@ putting them together, which is what a genre is.
 
 ### What you do
 
-1. Add **define camera ⟨Follow⟩** at the end of the world, with
-   **use trait ⟨Follows⟩**, **use trait ⟨Confined to the Map⟩**, and
-   **set actor to follow of ⟨this camera⟩ to ⟨any Walker⟩** — then
-   **look through camera ⟨Follow⟩**.
+1. In the map, open **Cameras** and choose **Main camera**. Under **Camera
+   traits**, tick **Follows** and **Confined to the Map**, and set **Actor to
+   follow** to **any Walker**.
 2. Add a **backdrop**, and **draw background ⟨tiled⟩** so it covers a room
    three screens wide rather than being stretched across one.
 3. Walk to the far end. The view goes with you and stops at the wall, and there

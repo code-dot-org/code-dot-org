@@ -105,12 +105,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'look/effect': ['world_add_effect', 'world_add_world_effect'],
   'place/edges': ['world_use_trait'],
   'place/map': [],
-  'place/camera': [
-    'world_define_camera',
-    'world_use_camera',
-    'world_use_trait',
-  ],
-  'place/camera-feel': ['world_use_trait'],
+  // Both made in the map editor's camera inspector, which asks for no block.
+  'place/camera': [],
+  'place/camera-feel': [],
   // In a PLACEMENT's workspace, which is the map editor's third view: the hat
   // is the Mouse rule's and `the ⟨…⟩` is what the tile grants. `set text of`
   // is the Label's own, minted from its file and gated by nothing
@@ -226,13 +223,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // are a hat and one block each.
   'puzzle/goal': ['math_number'],
   'puzzle/undo': ['world_use_trait', 'world_on_Input_PressesEvent'],
-  'adventure/world': [
-    'world_define_camera',
-    'world_use_camera',
-    'world_use_trait',
-    'world_set_background',
-    'world_set_background_repeat',
-  ],
+  'adventure/world': ['world_set_background', 'world_set_background_repeat'],
   'adventure/people': ['world_add_trait'],
   'adventure/errand': ['math_arithmetic', 'world_count_of_kind'],
   'platformer/level': [

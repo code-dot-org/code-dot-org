@@ -31,7 +31,11 @@ import {STOCK_ACTORS} from '../../actors/stock';
 import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {STOCK_RULES} from '../../rules/stock';
-import {EARNED_BLOCKS, EARNED_CATEGORIES} from '../toolboxShelf';
+import {
+  EARNED_BLOCKS,
+  EARNED_CATEGORIES,
+  WITHHELD_CATEGORIES,
+} from '../toolboxShelf';
 
 /**
  * Blocks in an earned drawer that no tile grants, by the drawer they are in.
@@ -72,7 +76,11 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_actor_kind',
     'world_remove_world_effect',
   ],
+  // Withheld whole: a world's cameras are made in the map editor, so the
+  // camera lessons teach the camera inspector rather than these.
   Cameras: [
+    'world_define_camera',
+    'world_use_camera',
     'world_move_camera',
     'world_camera',
     'world_all_cameras',
@@ -200,7 +208,12 @@ const hidden = (): Record<string, string[]> => {
     if (EARNED_CATEGORIES.has(name)) {
       continue;
     }
-    if (!types.some(type => EARNED_BLOCKS.has(type))) {
+    // …and a drawer the tree withholds is gated though nothing in it is
+    // granted (`Catalogue.withheld`).
+    if (
+      !WITHHELD_CATEGORIES.has(name) &&
+      !types.some(type => EARNED_BLOCKS.has(type))
+    ) {
       continue;
     }
     const missing = types.filter(

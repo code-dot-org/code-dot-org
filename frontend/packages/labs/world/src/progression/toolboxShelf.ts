@@ -14,6 +14,11 @@
 // entirely open, and gating grows as the curriculum does rather than having to
 // be complete on the first day.
 //
+// One exception, named on the catalogue rather than here: a drawer the tree
+// WITHHOLDS is gated though nothing in it is granted (`Catalogue.withheld`).
+// The Cameras drawer is one, because a world's cameras are made in the map
+// editor and the camera lessons teach that instead.
+//
 // The consequence is worth stating plainly, because it is the forcing function:
 // once one Actor block is granted, every OTHER Actor block is hidden until some
 // tile grants it too. A lesson that needs a block nobody has assigned is a
@@ -94,10 +99,19 @@ export const EARNED_BLOCKS: ReadonlySet<string> =
   earnedBlocksOf(DEFAULT_CATALOGUE);
 export const EARNED_CATEGORIES: ReadonlySet<string> =
   earnedCategoriesOf(DEFAULT_CATALOGUE);
+/**
+ * Drawers gated block by block though nothing in them is granted
+ * (`Catalogue.withheld`): each of their blocks is hidden until a tile grants
+ * it, which none does.
+ */
+export const WITHHELD_CATEGORIES: ReadonlySet<string> = new Set(
+  DEFAULT_CATALOGUE.withheld ?? [],
+);
 
 /** Whether this drawer has anything earned in it — see the header. */
 const isEarned = (category: ToolboxCategory): boolean =>
   EARNED_CATEGORIES.has(category.name) ||
+  WITHHELD_CATEGORIES.has(category.name) ||
   (category.blocks ?? []).some(item => {
     const type = typeOf(item);
     return type !== undefined && EARNED_BLOCKS.has(type);

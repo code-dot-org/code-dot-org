@@ -25,6 +25,7 @@ import {
   importStockSprite,
 } from '../../appearance/importStock';
 import {stockAnimation, stockSprite} from '../../appearance/stock';
+import type {MainCameraSettings} from '../../blockly/placementCameras';
 import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
 import {importStockRule} from '../../rules/importStockRule';
@@ -2009,62 +2010,42 @@ describe('the map lesson’s check', () => {
   });
 });
 
+/**
+ * The world's main camera, edited as the map editor edits it: its traits and
+ * values live on the main map, not in blocks (`placementCameras`).
+ */
+const withMainCamera = (
+  source: Parameters<typeof editing>[0],
+  change: (camera: MainCameraSettings) => MainCameraSettings,
+) =>
+  editing(source, 'main.world', contents => {
+    const file = JSON.parse(contents) as {
+      map: {mainCamera?: MainCameraSettings};
+    };
+    file.map.mainCamera = change(
+      file.map.mainCamera ?? {traits: [], values: []},
+    );
+    return JSON.stringify(file);
+  });
+
 describe('the camera lesson’s check', () => {
   const lesson = LESSONS['place/camera'];
 
-  /** `define camera ⟨Chase⟩ …` and the block that looks through it. */
+  /** Follows, onto the Hero, and Confined to the Map if asked. */
   const chasing = (confined: boolean) =>
-    editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const rows = rowsOf(workspace);
-      const traits: Row[] = [
+    withMainCamera(lesson.source, () => ({
+      traits: [
+        'Camera Follow#FollowsTrait',
+        ...(confined ? ['Camera Confined#ConfinedToTheMapTrait'] : []),
+      ],
+      values: [
         {
-          type: 'world_use_trait',
-          fields: {TRAIT: 'Camera Follow#FollowsTrait'},
+          setter: 'world_set_CameraFollow_ActorToFollowProperty',
+          type: 'actor',
+          value: actorPath('hero'),
         },
-        ...(confined
-          ? [
-              {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Camera Confined#ConfinedToTheMapTrait'},
-              },
-            ]
-          : []),
-        {
-          type: 'world_set_CameraFollow_ActorToFollowProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_camera'}},
-            VALUE: {
-              block: {
-                type: 'world_actor_kind',
-                fields: {ACTOR: actorPath('hero')},
-              },
-            },
-          },
-        },
-      ];
-      // The camera goes LAST, after the Hero exists: `any ⟨Hero⟩` is read where
-      // it is written, and read too early it is a view that never moves.
-      rows[rows.length - 1].next = {
-        block: {
-          type: 'world_define_camera',
-          id: 'chase',
-          fields: {NAME: 'Chase'},
-          inputs: {
-            DO: {
-              block: traits.reduceRight((next, block) => ({
-                ...block,
-                next: {block: next},
-              })),
-            },
-          },
-          next: {
-            block: {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
-          },
-        },
-      };
-      return JSON.stringify(workspace);
-    });
+      ],
+    }));
 
   it('refuses a view that never moves', async () => {
     const {passes} = await check('place/camera', lesson.source);
@@ -2088,60 +2069,45 @@ describe('the camera lesson’s check', () => {
 describe('the camera-feel lesson’s check', () => {
   const lesson = LESSONS['place/camera-feel'];
 
-  /** The camera, with the traits a learner elected and the numbers they set. */
+  /** The camera, with the traits a learner ticked and the numbers they set. */
   const tuned = (options: {ease?: boolean; deadzone?: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const camera = rowsOf(workspace).find(
-        row => row.type === 'world_define_camera',
-      )!;
-      const rows: Row[] = [
+    withMainCamera(lesson.source, camera => ({
+      traits: [
+        ...camera.traits,
+        ...(options.ease ? ['Camera Ease#EasesTrait'] : []),
+        ...(options.deadzone ? ['Camera Deadzone#HasADeadzoneTrait'] : []),
+      ],
+      values: [
+        ...camera.values,
         ...(options.ease
           ? [
               {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Camera Ease#EasesTrait'},
-              },
-              {
-                type: 'world_set_CameraEase_SmoothnessProperty',
-                inputs: {
-                  ACTOR: {block: {type: 'world_this_camera'}},
-                  VALUE: {shadow: {type: 'math_number', fields: {NUM: 0.25}}},
-                },
+                setter: 'world_set_CameraEase_SmoothnessProperty',
+                type: 'number',
+                value: '0.25',
               },
             ]
           : []),
         ...(options.deadzone
           ? [
               {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Camera Deadzone#HasADeadzoneTrait'},
-              },
-              {
-                type: 'world_set_CameraDeadzone_SlackProperty',
-                inputs: {
-                  ACTOR: {block: {type: 'world_this_camera'}},
-                  X: {shadow: {type: 'math_number', fields: {NUM: 64}}},
-                  Y: {shadow: {type: 'math_number', fields: {NUM: 32}}},
-                },
+                setter: 'world_set_CameraDeadzone_SlackProperty',
+                type: 'point',
+                value: '64,32',
               },
             ]
           : []),
-      ];
-      if (rows.length) {
-        let last = inSocket(camera, 'DO')!;
-        while (last.next?.block) {
-          last = last.next.block;
-        }
-        last.next = {
-          block: rows.reduceRight((next, row) => ({
-            ...row,
-            next: {block: next},
-          })),
-        };
-      }
-      return JSON.stringify(workspace);
-    });
+      ],
+    }));
+
+  it('starts where the camera lesson left off, kept in the map', () => {
+    // No `define camera` for the map editor to list as "in code".
+    const world = projectFiles(lesson.source)['worlds/main.world'];
+    expect(world).not.toContain('world_define_camera');
+    expect(JSON.parse(world).map.mainCamera.traits).toContain(
+      'Camera Follow#FollowsTrait',
+    );
+  });
 
   it('refuses a view welded to the Hero', async () => {
     const {passes} = await check('place/camera-feel', lesson.source);
@@ -4303,13 +4269,12 @@ describe('the big-world lesson’s check', () => {
   const lesson = LESSONS['adventure/world'];
 
   /** The camera, the backdrop, or both — which is the lesson. */
-  const assembled = (options: {camera: boolean; sky: boolean}) =>
-    editing(lesson.source, 'main.world', contents => {
+  const assembled = (options: {camera: boolean; sky: boolean}) => {
+    const sky = editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const rows = rowsOf(workspace);
-      let last = rows[rows.length - 1];
       if (options.sky) {
-        last.next = {
+        rows[rows.length - 1].next = {
           block: {
             type: 'world_set_background',
             fields: {BACKGROUND: 'meadow.png'},
@@ -4321,57 +4286,26 @@ describe('the big-world lesson’s check', () => {
             },
           },
         };
-        while (last.next?.block) {
-          last = last.next.block;
-        }
-      }
-      if (options.camera) {
-        last.next = {
-          block: {
-            type: 'world_define_camera',
-            id: 'follow',
-            fields: {NAME: 'Follow'},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_use_trait',
-                  fields: {TRAIT: 'Camera Follow#FollowsTrait'},
-                  next: {
-                    block: {
-                      type: 'world_use_trait',
-                      fields: {
-                        TRAIT: 'Camera Confined#ConfinedToTheMapTrait',
-                      },
-                      next: {
-                        block: {
-                          type: 'world_set_CameraFollow_ActorToFollowProperty',
-                          inputs: {
-                            ACTOR: {block: {type: 'world_this_camera'}},
-                            VALUE: {
-                              block: {
-                                type: 'world_actor_kind',
-                                fields: {ACTOR: actorPath('walker')},
-                              },
-                            },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-            next: {
-              block: {
-                type: 'world_use_camera',
-                fields: {CAMERA: 'camera:follow'},
-              },
-            },
-          },
-        };
       }
       return JSON.stringify(workspace);
     });
+    // The camera as the map editor makes it: the main camera's, on the map.
+    return options.camera
+      ? withMainCamera(sky, () => ({
+          traits: [
+            'Camera Follow#FollowsTrait',
+            'Camera Confined#ConfinedToTheMapTrait',
+          ],
+          values: [
+            {
+              setter: 'world_set_CameraFollow_ActorToFollowProperty',
+              type: 'actor',
+              value: actorPath('walker'),
+            },
+          ],
+        }))
+      : sky;
+  };
 
   it('refuses a window that never moves', async () => {
     const {passes} = await check('adventure/world', lesson.source);

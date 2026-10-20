@@ -18,6 +18,8 @@ export const WORLD_CATALOGUE: Catalogue = {
   name: 'World Lab',
   version: 1,
   tiles: TILES,
+  // Cameras are taught in the map editor (`place/camera`), not as blocks.
+  withheld: ['Cameras'],
 };
 
 export const CATALOGUES: readonly Catalogue[] = [WORLD_CATALOGUE];

@@ -8,6 +8,7 @@
 // block).
 
 import {chain, me, num} from '../../actors/stock/workspace';
+import type {MainCameraSettings} from '../../blockly/placementCameras';
 
 /** `set position of ⟨this actor⟩ x ⟨…⟩ y ⟨…⟩`, inside an `add actor`. */
 export const placeAt = (x: number, y: number) => ({
@@ -217,6 +218,13 @@ export interface WorldSpec {
    * run, so a lesson that wants one wants a handler.
    */
   handlers?: object[];
+  /**
+   * The traits and values the world's main camera elects, kept on its main
+   * map as the map editor keeps them (`placementCameras`). A lesson's camera
+   * is made in the map editor, so a lesson that starts with one starts with
+   * it there rather than in blocks.
+   */
+  mainCamera?: MainCameraSettings;
 }
 
 /** A `.world` file. */
@@ -253,6 +261,7 @@ const isMapRow = (row: object): row is MapRow => IN_MAP in row;
 const mainMapOf = (
   rows: object[],
   tiles: [x: number, y: number] | undefined,
+  mainCamera: MainCameraSettings | undefined,
 ): object | undefined => {
   const taken = new Set<string>();
   const actors = rows.filter(isMapRow).flatMap(row =>
@@ -265,11 +274,12 @@ const mainMapOf = (
       return {...placement, id};
     }),
   );
-  if (actors.length === 0) {
+  if (actors.length === 0 && !mainCamera) {
     return undefined;
   }
   return {
     type: 'map',
+    ...(mainCamera ? {mainCamera} : {}),
     // Sized as the world says it is, so the map editor opens on the whole
     // level rather than on its first screen.
     ...(tiles
@@ -288,6 +298,7 @@ export const worldFile = ({
   rows,
   actors,
   handlers,
+  mainCamera,
 }: WorldSpec): LessonWorld => {
   const inside = [
     ...(tiles
@@ -325,7 +336,9 @@ export const worldFile = ({
     world: JSON.stringify(
       {
         blocks: {blocks: [world, ...beside]},
-        ...(mainMapOf(rows, tiles) ? {map: mainMapOf(rows, tiles)} : {}),
+        ...(mainMapOf(rows, tiles, mainCamera)
+          ? {map: mainMapOf(rows, tiles, mainCamera)}
+          : {}),
       },
       null,
       2,

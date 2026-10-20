@@ -92,7 +92,7 @@ and opens blocks for its second half.
 | `place/map`          | map    | BUILT                                                               |
 | `place/layers`       | map    | BUILT                                                               |
 | `place/script`       | map    | BUILT; the first blocks a Place learner writes                      |
-| `place/camera` (2)   | blocks | until a world's camera is in its inspector (MAP_FIRST.md)           |
+| `place/camera` (2)   | map    | BUILT; the main camera's traits and fields, in its inspector        |
 
 Fifteen of twenty-nine in the end: seven told on the map and eight half
 told there — rather than the eighteen this table first counted, which was a
