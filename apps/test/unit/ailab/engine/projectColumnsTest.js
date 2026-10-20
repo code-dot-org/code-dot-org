@@ -92,16 +92,76 @@ describe('applyPresetColumns', () => {
     expect(result.selectedFeatures).toEqual(['a', 'c']);
   });
 
-  test('keeps the rest of the project', () => {
-    const saved = project({hyperparameters: {k: 3}});
+  /*
+    A locked preset can replace columns the dataset still offers, which
+    keepSelectableColumns leaves alone. The run it replaces them under is no
+    more valid than one whose columns were dropped.
+  */
+  test('a locked label drops the saved run it replaces', () => {
     const result = applyPresetColumns(
-      saved,
+      project({
+        labelColumn: 'a',
+        selectedFeatures: ['b', 'c'],
+        hyperparameters: {k: 1},
+        accuracyCheckRowIndices: [3],
+      }),
+      {labelColumn: 'c'},
+      true,
+      false,
+      DATA
+    );
+    expect(result.labelColumn).toBe('c');
+    expect(result.selectedFeatures).toEqual(['b']);
+    expect(result.hyperparameters).toBeUndefined();
+    expect(result.accuracyCheckRowIndices).toBeUndefined();
+  });
+
+  test('locked features drop the saved run they replace', () => {
+    const result = applyPresetColumns(
+      project({
+        labelColumn: 'a',
+        selectedFeatures: ['b'],
+        hyperparameters: {k: 1},
+        accuracyCheckRowIndices: [3],
+      }),
+      {selectedFeatures: ['c']},
+      false,
+      true,
+      DATA
+    );
+    expect(result.selectedFeatures).toEqual(['c']);
+    expect(result.hyperparameters).toBeUndefined();
+  });
+
+  test('a preset that changes nothing keeps the saved run', () => {
+    const result = applyPresetColumns(
+      project({
+        labelColumn: 'a',
+        selectedFeatures: ['b', 'c'],
+        hyperparameters: {k: 1},
+        accuracyCheckRowIndices: [3],
+      }),
+      {labelColumn: 'a', selectedFeatures: ['b', 'c']},
+      true,
+      true,
+      DATA
+    );
+    expect(result.hyperparameters).toEqual({k: 1});
+    expect(result.accuracyCheckRowIndices).toEqual([3]);
+  });
+
+  test('keeps the rest of the project', () => {
+    const historicResults = [
+      {label: 'a', features: ['b'], accuracy: '80.00', correct: 4, total: 5},
+    ];
+    const result = applyPresetColumns(
+      project({historicResults}),
       {labelColumn: 'a'},
       false,
       false,
       DATA
     );
-    expect(result.hyperparameters).toEqual({k: 3});
+    expect(result.historicResults).toEqual(historicResults);
   });
 });
 
@@ -195,6 +255,22 @@ describe('keepSelectableColumns', () => {
       DATA
     );
     expect(result.historicResults).toEqual(historicResults);
+  });
+
+  test('reordering the features alone keeps the saved run', () => {
+    const result = keepSelectableColumns(
+      project({
+        labelColumn: 'a',
+        selectedFeatures: ['c', 'b'],
+        hyperparameters: {k: 3},
+        accuracyCheckRowIndices: [0, 2],
+      }),
+      ['a', 'b', 'c'],
+      DATA
+    );
+    expect(result.selectedFeatures).toEqual(['b', 'c']);
+    expect(result.hyperparameters).toEqual({k: 3});
+    expect(result.accuracyCheckRowIndices).toEqual([0, 2]);
   });
 
   test('keeps the training run the project described', () => {
