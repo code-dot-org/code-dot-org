@@ -1,40 +1,28 @@
-import React, {useLayoutEffect, useRef} from 'react';
-import {Provider} from 'react-redux';
+import React, {useRef} from 'react';
 
 import App, {type AppProps} from './App';
 import {setAssetPath} from './assetPath';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
-import {loadLevel} from './levelLoad';
-import {ProjectProvider} from './ProjectContext';
 import {setInstructionsEnabled} from './redux';
 import {store} from './store';
-import {TrainingDataProvider} from './TrainingDataContext';
-import type {Mode} from './types';
 
 export interface AilabEngineProps extends AppProps {
   /** Base path the consumer serves the lab's datasets/images from. */
   assetPath: string;
   i18n?: Record<string, string>;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
-  mode?: Mode;
-  levelId?: string | number;
 }
 
-/**
- * The lab, under the providers its components expect. The Redux store is a
- * module singleton, so only one of these can be mounted at a time.
- */
 const AilabEngine = ({
   assetPath,
   i18n,
   logMetric,
-  mode,
-  levelId,
   ...appProps
 }: AilabEngineProps) => {
   // At render time rather than in an effect: the components below read the
-  // asset path and I18n.t as they first render, before any effect runs.
+  // asset path and I18n.t as they first render, and the host's level load
+  // reads the asset path from its own layout effect.
   const initialized = useRef(false);
   if (!initialized.current) {
     initialized.current = true;
@@ -46,23 +34,7 @@ const AilabEngine = ({
     store.dispatch(setInstructionsEnabled(!!appProps.setInstructionsKey));
   }
 
-  // A layout effect, not a plain effect: it runs before the browser paints, so
-  // a level change never shows a frame of the previous level's state.
-  // TODO: read level properties from lab2 redux rather than passing them into the store,
-  // and follow the standard lab2 patterns for level changes.
-  useLayoutEffect(() => {
-    loadLevel(mode);
-  }, [levelId, mode]);
-
-  return (
-    <Provider store={store}>
-      <ProjectProvider>
-        <TrainingDataProvider>
-          <App {...appProps} />
-        </TrainingDataProvider>
-      </ProjectProvider>
-    </Provider>
-  );
+  return <App {...appProps} />;
 };
 
 export default AilabEngine;

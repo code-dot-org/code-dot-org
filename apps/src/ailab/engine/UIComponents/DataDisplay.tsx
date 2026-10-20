@@ -6,6 +6,7 @@ import React from 'react';
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
+import {useDatasetTableView} from '../useTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
@@ -14,10 +15,15 @@ import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
   const dispatch = useAppDispatch();
-  const rowCount = useAppSelector(state => state.data.length);
+  const data = useAppSelector(state => state.data);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
+  const tableView = useDatasetTableView(
+    [...data.keys()],
+    Object.keys(data[0] ?? {})
+  );
 
+  const rowCount = data.length;
   if (rowCount === 0) {
     return null;
   }
@@ -78,7 +84,7 @@ const DataDisplay = () => {
         <DatasetCardDeck />
       ) : (
         <div className={styles.tableContainer}>
-          <DataTable />
+          <DataTable view={tableView} />
         </div>
       )}
     </div>

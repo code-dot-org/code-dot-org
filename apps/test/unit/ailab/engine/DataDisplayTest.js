@@ -26,6 +26,9 @@ function renderDisplay() {
 
 const button = name => screen.getByRole('button', {name});
 
+const rowNumbers = () =>
+  Array.from(document.querySelectorAll('tbody th'), cell => cell.textContent);
+
 describe('DataDisplay', () => {
   beforeEach(() => I18n.initI18n());
 
@@ -109,5 +112,50 @@ describe('DataDisplay', () => {
 
     fireEvent.click(button('Table'));
     expect(screen.getByLabelText('Close column analysis')).toBeTruthy();
+  });
+
+  test('sorts by a column and keeps each row its dataset number', () => {
+    renderDisplay();
+    fireEvent.click(button('Sort by legs low to high'));
+
+    expect(
+      screen.getByRole('columnheader', {name: 'legs'}).getAttribute('aria-sort')
+    ).toBe('ascending');
+    expect(rowNumbers().join(' ')).toBe('3 6 9 1 4 7 2 5 8 10');
+  });
+
+  test('the sort button names what the next click does', () => {
+    renderDisplay();
+    fireEvent.click(button('Sort by animal A-Z'));
+    fireEvent.click(button('Sort by animal Z-A'));
+
+    expect(
+      button('Original order').closest('th').getAttribute('aria-sort')
+    ).toBe('descending');
+    expect(rowNumbers().slice(0, 3)).toEqual(['3', '6', '9']);
+
+    fireEvent.click(button('Original order'));
+    expect(
+      button('Sort by animal A-Z').closest('th').hasAttribute('aria-sort')
+    ).toBe(false);
+    expect(rowNumbers().slice(0, 3)).toEqual(['1', '2', '3']);
+  });
+
+  test('sorts text by the value it shows', () => {
+    I18n.initI18n({
+      datasets: {
+        unknown: {
+          values: {
+            bird: () => 'oiseau',
+            dog: () => 'chien',
+            snake: () => 'serpent',
+          },
+        },
+      },
+    });
+    renderDisplay();
+    fireEvent.click(button('Sort by animal A-Z'));
+
+    expect(rowNumbers().join(' ')).toBe('2 5 8 10 1 4 7 3 6 9');
   });
 });

@@ -14,13 +14,15 @@ import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
-  name: ['Tweety', 'Fido', 'Slither'][index] || row.animal,
+  name:
+    ['Tweety', 'Fido', 'Slither', 'Polly', 'Rex', 'Kaa'][index] || row.animal,
   ...row,
 }));
 
 function renderScorecard({
   data,
   predictedLabels = ['bird', 'dog', 'bird'],
+  accuracyCheckRowIndices = [0, 1, 2],
 } = {}) {
   const store = levelStore();
   if (data) {
@@ -33,7 +35,7 @@ function renderScorecard({
     store,
     project: {
       ...levelProject(),
-      accuracyCheckRowIndices: [0, 1, 2],
+      accuracyCheckRowIndices,
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
@@ -56,6 +58,8 @@ function headerRows() {
 function bodyRows() {
   return rowsIn(screen.getAllByRole('rowgroup')[1]);
 }
+
+const sortButton = name => screen.getByRole('button', {name});
 
 describe('ResultsDetails', () => {
   beforeAll(() => {
@@ -121,5 +125,17 @@ describe('ResultsDetails', () => {
     fireEvent.click(screen.getByLabelText('Show only features and label'));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
+  });
+
+  test('sorts another dataset column by its own row', () => {
+    renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
+    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(sortButton('Sort by name A-Z'));
+    fireEvent.click(sortButton('Sort by name Z-A'));
+
+    expect(bodyRows()).toEqual([
+      ['5', 'Rex', '4', 'dog', 'dog'],
+      ['4', 'Polly', '2', 'bird', 'bird'],
+    ]);
   });
 });
