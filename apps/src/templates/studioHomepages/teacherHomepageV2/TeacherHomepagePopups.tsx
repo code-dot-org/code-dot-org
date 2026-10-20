@@ -77,17 +77,21 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   React.useEffect(() => {
     HttpClient.fetchJson<DrawerData>('/teacher_dashboard/get_drawer_data')
       .then(data => {
+        // Allows triggering of drawer with URL params for testing / debugging
+        const searchParams = new URLSearchParams(window.location.search);
+        const forceNps = searchParams.get('showNPS') === 'true';
+
         setExistingSchoolInfo(data.value.existingSchoolInfo);
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
         setAFEDrawerOpen(data.value.afeEligible);
-        if (data.value.showNps) {
+        if (data.value.showNps || forceNps) {
           HttpClient.fetchJson<{props: string}>(
             '/form/nps_survey/configuration'
           )
             .then(result => {
               if (result.value?.props) {
-                setNPSDrawerOpen(data.value.showNps);
+                setNPSDrawerOpen(true);
                 setNPSProps(result.value.props);
               }
             })
@@ -96,8 +100,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
             });
         }
 
-        // Allows triggering of drawer with URL params for testing / debugging
-        const searchParams = new URLSearchParams(window.location.search);
         if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
           setSchoolInfoInterstitialOpen(true);
           // We don't want to set all to true at the same time
@@ -105,8 +107,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           setSchoolInfoConfirmationOpen(true);
         } else if (searchParams.get('showAFE') === 'true') {
           setAFEDrawerOpen(true);
-        } else if (searchParams.get('showNPS') === 'true') {
-          setNPSDrawerOpen(true);
         }
         setIsLoading(false);
       })
