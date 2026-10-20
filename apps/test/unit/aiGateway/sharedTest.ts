@@ -58,6 +58,16 @@ describe('fetchAccessToken', () => {
     expect(result.signingKey).toBe('environment_key');
   });
 
+  it('throws when the response has no token', async () => {
+    mockPost.mockResolvedValue({
+      json: async () => ({turnstileEnforcementMode: 'disabled'}),
+    });
+
+    await expect(fetchAccessToken()).rejects.toThrow(
+      'AI Gateway token response has no token'
+    );
+  });
+
   it('sends the given context instead when a caller passes one', async () => {
     const shellContext: AichatContext = {
       clientType: AiChatClientTypes.ADAPTIVE,

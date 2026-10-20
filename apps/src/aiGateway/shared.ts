@@ -35,14 +35,15 @@ export async function fetchAccessToken(
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
-  // turnstileEnforcementMode is deliberately typed as unknown rather than asserted: it is
-  // absent from servers predating the flag, and parseTurnstileEnforcementMode is what
-  // turns anything unexpected into a safe default.
+  // Fields are unknown until checked; response.json() is untyped.
   const value = (await response.json()) as {
-    token: string;
+    token?: unknown;
     turnstileEnforcementMode?: unknown;
     signingKey?: unknown;
   };
+  if (typeof value.token !== 'string') {
+    throw new Error('AI Gateway token response has no token');
+  }
   return {
     token: value.token,
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
