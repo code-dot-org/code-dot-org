@@ -217,6 +217,7 @@ const legacyBlocks: {[key: string]: OldBlockDefinition} = Object.fromEntries(
     return [
       type,
       {
+        ...(value as object),
         type,
         init: (value as {init: () => void}).init,
         generator: {
