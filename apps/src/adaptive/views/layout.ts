@@ -10,6 +10,11 @@ export const BOARD_WIDTH = 760;
 const TOP_MARGIN = 96;
 const BOTTOM_MARGIN = 60;
 const RADIAL_MARGIN = 120;
+// Around a destinations grid: above for the boxes and their titles, below
+// for a title under the last row, and beside for a member's title next to it.
+const DESTINATION_HEADROOM = 40;
+const DESTINATION_FOOTROOM = 24;
+const DESTINATION_SIDE_MARGIN = 180;
 
 /** Distances between neighbouring nodes, per layout direction. */
 export interface Spacing {
@@ -25,6 +30,8 @@ export interface Spacing {
 export const NORMAL_SPACING: Spacing = {column: 200, row: 170, ring: 140};
 /** With no lines to make room for, nodes sit nearly touching. */
 export const PACKED_SPACING: Spacing = {column: 170, row: 135, ring: 115};
+/** For the circle with its title below, whose lines run center to center. */
+export const TIGHT_SPACING: Spacing = {column: 120, row: 110, ring: 100};
 
 export interface NodePosition {
   id: string;
@@ -45,7 +52,15 @@ export interface MapLayout {
   height: number;
   /** Guide circles behind a radial layout, about its center. */
   rings?: {x: number; y: number; radii: number[]};
+  /** The destination groups of a destinations layout, in authored order. */
+  destinations?: DestinationGroup[];
   spacing: Spacing;
+}
+
+/** The checkpoints that share a `destination`, in authored order. */
+export interface DestinationGroup {
+  title: string;
+  ids: string[];
 }
 
 /**
@@ -253,6 +268,149 @@ export function layoutCity(
 }
 
 /**
+ * The destinations grid: checkpoints with a `destination` stacked in the
+ * outer columns of a square grid. Groups alternate left and right from the
+ * top, each a run of rows with a free row between neighbours, and each
+ * side's stack is centered on the root's row. The rest sit on the ring of
+ * their depth within the inner columns, the root at the center, each in
+ * the free cell nearest the direction of its children, so the pathway fans
+ * out from the center to its destinations. A leaf with no destination
+ * takes a free cell toward its parents. Each `turn` moves every group one
+ * place clockwise around the sides: down the right, then up the left.
+ * `row` is the grid row.
+ */
+export function layoutDestinations(
+  checkpoints: Checkpoint[],
+  spacing = NORMAL_SPACING,
+  turns = 0
+): MapLayout {
+  const groups = destinationGroups(checkpoints);
+  const grouped = new Set(groups.flatMap(g => g.ids));
+  const depthOf = new Map<string, number>();
+  const rows = depthRows(checkpoints);
+  rows.forEach((ids, depth) => ids.forEach(id => depthOf.set(id, depth)));
+  const children = new Map<string, string[]>();
+  const parents = new Map<string, string[]>();
+  for (const {from, to} of edgesOf(checkpoints)) {
+    children.set(from, [...(children.get(from) || []), to]);
+    parents.set(to, [...(parents.get(to) || []), from]);
+  }
+  // Inner columns either side of the center: one per ring a checkpoint
+  // with children can sit on.
+  const innerDepth = Math.max(
+    0,
+    ...checkpoints
+      .filter(c => children.has(c.id) && !grouped.has(c.id))
+      .map(c => depthOf.get(c.id)!)
+  );
+  const half = Math.max(1, innerDepth);
+
+  const placed = new Map<string, Cell>();
+  const taken = new Set<string>();
+  const place = (id: string, cell: Cell) => {
+    placed.set(id, cell);
+    taken.add(cellKey(cell));
+  };
+
+  const stacks = destinationStacks(groups, turns);
+  stacks.forEach((stack, side) => {
+    const col = (side === 0 ? -1 : 1) * (half + 1);
+    const total = stack.reduce((n, g) => n + g.ids.length + 1, -1);
+    let row = -Math.floor(total / 2);
+    for (const group of stack) {
+      for (const id of group.ids) place(id, {col, row: row++});
+      row++;
+    }
+  });
+
+  // Angles are clockwise from the right, the row axis pointing down.
+  const angleOf = (c: Cell) => Math.atan2(c.row, c.col);
+  const between = (a: number, b: number) => {
+    const d = Math.abs(a - b) % TAU;
+    return Math.min(d, TAU - d);
+  };
+  const meanAngle = (ids: string[]) => {
+    const cells = ids.map(id => placed.get(id)!);
+    const x = cells.reduce((s, c) => s + Math.cos(angleOf(c)), 0);
+    const y = cells.reduce((s, c) => s + Math.sin(angleOf(c)), 0);
+    return Math.atan2(y, x);
+  };
+  const freeOnRing = (k: number): Cell[] =>
+    (k === 0 ? [{col: 0, row: 0}] : spiralCells((2 * k + 1) ** 2))
+      .slice(k === 0 ? 0 : (2 * k - 1) ** 2)
+      .filter(c => Math.abs(c.col) <= half && !taken.has(cellKey(c)));
+  const nearestOnRing = (k: number, angle: number): Cell => {
+    for (let ring = k; ; ring++) {
+      const free = freeOnRing(ring);
+      if (free.length) {
+        return free.reduce((best, c) =>
+          between(angleOf(c), angle) < between(angleOf(best), angle) ? c : best
+        );
+      }
+    }
+  };
+
+  // Outer rings first, so each checkpoint's children are placed before it.
+  // A leaf with no destination waits for its parents.
+  for (let depth = rows.length - 1; depth >= 0; depth--) {
+    for (const id of rows[depth]) {
+      if (placed.has(id) || !children.has(id)) continue;
+      const known = (children.get(id) || []).filter(c => placed.has(c));
+      place(id, nearestOnRing(depth, known.length ? meanAngle(known) : 0));
+    }
+  }
+  for (const c of checkpoints) {
+    if (placed.has(c.id)) continue;
+    const known = (parents.get(c.id) || []).filter(p => placed.has(p));
+    const depth = depthOf.get(c.id)!;
+    place(c.id, nearestOnRing(depth, known.length ? meanAngle(known) : 0));
+  }
+
+  const cells = checkpoints.map(c => placed.get(c.id)!);
+  return {
+    ...gridLayout(checkpoints, cells, spacing, {
+      top: TOP_MARGIN + DESTINATION_HEADROOM,
+      bottom: BOTTOM_MARGIN + DESTINATION_FOOTROOM,
+      side: Math.max(spacing.column, DESTINATION_SIDE_MARGIN),
+    }),
+    destinations: groups,
+  };
+}
+
+/**
+ * The groups of the left and right stacks, top to bottom, alternating
+ * sides from the top, then moved `turns` places clockwise around the
+ * sides.
+ */
+function destinationStacks(
+  groups: DestinationGroup[],
+  turns: number
+): DestinationGroup[][] {
+  const left = groups.filter((_, i) => i % 2 === 0);
+  const right = groups.filter((_, i) => i % 2 === 1);
+  const clockwise = [...right, ...left.reverse()];
+  const shift =
+    ((turns % clockwise.length) + clockwise.length) % clockwise.length;
+  const turned = [
+    ...clockwise.slice(clockwise.length - shift),
+    ...clockwise.slice(0, clockwise.length - shift),
+  ];
+  return [turned.slice(right.length).reverse(), turned.slice(0, right.length)];
+}
+
+/** Checkpoints grouped by `destination`, groups and members in authored order. */
+function destinationGroups(checkpoints: Checkpoint[]): DestinationGroup[] {
+  const groups: DestinationGroup[] = [];
+  for (const c of checkpoints) {
+    if (!c.destination) continue;
+    const group = groups.find(g => g.title === c.destination);
+    if (group) group.ids.push(c.id);
+    else groups.push({title: c.destination, ids: [c.id]});
+  }
+  return groups;
+}
+
+/**
  * The chain from the sole root up to and including the first checkpoint
  * with other than exactly one child, each link the only child of the one
  * before and requiring nothing else. Empty with no root or more than one.
@@ -284,42 +442,44 @@ function spineOf(checkpoints: Checkpoint[]): string[] {
  * A grid layout turned a quarter turn clockwise. What was above the root is
  * now to its right. Columns become rows, so the spacing swaps with them and
  * lines still route through the gaps. Nodes stay upright; `row` is left as
- * it was.
+ * it was, and so is the margin on each side of the board.
  */
 export function turnLayout(layout: MapLayout): MapLayout {
   const {column, row} = layout.spacing;
   const spacing = {...layout.spacing, column: row, row: column};
-  // (x, y) -> (-y, x) about the origin, then shifted back into the board,
-  // which is the old board with its sides swapped.
-  const left = column;
-  const top = TOP_MARGIN;
+  const old = Object.values(layout.nodes);
+  const minX = Math.min(...old.map(n => n.x));
+  const maxX = Math.max(...old.map(n => n.x));
+  const minY = Math.min(...old.map(n => n.y));
+  const maxY = Math.max(...old.map(n => n.y));
+  // (x, y) -> (-y, x) about the origin, then shifted back into the board.
   const nodes: {[id: string]: NodePosition} = {};
-  const ys = Object.values(layout.nodes).map(n => n.y);
-  const maxY = Math.max(...ys);
-  for (const n of Object.values(layout.nodes)) {
-    nodes[n.id] = {
-      ...n,
-      x: left + (maxY - n.y),
-      y: top + (n.x - column),
-    };
+  for (const n of old) {
+    nodes[n.id] = {...n, x: minX + (maxY - n.y), y: minY + (n.x - minX)};
   }
-  const xs = Object.values(nodes).map(n => n.x);
-  const ys2 = Object.values(nodes).map(n => n.y);
   return {
     ...layout,
     nodes,
     spacing,
-    width: Math.max(...xs) + column,
-    height: Math.max(...ys2) + BOTTOM_MARGIN,
+    width: minX + (maxY - minY) + (layout.width - maxX),
+    height: minY + (maxX - minX) + (layout.height - maxY),
   };
 }
 
-/** Positions and board size for checkpoints already assigned grid cells. */
+/**
+ * Positions and board size for checkpoints already assigned grid cells.
+ * The margins are the usual top and bottom and a column at each side,
+ * unless given.
+ */
 function gridLayout(
   checkpoints: Checkpoint[],
   cells: Cell[],
-  spacing: Spacing
+  spacing: Spacing,
+  margin?: {top: number; bottom: number; side: number}
 ): MapLayout {
+  const top = margin?.top ?? TOP_MARGIN;
+  const bottom = margin?.bottom ?? BOTTOM_MARGIN;
+  const side = margin?.side ?? spacing.column;
   const minCol = Math.min(...cells.map(c => c.col));
   const maxCol = Math.max(...cells.map(c => c.col));
   const minRow = Math.min(...cells.map(c => c.row));
@@ -330,15 +490,15 @@ function gridLayout(
     nodes[c.id] = {
       id: c.id,
       row: row - minRow,
-      x: spacing.column * (col - minCol + 1),
-      y: TOP_MARGIN + (row - minRow) * spacing.row,
+      x: side + spacing.column * (col - minCol),
+      y: top + (row - minRow) * spacing.row,
     };
   });
   return {
     nodes,
     edges: edgesOf(checkpoints),
-    width: spacing.column * (maxCol - minCol + 2),
-    height: TOP_MARGIN + (maxRow - minRow) * spacing.row + BOTTOM_MARGIN,
+    width: 2 * side + spacing.column * (maxCol - minCol),
+    height: top + (maxRow - minRow) * spacing.row + bottom,
     spacing,
   };
 }

@@ -10,7 +10,7 @@ import {
 } from '../progress';
 import {Checkpoint, Pathway} from '../types';
 
-import {DrawnEdge, gridRoutes} from './gridRoutes';
+import {DrawnEdge, busRoutes, gridRoutes} from './gridRoutes';
 import {
   Edge,
   MapLayout,
@@ -19,15 +19,23 @@ import {
   NodePosition,
   PACKED_SPACING,
   Spacing,
+  TIGHT_SPACING,
   layoutCheckpoints,
   layoutCity,
   layoutCluster,
+  layoutDestinations,
   layoutHoneycomb,
   layoutRadial,
   turnLayout,
 } from './layout';
 import {Rect, Size, ZoomLevel, boardTransform} from './mapZoom';
-import {EdgeShape, LayoutMode, NodeShape, useUiVariants} from './uiVariants';
+import {
+  EdgeShape,
+  GRID_MODES,
+  LayoutMode,
+  NodeShape,
+  useUiVariants,
+} from './uiVariants';
 
 import styles from './mapView.module.scss';
 
@@ -41,6 +49,10 @@ const ICONS: {[status in CheckpointStatus]: string} = {
 // Height of the title box above a circle, so the circle's center lands on
 // the layout's (x, y). Edges stop at the top of the box.
 const LABEL_HEIGHT = 40;
+// Two lines of title under a circle, and how far a title beside a circle
+// reaches out from its center; both match the stylesheet.
+const LABEL_BELOW_HEIGHT = 36;
+const SIDE_LABEL_REACH = NODE_RADIUS + 8 + 110;
 
 /** How far a node extends from its (x, y), per shape; edges stop there. */
 interface NodeMetrics {
@@ -50,12 +62,24 @@ interface NodeMetrics {
 }
 const NODE_METRICS: {[shape in NodeShape]: NodeMetrics} = {
   circle: {top: NODE_RADIUS + LABEL_HEIGHT, bottom: NODE_RADIUS, halfWidth: 95},
+  circleBelow: {
+    top: NODE_RADIUS,
+    bottom: NODE_RADIUS + LABEL_BELOW_HEIGHT,
+    halfWidth: 56,
+  },
   circleTitled: {top: 58, bottom: 58, halfWidth: 58},
   square: {top: 40, bottom: 40, halfWidth: 60},
   hexagon: {top: 62, bottom: 62, halfWidth: 54},
 };
+// Shapes whose title sits outside the shape.
+const NO_INNER_TITLE = new Set<NodeShape>(['circle', 'circleBelow']);
 // Room around that extent.
 const EXTENT_PADDING = 40;
+// Room between a destination box and its nodes, more above for the title,
+// and from the box to the group's trunk line beside it.
+const DESTINATION_PADDING = 12;
+const DESTINATION_TITLE_ROOM = 28;
+const TRUNK_GAP = 14;
 // One wheel gesture is many events; after a step, the rest are ignored for
 // about as long as the zoom transition runs.
 const WHEEL_COOLDOWN_MS = 500;
@@ -148,10 +172,8 @@ const LAYOUTS: {
   city: layoutCity,
   radial: layoutRadial,
   honeycomb: layoutHoneycomb,
+  destinations: layoutDestinations,
 };
-
-// Layouts on square cells, whose lines route through the gaps between them.
-const GRID_MODES = new Set<LayoutMode>(['cluster', 'city']);
 
 interface MapViewProps {
   pathway: Pathway;
@@ -198,14 +220,70 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
 }) => {
   const {variants} = useUiVariants();
   const metrics = NODE_METRICS[variants.nodeShape];
-  const cityTurns =
-    variants.layoutMode === 'city' ? ((variants.cityTurns % 4) + 4) % 4 : 0;
+  const turns = ((variants.cityTurns % 4) + 4) % 4;
+  const destinations = variants.layoutMode === 'destinations';
+  // Members of a destination carry their title beside them, outward.
+  const sideLabels = destinations && variants.nodeShape === 'circleBelow';
   const layout = useMemo(() => {
-    const spacing = variants.showEdges ? NORMAL_SPACING : PACKED_SPACING;
+    const spacing = sideLabels
+      ? TIGHT_SPACING
+      : variants.showEdges
+      ? NORMAL_SPACING
+      : PACKED_SPACING;
+    if (destinations) {
+      return layoutDestinations(pathway.checkpoints, spacing, turns);
+    }
     let built = LAYOUTS[variants.layoutMode](pathway.checkpoints, spacing);
-    for (let i = 0; i < cityTurns; i++) built = turnLayout(built);
+    if (variants.layoutMode === 'city') {
+      for (let i = 0; i < turns; i++) built = turnLayout(built);
+    }
     return built;
-  }, [pathway, variants.layoutMode, variants.showEdges, cityTurns]);
+  }, [
+    pathway,
+    variants.layoutMode,
+    variants.showEdges,
+    sideLabels,
+    destinations,
+    turns,
+  ]);
+  // A titled box around each destination group's nodes, and the group's
+  // trunk line just outside it on the inner side.
+  const destinationBoxes = useMemo(
+    () =>
+      (layout.destinations || []).map(({title, ids}) => {
+        const xs = ids.map(id => layout.nodes[id].x);
+        const ys = ids.map(id => layout.nodes[id].y);
+        const side = Math.min(...xs) < layout.width / 2 ? 'left' : 'right';
+        const reach = (toward: typeof side) =>
+          !sideLabels
+            ? metrics.halfWidth
+            : toward === side
+            ? SIDE_LABEL_REACH
+            : NODE_RADIUS;
+        const top = sideLabels ? NODE_RADIUS : metrics.top;
+        const bottom = sideLabels ? NODE_RADIUS : metrics.bottom;
+        const x = Math.min(...xs) - reach('left') - DESTINATION_PADDING;
+        const y =
+          Math.min(...ys) - top - DESTINATION_PADDING - DESTINATION_TITLE_ROOM;
+        const width =
+          Math.max(...xs) + reach('right') + DESTINATION_PADDING - x;
+        const height = Math.max(...ys) + bottom + DESTINATION_PADDING - y;
+        const trunk = side === 'left' ? x + width + TRUNK_GAP : x - TRUNK_GAP;
+        return {title, ids, side, x, y, width, height, trunk};
+      }),
+    [layout, metrics, sideLabels]
+  );
+  const memberSide = useMemo(
+    () => new Map(destinationBoxes.flatMap(b => b.ids.map(id => [id, b.side]))),
+    [destinationBoxes]
+  );
+  const trunkOf = useMemo(
+    () =>
+      Object.fromEntries(
+        destinationBoxes.flatMap(b => b.ids.map(id => [id, b.trunk]))
+      ),
+    [destinationBoxes]
+  );
   // The selected checkpoint's immediate requirements, marked on the map and
   // kept in view at focus.
   const required = useMemo(() => {
@@ -267,9 +345,10 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
     }
     return (id: string) => track.get(id) ?? 0.5;
   }, [layout]);
-  // What to draw: every edge, the selected checkpoint's, or none. The grid
-  // merges elbows that share a stretch; elsewhere each edge is one line.
-  // Highlighted lines come last, so they sit over the rest.
+  // What to draw: every edge, the selected checkpoint's, or none. The
+  // destinations grid runs its lines as roads along rows and columns, the
+  // other grids merge elbows that share a stretch, and elsewhere each edge
+  // is one line. Highlighted lines come last, so they sit over the rest.
   const lines = useMemo((): DrawnEdge[] => {
     const shown = variants.showEdges
       ? layout.edges
@@ -277,7 +356,9 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
       ? layout.edges.filter(feedsFocus)
       : [];
     const drawn =
-      variants.showEdges && GRID_MODES.has(variants.layoutMode)
+      destinations && variants.edgeShape === 'elbow'
+        ? busRoutes({...layout, edges: shown}, trunkOf)
+        : variants.showEdges && GRID_MODES.has(variants.layoutMode)
         ? gridRoutes(layout, variants.edgeShape)
         : shown.map(edge => ({
             key: `${edge.from}-${edge.to}`,
@@ -287,7 +368,7 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
     const lit = (line: DrawnEdge) => Number(line.edges.some(isIncoming));
     return [...drawn].sort((p, q) => lit(p) - lit(q));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [layout, focusId, variants]);
+  }, [layout, focusId, variants, trunkOf]);
   const [viewportRef, viewport] = useElementSize<HTMLDivElement>();
   const measured = viewport.width > 0 && viewport.height > 0;
   const {scale, x, y} = boardTransform(
@@ -326,6 +407,23 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
           transform: `translate(${x}px, ${y}px) scale(${scale})`,
         }}
       >
+        {destinationBoxes.map(box => (
+          <div
+            key={box.title}
+            className={classNames(
+              styles.destination,
+              box.side === 'right' && styles.destinationRight
+            )}
+            style={{
+              left: box.x,
+              top: box.y,
+              width: box.width,
+              height: box.height,
+            }}
+          >
+            <span className={styles.destinationTitle}>{box.title}</span>
+          </div>
+        ))}
         {(lines.length > 0 || layout.rings) && (
           <svg
             className={styles.edges}
@@ -359,6 +457,7 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
         {pathway.checkpoints.map(checkpoint => {
           const pos = layout.nodes[checkpoint.id];
           const status = statusMap[checkpoint.id];
+          const labelSide = sideLabels && memberSide.get(checkpoint.id);
           return (
             <div
               key={checkpoint.id}
@@ -396,7 +495,7 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
                         className={styles.shapeIcon}
                       />
                     )}
-                    {variants.nodeShape !== 'circle' && (
+                    {!NO_INNER_TITLE.has(variants.nodeShape) && (
                       <span className={styles.shapeTitle}>
                         {checkpoint.title}
                       </span>
@@ -409,6 +508,17 @@ const MapView: React.FunctionComponent<MapViewProps> = ({
                   </span>
                 )}
               </div>
+              {variants.nodeShape === 'circleBelow' && (
+                <span
+                  className={classNames(
+                    styles.labelBelow,
+                    labelSide === 'left' && styles.labelLeft,
+                    labelSide === 'right' && styles.labelRight
+                  )}
+                >
+                  {checkpoint.title}
+                </span>
+              )}
             </div>
           );
         })}

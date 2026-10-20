@@ -1,10 +1,12 @@
 import {Checkpoint} from '@cdo/apps/adaptive/types';
 import {
   MapLayout,
+  TIGHT_SPACING,
   layoutCheckpoints,
   layoutCity,
   turnLayout,
   layoutCluster,
+  layoutDestinations,
   layoutHoneycomb,
   layoutRadial,
 } from '@cdo/apps/adaptive/views/layout';
@@ -349,5 +351,140 @@ describe('layoutCity', () => {
     const cells = cellsOf(layoutCity(pathway));
     // A child above the start: no spine was laid.
     expect(cells.details).toEqual({col: 0, row: -1});
+  });
+});
+
+describe('layoutDestinations', () => {
+  const leaf = (id: string, requires: string[], destination: string) => ({
+    ...checkpoint(id, requires),
+    destination,
+  });
+  // A start, three branches and a sub-branch, four destinations of three
+  // leaves each, and a closing leaf with no destination.
+  const pathway = [
+    checkpoint('intro'),
+    checkpoint('a', ['intro']),
+    checkpoint('b', ['intro']),
+    checkpoint('c', ['intro']),
+    checkpoint('d', ['a']),
+    leaf('n1', ['a'], 'North'),
+    leaf('n2', ['b'], 'North'),
+    leaf('n3', ['b'], 'North'),
+    leaf('e1', ['b'], 'East'),
+    leaf('e2', ['b'], 'East'),
+    leaf('e3', ['b'], 'East'),
+    leaf('s1', ['c'], 'South'),
+    leaf('s2', ['c'], 'South'),
+    leaf('s3', ['c'], 'South'),
+    leaf('w1', ['d'], 'West'),
+    leaf('w2', ['d'], 'West'),
+    leaf('w3', ['d'], 'West'),
+    checkpoint('show', ['a', 'b', 'c', 'd']),
+  ];
+  const layout = layoutDestinations(pathway);
+  const {column, row} = layout.spacing;
+  const origin = layout.nodes.intro;
+  const cells = Object.fromEntries(
+    Object.values(layout.nodes).map(n => [
+      n.id,
+      {col: (n.x - origin.x) / column, row: (n.y - origin.y) / row},
+    ])
+  );
+  const ring = (id: string) =>
+    Math.max(Math.abs(cells[id].col), Math.abs(cells[id].row));
+
+  it('puts the start at the center and the destinations in the outer columns, left then right from the top', () => {
+    expect(cells.intro).toEqual({col: 0, row: 0});
+    expect([cells.n1, cells.n2, cells.n3]).toEqual([
+      {col: -3, row: -3},
+      {col: -3, row: -2},
+      {col: -3, row: -1},
+    ]);
+    expect([cells.e1, cells.e2, cells.e3]).toEqual([
+      {col: 3, row: -3},
+      {col: 3, row: -2},
+      {col: 3, row: -1},
+    ]);
+    expect([cells.s1, cells.s2, cells.s3]).toEqual([
+      {col: -3, row: 1},
+      {col: -3, row: 2},
+      {col: -3, row: 3},
+    ]);
+    expect([cells.w1, cells.w2, cells.w3]).toEqual([
+      {col: 3, row: 1},
+      {col: 3, row: 2},
+      {col: 3, row: 3},
+    ]);
+  });
+
+  it('puts a checkpoint on the ring of its depth, toward its children', () => {
+    // c feeds only the lower left; d feeds the lower right; a feeds d and
+    // the upper left corner.
+    expect(cells.c).toEqual({col: -1, row: 1});
+    expect(cells.d).toEqual({col: 2, row: 1});
+    expect(cells.a).toEqual({col: 1, row: -1});
+  });
+
+  it('gives a leaf with no destination a free cell on its ring, inside the outer columns', () => {
+    expect(ring('show')).toBe(3);
+    expect(Math.abs(cells.show.col)).toBeLessThan(3);
+    const keys = Object.values(cells).map(c => `${c.col},${c.row}`);
+    expect(new Set(keys).size).toBe(pathway.length);
+  });
+
+  it('keeps a free row between the stacks on a side', () => {
+    const keys = new Set(Object.values(cells).map(c => `${c.col},${c.row}`));
+    expect(keys.has('-3,0')).toBe(false);
+    expect(keys.has('3,0')).toBe(false);
+  });
+
+  it('leaves room above for the boxes and beside for the titles, kept when turned', () => {
+    const turned = turnLayout(layout);
+    const top = (l: MapLayout) =>
+      Math.min(...Object.values(l.nodes).map(n => n.y));
+    const left = (l: MapLayout) =>
+      Math.min(...Object.values(l.nodes).map(n => n.x));
+    expect(top(layout)).toBeGreaterThan(top(layoutCity(pathway)));
+    expect(left(layoutDestinations(pathway, TIGHT_SPACING))).toBeGreaterThan(
+      left(layoutCity(pathway, TIGHT_SPACING))
+    );
+    expect(top(turned)).toBe(top(layout));
+    expect(turned.destinations).toEqual(layout.destinations);
+  });
+
+  it('moves each destination one corner clockwise per turn, keeping the list order', () => {
+    const turned = layoutDestinations(pathway, undefined, 1);
+    const at = (id: string) => {
+      const n = turned.nodes[id];
+      return {
+        col: (n.x - turned.nodes.intro.x) / column,
+        row: (n.y - turned.nodes.intro.y) / row,
+      };
+    };
+    expect(at('n1')).toEqual({col: 3, row: -3});
+    expect(at('e1')).toEqual({col: 3, row: 1});
+    expect(at('w1')).toEqual({col: -3, row: 1});
+    expect(at('s1')).toEqual({col: -3, row: -3});
+    expect(turned.destinations).toEqual(layout.destinations);
+    expect(layoutDestinations(pathway, undefined, 4).nodes).toEqual(
+      layout.nodes
+    );
+  });
+
+  it('lists the destinations in authored order with their checkpoints', () => {
+    expect(layout.destinations).toEqual([
+      {title: 'North', ids: ['n1', 'n2', 'n3']},
+      {title: 'East', ids: ['e1', 'e2', 'e3']},
+      {title: 'South', ids: ['s1', 's2', 's3']},
+      {title: 'West', ids: ['w1', 'w2', 'w3']},
+    ]);
+  });
+
+  it('lays a pathway with no destinations out from the center', () => {
+    const plain = layoutDestinations(pathway.slice(0, 5));
+    expect(plain.destinations).toEqual([]);
+    const at = (id: string) => plain.nodes[id];
+    expect(Math.abs(at('a').x - at('intro').x)).toBeLessThanOrEqual(column);
+    expect(Math.abs(at('a').y - at('intro').y)).toBeLessThanOrEqual(row);
   });
 });

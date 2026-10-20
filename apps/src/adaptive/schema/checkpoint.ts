@@ -15,6 +15,11 @@ export const checkpointSourceSchema = z.strictObject({
   skillIds: z.array(z.string().min(1)).optional(),
   /** Checkpoint ids that must be complete before this one unlocks. */
   requires: z.array(z.string().min(1)).optional(),
+  /**
+   * The map destination this checkpoint belongs to, drawn as a group on the
+   * map. Only a leaf, a checkpoint nothing requires, may have one.
+   */
+  destination: z.string().min(1).optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 

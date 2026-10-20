@@ -11,11 +11,17 @@ export type LayoutMode =
   | 'cluster'
   | 'city'
   | 'radial'
-  | 'honeycomb';
-export type NodeShape = 'circle' | 'circleTitled' | 'square' | 'hexagon';
+  | 'honeycomb'
+  | 'destinations';
+export type NodeShape =
+  | 'circle'
+  | 'circleBelow'
+  | 'circleTitled'
+  | 'square'
+  | 'hexagon';
 
 export interface UiVariants {
-  /** Rows by dependency depth, a grid or honeycomb in authored order, or rings around the root. */
+  /** Rows by depth, a grid or honeycomb in authored order, rings around the root, or a grid with destinations around the outside. */
   layoutMode: LayoutMode;
   /** Draw every dependency edge, with nodes spaced to leave them room. Off, nodes pack closer. */
   showEdges: boolean;
@@ -25,11 +31,11 @@ export interface UiVariants {
   edgeShape: EdgeShape;
   /** Edges into the selected checkpoint drawn heavier, in color, flowing. */
   highlightIncomingEdges: boolean;
-  /** A circle with the title above it, or a circle, square or hexagon with the title inside. */
+  /** A circle with the title above or below it, or a circle, square or hexagon with the title inside. */
   nodeShape: NodeShape;
   /** The status icon as a small badge on the node's corner rather than at its center. */
   statusBadge: boolean;
-  /** Quarter turns clockwise applied to the city grid, 0 to 3. */
+  /** Quarter turns clockwise of the city grid, or of the destinations around their corners, 0 to 3. */
   cityTurns: number;
 }
 
@@ -46,6 +52,7 @@ export const DEFAULT_UI_VARIANTS: UiVariants = {
 
 export const NODE_SHAPES: {value: NodeShape; text: string}[] = [
   {value: 'circle', text: 'Circle, title above'},
+  {value: 'circleBelow', text: 'Circle, title below'},
   {value: 'circleTitled', text: 'Circle, title inside'},
   {value: 'square', text: 'Square, title inside'},
   {value: 'hexagon', text: 'Hexagon, title inside'},
@@ -58,7 +65,18 @@ export const LAYOUT_MODES: {value: LayoutMode; text: string}[] = [
   {value: 'city', text: 'City grid (grown from the start)'},
   {value: 'radial', text: 'Radial (rings from the start)'},
   {value: 'honeycomb', text: 'Honeycomb (hex tiling)'},
+  {value: 'destinations', text: 'Destinations (grouped around the outside)'},
 ];
+
+/** Layouts on square cells, whose lines follow the grid. */
+export const GRID_MODES = new Set<LayoutMode>([
+  'cluster',
+  'city',
+  'destinations',
+]);
+
+/** Layouts the Rotate buttons turn. */
+export const TURNABLE_MODES = new Set<LayoutMode>(['city', 'destinations']);
 
 export const EDGE_SHAPES: {value: EdgeShape; text: string}[] = [
   {value: 'curve', text: 'Curved'},

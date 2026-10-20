@@ -11,6 +11,7 @@ import {
   LayoutMode,
   NODE_SHAPES,
   NodeShape,
+  TURNABLE_MODES,
   useUiVariants,
 } from './uiVariants';
 
@@ -35,8 +36,8 @@ const UiVariantsCard: React.FunctionComponent = () => {
         <MuiButton
           variant="outlined"
           size="small"
-          aria-label="Rotate city grid left"
-          disabled={variants.layoutMode !== 'city'}
+          aria-label="Rotate left"
+          disabled={!TURNABLE_MODES.has(variants.layoutMode)}
           onClick={() => setVariant('cityTurns', (variants.cityTurns + 3) % 4)}
         >
           <FontAwesomeV6Icon iconName="rotate-left" />
@@ -45,8 +46,8 @@ const UiVariantsCard: React.FunctionComponent = () => {
         <MuiButton
           variant="outlined"
           size="small"
-          aria-label="Rotate city grid right"
-          disabled={variants.layoutMode !== 'city'}
+          aria-label="Rotate right"
+          disabled={!TURNABLE_MODES.has(variants.layoutMode)}
           onClick={() => setVariant('cityTurns', (variants.cityTurns + 1) % 4)}
         >
           Rotate&nbsp;
