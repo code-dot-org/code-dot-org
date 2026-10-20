@@ -315,20 +315,18 @@ describe('the scenario catalogue', () => {
     // camera rules that only have something to say about y.
     expect(map.size.height).toBe(VIEWPORT_TILES);
 
+    // The view is the MAIN camera's, kept on the world's main map as the map
+    // editor keeps it — not a `define camera` in blocks, which the Cameras
+    // list would show as "in code".
     const main = contents('main.world');
-    expect(main).toContain('world_define_camera');
-    expect(main).toContain('Camera Follow#FollowsTrait');
-    expect(main).toContain('Camera Confined#ConfinedToTheMapTrait');
-    // The camera is wired up AFTER the map is loaded. Before it, `any ⟨Bird⟩`
-    // is an empty list and the camera follows nothing for the whole game —
-    // with nothing in the console to say so.
-    expect(main.indexOf('world_load_map')).toBeLessThan(
-      main.indexOf('world_define_camera'),
-    );
-    // And the world looks through the one it defined, not the one every world
-    // has: the traits are on the new camera, so the default one would follow
-    // nothing.
-    expect(main).toContain('world_use_camera');
+    expect(main).not.toContain('world_define_camera');
+    expect(JSON.parse(main).map.mainCamera).toMatchObject({
+      traits: [
+        'Camera Follow#FollowsTrait',
+        'Camera Confined#ConfinedToTheMapTrait',
+      ],
+      values: [{value: 'actors/bird'}],
+    });
   });
 
   it('holds every rule flappy needs, including the ones it did not choose', () => {

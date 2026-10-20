@@ -356,9 +356,6 @@ const COIN_ACTOR = JSON.stringify({
   },
 });
 
-/** The `define camera` block's id, which is how the dropdown names it. */
-const CHASE = 'flappyChaseCamera';
-
 const FLAPPY_WORLD = JSON.stringify({
   blocks: {
     blocks: [
@@ -378,44 +375,32 @@ const FLAPPY_WORLD = JSON.stringify({
               inputs: {VALUE: number(GRAVITY)},
             },
             {type: 'world_load_map', fields: {MAP: 'maps/flappy'}},
-            // AFTER the map, and this is the one ordering that matters here.
-            // `any ⟨Bird⟩` is read when this runs, so a camera defined above
-            // `load map` would be handed an empty list and would sit still for
-            // the whole game — with nothing in the console to say why.
-            {
-              type: 'world_define_camera',
-              id: CHASE,
-              fields: {NAME: 'Chase'},
-              inputs: {
-                DO: {
-                  block: stack([
-                    useTrait('Camera Follow#FollowsTrait'),
-                    useTrait('Camera Confined#ConfinedToTheMapTrait'),
-                    {
-                      type: 'world_set_CameraFollow_ActorToFollowProperty',
-                      inputs: {
-                        ACTOR: {block: {type: 'world_this_camera'}},
-                        VALUE: {
-                          block: {
-                            type: 'world_actor_kind',
-                            fields: {ACTOR: 'actors/bird'},
-                          },
-                        },
-                      },
-                    },
-                  ]),
-                },
-              },
-            },
-            // A world has a camera without asking, and it is not this one.
-            {
-              type: 'world_use_camera',
-              fields: {CAMERA: `camera:${CHASE}`},
-            },
           ]),
         },
       },
     ],
+  },
+  // The view: the world's main camera following the Bird and kept inside the
+  // level, as the map editor's camera inspector stores it (`placementCameras`).
+  // A stored camera is declared after the world's rows, so it is set up after
+  // `load map` and `any ⟨Bird⟩` finds the Bird. The main map holds nothing
+  // else; the level is `maps/flappy`, which the world loads.
+  map: {
+    type: 'map',
+    actors: [],
+    mainCamera: {
+      traits: [
+        'Camera Follow#FollowsTrait',
+        'Camera Confined#ConfinedToTheMapTrait',
+      ],
+      values: [
+        {
+          setter: 'world_set_CameraFollow_ActorToFollowProperty',
+          type: 'actor',
+          value: 'actors/bird',
+        },
+      ],
+    },
   },
 });
 

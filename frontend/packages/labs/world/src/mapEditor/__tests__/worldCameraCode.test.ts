@@ -1,20 +1,39 @@
-// What a world's code says about its cameras (`worldCameraCode`), against
-// the one starter world that declares one: Flappy's Chase.
+// What a world's code says about its cameras (`worldCameraCode`): a camera a
+// learner wrote as blocks, which the map editor lists as "in code".
 
 import {describe, expect, it} from 'vitest';
 
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
-import {projectFiles} from '../../runtime/projectFiles';
 import {startingCamera} from '../worldCameraCode';
 import {worldCameras} from '../worldCameras';
 
-const flappy = Object.entries(projectFiles(WORLD_SCENARIOS.flappy.source)).find(
-  ([path]) => path.endsWith('.world'),
-)![1];
-const chase = worldCameras(flappy)[0];
+/** A world that defines Chase in its code and starts looking through it. */
+const world = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_world',
+        fields: {NAME: 'W'},
+        next: {
+          block: {
+            type: 'world_define_camera',
+            id: 'chase',
+            fields: {NAME: 'Chase'},
+            next: {
+              block: {
+                type: 'world_use_camera',
+                fields: {CAMERA: 'camera:chase'},
+              },
+            },
+          },
+        },
+      },
+    ],
+  },
+});
+const chase = worldCameras(world)[0];
 describe('reading a world’s code about its cameras', () => {
   it('knows which camera the code starts the world with', () => {
     expect(chase.name).toBe('Chase');
-    expect(startingCamera(flappy)).toBe(chase.id);
+    expect(startingCamera(world)).toBe(chase.id);
   });
 });

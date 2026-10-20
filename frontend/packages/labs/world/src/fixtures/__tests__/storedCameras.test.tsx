@@ -116,8 +116,7 @@ const withOverview = () => {
 
 describe('a world’s cameras made in the map editor', () => {
   it('are declared, and the world starts through the one its map says', async () => {
-    // Over the code's own `look through camera ⟨Chase⟩`: what the map editor
-    // was last told is what the world does.
+    // What the map editor was last told is what the world does.
     const {world, code} = await compileProject(withOverview());
     expect(code['worlds/main']).toContain('"Overview"');
     expect(world.activeCamera().name).toBe('Overview');

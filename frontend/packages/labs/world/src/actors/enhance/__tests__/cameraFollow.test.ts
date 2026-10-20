@@ -1,11 +1,10 @@
 // The camera that keeps an actor on screen — as edits, and then as a game.
 //
 // It is the WORLD's enhancement, and the actor is its answer: nothing here
-// lands in an actor's file. The half that matters is the second — five blocks
-// in a world, one of which reads `any ⟨Player⟩` at the moment it runs, and the
-// whole thing is silent when it is wrong. A camera aimed at nobody sits at the
-// middle of the map for the rest of the game with nothing in the console to
-// say why.
+// lands in an actor's file, and what lands in the world is its main camera's
+// settings, on its main map. The half that matters is the second: a camera
+// aimed at nobody sits at the middle of the map for the rest of the game with
+// nothing in the console to say why.
 
 import {describe, expect, it} from 'vitest';
 
@@ -37,44 +36,51 @@ const world = (source: ReturnType<typeof withActors>) => {
   return source.files[id].contents;
 };
 
+/** The world's main camera, as the main map stores it. */
+const mainCamera = (contents: string) =>
+  (
+    JSON.parse(contents) as {
+      map?: {mainCamera?: {traits: string[]; values: {setter: string}[]}};
+    }
+  ).map?.mainCamera;
+
 describe('the camera-follow enhancement, as edits', () => {
-  it('gives the world a camera, and looks through it', () => {
+  it('makes the world’s main camera follow, kept in the map', () => {
     const after = cameraFollowEnhancement.apply(withActors(), WORLD, PLAYER);
     const contents = world(after);
 
-    expect(contents).toContain('world_define_camera');
-    expect(contents).toContain('Camera Follow#FollowsTrait');
-    expect(contents).toContain('world_set_CameraFollow_ActorToFollowProperty');
-    // A world has a camera without asking, and it is not this one.
-    expect(contents).toContain('world_use_camera');
+    expect(mainCamera(contents)?.traits).toContain(
+      'Camera Follow#FollowsTrait',
+    );
     expect(followedIn(contents)).toBe('actors/player');
+    // Data, not blocks: the map editor shows it as the main camera's, and
+    // the code editor shows nothing (`placementCameras`).
+    expect(contents).not.toContain('world_define_camera');
+    expect(contents).not.toContain('world_use_camera');
 
     // …and the rule that aims it, which brings the one that moves the view.
     expect(fileIdAt(after, 'rules/cameraFollow.rule')).toBeTruthy();
     expect(fileIdAt(after, 'rules/camera.rule')).toBeTruthy();
   });
 
-  it('writes after everything else in the world', () => {
-    // The ordering is load-bearing: `any ⟨Player⟩` is read when the camera is
-    // declared, so one declared above `load map` is handed an empty list and
-    // sits still for the whole game (`fixtures/flappy` says the same thing
-    // over the same line).
-    const contents = world(
-      cameraFollowEnhancement.apply(withActors(), WORLD, PLAYER),
-    );
-    const parsed = JSON.parse(contents);
-    const rows: string[] = [];
-    for (
-      let at = parsed.blocks.blocks.find(
-        (block: {type: string}) => block.type === 'world_world',
-      );
-      at;
-      at = at.next?.block
-    ) {
-      rows.push(at.type);
-    }
-    expect(rows[rows.length - 1]).toBe('world_use_camera');
-    expect(rows[rows.length - 2]).toBe('world_define_camera');
+  it('keeps what else the main camera elects', () => {
+    const once = cameraFollowEnhancement.apply(withActors(), WORLD, PLAYER);
+    const id = fileIdAt(once, 'worlds/main.world')!;
+    const file = JSON.parse(once.files[id].contents);
+    file.map.mainCamera.traits.push('Camera Confined#ConfinedToTheMapTrait');
+    const confined = {
+      ...once,
+      files: {
+        ...once.files,
+        [id]: {...once.files[id], contents: JSON.stringify(file)},
+      },
+    };
+
+    const twice = cameraFollowEnhancement.apply(confined, WORLD, GROUND);
+    expect(mainCamera(world(twice))?.traits).toEqual([
+      'Camera Follow#FollowsTrait',
+      'Camera Confined#ConfinedToTheMapTrait',
+    ]);
   });
 
   it('does nothing the second time', () => {
@@ -93,7 +99,12 @@ describe('the camera-follow enhancement, as edits', () => {
     const twice = cameraFollowEnhancement.apply(once, WORLD, GROUND);
 
     expect(followedIn(world(twice))).toBe('actors/ground');
-    expect(world(twice).match(/world_define_camera/g)?.length).toBe(1);
+    expect(
+      mainCamera(world(twice))?.values.filter(
+        value =>
+          value.setter === 'world_set_CameraFollow_ActorToFollowProperty',
+      ),
+    ).toHaveLength(1);
     expect(cameraFollowEnhancement.applied(twice, WORLD, PLAYER)).toBe(false);
   });
 
@@ -112,8 +123,8 @@ describe('the camera-follow enhancement, played', () => {
     const root = parsed.blocks.blocks.find(
       (block: {type: string}) => block.type === 'world_world',
     );
-    // In FRONT of the camera, which is where a placement has to go: the camera
-    // reads `any ⟨Player⟩` as it is declared.
+    // A row of the world's own: the stored camera is declared after all of
+    // them, so it finds the Player wherever the row is.
     root.next = {
       block: {
         type: 'world_add_actor',

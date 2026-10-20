@@ -2,58 +2,50 @@
 //
 // A level bigger than the screen is the commonest thing a learner builds and
 // the commonest thing they cannot finish: the player walks off the right-hand
-// side and the game goes on without them. The answer is five blocks in three
-// places, and none of them is anywhere near the actor:
-//
-//   worlds/*.world           define camera ⟨Follow Camera⟩ do:
-//                              use trait ⟨Camera Follow#Follows⟩
-//                              set actor to follow of ⟨this camera⟩
-//                                to ⟨any ⟨target⟩⟩
-//                            look through camera ⟨Follow Camera⟩
+// side and the game goes on without them. The answer is the world's MAIN
+// camera, given `Follows` and told whom to follow — kept on the world's main
+// map as data, as the map editor's camera inspector keeps it, so it shows
+// there as the main camera's traits and fields and not as blocks
+// (`placementCameras`).
 //
 // IT IS THE WORLD'S, and that took a wrong turn to see. It was offered from an
 // actor's sparkles — "the camera follows THIS one" — and answering wrote nothing
-// at all into the actor's file: the camera is defined in the world, looked
-// through by the world, and the actor appears in it as a VALUE. Which camera a
-// world looks through, and what it is aimed at, are facts about the world's
-// view; a camera is not an actor and an actor cannot hold one.
+// at all into the actor's file: the camera belongs to the world, and the actor
+// appears in it as a VALUE. Which camera a world looks through, and what it is
+// aimed at, are facts about the world's view; a camera is not an actor and an
+// actor cannot hold one.
 //
 // So the subject is the world and the actor is an ANSWER: the shelf asks which
-// one to follow, under the row, from the actors that world can name — its own
-// `define actor` blocks and the project's `.actor` files alike.
+// one to follow, under the row, from the actors that world can name.
 //
-// APPENDED AT THE END, and the ordering is load-bearing rather than tidy.
-// `any ⟨Player⟩` is read when `define camera` runs, so a camera declared above
-// `load map` is handed an empty list and sits still for the whole game, with
-// nothing in the console to say why. The starter fixtures write the same
-// comment over the same line (`fixtures/flappy`).
+// ONE VIEW PER WORLD, so enhancing a second actor REPOINTS the main camera
+// rather than adding a rival: "follow this one" said twice is a learner
+// changing their mind rather than asking for two cameras. Whatever else the
+// main camera elects is left as it was.
 //
-// ONE CAMERA PER WORLD, with an id of its own, so enhancing a second actor
-// REPOINTS it rather than adding a rival: a world has one view, and "follow
-// this one" said twice is a learner changing their mind rather than asking for
-// two cameras. A camera the learner made themselves is left alone — this owns
-// the one it made and nothing else.
+// It used to write a `define camera` and a `look through camera` at the end of
+// the world, after everything else, because `any ⟨Player⟩` is read where the
+// camera is declared. A stored camera is declared after the world's rows
+// whatever they hold, so the order is no longer the learner's to get right.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import type {MainCameraSettings} from '../../blockly/placementCameras';
 import {authoredName} from '../../blockly/projectModules';
 import {fileIdAt, filePath} from '../../runtime/projectFiles';
 
-import {edit, importRules, kindOf} from './actorPatch';
+import {edit, importRules} from './actorPatch';
 import type {Enhancement, EnhanceChoice, EnhanceTarget} from './enhancements';
-import {append, down, rowsUnder, type BlockJson} from './patch';
 
-/** The rule that aims a camera, which brings the one that moves the view. */
+/** The trait that aims a camera, which brings the one that moves the view. */
 const FOLLOWS = 'Camera Follow#FollowsTrait';
+/** The field it is aimed by, as the camera inspector stores it. */
+const ACTOR_TO_FOLLOW = 'world_set_CameraFollow_ActorToFollowProperty';
 
-/**
- * The camera this makes, and the id it is known by.
- *
- * Fixed per world rather than per actor: a world has one view. Enhancing a
- * second actor finds this camera and points it somewhere else.
- */
-const CAMERA_ID = 'enhanceFollowCamera';
-const CAMERA_NAME = 'Follow Camera';
+/** A world's file, as much of it as this reads. */
+interface WorldFile {
+  map?: {mainCamera?: MainCameraSettings} & Record<string, unknown>;
+}
 
 /**
  * The actors this world can name, as the field names them: the project's
@@ -74,79 +66,40 @@ const actorsFor = (source: MultiFileSource): EnhanceChoice[] => {
   return files;
 };
 
-/**
- * Point the camera this enhancement made somewhere else.
- *
- * In place, on the file's own JSON: the camera is where an earlier pass of
- * this left it, and rebuilding it would move it to the end of the world's
- * chain for no reason.
- */
-const repoint = (contents: string, actor: string): string => {
-  const workspace = JSON.parse(contents) as {blocks?: {blocks?: BlockJson[]}};
-  for (const root of workspace.blocks?.blocks ?? []) {
-    for (const row of down(root)) {
-      if (row.type !== 'world_define_camera' || row.id !== CAMERA_ID) {
-        continue;
-      }
-      const body = (row.inputs?.DO as {block?: BlockJson} | undefined)?.block;
-      for (const inner of down(body)) {
-        if (inner.type === 'world_set_CameraFollow_ActorToFollowProperty') {
-          inner.inputs = {...inner.inputs, VALUE: kindOf(actor)};
-        }
-      }
-    }
-  }
-  return JSON.stringify(workspace, null, 2);
+/** Whom the world's main camera follows, if it follows anybody. */
+const aimedAt = (contents: string): string | undefined => {
+  const camera = (JSON.parse(contents) as WorldFile).map?.mainCamera;
+  return camera?.traits.includes(FOLLOWS)
+    ? camera.values.find(value => value.setter === ACTOR_TO_FOLLOW)?.value
+    : undefined;
 };
 
-/** The camera, and what it is for. */
-const camera = (actor: string): BlockJson => ({
-  type: 'world_define_camera',
-  id: CAMERA_ID,
-  fields: {NAME: CAMERA_NAME},
-  inputs: {
-    DO: {
-      block: {
-        type: 'world_use_trait',
-        fields: {TRAIT: FOLLOWS},
-        next: {
-          block: {
-            type: 'world_set_CameraFollow_ActorToFollowProperty',
-            inputs: {
-              ACTOR: {block: {type: 'world_this_camera'}},
-              VALUE: kindOf(actor),
-            },
-          },
-        },
-      },
+/**
+ * The world's file with its main camera following `actor`.
+ *
+ * In place: a value already there is replaced where it stands, so asking
+ * twice for the same actor writes the same file.
+ */
+const following = (contents: string, actor: string): string => {
+  const file = JSON.parse(contents) as WorldFile;
+  // A world that holds no map yet gets one with nothing on it, which is what
+  // a stored camera is kept on.
+  const map = file.map ?? {type: 'map', actors: []};
+  const held = map.mainCamera ?? {traits: [], values: []};
+  const aim = {setter: ACTOR_TO_FOLLOW, type: 'actor', value: actor};
+  const values = held.values.some(value => value.setter === ACTOR_TO_FOLLOW)
+    ? held.values.map(value => (value.setter === ACTOR_TO_FOLLOW ? aim : value))
+    : [...held.values, aim];
+  file.map = {
+    ...map,
+    mainCamera: {
+      traits: held.traits.includes(FOLLOWS)
+        ? held.traits
+        : [...held.traits, FOLLOWS],
+      values,
     },
-  },
-});
-
-/** …and the world looking through it, since it has one already. */
-const lookThrough = (): BlockJson => ({
-  type: 'world_use_camera',
-  fields: {CAMERA: `camera:${CAMERA_ID}`},
-});
-
-/** The `define camera` this enhancement made, if this world holds it. */
-const cameraIn = (contents: string): BlockJson | undefined =>
-  rowsUnder(contents, {type: 'world_world'}).find(
-    row => row.type === 'world_define_camera' && row.id === CAMERA_ID,
-  );
-
-/** Who that camera is aimed at, as the field records it. */
-const aimedAt = (block: BlockJson | undefined): string | undefined => {
-  const body = (block?.inputs?.DO as {block?: BlockJson} | undefined)?.block;
-  for (const row of down(body)) {
-    if (row.type !== 'world_set_CameraFollow_ActorToFollowProperty') {
-      continue;
-    }
-    const value = (row.inputs?.VALUE as {block?: BlockJson} | undefined)?.block;
-    const actor = value?.fields?.ACTOR;
-    return typeof actor === 'string' ? actor : undefined;
-  }
-  return undefined;
+  };
+  return JSON.stringify(file, null, 2);
 };
 
 export const cameraFollowEnhancement: Enhancement = {
@@ -156,8 +109,8 @@ export const cameraFollowEnhancement: Enhancement = {
   subject: 'world',
   name: 'A camera that follows an actor',
   description:
-    'Gives this world a camera that keeps one actor on screen, so a level can be bigger than the window. A world has one view, so asking again points the same camera at something else.',
-  brings: ['Follows an Actor', 'Has a Camera', 'a camera to look through'],
+    'Makes this world’s main camera keep one actor on screen, so a level can be bigger than the window. A world has one view, so asking again points the same camera at something else.',
+  brings: ['Follows an Actor', 'Has a Camera'],
   asks: {
     label: 'Following',
     options: source => actorsFor(source),
@@ -167,7 +120,7 @@ export const cameraFollowEnhancement: Enhancement = {
     if (!id) {
       return false;
     }
-    const aimed = aimedAt(cameraIn(source.files[id].contents));
+    const aimed = aimedAt(source.files[id].contents);
     // With nothing chosen yet the question is "has this world got one at all";
     // with an answer it is the sharper "is it already following that".
     return answer === undefined ? aimed !== undefined : aimed === answer;
@@ -184,17 +137,10 @@ export const cameraFollowEnhancement: Enhancement = {
     if (!id) {
       return current;
     }
-    return edit(current, id, contents =>
-      cameraIn(contents)
-        ? repoint(contents, answer)
-        : append(contents, {type: 'world_world'}, [
-            camera(answer),
-            lookThrough(),
-          ]),
-    );
+    return edit(current, id, contents => following(contents, answer));
   },
 };
 
 /** What a world's follow camera is aimed at — exported for its test. */
 export const followedIn = (contents: string): string | undefined =>
-  aimedAt(cameraIn(contents));
+  aimedAt(contents);

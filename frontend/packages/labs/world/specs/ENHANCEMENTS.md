@@ -238,13 +238,15 @@ read (specs/PARENTING.md).
 
 A level bigger than the screen is the commonest thing a learner builds and the
 commonest one they cannot finish — the player walks off the right-hand side and
-the game goes on without them. The answer is five blocks, and not one of them
-is anywhere near the actor:
+the game goes on without them. The answer is the world's MAIN camera, given
+`Follows` and told whom to follow, and none of it is anywhere near the actor.
+It is kept on the world's main map as the map editor's camera inspector keeps
+it (`placementCameras`), so the inspector shows it as the main camera's traits
+and fields and the code editor shows nothing:
 
-    worlds/*.world    define camera ⟨Follow Camera⟩ do:
-                        use trait ⟨Camera Follow#Follows⟩
-                        set actor to follow of ⟨this camera⟩ to ⟨any ⟨target⟩⟩
-                      look through camera ⟨Follow Camera⟩
+    worlds/*.world    map.mainCamera:
+                        traits  Camera Follow#Follows
+                        values  actor to follow = any ⟨target⟩
 
 **It is the WORLD's**, and it is the counter-example to the Health Bar rather
 than a repeat of its bug. Which camera a world looks through, and what that
@@ -254,16 +256,15 @@ ANSWER to the question it asks, and one world is patched — the one whose wand
 was clicked, which is also right for a project with two levels, since each
 world wants its own camera.
 
-**Appended at the end, and the ordering is load-bearing.** `any ⟨Player⟩` is
-read at the moment `define camera` runs, so a camera declared above `load map`
-is handed an empty list and sits still for the whole game, with nothing in the
-console to say why. The starter fixtures carry the same comment over the same
-line (`fixtures/flappy`).
+**One view per world**, so asking again REPOINTS the main camera rather than
+adding a rival: a second answer is a learner changing their mind. Whatever else
+the main camera elects is left as it was.
 
-**One camera per world**, with an id of its own, so asking again REPOINTS it
-rather than adding a rival: a world has one view, and a second answer is a
-learner changing their mind. A camera the learner made themselves is left
-alone — this owns the one it made and nothing else.
+It used to write a `define camera ⟨Follow Camera⟩` and a `look through camera`
+at the end of the world, after `load map`, because `any ⟨Player⟩` is read where
+the camera is declared and one declared earlier sits still for the whole game.
+A stored camera is declared after the world's rows whatever they hold, so that
+ordering is no longer something to get right.
 
 ## The pair: collecting, and the number it adds up to
 
