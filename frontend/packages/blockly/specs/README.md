@@ -28,7 +28,7 @@ what the code does, even where that is wrong.
 | 2    | `themes.md`          | THM-   | the other nine themes                                                    | 1a     | written |
 | 3    | `inputs.md`          | INP-   | the rectangle, round and triangle notch shapes                           | 1a     | written |
 | 4    | `react-fields.md`    | RF-    | `createReactField`, field utilities                                      | 1b     | written |
-| 5    | `fields.md`          | FLD-   | the dropdown field                                                       | 1a     | planned |
+| 5    | `fields.md`          | FLD-   | the dropdown field                                                       | 1a     | written |
 | 6    | `fields.md`          | FLD-   | the colour and button fields                                             | 1a     | planned |
 | 7    | `common-blocks.md`   | CMN-   | `BaseBlocks`                                                             | 5, 6   | planned |
 | 8    | `procedures.md`      | PRC-   | shareable procedures, procedure mutators                                 | 1a     | planned |
