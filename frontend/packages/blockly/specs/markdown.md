@@ -47,11 +47,11 @@ drags or places them into the provider's main workspace. It needs a
 `BlocklyProvider` with a main workspace; without one the flyouts are
 empty.
 
-MD-6. The component that draws each `<xml>` is made anew whenever
-`blocks`, `renderer`, `plugins`, `theme`, `draggable` or `extensions`
-changes identity, so every embedded workspace and flyout is unmounted and
-mounted again. A lab that passes an array or object made during render
-causes this on every render.
+MD-6. The component that draws each `<xml>` is made once, and reads the
+options of MD-1 from React context, so a lab that passes an array or object
+made during render does not remount the embedded workspaces. Changing
+`draggable` replaces each workspace with a flyout, or each flyout with a
+workspace.
 
 ## Test vectors
 
@@ -60,6 +60,9 @@ name="TEXT"><block type="text"><title name="TEXT">hi</title></block></value></bl
 into your program.` draws an SVG holding `print` and `hi`, between the
 two pieces of prose.
 
+MD-V2 (MD-6). Rendering MD-V1's markdown with `blocks={[]}` twice keeps
+the same drawn element.
+
 ## Not specified here
 
 - The markdown itself: `@code-dot-org/markdown`.
@@ -67,7 +70,5 @@ two pieces of prose.
 
 ## Open questions
 
-1. MD-6: make the drawing component once, and give it its options another
-   way, so that a lab's render does not remount every embedded workspace?
-2. MD-2: let `<shadow>` through, now that the converter reads shadows
-   (XML-6)? Apps strips them too, so levels rarely rely on them.
+1. MD-2: let `<shadow>` through, now that the converter reads shadows
+   (XML-6)? Apps strips them too.
