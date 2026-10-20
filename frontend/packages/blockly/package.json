@@ -36,6 +36,11 @@
       "import": "./dist/plugins/index.mjs",
       "require": "./dist/plugins/index.cjs"
     },
+    "./plugins/toolboxTrashcan": {
+      "types": "./dist/plugins/toolboxTrashcan/index.d.ts",
+      "import": "./dist/plugins/toolboxTrashcan/index.mjs",
+      "require": "./dist/plugins/toolboxTrashcan/index.cjs"
+    },
     "./plugins/scrollOptions": {
       "types": "./dist/plugins/scrollOptions/index.d.ts",
       "import": "./dist/plugins/scrollOptions/index.mjs",
