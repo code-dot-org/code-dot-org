@@ -30,7 +30,7 @@ what the code does, even where that is wrong.
 | 4    | `react-fields.md`    | RF-    | `createReactField`, field utilities                                      | 1b     | written |
 | 5    | `fields.md`          | FLD-   | the dropdown field                                                       | 1a     | written |
 | 6    | `fields.md`          | FLD-   | the colour and button fields                                             | 1a     | written |
-| 7    | `common-blocks.md`   | CMN-   | `BaseBlocks`                                                             | 5, 6   | planned |
+| 7    | `common-blocks.md`   | CMN-   | `BaseBlocks`                                                             | 5, 6   | written |
 | 8    | `procedures.md`      | PRC-   | shareable procedures, procedure mutators                                 | 1a     | planned |
 | 9    | `layout.md`          | LAY-   | positioning blocks on load                                               | 1b, 8  | planned |
 | 10   | `plugins.md`         | PLG-   | scrolling, `TopLeftMetricsManager`                                       | 1b     | planned |
