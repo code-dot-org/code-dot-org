@@ -256,8 +256,8 @@ rather than 11 makes a loaded `text_print` block taller.
 
 WS-V5 (WS-12). A block placed by the keyboard from an external flyout and
 still being moved when its workspace unmounts leaves Blockly's focus manager
-with no focused node. The case needs the flyout, so its test is in
-`flyout.md`'s part.
+with no focused node. The case needs the flyout; its test is `flyout.md`'s
+FLY-V1.
 
 ## Not specified here
 
