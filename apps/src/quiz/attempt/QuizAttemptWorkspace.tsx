@@ -437,6 +437,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             disabled={isSubmitting}
           />
         );
+      // TODO: render multiple select questions once the attempt view
+      // supports them.
+      case 'MultipleSelectQuestion':
+        return null;
       default: {
         // A new question type fails to compile here until it gets a case.
         const unhandledType: never = question.type;

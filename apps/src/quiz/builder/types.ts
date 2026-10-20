@@ -27,12 +27,24 @@ export interface MultipleChoiceDraft extends QuizQuestionSharedFields {
   correctChoiceId: string | null;
 }
 
+export interface MultipleSelectDraft extends QuizQuestionSharedFields {
+  type: 'MultipleSelectQuestion';
+  choices: QuizQuestionChoice[];
+  correctChoiceIds: string[];
+}
+
+// The two choice types share an editor and can be switched between.
+export type ChoiceQuestionDraft = MultipleChoiceDraft | MultipleSelectDraft;
+
 export interface FreeResponseDraft extends QuizQuestionSharedFields {
   type: 'FreeResponseQuestion';
 }
 
 // A question card's unsaved working copy; Save sends it as the request body.
-export type QuizQuestionDraft = MultipleChoiceDraft | FreeResponseDraft;
+export type QuizQuestionDraft =
+  | MultipleChoiceDraft
+  | MultipleSelectDraft
+  | FreeResponseDraft;
 
 // A question as the builder endpoints return it (GET /levels/:id/
 // quiz_configuration and a placement create): the QuizQuestion model's
