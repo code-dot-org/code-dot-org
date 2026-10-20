@@ -9,8 +9,11 @@ the zod schema, which CI runs), checks every text line of the JSONC carries
 a well-formed tag, and that the task list covers every level the pathway
 names, every placeholder image, and every TODO. Levels are looked up on
 GitHub through repo.py; offline, those checks are skipped with a note.
+Video keys are checked against dashboard/config/videos.csv the same way.
 Exits nonzero on any PROBLEM. Prints TODO paths and task counts.
 """
+import csv
+import io
 import json
 import os
 import re
@@ -23,9 +26,11 @@ import repo  # noqa: E402
 
 TEXT_KEYS = (
     'title description objective text instructions instructionsPrompt '
-    'questionTitle placeholder imageUrl minLabel maxLabel standards'
+    'questionTitle placeholder imageUrl standards'
 ).split()
 TEXT_LINE = re.compile(r'^\s*(?:\{[^"]*)?"(%s)"\s*:' % '|'.join(TEXT_KEYS))
+# A skill's evidence level description: a digit key with a string value.
+EVIDENCE_TEXT_LINE = re.compile(r'^\s*"(0|[1-9]\d*)"\s*:\s*"')
 CHOICE_LINE = re.compile(r'^\s*\{\s*"id":\s*"[^"]*",\s*"text":')
 TAG = re.compile(r'^\s*//\s*(copied|minimal|modified|todo|generated|unplaced|provided|me):(.*)$')
 TEXT_TAGS = {'copied', 'minimal', 'modified', 'todo', 'generated', 'provided', 'me'}
@@ -39,19 +44,27 @@ REGISTRY_ROW = re.compile(r'^\|\s*`([^`]+)`\s*\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]
 SHAPES = {
     'pathway': ({'formatVersion', 'id', 'title', 'objective', 'project', 'skills', 'checkpoints'}, set()),
     'project': ({'templateLevel', 'description'}, set()),
-    'skill': ({'id', 'title', 'description'}, {'standards'}),
-    'checkpoint': ({'id', 'title', 'description', 'steps'}, {'skillIds', 'requires'}),
+    'skill': ({'id', 'title', 'description'}, {'evidenceLevels', 'standards'}),
+    'checkpoint': ({'id', 'title', 'description', 'steps'},
+                   {'skillIds', 'requires', 'targetEvidenceLevels', 'skippable', 'routeAfterCompletion'}),
     'panels': ({'id', 'title', 'kind', 'panels'}, set()),
     'panel': ({'key', 'imageUrl', 'text'}, {'layout', 'typing', 'fadeInOverPrevious'}),
     'questions': ({'id', 'title', 'kind', 'questions'}, {'description'}),
-    'MultipleChoiceQuestion': ({'id', 'type', 'questionName', 'questionTitle', 'choices'}, {'correctChoiceId'}),
+    'MultipleChoiceQuestion': ({'id', 'type', 'questionName', 'questionTitle', 'choices'},
+                               {'correctChoiceId', 'measures'}),
     'choice': ({'id', 'text'}, set()),
     'freeResponse': ({'id', 'type', 'text'}, {'placeholder'}),
-    'scale': ({'id', 'type', 'text', 'scale'}, set()),
     'level': ({'id', 'title', 'kind', 'level'}, {'instructions', 'instructionsPrompt', 'project'}),
+    'video': ({'id', 'title', 'kind', 'videoKey'}, set()),
 }
-MAY_BE_EMPTY = {('panel', 'text')}
+STEP_KINDS = ('panels', 'questions', 'level', 'video')
+MAY_BE_EMPTY = {('panel', 'text'), ('freeResponse', 'placeholder'), ('questions', 'description')}
 LAYOUTS = {f'text-{v}-{h}' for v in ('top', 'bottom') for h in ('left', 'center', 'right')}
+EVIDENCE_KEY = re.compile(r'^(0|[1-9]\d*)$')
+
+
+def is_int(v, least):
+    return isinstance(v, int) and not isinstance(v, bool) and v >= least
 
 
 def shape_problems(p):
@@ -76,13 +89,29 @@ def shape_problems(p):
     check(p.get('project'), 'project', 'project')
     for key, skill in (p.get('skills') or {}).items():
         check(skill, 'skill', f'skills.{key}')
+        levels = skill.get('evidenceLevels') if isinstance(skill, dict) else None
+        if levels is not None:
+            if not isinstance(levels, dict):
+                problems.append(f'skills.{key}.evidenceLevels: expected an object')
+            else:
+                for level, text in levels.items():
+                    if not EVIDENCE_KEY.match(level):
+                        problems.append(f'skills.{key}.evidenceLevels.{level}: key must be a whole number')
+                    if not (isinstance(text, str) and text):
+                        problems.append(f'skills.{key}.evidenceLevels.{level}: must be non-empty text')
     for i, c in enumerate(p.get('checkpoints') or []):
         cw = f'checkpoints.{i}'
         check(c, 'checkpoint', cw)
+        for key in ('skippable', 'routeAfterCompletion'):
+            if key in c and not isinstance(c[key], bool):
+                problems.append(f'{cw}.{key}: must be true or false')
+        targets = c.get('targetEvidenceLevels')
+        if targets is not None and not (isinstance(targets, dict) and all(is_int(v, 1) for v in targets.values())):
+            problems.append(f'{cw}.targetEvidenceLevels: must map skill ids to whole numbers of 1 or more')
         for j, s in enumerate(c.get('steps') or []):
             sw = f'{cw}.steps.{j}'
             kind = s.get('kind')
-            if kind not in ('panels', 'questions', 'level'):
+            if kind not in STEP_KINDS:
                 problems.append(f'{sw}.kind: unknown {kind!r}')
                 continue
             check(s, kind, sw)
@@ -91,22 +120,43 @@ def shape_problems(p):
                 if 'layout' in panel and panel['layout'] not in LAYOUTS:
                     problems.append(f'{sw}.panels.{k}.layout: unknown {panel["layout"]!r}')
             for k, q in enumerate(s.get('questions') or []):
+                qw = f'{sw}.questions.{k}'
                 qtype = q.get('type')
-                if qtype not in ('MultipleChoiceQuestion', 'freeResponse', 'scale'):
-                    problems.append(f'{sw}.questions.{k}.type: unknown {qtype!r}')
+                if qtype not in ('MultipleChoiceQuestion', 'freeResponse'):
+                    problems.append(f'{qw}.type: unknown {qtype!r}')
                     continue
-                check(q, qtype, f'{sw}.questions.{k}')
-                if qtype == 'MultipleChoiceQuestion':
-                    if not (isinstance(q.get('id'), int) and q['id'] > 0):
-                        problems.append(f'{sw}.questions.{k}.id: must be a positive integer')
-                    if len(q.get('choices') or []) < 2:
-                        problems.append(f'{sw}.questions.{k}.choices: needs at least 2')
-                elif not isinstance(q.get('id'), str):
-                    problems.append(f'{sw}.questions.{k}.id: must be a string')
+                check(q, qtype, qw)
+                if not is_int(q.get('id'), 1):
+                    problems.append(f'{qw}.id: must be a positive integer')
+                if qtype == 'MultipleChoiceQuestion' and len(q.get('choices') or []) < 2:
+                    problems.append(f'{qw}.choices: needs at least 2')
                 for m, choice in enumerate(q.get('choices') or []):
-                    check(choice, 'choice', f'{sw}.questions.{k}.choices.{m}')
+                    check(choice, 'choice', f'{qw}.choices.{m}')
+                if 'measures' in q:
+                    problems += measures_shape_problems(q['measures'], f'{qw}.measures')
             if kind == 'level' and 'project' in s and s['project'] is not True:
                 problems.append(f'{sw}.project: must be true or absent')
+    return problems
+
+
+def measures_shape_problems(m, where):
+    """measuresSchema: a skillId with either one evidenceLevel (1 or more) or
+    evidenceLevels by choice id (0 or more), and nothing else."""
+    if not isinstance(m, dict):
+        return [f'{where}: expected an object']
+    problems = []
+    if not (isinstance(m.get('skillId'), str) and m['skillId']):
+        problems.append(f'{where}.skillId: missing')
+    rest = m.keys() - {'skillId'}
+    if rest == {'evidenceLevel'}:
+        if not is_int(m['evidenceLevel'], 1):
+            problems.append(f'{where}.evidenceLevel: must be a whole number of 1 or more')
+    elif rest == {'evidenceLevels'}:
+        levels = m['evidenceLevels']
+        if not (isinstance(levels, dict) and all(is_int(v, 0) for v in levels.values())):
+            problems.append(f'{where}.evidenceLevels: must map choice ids to whole numbers of 0 or more')
+    else:
+        problems.append(f'{where}: needs exactly one of evidenceLevel or evidenceLevels besides skillId')
     return problems
 
 
@@ -171,6 +221,53 @@ def reference_problems(p):
             used_levels.setdefault(s['level'], where)
     if len(set(map(repr, question_ids))) != len(question_ids):
         problems.append('checkpoints: question ids must be unique')
+    return problems + evidence_problems(p)
+
+
+def evidence_problems(p):
+    """findEvidenceProblems in references.ts."""
+    problems = []
+    skills = p.get('skills', {})
+
+    def check_level(where, skill_id, level):
+        described = (skills.get(skill_id) or {}).get('evidenceLevels')
+        if level > 0 and described and str(level) not in described:
+            problems.append(f"{where}: skill '{skill_id}' describes no evidence level {level}")
+
+    for c in p['checkpoints']:
+        cw = f'checkpoints.{c["id"]}'
+        if c.get('skippable') and not c.get('skillIds'):
+            problems.append(f'{cw}: skippable needs skillIds')
+        for skill_id, level in (c.get('targetEvidenceLevels') or {}).items():
+            if skill_id not in c.get('skillIds', []):
+                problems.append(f"{cw}.targetEvidenceLevels: '{skill_id}' is not in skillIds")
+            elif skill_id in skills:
+                check_level(f'{cw}.targetEvidenceLevels.{skill_id}', skill_id, level)
+        for s in c['steps']:
+            if s['kind'] != 'questions':
+                continue
+            for i, q in enumerate(s['questions']):
+                m = q.get('measures')
+                if q['type'] != 'MultipleChoiceQuestion' or not m:
+                    continue
+                where = f'{cw}.steps.{s["id"]}.questions.{i}.measures'
+                if m['skillId'] not in skills:
+                    problems.append(f"{where}: unknown skill '{m['skillId']}'")
+                graded = 'correctChoiceId' in q
+                if 'evidenceLevel' in m:
+                    if not graded:
+                        problems.append(f'{where}: evidenceLevel needs a correctChoiceId; '
+                                        'a survey question lists evidenceLevels by choice')
+                    check_level(where, m['skillId'], m['evidenceLevel'])
+                    continue
+                if graded:
+                    problems.append(f'{where}: a question with a correctChoiceId measures one '
+                                    'evidenceLevel, not evidenceLevels by choice')
+                choice_ids = {ch['id'] for ch in q['choices']}
+                for choice_id, level in m['evidenceLevels'].items():
+                    if choice_id not in choice_ids:
+                        problems.append(f"{where}: '{choice_id}' is not one of its choices")
+                    check_level(f'{where}.{choice_id}', m['skillId'], level)
     return problems
 
 
@@ -216,7 +313,7 @@ def annotation_problems(jsonc_path):
                 problems.append(f'{jsonc_path}:{n + 1}: modified needs was: "..." and why:')
             if tag == 'minimal' and 'changes:' not in body:
                 problems.append(f'{jsonc_path}:{n + 1}: minimal needs changes:')
-        if not (TEXT_LINE.match(line) or CHOICE_LINE.match(line)):
+        if not (TEXT_LINE.match(line) or CHOICE_LINE.match(line) or EVIDENCE_TEXT_LINE.match(line)):
             continue
         code, trailing = strip_line(line)
         tags = []
@@ -258,8 +355,8 @@ def todo_paths(node, path=''):
 
 
 def todo_owner(path):
-    """The id an open task must name for a TODO at `path`: its step, else
-    its checkpoint or skill, else the top-level field."""
+    """The id an open task must name, in backticks, for a TODO at `path`:
+    its step, else its checkpoint or skill, else the top-level field."""
     parts = path.split('.')
     if parts[0] == 'checkpoints':
         return parts[3] if len(parts) > 3 and parts[2] == 'steps' else parts[1]
@@ -311,11 +408,18 @@ def task_problems(p, tasks_path, placeholder_keys, files):
         if key and key in text and key not in open_text:
             problems.append(f'tasks: panel {key} still has a placeholder image but its task is checked off')
     for path in todo_paths(p):
-        if todo_owner(path) not in open_text:
-            problems.append(f'tasks: TODO at {path} has no open task naming {todo_owner(path)}')
+        if f'`{todo_owner(path)}`' not in open_text:
+            problems.append(f'tasks: TODO at {path} has no open task naming `{todo_owner(path)}`')
 
-    created = [n for n, row in registry.items() if row[3].lower().startswith('created')]
-    not_found = [n for n in created if files is not None and n not in files]
+    not_found = []
+    if files is not None:
+        for name in sorted(names - files.keys()):
+            status = registry.get(name, ['', '', ''])[2].lower()
+            if status.startswith('exists'):
+                problems.append(f'tasks: level {name} is listed as existing, but GitHub staging has no '
+                                'level by that name; check the spelling')
+            else:
+                not_found.append(name)
     done = sum(1 for _, d, _ in tasks if d)
     return problems, len(tasks) - done, done, not_found
 
@@ -377,9 +481,26 @@ def main(json_path):
     print('placeholder images:', len(placeholder_keys))
     print(f'tasks: {open_count} open, {done} done')
     if not_found:
-        print('created on levelbuilder, not yet on GitHub staging (normal until the nightly content push):',
-              ', '.join(not_found))
+        print('not yet on GitHub staging (normal until the nightly content push after each is created;',
+              'publishing fails its tests until they are):', ', '.join(not_found))
+    if files is not None:
+        missing_videos = video_keys_not_on_github(p)
+        if missing_videos:
+            print('video keys not in dashboard/config/videos.csv on GitHub staging (normal until the',
+                  'content push after the video is added; check the spelling):', ', '.join(missing_videos))
     sys.exit(1 if problems else 0)
+
+
+def video_keys_not_on_github(p):
+    keys = sorted({s['videoKey'] for c in p['checkpoints'] for s in c['steps'] if s['kind'] == 'video'})
+    if not keys:
+        return []
+    try:
+        known = {row['Key'] for row in csv.DictReader(io.StringIO(repo.cat('dashboard/config/videos.csv')))}
+    except (urllib.error.URLError, OSError) as e:
+        print(f'note: video check skipped, GitHub unreachable ({e})')
+        return []
+    return [k for k in keys if k not in known]
 
 
 if __name__ == '__main__':

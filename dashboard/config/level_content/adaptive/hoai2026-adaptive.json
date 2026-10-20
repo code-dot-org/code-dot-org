@@ -1,0 +1,1310 @@
+{
+  "formatVersion": 4,
+  "id": "hoai2026-adaptive",
+  "title": "Hour of AI 2026 - Adaptive",
+  "objective": "Steer AI toward an intended design by writing specific prompts and refining them based on what comes back. Judge AI output against your own intent, and decide when to accept, redirect, or override it. Use the vocabulary of web design (hero, feature cards, interactive canvas, call-to-action) to analyze what makes a page effective and to describe what you want built. Describe a problem with enough context for AI to give a useful explanation and fix. Verify an AI-proposed fix before trusting it, confirming the problem is resolved and nothing new broke.",
+  "project": {
+    "templateLevel": "adaptive-HoAI26-template-main-project",
+    "description": "TODO"
+  },
+  "skills": {
+    "build": {
+      "id": "build",
+      "title": "Build with AI",
+      "description": "Steering AI toward what you intend, and deciding what to do with what comes back."
+    },
+    "language": {
+      "id": "language",
+      "title": "Language of web dev",
+      "description": "Naming the parts of a page and understanding how they work."
+    },
+    "debug": {
+      "id": "debug",
+      "title": "Debug with AI",
+      "description": "Describing a problem so AI can help, and checking that the fix worked."
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "intro",
+      "title": "Intro",
+      "description": "Intro panels",
+      "steps": [
+        {
+          "id": "intro-panels",
+          "title": "Welcome",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-test-kickoff-f53be11d-a281-4bb0-a62e-c63389ee7dc6",
+              "imageUrl": "https://images.code.org/99d7f396c47a604d6ca01825a08c4ab2-Panel 1.png",
+              "text": "###Dream it. Describe it. Build it.",
+              "layout": "text-top-right"
+            },
+            {
+              "key": "adaptive-test-kickoff-3e0098fb-b792-442e-ade6-acaf5400fbde",
+              "imageUrl": "https://images.code.org/ab398ff421cc49dda5ad4547c45ea4ce-Panel 2.png",
+              "text": "###Start with a vision. \nWho needs something, and what would you make for them? You’ll pick up the language of web developers as you build with AI.",
+              "layout": "text-bottom-right"
+            },
+            {
+              "key": "adaptive-test-kickoff-a1596eb7-255e-4629-8dc8-a4a4dc65fd23",
+              "imageUrl": "https://images.code.org/c8d6eae80b0e56a0ff6f77049964a597-Panel 3.png",
+              "text": "###Spark your ideas.\nCheck out these examples then think about what YOU want to build!",
+              "layout": "text-bottom-right"
+            },
+            {
+              "key": "adaptive-test-kickoff-388e91e4-3f9c-4072-a12c-81dead86efd2",
+              "imageUrl": "https://images.code.org/b9499ec8e0d0089c1a804c9782dacd63-Second Helpings meal pickup dashboard.png",
+              "text": "###Second Helpings\nConnect extra food with the people who need it, before it goes to waste.",
+              "layout": "text-bottom-right"
+            },
+            {
+              "key": "adaptive-test-kickoff-8da3742a-efad-47fd-b3bd-6c3b62e712f4",
+              "imageUrl": "https://images.code.org/fdce7115752a614e912d3f6bbfea64cd-Calm Open Door teen support dashboard.png",
+              "text": "####Open Door\nMake it easier for a teen to find the right support at the right moment.",
+              "layout": "text-bottom-right"
+            },
+            {
+              "key": "adaptive-test-kickoff-3fc8f926-869c-4d76-86d0-b4041931f9f5",
+              "imageUrl": "https://images.code.org/4d73db76c6b43c86d4f2e73a172a849d-Puente_ School news in your language.png",
+              "text": "###Puente\nMake sure every family can understand what’s happening at school.",
+              "layout": "text-bottom-right"
+            },
+            {
+              "key": "adaptive-test-kickoff-5c85af8a-bed3-4276-8b1a-7c64cea8ae9b",
+              "imageUrl": "https://images.code.org/f1dc3032a40eb929d2182f0f1da7373d-Panel 4.png",
+              "text": "####Build it!\nIn this lesson, your path is unique. Share your idea and your coding experience, and your lesson shifts with every answer along the way.",
+              "layout": "text-bottom-right"
+            }
+          ]
+        },
+        {
+          "id": "intro-four-ways-there",
+          "title": "Four Ways There",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-four-ways-there"
+        },
+        {
+          "id": "intro-second-look",
+          "title": "Second Look",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-second-look"
+        },
+        {
+          "id": "intro-schedule-snap",
+          "title": "Schedule Snap",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-schedule-snap"
+        },
+        {
+          "id": "intro-plan",
+          "title": "Plan your website",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 101,
+              "type": "freeResponse",
+              "text": "TODO"
+            }
+          ]
+        },
+        {
+          "id": "intro-web-dev",
+          "title": "Intro - Diagnostic for web dev",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 102,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-self-check",
+              "questionTitle": "Which sentence sounds most like you?",
+              "choices": [
+                { "id": "a", "text": "I’m new to this. I haven’t worked with website code before." },
+                { "id": "b", "text": "I know some of the basics, like headings, buttons, and links that make up a page." },
+                { "id": "c", "text": "I can describe how a page looks, like its colors, fonts, and layout." },
+                { "id": "d", "text": "I can describe how a page behaves, like what happens when someone clicks or types." }
+              ]
+            },
+            {
+              "id": 103,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-button",
+              "questionTitle": "You want a button that changes color when someone clicks it. Which instruction would work best?",
+              "choices": [
+                { "id": "a", "text": "Style the button with a blue background color." },
+                { "id": "b", "text": "Add a click event that changes the button’s color." },
+                { "id": "c", "text": "Make the button look better and work better." },
+                { "id": "d", "text": "Add a button element that says “Click me.”" },
+                { "id": "e", "text": "I’m not sure." }
+              ],
+              "measures": {"skillId": "build", "evidenceLevels": {"a": 1, "b": 2, "c": 0, "d": 1, "e": 0}}
+            },
+            {
+              "id": 104,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-cards",
+              "questionTitle": "You want a page with a heading and three cards in a row. Which instruction would work best?",
+              "choices": [
+                { "id": "a", "text": "Add a heading and three cards." },
+                { "id": "b", "text": "Add an h1 and three div elements." },
+                { "id": "c", "text": "Add an h1, then place three cards side by side." },
+                { "id": "d", "text": "Use flexbox to lay out three card divs in a row." },
+                { "id": "e", "text": "I’m not sure." }
+              ],
+              "measures": {"skillId": "language", "evidenceLevels": {"a": 1, "b": 1, "c": 2, "d": 2, "e": 0}}
+            },
+            {
+              "id": 105,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "intro-knowledge-error",
+              "questionTitle": "Your heading looks wrong, and everything after it is huge too. You open the code and see this:\n\n<h1>Panda Fan Club\n<p>Welcome to the club!</p>\n\nWhich instruction to the AI would work best?",
+              "choices": [
+                { "id": "a", "text": "It’s broken. Fix it." },
+                { "id": "b", "text": "Add a CSS rule to fix the heading color." },
+                { "id": "c", "text": "Update the click handler so the heading changes." },
+                { "id": "d", "text": "Close the h1 tag after “Panda Fan Club”." },
+                { "id": "e", "text": "I’m not sure." }
+              ],
+              "measures": {"skillId": "debug", "evidenceLevels": {"a": 0, "b": 1, "c": 1, "d": 2, "e": 0}}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "steer-it",
+      "title": "Steer It",
+      "description": "Writes a prompt with 2 or more specific details, or a follow-up that changes one thing.",
+      "skillIds": ["build"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "steer-it-video",
+          "title": "Steer the AI",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-steer-it-1-17995faf-a664-4414-bc98-7431cd3241ef",
+              "imageUrl": "https://images.code.org/a54b50240ea4cb7adf5e3024b375eeb4-adaptive-HoAI26-steer-it-1-panel-1-684c1d2b-fe79-42f0-bfdc-95bd4df873fe.png",
+              "text": "A vague idea leads to a generic page.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-steer-it-1-afd489af-a45b-446f-a338-ca930cab4beb",
+              "imageUrl": "https://images.code.org/7fcaab895404efc7593fd11bc89d9446-adaptive-HoAI26-steer-it-1-panel-2-05db347e-50e7-4e31-8eb8-22237a6c5b9e.png",
+              "text": "Specific prompts create the page you pictured.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-steer-it-1-d8ddab96-9905-4f58-a542-c018b77acfb2",
+              "imageUrl": "https://images.code.org/8639fe1c24cf0d43b35e0ee23c827164-adaptive-HoAI26-steer-it-1-panel-3-261bf228-9191-4edb-89ed-a6ea705ef639.png",
+              "text": "Add details to make your vision clearer.",
+              "layout": "text-bottom-center"
+            },
+            {
+              "key": "adaptive-HoAI26-steer-it-1-0ae185a2-bd05-4498-a059-7ace18932f1a",
+              "imageUrl": "https://images.code.org/2db8f93a3785ad9e7a9ce71b8925b0b9-adaptive-HoAI26-steer-it-1-panel-4-1d745ffa-6de7-4ca6-8d09-1a13108d4cef.png",
+              "text": "Or change one thing, clearly stating what to keep.",
+              "layout": "text-bottom-center"
+            }
+          ]
+        },
+        {
+          "id": "steer-it-widget",
+          "title": "The prompt dial",
+          "kind": "level",
+          "level": "adaptive-HoAI26-steer-it-2",
+          "instructions": "Switch details on and off in a sample prompt and watch a sample page change."
+        },
+        {
+          "id": "steer-it-project",
+          "title": "Steer your first version",
+          "kind": "level",
+          "level": "adaptive-HoAI26-steer-it-3",
+          "project": true,
+          "instructions": "What would you change first? Add a detail or change one thing, and say what to keep.",
+          "instructionsPrompt": "Task: In their own project, write a follow-up prompt that adds details or changes one thing.\nOutline: Prompt: \"What would you change first? Add a detail or change one thing, and say what to keep.\" The tutor reads the prompt.\nEvidence: a prompt with 2 or more specific details, or a follow-up that changes one thing."
+        }
+      ]
+    },
+    {
+      "id": "use-the-lingo",
+      "title": "Use the Lingo",
+      "description": "Names a block of their page and what it is for.",
+      "skillIds": ["language"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "use-the-lingo-video",
+          "title": "Meet the page parts",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-use-the-lingo-4-0fabcd91-a15d-4eab-b9e0-a817bdb80c3c",
+              "imageUrl": "https://images.code.org/e96e3780990834ef3974ef3d80947dfb-adaptive-HoAI26-use-the-lingo-4-panel-1-63cc02fd-4ac4-46cf-a853-c80dd9d66f8b.png",
+              "text": "Every web page is made of different parts.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-use-the-lingo-4-d0f02545-840a-4370-95c5-1425103a1f5d",
+              "imageUrl": "https://images.code.org/1c66a502e8fc40384085255313953c2a-adaptive-HoAI26-use-the-lingo-4-panel-2-8b4a4f57-e9ea-4b2a-a7f1-b86102b286c0.png",
+              "text": "The 'hero' section is often at the top, grabbing attention.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-use-the-lingo-4-1774d6c3-2655-47d6-a5f8-adc23ff053d4",
+              "imageUrl": "https://images.code.org/f8b20e8911206eebc0d69e2559402d81-adaptive-HoAI26-use-the-lingo-4-panel-3-e54b4963-c816-4228-b7de-8bf1f1d5d26d.png",
+              "text": "Smaller 'feature cards' show key info or options.",
+              "layout": "text-bottom-center"
+            },
+            {
+              "key": "adaptive-HoAI26-use-the-lingo-4-7cf960b2-c941-4a0e-b99a-620e481caad4",
+              "imageUrl": "https://images.code.org/913bc094ad84431911c2d2c71150ccf4-adaptive-HoAI26-use-the-lingo-4-panel-4-d971775e-0e4c-4b45-9026-8daff6302f23.png",
+              "text": "An 'interactive canvas' lets users play or create.",
+              "layout": "text-bottom-center"
+            },
+            {
+              "key": "adaptive-HoAI26-use-the-lingo-4-72392717-95fb-44d8-82e3-9599f4c8b802",
+              "imageUrl": "https://images.code.org/0106677c91c70457e3eeefaa7d70a50c-adaptive-HoAI26-use-the-lingo-4-panel-5-8e3c5eec-92a8-41ad-8492-61f1a8b19f9d.png",
+              "text": "A 'call-to-action' button guides you to the next step.",
+              "layout": "text-bottom-center"
+            }
+          ]
+        },
+        {
+          "id": "use-the-lingo-widget",
+          "title": "Tap a block",
+          "kind": "level",
+          "level": "adaptive-HoAI26-use-the-lingo-5",
+          "instructions": "Tap blocks on a sample page to see each one's name and job."
+        },
+        {
+          "id": "use-the-lingo-project",
+          "title": "Name a block in your project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-use-the-lingo-6",
+          "project": true,
+          "instructions": "Pick one part of your page and ask for a change. Name it and say its job.",
+          "instructionsPrompt": "Task: Ask the AI for a change that names one block of their page and says what it is for.\nOutline: Prompt: \"Pick one part of your page and ask for a change. Name it and say its job.\"\nEvidence: a prompt that names a block and its job."
+        }
+      ]
+    },
+    {
+      "id": "keep-or-redirect",
+      "title": "Keep or Redirect",
+      "description": "Compares what came back with a plan and decides: keep, redirect or edit.",
+      "skillIds": ["build"],
+      "requires": ["steer-it"],
+      "steps": [
+        {
+          "id": "keep-or-redirect-video",
+          "title": "Match your plan",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-keep-or-redirect-7-ba2c3be6-4712-4e3d-8016-69fd81ac9220",
+              "imageUrl": "https://images.code.org/90c406a6db38b75113ede59d82566e53-adaptive-HoAI26-keep-or-redirect-7-panel-1-4502e179-ad54-492f-88e1-7ba569688744.png",
+              "text": "First, you start with a plan for your web page.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-keep-or-redirect-7-4f32facc-9d3a-417d-8506-7b147ed7a6e3",
+              "imageUrl": "https://images.code.org/aa6f60fde4ecc2bb10f318a7dc3cdbb7-adaptive-HoAI26-keep-or-redirect-7-panel-2-d483f2f6-5e99-4d6a-8757-48a82ae3baed.png",
+              "text": "Then, compare the AI's result to your plan. See what matches and what doesn't.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-keep-or-redirect-7-4e6e7a97-d8fc-4458-aa16-afc16e2b48c4",
+              "imageUrl": "https://images.code.org/bdeac1aa4a09c49e5c95a93fe1c4f9e3-adaptive-HoAI26-keep-or-redirect-7-panel-3-9ebcb81b-6a00-48a2-820d-03845357d2e6.png",
+              "text": "If the result is good, or close enough, you can simply keep it as is.",
+              "layout": "text-bottom-center"
+            },
+            {
+              "key": "adaptive-HoAI26-keep-or-redirect-7-4d59d49f-ef73-4664-89c5-db39ed61e775",
+              "imageUrl": "https://images.code.org/f730af5c733bb6cee601971b564db619-adaptive-HoAI26-keep-or-redirect-7-panel-4-6a845602-19a2-45b7-ae41-52dda4c49923.png",
+              "text": "If it's way off, redirect with a new prompt. For small changes, edit it yourself by hand.",
+              "layout": "text-bottom-center"
+            }
+          ]
+        },
+        {
+          "id": "keep-or-redirect-widget",
+          "title": "Plan versus result",
+          "kind": "level",
+          "level": "adaptive-HoAI26-keep-or-redirect-8",
+          "instructions": "Tap the parts of a sample result that match a plan, then try keep, redirect or edit and watch what happens."
+        },
+        {
+          "id": "keep-or-redirect-project",
+          "title": "Decide on a real change",
+          "kind": "level",
+          "level": "adaptive-HoAI26-keep-or-redirect-9",
+          "project": true,
+          "instructions": "Does this match? Keep it, redirect it or edit it, and say why.",
+          "instructionsPrompt": "Task: Write a one-sentence plan for a part of their page, then decide what to do when the AI changes it.\nOutline: First the student writes a one-sentence plan, such as \"A friendly headline and the blue button.\" When the AI changes something, the tutor shows the plan beside the result and asks: \"Does this match? Keep it, redirect it or edit it, and say why.\"\nEvidence: a decision with a reason that refers to the plan."
+        }
+      ]
+    },
+    {
+      "id": "give-context",
+      "title": "Give Context",
+      "description": "Reports a problem with what was expected, what happened and where.",
+      "skillIds": ["debug"],
+      "requires": ["intro"],
+      "steps": [
+        {
+          "id": "give-context-video",
+          "title": "Three questions",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-give-context-10-871d8e81-1266-415a-82b5-8330003b3e82",
+              "imageUrl": "https://images.code.org/0a7ede68163f4c99a28620ec4da99d6b-adaptive-HoAI26-give-context-10-panel-1-5afd6e79-50b1-4dcd-9f6a-06a4d82b5d04.png",
+              "text": "I typed 'It's broken!' and got this.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-give-context-10-4436b64f-b9e2-4bbc-bfbd-5bb0738dd413",
+              "imageUrl": "https://images.code.org/9c5dcd07c30b0675c07d039c4bc51616-adaptive-HoAI26-give-context-10-panel-2-9543f87e-b3c9-45fc-82e2-10fbd113227a.png",
+              "text": "But when I tried again with more details, the AI gave me a useful reply!",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-give-context-10-b6791e81-fea9-4823-8167-2435ed557756",
+              "imageUrl": "https://images.code.org/e9799e472ee00a3229646b00aa007435-adaptive-HoAI26-give-context-10-panel-3-9dcf37e3-41a9-4ba6-b13c-c793013368d9.png",
+              "text": "Good bug reports answer three questions: What did you expect? What happened? And where?",
+              "layout": "text-bottom-center"
+            }
+          ]
+        },
+        {
+          "id": "give-context-widget",
+          "title": "Build a bug report",
+          "kind": "level",
+          "level": "adaptive-HoAI26-give-context-11",
+          "instructions": "Add the three parts to a report about a sample broken page and watch the AI's reply get better."
+        },
+        {
+          "id": "give-context-project",
+          "title": "Report a problem in your project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-give-context-12",
+          "project": true,
+          "instructions": "Tell the AI what you expected, what happened and where.",
+          "instructionsPrompt": "Task: When something breaks or looks wrong, report what they expected, what happened and where.\nOutline: Needs a real problem. Prompt: \"Tell the AI what you expected, what happened and where.\" If nothing breaks, the tutor may offer a safe problem (parked for engineering).\nEvidence: what was expected, what happened and where, all in one message."
+        }
+      ]
+    },
+    {
+      "id": "check-the-fix",
+      "title": "Check the Fix",
+      "description": "Checks that a fix worked and that nothing new broke.",
+      "skillIds": ["debug"],
+      "requires": ["give-context"],
+      "steps": [
+        {
+          "id": "check-the-fix-panels",
+          "title": "Trust, then check",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-check-the-fix-13-c5c452e3-25a6-4544-94f0-066465f9f381",
+              "imageUrl": "https://images.code.org/a133066140c9b8d68a3d01e1f787e83c-adaptive-HoAI26-check-the-fix-13-panel-1-2067aefc-63e9-4ee1-a206-624e0f178c7e.png",
+              "text": "After a fix, reload the page to see if the changes worked.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-check-the-fix-13-865ee2e4-fc00-4ef6-a6ff-c5f556d5a66d",
+              "imageUrl": "https://images.code.org/ace19efd2f34afa9f33dee9c18ba1c60-adaptive-HoAI26-check-the-fix-13-panel-2-043d2eea-94ea-4fa8-8b93-5b6426be27d4.png",
+              "text": "Click on every button and link. Make sure all interactive elements still work.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-check-the-fix-13-f3604f97-23aa-462d-8ff9-e9adf8b4a12c",
+              "imageUrl": "https://images.code.org/542886051630157fd45f85280de5b751-adaptive-HoAI26-check-the-fix-13-panel-3-053129bf-7835-4bb9-b09e-e8a97252f165.png",
+              "text": "Carefully check the entire page for any new problems or broken parts.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "check-the-fix-widget",
+          "title": "Before and after",
+          "kind": "level",
+          "level": "adaptive-HoAI26-check-the-fix-14",
+          "instructions": "Drag a slider across two versions of a page to find what changed."
+        },
+        {
+          "id": "check-the-fix-project",
+          "title": "Check your fix",
+          "kind": "level",
+          "level": "adaptive-HoAI26-check-the-fix-15",
+          "project": true,
+          "instructions": "How did you check? Say what you tried.",
+          "instructionsPrompt": "Task: After the AI offers a fix, check that the problem is gone and nothing new broke.\nOutline: Prompt: \"How did you check? Say what you tried.\"\nEvidence: a stated check, such as \"I reloaded and the image appears.\""
+        }
+      ]
+    },
+    {
+      "id": "a-list-and-a-random-pick",
+      "title": "A list and a random pick",
+      "description": "Describes a list of options and a random pick, using list and pick words, so the page chooses one by chance.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "a-list-and-a-random-pick-panels",
+          "title": "Options in a list",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-a-list-and-a-random-pick-16-985cb86f-2041-43cb-b46f-bc7e42276b04",
+              "imageUrl": "https://images.code.org/6163cf795632996e153c4deb51dd244d-adaptive-HoAI26-a-list-and-a-random-pick-16-panel-1-9c495e5a-3369-44f1-8a02-5e0ec7e88134.png",
+              "text": "A list holds multiple options.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-a-list-and-a-random-pick-16-3be0c95d-6b6f-4966-a2b7-26df6e11886e",
+              "imageUrl": "https://images.code.org/c43684cce762ecfbb06cffd400f85a9f-adaptive-HoAI26-a-list-and-a-random-pick-16-panel-2-20296735-b45d-44f9-89c4-6b96abb72838.png",
+              "text": "A random pick chooses one by chance.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-a-list-and-a-random-pick-16-3c876579-7669-4811-8c2f-96dd4256a84e",
+              "imageUrl": "https://images.code.org/bff9a89ec8d6836afbbc416ae75f5362-adaptive-HoAI26-a-list-and-a-random-pick-16-panel-3-955a2251-695e-472f-b657-3cd9b4ac5b2a.png",
+              "text": "The spinning is just how it looks.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "a-list-and-a-random-pick-widget",
+          "title": "Edit the list, then pick",
+          "kind": "level",
+          "level": "adaptive-HoAI26-a-list-and-a-random-pick-17",
+          "instructions": "Add or remove items, press Pick, and see a different item each time."
+        },
+        {
+          "id": "a-list-and-a-random-pick-project",
+          "title": "Describe your list and your pick",
+          "kind": "level",
+          "level": "adaptive-HoAI26-a-list-and-a-random-pick-18",
+          "project": true,
+          "instructions": "What are your options, and how should the page choose one?",
+          "instructionsPrompt": "Task: Tell the AI what the options are and how the page should pick one.\nOutline: Prompt: \"What are your options, and how should the page choose one?\"\nEvidence: explains that the page picks one item from a list by chance."
+        }
+      ]
+    },
+    {
+      "id": "a-number-and-a-rule",
+      "title": "A number and a rule",
+      "description": "Describes a number that changes and a rule that uses it.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "a-number-and-a-rule-video",
+          "title": "Numbers and rules",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-a-number-and-a-rule-19-ff36aee4-9b28-4837-a8bb-cb1fe23c8685",
+              "imageUrl": "https://images.code.org/aeebc17ac02e50017f19fc8ffe4de175-adaptive-HoAI26-a-number-and-a-rule-19-panel-1-20c45567-59fc-47d2-bd45-e97d88945fd5.png",
+              "text": "Many apps and games use numbers that change, like a score.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-a-number-and-a-rule-19-702877e1-c14a-4232-8ae3-cd5ae406db3d",
+              "imageUrl": "https://images.code.org/2014bdb1cd8a9be84b1d70345cd6c7d0-adaptive-HoAI26-a-number-and-a-rule-19-panel-2-7f491cf3-518b-467a-aa00-ff47e09cf1b8.png",
+              "text": "A \"rule\" is a condition that tells the page what to do if that number changes in a certain way.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-a-number-and-a-rule-19-6d6c39d0-b187-4102-a6c3-78ed9f9616c4",
+              "imageUrl": "https://images.code.org/c0dc3fc3bef61b8a48f45031c07ca159-adaptive-HoAI26-a-number-and-a-rule-19-panel-3-09aa1c29-0607-4066-a4e3-6238e392f91f.png",
+              "text": "For example, a rule might say: \"If the score reaches 10...\"",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-a-number-and-a-rule-19-db452bd0-6f2d-42bf-b2ab-42c83c4cc1cb",
+              "imageUrl": "https://images.code.org/c9d1d94e77d30778171c278698592d99-adaptive-HoAI26-a-number-and-a-rule-19-panel-4-80626462-918f-4c35-8397-7ec9ea1b63bf.png",
+              "text": "...then the game round ends.\" Numbers and rules make pages dynamic!",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "a-number-and-a-rule-check",
+          "title": "Which one is the rule?",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 106,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "a-number-and-a-rule-q1",
+              "questionTitle": "Which sentence is a rule?",
+              "choices": [
+                { "id": "a", "text": "The score is 7." },
+                { "id": "b", "text": "If the score reaches 10, the round ends." },
+                { "id": "c", "text": "The button is blue." },
+                { "id": "d", "text": "The page has a title." }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "a-number-and-a-rule-respond",
+          "title": "Say your rule",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 107,
+              "type": "freeResponse",
+              "text": "Write the rule for your page as if... then...",
+              "placeholder": "For example: If the button is clicked, then show a message."
+            }
+          ]
+        },
+        {
+          "id": "a-number-and-a-rule-project",
+          "title": "Add a number and a rule",
+          "kind": "level",
+          "level": "adaptive-HoAI26-a-number-and-a-rule-22",
+          "project": true,
+          "instructions": "What number will change, and what rule will use it?",
+          "instructionsPrompt": "Task: Ask the AI for a number that changes (score, count or lives) and a rule that uses it.\nOutline: Prompt: \"What number will change, and what rule will use it?\" The tutor shows the rule they wrote.\nEvidence: names the number that changes and the rule that uses it."
+        }
+      ]
+    },
+    {
+      "id": "remember-and-show",
+      "title": "Remember and show",
+      "description": "Describes what the page should remember and what should show on screen.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "remember-and-show-panels",
+          "title": "The page remembers",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-remember-and-show-23-60a73507-9342-4fa5-a250-17cda9d517ab",
+              "imageUrl": "https://images.code.org/5bb00abc5cfda837a65a136643dc3af1-adaptive-HoAI26-remember-and-show-23-panel-1-bf0d0fa6-1a8d-4dc8-a94d-d70fa50529a7.png",
+              "text": "The page can remember what happened.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-remember-and-show-23-f84d3cc7-053c-47be-b86b-2c325cea5a74",
+              "imageUrl": "https://images.code.org/ce265e6b6345fa3caa0b8571cbea87c0-adaptive-HoAI26-remember-and-show-23-panel-2-ef0919eb-d177-4b05-9643-e8fd7b06befa.png",
+              "text": "A click can save a pick.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-remember-and-show-23-2e31310f-67f4-4985-97b5-cb4e3737bf88",
+              "imageUrl": "https://images.code.org/ebb6ae5b5f40261db7b8c0ccff601099-adaptive-HoAI26-remember-and-show-23-panel-3-6ef9ca50-194c-4102-beeb-5fa10281c1e9.png",
+              "text": "Then it can show them again.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-remember-and-show-23-fd44436a-8421-46e6-86fc-09e5d92ff1a7",
+              "imageUrl": "https://images.code.org/87f19414e63b0d1c15a957cb16b1ded6-adaptive-HoAI26-remember-and-show-23-panel-4-58d0e39d-127e-4f8b-abd2-a77c730831b6.png",
+              "text": "Showing can be a bar, a count, or a preview.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "remember-and-show-widget",
+          "title": "What does the page remember?",
+          "kind": "level",
+          "level": "adaptive-HoAI26-remember-and-show-24",
+          "instructions": "Click choices on a sample page and watch a memory list and a display update together."
+        },
+        {
+          "id": "remember-and-show-project",
+          "title": "Remember and show in your project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-remember-and-show-25",
+          "project": true,
+          "instructions": "What should your page remember, and what should show when it does?",
+          "instructionsPrompt": "Task: Tell the AI what the page should remember and what should show right away.\nOutline: Prompt: \"What should your page remember, and what should show when it does?\"\nEvidence: names what is remembered and what changes on screen."
+        }
+      ]
+    },
+    {
+      "id": "layout-and-spacing",
+      "title": "Layout and spacing",
+      "description": "Uses layout words and block names to describe space, alignment and order.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "layout-and-spacing-panels",
+          "title": "Space, alignment and order",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-layout-and-spacing-26-b8561ce0-5788-4c6f-bb4d-15242c2f59cd",
+              "imageUrl": "https://images.code.org/567fc55326993bed0d2a2cab39e0e34d-adaptive-HoAI26-layout-and-spacing-26-panel-1-18b73091-4fad-4bab-a237-2e3d75eab473.png",
+              "text": "Crowded?",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-layout-and-spacing-26-c5d19123-347f-4907-9eea-f01b4a70c5cb",
+              "imageUrl": "https://images.code.org/5f3e8da4f441f12dea40bc2ffe3855c9-adaptive-HoAI26-layout-and-spacing-26-panel-2-1a7b5cbf-ce8a-49d9-a499-d87f67d00f7d.png",
+              "text": "Space gives each part room.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-layout-and-spacing-26-cd11d90c-e2d0-4105-ab67-d3a54d1b88a4",
+              "imageUrl": "https://images.code.org/f5fb78fb43090051ccb9181ec7ef998c-adaptive-HoAI26-layout-and-spacing-26-panel-3-f5e784ea-db7c-4eaa-a1ad-ad24118ce52d.png",
+              "text": "Alignment makes it feel tidy.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-layout-and-spacing-26-6b38049a-14c4-4738-a592-7119c11ccfea",
+              "imageUrl": "https://images.code.org/7d9c97ead20a9def24eec5a60f038d67-adaptive-HoAI26-layout-and-spacing-26-panel-4-d449ba03-b656-419c-84b1-825476c6f17f.png",
+              "text": "Order guides the eye.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "layout-and-spacing-check",
+          "title": "Which description fixes it?",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 108,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "layout-and-spacing-q1",
+              "questionTitle": "Three club cards feel crowded. Which description fixes it?",
+              "choices": [
+                { "id": "a", "text": "Make it nicer." },
+                { "id": "b", "text": "Put more space between the three cards and line them up under the hero." },
+                { "id": "c", "text": "Make the cards disappear." },
+                { "id": "d", "text": "Make everything bigger." }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "layout-and-spacing-project",
+          "title": "Describe a layout change",
+          "kind": "level",
+          "level": "adaptive-HoAI26-layout-and-spacing-28",
+          "project": true,
+          "instructions": "Which blocks need more room or a different order? Say how they should be arranged.",
+          "instructionsPrompt": "Task: Ask the AI for a layout change that names the blocks and how they should be arranged.\nOutline: Prompt: \"Which blocks need more room or a different order? Say how they should be arranged.\"\nEvidence: a prompt that names blocks and says how they should be arranged."
+        }
+      ]
+    },
+    {
+      "id": "style-and-consistency",
+      "title": "Style and consistency",
+      "description": "Names a style in words and restates it across changes so the AI keeps it steady.",
+      "skillIds": ["build"],
+      "requires": ["steer-it"],
+      "steps": [
+        {
+          "id": "style-and-consistency-video",
+          "title": "Name a style, keep it",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-style-and-consistency-29-cc215da3-5e1a-4f98-913c-ec1eee2dd05c",
+              "imageUrl": "https://images.code.org/fb38e5ced6d213a108c4c7f8374573ba-adaptive-HoAI26-style-and-consistency-29-panel-1-80dabced-1aba-4180-9cb6-f6afd68ec458.png",
+              "text": "When you start, your web page has a clear and consistent style.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-style-and-consistency-29-c917aa50-bf5c-4f46-a949-fef5c9b7a386",
+              "imageUrl": "https://images.code.org/a34419902bf961bff6436c3b680691d3-adaptive-HoAI26-style-and-consistency-29-panel-2-c6df0b35-7aee-4469-b79a-54fa4c6d8ce0.png",
+              "text": "But with new additions, its style can start to drift.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-style-and-consistency-29-99b13e14-681f-4d4d-a23a-cc040dc2a1d5",
+              "imageUrl": "https://images.code.org/cde3a5eda1a694488cb80b87ba25d2af-adaptive-HoAI26-style-and-consistency-29-panel-3-e5ba20f8-746e-4902-8499-5ae21a23aa8e.png",
+              "text": "Too many inconsistent changes make it look messy and unplanned.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-style-and-consistency-29-b06446b7-09ac-4ffd-8f2d-9d7b1ea933d7",
+              "imageUrl": "https://images.code.org/0e0cae90516199a1cf60a0a5d70d8098-adaptive-HoAI26-style-and-consistency-29-panel-4-100af280-dd6c-4437-bc7f-1c9d58484380.png",
+              "text": "To fix this, name your style. Use a few words to describe it.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-style-and-consistency-29-4ef13276-0b29-49e6-8d98-7d15b4ea009a",
+              "imageUrl": "https://images.code.org/7f5932fafe06c29ba11ac60b1b41d9e9-adaptive-HoAI26-style-and-consistency-29-panel-5-e92d5c9c-c6c3-4009-ac7c-a953e17a8406.png",
+              "text": "Then, repeat that style every time you make a change.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "style-and-consistency-respond",
+          "title": "Your style in three words",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 109,
+              "type": "freeResponse",
+              "text": "Name the style of your site in three words, like calm, clean, rounded.",
+              "placeholder": "Enter three words to describe your site's style."
+            }
+          ]
+        },
+        {
+          "id": "style-and-consistency-project",
+          "title": "Keep your style across two changes",
+          "kind": "level",
+          "level": "adaptive-HoAI26-style-and-consistency-31",
+          "project": true,
+          "instructions": "Make your next change and say your style again.",
+          "instructionsPrompt": "Task: Make two more changes to their project and restate the style each time.\nOutline: Prompt: \"Make your next change and say your style again.\" The tutor checks a second change too.\nEvidence: a follow-up that restates the style while changing one thing."
+        }
+      ]
+    },
+    {
+      "id": "readable-and-clear",
+      "title": "Readable and clear",
+      "description": "Asks for text size, contrast and wording that make a block easy to read.",
+      "skillIds": ["build"],
+      "requires": ["keep-or-redirect"],
+      "steps": [
+        {
+          "id": "readable-and-clear-panels",
+          "title": "Size, contrast, wording",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-readable-and-clear-32-17cc1b70-462d-44ac-bdcb-93d7fd1edc7f",
+              "imageUrl": "https://images.code.org/a895652cf0f9e594616b195573ff7c8f-adaptive-HoAI26-readable-and-clear-32-panel-1-c0dbab6c-9680-4603-88b3-74ed90073d8d.png",
+              "text": "Size: can you read it from across the table?",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-readable-and-clear-32-ec23ee87-9cb3-488f-b4c8-20ac96287a44",
+              "imageUrl": "https://images.code.org/fb1197e068db9d9688d58ff70ef6e283-adaptive-HoAI26-readable-and-clear-32-panel-2-58feefbe-7755-4159-b506-551738e083d7.png",
+              "text": "Contrast: dark on light is easier.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-readable-and-clear-32-fe724db5-51e3-4045-95b1-5473f7cc8c7a",
+              "imageUrl": "https://images.code.org/0d971c5e0585c47495587a19a82c5915-adaptive-HoAI26-readable-and-clear-32-panel-3-476bb623-85a7-44ae-a81e-10ef0e3a9037.png",
+              "text": "Wording: short and plain.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "readable-and-clear-widget",
+          "title": "Try the contrast",
+          "kind": "level",
+          "level": "adaptive-HoAI26-readable-and-clear-33",
+          "instructions": "Move sliders to change text and background colors and see if it is easy to read."
+        },
+        {
+          "id": "readable-and-clear-project",
+          "title": "Ask for a readability change",
+          "kind": "level",
+          "level": "adaptive-HoAI26-readable-and-clear-34",
+          "project": true,
+          "instructions": "Which block is hardest to read? Ask for a change.",
+          "instructionsPrompt": "Task: Pick a block that is hard to read and ask for a size, contrast or wording change.\nOutline: Prompt: \"Which block is hardest to read? Ask for a change.\"\nEvidence: a prompt that names a block and a readability change."
+        }
+      ]
+    },
+    {
+      "id": "say-it-in-your-voice",
+      "title": "Say it in your voice",
+      "description": "Names a tone in words and restates it across changes so the AI keeps it steady.",
+      "skillIds": ["build"],
+      "requires": ["steer-it"],
+      "steps": [
+        {
+          "id": "say-it-in-your-voice-panels",
+          "title": "Tone words",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-say-it-in-your-voice-35-ff3f6180-7ec7-4a00-b462-f87de8f4de4b",
+              "imageUrl": "https://images.code.org/432405606dde54cf8ab3adc866538c15-adaptive-HoAI26-say-it-in-your-voice-35-panel-1-99ccd703-c794-4137-91ec-2507adaf933f.png",
+              "text": "The same headline can sound playful...",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-say-it-in-your-voice-35-da7a2f94-c842-4315-b6ed-8d5b5ce14690",
+              "imageUrl": "https://images.code.org/226d310e0415b48adadec76c851364f6-adaptive-HoAI26-say-it-in-your-voice-35-panel-2-678d1219-29e1-4dcd-b8a3-f53089a10d57.png",
+              "text": "...or calm, with soft colors and smooth lines.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-say-it-in-your-voice-35-1d7cd456-4d4d-45e9-a2b9-3f1bf0333b42",
+              "imageUrl": "https://images.code.org/6c9816d0db3396046446849f7f6cc44e-adaptive-HoAI26-say-it-in-your-voice-35-panel-3-a7f47769-92c8-4a63-b96e-5908a98c006b.png",
+              "text": "...or bold and direct, with strong colors.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-say-it-in-your-voice-35-b7ef8234-89ac-4314-8ceb-fe919d04fd89",
+              "imageUrl": "https://images.code.org/8a1f279e0e1d23a0de8e0c19b3a37c1d-adaptive-HoAI26-say-it-in-your-voice-35-panel-4-f969d9fa-f809-40bd-9eac-89d61c207dde.png",
+              "text": "Name your tone, then repeat it to keep your site consistent.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "say-it-in-your-voice-respond",
+          "title": "Your site's tone in three words",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 110,
+              "type": "freeResponse",
+              "text": "Pick three words for how your site should sound.",
+              "placeholder": "Enter your three tone words..."
+            }
+          ]
+        },
+        {
+          "id": "say-it-in-your-voice-project",
+          "title": "Keep your tone across two changes",
+          "kind": "level",
+          "level": "adaptive-HoAI26-say-it-in-your-voice-37",
+          "project": true,
+          "instructions": "Make your next change and say your tone again.",
+          "instructionsPrompt": "Task: Make two more changes and restate the tone each time.\nOutline: Prompt: \"Make your next change and say your tone again.\"\nEvidence: a follow-up that restates the tone while changing one thing."
+        }
+      ]
+    },
+    {
+      "id": "lead-with-the-point",
+      "title": "Lead with the point",
+      "description": "Uses headline words to say what the site is for in the first line.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "lead-with-the-point-video",
+          "title": "Say it in the first line",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-lead-with-the-point-38-55f0cf0b-0ccb-46b4-ac54-245ba803ce69",
+              "imageUrl": "https://images.code.org/de0e2e4d720c53cbf6e8498277b2a523-adaptive-HoAI26-lead-with-the-point-38-panel-1-ecc76eae-0d74-439d-8970-ecc99e2350a6.png",
+              "text": "Visitors decide in a few seconds if they'll stay on your page.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-lead-with-the-point-38-83e1d8d1-deb3-4653-8558-045145f45dac",
+              "imageUrl": "https://images.code.org/eade762cdc53d8b3d18dc0187bc36a0a-adaptive-HoAI26-lead-with-the-point-38-panel-2-52804333-382f-401c-ac98-1c088cd21968.png",
+              "text": "A vague headline doesn't tell them what your site is for.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-lead-with-the-point-38-a770442b-cdd6-4ceb-8511-4c7c42c5cfec",
+              "imageUrl": "https://images.code.org/b19768ebc9ebff1d2dfc8ff20ceafcd6-adaptive-HoAI26-lead-with-the-point-38-panel-3-8d09baa0-80d5-4f07-870e-badd940f8565.png",
+              "text": "A clear headline says exactly what your site is about.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-lead-with-the-point-38-909257ba-927c-4886-931a-7ddc1ef08f2e",
+              "imageUrl": "https://images.code.org/631315a1b290a4c53f66e0334f828ee5-adaptive-HoAI26-lead-with-the-point-38-panel-4-a8abda51-6705-4cb7-b66b-ffe56efe810e.png",
+              "text": "Lead with your main point to grab their attention right away.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "lead-with-the-point-check",
+          "title": "Which headline leads?",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 111,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "lead-with-the-point-q1",
+              "questionTitle": "Which headline tells a new student what the site is for?",
+              "choices": [
+                { "id": "a", "text": "Welcome!" },
+                { "id": "b", "text": "Find a club that fits you in two minutes." },
+                { "id": "c", "text": "Our school, our story." },
+                { "id": "d", "text": "Click here." }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "lead-with-the-point-project",
+          "title": "Rewrite your headline",
+          "kind": "level",
+          "level": "adaptive-HoAI26-lead-with-the-point-40",
+          "project": true,
+          "instructions": "What is your site for? Make the headline say it.",
+          "instructionsPrompt": "Task: Ask the AI to change the headline and first line, or edit them by hand.\nOutline: Prompt: \"What is your site for? Make the headline say it.\"\nEvidence: a prompt or edit that states the site's purpose in the headline."
+        }
+      ]
+    },
+    {
+      "id": "make-the-ask-clear",
+      "title": "Make the ask clear",
+      "description": "Writes a call-to-action with a clear verb and next step.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "make-the-ask-clear-panels",
+          "title": "A button that says what to do",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-make-the-ask-clear-41-dcc4456d-fb5e-4458-8425-822f4ae00b38",
+              "imageUrl": "https://images.code.org/ea72914efaf1c4f21d2de455e5f3f0fc-adaptive-HoAI26-make-the-ask-clear-41-panel-1-30f9bca6-0f7b-4dae-a8b5-92d134ccebfd.png",
+              "text": "A button that simply says 'Click here' is vague. It doesn't tell users what will happen next.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-make-the-ask-clear-41-be68f628-41fd-4b16-9687-cbdc2f0b844b",
+              "imageUrl": "https://images.code.org/2e3da13f7bb81364236e67671b51b33d-adaptive-HoAI26-make-the-ask-clear-41-panel-2-9b2587aa-0103-4c55-a053-71c7acab0fee.png",
+              "text": "A clear button tells you what to do next, using a verb and a specific step, like 'Find my club'.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-make-the-ask-clear-41-90457403-06f2-42a5-b0b5-744d20b9b404",
+              "imageUrl": "https://images.code.org/1ba0e33ea57a9aab68c54568dd8bd10a-adaptive-HoAI26-make-the-ask-clear-41-panel-3-289111b2-866e-4a82-bd87-9e9278bf5322.png",
+              "text": "Place important buttons where people naturally look, often under a short, guiding sentence.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "make-the-ask-clear-widget",
+          "title": "Fix the button",
+          "kind": "level",
+          "level": "adaptive-HoAI26-make-the-ask-clear-42",
+          "instructions": "Type or pick a new label for a vague button and see it on a sample page."
+        },
+        {
+          "id": "make-the-ask-clear-project",
+          "title": "Rewrite your call-to-action",
+          "kind": "level",
+          "level": "adaptive-HoAI26-make-the-ask-clear-43",
+          "project": true,
+          "instructions": "What should a visitor do next? Make the button say it.",
+          "instructionsPrompt": "Task: Ask for a call-to-action with a clear verb and next step, or edit it by hand.\nOutline: Prompt: \"What should a visitor do next? Make the button say it.\"\nEvidence: a call-to-action with a clear verb and next step."
+        }
+      ]
+    },
+    {
+      "id": "read-the-console",
+      "title": "Read the console",
+      "description": "Reads an error in the console and says where it points, so a problem report has the context the AI needs.",
+      "skillIds": ["debug"],
+      "requires": ["give-context"],
+      "steps": [
+        {
+          "id": "read-the-console-video",
+          "title": "What the console shows",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-read-the-console-44-9f5dbebe-f7db-4099-88dc-e4c8077c964a",
+              "imageUrl": "https://images.code.org/9239139758860ff8eb99c011025eb49e-adaptive-HoAI26-read-the-console-44-panel-1-443dcdb5-66f0-4e7c-955d-9afa22b55956.png",
+              "text": "When your web page has a problem, the browser tells you in the console. Look for red messages!",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-read-the-console-44-1a366fb1-0ee1-46b7-a440-c95f22f0bec3",
+              "imageUrl": "https://images.code.org/a7df55421ed495e37c630bf44874209e-adaptive-HoAI26-read-the-console-44-panel-2-9240ad6a-60d1-4d77-90c9-5c4065e72bab.png",
+              "text": "Each error message usually includes a keyword. This word helps you understand the type of problem.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-read-the-console-44-b0471c8c-a563-4395-a761-b77888ad3865",
+              "imageUrl": "https://images.code.org/e412c57298f4fd938b95f7979de2cc1e-adaptive-HoAI26-read-the-console-44-panel-3-27c79e25-a2f5-4a5f-bec8-2f8e844ee3fc.png",
+              "text": "The message also points to a line number. This tells you the exact spot in your code where the error occurred.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "read-the-console-panels",
+          "title": "Where, what, which line",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-read-the-console-45-40dec2e0-919d-41f0-a8ad-ba0f479e77fb",
+              "imageUrl": "https://images.code.org/ea7c7bbea23e7144c3f5ac3169fab9ab-adaptive-HoAI26-read-the-console-45-panel-1-5fb1597d-7aec-476f-9cce-796279032fd8.png",
+              "text": "Red means something went wrong.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-read-the-console-45-d66b94d7-28e1-47fa-804f-f8cb85170c92",
+              "imageUrl": "https://images.code.org/9240490520a311d11d943d9f47bf2468-adaptive-HoAI26-read-the-console-45-panel-2-44b58a4f-074a-4b80-a107-3778a21c36fd.png",
+              "text": "Which word does it name?",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-read-the-console-45-98f9f320-d2f7-4e94-9d56-45d0f77eaf7c",
+              "imageUrl": "https://images.code.org/0215d94f4ce367ba639dc867802f5c86-adaptive-HoAI26-read-the-console-45-panel-3-8028b8a8-f4d0-4c1d-90e7-6366b5dc80c2.png",
+              "text": "Which line does it point to?",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "read-the-console-project",
+          "title": "Read your console",
+          "kind": "level",
+          "level": "adaptive-HoAI26-read-the-console-46",
+          "project": true,
+          "instructions": "Open the console. What does the error point to?",
+          "instructionsPrompt": "Task: Open the console in their project and say what an error points to.\nOutline: Needs a real error. Prompt: \"Open the console. What does the error point to?\"\nEvidence: says which keyword or line the error points to."
+        }
+      ]
+    },
+    {
+      "id": "find-it-in-the-code",
+      "title": "Find it in the code",
+      "description": "Finds the line for a named block and uses its name to say where a change belongs.",
+      "skillIds": ["language"],
+      "requires": ["use-the-lingo"],
+      "steps": [
+        {
+          "id": "find-it-in-the-code-panels",
+          "title": "Blocks have names",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-find-it-in-the-code-47-e0d52bb0-ebf1-473b-9b2f-b13ead044145",
+              "imageUrl": "https://images.code.org/dc9ec9cbc84420b8feec8793ff0639ff-adaptive-HoAI26-find-it-in-the-code-47-panel-1-bc867649-a555-4441-be77-d11ae3a15ca0.png",
+              "text": "Every block has a name in the code.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-find-it-in-the-code-47-e7d42de2-ef20-4863-9d17-fa9324c15094",
+              "imageUrl": "https://images.code.org/2992abfbb6eafca13d368426cace8b0b-adaptive-HoAI26-find-it-in-the-code-47-panel-2-9424c1b6-45ad-41c5-9aa3-946618cd0cef.png",
+              "text": "Find the name to find the block.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-find-it-in-the-code-47-583b40f0-e348-44c0-b4fc-74d5af7279e4",
+              "imageUrl": "https://images.code.org/cc9827220fba241e1921dccc169b559b-adaptive-HoAI26-find-it-in-the-code-47-panel-3-9463d2f1-bd90-4e2c-a929-c42f227363cc.png",
+              "text": "Search for the name.",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "find-it-in-the-code-widget",
+          "title": "Search the code",
+          "kind": "level",
+          "level": "adaptive-HoAI26-find-it-in-the-code-48",
+          "instructions": "Type a block name into a search box and see matching lines highlight."
+        },
+        {
+          "id": "find-it-in-the-code-project",
+          "title": "Find a line in your project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-find-it-in-the-code-49",
+          "project": true,
+          "instructions": "Pick a block and find its line in your code.",
+          "instructionsPrompt": "Task: Find the line for one named block in their code.\nOutline: Prompt: \"Pick a block and find its line in your code.\"\nEvidence: points to the line or rule for a named block."
+        }
+      ]
+    },
+    {
+      "id": "undo-to-find-the-cause",
+      "title": "Undo to find the cause",
+      "description": "Undoes changes one at a time and checks after each, to verify what caused the problem.",
+      "skillIds": ["debug"],
+      "requires": ["check-the-fix"],
+      "steps": [
+        {
+          "id": "undo-to-find-the-cause-video",
+          "title": "Undo one at a time",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-undo-to-find-the-cause-50-37af3dfc-0d7b-4abb-8b5d-517f315f0d0a",
+              "imageUrl": "https://images.code.org/03aa57cc525f0a7ce910023fe39385e3-adaptive-HoAI26-undo-to-find-the-cause-50-panel-1-6b572bec-f761-45cb-bb27-32e3437df76b.png",
+              "text": "You've made a few changes to your page, and now something isn't working right.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-undo-to-find-the-cause-50-e68638d4-944c-44c1-899b-7bfb599853f5",
+              "imageUrl": "https://images.code.org/a93626ba2503401fb9b4c82b41ffe6c0-adaptive-HoAI26-undo-to-find-the-cause-50-panel-2-7885b9c8-7ef7-4f6b-9e07-f2d629a7b20c.png",
+              "text": "First, undo only the very last change you made to your code.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-undo-to-find-the-cause-50-1ea4fc18-b29a-41b9-921d-5d578aac815b",
+              "imageUrl": "https://images.code.org/095a52e23aaa4652d3cb8ee3507c4d5c-adaptive-HoAI26-undo-to-find-the-cause-50-panel-3-60e52c3d-6b8d-4aa2-ab86-b55904b9f51b.png",
+              "text": "Reload your page and check carefully to see if the problem is gone.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-undo-to-find-the-cause-50-48cc07a4-3731-4238-a9da-5778dc65f665",
+              "imageUrl": "https://images.code.org/47c95c7f9db8bee245f6b07a5f13f635-adaptive-HoAI26-undo-to-find-the-cause-50-panel-4-95dc67bc-7701-47b8-a9fb-4fdd02198c0f.png",
+              "text": "If it's still broken, undo the next newest change, and check again.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-undo-to-find-the-cause-50-1076fe71-dc47-42f7-8811-e2ad1a730074",
+              "imageUrl": "https://images.code.org/84b6ecdd23e3327cb8f217921db8fa06-adaptive-HoAI26-undo-to-find-the-cause-50-panel-5-f45108c3-7c77-427d-8777-e860b1403a1f.png",
+              "text": "Keep doing this until the page works correctly. The last change you undid was the problem!",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "undo-to-find-the-cause-check",
+          "title": "What do you undo first?",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 112,
+              "type": "MultipleChoiceQuestion",
+              "questionName": "undo-to-find-the-cause-q1",
+              "questionTitle": "You made three changes and something broke. What do you undo first?",
+              "choices": [
+                { "id": "a", "text": "All three at once." },
+                { "id": "b", "text": "The newest change, then check." },
+                { "id": "c", "text": "The oldest change." },
+                { "id": "d", "text": "Nothing. Ask for a new page." }
+              ],
+              "correctChoiceId": "b"
+            }
+          ]
+        },
+        {
+          "id": "undo-to-find-the-cause-respond",
+          "title": "Guess the cause",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 113,
+              "type": "freeResponse",
+              "text": "Which change do you think caused it, and why?",
+              "placeholder": "I think [this change] broke it because [reason]..."
+            }
+          ]
+        },
+        {
+          "id": "undo-to-find-the-cause-project",
+          "title": "Find the cause in your project",
+          "kind": "level",
+          "level": "adaptive-HoAI26-undo-to-find-the-cause-53",
+          "project": true,
+          "instructions": "Undo your newest change. Did it fix it?",
+          "instructionsPrompt": "Task: Undo one change at a time, check after each, and find which one caused the problem.\nOutline: Needs a real problem after more than one change. Prompt: \"Undo your newest change. Did it fix it?\" Repeat until it works.\nEvidence: names the change that caused the problem and how they found it."
+        }
+      ]
+    },
+    {
+      "id": "show-it-off",
+      "title": "Show it off",
+      "description": "Looks back at their hour, writes a sentence about their site, and shares it.",
+      "requires": ["steer-it", "use-the-lingo", "keep-or-redirect", "give-context", "check-the-fix"],
+      "steps": [
+        {
+          "id": "show-it-off-widget-1",
+          "title": "Your hour, replayed",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-show-it-off-54-cf6f9859-cfe3-4437-a266-0bfc2466d90d",
+              "imageUrl": "https://images.code.org/0d1e1113611b51a03ceb029b3445ae38-adaptive-HoAI26-show-it-off-54-panel-1-4ae0e271-2bfb-4feb-bef7-c059a00abc2a.png",
+              "text": "Remember all the changes you've made? Let's take a look back at your project's journey.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-54-1c7be411-eeb7-41d7-9477-03003dc86958",
+              "imageUrl": "https://images.code.org/693314a641f65910d974856a033aed23-adaptive-HoAI26-show-it-off-54-panel-2-3289cac7-7162-4d50-ab9c-82269d515ce2.png",
+              "text": "You can use a slider to replay how your web page changed over time, from your first prompt to your latest edits.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-54-904fb4bc-e463-43b0-b8fe-bff1afc5b286",
+              "imageUrl": "https://images.code.org/09450807f161421c79582ba4ac024f61-adaptive-HoAI26-show-it-off-54-panel-3-ac4b49f9-0044-452f-b686-d7d8e44a1d64.png",
+              "text": "Along the way, you earned special badges for mastering new web development skills!",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-54-da5a5c90-fbb9-429e-b995-0baf560fb9f0",
+              "imageUrl": "https://images.code.org/6a2ddfb0f81617574cde86c432bf54b9-adaptive-HoAI26-show-it-off-54-panel-4-a219fc85-4267-4ae7-8e68-e103f1a416e1.png",
+              "text": "Like the 'Page Namer' badge, for when you first identified a page part by its proper name.",
+              "layout": "text-top-left"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-54-33ce18c0-f3ba-46c0-92d7-fc5a6c835ad5",
+              "imageUrl": "https://images.code.org/493cdc53995bfa4df6a94438b3ebc50b-adaptive-HoAI26-show-it-off-54-panel-5-e6e5d35a-b9a3-41b7-8e41-2e73846216dc.png",
+              "text": "Or the 'Fix Checker' badge, when you successfully confirmed a bug fix!",
+              "layout": "text-top-left"
+            }
+          ]
+        },
+        {
+          "id": "show-it-off-widget-2",
+          "title": "Your skill summary",
+          "kind": "panels",
+          "panels": [
+            {
+              "key": "adaptive-HoAI26-show-it-off-55-2f5f9564-b31d-42c8-baff-a62bd13446c0",
+              "imageUrl": "https://images.code.org/d422654ff1c8ff7adf72682e38d9ad07-adaptive-HoAI26-show-it-off-55-panel-1-351f6d3b-94a8-4f3f-a475-cba15683808e.png",
+              "text": "Your hard work has paid off! Let's review your journey and celebrate your new skills.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-55-f83d3def-9ddf-4139-9c42-08552a3b8563",
+              "imageUrl": "https://images.code.org/eb6a7baf0681fe80946d7d7c827f23b0-adaptive-HoAI26-show-it-off-55-panel-2-93f0a690-2d55-46cc-a4ec-92ef1bccb3bb.png",
+              "text": "See how your prompts grew more detailed and how many tries it took to get your perfect page.",
+              "layout": "text-bottom-center"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-55-6dd9fe87-d7ce-4d9f-ba9a-8956b02ae277",
+              "imageUrl": "https://images.code.org/25d3fb2147a18ccc3e492384c79e55e9-adaptive-HoAI26-show-it-off-55-panel-3-d5aaee9e-8d47-4b52-8933-79699e392251.png",
+              "text": "Replay your closeness ratings, showing how well AI results matched your vision every time.",
+              "layout": "text-top-center"
+            },
+            {
+              "key": "adaptive-HoAI26-show-it-off-55-c086b13d-593e-4f31-bee9-4e9c5404e3f2",
+              "imageUrl": "https://images.code.org/d9cf8e2f3119aa7d3d79c291dc6e170a-adaptive-HoAI26-show-it-off-55-panel-4-56b5dd61-8794-4256-8a38-dcf0dd5c4e7c.png",
+              "text": "Special badges will light up, recognizing the key moves you've mastered.",
+              "layout": "text-bottom-center"
+            }
+          ]
+        },
+        {
+          "id": "show-it-off-respond",
+          "title": "Tell people about it",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": 114,
+              "type": "freeResponse",
+              "text": "What is your site, who is it for, and what are you proudest of?",
+              "placeholder": "Describe your site, its audience, and what you're proudest of..."
+            }
+          ]
+        },
+        {
+          "id": "show-it-off-project",
+          "title": "Show it off",
+          "kind": "level",
+          "level": "adaptive-HoAI26-show-it-off-57",
+          "project": true,
+          "instructions": "Publish the site and copy its link, then share it with the class.",
+          "instructionsPrompt": "Task: Publish the site and copy its link, then share it with the class.\nOutline: Project only. The student publishes the site and copies the link, then shares it with the class: present it, post it, or both. The teacher chooses how. The share card from the last step goes with it.\nNo evidence needed. The teacher view records that it was shared."
+        }
+      ]
+    }
+  ]
+}

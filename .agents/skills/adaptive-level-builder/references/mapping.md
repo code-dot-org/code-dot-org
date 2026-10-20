@@ -8,17 +8,26 @@
 | A checkpoint: a doc row group, or a sheet row | one `checkpoints[]` entry, with `skillIds` |
 | A numbered row or part within a checkpoint | one step, in order |
 | Info panel, slides | `panels` step |
-| Video | no video step exists: a `panels` step plus a task to make stand-in panels |
+| Video | `video` step whose `videoKey` is the video's key in levelbuilder's video list (`dashboard/config/videos.csv`); with no video there yet, a `panels` step of stand-in panels and a task to add the video and send its key |
 | Multiple choice, self check, CFU | `questions` step, `MultipleChoiceQuestion`; `correctChoiceId` only where the source gives an answer |
 | Short written answer | `questions` step, `freeResponse` |
-| Rating on a scale | `questions` step, `scale` |
+| Rating on a scale | `questions` step, `MultipleChoiceQuestion` with one choice per point of the scale, no `correctChoiceId`; there is no scale question |
 | Practice on a given page | `level` step on a sandbox level |
 | "Apply to project", work on the student's own page | `level` step, `project: true`, on a project level |
 | "Unlock X after Y", "Opens after Y" | `X.requires` includes `Y` |
 | The project the pathway builds | `project.templateLevel` and `project.description` |
 
 `requires` means all listed checkpoints; at least one checkpoint has none.
-These have no field: an "or" unlock, branching or routing by answer,
+
+Placement and routing by evidence have fields: a question's `measures`
+says which skill an answer shows and at what evidence level; a skill's
+`evidenceLevels` describes each level; a checkpoint's
+`targetEvidenceLevels` and `skippable` let a student who has shown the
+skill be placed past it; `routeAfterCompletion` runs the router when the
+checkpoint is done. Use them only where the source states the levels and
+what each answer shows; read the schema for the rules between them.
+
+These have no field: an "or" unlock, branching by a particular answer,
 per-destination variants, hints, pass criteria, feedback and validation
 messages, time estimates, status columns. Keep them as `unplaced`
 comments beside the step they belong to, copied word for word. When one
@@ -48,8 +57,9 @@ mapping step.
 - Ids: lowercase kebab-case from the source's labels (`steer-it`,
   `steer-it-panel`). Step ids are unique across the pathway; `project` is
   reserved.
-- Multiple choice `id`s are integers unique across the pathway, starting
-  at 101. `freeResponse` and `scale` ids are strings.
+- Question `id`s, multiple choice and free response alike, are positive
+  integers unique across the pathway, starting at 101. Once the pathway is
+  published, never change one: progress is stored by it.
 - Level names: `adaptive-<short id>-<role>`, role `template`,
   `project-<checkpoint>`, or a sandbox name such as `<checkpoint>-panda`.
   Max 70 characters. A level backs only one step, and no step may play the
@@ -71,8 +81,8 @@ a `todo` tag, and an image task.
 ## Linked levels
 
 When the source links a levelbuilder level (panels to reuse, a practice
-page), read it from GitHub staging, where levelbuilder levels land after
-the nightly content push:
+page, or a level made for each step), read it from GitHub staging, where
+levelbuilder levels land after the nightly content push:
 
     python3 $S/repo.py level <name>
 
@@ -82,6 +92,29 @@ properties pasted. A level made on levelbuilder since the last push is
 not on GitHub yet; add a content task asking the user to paste its
 properties. Give each such level its own source code in the JSONC
 header and cite fields by path (`KO panels[3].text`).
+
+A level step plays any Lab2 level: Weblab2, Panels, and the other labs
+in `apps/lab2EntryPoints.ts`. A level that is not Lab2 (FreeResponse,
+Multi, Match) cannot be a step; copy its prompt into an inline question
+and record the level as unused. Its directory in `repo.py where` names
+its type.
+
+When the source names a created level for every step, use each one
+unless the user says otherwise:
+
+- Weblab2 with Project Template Level Name equal to the pathway's
+  template: a step in the student's project. That template is the
+  pathway's `templateLevel`; if levels name different templates, ask.
+- Weblab2 without a template: a practice level step.
+- Panels: copy the panels inline (keys, images, text, layout) or play the
+  level as a step; ask which. Inline panels do not follow later edits on
+  levelbuilder.
+- FreeResponse: an inline `freeResponse`, its text from the source and
+  its placeholder from the level.
+- Not on GitHub yet: build the step from the source, and note the level.
+
+List every created level the pathway does not play in a decision, so the
+writer can keep or retire it.
 
 ## Starter code
 

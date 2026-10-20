@@ -36,13 +36,18 @@ as sources are added; keep old ones while any line cites them.
 (`CP!K3`), optionally with its column header (`CP!K3, Used in your
 project`); for a level, the property path (`KO panels[3].text`).
 
+Write the code on every cell and both ends of a range (`ST!K10, ST!L10`;
+`OB!B2-OB!B6` or `OB!B2-B6`), never a bare `L10`: when rows move,
+`scripts/sheet_diff.py --renumber` finds only cells that carry a code.
+
 ## Tags
 
 Every text line gets one tag, on the line above or trailing it for a
 one-line choice. Text lines are those with `title`, `description`,
 `objective`, `text`, `instructions`, `instructionsPrompt`,
-`questionTitle`, `placeholder`, `imageUrl`, `minLabel`, `maxLabel`,
-`standards`, and each choice. Ids, keys, and level names are not tagged.
+`questionTitle`, `placeholder`, `imageUrl`, `standards`, each choice,
+and each of a skill's `evidenceLevels` descriptions. Ids, keys, level
+names and video keys are not tagged.
 
 - `// copied: <loc>` — identical to the source after decoding export
   escapes. Nothing else may differ: not a quote, not a space.

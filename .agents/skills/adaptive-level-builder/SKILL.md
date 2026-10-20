@@ -28,6 +28,43 @@ A build lives in a workspace folder, by default
 The goal is fidelity to the source. Copy its words; never invent prose.
 Where the source gives nothing, write a visible `TODO` and a task.
 
+## Who reads what
+
+The user is usually a curriculum writer: expert on levelbuilder, not an
+engineer. Write the tasks file and every chat message for that reader.
+
+- Assume levelbuilder fluency. Level types, Project Template Level Name,
+  start code, the Panels editor, image upload, lessons and the nightly
+  content push need no explanation. Give the facts a task depends on (the
+  exact level name, type, template setting, start code, what to send
+  back) and skip the clicks.
+- Assume no JSON, git or code. Say what the student sees and what the
+  writer must do. A field name, step id or panel key goes in backticks
+  after the plain words, only where the writer must find or quote it.
+  Never use schema, parse, zod, root, flag, or a field name alone.
+- Name a source by its tab and document the first time: "the README tab
+  of Checkpoint_Steps", never "README", which reads as a repo file. Cell
+  codes such as `ST!L17` are for the JSONC; in chat, say "Steps row 17,
+  Content outline".
+- Pose a decision as a curriculum question: what the student would see
+  under each choice, then the choices.
+
+Words to use:
+
+| In the JSON | Say |
+|---|---|
+| checkpoint `requires` | opens after |
+| a checkpoint with no `requires` | open from the start |
+| level step with `project: true` | step in the student's project |
+| level step without it | practice level |
+| `instructionsPrompt` | tutor brief |
+| `correctChoiceId` | correct answer (the student retries until right) |
+| `unplaced` comment | source note |
+| `TODO` value | gap: the source gives nothing |
+
+The JSONC comments are for whoever maintains the build; keep their tags
+and cell codes as `references/annotations.md` describes.
+
 Scripts are in this skill's `scripts/` directory; below, `$S` stands for
 its absolute path. No code-dot-org checkout is needed: code and levels are
 read from GitHub, `code-dot-org/code-dot-org` on branch `staging`, through
@@ -142,10 +179,11 @@ checks and says so.
 
 ### 5. Report
 
-A short chat message:
+A short chat message, in the words of "Who reads what":
 
 - the source part used, and anything unreadable;
-- counts by annotation tag;
+- how much was copied word for word, lightly edited, changed, or left as
+  a gap, with counts;
 - open tasks by kind (levels, images, content, publish), and the decisions
   the user needs to make, each in one line;
 - the three file paths.
