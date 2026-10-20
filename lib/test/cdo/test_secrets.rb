@@ -95,6 +95,13 @@ class SecretsTest < Minitest::Test
     assert_equal %w(a b), requested_ids(:get_secret_value).sort
   end
 
+  def test_batch_networking_error_falls_back_to_get_secret_value
+    @client.stub_responses(:batch_get_secret_value, Seahorse::Client::NetworkingError.new(Errno::ECONNRESET.new))
+    @values['a'] = '1'
+    assert_equal '1', @secrets.get!('a')
+    assert_equal %w(a), requested_ids(:get_secret_value)
+  end
+
   def test_required
     @secrets.required('missing_key')
     e = assert_raises(Cdo::Secrets::NOT_FOUND) do

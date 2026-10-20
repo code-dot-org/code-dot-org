@@ -153,8 +153,8 @@ module Cdo
       # The SDK returns nil, not [], for a list absent from the response.
       Array(response.errors).each {|error| logger&.info("BatchGetSecretValue: #{error.error_code}: #{error.secret_id}")}
       Array(response.secret_values).to_h {|secret| [secret.name, secret.secret_string]}
-    # E.g. AccessDeniedException for a role not yet granted secretsmanager:BatchGetSecretValue.
-    rescue ::Aws::SecretsManager::Errors::ServiceError => exception
+    # Any failure, e.g. a role not yet granted secretsmanager:BatchGetSecretValue, leaves every key to GetSecretValue.
+    rescue => exception
       logger&.warn("BatchGetSecretValue failed, falling back to GetSecretValue: #{exception.message}")
       {}
     end
