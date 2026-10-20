@@ -8,6 +8,7 @@
   "properties": {
     "video_key": "hoai2026_intro",
     "uses_lab2": "true",
+    "video_full_width": true,
     "skip_dialog": true,
     "skip_sound": true,
     "encrypted": "false",
