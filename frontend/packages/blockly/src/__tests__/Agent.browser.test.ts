@@ -6,6 +6,7 @@ import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 import Agent, {AgentEvent} from '../Agent';
 import Driver from '../Driver';
 import ThrasosRenderer from '../renderers/thrasos';
+import {positionBlocksOnWorkspace} from '../serialization';
 import DefaultTheme from '../themes/default';
 import type {BlocklySerialization, Environment, Theme} from '../types';
 
@@ -103,6 +104,10 @@ describe('workspace.md: Agent', () => {
     driver.setTheme(otherTheme);
 
     expect(agent.workspace?.getTheme()).toBe(otherTheme.instance);
+  });
+
+  it('WS-9, LAY-12: positionBlocks starts as the collision layout', () => {
+    expect(agent.positionBlocks).toBe(positionBlocksOnWorkspace);
   });
 
   it('WS-9: arranges loaded blocks with positionBlocks, when set', () => {

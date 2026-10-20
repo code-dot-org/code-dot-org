@@ -14,6 +14,7 @@ import Driver from '../../Driver';
 import {useBlocklyContext} from '../../contexts/BlocklyContext';
 import type {Plugin} from '../../plugins';
 import ThrasosRenderer from '../../renderers/thrasos';
+import {positionBlocksOnWorkspace} from '../../serialization';
 import DefaultTheme from '../../themes/default';
 import type {Toolbox} from '../../toolbox';
 import type {
@@ -35,7 +36,7 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   startBlocks?: BlocklySerialization;
   /**
    * Arranges the top blocks once `startBlocks` are loaded, unless the
-   * workspace is inline.
+   * workspace is inline. Defaults to `serialization.positionBlocksOnWorkspace`.
    */
   positionBlocks?: (workspace: Blockly.WorkspaceSvg) => void;
   /** A set of blocks to put into the toolbox or flyout within the workspace */
@@ -86,7 +87,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   blocks,
   options,
   startBlocks,
-  positionBlocks,
+  positionBlocks = positionBlocksOnWorkspace,
   toolbox,
   renderer,
   theme,

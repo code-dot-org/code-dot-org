@@ -7,6 +7,7 @@ import type {EventMap} from 'typed-emitter';
 import type Driver from './Driver';
 import {DriverEvent} from './Driver';
 import type {WorkspaceAgent} from './Driver';
+import {positionBlocksOnWorkspace} from './serialization';
 import type {Toolbox} from './toolbox';
 import {buildToolbox} from './toolbox';
 import {releaseFocus} from './utils/releaseFocus';
@@ -67,7 +68,8 @@ class Agent<T extends Environment = Environment>
    * Arranges the top blocks after `load`, in a workspace that is not inline.
    * When unset, loaded blocks stay where the serialization put them.
    */
-  positionBlocks?: (workspace: Blockly.WorkspaceSvg) => void;
+  positionBlocks?: (workspace: Blockly.WorkspaceSvg) => void =
+    positionBlocksOnWorkspace;
 
   /**
    * Constructs a driver to power a Blockly Workspace in the given container.
