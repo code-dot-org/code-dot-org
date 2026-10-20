@@ -100,6 +100,12 @@
   color: var(--text-neutral-white-fixed);
 }
 
+.skipped .circle {
+  border-color: var(--borders-success-primary);
+  background: var(--background-success-extra-light);
+  color: var(--text-success-primary);
+}
+
 .dimmed {
   opacity: 0.2;
 }
