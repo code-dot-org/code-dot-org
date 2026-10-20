@@ -70,6 +70,7 @@ import {
 import {onTrimsUpdated} from '../imageTrim';
 import {
   DEFAULT_IMAGE_STYLE,
+  GENERATION_LIMIT,
   isFreeplayMode,
   isImageMode,
   tabsForMode,
@@ -1930,6 +1931,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  // Generations on this level so far; free play has no limit.
+  const [generationCount, setGenerationCount] = useState(0);
+  useEffect(() => setGenerationCount(0), [levelProperties.id]);
+  const countGeneration = useCallback(
+    () => setGenerationCount(count => count + 1),
+    []
+  );
+  const generationsLeft = isFreeplayMode(levelProperties.levelMode)
+    ? undefined
+    : GENERATION_LIMIT - generationCount;
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;
@@ -1968,6 +1979,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
     defaultStyle: DEFAULT_IMAGE_STYLE,
+    generationsLeft,
+    onGenerate: countGeneration,
     // Freeplay hands back the paint tools.
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
     pickRequest: pictures.pickRequest,
@@ -2040,7 +2053,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
             imageSubject={levelProperties.levelMode?.imageSubject}
             sentenceId={levelProperties.levelMode?.sentence}
-            defaultStyle={DEFAULT_IMAGE_STYLE}
             imageRole={levelProperties.levelMode?.imageRole}
             uploadImage={uploadImage}
             instructions={
@@ -2048,6 +2060,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 ? objectives.title
                 : levelProperties.longInstructions
             }
+            resultInstructions={
+              levelProperties.levelMode?.generatedInstructions
+            }
+            paintInstructions={levelProperties.levelMode?.paintInstructions}
+            generationsLeft={generationsLeft}
+            onGenerateStart={countGeneration}
             showTts={showTtsFor(levelProperties)}
           />
         </div>

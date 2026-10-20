@@ -57,7 +57,7 @@ function renderScene(props = {}) {
   return render(
     <Provider store={store}>
       <ThemeProvider>
-        <SentenceScene imageType="sprite" defaultStyle="pixel" {...props} />
+        <SentenceScene imageType="sprite" {...props} />
       </ThemeProvider>
     </Provider>
   );
@@ -68,8 +68,33 @@ const pickCreature = () => {
   fireEvent.click(screen.getByRole('button', {name: 'cat'}));
 };
 
+// The last step's tick shows this long before the picture replaces it.
+const SETTLE_MS = 500;
+
+// A generation that waits for the test to finish it.
+const pendingGeneration = () => {
+  let finish: (value: typeof RESULT) => void = () => {};
+  generateCharacterSet.mockReturnValueOnce(
+    new Promise(resolve => {
+      finish = resolve;
+    })
+  );
+  return (value: typeof RESULT) => finish(value);
+};
+
+// Presses Generate (or Regenerate) and waits out the settle.
+const generate = async (name = 'Generate') => {
+  await act(async () => {
+    fireEvent.click(screen.getByRole('button', {name}));
+  });
+  await act(async () => {
+    jest.advanceTimersByTime(SETTLE_MS);
+  });
+};
+
 describe('SentenceScene', () => {
   beforeEach(() => {
+    jest.useFakeTimers();
     generateImage.mockReset();
     generateCharacterSet.mockReset();
     saveGeneratedImage.mockReset();
@@ -77,12 +102,14 @@ describe('SentenceScene', () => {
     sendEvent.mockClear();
   });
 
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it('shows the image area and the editing controls', () => {
     renderScene();
     expect(screen.getByRole('region', {name: 'Your picture'})).toBeTruthy();
-    const style = screen.getByRole('combobox') as HTMLSelectElement;
-    expect(style.value).toBe('pixel');
-    expect(screen.getByRole('option', {name: 'Smooth'})).toBeTruthy();
+    expect(screen.queryByRole('combobox')).toBeNull();
     expect(
       (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
         .disabled
@@ -105,7 +132,7 @@ describe('SentenceScene', () => {
     );
   });
 
-  it('turns the frame into a drawing canvas with pen, fill and eraser only', () => {
+  it('turns the frame into a drawing canvas with pen, fill and eraser, three colors and one brush', () => {
     renderScene();
     fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
     expect(screen.getByRole('region', {name: 'Your drawing'})).toBeTruthy();
@@ -117,27 +144,49 @@ describe('SentenceScene', () => {
     expect(screen.getByRole('button', {name: 'Fill (F)'})).toBeTruthy();
     expect(screen.queryByRole('button', {name: /Eyedropper/})).toBeNull();
     const colors = screen.getByRole('group', {name: 'Colors'});
-    expect(colors.querySelectorAll('button')).toHaveLength(12);
+    expect(colors.querySelectorAll('button')).toHaveLength(3);
     expect(screen.queryByRole('button', {name: /Choose color/})).toBeNull();
+    expect(screen.queryByRole('button', {name: /Brush size/})).toBeNull();
+    const blue = screen.getByRole('button', {name: 'Blue'});
     const black = screen.getByRole('button', {name: 'Black'});
-    const red = screen.getByRole('button', {name: 'Red'});
+    expect(blue.getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(black);
     expect(black.getAttribute('aria-pressed')).toBe('true');
-    fireEvent.click(red);
-    expect(red.getAttribute('aria-pressed')).toBe('true');
-    expect(black.getAttribute('aria-pressed')).toBe('false');
+    expect(blue.getAttribute('aria-pressed')).toBe('false');
     expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
     expect(screen.queryByRole('application')).toBeNull();
   });
 
+  it('reads the paint instructions in place of the level instructions while drawing', () => {
+    renderScene({
+      instructions: 'Prompt AI to make some treasure.',
+      paintInstructions: 'Draw some treasure.',
+    });
+    fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
+    const panel = screen.getByRole('region', {name: 'Draw your picture'});
+    expect(panel.textContent).toMatch(/^Draw some treasure\./);
+    expect(panel.textContent).not.toMatch(/Prompt AI/);
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(
+      screen.getByRole('region', {name: 'Make your picture'}).textContent
+    ).toMatch(/^Prompt AI to make some treasure\./);
+  });
+
+  it('drops the level instructions while drawing when the level gives none for it', () => {
+    renderScene({instructions: 'Prompt AI to make some treasure.'});
+    fireEvent.click(screen.getByRole('button', {name: "I'll draw it myself"}));
+    expect(
+      screen.getByRole('region', {name: 'Draw your picture'}).textContent
+    ).not.toMatch(/Prompt AI/);
+  });
+
   it('makes one picture for an object', async () => {
     generateImage.mockResolvedValue(RESULT);
     renderScene({imageSubject: 'object'});
     fireEvent.click(screen.getByRole('button', {name: 'key'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(generateImage).toHaveBeenCalledTimes(1);
     expect(generateCharacterSet).not.toHaveBeenCalled();
   });
@@ -147,9 +196,7 @@ describe('SentenceScene', () => {
     renderScene();
     expect(screen.queryByRole('checkbox')).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(generateImage).not.toHaveBeenCalled();
     expect(generateCharacterSet).toHaveBeenCalledTimes(1);
     expect(generateCharacterSet.mock.calls[0][0]).toBe('A dragon');
@@ -159,20 +206,17 @@ describe('SentenceScene', () => {
     });
   });
 
-  it('shows a fact and a spinner while making the picture, then the two choices', async () => {
-    let finish: (value: typeof RESULT) => void = () => {};
-    generateCharacterSet.mockReturnValue(
-      new Promise(resolve => {
-        finish = resolve;
-      })
-    );
+  it('shows the steps and a fact while making the picture, then the two choices', async () => {
+    const finish = pendingGeneration();
     renderScene();
     pickCreature();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(screen.getByRole('status')).toBeTruthy();
     expect(screen.queryByRole('button', {name: /Change it/})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
-    expect(screen.getByText('Generating…')).toBeTruthy();
+    expect(
+      screen.getByRole('list', {name: 'What the AI is doing'}).textContent
+    ).toMatch(/Reading your prompt.*training data.*Predicting/);
     expect(
       screen.getByRole('complementary', {name: 'Did you know?'})
     ).toBeTruthy();
@@ -183,9 +227,14 @@ describe('SentenceScene', () => {
     await act(async () => {
       finish(RESULT);
     });
+    // The last step ticks, and the picture follows after the settle.
+    expect(screen.queryByRole('img', {name: 'A cat'})).toBeNull();
+    await act(async () => {
+      jest.advanceTimersByTime(SETTLE_MS);
+    });
     expect(screen.getByRole('img', {name: 'A cat'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Change words'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Generate again'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Modify prompt'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Regenerate'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Continue'})).toBeTruthy();
     expect(screen.queryByRole('button', {name: 'Generate'})).toBeNull();
     expect(
@@ -197,12 +246,10 @@ describe('SentenceScene', () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(screen.queryByRole('button', {name: 'Next words'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Remove cat'})).toBeNull();
-    fireEvent.click(screen.getByRole('button', {name: 'Change words'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Modify prompt'}));
     expect(screen.getByRole('button', {name: 'Next words'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Remove cat'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
@@ -216,9 +263,7 @@ describe('SentenceScene', () => {
       screen.queryByRole('button', {name: 'Behind the scenes'})
     ).toBeNull();
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(
       screen.getByRole('button', {name: 'Behind the scenes'})
     ).toBeTruthy();
@@ -228,38 +273,112 @@ describe('SentenceScene', () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     const group = screen.getByRole('group', {name: 'How did the AI do?'});
     expect(
       [...group.querySelectorAll('button')].map(b =>
         b.getAttribute('aria-label')
       )
     ).toEqual(['Good', 'Not so good']);
-    expect(screen.getByRole('button', {name: 'Change words'})).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Generate again'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Modify prompt'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Regenerate'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Continue'})).toBeTruthy();
     const up = screen.getByRole('button', {name: 'Good'});
     const down = screen.getByRole('button', {name: 'Not so good'});
     expect(up.getAttribute('aria-pressed')).toBe('false');
     fireEvent.click(down);
-    expect(down.getAttribute('aria-pressed')).toBe('true');
-    expect(up.getAttribute('aria-pressed')).toBe('false');
     expect(sendEvent).toHaveBeenCalledWith(
       'hoai2026-image-verdict',
       expect.objectContaining({verdict: 'down', promptText: 'A cat'}),
       true
     );
+    // A thumb down asks why, once, in the thumbs' place.
+    expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Not so good'})).toBeNull();
+    const mismatch = screen.getByRole('button', {
+      name: "Doesn't match my prompt",
+    });
+    const wrong = screen.getByRole('button', {name: "Doesn't look right"});
+    fireEvent.click(mismatch);
+    expect(mismatch.getAttribute('aria-pressed')).toBe('true');
+    expect((wrong as HTMLButtonElement).disabled).toBe(true);
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-verdict-reason',
+      expect.objectContaining({reason: 'mismatch', promptText: 'A cat'}),
+      true
+    );
+  });
+
+  it('asks why only after a thumb down', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await generate();
+    expect(screen.queryByRole('button', {name: /Doesn't/})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    expect(screen.queryByRole('button', {name: /Doesn't/})).toBeNull();
+  });
+
+  it('reads the result instructions once a picture is made', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({
+      instructions: 'Prompt AI to make a character.',
+      resultInstructions: 'AI generated an image based on your prompt.',
+    });
+    const panel = screen.getByRole('region', {name: 'Make your picture'});
+    expect(panel.textContent).toMatch(/^Prompt AI to make a character\./);
+    pickCreature();
+    // While the picture is made, the steps have the panel.
+    const finish = pendingGeneration();
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(panel.textContent).not.toMatch(/Prompt AI/);
+    await act(async () => {
+      finish(RESULT);
+    });
+    await act(async () => {
+      jest.advanceTimersByTime(SETTLE_MS);
+    });
+    expect(panel.textContent).toMatch(/ready\.AI generated an image/);
+    fireEvent.click(screen.getByRole('button', {name: 'Modify prompt'}));
+    expect(panel.textContent).toMatch(/^Prompt AI to make a character\./);
+  });
+
+  it('holds Generate and Regenerate once the generations are used up', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    const {rerender} = renderScene({generationsLeft: 1});
+    pickCreature();
+    expect(
+      (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(false);
+    await generate();
+    rerender(
+      <Provider store={createStore(() => ({}))}>
+        <ThemeProvider>
+          <SentenceScene imageType="sprite" generationsLeft={0} />
+        </ThemeProvider>
+      </Provider>
+    );
+    expect(
+      (screen.getByRole('button', {name: 'Regenerate'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(true);
+    expect(
+      (screen.getByRole('button', {name: 'Continue'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(false);
+    fireEvent.click(screen.getByRole('button', {name: 'Modify prompt'}));
+    expect(
+      (screen.getByRole('button', {name: 'Generate'}) as HTMLButtonElement)
+        .disabled
+    ).toBe(true);
   });
 
   it('reports the words it generates from', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(sendEvent).toHaveBeenCalledWith(
       'hoai2026-image-prompt',
       expect.objectContaining({
@@ -272,18 +391,58 @@ describe('SentenceScene', () => {
     );
   });
 
-  it('makes another picture on Generate again, with the same words', async () => {
+  it('makes another picture on Regenerate, with the same words', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate again'}));
-    });
+    await generate();
+    await generate('Regenerate');
     expect(generateCharacterSet).toHaveBeenCalledTimes(2);
     expect(generateCharacterSet.mock.calls[1][0]).toBe('A cat');
+  });
+
+  it('shows every picture as a tile, the one in the frame marked, and a tile swaps it in and ends the question', async () => {
+    const SECOND = {
+      ...RESULT,
+      filename: 'cat2.png',
+      generation: {...RESULT.generation, prompt: 'A cat'},
+    };
+    generateCharacterSet
+      .mockResolvedValueOnce(RESULT)
+      .mockResolvedValueOnce(SECOND);
+    saveGeneratedImage.mockResolvedValue('Sprite 1');
+    renderScene();
+    pickCreature();
+    await generate();
+    expect(screen.queryByRole('group', {name: 'Your pictures'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    await generate('Regenerate');
+    const tiles = screen.getByRole('group', {name: 'Your pictures'});
+    expect(tiles.querySelectorAll('button')).toHaveLength(2);
+    const pressed = () =>
+      [...tiles.querySelectorAll('button')].map(b =>
+        b.getAttribute('aria-pressed')
+      );
+    expect(pressed()).toEqual(['false', 'true']);
+    // The new picture has no verdict of its own yet.
+    expect(
+      screen.getByRole('button', {name: 'Good'}).getAttribute('aria-pressed')
+    ).toBe('false');
+    fireEvent.click(screen.getByRole('button', {name: 'Picture 1: A cat'}));
+    // The first picture is back and marked in the strip; the question was
+    // for the picture just made, and is gone.
+    expect(pressed()).toEqual(['true', 'false']);
+    expect(
+      screen.queryByRole('group', {name: 'How did the AI do?'})
+    ).toBeNull();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    });
+    expect(saveGeneratedImage).toHaveBeenCalledWith(
+      expect.any(Function),
+      RESULT,
+      expect.anything()
+    );
   });
 
   it('keeps the picture and moves on with Continue', async () => {
@@ -291,9 +450,7 @@ describe('SentenceScene', () => {
     saveGeneratedImage.mockResolvedValue('Sprite 1');
     renderScene({imageRole: 'hero'});
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
     });
@@ -312,9 +469,7 @@ describe('SentenceScene', () => {
     generateCharacterSet.mockRejectedValue(new ImageSafetyError('prompt'));
     renderScene();
     pickCreature();
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    });
+    await generate();
     expect(screen.getByRole('alert').textContent).toMatch(/okay for class/);
   });
 });
