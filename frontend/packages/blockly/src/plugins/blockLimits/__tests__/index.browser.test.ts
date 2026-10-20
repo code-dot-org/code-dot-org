@@ -71,4 +71,23 @@ describe('plugins.md: the blockLimits plugin', () => {
     block.moveBy(10, 10);
     await vi.waitFor(() => expect(bubbles(ws)).toEqual(['2']));
   });
+
+  it('PLG-17: counts a block when it is created', async () => {
+    const ws = inject(PRINT_LIMIT_2);
+    await vi.waitFor(() => expect(bubbles(ws)).toEqual(['2']));
+    Blockly.serialization.blocks.append({type: 'text_print'}, ws);
+    await vi.waitFor(() => expect(bubbles(ws)).toEqual(['1']));
+  });
+
+  it('PLG-17: stops counting a block when it is deleted', async () => {
+    const ws = inject(PRINT_LIMIT_2);
+    const block = Blockly.serialization.blocks.append(
+      {type: 'text_print'},
+      ws,
+    ) as Blockly.BlockSvg;
+    block.moveBy(10, 10);
+    await vi.waitFor(() => expect(bubbles(ws)).toEqual(['1']));
+    block.dispose();
+    await vi.waitFor(() => expect(bubbles(ws)).toEqual(['2']));
+  });
 });

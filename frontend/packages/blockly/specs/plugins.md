@@ -197,16 +197,16 @@ let a student solve such a level the way it means to rule out.
 ### Requirements
 
 PLG-14. `new BlockLimitMap(items, theme)` reads a limit for each block
-item of `items` that has `extraState.limit`, under the item's `type`. It
-reads only the items it is given, not those inside categories. The
-plugin gives it the workspace's toolbox contents
+item of `items`, or of the categories among them at any depth, that has
+`extraState.limit`, under the item's `type`, as apps finds limits on blocks
+anywhere in its toolbox. The plugin gives it the workspace's toolbox contents
 (`options.languageTree.contents`).
 
 PLG-15. The map counts blocks per limited type, each count starting at 0:
 `set`, `increment`, `get` (0 for an unknown type), `clear` (every count back
 to 0), `size` (the number of limited types), `has(type)`, and
 `limitFor(type)`, which is the type's limit, or `Infinity` for a type
-without one or with a limit of 0. `remainingFor(type)` is the limit less the
+without one. A limit of 0 allows none. `remainingFor(type)` is the limit less the
 count, and `anyOver()` is true while some count exceeds its limit.
 `indicatorFor(type, block)` makes, once for each type and block id, the
 indicator of PLG-16 on that block, and returns the same one after.
@@ -217,17 +217,25 @@ shows the remaining count in the theme's `blockLimits.indicator` colours,
 or `!` in its `blockLimits.overLimit` colours when the count is negative.
 
 PLG-17. The module exports, as default and as `plugin`, an inject plugin.
-When the workspace changes a block, moves one, changes theme, or finishes
-loading, and once the workspace is laid out, it counts the workspace's
+When a block on the workspace is created, changed, moved or deleted, when
+the theme changes or loading finishes, and once the workspace is laid out, it counts the workspace's
 enabled blocks of each limited type, and updates the indicator of each
 limited block in the workspace's flyout, making one where there is none.
-Creating or deleting a block does not, by itself, update them. A toolbox
-with no limits does nothing.
+A toolbox with no limits does nothing. Apps does not recount on deletion,
+so a block deleted other than by dragging it away stays counted there.
 
 ### Test vectors
 
 PLG-V6 (PLG-17). A flyout of one `text_print` with `extraState: {limit: 2}`
-shows `2`; after an enabled `text_print` is added and moved, `1`.
+shows `2`; after an enabled `text_print` is added, `1`; after it is
+deleted, `2` again.
+
+PLG-V7 (PLG-14). A `text_print` limited to 2 in a category, and a
+`controls_if` limited to 1 in a category within it, are both limited.
+
+PLG-V8 (PLG-15). With `text_print` limited to 0, its remaining count is 0
+and nothing is over; after one is counted, the remaining count is -1 and
+`anyOver()` is true.
 
 ## Disabled orphans
 
@@ -287,14 +295,12 @@ read-only.
 
 ### Open questions
 
-1. PLG-14: apps finds limits on blocks at any depth of the toolbox. Read
-   inside categories?
-2. PLG-15: a limit of 0 means no limit. Should it mean none may be used,
-   as in apps?
-3. PLG-17: count on creation, as apps does, and on deletion, which apps
-   does not?
-4. PLG-18: use `ORPHANED` throughout, as apps does, so a student's own
+1. PLG-17: a categorized toolbox's flyout is filled when a category
+   opens, which fires no event on the workspace, so its indicators wait
+   for the next change there. Apps has the same delay. Refresh them when
+   the flyout opens?
+2. PLG-18: use `ORPHANED` throughout, as apps does, so a student's own
    "Disable Block" survives attaching the block?
-5. PLG-21: apps grays every undeletable block except `when_run` and
+3. PLG-21: apps grays every undeletable block except `when_run` and
    procedure definitions, movable or not, in `#808080`, and again on
    loading and on selection. Match it?

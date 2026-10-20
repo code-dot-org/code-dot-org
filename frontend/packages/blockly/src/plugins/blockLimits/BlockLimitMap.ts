@@ -31,24 +31,25 @@ class BlockLimitMap {
     this.blockIndicatorMap = new Map<string, BlockLimitIndicator>();
     this.theme = theme;
 
-    // Iterate over each block element
-    toolboxBlocks.forEach(item => {
-      if (item.kind === 'block') {
-        const blockInfo = item as Blockly.utils.toolbox.BlockInfo;
-        const extraState = blockInfo.extraState;
-        if (extraState?.limit !== undefined) {
-          // Extract type and limit and add to blockLimitMap
-          const limit = extraState.limit;
-          const type = blockInfo.type;
-          if (type) {
-            this.blockLimitMap.set(type, limit);
-          }
-        }
-      }
-    });
+    this.readLimits(toolboxBlocks);
 
     // Set the count map to 0s
     this.clear();
+  }
+
+  private readLimits(items: Blockly.utils.toolbox.ToolboxItemInfo[]) {
+    items.forEach(item => {
+      if (item.kind === 'block') {
+        const {type, extraState} = item as Blockly.utils.toolbox.BlockInfo;
+        if (type && extraState?.limit !== undefined) {
+          this.blockLimitMap.set(type, extraState.limit);
+        }
+      } else if (Array.isArray((item as {contents?: unknown}).contents)) {
+        this.readLimits(
+          (item as Blockly.utils.toolbox.StaticCategoryInfo).contents,
+        );
+      }
+    });
   }
 
   /**
@@ -83,7 +84,7 @@ class BlockLimitMap {
    * Gets the maximum number of blocks for the given type.
    */
   limitFor(blockType: string): number {
-    return this.blockLimitMap.get(blockType) || Infinity;
+    return this.blockLimitMap.get(blockType) ?? Infinity;
   }
 
   /**
@@ -99,7 +100,7 @@ class BlockLimitMap {
   anyOver(): boolean {
     const blockCountMap = this.blockCountMap;
     return Array.from(this.blockLimitMap).some(
-      ([type, limit]) => (blockCountMap.get(type) || 0) > (limit || Infinity),
+      ([type, limit]) => (blockCountMap.get(type) || 0) > limit,
     );
   }
 

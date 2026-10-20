@@ -60,6 +60,8 @@ function changeHandler(
 ) {
   const expectedEventTypes: string[] = [
     Blockly.Events.BLOCK_CHANGE,
+    Blockly.Events.BLOCK_CREATE,
+    Blockly.Events.BLOCK_DELETE,
     Blockly.Events.BLOCK_MOVE,
     // High Contrast theme has a different font size, so we update the indicators.
     Blockly.Events.THEME_CHANGE,
