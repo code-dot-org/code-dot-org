@@ -491,17 +491,30 @@
 // Room for the word menus beside a larger picture; the panel's max-width
 // still shrinks it on narrow browsers.
 $sentence-dialog-width: 970px;
-$sentence-pane-size: 420px;
+// The pane gives way on a short window. The dialog keeps 32px from the
+// window's edges, its header, body padding and footer take 134px, and
+// Behind the scenes under the pane takes 40px; all of it fits a 605px
+// window with a little to spare.
+$sentence-pane-size: min(420px, calc(100vh - 220px));
 
 .dialogHost .dialogWide {
   width: $sentence-dialog-width;
 }
 
-// The picture's column: the pane, and Behind the scenes under it.
+// The session's pictures, as tall as the pane, closer to it than the
+// body's gap.
+.alternativesColumn {
+  flex: none;
+  display: flex;
+  max-height: $sentence-pane-size;
+  margin-right: -8px;
+}
+
+// The picture's column: the pane, and Behind the scenes close under it.
 .sentenceColumn {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
   flex-shrink: 0;
   width: $sentence-pane-size;
 
@@ -517,6 +530,11 @@ $sentence-pane-size: 420px;
   gap: 14px;
   flex: 1;
   min-width: 0;
+  // As tall as the pane, no taller for Behind the scenes under it, so a
+  // row held at the panel's bottom ends even with the picture.
+  align-self: flex-start;
+  min-height: $sentence-pane-size;
+  box-sizing: border-box;
 
   // Focus lands here on a mode change; the panel's edge is not the cue.
   &:focus {
@@ -524,7 +542,23 @@ $sentence-pane-size: 420px;
   }
 }
 
-// The Type choice stands a little apart from the sentence it decides.
+// The question about the picture, held at the panel's bottom.
+.sentenceVerdict {
+  margin-top: auto;
+}
+
+// The line above the sentence: what the student is doing, with the kind
+// as a dropdown in the line when it is theirs to pick.
+.sentenceHeadline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 6px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .sentenceType {
-  margin-bottom: 10px;
+  display: inline-flex;
 }
