@@ -91,6 +91,30 @@ describe('workspace.md: BlocklyWorkspace', () => {
     );
   });
 
+  it('WS-20, LAY-12: arranges start blocks with the collision layout unless told otherwise', async () => {
+    const arranged = {current: null} as {current: Blockly.WorkspaceSvg | null};
+    const left = {current: null} as {current: Blockly.WorkspaceSvg | null};
+    render(
+      <>
+        <BlocklyWorkspace startBlocks={START_BLOCKS} workspaceRef={arranged} />
+        <BlocklyWorkspace
+          startBlocks={START_BLOCKS}
+          workspaceRef={left}
+          positionBlocks={() => {}}
+        />
+      </>,
+    );
+    const origin = (ref: typeof arranged) =>
+      ref.current?.getTopBlocks(false)[0]?.getRelativeToSurfaceXY();
+    await vi.waitFor(
+      () => {
+        expect(origin(arranged)).toMatchObject({x: 16, y: 16});
+        expect(origin(left)).toMatchObject({x: 0, y: 0});
+      },
+      {timeout: 5000, interval: 50},
+    );
+  });
+
   // An input plugin supplied via the `plugins` prop binds a notch shape to a
   // type string. A block then only names that type (`output: 'Number'`); the
   // shape is applied to its connection by the renderer. This checks the plugin

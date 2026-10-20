@@ -95,8 +95,9 @@ injected. Otherwise it loads the serialization with
 `Blockly.serialization.workspaces.load`, which first clears the workspace.
 For an Agent that is not inline, it then calls `agent.positionBlocks`, if
 set, with the workspace, and resizes the workspace. `positionBlocks` is how
-a lab arranges loaded blocks that carry no positions; the package's own
-arrangement is in `layout.md`.
+a lab arranges loaded blocks that carry no positions. It starts as the
+package's own arrangement, `serialization.positionBlocksOnWorkspace`
+(`layout.md`).
 
 WS-10. For an inline Agent, `load` turns the workspace into a picture in the
 container:
@@ -177,7 +178,9 @@ of every workspace in it.
 WS-20. When `startBlocks` changes, and once the workspace exists, the
 component calls `agent.load(startBlocks)` (WS-9, WS-10). The
 `positionBlocks` prop is the Agent's `positionBlocks`, kept current as the
-prop changes.
+prop changes; left out, it is `serialization.positionBlocksOnWorkspace`. A
+lab that wants loaded blocks left where they are passes a function that
+does nothing.
 
 WS-21. After injection the component sets `workspaceRef.current` to the
 workspace and `javascriptGeneratorRef.current` to Blockly's

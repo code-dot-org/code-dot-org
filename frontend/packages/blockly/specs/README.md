@@ -32,7 +32,7 @@ what the code does, even where that is wrong.
 | 6    | `fields.md`          | FLD-   | the colour and button fields                                             | 1a     | written |
 | 7    | `common-blocks.md`   | CMN-   | `BaseBlocks`                                                             | 5, 6   | written |
 | 8    | `procedures.md`      | PRC-   | shareable procedures, procedure mutators                                 | 1a     | written |
-| 9    | `layout.md`          | LAY-   | positioning blocks on load                                               | 1b, 8  | planned |
+| 9    | `layout.md`          | LAY-   | positioning blocks on load                                               | 1b, 8  | written |
 | 10   | `plugins.md`         | PLG-   | scrolling, `TopLeftMetricsManager`                                       | 1b     | planned |
 | 11   | `plugins.md`         | PLG-   | the toolbox trashcan                                                     | 1b     | planned |
 | 12   | `plugins.md`         | PLG-   | block limits, disabled orphans, gray undeletables                        | 1b     | planned |
