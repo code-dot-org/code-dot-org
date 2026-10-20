@@ -3,11 +3,8 @@ import {IconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {type ReactNode} from 'react';
 
-import {
-  type ColumnId,
-  nextSortDirection,
-  type TableView,
-} from '../useTableView';
+import type {ColumnId, TableView} from '../types';
+import {nextSortDirection} from '../useTableView';
 
 import tableStyles from './dataTable.module.scss';
 
@@ -24,7 +21,7 @@ const SORT_ORDERS = {
 interface ColumnHeaderProps {
   column: ColumnId;
   name: string;
-  view?: TableView<ColumnId>;
+  view?: TableView;
   selected?: boolean;
   className?: string;
   children: ReactNode;

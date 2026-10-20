@@ -4,7 +4,7 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import type {ColumnId, TableView} from '../useTableView';
+import type {TableView} from '../types';
 
 import CellText from './CellText';
 import ColumnHeader from './ColumnHeader';
@@ -15,7 +15,7 @@ export const PREDICTION_COLUMN = Symbol('AI prediction');
 
 interface RowsTableHeaderProps {
   columns: string[];
-  view: TableView<ColumnId>;
+  view: TableView;
   showPrediction?: boolean;
 }
 

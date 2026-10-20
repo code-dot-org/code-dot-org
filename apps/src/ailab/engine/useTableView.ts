@@ -4,30 +4,24 @@ import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
 import {getLocalizedValue} from './helpers/valueDetails';
 import {useAppSelector} from './hooks';
+import type {
+  ColumnId,
+  DatasetTableView,
+  SortDirection,
+  TableView,
+} from './types';
 
-export type SortDirection = 'ascending' | 'descending';
-
-export type ColumnId = string | symbol;
-
-interface TableSort<Column extends ColumnId> {
-  column: Column;
+interface TableSort {
+  column: ColumnId;
   direction: SortDirection;
 }
 
-export interface TableView<Column extends ColumnId = string> {
-  rows: number[];
-  columns: Column[];
-  isNumerical(column: Column): boolean;
-  sortDirection(column: Column): SortDirection | undefined;
-  toggleSort(column: Column): void;
-}
-
 // Keep each input stable across renders, or every render sorts the whole dataset again.
-interface TableViewSource<Column extends ColumnId> {
+interface TableViewSource {
   rows: number[];
-  columns: Column[];
+  columns: ColumnId[];
   columnTypes: Partial<Record<ColumnId, string>>;
-  valueAt: (row: number, column: Column) => string | number;
+  valueAt: (row: number, column: ColumnId) => string | number;
 }
 
 function asNumber(value: string | number): number {
@@ -58,14 +52,14 @@ export function nextSortDirection(
   return direction === 'ascending' ? 'descending' : undefined;
 }
 
-export function useTableView<Column extends ColumnId>({
+export function useTableView({
   rows,
   columns,
   columnTypes,
   valueAt,
-}: TableViewSource<Column>): TableView<Column> {
-  const [sort, setSort] = useState<TableSort<Column>>();
-  const isNumerical = (column: Column) =>
+}: TableViewSource): TableView {
+  const [sort, setSort] = useState<TableSort>();
+  const isNumerical = (column: ColumnId) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
 
   const sortedRows = useMemo(() => {
@@ -100,14 +94,14 @@ export function useTableView<Column extends ColumnId>({
 export function useDatasetTableView(
   rows: number[],
   columns: string[]
-): TableView {
+): DatasetTableView {
   const data = useAppSelector(state => state.data);
   const columnTypes = useAppSelector(state => state.columnsByDataType);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const valueAt = useCallback(
-    (row: number, column: string) =>
-      getLocalizedValue(data[row][column], datasetId),
+    (row: number, column: ColumnId) =>
+      getLocalizedValue(data[row][column as string], datasetId),
     [data, datasetId]
   );
-  return useTableView({rows, columns, columnTypes, valueAt});
+  return {...useTableView({rows, columns, columnTypes, valueAt}), columns};
 }

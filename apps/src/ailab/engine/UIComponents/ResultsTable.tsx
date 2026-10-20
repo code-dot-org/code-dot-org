@@ -11,7 +11,7 @@ import {
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import type {ResultsData} from '../types';
+import type {ColumnId, ResultsData} from '../types';
 import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
@@ -20,8 +20,6 @@ import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
-
-type ResultsColumn = string | typeof PREDICTION_COLUMN;
 
 interface ResultsTableProps {
   results: ResultsData;
@@ -45,7 +43,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     [data, project, showAllColumns]
   );
   const rows = useMemo(() => [...results.examples.keys()], [results]);
-  const viewColumns = useMemo<ResultsColumn[]>(
+  const viewColumns = useMemo<ColumnId[]>(
     () => [...columns, PREDICTION_COLUMN],
     [columns]
   );
@@ -57,8 +55,8 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     [columnsByDataType, labelColumn]
   );
   const rawValueAt = useCallback(
-    (index: number, column: ResultsColumn) => {
-      if (column === PREDICTION_COLUMN) {
+    (index: number, column: ColumnId) => {
+      if (typeof column === 'symbol') {
         return results.predictedLabels[index];
       }
       if (column === labelColumn) {
@@ -72,7 +70,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     [results, labelColumn, selectedFeatures, data]
   );
   const valueAt = useCallback(
-    (index: number, column: ResultsColumn) =>
+    (index: number, column: ColumnId) =>
       getLocalizedValue(rawValueAt(index, column), datasetId),
     [rawValueAt, datasetId]
   );
