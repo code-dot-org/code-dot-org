@@ -1,6 +1,7 @@
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
-// The three walks on blocks, as interpreted source.
+// The three walks on blocks, as interpreted source: not blocks themselves,
+// but what the begins block's dropdown names.
 
 // Ticks a walker stands at each turn before setting off the other way:
 // about a quarter of a second, enough to read as looking around.
@@ -19,8 +20,12 @@ export const WANDER_STAND_TICKS: [number, number] = [8, 40];
 // so it stands beside the player rather than over it.
 export const FOLLOW_REACH_PX = 40;
 
-// walkOnBlocks walks one tick in a direction (0 stands still) and reports
-// what stopped it: 'edge', 'bound', 'blocked', or 'air' while falling.
+// walkOnBlocks moves the sprite one tick in `dir` (-1, 1, or 0 to stand)
+// and returns '' when it walked, else why not: 'edge' (no block ahead to
+// stand on), 'bound' (the view's side), 'blocked' (a wall held it) or
+// 'air' (still falling). A walker turns on any reason but 'air':
+//   var stopped = walkOnBlocks(spriteId, dir);
+//   if (stopped && stopped !== 'air') dir = -dir;
 export const WALKERS_HELPER_CODE = [
   'var WALK_SPEED = 2;',
   // Resets a walker's state when a different walker last ran on the sprite;
