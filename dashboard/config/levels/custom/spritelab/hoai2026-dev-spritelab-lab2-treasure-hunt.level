@@ -39,7 +39,7 @@
       ]
     },
     "objectives": {
-      "title": "**Find the treasure.**",
+      "title": "**Find the treasure**",
       "items": [
         {
           "text": "In **World**, click a square your player can reach to put your treasure there.",

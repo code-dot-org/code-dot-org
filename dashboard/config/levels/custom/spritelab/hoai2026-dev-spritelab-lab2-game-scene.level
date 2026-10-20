@@ -33,7 +33,7 @@
       "type": "platform"
     },
     "objectives": {
-      "title": "**Add the background to your game.**",
+      "title": "**Add the background to your game**",
       "items": [
         {
           "text": "Put **set background** under **when run**.",
@@ -61,6 +61,20 @@
         }
       ]
     },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_setBackgroundImageAs"
+            },
+            "blank": true
+          }
+        }
+      }
+    ],
     "header_label": "Make a platformer"
   }
 }]]></config>

@@ -19,7 +19,12 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       stroke-dasharray: 6 4;
       fill-opacity: 0.2;
     }
+    .blocklyPlaceholderBlank > .blocklyPath {
+      stroke: none;
+      fill-opacity: 0;
+    }
     .blocklyPlaceholderActive > .blocklyPath {
+      stroke: var(--text-neutral-primary, #fff);
       stroke-dasharray: none;
       fill-opacity: 0.4;
     }

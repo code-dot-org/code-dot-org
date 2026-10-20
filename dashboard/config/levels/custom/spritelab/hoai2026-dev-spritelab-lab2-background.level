@@ -28,7 +28,7 @@
       "sentence": "place-time"
     },
     "objectives": {
-      "title": "**Make a background.** Pick the words for a place and click **Generate**, or draw your own."
+      "title": "**Make a background** Pick the words for a place and click **Generate**, or draw your own."
     },
     "long_instructions": "# Make a background\nPick the words for a place and click **Generate**, or draw your own.",
     "header_label": "Make a story"

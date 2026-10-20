@@ -45,7 +45,7 @@
       ".........."
     ],
     "objectives": {
-      "title": "**Make your character the player.**",
+      "title": "**Make your character the player**",
       "items": [
         {
           "text": "Put **set as player** under **when run** and pick your character.",
@@ -74,6 +74,20 @@
         }
       ]
     },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_setAsPlatformPlayer"
+            },
+            "blank": true
+          }
+        }
+      }
+    ],
     "header_label": "Make a platformer"
   }
 }]]></config>
