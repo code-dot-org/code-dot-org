@@ -1,7 +1,8 @@
 import {z} from 'zod';
 
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {coerceStringBooleans} from '@cdo/apps/lab2/utils';
+// Not the barrel: it drags Lab2Registry into the level editor bundle.
+import {coerceStringBooleans} from '@cdo/apps/lab2/utils/coerceStringBooleans';
 
 import {stepBaseSchema} from './base';
 

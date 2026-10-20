@@ -1,9 +1,9 @@
-import ailab, {type Mode} from '@code-dot-org/ailab';
 import {act, render} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import * as ailab from '@cdo/apps/ailab/engine';
 import {ACCURACY_AT_LEAST} from '@cdo/apps/ailab/lab2/AccuracyValidator';
 import {AilabLevelProperties} from '@cdo/apps/ailab/lab2/types';
 import AilabView from '@cdo/apps/ailab/lab2/views/AilabView';
@@ -26,14 +26,12 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
-jest.mock('@code-dot-org/ailab', () => ({
+jest.mock('@cdo/apps/ailab/engine', () => ({
   __esModule: true,
-  default: {
-    mount: jest.fn(),
-    unmount: jest.fn(),
-    loadLevel: jest.fn(),
-    instructionsDismissed: jest.fn(),
-  },
+  mount: jest.fn(),
+  unmount: jest.fn(),
+  loadLevel: jest.fn(),
+  instructionsDismissed: jest.fn(),
 }));
 
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
@@ -63,7 +61,7 @@ const ACCURACY_VALIDATIONS: Validation[] = [
   {key: 'accuracy_unmet', conditions: [], message: UNMET_MESSAGE, next: false},
 ];
 
-const level = (id: number, mode?: Mode): AilabLevelProperties => ({
+const level = (id: number, mode?: ailab.Mode): AilabLevelProperties => ({
   id,
   name: `level ${id}`,
   appName: 'ailab',
