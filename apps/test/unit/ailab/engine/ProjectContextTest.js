@@ -409,6 +409,62 @@ describe('ProjectContext opening a saved project', () => {
     expect(project().labelColumn).toBe('a');
   });
 
+  /*
+    Every column looks unselectable until the dataset is described, so opening
+    a project then would throw it away with no second reconciliation to undo it.
+  */
+  test('waits for a dataset that has not loaded yet', () => {
+    const store = createStore(rootReducer);
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    expect(project()).toEqual(initialProject);
+
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('waits for the column types, not just the rows', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    expect(project()).toEqual(initialProject);
+
+    act(() =>
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      )
+    );
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('a reset drops a project still waiting for its dataset', () => {
+    const store = createStore(rootReducer);
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().openProject(SAVED));
+
+    act(() => {
+      store.dispatch(resetState());
+    });
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(project()).toEqual(initialProject);
+  });
+
   test('drops the snapshot a cancel would have used', () => {
     const {project, context} = renderContext(undefined, described());
     act(() => context().applyTrainingRun(FIRST));

@@ -59,6 +59,8 @@ export const ProjectProvider = ({
     openWith ?? initialProject
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  // A project handed to openProject before the dataset was described.
+  const pendingProject = useRef<AilabProject | undefined>(undefined);
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -68,6 +70,9 @@ export const ProjectProvider = ({
   useResetSignal(
     useCallback((keepsHistoricResults: boolean) => {
       previousRun.current = undefined;
+      // A reset starts the project over, so a project still waiting for the
+      // dataset it was saved against no longer applies.
+      pendingProject.current = undefined;
       setProject(previous =>
         keepsHistoricResults
           ? {...initialProject, historicResults: previous.historicResults}
@@ -142,11 +147,7 @@ export const ProjectProvider = ({
     );
   }, [presetColumns, lockedLabel, lockedFeatures, data]);
 
-  /*
-    Opens a saved project, which may name columns this dataset no longer has
-    and predates any preset the level applies.
-  */
-  const openProject = useCallback(
+  const applyProject = useCallback(
     (saved: AilabProject) => {
       previousRun.current = undefined;
       const opened = keepSelectableColumns(saved, selectableColumns, data);
@@ -164,6 +165,34 @@ export const ProjectProvider = ({
     },
     [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
   );
+
+  /*
+    Opens a saved project, which may name columns this dataset no longer has
+    and predates any preset the level applies.
+
+    Until the dataset is described, every column looks unselectable, so opening
+    one then would throw the whole project away. Such a project waits for the
+    dataset instead.
+  */
+  const openProject = useCallback(
+    (saved: AilabProject) => {
+      if (selectableColumns.length === 0) {
+        pendingProject.current = saved;
+        return;
+      }
+      pendingProject.current = undefined;
+      applyProject(saved);
+    },
+    [selectableColumns, applyProject]
+  );
+
+  useEffect(() => {
+    const saved = pendingProject.current;
+    if (saved && selectableColumns.length > 0) {
+      pendingProject.current = undefined;
+      applyProject(saved);
+    }
+  }, [selectableColumns, applyProject]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
