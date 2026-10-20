@@ -103,7 +103,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     pathway,
     checkpoint,
     statusMap,
-    stepContextMap,
+    progress,
     saveGeneratedInstructions,
     aiContext,
   } = usePathwayContext();
@@ -120,7 +120,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectInfo: {name: projectName, description: projectDescription},
     sources: currentSources,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
-    stepContext: stepContextMap[step.id],
+    generatedInstructions: progress.steps[step.id]?.generatedInstructions,
     saveGeneratedInstructions,
     aichatContext: aiContext,
   });
