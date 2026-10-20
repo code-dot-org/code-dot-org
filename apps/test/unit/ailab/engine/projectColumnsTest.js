@@ -144,6 +144,59 @@ describe('keepSelectableColumns', () => {
     expect(result.selectedFeatures).toEqual(['a', 'c']);
   });
 
+  /*
+    A dropped column makes the saved run describe a model over columns that are
+    no longer there. Left in place, refit() rebuilds over whatever survives and
+    reports it under the old run's accuracy.
+  */
+  test('drops the saved run when the label goes', () => {
+    const result = keepSelectableColumns(
+      project({
+        labelColumn: 'gone',
+        selectedFeatures: ['b'],
+        hyperparameters: {k: 3},
+        accuracyCheckRowIndices: [0, 2],
+      }),
+      ['a', 'b', 'c'],
+      DATA
+    );
+    expect(result.hyperparameters).toBeUndefined();
+    expect(result.accuracyCheckRowIndices).toBeUndefined();
+  });
+
+  test('drops the saved run when a feature goes', () => {
+    const result = keepSelectableColumns(
+      project({
+        labelColumn: 'a',
+        selectedFeatures: ['b', 'gone'],
+        hyperparameters: {k: 3},
+        accuracyCheckRowIndices: [0, 2],
+      }),
+      ['a', 'b', 'c'],
+      DATA
+    );
+    expect(result.hyperparameters).toBeUndefined();
+    expect(result.accuracyCheckRowIndices).toBeUndefined();
+  });
+
+  test('keeps the historic results a dropped column cost', () => {
+    const historicResults = [
+      {
+        label: 'gone',
+        features: ['b'],
+        accuracy: '80.00',
+        correct: 4,
+        total: 5,
+      },
+    ];
+    const result = keepSelectableColumns(
+      project({labelColumn: 'gone', selectedFeatures: ['b'], historicResults}),
+      ['a', 'b', 'c'],
+      DATA
+    );
+    expect(result.historicResults).toEqual(historicResults);
+  });
+
   test('keeps the training run the project described', () => {
     const saved = project({
       labelColumn: 'a',

@@ -45,6 +45,11 @@ export function applyPresetColumns(
 /*
   Drops columns this dataset doesn't offer, so a project saved against an
   earlier version of it still opens.
+
+  Dropping a column also discards the saved training run, which describes a
+  model over the columns as they were. Keeping it would let that model be
+  rebuilt over the surviving columns and reported under the old run's accuracy.
+  The historic results stay: each names the columns it was trained on.
 */
 export function keepSelectableColumns(
   project: AilabProject,
@@ -53,13 +58,26 @@ export function keepSelectableColumns(
 ): AilabProject {
   const isSelectable = (column: string) => selectableColumns.includes(column);
   const {labelColumn, selectedFeatures} = project;
-
-  return withColumns(
-    project,
+  const keptFeatures = selectedFeatures.filter(isSelectable);
+  const keptLabel =
     labelColumn !== undefined && isSelectable(labelColumn)
       ? labelColumn
-      : undefined,
-    selectedFeatures.filter(isSelectable),
+      : undefined;
+
+  const dropped =
+    keptLabel !== labelColumn ||
+    keptFeatures.length !== selectedFeatures.length;
+
+  return withColumns(
+    {
+      ...project,
+      hyperparameters: dropped ? undefined : project.hyperparameters,
+      accuracyCheckRowIndices: dropped
+        ? undefined
+        : project.accuracyCheckRowIndices,
+    },
+    keptLabel,
+    keptFeatures,
     data
   );
 }
