@@ -26,20 +26,35 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
+let mockEngineContexts: {project?: object; trainingData?: object} = {};
+
 // The providers and store are real so the view mounts them as it does in
 // production; the engine and the level load are not what these tests cover.
-jest.mock('@cdo/apps/ailab/engine', () => ({
-  __esModule: true,
-  AilabEngine: jest.fn(() => null),
-  instructionsDismissed: jest.fn(),
-  loadLevel: jest.fn(),
-  store: jest.requireActual('@cdo/apps/ailab/engine/store').store,
-  ProjectProvider: jest.requireActual('@cdo/apps/ailab/engine/ProjectContext')
-    .ProjectProvider,
-  TrainingDataProvider: jest.requireActual(
+jest.mock('@cdo/apps/ailab/engine', () => {
+  const {ProjectProvider, useProject} = jest.requireActual(
+    '@cdo/apps/ailab/engine/ProjectContext'
+  );
+  const {TrainingDataProvider, useTrainingData} = jest.requireActual(
     '@cdo/apps/ailab/engine/TrainingDataContext'
-  ).TrainingDataProvider,
-}));
+  );
+  return {
+    __esModule: true,
+    // The stand-in reads the contexts the real engine reads, so a provider the
+    // host stops supplying fails here rather than only on a real page.
+    AilabEngine: jest.fn(() => {
+      mockEngineContexts = {
+        project: useProject(),
+        trainingData: useTrainingData(),
+      };
+      return null;
+    }),
+    instructionsDismissed: jest.fn(),
+    loadLevel: jest.fn(),
+    store: jest.requireActual('@cdo/apps/ailab/engine/store').store,
+    ProjectProvider,
+    TrainingDataProvider,
+  };
+});
 
 jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
   __esModule: true,
@@ -94,6 +109,7 @@ describe('AilabView', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    mockEngineContexts = {};
     stubRedux();
     registerReducers({progress, lab});
     store = getStore();
@@ -127,6 +143,12 @@ describe('AilabView', () => {
     });
 
   const validationState = () => store.getState().lab.validationState;
+
+  it('renders the engine under the project and training data providers', () => {
+    renderLevel('1');
+    expect(mockEngineContexts.project).toBeDefined();
+    expect(mockEngineContexts.trainingData).toBeDefined();
+  });
 
   it('shows no message until a training run misses the minimum', () => {
     renderLevel('1');

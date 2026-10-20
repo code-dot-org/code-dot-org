@@ -57,8 +57,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     progressManager?.setValidator(validator);
   }, [progressManager, validator]);
 
-  // A layout effect, not a plain effect: it runs before the browser paints, so
-  // a level change never shows a frame of the previous level's state.
+  // Use a layout effect to load the level before the browser paints, preventing
+  // a flash of the previous level's state.
   useLayoutEffect(() => {
     loadLevel(mode);
   }, [levelProperties.id, mode]);
