@@ -32,6 +32,10 @@ export {isDarkTheme} from './themes/isDarkTheme';
 // Notch shapes for custom connection types; pass them as plugins.
 export * from './inputs';
 
+// Typed variables: a reusable variable flavour (a type-tagged variable + a
+// type-checked getter block) any lab can create.
+export * from './variables';
+
 export * from './components';
 export * from './contexts';
 export * from './fields';
