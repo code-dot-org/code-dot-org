@@ -82,7 +82,7 @@ module Cdo
         # You can set the value so that a lost connection can be detected earlier than the TCP/IP Close_Wait_Timeout value of 10 minutes.
         #
         # NOTE: mysql2 reuses this variable as a query timeout without retry, so set it to the maximum query execution time.
-        read_timeout: 30,
+        read_timeout: 90,
 
         # `MYSQL_OPT_WRITE_TIMEOUT`: The timeout in seconds for each attempt to write to the server.
         write_timeout: 10
