@@ -2,6 +2,9 @@ import {useState} from 'react';
 
 import {
   BlocklyWorkspace,
+  createFieldText,
+  createReactField,
+  defineBlock,
   RectangleInputPlugin,
   RoundInputPlugin,
   TriangleInputPlugin,
@@ -30,7 +33,29 @@ const TOOLBOX: Toolbox = [
     name: 'Shapes',
     blocks: ['demo_place', 'demo_sprite', 'demo_behavior', 'demo_location'],
   },
+  {name: 'Fields', blocks: ['demo_count']},
 ];
+
+// A React field (react-fields.md): the editor steps the number, the preview
+// draws it.
+const countField = createReactField<number>({
+  name: 'field_demo_count',
+  defaultValue: 3,
+  ariaLabel: 'count',
+  getAriaValue: value => String(value),
+  width: 24,
+  Editor: ({value, onChange}) => (
+    <span>
+      <button onClick={() => onChange(value - 1)}>−</button> {value}{' '}
+      <button onClick={() => onChange(value + 1)}>+</button>
+    </span>
+  ),
+  renderPreview: ({value, element, height}) => {
+    element.appendChild(
+      createFieldText(String(value), 6, height / 2 + 5, {fill: '#fff'}),
+    );
+  },
+});
 
 // Sprite Lab's custom types, notched as apps notches them (inputs.md).
 const SHAPE_PLUGINS = [
@@ -49,6 +74,18 @@ const valueBlock = (type: string, output: string, style: string) => ({
 });
 
 const BLOCKS: BlockDefinitions = [
+  defineBlock({
+    type: 'demo_count',
+    tooltip: '',
+    message0: 'count %1',
+    args0: [{type: countField, name: 'COUNT'}],
+    previousStatement: true,
+    nextStatement: true,
+    style: 'math_blocks',
+    generator: {
+      javascript: block => `count(${block.getFieldValue('COUNT')});\n`,
+    },
+  }),
   valueBlock('demo_sprite', 'Sprite', 'sprite_blocks'),
   valueBlock('demo_behavior', 'Behavior', 'behavior_blocks'),
   valueBlock('demo_location', 'Location', 'location_blocks'),
