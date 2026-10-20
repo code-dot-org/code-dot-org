@@ -10421,6 +10421,8 @@ en:
               name: Unit 3
             lesson-31:
               name: Unit 4
+            lesson-32:
+              name: Build Assessment
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -20789,6 +20791,8 @@ en:
               name: python lab stuff
             lesson-2:
               name: generating a lesson
+            lesson-3:
+              name: assessments
           lesson_groups: {}
           name: jamila-sandbox
           title: jamila's stuff go away
@@ -30981,13 +30985,27 @@ en:
               name: Joi
             lesson-15:
               name: Katie
+            lesson-16:
+              name: Erik - Quiz
+            lesson-17:
+              name: Katie - Quiz
+            lesson-18:
+              name: Joi- Quiz
+            lesson-19:
+              name: Julian- Quiz
+            lesson-20:
+              name: Emily- Quiz
+            lesson-21:
+              name: Angelina- Quiz
           lesson_groups:
             lessonGroup-2:
               display_name: Level Builder AI Tools
             lessonGroup-3:
               display_name: WIDGETS!
+            lessonGroup-4:
+              display_name: New Quizzes
           name: scottsdale-levelbuilder-exploration
-          title: Scottsdale Levelbuilder Exploration
+          title: Levelbuilder Exploration
           description_audience: ''
           description_short: ''
           description: ''
