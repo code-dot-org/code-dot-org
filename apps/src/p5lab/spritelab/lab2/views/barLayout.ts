@@ -25,9 +25,9 @@ export interface BarLayout {
    */
   scenesInAStrip: boolean;
   /**
-   * The resource panel's buttons sit at a bar's end and the panel is gone,
-   * giving the lab its width; `?resources=panel` or `?resources=bar`
-   * decides either way. Without a scene row the panel is the default.
+   * `?resources=bar`: the resource panel's buttons sit at a bar's end and
+   * the panel is gone, giving the lab its width. The panel, with its
+   * buttons at its foot, is the default.
    */
   resourcesInBar: boolean;
   /**
@@ -49,7 +49,6 @@ export function readBarLayout(param: ParamReader = queryParams): BarLayout {
   const scenesInStrip = barMode === 'workspace-top';
   const scenesInPreviewBar = barMode === 'preview-top';
   const scenesInAStrip = scenesInStrip || scenesInPreviewBar;
-  const resources = param('resources');
   return {
     previewSide: param('preview') === 'right' ? 'right' : 'left',
     barAtBottom: barMode !== 'top',
@@ -57,8 +56,7 @@ export function readBarLayout(param: ParamReader = queryParams): BarLayout {
     scenesInStrip,
     scenesInPreviewBar,
     scenesInAStrip,
-    resourcesInBar:
-      resources === 'bar' || (resources !== 'panel' && !scenesInAStrip),
+    resourcesInBar: param('resources') === 'bar',
     previewBarShown: param('preview-bar') !== 'false' || scenesInPreviewBar,
     jumboSide: param('jumbo') === 'left' ? 'left' : 'right',
     editorsAtStart: param('editors') === 'stripleft',

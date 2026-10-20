@@ -4,7 +4,7 @@ const layout = (params: Record<string, string> = {}) =>
   readBarLayout(name => params[name]);
 
 describe('readBarLayout', () => {
-  it('defaults to the scene dropdown in a workspace bar, with the Preview bar and the resource buttons in the bar', () => {
+  it('defaults to the scene dropdown in a workspace bar, the Preview bar, and the resource panel', () => {
     expect(layout()).toEqual({
       previewSide: 'left',
       barAtBottom: true,
@@ -12,7 +12,7 @@ describe('readBarLayout', () => {
       scenesInStrip: false,
       scenesInPreviewBar: false,
       scenesInAStrip: false,
-      resourcesInBar: true,
+      resourcesInBar: false,
       previewBarShown: true,
       jumboSide: 'right',
       editorsAtStart: false,
@@ -20,13 +20,14 @@ describe('readBarLayout', () => {
   });
 
   it('brings back the earlier layout on request', () => {
-    expect(
-      layout({bar: 'top', 'preview-bar': 'false', resources: 'panel'})
-    ).toMatchObject({
+    expect(layout({bar: 'top', 'preview-bar': 'false'})).toMatchObject({
       barAtBottom: false,
-      resourcesInBar: false,
       previewBarShown: false,
     });
+  });
+
+  it('moves the resource buttons into a bar on request', () => {
+    expect(layout({resources: 'bar'})).toMatchObject({resourcesInBar: true});
   });
 
   it('brings back the scene row under or above the workspace on request', () => {
@@ -40,14 +41,11 @@ describe('readBarLayout', () => {
     });
   });
 
-  it('keeps the resource panel when the dropdown stands in a strip, unless asked for the bar', () => {
+  it('puts the dropdown in the workspace strip on request', () => {
     expect(layout({bar: 'workspace-top'})).toMatchObject({
       scenesInStrip: true,
       scenesInAStrip: true,
       resourcesInBar: false,
-    });
-    expect(layout({bar: 'workspace-top', resources: 'bar'})).toMatchObject({
-      resourcesInBar: true,
     });
   });
 
