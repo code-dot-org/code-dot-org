@@ -13,6 +13,8 @@ import {
   PROMPT_TAGS,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
 
+import {dslHeredoc, dslQuote} from './dsl';
+
 // Multi and Match are DSLDefined: the Rails create path REQUIRES
 // dsl_text on POST, and the parser extracts the level name from it.
 // Content follows the stub policy, but structurally complete (one
@@ -231,27 +233,6 @@ export async function generateMatchLevel(
 }
 
 // ─── DSL rendering ───────────────────────────────────────────────────
-
-// Escape a string for inclusion inside a single-quoted DSL literal. The
-// DSL parser is Ruby's `instance_eval` on a hand-written DSL class, so
-// backslashes and single quotes are the only characters that need to
-// be neutralized.
-function dslQuote(s: string): string {
-  return `'${s.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
-}
-
-// Pick a heredoc terminator that doesn't appear anywhere in the body.
-// Default 'MARKDOWN' covers every shipped multi/match file in source
-// control; the fallback keeps us safe against pathological AI output.
-function dslHeredoc(body: string, defaultTag = 'MARKDOWN'): string {
-  let tag = defaultTag;
-  let suffix = 0;
-  while (body.includes(tag)) {
-    suffix += 1;
-    tag = `${defaultTag}_${suffix}`;
-  }
-  return `<<${tag}\n${body}\n${tag}`;
-}
 
 export function renderMultiDsl(
   name: string,
