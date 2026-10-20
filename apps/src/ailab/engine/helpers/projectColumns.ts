@@ -6,12 +6,6 @@
 
 import type {AilabProject, DataRow, PresetColumns} from '../types';
 
-/* Which columns a level's mode fixes, leaving the student no way to change. */
-export interface ColumnLocks {
-  label: boolean;
-  features: boolean;
-}
-
 export function sortByColumnOrder(
   features: string[],
   data: DataRow[]
@@ -27,13 +21,14 @@ export function sortByColumnOrder(
 export function applyPresetColumns(
   project: AilabProject,
   presetColumns: PresetColumns,
-  locks: ColumnLocks,
+  lockedLabel: boolean,
+  lockedFeatures: boolean,
   data: DataRow[]
 ): AilabProject {
   let labelColumn = project.labelColumn;
   if (
     presetColumns.labelColumn !== undefined &&
-    (locks.label || project.labelColumn === undefined)
+    (lockedLabel || project.labelColumn === undefined)
   ) {
     labelColumn = presetColumns.labelColumn;
   }
@@ -41,7 +36,7 @@ export function applyPresetColumns(
   let features = project.selectedFeatures;
   if (
     presetColumns.selectedFeatures &&
-    (locks.features || project.selectedFeatures.length === 0)
+    (lockedFeatures || project.selectedFeatures.length === 0)
   ) {
     features = presetColumns.selectedFeatures;
   }

@@ -64,10 +64,6 @@ export const ProjectProvider = ({
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  const locks = useMemo(
-    () => ({label: lockedLabel, features: lockedFeatures}),
-    [lockedLabel, lockedFeatures]
-  );
 
   useResetSignal(
     useCallback((keepsHistoricResults: boolean) => {
@@ -136,9 +132,15 @@ export const ProjectProvider = ({
       return;
     }
     setProject(previous =>
-      applyPresetColumns(previous, presetColumns, locks, data)
+      applyPresetColumns(
+        previous,
+        presetColumns,
+        lockedLabel,
+        lockedFeatures,
+        data
+      )
     );
-  }, [presetColumns, locks, data]);
+  }, [presetColumns, lockedLabel, lockedFeatures, data]);
 
   /*
     Opens a saved project, which may name columns this dataset no longer has
@@ -150,11 +152,17 @@ export const ProjectProvider = ({
       const opened = keepSelectableColumns(saved, selectableColumns, data);
       setProject(
         presetColumns
-          ? applyPresetColumns(opened, presetColumns, locks, data)
+          ? applyPresetColumns(
+              opened,
+              presetColumns,
+              lockedLabel,
+              lockedFeatures,
+              data
+            )
           : opened
       );
     },
-    [selectableColumns, data, presetColumns, locks]
+    [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
   );
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {

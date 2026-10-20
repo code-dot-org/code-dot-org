@@ -6,7 +6,6 @@ import {
 import {initialProject} from '@cdo/apps/ailab/engine/types';
 
 const DATA = [{a: '1', b: '2', c: '3'}];
-const UNLOCKED = {label: false, features: false};
 
 const project = columns => ({...initialProject, ...columns});
 
@@ -31,7 +30,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       project({labelColumn: 'a'}),
       {labelColumn: 'c'},
-      {label: true, features: false},
+      true,
+      false,
       DATA
     );
     expect(result.labelColumn).toBe('c');
@@ -41,7 +41,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       project({labelColumn: 'a'}),
       {labelColumn: 'c'},
-      UNLOCKED,
+      false,
+      false,
       DATA
     );
     expect(result.labelColumn).toBe('a');
@@ -51,7 +52,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       initialProject,
       {labelColumn: 'c'},
-      UNLOCKED,
+      false,
+      false,
       DATA
     );
     expect(result.labelColumn).toBe('c');
@@ -61,7 +63,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       project({selectedFeatures: ['b']}),
       {selectedFeatures: ['c']},
-      {label: false, features: true},
+      false,
+      true,
       DATA
     );
     expect(result.selectedFeatures).toEqual(['c']);
@@ -71,7 +74,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       project({selectedFeatures: ['b']}),
       {selectedFeatures: ['c']},
-      UNLOCKED,
+      false,
+      false,
       DATA
     );
     expect(result.selectedFeatures).toEqual(['b']);
@@ -81,7 +85,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       initialProject,
       {labelColumn: 'b', selectedFeatures: ['a', 'b', 'c']},
-      UNLOCKED,
+      false,
+      false,
       DATA
     );
     expect(result.selectedFeatures).toEqual(['a', 'c']);
@@ -92,7 +97,8 @@ describe('applyPresetColumns', () => {
     const result = applyPresetColumns(
       saved,
       {labelColumn: 'a'},
-      UNLOCKED,
+      false,
+      false,
       DATA
     );
     expect(result.hyperparameters).toEqual({k: 3});
