@@ -7,6 +7,7 @@
   "user_id": 1,
   "properties": {
     "video_key": "hoai2026_intro",
+    "uses_lab2": "true",
     "skip_dialog": true,
     "skip_sound": true,
     "encrypted": "false",
