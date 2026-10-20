@@ -10,7 +10,7 @@ import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 import {
   CheckpointStatusMap,
   GeneratedContent,
-  StepContext,
+  Progress,
 } from '../progress/model';
 import {Checkpoint, Pathway} from '../types';
 
@@ -18,7 +18,7 @@ export interface PathwayContextValue {
   pathway: Pathway;
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
-  stepContextMap: {[stepId: string]: StepContext};
+  progress: Progress;
   saveGeneratedInstructions: (
     stepId: string,
     content: GeneratedContent

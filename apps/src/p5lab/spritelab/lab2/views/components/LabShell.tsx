@@ -10,6 +10,8 @@ interface LabShellProps {
   rightExtra?: React.ReactNode;
   /** The bar under the workspace instead of over it. */
   barAtBottom?: boolean;
+  /** No bar at all: the scene controls live elsewhere. */
+  barHidden?: boolean;
   children: React.ReactNode;
 }
 
@@ -21,6 +23,7 @@ const LabShell: React.FunctionComponent<LabShellProps> = ({
   sceneTabs,
   rightExtra,
   barAtBottom = false,
+  barHidden = false,
   children,
 }) => {
   const bar = (
@@ -36,9 +39,9 @@ const LabShell: React.FunctionComponent<LabShellProps> = ({
   );
   return (
     <div className={moduleStyles.tabShell}>
-      {!barAtBottom && bar}
+      {!barHidden && !barAtBottom && bar}
       <div className={moduleStyles.tabContent}>{children}</div>
-      {barAtBottom && bar}
+      {!barHidden && barAtBottom && bar}
     </div>
   );
 };
