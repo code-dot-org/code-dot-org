@@ -10,7 +10,7 @@ import moduleStyles from './customDialog.module.scss';
 
 /**
  * @deprecated Use `MuiCustomDialogProps` from `@code-dot-org/component-library/dialog`.
- * Codemod: `yarn codemod:dialog` in `frontend/packages/component-library`.
+ * Codemod: `codemods/dialog-to-mui-dialog.ts` in `frontend/packages/component-library`.
  */
 export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   /** CustomDialog color mode */
@@ -41,7 +41,7 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  * Renders CustomDialog with content passed through props.
  *
  * @deprecated Use `MuiCustomDialog` from `@code-dot-org/component-library/dialog`; it takes the same props.
- * Codemod: `yarn codemod:dialog` in `frontend/packages/component-library`.
+ * Codemod: `codemods/dialog-to-mui-dialog.ts` in `frontend/packages/component-library`.
  * See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
  */
 
