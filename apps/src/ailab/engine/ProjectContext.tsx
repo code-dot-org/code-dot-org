@@ -9,6 +9,7 @@ import React, {
   type ReactNode,
 } from 'react';
 
+import {ResetReasons, type ResetReason} from './constants';
 import {
   applyPresetColumns,
   keepSelectableColumns,
@@ -74,16 +75,18 @@ export const ProjectProvider = ({
   const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((keepsHistoricResults: boolean) => {
+    useCallback((reason: ResetReason) => {
       previousRun.current = undefined;
-      // A reset starts the project over, so a project still waiting for the
-      // dataset it was saved against no longer applies.
-      pendingProject.current = undefined;
-      setProject(previous =>
-        keepsHistoricResults
-          ? {...initialProject, historicResults: previous.historicResults}
-          : initialProject
-      );
+      /*
+        A project waiting for a dataset outlives the student choosing one: the
+        dataset it was saved against may be the one they pick, and its columns
+        are reconciled against whichever it turns out to be. Any other reset
+        abandons it.
+      */
+      if (reason !== ResetReasons.DATASET_CHANGE) {
+        pendingProject.current = undefined;
+      }
+      setProject(initialProject);
     }, [])
   );
 

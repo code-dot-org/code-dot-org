@@ -1,5 +1,5 @@
 import {getAssetPath} from './assetPath';
-import {TestDataLocations} from './constants';
+import {TestDataLocations, ResetReasons, type ResetReason} from './constants';
 import {invalidatePendingDatasetLoads} from './datasetLoad';
 import {type Dataset, getDatasets} from './datasetManifest';
 import {loadDataset} from './loadDataset';
@@ -20,16 +20,16 @@ import type {Mode} from './types';
  * Prepare the lab for a level.
  */
 export const loadLevel = function (mode?: Mode): void {
-  reload(mode, /*keepHistoricResults*/ false);
+  reload(mode, ResetReasons.LEVEL_LOAD);
 };
 
 export const startOver = function (): void {
-  reload(store.getState().mode, /*keepHistoricResults*/ true);
+  reload(store.getState().mode, ResetReasons.START_OVER);
 };
 
-const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
+const reload = (mode: Mode | undefined, reason: ResetReason): void => {
   invalidatePendingDatasetLoads();
-  store.dispatch(resetState(keepHistoricResults));
+  store.dispatch(resetState(reason));
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);

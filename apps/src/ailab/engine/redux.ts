@@ -5,7 +5,12 @@ import {
   type AnyAction,
 } from '@reduxjs/toolkit';
 
-import {TestDataLocations, ResultsGrades} from './constants';
+import {
+  TestDataLocations,
+  ResultsGrades,
+  ResetReasons,
+  type ResetReason,
+} from './constants';
 import {getResultsDataInDataTableForm} from './helpers/accuracy';
 import {
   uniqLabelFeaturesSelected,
@@ -74,7 +79,7 @@ export interface RootState {
   resultsTab: string;
   presetColumns: PresetColumns | undefined;
   resetCount: number;
-  resetKeepsHistoricResults: boolean;
+  resetReason: ResetReason;
   mode?: Mode;
 }
 
@@ -150,7 +155,7 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
   presetColumns: undefined,
   resetCount: 0,
-  resetKeepsHistoricResults: false,
+  resetReason: ResetReasons.LEVEL_LOAD,
 };
 
 const ailabSlice = createSlice({
@@ -291,18 +296,20 @@ const ailabSlice = createSlice({
       state.predictionPlaying = false;
     },
     resetState: {
-      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
+      reducer(state, action: PayloadAction<{reason: ResetReason}>) {
         return {
           ...initialState,
           mode: state.mode,
           reserveLocation: state.reserveLocation,
           instructionsEnabled: state.instructionsEnabled,
           resetCount: state.resetCount + 1,
-          resetKeepsHistoricResults: action.payload.keepHistoricResults,
+          resetReason: action.payload.reason,
         };
       },
-      prepare(keepHistoricResults = false) {
-        return {payload: {keepHistoricResults}};
+      // Defaults to the reason that clears the most, so only a caller that
+      // means something narrower has to say so.
+      prepare(reason: ResetReason = ResetReasons.LEVEL_LOAD) {
+        return {payload: {reason}};
       },
     },
     setTrainedModelDetail: {

@@ -1,3 +1,4 @@
+import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {loadLevel, startOver} from '@cdo/apps/ailab/engine/levelLoad';
 import {
@@ -19,10 +20,10 @@ describe('startOver', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  test('asks the reset to keep the results already earned', () => {
+  test('names itself as the reason for the reset', () => {
     startOver();
 
-    expect(store.getState().resetKeepsHistoricResults).toBe(true);
+    expect(store.getState().resetReason).toBe(ResetReasons.START_OVER);
   });
 
   test('resets everything else to the start of the level', () => {
@@ -50,12 +51,12 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('asks the reset to drop the previous level’s results', () => {
+  test('names itself as the reason for the reset', () => {
     startOver();
 
     loadLevel(undefined);
 
-    expect(store.getState().resetKeepsHistoricResults).toBe(false);
+    expect(store.getState().resetReason).toBe(ResetReasons.LEVEL_LOAD);
   });
 
   test('reserves random rows for testing unless the mode asks for the last rows', () => {

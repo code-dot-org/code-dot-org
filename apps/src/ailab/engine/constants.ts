@@ -28,6 +28,19 @@ export const TestDataLocations = {
   RANDOM: 'random',
 };
 
+/*
+  Why the store was reset. Every reset clears the lab, but what else it means
+  differs: a dataset the student chose replaces the one a saved project was
+  built against, while a level load only precedes that project being opened.
+*/
+export const ResetReasons = {
+  LEVEL_LOAD: 'levelLoad',
+  DATASET_CHANGE: 'datasetChange',
+  START_OVER: 'startOver',
+} as const;
+
+export type ResetReason = (typeof ResetReasons)[keyof typeof ResetReasons];
+
 export const ModelNameMaxLength = 150;
 
 export const UNIQUE_OPTIONS_MAX = 50;
