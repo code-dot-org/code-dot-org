@@ -32,13 +32,23 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   default: ({
     checkpoint,
     initialStepId,
+    onExit,
+    onFinish,
   }: {
     checkpoint: {title: string};
     initialStepId?: string;
+    onExit: () => void;
+    onFinish: () => void;
   }) => (
     <div>
       playing {checkpoint.title}
       {initialStepId ? ` at ${initialStepId}` : ''}
+      <button type="button" onClick={onExit}>
+        exit
+      </button>
+      <button type="button" onClick={onFinish}>
+        finish
+      </button>
     </div>
   ),
 }));
@@ -190,6 +200,41 @@ describe('PathwayApp', () => {
       await renderSettled();
 
       expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
+
+    it('clears URL params when the user exits a checkpoint back to the map', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'exit'}).click());
+
+      expect(window.location.search).toBe('');
+    });
+
+    it('clears URL params when the user finishes a checkpoint', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'finish'}).click());
+
+      expect(window.location.search).toBe('');
+    });
+
+    it('uses progress resume rather than the URL step when a different checkpoint is opened', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'multi-a-step': {status: 'complete', timeSpent: 0}},
+      });
+      // URL targets intro; multi is a different checkpoint with progress.
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+
+      // Exit intro back to the map, then open multi.
+      act(() => screen.getByRole('button', {name: 'exit'}).click());
+      act(() => screen.getByText('start multi').click());
+
+      // multi should resume at multi-b-step (from progress), not intro-step.
+      expect(screen.getByText('playing Multi at multi-b-step')).toBeTruthy();
     });
   });
 });
