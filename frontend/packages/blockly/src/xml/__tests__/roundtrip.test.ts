@@ -90,4 +90,25 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson round-trips through Blockly', 
       fields: {MSG: 'second'},
     });
   });
+
+  it("XML-1: matches Blockly's own conversion for shadows, text and attributes", () => {
+    const xml =
+      '<xml><block type="rt_block" disabled="true" collapsed="true">' +
+      '<field name="MSG">007</field>' +
+      '<value name="VAL"><shadow type="rt_num"><field name="NUM">5</field></shadow></value>' +
+      '</block></xml>';
+    const reference = new Blockly.Workspace();
+    Blockly.Xml.domToWorkspace(Blockly.utils.xml.textToDom(xml), reference);
+    const expected = Blockly.serialization.workspaces.save(reference);
+    reference.dispose();
+
+    // Blockly's XML loader places a block without a position; ignore where.
+    const strip = (state: object) =>
+      JSON.parse(
+        JSON.stringify(state, (key, value) =>
+          ['id', 'x', 'y'].includes(key) ? undefined : value,
+        ),
+      );
+    expect(strip(roundTrip(xml))).toEqual(strip(expected));
+  });
 });

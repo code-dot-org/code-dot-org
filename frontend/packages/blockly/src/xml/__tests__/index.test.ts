@@ -51,15 +51,21 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
   });
 
   describe('fields', () => {
-    it('XML-5: maps <field name> by name and coerces the text value', () => {
+    it('XML-5, XML-V5: maps <field name> by name and keeps its text', () => {
       const block = firstBlock(
         '<xml><block type="math_number">' +
           '<field name="NUM">42</field>' +
           '<field name="LABEL">hello</field>' +
           '<field name="FLAG">true</field>' +
+          '<field name="CODE">007</field>' +
           '</block></xml>',
       );
-      expect(block.fields).toEqual({NUM: 42, LABEL: 'hello', FLAG: true});
+      expect(block.fields).toEqual({
+        NUM: '42',
+        LABEL: 'hello',
+        FLAG: 'true',
+        CODE: '007',
+      });
     });
 
     it('XML-5: treats legacy <title> as a field', () => {
@@ -87,11 +93,25 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
       ['', ''],
       ['hello', 'hello'],
       ['5px', '5px'],
-    ])('coerces field text %j to %j', (raw, expected) => {
+    ])('XML-4: coerces attribute text %j to %j', (raw, expected) => {
+      const block = firstBlock(`<xml><block type="t" v="${raw}"/></xml>`);
+      expect(block.extraState?.v).toBe(expected);
+    });
+  });
+
+  describe("Blockly's own attributes", () => {
+    it('XML-3, XML-V6: maps disabled, inline, collapsed and editable', () => {
       const block = firstBlock(
-        `<xml><block type="t"><field name="V">${raw}</field></block></xml>`,
+        '<xml><block type="t" disabled="true" inline="false"' +
+          ' collapsed="true" editable="false"/></xml>',
       );
-      expect(block.fields?.V).toBe(expected);
+      expect(block).toMatchObject({
+        disabledReasons: ['MANUALLY_DISABLED'],
+        inline: false,
+        collapsed: true,
+        editable: false,
+      });
+      expect(block).not.toHaveProperty('extraState');
     });
   });
 
@@ -156,7 +176,12 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
           '<block type="real"/>' +
           '</value></block></xml>',
       );
-      expect(block.inputs).toEqual({X: {block: {type: 'real'}}});
+      expect(block.inputs).toEqual({
+        X: {
+          block: {type: 'real'},
+          shadow: {type: 'math_number', fields: {NUM: '1'}},
+        },
+      });
     });
 
     it('XML-6: ignores a block nested inside a preceding shadow', () => {
@@ -171,10 +196,10 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
           '<block type="outer"/>' +
           '</value></block></xml>',
       );
-      expect(block.inputs).toEqual({X: {block: {type: 'outer'}}});
+      expect(block.inputs?.X.block).toEqual({type: 'outer'});
     });
 
-    it('XML-6: leaves the input unset when the only block is nested in a shadow', () => {
+    it("XML-6, XML-V2: keeps a shadow that is the input's only content", () => {
       const block = firstBlock(
         '<xml><block type="a"><value name="X">' +
           '<shadow type="wrapper">' +
@@ -182,7 +207,14 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
           '</shadow>' +
           '</value></block></xml>',
       );
-      expect(block).not.toHaveProperty('inputs');
+      expect(block.inputs).toEqual({
+        X: {
+          shadow: {
+            type: 'wrapper',
+            inputs: {INNER: {block: {type: 'deep'}}},
+          },
+        },
+      });
     });
 
     it('XML-6: selects the direct-child next block, not one nested in a shadow', () => {
@@ -194,7 +226,7 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
           '<block type="outer"/>' +
           '</next></block></xml>',
       );
-      expect(block.next).toEqual({block: {type: 'outer'}});
+      expect(block.next?.block).toEqual({type: 'outer'});
     });
   });
 
@@ -220,13 +252,25 @@ describe('xml-toolbox.md: convertBlocklyXmlToJson', () => {
       expect(block.extraState).toEqual({count: 3, enabled: true, mode: 'fast'});
     });
 
-    it('XML-7: collects procedure arg names into extraState.params', () => {
+    it("XML-7: collects a definition's args as named objects", () => {
       const block = firstBlock(
         '<xml><block type="procedures_defnoreturn">' +
-          '<mutation><arg name="x"/><arg name="y"/></mutation>' +
+          '<mutation><arg name="x" varid="vx"/><arg name="y"/></mutation>' +
           '</block></xml>',
       );
-      expect(block.extraState?.params).toEqual(['x', 'y']);
+      expect(block.extraState?.params).toEqual([
+        {name: 'x', id: 'vx'},
+        {name: 'y'},
+      ]);
+    });
+
+    it("XML-7: collects a call's args as names", () => {
+      const block = firstBlock(
+        '<xml><block type="procedures_callnoreturn">' +
+          '<mutation name="f"><arg name="x"/></mutation>' +
+          '</block></xml>',
+      );
+      expect(block.extraState).toEqual({name: 'f', params: ['x']});
     });
   });
 });

@@ -26,8 +26,14 @@ XML-2. A block's state has its `type` and `id`; `deletable` and `movable`
 as booleans, when the element has those attributes; and `x` and `y` as
 integers, when it has both.
 
-XML-3. Every other attribute of a `<block>` goes into `extraState` under
-its own name, its value converted by XML-4. This is how a toolbox block's
+XML-3. Blockly's own block attributes take the JSON form Blockly gives
+them: `inline` and `collapsed` as booleans, `editable="false"` as
+`editable: false`, and `disabled="true"` as
+`disabledReasons: ['MANUALLY_DISABLED']`. Every other attribute goes into
+`extraState` under its own name, its value converted by XML-4. This is how
+a toolbox block's `limit` reaches the block limits plugin (PLG-14).
+
+XML-4. This is how a toolbox block's
 `limit` reaches the block limits plugin (PLG-14). It is also where
 Blockly's own attributes `disabled`, `inline`, `collapsed` and `editable`
 go, so a block loaded from the result is not disabled, inlined, collapsed
@@ -37,20 +43,25 @@ XML-4. Values are converted: `true` and `false` to booleans, any text that
 is a number to that number, and the rest left as text.
 
 XML-5. `<field>` children, and `<title>` children as apps' oldest levels
-name them, give `fields`, keyed by `name`, each value converted by XML-4. A
-text field holding `007` is loaded as `7`.
+name them, give `fields`, keyed by `name`, each value its text as it is.
+The field converts the text when it loads, so a number field reads `42`
+as 42 and a text field keeps `007`.
 
-XML-6. A `<value>` or `<statement>` gives `inputs[name].block`, and a
-`<next>` gives `next.block`, from the first `<block>` directly inside it. A
-`<shadow>` is ignored, with any block inside it, so an input holding only a
-shadow is left empty.
+XML-6. A `<value>` or `<statement>` gives `inputs[name]`, and a `<next>`
+gives `next`: `block` from the first `<block>` directly inside it, and
+`shadow` from the first `<shadow>` directly inside it, each read as a block
+is. A block within a shadow is the shadow's, never the input's.
 
 XML-7. A `<mutation>` puts each of its attributes into `extraState`, its
 value converted by XML-4. `controls_if`'s `elseif` and `else` become the
 `elseIfCount` and `hasElse` its JSON form reads; every other attribute
 keeps its XML name, which is not, for most of Blockly's own blocks, the
 name their JSON form reads (`lists_create_with`'s `items` is `itemCount`
-there). Each `<arg name>` inside it adds its name to `extraState.params`.
+there). Each `<arg name>` inside it adds to `extraState.params`: for a procedure
+definition (`procedures_defnoreturn`, `procedures_defreturn`), an object
+`{name}`, with `id` from its `varid` if it has one, as Blockly's JSON form
+for a definition holds; for any other block, the name alone, as a call's
+does.
 The attributes of the element after the `<mutation>`, usually a `<field>`,
 are added too, without replacing those already there, except that an
 `elseif` among them does replace.
@@ -114,12 +125,20 @@ XML-V1 (XML-7). `<block type="controls_if"><mutation elseif="1"
 else="1"/></block>` converts to `extraState: {elseIfCount: 1, hasElse:
 true}`, which loads into Blockly's `controls_if`.
 
-XML-V2 (XML-6). `<value name="TEXT"><shadow type="text">...</shadow></value>`
-leaves `inputs` unset.
+XML-V2 (XML-6). `<value name="X"><shadow type="wrapper">...</shadow></value>`
+gives `inputs: {X: {shadow: {type: 'wrapper', ...}}}`.
 
 XML-V3 (XML-9). A category with id `Play` holding a `play_sound` block
 gives a `category` block with `CATEGORY: 'Play'`, then the `play_sound`
 block.
+
+XML-V5 (XML-5). `<field name="CODE">007</field>` gives `fields: {CODE:
+'007'}`.
+
+XML-V6 (XML-3). `disabled="true" inline="false" collapsed="true"
+editable="false"` gives `disabledReasons: ['MANUALLY_DISABLED']`,
+`inline: false`, `collapsed: true` and `editable: false`, and no
+`extraState`.
 
 XML-V4 (XML-11). A workspace holding a loose `math_number` of 42 and a
 `text_print` of `'a'` generates `\n\n\n42,0\nwindow.alert('a');\n`.
@@ -133,17 +152,10 @@ XML-V4 (XML-11). A workspace holding a loose `math_number` of 42 and a
 
 ## Open questions
 
-1. XML-3, XML-5, XML-6: the converter loses shadow blocks, the text of
-   fields that look like numbers, and Blockly's own block attributes.
-   Keep fields as text, read shadows, and map `disabled`, `inline`,
-   `collapsed` and `editable`?
-2. XML-7: a definition's parameters are names, where Blockly's JSON form
-   for a definition holds `{name}` objects; loaded, the definition's
-   parameter is not `x`. Write objects for definitions?
-3. XML-7: what are the attributes of the element after a `<mutation>` for?
+1. XML-7: what are the attributes of the element after a `<mutation>` for?
    For most blocks they add the next field's `name` to `extraState`.
-4. XML-7: map the attribute names of Blockly's other mutators
+2. XML-7: map the attribute names of Blockly's other mutators
    (`lists_create_with`, `text_join`, `lists_getIndex` and so on), or
    leave legacy mutations to the workspace-based conversion?
-5. XML-11: generate a loose value block as Blockly's `workspaceToCode`
+3. XML-11: generate a loose value block as Blockly's `workspaceToCode`
    does, as a statement of its code alone?
