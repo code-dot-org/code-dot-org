@@ -1,7 +1,5 @@
 /*
-  Settling which columns a project ends up with, from the three sources that
-  disagree: what the student chose, what the level's mode presets, and what the
-  loaded dataset actually offers.
+  Helpers for managing which columns a project uses for its label and features.
 */
 
 import type {AilabProject, DataRow, PresetColumns} from '../types';
@@ -15,8 +13,8 @@ export function sortByColumnOrder(
 }
 
 /*
-  A locked column always wins, since the student has no way to change it. An
-  unlocked one never replaces a choice already in the project.
+  Applies preset columns to a project, respecting locked label and feature columns.
+  Unlocked columns can be overwritten by the students' saved project.
 */
 export function applyPresetColumns(
   project: AilabProject,
