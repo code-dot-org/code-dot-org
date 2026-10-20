@@ -59,6 +59,14 @@ such as `1,2,4-6`, as the list of numbers it names, ignoring spaces and any
 item that is neither a number nor a range of numbers.
 `numberListToString(list)` joins numbers with commas.
 
+FLD-9. On a right-to-left block the field shows its text between the
+Unicode right-to-left override (U+202E) and pop-directional formatting
+(U+202C) marks, as apps' does. Blockly appends only a right-to-left mark
+(U+200F), which misorders text that mixes directions (Blockly issue 8645).
+Otherwise the text is Blockly's: cut to its display limit with `…`, and
+with its whitespace made non-breaking. Apps' copy of the method drops the
+non-breaking spaces; this one keeps them.
+
 ### Test vectors
 
 FLD-V1 (FLD-7, FLD-8). `config="1-3,5"` gives the options `1`, `2`, `3`
@@ -77,10 +85,3 @@ FLD-V4 (FLD-8). `printerStyleNumberRangeToList('1, 2,4-6, x')` is
 
 - Blockly's dropdown itself: menus, images in options, generated menus.
 - Which blocks use the field: `common-blocks.md`, and the labs.
-
-### Open questions
-
-1. Apps' dropdown draws a right-to-left block's text between the Unicode
-   right-to-left override and pop-directional marks, to work around Blockly
-   issue 8645, where Blockly appends a right-to-left mark only. This one
-   does not.

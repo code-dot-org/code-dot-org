@@ -157,6 +157,19 @@ export class CdoFieldDropdown extends Blockly.FieldDropdown {
     super.toXml(element);
     return element;
   }
+
+  /**
+   * Blockly's, with its trailing right-to-left mark replaced by override and
+   * pop-directional marks; the single mark misorders mixed text (Blockly
+   * issue 8645).
+   */
+  protected override getDisplayText_(): string {
+    const text = super.getDisplayText_();
+    if (!this.sourceBlock_?.RTL || !text.endsWith('\u200F')) {
+      return text;
+    }
+    return '\u202E' + text.slice(0, -1) + '\u202C';
+  }
 }
 
 export const plugin: FieldPlugin = {

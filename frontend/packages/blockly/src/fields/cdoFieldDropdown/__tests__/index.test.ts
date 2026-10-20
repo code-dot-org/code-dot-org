@@ -284,3 +284,36 @@ describe('fields.md: the dropdown, worked examples', () => {
     });
   });
 });
+
+describe('fields.md: right-to-left text', () => {
+  it('FLD-9: a right-to-left block shows the text between override and pop marks', () => {
+    const rtl = new Blockly.Workspace(
+      new Blockly.Options({rtl: true} as Blockly.BlocklyOptions),
+    );
+    const ltr = new Blockly.Workspace();
+    Blockly.Blocks.cdo_field_dropdown_rtl = {
+      init(this: Blockly.Block) {
+        this.appendDummyInput().appendField(
+          new CdoFieldDropdown([['big cat', '"CAT"']]),
+          'ANIMAL',
+        );
+      },
+    };
+    const shown = (workspace: Blockly.Workspace) => {
+      const block = workspace.newBlock('cdo_field_dropdown_rtl');
+      const field = block.getField('ANIMAL') as unknown as {
+        getDisplayText_(): string;
+      };
+      return field.getDisplayText_();
+    };
+    try {
+      // Blockly's non-breaking space is kept.
+      expect(shown(rtl)).toBe('\u202Ebig\u00A0cat\u202C');
+      expect(shown(ltr)).toBe('big\u00A0cat');
+    } finally {
+      rtl.dispose();
+      ltr.dispose();
+      delete Blockly.Blocks.cdo_field_dropdown_rtl;
+    }
+  });
+});

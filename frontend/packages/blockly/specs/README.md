@@ -93,3 +93,5 @@ these changes.
    `comment_blocks`. See `themes.md`, THM-6.
 10. `tritanopia-dark` is labelled "Tritanopia Dark Theme"; `ngfp/blockly`'s
     inherited `default-dark`'s label, "Modern Dark Theme".
+11. The dropdown draws right-to-left text as apps' does, between override
+    and pop-directional marks. See `fields.md`, FLD-9.
