@@ -2255,12 +2255,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   arrows={arrowSet}
                   onPlay={handlePlayClick}
                   onStop={stopTab ? handleStopClick : undefined}
-                  onPlayGame={handlePlayGame}
-                  playGameDisabled={!!pinnedSceneId}
-                  playGameReason={LOCKED_REASON}
-                  playSceneHidden={
-                    !pinnedSceneId && activeScene.id === scenes[0].id
-                  }
+                  // A level pinned to one scene has one Play, for that scene.
+                  onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                  playSceneHidden={activeScene.id === scenes[0].id}
                 />
               }
               below={
