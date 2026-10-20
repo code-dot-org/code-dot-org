@@ -38,7 +38,7 @@ what the code does, even where that is wrong.
 | 12   | `plugins.md`         | PLG-   | block limits, disabled orphans, gray undeletables                        | 1b     | written |
 | 13   | `xml-toolbox.md`     | XML-   | XML to JSON, toolbox and code utilities                                  | 1a     | written |
 | 14   | `typed-variables.md` | TV-    | `createTypedVariable`                                                    | 1a     | written |
-| 15   | `flyout.md`          | FLY-   | `BlocklyFlyout`                                                          | 1b     | planned |
+| 15   | `flyout.md`          | FLY-   | `BlocklyFlyout`                                                          | 1b     | written |
 | 16   | `markdown.md`        | MD-    | blocks embedded in markdown                                              | 1b, 13 | planned |
 | 17   | `mini-toolbox.md`    | MT-    | the mini-toolbox field                                                   | 1b, 6  | planned |
 
