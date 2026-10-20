@@ -35,7 +35,6 @@ export async function fetchAccessToken(
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
-  // Fields are unknown until checked; response.json() is untyped.
   const value = (await response.json()) as {
     token?: unknown;
     turnstileEnforcementMode?: unknown;
