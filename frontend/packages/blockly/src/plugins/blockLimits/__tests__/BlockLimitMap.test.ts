@@ -83,3 +83,44 @@ describe('plugins.md: BlockLimitMap', () => {
     expect(map.anyOver()).toBe(false);
   });
 });
+
+describe('plugins.md: BlockLimitMap limits', () => {
+  it('PLG-14, PLG-V7: reads limits inside categories, at any depth', () => {
+    const map = new BlockLimitMap(
+      [
+        {
+          kind: 'category',
+          name: 'Outer',
+          contents: [
+            {kind: 'block', type: 'text_print', extraState: {limit: 2}},
+            {
+              kind: 'category',
+              name: 'Inner',
+              contents: [
+                {kind: 'block', type: 'controls_if', extraState: {limit: 1}},
+              ],
+            },
+          ],
+        },
+      ] as unknown as Blockly.utils.toolbox.ToolboxItemInfo[],
+      theme,
+    );
+    expect(map.limitFor('text_print')).toBe(2);
+    expect(map.limitFor('controls_if')).toBe(1);
+  });
+
+  it('PLG-15, PLG-V8: a limit of 0 allows none', () => {
+    const map = new BlockLimitMap(
+      [
+        {kind: 'block', type: 'text_print', extraState: {limit: 0}},
+      ] as unknown as Blockly.utils.toolbox.ToolboxItemInfo[],
+      theme,
+    );
+    expect(map.limitFor('text_print')).toBe(0);
+    expect(map.remainingFor('text_print')).toBe(0);
+    expect(map.anyOver()).toBe(false);
+    map.increment('text_print');
+    expect(map.remainingFor('text_print')).toBe(-1);
+    expect(map.anyOver()).toBe(true);
+  });
+});

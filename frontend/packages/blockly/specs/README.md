@@ -115,3 +115,8 @@ these changes.
     toolbox on the page, and its `dispose` removed Blockly's trashcan from
     the component manager instead of itself, so a second one on the same
     workspace threw.
+16. Block limits are read inside toolbox categories (PLG-14), a limit of
+    0 allows none (PLG-15), and the counts are redone when a block is
+    created or deleted (PLG-17). `ngfp/blockly` read only top-level
+    items, so a categorized toolbox had no limits; treated 0 as no limit;
+    and counted a new block only once it moved.
