@@ -15,10 +15,11 @@ describe('usePlayProgress', () => {
         view.result.current.onPlayerProgress?.({touching: [], height, x});
       });
     report(100, 0.2);
+    report(115, 0.2);
     report(130, 0.2);
     expect(view.result.current.runtime.farthest).toBe(30);
     expect(view.result.current.runtime.risen).toBe(0);
-    report(80, 0.35);
+    report(120, 0.35);
     expect(view.result.current.runtime.farthest).toBe(30);
     expect(view.result.current.runtime.risen).toBeCloseTo(0.15);
     view.rerender({playing: false});
@@ -26,6 +27,32 @@ describe('usePlayProgress', () => {
     report(500, 0.2);
     report(510, 0.2);
     expect(view.result.current.runtime.farthest).toBe(30);
+  });
+
+  it('measures a jump from the lowest point, not from where the run began in the air', () => {
+    const view = renderHook(() => usePlayProgress(true, NEEDS));
+    const report = (x: number, height: number) =>
+      act(() => {
+        view.result.current.onPlayerProgress?.({touching: [], height, x});
+      });
+    report(100, 0.3);
+    report(100, 0);
+    report(100, 0.12);
+    expect(view.result.current.runtime.risen).toBeCloseTo(0.12);
+  });
+
+  it('starts over after a teleport instead of counting it as a run', () => {
+    const view = renderHook(() => usePlayProgress(true, NEEDS));
+    const report = (x: number, height: number) =>
+      act(() => {
+        view.result.current.onPlayerProgress?.({touching: [], height, x});
+      });
+    report(100, 0.1);
+    report(400, 0.4);
+    expect(view.result.current.runtime.farthest).toBe(0);
+    expect(view.result.current.runtime.risen).toBe(0);
+    report(415, 0.4);
+    expect(view.result.current.runtime.farthest).toBe(15);
   });
 
   it('asks the engine for reports only when the checklist reads them', () => {

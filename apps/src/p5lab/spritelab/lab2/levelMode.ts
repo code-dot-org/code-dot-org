@@ -56,12 +56,12 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   return mode ? TABS[mode.kind] : undefined;
 }
 
-/** The image panel is the whole level, in place of the tabs and the stage. */
 /** A level whose palette is about one image: world and build levels. */
 export function editsWorld(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'world' || mode?.kind === 'build';
 }
 
+/** The image panel is the whole level, in place of the tabs and the stage. */
 export function isImageMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'image';
 }

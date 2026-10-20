@@ -24,9 +24,7 @@ export const PLACEHOLDER_SPACER = {width: 160, height: 24};
 const TRANSPARENT_PIXEL =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
-/** A placeholder's extra state: the block it should be the size of, and
-    whether it keeps that room without drawing the outline, for a level
-    that wants a block there but not the hint. */
+/** The block it should be the size of; `blank` keeps the room without the outline. */
 export interface PlaceholderState {
   like?: BlocklyCore.serialization.blocks.State;
   blank?: boolean;

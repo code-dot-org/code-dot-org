@@ -30,6 +30,9 @@ export interface ObjectivesState {
   collapsedText?: string;
 }
 
+/** More than the player walks in a frame: a move this big is a teleport. */
+const TELEPORT_PX = 20;
+
 /** What the engine reports about the running player. */
 export interface PlayerProgressReport {
   /** Image names of sprites the player overlaps this frame. */
@@ -60,9 +63,10 @@ export function usePlayProgress(
   const [highest, setHighest] = useState(0);
   const [farthest, setFarthest] = useState(0);
   const [risen, setRisen] = useState(0);
-  // Where the current run's first report put the player; movement is
-  // measured from there.
-  const runStartRef = useRef<{x: number; height: number} | null>(null);
+  // The run's start x, the last x seen, and the lowest the feet have been.
+  const runRef = useRef<{x: number; lastX: number; lowest: number} | null>(
+    null
+  );
   const [scenesLanded, setScenesLanded] = useState<ReadonlySet<string>>(
     new Set()
   );
@@ -71,7 +75,7 @@ export function usePlayProgress(
 
   useEffect(() => {
     if (!playing) {
-      runStartRef.current = null;
+      runRef.current = null;
       return;
     }
     setEverPlayed(true);
@@ -105,13 +109,19 @@ export function usePlayProgress(
         setHighest(current => Math.max(current, report.height));
       }
       if (needs.move) {
-        const start = (runStartRef.current ??= {
-          x: report.x,
-          height: report.height,
-        });
-        const dx = Math.abs(report.x - start.x);
+        let run = runRef.current;
+        // A frame's jump past any walk is a teleport (restart, go to
+        // scene): the run starts over there.
+        if (!run || Math.abs(report.x - run.lastX) > TELEPORT_PX) {
+          run = {x: report.x, lastX: report.x, lowest: report.height};
+          runRef.current = run;
+        }
+        run.lastX = report.x;
+        run.lowest = Math.min(run.lowest, report.height);
+        const dx = Math.abs(report.x - run.x);
+        const rise = report.height - run.lowest;
         setFarthest(current => Math.max(current, dx));
-        setRisen(current => Math.max(current, report.height - start.height));
+        setRisen(current => Math.max(current, rise));
       }
     },
     [needs.touch, needs.height, needs.move]

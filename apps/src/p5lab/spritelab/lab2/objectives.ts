@@ -4,7 +4,7 @@
 import {ImageType} from './ai/images/types';
 import {ImageCounts} from './projectCounts';
 import {Tab} from './redux/spriteLab2Redux';
-import {WorldCell} from './world';
+import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 
 /** One kind of thing a level can ask for. */
 export type ObjectiveCheck =
@@ -80,8 +80,7 @@ export interface RuntimeProgress {
   highest: number;
   /** The farthest the player has run from where a run started, in px. */
   farthest: number;
-  /** The most the player's feet have risen above where a run started,
-      as a share of the view's height. */
+  /** The most the feet have risen above a run's lowest point, 0 to 1. */
   risen: number;
   /** Scenes a jump has landed on. */
   scenesLanded: ReadonlySet<string>;
@@ -109,8 +108,8 @@ export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
   return needs;
 }
 
-/** A run of one cell counts as having moved. */
-export const MOVED_PX = 40;
+/** A run of one default-grid cell counts as having moved. */
+export const MOVED_PX = cellSize(DEFAULT_SCENE_GRID_SIZE);
 /** A rise of a tenth of the view counts as a jump. */
 export const JUMPED_RISE = 0.1;
 

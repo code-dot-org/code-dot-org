@@ -27,7 +27,7 @@
       "imageRole": "hero"
     },
     "objectives": {
-      "title": "**Make a character** Use AI or draw your own."
+      "title": "**Make a character**\n\nUse AI or draw your own."
     },
     "long_instructions": "# Make a character\nUse AI or draw your own.",
     "header_label": "Make a story"

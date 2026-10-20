@@ -28,7 +28,7 @@
       "sentence": "place-detail"
     },
     "objectives": {
-      "title": "**Make a background for your game** Pick the words for a place and click **Generate**, or draw your own."
+      "title": "**Make a background for your game**\n\nPick the words for a place and click **Generate**, or draw your own."
     },
     "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**, or draw your own.",
     "header_label": "Make a platformer"
