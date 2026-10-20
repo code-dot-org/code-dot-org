@@ -1,5 +1,7 @@
 /* Generic helper functions. */
 
+export const compareText = new Intl.Collator('en', {numeric: true}).compare;
+
 export function getKeyByValue(
   object: Record<string, number>,
   value: number
