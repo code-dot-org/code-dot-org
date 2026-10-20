@@ -75,12 +75,45 @@ describe('plugins.md: disableOrphans', () => {
     const child = append('text_print');
     parent.nextConnection!.connect(child.previousConnection!);
     // Simulate the stale-disabled state the handler should clear.
-    child.setDisabledReason(true, Blockly.constants.MANUALLY_DISABLED);
+    child.setDisabledReason(true, 'ORPHANED');
 
     disableOrphans(moveEvent(child));
 
     expect(child.isEnabled()).toBe(true);
     expect(child.getSvgRoot().style.opacity).toBe('');
+  });
+
+  it("PLG-18: disables an orphan as orphaned, not as the student's choice", () => {
+    const orphan = append('text_print');
+    disableOrphans(moveEvent(orphan));
+    expect([...orphan.getDisabledReasons()]).toEqual(['ORPHANED']);
+  });
+
+  it("PLG-18, PLG-V9: keeps a student's own disable when the block is attached", () => {
+    // Only a workspace offering "Disable Block" keeps a manual disable.
+    workspace.dispose();
+    workspace = Blockly.inject(container, {disable: true});
+    const parent = append('text_print');
+    const child = append('text_print');
+    parent.nextConnection!.connect(child.previousConnection!);
+    child.setDisabledReason(true, Blockly.constants.MANUALLY_DISABLED);
+
+    disableOrphans(moveEvent(child));
+
+    expect(child.hasDisabledReason(Blockly.constants.MANUALLY_DISABLED)).toBe(
+      true,
+    );
+  });
+
+  it('PLG-20: a call disabled when its definition moved is enabled once attached', () => {
+    const parent = append('text_print');
+    const call = append('text_print');
+    call.setDisabledReason(true, 'ORPHANED');
+    parent.nextConnection!.connect(call.previousConnection!);
+
+    disableOrphans(moveEvent(call));
+
+    expect(call.isEnabled()).toBe(true);
   });
 
   it('PLG-18: disables a newly created orphan block', () => {
