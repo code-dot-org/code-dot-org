@@ -47,9 +47,8 @@ export function applyPresetColumns(
   earlier version of it still opens.
 
   Dropping a column also discards the saved training run, which describes a
-  model over the columns as they were. Keeping it would let that model be
-  rebuilt over the surviving columns and reported under the old run's accuracy.
-  The historic results stay: each names the columns it was trained on.
+  model over the columns as they were.
+  The historic results stay, as each names the columns it was trained on.
 */
 export function keepSelectableColumns(
   project: AilabProject,
