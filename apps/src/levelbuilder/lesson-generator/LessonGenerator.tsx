@@ -37,6 +37,7 @@ import {
   generatePythonlabLevel,
 } from './ai/pythonlab';
 import {generateSketchlabLevel} from './ai/sketchlab';
+import {generateVideoLevel} from './ai/video';
 import {
   generateWeblab2Exemplar,
   generateWeblab2Level,
@@ -882,6 +883,23 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               result.longInstructions
             );
             generatedOutput = {sketchlab: result};
+          } else if (spec.labType === 'video') {
+            const result = await generateVideoLevel(levelCtx);
+            setStage('saving-properties');
+            appendLog(`Saving video brief for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            if (result.teacherMarkdown) {
+              await updateLevelProperty(
+                level.id,
+                'teacher_markdown',
+                result.teacherMarkdown
+              );
+            }
+            generatedOutput = {video: result};
           } else if (spec.labType === 'multi' && multiResult) {
             // The DSL was already saved (create POST or reused-level
             // PATCH); only the long_instructions stub remains.

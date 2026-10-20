@@ -7,6 +7,7 @@ export const SUPPORTED_LAB_TYPES = [
   'ailab',
   'aichat',
   'sketchlab',
+  'video',
   'multi',
   'match',
   'freeResponse',
@@ -23,6 +24,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   ailab: 'Ailab',
   aichat: 'Aichat',
   sketchlab: 'Sketchlab',
+  video: 'StandaloneVideo',
   multi: 'Multi',
   match: 'Match',
   freeResponse: 'FreeResponse',
@@ -37,6 +39,7 @@ export const LAB_LABELS = {
   ailab: 'AI Lab',
   aichat: 'AI Chat',
   sketchlab: 'Sketch Lab',
+  video: 'Video',
   multi: 'Multiple Choice',
   match: 'Matching',
   freeResponse: 'Free Response',
@@ -50,6 +53,17 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
   'match',
   'bubbleChoice',
 ];
+
+// The first row of config/videos.csv stands in until the author swaps in
+// the real video; StandaloneVideo requires a key that resolves on create.
+export const PLACEHOLDER_VIDEO_KEY = 'maze_intro';
+
+// Properties a lab type needs on the create POST itself.
+export const CREATE_PROPERTIES_BY_LAB: Partial<
+  Record<LabType, Record<string, unknown>>
+> = {
+  video: {video_key: PLACEHOLDER_VIDEO_KEY, uses_lab2: true},
+};
 
 // Labs whose starter files are code, so an author may supply it.
 export const CODEBRIDGE_LAB_TYPES: readonly LabType[] = [
@@ -137,6 +151,17 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
       'canvas itself is left blank for the student to draw.',
     ],
     chooseFor: 'drawing / annotation exercises',
+  },
+  video: {
+    promptLabel: 'Video',
+    promptDescription: [
+      'a page where the student watches a short video. The video does not',
+      'exist yet: the level is created as a placeholder holding a brief for',
+      'the video team, with a stand-in video playing until the real one',
+      'replaces it. Use when the plan calls for a video explainer, demo, or',
+      'story beat.',
+    ],
+    chooseFor: 'video explainers to be produced',
   },
   multi: {
     promptLabel: 'Multi',

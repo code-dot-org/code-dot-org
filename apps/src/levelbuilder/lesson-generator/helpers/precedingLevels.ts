@@ -8,6 +8,7 @@ import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
 import {FreeResponseGeneration} from '../ai/freeResponse';
 import {PythonlabGeneration} from '../ai/pythonlab';
 import {SketchlabGeneration} from '../ai/sketchlab';
+import {VideoGeneration} from '../ai/video';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType, takesSuppliedCode} from '../types';
 
@@ -20,6 +21,7 @@ export interface PriorOutputByLab {
   ailab: AilabGeneration;
   aichat: AichatGeneration;
   sketchlab: SketchlabGeneration;
+  video: VideoGeneration;
   multi: MultiGeneration;
   match: MatchGeneration;
   freeResponse: FreeResponseGeneration;
@@ -128,6 +130,12 @@ export function priorOutputFromLevelProperties(
         summary: `Free response — Q: ${longInstructions.replace(/\s+/g, ' ')}`,
       },
     };
+  }
+  if (labType === 'video') {
+    const longInstructions =
+      (props as {longInstructions?: string}).longInstructions || '';
+    if (!longInstructions) return undefined;
+    return {video: {longInstructions, teacherMarkdown: ''}};
   }
   if (labType === 'sketchlab') {
     const longInstructions =
@@ -279,6 +287,12 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
       // Surface just the parent's summary so downstream levels know
       // the student was offered a choice here.
       lines.push(`  ${e.output.bubbleChoice.summary}`);
+    }
+    if (e.output?.video) {
+      lines.push('  Video brief:');
+      for (const line of e.output.video.longInstructions.split('\n')) {
+        lines.push(`    ${line}`);
+      }
     }
     if (e.output?.sketchlab) {
       // The sketch canvas is intentionally blank; only the instructions
