@@ -32,7 +32,8 @@ export async function createOrFindLevel(
   if (existing) return {...existing, reused: true};
 
   try {
-    // Rails auto-wraps only column names into params[:level]; nest the rest.
+    // Rails only auto-wraps column names into params[:level], so property
+    // keys sent at the top level never reach the permit list.
     const response = await HttpClient.post(
       '/levels?do_not_redirect=true',
       JSON.stringify({

@@ -54,10 +54,13 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
   'bubbleChoice',
 ];
 
-// First row of config/videos.csv; the author swaps in the real video.
+// StandaloneVideo validates its key at create time, so the placeholder
+// carries a real one: the first row of config/videos.csv, until the
+// author swaps in the actual video.
 export const PLACEHOLDER_VIDEO_KEY = 'maze_intro';
 
-// Sent on the create POST: the key is validated at create, full width keeps the footer.
+// Properties the create POST itself must carry. Full width is what
+// gives the lab2 video page its footer.
 export const CREATE_PROPERTIES_BY_LAB: Partial<
   Record<LabType, Record<string, unknown>>
 > = {
