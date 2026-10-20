@@ -17,7 +17,7 @@ import train from './train';
 import type {Mode} from './types';
 
 /**
- * Prepare the lab for a level. AilabEngine calls this once per level.
+ * Prepare the lab for a level.
  */
 export const loadLevel = function (mode?: Mode): void {
   reload(mode, /*keepHistoricResults*/ false);
