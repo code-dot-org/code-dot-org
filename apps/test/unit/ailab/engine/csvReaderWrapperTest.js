@@ -1,6 +1,5 @@
 import Papa from 'papaparse';
 
-import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '@cdo/apps/ailab/engine/datasetLoad';
 import {resetState} from '@cdo/apps/ailab/engine/redux';
@@ -17,7 +16,7 @@ const parseResult = animal => ({
 
 describe('parseCSV', () => {
   beforeEach(() => {
-    store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
+    store.dispatch(resetState(/*keepsPendingProject*/ false));
     invalidatePendingDatasetLoads();
     Papa.parse.mockReset();
   });

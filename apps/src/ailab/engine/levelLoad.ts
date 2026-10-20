@@ -1,5 +1,5 @@
 import {getAssetPath} from './assetPath';
-import {TestDataLocations, ResetReasons, type ResetReason} from './constants';
+import {TestDataLocations} from './constants';
 import {invalidatePendingDatasetLoads} from './datasetLoad';
 import {type Dataset, getDatasets} from './datasetManifest';
 import {loadDataset} from './loadDataset';
@@ -20,16 +20,17 @@ import type {Mode} from './types';
  * Prepare the lab for a level.
  */
 export const loadLevel = function (mode?: Mode): void {
-  reload(mode, ResetReasons.LEVEL_LOAD);
+  reload(mode);
 };
 
 export const startOver = function (): void {
-  reload(store.getState().mode, ResetReasons.START_OVER);
+  reload(store.getState().mode);
 };
 
-const reload = (mode: Mode | undefined, reason: ResetReason): void => {
+const reload = (mode: Mode | undefined): void => {
   invalidatePendingDatasetLoads();
-  store.dispatch(resetState(reason));
+  // Neither a level load nor a Start Over leaves a saved project to open.
+  store.dispatch(resetState(/*keepsPendingProject*/ false));
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);

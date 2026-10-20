@@ -9,7 +9,6 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import {ResetReasons, type ResetReason} from './constants';
 import {
   applyPresetColumns,
   keepSelectableColumns,
@@ -75,14 +74,9 @@ export const ProjectProvider = ({
   const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((reason: ResetReason) => {
+    useCallback((keepsPendingProject: boolean) => {
       previousRun.current = undefined;
-      /*
-        Only keep the pending project on a dataset change, as the dataset
-        may be the one currently used by the project.
-        For other reasons (level load or start over), we always discard it.
-      */
-      if (reason !== ResetReasons.DATASET_CHANGE) {
+      if (!keepsPendingProject) {
         pendingProject.current = undefined;
       }
       setProject(initialProject);

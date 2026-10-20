@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import React, {useRef} from 'react';
 
 import {getAssetPath} from '../assetPath';
-import {ResetReasons} from '../constants';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
@@ -31,8 +30,9 @@ const SelectDataset = () => {
   const invalidData = useAppSelector(state => state.invalidData);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // A project waiting to be opened may be waiting for the dataset chosen here.
   const resetForDatasetChange = () =>
-    dispatch(resetStateAction(ResetReasons.DATASET_CHANGE));
+    dispatch(resetStateAction(/*keepsPendingProject*/ true));
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>

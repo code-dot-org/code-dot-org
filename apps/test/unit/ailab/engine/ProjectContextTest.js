@@ -5,7 +5,6 @@ import {createStore} from 'redux';
 
 import {
   ColumnTypes,
-  ResetReasons,
   UNIQUE_OPTIONS_MAX,
 } from '@cdo/apps/ailab/engine/constants';
 import {
@@ -130,7 +129,7 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
 
     expect(project().hyperparameters).toBeUndefined();
@@ -143,7 +142,7 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(ResetReasons.START_OVER));
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
 
     expect(project()).toEqual(initialProject);
@@ -155,7 +154,7 @@ describe('ProjectContext', () => {
     act(() => context().snapshotTrainingRun());
 
     act(() => {
-      store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
     act(() => context().restoreTrainingRun());
 
@@ -487,7 +486,7 @@ describe('ProjectContext opening a saved project', () => {
     act(() => context().openProject(SAVED));
 
     act(() => {
-      store.dispatch(resetState(ResetReasons.DATASET_CHANGE));
+      store.dispatch(resetState(/*keepsPendingProject*/ true));
     });
     act(() => {
       store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
@@ -505,7 +504,7 @@ describe('ProjectContext opening a saved project', () => {
     act(() => context().openProject(SAVED));
 
     act(() => {
-      store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
     act(() => {
       store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));

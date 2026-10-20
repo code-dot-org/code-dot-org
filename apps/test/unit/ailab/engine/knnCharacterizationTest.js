@@ -19,11 +19,7 @@ import fs from 'fs';
 import KNN from 'ml-knn';
 import path from 'path';
 
-import {
-  ColumnTypes,
-  ResetReasons,
-  TestDataLocations,
-} from '@cdo/apps/ailab/engine/constants';
+import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
 import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {getPercentCorrect} from '@cdo/apps/ailab/engine/helpers/accuracy';
 import I18n from '@cdo/apps/ailab/engine/i18n';
@@ -69,7 +65,7 @@ function load(id, features) {
     fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
-  store.dispatch(resetState(ResetReasons.LEVEL_LOAD));
+  store.dispatch(resetState(/*keepsPendingProject*/ false));
   train.reset();
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));

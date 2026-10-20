@@ -28,14 +28,6 @@ export const TestDataLocations = {
   RANDOM: 'random',
 };
 
-export const ResetReasons = {
-  LEVEL_LOAD: 'levelLoad',
-  DATASET_CHANGE: 'datasetChange',
-  START_OVER: 'startOver',
-} as const;
-
-export type ResetReason = (typeof ResetReasons)[keyof typeof ResetReasons];
-
 export const ModelNameMaxLength = 150;
 
 export const UNIQUE_OPTIONS_MAX = 50;

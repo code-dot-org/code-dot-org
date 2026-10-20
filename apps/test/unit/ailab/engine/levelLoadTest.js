@@ -1,4 +1,3 @@
-import {ResetReasons} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {loadLevel, startOver} from '@cdo/apps/ailab/engine/levelLoad';
 import {
@@ -20,10 +19,10 @@ describe('startOver', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  test('names itself as the reason for the reset', () => {
+  test('abandons a project waiting to be opened', () => {
     startOver();
 
-    expect(store.getState().resetReason).toBe(ResetReasons.START_OVER);
+    expect(store.getState().resetKeepsPendingProject).toBe(false);
   });
 
   test('resets everything else to the start of the level', () => {
@@ -51,12 +50,10 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('names itself as the reason for the reset', () => {
-    startOver();
-
+  test('abandons a project waiting to be opened', () => {
     loadLevel(undefined);
 
-    expect(store.getState().resetReason).toBe(ResetReasons.LEVEL_LOAD);
+    expect(store.getState().resetKeepsPendingProject).toBe(false);
   });
 
   test('reserves random rows for testing unless the mode asks for the last rows', () => {

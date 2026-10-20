@@ -1,4 +1,4 @@
-import {ColumnTypes, ResetReasons} from '@cdo/apps/ailab/engine/constants';
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import reducer, {
   initialState,
   setCurrentPanel,
@@ -183,7 +183,7 @@ describe('ailab reducer', () => {
       state = reducer(state, setReserveLocation('random'));
       state = reducer(state, setCurrentColumn('a'));
       state = reducer(state, setCurrentPanel('results'));
-      const next = reducer(state, resetState(ResetReasons.LEVEL_LOAD));
+      const next = reducer(state, resetState(/*keepsPendingProject*/ false));
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
       expect(next.currentColumn).toBeUndefined();
@@ -192,7 +192,7 @@ describe('ailab reducer', () => {
 
     test('preserves instructionsEnabled through reset', () => {
       const enabled = reducer(initialState, setInstructionsEnabled(true));
-      const next = reducer(enabled, resetState(ResetReasons.LEVEL_LOAD));
+      const next = reducer(enabled, resetState(/*keepsPendingProject*/ false));
       expect(next.instructionsEnabled).toBe(true);
     });
   });

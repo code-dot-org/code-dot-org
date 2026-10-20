@@ -5,12 +5,7 @@ import {
   type AnyAction,
 } from '@reduxjs/toolkit';
 
-import {
-  TestDataLocations,
-  ResultsGrades,
-  ResetReasons,
-  type ResetReason,
-} from './constants';
+import {TestDataLocations, ResultsGrades} from './constants';
 import {getResultsDataInDataTableForm} from './helpers/accuracy';
 import {
   uniqLabelFeaturesSelected,
@@ -79,7 +74,7 @@ export interface RootState {
   resultsTab: string;
   presetColumns: PresetColumns | undefined;
   resetCount: number;
-  resetReason: ResetReason;
+  resetKeepsPendingProject: boolean;
   mode?: Mode;
 }
 
@@ -155,7 +150,7 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
   presetColumns: undefined,
   resetCount: 0,
-  resetReason: ResetReasons.LEVEL_LOAD,
+  resetKeepsPendingProject: false,
 };
 
 const ailabSlice = createSlice({
@@ -295,14 +290,14 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState(state, action: PayloadAction<ResetReason>) {
+    resetState(state, action: PayloadAction<boolean>) {
       return {
         ...initialState,
         mode: state.mode,
         reserveLocation: state.reserveLocation,
         instructionsEnabled: state.instructionsEnabled,
         resetCount: state.resetCount + 1,
-        resetReason: action.payload,
+        resetKeepsPendingProject: action.payload,
       };
     },
     setTrainedModelDetail: {
