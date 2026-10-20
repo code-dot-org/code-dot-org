@@ -7,6 +7,14 @@ export const possibleHeaders = {
   levelBuilderSave: 'levelBuilderSave',
 } as const;
 
+// For a lab that tracks its own progress within one level: SimpleHeader shows
+// the name in place of the unit name and the bar in place of the one it
+// derives from the unit's levels.
+export interface SimpleHeaderOverride {
+  name: string;
+  progress?: {position: number; total: number; valueText?: string};
+}
+
 export interface HeaderReduxState {
   currentHeader: keyof typeof possibleHeaders | undefined;
   // In general, we should not put functions into redux, but in order to
@@ -18,6 +26,7 @@ export interface HeaderReduxState {
   getLevelBuilderChanges: (() => object) | undefined;
   overrideHeaderText: string | undefined;
   overrideOnSaveUrl: string | undefined;
+  simpleHeaderOverride: SimpleHeaderOverride | undefined;
 }
 
 const initialState: HeaderReduxState = {
@@ -25,6 +34,7 @@ const initialState: HeaderReduxState = {
   getLevelBuilderChanges: undefined,
   overrideHeaderText: undefined,
   overrideOnSaveUrl: undefined,
+  simpleHeaderOverride: undefined,
 };
 
 const headerSlice = createSlice({
@@ -65,6 +75,15 @@ const headerSlice = createSlice({
     clearHeader(state) {
       state.currentHeader = undefined;
     },
+    setSimpleHeaderOverride(
+      state,
+      action: PayloadAction<SimpleHeaderOverride>
+    ) {
+      state.simpleHeaderOverride = action.payload;
+    },
+    clearSimpleHeaderOverride(state) {
+      state.simpleHeaderOverride = undefined;
+    },
   },
 });
 
@@ -74,6 +93,8 @@ export const {
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
   clearHeader,
+  setSimpleHeaderOverride,
+  clearSimpleHeaderOverride,
 } = headerSlice.actions;
 
 export default headerSlice.reducer;

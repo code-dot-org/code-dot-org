@@ -34,7 +34,7 @@
   flex-direction: column;
   // Shrinks with the row; the label ellipsizes and the bar fills the column.
   flex: 1 1 auto;
-  min-width: 0;
+  min-width: 80px;
 }
 
 .label {
@@ -43,6 +43,7 @@
   line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
 }
 
 .barRow {

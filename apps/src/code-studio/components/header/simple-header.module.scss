@@ -23,6 +23,17 @@
   flex: none;
 }
 
+// Empty unless a lab fills it, and then it keeps its width like the
+// project buttons.
+.labControls {
+  flex: none;
+  display: flex;
+
+  &:empty {
+    display: none;
+  }
+}
+
 // Each name may shrink below its content; what it holds ellipsizes.
 .unitName,
 .progress {

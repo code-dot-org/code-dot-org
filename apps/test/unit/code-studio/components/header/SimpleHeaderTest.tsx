@@ -24,8 +24,8 @@ jest.mock('@cdo/apps/code-studio/components/header/ScriptName', () => ({
     require('react').createElement('a', {href: props.href}, props.name),
 }));
 
-function renderHeader() {
-  const store = createStore(() => ({isRtl: false}));
+function renderHeader(header?: object) {
+  const store = createStore(() => ({isRtl: false, header}));
   return render(
     <Provider store={store}>
       <SimpleHeader
@@ -58,6 +58,38 @@ describe('SimpleHeader', () => {
     expect(
       document.querySelector('a[href="/s/hoai2026-dev"]')?.textContent
     ).toBe('hoai2026 dev');
+  });
+
+  it("shows a lab's name beside the logo, over its bar, with no unit name", () => {
+    renderHeader({
+      simpleHeaderOverride: {
+        name: 'Basics',
+        progress: {position: 1, total: 2, valueText: 'Step 1 of 2'},
+      },
+    });
+    expect(document.querySelector('#unit_name_container')).toBeNull();
+    expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
+      'Basics'
+    );
+    const bar = document.querySelector('[role="progressbar"]')!;
+    expect(bar.getAttribute('aria-labelledby')).toBe('simple_progress_label');
+    expect(bar.getAttribute('aria-valuetext')).toBe('Step 1 of 2');
+  });
+
+  it("shows a lab's name with no bar when it gives no progress", () => {
+    renderHeader({simpleHeaderOverride: {name: 'Skill map'}});
+    expect(document.querySelector('#unit_name_container')).toBeNull();
+    expect(document.querySelector('#simple_progress_label')?.textContent).toBe(
+      'Skill map'
+    );
+    expect(document.querySelector('[role="progressbar"]')).toBeNull();
+  });
+
+  it('places an empty slot for lab controls at the start of the row', () => {
+    renderHeader();
+    const row = document.querySelector('#header_middle_content')!;
+    expect(row.firstElementChild?.id).toBe('header_lab_controls');
+    expect(row.firstElementChild?.childElementCount).toBe(0);
   });
 
   it('marks the document as carrying the header', () => {

@@ -10,18 +10,23 @@ import {isEqual} from 'lodash';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
+import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 
 import ProjectInfo from './ProjectInfo';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 import ScriptName from './ScriptName';
-import SimpleProgress, {ProgressLevel} from './SimpleProgress';
+import SimpleProgress, {ProgressLevel, subPathFor} from './SimpleProgress';
 
 import styles from './simple-header.module.scss';
 
 interface HeaderState {
   isRtl: boolean;
+  header?: HeaderReduxState;
 }
+
+/** A lab portals its own header controls into this, at the row's start. */
+export const LAB_CONTROLS_ID = 'header_lab_controls';
 
 interface SimpleHeaderProps {
   scriptData: {simpleProgressImage?: string};
@@ -39,6 +44,14 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   const levels = useSelector(getCurrentLevels, isEqual) as
     | ProgressLevel[]
     | undefined;
+  const override = useSelector(
+    (state: HeaderState) => state.header?.simpleHeaderOverride
+  );
+  // A lab's name takes the unit name's place, beside the logo.
+  const unitName = override ? undefined : scriptNameData;
+  const subPath = override
+    ? {label: override.name, ...override.progress}
+    : subPathFor(levels);
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.
@@ -53,18 +66,19 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
 
   return (
     <div id="header_middle_content" className={styles.row}>
+      <div id={LAB_CONTROLS_ID} className={styles.labControls} />
       <div id="project_info_container" className={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
-      {scriptNameData && (
+      {unitName && (
         <div id="unit_name_container" className={styles.unitName}>
-          <ScriptName {...scriptNameData} isRtl={isRtl} />
+          <ScriptName {...unitName} isRtl={isRtl} />
         </div>
       )}
       <div id="simple_progress_container" className={styles.progress}>
         <SimpleProgress
           imageUrl={scriptData.simpleProgressImage}
-          levels={levels}
+          subPath={subPath}
         />
       </div>
     </div>

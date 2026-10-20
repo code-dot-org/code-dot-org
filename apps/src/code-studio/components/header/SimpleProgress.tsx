@@ -14,9 +14,12 @@ export interface ProgressLevel {
 
 export interface SubPath {
   label: string;
-  /** 1-based. A label that covers one level is 1 of 1. */
-  position: number;
-  total: number;
+  /** 1-based. A label that covers one level is 1 of 1. Without it and
+      total, the label shows with no bar. */
+  position?: number;
+  total?: number;
+  /** What a screen reader hears for the bar; "Level 1 of 3" if absent. */
+  valueText?: string;
 }
 
 // Where the current level sits among the levels sharing its header label.
@@ -40,17 +43,17 @@ export function subPathFor(levels?: ProgressLevel[]): SubPath | null {
 
 interface SimpleProgressProps {
   imageUrl?: string;
-  levels?: ProgressLevel[];
+  subPath?: SubPath | null;
 }
 
-/** A unit's logo, the current level's header label and a bar showing where
-    the level sits among those sharing it. Shrinks with the header's row:
-    the label ellipsizes and the bar fills what is left. */
+/** A unit's logo, a label and a bar showing a position under it, as
+    subPathFor gives them for a level. Shrinks with the header's row: the
+    label ellipsizes and the bar fills what is left. */
 const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
   imageUrl,
-  levels,
+  subPath,
 }) => {
-  const subPath = subPathFor(levels);
+  const {position, total} = subPath ?? {};
   return (
     <div id="simple_progress" className={styles.outer}>
       <div className={styles.row}>
@@ -62,27 +65,27 @@ const SimpleProgress: React.FunctionComponent<SimpleProgressProps> = ({
             <span id="simple_progress_label" className={styles.label}>
               {subPath.label}
             </span>
-            <div className={styles.barRow}>
-              <div
-                className={styles.track}
-                role="progressbar"
-                aria-labelledby="simple_progress_label"
-                aria-valuemin={0}
-                aria-valuemax={subPath.total}
-                aria-valuenow={subPath.position}
-                aria-valuetext={i18n.simpleProgressLevelOf({
-                  position: subPath.position,
-                  total: subPath.total,
-                })}
-              >
+            {position !== undefined && total !== undefined && (
+              <div className={styles.barRow}>
                 <div
-                  className={styles.fill}
-                  style={{
-                    width: `${(100 * subPath.position) / subPath.total}%`,
-                  }}
-                />
+                  className={styles.track}
+                  role="progressbar"
+                  aria-labelledby="simple_progress_label"
+                  aria-valuemin={0}
+                  aria-valuemax={total}
+                  aria-valuenow={position}
+                  aria-valuetext={
+                    subPath.valueText ??
+                    i18n.simpleProgressLevelOf({position, total})
+                  }
+                >
+                  <div
+                    className={styles.fill}
+                    style={{width: `${(100 * position) / total}%`}}
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
       </div>

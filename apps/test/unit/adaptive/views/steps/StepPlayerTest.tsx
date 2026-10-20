@@ -7,7 +7,14 @@ import {
   PathwayContextValue,
 } from '@cdo/apps/adaptive/views/PathwayContext';
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
+import {setSimpleHeaderOverride} from '@cdo/apps/code-studio/headerRedux';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
+
+const mockDispatch = jest.fn();
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  useAppDispatch: () => mockDispatch,
+}));
 
 const timer = Lab2ProgressTimer.getInstance();
 
@@ -26,12 +33,16 @@ describe('StepPlayer', () => {
   let now: jest.SpyInstance;
 
   beforeEach(() => {
+    mockDispatch.mockClear();
     now = jest.spyOn(Date, 'now').mockReturnValue(1000);
   });
 
-  afterEach(() => now.mockRestore());
+  afterEach(() => {
+    now.mockRestore();
+    document.getElementById('header_lab_controls')?.remove();
+  });
 
-  const renderPlayer = () => {
+  const renderPlayer = ({hideProgress = false} = {}) => {
     const calls: unknown[][] = [];
     const record =
       (name: string) =>
@@ -45,6 +56,7 @@ describe('StepPlayer', () => {
       >
         <StepPlayer
           checkpoint={checkpoint}
+          hideProgress={hideProgress}
           onStartStep={record('start')}
           onCompleteStep={record('complete')}
           onLeaveStep={record('leave')}
@@ -103,5 +115,43 @@ describe('StepPlayer', () => {
       ['start', checkpoint.steps[0]],
       ['leave', checkpoint.steps[0], 3000],
     ]);
+  });
+
+  it("shows the checkpoint's title and step in the header", () => {
+    renderPlayer();
+    expect(mockDispatch).toHaveBeenLastCalledWith(
+      setSimpleHeaderOverride({
+        name: 'Basics',
+        progress: {position: 1, total: 2, valueText: 'Step 1 of 2'},
+      })
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    expect(mockDispatch).toHaveBeenLastCalledWith(
+      setSimpleHeaderOverride({
+        name: 'Basics',
+        progress: {position: 2, total: 2, valueText: 'Step 2 of 2'},
+      })
+    );
+  });
+
+  it('shows only the title in the header when told to hide progress', () => {
+    renderPlayer({hideProgress: true});
+    expect(mockDispatch).toHaveBeenLastCalledWith(
+      setSimpleHeaderOverride({name: 'Basics'})
+    );
+  });
+
+  it("puts Back to map in the header's lab controls when there are any", () => {
+    const slot = document.createElement('div');
+    slot.id = 'header_lab_controls';
+    document.body.appendChild(slot);
+
+    const {onExit} = renderPlayer();
+    const button = screen.getByRole('button', {name: 'Back to map'});
+    expect(slot.contains(button)).toBe(true);
+
+    fireEvent.click(button);
+    expect(onExit).toHaveBeenCalled();
   });
 });

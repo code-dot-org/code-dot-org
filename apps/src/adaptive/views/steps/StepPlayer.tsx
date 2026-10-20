@@ -2,8 +2,12 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
+import {createPortal} from 'react-dom';
 
+import {LAB_CONTROLS_ID} from '@cdo/apps/code-studio/components/header/SimpleHeader';
+import {setSimpleHeaderOverride} from '@cdo/apps/code-studio/headerRedux';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
@@ -16,6 +20,7 @@ import VideoStep from './VideoStep';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
+import headerStyles from '@cdo/apps/code-studio/components/header/project-header.module.scss';
 
 const NO_ANSWERS: StepAnswers = {};
 
@@ -23,6 +28,8 @@ interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  /** Hides the header's bar, for a checkpoint that is not part of the map. */
+  hideProgress?: boolean;
   onStartStep: (step: Step) => void;
   onCompleteStep: (step: Step, timeMs: number) => void;
   onLeaveStep: (step: Step, timeMs: number) => void;
@@ -40,6 +47,7 @@ interface StepPlayerProps {
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  hideProgress = false,
   onStartStep,
   onCompleteStep,
   onLeaveStep,
@@ -47,8 +55,13 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onExit,
   onFinish,
 }) => {
+  const dispatch = useAppDispatch();
   const {progress} = usePathwayContext();
   const [index, setIndex] = useState(0);
+  // Absent when the unit's header is not SimpleHeader.
+  const [headerControls] = useState(() =>
+    document.getElementById(LAB_CONTROLS_ID)
+  );
   const steps = checkpoint.steps;
   const step = steps[index];
   const last = index === steps.length - 1;
@@ -66,6 +79,28 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     takeElapsed(); // Restarts the clock for this step.
     onStartStep(step);
   }, [step, onStartStep, takeElapsed]);
+
+  useEffect(() => {
+    dispatch(
+      setSimpleHeaderOverride(
+        hideProgress
+          ? {name: checkpoint.title}
+          : {
+              name: checkpoint.title,
+              progress: {
+                position: index + 1,
+                total: steps.length,
+                valueText: `Step ${index + 1} of ${steps.length}`,
+              },
+            }
+      )
+    );
+  }, [dispatch, checkpoint.title, hideProgress, index, steps.length]);
+
+  const exit = () => {
+    onLeaveStep(step, takeElapsed());
+    onExit();
+  };
 
   const advance = () => {
     onCompleteStep(step, takeElapsed());
@@ -124,45 +159,32 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
 
   return (
     <div className={styles.player}>
-      <div className={styles.playerBar}>
-        <MuiButton
-          variant="outlined"
-          size="extraSmall"
-          onClick={() => {
-            onLeaveStep(step, takeElapsed());
-            onExit();
-          }}
-        >
-          <FontAwesomeV6Icon iconName="map" />
-          &nbsp;Back to map
-        </MuiButton>
-        <div className={styles.playerBarTitle}>
-          <MuiTypography variant="overline3">{checkpoint.title}</MuiTypography>
-          <MuiTypography variant="body3" className={shared.muted}>
-            /
-          </MuiTypography>
-          <MuiTypography variant="strong">{step.title}</MuiTypography>
+      {headerControls ? (
+        createPortal(
+          <button
+            type="button"
+            className={classNames(
+              headerStyles.buttonSpacing,
+              'header_button',
+              'header_button_light',
+              'no-mc'
+            )}
+            onClick={exit}
+            aria-label="Back to map"
+          >
+            <FontAwesomeV6Icon iconName="map" />
+            <span className={headerStyles.buttonText}>&nbsp;Back to map</span>
+          </button>,
+          headerControls
+        )
+      ) : (
+        <div className={styles.backFallback}>
+          <MuiButton variant="outlined" size="extraSmall" onClick={exit}>
+            <FontAwesomeV6Icon iconName="map" />
+            &nbsp;Back to map
+          </MuiButton>
         </div>
-        {steps.length > 1 && (
-          <>
-            <div className={styles.dots} aria-hidden>
-              {steps.map((s, i) => (
-                <span
-                  key={s.id}
-                  className={classNames(
-                    styles.dot,
-                    i < index && styles.dotDone,
-                    i === index && styles.dotCurrent
-                  )}
-                />
-              ))}
-            </div>
-            <MuiTypography variant="body4" className={shared.muted}>
-              Step {index + 1} of {steps.length}
-            </MuiTypography>
-          </>
-        )}
-      </div>
+      )}
       <div className={styles.playerBody}>{renderStep(step)}</div>
     </div>
   );

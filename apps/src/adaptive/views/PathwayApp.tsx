@@ -6,6 +6,10 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {setAiGatewayOptIn} from '@cdo/apps/aichat/api/shouldUseAiGateway';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {
+  clearSimpleHeaderOverride,
+  setSimpleHeaderOverride,
+} from '@cdo/apps/code-studio/headerRedux';
+import {
   sendAdaptiveStepReport,
   sendStartedReportIfNotStarted,
 } from '@cdo/apps/code-studio/progressRedux';
@@ -137,6 +141,17 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     if (initialCheckpointId)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
   }, [initialCheckpointId, dispatch]);
+  // StepPlayer sets the header's name while a checkpoint plays.
+  const onMap = view.kind === 'map';
+  useEffect(() => {
+    if (onMap) dispatch(setSimpleHeaderOverride({name: pathway.title}));
+  }, [onMap, pathway.title, dispatch]);
+  useEffect(
+    () => () => {
+      dispatch(clearSimpleHeaderOverride());
+    },
+    [dispatch]
+  );
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
@@ -188,6 +203,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
+            hideProgress={isProject}
             onStartStep={startStep}
             onCompleteStep={completeStep}
             onLeaveStep={leaveStep}

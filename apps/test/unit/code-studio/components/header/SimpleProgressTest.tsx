@@ -20,7 +20,10 @@ const levelsWithCurrent = (currentId: string) =>
 describe('SimpleProgress', () => {
   it('shows the current level label and its place in the sub-path', () => {
     render(
-      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
+      <SimpleProgress
+        imageUrl="/logo.png"
+        subPath={subPathFor(levelsWithCurrent('3'))}
+      />
     );
     expect(screen.getByText('Story')).toBeTruthy();
     const bar = screen.getByRole('progressbar');
@@ -31,7 +34,7 @@ describe('SimpleProgress', () => {
   });
 
   it('fills the bar for a label that covers one level', () => {
-    render(<SimpleProgress levels={levelsWithCurrent('1')} />);
+    render(<SimpleProgress subPath={subPathFor(levelsWithCurrent('1'))} />);
     expect(screen.getByText('Getting started')).toBeTruthy();
     const bar = screen.getByRole('progressbar');
     expect(bar.getAttribute('aria-valuetext')).toBe('Level 1 of 1');
@@ -40,7 +43,10 @@ describe('SimpleProgress', () => {
 
   it('shows nothing but the logo for a level without a label', () => {
     render(
-      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('5')} />
+      <SimpleProgress
+        imageUrl="/logo.png"
+        subPath={subPathFor(levelsWithCurrent('5'))}
+      />
     );
     expect(screen.queryByRole('progressbar')).toBeNull();
     expect(document.querySelector('#simple_progress')?.textContent).toBe('');
@@ -48,7 +54,10 @@ describe('SimpleProgress', () => {
 
   it("wears the classes that shrink it with the header's row", () => {
     render(
-      <SimpleProgress imageUrl="/logo.png" levels={levelsWithCurrent('3')} />
+      <SimpleProgress
+        imageUrl="/logo.png"
+        subPath={subPathFor(levelsWithCurrent('3'))}
+      />
     );
     const outer = document.querySelector('#simple_progress') as HTMLElement;
     expect(outer.classList.contains(styles.outer)).toBe(true);
@@ -60,8 +69,32 @@ describe('SimpleProgress', () => {
     ).toBe(true);
   });
 
+  it('shows a label with no bar when given no position', () => {
+    render(
+      <SimpleProgress imageUrl="/logo.png" subPath={{label: 'My Project'}} />
+    );
+    expect(screen.getByText('My Project')).toBeTruthy();
+    expect(screen.queryByRole('progressbar')).toBeNull();
+  });
+
+  it('reads out the given value text in place of the level count', () => {
+    render(
+      <SimpleProgress
+        subPath={{
+          label: 'Build',
+          position: 2,
+          total: 4,
+          valueText: 'Step 2 of 4',
+        }}
+      />
+    );
+    expect(screen.getByRole('progressbar').getAttribute('aria-valuetext')).toBe(
+      'Step 2 of 4'
+    );
+  });
+
   it('names the bar after its label', () => {
-    render(<SimpleProgress levels={levelsWithCurrent('3')} />);
+    render(<SimpleProgress subPath={subPathFor(levelsWithCurrent('3'))} />);
     const bar = screen.getByRole('progressbar');
     expect(bar.getAttribute('aria-labelledby')).toBe('simple_progress_label');
     expect(screen.getByText('Story').id).toBe('simple_progress_label');

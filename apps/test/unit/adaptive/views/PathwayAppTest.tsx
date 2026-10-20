@@ -4,6 +4,7 @@ import React from 'react';
 import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
+import {setSimpleHeaderOverride} from '@cdo/apps/code-studio/headerRedux';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
@@ -124,7 +125,10 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText('map screen')).toBeTruthy();
-    expect(mockDispatch).not.toHaveBeenCalled();
+    expect(mockDispatch).not.toHaveBeenCalledWith({startedReport: 'adaptive'});
+    expect(mockDispatch).toHaveBeenCalledWith(
+      setSimpleHeaderOverride({name: 'Pathway'})
+    );
 
     act(() => screen.getByText('map screen').click());
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
