@@ -1,3 +1,4 @@
+import type {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import type {JavascriptGenerator} from 'blockly/javascript';
 
@@ -192,6 +193,11 @@ export interface BlockSvg<T extends Environment = Environment>
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type MutatorBlock<T, B extends BlockSvg<any> = BlockSvg> =
   T extends Mutator<infer _S, infer U> ? B & U : B;
+
+/**
+ * Specifically a block with the procedure mixin methods.
+ */
+export type ProcedureBlock = Blockly.BlockSvg & IProcedureBlock;
 
 /**
  * Blockly doesn't expose its own BlockGenerator for some reason. This is more

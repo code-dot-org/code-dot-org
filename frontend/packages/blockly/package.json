@@ -36,6 +36,16 @@
       "import": "./dist/plugins/index.mjs",
       "require": "./dist/plugins/index.cjs"
     },
+    "./plugins/sharableProcedures": {
+      "types": "./dist/plugins/sharableProcedures/index.d.ts",
+      "import": "./dist/plugins/sharableProcedures/index.mjs",
+      "require": "./dist/plugins/sharableProcedures/index.cjs"
+    },
+    "./mutators": {
+      "types": "./dist/mutators/index.d.ts",
+      "import": "./dist/mutators/index.mjs",
+      "require": "./dist/mutators/index.cjs"
+    },
     "./renderers": {
       "types": "./dist/renderers/index.d.ts",
       "import": "./dist/renderers/index.mjs",
@@ -113,6 +123,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@blockly/block-shareable-procedures": "^6.0.10",
     "@blockly/field-colour": "^6.0.4",
     "@blockly/theme-dark": "^8.0.3",
     "@blockly/theme-highcontrast": "^7.0.3",
