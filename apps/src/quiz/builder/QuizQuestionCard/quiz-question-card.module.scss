@@ -7,6 +7,16 @@
   background: var(--background-neutral-primary);
 }
 
+// FormFieldWrapper aligns its children to flex-start; the options list
+// should span the card.
+.optionsField {
+  width: 100%;
+
+  > * {
+    align-self: stretch;
+  }
+}
+
 .optionsList {
   display: flex;
   flex-direction: column;

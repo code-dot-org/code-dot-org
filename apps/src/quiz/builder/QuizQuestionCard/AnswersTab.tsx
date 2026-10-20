@@ -144,7 +144,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
           }))}
         />
       </FormFieldWrapper>
-      <FormFieldWrapper label="Options" className={styles.fullWidthField}>
+      <FormFieldWrapper label="Options" className={styles.optionsField}>
         <div className={styles.optionsList}>
           {draft.choices.map((choice, index) => {
             const isCorrect = correctChoiceIds.includes(choice.id);
@@ -203,12 +203,12 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
               </div>
             );
           })}
+          <AddItemButton
+            label="Add option"
+            onClick={addChoice}
+            disabled={disabled}
+          />
         </div>
-        <AddItemButton
-          label="Add option"
-          onClick={addChoice}
-          disabled={disabled}
-        />
       </FormFieldWrapper>
     </>
   );
