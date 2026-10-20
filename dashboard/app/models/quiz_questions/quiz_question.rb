@@ -19,8 +19,8 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
-  # Every concrete question subtype. TODO: P0 - add MatchQuestion.
-  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion MultipleSelectQuestion).freeze
+  # Every concrete question subtype.
+  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion MultipleSelectQuestion MatchQuestion).freeze
 
   after_initialize {self.type ||= self.class.sti_name}
 
@@ -190,6 +190,26 @@ class QuizQuestion < ApplicationRecord
     unless q['description'].nil? || q['description'].is_a?(String)
       errors.add(:content, '"description" must be a String if given')
     end
+  end
+
+  # Validates a list of {"id", "text"} items, such as answer choices. Returns
+  # the item ids, or nil (after recording an error on `content`) if any item
+  # is invalid. `noun` names one item in error messages.
+  protected def validate_items(items, noun)
+    # id and text must both be non-blank, not just Strings - a blank text
+    # would render as an item with no visible label.
+    unless items.all? {|i| i.is_a?(Hash) && i['id'].is_a?(String) && i['id'].present? && i['text'].is_a?(String) && i['text'].present?}
+      errors.add(:content, %(each #{noun} must have a non-blank "id" and "text"))
+      return nil
+    end
+
+    ids = items.map {|i| i['id']}
+    unless ids.uniq.length == ids.length
+      errors.add(:content, %(#{noun} ids must be unique))
+      return nil
+    end
+
+    ids
   end
 
   private def levelbuilder_mode?

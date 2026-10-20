@@ -2552,6 +2552,21 @@ FactoryBot.define do
     end
   end
 
+  factory :match_question, class: MatchQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Match question #{n}"}
+    content do
+      {
+        question_title: 'Match each expression to its value.',
+        pairs: [
+          {id: 'p1', items: [{id: 'a', text: '1 + 1'}, {id: 'x', text: '2'}]},
+          {id: 'p2', items: [{id: 'b', text: '2 + 1'}, {id: 'y', text: '3'}]},
+          {id: 'p3', items: [{id: 'c', text: '2 + 2'}, {id: 'z', text: '4'}]},
+        ]
+      }
+    end
+  end
+
   factory :quiz_question_standard do
     quiz_question
     standard
