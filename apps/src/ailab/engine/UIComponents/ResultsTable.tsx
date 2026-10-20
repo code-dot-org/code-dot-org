@@ -101,9 +101,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                     );
                   })}
                   <td className={labelCell}>
-                    <CellText>
-                      {cellValue(results.predictedLabels[index])}
-                    </CellText>
+                    <CellText>{valueAt(index, PREDICTION_COLUMN)}</CellText>
                   </td>
                 </tr>
               );

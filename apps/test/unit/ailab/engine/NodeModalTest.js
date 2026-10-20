@@ -221,7 +221,7 @@ describe('NodeModal', () => {
       within(dialog()).getByRole('button', {name: 'Sort by legs low to high'})
     ).toBeTruthy();
     expect(
-      within(dialog()).queryByRole('button', {name: /^Sort by AI prediction/})
+      within(dialog()).queryByRole('button', {name: /^Sort by AI predicts/})
     ).toBeNull();
   });
 

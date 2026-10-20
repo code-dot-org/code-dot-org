@@ -58,7 +58,7 @@ const RowsTableHeader = ({
       {showPrediction && (
         <ColumnHeader
           column={PREDICTION_COLUMN}
-          name="AI prediction"
+          name="AI predicts"
           view={view}
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >

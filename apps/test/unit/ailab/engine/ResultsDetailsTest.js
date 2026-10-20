@@ -142,6 +142,24 @@ describe('ResultsDetails', () => {
     ]);
   });
 
+  test('sorts categorical predictions as text, then restores the order', () => {
+    renderScorecard();
+    fireEvent.click(sortButton('Sort by AI predicts A-Z'));
+    fireEvent.click(sortButton('Sort by AI predicts Z-A'));
+
+    expect(bodyRows()).toEqual([
+      ['2', '4', 'dog', 'dog'],
+      ['1', '2', 'bird', 'bird'],
+    ]);
+
+    fireEvent.click(sortButton('Original order'));
+
+    expect(bodyRows()).toEqual([
+      ['1', '2', 'bird', 'bird'],
+      ['2', '4', 'dog', 'dog'],
+    ]);
+  });
+
   test('sorts numerical predictions by value', () => {
     renderScorecard({
       project: levelProject(ANIMAL_COLUMNS, 'legs'),
@@ -149,7 +167,7 @@ describe('ResultsDetails', () => {
       labels: [1.5, 1.25, 10],
       predictedLabels: [1.5, 1.25, 10],
     });
-    fireEvent.click(sortButton('Sort by AI prediction low to high'));
+    fireEvent.click(sortButton('Sort by AI predicts low to high'));
 
     expect(bodyRows()).toEqual([
       ['2', 'dog', '1.25', '1.25'],

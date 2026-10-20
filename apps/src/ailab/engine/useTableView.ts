@@ -10,17 +10,17 @@ export type SortDirection = 'ascending' | 'descending';
 // A column from outside the dataset takes a symbol, which no column name can match.
 export type ColumnId = string | symbol;
 
-interface TableSort {
-  column: ColumnId;
+interface TableSort<Column extends ColumnId> {
+  column: Column;
   direction: SortDirection;
 }
 
 export interface TableView<Column extends ColumnId = string> {
   rows: number[];
   columns: Column[];
-  isNumerical: (column: ColumnId) => boolean;
-  sortDirection: (column: ColumnId) => SortDirection | undefined;
-  toggleSort: (column: ColumnId) => void;
+  isNumerical(column: Column): boolean;
+  sortDirection(column: Column): SortDirection | undefined;
+  toggleSort(column: Column): void;
 }
 
 interface TableViewSource<Column extends ColumnId> {
@@ -64,18 +64,18 @@ export function useTableView<Column extends ColumnId>({
   columnTypes,
   valueAt,
 }: TableViewSource<Column>): TableView<Column> {
-  const [sort, setSort] = useState<TableSort>();
-  const isNumerical = (column: ColumnId) =>
+  const [sort, setSort] = useState<TableSort<Column>>();
+  const isNumerical = (column: Column) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
-  const column = columns.find(shown => shown === sort?.column);
 
   let sortedRows = rows;
-  if (sort && column !== undefined) {
-    const sign = sort.direction === 'ascending' ? 1 : -1;
+  if (sort && columns.includes(sort.column)) {
+    const {column, direction} = sort;
+    const sign = direction === 'ascending' ? 1 : -1;
     const numerical = isNumerical(column);
+    const values = new Map(rows.map(row => [row, valueAt(row, column)]));
     sortedRows = [...rows].sort(
-      (a, b) =>
-        sign * compareValues(valueAt(a, column), valueAt(b, column), numerical)
+      (a, b) => sign * compareValues(values.get(a)!, values.get(b)!, numerical)
     );
   }
 
