@@ -12,7 +12,12 @@ describe('usePlayProgress', () => {
     );
     const report = (x: number, height: number) =>
       act(() => {
-        view.result.current.onPlayerProgress?.({touching: [], height, x});
+        view.result.current.onPlayerProgress?.({
+          touching: [],
+          height,
+          x,
+          speed: 15,
+        });
       });
     report(100, 0.2);
     report(115, 0.2);
@@ -33,7 +38,12 @@ describe('usePlayProgress', () => {
     const view = renderHook(() => usePlayProgress(true, NEEDS));
     const report = (x: number, height: number) =>
       act(() => {
-        view.result.current.onPlayerProgress?.({touching: [], height, x});
+        view.result.current.onPlayerProgress?.({
+          touching: [],
+          height,
+          x,
+          speed: 15,
+        });
       });
     report(100, 0.3);
     report(100, 0);
@@ -45,7 +55,12 @@ describe('usePlayProgress', () => {
     const view = renderHook(() => usePlayProgress(true, NEEDS));
     const report = (x: number, height: number) =>
       act(() => {
-        view.result.current.onPlayerProgress?.({touching: [], height, x});
+        view.result.current.onPlayerProgress?.({
+          touching: [],
+          height,
+          x,
+          speed: 15,
+        });
       });
     report(100, 0.1);
     report(400, 0.4);

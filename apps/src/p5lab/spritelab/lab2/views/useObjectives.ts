@@ -30,8 +30,8 @@ export interface ObjectivesState {
   collapsedText?: string;
 }
 
-/** More than the player walks in a frame: a move this big is a teleport. */
-const TELEPORT_PX = 20;
+/** A frame's move past the player's speed by this much is a teleport. */
+const TELEPORT_SLACK_PX = 4;
 
 /** What the engine reports about the running player. */
 export interface PlayerProgressReport {
@@ -41,6 +41,8 @@ export interface PlayerProgressReport {
   height: number;
   /** The player's center across the view, in px. */
   x: number;
+  /** How far the player walks in a frame, in px. */
+  speed: number;
 }
 
 /**
@@ -110,9 +112,12 @@ export function usePlayProgress(
       }
       if (needs.move) {
         let run = runRef.current;
-        // A frame's jump past any walk is a teleport (restart, go to
+        // A frame's move past any walk is a teleport (restart, go to
         // scene): the run starts over there.
-        if (!run || Math.abs(report.x - run.lastX) > TELEPORT_PX) {
+        const teleport =
+          run &&
+          Math.abs(report.x - run.lastX) > report.speed + TELEPORT_SLACK_PX;
+        if (!run || teleport) {
           run = {x: report.x, lastX: report.x, lowest: report.height};
           runRef.current = run;
         }
