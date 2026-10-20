@@ -7,24 +7,27 @@ import {useAppSelector} from './hooks';
 
 export type SortDirection = 'ascending' | 'descending';
 
+// A column from outside the dataset takes a symbol, which no column name can match.
+export type ColumnId = string | symbol;
+
 interface TableSort {
-  column: string;
+  column: ColumnId;
   direction: SortDirection;
 }
 
-export interface TableView {
+export interface TableView<Column extends ColumnId = string> {
   rows: number[];
-  columns: string[];
-  isNumerical: (column: string) => boolean;
-  sortDirection: (column: string) => SortDirection | undefined;
-  toggleSort: (column: string) => void;
+  columns: Column[];
+  isNumerical: (column: ColumnId) => boolean;
+  sortDirection: (column: ColumnId) => SortDirection | undefined;
+  toggleSort: (column: ColumnId) => void;
 }
 
-interface TableViewSource {
+interface TableViewSource<Column extends ColumnId> {
   rows: number[];
-  columns: string[];
-  columnTypes: Record<string, string>;
-  valueAt: (row: number, column: string) => string | number;
+  columns: Column[];
+  columnTypes: Partial<Record<ColumnId, string>>;
+  valueAt: (row: number, column: Column) => string | number;
 }
 
 function asNumber(value: string | number): number {
@@ -55,20 +58,20 @@ export function nextSortDirection(
   return direction === 'ascending' ? 'descending' : undefined;
 }
 
-export function useTableView({
+export function useTableView<Column extends ColumnId>({
   rows,
   columns,
   columnTypes,
   valueAt,
-}: TableViewSource): TableView {
+}: TableViewSource<Column>): TableView<Column> {
   const [sort, setSort] = useState<TableSort>();
-  const isNumerical = (column: string) =>
+  const isNumerical = (column: ColumnId) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
+  const column = columns.find(shown => shown === sort?.column);
 
   let sortedRows = rows;
-  if (sort && columns.includes(sort.column)) {
-    const {column, direction} = sort;
-    const sign = direction === 'ascending' ? 1 : -1;
+  if (sort && column !== undefined) {
+    const sign = sort.direction === 'ascending' ? 1 : -1;
     const numerical = isNumerical(column);
     sortedRows = [...rows].sort(
       (a, b) =>
