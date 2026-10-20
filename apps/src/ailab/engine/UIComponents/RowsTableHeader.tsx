@@ -4,12 +4,14 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import type {TableView} from '../useTableView';
+import type {TableView} from '../types';
 
 import CellText from './CellText';
 import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
+
+export const PREDICTION_COLUMN = Symbol('AI prediction');
 
 interface RowsTableHeaderProps {
   columns: string[];
@@ -54,12 +56,14 @@ const RowsTableHeader = ({
         );
       })}
       {showPrediction && (
-        <th
-          scope="col"
+        <ColumnHeader
+          column={PREDICTION_COLUMN}
+          name="AI predicts"
+          view={view}
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >
           <CellText>AI predicts</CellText>
-        </th>
+        </ColumnHeader>
       )}
     </tr>
   );

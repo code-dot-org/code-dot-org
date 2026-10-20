@@ -32,6 +32,22 @@ export interface ResultsData {
   rowIndices: number[];
 }
 
+export type SortDirection = 'ascending' | 'descending';
+
+export type ColumnId = string | symbol;
+
+export interface TableView {
+  rows: number[];
+  columns: ColumnId[];
+  isNumerical(column: ColumnId): boolean;
+  sortDirection(column: ColumnId): SortDirection | undefined;
+  toggleSort(column: ColumnId): void;
+}
+
+export interface DatasetTableView extends TableView {
+  columns: string[];
+}
+
 export interface CategoricalColumnDetails {
   id: string;
   uniqueOptions: string[];
