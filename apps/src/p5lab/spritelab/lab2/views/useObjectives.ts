@@ -48,9 +48,11 @@ export interface PlayerProgressReport {
 /**
  * The running game's progress for the checklist: touches and height from
  * the engine, scene landings, and the longest run so far. Each only grows
- * while the level stays open. Reports the level never reads are not kept,
- * since each one re-renders the view; the engine's callback is null when
- * nothing wants it.
+ * while the level stays open. The engine also reports during the Code
+ * tab's preview; those are dropped, since only a run the student started
+ * with Play should count, and Play respawns the player. Reports the level
+ * never reads are not kept, since each one re-renders the view; the
+ * engine's callback is null when nothing wants it.
  */
 export function usePlayProgress(
   playing: boolean,
@@ -74,6 +76,8 @@ export function usePlayProgress(
   );
   const [longestRunSeconds, setLongestRunSeconds] = useState(0);
   const [everPlayed, setEverPlayed] = useState(false);
+  const playingRef = useRef(playing);
+  playingRef.current = playing;
 
   useEffect(() => {
     if (!playing) {
@@ -99,6 +103,9 @@ export function usePlayProgress(
   const wantsPlayer = needs.touch || needs.height || needs.move;
   const onPlayerProgress = useCallback(
     (report: PlayerProgressReport) => {
+      if (!playingRef.current) {
+        return;
+      }
       if (needs.touch && report.touching.length) {
         setTouched(current => {
           if (report.touching.every(name => current.has(name))) {

@@ -70,6 +70,31 @@ describe('usePlayProgress', () => {
     expect(view.result.current.runtime.farthest).toBe(15);
   });
 
+  it('drops the preview before Play, so the fall and respawn are not a jump', () => {
+    const view = renderHook(
+      (props: {playing: boolean}) =>
+        usePlayProgress(props.playing, {...NEEDS, touch: true}),
+      {initialProps: {playing: false}}
+    );
+    const report = (x: number, height: number) =>
+      act(() => {
+        view.result.current.onPlayerProgress?.({
+          touching: ['star'],
+          height,
+          x,
+          speed: 15,
+        });
+      });
+    report(100, 0.4);
+    report(100, 0.2);
+    expect(view.result.current.runtime.touched.size).toBe(0);
+    view.rerender({playing: true});
+    report(100, 0.4);
+    report(100, 0.2);
+    expect(view.result.current.runtime.risen).toBe(0);
+    expect(view.result.current.runtime.touched.has('star')).toBe(true);
+  });
+
   it('asks the engine for reports only when the checklist reads them', () => {
     const none = renderHook(() =>
       usePlayProgress(true, {...NEEDS, move: false})
