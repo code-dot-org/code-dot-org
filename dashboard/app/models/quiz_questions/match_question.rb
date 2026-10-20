@@ -46,12 +46,12 @@ class MatchQuestion < QuizQuestion
     response_data['pairs'].is_a?(Array) && response_data['pairs'].any?
   end
 
-  # All or nothing: correct only if exactly the correct pairs are given. The
-  # order of the two ids within a pair does not matter.
+  # All or nothing: correct only if exactly the correct pairs are given.
   def grade(response_data)
     pairs = response_data.is_a?(Hash) ? response_data['pairs'] : nil
     correct = pairs.is_a?(Array) &&
       pairs.all? {|p| p.is_a?(Array) && p.length == 2} &&
+      # Handles any order of pairs, as well as any order of ids within each pair.
       pairs.to_set(&:to_set) == correct_pairs.to_set(&:to_set)
     {score: correct ? 1 : 0, max_score: 1}
   end

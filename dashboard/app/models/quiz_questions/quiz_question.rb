@@ -192,20 +192,20 @@ class QuizQuestion < ApplicationRecord
     end
   end
 
-  # Validates a list of {"id", "text"} items, such as answer choices. Returns
-  # the item ids, or nil (after recording an error on `content`) if any item
-  # is invalid. `noun` names one item in error messages.
-  protected def validate_items(items, noun)
+  # Validates a list of {"id", "text"} items, such as answer choices.
+  # Returns the item ids, or nil (after recording an error on `content`) if any item
+  # is invalid.
+  protected def validate_items(items, error_message_noun)
     # id and text must both be non-blank, not just Strings - a blank text
     # would render as an item with no visible label.
     unless items.all? {|i| i.is_a?(Hash) && i['id'].is_a?(String) && i['id'].present? && i['text'].is_a?(String) && i['text'].present?}
-      errors.add(:content, %(each #{noun} must have a non-blank "id" and "text"))
+      errors.add(:content, %(each #{error_message_noun} must have a non-blank "id" and "text"))
       return nil
     end
 
     ids = items.map {|i| i['id']}
     unless ids.uniq.length == ids.length
-      errors.add(:content, %(#{noun} ids must be unique))
+      errors.add(:content, %(#{error_message_noun} ids must be unique))
       return nil
     end
 
