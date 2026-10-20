@@ -120,3 +120,11 @@ these changes.
     created or deleted (PLG-17). `ngfp/blockly` read only top-level
     items, so a categorized toolbox had no limits; treated 0 as no limit;
     and counted a new block only once it moved.
+17. Orphans are disabled with the reason `ORPHANED`, as in apps
+    (PLG-18), so a student's own disable survives attaching a block and a
+    call disabled when its definition moved is enabled once attached.
+    Undeletable blocks are grayed as apps grays them (PLG-21): all of
+    them but `when_run` and procedure definitions, movable or not, in
+    `#808080`, on loading and selection as well as creation.
+    `ngfp/blockly` disabled orphans as if the student had, grayed only
+    movable blocks as they were created, in `#888`.

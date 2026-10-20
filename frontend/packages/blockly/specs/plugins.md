@@ -259,8 +259,10 @@ changing from disabled to enabled, the block is passed to
 `updateBlockEnabled(block)`: under an enabled parent, the block and all its
 descendants lose the disabled reason; otherwise, if it can attach to
 anything (it has an output or previous connection), it and the blocks after
-it gain it. The reason is Blockly's `MANUALLY_DISABLED`, the reason a
-student's own "Disable Block" sets. The block's opacity is then 0.5 if it
+it gain it. The reason is `ORPHANED`, as in apps, so a student's own
+"Disable Block" (Blockly's `MANUALLY_DISABLED`) is kept when the block is
+attached. Blockly itself drops a manual disable when another reason is
+lifted, in a workspace whose `disable` option is off. The block's opacity is then 0.5 if it
 is disabled and has no parent, and its default otherwise.
 
 PLG-19. A block reporting that it went from disabled to enabled is checked
@@ -270,8 +272,8 @@ it is loose (blockly-samples issue 2035).
 PLG-20. When a procedure definition (`procedures_defnoreturn`) is dragged,
 `disableOrphanBlocks(workspace)` runs: every top-level
 `procedures_callnoreturn` is disabled with the reason `ORPHANED`, and
-every top block is passed to `updateBlockEnabled` with the reason
-`ORPHANED`, and has its opacity reset.
+every top block is passed to `updateBlockEnabled`, and has its opacity
+reset. Such a call, attached later, is enabled.
 
 ## Grayed undeletable blocks
 
@@ -283,10 +285,20 @@ level. `@code-dot-org/blockly/plugins/grayOutUndeletableBlocks` is apps'
 ### Requirements
 
 PLG-21. The plugin is an inject plugin whose change listener is
-`grayOutUndeletableBlocks(event)`. When a block is created, it and every
-block created with it, and when a block changes, that block, are colored
-`#888` if they cannot be deleted, can be moved, and the workspace is not
-read-only.
+`grayOutUndeletableBlocks(event)`. When a block is created, when loading
+finishes, and when the selection changes, every block on the workspace
+that cannot be deleted is colored `#808080`, apps' disabled gray, unless it
+is a `when_run` or a procedure definition (`procedures_defnoreturn`),
+which levels make undeletable as a matter of course. A read-only
+workspace is left as it is.
+
+### Test vectors
+
+PLG-V9 (PLG-18). In a workspace with `disable: true`, a `text_print` the
+student disabled and then attached under an enabled block stays disabled.
+
+PLG-V10 (PLG-21). An undeletable, immovable `text_print` is colored
+`#808080` when it is created.
 
 ### Not specified here
 
@@ -295,12 +307,6 @@ read-only.
 
 ### Open questions
 
-1. PLG-17: a categorized toolbox's flyout is filled when a category
-   opens, which fires no event on the workspace, so its indicators wait
-   for the next change there. Apps has the same delay. Refresh them when
-   the flyout opens?
-2. PLG-18: use `ORPHANED` throughout, as apps does, so a student's own
-   "Disable Block" survives attaching the block?
-3. PLG-21: apps grays every undeletable block except `when_run` and
-   procedure definitions, movable or not, in `#808080`, and again on
-   loading and on selection. Match it?
+1. PLG-17: a categorized toolbox fills its flyout when a category opens,
+   and its blocks get no indicators until the next change on the
+   workspace. Refresh them when the flyout opens?

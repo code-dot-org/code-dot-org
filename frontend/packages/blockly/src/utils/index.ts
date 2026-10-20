@@ -39,7 +39,7 @@ export function getToolboxWidth(
 
 export function updateBlockEnabled(
   block: Blockly.Block,
-  reason: string = Blockly.constants.MANUALLY_DISABLED,
+  reason: string = 'ORPHANED',
 ) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
