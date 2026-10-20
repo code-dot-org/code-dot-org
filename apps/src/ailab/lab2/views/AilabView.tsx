@@ -1,11 +1,6 @@
-import ailab, {
-  type InitAllOptions,
-  type Mode,
-  type SaveResponse,
-  type InstructionsKey,
-} from '@code-dot-org/ailab';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
+import * as ailab from '@cdo/apps/ailab/engine';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {LabProps} from '@cdo/apps/lab2/types';
@@ -29,8 +24,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
-    useState<InstructionsKey>();
-  const mode: Mode | undefined = useMemo(
+    useState<ailab.InstructionsKey>();
+  const mode: ailab.Mode | undefined = useMemo(
     () => (levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined),
     [levelProperties.mode]
   );
@@ -48,7 +43,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       dispatch(continueOrFinishLesson());
     };
 
-    const setInstructionsKey: InitAllOptions['setInstructionsKey'] = (
+    const setInstructionsKey: ailab.InitAllOptions['setInstructionsKey'] = (
       key,
       options
     ) => {
@@ -59,7 +54,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       }
     };
 
-    const saveTrainedModel: InitAllOptions['saveTrainedModel'] = async (
+    const saveTrainedModel: ailab.InitAllOptions['saveTrainedModel'] = async (
       dataToSave,
       callback
     ) => {
@@ -70,7 +65,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
           true,
           {'Content-Type': 'application/json'}
         );
-        const saveResponse = (await response.json()) as SaveResponse;
+        const saveResponse = (await response.json()) as ailab.SaveResponse;
         callback(saveResponse);
       } catch (error) {
         callback({status: 'error'});

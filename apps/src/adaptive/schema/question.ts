@@ -5,12 +5,39 @@ import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 import {stepBaseSchema} from './steps/base';
 import {subsetOf} from './subsetOf';
 
+/**
+ * What a question's answer says about one skill. A graded question, one with
+ * `correctChoiceId`, measures `evidenceLevel` when answered correctly and
+ * nothing otherwise; a survey question measures the evidence level listed
+ * for the chosen choice. Evidence level 0 is no evidence.
+ */
+export const measuresSchema = z.union([
+  z.strictObject({
+    skillId: z.string().min(1),
+    evidenceLevel: z.number().int().min(1),
+  }),
+  z.strictObject({
+    skillId: z.string().min(1),
+    /**
+     * The evidence level each choice shows, by choice id. A choice left out
+     * measures nothing.
+     */
+    evidenceLevels: z.record(z.string().min(1), z.number().int().min(0)),
+  }),
+]);
+
+/** What a question's answer says about one skill. */
+export type Measures = z.infer<typeof measuresSchema>;
+
 /** A multiple choice question that does not rely on Quiz BE (but looks like a Quiz).
  * This should be used for diagnostics and surveys and Quiz backed levels (when implemented)
  * should be used for evaluation.
  */
 export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
-  Omit<QuizQuestionSummary, 'page'> & {correctChoiceId?: string}
+  Omit<QuizQuestionSummary, 'page'> & {
+    correctChoiceId?: string;
+    measures?: Measures;
+  }
 >()(
   z.strictObject({
     id: z.number().int().positive(),
@@ -25,6 +52,7 @@ export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
      * Otherwise any option allows the student to continue.
      */
     correctChoiceId: z.string().min(1).optional(),
+    measures: measuresSchema.optional(),
   })
 );
 

@@ -76,6 +76,10 @@ class Adaptive < Level
     names.filter_map {|step_id, name| [step_id, levels[name]] if levels[name]}.to_h
   end
 
+  def sharing_levels
+    Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
+  end
+
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
     pathway = content
@@ -85,31 +89,51 @@ class Adaptive < Level
     properties
   end
 
-  # Only the file's existence is checked; the content is validated in CI.
+  # Only the file's existence is checked. Content saved from the pathway
+  # editor is checked in the browser; the repo's files are checked in CI.
   private def adaptive_content_exists
     return if adaptive_id.blank?
     return if AdaptiveContent.exist?(adaptive_id)
     errors.add(:adaptive_id, "has no content file under #{AdaptiveContent.content_dir}")
   end
 
-  # A copy of `pathway` with each referenced level's properties, as returned
-  # by the block, inlined under `levelProperties`: the project's template
-  # level and every `level` step. Names with no level pass through unresolved
-  # for the client to report. The cached pathway is not touched.
+  # A copy of `pathway` with each referenced level's properties (inlined under
+  # `levelProperties`) and each referenced video's URLs (inlined as `src`,
+  # `download`, `thumbnail`) resolved. The cached pathway is not touched.
+  # Unknown level names pass through unresolved so the client can report them.
   private def with_level_properties(pathway)
     names = [pathway.dig('project', 'templateLevel'), *level_steps(pathway).map {|step| step['level']}]
     levels = Level.where(name: names.compact.uniq).index_by(&:name)
-    resolve = lambda do |object, key|
-      level = levels[object[key]]
-      level ? object.merge('levelProperties' => yield(level)) : object
-    end
+
+    video_keys = video_steps(pathway).filter_map {|step| step['videoKey']}.uniq
+    videos = Video.where(key: video_keys).index_by(&:key)
 
     resolved = pathway.dup
-    resolved['project'] = resolve.call(pathway['project'], 'templateLevel') if pathway['project'].is_a?(Hash)
+    if pathway['project'].is_a?(Hash)
+      level = levels[pathway.dig('project', 'templateLevel')]
+      resolved['project'] = level ? pathway['project'].merge('levelProperties' => yield(level)) : pathway['project']
+    end
     if pathway['checkpoints'].is_a?(Array)
       resolved['checkpoints'] = pathway['checkpoints'].map do |checkpoint|
         next checkpoint unless checkpoint.is_a?(Hash) && checkpoint['steps'].is_a?(Array)
-        checkpoint.merge('steps' => checkpoint['steps'].map {|step| level_step?(step) ? resolve.call(step, 'level') : step})
+        checkpoint.merge(
+          'steps' => checkpoint['steps'].map do |step|
+            if level_step?(step)
+              level = levels[step['level']]
+              level ? step.merge('levelProperties' => yield(level)) : step
+            elsif video_step?(step)
+              video = videos[step['videoKey']]
+              next step unless video
+              step.merge(
+                'src' => video.youtube_url,
+                'download' => video.download,
+                'thumbnail' => video.thumbnail_url
+              )
+            else
+              step
+            end
+          end
+        )
       end
     end
     resolved
@@ -140,7 +164,15 @@ class Adaptive < Level
     steps(pathway).select {|step| level_step?(step)}
   end
 
+  private def video_steps(pathway)
+    steps(pathway).select {|step| video_step?(step)}
+  end
+
   private def level_step?(step)
     step.is_a?(Hash) && step['kind'] == 'level' && step['level'].is_a?(String)
+  end
+
+  private def video_step?(step)
+    step.is_a?(Hash) && step['kind'] == 'video' && step['videoKey'].is_a?(String)
   end
 end
