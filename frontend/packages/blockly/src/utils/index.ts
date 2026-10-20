@@ -36,3 +36,29 @@ export function getToolboxWidth(
 
   return 0;
 }
+
+export function updateBlockEnabled(
+  block: Blockly.Block,
+  reason: string = Blockly.constants.MANUALLY_DISABLED,
+) {
+  // Changing blocks as part of this event shouldn't be undoable.
+  const initialUndoFlag = Blockly.Events.getRecordUndo();
+  try {
+    Blockly.Events.setRecordUndo(false);
+    const parent = block.getParent();
+    if (parent && parent.isEnabled()) {
+      const children = block.getDescendants(false);
+      for (const child of children) {
+        child.setDisabledReason(false, reason);
+      }
+    } else if (block.outputConnection || block.previousConnection) {
+      let currentBlock: Blockly.Block | null = block;
+      do {
+        currentBlock.setDisabledReason(true, reason);
+        currentBlock = currentBlock.getNextBlock();
+      } while (currentBlock);
+    }
+  } finally {
+    Blockly.Events.setRecordUndo(initialUndoFlag);
+  }
+}

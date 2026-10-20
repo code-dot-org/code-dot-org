@@ -35,7 +35,7 @@ what the code does, even where that is wrong.
 | 9    | `layout.md`          | LAY-   | positioning blocks on load                                               | 1b, 8  | written |
 | 10   | `plugins.md`         | PLG-   | scrolling, `TopLeftMetricsManager`                                       | 1b     | written |
 | 11   | `plugins.md`         | PLG-   | the toolbox trashcan                                                     | 1b     | written |
-| 12   | `plugins.md`         | PLG-   | block limits, disabled orphans, gray undeletables                        | 1b     | planned |
+| 12   | `plugins.md`         | PLG-   | block limits, disabled orphans, gray undeletables                        | 1b     | written |
 | 13   | `xml-toolbox.md`     | XML-   | XML to JSON, toolbox and code utilities                                  | 1a     | planned |
 | 14   | `typed-variables.md` | TV-    | `createTypedVariable`                                                    | 1a     | planned |
 | 15   | `flyout.md`          | FLY-   | `BlocklyFlyout`                                                          | 1b     | planned |
