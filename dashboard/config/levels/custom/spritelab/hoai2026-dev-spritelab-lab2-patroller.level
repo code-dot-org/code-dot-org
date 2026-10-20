@@ -1,0 +1,115 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-20T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "build",
+      "imageType": "sprite",
+      "placeOne": true
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
+    "objectives": {
+      "title": "**Bring back your second character.**",
+      "items": [
+        {
+          "text": "In **World**, click a square on top of some blocks to put your second character there.",
+          "check": {
+            "kind": "world",
+            "role": "friend"
+          }
+        },
+        {
+          "text": "In **Code**, drag **begins patrolling** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_addBehaviorSimple",
+            "under": "spritelab2_whenRun",
+            "contains": "spritelab2_patrollingOnBlocks"
+          }
+        },
+        {
+          "text": "Click **Play** and go find them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Bring back your second character\nPut them on top of some blocks, then set them walking.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_addBehaviorSimple",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "BEHAVIOR": {
+              "block": {
+                "type": "spritelab2_patrollingOnBlocks"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "block": {
+                    "type": "spritelab2_patrollingOnBlocks"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a platformer"
+  }
+}]]></config>
+</GamelabJr>

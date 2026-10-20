@@ -1,7 +1,7 @@
 // The level's checklist as the Guide shows it: which items hold, kept once
 // earned for the rest of the visit, and the game's progress feeding them.
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   checkObjective,
@@ -36,6 +36,8 @@ export interface PlayerProgressReport {
   touching: string[];
   /** The player's feet, 0 at the floor to 1 at the top of the view. */
   height: number;
+  /** The player's center across the view, in px. */
+  x: number;
 }
 
 /**
@@ -56,6 +58,11 @@ export function usePlayProgress(
 } {
   const [touched, setTouched] = useState<ReadonlySet<string>>(new Set());
   const [highest, setHighest] = useState(0);
+  const [farthest, setFarthest] = useState(0);
+  const [risen, setRisen] = useState(0);
+  // Where the current run's first report put the player; movement is
+  // measured from there.
+  const runStartRef = useRef<{x: number; height: number} | null>(null);
   const [scenesLanded, setScenesLanded] = useState<ReadonlySet<string>>(
     new Set()
   );
@@ -64,6 +71,7 @@ export function usePlayProgress(
 
   useEffect(() => {
     if (!playing) {
+      runStartRef.current = null;
       return;
     }
     setEverPlayed(true);
@@ -82,7 +90,7 @@ export function usePlayProgress(
     };
   }, [playing, needs.seconds]);
 
-  const wantsPlayer = needs.touch || needs.height;
+  const wantsPlayer = needs.touch || needs.height || needs.move;
   const onPlayerProgress = useCallback(
     (report: PlayerProgressReport) => {
       if (needs.touch && report.touching.length) {
@@ -96,8 +104,17 @@ export function usePlayProgress(
       if (needs.height) {
         setHighest(current => Math.max(current, report.height));
       }
+      if (needs.move) {
+        const start = (runStartRef.current ??= {
+          x: report.x,
+          height: report.height,
+        });
+        const dx = Math.abs(report.x - start.x);
+        setFarthest(current => Math.max(current, dx));
+        setRisen(current => Math.max(current, report.height - start.height));
+      }
     },
-    [needs.touch, needs.height]
+    [needs.touch, needs.height, needs.move]
   );
 
   const onSceneLanded = useCallback((sceneId: string) => {
@@ -107,8 +124,15 @@ export function usePlayProgress(
   }, []);
 
   const runtime = useMemo(
-    () => ({longestRunSeconds, touched, highest, scenesLanded}),
-    [longestRunSeconds, touched, highest, scenesLanded]
+    () => ({
+      longestRunSeconds,
+      touched,
+      highest,
+      farthest,
+      risen,
+      scenesLanded,
+    }),
+    [longestRunSeconds, touched, highest, farthest, risen, scenesLanded]
   );
   return {
     runtime,

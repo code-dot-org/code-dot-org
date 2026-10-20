@@ -71,6 +71,7 @@ import {
 import {onTrimsUpdated} from '../imageTrim';
 import {
   DEFAULT_IMAGE_STYLE,
+  editsWorld,
   isFreeplayMode,
   isImageMode,
   tabsForMode,
@@ -1556,8 +1557,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A world level about one kind of image offers the palette only the
   // level's image of that kind.
   const placeOne = !!levelProperties.levelMode?.placeOne;
-  const paletteOnlyImage =
-    levelProperties.levelMode?.kind === 'world' ? focusImageName : undefined;
+  const paletteOnlyImage = editsWorld(levelProperties.levelMode)
+    ? focusImageName
+    : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) =>
       updateActiveWorld(world => moveWorldCell(world, row, col, cell)),

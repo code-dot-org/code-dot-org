@@ -49,6 +49,8 @@ export type ObjectiveCheck =
       role?: string;
       /** The player's feet rose this far up the view, 0 at the floor to 1. */
       height?: number;
+      /** The player ran a cell sideways or left the ground. */
+      moved?: boolean;
     }
   | {kind: 'scene'; id: string}
   | {kind: 'tab'; name: Tab};
@@ -76,6 +78,11 @@ export interface RuntimeProgress {
   touched: ReadonlySet<string>;
   /** The highest the player's feet have been, 0 at the floor to 1. */
   highest: number;
+  /** The farthest the player has run from where a run started, in px. */
+  farthest: number;
+  /** The most the player's feet have risen above where a run started,
+      as a share of the view's height. */
+  risen: number;
   /** Scenes a jump has landed on. */
   scenesLanded: ReadonlySet<string>;
 }
@@ -85,25 +92,34 @@ export interface RuntimeNeeds {
   seconds: boolean;
   touch: boolean;
   height: boolean;
+  move: boolean;
 }
 
 export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
-  const needs = {seconds: false, touch: false, height: false};
+  const needs = {seconds: false, touch: false, height: false, move: false};
   objectives?.items?.forEach(({check}) => {
     if (check.kind === 'play' && check.seconds !== undefined) {
       needs.seconds = true;
     } else if (check.kind === 'reach') {
       needs.touch ||= check.role !== undefined;
       needs.height ||= check.height !== undefined;
+      needs.move ||= check.moved === true;
     }
   });
   return needs;
 }
 
+/** A run of one cell counts as having moved. */
+export const MOVED_PX = 40;
+/** A rise of a tenth of the view counts as a jump. */
+export const JUMPED_RISE = 0.1;
+
 export const EMPTY_RUNTIME: RuntimeProgress = {
   longestRunSeconds: 0,
   touched: new Set(),
   highest: 0,
+  farthest: 0,
+  risen: 0,
   scenesLanded: new Set(),
 };
 
@@ -257,6 +273,12 @@ export function checkObjective(
       if (check.role !== undefined) {
         const image = inputs.imageForRole[check.role];
         return image !== undefined && inputs.runtime.touched.has(image);
+      }
+      if (check.moved) {
+        return (
+          inputs.runtime.farthest >= MOVED_PX ||
+          inputs.runtime.risen >= JUMPED_RISE
+        );
       }
       return (
         check.height !== undefined && inputs.runtime.highest >= check.height
