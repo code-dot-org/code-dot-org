@@ -62,9 +62,11 @@ FLY-8. `workspaceRef` receives the flyout's workspace once it is made, and
 FLY-9. On unmount the flyout's workspace releases focus (WS-12) and the
 flyout is disposed.
 
-FLY-10. The flyout is made once, against the main workspace of FLY-2. If
-that workspace is later replaced, as when the `BlocklyWorkspace` remounts,
-the flyout still targets the old one.
+FLY-10. When the main workspace the flyout targets is removed, as when the
+`BlocklyWorkspace` remounts, the flyout is disposed as on unmount (FLY-9)
+and made again, as in FLY-2, once the provider has a main workspace again.
+Each flyout is drawn in an element of its own within the component's,
+since disposing a flyout removes the element that holds it.
 
 ## Test vectors
 
@@ -76,6 +78,10 @@ node.
 FLY-V2 (FLY-1). A flyout with no `label` is a `region` named
 `Block palette`.
 
+FLY-V3 (FLY-10). With a flyout beside a `BlocklyWorkspace` whose `key`
+changes, the flyout's workspace targets the new main workspace and still
+holds its block.
+
 ## Not specified here
 
 - The blocks, which are the provider's (WS-17).
@@ -83,9 +89,8 @@ FLY-V2 (FLY-1). A flyout with no `label` is a `region` named
 
 ## Open questions
 
-1. FLY-10: rebuild the flyout against a new main workspace?
-2. FLY-5: a `blocks` array written inline in a lab's render is new on every
+1. FLY-5: a `blocks` array written inline in a lab's render is new on every
    render, so the flyout re-shows its blocks each time. Compare contents?
-3. The first browser run after the test dependencies are rebuilt has seen
+2. The first browser run after the test dependencies are rebuilt has seen
    the theme test (FLY-4) fail once, on the font size; it has passed on
    every run since. Is the high-contrast font still loading then?
