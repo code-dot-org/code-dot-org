@@ -26,7 +26,7 @@ what the code does, even where that is wrong.
 | 1a   | `definitions.md`     | DEF-   | definitions, Driver, Registry, plugins, renderer, toolbox, default theme | —      | written |
 | 1b   | `workspace.md`       | WS-    | Agent, contexts, `BlocklyWorkspace`, demo                                | 1a     | written |
 | 2    | `themes.md`          | THM-   | the other nine themes                                                    | 1a     | written |
-| 3    | `inputs.md`          | INP-   | the rectangle, round and triangle notch shapes                           | 1a     | planned |
+| 3    | `inputs.md`          | INP-   | the rectangle, round and triangle notch shapes                           | 1a     | written |
 | 4    | `react-fields.md`    | RF-    | `createReactField`, field utilities                                      | 1b     | planned |
 | 5    | `fields.md`          | FLD-   | the dropdown field                                                       | 1a     | planned |
 | 6    | `fields.md`          | FLD-   | the colour and button fields                                             | 1a     | planned |

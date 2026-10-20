@@ -1,7 +1,12 @@
 import {useState} from 'react';
 
-import {BlocklyWorkspace} from '../src';
-import type {BlocklySerialization, Toolbox} from '../src';
+import {
+  BlocklyWorkspace,
+  RectangleInputPlugin,
+  RoundInputPlugin,
+  TriangleInputPlugin,
+} from '../src';
+import type {BlockDefinitions, BlocklySerialization, Toolbox} from '../src';
 import {themeOptions, themes} from '../src/themes';
 
 import moduleStyles from './demo.module.css';
@@ -21,6 +26,47 @@ const TOOLBOX: Toolbox = [
   {name: 'Loops', blocks: ['controls_repeat_ext', 'controls_whileUntil']},
   {name: 'Math', blocks: ['math_number', 'math_arithmetic']},
   {name: 'Text', blocks: ['text', 'text_print']},
+  {
+    name: 'Shapes',
+    blocks: ['demo_place', 'demo_sprite', 'demo_behavior', 'demo_location'],
+  },
+];
+
+// Sprite Lab's custom types, notched as apps notches them (inputs.md).
+const SHAPE_PLUGINS = [
+  TriangleInputPlugin('Sprite'),
+  RoundInputPlugin('Behavior'),
+  RectangleInputPlugin('Location'),
+];
+
+const valueBlock = (type: string, output: string, style: string) => ({
+  type,
+  tooltip: '',
+  message0: output.toLowerCase(),
+  output,
+  style,
+  generator: {javascript: () => [`'${type}'`, 0] as [string, number]},
+});
+
+const BLOCKS: BlockDefinitions = [
+  valueBlock('demo_sprite', 'Sprite', 'sprite_blocks'),
+  valueBlock('demo_behavior', 'Behavior', 'behavior_blocks'),
+  valueBlock('demo_location', 'Location', 'location_blocks'),
+  {
+    type: 'demo_place',
+    tooltip: '',
+    message0: 'give %1 %2 at %3',
+    args0: [
+      {type: 'input_value', name: 'SPRITE', check: 'Sprite'},
+      {type: 'input_value', name: 'BEHAVIOR', check: 'Behavior'},
+      {type: 'input_value', name: 'LOCATION', check: 'Location'},
+    ],
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    style: 'sprite_blocks',
+    generator: {javascript: () => ''},
+  },
 ];
 
 const START_BLOCKS: BlocklySerialization = {
@@ -79,6 +125,8 @@ export const Demo = () => {
       </header>
       <main className={moduleStyles.canvas}>
         <BlocklyWorkspace
+          blocks={BLOCKS}
+          plugins={SHAPE_PLUGINS}
           toolbox={TOOLBOX}
           startBlocks={START_BLOCKS}
           theme={theme}

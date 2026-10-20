@@ -56,6 +56,26 @@
       "import": "./dist/themes/default/index.mjs",
       "require": "./dist/themes/default/index.cjs"
     },
+    "./inputs": {
+      "types": "./dist/inputs/index.d.ts",
+      "import": "./dist/inputs/index.mjs",
+      "require": "./dist/inputs/index.cjs"
+    },
+    "./inputs/rectangle": {
+      "types": "./dist/inputs/rectangle.d.ts",
+      "import": "./dist/inputs/rectangle.mjs",
+      "require": "./dist/inputs/rectangle.cjs"
+    },
+    "./inputs/round": {
+      "types": "./dist/inputs/round.d.ts",
+      "import": "./dist/inputs/round.mjs",
+      "require": "./dist/inputs/round.cjs"
+    },
+    "./inputs/triangle": {
+      "types": "./dist/inputs/triangle.d.ts",
+      "import": "./dist/inputs/triangle.mjs",
+      "require": "./dist/inputs/triangle.cjs"
+    },
     "./blocks/types": {
       "types": "./dist/blocks/types.d.ts"
     }

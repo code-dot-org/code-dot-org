@@ -21,6 +21,8 @@ export type {
 export {default as Driver, DriverEvent} from './Driver';
 export type {WorkspaceAgent} from './Driver';
 export {isDarkTheme} from './themes/isDarkTheme';
+// Notch shapes for custom connection types; pass them as plugins.
+export * from './inputs';
 
 export * from './components';
 export * from './contexts';
