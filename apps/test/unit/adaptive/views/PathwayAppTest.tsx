@@ -143,14 +143,14 @@ describe('PathwayApp', () => {
     });
   };
 
-  it('opens the first checkpoint for a student with no progress', async () => {
+  it('shows the map for a student with no progress', async () => {
     await renderSettled();
 
-    expect(screen.getByText('playing Intro')).toBeTruthy();
-    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+    expect(screen.getByText('map screen')).toBeTruthy();
+    expect(mockDispatch).not.toHaveBeenCalled();
   });
 
-  it('shows the map once anything has been started', async () => {
+  it('shows the map when the student has existing progress', async () => {
     mockLoad.mockResolvedValue({
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });
@@ -164,7 +164,7 @@ describe('PathwayApp', () => {
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
-  it('resumes at the step after the last completed one when opening an in-progress checkpoint', async () => {
+  it('resumes at the first incomplete step when opening an in-progress checkpoint', async () => {
     mockLoad.mockResolvedValue({
       steps: {
         'intro-step': {status: 'complete', timeSpent: 0},
@@ -191,7 +191,8 @@ describe('PathwayApp', () => {
 
       await renderSettled();
 
-      expect(screen.getByText('playing Next')).toBeTruthy();
+      // No step in URL → resumeStepId picks the first incomplete step.
+      expect(screen.getByText('playing Next at next-step')).toBeTruthy();
     });
 
     it('passes the URL step id to StepPlayer', async () => {

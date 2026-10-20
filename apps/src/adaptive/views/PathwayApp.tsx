@@ -86,18 +86,10 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       </div>
     );
   }
-  // Automatically start on the first checkpoint if there's no progress.
-  const noProgress = Object.keys(progress.steps).length === 0;
-  const autoCheckpointId = noProgress
-    ? pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id
-    : undefined;
-
   const params = new URLSearchParams(window.location.search);
   const urlCheckpointId = params.get('checkpoint') ?? undefined;
   const urlStepId = params.get('step') ?? undefined;
 
-  // URL target takes precedence over auto-start logic.
-  const initialCheckpointId = urlCheckpointId ?? autoCheckpointId;
   return (
     <LoadedPathwayApp
       pathway={pathway}
@@ -105,11 +97,11 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       progress={progress}
       statusMap={statusMap}
       initialView={
-        initialCheckpointId
-          ? {kind: 'step', checkpointId: initialCheckpointId}
+        urlCheckpointId
+          ? {kind: 'step', checkpointId: urlCheckpointId}
           : {kind: 'map'}
       }
-      initialCheckpointId={initialCheckpointId}
+      initialCheckpointId={urlCheckpointId}
       urlCheckpointId={urlCheckpointId}
       urlStepId={urlStepId}
       {...actions}

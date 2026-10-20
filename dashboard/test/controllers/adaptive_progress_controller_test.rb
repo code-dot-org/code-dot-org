@@ -163,9 +163,9 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     all = steps
     assert_equal 'complete', all['read']['status']
     assert_equal 'started',  all['quiz']['status']
-    # The frontend's resumeStepId scans these statuses to find the last complete
-    # step and resumes at the one after it.  Both non-level and level steps must
-    # return a status field for that to work across sessions.
+    # The frontend's resumeStepId scans these statuses left-to-right for the
+    # first step that is not complete.  Both non-level and level steps must
+    # return a status field for that scan to work across sessions.
   end
 
   test "level steps take their state from the step level's user level" do

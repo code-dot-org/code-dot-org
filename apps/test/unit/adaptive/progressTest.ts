@@ -104,12 +104,12 @@ describe('resumeStepId', () => {
 
   const resume = (steps: Progress['steps']) => resumeStepId(multi, {steps});
 
-  it('returns undefined when no steps are complete', () => {
-    expect(resume({})).toBeUndefined();
-    expect(resume({one: {status: 'started', timeSpent: 0}})).toBeUndefined();
+  it('returns the first step when none are complete', () => {
+    expect(resume({})).toBe('one');
+    expect(resume({one: {status: 'started', timeSpent: 0}})).toBe('one');
   });
 
-  it('returns the step after the last completed one', () => {
+  it('returns the first incomplete step', () => {
     expect(resume({one: {status: 'complete', timeSpent: 1}})).toBe('two');
     expect(
       resume({
@@ -129,7 +129,7 @@ describe('resumeStepId', () => {
     ).toBeUndefined();
   });
 
-  it('uses the last complete step even when later ones are only started', () => {
+  it('returns a started step as the next step to complete', () => {
     expect(
       resume({
         one: {status: 'complete', timeSpent: 1},
