@@ -13,6 +13,7 @@ import {render} from '@testing-library/react';
 import * as Blockly from 'blockly/core';
 import {beforeAll, beforeEach, describe, expect, it} from 'vitest';
 
+import {shelvedToolbox} from '../../progression/toolboxShelf';
 import {collisionsRule} from '../../rules/stock/collisions';
 import {inputRule} from '../../rules/stock/input';
 import BlocklyGenerator from '../BlocklyGenerator';
@@ -103,6 +104,30 @@ describe('a definition with a home elsewhere', () => {
     });
     expect(actor.hasDisabledReason(MISPLACED)).toBe(false);
     expect(row.hasDisabledReason(MISPLACED)).toBe(false);
+  });
+});
+
+describe('what a file may hold, against what its toolbox shows', () => {
+  // A lesson's shelf leaves out what the learner has not been given, and a
+  // learner who opens a lesson before `origin/first-world` has not been given
+  // `define world`. Checked against THAT toolbox, the world's own definition
+  // read as a block a world cannot hold, and was disabled with every row
+  // under it — a world that compiled to `export default world` and nothing
+  // else. So the check is made against the whole palette for the kind of
+  // file (`BlocklyFileEditor`, `holdable`), and the shelf is only advice.
+  it('keeps a world’s own definition, though the shelf has not got to it', () => {
+    const {toolbox} = buildDomainPalette(RULES, {fileKind: 'world'});
+    const shelved = shelvedToolbox(toolbox, {holds: () => false});
+    expect(typesOffered(shelved).has('world_world')).toBe(false);
+
+    const world = fileOf('world');
+    const root = world.newBlock('world_world');
+    const row = world.newBlock('world_add_actor');
+    root.nextConnection!.connect(row.previousConnection!);
+
+    review(root);
+    expect(root.isEnabled()).toBe(true);
+    expect(row.isEnabled()).toBe(true);
   });
 });
 

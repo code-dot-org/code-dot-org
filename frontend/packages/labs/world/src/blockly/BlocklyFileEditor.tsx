@@ -556,7 +556,7 @@ export const BlocklyFileEditor = ({
     return path ? files[path] : undefined;
   }, [currentSources.source, fileId, files]);
 
-  const {blocks, toolbox, unheard} = useMemo(() => {
+  const {blocks, toolbox, holdable} = useMemo(() => {
     const rules = projectRuleMetas(files);
     const palette = buildDomainPalette(rules, {
       ownRuleModule,
@@ -607,7 +607,15 @@ export const BlocklyFileEditor = ({
       // decided while the toolbox was built, and any of the three filters
       // above can leave one standing over nothing (`toolboxFilter`).
       toolbox: withoutEmptyHeadings(shelved),
-      unheard,
+      // What this kind of file may HOLD, which is the whole palette for it.
+      // Every filter above is advice about what to offer — a rule out of
+      // scope, a level's hidden drawers, an app's, a hat this actor cannot
+      // hear, a lesson's shelf — and none of them makes a block that is
+      // already in the file wrong to be there. Asking the shelved toolbox
+      // instead disabled `define world` itself in any lesson opened before
+      // `origin/first-world` was done, and a disabled world compiles to
+      // `export default world` and nothing else (`misplacedBlocks`).
+      holdable: typesOffered(palette.toolbox),
     };
   }, [
     files,
@@ -1344,15 +1352,7 @@ export const BlocklyFileEditor = ({
       // block pasted here from another tab cannot be here (`misplacedBlocks`).
       setFileContext(
         workspaceRef.current,
-        // The hats left out because this actor cannot hear them still count
-        // as offered: leaving them out is the toolbox's advice, and a file
-        // that holds one is not wrong to (`kindEvents.eventsUnheardBy`).
-        fileKind
-          ? {
-              kind: fileKind,
-              offered: new Set([...typesOffered(toolbox), ...unheard]),
-            }
-          : undefined,
+        fileKind ? {kind: fileKind, offered: holdable} : undefined,
       );
       // …and now that the workspace knows which file it is, the blocks that
       // draw the actor they are about can say so. HERE rather than only on
@@ -1367,8 +1367,7 @@ export const BlocklyFileEditor = ({
     currentSources.source,
     fileId,
     fileKind,
-    toolbox,
-    unheard,
+    holdable,
   ]);
 
   // Reload after a rename, once `blocks` carries the renamed member types —

@@ -48,7 +48,12 @@ const WARNING = 'misplaced';
 /** What a workspace is told about the file it edits. */
 export interface FileContext {
   kind: FileKind;
-  /** Every block type the file's toolbox offers. */
+  /**
+   * Every block type this kind of file's whole palette has: what it may HOLD,
+   * not what its toolbox shows. A lesson's shelf, a level's hidden drawers and
+   * a rule out of scope all leave blocks out of the toolbox that a file is
+   * still right to hold.
+   */
   offered: ReadonlySet<string>;
 }
 
