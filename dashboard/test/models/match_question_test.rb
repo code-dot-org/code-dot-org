@@ -52,13 +52,8 @@ class MatchQuestionTest < ActiveSupport::TestCase
     refute json.key?(:pairs)
     refute json.key?(:correctPairs)
     first, second = json[:matchSets]
-    assert_equal(['a', 'b', 'c'], first.map {|i| i['id']})
+    assert_equal ['a', 'b', 'c'], first.map {|i| i['id']}.sort
     assert_equal ['x', 'y', 'z'], second.map {|i| i['id']}.sort
-  end
-
-  test "attempt_content_json orders the second set the same way every time" do
-    question = create(:match_question)
-    assert_equal question.attempt_content_json, question.reload.attempt_content_json
   end
 
   test "answer_key_json lists each pair's item ids" do

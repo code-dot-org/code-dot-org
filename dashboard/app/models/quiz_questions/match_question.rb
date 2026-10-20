@@ -80,13 +80,10 @@ class MatchQuestion < QuizQuestion
     shared_content_json.merge(pairs: content['pairs'])
   end
 
-  # The second set is shuffled so its order does not mirror the first. The
-  # seed is fixed per question, so the order is stable across page loads.
   def attempt_content_json
     first_items = content['pairs'].map {|p| p['items'][0]}
     second_items = content['pairs'].map {|p| p['items'][1]}
-    shuffled = second_items.shuffle(random: Random.new(Digest::SHA256.hexdigest(key).to_i(16)))
-    shared_content_json.merge(matchSets: [first_items, shuffled])
+    shared_content_json.merge(matchSets: [first_items.shuffle, second_items.shuffle])
   end
 
   private def correct_pairs
