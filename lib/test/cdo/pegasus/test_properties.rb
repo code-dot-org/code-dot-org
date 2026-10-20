@@ -7,9 +7,7 @@ class PropertiesTest < Minitest::Test
   VALUE = 'value_to_delete'.freeze
 
   def setup
-    DB.transaction(retry_on: Sequel::DatabaseDisconnectError) do
-      DB[:properties].insert(key: KEY, value: VALUE.to_json)
-    end
+    DB[:properties].insert(key: KEY, value: VALUE.to_json)
   end
 
   def test_set_with_new_values
