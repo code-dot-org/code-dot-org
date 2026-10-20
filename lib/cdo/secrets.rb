@@ -148,10 +148,8 @@ module Cdo
     # @param keys[Array<String>]
     # @return [Hash<String, String>] Secret names and their values
     private def batch_get_secret_values(client, keys)
-      logger&.info("BatchGetSecretValue: #{keys.join(', ')}")
       response = client.batch_get_secret_value(secret_id_list: keys)
       # The SDK returns nil, not [], for a list absent from the response.
-      Array(response.errors).each {|error| logger&.info("BatchGetSecretValue: #{error.error_code}: #{error.secret_id}")}
       Array(response.secret_values).to_h {|secret| [secret.name, secret.secret_string]}
     # Any failure, e.g. a role not yet granted secretsmanager:BatchGetSecretValue, leaves every key to GetSecretValue.
     rescue => exception
@@ -164,7 +162,6 @@ module Cdo
     # @param key[String]
     # @return [String]
     private def get_secret_value(client, key)
-      logger&.info("GetSecretValue: #{key}")
       client.get_secret_value(
         secret_id: key,
         version_stage: CURRENT
