@@ -64,8 +64,9 @@ It generates `@blockly/field-colour`'s random-colour code. The colour field
 plugin leaves it in place when it is registered first (FLD-10).
 
 CMN-11. Every other entry is one of Blockly's own blocks (those
-`blockly/blocks` defines), under its own type, built by Blockly's
-initializer. Its generator is the one Blockly had for that type when the
+`blockly/blocks` defines), under its own type, with Blockly's initializer
+and every other method Blockly's definition has, such as
+`lists_create_with`'s `saveExtraState`. Its generator is the one Blockly had for that type when the
 package was first imported. A Driver replaces each registered type's
 generator with its own (DEF-13); capturing Blockly's beforehand is what
 keeps a re-registered stock block from calling the Driver's function, which
@@ -89,6 +90,10 @@ CMN-V3 (CMN-3). A `comment` block holding `hello` generates `// hello\n`.
 
 CMN-V4 (CMN-11). `math_number` registered from `BaseBlocks` through a Driver
 generates `['42', order]` for 42.
+
+CMN-V5 (CMN-11). `lists_create_with` registered from `BaseBlocks` through
+a Driver and loaded with `extraState: {itemCount: 5}` has an input `ADD4`,
+and saves `extraState: {itemCount: 5}`.
 
 ## Not specified here
 

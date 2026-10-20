@@ -95,3 +95,8 @@ these changes.
     inherited `default-dark`'s label, "Modern Dark Theme".
 11. The dropdown draws right-to-left text as apps' does, between override
     and pop-directional marks. See `fields.md`, FLD-9.
+12. `BaseBlocks`' stock entries carry every method of Blockly's
+    definition (CMN-11). `ngfp/blockly` kept only `init`, so the fourteen
+    stock blocks with more (`lists_create_with`, `lists_getIndex`, the
+    procedure blocks, `text_prompt` and others) lost their extra state or
+    failed to build once registered through a Driver.
