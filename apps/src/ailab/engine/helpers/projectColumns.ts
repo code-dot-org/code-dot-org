@@ -68,16 +68,14 @@ export function keepSelectableColumns(
   );
 }
 
-const sameMembership = (columns: string[], others: string[]): boolean =>
+const columnsMatch = (columns: string[], others: string[]): boolean =>
   columns.length === others.length &&
   columns.every(column => others.includes(column));
 
 /*
-  Settles a project on the columns given. Changing them discards the saved
-  training run, which describes a model over the columns as they were: rebuilt
-  over these, it would be a different model reported under the old run's
-  accuracy. The historic results stay, as each names the columns it was
-  trained on. Reordering alone changes nothing.
+  Applies the given columns to the project. If the selected columns differ
+  from the project's current columns, discard the current training run as it is
+  no longer valid. Historic results always stay.
 */
 function withColumns(
   project: AilabProject,
@@ -92,7 +90,7 @@ function withColumns(
   );
   const changed =
     labelColumn !== project.labelColumn ||
-    !sameMembership(selectedFeatures, project.selectedFeatures);
+    !columnsMatch(selectedFeatures, project.selectedFeatures);
 
   return {
     ...project,
