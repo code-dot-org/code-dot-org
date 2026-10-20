@@ -109,3 +109,9 @@ these changes.
     which left blocks of different widths overlapping, and had no
     `cleanUp`, so overlapping blocks that both had positions stayed
     overlapped. See `layout.md`, LAY-10 and LAY-11.
+15. The toolbox trashcan hides only its own workspace's toolbox (PLG-10),
+    and registers under an id of its own, which `dispose` removes along
+    with its listener and container (PLG-13). `ngfp/blockly`'s hid every
+    toolbox on the page, and its `dispose` removed Blockly's trashcan from
+    the component manager instead of itself, so a second one on the same
+    workspace threw.

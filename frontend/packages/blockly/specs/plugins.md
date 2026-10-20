@@ -123,7 +123,8 @@ as the toolbox (`getToolboxWidth`: the category list's width, the flyout's
 for a toolbox without categories, or 0 without a toolbox), at the left, or
 right to left at the view's width. It registers itself with the
 workspace's component manager as a delete area, a drag target and a
-positionable element, with weight -1, so that it, not the toolbox, receives
+positionable element, under the id `toolboxTrashcan-` and the workspace's
+id, with weight -1, so that it, not the toolbox, receives
 drags over the toolbox. Blockly repositions it when the workspace resizes.
 
 PLG-9. The trashcan is a body and a lid drawn as SVG shapes, filled with
@@ -136,10 +137,11 @@ PLG-10. On a block drag's start, unless the drag began in a flyout, the
 trashcan's container is shown and the toolbox's contents hidden: every
 flyout workspace not inside a block field
 (`.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace`) and every
-category list (`.blocklyToolboxCategoryGroup`). On the drag's end the
-container is hidden and they are shown. These are found in the whole
-document, so a drag in one workspace hides the toolboxes of every
-workspace on the page, as in apps. Other events change nothing.
+category list (`.blocklyToolboxCategoryGroup`) within the workspace's
+injection element. On the drag's end the container is hidden and they are
+shown. Other events change nothing. Apps looks for these in the whole
+document, so a drag in one of its workspaces hides every toolbox on the
+page.
 
 PLG-11. While the container is shown, the "not allowed" mark is shown if
 any dragged block can be neither deleted nor is a shadow block. Blockly
@@ -152,13 +154,11 @@ dropped; apps closes it at once on a drop. It swings to 45 degrees in
 fifths, 20 milliseconds apart, hinged on the side away from the toolbox,
 while the trashcan's opacity goes from 0.8 to 1.
 
-PLG-13. `dispose()` removes the drawing and cancels any lid animation, and
-removes from the component manager the component named `trashcan`. The
-trashcan sets no id of its own, so that is Blockly's trashcan, when the
-workspace has one, and not this one. It leaves the container in the page
-and its change listener on the workspace until the workspace is disposed,
-and a second `ToolboxTrashcan` on the same workspace throws, its id
-colliding with the first's.
+PLG-13. `dispose()` cancels any lid animation, removes the trashcan from
+the component manager, removes its change listener, and removes its
+container from the page. A workspace's own trashcan, if it has one, is
+left as it was, and the workspace may have another `ToolboxTrashcan`
+afterwards. Apps' trashcan lives as long as the page and has no `dispose`.
 
 ### Test vectors
 
@@ -177,8 +177,4 @@ the "not allowed" mark.
 
 ### Open questions
 
-1. PLG-10: find the toolbox contents within the trashcan's own workspace
-   rather than the document?
-2. PLG-13: give the trashcan an id, and have `dispose` remove it, its
-   container and its listener?
-3. PLG-9: draw apps' sprite instead, so the two look the same?
+1. PLG-9: draw apps' sprite instead, so the two look the same?

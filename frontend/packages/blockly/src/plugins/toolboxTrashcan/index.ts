@@ -82,12 +82,14 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
   private svgGroup?: SVGElement;
   private svgLid?: SVGGElement;
   private notAllowed?: SVGElement;
+  private changeListener?: (event: Blockly.Events.Abstract) => void;
 
   constructor(workspace: Blockly.WorkspaceSvg, theme: Theme) {
     super();
 
     // Retain workspace reference
     this.workspace = workspace;
+    this.id = `toolboxTrashcan-${workspace.id}`;
 
     // Determine the light/dark status of the theme
     this.trashcanFillColor = theme.definition.trashcan.fill;
@@ -114,7 +116,8 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
    * Called by Blockly.inject after the workspace is created
    */
   init() {
-    this.workspace.addChangeListener(this.workspaceChangeHandler.bind(this));
+    this.changeListener = this.workspaceChangeHandler.bind(this);
+    this.workspace.addChangeListener(this.changeListener);
 
     const svgGroup = this.createDom();
     this.container.appendChild(svgGroup);
@@ -143,10 +146,11 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
    * Unlink from all DOM elements to prevent memory leaks.
    */
   dispose() {
-    this.workspace.getComponentManager().removeComponent('trashcan');
-    if (this.svgGroup) {
-      dom.removeNode(this.svgGroup);
+    this.workspace.getComponentManager().removeComponent(this.id);
+    if (this.changeListener) {
+      this.workspace.removeChangeListener(this.changeListener);
     }
+    dom.removeNode(this.container);
     if (this.lidTask) {
       clearTimeout(this.lidTask);
     }
@@ -167,11 +171,9 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
         toolboxVisibility = 'hidden';
       }
 
-      // Toggle the toolbox/flyout contents: the flyout workspace for a
-      // flyout-only toolbox, and the category list for a categorized one. (An
-      // earlier separate query for .blocklyToolboxContents was dead code — that
-      // class does not exist in Blockly v13 and matched nothing.)
-      document
+      // A toolbox without categories is a flyout; one with them, a category list.
+      this.workspace
+        .getInjectionDiv()
         .querySelectorAll<SVGElement>(
           '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace, .blocklyToolboxCategoryGroup',
         )

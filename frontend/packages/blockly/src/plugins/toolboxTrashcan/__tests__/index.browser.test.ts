@@ -221,3 +221,83 @@ describe('plugins.md: ToolboxTrashcan', () => {
     expect(document.querySelector('.blocklyTrash')).toBeNull();
   });
 });
+
+describe('plugins.md: ToolboxTrashcan on a page', () => {
+  const categories = {
+    kind: 'categoryToolbox',
+    contents: [
+      {
+        kind: 'category',
+        name: 'Text',
+        contents: [{kind: 'block', type: 'text_print'}],
+      },
+    ],
+  };
+
+  const injectWithToolbox = () => {
+    const div = document.createElement('div');
+    div.style.width = '800px';
+    div.style.height = '600px';
+    document.body.appendChild(div);
+    return {div, ws: Blockly.inject(div, {toolbox: categories})};
+  };
+
+  it("PLG-10: a drag hides only its own workspace's toolbox", () => {
+    workspace.dispose();
+    const mine = injectWithToolbox();
+    const other = injectWithToolbox();
+    workspace = mine.ws;
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+
+    const block = append('text_print');
+    setDraggingFromToolbox(workspace, false);
+    trashcan.workspaceChangeHandler(dragEvent([block], true));
+
+    const group = (div: HTMLDivElement) =>
+      div.querySelector<HTMLElement>('.blocklyToolboxCategoryGroup');
+    expect(group(mine.div)?.style.visibility).toBe('hidden');
+    expect(group(other.div)?.style.visibility).not.toBe('hidden');
+
+    trashcan.workspaceChangeHandler(dragEvent([block], false));
+    other.ws.dispose();
+    other.div.remove();
+    mine.div.remove();
+  });
+
+  it("PLG-13: dispose removes the trashcan and leaves Blockly's own", () => {
+    workspace.dispose();
+    workspace = Blockly.inject(container, {
+      toolbox: categories,
+      trashcan: true,
+    });
+    const manager = workspace.getComponentManager();
+    expect(manager.getComponent('trashcan')).toBeDefined();
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const {container: overlay} = internals(trashcan);
+
+    trashcan.dispose();
+    const id = trashcan.id;
+    trashcan = undefined;
+
+    expect(manager.getComponent('trashcan')).toBeDefined();
+    expect(manager.getComponent(id)).toBeUndefined();
+    expect(document.contains(overlay)).toBe(false);
+  });
+
+  it('PLG-13: a workspace may have a second trashcan after the first is disposed', () => {
+    new ToolboxTrashcan(workspace, DefaultTheme).dispose();
+    expect(() => {
+      trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    }).not.toThrow();
+  });
+
+  it('PLG-13: a disposed trashcan ignores later drags', () => {
+    const first = new ToolboxTrashcan(workspace, DefaultTheme);
+    const {container: overlay} = internals(first);
+    first.dispose();
+    const block = append('text_print');
+    setDraggingFromToolbox(workspace, false);
+    workspace.fireChangeListener(dragEvent([block], true));
+    expect(overlay.style.visibility).toBe('hidden');
+  });
+});
