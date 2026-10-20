@@ -151,3 +151,8 @@ these changes.
     anew whenever an option changed identity, so a lab passing `blocks`
     made during render remounted every embedded workspace on every
     render.
+22. The mini toolbox saves whether its flyout is open as apps does,
+    `useDefaultIcon: false`, and loads it so (MT-7), and does not save the
+    toggle's empty value. `ngfp/blockly`'s loaded every block shut and
+    saved the toggle, so a headless load, such as code generation's,
+    warned of a field the block lacked.

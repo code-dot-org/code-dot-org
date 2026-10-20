@@ -100,10 +100,43 @@ export function addMiniToolbox(
     allowReadOnlyClick: true,
     onClick: () => toggleFlyout(block, toggle),
   });
+  // Its value is always empty; saved, it is a field a headless load lacks.
+  // Blockly saves an editable field too (FLD-17).
+  toggle.SERIALIZABLE = false;
+  toggle.EDITABLE = false;
   block.inputList[0].insertFieldAt(0, toggle, `${FLYOUT_INPUT}_TOGGLE`);
   if (tooltip) {
     toggle.setTooltip(tooltip);
   }
+  saveOpenState(block, toggle);
+}
+
+/**
+ * Save whether the flyout is open, as apps does: `useDefaultIcon: false`
+ * (the minus) is open. Any extra state the block saves of its own is kept.
+ * A block with only XML mutation hooks is left alone, since a JSON hook would
+ * replace them.
+ */
+function saveOpenState(block: Blockly.BlockSvg, toggle: FieldButton): void {
+  if (block.mutationToDom && !block.saveExtraState) {
+    return;
+  }
+  const saveOwn = block.saveExtraState?.bind(block);
+  const loadOwn = block.loadExtraState?.bind(block);
+  block.saveExtraState = (doFullSerialization?: boolean) => {
+    const own = saveOwn?.(doFullSerialization) ?? null;
+    if (!block.getInput(FLYOUT_INPUT)) {
+      return own;
+    }
+    return {...(own ?? {}), useDefaultIcon: false};
+  };
+  block.loadExtraState = (state: {useDefaultIcon?: boolean}) => {
+    const {useDefaultIcon, ...own} = state ?? {};
+    loadOwn?.(own);
+    if (useDefaultIcon === false && !block.getInput(FLYOUT_INPUT)) {
+      toggleFlyout(block, toggle);
+    }
+  };
 }
 
 /** Open the flyout by adding its input, or shut it by removing it. */
