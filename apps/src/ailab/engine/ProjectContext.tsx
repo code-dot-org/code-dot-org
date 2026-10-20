@@ -66,6 +66,13 @@ export const ProjectProvider = ({
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
+  // The rows and the column types arrive separately, and a dataset is only
+  // described once both have. A described dataset may still offer no
+  // selectable column, which is not the same as not having loaded.
+  const columnTypesKnown = useAppSelector(
+    state => Object.keys(state.columnsByDataType).length > 0
+  );
+  const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
     useCallback((keepsHistoricResults: boolean) => {
@@ -170,28 +177,29 @@ export const ProjectProvider = ({
     Opens a saved project, which may name columns this dataset no longer has
     and predates any preset the level applies.
 
-    Waits for the dataset to exist (has at least one selectable column)
-    before applying the project.
+    Waits for the dataset to be described before applying the project. A
+    described dataset that offers nothing selectable still applies: the columns
+    drop, but the historic results are kept.
   */
   const openProject = useCallback(
     (saved: AilabProject) => {
-      if (selectableColumns.length === 0) {
+      if (!datasetDescribed) {
         pendingProject.current = saved;
         return;
       }
       pendingProject.current = undefined;
       applyProject(saved);
     },
-    [selectableColumns, applyProject]
+    [datasetDescribed, applyProject]
   );
 
   useEffect(() => {
     const saved = pendingProject.current;
-    if (saved && selectableColumns.length > 0) {
+    if (saved && datasetDescribed) {
       pendingProject.current = undefined;
       applyProject(saved);
     }
-  }, [selectableColumns, applyProject]);
+  }, [datasetDescribed, applyProject]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {

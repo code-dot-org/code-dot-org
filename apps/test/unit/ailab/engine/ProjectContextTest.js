@@ -3,7 +3,10 @@ import {createElement} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
+import {
+  ColumnTypes,
+  UNIQUE_OPTIONS_MAX,
+} from '@cdo/apps/ailab/engine/constants';
 import {
   ProjectProvider,
   useProject,
@@ -445,6 +448,33 @@ describe('ProjectContext opening a saved project', () => {
     );
 
     expect(project()).toEqual(SAVED);
+  });
+
+  /*
+    Every column of this dataset is categorical with more unique values than
+    the lab will offer, so it is fully described and still has nothing to pick
+    from. That is not the same as a dataset that has yet to load.
+  */
+  test('opens against a dataset that offers nothing selectable', () => {
+    const store = createStore(rootReducer);
+    const crowded = Array.from({length: UNIQUE_OPTIONS_MAX + 10}, (_, row) => ({
+      a: `a${row}`,
+      b: `b${row}`,
+      c: `c${row}`,
+    }));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    act(() => {
+      store.dispatch(setImportedData(crowded, true));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
+      );
+    });
+
+    expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual([]);
+    expect(project().historicResults).toEqual(SAVED.historicResults);
   });
 
   test('a reset drops a project still waiting for its dataset', () => {
