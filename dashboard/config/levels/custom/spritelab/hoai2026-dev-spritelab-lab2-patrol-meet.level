@@ -45,7 +45,9 @@
             "kind": "block",
             "type": [
               "gamelab_spriteSay",
-              "spritelab2_restartScene"
+              "spritelab2_restartScene",
+              "spritelab2_burst",
+              "spritelab2_playSound"
             ],
             "data": "patrol-touch"
           }
@@ -80,6 +82,14 @@
         {
           "kind": "block",
           "type": "spritelab2_restartScene"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound"
         }
       ]
     },
