@@ -41,6 +41,7 @@ what the code does, even where that is wrong.
 | 15   | `flyout.md`          | FLY-   | `BlocklyFlyout`                                                          | 1b     | written |
 | 16   | `markdown.md`        | MD-    | blocks embedded in markdown                                              | 1b, 13 | written |
 | 17   | `mini-toolbox.md`    | MT-    | the mini-toolbox field                                                   | 1b, 6  | written |
+| 18   | —                    | —      | the package README, `docs/COVERAGE.md`, the demo's lesson modes          | 17     | written |
 
 The labs in the `ngfp` stack need parts 1a through 11, and the
 `toolboxToWorkspaceBlocks` utility of part 13. Parts 2, 3, 4 and 5 depend
@@ -70,8 +71,13 @@ these changes.
    cheaply can: version `0.0.0`; no `"type": "module"`, so the ESLint
    configuration is `eslint.config.mjs`; `build.emptyOutDir: false` and a
    `clean` script. It declares `events` and `@vitejs/plugin-react`, which
-   it imports but did not declare. Each part brings only the dependencies its code uses.
-   `copy.mjs`, which nothing runs, is not carried over.
+   it imports but did not declare. Each part brings only the dependencies its code uses,
+   and the demo's design-system packages are development dependencies.
+   Not carried over: `copy.mjs`, which nothing runs; `src/tsconfig.json`,
+   which no build reads; `public/README.md`, for a storybook the package
+   does not have; `src/README.md`, which held only headings; and the
+   dependencies nothing imports, among them `swiper`, `release-it`,
+   `clean-package` and `postcss`.
 5. The renderer computes dark-theme secondary colours for the theme being
    set. `ngfp/blockly` computed them for the theme before it, so a
    workspace that started dark had Blockly's colours, and one switched from
@@ -81,9 +87,13 @@ these changes.
    collision layout itself. The workspace part does not depend on the layout
    part. Part 9 makes the collision layout the prop's default, which restores
    `ngfp/blockly`'s behaviour for labs that pass nothing.
-7. The demo starts as one workspace over Blockly's own blocks. The lesson
-   modes, theme menu and instructions panel of `ngfp/blockly`'s demo return
-   with the parts they show.
+7. The demo began as one workspace over Blockly's own blocks, and
+   `ngfp/blockly`'s lesson modes, theme menu and instructions panel came
+   back together in part 18, with modes added for the parts that had none
+   (custom fields, common blocks, scrolling, typed variables, the mini
+   toolbox), and with the text of the gray-out and procedures modes
+   corrected to what those plugins do. The draggable-instructions mode is
+   chosen by the mode's `draggable`, not by its id.
 8. `BlocklyProvider` constructs its Driver once. `ngfp/blockly` constructed
    one on every render and kept the first, so every render of a lab under
    `lab-base`'s `BlocklyLab` ran a Driver constructor and initialized the
