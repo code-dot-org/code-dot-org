@@ -201,7 +201,7 @@ class LtiV1Controller < ApplicationController
           user: user,
           event_name: 'lti_user_signin',
           metadata: metadata,
-          session: session,
+          request: request,
         )
 
         # Ensure the LTI user identity and deployment association exists

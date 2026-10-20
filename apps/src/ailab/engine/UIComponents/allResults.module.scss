@@ -1,0 +1,51 @@
+@use '../sharedMixins' as mixins;
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 24px 24px;
+}
+
+// Fixed, so a cell's width never grows to fit an uncollapsed sentence.
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  // Code Studio's global th rule fills headers and borders them in white.
+  th {
+    padding: 0 0 10px;
+    background-color: transparent;
+    border: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.72px;
+    text-align: start;
+    text-transform: uppercase;
+    color: var(--text-neutral-quaternary);
+  }
+
+  td {
+    padding: 10px 0;
+    border-top: 1px solid var(--border-neutral-primary);
+  }
+
+  tr:last-child td {
+    padding-bottom: 0;
+  }
+}
+
+.accuracy {
+  @include mixins.accuracy-readout;
+
+  width: 80px;
+}
+
+.empty {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-neutral-secondary);
+}

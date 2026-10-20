@@ -1,0 +1,84 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-04T02:11:35.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##An AI saw mostly wizards in pointy hats. So it usually draws them that way.",
+        "imageUrl": "",
+        "key": "HoAI26-How-cfu-test-dc2d6114-2f43-46a4-8389-30bfb222a4cc",
+        "links": [
+          {
+            "text": "**True**",
+            "x": 34,
+            "y": 70,
+            "targetKey": "HoAI26-How-cfu-test-8f04b86f-d177-4024-9aa3-431ef727d468",
+            "width": 26
+          },
+          {
+            "text": "**False**",
+            "x": 72,
+            "y": 70,
+            "targetKey": "HoAI26-How-cfu-test-6be19a10-f6bb-4abe-93d8-7a232047913c",
+            "width": 25
+          }
+        ],
+        "layout": "text-top-center"
+      },
+      {
+        "text": "True: **Yes!** The AI usually makes what it saw the most.",
+        "imageUrl": "",
+        "key": "HoAI26-How-cfu-test-8f04b86f-d177-4024-9aa3-431ef727d468",
+        "links": [
+          {
+            "text": "Next",
+            "x": 50,
+            "y": 74,
+            "targetKey": "HoAI26-How-cfu-test-7185db35-3d6c-498a-b50a-9023865364ba"
+          }
+        ]
+      },
+      {
+        "text": "**Not quite.** The AI learned from lots of pictures, so it usually makes what it saw the most.",
+        "imageUrl": "",
+        "key": "HoAI26-How-cfu-test-6be19a10-f6bb-4abe-93d8-7a232047913c",
+        "links": [
+          {
+            "text": "Next",
+            "x": 50,
+            "y": 74,
+            "targetKey": "HoAI26-How-cfu-test-7185db35-3d6c-498a-b50a-9023865364ba"
+          }
+        ]
+      },
+      {
+        "text": "\"An AI picture is a photo of something that really exists.\" (false)\n\n--> True: **Not quite.** The AI makes a new picture from patterns it learned. It isn't a photo of a real thing.\n\n--> False: **Yes!** The AI makes the picture up from patterns, so it can look real without being real.",
+        "imageUrl": "",
+        "key": "HoAI26-How-cfu-test-7185db35-3d6c-498a-b50a-9023865364ba",
+        "links": [
+          {
+            "text": "",
+            "x": 50,
+            "y": 50,
+            "targetKey": "HoAI26-How-cfu-test-60653286-11b2-4499-a089-8cfc192bcf31"
+          }
+        ]
+      },
+      {
+        "text": "\"If I ask an AI for 'a dragon' and don't say what color, it picks a color for me.\" (true)\n\n--> True: **Yes!** When you leave something out, the AI fills it in with what's common. Notice what it chose.\n\n--> False: **Not quite.** The AI fills in whatever you leave out, usually with what's common. That's why it's worth noticing.",
+        "imageUrl": "",
+        "key": "HoAI26-How-cfu-test-60653286-11b2-4499-a089-8cfc192bcf31",
+        "showContinueButton": true
+      }
+    ],
+    "use_links": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-04 02:12:53 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:14:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:24:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:27:48 +0000\",\"changed\":[\"panels\",\"use_links\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:31:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:33:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:35:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 02:36:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-05 20:40:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -6,6 +6,10 @@ import TeacherPromotions from '@cdo/apps/templates/studioHomepages/teacherHomepa
 import HttpClient from '@cdo/apps/util/HttpClient';
 import * as localStorageUtils from '@cdo/apps/utils';
 
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
 jest.mock('@cdo/apps/util/HttpClient');
 jest.mock('@cdo/apps/utils', () => ({
   trySetLocalStorage: jest.fn(),

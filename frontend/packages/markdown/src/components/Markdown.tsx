@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
 import {
   useMemo,
-  useSyncExternalStore,
   type CSSProperties,
   type ElementType,
   type ReactNode,
@@ -18,6 +17,10 @@ import {unified} from 'unified';
 
 import {Typography, type TypographyProps} from '@mui/material';
 
+import {
+  componentSizeToBodyTextSizeMap,
+  type BodyTextSizeVariant,
+} from '@code-dot-org/component-library/common/constants';
 import Divider from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
 
@@ -28,16 +31,8 @@ import {
   composeSanitizeSchema,
   preprocessMarkdown,
   type MarkdownExtension,
-  type SanitizeSchema,
 } from '../extension';
-import {
-  getLocalizationVersion,
-  isLocalizationActive,
-  subscribeLocalization,
-  translateHtml,
-} from '../localization';
 import rehypeListItemParagraphs from '../rehypeListItemParagraphs';
-import rehypeLocalize from '../rehypeLocalize';
 
 import moduleStyles from './markdown.module.css';
 
@@ -49,6 +44,21 @@ export interface MarkdownProps {
   /** Additional class name for the wrapping container. */
   className?: string;
   /**
+   * Render as phrasing content: one `<span>`, no block wrapper and no paragraph
+   * typography, for markdown that sits inside a sentence or a list item. Block
+   * syntax (headings, lists, quotes, fences, rules) is switched off, so it stays
+   * literal text rather than producing block markup inside an inline context.
+   * The surrounding element supplies the type scale, so `bodyVariant` does not
+   * apply.
+   */
+  inline?: boolean;
+  /**
+   * Type scale for body text -- paragraphs, including those inside list items,
+   * and the links inside them. Defaults to `body2`. Headings and other elements
+   * keep their own variants. Ignored when `inline` is set.
+   */
+  bodyVariant?: BodyTextSizeVariant;
+  /**
    * Markdown extensions to enable for this render. Each extension is a
    * self-contained bundle of plugins, allowlist additions, and component
    * mappings (see {@link MarkdownExtension}); only the behaviors listed here are
@@ -57,6 +67,19 @@ export interface MarkdownProps {
    */
   extensions?: MarkdownExtension[];
 }
+
+/*
+ * The design system sizes Link by component size (`m` -> body2, and so on)
+ * rather than by typography variant, so body text and the links inside it are
+ * set from two different scales. Inverting the library's own map keeps them in
+ * step: a body4 paragraph gets xs links, not the 1rem default.
+ */
+const LINK_SIZE_BY_BODY_VARIANT = Object.fromEntries(
+  Object.entries(componentSizeToBodyTextSizeMap).map(([size, variant]) => [
+    variant,
+    size,
+  ]),
+) as Record<BodyTextSizeVariant, keyof typeof componentSizeToBodyTextSizeMap>;
 
 /*
  * Localization wrappers. Our i18n tooling keys off these attributes to localize
@@ -70,11 +93,9 @@ const LOCALIZE_LINK_ATTRS = {
   'data-lz-url': 'true',
   'data-localize': 'markdown-url',
 };
-// data-isolate marks a paragraph as a runtime translation unit; data-notranslate
-// marks one already translated at build time by rehypeLocalize, so the runtime
-// engine leaves it alone.
+// data-isolate makes a paragraph one translation unit; an extension marks
+// content inside it that must not be translated with data-ignore.
 const LOCALIZE_PARAGRAPH_ATTRS = {'data-isolate': 'true'};
-const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
 
 /*
  * Every component below forwards `className` and `style`. A mapped element
@@ -84,42 +105,36 @@ const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
  * When that extension is not enabled, the sanitizer has already removed the
  * attribute and there is nothing to forward.
  */
-const MarkdownLink: Components['a'] = ({
-  children,
-  href,
-  className,
-  style,
-  target,
-}) => (
-  // A `target="_blank"` on the node (set by the externalLinks extension) maps to
-  // the design-system Link's openInNewTab, which also applies rel=noopener.
-  <Link
-    href={href}
-    className={className}
-    style={style}
-    openInNewTab={target === '_blank'}
-    {...LOCALIZE_LINK_ATTRS}
-  >
-    {children}
-  </Link>
-);
+const makeLink =
+  (bodyVariant: BodyTextSizeVariant): Components['a'] =>
+  ({children, href, className, style, target}) => (
+    // A `target="_blank"` on the node (set by the externalLinks extension) maps
+    // to the design-system Link's openInNewTab, which also applies rel=noopener.
+    <Link
+      href={href}
+      size={LINK_SIZE_BY_BODY_VARIANT[bodyVariant]}
+      className={className}
+      style={style}
+      openInNewTab={target === '_blank'}
+      {...LOCALIZE_LINK_ATTRS}
+    >
+      {children}
+    </Link>
+  );
 
 /*
  * MUI Typography forwards unknown props (including our `data-*` localization
- * attributes) to the rendered element, so the isolation/notranslate markers
- * survive. When localization is active, rehypeLocalize has already translated
- * the content at build time, so we mark the paragraph data-notranslate;
- * otherwise data-isolate marks it for the runtime translation path.
+ * attributes) to the rendered element, so the isolation marker survives.
  */
 const makeParagraph =
-  (localized: boolean): Components['p'] =>
+  (variant: BodyTextSizeVariant): Components['p'] =>
   ({children, className, style}) => (
     <Typography
-      variant="body2"
+      variant={variant}
       component="p"
       className={className}
       style={style}
-      {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
+      {...LOCALIZE_PARAGRAPH_ATTRS}
     >
       {children}
     </Typography>
@@ -154,7 +169,9 @@ const muiText =
     </Typography>
   );
 
-const baseComponents = (localized: boolean): Partial<Components> => ({
+const baseComponents = (
+  bodyVariant: BodyTextSizeVariant,
+): Partial<Components> => ({
   h1: muiText('h1', 'h1'),
   h2: muiText('h2', 'h2'),
   h3: muiText('h3', 'h3'),
@@ -163,8 +180,8 @@ const baseComponents = (localized: boolean): Partial<Components> => ({
   h6: muiText('h6', 'h6'),
   strong: muiText('strong', 'strong'),
   em: muiText('em', 'em'),
-  a: MarkdownLink,
-  p: makeParagraph(localized),
+  a: makeLink(bodyVariant),
+  p: makeParagraph(bodyVariant),
   // `---` renders as a themed design-system divider. (Divider is not yet
   // MUI-migrated, so the DSCO component is the design-system component here.)
   hr: ({className, style}) => <Divider className={className} style={style} />,
@@ -173,12 +190,24 @@ const baseComponents = (localized: boolean): Partial<Components> => ({
 const NO_EXTENSIONS: MarkdownExtension[] = [];
 
 /*
- * A sanitize pass with a fresh attacher identity. unified de-duplicates plugins
- * by reference, so calling `.use(rehypeSanitize, schema)` twice reconfigures the
- * single registration instead of adding a second pass. Wrapping mints a distinct
- * attacher each call, so the before- and after-localization passes both run.
+ * Block constructs, switched off for an inline render. Disabling them in the
+ * tokenizer is what makes the inline contract enforceable: a definition that
+ * happens to start with "- " stays text instead of becoming a <ul> inside a
+ * <span>. Named as micromark knows them.
  */
-const sanitizePass = (schema: SanitizeSchema) => () => rehypeSanitize(schema);
+// Renders a mapped element's children in its place, dropping the element.
+const PassThrough: Components['p'] = ({children}) => <>{children}</>;
+
+const BLOCK_CONSTRUCTS = [
+  'blockQuote',
+  'codeFenced',
+  'codeIndented',
+  'headingAtx',
+  'htmlFlow',
+  'list',
+  'setextHeading',
+  'thematicBreak',
+];
 
 /*
  * Compose the pipeline from the base behavior plus the enabled extensions.
@@ -186,16 +215,11 @@ const sanitizePass = (schema: SanitizeSchema) => () => rehypeSanitize(schema);
  * rehype plugins run after raw-HTML reparsing but before sanitization, so their
  * output is still constrained by the (extension-widened) allowlist; extension
  * components are merged over the base mappings.
- *
- * Sanitization runs before localization. rehypeLocalize round-trips block
- * content through a live DOM (innerHTML) inside the translator, so the tree must
- * already be safe at that point — sanitizing only afterward would be too late to
- * stop markup that auto-executes on parse. When localization is active, a second
- * sanitize pass then constrains the translator's reparsed output.
  */
 const buildProcessor = (
   extensions: MarkdownExtension[],
-  localized: boolean,
+  bodyVariant: BodyTextSizeVariant,
+  inline: boolean,
 ) => {
   const sanitizeSchema = composeSanitizeSchema(defaultSchema, extensions);
 
@@ -213,23 +237,16 @@ const buildProcessor = (
     // wrapper already classifies correctly.
     .use(rehypeListItemParagraphs)
     .use(collectRehypePlugins(extensions))
-    // Sanitize before localization, not after: rehypeLocalize serializes each
-    // block and reparses it through a live DOM, so the content it handles has
-    // to be safe going in.
-    .use(sanitizePass(sanitizeSchema));
+    .use(rehypeSanitize, sanitizeSchema);
 
-  if (localized) {
-    // `summary` is included so details summaries (inline content after
-    // unwrapping) are translated like paragraph text.
-    processor.use(rehypeLocalize, {
-      translate: translateHtml,
-      blockTags: ['p', 'summary'],
-    });
-    // Re-sanitize the localized tree: the stashed originals are already safe,
-    // but the translator's output was reparsed and spliced back in, so hold it
-    // to the same allowlist. A distinct attacher (sanitizePass) so this is a
-    // genuine second pass, not a reconfiguration of the first.
-    processor.use(sanitizePass(sanitizeSchema));
+  if (inline) {
+    // Append rather than assign: remark-gfm has already registered its own
+    // micromark extensions under this key.
+    const micromarkExtensions = processor.data('micromarkExtensions') ?? [];
+    processor.data('micromarkExtensions', [
+      ...micromarkExtensions,
+      {disable: {null: BLOCK_CONSTRUCTS}},
+    ]);
   }
 
   return processor.use(rehypeReact, {
@@ -241,7 +258,14 @@ const buildProcessor = (
     // Blockly `<xml>` re-serialized to a workspace) need it; base components
     // destructure only the props they use, so the extra prop is inert for them.
     passNode: true,
-    components: composeComponents(baseComponents(localized), extensions),
+    components: composeComponents(
+      inline
+        ? // The one paragraph the parser still produces is the wrapping span
+          // itself, which carries the localization marker in its place.
+          {...baseComponents(bodyVariant), p: PassThrough}
+        : baseComponents(bodyVariant),
+      extensions,
+    ),
   });
 };
 
@@ -250,35 +274,36 @@ const buildProcessor = (
  * design-system components.
  *
  * Provide the markdown as the `content` prop or as a single string child. Pass
- * `extensions` to enable additional syntax, tags, or behaviors a la carte.
+ * `extensions` to enable additional syntax, tags, or behaviors a la carte,
+ * `bodyVariant` to size body text, and `inline` for markdown that has to render
+ * as phrasing content.
  *
- * Localization is automatic: when the core localization plugin has loaded
- * LocalizeJS, content is translated in place and re-translated on locale change
- * (see `localization.ts`); otherwise it is a no-op.
+ * Output is not translated here: paragraphs carry `data-isolate`, and the
+ * on-page translator (LocalizeJS) translates the rendered DOM.
  */
 const Markdown = ({
   content,
   className,
+  bodyVariant = 'body2',
+  inline = false,
   extensions = NO_EXTENSIONS,
   children,
 }: MarkdownProps) => {
-  // Re-render (and re-run the synchronous translate) when LocalizeJS loads or
-  // the locale changes. Inactive until then — the runtime data-isolate path,
-  // with no per-render translation cost.
-  useSyncExternalStore(
-    subscribeLocalization,
-    getLocalizationVersion,
-    getLocalizationVersion,
-  );
-  const localized = isLocalizationActive();
-
   const processor = useMemo(
-    () => buildProcessor(extensions, localized),
-    [extensions, localized],
+    () => buildProcessor(extensions, bodyVariant, inline),
+    [extensions, bodyVariant, inline],
   );
 
   const source = preprocessMarkdown(content ?? children ?? '', extensions);
   const rendered = processor.processSync(source).result;
+
+  if (inline) {
+    return (
+      <span className={className} {...LOCALIZE_PARAGRAPH_ATTRS}>
+        {rendered}
+      </span>
+    );
+  }
 
   return (
     <div className={classNames(moduleStyles.markdownContainer, className)}>

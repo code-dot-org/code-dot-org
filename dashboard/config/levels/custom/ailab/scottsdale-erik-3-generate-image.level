@@ -12,8 +12,7 @@
     "long_instructions": "TODOs:\r\n* Select the dataset about shapes.\r\n* Decide what attribute of the shapes the AI should try to predict.\r\n* Choose the characteristics of the shapes the AI should use to make its predictions.\r\n* Train your AI model with the selected data.\r\n* See how well your AI model predicts the shape attribute.\r\n* Review the accuracy of your AI's predictions.",
     "generate_outline": "Use image generation to create the image users will first see at the top of the site.",
     "encrypted": "false",
-    "instructions_important": "false",
-    "hide_share_and_remix": "false"
+    "instructions_important": "false"
   },
   "audit_log": "[{\"changed_at\":\"2026-09-15 20:44:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:54 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:52:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

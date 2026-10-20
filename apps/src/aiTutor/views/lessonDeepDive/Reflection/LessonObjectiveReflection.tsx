@@ -20,17 +20,17 @@ interface LessonObjectiveReflectionProps {
 const BUTTONS: {value: ReflectionValue; icon: string; label: string}[] = [
   {
     value: LessonObjectiveReflectionValues.LOST,
-    icon: 'face-anxious-sweat',
-    label: 'Struggling',
+    icon: 'eyes',
+    label: 'New to me',
   },
   {
     value: LessonObjectiveReflectionValues.UNSURE,
-    icon: 'face-thinking',
+    icon: 'battery-half',
     label: 'Getting there',
   },
   {
     value: LessonObjectiveReflectionValues.CONFIDENT,
-    icon: 'face-grin-stars',
+    icon: 'thumbs-up',
     label: 'Got it',
   },
 ];
@@ -40,29 +40,27 @@ const LessonObjectiveReflection: FC<LessonObjectiveReflectionProps> = ({
   selected,
   onSelectionChange,
 }) => (
-  <div className={styles.objectiveCard}>
-    <p className={styles.objectiveDescription}>{objective.description}</p>
-    <div className={styles.ratingButtons}>
-      {BUTTONS.map(({value, icon, label}) => {
-        const isActive = selected === value;
-        return (
-          <button
-            key={value}
-            type="button"
-            onClick={() => onSelectionChange(objective.id, value)}
-            aria-label={label}
-            aria-pressed={isActive}
-            className={`${styles.ratingButton} ${
-              isActive ? styles.ratingButtonActive : ''
-            }`}
-          >
-            <FontAwesomeV6Icon iconName={icon} />
-            {label}
-          </button>
-        );
-      })}
-    </div>
-  </div>
+  <>
+    <p className={styles.objectiveText}>{objective.description}</p>
+    {BUTTONS.map(({value, icon, label}) => {
+      const isActive = selected === value;
+      return (
+        <button
+          key={value}
+          type="button"
+          onClick={() => onSelectionChange(objective.id, value)}
+          aria-label={label}
+          aria-pressed={isActive}
+          className={`${styles.ratingOption} ${
+            isActive ? styles.ratingOptionActive : ''
+          }`}
+        >
+          <FontAwesomeV6Icon iconName={icon} />
+          {label}
+        </button>
+      );
+    })}
+  </>
 );
 
 export default LessonObjectiveReflection;

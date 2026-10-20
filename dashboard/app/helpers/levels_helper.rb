@@ -459,6 +459,7 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.widget_app_options
+    app_options[:level].merge! level_view_options(@level.id).camelize_keys
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options

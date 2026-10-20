@@ -5,7 +5,7 @@ wrong '0.5'
 wrong '1'
 right '2'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is not a valid probability value?

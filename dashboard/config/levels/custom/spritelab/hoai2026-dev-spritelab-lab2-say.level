@@ -24,34 +24,37 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
     "pinned_scene": {
       "id": "story-scene",
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Add your character.** Use **make new sprite** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."
-      },
-      {
-        "text": "**They're alive!** Watch your character speak, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Make them talk.**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play** and read what they say.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Add your character\nUse **make new sprite** to put your character on the left of the scene, then snap on a **say** block so they say something.",
+      ]
+    },
+    "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite** so your character talks.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition",
-          "fields": {
-            "POSITION": "left"
-          }
-        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -67,7 +70,31 @@
           }
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Hello!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

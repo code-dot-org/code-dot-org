@@ -41,6 +41,8 @@ export interface InstructionsProps {
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
   requireRun?: boolean;
+  /** Replaces "validate your code" as the disabled Continue tooltip. */
+  validationTooltip?: string;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */

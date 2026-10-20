@@ -1,0 +1,11 @@
+name 'UI Test test-levelgroup-activityguide-2'
+title 'Activity Guide Levelgroup'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'UI Test test-single-multi-retriable-in-levelgroup'
+level 'UI Test test-free-response-retriable-in-levelgroup'
+level 'UI Test K-1 Plant a Seed Multi 1'
+level 'UI Test K-1 Plant a Seed Multi 2'

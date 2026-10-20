@@ -123,6 +123,25 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'file: returns 404 for a filename the level does not have' do
+    LevelStarterAssetsHelper.expects(:get_object).never
+    level = create(:applab, starter_assets: {'ty.png' => @uuid_name})
+
+    get :file, params: {level_name: level.name, filename: 'other', format: 'png'}
+
+    assert_response :not_found
+  end
+
+  test 'file: returns 404 if the stored object is missing' do
+    LevelStarterAssetsHelper.expects(:get_object).with(@uuid_name).returns(@file_obj)
+    LevelStarterAssetsHelper.expects(:read_file).with(@file_obj).raises(Aws::S3::Errors::NoSuchKey.new(nil, 'missing'))
+    level = create(:applab, starter_assets: {'ty.png' => @uuid_name})
+
+    get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
+
+    assert_response :not_found
+  end
+
   test 'file_by_uuid: returns requested file' do
     LevelStarterAssetsHelper.
       expects(:get_object).

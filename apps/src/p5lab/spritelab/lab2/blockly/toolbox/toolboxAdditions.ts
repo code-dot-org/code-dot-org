@@ -14,8 +14,10 @@ import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
 import {
   BlockInfo,
@@ -78,6 +80,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Platform',
     types: [
       'gamelab_setBackgroundImageAs',
+      PLAY_SOUND_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
@@ -87,6 +90,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_setCameraZoom',
       RESTART_SCENE_BLOCK_TYPE,
       'spritelab2_makeSpriteAtGrid',
+      WHEN_PLAYER_BLOCK_TYPE,
       'gamelab_checkTouching',
       'gamelab_spriteSay',
       GO_TO_SCENE_BLOCK_TYPE,
@@ -99,6 +103,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Story',
     types: [
       'gamelab_setBackgroundImageAs',
+      PLAY_SOUND_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
       'gamelab_makeNewSpriteAnon',
       'gamelab_setProp',

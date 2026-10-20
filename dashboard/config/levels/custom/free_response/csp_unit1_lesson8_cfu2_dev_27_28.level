@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-30T05:13:18.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Fixed-Width Systems",
+    "long_instructions": "ASCII uses 8 bits per character, enough for the American keyboard. What challenge would you run into if you needed ASCII to also represent emoji, or characters from other languages like 你好?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18870,
+    "name_suffix": "_2025",
+    "instructions_important": "false",
+    "encrypted_solution": "kvwld998w5rcmmoQxHOuFzUtM+H4jTQBaBMoHC0nRN2bKDBSdaCTKhe3Jv7L\n39yCBGqxgHaXTL+JbMXXIzBTHq19EEIEKmJyf8TPHcPyo4JJN8Iq3NJ/hlcw\nZuSdjXPc0bXOfoFWq61HusPaYGctrvdX5t/c0lcwv7hce8sOsA0pWeQHhHc2\nnEsC2MC0JReOTLul2GOJpqvbODCk93LE0knhg0EfWeksOFMRHeh9mh7ZcEr8\n8iN4We46/72LEtX7+li0UwUey0IRQn3W7ZNWw4GXduXIqR5FJtK3p8SzJlZG\nZ5K7A5eOGKchLPa05vpBwiGhkc9cA4yQW2HuHEMv1A==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-30T05:13:18.024+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson8_cfu_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson8_cfu_dev_27_28\"},{\"changed_at\":\"2026-09-30 05:13:44 +0000\",\"changed\":[\"title\",\"long_instructions\",\"display_name\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-30 05:19:40 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

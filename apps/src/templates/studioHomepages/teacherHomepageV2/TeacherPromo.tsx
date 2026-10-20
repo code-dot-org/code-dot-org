@@ -3,8 +3,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
-import React from 'react';
+import React, {useCallback} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import styles from './teacherHomepage.module.scss';
@@ -21,6 +23,7 @@ export interface TeacherPromoInfo {
   isClosable: boolean;
   partnerLogo: string | null;
   isExternal: boolean;
+  position: number | null;
 }
 
 interface TeacherPromoAdditionalProps {
@@ -56,7 +59,19 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
   partnerLogo,
   isExternal,
   onClose,
+  position = null,
 }) => {
+  const trackEvent = useCallback(
+    (eventName: string) => {
+      analyticsReporter.sendEvent(eventName, {
+        contentfulEntryID: id,
+        announcementType,
+        position,
+      });
+    },
+    [id, announcementType, position]
+  );
+
   return (
     <li
       className={classNames(
@@ -69,7 +84,10 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
         <CloseButton
           className={styles.closeButton}
           aria-label={i18n.closeDialog()}
-          onClick={() => onClose(id)}
+          onClick={() => {
+            onClose(id);
+            trackEvent(EVENTS.PROMOTION_DISMISSED);
+          }}
         />
       )}
       <Typography
@@ -114,6 +132,9 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
             <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
           ) : undefined
         }
+        onClick={() => {
+          trackEvent(EVENTS.PROMOTION_CLICKED);
+        }}
       >
         {buttonLabel}
       </MuiButton>

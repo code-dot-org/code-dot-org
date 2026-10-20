@@ -118,6 +118,41 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
 
+### Teacher gallery
+
+`gallery.html` renders the Tutor+ project gallery from
+`src/gallery/ChallengeGallery`. Both modes work as above:
+
+```bash
+yarn dev                        # http://localhost-studio.code.org:5173/gallery.html
+VITE_API_MODE=msw yarn dev      # http://localhost:5173/gallery.html
+```
+
+`gallery.tsx` fetches the bootstrap from
+`GET /api/v1/scripts/:script/lessons/:position/tutor_gallery_data`. In
+dashboard mode, `?script=` (default `aif1-2025`) and `?lessonPosition=`
+(default `1`) select the lesson. If the request fails, the page shows the
+error.
+
+In dashboard mode, sign in as a teacher whose section has final challenge
+submissions. Ensure the teacher has AI chat access
+(`User#can_use_lesson_deep_dive?`) or else the page returns a 403 error.
+
+In msw mode, `?viewerRole=teacher|owner|peer` (default `teacher`) selects the
+project page layout. Only `teacher` sees the approval alert and toggles; the
+other roles see approved projects only. Dashboard mode takes the role from the
+signed-in user.
+
+Approvals and reactions made in msw mode are kept in sessionStorage, so they
+survive reloads and role changes in the same tab. `?cdoMockReset=1` resets stored mocks to the default state.
+
+The msw fixture's unit and section ids are invented. To regenerate it, request
+the bootstrap route above as a teacher.
+
+To see the AI Assessment panel in dashboard mode, set
+`openai_measures_of_learning_api_key` in `locals.yml` and submit a final
+response through the student flow.
+
 ### Styling, and what it is not
 
 The shell uses the same foundation as every other package dev host: MUI's

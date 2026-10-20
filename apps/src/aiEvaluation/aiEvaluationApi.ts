@@ -5,11 +5,7 @@ import {
   AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  logUserLevelEvaluation,
-  logUserLevelSkillEvaluations,
-} from './studentWorkEvaluationsApi';
-import {UserLevelSkillEvaluation} from './types';
+import {logUserLevelEvaluation} from './studentWorkEvaluationsApi';
 
 export interface StudentAnswer {
   studentId: number;
@@ -24,13 +20,7 @@ export interface AIResponse {
   aiEvaluation: string;
   aiReasoning: string;
   evaluationCriteria: string;
-  skillEvaluations?: [SkillBasedAIResponse];
   id: number;
-}
-
-export interface SkillBasedAIResponse extends AIResponse {
-  skillId: number;
-  skillKey: string;
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {
@@ -67,32 +57,6 @@ export async function evaluateStudentWorkOverall(
       unitId
     );
     parsedResponse.id = userLevelEvaluationId;
-  }
-  return parsedResponse;
-}
-
-export async function evaluateStudentWorkSkills(
-  studentWorkSample: StudentAnswer,
-  levelId: number,
-  unitId: number
-): Promise<AIResponse> {
-  const response = await evaluationFromOpenAI(
-    studentWorkSample.studentWork,
-    levelId,
-    AiEvaluationTypes.SINGLE_STUDENT,
-    true
-  );
-  let parsedResponse;
-  if (response?.content) {
-    parsedResponse = JSON.parse(response?.content);
-    const skillEvaluations: UserLevelSkillEvaluation[] =
-      parsedResponse.skillEvaluations || [];
-    await logUserLevelSkillEvaluations(
-      skillEvaluations,
-      studentWorkSample,
-      levelId,
-      unitId
-    );
   }
   return parsedResponse;
 }
@@ -143,8 +107,7 @@ type OpenaiChatCompletionMessage = {
 export async function evaluationFromOpenAI(
   studentWork?: string | Record<string, string>,
   levelId?: number,
-  evaluationType?: EvaluationType,
-  shouldEvaluateSkills?: boolean
+  evaluationType?: EvaluationType
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
     studentWork:
@@ -155,7 +118,6 @@ export async function evaluationFromOpenAI(
             .join('\n\n'),
     levelId: levelId,
     evaluationType: evaluationType,
-    shouldEvaluateSkills: shouldEvaluateSkills,
   };
 
   const response = await HttpClient.post(

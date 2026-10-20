@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-02T15:34:54.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "# Strategy vs. Pseudocode\n\nA strategy is a general approach to solving a problem. \n\n**Pseudocode** is that same strategy written as a step-by-step algorithm in plain language, precise enough that someone else could follow it exactly.\n\nIn Lesson 3, students  practice writing both. ",
+        "imageUrl": "https://images.code.org/08c8f44ad4230b6cf9cf958b6f964cd4-pseudocode panel1.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Worked Example:\n### The Problem\n\nBefore students write their own pseudocode, they'll see a concrete example first.\n\nIt's a simple problem: figuring out which of several students can run 100 meters the fastest, when you can only time one student at a time.",
+        "imageUrl": "https://images.code.org/154f54bbbabb0f8f5cf2d3ac130ba84a-runner-set-panel-2.png",
+        "key": "sp-pl-DS-pythonLab_tour-e31a5299-fb7b-4695-ac1f-5a80498a9378",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Worked Example:\n### The Strategy\n\nThey first explain the strategy.\n\n**Ex:** *\"Students run one at a time. If a student is faster than the fastest we've seen so far, we assume they're the fastest. Once we've gone through everyone, we know who the fastest was.\"*\n\n Notice this is still just plain description, no structure yet.",
+        "imageUrl": "https://images.code.org/e42ed2ce3a08b943846ac87a447e869d-AIFY2 Panel Levels3 (1).png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Worked Example: \n### The Pseudocode\n\nNext, they turn that strategy  into pseudocode:\n\n*<br>assume first student is the fastest<br>for each student:<br>  time student's 100 meter dash<br>  if faster than fastest so far:<br>    assume they're the fastest<br>*\n\nSame idea, but now precise enough that someone else could execute it exactly, no guessing involved.",
+        "imageUrl": "https://images.code.org/074a47864153772e836d62b013a30c11-AIFY2 Panel Levels4 (3).png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10-f545a3f8-80df-47e7-a398-659a35ae4b5b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Now It's Their Turn\n\nIn class, students first brainstorm a strategy for sentiment analysis, spotting happy versus sad sentences using word lists, with a partner. \n\nThen it's individual work: each student writes their own pseudocode, then traces it by hand to check it actually does what they think it does.",
+        "imageUrl": "https://images.code.org/7f935691d92e592c73c7eae9b2b94716-independent-work-icon-panel5.png",
+        "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-31887a3d-5ad5-424f-a333-ceecdb0181f9",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-02T15:34:54.589+00:00\",\"changed\":[\"cloned from \\\"pl-aif-y2-u1-l3-algorithms-panel\\\"\"],\"cloned_from\":\"pl-aif-y2-u1-l3-algorithms-panel\"}]"
+}]]></config>
+</Panels>

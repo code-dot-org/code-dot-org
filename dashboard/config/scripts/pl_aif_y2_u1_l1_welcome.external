@@ -1,0 +1,47 @@
+name 'pl-aif-y2-u1-l1-welcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<!-- Banner Section -->
+<div style="width: 100%; margin-top: 20px; border-radius: 10px; background: #4C42CF; padding: 40px 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+    <div style="color: #FFFFFF; font-size: 32px; font-weight: bold; line-height: 1.1; text-align: center;">
+        Teaching Logic-Based AI
+    </div>
+   
+</div>
+
+<!-- Welcome Section -->
+
+## Welcome
+
+This professional learning module is designed to help you prepare to teach Unit 1: Logic-Based AI from CodeAI's **AI Foundations Year 2** curriculum, available at <a href="[INSERT AIF Y2 COURSE LINK]" target="_blank" rel="noopener noreferrer">AI Foundations Year 2</a>.
+
+AI Foundations Year 2 is a year-long course for high school students, built as part of a Career and Technical Education (CTE) pathway aligned to the Microsoft Azure AI-901 certification exam.
+
+<!-- Goals Section -->
+<div style="margin: 20px auto; width: 90%; max-width: 900px; background: #FFFFFF; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); font-size: 14pt;">
+    <h2>In this module, you will:</h2>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+        <li>Explain AI as a spectrum of approaches, from simple rule-based logic to today's generative systems, so students see it as many tools, not one black box.</li><br>
+        <li>Read and reason through foundational Python: variables, functions, and loops, well enough to support students writing it for the first time.</li><br>
+        <li>Connect hands-on activities like hill climbing, decision trees, and debugging exercises to the reasoning skills they build, not just the code that results.</li><br>
+        <li>Recognize where rule-based, logic-driven AI breaks down, and why that limitation sets up the shift to machine learning in Unit 2.</li><br>
+        <li>Understand how AI Foundations Year 2 aligns to the Microsoft Azure AI-901 certification, so you know which concepts carry exam weight and which don't.</li>
+    </ul>
+</div>
+
+**Suggested Total Time:** [CONFIRM: full Unit 1 module time]
+
+**Lesson One Suggested Time:** 10 minutes
+
+---
+
+## Take the Pre-Survey
+
+CodeAI values and is responsive to feedback. Please fill out the pre-survey to tell us about who you are and how we can best support you.
+
+<div style="text-align: left;">
+<a class="btn btn-large btn-primary" href="[INSERT AIF Y2 PRE-SURVEY LINK]" target="_blank" rel="noopener noreferrer">Take the pre-survey</a>
+</div>
+MARKDOWN

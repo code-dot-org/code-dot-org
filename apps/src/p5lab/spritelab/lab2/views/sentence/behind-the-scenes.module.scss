@@ -1,0 +1,135 @@
+
+// Between the frame and the link row.
+$frame-gap: 2px;
+// From the frame's right and bottom edges to the panel's.
+$panel-inset: 6px;
+
+.underFrame {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: $frame-gap;
+
+  &,
+  * {
+    user-select: none;
+  }
+
+  // In the dialog, only the prompt itself may be copied.
+  .promptText,
+  .promptText * {
+    user-select: text;
+  }
+}
+
+.promptLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-neutral-primary);
+  }
+}
+
+// Above the link, in the frame's bottom right corner. Doubled to outrank
+// the component's own width and margin.
+.promptPopover.promptPopover {
+  position: absolute;
+  right: $panel-inset;
+  bottom: calc(100% + #{$frame-gap + $panel-inset});
+  margin: 0;
+  width: 460px;
+  max-width: 100%;
+  border: 1px solid var(--border-neutral-secondary);
+  // One height whichever tab is on show; the words scroll in what is left.
+  height: var(--prompt-panel-height, 60vh);
+  overflow: hidden;
+  z-index: 1;
+
+  // The component's own boxes between the panel and the words, by position
+  // since their classes are hashed; each lets its child shrink.
+  > div:last-child,
+  > div:last-child > div,
+  > div:last-child > div > div {
+    flex: 1 1 auto;
+    min-height: 0;
+    align-self: stretch;
+  }
+
+  .promptText {
+    flex: 1 1 auto;
+    min-height: 0;
+    align-self: stretch;
+    overflow-y: auto;
+    margin: 0;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .promptTabs {
+    display: flex;
+    gap: 6px;
+    align-self: stretch;
+  }
+
+  .promptTab {
+    padding: 4px 12px;
+    border: 1px solid var(--text-neutral-primary);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+
+    &[aria-selected='true'] {
+      background-color: var(--text-neutral-primary);
+      color: var(--background-neutral-primary);
+    }
+  }
+
+  .promptNote {
+    align-self: stretch;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .promptCommon {
+    margin: 0;
+  }
+
+  .poseMark {
+    padding: 0 3px;
+    border-radius: 3px;
+    background-color: color-mix(
+      in srgb,
+      var(--sentiment-warning-50) 35%,
+      transparent
+    );
+    color: inherit;
+  }
+
+  .poseList {
+    margin: 10px 0 0;
+    padding-left: 18px;
+
+    li {
+      margin-top: 4px;
+    }
+  }
+
+  .poseLabel {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}

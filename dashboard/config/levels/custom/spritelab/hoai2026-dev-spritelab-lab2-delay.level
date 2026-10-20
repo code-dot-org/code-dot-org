@@ -24,46 +24,82 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
     "pinned_scene": {
       "id": "story-scene",
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
+    "add_blocks": [
       {
-        "text": "**Say something else, a moment later.** Drag out **at [3] seconds** and put a **say** block inside it. Press **Play** and your character speaks right on cue."
-      },
-      {
-        "text": "**Perfect timing!** Watch your story unfold, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+        "type": "gamelab_atTime",
+        "data": "at-3",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 3
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "gamelab_spriteSay",
+                "fields": {
+                  "SPEECH": "Welcome to the adventure."
+                },
+                "inputs": {
+                  "SPRITE": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     ],
-    "long_instructions": "# Say something on a delay\nDrag out **at [3] seconds** and put a **say** block inside it. Your character will speak right on cue.",
+    "objectives": {
+      "title": "**Say something later.**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "data": "at-3"
+          }
+        },
+        {
+          "text": "Click **Play** and wait for it.",
+          "check": {
+            "kind": "play",
+            "seconds": 3
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Say something later\nDrag a **say** block onto the dotted outline under **at [3] seconds**. Your character speaks 3 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_atTime",
-          "inputs": {
-            "N": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 3
-                }
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Click my friend!"
+            "SPEECH": "Welcome to the adventure."
           },
           "inputs": {
             "SPRITE": {
@@ -74,7 +110,8 @@
           }
         }
       ]
-    }
+    },
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

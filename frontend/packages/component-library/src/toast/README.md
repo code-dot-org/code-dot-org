@@ -46,6 +46,29 @@ text raised twice in a row restarts too, and is announced again rather than
 passing silently. On the controlled `Toast`, pass a changing `toastId` for the
 same effect.
 
+## Icons
+
+The `type` picks an icon (`success` → a check, `danger` → an x, and so on). To
+show something else, pass one of FontAwesome's:
+
+```jsx
+const spinner = {iconName: 'spinner', animationType: 'spin'};
+
+// Imperative: per show() call.
+toast('Saving to your backpack...', {
+  type: 'info',
+  autoHideDuration: null,
+  icon: spinner,
+});
+
+// Controlled: through the Alert escape hatch.
+<Toast open message="Saving..." alertProps={{icon: spinner}} />;
+```
+
+The toast's Alert is presentational (the live region does the announcing), so an
+icon with no `title` is silent to a screen reader. The message has to carry the
+meaning on its own: "Saving..." reads as in-progress, a spinner alone does not.
+
 `anchorOrigin` picks a corner of the viewport. To land anywhere else, pass a
 `className` (on `Toast` or `ToastProvider`) — it goes on the Snackbar, the
 positioned surface.

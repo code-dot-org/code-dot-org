@@ -28,6 +28,19 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
     assert_equal [@original_picture.id], @students.map {|student| student.reload.secret_picture_id}.uniq
   end
 
+  test 'blank section lookup shows the form without an error' do
+    Section.expects(:with_deleted).never
+
+    [nil, '', " \t\n"].each do |code|
+      post :lookup_section, params: {section_code: code}
+
+      assert_response :success
+      assert_select 'input[name=section_code]', 1
+      assert_select '.alert-danger', 0
+      assert_select 'input[name=secret_picture_id]', 0
+    end
+  end
+
   test 'unknown section shows an error without an update form' do
     get :lookup_section, params: {section_code: 'missing'}
 

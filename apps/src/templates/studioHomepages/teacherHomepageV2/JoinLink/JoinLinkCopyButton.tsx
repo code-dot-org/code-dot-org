@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Tooltip} from '@mui/material';
 import classNames from 'classnames';

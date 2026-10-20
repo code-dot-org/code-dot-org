@@ -23,26 +23,38 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "sprite"
+      "imageType": "sprite",
+      "placeOne": true
+    },
+    "image_role_defaults": {
+      "sprite": "treasure"
     },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Put your treasure in the world.** Pick it from the palette and place it somewhere your player can reach."
-      },
-      {
-        "text": "**It's in your world.** Click **Play** to run around and find it, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "worldSprites": 2
+    "objectives": {
+      "title": "**Put your treasure in the world.**",
+      "items": [
+        {
+          "text": "Click a square your player can reach to put your treasure there.",
+          "check": {
+            "kind": "world",
+            "role": "treasure"
+          }
+        },
+        {
+          "text": "Click **Play** and go find it.",
+          "check": {
+            "kind": "reach",
+            "role": "treasure"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Put your treasure in the world\nPick your treasure from the palette and place it somewhere your player can reach."
+      ]
+    },
+    "long_instructions": "# Put your treasure in the world\nClick a square your player can reach. Click another square to move the treasure.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

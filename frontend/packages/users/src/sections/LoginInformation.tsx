@@ -92,6 +92,7 @@ export default function LoginInformation({settings}: SectionProps) {
               <UpdateEmailModal
                 open={emailOpen}
                 onClose={() => setEmailOpen(false)}
+                isTeacher={!isStudent}
               />
             </>
           )}

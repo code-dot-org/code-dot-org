@@ -28,7 +28,7 @@ const WIRE_SETTINGS = {
   should_see_add_password_form: false,
   should_see_edit_email_link: true,
   authentication_options: [
-    {credential_type: 'email', email: 'ada@example.com'},
+    {id: 1, credential_type: 'email', email: 'ada@example.com'},
   ],
   can_change_user_type: true,
   can_delete_own_account: true,
@@ -40,6 +40,13 @@ const WIRE_SETTINGS = {
   dependent_students_count: 0,
   age_options: [{value: '4', text: '4'}],
   us_state_options: [{value: 'WA', text: 'Washington'}],
+  integrations: {
+    can_manage_linked_accounts: true,
+    is_google_classroom_student: false,
+    is_clever_student: false,
+    personal_account_linking_enabled: true,
+    lms_name: null,
+  },
 };
 
 describe('createUsersApi.getSettings', () => {
@@ -55,7 +62,7 @@ describe('createUsersApi.getSettings', () => {
     expect(settings.userType).toBe('teacher');
     expect(settings.parentEmail).toBeNull();
     expect(settings.authenticationOptions).toEqual([
-      {credentialType: 'email', email: 'ada@example.com'},
+      {id: 1, credentialType: 'email', email: 'ada@example.com'},
     ]);
     expect(settings.ageOptions).toEqual([{value: '4', text: '4'}]);
     expect(settings.usStateOptions).toEqual([
@@ -108,6 +115,31 @@ describe('createUsersApi mutations target the right routes', () => {
     );
   });
 
+  it('updateProfile sends lti_roster_sync_enabled when the setting changes', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateProfile({ltiRosterSyncEnabled: false});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/dashboardapi/users',
+        body: {user: {lti_roster_sync_enabled: false}},
+      }),
+    );
+  });
+
+  it('unlinkLtiAccount POSTs the authentication option id', async () => {
+    const {api, request} = fakeTransport();
+    await api.unlinkLtiAccount({authenticationOptionId: 42});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'POST',
+        url: '/lti/v1/account_linking/unlink',
+        headers: {Accept: 'application/json'},
+        body: {authentication_option_id: 42},
+      }),
+    );
+  });
+
   it('updateSchoolInfo PATCHes /api/v1/user_school_infos with the built school data', async () => {
     const {api, request} = fakeTransport();
     await api.updateSchoolInfo({
@@ -146,6 +178,45 @@ describe('createUsersApi mutations target the right routes', () => {
     });
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({method: 'PATCH', url: '/users/email'}),
+    );
+  });
+
+  it('updateEmail sends the email opt-in answer when given', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateEmail({
+      newEmail: 'a@b.co',
+      hashedEmail: 'h',
+      currentPassword: 'pw',
+      emailOptIn: 'no',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {
+            email: 'a@b.co',
+            hashed_email: 'h',
+            current_password: 'pw',
+            email_preference_opt_in: 'no',
+          },
+        },
+      }),
+    );
+  });
+
+  it('updateEmail omits the email opt-in when unanswered', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateEmail({
+      newEmail: 'a@b.co',
+      hashedEmail: 'h',
+      currentPassword: 'pw',
+      emailOptIn: '',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        body: {
+          user: {email: 'a@b.co', hashed_email: 'h', current_password: 'pw'},
+        },
+      }),
     );
   });
 

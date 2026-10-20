@@ -1,18 +1,34 @@
 // What kind of level this is, and everything that follows from it: the
 // surfaces a student sees, and the image controls they get.
 
-import {ImageAdlibSet} from './ai/images/imageAdlibs';
-import {ImageStyle, ImageType} from './ai/images/types';
+import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
 export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
-  /** The kind of image the level is about. */
+  /** The kind of image the level is about. On a world level, the palette
+      offers only the level's image of this kind (image_role_defaults, else
+      the newest); a world level without one offers everything. */
   imageType?: ImageType;
-  /** Word combos to offer, in place of the set the kind implies. */
-  adlibs?: ImageAdlibSet;
+  /** For a sprite: a character, which can be animated, or an object, which
+      is one still picture with its own words. Character when unset. */
+  imageSubject?: ImageSubject;
+  /** Recorded on every image this level makes. The other end of the link
+      is the image_role_defaults level property (imageRoleDefaults.ts), which code
+      and world levels use to open their dropdowns on an image by role. */
+  imageRole?: string;
+  /** A world level that places one thing: no Erase, the image goes on an
+      empty cell, and choosing another cell moves it. */
+  placeOne?: boolean;
+  /** Which scene tabs a pinned level shows: its own scene's (the default),
+      or every scene's, the others locked, where a level first shows the
+      student the scenes they have. */
+  sceneTabs?: 'pinned' | 'all';
+  /** The sentence scene's sentence, by id in sentences.json; the
+      image type's own sentence when unset. */
+  sentence?: string;
 }
 
 /** The style every generate form starts on; students can still switch. */
@@ -28,12 +44,6 @@ const TABS: Record<LevelModeKind, Tab[]> = {
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
-/** Which combos a kind offers when the level names none. */
-const ADLIBS: Partial<Record<LevelModeKind, ImageAdlibSet>> = {
-  image: 'simple',
-  freeplay: 'expanded',
-};
-
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   return mode ? TABS[mode.kind] : undefined;
 }
@@ -46,10 +56,4 @@ export function isImageMode(mode: LevelMode | undefined): boolean {
 /** The only mode offering the prompt box and the paint tools. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
-}
-
-export function adlibSetForMode(
-  mode: LevelMode | undefined
-): ImageAdlibSet | undefined {
-  return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
 }

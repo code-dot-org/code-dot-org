@@ -23,21 +23,14 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "image",
-      "imageType": "sprite"
+      "imageType": "sprite",
+      "imageRole": "hero"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."
-      },
-      {
-        "text": "**There's your hero!** Continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "spriteImages": 1
-        }
-      }
-    ],
-    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**."
+    "objectives": {
+      "title": "**Make a character.** Use AI or draw your own."
+    },
+    "long_instructions": "# Make a character\nUse AI or draw your own.",
+    "header_label": "Make a story"
   }
 }]]></config>
 </GamelabJr>

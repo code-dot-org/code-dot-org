@@ -113,12 +113,6 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create, :index, :update, :destroy] do
-      collection do
-        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
-      end
-    end
-
     patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
@@ -466,8 +460,6 @@ Dashboard::Application.routes.draw do
         get 'level_properties'
         get 'extra_links'
         patch 'update_bubble_choice_settings'
-        post 'add_skill'
-        post 'remove_skill'
       end
 
       resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
@@ -541,6 +533,7 @@ Dashboard::Application.routes.draw do
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
         get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
+        get 'tutor/*path', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -622,6 +615,8 @@ Dashboard::Application.routes.draw do
         get '/edit', to: 'data_docs#edit_all'
       end
     end
+
+    resources :adaptive_pathways, only: [:show, :update], constraints: {id: /[a-z0-9][a-z0-9_-]{0,63}/}
 
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
       resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
@@ -834,6 +829,8 @@ Dashboard::Application.routes.draw do
         post :delete_progress
         post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
+        get :log_token, action: 'log_token_form', as: 'log_token_form'
+        post 'log_token/resolve', action: 'resolve_log_token', as: 'resolve_log_token'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress
@@ -1204,6 +1201,7 @@ Dashboard::Application.routes.draw do
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
+        post 'users/teacher_panel_v2_seen', to: 'users#post_teacher_panel_v2_seen'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -1237,6 +1235,12 @@ Dashboard::Application.routes.draw do
         get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
+
+        resources :scripts, only: [] do
+          resources :lessons, only: [], param: 'position' do
+            resource :tutor_gallery_data, only: :show, defaults: {format: 'json'}
+          end
+        end
 
         get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 
@@ -1493,11 +1497,11 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
-    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
+    post '/adaptive/traces', to: 'adaptive_traces#create'
 
     resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
@@ -1531,6 +1535,11 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :quiz_attempts, only: [:index, :create, :update]
+    resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
+      put 'steps/:step_id/progress', action: :update_progress, as: :step_progress
+      put 'steps/:step_id/generated_instructions', action: :update_generated_instructions, as: :step_generated_instructions
+      put 'steps/:step_id/validation_history', action: :update_validation_history, as: :step_validation_history
+    end
     resources :quiz_question_responses, only: [:create]
 
     resources :challenges, only: [:index, :show] do
@@ -1544,6 +1553,7 @@ Dashboard::Application.routes.draw do
       end
       member do
         post :evaluate
+        patch :approve
       end
       # The signed-in viewer's emoji reactions on this response. The emoji
       # name (e.g. "heart") is the member id, so removing a reaction is a

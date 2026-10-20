@@ -5,7 +5,7 @@ wrong '13 seconds'
 wrong '12 seconds'
 right 'It\'s not possible to know.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 These statistics describe an athlete's 100m dash times:

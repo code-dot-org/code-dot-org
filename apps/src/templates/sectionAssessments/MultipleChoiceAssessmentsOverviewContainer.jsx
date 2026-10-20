@@ -33,7 +33,7 @@ class MultipleChoiceAssessmentsOverviewContainer extends Component {
       <div>
         {questionAnswerData.length > 0 && studentId === ALL_STUDENT_FILTER && (
           <div>
-            <Typography variant="h2" component="h2" gutterBottom>
+            <Typography variant="h6" component="h2" gutterBottom>
               {i18n.multipleChoiceQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
                 numStudents: totalStudentCount,

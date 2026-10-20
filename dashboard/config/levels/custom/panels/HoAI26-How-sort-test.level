@@ -1,0 +1,145 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-03T22:30:57.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#AI can make a picture from just a few words\n\n Before it does, make a **prediction**. \n\nThen **notice** how close you got. \n\nYou will be able to **steer** AI in the direction you want it to go next.",
+        "imageUrl": "https://images.code.org/17964c5d6f1591e688280426b7b24d2b-intro.png",
+        "key": "HoAI26-How-sort-test-599cd872-b306-4509-94f4-87b18d3f570b",
+        "links": [
+          {
+            "text": "Try a prediction! ",
+            "x": 50,
+            "y": 86,
+            "targetKey": "HoAI26-How-sort-test-3330dc93-5f7d-4702-88eb-079ea4ffe7e8"
+          }
+        ],
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#Prompt: Make a penguin\n\nThe AI will make 20 pictures of a penguin. \n\nWhere will the penguin be in most of them? Tap your guess.",
+        "imageUrl": "https://images.code.org/3ebcda66f75943df2f772ec16d9ef64e-penguinBG.png",
+        "key": "HoAI26-How-sort-test-3330dc93-5f7d-4702-88eb-079ea4ffe7e8",
+        "links": [
+          {
+            "text": "Ice and snow",
+            "x": 58,
+            "y": 50,
+            "targetKey": "HoAI26-How-sort-test-eb6e7afe-17a9-4a64-b71b-6f807c77250e",
+            "width": 25
+          },
+          {
+            "text": "In the water",
+            "x": 85,
+            "y": 50,
+            "targetKey": "HoAI26-How-sort-test-b5d8d068-ff96-48d9-a194-eec2319d64fc",
+            "width": 25
+          },
+          {
+            "text": "At the zoo",
+            "x": 58,
+            "y": 73,
+            "targetKey": "HoAI26-How-sort-test-a927be31-0c10-4c26-a083-624a4c6013d0",
+            "width": 25
+          },
+          {
+            "text": "Somewhere else",
+            "x": 85,
+            "y": 73,
+            "targetKey": "HoAI26-How-sort-test-4c120d9f-93f7-4e26-84db-3df67435c617",
+            "width": 25
+          }
+        ],
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#Ice and snow\n\nYou were right! Ice and snow were in 11 of 18 pictures.",
+        "imageUrl": "https://images.code.org/5d9e253a998a52ffd5fb6794838234da-snow & ice.png",
+        "key": "HoAI26-How-sort-test-eb6e7afe-17a9-4a64-b71b-6f807c77250e",
+        "showContinueButton": false,
+        "links": [
+          {
+            "text": "Next",
+            "x": 50,
+            "y": 94,
+            "targetKey": "HoAI26-How-sort-test-c591b9db-0fc3-4874-9577-3b9bd781f003"
+          }
+        ],
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#In the water\n\nAlmost! The penguin was in the water the second most often. ",
+        "imageUrl": "https://images.code.org/8db05904bb54648158f2a7e7db6f859f-water.png",
+        "key": "HoAI26-How-sort-test-b5d8d068-ff96-48d9-a194-eec2319d64fc",
+        "links": [
+          {
+            "text": "Back",
+            "x": 50,
+            "y": 94,
+            "targetKey": "HoAI26-How-sort-test-3330dc93-5f7d-4702-88eb-079ea4ffe7e8"
+          }
+        ],
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#At the zoo\n\nNot quite. There were only two images of the penguin at the zoo.",
+        "imageUrl": "https://images.code.org/1287ec2b3aaf105f91ab2daeaf45baf4-zoo.png",
+        "key": "HoAI26-How-sort-test-a927be31-0c10-4c26-a083-624a4c6013d0",
+        "links": [
+          {
+            "text": "Back",
+            "x": 50,
+            "y": 94,
+            "targetKey": "HoAI26-How-sort-test-3330dc93-5f7d-4702-88eb-079ea4ffe7e8"
+          }
+        ],
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#Somewhere else\n\nNot quite. There was only one background that was somewhere else.",
+        "imageUrl": "https://images.code.org/04646a33b0329d70471d3a4770c6c583-else.png",
+        "key": "HoAI26-How-sort-test-4c120d9f-93f7-4e26-84db-3df67435c617",
+        "links": [
+          {
+            "text": "Back",
+            "x": 50,
+            "y": 94,
+            "targetKey": "HoAI26-How-sort-test-3330dc93-5f7d-4702-88eb-079ea4ffe7e8"
+          }
+        ],
+        "layout": "text-top-left"
+      },
+      {
+        "text": "AI learns from lots and lots of pictures.\n\nSo it usually makes what it saw the most. \n\n**It can look great and still be wrong.**",
+        "imageUrl": "https://images.code.org/78197065180c73d85c2ef56f4c2fb264-dragon.png",
+        "key": "HoAI26-How-sort-test-c591b9db-0fc3-4874-9577-3b9bd781f003",
+        "links": [
+          {
+            "text": "Next",
+            "x": 91,
+            "y": 91,
+            "targetKey": "HoAI26-How-sort-test-89d21d25-9918-4ed2-8f38-0af4fb45507d",
+            "width": 14
+          }
+        ],
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#Predict \n- Guess what it will make.\n\n#Notice\n- Look at what it made. Is anything there that you didn't ask for?\n\n#Steer\n- Change your words. Then try again.\n",
+        "imageUrl": "https://images.code.org/e35a936aa9c0dbbc8ac746757887ae2b-predict, notice, steer.png",
+        "key": "HoAI26-How-sort-test-89d21d25-9918-4ed2-8f38-0af4fb45507d",
+        "showContinueButton": true
+      }
+    ],
+    "use_links": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-03 22:50:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:04:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:11:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:17:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:19:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:22:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:22:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:43:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-03 23:48:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-04 01:30:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -25,36 +25,34 @@
       "kind": "world",
       "imageType": "block"
     },
+    "image_role_defaults": {
+      "block": "block"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
-    "world_start_pattern": [
-      "..........",
-      "..........",
-      "BB......BB",
-      "..........",
-      "....BB....",
-      "..........",
-      ".BB....BB.",
-      "....S.....",
-      "...BBBB...",
-      ".........."
-    ],
-    "guide_steps": [
-      {
-        "text": "**Make this world yours.** Pick your block in the palette and paint platforms onto the grid - add blocks, erase blocks, build new paths and towers. Then click **Play** to try your layout."
-      },
-      {
-        "text": "**You built a platformer!** Run and jump through what you made, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Make this world yours.**",
+      "items": [
+        {
+          "text": "Place platforms on the grid.",
+          "check": {
+            "kind": "world",
+            "changed": true
+          }
+        },
+        {
+          "text": "Click **Play** to try them.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Make this world yours\nPaint platforms onto the grid in the World tab - add blocks, erase blocks, build new paths and towers. Then press **Play** to try your layout."
+      ]
+    },
+    "long_instructions": "# Make this world yours\nPaint platforms on the grid: add blocks, erase blocks, build paths and towers. Click **Play** to try it.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

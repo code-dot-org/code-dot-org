@@ -11,8 +11,10 @@ import {getNewRemoveId} from '../utils';
 import {addChatEvent} from './addChatEvent';
 
 interface FetchUserChatHistoryParams {
-  userId: number;
+  userId: number | null;
   isOwnHistory: boolean;
+  // The level the chat belongs to, or null outside any level.
+  levelId: number | null;
   channelId?: string;
   lessonId?: number;
   initialWelcomeMessage?: string;
@@ -27,18 +29,21 @@ export const fetchUserChatHistory = createAsyncThunk(
     {
       userId,
       isOwnHistory,
+      levelId,
       channelId,
       lessonId,
       initialWelcomeMessage,
     }: FetchUserChatHistoryParams,
     thunkAPI
   ) => {
+    // A signed-out viewer has no history to fetch.
+    if (!userId) return;
     const state = thunkAPI.getState() as RootState;
     // Post teacher's student's user id to backend and retrieve student's chat history.
     try {
       const chatHistoryApiResponse = await getUserChatHistory(
         userId,
-        parseInt(state.progress.currentLevelId || ''),
+        levelId,
         state.progress.scriptId,
         channelId,
         lessonId

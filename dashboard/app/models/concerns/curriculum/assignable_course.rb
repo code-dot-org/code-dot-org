@@ -14,4 +14,12 @@ module Curriculum::AssignableCourse
 
     false
   end
+
+  def course_progress_viewable?(user)
+    return true if course_assignable?(user)
+    return false unless get_course_version&.course_offering&.assignable?
+    return false unless can_be_instructor?(user)
+
+    sunsetting?
+  end
 end

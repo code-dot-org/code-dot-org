@@ -35,12 +35,9 @@ const LOCAL_MODE = false;
 
 class StatsigSessionReplay {
   constructor() {
-    // stable_id is set as a cookie in application_controller.rb. However in a
-    // the rare case we are running outside of the application layout,
-    // set stable_id as a cookie here if it doesn't exist.
-    this.stable_id = findOrCreateStableId();
+    this.recordingVersion = 0;
+
     let user = {
-      customIDs: {stableID: this.stable_id},
       custom: {},
     };
 
@@ -84,6 +81,13 @@ class StatsigSessionReplay {
       return;
     }
 
+    const recordingVersion = this.recordingVersion;
+    const stableID = await findOrCreateStableId();
+    if (this.statsigClient || recordingVersion !== this.recordingVersion) {
+      return;
+    }
+
+    this.user.customIDs = {stableID};
     this.statsigClient = new StatsigClient(this.api_key, this.user);
     runStatsigSessionReplay(this.statsigClient);
     runStatsigAutoCapture(this.statsigClient);
@@ -91,6 +95,7 @@ class StatsigSessionReplay {
   }
 
   stopRecording() {
+    this.recordingVersion++;
     // check if the statsig client is already stopped
     if (!this.statsigClient) {
       return;

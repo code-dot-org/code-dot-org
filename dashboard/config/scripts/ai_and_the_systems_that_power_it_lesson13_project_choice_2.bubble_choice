@@ -1,0 +1,9 @@
+name 'ai-and-the-systems-that-power-it-lesson13-project-choice-2'
+display_name 'Using AI as a Co-Creator'
+description 'First use the AI Chat level in order to gather feedback from AI about your system diagram. Then use the Sketch Lab level to finalize your project based on the feedback that you received.'
+
+sublevels
+level 'computer-systems-lesson13-level5_2025-launch_v2_2026-dev'
+level 'ai-and-the-systems-that-power-it-lesson13-project-3'
+
+uses_lab2

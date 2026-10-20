@@ -24,30 +24,90 @@
     "level_mode": {
       "kind": "play"
     },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
     "world_start_pattern": [
-      "..........",
-      "..........",
-      "BB......BB",
-      "..........",
-      "....BB....",
-      "..........",
-      ".BB....BB.",
-      "....S.....",
-      "...BBBB...",
-      ".........."
+      [
+        "..........",
+        "..........",
+        "BB......BB",
+        "..........",
+        "....BB....",
+        "..........",
+        ".BB....BB.",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        ".......BBB",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB...BB",
+        ".S........",
+        "BBB...BB..",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "BB..BB..BB",
+        "..........",
+        ".BB....BB.",
+        "..........",
+        "..BB..BB..",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "........BB",
+        "BBB.......",
+        ".....BB...",
+        "..........",
+        "...BB..BB.",
+        ".S........",
+        "BBB..BBBBB",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "BB......BB",
+        "..........",
+        "...BBBB...",
+        "..........",
+        "BB..S...BB",
+        "..........",
+        "...BBBB..."
+      ]
     ],
-    "guide_steps": [
-      {
-        "text": "**A ready-made world.** We laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top - your player lands on blocks and can jump again from them. Continue when you're ready.",
-        "showContinue": true
-      }
-    ],
-    "long_instructions": "# A ready-made world\nWe laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top."
+    "objectives": {
+      "title": "**A ready-made world.** We built some platforms with your block.",
+      "items": [
+        {
+          "text": "Run and jump to the top.",
+          "check": {
+            "kind": "reach",
+            "height": 0.7
+          }
+        }
+      ]
+    },
+    "long_instructions": "# A ready-made world\nWe built some platforms with your block. Run and jump. Can you reach the top?",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

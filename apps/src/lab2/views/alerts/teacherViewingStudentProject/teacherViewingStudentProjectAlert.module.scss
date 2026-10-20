@@ -9,3 +9,8 @@
   height: 39px;
   flex-shrink: 0;
 }
+
+// Compound selector so it outranks .inWorkspaceContainer's neutral border.
+.inWorkspaceContainer.warningBorder {
+  border-bottom-color: var(--border-warning-mid);
+}

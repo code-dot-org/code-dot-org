@@ -1,0 +1,14 @@
+@use "sass:math";
+
+// The checkerboard behind a picture with transparency.
+@mixin checkerboard($cell, $tint, $bg) {
+  $half: math.div($cell, 2);
+
+  background-color: $bg;
+  background-image: linear-gradient(45deg, $tint 25%, transparent 25%),
+    linear-gradient(-45deg, $tint 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, $tint 75%),
+    linear-gradient(-45deg, transparent 75%, $tint 75%);
+  background-size: $cell $cell;
+  background-position: 0 0, 0 $half, $half (-$half), (-$half) 0;
+}

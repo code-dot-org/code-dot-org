@@ -1,6 +1,3 @@
-$border: #69788a;
-$card-bg: #424d59;
-$nav-bg: #292f36;
 
 // ── Outer shell ───────────────────────────────────────────────────────────────
 
@@ -17,200 +14,217 @@ $nav-bg: #292f36;
   min-height: 0;
 }
 
-// ── Menu (unselected state) ───────────────────────────────────────────────────
+// ── Choice menu (no modality selected) ───────────────────────────────────────
 
 .prompt {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
 }
 
-.overline {
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #d4dae1;
-  margin: 0 0 12px;
-}
-
-.heading {
-  font-family: var(--font-family-main);
-  font-size: clamp(2rem, 8vw, 3.75rem);
-  font-weight: 800;
-  line-height: 1;
-  color: #fff;
-  margin: 0 0 12px;
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #d4dae1;
-  line-height: 1.4;
-  margin: 0 0 24px;
-  max-width: 700px;
-}
-
-.menuList {
+.promptInner {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 440px;
+  gap: 16px;
+  width: 600px;
+  max-width: 100%;
+
+  .heading {
+    font-family: var(--font-family-heading);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.48px;
+    color: var(--sentiment-information-30);
+    margin: 0;
+  }
+
+  .subtext {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--text-neutral-primary);
+    margin: 0;
+  }
+
+  .challengeLink {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #f1f2f4;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+    transition: color 0.12s ease;
+
+    &:hover {
+      color: var(--text-neutral-primary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--sentiment-information-30);
+      outline-offset: 2px;
+    }
+  }
 }
 
-.menuCard {
-  display: flex;
-  align-items: center;
+.choiceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   width: 100%;
-  padding: 20px;
-  background: $card-bg;
-  border: 1px solid $border;
-  border-radius: 4px;
+}
+
+.choiceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 12px;
+  padding: 8px 4px;
+  overflow: hidden;
   cursor: pointer;
-  color: #f0f2f5;
-  text-align: left;
-  font-size: 1rem;
   transition: filter 0.12s ease;
 
   &:hover {
-    filter: brightness(1.12);
+    filter: brightness(1.15);
   }
 
   &:focus-visible {
-    outline: 2px solid #a374d6;
+    outline: 2px solid var(--sentiment-information-30);
     outline-offset: 2px;
   }
 }
 
-.menuCardIcon {
-  flex-shrink: 0;
-  font-size: 1.5rem;
-  width: 25px;
-  text-align: center;
-}
-
-// ── Bottom nav ────────────────────────────────────────────────────────────────
-
-.bottomNav {
-  flex-shrink: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 20px;
-  background: $nav-bg;
-  border-top: 1px solid $border;
-  padding: 0 24px;
-}
-
-// Menu / grid icon (left slot)
-.navMenuButton {
+.cardIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
   flex-shrink: 0;
-  padding: 8px 4px;
-  border: none;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  color: #a374d6;
-  font-size: 1.25rem;
-  cursor: pointer;
-  transition: color 0.12s ease;
-
-  &:hover {
-    color: #fff;
-  }
-
-  &:focus-visible {
-    outline: 2px solid #a374d6;
-    outline-offset: -2px;
-  }
 }
 
-.navMenuButtonActive {
-  border-bottom-color: #fff;
+.cardLabel {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-neutral-primary);
+  white-space: nowrap;
+}
+
+// ── Bottom navigation bar (shown when a review modality is active) ────────────
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 40px;
+  border-top: 1px solid var(--borders-neutral-solid);
+  flex-shrink: 0;
 }
 
 .navDivider {
   width: 1px;
-  background: $border;
-  margin: 4px 0;
+  height: 49px;
+  background-color: var(--borders-neutral-solid);
   flex-shrink: 0;
 }
 
-// Mode icon tabs
+.navModalities {
+  display: flex;
+  gap: 8px;
+}
+
 .navItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 2px;
   width: 72px;
-  flex-shrink: 0;
-  padding: 8px 4px;
-  border: none;
-  border-bottom: 2px solid transparent;
+  padding: 6px 4px;
   background: transparent;
-  color: #f0f2f5;
-  font-size: 1.25rem;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: color 0.12s ease;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  overflow: hidden;
+  transition: filter 0.12s ease;
 
   &:hover {
-    color: #fff;
+    filter: brightness(1.2);
   }
 
   &:focus-visible {
-    outline: 2px solid #a374d6;
-    outline-offset: -2px;
+    outline: 2px solid var(--sentiment-information-30);
+    outline-offset: 2px;
+  }
+
+  .navIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    color: #928cef;
   }
 }
 
 .navItemActive {
-  border-bottom-color: #fff;
-  color: #fff;
-}
+  background-color: #d8ffdc;
+  color: #1f1976;
+  font-weight: 600;
 
-.navLabel {
-  font-size: 0.75rem;
-  line-height: 1.3;
-  text-align: center;
-  margin-top: 2px;
-  white-space: nowrap;
-}
-
-// Done button (right slot)
-.doneWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  flex-shrink: 0;
+  .navIcon {
+    color: #1f1976;
+  }
 }
 
 .doneButton {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  height: 32px;
   padding: 5px 12px;
-  border: 1px solid #a1aebb;
-  border-radius: 4px;
-  background: transparent;
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 600;
-  white-space: nowrap;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid #6e7782;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.12s ease;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  transition: filter 0.12s ease;
 
   &:hover {
-    background: rgba(255 255 255 / 0.08);
+    filter: brightness(1.2);
   }
 
   &:focus-visible {
-    outline: 2px solid #a374d6;
+    outline: 2px solid var(--sentiment-information-30);
     outline-offset: 2px;
   }
+
+  .doneIcon {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
 }
+

@@ -1,0 +1,9 @@
+name 'ai-and-the-systems-that-power-it-lesson13-project-choice-1'
+display_name 'Sustainable System Diagram'
+description 'Use the template provided within Sketch Lab to create your system diagram. If needed, generate images to represent components within your system.'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson13-project-1'
+level 'ai-and-the-systems-that-power-it-lesson13-ai-chat'
+
+uses_lab2

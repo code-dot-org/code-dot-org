@@ -6,6 +6,7 @@ import $ from 'jquery';
 
 var _ = require('lodash');
 
+var globalEdition = require('@cdo/apps/util/globalEdition');
 var i18n = require('@cdo/netsim/locale');
 
 var utils = require('../utils'); // Provides String.prototype.repeat
@@ -435,11 +436,15 @@ exports.doesUserOwnShard = function (user, shardID) {
 /**
  * Given a location (e.g. `window.location`), create a URL-friendly
  * level 'slug' that we can use as part of the shard ID.
+ *
+ * The region prefix is stripped so every region shares one shard per level.
+ *
  * @param {!Location|HTMLHyperlinkElementUtils} loc
  * @return {string} a level 'slug' like 's-csp1-lessons-3-levels-2'
  */
 exports.getUniqueLevelKeyFromLocation = function (loc) {
-  return loc.pathname // something like '/s/csp1-2019/lessons/3/levels/2'
+  return globalEdition
+    .stripGlobalEditionPrefix(loc.pathname)
     .replace(/^\//, '') // Strip leading slash from pathname
     .replace(/\/$/, '') // Strip trailing slash (if it exists)
     .replace(/\W/g, '-'); // Replace non-word characters with dashes

@@ -36,12 +36,11 @@ The two trees are seeded independently, so a reference from one into the other
 is unresolvable wherever only one tree was loaded. Three rules follow, each
 enforced in the models:
 
-- a `UI Test ` level may only be referenced by a `ui-test-` unit. The reverse
-  is allowed: `ui-test-` units may still reference production levels, which is
-  the state of anything not yet migrated.
+- a unit and the levels it references must be on the same side. Deprecated
+  blockly levels are exempt: they have no definition file in either tree, and
+  both seeds load them from `config/deprecated_levels`.
 - a parent level and its children — contained levels, project template levels,
-  LevelGroup and BubbleChoice sublevels — must be on the same side, in both
-  directions.
+  LevelGroup and BubbleChoice sublevels — must be on the same side.
 - a level in use by a unit, or attached to another level as a parent or
   child, may not be renamed across the boundary, since that would move its
   definition file between the trees or split it from its relatives.
@@ -51,10 +50,10 @@ enforced in the models:
 ## Seeding
 
 `rake seed:ui_test` seeds this tree, and is the default seed in the test
-environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. Its
-level tasks (`custom_levels_ui_tests`, `child_dsls_ui_tests`,
-`parent_dsls_ui_tests`) run after the production level tasks, so a
-not-yet-migrated `ui-test-` unit can still resolve production levels.
+environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`.
+It seeds both UI test levels, needed by ui-test- units, and production levels,
+which are currently needed in order to back standalone projects in the test
+environment on urls like https://test-studio.code.org/projects/applab/
 
 ## Cached units
 
@@ -65,8 +64,6 @@ A unit whose level pages should be publicly cacheable needs an entry in
 ## Adding content
 
 Developers author this content, working locally with `levelbuilder_mode`
-enabled so that saving a level writes its definition file. Curriculum authors
-do not: the levelbuilder environment refuses to save or destroy `UI Test `
-levels (a `Level` validation and destroy guard), and under the proposal will
-not have access to this tree at all. To move an existing unit's levels here,
-see `bin/curriculum/clone_ui_test_levels.rb`.
+enabled. For now, developers must manually give any new course, unit, or level
+objects the name prefixes mentioned earlier, which will trigger the content to
+be written into this tree rather than into dashboard/config.

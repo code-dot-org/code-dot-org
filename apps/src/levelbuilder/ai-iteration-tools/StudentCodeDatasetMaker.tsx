@@ -1,4 +1,3 @@
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
@@ -7,30 +6,17 @@ import React, {useState} from 'react';
 import {
   AIResponse,
   evaluateStudentWorkOverall,
-  evaluateStudentWorkSkills,
   StudentAnswer,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {fetchStudentCodeSamples} from './StudentWorkSamplesApi';
 
-type EvaluatedCodeSample =
-  | OverallEvaluatedCodeSample
-  | SkillsEvaluatedCodeSample;
-
-type OverallEvaluatedCodeSample = StudentAnswer & AIResponse;
-
-type SkillsEvaluatedCodeSample = StudentAnswer & {
-  [key in `skill-${string}${
-    | 'evaluationCriteria'
-    | 'aiEvaluation'
-    | 'aiReasoning'}`]?: string;
-};
+type EvaluatedCodeSample = StudentAnswer & Omit<AIResponse, 'id'>;
 
 const StudentCodeDatasetMaker: React.FC = () => {
   const [datasetName, setDatasetName] = useState<string>('');
   const [levelId, setLevelId] = useState<string>('');
   const [unitId, setUnitId] = useState<string>('');
-  const [evaluateSkills, setEvaluateSkills] = useState<boolean>(false);
   const [studentIds, setStudentIds] = useState<string>('');
   const [pending, setPending] = useState<boolean>(false);
   const [fetchedSamples, setFetchedSamples] = useState<StudentAnswer[]>([]);
@@ -99,45 +85,18 @@ const StudentCodeDatasetMaker: React.FC = () => {
   };
 
   const evaluateStudentCode = async (studentAnswer: StudentAnswer) => {
-    let aiResponse;
-    if (evaluateSkills) {
-      aiResponse = await evaluateStudentWorkSkills(
-        studentAnswer,
-        parseInt(levelId),
-        parseInt(unitId)
-      );
-    } else {
-      aiResponse = await evaluateStudentWorkOverall(
-        studentAnswer,
-        parseInt(levelId),
-        parseInt(unitId)
-      );
-    }
+    const aiResponse = await evaluateStudentWorkOverall(
+      studentAnswer,
+      parseInt(levelId),
+      parseInt(unitId)
+    );
 
-    let evaluation: EvaluatedCodeSample;
-
-    if (aiResponse.skillEvaluations) {
-      evaluation = {
-        ...studentAnswer,
-      };
-      for (let i = 0; i < aiResponse.skillEvaluations.length; i++) {
-        const skillEvaluation = aiResponse.skillEvaluations[i];
-        const skillKey = skillEvaluation.skillKey;
-        evaluation[`skill-${skillKey}-evaluationCriteria`] =
-          skillEvaluation.evaluationCriteria;
-        evaluation[`skill-${skillKey}-aiEvaluation`] =
-          skillEvaluation.aiEvaluation;
-        evaluation[`skill-${skillKey}-aiReasoning`] =
-          skillEvaluation.aiReasoning;
-      }
-    } else {
-      evaluation = {
-        ...studentAnswer,
-        evaluationCriteria: aiResponse.evaluationCriteria,
-        aiEvaluation: aiResponse.aiEvaluation,
-        aiReasoning: aiResponse.aiReasoning,
-      };
-    }
+    const evaluation: EvaluatedCodeSample = {
+      ...studentAnswer,
+      evaluationCriteria: aiResponse.evaluationCriteria,
+      aiEvaluation: aiResponse.aiEvaluation,
+      aiReasoning: aiResponse.aiReasoning,
+    };
     setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);
   };
 
@@ -192,14 +151,6 @@ const StudentCodeDatasetMaker: React.FC = () => {
             {'Fetch Student Code Samples'}
           </MuiButton>
         </div>
-        <br />
-        <Checkbox
-          label={'Evaluate skills (if any) associated with the level'}
-          name={'evaluateSkills'}
-          checked={evaluateSkills}
-          size="s"
-          onChange={e => setEvaluateSkills(e.target.checked)}
-        />
         <br />
         <br />
         <div>

@@ -30,10 +30,12 @@ const defaultChatButtonData: ChatButtonData[] = [
   ...defaultPrompts,
 ] as const;
 
-interface AiTutorChatProps {
+export interface AiTutorChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
+  levelId: number | null;
   levelName?: string;
+  levelSystemPrompt?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPrompt?: string;
@@ -52,7 +54,9 @@ interface AiTutorChatProps {
 const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   hiddenContextCallback,
   aiTutorMultimodalEnabled = false,
+  levelId,
   levelName,
+  levelSystemPrompt,
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPrompt,
@@ -155,14 +159,17 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
         multimodalEnabled={aiTutorMultimodalEnabled}
+        levelId={levelId}
         levelName={levelName}
+        levelSystemPrompt={levelSystemPrompt}
         channelId={channelId}
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}
         hideModelChangeMessage={true}
-        jsonSchemaResponseCallback={
-          aiTutorResponseSchemaSettings?.jsonSchemaResponseCallback
+        formatSchemaResponseForDisplay={
+          aiTutorResponseSchemaSettings?.formatForDisplay
         }
+        onSchemaResponse={aiTutorResponseSchemaSettings?.onResponse}
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
         disabledState={disabledState}

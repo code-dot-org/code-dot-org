@@ -5,7 +5,7 @@ wrong 'People in a variety of different jobs all use AI'
 wrong 'AI can generate images and video in addition to generating text'
 right 'Research in different fields contributed to advances in AI'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 In what sense is AI the result of interdisciplinary work?

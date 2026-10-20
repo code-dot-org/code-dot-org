@@ -12,12 +12,7 @@ import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  AppName,
-  LabProps,
-  MultiFileSource,
-  ProjectSources,
-} from '@cdo/apps/lab2/types';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {DEFAULT_START_HTML_FILE} from '@cdo/apps/weblab2/htmlPreview/constants';
 
 import {useSource} from '../codebridge/hooks/useSource';
@@ -195,8 +190,6 @@ const Weblab2View: React.FC<
     levelProperties?.widgetView
   );
 
-  const secondaryBackpackAppNames: AppName[] = useMemo(() => ['sketchlab'], []);
-
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && sourceLevel === levelProperties.id && (
@@ -212,7 +205,6 @@ const Weblab2View: React.FC<
           onAssetRemoved={onAssetRemoved}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-          secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
           aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
           enableUserAddedSelectionContext={true}

@@ -35,7 +35,7 @@ trap cleanup EXIT
 fail() {
   echo "FAIL  $1" >&2
   echo "---- last web logs ----" >&2
-  compose logs --tail 40 web >&2 || true
+  compose logs --tail 100 web >&2 || true
   exit 1
 }
 

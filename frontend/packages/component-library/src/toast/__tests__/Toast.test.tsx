@@ -1,4 +1,11 @@
-import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {vi} from 'vitest';
 
@@ -9,6 +16,8 @@ import Toast, {
   ToastProvider,
   useToast,
 } from './../index';
+
+const SPINNER_ICON = {iconName: 'spinner', animationType: 'spin'} as const;
 
 describe('Design System - Toast', () => {
   describe('controlled Toast', () => {
@@ -186,6 +195,20 @@ describe('Design System - Toast', () => {
       }
     });
 
+    it('renders a custom icon in place of the type default', () => {
+      render(
+        <Toast
+          open
+          message="Saving..."
+          type="info"
+          alertProps={{icon: SPINNER_ICON}}
+        />,
+      );
+      const icon = screen.getByTestId('font-awesome-v6-icon');
+      expect(icon).toHaveClass('fa-spinner', 'fa-spin');
+      expect(icon).not.toHaveClass('fa-circle-info');
+    });
+
     it('ignores a clickaway close (user must read the status)', () => {
       const onClose = vi.fn();
       render(<Toast open message="Saved!" onClose={onClose} />);
@@ -219,6 +242,14 @@ describe('Design System - Toast', () => {
       const toast = useToast();
       return <button onClick={() => toast(message, options)}>fire</button>;
     }
+
+    // The provider's toast has a dismiss button, whose icon shares the test id,
+    // so look only inside the Alert's content (module classes render unscoped
+    // in tests).
+    const alertIcon = () =>
+      within(
+        document.querySelector('.alertContentContainer') as HTMLElement,
+      ).getByTestId('font-awesome-v6-icon');
 
     it('shows and announces a message on demand', async () => {
       render(
@@ -302,6 +333,36 @@ describe('Design System - Toast', () => {
       } finally {
         vi.useRealTimers();
       }
+    });
+
+    it('forwards a per-call icon to the Alert', async () => {
+      render(
+        <ToastProvider>
+          <Trigger
+            message="Saving..."
+            options={{
+              type: 'info',
+              autoHideDuration: null,
+              icon: SPINNER_ICON,
+            }}
+          />
+        </ToastProvider>,
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'fire'}));
+
+      await waitFor(() =>
+        expect(alertIcon()).toHaveClass('fa-spinner', 'fa-spin'),
+      );
+    });
+
+    it('falls back to the type default icon when no icon is given', () => {
+      render(
+        <ToastProvider>
+          <Trigger message="Profile updated" options={{type: 'success'}} />
+        </ToastProvider>,
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'fire'}));
+      expect(alertIcon()).toHaveClass('fa-check-circle');
     });
 
     it('keeps its message while animating out', async () => {

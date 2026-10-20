@@ -170,20 +170,20 @@ export const Sizes: Story = {
     const sHelperIcon = sHelperMessage.previousElementSibling;
 
     expect(sLabelText).toHaveStyle('font-size: 12px;');
-    expect(sLabelText).toHaveStyle('line-height: 19.68px;');
-    expect(sHelperMessage).toHaveStyle('font-size: 13.008px;');
-    expect(sHelperMessage).toHaveStyle('line-height: 21.3331px;');
-    expect(sHelperIcon).toHaveStyle('font-size: 13.008px;');
-    expect(sHelperIcon).toHaveStyle('line-height: 13.008px;');
+    expect(sLabelText).toHaveStyle('line-height: 18px;');
+    expect(sHelperMessage).toHaveStyle('font-size: 12px;');
+    expect(sHelperMessage).toHaveStyle('line-height: 18px;');
+    expect(sHelperIcon).toHaveStyle('font-size: 12px;');
+    expect(sHelperIcon).toHaveStyle('line-height: 12px;');
 
     const mLabelText = canvas.getAllByText('M Label text')[0];
     const mHelperMessage = canvas.getByText('M Helper message');
     const mHelperIcon = mHelperMessage.previousElementSibling;
 
     expect(mLabelText).toHaveStyle('font-size: 14px;');
-    expect(mLabelText).toHaveStyle('line-height: 21.56px;');
+    expect(mLabelText).toHaveStyle('line-height: 21.98px;');
     expect(mHelperMessage).toHaveStyle('font-size: 14px;');
-    expect(mHelperMessage).toHaveStyle('line-height: 21.56px;');
+    expect(mHelperMessage).toHaveStyle('line-height: 21.98px;');
     expect(mHelperIcon).toHaveStyle('font-size: 14px;');
     expect(mHelperIcon).toHaveStyle('line-height: 14px;');
 
@@ -192,9 +192,9 @@ export const Sizes: Story = {
     const lHelperIcon = lHelperMessage.previousElementSibling;
 
     expect(lLabelText).toHaveStyle('font-size: 16px;');
-    expect(lLabelText).toHaveStyle('line-height: 23.68px;');
+    expect(lLabelText).toHaveStyle('line-height: 24px;');
     expect(lHelperMessage).toHaveStyle('font-size: 16px;');
-    expect(lHelperMessage).toHaveStyle('line-height: 23.68px;');
+    expect(lHelperMessage).toHaveStyle('line-height: 24px;');
     expect(lHelperIcon).toHaveStyle('font-size: 16px;');
     expect(lHelperIcon).toHaveStyle('line-height: 16px;');
   },

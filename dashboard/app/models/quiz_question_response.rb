@@ -23,6 +23,10 @@ class QuizQuestionResponse < ApplicationRecord
   belongs_to :quiz_attempt
   belongs_to :quiz_question
 
+  # Only questions still placed on the quiz count - finalize scores over
+  # placements too. nil level means the quiz was deleted, placements with it.
+  scope :in_quiz, ->(level) {where(quiz_question_id: level.question_ids) if level}
+
   GRADING_STATUSES = %w(
     auto_graded
     pending_ai

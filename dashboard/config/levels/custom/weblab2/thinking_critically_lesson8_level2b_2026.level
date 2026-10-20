@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Social Media Post",
-    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "long_instructions": "## Sample Social Media Post\r\n\r\n1. Examine the sample social media post to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and write them to the table in your Activity Guide.\r\n",
     "bubble_choice_description": "A post added to a social media channel",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -63,6 +63,6 @@
     },
     "thumbnail_url": "https://images.code.org/5fb5e274c9dae3549905f279cb8e7dc0-two.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28T16:04:42.792+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2a_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2a_2026\"},{\"changed_at\":\"2026-04-28 16:09:50 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:10:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:43 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:04:42.792+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2a_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2a_2026\"},{\"changed_at\":\"2026-04-28 16:09:50 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:10:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:43 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 17:50:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -36,7 +36,7 @@ class MultipleChoiceByStudentContainer extends Component {
       <div>
         {studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses && (
           <div>
-            <Typography variant="h2">
+            <Typography variant="h6" component="h2">
               {i18n.multipleChoiceStudentOverview({
                 studentName: studentAnswerData.name,
               })}

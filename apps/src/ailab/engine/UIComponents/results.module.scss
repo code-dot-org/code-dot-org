@@ -1,0 +1,25 @@
+@use '../sharedMixins' as mixins;
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+// Scrolls when a narrow canvas stacks the Test panel under the tree.
+.results {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.emptyCanvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background-color: var(--background-neutral-secondary);
+}
+
+.overlay {
+  @include mixins.canvas-overlay;
+}

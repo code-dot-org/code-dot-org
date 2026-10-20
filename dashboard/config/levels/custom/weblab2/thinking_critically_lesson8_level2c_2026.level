@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Tech/Gamer Forum",
-    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "long_instructions": "## Sample Tech / Gamer Forum\r\n\r\n1. Examine the sample gamer forum post to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and write them to the table in your Activity Guide.\r\n",
     "bubble_choice_description": "A thread posted on a discussion board",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -73,6 +73,6 @@
     },
     "thumbnail_url": "https://images.code.org/7ec14f4e73db6c07c872e2c951dac8ec-three.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28T16:11:07.249+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2b_2026\"},{\"changed_at\":\"2026-04-28 16:12:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:12:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-08 21:56:14 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:11:07.249+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2b_2026\"},{\"changed_at\":\"2026-04-28 16:12:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:12:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-08 21:56:14 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-30 17:51:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

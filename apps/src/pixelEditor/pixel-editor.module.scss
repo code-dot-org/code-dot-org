@@ -16,9 +16,9 @@ $border-subtle: chrome.$border-subtle;
   @include chrome.theme;
 }
 
-// One high-contrast keyboard focus ring for everything in the dark modal;
-// UA defaults are hard to see against the panel background.
-.dialogHost .modal :focus-visible {
+// One high-contrast keyboard focus ring for everything the editor renders,
+// in the modal or in a host's panel; UA defaults are hard to see on dark.
+.dialogHost :focus-visible {
   @include chrome.focus-ring;
 }
 
@@ -122,6 +122,51 @@ $border-subtle: chrome.$border-subtle;
   justify-content: center;
   margin-top: auto;
   padding-top: 8px;
+}
+
+// The toolbar as one wrapping row: tools, sizes and undo/redo on the
+// first line, the color control on the second, the palette opening
+// downward.
+.toolbarRow {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  .toolGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .toolbarDivider {
+    width: 1px;
+    height: 26px;
+    margin: 0 4px;
+  }
+
+  .historyRow {
+    margin-top: 0;
+    margin-left: auto;
+    padding-top: 0;
+  }
+
+  .colorRow {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .colorPicker {
+    width: 64px;
+  }
+
+  .spectrumPopover {
+    top: calc(100% + 8px);
+    bottom: auto;
+    left: 0;
+  }
 }
 
 .canvasArea {
@@ -234,6 +279,34 @@ $border-subtle: chrome.$border-subtle;
 
 .savePrimary {
   @include chrome.primary-button;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.paletteSwatch {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--dialog-control-border-strong);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--dialog-panel-text);
+  }
+}
+
+.paletteSwatchActive {
+  box-shadow:
+    0 0 0 2px var(--dialog-inset-bg),
+    0 0 0 3px var(--dialog-panel-text);
 }
 
 // Spans both toolbar columns; the popover offset below is measured from its

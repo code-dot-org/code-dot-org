@@ -102,6 +102,6 @@
 - if @rubric.present? && current_user&.teacher?
   %div#rubric-fab-mount-point
 
-- if Policies::Ai.ai_differentiation_enabled?(current_user)
+- if Policies::Ai.ai_differentiation_eligible?(current_user)
   %div#ai-differentiation-fab-mount-point
 

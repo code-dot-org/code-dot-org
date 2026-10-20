@@ -25,6 +25,8 @@ declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     white: true;
     tertiary: true;
+    /** Contained only. Outlined and text orange use that variant's primary styles. */
+    orange: true;
   }
 }
 

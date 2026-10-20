@@ -2,10 +2,12 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {AddBlockEntry} from './addBlocks';
 import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
+import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
-import {Tab} from './redux/spriteLab2Redux';
+import {Objectives} from './objectives';
 import {World} from './world';
 
 /** The animation-list category marking an image as a background, not a costume. */
@@ -31,6 +33,8 @@ export interface SerializedAnimationProps {
   recentColors?: RGBA[];
   /** The stored image is already cropped to its content. */
   trimmed?: boolean;
+  /** What the image level that made it was for (level_mode.imageRole). */
+  role?: string;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
@@ -70,6 +74,14 @@ export interface Scene {
   source?: WorkspaceSerialization;
   /** Starter sprite and block placements, spawned ahead of the program. */
   world?: World;
+  /** The scene's first frame as last captured (sceneThumbnails.ts): a
+      project asset, and the fingerprint of the scene it shows. */
+  thumbnail?: SceneThumbnail;
+}
+
+export interface SceneThumbnail {
+  url: string;
+  fingerprint: string;
 }
 
 /** The single ProjectSources.source JSON for a SpriteLab2 project. */
@@ -78,38 +90,6 @@ export interface Sources extends ProjectSources {
   animations?: SerializedAnimationList;
   /** Per-scene code workspaces. */
   scenes?: Scene[];
-}
-
-/**
- * One stage of a level's floating-guide instructions. `text` is markdown;
- * `after` is what must hold to reach this step from the one before it, every
- * listed clause of it (the first step needs none).
- */
-export interface GuideStep {
-  text: string;
-  /** Offer the Continue button to the next level while on this step. */
-  showContinue?: boolean;
-  /**
-   * Image counts are measured from what the project held when the level
-   * opened, so a level gates on the images made on it, not the ones it
-   * inherited from earlier levels.
-   */
-  after?: {
-    /** At least this many block-kind cells placed in the World. */
-    worldBlocks?: number;
-    /** At least this many sprite-kind cells placed in the World. */
-    worldSprites?: number;
-    /** At least this many images made on this level. */
-    images?: number;
-    /** At least this many sprite-type images made on this level. */
-    spriteImages?: number;
-    /** At least this many background-type images made on this level. */
-    backgroundImages?: number;
-    /** At least this many block-type images made on this level. */
-    blockImages?: number;
-    /** This tab is active. */
-    tab?: Tab;
-  };
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
@@ -124,12 +104,27 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     name: string;
     type?: SceneType;
   };
-  /** Staged text for the floating guide, in order. */
-  guideSteps?: GuideStep[];
+  /** The level's objectives (objectives.ts): the Guide's text, checklist
+      and Continue gate. */
+  objectives?: Objectives;
   /** Premade world for the pinned scene, one string per playfield row
       anchored to the floor. 'B' cells take the block image the student made
-      most recently, 'S' their first character. */
-  worldStartPattern?: string[];
+      most recently, 'S' the image_role_defaults sprite, else their first
+      character. */
+  /** Rows of a premade world (worldStartPattern.ts), or several such
+      layouts, one of which the project draws by its channel id. */
+  worldStartPattern?: string[] | string[][];
+  /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
+      image levels record through level_mode.imageRole. */
+  imageRoleDefaults?: ImageRoleDefaults;
+  /** Blocks added to the pinned scene when the student arrives and the
+      scene has none of that type (addBlocks.ts), in Blockly's block
+      state form: an event to fill in, a placeholder shadow on its `next`.
+      An entry with `attachTo` instead hangs its shadow on the end of the
+      stack already there whose top block has that type. */
+  addBlocks?: AddBlockEntry[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
+  /** Runtime libraries the level opts into (see usesPlatformPhysics). */
+  helperLibraries?: string[];
 }

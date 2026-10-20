@@ -1,21 +1,21 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Challenge,
+  ChallengeResponse,
+  ChallengeResponseDetail,
+  challengeResponseValidator,
+  EvaluationStatus,
+  ExplanationTypes,
+  ProjectDetailsCard,
+} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
-
-import ProjectDetailsCard from '../../gallery/ProjectDetailsCard';
-import {ChallengeResponseDetail} from '../../gallery/types';
-import {
-  Challenge,
-  ChallengeResponse,
-  challengeResponseValidator,
-  EvaluationStatus,
-  ExplanationTypes,
-} from '../types';
 
 import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';
@@ -32,10 +32,6 @@ interface ChallengeBoxProps {
   lessonId: number;
   challenge: Challenge;
   challengeType: string;
-  challengeSetCallback: (
-    pickedChallenge: Challenge | null,
-    pickedChallengeType: string | null
-  ) => void;
 }
 
 // Terminal evaluation_status values that map to a student-facing error
@@ -51,7 +47,6 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   lessonId,
   challenge,
   challengeType,
-  challengeSetCallback,
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -78,9 +73,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // (the drawing, or the recording) lives in the active modality component.
   // The modality reports whether it can be submitted through
   // onSubmittableChange, and registers its submit/reset handlers on these
-  // refs so the top bar can drive them.
+  // refs so the top bar can drive them. Submit resolves true once the
+  // response is created.
   const [canSubmit, setCanSubmit] = useState(false);
-  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
 
   // Video challenges are recordings top to bottom, so the record button
@@ -89,6 +85,17 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   const isRecordable =
     challengeType === ChallengeTypes.VIDEO ||
     explanationType === ExplanationTypes.AUDIO;
+  // Video previews return to edit first; audio re-records in one click
+  const isVideoPreview =
+    challengeType === ChallengeTypes.VIDEO && hasRecording && !isRecording;
+
+  const handleRecordClick = () => {
+    if (isVideoPreview) {
+      setHasRecording(false);
+    } else {
+      setIsRecording(!isRecording);
+    }
+  };
 
   // Both challenge modalities report submission through this callback; the
   // confirmation dialog is shared here rather than duplicated per modality.
@@ -132,11 +139,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           challengeResponseValidator
         )
           .then(response => {
-            console.log(response);
             return response.value;
           })
           .then(value => {
-            console.log(value);
             const status = value.evaluation_status;
             const outcome =
               status === 'success'
@@ -203,12 +208,16 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     setChallengeResponse(null);
   };
 
-  // The gallery is a sibling Rails page one segment below the current tutor
-  // page: .../lessons/<n>/tutor -> .../lessons/<n>/tutor/gallery.
-  const handleViewGallery = () => {
-    const base = window.location.pathname.replace(/\/$/, '');
-    window.location.href = `${base}/gallery`;
+  // On failure the modality shows its own error; return to composing.
+  const handleSubmitClick = async () => {
+    setShowConfirmation(true);
+    if (!(await submitRef.current?.())) {
+      setShowConfirmation(false);
+    }
   };
+
+  const navigate = useNavigate();
+  const handleViewGallery = () => navigate('/gallery');
 
   const switchExplanationType = (type: string) => {
     setIsRecording(false);
@@ -417,9 +426,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                   startIcon={
                     <FontAwesomeV6Icon iconStyle="solid" iconName="check" />
                   }
-                  onClick={() => {
-                    challengeSetCallback(null, null);
-                  }}
+                  onClick={() => navigate('/intervention')}
                   disabled={showConfirmation}
                 >
                   I'm done
@@ -440,9 +447,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       iconName="arrow-left"
                     />
                   }
-                  onClick={() => {
-                    challengeSetCallback(null, null);
-                  }}
+                  onClick={() => navigate('/intervention')}
                 >
                   Choose a different challenge
                 </MuiButton>
@@ -573,10 +578,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     }
                     variant="contained"
                     disabled={showConfirmation}
-                    onClick={() => setIsRecording(!isRecording)}
+                    onClick={handleRecordClick}
                   >
                     {isRecording
                       ? 'Stop Recording'
+                      : isVideoPreview
+                      ? 'Edit and Record Again'
                       : hasRecording
                       ? 'Record Again'
                       : 'Start Recording'}
@@ -589,10 +596,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     size="medium"
                     className={styles.submitButton}
                     disabled={!canSubmit}
-                    onClick={() => {
-                      setShowConfirmation(true);
-                      submitRef.current?.();
-                    }}
+                    onClick={handleSubmitClick}
                   >
                     Submit
                   </MuiButton>

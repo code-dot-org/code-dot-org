@@ -1,7 +1,7 @@
 {
   "key": "idaho-digital-literacy",
   "display_name": "Idaho Digital Literacy",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": "AIF",

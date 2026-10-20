@@ -24,6 +24,9 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
@@ -32,28 +35,35 @@
     "world_start_pattern": [
       "..........",
       "..........",
-      "BB......BB",
       "..........",
-      "....BB....",
       "..........",
-      ".BB....BB.",
+      "..........",
+      "..........",
+      "..........",
       "....S.....",
-      "...BBBB...",
+      "..........",
       ".........."
     ],
-    "guide_steps": [
-      {
-        "text": "**Make your character the player.** There they are, waiting in your world. Drag out **set [ ] as player** and pick them. Then click **Play** and try the arrow keys: **left** and **right** to run, **up** to jump."
-      },
-      {
-        "text": "**You're in control!** Run and jump around, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Make your character the player.**",
+      "items": [
+        {
+          "text": "Drag **set as player** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_setAsPlatformPlayer",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Make your character the player\nUse **set [ ] as player** and pick your character. Then press **Play** and use the arrow keys: left and right to run, up to jump.",
+      ]
+    },
+    "long_instructions": "# Make your character the player\nDrag **set as player** onto the dotted outline and pick your character. Arrow keys: left and right to run, up to jump.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -62,7 +72,21 @@
           "type": "spritelab2_setAsPlatformPlayer"
         }
       ]
-    }
+    },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_setAsPlatformPlayer"
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

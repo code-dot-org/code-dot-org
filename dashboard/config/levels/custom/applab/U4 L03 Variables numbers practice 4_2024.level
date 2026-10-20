@@ -46,8 +46,7 @@
     "libraries_enabled": "false",
     "name_suffix": "_2024",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "skill_keys": "[\"variables_name\", \"variables_declare\"]"
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -17,9 +17,11 @@ import {
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
+import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
@@ -63,6 +65,11 @@ interface UseBlocklyWorkspaceResult {
     onWorkspaceChange: (source: WorkspaceSerialization) => void,
     onIntermediateChange?: () => void
   ) => () => void;
+  /** Blockly's undo stacks: edits since the last load, and undone ones. */
+  canUndo: boolean;
+  canRedo: boolean;
+  undo: () => void;
+  redo: () => void;
 }
 
 /**
@@ -83,6 +90,7 @@ export default function useBlocklyWorkspace({
   themeRef.current = theme;
   // Tracks workspace loads (as opposed to user edits).
   const pendingLoadsRef = useRef(0);
+  const [history, setHistory] = useState({canUndo: false, canRedo: false});
   const currentBlocksRef = useRef<WorkspaceSerialization | null>(null);
   const onWorkspaceChangeRef = useRef<(source: WorkspaceSerialization) => void>(
     () => {}
@@ -137,6 +145,11 @@ export default function useBlocklyWorkspace({
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
 
+    // Drags onto a placeholder keep the placeholder showing, not a marker.
+    workspaceRef.current.options.plugins[
+      BlocklyCore.registry.Type.CONNECTION_PREVIEWER.toString()
+    ] = PlaceholderPreviewer;
+
     // CDO Blockly shrinks the container by the workspace-header height to
     // leave room for a header bar we don't render, leaving a gap at the
     // bottom. Reclaim the full height and resize the workspace SVG to fill.
@@ -146,9 +159,16 @@ export default function useBlocklyWorkspace({
     const onChange = (e: BlocklyCore.Events.Abstract) => {
       if (pendingLoadsRef.current > 0) {
         if (e.type === BlocklyCore.Events.FINISHED_LOADING) {
-          // This load's event stream is over.
+          // This load's event stream is over. A load is not an edit to
+          // undo: a scene's blocks never undo into the last scene's.
           pendingLoadsRef.current--;
+          workspaceRef.current?.clearUndo();
         }
+        return;
+      }
+      // The stack-room pass tidies positions; it is not an edit to save or
+      // run.
+      if (e.group === STACK_ROOM_EVENT_GROUP) {
         return;
       }
       // Toolbox editing: flag blocks that won't serialize into a category.
@@ -185,9 +205,31 @@ export default function useBlocklyWorkspace({
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    // After onChange, which clears the stacks when a load ends.
+    const onHistoryChange = () => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      const canUndo = workspace.getUndoStack().length > 0;
+      const canRedo = workspace.getRedoStack().length > 0;
+      setHistory(last =>
+        last.canUndo === canUndo && last.canRedo === canRedo
+          ? last
+          : {canUndo, canRedo}
+      );
+    };
+    workspaceRef.current.addChangeListener(onHistoryChange);
+    setHistory({canUndo: false, canRedo: false});
+    // Levelbuilder lays a toolbox and start sources out by hand.
+    const stopStackRoom =
+      isToolboxMode || isStartMode
+        ? undefined
+        : watchStackRoom(workspaceRef.current);
     setWorkspaceVersion(version => version + 1);
 
     return () => {
+      stopStackRoom?.();
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
       currentBlocksRef.current = null;
@@ -285,6 +327,9 @@ export default function useBlocklyWorkspace({
     []
   );
 
+  const undo = useCallback(() => workspaceRef.current?.undo(false), []);
+  const redo = useCallback(() => workspaceRef.current?.undo(true), []);
+
   return {
     workspaceVersion,
     getCode,
@@ -293,5 +338,9 @@ export default function useBlocklyWorkspace({
     loadCode,
     refreshToolbox,
     subscribeToChanges,
+    canUndo: history.canUndo,
+    canRedo: history.canRedo,
+    undo,
+    redo,
   };
 }

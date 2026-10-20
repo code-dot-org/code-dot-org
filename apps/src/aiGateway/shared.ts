@@ -1,4 +1,5 @@
 import AichatContextManager from '../aichat/aichatContextManager';
+import {AichatContext} from '../aichat/types';
 import HttpClient from '../util/HttpClient';
 
 import {
@@ -19,12 +20,13 @@ export interface GatewayAccessToken {
   turnstileEnforcementMode: TurnstileEnforcementMode;
 }
 
-export async function fetchAccessToken(): Promise<GatewayAccessToken> {
+// Use the provided AichatContext or fall back to the default context.
+export async function fetchAccessToken(
+  aichatContext: AichatContext = AichatContextManager.getContext()
+): Promise<GatewayAccessToken> {
   const response = await HttpClient.post(
     '/ai_gateway/access_token',
-    JSON.stringify({
-      aichatContext: AichatContextManager.getContext(),
-    }),
+    JSON.stringify({aichatContext}),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',

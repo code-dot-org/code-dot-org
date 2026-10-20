@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-12 21:44:25 UTC",
+    "serialized_at": "2026-09-23 12:54:21 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6429,23 +6429,12 @@
       }
     },
     {
-      "name": "Computing Innovation Map",
-      "url": "https://www.google.com/maps/d/u/1/viewer?mid=1wpU-4sxapqN7ksztqtEdVEcKtbhCcA0",
-      "key": "computing_innovation_map",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "computing_innovation_map"
-      }
-    },
-    {
-      "name": "Computing Innovation Map (Alternative)",
+      "name": "Computing Innovation Map ",
       "url": "https://docs.google.com/presentation/d/1Xf2jIO3BChbp8Xr4qsHYgG1LovjzDzU6uoClzC3clXU/edit?usp=drivesdk",
       "key": "computing_innovation_map_alternative_",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -7100,12 +7089,6 @@
       "seeding_key": {
         "lesson.key": "Introduction to Computer Systems",
         "resource.key": "computer_innovations_and_careers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Computer Systems",
-        "resource.key": "computing_innovation_map"
       }
     },
     {
@@ -8379,6 +8362,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

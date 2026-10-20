@@ -159,10 +159,9 @@ const ControlButtons: React.FunctionComponent = () => {
       <WithConditionalTooltip
         showTooltip={!isRunning && !!disabledCodeActionsTooltip}
         tooltipProps={{
-          direction: 'onRight',
-          text: disabledCodeActionsTooltip || '',
-          size: 's',
-          tooltipId: 'code-actions-tooltip',
+          placement: 'right',
+          title: disabledCodeActionsTooltip || '',
+          id: 'code-actions-tooltip',
         }}
       >
         <MuiButton

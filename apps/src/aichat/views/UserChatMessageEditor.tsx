@@ -34,12 +34,18 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
-  jsonSchemaResponseCallback?: (response: unknown) => string;
-  currentLevelId?: string | null;
+  currentLevelId: number | null;
+  levelSystemPrompt?: string;
   sendDisabled?: boolean;
   onMessageSent?: () => void;
 
-  lessonId?: number;
+  // Forwarded to submitChatContents, which invokes it once for a schema lab's
+  // response after that response has been logged.
+  onSchemaResponse?: (response: unknown) => void;
+
+  // Forwarded to submitChatContents, which applies it to prior turns before
+  // sending them to the model.
+  formatSchemaResponseForDisplay?: (response: unknown) => string;
 
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
@@ -62,9 +68,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
-  jsonSchemaResponseCallback,
   currentLevelId,
-  lessonId,
+  levelSystemPrompt,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
@@ -73,6 +78,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatDisabled,
   sendDisabled = false,
   onMessageSent,
+  onSchemaResponse,
+  formatSchemaResponseForDisplay,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -128,8 +135,10 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
-            jsonSchemaResponseCallback,
-            lessonId,
+            levelName,
+            levelSystemPrompt,
+            onSchemaResponse,
+            formatSchemaResponseForDisplay,
           })
         );
         onMessageSent?.();
@@ -145,9 +154,11 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
-      jsonSchemaResponseCallback,
-      lessonId,
+      levelName,
+      levelSystemPrompt,
       onMessageSent,
+      onSchemaResponse,
+      formatSchemaResponseForDisplay,
     ]
   );
 

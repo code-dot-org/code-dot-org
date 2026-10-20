@@ -1,3 +1,4 @@
+@use "checkerboard";
 @use './imageTile' as tile;
 // The image dialog: image large on the left, details or the generate form
 // on the right, actions in a footer bar. Wears the same rounded chrome as
@@ -18,37 +19,9 @@
 .dialogHost .dialog {
   @include chrome.panel;
 
-  // One width for both views; the panel's max-width still shrinks it on
-  // narrow browsers.
+  // The details view's width (.dialogWide is the sentence view's); the
+  // panel's max-width still shrinks it on narrow browsers.
   width: 850px;
-}
-
-// No modal entrance and no card chrome. The painted panel color (the
-// alternatives ring gap) must match the lab's ground, not the card's.
-.dialogHost .imageLevelPanel {
-  animation: none;
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-
-  --dialog-panel-bg: var(--background-neutral-primary);
-
-  .footer {
-    border-top: none;
-    padding-top: 0;
-  }
-
-  // The image sits on the stage itself: no frame, and no checkerboard (that
-  // is for the dialog, whose opaque panel would otherwise hide transparency).
-  .imagePane {
-    border: none;
-  }
-
-  .imagePaneChecker {
-    background-color: transparent;
-    background-image: none;
-  }
 }
 
 .dialogHost .dialog :focus-visible {
@@ -127,44 +100,42 @@
   img.pixelArt {
     image-rendering: pixelated;
   }
+}
 
-  // A character set plays one pose at a time at full size (the canvas takes
-  // the pane's own img/canvas sizing), named in the pane's top left corner.
-  .sheetPreview {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    inset: 0;
-  }
+// A character set plays one pose at a time at full size (the canvas takes
+// its host's img/canvas sizing), named in a pill in the host's top left
+// corner. Top level, so every host of AnimatedSheetPreview gets the pill;
+// the host supplies the positioned box.
+.sheetPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
 
-  .sheetPreviewCaption {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    background: rgb(0 0 0 / 45%);
-    color: #fff;
-    font-size: 13px;
-  }
+.sheetPreviewCaption {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgb(0 0 0 / 45%);
+  color: #fff;
+  font-size: 13px;
+  // The page gives every span user-select: text.
+  user-select: none;
 }
 
 // Checkerboard signals transparency; base and tint follow the theme (the
 // paint editor draws the same pair into its canvas). Only once there's an
 // image: an empty pane stays blank.
 .imagePaneChecker {
-  background-color: var(--dialog-checker-bg);
-  background-image: linear-gradient(
-      45deg,
-      var(--dialog-checker-tint) 25%,
-      transparent 25%
-    ),
-    linear-gradient(-45deg, var(--dialog-checker-tint) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--dialog-checker-tint) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--dialog-checker-tint) 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  @include checkerboard.checkerboard(
+    20px,
+    var(--dialog-checker-tint),
+    var(--dialog-checker-bg)
+  );
 }
 
 // The summary view's image is itself the way into the paint editor.
@@ -294,10 +265,9 @@
 
 // --- Generate view ---
 
-// Hosts the transplanted guide Adlib (it brings its own dark panel and
-// glowing border); the native fieldset disable dims it while typed text
-// has precedence.
-.adlibGroup {
+// Hosts the sentence's word menus; the native fieldset disable dims them
+// while typed text has precedence.
+.wordMenusGroup {
   min-width: 0;
   margin: 0;
   padding: 0;
@@ -384,6 +354,7 @@
 // Wears .radioGroup's bordered look; this only fits the slider, which the
 // design system fixes at 300px (its track and input already stretch to
 // their container).
+
 .temperatureGroup > div {
   width: 100%;
   min-width: 0;
@@ -513,4 +484,47 @@
 .generateProgress {
   font-size: 13px;
   opacity: 0.8;
+}
+
+// --- Sentence view ---
+
+// Room for the word menus beside a larger picture; the panel's max-width
+// still shrinks it on narrow browsers.
+$sentence-dialog-width: 970px;
+$sentence-pane-size: 420px;
+
+.dialogHost .dialogWide {
+  width: $sentence-dialog-width;
+}
+
+// The picture's column: the pane, and Behind the scenes under it.
+.sentenceColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  width: $sentence-pane-size;
+
+  .imagePane {
+    width: $sentence-pane-size;
+    height: $sentence-pane-size;
+  }
+}
+
+.sentencePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+
+  // Focus lands here on a mode change; the panel's edge is not the cue.
+  &:focus {
+    outline: none;
+  }
+}
+
+// The Type choice stands a little apart from the sentence it decides.
+.sentenceType {
+  margin-bottom: 10px;
 }

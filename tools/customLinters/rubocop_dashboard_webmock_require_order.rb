@@ -14,7 +14,7 @@ module CustomCops
 
     def on_send(node)
       return unless require_statement?(node) do |package|
-        if (package == 'test_helper') && @webmock_require.present?
+        if (package == 'test_helper') && @webmock_require&.present?
           add_offense(node, message: MSG) do |corrector|
             corrector.insert_before(@webmock_require, "#{node.source}\n")
             corrector.remove(node)

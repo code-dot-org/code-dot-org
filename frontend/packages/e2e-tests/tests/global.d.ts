@@ -17,6 +17,14 @@ declare global {
     __TestInterface?: {
       arrangeBlockPosition(blocksXml: string, options: object): string;
       loadBlocks(blocksXml: string): void;
+      getDroplet(): {
+        currentlyAnimating: boolean;
+        session: {currentlyUsingBlocks: boolean};
+      };
     };
+    /** OneTrust's public API; ToggleInfoDisplay appears once its UI has rendered. */
+    OneTrust?: {ToggleInfoDisplay?(): void};
+    /** OneTrust's consented group ids, comma-delimited, e.g. ",C0001,C0002,". */
+    OnetrustActiveGroups?: string;
   }
 }

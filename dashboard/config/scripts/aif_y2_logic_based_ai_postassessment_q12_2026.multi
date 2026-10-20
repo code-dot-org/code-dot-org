@@ -5,7 +5,7 @@ wrong '`s(lower)`'
 right '`s.lower()`'
 wrong '`lower.s()`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Given a string `s`, how would you call the `lower` method on it to convert it to lowercase? 

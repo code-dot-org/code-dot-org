@@ -53,8 +53,6 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  has_many :levels_skills
-  has_many :skills, through: :levels_skills
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
@@ -69,9 +67,22 @@ class Level < ApplicationRecord
   end)
 
   # scope for levels that require ai chat tools to reasonably function.
-  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
+  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2 Adaptive])}
 
   scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
+
+  # Aichat levels pick their model per level, so only those configured with a
+  # US only model count.
+  scope :with_us_only_aichat_model, (lambda do
+    where(type: 'Aichat').where(
+      "levels.properties->>'$.aichat_settings.initialCustomizations.selectedModelId' IN (?)",
+      SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS
+    )
+  end)
+
+  scope :with_essential_us_only_ai_models, (lambda do
+    with_us_only_aichat_model.or(where(type: 'Weblab2'))
+  end)
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -135,7 +146,7 @@ class Level < ApplicationRecord
     use_secondary_finish_button
     skip_url
     stay_on_level_after_submit
-    skill_keys
+    header_label
     additional_ai_evaluation_instructions
     product_tours
     generate_outline
@@ -367,6 +378,7 @@ class Level < ApplicationRecord
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Adaptive', # no ideal solution
     'Aichat', # no ideal solution
     'Ailab', # no ideal solution
     'Applab', # freeplay
@@ -1141,46 +1153,6 @@ class Level < ApplicationRecord
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
     end
-  end
-
-  def summarize_for_levels_skills
-    {
-      level_id: id,
-      level_name: name,
-      unit_names: unit_names,
-      skills: skill_identifiers,
-    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
-  end
-
-  # This method returns the names of all units that this level is part of.
-  # For contained levels, we also include the names of the units that
-  # the parent levels are part of.
-  # This is used to filter levels by unit for display on /skills.
-  def unit_names
-    unit_names = script_levels.map {|sl| sl.script.name}
-    parent_levels.each do |parent_level|
-      unit_names += parent_level.script_levels.map {|sl| sl.script.name}
-    end
-    unit_names.uniq.sort
-  end
-
-  def skill_identifiers
-    skills.map {|skill| {id: skill.id, key: skill.key}}
-  end
-
-  def remove_skill_key(skill_key)
-    leftover_skill_keys = JSON.parse(skill_keys)&.delete_if {|sk| sk == skill_key} if skill_keys
-    properties['skill_keys'] = leftover_skill_keys.empty? ? nil : leftover_skill_keys.to_json
-    save!
-  end
-
-  def add_skill_key(skill_key)
-    properties['skill_keys'] = if skill_keys && JSON.parse(skill_keys).is_a?(Array)
-                                 JSON.parse(skill_keys).push(skill_key).uniq.to_json
-                               else
-                                 [skill_key].to_json
-                               end
-    save!
   end
 
   def uses_theme_preference?

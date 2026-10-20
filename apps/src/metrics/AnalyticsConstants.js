@@ -432,6 +432,7 @@ const EVENTS = {
 
   // Sprite Lab in Lab2 image generation
   HOAI2026_IMAGE_PROMPT: 'hoai2026-image-prompt',
+  HOAI2026_IMAGE_VERDICT: 'hoai2026-image-verdict',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
@@ -728,6 +729,11 @@ const EVENTS = {
     'Add pair programming partner button clicked',
   PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED:
     'Stop pair programming button clicked',
+
+  // Teacher and Permanent promotion events
+  PROMOTION_CLICKED: 'Promotion Clicked',
+  PROMOTION_DISMISSED: 'Promotion Dismissed',
+  PERMANENT_PROMOTION_CLICKED: 'Permanent Promotion Clicked',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:46:09.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-read-the-console-45-40dec2e0-919d-41f0-a8ad-ba0f479e77fb",
+        "text": "Red means something went wrong.",
+        "imageUrl": "https://images.code.org/ea7c7bbea23e7144c3f5ac3169fab9ab-adaptive-HoAI26-read-the-console-45-panel-1-5fb1597d-7aec-476f-9cce-796279032fd8.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-read-the-console-45-d66b94d7-28e1-47fa-804f-f8cb85170c92",
+        "text": "Which word does it name?",
+        "imageUrl": "https://images.code.org/9240490520a311d11d943d9f47bf2468-adaptive-HoAI26-read-the-console-45-panel-2-44b58a4f-074a-4b80-a107-3778a21c36fd.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-read-the-console-45-98f9f320-d2f7-4e94-9d56-45d0f77eaf7c",
+        "text": "Which line does it point to?",
+        "imageUrl": "https://images.code.org/0215d94f4ce367ba639dc867802f5c86-adaptive-HoAI26-read-the-console-45-panel-3-8028b8a8-f4d0-4c1d-90e7-6366b5dc80c2.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Learn to interpret console errors. Understand that red indicates a problem, how to identify the keyword associated with the error, and how the line number points to its location in the code."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:46:47 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:46:47 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -8,10 +8,12 @@ import {
 describe('camelize', () => {
   it('matches the server camelization for every editable key', () => {
     const expected = {
-      guide_steps: 'guideSteps',
+      objectives: 'objectives',
       hide_custom_blocks: 'hideCustomBlocks',
+      image_role_defaults: 'imageRoleDefaults',
       level_mode: 'levelMode',
       pinned_scene: 'pinnedScene',
+      add_blocks: 'addBlocks',
       world_start_pattern: 'worldStartPattern',
     };
     expect(Object.keys(expected).sort()).toEqual(

@@ -1,0 +1,523 @@
+@use "sr-only";
+
+// Chips and words are controls, not text to copy; the page gives p and
+// span user-select: text.
+.menus,
+.readOnly {
+  &,
+  * {
+    user-select: none;
+  }
+}
+
+.menus {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.srOnly {
+  @include sr-only.sr-only;
+}
+
+// The sentence and its hidden longest form share one grid cell.
+.sentenceStack {
+  display: grid;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+
+.sentenceGhost {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sentence {
+  margin: 0;
+  min-height: 48px;
+  font-size: 22px;
+  line-height: 2;
+  color: var(--text-neutral-primary);
+}
+
+// A slot's color from the palette; the text color on it (4.5:1 in both
+// themes); a darker shade for the ledge under a raised button and for
+// lines on the light tray; a lighter shade for lines on the dark tray
+// (3:1 on each).
+@mixin hue($base, $dark, $light, $text) {
+  --hue: var(#{$base});
+  --hue-dark: var(#{$dark});
+  --hue-light: var(#{$light});
+  --hue-text: var(#{$text});
+  --hue-line: var(--hue-dark);
+}
+
+:global([data-theme='Dark']) :is(.hue_blue, .hue_yellow, .hue_pink, .hue_orange, .hue_purple) {
+  --hue-line: var(--hue-light);
+}
+
+.hue_blue {
+  @include hue(
+    --sentiment-information-70,
+    --sentiment-information-90,
+    --sentiment-information-30,
+    --neutral-base-white
+  );
+}
+
+.hue_yellow {
+  @include hue(
+    --sentiment-warning-50,
+    --sentiment-warning-70,
+    --sentiment-warning-30,
+    --neutral-gray-95
+  );
+}
+
+.hue_pink {
+  @include hue(
+    --brand-pink-60,
+    --brand-pink-80,
+    --brand-pink-30,
+    --neutral-base-white
+  );
+}
+
+.hue_orange {
+  @include hue(
+    --brand-orange-50,
+    --brand-orange-70,
+    --brand-orange-30,
+    --neutral-gray-95
+  );
+}
+
+.hue_purple {
+  @include hue(
+    --brand-purple-50,
+    --brand-purple-70,
+    --brand-purple-30,
+    --neutral-base-white
+  );
+}
+
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 2px;
+  padding: 3px 24px 3px 4px;
+  border-radius: 999px;
+  line-height: 1.4;
+  background-color: var(--hue);
+  color: var(--hue-text);
+  box-shadow: 0 2px 0 var(--hue-dark);
+  vertical-align: middle;
+  animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes chip-land {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.emojiBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: var(--neutral-white-alpha-80);
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.keepTogether {
+  white-space: nowrap;
+}
+
+// Margin 0: the page gives every button 5px, which would make the chip
+// taller than the sentence's line.
+.chipWord {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+button.chipWord {
+  cursor: pointer;
+}
+
+// No x in a read-only chip.
+.readOnly .chip {
+  padding-right: 14px;
+}
+
+// Where the word from the set on show would land.
+.placeholder {
+  min-width: 80px;
+  min-height: 1.5em;
+  padding-right: 14px;
+  background: transparent;
+  border: 2px dashed var(--hue-line);
+  box-shadow: none;
+  opacity: 0.8;
+  animation: slot-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes slot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
+}
+
+// Only the blank's pulse stops: an animation change on a filled chip would
+// replay its landing.
+.dropTarget {
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 0 0 4px var(--hue);
+}
+
+.placeholder.dropTarget {
+  animation: none;
+}
+
+.dimmed {
+  opacity: 0.5;
+}
+
+.remove {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid var(--background-neutral-primary);
+  border-radius: 50%;
+  background-color: var(--text-neutral-primary);
+  color: var(--background-neutral-primary);
+  font-size: 12px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carouselBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 6px 8px;
+  border-radius: 16px;
+  border: 1px solid var(--border-neutral-secondary);
+  background-color: var(--background-neutral-primary);
+  box-shadow: 0 4px 0 var(--neutral-black-alpha-30);
+}
+
+@media (max-height: 800px) {
+  .sentence {
+    min-height: 40px;
+    font-size: 19px;
+    line-height: 1.9;
+  }
+
+  .carouselBox {
+    gap: 0;
+    padding: 4px 4px 6px;
+  }
+}
+
+// One slot's words at a time, between the arrows.
+.carousel {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
+// The arrows and dots fade in once there is a second set to go to.
+.arrow,
+.dots {
+  transition: opacity 0.3s ease-out;
+}
+
+.dots.navHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.arrow {
+  flex: none;
+  align-self: center;
+  margin: 0;
+  width: 36px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-neutral-primary);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  // After the disabled rule so this opacity overrides it.
+  &.navHidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// All sets share one grid cell, so the stack is as tall as the tallest set.
+.sets {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+}
+
+.set {
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: 108px;
+  display: flex;
+  align-items: center;
+  padding: 6px 4px;
+}
+
+@media (max-height: 800px) {
+  .set {
+    min-height: 84px;
+    padding: 4px;
+  }
+}
+
+// Laid out for height only.
+.setHidden {
+  visibility: hidden;
+}
+
+@keyframes enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enter-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.enterFromRight {
+  animation: enter-from-right 0.2s ease-out;
+}
+
+.enterFromLeft {
+  animation: enter-from-left 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enterFromRight,
+  .enterFromLeft {
+    animation: none;
+  }
+}
+
+// The page gives every button a 5px margin; the chips, dots and arrows
+// zero it so these gaps are the whole gap.
+.words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dotsRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+// Doubled to outrank the button's own margin and position.
+.shuffle.shuffle {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+// A 24px button around a 12px dot: a neutral ring until the set has its
+// word (a hue ring fails contrast on one theme's tray or the other), filled
+// with the set's color once it does, and ringed darker while on show.
+.dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  animation: dot-in 0.3s ease-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 2px solid var(--text-neutral-secondary);
+  }
+}
+
+@keyframes dot-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+}
+
+.dotFilled::before {
+  background-color: var(--hue);
+}
+
+.dotCurrent::before {
+  background-color: var(--hue);
+  border-color: var(--text-neutral-primary);
+  transform: scale(1.25);
+}
+
+.word {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  min-height: 44px;
+  border: 2px solid var(--hue-line);
+  border-radius: 999px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 4px 16px 4px 6px;
+  box-shadow: 0 3px 0 var(--hue-dark);
+  cursor: grab;
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out;
+  // Backwards only: a fill after the end would hold the pop's transform
+  // over the hover and press ones.
+  animation: word-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(var(--i) * 35ms);
+
+  .emojiBadge {
+    background: var(--hue);
+    color: var(--hue-text);
+  }
+
+  &:hover:not(:disabled, .chosen) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 var(--hue-dark);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--hue-dark);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@keyframes word-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Outranks the hover above.
+.word.chosen {
+  background-color: var(--hue);
+  color: var(--hue-text);
+
+  .emojiBadge {
+    background: var(--neutral-white-alpha-80);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip,
+  .word,
+  .placeholder {
+    animation: none;
+  }
+
+  .word {
+    transition: none;
+  }
+}

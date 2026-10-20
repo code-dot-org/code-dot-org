@@ -5,7 +5,7 @@ wrong 'Continuous data'
 right 'Categorical data'
 wrong 'Pairwise data'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A researcher surveys children and records each student's favorite color. What kind of data is this?

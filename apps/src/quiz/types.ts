@@ -10,8 +10,29 @@ export interface QuizViewContent {
   workspaceContent: React.ReactNode;
 }
 
+// STI class names; must match QuizQuestion::TYPES.
+// TODO: derive from SharedConstants.
+export type QuizQuestionType =
+  | 'MultipleChoiceQuestion'
+  | 'FreeResponseQuestion';
+
+// Answer fields (correctChoiceId, explanation) are deliberately excluded.
+export interface QuizQuestionSummary {
+  id: number;
+  type: QuizQuestionType;
+  questionName: string;
+  questionTitle: string;
+  description?: string | null;
+  choices?: {id: string; text: string}[];
+  page: number;
+}
+
+export interface QuizPage<T> {
+  page: number;
+  questions: T[];
+}
+
 export interface QuizLevelProperties extends LevelProperties {
-  unitId?: number;
   displayName?: string;
   customIntroText?: string;
   timeLimitMinutes?: number;
@@ -20,6 +41,6 @@ export interface QuizLevelProperties extends LevelProperties {
   showIntroScreen?: boolean;
   purpose?: string;
   allowMultipleAttempts?: boolean;
+  showQuestionsAfterSubmit?: boolean;
+  quizQuestions?: QuizQuestionSummary[];
 }
-
-export const toBool = (value: boolean | undefined) => value ?? false;

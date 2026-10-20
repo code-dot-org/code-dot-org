@@ -5,7 +5,7 @@ wrong 'Most residents in favor of new apartment building.'
 wrong 'Middle-aged residents unsure about new apartment building.'
 right 'Young residents in favor of new apartment building, older residents against.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 A newspaper surveyed all of a town's residents about a proposed new apartment building.

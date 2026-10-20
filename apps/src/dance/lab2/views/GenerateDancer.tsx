@@ -6,7 +6,6 @@ import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useParentLevelProperties} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/ParentLevelPropertiesContext';
-import {sendSuccessReportForLevel} from '@cdo/apps/code-studio/progressRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   DanceLevelProperties,
@@ -373,15 +372,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   }, []);
 
   const hasParent = !!useParentLevelProperties();
-  const sublevelOnContinue = useCallback(() => {
-    dispatch(
-      sendSuccessReportForLevel(
-        levelProperties.id.toString(),
-        levelProperties.appName
-      )
-    );
-  }, [dispatch, levelProperties.appName, levelProperties.id]);
-
   const showTts =
     levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
 
@@ -566,8 +556,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     hasEdited={true}
                     isRunning={false}
                     className={moduleStyles.buttonWide}
-                    // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
-                    onContinue={sublevelOnContinue}
                     textVariant={'simple'}
                   />
                 )}

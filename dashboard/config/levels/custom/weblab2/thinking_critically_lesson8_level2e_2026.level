@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Lock Screen Notifications",
-    "long_instructions": "## Digital Artifact\r\n\r\n1. Examine the artifact to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and add it to the table in your Activity Guide.\r\n",
+    "long_instructions": "## Sample Lock Screen Notifications\r\n\r\n1. Examine the sample lock screen notifications to the right.\r\n2. Find example(s) of **Public**, **Private**, and **Sensitive** data and write them to the table in your Activity Guide.\r\n",
     "bubble_choice_description": "A user's notifications on their cellphone",
     "offer_browser_tts": "false",
     "submittable": "false",
@@ -93,6 +93,6 @@
     },
     "thumbnail_url": "https://images.code.org/585750e8611d8bd3cc42a23b455f0795-five.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28T16:19:55.767+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2d_2026\"},{\"changed_at\":\"2026-04-28 16:20:00 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:21:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:56:55 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:19:55.767+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2d_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2d_2026\"},{\"changed_at\":\"2026-04-28 16:20:00 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:21:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:56:55 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 17:52:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

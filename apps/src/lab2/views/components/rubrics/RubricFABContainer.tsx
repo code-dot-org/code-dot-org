@@ -1,8 +1,11 @@
 import React, {useEffect, useMemo} from 'react';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {isLabLoading} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import {useLevelProperties} from '../../LevelPropertiesWrapper';
 
@@ -87,6 +90,19 @@ const RubricFABContainer: React.FC = () => {
   }
 
   const {rubric, canShowTaScoresAlert} = rubricData!;
+
+  if (experiments.isEnabled('rubrics-drawer')) {
+    // Hands off to the AI TA drawer's Rubrics screen (apps/src/
+    // aiTeacherDrawer/rubrics/) instead of the floating RubricContainer
+    // panel below.
+    return (
+      <AiDiffFloatingActionButton
+        context={{type: AiDiffContext.LEVEL}}
+        scriptName={unitName ?? undefined}
+        openToNav="Rubrics"
+      />
+    );
+  }
 
   return (
     // Force light mode for the rubric FAB and dialog as they are not fully themed currently.

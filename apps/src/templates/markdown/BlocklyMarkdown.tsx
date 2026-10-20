@@ -13,7 +13,7 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import {blockly} from './blockly';
+import {blockly, IGNORE_ATTRS} from './blockly';
 
 // Default gate: create the workspace right away.
 const createImmediately = (create: () => void) => create();
@@ -117,10 +117,10 @@ const BlocklyMarkdownWorkspace = ({
     <>
       {createElement(
         'xml',
-        {is: 'xml', ref: xmlRef, style: {display: 'none'}},
+        {is: 'xml', ref: xmlRef, style: {display: 'none'}, ...IGNORE_ATTRS},
         children
       )}
-      <span ref={hostRef} />
+      <span ref={hostRef} {...IGNORE_ATTRS} />
     </>
   );
 };

@@ -4071,24 +4071,22 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can grant admin role when in development environment' do
-    with_rack_env(:development) do
-      email = 'katherinejohnson@code.org'
-      migrated_teacher = create(:teacher, email: email)
+    set_env(:development)
+    email = 'katherinejohnson@code.org'
+    migrated_teacher = create(:teacher, email: email)
 
-      assert migrated_teacher.update(admin: true)
+    assert migrated_teacher.update(admin: true)
 
-      assert migrated_teacher.reload.admin?
-    end
+    assert migrated_teacher.reload.admin?
   end
 
   test 'can grant admin role when in adhoc environment' do
-    with_rack_env(:adhoc) do
-      email = 'dorothyvaughan@code.org'
-      migrated_teacher = create(:teacher, email: email)
-      assert migrated_teacher.update(admin: true)
+    set_env(:adhoc)
+    email = 'dorothyvaughan@code.org'
+    migrated_teacher = create(:teacher, email: email)
+    assert migrated_teacher.update(admin: true)
 
-      assert migrated_teacher.reload.admin?
-    end
+    assert migrated_teacher.reload.admin?
   end
 
   test 'display_captcha returns false for new user with uninitialized section attempts hash' do

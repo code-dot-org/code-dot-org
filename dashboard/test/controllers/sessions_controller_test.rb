@@ -66,6 +66,14 @@ class SessionsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'teachers return to a code.org url after signing in' do
+    teacher = create(:teacher)
+    session[:user_return_to] = user_return_to = CDO.code_org_url('/the-return-to-url', 'https:')
+    create_session_for_user(teacher)
+    assert_signed_in_as teacher
+    assert_redirected_to user_return_to
+  end
+
   test 'signing in as user via username' do
     user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
 
@@ -132,13 +140,15 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal anon_user_id, sign_in.anon_user_id
   end
 
-  test 'signing in user does not store a blank stable ID' do
+  test 'signing in user replaces and stores a blank stable ID' do
     session[:statsig_stable_id] = ''
     user = create(:user)
 
     create_session_for_user(user)
 
-    assert_nil SignIn.find_by!(user_id: user.id).anon_user_id
+    anon_user_id = SignIn.find_by!(user_id: user.id).anon_user_id
+    assert Cdo::AnonUserId.valid?(anon_user_id)
+    assert_equal session[:statsig_stable_id], anon_user_id
   end
 
   test 'failed signin does not create SignIn' do

@@ -22,35 +22,36 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "sceneTabs": "all"
     },
-    "guide_steps": [
-      {
-        "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."
-      },
-      {
-        "text": "**Your scenes are connected!** Try jumping between them, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
+    "objectives": {
+      "title": "**Link your scenes.**",
+      "items": [
+        {
+          "text": "Drag **go to scene** onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "spritelab2_goToScene",
+            "data": "at-9"
+          }
+        },
+        {
+          "text": "Click **Play** and wait for the jump.",
+          "check": {
+            "kind": "scene",
+            "id": "platform-scene"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
+      ]
+    },
+    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
-        {
-          "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
         {
           "kind": "block",
           "type": "spritelab2_goToScene",
@@ -59,7 +60,45 @@
           }
         }
       ]
-    }
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "add_blocks": [
+      {
+        "type": "gamelab_atTime",
+        "data": "at-9",
+        "fields": {
+          "UNIT": "\"seconds\""
+        },
+        "inputs": {
+          "N": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 9
+              }
+            }
+          }
+        },
+        "next": {
+          "shadow": {
+            "type": "spritelab2_placeholder",
+            "extraState": {
+              "like": {
+                "type": "spritelab2_goToScene",
+                "fields": {
+                  "SCENE": "platform-scene"
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "header_label": "Conclusion"
   }
 }]]></config>
 </GamelabJr>

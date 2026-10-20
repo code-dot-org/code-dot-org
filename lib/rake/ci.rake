@@ -121,6 +121,15 @@ namespace :ci do
     check_for_new_file_changes
   end
 
+  # Drone exports the Applitools variables (.drone.yml).
+  timed_task_with_logging playwright_eyes: 'test:playwright_install' do
+    if ENV['VISUAL_PROVIDER'].blank?
+      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
+      next
+    end
+    run_playwright_suite(:eyes, blocking: false)
+  end
+
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_ui_tests do
     unless CI::Utils.ci_job_ui_tests?
@@ -190,7 +199,7 @@ namespace :ci do
           exception
         end
       end
-    Rake::Task['test:playwright_eyes'].invoke
+    Rake::Task['ci:playwright_eyes'].invoke
 
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
@@ -350,10 +359,34 @@ def check_for_new_file_changes
     ChatClient.log 'No changes to schema.rb detected.'
   end
 
+  # db:migrate regenerates these templates only in development, and CI runs in test.
+  Dir.chdir('dashboard') do
+    RakeUtils.rake_stream_output 'analytics_export:generate_materialized_view_templates'
+  end
+  zeroetl_dir = 'aws/redshift/zeroetl_materialized_views'
+  if GitUtils.file_changed_from_git?(zeroetl_dir)
+    RakeUtils.system_stream_output("git status --short -- #{zeroetl_dir} | cat")
+    RakeUtils.system_stream_output("git diff -- #{zeroetl_dir} | cat")
+    raise "Unexpected change to #{zeroetl_dir} - Make sure you run your migration (or `rake analytics_export:generate_materialized_view_templates`) locally and commit the regenerated templates into your branch. See #{zeroetl_dir}/README.md before merging."
+  else
+    ChatClient.log "No changes to #{zeroetl_dir} detected."
+  end
+
   if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/app/models/**/*'])
     RakeUtils.system_stream_output('git diff -- dashboard/app/models | cat')
     raise 'Unexpected change to dashboard/app/models - Make sure you run your migration locally and push those changes into your branch.'
   else
     ChatClient.log 'No changes to dashboard/app/models detected.'
+  end
+
+  # rake build may have skipped the apps build (apps/build/commit_hash cache),
+  # so regenerate here rather than rely on it.
+  RakeUtils.system_stream_output('bundle exec ruby apps/script/generateSharedConstants.rb')
+  shared_constants_file = 'frontend/packages/shared-constants/src/sharedConstants.ts'
+  if GitUtils.file_changed_from_git?(shared_constants_file)
+    RakeUtils.system_stream_output("git diff -- #{shared_constants_file} | cat")
+    raise "Unexpected change to #{shared_constants_file} - Make sure you run apps/script/generateSharedConstants.rb locally and commit those changes into your branch."
+  else
+    ChatClient.log "No changes to #{shared_constants_file} detected."
   end
 end

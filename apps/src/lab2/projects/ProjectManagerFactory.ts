@@ -19,7 +19,7 @@ export default class ProjectManagerFactory {
     projectId: string,
     isStandaloneProjectLevel: boolean,
     isShareView: boolean = false,
-    sourcesStore: SourcesStore = new SourcesStore()
+    sourcesStore: SourcesStore
   ): ProjectManager {
     return new ProjectManager({
       sourcesStore,
@@ -43,9 +43,9 @@ export default class ProjectManagerFactory {
   static async getProjectManagerForLevel(
     levelId: number,
     isStandaloneProjectLevel: boolean,
-    userId?: number,
-    scriptId?: number,
-    sourcesStore: SourcesStore = new SourcesStore()
+    userId: number | undefined,
+    scriptId: number | undefined,
+    sourcesStore: SourcesStore
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
     let channelId: string | undefined = undefined;

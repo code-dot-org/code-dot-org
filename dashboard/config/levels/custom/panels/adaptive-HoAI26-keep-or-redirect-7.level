@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:25:20.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-keep-or-redirect-7-ba2c3be6-4712-4e3d-8016-69fd81ac9220",
+        "text": "###Start with a plan.\n\nDecide who your page is for, what belongs on it, and what visitors should be able to do.",
+        "imageUrl": "https://images.code.org/8394606fbac99808bd9afa51ee0652b9-Planning a Web Page Layout-1.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "adaptive-HoAI26-keep-or-redirect-7-4f32facc-9d3a-417d-8506-7b147ed7a6e3",
+        "text": "####Compare the result to your plan.\n\nCheck the content, layout, and features. What matches? What’s missing or different?",
+        "imageUrl": "https://images.code.org/fc4ea1d7455395b59c82ec350ea55d76-Plan versus browser_ spot the mismatch-2.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-keep-or-redirect-7-4e6e7a97-d8fc-4458-aa16-afc16e2b48c4",
+        "text": "###Keep what works.\n\nIf the page meets your goals and works when you test it, you can keep it as is.",
+        "imageUrl": "https://images.code.org/c17aeb4d1f7e4d09059b1ae52991fac9-From wrong page to right layout-3.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-keep-or-redirect-7-4d59d49f-ef73-4664-89c5-db39ed61e775",
+        "text": "####You decide what to keep!\n\nWrite a new prompt that explains what missed the mark, what to change, and what to keep.",
+        "imageUrl": "https://images.code.org/6488a63920af6623306bf319fbf54573-Plan matches the finished page-4.png",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Watch a screen recording demonstrating how to evaluate AI output against a plan. Learn to identify matches and mismatches, then choose whether to keep the result, redirect with a new prompt, or edit by hand for small, exact changes.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:34:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:35:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

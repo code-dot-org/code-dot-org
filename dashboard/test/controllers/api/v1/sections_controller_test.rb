@@ -1138,6 +1138,91 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED], section.ai_chat_access_level
   end
 
+  test "update: can edit a section whose course has sunset, keeping its course version" do
+    sunsetting_unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    CourseOffering.add_course_offering(sunsetting_unit_group)
+    section = create(:section, user: @teacher, name: 'Old section name', course_id: sunsetting_unit_group.id)
+    refute sunsetting_unit_group.course_assignable?(@teacher)
+
+    sign_in @teacher
+    post :update, params: {
+      id: section.id,
+      name: 'New section name',
+      course_version_id: sunsetting_unit_group.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal 'New section name', section.name
+    assert_equal sunsetting_unit_group.id, section.course_id
+  end
+
+  test "update: can edit a section on a sunsetting single-unit course" do
+    sunsetting_course = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    CourseOffering.add_course_offering(sunsetting_course)
+    sunsetting_unit = sunsetting_course.default_units.first
+    section = create(:section, user: @teacher, name: 'Old section name', script: sunsetting_unit, course_id: sunsetting_course.id)
+
+    sign_in @teacher
+    post :update, params: {
+      id: section.id,
+      name: 'New section name',
+      course_version_id: sunsetting_course.course_version.id,
+    }
+
+    assert_response :success
+    section.reload
+    assert_equal 'New section name', section.name
+    assert_equal sunsetting_unit.id, section.script_id
+  end
+
+  test "update: cannot move a section onto a sunsetting course it is not already on" do
+    sunsetting_unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    CourseOffering.add_course_offering(sunsetting_unit_group)
+    section = create(:section, user: @teacher, course_id: @csp_unit_group.id)
+
+    sign_in @teacher
+    post :update, params: {
+      id: section.id,
+      course_version_id: sunsetting_unit_group.course_version.id,
+    }
+
+    assert_response :forbidden
+    section.reload
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
+  test "cannot create a section with a sunsetting course" do
+    sunsetting_unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    CourseOffering.add_course_offering(sunsetting_unit_group)
+
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: sunsetting_unit_group.course_version.id,
+    }
+
+    assert_response :forbidden
+  end
+
+  test "update: another teacher cannot edit a section whose course has sunset" do
+    sunsetting_unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    CourseOffering.add_course_offering(sunsetting_unit_group)
+    section = create(:section, user: @teacher, name: 'Old section name', course_id: sunsetting_unit_group.id)
+
+    sign_in create(:teacher)
+    post :update, params: {
+      id: section.id,
+      name: 'New section name',
+      course_version_id: sunsetting_unit_group.course_version.id,
+    }
+
+    assert_response :forbidden
+    section.reload
+    assert_equal 'Old section name', section.name
+  end
+
   test "update: course_id is not updated if invalid" do
     UnitGroup.stubs(:course_assignable?).returns(false)
 

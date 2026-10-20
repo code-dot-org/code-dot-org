@@ -23,26 +23,38 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "sprite"
+      "imageType": "sprite",
+      "placeOne": true
+    },
+    "image_role_defaults": {
+      "sprite": "friend"
     },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
-    "guide_steps": [
-      {
-        "text": "**Remember your second character?** Give them a platform: place them on top of some blocks."
-      },
-      {
-        "text": "**They're in your world.** Click **Play** to go and find them, then continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "worldSprites": 3
+    "objectives": {
+      "title": "**Bring back your second character.**",
+      "items": [
+        {
+          "text": "Click a square on top of some blocks to put your second character there.",
+          "check": {
+            "kind": "world",
+            "role": "friend"
+          }
+        },
+        {
+          "text": "Click **Play** and go find them.",
+          "check": {
+            "kind": "reach",
+            "role": "friend"
+          }
         }
-      }
-    ],
-    "long_instructions": "# Add your second character\nGive them a platform: place them on top of some blocks."
+      ]
+    },
+    "long_instructions": "# Bring back your second character\nClick a square on top of some blocks to put them there. Click another square to move them.",
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>

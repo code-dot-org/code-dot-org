@@ -1,5 +1,4 @@
 import {
-  adlibSetForMode,
   isFreeplayMode,
   isImageMode,
   tabsForMode,
@@ -27,23 +26,5 @@ describe('isImageMode / isFreeplayMode', () => {
     expect(isImageMode({kind: 'freeplay'})).toBe(false);
     expect(isFreeplayMode({kind: 'freeplay'})).toBe(true);
     expect(isFreeplayMode(undefined)).toBe(false);
-  });
-});
-
-describe('adlibSetForMode', () => {
-  it('falls back to the set the kind implies', () => {
-    expect(adlibSetForMode({kind: 'image'})).toBe('simple');
-    expect(adlibSetForMode({kind: 'freeplay'})).toBe('expanded');
-  });
-
-  it('lets a level name its own set instead', () => {
-    expect(adlibSetForMode({kind: 'image', adlibs: 'treasure'})).toBe(
-      'treasure'
-    );
-  });
-
-  it('offers no combos to a kind that generates no images', () => {
-    expect(adlibSetForMode({kind: 'code'})).toBeUndefined();
-    expect(adlibSetForMode(undefined)).toBeUndefined();
   });
 });

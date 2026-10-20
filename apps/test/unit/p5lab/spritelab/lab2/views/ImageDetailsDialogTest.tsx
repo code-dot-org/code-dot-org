@@ -6,6 +6,28 @@ import ImageDetailsDialog, {
   resolutionLabel,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/ImageDetailsDialog';
 
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/GenerateImageView', () => ({
+  __esModule: true,
+  default: () => <div data-generate-view />,
+}));
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/SentenceDialogBody', () => ({
+  __esModule: true,
+  default: (props: {
+    typeChoice: boolean;
+    imageType: string;
+    imageSubject?: string;
+    defaultStyle: string;
+  }) => (
+    <div
+      data-sentence-body
+      data-type-choice={String(props.typeChoice)}
+      data-image-type={props.imageType}
+      data-image-subject={props.imageSubject}
+      data-style={props.defaultStyle}
+    />
+  ),
+}));
+
 // The summary view's primary button reads Accept when this dialog session
 // replaced the image it opened on (including starting from nothing), and
 // Done when the image is unchanged — the caller derives that; this pins
@@ -86,5 +108,62 @@ describe('resolutionLabel', () => {
     // 520px at 8 physical px per art pixel: a 65x65 image stored before
     // normalization standardized grid sizes.
     expect(resolutionLabel({x: 520, y: 520}, 8)).toBe('65 × 65 (520 × 520)');
+  });
+});
+
+describe('ImageDetailsDialog generate view', () => {
+  it('opens a new image on the image form with the Type free', () => {
+    renderDialog({animKey: null, name: undefined});
+    expect(
+      document
+        .querySelector('[data-sentence-body]')
+        ?.getAttribute('data-type-choice')
+    ).toBe('true');
+  });
+
+  it('locks the Type for a new image on a level that sets it', () => {
+    renderDialog({animKey: null, name: undefined, lockedImageType: 'block'});
+    expect(
+      document
+        .querySelector('[data-sentence-body]')
+        ?.getAttribute('data-type-choice')
+    ).toBe('false');
+  });
+
+  it('reopens on the kind and style a cancelled paint had chosen', () => {
+    renderDialog({
+      animKey: null,
+      name: undefined,
+      defaultStyle: 'pixel',
+      newImageDraft: {
+        name: 'Object 1',
+        imageType: 'sprite',
+        subject: 'object',
+        style: 'smooth',
+      },
+    });
+    const body = document.querySelector('[data-sentence-body]')!;
+    expect(body.getAttribute('data-image-type')).toBe('sprite');
+    expect(body.getAttribute('data-image-subject')).toBe('object');
+    expect(body.getAttribute('data-style')).toBe('smooth');
+  });
+
+  it('keeps the full form for the advanced dialog', () => {
+    renderDialog({animKey: null, name: undefined, advanced: true});
+    expect(document.querySelector('[data-generate-view]')).toBeTruthy();
+    expect(document.querySelector('[data-sentence-body]')).toBeNull();
+  });
+});
+
+describe('ImageDetailsDialog existing-image footer', () => {
+  it('offers no regenerate to students', () => {
+    renderDialog();
+    expect(screen.queryByRole('button', {name: /Generate with AI/})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Done'})).toBeTruthy();
+  });
+
+  it('keeps Generate with AI in the advanced dialog', () => {
+    renderDialog({advanced: true});
+    expect(screen.getByRole('button', {name: /Generate with AI/})).toBeTruthy();
   });
 });

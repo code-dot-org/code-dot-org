@@ -1,7 +1,7 @@
 {
   "key": "foundations-of-ai-programming",
   "display_name": "Foundations of AI Programming",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AIF",

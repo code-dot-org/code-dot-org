@@ -14,6 +14,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import cleverCodeOrgLogo from '../../../static/teacherDashboard/cleverCodeOrgLogo.svg';
+
 import styles from './ParentLetter.module.scss';
 
 const RESEARCH_ARTICLE_URL =
@@ -300,7 +302,7 @@ const SignInInstructions = ({
           <li>
             <Paragraph>{i18n.parentLetterClever2()}</Paragraph>
             <img
-              src="/shared/images/clever_code_org_logo.png"
+              src={cleverCodeOrgLogo}
               alt={i18n.codeLogoClever()}
               className={styles.stepImage}
             />

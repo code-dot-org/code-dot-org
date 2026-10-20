@@ -14,6 +14,10 @@ import {JavalabFlatSource} from './types';
 // expects MultiFileSource. This store mediates: load() converts S3's flat
 // shape into MultiFileSource; save() converts back before writing.
 export class JavalabSourcesStore extends SourcesStore {
+  constructor() {
+    super('javalab');
+  }
+
   async load(channelId: string, versionId?: string) {
     const raw = await super.load(channelId, versionId);
     if (!raw || !raw.source) return raw;

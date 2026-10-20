@@ -617,6 +617,7 @@ describe('teacherSectionsRedux', () => {
         avatar_color: 1,
         avatar_emoji: 1,
         assignedAiChatToolsDependency: undefined,
+        assignedRequiredInaccessibleAiModels: undefined,
         aiChatAccessLevel: undefined,
       });
     });
@@ -976,6 +977,7 @@ describe('teacherSectionsRedux', () => {
           avatar_color: undefined,
           avatar_emoji: undefined,
           assignedAiChatToolsDependency: undefined,
+          assignedRequiredInaccessibleAiModels: undefined,
           aiChatAccessLevel: undefined,
         },
       });

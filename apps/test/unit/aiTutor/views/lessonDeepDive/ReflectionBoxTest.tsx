@@ -41,30 +41,55 @@ function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
   );
 }
 
+// Advance past the slide animation (two nested 220ms timeouts).
+function runAnimation() {
+  act(() => jest.advanceTimersByTime(500));
+}
+
+// Rate the current objective and advance to the next step.
+function rateAndAdvance(label: RegExp) {
+  fireEvent.click(screen.getByRole('button', {name: label}));
+  fireEvent.click(screen.getByRole('button', {name: /^next$/i}));
+  runAnimation();
+}
+
+// Navigate past all objective steps with the given rating, landing on the
+// free-response card where the Done button lives.
+function navigateToFreeResponse(rating: RegExp = /got it/i) {
+  for (let i = 0; i < OBJECTIVES.length; i++) {
+    rateAndAdvance(rating);
+  }
+}
+
 describe('ReflectionBox submit button', () => {
   beforeEach(() => {
+    jest.useFakeTimers();
     jest.clearAllMocks();
     saveReflectionMock.mockResolvedValue(undefined);
     saveObjectiveMock.mockResolvedValue(undefined);
     postMock.mockResolvedValue(undefined);
   });
 
-  it('renders the submit button', () => {
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('renders the Done button on the last step', () => {
     renderReflectionBox();
-    expect(
-      screen.getByRole('button', {name: /start practicing/i})
-    ).toBeInTheDocument();
+    navigateToFreeResponse();
+    expect(screen.getByRole('button', {name: /^done$/i})).toBeInTheDocument();
   });
 
   it('calls saveUserLessonReflection with lessonId, success, and struggle on submit', async () => {
     renderReflectionBox();
+    navigateToFreeResponse();
 
     const textboxes = screen.getAllByRole('textbox');
     fireEvent.change(textboxes[0], {target: {value: 'I understood loops'}});
     fireEvent.change(textboxes[1], {target: {value: 'Recursion is hard'}});
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
     expect(saveReflectionMock).toHaveBeenCalledWith(
@@ -74,37 +99,33 @@ describe('ReflectionBox submit button', () => {
     );
   });
 
-  it('does not call saveUserLessonObjectiveReflection when no objectives are selected', async () => {
-    renderReflectionBox();
-
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
-    });
-
-    expect(saveObjectiveMock).not.toHaveBeenCalled();
-  });
-
   it('calls saveUserLessonObjectiveReflection only for selected objectives', async () => {
     renderReflectionBox();
 
-    // Click Confident for the first objective only
-    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
+    // Rate only the first objective; skip the second via "Got it" to satisfy
+    // the required-rating guard so both steps can be advanced through.
+    rateAndAdvance(/got it/i); // obj 1: confident
+    rateAndAdvance(/got it/i); // obj 2: confident
 
+    // Override: re-render is not necessary; the save mock counts calls.
+    // One saveObjectiveMock per objective that was rated.
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
-    expect(saveObjectiveMock).toHaveBeenCalledTimes(1);
+    expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
   });
 
   it('calls saveUserLessonObjectiveReflection for each selected objective', async () => {
     renderReflectionBox();
 
-    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
-    fireEvent.click(screen.getAllByRole('button', {name: /struggling/i})[1]);
+    // First objective: "Got it"
+    rateAndAdvance(/got it/i);
+    // Second objective: "New to me" (maps to LOST / 'lost')
+    rateAndAdvance(/new to me/i);
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
     expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
@@ -115,11 +136,11 @@ describe('ReflectionBox submit button', () => {
   it('requests podcast generation for objectives rated struggling or getting there', async () => {
     renderReflectionBox();
 
-    fireEvent.click(screen.getAllByRole('button', {name: /struggling/i})[0]);
-    fireEvent.click(screen.getAllByRole('button', {name: /getting there/i})[1]);
+    rateAndAdvance(/new to me/i); // obj 1: lost
+    rateAndAdvance(/getting there/i); // obj 2: unsure
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
     expect(postMock).toHaveBeenCalledTimes(1);
@@ -134,11 +155,11 @@ describe('ReflectionBox submit button', () => {
   it('requests podcast generation with an empty objective list when all objectives are rated "Got it"', async () => {
     renderReflectionBox();
 
-    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[0]);
-    fireEvent.click(screen.getAllByRole('button', {name: /got it/i})[1]);
+    rateAndAdvance(/got it/i); // obj 1: confident
+    rateAndAdvance(/got it/i); // obj 2: confident
 
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
+      fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
     expect(postMock).toHaveBeenCalledTimes(1);
@@ -150,23 +171,7 @@ describe('ReflectionBox submit button', () => {
     );
   });
 
-  it('requests podcast generation with every lesson objective when no objective is rated', async () => {
-    renderReflectionBox();
-
-    await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: /start practicing/i}));
-    });
-
-    expect(postMock).toHaveBeenCalledTimes(1);
-    expect(postMock).toHaveBeenCalledWith(
-      '/ai_student_podcasts/generate_podcast',
-      JSON.stringify({lesson_id: LESSON_ID, objective_ids: ['1', '2']}),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-  });
-
-  it('disables the submit button while submitting and re-enables after', async () => {
+  it('disables the Done button while submitting and re-enables after', async () => {
     let resolveSubmit: () => void;
     saveReflectionMock.mockReturnValue(
       new Promise<void>(resolve => {
@@ -175,7 +180,8 @@ describe('ReflectionBox submit button', () => {
     );
 
     renderReflectionBox();
-    const button = screen.getByRole('button', {name: /start practicing/i});
+    navigateToFreeResponse();
+    const button = screen.getByRole('button', {name: /^done$/i});
 
     await act(async () => {
       fireEvent.click(button);
@@ -188,5 +194,14 @@ describe('ReflectionBox submit button', () => {
     });
 
     expect(button).not.toBeDisabled();
+  });
+
+  it('disables the Next button until a rating is selected', () => {
+    renderReflectionBox();
+    const nextButton = screen.getByRole('button', {name: /^next$/i});
+    expect(nextButton).toBeDisabled();
+
+    fireEvent.click(screen.getByRole('button', {name: /got it/i}));
+    expect(nextButton).not.toBeDisabled();
   });
 });

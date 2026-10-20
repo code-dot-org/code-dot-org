@@ -22,6 +22,7 @@ module SharedConstants
   GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
   STATSIG_STABLE_ID_KEY = 'statsig_stable_id'
+  STATSIG_STABLE_ID_PATTERN = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}'.freeze
 
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
@@ -895,6 +896,12 @@ module SharedConstants
     AI_TUTOR: "ai-tutor",
     FLOW_LAB: "flow-lab",
     LESSON_DEEP_DIVE: "lesson-deep-dive",
+    # The adaptive pathway shell's own generation calls (instructions, validation, routing).
+    ADAPTIVE: "adaptive",
+    # Spoken descriptions of Python Lab theater output, for screen reader users.
+    THEATER_DESCRIPTION: "theater-description",
+    # Levelbuilder curriculum generator pages (lessons/:id/generate and the unit scope).
+    CURRICULUM_GENERATOR: "curriculum-generator",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -902,6 +909,9 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
     AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
+    AI_CHAT_CLIENT_TYPES[:ADAPTIVE] => 30,
+    AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] => 30,
+    AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] => 30,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

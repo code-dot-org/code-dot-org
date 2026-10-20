@@ -197,6 +197,9 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       isOnTeacherDashboard={true}
       aiChatToolsDependency={selectedSection.assignedAiChatToolsDependency}
+      unitRequiresInaccessibleAiModels={
+        unitSummaryResponse.unitData.requires_inaccessible_ai_models
+      }
     />
   );
 };

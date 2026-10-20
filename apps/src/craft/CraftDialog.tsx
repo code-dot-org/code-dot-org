@@ -1,6 +1,6 @@
 import {
-  CustomDialog,
-  type CustomDialogProps,
+  MuiCustomDialog as CustomDialog,
+  type MuiCustomDialogProps as CustomDialogProps,
 } from '@code-dot-org/component-library/dialog';
 import React from 'react';
 

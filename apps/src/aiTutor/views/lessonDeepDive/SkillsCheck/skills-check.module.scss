@@ -28,7 +28,7 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #a86cd8;
+  color: var(--text-brand-purple-primary-fixed);
   margin: 0 0 16px;
 }
 
@@ -36,7 +36,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #d4dae1;
+  color: var(--text-neutral-quaternary);
   margin: 0 0 20px;
 }
 
@@ -54,17 +54,17 @@
   display: block;
   width: 100%;
   padding: 10px 12px;
-  background: #424d59;
-  border: 1px solid #69788a;
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
-  color: #f0f2f5;
+  color: var(--text-neutral-secondary);
   font-size: 1rem;
   text-align: left;
   cursor: pointer;
   transition: border-color 0.1s ease;
 
   &:hover:not(:disabled) {
-    border-color: #a1aebb;
+    border-color: var(--borders-neutral-strong);
   }
 
   &:focus-visible {
@@ -78,7 +78,7 @@
 }
 
 .optionSelected {
-  border: 2px solid #a86cd8;
+  border: 2px solid var(--borders-brand-purple-primary);
 }
 
 .optionCorrect {
@@ -93,10 +93,10 @@
   display: block;
   width: 250px;
   padding: 8px 16px;
-  background: #9657c7;
+  background: var(--background-brand-purple-primary);
   border: none;
   border-radius: 4px;
-  color: #fff;
+  color: var(--text-neutral-primary);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -119,7 +119,7 @@
 
 .feedback {
   flex: 1;
-  color: #dfe3e9;
+  color: var(--text-neutral-tertiary);
   font-size: 0.875rem;
   line-height: 1.55;
   margin-top: 5px;
@@ -131,7 +131,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #424d59;
+  border-top: 1px solid var(--background-neutral-secondary);
   padding: 12px 24px;
   min-height: 69px;
   flex-shrink: 0;
@@ -143,9 +143,9 @@
   gap: 8px;
   padding: 5px 12px;
   background: transparent;
-  border: 1px solid #a1aebb;
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px;
-  color: #fff;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;

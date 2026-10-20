@@ -83,8 +83,8 @@ interface AudioRecorderProps {
   // Called when the recording stops on its own (countdown expiry), so the
   // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
-  recordedUrl: string | null;
-  setRecordedUrl: React.Dispatch<React.SetStateAction<string | null>>;
+  recordedBlob: Blob | null;
+  setRecordedBlob: React.Dispatch<React.SetStateAction<Blob | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
@@ -93,14 +93,15 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
   isRecording,
   onRecordingChange,
   onIsRecordingChange,
-  recordedUrl,
-  setRecordedUrl,
+  recordedBlob,
+  setRecordedBlob,
   timeLimitSeconds = 30,
   disabled = false,
 }) => {
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   const streamRef = useRef<MediaStream | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
@@ -143,12 +144,17 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Revoke the object URL whenever it changes or on unmount.
+  // Derive the preview URL from the recorded Blob, revoking the previous one
+  // whenever the Blob changes or on unmount.
   useEffect(() => {
-    return () => {
-      if (recordedUrl) URL.revokeObjectURL(recordedUrl);
-    };
-  }, [recordedUrl]);
+    if (!recordedBlob) {
+      setPreviewUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(recordedBlob);
+    setPreviewUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [recordedBlob]);
 
   const stopRecording = useCallback(() => {
     clearTimer();
@@ -168,7 +174,7 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     // Re-recording over a previous take: that stream's tracks were stopped
     // when the previous recording finished, so get a fresh one first.
     if (recordingState === 'recorded') {
-      setRecordedUrl(null);
+      setRecordedBlob(null);
       onRecordingChange(false);
       await startStream();
     }
@@ -184,7 +190,7 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     };
     recorder.onstop = () => {
       const blob = new Blob(chunksRef.current, {type: 'audio/webm'});
-      setRecordedUrl(URL.createObjectURL(blob));
+      setRecordedBlob(blob);
       onRecordingChange(true);
       onIsRecordingChange?.(false);
     };
@@ -200,7 +206,7 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     recordingState,
     startStream,
     timeLimitSeconds,
-    setRecordedUrl,
+    setRecordedBlob,
     onRecordingChange,
     onIsRecordingChange,
   ]);
@@ -221,11 +227,11 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     return <p className={styles.error}>{error}</p>;
   }
 
-  if (recordingState === 'recorded' && recordedUrl) {
+  if (recordingState === 'recorded' && previewUrl) {
     return (
       <div className={styles.container}>
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <audio className={styles.audio} src={recordedUrl} controls />
+        <audio className={styles.audio} src={previewUrl} controls />
       </div>
     );
   }

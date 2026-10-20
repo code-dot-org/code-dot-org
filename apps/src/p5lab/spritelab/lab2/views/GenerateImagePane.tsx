@@ -3,10 +3,8 @@ import {AnyAction} from 'redux';
 
 import {dataURIToSourceSize, toImage} from '@cdo/apps/imageUtils';
 import {
-  addAnimation,
   deleteAnimation,
   isNameUnique,
-  setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
@@ -18,18 +16,13 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
-import {bytesToDataURI} from '../ai/images/encoding';
-import {ImageAdlibSet} from '../ai/images/imageAdlibs';
+import {bytesToDataURI, dataURIToBytes} from '../ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {
-  ImageGenerationMetadata,
-  ImageStyle,
-  ImageType,
-} from '../ai/images/types';
+import {ImageStyle, ImageSubject, ImageType} from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
@@ -43,9 +36,16 @@ import {
   trimAnimationListImages,
 } from '../imageTrim';
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
+import {PictureRequest} from '../picturePicker';
 
-import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
+import {
+  AnimationPatch,
+  createNamedAnimation,
+  framesPatch,
+  uploadOrEmbed,
+} from './imageSave';
+import type {NewImageDraft} from './SentenceDialogBody';
 import {
   alternativeFromAnimation,
   framesFromAnimation,
@@ -55,26 +55,6 @@ import {
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 type Dispatch = ReturnType<typeof useAppDispatch>;
-
-// The animation fields the dialog's persist paths write. An explicit
-// `undefined` clears the field (the spread keeps the key).
-interface AnimationPatch {
-  sourceUrl?: string;
-  dataURI?: string;
-  frameSize?: {x: number; y: number};
-  sourceSize?: {x: number; y: number};
-  frameCount?: number;
-  frameDelay?: number;
-  looping?: boolean;
-  poses?: AnimationPoses;
-  categories?: string[];
-  pixelGridSize?: number;
-  /** Set wherever an animation's pixels are replaced — a stale true would
-   * skip a needed trim. */
-  trimmed?: boolean;
-  generation?: ImageGenerationMetadata;
-  recentColors?: PixelEditorSaveMeta['recentColors'];
-}
 
 /** Where a strip's standing frame sits — the base picture the set was drawn
     from (the last frame of the stand range; see CHARACTER_STRIP_POSES). */
@@ -147,56 +127,6 @@ async function alternativeThumb(
   }
 }
 
-// A plain single-frame picture's playback fields; also what a brand-new
-// animation starts as.
-const SINGLE_FRAME_PROPS = {frameCount: 1, frameDelay: 2, looping: true};
-
-/**
- * The patch a result's frame grid dictates: a character strip's layout, or a
- * plain picture's single frame — which must overwrite any strip the image
- * used to be (explicit undefined clears poses).
- */
-function framesPatch(frames: GeneratedImageResult['frames']): AnimationPatch {
-  return frames
-    ? {
-        frameSize: frames.frameSize,
-        sourceSize: {
-          x: frames.frameSize.x * frames.frameCount,
-          y: frames.frameSize.y,
-        },
-        frameCount: frames.frameCount,
-        frameDelay: frames.frameDelay,
-        looping: frames.looping,
-        poses: frames.poses,
-      }
-    : {...SINGLE_FRAME_PROPS, poses: undefined};
-}
-
-/**
- * Create an animation under a name callers have already validated as free,
- * and return its key. The classic addAnimation thunk always renames to
- * name_N; the plain name is set back afterwards.
- */
-function createNamedAnimation(
-  dispatch: Dispatch,
-  name: string,
-  props: AnimationPatch
-): string {
-  const key = createUuid();
-  dispatch(
-    // addAnimation is an untyped JS thunk; cast for dispatch.
-    addAnimation(key, {
-      name,
-      ...SINGLE_FRAME_PROPS,
-      ...props,
-    }) as unknown as AnyAction
-  );
-  if (isNameUnique(name, getStore().getState().animationList.propsByKey)) {
-    dispatch(setAnimationName(key, name) as unknown as AnyAction);
-  }
-  return key;
-}
-
 /**
  * Point an existing animation at new pixels and refresh its thumbnails.
  * Uses the raw list-replace action because the classic edit action clears
@@ -267,20 +197,24 @@ interface GenerateImagePaneProps {
   onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** Level-imposed subject for new sprites. */
+  lockedImageSubject?: ImageSubject;
+  /** Recorded on every image made here. */
+  imageRole?: string;
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
-  /** Offer this tier of adlib prompt combos in the student dialog. */
-  adlibSet?: ImageAdlibSet;
-  /** The adlib is the only prompt input: no free-text box. */
-  adlibOnly?: boolean;
   /** Style the generate form starts on for new images. */
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
-  /** The image panel is the level: no gallery, no modal, always open on a
-      blank generate form. */
-  imageLevel?: boolean;
+  /** A picture asked for from a block or the world palette: opens the
+      new-image dialog on its kind. A new object each time. */
+  pickRequest?: PictureRequest | null;
+  /** A new image was made (generated or painted), by name and kind. */
+  onImageCreated?: (name: string, imageType: ImageType) => void;
+  /** The dialog a pick opened was closed without a picture. */
+  onPickCancel?: () => void;
 }
 
 /**
@@ -319,13 +253,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
   onDeleteImage,
-  lockedImageType,
+  lockedImageType: levelImageType,
+  lockedImageSubject: levelImageSubject,
+  imageRole,
   advanced,
-  adlibSet,
-  adlibOnly,
   defaultStyle,
   paintDisabled,
-  imageLevel,
+  pickRequest = null,
+  onImageCreated,
+  onPickCancel,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -474,6 +410,37 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     },
     [resetSession]
   );
+  // A pick opens the new-image dialog on the asker's kind; while it is
+  // open, that kind is the locked one.
+  useEffect(() => {
+    if (!pickRequest) {
+      return;
+    }
+    sessionEpochRef.current++;
+    triggerRef.current = null;
+    setDialogTarget('new');
+    setPaintNewDraft(null);
+    resetSession();
+  }, [pickRequest, resetSession]);
+  const lockedImageType = pickRequest?.imageType ?? levelImageType;
+  const lockedImageSubject = pickRequest?.subject ?? levelImageSubject;
+  // The asker gets the picture and the dialog closes, instead of the
+  // summary: the student is on their way back to the block or the world.
+  const pickedRef = useRef(onImageCreated);
+  pickedRef.current = onImageCreated;
+  const finishNew = useCallback(
+    (key: string, name: string, imageType: ImageType) => {
+      pickedRef.current?.(name, imageType);
+      if (pickRequest) {
+        setDialogTarget(null);
+        setPainting('no');
+        endSession();
+      } else {
+        setDialogTarget(key);
+      }
+    },
+    [pickRequest, endSession]
+  );
 
   const closeDialog = useCallback(() => {
     sessionEpochRef.current++;
@@ -481,8 +448,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     setPainting('no');
     setPaintNewDraft(null);
     endSession();
+    if (pickRequest) {
+      onPickCancel?.();
+    }
     triggerRef.current?.focus();
-  }, [endSession]);
+  }, [endSession, pickRequest, onPickCancel]);
 
   // Leaving the tab mid-session must still reclaim the session's leftover
   // assets (and orphan any in-flight persist), exactly as closing would.
@@ -519,16 +489,16 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     if (!needsGridDetection || !detectSource) {
       return;
     }
-    let cancelled = false;
+    let canceled = false;
     cachedGridDetection(detectSource, frameSize)
       .then(size => {
-        if (!cancelled && size && size > 1) {
+        if (!canceled && size && size > 1) {
           setDetectedGrid({source: detectSource, size});
         }
       })
       .catch(() => {});
     return () => {
-      cancelled = true;
+      canceled = true;
     };
   }, [needsGridDetection, detectSource, frameSize]);
   const detectedGridSize =
@@ -623,18 +593,13 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         return;
       }
       const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
-      let sourceUrl = dataURI;
-      if (uploadImage) {
-        try {
-          sourceUrl = await uploadImage(
-            result.filename,
-            result.uint8Array,
-            result.mediaType
-          );
-        } catch {
-          // Keep the embedded data URI.
-        }
-      }
+      const sourceUrl = await uploadOrEmbed(
+        uploadImage,
+        result.filename,
+        result.uint8Array,
+        result.mediaType,
+        dataURI
+      );
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
       if (persistIsStale(epoch, sourceUrl)) {
@@ -661,13 +626,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           ...framesPatch(result.frames),
           categories: categoriesForType(result.generation.imageType),
+          ...(imageRole && {role: imageRole}),
           pixelGridSize: result.pixelGridSize,
           trimmed: !!result.trimmed,
           generation: result.generation,
         });
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        setDialogTarget(key);
+        finishNew(key, newName, result.generation.imageType);
         return;
       }
 
@@ -691,7 +657,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       noteAsset(previousUrl);
     },
     [
+      finishNew,
       dialogTarget,
+      imageRole,
       targetProps,
       uploadImage,
       dispatch,
@@ -739,26 +707,17 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
   // asset (new filename, so nothing caches the old pixels).
   const uploadEdited = useCallback(
-    async (name: string, dataURI: string): Promise<string> => {
-      if (!uploadImage) {
-        // With nowhere to upload, the dataURI itself is stored as the
-        // source, which persists in project sources.
-        return dataURI;
-      }
-      try {
-        const base64 = dataURI.split(',')[1];
-        const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
-        const safeName = (name || 'image')
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '_');
-        return await uploadImage(
-          `${safeName}_${Date.now()}.png`,
-          bytes,
-          'image/png'
-        );
-      } catch {
-        return dataURI;
-      }
+    (name: string, dataURI: string): Promise<string> => {
+      const safeName = (name || 'image')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_');
+      return uploadOrEmbed(
+        uploadImage,
+        `${safeName}_${Date.now()}.png`,
+        dataURIToBytes(dataURI),
+        'image/png',
+        dataURI
+      );
     },
     [uploadImage]
   );
@@ -772,7 +731,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (dialogTarget === 'new' && paintNewDraft) {
         const {name, imageType} = paintNewDraft;
         const sourceUrl = await uploadEdited(name, dataURI);
-        // The paint may have been cancelled (or the dialog moved on) while
+        // The paint may have been canceled (or the dialog moved on) while
         // the upload was out.
         if (persistIsStale(epoch, sourceUrl)) {
           return;
@@ -781,6 +740,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           categories: categoriesForType(imageType),
+          ...(imageRole && {role: imageRole}),
           pixelGridSize: meta.pixelGridSize,
           recentColors: meta.recentColors,
         });
@@ -796,7 +756,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         setPaintNewDraft(null);
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        setDialogTarget(key);
+        finishNew(key, name, imageType);
         return;
       }
 
@@ -843,7 +803,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       noteAsset(previousUrl);
     },
     [
+      finishNew,
       dialogTarget,
+      imageRole,
       targetProps,
       paintNewDraft,
       uploadEdited,
@@ -872,15 +834,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
-  // An image level opens on a blank form, and returns to one whenever a
-  // close or delete clears the target: the level is there to make an image,
-  // and the newest one of its type belongs to whichever level made it.
-  useEffect(() => {
-    if (imageLevel && !dialogTarget) {
-      setDialogTarget('new');
-    }
-  }, [imageLevel, dialogTarget]);
-
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -890,36 +843,34 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      {!imageLevel && (
-        <div className={moduleStyles.imageGallery}>
-          {/* First slot, so it never hides behind a scroll. */}
-          <div className={moduleStyles.imageCard}>
-            <button
-              type="button"
-              className={moduleStyles.newImageCard}
-              onClick={openNewDialog}
-            >
-              <span aria-hidden>+</span>
-              <span className={moduleStyles.newImageLabel}>New image</span>
-            </button>
-          </div>
-          {images.map(({key, props}) => (
-            <GalleryCard
-              key={key}
-              animKey={key}
-              name={props?.name}
-              caption={advanced ? props?.name : undefined}
-              thumb={
-                getImageThumbnail(props?.name) ||
-                props?.dataURI ||
-                props?.sourceUrl ||
-                undefined
-              }
-              onOpen={openDialog}
-            />
-          ))}
+      <div className={moduleStyles.imageGallery}>
+        {/* First slot, so it never hides behind a scroll. */}
+        <div className={moduleStyles.imageCard}>
+          <button
+            type="button"
+            className={moduleStyles.newImageCard}
+            onClick={openNewDialog}
+          >
+            <span aria-hidden>+</span>
+            <span className={moduleStyles.newImageLabel}>New image</span>
+          </button>
         </div>
-      )}
+        {images.map(({key, props}) => (
+          <GalleryCard
+            key={key}
+            animKey={key}
+            name={props?.name}
+            caption={advanced ? props?.name : undefined}
+            thumb={
+              getImageThumbnail(props?.name) ||
+              props?.dataURI ||
+              props?.sourceUrl ||
+              undefined
+            }
+            onOpen={openDialog}
+          />
+        ))}
+      </div>
 
       {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
@@ -961,17 +912,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          lockedImageSubject={lockedImageSubject}
           // No seed means the session started from nothing; any image
           // differs from that.
           imageChanged={
             !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           advanced={advanced}
-          adlibSet={adlibSet}
-          adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
-          imageLevel={imageLevel}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}
@@ -1023,7 +972,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onReady={() => setPainting('active')}
           onSave={handleEditorSave}
           onCancel={() => {
-            // Orphan a save still uploading: cancelled means not applied.
+            // Orphan a save still uploading: canceled means not applied.
             sessionEpochRef.current++;
             setPainting('no');
           }}

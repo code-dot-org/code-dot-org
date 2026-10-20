@@ -1,6 +1,6 @@
 require_relative 'test_helper'
 require_relative '../../lib/test/sequel_test_case'
-require 'mocha/mini_test'
+require 'mocha/minitest'
 require 'cdo/poste'
 require 'digest/md5'
 

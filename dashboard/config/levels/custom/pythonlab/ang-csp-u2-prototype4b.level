@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-30T23:00:11.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "debug",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "Prototype 4\r\n\r\nweak submission",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# MOVIE NIGHT MATCHER\n# This version is DELIBERATELY well-behaved everywhere except one thing:\n# its nested if-else and compound if both look like real logic, but neither\n# one actually changes what the program can output. Everything else --\n# naming, validation, the Theater connection -- is clean on purpose, so the\n# conditional issue doesn't get lost next to other obvious problems.\n\nfrom theater import *\n\nprint(\"MOVIE NIGHT MATCHER\")\nprint(\"Answer a few questions and I'll find your movie.\\n\")\n\nmood = input(\"Are you in the mood for something INTENSE or something RELAXING? (type intense or relaxing) \")\nwhile mood != \"intense\" and mood != \"relaxing\":\n    print(\"Hmm, that's not one of the options -- please type exactly 'intense' or 'relaxing'.\")\n    mood = input(\"Intense or relaxing? \")\n\nwatching_with = input(\"Are you watching ALONE or with OTHERS? (type alone or others) \")\nwhile watching_with != \"alone\" and watching_with != \"others\":\n    print(\"That's not a valid option -- please type exactly 'alone' or 'others'.\")\n    watching_with = input(\"Alone or others? \")\n\nscary_ok = input(\"Are you okay with something scary tonight? (yes/no) \")\nwhile scary_ok != \"yes\" and scary_ok != \"no\":\n    print(\"Please answer with exactly 'yes' or 'no'.\")\n    scary_ok = input(\"Okay with scary? (yes/no) \")\n\n# ---------- THE ALGORITHM ----------\nif mood == \"intense\":\n    # This inner check LOOKS like it's testing something new, but mood can\n    # only ever be \"intense\" or \"relaxing\" (the while loop above guarantees\n    # it), and we already know mood == \"intense\" to even be in this block.\n    # So \"mood != 'relaxing'\" is ALWAYS true here -- the else below it can\n    # never run.\n    if mood != \"relaxing\":\n        # This \"or\" LOOKS like it's branching on watching_with, but\n        # watching_with can only ever be \"alone\" or \"others\" -- so this\n        # condition is ALSO always true. The else below it can never run.\n        if watching_with == \"alone\" or watching_with == \"others\":\n            if scary_ok == \"yes\":\n                recommendation = \"Horror Movie\"\n                reason = \"intense, and you're okay with scares.\"\n            else:\n                recommendation = \"Action Thriller\"\n                reason = \"intense, but keeping the scares out.\"\n        else:\n            # Looks reachable. Isn't. watching_with has no third value.\n            recommendation = \"Group Action Movie\"\n            reason = \"intense, with company.\"\n    else:\n        # Looks reachable. Isn't. mood has no third value.\n        recommendation = \"N/A\"\n        reason = \"this should never print\"\nelse:\n    recommendation = \"Documentary\"\n    reason = \"relaxing -- a documentary fits.\"\n\nprint(\"\")\nprint(\"Your movie:\", recommendation)\nprint(\"Check the Theater for your full reveal!\")\n\n# ---------- THE REVEAL (clean and genuinely personalized -- not the problem here) ----------\nclear(\"#12102A\")\n\nset_fill_color(\"#050414\")\ndraw_rectangle(0, 0, 400, 30)\ndraw_rectangle(0, 370, 400, 30)\nset_fill_color(\"#F4F1E8\")\nfor i in range(9):\n    hole_x = 14 + i * 44\n    draw_rectangle(hole_x, 9, 18, 12)\n    draw_rectangle(hole_x, 379, 18, 12)\n\nset_fill_color(\"#050414\")\ndraw_rectangle(56, 118, 296, 170)\nset_fill_color(\"#E8B33D\")\ndraw_rectangle(50, 112, 296, 170)\n\nset_text_style(\"serif\", \"bold\")\nset_text_color(\"#12102A\")\nset_text_height(14)\ndraw_text(\"TONIGHT'S PICK\", 78, 142)\nset_text_height(26)\ndraw_text(recommendation, 78, 190)\nset_text_style(\"sans\", \"italic\")\nset_text_height(13)\ndraw_text(\"Because it's \" + reason, 68, 230)\n\nplay_note(72, 0.6)\npause(1.2)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "mini_app": "theater",
+    "mini_app_variant": "functional"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-30T23:00:11.251+00:00\",\"changed\":[\"cloned from \\\"ang-csp-u2-prototype4\\\"\"],\"cloned_from\":\"ang-csp-u2-prototype4\"},{\"changed_at\":\"2026-09-30 23:00:21 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:45:33 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:52:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-30 23:52:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

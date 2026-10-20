@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import ProjectUpdatedAt from './ProjectUpdatedAt';
+import ProjectUpdatedAt, {
+  PROJECT_UPDATED_AT_HEIGHT,
+  PROJECT_UPDATED_AT_MIN_WIDTH,
+} from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 class ScriptName extends React.Component {
@@ -75,13 +78,18 @@ class ScriptName extends React.Component {
   }
 
   render() {
-    const fullWidth = this.getFullWidth();
+    // With no width from the header, the name sits in the header's flex row
+    // and ellipsizes whenever the row squeezes it.
+    const inFlow = this.props.width === undefined;
     const actualWidth = this.props.width;
-    const isTruncated = actualWidth > 0 && fullWidth > actualWidth;
+    const isTruncated =
+      !inFlow && actualWidth > 0 && this.getFullWidth() > actualWidth;
     this._isTruncated = isTruncated;
     const {isRtl} = this.props;
 
-    const ellipsisStyle = isTruncated
+    const ellipsisStyle = inFlow
+      ? styles.flowLink
+      : isTruncated
       ? {
           display: 'block',
           width: actualWidth,
@@ -92,7 +100,9 @@ class ScriptName extends React.Component {
         }
       : {};
 
-    if (!this.props.showProjectUpdatedAt) {
+    // In flow the two-line layout, its width and its height are kept even
+    // before the saved-at state arrives, so nothing moves when it fills in.
+    if (!this.props.showProjectUpdatedAt && !inFlow) {
       return (
         <div style={{...styles.headerContainer, height: 18}}>
           <div
@@ -107,14 +117,22 @@ class ScriptName extends React.Component {
     }
 
     return (
-      <div style={styles.headerContainer}>
+      <div style={inFlow ? styles.flowContainer : styles.headerContainer}>
         <div
           className="script_name"
           ref="scriptName"
-          style={{...styles.headerInner, height: 40}}
+          style={
+            inFlow ? styles.flowInner : {...styles.headerInner, height: 40}
+          }
         >
-          <div style={styles.outerContainer}>
-            <div style={styles.containerWithUpdatedAt}>
+          <div style={inFlow ? styles.flowOuter : styles.outerContainer}>
+            <div
+              style={
+                inFlow
+                  ? styles.flowColumnWithUpdatedAt
+                  : styles.containerWithUpdatedAt
+              }
+            >
               {this.renderScriptLink({
                 ...styles.scriptLinkWithUpdatedAt,
                 ...ellipsisStyle,
@@ -122,9 +140,13 @@ class ScriptName extends React.Component {
                   ? {alignSelf: isRtl ? 'flex-end' : 'flex-start'}
                   : {}),
               })}
-              <ProjectUpdatedAt
-                onContentUpdated={this.onProjectUpdatedAtContentUpdated}
-              />
+              {this.props.showProjectUpdatedAt ? (
+                <ProjectUpdatedAt
+                  onContentUpdated={this.onProjectUpdatedAtContentUpdated}
+                />
+              ) : (
+                <div style={styles.updatedAtPlaceholder} />
+              )}
             </div>
           </div>
         </div>
@@ -144,6 +166,27 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
   },
+  flowContainer: {
+    height: 40,
+    minWidth: 0,
+  },
+  flowInner: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    minWidth: 0,
+  },
+  flowOuter: {
+    textAlign: 'end',
+    minWidth: 0,
+  },
+  flowLink: {
+    display: 'block',
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
   scriptLinkWithUpdatedAt: {
     display: 'block',
   },
@@ -156,8 +199,23 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'end',
   },
+  // The saved-at badge's width, held before the badge arrives so the row
+  // does not re-center when it does. Shrinks with the row like the rest.
+  flowColumnWithUpdatedAt: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+    width: PROJECT_UPDATED_AT_MIN_WIDTH,
+    maxWidth: '100%',
+  },
+  // The badge's line, held empty until it arrives, so the name sits where
+  // it will end up.
+  updatedAtPlaceholder: {
+    height: PROJECT_UPDATED_AT_HEIGHT,
+  },
 };
 
+export const UnconnectedScriptName = ScriptName;
 export default connect(state => ({
   showProjectUpdatedAt: state.project.showProjectUpdatedAt,
 }))(ScriptName);

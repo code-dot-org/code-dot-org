@@ -37,7 +37,6 @@ export const courseOfferings = {
   1: {
     id: 1,
     display_name: 'Course A',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       1: {
@@ -89,7 +88,6 @@ export const courseOfferings = {
   2: {
     id: 2,
     display_name: 'Computer Science Discoveries',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       3: {
@@ -159,7 +157,6 @@ export const courseOfferings = {
   3: {
     id: 3,
     display_name: 'Computer Science A',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       5: {
@@ -198,7 +195,6 @@ export const courseOfferings = {
   4: {
     id: 4,
     display_name: 'Flappy',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       6: {
@@ -229,7 +225,6 @@ export const courseOfferings = {
   5: {
     id: 5,
     display_name: 'Hello World',
-    is_featured: true,
     participant_audience: 'student',
     course_versions: {
       7: {
@@ -260,7 +255,6 @@ export const courseOfferings = {
   6: {
     id: 6,
     display_name: 'Poem Art',
-    is_featured: true,
     participant_audience: 'student',
     course_versions: {
       8: {
@@ -291,7 +285,6 @@ export const courseOfferings = {
   7: {
     id: 7,
     display_name: 'Artist',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       9: {
@@ -322,7 +315,6 @@ export const courseOfferings = {
   8: {
     id: 8,
     display_name: 'Self Paced PL CSP',
-    is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
       10: {
@@ -361,7 +353,6 @@ export const courseOfferings = {
   9: {
     id: 9,
     display_name: 'Virtual PL CSP',
-    is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
       11: {
@@ -415,7 +406,6 @@ export const courseOfferings = {
   10: {
     id: 10,
     display_name: 'Single Unit Course',
-    is_featured: false,
     participant_audience: 'student',
     course_versions: {
       13: {

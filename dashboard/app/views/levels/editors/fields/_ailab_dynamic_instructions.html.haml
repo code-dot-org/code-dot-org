@@ -2,5 +2,9 @@
   Dynamic Instructions
 
 #dynamic_instructions.in.collapse
-  = f.label :ailab_dynamic_instructions, 'Dynamic instructions'
-  = f.text_area :dynamic_instructions, placeholder: 'Insert JSON Data', rows: 10, style: 'width: 50%', value: @level.dynamic_instructions
+  #ailab-dynamic-instructions-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/en_us/ailab_locale.js')}
+  %script{src: webpack_asset_path('js/levels/editors/fields/_ailab_dynamic_instructions.js'),
+        data: {ailabdynamicinstructions: @level.dynamic_instructions.to_json}}

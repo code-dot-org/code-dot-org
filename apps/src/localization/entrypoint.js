@@ -17,11 +17,14 @@ const csd_prefixes = [
   '/courses/teaching-csd-unit1-2025',
   '/courses/self-paced-pl-aiml-2024',
   '/courses/getting-started-2025',
+  '/courses/teaching-csd-aiml-2025',
+  '/courses/teaching-csd-unit1-2025',
 ];
 
 const csf_prefixes = [
   '/courses/k5-unplugged',
   '/courses/express-2024',
+  '/courses/express-2025',
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
   '/courses/teaching-csf-2025',
@@ -102,6 +105,7 @@ const live = [
   '/courses/oceans',
   '/courses/how-ai-works-2023',
   '/courses/problem-solving-with-ai-2025',
+  '/courses/artificial-intelligence-foundations-india-2025',
 ];
 
 const matches = prefix => {
@@ -161,6 +165,7 @@ function loadLocalize() {
     rememberLanguage: true,
     retranslateOnNewPhrases: true,
     disableWidget: true,
+    allowIgnoredChildrenInIsolate: true,
     saveNewPhrases: !(
       window.location.host === 'studio.code.org' ||
       window.location.host === 'code.org'

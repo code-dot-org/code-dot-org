@@ -25,6 +25,10 @@ $handle-grab-buffer: 10px;
   width: 100%;
   height: 100%;
 
+  // React Flow's light-mode background is transparent, which exports as a
+  // transparent PNG; paint the themed color so downloads match the screen.
+  --xy-background-color: var(--background-neutral-primary);
+
   // Edges: use themed stroke so they stay visible in dark mode.
   --xy-edge-stroke-default: var(--borders-neutral-solid);
 

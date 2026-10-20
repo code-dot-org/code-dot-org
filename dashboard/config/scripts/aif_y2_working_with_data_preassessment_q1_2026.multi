@@ -5,7 +5,7 @@ right 'They ask questions, use data to answer those questions, and communicate t
 wrong 'They design surveys, test those surveys, and ensure the data collection process is not biased.'
 wrong 'They collect data, create machine learning models, and use those models to make predictions.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which **best** describes the role of a data analyst?

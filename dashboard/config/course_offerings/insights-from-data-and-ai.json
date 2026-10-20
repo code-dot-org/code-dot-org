@@ -1,7 +1,7 @@
 {
   "key": "insights-from-data-and-ai",
   "display_name": "Insights from Data and AI",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AIF",

@@ -76,6 +76,10 @@ following:
   studio.code.org pages, but which isn't already in `minimal.js`. So any page
   that needs `code-studio-common.js`, also needs `minimal.js` to work.
 
+- `code-studio-common-deps.js` - this bundle includes the third-party code that
+  would otherwise be in `code-studio-common.js`. So any page that needs
+  `code-studio-common.js`, also needs `code-studio-common-deps.js` to work.
+
 - `common.js` - this bundle includes code that is used across all of the big
   apps (gamelab, applab, etc.) but which isn't already in `minimal.js` or
   `code-studio-common.js`.
@@ -111,7 +115,7 @@ dependencies will be. Here are the different options:
    key will become the bundle's filename and the value is the file to generate the
    bundle from. Any code used by your new file which is used by other entries in
    `CODE_STUDIO_ENTRIES` will be automatically factored out into the
-   `code-studio-common.js` file.
+   `code-studio-common.js` and `code-studio-common-deps.js` files.
 
 3. I'm creating a new "marketing" page that doesn't have a lot of dependencies.
 

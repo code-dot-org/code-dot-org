@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-16T17:29:05.000Z",
+  "level_num": "custom",
+  "user_id": 10559,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "77114bce-0a3d-4c88-8ae6-677c0a2d5b1b": {
+          "id": "77114bce-0a3d-4c88-8ae6-677c0a2d5b1b",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My First Web Lab</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <h1>Welcome to Web Lab 2!</h1>\n    <p>This is your starting point. Explore and modify!</p>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "bfa02dae-6718-4476-a87f-3642d83ed738": {
+          "id": "bfa02dae-6718-4476-a87f-3642d83ed738",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: lightblue;\n}\n\nh1 {\n    color: navy;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "aeedcb9a-3d34-40a4-b4d2-3ff8d49ab078": {
+          "id": "aeedcb9a-3d34-40a4-b4d2-3ff8d49ab078",
+          "name": "script.js",
+          "contents": "// Your JavaScript code goes here!\nconsole.log(\"Script loaded!\");",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "77114bce-0a3d-4c88-8ae6-677c0a2d5b1b",
+        "bfa02dae-6718-4476-a87f-3642d83ed738",
+        "aeedcb9a-3d34-40a4-b4d2-3ff8d49ab078"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Explore the structure of the `index.html` file\r\n- Examine the styling rules in `style.css`\r\n- Review the JavaScript code in `script.js`\r\n- Consider what new elements or styles you might want to add\r\n- Think about how to make the page interactive with JavaScript",
+    "generate_outline": "generate an empty level",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMpVPNCXSftuycQA5/4F\nINHjq/bqROFrYVhx0nbItU78aeT73nL5yhOHi/2uTKkFQWArxkjU4hVPGIl3\nC7E+nxqCXDtDUVeW+lvrmgF7NH+ZZDO4/wuXkCynm9mlytUtoPGCMQF0zNR0\nA9FAkFBmu6IJT9XRZLsXmg3ZjB7BRt/staM8zP3sLKdHJKRJH29b5eOqAv2b\n3aQsfgXMypSbHbwKYUmFOLom5Ys20t5XExwmt2uhIC6TqjHIs97rPGMeO6CL\nH5j3T2SfQ9h0Zh9UaeyuslWtifQZvKn0PY0kXm/qSjVJjuUAkWnBGRZOQfsZ\nxOUZutRYjoeNjH8Ky5VwMOLbtGSmtaPBzuDoANz4BQ9HRqeSC/gIaT9Gp0JO\n2UOiO+2W5/rHqCNNdVuqisexOF0I6QUQvysJXVsgi9B4Bp0UklNWSb3VqHIN\nbPawvea9Iof0UGTW0uY9qx6cgSa4itJoyOHDIInNqjgs21JDGoX1tJnlwdG3\n2m6KqlOqRJPm1j37+DQuAYTclcuc8xa3gvXnpl2vM4udO5VLB8xCALpknA6l\ntdzACJlT2/3RMXzBpLFB+VUclra03JGismgneM63QArL7m1V7g1yo+Y2Vwtg\nLPo1KkkMApEmK58F+r1UXzgS7ZpA8VZsEsW27JEg/J8IDO0yxBIGDqFVcUSd\nDmEdKBsYKg4HIncueX/3oq6JDddXYVw5mKJwpLR0dXKGEjqN2Bclw+x0QFYV\nsekU0MPZ5WfvSYr2gG+N9FznlXR/n0YTfDxoDw/WrLis/t4FbrnvpuKLfjD0\nSkKgo6AfT9bH7ZuX+UoNWrPzHUbrUIkH7xGjXNnTvTO/B6Jv42XfOJzVQzo8\niriJBmoMv3D7VaoU0FrEPHBqEsrBOQzqsuSS/qcMCq2+c/J0nLtpc0o+Kr1l\ngvSXZwiuLA0N42u13pCv3MS5qbyj4i9ny0vQWnIg93WE8sMKlb40MBZ/f/2g\n60wKnjX/gNLb99XyIghDXZsSvwRUwTaNxdpVDrn546AmEyXdhPbPN+Mfb6EH\nBXvOI1PkYeaWtnc4Ux4qwInagYAmCnCx6d5Oe4Ns+UecggtziAwzIjQo/Xzx\n6ZUWFXE5RUgyhhGCvuyygxJAGBJWhk9PRbYae5HH1/SHmnJA+lXSG3DqJSGm\niaV9jW2Sz1V8W3jH9dhqNUpEiD3ybkvOkc8NThAZROTQVWtK8VpIusa0uAeN\ntNbSEvAzO/n5IYI51KncchvMjWrIOAWuqIyUo1lyZ/UC/I/knFC59K9wIV13\nyhGv2rk/tte+IYAD6OjlVhbAN+wHko9B35UzgUoyZwaKtulWt68Vu81Bez1x\nCThD165DuE91g8Npw4dsD1fZQRzRCMBnh225tkMJxukPVnosXGaitV4HHW8R\nQLl7vXIBFucwgq1g//z+HpSaILQsysFhLEfSL70wkFIPTg7patLrCXO+Bjy4\nT5TFKQNwBuRNtqnciqfoHsWNAP6XS1TlEJxHQ1vei7m0rfoZk9tTPJ+YJe3b\nt81pwqEZ4n80snOb4piqJHxvQlpKZz6seISnXcLH\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-16 17:30:56 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-16 17:30:56 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-16 17:32:52 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-16 17:34:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-16 17:34:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-16 17:35:09 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-09-16 17:35:09 +0000\",\"changed\":[\"generate_outline\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+}]]></config>
+</Weblab2>

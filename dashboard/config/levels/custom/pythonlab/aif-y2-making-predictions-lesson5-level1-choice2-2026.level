@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-11T00:03:47.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice2-2026 + template",
+    "long_instructions": "Ms. Alvarez, the school's guidance counselor, has data from 20 past students: hours studied, hours slept, practice problems completed, and their test score. She wants to build a model that predicts a new student's score from their study habits, so students can check in mid-prep and see if they're on track.\r\n\r\nBut if she only checks the model's predictions against the same 20 students it learned from, she won't know if it actually works, that's like grading a test with the answer key the student wrote. What she really needs is to test it on students it's never seen before.\r\n\r\n**☑️ Do This:**\r\n- Import the `train_test_split` function.\r\n- Split the data into training and test sets. 20% of the data should be in the test set.\r\n\r\nSave TODOs 3–5 for the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that to use the `train_test_split` function, you should import it with:\r\n\r\n```\r\nfrom sklearn.model_selection import train_test_split\r\n```\r\n\r\nThe `train_test_split` function takes `input` and `output` as its first two arguments. To put 20% of the data in a test set, set the `test_size` parameter to `0.2`.\r\n\r\nThe return value will be four separate lists, always in this order: `train_inputs`, `test_inputs`, `train_outputs`, `test_outputs`. Be sure to unpack all four when you call the function, or you'll get an error.\r\n\r\n```\r\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\r\n  inputs, outputs, test_size=0.2\r\n)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY7Gbw/gOjgOknSm\nNYj3OfjtD5oonqNpJj6V8Jn0B5UdeK2XJCJ3i8tDk215enJ0uY/AcOGcM53G\nT9UqWoVZNrTQ2H+97xO+eH7k9JbDkyO/Cf35F/UwBCk4VjxExWTJ9hzOO1rT\ntJrzjrrBl/OkRXp+UnCUwmDOVHbC0XF6X7ZBh3GnLMp7hIafmCJ4oM/HzI6q\nsZI/hJCj/Ot5nEMeKEXOqla81paD9Vxr+ahsFYA4z09x6DuDu4K5/M+b2LLf\nR92kMo3Xt6TK8fESkCsqgUCs+Ytmuh0m05o7cz6BpjjIJ0xW5nHqEtNtgYa3\nRMkCYf2BSq4HjJssXhfjLJLj1lEHie4KY3ifcb2qIe8Sl0NNfX6mS4wuWGqm\nUseVEL7Xzdme1QWffVnKFsK/tkzfPp2d+y7vCOudqA1ZbMrZBBbtIm+8QdB7\ndBgXIF6qyIgwfN+ULGV9D2clxS4gm71XRTQokvk1yOGr35JOoPivzQcsmTPa\noTiu/WXI5jYGvc+59xKIyykzE0YrnW4V3wgywl/uJFZG23sR/zEOSz1RBRc8\n0cpcN16oLDMLgwXrZoncwFjU7iI181WI/YCXyhbghBG8DWAQx0IO/z5djKHH\nmiKfBZA53HHJ9G1JK9XM+F0c3Hp3wWV5c36l9ti0Jpf3FQFrHhEAHwiKyusN\n2wRCMlgg3/OdvMMmMFjH5oA5crZdVMyKBmfV78bHLQstWVIMi/QYbw7Lcglx\nCB8kFQH8p5umqLl81Ex+Yu6FTa4VKx0UAIDjQLz5wtmWNVrkyWBQInE1vLG+\ntTHyQs+kcFWDXQe4yxucUEueYMu8CfOXGZccLXZPl/CQaXMQ121T2B7MtoxW\n6U612sIXz3eGLOmNdq3Z/qO6OtfN34+jSGqBLn/BtmD2aJw3OLkBGjKtN05g\nerGScbMZHGbGmQ4mab4vqy2U8mDwclGamrIfwx1+yfmGrMFwdAnHUOHFvLXX\nkqUk+VUggMw8f62OD+T7NtzLBGMUJDq7FEZhOCI6w2zcr7BqxHm8IMmCtRWk\n5JBobLzJqasEnCJ2eJUDW0cDtU9ctQ5X3AxbduHObwoSKMzcKHigfR62OIDb\n/WMn8RPmz3LB5wbG3GKecuKYLU82T7UbxJaShOdH1Zulmh+QcDBXMKZItEby\nNlnr8xh2rzX2U7bBZGzKV1xElVhLWtePsHYIwgNw8ynEw+/IL6hPC/i9IViW\n36KK7T2KHSgze3WHWEmvDpTmzTWf42VZfWp3GqfCGKMogDEtx7U+FwHtP8c8\nbHGrWnzEQMnjHDSGBn8fekPTClqAhR55PVFtPw/bBh43YFnfztpjXqO6PYIL\nqbrEp5uP2n9JQja4RnlkwGM5KH+/WsQR1RfQxiTv6iJBMoqNzzwWuVLSArwd\nMms3Kk1SF+UenA8HBmv6pUrLBOG2BXY1sZSiCxTbpNQY55qfNReiPEAH8W5M\nhYyPZ1/Hj/PPZ8pOHDuZQkoc3UduYPR9A0k+C3IXJBR8IAo9luQdJJLmO14Q\nUfHPSHATE2ZknIuu8bNRvlLhjx2/X6XasHtL/wbHAP5oq3brUxxCtVb/c//P\nblwveg==\n",
+    "display_name": "Ms. Alvarez's Study Plan",
+    "bubble_choice_description": "Help a school counselor make a study plan for students.",
+    "thumbnail_url": "https://images.code.org/02614d4e36a94b4a1eb77530a008557f-alvarez.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:08:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:08:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:13:51 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:16:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:22:53 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:23:48 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

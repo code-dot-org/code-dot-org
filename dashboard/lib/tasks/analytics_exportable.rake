@@ -1,6 +1,6 @@
 # Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL → Redshift materialized view" pipeline:
 #  analytics_export:zero_etl_data_filter[environment_type]                    # Print a table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL.
-#  analytics_export:update_zero_etl_filter[integration_arn,environment_type]  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
+#  analytics_export:update_zero_etl_filter[environment_type]                  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
 #  analytics_export:resync_zero_etl_table[table_names,environment_type]       # Resync one or more (space-separated, optionally `database.`-qualified) tables that failed to replicate via Zero ETL.
 #  analytics_export:zero_etl_export_status[environment_type]                  # Report the Zero ETL replication status of every table we export to analytics.
 #  analytics_export:configure_zero_etl_target_database[environment_type]      # Apply the required Zero ETL ingestion settings (ACCEPTINVCHARS, TRUNCATECOLUMNS) to the target database.
@@ -62,20 +62,23 @@ namespace :analytics_export do
     puts AnalyticsExportable.zero_etl_data_filter(db_name: "dashboard_#{args[:environment_type]}")
   end
 
-  # bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
-  # DRY_RUN=1 bundle exec rake 'analytics_export:update_zero_etl_filter[arn:aws:rds:us-east-1:ACCOUNT:integration:ID,production]'
+  # bundle exec rake 'analytics_export:update_zero_etl_filter[production]'
+  # DRY_RUN=1 bundle exec rake 'analytics_export:update_zero_etl_filter[production]'
   desc "Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`."
-  task :update_zero_etl_filter, [:integration_arn, :environment_type] => :environment do |_t, args|
-    abort "Usage: rake analytics_export:update_zero_etl_filter[ARN,environment_type]" if args[:integration_arn].blank? || args[:environment_type].blank?
+  task :update_zero_etl_filter, [:environment_type] => :environment do |_t, args|
+    abort "Usage: rake analytics_export:update_zero_etl_filter[environment_type]" if args[:environment_type].blank?
 
     require 'cdo/aws/rds'
 
     db_name = "dashboard_#{args[:environment_type]}"
     dry_run = ENV['DRY_RUN'].present?
+    integration_arn = Cdo::RDS.zero_etl_integration_arn(environment_type: args[:environment_type])
+    puts "Integration: #{integration_arn}"
+
     # AnalyticsExportable computes the desired filter from the schema; Cdo::RDS reads/reconciles/writes
     # it against the live integration via the RDS API.
     result = Cdo::RDS.update_zero_etl_integration!(
-      integration_arn: args[:integration_arn],
+      integration_arn: integration_arn,
       desired_data_filter: AnalyticsExportable.zero_etl_data_filter(db_name: db_name),
       db_name: db_name,
       dry_run: dry_run
@@ -235,11 +238,12 @@ namespace :analytics_export do
 
     client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
 
-    plan = Cdo::Aws::Redshift::MaterializedViewManager.provision_all_views(
+    Cdo::Aws::Redshift::MaterializedViewManager.generate_all_ddl_templates(models: models)
+
+    plan = Cdo::Aws::Redshift::MaterializedViewManager.plan_provisioning(
       client: client,
       environment_type: env,
-      models: models,
-      dry_run: true
+      models: models
     )
 
     if plan[:to_add].any?
@@ -329,7 +333,6 @@ namespace :analytics_export do
   end
 
   # bundle exec rake 'analytics_export:refresh_materialized_views[production]'
-  # DRY_RUN=1 bundle exec rake 'analytics_export:refresh_materialized_views[test]'
   desc "REFRESH each Model's Redshift Materialized Views if they are stale."
   task :refresh_materialized_views, [:environment_type] => :environment do |_t, args|
     abort "Usage: rake analytics_export:refresh_materialized_views[environment_type]" if args[:environment_type].blank?
@@ -350,93 +353,39 @@ namespace :analytics_export do
     abort "No exportable models found." if models.empty?
 
     env = args[:environment_type].to_sym
-    dry_run = ENV['DRY_RUN'].present?
-
     client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
 
-    # Phase 1: dry-run preview — group models into stale / fresh / no_views
-    # without touching Redshift beyond the SVV_MV_INFO catalog read.
-    would_refresh = {}
-    skipped = []
-    no_views = []
-    Cdo::Aws::Redshift::MaterializedViewManager.refresh_all_views(
-      client: client, environment_type: env, models: models, dry_run: true
-    ) do |event, table_name, payload|
-      case event
-      when :would_refresh
-        would_refresh[table_name] = payload
-      when :skipped
-        skipped << table_name
-      when :no_views
-        no_views << table_name
-      end
-    end
-
-    if would_refresh.any?
-      puts "Stale (#{would_refresh.length} model(s)):"
-      would_refresh.each {|table, fqns| puts "  ~ #{table} (#{fqns.length} view(s))"}
-    end
-
-    puts "Fresh (will be skipped): #{skipped.length} model(s)." unless skipped.empty?
-    puts "No views: #{no_views.length} model(s)." unless no_views.empty?
-
-    if would_refresh.empty?
-      puts "Nothing to refresh."
-      next
-    end
-
-    if dry_run
-      puts "\n[DRY RUN] No statements submitted."
-      next
-    end
-
-    print "\nProceed? [y/N] "
-    abort "Aborted." unless $stdin.gets&.strip&.downcase == 'y'
-
-    puts "\nSubmitting REFRESH for #{would_refresh.length} model(s)..."
+    puts "Refreshing stale materialized views for #{models.length} model(s) in #{env}"
+    puts "(polls every 10s, Ctrl-C to detach — statements keep running on Redshift)..."
     started_at = Time.now
 
-    result = Cdo::Aws::Redshift::MaterializedViewManager.refresh_all_views(
+    result = Cdo::Aws::Redshift::MaterializedViewManager.refresh_and_wait(
       client: client, environment_type: env, models: models
-    ) do |event, payload, extra|
+    ) do |event, name, detail|
       case event
       when :submitted
-        puts "  submitted #{payload} (#{extra.length} view(s))"
+        puts "  submitted #{name} (#{detail.length} view(s))"
+      when :skipped
+        puts "  fresh     #{name} (skipped)"
+      when :no_views
+        puts "  no views  #{name}"
       when :error
-        warn "  submit FAILED for #{payload}: #{extra.class}: #{extra.message.lines.first&.strip}"
-      end
-    end
-
-    statements = result[:statements] || {}
-
-    if statements.empty?
-      elapsed = (Time.now - started_at).round(1)
-      puts "Done in #{elapsed}s. No statements to wait for."
-      next
-    end
-
-    puts "\nWaiting for #{statements.length} statement(s) to complete (polls every 10s, Ctrl-C to detach — statements keep running on Redshift)..."
-
-    wait_result = client.wait_for_statements(
-      statements: statements
-    ) do |event, fqn, detail|
-      case event
+        warn "  submit FAILED for #{name}: #{detail.class}: #{detail.message.lines.first&.strip}"
       when :finished
-        puts "  FINISHED  #{fqn} (#{detail}s)"
+        puts "  FINISHED  #{name} (#{detail}s)"
       when :failed
-        puts "  FAILED    #{fqn} -- #{detail}"
+        puts "  FAILED    #{name} -- #{detail}"
       end
     end
 
     elapsed = (Time.now - started_at).round(1)
-    puts "\nDone in #{elapsed}s. #{wait_result[:finished].length} finished, #{wait_result[:failed].length} failed."
+    puts "\nDone in #{elapsed}s. #{result[:refreshed].length} refreshed, #{result[:failures].length} failed."
 
-    if result[:failed].any?
-      warn "\n#{result[:failed].length} model(s) failed at submit time:"
-      result[:failed].each {|t| warn "  - #{t}"}
+    if result[:failures].any?
+      warn "\n#{result[:failures].length} view(s) or model(s) failed:"
+      result[:failures].each {|name| warn "  - #{name}"}
+      exit 1
     end
-
-    exit 1 if result[:failed].any? || wait_result[:failed].any?
   end
 
   # bundle exec rake 'analytics_export:materialized_view_status[production]'

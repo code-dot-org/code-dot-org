@@ -78,6 +78,8 @@ class UnitEditor extends React.Component {
     ]),
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
+    initialSimpleProgress: PropTypes.bool,
+    initialSimpleProgressImage: PropTypes.string,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -136,6 +138,8 @@ class UnitEditor extends React.Component {
       topicTags: this.props.initialTopicTags,
       contentArea: this.props.initialContentArea,
       tts: this.props.initialTts,
+      simpleProgress: this.props.initialSimpleProgress,
+      simpleProgressImage: this.props.initialSimpleProgressImage || '',
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -246,6 +250,8 @@ class UnitEditor extends React.Component {
       topic_tags: this.state.topicTags,
       content_area: this.state.contentArea,
       tts: this.state.tts,
+      simple_progress: this.state.simpleProgress,
+      simple_progress_image: this.state.simpleProgressImage,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -428,6 +434,34 @@ class UnitEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          <label>
+            Show simple progress instead of progress bubbles in the level header
+            <input
+              type="checkbox"
+              checked={this.state.simpleProgress}
+              style={styles.checkbox}
+              onChange={e => this.setState({simpleProgress: e.target.checked})}
+            />
+            <HelpTip>
+              <p>
+                The header shows the image below and each level's header label
+                where the row of level bubbles would be.
+              </p>
+            </HelpTip>
+          </label>
+          {this.state.simpleProgress && (
+            <label>
+              Simple progress image URL
+              <input
+                value={this.state.simpleProgressImage}
+                style={styles.input}
+                placeholder="/blockly/media/hoai2026/logo.png"
+                onChange={e =>
+                  this.setState({simpleProgressImage: e.target.value})
+                }
+              />
+            </label>
+          )}
           <label>
             Enable Text-to-Speech
             <input

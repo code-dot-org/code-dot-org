@@ -159,6 +159,6 @@
     "offer_browser_tts": "false",
     "require_edit_to_continue": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:05.780+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L7-2025\"},{\"changed_at\":\"2026-07-25 00:41:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-25 00:42:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-26 22:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:05.780+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L7-2025\"},{\"changed_at\":\"2026-07-25 00:41:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-25 00:42:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-26 22:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-23 13:49:49 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

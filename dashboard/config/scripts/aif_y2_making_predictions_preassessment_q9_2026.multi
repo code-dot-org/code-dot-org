@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q9-2026'
+
+wrong '5'
+right '7'
+wrong '12'
+wrong '25'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Two examples have the features (2, 3) and (5, 7). What is the Manhattan distance between them?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Nearest-Neighbor Classification
+MARKDOWN

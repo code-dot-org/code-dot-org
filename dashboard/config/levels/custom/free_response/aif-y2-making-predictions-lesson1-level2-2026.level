@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-10T21:25:54.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "Priya tutors math students. For five of her students, she recorded how many practice problems each one completed and that student’s quiz score. Priya wants to know what quiz score to expect from a student who completes 40 practice problems.\r\n\r\nDescribe, step by step, what you would do with Priya’s records to train a model and deliver her prediction. What happens when you call `fit`?\r\n",
+    "stay_on_level_after_submit": "false",
+    "submittable": "true",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-10 21:26:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:27:09 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

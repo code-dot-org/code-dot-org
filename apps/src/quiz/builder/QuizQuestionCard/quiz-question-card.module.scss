@@ -1,0 +1,54 @@
+.tabsRow {
+  padding: 0 10px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.tabPanels {
+  background: var(--background-neutral-primary);
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: var(--background-neutral-secondary);
+}
+
+.correctToggle {
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  color: var(--text-neutral-primary);
+}
+
+.correctToggleSelected {
+  background: var(--background-selected-primary);
+  border-color: var(--background-selected-primary);
+  color: var(--text-selected-primary);
+
+  &:hover {
+    background: var(--background-selected-primary);
+  }
+}
+
+// FormFieldWrapper aligns its children to flex-start, so the input needs its own width.
+.fullWidthField {
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+}
+
+.optionText {
+  flex: 1 0 0;
+  min-width: 0;
+}

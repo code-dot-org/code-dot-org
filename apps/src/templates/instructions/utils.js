@@ -124,6 +124,8 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     blockSpaceContainer.classList.add('readonly-block-space-container');
     // We do not translate the blockly workspaces
     blockSpaceContainer.classList.add('notranslate');
+    // Inline blocks sit inside data-isolate paragraphs, which honor data-ignore.
+    blockSpaceContainer.setAttribute('data-ignore', 'true');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block

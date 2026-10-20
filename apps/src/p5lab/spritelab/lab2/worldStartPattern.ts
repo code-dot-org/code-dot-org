@@ -1,20 +1,23 @@
 // The premade world a level can hand a student, painted into its pinned scene.
 
-import {useEffect} from 'react';
+import {useEffect, useRef} from 'react';
 
-import {countWorldCells} from './guideSteps';
 import {imageTypeFromCategories} from './imageGallery';
+import {imageNamedForRole} from './imageRoleDefaults';
+import {countWorldCells} from './projectCounts';
 import {RuntimeAnimationList, Scene, Sources} from './types';
 import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 
 /**
  * Which image each pattern character draws: 'B' the block the student made
- * most recently, 'S' their first character. orderedKeys is newest-first,
+ * most recently, 'S' the sprite carrying spriteRole (the level's default
+ * sprite), else their first character. orderedKeys is newest-first,
  * because Sprite Lab prepends new animations.
  */
-export function patternCells(animations: RuntimeAnimationList): {
-  [char: string]: WorldCell;
-} {
+export function patternCells(
+  animations: RuntimeAnimationList,
+  spriteRole?: string
+): {[char: string]: WorldCell} {
   const {orderedKeys, propsByKey} = animations;
   const typeOf = (key: string) =>
     imageTypeFromCategories(propsByKey[key]?.categories);
@@ -23,19 +26,51 @@ export function patternCells(animations: RuntimeAnimationList): {
   if (blockKey) {
     cells.B = {image: propsByKey[blockKey].name, kind: 'block'};
   }
+  const roleName = imageNamedForRole(animations, 'sprite', spriteRole);
   const spriteKey = [...orderedKeys]
     .reverse()
     .find(key => typeOf(key) === 'sprite');
-  if (spriteKey) {
-    cells.S = {image: propsByKey[spriteKey].name, kind: 'sprite'};
+  const spriteName = roleName ?? (spriteKey && propsByKey[spriteKey].name);
+  if (spriteName) {
+    cells.S = {image: spriteName, kind: 'sprite'};
   }
   return cells;
+}
+
+// The pick is not stored: the grid keeps it, since a later level seeds only
+// the kinds the grid still lacks.
+export function chooseStartPattern(
+  pattern: string[] | string[][] | undefined,
+  {
+    hasProject,
+    roll,
+    override,
+  }: {hasProject: boolean; roll: number; override?: number}
+): string[] | undefined {
+  if (!pattern?.length) {
+    return undefined;
+  }
+  if (!Array.isArray(pattern[0])) {
+    return pattern as string[];
+  }
+  const layouts = pattern as string[][];
+  if (override !== undefined && layouts[override]) {
+    return layouts[override];
+  }
+  if (!hasProject) {
+    return layouts[0];
+  }
+  return layouts[
+    Math.min(layouts.length - 1, Math.floor(roll * layouts.length))
+  ];
 }
 
 /**
  * The scene's world with the pattern painted in, or null when it would change
  * nothing. Each kind seeds only while the world holds none of it, and only
- * into empty cells, so a student's own placements always win. Rows anchor to
+ * into empty cells, so a student's own placements always win. One exception:
+ * while the world has no blocks yet, a sprite the pattern names that occurs
+ * exactly once in the grid, off its mark, is moved onto it. Rows anchor to
  * the playfield floor, resizeWorld's convention.
  */
 export function paintPattern(
@@ -57,9 +92,19 @@ export function paintPattern(
     }
     [...rowText].slice(0, size).forEach((char, col) => {
       const cell = cellFor[char];
-      const placed = cell?.kind === 'block' ? counts.blocks : counts.sprites;
-      if (!cell || placed > 0 || grid[row][col]) {
+      if (!cell || grid[row][col]) {
         return;
+      }
+      const placed = cell.kind === 'block' ? counts.blocks : counts.sprites;
+      if (placed > 0) {
+        const from =
+          cell.kind === 'sprite' &&
+          counts.blocks === 0 &&
+          soleCellOf(grid, cell);
+        if (!from) {
+          return;
+        }
+        grid[from.row][from.col] = null;
       }
       grid[row][col] = cell;
       painted = true;
@@ -68,26 +113,56 @@ export function paintPattern(
   return painted ? {grid} : null;
 }
 
+/** Where the one cell showing this image sits, or null when the grid holds
+    none or more than one. */
+function soleCellOf(
+  grid: (WorldCell | null)[][],
+  cell: WorldCell
+): {row: number; col: number} | null {
+  const found: {row: number; col: number}[] = [];
+  grid.forEach((cells, row) =>
+    cells.forEach((c, col) => {
+      if (c?.image === cell.image && c.kind === cell.kind) {
+        found.push({row, col});
+      }
+    })
+  );
+  return found.length === 1 ? found[0] : null;
+}
+
 /** Seeds the pattern whenever the image list changes. A trigger keyed on
     Start Over itself would fire with the pre-reset list. */
 export function useWorldStartPattern({
-  pattern,
+  pattern: patternOrLayouts,
+  channelId,
+  layoutOverride,
   pinnedSceneId,
   enabled,
   animations,
+  spriteRole,
   updateSources,
 }: {
-  pattern: string[] | undefined;
+  pattern: string[] | string[][] | undefined;
+  channelId: string | undefined;
+  layoutOverride?: number;
   pinnedSceneId: string | undefined;
   enabled: boolean;
   animations: RuntimeAnimationList;
+  spriteRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): void {
+  // The effect runs again on every animation change and must not reroll.
+  const roll = useRef(Math.random());
   useEffect(() => {
-    if (!pattern?.length || !pinnedSceneId || !enabled) {
+    const pattern = chooseStartPattern(patternOrLayouts, {
+      hasProject: !!channelId,
+      roll: roll.current,
+      override: layoutOverride,
+    });
+    if (!pattern || !pinnedSceneId || !enabled) {
       return;
     }
-    const cellFor = patternCells(animations);
+    const cellFor = patternCells(animations, spriteRole);
     updateSources(prev => {
       const scenes: Scene[] = prev.scenes ?? [];
       const index = scenes.findIndex(scene => scene.id === pinnedSceneId);
@@ -102,5 +177,14 @@ export function useWorldStartPattern({
       next[index] = {...scenes[index], world};
       return {...prev, scenes: next};
     });
-  }, [pattern, pinnedSceneId, enabled, animations, updateSources]);
+  }, [
+    patternOrLayouts,
+    channelId,
+    layoutOverride,
+    pinnedSceneId,
+    enabled,
+    animations,
+    spriteRole,
+    updateSources,
+  ]);
 }
