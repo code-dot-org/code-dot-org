@@ -29,9 +29,7 @@ THM-1. The package defines these themes:
 | `deuteranopia`       | Deuteranopia Theme       | Blockly's Classic             | 11        | no   |
 | `deuteranopia-dark`  | Deuteranopia Dark Theme  | `@blockly/theme-dark`         | 11        | yes  |
 | `tritanopia`         | Tritanopia Theme         | Blockly's Classic             | 11        | no   |
-| `tritanopia-dark`    | Modern Dark Theme        | `@blockly/theme-dark`         | 11        | yes  |
-
-`tritanopia-dark`'s label is `default-dark`'s, copied by mistake.
+| `tritanopia-dark`    | Tritanopia Dark Theme    | `@blockly/theme-dark`         | 11        | yes  |
 
 THM-2. A theme's name is saved in students' settings. A name must never
 change, and a removed theme's name must keep resolving to something.
@@ -107,7 +105,6 @@ has the primary colour of apps' `protanopiaBlockStyles.loop_blocks`.
 
 ## Open questions
 
-1. THM-1: correct `tritanopia-dark`'s label to "Tritanopia Dark Theme".
-2. THM-7: copy `@blockly/theme-highcontrast`'s styles rather than change the
+1. THM-7: copy `@blockly/theme-highcontrast`'s styles rather than change the
    module's own object?
-3. THM-9: drop `blackBackground`, or is something meant to read it?
+2. THM-9: drop `blackBackground`, or is something meant to read it?

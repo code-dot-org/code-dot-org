@@ -10,6 +10,7 @@ import {definition as TritanopiaDefinition} from '../tritanopia';
 export const definition = {
   ...DarkDefinition,
   name: 'tritanopia-dark',
+  option: 'Tritanopia Dark Theme',
   blockStyles: {
     ...TritanopiaDefinition.blockStyles,
   },

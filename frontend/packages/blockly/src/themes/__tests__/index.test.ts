@@ -94,6 +94,11 @@ describe('themes.md: the set', () => {
     }
   });
 
+  it('THM-1: every theme has a label of its own', () => {
+    const labels = Object.values(themes).map(theme => theme.definition.option);
+    expect(new Set(labels).size).toBe(labels.length);
+  });
+
   it('THM-3, THM-4, THM-5: each offered theme has a dark variant, and only the variants are dark', () => {
     expect(themeOptions.map(option => option.value)).toEqual([
       'default',

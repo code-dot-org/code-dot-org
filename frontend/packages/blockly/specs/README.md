@@ -91,3 +91,5 @@ these changes.
 9. The default themes define `ai_blocks`, which apps' do and
    `ngfp/blockly`'s did not, and the `Theme` type requires it and
    `comment_blocks`. See `themes.md`, THM-6.
+10. `tritanopia-dark` is labelled "Tritanopia Dark Theme"; `ngfp/blockly`'s
+    inherited `default-dark`'s label, "Modern Dark Theme".
