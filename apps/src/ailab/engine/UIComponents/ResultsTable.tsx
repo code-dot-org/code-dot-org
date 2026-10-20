@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {
@@ -40,30 +40,46 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     isRegression(state, project)
   );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = dataColumnsFor(data, project, showAllColumns);
-  const cellValue = (value: string | number) =>
-    getLocalizedValue(value, datasetId);
-  const rawValueAt = (index: number, column: ResultsColumn) => {
-    if (column === PREDICTION_COLUMN) {
-      return results.predictedLabels[index];
-    }
-    if (column === labelColumn) {
-      return results.labels[index];
-    }
-    const feature = selectedFeatures.indexOf(column);
-    return feature === -1
-      ? data[results.rowIndices[index]][column]
-      : results.examples[index][feature];
-  };
-  const valueAt = (index: number, column: ResultsColumn) =>
-    cellValue(rawValueAt(index, column));
-  const view = useTableView<ResultsColumn>({
-    rows: [...results.examples.keys()],
-    columns: [...columns, PREDICTION_COLUMN],
-    columnTypes: {
+  const columns = useMemo(
+    () => dataColumnsFor(data, project, showAllColumns),
+    [data, project, showAllColumns]
+  );
+  const rows = useMemo(() => [...results.examples.keys()], [results]);
+  const viewColumns = useMemo<ResultsColumn[]>(
+    () => [...columns, PREDICTION_COLUMN],
+    [columns]
+  );
+  const columnTypes = useMemo(
+    () => ({
       ...columnsByDataType,
       [PREDICTION_COLUMN]: columnsByDataType[labelColumn],
+    }),
+    [columnsByDataType, labelColumn]
+  );
+  const rawValueAt = useCallback(
+    (index: number, column: ResultsColumn) => {
+      if (column === PREDICTION_COLUMN) {
+        return results.predictedLabels[index];
+      }
+      if (column === labelColumn) {
+        return results.labels[index];
+      }
+      const feature = selectedFeatures.indexOf(column);
+      return feature === -1
+        ? data[results.rowIndices[index]][column]
+        : results.examples[index][feature];
     },
+    [results, labelColumn, selectedFeatures, data]
+  );
+  const valueAt = useCallback(
+    (index: number, column: ResultsColumn) =>
+      getLocalizedValue(rawValueAt(index, column), datasetId),
+    [rawValueAt, datasetId]
+  );
+  const view = useTableView({
+    rows,
+    columns: viewColumns,
+    columnTypes,
     valueAt,
   });
 

@@ -94,4 +94,14 @@ describe('useTableView', () => {
     rerender({...showOnlyName, columns: ALL_COLUMNS});
     expect(result.current.rows).toEqual([0, 3, 2, 1]);
   });
+
+  test('reads each value once per sort, and not again on a rerender', () => {
+    const countedValueAt = jest.fn(valueAt);
+    const {result, rerender} = renderView({valueAt: countedValueAt});
+    act(() => result.current.toggleSort('name'));
+    expect(countedValueAt).toHaveBeenCalledTimes(ALL_ROWS.length);
+
+    rerender();
+    expect(countedValueAt).toHaveBeenCalledTimes(ALL_ROWS.length);
+  });
 });
