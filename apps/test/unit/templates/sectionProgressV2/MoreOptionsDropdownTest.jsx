@@ -2,6 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {UnconnectedMoreOptionsDropdown as MoreOptionsDropdown} from '@cdo/apps/templates/sectionProgressV2/MoreOptionsDropdown';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 describe('MoreOptionsDropdown', () => {
@@ -15,6 +16,14 @@ describe('MoreOptionsDropdown', () => {
   beforeEach(() => {
     expandMetadataForStudents = jest.fn();
     collapseMetadataForStudents = jest.fn();
+    // Reset Progress is behind an experiment; most tests here exercise it on.
+    jest
+      .spyOn(experiments, 'isEnabled')
+      .mockImplementation(key => key === experiments.RESET_PROGRESS);
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
   const renderComponent = () =>
@@ -60,6 +69,19 @@ describe('MoreOptionsDropdown', () => {
 
     expect(collapseMetadataForStudents).toHaveBeenCalledTimes(1);
     expect(collapseMetadataForStudents).toHaveBeenCalledWith([1, 2]);
+  });
+
+  it('hides the reset progress option when the experiment is off', () => {
+    experiments.isEnabled.mockReturnValue(false);
+    renderComponent();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: i18n.additionalOptions()})
+    );
+
+    expect(screen.getByText(i18n.expandAll())).toBeTruthy();
+    expect(screen.getByText(i18n.collapseAll())).toBeTruthy();
+    expect(screen.queryByText(i18n.resetProgress())).toBeNull();
   });
 
   it('opens the reset progress dialog when reset-progress is clicked', () => {

@@ -83,6 +83,11 @@ experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 // Render the Teacher Panel inside the TA drawer on level pages.
 experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
+// Offer teachers the Reset Progress option on the section progress page.
+experiments.RESET_PROGRESS = 'reset-progress';
+// Ask teachers to explain why they are resetting student progress. Temporary:
+// turn off once enough reasons have been collected.
+experiments.RESET_PROGRESS_REASON = 'reset-progress-reason';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

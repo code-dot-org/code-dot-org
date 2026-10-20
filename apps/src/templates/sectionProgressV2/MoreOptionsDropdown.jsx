@@ -8,9 +8,11 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSelectedCourseId,
+  getSelectedScriptFriendlyName,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import ResetProgressDialog from './ResetProgressDialog';
@@ -27,11 +29,16 @@ function MoreOptionsDropdown({
   collapseMetadataForStudents,
   sectionId,
   scriptId,
+  unitName,
   courseId,
   unitPosition,
 }) {
   const [showResetProgressDialog, setShowResetProgressDialog] =
     React.useState(false);
+  const offerResetProgress = React.useMemo(
+    () => experiments.isEnabled(experiments.RESET_PROGRESS),
+    []
+  );
   const studentIds = React.useMemo(
     () => students.map(student => student.id),
     [students]
@@ -82,18 +89,23 @@ function MoreOptionsDropdown({
             icon: {iconName: 'arrows-to-line', iconStyle: 'solid'},
             onClick: collapseAll,
           },
-          {
-            value: 'reset-progress',
-            label: i18n.resetProgress(),
-            icon: {iconName: 'rotate-left', iconStyle: 'solid'},
-            onClick: () => setShowResetProgressDialog(true),
-          },
+          ...(offerResetProgress
+            ? [
+                {
+                  value: 'reset-progress',
+                  label: i18n.resetProgress(),
+                  icon: {iconName: 'rotate-left', iconStyle: 'solid'},
+                  onClick: () => setShowResetProgressDialog(true),
+                },
+              ]
+            : []),
         ]}
       />
       {showResetProgressDialog && (
         <ResetProgressDialog
           students={students}
           unitId={scriptId}
+          unitName={unitName}
           sectionId={sectionId}
           courseId={courseId}
           unitPosition={unitPosition}
@@ -109,6 +121,7 @@ MoreOptionsDropdown.propTypes = {
   collapseMetadataForStudents: PropTypes.func,
   sectionId: PropTypes.number,
   scriptId: PropTypes.number,
+  unitName: PropTypes.string,
   courseId: PropTypes.number,
   unitPosition: PropTypes.number,
 };
@@ -120,6 +133,7 @@ export default connect(
     students: state.teacherSections.selectedStudents,
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
+    unitName: getSelectedScriptFriendlyName(state),
     courseId: getSelectedCourseId(state),
     unitPosition: getSelectedUnitPosition(state),
   }),
