@@ -69,6 +69,7 @@ const ColumnHeader = ({
                 <FontAwesomeV6Icon
                   iconName={SORT_ICONS[kind][nextDirection]}
                   iconStyle="solid"
+                  aria-hidden="true"
                 />
               )}
               {sortLabel}
@@ -87,6 +88,7 @@ const ColumnHeader = ({
                 sortDirection ? SORT_ICONS[kind][sortDirection] : 'sort'
               }
               iconStyle="solid"
+              aria-hidden="true"
             />
           </IconButton>
         </Tooltip>

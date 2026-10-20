@@ -74,6 +74,15 @@
   padding-right: 28px;
 }
 
+// Column sizing reads min-width: 100% as 0, so this caps the ask, not the fill.
+.headerWithControls .cellText {
+  display: block;
+  min-width: 100%;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .sortControl {
   position: absolute;
   top: 1px;
