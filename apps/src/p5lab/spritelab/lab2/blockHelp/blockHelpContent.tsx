@@ -1,6 +1,6 @@
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
-import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.gif';
-import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.gif';
+import animGoToExternalScene from '@cdo/static/spritelab_lab2/block-help/go-to-external-scene.png';
+import animPlayMusic from '@cdo/static/spritelab_lab2/block-help/play-music.png';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animSetASpriteProperty from '@cdo/static/spritelab_lab2/block-help/set-a-sprite-property.gif';
 import animSetGravity from '@cdo/static/spritelab_lab2/block-help/set-gravity.gif';
@@ -15,9 +15,10 @@ import {PLATFORM_GRAVITY} from '../platformPhysics';
 /**
  * What the new-block catalog says about a block: a `summary` sentence,
  * then the `body`, markdown, one more sentence at most, beside an
- * `animation` (a looping GIF of the block in action). Content lives here
- * rather than in the level so it can carry pictures and the lab's numbers;
- * a level-authored source can replace this table later.
+ * `animation` (a looping GIF of the block in action, or a still picture
+ * where one says enough). Content lives here rather than in the level so
+ * it can carry pictures and the lab's numbers; a level-authored source can
+ * replace this table later.
  */
 export interface BlockHelp {
   title: string;
@@ -58,7 +59,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
   },
   spritelab2_playMusic: {
     title: 'Play music',
-    animation: {src: animPlayMusic, alt: 'The play music block in action.'},
+    animation: {src: animPlayMusic, alt: 'Musical notes.'},
     summary:
       'Plays one of your Music Lab songs, repeating, while the game plays.',
     body: 'Put it under "when run" in the scene where the music should start.',
@@ -81,7 +82,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     title: 'Go to external scene',
     animation: {
       src: animGoToExternalScene,
-      alt: 'The go to external scene block in action.',
+      alt: 'An arrow from one scene to another.',
     },
     summary: 'Jumps into a scene from a classmate’s project.',
     body: 'Their scenes appear in the list once they have shared a project.',
