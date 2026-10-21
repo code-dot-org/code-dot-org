@@ -147,6 +147,7 @@ import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
 import ToolButtons from './components/ToolButtons';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
+import DiscoverBlocksButton from './DiscoverBlocksButton';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
@@ -2055,6 +2056,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onManageScenes: sceneEditing.openGallery,
   };
   // The resource panel's buttons, when they live in a bar.
+  const catalogOffered = catalog.length > 0 && isEditable;
+  const openBlockCatalog = () => setShowBlockCatalog(true);
+
   const toolButtons = resourcesInBar && (
     <ToolButtons
       levelId={levelProperties.id}
@@ -2205,7 +2209,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               (activeTab === 'Code' || activeTab === 'World') && (
                 <WorkspaceSceneBar
                   {...sceneControls}
-                  rightExtra={toolButtons}
+                  rightExtra={
+                    <>
+                      {activeTab === 'Code' && catalogOffered && (
+                        <DiscoverBlocksButton
+                          remaining={hiddenBlockTypes.size}
+                          className={moduleStyles.barButton}
+                          onClick={openBlockCatalog}
+                        />
+                      )}
+                      {toolButtons}
+                    </>
+                  }
                   style={clearOfPreview}
                 />
               )}
@@ -2257,12 +2272,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               {animationsSeeded && (
                 <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
               )}
-              {catalog.length > 0 && isEditable && (
+              {/* With a workspace bar the catalog opens from the bar's end. */}
+              {!barInWorkspace && catalogOffered && (
                 <AddBlocksButton
                   workspaceVersion={workspaceVersion}
                   getWorkspace={getMainWorkspace}
                   remaining={hiddenBlockTypes.size}
-                  onClick={() => setShowBlockCatalog(true)}
+                  onClick={openBlockCatalog}
                 />
               )}
             </div>

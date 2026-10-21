@@ -6,8 +6,12 @@ import * as BlocklyCore from 'blockly/core';
 import {useEffect, useMemo, useState} from 'react';
 
 import {installFlyoutDots} from '../blockly/flyoutDots';
+import {widenFlyoutMargin} from '../blockly/flyoutRoom';
 import {usedBlockTypes} from '../newBlocks';
 import {Scene} from '../types';
+
+// Room in the flyout's margin for the dots beside added blocks.
+const MARGIN_FACTOR = 2;
 
 export function useFlyoutDots({
   enabled,
@@ -33,6 +37,13 @@ export function useFlyoutDots({
         : new Set([...current, ...used])
     );
   }, [used]);
+
+  useEffect(() => {
+    if (!workspaceVersion || !enabled) {
+      return;
+    }
+    return widenFlyoutMargin(getWorkspace(), MARGIN_FACTOR);
+  }, [enabled, workspaceVersion, getWorkspace]);
 
   useEffect(() => {
     if (!workspaceVersion || !enabled || added.size === 0) {
