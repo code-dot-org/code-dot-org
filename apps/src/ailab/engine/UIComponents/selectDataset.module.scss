@@ -17,40 +17,11 @@
 .content {
   @include mixins.panel-content;
 
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-content: start;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
   gap: 8px;
   background-color: var(--background-neutral-secondary);
-}
-
-.item {
-  @include mixins.card;
-
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin: 0;
-  padding: 8px;
-  border-width: 2px;
-  text-align: start;
-  cursor: pointer;
-}
-
-.highlighted {
-  border-color: var(--border-brand-mid);
-}
-
-.selected {
-  border-color: var(--border-brand-primary);
-}
-
-.image {
-  display: block;
-  width: 100%;
-  // This assumes that all dataset images have a 1.5 aspect ratio, e.g. 720x480.
-  aspect-ratio: 1.5;
-  border-radius: var(--shape-sm);
 }
 
 .upload {

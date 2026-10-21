@@ -39,7 +39,6 @@ export interface RootState {
   data: DataRow[];
   metadata: Metadata;
   removedRowsCount: number;
-  highlightDataset: string | undefined;
   columnsByDataType: Record<string, string>;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
@@ -112,7 +111,6 @@ export const initialState: RootState = {
     card: {},
   },
   removedRowsCount: 0,
-  highlightDataset: undefined,
   columnsByDataType: {},
   featureNumberKey: {},
   trainingExamples: [],
@@ -375,9 +373,6 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightDataset(state, action: PayloadAction<string>) {
-      state.highlightDataset = action.payload;
-    },
     setTrainingModalStep(
       state,
       action: PayloadAction<TrainingModalStep | undefined>
@@ -448,7 +443,6 @@ export const {
   setCurrentColumn,
   setDatasetCardRow,
   setDatasetLayout,
-  setHighlightDataset,
   setTrainingModalStep,
   replayTraining,
   setSaveStatus,
