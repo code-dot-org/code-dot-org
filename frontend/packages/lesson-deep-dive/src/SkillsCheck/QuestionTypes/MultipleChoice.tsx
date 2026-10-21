@@ -1,8 +1,8 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
-import React, {FC, useState} from 'react';
+import {type Dispatch, type FC, type SetStateAction, useState} from 'react';
 
-import {PracticeProblemTypes} from '@cdo/generated-scripts/sharedConstants';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {PracticeProblemTypes} from '@code-dot-org/shared-constants';
 
 import {
   MatchSolution,
@@ -17,12 +17,10 @@ import styles from './question.module.scss';
 interface PracticeMultipleChoiceProps {
   problem: PracticeProblem;
   submitted: boolean;
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  studentAnswerCallback: React.Dispatch<
-    React.SetStateAction<
-      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
-    >
+  submitCallback: Dispatch<SetStateAction<boolean>>;
+  correctCallback: Dispatch<SetStateAction<boolean>>;
+  studentAnswerCallback: Dispatch<
+    SetStateAction<(MultiSolution | ScrambleSolution | MatchSolution)[] | null>
   >;
 }
 
@@ -37,7 +35,7 @@ const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
 
   const checkIsCorrect = () => {
     const correctOptions = new Set(
-      problem.solution.filter(s => s.correct).map(s => s.option)
+      problem.solution.filter(s => s.correct).map(s => s.option),
     );
     const selectedSet = new Set(selected);
     return (
@@ -53,7 +51,7 @@ const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
       setSelected(prev =>
         prev.includes(option)
           ? prev.filter(o => o !== option)
-          : [...prev, option]
+          : [...prev, option],
       );
     }
   };
@@ -65,7 +63,7 @@ const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
       problem.solution.map(s => ({
         option: s.option,
         correct: selected.includes(s.option),
-      }))
+      })),
     );
   };
 

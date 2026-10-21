@@ -1,8 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography} from '@mui/material';
-import React from 'react';
+import {type FC} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import styles from './practice-problems.module.scss';
 
@@ -13,7 +14,7 @@ interface SortableOptionProps {
   showAnswer: boolean;
 }
 
-export const SortableOptionCard: React.FC<SortableOptionProps> = ({
+export const SortableOptionCard: FC<SortableOptionProps> = ({
   option,
   id,
   correct,
