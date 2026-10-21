@@ -23,6 +23,7 @@ import {
 import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway} from '../types';
 
+import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
@@ -83,9 +84,8 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       </div>
     );
   }
-  const params = new URLSearchParams(window.location.search);
-  const urlCheckpointId = params.get('checkpoint') ?? undefined;
-  const urlStepId = params.get('step') ?? undefined;
+  const {checkpointId: urlCheckpointId, stepId: urlStepId} =
+    checkpointStepFromUrl();
 
   let initialCheckpointId: string | undefined;
   let initialStepId: string | undefined;
@@ -158,29 +158,15 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       : {kind: 'map'}
   );
 
-  const clearStepParams = useCallback(() => {
-    const p = new URLSearchParams(window.location.search);
-    p.delete('checkpoint');
-    p.delete('step');
-    const qs = p.toString();
-    window.history.replaceState(
-      null,
-      '',
-      qs ? `?${qs}` : window.location.pathname
-    );
-  }, []);
-
   // Handle browser back/forward at the checkpoint level.
   useEffect(() => {
     const handler = () => {
-      const p = new URLSearchParams(window.location.search);
-      const checkpointId = p.get('checkpoint');
+      const {checkpointId, stepId: urlStep} = checkpointStepFromUrl();
       if (!checkpointId) {
         setView({kind: 'map'});
       } else if (checkpointId === 'project') {
         setView({kind: 'project'});
       } else {
-        const urlStep = p.get('step') ?? undefined;
         const cp = pathway.checkpoints.find(c => c.id === checkpointId);
         const validUrlStep = cp?.steps.some(s => s.id === urlStep)
           ? urlStep
@@ -263,14 +249,14 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             onLeaveStep={leaveStep}
             onSaveAnswers={saveAnswers}
             onExit={() => {
-              clearStepParams();
+              clearUrl();
               setView({
                 kind: 'map',
                 focusId: isProject ? undefined : checkpoint.id,
               });
             }}
             onFinish={() => {
-              clearStepParams();
+              clearUrl();
               if (!isProject) finishCheckpoint(checkpoint);
               setView({kind: 'map'});
             }}

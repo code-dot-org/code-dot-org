@@ -7,6 +7,7 @@ import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
+import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
 import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
@@ -70,26 +71,13 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   }, []);
 
   useEffect(() => {
-    const current = new URLSearchParams(window.location.search);
-    if (
-      current.get('checkpoint') === checkpoint.id &&
-      current.get('step') === step.id
-    ) {
-      // URL is already correct (popstate navigation or initial URL load).
-      // Don't add a duplicate history entry.
-      return;
-    }
-    const p = new URLSearchParams(window.location.search);
-    p.set('checkpoint', checkpoint.id);
-    p.set('step', step.id);
-    window.history.pushState(null, '', `?${p.toString()}`);
+    updateUrl(checkpoint.id, step.id);
   }, [checkpoint.id, step.id]);
 
   useEffect(() => {
     const handler = () => {
-      const p = new URLSearchParams(window.location.search);
-      const stepId = p.get('step');
-      if (p.get('checkpoint') !== checkpoint.id || !stepId) return;
+      const {checkpointId, stepId} = checkpointStepFromUrl();
+      if (checkpointId !== checkpoint.id || !stepId) return;
       const i = steps.findIndex(s => s.id === stepId);
       if (i >= 0) setIndex(i);
     };

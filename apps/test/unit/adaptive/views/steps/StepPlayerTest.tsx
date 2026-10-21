@@ -168,6 +168,20 @@ describe('StepPlayer', () => {
       );
     });
 
+    it('ignores popstate events for a different checkpoint', () => {
+      renderPlayer();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+
+      pushState.mockClear();
+      window.history.replaceState({}, '', '?checkpoint=other&step=one');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      // Step unchanged — the event was for a different checkpoint.
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(pushState).not.toHaveBeenCalled();
+    });
+
     it('navigates to the previous step when the browser fires popstate', () => {
       renderPlayer();
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));

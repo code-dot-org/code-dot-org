@@ -140,10 +140,10 @@ describe('PathwayApp', () => {
     });
   };
 
-  it('auto-starts the first checkpoint when there is no progress', async () => {
+  it('auto-starts the first checkpoint at the first step when there is no progress', async () => {
     await renderSettled();
 
-    expect(screen.getByText(/playing Intro/)).toBeTruthy();
+    expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
@@ -212,6 +212,28 @@ describe('PathwayApp', () => {
 
       await renderSettled();
 
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
+
+    it('falls back to stepIdToResume when the URL step does not belong to the checkpoint', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=bogus-step');
+
+      await renderSettled();
+
+      // 'bogus-step' is not in intro's steps → stepIdToResume → first incomplete step.
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
+
+    it('falls back to stepIdToResume when a popstate URL step does not belong to the checkpoint', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      window.history.replaceState({}, '', '?checkpoint=intro&step=bogus-step');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      // 'bogus-step' not in intro → stepIdToResume → 'intro-step' (started, not complete).
       expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
     });
 
