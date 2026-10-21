@@ -26,6 +26,32 @@ class PracticeProblemTest < ActiveSupport::TestCase
     assert_includes dup.errors[:key], 'has already been taken'
   end
 
+  test 'accepts an answerable solution of each type' do
+    [
+      ['multiple_choice_single_select', [{option: 'a', correct: true}, {option: 'b', correct: false}]],
+      ['multiple_choice_multi_select', [{option: 'a', correct: true}, {option: 'b', correct: true}]],
+      ['match', [{option: 'a', correct: 'x'}, {option: 'b', correct: 'y'}]],
+      ['sort', [{option: 'a', correct: 'x'}, {option: 'b', correct: 'x'}]],
+      ['scramble', [{option: 'a', correct: 1}, {option: 'b', correct: 0}]],
+    ].each do |type, solution|
+      problem = build(:practice_problem, problem_type: type, solution: solution)
+      assert problem.valid?, "#{type}: #{problem.errors.full_messages.join(', ')}"
+    end
+  end
+
+  test 'rejects an unanswerable solution of each type' do
+    [
+      ['multiple_choice_single_select', [{option: 'a', correct: true}]],
+      ['multiple_choice_single_select', [{option: 'a', correct: true}, {option: 'b', correct: true}]],
+      ['multiple_choice_multi_select', [{option: 'a', correct: false}, {option: 'b', correct: false}]],
+      ['match', [{option: 'a', correct: 'x'}, {option: '', correct: 'y'}]],
+      ['sort', [{option: 'a', correct: 'x'}, {option: 'b', correct: nil}]],
+      ['scramble', [{option: 'a', correct: 0}, {option: 'b', correct: 0}]],
+    ].each do |type, solution|
+      refute build(:practice_problem, problem_type: type, solution: solution).valid?, "#{type}: #{solution}"
+    end
+  end
+
   test 'summarize_for_lesson_edit scopes objectiveIds to the given lesson' do
     lesson = create(:lesson)
     other_lesson = create(:lesson)
@@ -48,7 +74,7 @@ class PracticeProblemTest < ActiveSupport::TestCase
         key: 'write-test',
         problem_type: 'multiple_choice_single_select',
         problem_text: 'Q?',
-        solution: [{'option' => 'a', 'correct' => true}]
+        solution: [{'option' => 'a', 'correct' => true}, {'option' => 'b', 'correct' => false}]
       )
       problem.objectives << @objective1
 
@@ -61,7 +87,7 @@ class PracticeProblemTest < ActiveSupport::TestCase
       assert_equal 'write-test', written['key']
       assert_equal 'multiple_choice_single_select', written['problem_type']
       assert_equal 'Q?', written['problem_text']
-      assert_equal [{'option' => 'a', 'correct' => true}], written['solution']
+      assert_equal [{'option' => 'a', 'correct' => true}, {'option' => 'b', 'correct' => false}], written['solution']
       assert_equal [@objective1.key], written['objective_keys']
     end
   end
@@ -136,4 +162,5 @@ class PracticeProblemTest < ActiveSupport::TestCase
       assert PracticeProblem.exists?(key: 'test-practice-problem'), 'valid file should still be seeded after bad file'
     end
   end
+
 end

@@ -19,6 +19,10 @@ class PracticeProblem < ApplicationRecord
   has_and_belongs_to_many :objectives, join_table: :objectives_practice_problems
   validates :key, presence: true, uniqueness: true
   validates :problem_type, inclusion: {in: SharedConstants::PRACTICE_PROBLEM_TYPES.values}
+  validates :problem_text, presence: true
+  validate :solution_is_answerable
+
+  TYPES = SharedConstants::PRACTICE_PROBLEM_TYPES
 
   def summarize
     {
@@ -92,5 +96,31 @@ class PracticeProblem < ApplicationRecord
     problem.objectives = Objective.where(key: objective_keys)
 
     problem.key
+  end
+
+  # The student UI cannot complete a problem that fails these rules.
+  private def solution_is_answerable
+    entries = solution
+    unless entries.is_a?(Array) && entries.size >= 2 && entries.all?(Hash)
+      return errors.add(:solution, 'must have at least two options')
+    end
+    entries = entries.map(&:stringify_keys)
+    errors.add(:solution, 'options must not be blank') if entries.any? {|e| e['option'].to_s.blank?}
+
+    correct = entries.map {|e| e['correct']}
+    case problem_type
+    when TYPES[:MULTIPLE_CHOICE_SINGLE]
+      errors.add(:solution, 'must have exactly one correct option') unless correct.count(true) == 1
+    when TYPES[:MULTIPLE_CHOICE_MULTI]
+      errors.add(:solution, 'must have at least one correct option') unless correct.include?(true)
+    when TYPES[:MATCH]
+      errors.add(:solution, 'every option needs a match') if correct.any? {|c| c.to_s.blank?}
+    when TYPES[:SORT]
+      errors.add(:solution, 'every option needs a category') if correct.any? {|c| c.to_s.blank?}
+    when TYPES[:SCRAMBLE]
+      unless correct.all?(Integer) && correct.sort == (0...correct.size).to_a
+        errors.add(:solution, 'scramble positions must be 0 through n-1, each used once')
+      end
+    end
   end
 end

@@ -285,21 +285,26 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
   };
 
   const current = candidates[reviewIndex];
+  const dialogOpen =
+    addingManually || (reviewing && !!current) || !!editingProblem;
+
+  // Rendered inside the open dialog, since the modal covers the panel.
+  const errorBanner = error && (
+    <Typography
+      variant="body3"
+      component="p"
+      className={moduleStyles.error}
+      role="alert"
+    >
+      {error}
+    </Typography>
+  );
 
   return (
     <div>
       <h3>Practice Problems</h3>
 
-      {error && (
-        <Typography
-          variant="body3"
-          component="p"
-          className={moduleStyles.error}
-          role="alert"
-        >
-          {error}
-        </Typography>
-      )}
+      {!dialogOpen && errorBanner}
 
       <table className={moduleStyles.table}>
         <thead>
@@ -426,6 +431,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
               >
                 New {problemTypeLabel(manualType)}
               </Typography>
+              {errorBanner}
               <PracticeProblemEditor
                 key={manualType}
                 problem={blankProblem(manualType)}
@@ -446,6 +452,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
               Review generated problem {reviewIndex + 1} of {candidates.length}
             </Typography>
           </div>
+          {errorBanner}
 
           {editingCandidate ? (
             <PracticeProblemEditor
@@ -526,6 +533,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
           >
             Edit Practice Problem
           </Typography>
+          {errorBanner}
           <PracticeProblemEditor
             problem={editingProblem}
             objectives={objectives}

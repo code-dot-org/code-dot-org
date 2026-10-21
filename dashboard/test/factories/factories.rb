@@ -1460,7 +1460,7 @@ FactoryBot.define do
     active {false}
     problem_text {'fake problem text'}
     problem_type {'multiple_choice_single_select'}
-    solution {{}}
+    solution {[{option: 'a', correct: true}, {option: 'b', correct: false}]}
   end
 
   factory :user_practice_problem_attempt do

@@ -155,7 +155,7 @@ class PracticeProblemsControllerTest < ActionController::TestCase
     lesson = create(:lesson)
     objective = create(:objective, lesson: lesson)
 
-    post :create, params: {
+    post :create, as: :json, params: {
       key: '../../evil',
       problem_type: 'multiple_choice_single_select',
       problem_text: 'Which is a loop?',
