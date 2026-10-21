@@ -1,75 +1,20 @@
-// Places checkpoints on the map. The tree puts roots on top, a checkpoint's
-// row being the length of the longest `requires` chain beneath it, so every
-// edge points downward. The destinations grid puts the root at the center
-// and the checkpoints with a `destination` in stacks around the outside.
+// The destinations grid: the root at the center and the checkpoints with a
+// `destination` in stacks around the outside.
 
-import {Checkpoint} from '../types';
+import {Checkpoint} from '../../../types';
 
-export const NODE_RADIUS = 34;
-export const BOARD_WIDTH = 760;
+import {depthRows, edgesOf} from './graph';
+import {DestinationGroup, MapLayout, NodePosition} from './types';
+
 const TAU = 2 * Math.PI;
-const ROW_HEIGHT = 170;
-const TOP_MARGIN = 96;
-const BOTTOM_MARGIN = 60;
-// A destinations grid cell holds a circle with two lines of title below it.
+// A cell holds a circle with two lines of title below it.
 const CELL_WIDTH = 120;
 const CELL_HEIGHT = 110;
 // Around the grid: above for the group boxes and their titles, below for a
 // title under the last row, beside for a member's title next to it.
-const GRID_TOP_MARGIN = TOP_MARGIN + 40;
-const GRID_BOTTOM_MARGIN = BOTTOM_MARGIN + 24;
-const GRID_SIDE_MARGIN = 180;
-
-export interface NodePosition {
-  id: string;
-  x: number;
-  y: number;
-  row: number;
-}
-
-export interface Edge {
-  from: string;
-  to: string;
-}
-
-/** The checkpoints that share a `destination`, in authored order. */
-export interface DestinationGroup {
-  title: string;
-  ids: string[];
-}
-
-export interface MapLayout {
-  nodes: {[id: string]: NodePosition};
-  edges: Edge[];
-  width: number;
-  height: number;
-  /** Distance between neighbouring cells of a destinations grid. */
-  cell?: {width: number; height: number};
-  /** The destination groups of a destinations grid, in authored order. */
-  destinations?: DestinationGroup[];
-}
-
-/** Checkpoints in rows by depth, roots on top. */
-export function layoutCheckpoints(checkpoints: Checkpoint[]): MapLayout {
-  const rows = depthRows(checkpoints);
-  const nodes: {[id: string]: NodePosition} = {};
-  rows.forEach((ids, row) => {
-    ids.forEach((id, i) => {
-      nodes[id] = {
-        id,
-        row,
-        x: Math.round((BOARD_WIDTH * (i + 1)) / (ids.length + 1)),
-        y: TOP_MARGIN + row * ROW_HEIGHT,
-      };
-    });
-  });
-  return {
-    nodes,
-    edges: edgesOf(checkpoints),
-    width: BOARD_WIDTH,
-    height: TOP_MARGIN + (rows.length - 1) * ROW_HEIGHT + BOTTOM_MARGIN,
-  };
-}
+const TOP_MARGIN = 136;
+const BOTTOM_MARGIN = 84;
+const SIDE_MARGIN = 180;
 
 type Cell = {col: number; row: number};
 const cellKey = (c: Cell) => `${c.col},${c.row}`;
@@ -180,16 +125,15 @@ export function layoutDestinations(
     nodes[c.id] = {
       id: c.id,
       row: row - minRow,
-      x: GRID_SIDE_MARGIN + CELL_WIDTH * (col - minCol),
-      y: GRID_TOP_MARGIN + CELL_HEIGHT * (row - minRow),
+      x: SIDE_MARGIN + CELL_WIDTH * (col - minCol),
+      y: TOP_MARGIN + CELL_HEIGHT * (row - minRow),
     };
   });
   return {
     nodes,
     edges: edgesOf(checkpoints),
-    width: 2 * GRID_SIDE_MARGIN + CELL_WIDTH * (maxCol - minCol),
-    height:
-      GRID_TOP_MARGIN + CELL_HEIGHT * (maxRow - minRow) + GRID_BOTTOM_MARGIN,
+    width: 2 * SIDE_MARGIN + CELL_WIDTH * (maxCol - minCol),
+    height: TOP_MARGIN + CELL_HEIGHT * (maxRow - minRow) + BOTTOM_MARGIN,
     cell: {width: CELL_WIDTH, height: CELL_HEIGHT},
     destinations: groups,
   };
@@ -240,46 +184,4 @@ function destinationGroups(checkpoints: Checkpoint[]): DestinationGroup[] {
     else groups.push({title: c.destination, ids: [c.id]});
   }
   return groups;
-}
-
-/** One edge per known `requires`, parent to child. */
-function edgesOf(checkpoints: Checkpoint[]): Edge[] {
-  const ids = new Set(checkpoints.map(c => c.id));
-  const edges: Edge[] = [];
-  for (const c of checkpoints) {
-    for (const r of c.requires || []) {
-      if (ids.has(r)) edges.push({from: r, to: c.id});
-    }
-  }
-  return edges;
-}
-
-/**
- * Checkpoint ids grouped by depth: the length of the longest `requires`
- * chain beneath each. Unknown requires are ignored and a cycle is cut.
- */
-function depthRows(checkpoints: Checkpoint[]): string[][] {
-  const byId = new Map(checkpoints.map(c => [c.id, c]));
-  const rowOf = new Map<string, number>();
-
-  const rowFor = (id: string, path: Set<string>): number => {
-    const known = rowOf.get(id);
-    if (known !== undefined) return known;
-    const requires = (byId.get(id)?.requires || []).filter(
-      r => byId.has(r) && !path.has(r)
-    );
-    const row = requires.length
-      ? 1 + Math.max(...requires.map(r => rowFor(r, new Set(path).add(id))))
-      : 0;
-    rowOf.set(id, row);
-    return row;
-  };
-  checkpoints.forEach(c => rowFor(c.id, new Set([c.id])));
-
-  const rows: string[][] = [];
-  for (const c of checkpoints) {
-    const row = rowOf.get(c.id) || 0;
-    (rows[row] ||= []).push(c.id);
-  }
-  return rows;
 }

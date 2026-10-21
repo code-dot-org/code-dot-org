@@ -1,4 +1,4 @@
-import {Pathway} from '../types';
+import {Pathway} from '../../types';
 
 export const MAP_LAYOUTS = ['tree', 'destinations'] as const;
 export type MapLayoutMode = (typeof MAP_LAYOUTS)[number];

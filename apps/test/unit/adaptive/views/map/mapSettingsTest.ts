@@ -1,5 +1,5 @@
 import {Pathway} from '@cdo/apps/adaptive/types';
-import {resolveMapSettings} from '@cdo/apps/adaptive/views/mapSettings';
+import {resolveMapSettings} from '@cdo/apps/adaptive/views/map/mapSettings';
 
 const pathway = (map?: Pathway['map']) => ({map} as Pathway);
 

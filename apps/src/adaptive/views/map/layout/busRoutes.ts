@@ -2,7 +2,7 @@
 // to a row and then along that row, so the map reads as roads out of each
 // checkpoint, and lines that share a stretch of road are drawn once.
 
-import {Edge, MapLayout, NodePosition} from './layout';
+import {Edge, MapLayout, NodePosition} from './types';
 
 /** One line to draw, and the edges it carries. */
 export interface DrawnEdge {

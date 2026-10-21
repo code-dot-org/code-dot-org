@@ -1,5 +1,5 @@
-import {busRoutes} from '@cdo/apps/adaptive/views/busRoutes';
-import {Edge, MapLayout} from '@cdo/apps/adaptive/views/layout';
+import {busRoutes} from '@cdo/apps/adaptive/views/map/layout/busRoutes';
+import {Edge, MapLayout} from '@cdo/apps/adaptive/views/map/layout/types';
 
 // Cells 100 apart, cell (0, 0) at (500, 500).
 const grid = (
