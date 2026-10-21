@@ -14,6 +14,9 @@ import I18n from '../i18n';
 import {useProject} from '../ProjectContext';
 import {setCurrentPanel} from '../redux';
 
+import EmptyState from './EmptyState';
+import SampleRow from './SampleRow';
+
 import styles from './dataCard.module.scss';
 
 interface CardRowProps {
@@ -36,22 +39,6 @@ const CardRow = ({heading, children, isStat = false}: CardRowProps) => (
   </div>
 );
 
-const EmptyState = () => (
-  <div className={styles.empty}>
-    <span className={styles.emptyIcon}>
-      <FontAwesomeV6Icon iconName="table" iconStyle="solid" />
-    </span>
-    <div className={styles.emptyText}>
-      <Typography component="p" variant="body2" className={styles.strong}>
-        No dataset selected
-      </Typography>
-      <Typography component="p" variant="body4" className={styles.emptyMessage}>
-        Select a dataset to see its details here.
-      </Typography>
-    </div>
-  </div>
-);
-
 const DATA_LENGTH_LIMIT = 20000;
 
 const DataCard = () => {
@@ -66,7 +53,6 @@ const DataCard = () => {
   const metadata = useAppSelector(state => state.metadata);
   const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
   const dataLength = useAppSelector(state => state.data.length);
-  const sampleRow = useAppSelector(state => state.data[0]);
   const removedRowsCount = useAppSelector(state => state.removedRowsCount);
 
   const card =
@@ -94,7 +80,13 @@ const DataCard = () => {
       </div>
       <div className={styles.content}>
         {dataLength === 0 ? (
-          !hasSelection && <EmptyState />
+          !hasSelection && (
+            <EmptyState
+              iconName="table"
+              title="No dataset selected"
+              message="Select a dataset to see its details here."
+            />
+          )
         ) : (
           <>
             <div className={styles.card}>
@@ -137,36 +129,7 @@ const DataCard = () => {
                 </div>
               )}
             </div>
-            {datasetDetails.isUserUploaded && (
-              <div className={styles.card}>
-                <Typography
-                  component="h5"
-                  variant="label3"
-                  className={classNames(styles.section, styles.heading)}
-                >
-                  Sample row
-                </Typography>
-                <dl className={styles.sampleRow}>
-                  {Object.entries(sampleRow).map(([column, value]) => (
-                    <div key={column} className={styles.sampleCell}>
-                      <Typography component="dt" variant="body3">
-                        {column}
-                      </Typography>
-                      <Typography
-                        component="dd"
-                        variant="body3"
-                        className={classNames(
-                          styles.strong,
-                          styles.sampleValue
-                        )}
-                      >
-                        {value}
-                      </Typography>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            )}
+            {datasetDetails.isUserUploaded && <SampleRow />}
           </>
         )}
       </div>
