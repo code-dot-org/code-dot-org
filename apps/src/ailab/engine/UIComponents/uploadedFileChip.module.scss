@@ -55,3 +55,10 @@
   flex-shrink: 0;
   font-size: 14px;
 }
+
+@media (forced-colors: active) {
+  .chip:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+}
