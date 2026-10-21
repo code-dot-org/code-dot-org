@@ -847,6 +847,10 @@ FactoryBot.define do
       login_type {'email'}
       grades {['pl']}
     end
+
+    trait :picture_password do
+      login_type {Section::LOGIN_TYPE_PICTURE}
+    end
   end
 
   factory :section_instructor do
