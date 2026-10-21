@@ -5,7 +5,7 @@ import {
   Progress,
   checkpointStatus,
   getStatusMap,
-  resumeStepId,
+  stepIdToResume,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
@@ -101,7 +101,7 @@ describe('checkpointStatus', () => {
   });
 });
 
-describe('resumeStepId', () => {
+describe('stepIdToResume', () => {
   const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
   const multi = checkpoint('multi', undefined, [
     panels('one'),
@@ -109,7 +109,7 @@ describe('resumeStepId', () => {
     level,
   ]);
 
-  const resume = (steps: Progress['steps']) => resumeStepId(multi, {steps});
+  const resume = (steps: Progress['steps']) => stepIdToResume(multi, {steps});
 
   it('returns the first step when none are complete', () => {
     expect(resume({})).toBe('one');

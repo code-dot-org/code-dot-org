@@ -70,7 +70,7 @@ export const EMPTY_PROGRESS: Progress = {steps: {}};
  * The step id to resume in a checkpoint: the first step that is not yet
  * complete. Returns undefined when all steps are complete.
  */
-export function resumeStepId(
+export function stepIdToResume(
   checkpoint: Checkpoint,
   progress: Progress
 ): string | undefined {

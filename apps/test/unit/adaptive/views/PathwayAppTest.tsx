@@ -203,7 +203,7 @@ describe('PathwayApp', () => {
 
       await renderSettled();
 
-      // No step in URL → resumeStepId picks the first incomplete step.
+      // No step in URL → stepIdToResume picks the first incomplete step.
       expect(screen.getByText('playing Next at next-step')).toBeTruthy();
     });
 

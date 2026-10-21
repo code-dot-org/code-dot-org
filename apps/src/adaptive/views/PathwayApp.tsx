@@ -17,7 +17,7 @@ import {isAdaptiveAiEnabled} from '../ai/generate';
 import {
   PROJECT_STEP_ID,
   Progress,
-  resumeStepId,
+  stepIdToResume,
   useProgress,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
@@ -153,7 +153,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       const urlStep = p.get('step');
       if (checkpointId === urlCheckpoint && urlStep) return urlStep;
       const cp = pathway.checkpoints.find(c => c.id === checkpointId);
-      return cp ? resumeStepId(cp, progress) : undefined;
+      return cp ? stepIdToResume(cp, progress) : undefined;
     },
     [pathway.checkpoints, progress]
   );
