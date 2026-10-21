@@ -1,5 +1,9 @@
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {getMergedAiTutorCodeWithSource} from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
+import {
+  formatAcceptRejectResponse,
+  getAiTutorResponseJsonSchema,
+  getMergedAiTutorCodeWithSource,
+} from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 // Helper to create a MultiFileSource.
 const createSource = (
@@ -404,5 +408,44 @@ describe('getMergedAiTutorCodeWithSource', () => {
       expect(result.files['2'].name).toBe('style.css');
       expect(result.files['3'].name).toBe('script.js');
     });
+  });
+});
+
+describe('getAiTutorResponseJsonSchema', () => {
+  const answerSchema = (
+    schema: ReturnType<typeof getAiTutorResponseJsonSchema>
+  ) =>
+    schema.properties.answer as ReturnType<typeof getAiTutorResponseJsonSchema>;
+
+  it('limits the answerType enum to the given answer types', () => {
+    const answer = answerSchema(
+      getAiTutorResponseJsonSchema(['buildPage', 'refusal'])
+    );
+    expect(answer.properties.answerType).toMatchObject({
+      enum: ['buildPage', 'refusal'],
+    });
+  });
+
+  it('includes and requires code by default', () => {
+    const answer = answerSchema(getAiTutorResponseJsonSchema(['buildHTML']));
+    expect(answer.properties.code).toBeDefined();
+    expect(answer.required).toContain('code');
+  });
+
+  it('drops code entirely when code is not allowed', () => {
+    const answer = answerSchema(
+      getAiTutorResponseJsonSchema(['ask'], {allowCode: false})
+    );
+    expect(answer.properties.code).toBeUndefined();
+    expect(answer.required).not.toContain('code');
+    expect(answer.propertyOrdering).not.toContain('code');
+  });
+});
+
+describe('formatAcceptRejectResponse', () => {
+  it('treats a missing code field as no files', () => {
+    expect(
+      formatAcceptRejectResponse({answerType: 'ask', explanation: 'Hi'}).code
+    ).toEqual([]);
   });
 });

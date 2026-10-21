@@ -334,6 +334,8 @@ export interface LevelProperties {
    * with, and don't show the separate Instructions tab.
    */
   showInstructionsInAiTutor?: boolean;
+  /** Splits the AI Tutor's send button into Build and Ask; set by adaptive steps. */
+  aiTutorBuildAndAsk?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;

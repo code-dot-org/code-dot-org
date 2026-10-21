@@ -125,7 +125,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     aichatContext: aiContext,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
-  // adaptive-specific overrides: step-specific instructions, always hide share
+  // adaptive-specific overrides: Build/Ask tutor buttons, step-specific
+  // instructions, always hide share
   // and remix, and pathway-specific tutor context that gets appendd to the level
   // system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
@@ -143,6 +144,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       // Default to pinning, but let the level override if needed.
       showInstructionsInAiTutor: true,
       ...levelProperties,
+      aiTutorBuildAndAsk: true,
       hideShareAndRemix: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
