@@ -32,4 +32,29 @@ class UserAdaptiveStep < ApplicationRecord
   belongs_to :user_level
 
   validates :step_id, presence: true
+
+  def record_progress!(started: false, completed: false, seconds: nil, answers: nil)
+    with_lock do
+      merged = progress || {}
+      now = Time.zone.now.utc.iso8601
+      merged['startedAt'] ||= now if started
+      merged['completedAt'] ||= now if completed
+      merged['timeSpent'] = (merged['timeSpent'] || 0) + seconds if seconds&.positive?
+      if answers
+        merged['answers'] = (merged['answers'] || {}).merge(answers)
+        merged['submitted'] = true
+      end
+      # Any progress at all makes the step started, so a no-op save leaves it nil.
+      self.progress = merged if merged.any?
+      save!
+    end
+  end
+
+  def progress_json
+    return {} unless progress
+    {
+      'status' => progress['completedAt'] ? 'complete' : 'started',
+      'timeSpent' => progress['timeSpent'] || 0,
+    }.merge(progress.slice('startedAt', 'completedAt', 'submitted', 'answers'))
+  end
 end

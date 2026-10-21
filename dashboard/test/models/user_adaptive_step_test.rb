@@ -24,4 +24,13 @@ class UserAdaptiveStepTest < ActiveSupport::TestCase
     assert_equal [intro, quiz].to_set, @user_level.user_adaptive_steps.to_set
     assert_equal '2026-10-08T17:00:00Z', intro.reload.progress['startedAt']
   end
+
+  test "soft-deleting the user level deletes its steps" do
+    UserAdaptiveStep.create!(user_level: @user_level, step_id: 'intro')
+
+    @user_level.destroy
+
+    assert UserLevel.with_deleted.find(@user_level.id).deleted?
+    assert_empty UserAdaptiveStep.where(user_level_id: @user_level.id)
+  end
 end

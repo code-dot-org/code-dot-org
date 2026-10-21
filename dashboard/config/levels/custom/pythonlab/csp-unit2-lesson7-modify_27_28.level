@@ -1,0 +1,388 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-20T21:11:21.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "# Modify\r\n\r\nMuralists don’t repaint a spot that’s already painted — it wastes supplies. Extend the program with two new checks a real muralist would use before continuing their work.\r\n\r\n1. Create a variable called `ready_to_paint`, combining `is_on_paint()` and `has_paint()` with `and`. You’ll need to use `not` for one of them, so that it’s `True` only when the Painter has paint to use and the current square has no paint yet.\r\n2. Print `ready_to_paint` and check the console output.\r\n3. Create a variable called `needs_supplies`, combining `is_on_bucket()` and `has_paint()` with `or`. You’ll need to use `not` for one of them, so that it’s `True` if the Painter is standing on a bucket, or `True` if the Painter has run out of paint.\r\n4. Print `needs_supplies` and check the console output.\r\n5. Turn your painter around and move back to the bucket. Take more paint, then move one more square. Create `ready_to_paint` and `needs_supplies` again, using the same lines you wrote in steps 1 and 3, and print both.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\nprint(\"can_move():\", can_move())\nprint(\"has_paint():\", has_paint())\nmove()\ntake_paint()\nmove()\npaint(\"white\")\n\nready = can_move() and has_paint()\nprint(\"ready:\", ready)\n\non_something = is_on_bucket() or is_on_paint()\nprint(\"on_something:\", on_something)\nprint(\"not is_on_paint():\", not is_on_paint())\n\n# create ready_to_paint and print it\n\n# create needs_supplies and print it\n\n# turn around, move back to the bucket, take more paint, move one more square,\n\n# create ready_to_paint and needs_supplies again and print both",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 5,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "mini_app_variant": "object_oriented",
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-20T21:11:21.327+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson7-investigate_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson7-investigate_27_28\"},{\"changed_at\":\"2026-10-20 21:19:42 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"serialized_maze\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 21:21:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 21:23:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 21:23:23 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 00:54:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 00:56:47 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 01:06:27 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

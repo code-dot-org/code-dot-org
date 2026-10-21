@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q9-2026'
+
+right '(2, 3)'
+wrong '(5, 7)'
+wrong '(6, 1)'
+wrong '(0, 7)'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A new example has the features (4, 4). Using Manhattan distance, which of these stored examples is its nearest neighbor?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Nearest-Neighbor Classification
+MARKDOWN

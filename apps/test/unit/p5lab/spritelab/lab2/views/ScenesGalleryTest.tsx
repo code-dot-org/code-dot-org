@@ -38,6 +38,21 @@ describe('ScenesGallery', () => {
     expect(screen.getAllByRole('button', {name: 'Start here'})).toHaveLength(1);
   });
 
+  it('draws an arrow for each link between cards, and plays the game', () => {
+    const onPlayGame = jest.fn();
+    renderGallery({
+      links: [
+        {from: 'a', to: 'b'},
+        {from: 'b', to: 'a'},
+        {from: 'a', to: 'gone'},
+      ],
+      onPlayGame,
+    });
+    expect(document.querySelectorAll('svg path[marker-end]')).toHaveLength(2);
+    fireEvent.click(screen.getByRole('button', {name: 'Play game'}));
+    expect(onPlayGame).toHaveBeenCalled();
+  });
+
   it('opens a scene from its tile', () => {
     const {onOpenScene} = renderGallery();
     fireEvent.click(screen.getByRole('button', {name: 'Open Cave'}));

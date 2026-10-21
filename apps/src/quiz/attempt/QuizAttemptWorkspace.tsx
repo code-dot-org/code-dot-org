@@ -1,5 +1,5 @@
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
   sendStartedReportIfNotStarted,
@@ -22,10 +22,20 @@ import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
-import {QuizAttemptData, QuizQuestionResult} from './types';
+import {
+  isFreeResponseResponse,
+  isMultipleChoiceResponse,
+  QuizAttemptData,
+  QuizQuestionResponse,
+  QuizQuestionResponseData,
+  QuizQuestionResult,
+} from './types';
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
+
+// How long typing must pause before a free response answer autosaves.
+export const ANSWER_AUTOSAVE_DELAY_MS = 1000;
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
@@ -88,12 +98,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     (a, b) => a - b
   );
   const totalPages = pageNumbers.length || 1;
-  // TODO: Add support for other question types.
-  const mcQuestions = quizQuestions.filter(
-    question => question.type === 'MultipleChoiceQuestion'
-  );
   let resultQuestionNumber = 0;
-  const resultPages = groupByPage(mcQuestions).map(({page, questions}) => {
+  const resultPages = groupByPage(quizQuestions).map(({page, questions}) => {
     const firstQuestionNumber = resultQuestionNumber + 1;
     resultQuestionNumber += questions.length;
     return {
@@ -104,17 +110,34 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     };
   });
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
-    useState<Record<number, string>>({});
+  // The student's answer to each question, as on screen.
+  const [responsesByQuestionId, setResponsesByQuestionId] = useState<
+    Record<number, QuizQuestionResponse>
+  >({});
   // Retake goes back through the intro screen rather than starting a new
   // attempt immediately.
   const [isRetakeIntroOpen, setIsRetakeIntroOpen] = useState(false);
+  // Answers are locked from the Submit click until it settles, so what was
+  // on screen at the click is what gets sent.
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  // State lags a render behind, so a fast second click checks this instead.
+  const isSubmittingRef = useRef(false);
   // One chained promise per question, so a rapid second pick waits for the
   // first write to settle instead of racing it, and finishAttempt can wait
   // for all of them before the server locks the attempt.
   const pendingWritesByQuestionIdRef = useRef<Record<number, Promise<unknown>>>(
     {}
   );
+  const answerAutosaveTimersRef = useRef<
+    Record<number, ReturnType<typeof setTimeout>>
+  >({});
+  // Answer text not yet confirmed saved, kept apart from the timers so a
+  // failed save is retried on blur.
+  const unsavedAnswerTextsRef = useRef<Record<number, string>>({});
+  const cancelAnswerAutosaves = useCallback(() => {
+    Object.values(answerAutosaveTimersRef.current).forEach(clearTimeout);
+    answerAutosaveTimersRef.current = {};
+  }, []);
   // The finish-time success report, so Next level can wait for it.
   const pendingReportRef = useRef<Promise<unknown>>(Promise.resolve());
 
@@ -131,21 +154,19 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   }, [levelId]);
 
   useEffect(() => {
-    const selectedChoices: Record<number, string> = {};
+    const responses: Record<number, QuizQuestionResponse> = {};
     for (const result of attempt?.questionResultsInProgress ?? []) {
-      if (
-        result.questionType === 'MultipleChoiceQuestion' &&
-        result.responseData.selectedChoiceId
-      ) {
-        selectedChoices[result.quizQuestionId] =
-          result.responseData.selectedChoiceId;
-      }
+      responses[result.quizQuestionId] = result;
     }
-    setSelectedChoicesByQuestionId(selectedChoices);
+    setResponsesByQuestionId(responses);
     setCurrentPageNumber(1);
     setIsRetakeIntroOpen(false);
     pendingWritesByQuestionIdRef.current = {};
-  }, [attempt?.id, attempt?.questionResultsInProgress]);
+    unsavedAnswerTextsRef.current = {};
+    cancelAnswerAutosaves();
+  }, [attempt?.id, attempt?.questionResultsInProgress, cancelAnswerAutosaves]);
+
+  useEffect(() => cancelAnswerAutosaves, [cancelAnswerAutosaves]);
 
   const isAttemptInProgress =
     !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
@@ -196,16 +217,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   const handleFinishAttempt = async () => {
     // Send the student's current answers with submit, so grading is based
     // on what they see on screen rather than whatever autosave last landed.
-    const responsesByQuestionId = Object.fromEntries(
-      Object.entries(selectedChoicesByQuestionId).map(
-        ([questionId, choiceId]) => [questionId, {selectedChoiceId: choiceId}]
-      )
-    );
+    const responseDataByQuestionId: Record<number, QuizQuestionResponseData> =
+      {};
+    for (const [id, response] of Object.entries(responsesByQuestionId)) {
+      responseDataByQuestionId[Number(id)] = response.responseData;
+    }
     // Targets the level the attempt was for, not whichever quiz is current
     // by the time this resolves.
     const requestLevelId = levelId;
     try {
-      await finishAttempt(responsesByQuestionId);
+      await finishAttempt(responseDataByQuestionId);
       pendingReportRef.current = Promise.resolve(
         dispatch(sendSuccessReportForLevel(requestLevelId.toString(), appName))
       );
@@ -251,50 +272,112 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     beginAttempt,
   ]);
 
-  const handleSelectChoice = (questionId: number, choiceId: string) => {
-    const previousChoiceId = selectedChoicesByQuestionId[questionId];
-    setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
-
-    // Chain onto this question's own pending write, if any, so writes for
-    // the same question reach the server in the order they were made.
+  // Chains onto this question's own pending write, if any, so writes for
+  // the same question reach the server in the order they were made.
+  const queueResponseWrite = (
+    questionId: number,
+    responseData: QuizQuestionResponseData
+  ) => {
     const previousWrite =
       pendingWritesByQuestionIdRef.current[questionId] ?? Promise.resolve();
     const thisWrite = previousWrite
       .catch(() => {
         // An earlier write's failure shouldn't stop this one from sending.
       })
-      .then(() =>
-        submitQuestionResponse(questionId, {selectedChoiceId: choiceId})
-      )
-      .catch(() => {
-        // Already recorded as a user-facing error in useQuizAttempt. Only
-        // roll back if nothing newer has been picked since this write
-        // started - a later choice landing after this failure must stand.
-        setSelectedChoicesByQuestionId(prev => {
-          if (prev[questionId] !== choiceId) {
-            return prev;
-          }
-          const next = {...prev};
-          if (previousChoiceId === undefined) {
-            delete next[questionId];
-          } else {
-            next[questionId] = previousChoiceId;
-          }
-          return next;
-        });
-      });
+      .then(() => submitQuestionResponse(questionId, responseData));
     pendingWritesByQuestionIdRef.current[questionId] = thisWrite;
+    return thisWrite;
+  };
+
+  const handleSelectChoice = (questionId: number, choiceId: string) => {
+    const previousResponse = responsesByQuestionId[questionId];
+    const response: QuizQuestionResponse = {
+      questionType: 'MultipleChoiceQuestion',
+      responseData: {selectedChoiceId: choiceId},
+    };
+    setResponsesByQuestionId(prev => ({...prev, [questionId]: response}));
+
+    queueResponseWrite(questionId, response.responseData).catch(() => {
+      // Already recorded as a user-facing error in useQuizAttempt. Only
+      // roll back if nothing newer has been picked since this write
+      // started - a later choice landing after this failure must stand.
+      setResponsesByQuestionId(prev => {
+        if (prev[questionId] !== response) {
+          return prev;
+        }
+        const next = {...prev};
+        if (previousResponse === undefined) {
+          delete next[questionId];
+        } else {
+          next[questionId] = previousResponse;
+        }
+        return next;
+      });
+    });
+  };
+
+  // Unlike a choice, a failed save keeps the text: rolling back would
+  // erase what the student typed.
+  const saveAnswerText = (questionId: number, answerText: string) => {
+    clearTimeout(answerAutosaveTimersRef.current[questionId]);
+    delete answerAutosaveTimersRef.current[questionId];
+    queueResponseWrite(questionId, {answerText})
+      .then(() => {
+        // A newer edit made while this was in flight is still unsaved.
+        if (unsavedAnswerTextsRef.current[questionId] === answerText) {
+          delete unsavedAnswerTextsRef.current[questionId];
+        }
+      })
+      .catch(() => {
+        // Already recorded as a user-facing error in useQuizAttempt.
+      });
+  };
+
+  // Debounced - saves after typing pauses, not every keystroke.
+  const handleChangeAnswerText = (questionId: number, answerText: string) => {
+    setResponsesByQuestionId(prev => ({
+      ...prev,
+      [questionId]: {
+        questionType: 'FreeResponseQuestion',
+        responseData: {answerText},
+      },
+    }));
+    unsavedAnswerTextsRef.current[questionId] = answerText;
+    clearTimeout(answerAutosaveTimersRef.current[questionId]);
+    answerAutosaveTimersRef.current[questionId] = setTimeout(
+      () => saveAnswerText(questionId, answerText),
+      ANSWER_AUTOSAVE_DELAY_MS
+    );
+  };
+
+  const handleBlurAnswerText = (questionId: number) => {
+    const unsavedText = unsavedAnswerTextsRef.current[questionId];
+    if (unsavedText !== undefined) {
+      saveAnswerText(questionId, unsavedText);
+    }
   };
 
   const handleNext = async () => {
     if (currentPageNumber >= totalPages) {
-      // Every answer must reach the server before it locks the attempt -
-      // otherwise a still-in-flight write loses the race and is recorded
-      // as skipped.
-      await Promise.allSettled(
-        Object.values(pendingWritesByQuestionIdRef.current)
-      );
-      await handleFinishAttempt();
+      if (isSubmittingRef.current) {
+        return;
+      }
+      isSubmittingRef.current = true;
+      setIsSubmitting(true);
+      try {
+        // Submit sends every answer itself, so unsent autosaves are dropped.
+        cancelAnswerAutosaves();
+        // Every answer must reach the server before it locks the attempt -
+        // otherwise a still-in-flight write loses the race and is recorded
+        // as skipped.
+        await Promise.allSettled(
+          Object.values(pendingWritesByQuestionIdRef.current)
+        );
+        await handleFinishAttempt();
+      } finally {
+        isSubmittingRef.current = false;
+        setIsSubmitting(false);
+      }
     } else {
       setCurrentPageNumber(currentPageNumber + 1);
     }
@@ -313,6 +396,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             quizQuestions.findIndex(q => q.id === question.id) + 1
           } of ${quizQuestions.length}`
         : undefined;
+    const response = responsesByQuestionId[question.id];
     switch (question.type) {
       case 'MultipleChoiceQuestion':
         return (
@@ -321,10 +405,16 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
-            selectedChoiceId={selectedChoicesByQuestionId[question.id] ?? null}
+            selectedChoiceId={
+              (response &&
+                isMultipleChoiceResponse(response) &&
+                response.responseData.selectedChoiceId) ||
+              null
+            }
             onSelectChoice={choiceId =>
               handleSelectChoice(question.id, choiceId)
             }
+            disabled={isSubmitting}
           />
         );
       case 'FreeResponseQuestion':
@@ -334,6 +424,17 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
+            answerText={
+              (response &&
+                isFreeResponseResponse(response) &&
+                response.responseData.answerText) ||
+              ''
+            }
+            onChangeAnswerText={answerText =>
+              handleChangeAnswerText(question.id, answerText)
+            }
+            onBlur={() => handleBlurAnswerText(question.id)}
+            disabled={isSubmitting}
           />
         );
       default: {
@@ -367,9 +468,9 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   key={question.id}
                   question={question}
                   questionLabel={
-                    mcQuestions.length > 1
+                    quizQuestions.length > 1
                       ? `Question ${firstQuestionNumber + indexInPage} of ${
-                          mcQuestions.length
+                          quizQuestions.length
                         }`
                       : undefined
                   }
@@ -416,7 +517,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             {/* A student who hasn't started (attempt is null) shows teacher every question unanswered. */}
             {attempt !== undefined &&
               renderQuestionResults(
-                mcQuestions.map(question => ({
+                quizQuestions.map(question => ({
                   ...(attempt?.questionResultsInProgress?.find(
                     r => r.quizQuestionId === question.id
                   ) ?? {
@@ -499,6 +600,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
           onNavigateToPage={setCurrentPageNumber}
           onNext={handleNext}
           finishButtonLabel={allowMultipleAttempts ? 'Finish' : 'Submit'}
+          isSubmitting={isSubmitting}
         />
       )}
     </div>

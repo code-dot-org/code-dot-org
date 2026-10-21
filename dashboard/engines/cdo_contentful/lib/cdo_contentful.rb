@@ -15,7 +15,7 @@ module CdoContentful
   end
 
   self.config = ActiveSupport::OrderedOptions.new.tap do |config|
-    config.cs_for_all = CdoContentful::CsForAll.config
+    config.hour_of_ai = CdoContentful::HourOfAi.config
     config.marketing = CdoContentful::Marketing.config
   end
 
