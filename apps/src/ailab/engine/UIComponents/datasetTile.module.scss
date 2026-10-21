@@ -90,6 +90,26 @@
   color: var(--text-neutral-primary);
 }
 
+.tile:disabled {
+  border-color: var(--border-disabled-neutral);
+  box-shadow: none;
+  scale: none;
+  cursor: default;
+
+  .cover {
+    opacity: 0.2;
+    background-color: var(--background-neutral-quaternary);
+  }
+
+  .label {
+    border-top-color: var(--border-disabled-neutral);
+  }
+
+  .name {
+    color: var(--text-disabled-neutral);
+  }
+}
+
 .selected,
 .selected:hover,
 .selected:active,

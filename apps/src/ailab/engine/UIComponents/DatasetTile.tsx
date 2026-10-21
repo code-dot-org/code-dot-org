@@ -12,6 +12,7 @@ interface DatasetTileProps {
   imageSrc: string | undefined;
   rowCount: number;
   isSelected: boolean;
+  disabled?: boolean;
   onClick: () => void;
 }
 
@@ -20,16 +21,19 @@ const DatasetTile = ({
   imageSrc,
   rowCount,
   isSelected,
+  disabled = false,
   onClick,
 }: DatasetTileProps) => {
   const [imageFailed, setImageFailed] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
+  const showsSelection = isSelected && !disabled;
 
   return (
     <button
       type="button"
-      className={classNames(styles.tile, {[styles.selected]: isSelected})}
+      className={classNames(styles.tile, {[styles.selected]: showsSelection})}
       aria-pressed={isSelected}
+      disabled={disabled}
       onClick={onClick}
       onFocus={event =>
         setFocusVisible(event.currentTarget.matches(':focus-visible'))
@@ -53,7 +57,7 @@ const DatasetTile = ({
             aria-hidden="true"
           />
         )}
-        {isSelected && (
+        {showsSelection && (
           <span className={styles.selectedMark}>
             <FontAwesomeV6Icon
               iconName="check"

@@ -62,6 +62,15 @@ describe('DatasetTile', () => {
     expect(onClick).toHaveBeenCalled();
   });
 
+  test('ignores clicks when disabled', () => {
+    const onClick = jest.fn();
+    renderTile({disabled: true, onClick});
+    const tile = screen.getByRole('button', {name: /^Exoplanets/});
+    expect(tile.disabled).toBe(true);
+    fireEvent.click(tile);
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
   describe('name tooltip', () => {
     beforeEach(() => jest.useFakeTimers());
     afterEach(() => {
