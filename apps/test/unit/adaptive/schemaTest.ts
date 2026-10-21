@@ -407,7 +407,7 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
-  it('accepts a map layout and orientation and rejects a direction off the compass', () => {
+  it('accepts a map layout and orientation and rejects an unknown orientation', () => {
     const raw = served();
     raw.map = {layout: 'destinations', orientation: 'w'};
     expect(problemsOf(raw)).toEqual([]);
