@@ -45,6 +45,7 @@
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@tanstack/router-plugin": "^1.139.14",
+    "@tanstack/virtual-file-routes": "^1.139.0",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",

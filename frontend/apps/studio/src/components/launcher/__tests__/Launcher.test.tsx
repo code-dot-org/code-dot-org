@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {describe, it, expect, vi} from 'vitest';
 
@@ -33,6 +33,21 @@ describe('Launcher', () => {
     expect(screen.getByText('Duration: Lesson')).toBeInTheDocument();
   });
 
+  it('copies the privacy policy address rather than linking to it', async () => {
+    const writeText = vi.fn(async () => undefined);
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: {writeText},
+    });
+    render(<Launcher curricula={[curriculum]} onOpen={vi.fn()} />);
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
+    await userEvent.click(
+      screen.getByRole('button', {name: /Copy the privacy policy address/}),
+    );
+    expect(writeText).toHaveBeenCalledWith('https://code.org/privacy');
+    expect(await screen.findByRole('tooltip')).toHaveTextContent('Copied!');
+  });
+
   it('says Grade for a single grade and omits a missing duration', () => {
     render(
       <Launcher
@@ -60,14 +75,16 @@ describe('Launcher', () => {
         onOpen={vi.fn()}
       />,
     );
-    expect(screen.getAllByRole('button')).toHaveLength(2);
+    expect(
+      within(screen.getByRole('main')).getAllByRole('button'),
+    ).toHaveLength(2);
   });
 });
 
 describe('CURRICULA', () => {
-  it('lists the 22 Content Library curricula once each', () => {
-    expect(CURRICULA).toHaveLength(22);
-    expect(new Set(CURRICULA.map(a => a.id)).size).toBe(22);
+  it('lists the 10 Content Library curricula once each', () => {
+    expect(CURRICULA).toHaveLength(10);
+    expect(new Set(CURRICULA.map(a => a.id)).size).toBe(10);
   });
 
   it('loads every curriculum from studio.code.org over https', () => {

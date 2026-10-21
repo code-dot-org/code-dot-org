@@ -8,6 +8,7 @@ export default [
     'dist',
     'dist-mobile',
     'public/vite*',
+    'src/routeTree.mobile.gen.ts',
     'vite.config.ts',
     'vite.mobile.config.ts',
   ]),

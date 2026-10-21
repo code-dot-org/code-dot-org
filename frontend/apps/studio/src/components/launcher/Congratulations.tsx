@@ -2,11 +2,14 @@ import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import type {Curriculum} from '@/config/curricula';
 
 import AppHeader from './AppHeader';
 
 import styles from './congratulations.module.scss';
+import screen from './screen.module.scss';
 
 interface CongratulationsProps {
   /** The finished curriculum; undefined when the app could not tell which. */
@@ -24,9 +27,9 @@ export default function Congratulations({
   const [imageFailed, setImageFailed] = useState(false);
 
   return (
-    <div className={styles.page}>
+    <div className={screen.page}>
       <AppHeader logoIsHeading={false} />
-      <main className={styles.main}>
+      <main className={screen.main}>
         {curriculum && !imageFailed && (
           <div
             className={classNames(
@@ -53,21 +56,25 @@ export default function Congratulations({
             'You finished the curriculum.'
           )}
         </Typography>
-        <div className={styles.actions}>
+        <div className={screen.actions}>
           {curriculum && (
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               size="large"
+              startIcon={
+                <FontAwesomeV6Icon iconName="arrow-rotate-right" aria-hidden />
+              }
               onClick={() => onTryAgain(curriculum)}
             >
               Try again
             </Button>
           )}
           <Button
-            variant="contained"
-            color="primary"
+            variant="outlined"
+            color="secondary"
             size="large"
+            startIcon={<FontAwesomeV6Icon iconName="house" aria-hidden />}
             onClick={onChooseAnother}
           >
             Choose another curriculum

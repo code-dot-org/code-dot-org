@@ -3,11 +3,15 @@ package org.codeai
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.graphics.Color
+import android.net.ConnectivityManager
+import android.net.Network
 import android.net.Uri
 import android.os.Bundle
 import android.os.SystemClock
+import android.view.ActionMode
 import android.view.View
 import android.view.ViewGroup
+import android.view.textclassifier.TextClassifier
 import android.webkit.CookieManager
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
@@ -20,6 +24,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
+import androidx.core.view.get
+import androidx.core.view.size
 import androidx.core.view.WindowInsetsCompat
 import com.getcapacitor.BridgeActivity
 import com.getcapacitor.BridgeWebViewClient
@@ -41,6 +47,14 @@ class MainActivity : BridgeActivity() {
     // Opened once the landing page is back: a course's congratulations, or
     // the first level after "Try again".
     private var pendingLandingUrl: String? = null
+    private lateinit var connectivity: ConnectivityManager
+    // The WebView takes navigator.onLine, and fires online and offline, only
+    // from the app; the offline page reloads itself on online.
+    private val networkCallback = object : ConnectivityManager.NetworkCallback() {
+        override fun onAvailable(network: Network) = setNetworkAvailable(true)
+
+        override fun onLost(network: Network) = setNetworkAvailable(false)
+    }
     // Set when the cover's logo cancels a load, which can leave the cancelled
     // page in history, even ahead of the landing page.
     private var clearHistoryOnLanding = false
@@ -62,6 +76,9 @@ class MainActivity : BridgeActivity() {
         // pages. Capacitor lets scripts open windows; without multiple-window
         // support those open here.
         settings.setSupportMultipleWindows(false)
+        // Selected text that looks like a web address or phone number would
+        // offer to open it in another app.
+        webView.setTextClassifier(TextClassifier.NO_OP)
         // The page script zooms studio.code.org pages by setting their
         // viewport, which the WebView ignores outside wide-viewport mode.
         settings.useWideViewPort = true
@@ -76,7 +93,12 @@ class MainActivity : BridgeActivity() {
         hideSiteChrome = "var codeaiDebugBuild = ${BuildConfig.DEBUG};\n" +
             resources.openRawResource(R.raw.hide_site_chrome)
                 .use { it.readBytes().toString(Charsets.UTF_8) }
-        val pageInjector = PageInjector(SITE_ORIGIN, hideSiteChrome, settings.userAgentString)
+        val pageInjector = PageInjector(
+            SITE_ORIGIN,
+            hideSiteChrome,
+            settings.userAgentString,
+            "${bridge.localUrl}$OFFLINE_PATH",
+        )
         val assetCache = AssetCache(
             cacheDir.resolve("assets"),
             settings.userAgentString,
@@ -102,7 +124,7 @@ class MainActivity : BridgeActivity() {
                 val url = request.url
                 // The WebView ignores navigation started inside this
                 // callback, so go home once it has returned.
-                if (SitePolicy.isHomeLink(url, view.url)) {
+                if (SitePolicy.isHomeLink(url)) {
                     view.post { goHome() }
                     return true
                 }
@@ -139,9 +161,9 @@ class MainActivity : BridgeActivity() {
                 if (isAppPage(url)) {
                     return super.shouldOverrideUrlLoading(view, request)
                 }
-                // Amazon Kids+ forbids links out of the app. Capacitor would
-                // open other hosts in the system browser; ignore them instead,
-                // and let iframes navigate in place.
+                // Amazon Kids+ allows no links out of its environment. Capacitor
+                // would open other hosts in the system browser; ignore them
+                // instead, and let iframes navigate in place.
                 return request.isForMainFrame
             }
 
@@ -224,6 +246,12 @@ class MainActivity : BridgeActivity() {
             WindowInsetsCompat.CONSUMED
         }
 
+        connectivity = getSystemService(ConnectivityManager::class.java)
+        if (connectivity.activeNetwork == null) {
+            webView.setNetworkAvailable(false)
+        }
+        connectivity.registerDefaultNetworkCallback(networkCallback)
+
         // Amazon Kids+ requires Back to return to the previous screen and to
         // exit from the landing page.
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
@@ -304,6 +332,36 @@ class MainActivity : BridgeActivity() {
         bridge.webView.dispatchConfigurationChanged(newConfig)
     }
 
+    private fun setNetworkAvailable(available: Boolean) {
+        val webView = bridge.webView
+        webView.post { webView.setNetworkAvailable(available) }
+    }
+
+    override fun onDestroy() {
+        connectivity.unregisterNetworkCallback(networkCallback)
+        super.onDestroy()
+    }
+
+    // Selecting text offers Share and other apps' actions, each a way out of
+    // the app, which Amazon Kids+ does not allow. The WebView names its own
+    // items in its package's resources, not in android.R.
+    override fun onActionModeStarted(mode: ActionMode) {
+        super.onActionModeStarted(mode)
+        val menu = mode.menu
+        for (i in 0 until menu.size) {
+            val item = menu[i]
+            val name = webViewResources?.let { runCatching { it.getResourceEntryName(item.itemId) }.getOrNull() }
+            if (item.intent != null || item.itemId in LEAVING_ACTIONS || name in LEAVING_WEBVIEW_ACTIONS) {
+                item.isVisible = false
+            }
+        }
+    }
+
+    private val webViewResources by lazy {
+        WebView.getCurrentWebViewPackage()?.applicationInfo
+            ?.let { runCatching { packageManager.getResourcesForApplication(it) }.getOrNull() }
+    }
+
     override fun onPause() {
         super.onPause()
         // Android writes persistent cookies to disk only periodically.
@@ -312,6 +370,10 @@ class MainActivity : BridgeActivity() {
 
     private fun rememberPage(url: String?) {
         if (url == null) {
+            return
+        }
+        // Keeps the page it stands in for, so a restart retries it.
+        if (url.toUri().path == OFFLINE_PATH && isLandingPage(url)) {
             return
         }
         if (isLandingPage(url)) {
@@ -390,6 +452,11 @@ class MainActivity : BridgeActivity() {
         // The landing page opens its congratulations at #finished=<course>,
         // with the course empty when unknown. Keep in step with launcher.tsx.
         private const val FINISHED_FRAGMENT = "#finished="
+        // The landing page's offline screen. Keep in step with routes/offline.tsx
+        // in apps/studio.
+        private const val OFFLINE_PATH = "/offline"
+        private val LEAVING_ACTIONS = setOf(android.R.id.shareText, android.R.id.textAssist)
+        private val LEAVING_WEBVIEW_ACTIONS = setOf("select_action_menu_share", "select_action_menu_web_search")
 
         // The last studio.code.org page shown, so a fresh start resumes there.
         // Cleared on the landing page: a child who went home starts at home.

@@ -9,11 +9,57 @@ $card-radius: 4px;
   color: var(--text-neutral-primary);
 }
 
+// Baselines: the privacy text sits on the logo's bottom edge.
 .header {
   display: flex;
-  align-items: center;
-  padding: var(--spacing-p-m) var(--spacing-p-l);
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-p-m);
+  padding: var(--spacing-p-s) var(--spacing-p-l);
   background: var(--background-brand-purple-primary-fixed);
+}
+
+// Two classes outrank the theme's Typography color.
+// Line height 1 keeps the room below its baseline, and so the bar, small.
+.header .privacy {
+  margin: 0;
+  line-height: 1;
+  color: var(--text-neutral-white-fixed);
+}
+
+// The theme's text button, drawn as the address it copies. Three classes
+// outrank the theme's button classes.
+.header .privacy .privacyCopy {
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-transform: none;
+  vertical-align: baseline;
+
+  &:hover,
+  &:active {
+    background: transparent;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// The off-screen field the fallback copy selects.
+.copyField {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .logoHeading {
@@ -95,7 +141,10 @@ $card-radius: 4px;
   padding: 1.25em 1em;
 }
 
+// Above the Try Now overlay, so a tap on "+N" opens its tooltip.
 .tags {
+  position: relative;
+  z-index: 1;
   margin-bottom: 0.5em;
 }
 

@@ -50,7 +50,7 @@ Route definitions use canonical paths (e.g. `/projects/$labType/$channelId/edit`
 
 ## Mobile build
 
-`yarn build:mobile` builds the same app with `vite.mobile.config.ts` (relative base, `dist-mobile/`, Latin fonts only) for the Capacitor app in [`apps/mobile`](../mobile). Its mode `mobile` makes the root skip auth, CSRF priming and site chrome, and `/launcher` answers not found in any other build. `yarn dev:mobile` serves it.
+`yarn build:mobile` builds the same app with `vite.mobile.config.ts` (relative base, `dist-mobile/`, Latin fonts only) for the Capacitor app in [`apps/mobile`](../mobile). Its mode `mobile` makes the root skip auth, CSRF priming and site chrome, and `/launcher` and `/offline` (the screen the app shows for a page it cannot fetch) answer not found in any other build. Its route tree, generated into the untracked `src/routeTree.mobile.gen.ts`, holds only the root, `/launcher` and `/offline`, so no lab and none of the lab code it loads goes into the app: labs run on studio.code.org. It also leaves out the CSS cascade layers the web build puts MUI and Font Awesome in, which WebViews before Chromium 99 drop, as on Fire OS 7: MUI's styles are injected first instead, and Font Awesome is linked. `yarn dev:mobile` serves it.
 
 ## Adding a lab
 

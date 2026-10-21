@@ -40,7 +40,7 @@ describe('/launcher in the mobile build', () => {
     expect(
       await screen.findByRole('heading', {level: 1, name: 'CodeAI'}),
     ).toBeInTheDocument();
-    expect(screen.getAllByRole('button', {name: /^Try /})).toHaveLength(22);
+    expect(screen.getAllByRole('button', {name: /^Try /})).toHaveLength(10);
     expect(fetchAuthOutcome).not.toHaveBeenCalled();
     expect(primeCsrfToken).not.toHaveBeenCalled();
   });

@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react';
 import {tanstackRouter} from '@tanstack/router-plugin/vite';
+import {rootRoute, route} from '@tanstack/virtual-file-routes';
 import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
 import path from 'node:path';
 
@@ -60,6 +61,17 @@ function englishFontsOnly(): Plugin {
   };
 }
 
+// The only pages the app serves. Lab routes stay out, and so does the lab code
+// they load, which the app never requests: labs run on studio.code.org.
+const MOBILE_ROUTES = rootRoute('__root.tsx', [
+  route('/launcher', 'launcher.tsx'),
+  route('/offline', 'offline.tsx'),
+]);
+const MOBILE_ROUTE_TREE = path.resolve(
+  __dirname,
+  'src/routeTree.mobile.gen.ts',
+);
+
 // Builds the shell that Capacitor packages into the Android app, starting at
 // /launcher. The output is loaded from local files, so asset URLs are
 // relative and index.html sits at the root of dist-mobile, where
@@ -73,10 +85,6 @@ export default defineConfig({
     outDir: path.resolve(__dirname, 'dist-mobile'),
     emptyOutDir: true,
   },
-  // TFJS (bundled via @code-dot-org/oceans-lab) references bare `global`.
-  define: {
-    global: 'globalThis',
-  },
   server: {
     fs: {
       allow: [searchForWorkspaceRoot(process.cwd())],
@@ -84,13 +92,19 @@ export default defineConfig({
   },
   resolve: {
     dedupe: ['@mui/material', '@emotion/react', '@emotion/styled'],
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+    alias: [
+      {find: /^@\/routeTree\.gen$/, replacement: MOBILE_ROUTE_TREE},
+      {find: '@', replacement: path.resolve(__dirname, './src')},
+    ],
   },
   plugins: [
     englishFontsOnly(),
-    tanstackRouter({target: 'react', autoCodeSplitting: true}),
+    tanstackRouter({
+      target: 'react',
+      autoCodeSplitting: true,
+      virtualRouteConfig: MOBILE_ROUTES,
+      generatedRouteTree: MOBILE_ROUTE_TREE,
+    }),
     react(),
   ],
 });

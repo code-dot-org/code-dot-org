@@ -7,6 +7,7 @@ import java.io.ByteArrayInputStream
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
+import java.net.URLEncoder
 import java.nio.charset.Charset
 import java.util.Locale
 import java.util.concurrent.ConcurrentHashMap
@@ -23,6 +24,9 @@ import org.json.JSONObject
  * with HTML is rewritten. A redirect within the site is answered with a stub
  * that calls location.replace(), because the WebView follows redirects
  * without consulting the app again; the target then comes back through here.
+ * A page that cannot be fetched at all, as when the tablet is offline, is
+ * answered with a stub that replaces it with [offlineUrl], the landing page's
+ * offline screen, in place of the WebView's own error page.
  * For anything else this returns null and the WebView loads the URL itself,
  * which repeats the request; studio.code.org page GETs are safe to repeat.
  */
@@ -30,6 +34,7 @@ internal class PageInjector(
     private val origin: String,
     script: String,
     private val userAgent: String,
+    private val offlineUrl: String,
 ) {
     private val headSnippet: String
     private val redirectStubs = ConcurrentHashMap.newKeySet<String>()
@@ -84,9 +89,7 @@ internal class PageInjector(
                 ByteArrayInputStream(body),
             )
         } catch (e: IOException) {
-            // Offline or a bad response: the WebView retries and shows its own
-            // error, and the commit-time fallback still hides the chrome.
-            null
+            replaceWith(url, "$offlineUrl?url=${URLEncoder.encode(url, "UTF-8")}")
         } catch (e: RuntimeException) {
             null
         } finally {
@@ -108,6 +111,10 @@ internal class PageInjector(
         if (!target.startsWith("$origin/")) {
             return null
         }
+        return replaceWith(url, target)
+    }
+
+    private fun replaceWith(url: String, target: String): WebResourceResponse {
         val html = "<!DOCTYPE html><script>location.replace(${JSONObject.quote(target)});</script>"
         redirectStubs.add(url)
         return WebResourceResponse(

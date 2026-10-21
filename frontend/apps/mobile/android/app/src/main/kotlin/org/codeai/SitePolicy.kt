@@ -7,11 +7,9 @@ import java.util.Locale
 
 /** Which studio.code.org pages the app shows and how it treats them. */
 internal object SitePolicy {
-    const val SITE_ORIGIN = "https://studio.code.org"
-    // Pages the app may show. Keep in step with server.allowNavigation in
+    // The only site the app shows. Keep in step with server.allowNavigation in
     // capacitor.config.ts.
-    private const val SUPPORT_ORIGIN = "https://support.code.org"
-    val ALLOWED_ORIGINS = setOf(SITE_ORIGIN, SUPPORT_ORIGIN)
+    const val SITE_ORIGIN = "https://studio.code.org"
     // The site logo's link, set by hide_site_chrome.js. It is an https path
     // the site does not serve, not a custom scheme: Chromium treats unknown
     // schemes as external apps and may drop the navigation, while every
@@ -30,7 +28,7 @@ internal object SitePolicy {
 
     // Appended to the WebView's User-Agent, so the server can tell every
     // request from the app (pages, API calls, iframes) from a browser's,
-    // e.g. "CodeAIApp/0.1.0 (android; amazon-kids)".
+    // e.g. "CodeAIApp/0.2.0 (android; amazon-kids)".
     const val USER_AGENT_PRODUCT = "CodeAIApp"
     const val PLATFORM = "android"
     const val EDITION = "amazon-kids"
@@ -47,8 +45,6 @@ internal object SitePolicy {
     // child instead.
     private val CERTIFICATE_PATHS = listOf("/congrats", "/certificates/", "/print_certificates/")
     private val COURSE_NAME = Regex("[A-Za-z0-9_-]+")
-    // The help center's main page, in any language: /hc, /hc/en-us.
-    private val SUPPORT_HOME_PATH = Regex("^(/hc(/[A-Za-z-]+)?)?/?$")
     // A free-play lab's project editor, /projects/<lab>/<id>/edit.
     private val PROJECT_EDITOR =
         Regex("^${Regex.escape(SITE_ORIGIN)}/projects/([a-z0-9_]+)/[A-Za-z0-9_-]+/edit$")
@@ -73,7 +69,7 @@ internal object SitePolicy {
         LocaleList.setDefault(LocaleList(APP_LOCALE))
     }
 
-    fun isAllowedOrigin(url: Uri): Boolean = origin(url) in ALLOWED_ORIGINS
+    fun isAllowedOrigin(url: Uri): Boolean = origin(url) == SITE_ORIGIN
 
     fun isSitePage(url: String?): Boolean = url != null && url.startsWith("$SITE_ORIGIN/")
 
@@ -84,26 +80,7 @@ internal object SitePolicy {
 
     fun isResetUrl(url: Uri): Boolean = origin(url) == SITE_ORIGIN && url.path == RESET_PATH
 
-    /**
-     * Links the app answers with its landing page: the site logo's HOME_URL,
-     * and on support.code.org pages its logo, which leads to code.org's home
-     * page, and links to its help center's main page. From studio.code.org
-     * those open as they would in a browser, as a lab's "Get help" does.
-     */
-    fun isHomeLink(url: Uri, from: String?): Boolean {
-        if (origin(url) == SITE_ORIGIN) {
-            return url.toString() == HOME_URL
-        }
-        if (from?.startsWith("$SUPPORT_ORIGIN/") != true) {
-            return false
-        }
-        val path = url.path.orEmpty()
-        return when (origin(url)) {
-            "https://code.org", "https://www.code.org" -> path.isEmpty() || path == "/"
-            SUPPORT_ORIGIN -> SUPPORT_HOME_PATH.matches(path)
-            else -> false
-        }
-    }
+    fun isHomeLink(url: Uri): Boolean = url.toString() == HOME_URL
 
     /**
      * The lab of /projects/<lab>, the link that starts a new project; the

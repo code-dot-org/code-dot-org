@@ -1,22 +1,3 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: var(--font-family-main);
-  background: var(--background-neutral-secondary);
-  color: var(--text-neutral-primary);
-}
-
-.main {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-p-l);
-  text-align: center;
-}
-
 // The curriculum's catalog image, at the catalog card's size.
 .image {
   display: flex;
@@ -49,11 +30,4 @@
 .message {
   margin: 0 0 var(--spacing-p-l);
   color: var(--text-neutral-secondary);
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--spacing-p-m);
 }

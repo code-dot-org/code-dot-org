@@ -9,14 +9,22 @@ The app is the landing page only, and everything runs in one WebView: the
 landing page, every studio.code.org page, `window.open` and `target=_blank`.
 Pages therefore share one browser session, so sessionStorage, session cookies
 and localStorage carry across every page load. It lists the Amazon Fire Kids
-Content Library, the 22 curricula in Studio's `src/config/curricula.ts`, as
+Content Library, the 10 curricula in Studio's `src/config/curricula.ts`, as
 cards laid out like the course catalog's (`CurriculumCatalogCard` in `apps/`),
 with the catalog's images, descriptions, topics, grades and durations; tapping
 one navigates the app's WebView to that curriculum's studio.code.org URL.
-Navigation to hosts in `server.allowNavigation` (`capacitor.config.ts`) —
-studio.code.org and support.code.org — stays inside the app;
-`MainActivity.kt` ignores links to any other host, because Amazon Kids+
-forbids links out of the app. Apart from YouTube, only page navigations are
+Only studio.code.org, the one host in `server.allowNavigation`
+(`capacitor.config.ts`), opens inside the app. `MainActivity.kt` ignores
+links to any other host, support.code.org and code.org included, because
+Amazon Kids+ allows no links that lead outside its environment, and the page
+script hides every `http`, `https` and `//` link to another host, such as
+Get help and Report a problem, so none is left to do nothing when tapped;
+links with other schemes, such as `mailto:`, stay. For the
+same reason the launcher's header gives the privacy policy as text a parent
+can copy, not a link, and selected text offers only Copy and Select All: the
+WebView's text classifier, which offers to open addresses, is off, and Share
+and other apps' actions are hidden. Apart from
+YouTube, only page navigations are
 filtered: scripts, fetch and XHR calls, and iframes load from any host, so
 Statsig, Google Analytics, Google Tag Manager and Sentry run as they do on the
 web. YouTube is unreachable so that video levels use Code.org's own player,
@@ -29,10 +37,8 @@ The app runs in landscape only (`screenOrientation` in `AndroidManifest.xml`).
 and applies "Elements to Hide in the Wrapper", whose item numbers its comments
 cite. In the header, the logo links to
 `https://studio.code.org/codeai-app/home`, which `MainActivity.kt`
-intercepts and handles by returning to the landing page. On support.code.org
-pages, its logo (a link to code.org) and links to its help center's main page
-return there too, but from studio.code.org a lab's "Get help" opens the help
-center as usual; the site links are hidden; and New project, sign-in, help, the menu,
+intercepts and handles by returning to the landing page; the site links are
+hidden; and New project, sign-in, help, the menu,
 Share, Remix and "I finished!" are made invisible but keep their space, so
 the lesson navigation stays centered. It also hides the footers and their
 language selector, Download Video links, sharing after the last level, the
@@ -94,6 +100,16 @@ placeholder and the page script holds the one the site adds. That brings a
 level's load event about two seconds sooner; what the site reports in the
 meantime waits in `window.dataLayer` and is sent when they start.
 
+A studio.code.org page that cannot be fetched, as when the tablet is
+offline, never shows the WebView's own error page: `PageInjector.kt` answers
+it with a stub that replaces it with the landing page's offline screen,
+`/offline?url=<page>` (studio's `routes/offline.tsx`). The screen says there
+is no internet connection and offers Try again, which replaces it with the
+page, and Back to curricula. `MainActivity.kt` reports the network to the
+WebView, which otherwise always reports itself online, so the screen retries
+by itself when the tablet reconnects. A restart while it shows retries the
+page.
+
 Signed-out progress is kept until the child resets it. The site keeps level
 progress and code in sessionStorage, which the WebView forgets when the app's
 process ends, so the page script copies it to localStorage and restores it
@@ -142,7 +158,8 @@ Kotlin compiler. From this directory:
 
 ```bash
 yarn android:sync     # build Studio's mobile output and copy it into android/
-cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.1.0-debug.apk
+cd android && ./gradlew assembleDebug   # app/build/outputs/apk/debug/codeai-0.2.0-debug.apk
+cd android && ./gradlew testDebugUnitTest   # SitePolicy and PageInjector, on the JVM with Robolectric
 yarn android:open     # or open the project in Android Studio
 ```
 

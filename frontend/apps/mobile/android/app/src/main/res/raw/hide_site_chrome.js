@@ -359,6 +359,12 @@
     '.sharing-content',
     // 8. "Need help?" videos and hints beside the lab.
     '#reference_area',
+    // Links off studio.code.org, such as Get help: Amazon Kids+ allows no
+    // links out of the app, so MainActivity.kt ignores them and they would
+    // do nothing. Relative links stay on the site; other schemes, such as
+    // mailto:, are left as they are.
+    'a[href^="http"]:not([href^="https://studio.code.org/"]):not([href^="http://studio.code.org/"])',
+    'a[href^="//"]:not([href^="//studio.code.org/"])',
     // Cookie banner and translation widget: the app is English only, and
     // both can lead out of the app.
     '#gdpr-dialog',

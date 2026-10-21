@@ -126,11 +126,15 @@ const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
+  // Chromium before 99, which Fire OS 7 tablets can still run, drops layered
+  // rules; the mobile build injects MUI's styles first instead, so module CSS
+  // after them wins as it does over the mui layer.
+  const layered = !isMobileBuild();
   return (
     <QueryClientProvider client={queryClient}>
-      <StyledEngineProvider enableCssLayer>
+      <StyledEngineProvider enableCssLayer={layered} injectFirst={!layered}>
         <HeadContent />
-        {cssLayerOrder}
+        {layered && cssLayerOrder}
         <ThemeProvider theme={theme}>
           {responsiveFloorStyles}
           <Bootstrap locale="en-US">

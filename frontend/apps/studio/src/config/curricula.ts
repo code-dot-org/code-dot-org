@@ -25,10 +25,8 @@ const STUDIO = 'https://studio.code.org';
 // The Amazon Fire Kids Content Library, in its order. Titles, descriptions,
 // images, topics and grades come from the course offerings behind
 // studio.code.org/catalog (dashboard/config/course_offerings); durations from
-// the catalog cards. The three CSF lessons use their course's image, topics
-// and grades with the lesson's own title and overview. The free-play labs
-// have no catalog entry: Dance Party and Music Lab use their tutorials'
-// images, Sprite Lab the icon studio.code.org's header shows. The list is bundled, so
+// the catalog cards. Sprite Lab, a free-play lab, has no catalog entry and
+// uses the icon studio.code.org's header shows. The list is bundled, so
 // changing it requires a new app build and Amazon review.
 export const CURRICULA: readonly Curriculum[] = [
   {
@@ -46,39 +44,6 @@ export const CURRICULA: readonly Curriculum[] = [
     url: `${STUDIO}/courses/pre-express-2025/units/1`,
   },
   {
-    id: 'express-2025',
-    title: 'CS Fundamentals: Express Course',
-    description:
-      'Let your students learn computer science at their own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges.',
-    image: {
-      src: 'https://images.code.org/aaee14231592a91f7ca063867bc7454c-ExpressCourse.png',
-      fit: 'cover',
-    },
-    topics: ['Programming'],
-    grades: '3-8',
-    duration: 'Quarter',
-    url: `${STUDIO}/courses/express-2025/units/1`,
-  },
-  {
-    id: 'mix-move-ai-2025',
-    title: 'Mix & Move with AI',
-    description:
-      'Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.',
-    image: {
-      src: 'https://images.code.org/f509dbca60f52bc96b6eddd8d3a6c82b-mix-move-ai-course-image.png',
-      fit: 'cover',
-    },
-    topics: [
-      'Artificial Intelligence',
-      'Music',
-      'Art and Design',
-      'Programming',
-    ],
-    grades: '2-12',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/mix-move-ai-2025/units/1`,
-  },
-  {
     id: 'oceans',
     title: 'AI for Oceans',
     description:
@@ -93,44 +58,6 @@ export const CURRICULA: readonly Curriculum[] = [
     url: `${STUDIO}/courses/oceans/units/1`,
   },
   {
-    id: 'dance-ai-2023',
-    title: 'Dance Party: AI Edition',
-    description:
-      'In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment.',
-    image: {
-      src: 'https://images.code.org/ec283654e85e5d6429a1600157b6c789-dance_ai.jpg',
-      fit: 'cover',
-    },
-    topics: [
-      'Artificial Intelligence',
-      'Games and Animations',
-      'Art and Design',
-      'Programming',
-    ],
-    grades: '3-8',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/dance-ai-2023/units/1`,
-  },
-  {
-    id: 'music-jam-2024',
-    title: 'Music Lab: Jam Session',
-    description:
-      'Bring music and coding together with Music Lab: Jam Session! In this self-guided Hour of Code activity, students will remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while learning coding basics and exploring AI-powered beats.',
-    image: {
-      src: 'https://images.code.org/5aac6d5fbe2340096ef52dd6301bbbff-image (48).png',
-      fit: 'cover',
-    },
-    topics: [
-      'Artificial Intelligence',
-      'Music',
-      'Art and Design',
-      'Programming',
-    ],
-    grades: '2-12',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/music-jam-2024/units/1`,
-  },
-  {
     id: 'hello-world-animals-2021',
     title: 'Hello World: Animals',
     description:
@@ -143,19 +70,6 @@ export const CURRICULA: readonly Curriculum[] = [
     grades: '2-12',
     duration: 'Lesson',
     url: `${STUDIO}/courses/hello-world-animals-2021/units/1`,
-  },
-  {
-    id: 'hello-world-transformers-one-2024',
-    title: 'Hello World Transformers One',
-    description: 'Bring Transformers characters to life with your own code.',
-    image: {
-      src: 'https://images.code.org/36a6f0c0d8a9dc1c5085b33c6b6fb89e-transformers-catalog.png',
-      fit: 'cover',
-    },
-    topics: ['Programming'],
-    grades: '2-12',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/hello-world-transformers-one-2024/units/1`,
   },
   {
     id: 'starwarsblocks',
@@ -219,20 +133,6 @@ export const CURRICULA: readonly Curriculum[] = [
     url: `${STUDIO}/courses/mc/units/1`,
   },
   {
-    id: 'aquatic',
-    title: 'Minecraft: Voyage Aquatic',
-    description:
-      'Build and explore with Minecraft! Use your creativity and problem solving skills to explore and build underwater worlds with code.',
-    image: {
-      src: 'https://images.code.org/291daacf8b43681d634c9004b5f0d14a-Minecraft Voyager.png',
-      fit: 'cover',
-    },
-    topics: ['Games and Animations', 'Programming'],
-    grades: '2-12',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/aquatic/units/1/lessons/1/levels/1`,
-  },
-  {
     id: 'hero',
     title: "Minecraft: Hero's Journey",
     description:
@@ -245,20 +145,6 @@ export const CURRICULA: readonly Curriculum[] = [
     grades: '2-12',
     duration: 'Lesson',
     url: `${STUDIO}/courses/hero/units/1/lessons/1/levels/1`,
-  },
-  {
-    id: 'minecraft',
-    title: 'Minecraft Designer',
-    description:
-      'YOU make the rules in this activity, where you can learn basic computer science skills to create your own Minecraft game to share with others!',
-    image: {
-      src: 'https://images.code.org/307960d823153f6e15aa701d3373ea7f-Minecraft Designer.png',
-      fit: 'cover',
-    },
-    topics: ['Games and Animations', 'Programming'],
-    grades: '2-12',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/minecraft/units/1/lessons/1/levels/1`,
   },
   {
     id: 'flappy',
@@ -275,46 +161,6 @@ export const CURRICULA: readonly Curriculum[] = [
     url: `${STUDIO}/flappy/1`,
   },
   {
-    id: 'csf-courseb-2025-sequencing-angry-birds',
-    title: 'Sequencing with Angry Birds',
-    description: 'Help Red the Angry Bird follow the path to the naughty pig.',
-    image: {
-      src: 'https://images.code.org/a695bfd633b89cb1ffd49ce7dfc2731a-Course B.png',
-      fit: 'cover',
-    },
-    topics: ['Programming'],
-    grades: '1-2',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/courseb-2025/units/1/lessons/3/levels/1`,
-  },
-  {
-    id: 'csf-coursed-2025-loops-ice-age',
-    title: 'Loops in Ice Age',
-    description:
-      'Use the repeat block to help Scrat reach the acorn as efficiently as possible.',
-    image: {
-      src: 'https://images.code.org/4d8ce599ad686237c78ef95f573f0685-Course D.png',
-      fit: 'cover',
-    },
-    topics: ['Games and Animations', 'Art and Design', 'Programming'],
-    grades: '3-4',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/coursed-2025/units/1/lessons/11/levels/1`,
-  },
-  {
-    id: 'csf-coursed-2025-star-wars-game',
-    title: 'Build a Star Wars Game',
-    description: 'Feel the force as you build your own Star Wars game.',
-    image: {
-      src: 'https://images.code.org/4d8ce599ad686237c78ef95f573f0685-Course D.png',
-      fit: 'cover',
-    },
-    topics: ['Games and Animations', 'Art and Design', 'Programming'],
-    grades: '3-4',
-    duration: 'Lesson',
-    url: `${STUDIO}/courses/coursed-2025/units/1/lessons/8/levels/1`,
-  },
-  {
     id: 'spritelab',
     title: 'Sprite Lab',
     description: 'Create your own characters, stories and games with code.',
@@ -322,31 +168,6 @@ export const CURRICULA: readonly Curriculum[] = [
     topics: ['Games and Animations', 'Art and Design', 'Programming'],
     grades: '2-12',
     url: `${STUDIO}/projects/spritelab`,
-  },
-  {
-    id: 'dance',
-    title: 'Dance Party',
-    description:
-      'Get creative and code animated characters to bust a move to your favorite songs.',
-    image: {
-      src: 'https://images.code.org/074e07dcd748224291884e8ac9f5267b-Dance Party 2019.png',
-      fit: 'cover',
-    },
-    topics: ['Games and Animations', 'Programming'],
-    grades: '2-12',
-    url: `${STUDIO}/projects/dance`,
-  },
-  {
-    id: 'music',
-    title: 'Music Lab',
-    description: 'Compose your own songs with code.',
-    image: {
-      src: 'https://images.code.org/83dd7299edd4c69cdbc44f7a8033cbfa-Music Lab Callout Graphic (11).png',
-      fit: 'cover',
-    },
-    topics: ['Art and Design', 'Programming'],
-    grades: '2-12',
-    url: `${STUDIO}/projects/music`,
   },
 ];
 

@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {describe, it, expect, vi} from 'vitest';
 
@@ -47,26 +47,34 @@ describe('Congratulations', () => {
     expect(
       screen.getByText('You finished the curriculum.'),
     ).toBeInTheDocument();
-    expect(screen.getAllByRole('button')).toHaveLength(1);
+    expect(
+      within(screen.getByRole('main')).getAllByRole('button'),
+    ).toHaveLength(1);
   });
 });
 
 describe('curriculumForCourse', () => {
   it('matches the course in each kind of curriculum URL', () => {
     expect(curriculumForCourse('oceans')?.id).toBe('oceans');
-    expect(curriculumForCourse('express-2025')?.id).toBe('express-2025');
+    expect(curriculumForCourse('frozen')?.id).toBe('frozen');
     expect(curriculumForCourse('flappy')?.id).toBe('flappy');
-    expect(curriculumForCourse('courseb-2025')?.id).toBe(
-      'csf-courseb-2025-sequencing-angry-birds',
-    );
   });
 
   it('is undefined for unknown, shared or free-play courses', () => {
     expect(curriculumForCourse('')).toBeUndefined();
     expect(curriculumForCourse('hourofcode')).toBeUndefined();
-    // Two curricula are lessons of Course D.
-    expect(curriculumForCourse('coursed-2025')).toBeUndefined();
     expect(curriculumForCourse('projects')).toBeUndefined();
+    const lessonOf = (id: string, lesson: number) => ({
+      ...oceans,
+      id,
+      url: `https://studio.code.org/courses/coursed-2025/units/1/lessons/${lesson}/levels/1`,
+    });
+    expect(
+      curriculumForCourse('coursed-2025', [
+        lessonOf('a', 8),
+        lessonOf('b', 11),
+      ]),
+    ).toBeUndefined();
   });
 });
 

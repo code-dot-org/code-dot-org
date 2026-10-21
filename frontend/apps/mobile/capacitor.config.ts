@@ -7,10 +7,9 @@ const config: CapacitorConfig = {
   webDir: '../studio/dist-mobile',
   server: {
     appStartPath: '/launcher',
-    // Hosts the app's WebView may navigate to. Keep in step with
-    // ALLOWED_ORIGINS in MainActivity.kt, which ignores links to any other
-    // host.
-    allowNavigation: ['studio.code.org', 'support.code.org'],
+    // The only host the app's WebView shows. Keep in step with SITE_ORIGIN in
+    // SitePolicy.kt; MainActivity.kt ignores links to any other host.
+    allowNavigation: ['studio.code.org'],
   },
 };
 

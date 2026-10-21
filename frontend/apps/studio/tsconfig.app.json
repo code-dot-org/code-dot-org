@@ -3,5 +3,6 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": ["src", "entrypoints"]
+  "include": ["src", "entrypoints"],
+  "exclude": ["src/routeTree.mobile.gen.ts"]
 }
