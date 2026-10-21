@@ -31,7 +31,7 @@ import styles from './shared.module.scss';
 
 type View =
   | {kind: 'map'; focusId?: string}
-  | {kind: 'step'; checkpointId: string}
+  | {kind: 'step'; checkpointId: string; stepId?: string}
   | {kind: 'project'};
 
 interface PathwayAppProps {
@@ -85,13 +85,31 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   }
   const params = new URLSearchParams(window.location.search);
   const urlCheckpointId = params.get('checkpoint') ?? undefined;
-  // Auto-start the first checkpoint for students who haven't begun yet.
-  // A step with generatedInstructions but no status doesn't count as started.
-  const hasProgress = Object.values(progress.steps).some(s => s.status);
-  const firstCheckpointId = !hasProgress
-    ? pathway.checkpoints[0]?.id
-    : undefined;
-  const startCheckpointId = urlCheckpointId ?? firstCheckpointId;
+  const urlStepId = params.get('step') ?? undefined;
+
+  let initialCheckpointId: string | undefined;
+  let initialStepId: string | undefined;
+
+  if (urlCheckpointId) {
+    // URL names a checkpoint: open it, and use the URL step if it belongs there.
+    initialCheckpointId = urlCheckpointId;
+    const cp = pathway.checkpoints.find(c => c.id === urlCheckpointId);
+    if (cp) {
+      const urlStepValid = cp.steps.some(s => s.id === urlStepId);
+      initialStepId = urlStepValid ? urlStepId : stepIdToResume(cp, progress);
+    }
+  } else {
+    // No URL checkpoint: auto-start only when the student hasn't begun yet.
+    // A step with generatedInstructions but no status doesn't count as started.
+    const hasProgress = Object.values(progress.steps).some(s => s.status);
+    if (!hasProgress) {
+      const firstCp = pathway.checkpoints[0];
+      if (firstCp) {
+        initialCheckpointId = firstCp.id;
+        initialStepId = stepIdToResume(firstCp, progress);
+      }
+    }
+  }
 
   return (
     <LoadedPathwayApp
@@ -99,12 +117,8 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       progressKey={progressKey}
       progress={progress}
       statusMap={statusMap}
-      initialView={
-        startCheckpointId
-          ? {kind: 'step', checkpointId: startCheckpointId}
-          : {kind: 'map'}
-      }
-      initialCheckpointId={startCheckpointId}
+      initialCheckpointId={initialCheckpointId}
+      initialStepId={initialStepId}
       {...actions}
     />
   );
@@ -115,20 +129,21 @@ type LoadedProgress = ReturnType<typeof useProgress> & {progress: Progress};
 
 type LoadedPathwayAppProps = PathwayAppProps &
   LoadedProgress & {
-    initialView: View;
-    /** A checkpoint the initial view opens, which starts the adaptive level. */
+    /** Checkpoint to open on mount; absent → show map. */
     initialCheckpointId?: string;
+    /** Step within initialCheckpointId to start on. */
+    initialStepId?: string;
   };
 
-// The pathway once its progress is known. Reads initialView and
-// initialCheckpointId once, on mount.
+// The pathway once its progress is known. Reads initialCheckpointId and
+// initialStepId once, on mount.
 const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   pathway,
   progressKey,
   progress,
   statusMap,
-  initialView,
   initialCheckpointId,
+  initialStepId,
   startStep,
   completeStep,
   leaveStep,
@@ -137,7 +152,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
-  const [view, setView] = useState<View>(initialView);
+  const [view, setView] = useState<View>(
+    initialCheckpointId
+      ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
+      : {kind: 'map'}
+  );
 
   const clearStepParams = useCallback(() => {
     const p = new URLSearchParams(window.location.search);
@@ -151,32 +170,32 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     );
   }, []);
 
-  // Reads the live URL at call time so forward-button re-entry lands on the
-  // right step (not on stale initial props).
-  const getInitialStepId = useCallback(
-    (checkpointId: string): string | undefined => {
-      const p = new URLSearchParams(window.location.search);
-      const urlCheckpoint = p.get('checkpoint');
-      const urlStep = p.get('step');
-      if (checkpointId === urlCheckpoint && urlStep) return urlStep;
-      const cp = pathway.checkpoints.find(c => c.id === checkpointId);
-      return cp ? stepIdToResume(cp, progress) : undefined;
-    },
-    [pathway.checkpoints, progress]
-  );
-
   // Handle browser back/forward at the checkpoint level.
   useEffect(() => {
     const handler = () => {
       const p = new URLSearchParams(window.location.search);
       const checkpointId = p.get('checkpoint');
-      if (!checkpointId) setView({kind: 'map'});
-      else if (checkpointId === 'project') setView({kind: 'project'});
-      else setView({kind: 'step', checkpointId});
+      if (!checkpointId) {
+        setView({kind: 'map'});
+      } else if (checkpointId === 'project') {
+        setView({kind: 'project'});
+      } else {
+        const urlStep = p.get('step') ?? undefined;
+        const cp = pathway.checkpoints.find(c => c.id === checkpointId);
+        const validUrlStep = cp?.steps.some(s => s.id === urlStep)
+          ? urlStep
+          : undefined;
+        setView({
+          kind: 'step',
+          checkpointId,
+          stepId:
+            validUrlStep ?? (cp ? stepIdToResume(cp, progress) : undefined),
+        });
+      }
     };
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
-  }, []);
+  }, [pathway.checkpoints, progress]);
 
   // The verdict is only logged for now; nothing acts on it yet.
   const {lastRouting} = progress;
@@ -238,9 +257,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
-            initialStepId={
-              isProject ? undefined : getInitialStepId(checkpoint.id)
-            }
+            initialStepId={view.kind === 'step' ? view.stepId : undefined}
             onStartStep={startStep}
             onCompleteStep={completeStep}
             onLeaveStep={leaveStep}
@@ -272,7 +289,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         onFocus={focusId => setView({kind: 'map', focusId})}
         onStart={id => {
           dispatch(sendStartedReportIfNotStarted('adaptive'));
-          setView({kind: 'step', checkpointId: id});
+          const cp = pathway.checkpoints.find(c => c.id === id);
+          setView({
+            kind: 'step',
+            checkpointId: id,
+            stepId: cp ? stepIdToResume(cp, progress) : undefined,
+          });
         }}
         onWorkOnProject={() => {
           dispatch(sendStartedReportIfNotStarted('adaptive'));
