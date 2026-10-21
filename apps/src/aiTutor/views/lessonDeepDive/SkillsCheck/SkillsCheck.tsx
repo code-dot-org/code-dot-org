@@ -1,4 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  MatchSolution,
+  MultiSolution,
+  PracticeMatch,
+  PracticeMultipleChoice,
+  PracticeProblem,
+  PracticeScramble,
+  PracticeSort,
+  ScrambleSolution,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {
   FC,
   useCallback,
@@ -35,19 +45,10 @@ import sortJSON from '@cdo/static/tutor/sort_example.json';
 import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameters';
 import {
   LessonDeepDiveData,
-  MatchSolution,
-  MultiSolution,
-  PracticeProblem,
   practiceProblemValidator,
   ReflectionData,
-  ScrambleSolution,
   userPracticeProblemAttemptValidator,
 } from '../types';
-
-import Match from './QuestionTypes/Match';
-import MultipleChoice from './QuestionTypes/MultipleChoice';
-import Scramble from './QuestionTypes/Scramble';
-import Sort from './QuestionTypes/Sort';
 
 import styles from './skills-check.module.scss';
 
@@ -315,13 +316,13 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     switch (problem.type) {
       case PracticeProblemTypes.MULTIPLE_CHOICE_SINGLE:
       case PracticeProblemTypes.MULTIPLE_CHOICE_MULTI:
-        return <MultipleChoice {...sharedProps} />;
+        return <PracticeMultipleChoice {...sharedProps} />;
       case PracticeProblemTypes.SCRAMBLE:
-        return <Scramble {...sharedProps} />;
+        return <PracticeScramble {...sharedProps} />;
       case PracticeProblemTypes.MATCH:
-        return <Match {...sharedProps} />;
+        return <PracticeMatch {...sharedProps} />;
       case PracticeProblemTypes.SORT:
-        return <Sort {...sharedProps} />;
+        return <PracticeSort {...sharedProps} />;
     }
   };
 
