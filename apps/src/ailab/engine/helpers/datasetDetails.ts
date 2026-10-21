@@ -74,7 +74,3 @@ export function isUserUploadedDataset(state: RootState): boolean {
   // users are objects. Use data type as a proxy to know which case we're in.
   return typeof state.csvfile === 'object' && state.csvfile !== null;
 }
-
-export function getUploadedFileName(state: RootState): string | undefined {
-  return typeof state.csvfile === 'object' ? state.csvfile.name : undefined;
-}

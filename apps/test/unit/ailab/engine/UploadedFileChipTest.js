@@ -15,20 +15,46 @@ function cutOffNames() {
 }
 
 const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
-const chip = () => screen.getByRole('button', {name: `Remove ${FILE_NAME}`});
+const chip = () => screen.getByRole('button', {name: FILE_NAME});
+const removeButton = () =>
+  screen.getByRole('button', {name: `Remove ${FILE_NAME}`});
 
-function renderChip(onRemove = () => {}) {
+function renderChip(props = {}) {
   return render(
-    withTheme(createElement(UploadedFileChip, {fileName: FILE_NAME, onRemove}))
+    withTheme(
+      createElement(UploadedFileChip, {
+        fileName: FILE_NAME,
+        isSelected: false,
+        onSelect: () => {},
+        onRemove: () => {},
+        ...props,
+      })
+    )
   );
 }
 
 describe('UploadedFileChip', () => {
-  test('calls onRemove when clicked', () => {
+  test('selects the upload when the file name is clicked', () => {
+    const onSelect = jest.fn();
     const onRemove = jest.fn();
-    renderChip(onRemove);
-    fireEvent.click(chip());
+    renderChip({onSelect, onRemove});
+    fireEvent.click(screen.getByText(FILE_NAME));
+    expect(onSelect).toHaveBeenCalled();
+    expect(onRemove).not.toHaveBeenCalled();
+  });
+
+  test('removes the upload only from the x', () => {
+    const onSelect = jest.fn();
+    const onRemove = jest.fn();
+    renderChip({onSelect, onRemove});
+    fireEvent.click(removeButton());
     expect(onRemove).toHaveBeenCalled();
+    expect(onSelect).not.toHaveBeenCalled();
+  });
+
+  test('reports when the upload is the selected dataset', () => {
+    renderChip({isSelected: true});
+    expect(chip().getAttribute('aria-pressed')).toBe('true');
   });
 
   describe('file name tooltip', () => {

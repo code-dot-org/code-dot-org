@@ -2,13 +2,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Divider, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
-import {getUploadedFileName} from '../helpers/datasetDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {loadDataset} from '../loadDataset';
@@ -29,8 +28,15 @@ const SelectDataset = () => {
   const dispatch = useAppDispatch();
   const specifiedDatasets = useAppSelector(getSpecifiedDatasets);
   const name = useAppSelector(state => state.name);
-  const uploadedFileName = useAppSelector(getUploadedFileName);
+  const csvfile = useAppSelector(state => state.csvfile);
   const invalidData = useAppSelector(state => state.invalidData);
+  // Held only while the picker is open, so moving on with one of our datasets
+  // drops the upload.
+  const [uploadedFile, setUploadedFile] = useState(() =>
+    typeof csvfile === 'object' ? csvfile : undefined
+  );
+  const isUploadSelected =
+    uploadedFile !== undefined && csvfile === uploadedFile;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const uploadButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -54,6 +60,11 @@ const SelectDataset = () => {
       const csvPath = assetPath + dataset.path;
       const jsonPath = assetPath + dataset.metadataPath;
 
+      // Only an upload can be invalid, and a rejected one isn't worth keeping.
+      if (invalidData) {
+        setUploadedFile(undefined);
+      }
+
       resetForDatasetChange();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
@@ -64,16 +75,31 @@ const SelectDataset = () => {
     }
   };
 
-  const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const loadUpload = (file: File) => {
     resetForDatasetChange();
-    setSelectedCSV(event.target.files![0]);
+    setSelectedCSV(file);
     invalidatePendingDatasetLoads();
-    parseCSV(event.target.files![0] as unknown as string, false, true);
+    parseCSV(file as unknown as string, false, true);
+  };
+
+  const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files![0];
+    setUploadedFile(file);
+    loadUpload(file);
+  };
+
+  const handleUploadChipSelect = () => {
+    if (!isUploadSelected) {
+      loadUpload(uploadedFile!);
+    }
   };
 
   const handleUploadRemove = () => {
-    resetState();
-    invalidatePendingDatasetLoads();
+    if (isUploadSelected) {
+      resetForDatasetChange();
+      invalidatePendingDatasetLoads();
+    }
+    setUploadedFile(undefined);
     uploadButtonRef.current!.focus();
   };
 
@@ -133,11 +159,13 @@ const SelectDataset = () => {
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
           </Button>
-          {uploadedFileName && !invalidData && (
+          {uploadedFile && !invalidData && (
             <>
               <Divider orientation="vertical" className={styles.divider} />
               <UploadedFileChip
-                fileName={uploadedFileName}
+                fileName={uploadedFile.name}
+                isSelected={isUploadSelected}
+                onSelect={handleUploadChipSelect}
                 onRemove={handleUploadRemove}
               />
             </>
