@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
+import {Challenges, VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {FC, useCallback, useState} from 'react';
 
@@ -12,8 +12,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import Challenges from '../ChallengeActivities/Challenges';
 
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
