@@ -40,7 +40,7 @@ class PracticeProblemsController < ApplicationController
   # accepted) and associates it with the lesson's objectives.
   def create
     problem = PracticeProblem.new(practice_problem_params)
-    problem.key = generate_key if problem.key.blank?
+    problem.key = generate_key
     if problem.save
       set_lesson_objectives(problem)
       problem.write_serialization
@@ -87,7 +87,8 @@ class PracticeProblemsController < ApplicationController
   end
 
   private def practice_problem_params
-    attrs = params.permit(:key, :problem_type, :active, :problem_text)
+    # key is never permitted: it names a file under config/practice_problems.
+    attrs = params.permit(:problem_type, :active, :problem_text)
     # solution is a json column holding an array of {option, correct} hashes;
     # correct is a boolean / integer / string depending on problem_type.
     if params.key?(:solution)

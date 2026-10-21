@@ -156,6 +156,7 @@ class PracticeProblemsControllerTest < ActionController::TestCase
     objective = create(:objective, lesson: lesson)
 
     post :create, params: {
+      key: '../../evil',
       problem_type: 'multiple_choice_single_select',
       problem_text: 'Which is a loop?',
       active: true,
@@ -170,7 +171,7 @@ class PracticeProblemsControllerTest < ActionController::TestCase
     assert_equal 'multiple_choice_single_select', problem.problem_type
     assert_equal 'Which is a loop?', problem.problem_text
     assert_includes problem.objectives, objective
-    assert data['key'].present?, 'key should be auto-generated'
+    assert_match(/\App-lesson-#{lesson.id}-\h+\z/, data['key'])
     assert_equal [objective.id], data['objectiveIds']
   end
 
