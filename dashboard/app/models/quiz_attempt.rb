@@ -91,6 +91,7 @@ class QuizAttempt < ApplicationRecord
 
     quiz_question_responses.in_quiz(level).includes(:quiz_question).map do |response|
       reveal_answer = show_correctness && reveal_answer_explanation
+      answer_key = response.quiz_question.answer_key_json
       # Pending/manual/ungraded responses have no score yet - report nil rather than false,
       # or an ungraded response would be shown to the student as incorrect.
       graded = response.score.present? && response.max_score.present?
@@ -100,7 +101,7 @@ class QuizAttempt < ApplicationRecord
         response_data: response.response_data,
         correct: (show_correctness && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
-        correct_choice_id: reveal_answer ? response.quiz_question.content['correct_choice_id'] : nil
+        answer_key: reveal_answer ? answer_key : answer_key.transform_values {nil}
       }
     end
   end

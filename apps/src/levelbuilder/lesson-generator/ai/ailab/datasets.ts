@@ -1,8 +1,8 @@
-import {type Dataset, getRawDatasets} from '@code-dot-org/ailab';
+import {type Dataset, getRawDatasets} from '@cdo/apps/ailab/engine';
 
 export type AilabDataset = Dataset;
 
-// Read the AI Lab package's own dataset list so the lesson generator's
+// Read AI Lab's own dataset list so the lesson generator's
 // dataset enum tracks the same catalogue without drift. Uses the raw
 // variant because the lesson generator never mounts the lab, so its
 // I18n has not been initialised at import time and localizing here

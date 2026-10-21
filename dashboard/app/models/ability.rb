@@ -24,6 +24,7 @@ class Ability
       Rubric,
       :reports,
       :widget2, # levelbuilder only, see override below
+      :adaptive_pathway, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
@@ -336,14 +337,12 @@ class Ability
           can?(:manage, message.aidiff_thread)
         end
         can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
-        if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
-          can :create, AidiffArtifact
-          can :create, AidiffExitTicket
-          can :create, AidiffLessonHook
-          can [:index], AidiffArtifact, user_id: user.id
-          can [:index, :update, :show], AidiffExitTicket, user_id: user.id
-          can [:index, :update, :show], AidiffLessonHook, user_id: user.id
-        end
+        can :create, AidiffArtifact
+        can :create, AidiffExitTicket
+        can :create, AidiffLessonHook
+        can [:index], AidiffArtifact, user_id: user.id
+        can [:index, :update, :show], AidiffExitTicket, user_id: user.id
+        can [:index, :update, :show], AidiffLessonHook, user_id: user.id
       end
 
       can :create, UserPracticeProblemAttempt
@@ -519,6 +518,7 @@ class Ability
         Video,
         Vocabulary,
         :foorm_editor,
+        :adaptive_pathway,
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,

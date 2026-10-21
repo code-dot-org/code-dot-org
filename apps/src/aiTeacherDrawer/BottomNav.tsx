@@ -18,6 +18,7 @@ interface BottomNavProps {
   showLearn?: boolean;
   showTeacherPanel?: boolean;
   showRubrics?: boolean;
+  rebranded?: boolean;
 }
 
 const BottomNav: React.FC<BottomNavProps> = ({
@@ -28,6 +29,7 @@ const BottomNav: React.FC<BottomNavProps> = ({
   showLearn = false,
   showTeacherPanel = false,
   showRubrics = false,
+  rebranded = false,
 }) => {
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
@@ -39,7 +41,10 @@ const BottomNav: React.FC<BottomNavProps> = ({
   ];
 
   return (
-    <nav className={style.nav} aria-label="Main navigation">
+    <nav
+      className={classNames(style.nav, rebranded && style.navTa)}
+      aria-label="Main navigation"
+    >
       {navItems.map(({label, iconName}) => {
         const active = label === activeLabel;
         const showDot = label === 'Alerts' && unreadNotificationCount > 0;

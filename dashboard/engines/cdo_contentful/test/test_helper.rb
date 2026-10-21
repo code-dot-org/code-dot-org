@@ -11,8 +11,12 @@ require 'minitest/autorun'
 require 'minitest/spec'
 
 require 'cdo_contentful'
+# The cassettes were recorded against these spaces. Running code gets its values from CDO.
 CdoContentful.configure do |config|
-  config.cs_for_all.client.access_token = 'fake_access_token'
+  config.hour_of_ai.client.space = 'hwu8vzk5v0g2'
+  config.hour_of_ai.client.api_url = 'preview.contentful.com'
+  config.hour_of_ai.client.access_token = ENV.fetch('CONTENTFUL_HOUR_OF_AI_ACCESS_TOKEN', 'fake_access_token')
+  config.marketing.client.space = '90t6bu6vlf76'
   config.marketing.client.access_token = 'fake_access_token'
 end
 

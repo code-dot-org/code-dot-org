@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q3-2026'
+
+right 'How long shoes last depends on more than just distance walked'
+wrong 'A model with two inputs is always more accurate than a model with one'
+wrong 'Price lets the model correct errors in the distance measurements'
+wrong 'A second input lets the model make predictions with less training data'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A model predicts how long a pair of shoes will last based on the distance walked each week. Why might adding the shoes' price as a second input improve its predictions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Multiple Linear Regression
+MARKDOWN

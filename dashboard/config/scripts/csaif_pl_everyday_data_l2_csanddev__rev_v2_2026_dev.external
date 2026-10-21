@@ -5,6 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Data
 
+<p>Lessons 7 through 9 shift to data: how computer systems store it, how they process it, and how AI uses it.</p>
+
+The next few levels highlight some key activities from these lessons. 
+
 Data is all around us, shaping the world we live in. Whether it's the number of steps we take, the likes on a social media post, or the weather forecast. 
 
 Everything can be quantified and analyzed to reveal patterns and insights that drive our decisions and innovations.

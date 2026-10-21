@@ -1,0 +1,14 @@
+@use '../sharedMixins' as mixins;
+
+.emphasized {
+  font-weight: 600;
+}
+
+.note {
+  margin: 0;
+  color: var(--text-neutral-secondary);
+}
+
+.emptyNote {
+  @include mixins.data-table-empty-note;
+}

@@ -176,6 +176,12 @@ class ScriptLevelsController < ApplicationController
     end
 
     @level = select_level
+    # For the summary view on a BubbleChoice, allow targeting a specific sublevel
+    # by ID so the teacher sees that sublevel's responses rather than an empty page.
+    if params[:view] == 'summary' && params[:level_id].present? && @script_level.bubble_choice?
+      target = @script_level.level.sublevels.find {|sl| sl.id.to_s == params[:level_id].to_s}
+      @level = target if target
+    end
     return if redirect_under_13_without_tos_teacher(@level)
 
     # TODO: If this adds too much to the load time in prod, move it to an API.

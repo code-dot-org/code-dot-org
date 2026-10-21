@@ -22,14 +22,14 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "AI uses your prompt and patterns it learned to make a new image.\n\n---\n\n**Something to think about:** Who chooses the training data, and what might be missing from it?",
-        "imageUrl": "https://images.code.org/dd5379f1ec65be075369af4c08a672f2-codeai-prompt-cat-noise-16x9.gif",
+        "text": "AI uses your prompt and patterns it learned to make a new image.\n\n---\n\n**Something to think about:** What might happen if almost every example in the training data showed the same kind of cat?",
+        "imageUrl": "https://images.code.org/bd73a9b4496a31424e54da656a458d00-codeai-prompt-bold-16x9.gif",
         "key": "adaptive-test-debug-panel-5b46df30-8529-4368-84d7-7e9d4c52c78c",
         "fadeInOverPrevious": true
       }
     ],
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-14T15:27:25.879+00:00\",\"changed\":[\"cloned from \\\"adaptive-test-debug-panel\\\"\"],\"cloned_from\":\"adaptive-test-debug-panel\"},{\"changed_at\":\"2026-10-14 15:28:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 15:35:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 15:38:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 18:43:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 22:31:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 22:38:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-14T15:27:25.879+00:00\",\"changed\":[\"cloned from \\\"adaptive-test-debug-panel\\\"\"],\"cloned_from\":\"adaptive-test-debug-panel\"},{\"changed_at\":\"2026-10-14 15:28:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 15:35:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 15:38:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 18:43:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 22:31:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 22:38:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 02:22:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 02:25:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

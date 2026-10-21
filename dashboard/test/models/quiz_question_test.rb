@@ -20,6 +20,17 @@ class QuizQuestionTest < ActiveSupport::TestCase
     assert_includes question.errors.attribute_names, :content
   end
 
+  test "blank content fails only the presence validation, for every type" do
+    blanks = [nil, {}]
+    QuizQuestion::TYPES.each do |type|
+      blanks.each do |blank|
+        question = type.constantize.new(key: SecureRandom.uuid, name: 'Name', content: blank)
+        refute question.valid?, "#{type} with #{blank.inspect}"
+        assert_equal({content: [{error: :blank}]}, question.errors.details, "#{type} with #{blank.inspect}")
+      end
+    end
+  end
+
   test "a question need not be tagged with any Standard" do
     question = create(:quiz_question)
     assert_empty question.standards

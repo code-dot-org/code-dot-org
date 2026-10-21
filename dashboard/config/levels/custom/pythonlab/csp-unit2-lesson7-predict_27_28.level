@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-20T18:59:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "- Line 1: True and False → False — and needs both sides true; one is false.\n- Line 2: True or False → True — or needs just one side true.\n- Line 3: not False → True — not flips the value.\n- Line 4: True and True → True — both sides true, so and is satisfied.\n- Line 5: False and False → False — neither side true, and still fails.\n- Line 6: False or False → False — neither side true, or has nothing to catch.\n- Line 7: True or True → True — either side alone would do; both happen to be true.\n\nLikely surprises to watch for (Notice & Wonder):\n- Line 4 — some students expect and of two trues to be “extra true” rather than just True.\n- Line 6 — the one case where or doesn’t rescue the result; a few may expect or to “always lean toward True.”\n- Line 3 — usually intuitive, but a student previewing line-5-style reasoning onto it sometimes overthinks a one-sided flip.",
+      "questionType": "freeResponse",
+      "placeholderText": "Predict the console output for each line",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "# Predict & Run\r\n\r\nTrace through the print statements and predict what will print for each line. \r\n\r\nRun the program to check your predictions. ",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "print(\"1:\", True and False)   \nprint(\"2:\", True or False)    \nprint(\"3:\", not False)        \nprint(\"4:\", not True)        \nprint(\"5:\", True and True)\nprint(\"6:\", True or True)\nprint(\"7:\", False and False)\nprint(\"8:\", False or False)  ",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-20 18:59:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:50:53 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:59:43 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 20:08:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 20:08:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
