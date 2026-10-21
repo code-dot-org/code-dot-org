@@ -203,6 +203,22 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
+  test "update edits a multiple select question's correct choices" do
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question, page: 1, position: 2)
+
+    put :update, as: :json, params: {
+      id: question.id, quizLevelId: @quiz.id,
+      questionName: 'Evens', questionTitle: 'Which are even?',
+      choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+      correctChoiceIds: ['a', 'b', 'c']
+    }
+
+    assert_response :success
+    assert_equal ['a', 'b', 'c'], JSON.parse(response.body)['correctChoiceIds']
+    assert_equal ['a', 'b', 'c'], question.reload.content['correct_choice_ids']
+  end
+
   test "update stores the description, and omits a blank one" do
     params = {
       id: @question.id, quizLevelId: @quiz.id,
@@ -280,11 +296,70 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
-  test "update cannot change a question's type" do
-    put :update, params: {
-      id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
-      questionName: 'Still MC', questionTitle: 'ignored'
+  test "update forks a type change between choice types, repoints the placement, and deletes the unreferenced original" do
+    put :update, as: :json, params: {
+      id: @question.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      questionName: 'Now multi-select', questionTitle: 'Pick both',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a', 'b']
     }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 'MultipleSelectQuestion', body['type']
+    assert_equal ['a', 'b'], body['correctChoiceIds']
+    forked = MultipleSelectQuestion.find(body['id'])
+    assert_equal @question.id, forked.fork_parent_id
+    assert_equal forked.id, @quiz.reload.placements.sole.quiz_question_id
+    refute QuizQuestion.exists?(@question.id)
+  end
+
+  test "update keeps the original on a type change when another quiz still places it" do
+    create(:quiz_question_placement, level: create(:quiz), quiz_question: @question)
+
+    put :update, as: :json, params: {
+      id: @question.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      questionName: 'Now multi-select', questionTitle: 'Pick both',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
+    }
+
+    assert_response :success
+    assert_instance_of MultipleChoiceQuestion, @question.reload
+    refute_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
+  end
+
+  test "update keeps the original on a type change when it has responses" do
+    create(:quiz_question_response, quiz_question: @question)
+
+    put :update, as: :json, params: {
+      id: @question.id, quizLevelId: @quiz.id, type: 'MultipleSelectQuestion',
+      questionName: 'Now multi-select', questionTitle: 'Pick both',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
+    }
+
+    assert_response :success
+    assert QuizQuestion.exists?(@question.id)
+  end
+
+  test "update cannot change a choice question into a free response question" do
+    assert_no_difference 'QuizQuestion.count' do
+      put :update, params: {
+        id: @question.id, quizLevelId: @quiz.id, type: 'FreeResponseQuestion',
+        questionName: 'Still MC', questionTitle: 'ignored'
+      }
+    end
+
+    assert_response :bad_request
+    assert_instance_of MultipleChoiceQuestion, @question.reload
+  end
+
+  test "update requires quizLevelId to change a question's type" do
+    assert_no_difference 'QuizQuestion.count' do
+      put :update, as: :json, params: {
+        id: @question.id, type: 'MultipleSelectQuestion',
+        questionName: 'Now multi-select', questionTitle: 'Pick both',
+        choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceIds: ['a']
+      }
+    end
 
     assert_response :bad_request
     assert_instance_of MultipleChoiceQuestion, @question.reload

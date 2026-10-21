@@ -4,7 +4,14 @@
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
-export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
+/** build: a world level with the Code tab beside it, opening on World. */
+export type LevelModeKind =
+  | 'code'
+  | 'world'
+  | 'build'
+  | 'play'
+  | 'image'
+  | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
@@ -29,9 +36,19 @@ export interface LevelMode {
   /** The sentence scene's sentence, by id in sentences.json; the
       image type's own sentence when unset. */
   sentence?: string;
+  /** An image level's instructions once a picture is made, markdown, in
+      place of its objectives title. */
+  generatedInstructions?: string;
+  /** An image level's instructions while the student draws, markdown, in
+      place of its objectives title, which is gone while drawing either way. */
+  paintInstructions?: string;
 }
 
-/** The style every generate form starts on; students can still switch. */
+/** Generations a level before free play allows; free play has no limit. */
+export const GENERATION_LIMIT = 5;
+
+/** The style the advanced generate form starts on; the student form is
+    pixel art only. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
 /** The tabs a kind shows, the first being where the level opens. An image
@@ -39,6 +56,7 @@ export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 const TABS: Record<LevelModeKind, Tab[]> = {
   code: ['Code', 'Play'],
   world: ['World', 'Play'],
+  build: ['World', 'Code', 'Play'],
   play: ['Play'],
   image: [],
   freeplay: ['Code', 'Images', 'World', 'Play'],
@@ -46,6 +64,11 @@ const TABS: Record<LevelModeKind, Tab[]> = {
 
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   return mode ? TABS[mode.kind] : undefined;
+}
+
+/** A level whose palette is about one image: world and build levels. */
+export function editsWorld(mode: LevelMode | undefined): boolean {
+  return mode?.kind === 'world' || mode?.kind === 'build';
 }
 
 /** The image panel is the whole level, in place of the tabs and the stage. */

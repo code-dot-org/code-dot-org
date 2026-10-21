@@ -1,32 +1,34 @@
-// The level header's middle for a unit with simple progress: the project
-// info, the unit name over its saved-at line, and the unit's logo with the
-// part's label and bar, in one flex row. Nothing is measured: each part
-// shrinks on its own and the row centers what is left. HeaderMiddle measures
-// because its bubbles need a count that fits; nothing here does. It shows
-// on mount: HeaderMiddle's wait for an app load has no signal under Lab2,
-// the only place simple progress is used.
+// The level header's middle for a unit whose simple_progress property is
+// set: the unit's image, the unit name and the current level's header label
+// on one line with the project's saved-at under them, after the project's
+// own controls.  One flex row, nothing measured, shown on mount.
 
-import {isEqual} from 'lodash';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
-import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  getParentLevel,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import ProjectInfo from './ProjectInfo';
+import ProjectUpdatedAt, {PROJECT_UPDATED_AT_HEIGHT} from './ProjectUpdatedAt';
 import remeasureOnFontsReady from './remeasureOnFontsReady';
-import ScriptName from './ScriptName';
-import SimpleProgress, {ProgressLevel} from './SimpleProgress';
 
 import styles from './simple-header.module.scss';
 
+// The header page's store has no typed root state; these are the two
+// slices this component reads.
 interface HeaderState {
   isRtl: boolean;
+  project: ProjectState;
 }
 
 interface SimpleHeaderProps {
   scriptData: {simpleProgressImage?: string};
   /** The unit name and its link, as header.build receives them. */
-  scriptNameData?: {name: string; href: string; smallText?: boolean};
+  scriptNameData?: {name: string; href: string};
 }
 
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
@@ -34,11 +36,14 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   scriptNameData,
 }) => {
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
-  // The selector builds a new array per call; compare by content or every
-  // store change re-renders the row.
-  const levels = useSelector(getCurrentLevels, isEqual) as
-    | ProgressLevel[]
-    | undefined;
+  const showSaved = useSelector(
+    (state: HeaderState) => state.project.showProjectUpdatedAt
+  );
+  // A current sublevel's label is its parent's.
+  const label: string | undefined = useSelector(
+    (state: unknown) =>
+      (getParentLevel(state) ?? getCurrentLevel(state))?.headerLabel
+  );
 
   // Eyes UI tests key on these to tell a page with this header from one with
   // a server-rendered header, and to wait for the font swap.
@@ -56,16 +61,48 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
       <div id="project_info_container" className={styles.projectInfo}>
         <ProjectInfo isRtl={isRtl} />
       </div>
-      {scriptNameData && (
-        <div id="unit_name_container" className={styles.unitName}>
-          <ScriptName {...scriptNameData} isRtl={isRtl} />
-        </div>
-      )}
-      <div id="simple_progress_container" className={styles.progress}>
-        <SimpleProgress
-          imageUrl={scriptData.simpleProgressImage}
-          levels={levels}
+      {scriptData.simpleProgressImage && (
+        <img
+          src={scriptData.simpleProgressImage}
+          alt=""
+          className={styles.image}
         />
+      )}
+      <div className={styles.text}>
+        <div className={styles.title}>
+          {scriptNameData && (
+            <a
+              id="unit_name_container"
+              href={scriptNameData.href}
+              title={scriptNameData.name}
+              className={styles.unitName}
+            >
+              {scriptNameData.name}
+            </a>
+          )}
+          {scriptNameData && label && (
+            <span className={styles.separator} aria-hidden="true">
+              ·
+            </span>
+          )}
+          {label && (
+            <span className={styles.label} title={label}>
+              {label}
+            </span>
+          )}
+        </div>
+        {/* The saved-at's height is reserved before it shows, and the line
+            height set with it: the header's inherited line height is taller
+            and would push the text below the slot. */}
+        <div
+          className={styles.saved}
+          style={{
+            height: PROJECT_UPDATED_AT_HEIGHT,
+            lineHeight: `${PROJECT_UPDATED_AT_HEIGHT}px`,
+          }}
+        >
+          {showSaved && <ProjectUpdatedAt />}
+        </div>
       </div>
     </div>
   );
