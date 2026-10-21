@@ -4,11 +4,12 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 export interface BarLayout {
   /** The preview column's side; `?preview=right` moves it. */
   previewSide: 'left' | 'right';
-  /** The scene row sits under the workspace; `?bar=top` puts it above. */
+  /** `?bar=bottom` brings back the scene row under the workspace, and
+      `?bar=top` above it. */
   barAtBottom: boolean;
   /**
-   * `?bar=workspace`: a bar at the editors' base replaces the scene row,
-   * holding a dropdown of the scenes.
+   * The default: a bar at the editors' base holds a dropdown of the scenes,
+   * in place of a scene row.
    */
   barInWorkspace: boolean;
   /**
@@ -24,9 +25,9 @@ export interface BarLayout {
    */
   scenesInAStrip: boolean;
   /**
-   * The resource panel's buttons sit at a bar's end and the panel is gone,
-   * giving the lab its width; `?resources=panel` or `?resources=bar`
-   * decides either way. Without a scene row the panel is the default.
+   * `?resources=bar`: the resource panel's buttons sit at a bar's end and
+   * the panel is gone, giving the lab its width. The panel, with its
+   * buttons at its foot, is the default.
    */
   resourcesInBar: boolean;
   /**
@@ -44,11 +45,10 @@ export interface BarLayout {
 export type ParamReader = (name: string) => unknown;
 
 export function readBarLayout(param: ParamReader = queryParams): BarLayout {
-  const barMode = param('bar');
+  const barMode = param('bar') ?? 'workspace';
   const scenesInStrip = barMode === 'workspace-top';
   const scenesInPreviewBar = barMode === 'preview-top';
   const scenesInAStrip = scenesInStrip || scenesInPreviewBar;
-  const resources = param('resources');
   return {
     previewSide: param('preview') === 'right' ? 'right' : 'left',
     barAtBottom: barMode !== 'top',
@@ -56,8 +56,7 @@ export function readBarLayout(param: ParamReader = queryParams): BarLayout {
     scenesInStrip,
     scenesInPreviewBar,
     scenesInAStrip,
-    resourcesInBar:
-      resources === 'bar' || (resources !== 'panel' && !scenesInAStrip),
+    resourcesInBar: param('resources') === 'bar',
     previewBarShown: param('preview-bar') !== 'false' || scenesInPreviewBar,
     jumboSide: param('jumbo') === 'left' ? 'left' : 'right',
     editorsAtStart: param('editors') === 'stripleft',

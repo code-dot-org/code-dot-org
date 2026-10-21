@@ -260,6 +260,7 @@ en:
     video:
       name:
         maze_intro: Maze Intro
+        hoai2026_intro: Hour of AI 2026 intro
         artist_intro: Artist Intro
         farmer_intro: Farmer Intro
         flappy_intro: Flappy Intro

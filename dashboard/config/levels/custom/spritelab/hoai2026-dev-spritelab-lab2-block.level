@@ -30,7 +30,7 @@
       "paintInstructions": "**Draw a block.**"
     },
     "objectives": {
-      "title": "**Prompt AI to make a block.**"
+      "title": "**Prompt AI to make a block**"
     },
     "long_instructions": "# Prompt AI to make a block",
     "header_label": "Make a platformer"

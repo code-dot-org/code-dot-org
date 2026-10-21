@@ -31,7 +31,7 @@
       "paintInstructions": "**Draw some treasure.**"
     },
     "objectives": {
-      "title": "**Prompt AI to make some treasure.**"
+      "title": "**Prompt AI to make some treasure**"
     },
     "long_instructions": "# Prompt AI to make some treasure",
     "header_label": "Make a platformer"

@@ -209,6 +209,8 @@ describe('checkObjective', () => {
       longestRunSeconds: 4,
       touched: new Set(['Sprite 3']),
       highest: 0.8,
+      farthest: 50,
+      risen: 0,
       scenesLanded: new Set(['platform-scene']),
     };
     const played = inputs({everPlayed: true, runtime, activeTab: 'Play'});
@@ -222,6 +224,17 @@ describe('checkObjective', () => {
     expect(checkObjective({kind: 'reach', role: 'hero'}, played)).toBe(false);
     expect(checkObjective({kind: 'reach', height: 0.75}, played)).toBe(true);
     expect(checkObjective({kind: 'reach', height: 0.9}, played)).toBe(false);
+    expect(checkObjective({kind: 'reach', moved: true}, played)).toBe(true);
+    const jumped = inputs({
+      everPlayed: true,
+      runtime: {...runtime, farthest: 0, risen: 0.2},
+    });
+    expect(checkObjective({kind: 'reach', moved: true}, jumped)).toBe(true);
+    const still = inputs({
+      everPlayed: true,
+      runtime: {...runtime, farthest: 10, risen: 0.05},
+    });
+    expect(checkObjective({kind: 'reach', moved: true}, still)).toBe(false);
     expect(checkObjective({kind: 'scene', id: 'platform-scene'}, played)).toBe(
       true
     );
@@ -245,6 +258,7 @@ describe('runtimeNeeds', () => {
       seconds: false,
       touch: false,
       height: false,
+      move: false,
     });
     expect(
       runtimeNeeds({
@@ -253,7 +267,7 @@ describe('runtimeNeeds', () => {
           {text: '', check: {kind: 'reach', role: 'treasure'}},
         ],
       })
-    ).toEqual({seconds: false, touch: true, height: false});
+    ).toEqual({seconds: false, touch: true, height: false, move: false});
     expect(
       runtimeNeeds({
         items: [
@@ -261,6 +275,9 @@ describe('runtimeNeeds', () => {
           {text: '', check: {kind: 'reach', height: 0.7}},
         ],
       })
-    ).toEqual({seconds: true, touch: false, height: true});
+    ).toEqual({seconds: true, touch: false, height: true, move: false});
+    expect(
+      runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
+    ).toEqual({seconds: false, touch: false, height: false, move: true});
   });
 });

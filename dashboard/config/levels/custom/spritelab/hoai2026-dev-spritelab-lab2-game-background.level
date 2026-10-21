@@ -30,7 +30,7 @@
       "paintInstructions": "**Draw a background for your game.**"
     },
     "objectives": {
-      "title": "**Prompt AI to make a background for your game.**"
+      "title": "**Prompt AI to make a background for your game**"
     },
     "long_instructions": "# Prompt AI to make a background for your game",
     "header_label": "Make a platformer"
