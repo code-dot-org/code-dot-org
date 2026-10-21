@@ -175,6 +175,22 @@ class PracticeProblemsControllerTest < ActionController::TestCase
     assert_equal [objective.id], data['objectiveIds']
   end
 
+  test 'create returns 400 without an objective from the lesson' do
+    sign_in create(:levelbuilder)
+    lesson = create(:lesson)
+
+    assert_no_difference 'PracticeProblem.count' do
+      post :create, as: :json, params: {
+        problem_type: 'multiple_choice_single_select',
+        problem_text: 'Which is a loop?',
+        solution: [{option: 'for', correct: true}, {option: 'if', correct: false}],
+        lesson_id: lesson.id,
+        objective_ids: [],
+      }
+    end
+    assert_response :bad_request
+  end
+
   test 'create returns 400 for an invalid problem' do
     sign_in create(:levelbuilder)
     post :create, params: {problem_type: 'not_a_type', problem_text: '', solution: []}
@@ -187,23 +203,23 @@ class PracticeProblemsControllerTest < ActionController::TestCase
     lesson_b = create(:lesson)
     obj_a = create(:objective, lesson: lesson_a)
     obj_b = create(:objective, lesson: lesson_b)
+    obj_b2 = create(:objective, lesson: lesson_b)
     problem = create(:practice_problem)
     problem.objectives = [obj_a, obj_b]
 
-    # Editing from lesson_b, clearing its objective, must not touch lesson_a.
-    # The client sends a lone empty-string marker for an empty selection since
-    # Rails drops a truly-empty array param.
+    # Editing from lesson_b, swapping its objective, must not touch lesson_a.
     patch :update, params: {
       id: problem.id,
       problem_text: 'edited',
       lesson_id: lesson_b.id,
-      objective_ids: [''],
+      objective_ids: [obj_b2.id],
     }
     assert_response :ok
 
     problem.reload
     assert_equal 'edited', problem.problem_text
     assert_includes problem.objectives, obj_a
+    assert_includes problem.objectives, obj_b2
     refute_includes problem.objectives, obj_b
   end
 

@@ -39,6 +39,7 @@ class PracticeProblemsController < ApplicationController
   # Creates a practice problem (typically an AI-generated one the levelbuilder
   # accepted) and associates it with the lesson's objectives.
   def create
+    return render_missing_objective unless lesson_objective_chosen?
     problem = PracticeProblem.new(practice_problem_params)
     problem.key = generate_key
     if problem.save
@@ -53,6 +54,7 @@ class PracticeProblemsController < ApplicationController
   # PATCH/PUT /practice_problems/:id
   def update
     problem = PracticeProblem.find(params[:id])
+    return render_missing_objective unless lesson_objective_chosen?
     if problem.update(practice_problem_params)
       set_lesson_objectives(problem)
       problem.write_serialization
@@ -113,6 +115,18 @@ class PracticeProblemsController < ApplicationController
       else
         chosen.to_a
       end
+  end
+
+  # The lesson editor finds problems only through the lesson's objectives, so
+  # a problem saved without one disappears on reload.
+  private def lesson_objective_chosen?
+    lesson = Lesson.find_by(id: params[:lesson_id])
+    return true unless lesson
+    lesson.objectives.exists?(id: Array(params[:objective_ids]).compact_blank)
+  end
+
+  private def render_missing_objective
+    render status: :bad_request, json: 'Select at least one objective from this lesson.'
   end
 
   private def generate_key
