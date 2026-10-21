@@ -6,6 +6,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {
+  PLACEHOLDER_BLANK_CLASS,
   PLACEHOLDER_BLOCK_TYPE,
   PLACEHOLDER_CLASS,
   PLACEHOLDER_SPACER,
@@ -85,6 +86,9 @@ export function placeholderOutline(this: BlocklyCore.Block) {
   this.initSvg = () => {
     initSvg();
     this.getSvgRoot().classList.add(PLACEHOLDER_CLASS);
+    if ((this as PlaceholderBlock).blank) {
+      this.getSvgRoot().classList.add(PLACEHOLDER_BLANK_CLASS);
+    }
     const defs = this.workspace.getParentSvg().querySelector('defs');
     if (clip || !defs) {
       return;

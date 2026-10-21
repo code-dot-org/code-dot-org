@@ -373,7 +373,6 @@ button.chipWord {
 }
 
 .dotsRow {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,15 +383,6 @@ button.chipWord {
   display: flex;
   justify-content: center;
   gap: 8px;
-}
-
-// Doubled to outrank the button's own margin and position.
-.shuffle.shuffle {
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0;
 }
 
 // A 24px button around a 12px dot: a neutral ring until the set has its

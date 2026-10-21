@@ -214,6 +214,17 @@ describe('NodeModal', () => {
     ).toBeTruthy();
   });
 
+  it("offers no sort on an answer's single prediction", () => {
+    fireEvent.click(answer('dog'));
+
+    expect(
+      within(dialog()).getByRole('button', {name: 'Sort by legs low to high'})
+    ).toBeTruthy();
+    expect(
+      within(dialog()).queryByRole('button', {name: /^Sort by AI predicts/})
+    ).toBeNull();
+  });
+
   it("leaves the AI's prediction off an answer's training rows", () => {
     fireEvent.click(answer('dog'));
     fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));

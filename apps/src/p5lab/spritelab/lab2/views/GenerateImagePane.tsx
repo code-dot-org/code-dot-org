@@ -38,6 +38,7 @@ import {
 import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 import {PictureRequest} from '../picturePicker';
 
+import PictureLibrary, {LibraryGroup} from './components/PictureLibrary';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
 import {
   AnimationPatch,
@@ -46,11 +47,7 @@ import {
   uploadOrEmbed,
 } from './imageSave';
 import type {NewImageDraft} from './SentenceDialogBody';
-import {
-  alternativeFromAnimation,
-  framesFromAnimation,
-  useImageSession,
-} from './useImageSession';
+import {framesFromAnimation, useImageSession} from './useImageSession';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -156,39 +153,6 @@ function repointAnimation(
   return current.propsByKey[key]?.sourceUrl;
 }
 
-interface GalleryCardProps {
-  animKey: string;
-  /** The image's name; the thumbnail's alt text. */
-  name?: string;
-  /** Name shown under the thumbnail; omitted in the student gallery. */
-  caption?: string;
-  thumb?: string;
-  onOpen: (key: string, trigger: HTMLElement) => void;
-}
-
-// Memoized: opening or closing the dialog re-renders the pane, and every
-// card would re-render with it. Thumbnail updates arrive as a changed prop.
-// Deliberately no title attribute: the card's label is the image's name
-// alone, and the full prompt lives in the image's dialog.
-// Exported for the label tests.
-export const GalleryCard = React.memo<GalleryCardProps>(
-  ({animKey, name, caption, thumb, onOpen}) => (
-    <div className={moduleStyles.imageCard}>
-      <button
-        type="button"
-        className={moduleStyles.imageThumb}
-        onClick={event => onOpen(animKey, event.currentTarget)}
-      >
-        {thumb && <img src={thumb} alt={name || 'image'} />}
-      </button>
-      {caption !== undefined && (
-        <div className={moduleStyles.imageName}>{caption}</div>
-      )}
-    </div>
-  )
-);
-GalleryCard.displayName = 'GalleryCard';
-
 interface GenerateImagePaneProps {
   uploadImage?: UploadImageFunction;
   /** Rename an image and every reference to it; error message or null. */
@@ -206,6 +170,11 @@ interface GenerateImagePaneProps {
   advanced?: boolean;
   /** Style the generate form starts on for new images. */
   defaultStyle?: ImageStyle;
+  /** Generations the student has left on this level; unlimited when
+      unset. */
+  generationsLeft?: number;
+  /** A generation request is leaving the dialog. */
+  onGenerate?: () => void;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
   /** A picture asked for from a block or the world palette: opens the
@@ -215,11 +184,23 @@ interface GenerateImagePaneProps {
   onImageCreated?: (name: string, imageType: ImageType) => void;
   /** The dialog a pick opened was closed without a picture. */
   onPickCancel?: () => void;
+  /** Which side the chosen picture takes; the right unless given. */
+  jumboSide?: 'left' | 'right';
 }
 
+/** The strips, in order: a sprite made as an object has its own. */
+type GroupId = 'character' | 'object' | 'background' | 'block';
+const GROUPS: {id: GroupId; title: string}[] = [
+  {id: 'character', title: 'Characters'},
+  {id: 'object', title: 'Objects'},
+  {id: 'background', title: 'Backgrounds'},
+  {id: 'block', title: 'Blocks'},
+];
+
 /**
- * The Images tab: the project's image gallery. Clicking an image (or the
- * new-image card) opens the image dialog; painting happens from there.
+ * The Images editor: the project's pictures as a library, the chosen one
+ * large. New image opens the dialog; a chosen picture paints straight into
+ * the editor; a block's or the palette's pick opens the dialog on its kind.
  */
 // Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
 // the answer never changes for the same pixels, so it is cached across
@@ -258,10 +239,13 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   imageRole,
   advanced,
   defaultStyle,
+  generationsLeft,
+  onGenerate,
   paintDisabled,
   pickRequest = null,
   onImageCreated,
   onPickCancel,
+  jumboSide,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -351,7 +335,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     reset: resetSession,
     end: endSession,
     push: pushAlternative,
-    setThumb: setAlternativeThumb,
     noteAsset,
     seedSourceUrl,
   } = useImageSession(deleteUnreferencedAsset);
@@ -366,7 +349,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const generationEpochRef = useRef(0);
   const handleGenerateStart = useCallback(() => {
     generationEpochRef.current = sessionEpochRef.current;
-  }, []);
+    onGenerate?.();
+  }, [onGenerate]);
 
   // True when work stamped with `epoch` no longer matches the subject;
   // whatever the stale work uploaded is deleted, since nothing uses it.
@@ -379,25 +363,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       return true;
     },
     [deleteUnreferencedAsset]
-  );
-
-  const openDialog = useCallback(
-    (key: string, trigger: HTMLElement) => {
-      sessionEpochRef.current++;
-      triggerRef.current = trigger;
-      setDialogTarget(key);
-      setPaintNewDraft(null);
-      const seed = alternativeFromAnimation(
-        getStore().getState().animationList.propsByKey[key]
-      );
-      resetSession(seed);
-      if (seed) {
-        alternativeThumb(seed.thumb, seed.frames).then(thumb =>
-          setAlternativeThumb(seed.id, thumb)
-        );
-      }
-    },
-    [resetSession, setAlternativeThumb]
   );
 
   const openNewDialog = useCallback(
@@ -428,18 +393,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // summary: the student is on their way back to the block or the world.
   const pickedRef = useRef(onImageCreated);
   pickedRef.current = onImageCreated;
+  // Keeping a new picture closes the dialog: the library shows it large.
   const finishNew = useCallback(
-    (key: string, name: string, imageType: ImageType) => {
+    (name: string, imageType: ImageType) => {
       pickedRef.current?.(name, imageType);
-      if (pickRequest) {
-        setDialogTarget(null);
-        setPainting('no');
-        endSession();
-      } else {
-        setDialogTarget(key);
-      }
+      setDialogTarget(null);
+      setPainting('no');
+      endSession();
     },
-    [pickRequest, endSession]
+    [endSession]
   );
 
   const closeDialog = useCallback(() => {
@@ -506,16 +468,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       ? detectedGrid.size
       : undefined;
 
-  const handleDelete = useCallback(() => {
-    if (dialogTarget && dialogTarget !== 'new') {
-      const removed =
-        getStore().getState().animationList.propsByKey[dialogTarget];
+  const deleteImage = useCallback(
+    (key: string) => {
+      const removed = getStore().getState().animationList.propsByKey[key];
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
-        deleteAnimation(
-          dialogTarget,
-          true /* isSpriteLab */
-        ) as unknown as AnyAction
+        deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
       );
       // The removal already happened; reclaim the asset if unreferenced now,
       // and take the blocks and World cells that pointed at the image along.
@@ -523,15 +481,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       if (removed?.name) {
         onDeleteImage(removed.name);
       }
+    },
+    [dispatch, deleteUnreferencedAsset, onDeleteImage]
+  );
+  const handleDelete = useCallback(() => {
+    if (dialogTarget && dialogTarget !== 'new') {
+      deleteImage(dialogTarget);
     }
     closeDialog();
-  }, [
-    dispatch,
-    dialogTarget,
-    closeDialog,
-    deleteUnreferencedAsset,
-    onDeleteImage,
-  ]);
+  }, [dialogTarget, deleteImage, closeDialog]);
 
   const handleRename = useCallback(
     (newName: string): string | null => {
@@ -621,7 +579,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       noteAsset(sourceUrl);
 
       if (dialogTarget === 'new' && newName) {
-        const key = createNamedAnimation(dispatch, newName, {
+        createNamedAnimation(dispatch, newName, {
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           ...framesPatch(result.frames),
@@ -633,7 +591,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        finishNew(key, newName, result.generation.imageType);
+        finishNew(newName, result.generation.imageType);
         return;
       }
 
@@ -736,7 +694,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         if (persistIsStale(epoch, sourceUrl)) {
           return;
         }
-        const key = createNamedAnimation(dispatch, name, {
+        createNamedAnimation(dispatch, name, {
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           categories: categoriesForType(imageType),
@@ -756,7 +714,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         setPaintNewDraft(null);
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
-        finishNew(key, name, imageType);
+        finishNew(name, imageType);
         return;
       }
 
@@ -834,6 +792,67 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
+  // The jumbo's picture: the first until one is chosen, a picture made
+  // here as soon as it lands, and the first again when the chosen one goes.
+  const [chosenKey, setChosenKey] = useState<string | null>(null);
+  const knownKeysRef = useRef<Set<string> | null>(null);
+  useEffect(() => {
+    const keys = new Set(images.map(image => image.key));
+    const known = knownKeysRef.current;
+    knownKeysRef.current = keys;
+    const added = known && images.find(image => !known.has(image.key));
+    if (added) {
+      setChosenKey(added.key);
+    }
+  }, [images]);
+  const chosen =
+    images.find(image => image.key === chosenKey) ?? images[0] ?? null;
+  const chosenProps = chosen?.props;
+  // Character sets are sheets of frames; the editor paints one image.
+  const chosenPaintable =
+    !!chosen &&
+    !chosenProps?.poses &&
+    !paintDisabled &&
+    !!(chosenProps?.dataURI || chosenProps?.sourceUrl);
+  const paintChosen = useCallback(() => {
+    if (!chosen) {
+      return;
+    }
+    // The editor saves against the dialog's target.
+    setDialogTarget(chosen.key);
+    setPaintNewDraft(null);
+    savingPaintRef.current = false;
+    setPainting('loading');
+  }, [chosen]);
+  const groups = useMemo<LibraryGroup[]>(() => {
+    const byId = new Map<GroupId, LibraryGroup>(
+      GROUPS.map(({id, title}) => [id, {id, title, pictures: []}])
+    );
+    images.forEach(({key, props}) => {
+      const type = imageTypeFromCategories(props?.categories);
+      const id: GroupId =
+        type === 'sprite'
+          ? props?.generation?.subject === 'object'
+            ? 'object'
+            : 'character'
+          : type;
+      const group = byId.get(id) as LibraryGroup;
+      const src = props?.dataURI || props?.sourceUrl || undefined;
+      group.pictures.push({
+        key,
+        name: props?.name,
+        thumb: getImageThumbnail(props?.name) || src,
+        src,
+        pixelated: !!props?.pixelGridSize,
+        sheet:
+          props?.poses && src
+            ? {src, frameSize: props.frameSize, poses: props.poses}
+            : undefined,
+      });
+    });
+    return [...byId.values()].filter(group => group.pictures.length > 0);
+  }, [images]);
+
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -841,38 +860,22 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     creating && paintNewDraft
       ? paintNewDraft.imageType
       : imageTypeFromCategories(targetProps?.categories);
+  // The details dialog opens for a new picture or a pick; a chosen picture
+  // shows in the jumbo instead, and paints straight into the editor.
+  const detailsDialogShown = creating || !!pickRequest;
   return (
     <div className={moduleStyles.imagesManager}>
-      <div className={moduleStyles.imageGallery}>
-        {/* First slot, so it never hides behind a scroll. */}
-        <div className={moduleStyles.imageCard}>
-          <button
-            type="button"
-            className={moduleStyles.newImageCard}
-            onClick={openNewDialog}
-          >
-            <span aria-hidden>+</span>
-            <span className={moduleStyles.newImageLabel}>New image</span>
-          </button>
-        </div>
-        {images.map(({key, props}) => (
-          <GalleryCard
-            key={key}
-            animKey={key}
-            name={props?.name}
-            caption={advanced ? props?.name : undefined}
-            thumb={
-              getImageThumbnail(props?.name) ||
-              props?.dataURI ||
-              props?.sourceUrl ||
-              undefined
-            }
-            onOpen={openDialog}
-          />
-        ))}
-      </div>
+      <PictureLibrary
+        groups={groups}
+        chosenKey={chosen?.key ?? null}
+        onChoose={setChosenKey}
+        onNew={openNewDialog}
+        onPaint={chosenPaintable ? paintChosen : undefined}
+        onDelete={chosen ? () => deleteImage(chosen.key) : undefined}
+        jumboSide={jumboSide}
+      />
 
-      {dialogTarget && painting !== 'active' && (
+      {detailsDialogShown && dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
           // Keyed by subject: when a paint-save turns 'new' into a real
           // image, the dialog remounts and opens on the summary view.
@@ -920,6 +923,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           }
           advanced={advanced}
           defaultStyle={defaultStyle}
+          generationsLeft={generationsLeft}
           paintDisabled={paintDisabled}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.

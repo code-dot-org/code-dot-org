@@ -182,6 +182,14 @@ $sidebar-tooltip-z-index: 2010;
 }
 
 .taMarkIcon {
+  // FontAwesome's own `.fa-kit` rule sets `display: var(--fa-display,
+  // inline-block)` at the same specificity as this class, so whichever
+  // stylesheet lands later wins - and that differs by page, because the legacy
+  // code-studio bundle injects FontAwesome unlayered at runtime while
+  // frontend/apps/studio layers it. Setting the variable makes FontAwesome's
+  // own declaration resolve to flex either way; the `display` below still
+  // covers the case where FontAwesome has not loaded at all.
+  --fa-display: flex;
   display: flex;
   align-items: center;
   flex-shrink: 0;

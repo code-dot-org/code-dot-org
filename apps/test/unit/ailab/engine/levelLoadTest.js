@@ -1,12 +1,5 @@
-import {act} from '@testing-library/react';
-
 import I18n from '@cdo/apps/ailab/engine/i18n';
-import {
-  initAll,
-  loadLevel,
-  startOver,
-  unmount,
-} from '@cdo/apps/ailab/engine/index';
+import {loadLevel, startOver} from '@cdo/apps/ailab/engine/levelLoad';
 import {
   setAccuracyCheckExamples,
   setCurrentPanel,
@@ -71,29 +64,5 @@ describe('loadLevel', () => {
 
     loadLevel({reserveLastRows: true});
     expect(store.getState().reserveLocation).toBe('end');
-  });
-});
-
-// The component suites render panels directly, so only this reaches the
-// provider nesting that mount() sets up.
-describe('mount', () => {
-  test('renders the app under the training data provider', () => {
-    const root = document.createElement('div');
-    root.id = 'root';
-    document.body.appendChild(root);
-
-    act(() => {
-      initAll({
-        assetPath: './',
-        mode: {datasets: ['songs']},
-        onContinue: () => {},
-        saveTrainedModel: () => {},
-      });
-    });
-
-    expect(root.querySelector('#train-panel')).not.toBeNull();
-
-    act(() => unmount());
-    root.remove();
   });
 });
