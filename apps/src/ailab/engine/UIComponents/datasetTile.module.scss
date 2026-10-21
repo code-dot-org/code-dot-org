@@ -29,11 +29,9 @@
   }
 
   &:focus-visible {
-    outline: none;
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: 2px;
     border-color: var(--border-neutral-primary);
-    box-shadow:
-      0 0 0 2px var(--background-neutral-primary),
-      0 0 0 4px var(--border-focused-primary);
   }
 }
 
@@ -127,11 +125,4 @@
   background-color: var(--background-selected-primary-inverse);
   color: var(--text-selected-primary-inverse);
   font-size: 24px;
-}
-
-@media (forced-colors: active) {
-  .tile:focus-visible {
-    outline: 2px solid;
-    outline-offset: 2px;
-  }
 }
