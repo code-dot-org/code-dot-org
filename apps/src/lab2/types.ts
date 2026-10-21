@@ -330,8 +330,8 @@ export interface LevelProperties {
   aiTutorPromptSettings?: AiTutorPromptSettings;
   levelSystemPrompt?: string;
   /**
-   * Show the instructions in the AI Tutor tab, open above the chat to begin
-   * with, and don't show the separate Instructions tab.
+   * Show the instructions in the AI Tutor tab, pinned above the chat as a
+   * message from the tutor, and don't show the separate Instructions tab.
    */
   showInstructionsInAiTutor?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
