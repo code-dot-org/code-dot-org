@@ -55,6 +55,7 @@ const IMAGE_FIELDS: Record<string, readonly string[]> = {
   gamelab_isCostumeEqual: ['COSTUME'],
   gamelab_layoutSprites: ['GROUP'],
   gamelab_makeBurst: ['ANIMATION_NAME'],
+  spritelab2_beginsBehavior: ['SPRITE'],
   spritelab2_burst: ['ORIGIN'],
   gamelab_makeNewSpriteAnon: ['ANIMATION_NAME'],
   gamelab_makeNewSpriteGroup: ['GROUP'],
