@@ -133,10 +133,10 @@ import {
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
-import AddBlocksButton from './AddBlocksButton';
 import {readBarLayout} from './barLayout';
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
+import CatalogBand from './CatalogBand';
 import EditorStrip from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
@@ -2055,10 +2055,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onCreateScene: sceneEditing.createScene,
     onManageScenes: sceneEditing.openGallery,
   };
-  // The resource panel's buttons, when they live in a bar.
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
+  // The resource panel's buttons, when they live in a bar.
   const toolButtons = resourcesInBar && (
     <ToolButtons
       levelId={levelProperties.id}
@@ -2274,7 +2274,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               )}
               {/* With a workspace bar the catalog opens from the bar's end. */}
               {!barInWorkspace && catalogOffered && (
-                <AddBlocksButton
+                <CatalogBand
                   workspaceVersion={workspaceVersion}
                   getWorkspace={getMainWorkspace}
                   remaining={hiddenBlockTypes.size}

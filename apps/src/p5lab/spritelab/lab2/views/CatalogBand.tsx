@@ -17,7 +17,7 @@ const FOOTER_PX = 44;
 // and the count alone.
 const COMPACT_BELOW_PX = 180;
 
-interface AddBlocksButtonProps {
+interface CatalogBandProps {
   /** Bumps when the workspace is re-injected. */
   workspaceVersion: number;
   getWorkspace: () => BlocklyCore.WorkspaceSvg | null | undefined;
@@ -28,11 +28,12 @@ interface AddBlocksButtonProps {
 
 /**
  * The tinted band across the toolbox's foot, with the button that opens
- * the new-block catalog in its middle. It sits inside the toolbox column,
- * which is why its width follows the column's; the flyout gains room to
- * scroll its last block clear of it.
+ * the new-block catalog in its middle, for the layouts without a scene
+ * bar under the workspace. It sits inside the toolbox column, which is
+ * why its width follows the column's; the flyout gains room to scroll its
+ * last block clear of it.
  */
-const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
+const CatalogBand: React.FunctionComponent<CatalogBandProps> = ({
   workspaceVersion,
   getWorkspace,
   remaining,
@@ -70,4 +71,4 @@ const AddBlocksButton: React.FunctionComponent<AddBlocksButtonProps> = ({
   );
 };
 
-export default AddBlocksButton;
+export default CatalogBand;

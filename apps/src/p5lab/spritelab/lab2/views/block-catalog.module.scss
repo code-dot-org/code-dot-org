@@ -1,11 +1,12 @@
 // The new-block catalog: a list of blocks on the left, the chosen block's
-// help on the right, and the bar pinned over the toolbox that opens it.
+// help on the right, and the button that opens it, at the scene bar's end
+// or on a band across the toolbox's foot.
 
 @use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 @use 'catalog-dot' as catalog;
 
 $list-width: 220px;
-$corner-inset: 8px;
+$band-inset: 8px;
 
 .dialogHost {
   display: contents;
@@ -208,8 +209,7 @@ $corner-inset: 8px;
   padding: 12px 24px;
 }
 
-// Pinned inside the toolbox's lower-right corner: `left` is the toolbox
-// column's width, and the button hangs back from it by its own width.
+// Across the toolbox's foot, at the column's width (CatalogBand.tsx).
 // Above Blockly's category list (z 70) and flyout (z 20), below its block
 // drag surface (z 80), so a block dragged out still passes over the band.
 .toolboxFooter {
@@ -219,7 +219,7 @@ $corner-inset: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 $corner-inset;
+  padding: 0 $band-inset;
   box-sizing: border-box;
   background-color: var(--neutral-black-alpha-80);
   z-index: 71;

@@ -1,6 +1,6 @@
 // Room the catalog asks of the flyout: a wider margin for the dots beside
-// its blocks, space at its foot for the bar pinned over its bottom edge,
-// and the flyout's width for sizing that bar.
+// its blocks, space at its foot for the band pinned over its bottom edge,
+// and the toolbox's width for sizing that band.
 
 import * as BlocklyCore from 'blockly/core';
 
