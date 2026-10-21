@@ -48,9 +48,11 @@
           "text": "In **Code**, drag **begins patrolling** onto the dotted outline.",
           "check": {
             "kind": "block",
-            "type": "gamelab_addBehaviorSimple",
+            "type": "spritelab2_beginsBehavior",
             "under": "spritelab2_whenRun",
-            "contains": "spritelab2_patrollingOnBlocks"
+            "fields": {
+              "BEHAVIOR": "patrollingOnBlocks"
+            }
           }
         },
         {
@@ -68,18 +70,9 @@
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_addBehaviorSimple",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            },
-            "BEHAVIOR": {
-              "block": {
-                "type": "spritelab2_patrollingOnBlocks"
-              }
-            }
+          "type": "spritelab2_beginsBehavior",
+          "fields": {
+            "BEHAVIOR": "patrollingOnBlocks"
           }
         }
       ]
@@ -91,18 +84,9 @@
           "type": "spritelab2_placeholder",
           "extraState": {
             "like": {
-              "type": "gamelab_addBehaviorSimple",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "BEHAVIOR": {
-                  "block": {
-                    "type": "spritelab2_patrollingOnBlocks"
-                  }
-                }
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "patrollingOnBlocks"
               }
             }
           }
