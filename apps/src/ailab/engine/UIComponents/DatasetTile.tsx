@@ -3,6 +3,8 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import FullTextTooltip from './FullTextTooltip';
+
 import styles from './datasetTile.module.scss';
 
 interface DatasetTileProps {
@@ -21,6 +23,7 @@ const DatasetTile = ({
   onClick,
 }: DatasetTileProps) => {
   const [imageFailed, setImageFailed] = useState(false);
+  const [focusVisible, setFocusVisible] = useState(false);
 
   return (
     <button
@@ -28,6 +31,10 @@ const DatasetTile = ({
       className={classNames(styles.tile, {[styles.selected]: isSelected})}
       aria-pressed={isSelected}
       onClick={onClick}
+      onFocus={event =>
+        setFocusVisible(event.currentTarget.matches(':focus-visible'))
+      }
+      onBlur={() => setFocusVisible(false)}
     >
       <span className={styles.cover}>
         {imageSrc && !imageFailed ? (
@@ -57,9 +64,11 @@ const DatasetTile = ({
         )}
       </span>
       <span className={styles.label}>
-        <Typography component="span" variant="label2" className={styles.name}>
-          {name}
-        </Typography>
+        <FullTextTooltip title={name} focused={focusVisible} placement="top">
+          <Typography component="span" variant="label2" className={styles.name}>
+            {name}
+          </Typography>
+        </FullTextTooltip>
         <Typography component="span" variant="body4" className={styles.rows}>
           {`${rowCount.toLocaleString('en')} rows`}
         </Typography>

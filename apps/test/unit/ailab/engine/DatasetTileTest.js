@@ -1,9 +1,18 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import DatasetTile from '@cdo/apps/ailab/engine/UIComponents/DatasetTile';
 
 import {withTheme} from './renderWithProviders';
+
+import './stubPseudoClasses';
+
+function cutOffNames() {
+  jest.spyOn(Element.prototype, 'scrollWidth', 'get').mockReturnValue(120);
+  jest.spyOn(Element.prototype, 'clientWidth', 'get').mockReturnValue(60);
+}
+
+const tooltip = () => screen.queryByRole('tooltip', {hidden: true});
 
 function renderTile(props = {}) {
   return render(
@@ -51,5 +60,41 @@ describe('DatasetTile', () => {
     renderTile({onClick});
     fireEvent.click(screen.getByRole('button', {name: /^Exoplanets/}));
     expect(onClick).toHaveBeenCalled();
+  });
+
+  describe('name tooltip', () => {
+    beforeEach(() => jest.useFakeTimers());
+    afterEach(() => {
+      jest.useRealTimers();
+      jest.restoreAllMocks();
+    });
+
+    test('shows the whole name on hover when it is cut off', () => {
+      cutOffNames();
+      const {container} = renderTile();
+
+      fireEvent.mouseOver(within(container).getByText('Exoplanets'));
+      act(() => jest.advanceTimersByTime(1000));
+
+      expect(tooltip().textContent).toBe('Exoplanets');
+    });
+
+    test('shows the whole name while the tile has keyboard focus', () => {
+      cutOffNames();
+      renderTile();
+
+      act(() => screen.getByRole('button', {name: /^Exoplanets/}).focus());
+
+      expect(tooltip().textContent).toBe('Exoplanets');
+    });
+
+    test('stays closed when the name fits', () => {
+      renderTile();
+
+      fireEvent.mouseOver(screen.getByText('Exoplanets'));
+      act(() => jest.advanceTimersByTime(1000));
+
+      expect(tooltip()).toBeNull();
+    });
   });
 });
