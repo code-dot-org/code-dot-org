@@ -8,6 +8,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {setPromptModes} from '@cdo/apps/aichat/redux';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
@@ -27,6 +28,7 @@ import {
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
+import {getBuildAndAskPromptModes} from './helpers/aiTutorPromptModes';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
@@ -152,6 +154,21 @@ const Weblab2View: React.FC<
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
   const dispatch = useAppDispatch();
+
+  const buildAndAsk = !!levelProperties.aiTutorBuildAndAsk;
+  const answerTypeCustomizations =
+    levelProperties.aiTutorPromptSettings?.answerTypeCustomizations;
+  useEffect(() => {
+    if (!buildAndAsk) return;
+    dispatch(
+      setPromptModes(
+        getBuildAndAskPromptModes(answerTypeCustomizations, weblab2VideoFiles)
+      )
+    );
+    return () => {
+      dispatch(setPromptModes(undefined));
+    };
+  }, [dispatch, buildAndAsk, answerTypeCustomizations]);
 
   const onAssetUploaded = useCallback(
     (asset: ChatAsset, assetUrl: string) => {

@@ -55,7 +55,7 @@ const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
 const allowsJavaScript = (answerTypes: AiTutorAnswerType[]) =>
   answerTypes.includes('buildJavaScript') || answerTypes.includes('buildPage');
 
-const generateFinalAnswerTypeList = (
+export const generateFinalAnswerTypeList = (
   answerTypes: AiTutorAnswerType[]
 ): AiTutorAnswerType[] => {
   let finalAnswerTypes = [...answerTypes];
