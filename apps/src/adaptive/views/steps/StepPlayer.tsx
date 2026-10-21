@@ -70,11 +70,32 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   }, []);
 
   useEffect(() => {
+    const current = new URLSearchParams(window.location.search);
+    if (
+      current.get('checkpoint') === checkpoint.id &&
+      current.get('step') === step.id
+    ) {
+      // URL is already correct (popstate navigation or initial URL load).
+      // Don't add a duplicate history entry.
+      return;
+    }
     const p = new URLSearchParams(window.location.search);
     p.set('checkpoint', checkpoint.id);
     p.set('step', step.id);
-    window.history.replaceState(null, '', `?${p.toString()}`);
+    window.history.pushState(null, '', `?${p.toString()}`);
   }, [checkpoint.id, step.id]);
+
+  useEffect(() => {
+    const handler = () => {
+      const p = new URLSearchParams(window.location.search);
+      const stepId = p.get('step');
+      if (p.get('checkpoint') !== checkpoint.id || !stepId) return;
+      const i = steps.findIndex(s => s.id === stepId);
+      if (i >= 0) setIndex(i);
+    };
+    window.addEventListener('popstate', handler);
+    return () => window.removeEventListener('popstate', handler);
+  }, [checkpoint.id, steps]);
 
   useEffect(() => {
     takeElapsed(); // Restarts the clock for this step.

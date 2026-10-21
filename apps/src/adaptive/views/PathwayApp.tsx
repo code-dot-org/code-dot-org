@@ -85,7 +85,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   }
   const params = new URLSearchParams(window.location.search);
   const urlCheckpointId = params.get('checkpoint') ?? undefined;
-  const urlStepId = params.get('step') ?? undefined;
 
   return (
     <LoadedPathwayApp
@@ -99,8 +98,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
           : {kind: 'map'}
       }
       initialCheckpointId={urlCheckpointId}
-      urlCheckpointId={urlCheckpointId}
-      urlStepId={urlStepId}
       {...actions}
     />
   );
@@ -114,10 +111,6 @@ type LoadedPathwayAppProps = PathwayAppProps &
     initialView: View;
     /** A checkpoint the initial view opens, which starts the adaptive level. */
     initialCheckpointId?: string;
-    /** The checkpoint specified in the URL, if any; scopes urlStepId. */
-    urlCheckpointId?: string;
-    /** A step within urlCheckpointId to jump to directly (from URL). */
-    urlStepId?: string;
   };
 
 // The pathway once its progress is known. Reads initialView and
@@ -129,8 +122,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   statusMap,
   initialView,
   initialCheckpointId,
-  urlCheckpointId,
-  urlStepId,
   startStep,
   completeStep,
   leaveStep,
@@ -153,16 +144,33 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     );
   }, []);
 
-  // URL step applies only to the URL-specified checkpoint; all other entries
-  // (including map clicks to in-progress checkpoints) resume from progress.
+  // Reads the live URL at call time so forward-button re-entry lands on the
+  // right step (not on stale initial props).
   const getInitialStepId = useCallback(
     (checkpointId: string): string | undefined => {
-      if (checkpointId === urlCheckpointId && urlStepId) return urlStepId;
+      const p = new URLSearchParams(window.location.search);
+      const urlCheckpoint = p.get('checkpoint');
+      const urlStep = p.get('step');
+      if (checkpointId === urlCheckpoint && urlStep) return urlStep;
       const cp = pathway.checkpoints.find(c => c.id === checkpointId);
       return cp ? resumeStepId(cp, progress) : undefined;
     },
-    [urlCheckpointId, urlStepId, pathway.checkpoints, progress]
+    [pathway.checkpoints, progress]
   );
+
+  // Handle browser back/forward at the checkpoint level.
+  useEffect(() => {
+    const handler = () => {
+      const p = new URLSearchParams(window.location.search);
+      const checkpointId = p.get('checkpoint');
+      if (!checkpointId) setView({kind: 'map'});
+      else if (checkpointId === 'project') setView({kind: 'project'});
+      else setView({kind: 'step', checkpointId});
+    };
+    window.addEventListener('popstate', handler);
+    return () => window.removeEventListener('popstate', handler);
+  }, []);
+
   // The verdict is only logged for now; nothing acts on it yet.
   const {lastRouting} = progress;
   useEffect(() => {

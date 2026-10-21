@@ -249,5 +249,28 @@ describe('PathwayApp', () => {
       // multi should resume at multi-b-step (from progress), not intro-step.
       expect(screen.getByText('playing Multi at multi-b-step')).toBeTruthy();
     });
+
+    it('navigates back to the map when the browser fires popstate with no checkpoint', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+      await renderSettled();
+      expect(screen.getByText(/playing Intro/)).toBeTruthy();
+
+      // Simulate browser back to the map (no checkpoint param).
+      window.history.replaceState({}, '', '/');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('map screen')).toBeTruthy();
+    });
+
+    it('navigates into a checkpoint when the browser fires popstate with a checkpoint param', async () => {
+      await renderSettled();
+      expect(screen.getByText('map screen')).toBeTruthy();
+
+      // Simulate browser forward to intro at a specific step.
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
   });
 });

@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {Checkpoint, Step} from '@cdo/apps/adaptive/types';
@@ -108,22 +108,25 @@ describe('StepPlayer', () => {
 
   describe('URL parameters', () => {
     let replaceState: jest.SpyInstance;
+    let pushState: jest.SpyInstance;
     const originalUrl = window.location.href;
 
     beforeEach(() => {
       replaceState = jest.spyOn(window.history, 'replaceState');
+      pushState = jest.spyOn(window.history, 'pushState');
       window.history.replaceState({}, '', '/');
     });
 
     afterEach(() => {
       replaceState.mockRestore();
+      pushState.mockRestore();
       window.history.replaceState({}, '', originalUrl);
     });
 
     it('writes checkpoint and step ids to the URL on mount', () => {
       renderPlayer();
 
-      expect(replaceState).toHaveBeenCalledWith(
+      expect(pushState).toHaveBeenCalledWith(
         null,
         '',
         '?checkpoint=basics&step=one'
@@ -132,37 +135,52 @@ describe('StepPlayer', () => {
 
     it('updates the URL when advancing to the next step', () => {
       renderPlayer();
-      replaceState.mockClear();
+      pushState.mockClear();
 
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
-      expect(replaceState).toHaveBeenCalledWith(
+      expect(pushState).toHaveBeenCalledWith(
         null,
         '',
         '?checkpoint=basics&step=two'
       );
     });
 
-    it('starts on the step matching initialStepId', () => {
+    it('starts on the step matching initialStepId without adding a history entry', () => {
+      // Simulate URL navigation — URL already has the step param.
+      window.history.replaceState({}, '', '?checkpoint=basics&step=two');
+      pushState.mockClear();
       renderPlayer('two');
 
       expect(screen.getByText('Step 2 of 2')).toBeTruthy();
-      expect(replaceState).toHaveBeenCalledWith(
-        null,
-        '',
-        '?checkpoint=basics&step=two'
-      );
+      // URL already correct → no pushState (avoids a duplicate history entry).
+      expect(pushState).not.toHaveBeenCalled();
     });
 
     it('falls back to step 0 when initialStepId is not found', () => {
       renderPlayer('unknown-step');
 
       expect(screen.getByText('Step 1 of 2')).toBeTruthy();
-      expect(replaceState).toHaveBeenCalledWith(
+      expect(pushState).toHaveBeenCalledWith(
         null,
         '',
         '?checkpoint=basics&step=one'
       );
+    });
+
+    it('navigates to the previous step when the browser fires popstate', () => {
+      renderPlayer();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+
+      pushState.mockClear();
+      // Simulate browser back: URL reverts to step one, popstate fires.
+      window.history.replaceState({}, '', '?checkpoint=basics&step=one');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      // URL already correct → no duplicate history entry added.
+      expect(pushState).not.toHaveBeenCalled();
     });
   });
 });
