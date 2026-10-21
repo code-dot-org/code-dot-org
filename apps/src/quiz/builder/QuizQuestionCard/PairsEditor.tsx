@@ -23,7 +23,7 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
 }) => {
   const headingId = useId();
 
-  const updateItemText = (pairId: string, index: 0 | 1, text: string) => {
+  const updateItemText = (pairId: string, index: number, text: string) => {
     onChange({
       ...draft,
       pairs: draft.pairs.map(pair => {
@@ -55,12 +55,12 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
             key={pair.id}
             className={classNames(styles.optionRow, styles.pairRow)}
           >
-            {pair.items.map((item, index) => {
-              const role = index === 0 ? 'Term' : 'Definition';
+            {pair.items.map((item, itemIndex) => {
+              const role = itemIndex === 0 ? 'Term' : 'Definition';
               return (
                 <textarea
                   key={item.id}
-                  name={`pair-${pair.id}-item-${index}`}
+                  name={`pair-${pair.id}-item-${itemIndex}`}
                   aria-label={`Pair ${pairIndex + 1}, ${role.toLowerCase()}`}
                   placeholder={role}
                   className={classNames(
@@ -69,7 +69,7 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
                   )}
                   value={item.text}
                   onChange={e =>
-                    updateItemText(pair.id, index as 0 | 1, e.target.value)
+                    updateItemText(pair.id, itemIndex, e.target.value)
                   }
                   disabled={disabled}
                 />
