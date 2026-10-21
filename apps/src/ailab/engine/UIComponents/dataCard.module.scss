@@ -19,11 +19,122 @@
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
-.row {
+.card {
+  @include mixins.card;
+
+  overflow: hidden;
+}
+
+.section {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding: 8px 10px;
+  overflow-wrap: anywhere;
+}
+
+.section + .section,
+.stats,
+.stats + .section {
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.stats {
+  display: flex;
+
+  > .fact {
+    flex: 1;
+    padding: 8px 10px;
+  }
+
+  > .fact + .fact {
+    border-left: 1px solid var(--border-neutral-primary);
+  }
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.heading {
+  color: var(--text-neutral-quaternary);
+}
+
+.statValue {
+  font-weight: 600;
+}
+
+.sampleHeading {
+  display: block;
+  padding: 8px 10px;
+  color: var(--text-neutral-quaternary);
+}
+
+.sampleRow {
+  margin: 0;
+}
+
+.sampleCell {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--border-neutral-primary);
+  overflow-wrap: anywhere;
+
+  dd {
+    margin: 0;
+  }
+}
+
+.sampleValue {
+  font-weight: 600;
+  text-align: end;
+}
+
+.empty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--shape-round);
+  background-color: var(--background-neutral-septenary);
+  color: var(--text-neutral-primary-inverse);
+  font-size: 24px;
+}
+
+.emptyText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.emptyTitle {
+  font-weight: 600;
+}
+
+.emptyMessage {
+  color: var(--text-neutral-secondary);
+}
+
+.actionRow {
+  padding: 8px;
+  background-color: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
 }

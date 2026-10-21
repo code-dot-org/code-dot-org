@@ -296,12 +296,15 @@ const App = ({
       {currentPanel === 'selectDataset' && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
-            <ContainerLeft>
+            <div className={styles.pickerColumn}>
               <SelectDataset />
-            </ContainerLeft>
-            <ContainerRight>
-              <DataCard />
-            </ContainerRight>
+            </div>
+            <div className={styles.infoColumn}>
+              <DataCard
+                canUseDataset={!!panelButtons.next?.enabled}
+                onUseDataset={() => dispatch(setCurrentPanel('datasetView'))}
+              />
+            </div>
           </div>
         </BodyContainer>
       )}
@@ -355,7 +358,7 @@ const App = ({
         </BodyContainer>
       )}
 
-      {hasNavigation && (
+      {hasNavigation && currentPanel !== 'selectDataset' && (
         <PanelButtons
           panelButtons={panelButtons}
           currentPanel={currentPanel}
