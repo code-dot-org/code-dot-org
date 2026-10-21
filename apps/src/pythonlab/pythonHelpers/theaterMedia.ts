@@ -7,11 +7,20 @@ import {TheaterSignalType} from '@cdo/apps/miniApps/theater/constants';
 export function handleTheaterMedia(
   gif: Uint8Array<ArrayBuffer>,
   wav?: Uint8Array<ArrayBuffer>,
-  gifDurationMs?: number
+  gifDurationMs?: number,
+  summary?: string,
+  transcript?: string
 ) {
   const theater = CodebridgeRegistry.getInstance().getTheater();
   if (!theater) {
     return;
+  }
+
+  if (summary) {
+    theater.handleSignal({
+      value: TheaterSignalType.DESCRIPTION,
+      detail: {summary, transcript},
+    });
   }
 
   const gifUrl = URL.createObjectURL(new Blob([gif], {type: 'image/gif'}));

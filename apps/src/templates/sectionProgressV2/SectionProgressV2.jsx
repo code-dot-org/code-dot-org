@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -42,6 +43,7 @@ function SectionProgressV2({
   isLoadingSectionData,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
+  aiChatAccessLevel,
 }) {
   const params = useParams();
   React.useEffect(() => {
@@ -171,6 +173,7 @@ function SectionProgressV2({
           {experiments.isEnabledAllowingQueryString(
             experiments.LESSON_TUTOR_CHALLENGE
           ) &&
+            canUseLessonDeepDive(aiChatAccessLevel) &&
             galleryUrl && (
               <Button
                 href={galleryUrl}
@@ -210,6 +213,7 @@ SectionProgressV2.propTypes = {
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
   hideTopHeading: PropTypes.bool,
+  aiChatAccessLevel: PropTypes.string,
 };
 
 export default connect(
@@ -230,6 +234,7 @@ export default connect(
       state.sectionProgress.expandedLessonIds[
         state.teacherSections.selectedSectionId
       ] || [],
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId) {

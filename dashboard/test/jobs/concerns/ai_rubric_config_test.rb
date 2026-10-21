@@ -28,6 +28,13 @@ class AiRubricConfigTest < ActiveSupport::TestCase
     assert_nil result
   end
 
+  test 'get_lesson_s3_name returns the empty string when that is the s3_config_dir' do
+    create(:rubric, lesson: @lesson, level: @level, s3_config_dir: '')
+
+    result = AiRubricConfig.get_lesson_s3_name(@script_level)
+    assert_equal '', result
+  end
+
   test 'get_lesson_s3_name returns nil for nil script_level' do
     result = AiRubricConfig.get_lesson_s3_name(nil)
     assert_nil result
@@ -42,6 +49,24 @@ class AiRubricConfigTest < ActiveSupport::TestCase
 
   test 'ai_enabled? returns false when no rubric exists' do
     refute AiRubricConfig.ai_enabled?(@script_level)
+  end
+
+  test 'ai_enabled? returns false when rubric has a nil s3_config_dir' do
+    create(:rubric, lesson: @lesson, level: @level, s3_config_dir: nil)
+
+    refute AiRubricConfig.ai_enabled?(@script_level)
+  end
+
+  # An empty s3_config_dir is truthy in Ruby, so this used to enable AI and
+  # enqueue rubric jobs against a config directory that does not exist.
+  test 'ai_enabled? returns false when rubric has an empty s3_config_dir' do
+    create(:rubric, lesson: @lesson, level: @level, s3_config_dir: '')
+
+    refute AiRubricConfig.ai_enabled?(@script_level)
+  end
+
+  test 'ai_enabled? returns false for nil script_level' do
+    refute AiRubricConfig.ai_enabled?(nil)
   end
 
   test 'validate passes when s3_config_dir is nil and no ai-enabled learning goals' do

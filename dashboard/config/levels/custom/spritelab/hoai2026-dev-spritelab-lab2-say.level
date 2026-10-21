@@ -32,18 +32,25 @@
       "name": "Story",
       "type": "story"
     },
-    "guide_steps": [
-      {
-        "text": "**Make them talk.** Drag a **say** block onto the dotted outline under **make new sprite**. Type what they say. Click **Play**."
-      },
-      {
-        "text": "**They're alive!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
+    "objectives": {
+      "title": "**Make them talk.**",
+      "items": [
+        {
+          "text": "Drag a **say** block onto the dotted outline.",
+          "check": {
+            "kind": "block",
+            "type": "gamelab_spriteSay",
+            "under": "spritelab2_whenRun"
+          }
+        },
+        {
+          "text": "Click **Play** and read what they say.",
+          "check": {
+            "kind": "play"
+          }
         }
-      }
-    ],
+      ]
+    },
     "long_instructions": "# Make them talk\nDrag a **say** block onto the dotted outline under **make new sprite** so your character talks.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

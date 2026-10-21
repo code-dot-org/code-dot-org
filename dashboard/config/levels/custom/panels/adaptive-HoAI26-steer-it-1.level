@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:19:56.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-steer-it-1-17995faf-a664-4414-bc98-7431cd3241ef",
+        "text": "**A vague idea leads to a generic page.**\n\n---\nPrompt: “Make a website.”\n",
+        "imageUrl": "https://images.code.org/dee88529c28798be1fda6f480abb9a62-CodeAI browser on dark purple canvas.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-steer-it-1-afd489af-a45b-446f-a338-ca930cab4beb",
+        "text": "**Specific prompts create the page you pictured.**\n\n----\n\nPrompt: “Make a blue skate park page.”\n",
+        "imageUrl": "https://images.code.org/02dfe8a1bee6e260585221550d798819-Blue skate park webpage mockup-1.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-steer-it-1-d8ddab96-9905-4f58-a542-c018b77acfb2",
+        "text": "**Add details to make your vision clearer.**\n\n---\n\nPrompt: “Enlarge the ramp image and pink button.”",
+        "imageUrl": "https://images.code.org/2ed6b377e2e017ef72261aa95cc69f2f-Blue halfpipe skate park webpage design-2.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Watch an animated video demonstrating how specific prompts yield desired results from AI, contrasting with vague prompts. Learn two key moves: adding detail or changing one thing while specifying what to keep.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:20:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:20:44 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 22:49:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 22:52:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 22:52:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

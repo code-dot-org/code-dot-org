@@ -226,6 +226,23 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'open redirect protection' do
+    before do
+      sign_in create(:teacher)
+    end
+
+    it 'allows redirects to the code.org host' do
+      user_return_to = CDO.code_org_url('/afe', 'https:')
+      get api_v1_users_cached_page_auth_redirect_path, params: {user_return_to: user_return_to}
+      assert_redirected_to user_return_to
+    end
+
+    it 'rejects redirects to other hosts' do
+      get api_v1_users_cached_page_auth_redirect_path, params: {user_return_to: 'https://some-other-site.com/afe'}
+      assert_response :not_found
+    end
+  end
+
   describe '#root_url' do
     subject(:root_url_helper) {root_url}
 

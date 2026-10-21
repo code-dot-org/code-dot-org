@@ -25,21 +25,13 @@
       "kind": "image",
       "imageType": "sprite",
       "imageRole": "hero",
-      "imageUi": "explore"
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a character.**"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a character.** Use AI or draw your own."
-      },
-      {
-        "text": "**There's your main character!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "spriteImages": 1
-        }
-      }
-    ],
-    "long_instructions": "# Make a character\nUse AI or draw your own.",
+    "objectives": {
+      "title": "**Prompt AI to make a character.**"
+    },
+    "long_instructions": "# Prompt AI to make a character",
     "header_label": "Make a story"
   }
 }]]></config>

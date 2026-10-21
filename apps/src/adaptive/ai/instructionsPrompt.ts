@@ -8,6 +8,11 @@ import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
 import {labEnvironment} from './labEnvironments';
 
+/**
+ * Used by Langfuse traces; change when a meaningful update is made.
+ */
+export const INSTRUCTIONS_PROMPT_VERSION = '2026-10-12';
+
 export const generatedInstructionsSchema = z.object({
   /** Markdown the student reads, in place of the authored instructions. */
   instructions: z.string().min(1),

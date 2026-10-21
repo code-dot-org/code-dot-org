@@ -1,4 +1,5 @@
 import {
+  INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
   generatedInstructionsSchema,
 } from '@cdo/apps/adaptive/ai/instructionsPrompt';
@@ -29,6 +30,12 @@ const pathway: Pathway = {
   skills: {},
   checkpoints: [checkpoint],
 };
+
+describe('INSTRUCTIONS_PROMPT_VERSION', () => {
+  it('is the date the wording last changed', () => {
+    expect(INSTRUCTIONS_PROMPT_VERSION).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+});
 
 describe('buildInstructionsPrompt', () => {
   it('includes the step brief, the project and the authored fallback', () => {

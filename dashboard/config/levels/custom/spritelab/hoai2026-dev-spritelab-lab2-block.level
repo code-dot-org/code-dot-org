@@ -25,22 +25,14 @@
       "kind": "image",
       "imageType": "block",
       "imageRole": "block",
-      "imageUi": "explore",
-      "sentence": "block"
+      "sentence": "block",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a block.**"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a block.** Platformers are built from blocks. Pick a material and click **Generate**, or draw your own."
-      },
-      {
-        "text": "**Nice!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "blockImages": 1
-        }
-      }
-    ],
-    "long_instructions": "# Make a block\nPlatformers are built from blocks. Pick a material and click **Generate**, or draw your own.",
+    "objectives": {
+      "title": "**Prompt AI to make a block.**"
+    },
+    "long_instructions": "# Prompt AI to make a block",
     "header_label": "Make a platformer"
   }
 }]]></config>

@@ -1,5 +1,6 @@
 class ChallengesController < ApplicationController
   before_action :authenticate_user!
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   load_and_authorize_resource
 
   # GET /challenges?lesson_id=:lesson_id

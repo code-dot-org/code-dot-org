@@ -199,7 +199,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'end',
   },
-  // The saved-at badge's width, held before the badge arrives so the row
+  // The saved-at's width, held before it shows so the row
   // does not re-center when it does. Shrinks with the row like the rest.
   flowColumnWithUpdatedAt: {
     display: 'flex',
@@ -208,7 +208,7 @@ const styles = {
     width: PROJECT_UPDATED_AT_MIN_WIDTH,
     maxWidth: '100%',
   },
-  // The badge's line, held empty until it arrives, so the name sits where
+  // The saved-at's line, held empty until it shows, so the name sits where
   // it will end up.
   updatedAtPlaceholder: {
     height: PROJECT_UPDATED_AT_HEIGHT,

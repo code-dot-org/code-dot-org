@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:22:37.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-0fabcd91-a15d-4eab-b9e0-a817bdb80c3c",
+        "text": "###Sections of a webpage\n\nWhen you name the section you want to work on it makes it easier to build with AI.",
+        "imageUrl": "https://images.code.org/e96e3780990834ef3974ef3d80947dfb-adaptive-HoAI26-use-the-lingo-4-panel-1-63cc02fd-4ac4-46cf-a853-c80dd9d66f8b.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-d0f02545-840a-4370-95c5-1425103a1f5d",
+        "text": "###Hero Banner\n\nThe **hero** section introduces your page. \n",
+        "imageUrl": "https://images.code.org/5c00eed0ca6469f72220f1d45b76daa3-panda-panel-1-smooth.gif",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-1774d6c3-2655-47d6-a5f8-adc23ff053d4",
+        "text": "###Feature Cards\n\nSmaller 'feature cards' show key info or options.",
+        "imageUrl": "https://images.code.org/4cbf36ea81de2d406284648987c85cb2-panda-panel-2-smooth.gif",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-7cf960b2-c941-4a0e-b99a-620e481caad4",
+        "text": "###Interactive Canvas\nAn 'interactive canvas' lets users play or create.",
+        "imageUrl": "https://images.code.org/f86e7d22373a481729d0274ee6031e16-panda-panel-3-drag-bamboo.gif",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-use-the-lingo-4-72392717-95fb-44d8-82e3-9599f4c8b802",
+        "text": "###Call-to-action\nA 'call-to-action' button guides you to the next step.",
+        "imageUrl": "https://images.code.org/e9f7ceb739176bd901c6e1c77c5b2693-panda-panel-4-smooth.gif",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Watch an animated video that tours common web page parts. See how a page builds block by block, with each section popping in to reveal its name and function, such as hero, feature cards, or call-to-action.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:23:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:23:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 23:17:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 23:21:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 23:23:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 23:25:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 23:26:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-19 23:31:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

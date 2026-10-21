@@ -10,6 +10,9 @@ REQUIREMENTS = {
   "bower.json" => {cmd: "bower install"},
   "Gemfile" => {cmd: "bundle install"},
   "schema.rb" => {cmd: "bundle exec rake db:migrate", dir: ".."},
+  # Re-grant permissions for the non-root `writer` and `reader` SQL users when the privilege lists change. The users
+  # themselves survive a db:reset, so this is the only routine reason to re-run the task after the initial `rake install`.
+  "sql_user_provisioner.rb" => {cmd: "bundle exec rake db:provision_sql_users", dir: "../../dashboard"},
 }.freeze
 
 NULL_SHA = /\A0+\z/

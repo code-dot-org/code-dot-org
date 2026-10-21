@@ -1,4 +1,4 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -8,7 +8,9 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {navigateToNextLevelOrFinish} from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import QuizAttemptWorkspace from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
+import QuizAttemptWorkspace, {
+  ANSWER_AUTOSAVE_DELAY_MS,
+} from '@cdo/apps/quiz/attempt/QuizAttemptWorkspace';
 import {QuizAttemptData} from '@cdo/apps/quiz/attempt/types';
 import useQuizAttempt from '@cdo/apps/quiz/attempt/useQuizAttempt';
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
@@ -348,46 +350,6 @@ describe('QuizAttemptWorkspace', () => {
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
-  it('shows a result card for each submitted multiple choice question', () => {
-    renderWorkspace({
-      quizQuestions: [
-        question({id: 1, questionTitle: 'What is the value of x?'}),
-        question({id: 2, questionTitle: 'What is the value of y?'}),
-      ],
-      hookState: {
-        attempt: {
-          ...ATTEMPT,
-          submittedAt: '2026-01-01T00:00:00Z',
-          questionResults: [
-            {
-              quizQuestionId: 1,
-              selectedChoiceId: 'a',
-              correct: true,
-              explanation: null,
-              correctChoiceId: 'a',
-            },
-            {
-              quizQuestionId: 2,
-              selectedChoiceId: 'b',
-              correct: false,
-              explanation: null,
-              correctChoiceId: 'a',
-            },
-          ],
-        },
-      },
-    });
-
-    expect(
-      screen.getByRole('heading', {name: 'What is the value of x?'})
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', {name: 'What is the value of y?'})
-    ).toBeInTheDocument();
-    expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
-    expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
-  });
-
   // If a levelbuilder adds a new question to a quiz that has already been submitted by a student.
   it('omits a question from the submitted results when it has no result', () => {
     renderWorkspace({
@@ -617,14 +579,16 @@ describe('QuizAttemptWorkspace', () => {
           questionResults: [
             {
               quizQuestionId: 1,
-              selectedChoiceId: 'a',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'a'},
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
             },
             {
               quizQuestionId: 2,
-              selectedChoiceId: 'b',
+              questionType: 'MultipleChoiceQuestion',
+              responseData: {selectedChoiceId: 'b'},
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -736,60 +700,6 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
   });
 
-  it('restores in-progress answers and leaves questions missing from the map blank', () => {
-    renderWorkspace({
-      hookState: {
-        attempt: {
-          ...ATTEMPT,
-          questionResultsInProgress: [
-            {quizQuestionId: 1, selectedChoiceId: 'b'},
-          ],
-        },
-      },
-      quizQuestions: [
-        question({
-          id: 1,
-          questionTitle: 'First',
-          choices: [
-            {id: 'a', text: 'five'},
-            {id: 'b', text: 'eight'},
-          ],
-        }),
-        question({
-          id: 2,
-          questionTitle: 'Second',
-          choices: [
-            {id: 'a', text: 'left'},
-            {id: 'b', text: 'right'},
-          ],
-        }),
-      ],
-    });
-
-    expect(screen.getByRole('radio', {name: /eight/})).toBeChecked();
-    expect(screen.getByRole('radio', {name: /left/})).not.toBeChecked();
-    expect(screen.getByRole('radio', {name: /right/})).not.toBeChecked();
-  });
-
-  it('submits the chosen answer when a choice is selected', async () => {
-    const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
-    renderWorkspace({
-      hookState: {attempt: ATTEMPT, submitQuestionResponse},
-      quizQuestions: [question({id: 5})],
-    });
-
-    fireEvent.click(screen.getByRole('radio', {name: /8/}));
-
-    // The optimistic UI update is synchronous; the write itself is queued
-    // onto a per-question promise chain, so it lands a tick later.
-    expect(screen.getByRole('radio', {name: /8/})).toBeChecked();
-    await waitFor(() =>
-      expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
-        selectedChoiceId: 'b',
-      })
-    );
-  });
-
   it('advances to the next page instead of finishing when not on the last page', () => {
     const finishAttempt = jest.fn();
     renderWorkspace({
@@ -849,23 +759,6 @@ describe('QuizAttemptWorkspace', () => {
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
-  it('sends the currently selected choices when finishing', async () => {
-    const finishAttempt = jest.fn().mockResolvedValue(undefined);
-    const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
-    renderWorkspace({
-      hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
-      quizQuestions: [question({id: 5, page: 1})],
-    });
-
-    fireEvent.click(screen.getByRole('radio', {name: /8/}));
-    await waitFor(() => expect(submitQuestionResponse).toHaveBeenCalled());
-    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
-
-    await waitFor(() =>
-      expect(finishAttempt).toHaveBeenCalledWith({5: {selectedChoiceId: 'b'}})
-    );
-  });
-
   it('reports success for this level once the attempt is submitted, so the progress bubble updates even if the student has since navigated on', async () => {
     const finishAttempt = jest.fn().mockResolvedValue(undefined);
     renderWorkspace({
@@ -903,77 +796,6 @@ describe('QuizAttemptWorkspace', () => {
     expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
   });
 
-  it('sends writes for the same question in the order they were picked', async () => {
-    const firstWrite = deferred<void>();
-    const submitQuestionResponse = jest
-      .fn()
-      .mockReturnValueOnce(firstWrite.promise)
-      .mockResolvedValueOnce(undefined);
-    renderWorkspace({
-      hookState: {attempt: ATTEMPT, submitQuestionResponse},
-      quizQuestions: [question({id: 5})],
-    });
-
-    fireEvent.click(screen.getByRole('radio', {name: /8/})); // choice b
-    fireEvent.click(screen.getByRole('radio', {name: /5/})); // choice a, right after
-
-    // The second pick is queued behind the first write, not racing it.
-    await waitFor(() =>
-      expect(submitQuestionResponse).toHaveBeenCalledTimes(1)
-    );
-    expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
-      selectedChoiceId: 'b',
-    });
-
-    firstWrite.resolve();
-    await waitFor(() =>
-      expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
-    );
-    expect(submitQuestionResponse).toHaveBeenLastCalledWith(5, {
-      selectedChoiceId: 'a',
-    });
-  });
-
-  it('rolls back the optimistic choice when its write fails and nothing newer was picked', async () => {
-    const submitQuestionResponse = jest
-      .fn()
-      .mockRejectedValue(new Error('network down'));
-    renderWorkspace({
-      hookState: {attempt: ATTEMPT, submitQuestionResponse},
-      quizQuestions: [question({id: 5})],
-    });
-
-    fireEvent.click(screen.getByRole('radio', {name: /8/}));
-    expect(screen.getByRole('radio', {name: /8/})).toBeChecked();
-
-    await waitFor(() =>
-      expect(screen.getByRole('radio', {name: /8/})).not.toBeChecked()
-    );
-    expect(screen.getByRole('radio', {name: /5/})).not.toBeChecked();
-  });
-
-  it('does not roll back a newer choice when an earlier write for the same question fails', async () => {
-    const firstWrite = deferred<void>();
-    const submitQuestionResponse = jest
-      .fn()
-      .mockReturnValueOnce(firstWrite.promise)
-      .mockResolvedValueOnce(undefined);
-    renderWorkspace({
-      hookState: {attempt: ATTEMPT, submitQuestionResponse},
-      quizQuestions: [question({id: 5})],
-    });
-
-    fireEvent.click(screen.getByRole('radio', {name: /8/})); // b, will fail
-    fireEvent.click(screen.getByRole('radio', {name: /5/})); // a, picked after
-
-    firstWrite.reject(new Error('network down'));
-    await waitFor(() =>
-      expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
-    );
-
-    expect(screen.getByRole('radio', {name: /5/})).toBeChecked();
-  });
-
   it('waits for a pending answer write to settle before finishing the attempt', async () => {
     const pendingWrite = deferred<void>();
     const submitQuestionResponse = jest
@@ -996,6 +818,31 @@ describe('QuizAttemptWorkspace', () => {
     await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
+  it('finishes the attempt only once when Submit is clicked again while submitting', async () => {
+    const pendingWrite = deferred<void>();
+    const submitQuestionResponse = jest
+      .fn()
+      .mockReturnValue(pendingWrite.promise);
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    renderWorkspace({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+      quizQuestions: [question({id: 5})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/}));
+    const submitButton = screen.getByRole('button', {name: /Submit|Finish/});
+    fireEvent.click(submitButton);
+    fireEvent.click(submitButton);
+    expect(submitButton).toHaveAttribute('aria-disabled', 'true');
+
+    pendingWrite.resolve();
+    await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
+    await waitFor(() =>
+      expect(submitButton).toHaveAttribute('aria-disabled', 'false')
+    );
+    expect(finishAttempt).toHaveBeenCalledTimes(1);
+  });
+
   it('does not render the footer outside of an in-progress attempt', () => {
     renderWorkspace({
       hookState: {
@@ -1014,7 +861,7 @@ describe('QuizAttemptWorkspace', () => {
   });
 
   describe('when a teacher is viewing a student', () => {
-    const SUBMITTED = {
+    const SUBMITTED: QuizAttemptData = {
       ...ATTEMPT,
       submittedAt: '2026-01-01T00:00:00Z',
       score: 1,
@@ -1023,7 +870,8 @@ describe('QuizAttemptWorkspace', () => {
       questionResults: [
         {
           quizQuestionId: 1,
-          selectedChoiceId: 'b',
+          questionType: 'MultipleChoiceQuestion',
+          responseData: {selectedChoiceId: 'b'},
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -1098,7 +946,11 @@ describe('QuizAttemptWorkspace', () => {
           attempt: {
             ...ATTEMPT,
             questionResultsInProgress: [
-              {quizQuestionId: 1, selectedChoiceId: 'b'},
+              {
+                quizQuestionId: 1,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'b'},
+              },
             ],
           },
         },
@@ -1136,6 +988,446 @@ describe('QuizAttemptWorkspace', () => {
       expect(
         screen.queryByRole('button', {name: 'Try again'})
       ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('multiple choice questions', () => {
+    it('restores in-progress answers and leaves questions missing from the map blank', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 1,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'b'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [
+          question({
+            id: 1,
+            questionTitle: 'First',
+            choices: [
+              {id: 'a', text: 'five'},
+              {id: 'b', text: 'eight'},
+            ],
+          }),
+          question({
+            id: 2,
+            questionTitle: 'Second',
+            choices: [
+              {id: 'a', text: 'left'},
+              {id: 'b', text: 'right'},
+            ],
+          }),
+        ],
+      });
+
+      expect(screen.getByRole('radio', {name: /eight/})).toBeChecked();
+      expect(screen.getByRole('radio', {name: /left/})).not.toBeChecked();
+      expect(screen.getByRole('radio', {name: /right/})).not.toBeChecked();
+    });
+
+    it('submits the chosen answer when a choice is selected', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [question({id: 5})],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+
+      // The optimistic UI update is synchronous; the write itself is queued
+      // onto a per-question promise chain, so it lands a tick later.
+      expect(screen.getByRole('radio', {name: /8/})).toBeChecked();
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
+          selectedChoiceId: 'b',
+        })
+      );
+    });
+
+    it('sends writes for the same question in the order they were picked', async () => {
+      const firstWrite = deferred<void>();
+      const submitQuestionResponse = jest
+        .fn()
+        .mockReturnValueOnce(firstWrite.promise)
+        .mockResolvedValueOnce(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [question({id: 5})],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/})); // choice b
+      fireEvent.click(screen.getByRole('radio', {name: /5/})); // choice a, right after
+
+      // The second pick is queued behind the first write, not racing it.
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(1)
+      );
+      expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
+        selectedChoiceId: 'b',
+      });
+
+      firstWrite.resolve();
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
+      );
+      expect(submitQuestionResponse).toHaveBeenLastCalledWith(5, {
+        selectedChoiceId: 'a',
+      });
+    });
+
+    it('rolls back the optimistic choice when its write fails and nothing newer was picked', async () => {
+      const submitQuestionResponse = jest
+        .fn()
+        .mockRejectedValue(new Error('network down'));
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [question({id: 5})],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      expect(screen.getByRole('radio', {name: /8/})).toBeChecked();
+
+      await waitFor(() =>
+        expect(screen.getByRole('radio', {name: /8/})).not.toBeChecked()
+      );
+      expect(screen.getByRole('radio', {name: /5/})).not.toBeChecked();
+    });
+
+    it('does not roll back a newer choice when an earlier write for the same question fails', async () => {
+      const firstWrite = deferred<void>();
+      const submitQuestionResponse = jest
+        .fn()
+        .mockReturnValueOnce(firstWrite.promise)
+        .mockResolvedValueOnce(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [question({id: 5})],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/})); // b, will fail
+      fireEvent.click(screen.getByRole('radio', {name: /5/})); // a, picked after
+
+      firstWrite.reject(new Error('network down'));
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
+      );
+
+      expect(screen.getByRole('radio', {name: /5/})).toBeChecked();
+    });
+
+    it('sends the currently selected choices when finishing', async () => {
+      const finishAttempt = jest.fn().mockResolvedValue(undefined);
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+        quizQuestions: [question({id: 5, page: 1})],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      await waitFor(() => expect(submitQuestionResponse).toHaveBeenCalled());
+      fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+      await waitFor(() =>
+        expect(finishAttempt).toHaveBeenCalledWith({5: {selectedChoiceId: 'b'}})
+      );
+    });
+
+    it('shows a result card for each submitted multiple choice question', () => {
+      renderWorkspace({
+        quizQuestions: [
+          question({id: 1, questionTitle: 'What is the value of x?'}),
+          question({id: 2, questionTitle: 'What is the value of y?'}),
+        ],
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            submittedAt: '2026-01-01T00:00:00Z',
+            questionResults: [
+              {
+                quizQuestionId: 1,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'a'},
+                correct: true,
+                explanation: null,
+                correctChoiceId: 'a',
+              },
+              {
+                quizQuestionId: 2,
+                questionType: 'MultipleChoiceQuestion',
+                responseData: {selectedChoiceId: 'b'},
+                correct: false,
+                explanation: null,
+                correctChoiceId: 'a',
+              },
+            ],
+          },
+        },
+      });
+
+      expect(
+        screen.getByRole('heading', {name: 'What is the value of x?'})
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', {name: 'What is the value of y?'})
+      ).toBeInTheDocument();
+      expect(screen.getByText('Question 1 of 2')).toBeInTheDocument();
+      expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
+    });
+  });
+
+  describe('free response questions', () => {
+    const FR_QUESTION = question({
+      id: 9,
+      type: 'FreeResponseQuestion',
+      questionTitle: 'Why does the loop stop?',
+      choices: undefined,
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('restores in-progress answer text', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 9,
+                questionType: 'FreeResponseQuestion',
+                responseData: {answerText: 'x > 3'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [FR_QUESTION],
+      });
+
+      expect(screen.getByRole('textbox', {name: /loop stop/})).toHaveValue(
+        'x > 3'
+      );
+    });
+
+    it('autosaves the answer only once typing pauses', async () => {
+      jest.useFakeTimers();
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x'}});
+      act(() => jest.advanceTimersByTime(ANSWER_AUTOSAVE_DELAY_MS - 1));
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      act(() => jest.advanceTimersByTime(ANSWER_AUTOSAVE_DELAY_MS - 1));
+      expect(submitQuestionResponse).not.toHaveBeenCalled();
+
+      act(() => jest.advanceTimersByTime(1));
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledWith(9, {
+          answerText: 'x > 3',
+        })
+      );
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(1);
+    });
+
+    it('saves the answer right away on blur', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledWith(9, {
+          answerText: 'x > 3',
+        })
+      );
+    });
+
+    it('does not save on blur when nothing changed', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+
+      fireEvent.blur(screen.getByRole('textbox', {name: /loop stop/}));
+
+      await Promise.resolve();
+      expect(submitQuestionResponse).not.toHaveBeenCalled();
+    });
+
+    it('keeps the typed answer when its save fails', async () => {
+      const submitQuestionResponse = jest
+        .fn()
+        .mockRejectedValue(new Error('offline'));
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+
+      await waitFor(() => expect(submitQuestionResponse).toHaveBeenCalled());
+      expect(textbox).toHaveValue('x > 3');
+    });
+
+    it('retries a failed save on the next blur, then stops once it succeeds', async () => {
+      const submitQuestionResponse = jest
+        .fn()
+        .mockRejectedValueOnce(new Error('offline'))
+        .mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(1)
+      );
+
+      // No edit in between - the unsaved text alone triggers the retry.
+      fireEvent.blur(textbox);
+      await waitFor(() =>
+        expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
+      );
+      expect(submitQuestionResponse).toHaveBeenLastCalledWith(9, {
+        answerText: 'x > 3',
+      });
+
+      // Saved now, so a further blur sends nothing. A macrotask tick lets
+      // the whole write chain settle first.
+      const settle = () =>
+        act(() => new Promise(resolve => setTimeout(resolve, 0)));
+      await settle();
+      fireEvent.blur(textbox);
+      await settle();
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(2);
+    });
+
+    it('sends the answer text with submit and drops the pending autosave', async () => {
+      jest.useFakeTimers();
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      const finishAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+        quizQuestions: [question({id: 5}), FR_QUESTION],
+      });
+
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      fireEvent.change(screen.getByRole('textbox', {name: /loop stop/}), {
+        target: {value: 'x > 3'},
+      });
+      fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+      await waitFor(() =>
+        expect(finishAttempt).toHaveBeenCalledWith({
+          5: {selectedChoiceId: 'b'},
+          9: {answerText: 'x > 3'},
+        })
+      );
+      act(() => jest.advanceTimersByTime(ANSWER_AUTOSAVE_DELAY_MS));
+      expect(submitQuestionResponse).not.toHaveBeenCalledWith(9, {
+        answerText: 'x > 3',
+      });
+    });
+
+    it('locks answers while submitting, so the answer on screen at Submit is the one sent', async () => {
+      const choiceWrite = deferred<void>();
+      const submitQuestionResponse = jest
+        .fn()
+        .mockResolvedValueOnce(undefined) // answer text, on blur
+        .mockReturnValueOnce(choiceWrite.promise); // choice, still in flight
+      const finishAttempt = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+        quizQuestions: [question({id: 5}), FR_QUESTION],
+      });
+      const textbox = screen.getByRole('textbox', {name: /loop stop/});
+
+      fireEvent.change(textbox, {target: {value: 'x > 3'}});
+      fireEvent.blur(textbox);
+      fireEvent.click(screen.getByRole('radio', {name: /8/}));
+      fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+      // Submit is waiting on the choice write; no answer can change meanwhile.
+      expect(textbox).toBeDisabled();
+      expect(screen.getByRole('radio', {name: /5/})).toBeDisabled();
+      expect(finishAttempt).not.toHaveBeenCalled();
+
+      choiceWrite.resolve();
+      await waitFor(() =>
+        expect(finishAttempt).toHaveBeenCalledWith({
+          5: {selectedChoiceId: 'b'},
+          9: {answerText: 'x > 3'},
+        })
+      );
+    });
+
+    it('shows the submitted answer text in the results', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            submittedAt: '2026-10-14T00:00:00Z',
+            questionResults: [
+              {
+                quizQuestionId: 9,
+                questionType: 'FreeResponseQuestion',
+                responseData: {answerText: 'x > 3'},
+                correct: null,
+                explanation: null,
+                correctChoiceId: null,
+              },
+            ],
+          },
+        },
+        quizQuestions: [FR_QUESTION],
+      });
+
+      expect(screen.getByText('Why does the loop stop?')).toBeInTheDocument();
+      expect(screen.getByText('x > 3')).toBeInTheDocument();
+    });
+
+    it("shows a teacher the student's in-progress answer text", () => {
+      renderWorkspace({
+        viewAsUserId: 99,
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 9,
+                questionType: 'FreeResponseQuestion',
+                responseData: {answerText: 'x > 3'},
+              },
+            ],
+          },
+        },
+        quizQuestions: [FR_QUESTION],
+      });
+
+      expect(screen.getByText("Student's answer")).toBeInTheDocument();
+      expect(screen.getByText('x > 3')).toBeInTheDocument();
+      expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
     });
   });
 });

@@ -103,8 +103,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     pathway,
     checkpoint,
     statusMap,
-    stepContextMap,
-    updateStepContext,
+    progress,
+    saveGeneratedInstructions,
     aiContext,
   } = usePathwayContext();
   // Keyed on the project's strings, not the channel, which changes on every save.
@@ -120,8 +120,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectInfo: {name: projectName, description: projectDescription},
     sources: currentSources,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
-    stepContext: stepContextMap[step.id],
-    updateStepContext,
+    generatedInstructions: progress.steps[step.id]?.generatedInstructions,
+    saveGeneratedInstructions,
     aichatContext: aiContext,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
@@ -140,6 +140,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     });
     const own = levelProperties.levelSystemPrompt;
     return {
+      // Default to pinning, but let the level override if needed.
+      showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
       longInstructions: instructions,

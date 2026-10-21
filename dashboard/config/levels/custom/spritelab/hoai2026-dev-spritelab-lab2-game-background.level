@@ -25,22 +25,14 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "platform-background",
-      "imageUi": "explore",
-      "sentence": "place-detail"
+      "sentence": "place-detail",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background for your game.**"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a background for your game.** Pick the words for a place and click **Generate**, or draw your own."
-      },
-      {
-        "text": "**That sets the mood!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "backgroundImages": 1
-        }
-      }
-    ],
-    "long_instructions": "# Make a background for your game\nPick the words for a place and click **Generate**, or draw your own.",
+    "objectives": {
+      "title": "**Prompt AI to make a background for your game.**"
+    },
+    "long_instructions": "# Prompt AI to make a background for your game",
     "header_label": "Make a platformer"
   }
 }]]></config>

@@ -8,11 +8,14 @@
       "curriculum_umbrella": "Self-paced PL - CSD",
       "has_unnumbered_lessons": true,
       "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-03 20:29:52 UTC",
+    "serialized_at": "2026-10-15 21:48:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

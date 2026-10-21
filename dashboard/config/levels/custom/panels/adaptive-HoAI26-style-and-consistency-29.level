@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:38:23.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-cc215da3-5e1a-4f98-913c-ec1eee2dd05c",
+        "text": "When you start, your web page has a clear and consistent style.",
+        "imageUrl": "https://images.code.org/fb38e5ced6d213a108c4c7f8374573ba-adaptive-HoAI26-style-and-consistency-29-panel-1-80dabced-1aba-4180-9cb6-f6afd68ec458.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-c917aa50-bf5c-4f46-a949-fef5c9b7a386",
+        "text": "But with new additions, its style can start to drift.",
+        "imageUrl": "https://images.code.org/a34419902bf961bff6436c3b680691d3-adaptive-HoAI26-style-and-consistency-29-panel-2-c6df0b35-7aee-4469-b79a-54fa4c6d8ce0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-99b13e14-681f-4d4d-a23a-cc040dc2a1d5",
+        "text": "Too many inconsistent changes make it look messy and unplanned.",
+        "imageUrl": "https://images.code.org/cde3a5eda1a694488cb80b87ba25d2af-adaptive-HoAI26-style-and-consistency-29-panel-3-e5ba20f8-746e-4902-8499-5ae21a23aa8e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-b06446b7-09ac-4ffd-8f2d-9d7b1ea933d7",
+        "text": "To fix this, name your style. Use a few words to describe it.",
+        "imageUrl": "https://images.code.org/0e0cae90516199a1cf60a0a5d70d8098-adaptive-HoAI26-style-and-consistency-29-panel-4-100af280-dd6c-4437-bc7f-1c9d58484380.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-4ef13276-0b29-49e6-8d98-7d15b4ea009a",
+        "text": "Then, repeat that style every time you make a change.",
+        "imageUrl": "https://images.code.org/7f5932fafe06c29ba11ac60b1b41d9e9-adaptive-HoAI26-style-and-consistency-29-panel-5-e92d5c9c-c6c3-4009-ac7c-a953e17a8406.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Watch a video demonstrating the importance of maintaining a consistent style. Observe how a site's style can drift after multiple changes and how naming and repeating the desired style helps maintain coherence."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:39:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:39:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

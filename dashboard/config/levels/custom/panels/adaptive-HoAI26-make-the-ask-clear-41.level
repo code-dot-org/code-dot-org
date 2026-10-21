@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-16T21:44:01.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-dcc4456d-fb5e-4458-8425-822f4ae00b38",
+        "text": "A button that simply says 'Click here' is vague. It doesn't tell users what will happen next.",
+        "imageUrl": "https://images.code.org/ea72914efaf1c4f21d2de455e5f3f0fc-adaptive-HoAI26-make-the-ask-clear-41-panel-1-30f9bca6-0f7b-4dae-a8b5-92d134ccebfd.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-be68f628-41fd-4b16-9687-cbdc2f0b844b",
+        "text": "A clear button tells you what to do next, using a verb and a specific step, like 'Find my club'.",
+        "imageUrl": "https://images.code.org/2e3da13f7bb81364236e67671b51b33d-adaptive-HoAI26-make-the-ask-clear-41-panel-2-9b2587aa-0103-4c55-a053-71c7acab0fee.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "adaptive-HoAI26-make-the-ask-clear-41-90457403-06f2-42a5-b0b5-744d20b9b404",
+        "text": "Place important buttons where people naturally look, often under a short, guiding sentence.",
+        "imageUrl": "https://images.code.org/1ba0e33ea57a9aab68c54568dd8bd10a-adaptive-HoAI26-make-the-ask-clear-41-panel-3-289111b2-866e-4a82-bd87-9e9278bf5322.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Understand how to create clear calls-to-action. Learn why 'Click here' is vague, and how to make buttons clear with a verb and a next step, placing them where eyes naturally land."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:44:37 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:44:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

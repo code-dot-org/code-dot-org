@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T01:18:19.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Knitted Scarf",
+    "long_instructions": "You’re building a multiple linear regression model that predicts how long it will take to knit a scarf (in hours) based on two variables: the number of rows of stitches and the number of stitch types in the scarf’s design. You have the following training data:\r\n\r\n---\r\n\r\n| Rows | Stitch Types | Time |\r\n| - | - | - |\r\n| 100 rows | 8 stitch types | 6 hours |\r\n| 180 rows | 2 stitch types | 5 hours |\r\n| 250 rows | 6 stitch types | 9 hours |\r\n| 320 rows | 1 stitch types | 8 hours |\r\n| 400 rows | 4 stitch types | 12 hours |\r\n\r\n---\r\n\r\n**☑️ Do This:**\r\n\r\n1. The first training data example has already been added to the `inputs` list. Add the remaining training data examples to the `inputs` list.\r\n2. The first training data example has already been added to the `outputs` list. Add the remaining training data examples to the `outputs` list.\r\n3. Train the model based on the training data inputs and outputs.\r\n4. Run the code and make some predictions. Check that they seem reasonable based on your training data.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo train a linear regression model with `scikit-learn`, recall that you can use code like:\r\n\r\n```python\r\nmodel.fit(x, y)\r\n```\r\n\r\nwhere `x` represents the inputs and `y` represents the outputs.\r\n",
+    "bubble_choice_description": "Predict how long it will take to knit a scarf.",
+    "thumbnail_url": "https://images.code.org/99fbbb216f85c402831c143e814b592d-knitting.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\n\n# Input features: [rows, stitch types]\n# TODO 1: Add the remaining training data inputs\ninputs = [[100, 8]]\n\n# Output: hours of knitting\n# TODO 2: Add the remaining training data outputs\noutputs = [6]\n\nmodel = LinearRegression()\n\n# TODO 3: Fit the model to the inputs and outputs\n\n# Make a prediction for a new knitting project\nrows = int(input(\"Enter number of rows of stitches: \"))\nstitch_types = int(input(\"Enter number of stitch types: \"))\nprediction = model.predict([[rows, stitch_types]])\n\nprint(\"Predicted hours of knitting: \", round(prediction[0]))\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpZn7LnDQIWbWyw\nar6Hnvp5NCCLXjkLvINqikEztnpIXU3l5GadmFplpsxlPr2XrzOy52cXgLCs\nDNkwPvA67GMSOPnKdnv42wdLVrlRnlabOgkxWyJtBKdao9JAGNJkXKVjVDwb\nv9mlANh62+nTJyAnTBAlw3EvtKeNJ03coDFQmz/onOeEFCjm66qm9YybKouQ\nO0wT5q+hOODEAACaVDFOPK5yJsnTT8F9aAG0q2aQ1hVH74ZhT21i3APogo2u\nHc3iViQ3zXPwzgxnD3rKM3NheWP8y2XBXwgmYQOnK591bm5EHUcbBLUjEp+p\n1OhWuR5G6adFH2G1/qY13jouteNzkPgYOmtJqSodM5lYN4jA7ldf2VQxL08c\nx+95B55w5qdwchMD3kdkyvRLu4vnOSRSXuuSiqccJH66DIfj7nA3dm3dYZ9d\ndmNwWWvxrUfxVpnGrdWZp3ey2yji+2Gj9X3zJArs7c2VyUVO+QhqMchKwwLY\nysz8mJUF4PuRLWNscyNk7HgGsL1mOt9RIZrKylrF8zowpseurVKobYWBLdMN\nY4z9VwvG7341GKQBKLpzVPIR0oW0llkgfS8JCGSd6GCWZxEffCERJ8tWu3N3\n0B5bfpjSTOkhf+pIhCSMws0jeIPCtW85qMnkGkBzmAWLQ/PBuIG8+edX/3bE\nreiLtHnnwLCu9o9oQa4u8eqQ18EWE1xUX0ooB8z4DIP1s9ZbblswDtvAns/l\nfAxGcWdTsKm26XYOs1LXZONTaIxD3OnXSjUqaqSCzpzrPLShodDk0EpNCLkW\nlQ8Cz8Y30xX0r7DPxq+tMPljyPL7K5baoQoawHRqmrWDDYnGOC8V5wVF/T1D\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 01:26:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:28:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:28:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-13 01:28:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

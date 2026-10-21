@@ -61,3 +61,8 @@
   align-items: center;
   gap: 16px;
 }
+
+.note {
+  flex-basis: 100%;
+  color: var(--text-neutral-tertiary);
+}

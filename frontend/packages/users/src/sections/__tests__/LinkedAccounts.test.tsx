@@ -1,4 +1,4 @@
-import {render, screen, within} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
@@ -275,5 +275,68 @@ describe('LinkedAccounts', () => {
       .map(heading => heading.textContent);
     expect(names).not.toContain('Canvas');
     expect(names).toContain('PowerSchool (Schoology)');
+  });
+
+  it('disconnects a linked login by posting its disconnect form', () => {
+    renderSection();
+
+    const form = button(/^disconnect google/i).closest('form')!;
+    expect(form).toHaveAttribute('method', 'post');
+    expect(form).toHaveAttribute('action', '/users/auth/2/disconnect');
+    expect(form).toHaveFormValues({authenticity_token: 'test-csrf-token'});
+  });
+
+  it('blocks disconnecting the last login of an account without a password', () => {
+    renderSection({
+      hasPassword: false,
+      authenticationOptions: [
+        {id: 2, credentialType: 'google_oauth2', email: 'ada@example.com'},
+      ],
+    });
+
+    const disconnect = button(/^disconnect google/i);
+    expect(disconnect).toBeDisabled();
+    expect(disconnect).toHaveAccessibleDescription(
+      'To make sure you can still sign in to your account, please add a password or another linked account first.',
+    );
+  });
+
+  it('blocks disconnecting Google for a student in a Google Classroom section', () => {
+    renderSection({userType: 'student'}, {isGoogleClassroomStudent: true});
+
+    const disconnect = button(/^disconnect google/i);
+    expect(disconnect).toBeDisabled();
+    expect(disconnect).toHaveAccessibleDescription(
+      'You cannot disconnect from this linked account because it is tied to one of your sections.',
+    );
+  });
+
+  it('names an LMS login by its platform and warns before unlinking it', () => {
+    renderSection(
+      {
+        authenticationOptions: [
+          {id: 1, credentialType: 'email', email: 'ada@example.com'},
+          {id: 3, credentialType: 'lti_v1', email: 'ada@lms.example.com'},
+        ],
+      },
+      {lmsName: 'canvas_cloud'},
+    );
+
+    expect(
+      within(group('My integrations')).getByRole('heading', {
+        level: 4,
+        name: 'Canvas',
+      }),
+    ).toBeInTheDocument();
+    const disconnect = button(/^disconnect canvas/i);
+    expect(disconnect.closest('form')).toBeNull();
+
+    fireEvent.click(disconnect);
+
+    expect(
+      screen.getByRole('alertdialog', {
+        name: 'Are you sure you want to unlink your account?',
+      }),
+    ).toBeInTheDocument();
   });
 });
