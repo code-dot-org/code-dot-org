@@ -1,27 +1,26 @@
-import {render, screen, fireEvent, act} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
+import {type Mock, vi} from 'vitest';
 
 import {
-  saveUserLessonReflection,
-  saveUserLessonObjectiveReflection,
-} from '@cdo/apps/aiTutor/reflectionsApi';
-import ReflectionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox';
-import HttpClient from '@cdo/apps/util/HttpClient';
+  generatePodcast,
+  saveLessonObjectiveReflection,
+  saveLessonReflection,
+} from '../../api';
+import ReflectionBox from '../ReflectionBox';
 
-jest.mock('@cdo/apps/aiTutor/reflectionsApi', () => ({
-  saveUserLessonReflection: jest.fn(),
-  saveUserLessonObjectiveReflection: jest.fn(),
+const client = vi.hoisted(() => ({transport: {}}));
+
+vi.mock('@code-dot-org/core/api', () => ({useApiClient: () => client}));
+
+vi.mock('../../api', () => ({
+  generatePodcast: vi.fn(),
+  saveLessonObjectiveReflection: vi.fn(),
+  saveLessonReflection: vi.fn(),
 }));
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {post: jest.fn()},
-}));
-
-const saveReflectionMock = saveUserLessonReflection as jest.Mock;
-const saveObjectiveMock = saveUserLessonObjectiveReflection as jest.Mock;
-const postMock = HttpClient.post as jest.Mock;
+const saveReflectionMock = saveLessonReflection as Mock;
+const saveObjectiveMock = saveLessonObjectiveReflection as Mock;
+const generatePodcastMock = generatePodcast as Mock;
 
 const LESSON_ID = 42;
 const OBJECTIVES = [
@@ -29,21 +28,21 @@ const OBJECTIVES = [
   {id: '2', description: 'Objective two'},
 ];
 
-function renderReflectionBox(onSubmitComplete: jest.Mock = jest.fn()) {
+function renderReflectionBox(onSubmitComplete: Mock = vi.fn()) {
   render(
     <ReflectionBox
       unitLabel={'unit 1'}
       lessonId={LESSON_ID}
       objectives={OBJECTIVES}
       onSubmitComplete={onSubmitComplete}
-      onNext={jest.fn()}
-    />
+      onNext={vi.fn()}
+    />,
   );
 }
 
 // Advance past the slide animation (two nested 220ms timeouts).
 function runAnimation() {
-  act(() => jest.advanceTimersByTime(500));
+  act(() => vi.advanceTimersByTime(500));
 }
 
 // Rate the current objective and advance to the next step.
@@ -63,15 +62,15 @@ function navigateToFreeResponse(rating: RegExp = /got it/i) {
 
 describe('ReflectionBox submit button', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
-    jest.clearAllMocks();
+    vi.useFakeTimers();
+    vi.clearAllMocks();
     saveReflectionMock.mockResolvedValue(undefined);
     saveObjectiveMock.mockResolvedValue(undefined);
-    postMock.mockResolvedValue(undefined);
+    generatePodcastMock.mockResolvedValue(undefined);
   });
 
   afterEach(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   it('renders the Done button on the last step', () => {
@@ -80,7 +79,7 @@ describe('ReflectionBox submit button', () => {
     expect(screen.getByRole('button', {name: /^done$/i})).toBeInTheDocument();
   });
 
-  it('calls saveUserLessonReflection with lessonId, success, and struggle on submit', async () => {
+  it('calls saveLessonReflection with lessonId, success, and struggle on submit', async () => {
     renderReflectionBox();
     navigateToFreeResponse();
 
@@ -93,13 +92,14 @@ describe('ReflectionBox submit button', () => {
     });
 
     expect(saveReflectionMock).toHaveBeenCalledWith(
+      client.transport,
       LESSON_ID,
       'I understood loops',
-      'Recursion is hard'
+      'Recursion is hard',
     );
   });
 
-  it('calls saveUserLessonObjectiveReflection only for selected objectives', async () => {
+  it('calls saveLessonObjectiveReflection only for selected objectives', async () => {
     renderReflectionBox();
 
     // Rate only the first objective; skip the second via "Got it" to satisfy
@@ -116,7 +116,7 @@ describe('ReflectionBox submit button', () => {
     expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
   });
 
-  it('calls saveUserLessonObjectiveReflection for each selected objective', async () => {
+  it('calls saveLessonObjectiveReflection for each selected objective', async () => {
     renderReflectionBox();
 
     // First objective: "Got it"
@@ -129,8 +129,16 @@ describe('ReflectionBox submit button', () => {
     });
 
     expect(saveObjectiveMock).toHaveBeenCalledTimes(2);
-    expect(saveObjectiveMock).toHaveBeenCalledWith('1', 'confident');
-    expect(saveObjectiveMock).toHaveBeenCalledWith('2', 'lost');
+    expect(saveObjectiveMock).toHaveBeenCalledWith(
+      client.transport,
+      '1',
+      'confident',
+    );
+    expect(saveObjectiveMock).toHaveBeenCalledWith(
+      client.transport,
+      '2',
+      'lost',
+    );
   });
 
   it('requests podcast generation for objectives rated struggling or getting there', async () => {
@@ -143,12 +151,11 @@ describe('ReflectionBox submit button', () => {
       fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
-    expect(postMock).toHaveBeenCalledTimes(1);
-    expect(postMock).toHaveBeenCalledWith(
-      '/ai_student_podcasts/generate_podcast',
-      JSON.stringify({lesson_id: LESSON_ID, objective_ids: ['1', '2']}),
-      true,
-      {'Content-Type': 'application/json'}
+    expect(generatePodcastMock).toHaveBeenCalledTimes(1);
+    expect(generatePodcastMock).toHaveBeenCalledWith(
+      client.transport,
+      LESSON_ID,
+      ['1', '2'],
     );
   });
 
@@ -162,12 +169,11 @@ describe('ReflectionBox submit button', () => {
       fireEvent.click(screen.getByRole('button', {name: /^done$/i}));
     });
 
-    expect(postMock).toHaveBeenCalledTimes(1);
-    expect(postMock).toHaveBeenCalledWith(
-      '/ai_student_podcasts/generate_podcast',
-      JSON.stringify({lesson_id: LESSON_ID, objective_ids: []}),
-      true,
-      {'Content-Type': 'application/json'}
+    expect(generatePodcastMock).toHaveBeenCalledTimes(1);
+    expect(generatePodcastMock).toHaveBeenCalledWith(
+      client.transport,
+      LESSON_ID,
+      [],
     );
   });
 
@@ -176,7 +182,7 @@ describe('ReflectionBox submit button', () => {
     saveReflectionMock.mockReturnValue(
       new Promise<void>(resolve => {
         resolveSubmit = resolve;
-      })
+      }),
     );
 
     renderReflectionBox();

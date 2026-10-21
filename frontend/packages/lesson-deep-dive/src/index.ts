@@ -12,6 +12,7 @@ export {default as PracticeMultipleChoice} from './SkillsCheck/QuestionTypes/Mul
 export {default as PracticeScramble} from './SkillsCheck/QuestionTypes/Scramble';
 export {default as PracticeSort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
+export {default as ReflectionBox} from './Reflection/ReflectionBox';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
 export {default as ValidatedLevelsBox} from './StudentLessonStats/ValidatedLevelsBox';
@@ -31,10 +32,13 @@ export type {
   Challenge,
   ChallengeResponse,
   ChallengeResponseAsset,
+  LessonObjective,
   MatchSolution,
   MultiSolution,
   PracticeProblem,
   Reaction,
+  ReflectionData,
+  ReflectionValue,
   ScrambleSolution,
 } from './types';
 export {assetWithUrl} from './gallery/assetUtils';
