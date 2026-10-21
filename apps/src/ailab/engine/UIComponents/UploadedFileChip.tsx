@@ -1,7 +1,8 @@
-/* The student's uploaded CSV, removed by clicking it. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
-import React, {useState} from 'react';
+import React from 'react';
+
+import {useFocusVisible} from '../useFocusVisible';
 
 import FullTextTooltip from './FullTextTooltip';
 
@@ -13,7 +14,7 @@ interface UploadedFileChipProps {
 }
 
 const UploadedFileChip = ({fileName, onRemove}: UploadedFileChipProps) => {
-  const [focusVisible, setFocusVisible] = useState(false);
+  const {focusVisible, focusHandlers} = useFocusVisible();
 
   return (
     <button
@@ -21,13 +22,10 @@ const UploadedFileChip = ({fileName, onRemove}: UploadedFileChipProps) => {
       className={styles.chip}
       aria-label={`Remove ${fileName}`}
       onClick={onRemove}
-      onFocus={event =>
-        setFocusVisible(event.currentTarget.matches(':focus-visible'))
-      }
-      onBlur={() => setFocusVisible(false)}
+      {...focusHandlers}
     >
       <span className={styles.fileIcon}>
-        <FontAwesomeV6Icon iconName="file-csv" iconStyle="solid" />
+        <FontAwesomeV6Icon iconName="file-csv" aria-hidden="true" />
       </span>
       <FullTextTooltip title={fileName} focused={focusVisible} placement="top">
         <Typography component="span" variant="label2" className={styles.name}>
@@ -36,8 +34,8 @@ const UploadedFileChip = ({fileName, onRemove}: UploadedFileChipProps) => {
       </FullTextTooltip>
       <FontAwesomeV6Icon
         iconName="xmark"
-        iconStyle="solid"
         className={styles.removeIcon}
+        aria-hidden="true"
       />
     </button>
   );

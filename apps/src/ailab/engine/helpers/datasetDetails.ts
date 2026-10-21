@@ -76,7 +76,5 @@ export function isUserUploadedDataset(state: RootState): boolean {
 }
 
 export function getUploadedFileName(state: RootState): string | undefined {
-  return isUserUploadedDataset(state)
-    ? (state.csvfile as unknown as File).name
-    : undefined;
+  return typeof state.csvfile === 'object' ? state.csvfile.name : undefined;
 }

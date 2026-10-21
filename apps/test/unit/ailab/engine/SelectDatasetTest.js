@@ -1,9 +1,12 @@
-import {fireEvent, screen} from '@testing-library/react';
+import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {createStore} from 'redux';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
-import rootReducer, {setSelectedCSV} from '@cdo/apps/ailab/engine/redux';
+import rootReducer, {
+  setInvalidData,
+  setSelectedCSV,
+} from '@cdo/apps/ailab/engine/redux';
 import SelectDataset from '@cdo/apps/ailab/engine/UIComponents/SelectDataset';
 
 import {renderWithProviders} from './renderWithProviders';
@@ -32,5 +35,14 @@ describe('SelectDataset', () => {
     expect(
       screen.queryByRole('button', {name: 'Remove mydataset.csv'})
     ).toBeNull();
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: /^Upload/})
+    );
+  });
+
+  test('shows no file chip for a rejected upload', () => {
+    const {store} = renderPicker(new File(['a,b'], 'tiny.csv'));
+    act(() => store.dispatch(setInvalidData('tooFewRows')));
+    expect(screen.queryByRole('button', {name: 'Remove tiny.csv'})).toBeNull();
   });
 });

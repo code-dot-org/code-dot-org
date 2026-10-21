@@ -35,9 +35,8 @@
 }
 
 .upload .divider {
-  width: 1px;
   height: 12px;
-  background-color: var(--border-neutral-primary);
+  border-color: var(--border-neutral-primary);
 }
 
 .upload .fileInput {

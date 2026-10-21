@@ -33,7 +33,7 @@ export type DatasetLayout = 'table' | 'cards';
 
 export interface RootState {
   name: string | undefined;
-  csvfile: string | undefined;
+  csvfile: string | File | undefined;
   jsonfile: string | undefined;
   invalidData: string | undefined;
   data: DataRow[];
@@ -161,7 +161,7 @@ const ailabSlice = createSlice({
     setSelectedName(state, action: PayloadAction<string>) {
       state.name = action.payload;
     },
-    setSelectedCSV(state, action: PayloadAction<string>) {
+    setSelectedCSV(state, action: PayloadAction<string | File>) {
       state.csvfile = action.payload;
     },
     setSelectedJSON(state, action: PayloadAction<string>) {

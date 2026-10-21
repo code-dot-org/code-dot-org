@@ -1,6 +1,6 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, Typography} from '@mui/material';
+import {Button, Divider, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useRef} from 'react';
 
@@ -32,6 +32,7 @@ const SelectDataset = () => {
   const uploadedFileName = useAppSelector(getUploadedFileName);
   const invalidData = useAppSelector(state => state.invalidData);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const uploadButtonRef = useRef<HTMLButtonElement>(null);
 
   // A project waiting to be opened may be waiting for the dataset chosen here.
   const resetForDatasetChange = () =>
@@ -39,7 +40,7 @@ const SelectDataset = () => {
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
-    dispatch(setSelectedCSVAction(csvfilePath as string));
+    dispatch(setSelectedCSVAction(csvfilePath));
   const setSelectedJSON = (jsonfilePath: string) =>
     dispatch(setSelectedJSONAction(jsonfilePath));
 
@@ -73,6 +74,7 @@ const SelectDataset = () => {
   const handleUploadRemove = () => {
     resetState();
     invalidatePendingDatasetLoads();
+    uploadButtonRef.current!.focus();
   };
 
   const getInvalidDataMessage = () => {
@@ -117,6 +119,7 @@ const SelectDataset = () => {
       {!specifiedDatasets && (
         <div className={styles.upload}>
           <Button
+            ref={uploadButtonRef}
             variant="outlined"
             color="secondary"
             size="small"
@@ -130,9 +133,9 @@ const SelectDataset = () => {
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
           </Button>
-          {uploadedFileName && (
+          {uploadedFileName && !invalidData && (
             <>
-              <span className={styles.divider} />
+              <Divider orientation="vertical" className={styles.divider} />
               <UploadedFileChip
                 fileName={uploadedFileName}
                 onRemove={handleUploadRemove}
