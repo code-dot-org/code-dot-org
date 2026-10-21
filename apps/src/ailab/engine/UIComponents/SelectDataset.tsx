@@ -8,6 +8,7 @@ import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
+import {getUploadedFileName} from '../helpers/datasetDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {loadDataset} from '../loadDataset';
@@ -20,6 +21,7 @@ import {
 } from '../redux';
 
 import DatasetTile from './DatasetTile';
+import UploadedFileChip from './UploadedFileChip';
 
 import styles from './selectDataset.module.scss';
 
@@ -27,6 +29,7 @@ const SelectDataset = () => {
   const dispatch = useAppDispatch();
   const specifiedDatasets = useAppSelector(getSpecifiedDatasets);
   const name = useAppSelector(state => state.name);
+  const uploadedFileName = useAppSelector(getUploadedFileName);
   const invalidData = useAppSelector(state => state.invalidData);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -65,6 +68,11 @@ const SelectDataset = () => {
     setSelectedCSV(event.target.files![0]);
     invalidatePendingDatasetLoads();
     parseCSV(event.target.files![0] as unknown as string, false, true);
+  };
+
+  const handleUploadRemove = () => {
+    resetState();
+    invalidatePendingDatasetLoads();
   };
 
   const getInvalidDataMessage = () => {
@@ -113,12 +121,24 @@ const SelectDataset = () => {
             color="secondary"
             size="small"
             startIcon={
-              <FontAwesomeV6Icon iconName="file-arrow-up" aria-hidden="true" />
+              <FontAwesomeV6Icon
+                iconName="arrow-up-from-bracket"
+                aria-hidden="true"
+              />
             }
             onClick={() => fileInputRef.current!.click()}
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
           </Button>
+          {uploadedFileName && (
+            <>
+              <span className={styles.divider} />
+              <UploadedFileChip
+                fileName={uploadedFileName}
+                onRemove={handleUploadRemove}
+              />
+            </>
+          )}
           {/* Setting value to empty here allows us to receive an
               onChange event for the same file as previously selected,
               which allows the user to upload a file, then choose an

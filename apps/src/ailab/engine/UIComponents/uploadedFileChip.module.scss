@@ -1,0 +1,57 @@
+@use '../sharedMixins' as mixins;
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  max-width: 200px;
+  height: 32px;
+  margin: 0;
+  padding: 0 10px 0 0;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-brand-primary);
+  border-radius: var(--shape-sm);
+  color: var(--text-selected-primary-inverse);
+  cursor: pointer;
+  transition: scale mixins.$mark-transition;
+
+  &:hover {
+    background-color: var(--background-brand-light);
+  }
+
+  &:active {
+    scale: 0.98;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--background-neutral-primary),
+      0 0 0 4px var(--border-focused-primary);
+  }
+}
+
+.fileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: 32px;
+  flex-shrink: 0;
+  background-color: var(--background-selected-strong);
+  color: var(--text-neutral-primary-inverse);
+  font-size: 14px;
+}
+
+.name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.removeIcon {
+  flex-shrink: 0;
+  font-size: 14px;
+}
