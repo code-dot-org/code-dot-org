@@ -85,8 +85,7 @@ experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
 // Offer teachers the Reset Progress option on the section progress page.
 experiments.RESET_PROGRESS = 'reset-progress';
-// Ask teachers to explain why they are resetting student progress. Temporary:
-// turn off once enough reasons have been collected.
+// Ask teachers to explain why they are resetting student progress.
 experiments.RESET_PROGRESS_REASON = 'reset-progress-reason';
 
 /**

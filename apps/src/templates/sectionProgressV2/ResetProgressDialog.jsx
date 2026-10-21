@@ -47,8 +47,7 @@ export default function ResetProgressDialog({
     []
   );
   // Seeded from the last reset so a teacher resetting for the same reason
-  // does not retype it. tryGetLocalStorage returns null for a key that was
-  // never set - its default only covers a thrown exception.
+  // does not retype it.
   const [reason, setReason] = React.useState(
     () => (askForReason && tryGetLocalStorage(REASON_STORAGE_KEY, '')) || ''
   );
