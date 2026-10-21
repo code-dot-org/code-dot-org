@@ -4,13 +4,19 @@ import {
   DragEndEvent,
   KeyboardSensor,
   PointerSensor,
+  useDroppable,
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
 import {sortableKeyboardCoordinates} from '@dnd-kit/sortable';
-import React, {FC, useState} from 'react';
-
-import {Droppable} from '@cdo/apps/codebridge/FileBrowser/Droppable';
+import {
+  type Dispatch,
+  type FC,
+  type ReactNode,
+  type SetStateAction,
+  useCallback,
+  useState,
+} from 'react';
 
 import {
   MatchSolution,
@@ -24,15 +30,28 @@ import {DraggableOptions} from './DraggableOptions';
 import styles from './question.module.scss';
 import sortStyles from './sort.module.scss';
 
+interface DropZoneProps {
+  id: string;
+  className: string;
+  children: ReactNode;
+}
+
+const DropZone: FC<DropZoneProps> = ({id, className, children}) => {
+  const {setNodeRef} = useDroppable({id});
+  return (
+    <div ref={setNodeRef} className={className}>
+      {children}
+    </div>
+  );
+};
+
 interface PracticeSortProps {
   problem: PracticeProblem;
   submitted: boolean;
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  studentAnswerCallback: React.Dispatch<
-    React.SetStateAction<
-      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
-    >
+  submitCallback: Dispatch<SetStateAction<boolean>>;
+  correctCallback: Dispatch<SetStateAction<boolean>>;
+  studentAnswerCallback: Dispatch<
+    SetStateAction<(MultiSolution | ScrambleSolution | MatchSolution)[] | null>
   >;
 }
 
@@ -46,7 +65,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
   const solutions = problem.solution.map(s => ({...s})) as MatchSolution[];
 
   const [draggableOptions] = useState<string[]>(
-    solutions.map(s => s.option).sort(() => Math.random() - 0.5)
+    solutions.map(s => s.option).sort(() => Math.random() - 0.5),
   );
   const [droppableMatches] = useState<string[]>([
     ...new Set(solutions.map(s => s.correct).sort(() => Math.random() - 0.5)),
@@ -61,7 +80,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
         solutions.find(
           ({option, correct}) =>
             option === dragAndDropPairs[i].option &&
-            correct === dragAndDropPairs[i].correct
+            correct === dragAndDropPairs[i].correct,
         ) === undefined
       ) {
         return false;
@@ -72,22 +91,22 @@ const PracticeSort: FC<PracticeSortProps> = ({
 
   const sensors = useSensors(
     useSensor(PointerSensor, {activationConstraint: {distance: 10}}),
-    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates})
+    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}),
   );
 
-  const handleDragEndOption = React.useCallback(
+  const handleDragEndOption = useCallback(
     (event: DragEndEvent) => {
       const {active, over} = event;
       if (over && active.id !== over.id && !submitted) {
         setDragAndDropPairs([
           ...dragAndDropPairs.filter(
-            sol => sol.option !== (active.id as string)
+            sol => sol.option !== (active.id as string),
           ),
           {option: active.id as string, correct: over.id as string},
         ]);
       }
     },
-    [dragAndDropPairs, setDragAndDropPairs, submitted]
+    [dragAndDropPairs, setDragAndDropPairs, submitted],
   );
 
   return (
@@ -100,11 +119,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
       >
         <div className={sortStyles.optionsRows}>
           {droppableMatches.map(match => (
-            <Droppable
-              key={match}
-              data={{id: match}}
-              className={sortStyles.dropZone}
-            >
+            <DropZone key={match} id={match} className={sortStyles.dropZone}>
               <span className={sortStyles.cardLabel}>{match}</span>
               {dragAndDropPairs
                 .filter(sol => sol.correct === match)
@@ -116,13 +131,13 @@ const PracticeSort: FC<PracticeSortProps> = ({
                     correct={
                       solutions.find(
                         ({option, correct}) =>
-                          option === pair.option && correct === pair.correct
+                          option === pair.option && correct === pair.correct,
                       ) !== undefined
                     }
                     showAnswer={submitted}
                   />
                 ))}
-            </Droppable>
+            </DropZone>
           ))}
         </div>
         <div
@@ -132,7 +147,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
             .filter(
               opt =>
                 dragAndDropPairs.find(({option}) => option === opt) ===
-                undefined
+                undefined,
             )
             .map(opt => (
               <DraggableOptions
