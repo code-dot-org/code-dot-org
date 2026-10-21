@@ -188,8 +188,7 @@ class LevelsController < ApplicationController
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
-    # The header label shows only in a simple-progress unit's header; on
-    # other levels the field invites a title that shows nowhere.
+    # The header label shows only in a simple-progress unit's header.
     @show_header_label = @level.header_label.present? ||
       @level.script_levels.map(&:script).compact.any?(&:simple_progress?)
     if @level.is_a? Applab
