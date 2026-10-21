@@ -33,7 +33,7 @@
       "type": "platform"
     },
     "objectives": {
-      "title": "**Set them walking.**",
+      "title": "**Set them walking**",
       "items": [
         {
           "text": "Drag **begins patrolling** onto the dotted outline.",

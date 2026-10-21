@@ -30,7 +30,7 @@
       "paintInstructions": "**Draw a background.**"
     },
     "objectives": {
-      "title": "**Prompt AI to make a background.**"
+      "title": "**Prompt AI to make a background**"
     },
     "long_instructions": "# Prompt AI to make a background",
     "header_label": "Make a story"
