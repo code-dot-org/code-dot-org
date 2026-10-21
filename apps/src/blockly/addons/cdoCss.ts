@@ -24,6 +24,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       fill-opacity: 0;
     }
     .blocklyPlaceholderActive > .blocklyPath {
+      /* A blank placeholder gets its outline back under a hovering block. */
       stroke: var(--text-neutral-primary, #fff);
       stroke-dasharray: none;
       fill-opacity: 0.4;
