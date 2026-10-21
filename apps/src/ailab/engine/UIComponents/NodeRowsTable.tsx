@@ -8,7 +8,7 @@ import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import type {TableView} from '../useTableView';
+import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
@@ -19,7 +19,7 @@ import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
   labelId: string;
-  view: TableView;
+  view: DatasetTableView;
   emphasizedColumn?: string;
   emptyText: string;
   prediction?: string | number;

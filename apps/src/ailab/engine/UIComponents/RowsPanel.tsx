@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material';
-import React, {type ReactNode, useId} from 'react';
+import React, {type ReactNode, useId, useMemo} from 'react';
 
 import {dataColumnsFor} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
@@ -38,10 +38,11 @@ const RowsPanel = ({
   const descriptionId = useId();
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
-  const tableView = useDatasetTableView(
-    rowIndices,
-    dataColumnsFor(data, project, showAllColumns)
+  const columns = useMemo(
+    () => dataColumnsFor(data, project, showAllColumns),
+    [data, project, showAllColumns]
   );
+  const tableView = useDatasetTableView(rowIndices, columns);
 
   return (
     <div className={styles.panel}>
