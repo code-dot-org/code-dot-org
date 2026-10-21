@@ -4,7 +4,7 @@ Storybook for the `@code-dot-org/component-library` design system.
 
 - `yarn storybook` / `yarn dev` — dev server on :6006
 - `yarn build` — static build under `dist/`
-- `yarn test` — Vitest (browser) story tests
+- `yarn test-storybook` — Vitest (browser) story tests; `yarn test:ui:ci` runs them with the Eyes check
 
 ## Brand switcher
 
