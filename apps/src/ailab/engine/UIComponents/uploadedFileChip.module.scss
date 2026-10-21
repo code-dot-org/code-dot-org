@@ -26,10 +26,8 @@
   }
 
   &:focus-visible {
-    outline: none;
-    box-shadow:
-      0 0 0 2px var(--background-neutral-primary),
-      0 0 0 4px var(--border-focused-primary);
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: 2px;
   }
 }
 
@@ -54,11 +52,4 @@
 .removeIcon {
   flex-shrink: 0;
   font-size: 14px;
-}
-
-@media (forced-colors: active) {
-  .chip:focus-visible {
-    outline: 2px solid;
-    outline-offset: 2px;
-  }
 }
