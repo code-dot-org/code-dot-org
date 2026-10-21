@@ -1,24 +1,24 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {vi} from 'vitest';
+
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 
 import LessonObjectiveReflection, {
-  ReflectionValue,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/LessonObjectiveReflection';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+  type ReflectionValue,
+} from '../LessonObjectiveReflection';
 
 const OBJECTIVE = {id: 'obj-1', description: 'Understand loops'};
 
 function renderComponent(
   selected: ReflectionValue | null = null,
-  onSelectionChange = jest.fn()
+  onSelectionChange = vi.fn(),
 ) {
   render(
     <LessonObjectiveReflection
       objective={OBJECTIVE}
       selected={selected}
       onSelectionChange={onSelectionChange}
-    />
+    />,
   );
   return onSelectionChange;
 }
@@ -33,7 +33,7 @@ describe('LessonObjectiveReflection', () => {
     renderComponent();
     expect(screen.getByRole('button', {name: 'New to me'})).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Getting there'})
+      screen.getByRole('button', {name: 'Getting there'}),
     ).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Got it'})).toBeInTheDocument();
   });
@@ -43,7 +43,7 @@ describe('LessonObjectiveReflection', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
     expect(callback).toHaveBeenCalledWith(
       'obj-1',
-      LessonObjectiveReflectionValues.CONFIDENT
+      LessonObjectiveReflectionValues.CONFIDENT,
     );
   });
 
@@ -51,7 +51,7 @@ describe('LessonObjectiveReflection', () => {
     renderComponent(LessonObjectiveReflectionValues.UNSURE);
     expect(screen.getByRole('button', {name: 'Getting there'})).toHaveAttribute(
       'aria-pressed',
-      'true'
+      'true',
     );
   });
 
@@ -59,11 +59,11 @@ describe('LessonObjectiveReflection', () => {
     renderComponent(LessonObjectiveReflectionValues.UNSURE);
     expect(screen.getByRole('button', {name: 'New to me'})).toHaveAttribute(
       'aria-pressed',
-      'false'
+      'false',
     );
     expect(screen.getByRole('button', {name: 'Got it'})).toHaveAttribute(
       'aria-pressed',
-      'false'
+      'false',
     );
   });
 });
