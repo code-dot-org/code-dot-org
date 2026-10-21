@@ -33,6 +33,11 @@ export const checkpointSourceSchema = z.strictObject({
    * next open checkpoint, so the student sees what their evidence skipped.
    */
   routeAfterCompletion: z.boolean().optional(),
+  /**
+   * The map destination this checkpoint belongs to, drawn as a group on the
+   * map. Only a leaf, a checkpoint nothing requires, may have one.
+   */
+  destination: z.string().min(1).optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 

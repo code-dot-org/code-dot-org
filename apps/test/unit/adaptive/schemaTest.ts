@@ -407,6 +407,24 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it('accepts a map layout and orientation and rejects a direction off the compass', () => {
+    const raw = served();
+    raw.map = {layout: 'destinations', orientation: 'w'};
+    expect(problemsOf(raw)).toEqual([]);
+    Object.assign(raw.map, {orientation: 'nw'});
+    expect(problemsOf(raw)).toHaveLength(1);
+  });
+
+  it('accepts a destination on a leaf and flags one on a checkpoint another requires', () => {
+    const raw = served();
+    raw.checkpoints[2].destination = 'Polish';
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[0].destination = 'Polish';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.destination: only a checkpoint nothing requires may have one, but 'basics' requires it",
+    ]);
+  });
+
   it('flags duplicate checkpoint and step ids', () => {
     const raw = served();
     raw.checkpoints[2].id = 'basics';
