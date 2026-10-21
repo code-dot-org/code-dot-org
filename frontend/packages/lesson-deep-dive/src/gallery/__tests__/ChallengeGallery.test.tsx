@@ -323,10 +323,10 @@ describe('ChallengeGallery', () => {
     render(<ChallengeGallery tutorGalleryData={teacherGalleryData} />);
 
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
     expect(
-      screen.getByRole('checkbox', {name: /Visible for students/})
+      screen.getByRole('checkbox', {name: /Visible for students/}),
     ).toBeDisabled();
   });
 
