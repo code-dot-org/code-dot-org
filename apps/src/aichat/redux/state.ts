@@ -1,6 +1,7 @@
 import {
   AiChatClientType,
   ChatAsset,
+  ChatPromptModes,
   ChatEvent,
   ServerChatEvent,
   UserAddedSelectionContext,
@@ -34,4 +35,6 @@ export interface AichatState {
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
   userAddedSelectionContext: UserAddedSelectionContext;
+  // A lab's submit buttons, each sending with its own prompt; set while the lab is mounted.
+  promptModes?: ChatPromptModes;
 }

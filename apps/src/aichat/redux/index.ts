@@ -16,4 +16,5 @@ export {
   clearStagedFilesAlert,
   clearStagedFiles,
   setChatWorkspaceSelectedTab,
+  setPromptModes,
 } from './slice';
