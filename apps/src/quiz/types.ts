@@ -14,7 +14,8 @@ export interface QuizViewContent {
 // TODO: derive from SharedConstants.
 export type QuizQuestionType =
   | 'MultipleChoiceQuestion'
-  | 'FreeResponseQuestion';
+  | 'FreeResponseQuestion'
+  | 'MatchQuestion';
 
 // Answer fields (correctChoiceId, explanation) are deliberately excluded.
 export interface QuizQuestionSummary {

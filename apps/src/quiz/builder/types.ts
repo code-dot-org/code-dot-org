@@ -31,8 +31,21 @@ export interface FreeResponseDraft extends QuizQuestionSharedFields {
   type: 'FreeResponseQuestion';
 }
 
+export interface MatchPair {
+  id: string;
+  items: [QuizQuestionChoice, QuizQuestionChoice];
+}
+
+export interface MatchDraft extends QuizQuestionSharedFields {
+  type: 'MatchQuestion';
+  pairs: MatchPair[];
+}
+
 // A question card's unsaved working copy; Save sends it as the request body.
-export type QuizQuestionDraft = MultipleChoiceDraft | FreeResponseDraft;
+export type QuizQuestionDraft =
+  | MultipleChoiceDraft
+  | FreeResponseDraft
+  | MatchDraft;
 
 // A question as the builder endpoints return it (GET /levels/:id/
 // quiz_configuration and a placement create): the QuizQuestion model's

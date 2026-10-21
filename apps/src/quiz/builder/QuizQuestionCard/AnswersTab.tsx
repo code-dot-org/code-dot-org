@@ -6,7 +6,13 @@ import classNames from 'classnames';
 import React from 'react';
 
 import AddItemButton from '../AddItemButton';
-import {MultipleChoiceDraft, QuizQuestionDraft} from '../types';
+import {MIN_PAIRS, newMatchPair} from '../matchPairs';
+import {
+  MatchDraft,
+  MatchPair,
+  MultipleChoiceDraft,
+  QuizQuestionDraft,
+} from '../types';
 
 import styles from './quiz-question-card.module.scss';
 import builderCommonStyles from '../builder-common.module.scss';
@@ -118,6 +124,85 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
   );
 };
 
+interface PairsEditorProps {
+  draft: MatchDraft;
+  onChange: (draft: MatchDraft) => void;
+  disabled?: boolean;
+}
+
+const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
+  draft,
+  onChange,
+  disabled,
+}) => {
+  const updateItemText = (pairId: string, index: 0 | 1, text: string) => {
+    onChange({
+      ...draft,
+      pairs: draft.pairs.map(pair => {
+        if (pair.id !== pairId) {
+          return pair;
+        }
+        const items: MatchPair['items'] = [...pair.items];
+        items[index] = {...items[index], text};
+        return {...pair, items};
+      }),
+    });
+  };
+
+  const removePair = (pairId: string) => {
+    onChange({
+      ...draft,
+      pairs: draft.pairs.filter(pair => pair.id !== pairId),
+    });
+  };
+
+  return (
+    <>
+      <div className={styles.optionsList}>
+        {draft.pairs.map((pair, pairIndex) => (
+          <div key={pair.id} className={styles.optionRow}>
+            {pair.items.map((item, index) => (
+              <TextField
+                key={item.id}
+                name={`pair-${pair.id}-item-${index}`}
+                aria-label={`Pair ${pairIndex + 1}, ${
+                  index === 0 ? 'item' : 'match'
+                }`}
+                placeholder={index === 0 ? 'Item' : 'Match'}
+                size="s"
+                color="gray"
+                className={classNames(styles.fullWidthField, styles.optionText)}
+                value={item.text}
+                onChange={e =>
+                  updateItemText(pair.id, index as 0 | 1, e.target.value)
+                }
+                disabled={disabled}
+              />
+            ))}
+            <IconButton
+              aria-label={`Delete pair ${pairIndex + 1}`}
+              size="small"
+              color="error"
+              type="button"
+              disabled={disabled || draft.pairs.length <= MIN_PAIRS}
+              onClick={() => removePair(pair.id)}
+            >
+              <FontAwesomeV6Icon iconName="trash" />
+            </IconButton>
+          </div>
+        ))}
+      </div>
+      <AddItemButton
+        label="Add pair"
+        onClick={() =>
+          onChange({...draft, pairs: [...draft.pairs, newMatchPair()]})
+        }
+        disabled={disabled}
+      />
+    </>
+  );
+};
+
 const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   draft,
   onChange,
@@ -126,6 +211,9 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   <div className={builderCommonStyles.section}>
     {draft.type === 'MultipleChoiceQuestion' && (
       <ChoicesEditor draft={draft} onChange={onChange} disabled={disabled} />
+    )}
+    {draft.type === 'MatchQuestion' && (
+      <PairsEditor draft={draft} onChange={onChange} disabled={disabled} />
     )}
 
     <FormFieldWrapper label="Answer explanation (optional)">

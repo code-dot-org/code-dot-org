@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizQuestionType} from '../types';
 
+import {newMatchPair} from './matchPairs';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
@@ -76,10 +77,26 @@ export default function useQuizBuilderQuestions(
         usedInPublishedUnit: false,
         page,
       };
-      const question: QuizBuilderQuestion =
-        type === 'MultipleChoiceQuestion'
-          ? {...shared, type, ...NEW_MULTIPLE_CHOICE_ANSWERS}
-          : {...shared, type};
+      let question: QuizBuilderQuestion;
+      switch (type) {
+        case 'MultipleChoiceQuestion':
+          question = {...shared, type, ...NEW_MULTIPLE_CHOICE_ANSWERS};
+          break;
+        case 'FreeResponseQuestion':
+          question = {...shared, type};
+          break;
+        case 'MatchQuestion':
+          // Built per call: every question needs its own random ids.
+          question = {
+            ...shared,
+            type,
+            pairs: [
+              newMatchPair('Item A', 'Match A'),
+              newMatchPair('Item B', 'Match B'),
+            ],
+          };
+          break;
+      }
       setQuestions(prev => [...prev, question]);
       return id;
     },
