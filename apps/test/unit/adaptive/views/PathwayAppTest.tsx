@@ -140,14 +140,14 @@ describe('PathwayApp', () => {
     });
   };
 
-  it('shows the map for a student with no progress', async () => {
+  it('auto-starts the first checkpoint when there is no progress', async () => {
     await renderSettled();
 
-    expect(screen.getByText('map screen')).toBeTruthy();
-    expect(mockDispatch).not.toHaveBeenCalled();
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
+    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
-  it('shows the map when the only entry holds generated instructions', async () => {
+  it('auto-starts even when the only entry holds generated instructions', async () => {
     mockLoad.mockResolvedValue({
       steps: {
         'intro-step': {
@@ -159,7 +159,7 @@ describe('PathwayApp', () => {
 
     await renderSettled();
 
-    expect(screen.getByText('map screen')).toBeTruthy();
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
   });
 
   it('shows the map once anything has been started', async () => {
@@ -263,6 +263,9 @@ describe('PathwayApp', () => {
     });
 
     it('navigates into a checkpoint when the browser fires popstate with a checkpoint param', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
       await renderSettled();
       expect(screen.getByText('map screen')).toBeTruthy();
 

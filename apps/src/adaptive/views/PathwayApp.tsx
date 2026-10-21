@@ -85,6 +85,13 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   }
   const params = new URLSearchParams(window.location.search);
   const urlCheckpointId = params.get('checkpoint') ?? undefined;
+  // Auto-start the first checkpoint for students who haven't begun yet.
+  // A step with generatedInstructions but no status doesn't count as started.
+  const hasProgress = Object.values(progress.steps).some(s => s.status);
+  const firstCheckpointId = !hasProgress
+    ? pathway.checkpoints[0]?.id
+    : undefined;
+  const startCheckpointId = urlCheckpointId ?? firstCheckpointId;
 
   return (
     <LoadedPathwayApp
@@ -93,11 +100,11 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       progress={progress}
       statusMap={statusMap}
       initialView={
-        urlCheckpointId
-          ? {kind: 'step', checkpointId: urlCheckpointId}
+        startCheckpointId
+          ? {kind: 'step', checkpointId: startCheckpointId}
           : {kind: 'map'}
       }
-      initialCheckpointId={urlCheckpointId}
+      initialCheckpointId={startCheckpointId}
       {...actions}
     />
   );
