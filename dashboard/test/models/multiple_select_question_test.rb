@@ -34,6 +34,11 @@ class MultipleSelectQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade('selectedChoiceIds' => 'a'))
   end
 
+  test "grade scores a selection with a repeated choice as incorrect" do
+    question = create(:multiple_select_question)
+    assert_equal({score: 0, max_score: 1}, question.grade('selectedChoiceIds' => ['a', 'a', 'c']))
+  end
+
   test "answered? is true only when at least one choice is selected" do
     question = build(:multiple_select_question)
     assert question.answered?({'selectedChoiceIds' => ['a']})

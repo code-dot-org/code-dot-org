@@ -21,13 +21,23 @@ module Middleware
       SoundLibraryApi,
     ].freeze
 
+    # The marketing site needs to make authenticated POST requests
+    # cross-origin to learning platform, such as when submitting the
+    # Amazon Future Engineers form. Bypass the default behavior of dropping
+    # the session for the official marketing site hostnames.
+    def self.permitted_origins
+      [CDO.code_org_url('', 'https:'), *CDO.marketing_sites_hosts]
+    end
+
     def initialize(app)
+      permitted_origins = self.class.permitted_origins
       @app = Rack::Builder.new do
         APPS.each do |middleware|
           # Prevent Sinatra from converting downstream exceptions into generic 500
           # responses before Rails has a chance to handle them appropriately.
           middleware.set :raise_errors, true
           middleware.set :show_exceptions, false
+          middleware.set :protection, permitted_origins: permitted_origins
 
           use middleware
         end

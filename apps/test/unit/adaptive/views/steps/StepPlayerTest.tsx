@@ -41,7 +41,7 @@ describe('StepPlayer', () => {
     const onFinish = jest.fn();
     render(
       <PathwayContext.Provider
-        value={{stepContextMap: {}} as unknown as PathwayContextValue}
+        value={{progress: {steps: {}}} as unknown as PathwayContextValue}
       >
         <StepPlayer
           checkpoint={checkpoint}
