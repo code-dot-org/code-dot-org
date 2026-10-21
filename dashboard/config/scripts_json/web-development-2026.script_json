@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-17 21:05:42 UTC",
+    "serialized_at": "2026-10-20 22:35:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -11822,7 +11822,7 @@
     },
     {
       "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=q7d_JtyCq1A&t=1s",
+      "url": "https://www.youtube.com/watch?v=q7d_JtyCq1A",
       "key": "pair_programming",
       "properties": {
         "audience": "Student",
