@@ -34,8 +34,8 @@ export const checkpointSourceSchema = z.strictObject({
    */
   routeAfterCompletion: z.boolean().optional(),
   /**
-   * The map destination this checkpoint belongs to, drawn as a group on the
-   * map. Only a leaf, a checkpoint nothing requires, may have one.
+   * The map destination this checkpoint belongs to. Only a terminal (leaf)
+   * checkpoint, one that no other checkpoint requires, can have one.
    */
   destination: z.string().min(1).optional(),
   steps: z.array(stepSourceSchema).min(1),
