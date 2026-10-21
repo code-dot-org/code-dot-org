@@ -162,8 +162,8 @@ function findSkillProblems(pathway: Pathway): string[] {
  * Detects and returns any problems with the checkpoint graph: ids are
  * unique, `requires` name known checkpoints, at least one checkpoint is a
  * root, every checkpoint can eventually unlock, meaning its `requires`
- * chains all lead back to a root rather than looping, and only a leaf, a
- * checkpoint nothing requires, has a `destination`.
+ * chains all lead back to a root rather than looping, and only a checkpoint
+ * that no other checkpoints require has a `destination`.
  */
 function findCheckpointProblems(pathway: Pathway): string[] {
   const where = 'checkpoints';
@@ -225,7 +225,7 @@ function findCheckpointProblems(pathway: Pathway): string[] {
     const child = requiredBy.get(checkpoint.id);
     if (checkpoint.destination && child) {
       problems.push(
-        `${where}.${checkpoint.id}.destination: only a checkpoint nothing requires may have one, but '${child}' requires it`
+        `${where}.${checkpoint.id}.destination: only a checkpoint that no other checkpoints require may have one but '${child}' requires it`
       );
     }
   }

@@ -415,13 +415,13 @@ describe('findReferenceProblems', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
-  it('accepts a destination on a leaf and flags one on a checkpoint another requires', () => {
+  it('accepts a destination on a checkpoint nothing requires and flags one on a checkpoint another requires', () => {
     const raw = served();
     raw.checkpoints[2].destination = 'Polish';
     expect(problemsOf(raw)).toEqual([]);
     raw.checkpoints[0].destination = 'Polish';
     expect(problemsOf(raw)).toEqual([
-      "checkpoints.intro.destination: only a checkpoint nothing requires may have one, but 'basics' requires it",
+      "checkpoints.intro.destination: only a checkpoint that no other checkpoints require may have one but 'basics' requires it",
     ]);
   });
 
