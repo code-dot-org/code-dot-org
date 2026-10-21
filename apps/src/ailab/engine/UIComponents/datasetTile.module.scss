@@ -7,12 +7,14 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 241px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
   text-align: start;
   cursor: pointer;
   transition:
+    border-color mixins.$mark-transition,
     box-shadow mixins.$mark-transition,
     scale mixins.$mark-transition;
 
@@ -70,6 +72,7 @@
   padding: 8px 10px;
   background-color: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
+  transition: border-top-color mixins.$mark-transition;
 }
 
 .tile:hover .label,

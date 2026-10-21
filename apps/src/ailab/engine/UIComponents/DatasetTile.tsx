@@ -1,4 +1,3 @@
-/* One dataset in the picker: its cover above its name and size. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -44,11 +43,16 @@ const DatasetTile = ({
             iconName="table"
             iconStyle="regular"
             className={styles.placeholderIcon}
+            aria-hidden="true"
           />
         )}
         {isSelected && (
           <span className={styles.selectedMark}>
-            <FontAwesomeV6Icon iconName="check" iconStyle="solid" />
+            <FontAwesomeV6Icon
+              iconName="check"
+              iconStyle="solid"
+              aria-hidden="true"
+            />
           </span>
         )}
       </span>
