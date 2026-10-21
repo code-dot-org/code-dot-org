@@ -1,0 +1,42 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-20T19:16:51.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "6f308134-7136-4480-a501-e93dc06a8b08": {
+          "id": "6f308134-7136-4480-a501-e93dc06a8b08",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Web Lab Flashcards</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <h1>Understanding AI: Key Terms</h1>\n    </header>\n    <main class=\"flashcard-container\">\n        <div class=\"flashcard\">\n            <div class=\"term\">\n                <h3>Feature</h3>\n            </div>\n            <div class=\"definition\">\n                <p>A characteristic or attribute of an object or data that can be used for classification or analysis.</p>\n            </div>\n        </div>\n        <div class=\"flashcard\">\n            <div class=\"term\">\n                <h3>Dataset</h3>\n            </div>\n            <div class=\"definition\">\n                <p>A collection of related information, often organized in tables or other structures, used to train AI models.</p>\n            </div>\n        </div>\n    </main>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "54c0fbb8-98f8-479d-99f1-5b2524a651f2": {
+          "id": "54c0fbb8-98f8-479d-99f1-5b2524a651f2",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    background-color: #f0f2f5;\n    color: #333;\n    margin: 0;\n    padding: 20px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\nh1 {\n    color: #0056b3;\n    margin-bottom: 30px;\n}\n\n.flashcard-container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 20px;\n    justify-content: center;\n}\n\n.flashcard {\n    background-color: #fff;\n    border-radius: 8px;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    width: 250px;\n    min-height: 150px;\n    padding: 20px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    cursor: pointer;\n    transition: transform 0.2s ease-in-out;\n}\n\n.flashcard:hover {\n    transform: translateY(-5px);\n}\n\n.flashcard .term h3 {\n    margin: 0;\n    color: #007bff;\n    font-size: 1.5em;\n}\n\n.flashcard .definition {\n    margin-top: 15px;\n    font-size: 0.9em;\n    color: #555;\n    display: none; /* Hide definition by default */\n}\n\n.flashcard:hover .definition {\n    display: block; /* Show definition on hover */\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "6f308134-7136-4480-a501-e93dc06a8b08",
+        "54c0fbb8-98f8-479d-99f1-5b2524a651f2"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- in index.html, change the page title to \"AI Vocabulary Flashcards\"\r\n- in style.css, add a new CSS rule for a class named `.highlight` that sets the text color to purple\r\n- in index.html, add a new flashcard div, giving it the class `flashcard`\r\n- in the new flashcard, add a term and its definition for the word \"Algorithm\", using `h3` for the term and `p` for the definition\r\n- in style.css, add a hover effect to `.flashcard` so that the `.definition` becomes visible when the flashcard is hovered over\r\n- in index.html, apply the `.highlight` class to the term \"Feature\" in the first flashcard",
+    "encrypted_exemplar_sources": "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\n",
+    "generate_outline": "Vocabulary flashcards- Flashcard level for the lesson's key terms"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-20 19:17:00 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:17:00 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:17:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 19:17:08 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

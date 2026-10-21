@@ -10,6 +10,7 @@ import React from 'react';
 
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
+import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
@@ -27,6 +28,8 @@ const THEME_ITEMS = [
 interface MapScreenProps {
   pathway: Pathway;
   statusMap: CheckpointStatusMap;
+  /** What the student has shown, for explaining a skipped checkpoint. */
+  evidence: PathwayEvidence;
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   onFocus: (id: string | undefined) => void;
@@ -37,6 +40,7 @@ interface MapScreenProps {
 const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   pathway,
   statusMap,
+  evidence,
   focusId,
   onFocus,
   onStart,
@@ -96,6 +100,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             checkpoint={focused}
             status={statusMap[focused.id]}
             statusMap={statusMap}
+            evidence={evidence}
             onStart={() => onStart(focused.id)}
             onSelectCheckpoint={onFocus}
           />

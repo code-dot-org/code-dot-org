@@ -9,9 +9,11 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
   default: ({
     onStart,
+    focusId,
     onWorkOnProject,
   }: {
     onStart: (id: string) => void;
+    focusId?: string;
     onWorkOnProject: () => void;
   }) => (
     <>
@@ -22,21 +24,24 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
         start multi
       </button>
       <button type="button" onClick={onWorkOnProject}>
-        map screen
+        map screen{focusId ? ` focused on ${focusId}` : ''}
       </button>
     </>
   ),
 }));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
+  // Finishing completes the last step first, as the real player does.
   default: ({
     checkpoint,
     initialStepId,
+    onCompleteStep,
     onExit,
     onFinish,
   }: {
-    checkpoint: {title: string};
+    checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
+    onCompleteStep: (step: unknown, timeMs: number) => void;
     onExit: () => void;
     onFinish: () => void;
   }) => (
@@ -46,7 +51,13 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       <button type="button" onClick={onExit}>
         exit
       </button>
-      <button type="button" onClick={onFinish}>
+      <button
+        type="button"
+        onClick={() => {
+          onCompleteStep(checkpoint.steps[checkpoint.steps.length - 1], 0);
+          onFinish();
+        }}
+      >
         finish
       </button>
     </div>
@@ -297,5 +308,94 @@ describe('PathwayApp', () => {
 
       expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
     });
+  });
+
+  // A diagnostic whose one survey answer shows build at evidence level 1,
+  // enough to skip the first-ring checkpoint, with the one past it open.
+  const routing: Pathway = {
+    ...pathway,
+    skills: {
+      build: {id: 'build', title: 'Build', description: 'Build.'},
+    },
+    checkpoints: [
+      {
+        id: 'intro',
+        title: 'Intro',
+        description: 'Start here.',
+        routeAfterCompletion: true,
+        steps: [
+          {
+            id: 'intro-check',
+            title: 'Check',
+            kind: 'questions',
+            questions: [
+              {
+                id: 1,
+                type: 'MultipleChoiceQuestion',
+                questionName: 'q1',
+                questionTitle: 'Q1',
+                choices: [
+                  {id: 'a', text: 'A'},
+                  {id: 'b', text: 'B'},
+                ],
+                measures: {skillId: 'build', evidenceLevels: {a: 0, b: 1}},
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'next',
+        title: 'Next',
+        description: 'Then this.',
+        skillIds: ['build'],
+        skippable: true,
+        requires: ['intro'],
+        steps: [step('next')],
+      },
+      {
+        id: 'after',
+        title: 'After',
+        description: 'And this.',
+        requires: ['next'],
+        steps: [step('after')],
+      },
+    ],
+  };
+
+  it('shows the map focused past a skipped checkpoint when a routing checkpoint finishes', async () => {
+    // Answers but no status, so the intro auto-opens and its finish routes.
+    mockLoad.mockResolvedValue({
+      steps: {
+        'intro-check': {timeSpent: 1, answers: {1: [{answerId: 'b'}]}},
+      },
+    });
+    await act(async () => {
+      render(<PathwayApp pathway={routing} progressKey={progressKey} />);
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
+
+    await act(async () => {
+      screen.getByText('finish').click();
+    });
+
+    expect(screen.getByText('map screen focused on after')).toBeTruthy();
+  });
+
+  it('returns to the map unfocused after a checkpoint that does not route', async () => {
+    await act(async () => {
+      render(<PathwayApp pathway={pathway} progressKey={progressKey} />);
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+    await act(async () => {
+      screen.getByText('finish').click();
+    });
+
+    expect(screen.getByText('map screen')).toBeTruthy();
   });
 });

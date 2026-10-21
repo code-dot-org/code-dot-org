@@ -9,7 +9,7 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
-import type {TableView} from '../useTableView';
+import type {DatasetTableView} from '../types';
 
 import ColumnHeader from './ColumnHeader';
 
@@ -23,7 +23,7 @@ interface DataTableProps {
   hideLabel?: boolean;
   useResultsData?: boolean;
   maxRows?: number;
-  view?: TableView;
+  view?: DatasetTableView;
 }
 
 const DataTable = ({

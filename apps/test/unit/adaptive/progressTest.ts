@@ -3,12 +3,12 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
-  checkpointStatus,
-  getStatusMap,
   stepIdToResume,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
+import {routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -53,9 +53,12 @@ const pathway = {
   ],
 } as Pathway;
 
-describe('checkpointStatus', () => {
+const statusMapOf = (p: Pathway, progress: Progress) =>
+  routeStatusMap(p, progress, computeEvidence(p, progress));
+
+describe('routeStatusMap without evidence', () => {
   const status = (index: number, progress: Progress) =>
-    checkpointStatus(pathway.checkpoints[index], pathway, progress);
+    statusMapOf(pathway, progress)[pathway.checkpoints[index].id];
 
   it('is available with no requires, locked until requires are complete', () => {
     const progress = progressOf([], []);
@@ -80,7 +83,7 @@ describe('checkpointStatus', () => {
     const multi = checkpoint('multi', undefined, [panels('one'), level]);
     const twoStep = {checkpoints: [multi]} as Pathway;
     const statusOf = (steps: Progress['steps']) =>
-      checkpointStatus(multi, twoStep, {steps});
+      statusMapOf(twoStep, {steps}).multi;
 
     expect(statusOf({one: {status: 'complete', timeSpent: 3}})).toBe(
       'inProgress'
@@ -95,9 +98,7 @@ describe('checkpointStatus', () => {
     const progress = {
       steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
     };
-    expect(checkpointStatus(pathway.checkpoints[0], pathway, progress)).toBe(
-      'available'
-    );
+    expect(statusMapOf(pathway, progress).intro).toBe('available');
   });
 });
 
@@ -146,9 +147,56 @@ describe('stepIdToResume', () => {
   });
 });
 
-describe('getStatusMap', () => {
+describe('routeStatusMap from progress', () => {
+  it('skips a demonstrated skippable checkpoint and un-skips it once started', () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'check',
+            title: 'Check',
+            kind: 'questions',
+            questions: [
+              {
+                id: 1,
+                type: 'MultipleChoiceQuestion',
+                questionName: 'q1',
+                questionTitle: 'Q1',
+                choices: [
+                  {id: 'a', text: 'A'},
+                  {id: 'b', text: 'B'},
+                ],
+                measures: {skillId: 'build', evidenceLevels: {a: 0, b: 1}},
+              },
+            ],
+          } as unknown as Step,
+        ]),
+        {...checkpoint('a', ['intro']), skillIds: ['build'], skippable: true},
+        checkpoint('b', ['a']),
+      ],
+    } as unknown as Pathway;
+    const answered: Progress = {
+      steps: {
+        check: {
+          status: 'complete',
+          timeSpent: 1,
+          answers: {1: [{answerId: 'b'}]},
+        },
+      },
+    };
+    expect(statusMapOf(routed, answered)).toEqual({
+      intro: 'complete',
+      a: 'skipped',
+      b: 'available',
+    });
+    const reopened: Progress = {
+      steps: {...answered.steps, 'a-step': {status: 'started', timeSpent: 0}},
+    };
+    expect(statusMapOf(routed, reopened).a).toBe('inProgress');
+  });
+
   it('maps every checkpoint id to its status', () => {
-    expect(getStatusMap(pathway, progressOf(['intro', 'a'], []))).toEqual({
+    expect(statusMapOf(pathway, progressOf(['intro', 'a'], []))).toEqual({
       intro: 'complete',
       a: 'complete',
       b: 'available',

@@ -21,6 +21,7 @@ import {
   useProgress,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
+import {nextCheckpoint} from '../routing/route';
 import {Checkpoint, Pathway} from '../types';
 
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
@@ -31,7 +32,7 @@ import StepPlayer from './steps/StepPlayer';
 import styles from './shared.module.scss';
 
 type View =
-  | {kind: 'map'; focusId?: string}
+  | {kind: 'map'; focusId?: string; focusNext?: boolean}
   | {kind: 'step'; checkpointId: string; stepId?: string}
   | {kind: 'project'};
 
@@ -74,9 +75,13 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       dispatch(sendAdaptiveStepReport(levelId, appType, result, timeMs)),
     [dispatch]
   );
-  const {progress, statusMap, ...actions} = useProgress(pathway, progressKey, {
-    reportLevelStep,
-  });
+  const {progress, statusMap, ...restProgress} = useProgress(
+    pathway,
+    progressKey,
+    {
+      reportLevelStep,
+    }
+  );
   if (!progress) {
     return (
       <div className={styles.app}>
@@ -119,7 +124,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       statusMap={statusMap}
       initialCheckpointId={initialCheckpointId}
       initialStepId={initialStepId}
-      {...actions}
+      {...restProgress}
     />
   );
 };
@@ -148,7 +153,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   completeStep,
   leaveStep,
   saveGeneratedInstructions,
-  finishCheckpoint,
+  evidence,
   saveAnswers,
 }) => {
   const dispatch = useAppDispatch();
@@ -182,12 +187,13 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
   }, [pathway.checkpoints, progress]);
-
-  // The verdict is only logged for now; nothing acts on it yet.
-  const {lastRouting} = progress;
+  // After a routing checkpoint, the map focuses the next open checkpoint,
+  // read once the finish's step completion and answers are in the status map.
   useEffect(() => {
-    if (lastRouting) console.log('[adaptive router]', lastRouting);
-  }, [lastRouting]);
+    if (view.kind === 'map' && view.focusNext) {
+      setView({kind: 'map', focusId: nextCheckpoint(pathway, statusMap)});
+    }
+  }, [view, pathway, statusMap]);
   useEffect(() => {
     if (initialCheckpointId)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
@@ -257,8 +263,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             }}
             onFinish={() => {
               clearUrl();
-              if (!isProject) finishCheckpoint(checkpoint);
-              setView({kind: 'map'});
+              setView({
+                kind: 'map',
+                focusNext: !isProject && !!checkpoint.routeAfterCompletion,
+              });
             }}
           />
         </PathwayContext.Provider>
@@ -271,6 +279,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       <MapScreen
         pathway={pathway}
         statusMap={statusMap}
+        evidence={evidence}
         focusId={view.kind === 'map' ? view.focusId : undefined}
         onFocus={focusId => setView({kind: 'map', focusId})}
         onStart={id => {

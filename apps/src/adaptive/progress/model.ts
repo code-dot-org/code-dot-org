@@ -4,14 +4,15 @@
 
 import {hashString} from '@cdo/apps/utils';
 
-import type {RoutingRecord} from '../routing/routeAfterCompletion';
-import {Checkpoint, Pathway} from '../types';
+import {Checkpoint} from '../types';
 
 export type CheckpointStatus =
   | 'locked'
   | 'available'
   | 'inProgress'
-  | 'complete';
+  | 'complete'
+  /** Demonstrated by the student's evidence and skippable, so passed without being played. */
+  | 'skipped';
 
 /** Each checkpoint's status, by checkpoint id. */
 export type CheckpointStatusMap = {[checkpointId: string]: CheckpointStatus};
@@ -60,8 +61,6 @@ export interface StepProgress {
 
 export interface Progress {
   steps: {[stepId: string]: StepProgress};
-  /** Temporary: logs the last routing verdict until the UI that applies it lands. Not stored. */
-  lastRouting?: RoutingRecord;
 }
 
 export const EMPTY_PROGRESS: Progress = {steps: {}};
@@ -79,33 +78,12 @@ export function stepIdToResume(
   )?.id;
 }
 
-const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
+/** Whether the student finished the checkpoint: its last step is complete. */
+export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
   const last = checkpoint.steps[checkpoint.steps.length - 1];
   return !!last && progress.steps[last.id]?.status === 'complete';
 };
 
-/** Started by any step, complete with its last, unlocked by its requires. */
-export function checkpointStatus(
-  checkpoint: Checkpoint,
-  pathway: Pathway,
-  progress: Progress
-): CheckpointStatus {
-  if (isComplete(checkpoint, progress)) return 'complete';
-  const unlocked = (checkpoint.requires || []).every(r => {
-    const required = pathway.checkpoints.find(c => c.id === r);
-    return !!required && isComplete(required, progress);
-  });
-  if (!unlocked) return 'locked';
-  return checkpoint.steps.some(s => progress.steps[s.id]?.status)
-    ? 'inProgress'
-    : 'available';
-}
-
-export function getStatusMap(
-  pathway: Pathway,
-  progress: Progress
-): CheckpointStatusMap {
-  return Object.fromEntries(
-    pathway.checkpoints.map(c => [c.id, checkpointStatus(c, pathway, progress)])
-  );
-}
+/** Whether the student has opened the checkpoint: any step has a status. */
+export const isStarted = (checkpoint: Checkpoint, progress: Progress) =>
+  checkpoint.steps.some(s => progress.steps[s.id]?.status);
