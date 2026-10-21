@@ -1,6 +1,10 @@
 import type {Transport} from '@code-dot-org/core/api';
 
-import {challengeValidator, type Challenge} from './types';
+import {
+  challengeValidator,
+  type Challenge,
+  type ReflectionValue,
+} from './types';
 
 /** GET /challenges */
 export async function listChallenges(
@@ -13,4 +17,44 @@ export async function listChallenges(
     url: `/challenges?${params.toString()}`,
   });
   return challengeValidator(raw);
+}
+
+/** POST /user_lesson_reflections */
+export async function saveLessonReflection(
+  transport: Transport,
+  lessonId: number,
+  success: string,
+  struggle: string,
+): Promise<void> {
+  await transport.request<unknown>({
+    method: 'POST',
+    url: '/user_lesson_reflections',
+    body: {lesson_id: lessonId, success, struggle},
+  });
+}
+
+/** POST /user_lesson_objective_reflections */
+export async function saveLessonObjectiveReflection(
+  transport: Transport,
+  objectiveId: string,
+  reflection: ReflectionValue,
+): Promise<void> {
+  await transport.request<unknown>({
+    method: 'POST',
+    url: '/user_lesson_objective_reflections',
+    body: {objective_id: objectiveId, reflection},
+  });
+}
+
+/** POST /ai_student_podcasts/generate_podcast */
+export async function generatePodcast(
+  transport: Transport,
+  lessonId: number,
+  objectiveIds: string[],
+): Promise<void> {
+  await transport.request<unknown>({
+    method: 'POST',
+    url: '/ai_student_podcasts/generate_podcast',
+    body: {lesson_id: lessonId, objective_ids: objectiveIds},
+  });
 }

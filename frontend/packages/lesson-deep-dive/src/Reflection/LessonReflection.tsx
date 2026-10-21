@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {type FC} from 'react';
 
 import styles from './reflection.module.scss';
 
