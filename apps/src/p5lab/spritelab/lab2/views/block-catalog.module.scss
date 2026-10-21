@@ -80,6 +80,9 @@ $band-inset: 8px;
   align-items: center;
   gap: 8px;
   width: 100%;
+  // code-studio gives every button a margin, which here is a dead strip
+  // between entries.
+  margin: 0;
   padding: 10px 12px;
   border: none;
   border-radius: 6px;
