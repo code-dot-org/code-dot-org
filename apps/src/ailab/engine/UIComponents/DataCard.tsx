@@ -30,10 +30,7 @@ const CardRow = ({heading, children, isStat = false}: CardRowProps) => (
     <Typography component="h5" variant="label3" className={styles.heading}>
       {heading}
     </Typography>
-    <Typography
-      variant={isStat ? 'body2' : 'body3'}
-      className={classNames(isStat && styles.strong)}
-    >
+    <Typography variant="body3" className={classNames(isStat && styles.strong)}>
       {children}
     </Typography>
   </div>
@@ -90,7 +87,7 @@ const DataCard = () => {
         ) : (
           <>
             <div className={styles.card}>
-              <div className={styles.section}>
+              <div className={classNames(styles.section, styles.intro)}>
                 <Typography component="h4" variant="h6">
                   {name ?? uploadedFileName}
                 </Typography>

@@ -4,6 +4,7 @@
   @include mixins.card;
 
   overflow: hidden;
+  border-radius: var(--shape-lg);
 }
 
 .heading {
@@ -19,7 +20,7 @@
 .cell {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: 16px;
   padding: 8px 10px;
   border-top: 1px solid var(--border-neutral-primary);
   overflow-wrap: anywhere;
