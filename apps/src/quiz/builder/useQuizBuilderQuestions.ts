@@ -91,8 +91,8 @@ export default function useQuizBuilderQuestions(
             ...shared,
             type,
             pairs: [
-              newMatchPair('Item A', 'Match A'),
-              newMatchPair('Item B', 'Match B'),
+              newMatchPair('Term A', 'Definition A'),
+              newMatchPair('Term B', 'Definition B'),
             ],
           };
           break;

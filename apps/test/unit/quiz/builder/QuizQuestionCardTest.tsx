@@ -259,19 +259,28 @@ describe('QuizQuestionCard', () => {
       return utils;
     }
 
-    it('shows each pair as two labeled fields', () => {
+    it('shows each pair as two labeled fields under an Options heading', () => {
       openPairs();
 
-      expect(screen.getByLabelText('Pair 1, item')).toHaveValue('1 + 1');
-      expect(screen.getByLabelText('Pair 1, match')).toHaveValue('2');
-      expect(screen.getByLabelText('Pair 2, item')).toHaveValue('2 + 1');
-      expect(screen.getByLabelText('Pair 2, match')).toHaveValue('3');
+      expect(screen.getByRole('group', {name: 'Options'})).toBeInTheDocument();
+      expect(screen.getByLabelText('Pair 1, term')).toHaveAttribute(
+        'placeholder',
+        'Term'
+      );
+      expect(screen.getByLabelText('Pair 1, definition')).toHaveAttribute(
+        'placeholder',
+        'Definition'
+      );
+      expect(screen.getByLabelText('Pair 1, term')).toHaveValue('1 + 1');
+      expect(screen.getByLabelText('Pair 1, definition')).toHaveValue('2');
+      expect(screen.getByLabelText('Pair 2, term')).toHaveValue('2 + 1');
+      expect(screen.getByLabelText('Pair 2, definition')).toHaveValue('3');
     });
 
     it('saves edited pair text', async () => {
       const {onSave} = openPairs();
 
-      fireEvent.change(screen.getByLabelText('Pair 2, match'), {
+      fireEvent.change(screen.getByLabelText('Pair 2, definition'), {
         target: {value: 'three'},
       });
       await act(async () => {
@@ -300,8 +309,8 @@ describe('QuizQuestionCard', () => {
 
       fireEvent.click(screen.getByRole('button', {name: 'Add pair'}));
 
-      expect(screen.getByLabelText('Pair 3, item')).toHaveValue('');
-      expect(screen.getByLabelText('Pair 3, match')).toHaveValue('');
+      expect(screen.getByLabelText('Pair 3, term')).toHaveValue('');
+      expect(screen.getByLabelText('Pair 3, definition')).toHaveValue('');
       const names = screen
         .getAllByRole('textbox')
         .map(field => field.getAttribute('name'))
@@ -319,8 +328,8 @@ describe('QuizQuestionCard', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Add pair'}));
       fireEvent.click(screen.getByRole('button', {name: 'Delete pair 1'}));
 
-      expect(screen.getByLabelText('Pair 1, item')).toHaveValue('2 + 1');
-      expect(screen.queryByLabelText('Pair 3, item')).toBeNull();
+      expect(screen.getByLabelText('Pair 1, term')).toHaveValue('2 + 1');
+      expect(screen.queryByLabelText('Pair 3, term')).toBeNull();
     });
   });
 });

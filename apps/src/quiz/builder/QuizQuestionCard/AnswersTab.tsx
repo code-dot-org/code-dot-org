@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
-import {IconButton} from '@mui/material';
+import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useId} from 'react';
 
 import AddItemButton from '../AddItemButton';
 import {MIN_PAIRS, newMatchPair} from '../matchPairs';
@@ -135,6 +135,8 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
   onChange,
   disabled,
 }) => {
+  const headingId = useId();
+
   const updateItemText = (pairId: string, index: 0 | 1, text: string) => {
     onChange({
       ...draft,
@@ -157,28 +159,36 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
   };
 
   return (
-    <>
+    <div role="group" aria-labelledby={headingId} className={styles.pairsGroup}>
+      <Typography variant="label3" component="span" id={headingId}>
+        Options
+      </Typography>
       <div className={styles.optionsList}>
         {draft.pairs.map((pair, pairIndex) => (
-          <div key={pair.id} className={styles.optionRow}>
-            {pair.items.map((item, index) => (
-              <TextField
-                key={item.id}
-                name={`pair-${pair.id}-item-${index}`}
-                aria-label={`Pair ${pairIndex + 1}, ${
-                  index === 0 ? 'item' : 'match'
-                }`}
-                placeholder={index === 0 ? 'Item' : 'Match'}
-                size="s"
-                color="gray"
-                className={classNames(styles.fullWidthField, styles.optionText)}
-                value={item.text}
-                onChange={e =>
-                  updateItemText(pair.id, index as 0 | 1, e.target.value)
-                }
-                disabled={disabled}
-              />
-            ))}
+          <div
+            key={pair.id}
+            className={classNames(styles.optionRow, styles.pairRow)}
+          >
+            {pair.items.map((item, index) => {
+              const role = index === 0 ? 'Term' : 'Definition';
+              return (
+                <textarea
+                  key={item.id}
+                  name={`pair-${pair.id}-item-${index}`}
+                  aria-label={`Pair ${pairIndex + 1}, ${role.toLowerCase()}`}
+                  placeholder={role}
+                  className={classNames(
+                    builderCommonStyles.textarea,
+                    styles.pairText
+                  )}
+                  value={item.text}
+                  onChange={e =>
+                    updateItemText(pair.id, index as 0 | 1, e.target.value)
+                  }
+                  disabled={disabled}
+                />
+              );
+            })}
             <IconButton
               aria-label={`Delete pair ${pairIndex + 1}`}
               size="small"
@@ -199,7 +209,7 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
         }
         disabled={disabled}
       />
-    </>
+    </div>
   );
 };
 

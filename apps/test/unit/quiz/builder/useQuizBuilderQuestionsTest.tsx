@@ -90,8 +90,8 @@ describe('useQuizBuilderQuestions', () => {
     expect(first).toMatchObject({
       type: 'MatchQuestion',
       pairs: [
-        {items: [{text: 'Item A'}, {text: 'Match A'}]},
-        {items: [{text: 'Item B'}, {text: 'Match B'}]},
+        {items: [{text: 'Term A'}, {text: 'Definition A'}]},
+        {items: [{text: 'Term B'}, {text: 'Definition B'}]},
       ],
     });
     const ids = [first, second].flatMap(question =>
