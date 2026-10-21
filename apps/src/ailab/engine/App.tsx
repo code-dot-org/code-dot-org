@@ -296,15 +296,15 @@ const App = ({
       {currentPanel === 'selectDataset' && (
         <BodyContainer flush>
           <div className={styles.panelRow}>
-            <div className={styles.pickerColumn}>
+            <ContainerLeft>
               <SelectDataset />
-            </div>
-            <div className={styles.infoColumn}>
+            </ContainerLeft>
+            <ContainerRight>
               <DataCard
                 canUseDataset={!!panelButtons.next?.enabled}
                 onUseDataset={() => dispatch(setCurrentPanel('datasetView'))}
               />
-            </div>
+            </ContainerRight>
           </div>
         </BodyContainer>
       )}

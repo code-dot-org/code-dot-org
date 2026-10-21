@@ -45,17 +45,17 @@
 .stats {
   display: flex;
 
-  > .fact {
+  > .row {
     flex: 1;
     padding: 8px 10px;
   }
 
-  > .fact + .fact {
+  > .row + .row {
     border-left: 1px solid var(--border-neutral-primary);
   }
 }
 
-.fact {
+.row {
   display: flex;
   flex-direction: column;
   gap: 2px;

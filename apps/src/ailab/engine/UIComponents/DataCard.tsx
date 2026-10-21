@@ -12,13 +12,13 @@ import I18n from '../i18n';
 
 import styles from './dataCard.module.scss';
 
-interface FactProps {
+interface CardRowProps {
   heading: string;
   children: ReactNode;
 }
 
-const Fact = ({heading, children}: FactProps) => (
-  <div className={styles.fact}>
+const CardRow = ({heading, children}: CardRowProps) => (
+  <div className={styles.row}>
     <Typography component="h4" variant="label3" className={styles.heading}>
       {heading}
     </Typography>
@@ -26,8 +26,8 @@ const Fact = ({heading, children}: FactProps) => (
   </div>
 );
 
-const Stat = ({heading, children}: FactProps) => (
-  <div className={styles.fact}>
+const Stat = ({heading, children}: CardRowProps) => (
+  <div className={styles.row}>
     <Typography component="h4" variant="label3" className={styles.heading}>
       {heading}
     </Typography>
@@ -113,21 +113,21 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
               </div>
               {card?.context?.potentialUses && (
                 <div className={styles.section}>
-                  <Fact heading="Potential Uses">
+                  <CardRow heading="Potential Uses">
                     {datasetDetails.potentialUses}
-                  </Fact>
+                  </CardRow>
                 </div>
               )}
               {card?.context?.potentialMisuses && (
                 <div className={styles.section}>
-                  <Fact heading="Potential Misuses">
+                  <CardRow heading="Potential Misuses">
                     {datasetDetails.potentialMisuses}
-                  </Fact>
+                  </CardRow>
                 </div>
               )}
               {card?.source && (
                 <div className={styles.section}>
-                  <Fact heading="Source">{card.source}</Fact>
+                  <CardRow heading="Source">{card.source}</CardRow>
                 </div>
               )}
               {removedRowsMsg && (
