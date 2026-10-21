@@ -9,7 +9,7 @@ dependencies = []
 [dependency-groups]
 dev = [
   'pytest >=8',
-  'pillow >=10',
+  'pillow>=13.0.0',
   'numpy >=1.26',
 ]
 
