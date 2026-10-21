@@ -1,37 +1,36 @@
 /* React component to show information about the currently-selected data set. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
-import React, {type ReactNode} from 'react';
+import classNames from 'classnames';
+import React, {type ReactNode, useEffect} from 'react';
 
 import {
   getDatasetDetails,
   getUploadedFileName,
 } from '../helpers/datasetDetails';
-import {shallowEqual, useAppSelector} from '../hooks';
+import {isPanelEnabled} from '../helpers/navigationValidation';
+import {shallowEqual, useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
+import {useProject} from '../ProjectContext';
+import {setCurrentPanel} from '../redux';
 
 import styles from './dataCard.module.scss';
 
 interface CardRowProps {
   heading: string;
   children: ReactNode;
+  isStat?: boolean;
 }
 
-const CardRow = ({heading, children}: CardRowProps) => (
-  <div className={styles.row}>
-    <Typography component="h4" variant="label3" className={styles.heading}>
+const CardRow = ({heading, children, isStat = false}: CardRowProps) => (
+  <div className={styles.section}>
+    <Typography component="h5" variant="label3" className={styles.heading}>
       {heading}
     </Typography>
-    <Typography variant="body3">{children}</Typography>
-  </div>
-);
-
-const Stat = ({heading, children}: CardRowProps) => (
-  <div className={styles.row}>
-    <Typography component="h4" variant="label3" className={styles.heading}>
-      {heading}
-    </Typography>
-    <Typography variant="body2" className={styles.statValue}>
+    <Typography
+      variant={isStat ? 'body2' : 'body3'}
+      className={classNames(isStat && styles.strong)}
+    >
       {children}
     </Typography>
   </div>
@@ -43,7 +42,7 @@ const EmptyState = () => (
       <FontAwesomeV6Icon iconName="table" iconStyle="solid" />
     </span>
     <div className={styles.emptyText}>
-      <Typography component="p" variant="body2" className={styles.emptyTitle}>
+      <Typography component="p" variant="body2" className={styles.strong}>
         No dataset selected
       </Typography>
       <Typography component="p" variant="body4" className={styles.emptyMessage}>
@@ -53,12 +52,15 @@ const EmptyState = () => (
   </div>
 );
 
-interface DataCardProps {
-  canUseDataset: boolean;
-  onUseDataset: () => void;
-}
+const DATA_LENGTH_LIMIT = 20000;
 
-const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
+const DataCard = () => {
+  const dispatch = useAppDispatch();
+  const {project} = useProject();
+  const canUseDataset = useAppSelector(state =>
+    isPanelEnabled(state, project, 'datasetView')
+  );
+  const hasSelection = useAppSelector(state => state.csvfile !== undefined);
   const name = useAppSelector(state => state.name);
   const uploadedFileName = useAppSelector(getUploadedFileName);
   const metadata = useAppSelector(state => state.metadata);
@@ -70,12 +72,13 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
   const card =
     Object.keys(metadata.card).length > 0 ? metadata.card : undefined;
 
-  const dataLengthLimit = 20000;
-  if (dataLength > dataLengthLimit) {
-    window.alert(
-      I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit})
-    );
-  }
+  useEffect(() => {
+    if (dataLength > DATA_LENGTH_LIMIT) {
+      window.alert(
+        I18n.t('dataCardWarningLargeDataset', {rowCount: DATA_LENGTH_LIMIT})
+      );
+    }
+  }, [dataLength]);
 
   const removedRowsMsg =
     removedRowsCount > 0
@@ -91,7 +94,7 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
       </div>
       <div className={styles.content}>
         {dataLength === 0 ? (
-          <EmptyState />
+          !hasSelection && <EmptyState />
         ) : (
           <>
             <div className={styles.card}>
@@ -106,29 +109,27 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
                 )}
               </div>
               <div className={styles.stats}>
-                <Stat heading="Rows">{dataLength.toLocaleString('en')}</Stat>
+                <CardRow heading="Rows" isStat>
+                  {dataLength.toLocaleString('en')}
+                </CardRow>
                 {card?.lastUpdated && (
-                  <Stat heading="Last Updated">{card.lastUpdated}</Stat>
+                  <CardRow heading="Last Updated" isStat>
+                    {card.lastUpdated}
+                  </CardRow>
                 )}
               </div>
               {card?.context?.potentialUses && (
-                <div className={styles.section}>
-                  <CardRow heading="Potential Uses">
-                    {datasetDetails.potentialUses}
-                  </CardRow>
-                </div>
+                <CardRow heading="Potential Uses">
+                  {datasetDetails.potentialUses}
+                </CardRow>
               )}
               {card?.context?.potentialMisuses && (
-                <div className={styles.section}>
-                  <CardRow heading="Potential Misuses">
-                    {datasetDetails.potentialMisuses}
-                  </CardRow>
-                </div>
+                <CardRow heading="Potential Misuses">
+                  {datasetDetails.potentialMisuses}
+                </CardRow>
               )}
               {card?.source && (
-                <div className={styles.section}>
-                  <CardRow heading="Source">{card.source}</CardRow>
-                </div>
+                <CardRow heading="Source">{card.source}</CardRow>
               )}
               {removedRowsMsg && (
                 <div className={styles.section}>
@@ -136,12 +137,12 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
                 </div>
               )}
             </div>
-            {!card && (
+            {datasetDetails.isUserUploaded && (
               <div className={styles.card}>
                 <Typography
-                  component="h4"
+                  component="h5"
                   variant="label3"
-                  className={styles.sampleHeading}
+                  className={classNames(styles.section, styles.heading)}
                 >
                   Sample row
                 </Typography>
@@ -154,7 +155,10 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
                       <Typography
                         component="dd"
                         variant="body3"
-                        className={styles.sampleValue}
+                        className={classNames(
+                          styles.strong,
+                          styles.sampleValue
+                        )}
                       >
                         {value}
                       </Typography>
@@ -176,7 +180,7 @@ const DataCard = ({canUseDataset, onUseDataset}: DataCardProps) => {
             <FontAwesomeV6Icon iconName="arrow-right" aria-hidden="true" />
           }
           disabled={!canUseDataset}
-          onClick={onUseDataset}
+          onClick={() => dispatch(setCurrentPanel('datasetView'))}
         >
           Use this dataset
         </Button>

@@ -26,6 +26,10 @@
   @include mixins.card;
 
   overflow: hidden;
+
+  > * + * {
+    border-top: 1px solid var(--border-neutral-primary);
+  }
 }
 
 .section {
@@ -36,43 +40,24 @@
   overflow-wrap: anywhere;
 }
 
-.section + .section,
-.stats,
-.stats + .section {
-  border-top: 1px solid var(--border-neutral-primary);
-}
-
 .stats {
   display: flex;
 
-  > .row {
+  > .section {
     flex: 1;
-    padding: 8px 10px;
   }
 
-  > .row + .row {
+  > .section + .section {
     border-left: 1px solid var(--border-neutral-primary);
   }
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
 }
 
 .heading {
   color: var(--text-neutral-quaternary);
 }
 
-.statValue {
+.strong {
   font-weight: 600;
-}
-
-.sampleHeading {
-  display: block;
-  padding: 8px 10px;
-  color: var(--text-neutral-quaternary);
 }
 
 .sampleRow {
@@ -84,7 +69,6 @@
   justify-content: space-between;
   gap: 8px;
   padding: 8px 10px;
-  border-top: 1px solid var(--border-neutral-primary);
   overflow-wrap: anywhere;
 
   dd {
@@ -92,8 +76,11 @@
   }
 }
 
+.sampleCell + .sampleCell {
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
 .sampleValue {
-  font-weight: 600;
   text-align: end;
 }
 
@@ -123,10 +110,6 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-}
-
-.emptyTitle {
-  font-weight: 600;
 }
 
 .emptyMessage {

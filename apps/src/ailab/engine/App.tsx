@@ -300,10 +300,7 @@ const App = ({
               <SelectDataset />
             </ContainerLeft>
             <ContainerRight>
-              <DataCard
-                canUseDataset={!!panelButtons.next?.enabled}
-                onUseDataset={() => dispatch(setCurrentPanel('datasetView'))}
-              />
+              <DataCard />
             </ContainerRight>
           </div>
         </BodyContainer>
@@ -358,7 +355,7 @@ const App = ({
         </BodyContainer>
       )}
 
-      {hasNavigation && currentPanel !== 'selectDataset' && (
+      {hasNavigation && (
         <PanelButtons
           panelButtons={panelButtons}
           currentPanel={currentPanel}
