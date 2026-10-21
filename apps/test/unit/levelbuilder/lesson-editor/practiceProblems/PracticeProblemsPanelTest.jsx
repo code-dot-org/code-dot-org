@@ -86,6 +86,52 @@ describe('PracticeProblemsPanel', () => {
     wrapper.unmount();
   });
 
+  it('sends one POST when Accept is clicked twice during a save', async () => {
+    const candidates = [
+      {problemType: 'match', problemText: 'A', solution: [], objectiveIds: []},
+      {problemType: 'match', problemText: 'B', solution: [], objectiveIds: []},
+    ];
+    let resolveSave;
+    fetchSpy = jest
+      .spyOn(window, 'fetch')
+      .mockImplementation(url =>
+        url === '/practice_problems/generate'
+          ? Promise.resolve({ok: true, json: () => Promise.resolve(candidates)})
+          : new Promise(resolve => (resolveSave = resolve))
+      );
+    const wrapper = mount(<PracticeProblemsPanel {...defaultProps} />);
+    const clickButton = label =>
+      wrapper
+        .findWhere(n => n.name() === 'button' && n.text().includes(label))
+        .first()
+        .simulate('click');
+
+    await act(async () => {
+      clickButton('Generate with AI');
+      await flushPromises();
+    });
+    wrapper.update();
+
+    await act(async () => {
+      clickButton('Accept');
+      wrapper.update();
+      clickButton('Accept');
+      resolveSave({
+        ok: true,
+        json: () => Promise.resolve({...candidates[0], id: 99}),
+      });
+      await flushPromises();
+    });
+    wrapper.update();
+
+    const posts = fetchSpy.mock.calls.filter(
+      ([url]) => url === '/practice_problems'
+    );
+    expect(posts).toHaveLength(1);
+    expect(wrapper.text()).toContain('1 of 1');
+    wrapper.unmount();
+  });
+
   it('opens a type picker from Add manually, then the editor for a chosen type', () => {
     const wrapper = mount(<PracticeProblemsPanel {...defaultProps} />);
 

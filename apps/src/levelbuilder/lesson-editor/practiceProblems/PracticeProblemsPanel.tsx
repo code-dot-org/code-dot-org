@@ -1,5 +1,5 @@
 import {Typography, Button as MuiButton} from '@mui/material';
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 
 import {PracticeProblemTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -114,6 +114,11 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
   const [addingManually, setAddingManually] = useState(false);
   const [manualType, setManualType] = useState<string | null>(null);
   const [generating, setGenerating] = useState(false);
+  // Blocks a second save, and edits to the review queue, while a save is in
+  // flight; handleAccept drops the candidate by its index at click time. The
+  // ref guards clicks that land before the re-render disables the buttons.
+  const [saving, setSaving] = useState(false);
+  const savingRef = useRef(false);
   const [error, setError] = useState<string | null>(null);
 
   const objectiveDescriptionsById = new Map(
@@ -206,8 +211,25 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
     return response.json();
   };
 
-  const handleAccept = async () => {
+  const withSaving = async (save: () => Promise<void>) => {
+    if (savingRef.current) {
+      return;
+    }
+    savingRef.current = true;
+    setSaving(true);
+    setError(null);
     try {
+      await save();
+    } catch (e) {
+      setError(`Failed to save problem: ${e}`);
+    } finally {
+      savingRef.current = false;
+      setSaving(false);
+    }
+  };
+
+  const handleAccept = () =>
+    withSaving(async () => {
       const saved = await persist(
         candidates[reviewIndex],
         'POST',
@@ -215,10 +237,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
       );
       setProblems(prev => [...prev, saved]);
       dropCurrentCandidate();
-    } catch (e) {
-      setError(`Failed to save problem: ${e}`);
-    }
-  };
+    });
 
   const handleSaveCandidateEdit = (updated: PracticeProblemData) => {
     setCandidates(prev =>
@@ -227,8 +246,8 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
     setEditingCandidate(false);
   };
 
-  const handleSaveExistingEdit = async (updated: PracticeProblemData) => {
-    try {
+  const handleSaveExistingEdit = (updated: PracticeProblemData) =>
+    withSaving(async () => {
       const saved = await persist(
         updated,
         'PATCH',
@@ -236,25 +255,19 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
       );
       setProblems(prev => prev.map(p => (p.id === saved.id ? saved : p)));
       setEditingProblem(null);
-    } catch (e) {
-      setError(`Failed to save problem: ${e}`);
-    }
-  };
+    });
 
   const closeManual = () => {
     setAddingManually(false);
     setManualType(null);
   };
 
-  const handleSaveManual = async (problem: PracticeProblemData) => {
-    try {
+  const handleSaveManual = (problem: PracticeProblemData) =>
+    withSaving(async () => {
       const saved = await persist(problem, 'POST', '/practice_problems');
       setProblems(prev => [...prev, saved]);
       closeManual();
-    } catch (e) {
-      setError(`Failed to save problem: ${e}`);
-    }
-  };
+    });
 
   const handleRemoveExisting = async (problem: PracticeProblemData) => {
     if (
@@ -436,6 +449,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
                 key={manualType}
                 problem={blankProblem(manualType)}
                 objectives={objectives}
+                saving={saving}
                 onSave={handleSaveManual}
                 onCancel={closeManual}
               />
@@ -468,6 +482,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
                 <MuiButton
                   variant="contained"
                   color="primary"
+                  disabled={saving}
                   onClick={handleAccept}
                 >
                   Accept
@@ -475,6 +490,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
                 <MuiButton
                   variant="outlined"
                   color="secondary"
+                  disabled={saving}
                   onClick={dropCurrentCandidate}
                 >
                   Reject
@@ -537,6 +553,7 @@ const PracticeProblemsPanel: React.FC<PracticeProblemsPanelProps> = ({
           <PracticeProblemEditor
             problem={editingProblem}
             objectives={objectives}
+            saving={saving}
             onSave={handleSaveExistingEdit}
             onCancel={() => setEditingProblem(null)}
           />

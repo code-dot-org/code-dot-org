@@ -16,6 +16,7 @@ import moduleStyles from './practiceProblems.module.scss';
 interface PracticeProblemEditorProps {
   problem: PracticeProblemData;
   objectives: LessonObjective[];
+  saving?: boolean;
   onSave: (updated: PracticeProblemData) => void;
   onCancel: () => void;
 }
@@ -26,6 +27,7 @@ interface PracticeProblemEditorProps {
 const PracticeProblemEditor: React.FC<PracticeProblemEditorProps> = ({
   problem,
   objectives,
+  saving = false,
   onSave,
   onCancel,
 }) => {
@@ -292,7 +294,12 @@ const PracticeProblemEditor: React.FC<PracticeProblemEditorProps> = ({
       </fieldset>
 
       <div className={moduleStyles.reviewActions}>
-        <MuiButton variant="contained" color="primary" onClick={handleSave}>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          disabled={saving}
+          onClick={handleSave}
+        >
           Save
         </MuiButton>
         <MuiButton variant="outlined" color="secondary" onClick={onCancel}>
