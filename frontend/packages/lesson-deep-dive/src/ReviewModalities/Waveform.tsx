@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import {type FC, useEffect, useState} from 'react';
 
 import styles from './podcasts-box.module.scss';
 
@@ -57,7 +57,7 @@ const Waveform: FC<WaveformProps> = ({analyser, isPlaying}) => {
         BARS.map((_bar, i) => {
           const magnitude = (data[i] ?? 0) / 255;
           return MIN_LIVE_HEIGHT + magnitude * (100 - MIN_LIVE_HEIGHT);
-        })
+        }),
       );
       frame = requestAnimationFrame(tick);
     };
