@@ -33,9 +33,13 @@ const PracticeProblemEditor: React.FC<PracticeProblemEditorProps> = ({
 }) => {
   const {problemType} = problem;
   const [problemText, setProblemText] = useState(problem.problemText);
-  const [solution, setSolution] = useState<SolutionEntry[]>(
-    problem.solution.map(entry => ({...entry}))
-  );
+  // Scramble rows are shown in answer order, since handleSave reindexes them.
+  const [solution, setSolution] = useState<SolutionEntry[]>(() => {
+    const copy = problem.solution.map(entry => ({...entry}));
+    return problemType === PracticeProblemTypes.SCRAMBLE
+      ? copy.sort((a, b) => Number(a.correct) - Number(b.correct))
+      : copy;
+  });
   const [objectiveIds, setObjectiveIds] = useState<number[]>(
     problem.objectiveIds ?? []
   );

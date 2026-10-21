@@ -116,6 +116,37 @@ describe('PracticeProblemEditor', () => {
     ]);
   });
 
+  it('keeps scramble answer order when rows arrive unsorted', () => {
+    const onSave = jest.fn();
+    const scramble = {
+      problemType: 'scramble',
+      problemText: 'Order',
+      solution: [
+        {option: 'second', correct: 1},
+        {option: 'first', correct: 0},
+      ],
+      objectiveIds: [],
+    };
+    const wrapper = mount(
+      <PracticeProblemEditor
+        problem={scramble}
+        objectives={objectives}
+        onSave={onSave}
+        onCancel={jest.fn()}
+      />
+    );
+
+    wrapper
+      .findWhere(n => n.name() === 'button' && n.text() === 'Save')
+      .first()
+      .simulate('click');
+
+    expect(onSave.mock.calls[0][0].solution).toEqual([
+      {option: 'first', correct: 0},
+      {option: 'second', correct: 1},
+    ]);
+  });
+
   it('adds an option', () => {
     const onSave = jest.fn();
     const wrapper = mount(
