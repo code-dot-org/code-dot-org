@@ -53,6 +53,9 @@ Read, in this order:
   (`gh pr view N --comments`); list which of them the PR claims to have
   addressed,
 - any proposal or design doc the PR or the caller links,
+- `.github/pull_request_template.md` and `.github/PULL_REQUEST_GUIDELINES.md`
+  — the house rules for what a PR body contains, how it reads, and what
+  the code and comments in it have to clear. Phases 2 and 4 apply them.
 - `git log` for the branch — commit messages in this repo tend to document
   the special cases the diff hit,
 - the PR's position in a stack, if any: its base branch, and which sibling
@@ -66,6 +69,14 @@ thorough and running it twice wastes the budget you need for Phase 3.
 
 Hold back `--comment` and `--fix` — both act on the raw, unranked list, which
 is the list you are about to re-rank.
+
+`/code-review` doesn't know the house rules. Add findings of your own for
+the parts of `.github/PULL_REQUEST_GUIDELINES.md` it doesn't cover: a PR
+large enough to have been split without the description saying why it
+wasn't, over-engineering weighed against the benefit it buys, and comments
+that narrate how the code works, restate the diff, duplicate a neighbour,
+or depend on behaviour of code outside their scope. These are MEDIUM by
+the severity scale unless something else lifts them.
 
 ## Phase 3 — triage, verify, classify
 
@@ -134,8 +145,14 @@ CRITICAL findings stay in HIGH regardless.
 ```
 ## PR description
 
-Claims that don't match the code, and omissions that would mislead the next
-reviewer. One line if it's accurate.
+Audit the body against `.github/pull_request_template.md` and the PR
+description rules in `.github/PULL_REQUEST_GUIDELINES.md`: sections the
+template asks for that are missing or still hold their comment markers,
+unchecked vetting boxes, an Authorship section that doesn't separate what
+the human did from what an agent did, and the writing-style rules — plain
+English over AI jargon, "I" only for the human author, no walkthrough of
+how the change works. Then the claims that don't match the code, and the
+omissions that would mislead the next reviewer. One line if it's accurate.
 
 ## Previously raised feedback
 
