@@ -1,5 +1,6 @@
 <Quiz>
   <config><![CDATA[{
+  "published": true,
   "game_id": 76,
   "created_at": "2026-10-19T17:14:22.000Z",
   "level_num": "custom",
@@ -13,7 +14,6 @@
     "show_correctness": true,
     "display_name": "Test of New Quizes"
   },
-  "published": true,
   "placements": [
     {
       "page": 1,
