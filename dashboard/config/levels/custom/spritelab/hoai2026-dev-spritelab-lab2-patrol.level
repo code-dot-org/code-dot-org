@@ -39,9 +39,11 @@
           "text": "Drag **begins patrolling** onto the dotted outline.",
           "check": {
             "kind": "block",
-            "type": "gamelab_addBehaviorSimple",
+            "type": "spritelab2_beginsBehavior",
             "under": "spritelab2_whenRun",
-            "contains": "spritelab2_patrollingOnBlocks"
+            "fields": {
+              "BEHAVIOR": "patrollingOnBlocks"
+            }
           }
         },
         {
