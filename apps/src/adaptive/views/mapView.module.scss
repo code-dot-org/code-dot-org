@@ -1,8 +1,18 @@
+// The board at its own size, scaled down to the width it is given; the
+// zoom layer inside it scales up about the focused checkpoint.
+.fit {
+  position: relative;
+}
+
 .board {
   position: relative;
-  margin: 0 auto;
+  transform-origin: left top;
+}
+
+.zoom {
+  position: absolute;
+  inset: 0;
   transition: transform 450ms ease;
-  transform-origin: center top;
 }
 
 .edges {
@@ -16,13 +26,38 @@
   fill: none;
   stroke: var(--borders-neutral-primary);
   stroke-width: 3;
-  stroke-dasharray: 8 8;
+  stroke-dasharray: 1 8;
+  stroke-linecap: round;
   transition: stroke 300ms;
 }
 
 .edgeActive {
   stroke: var(--borders-success-primary);
   stroke-dasharray: none;
+}
+
+// A destination group's box, its title in the top corner on the outer side.
+.destination {
+  position: absolute;
+  z-index: 0;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 16px;
+  background: var(--background-neutral-primary);
+}
+
+.destinationTitle {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  color: var(--text-neutral-primary);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.destinationRight .destinationTitle {
+  right: 14px;
+  left: auto;
 }
 
 .node {
@@ -34,6 +69,47 @@
   width: 190px;
   transform: translateX(-50%);
   transition: opacity 300ms;
+}
+
+// On the destinations grid the title sits below the circle, two lines at
+// most, the node as wide as the title; a destination member's title sits
+// beside its circle, on the outer side.
+.nodeBelow {
+  width: 112px;
+}
+
+.labelBelow {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 6px;
+  padding: 0 2px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.labelLeft,
+.labelRight {
+  position: absolute;
+  top: 50%;
+  width: 110px;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+.labelLeft {
+  right: calc(50% + 42px);
+  text-align: right;
+}
+
+.labelRight {
+  left: calc(50% + 42px);
+  text-align: left;
 }
 
 .nodeLabel {

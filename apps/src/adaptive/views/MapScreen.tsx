@@ -6,7 +6,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
@@ -14,6 +14,7 @@ import {PathwayEvidence} from '../routing/evidence';
 import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
+import {resolveMapSettings} from './mapSettings';
 import MapView from './MapView';
 import ProjectCard from './ProjectCard';
 
@@ -51,6 +52,10 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   // step's manager on the same channel.
   const projectState = usePathwayProject(pathway);
   const focused = focusId && pathway.checkpoints.find(c => c.id === focusId);
+  const mapSettings = useMemo(
+    () => resolveMapSettings(pathway, window.location.search),
+    [pathway]
+  );
 
   // A click on the map background while zoomed returns to the full map.
   const onMapClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -89,6 +94,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         <MapView
           pathway={pathway}
           statusMap={statusMap}
+          settings={mapSettings}
           focusId={focusId}
           onSelect={id => onFocus(id === focusId ? undefined : id)}
         />
