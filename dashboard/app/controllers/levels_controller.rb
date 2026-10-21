@@ -188,6 +188,10 @@ class LevelsController < ApplicationController
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+    # Only the simple-progress header reads it; elsewhere the field invites
+    # authors to fill in a title that shows nowhere.
+    @show_header_label = @level.header_label.present? ||
+      @level.script_levels.map(&:script).compact.any?(&:simple_progress?)
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
