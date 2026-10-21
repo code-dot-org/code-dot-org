@@ -1321,6 +1321,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayerProgress({
       touching,
       height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
+      x: player.position.x,
+      speed: player.speed,
     });
   }
 

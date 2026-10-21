@@ -1,7 +1,7 @@
 // The level's checklist as the Guide shows it: which items hold, kept once
 // earned for the rest of the visit, and the game's progress feeding them.
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   checkObjective,
@@ -30,20 +30,29 @@ export interface ObjectivesState {
   collapsedText?: string;
 }
 
+/** A frame's move past the player's speed by this much is a teleport. */
+const TELEPORT_SLACK_PX = 4;
+
 /** What the engine reports about the running player. */
 export interface PlayerProgressReport {
   /** Image names of sprites the player overlaps this frame. */
   touching: string[];
   /** The player's feet, 0 at the floor to 1 at the top of the view. */
   height: number;
+  /** The player's center across the view, in px. */
+  x: number;
+  /** How far the player walks in a frame, in px. */
+  speed: number;
 }
 
 /**
  * The running game's progress for the checklist: touches and height from
  * the engine, scene landings, and the longest run so far. Each only grows
- * while the level stays open. Reports the level never reads are not kept,
- * since each one re-renders the view; the engine's callback is null when
- * nothing wants it.
+ * while the level stays open. The engine also reports during the Code
+ * tab's preview; those are dropped, since only a run the student started
+ * with Play should count, and Play respawns the player. Reports the level
+ * never reads are not kept, since each one re-renders the view; the
+ * engine's callback is null when nothing wants it.
  */
 export function usePlayProgress(
   playing: boolean,
@@ -56,14 +65,23 @@ export function usePlayProgress(
 } {
   const [touched, setTouched] = useState<ReadonlySet<string>>(new Set());
   const [highest, setHighest] = useState(0);
+  const [farthest, setFarthest] = useState(0);
+  const [risen, setRisen] = useState(0);
+  // The run's start x, the last x seen, and the lowest the feet have been.
+  const runRef = useRef<{x: number; lastX: number; lowest: number} | null>(
+    null
+  );
   const [scenesLanded, setScenesLanded] = useState<ReadonlySet<string>>(
     new Set()
   );
   const [longestRunSeconds, setLongestRunSeconds] = useState(0);
   const [everPlayed, setEverPlayed] = useState(false);
+  const playingRef = useRef(playing);
+  playingRef.current = playing;
 
   useEffect(() => {
     if (!playing) {
+      runRef.current = null;
       return;
     }
     setEverPlayed(true);
@@ -82,9 +100,12 @@ export function usePlayProgress(
     };
   }, [playing, needs.seconds]);
 
-  const wantsPlayer = needs.touch || needs.height;
+  const wantsPlayer = needs.touch || needs.height || needs.move;
   const onPlayerProgress = useCallback(
     (report: PlayerProgressReport) => {
+      if (!playingRef.current) {
+        return;
+      }
       if (needs.touch && report.touching.length) {
         setTouched(current => {
           if (report.touching.every(name => current.has(name))) {
@@ -96,8 +117,26 @@ export function usePlayProgress(
       if (needs.height) {
         setHighest(current => Math.max(current, report.height));
       }
+      if (needs.move) {
+        let run = runRef.current;
+        // A frame's move past any walk is a teleport (restart, go to
+        // scene): the run starts over there.
+        const teleport =
+          run &&
+          Math.abs(report.x - run.lastX) > report.speed + TELEPORT_SLACK_PX;
+        if (!run || teleport) {
+          run = {x: report.x, lastX: report.x, lowest: report.height};
+          runRef.current = run;
+        }
+        run.lastX = report.x;
+        run.lowest = Math.min(run.lowest, report.height);
+        const dx = Math.abs(report.x - run.x);
+        const rise = report.height - run.lowest;
+        setFarthest(current => Math.max(current, dx));
+        setRisen(current => Math.max(current, rise));
+      }
     },
-    [needs.touch, needs.height]
+    [needs.touch, needs.height, needs.move]
   );
 
   const onSceneLanded = useCallback((sceneId: string) => {
@@ -107,8 +146,15 @@ export function usePlayProgress(
   }, []);
 
   const runtime = useMemo(
-    () => ({longestRunSeconds, touched, highest, scenesLanded}),
-    [longestRunSeconds, touched, highest, scenesLanded]
+    () => ({
+      longestRunSeconds,
+      touched,
+      highest,
+      farthest,
+      risen,
+      scenesLanded,
+    }),
+    [longestRunSeconds, touched, highest, farthest, risen, scenesLanded]
   );
   return {
     runtime,

@@ -30,7 +30,7 @@
       "paintInstructions": "**Draw another character.**"
     },
     "objectives": {
-      "title": "**Prompt AI to make another character.**"
+      "title": "**Prompt AI to make another character**"
     },
     "long_instructions": "# Prompt AI to make another character",
     "header_label": "Make a story"

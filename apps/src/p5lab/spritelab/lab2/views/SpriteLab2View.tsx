@@ -70,6 +70,7 @@ import {
 import {onTrimsUpdated} from '../imageTrim';
 import {
   DEFAULT_IMAGE_STYLE,
+  editsWorld,
   GENERATION_LIMIT,
   isFreeplayMode,
   isImageMode,
@@ -1568,8 +1569,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A world level about one kind of image offers the palette only the
   // level's image of that kind.
   const placeOne = !!levelProperties.levelMode?.placeOne;
-  const paletteOnlyImage =
-    levelProperties.levelMode?.kind === 'world' ? focusImageName : undefined;
+  const paletteOnlyImage = editsWorld(levelProperties.levelMode)
+    ? focusImageName
+    : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) =>
       updateActiveWorld(world => moveWorldCell(world, row, col, cell)),
@@ -2253,12 +2255,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   arrows={arrowSet}
                   onPlay={handlePlayClick}
                   onStop={stopTab ? handleStopClick : undefined}
-                  onPlayGame={handlePlayGame}
-                  playGameDisabled={!!pinnedSceneId}
-                  playGameReason={LOCKED_REASON}
-                  playSceneHidden={
-                    !pinnedSceneId && activeScene.id === scenes[0].id
-                  }
+                  // A level pinned to one scene has one Play, for that scene.
+                  onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                  playSceneHidden={activeScene.id === scenes[0].id}
                 />
               }
               below={

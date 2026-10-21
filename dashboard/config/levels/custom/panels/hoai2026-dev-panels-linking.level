@@ -10,15 +10,9 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "##Connect your scenes\nYou have a story scene and a platformer scene. Right now they are separate.\n\nLet's link them. After a few seconds, your story will jump to the platformer.",
-        "imageUrl": "",
-        "key": "hoai2026-dev-panels-linking-f341481b-ad5e-4c33-a87a-9b4581b23bde"
-      },
-      {
-        "text": "##Link them\nNext you get a new block: **go to scene**. It jumps from one scene to another.",
-        "imageUrl": "",
-        "key": "hoai2026-dev-panels-linking-d9b50c4a-c7c2-48c1-b059-c48fda7c443d",
-        "fadeInOverPrevious": true
+        "text": "**Link your story to your game.**\n\nMake your scene change from story to platformer after a few seconds.",
+        "imageUrl": "https://images.code.org/740becfa9e8c5d42f3066269e40e8e9e-pixel-platform-link-scenes (2).gif",
+        "key": "hoai2026-dev-panels-linking-bc2ca338-bc77-4a2d-a92c-076eb8697ece"
       }
     ],
     "use_links": "false",
