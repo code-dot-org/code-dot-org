@@ -72,26 +72,67 @@ const Link: React.FunctionComponent<LinkProps> = ({
   type = 'primary',
   role,
   ...HTMLAttributes
-}) => (
-  <a
-    className={classNames(
-      moduleStyles.link,
-      moduleStyles[`link-${type}`],
-      moduleStyles[`link-${size}`],
-      className,
-    )}
-    href={!disabled ? href : undefined}
-    id={id}
-    onClick={!disabled ? onClick : undefined}
-    rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
-    target={(openInNewTab || undefined) && '_blank'}
-    role={role}
-    {...(disabled ? {'aria-disabled': true} : {})}
-    {...HTMLAttributes}
-  >
-    {text || children}
-    {external && <FontAwesomeV6Icon {...externalLinkIconProps} />}
-  </a>
-);
+}) => {
+  const isExternal = external !== undefined ? external : isExternalUrl(href);
+
+  return (
+    <a
+      className={classNames(
+        moduleStyles.link,
+        moduleStyles[`link-${type}`],
+        moduleStyles[`link-${size}`],
+        className,
+      )}
+      href={!disabled ? href : undefined}
+      id={id}
+      onClick={!disabled ? onClick : undefined}
+      rel={openInNewTab || isExternal ? 'noopener noreferrer' : undefined}
+      target={(openInNewTab || undefined) && '_blank'}
+      role={role}
+      {...(disabled ? {'aria-disabled': true} : {})}
+      {...HTMLAttributes}
+    >
+      {text || children}
+      {isExternal && <FontAwesomeV6Icon {...externalLinkIconProps} />}
+    </a>
+  );
+};
+
+/**
+ * Regex to check if a given URL starts with a protocol or double slash.
+ *
+ *  e.g.:
+ * - https://example.com
+ * - //example.com
+ * - ftp://example.com
+ * - mailto:example@example.com
+ */
+const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
+
+const INTERNAL_URL_REGEX_LIST = [
+  // Matches "https://code.org", "https://studio.code.org", "http://localhost-studio.code.org:3000/"
+  /^(?:https?:\/\/)?(?:[a-z0-9-]+\.)?code\.org(:\d+)?/i,
+  // Storybooks
+  /^(?:https?:\/\/)?localhost(:\d+)?/i,
+  // dev-code.org
+  /^(?:https?:\/\/)?dev-code.org(:\d+)?/i,
+  // hourofcode.com
+  /^(?:https?:\/\/)?hourofcode.com(:\d+)?/i,
+  // csedweek.org
+  /^(?:https?:\/\/)?csedweek.org(:\d+)?/i,
+];
+
+const isExternalUrl = (href: string) => {
+  const isAbsolute = ABSOLUTE_URL_REGEX.test(href);
+
+  if (!isAbsolute) {
+    return false;
+  }
+
+  // Tests the absolute URL (e.g. "https://example.com") against our list of internal URLs
+  const isInternal = INTERNAL_URL_REGEX_LIST.some(regex => regex.test(href));
+
+  return !isInternal;
+};
 
 export default Link;

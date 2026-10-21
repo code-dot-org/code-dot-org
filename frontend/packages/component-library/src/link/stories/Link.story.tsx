@@ -55,11 +55,40 @@ ExternalLink.args = {
   external: true,
 };
 
+export const ExternalLinkAutoDetected = SingleTemplate.bind({});
+ExternalLinkAutoDetected.args = {
+  text: 'Auto-detected External Link',
+  href: 'https://google.com',
+};
+
 export const OpenInNewTabLink = SingleTemplate.bind({});
 OpenInNewTabLink.args = {
   text: 'Open in New Tab',
   href: 'https://google.com',
   openInNewTab: true,
+};
+
+export const InternalVsExternalAutoDetection = MultipleTemplate.bind({});
+InternalVsExternalAutoDetection.args = {
+  components: [
+    {
+      text: 'Internal Link (relative)',
+      href: '/about',
+    },
+    {
+      text: 'Internal Link (hash)',
+      href: '#section',
+    },
+    {
+      text: 'External Link (auto-detected)',
+      href: 'https://google.com',
+    },
+    {
+      text: 'external=false using external URL',
+      href: 'https://google.com',
+      external: false,
+    },
+  ],
 };
 
 export const LinkWithTextPropVsLinkWithChildrenProp = MultipleTemplate.bind({});
