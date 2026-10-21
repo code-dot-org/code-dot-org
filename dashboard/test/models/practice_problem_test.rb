@@ -163,4 +163,28 @@ class PracticeProblemTest < ActiveSupport::TestCase
     end
   end
 
+  test 'seed_all destroys problems whose file is gone' do
+    removed = create(:practice_problem, key: 'removed-problem')
+    Dir.mktmpdir do |tmpdir|
+      root = Pathname.new(tmpdir)
+      File.write(root.join('good.json'), practice_problem_data.to_json)
+
+      PracticeProblem.seed_all(root_dir: root, glob: '*.json')
+
+      assert PracticeProblem.exists?(key: 'test-practice-problem')
+      refute PracticeProblem.exists?(id: removed.id)
+    end
+  end
+
+  test 'seed_all destroys nothing when a file fails to seed' do
+    kept = create(:practice_problem, key: 'kept-problem')
+    Dir.mktmpdir do |tmpdir|
+      root = Pathname.new(tmpdir)
+      File.write(root.join('bad.json'), 'not valid json {{')
+
+      PracticeProblem.seed_all(root_dir: root, glob: '*.json')
+
+      assert PracticeProblem.exists?(id: kept.id)
+    end
+  end
 end

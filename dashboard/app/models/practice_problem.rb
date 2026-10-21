@@ -74,12 +74,18 @@ class PracticeProblem < ApplicationRecord
     )
   end
 
+  # Destroys records whose file is gone, unless a file failed to seed: its
+  # key is unknown, and destroying would delete a live problem.
   def self.seed_all(root_dir: Rails.root, glob: "config/practice_problems/*.json")
+    seeded_keys = []
+    failed = false
     Dir.glob(root_dir.join(glob)).each do |path|
-      seed_record(path)
+      seeded_keys << seed_record(path)
     rescue => exception
+      failed = true
       CDO.log.error "Failed to seed practice problem #{path}: #{exception.message}"
     end
+    where.not(key: seeded_keys).destroy_all unless failed
   end
 
   def self.properties_from_file(content)
