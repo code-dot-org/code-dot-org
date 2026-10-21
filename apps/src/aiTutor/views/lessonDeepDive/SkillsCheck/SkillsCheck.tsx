@@ -7,6 +7,7 @@ import {
   PracticeProblem,
   PracticeScramble,
   PracticeSort,
+  ReflectionData,
   ScrambleSolution,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {
@@ -46,7 +47,6 @@ import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameter
 import {
   LessonDeepDiveData,
   practiceProblemValidator,
-  ReflectionData,
   userPracticeProblemAttemptValidator,
 } from '../types';
 

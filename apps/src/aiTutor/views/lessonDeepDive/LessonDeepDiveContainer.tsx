@@ -4,6 +4,9 @@ import {
   LevelsAttemptedBox,
   NextStepPicker,
   PreSkillsCheck,
+  ReflectionBox,
+  ReflectionData,
+  ReflectionValue,
   TimeSpentBox,
   TutorSummaryBox,
   ValidatedLevelsBox,
@@ -16,10 +19,9 @@ import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
-import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
+import {LessonDeepDiveData} from './types';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
