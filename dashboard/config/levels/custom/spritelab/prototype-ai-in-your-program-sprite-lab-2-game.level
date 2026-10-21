@@ -27,7 +27,7 @@
     },
     "image_role_defaults": {
       "sprite": "hero",
-      "gamelab_addBehaviorSimple": [
+      "spritelab2_beginsBehavior": [
         "friend"
       ],
       "gamelab_checkTouching": [
