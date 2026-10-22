@@ -78,12 +78,11 @@ export const ProjectProvider = ({
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
   /*
-    A project waiting for the dataset it will be reconciled against.
+    A project waiting for the dataset to load.
   */
   const [pendingProject, setPendingProject] = useState<
     AilabProject | undefined
   >();
-  // TODO: do we need all of these booleans
   const isProjectLoading = pendingProject !== undefined;
   const isDefaultProject = project === defaultProject;
   const data = useAppSelector(state => state.data);
