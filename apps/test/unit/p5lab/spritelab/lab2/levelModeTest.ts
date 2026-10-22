@@ -8,6 +8,7 @@ describe('tabsForMode', () => {
   it('opens on the first tab it names', () => {
     expect(tabsForMode({kind: 'code'})).toEqual(['Code', 'Play']);
     expect(tabsForMode({kind: 'world'})).toEqual(['World', 'Play']);
+    expect(tabsForMode({kind: 'build'})).toEqual(['World', 'Code', 'Play']);
     expect(tabsForMode({kind: 'play'})).toEqual(['Play']);
   });
 

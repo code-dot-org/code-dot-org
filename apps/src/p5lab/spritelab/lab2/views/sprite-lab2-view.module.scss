@@ -484,6 +484,13 @@ $z-over-blockly: 71;
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
+// Discover blocks at the workspace bar's end, at the bar's control height.
+.barButton.barButton {
+  height: $tab-item-height;
+  padding: 0 12px;
+  line-height: 1;
+}
+
 // The scene dropdown's name is a control, not text to copy, wherever the
 // dropdown stands. code-studio.css sets `p, span` back to selectable, so
 // the name's span is named too.

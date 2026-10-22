@@ -330,8 +330,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hiddenContextCallback &&
     hasInstructions;
 
-  // The AI Tutor tab, with its instructions drawer open to begin with,
-  // stands in for the Instructions tab. Predict levels keep their own layout.
+  // The AI Tutor tab, with the instructions pinned above its chat, stands in
+  // for the Instructions tab. Predict levels keep their own layout.
   const instructionsInAiTutor =
     !!levelProperties.showInstructionsInAiTutor &&
     usesSharedInstructionsDrawer &&
@@ -387,9 +387,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <AiTutorChatWithInstructionDrawer
             {...aiTutorProps}
             instructionsContent={instructionsContent}
+            instructionsText={
+              instructionsProps.dynamicInstructions ||
+              levelProperties.longInstructions
+            }
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
-            instructionsInitiallyOpen={instructionsInAiTutor}
+            instructionsPinned={instructionsInAiTutor}
           />
         );
       } else {

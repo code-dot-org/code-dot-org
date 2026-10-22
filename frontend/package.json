@@ -19,15 +19,16 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
+    "deploy": "turbo deploy",
     "dev": "turbo clean --filter '@code-dot-org/studio...' && turbo watch dev --filter @code-dot-org/studio",
     "format": "prettier --check *",
     "format:fix": "prettier --write .",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "release": "turbo release",
     "release:dryrun": "turbo release:dryrun",
     "start": "yarn dev",
     "test": "turbo test",
-    "test:ui:ci": "turbo test:ui:ci",
     "test:ui:local": "turbo test:ui:local",
     "test:unit": "yarn test",
     "typecheck": "turbo typecheck"

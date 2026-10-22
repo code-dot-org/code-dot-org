@@ -34,7 +34,7 @@
       "type": "platform"
     },
     "objectives": {
-      "title": "**Make this world yours.**",
+      "title": "**Make this world yours**",
       "items": [
         {
           "text": "Place platforms on the grid.",

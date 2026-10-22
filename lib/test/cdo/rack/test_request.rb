@@ -189,15 +189,24 @@ class RequestTest
       end
     end
 
-    def test_statsig_stable_id_is_memoized
-      session = {}
+    def test_statsig_stable_id_is_stable_until_cleared
+      stable_id = SecureRandom.uuid
+      cookies = {SharedConstants::STATSIG_STABLE_ID_KEY => stable_id}
+      session = {SharedConstants::STATSIG_STABLE_ID_KEY => stable_id}
       request = MockRequest.new(session)
-      stable_id = request.statsig_stable_id
-      session.expects(:[]).never
-      session.expects(:[]=).never
+      request.stubs(:cookies).returns(cookies)
 
       assert_equal stable_id, request.statsig_stable_id
       assert_equal stable_id, request.anon_user_id
+
+      cookies.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
+      session.delete(SharedConstants::STATSIG_STABLE_ID_KEY)
+      new_stable_id = request.statsig_stable_id
+
+      assert_match /\A#{SharedConstants::STATSIG_STABLE_ID_PATTERN}\z/io, new_stable_id
+      refute_equal stable_id, new_stable_id
+      assert_equal new_stable_id, request.statsig_stable_id
+      assert_equal new_stable_id, request.anon_user_id
     end
 
     def test_statsig_stable_id_uses_session_for_blank_cookie

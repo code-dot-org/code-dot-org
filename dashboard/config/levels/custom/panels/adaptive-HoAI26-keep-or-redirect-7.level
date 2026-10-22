@@ -31,7 +31,7 @@
         "key": "adaptive-HoAI26-keep-or-redirect-7-4d59d49f-ef73-4664-89c5-db39ed61e775",
         "text": "####You decide what to keep!\n\nWrite a new prompt that explains what missed the mark, what to change, and what to keep.",
         "imageUrl": "https://images.code.org/6488a63920af6623306bf319fbf54573-Plan matches the finished page-4.png",
-        "layout": "text-bottom-left",
+        "layout": "text-top-right",
         "fadeInOverPrevious": true
       }
     ],
@@ -40,6 +40,6 @@
     "offer_browser_tts": "false",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:34:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:35:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:34:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:35:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 16:31:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

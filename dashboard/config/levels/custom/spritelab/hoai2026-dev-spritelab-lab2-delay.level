@@ -72,7 +72,7 @@
       }
     ],
     "objectives": {
-      "title": "**Say something later.**",
+      "title": "**Say something later**",
       "items": [
         {
           "text": "Drag a **say** block onto the dotted outline.",

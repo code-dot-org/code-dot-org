@@ -54,12 +54,15 @@
         "zh-CN",
         "zh-TW"
       ],
+      "topic_tags": [
+        "ai"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-30 13:53:25 UTC",
+    "serialized_at": "2026-10-21 13:36:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

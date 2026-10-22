@@ -49,6 +49,7 @@ import {
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
+import {catalogEntries, heldBackBlockTypes} from '../blockCatalog';
 import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -70,6 +71,8 @@ import {
 import {onTrimsUpdated} from '../imageTrim';
 import {
   DEFAULT_IMAGE_STYLE,
+  editsWorld,
+  GENERATION_LIMIT,
   isFreeplayMode,
   isImageMode,
   tabsForMode,
@@ -132,7 +135,9 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {readBarLayout} from './barLayout';
+import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
+import CatalogBand from './CatalogBand';
 import EditorStrip from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
@@ -143,6 +148,7 @@ import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
 import ToolButtons from './components/ToolButtons';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
+import DiscoverBlocksButton from './DiscoverBlocksButton';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
@@ -153,6 +159,7 @@ import SentenceScene from './sentence/SentenceScene';
 import {showTtsFor} from './showTts';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
+import {useFlyoutDots} from './useFlyoutDots';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePaneSlide from './usePaneSlide';
 import usePicturesSheet from './usePicturesSheet';
@@ -399,6 +406,48 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
+  // The new-block catalog: the unit's new blocks stay out of the toolbox
+  // until the student adds them from the dialog. Off in the levelbuilder's
+  // edit modes, whose saves would carry its flags into every student's
+  // start sources.
+  const catalogOn = !!levelProperties.blockCatalog && !isLevelEditMode;
+  const catalog = useMemo(
+    () =>
+      catalogOn
+        ? catalogEntries(
+            levelProperties.newBlocks,
+            levelProperties.toolboxDefinition
+          )
+        : [],
+    [catalogOn, levelProperties.newBlocks, levelProperties.toolboxDefinition]
+  );
+  const chosenBlocks = currentSources.chosenBlocks;
+  const chosenBlockSet = useMemo(
+    () => new Set(chosenBlocks ?? []),
+    [chosenBlocks]
+  );
+  const hiddenBlockTypes = useMemo(
+    () => heldBackBlockTypes(catalog, chosenBlocks),
+    [catalog, chosenBlocks]
+  );
+  const [showBlockCatalog, setShowBlockCatalog] = useState(false);
+  // Dismissing the catalog, not opening it, is what counts as seen: an
+  // opening cut short (a Start Over that leaves the level, a reload) comes
+  // back next time.
+  const closeBlockCatalog = useCallback(() => {
+    setShowBlockCatalog(false);
+    if (!currentSources.blockCatalogSeen) {
+      patchSources({blockCatalogSeen: true});
+    }
+  }, [currentSources.blockCatalogSeen, patchSources]);
+  const addCatalogBlock = useCallback(
+    (type: string) => {
+      if (!chosenBlockSet.has(type)) {
+        patchSources({chosenBlocks: [...chosenBlockSet, type]});
+      }
+    },
+    [chosenBlockSet, patchSources]
+  );
 
   // The project's pictures, in a sheet over the workspace.
   const picturesOffered = tabs.includes('Images');
@@ -983,6 +1032,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
+    hiddenBlockTypes,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1340,7 +1390,42 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (animationsSeeded && sceneToolbox) {
       refreshToolbox(sceneToolbox);
     }
-  }, [animationsSeeded, sceneToolbox, workspaceVersion, refreshToolbox]);
+  }, [
+    animationsSeeded,
+    sceneToolbox,
+    hiddenBlockTypes,
+    workspaceVersion,
+    refreshToolbox,
+  ]);
+
+  // ?new-blocks=reset puts the catalog back to nothing added, for trying
+  // the first landing again.
+  const resetCatalogRef = useRef(queryParams('new-blocks') === 'reset');
+  useEffect(() => {
+    if (resetCatalogRef.current && catalog.length && isEditable) {
+      resetCatalogRef.current = false;
+      patchSources({chosenBlocks: [], blockCatalogSeen: false});
+    }
+  }, [catalog.length, isEditable, patchSources]);
+
+  // The catalog opens itself the first time the student lands here, and
+  // closes if the level changes under it.
+  useEffect(() => {
+    if (!catalog.length) {
+      setShowBlockCatalog(false);
+    } else if (
+      isEditable &&
+      animationsSeeded &&
+      !currentSources.blockCatalogSeen
+    ) {
+      setShowBlockCatalog(true);
+    }
+  }, [
+    catalog.length,
+    isEditable,
+    animationsSeeded,
+    currentSources.blockCatalogSeen,
+  ]);
 
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
@@ -1567,8 +1652,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A world level about one kind of image offers the palette only the
   // level's image of that kind.
   const placeOne = !!levelProperties.levelMode?.placeOne;
-  const paletteOnlyImage =
-    levelProperties.levelMode?.kind === 'world' ? focusImageName : undefined;
+  const paletteOnlyImage = editsWorld(levelProperties.levelMode)
+    ? focusImageName
+    : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) =>
       updateActiveWorld(world => moveWorldCell(world, row, col, cell)),
@@ -1888,6 +1974,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch, stopTab]
   );
 
+  // Dots beside the catalog blocks the project has not used yet.
+  const getMainWorkspace = useCallback(
+    () => Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg | null,
+    []
+  );
+  useFlyoutDots({
+    enabled: catalogOn,
+    added: chosenBlockSet,
+    scenes,
+    workspaceVersion,
+    getWorkspace: getMainWorkspace,
+  });
+
   // Only freeplay adds, renames, reorders or deletes scenes; a level with no
   // mode is unconstrained.
   const scenesEditable =
@@ -1930,6 +2029,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  // Generations on this level so far; free play has no limit.
+  const [generationCount, setGenerationCount] = useState(0);
+  useEffect(() => setGenerationCount(0), [levelProperties.id]);
+  const countGeneration = useCallback(
+    () => setGenerationCount(count => count + 1),
+    []
+  );
+  const generationsLeft = isFreeplayMode(levelProperties.levelMode)
+    ? undefined
+    : GENERATION_LIMIT - generationCount;
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;
@@ -1948,6 +2057,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onCreateScene: sceneEditing.createScene,
     onManageScenes: sceneEditing.openGallery,
   };
+  const catalogOffered = catalog.length > 0 && isEditable;
+  const openBlockCatalog = () => setShowBlockCatalog(true);
+
   // The resource panel's buttons, when they live in a bar.
   const toolButtons = resourcesInBar && (
     <ToolButtons
@@ -1968,6 +2080,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
     defaultStyle: DEFAULT_IMAGE_STYLE,
+    generationsLeft,
+    onGenerate: countGeneration,
     // Freeplay hands back the paint tools.
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
     pickRequest: pictures.pickRequest,
@@ -1998,6 +2112,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           message={
             firstLevelId ? START_OVER_RETURNS_MESSAGE : START_OVER_MESSAGE
           }
+        />
+      )}
+      {showBlockCatalog && (
+        <BlockCatalogDialog
+          entries={catalog}
+          chosen={chosenBlockSet}
+          onAdd={addCatalogBlock}
+          onClose={closeBlockCatalog}
         />
       )}
       {!resourcesInBar && (
@@ -2040,7 +2162,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             imageType={levelProperties.levelMode?.imageType ?? 'sprite'}
             imageSubject={levelProperties.levelMode?.imageSubject}
             sentenceId={levelProperties.levelMode?.sentence}
-            defaultStyle={DEFAULT_IMAGE_STYLE}
             imageRole={levelProperties.levelMode?.imageRole}
             uploadImage={uploadImage}
             instructions={
@@ -2048,6 +2169,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 ? objectives.title
                 : levelProperties.longInstructions
             }
+            resultInstructions={
+              levelProperties.levelMode?.generatedInstructions
+            }
+            paintInstructions={levelProperties.levelMode?.paintInstructions}
+            generationsLeft={generationsLeft}
+            onGenerateStart={countGeneration}
             showTts={showTtsFor(levelProperties)}
           />
         </div>
@@ -2084,7 +2211,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               (activeTab === 'Code' || activeTab === 'World') && (
                 <WorkspaceSceneBar
                   {...sceneControls}
-                  rightExtra={toolButtons}
+                  rightExtra={
+                    <>
+                      {activeTab === 'Code' && catalogOffered && (
+                        <DiscoverBlocksButton
+                          remaining={hiddenBlockTypes.size}
+                          className={moduleStyles.barButton}
+                          onClick={openBlockCatalog}
+                        />
+                      )}
+                      {toolButtons}
+                    </>
+                  }
                   style={clearOfPreview}
                 />
               )}
@@ -2135,6 +2273,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             >
               {animationsSeeded && (
                 <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
+              )}
+              {/* With a workspace bar the catalog opens from the bar's end. */}
+              {!barInWorkspace && catalogOffered && (
+                <CatalogBand
+                  workspaceVersion={workspaceVersion}
+                  getWorkspace={getMainWorkspace}
+                  remaining={hiddenBlockTypes.size}
+                  onClick={openBlockCatalog}
+                />
               )}
             </div>
 
@@ -2235,12 +2382,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   arrows={arrowSet}
                   onPlay={handlePlayClick}
                   onStop={stopTab ? handleStopClick : undefined}
-                  onPlayGame={handlePlayGame}
-                  playGameDisabled={!!pinnedSceneId}
-                  playGameReason={LOCKED_REASON}
-                  playSceneHidden={
-                    !pinnedSceneId && activeScene.id === scenes[0].id
-                  }
+                  // A level pinned to one scene has one Play, for that scene.
+                  onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                  playSceneHidden={activeScene.id === scenes[0].id}
                 />
               }
               below={
