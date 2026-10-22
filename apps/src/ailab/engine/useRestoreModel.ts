@@ -31,7 +31,12 @@ export function useRestoreModel(): boolean {
     }
 
     const run = train.refit(store, project);
-    // If the run is invalid, drop it.
+    /*
+      TODO: a run that cannot be rebuilt — the dataset lost rows, or the level
+      changed trainer — strands a pretrained level, which offers neither a
+      retrain nor a Start Over. Clear the run from the project here, and have
+      the pretrain gate on that rather than on the history.
+    */
     if (!run) {
       return;
     }
