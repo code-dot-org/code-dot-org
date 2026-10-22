@@ -74,16 +74,12 @@ export const ProjectProvider = ({
   const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((keepsHistoricResults: boolean) => {
+    useCallback((keepsPendingProject: boolean) => {
       previousRun.current = undefined;
-      // A reset starts the project over, so a project still waiting for the
-      // dataset it was saved against no longer applies.
-      pendingProject.current = undefined;
-      setProject(previous =>
-        keepsHistoricResults
-          ? {...initialProject, historicResults: previous.historicResults}
-          : initialProject
-      );
+      if (!keepsPendingProject) {
+        pendingProject.current = undefined;
+      }
+      setProject(initialProject);
     }, [])
   );
 

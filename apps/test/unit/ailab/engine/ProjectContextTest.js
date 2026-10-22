@@ -129,7 +129,7 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
 
     expect(project().hyperparameters).toBeUndefined();
@@ -137,17 +137,15 @@ describe('ProjectContext', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('Start Over keeps the results but drops the rest', () => {
+  test('Start Over drops the results along with the rest', () => {
     const {store, project, context} = renderContext();
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(true));
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
 
-    expect(project().hyperparameters).toBeUndefined();
-    expect(project().accuracyCheckRowIndices).toBeUndefined();
-    expect(accuracies(project())).toEqual(['80.00']);
+    expect(project()).toEqual(initialProject);
   });
 
   test('a reset drops the snapshot a cancel would have used', () => {
@@ -156,7 +154,7 @@ describe('ProjectContext', () => {
     act(() => context().snapshotTrainingRun());
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
     act(() => context().restoreTrainingRun());
 
@@ -477,13 +475,36 @@ describe('ProjectContext opening a saved project', () => {
     expect(project().historicResults).toEqual(SAVED.historicResults);
   });
 
-  test('a reset drops a project still waiting for its dataset', () => {
+  /*
+    The dataset a project waits for may be the one the student goes on to
+    choose, so choosing one does not abandon it. Its columns are reconciled
+    against whichever dataset arrives.
+  */
+  test('the student choosing a dataset keeps a project waiting for one', () => {
     const store = createStore(rootReducer);
     const {project, context} = renderContext(undefined, store);
     act(() => context().openProject(SAVED));
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ true));
+    });
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('a level load drops a project still waiting for its dataset', () => {
+    const store = createStore(rootReducer);
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().openProject(SAVED));
+
+    act(() => {
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
     act(() => {
       store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));

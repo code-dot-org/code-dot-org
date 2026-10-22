@@ -74,7 +74,7 @@ export interface RootState {
   resultsTab: string;
   presetColumns: PresetColumns | undefined;
   resetCount: number;
-  resetKeepsHistoricResults: boolean;
+  resetKeepsPendingProject: boolean;
   mode?: Mode;
 }
 
@@ -150,7 +150,7 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
   presetColumns: undefined,
   resetCount: 0,
-  resetKeepsHistoricResults: false,
+  resetKeepsPendingProject: false,
 };
 
 const ailabSlice = createSlice({
@@ -290,20 +290,15 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState: {
-      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
-        return {
-          ...initialState,
-          mode: state.mode,
-          reserveLocation: state.reserveLocation,
-          instructionsEnabled: state.instructionsEnabled,
-          resetCount: state.resetCount + 1,
-          resetKeepsHistoricResults: action.payload.keepHistoricResults,
-        };
-      },
-      prepare(keepHistoricResults = false) {
-        return {payload: {keepHistoricResults}};
-      },
+    resetState(state, action: PayloadAction<boolean>) {
+      return {
+        ...initialState,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
+        resetCount: state.resetCount + 1,
+        resetKeepsPendingProject: action.payload,
+      };
     },
     setTrainedModelDetail: {
       reducer(

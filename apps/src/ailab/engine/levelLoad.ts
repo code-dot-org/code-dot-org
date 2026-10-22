@@ -20,16 +20,17 @@ import type {Mode} from './types';
  * Prepare the lab for a level.
  */
 export const loadLevel = function (mode?: Mode): void {
-  reload(mode, /*keepHistoricResults*/ false);
+  reload(mode);
 };
 
 export const startOver = function (): void {
-  reload(store.getState().mode, /*keepHistoricResults*/ true);
+  reload(store.getState().mode);
 };
 
-const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
+const reload = (mode: Mode | undefined): void => {
   invalidatePendingDatasetLoads();
-  store.dispatch(resetState(keepHistoricResults));
+  // Neither a level load nor a Start Over leaves a saved project to open.
+  store.dispatch(resetState(/*keepsPendingProject*/ false));
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);
