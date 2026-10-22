@@ -1,8 +1,11 @@
 import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
-import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 import {createPortal} from 'react-dom';
+
+import platformerPicture from '@cdo/static/spritelab_lab2/scene-types/platformer.png';
+import storyPicture from '@cdo/static/spritelab_lab2/scene-types/story.png';
 
 import {SceneType} from '../types';
 
@@ -10,10 +13,11 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 export const SCENE_NAME_MAX_LENGTH = 40;
 
-// What each scene type is called for a student choosing one.
-const SCENE_TYPE_LABELS: {value: SceneType; label: string}[] = [
-  {value: 'story', label: 'A story'},
-  {value: 'platform', label: 'A platformer'},
+// What each scene type is called for a student choosing one, with a
+// picture of the kind of scene it makes.
+const SCENE_TYPES: {value: SceneType; label: string; picture: string}[] = [
+  {value: 'story', label: 'A story', picture: storyPicture},
+  {value: 'platform', label: 'A platformer', picture: platformerPicture},
 ];
 
 interface NewSceneDialogProps {
@@ -22,8 +26,8 @@ interface NewSceneDialogProps {
 }
 
 /**
- * Names a new scene and picks its type. A scene's type decides the blocks it
- * offers and how big its sprites are, so it is chosen once, here, rather
+ * Picks a new scene's type and names it. A scene's type decides the blocks
+ * it offers and how big its sprites are, so it is chosen once, here, rather
  * than changed later.
  */
 const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
@@ -56,6 +60,31 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
       onClose={onClose}
       customContent={
         <div className={moduleStyles.newSceneFields}>
+          <fieldset className={moduleStyles.sceneTypeGroup}>
+            <legend>What is this scene for?</legend>
+            <div className={moduleStyles.sceneTypeCards}>
+              {SCENE_TYPES.map(({value, label, picture}) => (
+                <label
+                  key={value}
+                  className={classNames(
+                    moduleStyles.sceneTypeCard,
+                    type === value && moduleStyles.sceneTypeCardChosen
+                  )}
+                >
+                  <input
+                    type="radio"
+                    name="sceneType"
+                    value={value}
+                    className={moduleStyles.sceneTypeInput}
+                    checked={type === value}
+                    onChange={() => setType(value)}
+                  />
+                  <img src={picture} alt="" />
+                  <span>{label}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
           <TextField
             name="sceneName"
             label="Scene name"
@@ -63,20 +92,6 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
             maxLength={SCENE_NAME_MAX_LENGTH}
             onChange={e => setName(e.target.value)}
           />
-          <fieldset className={moduleStyles.sceneTypeGroup}>
-            <legend>What is this scene for?</legend>
-            {SCENE_TYPE_LABELS.map(({value, label}) => (
-              <RadioButton
-                key={value}
-                name="sceneType"
-                value={value}
-                label={label}
-                size="s"
-                checked={type === value}
-                onChange={() => setType(value)}
-              />
-            ))}
-          </fieldset>
         </div>
       }
       primaryButtonProps={{
