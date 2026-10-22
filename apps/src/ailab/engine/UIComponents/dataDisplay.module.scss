@@ -28,6 +28,13 @@
   white-space: nowrap;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .header .viewToggle {
   @include mixins.segmented-buttons-xs;
 

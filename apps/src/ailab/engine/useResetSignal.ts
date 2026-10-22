@@ -6,13 +6,8 @@ import {useEffect, useRef} from 'react';
 
 import {useAppSelector} from './hooks';
 
-export function useResetSignal(
-  onReset: (keepsPendingProject: boolean) => void
-): void {
+export function useResetSignal(onReset: () => void): void {
   const resetCount = useAppSelector(state => state.resetCount);
-  const keepsPendingProject = useAppSelector(
-    state => state.resetKeepsPendingProject
-  );
   const appliedReset = useRef(resetCount);
 
   useEffect(() => {
@@ -21,6 +16,6 @@ export function useResetSignal(
       return;
     }
     appliedReset.current = resetCount;
-    onReset(keepsPendingProject);
-  }, [resetCount, keepsPendingProject, onReset]);
+    onReset();
+  }, [resetCount, onReset]);
 }

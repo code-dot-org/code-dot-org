@@ -43,9 +43,9 @@ export interface ColumnFilter {
 
 export interface TableView {
   rows: number[];
-  totalRows: number;
+  totalRowCount: number;
   columns: ColumnId[];
-  filterableColumns: ColumnId[];
+  shownFilterableColumns: ColumnId[];
   filter: ColumnFilter | undefined;
   valueAt(row: number, column: ColumnId): string | number;
   isNumerical(column: ColumnId): boolean;
