@@ -30,7 +30,7 @@ export const startOver = function (): void {
 const reload = (mode: Mode | undefined): void => {
   invalidatePendingDatasetLoads();
   // Neither a level load nor a Start Over leaves a saved project to open.
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);

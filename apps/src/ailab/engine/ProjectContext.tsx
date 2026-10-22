@@ -74,11 +74,13 @@ export const ProjectProvider = ({
   const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((keepsPendingProject: boolean) => {
+    useCallback(() => {
       previousRun.current = undefined;
-      if (!keepsPendingProject) {
-        pendingProject.current = undefined;
-      }
+      /*
+        A project waiting for its dataset outlives a reset. The level load
+        that opens a project resets the lab first, and the student choosing a
+        dataset may be choosing the one that project was saved against.
+      */
       setProject(initialProject);
     }, [])
   );
