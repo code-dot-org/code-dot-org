@@ -11,6 +11,7 @@ import {
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getFilterableColumns} from '../selectors';
 import type {ColumnId, ResultsData} from '../types';
 import {useTableView} from '../useTableView';
 
@@ -34,6 +35,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
   const labelColumn = project.labelColumn || 'unknown';
   const data = useAppSelector(state => state.data);
   const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+  const filterableColumns = useAppSelector(getFilterableColumns);
   const isRegressionMode = useAppSelector(state =>
     isRegression(state, project)
   );
@@ -53,6 +55,13 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
       [PREDICTION_COLUMN]: columnsByDataType[labelColumn],
     }),
     [columnsByDataType, labelColumn]
+  );
+  const viewFilterableColumns = useMemo<ColumnId[]>(
+    () =>
+      filterableColumns.includes(labelColumn)
+        ? [...filterableColumns, PREDICTION_COLUMN]
+        : filterableColumns,
+    [filterableColumns, labelColumn]
   );
   const rawValueAt = useCallback(
     (index: number, column: ColumnId) => {
@@ -78,6 +87,7 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
     rows,
     columns: viewColumns,
     columnTypes,
+    filterableColumns: viewFilterableColumns,
     valueAt,
   });
 

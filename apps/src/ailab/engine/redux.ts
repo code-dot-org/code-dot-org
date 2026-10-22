@@ -33,13 +33,12 @@ export type DatasetLayout = 'table' | 'cards';
 
 export interface RootState {
   name: string | undefined;
-  csvfile: string | undefined;
+  csvfile: string | File | undefined;
   jsonfile: string | undefined;
   invalidData: string | undefined;
   data: DataRow[];
   metadata: Metadata;
   removedRowsCount: number;
-  highlightDataset: string | undefined;
   columnsByDataType: Record<string, string>;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
@@ -74,7 +73,6 @@ export interface RootState {
   resultsTab: string;
   presetColumns: PresetColumns | undefined;
   resetCount: number;
-  resetKeepsHistoricResults: boolean;
   mode?: Mode;
 }
 
@@ -112,7 +110,6 @@ export const initialState: RootState = {
     card: {},
   },
   removedRowsCount: 0,
-  highlightDataset: undefined,
   columnsByDataType: {},
   featureNumberKey: {},
   trainingExamples: [],
@@ -150,7 +147,6 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
   presetColumns: undefined,
   resetCount: 0,
-  resetKeepsHistoricResults: false,
 };
 
 const ailabSlice = createSlice({
@@ -163,7 +159,7 @@ const ailabSlice = createSlice({
     setSelectedName(state, action: PayloadAction<string>) {
       state.name = action.payload;
     },
-    setSelectedCSV(state, action: PayloadAction<string>) {
+    setSelectedCSV(state, action: PayloadAction<string | File>) {
       state.csvfile = action.payload;
     },
     setSelectedJSON(state, action: PayloadAction<string>) {
@@ -290,20 +286,14 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState: {
-      reducer(state, action: PayloadAction<{keepHistoricResults: boolean}>) {
-        return {
-          ...initialState,
-          mode: state.mode,
-          reserveLocation: state.reserveLocation,
-          instructionsEnabled: state.instructionsEnabled,
-          resetCount: state.resetCount + 1,
-          resetKeepsHistoricResults: action.payload.keepHistoricResults,
-        };
-      },
-      prepare(keepHistoricResults = false) {
-        return {payload: {keepHistoricResults}};
-      },
+    resetState(state) {
+      return {
+        ...initialState,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
+        resetCount: state.resetCount + 1,
+      };
     },
     setTrainedModelDetail: {
       reducer(
@@ -375,9 +365,6 @@ const ailabSlice = createSlice({
       state.currentColumn =
         state.currentColumn === currentColumn ? undefined : currentColumn;
     },
-    setHighlightDataset(state, action: PayloadAction<string>) {
-      state.highlightDataset = action.payload;
-    },
     setTrainingModalStep(
       state,
       action: PayloadAction<TrainingModalStep | undefined>
@@ -448,7 +435,6 @@ export const {
   setCurrentColumn,
   setDatasetCardRow,
   setDatasetLayout,
-  setHighlightDataset,
   setTrainingModalStep,
   replayTraining,
   setSaveStatus,

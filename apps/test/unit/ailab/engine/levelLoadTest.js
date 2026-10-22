@@ -19,12 +19,6 @@ describe('startOver', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  test('asks the reset to keep the results already earned', () => {
-    startOver();
-
-    expect(store.getState().resetKeepsHistoricResults).toBe(true);
-  });
-
   test('resets everything else to the start of the level', () => {
     startOver();
 
@@ -50,14 +44,6 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('asks the reset to drop the previous level’s results', () => {
-    startOver();
-
-    loadLevel(undefined);
-
-    expect(store.getState().resetKeepsHistoricResults).toBe(false);
-  });
-
   test('reserves random rows for testing unless the mode asks for the last rows', () => {
     loadLevel(undefined);
     expect(store.getState().reserveLocation).toBe('random');

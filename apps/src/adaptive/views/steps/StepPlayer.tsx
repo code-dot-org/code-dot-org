@@ -6,6 +6,7 @@ import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
 import AdaptiveHeader from '../AdaptiveHeader';
+import {checkpointStepFromUrl, updateUrl} from '../checkpointUrl';
 import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
@@ -24,6 +25,8 @@ interface StepPlayerProps {
   finishLabel?: string;
   /** The header's title in place of the checkpoint's and step's. */
   headerTitle?: string;
+  /** Step ID to jump to on mount (from URL param). Falls back to step 0. */
+  initialStepId?: string;
   onStartStep: (step: Step) => void;
   onCompleteStep: (step: Step, timeMs: number) => void;
   onLeaveStep: (step: Step, timeMs: number) => void;
@@ -44,6 +47,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
   headerTitle,
+  initialStepId,
   onStartStep,
   onCompleteStep,
   onLeaveStep,
@@ -53,8 +57,12 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onFinishPathway,
 }) => {
   const {progress} = usePathwayContext();
-  const [index, setIndex] = useState(0);
   const steps = checkpoint.steps;
+  const [index, setIndex] = useState(() => {
+    if (!initialStepId) return 0;
+    const i = steps.findIndex(s => s.id === initialStepId);
+    return i >= 0 ? i : 0;
+  });
   const step = steps[index];
   const last = index === steps.length - 1;
   const continueLabel = last ? finishLabel : 'Continue';
@@ -66,6 +74,21 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     clock.resetMilestoneTimer();
     return elapsed;
   }, []);
+
+  useEffect(() => {
+    updateUrl(checkpoint.id, step.id);
+  }, [checkpoint.id, step.id]);
+
+  useEffect(() => {
+    const handler = () => {
+      const {checkpointId, stepId} = checkpointStepFromUrl();
+      if (checkpointId !== checkpoint.id || !stepId) return;
+      const i = steps.findIndex(s => s.id === stepId);
+      if (i >= 0) setIndex(i);
+    };
+    window.addEventListener('popstate', handler);
+    return () => window.removeEventListener('popstate', handler);
+  }, [checkpoint.id, steps]);
 
   useEffect(() => {
     takeElapsed(); // Restarts the clock for this step.

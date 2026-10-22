@@ -8,15 +8,25 @@ import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
   __esModule: true,
   default: ({
+    onStart,
     focusId,
     onWorkOnProject,
   }: {
+    onStart: (id: string) => void;
     focusId?: string;
     onWorkOnProject: () => void;
   }) => (
-    <button type="button" onClick={onWorkOnProject}>
-      map screen{focusId ? ` focused on ${focusId}` : ''}
-    </button>
+    <>
+      <button type="button" onClick={() => onStart('intro')}>
+        start intro
+      </button>
+      <button type="button" onClick={() => onStart('multi')}>
+        start multi
+      </button>
+      <button type="button" onClick={onWorkOnProject}>
+        map screen{focusId ? ` focused on ${focusId}` : ''}
+      </button>
+    </>
   ),
 }));
 jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
@@ -37,17 +47,25 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   // Finishing completes the last step first, as the real player does.
   default: ({
     checkpoint,
+    initialStepId,
     onCompleteStep,
+    onExit,
     onFinish,
     onFinishPathway,
   }: {
     checkpoint: {title: string; steps: unknown[]};
+    initialStepId?: string;
     onCompleteStep: (step: unknown, timeMs: number) => void;
+    onExit: () => void;
     onFinish: () => void;
     onFinishPathway?: () => void;
   }) => (
     <div>
       playing {checkpoint.title}
+      {initialStepId ? ` at ${initialStepId}` : ''}
+      <button type="button" onClick={onExit}>
+        exit
+      </button>
       <button
         type="button"
         onClick={() => {
@@ -120,14 +138,27 @@ const pathway: Pathway = {
       requires: ['intro'],
       steps: [step('next')],
     },
+    {
+      id: 'multi',
+      title: 'Multi',
+      description: 'Two steps.',
+      steps: [step('multi-a'), step('multi-b')],
+    },
   ],
 };
 const progressKey = {scriptId: 2, levelId: 3};
 
 describe('PathwayApp', () => {
+  const originalUrl = window.location.href;
+
   beforeEach(() => {
     mockDispatch.mockClear();
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
+    window.history.replaceState({}, '', '/');
+  });
+
+  afterEach(() => {
+    window.history.replaceState({}, '', originalUrl);
   });
 
   // Progress loads from a promise, so the first render settles after a tick.
@@ -140,14 +171,14 @@ describe('PathwayApp', () => {
     });
   };
 
-  it('opens the first checkpoint for a student with no progress', async () => {
+  it('auto-starts the first checkpoint at the first step when there is no progress', async () => {
     await renderSettled();
 
-    expect(screen.getByText('playing Intro')).toBeTruthy();
+    expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
   });
 
-  it('opens the first checkpoint when the only entry holds generated instructions', async () => {
+  it('auto-starts even when the only entry holds generated instructions', async () => {
     mockLoad.mockResolvedValue({
       steps: {
         'intro-step': {
@@ -159,7 +190,7 @@ describe('PathwayApp', () => {
 
     await renderSettled();
 
-    expect(screen.getByText('playing Intro')).toBeTruthy();
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
   });
 
   it('shows the map once anything has been started', async () => {
@@ -174,6 +205,155 @@ describe('PathwayApp', () => {
 
     act(() => screen.getByText('map screen').click());
     expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+  });
+
+  it('resumes at the first incomplete step when opening an in-progress checkpoint', async () => {
+    mockLoad.mockResolvedValue({
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'multi-a-step': {status: 'complete', timeSpent: 0},
+      },
+    });
+
+    await renderSettled();
+
+    // Has progress → map shown first.
+    expect(screen.getByText('map screen')).toBeTruthy();
+
+    act(() => screen.getByText('start multi').click());
+
+    expect(screen.getByText('playing Multi at multi-b-step')).toBeTruthy();
+  });
+
+  describe('URL parameters', () => {
+    it('opens a URL-specified checkpoint even when there is existing progress', async () => {
+      // intro complete → next is available (not locked).
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+      });
+      window.history.replaceState({}, '', '?checkpoint=next');
+
+      await renderSettled();
+
+      // No step in URL → stepIdToResume picks the first incomplete step.
+      expect(screen.getByText('playing Next at next-step')).toBeTruthy();
+    });
+
+    it('passes the URL step id to StepPlayer', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
+
+    it('falls back to stepIdToResume when the URL step does not belong to the checkpoint', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=bogus-step');
+
+      await renderSettled();
+
+      // 'bogus-step' is not in intro's steps → stepIdToResume → first incomplete step.
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
+
+    it('falls back to stepIdToResume when a popstate URL step does not belong to the checkpoint', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      window.history.replaceState({}, '', '?checkpoint=intro&step=bogus-step');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      // 'bogus-step' not in intro → stepIdToResume → 'intro-step' (started, not complete).
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
+
+    it('clears URL params when the user exits a checkpoint back to the map', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'exit'}).click());
+
+      expect(window.location.search).toBe('');
+    });
+
+    it('clears URL params when the user finishes a checkpoint', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+      act(() => screen.getByRole('button', {name: 'finish'}).click());
+
+      expect(window.location.search).toBe('');
+    });
+
+    it('uses progress resume rather than the URL step when a different checkpoint is opened', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'multi-a-step': {status: 'complete', timeSpent: 0}},
+      });
+      // URL targets intro; multi is a different checkpoint with progress.
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+
+      await renderSettled();
+
+      // Exit intro back to the map, then open multi.
+      act(() => screen.getByRole('button', {name: 'exit'}).click());
+      act(() => screen.getByText('start multi').click());
+
+      // multi should resume at multi-b-step (from progress), not intro-step.
+      expect(screen.getByText('playing Multi at multi-b-step')).toBeTruthy();
+    });
+
+    it('ignores a URL checkpoint that is locked and shows the map', async () => {
+      // 'next' requires 'intro' to be complete; with no progress it is locked.
+      window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
+
+      await renderSettled();
+
+      expect(screen.getByText('map screen')).toBeTruthy();
+      expect(window.location.search).toBe('');
+    });
+
+    it('ignores a popstate navigation to a locked checkpoint and stays on the map', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      expect(screen.getByText('map screen')).toBeTruthy();
+
+      // 'next' requires intro to be complete; started is not complete → locked.
+      window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('map screen')).toBeTruthy();
+      expect(window.location.search).toBe('');
+    });
+
+    it('navigates back to the map when the browser fires popstate with no checkpoint', async () => {
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+      await renderSettled();
+      expect(screen.getByText(/playing Intro/)).toBeTruthy();
+
+      // Simulate browser back to the map (no checkpoint param).
+      window.history.replaceState({}, '', '/');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('map screen')).toBeTruthy();
+    });
+
+    it('navigates into a checkpoint when the browser fires popstate with a checkpoint param', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      expect(screen.getByText('map screen')).toBeTruthy();
+
+      // Simulate browser forward to intro at a specific step.
+      window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('playing Intro at intro-step')).toBeTruthy();
+    });
   });
 
   // A diagnostic whose one survey answer shows build at evidence level 1,
@@ -242,7 +422,7 @@ describe('PathwayApp', () => {
     await act(async () => {
       await Promise.resolve();
     });
-    expect(screen.getByText('playing Intro')).toBeTruthy();
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
 
     await act(async () => {
       screen.getByText('finish').click();

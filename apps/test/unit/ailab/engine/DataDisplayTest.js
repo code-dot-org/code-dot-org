@@ -1,12 +1,13 @@
-import {act, fireEvent, screen} from '@testing-library/react';
+import {act, fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement, Fragment} from 'react';
 
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {resetState, setCurrentColumn} from '@cdo/apps/ailab/engine/redux';
 import ColumnAnalysis from '@cdo/apps/ailab/engine/UIComponents/ColumnAnalysis';
 import DataDisplay from '@cdo/apps/ailab/engine/UIComponents/DataDisplay';
 
-import {levelProject, levelStore} from './levelStore';
+import {ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderDisplay() {
@@ -157,5 +158,112 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Sort by animal A-Z'));
 
     expect(rowNumbers().join(' ')).toBe('2 5 8 10 1 4 7 3 6 9');
+  });
+
+  test('filters one categorical column and counts the matching rows', () => {
+    renderDisplay();
+    fireEvent.click(button('Filter'));
+    const menu = screen.getByRole('dialog', {name: 'Filter rows'});
+    fireEvent.click(within(menu).getByRole('button', {name: /^animal/}));
+    fireEvent.click(within(menu).getByRole('checkbox', {name: 'dog'}));
+
+    expect(rowNumbers().join(' ')).toBe('2 5 8 10');
+    expect(screen.getByText('4 of 10 rows')).toBeTruthy();
+    expect(within(menu).getByRole('button', {name: 'Done (1)'})).toBeTruthy();
+  });
+
+  test('lists only the categorical columns, with their value counts', () => {
+    renderDisplay();
+    fireEvent.click(button('Filter'));
+    const menu = screen.getByRole('dialog', {name: 'Filter rows'});
+
+    expect(
+      within(menu)
+        .getAllByRole('button', {name: /categor/})
+        .map(item => item.textContent)
+    ).toEqual(['animal 3 categories']);
+  });
+
+  test('hides the filter when no column can be filtered', () => {
+    const columns = {legs: ColumnTypes.NUMERICAL};
+    renderWithProviders(createElement(DataDisplay), {
+      store: levelStore(
+        undefined,
+        ANIMALS.map(({legs}) => ({legs})),
+        columns
+      ),
+      project: levelProject(columns, 'legs'),
+    });
+
+    expect(screen.getByRole('table')).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Filter'})).toBeNull();
+  });
+
+  test('closing the filter focuses its tag, and cards show every row', async () => {
+    renderDisplay();
+    button('Filter').focus();
+    fireEvent.click(button('Filter'));
+    fireEvent.click(button(/^animal/));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
+    fireEvent.click(button('Done (1)'));
+    await waitFor(() =>
+      expect(document.activeElement).toBe(button('Filter by animal: dog'))
+    );
+
+    fireEvent.click(button('Cards'));
+    expect(screen.getByText('10 rows')).toBeTruthy();
+    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    expect(
+      screen.queryByRole('button', {name: 'Filter by animal: dog'})
+    ).toBeNull();
+  });
+
+  test('clearing the tag shows every row and focuses the filter button', async () => {
+    renderDisplay();
+    fireEvent.click(button('Filter'));
+    fireEvent.click(button(/^animal/));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
+    fireEvent.keyDown(screen.getByRole('dialog'), {key: 'Escape'});
+    await waitFor(() => button('Filter by animal: dog'));
+
+    fireEvent.click(button('Clear filter'));
+
+    expect(screen.getByText('10 rows')).toBeTruthy();
+    expect(document.activeElement).toBe(button('Filter'));
+  });
+
+  test('clearing from the menu moves focus to Done', () => {
+    renderDisplay();
+    fireEvent.click(button('Filter'));
+    fireEvent.click(button(/^animal/));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
+    const menu = screen.getByRole('dialog', {name: 'Filter rows'});
+    const clear = within(menu).getByRole('button', {name: 'Clear filter'});
+    clear.focus();
+    fireEvent.click(clear);
+
+    expect(clear.disabled).toBe(true);
+    expect(document.activeElement).toBe(
+      within(menu).getByRole('button', {name: 'Done'})
+    );
+  });
+
+  test('opening a column focuses its first value, and Back refocuses the column', () => {
+    renderDisplay();
+    fireEvent.click(button('Filter'));
+    const menu = screen.getByRole('dialog', {name: 'Filter rows'});
+    fireEvent.click(within(menu).getByRole('button', {name: /^animal/}));
+
+    expect(document.activeElement).toBe(
+      within(menu).getByRole('checkbox', {name: 'bird'})
+    );
+
+    fireEvent.click(
+      within(menu).getByRole('button', {name: 'Back to columns'})
+    );
+
+    expect(document.activeElement).toBe(
+      within(menu).getByRole('button', {name: /^animal/})
+    );
   });
 });

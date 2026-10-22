@@ -19,6 +19,7 @@ import {
   PROJECT_STEP_ID,
   Progress,
   StepProgress,
+  ValidationAttempt,
 } from './model';
 import {
   ProgressKey,
@@ -201,6 +202,20 @@ export function useProgress(
     [updateStep, store, scriptId, levelId]
   );
 
+  /** Appends a check of a project step's work, dated now until the server's time arrives with the next load. */
+  const recordValidation = useCallback(
+    (step: Step, attempt: Omit<ValidationAttempt, 'at'>) => {
+      const dated = {...attempt, at: new Date().toISOString()};
+      updateStep(step.id, entry => ({
+        timeSpent: 0,
+        ...entry,
+        validationHistory: [...(entry?.validationHistory ?? []), dated],
+      }));
+      store.saveValidation({scriptId, levelId}, step.id, attempt);
+    },
+    [updateStep, store, scriptId, levelId]
+  );
+
   return {
     progress,
     isLoading: progress === undefined,
@@ -212,5 +227,6 @@ export function useProgress(
     leaveStep,
     saveAnswers,
     saveGeneratedInstructions,
+    recordValidation,
   };
 }

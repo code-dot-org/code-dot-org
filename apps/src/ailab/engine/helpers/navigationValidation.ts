@@ -141,8 +141,9 @@ export function prevNextButtons(
   let prev: NavButton | undefined, next: NavButton | undefined;
 
   if (state.currentPanel === 'selectDataset') {
+    // The About this data panel's own button moves on to the dataset.
     prev = undefined;
-    next = {panel: 'datasetView', text: I18n.t('navigateForward')};
+    next = undefined;
   } else if (state.currentPanel === 'datasetView') {
     // The Train panel's own button moves on to training.
     prev = isPanelAvailable(state, 'selectDataset')
