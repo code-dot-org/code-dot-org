@@ -16,6 +16,7 @@ import android.webkit.CookieManager
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
+import android.webkit.WebSettings
 import android.webkit.WebStorage
 import android.webkit.WebView
 import androidx.activity.OnBackPressedCallback
@@ -27,6 +28,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.get
 import androidx.core.view.size
 import androidx.core.view.WindowInsetsCompat
+import androidx.webkit.UserAgentMetadata
+import androidx.webkit.WebSettingsCompat
+import androidx.webkit.WebViewFeature
 import com.getcapacitor.BridgeActivity
 import com.getcapacitor.BridgeWebViewClient
 import com.getcapacitor.WebViewListener
@@ -71,6 +75,7 @@ class MainActivity : BridgeActivity() {
         val settings = webView.settings
         settings.userAgentString =
             "${settings.userAgentString} ${SitePolicy.userAgentToken(BuildConfig.VERSION_NAME)}"
+        addAppBrand(settings)
         // Every page, including window.open and target=_blank, loads in this
         // one WebView, so sessionStorage and session cookies carry across
         // pages. Capacitor lets scripts open windows; without multiple-window
@@ -446,6 +451,29 @@ class MainActivity : BridgeActivity() {
         }
         val localHost = bridge.localUrl.toUri().host
         return localHost != null && localHost == url.toUri().host
+    }
+
+
+    // Names the app in the WebView's brand list too (navigator.userAgentData
+    // and the Sec-CH-UA headers), as a browser built on Chromium names itself.
+    // Older WebViews lack the feature and keep only the User-Agent token.
+    private fun addAppBrand(settings: WebSettings) {
+        if (!WebViewFeature.isFeatureSupported(WebViewFeature.USER_AGENT_METADATA)) {
+            return
+        }
+        val metadata = WebSettingsCompat.getUserAgentMetadata(settings)
+        val version = BuildConfig.VERSION_NAME
+        val app = UserAgentMetadata.BrandVersion.Builder()
+            .setBrand(SitePolicy.USER_AGENT_PRODUCT)
+            .setMajorVersion(version.substringBefore('.'))
+            .setFullVersion(version)
+            .build()
+        WebSettingsCompat.setUserAgentMetadata(
+            settings,
+            UserAgentMetadata.Builder(metadata)
+                .setBrandVersionList(metadata.brandVersionList + app)
+                .build(),
+        )
     }
 
     companion object {
