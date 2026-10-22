@@ -366,6 +366,45 @@ describe('ProjectContext opening a saved project', () => {
     historicResults: [FIRST.historicResult],
   };
 
+  test('is not open until a project has been opened', () => {
+    const {context} = renderContext(undefined, described());
+
+    expect(context().opened).toBe(false);
+
+    act(() => context().openProject(SAVED));
+
+    expect(context().opened).toBe(true);
+  });
+
+  test('is not open while a project waits for its dataset', () => {
+    const store = createStore(rootReducer);
+    const {context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    expect(context().opened).toBe(false);
+
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(context().opened).toBe(true);
+  });
+
+  // An emptied project is still the state the student is now in.
+  test('stays open through a reset', () => {
+    const {store, context} = renderContext(undefined, described());
+    act(() => context().openProject(SAVED));
+
+    act(() => {
+      store.dispatch(resetState());
+    });
+
+    expect(context().opened).toBe(true);
+  });
+
   test('takes the columns and the run the project described', () => {
     const {project, context} = renderContext(undefined, described());
 

@@ -10,41 +10,61 @@ import {Provider} from 'react-redux';
 import {
   AilabEngine,
   type AilabEngineProps,
+  type AilabProject,
   instructionsDismissed,
   type InstructionsKey,
   loadLevel,
   type Mode,
   ProjectProvider,
   type SaveResponse,
-  startOver,
   store,
   TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
 import {AilabLevelProperties} from '../types';
 
+import ProjectSync from './ProjectSync';
+
 import styles from './ailab-view.module.scss';
 
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
+  hasEdited: boolean;
+  /** The project as last saved, to open the lab with. */
+  savedProject: AilabProject;
+  save: (project: AilabProject) => void;
+  startOver: () => void;
+  projectManager: ProjectManager | null;
 }
 
-const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
+const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
+  levelProperties,
+  hasEdited,
+  savedProject,
+  save,
+  startOver,
+  projectManager,
+}) => {
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
   const progressManager = useContext(ProgressManagerContext);
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
     useState<InstructionsKey>();
+  const levelStatus = useAppSelector(state => getCurrentLevel(state)?.status);
   const mode: Mode | undefined = useMemo(
     () => (levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined),
     [levelProperties.mode]
@@ -64,7 +84,9 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
     loadLevel(mode);
   }, [levelProperties.id, mode]);
 
-  const onContinue = () => {
+  // The model card is often the last thing written, and saves are throttled.
+  const onContinue = async () => {
+    await projectManager?.flushSave();
     dispatch(continueOrFinishLesson());
   };
 
@@ -105,7 +127,14 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
     showDialog({type: DialogType.StartOver, handleConfirm: startOver});
   };
 
+  /*
+    Training is the one change that is unambiguously the student's: a level's
+    preset columns reach the project the same way their own choices do.
+  */
   const onTrained = (accuracy: number) => {
+    if (levelStatus === LevelStatus.not_tried) {
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+    }
     validator.latestAccuracy = accuracy;
     progressManager?.resetValidation();
     progressManager?.updateProgress();
@@ -133,7 +162,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
         levelProperties={levelProperties}
         isRunning={false}
         hasRun={false}
-        hasEdited={false}
+        hasEdited={hasEdited}
         validationTooltip={
           mode?.requireAccuracy
             ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
@@ -147,6 +176,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
           <Provider store={store}>
             <ProjectProvider>
               <TrainingDataProvider>
+                <ProjectSync savedProject={savedProject} save={save} />
                 <AilabEngine
                   assetPath="/blockly/media/skins/ailab/"
                   onContinue={onContinue}

@@ -51,7 +51,10 @@ jest.mock('@cdo/apps/ailab/engine', () => {
     instructionsDismissed: jest.fn(),
     loadLevel: jest.fn(),
     store: jest.requireActual('@cdo/apps/ailab/engine/store').store,
+    initialProject: jest.requireActual('@cdo/apps/ailab/engine/types')
+      .initialProject,
     ProjectProvider,
+    useProject,
     TrainingDataProvider,
   };
 });
@@ -97,10 +100,19 @@ const LEVELS = {
   '3': level(3),
 };
 
+const save = jest.fn();
+
 const CurrentLevel = () => {
   const {levelProperties} = useLevelProperties();
   return (
-    <AilabWorkspace levelProperties={levelProperties as AilabLevelProperties} />
+    <AilabWorkspace
+      levelProperties={levelProperties as AilabLevelProperties}
+      hasEdited={false}
+      savedProject={ailab.initialProject}
+      save={save}
+      startOver={jest.fn()}
+      projectManager={null}
+    />
   );
 };
 

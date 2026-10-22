@@ -38,6 +38,7 @@ import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 import {usePretrainOnLoad} from './usePretrainOnLoad';
+import {useRestoreModel} from './useRestoreModel';
 
 import styles from './app.module.scss';
 
@@ -245,7 +246,7 @@ const App = ({
   onTrained,
 }: AppProps) => {
   const dispatch = useAppDispatch();
-  const {project} = useProject();
+  const {project, opening} = useProject();
   const panelButtons = useAppSelector<PrevNextButtons>(
     state => getPanelButtons(state, project),
     panelButtonsEqual
@@ -263,6 +264,20 @@ const App = ({
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   usePretrainOnLoad();
+  const restoringModel = useRestoreModel();
+
+  /*
+    A dataset the lab asked for but has not read yet. A level that names no
+    dataset waits for the student to choose one instead, and is not loading.
+  */
+  const datasetPending = useAppSelector(
+    state => !!state.csvfile && state.data.length === 0 && !state.invalidData
+  );
+  /*
+    Showing the lab before a saved project has opened would show the dataset
+    with no columns chosen and testing disabled, then rearrange it.
+  */
+  const loading = datasetPending || opening || restoringModel;
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -286,6 +301,10 @@ const App = ({
     // As above: report a result once, not once per render of the consumer.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
+
+  if (loading) {
+    return <div className={styles.app} style={colorVariables} />;
+  }
 
   return (
     <div className={styles.app} style={colorVariables}>
