@@ -222,8 +222,11 @@ module Levels
     end
 
     def cross_partition_children_message(offending_child_names)
-      "level \"#{name}\" and its child levels must be in the same partition " \
-        "(\"UI Test \", standalone project, or production); offending children: #{offending_child_names.join(', ')}"
+      "level #{name.dump} and its child levels must be in the same partition " \
+        "(\"UI Test \", standalone project, or production); offending children: " \
+        "#{offending_child_names.map(&:dump).join(', ')}. Copy each " \
+        "#{Policies::LevelFiles.copy_into_partition_of(name)} and refer to the copy instead. " \
+        "Delete each old level and its file, unless they already exist outside of your development environment"
     end
 
     def sanitize_contained_level_names

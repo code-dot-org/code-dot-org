@@ -269,6 +269,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     ui_test_parent.contained_level_names = [prod_child.name]
     refute ui_test_parent.valid?
     assert_includes ui_test_parent.errors.full_messages.first, prod_child.name
+    assert_includes ui_test_parent.errors.full_messages.first, 'Copy each to a name beginning with "UI Test "'
 
     # same-side references are fine in both partitions
     ui_test_parent.reload.contained_level_names = [ui_test_child.name]
@@ -285,11 +286,13 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     level.contained_level_names = [subproject.name]
     refute level.valid?
     assert_includes level.errors.full_messages.first, subproject.name
+    assert_includes level.errors.full_messages.first, 'Copy each to a name without the "UI Test ...", "New ... Project", or "... Subproject" form'
 
     project = create(:level, name: 'New LevelsWithinLevels Project')
     project.project_template_level_name = prod_child.name
     refute project.valid?
     assert_includes project.errors.full_messages.first, prod_child.name
+    assert_includes project.errors.full_messages.first, 'Copy each to a name ending in " Subproject" and refer to the copy instead. Delete each old level and its file, unless they already exist outside of your development environment'
 
     project.reload.project_template_level_name = subproject.name
     assert project.valid?

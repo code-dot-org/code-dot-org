@@ -31,6 +31,18 @@ module Policies
         [Level.ui_test_partition_name?(other_name), Level.standalone_partition_name?(other_name)]
     end
 
+    # Completes "copy it ..." in the errors refusing a child from another
+    # partition than its parent's.
+    def self.copy_into_partition_of(parent_name)
+      if Level.standalone_partition_name?(parent_name)
+        'to a name ending in " Subproject"'
+      elsif Level.ui_test_partition_name?(parent_name)
+        'to a name beginning with "UI Test "'
+      else
+        'to a name without the "UI Test ...", "New ... Project", or "... Subproject" form'
+      end
+    end
+
     # Which partition the level defined by the given file (.level or DSL)
     # belongs to, based on which tree its path falls under.
     def self.partition_for_path(path)
