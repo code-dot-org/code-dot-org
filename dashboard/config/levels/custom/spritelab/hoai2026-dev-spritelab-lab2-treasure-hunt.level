@@ -24,7 +24,13 @@
     "level_mode": {
       "kind": "build",
       "imageType": "sprite",
-      "placeOne": true
+      "imageSubject": "object",
+      "imageRole": "treasure",
+      "sentence": "treasure",
+      "placeOne": true,
+      "imageFirst": true,
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw some treasure.**"
     },
     "pinned_scene": {
       "id": "platform-scene",
@@ -41,6 +47,13 @@
     "objectives": {
       "title": "**Find the treasure**",
       "items": [
+        {
+          "text": "Prompt AI to make some treasure.",
+          "check": {
+            "kind": "image",
+            "imageType": "sprite"
+          }
+        },
         {
           "text": "In **World**, click a square your player can reach to put your treasure there.",
           "check": {
@@ -69,7 +82,7 @@
         }
       ]
     },
-    "long_instructions": "# Find the treasure\nPut your treasure in the world, then choose what happens when your character reaches it: say something, a burst, or a sound.",
+    "long_instructions": "# Find the treasure\nMake some treasure and put it in the world, then choose what happens when your character reaches it: say something, a burst, or a sound.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -138,7 +151,21 @@
         }
       }
     ],
-    "header_label": "Make a platformer"
+    "header_label": "Make a platformer",
+    "callouts": [
+      {
+        "target": "code-tab",
+        "when": {
+          "done": [
+            1
+          ],
+          "notDone": [
+            2
+          ],
+          "tabNever": "Code"
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

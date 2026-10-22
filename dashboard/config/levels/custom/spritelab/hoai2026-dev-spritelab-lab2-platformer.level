@@ -23,7 +23,12 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "block"
+      "imageType": "block",
+      "imageRole": "block",
+      "sentence": "block",
+      "imageFirst": true,
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a block.**"
     },
     "image_role_defaults": {
       "block": "block"
@@ -37,22 +42,92 @@
       "title": "**Make this world yours**",
       "items": [
         {
-          "text": "Place platforms on the grid.",
+          "text": "Prompt AI to make a block.",
+          "check": {
+            "kind": "image",
+            "imageType": "block"
+          }
+        },
+        {
+          "text": "Add platforms on the grid.",
           "check": {
             "kind": "world",
             "changed": true
           }
         },
         {
-          "text": "Click **Play** to try them.",
+          "text": "Click **Play** and jump to the top.",
           "check": {
-            "kind": "play"
+            "kind": "reach",
+            "height": 0.7
           }
         }
       ]
     },
-    "long_instructions": "# Make this world yours\nPaint platforms on the grid: add blocks, erase blocks, build paths and towers. Click **Play** to try it.",
-    "header_label": "Make a platformer"
+    "long_instructions": "# Make this world yours\nMake your own block, then add platforms on the grid. Click **Play** and get to the top.",
+    "header_label": "Make a platformer",
+    "world_start_pattern": [
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "....BB....",
+        "..........",
+        ".BB....BB.",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".....BB...",
+        "..........",
+        "...BB...BB",
+        ".S........",
+        "BBB...BB..",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        ".BB....BB.",
+        "..........",
+        "..BB..BB..",
+        "....S.....",
+        "...BBBB...",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "BBB.......",
+        ".....BB...",
+        "..........",
+        "...BB..BB.",
+        ".S........",
+        "BBB..BBBBB",
+        ".........."
+      ],
+      [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "...BBBB...",
+        "..........",
+        "BB..S...BB",
+        "..........",
+        "...BBBB..."
+      ]
+    ]
   }
 }]]></config>
 </GamelabJr>

@@ -34,48 +34,46 @@
     },
     "add_blocks": [
       {
-        "type": "gamelab_atTime",
-        "data": "at-3",
-        "fields": {
-          "UNIT": "\"seconds\""
-        },
-        "inputs": {
-          "N": {
-            "shadow": {
-              "type": "math_number",
-              "fields": {
-                "NUM": 3
+        "ghost": {
+          "type": "gamelab_atTime",
+          "fields": {
+            "UNIT": "\"seconds\""
+          },
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
               }
             }
-          }
-        },
-        "next": {
-          "shadow": {
-            "type": "spritelab2_placeholder",
-            "extraState": {
-              "like": {
-                "type": "gamelab_spriteSay",
-                "fields": {
-                  "SPEECH": "Welcome to the adventure."
-                },
-                "inputs": {
-                  "SPRITE": {
-                    "shadow": {
-                      "type": "gamelab_allSpritesWithAnimation"
-                    }
+          },
+          "next": {
+            "block": {
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Ready to start your game?"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
                   }
                 }
               }
             }
           }
-        }
+        },
+        "data": "at-3",
+        "tagged": true
       }
     ],
     "objectives": {
       "title": "**Say something later**",
       "items": [
         {
-          "text": "Drag a **say** block onto the dotted outline.",
+          "text": "Drag **at 3 seconds** into the workspace, then a **say** block under it.",
           "check": {
             "kind": "block",
             "type": "gamelab_spriteSay",
@@ -91,15 +89,33 @@
         }
       ]
     },
-    "long_instructions": "# Say something later\nDrag a **say** block onto the dotted outline under **at [3] seconds**. Your character speaks 3 seconds in.",
+    "long_instructions": "# Say something later\nDrag **at 3 seconds** onto its outline, then a **say** block onto the outline under it. Your character speaks 3 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
+          "type": "gamelab_atTime",
+          "fields": {
+            "UNIT": "\"seconds\""
+          },
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          },
+          "data": "at-3"
+        },
+        {
+          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Welcome to the adventure."
+            "SPEECH": "Ready to start your game?"
           },
           "inputs": {
             "SPRITE": {

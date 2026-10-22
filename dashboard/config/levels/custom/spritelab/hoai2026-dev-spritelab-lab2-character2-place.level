@@ -22,7 +22,13 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "imageFirst": true,
+      "imageType": "sprite",
+      "imageRole": "friend",
+      "sentence": "friend",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw another character.**"
     },
     "image_role_defaults": {
       "sprite": "friend"
@@ -36,6 +42,13 @@
       "title": "**Add them on the right**",
       "items": [
         {
+          "text": "Prompt AI to make another character.",
+          "check": {
+            "kind": "image",
+            "imageType": "sprite"
+          }
+        },
+        {
           "text": "Drag **make new sprite** onto the dotted outline.",
           "check": {
             "kind": "block",
@@ -45,16 +58,10 @@
               "POSITION": "right"
             }
           }
-        },
-        {
-          "text": "Click **Play** to see them both.",
-          "check": {
-            "kind": "play"
-          }
         }
       ]
     },
-    "long_instructions": "# Add your second character\nDrag **make new sprite** with position **right** onto the dotted outline to put your new character on the right.",
+    "long_instructions": "# Add your second character\nMake another character, then drag **make new sprite** with position **right** onto the dotted outline to put them on the right.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

@@ -22,7 +22,13 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "imageFirst": true,
+      "imageType": "background",
+      "imageRole": "story-background",
+      "sentence": "place-time",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background.**"
     },
     "image_role_defaults": {
       "background": "story-background"
@@ -36,22 +42,24 @@
       "title": "**Set the scene**",
       "items": [
         {
-          "text": "Drag **set background** onto the dotted outline.",
+          "text": "Prompt AI to make a background.",
           "check": {
-            "kind": "block",
-            "type": "gamelab_setBackgroundImageAs",
-            "under": "spritelab2_whenRun"
+            "kind": "image",
+            "imageType": "background"
           }
         },
         {
-          "text": "Click **Play** to watch your story.",
+          "text": "Drag **set background** onto the dotted outline and pick your background.",
           "check": {
-            "kind": "play"
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun",
+            "namesImage": "IMG"
           }
         }
       ]
     },
-    "long_instructions": "# Set the scene\nDrag **set background** onto the dotted outline.",
+    "long_instructions": "# Set the scene\nMake a background, then drag **set background** onto the dotted outline and pick it.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
