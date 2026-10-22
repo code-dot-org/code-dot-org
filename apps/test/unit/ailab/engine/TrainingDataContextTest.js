@@ -74,7 +74,7 @@ describe('TrainingDataContext', () => {
     act(() => trainingData().setTrainedModel(MODEL));
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
     expect(trainingData().trainedModel).toBeUndefined();
 

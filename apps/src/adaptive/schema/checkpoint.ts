@@ -29,11 +29,15 @@ export const checkpointSourceSchema = z.strictObject({
    */
   skippable: z.boolean().optional(),
   /**
-   * Whether completing this checkpoint runs the router over the evidence so
-   * far. Routing needs some evidence; with none, completion returns to the
-   * map as usual.
+   * Whether finishing this checkpoint returns to the map focused on the
+   * next open checkpoint, so the student sees what their evidence skipped.
    */
   routeAfterCompletion: z.boolean().optional(),
+  /**
+   * The map destination this checkpoint belongs to. Only a terminal (leaf)
+   * checkpoint, one that no other checkpoint requires, can have one.
+   */
+  destination: z.string().min(1).optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 

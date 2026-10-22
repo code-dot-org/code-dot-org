@@ -89,7 +89,9 @@ class DCDOBase < DynamicConfigBase
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
-      'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false)
+      'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
+      # Kill switch for Tutor+ (lesson deep dive); also gates its endpoints and chat server-side.
+      'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true)
     }
   end
 end

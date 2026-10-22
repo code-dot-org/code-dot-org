@@ -3,7 +3,7 @@
 // router reads evidence computed from progress on every decision, so authored
 // evidence levels can change without migrating anything.
 
-import {Answer, Progress, StepProgress} from '../progress/model';
+import type {Answer, Progress, StepProgress} from '../progress/model';
 import {Measures} from '../schema/question';
 import {Checkpoint, Pathway, QuestionsStep, Step} from '../types';
 

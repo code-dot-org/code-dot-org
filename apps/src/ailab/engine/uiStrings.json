@@ -1,5 +1,4 @@
 {
-  "navigateForward": "Continue",
   "navigateBack": "Back",
   "navigateDone": "Finish",
   "saveProgress": "Save",
@@ -36,12 +35,6 @@
   "selectDatasetErrorTooFewColumns": "Please upload a {fileType} with at least {count} columns.",
   "dataCardWarningLargeDataset": "Warning: Datasets with more than {rowCount} rows will slow down the user experience.",
   "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {row} other {rows}} removed because {rowCount, plural, one {it} other {they}} contained empty cells.",
-  "dataCardDefaultHeader": "Details",
-  "dataCardSource": "Source",
-  "dataCardRowCount": "Rows of data",
-  "dataCardLastUpdated": "Last updated",
-  "dataCardPotentialUses": "Potential uses",
-  "dataCardPotentialMisuses": "Potential misuses",
   "saveStatus_success": "Your model was saved!",
   "saveStatus_failure": "There was an error. Your model did not save. Please try again.",
   "saveStatus_piiProfanity": "Your model could not be saved because it contains profanity or personally identifying information (e.g. email, address, phone number).",

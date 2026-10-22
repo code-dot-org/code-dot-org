@@ -13,7 +13,6 @@ type SentenceSound =
   | 'complete'
   | 'go'
   | 'reveal'
-  | 'shuffle'
   | 'cheer'
   | 'hmm';
 
@@ -51,12 +50,6 @@ const SOUNDS: Record<SentenceSound, Note[]> = {
     {hz: 784, at: 0.2, seconds: 0.12},
     {hz: 1047, at: 0.3, seconds: 0.4},
   ],
-  shuffle: [0, 1, 2, 3, 4].map(i => ({
-    hz: 500 + i * 90,
-    at: i * 0.05,
-    seconds: 0.05,
-    volume: 0.07,
-  })),
   cheer: [
     {hz: 784, at: 0, seconds: 0.1},
     {hz: 1047, at: 0.09, seconds: 0.25},

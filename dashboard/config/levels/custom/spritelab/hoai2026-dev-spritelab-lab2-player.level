@@ -45,10 +45,10 @@
       ".........."
     ],
     "objectives": {
-      "title": "**Make your character the player.**",
+      "title": "**Make your character the player**",
       "items": [
         {
-          "text": "Drag **set as player** onto the dotted outline.",
+          "text": "Put **set as player** under **when run** and pick your character.",
           "check": {
             "kind": "block",
             "type": "spritelab2_setAsPlatformPlayer",
@@ -58,12 +58,13 @@
         {
           "text": "Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.",
           "check": {
-            "kind": "play"
+            "kind": "reach",
+            "moved": true
           }
         }
       ]
     },
-    "long_instructions": "# Make your character the player\nDrag **set as player** onto the dotted outline and pick your character. Arrow keys: left and right to run, up to jump.",
+    "long_instructions": "# Make your character the player\nPut **set as player** under **when run** and pick your character. Arrow keys: left and right to run, up to jump.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -81,7 +82,8 @@
           "extraState": {
             "like": {
               "type": "spritelab2_setAsPlatformPlayer"
-            }
+            },
+            "blank": true
           }
         }
       }

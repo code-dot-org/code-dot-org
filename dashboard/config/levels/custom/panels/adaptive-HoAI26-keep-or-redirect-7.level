@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-10-16T21:25:20.000Z",
   "level_num": "custom",
@@ -8,32 +9,37 @@
     "panels": [
       {
         "key": "adaptive-HoAI26-keep-or-redirect-7-ba2c3be6-4712-4e3d-8016-69fd81ac9220",
-        "text": "First, you start with a plan for your web page.",
-        "imageUrl": "https://images.code.org/90c406a6db38b75113ede59d82566e53-adaptive-HoAI26-keep-or-redirect-7-panel-1-4502e179-ad54-492f-88e1-7ba569688744.png",
-        "layout": "text-top-center"
+        "text": "###Start with a plan.\n\nDecide who your page is for, what belongs on it, and what visitors should be able to do.",
+        "imageUrl": "https://images.code.org/8394606fbac99808bd9afa51ee0652b9-Planning a Web Page Layout-1.png",
+        "layout": "text-top-right"
       },
       {
         "key": "adaptive-HoAI26-keep-or-redirect-7-4f32facc-9d3a-417d-8506-7b147ed7a6e3",
-        "text": "Then, compare the AI's result to your plan. See what matches and what doesn't.",
-        "imageUrl": "https://images.code.org/aa6f60fde4ecc2bb10f318a7dc3cdbb7-adaptive-HoAI26-keep-or-redirect-7-panel-2-d483f2f6-5e99-4d6a-8757-48a82ae3baed.png",
-        "layout": "text-top-center"
+        "text": "####Compare the result to your plan.\n\nCheck the content, layout, and features. What matches? What’s missing or different?",
+        "imageUrl": "https://images.code.org/fc4ea1d7455395b59c82ec350ea55d76-Plan versus browser_ spot the mismatch-2.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
       },
       {
         "key": "adaptive-HoAI26-keep-or-redirect-7-4e6e7a97-d8fc-4458-aa16-afc16e2b48c4",
-        "text": "If the result is good, or close enough, you can simply keep it as is.",
-        "imageUrl": "https://images.code.org/bdeac1aa4a09c49e5c95a93fe1c4f9e3-adaptive-HoAI26-keep-or-redirect-7-panel-3-9ebcb81b-6a00-48a2-820d-03845357d2e6.png",
-        "layout": "text-bottom-center"
+        "text": "###Keep what works.\n\nIf the page meets your goals and works when you test it, you can keep it as is.",
+        "imageUrl": "https://images.code.org/c17aeb4d1f7e4d09059b1ae52991fac9-From wrong page to right layout-3.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
       },
       {
         "key": "adaptive-HoAI26-keep-or-redirect-7-4d59d49f-ef73-4664-89c5-db39ed61e775",
-        "text": "If it's way off, redirect with a new prompt. For small changes, edit it yourself by hand.",
-        "imageUrl": "https://images.code.org/f730af5c733bb6cee601971b564db619-adaptive-HoAI26-keep-or-redirect-7-panel-4-6a845602-19a2-45b7-ae41-52dda4c49923.png",
-        "layout": "text-bottom-center"
+        "text": "####You decide what to keep!\n\nWrite a new prompt that explains what missed the mark, what to change, and what to keep.",
+        "imageUrl": "https://images.code.org/6488a63920af6623306bf319fbf54573-Plan matches the finished page-4.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
       }
     ],
-    "generate_outline": "Watch a screen recording demonstrating how to evaluate AI output against a plan. Learn to identify matches and mismatches, then choose whether to keep the result, redirect with a new prompt, or edit by hand for small, exact changes."
+    "generate_outline": "Watch a screen recording demonstrating how to evaluate AI output against a plan. Learn to identify matches and mismatches, then choose whether to keep the result, redirect with a new prompt, or edit by hand for small, exact changes.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:26:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:34:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 03:35:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 16:31:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>
