@@ -28,27 +28,26 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "import csv\n\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# TODO 1: Import `train_test_split`\n\n# Read data\nf = open(\"academic_data.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs\ninputs = []\nfor row in data:\n  inputs.append([\n      int(row[\"hours_studied\"]),\n      int(row[\"hours_slept\"]),\n      int(row[\"practice_problems\"])\n  ])\n\n# Define outputs\noutputs = []\nfor row in data:\n  outputs.append(int(row[\"test_score\"]))\n\n# TODO 2: Split data using `train_test_split`\n\n# Create model\nmodel = LinearRegression()\n\n# TODO 3: Fit model\n\n# TODO 4: Measure loss\n\n# TODO 5: Print loss",
+          "contents": "import csv\n\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# TODO 1: Import `train_test_split`\n\n# Read data\nf = open(\"academic_data.csv\")\ndata = list(csv.DictReader(f))\nf.close()\n\n# Define inputs\ninputs = []\nfor row in data:\n  inputs.append([\n    int(row[\"hours_studied\"]),\n    int(row[\"hours_slept\"]),\n    int(row[\"practice_problems\"])\n  ])\n\n# Define outputs\noutputs = []\nfor row in data:\n  outputs.append(int(row[\"test_score\"]))\n\n# TODO 2: Split data using `train_test_split`\n\n# Create model\nmodel = LinearRegression()\n\n# TODO 3: Fit model\n\n# TODO 4: Measure loss\n\n# TODO 5: Print loss",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "1": {
           "id": "1",
           "name": "academic_data.csv",
           "contents": "hours_studied,hours_slept,practice_problems,test_score\n2,6,10,68\n5,8,25,91\n1,5,5,55\n4,7,20,85\n3,4,15,70\n6,8,30,96\n0,6,2,45\n3,7,12,74\n2,3,10,58\n5,7,22,88\n4,8,18,84\n1,7,8,60\n6,6,28,90\n2,8,14,72\n3,5,13,69\n5,6,24,87\n0,8,3,50\n4,5,17,78\n6,7,29,94\n1,4,6,52",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
       },
       "openFiles": [
-        "0",
-        "1"
+        "0"
       ]
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-11 00:02:41 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:02:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:06:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:06:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:02:41 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:02:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:06:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:06:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:12:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

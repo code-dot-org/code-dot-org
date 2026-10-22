@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:27:47.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-give-context-10-871d8e81-1266-415a-82b5-8330003b3e82",
+        "text": "###“It’s not working.”\nMateo is building a website for his parents’ bakery, but the photos overlap. He tells AI, “It’s not working. Fix it.” After another try, the problem is still there.",
+        "imageUrl": "https://images.code.org/fcfe80dab9c17c530f44230ca8fda3ff-Frustrated student faces a broken bakery gallery.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-give-context-10-4436b64f-b9e2-4bbc-bfbd-5bb0738dd413",
+        "text": "###Get specific.\nHe tries again: “In the photo gallery, the pictures overlap. I want three equal-sized photos in one row, with space between them.”",
+        "imageUrl": "https://images.code.org/c71394dfc04d1e494e3bac2d9785a58c-Imagined bakery site in a thought bubble.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-give-context-10-b6791e81-fea9-4823-8167-2435ed557756",
+        "text": "###Find the pattern.\nMateo checks the updated page. It works! He notices what helped: name the part, describe what happens, and explain what should happen. Then test the change.",
+        "imageUrl": "https://images.code.org/cf2655e0b29a3fc3b50c867b592d8fdb-Student working beside a bakery website.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "A comedy sketch where a student learns the importance of detailed bug reports. See how vague reports yield unhelpful replies, while clear reports lead to useful solutions. Understand the three key questions for reporting issues.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:28:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:28:15 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 04:45:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-20 04:46:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-20T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**AI finds patterns that repeat across its training data.**\n\nWhy would repeating patterns be useful for making something new?",
+        "imageUrl": "https://images.code.org/21dc8bc583c9ef2c63d3d6f50276bcf3-codeai-scanner-learning-box-16x9.gif",
+        "fadeInOverPrevious": true,
+        "key": "hoai2026-dev-panels-training-data-15c8c1cd-00d8-4ef0-a3b0-25c3e935fd06"
+      },
+      {
+        "text": "For example, this training data includes many different cats.\n\nColors and markings vary, but some features repeat.\n\n**AI learns shared patterns, like pointed ears.**\n",
+        "imageUrl": "https://images.code.org/a2b43d0612d01a0b36a1af06686fb1ba-codeai-cat-pattern-grid-16x9.gif",
+        "fadeInOverPrevious": true,
+        "key": "hoai2026-dev-panels-training-data-b45c4029-cf07-4dcb-b4ec-fad8bebfb262"
+      },
+      {
+        "text": "AI uses your prompt and patterns it learned to make a new image.\n\n---\n\n**Something to think about:** What might happen if almost every example in the training data showed the same kind of cat?",
+        "imageUrl": "https://images.code.org/bd73a9b4496a31424e54da656a458d00-codeai-prompt-bold-16x9.gif",
+        "fadeInOverPrevious": true,
+        "key": "hoai2026-dev-panels-training-data-60b4dcb0-1c2d-4a2e-b956-c122107b6698"
+      }
+    ],
+    "use_links": "false",
+    "header_label": "Getting started"
+  }
+}]]></config>
+</Panels>

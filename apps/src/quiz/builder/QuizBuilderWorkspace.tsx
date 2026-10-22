@@ -4,9 +4,10 @@ import React, {useMemo, useState} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
+import {QuizQuestionType} from '../types';
 import {groupByPage} from '../utils';
 
-import AddItemButton from './AddItemButton';
+import CreateQuestionDropdown from './CreateQuestionDropdown';
 import IntroScreenCard from './IntroScreenCard';
 import {QuizConfigurationData} from './QuizConfigurationPanel';
 import QuizQuestionCard from './QuizQuestionCard';
@@ -52,10 +53,21 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   const hasPendingQuestion = questions.some(question =>
     isPendingQuestionId(question.id)
   );
-  const pages = useMemo(() => groupByPage(questions), [questions]);
+  // Pages aren't stored separately - each question's placement has a page number.
+  // "Add page" keeps the new, still-empty page in local state until a question is created on it.
+  const [addedEmptyPage, setAddedEmptyPage] = useState<number | null>(null);
+  const pages = useMemo(() => {
+    const pagesWithQuestions = groupByPage(questions);
+    return addedEmptyPage === null
+      ? pagesWithQuestions
+      : [...pagesWithQuestions, {page: addedEmptyPage, questions: []}];
+  }, [questions, addedEmptyPage]);
 
-  const handleCreate = (page: number) => {
-    setExpandedId(addPendingQuestion(page));
+  const handleCreate = (page: number, type: QuizQuestionType) => {
+    setExpandedId(addPendingQuestion(page, type));
+    if (page === addedEmptyPage) {
+      setAddedEmptyPage(null);
+    }
   };
 
   let outline: React.ReactNode;
@@ -88,27 +100,32 @@ const QuizBuilderWorkspace: React.FunctionComponent<
                   {questionCountLabel(pageQuestions.length)}
                 </Typography>
               </div>
-              <ol className={styles.list}>
-                {pageQuestions.map(question => (
-                  <li key={question.id}>
-                    <QuizQuestionCard
-                      question={question}
-                      isExpanded={question.id === expandedId}
-                      onExpandedChange={expanded =>
-                        setExpandedId(expanded ? question.id : null)
-                      }
-                      error={question.id === errorQuestionId ? error : null}
-                      onSave={saveQuestion}
-                      onRemove={removeQuestion}
-                    />
-                  </li>
-                ))}
-              </ol>
-              <AddItemButton
-                label="Create question"
-                onClick={() => handleCreate(page)}
-                disabled={hasPendingQuestion}
-              />
+              {pageQuestions.length > 0 && (
+                <ol className={styles.list}>
+                  {pageQuestions.map(question => (
+                    <li key={question.id}>
+                      <QuizQuestionCard
+                        question={question}
+                        isExpanded={question.id === expandedId}
+                        onExpandedChange={expanded =>
+                          setExpandedId(expanded ? question.id : null)
+                        }
+                        error={question.id === errorQuestionId ? error : null}
+                        onSave={saveQuestion}
+                        onRemove={removeQuestion}
+                      />
+                    </li>
+                  ))}
+                </ol>
+              )}
+              <div className={styles.addQuestionRow}>
+                <CreateQuestionDropdown
+                  name={`create-question-page-${page}`}
+                  variant="text"
+                  onCreate={type => handleCreate(page, type)}
+                  disabled={hasPendingQuestion}
+                />
+              </div>
               {pageHasPendingQuestion && (
                 <Typography variant="body3" className={styles.createHint}>
                   Save or remove your new question before creating another.
@@ -123,8 +140,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           color="secondary"
           size="extraSmall"
           type="button"
-          disabled={hasPendingQuestion}
-          onClick={() => handleCreate(nextPage)}
+          disabled={hasPendingQuestion || addedEmptyPage !== null}
+          onClick={() => setAddedEmptyPage(nextPage)}
           startIcon={<FontAwesomeV6Icon iconName="plus" />}
         >
           <Typography
@@ -171,16 +188,12 @@ const QuizBuilderWorkspace: React.FunctionComponent<
         {outline}
 
         {questions.length === 0 && (
-          <Button
+          <CreateQuestionDropdown
+            name="create-question-empty"
             className={styles.createButton}
-            variant="contained"
-            color="primary"
-            type="button"
+            onCreate={type => handleCreate(1, type)}
             disabled={isLoading}
-            onClick={() => handleCreate(1)}
-          >
-            + Create question
-          </Button>
+          />
         )}
       </div>
     </PanelContainer>

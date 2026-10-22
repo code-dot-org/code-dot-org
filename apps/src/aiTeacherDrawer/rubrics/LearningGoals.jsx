@@ -430,6 +430,17 @@ export default function LearningGoals({
     setCurrentLearningGoal(0);
   }
 
+  // Also used as the hover title: both header lines clip at two lines.
+  const currentLearningGoalName =
+    currentLearningGoal === learningGoals.length
+      ? i18n.rubricLearningGoalSummary()
+      : learningGoals[currentLearningGoal].learningGoal;
+  const nextLearningGoalName =
+    currentLearningGoal + 1 === learningGoals.length
+      ? i18n.rubricLearningGoalSummary()
+      : learningGoals[(currentLearningGoal + 1) % learningGoals.length]
+          .learningGoal;
+
   return (
     <div className={style.learningGoalsContainer}>
       <div className={style.learningGoalsHeader}>
@@ -465,10 +476,8 @@ export default function LearningGoals({
               variant="h5"
               gutterBottom
             >
-              <span>
-                {currentLearningGoal === learningGoals.length
-                  ? i18n.rubricLearningGoalSummary()
-                  : learningGoals[currentLearningGoal].learningGoal}
+              <span title={currentLearningGoalName}>
+                {currentLearningGoalName}
               </span>
               {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
                 <AiToken />
@@ -478,13 +487,9 @@ export default function LearningGoals({
               className={style.learningGoalsHeaderTextBody}
               variant="body3"
               gutterBottom
+              title={`${i18n.next()}: ${nextLearningGoalName}`}
             >
-              {i18n.next()}:{' '}
-              {currentLearningGoal + 1 === learningGoals.length
-                ? i18n.rubricLearningGoalSummary()
-                : learningGoals[
-                    (currentLearningGoal + 1) % learningGoals.length
-                  ].learningGoal}
+              {i18n.next()}: {nextLearningGoalName}
             </Typography>
           </div>
         </div>

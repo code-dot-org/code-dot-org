@@ -11,10 +11,13 @@ def make_scene():
 
 
 def install_fake_bridge(monkeypatch):
-  """Record what play_scenes publishes; returns the list of (gif, wav, gif_ms)."""
+  """Record what play_scenes publishes.
+
+  Returns the list of (gif, wav, gif_ms, summary, transcript) tuples.
+  """
   published = []
   fake_bridge = types.ModuleType("_theater_bridge")
-  fake_bridge.publish = lambda gif, wav, gif_ms: published.append((gif, wav, gif_ms))
+  fake_bridge.publish = lambda *args: published.append(args)
   monkeypatch.setitem(sys.modules, "_theater_bridge", fake_bridge)
   return published
 
@@ -31,7 +34,8 @@ def test_play_scenes_publishes_the_rendered_gif(monkeypatch):
   gif_bytes, _wav = play_scenes(make_scene())
 
   # A silent program still publishes, with no audio track alongside the gif.
-  assert published == [(gif_bytes, None, 0)]
+  assert len(published) == 1
+  assert published[0][:3] == (gif_bytes, None, 0)
 
 
 def test_play_scenes_publishes_the_audio_track(monkeypatch):
@@ -42,7 +46,7 @@ def test_play_scenes_publishes_the_audio_track(monkeypatch):
   gif_bytes, wav_bytes = play_scenes(scene)
 
   assert wav_bytes is not None
-  assert published == [(gif_bytes, wav_bytes, 0)]
+  assert published[0][:3] == (gif_bytes, wav_bytes, 0)
 
 
 def test_play_scenes_concatenates_scene_actions(monkeypatch):
@@ -71,3 +75,16 @@ def test_play_scenes_publishes_the_gif_length(monkeypatch):
 
   # The two pauses, in milliseconds; the closing frame carries no delay.
   assert published[0][2] == 1750
+
+
+def test_play_scenes_publishes_a_description_of_every_scene(monkeypatch):
+  published = install_fake_bridge(monkeypatch)
+
+  second = Scene()
+  second.draw_ellipse(200, 200, 50, 50)
+  play_scenes(make_scene(), second)
+
+  _gif, _wav, _ms, summary, transcript = published[0]
+  assert summary == "Still picture."
+  assert "rectangle" in transcript
+  assert "ellipse" in transcript

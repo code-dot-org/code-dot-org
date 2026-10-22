@@ -125,4 +125,17 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     )
     refute question.valid?
   end
+
+  test "answered? is true only when a choice is selected" do
+    question = build(:multiple_choice_question)
+    assert question.answered?({'selectedChoiceId' => 'b'})
+    refute question.answered?({'selectedChoiceId' => ''})
+    refute question.answered?({})
+  end
+
+  test "placeholder_content is valid" do
+    question = build(:multiple_choice_question)
+    question.content = question.placeholder_content
+    assert question.valid?
+  end
 end

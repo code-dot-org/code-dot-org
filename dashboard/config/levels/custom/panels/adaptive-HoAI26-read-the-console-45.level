@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:46:09.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-read-the-console-45-40dec2e0-919d-41f0-a8ad-ba0f479e77fb",
+        "text": "### Start with the message.\nAn **error message** gives you a clue about what went wrong.",
+        "imageUrl": "https://images.code.org/d91abc4ebde4eab44b33beee5ee2fd80-exec-35f2bb74-c87c-4b3e-a294-c94e36a5449d.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-read-the-console-45-d66b94d7-28e1-47fa-804f-f8cb85170c92",
+        "text": "### What does it name?\nLook for a named item. \n\nShare the **exact message** with AI.",
+        "imageUrl": "https://images.code.org/0fc0066745cda9e97b6e16cddfb4f317-exec-9b38705e-9705-4660-8762-55654f0dd639.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-read-the-console-45-98f9f320-d2f7-4e94-9d56-45d0f77eaf7c",
+        "text": "### Follow the line.\nCheck the **file and line number**. \n\nThe cause may be there or earlier in the code.",
+        "imageUrl": "https://images.code.org/ad1bc15d41554ed3a28b134f108217fc-exec-ded66e0c-911f-4d5b-9955-ec01b1c80c53.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Learn to interpret console errors. Understand that red indicates a problem, how to identify the keyword associated with the error, and how the line number points to its location in the code.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:46:47 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:46:47 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 02:49:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

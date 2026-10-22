@@ -58,7 +58,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let id: number | undefined;
     act(() => {
-      id = result.current.addPendingQuestion(1);
+      id = result.current.addPendingQuestion(1, 'MultipleChoiceQuestion');
     });
 
     expect(postSpy).not.toHaveBeenCalled();
@@ -82,7 +82,7 @@ describe('useQuizBuilderQuestions', () => {
     await waitForNextUpdate();
 
     act(() => {
-      result.current.addPendingQuestion(2);
+      result.current.addPendingQuestion(2, 'MultipleChoiceQuestion');
     });
 
     expect(result.current.questions[1]).toMatchObject({page: 2});
@@ -96,7 +96,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let id: number | undefined;
     act(() => {
-      id = result.current.addPendingQuestion(1);
+      id = result.current.addPendingQuestion(1, 'MultipleChoiceQuestion');
     });
 
     expect(id).toBeLessThan(0);
@@ -118,6 +118,7 @@ describe('useQuizBuilderQuestions', () => {
 
   describe('saveQuestion', () => {
     const PAYLOAD = {
+      type: 'MultipleChoiceQuestion' as const,
       questionName: 'Updated question',
       questionTitle: 'What is 2 + 3?',
       choices: QUESTION.choices,
@@ -199,7 +200,10 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion(1);
+        pendingId = result.current.addPendingQuestion(
+          1,
+          'MultipleChoiceQuestion'
+        );
       });
 
       const created = {...QUESTION, ...PAYLOAD, id: 99};
@@ -233,7 +237,10 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion(2);
+        pendingId = result.current.addPendingQuestion(
+          2,
+          'MultipleChoiceQuestion'
+        );
       });
 
       const created = {...QUESTION, ...PAYLOAD, id: 99, page: 2};
@@ -265,7 +272,10 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion(1);
+        pendingId = result.current.addPendingQuestion(
+          1,
+          'MultipleChoiceQuestion'
+        );
       });
 
       let succeeded = false;

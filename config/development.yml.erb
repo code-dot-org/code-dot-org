@@ -14,9 +14,10 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
+# Use default credentials for the admin/root user. `db:provision_sql_users` creates the `writer` and `reader` users.
 db_credential_admin: {"username":"root", "password":""}
-db_credential_writer: {"username":"root", "password":""}
-db_credential_reader: {"username":"root", "password":""}
+db_credential_writer: {"username":"writer", "password":""}
+db_credential_reader: {"username":"reader", "password":""}
 db_writer: 'mysql://root@localhost/'
 
 lint: true

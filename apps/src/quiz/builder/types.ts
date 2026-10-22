@@ -1,3 +1,5 @@
+import {QuizQuestionType} from '../types';
+
 export interface QuizQuestionChoice {
   id: string;
   text: string;
@@ -11,45 +13,45 @@ export interface StandardSummary {
   description: string;
 }
 
-// Mirrors the QuizQuestion model. `type` is the STI class name;
-// MultipleChoiceQuestion is the only one so far.
-export interface QuizQuestion {
-  id: number;
-  type: string;
+// The fields every question type shares, editable in any question's card.
+interface QuizQuestionSharedFields {
   questionName: string;
   questionTitle: string;
   description: string | null;
-  choices: QuizQuestionChoice[];
-  correctChoiceId: string | null;
   explanation: string | null;
-  standards: StandardSummary[];
 }
 
-// A QuizQuestion as the builder endpoints return it (GET /levels/:id/
-// quiz_configuration and a placement create): the question plus the
-// placement and cross-quiz usage context that
+export interface MultipleChoiceDraft extends QuizQuestionSharedFields {
+  type: 'MultipleChoiceQuestion';
+  choices: QuizQuestionChoice[];
+  correctChoiceId: string | null;
+}
+
+export interface FreeResponseDraft extends QuizQuestionSharedFields {
+  type: 'FreeResponseQuestion';
+}
+
+// A question card's unsaved working copy; Save sends it as the request body.
+export type QuizQuestionDraft = MultipleChoiceDraft | FreeResponseDraft;
+
+// A question as the builder endpoints return it (GET /levels/:id/
+// quiz_configuration and a placement create): the QuizQuestion model's
+// fields plus the placement and cross-quiz usage context that
 // QuizQuestionSerialization#quiz_question_json adds.
-export interface QuizBuilderQuestion extends QuizQuestion {
+export type QuizBuilderQuestion = QuizQuestionDraft & {
+  id: number;
+  // TODO: move to QuizQuestionSharedFields when we allow editing standards.
+  standards: StandardSummary[];
   attachedToOtherQuizzes: boolean;
   usedInPublishedUnit: boolean;
   page: number | null;
-}
+};
 
 // A negative id marks a question that has been added locally
 // and hasn't posted to the server yet - real ids are
 // database-assigned and always positive.
 export function isPendingQuestionId(id: number): boolean {
   return id < 0;
-}
-
-// The fields a per-question editor can change.
-export interface QuizQuestionEditableFields {
-  questionName: string;
-  questionTitle: string;
-  description: string | null;
-  choices: QuizQuestionChoice[];
-  correctChoiceId: string | null;
-  explanation: string | null;
 }
 
 // What useQuizBuilderQuestions exposes.
@@ -62,7 +64,7 @@ export interface QuizBuilderQuestionsState {
   // on that question's card instead of globally.
   errorQuestionId: number | null;
   // Adds a placeholder question to local state only, on the given page.
-  addPendingQuestion: (page: number) => number;
+  addPendingQuestion: (page: number, type: QuizQuestionType) => number;
   // Resolves with the saved question's id on success. For a pending
   // question this is its first save, which creates it server-side and
   // replaces the negative id with the real one; otherwise it's a normal
@@ -72,7 +74,7 @@ export interface QuizBuilderQuestionsState {
   // showing the user's unsaved edits.
   saveQuestion: (
     id: number,
-    payload: QuizQuestionEditableFields
+    payload: QuizQuestionDraft
   ) => Promise<number | undefined>;
   // For a pending question, just drops it from local state. Otherwise
   // detaches it from the quiz server-side first.
