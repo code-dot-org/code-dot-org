@@ -150,6 +150,49 @@ describe('routeStatusMap from progress', () => {
     expect(statusMapOf(routed, reopened).a).toBe('inProgress');
   });
 
+  it("skips a demonstrated skippable checkpoint once a project step's check shows the skill", () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'build-page',
+            title: 'Build',
+            kind: 'level',
+            level: 'x',
+            project: true,
+            validation: {
+              condition: 'Adds a heading.',
+              measures: {skillId: 'build'},
+            },
+          } as unknown as Step,
+        ]),
+        {
+          ...checkpoint('a', ['intro']),
+          skillIds: ['build'],
+          skippable: true,
+          targetEvidenceLevels: {build: 2},
+        },
+      ],
+    } as unknown as Pathway;
+    const checkedAt2: Progress = {
+      steps: {
+        'build-page': {
+          status: 'complete',
+          timeSpent: 1,
+          validationHistory: [
+            {
+              at: '2026-10-22T10:00:00Z',
+              pass: true,
+              evidenceLevel: 2,
+              reason: 'Done.',
+            },
+          ],
+        },
+      },
+    };
+    expect(statusMapOf(routed, checkedAt2).a).toBe('skipped');
+  });
+
   it('maps every checkpoint id to its status', () => {
     expect(statusMapOf(pathway, progressOf(['intro', 'a'], []))).toEqual({
       intro: 'complete',
