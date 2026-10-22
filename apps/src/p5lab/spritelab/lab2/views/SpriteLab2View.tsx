@@ -42,7 +42,7 @@ import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {addMissingBlocks} from '../addBlocks';
+import {addMissingBlocks, settleGhosts} from '../addBlocks';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -1035,6 +1035,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [animationList, patchSources]);
 
+  const settleLevelGhosts = useCallback(
+    (workspace: BlocklyCore.WorkspaceSvg) =>
+      !!levelProperties.addBlocks &&
+      settleGhosts(workspace, levelProperties.addBlocks),
+    [levelProperties.addBlocks]
+  );
   const {
     workspaceVersion,
     getCode,
@@ -1051,6 +1057,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
     hiddenBlockTypes,
+    beforeSave: settleLevelGhosts,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });

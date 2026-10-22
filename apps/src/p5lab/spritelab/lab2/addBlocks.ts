@@ -4,6 +4,7 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+import {GhostStack, isGhostStack, placeGhost, settleGhost} from './ghostBlocks';
 import {scrollIntoView} from './scrollIntoView';
 import {
   ensureRoom,
@@ -27,10 +28,26 @@ export interface AttachShadow {
   shadow: BlocklyCore.serialization.blocks.State;
 }
 
-export type AddBlockEntry = AddBlock | AttachShadow;
+export type AddBlockEntry = AddBlock | AttachShadow | GhostStack;
 
 export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
   return 'attachTo' in entry;
+}
+
+/** The level's ghosts (ghostBlocks.ts). */
+export function ghostEntries(entries: AddBlockEntry[]): GhostStack[] {
+  return entries.filter(isGhostStack);
+}
+
+/** Settle every ghost whose top block the student has built. True when
+    the workspace changed. */
+export function settleGhosts(
+  workspace: BlocklyCore.WorkspaceSvg,
+  entries: AddBlockEntry[]
+): boolean {
+  return ghostEntries(entries)
+    .map(entry => settleGhost(workspace, entry))
+    .some(Boolean);
 }
 
 /** A block in the workspace as the matcher sees it. */
@@ -145,6 +162,9 @@ export function unfilledOutlines(
   const tops = workspace.getTopBlocks(false);
   const found = new Set<BlocklyCore.BlockSvg>();
   for (const entry of entries) {
+    if (isGhostStack(entry)) {
+      continue;
+    }
     const placeholder = isAttachShadow(entry)
       ? entry.shadow
       : entry.next?.shadow;
@@ -205,7 +225,7 @@ export async function addMissingBlocks(
     return 0;
   }
   const blocks = entries.filter(
-    (entry): entry is AddBlock => !isAttachShadow(entry)
+    (entry): entry is AddBlock => !isAttachShadow(entry) && !isGhostStack(entry)
   );
   const present = workspace.getAllBlocks(false).filter(b => !b.isShadow());
   const missing = missingBlocks(present, blocks);
@@ -236,6 +256,17 @@ export async function addMissingBlocks(
         }
       } catch (e) {
         console.warn(`add_blocks shadow for ${entry.attachTo} not hung:`, e);
+      }
+    } else if (isGhostStack(entry)) {
+      try {
+        const at = placeBelow(workspace.getTopBlocks(false).map(measureStack));
+        const top = placeGhost(workspace, entry, at);
+        if (top) {
+          BlocklyCore.renderManagement.triggerQueuedRenders(workspace);
+          added.push(top);
+        }
+      } catch (e) {
+        console.warn(`add_blocks ghost ${entry.data} not placed:`, e);
       }
     }
   }

@@ -23,6 +23,7 @@ import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {guardGhostConnections, withoutGhosts} from '../ghostBlocks';
 import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
@@ -41,6 +42,9 @@ interface UseBlocklyWorkspaceOptions {
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   /** Block types kept out of the toolbox; read at inject and on refresh. */
   hiddenBlockTypes?: ReadonlySet<string>;
+  /** Runs before a change is saved; true when it changed the workspace
+      (ghostBlocks.ts settles the level's ghosts here). */
+  beforeSave?: (workspace: BlocklyCore.WorkspaceSvg) => boolean;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
 }
@@ -89,10 +93,13 @@ export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
   hiddenBlockTypes,
+  beforeSave,
   sharedBlocks,
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const beforeSaveRef = useRef(beforeSave);
+  beforeSaveRef.current = beforeSave;
   const hiddenRef = useRef(hiddenBlockTypes);
   hiddenRef.current = hiddenBlockTypes;
   // A level's authored definition with the lab's additions, filtered to
@@ -168,6 +175,7 @@ export default function useBlocklyWorkspace({
     workspaceRef.current.options.plugins[
       BlocklyCore.registry.Type.CONNECTION_PREVIEWER.toString()
     ] = PlaceholderPreviewer;
+    guardGhostConnections(workspaceRef.current);
 
     // CDO Blockly shrinks the container by the workspace-header height to
     // leave room for a header bar we don't render, leaving a gap at the
@@ -223,12 +231,14 @@ export default function useBlocklyWorkspace({
       if (workspaceRef.current.isDragging()) {
         return;
       }
+      beforeSaveRef.current?.(workspaceRef.current);
       let serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;
-      // Levelbuilder's own locks are authored; a student's are the level's.
+      // Levelbuilder's own locks and ghosts are authored; a student's are
+      // the level's.
       if (!isToolboxMode && !isStartMode) {
-        serialized = withoutLocks(serialized);
+        serialized = withoutGhosts(withoutLocks(serialized));
       }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);

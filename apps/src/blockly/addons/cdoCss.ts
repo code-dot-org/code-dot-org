@@ -23,6 +23,11 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       stroke: none;
       fill-opacity: 0;
     }
+    .blocklyGhost.blocklyDisabled > .blocklyPath {
+      /* A ghost keeps the dashed outline at full strength over the disabled dimming. */
+      stroke-opacity: 1;
+      fill-opacity: 0.15;
+    }
     .blocklyPlaceholderActive > .blocklyPath {
       /* A blank placeholder gets its outline back under a hovering block. */
       stroke: var(--text-neutral-primary, #fff);
