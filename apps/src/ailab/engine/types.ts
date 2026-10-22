@@ -36,12 +36,24 @@ export type SortDirection = 'ascending' | 'descending';
 
 export type ColumnId = string | symbol;
 
+export interface ColumnFilter {
+  column: ColumnId;
+  values: string[];
+}
+
 export interface TableView {
   rows: number[];
+  totalRows: number;
   columns: ColumnId[];
+  filterableColumns: ColumnId[];
+  filter: ColumnFilter | undefined;
+  valueAt(row: number, column: ColumnId): string | number;
   isNumerical(column: ColumnId): boolean;
   sortDirection(column: ColumnId): SortDirection | undefined;
   toggleSort(column: ColumnId): void;
+  filterOptions(column: ColumnId): string[];
+  filterBy(column: ColumnId, values: string[]): void;
+  clearFilter(): void;
 }
 
 export interface DatasetTableView extends TableView {

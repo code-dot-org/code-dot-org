@@ -4,7 +4,9 @@ import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
 import {getLocalizedValue} from './helpers/valueDetails';
 import {useAppSelector} from './hooks';
+import {getFilterableColumns} from './selectors';
 import type {
+  ColumnFilter,
   ColumnId,
   DatasetTableView,
   SortDirection,
@@ -21,6 +23,7 @@ interface TableViewSource {
   rows: number[];
   columns: ColumnId[];
   columnTypes: Partial<Record<ColumnId, string>>;
+  filterableColumns: ColumnId[];
   valueAt: (row: number, column: ColumnId) => string | number;
 }
 
@@ -56,28 +59,42 @@ export function useTableView({
   rows,
   columns,
   columnTypes,
+  filterableColumns,
   valueAt,
 }: TableViewSource): TableView {
   const [sort, setSort] = useState<TableSort>();
+  const [filter, setFilter] = useState<ColumnFilter>();
   const isNumerical = (column: ColumnId) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
 
-  const sortedRows = useMemo(() => {
+  const shownRows = useMemo(() => {
+    const matchingRows = rows.filter(
+      row =>
+        !filter || filter.values.includes(String(valueAt(row, filter.column)))
+    );
     if (!sort || !columns.includes(sort.column)) {
-      return rows;
+      return matchingRows;
     }
     const {column, direction} = sort;
     const sign = direction === 'ascending' ? 1 : -1;
     const numerical = columnTypes[column] === ColumnTypes.NUMERICAL;
-    const values = new Map(rows.map(row => [row, valueAt(row, column)]));
-    return [...rows].sort(
+    const values = new Map(
+      matchingRows.map(row => [row, valueAt(row, column)])
+    );
+    return matchingRows.sort(
       (a, b) => sign * compareValues(values.get(a)!, values.get(b)!, numerical)
     );
-  }, [rows, columns, columnTypes, valueAt, sort]);
+  }, [rows, columns, columnTypes, valueAt, sort, filter]);
 
   return {
-    rows: sortedRows,
+    rows: shownRows,
+    totalRows: rows.length,
     columns,
+    filterableColumns: columns.filter(column =>
+      filterableColumns.includes(column)
+    ),
+    filter,
+    valueAt,
     isNumerical,
     sortDirection: column =>
       sort?.column === column ? sort.direction : undefined,
@@ -88,6 +105,19 @@ export function useTableView({
         );
         return direction && {column, direction};
       }),
+    // A checked value stays listed after the rows change, so it can be unchecked.
+    filterOptions: column =>
+      [
+        ...new Set([
+          ...rows.map(row => String(valueAt(row, column))),
+          ...(filter?.column === column ? filter.values : []),
+        ]),
+      ]
+        .filter(option => option !== '')
+        .sort(compareText),
+    filterBy: (column, values) =>
+      setFilter(values.length ? {column, values} : undefined),
+    clearFilter: () => setFilter(undefined),
   };
 }
 
@@ -98,10 +128,14 @@ export function useDatasetTableView(
   const data = useAppSelector(state => state.data);
   const columnTypes = useAppSelector(state => state.columnsByDataType);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const filterableColumns = useAppSelector(getFilterableColumns);
   const valueAt = useCallback(
     (row: number, column: ColumnId) =>
       getLocalizedValue(data[row][column as string], datasetId),
     [data, datasetId]
   );
-  return {...useTableView({rows, columns, columnTypes, valueAt}), columns};
+  return {
+    ...useTableView({rows, columns, columnTypes, filterableColumns, valueAt}),
+    columns,
+  };
 }
