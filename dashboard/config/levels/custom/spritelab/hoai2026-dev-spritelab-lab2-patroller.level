@@ -24,7 +24,6 @@
     "level_mode": {
       "kind": "build",
       "imageType": "sprite",
-      "placeOne": true,
       "paletteRoles": [
         "block",
         "friend"
