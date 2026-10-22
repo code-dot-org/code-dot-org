@@ -26,6 +26,9 @@ const TableFilter = ({view}: TableFilterProps) => {
   const anchorRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const doneRef = useRef<HTMLButtonElement>(null);
+  const backRef = useRef<HTMLButtonElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+  const columnButtons = useRef(new Map<ColumnId, HTMLButtonElement | null>());
   const valuesHeadingId = useId();
   const [open, setOpen] = useState(false);
   const [menuColumn, setMenuColumn] = useState<ColumnId>();
@@ -67,6 +70,16 @@ const TableFilter = ({view}: TableFilterProps) => {
     view.clearFilter();
   };
 
+  const showValues = (column: ColumnId) => {
+    flushSync(() => setMenuColumn(column));
+    (listRef.current?.querySelector('input') ?? backRef.current)?.focus();
+  };
+
+  const showColumns = (column: ColumnId) => {
+    flushSync(() => setMenuColumn(undefined));
+    columnButtons.current.get(column)?.focus();
+  };
+
   const renderColumns = () => (
     <>
       <div className={styles.menuHeader}>
@@ -74,17 +87,20 @@ const TableFilter = ({view}: TableFilterProps) => {
           Filter by column
         </Typography>
       </div>
-      <ul className={styles.list}>
+      <ul ref={listRef} className={styles.list}>
         {view.shownFilterableColumns.map(column => {
           const isFiltered = filter?.column === column;
           return (
             <li key={String(column)}>
               <button
+                ref={element => {
+                  columnButtons.current.set(column, element);
+                }}
                 type="button"
                 className={classNames(styles.columnItem, {
                   [styles.filtered]: isFiltered,
                 })}
-                onClick={() => setMenuColumn(column)}
+                onClick={() => showValues(column)}
               >
                 <Typography component="span" variant="label3">
                   {columnName(column)}
@@ -125,11 +141,12 @@ const TableFilter = ({view}: TableFilterProps) => {
       <>
         <div className={styles.menuHeader}>
           <IconButton
+            ref={backRef}
             aria-label="Back to columns"
             variant="text"
             color="tertiary"
             size="extraSmall"
-            onClick={() => setMenuColumn(undefined)}
+            onClick={() => showColumns(column)}
           >
             <FontAwesomeV6Icon
               iconName="chevron-left"
@@ -146,6 +163,7 @@ const TableFilter = ({view}: TableFilterProps) => {
           </Typography>
         </div>
         <ul
+          ref={listRef}
           role="group"
           aria-labelledby={valuesHeadingId}
           className={styles.list}

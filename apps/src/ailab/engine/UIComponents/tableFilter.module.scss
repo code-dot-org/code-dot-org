@@ -68,6 +68,8 @@ $tag-max-width: 240px;
 
 // Two classes, to outrank the theme's popover surface.
 .panel.panel {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 260px;
   margin-top: 4px;

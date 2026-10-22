@@ -247,4 +247,23 @@ describe('DataDisplay', () => {
       within(menu).getByRole('button', {name: 'Done'})
     );
   });
+
+  test('opening a column focuses its first value, and Back refocuses the column', () => {
+    renderDisplay();
+    fireEvent.click(button('Filter'));
+    const menu = screen.getByRole('dialog', {name: 'Filter rows'});
+    fireEvent.click(within(menu).getByRole('button', {name: /^animal/}));
+
+    expect(document.activeElement).toBe(
+      within(menu).getByRole('checkbox', {name: 'bird'})
+    );
+
+    fireEvent.click(
+      within(menu).getByRole('button', {name: 'Back to columns'})
+    );
+
+    expect(document.activeElement).toBe(
+      within(menu).getByRole('button', {name: /^animal/})
+    );
+  });
 });
