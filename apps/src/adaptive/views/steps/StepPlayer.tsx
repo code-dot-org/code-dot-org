@@ -1,12 +1,11 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
 import {Answer, StepAnswers} from '../../progress';
 import {Checkpoint, Step} from '../../types';
+import AdaptiveHeader from '../AdaptiveHeader';
 import {usePathwayContext} from '../PathwayContext';
 
 import LevelStep from './LevelStep';
@@ -23,6 +22,8 @@ interface StepPlayerProps {
   checkpoint: Checkpoint;
   /** Label for the last step's button. */
   finishLabel?: string;
+  /** The header's title in place of the checkpoint's and step's. */
+  headerTitle?: string;
   onStartStep: (step: Step) => void;
   onCompleteStep: (step: Step, timeMs: number) => void;
   onLeaveStep: (step: Step, timeMs: number) => void;
@@ -34,18 +35,22 @@ interface StepPlayerProps {
   ) => void;
   onExit: () => void;
   onFinish: () => void;
+  /** Leaves for the final project; the header offers it when given. */
+  onFinishPathway?: () => void;
 }
 
 /** Plays a checkpoint's steps in order, then reports the checkpoint finished. */
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
   finishLabel = 'Complete checkpoint',
+  headerTitle,
   onStartStep,
   onCompleteStep,
   onLeaveStep,
   onSaveAnswers,
   onExit,
   onFinish,
+  onFinishPathway,
 }) => {
   const {progress} = usePathwayContext();
   const [index, setIndex] = useState(0);
@@ -66,6 +71,11 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     takeElapsed(); // Restarts the clock for this step.
     onStartStep(step);
   }, [step, onStartStep, takeElapsed]);
+
+  const leave = (then: () => void) => {
+    onLeaveStep(step, takeElapsed());
+    then();
+  };
 
   const advance = () => {
     onCompleteStep(step, takeElapsed());
@@ -124,45 +134,11 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
 
   return (
     <div className={styles.player}>
-      <div className={styles.playerBar}>
-        <MuiButton
-          variant="outlined"
-          size="extraSmall"
-          onClick={() => {
-            onLeaveStep(step, takeElapsed());
-            onExit();
-          }}
-        >
-          <FontAwesomeV6Icon iconName="map" />
-          &nbsp;Back to map
-        </MuiButton>
-        <div className={styles.playerBarTitle}>
-          <MuiTypography variant="overline3">{checkpoint.title}</MuiTypography>
-          <MuiTypography variant="body3" className={shared.muted}>
-            /
-          </MuiTypography>
-          <MuiTypography variant="strong">{step.title}</MuiTypography>
-        </div>
-        {steps.length > 1 && (
-          <>
-            <div className={styles.dots} aria-hidden>
-              {steps.map((s, i) => (
-                <span
-                  key={s.id}
-                  className={classNames(
-                    styles.dot,
-                    i < index && styles.dotDone,
-                    i === index && styles.dotCurrent
-                  )}
-                />
-              ))}
-            </div>
-            <MuiTypography variant="body4" className={shared.muted}>
-              Step {index + 1} of {steps.length}
-            </MuiTypography>
-          </>
-        )}
-      </div>
+      <AdaptiveHeader
+        title={headerTitle ?? `${checkpoint.title}: ${step.title}`}
+        onViewSkillTree={() => leave(onExit)}
+        onFinish={onFinishPathway && (() => leave(onFinishPathway))}
+      />
       <div className={styles.playerBody}>{renderStep(step)}</div>
     </div>
   );
