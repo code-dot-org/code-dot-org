@@ -5,7 +5,13 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Answer, EMPTY_PROGRESS, GeneratedContent, Progress} from './model';
+import {
+  Answer,
+  EMPTY_PROGRESS,
+  GeneratedContent,
+  Progress,
+  ValidationAttempt,
+} from './model';
 
 export interface ProgressKey {
   scriptId: number;
@@ -48,6 +54,17 @@ export class ProgressStore {
       this.putStep(key, stepId, 'generated_instructions', {
         generatedInstructions: content,
       })
+    );
+  }
+
+  /** Appends one check of a project step's work; the server sets its time. */
+  saveValidation(
+    key: ProgressKey,
+    stepId: string,
+    attempt: Omit<ValidationAttempt, 'at'>
+  ): Promise<void> {
+    return this.enqueue(`save validation for ${stepId}`, () =>
+      this.putStep(key, stepId, 'validation_history', {attempt})
     );
   }
 

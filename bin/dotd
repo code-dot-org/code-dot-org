@@ -326,11 +326,14 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:STP) do
-        if run_on 'production-daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
-          puts 'Content from staging branch successfully seeded to production database'
-        else
-          puts 'Content from staging branch was not successfully seeded to production database.'
-        end
+        run_interactively_on 'production-daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
+        puts <<-OUTPUT.unindent
+
+          STP completed. Check Slack#infra-production to confirm whether it
+          succeeded. On failure, the output above ends with a Ruby error and
+          stack trace.
+        OUTPUT
+        @logger.info 'seeds curriculum content from staging to production'
       end
       menu.choice(:L) do
         run_interactively_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""

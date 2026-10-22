@@ -96,6 +96,12 @@ export const getSelectableColumns = createSelector(
   selectableColumns
 );
 
+// Categorical columns with few enough values to list as filter choices.
+export const getFilterableColumns = createSelector(
+  [getSelectableColumns, getCategoricalColumns],
+  arrayIntersection
+);
+
 export const getUniqueOptionsByColumn = createSelector(
   [getSelectedCategoricalColumns, getData],
   (
