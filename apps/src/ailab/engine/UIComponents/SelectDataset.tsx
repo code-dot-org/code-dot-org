@@ -17,8 +17,9 @@ import {
   setSelectedJSON as setSelectedJSONAction,
   resetState as resetStateAction,
   getSpecifiedDatasets,
-  setHighlightDataset as setHighlightDatasetAction,
 } from '../redux';
+
+import DatasetTile from './DatasetTile';
 
 import styles from './selectDataset.module.scss';
 
@@ -26,7 +27,6 @@ const SelectDataset = () => {
   const dispatch = useAppDispatch();
   const specifiedDatasets = useAppSelector(getSpecifiedDatasets);
   const name = useAppSelector(state => state.name);
-  const highlightDataset = useAppSelector(state => state.highlightDataset);
   const invalidData = useAppSelector(state => state.invalidData);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -39,8 +39,6 @@ const SelectDataset = () => {
     dispatch(setSelectedCSVAction(csvfilePath as string));
   const setSelectedJSON = (jsonfilePath: string) =>
     dispatch(setSelectedJSONAction(jsonfilePath));
-  const setHighlightDataset = (id: string | undefined) =>
-    dispatch(setHighlightDatasetAction(id as string));
 
   const handleDatasetClick = (id: string) => {
     const assetPath = getAssetPath();
@@ -97,35 +95,16 @@ const SelectDataset = () => {
         </Typography>
       </div>
       <div className={styles.content}>
-        {datasets.map(dataset => {
-          return (
-            <button
-              type="button"
-              className={classNames(styles.item, {
-                [styles.highlighted]: highlightDataset === dataset.name,
-                [styles.selected]: name === dataset.name,
-              })}
-              key={dataset.id}
-              aria-pressed={name === dataset.name}
-              onClick={() => handleDatasetClick(dataset.id)}
-              onMouseEnter={() => setHighlightDataset(dataset.name)}
-              onMouseLeave={() => setHighlightDataset(undefined)}
-            >
-              <img
-                src={assetPath + dataset.imagePath}
-                draggable={false}
-                className={classNames(
-                  'uitest-ailab-dataset-image',
-                  styles.image
-                )}
-                alt=""
-              />
-              <Typography component="span" variant="label2">
-                {dataset.name}
-              </Typography>
-            </button>
-          );
-        })}
+        {datasets.map(dataset => (
+          <DatasetTile
+            key={dataset.id}
+            name={dataset.name}
+            imageSrc={dataset.imagePath && assetPath + dataset.imagePath}
+            rowCount={dataset.rowCount}
+            isSelected={name === dataset.name}
+            onClick={() => handleDatasetClick(dataset.id)}
+          />
+        ))}
       </div>
       {!specifiedDatasets && (
         <div className={styles.upload}>
