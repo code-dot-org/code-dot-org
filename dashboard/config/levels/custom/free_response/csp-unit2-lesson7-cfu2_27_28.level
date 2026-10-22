@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-21T15:58:45.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check your understanding",
+    "long_instructions": "> A program includes this line:\r\n\r\n```\r\ncan_enter = has_ticket and age >= 13`\r\n```\r\n\r\n> If `has_ticket = True` and `age = 10`, the program currently prints `can_enter` as `False`.\r\n> 1. Suppose you changed `and` to `or` in that line, keeping the same values. Would the printed result change? Explain your reasoning, including what each individual condition (`has_ticket` and `age >= 13`) evaluates to.",
+    "stay_on_level_after_submit": "false",
+    "height": "50",
+    "placeholder": "Type response here",
+    "encrypted_solution": "FDslXqMhrcTGADDgBfB/xB3AHHkHzhC8fUUmR4WRPDB/bhzHR5KKoVLo/Mu5\n7UlCDM0ChKxD3ZM2cwtrsrbik6tMwlN8pbZEzKrDpW9O0NzhJyr8huTrdPLG\nVL+zqjjAT5xnUTnJ6wCpKD3j2WMYVjPMN3+moS6wD11J1aGQ9ESzh4i00JW7\nDUwezHTsBvJjKr+H1z5wiIKm8xNbbJKRqoP5k2THgfb7aez0xJl3+pNgxkrQ\nk8BFVVKIL1qkSvi8qyLv4fDB0IwPc2S8WriXiu7gXZO+yzsjfYo1dmbfAYr8\nFRSlTJuA+gg8r7D5I38xRsbyTxymoFN4Qasw8S0hIwuiU6GcNR1ZNacTsuaF\nUJGXai5sHT2vXCpNtgjdgs9dDRefDP4WXYimIMco5aUAUEX2QEPMsw631Z9C\n3974BGPu5Frp79BRKEsS/j00oKyz86LkFZSshWRlldNDExQhGmFI0A4sDSQ4\nfSym4P2ELeI+mKJK1aSHYPscf6Xi12Er1Dv7tbt8MEKX/5hy399aB9sGi8vF\nli2J5Jwso3gBKulUGY1Uz37oypBMcVbA+JbbvCqtgMly38JvsnI63JckVUOl\nXm/l0q5pkuObnZ45sEE=\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-21 15:58:51 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

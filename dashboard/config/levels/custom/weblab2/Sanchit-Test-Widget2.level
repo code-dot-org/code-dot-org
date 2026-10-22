@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-10-21T21:09:17.000Z",
+  "level_num": "custom",
+  "user_id": 13506,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "require_edit_to_continue": "true",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "widget2": {
+      "id": "katietestwidget2"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-21 21:09:24 +0000\",\"changed\":[],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-20 22:38:16 UTC",
+    "serialized_at": "2026-10-21 22:53:07 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -228,28 +228,40 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
+    },
+    {
+      "key": "331ea484-28ee-4eca-969c-a70aefd58342",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
     }
   ],
   "activity_sections": [
     {
-      "key": "0a08cfac-f25e-4242-a357-ad6cf603fc0c",
+      "key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32",
       "position": 1,
       "properties": {
-        "progression_name": "My Sorting Rules"
+        "progression_name": "Find the Secret Rule"
       },
       "seeding_key": {
-        "activity_section.key": "0a08cfac-f25e-4242-a357-ad6cf603fc0c",
+        "activity_section.key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32",
         "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
       }
     },
     {
-      "key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32",
+      "key": "f73d2c7d-c5ee-4557-ae85-6138cf345cf2",
       "position": 2,
       "properties": {
-        "progression_name": "Sorting Data"
+        "progression_name": "Your Secret Rule"
       },
       "seeding_key": {
-        "activity_section.key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32",
+        "activity_section.key": "f73d2c7d-c5ee-4557-ae85-6138cf345cf2",
         "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
       }
     },
@@ -263,6 +275,28 @@
         "activity_section.key": "b0f76994-25ba-40b7-9d8c-2ca6186a631f",
         "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
       }
+    },
+    {
+      "key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec",
+      "position": 1,
+      "properties": {
+        "progression_name": "Robot Recycler"
+      },
+      "seeding_key": {
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    },
+    {
+      "key": "f480674c-90b7-45e9-8397-16b4f20da42a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
     }
   ],
   "script_levels": [
@@ -272,29 +306,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "My Sorting Rules"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-makes-ai-lesson1-free-response"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "0a08cfac-f25e-4242-a357-ad6cf603fc0c"
-      },
-      "level_keys": [
-        "data-makes-ai-lesson1-free-response"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Sorting Data"
+        "progression": "Find the Secret Rule"
       },
       "bonus": false,
       "seeding_key": {
@@ -311,12 +323,12 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 2,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sorting Data"
+        "progression": "Find the Secret Rule"
       },
       "bonus": false,
       "seeding_key": {
@@ -333,12 +345,12 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sorting Data"
+        "progression": "Find the Secret Rule"
       },
       "bonus": false,
       "seeding_key": {
@@ -355,12 +367,12 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sorting Data"
+        "progression": "Your Secret Rule"
       },
       "bonus": false,
       "seeding_key": {
@@ -370,15 +382,15 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32"
+        "activity_section.key": "f73d2c7d-c5ee-4557-ae85-6138cf345cf2"
       },
       "level_keys": [
         "data-makes-ai-lesson1-choice-level"
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -387,7 +399,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "data-makes-ai-lesson1-vocab-flashcards"
+          "data-makes-ai-lesson1-vocab-flashcards-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -395,12 +407,12 @@
         "activity_section.key": "b0f76994-25ba-40b7-9d8c-2ca6186a631f"
       },
       "level_keys": [
-        "data-makes-ai-lesson1-vocab-flashcards"
+        "data-makes-ai-lesson1-vocab-flashcards-2"
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -419,21 +431,97 @@
       "level_keys": [
         "data-makes-ai-lesson1-vocab-matching"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Robot Recycler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-sketch-lab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-sketch-lab"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Robot Recycler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-free-response"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-free-response"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-vocab-flashcards"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-vocab-matching"
+      ]
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "data-makes-ai-lesson1-free-response",
-        "script_level.level_keys": [
-          "data-makes-ai-lesson1-free-response"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "0a08cfac-f25e-4242-a357-ad6cf603fc0c"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "data-makes-ai-lesson1-pattern-2",
@@ -479,14 +567,14 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32"
+        "activity_section.key": "f73d2c7d-c5ee-4557-ae85-6138cf345cf2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "data-makes-ai-lesson1-vocab-flashcards",
+        "level.key": "data-makes-ai-lesson1-vocab-flashcards-2",
         "script_level.level_keys": [
-          "data-makes-ai-lesson1-vocab-flashcards"
+          "data-makes-ai-lesson1-vocab-flashcards-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -504,6 +592,54 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "b0f76994-25ba-40b7-9d8c-2ca6186a631f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-sketch-lab",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-sketch-lab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-free-response",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-free-response"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-vocab-flashcards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-vocab-matching",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
       }
     }
   ],
@@ -597,10 +733,56 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "branching_logic",
+      "word": "branching logic",
+      "definition": "A way of making decisions using yes or no questions, where each answer sends you in a different direction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "branching_logic"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "classification",
+      "definition": "Sorting something into a category based on its features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "feature",
+      "word": "feature",
+      "definition": "A characteristic you can observe about something",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "branching_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "feature"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -619,7 +801,7 @@
     {
       "key": "1dc11913-7862-422c-9985-2d1b8cdce293",
       "properties": {
-        "description": "Identify at least one feature that can be used to sort a set of objects into two groups."
+        "description": "Identify a feature that can be used to sort a set of objects into two groups."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
