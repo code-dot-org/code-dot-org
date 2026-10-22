@@ -94,12 +94,15 @@ export const ProjectProvider = ({
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  // The rows and the column types arrive separately, and a dataset is only
-  // described once both have.
-  const columnTypesKnown = useAppSelector(
-    state => Object.keys(state.columnsByDataType).length > 0
-  );
-  const datasetDescribed = data.length > 0 && columnTypesKnown;
+  /*
+    The rows and the column types arrive separately, and the types one column
+    at a time. Every column has to have one: a project reconciled against a
+    dataset half described loses the columns whose types had yet to arrive.
+  */
+  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+  const datasetDescribed =
+    data.length > 0 &&
+    Object.keys(data[0]).every(column => columnsByDataType[column]);
 
   useResetSignal(
     useCallback(() => {

@@ -94,6 +94,16 @@ const loadDataset = () =>
     );
   });
 
+// The readers dispatch the rows and then a type per column, in their own time.
+const loadDatasetColumnByColumn = () => {
+  act(() => store.dispatch(setImportedData(DATA, false)));
+  ['a', 'b', 'c'].forEach(column =>
+    act(() =>
+      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+    )
+  );
+};
+
 describe('ProjectSync', () => {
   test('saves nothing until the saved project has been opened', () => {
     const {save} = renderSync();
@@ -112,6 +122,21 @@ describe('ProjectSync', () => {
 
     expect(context().project).toEqual(SAVED);
     expect(save).toHaveBeenCalledWith(SAVED);
+  });
+
+  /*
+    Reconciling against a dataset whose columns are still being typed drops
+    the ones whose type has yet to arrive, and the mirror then saves the
+    project without them.
+  */
+  test('waits for every column of the dataset to be described', () => {
+    const {save, context} = renderSync();
+
+    loadDatasetColumnByColumn();
+
+    expect(context().project).toEqual(SAVED);
+    expect(save).toHaveBeenCalledWith(SAVED);
+    expect(save).toHaveBeenCalledTimes(1);
   });
 
   test('saves a column the student chooses', () => {
