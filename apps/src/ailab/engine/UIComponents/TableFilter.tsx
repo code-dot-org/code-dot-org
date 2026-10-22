@@ -1,9 +1,7 @@
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, IconButton, Popover, Tooltip, Typography} from '@mui/material';
-import classNames from 'classnames';
-import React, {useId, useRef, useState} from 'react';
+import {Button, Popover, Tooltip, Typography} from '@mui/material';
+import React, {useRef, useState} from 'react';
 import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -11,11 +9,10 @@ import {useAppSelector} from '../hooks';
 import type {ColumnId, TableView} from '../types';
 
 import {PREDICTION_COLUMN_NAME} from './RowsTableHeader';
+import TableFilterColumnList from './TableFilterColumnList';
+import TableFilterValueList from './TableFilterValueList';
 
 import styles from './tableFilter.module.scss';
-
-const categoryCount = (count: number) =>
-  `${count} ${count === 1 ? 'category' : 'categories'}`;
 
 interface TableFilterProps {
   view: TableView;
@@ -26,12 +23,9 @@ const TableFilter = ({view}: TableFilterProps) => {
   const anchorRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const doneRef = useRef<HTMLButtonElement>(null);
-  const backRef = useRef<HTMLButtonElement>(null);
-  const listRef = useRef<HTMLUListElement>(null);
-  const columnButtons = useRef(new Map<ColumnId, HTMLButtonElement | null>());
-  const valuesHeadingId = useId();
   const [open, setOpen] = useState(false);
   const [menuColumn, setMenuColumn] = useState<ColumnId>();
+  const [returnColumn, setReturnColumn] = useState<ColumnId>();
   const {filter} = view;
   const menuChecked =
     filter && filter.column === menuColumn ? filter.values : [];
@@ -51,6 +45,7 @@ const TableFilter = ({view}: TableFilterProps) => {
 
   const openMenu = (column?: ColumnId) => {
     setMenuColumn(column);
+    setReturnColumn(undefined);
     setOpen(true);
   };
 
@@ -70,119 +65,9 @@ const TableFilter = ({view}: TableFilterProps) => {
     view.clearFilter();
   };
 
-  const showValues = (column: ColumnId) => {
-    flushSync(() => setMenuColumn(column));
-    (listRef.current?.querySelector('input') ?? backRef.current)?.focus();
-  };
-
-  const showColumns = (column: ColumnId) => {
-    flushSync(() => setMenuColumn(undefined));
-    columnButtons.current.get(column)?.focus();
-  };
-
-  const renderColumns = () => (
-    <>
-      <div className={styles.menuHeader}>
-        <Typography variant="overline3" className={styles.menuTitle}>
-          Filter by column
-        </Typography>
-      </div>
-      <ul ref={listRef} className={styles.list}>
-        {view.shownFilterableColumns.map(column => {
-          const isFiltered = filter?.column === column;
-          return (
-            <li key={String(column)}>
-              <button
-                ref={element => {
-                  columnButtons.current.set(column, element);
-                }}
-                type="button"
-                className={classNames(styles.columnItem, {
-                  [styles.filtered]: isFiltered,
-                })}
-                onClick={() => showValues(column)}
-              >
-                <Typography component="span" variant="label3">
-                  {columnName(column)}
-                </Typography>{' '}
-                <Typography
-                  component="span"
-                  variant="body4"
-                  className={styles.columnMeta}
-                >
-                  {isFiltered
-                    ? `${filter.values.length} selected`
-                    : categoryCount(view.filterOptions(column).length)}
-                  <FontAwesomeV6Icon
-                    iconName="chevron-right"
-                    iconStyle="solid"
-                    aria-hidden="true"
-                  />
-                </Typography>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-    </>
-  );
-
-  const renderValues = (column: ColumnId) => {
-    const options = view.filterOptions(column);
-    const setChecked = (option: string, checked: boolean) =>
-      view.filterBy(
-        column,
-        options.filter(value =>
-          value === option ? checked : menuChecked.includes(value)
-        )
-      );
-
-    return (
-      <>
-        <div className={styles.menuHeader}>
-          <IconButton
-            ref={backRef}
-            aria-label="Back to columns"
-            variant="text"
-            color="tertiary"
-            size="extraSmall"
-            onClick={() => showColumns(column)}
-          >
-            <FontAwesomeV6Icon
-              iconName="chevron-left"
-              iconStyle="solid"
-              aria-hidden="true"
-            />
-          </IconButton>
-          <Typography
-            id={valuesHeadingId}
-            variant="overline3"
-            className={styles.menuTitle}
-          >
-            {columnName(column)}
-          </Typography>
-        </div>
-        <ul
-          ref={listRef}
-          role="group"
-          aria-labelledby={valuesHeadingId}
-          className={styles.list}
-        >
-          {options.map(option => (
-            <li key={option} className={styles.valueItem}>
-              <Checkbox
-                name={`Filter ${columnName(column)}`}
-                value={option}
-                size="xs"
-                label={option}
-                checked={menuChecked.includes(option)}
-                onChange={event => setChecked(option, event.target.checked)}
-              />
-            </li>
-          ))}
-        </ul>
-      </>
-    );
+  const backToColumns = (column: ColumnId) => {
+    setMenuColumn(undefined);
+    setReturnColumn(column);
   };
 
   return (
@@ -246,7 +131,7 @@ const TableFilter = ({view}: TableFilterProps) => {
       )}
       <Popover
         open={open}
-        anchorEl={anchorRef.current}
+        anchorEl={() => anchorRef.current!}
         onClose={closeMenu}
         disableRestoreFocus
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
@@ -259,7 +144,22 @@ const TableFilter = ({view}: TableFilterProps) => {
           },
         }}
       >
-        {menuColumn === undefined ? renderColumns() : renderValues(menuColumn)}
+        {menuColumn === undefined ? (
+          <TableFilterColumnList
+            view={view}
+            columnName={columnName}
+            focusColumn={returnColumn}
+            onSelect={setMenuColumn}
+          />
+        ) : (
+          <TableFilterValueList
+            view={view}
+            column={menuColumn}
+            name={columnName(menuColumn)}
+            checked={menuChecked}
+            onBack={() => backToColumns(menuColumn)}
+          />
+        )}
         <div className={styles.actions}>
           <Button
             variant="text"

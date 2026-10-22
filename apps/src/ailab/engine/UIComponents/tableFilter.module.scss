@@ -28,9 +28,8 @@ $tag-max-width: 240px;
   }
 
   &:has(.tagButton:focus-visible) {
-    box-shadow:
-      0 0 0 2px var(--background-neutral-primary),
-      0 0 0 4px var(--border-focused-primary);
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: 2px;
   }
 }
 
