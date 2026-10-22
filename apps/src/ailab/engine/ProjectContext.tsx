@@ -39,9 +39,9 @@ interface ProjectContextValue {
     would lose their work. A reset empties the project but does not unset
     this: an emptied project is still the state they are now in.
   */
-  opened: boolean;
+  isProjectLoaded: boolean;
   /** A project has been handed over and is waiting for its dataset. */
-  opening: boolean;
+  isProjectLoading: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -73,7 +73,7 @@ export const ProjectProvider = ({
   onProjectChange,
 }: ProjectProviderProps) => {
   const [project, setProject] = useState<AilabProject>(defaultProject);
-  const [opened, setOpened] = useState(false);
+  const [isProjectLoaded, setIsProjectLoaded] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
@@ -84,12 +84,7 @@ export const ProjectProvider = ({
     AilabProject | undefined
   >();
   // TODO: do we need all of these booleans
-  const opening = pendingProject !== undefined;
-  /*
-    The project is the lab's own empty one: nothing opened or chosen yet, or a
-    reset has just emptied it. Identity, not contents: a reset puts this exact
-    project back, while opening one or choosing a column builds a new one.
-  */
+  const isProjectLoading = pendingProject !== undefined;
   const isDefaultProject = project === defaultProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
@@ -189,7 +184,7 @@ export const ProjectProvider = ({
             )
           : reconciled
       );
-      setOpened(true);
+      setIsProjectLoaded(true);
     },
     [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
   );
@@ -222,10 +217,10 @@ export const ProjectProvider = ({
     project is never worth reporting anyway.
   */
   useEffect(() => {
-    if (opened && !isDefaultProject) {
+    if (isProjectLoaded && !isDefaultProject) {
       onProjectChangeRef.current?.(project);
     }
-  }, [opened, isDefaultProject, project]);
+  }, [isProjectLoaded, isDefaultProject, project]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
@@ -259,8 +254,8 @@ export const ProjectProvider = ({
     () => ({
       project,
       openProject,
-      opened,
-      opening,
+      isProjectLoaded,
+      isProjectLoading,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -272,8 +267,8 @@ export const ProjectProvider = ({
     [
       project,
       openProject,
-      opened,
-      opening,
+      isProjectLoaded,
+      isProjectLoading,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

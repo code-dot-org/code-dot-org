@@ -72,12 +72,16 @@ const ContextProbe = ({trainingRun, awaitOpen, report}) => {
     this one and would otherwise replace the run with the project alone.
   */
   useEffect(() => {
-    if (seeded.current || !trainingRun || (awaitOpen && !project.opened)) {
+    if (
+      seeded.current ||
+      !trainingRun ||
+      (awaitOpen && !project.isProjectLoaded)
+    ) {
       return;
     }
     seeded.current = true;
     applyRun(contextsRef.current, trainingRun);
-  }, [trainingRun, awaitOpen, project.opened]);
+  }, [trainingRun, awaitOpen, project.isProjectLoaded]);
 
   return null;
 };
@@ -89,8 +93,8 @@ const ContextProbe = ({trainingRun, awaitOpen, report}) => {
 */
 // eslint-disable-next-line react/prop-types
 const WhenOpen = ({awaitOpen, children}) => {
-  const {opened} = useProject();
-  return !awaitOpen || opened ? children : null;
+  const {isProjectLoaded} = useProject();
+  return !awaitOpen || isProjectLoaded ? children : null;
 };
 
 export function renderWithProviders(

@@ -246,7 +246,7 @@ const App = ({
   onTrained,
 }: AppProps) => {
   const dispatch = useAppDispatch();
-  const {project, opening} = useProject();
+  const {project, isProjectLoading} = useProject();
   const panelButtons = useAppSelector<PrevNextButtons>(
     state => getPanelButtons(state, project),
     panelButtonsEqual
@@ -269,7 +269,7 @@ const App = ({
   const datasetPending = useAppSelector(
     state => !!state.csvfile && state.data.length === 0 && !state.invalidData
   );
-  const loading = datasetPending || opening || restoringModel;
+  const loading = datasetPending || isProjectLoading || restoringModel;
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {

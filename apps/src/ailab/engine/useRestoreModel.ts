@@ -14,12 +14,12 @@ import {useTrainingData} from './TrainingDataContext';
 */
 export function useRestoreModel(): boolean {
   const dispatch = useAppDispatch();
-  const {project, opened} = useProject();
+  const {project, isProjectLoaded} = useProject();
   const {trainedModel, setTrainedModel} = useTrainingData();
   const [attempted, setAttempted] = useState(false);
 
   useEffect(() => {
-    if (attempted || !opened) {
+    if (attempted || !isProjectLoaded) {
       return;
     }
     setAttempted(true);
@@ -40,9 +40,16 @@ export function useRestoreModel(): boolean {
     if (isPanelEnabled(store.getState(), project, 'results')) {
       dispatch(setCurrentPanel('results'));
     }
-  }, [attempted, opened, trainedModel, project, setTrainedModel, dispatch]);
+  }, [
+    attempted,
+    isProjectLoaded,
+    trainedModel,
+    project,
+    setTrainedModel,
+    dispatch,
+  ]);
 
   // Nothing to wait for until a project has been opened; a lab with no host
   // to open one never waits at all.
-  return opened && !attempted;
+  return isProjectLoaded && !attempted;
 }

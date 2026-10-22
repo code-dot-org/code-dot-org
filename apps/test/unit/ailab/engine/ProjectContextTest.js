@@ -383,11 +383,11 @@ describe('ProjectContext opening a saved project', () => {
   test('is not open until a project has been opened', () => {
     const {context} = renderContext(undefined, described());
 
-    expect(context().opened).toBe(false);
+    expect(context().isProjectLoaded).toBe(false);
 
     act(() => context().openProject(SAVED));
 
-    expect(context().opened).toBe(true);
+    expect(context().isProjectLoaded).toBe(true);
   });
 
   test('is not open while a project waits for its dataset', () => {
@@ -395,7 +395,7 @@ describe('ProjectContext opening a saved project', () => {
     const {context} = renderContext(undefined, store);
 
     act(() => context().openProject(SAVED));
-    expect(context().opened).toBe(false);
+    expect(context().isProjectLoaded).toBe(false);
 
     act(() => {
       store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
@@ -404,7 +404,7 @@ describe('ProjectContext opening a saved project', () => {
       );
     });
 
-    expect(context().opened).toBe(true);
+    expect(context().isProjectLoaded).toBe(true);
   });
 
   // An emptied project is still the state the student is now in.
@@ -416,7 +416,7 @@ describe('ProjectContext opening a saved project', () => {
       store.dispatch(resetState());
     });
 
-    expect(context().opened).toBe(true);
+    expect(context().isProjectLoaded).toBe(true);
   });
 
   test('takes the columns and the run the project described', () => {
