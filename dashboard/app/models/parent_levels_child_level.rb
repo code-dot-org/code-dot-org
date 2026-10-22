@@ -71,8 +71,10 @@ class ParentLevelsChildLevel < ApplicationRecord
     return unless parent_level && child_level
     return if Policies::LevelFiles.same_partition?(parent_level.name, child_level.name)
     add_child_error(
-      "level #{parent_level.name.dump} and its child levels must be in the same partition " \
-      "(\"UI Test \", standalone project, or production); offending child: #{child_level.name.dump}"
+      "#{child_level.name.dump} must be in the same partition as its parent #{parent_level.name.dump} " \
+      "(\"UI Test \", standalone project, or production); copy it " \
+      "#{Policies::LevelFiles.copy_into_partition_of(parent_level.name)}. Delete the old level and its file, " \
+      "unless they already exist outside of your development environment"
     )
   end
 

@@ -62,7 +62,8 @@ module Policies
       Policies::StandaloneProjects.all.each do |key, config|
         name = config[:name]
         assert Policies::StandaloneProjects.partition_name?(name),
-          "#{key}: #{name.dump} is not a standalone partition name (\"New ... Project\", \"... Subproject\", or LEGACY_PROJECT_NAMES); rename the level"
+          "#{key}: #{name.dump} is not a standalone partition name (\"New ... Project\", \"... Subproject\", or LEGACY_PROJECT_NAMES); copy it to a name of the form \"New ... Project\" and name the copy in standalone_projects.yml instead. " \
+            "Delete the old level and its file, unless they already exist outside of your development environment"
         assert_equal 1, definitions.fetch(name, []).size,
           "#{key}: expected exactly one definition of #{name.dump} under #{STANDALONE_TREE}, found #{definitions.fetch(name, [])}"
         assert_empty ui_test_definitions.fetch(name, []), "#{key}: #{name.dump} is also defined in the ui-test tree"
