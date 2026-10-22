@@ -1,7 +1,7 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
-import {useTableView} from '@cdo/apps/ailab/engine/useTableView';
+import {useTableView, viewForGrade} from '@cdo/apps/ailab/engine/useTableView';
 
 const DATA = [
   {name: 'ant', size: '2', habitat: 'land'},
@@ -226,5 +226,20 @@ describe('useTableView', () => {
     });
     expect(result.current.shownFilterableColumns).toEqual(['name']);
     expect(result.current.rows).toEqual([1, 2]);
+  });
+
+  test('a grade shows its matching rows and counts each grade after the filter', () => {
+    const {result} = renderView();
+    const rowsByGrade = {correct: [0, 2, 3], incorrect: [1]};
+    act(() => result.current.filterBy('habitat', ['sea']));
+
+    const correct = viewForGrade(result.current, rowsByGrade, 'correct');
+    expect(correct.view.rows).toEqual([2]);
+    expect(correct.view.totalRowCount).toBe(3);
+    expect(correct.counts).toEqual({correct: 1, incorrect: 1});
+
+    const incorrect = viewForGrade(result.current, rowsByGrade, 'incorrect');
+    expect(incorrect.view.rows).toEqual([1]);
+    expect(incorrect.view.totalRowCount).toBe(1);
   });
 });

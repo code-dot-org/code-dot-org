@@ -1,13 +1,15 @@
 import {Typography} from '@mui/material';
-import React, {type ReactNode, useId, useMemo} from 'react';
+import React, {type ReactNode, useId, useMemo, useState} from 'react';
 
 import {dataColumnsFor} from '../helpers/columnDetails';
+import type {Grade} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {useDatasetTableView} from '../useTableView';
+import {useDatasetTableView, viewForGrade} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
+import ResultsToggle from './ResultsToggle';
 import TableFilter from './TableFilter';
 
 import styles from './rowsPanel.module.scss';
@@ -24,7 +26,7 @@ export interface RowsPanelProps {
   showAllColumns: boolean;
   onToggleColumns: () => void;
   emptyText?: string;
-  resultsToggle?: ReactNode;
+  rowsByGrade?: Record<Grade, number[]>;
   prediction?: string | number;
 }
 
@@ -35,7 +37,7 @@ const RowsPanel = ({
   showAllColumns,
   onToggleColumns,
   emptyText = 'No rows reached this step',
-  resultsToggle,
+  rowsByGrade,
   prediction,
 }: RowsPanelProps) => {
   const descriptionId = useId();
@@ -46,6 +48,8 @@ const RowsPanel = ({
     [data, project, showAllColumns]
   );
   const tableView = useDatasetTableView(rowIndices, columns);
+  const [grade, setGrade] = useState<Grade>('correct');
+  const graded = rowsByGrade && viewForGrade(tableView, rowsByGrade, grade);
 
   return (
     <div className={styles.panel}>
@@ -59,7 +63,7 @@ const RowsPanel = ({
           {description}
         </Typography>
         <div className={styles.actions}>
-          {!resultsToggle && (
+          {!graded && (
             <>
               <Typography variant="body3" component="span">
                 <strong>
@@ -70,7 +74,13 @@ const RowsPanel = ({
             </>
           )}
           <div className={styles.actionGroup}>
-            {resultsToggle}
+            {graded && (
+              <ResultsToggle
+                grade={grade}
+                onChange={value => setGrade(value as Grade)}
+                counts={graded.counts}
+              />
+            )}
             <TableFilter view={tableView} />
             <ColumnsButton
               showAllColumns={showAllColumns}
@@ -81,7 +91,7 @@ const RowsPanel = ({
       </div>
       <NodeRowsTable
         labelId={descriptionId}
-        view={tableView}
+        view={graded ? graded.view : tableView}
         emphasizedColumn={emphasizedColumn}
         emptyText={emptyText}
         prediction={prediction}

@@ -1,6 +1,8 @@
 import {useCallback, useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
+import type {Grade} from './helpers/displayTreeNodeContent';
+import type {DisplayTreeNodeCounts} from './helpers/displayTreeTrace';
 import {compareText} from './helpers/utils';
 import {getLocalizedValue} from './helpers/valueDetails';
 import {useAppSelector} from './hooks';
@@ -156,5 +158,32 @@ export function useDatasetTableView(
   return {
     ...useTableView({rows, columns, columnTypes, filterableColumns, valueAt}),
     columns,
+  };
+}
+
+// The view spans every grade, so each grade's count follows the filter.
+export function viewForGrade<View extends TableView>(
+  view: View,
+  rowsByGrade: Record<Grade, number[]>,
+  grade: Grade
+): {view: View; counts: DisplayTreeNodeCounts} {
+  const matchingRows = (rowGrade: Grade) => {
+    const gradeRows = new Set(rowsByGrade[rowGrade]);
+    return view.rows.filter(row => gradeRows.has(row));
+  };
+  const matching = {
+    correct: matchingRows('correct'),
+    incorrect: matchingRows('incorrect'),
+  };
+  return {
+    view: {
+      ...view,
+      rows: matching[grade],
+      totalRowCount: rowsByGrade[grade].length,
+    },
+    counts: {
+      correct: matching.correct.length,
+      incorrect: matching.incorrect.length,
+    },
   };
 }

@@ -1,14 +1,17 @@
 import React, {useMemo, useState} from 'react';
 
+import {ResultsGrades} from '../constants';
 import {
   formatAccuracy,
-  getCorrectCount,
+  getAccuracyGrades,
   getResultsByGrade,
 } from '../helpers/accuracy';
 import {dataColumnsFor} from '../helpers/columnDetails';
+import type {Grade} from '../helpers/displayTreeNodeContent';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
+import {viewForGrade} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
@@ -30,18 +33,25 @@ const ResultsDetails = () => {
   const [showAllColumns, setShowAllColumns] = useState(false);
   const data = useAppSelector(state => state.data);
   const results = useAppSelector(
-    state => getResultsByGrade(state, project, resultsTab),
+    state => getResultsByGrade(state, project, ResultsGrades.ALL),
     deepEqual
   );
+  const grades = useAppSelector(state => getAccuracyGrades(state, project));
+  const rowsByGrade = useMemo(() => {
+    const indices = [...grades.keys()];
+    return {
+      correct: indices.filter(index => grades[index] === ResultsGrades.CORRECT),
+      incorrect: indices.filter(
+        index => grades[index] === ResultsGrades.INCORRECT
+      ),
+    };
+  }, [grades]);
   const columns = useMemo(
     () => dataColumnsFor(data, project, showAllColumns),
     [data, project, showAllColumns]
   );
   const view = useResultsTableView(results, columns);
-  const gradeCounts = useAppSelector(state => {
-    const {correct, total} = getCorrectCount(state, project);
-    return {correct, incorrect: total - correct};
-  }, deepEqual);
+  const graded = viewForGrade(view, rowsByGrade, resultsTab as Grade);
 
   return (
     <div className={styles.details}>
@@ -63,7 +73,7 @@ const ResultsDetails = () => {
               <ResultsToggle
                 grade={resultsTab}
                 onChange={grade => dispatch(setResultsTab(grade))}
-                counts={gradeCounts}
+                counts={graded.counts}
               />
             )}
             <TableFilter view={view} />
@@ -74,7 +84,7 @@ const ResultsDetails = () => {
           </div>
         </div>
       </div>
-      <ResultsTable results={results} columns={columns} view={view} />
+      <ResultsTable results={results} columns={columns} view={graded.view} />
     </div>
   );
 };
