@@ -1,16 +1,13 @@
-// A ghost stack: the blocks a level wants built, drawn as dashed outlines
-// in the workspace. The student builds the real thing from the toolbox;
-// once the stack's top block is in the workspace the ghost goes, leaving
-// a placeholder on the real block for each block the ghost held inside
-// or under it. A ghost runs nothing, connects to nothing, and is never
-// saved.
+// A ghost stack: the blocks a level wants built, drawn as a stack of
+// placeholder outlines in the workspace, each the size of the block it
+// stands for. The student builds the real thing from the toolbox; once
+// the stack's top block is in the workspace the ghost goes, leaving a
+// placeholder on the real block for each block the ghost held under it.
+// A ghost runs nothing, connects to nothing, and is never saved.
 
 import * as BlocklyCore from 'blockly/core';
 
-import {
-  PLACEHOLDER_BLOCK_TYPE,
-  PLACEHOLDER_CLASS,
-} from './blockly/blockDefinitions/placeholder';
+import {PLACEHOLDER_BLOCK_TYPE} from './blockly/blockDefinitions/placeholder';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
 
@@ -94,15 +91,31 @@ function ghostBlocks(
   return workspace.getTopBlocks(false).filter(top => top.data === tag);
 }
 
-// The outline goes on the ghost's real blocks; a shadow in one of their
-// inputs keeps its own look.
+/** The stack as placeholders: one per block down the chain, each sized
+    like the block it stands for. Blocks on inputs size their holder but
+    get no outline of their own. */
+export function asPlaceholders(state: BlockState): BlockState {
+  const {next, data, ...like} = state;
+  const out: BlockState = {type: PLACEHOLDER_BLOCK_TYPE, extraState: {like}};
+  if (data) {
+    out.data = data;
+  }
+  if (next?.block) {
+    out.next = {block: asPlaceholders(next.block)};
+  }
+  return out;
+}
+
+// The fill is inline, since Blockly paints a disabled block's path with
+// its hatch pattern.
 function dress(block: BlocklyCore.Block): void {
   block.setDisabledReason(true, DISABLED_REASON);
   block.setDeletable(false);
   block.setMovable(false);
   block.setEditable(false);
   if (block instanceof BlocklyCore.BlockSvg && !block.isShadow()) {
-    block.getSvgRoot().classList.add(PLACEHOLDER_CLASS, GHOST_CLASS);
+    block.getSvgRoot().classList.add(GHOST_CLASS);
+    block.pathObject.svgPath.style.fill = block.getColour();
   }
 }
 
@@ -120,7 +133,7 @@ export function placeGhost(
   BlocklyCore.Events.disable();
   try {
     const top = BlocklyCore.serialization.blocks.append(
-      {...tagged(entry.ghost, tag), ...at},
+      {...asPlaceholders(tagged(entry.ghost, tag)), ...at},
       workspace,
       {recordUndo: false}
     ) as BlocklyCore.BlockSvg;

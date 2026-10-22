@@ -24,9 +24,9 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       fill-opacity: 0;
     }
     .blocklyGhost.blocklyDisabled > .blocklyPath {
-      /* A ghost keeps the dashed outline at full strength over the disabled dimming. */
+      /* A ghost is a placeholder that runs nothing; it is not dimmed as disabled. */
       stroke-opacity: 1;
-      fill-opacity: 0.15;
+      fill-opacity: 0.2;
     }
     .blocklyPlaceholderActive > .blocklyPath {
       /* A blank placeholder gets its outline back under a hovering block. */

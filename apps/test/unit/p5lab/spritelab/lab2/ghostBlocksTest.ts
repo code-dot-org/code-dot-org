@@ -1,5 +1,6 @@
 import {ownsTop} from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 import {
+  asPlaceholders,
   ghostTag,
   isGhostStack,
   tagged,
@@ -32,6 +33,20 @@ describe('ghost stacks', () => {
     expect(out.inputs?.DO.block?.data).toBe(tag);
     expect(out.next?.block?.data).toBe(tag);
     expect(AT_TIME_SAY).not.toHaveProperty('data');
+  });
+
+  it('draws the stack as a chain of placeholders sized like its blocks', () => {
+    const out = asPlaceholders(tagged(AT_TIME_SAY, 'ghost:later'));
+    expect(out.type).toBe('spritelab2_placeholder');
+    expect(out.data).toBe('ghost:later');
+    const like = (out.extraState as {like: {type: string; next?: unknown}})
+      .like;
+    expect(like.type).toBe('gamelab_atTime');
+    expect(like.next).toBeUndefined();
+    expect(out.next?.block?.type).toBe('spritelab2_placeholder');
+    expect(
+      (out.next?.block?.extraState as {like: {type: string}}).like.type
+    ).toBe('spritelab2_restartScene');
   });
 
   it('claims the tops a level has the student build', () => {
