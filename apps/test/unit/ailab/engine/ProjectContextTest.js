@@ -515,17 +515,18 @@ describe('ProjectContext opening a saved project', () => {
   });
 
   /*
-    The dataset a project waits for may be the one the student goes on to
-    choose, so choosing one does not abandon it. Its columns are reconciled
-    against whichever dataset arrives.
+    A reset is how a level load begins, and the project being opened belongs
+    to that level. The dataset a project waits for may also be the one the
+    student goes on to choose. Either way it outlives the reset, and its
+    columns are reconciled against whichever dataset arrives.
   */
-  test('the student choosing a dataset keeps a project waiting for one', () => {
+  test('a reset keeps a project still waiting for its dataset', () => {
     const store = createStore(rootReducer);
     const {project, context} = renderContext(undefined, store);
     act(() => context().openProject(SAVED));
 
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ true));
+      store.dispatch(resetState());
     });
     act(() => {
       store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
@@ -535,24 +536,6 @@ describe('ProjectContext opening a saved project', () => {
     });
 
     expect(project()).toEqual(SAVED);
-  });
-
-  test('a level load drops a project still waiting for its dataset', () => {
-    const store = createStore(rootReducer);
-    const {project, context} = renderContext(undefined, store);
-    act(() => context().openProject(SAVED));
-
-    act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ false));
-    });
-    act(() => {
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
-    });
-
-    expect(project()).toEqual(initialProject);
   });
 
   test('drops the snapshot a cancel would have used', () => {

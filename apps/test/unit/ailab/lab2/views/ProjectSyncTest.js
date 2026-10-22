@@ -3,26 +3,34 @@
   matters here is the order: the saved project reaches the lab before anything
   is written back, or a page load would save an empty project over the
   student's work.
+
+  These mount the way the workspace does, loading the level from a parent
+  layout effect, because that reset is what a seed has to survive. The trainer
+  and the level load work against the store singleton, so these do too.
 */
 import {act, render} from '@testing-library/react';
-import {createElement} from 'react';
+import {createElement, useLayoutEffect} from 'react';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
 
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
+import {loadLevel} from '@cdo/apps/ailab/engine/levelLoad';
 import {
   ProjectProvider,
   useProject,
 } from '@cdo/apps/ailab/engine/ProjectContext';
-import rootReducer, {
+import {
   resetState,
   setColumnsByDataType,
   setImportedData,
   setMode,
   setPresetColumns,
 } from '@cdo/apps/ailab/engine/redux';
+import {store} from '@cdo/apps/ailab/engine/store';
 import {initialProject} from '@cdo/apps/ailab/engine/types';
 import ProjectSync from '@cdo/apps/ailab/lab2/views/ProjectSync';
+
+jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
+jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
 
 const DATA = [
   {a: '1', b: '2', c: '3'},
@@ -38,32 +46,47 @@ const SAVED = {
   ],
 };
 
+// eslint-disable-next-line react/prop-types
+const Probe = ({report}) => {
+  report(useProject());
+  return null;
+};
+
+// Stands in for the workspace, which loads the level from a layout effect.
+// eslint-disable-next-line react/prop-types
+const Workspace = ({savedProject, save, report}) => {
+  useLayoutEffect(() => {
+    loadLevel(undefined);
+  }, []);
+
+  return createElement(
+    ProjectProvider,
+    null,
+    createElement(ProjectSync, {savedProject, save}),
+    createElement(Probe, {report})
+  );
+};
+
 function renderSync(savedProject = SAVED) {
-  const store = createStore(rootReducer);
   const save = jest.fn();
   let context;
-  const Probe = () => {
-    context = useProject();
-    return null;
-  };
 
   render(
     createElement(
       Provider,
       {store},
-      createElement(
-        ProjectProvider,
-        null,
-        createElement(ProjectSync, {savedProject, save}),
-        createElement(Probe)
-      )
+      createElement(Workspace, {
+        savedProject,
+        save,
+        report: value => (context = value),
+      })
     )
   );
 
-  return {store, save, context: () => context};
+  return {save, context: () => context};
 }
 
-const loadDataset = store =>
+const loadDataset = () =>
   act(() => {
     store.dispatch(setImportedData(DATA, false));
     ['a', 'b', 'c'].forEach(column =>
@@ -78,18 +101,22 @@ describe('ProjectSync', () => {
     expect(save).not.toHaveBeenCalled();
   });
 
+  /*
+    The level load resets the lab after the seed is queued, and the project
+    has to outlive that or a page load opens an empty lab.
+  */
   test('opens the saved project into the lab', () => {
-    const {store, save, context} = renderSync();
+    const {save, context} = renderSync();
 
-    loadDataset(store);
+    loadDataset();
 
     expect(context().project).toEqual(SAVED);
     expect(save).toHaveBeenCalledWith(SAVED);
   });
 
   test('saves a column the student chooses', () => {
-    const {store, save, context} = renderSync();
-    loadDataset(store);
+    const {save, context} = renderSync();
+    loadDataset();
     save.mockClear();
 
     act(() => context().addSelectedFeature('c'));
@@ -100,8 +127,8 @@ describe('ProjectSync', () => {
 
   // The level chose these, but the sources mirror the project either way.
   test("saves the level's preset columns", () => {
-    const {store, save} = renderSync(initialProject);
-    loadDataset(store);
+    const {save} = renderSync(initialProject);
+    loadDataset();
     save.mockClear();
 
     act(() => {
@@ -113,19 +140,14 @@ describe('ProjectSync', () => {
     expect(save.mock.lastCall[0].labelColumn).toBe('c');
   });
 
-  /*
-    A dataset the student picks changes what openProject would reconcile
-    against, but asking again would put the saved project back over whatever
-    they have done since.
-  */
   test('opens the saved project once, not on every dataset', () => {
-    const {store, context} = renderSync();
-    loadDataset(store);
+    const {context} = renderSync();
+    loadDataset();
 
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ true));
+      store.dispatch(resetState());
     });
-    loadDataset(store);
+    loadDataset();
 
     expect(context().project).toEqual(initialProject);
   });
@@ -135,12 +157,12 @@ describe('ProjectSync', () => {
     what they do next has to go on being saved.
   */
   test('keeps saving after a reset empties the project', () => {
-    const {store, save, context} = renderSync();
-    loadDataset(store);
+    const {save, context} = renderSync();
+    loadDataset();
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ true));
+      store.dispatch(resetState());
     });
-    loadDataset(store);
+    loadDataset();
     save.mockClear();
 
     act(() => context().setLabelColumn('a'));

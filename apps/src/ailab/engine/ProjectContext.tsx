@@ -67,8 +67,14 @@ export const ProjectProvider = ({
   );
   const [opened, setOpened] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
-  // A project handed to openProject before the dataset was described.
-  const pendingProject = useRef<AilabProject | undefined>(undefined);
+  /*
+    A project waiting for the dataset it will be reconciled against. Opening
+    one always waits a render, so the dataset it meets is the one the lab has
+    then, not the one it had when the project arrived.
+  */
+  const [pendingProject, setPendingProject] = useState<
+    AilabProject | undefined
+  >();
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -82,11 +88,13 @@ export const ProjectProvider = ({
   const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((keepsPendingProject: boolean) => {
+    useCallback(() => {
       previousRun.current = undefined;
-      if (!keepsPendingProject) {
-        pendingProject.current = undefined;
-      }
+      /*
+        A project waiting for its dataset outlives a reset. The level load
+        that opens a project resets the lab first, and the student choosing a
+        dataset may be choosing the one that project was saved against.
+      */
       setProject(initialProject);
     }, [])
   );
@@ -183,25 +191,16 @@ export const ProjectProvider = ({
 
     Waits for the dataset to be described before applying the project.
   */
-  const openProject = useCallback(
-    (saved: AilabProject) => {
-      if (!datasetDescribed) {
-        pendingProject.current = saved;
-        return;
-      }
-      pendingProject.current = undefined;
-      applyProject(saved);
-    },
-    [datasetDescribed, applyProject]
-  );
+  const openProject = useCallback((saved: AilabProject) => {
+    setPendingProject(saved);
+  }, []);
 
   useEffect(() => {
-    const saved = pendingProject.current;
-    if (saved && datasetDescribed) {
-      pendingProject.current = undefined;
-      applyProject(saved);
+    if (pendingProject && datasetDescribed) {
+      setPendingProject(undefined);
+      applyProject(pendingProject);
     }
-  }, [datasetDescribed, applyProject]);
+  }, [pendingProject, datasetDescribed, applyProject]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
