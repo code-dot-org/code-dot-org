@@ -57,8 +57,9 @@ import {
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {activeCallout, CALLOUT_SELECTORS} from '../callouts';
 import defaultSources from '../defaultSources.json';
-import {imageTypeFromCategories} from '../imageGallery';
+import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
   collectImageReferences,
@@ -126,6 +127,7 @@ import {
   Sources,
 } from '../types';
 import {
+  createEmptyWorld,
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
   moveWorldCell,
@@ -135,12 +137,17 @@ import {
   World,
   WorldCell,
 } from '../world';
-import {useWorldStartPattern} from '../worldStartPattern';
+import {
+  paintPattern,
+  patternCells,
+  useWorldStartPattern,
+} from '../worldStartPattern';
 
 import {readBarLayout} from './barLayout';
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
 import CatalogBand from './CatalogBand';
+import Callout from './components/Callout';
 import EditorStrip from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
@@ -154,6 +161,7 @@ import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
+import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesGallery from './ScenesGallery';
@@ -316,10 +324,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // dropping a placement (see resizeWorld) — the project's world is shared
   // across the levels that open its channel, so the data decides.
   const seedSceneSize = DEFAULT_SCENE_GRID_SIZE;
-  const worldFor = useCallback(
-    (scene?: Scene) => resizeWorld(scene?.world, seedSceneSize),
-    [seedSceneSize]
-  );
   // A level's mode opens it on the first tab the mode names (display order is
   // fixed, so that order is free to carry the start tab).
   useEffect(() => {
@@ -454,8 +458,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // The project's pictures, in a sheet over the workspace.
   const picturesOffered = tabs.includes('Images');
+  // A level that opens on its image dialog needs the sheet to answer the
+  // request, Images tab or not.
+  const imageFirst = !!levelProperties.levelMode?.imageFirst;
   const pictures = usePicturesSheet({
-    offered: picturesOffered,
+    offered: picturesOffered || imageFirst,
     ready: animationsSeeded,
   });
 
@@ -588,10 +595,39 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       previous?.kind === sceneToolbox?.kind ? previous : sceneToolbox
     );
   }, [sceneToolbox]);
-  const activeWorld = worldFor(activeScene);
-  const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+  // A practice world stands in for the pinned scene's own on this level.
+  const practiceWorld = useMemo(() => {
+    const pattern = levelProperties.practiceWorld?.pattern;
+    if (!pattern) {
+      return undefined;
+    }
+    return (
+      paintPattern(
+        createEmptyWorld(seedSceneSize),
+        pattern,
+        patternCells(
+          animationList,
+          defaultRole(levelProperties.imageRoleDefaults, 'sprite')
+        )
+      ) ?? undefined
+    );
+  }, [
+    levelProperties.practiceWorld,
+    levelProperties.imageRoleDefaults,
+    seedSceneSize,
+    animationList,
+  ]);
+  const worldFor = useCallback(
+    (scene?: Scene) =>
+      practiceWorld && scene?.id === pinnedSceneId
+        ? practiceWorld
+        : resizeWorld(scene?.world, seedSceneSize),
+    [seedSceneSize, practiceWorld, pinnedSceneId]
+  );
+  const activeWorld = worldFor(activeScene);
+  const activeSceneSize = sceneGridSize(activeWorld);
 
   const sceneMetadata = useMemo(
     () => sceneMetadataFor(scenes, animationList),
@@ -1034,6 +1070,108 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     });
   }, [animationList, patchSources]);
+
+  // The level's starter images join the project once, by role.
+  useEffect(() => {
+    const starters = levelProperties.starterImages;
+    if (
+      !starters?.length ||
+      !animationsSeeded ||
+      !isEditable ||
+      isLevelEditMode
+    ) {
+      return;
+    }
+    starters.forEach(starter => {
+      const inRole =
+        !!starter.role &&
+        !!imageNamedForRole(animationList, starter.imageType, starter.role);
+      if (inRole || imageNames.has(starter.name)) {
+        return;
+      }
+      createNamedAnimation(dispatch, starter.name, {
+        sourceUrl: starter.src,
+        frameSize: {x: starter.width, y: starter.height},
+        categories: categoriesForType(starter.imageType),
+        ...(starter.role && {role: starter.role}),
+      });
+    });
+  }, [
+    levelProperties.starterImages,
+    animationsSeeded,
+    isEditable,
+    animationList,
+    imageNames,
+    dispatch,
+  ]);
+
+  // What the student has opened on this level, for the callouts.
+  const [tabsSeen, setTabsSeen] = useState<ReadonlySet<Tab>>(new Set());
+  const [scenesSeen, setScenesSeen] = useState<ReadonlySet<string>>(new Set());
+  useEffect(() => {
+    setTabsSeen(seen =>
+      seen.has(activeTab) ? seen : new Set([...seen, activeTab])
+    );
+  }, [activeTab]);
+  useEffect(() => {
+    if (activeSceneId) {
+      setScenesSeen(seen =>
+        seen.has(activeSceneId) ? seen : new Set([...seen, activeSceneId])
+      );
+    }
+  }, [activeSceneId]);
+  const calloutDone = useMemo(
+    () =>
+      new Set(objectives.items.flatMap((item, i) => (item.done ? [i] : []))),
+    [objectives.items]
+  );
+  const callout = activeCallout(levelProperties.callouts, {
+    done: calloutDone,
+    tabsSeen,
+    scenesSeen,
+  });
+
+  // The level's first image: the dialog opens on arrival and again after a
+  // dismissal, until the project has an image in the level's role.
+  const firstImageDone = useMemo(() => {
+    const mode = levelProperties.levelMode;
+    return (
+      !mode?.imageFirst ||
+      !!imageNamedForRole(
+        animationList,
+        mode.imageType ?? 'sprite',
+        mode.imageRole
+      )
+    );
+  }, [levelProperties.levelMode, animationList]);
+  useEffect(() => {
+    if (
+      firstImageDone ||
+      !isEditable ||
+      isLevelEditMode ||
+      !animationsSeeded ||
+      pictures.pickRequest
+    ) {
+      return;
+    }
+    const mode = levelProperties.levelMode;
+    const timer = window.setTimeout(
+      () =>
+        requestPicture({
+          imageType: mode?.imageType,
+          subject: mode?.imageSubject,
+          onPicked: () => {},
+        }),
+      300
+    );
+    return () => window.clearTimeout(timer);
+  }, [
+    firstImageDone,
+    isEditable,
+    animationsSeeded,
+    pictures.pickRequest,
+    levelProperties.levelMode,
+  ]);
 
   const settleLevelGhosts = useCallback(
     (workspace: BlocklyCore.WorkspaceSvg) =>
@@ -1680,9 +1818,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A world level about one kind of image offers the palette only the
   // level's image of that kind.
   const placeOne = !!levelProperties.levelMode?.placeOne;
-  const paletteOnlyImage = editsWorld(levelProperties.levelMode)
-    ? focusImageName
-    : undefined;
+  const paletteOnlyImages = useMemo(() => {
+    const roles = levelProperties.levelMode?.paletteRoles;
+    if (roles) {
+      return roles.flatMap(role => {
+        const name = (['sprite', 'block', 'background'] as const)
+          .map(kind => imageNamedForRole(animationList, kind, role))
+          .find(Boolean);
+        return name ? [name] : [];
+      });
+    }
+    return editsWorld(levelProperties.levelMode) && focusImageName
+      ? [focusImageName]
+      : undefined;
+  }, [levelProperties.levelMode, animationList, focusImageName]);
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) =>
       updateActiveWorld(world => moveWorldCell(world, row, col, cell)),
@@ -2110,6 +2259,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedImageType: levelProperties.levelMode?.imageType,
     lockedImageSubject: levelProperties.levelMode?.imageSubject,
     imageRole: levelProperties.levelMode?.imageRole,
+    sentenceId: levelProperties.levelMode?.sentence,
     advanced: imagesAdvanced,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     generationsLeft,
@@ -2144,6 +2294,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           message={
             firstLevelId ? START_OVER_RETURNS_MESSAGE : START_OVER_MESSAGE
           }
+        />
+      )}
+      {callout && !isLevelEditMode && (
+        <Callout
+          selector={CALLOUT_SELECTORS[callout.target]}
+          direction={callout.direction}
         />
       )}
       {showBlockCatalog && (
@@ -2363,7 +2519,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                       ? 'Make some pictures first.'
                       : 'Go back and make your image first.'
                   }
-                  only={paletteOnlyImage}
+                  only={paletteOnlyImages}
                   onMoveCell={placeOne ? handleMoveWorldCell : undefined}
                   selected={worldPaletteSelection}
                   onSelect={choosePaletteSelection}

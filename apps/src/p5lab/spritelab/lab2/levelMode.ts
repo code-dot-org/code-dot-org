@@ -29,6 +29,9 @@ export interface LevelMode {
   /** A world level that places one thing: no Erase, the image goes on an
       empty cell, and choosing another cell moves it. */
   placeOne?: boolean;
+  /** The roles whose images the palette offers, in place of the level's
+      one image of its kind. */
+  paletteRoles?: string[];
   /** Which scene tabs a pinned level shows: its own scene's (the default),
       or every scene's, the others locked, where a level first shows the
       student the scenes they have. */
@@ -36,6 +39,9 @@ export interface LevelMode {
   /** The sentence scene's sentence, by id in sentences.json; the
       image type's own sentence when unset. */
   sentence?: string;
+  /** The level opens on the student image dialog for its image, over the
+      lab, until an image carries the level's role. */
+  imageFirst?: boolean;
   /** An image level's instructions once a picture is made, markdown, in
       place of its objectives title. */
   generatedInstructions?: string;

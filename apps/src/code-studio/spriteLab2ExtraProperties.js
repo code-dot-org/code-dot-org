@@ -21,6 +21,9 @@ export const RAW_EDITABLE_PROPERTIES = [
   'pinned_scene',
   'add_blocks',
   'world_start_pattern',
+  'callouts',
+  'starter_images',
+  'practice_world',
 ];
 
 // level_properties camelizes property names; saves use the stored

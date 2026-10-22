@@ -46,6 +46,9 @@ class GamelabJr < Gamelab
     world_start_pattern
     objectives
     block_catalog
+    callouts
+    starter_images
+    practice_world
   )
 
   def shared_blocks

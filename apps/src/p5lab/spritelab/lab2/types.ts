@@ -3,7 +3,8 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {AddBlockEntry} from './addBlocks';
-import {ImageGenerationMetadata} from './ai/images/types';
+import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
@@ -96,6 +97,17 @@ export interface Sources extends ProjectSources {
   blockCatalogSeen?: boolean;
 }
 
+export interface StarterImage {
+  name: string;
+  imageType: ImageType;
+  role?: string;
+  /** The image's URL, a lab asset. */
+  src: string;
+  /** The image's size in px. */
+  width: number;
+  height: number;
+}
+
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
@@ -133,6 +145,15 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       An entry with `attachTo` instead hangs its shadow on the end of the
       stack already there whose top block has that type. */
   addBlocks?: AddBlockEntry[];
+  /** Arrows at the lab's controls while a condition holds (callouts.ts). */
+  callouts?: LevelCallout[];
+  /** Images the level gives the project on arrival, when it has no image
+      in the role yet: a lab asset by URL, named and typed as given. */
+  starterImages?: StarterImage[];
+  /** A world for the pinned scene that is this level's alone: painted
+      from the pattern (worldStartPattern.ts) in memory, never saved, so
+      the scene's own world waits untouched. */
+  practiceWorld?: {pattern: string[]};
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
   /** Runtime libraries the level opts into (see usesPlatformPhysics). */

@@ -55,6 +55,8 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   onDelete: () => void;
   /** The image's kind; locked while regenerating an existing image. */
   imageType?: ImageType;
+  /** The sentence a new image's form offers, by id. */
+  sentenceId?: string;
   /** This session replaced the image it opened on (closing keeps that). */
   imageChanged?: boolean;
   /** Show the full internal dialog — the image's name (and renaming),
@@ -132,6 +134,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   newImageDraft,
   onRename,
   onDelete,
+  sentenceId,
   imageType,
   lockedImageType,
   lockedImageSubject,
@@ -300,6 +303,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               ? newImageDraft?.subject ?? lockedImageSubject
               : generation?.subject
           }
+          sentenceId={sentenceId}
           typeChoice={isNew && !lockedImageType}
           generationsLeft={generationsLeft}
           onKeep={async result => {
