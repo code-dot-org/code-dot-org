@@ -259,10 +259,10 @@ export function resolvePlatformPhysics(
       sprite.velocity.y = 0;
       landed = true;
     }
-    // Weightless, nothing brings a player back from above the view, so the
+    // Weightless, nothing brings a player back from above the world, so the
     // top is closed too — at the art box, like the sides, so no head is cut.
-    // This is the body-center y that puts the art top at 0.
-    const artBoxTopY = halfH + 2 * drop;
+    // This is the body-center y that puts the art top on the world's top.
+    const artBoxTopY = (view.top ?? 0) + halfH + 2 * drop;
     if (weightless && y < artBoxTopY) {
       y = artBoxTopY;
     }

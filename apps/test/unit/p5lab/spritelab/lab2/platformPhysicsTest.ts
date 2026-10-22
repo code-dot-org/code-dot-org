@@ -314,6 +314,22 @@ describe('platformPhysics with custom gravity', () => {
     expect(player.position.y - 25).toBe(0);
   });
 
+  it('weightless, flies up past the canvas top into a taller world', () => {
+    const tall = {width: 400, height: 400, top: -400};
+    const player = makeSprite(200, 100);
+    for (let i = 0; i < 100; i++) {
+      player.position.y -= 5;
+      resolvePlatformPhysics(
+        [{sprite: player, x: player.position.x, y: player.position.y}],
+        [],
+        tall,
+        0
+      );
+    }
+    // Stopped by the world's top, not the canvas's: art top at -400.
+    expect(player.position.y - 25).toBe(-400);
+  });
+
   it('negative gravity rests the art on a world top above the canvas', () => {
     const tall = {width: 400, height: 400, top: -400};
     const player = makeSprite(200, 300);
