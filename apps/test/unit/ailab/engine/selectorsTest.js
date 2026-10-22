@@ -13,6 +13,7 @@ import {
   getUniqueOptionsByColumn,
   getExtremaByColumn,
   getSelectableColumns,
+  getFilterableColumns,
 } from '@cdo/apps/ailab/engine/selectors';
 
 import {
@@ -128,5 +129,13 @@ describe('getSelectableColumns', () => {
 
   test('returns nothing when there is no data', () => {
     expect(getSelectableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+  });
+});
+
+describe('getFilterableColumns', () => {
+  test('keeps the selectable columns that are categorical', () => {
+    expect(
+      getFilterableColumns.resultFunc(['count', 'color'], ['color', 'id'])
+    ).toEqual(['color']);
   });
 });
