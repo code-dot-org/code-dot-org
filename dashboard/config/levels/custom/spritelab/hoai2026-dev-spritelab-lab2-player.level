@@ -95,7 +95,6 @@
       {
         "name": "Tile",
         "imageType": "block",
-        "role": "block",
         "src": "/blockly/media/spritelab_lab2/tiles/grass.png",
         "width": 128,
         "height": 128

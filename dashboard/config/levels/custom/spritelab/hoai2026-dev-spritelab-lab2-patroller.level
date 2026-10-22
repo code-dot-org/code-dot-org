@@ -94,6 +94,20 @@
         }
       }
     ],
+    "callouts": [
+      {
+        "target": "code-tab",
+        "when": {
+          "done": [
+            0
+          ],
+          "notDone": [
+            1
+          ],
+          "tabNot": "Code"
+        }
+      }
+    ],
     "header_label": "Make a platformer"
   }
 }]]></config>
