@@ -177,7 +177,6 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
   end
 
-<<<<<<< HEAD
   test "show returns each step's completion status so the frontend can compute where to resume" do
     put_step 'read', started: true, completed: true
     put_step 'quiz', started: true
@@ -185,15 +184,11 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     all = steps
     assert_equal 'complete', all['read']['status']
     assert_equal 'started',  all['quiz']['status']
-    # The frontend's resumeStepId scans these statuses left-to-right for the
+    # stepIdToResume on the frontend scans these statuses left-to-right for the
     # first step that is not complete.  Both non-level and level steps must
     # return a status field for that scan to work across sessions.
   end
 
-  test "validation history is not implemented" do
-    assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
-      put :update_validation_history, params: {step_id: 'try', **params}, as: :json
-=======
   test "validation attempts are appended with the server's time and shown with the level's state" do
     travel_to Time.utc(2026, 10, 21, 17) do
       put_validation 'try', {'pass' => false, 'evidenceLevel' => 1, 'reason' => 'No heading yet.', 'at' => 'yesterday'}
@@ -247,7 +242,6 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
         put_validation step_id, attempt
       end
       assert_response :unprocessable_entity, "#{step_id} #{attempt}"
->>>>>>> d4fa0767da5f17ae98c61ed1be6dd6dd54ca1943
     end
   end
 
