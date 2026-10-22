@@ -22,41 +22,40 @@ module Policies
 
     test 'can find an existing level file from a variety of directories' do
       level = create(:level)
-      level_files = [
-        # Check in the default location
-        'config/levels/custom',
-        # Also check nested and deeply-nested subdirectories
-        'config/levels/custom/foo',
-        'config/levels/custom/foo/bar/baz',
-      ].map {|dir| Rails.root.join(dir, "#{level.name}.level")}
+      with_tmp_rails_root do |root|
+        level_files = [
+          # Check in the default location
+          'config/levels/custom',
+          # Also check nested and deeply-nested subdirectories
+          'config/levels/custom/foo',
+          'config/levels/custom/foo/bar/baz',
+        ].map {|dir| root.join(dir, "#{level.name}.level")}
 
-      level_files.each do |level_file|
-        FileUtils.mkdir_p(File.dirname(level_file))
-        FileUtils.touch(level_file)
-        assert_equal(Policies::LevelFiles.level_file_path(level), level_file)
-        FileUtils.rm_f(level_file)
+        level_files.each do |level_file|
+          FileUtils.mkdir_p(File.dirname(level_file))
+          FileUtils.touch(level_file)
+          assert_equal(Policies::LevelFiles.level_file_path(level), level_file)
+          FileUtils.rm_f(level_file)
+        end
       end
-    ensure
-      # Make sure we clean up all touched level files, even if the test fails
-      level_files.each {|level_file| FileUtils.rm_f(level_file)}
     end
 
     test 'will raise if multiple .level files found with the same name' do
       level = create(:level)
-      level_files = [
-        'config/levels/custom/foo',
-        'config/levels/custom/bar',
-      ].map {|dir| Rails.root.join(dir, "#{level.name}.level").to_s}
-      level_files.each do |level_file|
-        FileUtils.mkdir_p(File.dirname(level_file))
-        FileUtils.touch(level_file)
-      end
+      with_tmp_rails_root do |root|
+        level_files = [
+          'config/levels/custom/foo',
+          'config/levels/custom/bar',
+        ].map {|dir| root.join(dir, "#{level.name}.level").to_s}
+        level_files.each do |level_file|
+          FileUtils.mkdir_p(File.dirname(level_file))
+          FileUtils.touch(level_file)
+        end
 
-      exception = assert_raises {Policies::LevelFiles.level_file_path(level)}
-      assert_includes(exception.message, "Multiple .level files for '#{level.name}' found:")
-      level_files.each {|level_file| assert_includes(exception.message, level_file)}
-    ensure
-      level_files.each {|level_file| FileUtils.rm_f(level_file)}
+        exception = assert_raises {Policies::LevelFiles.level_file_path(level)}
+        assert_includes(exception.message, "Multiple .level files for '#{level.name}' found:")
+        level_files.each {|level_file| assert_includes(exception.message, level_file)}
+      end
     end
 
     test 'will only write to file in levelbuilder mode' do
@@ -145,27 +144,27 @@ module Policies
 
     test 'a standalone project level never resolves to a file in the production tree' do
       level = create(:level, name: 'New LevelFiles Wrong Tree Project')
-      stray = Rails.root.join('config/levels/custom', "#{level.name}.level")
-      FileUtils.mkdir_p(File.dirname(stray))
-      FileUtils.touch(stray)
+      with_tmp_rails_root do |root|
+        stray = root.join('config/levels/custom', "#{level.name}.level")
+        FileUtils.mkdir_p(File.dirname(stray))
+        FileUtils.touch(stray)
 
-      expected_file_path = Rails.root.join('config/standalone_projects/levels/custom', level.game.app, "#{level.name}.level")
-      assert_equal(expected_file_path, Policies::LevelFiles.level_file_path(level))
-    ensure
-      FileUtils.rm_f(stray)
+        expected_file_path = root.join('config/standalone_projects/levels/custom', level.game.app, "#{level.name}.level")
+        assert_equal(expected_file_path, Policies::LevelFiles.level_file_path(level))
+      end
     end
 
     test 'a UI Test level never resolves to a file in the production tree' do
       level = create(:level, name: 'UI Test LevelFiles wrong tree')
-      level_file = Rails.root.join('config/levels/custom', "#{level.name}.level")
-      FileUtils.mkdir_p(File.dirname(level_file))
-      FileUtils.touch(level_file)
+      with_tmp_rails_root do |root|
+        level_file = root.join('config/levels/custom', "#{level.name}.level")
+        FileUtils.mkdir_p(File.dirname(level_file))
+        FileUtils.touch(level_file)
 
-      # the production-tree file is ignored; we get the test/ui default path
-      expected_file_path = Rails.root.join('test/ui/config/levels/custom', level.game.app, "#{level.name}.level")
-      assert_equal(expected_file_path, Policies::LevelFiles.level_file_path(level))
-    ensure
-      FileUtils.rm_f(level_file)
+        # the production-tree file is ignored; we get the test/ui default path
+        expected_file_path = root.join('test/ui/config/levels/custom', level.game.app, "#{level.name}.level")
+        assert_equal(expected_file_path, Policies::LevelFiles.level_file_path(level))
+      end
     end
 
     test 'will only write certain levels to file' do

@@ -95,7 +95,6 @@ class LevelLoaderTest < ActiveSupport::TestCase
   end
 
   test 'import_levels refuses level files misfiled across the partitions' do
-    fixture = Rails.root.join('test/fixtures/levels/Bee Fixture.level')
     misfiled = [
       'test/ui/config/levels/custom/LevelLoader misfiled probe.level',
       'config/levels/custom/UI Test LevelLoader misfiled probe.level',
@@ -103,53 +102,45 @@ class LevelLoaderTest < ActiveSupport::TestCase
       'config/levels/custom/LevelLoader Misfiled Subproject.level',
       'config/standalone_projects/levels/custom/LevelLoader misfiled probe.level',
       'test/ui/config/levels/custom/New LevelLoader Misfiled Project.level',
-    ].map {|path| Rails.root.join(path)}
+    ]
 
-    misfiled.each do |path|
-      FileUtils.mkdir_p(File.dirname(path))
-      FileUtils.cp(fixture, path)
+    Dir.mktmpdir do |dir|
+      misfiled.each do |relative_path|
+        path = copy_level_fixture(dir, relative_path)
 
-      e = assert_raises do
-        LevelLoader.import_levels path.relative_path_from(Rails.root).to_s
+        e = assert_raises do
+          LevelLoader.import_levels path
+        end
+        assert_includes e.message, 'misfiled'
+        assert_includes e.message, "git mv #{path.dump}"
+        assert_nil Level.find_by_name(Policies::LevelFiles.level_name_from_path(path))
       end
-      assert_includes e.message, 'misfiled'
-      assert_includes e.message, "git mv #{path.to_s.dump}"
-      assert_nil Level.find_by_name(Policies::LevelFiles.level_name_from_path(path))
-    ensure
-      FileUtils.rm_f(path)
     end
   end
 
   test 'import_levels loads standalone partition levels on levelbuilder, whose web application refuses edits to them' do
-    fixture = Rails.root.join('test/fixtures/levels/Bee Fixture.level')
-    path = Rails.root.join('config/standalone_projects/levels/custom/LevelLoader Levelbuilder Probe Subproject.level')
-    FileUtils.mkdir_p(File.dirname(path))
-    FileUtils.cp(fixture, path)
     CDO.stubs(:rack_env).returns(:levelbuilder)
     CDO.stubs(:running_web_application?).returns(false)
 
-    LevelLoader.import_levels path.relative_path_from(Rails.root).to_s
+    Dir.mktmpdir do |dir|
+      LevelLoader.import_levels copy_level_fixture(dir, 'config/standalone_projects/levels/custom/LevelLoader Levelbuilder Probe Subproject.level')
+    end
     level = Level.find_by_name!('LevelLoader Levelbuilder Probe Subproject')
 
     CDO.stubs(:running_web_application?).returns(true)
     level.notes = 'edited'
     refute level.valid?
-  ensure
-    FileUtils.rm_f(path)
   end
 
   test 'import_levels refuses a level file whose name matches two partitions' do
-    fixture = Rails.root.join('test/fixtures/levels/Bee Fixture.level')
-    path = Rails.root.join('test/ui/config/levels/custom/UI Test LevelLoader Probe Subproject.level')
-    FileUtils.mkdir_p(File.dirname(path))
-    FileUtils.cp(fixture, path)
+    Dir.mktmpdir do |dir|
+      path = copy_level_fixture(dir, 'test/ui/config/levels/custom/UI Test LevelLoader Probe Subproject.level')
 
-    e = assert_raises(ArgumentError) do
-      LevelLoader.import_levels path.relative_path_from(Rails.root).to_s
+      e = assert_raises(ArgumentError) do
+        LevelLoader.import_levels path
+      end
+      assert_includes e.message, 'only one'
     end
-    assert_includes e.message, 'only one'
-  ensure
-    FileUtils.rm_f(path)
   end
 
   test 'import_levels with an empty glob no-ops, unless a level was requested by name' do
@@ -243,6 +234,16 @@ class LevelLoaderTest < ActiveSupport::TestCase
     )
     path = File.join(dir, "#{name}.level")
     File.write(path, level.to_xml)
+    path
+  end
+
+  # Copies the Bee fixture to relative_path under dir, whose layout mirrors the
+  # repo's, since the partition a file is seeded into follows its path. Returns
+  # the path written.
+  def copy_level_fixture(dir, relative_path)
+    path = File.join(dir, relative_path)
+    FileUtils.mkdir_p(File.dirname(path))
+    FileUtils.cp(Rails.root.join('test/fixtures/levels/Bee Fixture.level'), path)
     path
   end
 end
