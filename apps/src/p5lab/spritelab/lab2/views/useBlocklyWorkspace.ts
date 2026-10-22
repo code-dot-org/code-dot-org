@@ -63,8 +63,8 @@ interface UseBlocklyWorkspaceResult {
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
-  /** Load code into the workspace; `lock` holds every loaded block in
-      place but the level's own stacks (blockLocks.ts). */
+  /** Load code into the workspace; `lock` keeps every loaded block from
+      deletion but the level's own stacks (blockLocks.ts). */
   loadCode: (
     source: WorkspaceSerialization,
     options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}

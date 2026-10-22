@@ -12,8 +12,8 @@ import {PLACEHOLDER_BLOCK_TYPE} from './blockly/blockDefinitions/placeholder';
 type BlockState = BlocklyCore.serialization.blocks.State;
 
 /** A level's ghost: the stack to build, and the tag that names it. The
-    real block that settles the ghost is a movable one of the stack's top
-    type (an earlier level's blocks are locked), carrying the tag when
+    real block that settles the ghost is a deletable one of the stack's
+    top type (an earlier level's blocks are not), carrying the tag when
     `tagged` says the toolbox gives its block the tag. */
 export interface GhostStack {
   ghost: BlockState;
@@ -78,7 +78,7 @@ export function hasRealTop(
         top =>
           top.type === entry.ghost.type &&
           !isGhostBlock(top) &&
-          top.isMovable() &&
+          top.isDeletable() &&
           (!entry.tagged || top.data === entry.data)
       ) ?? null
   );

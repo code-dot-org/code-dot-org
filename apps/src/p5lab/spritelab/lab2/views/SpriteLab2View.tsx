@@ -1989,7 +1989,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     sceneLoadsRef.current++;
-    // Before free play, what an earlier level built stays put.
+    // Before free play, what an earlier level built cannot be deleted.
     loadCode(source, {
       lock: !isLevelEditMode && !isFreeplayMode(levelProperties.levelMode),
       own: top => ownsTop(levelProperties.addBlocks ?? [], top),

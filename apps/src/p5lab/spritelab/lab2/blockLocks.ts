@@ -1,7 +1,8 @@
-// Blocks a student built on an earlier level are held in place on later
-// ones: a stack deleted by accident would strand the student. The locks
-// are the level's, set as the scene loads and never saved, so free play
-// loads the same project with every block free again.
+// Blocks a student built on an earlier level cannot be deleted on later
+// ones: a stack deleted by accident would strand the student. They can
+// still be moved. The locks are the level's, set as the scene loads and
+// never saved, so free play loads the same project with every block free
+// again.
 
 import * as BlocklyCore from 'blockly/core';
 
@@ -9,8 +10,8 @@ import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
 
-/** Hold every real block in the workspace where it is, but for the stacks
-    `own` claims: the level's own, built on it and still free to change. */
+/** Keep every real block in the workspace from deletion, but for the
+    stacks `own` claims: the level's own, built on it and still free. */
 export function lockBlocks(
   workspace: BlocklyCore.Workspace,
   own: (top: BlocklyCore.Block) => boolean = () => false
@@ -20,11 +21,9 @@ export function lockBlocks(
       return;
     }
     top.getDescendants(false).forEach(block => {
-      if (block.isShadow()) {
-        return;
+      if (!block.isShadow()) {
+        block.setDeletable(false);
       }
-      block.setDeletable(false);
-      block.setMovable(false);
     });
   });
 }
