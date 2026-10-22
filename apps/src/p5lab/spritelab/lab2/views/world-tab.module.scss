@@ -22,6 +22,14 @@
   min-height: 0;
 }
 
+// The size choice sits over the grid, in the grid's column.
+.worldSizeRow {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
 // The room for the grid, measured so the editor shrinks to fit small
 // windows (down to a floor; past that the tab scrolls).
 .worldGridArea {

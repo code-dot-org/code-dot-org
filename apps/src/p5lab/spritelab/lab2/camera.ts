@@ -25,6 +25,34 @@ export interface Point {
   y: number;
 }
 
+/** The world's edges in world coordinates. */
+export interface WorldBounds {
+  left: number;
+  top: number;
+  right: number;
+  bottom: number;
+}
+
+/** A world the size of the canvas. */
+export const CANVAS_BOUNDS: WorldBounds = {
+  left: 0,
+  top: 0,
+  right: APP_WIDTH,
+  bottom: APP_WIDTH,
+};
+
+/** A world `extent` canvases wide and high, the first canvas at its bottom
+    left keeping the canvas's own coordinates: the rest lies to the right
+    and above, where y is negative. */
+export function worldBounds(extent: number): WorldBounds {
+  return {
+    left: 0,
+    top: APP_WIDTH * (1 - extent),
+    right: APP_WIDTH * extent,
+    bottom: APP_WIDTH,
+  };
+}
+
 export function clampZoom(value: number): number {
   if (!Number.isFinite(value)) {
     return MIN_ZOOM;
@@ -44,16 +72,23 @@ export function backgroundZoom(zoom: number): number {
 
 /**
  * Where the camera looks: the target (the player), clamped so the view never
- * leaves the world. No target — or no room to scroll — centers the view.
+ * leaves the world. No target centers the view on the first canvas.
  */
-export function cameraFocus(zoom: number, target: Point | null): Point {
+export function cameraFocus(
+  zoom: number,
+  target: Point | null,
+  bounds: WorldBounds = CANVAS_BOUNDS
+): Point {
   const half = APP_WIDTH / (2 * zoom);
-  const clamp = (value: number) =>
-    Math.min(APP_WIDTH - half, Math.max(half, value));
+  const clamp = (value: number, low: number, high: number) =>
+    Math.min(high - half, Math.max(low + half, value));
   if (!target) {
     return {x: APP_WIDTH / 2, y: APP_WIDTH / 2};
   }
-  return {x: clamp(target.x), y: clamp(target.y)};
+  return {
+    x: clamp(target.x, bounds.left, bounds.right),
+    y: clamp(target.y, bounds.top, bounds.bottom),
+  };
 }
 
 /**
@@ -68,22 +103,28 @@ export function worldPoint(screen: Point, zoom: number, focus: Point): Point {
 }
 
 /**
- * The screen-space rectangle to draw the world-sized background into: the
- * background plane at its own (harder) zoom, centered when the camera is,
- * panning at BACKGROUND_SCROLL_RATE of the foreground's screen shift. At
- * zoom 1 this is exactly the unzoomed full-canvas draw.
+ * The screen-space rectangle to draw the background into: the background
+ * plane at its own (harder) zoom, centered when the camera is on the
+ * world's center, panning at BACKGROUND_SCROLL_RATE of the foreground's
+ * screen shift, and stretched by that rate's share of a world wider than
+ * the canvas so its edges stay out of view at every pan. At zoom 1 over a
+ * canvas-sized world this is exactly the unzoomed full-canvas draw.
  */
 export function backgroundFrame(
   zoom: number,
-  focus: Point
+  focus: Point,
+  bounds: WorldBounds = CANVAS_BOUNDS
 ): {x: number; y: number; size: number} {
-  const scale = backgroundZoom(zoom);
+  const span = Math.max(bounds.right - bounds.left, bounds.bottom - bounds.top);
+  const size =
+    APP_WIDTH * backgroundZoom(zoom) +
+    BACKGROUND_SCROLL_RATE * zoom * (span - APP_WIDTH);
   const half = APP_WIDTH / 2;
-  const place = (coord: number) =>
-    half - half * scale - BACKGROUND_SCROLL_RATE * (coord - half) * zoom;
+  const place = (coord: number, center: number) =>
+    half - size / 2 - BACKGROUND_SCROLL_RATE * (coord - center) * zoom;
   return {
-    x: place(focus.x),
-    y: place(focus.y),
-    size: APP_WIDTH * scale,
+    x: place(focus.x, (bounds.left + bounds.right) / 2),
+    y: place(focus.y, (bounds.top + bounds.bottom) / 2),
+    size,
   };
 }

@@ -76,6 +76,15 @@ export interface MovedPlayer {
 interface View {
   width: number;
   height: number;
+  /** Where the world starts above the canvas, 0 or negative: a world taller
+      than the canvas keeps the canvas's floor and grows upward. */
+  top?: number;
+}
+
+// The line everything mirrors across for upward gravity: the world's top
+// and its floor trade places.
+function mirrorY(view: View, y: number): number {
+  return view.height + (view.top ?? 0) - y;
 }
 
 // Generated block art is keyed and cropped, so a tile's image can come up
@@ -121,17 +130,17 @@ export function bodyBox(sprite: PhysicsBox): CollisionBox {
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
   return walls.map(wall => ({
     ...wall,
-    position: {x: wall.position.x, y: view.height - wall.position.y},
+    position: {x: wall.position.x, y: mirrorY(view, wall.position.y)},
   }));
 }
 
 // Flip a sprite's vertical state across the view's horizontal midline (see
 // the negative-gravity branch below).
 function flipSpriteY(sprite: PhysicsSprite, view: View): void {
-  sprite.position.y = view.height - sprite.position.y;
+  sprite.position.y = mirrorY(view, sprite.position.y);
   sprite.velocity.y = -sprite.velocity.y;
   if (sprite.__slab2Prev) {
-    sprite.__slab2Prev.y = view.height - sprite.__slab2Prev.y;
+    sprite.__slab2Prev.y = mirrorY(view, sprite.__slab2Prev.y);
   }
 }
 
@@ -149,12 +158,12 @@ export function resolvePlatformPhysics(
   if (gravity < 0) {
     moved.forEach(m => {
       flipSpriteY(m.sprite, view);
-      m.y = view.height - m.y;
+      m.y = mirrorY(view, m.y);
     });
     resolvePlatformPhysics(moved, flipWallsY(walls, view), view, -gravity);
     moved.forEach(m => {
       flipSpriteY(m.sprite, view);
-      m.y = view.height - m.y;
+      m.y = mirrorY(view, m.y);
     });
     return;
   }
@@ -548,7 +557,7 @@ function wallsAtFeet(walls: PhysicsBox[], feet: number): PhysicsBox[] {
 function flippedSprite(sprite: PhysicsSprite, view: View): PhysicsSprite {
   return {
     ...sprite,
-    position: {x: sprite.position.x, y: view.height - sprite.position.y},
+    position: {x: sprite.position.x, y: mirrorY(view, sprite.position.y)},
     velocity: {x: sprite.velocity.x, y: -sprite.velocity.y},
   };
 }

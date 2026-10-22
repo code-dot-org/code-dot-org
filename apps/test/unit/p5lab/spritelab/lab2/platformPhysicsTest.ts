@@ -314,6 +314,21 @@ describe('platformPhysics with custom gravity', () => {
     expect(player.position.y - 25).toBe(0);
   });
 
+  it('negative gravity rests the art on a world top above the canvas', () => {
+    const tall = {width: 400, height: 400, top: -400};
+    const player = makeSprite(200, 300);
+    for (let i = 0; i < 100; i++) {
+      player.position.y += player.velocity.y;
+      resolvePlatformPhysics(
+        [{sprite: player, x: player.position.x, y: player.position.y}],
+        [],
+        tall,
+        -PLATFORM_GRAVITY
+      );
+    }
+    expect(player.position.y - 25).toBe(-400);
+  });
+
   it('negative gravity lands on a block underside and stays', () => {
     // Wall cell (col 1, row 1): center (75, 75), underside at y=100.
     const walls = [wallAt(1, 1)];

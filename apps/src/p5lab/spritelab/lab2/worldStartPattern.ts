@@ -110,7 +110,7 @@ export function paintPattern(
       painted = true;
     });
   });
-  return painted ? {grid} : null;
+  return painted ? {...world, grid} : null;
 }
 
 /** Where the one cell showing this image sits, or null when the grid holds

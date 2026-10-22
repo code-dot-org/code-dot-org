@@ -6,8 +6,14 @@ import {
   moveWorldCell,
   paintWorldCell,
   resizeWorld,
+  runningGrid,
+  runningRow,
+  runningSize,
   sceneGridSize,
+  setWorldExtent,
+  storageRow,
   WORLD_MULTIPLE,
+  worldExtent,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
 
 // A legacy world: the 8-cell playfield this lab shipped with first.
@@ -69,6 +75,103 @@ describe('world', () => {
     world.grid[DEFAULT_SCENE_GRID_SIZE][0] = {image: 'ice', kind: 'block'};
     world.grid[0][DEFAULT_SCENE_GRID_SIZE] = {image: 'ice', kind: 'block'};
     expect(compileWorldPrelude(world)).toBe('');
+  });
+
+  describe('extent', () => {
+    const size = DEFAULT_SCENE_GRID_SIZE;
+
+    it('is one unless the world says otherwise, and never more than stored', () => {
+      expect(worldExtent(undefined)).toBe(1);
+      expect(worldExtent(createEmptyWorld())).toBe(1);
+      expect(worldExtent({...createEmptyWorld(), extent: 2})).toBe(2);
+      expect(runningSize({...createEmptyWorld(), extent: 3})).toBe(size * 3);
+    });
+
+    it('keeps the first playfield at the bottom left of the running world', () => {
+      // At extent 2 the running world is 20 rows: the playfield's rows are
+      // the last ten, and the row just above it is the first spare row.
+      expect(storageRow(size, 2, size)).toBe(0);
+      expect(storageRow(size, 2, 2 * size - 1)).toBe(size - 1);
+      expect(storageRow(size, 2, size - 1)).toBe(size);
+      expect(storageRow(size, 2, 0)).toBe(2 * size - 1);
+      expect(runningRow(size, 2, 0)).toBe(size);
+      expect(runningRow(size, 2, size)).toBe(size - 1);
+      // Beyond the extent's sky, nothing shows.
+      expect(runningRow(size, 2, 2 * size)).toBeNull();
+      expect(runningRow(size, 1, size)).toBeNull();
+    });
+
+    it('keeps a placement the same height over the floor at every extent', () => {
+      const world = setWorldExtent(createEmptyWorld(), 3);
+      const sky = {image: 'ice', kind: 'block'} as const;
+      const above = storageRow(size, 3, 3 * size - 1 - size);
+      const painted = paintWorldCell(world, above, 0, sky);
+      expect(runningGrid(painted)[3 * size - 1 - size][0]).toEqual(sky);
+      const smaller = setWorldExtent(painted, 2);
+      expect(runningGrid(smaller)[2 * size - 1 - size][0]).toEqual(sky);
+    });
+
+    it('shows the running world as a square of the extent', () => {
+      const world = setWorldExtent(createEmptyWorld(), 2);
+      world.grid[0][0] = {image: 'ice', kind: 'block'};
+      world.grid[size][size + 1] = {image: 'cat', kind: 'sprite'};
+      const shown = runningGrid(world);
+      expect(shown).toHaveLength(2 * size);
+      expect(shown[0]).toHaveLength(2 * size);
+      expect(shown[size][0]).toEqual({image: 'ice', kind: 'block'});
+      expect(shown[size - 1][size + 1]).toEqual({image: 'cat', kind: 'sprite'});
+    });
+
+    it('trims what a smaller extent leaves out and keeps the rest', () => {
+      const world = setWorldExtent(createEmptyWorld(), 3);
+      world.grid[0][0] = {image: 'ice', kind: 'block'};
+      world.grid[0][2 * size] = {image: 'ice', kind: 'block'};
+      world.grid[size][0] = {image: 'ice', kind: 'block'};
+      world.grid[2 * size][0] = {image: 'ice', kind: 'block'};
+      const trimmed = setWorldExtent(world, 2);
+      expect(trimmed.extent).toBe(2);
+      expect(trimmed.grid[0][0]).not.toBeNull();
+      expect(trimmed.grid[size][0]).not.toBeNull();
+      expect(trimmed.grid[0][2 * size]).toBeNull();
+      expect(trimmed.grid[2 * size][0]).toBeNull();
+      expect(
+        setWorldExtent(trimmed, 1).grid.flat().filter(Boolean)
+      ).toHaveLength(1);
+    });
+
+    it('survives a paint, a move and a resize', () => {
+      const world = setWorldExtent(createEmptyWorld(), 2);
+      const cell = {image: 'cat', kind: 'sprite'} as const;
+      expect(paintWorldCell(world, 0, 0, cell).extent).toBe(2);
+      expect(moveWorldCell(world, 0, 0, cell).extent).toBe(2);
+      expect(resizeWorld(world, size + 2).extent).toBe(2);
+    });
+
+    it('spawns the whole running world, the extra cells right and above', () => {
+      const world = setWorldExtent(createEmptyWorld(), 2);
+      const cell = cellSize(size);
+      // The playfield's own corner, a cell to its right, and one above it.
+      world.grid[size - 1][0] = {image: 'ice', kind: 'block'};
+      world.grid[size - 1][size] = {image: 'ice', kind: 'block'};
+      world.grid[size][0] = {image: 'owl', kind: 'sprite'};
+      expect(compileWorldPrelude(world)).toBe(
+        [
+          'setWorldExtent(2);',
+          `setDefaultSpriteSize(${cell});`,
+          `makeNewGroupSprite("ice", 'walls', {x: ${cell / 2}, y: ${
+            cell / 2 + cell * (size - 1)
+          }});`,
+          `makeNewGroupSprite("ice", 'walls', {x: ${
+            cell / 2 + cell * size
+          }, y: ${cell / 2 + cell * (size - 1)}});`,
+          `makeNewSpriteAnon("owl", {x: ${cell / 2}, y: ${-cell / 2}});`,
+          '',
+        ].join('\n')
+      );
+      expect(compileWorldPrelude(setWorldExtent(createEmptyWorld(), 3))).toBe(
+        'setWorldExtent(3);'
+      );
+    });
   });
 
   it("grows a smaller world, keeping the playfield's floor at the floor", () => {

@@ -1,3 +1,4 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
@@ -7,7 +8,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getImageThumbnail, onTrimsUpdated} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-import {createEmptyWorld, World, WorldCell} from '../world';
+import {
+  createEmptyWorld,
+  World,
+  WORLD_EXTENTS,
+  WorldCell,
+  WorldExtent,
+} from '../world';
 
 import moduleStyles from './world-tab.module.scss';
 
@@ -275,6 +282,15 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
+  /** Offers the world's size over the grid: how many playfields wide and
+      high it runs. */
+  sizeChoice?: {
+    extent: WorldExtent;
+    /** Cells per side of one playfield. */
+    playfieldSize: number;
+    color: 'black' | 'white';
+    onChange: (extent: WorldExtent) => void;
+  };
   /** Offers a New square above the palette that asks for a picture. */
   onNewPicture?: () => void;
 }
@@ -300,6 +316,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   emptyMessage,
   only,
   onMoveCell,
+  sizeChoice,
   selected,
   onSelect,
   onNewPicture,
@@ -970,6 +987,27 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           : 'Arrow keys move around the grid. Enter or Space places the chosen item, or removes it if the cell already holds it; hold the key down and move to keep painting. Delete clears the cell. Number keys 1 to 9 choose an item; 0 chooses Erase.'}
       </p>
       <div className={moduleStyles.worldGridColumn}>
+        {sizeChoice && (
+          <div className={moduleStyles.worldSizeRow}>
+            <SimpleDropdown
+              name="world-size"
+              labelText="World size"
+              size="s"
+              color={sizeChoice.color}
+              items={WORLD_EXTENTS.map(extent => {
+                const side = sizeChoice.playfieldSize * extent;
+                return {value: String(extent), text: `${side} x ${side}`};
+              })}
+              selectedValue={String(sizeChoice.extent)}
+              onChange={e => {
+                const extent = Number(e.target.value) as WorldExtent;
+                if (WORLD_EXTENTS.includes(extent)) {
+                  sizeChoice.onChange(extent);
+                }
+              }}
+            />
+          </div>
+        )}
         {!palette.length && (
           <p className={moduleStyles.worldEmpty}>{emptyMessage}</p>
         )}

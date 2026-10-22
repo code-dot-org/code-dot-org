@@ -19,6 +19,7 @@ import {
   cameraFocus,
   clampZoom,
   stepZoom,
+  worldBounds,
   worldPoint,
 } from './camera';
 import {
@@ -51,7 +52,7 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
-import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
+import {cellSize, DEFAULT_SCENE_GRID_SIZE, WORLD_MULTIPLE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
 // after the jump event fires: the handler runs on the interpreter's next
@@ -452,6 +453,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // platform draw loop below); a fresh run starts back at 1.
     this.cameraZoom_ = 1;
     this.cameraZoomTarget_ = 1;
+    // How many canvases wide and high the world runs (the World tab's
+    // size); the prelude sets it ahead of the program.
+    this.worldExtent_ = 1;
+    library.commands.setWorldExtent = extent => {
+      const wanted = Math.floor(Number(extent)) || 1;
+      this.worldExtent_ = Math.min(WORLD_MULTIPLE, Math.max(1, wanted));
+    };
     // Not reset per run: a restart re-runs the program, and zeroing this here
     // would let the next frame restart again immediately.
     this.lastRestartAt_ = this.lastRestartAt_ || 0;
@@ -508,9 +516,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!this.usesPlatformPhysics_) {
         return true;
       }
-      const p5 = this.p5Wrapper.p5;
       const walls = this.wallsThisFrame_(library);
-      const view = {width: p5.width, height: p5.height};
+      const view = this.worldView_();
       return library.getSpriteArray(spriteArg).some(sprite => {
         const gravity =
           sprite.group === 'players'
@@ -1146,13 +1153,14 @@ export default class SpriteLab2Engine extends SpriteLab {
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: 'players'})[0];
-      const focus = cameraFocus(zoom, player ? player.position : null);
+      const bounds = worldBounds(engine.worldExtent_);
+      const focus = cameraFocus(zoom, player ? player.position : null, bounds);
       if (engine.frameCaptureArmed_) {
-        // The picture shows the whole world: drawn at zoom 1, copied by the
-        // callbacks (synchronously), then painted over by the real frame
-        // below, so nothing of it reaches the screen.
+        // The picture shows the first canvas of the world: drawn at zoom 1,
+        // copied by the callbacks (synchronously), then painted over by the
+        // real frame below, so nothing of it reaches the screen.
         engine.frameCaptureArmed_ = false;
-        engine.drawWorld_(this, 1, cameraFocus(1, null));
+        engine.drawWorld_(this, 1, cameraFocus(1, null, bounds));
         engine.settleFrameCaptures_(p5.canvas);
       }
       engine.drawWorld_(this, zoom, focus);
@@ -1172,7 +1180,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     const {p5} = library;
     const {camera} = p5;
     camera.off();
-    library.drawBackground(backgroundFrame(zoom, focus));
+    library.drawBackground(
+      backgroundFrame(zoom, focus, worldBounds(this.worldExtent_))
+    );
     camera.zoom = zoom;
     camera.position.x = focus.x;
     camera.position.y = focus.y;
@@ -1198,6 +1208,18 @@ export default class SpriteLab2Engine extends SpriteLab {
     waiters.forEach(onFrame => onFrame(canvas));
   }
 
+  // The physics world: the canvas, widened to the right and raised above
+  // by the World tab's extent. The floor stays the canvas's bottom.
+  worldView_() {
+    const p5 = this.p5Wrapper.p5;
+    const extent = this.worldExtent_ || 1;
+    return {
+      width: p5.width * extent,
+      height: p5.height,
+      top: p5.height * (1 - extent),
+    };
+  }
+
   // Platformer physics for players and marked sprites (see
   // platformPhysics.ts for the rules), run immediately before every paint —
   // after p5's pre-phase velocity integration and after this frame's
@@ -1206,7 +1228,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
-    const p5 = this.p5Wrapper.p5;
     // Snapshot positions before the stock pass below: the movement
     // reconstruction must not see its shove.
     const snapshot = sprite => ({
@@ -1259,7 +1280,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         walls.forEach(wall => sprite.collide(wall));
       }
     });
-    const view = {width: p5.width, height: p5.height};
+    const view = this.worldView_();
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
@@ -1451,7 +1472,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const walls = this.wallsThisFrame_(library);
-    const view = {width: p5.width, height: p5.height};
+    const view = this.worldView_();
     Object.values(library.nativeSpriteMap).forEach(sprite => {
       const poses = this.posesByName_.get(sprite.getAnimationLabel());
       const animation = sprite.animation;

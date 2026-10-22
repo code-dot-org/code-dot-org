@@ -131,6 +131,12 @@ import {
   sceneGridSize,
   World,
   WorldCell,
+  runningGrid,
+  runningSize,
+  setWorldExtent,
+  storageRow,
+  worldExtent,
+  WorldExtent,
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
@@ -587,6 +593,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [sceneToolbox]);
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
+  // The editor shows the world as it runs: the first playfield at the
+  // bottom left, with the extent's extra cells to its right and above.
+  const activeExtent = worldExtent(activeWorld);
+  const shownWorld = useMemo(
+    () => ({grid: runningGrid(activeWorld)}),
+    [activeWorld]
+  );
+  const shownSize = runningSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
 
@@ -1643,9 +1657,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [updateSources, activeSceneId, scheduleRun, worldFor]
   );
+  // The editor's rows are the running world's; the stored grid keeps the
+  // first playfield at its top (see storageRow).
   const handlePaintWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell | null) =>
-      updateActiveWorld(world => paintWorldCell(world, row, col, cell)),
+      updateActiveWorld(world =>
+        paintWorldCell(
+          world,
+          storageRow(sceneGridSize(world), worldExtent(world), row),
+          col,
+          cell
+        )
+      ),
+    [updateActiveWorld]
+  );
+  const handleWorldExtentChange = useCallback(
+    (extent: WorldExtent) =>
+      updateActiveWorld(world => setWorldExtent(world, extent)),
     [updateActiveWorld]
   );
 
@@ -1657,7 +1685,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     : undefined;
   const handleMoveWorldCell = useCallback(
     (row: number, col: number, cell: WorldCell) =>
-      updateActiveWorld(world => moveWorldCell(world, row, col, cell)),
+      updateActiveWorld(world =>
+        moveWorldCell(
+          world,
+          storageRow(sceneGridSize(world), worldExtent(world), row),
+          col,
+          cell
+        )
+      ),
     [updateActiveWorld]
   );
 
@@ -2323,9 +2358,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 }}
               >
                 <WorldTab
-                  world={activeWorld}
-                  sceneSize={activeSceneSize}
+                  world={shownWorld}
+                  sceneSize={shownSize}
                   onPaintCell={handlePaintWorldCell}
+                  // A bigger world needs the platform camera to scroll it.
+                  sizeChoice={
+                    activeScene.type === 'platform'
+                      ? {
+                          extent: activeExtent,
+                          playfieldSize: activeSceneSize,
+                          color: theme === 'Dark' ? 'white' : 'black',
+                          onChange: handleWorldExtentChange,
+                        }
+                      : undefined
+                  }
                   emptyMessage={
                     picturesOffered
                       ? 'Make some pictures first.'

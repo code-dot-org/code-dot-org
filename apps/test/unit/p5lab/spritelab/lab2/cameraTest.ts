@@ -6,6 +6,7 @@ import {
   MAX_ZOOM,
   MIN_ZOOM,
   stepZoom,
+  worldBounds,
   worldPoint,
 } from '@cdo/apps/p5lab/spritelab/lab2/camera';
 
@@ -43,6 +44,45 @@ describe('camera', () => {
   it('follows the target and clamps the view inside the world', () => {
     expect(cameraFocus(2, {x: 150, y: 250})).toEqual({x: 150, y: 250});
     expect(cameraFocus(2, {x: 10, y: 390})).toEqual({x: 100, y: 300});
+  });
+
+  it('scrolls at zoom 1 over a world wider and taller than the canvas', () => {
+    const bounds = worldBounds(2);
+    expect(bounds).toEqual({left: 0, top: -400, right: 800, bottom: 400});
+    expect(cameraFocus(1, null, bounds)).toEqual({x: 200, y: 200});
+    expect(cameraFocus(1, {x: 500, y: -100}, bounds)).toEqual({
+      x: 500,
+      y: -100,
+    });
+    expect(cameraFocus(1, {x: 790, y: -390}, bounds)).toEqual({
+      x: 600,
+      y: -200,
+    });
+    expect(cameraFocus(1, {x: 10, y: 390}, bounds)).toEqual({x: 200, y: 200});
+  });
+
+  it("keeps the background's edges out of view across a bigger world", () => {
+    const bounds = worldBounds(3);
+    for (const zoom of [1, 2, MAX_ZOOM]) {
+      for (const corner of [
+        {x: 0, y: -800},
+        {x: 1200, y: 400},
+        {x: 600, y: -200},
+      ]) {
+        const focus = cameraFocus(zoom, corner, bounds);
+        const {x, y, size} = backgroundFrame(zoom, focus, bounds);
+        expect(x).toBeLessThanOrEqual(0);
+        expect(y).toBeLessThanOrEqual(0);
+        expect(x + size).toBeGreaterThanOrEqual(400);
+        expect(y + size).toBeGreaterThanOrEqual(400);
+      }
+    }
+    // The canvas-sized world is unchanged by the bounds argument.
+    expect(backgroundFrame(1, cameraFocus(1, null), worldBounds(1))).toEqual({
+      x: 0,
+      y: 0,
+      size: 400,
+    });
   });
 
   it('draws the background exactly full-canvas at zoom 1', () => {
