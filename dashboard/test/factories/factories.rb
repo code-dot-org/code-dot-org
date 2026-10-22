@@ -1122,8 +1122,7 @@ FactoryBot.define do
 
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
-    # Sublevels follow the parent's side of the standalone project partition:
-    # a "New ... Project" parent may attach only "... Subproject" children.
+    # Ensure sublevels fall on the parent's side of the standalone project partition.
     sublevels do
       suffix = Level.standalone_partition_name?(name) ? ' Subproject' : ''
       [

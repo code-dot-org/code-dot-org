@@ -264,10 +264,8 @@ class Level < ApplicationRecord
 
   UI_TEST_NAME_PREFIX = 'ui test '.freeze
 
-  # Levels named "UI Test ..." exist only for UI tests and are stored apart
-  # from production levels; see dashboard/test/ui/config/README.md. Match on
-  # the level name, never the filename: the DSL file for "UI Test Foo" is
-  # ui_test_foo.<type>.
+  # Whether the level name falls into the UI test partition.
+  # See dashboard/test/ui/config/README.md.
   def self.ui_test_partition_name?(name)
     name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
   end
@@ -276,7 +274,8 @@ class Level < ApplicationRecord
     Level.ui_test_partition_name?(name)
   end
 
-  # Like ui_test_partition_name?, for the standalone project partition.
+  # Whether the level name falls into the standalone project partition.
+  # See dashboard/config/standalone_projects/README.md.
   def self.standalone_partition_name?(name)
     Policies::StandaloneProjects.partition_name?(name)
   end
@@ -522,29 +521,27 @@ class Level < ApplicationRecord
 
   # UI test and standalone project levels are engineering-owned: developers
   # author them locally, and their definition files live under
-  # dashboard/test/ui/config and dashboard/config/standalone_projects, trees
-  # the daily content push from the levelbuilder environment must never
-  # modify. Refuse to save or destroy them from its web application; seeds
-  # still load them there. The throw halts a destroy and is harmless during
-  # validation. See dashboard/test/ui/config/README.md.
+  # dashboard/test/ui/config and dashboard/config/standalone_projects, trees the
+  # daily content push from the levelbuilder environment must never modify.
+  # Refuse to save or destroy these levels from its web application, while
+  # allowing them to be modified by the seed task. The throw halts a destroy and
+  # is harmless during validation. See dashboard/test/ui/config/README.md.
   def non_production_levels_are_immutable_on_levelbuilder
     return unless rack_env?(:levelbuilder) && CDO.running_web_application?
     return if [name, name_was].none? {|n| Level.ui_test_partition_name?(n) || Level.standalone_partition_name?(n)}
     errors.add(
       :base,
-      'UI test and standalone project levels cannot be changed on levelbuilder; they are maintained in the repo ' \
-        'under dashboard/test/ui/config and dashboard/config/standalone_projects'
+      'UI test and standalone project levels cannot be changed on levelbuilder; ' \
+        'they are maintained by engineers.'
     )
     throw :abort
   end
 
-  # Each partition's seed would claim the definition file of a level matching
-  # both rules; Policies::LevelFiles.partition_for_name raises on such a name.
   def name_matches_at_most_one_partition
     return unless Level.ui_test_partition_name?(name) && Level.standalone_partition_name?(name)
     errors.add(
       :name,
-      'may match only one partition rule, "UI Test " or standalone project ("New ... Project", "... Subproject"); drop one of the markers'
+      'may match only one partition rule: "UI Test ..." or standalone project ("New ... Project", "... Subproject"); drop one of the markers'
     )
   end
 

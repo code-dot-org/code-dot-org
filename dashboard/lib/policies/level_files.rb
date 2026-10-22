@@ -23,17 +23,16 @@ module Policies
       :production
     end
 
-    # Unlike partition_for_name, never raises, so validations can call it: a
-    # name matching two rules is set apart here, and Level refuses it on its
-    # own.
+    # Unlike partition_for_name, never raises, so validations can call it. A
+    # name matching multiple partitions (and thus invalid) is treated as
+    # different from any name in only one partition.
     def self.same_partition?(name, other_name)
       [Level.ui_test_partition_name?(name), Level.standalone_partition_name?(name)] ==
         [Level.ui_test_partition_name?(other_name), Level.standalone_partition_name?(other_name)]
     end
 
     # Which partition the level defined by the given file (.level or DSL)
-    # belongs to, based on which tree its path falls under. Seed tasks compare
-    # this against partition_for_name to refuse misfiled definitions.
+    # belongs to, based on which tree its path falls under.
     def self.partition_for_path(path)
       path = path.to_s
       return :ui_test if path.include?('test/ui/config/')

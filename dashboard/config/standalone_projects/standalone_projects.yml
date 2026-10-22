@@ -1,8 +1,6 @@
 # Each entry defines a standalone project type to be served from
 # /projects/<type>, with the following options:
 # - {String} :name The name of the level to use for this project type.
-#   The level must set is_project_level: "is_project_level": true in a .level
-#   file, `standalone` in a BubbleChoice DSL. Levelbuilder has no field for it.
 # - {Boolean|nil} :levelbuilder_required Whether you must have
 #   UserPermission::LEVELBUILDER to access this project type. Default: false.
 # - {Boolean|nil} :login_required Whether you must be logged in to access this
@@ -10,6 +8,10 @@
 # - {String|nil} :default_image_url If present, set this as the thumbnail image
 #   url when creating a project of this type.
 # - {Boolean|nil} :i18n If present, include this level in the i18n sync
+#
+# The engineer must set level.is_project_level via `"is_project_level": true` in
+# a .level file, or `standalone` in a BubbleChoice DSL file. Levelbuilder has no
+# field for it.
 adaptations:
   name: New Adaptations Project
 artist:
