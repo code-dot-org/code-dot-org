@@ -12,17 +12,34 @@
     "build": {
       "id": "build",
       "title": "Build with AI",
-      "description": "Steering AI toward what you intend, and deciding what to do with what comes back."
+      "description": "Steering AI toward what you intend, and deciding what to do with what comes back.",
+      "evidenceLevels": {
+        "0": "Writes vague one-line prompts with no goal, constraint or edge case, accepts whatever comes back, and cannot say why a prompt produced its result.",
+        "1": "States a basic goal in the prompt, notices obvious mismatches with intent when they are visible or pointed out, and revises broadly, asking the AI to fix it or make it better.",
+        "2": "Names a goal, a constraint and an edge case before generating, compares the output against intent to find specific matches and mismatches, and revises by naming the exact element or behavior to change, explaining why the prompt produced what it did."
+      }
     },
     "language": {
       "id": "language",
       "title": "Language of web dev",
-      "description": "Naming the parts of a page and understanding how they work."
+      "description": "Naming the parts of a page and understanding how they work.",
+      "evidenceLevels": {
+        "0": "Sees a site as one flat idea; sketches are decorative rather than structural, and recurring components go unrecognized even when pointed out.",
+        "1": "Identifies basic components such as the nav bar, hero, cards and footer in an existing page when prompted, and fills in a heavily scaffolded wireframe or site map with inconsistent structure and no clear hierarchy.",
+        "2": "Breaks a multi-page product into pages and components with a clear hierarchy, strips detail away to show structure only and can say why, and lays out a site map or wireframe that supports a plausible user flow with patterns applied consistently.",
+        "3": "Anticipates navigation needs the task did not spell out, moves between site map and wireframe as a decision requires, and picks or adapts a layout pattern on purpose rather than defaulting to the first idea."
+      }
     },
     "debug": {
       "id": "debug",
       "title": "Debug with AI",
-      "description": "Describing a problem so AI can help, and checking that the fix worked."
+      "description": "Describing a problem so AI can help, and checking that the fix worked.",
+      "evidenceLevels": {
+        "0": "Avoids or dismisses error messages, cannot pick out the relevant part of one, and pastes whole code or applies any suggested fix without understanding it.",
+        "1": "Reads an error when prompted but treats it as a stop sign, identifies the literal text without connecting it to the code, and pastes it to the AI with no context.",
+        "2": "Treats an error as the start of a diagnosis, connects it to the line or element at fault and restates it in their own words, and gives the AI the error plus the intended behavior and what changed.",
+        "3": "Tests deliberately to surface errors as feedback, predicts likely causes from prior bugs before reading the full message, and fixes the bug from the AI's explanation, asking for a direct patch only as a check."
+      }
     }
   },
   "checkpoints": [
@@ -224,6 +241,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-steer-it-3",
           "project": true,
+          "validation": {
+            "condition": "The project changed to match a prompt with two or more specific details, or a follow-up that changed one thing.",
+            "measures": { "skillId": "build" }
+          },
           "instructions": "What would you change first? Add a detail or change one thing, and say what to keep.",
           "instructionsPrompt": "Task: In their own project, write a follow-up prompt that adds details or changes one thing.\nOutline: Prompt: \"What would you change first? Add a detail or change one thing, and say what to keep.\" The tutor reads the prompt.\nEvidence: a prompt with 2 or more specific details, or a follow-up that changes one thing."
         }

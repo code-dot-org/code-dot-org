@@ -3,6 +3,7 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
+  latestValidation,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
@@ -187,6 +188,7 @@ describe('useProgress', () => {
       load: jest.fn().mockResolvedValue(loaded),
       saveStep: jest.fn().mockResolvedValue(undefined),
       saveInstructions: jest.fn().mockResolvedValue(undefined),
+      saveValidation: jest.fn().mockResolvedValue(undefined),
     };
     return store as typeof store & ProgressStore;
   };
@@ -320,6 +322,31 @@ describe('useProgress', () => {
       'try',
       generatedInstructions
     );
+  });
+
+  it('appends a validation attempt, dated, without starting the step', async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+    const attempt = {pass: false, evidenceLevel: 1, reason: 'Not yet.'};
+
+    act(() => result.current.recordValidation(sandbox, attempt));
+    act(() =>
+      result.current.recordValidation(sandbox, {...attempt, pass: true})
+    );
+
+    const history = result.current.progress?.steps.try.validationHistory;
+    expect(history).toHaveLength(2);
+    expect(history?.[0]).toMatchObject(attempt);
+    expect(latestValidation(result.current.progress?.steps.try)?.pass).toBe(
+      true
+    );
+    expect(typeof history?.[1].at).toBe('string');
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveValidation).toHaveBeenLastCalledWith(key, 'try', {
+      ...attempt,
+      pass: true,
+    });
+    expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
   it('restores loaded generated instructions', async () => {

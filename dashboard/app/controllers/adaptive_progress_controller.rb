@@ -69,8 +69,18 @@ class AdaptiveProgressController < ApplicationController
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
+  # Appends one check of a project step's work.
   def update_validation_history
-    render json: {error: 'Saving validation history is not implemented yet'}, status: :not_implemented
+    step = @level.find_step(params[:step_id])
+    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['validation'].is_a?(Hash)
+
+    attempt = validation_attempt(step, request.request_parameters['attempt'])
+    return head :unprocessable_entity unless attempt
+
+    row = step_row(step)
+    row.record_validation!(attempt)
+
+    render json: row_json(row)
   end
 
   private def load_adaptive
@@ -112,9 +122,10 @@ class AdaptiveProgressController < ApplicationController
   end
 
   private def row_json(row)
-    return nil unless row.progress || row.generated_instructions
+    return nil unless row.progress || row.generated_instructions || row.validation_history
     entry = {'timeSpent' => 0}.merge(row.progress_json)
     entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
+    entry['validationHistory'] = row.validation_history if row.validation_history
     entry
   end
 
@@ -132,6 +143,30 @@ class AdaptiveProgressController < ApplicationController
   private def time_spent_seconds(time_ms)
     return nil unless time_ms.is_a?(Numeric) && time_ms >= 0
     [(time_ms / 1000.0).ceil, ActivitiesController::MAX_INT_TIME_SPENT].min
+  end
+
+  # The attempt as stored, dated now, or nil if it does not fit: pass is a
+  # boolean, the evidence level is 0 or one the measured skill describes,
+  # the reason fits, and the trace id, if any, is a short string.
+  private def validation_attempt(step, attempt)
+    return nil unless attempt.is_a?(Hash)
+    pass = attempt['pass']
+    level = attempt['evidenceLevel']
+    reason = attempt['reason']
+    trace_id = attempt['traceId']
+    return nil unless [true, false].include?(pass)
+    return nil unless level.is_a?(Integer) && level >= 0
+    skill_evidence_levels = @level.content&.dig('skills', step.dig('validation', 'measures', 'skillId'), 'evidenceLevels')
+    return nil unless skill_evidence_levels.is_a?(Hash) && (level.zero? || skill_evidence_levels.key?(level.to_s))
+    return nil unless reason.is_a?(String) && reason.length <= MAX_TEXT_LENGTH
+    return nil unless trace_id.nil? || (trace_id.is_a?(String) && trace_id.length <= 255)
+    {
+      'at' => Time.zone.now.utc.iso8601,
+      'pass' => pass,
+      'evidenceLevel' => level,
+      'reason' => reason,
+      'traceId' => trace_id,
+    }.compact
   end
 
   # {question id => student responses checked against the content}, or nil if they do not fit.

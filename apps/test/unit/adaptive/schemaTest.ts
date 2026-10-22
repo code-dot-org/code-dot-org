@@ -688,6 +688,37 @@ describe('evidence fields', () => {
     ]);
   });
 
+  it('accepts validation on a project step measuring a checkpoint skill with evidence levels', () => {
+    const raw = withEvidence();
+    Object.assign(raw.checkpoints[1].steps[0], {
+      validation: {
+        condition: 'Adds a heading.',
+        measures: {skillId: 'prompting'},
+      },
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags validation on a sandbox step, on a skill the checkpoint lacks, and on a skill with no evidence levels', () => {
+    const raw = withEvidence();
+    const validation = {
+      condition: 'Adds a heading.',
+      measures: {skillId: 'css'},
+    };
+    Object.assign(raw.checkpoints[1].steps[1], {validation});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: validation judges the student's project, so the step must be marked project",
+      "checkpoints.basics.steps.practice.validation.measures: 'css' is not in skillIds",
+    ]);
+    delete raw.skills.prompting.evidenceLevels;
+    Object.assign(raw.checkpoints[1].steps[1], {
+      validation: {...validation, measures: {skillId: 'prompting'}},
+    });
+    expect(problemsOf(raw)).toContain(
+      "checkpoints.basics.steps.practice.validation.measures: skill 'prompting' describes no evidence levels to rate on"
+    );
+  });
+
   it('flags skippable on a checkpoint with no skills', () => {
     const raw = withEvidence();
     raw.checkpoints[0] = {...raw.checkpoints[0], skippable: true};
