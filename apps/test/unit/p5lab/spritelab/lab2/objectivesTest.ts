@@ -73,6 +73,7 @@ function inputs(over: Partial<ObjectiveInputs> = {}): ObjectiveInputs {
     grid: undefined,
     baselineGrid: undefined,
     imageForRole: {hero: 'Sprite 1', treasure: 'Sprite 3'},
+    imageNames: new Set(['Sprite 1', 'Sprite 3', 'Background 1']),
     source,
     activeTab: 'Code',
     everPlayed: false,
@@ -211,6 +212,7 @@ describe('checkObjective', () => {
       highest: 0.8,
       farthest: 50,
       risen: 0,
+      rightmost: 0.85,
       scenesLanded: new Set(['platform-scene']),
     };
     const played = inputs({everPlayed: true, runtime, activeTab: 'Play'});
@@ -243,6 +245,81 @@ describe('checkObjective', () => {
     );
     expect(checkObjective({kind: 'tab', name: 'Play'}, played)).toBe(true);
     expect(checkObjective({kind: 'tab', name: 'World'}, played)).toBe(false);
+    expect(checkObjective({kind: 'reach', across: 0.8}, played)).toBe(true);
+    expect(checkObjective({kind: 'reach', across: 0.9}, played)).toBe(false);
+    const opened = inputs({activeSceneId: 'story-scene'});
+    expect(
+      checkObjective({kind: 'scene', id: 'story-scene', opened: true}, opened)
+    ).toBe(true);
+    expect(
+      checkObjective({kind: 'scene', id: 'story-scene', opened: true}, played)
+    ).toBe(false);
+  });
+
+  it('can insist that a field names an image the project has', () => {
+    const named = (value: string) =>
+      inputs({
+        source: {
+          blocks: {
+            blocks: [
+              {
+                type: 'spritelab2_whenRun',
+                next: {
+                  block: {
+                    type: 'gamelab_setBackgroundImageAs',
+                    fields: {IMG: value},
+                  },
+                },
+              },
+            ],
+          },
+        },
+      });
+    const check: ObjectiveCheck = {
+      kind: 'block',
+      type: 'gamelab_setBackgroundImageAs',
+      namesImage: 'IMG',
+    };
+    expect(checkObjective(check, named('"Background 1"'))).toBe(true);
+    expect(checkObjective(check, named('null'))).toBe(false);
+    expect(checkObjective(check, named('"Gone"'))).toBe(false);
+  });
+
+  it('can insist that the sprite input names the image of a role', () => {
+    const begins = (image: string) =>
+      inputs({
+        imageForRole: {friend: 'Sprite 2'},
+        source: {
+          blocks: {
+            blocks: [
+              {
+                type: 'spritelab2_whenRun',
+                next: {
+                  block: {
+                    type: 'spritelab2_beginsBehavior',
+                    fields: {BEHAVIOR: 'patrollingOnBlocks'},
+                    inputs: {
+                      SPRITE: {
+                        shadow: {
+                          type: 'gamelab_allSpritesWithAnimation',
+                          fields: {ANIMATION: image},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        },
+      });
+    const check: ObjectiveCheck = {
+      kind: 'block',
+      type: 'spritelab2_beginsBehavior',
+      spriteRole: 'friend',
+    };
+    expect(checkObjective(check, begins('"Sprite 2"'))).toBe(true);
+    expect(checkObjective(check, begins('"Sprite 1"'))).toBe(false);
   });
 
   it('never matches a role the project has no image for', () => {
@@ -259,6 +336,7 @@ describe('runtimeNeeds', () => {
       touch: false,
       height: false,
       move: false,
+      across: false,
     });
     expect(
       runtimeNeeds({
@@ -267,7 +345,13 @@ describe('runtimeNeeds', () => {
           {text: '', check: {kind: 'reach', role: 'treasure'}},
         ],
       })
-    ).toEqual({seconds: false, touch: true, height: false, move: false});
+    ).toEqual({
+      seconds: false,
+      touch: true,
+      height: false,
+      move: false,
+      across: false,
+    });
     expect(
       runtimeNeeds({
         items: [
@@ -275,9 +359,21 @@ describe('runtimeNeeds', () => {
           {text: '', check: {kind: 'reach', height: 0.7}},
         ],
       })
-    ).toEqual({seconds: true, touch: false, height: true, move: false});
+    ).toEqual({
+      seconds: true,
+      touch: false,
+      height: true,
+      move: false,
+      across: false,
+    });
     expect(
       runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
-    ).toEqual({seconds: false, touch: false, height: false, move: true});
+    ).toEqual({
+      seconds: false,
+      touch: false,
+      height: false,
+      move: true,
+      across: false,
+    });
   });
 });

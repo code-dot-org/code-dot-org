@@ -41,6 +41,8 @@ export interface PlayerProgressReport {
   height: number;
   /** The player's center across the view, in px. */
   x: number;
+  /** The same, as a share of the view's width, 0 to 1. */
+  across: number;
   /** How far the player walks in a frame, in px. */
   speed: number;
 }
@@ -67,6 +69,7 @@ export function usePlayProgress(
   const [highest, setHighest] = useState(0);
   const [farthest, setFarthest] = useState(0);
   const [risen, setRisen] = useState(0);
+  const [rightmost, setRightmost] = useState(0);
   // The run's start x, the last x seen, and the lowest the feet have been.
   const runRef = useRef<{x: number; lastX: number; lowest: number} | null>(
     null
@@ -100,7 +103,7 @@ export function usePlayProgress(
     };
   }, [playing, needs.seconds]);
 
-  const wantsPlayer = needs.touch || needs.height || needs.move;
+  const wantsPlayer = needs.touch || needs.height || needs.move || needs.across;
   const onPlayerProgress = useCallback(
     (report: PlayerProgressReport) => {
       if (!playingRef.current) {
@@ -116,6 +119,9 @@ export function usePlayProgress(
       }
       if (needs.height) {
         setHighest(current => Math.max(current, report.height));
+      }
+      if (needs.across) {
+        setRightmost(current => Math.max(current, report.across));
       }
       if (needs.move) {
         let run = runRef.current;
@@ -136,7 +142,7 @@ export function usePlayProgress(
         setRisen(current => Math.max(current, rise));
       }
     },
-    [needs.touch, needs.height, needs.move]
+    [needs.touch, needs.height, needs.move, needs.across]
   );
 
   const onSceneLanded = useCallback((sceneId: string) => {
@@ -152,9 +158,18 @@ export function usePlayProgress(
       highest,
       farthest,
       risen,
+      rightmost,
       scenesLanded,
     }),
-    [longestRunSeconds, touched, highest, farthest, risen, scenesLanded]
+    [
+      longestRunSeconds,
+      touched,
+      highest,
+      farthest,
+      risen,
+      rightmost,
+      scenesLanded,
+    ]
   );
   return {
     runtime,
@@ -175,8 +190,10 @@ export function useObjectives({
   grid,
   baselineGrid,
   imageForRole,
+  imageNames,
   source,
   activeTab,
+  activeSceneId,
   everPlayed,
   runtime,
 }: {
@@ -185,8 +202,10 @@ export function useObjectives({
   grid?: (WorldCell | null)[][];
   baselineGrid?: (WorldCell | null)[][];
   imageForRole: Record<string, string | undefined>;
+  imageNames: ReadonlySet<string>;
   source?: WorkspaceSource;
   activeTab: Tab;
+  activeSceneId?: string;
   everPlayed: boolean;
   runtime: RuntimeProgress;
 }): ObjectivesState {
@@ -197,8 +216,10 @@ export function useObjectives({
       grid,
       baselineGrid,
       imageForRole,
+      imageNames,
       source,
       activeTab,
+      activeSceneId,
       everPlayed,
       runtime: runtime ?? EMPTY_RUNTIME,
     }),
@@ -207,8 +228,10 @@ export function useObjectives({
       grid,
       baselineGrid,
       imageForRole,
+      imageNames,
       source,
       activeTab,
+      activeSceneId,
       everPlayed,
       runtime,
     ]

@@ -27,6 +27,10 @@ export type ObjectiveCheck =
       fields?: Record<string, string>;
       /** A block type that must sit inside the block (an input). */
       contains?: string;
+      /** A field that must name an image the project has. */
+      namesImage?: string;
+      /** The block's SPRITE input must name the image carrying this role. */
+      spriteRole?: string;
     }
   | {
       kind: 'world';
@@ -51,8 +55,16 @@ export type ObjectiveCheck =
       height?: number;
       /** The player ran a cell sideways or left the ground. */
       moved?: boolean;
+      /** The player's center got this far across the view, 0 to 1. */
+      across?: number;
     }
-  | {kind: 'scene'; id: string}
+  | {
+      kind: 'scene';
+      id: string;
+      /** The student opened the scene in the editor, rather than a jump
+          landing on it. */
+      opened?: boolean;
+    }
   | {kind: 'tab'; name: Tab};
 
 export interface Objective {
@@ -82,6 +94,8 @@ export interface RuntimeProgress {
   farthest: number;
   /** The most the feet have risen above a run's lowest point, 0 to 1. */
   risen: number;
+  /** The farthest right the player's center has been, 0 to 1. */
+  rightmost: number;
   /** Scenes a jump has landed on. */
   scenesLanded: ReadonlySet<string>;
 }
@@ -92,10 +106,17 @@ export interface RuntimeNeeds {
   touch: boolean;
   height: boolean;
   move: boolean;
+  across: boolean;
 }
 
 export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
-  const needs = {seconds: false, touch: false, height: false, move: false};
+  const needs = {
+    seconds: false,
+    touch: false,
+    height: false,
+    move: false,
+    across: false,
+  };
   objectives?.items?.forEach(({check}) => {
     if (check.kind === 'play' && check.seconds !== undefined) {
       needs.seconds = true;
@@ -103,6 +124,7 @@ export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
       needs.touch ||= check.role !== undefined;
       needs.height ||= check.height !== undefined;
       needs.move ||= check.moved === true;
+      needs.across ||= check.across !== undefined;
     }
   });
   return needs;
@@ -119,6 +141,7 @@ export const EMPTY_RUNTIME: RuntimeProgress = {
   highest: 0,
   farthest: 0,
   risen: 0,
+  rightmost: 0,
   scenesLanded: new Set(),
 };
 
@@ -144,8 +167,11 @@ export interface ObjectiveInputs {
   baselineGrid?: (WorldCell | null)[][];
   /** Image name by role. */
   imageForRole: Record<string, string | undefined>;
+  /** Every image the project has. */
+  imageNames: ReadonlySet<string>;
   source?: WorkspaceSource;
   activeTab: Tab;
+  activeSceneId?: string;
   everPlayed: boolean;
   runtime: RuntimeProgress;
 }
@@ -175,9 +201,17 @@ export function* realBlocks(
   yield* realBlocks(block.next?.block);
 }
 
+// The image a sprite input names: its block's, else its shadow's.
+function spriteImageOf(block: BlockState): string | undefined {
+  const input = block.inputs?.SPRITE;
+  const picker = input?.block ?? input?.shadow;
+  return fieldValue(picker?.fields?.ANIMATION);
+}
+
 function matchesBlock(
   block: BlockState,
-  check: Extract<ObjectiveCheck, {kind: 'block'}>
+  check: Extract<ObjectiveCheck, {kind: 'block'}>,
+  inputs: ObjectiveInputs
 ): boolean {
   const types = Array.isArray(check.type) ? check.type : [check.type];
   if (!types.includes(block.type) || block.disabledReasons?.length) {
@@ -194,20 +228,33 @@ function matchesBlock(
       return false;
     }
   }
+  if (check.namesImage) {
+    const name = fieldValue(block.fields?.[check.namesImage]);
+    if (name === undefined || !inputs.imageNames.has(name)) {
+      return false;
+    }
+  }
+  if (check.spriteRole !== undefined) {
+    const image = inputs.imageForRole[check.spriteRole];
+    if (image === undefined || spriteImageOf(block) !== image) {
+      return false;
+    }
+  }
   return true;
 }
 
 function hasBlock(
-  source: WorkspaceSource | undefined,
-  check: Extract<ObjectiveCheck, {kind: 'block'}>
+  check: Extract<ObjectiveCheck, {kind: 'block'}>,
+  inputs: ObjectiveInputs
 ): boolean {
+  const {source} = inputs;
   const tops = (source?.blocks?.blocks ?? []).filter(
     top =>
       (check.under === undefined || top.type === check.under) &&
       (check.data === undefined || top.data === check.data)
   );
   return tops.some(top =>
-    [...realBlocks(top)].some(block => matchesBlock(block, check))
+    [...realBlocks(top)].some(block => matchesBlock(block, check, inputs))
   );
 }
 
@@ -261,7 +308,7 @@ export function checkObjective(
     case 'image':
       return inputs.images[check.imageType] >= (check.count ?? 1);
     case 'block':
-      return hasBlock(inputs.source, check);
+      return hasBlock(check, inputs);
     case 'world':
       return worldHolds(check, inputs);
     case 'play':
@@ -279,12 +326,17 @@ export function checkObjective(
           inputs.runtime.risen >= JUMPED_RISE
         );
       }
+      if (check.across !== undefined) {
+        return inputs.runtime.rightmost >= check.across;
+      }
       return (
         check.height !== undefined && inputs.runtime.highest >= check.height
       );
     }
     case 'scene':
-      return inputs.runtime.scenesLanded.has(check.id);
+      return check.opened
+        ? inputs.activeSceneId === check.id
+        : inputs.runtime.scenesLanded.has(check.id);
     case 'tab':
       return inputs.activeTab === check.name;
   }

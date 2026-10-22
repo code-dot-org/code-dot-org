@@ -50,7 +50,10 @@ import {
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {catalogEntries, heldBackBlockTypes} from '../blockCatalog';
-import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
+import {
+  refreshSceneDropdowns,
+  setEditingSceneId,
+} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
@@ -680,14 +683,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [objectiveRoles, animationList]
   );
+  const imageNames = useMemo(
+    () =>
+      new Set(
+        animationList.orderedKeys.map(
+          key => animationList.propsByKey[key]?.name
+        )
+      ),
+    [animationList]
+  );
   const objectives = useObjectives({
     objectives: levelProperties.objectives,
     images: objectiveImages,
     grid: activeWorld.grid,
     baselineGrid,
     imageForRole,
+    imageNames,
     source: activeScene.source as WorkspaceSource | undefined,
     activeTab,
+    activeSceneId: activeSceneId ?? undefined,
     everPlayed: playProgress.everPlayed,
     runtime: playProgress.runtime,
   });
@@ -774,6 +788,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // Go-to-scene blocks draw the pictures from that store.
     refreshSceneDropdowns();
   }, [sceneMetadata, dispatch]);
+  useEffect(() => {
+    setEditingSceneId(activeSceneId);
+    refreshSceneDropdowns();
+  }, [activeSceneId]);
 
   // Cleanup on level switch.
   useEffect(() => {
@@ -1097,7 +1115,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: !isToolboxMode,
   });
 
-  // Run the current program as the live preview (cheap: the engine reuses p5).
+  // Run the current program as the live preview (cheap: the engine reuses
+  // p5), held on its first frame.
   const runProgram = useCallback(() => {
     const engine = engineRef.current;
     if (!engine) {
@@ -1116,7 +1135,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         scene: activeSceneRef.current,
       };
     }
-    engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
+    engine.runProgram(program, referencedImages, activeSceneTypeRef.current, {
+      holdFirstFrame: true,
+    });
     setPlayingPlatformer(engine.isPlatformScene());
   }, [dispatch, getCode, requestThumbnail]);
 
@@ -1808,7 +1829,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     sceneLoadsRef.current++;
-    loadCode(source);
+    // Before free play, what an earlier level built stays put.
+    loadCode(source, {
+      lock: !isLevelEditMode && !isFreeplayMode(levelProperties.levelMode),
+    });
     runLocalScene(activeScene);
     // After the load, so the blocks sit below what the workspace holds.
     addLevelBlocks();
@@ -1819,6 +1843,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     currentSources.source,
     getCurrentBlocks,
     loadCode,
+    levelProperties.levelMode,
     runLocalScene,
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.

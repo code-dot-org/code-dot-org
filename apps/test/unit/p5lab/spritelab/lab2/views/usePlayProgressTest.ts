@@ -2,7 +2,13 @@ import {act, renderHook} from '@testing-library/react-hooks';
 
 import {usePlayProgress} from '@cdo/apps/p5lab/spritelab/lab2/views/useObjectives';
 
-const NEEDS = {seconds: false, touch: false, height: false, move: true};
+const NEEDS = {
+  seconds: false,
+  touch: false,
+  height: false,
+  move: true,
+  across: false,
+};
 
 describe('usePlayProgress', () => {
   it('measures a run from its first report, and starts over on the next run', () => {
@@ -16,6 +22,7 @@ describe('usePlayProgress', () => {
           touching: [],
           height,
           x,
+          across: x / 400,
           speed: 15,
         });
       });
@@ -42,6 +49,7 @@ describe('usePlayProgress', () => {
           touching: [],
           height,
           x,
+          across: x / 400,
           speed: 15,
         });
       });
@@ -59,6 +67,7 @@ describe('usePlayProgress', () => {
           touching: [],
           height,
           x,
+          across: x / 400,
           speed: 15,
         });
       });
@@ -82,6 +91,7 @@ describe('usePlayProgress', () => {
           touching: ['star'],
           height,
           x,
+          across: x / 400,
           speed: 15,
         });
       });
@@ -93,6 +103,26 @@ describe('usePlayProgress', () => {
     report(100, 0.2);
     expect(view.result.current.runtime.risen).toBe(0);
     expect(view.result.current.runtime.touched.has('star')).toBe(true);
+  });
+
+  it('keeps the farthest right the player has been', () => {
+    const view = renderHook(() =>
+      usePlayProgress(true, {...NEEDS, move: false, across: true})
+    );
+    const report = (x: number) =>
+      act(() => {
+        view.result.current.onPlayerProgress?.({
+          touching: [],
+          height: 0.2,
+          x,
+          across: x / 400,
+          speed: 15,
+        });
+      });
+    report(100);
+    report(340);
+    report(200);
+    expect(view.result.current.runtime.rightmost).toBeCloseTo(0.85);
   });
 
   it('asks the engine for reports only when the checklist reads them', () => {
