@@ -73,7 +73,7 @@ module Cdo
     end
 
     def shared_cache
-      CDO_SHARED_CACHE
+      Cdo::SharedCache.cache
     end
 
     def i18n_backend
