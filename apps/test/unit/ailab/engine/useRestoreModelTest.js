@@ -40,7 +40,7 @@ const COLUMNS = {
 
 beforeEach(() => {
   I18n.initI18n();
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   store.dispatch(setImportedData(DATA, false));
   ['temperature', 'cost', 'rain'].forEach(column =>

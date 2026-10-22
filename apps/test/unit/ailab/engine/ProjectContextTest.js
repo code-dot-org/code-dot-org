@@ -129,7 +129,7 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ false));
+      store.dispatch(resetState());
     });
 
     expect(project().hyperparameters).toBeUndefined();
@@ -142,7 +142,7 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ false));
+      store.dispatch(resetState());
     });
 
     expect(project()).toEqual(initialProject);
@@ -154,7 +154,7 @@ describe('ProjectContext', () => {
     act(() => context().snapshotTrainingRun());
 
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ false));
+      store.dispatch(resetState());
     });
     act(() => context().restoreTrainingRun());
 
@@ -399,7 +399,7 @@ describe('ProjectContext opening a saved project', () => {
     act(() => context().openProject(SAVED));
 
     act(() => {
-      store.dispatch(resetState(/*keepsPendingProject*/ false));
+      store.dispatch(resetState());
     });
 
     expect(context().opened).toBe(true);

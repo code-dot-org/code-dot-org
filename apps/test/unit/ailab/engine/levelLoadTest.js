@@ -19,12 +19,6 @@ describe('loadLevel', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  test('abandons a project waiting to be opened', () => {
-    loadLevel(undefined);
-
-    expect(store.getState().resetKeepsPendingProject).toBe(false);
-  });
-
   test('resets the lab to the start of the level', () => {
     loadLevel(undefined);
 

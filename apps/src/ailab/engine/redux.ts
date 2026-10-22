@@ -73,7 +73,6 @@ export interface RootState {
   resultsTab: string;
   presetColumns: PresetColumns | undefined;
   resetCount: number;
-  resetKeepsPendingProject: boolean;
   mode?: Mode;
 }
 
@@ -148,7 +147,6 @@ export const initialState: RootState = {
   resultsTab: ResultsGrades.CORRECT,
   presetColumns: undefined,
   resetCount: 0,
-  resetKeepsPendingProject: false,
 };
 
 const ailabSlice = createSlice({
@@ -288,14 +286,13 @@ const ailabSlice = createSlice({
       state.predictionStepByHand = true;
       state.predictionPlaying = false;
     },
-    resetState(state, action: PayloadAction<boolean>) {
+    resetState(state) {
       return {
         ...initialState,
         mode: state.mode,
         reserveLocation: state.reserveLocation,
         instructionsEnabled: state.instructionsEnabled,
         resetCount: state.resetCount + 1,
-        resetKeepsPendingProject: action.payload,
       };
     },
     setTrainedModelDetail: {

@@ -21,8 +21,7 @@ import type {Mode} from './types';
  */
 export const loadLevel = function (mode?: Mode): void {
   invalidatePendingDatasetLoads();
-  // A level load leaves no saved project waiting to be opened.
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);

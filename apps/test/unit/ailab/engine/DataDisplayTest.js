@@ -88,7 +88,7 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Next row'));
     expect(store.getState().datasetCardRow).toBe(1);
 
-    act(() => store.dispatch(resetState(/*keepsPendingProject*/ false)));
+    act(() => store.dispatch(resetState()));
     expect(store.getState().datasetCardRow).toBe(0);
   });
 

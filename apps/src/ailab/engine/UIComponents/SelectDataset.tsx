@@ -30,9 +30,7 @@ const SelectDataset = () => {
   const invalidData = useAppSelector(state => state.invalidData);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // A project waiting to be opened may be waiting for the dataset chosen here.
-  const resetForDatasetChange = () =>
-    dispatch(resetStateAction(/*keepsPendingProject*/ true));
+  const resetState = () => dispatch(resetStateAction());
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
@@ -50,7 +48,7 @@ const SelectDataset = () => {
       const csvPath = assetPath + dataset.path;
       const jsonPath = assetPath + dataset.metadataPath;
 
-      resetForDatasetChange();
+      resetState();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
       setSelectedJSON(jsonPath);
@@ -61,7 +59,7 @@ const SelectDataset = () => {
   };
 
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    resetForDatasetChange();
+    resetState();
     setSelectedCSV(event.target.files![0]);
     invalidatePendingDatasetLoads();
     parseCSV(event.target.files![0] as unknown as string, false, true);
