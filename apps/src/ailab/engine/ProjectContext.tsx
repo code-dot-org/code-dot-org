@@ -40,6 +40,8 @@ interface ProjectContextValue {
     this: an emptied project is still the state they are now in.
   */
   opened: boolean;
+  /** A project has been handed over and is waiting for its dataset. */
+  opening: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -75,6 +77,7 @@ export const ProjectProvider = ({
   const [pendingProject, setPendingProject] = useState<
     AilabProject | undefined
   >();
+  const opening = pendingProject !== undefined;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -235,6 +238,7 @@ export const ProjectProvider = ({
       project,
       openProject,
       opened,
+      opening,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -247,6 +251,7 @@ export const ProjectProvider = ({
       project,
       openProject,
       opened,
+      opening,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

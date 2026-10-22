@@ -2,8 +2,13 @@ import {act, screen} from '@testing-library/react';
 import React from 'react';
 
 import AilabEngine from '@cdo/apps/ailab/engine/AilabEngine';
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {loadLevel} from '@cdo/apps/ailab/engine/levelLoad';
+import {
+  setColumnsByDataType,
+  setImportedData,
+} from '@cdo/apps/ailab/engine/redux';
 import {store} from '@cdo/apps/ailab/engine/store';
 
 import {renderWithProviders} from './renderWithProviders';
@@ -25,6 +30,14 @@ test('renders the app for a loaded level', () => {
     {store}
   );
   act(() => loadLevel({datasets: ['songs']}));
+  // The readers are mocked, so stand in for the dataset arriving: the lab
+  // waits for one it asked for rather than showing an empty workspace.
+  act(() => {
+    store.dispatch(setImportedData([{artist: 'a', year: '2001'}], false));
+    ['artist', 'year'].forEach(column =>
+      store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
+    );
+  });
 
   expect(screen.getByRole('combobox', {name: 'Predict'})).not.toBeNull();
 });
