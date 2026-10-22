@@ -49,6 +49,7 @@ class StatsigReporter {
       custom: {
         enabledExperiments: experiments.getEnabledExperiments(),
         geRegion: getGlobalEditionRegion(),
+        userAgent: navigator.userAgent,
       },
       customIDs: {stableID: this.stable_id},
     };
@@ -123,6 +124,7 @@ class StatsigReporter {
         isVerifiedInstructor,
         enabledExperiments,
         educatorRole,
+        userAgent: navigator.userAgent,
       },
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
