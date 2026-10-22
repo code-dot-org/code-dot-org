@@ -932,14 +932,16 @@ $z-over-blockly: 71;
 
 .sceneTypeCards {
   display: flex;
+  justify-content: center;
   gap: 12px;
 }
 
 // A card is the radio's label: the whole picture picks. The chosen one
-// carries the brand border; the others a quiet one.
+// carries the brand border; the others a quiet one. Sized from the
+// viewport's height so the dialog fits a short screen (605px) whole.
 .sceneTypeCard {
   display: flex;
-  flex: 1 1 0;
+  flex: 0 1 clamp(136px, calc(100vh - 340px), 336px);
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
