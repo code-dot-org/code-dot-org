@@ -90,7 +90,7 @@ export const ProjectProvider = ({
     reset has just emptied it. Identity, not contents: a reset puts this exact
     project back, while opening one or choosing a column builds a new one.
   */
-  const empty = project === defaultProject;
+  const isDefaultProject = project === defaultProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -222,10 +222,10 @@ export const ProjectProvider = ({
     project is never worth reporting anyway.
   */
   useEffect(() => {
-    if (opened && !empty) {
+    if (opened && !isDefaultProject) {
       onProjectChangeRef.current?.(project);
     }
-  }, [opened, empty, project]);
+  }, [opened, isDefaultProject, project]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
