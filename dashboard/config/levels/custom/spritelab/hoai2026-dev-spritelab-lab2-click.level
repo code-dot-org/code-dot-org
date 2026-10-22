@@ -52,7 +52,7 @@
         }
       ]
     },
-    "long_instructions": "# Talk later\nDrag **at 6 seconds** onto its outline, then a **say** block onto the outline under it. Your new character speaks 6 seconds in.",
+    "long_instructions": "# Talk later\nDrag **at 6 seconds** into the workspace, then a **say** block under it. Your new character speaks 6 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -90,43 +90,6 @@
         }
       ]
     },
-    "add_blocks": [
-      {
-        "ghost": {
-          "type": "gamelab_atTime",
-          "fields": {
-            "UNIT": "\"seconds\""
-          },
-          "inputs": {
-            "N": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 6
-                }
-              }
-            }
-          },
-          "next": {
-            "block": {
-              "type": "gamelab_spriteSay",
-              "fields": {
-                "SPEECH": "Let's go!"
-              },
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "data": "at-6",
-        "tagged": true
-      }
-    ],
     "header_label": "Make a story"
   }
 }]]></config>
