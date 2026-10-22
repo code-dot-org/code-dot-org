@@ -4,6 +4,9 @@ import {setPresetColumns} from './redux';
 import {getSelectableColumns} from './selectors';
 import {store} from './store';
 
+// TODO: update dataset loading to be a single signal rather than
+// separate CSV and JSON parsing that puts things in the store at different times.
+// This will prevent a class of bugs where the project is reconciled against an incomplete/outdated dataset.
 export const loadDataset = async (
   csvPath: string,
   jsonPath: string
