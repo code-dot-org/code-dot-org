@@ -33,14 +33,7 @@ type TrainingRunOutputs = Pick<
 interface ProjectContextValue {
   project: AilabProject;
   openProject: (saved: AilabProject) => void;
-  /*
-    Whether a project has been opened yet. Until it has, the project is the
-    lab's own empty one rather than the student's, and saving it over theirs
-    would lose their work. A reset empties the project but does not unset
-    this: an emptied project is still the state they are now in.
-  */
   isProjectLoaded: boolean;
-  /** A project has been handed over and is waiting for its dataset. */
   isProjectLoading: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
@@ -57,13 +50,7 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 
 interface ProjectProviderProps {
   children: ReactNode;
-  /*
-    A saved project to open the lab with, once its dataset has loaded. Opening
-    starts again whenever this changes, so it must hold still while the student
-    works.
-  */
   initialProject?: AilabProject;
-  /** Called with the project whenever the student changes it. */
   onProjectChange?: (project: AilabProject) => void;
 }
 
@@ -193,9 +180,9 @@ export const ProjectProvider = ({
   }, []);
 
   /*
-    From an effect rather than the initial state: the level load clears the
-    dataset from a layout effect, and a project queued before that would be
-    reconciled against the one the last level left behind.
+    This is done in an effect to ensure the level has loaded and cleared
+    previous data.
+    TODO: see if we can refactor things to not need an effect here.
   */
   useEffect(() => {
     if (initialProject) {
@@ -210,11 +197,6 @@ export const ProjectProvider = ({
     }
   }, [pendingProject, datasetDescribed, applyProject]);
 
-  /*
-    A level change empties the project before the lab is taken down, and what
-    it would be saved to still belongs to the level being left. An emptied
-    project is never worth reporting anyway.
-  */
   useEffect(() => {
     if (isProjectLoaded && !isDefaultProject) {
       onProjectChangeRef.current?.(project);
