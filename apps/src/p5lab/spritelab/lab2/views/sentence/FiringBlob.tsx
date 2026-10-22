@@ -15,10 +15,21 @@ interface FiringBlobProps {
 interface Node {
   x: number;
   y: number;
+  /** Where the node rests; it drifts a little around here. */
+  homeX: number;
+  homeY: number;
+  /** Its own phase and pace, so no two nodes drift in step. */
+  phase: number;
+  pace: number;
   glow: number;
   color: string;
   links: number[];
 }
+
+// How far a node wanders from home, px, and how fast: well under the
+// spacing between nodes, so the net keeps its shape.
+const DRIFT_PX = 1.6;
+const DRIFT_RATE = 0.0006;
 
 interface Pulse {
   from: number;
@@ -75,7 +86,17 @@ function buildNet(neutral: string): Node[] {
       inBlob(x, y) &&
       !nodes.some(n => Math.hypot(n.x - x, n.y - y) < MIN_SPACING)
     ) {
-      nodes.push({x, y, glow: 0, color: neutral, links: []});
+      nodes.push({
+        x,
+        y,
+        homeX: x,
+        homeY: y,
+        phase: random(0, Math.PI * 2),
+        pace: random(0.7, 1.3),
+        glow: 0,
+        color: neutral,
+        links: [],
+      });
     }
   }
   nodes.forEach((a, ia) => {
@@ -142,6 +163,13 @@ function drawNet(
   const breathe = still
     ? 1
     : 1 + Math.sin(now * 0.0016) * 0.03 + Math.min(0.03, activity * 0.002);
+  if (!still) {
+    nodes.forEach(n => {
+      const t = now * DRIFT_RATE * n.pace + n.phase;
+      n.x = n.homeX + Math.sin(t) * DRIFT_PX;
+      n.y = n.homeY + Math.cos(t * 1.3) * DRIFT_PX;
+    });
+  }
   ctx.save();
   ctx.translate(CENTER_X, CENTER_Y);
   ctx.scale(breathe, breathe);
