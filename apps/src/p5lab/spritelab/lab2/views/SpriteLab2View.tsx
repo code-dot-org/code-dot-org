@@ -654,7 +654,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [scenes, activeSceneId, pinnedSceneId, openScene]);
 
   // Premade world, when the level authors one.
-  useWorldStartPattern({
+  const paintedWorld = useWorldStartPattern({
     pattern: levelProperties.worldStartPattern,
     channelId,
     layoutOverride: layoutOverrideParam(),
@@ -693,12 +693,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   // The World grid a "changed" check compares against: the pinned scene's
   // world as the level opened, from the same load-time sources as the image
-  // baseline.
+  // baseline, with the level's premade world painted in.
   const baselineGrid = useMemo(
     () =>
+      paintedWorld?.grid ??
       getScenes(initialSources).find(scene => scene.id === pinnedSceneId)?.world
         ?.grid,
-    [initialSources, pinnedSceneId]
+    [paintedWorld, initialSources, pinnedSceneId]
   );
   const objectiveRoles = useMemo(() => {
     const roles = new Set<string>();
