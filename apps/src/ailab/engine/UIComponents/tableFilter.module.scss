@@ -6,7 +6,6 @@ $tag-max-width: 240px;
 }
 
 .tag {
-  // The label, icon and close button read these.
   --text-neutral-primary: var(--text-brand-secondary);
   --text-neutral-quaternary: var(--text-brand-secondary);
   --text-neutral-placeholder: var(--text-brand-secondary);
@@ -184,7 +183,6 @@ $tag-max-width: 240px;
     background-color: var(--background-selected-strong);
   }
 
-  // The checkbox reads these for its box, check and focus ring.
   label {
     --text-selected-primary: var(--text-selected-primary-inverse);
     --background-selected-primary: var(--background-selected-primary-inverse);

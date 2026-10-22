@@ -28,14 +28,12 @@ const TableFilter = ({view}: TableFilterProps) => {
   const doneRef = useRef<HTMLButtonElement>(null);
   const valuesHeadingId = useId();
   const [open, setOpen] = useState(false);
-  // Undefined lists the columns; a column lists its values.
   const [menuColumn, setMenuColumn] = useState<ColumnId>();
   const {filter} = view;
   const menuChecked =
     filter && filter.column === menuColumn ? filter.values : [];
   const canClear = menuColumn === undefined ? !!filter : menuChecked.length > 0;
 
-  // A filter on a column since hidden keeps its tag, so it can be cleared.
   if (!filter && view.shownFilterableColumns.length === 0) {
     return null;
   }
