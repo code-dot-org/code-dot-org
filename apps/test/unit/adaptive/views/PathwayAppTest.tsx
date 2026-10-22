@@ -207,8 +207,9 @@ describe('PathwayApp', () => {
 
   describe('URL parameters', () => {
     it('opens a URL-specified checkpoint even when there is existing progress', async () => {
+      // intro complete → next is available (not locked).
       mockLoad.mockResolvedValue({
-        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+        steps: {'intro-step': {status: 'complete', timeSpent: 0}},
       });
       window.history.replaceState({}, '', '?checkpoint=next');
 
@@ -281,6 +282,31 @@ describe('PathwayApp', () => {
 
       // multi should resume at multi-b-step (from progress), not intro-step.
       expect(screen.getByText('playing Multi at multi-b-step')).toBeTruthy();
+    });
+
+    it('ignores a URL checkpoint that is locked and shows the map', async () => {
+      // 'next' requires 'intro' to be complete; with no progress it is locked.
+      window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
+
+      await renderSettled();
+
+      expect(screen.getByText('map screen')).toBeTruthy();
+      expect(window.location.search).toBe('');
+    });
+
+    it('ignores a popstate navigation to a locked checkpoint and stays on the map', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      await renderSettled();
+      expect(screen.getByText('map screen')).toBeTruthy();
+
+      // 'next' requires intro to be complete; started is not complete → locked.
+      window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('map screen')).toBeTruthy();
+      expect(window.location.search).toBe('');
     });
 
     it('navigates back to the map when the browser fires popstate with no checkpoint', async () => {

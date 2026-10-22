@@ -96,19 +96,26 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   let initialStepId: string | undefined;
 
   if (urlCheckpointId) {
-    // URL names a checkpoint: open it, and use the URL step if it belongs there.
-    initialCheckpointId = urlCheckpointId;
-    const cp = pathway.checkpoints.find(c => c.id === urlCheckpointId);
-    if (cp) {
-      const urlStepValid = cp.steps.some(s => s.id === urlStepId);
-      initialStepId = urlStepValid ? urlStepId : stepIdToResume(cp, progress);
+    if (statusMap[urlCheckpointId] === 'locked') {
+      // Silently drop the URL rather than let the student bypass a lock.
+      clearUrl();
+    } else {
+      // URL names an accessible checkpoint: open it, using the URL step if valid.
+      initialCheckpointId = urlCheckpointId;
+      const cp = pathway.checkpoints.find(c => c.id === urlCheckpointId);
+      if (cp) {
+        const urlStepValid = cp.steps.some(s => s.id === urlStepId);
+        initialStepId = urlStepValid ? urlStepId : stepIdToResume(cp, progress);
+      }
     }
   } else {
     // No URL checkpoint: auto-start only when the student hasn't begun yet.
     // A step with generatedInstructions but no status doesn't count as started.
     const hasProgress = Object.values(progress.steps).some(s => s.status);
     if (!hasProgress) {
-      const firstCp = pathway.checkpoints.find(c => statusMap[c.id] === 'available');
+      const firstCp = pathway.checkpoints.find(
+        c => statusMap[c.id] === 'available'
+      );
       if (firstCp) {
         initialCheckpointId = firstCp.id;
         initialStepId = stepIdToResume(firstCp, progress);
@@ -171,6 +178,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         setView({kind: 'map'});
       } else if (checkpointId === 'project') {
         setView({kind: 'project'});
+      } else if (statusMap[checkpointId] === 'locked') {
+        clearUrl();
+        setView({kind: 'map'});
       } else {
         const cp = pathway.checkpoints.find(c => c.id === checkpointId);
         const validUrlStep = cp?.steps.some(s => s.id === urlStep)
@@ -186,7 +196,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     };
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
-  }, [pathway.checkpoints, progress]);
+  }, [pathway.checkpoints, progress, statusMap]);
   // After a routing checkpoint, the map focuses the next open checkpoint,
   // read once the finish's step completion and answers are in the status map.
   useEffect(() => {
