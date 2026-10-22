@@ -1,0 +1,7 @@
+// Takes the room the frame's generating box leaves; the drawing centers
+// itself inside.
+.blob {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+}

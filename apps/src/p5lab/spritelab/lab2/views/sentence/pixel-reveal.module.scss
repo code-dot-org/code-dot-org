@@ -47,37 +47,3 @@
     transform: translate(var(--dx), var(--dy)) scale(0.3) rotate(90deg);
   }
 }
-
-.shuffle {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 6px;
-  width: min(42%, 180px);
-  aspect-ratio: 1;
-}
-
-.block {
-  background: var(--hue-light);
-  border-radius: 3px;
-  animation: block-blink 1.2s ease-in-out var(--delay) infinite;
-}
-
-@keyframes block-blink {
-  0%,
-  100% {
-    opacity: 0.15;
-    transform: scale(0.6);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .block {
-    animation: none;
-    opacity: 0.6;
-    transform: none;
-  }
-}

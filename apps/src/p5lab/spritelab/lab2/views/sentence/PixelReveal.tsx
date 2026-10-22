@@ -1,6 +1,5 @@
-// Three overlays for the picture frame: blinking blocks while a picture is
-// generated, the picture sharpening from coarse blocks to full detail, and
-// a burst of sparks when it appears.
+// Two overlays for the picture frame: the picture sharpening from coarse
+// blocks to full detail, and a burst of sparks when it appears.
 
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
@@ -173,26 +172,3 @@ export const SparkleBurst: React.FunctionComponent = () => {
     </div>
   );
 };
-
-const SHUFFLE_SIDE = 5;
-
-/** A grid of blocks blinking in the word colors while the picture is made. */
-export const PixelShuffle: React.FunctionComponent = () => (
-  <div className={styles.shuffle} aria-hidden>
-    {Array.from({length: SHUFFLE_SIDE * SHUFFLE_SIDE}, (_, i) => {
-      const style = {
-        '--delay': `${((i * 7) % (SHUFFLE_SIDE * SHUFFLE_SIDE)) * 60}ms`,
-      } as React.CSSProperties;
-      return (
-        <span
-          key={i}
-          className={classNames(
-            styles.block,
-            hueClass(i + Math.floor(i / SHUFFLE_SIDE))
-          )}
-          style={style}
-        />
-      );
-    })}
-  </div>
-);
