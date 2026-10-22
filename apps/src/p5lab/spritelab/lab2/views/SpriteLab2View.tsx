@@ -1611,7 +1611,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // worldMounted: the world's wrapper can first render after the last change.
   const stageRef = useRef<HTMLDivElement>(null);
   const codeWrapperRef = useRef<HTMLDivElement>(null);
-  const worldWrapperRef = useRef<HTMLDivElement>(null);
+  const worldWrapperRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     if (stageRef.current) {
       stageRef.current.inert = stageCovered;
@@ -1624,9 +1624,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [stageCovered, activeTab, worldMounted]);
 
+  // An editor fades in when it appears or its scene changes, so the swap
+  // reads as a change rather than a jump; the chrome around it stays put.
+  const fadeIn = useCallback((editor: HTMLElement | null) => {
+    if (!reducedMotion()) {
+      editor?.animate?.([{opacity: 0}, {opacity: 1}], {
+        duration: SCENE_SWITCH_FADE_MS,
+        easing: 'ease-out',
+      });
+    }
+  }, []);
+
   // Switching the scene being edited fades the editors in and plays a quick
-  // fade over the preview, so the swap reads as a change of scene rather
-  // than a jump; the chrome around them stays put. Never on arrival.
+  // fade over the preview too. Never on arrival.
   const [sceneSwitches, setSceneSwitches] = useState(0);
   const switchedFromRef = useRef<string | null>(null);
   useEffect(() => {
@@ -1636,16 +1646,38 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     setSceneSwitches(n => n + 1);
-    if (reducedMotion()) {
+    fadeIn(codeWrapperRef.current);
+    fadeIn(worldWrapperRef.current);
+  }, [activeSceneId, fadeIn]);
+
+  // The Code and World editors stay mounted and are unclipped to show, so
+  // they fade in by hand when their tab comes up. Never on arrival.
+  const shownTabRef = useRef<Tab | null>(null);
+  const tabBeforeRef = useRef<Tab | null>(null);
+  useEffect(() => {
+    const from = shownTabRef.current;
+    shownTabRef.current = activeTab;
+    if (!from || from === activeTab) {
       return;
     }
-    [codeWrapperRef.current, worldWrapperRef.current].forEach(editor =>
-      editor?.animate?.([{opacity: 0}, {opacity: 1}], {
-        duration: SCENE_SWITCH_FADE_MS,
-        easing: 'ease-out',
-      })
-    );
-  }, [activeSceneId]);
+    tabBeforeRef.current = from;
+    if (activeTab === 'Code') {
+      fadeIn(codeWrapperRef.current);
+    } else if (activeTab === 'World') {
+      fadeIn(worldWrapperRef.current);
+    }
+  }, [activeTab, fadeIn]);
+  // The world's wrapper first mounts a render after its tab comes up, when
+  // the effect above found nothing to fade.
+  const worldWrapperMounted = useCallback(
+    (wrapper: HTMLDivElement | null) => {
+      worldWrapperRef.current = wrapper;
+      if (wrapper && tabBeforeRef.current) {
+        fadeIn(wrapper);
+      }
+    },
+    [fadeIn]
+  );
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -2541,7 +2573,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             )}
             {worldTabEnabled && worldMounted && (
               <div
-                ref={worldWrapperRef}
+                ref={worldWrapperMounted}
                 className={classNames(
                   moduleStyles.codeTabWrapper,
                   editorsShown && moduleStyles.underEditorStrip,
