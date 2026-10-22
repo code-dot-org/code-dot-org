@@ -147,6 +147,39 @@ describe('useTableView', () => {
     expect(result.current.rows).toEqual([2, 1]);
   });
 
+  test('toggling the sort does not filter the rows again', () => {
+    const countedValueAt = jest.fn(valueAt);
+    const {result} = renderView({valueAt: countedValueAt});
+    act(() => result.current.filterBy('habitat', ['sea']));
+    countedValueAt.mockClear();
+
+    act(() => result.current.toggleSort('name'));
+    expect(countedValueAt).toHaveBeenCalledTimes(2);
+  });
+
+  test('reads a column once for its filter options until the rows change', () => {
+    const countedValueAt = jest.fn(valueAt);
+    const {result, rerender} = renderView({valueAt: countedValueAt});
+    result.current.filterOptions('habitat');
+    result.current.filterOptions('habitat');
+    act(() => result.current.toggleSort('size'));
+    countedValueAt.mockClear();
+
+    result.current.filterOptions('habitat');
+    expect(countedValueAt).not.toHaveBeenCalled();
+
+    rerender({
+      rows: [1, 2],
+      columns: ALL_COLUMNS,
+      columnTypes: COLUMN_TYPES,
+      filterableColumns: ['name', 'habitat'],
+      valueAt: countedValueAt,
+    });
+    countedValueAt.mockClear();
+    expect(result.current.filterOptions('habitat')).toEqual(['sea']);
+    expect(countedValueAt).toHaveBeenCalledTimes(2);
+  });
+
   test('offers sorted, non-blank values for filterable columns only', () => {
     const {result} = renderView();
 

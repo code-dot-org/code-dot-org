@@ -67,11 +67,15 @@ export function useTableView({
   const isNumerical = (column: ColumnId) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
 
+  const matchingRows = useMemo(() => {
+    if (!filter) {
+      return rows;
+    }
+    const checked = new Set(filter.values);
+    return rows.filter(row => checked.has(String(valueAt(row, filter.column))));
+  }, [rows, valueAt, filter]);
+
   const shownRows = useMemo(() => {
-    const matchingRows = rows.filter(
-      row =>
-        !filter || filter.values.includes(String(valueAt(row, filter.column)))
-    );
     if (!sort || !columns.includes(sort.column)) {
       return matchingRows;
     }
@@ -81,10 +85,24 @@ export function useTableView({
     const values = new Map(
       matchingRows.map(row => [row, valueAt(row, column)])
     );
-    return matchingRows.sort(
+    return [...matchingRows].sort(
       (a, b) => sign * compareValues(values.get(a)!, values.get(b)!, numerical)
     );
-  }, [rows, columns, columnTypes, valueAt, sort, filter]);
+  }, [matchingRows, columns, columnTypes, valueAt, sort]);
+
+  const rowOptions = useMemo(() => {
+    const optionsByColumn = new Map<ColumnId, string[]>();
+    return (column: ColumnId) => {
+      let options = optionsByColumn.get(column);
+      if (!options) {
+        options = [...new Set(rows.map(row => String(valueAt(row, column))))]
+          .filter(option => option !== '')
+          .sort(compareText);
+        optionsByColumn.set(column, options);
+      }
+      return options;
+    };
+  }, [rows, valueAt]);
 
   return {
     rows: shownRows,
@@ -106,15 +124,16 @@ export function useTableView({
         return direction && {column, direction};
       }),
     // A checked value stays listed after the rows change, so it can be unchecked.
-    filterOptions: column =>
-      [
-        ...new Set([
-          ...rows.map(row => String(valueAt(row, column))),
-          ...(filter?.column === column ? filter.values : []),
-        ]),
-      ]
-        .filter(option => option !== '')
-        .sort(compareText),
+    filterOptions: column => {
+      const options = rowOptions(column);
+      const missingChecked =
+        filter?.column === column
+          ? filter.values.filter(value => !options.includes(value))
+          : [];
+      return missingChecked.length
+        ? [...options, ...missingChecked].sort(compareText)
+        : options;
+    },
     filterBy: (column, values) =>
       setFilter(values.length ? {column, values} : undefined),
     clearFilter: () => setFilter(undefined),
