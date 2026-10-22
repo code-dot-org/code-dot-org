@@ -1,4 +1,3 @@
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useMemo} from 'react';
 
@@ -13,8 +12,8 @@ import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
-import NoMatchingRows from './NoMatchingRows';
 import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
+import TableEmptyNote from './TableEmptyNote';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
@@ -135,17 +134,7 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
             })}
           </tbody>
         </table>
-        {results.examples.length === 0 ? (
-          <Typography
-            variant="body4"
-            component="p"
-            className={styles.emptyNote}
-          >
-            No rows matched this filter
-          </Typography>
-        ) : (
-          view.rows.length === 0 && <NoMatchingRows />
-        )}
+        <TableEmptyNote view={view} emptyText="No rows matched this filter" />
       </DataTableFrame>
     </>
   );

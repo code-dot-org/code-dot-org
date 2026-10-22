@@ -88,7 +88,7 @@ const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
       </div>
       <nav className={styles.pager} aria-label="Card navigation">
         <PagerButton
-          label="Previous row"
+          label="Previous card"
           icon="chevron-left"
           disabled={position === 0}
           onClick={() => goToCard(position - 1)}
@@ -103,7 +103,7 @@ const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
           {`Card ${position + 1} of ${total}`}
         </Typography>
         <PagerButton
-          label="Next row"
+          label="Next card"
           icon="chevron-right"
           disabled={position === total - 1}
           onClick={() => goToCard(position + 1)}
