@@ -19,12 +19,6 @@ describe('startOver', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  test('abandons a project waiting to be opened', () => {
-    startOver();
-
-    expect(store.getState().resetKeepsPendingProject).toBe(false);
-  });
-
   test('resets everything else to the start of the level', () => {
     startOver();
 
@@ -50,12 +44,6 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('abandons a project waiting to be opened', () => {
-    loadLevel(undefined);
-
-    expect(store.getState().resetKeepsPendingProject).toBe(false);
-  });
-
   test('reserves random rows for testing unless the mode asks for the last rows', () => {
     loadLevel(undefined);
     expect(store.getState().reserveLocation).toBe('random');

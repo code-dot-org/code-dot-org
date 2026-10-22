@@ -65,7 +65,7 @@ function load(id, features) {
     fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));

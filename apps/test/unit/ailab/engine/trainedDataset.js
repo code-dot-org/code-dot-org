@@ -38,7 +38,7 @@ export function trainDataset(
     fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));

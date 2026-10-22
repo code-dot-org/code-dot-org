@@ -40,9 +40,7 @@ const SelectDataset = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const uploadButtonRef = useRef<HTMLButtonElement>(null);
 
-  // A project waiting to be opened may be waiting for the dataset chosen here.
-  const resetForDatasetChange = () =>
-    dispatch(resetStateAction(/*keepsPendingProject*/ true));
+  const resetState = () => dispatch(resetStateAction());
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
@@ -65,7 +63,7 @@ const SelectDataset = () => {
         setUploadedFile(undefined);
       }
 
-      resetForDatasetChange();
+      resetState();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
       setSelectedJSON(jsonPath);
@@ -76,7 +74,7 @@ const SelectDataset = () => {
   };
 
   const loadUpload = (file: File) => {
-    resetForDatasetChange();
+    resetState();
     setSelectedCSV(file);
     invalidatePendingDatasetLoads();
     parseCSV(file as unknown as string, false, true);
@@ -96,7 +94,7 @@ const SelectDataset = () => {
 
   const handleUploadRemove = () => {
     if (isUploadSelected) {
-      resetForDatasetChange();
+      resetState();
       invalidatePendingDatasetLoads();
     }
     setUploadedFile(undefined);

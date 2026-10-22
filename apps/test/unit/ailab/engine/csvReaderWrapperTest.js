@@ -16,7 +16,7 @@ const parseResult = animal => ({
 
 describe('parseCSV', () => {
   beforeEach(() => {
-    store.dispatch(resetState(/*keepsPendingProject*/ false));
+    store.dispatch(resetState());
     invalidatePendingDatasetLoads();
     Papa.parse.mockReset();
   });
