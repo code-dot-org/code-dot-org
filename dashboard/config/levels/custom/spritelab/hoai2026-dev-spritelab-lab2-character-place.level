@@ -54,12 +54,6 @@
             "type": "spritelab2_makeSpriteAtPosition",
             "under": "spritelab2_whenRun"
           }
-        },
-        {
-          "text": "Click **Play** to see them.",
-          "check": {
-            "kind": "play"
-          }
         }
       ]
     },
