@@ -7,6 +7,7 @@ export const SUPPORTED_LAB_TYPES = [
   'ailab',
   'aichat',
   'sketchlab',
+  'video',
   'multi',
   'match',
   'freeResponse',
@@ -23,6 +24,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   ailab: 'Ailab',
   aichat: 'Aichat',
   sketchlab: 'Sketchlab',
+  video: 'StandaloneVideo',
   multi: 'Multi',
   match: 'Match',
   freeResponse: 'FreeResponse',
@@ -37,6 +39,7 @@ export const LAB_LABELS = {
   ailab: 'AI Lab',
   aichat: 'AI Chat',
   sketchlab: 'Sketch Lab',
+  video: 'Video',
   multi: 'Multiple Choice',
   match: 'Matching',
   freeResponse: 'Free Response',
@@ -50,6 +53,23 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
   'match',
   'bubbleChoice',
 ];
+
+// StandaloneVideo validates its key at create time, so the placeholder
+// carries a real one: the first row of config/videos.csv, until the
+// author swaps in the actual video.
+export const PLACEHOLDER_VIDEO_KEY = 'maze_intro';
+
+// Properties the create POST itself must carry. Full width is what
+// gives the lab2 video page its footer.
+export const CREATE_PROPERTIES_BY_LAB: Partial<
+  Record<LabType, Record<string, unknown>>
+> = {
+  video: {
+    video_key: PLACEHOLDER_VIDEO_KEY,
+    uses_lab2: true,
+    video_full_width: true,
+  },
+};
 
 // Labs whose starter files are code, so an author may supply it.
 export const CODEBRIDGE_LAB_TYPES: readonly LabType[] = [
@@ -137,6 +157,17 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
       'canvas itself is left blank for the student to draw.',
     ],
     chooseFor: 'drawing / annotation exercises',
+  },
+  video: {
+    promptLabel: 'Video',
+    promptDescription: [
+      'a page where the student watches a short video. The video does not',
+      'exist yet: the level is created as a placeholder holding a brief for',
+      'the video team, with a stand-in video playing until the real one',
+      'replaces it. Use when the plan calls for a video explainer, demo, or',
+      'story beat.',
+    ],
+    chooseFor: 'videos still to be produced',
   },
   multi: {
     promptLabel: 'Multi',
