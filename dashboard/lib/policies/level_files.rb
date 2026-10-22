@@ -8,7 +8,7 @@ module Policies
     }.freeze
 
     def self.partition_for_name(level_name)
-      Level.ui_test_name?(level_name) ? :ui_test : :production
+      Level.ui_test_partition_name?(level_name) ? :ui_test : :production
     end
 
     # Which partition the level defined by the given file (.level or DSL)
