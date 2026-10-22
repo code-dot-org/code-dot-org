@@ -56,6 +56,27 @@ describe('sourceToProject', () => {
   });
 
   /*
+    Each result is rendered as it was saved, so one missing a field would
+    reach the results panel as undefined.
+  */
+  test('drops historic results that are missing a field', () => {
+    const [complete] = SAVED.historicResults;
+    const project = sourceToProject({
+      ...SAVED,
+      historicResults: [
+        complete,
+        {...complete, accuracy: undefined},
+        {...complete, features: ['b', 9]},
+        {...complete, correct: '4'},
+        'a run went here',
+        null,
+      ],
+    });
+
+    expect(project.historicResults).toEqual([complete]);
+  });
+
+  /*
     The indices name rows of the dataset, so a partly valid list is worse than
     none: train.refit would grade against rows the saved run never used.
   */

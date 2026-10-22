@@ -14,7 +14,7 @@ export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
 
 export {defaultProject} from './types';
-export type {AilabProject} from './types';
+export type {AilabProject, HistoricResult} from './types';
 
 export type {
   InstructionsKey,

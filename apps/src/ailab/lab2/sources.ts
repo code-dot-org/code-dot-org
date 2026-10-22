@@ -1,10 +1,12 @@
 /*
-  AI Lab's main.json: a student's project as the engine keeps it. The engine
-  owns the shape; this module is where an untrusted copy of it from the server
-  is made safe to open.
+  AI Lab's main.json: a student's project as the engine stores it.
 */
 
-import {defaultProject, type AilabProject} from '@cdo/apps/ailab/engine';
+import {
+  defaultProject,
+  type AilabProject,
+  type HistoricResult,
+} from '@cdo/apps/ailab/engine';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 export type AilabProjectSources = ProjectSources & {source: AilabProject};
@@ -17,6 +19,21 @@ export const AILAB_DEFAULT_SOURCES: AilabProjectSources = {
 const columnNames = (value: unknown): string[] =>
   Array.isArray(value) ? value.filter(name => typeof name === 'string') : [];
 
+const isHistoricResult = (value: unknown): value is HistoricResult => {
+  if (typeof value !== 'object' || value === null) {
+    return false;
+  }
+  const result = value as Partial<HistoricResult>;
+  return (
+    typeof result.label === 'string' &&
+    Array.isArray(result.features) &&
+    result.features.every(feature => typeof feature === 'string') &&
+    typeof result.accuracy === 'string' &&
+    typeof result.correct === 'number' &&
+    typeof result.total === 'number'
+  );
+};
+
 const rowIndices = (value: unknown): number[] | undefined =>
   Array.isArray(value) && value.every(index => Number.isInteger(index))
     ? (value as number[])
@@ -24,10 +41,8 @@ const rowIndices = (value: unknown): number[] | undefined =>
 
 /*
   A saved source as an AilabProject, dropping anything that isn't the shape the
-  engine expects. Nothing validates main.json on the way in, so a project saved
-  by an older version of the lab, or edited by hand, arrives here unchecked.
+  engine expects.
 */
-// TODO: do we need this
 export function sourceToProject(
   source: ProjectSources['source']
 ): AilabProject {
@@ -43,7 +58,7 @@ export function sourceToProject(
     hyperparameters: saved.hyperparameters,
     accuracyCheckRowIndices: rowIndices(saved.accuracyCheckRowIndices),
     historicResults: Array.isArray(saved.historicResults)
-      ? saved.historicResults
+      ? saved.historicResults.filter(isHistoricResult)
       : [],
   };
 }

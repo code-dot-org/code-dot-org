@@ -49,7 +49,5 @@ export function useRestoreModel(): boolean {
     dispatch,
   ]);
 
-  // Nothing to wait for until a project has been opened; a lab with no host
-  // to open one never waits at all.
   return isProjectLoaded && !attempted;
 }

@@ -85,7 +85,6 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
     loadLevel(mode);
   }, [levelProperties.id, mode]);
 
-  // The model card is often the last thing written, and saves are throttled.
   const onContinue = async () => {
     await projectManager?.flushSave();
     dispatch(continueOrFinishLesson());
