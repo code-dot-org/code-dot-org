@@ -90,7 +90,7 @@ module PracticeProblemGenerator
   def self.normalize(problems, lesson)
     valid_types = TYPES.values
     valid_objective_ids = lesson.objectives.pluck(:id).to_set
-    seen = existing_problem_texts(lesson).map {|t| normalize_text(t)}.to_set
+    seen = existing_problem_texts(lesson).to_set {|t| normalize_text(t)}
 
     problems.filter_map do |problem|
       next unless problem.is_a?(Hash)
@@ -148,7 +148,7 @@ module PracticeProblemGenerator
   end
 
   def self.truthy?(value)
-    value == true || value.to_s.strip.downcase == 'true'
+    value == true || value.to_s.strip.casecmp('true').zero?
   end
 
   def self.normalize_text(text)

@@ -94,7 +94,7 @@ class PracticeProblemGeneratorTest < ActiveSupport::TestCase
 
     result = PracticeProblemGenerator.generate(lesson: @lesson)
 
-    assert_equal ['A fresh question'], result.map {|p| p[:problemText]}
+    assert_equal ['A fresh question'], result.pluck(:problemText)
     assert_equal [@objective.id], result.first[:objectiveIds]
   end
 
@@ -108,7 +108,7 @@ class PracticeProblemGeneratorTest < ActiveSupport::TestCase
     )
 
     result = PracticeProblemGenerator.generate(lesson: @lesson)
-    assert_equal ['Good one'], result.map {|p| p[:problemText]}
+    assert_equal ['Good one'], result.pluck(:problemText)
   end
 
   test 'is resilient to malformed model output' do
@@ -127,7 +127,7 @@ class PracticeProblemGeneratorTest < ActiveSupport::TestCase
 
     result = PracticeProblemGenerator.generate(lesson: @lesson)
 
-    assert_equal ['Salvageable'], result.map {|p| p[:problemText]}
+    assert_equal ['Salvageable'], result.pluck(:problemText)
     assert_equal [
       {'option' => 'for', 'correct' => true},
       {'option' => 'if', 'correct' => false},
