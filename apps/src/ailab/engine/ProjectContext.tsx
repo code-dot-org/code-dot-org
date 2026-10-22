@@ -49,11 +49,6 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 interface ProjectProviderProps {
   children: ReactNode;
   project?: AilabProject;
-  /*
-    Called with the project after the student changes it: choosing columns or
-    training a model. Not called for a level's preset columns, for a project
-    opened from a save, or for a reset, none of which are the student's work.
-  */
   onEdited?: (project: AilabProject) => void;
 }
 
@@ -65,7 +60,7 @@ export const ProjectProvider = ({
   const [project, setProject] = useState<AilabProject>(
     openWith ?? initialProject
   );
-  // Read by edit() so two changes in one tick build on each other.
+  // Track the latest project as a ref to ensure we always have the most recent state.
   const latestProject = useRef(project);
   latestProject.current = project;
   const onEditedRef = useRef(onEdited);
