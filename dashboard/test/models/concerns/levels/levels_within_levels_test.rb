@@ -277,7 +277,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert level.valid?
   end
 
-  test 'a level and its children must be in the same partition, standalone included' do
+  test 'a level and its children must be on the same side of the standalone project partition' do
     subproject = create(:level, name: 'LevelsWithinLevels Subproject')
     prod_child = create(:level, name: 'LevelsWithinLevels standalone prod child')
 

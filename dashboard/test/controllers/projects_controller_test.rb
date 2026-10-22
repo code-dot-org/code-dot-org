@@ -392,6 +392,14 @@ class ProjectsControllerTest < ActionController::TestCase
     assert @response.headers['Location'].ends_with? '/edit?enableMaker=true'
   end
 
+  test '/applab reopens the most recent applab project' do
+    get :create_new, params: {key: 'applab'}
+    edit_url = @response.headers['Location']
+
+    get :load, params: {key: 'applab'}
+    assert_redirected_to edit_url
+  end
+
   test 'get_or_create_for_level without script creates new channel if none exists' do
     level = create(:level, :blockly)
     get :get_or_create_for_level, params: {level_id: level.id}
