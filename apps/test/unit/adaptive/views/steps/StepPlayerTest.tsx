@@ -213,7 +213,7 @@ describe('StepPlayer', () => {
       pushState.mockClear();
       renderPlayer({initialStepId: 'two'});
 
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
       // URL already correct → no pushState (avoids a duplicate history entry).
       expect(pushState).not.toHaveBeenCalled();
     });
@@ -221,7 +221,7 @@ describe('StepPlayer', () => {
     it('falls back to step 0 when initialStepId is not found', () => {
       renderPlayer({initialStepId: 'unknown-step'});
 
-      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: one')).toBeTruthy();
       expect(pushState).toHaveBeenCalledWith(
         null,
         '',
@@ -232,28 +232,28 @@ describe('StepPlayer', () => {
     it('ignores popstate events for a different checkpoint', () => {
       renderPlayer();
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
 
       pushState.mockClear();
       window.history.replaceState({}, '', '?checkpoint=other&step=one');
       act(() => window.dispatchEvent(new PopStateEvent('popstate')));
 
       // Step unchanged — the event was for a different checkpoint.
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
       expect(pushState).not.toHaveBeenCalled();
     });
 
     it('navigates to the previous step when the browser fires popstate', () => {
       renderPlayer();
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
 
       pushState.mockClear();
       // Simulate browser back: URL reverts to step one, popstate fires.
       window.history.replaceState({}, '', '?checkpoint=basics&step=one');
       act(() => window.dispatchEvent(new PopStateEvent('popstate')));
 
-      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: one')).toBeTruthy();
       // URL already correct → no duplicate history entry added.
       expect(pushState).not.toHaveBeenCalled();
     });

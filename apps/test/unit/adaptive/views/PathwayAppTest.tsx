@@ -460,7 +460,7 @@ describe('PathwayApp', () => {
 
   it('opens the project when a checkpoint is left for it', async () => {
     await renderSettled();
-    expect(screen.getByText('playing Intro')).toBeTruthy();
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
 
     act(() => screen.getByText('finish pathway').click());
 
