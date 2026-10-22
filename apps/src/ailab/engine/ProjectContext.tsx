@@ -42,6 +42,12 @@ interface ProjectContextValue {
   opened: boolean;
   /** A project has been handed over and is waiting for its dataset. */
   opening: boolean;
+  /*
+    The project is the lab's own empty one: nothing has been opened or chosen
+    yet, or a reset has just emptied it. Saving it would be saving the absence
+    of the student's work rather than their work.
+  */
+  empty: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -78,6 +84,11 @@ export const ProjectProvider = ({
     AilabProject | undefined
   >();
   const opening = pendingProject !== undefined;
+  /*
+    Identity, not contents: a reset puts this exact project back, while
+    opening one or choosing a column always builds a new one.
+  */
+  const empty = project === initialProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -239,6 +250,7 @@ export const ProjectProvider = ({
       openProject,
       opened,
       opening,
+      empty,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -252,6 +264,7 @@ export const ProjectProvider = ({
       openProject,
       opened,
       opening,
+      empty,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

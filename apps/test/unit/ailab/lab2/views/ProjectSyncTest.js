@@ -140,6 +140,22 @@ describe('ProjectSync', () => {
     expect(save.mock.lastCall[0].labelColumn).toBe('c');
   });
 
+  /*
+    Switching levels loads the next one while this component is still standing
+    and still saving to the level being left. The lab is emptied first, and
+    saving that would replace the student's work with nothing.
+  */
+  test('does not save the emptying that a level change begins with', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    act(() => context().addSelectedFeature('c'));
+    save.mockClear();
+
+    act(() => loadLevel(undefined));
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
   test('opens the saved project once, not on every dataset', () => {
     const {context} = renderSync();
     loadDataset();

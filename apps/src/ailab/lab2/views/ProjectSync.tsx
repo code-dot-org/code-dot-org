@@ -16,7 +16,7 @@ interface ProjectSyncProps {
   the project is, while the sources belong to the view above them.
 */
 const ProjectSync: React.FC<ProjectSyncProps> = ({savedProject, save}) => {
-  const {project, openProject, opened} = useProject();
+  const {project, openProject, opened, empty} = useProject();
   const requested = useRef(false);
 
   /*
@@ -32,11 +32,16 @@ const ProjectSync: React.FC<ProjectSyncProps> = ({savedProject, save}) => {
     openProject(savedProject);
   }, [openProject, savedProject]);
 
+  /*
+    A level change empties the project before this component is taken down,
+    and the sources it would be saved to still belong to the level being left.
+    An emptied project is never worth saving anyway.
+  */
   useEffect(() => {
-    if (opened) {
+    if (opened && !empty) {
       save(project);
     }
-  }, [opened, project, save]);
+  }, [opened, empty, project, save]);
 
   return null;
 };
