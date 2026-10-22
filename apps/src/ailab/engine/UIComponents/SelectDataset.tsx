@@ -40,7 +40,6 @@ const SelectDataset = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const uploadButtonRef = useRef<HTMLButtonElement>(null);
 
-  // A project waiting to be opened may be waiting for the dataset chosen here.
   const resetState = () => dispatch(resetStateAction());
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
