@@ -10,9 +10,10 @@
 // link and never loads it; it also blocks YouTube (item 3) and the
 // certificate pages (item 6), which CSS cannot reach.
 //
-// It also keeps signed-out progress across app restarts, zooms the page,
-// loads the header's zoom controls in debug builds, tells the app when the
-// page has settled, and holds Google's tag scripts until then.
+// It also keeps signed-out progress and the anonymous user ID across app
+// restarts, zooms the page, loads the header's zoom controls in debug
+// builds, tells the app when the page has settled, and holds Google's tag
+// scripts until then.
 (function () {
   if (window.__codeaiHideSiteChrome) {
     return;
@@ -149,6 +150,57 @@
   function cookieValue(name) {
     var match = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
     return match ? decodeURIComponent(match[1]) : null;
+  }
+
+  // The site sets its Statsig stable ID, which is also the anonymous user ID
+  // for signed-out progress, as a session cookie, and the WebView forgets
+  // session cookies when the app's process ends. Each write of it is given a
+  // year's lifetime here; one that already has a lifetime, such as the site
+  // removing it without consent, passes unchanged. Each page also renews the
+  // cookie it finds, so the year counts from the last visit.
+  var STABLE_ID_COOKIE = 'statsig_stable_id';
+  var STABLE_ID_MAX_AGE_S = 365 * 24 * 60 * 60;
+  var cookieProperty = Object.getOwnPropertyDescriptor(Document.prototype, 'cookie');
+  if (cookieProperty && cookieProperty.set) {
+    Object.defineProperty(document, 'cookie', {
+      configurable: true,
+      get: function () {
+        return cookieProperty.get.call(this);
+      },
+      set: function (value) {
+        var text = String(value);
+        if (
+          text.indexOf(STABLE_ID_COOKIE + '=') === 0 &&
+          !/;\s*(expires|max-age)=/i.test(text)
+        ) {
+          text += '; max-age=' + STABLE_ID_MAX_AGE_S;
+        }
+        cookieProperty.set.call(this, text);
+      },
+    });
+  }
+
+  // Renews only the stable ID cookie's expiry and keeps the domain, path and
+  // other attributes the site gave it; the Cookie Store API reports those,
+  // document.cookie does not.
+  if (window.cookieStore) {
+    window.cookieStore
+      .get(STABLE_ID_COOKIE)
+      .then(function (cookie) {
+        if (!cookie) {
+          return;
+        }
+        return window.cookieStore.set({
+          name: cookie.name,
+          value: cookie.value,
+          domain: cookie.domain,
+          path: cookie.path,
+          sameSite: cookie.sameSite,
+          partitioned: cookie.partitioned,
+          expires: Date.now() + STABLE_ID_MAX_AGE_S * 1000,
+        });
+      })
+      .catch(function () {});
   }
 
   // Signed-out progress and level code live in sessionStorage, which the
