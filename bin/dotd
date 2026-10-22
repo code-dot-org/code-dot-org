@@ -229,7 +229,6 @@ def dotd_menu_prompt_all
 
       DTS:
 
-        #{bold 'S'}: Commit content on #{underline 's'}taging.
         #{bold 'DTS'}: #{underline 'D'}eploy #{underline 't'}o #{underline 's'}taging from levelbuilder.
 
       DTT:
@@ -270,12 +269,15 @@ def dotd_menu(dotd_name)
       menu.choice(:D) {show_full_menu = false}
       menu.choice(:H) {get_honeybadger_issues}
       menu.choice(:C) {perform_self_check}
-      menu.choice(:S) do
-        if run_on 'staging', "staging/bin/content-push --name=\"#{@dotd_name}\""
-          @logger.info 'commits content on staging'
-        else
-          @logger.info 'error attempting to commit content on staging'
-        end
+      # HighLine resolves a unique prefix, so without this choice,
+      # "S" selects STP and seeds production without confirming.
+      menu.hidden(:S) do
+        puts <<-OUTPUT.unindent
+
+          The staging content push is gone. Content is committed on levelbuilder
+          only, with #{bold 'L'}.
+
+        OUTPUT
       end
       menu.choice(:DTS) do
         if GitHub.compare(base: 'staging', head: 'levelbuilder').empty?
