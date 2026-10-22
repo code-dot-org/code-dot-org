@@ -6,7 +6,7 @@ import {Store} from 'redux';
 import * as ailab from '@cdo/apps/ailab/engine';
 import {ACCURACY_AT_LEAST} from '@cdo/apps/ailab/lab2/AccuracyValidator';
 import {AilabLevelProperties} from '@cdo/apps/ailab/lab2/types';
-import AilabView from '@cdo/apps/ailab/lab2/views/AilabView';
+import AilabWorkspace from '@cdo/apps/ailab/lab2/views/AilabWorkspace';
 import progress, {
   initProgress,
   sendSuccessReport,
@@ -100,11 +100,11 @@ const LEVELS = {
 const CurrentLevel = () => {
   const {levelProperties} = useLevelProperties();
   return (
-    <AilabView levelProperties={levelProperties as AilabLevelProperties} />
+    <AilabWorkspace levelProperties={levelProperties as AilabLevelProperties} />
   );
 };
 
-describe('AilabView', () => {
+describe('AilabWorkspace', () => {
   let store: Store;
 
   beforeEach(() => {
