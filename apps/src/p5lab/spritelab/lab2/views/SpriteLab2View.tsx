@@ -1132,8 +1132,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     scenesSeen,
   });
 
-  // The level's first image: the dialog opens on arrival and again after a
-  // dismissal, until the project has an image in the level's role.
+  // The level's first image: the dialog opens on arrival, and again after
+  // a dismissal while the project has no image in the level's role.
+  const firstImageAskedRef = useRef<number | null>(null);
   const firstImageDone = useMemo(() => {
     const mode = levelProperties.levelMode;
     return (
@@ -1146,8 +1147,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [levelProperties.levelMode, animationList]);
   useEffect(() => {
+    const mode = levelProperties.levelMode;
+    const asked = firstImageAskedRef.current === levelProperties.id;
     if (
-      firstImageDone ||
+      !mode?.imageFirst ||
+      (asked && firstImageDone) ||
       !isEditable ||
       isLevelEditMode ||
       !animationsSeeded ||
@@ -1155,16 +1159,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     ) {
       return;
     }
-    const mode = levelProperties.levelMode;
-    const timer = window.setTimeout(
-      () =>
-        requestPicture({
-          imageType: mode?.imageType,
-          subject: mode?.imageSubject,
-          onPicked: () => {},
-        }),
-      300
-    );
+    const timer = window.setTimeout(() => {
+      firstImageAskedRef.current = levelProperties.id;
+      requestPicture({
+        imageType: mode.imageType,
+        subject: mode.imageSubject,
+        onPicked: () => {},
+      });
+    }, 300);
     return () => window.clearTimeout(timer);
   }, [
     firstImageDone,
@@ -1172,6 +1174,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     animationsSeeded,
     pictures.pickRequest,
     levelProperties.levelMode,
+    levelProperties.id,
   ]);
 
   const settleLevelGhosts = useCallback(
