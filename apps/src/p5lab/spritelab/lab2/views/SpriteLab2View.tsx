@@ -1763,12 +1763,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else if (activeTab === 'Code' || activeTab === 'World') {
       // Only when the stage shows something else: after Play, or after a
       // jump or an external scene. Code, World and Images share one
-      // preview, so moving between them leaves it running.
+      // preview, so moving between them leaves it as it is. The preview
+      // is the held first frame, not the game Play left running.
       const playing = currentPlayingRef.current;
       const previewingActive =
         playing?.kind === 'local' && playing.scene.id === activeSceneId;
       if (prevTab === 'Play' || !previewingActive) {
-        runScene(activeSceneId);
+        runProgram();
       }
     }
     // playStartSceneId is set in the same batch as the tab change; the
@@ -1777,6 +1778,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeTab,
     engineReady,
     runScene,
+    runProgram,
     activeSceneId,
     defaultPlaySceneId,
     playStartSceneId,
