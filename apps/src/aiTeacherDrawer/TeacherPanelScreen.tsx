@@ -49,6 +49,7 @@ const TeacherPanelScreen: React.FC = () => {
         scriptId={data.script_id}
         unitName={data.script_name}
         pageType={pageType}
+        inTaDrawer
       />
     </div>
   );
