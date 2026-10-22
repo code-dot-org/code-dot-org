@@ -58,13 +58,13 @@ module Policies
       LEVEL_NAMES.include?(name)
     end
 
-    # The standalone project partition's name rule, case-insensitive like
-    # "UI Test "; see dashboard/config/standalone_projects/README.md.
     PROJECT_NAME_PATTERN = /\Anew .+ project\z/i
     SUBPROJECT_NAME_SUFFIX = ' subproject'.freeze
     # Project levels named before the "New ... Project" rule.
     LEGACY_PROJECT_NAMES = ['Calc Free Play', 'Eval Free Play'].freeze
 
+    # The standalone project partition's name rule. Case-insensitive.
+    # See dashboard/config/standalone_projects/README.md.
     def self.partition_name?(level_name)
       level_name = level_name.to_s
       PROJECT_NAME_PATTERN.match?(level_name) ||

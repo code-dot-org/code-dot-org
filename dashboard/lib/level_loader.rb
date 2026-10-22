@@ -1,12 +1,10 @@
 require 'set'
 
 class LevelLoader
-  # Top-level entry point, called by rake seed:custom_levels,
-  # seed:standalone_project_levels and seed:custom_levels_ui_tests. With a
-  # level_name, the partition is chosen by the name; without one,
-  # `partition` picks which partition's levels to load (a
-  # Policies::LevelFiles::LEVELS_SUBDIR key).
-  # See dashboard/test/ui/config/README.md.
+  # Top-level entry point. With a level_name, the partition is chosen by the
+  # name; without one, `partition` picks which partition's levels to load (a
+  # Policies::LevelFiles::LEVELS_SUBDIR key). See
+  # dashboard/test/ui/config/README.md.
   def self.load_custom_levels(level_name, root_dir, partition: nil)
     import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, partition: partition), level_name: level_name)
   end
