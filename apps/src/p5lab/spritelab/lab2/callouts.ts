@@ -16,17 +16,17 @@ export interface LevelCallout {
     done?: number[];
     /** Checklist items, by index, that must not be done yet. */
     notDone?: number[];
-    /** A tab the student must not have opened yet. */
-    tabNever?: Tab;
+    /** The arrow shows while the student is not on this tab. */
+    tabNot?: Tab;
     /** A scene the student must not have opened yet. */
     sceneNever?: string;
   };
 }
 
-/** What the level has seen the student do so far. */
+/** What the level has seen the student do so far, and where they are. */
 export interface CalloutState {
   done: ReadonlySet<number>;
-  tabsSeen: ReadonlySet<Tab>;
+  tab: Tab;
   scenesSeen: ReadonlySet<string>;
 }
 
@@ -44,7 +44,7 @@ export function calloutHolds(
   return (
     (when.done ?? []).every(i => state.done.has(i)) &&
     (when.notDone ?? []).every(i => !state.done.has(i)) &&
-    (when.tabNever === undefined || !state.tabsSeen.has(when.tabNever)) &&
+    (when.tabNot === undefined || state.tab !== when.tabNot) &&
     (when.sceneNever === undefined || !state.scenesSeen.has(when.sceneNever))
   );
 }

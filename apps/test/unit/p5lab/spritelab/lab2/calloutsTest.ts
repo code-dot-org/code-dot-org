@@ -6,7 +6,7 @@ import {
 
 const state = {
   done: new Set([0]),
-  tabsSeen: new Set(['World' as const]),
+  tab: 'World' as const,
   scenesSeen: new Set(['platform-scene']),
 };
 
@@ -14,14 +14,12 @@ describe('callouts', () => {
   it('holds while the done, not-done, tab and scene conditions all hold', () => {
     const toCode: LevelCallout = {
       target: 'code-tab',
-      when: {done: [0], notDone: [1], tabNever: 'Code'},
+      when: {done: [0], notDone: [1], tabNot: 'Code'},
     };
     expect(calloutHolds(toCode, state)).toBe(true);
     expect(calloutHolds(toCode, {...state, done: new Set([0, 1])})).toBe(false);
     expect(calloutHolds(toCode, {...state, done: new Set()})).toBe(false);
-    expect(
-      calloutHolds(toCode, {...state, tabsSeen: new Set(['World', 'Code'])})
-    ).toBe(false);
+    expect(calloutHolds(toCode, {...state, tab: 'Code'})).toBe(false);
     const toScenes: LevelCallout = {
       target: 'scene-dropdown',
       direction: 'down',

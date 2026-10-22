@@ -1107,14 +1107,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     dispatch,
   ]);
 
-  // What the student has opened on this level, for the callouts.
-  const [tabsSeen, setTabsSeen] = useState<ReadonlySet<Tab>>(new Set());
+  // The scenes the student has opened on this level, for the callouts.
   const [scenesSeen, setScenesSeen] = useState<ReadonlySet<string>>(new Set());
-  useEffect(() => {
-    setTabsSeen(seen =>
-      seen.has(activeTab) ? seen : new Set([...seen, activeTab])
-    );
-  }, [activeTab]);
   useEffect(() => {
     if (activeSceneId) {
       setScenesSeen(seen =>
@@ -1129,7 +1123,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const callout = activeCallout(levelProperties.callouts, {
     done: calloutDone,
-    tabsSeen,
+    tab: activeTab,
     scenesSeen,
   });
 
