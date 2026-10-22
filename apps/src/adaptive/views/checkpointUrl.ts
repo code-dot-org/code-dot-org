@@ -29,9 +29,5 @@ export function clearUrl(): void {
   p.delete(CHECKPOINT_KEY);
   p.delete(STEP_KEY);
   const qs = p.toString();
-  window.history.replaceState(
-    null,
-    '',
-    qs ? `?${qs}` : window.location.pathname
-  );
+  window.history.pushState(null, '', qs ? `?${qs}` : window.location.pathname);
 }
