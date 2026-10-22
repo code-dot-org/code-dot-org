@@ -23,6 +23,12 @@ describe('SpriteLab2 characterSet', () => {
     expect(text).toContain('No writing');
   });
 
+  it('the base prompt asks for the character drawn once, not as a sheet', () => {
+    expect(basePrompt('A friendly witch', 'pixel', key, 16)).toMatch(
+      /Draw it once: a single figure, not a sprite sheet/
+    );
+  });
+
   it('a pose prompt holds the character to its size and position', () => {
     const text = posePrompt(
       'a knight',
