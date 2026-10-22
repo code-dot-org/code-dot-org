@@ -1279,6 +1279,15 @@ $z-over-blockly: 71;
   pointer-events: none;
 }
 
+// The editor's scene switch: over before the eye settles on the new scene.
+.sceneFadeQuick {
+  animation-duration: 0.18s;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
 @keyframes scene-fade-in {
   from {
     opacity: 1;

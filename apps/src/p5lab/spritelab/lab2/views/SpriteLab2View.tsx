@@ -95,6 +95,7 @@ import {
 import {runtimeNeeds, WorkspaceSource} from '../objectives';
 import {requestPicture} from '../picturePicker';
 import {countImagesByType, imageCountsDelta} from '../projectCounts';
+import {reducedMotion} from '../reducedMotion';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -235,6 +236,9 @@ function getScenes(sources: Sources): Scene[] {
 
 // Debounce between a workspace edit and the live-preview re-run.
 const RUN_DEBOUNCE_MS = 400;
+// Editors and preview on a scene switch: quick, so a scene is never slow
+// to appear.
+const SCENE_SWITCH_FADE_MS = 180;
 
 // Sprites come from the Images tab, so a new project starts with no
 // animations.
@@ -1620,6 +1624,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [stageCovered, activeTab, worldMounted]);
 
+  // Switching the scene being edited fades the editors in and plays a quick
+  // fade over the preview, so the swap reads as a change of scene rather
+  // than a jump; the chrome around them stays put. Never on arrival.
+  const [sceneSwitches, setSceneSwitches] = useState(0);
+  const switchedFromRef = useRef<string | null>(null);
+  useEffect(() => {
+    const from = switchedFromRef.current;
+    switchedFromRef.current = activeSceneId;
+    if (!from || !activeSceneId || from === activeSceneId) {
+      return;
+    }
+    setSceneSwitches(n => n + 1);
+    if (reducedMotion()) {
+      return;
+    }
+    [codeWrapperRef.current, worldWrapperRef.current].forEach(editor =>
+      editor?.animate?.([{opacity: 0}, {opacity: 1}], {
+        duration: SCENE_SWITCH_FADE_MS,
+        easing: 'ease-out',
+      })
+    );
+  }, [activeSceneId]);
+
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
   // from the tab button or "Restart game" clears it.
@@ -2608,6 +2635,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 ) : undefined
               }
               fadeTrigger={fadeTrigger}
+              switchTrigger={sceneSwitches}
               covered={jumpCover}
               loading={externalLoading}
               getDefaultSpriteSize={getDefaultSpriteSize}
