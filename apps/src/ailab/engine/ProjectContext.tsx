@@ -42,12 +42,6 @@ interface ProjectContextValue {
   opened: boolean;
   /** A project has been handed over and is waiting for its dataset. */
   opening: boolean;
-  /*
-    The project is the lab's own empty one: nothing has been opened or chosen
-    yet, or a reset has just emptied it. Saving it would be saving the absence
-    of the student's work rather than their work.
-  */
-  empty: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -63,26 +57,35 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 
 interface ProjectProviderProps {
   children: ReactNode;
-  project?: AilabProject;
+  /** A saved project to open the lab with, once its dataset has loaded. */
+  savedProject?: AilabProject;
+  /** Called with the project whenever the student changes it. */
+  onProjectChange?: (project: AilabProject) => void;
 }
 
 export const ProjectProvider = ({
   children,
-  project: openWith,
+  savedProject,
+  onProjectChange,
 }: ProjectProviderProps) => {
-  const [project, setProject] = useState<AilabProject>(
-    openWith ?? initialProject
-  );
+  const [project, setProject] = useState<AilabProject>(initialProject);
   const [opened, setOpened] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  const onProjectChangeRef = useRef(onProjectChange);
+  onProjectChangeRef.current = onProjectChange;
   /*
-    A project waiting for the dataset it will be reconciled against.
+    A project waiting for the dataset it will be reconciled against. The saved
+    one starts here rather than in the project: it has still to be reconciled,
+    and a later one is a different lab, which arrives by remounting this.
   */
-  const [pendingProject, setPendingProject] = useState<
-    AilabProject | undefined
-  >();
+  const [pendingProject, setPendingProject] = useState(savedProject);
   // TODO: do we need all of these booleans
   const opening = pendingProject !== undefined;
+  /*
+    The project is the lab's own empty one: nothing opened or chosen yet, or a
+    reset has just emptied it. Identity, not contents: a reset puts this exact
+    project back, while opening one or choosing a column builds a new one.
+  */
   const empty = project === initialProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
@@ -198,6 +201,17 @@ export const ProjectProvider = ({
     }
   }, [pendingProject, datasetDescribed, applyProject]);
 
+  /*
+    A level change empties the project before the lab is taken down, and what
+    it would be saved to still belongs to the level being left. An emptied
+    project is never worth reporting anyway.
+  */
+  useEffect(() => {
+    if (opened && !empty) {
+      onProjectChangeRef.current?.(project);
+    }
+  }, [opened, empty, project]);
+
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
       return;
@@ -232,7 +246,6 @@ export const ProjectProvider = ({
       openProject,
       opened,
       opening,
-      empty,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -246,7 +259,6 @@ export const ProjectProvider = ({
       openProject,
       opened,
       opening,
-      empty,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

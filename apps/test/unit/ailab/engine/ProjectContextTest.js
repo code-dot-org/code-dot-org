@@ -1,5 +1,5 @@
 import {act, render} from '@testing-library/react';
-import {createElement} from 'react';
+import {createElement, useLayoutEffect} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
@@ -7,6 +7,7 @@ import {
   ColumnTypes,
   UNIQUE_OPTIONS_MAX,
 } from '@cdo/apps/ailab/engine/constants';
+import {loadLevel} from '@cdo/apps/ailab/engine/levelLoad';
 import {
   ProjectProvider,
   useProject,
@@ -18,7 +19,11 @@ import rootReducer, {
   setMode,
   setPresetColumns,
 } from '@cdo/apps/ailab/engine/redux';
+import {store as singletonStore} from '@cdo/apps/ailab/engine/store';
 import {initialProject} from '@cdo/apps/ailab/engine/types';
+
+jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
+jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
 
 const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
   hyperparameters,
@@ -47,7 +52,11 @@ function renderContext(openWith, seedStore) {
     createElement(
       Provider,
       {store},
-      createElement(ProjectProvider, {project: openWith}, createElement(Probe))
+      createElement(
+        ProjectProvider,
+        {savedProject: openWith},
+        createElement(Probe)
+      )
     )
   );
 
@@ -63,13 +72,22 @@ describe('ProjectContext', () => {
     expect(project()).toEqual(initialProject);
   });
 
+  // A saved project waits for the dataset it will be reconciled against.
   test('opens with a project it is handed', () => {
-    const {project} = renderContext({
-      ...initialProject,
-      hyperparameters: {k: 5},
-      accuracyCheckRowIndices: [2, 7],
-      historicResults: [FIRST.historicResult],
-    });
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    ['a', 'b', 'c'].forEach(column =>
+      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+    );
+    const {project} = renderContext(
+      {
+        ...initialProject,
+        hyperparameters: {k: 5},
+        accuracyCheckRowIndices: [2, 7],
+        historicResults: [FIRST.historicResult],
+      },
+      store
+    );
     expect(project().hyperparameters).toEqual({k: 5});
     expect(project().accuracyCheckRowIndices).toEqual([2, 7]);
     expect(accuracies(project())).toEqual(['80.00']);
@@ -547,5 +565,192 @@ describe('ProjectContext opening a saved project', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toEqual(SAVED.hyperparameters);
+  });
+});
+
+/*
+  The provider keeps a saved project and the lab's own the same thing. These
+  mount the way the workspace does, loading the level from a parent layout
+  effect, because that reset is what a seed has to survive. The level load
+  works against the store singleton, so these do too.
+*/
+describe('ProjectContext keeping a saved project in sync', () => {
+  // The singleton carries state between tests; each starts from a clean lab.
+  beforeEach(() => singletonStore.dispatch(resetState()));
+
+  const DATA = [
+    {a: '1', b: '2', c: '3'},
+    {a: '4', b: '5', c: '6'},
+  ];
+
+  const SAVED_COLUMNS = {
+    ...initialProject,
+    labelColumn: 'a',
+    selectedFeatures: ['b'],
+    historicResults: [FIRST.historicResult],
+  };
+
+  // eslint-disable-next-line react/prop-types
+  const Workspace = ({savedProject, onProjectChange, report}) => {
+    useLayoutEffect(() => {
+      loadLevel(undefined);
+    }, []);
+
+    return createElement(
+      ProjectProvider,
+      {savedProject, onProjectChange},
+      createElement(Probe, {report})
+    );
+  };
+
+  // eslint-disable-next-line react/prop-types
+  const Probe = ({report}) => {
+    report(useProject());
+    return null;
+  };
+
+  function renderSync(savedProject = SAVED_COLUMNS) {
+    const onProjectChange = jest.fn();
+    let context;
+    render(
+      createElement(
+        Provider,
+        {store: singletonStore},
+        createElement(Workspace, {
+          savedProject,
+          onProjectChange,
+          report: value => (context = value),
+        })
+      )
+    );
+    return {save: onProjectChange, context: () => context};
+  }
+
+  const loadDataset = () =>
+    act(() => {
+      singletonStore.dispatch(setImportedData(DATA, false));
+      ['a', 'b', 'c'].forEach(column =>
+        singletonStore.dispatch(
+          setColumnsByDataType(column, ColumnTypes.NUMERICAL)
+        )
+      );
+    });
+
+  // The readers dispatch the rows and then a type per column, in their own time.
+  const loadDatasetColumnByColumn = () => {
+    act(() => singletonStore.dispatch(setImportedData(DATA, false)));
+    ['a', 'b', 'c'].forEach(column =>
+      act(() =>
+        singletonStore.dispatch(
+          setColumnsByDataType(column, ColumnTypes.NUMERICAL)
+        )
+      )
+    );
+  };
+
+  test('reports nothing until the saved project has been opened', () => {
+    const {save} = renderSync();
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  /*
+    The level load resets the lab after the seed is queued, and the project
+    has to outlive that or a page load opens an empty lab.
+  */
+  test('opens the saved project into the lab', () => {
+    const {save, context} = renderSync();
+
+    loadDataset();
+
+    expect(context().project).toEqual(SAVED_COLUMNS);
+    expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
+  });
+
+  /*
+    Reconciling against a dataset whose columns are still being typed drops
+    the ones whose type has yet to arrive, and the project is then reported
+    without them.
+  */
+  test('waits for every column of the dataset to be described', () => {
+    const {save, context} = renderSync();
+
+    loadDatasetColumnByColumn();
+
+    expect(context().project).toEqual(SAVED_COLUMNS);
+    expect(save).toHaveBeenCalledTimes(1);
+  });
+
+  test('reports a column the student chooses', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    save.mockClear();
+
+    act(() => context().addSelectedFeature('c'));
+
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.lastCall[0].selectedFeatures).toEqual(['b', 'c']);
+  });
+
+  // The level chose these, but the saved copy mirrors the project either way.
+  test("reports the level's preset columns", () => {
+    const {save} = renderSync(initialProject);
+    loadDataset();
+    save.mockClear();
+
+    act(() => {
+      singletonStore.dispatch(setMode({hideSelectLabel: true}));
+      singletonStore.dispatch(setPresetColumns({labelColumn: 'c'}));
+    });
+
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.lastCall[0].labelColumn).toBe('c');
+  });
+
+  /*
+    Switching levels loads the next one while the lab is still standing and
+    still saving to the level being left. The lab is emptied first, and
+    saving that would replace the student's work with nothing.
+  */
+  test('does not report the emptying that a level change begins with', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    act(() => context().addSelectedFeature('c'));
+    save.mockClear();
+
+    act(() => loadLevel(undefined));
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('opens the saved project once, not on every dataset', () => {
+    const {context} = renderSync();
+    loadDataset();
+
+    act(() => {
+      singletonStore.dispatch(resetState());
+    });
+    loadDataset();
+
+    expect(context().project).toEqual(initialProject);
+  });
+
+  /*
+    The dataset the student switched to is now their work, empty as it is, and
+    what they do next has to go on being reported.
+  */
+  test('keeps reporting after a reset empties the project', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    act(() => {
+      singletonStore.dispatch(resetState());
+    });
+    loadDataset();
+    save.mockClear();
+
+    act(() => context().setLabelColumn('a'));
+
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.lastCall[0].labelColumn).toBe('a');
   });
 });

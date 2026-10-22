@@ -36,8 +36,6 @@ import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
 import {AilabLevelProperties} from '../types';
 
-import ProjectSync from './ProjectSync';
-
 import styles from './ailab-view.module.scss';
 
 interface AilabWorkspaceProps {
@@ -169,9 +167,8 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>
-            <ProjectProvider>
+            <ProjectProvider savedProject={savedProject} onProjectChange={save}>
               <TrainingDataProvider>
-                <ProjectSync savedProject={savedProject} save={save} />
                 <AilabEngine
                   assetPath="/blockly/media/skins/ailab/"
                   onContinue={onContinue}

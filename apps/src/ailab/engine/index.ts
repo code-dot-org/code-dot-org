@@ -10,7 +10,7 @@ export type {AilabEngineProps} from './AilabEngine';
 
 export {store} from './store';
 export {loadLevel} from './levelLoad';
-export {ProjectProvider, useProject} from './ProjectContext';
+export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
 
 export {initialProject} from './types';
