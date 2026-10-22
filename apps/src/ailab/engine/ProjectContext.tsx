@@ -76,29 +76,19 @@ export const ProjectProvider = ({
   const [opened, setOpened] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   /*
-    A project waiting for the dataset it will be reconciled against. Opening
-    one always waits a render, so the dataset it meets is the one the lab has
-    then, not the one it had when the project arrived.
+    A project waiting for the dataset it will be reconciled against.
   */
   const [pendingProject, setPendingProject] = useState<
     AilabProject | undefined
   >();
+  // TODO: do we need all of these booleans
   const opening = pendingProject !== undefined;
-  /*
-    Identity, not contents: a reset puts this exact project back, while
-    opening one or choosing a column always builds a new one.
-  */
   const empty = project === initialProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  /*
-    The rows and the column types arrive separately, and the types one column
-    at a time. Every column has to have one: a project reconciled against a
-    dataset half described loses the columns whose types had yet to arrive.
-  */
   const columnsByDataType = useAppSelector(state => state.columnsByDataType);
   const datasetDescribed =
     data.length > 0 &&
@@ -197,12 +187,6 @@ export const ProjectProvider = ({
     [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
   );
 
-  /*
-    Opens a saved project, which may name columns this dataset no longer has
-    and predates any preset the level applies.
-
-    Waits for the dataset to be described before applying the project.
-  */
   const openProject = useCallback((saved: AilabProject) => {
     setPendingProject(saved);
   }, []);

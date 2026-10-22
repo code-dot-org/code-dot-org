@@ -40,7 +40,6 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     onReinitialize: handleReinitialize,
   });
 
-  // External components reach the project manager through the registry.
   useEffect(() => {
     if (projectManager) {
       Lab2Registry.getInstance().setProjectManager(projectManager);

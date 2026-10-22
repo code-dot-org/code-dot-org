@@ -21,8 +21,6 @@ export function usePretrainOnLoad() {
     isPanelEnabled(state, project, 'results')
   );
 
-  // A project that already describes a run has one to rebuild instead, and
-  // training here as well would record a second run on every load.
   const trainedBefore = project.historicResults.length > 0;
 
   useEffect(() => {

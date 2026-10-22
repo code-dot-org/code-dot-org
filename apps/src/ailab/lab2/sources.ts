@@ -27,6 +27,7 @@ const rowIndices = (value: unknown): number[] | undefined =>
   engine expects. Nothing validates main.json on the way in, so a project saved
   by an older version of the lab, or edited by hand, arrives here unchecked.
 */
+// TODO: do we need this
 export function sourceToProject(
   source: ProjectSources['source']
 ): AilabProject {

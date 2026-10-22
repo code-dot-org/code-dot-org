@@ -266,17 +266,9 @@ const App = ({
   usePretrainOnLoad();
   const restoringModel = useRestoreModel();
 
-  /*
-    A dataset the lab asked for but has not read yet. A level that names no
-    dataset waits for the student to choose one instead, and is not loading.
-  */
   const datasetPending = useAppSelector(
     state => !!state.csvfile && state.data.length === 0 && !state.invalidData
   );
-  /*
-    Showing the lab before a saved project has opened would show the dataset
-    with no columns chosen and testing disabled, then rearrange it.
-  */
   const loading = datasetPending || opening || restoringModel;
 
   // Notify the consumer of instructions key changes when they occur.

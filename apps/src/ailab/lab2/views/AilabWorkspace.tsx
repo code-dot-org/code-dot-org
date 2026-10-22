@@ -43,7 +43,6 @@ import styles from './ailab-view.module.scss';
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
   hasEdited: boolean;
-  /** The project as last saved, to open the lab with. */
   savedProject: AilabProject;
   save: (project: AilabProject) => void;
   startOver: () => void;
@@ -127,10 +126,6 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
     showDialog({type: DialogType.StartOver, handleConfirm: startOver});
   };
 
-  /*
-    Training is the one change that is unambiguously the student's: a level's
-    preset columns reach the project the same way their own choices do.
-  */
   const onTrained = (accuracy: number) => {
     if (levelStatus === LevelStatus.not_tried) {
       dispatch(sendStartedReportIfNotStarted(levelProperties.appName));

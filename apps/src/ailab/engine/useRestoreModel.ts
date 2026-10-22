@@ -9,12 +9,8 @@ import train from './train';
 import {useTrainingData} from './TrainingDataContext';
 
 /*
-  Rebuilds the model an opened project describes. A project carries the
-  columns, the hyperparameters and the rows the run was graded against, but
-  not the model itself, which is a live object the trainer has to make again.
-
-  Returns whether that is still to come, so the lab can wait rather than show
-  a project half opened.
+  Rebuilds the model an opened project describes, and
+  returns whether we are waiting for the model to be rebuilt.
 */
 export function useRestoreModel(): boolean {
   const dispatch = useAppDispatch();
@@ -35,13 +31,12 @@ export function useRestoreModel(): boolean {
     }
 
     const run = train.refit(store, project);
-    // The project already describes this run; applying it would record it twice.
+    // If the run is invalid, drop it.
     if (!run) {
       return;
     }
     setTrainedModel(run.trainedModel);
 
-    // Rebuilding is what makes the results reachable, so open on them.
     if (isPanelEnabled(store.getState(), project, 'results')) {
       dispatch(setCurrentPanel('results'));
     }
