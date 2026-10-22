@@ -81,7 +81,15 @@ const PairsEditor: React.FunctionComponent<PairsEditorProps> = ({
               color="error"
               type="button"
               disabled={disabled || draft.pairs.length <= MIN_PAIRS}
-              onClick={() => removePair(pair.id)}
+              onClick={e => {
+                const row = e.currentTarget.parentElement;
+                const adjacentRow =
+                  row?.nextElementSibling ?? row?.previousElementSibling;
+                adjacentRow
+                  ?.querySelector<HTMLTextAreaElement>('textarea')
+                  ?.focus();
+                removePair(pair.id);
+              }}
             >
               <FontAwesomeV6Icon iconName="trash" />
             </IconButton>
