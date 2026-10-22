@@ -7,8 +7,9 @@ import {useCallback, useEffect, useMemo, useState} from 'react';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {routeAfterCompletion} from '../routing/routeAfterCompletion';
-import {Checkpoint, Pathway, Step} from '../types';
+import {computeEvidence} from '../routing/evidence';
+import {routeStatusMap} from '../routing/route';
+import {Pathway, Step} from '../types';
 
 import {
   Answer,
@@ -18,7 +19,6 @@ import {
   PROJECT_STEP_ID,
   Progress,
   StepProgress,
-  getStatusMap,
 } from './model';
 import {
   ProgressKey,
@@ -32,6 +32,7 @@ export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
   available: 'Ready to start',
   inProgress: 'In progress',
   complete: 'Complete',
+  skipped: 'Skipped',
 };
 
 /** Records a result on a level step's level; see sendAdaptiveStepReport. */
@@ -82,9 +83,13 @@ export function useProgress(
     };
   }, [store, scriptId, levelId]);
 
-  const statusMap = useMemo(
-    () => getStatusMap(pathway, progress ?? EMPTY_PROGRESS),
+  const evidence = useMemo(
+    () => computeEvidence(pathway, progress ?? EMPTY_PROGRESS),
     [pathway, progress]
+  );
+  const statusMap = useMemo(
+    () => routeStatusMap(pathway, progress ?? EMPTY_PROGRESS, evidence),
+    [pathway, progress, evidence]
   );
 
   const updateStep = useCallback(
@@ -184,13 +189,6 @@ export function useProgress(
     [reportStepProgress]
   );
 
-  // A functional update, so the router sees the step completion and answers
-  // saved by the same click.
-  const finishCheckpoint = useCallback(
-    (checkpoint: Checkpoint) =>
-      setProgress(p => p && routeAfterCompletion(pathway, p, checkpoint)),
-    [pathway]
-  );
   const saveGeneratedInstructions = useCallback(
     (id: string, content: GeneratedContent) => {
       updateStep(id, entry => ({
@@ -207,11 +205,12 @@ export function useProgress(
     progress,
     isLoading: progress === undefined,
     statusMap,
+    /** What the student has shown in each skill, which the status map is routed on. */
+    evidence,
     startStep,
     completeStep,
     leaveStep,
     saveAnswers,
     saveGeneratedInstructions,
-    finishCheckpoint,
   };
 }

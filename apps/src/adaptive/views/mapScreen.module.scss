@@ -1,17 +1,34 @@
 .mapScreen {
   flex: 1;
   display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.mapBar {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 4px 16px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+}
+
+.mapBody {
+  display: flex;
+  flex: 1;
   min-height: 0;
 }
 
 .mapArea {
   position: relative;
+  display: flex;
   flex: 1;
-  // No scrolling: the map is sized to fit, and a scrollbar appearing while
-  // zooming would shift the board.
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 24px 24px 48px;
+  flex-direction: column;
+  min-width: 0;
+  // The board is scaled to fit, and the zoomed board spills past the edges.
+  overflow: hidden;
+  padding: 24px;
 }
 
 .mapBack {
@@ -19,19 +36,6 @@
   top: 24px;
   right: 24px;
   z-index: 2;
-}
-
-.mapHeader {
-  max-width: 760px;
-  margin: 0 auto 8px;
-  transition: opacity 300ms;
-}
-
-// Hidden while a checkpoint is focused, but still laid out so the board
-// does not jump.
-.mapHeaderHidden {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .side {
