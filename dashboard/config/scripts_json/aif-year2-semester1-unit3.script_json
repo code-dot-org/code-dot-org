@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-07 04:57:13 UTC",
+    "serialized_at": "2026-10-15 14:08:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -83,7 +83,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, students play *Candidate*—a game that guides them, first-hand, through the process of data analysis. As they compete to run for student government on the most popular policy, students learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
-        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.\n- Print copies of the Working WIth Data Unit Guide (one for each student).",
+        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.\n- Print copies of the Working With Data Unit Guide (one for each student).",
         "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, you'll play *Candidate*—a game that guides you, first-hand, through the process of data analysis. As you compete to run for student government on the most popular policy, you'll learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
         "unplugged": true
       },

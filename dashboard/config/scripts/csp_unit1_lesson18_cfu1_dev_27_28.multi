@@ -9,3 +9,6 @@ wrong 'The flowcharts solve the same problem because both have two move forward 
 right 'The flowcharts solve the same problem because the robot draws the same trail, even though the steps are different.'
 
 allow_multiple_attempts true
+markdown <<MARKDOWN
+<img src="https://images.code.org/26ab4e4edc82ae063edf8ddec4aab375-flowchart-mcq.png" alt="Flowchart A: Start, turn left, move forward, move forward, End. Flowchart B: Start, turn right, turn right, turn right, move forward, move forward, End.">
+MARKDOWN

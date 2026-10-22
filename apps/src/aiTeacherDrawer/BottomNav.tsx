@@ -3,6 +3,10 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+import {sendTaEvent} from './analytics';
+
 import style from './bottom-nav.module.scss';
 
 interface NavItem {
@@ -18,6 +22,7 @@ interface BottomNavProps {
   showLearn?: boolean;
   showTeacherPanel?: boolean;
   showRubrics?: boolean;
+  rebranded?: boolean;
 }
 
 const BottomNav: React.FC<BottomNavProps> = ({
@@ -28,6 +33,7 @@ const BottomNav: React.FC<BottomNavProps> = ({
   showLearn = false,
   showTeacherPanel = false,
   showRubrics = false,
+  rebranded = false,
 }) => {
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
@@ -39,7 +45,10 @@ const BottomNav: React.FC<BottomNavProps> = ({
   ];
 
   return (
-    <nav className={style.nav} aria-label="Main navigation">
+    <nav
+      className={classNames(style.nav, rebranded && style.navTa)}
+      aria-label="Main navigation"
+    >
       {navItems.map(({label, iconName}) => {
         const active = label === activeLabel;
         const showDot = label === 'Alerts' && unreadNotificationCount > 0;
@@ -48,7 +57,18 @@ const BottomNav: React.FC<BottomNavProps> = ({
             key={label}
             type="button"
             className={style.item}
-            onClick={() => onNavChange(label)}
+            onClick={() => {
+              sendTaEvent(
+                EVENTS.AI_TA_TAB_CLICKED,
+                {
+                  to_tab: label,
+                  from_tab: activeLabel,
+                  alert_badge_count: unreadNotificationCount,
+                },
+                label
+              );
+              onNavChange(label);
+            }}
           >
             <div
               className={classNames(style.itemContent, active && style.active)}

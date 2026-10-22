@@ -1,0 +1,35 @@
+<Quiz>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 76,
+  "created_at": "2026-10-19T17:14:22.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "header_label": "AID Test Quiz ",
+    "purpose": "exam",
+    "allow_multiple_attempts": true,
+    "show_questions_after_submit": true,
+    "show_correctness": true,
+    "display_name": "Test of New Quizes"
+  },
+  "placements": [
+    {
+      "page": 1,
+      "position": 1,
+      "question_key": "cb3413f7-6ff1-4611-a14b-f64369592c0a"
+    },
+    {
+      "page": 1,
+      "position": 2,
+      "question_key": "284e7135-5b4f-4cb2-ac5a-590112cfaeea"
+    },
+    {
+      "page": 1,
+      "position": 3,
+      "question_key": "6e2acfef-560e-4da6-97df-bc486ae2d85c"
+    }
+  ]
+}]]></config>
+</Quiz>

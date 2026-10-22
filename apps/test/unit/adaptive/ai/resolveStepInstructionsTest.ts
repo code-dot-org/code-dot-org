@@ -58,7 +58,7 @@ const inputsHash = generateInputsHash(
 const resolve = (
   overrides: Partial<Parameters<typeof resolveStepInstructions>[0]> = {}
 ) => {
-  const updateStepContext = jest.fn();
+  const saveGeneratedInstructions = jest.fn();
   const result = resolveStepInstructions({
     pathway,
     checkpoint,
@@ -66,12 +66,12 @@ const resolve = (
     projectInfo,
     sources,
     authoredInstructions: 'Authored.',
-    stepContext: undefined,
-    updateStepContext,
+    generatedInstructions: undefined,
+    saveGeneratedInstructions,
     aichatContext: context,
     ...overrides,
   });
-  return {result, updateStepContext};
+  return {result, saveGeneratedInstructions};
 };
 
 describe('resolveStepInstructions', () => {
@@ -95,7 +95,7 @@ describe('resolveStepInstructions', () => {
 
   it('returns cached instructions whose hash matches, without generating', async () => {
     const {result} = resolve({
-      stepContext: {generated: {instructions: 'Cached.', inputsHash}},
+      generatedInstructions: {instructions: 'Cached.', inputsHash},
     });
 
     expect(await result).toBe('Cached.');
@@ -107,13 +107,15 @@ describe('resolveStepInstructions', () => {
       output: {instructions: 'Fresh.'},
       traceId: 'trace-1',
     });
-    const {result, updateStepContext} = resolve({
-      stepContext: {generated: {instructions: 'Old.', inputsHash: 'deadbeef'}},
+    const {result, saveGeneratedInstructions} = resolve({
+      generatedInstructions: {instructions: 'Old.', inputsHash: 'deadbeef'},
     });
 
     expect(await result).toBe('Fresh.');
-    expect(updateStepContext).toHaveBeenCalledWith('build', {
-      generated: {instructions: 'Fresh.', inputsHash, traceId: 'trace-1'},
+    expect(saveGeneratedInstructions).toHaveBeenCalledWith('build', {
+      instructions: 'Fresh.',
+      inputsHash,
+      traceId: 'trace-1',
     });
   });
 
@@ -138,9 +140,9 @@ describe('resolveStepInstructions', () => {
 
   it('returns the authored text and caches nothing when generation yields nothing', async () => {
     mockGenerate.mockResolvedValue({traceId: 'trace-1'});
-    const {result, updateStepContext} = resolve();
+    const {result, saveGeneratedInstructions} = resolve();
 
     expect(await result).toBe('Authored.');
-    expect(updateStepContext).not.toHaveBeenCalled();
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
   });
 });

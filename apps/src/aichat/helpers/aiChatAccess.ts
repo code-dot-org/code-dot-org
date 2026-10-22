@@ -2,6 +2,7 @@ import {
   AiChatAccessLevel,
   AiChatToolsDependencyValue,
 } from '@cdo/apps/aichat/types/accessControls';
+import DCDO from '@cdo/apps/dcdo';
 import {
   AiChatAccessLevels,
   AiChatToolsDependency,
@@ -69,7 +70,9 @@ export const areAiChatToolsEnabled = ({
 // Lesson deep dive is not tied to a level, so essential-only access does not unlock it.
 export const canUseLessonDeepDive = (
   aiChatAccessLevel: AiChatAccessLevel | undefined
-): boolean => aiChatAccessLevel === AiChatAccessLevels.ENABLED;
+): boolean =>
+  !!DCDO.get('lesson-deep-dive-enabled', true) &&
+  aiChatAccessLevel === AiChatAccessLevels.ENABLED;
 
 /**
  * Returns true if the AI Chat essential alert should be shown for a section

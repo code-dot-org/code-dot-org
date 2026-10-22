@@ -19,8 +19,8 @@
 #  index_quiz_questions_on_name        (name)
 #
 class QuizQuestion < ApplicationRecord
-  # Every concrete question subtype. TODO: P0 - add MultipleSelectQuestion, MatchQuestion.
-  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion).freeze
+  # Every concrete question subtype.
+  TYPES = %w(MultipleChoiceQuestion FreeResponseQuestion MultipleSelectQuestion MatchQuestion).freeze
 
   after_initialize {self.type ||= self.class.sti_name}
 
@@ -95,6 +95,12 @@ class QuizQuestion < ApplicationRecord
     levelbuilder_mode? && !skip_write_to_file
   end
 
+  # Placed on a quiz or answered in an attempt; such a question must not be
+  # hard-deleted.
+  def referenced?
+    levels.exists? || quiz_question_responses.exists?
+  end
+
   # published unit means preview/stable/sunsetting
   def used_in_published_unit?
     self.class.published_unit_usage([id]).fetch(id, false)
@@ -154,10 +160,21 @@ class QuizQuestion < ApplicationRecord
 
   # The `content` fields every subtype has. A blank description is omitted,
   # not stored as null.
-  def self.shared_content(params)
+  def self.shared_content_from_builder_params(params)
     content = {question_title: params[:questionTitle]}
     content[:description] = params[:description] if params[:description].present?
     content
+  end
+
+  # The answer key fields shown with submitted results. Values are nilled,
+  # not omitted, when the key is hidden.
+  def answer_key_json
+    {}
+  end
+
+  # The JSON fields every subtype has.
+  def shared_content_json
+    {questionTitle: content['question_title'], description: content['description']}
   end
 
   # Subtype-specific fields for the quiz builder, answer key included.
@@ -181,29 +198,24 @@ class QuizQuestion < ApplicationRecord
     end
   end
 
-  # Shared by subtypes whose `content` includes a "choices" array. Returns
-  # the set of choice ids, or nil (after recording an error on `content`) if
-  # the shape is invalid.
-  protected def validate_choices(choices)
-    unless choices.is_a?(Array) && choices.length >= 2
-      errors.add(:content, 'must have at least 2 "choices"')
-      return nil
-    end
-
+  # Validates a list of {"id", "text"} items, such as answer choices.
+  # Returns the item ids, or nil (after recording an error on `content`) if any item
+  # is invalid.
+  protected def validate_items(items, error_message_noun)
     # id and text must both be non-blank, not just Strings - a blank text
-    # would render as an answer choice with no visible label.
-    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String) && c['text'].present?}
-      errors.add(:content, 'each choice must have a non-blank "id" and "text"')
+    # would render as an item with no visible label.
+    unless items.all? {|i| i.is_a?(Hash) && i['id'].is_a?(String) && i['id'].present? && i['text'].is_a?(String) && i['text'].present?}
+      errors.add(:content, %(each #{error_message_noun} must have a non-blank "id" and "text"))
       return nil
     end
 
-    choice_ids = choices.map {|c| c['id']}
-    unless choice_ids.uniq.length == choice_ids.length
-      errors.add(:content, '"choices" ids must be unique')
+    ids = items.map {|i| i['id']}
+    unless ids.uniq.length == ids.length
+      errors.add(:content, %(#{error_message_noun} ids must be unique))
       return nil
     end
 
-    choice_ids
+    ids
   end
 
   private def levelbuilder_mode?

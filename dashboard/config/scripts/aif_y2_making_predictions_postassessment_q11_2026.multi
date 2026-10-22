@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q11-2026'
+
+wrong 'Converting categories such as “cat” and “dog” into numbers'
+right 'Resizing features so that they use a similar numeric scale'
+wrong 'Removing the features with the largest values from the data'
+wrong 'Dividing the data into training and test sets'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is feature scaling?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Scaling Features
+MARKDOWN

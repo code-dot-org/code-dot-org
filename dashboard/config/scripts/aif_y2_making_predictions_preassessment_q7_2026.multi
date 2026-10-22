@@ -1,0 +1,20 @@
+name 'aif-y2-making-predictions-preassessment-q7-2026'
+
+wrong 'Use 20% of the examples to train the model'
+wrong 'Put exactly 20 examples in the test set'
+right 'Set aside 20% of the examples to test the model'
+wrong 'Stop training once the model reaches 20% accuracy'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A program splits its data with this line. What does `test_size=0.2` tell `train_test_split` to do?
+
+```python
+train_inputs, test_inputs, train_outputs, test_outputs = train_test_split(inputs, outputs, test_size=0.2)
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Training and Test Sets
+MARKDOWN
