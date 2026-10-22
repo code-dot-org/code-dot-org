@@ -1,5 +1,5 @@
 import {Checkpoint} from '@cdo/apps/adaptive/types';
-import {layoutCheckpoints} from '@cdo/apps/adaptive/views/layout';
+import {layoutCheckpoints} from '@cdo/apps/adaptive/views/map/layout/tree';
 
 const checkpoint = (id: string, requires?: string[]): Checkpoint => ({
   id,

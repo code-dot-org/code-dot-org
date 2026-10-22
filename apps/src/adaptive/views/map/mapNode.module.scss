@@ -1,30 +1,3 @@
-.board {
-  position: relative;
-  margin: 0 auto;
-  transition: transform 450ms ease;
-  transform-origin: center top;
-}
-
-.edges {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: visible;
-}
-
-.edge {
-  fill: none;
-  stroke: var(--borders-neutral-primary);
-  stroke-width: 3;
-  stroke-dasharray: 8 8;
-  transition: stroke 300ms;
-}
-
-.edgeActive {
-  stroke: var(--borders-success-primary);
-  stroke-dasharray: none;
-}
-
 .node {
   position: absolute;
   z-index: 1;
@@ -33,27 +6,28 @@
   align-items: center;
   width: 190px;
   transform: translateX(-50%);
+}
+
+// Another checkpoint is focused: each part of the node is washed toward the
+// background by an overlay, so the node stays opaque and still hides the
+// lines under it. Each part positions itself so the overlay fits it.
+.node > *::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--background-neutral-primary);
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 300ms;
 }
 
-.nodeLabel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  max-width: 100%;
-  margin-bottom: 8px;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 8px;
-  background: var(--background-neutral-primary);
-  font-size: 13px;
-  line-height: 1.15;
-  text-align: center;
-  white-space: nowrap;
+.dimmed > *::after {
+  opacity: 0.8;
 }
 
 .circle {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,8 +74,10 @@
   color: var(--text-neutral-white-fixed);
 }
 
-.dimmed {
-  opacity: 0.2;
+.skipped .circle {
+  border-color: var(--borders-success-primary);
+  background: var(--background-success-extra-light);
+  color: var(--text-success-primary);
 }
 
 .focused .circle {

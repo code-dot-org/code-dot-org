@@ -17,6 +17,7 @@ export interface TutorContextInput {
 
 const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
   complete: 'Completed',
+  skipped: 'Skipped, already demonstrated',
   inProgress: 'In progress',
   available: 'Not started',
   locked: 'Not started',
@@ -25,6 +26,7 @@ const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
 // Checkpoint statuses relevant to the tutor; locked reads as available.
 const TUTOR_STATUSES: CheckpointStatus[] = [
   'complete',
+  'skipped',
   'inProgress',
   'available',
 ];
