@@ -12,9 +12,10 @@ import {setResultsTab} from '../redux';
 
 import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
-import ResultsTable, {useResultsTableView} from './ResultsTable';
+import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
 import TableFilter from './TableFilter';
+import {useResultsTableView} from './useResultsTableView';
 
 import styles from './resultsDetails.module.scss';
 
