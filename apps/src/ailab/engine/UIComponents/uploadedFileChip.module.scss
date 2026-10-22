@@ -1,0 +1,105 @@
+@use '../sharedMixins' as mixins;
+
+$remove-width: 34px;
+
+.chip {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  max-width: 200px;
+  transition: scale mixins.$mark-transition;
+
+  &:active {
+    scale: 0.98;
+  }
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  min-width: 0;
+  height: 32px;
+  margin: 0;
+  padding: 0 $remove-width 0 0;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: 2px;
+  }
+}
+
+.chip:hover .select {
+  background-color: var(--background-neutral-tertiary);
+}
+
+.fileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: 32px;
+  flex-shrink: 0;
+  background-color: var(--background-selected-primary);
+  color: var(--text-selected-primary);
+  font-size: 14px;
+}
+
+.chip:hover .fileIcon {
+  background-color: var(--background-selected-strong);
+}
+
+.name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $remove-width;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: var(--shape-sm);
+  color: var(--text-neutral-quaternary);
+  font-size: 14px;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: -4px;
+  }
+}
+
+.selected {
+  .select {
+    border-color: var(--border-selected-primary);
+  }
+
+  &:hover .select {
+    border-color: var(--border-selected-strong);
+    background-color: var(--background-brand-light);
+  }
+
+  .remove {
+    color: var(--text-brand-secondary);
+  }
+}

@@ -1,8 +1,8 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button, Typography} from '@mui/material';
+import {Button, Divider, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 
 import {getAssetPath} from '../assetPath';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
@@ -20,6 +20,7 @@ import {
 } from '../redux';
 
 import DatasetTile from './DatasetTile';
+import UploadedFileChip from './UploadedFileChip';
 
 import styles from './selectDataset.module.scss';
 
@@ -27,8 +28,17 @@ const SelectDataset = () => {
   const dispatch = useAppDispatch();
   const specifiedDatasets = useAppSelector(getSpecifiedDatasets);
   const name = useAppSelector(state => state.name);
+  const csvfile = useAppSelector(state => state.csvfile);
   const invalidData = useAppSelector(state => state.invalidData);
+  // Held only while the picker is open, so moving on with one of our datasets
+  // drops the upload.
+  const [uploadedFile, setUploadedFile] = useState(() =>
+    typeof csvfile === 'object' ? csvfile : undefined
+  );
+  const isUploadSelected =
+    uploadedFile !== undefined && csvfile === uploadedFile;
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const uploadButtonRef = useRef<HTMLButtonElement>(null);
 
   // A project waiting to be opened may be waiting for the dataset chosen here.
   const resetForDatasetChange = () =>
@@ -36,7 +46,7 @@ const SelectDataset = () => {
   const setSelectedName = (datasetName: string) =>
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
-    dispatch(setSelectedCSVAction(csvfilePath as string));
+    dispatch(setSelectedCSVAction(csvfilePath));
   const setSelectedJSON = (jsonfilePath: string) =>
     dispatch(setSelectedJSONAction(jsonfilePath));
 
@@ -50,6 +60,11 @@ const SelectDataset = () => {
       const csvPath = assetPath + dataset.path;
       const jsonPath = assetPath + dataset.metadataPath;
 
+      // Only an upload can be invalid, and a rejected one isn't worth keeping.
+      if (invalidData) {
+        setUploadedFile(undefined);
+      }
+
       resetForDatasetChange();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
@@ -60,11 +75,32 @@ const SelectDataset = () => {
     }
   };
 
-  const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const loadUpload = (file: File) => {
     resetForDatasetChange();
-    setSelectedCSV(event.target.files![0]);
+    setSelectedCSV(file);
     invalidatePendingDatasetLoads();
-    parseCSV(event.target.files![0] as unknown as string, false, true);
+    parseCSV(file as unknown as string, false, true);
+  };
+
+  const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files![0];
+    setUploadedFile(file);
+    loadUpload(file);
+  };
+
+  const handleUploadChipSelect = () => {
+    if (!isUploadSelected) {
+      loadUpload(uploadedFile!);
+    }
+  };
+
+  const handleUploadRemove = () => {
+    if (isUploadSelected) {
+      resetForDatasetChange();
+      invalidatePendingDatasetLoads();
+    }
+    setUploadedFile(undefined);
+    uploadButtonRef.current!.focus();
   };
 
   const getInvalidDataMessage = () => {
@@ -109,16 +145,31 @@ const SelectDataset = () => {
       {!specifiedDatasets && (
         <div className={styles.upload}>
           <Button
+            ref={uploadButtonRef}
             variant="outlined"
             color="secondary"
             size="small"
             startIcon={
-              <FontAwesomeV6Icon iconName="file-arrow-up" aria-hidden="true" />
+              <FontAwesomeV6Icon
+                iconName="arrow-up-from-bracket"
+                aria-hidden="true"
+              />
             }
             onClick={() => fileInputRef.current!.click()}
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
           </Button>
+          {uploadedFile && !invalidData && (
+            <>
+              <Divider orientation="vertical" className={styles.divider} />
+              <UploadedFileChip
+                fileName={uploadedFile.name}
+                isSelected={isUploadSelected}
+                onSelect={handleUploadChipSelect}
+                onRemove={handleUploadRemove}
+              />
+            </>
+          )}
           {/* Setting value to empty here allows us to receive an
               onChange event for the same file as previously selected,
               which allows the user to upload a file, then choose an

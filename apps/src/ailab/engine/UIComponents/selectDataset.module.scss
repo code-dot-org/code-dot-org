@@ -28,10 +28,15 @@
 .upload {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   padding: 8px;
   background-color: var(--background-neutral-primary);
   border-top: 1px solid var(--border-neutral-primary);
+}
+
+.upload .divider {
+  height: 12px;
+  border-color: var(--border-neutral-primary);
 }
 
 .upload .fileInput {

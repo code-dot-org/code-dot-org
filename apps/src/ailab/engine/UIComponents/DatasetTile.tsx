@@ -3,6 +3,8 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {useFocusVisible} from '../useFocusVisible';
+
 import FullTextTooltip from './FullTextTooltip';
 
 import styles from './datasetTile.module.scss';
@@ -25,7 +27,7 @@ const DatasetTile = ({
   onClick,
 }: DatasetTileProps) => {
   const [imageFailed, setImageFailed] = useState(false);
-  const [focusVisible, setFocusVisible] = useState(false);
+  const {focusVisible, focusHandlers} = useFocusVisible();
   const showsSelection = isSelected && !disabled;
 
   return (
@@ -35,10 +37,7 @@ const DatasetTile = ({
       aria-pressed={isSelected}
       disabled={disabled}
       onClick={onClick}
-      onFocus={event =>
-        setFocusVisible(event.currentTarget.matches(':focus-visible'))
-      }
-      onBlur={() => setFocusVisible(false)}
+      {...focusHandlers}
     >
       <span className={styles.cover}>
         {imageSrc && !imageFailed ? (
