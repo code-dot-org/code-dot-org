@@ -432,6 +432,7 @@ const EVENTS = {
   // Sprite Lab in Lab2 image generation
   HOAI2026_IMAGE_PROMPT: 'hoai2026-image-prompt',
   HOAI2026_IMAGE_VERDICT: 'hoai2026-image-verdict',
+  HOAI2026_IMAGE_VERDICT_REASON: 'hoai2026-image-verdict-reason',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',

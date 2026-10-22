@@ -1,5 +1,8 @@
 ## Updating FontAwesome Files
 
+The current steps, and an agent skill that automates them, are in `frontend/packages/fonts/README.md`.
+The list below is older and kept for reference.
+
 If you are looking to update the FontAwesome files in `font.scss`, you'll need to do the following:
 1. **Download css and webfont files from FontAwesome.**
    Sign in with our shared dev account, find our "Code.org Kit", then click "Download Web Files" from the "Self-Host on the Web" option.

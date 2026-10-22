@@ -73,9 +73,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // (the drawing, or the recording) lives in the active modality component.
   // The modality reports whether it can be submitted through
   // onSubmittableChange, and registers its submit/reset handlers on these
-  // refs so the top bar can drive them.
+  // refs so the top bar can drive them. Submit resolves true once the
+  // response is created.
   const [canSubmit, setCanSubmit] = useState(false);
-  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
 
   // Video challenges are recordings top to bottom, so the record button
@@ -205,6 +206,14 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     setCanSubmit(false);
     setCompositionState(CompositionStates.ITERATING);
     setChallengeResponse(null);
+  };
+
+  // On failure the modality shows its own error; return to composing.
+  const handleSubmitClick = async () => {
+    setShowConfirmation(true);
+    if (!(await submitRef.current?.())) {
+      setShowConfirmation(false);
+    }
   };
 
   const navigate = useNavigate();
@@ -587,10 +596,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     size="medium"
                     className={styles.submitButton}
                     disabled={!canSubmit}
-                    onClick={() => {
-                      setShowConfirmation(true);
-                      submitRef.current?.();
-                    }}
+                    onClick={handleSubmitClick}
                   >
                     Submit
                   </MuiButton>

@@ -3,6 +3,7 @@ import _ from 'lodash';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import reducer, {
+  sendAdaptiveStepReport,
   initProgress,
   mergeResults,
   mergePeerReviewProgress,
@@ -28,6 +29,7 @@ import {
   lessonExtrasUrl,
   __testonly__ as __testonly__selectors,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import * as progressReduxSelectors from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
@@ -2077,6 +2079,78 @@ describe('progressReduxTest', () => {
         assert.deepEqual(expectedDispatchActions, getDispatchActions());
         assert.deepEqual(responseData, serverResponseData);
       });
+    });
+  });
+
+  describe('sendAdaptiveStepReport', () => {
+    let fetchSpy;
+    const dispatch = jest.fn();
+    const getState = () => ({progress: {courseId: undefined}});
+
+    beforeEach(() => {
+      fetchSpy = jest
+        .spyOn(window, 'fetch')
+        .mockResolvedValue({ok: true, status: 200});
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+      dispatch.mockReset();
+    });
+
+    it('posts the step level under the adaptive script level', async () => {
+      jest
+        .spyOn(progressReduxSelectors, 'getCurrentScriptLevelId')
+        .mockReturnValue(77);
+
+      await sendAdaptiveStepReport(
+        12,
+        'weblab2',
+        TestResults.ALL_PASS,
+        4500
+      )(dispatch, getState, undefined);
+
+      expect(fetchSpy).toHaveBeenCalledTimes(1);
+      const [url, options] = fetchSpy.mock.calls[0];
+      expect(url).toBe('/milestone/0/77/12');
+      expect(JSON.parse(options.body)).toEqual({
+        app: 'weblab2',
+        result: true,
+        testResult: TestResults.ALL_PASS,
+        timeSinceLastMilestone: 4500,
+      });
+      expect(dispatch).not.toHaveBeenCalled();
+    });
+
+    it('posts nothing without a script level', async () => {
+      jest
+        .spyOn(progressReduxSelectors, 'getCurrentScriptLevelId')
+        .mockReturnValue(undefined);
+
+      await sendAdaptiveStepReport(
+        12,
+        'weblab2',
+        TestResults.LEVEL_STARTED,
+        0
+      )(dispatch, getState, undefined);
+
+      expect(fetchSpy).not.toHaveBeenCalled();
+    });
+
+    it('rejects when the server refuses the report', async () => {
+      jest
+        .spyOn(progressReduxSelectors, 'getCurrentScriptLevelId')
+        .mockReturnValue(77);
+      fetchSpy.mockResolvedValue({ok: false, status: 403});
+
+      await expect(
+        sendAdaptiveStepReport(
+          12,
+          'weblab2',
+          TestResults.ALL_PASS,
+          0
+        )(dispatch, getState, undefined)
+      ).rejects.toThrow('403');
     });
   });
 });

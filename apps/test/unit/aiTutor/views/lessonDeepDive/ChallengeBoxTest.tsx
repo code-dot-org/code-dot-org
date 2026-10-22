@@ -33,6 +33,11 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
   })),
 }));
 
+// Image moderation is WhiteboardChallenge's concern; pass every drawing here.
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: jest.fn(async () => 'safe'),
+}));
+
 // See the stub for what it reproduces of the real canvas, and why.
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoCanvas',
@@ -104,6 +109,7 @@ const fakeChallengeResponse = (
   student_feedback: null,
   evaluation_status: 'running',
   is_final: true,
+  approved: false,
   created_at: '2024-01-01T12:00:00Z',
   assets: [{id: 9, asset_type: 'whiteboard_image', download_url: null}],
   reactions: [],
@@ -187,6 +193,32 @@ describe('ChallengeBox', () => {
       ).toBeInTheDocument()
     );
     expect(document.querySelector('svg')).toBeInTheDocument();
+  });
+
+  it('returns to composing when the submit fails', async () => {
+    snapshot.mockResolvedValue({error: 'Could not capture your drawing.'});
+
+    render(
+      <ChallengeBox
+        lessonId={42}
+        challenge={fakeChallenge}
+        challengeType={ChallengeTypes.WHITEBOARD}
+      />
+    );
+    await submitWhiteboardChallenge();
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Could not capture your drawing.')
+      ).toBeInTheDocument()
+    );
+    expect(
+      screen.queryByText('Tutor is writing feedback...')
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    expect(
+      screen.getByPlaceholderText('Write your explanation here')
+    ).toBeEnabled();
   });
 
   it('displays the feedback once evaluation succeeds', async () => {

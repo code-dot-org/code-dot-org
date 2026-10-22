@@ -847,6 +847,10 @@ FactoryBot.define do
       login_type {'email'}
       grades {['pl']}
     end
+
+    trait :picture_password do
+      login_type {Section::LOGIN_TYPE_PICTURE}
+    end
   end
 
   factory :section_instructor do
@@ -2536,6 +2540,33 @@ FactoryBot.define do
       {
         question_title: 'Give one specific example of an abstraction you used during this lesson.',
         description: 'An example of an abstraction is a function or class that encapsulates a concept or behavior.'
+      }
+    end
+  end
+
+  factory :multiple_select_question, class: MultipleSelectQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple select question #{n}"}
+    content do
+      {
+        question_title: 'Which of these are even?',
+        choices: [{id: 'a', text: '2'}, {id: 'b', text: '3'}, {id: 'c', text: '4'}],
+        correct_choice_ids: ['a', 'c']
+      }
+    end
+  end
+
+  factory :match_question, class: MatchQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Match question #{n}"}
+    content do
+      {
+        question_title: 'Match each expression to its value.',
+        pairs: [
+          {id: 'p1', items: [{id: 'a', text: '1 + 1'}, {id: 'x', text: '2'}]},
+          {id: 'p2', items: [{id: 'b', text: '2 + 1'}, {id: 'y', text: '3'}]},
+          {id: 'p3', items: [{id: 'c', text: '2 + 2'}, {id: 'z', text: '4'}]},
+        ]
       }
     end
   end

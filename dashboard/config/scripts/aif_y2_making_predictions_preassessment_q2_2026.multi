@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q2-2026'
+
+wrong '`model = LinearRegression(hours, scores)`'
+wrong '`model.predict(hours, scores)`'
+wrong '`model.train(hours, scores)`'
+right '`model.fit(hours, scores)`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A linear regression model named `model` has inputs in a list named `hours` and outputs in a list named `scores`. Which line of Python code trains the model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Machine Learning in Python
+MARKDOWN

@@ -46,7 +46,7 @@ export {
   getUnitCounts,
   listChallengeResponses,
   removeReaction,
+  setApproved,
 } from './gallery/api';
+export {default as ChallengeGallery} from './gallery/ChallengeGallery';
 export {default as ProjectDetailsCard} from './gallery/ProjectDetailsCard';
-export {default as ProjectView} from './gallery/ProjectView';
-export {default as ReactionChips} from './gallery/ReactionChips';

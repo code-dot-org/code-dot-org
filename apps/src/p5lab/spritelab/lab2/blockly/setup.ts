@@ -29,6 +29,7 @@ import {
   EffectOptionDropdown,
   FIELD_EFFECT_OPTION_TYPE,
 } from './blockDefinitions/playSoundEffect';
+import {EVENT_HAT_EXTENSION, eventHat} from './blockDefinitions/whenPlayer';
 import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
@@ -103,6 +104,7 @@ function installLabBlocks(): void {
     PLACEHOLDER_OUTLINE_EXTENSION,
     placeholderOutline
   );
+  BlocklyCore.Extensions.register(EVENT_HAT_EXTENSION, eventHat);
   BlocklyCore.Extensions.registerMutator(
     PLACEHOLDER_MUTATOR,
     placeholderMutator

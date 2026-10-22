@@ -12,8 +12,10 @@ class AiRubricConfig
   class StubNoSuchKey < StandardError
   end
 
+  # A rubric with a blank s3_config_dir has no AI config to evaluate against.
+  # Note the empty string is as good as nil here, and is truthy in Ruby.
   def self.ai_enabled?(script_level)
-    !!get_lesson_s3_name(script_level)
+    get_lesson_s3_name(script_level).present?
   end
 
   # Returns the path suffix of the location in S3 which contains the config

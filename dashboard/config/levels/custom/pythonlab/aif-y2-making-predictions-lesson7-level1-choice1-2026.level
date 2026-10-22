@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:00:41.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson7-choice1-2026 + template",
+    "long_instructions": "You are building a nearest-neighbor classifier to identify celestial objects. You want to predict if an unknown object is a meteor, star or galaxy by comparing its measured features to a catalog of previously observed (known) objects, using nearest neighbors classification.\r\n\r\n**☑️ Do This:**\r\n\r\n- Create a new model using `KNeighborsClassifier`\r\n- Train the model with`model.fit`\r\n\r\nYou’ll complete TODO 3 and TODO 4 in the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo create a `KNeighborsClassifier`, call it and set `n_neighbors=1`, so that predictions are based on a single nearest neighbor:\r\n\r\n```\r\nKNeighborsClassifier(n_neighbors=1)\r\n```\r\n\r\nIf you’ve saved your classifier in a variable  called `model`, you can fit it to data with code like:\r\n\r\n```\r\nmodel.fit(train_inputs, train_outputs)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nRlG55Chu\n",
+    "display_name": "Astronomer",
+    "thumbnail_url": "https://images.code.org/f20a5e4ed56b50cccfc145cdd607cb5b-space.jpg",
+    "bubble_choice_description": "An astronomer studies planets, stars, galaxies, and other celestial obejcts."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:03:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:04:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:10:46 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:13:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:15:14 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

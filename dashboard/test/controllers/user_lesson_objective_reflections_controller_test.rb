@@ -4,6 +4,7 @@ class UserLessonObjectiveReflectionsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     @student = create(:student)
     @other_student = create(:student)
     @teacher = create(:teacher)
@@ -47,6 +48,17 @@ class UserLessonObjectiveReflectionsControllerTest < ActionController::TestCase
     reflections = UserLessonObjectiveReflection.where(student: @student, objective: @objective).order(:created_at)
     assert_equal "lost", reflections.first.reflection
     assert_equal "confident", reflections.last.reflection
+  end
+
+  test "create is forbidden without lesson deep dive access" do
+    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+    sign_in @student
+
+    assert_no_difference 'UserLessonObjectiveReflection.count' do
+      post :create, params: {objective_id: @objective.id, reflection: "confident"}
+    end
+
+    assert_response :forbidden
   end
 
   # Param filtering / authorization boundary

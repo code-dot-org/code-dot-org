@@ -157,6 +157,31 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     refute attributes.key?('langfuse.observation.usage_details')
   end
 
+  test 'export uses a caller-supplied trace id' do
+    _url, _options, body = capture_export(trace_id: 'ab' * 16)
+
+    spans_from(body).each do |span|
+      assert_equal 'ab' * 16, span['traceId']
+    end
+  end
+
+  test 'export marks the generation only with level and status message' do
+    _url, _options, body = capture_export(level: 'ERROR', status_message: 'timed out')
+    root, generation = spans_from(body)
+
+    assert_equal 'ERROR', attributes_of(generation)['langfuse.observation.level']
+    assert_equal 'timed out', attributes_of(generation)['langfuse.observation.status_message']
+    refute attributes_of(root).key?('langfuse.observation.level')
+  end
+
+  test 'export omits level and status message by default' do
+    _url, _options, body = capture_export
+    _root, generation = spans_from(body)
+
+    refute attributes_of(generation).key?('langfuse.observation.level')
+    refute attributes_of(generation).key?('langfuse.observation.status_message')
+  end
+
   test 'export swallows transport failures' do
     HTTParty.stubs(:post).raises(Net::ReadTimeout)
     Rails.logger.expects(:warn).with(regexp_matches(/Langfuse OTLP export error/))

@@ -7404,6 +7404,14 @@ columns:
     default_function: 
     collation: utf8mb3_unicode_ci
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_tutor_enabled
+    sql_type_metadata: *20
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
   seed_info:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -7999,6 +8007,50 @@ columns:
   - *9
   - *175
   - *162
+  user_adaptive_steps:
+  - *9
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: user_level_id
+    sql_type_metadata: *34
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: step_id
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: progress
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: validation_history
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: generated_instructions
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *12
+  - *13
   user_data_retention_statuses:
   - *9
   - *18
@@ -9507,6 +9559,7 @@ primary_keys:
   unit_groups: id
   unit_groups_resources: 
   unit_groups_student_resources: id
+  user_adaptive_steps: id
   user_data_retention_statuses: id
   user_facilitator_infos: id
   user_geos: id
@@ -9757,6 +9810,7 @@ data_sources:
   unit_groups: true
   unit_groups_resources: true
   unit_groups_student_resources: true
+  user_adaptive_steps: true
   user_data_retention_statuses: true
   user_facilitator_infos: true
   user_geos: true
@@ -16138,6 +16192,21 @@ indexes:
     type: 
     using: :btree
     comment: 
+  user_adaptive_steps:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_adaptive_steps
+    name: index_user_adaptive_steps_on_user_level_id_and_step_id
+    unique: true
+    columns:
+    - user_level_id
+    - step_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_data_retention_statuses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_data_retention_statuses
@@ -16870,7 +16939,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20261006120000
+version: 20261009170000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

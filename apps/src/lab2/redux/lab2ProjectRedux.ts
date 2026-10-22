@@ -474,6 +474,7 @@ const projectSlice = createSlice({
       state.restoredOldVersion = false;
       state.viewingAiTutorVersion = false;
       state.aiTutorVersionFiles = undefined;
+      state.projectSourceBeforeAiTutorVersion = undefined;
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;

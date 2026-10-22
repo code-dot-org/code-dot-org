@@ -13,6 +13,7 @@ export interface QuizFooterProps {
   onNavigateToPage: (pageNumber: number) => void;
   onNext: () => void;
   finishButtonLabel: string;
+  isSubmitting?: boolean;
 }
 
 const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
@@ -21,6 +22,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
   onNavigateToPage,
   onNext,
   finishButtonLabel,
+  isSubmitting,
 }) => {
   const isFirstPage = currentPageNumber === 1;
   const isLastPage = currentPageNumber === totalPages;
@@ -68,6 +70,8 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
           type="button"
           endIcon={!isLastPage && <FontAwesomeV6Icon iconName="arrow-right" />}
           onClick={onNext}
+          // Not `disabled`: that drops focus, stranding it if the submit fails.
+          aria-disabled={isLastPage && isSubmitting}
         >
           {isLastPage ? finishButtonLabel : 'Next'}
         </MuiButton>

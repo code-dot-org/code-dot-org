@@ -16,6 +16,7 @@ export interface IntroCardProps {
   timeLimitMinutes?: number;
   allowMultipleAttempts: boolean;
   onBegin: () => void;
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 const pluralize = (count: number, noun: string) =>
@@ -29,6 +30,7 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
   timeLimitMinutes,
   allowMultipleAttempts,
   onBegin,
+  headingRef,
 }) => {
   const metadata = [
     {icon: 'circle-question', text: pluralize(questionCount, 'question')},
@@ -45,6 +47,7 @@ const IntroCard: React.FunctionComponent<IntroCardProps> = ({
     <AttemptCard
       label="Before you begin"
       title={title}
+      headingRef={headingRef}
       description={
         introText && (
           <Typography

@@ -1,0 +1,33 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-16T21:17:05.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "> A city’s parks department wants to use a chatbot to answer resident questions about park hours, reservations, and permit fees. A resident asks the chatbot whether the permit application they submitted this morning has been approved yet.\r\n>\r\n> Would you trust the chatbot to answer this without a human reviewing it first? Explain your reasoning, and connect it to something you noticed about the library chatbot today.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18867,
+    "name_suffix": "_2025",
+    "encrypted_solution": "zRb2zM/zydrxh9yRFzPgXe9bWlQ2ipm+ATdglN+Y+i0L4rRUsWtVtVwlJPQs\nJIcNH7bnMehcKZ6sHDSWgktDih3b14jG3CJ09cMzQRyiFTJ8stWhcMDSVn3s\nJwcUFXStf9sOt0VLfCv5igs7avaRGtMjuJzvB2I6WDdP5YWvsk3lcqzuQOzz\n6X7ZzIZXTQmrBIAFUPSk/MH1u4Fylwfwd5MPVmqciiLaKVElFnd8yRKJnq/D\n3i++AY+q+DcxazM+ksaXFKVppu/cjjO10Z9egZ3Lgo7RwOBrtsNZVP+iSqOk\nNfVE/LaOMU9xqzhPO+ABfTJEEj5Zn90LfaSrcoOnN8n2/nhbnOmaimgb9LYI\nxi20gn9UnhSZKr42EqN0T0lx7Y0b8wj4taDTi/BvsmNBozFP670tWlmquuUE\nEdlYZ5XTz50sFEMQeDK4T+CIcu/UdZaNTcc7nACUcFM6x1snFyODdNfnDMGY\nt0dopKI+V/ott50knHfyCiVBRpXmDYNHk0TJ/FtH+yg5kw9vCFpqVelr8F0n\nHdWDbgjZHUnvm8H031Zga+eJYiUZOvZTL12cKkebCu4Fk7MYs4aLKMwyc32b\nRLchPfJOqfIUBMUqX6OdsiAI5qGQz7+UW/kTBcqUbnQE8UBQLDcaDeZWbuXk\nrjF/pW9m8N+rd3WUoXyFEQ4TeNyFBqPq57hwBoQLAVEJzGklNIG8TTp0/7qW\nZT6k6C2p0fKUU3bQGhLpeDBpEcFq19bwpiMTdpTyZYW+gVeprqHb80UHdElg\nUHSqfzaQVgZf8i+VFkjeVkKtu5cMWz3xnhkB4e6WE5Pfup5MBUR5pTIUuEKz\neJqbaA2b+mKt0xbsoIS7Ll8QhrYm/sWuC1Pa3eo+6kmncXjLszbngNGBq5QZ\ntzGSDyvOtqS6cdThfkax7wqaX2ZzDYQh/e5wMFCbIe+lwtNw+TWfIFKz+546\naWxqdwMo+7gJQyNMqeTQIvNNDIZxlq5ydwEaYy9h8ScLq3UiuVnpA8Pn4Tgk\nScQjcwWDWgmsllm0mrQ2VQs7abBPJhLSYqAeEYJQMZm9auPR2VEcYGGhavAL\n1w1vJtWuw3z3EYYa7y24l0MnkVUBhcaBz7H8zHK/Dy8NjYhof4jlerhgr6Kl\nYQGRsbWMuM0hwQaOOURCGVnxGLpbWoF5yqwYkIjsQOdnVEUMg22rYK5Qqmkp\n4UxE9ECFOoBtDfQj\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Applying the Judgment to a New Scenario",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false",
+    "teacher_markdown": "**Strong:** Says no, and explains that this is a live, individual record — one specific resident’s application status — not a stable fact the system could have been given ahead of time. Explicitly connects this to the library chatbot’s holiday gap: both are cases where the system would confidently answer something it was never actually given data for.\r\n\r\n**Partial:** Says no with reasonable individual-case reasoning (“every application is different,” “this changes day to day”) but doesn’t explicitly link it back to the library example, or the connection is vague (“AI can make mistakes”).\r\n\r\n**Weak:** Says yes, it’s fine to trust without review — or gives a reason unrelated to the live-data distinction (e.g., “chatbots are always risky,” or a generic statement that doesn’t explain why this particular question is the risky one compared to the others)."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-16T21:17:05.762+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson16-cfu2_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson16-cfu2_27_28\"},{\"changed_at\":\"2026-10-16 21:17:11 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -3,7 +3,7 @@
 // prompt, ahead of the lab's own tutor prompt.
 
 import {CheckpointStatus, CheckpointStatusMap} from '../progress/model';
-import {Checkpoint, LevelStep, Pathway} from '../types';
+import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
 export interface TutorContextInput {
   pathway: Pathway;
@@ -12,11 +12,12 @@ export interface TutorContextInput {
   step: LevelStep;
   statusMap: CheckpointStatusMap;
   /** The student's project, when the step edits it. */
-  project?: {name?: string; description?: string};
+  project?: PathwayProjectInfo;
 }
 
 const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
   complete: 'Completed',
+  skipped: 'Skipped, already demonstrated',
   inProgress: 'In progress',
   available: 'Not started',
   locked: 'Not started',
@@ -25,6 +26,7 @@ const STATUS_HEADINGS: {[status in CheckpointStatus]: string} = {
 // Checkpoint statuses relevant to the tutor; locked reads as available.
 const TUTOR_STATUSES: CheckpointStatus[] = [
   'complete',
+  'skipped',
   'inProgress',
   'available',
 ];

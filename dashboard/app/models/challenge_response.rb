@@ -71,6 +71,7 @@ class ChallengeResponse < ApplicationRecord
       transcript: transcript,
       evaluation_status: evaluation_status,
       is_final: is_final,
+      approved: approved,
       created_at: created_at,
       assets: challenge_response_assets.map {|asset| asset.summarize(upload: assets_for_upload)},
       reactions: reaction_summary(viewer),

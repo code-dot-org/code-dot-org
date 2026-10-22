@@ -70,6 +70,7 @@ export type ChallengeResponse = {
   student_feedback: string | null;
   evaluation_status: string | null;
   is_final: boolean;
+  approved: boolean;
   created_at: string;
   assets: ChallengeResponseAsset[];
   reactions: Reaction[];
@@ -87,6 +88,7 @@ type ServerChallengeResponse = {
   student_feedback?: string | null;
   evaluation_status: string | null;
   is_final: boolean;
+  approved?: boolean;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
   reactions?: unknown;
@@ -111,6 +113,7 @@ export const challengeResponseValidator: ResponseValidator<
     student_feedback: r.student_feedback ?? null,
     evaluation_status: r.evaluation_status ?? null,
     is_final: r.is_final,
+    approved: r.approved === true,
     created_at: r.created_at,
     assets: r.assets.map(a => ({
       id: a.id,

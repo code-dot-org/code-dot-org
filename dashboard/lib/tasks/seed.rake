@@ -44,6 +44,10 @@ namespace :seed do
     JSONVideo.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
+  timed_task_with_logging json_videos_ui_tests: :environment do
+    JSONVideo.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME, glob: 'test/ui/config/json_videos/*.json')
+  end
+
   timed_task_with_logging practice_problems: :environment do
     PracticeProblem.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
@@ -330,7 +334,9 @@ namespace :seed do
 
   # Parse each .[dsl] file and setup its model.
   def parse_dsl_files(dsl_files, dsl_types)
-    level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+    # Use explicit types to match every DSL level, without relying on their
+    # classes to have been eagerly loaded.
+    level_md5s_by_name = Level.where(type: dsl_types).pluck(:name, :md5).to_h
 
     dsl_files.each do |filename|
       dsl_class = dsl_types.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
@@ -563,7 +569,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :json_videos, :practice_problems, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :foorms, :datablock_storage, :validate_ai_rubrics].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :jit_pl_concepts, :reseed_scripts_ui_tests, :json_videos_ui_tests, :callouts_ui_tests, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
 
   # Development seeds the UI test tree on top of production content, so that a

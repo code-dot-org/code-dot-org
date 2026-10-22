@@ -8,7 +8,8 @@ import {
 describe('camelize', () => {
   it('matches the server camelization for every editable key', () => {
     const expected = {
-      guide_steps: 'guideSteps',
+      block_catalog: 'blockCatalog',
+      objectives: 'objectives',
       hide_custom_blocks: 'hideCustomBlocks',
       image_role_defaults: 'imageRoleDefaults',
       level_mode: 'levelMode',
