@@ -143,7 +143,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       scene has none of that type (addBlocks.ts), in Blockly's block
       state form: an event to fill in, a placeholder shadow on its `next`.
       An entry with `attachTo` instead hangs its shadow on the end of the
-      stack already there whose top block has that type. */
+      stack already there whose top block has that type; one with `ghost`
+      draws the stack as outlines for the student to build from the
+      toolbox (ghostBlocks.ts). */
   addBlocks?: AddBlockEntry[];
   /** Arrows at the lab's controls while a condition holds (callouts.ts). */
   callouts?: LevelCallout[];
