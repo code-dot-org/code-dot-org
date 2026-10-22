@@ -29,7 +29,7 @@ const DataDisplay = () => {
   }
 
   const isTable = datasetLayout === 'table';
-  const shownCount = isTable ? tableView.rows.length : rowCount;
+  const shownCount = tableView.rows.length;
   const totalText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
   const rowCountText =
     shownCount === rowCount ? totalText : `${shownCount} of ${totalText}`;
@@ -61,7 +61,7 @@ const DataDisplay = () => {
           </Typography>
         </div>
         <div className={styles.actions}>
-          {isTable && <TableFilter view={tableView} />}
+          <TableFilter view={tableView} />
           <div
             role="group"
             aria-label="Dataset view"
@@ -92,7 +92,7 @@ const DataDisplay = () => {
           <DataTable view={tableView} />
         </div>
       ) : (
-        <DatasetCardDeck />
+        <DatasetCardDeck rows={tableView.rows} />
       )}
     </div>
   );

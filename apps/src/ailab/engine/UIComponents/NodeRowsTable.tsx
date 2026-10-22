@@ -12,6 +12,7 @@ import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
+import NoMatchingRows from './NoMatchingRows';
 import RowsTableHeader from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
@@ -87,7 +88,7 @@ const NodeRowsTable = ({
             ))}
           </tbody>
         </table>
-        {view.rows.length === 0 && (
+        {view.totalRowCount === 0 ? (
           <Typography
             variant="body4"
             component="p"
@@ -95,6 +96,8 @@ const NodeRowsTable = ({
           >
             {emptyText}
           </Typography>
+        ) : (
+          view.rows.length === 0 && <NoMatchingRows />
         )}
       </DataTableFrame>
       {view.rows.length > shownRows.length && (

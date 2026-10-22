@@ -1,4 +1,4 @@
-import {act, fireEvent, screen, within} from '@testing-library/react';
+import {act, fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
@@ -212,6 +212,20 @@ describe('NodeModal', () => {
     expect(
       within(dialog()).getByRole('button', {name: 'Correct (1)'})
     ).toBeTruthy();
+  });
+
+  it('filters the rows trained on and counts the ones it keeps', async () => {
+    fireEvent.click(root());
+    fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
+    fireEvent.click(within(dialog()).getByRole('button', {name: 'Filter'}));
+    fireEvent.click(screen.getByRole('button', {name: /^animal/}));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'bird'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
+
+    await waitFor(() =>
+      expect(within(dialog()).getByText('3 of 9 Rows')).toBeTruthy()
+    );
+    expect(shownRows().map(([number]) => number)).toEqual(['1', '4', '7']);
   });
 
   it("offers no sort on an answer's single prediction", () => {

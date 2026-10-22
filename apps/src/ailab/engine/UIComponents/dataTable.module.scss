@@ -226,3 +226,7 @@
     background-color: var(--background-info-light);
   }
 }
+
+.emptyNote {
+  @include mixins.data-table-empty-note;
+}

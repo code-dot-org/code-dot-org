@@ -45,18 +45,18 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Cards'));
 
     expect(screen.queryByRole('table')).toBeNull();
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 1 of 10')).toBeTruthy();
     expect(screen.getByText('bird')).toBeTruthy();
     expect(button('Previous row').getAttribute('aria-disabled')).toBe('true');
     fireEvent.click(button('Previous row'));
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 1 of 10')).toBeTruthy();
 
     fireEvent.click(button('Next row'));
-    expect(screen.getByText('Row 2 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 2 of 10')).toBeTruthy();
     expect(screen.getByText('dog')).toBeTruthy();
 
     fireEvent.keyDown(button('Next row'), {key: 'ArrowLeft'});
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 1 of 10')).toBeTruthy();
   });
 
   test('marks the label and the features for screen readers', () => {
@@ -75,12 +75,12 @@ describe('DataDisplay', () => {
     next.focus();
     fireEvent.keyDown(next, {key: 'End'});
 
-    expect(screen.getByText('Row 10 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 10 of 10')).toBeTruthy();
     expect(next.getAttribute('aria-disabled')).toBe('true');
     expect(document.activeElement).toBe(next);
 
     fireEvent.click(next);
-    expect(screen.getByText('Row 10 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 10 of 10')).toBeTruthy();
   });
 
   test('a new level or dataset starts the deck on its first row', () => {
@@ -199,7 +199,7 @@ describe('DataDisplay', () => {
     expect(screen.queryByRole('button', {name: 'Filter'})).toBeNull();
   });
 
-  test('closing the filter focuses its tag, and cards show every row', async () => {
+  test('closing the filter focuses its tag, and cards show only the matching rows', async () => {
     renderDisplay();
     button('Filter').focus();
     fireEvent.click(button('Filter'));
@@ -211,11 +211,9 @@ describe('DataDisplay', () => {
     );
 
     fireEvent.click(button('Cards'));
-    expect(screen.getByText('10 rows')).toBeTruthy();
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
-    expect(
-      screen.queryByRole('button', {name: 'Filter by animal: dog'})
-    ).toBeNull();
+    expect(screen.getByText('4 of 10 rows')).toBeTruthy();
+    expect(screen.getByText('Card 1 of 4')).toBeTruthy();
+    expect(screen.getByText('Row 2')).toBeTruthy();
   });
 
   test('clearing the tag shows every row and focuses the filter button', async () => {
