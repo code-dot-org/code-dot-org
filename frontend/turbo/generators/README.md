@@ -13,8 +13,9 @@ yarn turbo gen lab       # scaffold a new React lab under packages/labs/<name>/
 ```
 
 Both generators prompt for a package name and description, then create all
-scaffold files. The `lab` generator also registers the lab in Studio
-(`labs.ts`, `getLabEntrypoint.ts`, `apps/studio/package.json`).
+scaffold files. The `lab` generator also registers the lab in Studio and CI;
+[Scaffolding a new lab](../../docs/conventions/packages.md#scaffolding-a-new-lab)
+lists every edit.
 
 After generation, both generators automatically run:
 

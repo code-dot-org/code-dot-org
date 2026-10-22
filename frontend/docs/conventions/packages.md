@@ -35,7 +35,8 @@ has non-obvious data flow, stateful services, or significant constraints.
 ## package.json
 
 - `name`: `@code-dot-org/<package-name>`
-- `version`: `0.0.0` (managed by Turborepo/Changesets, never edit manually)
+- `version`: `0.0.0`, never edited manually. Packages that publish get versions
+  from release-it (a `release` script, shared config in `packages/changelogs`)
 - `private`: `true` for internal packages not published to npm
 - External dependencies (`react`, `uuid`, etc.) → `peerDependencies` + `devDependencies`, never `dependencies`
 - Do not add `"type": "module"` — it breaks the legacy `apps/` webpack bundle
@@ -69,6 +70,7 @@ has non-obvious data flow, stateful services, or significant constraints.
 - Choose the preset that matches the package type:
   - React apps and component libraries → `@code-dot-org/lint-config/eslint/react.mjs`
   - Node.js tooling or config-only packages → `@code-dot-org/lint-config/eslint/node.mjs`
+  - Labs (`packages/labs/*`) → `@code-dot-org/lint-config/eslint/lab.mjs`
   - Vitest test files → add `@code-dot-org/lint-config/eslint/vitest.mjs` as an overlay
 
 ```js

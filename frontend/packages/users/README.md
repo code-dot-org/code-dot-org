@@ -23,8 +23,8 @@ different endpoint (`PATCH /api/v1/user_school_infos`).
 
 It is **app-shaped but not a lab** — it has a standalone dev server, MSW
 fixtures, and a `./mocks` subpath like a lab, but it registers no lab entry and
-has no channel/level model. See
-[frontend/docs/conventions/packages.md](../../docs/conventions/packages.md#app-shaped-feature-packages).
+has no channel/level model. The lab conventions it follows are in
+[frontend/docs/conventions/packages.md](../../docs/conventions/packages.md#labs).
 
 ## Public API
 
