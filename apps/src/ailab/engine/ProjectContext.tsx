@@ -9,9 +9,15 @@ import React, {
   type ReactNode,
 } from 'react';
 
+import {
+  applyPresetColumns,
+  keepSelectableColumns,
+  sortByColumnOrder,
+} from './helpers/projectColumns';
 import {useAppSelector} from './hooks';
+import {getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
-import {initialProject, type AilabProject, type DataRow} from './types';
+import {initialProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
 
 /*
@@ -26,6 +32,7 @@ type TrainingRunOutputs = Pick<
 
 interface ProjectContextValue {
   project: AilabProject;
+  openProject: (saved: AilabProject) => void;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -33,11 +40,6 @@ interface ProjectContextValue {
   applyTrainingRun: (run?: TrainingRun) => void;
   snapshotTrainingRun: () => void;
   restoreTrainingRun: () => void;
-}
-
-function sortByColumnOrder(features: string[], data: DataRow[]): string[] {
-  const columns = Object.keys(data[0] ?? {});
-  return [...features].sort((a, b) => columns.indexOf(a) - columns.indexOf(b));
 }
 
 const ProjectContext = createContext<ProjectContextValue | undefined>(
@@ -57,19 +59,27 @@ export const ProjectProvider = ({
     openWith ?? initialProject
   );
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  // A project handed to openProject before the dataset was described.
+  const pendingProject = useRef<AilabProject | undefined>(undefined);
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
+  const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
+  // The rows and the column types arrive separately, and a dataset is only
+  // described once both have.
+  const columnTypesKnown = useAppSelector(
+    state => Object.keys(state.columnsByDataType).length > 0
+  );
+  const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((keepsHistoricResults: boolean) => {
+    useCallback((keepsPendingProject: boolean) => {
       previousRun.current = undefined;
-      setProject(previous =>
-        keepsHistoricResults
-          ? {...initialProject, historicResults: previous.historicResults}
-          : initialProject
-      );
+      if (!keepsPendingProject) {
+        pendingProject.current = undefined;
+      }
+      setProject(initialProject);
     }, [])
   );
 
@@ -124,42 +134,65 @@ export const ProjectProvider = ({
     [data]
   );
 
-  /*
-    Handle the preset columns for the project. A locked column always
-    wins, since the student has no way to change it. An unlocked one will
-    never replace a choice already in the project.
-  */
   useEffect(() => {
     if (!presetColumns) {
       return;
     }
-    setProject(previous => {
-      let labelColumn = previous.labelColumn;
-      if (
-        presetColumns.labelColumn !== undefined &&
-        (lockedLabel || previous.labelColumn === undefined)
-      ) {
-        labelColumn = presetColumns.labelColumn;
-      }
-
-      let features = previous.selectedFeatures;
-      if (
-        presetColumns.selectedFeatures &&
-        (lockedFeatures || previous.selectedFeatures.length === 0)
-      ) {
-        features = presetColumns.selectedFeatures;
-      }
-
-      return {
-        ...previous,
-        labelColumn,
-        selectedFeatures: sortByColumnOrder(
-          features.filter(feature => feature !== labelColumn),
-          data
-        ),
-      };
-    });
+    setProject(previous =>
+      applyPresetColumns(
+        previous,
+        presetColumns,
+        lockedLabel,
+        lockedFeatures,
+        data
+      )
+    );
   }, [presetColumns, lockedLabel, lockedFeatures, data]);
+
+  const applyProject = useCallback(
+    (saved: AilabProject) => {
+      previousRun.current = undefined;
+      const opened = keepSelectableColumns(saved, selectableColumns, data);
+      setProject(
+        presetColumns
+          ? applyPresetColumns(
+              opened,
+              presetColumns,
+              lockedLabel,
+              lockedFeatures,
+              data
+            )
+          : opened
+      );
+    },
+    [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
+  );
+
+  /*
+    Opens a saved project, which may name columns this dataset no longer has
+    and predates any preset the level applies.
+
+    Waits for the dataset to be described before applying the project.
+  */
+  const openProject = useCallback(
+    (saved: AilabProject) => {
+      if (!datasetDescribed) {
+        pendingProject.current = saved;
+        return;
+      }
+      pendingProject.current = undefined;
+      applyProject(saved);
+    },
+    [datasetDescribed, applyProject]
+  );
+
+  useEffect(() => {
+    const saved = pendingProject.current;
+    if (saved && datasetDescribed) {
+      pendingProject.current = undefined;
+      applyProject(saved);
+    }
+  }, [datasetDescribed, applyProject]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
@@ -192,6 +225,7 @@ export const ProjectProvider = ({
   const value = useMemo(
     () => ({
       project,
+      openProject,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -202,6 +236,7 @@ export const ProjectProvider = ({
     }),
     [
       project,
+      openProject,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

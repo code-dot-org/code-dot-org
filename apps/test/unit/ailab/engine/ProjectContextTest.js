@@ -4,11 +4,16 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import {
+  ColumnTypes,
+  UNIQUE_OPTIONS_MAX,
+} from '@cdo/apps/ailab/engine/constants';
+import {
   ProjectProvider,
   useProject,
 } from '@cdo/apps/ailab/engine/ProjectContext';
 import rootReducer, {
   resetState,
+  setColumnsByDataType,
   setImportedData,
   setMode,
   setPresetColumns,
@@ -124,7 +129,7 @@ describe('ProjectContext', () => {
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
 
     expect(project().hyperparameters).toBeUndefined();
@@ -132,17 +137,15 @@ describe('ProjectContext', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('Start Over keeps the results but drops the rest', () => {
+  test('Start Over drops the results along with the rest', () => {
     const {store, project, context} = renderContext();
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(true));
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
 
-    expect(project().hyperparameters).toBeUndefined();
-    expect(project().accuracyCheckRowIndices).toBeUndefined();
-    expect(accuracies(project())).toEqual(['80.00']);
+    expect(project()).toEqual(initialProject);
   });
 
   test('a reset drops the snapshot a cancel would have used', () => {
@@ -151,7 +154,7 @@ describe('ProjectContext', () => {
     act(() => context().snapshotTrainingRun());
 
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
     });
     act(() => context().restoreTrainingRun());
 
@@ -342,5 +345,185 @@ describe('ProjectContext column choices', () => {
 
     expect(project().labelColumn).toBe('c');
     expect(project().selectedFeatures).toEqual(['a', 'b']);
+  });
+});
+
+describe('ProjectContext opening a saved project', () => {
+  const described = () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    ['a', 'b', 'c'].forEach(column =>
+      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+    );
+    return store;
+  };
+
+  const SAVED = {
+    labelColumn: 'a',
+    selectedFeatures: ['b', 'c'],
+    hyperparameters: {k: 3},
+    accuracyCheckRowIndices: [0],
+    historicResults: [FIRST.historicResult],
+  };
+
+  test('takes the columns and the run the project described', () => {
+    const {project, context} = renderContext(undefined, described());
+
+    act(() => context().openProject(SAVED));
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('drops columns this dataset does not offer', () => {
+    const {project, context} = renderContext(undefined, described());
+
+    act(() =>
+      context().openProject({
+        ...SAVED,
+        labelColumn: 'gone',
+        selectedFeatures: ['b', 'alsogone'],
+      })
+    );
+
+    expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual(['b']);
+  });
+
+  test('a locked label still beats the saved one', () => {
+    const store = described();
+    store.dispatch(setMode({hideSelectLabel: true}));
+    store.dispatch(setPresetColumns({labelColumn: 'c'}));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+
+    expect(project().labelColumn).toBe('c');
+  });
+
+  test('an unlocked preset leaves the saved label alone', () => {
+    const store = described();
+    store.dispatch(setPresetColumns({labelColumn: 'c'}));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+
+    expect(project().labelColumn).toBe('a');
+  });
+
+  /*
+    Every column looks unselectable until the dataset is described, so opening
+    a project then would throw it away with no second reconciliation to undo it.
+  */
+  test('waits for a dataset that has not loaded yet', () => {
+    const store = createStore(rootReducer);
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    expect(project()).toEqual(initialProject);
+
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('waits for the column types, not just the rows', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    expect(project()).toEqual(initialProject);
+
+    act(() =>
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      )
+    );
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  /*
+    Every column of this dataset is categorical with more unique values than
+    the lab will offer, so it is fully described and still has nothing to pick
+    from. That is not the same as a dataset that has yet to load.
+  */
+  test('opens against a dataset that offers nothing selectable', () => {
+    const store = createStore(rootReducer);
+    const crowded = Array.from({length: UNIQUE_OPTIONS_MAX + 10}, (_, row) => ({
+      a: `a${row}`,
+      b: `b${row}`,
+      c: `c${row}`,
+    }));
+    const {project, context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    act(() => {
+      store.dispatch(setImportedData(crowded, true));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
+      );
+    });
+
+    expect(project().labelColumn).toBeUndefined();
+    expect(project().selectedFeatures).toEqual([]);
+    expect(project().historicResults).toEqual(SAVED.historicResults);
+  });
+
+  /*
+    The dataset a project waits for may be the one the student goes on to
+    choose, so choosing one does not abandon it. Its columns are reconciled
+    against whichever dataset arrives.
+  */
+  test('the student choosing a dataset keeps a project waiting for one', () => {
+    const store = createStore(rootReducer);
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().openProject(SAVED));
+
+    act(() => {
+      store.dispatch(resetState(/*keepsPendingProject*/ true));
+    });
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(project()).toEqual(SAVED);
+  });
+
+  test('a level load drops a project still waiting for its dataset', () => {
+    const store = createStore(rootReducer);
+    const {project, context} = renderContext(undefined, store);
+    act(() => context().openProject(SAVED));
+
+    act(() => {
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
+    });
+    act(() => {
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(project()).toEqual(initialProject);
+  });
+
+  test('drops the snapshot a cancel would have used', () => {
+    const {project, context} = renderContext(undefined, described());
+    act(() => context().applyTrainingRun(FIRST));
+    act(() => context().snapshotTrainingRun());
+
+    act(() => context().openProject(SAVED));
+    act(() => context().restoreTrainingRun());
+
+    expect(project().hyperparameters).toEqual(SAVED.hyperparameters);
   });
 });

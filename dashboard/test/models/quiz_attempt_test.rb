@@ -218,6 +218,33 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_equal({correctChoiceIds: ['a', 'c']}, result[:answer_key])
   end
 
+  test "question_results reveals a match question's correct pairs only per the quiz's settings" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:match_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    response_data = {'pairs' => [['a', 'x'], ['b', 'y'], ['c', 'z']]}
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: response_data,
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+
+    result = attempt.question_results.first
+    assert_equal 'MatchQuestion', result[:quiz_question_type]
+    assert_equal response_data, result[:response_data]
+    assert_equal({correctPairs: nil}, result[:answer_key])
+
+    quiz.update!(show_correctness: true, reveal_answer_explanation: true, show_questions_after_submit: true)
+    result = attempt.reload.question_results.first
+    assert result[:correct]
+    assert_equal({correctPairs: [['a', 'x'], ['b', 'y'], ['c', 'z']]}, result[:answer_key])
+  end
+
   test "question_results_in_progress is nil once the attempt is submitted" do
     attempt = create(:quiz_attempt, submitted_at: Time.now)
     assert_nil attempt.question_results_in_progress
