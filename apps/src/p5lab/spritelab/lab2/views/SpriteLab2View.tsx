@@ -653,13 +653,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [scenes, activeSceneId, pinnedSceneId, openScene]);
 
-  // Premade world, when the level authors one.
+  // The level's first image: the dialog opens on arrival, and again after
+  // a dismissal while the project has no image in the level's role.
+  const firstImageAskedRef = useRef<number | null>(null);
+  const firstImageDone = useMemo(() => {
+    const mode = levelProperties.levelMode;
+    return (
+      !mode?.imageFirst ||
+      !!imageNamedForRole(
+        animationList,
+        mode.imageType ?? 'sprite',
+        mode.imageRole
+      )
+    );
+  }, [levelProperties.levelMode, animationList]);
+
+  // Premade world, when the level authors one; one that opens on its image
+  // dialog paints once that image exists, with it.
   const paintedWorld = useWorldStartPattern({
     pattern: levelProperties.worldStartPattern,
     channelId,
     layoutOverride: layoutOverrideParam(),
     pinnedSceneId,
-    enabled: animationsSeeded,
+    enabled: animationsSeeded && firstImageDone,
     animations: animationList,
     spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
     updateSources,
@@ -1127,20 +1143,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     scenesSeen,
   });
 
-  // The level's first image: the dialog opens on arrival, and again after
-  // a dismissal while the project has no image in the level's role.
-  const firstImageAskedRef = useRef<number | null>(null);
-  const firstImageDone = useMemo(() => {
-    const mode = levelProperties.levelMode;
-    return (
-      !mode?.imageFirst ||
-      !!imageNamedForRole(
-        animationList,
-        mode.imageType ?? 'sprite',
-        mode.imageRole
-      )
-    );
-  }, [levelProperties.levelMode, animationList]);
   useEffect(() => {
     const mode = levelProperties.levelMode;
     const asked = firstImageAskedRef.current === levelProperties.id;
@@ -1927,8 +1929,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // wherever the workspace was, so a load runs it too and brings the
   // level's outline back on screen.
   const addLevelBlocks = useCallback(() => {
+    // A level that opens on its image dialog adds its blocks once that
+    // image exists, so their dropdowns open on it.
     if (
       !animationsSeeded ||
+      !firstImageDone ||
       isToolboxMode ||
       !levelProperties.addBlocks ||
       activeScene.id !== pinnedSceneId
@@ -1958,6 +1963,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     addMissingBlocks(workspace, levelProperties.addBlocks);
   }, [
     animationsSeeded,
+    firstImageDone,
     levelProperties.id,
     levelProperties.addBlocks,
     activeScene.id,
