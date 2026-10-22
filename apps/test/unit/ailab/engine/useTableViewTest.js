@@ -114,7 +114,7 @@ describe('useTableView', () => {
     act(() => result.current.filterBy('habitat', ['sea']));
     expect(result.current.rows).toEqual([1, 2]);
     expect(result.current.filter).toEqual({column: 'habitat', values: ['sea']});
-    expect(result.current.totalRows).toBe(4);
+    expect(result.current.totalRowCount).toBe(4);
   });
 
   test('filtering another column replaces the filter', () => {
@@ -183,7 +183,7 @@ describe('useTableView', () => {
   test('offers sorted, non-blank values for filterable columns only', () => {
     const {result} = renderView();
 
-    expect(result.current.filterableColumns).toEqual(['name', 'habitat']);
+    expect(result.current.shownFilterableColumns).toEqual(['name', 'habitat']);
     expect(result.current.filterOptions('habitat')).toEqual(['land', 'sea']);
     expect(result.current.filterOptions('name')).toEqual([
       'ant',
@@ -205,7 +205,7 @@ describe('useTableView', () => {
       valueAt,
     });
     expect(result.current.rows).toEqual([]);
-    expect(result.current.totalRows).toBe(2);
+    expect(result.current.totalRowCount).toBe(2);
     expect(result.current.filterOptions('name')).toEqual([
       'ant',
       'crab',
@@ -224,7 +224,7 @@ describe('useTableView', () => {
       filterableColumns: ['name', 'habitat'],
       valueAt,
     });
-    expect(result.current.filterableColumns).toEqual(['name']);
+    expect(result.current.shownFilterableColumns).toEqual(['name']);
     expect(result.current.rows).toEqual([1, 2]);
   });
 });
