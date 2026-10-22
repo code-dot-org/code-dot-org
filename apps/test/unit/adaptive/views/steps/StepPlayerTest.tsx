@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {Checkpoint, Step} from '@cdo/apps/adaptive/types';
@@ -31,7 +31,7 @@ describe('StepPlayer', () => {
 
   afterEach(() => now.mockRestore());
 
-  const renderPlayer = () => {
+  const renderPlayer = (initialStepId?: string) => {
     const calls: unknown[][] = [];
     const record =
       (name: string) =>
@@ -45,6 +45,7 @@ describe('StepPlayer', () => {
       >
         <StepPlayer
           checkpoint={checkpoint}
+          initialStepId={initialStepId}
           onStartStep={record('start')}
           onCompleteStep={record('complete')}
           onLeaveStep={record('leave')}
@@ -103,5 +104,97 @@ describe('StepPlayer', () => {
       ['start', checkpoint.steps[0]],
       ['leave', checkpoint.steps[0], 3000],
     ]);
+  });
+
+  describe('URL parameters', () => {
+    let replaceState: jest.SpyInstance;
+    let pushState: jest.SpyInstance;
+    const originalUrl = window.location.href;
+
+    beforeEach(() => {
+      replaceState = jest.spyOn(window.history, 'replaceState');
+      pushState = jest.spyOn(window.history, 'pushState');
+      window.history.replaceState({}, '', '/');
+    });
+
+    afterEach(() => {
+      replaceState.mockRestore();
+      pushState.mockRestore();
+      window.history.replaceState({}, '', originalUrl);
+    });
+
+    it('writes checkpoint and step ids to the URL on mount', () => {
+      renderPlayer();
+
+      expect(pushState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=one'
+      );
+    });
+
+    it('updates the URL when advancing to the next step', () => {
+      renderPlayer();
+      pushState.mockClear();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+
+      expect(pushState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=two'
+      );
+    });
+
+    it('starts on the step matching initialStepId without adding a history entry', () => {
+      // Simulate URL navigation — URL already has the step param.
+      window.history.replaceState({}, '', '?checkpoint=basics&step=two');
+      pushState.mockClear();
+      renderPlayer('two');
+
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      // URL already correct → no pushState (avoids a duplicate history entry).
+      expect(pushState).not.toHaveBeenCalled();
+    });
+
+    it('falls back to step 0 when initialStepId is not found', () => {
+      renderPlayer('unknown-step');
+
+      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      expect(pushState).toHaveBeenCalledWith(
+        null,
+        '',
+        '?checkpoint=basics&step=one'
+      );
+    });
+
+    it('ignores popstate events for a different checkpoint', () => {
+      renderPlayer();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+
+      pushState.mockClear();
+      window.history.replaceState({}, '', '?checkpoint=other&step=one');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      // Step unchanged — the event was for a different checkpoint.
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(pushState).not.toHaveBeenCalled();
+    });
+
+    it('navigates to the previous step when the browser fires popstate', () => {
+      renderPlayer();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+
+      pushState.mockClear();
+      // Simulate browser back: URL reverts to step one, popstate fires.
+      window.history.replaceState({}, '', '?checkpoint=basics&step=one');
+      act(() => window.dispatchEvent(new PopStateEvent('popstate')));
+
+      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      // URL already correct → no duplicate history entry added.
+      expect(pushState).not.toHaveBeenCalled();
+    });
   });
 });
