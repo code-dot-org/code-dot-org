@@ -14,8 +14,8 @@ Part of the [partitioned curriculum data proposal](https://docs.google.com/docum
 
 ## Naming
 
-Which tree something belongs to is decided by the name of the thing defined,
-not by where its file happens to sit:
+Which partition something belongs to is decided by the name of the thing
+defined, not by where its file happens to sit:
 
 - course offerings, courses, units: names beginning `ui-test-`, e.g.
   `ui-test-csf`
