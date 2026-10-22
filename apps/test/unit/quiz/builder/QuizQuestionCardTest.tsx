@@ -1,9 +1,9 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React, {useState} from 'react';
+import React, {act, useState} from 'react';
 
 import QuizQuestionCard from '@cdo/apps/quiz/builder/QuizQuestionCard';
-import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
+import {MatchDraft, QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
 
 const QUESTION: QuizBuilderQuestion = {
   id: 7,
@@ -253,14 +253,14 @@ describe('QuizQuestionCard', () => {
       ],
     };
 
-    function openPairs() {
+    function openAnswers() {
       const utils = renderCard({question: MATCH_QUESTION, isExpanded: true});
       fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
       return utils;
     }
 
     it('shows each pair as two labeled fields under an Options heading', () => {
-      openPairs();
+      openAnswers();
 
       expect(screen.getByRole('group', {name: 'Options'})).toBeInTheDocument();
       expect(screen.getByLabelText('Pair 1, term')).toHaveAttribute(
@@ -278,7 +278,7 @@ describe('QuizQuestionCard', () => {
     });
 
     it('saves edited pair text', async () => {
-      const {onSave} = openPairs();
+      const {onSave} = openAnswers();
 
       fireEvent.change(screen.getByLabelText('Pair 2, definition'), {
         target: {value: 'three'},
@@ -304,22 +304,28 @@ describe('QuizQuestionCard', () => {
       );
     });
 
-    it('adds an empty pair with new, distinct ids', () => {
-      openPairs();
+    it('adds an empty pair with new, distinct ids', async () => {
+      const {onSave} = openAnswers();
 
       fireEvent.click(screen.getByRole('button', {name: 'Add pair'}));
 
       expect(screen.getByLabelText('Pair 3, term')).toHaveValue('');
       expect(screen.getByLabelText('Pair 3, definition')).toHaveValue('');
-      const names = screen
-        .getAllByRole('textbox')
-        .map(field => field.getAttribute('name'))
-        .filter(name => name?.startsWith('pair-'));
-      expect(new Set(names).size).toBe(6);
+
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+      const {pairs}: MatchDraft = onSave.mock.calls[0][1];
+      const ids = pairs.flatMap(pair => [
+        pair.id,
+        ...pair.items.map(item => item.id),
+      ]);
+      expect(ids).toHaveLength(9);
+      expect(new Set(ids).size).toBe(9);
     });
 
     it('does not delete below 2 pairs', () => {
-      openPairs();
+      openAnswers();
 
       expect(
         screen.getByRole('button', {name: 'Delete pair 1'})

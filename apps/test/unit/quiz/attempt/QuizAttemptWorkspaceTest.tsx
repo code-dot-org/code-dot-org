@@ -1430,25 +1430,4 @@ describe('QuizAttemptWorkspace', () => {
       expect(screen.queryByRole('textbox')).not.toBeInTheDocument();
     });
   });
-
-  // TODO: replace with tests for MatchQuestionContainer.
-  it('shows a placeholder for a match question', () => {
-    renderWorkspace({
-      hookState: {attempt: ATTEMPT},
-      quizQuestions: [
-        question({
-          type: 'MatchQuestion',
-          questionTitle: 'Match each expression to its value.',
-          choices: undefined,
-        }),
-      ],
-    });
-
-    expect(
-      screen.getByRole('heading', {name: 'Match each expression to its value.'})
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Matching questions are not available yet.')
-    ).toBeInTheDocument();
-  });
 });
