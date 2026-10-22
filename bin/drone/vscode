@@ -3,7 +3,7 @@
 USAGE="
 Opens a VSCode tunnel into a live drone build, for interactive debugging.
 
-Usage: bin/drone/vscode ec2-34-201-165-204.us-west-2.compute.amazonaws.com
+Usage: bin/drone/vscode i-0123456789abcdef0 us-west-2
 
 Establishing a tunnel:
   1. You'll have to login to GitHub and auth, watch the terminal for a URL + code
@@ -13,11 +13,11 @@ Establishing a tunnel:
       the Remote Explorer you can referesh and you shoudl see a tunnel (named a hex code)
   3. You can open terminals, editors etc in VSCode: you are editing the remote drone instance
 
-See bin/drone/shell for more info on flags and ssh setup
+See bin/drone/shell for more info on the instance id / region arguments
 "
 
-# Print USAGE if --help or ARGC != 1
-if [ "$1" = "--help" ] || [ "$#" -ne 1 ]; then
+# Print USAGE if --help or no instance id given
+if [ "$1" = "--help" ] || [ "$#" -lt 1 ]; then
   cat <<< "$USAGE"
   exit 1
 fi
