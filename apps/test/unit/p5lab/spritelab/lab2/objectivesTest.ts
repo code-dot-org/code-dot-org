@@ -72,7 +72,7 @@ function inputs(over: Partial<ObjectiveInputs> = {}): ObjectiveInputs {
     images: {sprite: 0, background: 0, block: 0},
     grid: undefined,
     baselineGrid: undefined,
-    imageForRole: {hero: 'Sprite 1', treasure: 'Sprite 3'},
+    imagesForRole: {hero: ['Sprite 1'], treasure: ['Sprite 3']},
     imageNames: new Set(['Sprite 1', 'Sprite 3', 'Background 1']),
     source,
     activeTab: 'Code',
@@ -313,7 +313,7 @@ describe('checkObjective', () => {
   it('can insist that the sprite input names the image of a role', () => {
     const begins = (image: string) =>
       inputs({
-        imageForRole: {friend: 'Sprite 2'},
+        imagesForRole: {friend: ['Sprite 2', 'Sprite 4']},
         source: {
           blocks: {
             blocks: [
@@ -344,11 +344,12 @@ describe('checkObjective', () => {
       spriteRole: 'friend',
     };
     expect(checkObjective(check, begins('"Sprite 2"'))).toBe(true);
+    expect(checkObjective(check, begins('"Sprite 4"'))).toBe(true);
     expect(checkObjective(check, begins('"Sprite 1"'))).toBe(false);
   });
 
   it('never matches a role the project has no image for', () => {
-    const none = inputs({imageForRole: {}, grid: grid([[7, 4, hero]])});
+    const none = inputs({imagesForRole: {}, grid: grid([[7, 4, hero]])});
     expect(checkObjective({kind: 'world', role: 'hero'}, none)).toBe(false);
     expect(checkObjective({kind: 'reach', role: 'hero'}, none)).toBe(false);
   });

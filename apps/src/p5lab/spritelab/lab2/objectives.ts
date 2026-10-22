@@ -32,12 +32,12 @@ export type ObjectiveCheck =
       contains?: string;
       /** A field that must name an image the project has. */
       namesImage?: string;
-      /** The block's SPRITE input must name the image carrying this role. */
+      /** The block's SPRITE input must name an image carrying this role. */
       spriteRole?: string;
     }
   | {
       kind: 'world';
-      /** A cell showing the image that carries this role. */
+      /** A cell showing an image that carries this role. */
       role?: string;
       /** At least this many cells of this kind. */
       cellKind?: WorldCell['kind'];
@@ -52,7 +52,7 @@ export type ObjectiveCheck =
     }
   | {
       kind: 'reach';
-      /** The player touched the sprite whose image carries this role. */
+      /** The player touched a sprite whose image carries this role. */
       role?: string;
       /** The player's feet rose this far up the view, 0 at the floor to 1. */
       height?: number;
@@ -168,8 +168,9 @@ export interface ObjectiveInputs {
   grid?: (WorldCell | null)[][];
   /** The grid the level opened with. */
   baselineGrid?: (WorldCell | null)[][];
-  /** Image name by role. */
-  imageForRole: Record<string, string | undefined>;
+  /** Image names by role: a student can make a role's image more than
+      once, and every one counts. */
+  imagesForRole: Record<string, readonly string[] | undefined>;
   /** Every image the project has. */
   imageNames: ReadonlySet<string>;
   source?: WorkspaceSource;
@@ -202,6 +203,10 @@ export function* realBlocks(
     yield* realBlocks(input.block);
   }
   yield* realBlocks(block.next?.block);
+}
+
+function inRole(inputs: ObjectiveInputs, role: string, image: string): boolean {
+  return !!inputs.imagesForRole[role]?.includes(image);
 }
 
 // The image a sprite input names: its block's, else its shadow's.
@@ -246,8 +251,8 @@ function matchesBlock(
     }
   }
   if (check.spriteRole !== undefined) {
-    const image = inputs.imageForRole[check.spriteRole];
-    if (image === undefined || spriteImageOf(block) !== image) {
+    const image = spriteImageOf(block);
+    if (image === undefined || !inRole(inputs, check.spriteRole, image)) {
       return false;
     }
   }
@@ -301,8 +306,8 @@ function worldHolds(
   }
   const cells = cellsOf(inputs.grid);
   if (check.role !== undefined) {
-    const image = inputs.imageForRole[check.role];
-    return image !== undefined && cells.some(cell => cell.image === image);
+    const role = check.role;
+    return cells.some(cell => inRole(inputs, role, cell.image));
   }
   const ofKind = check.cellKind
     ? cells.filter(cell => cell.kind === check.cellKind)
@@ -328,8 +333,10 @@ export function checkObjective(
         : inputs.runtime.longestRunSeconds >= check.seconds;
     case 'reach': {
       if (check.role !== undefined) {
-        const image = inputs.imageForRole[check.role];
-        return image !== undefined && inputs.runtime.touched.has(image);
+        const role = check.role;
+        return [...inputs.runtime.touched].some(image =>
+          inRole(inputs, role, image)
+        );
       }
       if (check.moved) {
         return (

@@ -71,6 +71,7 @@ import {
   defaultImageName,
   defaultRole,
   imageNamedForRole,
+  imagesNamedForRole,
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
@@ -726,13 +727,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
     return [...roles];
   }, [levelProperties.objectives]);
-  const imageForRole = useMemo(
+  const imagesForRole = useMemo(
     () =>
       Object.fromEntries(
         objectiveRoles.map(role => [
           role,
           // World cells and touched sprites are sprite images.
-          imageNamedForRole(animationList, 'sprite', role),
+          imagesNamedForRole(animationList, 'sprite', role),
         ])
       ),
     [objectiveRoles, animationList]
@@ -751,7 +752,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     images: objectiveImages,
     grid: activeWorld.grid,
     baselineGrid,
-    imageForRole,
+    imagesForRole,
     imageNames,
     source: activeScene.source as WorkspaceSource | undefined,
     activeTab,

@@ -189,7 +189,7 @@ export function useObjectives({
   images,
   grid,
   baselineGrid,
-  imageForRole,
+  imagesForRole,
   imageNames,
   source,
   activeTab,
@@ -201,7 +201,7 @@ export function useObjectives({
   images: ImageCounts;
   grid?: (WorldCell | null)[][];
   baselineGrid?: (WorldCell | null)[][];
-  imageForRole: Record<string, string | undefined>;
+  imagesForRole: Record<string, readonly string[] | undefined>;
   imageNames: ReadonlySet<string>;
   source?: WorkspaceSource;
   activeTab: Tab;
@@ -215,7 +215,7 @@ export function useObjectives({
       images,
       grid,
       baselineGrid,
-      imageForRole,
+      imagesForRole,
       imageNames,
       source,
       activeTab,
@@ -227,7 +227,7 @@ export function useObjectives({
       images,
       grid,
       baselineGrid,
-      imageForRole,
+      imagesForRole,
       imageNames,
       source,
       activeTab,
