@@ -1,57 +1,64 @@
 require 'test_helper'
 
 class DelayedJobConfigTest < ActiveSupport::TestCase
-  INITIALIZER = Rails.root.join('config/initializers/delayed_job_config.rb').freeze
+  let(:initializer) {Rails.root.join('config/initializers/delayed_job_config.rb')}
+  let(:min_priority) {nil}
+  let(:max_priority) {nil}
 
-  setup do
-    @min_priority = Delayed::Worker.min_priority
-    @max_priority = Delayed::Worker.max_priority
+  before do
+    @original_range = [Delayed::Worker.min_priority, Delayed::Worker.max_priority]
+    CDO.stubs(:active_job_worker_min_priority).returns(min_priority)
+    CDO.stubs(:active_job_worker_max_priority).returns(max_priority)
   end
 
-  teardown do
-    Delayed::Worker.min_priority = @min_priority
-    Delayed::Worker.max_priority = @max_priority
+  after do
+    Delayed::Worker.min_priority, Delayed::Worker.max_priority = @original_range
   end
 
-  test 'leaves the priority range open when nothing is configured' do
-    CDO.stubs(:active_job_worker_min_priority).returns(nil)
-    CDO.stubs(:active_job_worker_max_priority).returns(nil)
+  describe 'worker priority range' do
+    subject(:load_initializer) {load initializer}
 
-    load INITIALIZER
+    context 'without configured priorities' do
+      it 'leaves the range open' do
+        load_initializer
+        _(Delayed::Worker.min_priority).must_be_nil
+        _(Delayed::Worker.max_priority).must_be_nil
+      end
+    end
 
-    assert_nil Delayed::Worker.min_priority
-    assert_nil Delayed::Worker.max_priority
-  end
+    context 'with blank priorities' do
+      let(:min_priority) {''}
+      let(:max_priority) {''}
 
-  test 'treats a blank value as unset' do
-    CDO.stubs(:active_job_worker_min_priority).returns('')
-    CDO.stubs(:active_job_worker_max_priority).returns('')
+      it 'leaves the range open' do
+        load_initializer
+        _(Delayed::Worker.min_priority).must_be_nil
+        _(Delayed::Worker.max_priority).must_be_nil
+      end
+    end
 
-    load INITIALIZER
+    context 'with a configured maximum priority' do
+      let(:max_priority) {'9'}
 
-    assert_nil Delayed::Worker.min_priority
-    assert_nil Delayed::Worker.max_priority
-  end
+      it 'caps the range' do
+        load_initializer
+        _(Delayed::Worker.min_priority).must_be_nil
+        _(Delayed::Worker.max_priority).must_equal 9
+      end
 
-  test 'caps the priority range from configuration' do
-    CDO.stubs(:active_job_worker_min_priority).returns(nil)
-    CDO.stubs(:active_job_worker_max_priority).returns('9')
+      it 'filters reserved jobs by the cap' do
+        load_initializer
+        _(Delayed::Job.max_priority.to_sql).must_match(/priority <= .?9.?\)/)
+      end
 
-    load INITIALIZER
-
-    assert_nil Delayed::Worker.min_priority
-    assert_equal 9, Delayed::Worker.max_priority
-    assert_match(/priority <= .?9.?\)/, Delayed::Job.max_priority.to_sql)
-  end
-
-  test 'bin/delayed_job flags override the configured range' do
-    CDO.stubs(:active_job_worker_min_priority).returns(nil)
-    CDO.stubs(:active_job_worker_max_priority).returns(9)
-
-    load INITIALIZER
-    Delayed::Worker.new(min_priority: 10, max_priority: nil)
-
-    assert_equal 10, Delayed::Worker.min_priority
-    assert_nil Delayed::Worker.max_priority
+      context 'when bin/delayed_job passes priority flags' do
+        it 'lets the flags override the configured range' do
+          load_initializer
+          Delayed::Worker.new(min_priority: 10, max_priority: nil)
+          _(Delayed::Worker.min_priority).must_equal 10
+          _(Delayed::Worker.max_priority).must_be_nil
+        end
+      end
+    end
   end
 end
