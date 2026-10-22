@@ -51,6 +51,13 @@ import {
   wallBox,
 } from './platformPhysics';
 import {createPlayerActionTracker, isPlayerAction} from './playerActions';
+import {
+  asSoundEffect,
+  playPreset,
+  playSoundEffect,
+  stopSoundEffects,
+  synthPresetOf,
+} from './soundEffects';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -564,6 +571,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    const playSoundFile = library.commands.playSound;
+    library.commands.playSound = function (url) {
+      const preset = synthPresetOf(url);
+      if (preset) {
+        library.soundLog.push(url);
+        playPreset(preset);
+        return;
+      }
+      return playSoundFile.call(this, url);
+    };
+    library.commands.playSoundEffect = (wave, pitch, length, pattern) => {
+      const effect = asSoundEffect(wave, pitch, length, pattern);
+      if (effect) {
+        playSoundEffect(effect);
+      }
+    };
     // The physics pass records the player's actions; the events that fire
     // on them run one frame later.
     this.playerActionTracker_ = createPlayerActionTracker();
@@ -884,6 +907,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
+    stopSoundEffects();
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
@@ -932,6 +956,7 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   destroy() {
     this.destroyed_ = true;
+    stopSoundEffects();
     this.reset();
     this.stopTickTimer();
     this.imageWaitCancel_?.();
