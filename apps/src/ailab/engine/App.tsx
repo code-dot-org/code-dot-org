@@ -38,6 +38,7 @@ import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 import {usePretrainOnLoad} from './usePretrainOnLoad';
+import {useRestoreModel} from './useRestoreModel';
 
 import styles from './app.module.scss';
 
@@ -263,6 +264,7 @@ const App = ({
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
   usePretrainOnLoad();
+  useRestoreModel();
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {

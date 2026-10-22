@@ -1,5 +1,4 @@
 import React, {
-  useCallback,
   useContext,
   useEffect,
   useLayoutEffect,
@@ -37,13 +36,16 @@ import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
 import {AilabLevelProperties} from '../types';
 
+import ProjectSync from './ProjectSync';
+
 import styles from './ailab-view.module.scss';
 
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
   hasEdited: boolean;
-  /** Persists a project the student has changed. */
-  saveProject: (project: AilabProject) => void;
+  /** The project as last saved, to open the lab with. */
+  savedProject: AilabProject;
+  save: (project: AilabProject) => void;
   startOver: () => void;
   projectManager: ProjectManager | null;
 }
@@ -51,7 +53,8 @@ interface AilabWorkspaceProps {
 const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   levelProperties,
   hasEdited,
-  saveProject,
+  savedProject,
+  save,
   startOver,
   projectManager,
 }) => {
@@ -80,16 +83,6 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   useLayoutEffect(() => {
     loadLevel(mode);
   }, [levelProperties.id, mode]);
-
-  const onEdited = useCallback(
-    (project: AilabProject) => {
-      saveProject(project);
-      if (levelStatus === LevelStatus.not_tried) {
-        dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
-      }
-    },
-    [saveProject, dispatch, levelProperties.appName, levelStatus]
-  );
 
   // The model card is often the last thing written, and saves are throttled.
   const onContinue = async () => {
@@ -134,7 +127,14 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
     showDialog({type: DialogType.StartOver, handleConfirm: startOver});
   };
 
+  /*
+    Training is the one change that is unambiguously the student's: a level's
+    preset columns reach the project the same way their own choices do.
+  */
   const onTrained = (accuracy: number) => {
+    if (levelStatus === LevelStatus.not_tried) {
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+    }
     validator.latestAccuracy = accuracy;
     progressManager?.resetValidation();
     progressManager?.updateProgress();
@@ -174,8 +174,9 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>
-            <ProjectProvider onEdited={onEdited}>
+            <ProjectProvider>
               <TrainingDataProvider>
+                <ProjectSync savedProject={savedProject} save={save} />
                 <AilabEngine
                   assetPath="/blockly/media/skins/ailab/"
                   onContinue={onContinue}

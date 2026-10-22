@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {type AilabProject} from '@cdo/apps/ailab/engine';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
@@ -8,7 +8,11 @@ import {LabProps} from '@cdo/apps/lab2/types';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {AILAB_DEFAULT_SOURCES, type AilabProjectSources} from '../sources';
+import {
+  AILAB_DEFAULT_SOURCES,
+  type AilabProjectSources,
+  sourceToProject,
+} from '../sources';
 import {AilabLevelProperties} from '../types';
 
 import AilabWorkspace from './AilabWorkspace';
@@ -52,13 +56,18 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     }
   }, [loadError, dispatch]);
 
-  const saveProject = useCallback(
+  const save = useCallback(
     (project: AilabProject) =>
       updateSources(previous => ({...previous, source: project})),
     [updateSources]
   );
 
-  if (!currentSources) {
+  const savedProject = useMemo(
+    () => (currentSources ? sourceToProject(currentSources.source) : undefined),
+    [currentSources]
+  );
+
+  if (!currentSources || !savedProject) {
     return <Loading isLoading={true} />;
   }
 
@@ -67,7 +76,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       key={reinitializedCount}
       levelProperties={levelProperties}
       hasEdited={hasEdited}
-      saveProject={saveProject}
+      savedProject={savedProject}
+      save={save}
       startOver={startOver}
       projectManager={projectManager}
     />
