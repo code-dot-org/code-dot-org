@@ -93,7 +93,7 @@
   DBProxyConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: 'Publish Database Proxy type (`proxysql` or `rdsproxy`) to application configuration setting CDO.db_proxy'
+      Description: 'Publish Database Proxy type (`proxysql`, `rdsproxy`, or `none`) to application configuration setting CDO.db_proxy'
       Name: !Sub "CfnStack/${AWS::StackName}/db_proxy"
       SecretString: <%=DATABASE_CONFIGURATION[:db_proxy]%>
   DBWriterEndpointConfig:
