@@ -38,6 +38,13 @@ module Cdo
     # Generic shared cache.
     # Use memcached if available, with FileStore as fallback.
     def self.cache
+      # If we try to create an ActiveSupport::Cache::Store of some kind before
+      # the Rails application has been initialized (ie, if we invoke DCDO.get
+      # on import), it will get created without any of the configuration values
+      # we expect to be applied to it. So, we only allow CDO.shared_cache to be
+      # consulted after initialization.
+      raise "Shared cache tried to initialize before the Rails application has loaded." unless Rails.try(:application).present?
+
       @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(cache_dir))
     end
 
@@ -51,5 +58,3 @@ module Cdo
     end
   end
 end
-
-CDO_SHARED_CACHE = Cdo::SharedCache.cache
