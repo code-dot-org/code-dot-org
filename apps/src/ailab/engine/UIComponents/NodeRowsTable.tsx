@@ -12,8 +12,8 @@ import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
-import NoMatchingRows from './NoMatchingRows';
 import RowsTableHeader from './RowsTableHeader';
+import TableEmptyNote from './TableEmptyNote';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
@@ -88,17 +88,7 @@ const NodeRowsTable = ({
             ))}
           </tbody>
         </table>
-        {view.totalRowCount === 0 ? (
-          <Typography
-            variant="body4"
-            component="p"
-            className={styles.emptyNote}
-          >
-            {emptyText}
-          </Typography>
-        ) : (
-          view.rows.length === 0 && <NoMatchingRows />
-        )}
+        <TableEmptyNote view={view} emptyText={emptyText} />
       </DataTableFrame>
       {view.rows.length > shownRows.length && (
         <Typography variant="body4" component="p" className={styles.note}>

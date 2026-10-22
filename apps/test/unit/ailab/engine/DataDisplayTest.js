@@ -37,7 +37,7 @@ describe('DataDisplay', () => {
     renderDisplay();
     expect(screen.getByRole('table')).toBeTruthy();
     expect(button('Table').getAttribute('aria-pressed')).toBe('true');
-    expect(screen.queryByLabelText('Next row')).toBeNull();
+    expect(screen.queryByLabelText('Next card')).toBeNull();
   });
 
   test('cards shows one dataset row and steps to the next', () => {
@@ -47,15 +47,15 @@ describe('DataDisplay', () => {
     expect(screen.queryByRole('table')).toBeNull();
     expect(screen.getByText('Card 1 of 10')).toBeTruthy();
     expect(screen.getByText('bird')).toBeTruthy();
-    expect(button('Previous row').getAttribute('aria-disabled')).toBe('true');
-    fireEvent.click(button('Previous row'));
+    expect(button('Previous card').getAttribute('aria-disabled')).toBe('true');
+    fireEvent.click(button('Previous card'));
     expect(screen.getByText('Card 1 of 10')).toBeTruthy();
 
-    fireEvent.click(button('Next row'));
+    fireEvent.click(button('Next card'));
     expect(screen.getByText('Card 2 of 10')).toBeTruthy();
     expect(screen.getByText('dog')).toBeTruthy();
 
-    fireEvent.keyDown(button('Next row'), {key: 'ArrowLeft'});
+    fireEvent.keyDown(button('Next card'), {key: 'ArrowLeft'});
     expect(screen.getByText('Card 1 of 10')).toBeTruthy();
   });
 
@@ -71,7 +71,7 @@ describe('DataDisplay', () => {
   test('next stays focused and inert on the last row', () => {
     renderDisplay();
     fireEvent.click(button('Cards'));
-    const next = button('Next row');
+    const next = button('Next card');
     next.focus();
     fireEvent.keyDown(next, {key: 'End'});
 
@@ -86,7 +86,7 @@ describe('DataDisplay', () => {
   test('a new level or dataset starts the deck on its first row', () => {
     const store = renderDisplay();
     fireEvent.click(button('Cards'));
-    fireEvent.click(button('Next row'));
+    fireEvent.click(button('Next card'));
     expect(store.getState().datasetCardRow).toBe(1);
 
     act(() => store.dispatch(resetState(/*keepsPendingProject*/ false)));
@@ -96,7 +96,7 @@ describe('DataDisplay', () => {
   test('only the front card is in the tab order', () => {
     renderDisplay();
     fireEvent.click(button('Cards'));
-    fireEvent.click(button('Next row'));
+    fireEvent.click(button('Next card'));
     const tabIndexes = [...document.querySelectorAll('dl')].map(
       list => list.tabIndex
     );
