@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-20 21:23:48 UTC",
+    "serialized_at": "2026-10-21 15:59:30 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -439,6 +439,50 @@
       "level_keys": [
         "csp-unit2-lesson7-modify_27_28"
       ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson7-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c"
+      },
+      "level_keys": [
+        "csp-unit2-lesson7-cfu1_27_28"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson7-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c"
+      },
+      "level_keys": [
+        "csp-unit2-lesson7-cfu2_27_28"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -483,6 +527,30 @@
         "level.key": "csp-unit2-lesson7-modify_27_28",
         "script_level.level_keys": [
           "csp-unit2-lesson7-modify_27_28"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson7-cfu1_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson7-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson7-cfu2_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson7-cfu2_27_28"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
