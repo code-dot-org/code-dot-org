@@ -1,0 +1,205 @@
+$tag-max-width: 240px;
+
+.root {
+  display: flex;
+  min-width: 0;
+}
+
+.tag {
+  // The label, icon and close button read these.
+  --text-neutral-primary: var(--text-brand-secondary);
+  --text-neutral-quaternary: var(--text-brand-secondary);
+  --text-neutral-placeholder: var(--text-brand-secondary);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-sizing: border-box;
+  max-width: $tag-max-width;
+  height: 24px;
+  padding: 0 8px;
+  color: var(--text-brand-secondary);
+  background-color: var(--background-brand-light);
+  border: 1px solid var(--border-brand-mid);
+  border-radius: var(--shape-sm);
+
+  &:hover,
+  &:active {
+    border-color: var(--border-brand-strong);
+  }
+
+  &:has(.tagButton:focus-visible) {
+    box-shadow:
+      0 0 0 2px var(--background-neutral-primary),
+      0 0 0 4px var(--border-focused-primary);
+  }
+}
+
+.tagButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.tagText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tagValues {
+  font-weight: 400;
+}
+
+.clear {
+  display: flex;
+}
+
+// Two classes, to outrank the theme's popover surface.
+.panel.panel {
+  box-sizing: border-box;
+  width: 260px;
+  margin-top: 4px;
+  overflow: hidden;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.menuHeader {
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 4px;
+  background-color: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.menuHeader .menuTitle {
+  grid-column: 2;
+  text-align: center;
+  color: var(--text-neutral-quaternary);
+}
+
+.list {
+  max-height: 240px;
+  padding: 4px 0;
+  margin: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.columnItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px 4px 12px;
+  margin: 0;
+  text-align: start;
+  background-color: var(--background-neutral-primary);
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-focused-primary);
+    outline-offset: -2px;
+  }
+}
+
+.columnItem.filtered {
+  --text-neutral-primary: var(--text-selected-primary);
+  --text-neutral-tertiary: var(--text-selected-primary);
+  --text-neutral-quaternary: var(--text-selected-primary);
+
+  background-color: var(--background-selected-primary);
+
+  &:hover,
+  &:active {
+    background-color: var(--background-selected-strong);
+  }
+
+  &:focus-visible {
+    outline-color: var(--border-focused-inverse);
+  }
+}
+
+.columnItem .columnMeta {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+  color: var(--text-neutral-tertiary);
+
+  i {
+    width: 16px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--text-neutral-quaternary);
+  }
+}
+
+.valueItem {
+  display: flex;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  label {
+    flex: 1;
+    min-width: 0;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+}
+
+.valueItem:has(input:checked) {
+  --text-neutral-primary: var(--text-selected-primary);
+
+  background-color: var(--background-selected-primary);
+
+  &:hover {
+    background-color: var(--background-selected-strong);
+  }
+
+  // The checkbox reads these for its box, check and focus ring.
+  label {
+    --text-selected-primary: var(--text-selected-primary-inverse);
+    --background-selected-primary: var(--background-selected-primary-inverse);
+    --border-selected-primary: var(--background-selected-primary-inverse);
+    --background-selected-strong: var(--background-selected-primary-inverse);
+    --border-selected-strong: var(--background-selected-primary-inverse);
+    --borders-brand-teal-primary: var(--border-focused-inverse);
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 4px;
+  border-top: 1px solid var(--border-neutral-primary);
+}
