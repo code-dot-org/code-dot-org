@@ -106,9 +106,9 @@ export function useTableView({
 
   return {
     rows: shownRows,
-    totalRows: rows.length,
+    totalRowCount: rows.length,
     columns,
-    filterableColumns: columns.filter(column =>
+    shownFilterableColumns: columns.filter(column =>
       filterableColumns.includes(column)
     ),
     filter,
