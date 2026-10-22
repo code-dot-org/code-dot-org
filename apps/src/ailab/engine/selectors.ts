@@ -96,6 +96,11 @@ export const getSelectableColumns = createSelector(
   selectableColumns
 );
 
+export const getFilterableColumns = createSelector(
+  [getSelectableColumns, getCategoricalColumns],
+  arrayIntersection
+);
+
 export const getUniqueOptionsByColumn = createSelector(
   [getSelectedCategoricalColumns, getData],
   (

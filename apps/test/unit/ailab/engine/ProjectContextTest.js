@@ -137,17 +137,15 @@ describe('ProjectContext', () => {
     expect(accuracies(project())).toEqual([]);
   });
 
-  test('Start Over keeps the results but drops the rest', () => {
+  test('Start Over drops the results along with the rest', () => {
     const {store, project, context} = renderContext();
     act(() => context().applyTrainingRun(FIRST));
 
     act(() => {
-      store.dispatch(resetState(true));
+      store.dispatch(resetState());
     });
 
-    expect(project().hyperparameters).toBeUndefined();
-    expect(project().accuracyCheckRowIndices).toBeUndefined();
-    expect(accuracies(project())).toEqual(['80.00']);
+    expect(project()).toEqual(initialProject);
   });
 
   test('a reset drops the snapshot a cancel would have used', () => {
@@ -477,7 +475,13 @@ describe('ProjectContext opening a saved project', () => {
     expect(project().historicResults).toEqual(SAVED.historicResults);
   });
 
-  test('a reset drops a project still waiting for its dataset', () => {
+  /*
+    A reset is how a level load begins, and the project being opened belongs
+    to that level. The dataset a project waits for may also be the one the
+    student goes on to choose. Either way it outlives the reset, and its
+    columns are reconciled against whichever dataset arrives.
+  */
+  test('a reset keeps a project still waiting for its dataset', () => {
     const store = createStore(rootReducer);
     const {project, context} = renderContext(undefined, store);
     act(() => context().openProject(SAVED));
@@ -492,7 +496,7 @@ describe('ProjectContext opening a saved project', () => {
       );
     });
 
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(SAVED);
   });
 
   test('drops the snapshot a cancel would have used', () => {
