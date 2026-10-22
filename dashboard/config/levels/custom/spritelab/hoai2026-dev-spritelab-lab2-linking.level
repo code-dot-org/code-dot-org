@@ -110,8 +110,13 @@
     "header_label": "Conclusion",
     "callouts": [
       {
-        "target": "scene-dropdown",
-        "direction": "down",
+        "target": "scene-option",
+        "scene": "story-scene",
+        "direction": "left",
+        "fallback": {
+          "target": "scene-dropdown",
+          "direction": "down"
+        },
         "when": {
           "sceneNever": "story-scene"
         }

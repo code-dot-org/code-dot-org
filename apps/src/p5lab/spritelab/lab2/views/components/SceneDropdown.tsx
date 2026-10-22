@@ -82,6 +82,7 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
         <li key={scene.id}>
           <button
             type="button"
+            data-scene-id={scene.id}
             aria-current={scene.id === activeSceneId ? 'true' : undefined}
             className={classNames(
               moduleStyles.sceneMenuItem,

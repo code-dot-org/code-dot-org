@@ -57,7 +57,7 @@ import {
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
-import {activeCallout, CALLOUT_SELECTORS} from '../callouts';
+import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
 import {
@@ -2307,8 +2307,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       )}
       {callout && !isLevelEditMode && (
         <Callout
-          selector={CALLOUT_SELECTORS[callout.target]}
+          selector={calloutSelector(callout)}
           direction={callout.direction}
+          fallback={
+            callout.fallback && {
+              selector: calloutSelector(callout.fallback),
+              direction: callout.fallback.direction,
+            }
+          }
         />
       )}
       {showBlockCatalog && (
@@ -2585,7 +2591,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 />
               }
               below={
-                levelProperties.levelMode ? (
+                // Free play's guide is only in the way of the game.
+                levelProperties.levelMode &&
+                !(
+                  isFreeplayMode(levelProperties.levelMode) &&
+                  activeTab === 'Play'
+                ) ? (
                   <GenerateSpriteLab
                     docked
                     levelMode={levelProperties.levelMode}

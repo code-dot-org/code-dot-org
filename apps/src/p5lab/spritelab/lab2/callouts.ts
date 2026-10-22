@@ -5,12 +5,20 @@
 import {Tab} from './redux/spriteLab2Redux';
 import {CalloutDirection} from './views/components/Callout';
 
-export type CalloutTarget = 'code-tab' | 'scene-dropdown';
+export type CalloutTarget = 'code-tab' | 'scene-dropdown' | 'scene-option';
 
-export interface LevelCallout {
+export interface CalloutAim {
   target: CalloutTarget;
+  /** The scene a scene-option target names. */
+  scene?: string;
   /** Which way the arrow points at its target; up when unset. */
   direction?: CalloutDirection;
+}
+
+export interface LevelCallout extends CalloutAim {
+  /** Where the arrow goes while the target is not on the page: the menu
+      button while the menu is closed, say. */
+  fallback?: CalloutAim;
   when?: {
     /** Checklist items, by index, that must be done. */
     done?: number[];
@@ -30,11 +38,17 @@ export interface CalloutState {
   scenesSeen: ReadonlySet<string>;
 }
 
-/** The element each target names, as the lab renders it. */
-export const CALLOUT_SELECTORS: Record<CalloutTarget, string> = {
-  'code-tab': 'button:has(> [data-label="Code"])',
-  'scene-dropdown': '[aria-label^="Scene:"]',
-};
+/** The element an aim names, as the lab renders it. */
+export function calloutSelector(aim: CalloutAim): string {
+  switch (aim.target) {
+    case 'code-tab':
+      return 'button:has(> [data-label="Code"])';
+    case 'scene-dropdown':
+      return '[aria-label^="Scene:"]';
+    case 'scene-option':
+      return `[data-scene-id="${aim.scene ?? ''}"]`;
+  }
+}
 
 export function calloutHolds(
   callout: LevelCallout,

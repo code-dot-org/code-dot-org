@@ -15,6 +15,8 @@ interface CalloutProps {
   direction?: CalloutDirection;
   /** Gap in px between the element's edge and the arrow. */
   offset?: number;
+  /** Where the arrow goes while `selector` matches nothing. */
+  fallback?: {selector: string; direction?: CalloutDirection};
 }
 
 interface TargetRect {
@@ -59,14 +61,23 @@ const anchorFor = (
   }
 };
 
+interface Hit {
+  rect: TargetRect;
+  direction: CalloutDirection;
+}
+
 /** A bouncing arrow fixed beside the element `selector` matches, for as
-    long as the element is on the page. Nothing renders while it is absent. */
+    long as the element is on the page; beside the fallback's element while
+    it is absent. Nothing renders while neither is on the page. */
 const Callout: React.FunctionComponent<CalloutProps> = ({
   selector,
   direction = 'up',
   offset = DEFAULT_OFFSET,
+  fallback,
 }) => {
-  const [rect, setRect] = useState<TargetRect | null>(null);
+  const [hit, setHit] = useState<Hit | null>(null);
+  const fallbackSelector = fallback?.selector;
+  const fallbackDirection = fallback?.direction ?? 'up';
 
   useEffect(() => {
     let observed: Element | null = null;
@@ -75,8 +86,21 @@ const Callout: React.FunctionComponent<CalloutProps> = ({
         ? new ResizeObserver(() => measure())
         : null;
 
+    const rectOf = (element: Element | null) => {
+      const box = element?.getBoundingClientRect();
+      return box && box.width > 0 && box.height > 0
+        ? {left: box.left, top: box.top, right: box.right, bottom: box.bottom}
+        : null;
+    };
     const measure = () => {
-      const element = document.querySelector(selector);
+      let element = document.querySelector(selector);
+      let aimed = direction;
+      let rect = rectOf(element);
+      if (!rect && fallbackSelector) {
+        element = document.querySelector(fallbackSelector);
+        aimed = fallbackDirection;
+        rect = rectOf(element);
+      }
       if (observer && element !== observed) {
         observer.disconnect();
         if (element) {
@@ -84,12 +108,11 @@ const Callout: React.FunctionComponent<CalloutProps> = ({
         }
         observed = element;
       }
-      const box = element?.getBoundingClientRect();
-      const next =
-        box && box.width > 0 && box.height > 0
-          ? {left: box.left, top: box.top, right: box.right, bottom: box.bottom}
-          : null;
-      setRect(prev => (sameRect(prev, next) ? prev : next));
+      setHit(prev =>
+        prev && rect && sameRect(prev.rect, rect) && prev.direction === aimed
+          ? prev
+          : rect && {rect, direction: aimed}
+      );
     };
 
     measure();
@@ -103,16 +126,16 @@ const Callout: React.FunctionComponent<CalloutProps> = ({
       window.removeEventListener('scroll', measure, true);
       observer?.disconnect();
     };
-  }, [selector]);
+  }, [selector, direction, fallbackSelector, fallbackDirection]);
 
-  if (!rect) {
+  if (!hit) {
     return null;
   }
 
   return (
     <div
-      className={classNames(styles.callout, DIRECTION_CLASS[direction])}
-      style={anchorFor(rect, direction, offset)}
+      className={classNames(styles.callout, DIRECTION_CLASS[hit.direction])}
+      style={anchorFor(hit.rect, hit.direction, offset)}
       aria-hidden="true"
     >
       <div
