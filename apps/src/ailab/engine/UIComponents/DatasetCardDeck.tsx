@@ -1,6 +1,6 @@
-/* Shows the dataset one row at a time on a stack of cards, with a pager to
- * step through the rows. Cards behind the current one are blank and peek out
- * above it. */
+/* Shows the given dataset rows one at a time on a stack of cards, with a
+ * pager to step through them. Cards behind the current one are blank and peek
+ * out above it. */
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {type CSSProperties, type KeyboardEvent} from 'react';
@@ -16,32 +16,38 @@ import styles from './datasetCardDeck.module.scss';
 // Blank cards visible behind the current one.
 const DECK_PEEK = 2;
 
-const DatasetCardDeck = () => {
+interface DatasetCardDeckProps {
+  rows: number[];
+}
+
+const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
   const dispatch = useAppDispatch();
   const data = useAppSelector(state => state.data);
-  const rowIndex = useAppSelector(state => state.datasetCardRow);
-  const total = data.length;
+  const currentRow = useAppSelector(state => state.datasetCardRow);
+  const total = rows.length;
+  // A filter that drops the current row moves the deck to its first card.
+  const position = Math.max(rows.indexOf(currentRow), 0);
 
   // Render the previous card so it can animate away, and one card past the
   // peeking ones so it can fade in.
-  const windowStart = Math.max(0, rowIndex - 1);
-  const windowEnd = Math.min(total, rowIndex + DECK_PEEK + 2);
+  const windowStart = Math.max(0, position - 1);
+  const windowEnd = Math.min(total, position + DECK_PEEK + 2);
 
-  const goToRow = (index: number) =>
-    dispatch(setDatasetCardRow(Math.min(Math.max(index, 0), total - 1)));
+  const goToCard = (index: number) =>
+    dispatch(setDatasetCardRow(rows[Math.min(Math.max(index, 0), total - 1)]));
 
   const onKeyDown = (event: KeyboardEvent) => {
-    const targetRow = {
-      ArrowRight: rowIndex + 1,
-      ArrowDown: rowIndex + 1,
-      ArrowLeft: rowIndex - 1,
-      ArrowUp: rowIndex - 1,
+    const targetCard = {
+      ArrowRight: position + 1,
+      ArrowDown: position + 1,
+      ArrowLeft: position - 1,
+      ArrowUp: position - 1,
       Home: 0,
       End: total - 1,
     }[event.key];
-    if (targetRow !== undefined) {
+    if (targetCard !== undefined) {
       event.preventDefault();
-      goToRow(targetRow);
+      goToCard(targetCard);
     }
   };
 
@@ -54,12 +60,11 @@ const DatasetCardDeck = () => {
     >
       <div className={styles.stage}>
         <div className={styles.deck}>
-          {data.slice(windowStart, windowEnd).map((row, offset) => {
-            const datasetRow = windowStart + offset;
-            const depth = datasetRow - rowIndex;
+          {rows.slice(windowStart, windowEnd).map((row, offset) => {
+            const depth = windowStart + offset - position;
             return (
               <div
-                key={datasetRow}
+                key={row}
                 className={classNames(styles.slot, {
                   [styles.dealt]: depth < 0,
                   [styles.waiting]: depth > DECK_PEEK,
@@ -72,8 +77,8 @@ const DatasetCardDeck = () => {
                 ) : (
                   <DatasetRowCard
                     isCurrent={depth === 0}
-                    rowNumber={datasetRow + 1}
-                    row={row}
+                    rowNumber={row + 1}
+                    row={data[row]}
                   />
                 )}
               </div>
@@ -85,8 +90,8 @@ const DatasetCardDeck = () => {
         <PagerButton
           label="Previous row"
           icon="chevron-left"
-          disabled={rowIndex === 0}
-          onClick={() => goToRow(rowIndex - 1)}
+          disabled={position === 0}
+          onClick={() => goToCard(position - 1)}
           onKeyDown={onKeyDown}
         />
         <Typography
@@ -95,13 +100,13 @@ const DatasetCardDeck = () => {
           className={styles.counter}
           aria-live="polite"
         >
-          {`Row ${rowIndex + 1} of ${total}`}
+          {`Card ${position + 1} of ${total}`}
         </Typography>
         <PagerButton
           label="Next row"
           icon="chevron-right"
-          disabled={rowIndex === total - 1}
-          onClick={() => goToRow(rowIndex + 1)}
+          disabled={position === total - 1}
+          onClick={() => goToCard(position + 1)}
           onKeyDown={onKeyDown}
         />
       </nav>

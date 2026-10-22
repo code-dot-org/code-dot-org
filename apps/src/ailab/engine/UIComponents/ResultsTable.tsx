@@ -3,47 +3,33 @@ import classNames from 'classnames';
 import React, {useCallback, useMemo} from 'react';
 
 import {REGRESSION_ERROR_TOLERANCE} from '../constants';
-import {
-  dataColumnsFor,
-  getColumnRole,
-  isRegression,
-} from '../helpers/columnDetails';
+import {getColumnRole, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getFilterableColumns} from '../selectors';
-import type {ColumnId, ResultsData} from '../types';
+import type {ColumnId, ResultsData, TableView} from '../types';
 import {useTableView} from '../useTableView';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
+import NoMatchingRows from './NoMatchingRows';
 import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './resultsTable.module.scss';
 
-interface ResultsTableProps {
-  results: ResultsData;
-  showAllColumns: boolean;
-}
-
-const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
-
-const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
+export function useResultsTableView(
+  results: ResultsData,
+  columns: string[]
+): TableView {
   const {project} = useProject();
   const selectedFeatures = project.selectedFeatures;
   const labelColumn = project.labelColumn || 'unknown';
   const data = useAppSelector(state => state.data);
   const columnsByDataType = useAppSelector(state => state.columnsByDataType);
   const filterableColumns = useAppSelector(getFilterableColumns);
-  const isRegressionMode = useAppSelector(state =>
-    isRegression(state, project)
-  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const columns = useMemo(
-    () => dataColumnsFor(data, project, showAllColumns),
-    [data, project, showAllColumns]
-  );
   const rows = useMemo(() => [...results.examples.keys()], [results]);
   const viewColumns = useMemo<ColumnId[]>(
     () => [...columns, PREDICTION_COLUMN],
@@ -83,13 +69,28 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
       getLocalizedValue(rawValueAt(index, column), datasetId),
     [rawValueAt, datasetId]
   );
-  const view = useTableView({
+  return useTableView({
     rows,
     columns: viewColumns,
     columnTypes,
     filterableColumns: viewFilterableColumns,
     valueAt,
   });
+}
+
+interface ResultsTableProps {
+  results: ResultsData;
+  columns: string[];
+  view: TableView;
+}
+
+const labelCell = classNames(tableStyles.bodyCell, tableStyles.bodyCellLabel);
+
+const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
+  const {project} = useProject();
+  const isRegressionMode = useAppSelector(state =>
+    isRegression(state, project)
+  );
 
   return (
     <>
@@ -120,19 +121,21 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
                           [tableStyles.bodyCellFeature]: role === 'feature',
                         })}
                       >
-                        <CellText>{valueAt(index, column)}</CellText>
+                        <CellText>{view.valueAt(index, column)}</CellText>
                       </td>
                     );
                   })}
                   <td className={labelCell}>
-                    <CellText>{valueAt(index, PREDICTION_COLUMN)}</CellText>
+                    <CellText>
+                      {view.valueAt(index, PREDICTION_COLUMN)}
+                    </CellText>
                   </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
-        {results.examples.length === 0 && (
+        {results.examples.length === 0 ? (
           <Typography
             variant="body4"
             component="p"
@@ -140,6 +143,8 @@ const ResultsTable = ({results, showAllColumns}: ResultsTableProps) => {
           >
             No rows matched this filter
           </Typography>
+        ) : (
+          view.rows.length === 0 && <NoMatchingRows />
         )}
       </DataTableFrame>
     </>
