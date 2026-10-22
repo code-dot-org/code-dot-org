@@ -108,7 +108,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     // A step with generatedInstructions but no status doesn't count as started.
     const hasProgress = Object.values(progress.steps).some(s => s.status);
     if (!hasProgress) {
-      const firstCp = pathway.checkpoints[0];
+      const firstCp = pathway.checkpoints.find(c => statusMap[c.id] === 'available');
       if (firstCp) {
         initialCheckpointId = firstCp.id;
         initialStepId = stepIdToResume(firstCp, progress);
