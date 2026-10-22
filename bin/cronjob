@@ -13,12 +13,16 @@
 # ERROR (not currently differentiated): A non-0 exit code could be elevated to mean error and
 #   result in a HoneyBadger error.
 #
+# SENTRY MONITOR: when SENTRY_MONITOR_SLUG and SENTRY_MONITOR_SCHEDULE are set, each run is reported
+#   as a Sentry Cron Monitor check-in. See lib/cdo/sentry.rb.
+#
 # CRONJOBs are defined the cdo-apps::crontab Chef recipe: `chef/cookbooks/cdo-apps/recipes/crontab.rb`.
 #
 
 require_relative '../deployment'
 require 'mail'
 require 'cdo/honeybadger'
+require 'cdo/sentry'
 require 'open3'
 
 #
@@ -63,7 +67,9 @@ end
 #
 def main
   command = ARGV[0]
-  stdout, stderr, status = Open3.capture3(command)
+  stdout, stderr, status = Sentry.monitor_cronjob(command, slug: ENV.fetch('SENTRY_MONITOR_SLUG', nil), schedule: ENV.fetch('SENTRY_MONITOR_SCHEDULE', nil)) do
+    Open3.capture3(command)
+  end
   result = stdout + stderr
   exitstatus = status.exitstatus
 
@@ -71,6 +77,7 @@ def main
   email_notify command, exitstatus, result, ARGV[1]
 rescue => exception
   Honeybadger.notify_cronjob_error exception
+  Sentry.capture_exception exception
   raise
 end
 
