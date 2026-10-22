@@ -16,8 +16,10 @@ import rootReducer, {
   resetState,
   setColumnsByDataType,
   setImportedData,
+  setInvalidData,
   setMode,
   setPresetColumns,
+  setSelectedCSV,
 } from '@cdo/apps/ailab/engine/redux';
 import {store as singletonStore} from '@cdo/apps/ailab/engine/store';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
@@ -387,6 +389,61 @@ describe('ProjectContext opening a saved project', () => {
 
     act(() => context().openProject(SAVED));
 
+    expect(context().isProjectLoaded).toBe(true);
+  });
+
+  /*
+    A level can leave the dataset to the student. Holding the lab back for a
+    load that nothing has started hides the picker that would start it.
+  */
+  test('is not loading when no dataset is on its way', () => {
+    const {context} = renderContext(SAVED, createStore(rootReducer));
+
+    expect(context().isProjectLoading).toBe(false);
+    expect(context().isProjectLoaded).toBe(false);
+  });
+
+  test('is loading while the dataset it waits for is on its way', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setSelectedCSV('animals.csv'));
+
+    expect(renderContext(SAVED, store).context().isProjectLoading).toBe(true);
+  });
+
+  /*
+    The rows and the column types are read from two files, in either order,
+    so rows alone do not mean the dataset is here.
+  */
+  test('is loading while the rows are here and their types are not', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setSelectedCSV('animals.csv'));
+    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+
+    expect(renderContext(SAVED, store).context().isProjectLoading).toBe(true);
+  });
+
+  // The picker reports the problem, so it has to be allowed to render.
+  test('is not loading once the chosen dataset has failed', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setSelectedCSV('animals.csv'));
+    store.dispatch(setInvalidData('tooFewRows'));
+
+    expect(renderContext(SAVED, store).context().isProjectLoading).toBe(false);
+  });
+
+  test('opens the saved project once the student picks a dataset', () => {
+    const store = createStore(rootReducer);
+    const {context} = renderContext(SAVED, store);
+
+    act(() => {
+      store.dispatch(setSelectedCSV('animals.csv'));
+      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+      ['a', 'b', 'c'].forEach(column =>
+        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
+      );
+    });
+
+    expect(context().project.labelColumn).toBe('a');
     expect(context().isProjectLoaded).toBe(true);
   });
 

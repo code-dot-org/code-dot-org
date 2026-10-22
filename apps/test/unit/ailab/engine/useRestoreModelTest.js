@@ -85,6 +85,20 @@ test('opens on the results, which the rebuilt model unlocks', () => {
   expect(store.getState().currentPanel).toBe('results');
 });
 
+/*
+  Clicking a dataset loads it while the picker is still open, so a level that
+  lets the student choose opens their project before they have chosen.
+*/
+test('leaves a student who is still choosing a dataset on the picker', () => {
+  const saved = savedAfterTraining();
+  store.dispatch(setCurrentPanel('selectDataset'));
+
+  const rendered = openLab(saved);
+
+  expect(store.getState().currentPanel).toBe('selectDataset');
+  expect(rendered.trainingData().trainedModel).toBeDefined();
+});
+
 // The project already names the run; recording it again would list it twice.
 test('leaves the history as the project described it', () => {
   const saved = savedAfterTraining();

@@ -37,7 +37,16 @@ export function useRestoreModel(): boolean {
     }
     setTrainedModel(run.trainedModel);
 
-    if (isPanelEnabled(store.getState(), project, 'results')) {
+    /*
+      Clicking a dataset loads it while the picker is still open, so the
+      project can open before the student has settled on one. Moving them to
+      the results would make that click their choice.
+    */
+    const state = store.getState();
+    if (
+      state.currentPanel !== 'selectDataset' &&
+      isPanelEnabled(state, project, 'results')
+    ) {
       dispatch(setCurrentPanel('results'));
     }
   }, [

@@ -70,7 +70,11 @@ export const ProjectProvider = ({
   const [pendingProject, setPendingProject] = useState<
     AilabProject | undefined
   >();
-  const isProjectLoading = pendingProject !== undefined;
+  const datasetSelectionPending = useAppSelector(
+    state => !!state.csvfile && !state.invalidData
+  );
+  const isProjectLoading =
+    pendingProject !== undefined && datasetSelectionPending;
   const isDefaultProject = project === defaultProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
