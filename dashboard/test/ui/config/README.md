@@ -45,7 +45,7 @@ enforced in the models:
   child, may not be renamed across the boundary, since that would move its
   definition file between the trees or split it from its relatives.
 
-`grep -r ui_test_name? dashboard` finds every enforcement point.
+`grep -r ui_test_partition_name? dashboard` finds every enforcement point.
 
 ## Seeding
 
