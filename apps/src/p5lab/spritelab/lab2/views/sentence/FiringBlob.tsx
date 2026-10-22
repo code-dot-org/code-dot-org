@@ -150,6 +150,10 @@ function fire(
     });
 }
 
+// How quickly the swell follows the net's activity, ms: a firing lights
+// a node at once, and the swell must not jump with it.
+const SWELL_LAG_MS = 400;
+
 function drawNet(
   ctx: CanvasRenderingContext2D,
   nodes: Node[],
@@ -157,12 +161,17 @@ function drawNet(
   neutral: string,
   now: number,
   dt: number,
-  still: boolean
+  still: boolean,
+  swell: {activity: number}
 ) {
   const activity = nodes.reduce((sum, n) => sum + n.glow, 0);
+  swell.activity +=
+    (activity - swell.activity) * Math.min(1, dt / SWELL_LAG_MS);
   const breathe = still
     ? 1
-    : 1 + Math.sin(now * 0.0016) * 0.03 + Math.min(0.03, activity * 0.002);
+    : 1 +
+      Math.sin(now * 0.0016) * 0.03 +
+      Math.min(0.03, swell.activity * 0.002);
   if (!still) {
     nodes.forEach(n => {
       const t = now * DRIFT_RATE * n.pace + n.phase;
@@ -284,12 +293,13 @@ const FiringBlob: React.FunctionComponent<FiringBlobProps> = ({colors}) => {
         (dpr * (height - HEIGHT * scale)) / 2
       );
     };
+    const swell = {activity: 0};
     const draw = (now: number, dt: number) => {
       ctx.save();
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.restore();
-      drawNet(ctx, nodes, pulses, neutral, now, dt, still);
+      drawNet(ctx, nodes, pulses, neutral, now, dt, still, swell);
     };
 
     let frame = 0;
