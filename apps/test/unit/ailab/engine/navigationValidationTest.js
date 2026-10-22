@@ -217,13 +217,14 @@ describe('prevNextButtons on the data panels', () => {
   });
 
   test.each([{}, {hideSelectLabel: true}])(
-    'selectDataset moves on to datasetView with mode %o',
+    'selectDataset has neither button with mode %o',
     mode => {
-      const {next} = prevNextButtons(
+      const {prev, next} = prevNextButtons(
         {...dataUploadedState, currentPanel: 'selectDataset', mode},
         noProject
       );
-      expect(next.panel).toBe('datasetView');
+      expect(prev).toBeUndefined();
+      expect(next).toBeUndefined();
     }
   );
 

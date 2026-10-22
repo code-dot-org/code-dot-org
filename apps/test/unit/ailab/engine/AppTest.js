@@ -49,7 +49,7 @@ describe('onTrained', () => {
     const {store, onTrained, trainModel} = renderApp({trainer: 'decisionTree'});
     trainModel();
     act(() => {
-      store.dispatch(resetState());
+      store.dispatch(resetState(/*keepsPendingProject*/ false));
       store.dispatch(setMode({}));
     });
     expect(onTrained).toHaveBeenCalledTimes(1);
@@ -83,7 +83,7 @@ describe('a pretrained level', () => {
 
   // Auto-training goes through useTrainingRun, which trains the store singleton.
   function renderLevel(mode) {
-    storeSingleton.dispatch(resetState());
+    storeSingleton.dispatch(resetState(/*keepsPendingProject*/ false));
     seedLevel(storeSingleton, mode);
     const onTrained = jest.fn();
     const {trainingData} = renderWithProviders(
@@ -110,7 +110,7 @@ describe('a pretrained level', () => {
     const {onTrained} = renderLevel({trainer: 'decisionTree'});
 
     act(() => {
-      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(resetState(/*keepsPendingProject*/ false));
       storeSingleton.dispatch(setMode(PRETRAINED));
     });
     expect(onTrained).not.toHaveBeenCalled();
@@ -134,7 +134,7 @@ describe('a pretrained level', () => {
     renderLevel({trainer: 'decisionTree'});
 
     act(() => {
-      storeSingleton.dispatch(resetState());
+      storeSingleton.dispatch(resetState(/*keepsPendingProject*/ false));
       storeSingleton.dispatch(setMode(hiding));
       storeSingleton.dispatch(setCurrentPanel('datasetView'));
     });

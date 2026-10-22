@@ -19,10 +19,10 @@ describe('startOver', () => {
     store.dispatch(setAccuracyCheckExamples([[4]]));
   });
 
-  test('asks the reset to keep the results already earned', () => {
+  test('abandons a project waiting to be opened', () => {
     startOver();
 
-    expect(store.getState().resetKeepsHistoricResults).toBe(true);
+    expect(store.getState().resetKeepsPendingProject).toBe(false);
   });
 
   test('resets everything else to the start of the level', () => {
@@ -50,12 +50,10 @@ describe('startOver', () => {
 });
 
 describe('loadLevel', () => {
-  test('asks the reset to drop the previous level’s results', () => {
-    startOver();
-
+  test('abandons a project waiting to be opened', () => {
     loadLevel(undefined);
 
-    expect(store.getState().resetKeepsHistoricResults).toBe(false);
+    expect(store.getState().resetKeepsPendingProject).toBe(false);
   });
 
   test('reserves random rows for testing unless the mode asks for the last rows', () => {

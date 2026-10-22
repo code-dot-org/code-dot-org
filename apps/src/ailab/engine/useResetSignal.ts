@@ -7,11 +7,11 @@ import {useEffect, useRef} from 'react';
 import {useAppSelector} from './hooks';
 
 export function useResetSignal(
-  onReset: (keepsHistoricResults: boolean) => void
+  onReset: (keepsPendingProject: boolean) => void
 ): void {
   const resetCount = useAppSelector(state => state.resetCount);
-  const keepsHistoricResults = useAppSelector(
-    state => state.resetKeepsHistoricResults
+  const keepsPendingProject = useAppSelector(
+    state => state.resetKeepsPendingProject
   );
   const appliedReset = useRef(resetCount);
 
@@ -21,6 +21,6 @@ export function useResetSignal(
       return;
     }
     appliedReset.current = resetCount;
-    onReset(keepsHistoricResults);
-  }, [resetCount, keepsHistoricResults, onReset]);
+    onReset(keepsPendingProject);
+  }, [resetCount, keepsPendingProject, onReset]);
 }
