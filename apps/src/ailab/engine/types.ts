@@ -203,7 +203,7 @@ export interface AilabProject {
   historicResults: HistoricResult[];
 }
 
-export const initialProject: AilabProject = {
+export const defaultProject: AilabProject = {
   labelColumn: undefined,
   selectedFeatures: [],
   hyperparameters: undefined,

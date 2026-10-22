@@ -17,7 +17,7 @@ import {
 import {useAppSelector} from './hooks';
 import {getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
-import {initialProject, type AilabProject} from './types';
+import {defaultProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
 
 /*
@@ -57,18 +57,22 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 
 interface ProjectProviderProps {
   children: ReactNode;
-  /** A saved project to open the lab with, once its dataset has loaded. */
-  savedProject?: AilabProject;
+  /*
+    A saved project to open the lab with, once its dataset has loaded. Opening
+    starts again whenever this changes, so it must hold still while the student
+    works.
+  */
+  initialProject?: AilabProject;
   /** Called with the project whenever the student changes it. */
   onProjectChange?: (project: AilabProject) => void;
 }
 
 export const ProjectProvider = ({
   children,
-  savedProject,
+  initialProject,
   onProjectChange,
 }: ProjectProviderProps) => {
-  const [project, setProject] = useState<AilabProject>(initialProject);
+  const [project, setProject] = useState<AilabProject>(defaultProject);
   const [opened, setOpened] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const onProjectChangeRef = useRef(onProjectChange);
@@ -79,7 +83,6 @@ export const ProjectProvider = ({
   const [pendingProject, setPendingProject] = useState<
     AilabProject | undefined
   >();
-  const openWith = useRef(savedProject);
   // TODO: do we need all of these booleans
   const opening = pendingProject !== undefined;
   /*
@@ -87,7 +90,7 @@ export const ProjectProvider = ({
     reset has just emptied it. Identity, not contents: a reset puts this exact
     project back, while opening one or choosing a column builds a new one.
   */
-  const empty = project === initialProject;
+  const empty = project === defaultProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
@@ -101,7 +104,7 @@ export const ProjectProvider = ({
   useResetSignal(
     useCallback(() => {
       previousRun.current = undefined;
-      setProject(initialProject);
+      setProject(defaultProject);
     }, [])
   );
 
@@ -201,11 +204,10 @@ export const ProjectProvider = ({
     reconciled against the one the last level left behind.
   */
   useEffect(() => {
-    if (openWith.current) {
-      setPendingProject(openWith.current);
-      openWith.current = undefined;
+    if (initialProject) {
+      setPendingProject(initialProject);
     }
-  }, []);
+  }, [initialProject]);
 
   useEffect(() => {
     if (pendingProject && datasetDescribed) {

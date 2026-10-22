@@ -4,14 +4,14 @@
   is made safe to open.
 */
 
-import {initialProject, type AilabProject} from '@cdo/apps/ailab/engine';
+import {defaultProject, type AilabProject} from '@cdo/apps/ailab/engine';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 export type AilabProjectSources = ProjectSources & {source: AilabProject};
 
 // Must stay referentially stable: useSources reloads when it changes.
 export const AILAB_DEFAULT_SOURCES: AilabProjectSources = {
-  source: initialProject,
+  source: defaultProject,
 };
 
 const columnNames = (value: unknown): string[] =>
@@ -32,7 +32,7 @@ export function sourceToProject(
   source: ProjectSources['source']
 ): AilabProject {
   if (typeof source !== 'object' || source === null) {
-    return initialProject;
+    return defaultProject;
   }
   const saved = source as Partial<AilabProject>;
 

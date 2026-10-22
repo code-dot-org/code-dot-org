@@ -105,7 +105,7 @@ export function renderWithProviders(
         {store},
         createElement(
           ProjectProvider,
-          {savedProject: project},
+          {initialProject: project},
           createElement(
             TrainingDataProvider,
             null,

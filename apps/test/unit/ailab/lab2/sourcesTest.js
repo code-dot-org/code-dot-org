@@ -1,4 +1,4 @@
-import {initialProject} from '@cdo/apps/ailab/engine';
+import {defaultProject} from '@cdo/apps/ailab/engine';
 import {
   AILAB_DEFAULT_SOURCES,
   sourceToProject,
@@ -28,9 +28,9 @@ describe('sourceToProject', () => {
   });
 
   test('falls back to an empty project for a source that is not one', () => {
-    expect(sourceToProject('blocks go here')).toEqual(initialProject);
-    expect(sourceToProject(null)).toEqual(initialProject);
-    expect(sourceToProject(undefined)).toEqual(initialProject);
+    expect(sourceToProject('blocks go here')).toEqual(defaultProject);
+    expect(sourceToProject(null)).toEqual(defaultProject);
+    expect(sourceToProject(undefined)).toEqual(defaultProject);
   });
 
   test('supplies the arrays a project is expected to have', () => {

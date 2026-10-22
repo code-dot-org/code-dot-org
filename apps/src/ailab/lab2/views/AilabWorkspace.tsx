@@ -34,6 +34,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
+import {type AilabProjectSources, sourceToProject} from '../sources';
 import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
@@ -41,7 +42,7 @@ import styles from './ailab-view.module.scss';
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
   hasEdited: boolean;
-  savedProject: AilabProject;
+  savedSource: AilabProjectSources['source'];
   save: (project: AilabProject) => void;
   startOver: () => void;
   projectManager: ProjectManager | null;
@@ -50,11 +51,14 @@ interface AilabWorkspaceProps {
 const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   levelProperties,
   hasEdited,
-  savedProject,
+  savedSource,
   save,
   startOver,
   projectManager,
 }) => {
+  // Read once: the sources change with every save, but the project the lab
+  // opens with is the one this level was loaded with.
+  const [initialProject] = useState(() => sourceToProject(savedSource));
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
   const progressManager = useContext(ProgressManagerContext);
@@ -167,7 +171,10 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>
-            <ProjectProvider savedProject={savedProject} onProjectChange={save}>
+            <ProjectProvider
+              initialProject={initialProject}
+              onProjectChange={save}
+            >
               <TrainingDataProvider>
                 <AilabEngine
                   assetPath="/blockly/media/skins/ailab/"

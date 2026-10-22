@@ -19,7 +19,7 @@ import {
 } from '@cdo/apps/ailab/engine/redux';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
@@ -53,7 +53,7 @@ afterEach(() => I18n.reset());
 
 // What the lab would have saved after the student trained once.
 function savedAfterTraining() {
-  const project = {...initialProject, ...COLUMNS};
+  const project = {...defaultProject, ...COLUMNS};
   const run = runTraining(store, project);
   train.reset();
   return {
@@ -95,7 +95,7 @@ test('leaves the history as the project described it', () => {
 });
 
 test('rebuilds nothing when the project describes no run', () => {
-  const rendered = openLab({...initialProject, ...COLUMNS});
+  const rendered = openLab({...defaultProject, ...COLUMNS});
 
   expect(rendered.trainingData().trainedModel).toBeUndefined();
   expect(store.getState().currentPanel).toBe('datasetView');
@@ -118,7 +118,7 @@ test('rebuilds rather than retrains on a pretrained level', () => {
 test('still pretrains a level with nothing saved', () => {
   store.dispatch(setMode({pretrained: true}));
 
-  const rendered = openLab({...initialProject, ...COLUMNS});
+  const rendered = openLab({...defaultProject, ...COLUMNS});
 
   expect(rendered.project().historicResults).toHaveLength(1);
 });

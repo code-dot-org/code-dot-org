@@ -20,7 +20,7 @@ import rootReducer, {
   setPresetColumns,
 } from '@cdo/apps/ailab/engine/redux';
 import {store as singletonStore} from '@cdo/apps/ailab/engine/store';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
 jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
@@ -40,7 +40,7 @@ const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
 const FIRST = run('80.00', {k: 1}, [8, 9]);
 const SECOND = run('90.00', {k: 3}, [0, 5]);
 
-function renderContext(openWith, seedStore) {
+function renderContext(initialProject, seedStore) {
   const store = seedStore ?? createStore(rootReducer);
   let context;
   const Probe = () => {
@@ -52,11 +52,7 @@ function renderContext(openWith, seedStore) {
     createElement(
       Provider,
       {store},
-      createElement(
-        ProjectProvider,
-        {savedProject: openWith},
-        createElement(Probe)
-      )
+      createElement(ProjectProvider, {initialProject}, createElement(Probe))
     )
   );
 
@@ -69,7 +65,7 @@ const accuracies = project =>
 describe('ProjectContext', () => {
   test('starts empty', () => {
     const {project} = renderContext();
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
   });
 
   // A saved project waits for the dataset it will be reconciled against.
@@ -81,7 +77,7 @@ describe('ProjectContext', () => {
     );
     const {project} = renderContext(
       {
-        ...initialProject,
+        ...defaultProject,
         hyperparameters: {k: 5},
         accuracyCheckRowIndices: [2, 7],
         historicResults: [FIRST.historicResult],
@@ -163,7 +159,7 @@ describe('ProjectContext', () => {
       store.dispatch(resetState());
     });
 
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
   });
 
   test('a reset drops the snapshot a cancel would have used', () => {
@@ -476,7 +472,7 @@ describe('ProjectContext opening a saved project', () => {
     const {project, context} = renderContext(undefined, store);
 
     act(() => context().openProject(SAVED));
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
 
     act(() => {
       store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
@@ -494,7 +490,7 @@ describe('ProjectContext opening a saved project', () => {
     const {project, context} = renderContext(undefined, store);
 
     act(() => context().openProject(SAVED));
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
 
     act(() =>
       ['a', 'b', 'c'].forEach(column =>
@@ -584,21 +580,21 @@ describe('ProjectContext keeping a saved project in sync', () => {
   ];
 
   const SAVED_COLUMNS = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: 'a',
     selectedFeatures: ['b'],
     historicResults: [FIRST.historicResult],
   };
 
   // eslint-disable-next-line react/prop-types
-  const Workspace = ({savedProject, onProjectChange, report}) => {
+  const Workspace = ({initialProject, onProjectChange, report}) => {
     useLayoutEffect(() => {
       loadLevel(undefined);
     }, []);
 
     return createElement(
       ProjectProvider,
-      {savedProject, onProjectChange},
+      {initialProject, onProjectChange},
       createElement(Probe, {report})
     );
   };
@@ -609,7 +605,7 @@ describe('ProjectContext keeping a saved project in sync', () => {
     return null;
   };
 
-  function renderSync(savedProject = SAVED_COLUMNS) {
+  function renderSync(initialProject = SAVED_COLUMNS) {
     const onProjectChange = jest.fn();
     let context;
     render(
@@ -617,7 +613,7 @@ describe('ProjectContext keeping a saved project in sync', () => {
         Provider,
         {store: singletonStore},
         createElement(Workspace, {
-          savedProject,
+          initialProject,
           onProjectChange,
           report: value => (context = value),
         })
@@ -709,7 +705,7 @@ describe('ProjectContext keeping a saved project in sync', () => {
 
   // The level chose these, but the saved copy mirrors the project either way.
   test("reports the level's preset columns", () => {
-    const {save} = renderSync(initialProject);
+    const {save} = renderSync(defaultProject);
     loadDataset();
     save.mockClear();
 
@@ -747,7 +743,7 @@ describe('ProjectContext keeping a saved project in sync', () => {
     });
     loadDataset();
 
-    expect(context().project).toEqual(initialProject);
+    expect(context().project).toEqual(defaultProject);
   });
 
   /*

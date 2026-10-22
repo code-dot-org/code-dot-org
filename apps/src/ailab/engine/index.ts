@@ -13,7 +13,7 @@ export {loadLevel} from './levelLoad';
 export {ProjectProvider} from './ProjectContext';
 export {TrainingDataProvider} from './TrainingDataContext';
 
-export {initialProject} from './types';
+export {defaultProject} from './types';
 export type {AilabProject} from './types';
 
 export type {
