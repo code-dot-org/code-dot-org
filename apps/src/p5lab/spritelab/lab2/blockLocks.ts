@@ -9,14 +9,23 @@ import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
 
-/** Hold every real block in the workspace where it is. */
-export function lockBlocks(workspace: BlocklyCore.Workspace): void {
-  workspace.getAllBlocks(false).forEach(block => {
-    if (block.isShadow()) {
+/** Hold every real block in the workspace where it is, but for the stacks
+    `own` claims: the level's own, built on it and still free to change. */
+export function lockBlocks(
+  workspace: BlocklyCore.Workspace,
+  own: (top: BlocklyCore.Block) => boolean = () => false
+): void {
+  workspace.getTopBlocks(false).forEach(top => {
+    if (own(top)) {
       return;
     }
-    block.setDeletable(false);
-    block.setMovable(false);
+    top.getDescendants(false).forEach(block => {
+      if (block.isShadow()) {
+        return;
+      }
+      block.setDeletable(false);
+      block.setMovable(false);
+    });
   });
 }
 

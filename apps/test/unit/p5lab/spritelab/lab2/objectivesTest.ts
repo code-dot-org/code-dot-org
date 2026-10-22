@@ -256,6 +256,31 @@ describe('checkObjective', () => {
     ).toBe(false);
   });
 
+  it('reads a value off a block on an input', () => {
+    const hat = (n: number) =>
+      inputs({
+        source: {
+          blocks: {
+            blocks: [
+              {
+                type: 'gamelab_atTime',
+                inputs: {N: {shadow: {type: 'math_number', fields: {NUM: n}}}},
+                next: {block: {type: 'gamelab_spriteSay'}},
+              },
+            ],
+          },
+        },
+      });
+    const check: ObjectiveCheck = {
+      kind: 'block',
+      type: 'gamelab_atTime',
+      inputs: {N: '6'},
+      contains: 'gamelab_spriteSay',
+    };
+    expect(checkObjective(check, hat(6))).toBe(true);
+    expect(checkObjective(check, hat(3))).toBe(false);
+  });
+
   it('can insist that a field names an image the project has', () => {
     const named = (value: string) =>
       inputs({

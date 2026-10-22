@@ -64,10 +64,10 @@ interface UseBlocklyWorkspaceResult {
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
   /** Load code into the workspace; `lock` holds every loaded block in
-      place (blockLocks.ts). */
+      place but the level's own stacks (blockLocks.ts). */
   loadCode: (
     source: WorkspaceSerialization,
-    options?: {lock?: boolean}
+    options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}
   ) => void;
   /**
    * Register the change listeners:
@@ -300,7 +300,10 @@ export default function useBlocklyWorkspace({
   );
 
   const loadCode = useCallback(
-    (source: WorkspaceSerialization, options?: {lock?: boolean}) => {
+    (
+      source: WorkspaceSerialization,
+      options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}
+    ) => {
       const workspace = workspaceRef.current;
       if (!workspace) {
         return;
@@ -309,7 +312,7 @@ export default function useBlocklyWorkspace({
       try {
         loadBlocksToWorkspace(workspace, JSON.stringify(source));
         if (options?.lock) {
-          lockBlocks(workspace);
+          lockBlocks(workspace, options.own);
         }
         // Update ref here (instead of in change listener) since callers may read this synchronously.
         currentBlocksRef.current = source;

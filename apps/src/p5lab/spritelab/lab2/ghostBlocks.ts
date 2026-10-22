@@ -14,11 +14,16 @@ import {
 
 type BlockState = BlocklyCore.serialization.blocks.State;
 
-/** A level's ghost: the stack to build, and the tag that names it. */
+/** A level's ghost: the stack to build, and the tag that names it. The
+    real block that settles the ghost is a movable one of the stack's top
+    type (an earlier level's blocks are locked), carrying the tag when
+    `tagged` says the toolbox gives its block the tag. */
 export interface GhostStack {
   ghost: BlockState;
-  /** Carried by every block of the ghost in the workspace. */
+  /** Names the ghost; also the `data` the toolbox block carries when
+      `tagged` is set. */
   data: string;
+  tagged?: boolean;
 }
 
 export function isGhostStack(entry: unknown): entry is GhostStack {
@@ -39,8 +44,9 @@ export function isGhostBlock(
   return !!block?.data?.startsWith(GHOST_PREFIX);
 }
 
-/** The state with the ghost's tag on every block, so the workspace can
-    tell the ghost's blocks from the student's. */
+/** The state with the ghost's tag on every real block, so the workspace
+    can tell the ghost's blocks from the student's; shadows go with their
+    block. */
 export function tagged(state: BlockState, tag: string): BlockState {
   const out: BlockState = {...state, data: tag};
   if (state.inputs) {
@@ -48,30 +54,36 @@ export function tagged(state: BlockState, tag: string): BlockState {
       Object.entries(state.inputs).map(([name, input]) => [
         name,
         {
+          ...input,
           ...(input.block && {block: tagged(input.block, tag)}),
-          ...(input.shadow && {shadow: tagged(input.shadow, tag)}),
         },
       ])
     );
   }
   if (state.next) {
     out.next = {
+      ...state.next,
       ...(state.next.block && {block: tagged(state.next.block, tag)}),
-      ...(state.next.shadow && {shadow: tagged(state.next.shadow, tag)}),
     };
   }
   return out;
 }
 
-/** A block of `type` the student built: real, not a ghost, not a shadow. */
+/** The student's own top block for the ghost, or null. */
 export function hasRealTop(
   workspace: BlocklyCore.Workspace,
-  type: string
+  entry: GhostStack
 ): BlocklyCore.Block | null {
   return (
     workspace
       .getTopBlocks(false)
-      .find(top => top.type === type && !isGhostBlock(top)) ?? null
+      .find(
+        top =>
+          top.type === entry.ghost.type &&
+          !isGhostBlock(top) &&
+          top.isMovable() &&
+          (!entry.tagged || top.data === entry.data)
+      ) ?? null
   );
 }
 
@@ -82,14 +94,15 @@ function ghostBlocks(
   return workspace.getTopBlocks(false).filter(top => top.data === tag);
 }
 
+// The outline goes on the ghost's real blocks; a shadow in one of their
+// inputs keeps its own look.
 function dress(block: BlocklyCore.Block): void {
   block.setDisabledReason(true, DISABLED_REASON);
   block.setDeletable(false);
   block.setMovable(false);
   block.setEditable(false);
-  if (block instanceof BlocklyCore.BlockSvg && block.rendered) {
-    const root = block.getSvgRoot();
-    root.classList.add(PLACEHOLDER_CLASS, GHOST_CLASS);
+  if (block instanceof BlocklyCore.BlockSvg && !block.isShadow()) {
+    block.getSvgRoot().classList.add(PLACEHOLDER_CLASS, GHOST_CLASS);
   }
 }
 
@@ -101,10 +114,7 @@ export function placeGhost(
   at: {x: number; y: number}
 ): BlocklyCore.BlockSvg | null {
   const tag = ghostTag(entry.data);
-  if (
-    hasRealTop(workspace, entry.ghost.type) ||
-    ghostBlocks(workspace, tag).length
-  ) {
+  if (hasRealTop(workspace, entry) || ghostBlocks(workspace, tag).length) {
     return null;
   }
   BlocklyCore.Events.disable();
@@ -151,7 +161,7 @@ export function settleGhost(
   workspace: BlocklyCore.WorkspaceSvg,
   entry: GhostStack
 ): boolean {
-  const real = hasRealTop(workspace, entry.ghost.type);
+  const real = hasRealTop(workspace, entry);
   if (!real) {
     return false;
   }
@@ -169,16 +179,19 @@ export function settleGhost(
   return true;
 }
 
-/** Keep a ghost from taking or joining any connection. */
+/** Keep a dragged block from joining a ghost, and a ghost from being
+    dragged onto anything; the ghost's own shadows still attach as it is
+    built. */
 export function guardGhostConnections(
   workspace: BlocklyCore.WorkspaceSvg
 ): void {
   const checker = workspace.connectionChecker;
   const canConnect = checker.canConnect.bind(checker);
   checker.canConnect = (a, b, isDragging, distance) =>
-    !isGhostBlock(a?.getSourceBlock()) &&
-    !isGhostBlock(b?.getSourceBlock()) &&
-    canConnect(a, b, isDragging, distance);
+    !(
+      isDragging &&
+      (isGhostBlock(a?.getSourceBlock()) || isGhostBlock(b?.getSourceBlock()))
+    ) && canConnect(a, b, isDragging, distance);
 }
 
 /** The serialized workspace without the ghosts. */

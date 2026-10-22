@@ -36,6 +36,10 @@ export interface LevelMode {
       or every scene's, the others locked, where a level first shows the
       student the scenes they have. */
   sceneTabs?: 'pinned' | 'all';
+  /** The scene the level opens on, in place of its pinned scene, with
+      the scenes left open for the student to move between; the pinned
+      scene still takes the level's starter blocks. */
+  openScene?: string;
   /** The sentence scene's sentence, by id in sentences.json; the
       image type's own sentence when unset. */
   sentence?: string;

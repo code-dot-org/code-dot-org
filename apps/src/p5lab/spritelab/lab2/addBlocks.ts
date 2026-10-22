@@ -39,6 +39,17 @@ export function ghostEntries(entries: AddBlockEntry[]): GhostStack[] {
   return entries.filter(isGhostStack);
 }
 
+/** Whether a top block is one this level has the student build: a block
+    the level adds, or a ghost's top, by type and tag. */
+export function ownsTop(entries: AddBlockEntry[], top: PresentBlock): boolean {
+  return entries.some(entry =>
+    isGhostStack(entry)
+      ? top.type === entry.ghost.type &&
+        (!entry.tagged || top.data === entry.data)
+      : !isAttachShadow(entry) && matchesEntry(top, entry)
+  );
+}
+
 /** Settle every ghost whose top block the student has built. True when
     the workspace changed. */
 export function settleGhosts(

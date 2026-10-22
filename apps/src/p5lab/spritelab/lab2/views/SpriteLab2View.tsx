@@ -42,7 +42,7 @@ import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {addMissingBlocks, settleGhosts} from '../addBlocks';
+import {addMissingBlocks, ownsTop, settleGhosts} from '../addBlocks';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -507,8 +507,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
   ]);
 
+  const openScene = levelProperties.levelMode?.openScene;
   const [activeSceneId, setActiveSceneId] = useState<string | null>(
-    () => pinnedSceneId ?? scenes[0].id
+    () => openScene ?? pinnedSceneId ?? scenes[0].id
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeSceneType = activeScene?.type;
@@ -638,7 +639,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // ensure effect lands it, otherwise reset to the first scene when the
   // active one disappears (e.g. code cleared via start over).
   useEffect(() => {
-    if (pinnedSceneId) {
+    if (pinnedSceneId && !openScene) {
       if (
         activeSceneId !== pinnedSceneId &&
         scenes.some(s => s.id === pinnedSceneId)
@@ -648,9 +649,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     if (!scenes.some(s => s.id === activeSceneId)) {
-      setActiveSceneId(scenes[0].id);
+      setActiveSceneId(pinnedSceneId ?? scenes[0].id);
     }
-  }, [scenes, activeSceneId, pinnedSceneId]);
+  }, [scenes, activeSceneId, pinnedSceneId, openScene]);
 
   // Premade world, when the level authors one.
   useWorldStartPattern({
@@ -1988,6 +1989,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // Before free play, what an earlier level built stays put.
     loadCode(source, {
       lock: !isLevelEditMode && !isFreeplayMode(levelProperties.levelMode),
+      own: top => ownsTop(levelProperties.addBlocks ?? [], top),
     });
     runLocalScene(activeScene);
     // After the load, so the blocks sit below what the workspace holds.
@@ -1999,6 +2001,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     currentSources.source,
     getCurrentBlocks,
     loadCode,
+    levelProperties.addBlocks,
     levelProperties.levelMode,
     runLocalScene,
     sourcesReinitializedCount,
@@ -2231,7 +2234,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
         : sceneMetadata,
     activeSceneId,
-    locked: !!pinnedSceneId,
+    locked: !!pinnedSceneId && !openScene,
     lockedReason: LOCKED_REASON,
     allowCreate: scenesEditable || !!pinnedSceneId,
     onSelectScene: sceneEditing.selectScene,

@@ -25,6 +25,9 @@ export type ObjectiveCheck =
       data?: string;
       /** Field values the block must carry. */
       fields?: Record<string, string>;
+      /** Values the blocks on these inputs must carry in a field: the
+          number on an event's N, say. */
+      inputs?: Record<string, string>;
       /** A block type that must sit inside the block (an input). */
       contains?: string;
       /** A field that must name an image the project has. */
@@ -219,6 +222,14 @@ function matchesBlock(
   }
   for (const [name, wanted] of Object.entries(check.fields ?? {})) {
     if (fieldValue(block.fields?.[name]) !== wanted) {
+      return false;
+    }
+  }
+  for (const [name, wanted] of Object.entries(check.inputs ?? {})) {
+    const input = block.inputs?.[name];
+    const on = input?.block ?? input?.shadow;
+    const values = Object.values(on?.fields ?? {}).map(fieldValue);
+    if (!values.includes(wanted)) {
       return false;
     }
   }
