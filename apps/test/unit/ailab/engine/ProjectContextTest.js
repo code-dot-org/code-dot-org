@@ -681,6 +681,21 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save).toHaveBeenCalledTimes(1);
   });
 
+  /*
+    A level change mounts the lab again while the engine's store still holds
+    the dataset of the level being left, which the level load clears moments
+    later. Opening against that one reconciles the project to its columns.
+  */
+  test('does not open against the dataset the last level left behind', () => {
+    loadDataset();
+
+    const {save, context} = renderSync();
+    loadDataset();
+
+    expect(context().project).toEqual(SAVED_COLUMNS);
+    expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
+  });
+
   test('reports a column the student chooses', () => {
     const {save, context} = renderSync();
     loadDataset();

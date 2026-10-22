@@ -74,11 +74,12 @@ export const ProjectProvider = ({
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
   /*
-    A project waiting for the dataset it will be reconciled against. The saved
-    one starts here rather than in the project: it has still to be reconciled,
-    and a later one is a different lab, which arrives by remounting this.
+    A project waiting for the dataset it will be reconciled against.
   */
-  const [pendingProject, setPendingProject] = useState(savedProject);
+  const [pendingProject, setPendingProject] = useState<
+    AilabProject | undefined
+  >();
+  const openWith = useRef(savedProject);
   // TODO: do we need all of these booleans
   const opening = pendingProject !== undefined;
   /*
@@ -192,6 +193,18 @@ export const ProjectProvider = ({
 
   const openProject = useCallback((saved: AilabProject) => {
     setPendingProject(saved);
+  }, []);
+
+  /*
+    From an effect rather than the initial state: the level load clears the
+    dataset from a layout effect, and a project queued before that would be
+    reconciled against the one the last level left behind.
+  */
+  useEffect(() => {
+    if (openWith.current) {
+      setPendingProject(openWith.current);
+      openWith.current = undefined;
+    }
   }, []);
 
   useEffect(() => {
