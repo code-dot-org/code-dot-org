@@ -276,7 +276,7 @@ interface MuiIconButtonProps {
 
 **Implemented**: Custom colors are handled via theme variants using `variant × color` combinations.
 
-Custom colors are added via TypeScript type extensions in `src/themes/code.org/types.d.ts`:
+Custom colors are added via TypeScript type extensions in `src/themes/code.org/muiAugmentation.ts`:
 
 ```typescript
 declare module '@mui/material/Button' {
@@ -322,7 +322,7 @@ All color combinations are handled via theme variants in `src/themes/code.org/st
 
 **Implemented**: Custom sizes are added via theme variants.
 
-Custom sizes are added via TypeScript type extensions in `src/themes/code.org/types.d.ts`:
+Custom sizes are added via TypeScript type extensions in `src/themes/code.org/muiAugmentation.ts`:
 
 ```typescript
 declare module '@mui/material/Button' {

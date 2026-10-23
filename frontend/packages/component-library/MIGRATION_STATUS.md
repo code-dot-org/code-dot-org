@@ -59,30 +59,18 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 
 ## Style Overrides Reference
 
-All MUI style overrides live in `src/themes/code.org/styleOverrides/` and are aggregated in `index.ts`:
-
-```typescript
-export const STYLE_OVERRIDES: Components<Theme> = {
-  MuiTypography: TYPOGRAPHY_OVERRIDES,
-  MuiLink: LINK_OVERRIDES,
-  MuiBreadcrumbs: BREADCRUMBS_OVERRIDES,
-  MuiButtonBase: BUTTON_BASE_OVERRIDES,
-  MuiButton: BUTTON_OVERRIDES,
-  MuiIconButton: ICON_BUTTON_OVERRIDES,
-  MuiTooltip: TOOLTIP_OVERRIDES,
-};
-```
+All MUI style overrides live in `src/themes/code.org/styleOverrides/` and are aggregated in `STYLE_OVERRIDES` in [`styleOverrides/index.ts`](src/themes/code.org/styleOverrides/index.ts).
 
 ## Type Augmentations
 
-Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` and must be manually synced to `apps/src/types/mui.d.ts` (TypeScript module augmentation doesn't cross package boundaries in this monorepo).
+Custom MUI type augmentations (custom Button, IconButton, Breadcrumbs and Tooltip props, Typography variants, the `MuiFooter` slot) are declared in [`src/themes/code.org/muiAugmentation.ts`](src/themes/code.org/muiAugmentation.ts). `code.org/index.ts` re-exports them (`export type *`), so consumers that import the package pick them up without a local copy. `frontend/apps/studio/src/types/mui.d.ts` is the one exception: it re-declares the Typography variants locally.
 
 ## How to Migrate a Component
 
-1. **Discuss with the design team** — Before starting a new component migration, coordinate with the design team (including Moshe and Mark) to align on visual expectations and any design adjustments needed for the MUI equivalent.
+1. **Discuss with the design team** — Before starting a new component migration, coordinate with the design team (including @moshebaricdo and @markabarrett) to align on visual expectations and any design adjustments needed for the MUI equivalent.
 2. Create MUI style overrides in `src/themes/code.org/styleOverrides/`.
 3. Add the overrides to `STYLE_OVERRIDES` in `styleOverrides/index.ts`.
-4. Add any necessary type augmentations to `types.d.ts`.
+4. Add any necessary type augmentations to `muiAugmentation.ts`.
 5. Mark the DSCO component as `@deprecated` with a clear migration path.
 6. Update this document.
 7. Optionally, create a codemod in `codemods/` for automated migration of consumers.
@@ -103,7 +91,7 @@ Each DSCO component follows this migration lifecycle. Step 5 applies only when t
 
 ## Building New MUI Components
 
-When creating a completely new MUI component for the design system (i.e. not migrating an existing DSCO component), discuss it with the design team (Moshe and Mark) before starting implementation. This ensures the component follows existing design system patterns and that we maintain a high-quality, high-integrity design system.
+When creating a completely new MUI component for the design system (i.e. not migrating an existing DSCO component), discuss it with the design team (@moshebaricdo and @markabarrett) before starting implementation. This ensures the component follows existing design system patterns and that we maintain a high-quality, high-integrity design system.
 
 ## Internal Dependency Blockers
 
