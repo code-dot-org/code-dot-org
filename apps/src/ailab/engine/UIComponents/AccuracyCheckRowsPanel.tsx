@@ -28,22 +28,12 @@ const AccuracyCheckRowsPanel = ({
     [rows]
   );
 
-  if (!splitByGrade) {
-    return (
-      <RowsPanel
-        description={description}
-        rowIndices={testedRows}
-        {...columnProps}
-      />
-    );
-  }
-
   return (
     <RowsPanel
       description={description}
       rowIndices={testedRows}
-      rowsByGrade={rows}
-      emptyText="No rows matched this filter"
+      rowsByGrade={splitByGrade ? rows : undefined}
+      emptyText={splitByGrade ? 'No rows matched this filter' : undefined}
       {...columnProps}
     />
   );

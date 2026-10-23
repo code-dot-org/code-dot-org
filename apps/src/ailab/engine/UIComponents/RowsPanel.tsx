@@ -5,7 +5,7 @@ import {dataColumnsFor} from '../helpers/columnDetails';
 import type {Grade} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {useDatasetTableView, viewForGrade} from '../useTableView';
+import {useDatasetTableView, useGradedView} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
@@ -47,9 +47,12 @@ const RowsPanel = ({
     () => dataColumnsFor(data, project, showAllColumns),
     [data, project, showAllColumns]
   );
-  const tableView = useDatasetTableView(rowIndices, columns);
   const [grade, setGrade] = useState<Grade>('correct');
-  const graded = rowsByGrade && viewForGrade(tableView, rowsByGrade, grade);
+  const {view, counts} = useGradedView(
+    useDatasetTableView(rowIndices, columns),
+    rowsByGrade,
+    grade
+  );
 
   return (
     <div className={styles.panel}>
@@ -63,25 +66,25 @@ const RowsPanel = ({
           {description}
         </Typography>
         <div className={styles.actions}>
-          {!graded && (
+          {!counts && (
             <>
               <Typography variant="body3" component="span">
                 <strong>
-                  {rowCountText(tableView.rows.length, rowIndices.length)}
+                  {rowCountText(view.rows.length, rowIndices.length)}
                 </strong>
               </Typography>
               <span className={styles.divider} />
             </>
           )}
           <div className={styles.actionGroup}>
-            {graded && (
+            {counts && (
               <ResultsToggle
                 grade={grade}
-                onChange={value => setGrade(value as Grade)}
-                counts={graded.counts}
+                onChange={setGrade}
+                counts={counts}
               />
             )}
-            <TableFilter view={tableView} />
+            <TableFilter view={view} />
             <ColumnsButton
               showAllColumns={showAllColumns}
               onToggle={onToggleColumns}
@@ -91,7 +94,7 @@ const RowsPanel = ({
       </div>
       <NodeRowsTable
         labelId={descriptionId}
-        view={graded ? graded.view : tableView}
+        view={view}
         emphasizedColumn={emphasizedColumn}
         emptyText={emptyText}
         prediction={prediction}

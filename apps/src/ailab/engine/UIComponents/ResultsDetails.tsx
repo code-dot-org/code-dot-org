@@ -1,17 +1,16 @@
 import React, {useMemo, useState} from 'react';
 
-import {ResultsGrades} from '../constants';
 import {
   formatAccuracy,
   getAccuracyGrades,
-  getResultsByGrade,
+  getAllResults,
 } from '../helpers/accuracy';
 import {dataColumnsFor} from '../helpers/columnDetails';
 import type {Grade} from '../helpers/displayTreeNodeContent';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
-import {viewForGrade} from '../useTableView';
+import {useGradedView} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
@@ -33,25 +32,24 @@ const ResultsDetails = () => {
   const [showAllColumns, setShowAllColumns] = useState(false);
   const data = useAppSelector(state => state.data);
   const results = useAppSelector(
-    state => getResultsByGrade(state, project, ResultsGrades.ALL),
+    state => getAllResults(state, project),
     deepEqual
   );
   const grades = useAppSelector(state => getAccuracyGrades(state, project));
   const rowsByGrade = useMemo(() => {
-    const indices = [...grades.keys()];
-    return {
-      correct: indices.filter(index => grades[index] === ResultsGrades.CORRECT),
-      incorrect: indices.filter(
-        index => grades[index] === ResultsGrades.INCORRECT
-      ),
-    };
+    const byGrade: Record<Grade, number[]> = {correct: [], incorrect: []};
+    grades.forEach((grade, row) => byGrade[grade as Grade].push(row));
+    return byGrade;
   }, [grades]);
   const columns = useMemo(
     () => dataColumnsFor(data, project, showAllColumns),
     [data, project, showAllColumns]
   );
-  const view = useResultsTableView(results, columns);
-  const graded = viewForGrade(view, rowsByGrade, resultsTab as Grade);
+  const {view, counts} = useGradedView(
+    useResultsTableView(results, columns),
+    rowsByGrade,
+    resultsTab
+  );
 
   return (
     <div className={styles.details}>
@@ -73,7 +71,7 @@ const ResultsDetails = () => {
               <ResultsToggle
                 grade={resultsTab}
                 onChange={grade => dispatch(setResultsTab(grade))}
-                counts={graded.counts}
+                counts={counts}
               />
             )}
             <TableFilter view={view} />
@@ -84,7 +82,7 @@ const ResultsDetails = () => {
           </div>
         </div>
       </div>
-      <ResultsTable results={results} columns={columns} view={graded.view} />
+      <ResultsTable results={results} columns={columns} view={view} />
     </div>
   );
 };

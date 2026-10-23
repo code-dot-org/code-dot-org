@@ -2,13 +2,14 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 
 import {ResultsGrades} from '../constants';
+import type {Grade} from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeCounts} from '../helpers/displayTreeTrace';
 
 import styles from './resultsToggle.module.scss';
 
 interface ResultsToggleProps {
-  grade: string;
-  onChange: (grade: string) => void;
+  grade: Grade;
+  onChange: (grade: Grade) => void;
   counts?: DisplayTreeNodeCounts;
 }
 
@@ -18,7 +19,7 @@ const ResultsToggle = ({grade, onChange, counts}: ResultsToggleProps) => (
       size="xs"
       className={styles.segments}
       selectedButtonValue={grade}
-      onChange={onChange}
+      onChange={value => onChange(value as Grade)}
       buttons={[
         {
           value: ResultsGrades.CORRECT,
