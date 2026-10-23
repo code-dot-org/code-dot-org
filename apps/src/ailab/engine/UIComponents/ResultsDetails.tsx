@@ -48,7 +48,7 @@ const ResultsDetails = () => {
   const {view, counts} = useGradedView(
     useResultsTableView(results, columns),
     rowsByGrade,
-    resultsTab
+    resultsTab as Grade
   );
 
   return (

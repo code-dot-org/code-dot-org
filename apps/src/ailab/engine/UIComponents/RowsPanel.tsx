@@ -49,7 +49,7 @@ const RowsPanel = ({
     [data, project, showAllColumns]
   );
   const [grade, setGrade] = useState<Grade>('correct');
-  const {view, counts} = useGradedView(
+  const {view: tableView, counts} = useGradedView(
     useDatasetTableView(rowIndices, columns),
     rowsByGrade,
     grade
@@ -71,7 +71,7 @@ const RowsPanel = ({
             <>
               <Typography variant="body3" component="span">
                 <strong>
-                  {rowCountText(view.rows.length, rowIndices.length)}
+                  {rowCountText(tableView.rows.length, rowIndices.length)}
                 </strong>
               </Typography>
               <span className={styles.divider} />
@@ -81,11 +81,11 @@ const RowsPanel = ({
             {rowsByGrade && (
               <ResultsToggle
                 grade={grade}
-                onChange={setGrade}
+                onChange={value => setGrade(value as Grade)}
                 counts={counts}
               />
             )}
-            <TableFilter view={view} />
+            <TableFilter view={tableView} />
             <ColumnsButton
               showAllColumns={showAllColumns}
               onToggle={onToggleColumns}
@@ -95,7 +95,7 @@ const RowsPanel = ({
       </div>
       <NodeRowsTable
         labelId={descriptionId}
-        view={view}
+        view={tableView}
         emphasizedColumn={emphasizedColumn}
         emptyText={emptyText}
         prediction={prediction}

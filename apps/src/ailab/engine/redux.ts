@@ -5,9 +5,8 @@ import {
   type AnyAction,
 } from '@reduxjs/toolkit';
 
-import {TestDataLocations} from './constants';
+import {TestDataLocations, ResultsGrades} from './constants';
 import {getResultsDataInDataTableForm} from './helpers/accuracy';
-import type {Grade} from './helpers/displayTreeNodeContent';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
@@ -71,7 +70,7 @@ export interface RootState {
   instructionsEnabled: boolean;
   instructionsKey: InstructionsKey | null;
   showOverlay: boolean;
-  resultsTab: Grade;
+  resultsTab: string;
   presetColumns: PresetColumns | undefined;
   resetCount: number;
   mode?: Mode;
@@ -145,7 +144,7 @@ export const initialState: RootState = {
   instructionsEnabled: false,
   instructionsKey: null,
   showOverlay: false,
-  resultsTab: 'correct',
+  resultsTab: ResultsGrades.CORRECT,
   presetColumns: undefined,
   resetCount: 0,
 };
@@ -347,7 +346,7 @@ const ailabSlice = createSlice({
       if (currentPanel === 'results') {
         state.testData = {};
         state.prediction = undefined;
-        state.resultsTab = 'correct';
+        state.resultsTab = ResultsGrades.CORRECT;
       } else {
         state.currentColumn = undefined;
       }
@@ -400,7 +399,7 @@ const ailabSlice = createSlice({
     setInstructionsEnabled(state, action: PayloadAction<boolean>) {
       state.instructionsEnabled = action.payload;
     },
-    setResultsTab(state, action: PayloadAction<Grade>) {
+    setResultsTab(state, action: PayloadAction<string>) {
       state.resultsTab = action.payload;
     },
   },
