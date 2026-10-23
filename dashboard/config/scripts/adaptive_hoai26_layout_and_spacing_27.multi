@@ -1,14 +1,13 @@
 name 'adaptive-HoAI26-layout-and-spacing-27'
-title 'TODO: title'
 description ''
-question 'Which prompt best fixes a crowded layout of three club cards on a page?'
-wrong 'Make it nicer.'
-right 'Put more space between the three cards and line them up under the hero.'
-wrong 'Make the cards disappear.'
-wrong 'Make everything bigger.'
+question 'Your club page has three cards that feel crowded. Which prompt is most likely to fix the problem?'
+wrong 'Make the cards look more polished and modern overall.'
+wrong 'Give each card a different color so they stand out more.'
+right 'Add more space between the three cards.'
+wrong 'Make the text on each card bigger so it is easier to read.'
 
 markdown <<MARKDOWN
-Which prompt best fixes a crowded layout of three club cards on a page?
+
 MARKDOWN
 
 allow_multiple_attempts true
