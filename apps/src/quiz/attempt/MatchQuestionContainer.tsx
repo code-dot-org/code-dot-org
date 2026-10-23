@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import {QuizQuestionSummary} from '../types';
+import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
 import {MatchPairs, partnerOf, toggleMatch} from './matchPairing';
@@ -98,8 +99,19 @@ const MatchQuestionContainer: React.FunctionComponent<
     return () => observer.disconnect();
   }, [pairs, matchSets]);
 
-  const textOf = (id: string) =>
-    [...matchSets[0], ...matchSets[1]].find(item => item.id === id)?.text;
+  // Each first-set item has a letter by position; a second-set item shows
+  // its partner's letter once paired.
+  const letterOf = (id: string) => {
+    const index = matchSets[0].findIndex(item => item.id === id);
+    return index === -1 ? undefined : formatChoiceLetter(index);
+  };
+  const labelOf = (id: string) => {
+    const first = matchSets[0].find(item => item.id === id);
+    if (first) {
+      return `${letterOf(id)}. ${first.text}`;
+    }
+    return matchSets[1].find(item => item.id === id)?.text;
+  };
 
   const handleClick = (set: SetIndex, id: string) => {
     if (!selected || selected.set === set) {
@@ -117,34 +129,31 @@ const MatchQuestionContainer: React.FunctionComponent<
       {matchSets[set].map(item => {
         const partnerId = partnerOf(pairs, item.id);
         const isSelected = selected?.id === item.id;
+        const letter =
+          set === 0 ? letterOf(item.id) : partnerId && letterOf(partnerId);
         return (
-          <div
+          <button
             key={item.id}
-            className={classNames(styles.option, set === 1 && styles.second)}
+            type="button"
+            className={classNames(styles.card, set === 1 && styles.second, {
+              [styles.cardActive]: partnerId || isSelected,
+            })}
+            aria-pressed={isSelected}
+            aria-label={
+              partnerId
+                ? `${labelOf(item.id)}, matched with ${labelOf(partnerId)}`
+                : labelOf(item.id)
+            }
+            onClick={() => handleClick(set, item.id)}
+            disabled={disabled}
           >
-            <button
-              type="button"
-              className={classNames(styles.card, {
-                [styles.cardPaired]: partnerId,
-                [styles.cardSelected]: isSelected,
-              })}
-              aria-pressed={isSelected}
-              aria-label={
-                partnerId
-                  ? `${item.text}, matched with ${textOf(partnerId)}`
-                  : item.text
-              }
-              onClick={() => handleClick(set, item.id)}
-              disabled={disabled}
+            <Typography
+              variant={set === 0 ? 'body2' : 'body3'}
+              component="span"
+              className={classNames(set === 0 && styles.firstText)}
             >
-              <Typography
-                variant={set === 0 ? 'body2' : 'body3'}
-                component="span"
-                className={classNames(set === 0 && styles.firstText)}
-              >
-                {item.text}
-              </Typography>
-            </button>
+              {item.text}
+            </Typography>
             <span
               ref={element => {
                 if (element) {
@@ -153,12 +162,12 @@ const MatchQuestionContainer: React.FunctionComponent<
                   dotRefs.current.delete(item.id);
                 }
               }}
-              className={classNames(styles.dot, {
-                [styles.dotActive]: partnerId || isSelected,
-              })}
+              className={styles.dot}
               aria-hidden="true"
-            />
-          </div>
+            >
+              {letter}
+            </span>
+          </button>
         );
       })}
     </div>
