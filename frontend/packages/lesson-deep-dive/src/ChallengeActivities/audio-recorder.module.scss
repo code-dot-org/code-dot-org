@@ -36,7 +36,7 @@
   border-radius: 999px;
   background-color: var(--brand-purple-30);
   color: var(--brand-purple-80);
-  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.30);
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
 
   & strong {
     color: var(--brand-purple-80);
@@ -45,7 +45,6 @@
   & p {
     color: var(--brand-purple-80);
   }
-
 }
 
 .audio {
