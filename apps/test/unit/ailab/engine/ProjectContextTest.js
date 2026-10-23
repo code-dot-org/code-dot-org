@@ -697,10 +697,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save).not.toHaveBeenCalled();
   });
 
-  /*
-    The level load resets the lab after the seed is queued, and the project
-    has to outlive that or a page load opens an empty lab.
-  */
   test('opens the saved project into the lab', () => {
     const {save, context} = renderSync();
 
@@ -710,11 +706,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
   });
 
-  /*
-    Reconciling against a dataset whose columns are still being typed drops
-    the ones whose type has yet to arrive, and the project is then reported
-    without them.
-  */
   test('waits for every column of the dataset to be described', () => {
     const {save, context} = renderSync();
 
@@ -760,11 +751,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save.mock.lastCall[0].labelColumn).toBe('c');
   });
 
-  /*
-    Switching levels loads the next one while the lab is still standing and
-    still saving to the level being left. The lab is emptied first, and
-    saving that would replace the student's work with nothing.
-  */
   test('does not report the emptying that a level change begins with', () => {
     const {save, context} = renderSync();
     loadDataset();
@@ -788,10 +774,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(context().project).toEqual(defaultProject);
   });
 
-  /*
-    The dataset the student switched to is now their work, empty as it is, and
-    what they do next has to go on being reported.
-  */
   test('keeps reporting after a reset empties the project', () => {
     const {save, context} = renderSync();
     loadDataset();
