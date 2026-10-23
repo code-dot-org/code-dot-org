@@ -9,6 +9,33 @@ import {
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
+jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
+  __esModule: true,
+  default: ({
+    title,
+    onViewSkillTree,
+    onFinish,
+  }: {
+    title: string;
+    onViewSkillTree?: () => void;
+    onFinish?: () => void;
+  }) => (
+    <div>
+      header: {title}
+      {onViewSkillTree && (
+        <button type="button" onClick={onViewSkillTree}>
+          View skill tree
+        </button>
+      )}
+      {onFinish && (
+        <button type="button" onClick={onFinish}>
+          I'm finished!
+        </button>
+      )}
+    </div>
+  ),
+}));
+
 const timer = Lab2ProgressTimer.getInstance();
 
 // A kind the player has no view for, so it shows its own Continue button.
@@ -31,7 +58,9 @@ describe('StepPlayer', () => {
 
   afterEach(() => now.mockRestore());
 
-  const renderPlayer = (initialStepId?: string) => {
+  const renderPlayer = (
+    props: Partial<React.ComponentProps<typeof StepPlayer>> = {}
+  ) => {
     const calls: unknown[][] = [];
     const record =
       (name: string) =>
@@ -45,13 +74,13 @@ describe('StepPlayer', () => {
       >
         <StepPlayer
           checkpoint={checkpoint}
-          initialStepId={initialStepId}
           onStartStep={record('start')}
           onCompleteStep={record('complete')}
           onLeaveStep={record('leave')}
           onSaveAnswers={record('answers')}
           onExit={onExit}
           onFinish={onFinish}
+          {...props}
         />
       </PathwayContext.Provider>
     );
@@ -79,7 +108,7 @@ describe('StepPlayer', () => {
     const {calls, onExit} = renderPlayer();
 
     now.mockReturnValue(3500);
-    fireEvent.click(screen.getByRole('button', {name: /Back to map/}));
+    fireEvent.click(screen.getByRole('button', {name: 'View skill tree'}));
 
     expect(calls).toEqual([
       ['start', checkpoint.steps[0]],
@@ -98,12 +127,44 @@ describe('StepPlayer', () => {
     now.mockReturnValue(8000);
     timer.startIdle();
     now.mockReturnValue(9000);
-    fireEvent.click(screen.getByRole('button', {name: /Back to map/}));
+    fireEvent.click(screen.getByRole('button', {name: 'View skill tree'}));
 
     expect(calls).toEqual([
       ['start', checkpoint.steps[0]],
       ['leave', checkpoint.steps[0], 3000],
     ]);
+  });
+
+  it("titles the header with the checkpoint's and the step's titles", () => {
+    renderPlayer();
+    expect(screen.getByText('header: Basics: one')).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    expect(screen.getByText('header: Basics: two')).toBeTruthy();
+  });
+
+  it('titles the header with the title it is given', () => {
+    renderPlayer({headerTitle: 'My Project'});
+    expect(screen.getByText('header: My Project')).toBeTruthy();
+  });
+
+  it('reports the time on a step left for the final project', () => {
+    const onFinishPathway = jest.fn();
+    const {calls} = renderPlayer({onFinishPathway});
+
+    now.mockReturnValue(2500);
+    fireEvent.click(screen.getByRole('button', {name: "I'm finished!"}));
+
+    expect(calls).toEqual([
+      ['start', checkpoint.steps[0]],
+      ['leave', checkpoint.steps[0], 1500],
+    ]);
+    expect(onFinishPathway).toHaveBeenCalled();
+  });
+
+  it('offers no way to the final project without a handler for it', () => {
+    renderPlayer();
+    expect(screen.queryByRole('button', {name: "I'm finished!"})).toBeNull();
   });
 
   describe('URL parameters', () => {
@@ -150,17 +211,17 @@ describe('StepPlayer', () => {
       // Simulate URL navigation — URL already has the step param.
       window.history.replaceState({}, '', '?checkpoint=basics&step=two');
       pushState.mockClear();
-      renderPlayer('two');
+      renderPlayer({initialStepId: 'two'});
 
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
       // URL already correct → no pushState (avoids a duplicate history entry).
       expect(pushState).not.toHaveBeenCalled();
     });
 
     it('falls back to step 0 when initialStepId is not found', () => {
-      renderPlayer('unknown-step');
+      renderPlayer({initialStepId: 'unknown-step'});
 
-      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: one')).toBeTruthy();
       expect(pushState).toHaveBeenCalledWith(
         null,
         '',
@@ -171,28 +232,28 @@ describe('StepPlayer', () => {
     it('ignores popstate events for a different checkpoint', () => {
       renderPlayer();
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
 
       pushState.mockClear();
       window.history.replaceState({}, '', '?checkpoint=other&step=one');
       act(() => window.dispatchEvent(new PopStateEvent('popstate')));
 
       // Step unchanged — the event was for a different checkpoint.
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
       expect(pushState).not.toHaveBeenCalled();
     });
 
     it('navigates to the previous step when the browser fires popstate', () => {
       renderPlayer();
       fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-      expect(screen.getByText('Step 2 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: two')).toBeTruthy();
 
       pushState.mockClear();
       // Simulate browser back: URL reverts to step one, popstate fires.
       window.history.replaceState({}, '', '?checkpoint=basics&step=one');
       act(() => window.dispatchEvent(new PopStateEvent('popstate')));
 
-      expect(screen.getByText('Step 1 of 2')).toBeTruthy();
+      expect(screen.getByText('header: Basics: one')).toBeTruthy();
       // URL already correct → no duplicate history entry added.
       expect(pushState).not.toHaveBeenCalled();
     });
