@@ -12,6 +12,7 @@ export interface DatasetFiles {
 }
 
 export interface DatasetColumns {
+  all: string[];
   selectable: string[];
   defaultLabel?: string;
 }
@@ -36,10 +37,27 @@ export async function fetchDatasetColumns(
   const selectable = selectableColumns(rows, columnTypes);
   const {defaultLabelColumn} = metadata;
   return {
+    all: Object.keys(rows[0] ?? {}),
     selectable,
     defaultLabel:
       defaultLabelColumn && selectable.includes(defaultLabelColumn)
         ? defaultLabelColumn
         : undefined,
+  };
+}
+
+// Students cannot predict the id column or predict from it.
+export function withoutIdColumn(
+  columns: DatasetColumns | undefined,
+  idColumn: string | undefined
+): DatasetColumns | undefined {
+  if (!columns || idColumn === undefined) {
+    return columns;
+  }
+  return {
+    ...columns,
+    selectable: columns.selectable.filter(column => column !== idColumn),
+    defaultLabel:
+      columns.defaultLabel === idColumn ? undefined : columns.defaultLabel,
   };
 }

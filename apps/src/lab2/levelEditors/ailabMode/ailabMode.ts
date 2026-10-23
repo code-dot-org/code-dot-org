@@ -62,7 +62,7 @@ function isValidModeValue(
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
   }
-  if (key === 'label') {
+  if (key === 'label' || key === 'idColumn') {
     return typeof value === 'string' && value !== '';
   }
   if (key === 'features') {
@@ -104,12 +104,14 @@ export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
   delete newMode.label;
   delete newMode.features;
+  delete newMode.idColumn;
   return newMode;
 }
 
 const SET_BY_DATASET = [
   'label',
   'features',
+  'idColumn',
   'hideSelectLabel',
   'lockFeatures',
   'pretrained',
@@ -146,6 +148,20 @@ export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
     mode,
     'features',
     features.length ? features : undefined
+  );
+}
+
+export function setIdColumn(
+  mode: ModeObject,
+  idColumn: string | undefined
+): ModeObject {
+  const newMode = setJsonObjectValue(mode, 'idColumn', idColumn);
+  if (idColumn !== undefined && newMode.label === idColumn) {
+    delete newMode.label;
+  }
+  return setFeatures(
+    newMode,
+    getFeatures(newMode).filter(feature => feature !== idColumn)
   );
 }
 

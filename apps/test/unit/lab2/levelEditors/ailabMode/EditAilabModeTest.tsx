@@ -121,6 +121,10 @@ function labelDropdown() {
   return screen.getByRole('combobox', {name: /^Label/});
 }
 
+function idColumnDropdown() {
+  return screen.getByRole('combobox', {name: /^ID column/});
+}
+
 function optionsOf(select: HTMLElement) {
   return Array.from((select as HTMLSelectElement).options).map(
     option => option.text
@@ -444,9 +448,10 @@ describe('EditAilabMode', () => {
       renderEditor(null);
       expect(labelDropdown()).toBeDisabled();
       expect(featuresDropdown()).toBeDisabled();
+      expect(idColumnDropdown()).toBeDisabled();
       expect(
         screen.getAllByText('Choose a dataset to set its columns.')
-      ).toHaveLength(2);
+      ).toHaveLength(3);
     });
 
     it('sets the label and the features', async () => {
@@ -507,7 +512,7 @@ describe('EditAilabMode', () => {
 
     it('clears them when the dataset changes', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"]}'
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "idColumn": "name"}'
       );
       await columnsLoaded();
 
@@ -877,6 +882,62 @@ describe('EditAilabMode', () => {
       ).toBeInTheDocument();
       expect(labelDropdown()).toBeDisabled();
       expect(featuresDropdown()).toBeDisabled();
+    });
+  });
+
+  describe('id column', () => {
+    beforeEach(() => serveFiles(FILES));
+
+    it('offers every column, even one students cannot choose', async () => {
+      renderEditor('{"datasets": ["zoo"]}');
+      await columnsLoaded();
+      expect(optionsOf(idColumnDropdown())).toEqual([
+        'None: number the rows',
+        'name',
+        'legs',
+        'wings',
+        'animal',
+      ]);
+    });
+
+    it('keeps the id column out of the label and features', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "legs", "features": ["wings", "animal"]}'
+      );
+      await columnsLoaded();
+
+      fireEvent.change(idColumnDropdown(), {target: {value: 'legs'}});
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        features: ['wings', 'animal'],
+        idColumn: 'legs',
+      });
+      expect(optionsOf(labelDropdown())).toEqual([
+        'None',
+        'animal (default)',
+        'wings',
+      ]);
+
+      fireEvent.change(idColumnDropdown(), {target: {value: 'animal'}});
+      expect(JSON.parse(savedMode())).toMatchObject({
+        features: ['wings'],
+        idColumn: 'animal',
+      });
+      expect(optionsOf(labelDropdown())).toEqual(['None', 'legs', 'wings']);
+      expect(featureOptions()).toEqual(['legs', 'wings']);
+
+      fireEvent.change(idColumnDropdown(), {target: {value: ''}});
+      expect(JSON.parse(savedMode())).not.toHaveProperty('idColumn');
+    });
+
+    it('reports a saved id column the dataset does not have', async () => {
+      renderEditor('{"datasets": ["zoo"], "idColumn": "nope"}');
+      await columnsLoaded();
+      expect(idColumnDropdown()).toHaveValue('nope');
+      expect(
+        screen.getByText('This dataset has no column "nope".')
+      ).toBeInTheDocument();
     });
   });
 });
