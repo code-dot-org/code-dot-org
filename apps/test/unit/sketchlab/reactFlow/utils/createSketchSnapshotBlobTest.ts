@@ -74,4 +74,39 @@ describe('createSketchSnapshotBlob', () => {
       })
     );
   });
+
+  it('shares one capture between overlapping calls and restores the SVG styles', async () => {
+    const viewport = document.querySelector('.react-flow__viewport')!;
+    viewport.insertAdjacentHTML(
+      'beforeend',
+      '<svg class="react-flow__edge"><path d="M0 0L10 10"></path></svg>'
+    );
+    const path = viewport.querySelector('path')!;
+    const pendingCaptures: ((blob: Blob) => void)[] = [];
+    mockToBlob.mockImplementation(() => {
+      // The capture's temporary inline styles are in place while it runs.
+      expect(path.getAttribute('style')).not.toBeNull();
+      return new Promise(resolve => pendingCaptures.push(resolve));
+    });
+
+    const first = createSketchSnapshotBlob(reactFlow);
+    const second = createSketchSnapshotBlob(reactFlow);
+    await new Promise(resolve => setTimeout(resolve, 0));
+    const blob = new Blob();
+    pendingCaptures.forEach(finishCapture => finishCapture(blob));
+
+    expect(await first).toEqual({blob});
+    expect(await second).toEqual({blob});
+    expect(path.getAttribute('style')).toBeNull();
+    expect(mockToBlob).toHaveBeenCalledTimes(1);
+  });
+
+  it('starts a new capture once the previous one has finished', async () => {
+    mockToBlob.mockResolvedValue(new Blob());
+
+    await createSketchSnapshotBlob(reactFlow);
+    await createSketchSnapshotBlob(reactFlow);
+
+    expect(mockToBlob).toHaveBeenCalledTimes(2);
+  });
 });

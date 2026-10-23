@@ -19,9 +19,24 @@ const EXPORT_PADDING_PX = 10;
 const MAX_EXPORT_DIMENSION_PX = 2048;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
 
-export const createSketchSnapshotBlob = async (
+type SnapshotResult = {blob?: Blob; error?: string};
+
+let captureInFlight: Promise<SnapshotResult> | undefined;
+
+// Overlapping captures would each save the other's temporary DOM edits as
+// originals, so a call made mid-capture shares the running capture's result.
+export const createSketchSnapshotBlob = (
   reactFlow: ReactFlowInstance | null
-): Promise<{blob?: Blob; error?: string}> => {
+): Promise<SnapshotResult> => {
+  captureInFlight ??= captureSketch(reactFlow).finally(() => {
+    captureInFlight = undefined;
+  });
+  return captureInFlight;
+};
+
+const captureSketch = async (
+  reactFlow: ReactFlowInstance | null
+): Promise<SnapshotResult> => {
   if (!reactFlow) {
     return {error: 'Sketch is not ready yet. Please try again.'};
   }
