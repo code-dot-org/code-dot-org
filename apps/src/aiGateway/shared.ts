@@ -66,3 +66,98 @@ export function getModelString(model: unknown) {
   }
   return modelString;
 }
+
+interface CachedAccessToken extends GatewayAccessToken {
+  expiresAtLocal: number;
+}
+
+// Relies on the worker accepting a token more than once before it expires; remove if it starts rejecting a reused token_id.
+const cachedAccessTokens = new Map<string, CachedAccessToken>();
+const pendingAccessTokens = new Map<string, Promise<GatewayAccessToken>>();
+
+// 15 s for a long request, plus the 5 s by which Rails backdates issued_at_time.
+export const ACCESS_TOKEN_REUSE_MARGIN_MS = 20_000;
+
+// Every field is sent to Rails, so any of them may become a claim.
+function accessTokenCacheKey(aichatContext: AichatContext): string {
+  return JSON.stringify(aichatContext, Object.keys(aichatContext).sort());
+}
+
+function accessTokenLifetimeMs(token: string): number | undefined {
+  try {
+    const segment = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
+    const payload = JSON.parse(
+      atob(segment.padEnd(Math.ceil(segment.length / 4) * 4, '='))
+    ) as {issued_at_time?: unknown; expiration_time?: unknown};
+    const {issued_at_time: issuedAt, expiration_time: expiresAt} = payload;
+    if (typeof issuedAt !== 'number' || typeof expiresAt !== 'number') {
+      return undefined;
+    }
+    const lifetimeMs = (expiresAt - issuedAt) * 1000;
+    return lifetimeMs > 0 ? lifetimeMs : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+async function fetchAndCacheAccessToken(
+  key: string,
+  aichatContext: AichatContext
+): Promise<GatewayAccessToken> {
+  // Read before the request: the token is issued later, so its expiry is never overestimated.
+  const requestedAt = Date.now();
+  const accessToken = await fetchAccessToken(aichatContext);
+  const lifetimeMs = accessTokenLifetimeMs(accessToken.token);
+  if (lifetimeMs !== undefined) {
+    cachedAccessTokens.set(key, {
+      ...accessToken,
+      expiresAtLocal: requestedAt + lifetimeMs,
+    });
+  }
+  return accessToken;
+}
+
+// Concurrent callers with the same context share one request; failures are not cached.
+export function getAccessToken(
+  aichatContext: AichatContext = AichatContextManager.getContext()
+): Promise<GatewayAccessToken> {
+  const key = accessTokenCacheKey(aichatContext);
+  const cached = cachedAccessTokens.get(key);
+  if (cached) {
+    if (Date.now() < cached.expiresAtLocal - ACCESS_TOKEN_REUSE_MARGIN_MS) {
+      return Promise.resolve({
+        token: cached.token,
+        turnstileEnforcementMode: cached.turnstileEnforcementMode,
+      });
+    }
+    cachedAccessTokens.delete(key);
+  }
+
+  const pending = pendingAccessTokens.get(key);
+  if (pending) {
+    return pending;
+  }
+  const fetching = fetchAndCacheAccessToken(key, aichatContext).finally(() => {
+    if (pendingAccessTokens.get(key) === fetching) {
+      pendingAccessTokens.delete(key);
+    }
+  });
+  pendingAccessTokens.set(key, fetching);
+  return fetching;
+}
+
+// Matches on the token so a rejection of an old token cannot evict a newer one.
+export function invalidateAccessToken(
+  aichatContext: AichatContext,
+  token: string
+) {
+  const key = accessTokenCacheKey(aichatContext);
+  if (cachedAccessTokens.get(key)?.token === token) {
+    cachedAccessTokens.delete(key);
+  }
+}
+
+export function clearAccessTokenCache() {
+  cachedAccessTokens.clear();
+  pendingAccessTokens.clear();
+}
