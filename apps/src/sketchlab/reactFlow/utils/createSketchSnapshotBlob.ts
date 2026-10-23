@@ -8,7 +8,9 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
+import {getExportStyleProperties} from './getExportStyleProperties';
 import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
+import {inlineSvgStylesForExport} from './inlineSvgStylesForExport';
 import {SketchCaptureError} from './SketchCaptureError';
 
 const EXPORT_PADDING_PX = 10;
@@ -16,10 +18,40 @@ const EXPORT_PADDING_PX = 10;
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
+// html-to-image never resolves if the browser loads an image but cannot decode it.
+export const CAPTURE_TIMEOUT_MS = 30_000;
 
-export const createSketchSnapshotBlob = async (
+type SnapshotResult = {blob?: Blob; error?: string};
+
+const withTimeout = <T>(promise: Promise<T>, timeoutMs: number): Promise<T> => {
+  let timer: number | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = window.setTimeout(
+      () => reject(new Error(`capture timed out after ${timeoutMs} ms`)),
+      timeoutMs
+    );
+  });
+  return Promise.race([promise, timeout]).finally(() =>
+    window.clearTimeout(timer)
+  );
+};
+
+let captureInFlight: Promise<SnapshotResult> | undefined;
+
+// Overlapping captures would each save the other's temporary DOM edits as
+// originals, so a call made mid-capture shares the running capture's result.
+export const createSketchSnapshotBlob = (
   reactFlow: ReactFlowInstance | null
-): Promise<{blob?: Blob; error?: string}> => {
+): Promise<SnapshotResult> => {
+  captureInFlight ??= captureSketch(reactFlow).finally(() => {
+    captureInFlight = undefined;
+  });
+  return captureInFlight;
+};
+
+const captureSketch = async (
+  reactFlow: ReactFlowInstance | null
+): Promise<SnapshotResult> => {
   if (!reactFlow) {
     return {error: 'Sketch is not ready yet. Please try again.'};
   }
@@ -60,13 +92,13 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  let blob: Blob | null;
-  try {
+  const renderBlob = async () => {
     // Supplying this stops html-to-image from inlining every font the page declares.
     const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
-    blob = await toBlob(viewport, {
+    return toBlob(viewport, {
       backgroundColor,
       fontEmbedCSS,
+      includeStyleProperties: getExportStyleProperties(),
       width: imageWidth,
       height: imageHeight,
       style: {
@@ -75,6 +107,12 @@ export const createSketchSnapshotBlob = async (
         transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
       },
     });
+  };
+
+  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
+  let blob: Blob | null;
+  try {
+    blob = await withTimeout(renderBlob(), CAPTURE_TIMEOUT_MS);
   } catch (cause) {
     const captureError = new SketchCaptureError(cause, {
       elements: contentRects.length,
@@ -86,6 +124,8 @@ export const createSketchSnapshotBlob = async (
       .getMetricsReporter()
       .logError('Sketch snapshot error', captureError, captureError.details);
     return {error: CAPTURE_ERROR};
+  } finally {
+    restoreSvgStyles();
   }
 
   if (!blob) {
