@@ -3,7 +3,8 @@
 This directory contains packages and applications that power Code.org sites.
 
 **Note**: Most of Code.org's Studio product (student experience, curriculum, teacher tools, etc.) is built in the
-top-level `apps` package and is not currently located in this directory. For the marketing sites application, go to the [code-dot-org/marketing-sites repo](https://github.com/code-dot-org/marketing-sites).
+top-level `apps` package and is not currently located in this directory. New code goes in `apps` unless the work has
+explicitly chosen this directory; see the root `AGENTS.md`. For the marketing sites application, go to the [code-dot-org/marketing-sites repo](https://github.com/code-dot-org/marketing-sites).
 
 ## What's inside?
 
