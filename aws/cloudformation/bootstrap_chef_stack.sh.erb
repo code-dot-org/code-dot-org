@@ -122,7 +122,7 @@ cat <<JSON > $FIRST_BOOT
     "sync": <%=!daemon%>
   },
   "cdo-secrets": {
-  # Fullstack adhoc frontends require Redis and Memcached endpoints and rely on Chef to configure them. Production is configured through CDO.redis_url (a stack secret).
+<%# Full-stack adhocs need Chef-injected endpoints; production uses stack secrets. -%>
 <% if frontends && rack_env?(:adhoc) -%>
     "redis_url": "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
