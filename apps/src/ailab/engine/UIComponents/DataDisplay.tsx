@@ -6,7 +6,7 @@ import React, {useMemo} from 'react';
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
-import {useDatasetTableView} from '../useTableView';
+import {useDatasetTableView} from '../useDatasetTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';

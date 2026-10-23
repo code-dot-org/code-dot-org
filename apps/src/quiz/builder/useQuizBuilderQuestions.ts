@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizQuestionType} from '../types';
 
+import {newMatchPair} from './matchPairs';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
@@ -76,10 +77,27 @@ export default function useQuizBuilderQuestions(
         usedInPublishedUnit: false,
         page,
       };
-      const question: QuizBuilderQuestion =
-        type === 'MultipleChoiceQuestion'
-          ? {...shared, type, ...NEW_MULTIPLE_CHOICE_ANSWERS}
-          : {...shared, type};
+      let question: QuizBuilderQuestion;
+      switch (type) {
+        case 'MultipleChoiceQuestion':
+          question = {...shared, type, ...NEW_MULTIPLE_CHOICE_ANSWERS};
+          break;
+        case 'FreeResponseQuestion':
+          question = {...shared, type};
+          break;
+        case 'MatchQuestion':
+          // We use nondeterministic IDs (via newMatchPair) when generating boilerplate
+          // match items to avoid possible exposure of solutions to students.
+          question = {
+            ...shared,
+            type,
+            pairs: [
+              newMatchPair('Term A', 'Definition A'),
+              newMatchPair('Term B', 'Definition B'),
+            ],
+          };
+          break;
+      }
       setQuestions(prev => [...prev, question]);
       return id;
     },

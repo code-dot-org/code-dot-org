@@ -24,6 +24,7 @@ import {ProgressKey} from '../progress/progressStore';
 import {nextCheckpoint} from '../routing/route';
 import {Checkpoint, Pathway} from '../types';
 
+import AdaptiveHeader from './AdaptiveHeader';
 import {checkpointStepFromUrl, clearUrl} from './checkpointUrl';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
@@ -209,6 +210,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       dispatch(sendStartedReportIfNotStarted('adaptive'));
   }, [initialCheckpointId, dispatch]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
+  const openProject = () => {
+    dispatch(sendStartedReportIfNotStarted('adaptive'));
+    setView({kind: 'project'});
+  };
   // Use AI Gateway for AI Tutor in Weblab2 steps, if adaptive AI is enabled.
   useEffect(() => {
     setAiGatewayOptIn(isAdaptiveAiEnabled());
@@ -259,6 +264,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           <StepPlayer
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
+            headerTitle={isProject ? checkpoint.title : undefined}
             initialStepId={view.kind === 'step' ? view.stepId : undefined}
             onStartStep={startStep}
             onCompleteStep={completeStep}
@@ -278,6 +284,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
                 focusNext: !isProject && !!checkpoint.routeAfterCompletion,
               });
             }}
+            onFinishPathway={isProject ? undefined : openProject}
           />
         </PathwayContext.Provider>
       </div>
@@ -286,6 +293,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
 
   return (
     <div className={styles.app}>
+      <AdaptiveHeader
+        title={`Skill Tree: ${pathway.title}`}
+        onFinish={openProject}
+      />
       <MapScreen
         pathway={pathway}
         statusMap={statusMap}
@@ -301,10 +312,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
             stepId: cp ? stepIdToResume(cp, progress) : undefined,
           });
         }}
-        onWorkOnProject={() => {
-          dispatch(sendStartedReportIfNotStarted('adaptive'));
-          setView({kind: 'project'});
-        }}
+        onWorkOnProject={openProject}
       />
     </div>
   );

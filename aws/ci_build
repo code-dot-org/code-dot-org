@@ -30,6 +30,7 @@ require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/git_utils'
 require 'cdo/honeybadger'
+require 'cdo/sentry'
 require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/test_server_status'
@@ -81,6 +82,7 @@ def build
     RakeUtils.bundle_install
 
     Honeybadger.notify_new_release(rack_env, git_revision)
+    Cdo::Sentry.notify_new_release(rack_env, git_revision)
 
     status = begin
       result = RakeUtils.rake_stream_output 'infra:ci'

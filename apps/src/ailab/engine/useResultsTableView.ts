@@ -1,13 +1,12 @@
 import {useCallback, useMemo} from 'react';
 
-import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppSelector} from '../hooks';
-import {useProject} from '../ProjectContext';
-import {getFilterableColumns} from '../selectors';
-import type {ColumnId, ResultsData, TableView} from '../types';
-import {useTableView} from '../useTableView';
-
-import {PREDICTION_COLUMN} from './RowsTableHeader';
+import {getLocalizedValue} from './helpers/valueDetails';
+import {useAppSelector} from './hooks';
+import {useProject} from './ProjectContext';
+import {getFilterableColumns} from './selectors';
+import type {ColumnId, ResultsData, TableView} from './types';
+import {PREDICTION_COLUMN} from './UIComponents/RowsTableHeader';
+import {useTableView} from './useTableView';
 
 export function useResultsTableView(
   results: ResultsData,
