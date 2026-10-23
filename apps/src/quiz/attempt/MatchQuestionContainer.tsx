@@ -4,7 +4,7 @@ import {QuizQuestionSummary} from '../types';
 
 import AttemptCard from './AttemptCard';
 import MatchColumn from './MatchColumn';
-import {MatchPairs, MatchSets, toggleMatch} from './matchPairing';
+import {MatchPairs, MatchSets, MatchSide, toggleMatch} from './matchPairing';
 import QuestionDescription from './QuestionDescription';
 
 import styles from './match-question-container.module.scss';
@@ -19,8 +19,6 @@ export interface MatchQuestionContainerProps {
   headingRef?: React.Ref<HTMLHeadingElement>;
   disabled?: boolean;
 }
-
-type SetIndex = 0 | 1;
 
 interface Point {
   x: number;
@@ -49,7 +47,7 @@ const MatchQuestionContainer: React.FunctionComponent<
   disabled,
 }) => {
   const [selected, setSelected] = useState<{
-    set: SetIndex;
+    side: MatchSide;
     id: string;
   } | null>(null);
   const [linePaths, setLinePaths] = useState<string[]>([]);
@@ -75,9 +73,9 @@ const MatchQuestionContainer: React.FunctionComponent<
           : null;
       };
       setLinePaths(
-        pairs.flatMap(([firstId, secondId]) => {
-          const start = centerOf(firstId);
-          const end = centerOf(secondId);
+        pairs.flatMap(([startId, endId]) => {
+          const start = centerOf(startId);
+          const end = centerOf(endId);
           return start && end ? [curvePath(start, end)] : [];
         })
       );
@@ -92,13 +90,13 @@ const MatchQuestionContainer: React.FunctionComponent<
     return () => observer.disconnect();
   }, [pairs, matchSets]);
 
-  const handleClick = (set: SetIndex, id: string) => {
-    if (!selected || selected.set === set) {
-      setSelected(selected?.id === id ? null : {set, id});
+  const handleClick = (side: MatchSide, id: string) => {
+    if (!selected || selected.side === side) {
+      setSelected(selected?.id === id ? null : {side, id});
       return;
     }
     onChangePairs(
-      toggleMatch(pairs, set === 1 ? [selected.id, id] : [id, selected.id])
+      toggleMatch(pairs, side === 'end' ? [selected.id, id] : [id, selected.id])
     );
     setSelected(null);
   };
@@ -124,14 +122,14 @@ const MatchQuestionContainer: React.FunctionComponent<
             <path key={path} d={path} className={styles.line} />
           ))}
         </svg>
-        {([0, 1] as const).map(set => (
+        {(['start', 'end'] as const).map(side => (
           <MatchColumn
-            key={set}
+            key={side}
             matchSets={matchSets}
-            set={set}
+            side={side}
             pairs={pairs}
             selectedId={selected?.id}
-            onClickItem={id => handleClick(set, id)}
+            onClickItem={id => handleClick(side, id)}
             dotRef={dotRef}
             disabled={disabled}
           />

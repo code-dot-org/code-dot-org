@@ -44,7 +44,7 @@
   text-align: center;
   cursor: pointer;
 
-  &.second {
+  &.end {
     padding-inline: 26px 16px;
   }
 
@@ -78,7 +78,7 @@
   }
 }
 
-.firstText {
+.startText {
   font-weight: 600;
 }
 
@@ -103,7 +103,7 @@
   line-height: 1;
   transform: translateY(-50%);
 
-  .second & {
+  .end & {
     inset-inline: -12px auto;
   }
 }
