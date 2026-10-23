@@ -18,7 +18,7 @@ const EXPORT_PADDING_PX = 10;
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
-// html-to-image never settles if the browser loads an image but cannot decode it.
+// html-to-image never resolves if the browser loads an image but cannot decode it.
 export const CAPTURE_TIMEOUT_MS = 30_000;
 
 type SnapshotResult = {blob?: Blob; error?: string};
