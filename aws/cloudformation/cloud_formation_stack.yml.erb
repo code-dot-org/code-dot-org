@@ -380,6 +380,8 @@ Resources:
           Value: weighted_random # Weighted Random precludes Stickiness and Slow Start.
         - Key: load_balancing.algorithm.anomaly_mitigation
           Value: "on" # Requires Weighted Random.
+        - Key: slow_start.duration_seconds
+          Value: 0 # Explicitly disable Slow Start because it precludes Weighted Random.
         - Key: stickiness.enabled
           Value: false # We don't store sessions in-memory in web application servers.
 

@@ -6,4 +6,5 @@ export const QUESTION_TYPE_LABELS_ICONS: Record<
 > = {
   MultipleChoiceQuestion: {label: 'Multiple choice', iconName: 'list-check'},
   FreeResponseQuestion: {label: 'Free response', iconName: 'pen-field'},
+  MatchQuestion: {label: 'Matching', iconName: 'diagram-next'},
 };
