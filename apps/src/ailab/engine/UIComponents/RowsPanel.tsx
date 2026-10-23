@@ -8,11 +8,14 @@ import {useDatasetTableView} from '../useTableView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
+import TableFilter from './TableFilter';
 
 import styles from './rowsPanel.module.scss';
 
-const rowCountText = (count: number) =>
-  `${count} ${count === 1 ? 'Row' : 'Rows'}`;
+const rowCountText = (shown: number, total: number) => {
+  const totalText = `${total} ${total === 1 ? 'Row' : 'Rows'}`;
+  return shown === total ? totalText : `${shown} of ${totalText}`;
+};
 
 export interface RowsPanelProps {
   description: ReactNode;
@@ -59,13 +62,16 @@ const RowsPanel = ({
           {!resultsToggle && (
             <>
               <Typography variant="body3" component="span">
-                <strong>{rowCountText(rowIndices.length)}</strong>
+                <strong>
+                  {rowCountText(tableView.rows.length, rowIndices.length)}
+                </strong>
               </Typography>
               <span className={styles.divider} />
             </>
           )}
           <div className={styles.actionGroup}>
             {resultsToggle}
+            <TableFilter view={tableView} />
             <ColumnsButton
               showAllColumns={showAllColumns}
               onToggle={onToggleColumns}
