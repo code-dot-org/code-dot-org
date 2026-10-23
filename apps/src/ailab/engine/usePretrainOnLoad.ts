@@ -7,11 +7,6 @@ import {getHideDatasetView, readyToTrain, setCurrentPanel} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
-/*
-  Trains a pretrained level on load, once the restore has had its turn: a
-  saved run that cannot be rebuilt has to be replaced, and such a level
-  offers the student neither a retrain nor a Start Over.
-*/
 export function usePretrainOnLoad(restoringModel: boolean) {
   const dispatch = useAppDispatch();
   const {project} = useProject();

@@ -270,9 +270,8 @@ const App = ({
     state => !!state.csvfile && state.data.length === 0 && !state.invalidData
   );
   /*
-    The picker stays up through a load it started: it shows the student which
-    dataset they clicked, and taking it down would lose the upload it is
-    holding for them.
+    Datasets load while on the select dataset panel, don't hide that panel
+    while datasets are still loading.
   */
   const loading =
     currentPanel !== 'selectDataset' &&

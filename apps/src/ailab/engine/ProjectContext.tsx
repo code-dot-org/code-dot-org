@@ -162,17 +162,21 @@ export const ProjectProvider = ({
   const applyProject = useCallback(
     (saved: AilabProject) => {
       previousRun.current = undefined;
-      const reconciled = keepSelectableColumns(saved, selectableColumns, data);
+      const reconciledProject = keepSelectableColumns(
+        saved,
+        selectableColumns,
+        data
+      );
       setProject(
         presetColumns
           ? applyPresetColumns(
-              reconciled,
+              reconciledProject,
               presetColumns,
               lockedLabel,
               lockedFeatures,
               data
             )
-          : reconciled
+          : reconciledProject
       );
       setIsProjectLoaded(true);
     },
@@ -201,6 +205,9 @@ export const ProjectProvider = ({
     }
   }, [pendingProject, datasetDescribed, applyProject]);
 
+  // TODO: skip notifying on project change if the change is due to on-load
+  // reconciliation of the project with the saved state, as that is not a user
+  // change and shouldn't count as an 'edit'.
   useEffect(() => {
     if (isProjectLoaded && !isDefaultProject) {
       onProjectChangeRef.current?.(project);
