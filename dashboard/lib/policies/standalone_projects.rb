@@ -64,7 +64,7 @@ module Policies
     LEGACY_PROJECT_NAMES = ['Calc Free Play', 'Eval Free Play'].freeze
 
     # The standalone project partition's name rule. Case-insensitive.
-    # See dashboard/config/standalone_projects/README.md.
+    # See dashboard/config/PARTITIONS.md.
     def self.partition_name?(level_name)
       level_name = level_name.to_s
       PROJECT_NAME_PATTERN.match?(level_name) ||

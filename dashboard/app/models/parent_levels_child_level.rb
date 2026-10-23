@@ -62,7 +62,7 @@ class ParentLevelsChildLevel < ApplicationRecord
   end
 
   # A parent level and its children must be in the same partition; see
-  # dashboard/test/ui/config/README.md. Validating here covers every path
+  # dashboard/config/PARTITIONS.md. Validating here covers every path
   # that writes parent/child rows. Level's children_stay_within_partition
   # validation is the name-based complement, catching names which resolve to
   # no level at all.

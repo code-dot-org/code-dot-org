@@ -360,8 +360,7 @@ namespace :seed do
 
         # A file must sit in the tree its level name selects, or seeding
         # another tree would quietly pick it up; see
-        # dashboard/test/ui/config/README.md and
-        # dashboard/config/standalone_projects/README.md.
+        # dashboard/config/PARTITIONS.md.
         if Policies::LevelFiles.partition_for_name(data[:name]) != Policies::LevelFiles.partition_for_path(filename)
           raise "level #{data[:name].dump} does not belong in #{filename}: \"UI Test \" levels " \
             "live under test/ui/config/scripts, standalone project levels (\"New ... Project\", " \

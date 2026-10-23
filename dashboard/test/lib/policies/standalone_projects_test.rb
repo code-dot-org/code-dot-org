@@ -4,7 +4,7 @@ module Policies
   # Checks standalone_projects.yml against the definition files beside it
   # under config/standalone_projects. Reads only those and the ui-test tree,
   # so it needs no production content mapped in. See
-  # dashboard/config/standalone_projects/README.md.
+  # dashboard/config/PARTITIONS.md.
   class StandaloneProjectsTest < ActiveSupport::TestCase
     STANDALONE_TREE = Rails.root.join('config/standalone_projects')
     UI_TEST_TREE = Rails.root.join('test/ui/config')
