@@ -317,6 +317,8 @@ Dashboard::Application.routes.draw do
       post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
+      get '/teacher_directory_verification/:token', to: 'teacher_directory_verifications#show', as: :teacher_directory_verification
+      post '/teacher_directory_verification/:token', to: 'teacher_directory_verifications#create', as: :submit_teacher_directory_verification
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       delete '/expire_other', to: 'sessions#expire_other'
