@@ -220,3 +220,21 @@ describe('a run trained on columns the project has since changed', () => {
     expect(rendered.trainingData().trainedModel).toBeUndefined();
   });
 });
+
+/*
+  A saved hyperparameter is a number of the right name, which does not make it
+  one this dataset can be trained with: ml-knn throws on a k below one.
+*/
+describe.each([
+  ['below one', {k: 0}],
+  ['negative', {k: -1}],
+  ['not a number', {k: NaN}],
+  ['fractional', {k: 1.5}],
+  ['larger than the dataset', {k: 999}],
+])('a saved run whose k is %s', (_name, hyperparameters) => {
+  test('declines, leaving the student to retrain', () => {
+    const rendered = openLab({...savedAfterTraining(), hyperparameters});
+
+    expect(rendered.trainingData().trainedModel).toBeUndefined();
+  });
+});

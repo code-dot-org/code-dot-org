@@ -51,9 +51,9 @@ export function useRestoreModel(): boolean {
     setTrainedModel(run.trainedModel);
 
     /*
-      Clicking a dataset loads it while the picker is still open, so the
-      project can open before the student has settled on one. Moving them to
-      the results would make that click their choice.
+      Clicking a dataset loads it while the picker is still open.
+      Don't move to the results panel in that case because the user
+      hasn't actually selected the dataset yet.
     */
     const state = store.getState();
     if (
