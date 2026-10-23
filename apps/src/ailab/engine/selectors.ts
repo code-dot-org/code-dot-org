@@ -105,26 +105,25 @@ export const getIdColumn = createSelector(
   ): string | undefined => {
     const idColumn =
       levelIdColumn === null ? undefined : levelIdColumn ?? defaultIdColumn;
-    return idColumn !== undefined && data.length > 0 && idColumn in data[0]
+    return idColumn !== undefined && Object.hasOwn(data[0] ?? {}, idColumn)
       ? idColumn
       : undefined;
   }
 );
 
+export const getTrainableColumns = createSelector(
+  [getData, getColumnsByDataType],
+  selectableColumns
+);
+
 export const getSelectableColumns = createSelector(
-  [getData, getColumnsByDataType, getIdColumn],
-  (
-    data: DataRow[],
-    columnsByDataType: Record<string, string>,
-    idColumn: string | undefined
-  ): string[] =>
-    selectableColumns(data, columnsByDataType).filter(
-      column => column !== idColumn
-    )
+  [getTrainableColumns, getIdColumn],
+  (columns: string[], idColumn: string | undefined): string[] =>
+    columns.filter(column => column !== idColumn)
 );
 
 export const getFilterableColumns = createSelector(
-  [getSelectableColumns, getCategoricalColumns],
+  [getTrainableColumns, getCategoricalColumns],
   arrayIntersection
 );
 

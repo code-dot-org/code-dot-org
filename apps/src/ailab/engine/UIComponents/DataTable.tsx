@@ -4,11 +4,7 @@ import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
-import {
-  getColumnRole,
-  getLocalizedColumnName,
-  withIdColumnFirst,
-} from '../helpers/columnDetails';
+import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
@@ -17,6 +13,7 @@ import {getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import ColumnHeader from './ColumnHeader';
+import DataCell from './DataCell';
 import RowNumberCell from './RowNumberCell';
 
 import styles from './dataTable.module.scss';
@@ -95,12 +92,9 @@ const DataTable = ({
       variant = styles.bodyCellFeature;
     }
 
-    return classNames(
-      'uitest-data-table-column',
-      key === idColumn ? [styles.indexCell, styles.idCell] : styles.bodyCell,
-      variant,
-      {[styles.clickable]: isClickable}
-    );
+    return classNames('uitest-data-table-column', variant, {
+      [styles.clickable]: isClickable,
+    });
   };
 
   const getColumns = () => {
@@ -116,7 +110,7 @@ const DataTable = ({
       const selected = columns.filter(key => selectedFeatures.includes(key));
       return noLabel ? selected : [...selected, labelColumn];
     }
-    return withIdColumnFirst(columns, idColumn);
+    return columns;
   };
 
   const getRows = () => {
@@ -205,12 +199,10 @@ const DataTable = ({
                 />
               )}
               {getColumns().map(columnId => {
-                const isIdColumn = columnId === idColumn;
-                const Cell = isIdColumn ? 'th' : 'td';
                 return (
-                  <Cell
+                  <DataCell
                     key={columnId}
-                    scope={isIdColumn ? 'row' : undefined}
+                    isIdColumn={columnId === idColumn}
                     className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
                   >
@@ -223,7 +215,7 @@ const DataTable = ({
                         ? ' '
                         : getLocalizedValue(data[row][columnId], datasetId)}
                     </Typography>
-                  </Cell>
+                  </DataCell>
                 );
               })}
             </tr>

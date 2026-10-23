@@ -9,6 +9,7 @@ import {getIdColumn} from '../selectors';
 import type {ResultsData, TableView} from '../types';
 
 import CellText from './CellText';
+import DataCell from './DataCell';
 import DataTableFrame from './DataTableFrame';
 import RowNumberCell from './RowNumberCell';
 import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
@@ -54,24 +55,17 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
                   />
                   {columns.map(column => {
                     const role = getColumnRole(project, column);
-                    const isIdColumn = column === idColumn;
-                    const Cell = isIdColumn ? 'th' : 'td';
                     return (
-                      <Cell
+                      <DataCell
                         key={column}
-                        scope={isIdColumn ? 'row' : undefined}
-                        className={classNames(
-                          isIdColumn
-                            ? [tableStyles.indexCell, tableStyles.idCell]
-                            : tableStyles.bodyCell,
-                          {
-                            [tableStyles.bodyCellLabel]: role === 'label',
-                            [tableStyles.bodyCellFeature]: role === 'feature',
-                          }
-                        )}
+                        isIdColumn={column === idColumn}
+                        className={classNames({
+                          [tableStyles.bodyCellLabel]: role === 'label',
+                          [tableStyles.bodyCellFeature]: role === 'feature',
+                        })}
                       >
                         <CellText>{view.valueAt(index, column)}</CellText>
-                      </Cell>
+                      </DataCell>
                     );
                   })}
                   <td className={labelCell}>

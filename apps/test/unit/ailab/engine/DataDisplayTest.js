@@ -304,5 +304,18 @@ describe('DataDisplay', () => {
         Array.from(card.querySelectorAll('dt'), term => term.textContent)
       ).toEqual(['animal, used as the label', 'legs, used as a feature']);
     });
+
+    test('titles a card with a blank id by its row number', () => {
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore({idColumn: 'name'}, [
+          {...NAMED[0], name: ''},
+          ...NAMED.slice(1),
+        ]),
+        project: levelProject(),
+      });
+      fireEvent.click(button('Cards'));
+
+      expect(screen.getByRole('group', {name: 'Row 1'})).toBeTruthy();
+    });
   });
 });

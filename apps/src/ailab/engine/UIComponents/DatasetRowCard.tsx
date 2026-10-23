@@ -20,6 +20,10 @@ interface DatasetRowCardProps {
 const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
+  const name =
+    idColumn && row[idColumn] !== ''
+      ? getLocalizedValue(row[idColumn], datasetId)
+      : undefined;
   const {project} = useProject();
   const titleId = useId();
   const rowNumberId = useId();
@@ -65,7 +69,9 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
     <div
       className={styles.card}
       role="group"
-      aria-labelledby={idColumn ? `${titleId} ${rowNumberId}` : titleId}
+      aria-labelledby={
+        name === undefined ? titleId : `${titleId} ${rowNumberId}`
+      }
       aria-roledescription="slide"
     >
       <div className={styles.heading}>
@@ -75,11 +81,9 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
           variant="body1"
           className={styles.title}
         >
-          {idColumn
-            ? getLocalizedValue(row[idColumn], datasetId)
-            : `Row ${rowNumber}`}
+          {name ?? `Row ${rowNumber}`}
         </Typography>
-        {idColumn && (
+        {name !== undefined && (
           <Typography
             id={rowNumberId}
             component="p"

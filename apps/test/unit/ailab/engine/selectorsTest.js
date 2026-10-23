@@ -15,6 +15,7 @@ import {
   getSelectableColumns,
   getFilterableColumns,
   getIdColumn,
+  getTrainableColumns,
 } from '@cdo/apps/ailab/engine/selectors';
 
 import {
@@ -103,7 +104,7 @@ describe('getting extrema', () => {
   });
 });
 
-describe('getSelectableColumns', () => {
+describe('getTrainableColumns', () => {
   const tooManyOptions = Array.from({length: UNIQUE_OPTIONS_MAX + 1}, (_, i) =>
     String(i)
   );
@@ -122,19 +123,21 @@ describe('getSelectableColumns', () => {
   };
 
   test('keeps numbers-only numerical and small categorical columns', () => {
-    expect(getSelectableColumns.resultFunc(data, columnsByDataType)).toEqual([
+    expect(getTrainableColumns.resultFunc(data, columnsByDataType)).toEqual([
       'count',
       'color',
     ]);
   });
 
   test('returns nothing when there is no data', () => {
-    expect(getSelectableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+    expect(getTrainableColumns.resultFunc([], columnsByDataType)).toEqual([]);
   });
+});
 
+describe('getSelectableColumns', () => {
   test('leaves out the id column', () => {
     expect(
-      getSelectableColumns.resultFunc(data, columnsByDataType, 'color')
+      getSelectableColumns.resultFunc(['count', 'color'], 'color')
     ).toEqual(['count']);
   });
 });
@@ -159,6 +162,10 @@ describe('getIdColumn', () => {
 
   test('is undefined when the mode turns off the default', () => {
     expect(getIdColumn.resultFunc(data, null, 'name')).toBeUndefined();
+  });
+
+  test('ignores names inherited by every object', () => {
+    expect(getIdColumn.resultFunc(data, 'constructor')).toBeUndefined();
   });
 });
 

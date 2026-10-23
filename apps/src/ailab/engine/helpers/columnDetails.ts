@@ -45,7 +45,6 @@ export function getColumnRole(
   return undefined;
 }
 
-// The id column leads, standing in for the row number.
 export function withIdColumnFirst(
   columns: string[],
   idColumn: string | undefined
