@@ -127,6 +127,7 @@ export interface Metadata {
   name?: string;
   card: MetadataCard;
   defaultLabelColumn?: string;
+  defaultIdColumn?: string;
   fields?: MetadataField[];
 }
 

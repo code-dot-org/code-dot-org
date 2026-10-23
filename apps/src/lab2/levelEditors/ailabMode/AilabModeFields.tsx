@@ -10,6 +10,7 @@ import {
   BooleanModeKey,
   clearDataset,
   DEFAULT_TRAINER,
+  getLevelIdColumn,
   getSelectedDataset,
   isSetByHiddenTesting,
   isSetByPretrained,
@@ -80,7 +81,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   );
   const columns = withoutIdColumn(
     datasetColumns,
-    mode.idColumn as string | undefined
+    getLevelIdColumn(mode, datasetColumns?.defaultIdColumn)
   );
 
   const datasetItems = [

@@ -930,5 +930,48 @@ describe('EditAilabMode', () => {
         screen.getByText('This dataset has no column "nope".')
       ).toBeInTheDocument();
     });
+
+    describe('when the dataset names a default', () => {
+      beforeEach(() =>
+        serveFiles({
+          ...FILES,
+          'zoo.json': {
+            ...(FILES['zoo.json'] as object),
+            defaultIdColumn: 'name',
+          },
+        })
+      );
+
+      it('starts on the default and saves only a change from it', async () => {
+        const savedMode = renderEditor('{"datasets": ["zoo"]}');
+        await columnsLoaded();
+        expect(idColumnDropdown()).toHaveValue('name');
+        expect(optionsOf(idColumnDropdown())).toEqual([
+          'None: number the rows',
+          'name (default)',
+          'legs',
+          'wings',
+          'animal',
+        ]);
+
+        fireEvent.change(idColumnDropdown(), {target: {value: ''}});
+        expect(JSON.parse(savedMode())).toHaveProperty('idColumn', null);
+
+        fireEvent.change(idColumnDropdown(), {target: {value: 'legs'}});
+        expect(JSON.parse(savedMode())).toHaveProperty('idColumn', 'legs');
+
+        fireEvent.change(idColumnDropdown(), {target: {value: 'name'}});
+        expect(JSON.parse(savedMode())).not.toHaveProperty('idColumn');
+      });
+
+      it('keeps a saved None', async () => {
+        const savedMode = renderEditor(
+          '{"datasets": ["zoo"], "idColumn": null}'
+        );
+        await columnsLoaded();
+        expect(idColumnDropdown()).toHaveValue('');
+        expect(JSON.parse(savedMode())).toHaveProperty('idColumn', null);
+      });
+    });
   });
 });

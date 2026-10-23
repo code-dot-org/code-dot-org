@@ -15,6 +15,7 @@ export interface DatasetColumns {
   all: string[];
   selectable: string[];
   defaultLabel?: string;
+  defaultIdColumn?: string;
 }
 
 export async function fetchDatasetColumns(
@@ -35,13 +36,18 @@ export async function fetchDatasetColumns(
     ])
   );
   const selectable = selectableColumns(rows, columnTypes);
-  const {defaultLabelColumn} = metadata;
+  const {defaultLabelColumn, defaultIdColumn} = metadata;
+  const all = Object.keys(rows[0] ?? {});
   return {
-    all: Object.keys(rows[0] ?? {}),
+    all,
     selectable,
     defaultLabel:
       defaultLabelColumn && selectable.includes(defaultLabelColumn)
         ? defaultLabelColumn
+        : undefined,
+    defaultIdColumn:
+      defaultIdColumn && all.includes(defaultIdColumn)
+        ? defaultIdColumn
         : undefined,
   };
 }

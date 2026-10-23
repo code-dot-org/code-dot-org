@@ -62,6 +62,9 @@ function isValidModeValue(
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
   }
+  if (key === 'idColumn' && value === null) {
+    return true;
+  }
   if (key === 'label' || key === 'idColumn') {
     return typeof value === 'string' && value !== '';
   }
@@ -141,6 +144,16 @@ export function getStartingLabel(
     (mode.label as string | undefined) ??
     (mode.hideSelectLabel === true ? defaultLabel : undefined)
   );
+}
+
+// null turns off the dataset's default id column.
+export function getLevelIdColumn(
+  mode: ModeObject,
+  defaultIdColumn: string | undefined
+): string | undefined {
+  return mode.idColumn === null
+    ? undefined
+    : (mode.idColumn as string | undefined) ?? defaultIdColumn;
 }
 
 export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
