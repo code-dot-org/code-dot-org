@@ -1,26 +1,19 @@
-import {Typography} from '@mui/material';
-import classNames from 'classnames';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import {QuizQuestionSummary} from '../types';
-import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
-import {MatchPairs, partnerOf, toggleMatch} from './matchPairing';
+import MatchColumn from './MatchColumn';
+import {MatchPairs, MatchSets, toggleMatch} from './matchPairing';
 import QuestionDescription from './QuestionDescription';
 
 import styles from './match-question-container.module.scss';
-
-export interface MatchItem {
-  id: string;
-  text: string;
-}
 
 export interface MatchQuestionContainerProps {
   question: Omit<QuizQuestionSummary, 'page'>;
   // Omit for a quiz with only one question.
   questionLabel?: string;
-  matchSets: [MatchItem[], MatchItem[]];
+  matchSets: MatchSets;
   pairs: MatchPairs;
   onChangePairs: (pairs: MatchPairs) => void;
   headingRef?: React.Ref<HTMLHeadingElement>;
@@ -99,20 +92,6 @@ const MatchQuestionContainer: React.FunctionComponent<
     return () => observer.disconnect();
   }, [pairs, matchSets]);
 
-  // Each first-set item has a letter by position; a second-set item shows
-  // its partner's letter once paired.
-  const letterOf = (id: string) => {
-    const index = matchSets[0].findIndex(item => item.id === id);
-    return index === -1 ? undefined : formatChoiceLetter(index);
-  };
-  const labelOf = (id: string) => {
-    const first = matchSets[0].find(item => item.id === id);
-    if (first) {
-      return `${letterOf(id)}. ${first.text}`;
-    }
-    return matchSets[1].find(item => item.id === id)?.text;
-  };
-
   const handleClick = (set: SetIndex, id: string) => {
     if (!selected || selected.set === set) {
       setSelected(selected?.id === id ? null : {set, id});
@@ -124,54 +103,13 @@ const MatchQuestionContainer: React.FunctionComponent<
     setSelected(null);
   };
 
-  const renderColumn = (set: SetIndex) => (
-    <div className={styles.column}>
-      {matchSets[set].map(item => {
-        const partnerId = partnerOf(pairs, item.id);
-        const isSelected = selected?.id === item.id;
-        const letter =
-          set === 0 ? letterOf(item.id) : partnerId && letterOf(partnerId);
-        return (
-          <button
-            key={item.id}
-            type="button"
-            className={classNames(styles.card, set === 1 && styles.second, {
-              [styles.cardActive]: partnerId || isSelected,
-            })}
-            aria-pressed={isSelected}
-            aria-label={
-              partnerId
-                ? `${labelOf(item.id)}, matched with ${labelOf(partnerId)}`
-                : labelOf(item.id)
-            }
-            onClick={() => handleClick(set, item.id)}
-            disabled={disabled}
-          >
-            <Typography
-              variant={set === 0 ? 'body2' : 'body3'}
-              component="span"
-              className={classNames(set === 0 && styles.firstText)}
-            >
-              {item.text}
-            </Typography>
-            <span
-              ref={element => {
-                if (element) {
-                  dotRefs.current.set(item.id, element);
-                } else {
-                  dotRefs.current.delete(item.id);
-                }
-              }}
-              className={styles.dot}
-              aria-hidden="true"
-            >
-              {letter}
-            </span>
-          </button>
-        );
-      })}
-    </div>
-  );
+  const dotRef = (id: string, element: HTMLElement | null) => {
+    if (element) {
+      dotRefs.current.set(id, element);
+    } else {
+      dotRefs.current.delete(id);
+    }
+  };
 
   return (
     <AttemptCard
@@ -186,8 +124,18 @@ const MatchQuestionContainer: React.FunctionComponent<
             <path key={path} d={path} className={styles.line} />
           ))}
         </svg>
-        {renderColumn(0)}
-        {renderColumn(1)}
+        {([0, 1] as const).map(set => (
+          <MatchColumn
+            key={set}
+            matchSets={matchSets}
+            set={set}
+            pairs={pairs}
+            selectedId={selected?.id}
+            onClickItem={id => handleClick(set, id)}
+            dotRef={dotRef}
+            disabled={disabled}
+          />
+        ))}
       </div>
     </AttemptCard>
   );

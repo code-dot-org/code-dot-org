@@ -17,8 +17,8 @@ import {groupByPage, toBool} from '../utils';
 import AttemptCard from './AttemptCard';
 import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
-import {MatchPairs} from './matchPairing';
-import MatchQuestionContainer, {MatchItem} from './MatchQuestionContainer';
+import {MatchPairs, MatchSets} from './matchPairing';
+import MatchQuestionContainer from './MatchQuestionContainer';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
@@ -37,7 +37,7 @@ import useQuizAttempt from './useQuizAttempt';
 import styles from './quiz-attempt-workspace.module.scss';
 
 // TODO: replace with the question's own matchSets from attempt_content_json.
-const STUB_MATCH_SETS: [MatchItem[], MatchItem[]] = [
+const STUB_MATCH_SETS: MatchSets = [
   [
     {id: 'a', text: 'Image classifier'},
     {id: 'b', text: 'Large language model'},
