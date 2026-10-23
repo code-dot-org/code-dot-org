@@ -1,5 +1,5 @@
 # pythonlab-packages
-This repository consists of packages for use in Python Lab. This can contain any library we want to expose to
+This directory consists of packages for use in Python Lab. This can contain any library we want to expose to
 students or any patches we want to apply to student code. Here are the current packages:
 
 ### neighborhood
