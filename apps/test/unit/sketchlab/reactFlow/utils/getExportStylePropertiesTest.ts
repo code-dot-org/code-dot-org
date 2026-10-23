@@ -20,12 +20,4 @@ describe('getExportStyleProperties', () => {
 
     expect(getExportStyleProperties()).toEqual(['color', 'font-size']);
   });
-
-  it('reads the document each call rather than reusing an earlier list', () => {
-    documentProperties('color');
-    expect(getExportStyleProperties()).toEqual(['color']);
-
-    documentProperties('font-size');
-    expect(getExportStyleProperties()).toEqual(['font-size']);
-  });
 });

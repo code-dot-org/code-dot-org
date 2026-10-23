@@ -5,6 +5,7 @@
 //
 // Return the property list html-to-image should copy: everything it would have copied
 // on its own, minus the custom properties.
+// html-to-image keeps the first list it receives for the life of the page.
 export const getExportStyleProperties = (): string[] =>
   Array.from(window.getComputedStyle(document.documentElement)).filter(
     name => !name.startsWith('--')
