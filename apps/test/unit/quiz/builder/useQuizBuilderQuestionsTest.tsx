@@ -249,7 +249,7 @@ describe('useQuizBuilderQuestions', () => {
       expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
     });
 
-    it("POSTs a pending question as the draft's type when it was switched before saving", async () => {
+    it('creates a pending question as the type it was switched to before its first save', async () => {
       const {result, waitForNextUpdate} = renderHook(() =>
         useQuizBuilderQuestions(42)
       );
