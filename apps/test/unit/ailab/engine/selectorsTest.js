@@ -151,6 +151,15 @@ describe('getIdColumn', () => {
     expect(getIdColumn.resultFunc([], 'name')).toBeUndefined();
     expect(getIdColumn.resultFunc(data, undefined)).toBeUndefined();
   });
+
+  test("falls back to the dataset's default when the mode sets none", () => {
+    expect(getIdColumn.resultFunc(data, undefined, 'name')).toBe('name');
+    expect(getIdColumn.resultFunc(data, 'legs', 'name')).toBe('legs');
+  });
+
+  test('is undefined when the mode turns off the default', () => {
+    expect(getIdColumn.resultFunc(data, null, 'name')).toBeUndefined();
+  });
 });
 
 describe('getFilterableColumns', () => {
