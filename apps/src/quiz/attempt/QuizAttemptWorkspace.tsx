@@ -17,6 +17,8 @@ import {groupByPage, toBool} from '../utils';
 import AttemptCard from './AttemptCard';
 import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
+import {MatchPairs} from './matchPairing';
+import MatchQuestionContainer, {MatchItem} from './MatchQuestionContainer';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
@@ -33,6 +35,22 @@ import {
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
+
+// TODO: replace with the question's own matchSets from attempt_content_json.
+const STUB_MATCH_SETS: [MatchItem[], MatchItem[]] = [
+  [
+    {id: 'a', text: 'Image classifier'},
+    {id: 'b', text: 'Large language model'},
+    {id: 'c', text: 'Recommender system'},
+    {id: 'd', text: 'Speech recognizer'},
+  ],
+  [
+    {id: 'x', text: 'Drafting and summarizing text'},
+    {id: 'y', text: 'Turning spoken words into text'},
+    {id: 'z', text: 'Sorting photos into categories'},
+    {id: 'w', text: 'Ranking videos for one viewer'},
+  ],
+];
 
 // How long typing must pause before a free response answer autosaves.
 export const ANSWER_AUTOSAVE_DELAY_MS = 1000;
@@ -120,6 +138,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // Answers are locked from the Submit click until it settles, so what was
   // on screen at the click is what gets sent.
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // TODO: replace with responsesByQuestionId once match responses are saved.
+  const [stubMatchPairs, setStubMatchPairs] = useState<
+    Record<number, MatchPairs>
+  >({});
   // State lags a render behind, so a fast second click checks this instead.
   const isSubmittingRef = useRef(false);
   // One chained promise per question, so a rapid second pick waits for the
@@ -437,19 +459,20 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             disabled={isSubmitting}
           />
         );
-      // TODO: replace with a MatchQuestionContainer.
       case 'MatchQuestion':
         return (
-          <AttemptCard
+          <MatchQuestionContainer
             key={question.id}
-            label={questionLabel}
-            title={question.questionTitle}
             headingRef={headingRef}
-          >
-            <Typography variant="body2">
-              Matching questions are not available yet.
-            </Typography>
-          </AttemptCard>
+            question={question}
+            questionLabel={questionLabel}
+            matchSets={STUB_MATCH_SETS}
+            pairs={stubMatchPairs[question.id] ?? []}
+            onChangePairs={pairs =>
+              setStubMatchPairs(prev => ({...prev, [question.id]: pairs}))
+            }
+            disabled={isSubmitting}
+          />
         );
       default: {
         // A new question type fails to compile here until it gets a case.
