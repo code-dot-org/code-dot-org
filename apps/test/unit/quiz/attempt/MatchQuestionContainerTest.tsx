@@ -2,12 +2,10 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {useState} from 'react';
 
-import {MatchPairs} from '@cdo/apps/quiz/attempt/matchPairing';
-import MatchQuestionContainer, {
-  MatchItem,
-} from '@cdo/apps/quiz/attempt/MatchQuestionContainer';
+import {MatchPairs, MatchSets} from '@cdo/apps/quiz/attempt/matchPairing';
+import MatchQuestionContainer from '@cdo/apps/quiz/attempt/MatchQuestionContainer';
 
-const MATCH_SETS: [MatchItem[], MatchItem[]] = [
+const MATCH_SETS: MatchSets = [
   [
     {id: 'a', text: '1 + 1'},
     {id: 'b', text: '2 + 1'},
