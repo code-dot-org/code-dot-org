@@ -91,9 +91,25 @@ export const getSelectedNumericalFeatures = createSelector(
   }
 );
 
+// A dataset can drop or rename the column a level names.
+export const getIdColumn = createSelector(
+  [getData, (state: RootState) => state.mode?.idColumn],
+  (data: DataRow[], idColumn: string | undefined): string | undefined =>
+    idColumn !== undefined && data.length > 0 && idColumn in data[0]
+      ? idColumn
+      : undefined
+);
+
 export const getSelectableColumns = createSelector(
-  [getData, getColumnsByDataType],
-  selectableColumns
+  [getData, getColumnsByDataType, getIdColumn],
+  (
+    data: DataRow[],
+    columnsByDataType: Record<string, string>,
+    idColumn: string | undefined
+  ): string[] =>
+    selectableColumns(data, columnsByDataType).filter(
+      column => column !== idColumn
+    )
 );
 
 export const getFilterableColumns = createSelector(

@@ -14,6 +14,7 @@ import {
   getExtremaByColumn,
   getSelectableColumns,
   getFilterableColumns,
+  getIdColumn,
 } from '@cdo/apps/ailab/engine/selectors';
 
 import {
@@ -129,6 +130,26 @@ describe('getSelectableColumns', () => {
 
   test('returns nothing when there is no data', () => {
     expect(getSelectableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+  });
+
+  test('leaves out the id column', () => {
+    expect(
+      getSelectableColumns.resultFunc(data, columnsByDataType, 'color')
+    ).toEqual(['count']);
+  });
+});
+
+describe('getIdColumn', () => {
+  const data = [{name: 'Fido', legs: '4'}];
+
+  test("is the mode's id column when the dataset has it", () => {
+    expect(getIdColumn.resultFunc(data, 'name')).toBe('name');
+  });
+
+  test('is undefined when the dataset lacks it or the mode sets none', () => {
+    expect(getIdColumn.resultFunc(data, 'nope')).toBeUndefined();
+    expect(getIdColumn.resultFunc([], 'name')).toBeUndefined();
+    expect(getIdColumn.resultFunc(data, undefined)).toBeUndefined();
   });
 });
 
