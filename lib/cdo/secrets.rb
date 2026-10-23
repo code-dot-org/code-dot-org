@@ -11,6 +11,8 @@ module Cdo
     CURRENT = "AWSCURRENT".freeze
     NOT_FOUND = ::Aws::SecretsManager::Errors::ResourceNotFoundException
     EXISTS = ::Aws::SecretsManager::Errors::ResourceExistsException
+    # BatchGetSecretValue accepts at most 20 secret IDs per request.
+    BATCH_SIZE = 20
 
     attr_accessor :logger
 
@@ -19,6 +21,7 @@ module Cdo
 
       # Cache fetched secrets in-memory in an instance-variable hash.
       @values = {}
+      @values_lock = Mutex.new
       @client = client
 
       @pool = Concurrent::CachedThreadPool.new
@@ -37,7 +40,7 @@ module Cdo
     def required(*keys, fetch: false)
       keys = keys.map(&:to_s)
       @required += keys
-      keys.map {|key| get(key)} if fetch
+      get_multi(*keys) if fetch
     end
 
     # Ensure all required secrets are fully loaded.
@@ -47,27 +50,24 @@ module Cdo
       get_multi(*@required).value!
     end
 
-    # Asynchronously fetch keys in parallel.
+    # Asynchronously fetch keys, up to BATCH_SIZE per request, with the requests in parallel.
     # @return [Concurrent::Promises::Future<Hash>] All keys and their resolved values
     def get_multi(*keys)
+      keys = keys.map(&:to_s).uniq
       return Concurrent::Promises.fulfilled_future({}, @pool) if keys.empty?
-      client_promise.then do
-        promises = keys.map {|key| get(key).then {|value| [key, value]}}
-        Concurrent::Promises.zip_futures_on(@pool, *promises).
-          then {|*values| values.to_h}
-      end.flat
+      fetch(keys)
+      promises = keys.map {|key| @values[key].then {|value| [key, value]}}
+      Concurrent::Promises.zip_futures_on(@pool, *promises).
+        then {|*values| values.to_h}
     end
 
     # Asynchronously fetch specified key from Secrets Manager.
+    # The first lookup of a required key also fetches every required key not yet fetched.
     # @return [Concurrent::Promises::Future<String>] Resolved value
     def get(key)
       key = key.to_s
-      @values[key] ||= client_promise.then do |client|
-        parse_json(get_secret_value(client, key))
-      rescue => exception
-        exception.message << " Key: #{key}"
-        raise
-      end
+      fetch(@required.include?(key) ? [key, *@required] : [key]) unless @values.key?(key)
+      @values[key]
     end
 
     # Alternate lookup: Raise exception if secret is not found.
@@ -123,6 +123,40 @@ module Cdo
         secret_id: key,
         secret_string: value
       )
+    end
+
+    # Start fetching each of +keys+ not already fetched, one BatchGetSecretValue request per BATCH_SIZE keys.
+    # @param keys[Array<String>]
+    private def fetch(keys)
+      @values_lock.synchronize do
+        (keys.uniq - @values.keys).each_slice(BATCH_SIZE) do |batch|
+          batch_values = client_promise.then {|client| batch_get_secret_values(client, batch)}
+          batch.each do |key|
+            @values[key] = batch_values.then do |values|
+              parse_json(values.fetch(key) {get_secret_value(client_promise.value!, key)})
+            rescue => exception
+              exception.message << " Key: #{key}"
+              raise
+            end
+          end
+        end
+      end
+    end
+
+    # Call BatchGetSecretValue for up to BATCH_SIZE keys. Keys left out are retried with GetSecretValue.
+    # @param client[::Aws::SecretsManager::Client]
+    # @param keys[Array<String>]
+    # @return [Hash<String, String>] Secret names and their values
+    private def batch_get_secret_values(client, keys)
+      logger&.info("BatchGetSecretValue: #{keys.join(', ')}")
+      response = client.batch_get_secret_value(secret_id_list: keys)
+      # The SDK returns nil, not [], for a list absent from the response.
+      Array(response.errors).each {|error| logger&.info("BatchGetSecretValue: #{error.error_code}: #{error.secret_id}")}
+      Array(response.secret_values).to_h {|secret| [secret.name, secret.secret_string]}
+    # Any failure, e.g. a role not yet granted secretsmanager:BatchGetSecretValue, leaves every key to GetSecretValue.
+    rescue => exception
+      logger&.warn("BatchGetSecretValue failed, falling back to GetSecretValue: #{exception.message}")
+      {}
     end
 
     # Call GetSecretValue for the provided key.
