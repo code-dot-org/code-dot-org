@@ -9,6 +9,7 @@ import {createElement} from 'react';
 
 import App from '@cdo/apps/ailab/engine/App';
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
+import {hasCurrentTrainingResult} from '@cdo/apps/ailab/engine/helpers/navigationValidation';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   resetState,
@@ -41,6 +42,8 @@ const COLUMNS = {
 beforeEach(() => {
   I18n.initI18n();
   store.dispatch(resetState());
+  // A reset leaves the mode alone, so one level's would outlive its tests.
+  store.dispatch(setMode(undefined));
   train.reset();
   store.dispatch(setImportedData(DATA, false));
   ['temperature', 'cost', 'rain'].forEach(column =>
@@ -170,5 +173,50 @@ describe('a pretrained level whose saved run cannot be rebuilt', () => {
     expect(rendered.project().historicResults.length).toBeGreaterThan(
       saved.historicResults.length
     );
+  });
+});
+
+/*
+  A project's columns can change since its run was trained: changing a
+  column leaves the run alone. The rebuilt model has to match the run the
+  history advertises, because that is what the result gates compare the
+  student's columns against.
+*/
+describe('a run trained on columns the project has since changed', () => {
+  // The student narrowed the features after training, and did not retrain.
+  const narrowed = saved => ({...saved, selectedFeatures: ['temperature']});
+
+  test('rebuilds for the columns the run was trained on', () => {
+    const saved = savedAfterTraining();
+
+    openLab(narrowed(saved));
+
+    expect(store.getState().accuracyCheckExamples[0]).toHaveLength(
+      saved.historicResults[0].features.length
+    );
+  });
+
+  test('opens the gates on a model that matches them', () => {
+    const rendered = openLab(narrowed(savedAfterTraining()));
+
+    act(() => rendered.projectActions().addSelectedFeature('rain'));
+
+    const project = rendered.project();
+    expect(hasCurrentTrainingResult(project)).toBe(true);
+    expect(store.getState().accuracyCheckExamples[0]).toHaveLength(
+      project.selectedFeatures.length
+    );
+  });
+
+  test('declines when a column the run used has left the dataset', () => {
+    const saved = savedAfterTraining();
+    const [result] = saved.historicResults;
+
+    const rendered = openLab({
+      ...narrowed(saved),
+      historicResults: [{...result, features: ['temperature', 'humidity']}],
+    });
+
+    expect(rendered.trainingData().trainedModel).toBeUndefined();
   });
 });

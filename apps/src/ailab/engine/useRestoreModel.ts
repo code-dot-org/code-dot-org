@@ -4,6 +4,7 @@ import {isPanelEnabled} from './helpers/navigationValidation';
 import {useAppDispatch} from './hooks';
 import {useProject} from './ProjectContext';
 import {setCurrentPanel} from './redux';
+import {getSelectableColumns} from './selectors';
 import {store} from './store';
 import train from './train';
 import {useTrainingData} from './TrainingDataContext';
@@ -24,13 +25,26 @@ export function useRestoreModel(): boolean {
     }
     setAttempted(true);
 
+    const trainedOn = project.historicResults[0];
     const describesRun =
-      project.hyperparameters && project.accuracyCheckRowIndices;
+      project.hyperparameters && project.accuracyCheckRowIndices && trainedOn;
     if (trainedModel || !describesRun) {
       return;
     }
 
-    const run = train.refit(store, project);
+    const selectable = getSelectableColumns(store.getState());
+    // Use columns from the last training run, not the current project selection,
+    // in case they are different.
+    const columns = [trainedOn.label, ...trainedOn.features];
+    if (!columns.every(column => selectable.includes(column))) {
+      return;
+    }
+
+    const run = train.refit(store, {
+      ...project,
+      labelColumn: trainedOn.label,
+      selectedFeatures: trainedOn.features,
+    });
     if (!run) {
       return;
     }
