@@ -216,7 +216,10 @@ module Dashboard
     module InitInternalsSerializer
       # TODO infra: remove this custom Serializer as part of finalizing the update to Rails 7.1
       throw "remove Rails-7.0-specific mitigation" if (Rails.application.config.active_record.marshalling_format_version || 0) >= 7.1
-      include ActiveSupport::Cache::SerializerWithFallback[:marshal_7_0]
+      # We unintuitively need to use :marshal_6_1 here rather than :marshal_7_0, until we
+      # resolve some inconsistencies with how we initialize ActiveSupport::Cache. See
+      # https://github.com/code-dot-org/code-dot-org/pull/76326 for more context.
+      include ActiveSupport::Cache::SerializerWithFallback[:marshal_6_1]
       extend self
 
       def load(dumped)
