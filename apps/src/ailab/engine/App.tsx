@@ -269,7 +269,14 @@ const App = ({
   const datasetPending = useAppSelector(
     state => !!state.csvfile && state.data.length === 0 && !state.invalidData
   );
-  const loading = datasetPending || isProjectLoading || restoringModel;
+  /*
+    The picker stays up through a load it started: it shows the student which
+    dataset they clicked, and taking it down would lose the upload it is
+    holding for them.
+  */
+  const loading =
+    currentPanel !== 'selectDataset' &&
+    (datasetPending || isProjectLoading || restoringModel);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
