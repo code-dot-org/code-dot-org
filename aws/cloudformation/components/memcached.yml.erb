@@ -26,10 +26,11 @@
       PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(3).to_json %>
       PreferredMaintenanceWindow: sat:03:00-sat:04:00
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
-  # Publish the configuration endpoint so Kubernetes workers can read it from
-  # Secrets Manager (synced as CDO_memcached_endpoint by the k8s-gitops
-  # standard-envtypes ExternalSecret). Legacy frontends get the same value from
-  # bootstrap_chef_stack.sh.erb.
+  # Publish the configuration endpoint to Secrets Manager. Kubernetes workers
+  # read it through the k8s-gitops standard-envtypes ExternalSecret as
+  # CDO_memcached_endpoint; production EC2 hosts read it through the
+  # !StackSecret declaration in config/production.yml.erb. Full-stack adhocs
+  # still receive it from bootstrap_chef_stack.sh.erb.
   MemcachedEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
