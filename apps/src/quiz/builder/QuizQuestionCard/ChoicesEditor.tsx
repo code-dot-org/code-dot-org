@@ -5,7 +5,7 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
 import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useId} from 'react';
 
 import {formatChoiceLetter} from '../../utils';
 import AddItemButton from '../AddItemButton';
@@ -78,15 +78,15 @@ interface ChoicesEditorProps {
   draft: ChoiceQuestionDraft;
   onChange: (draft: ChoiceQuestionDraft) => void;
   disabled?: boolean;
-  questionId: number;
 }
 
 const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
   draft,
   onChange,
   disabled,
-  questionId,
 }) => {
+  // Radios group by name across the page, so each editor needs its own.
+  const markerName = useId();
   const correctChoiceIds = correctChoiceIdsOf(draft);
   const isMultipleSelect = draft.type === 'MultipleSelectQuestion';
 
@@ -163,7 +163,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
                   <div className={styles.correctMarker}>
                     {isMultipleSelect ? (
                       <Checkbox
-                        name={`question-${questionId}-correct-${choice.id}`}
+                        name={`${markerName}-${choice.id}`}
                         ariaLabel={markerLabel}
                         size="s"
                         checked={isCorrect}
@@ -172,7 +172,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
                       />
                     ) : (
                       <RadioButton
-                        name={`question-${questionId}-correct`}
+                        name={markerName}
                         value={choice.id}
                         ariaLabel={markerLabel}
                         size="s"

@@ -12,25 +12,17 @@ interface AnswersTabProps {
   draft: QuizQuestionDraft;
   onChange: (draft: QuizQuestionDraft) => void;
   disabled?: boolean;
-  // Keeps each card's radio group separate.
-  questionId: number;
 }
 
 const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   draft,
   onChange,
   disabled,
-  questionId,
 }) => (
   <div className={builderCommonStyles.section}>
     {(draft.type === 'MultipleChoiceQuestion' ||
       draft.type === 'MultipleSelectQuestion') && (
-      <ChoicesEditor
-        draft={draft}
-        onChange={onChange}
-        disabled={disabled}
-        questionId={questionId}
-      />
+      <ChoicesEditor draft={draft} onChange={onChange} disabled={disabled} />
     )}
     {draft.type === 'MatchQuestion' && (
       <PairsEditor draft={draft} onChange={onChange} disabled={disabled} />
