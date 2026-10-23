@@ -79,19 +79,14 @@ module Cdo
         connect_timeout: 2,
 
         # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.
-        # There are retries if necessary, so the total effective timeout value is three times the option value.
         # You can set the value so that a lost connection can be detected earlier than the TCP/IP Close_Wait_Timeout value of 10 minutes.
         #
         # NOTE: mysql2 reuses this variable as a query timeout without retry, so set it to the maximum query execution time.
-        read_timeout: 30,
+        read_timeout: 90,
 
         # `MYSQL_OPT_WRITE_TIMEOUT`: The timeout in seconds for each attempt to write to the server.
-        # There is a retry if necessary, so the total effective timeout value is two times the option value.
-        write_timeout: 5
+        write_timeout: 10
       }
-
-      # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
-      db_options[:reconnect] = true if DCDO.get('enable_mysql_client_reconnect', true)
 
       if query_timeout
         db_options[:read_timeout] = query_timeout
