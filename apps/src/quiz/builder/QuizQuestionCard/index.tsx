@@ -52,6 +52,8 @@ function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
       };
     case 'FreeResponseQuestion':
       return {...shared, type: question.type};
+    case 'MatchQuestion':
+      return {...shared, type: question.type, pairs: question.pairs};
   }
 }
 

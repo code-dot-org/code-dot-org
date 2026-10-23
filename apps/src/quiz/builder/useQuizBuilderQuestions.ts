@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizQuestionType} from '../types';
 
+import {newMatchPair} from './matchPairs';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
@@ -93,6 +94,18 @@ export default function useQuizBuilderQuestions(
           break;
         case 'FreeResponseQuestion':
           question = {...shared, type};
+          break;
+        case 'MatchQuestion':
+          // We use nondeterministic IDs (via newMatchPair) when generating boilerplate
+          // match items to avoid possible exposure of solutions to students.
+          question = {
+            ...shared,
+            type,
+            pairs: [
+              newMatchPair('Term A', 'Definition A'),
+              newMatchPair('Term B', 'Definition B'),
+            ],
+          };
           break;
       }
       setQuestions(prev => [...prev, question]);

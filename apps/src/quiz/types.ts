@@ -15,7 +15,8 @@ export interface QuizViewContent {
 export type QuizQuestionType =
   | 'MultipleChoiceQuestion'
   | 'MultipleSelectQuestion'
-  | 'FreeResponseQuestion';
+  | 'FreeResponseQuestion'
+  | 'MatchQuestion';
 
 // Answer keys and the explanation are deliberately excluded.
 export interface QuizQuestionSummary {

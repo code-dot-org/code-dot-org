@@ -1,9 +1,9 @@
-import {act, fireEvent, render, screen, within} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React, {useState} from 'react';
+import React, {act, useState} from 'react';
 
 import QuizQuestionCard from '@cdo/apps/quiz/builder/QuizQuestionCard';
-import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
+import {MatchDraft, QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
 
 const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   id: 7,
@@ -413,5 +413,116 @@ describe('QuizQuestionCard', () => {
     expect(
       screen.getByLabelText('Answer explanation (optional)')
     ).toBeInTheDocument();
+  });
+
+  describe('a match question', () => {
+    const {choices, correctChoiceId, ...shared} = MULTIPLE_CHOICE_QUESTION;
+    void choices;
+    void correctChoiceId;
+    const MATCH_QUESTION: QuizBuilderQuestion = {
+      ...shared,
+      type: 'MatchQuestion',
+      pairs: [
+        {
+          id: 'p1',
+          items: [
+            {id: 'k3f', text: '1 + 1'},
+            {id: '9qz', text: '2'},
+          ],
+        },
+        {
+          id: 'p2',
+          items: [
+            {id: 'r7w', text: '2 + 1'},
+            {id: 'm2d', text: '3'},
+          ],
+        },
+      ],
+    };
+
+    function openAnswers() {
+      const utils = renderCard({question: MATCH_QUESTION, isExpanded: true});
+      fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
+      return utils;
+    }
+
+    it('shows each pair as two labeled fields under an Options heading', () => {
+      openAnswers();
+
+      expect(screen.getByRole('group', {name: 'Options'})).toBeInTheDocument();
+      expect(screen.getByLabelText('Pair 1, term')).toHaveAttribute(
+        'placeholder',
+        'Term'
+      );
+      expect(screen.getByLabelText('Pair 1, definition')).toHaveAttribute(
+        'placeholder',
+        'Definition'
+      );
+      expect(screen.getByLabelText('Pair 1, term')).toHaveValue('1 + 1');
+      expect(screen.getByLabelText('Pair 1, definition')).toHaveValue('2');
+      expect(screen.getByLabelText('Pair 2, term')).toHaveValue('2 + 1');
+      expect(screen.getByLabelText('Pair 2, definition')).toHaveValue('3');
+    });
+
+    it('saves edited pair text', async () => {
+      const {onSave} = openAnswers();
+
+      fireEvent.change(screen.getByLabelText('Pair 2, definition'), {
+        target: {value: 'three'},
+      });
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        7,
+        expect.objectContaining({
+          pairs: [
+            MATCH_QUESTION.pairs[0],
+            {
+              id: 'p2',
+              items: [
+                {id: 'r7w', text: '2 + 1'},
+                {id: 'm2d', text: 'three'},
+              ],
+            },
+          ],
+        })
+      );
+    });
+
+    it('adds an empty pair with new, distinct ids', async () => {
+      const {onSave} = openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Add pair'}));
+
+      expect(screen.getByLabelText('Pair 3, term')).toHaveValue('');
+      expect(screen.getByLabelText('Pair 3, definition')).toHaveValue('');
+
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+      const {pairs}: MatchDraft = onSave.mock.calls[0][1];
+      const ids = pairs.flatMap(pair => [
+        pair.id,
+        ...pair.items.map(item => item.id),
+      ]);
+      expect(ids).toHaveLength(9);
+      expect(new Set(ids).size).toBe(9);
+    });
+
+    it('does not delete below 2 pairs', () => {
+      openAnswers();
+
+      expect(
+        screen.getByRole('button', {name: 'Delete pair 1'})
+      ).toBeDisabled();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Add pair'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Delete pair 1'}));
+
+      expect(screen.getByLabelText('Pair 1, term')).toHaveValue('2 + 1');
+      expect(screen.queryByLabelText('Pair 3, term')).toBeNull();
+    });
   });
 });

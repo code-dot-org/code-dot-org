@@ -92,3 +92,27 @@
   flex: 1 0 0;
   min-width: 0;
 }
+
+.pairsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pairRow {
+  // A pair's two fields grow independently, so their heights can differ.
+  align-items: flex-start;
+
+  :global(.MuiIconButton-root) {
+    align-self: center;
+  }
+}
+
+.pairText {
+  flex: 1 0 0;
+  min-width: 0;
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+}
