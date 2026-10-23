@@ -1532,7 +1532,11 @@ Dashboard::Application.routes.draw do
     resources :aidiff_artifacts, only: [:index, :create]
 
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
-    resources :practice_problems, only: [:index, :show]
+    resources :practice_problems, only: [:index, :show, :create, :update, :destroy] do
+      collection do
+        post 'generate'
+      end
+    end
 
     resources :quiz_attempts, only: [:index, :create, :update]
     resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
