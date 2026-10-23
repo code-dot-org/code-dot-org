@@ -7,6 +7,7 @@ export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
 export {default as NextStepPicker} from './NextStepPicker';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
+export {default as PodcastsBox} from './ReviewModalities/PodcastsBox';
 export {default as PracticeMatch} from './SkillsCheck/QuestionTypes/Match';
 export {default as PracticeMultipleChoice} from './SkillsCheck/QuestionTypes/MultipleChoice';
 export {default as PracticeScramble} from './SkillsCheck/QuestionTypes/Scramble';

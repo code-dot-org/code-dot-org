@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   Challenges,
+  PodcastsBox,
   ReflectionData,
   VocabularyFlashcards,
 } from '@code-dot-org/lesson-deep-dive';
@@ -17,7 +18,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Chat from './Chat';
-import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
 
 import styles from './intervention-box.module.scss';

@@ -1,18 +1,20 @@
-import {ReflectionData} from '@code-dot-org/lesson-deep-dive';
-import {render, screen, waitFor, fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {type Mock, vi} from 'vitest';
 
-import PodcastsBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {get: jest.fn()},
-}));
+import {getPodcast} from '../../api';
+import {type ReflectionData} from '../../types';
+import PodcastsBox from '../PodcastsBox';
 
-const mockGet = HttpClient.get as jest.Mock;
+vi.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
+vi.mock('../../api', () => ({getPodcast: vi.fn()}));
+
+const mockGet = getPodcast as Mock;
 
 const LESSON_ID = 42;
 
@@ -31,13 +33,10 @@ const reflectionData: ReflectionData = {
 type ScriptLine = {voice_id: string; text: string};
 
 // Stubs the transcript GET. The audio bytes are loaded by the <audio> element
-// itself from a same-origin src URL — HttpClient is no longer in that path.
+// itself from a same-origin src URL — the API client is no longer in that path.
 function mockTranscript(script: ScriptLine[] | null = null) {
   mockGet.mockResolvedValue({
-    json: () =>
-      Promise.resolve({
-        podcast_script: script ? JSON.stringify(script) : null,
-      }),
+    podcast_script: script ? JSON.stringify(script) : null,
   });
 }
 
@@ -67,7 +66,7 @@ describe('PodcastsBox', () => {
         lessonId={LESSON_ID}
         reflectionData={reflectionData}
         objectives={[]}
-      />
+      />,
     );
 
     const src = audioSrc();
@@ -86,7 +85,7 @@ describe('PodcastsBox', () => {
         lessonId={LESSON_ID}
         reflectionData={reflectionData}
         objectives={[]}
-      />
+      />,
     );
 
     const playButton = screen.getByRole('button', {name: 'Play'});
@@ -106,7 +105,7 @@ describe('PodcastsBox', () => {
         lessonId={LESSON_ID}
         reflectionData={reflectionData}
         objectives={[]}
-      />
+      />,
     );
 
     fireEvent.canPlay(audioElement());
@@ -124,13 +123,13 @@ describe('PodcastsBox', () => {
         lessonId={LESSON_ID}
         reflectionData={reflectionData}
         objectives={[]}
-      />
+      />,
     );
 
     fireEvent.error(audioElement());
 
     expect(
-      await screen.findByText(/podcast isn't ready yet/i)
+      await screen.findByText(/podcast isn't ready yet/i),
     ).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Play'})).toBeDisabled();
   });
@@ -148,7 +147,7 @@ describe('PodcastsBox', () => {
           struggle: '',
         }}
         objectives={[]}
-      />
+      />,
     );
 
     const src = audioSrc();
@@ -166,7 +165,7 @@ describe('PodcastsBox', () => {
           {id: '10', description: 'First objective'},
           {id: '20', description: 'Second objective'},
         ]}
-      />
+      />,
     );
 
     const src = audioSrc();
@@ -189,7 +188,7 @@ describe('PodcastsBox', () => {
           {id: '10', description: 'First objective'},
           {id: '20', description: 'Second objective'},
         ]}
-      />
+      />,
     );
 
     const src = audioSrc();
