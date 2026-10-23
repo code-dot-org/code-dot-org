@@ -88,10 +88,6 @@ test('opens on the results, which the rebuilt model unlocks', () => {
   expect(store.getState().currentPanel).toBe('results');
 });
 
-/*
-  Clicking a dataset loads it while the picker is still open, so a level that
-  lets the student choose opens their project before they have chosen.
-*/
 test('leaves a student who is still choosing a dataset on the picker', () => {
   const saved = savedAfterTraining();
   store.dispatch(setCurrentPanel('selectDataset'));
@@ -118,10 +114,6 @@ test('rebuilds nothing when the project describes no run', () => {
   expect(store.getState().currentPanel).toBe('datasetView');
 });
 
-/*
-  A pretrained level trains on load. With a run to rebuild there is nothing
-  for it to do, or it would record a second run every time the page opened.
-*/
 test('rebuilds rather than retrains on a pretrained level', () => {
   const saved = savedAfterTraining();
   store.dispatch(setMode({pretrained: true}));
@@ -140,11 +132,6 @@ test('still pretrains a level with nothing saved', () => {
   expect(rendered.project().historicResults).toHaveLength(1);
 });
 
-/*
-  A pretrained level offers neither a retrain nor a Start Over, so a run it
-  cannot rebuild has to be replaced rather than waited on. The history is no
-  guide: it outlives the run that produced it.
-*/
 describe('a pretrained level whose saved run cannot be rebuilt', () => {
   beforeEach(() => store.dispatch(setMode({pretrained: true})));
 
@@ -176,12 +163,6 @@ describe('a pretrained level whose saved run cannot be rebuilt', () => {
   });
 });
 
-/*
-  A project's columns can change since its run was trained: changing a
-  column leaves the run alone. The rebuilt model has to match the run the
-  history advertises, because that is what the result gates compare the
-  student's columns against.
-*/
 describe('a run trained on columns the project has since changed', () => {
   // The student narrowed the features after training, and did not retrain.
   const narrowed = saved => ({...saved, selectedFeatures: ['temperature']});
@@ -221,10 +202,6 @@ describe('a run trained on columns the project has since changed', () => {
   });
 });
 
-/*
-  A saved hyperparameter is a number of the right name, which does not make it
-  one this dataset can be trained with: ml-knn throws on a k below one.
-*/
 describe.each([
   ['below one', {k: 0}],
   ['negative', {k: -1}],

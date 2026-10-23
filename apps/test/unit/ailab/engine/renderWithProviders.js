@@ -89,7 +89,7 @@ const ContextProbe = ({trainingRun, awaitOpen, report}) => {
 /*
   A saved project reaches the lab once its dataset has, so the panels get an
   empty project first. App holds the lab back until then; a panel rendered on
-  its own needs the same, or it renders a project that has yet to arrive.
+  its own needs the same logic.
 */
 // eslint-disable-next-line react/prop-types
 const WhenOpen = ({awaitOpen, children}) => {

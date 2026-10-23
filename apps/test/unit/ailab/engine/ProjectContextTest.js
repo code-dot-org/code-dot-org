@@ -392,10 +392,6 @@ describe('ProjectContext opening a saved project', () => {
     expect(context().isProjectLoaded).toBe(true);
   });
 
-  /*
-    A level can leave the dataset to the student. Holding the lab back for a
-    load that nothing has started hides the picker that would start it.
-  */
   test('is not loading when no dataset is on its way', () => {
     const {context} = renderContext(SAVED, createStore(rootReducer));
 
@@ -621,12 +617,6 @@ describe('ProjectContext opening a saved project', () => {
   });
 });
 
-/*
-  The provider keeps a saved project and the lab's own the same thing. These
-  mount the way the workspace does, loading the level from a parent layout
-  effect, because that reset is what a seed has to survive. The level load
-  works against the store singleton, so these do too.
-*/
 describe('ProjectContext keeping a saved project in sync', () => {
   // The singleton carries state between tests; each starts from a clean lab.
   beforeEach(() => singletonStore.dispatch(resetState()));
@@ -734,11 +724,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save).toHaveBeenCalledTimes(1);
   });
 
-  /*
-    A level change mounts the lab again while the engine's store still holds
-    the dataset of the level being left, which the level load clears moments
-    later. Opening against that one reconciles the project to its columns.
-  */
   test('does not open against the dataset the last level left behind', () => {
     loadDataset();
 

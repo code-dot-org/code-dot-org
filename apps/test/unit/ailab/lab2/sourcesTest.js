@@ -76,10 +76,6 @@ describe('sourceToProject', () => {
     expect(project.historicResults).toEqual([complete]);
   });
 
-  /*
-    A trainer asks the saved value which family it belongs to with `in`, which
-    throws on anything that is not an object.
-  */
   test('drops hyperparameters that name no trainer', () => {
     const dropped = saved =>
       sourceToProject({...SAVED, hyperparameters: saved}).hyperparameters;

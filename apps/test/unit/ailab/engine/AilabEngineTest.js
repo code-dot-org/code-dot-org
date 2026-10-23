@@ -30,8 +30,6 @@ test('renders the app for a loaded level', () => {
     {store}
   );
   act(() => loadLevel({datasets: ['songs']}));
-  // The readers are mocked, so stand in for the dataset arriving: the lab
-  // waits for one it asked for rather than showing an empty workspace.
   act(() => {
     store.dispatch(setImportedData([{artist: 'a', year: '2001'}], false));
     ['artist', 'year'].forEach(column =>

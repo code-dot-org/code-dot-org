@@ -157,10 +157,6 @@ describe('a pretrained level', () => {
   });
 });
 
-/*
-  The picker holds the student's upload in its own state, so that choosing one
-  of our datasets and coming back leaves the upload where they left it.
-*/
 describe('choosing a dataset', () => {
   beforeEach(() => I18n.initI18n());
 
