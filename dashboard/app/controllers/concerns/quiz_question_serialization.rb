@@ -11,6 +11,7 @@ module QuizQuestionSerialization
       :questionName, :questionTitle, :correctChoiceId, :explanation, :page, :editMode, :description, :type,
       choices: [:id, :text],
       correctChoiceIds: [],
+      pairs: [:id, {items: [:id, :text]}],
       standards: [:frameworkShortcode, :shortcode]
     )
   end

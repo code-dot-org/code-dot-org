@@ -69,6 +69,45 @@
   }
 }
 
+.header.headerWithControls:not(.clickable),
+.headerWithControls .headerButton {
+  padding-right: 28px;
+}
+
+// Column sizing reads min-width: 100% as 0, so this caps the ask, not the fill.
+.headerWithControls .cellText {
+  display: block;
+  min-width: 100%;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sortControl {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  opacity: 0;
+}
+
+.headerWithControls:hover .sortControl,
+.headerWithControls:focus-within .sortControl,
+.sortControl.sorted {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .sortControl {
+    opacity: 1;
+  }
+}
+
+.sortTooltip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .headerButton {
   display: block;
   width: 100%;
@@ -186,4 +225,8 @@
   .bodyCellFeature {
     background-color: var(--background-info-light);
   }
+}
+
+.emptyNote {
+  @include mixins.data-table-empty-note;
 }

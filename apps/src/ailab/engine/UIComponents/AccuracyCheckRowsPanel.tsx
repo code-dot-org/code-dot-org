@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React, {useMemo} from 'react';
 
-import type {Grade} from '../helpers/displayTreeNodeContent';
 import type {DisplayTreeNodeRows} from '../helpers/displayTreeTrace';
 
-import ResultsToggle from './ResultsToggle';
 import RowsPanel, {type RowsPanelProps} from './RowsPanel';
 
 type AccuracyCheckRowsPanelProps = Pick<
@@ -25,33 +23,17 @@ const AccuracyCheckRowsPanel = ({
   splitByGrade,
   ...columnProps
 }: AccuracyCheckRowsPanelProps) => {
-  const [grade, setGrade] = useState<Grade>('correct');
-
-  if (!splitByGrade) {
-    return (
-      <RowsPanel
-        description={description}
-        rowIndices={[...rows.correct, ...rows.incorrect].sort((a, b) => a - b)}
-        {...columnProps}
-      />
-    );
-  }
+  const testedRows = useMemo(
+    () => [...rows.correct, ...rows.incorrect].sort((a, b) => a - b),
+    [rows]
+  );
 
   return (
     <RowsPanel
       description={description}
-      rowIndices={rows[grade]}
-      emptyText="No rows matched this filter"
-      resultsToggle={
-        <ResultsToggle
-          grade={grade}
-          onChange={value => setGrade(value as Grade)}
-          counts={{
-            correct: rows.correct.length,
-            incorrect: rows.incorrect.length,
-          }}
-        />
-      }
+      rowIndices={testedRows}
+      rowsByGrade={splitByGrade ? rows : undefined}
+      emptyText={splitByGrade ? 'No rows matched this filter' : undefined}
       {...columnProps}
     />
   );

@@ -4,17 +4,27 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import type {TableView} from '../types';
 
 import CellText from './CellText';
+import ColumnHeader from './ColumnHeader';
 
 import tableStyles from './dataTable.module.scss';
 
+export const PREDICTION_COLUMN = Symbol('AI prediction');
+export const PREDICTION_COLUMN_NAME = 'AI predicts';
+
 interface RowsTableHeaderProps {
   columns: string[];
+  view: TableView;
   showPrediction?: boolean;
 }
 
-const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
+const RowsTableHeader = ({
+  columns,
+  view,
+  showPrediction,
+}: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
@@ -30,26 +40,31 @@ const RowsTableHeader = ({columns, showPrediction}: RowsTableHeaderProps) => {
       />
       {columns.map(column => {
         const role = getColumnRole(project, column);
+        const columnName = getLocalizedColumnName(datasetId, column);
         return (
-          <th
+          <ColumnHeader
             key={column}
-            scope="col"
+            column={column}
+            name={columnName}
+            view={view}
             className={classNames(tableStyles.header, {
               [tableStyles.headerLabel]: role === 'label',
               [tableStyles.headerFeature]: role === 'feature',
             })}
           >
-            <CellText>{getLocalizedColumnName(datasetId, column)}</CellText>
-          </th>
+            <CellText>{columnName}</CellText>
+          </ColumnHeader>
         );
       })}
       {showPrediction && (
-        <th
-          scope="col"
+        <ColumnHeader
+          column={PREDICTION_COLUMN}
+          name={PREDICTION_COLUMN_NAME}
+          view={view}
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >
-          <CellText>AI predicts</CellText>
-        </th>
+          <CellText>{PREDICTION_COLUMN_NAME}</CellText>
+        </ColumnHeader>
       )}
     </tr>
   );

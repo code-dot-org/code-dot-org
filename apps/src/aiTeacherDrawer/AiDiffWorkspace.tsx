@@ -3,13 +3,15 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {fetchThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
+import {sendTaEvent} from './analytics';
 import ChatList from './ChatList';
 import {ChatThread, chatThreadValidator, Context} from './types';
 
@@ -38,6 +40,9 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threads, setThreads] = useState<ChatThread[]>();
 
   const dispatch = useAppDispatch();
+  const threadMessages = useAppSelector(
+    state => state.aiDiffChat.threadMessages
+  );
 
   async function asyncFetchThreads(): Promise<ChatThread[]> {
     const response = await HttpClient.fetchJson<ChatThread[]>(
@@ -64,6 +69,14 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   }, [fetchThreads, dispatch]);
 
   const handleNewChat = useCallback(() => {
+    sendTaEvent(
+      EVENTS.AI_TA_NEW_CHAT_STARTED,
+      {
+        entry_point: 'header',
+        previous_thread_message_count: threadMessages.length,
+      },
+      'header'
+    );
     dispatch(
       fetchThreadMessages({
         contextType: context.type,
@@ -71,7 +84,14 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         curriculumCourses: curriculumCourses,
       })
     );
-  }, [dispatch, context, curriculumCourses]);
+  }, [dispatch, context, curriculumCourses, threadMessages.length]);
+
+  const handleViewThreads = useCallback(() => {
+    sendTaEvent(EVENTS.AI_TA_THREAD_LIST_OPENED, {
+      thread_count: threads?.length ?? 0,
+    });
+    onViewThreads?.();
+  }, [onViewThreads, threads]);
 
   const drawerIsEnabled =
     experiments.isEnabled('ai-diff-drawer') ||
@@ -105,7 +125,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         scriptName={scriptName}
         threadFetchCallback={fetchThreads}
         onNewChat={handleNewChat}
-        onViewThreads={onViewThreads}
+        onViewThreads={handleViewThreads}
         personalizationData={personalizationData}
       />
     </div>

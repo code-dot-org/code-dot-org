@@ -3,38 +3,39 @@ require_relative '../test_helper'
 require 'dynamic_config/dynamic_config_base'
 
 class DynamicConfigBaseTest < Minitest::Test
-  def setup
-    @mock_datastore = Minitest::Mock.new
-    @dynamic_config = DynamicConfigBase.new(@mock_datastore)
+  class MockDynamicConfig < DynamicConfigBase
+    def self.datastore_cache
+      @@mock_datastore_cache ||= Minitest::Mock.new
+    end
   end
 
   def test_basic_setter_functionality
-    @mock_datastore.expect(:set, true, ["valid key", "first value"])
-    assert @dynamic_config.set("valid key", "first value")
+    MockDynamicConfig.datastore_cache.expect(:set, true, ["valid key", "first value"])
+    assert MockDynamicConfig.set("valid key", "first value")
 
     assert_raises ArgumentError do
-      @dynamic_config.set(:invalid_key, "second value")
+      MockDynamicConfig.set(:invalid_key, "second value")
     end
 
-    @mock_datastore.verify
+    MockDynamicConfig.datastore_cache.verify
   end
 
   def test_basic_getter_functionality
-    @mock_datastore.expect(:get, "value", ["valid key"])
-    assert_equal @dynamic_config.get("valid key", "default"), "value"
+    MockDynamicConfig.datastore_cache.expect(:get, "value", ["valid key"])
+    assert_equal MockDynamicConfig.get("valid key", "default"), "value"
 
     assert_raises ArgumentError do
-      @dynamic_config.get(:invalid_key)
+      MockDynamicConfig.get(:invalid_key)
     end
 
-    @mock_datastore.verify
+    MockDynamicConfig.datastore_cache.verify
   end
 
   def test_get_default_logic
-    @mock_datastore.expect(:get, nil, ["nil key"])
-    @mock_datastore.expect(:get, "nonnil value", ["nonnil key"])
-    assert_equal @dynamic_config.get("nil key", "default value"), "default value"
-    assert_equal @dynamic_config.get("nonnil key", "default value"), "nonnil value"
-    @mock_datastore.verify
+    MockDynamicConfig.datastore_cache.expect(:get, nil, ["nil key"])
+    MockDynamicConfig.datastore_cache.expect(:get, "nonnil value", ["nonnil key"])
+    assert_equal MockDynamicConfig.get("nil key", "default value"), "default value"
+    assert_equal MockDynamicConfig.get("nonnil key", "default value"), "nonnil value"
+    MockDynamicConfig.datastore_cache.verify
   end
 end

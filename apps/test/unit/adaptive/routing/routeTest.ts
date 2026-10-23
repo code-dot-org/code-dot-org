@@ -1,6 +1,6 @@
-import {CheckpointStatusMap} from '@cdo/apps/adaptive/progress';
+import {Progress} from '@cdo/apps/adaptive/progress';
 import {PathwayEvidence} from '@cdo/apps/adaptive/routing/evidence';
-import {route} from '@cdo/apps/adaptive/routing/route';
+import {nextCheckpoint, routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway} from '@cdo/apps/adaptive/types';
 
 const checkpoint = (
@@ -60,92 +60,127 @@ const evidenceOf = (levels: {[skillId: string]: number}): PathwayEvidence =>
     ])
   );
 
-/** The status map once the intro is complete and the rest untouched, with overrides. */
-const afterIntro = (
-  overrides: CheckpointStatusMap = {}
-): CheckpointStatusMap => ({
-  intro: 'complete',
-  'add-details': 'available',
-  'tweak-it': 'available',
-  'edit-by-hand': 'available',
-  'spot-section': 'locked',
-  ...overrides,
+/** Progress with each listed checkpoint's one step complete or started. */
+const progressOf = (completed: string[], started: string[] = []): Progress => ({
+  steps: {
+    ...Object.fromEntries(
+      started.map(id => [`${id}-step`, {status: 'started', timeSpent: 0}])
+    ),
+    ...Object.fromEntries(
+      completed.map(id => [`${id}-step`, {status: 'complete', timeSpent: 0}])
+    ),
+  },
 });
-const introDone = {kind: 'checkpointComplete' as const, checkpointId: 'intro'};
 
-describe('route', () => {
-  it('places at the first available checkpoint when nothing is demonstrated', () => {
-    const result = route(pathway, afterIntro(), {}, introDone);
-    expect(result.completedCheckpoints).toEqual([]);
-    expect(result.nextCheckpoint).toBe('add-details');
+describe('routeStatusMap', () => {
+  it('skips nothing without evidence', () => {
+    expect(routeStatusMap(pathway, progressOf(['intro']), {})).toEqual({
+      intro: 'complete',
+      'add-details': 'available',
+      'tweak-it': 'available',
+      'edit-by-hand': 'available',
+      'spot-section': 'locked',
+    });
   });
 
-  it('passes a demonstrated skippable checkpoint and places at the next', () => {
-    const result = route(
+  it('skips a demonstrated skippable checkpoint', () => {
+    const statusMap = routeStatusMap(
       pathway,
-      afterIntro(),
-      evidenceOf({build: 1}),
-      introDone
+      progressOf(['intro']),
+      evidenceOf({build: 1})
     );
-    expect(result.completedCheckpoints).toEqual(['add-details']);
-    expect(result.nextCheckpoint).toBe('tweak-it');
+    expect(statusMap['add-details']).toBe('skipped');
+    expect(statusMap['tweak-it']).toBe('available');
   });
 
-  it('keeps passing as completions open more, but never a non-skippable one', () => {
-    const result = route(
+  it('keeps skipping as skips unlock more, but never a non-skippable one', () => {
+    const statusMap = routeStatusMap(
       pathway,
-      afterIntro(),
-      evidenceOf({build: 2, language: 1}),
-      introDone
+      progressOf(['intro']),
+      evidenceOf({build: 2, language: 1})
     );
-    expect(result.completedCheckpoints).toEqual([
-      'add-details',
-      'tweak-it',
-      'spot-section',
-    ]);
-    expect(result.nextCheckpoint).toBe('edit-by-hand');
+    expect(statusMap).toEqual({
+      intro: 'complete',
+      'add-details': 'skipped',
+      'tweak-it': 'skipped',
+      'edit-by-hand': 'available',
+      'spot-section': 'skipped',
+    });
   });
 
-  it('does not pass a checkpoint whose skills lack evidence', () => {
-    const result = route(
+  it('does not skip a checkpoint whose skills lack evidence', () => {
+    const statusMap = routeStatusMap(
       pathway,
-      afterIntro(),
-      evidenceOf({build: 2}),
-      introDone
+      progressOf(['intro']),
+      evidenceOf({build: 2})
     );
-    expect(result.completedCheckpoints).toEqual(['add-details', 'tweak-it']);
-    expect(result.nextCheckpoint).toBe('edit-by-hand');
+    expect(statusMap['spot-section']).toBe('available');
   });
 
-  it('never passes a checkpoint in progress, and places there first', () => {
-    const result = route(
+  it('never skips a checkpoint the student has started', () => {
+    const statusMap = routeStatusMap(
       pathway,
-      afterIntro({'tweak-it': 'inProgress'}),
-      evidenceOf({build: 2, language: 1}),
-      introDone
+      progressOf(['intro'], ['tweak-it']),
+      evidenceOf({build: 2, language: 1})
     );
-    expect(result.completedCheckpoints).toEqual(['add-details']);
-    expect(result.nextCheckpoint).toBe('tweak-it');
+    expect(statusMap['tweak-it']).toBe('inProgress');
+    expect(statusMap['add-details']).toBe('skipped');
+    // Nothing skipped tweak-it, so spot-section stays behind it.
+    expect(statusMap['spot-section']).toBe('locked');
   });
 
-  it('places nowhere when everything open is passed or done', () => {
-    const result = route(
+  it('does not skip a locked checkpoint, whatever the evidence', () => {
+    const statusMap = routeStatusMap(
       pathway,
-      afterIntro({'edit-by-hand': 'complete'}),
-      evidenceOf({build: 2, language: 1}),
-      introDone
+      progressOf([]),
+      evidenceOf({build: 2, language: 1})
     );
-    expect(result.completedCheckpoints).toEqual([
-      'add-details',
-      'tweak-it',
-      'spot-section',
-    ]);
-    expect(result.nextCheckpoint).toBeUndefined();
+    expect(statusMap).toEqual({
+      intro: 'available',
+      'add-details': 'locked',
+      'tweak-it': 'locked',
+      'edit-by-hand': 'locked',
+      'spot-section': 'locked',
+    });
   });
 
-  it('does not change the status map it was given', () => {
-    const statusMap = afterIntro();
-    route(pathway, statusMap, evidenceOf({build: 2}), introDone);
-    expect(statusMap).toEqual(afterIntro());
+  it('keeps everything a completed checkpoint requires done, even once the evidence no longer covers it', () => {
+    // Spot the Section was completed after add-details and tweak-it were
+    // skipped; a raised target then leaves tweak-it undemonstrated.
+    const statusMap = routeStatusMap(
+      pathway,
+      progressOf(['intro', 'spot-section']),
+      evidenceOf({build: 1})
+    );
+    expect(statusMap).toEqual({
+      intro: 'complete',
+      'add-details': 'skipped',
+      'tweak-it': 'available',
+      'edit-by-hand': 'available',
+      'spot-section': 'complete',
+    });
+  });
+});
+
+describe('nextCheckpoint', () => {
+  it('is the first checkpoint in progress or available, in authored order', () => {
+    expect(
+      nextCheckpoint(pathway, {
+        intro: 'complete',
+        'add-details': 'skipped',
+        'tweak-it': 'available',
+        'edit-by-hand': 'inProgress',
+        'spot-section': 'locked',
+      })
+    ).toBe('tweak-it');
+    expect(
+      nextCheckpoint(pathway, {
+        intro: 'complete',
+        'add-details': 'skipped',
+        'tweak-it': 'skipped',
+        'edit-by-hand': 'complete',
+        'spot-section': 'skipped',
+      })
+    ).toBeUndefined();
   });
 });

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-14 21:15:14 UTC",
+    "serialized_at": "2026-10-22 20:18:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +40,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "This lesson introduces how choosing features affects the way data is sorted. Taking on the role of data scientists, students sort monster cards using yes/no questions, identify each other’s rules, and solve secret sorting challenges. Through hands-on activities and discussion, students explore how different features produce different classifications and why more data may be needed to identify a rule.",
+        "preparation": "- Print and cut one set of monster cards per groups of 2–4 students \n- Print the activity guide: one per student",
+        "student_overview": "In this lesson, you take on the role of a data scientist to learn how to use information to sort data. You will practice by sorting monsters and finding secret sorting rules."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -214,22 +217,659 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "8c208385-bde6-4d91-a8bf-020ae56c55f2",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "0929c4fc-646a-4812-aadf-609696f9febe",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "331ea484-28ee-4eca-969c-a70aefd58342",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b47944dc-680f-4b2d-9ac6-c9bee2b2a854",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students see that people sort the same things in different ways, based on the feature(s) they pay attention to. AI systems also use features that they recognize in order to make classifications.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the four pictures. Give students 30 seconds to pick the one that does not belong.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Look at the four pictures. Which one does not belong? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Every item can be the one that doesn't belong. It depends on what you pay attention to. Take several answers from students and push for the because each time. Try to emphasize what students might have been using to classify the objects: \"So you were paying attention to ___.\" A main takeaway is that everyone looked at the same four pictures and sorted them differently because they each chose something different to pay attention to.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why might an AI system have misclassified this dog as a muffin?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Some students will say the AI is dumb or broken. That's fine for a first impression. To encourage more critical thinking, ask the students, \"What do the dog and the muffin have in common?\" Students will likely name the tan color, the round shape, and the three dark spots. Then ask, \"What would help you tell them apart?\" Students might say fur, ears, or a paper wrapper. Point out that some details trick you because both things have them, while other details help you sort correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b47944dc-680f-4b2d-9ac6-c9bee2b2a854",
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
+      }
+    },
+    {
+      "key": "094f4e7a-46a8-415b-ba90-fff69fef3d7c",
+      "position": 2,
+      "properties": {
+        "duration": "35",
+        "name": "Activity "
+      },
+      "seeding_key": {
+        "activity_section.key": "094f4e7a-46a8-415b-ba90-fff69fef3d7c",
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
+      }
+    },
+    {
+      "key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32",
+      "position": 3,
+      "properties": {
+        "progression_name": "Find the Secret Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8433428-2ebb-4d6b-9e97-409e6a8fca32",
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
+      }
+    },
+    {
+      "key": "f73d2c7d-c5ee-4557-ae85-6138cf345cf2",
+      "position": 4,
+      "properties": {
+        "progression_name": "Your Secret Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "f73d2c7d-c5ee-4557-ae85-6138cf345cf2",
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
+      }
+    },
+    {
+      "key": "b0f76994-25ba-40b7-9d8c-2ca6186a631f",
+      "position": 5,
+      "properties": {
+        "progression_name": "Lesson Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0f76994-25ba-40b7-9d8c-2ca6186a631f",
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
+      }
+    },
+    {
+      "key": "822a9037-8bc8-41c3-8a73-10f7cb5b0c67",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students sort monster cards with yes/no questions. They see that the person sorting chooses the feature.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of 12 monster cards. Give each student a copy of the Sorting by Rules activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of 2–4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give groups a few minutes to explore the monster cards. The students should record their observations in the Round One section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask for volunteers to share some of their observations. Write the answers on the board. Label the list \"features.\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define feature.\n\n**Say**: Everything on our list is a feature. A feature is a characteristic you can observe about something. It can be something you can see, like a color, or it could be a quality that is harder to observe, like softness or temperature.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define data.\n\n**Say**: Our monster cards are data. Data is information that has been collected and recorded.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each group creates one secret yes/no question and sorts its monsters into a Yes group and a No group based on this rule. They should record this rule in the Round Two section of their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If a group picks a question with more than two answers (\"What color is it?\"), help them make it yes/no (\"Is it green?\").\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have two groups swap and attempt to guess each other's question. Students should record what they believe the rule to be in their activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How did you figure out the other group's sorting rule?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for something like \"We looked at what all the Yes monsters had in common.\" If a group guessed a different rule that still works for every card, make a big deal of it. Ask, \"Both rules work. What new monster would show us which rule is the real one?\" Point out that the same cards can be sorted lots of ways, and the people sorting get to decide how.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define classification.\n\n**Say**: You put each monster in a category based on one or more of its features. That is called classification.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Groups pick one of their two groups and sort it again with a second yes/no question. Students complete the Round Three section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Draw one group's sort on the board as yes/no branches. Define branching logic.\n\n**Say**: Each answer sends you a different way. That is branching logic. What you just built by hand is called a decision tree. People build them, and computers can build them too.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why might it be useful to add a second yes/no question?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students explaining that one question still leaves things mixed together. \"It makes smaller groups\" is a start, but push for more by asking \"Why would you want smaller groups?\" A stronger answer names what they wanted to separate, like \"so we can tell the spiky ones apart from the fuzzy ones.\" Students should name a real purpose behind their further sorting.\n",
+        "duration": "15",
+        "name": "Monster Sorter"
+      },
+      "seeding_key": {
+        "activity_section.key": "822a9037-8bc8-41c3-8a73-10f7cb5b0c67",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "f504f7b8-64d4-407f-b527-a2ec9938a02a",
+      "position": 2,
+      "properties": {
+        "description": "**Say**: People who build sorting systems like these as their job are called data scientists. A big part of their job is what you just did at your tables: figuring out which features matter for sorting something into the right category. For instance, a data scientist at a music streaming company asks the same question about songs: which features help predict whether a listener will skip a song? Is it the tempo? The genre? The length? Not every feature turns out to matter.\n\nIn this unit, you become the data scientists.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What do you think is the hardest part of that job? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for answers that connect to what students did today: picking which detail matters, a question that didn't sort the way they wanted, or monsters that were hard to place. When you hear one, ask \"What was hard about choosing your question today?\" to bring them back to their own experience.\n",
+        "duration": "5",
+        "name": "Career Spotlight: Data Scientist"
+      },
+      "seeding_key": {
+        "activity_section.key": "f504f7b8-64d4-407f-b527-a2ec9938a02a",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students name features they could sort by, then determine the sorting rule used in the levels. They see that with too little data, a new item could fit more than one box, and that more data helps them find the real rule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students in pairs\n\n**Say**: Each of these levels has a rule that decides what goes in each box. Your job is to determine what that rule is.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1:\n* **Level 1**: Students look at items in green, blue and red boxes and pick how they are sorted (by color).\n* **Level 2**: Students predict where a pink circle with a black border goes. Box One holds circles and Box Two holds a pink square, so it could go in either box. The best answer is \"We need more training data to know.\"\n* **Level 3**: Students click Run, then drag each item into a box. The new rule is outline color: Box One black, Box Two red, Box Three blue.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Verify students are progressing through levels and help any students that are struggling\n",
+        "duration": "15",
+        "name": "Find the Secret Rule",
+        "progression_name": "Find the Secret Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "88e7638f-acbc-45e6-80d9-1d64a7531449",
+      "position": 4,
+      "properties": {
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4. Pairs pick one level. Partner A sorts the items on screen with a secret rule. Partner B acts as the computer and guesses how Partner A sorted.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Partner B doesn't watch while Partner A sorts. If Partner B guesses a different rule that also fits, ask the pair what new item would tell the two rules apart.\n",
+        "progression_name": "Your Secret Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "88e7638f-acbc-45e6-80d9-1d64a7531449",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "67e904b8-98df-4481-9f40-f618beaf9595",
+      "position": 5,
+      "properties": {
+        "description": "\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is one question about your own life that could be answered by a sorting system?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Good examples sort things into groups, like \"Will I skip this song?\", \"Do I need a jacket?\", or \"Is this text spam?\" Some students will offer a question that doesn't sort anything, like \"What's for dinner?\" Help them reshape it by asking \"What would the two piles be?\" Strong answers also mention what the system would look at to decide, like the weather or who sent the text. Students don't have to share anything personal.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students record their responses in the Wrap Up section of the activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "67e904b8-98df-4481-9f40-f618beaf9595",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "de4da438-802a-45c9-938e-fbfe67f3798f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Levels 5–6:\n\n* **Level 5**: Students flip vocabulary flash cards for feature, data, classification and branching logic. They can shuffle the cards or start from the definition.\n* **Level 6**: Students drag each word to its definition, then click Submit.\n",
+        "progression_name": "Lesson Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f",
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe"
+      }
+    },
+    {
+      "key": "04a3e8b0-a521-4369-926a-77dacf6feeba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<!-- Apply as a Teaching Tip callout in Level Builder -->",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students will mention details, features, or yes/no questions. Others will say something like \"it just knows.\" Both are normal today, so don't correct anyone. You'll come back to this question later in the unit, and these answers show where students are starting."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04a3e8b0-a521-4369-926a-77dacf6feeba",
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe"
+      }
+    },
+    {
+      "key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec",
+      "position": 1,
+      "properties": {
+        "progression_name": "Robot Recycler"
+      },
+      "seeding_key": {
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    },
+    {
+      "key": "f480674c-90b7-45e9-8397-16b4f20da42a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-pattern-2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-pattern-3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-pattern-4"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-choice-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "88e7638f-acbc-45e6-80d9-1d64a7531449"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-choice-level"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-flashcards-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-vocab-flashcards-2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-matching"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-vocab-matching"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Robot Recycler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-sketch-lab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-sketch-lab"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Robot Recycler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-free-response"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-free-response"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-vocab-flashcards"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-vocab-matching"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-pattern-2",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-pattern-3",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-pattern-4",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-choice-level",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-choice-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "88e7638f-acbc-45e6-80d9-1d64a7531449"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-vocab-flashcards-2",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-flashcards-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-vocab-matching",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-matching"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-sketch-lab",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-sketch-lab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-free-response",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-free-response"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "07a7c0f5-1f34-42df-9797-a824aa0d0cec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-vocab-flashcards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-vocab-matching",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Data Makes AI - Lesson 1 - Activity Guide",
+      "url": "https://docs.google.com/document/d/110SjuWQvyoo1fT8QhIhpbz-CjmXAbq-vh1co8dz7BzA",
+      "key": "_key_data_makes_ai_-_lesson_1_-_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "name": "Data Makes AI - Lesson 1 - Activity Guide",
+      "url": "https://docs.google.com/document/d/1b5KGd_24BABblwPzhCet2PEhk4SAOyaN3vMgRyaINQA/",
+      "key": "data_makes_ai_-_lesson_1_-_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "name": "Monster Sorter Cards",
+      "url": "https://docs.google.com/document/d/1IWhZsY3vqRc9EklFy3H8AO5H20-xIM9pqhJfIo-i5S8",
+      "key": "monster_sorter_cards",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "monster_sorter_cards"
+      }
+    },
+    {
+      "name": "Sorting by Rules",
+      "url": "https://docs.google.com/presentation/d/1ccAacsgREHijhihJ9hQmSRaDBnrysGOADpiZJ0aHG6Y",
+      "key": "sorting_by_rules",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sorting_by_rules"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "monster_sorter_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "sorting_by_rules"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -238,16 +878,107 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "branching_logic",
+      "word": "branching logic",
+      "definition": "A way of making decisions using yes or no questions, where each answer sends you in a different direction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "branching_logic"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "classification",
+      "definition": "Sorting something into a category based on its features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "data",
+      "word": "data",
+      "definition": "Information that is collected, stored, and used to understand and solve problems",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "feature",
+      "word": "feature",
+      "definition": "A characteristic you can observe about something",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "branching_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "feature"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "0f90cf07-1ddd-4d58-81f4-836001a08183",
+      "properties": {
+        "description": "Recognize that different feature choices produce different sorting outcomes."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "0f90cf07-1ddd-4d58-81f4-836001a08183"
+      }
+    },
+    {
+      "key": "1dc11913-7862-422c-9985-2d1b8cdce293",
+      "properties": {
+        "description": "Identify a feature that can be used to sort a set of objects into two groups."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1dc11913-7862-422c-9985-2d1b8cdce293"
+      }
+    },
+    {
+      "key": "ae931696-0813-43b2-bcce-c1d884b28eaa",
+      "properties": {
+        "description": "Distinguish between a feature that helps sort accurately and one that leads to a wrong result"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ae931696-0813-43b2-bcce-c1d884b28eaa"
+      }
+    }
   ],
   "lessons_standards": [
 

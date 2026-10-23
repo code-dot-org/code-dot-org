@@ -5,91 +5,104 @@
       "name": "Top Songs",
       "path": "datasets/songs.csv",
       "metadataPath": "datasets/songs.json",
-      "imagePath": "datasets/songs.jpg"
+      "imagePath": "datasets/songs.jpg",
+      "rowCount": 903
     },
     {
       "id": "basketball_shots",
       "name": "NCAA 3-Point Attempts",
       "path": "datasets/basketball_shots.csv",
       "metadataPath": "datasets/basketball_shots.json",
-      "imagePath": "datasets/basketball_shots.jpg"
+      "imagePath": "datasets/basketball_shots.jpg",
+      "rowCount": 2789
     },
     {
       "id": "exoplanets",
       "name": "Exoplanets",
       "path": "datasets/exoplanets.csv",
       "metadataPath": "datasets/exoplanets.json",
-      "imagePath": "datasets/exoplanets.jpg"
+      "imagePath": "datasets/exoplanets.jpg",
+      "rowCount": 478
     },
     {
       "id": "thanksgiving",
       "name": "Regional Thanksgiving Food Survey",
       "path": "datasets/thanksgiving.csv",
       "metadataPath": "datasets/thanksgiving.json",
-      "imagePath": "datasets/thanksgiving.jpg"
+      "imagePath": "datasets/thanksgiving.jpg",
+      "rowCount": 931
     },
     {
       "id": "jeans",
       "name": "Jeans Measurements",
       "path": "datasets/jeans.csv",
       "metadataPath": "datasets/jeans.json",
-      "imagePath": "datasets/jeans.jpg"
+      "imagePath": "datasets/jeans.jpg",
+      "rowCount": 80
     },
     {
       "id": "bike_sharing",
       "name": "Bike Sharing",
       "path": "datasets/bike_sharing.csv",
       "metadataPath": "datasets/bike_sharing.json",
-      "imagePath": "datasets/bike_sharing.jpg"
+      "imagePath": "datasets/bike_sharing.jpg",
+      "rowCount": 731
     },
     {
       "id": "billionaires",
       "name": "Billionaires",
       "path": "datasets/billionaires.csv",
       "metadataPath": "datasets/billionaires.json",
-      "imagePath": "datasets/billionaires.jpg"
+      "imagePath": "datasets/billionaires.jpg",
+      "rowCount": 2229
     },
     {
       "id": "census",
       "name": "Partial Census Data",
       "path": "datasets/census_part.csv",
       "metadataPath": "datasets/census_part.json",
-      "imagePath": "datasets/census.jpg"
+      "imagePath": "datasets/census.jpg",
+      "rowCount": 998
     },
     {
       "id": "happiness_raw",
       "name": "Global Happiness",
       "path": "datasets/global_happiness_raw.csv",
       "metadataPath": "datasets/global_happiness_raw.json",
-      "imagePath": "datasets/global_happiness.jpg"
+      "imagePath": "datasets/global_happiness.jpg",
+      "rowCount": 1512
     },
     {
       "id": "housing",
       "name": "Housing Prices",
       "path": "datasets/housing_data.csv",
       "metadataPath": "datasets/housing_data.json",
-      "imagePath": "datasets/housing_data.jpg"
+      "imagePath": "datasets/housing_data.jpg",
+      "rowCount": 411
     },
     {
       "id": "insurance",
       "name": "Insurance Data",
       "path": "datasets/insurance_cost.csv",
       "metadataPath": "datasets/insurance_cost.json",
-      "imagePath": "datasets/insurance_cost.jpg"
+      "imagePath": "datasets/insurance_cost.jpg",
+      "rowCount": 1338
     },
     {
       "id": "heart",
       "name": "Heart Health",
       "path": "datasets/heart.csv",
       "metadataPath": "datasets/heart.json",
-      "imagePath": "datasets/heart.jpg"
+      "imagePath": "datasets/heart.jpg",
+      "rowCount": 303
     },
     {
       "id": "zoo",
       "name": "Zoo",
       "path": "datasets/zoo.csv",
       "metadataPath": "datasets/zoo.json",
-      "imagePath": "datasets/zoo.jpg"
+      "imagePath": "datasets/zoo.jpg",
+      "rowCount": 101
     },
     {
       "id": "tacos_toy",
@@ -97,7 +110,8 @@
       "path": "datasets/taco_toppings_toy.csv",
       "metadataPath": "datasets/taco_toppings_toy.json",
       "imagePath": "datasets/taco_toppings_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 500
     },
     {
       "id": "icecream_toy",
@@ -105,7 +119,8 @@
       "path": "datasets/icecream_toppings_toy.csv",
       "metadataPath": "datasets/icecream_toppings_toy.json",
       "imagePath": "datasets/icecream_toppings_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 500
     },
     {
       "id": "pizza_toy",
@@ -113,7 +128,8 @@
       "path": "datasets/pizza_toppings_toy.csv",
       "metadataPath": "datasets/pizza_toppings_toy.json",
       "imagePath": "datasets/pizza_toppings_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 500
     },
     {
       "id": "boba_toy",
@@ -121,7 +137,8 @@
       "path": "datasets/boba_toy.csv",
       "metadataPath": "datasets/boba_toy.json",
       "imagePath": "datasets/boba_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "cookies_toy",
@@ -129,7 +146,8 @@
       "path": "datasets/cookies_toy.csv",
       "metadataPath": "datasets/cookies_toy.json",
       "imagePath": "datasets/cookies_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "naan_toy",
@@ -137,7 +155,8 @@
       "path": "datasets/naan_toy.csv",
       "metadataPath": "datasets/naan_toy.json",
       "imagePath": "datasets/naan_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "poke_toy",
@@ -145,7 +164,8 @@
       "path": "datasets/poke_toy.csv",
       "metadataPath": "datasets/poke_toy.json",
       "imagePath": "datasets/poke_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "poutine_toy",
@@ -153,7 +173,8 @@
       "path": "datasets/poutine_toy.csv",
       "metadataPath": "datasets/poutine_toy.json",
       "imagePath": "datasets/poutine_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "raspado_toy",
@@ -161,7 +182,8 @@
       "path": "datasets/raspado_toy.csv",
       "metadataPath": "datasets/raspado_toy.json",
       "imagePath": "datasets/raspado_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "salad_toy",
@@ -169,7 +191,8 @@
       "path": "datasets/salad_toy.csv",
       "metadataPath": "datasets/salad_toy.json",
       "imagePath": "datasets/salad_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "salsa_toy",
@@ -177,7 +200,8 @@
       "path": "datasets/salsa_toy.csv",
       "metadataPath": "datasets/salsa_toy.json",
       "imagePath": "datasets/salsa_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "safari_toy",
@@ -185,7 +209,8 @@
       "path": "datasets/safari_toy.csv",
       "metadataPath": "datasets/safari_toy.json",
       "imagePath": "datasets/safari_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "medical_priority",
@@ -193,42 +218,48 @@
       "path": "datasets/medical_priority.csv",
       "metadataPath": "datasets/medical_priority.json",
       "imagePath": "datasets/medical_priority.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 1000
     },
     {
       "id": "nutrition",
       "name": "Nutrition",
       "path": "datasets/nutrition.csv",
       "metadataPath": "datasets/nutrition.json",
-      "imagePath": "datasets/nutrition.jpg"
+      "imagePath": "datasets/nutrition.jpg",
+      "rowCount": 7413
     },
     {
       "id": "student_survey",
       "name": "Student Lifestyle Survey",
       "path": "datasets/student_survey.csv",
       "metadataPath": "datasets/student_survey.json",
-      "imagePath": "datasets/student_survey.jpg"
+      "imagePath": "datasets/student_survey.jpg",
+      "rowCount": 674
     },
     {
       "id": "abalone",
       "name": "Abalone",
       "path": "datasets/abalone.csv",
       "metadataPath": "datasets/abalone.json",
-      "imagePath": "datasets/abalone.jpg"
+      "imagePath": "datasets/abalone.jpg",
+      "rowCount": 4177
     },
     {
       "id": "movies",
       "name": "Movie Stats",
       "path": "datasets/movies.csv",
       "metadataPath": "datasets/movies.json",
-      "imagePath": "datasets/movies.jpg"
+      "imagePath": "datasets/movies.jpg",
+      "rowCount": 6820
     },
     {
       "id": "car_evaluation",
       "name": "Car Evaluation",
       "path": "datasets/car_evaluation.csv",
       "metadataPath": "datasets/car_evaluation.json",
-      "imagePath": "datasets/car_evaluation.jpg"
+      "imagePath": "datasets/car_evaluation.jpg",
+      "rowCount": 1727
     },
     {
       "id": "loneliness_interests",
@@ -236,7 +267,8 @@
       "path": "datasets/loneliness_interests.csv",
       "metadataPath": "datasets/loneliness_interests.json",
       "imagePath": "datasets/loneliness_interests.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 674
     },
     {
       "id": "loneliness_movies",
@@ -244,7 +276,8 @@
       "path": "datasets/loneliness_movies.csv",
       "metadataPath": "datasets/loneliness_movies.json",
       "imagePath": "datasets/loneliness_movies.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 674
     },
     {
       "id": "loneliness_music",
@@ -252,7 +285,8 @@
       "path": "datasets/loneliness_music.csv",
       "metadataPath": "datasets/loneliness_music.json",
       "imagePath": "datasets/loneliness_music.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 674
     },
     {
       "id": "loneliness_personality",
@@ -260,7 +294,8 @@
       "path": "datasets/loneliness_personality.csv",
       "metadataPath": "datasets/loneliness_personality.json",
       "imagePath": "datasets/loneliness_personality.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 674
     },
     {
       "id": "loneliness_phobias",
@@ -268,7 +303,8 @@
       "path": "datasets/loneliness_phobias.csv",
       "metadataPath": "datasets/loneliness_phobias.json",
       "imagePath": "datasets/loneliness_phobias.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 674
     },
     {
       "id": "club_biased_toy",
@@ -276,7 +312,8 @@
       "path": "datasets/club_biased_toy.csv",
       "metadataPath": "datasets/club_biased_toy.json",
       "imagePath": "datasets/club_biased_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 368
     },
     {
       "id": "club_sparse_toy",
@@ -284,7 +321,8 @@
       "path": "datasets/club_sparse_toy.csv",
       "metadataPath": "datasets/club_sparse_toy.json",
       "imagePath": "datasets/club_sparse_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 25
     },
     {
       "id": "club_random_toy",
@@ -292,7 +330,8 @@
       "path": "datasets/club_random_toy.csv",
       "metadataPath": "datasets/club_random_toy.json",
       "imagePath": "datasets/club_random_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 748
     },
     {
       "id": "club_specific_toy",
@@ -300,7 +339,8 @@
       "path": "datasets/club_specific_toy.csv",
       "metadataPath": "datasets/club_specific_toy.json",
       "imagePath": "datasets/club_specific_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 110
     },
     {
       "id": "shapes_v1_toy",
@@ -308,7 +348,8 @@
       "path": "datasets/shapes_v1_toy.csv",
       "metadataPath": "datasets/shapes_v1_toy.json",
       "imagePath": "datasets/shapes_v1_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 100
     },
     {
       "id": "shapes_v2_toy",
@@ -316,7 +357,8 @@
       "path": "datasets/shapes_v2_toy.csv",
       "metadataPath": "datasets/shapes_v2_toy.json",
       "imagePath": "datasets/shapes_v2_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 100
     },
     {
       "id": "shoe_survey_toy",
@@ -324,7 +366,8 @@
       "path": "datasets/shoe_survey_toy.csv",
       "metadataPath": "datasets/shoe_survey_toy.json",
       "imagePath": "datasets/shoe_survey_toy.jpg",
-      "isToy": true
+      "isToy": true,
+      "rowCount": 452
     }
   ]
 }

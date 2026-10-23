@@ -1,4 +1,4 @@
-import {fireEvent, screen, within} from '@testing-library/react';
+import {fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
@@ -10,30 +10,35 @@ import {
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
 
-import {ANIMALS, levelProject, levelStore} from './levelStore';
+import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
-  name: ['Tweety', 'Fido', 'Slither'][index] || row.animal,
+  name:
+    ['Tweety', 'Fido', 'Slither', 'Polly', 'Rex', 'Kaa'][index] || row.animal,
   ...row,
 }));
 
 function renderScorecard({
   data,
+  examples = [[2], [4], [0]],
+  labels = ['bird', 'dog', 'snake'],
   predictedLabels = ['bird', 'dog', 'bird'],
+  accuracyCheckRowIndices = [0, 1, 2],
+  project = levelProject(),
 } = {}) {
   const store = levelStore();
   if (data) {
     store.dispatch(setImportedData(data, false));
   }
-  store.dispatch(setAccuracyCheckExamples([[2], [4], [0]]));
-  store.dispatch(setAccuracyCheckLabels(['bird', 'dog', 'snake']));
+  store.dispatch(setAccuracyCheckExamples(examples));
+  store.dispatch(setAccuracyCheckLabels(labels));
   store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
   renderWithProviders(createElement(ResultsDetails), {
     store,
     project: {
-      ...levelProject(),
-      accuracyCheckRowIndices: [0, 1, 2],
+      ...project,
+      accuracyCheckRowIndices,
       historicResults: [
         {label: 'animal', features: ['legs'], accuracy: '66.67'},
       ],
@@ -56,6 +61,8 @@ function headerRows() {
 function bodyRows() {
   return rowsIn(screen.getAllByRole('rowgroup')[1]);
 }
+
+const sortButton = name => screen.getByRole('button', {name});
 
 describe('ResultsDetails', () => {
   beforeAll(() => {
@@ -121,5 +128,53 @@ describe('ResultsDetails', () => {
     fireEvent.click(screen.getByLabelText('Show only features and label'));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
+  });
+
+  test('sorts another dataset column by its own row', () => {
+    renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
+    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(sortButton('Sort by name A-Z'));
+    fireEvent.click(sortButton('Sort by name Z-A'));
+
+    expect(bodyRows()).toEqual([
+      ['5', 'Rex', '4', 'dog', 'dog'],
+      ['4', 'Polly', '2', 'bird', 'bird'],
+    ]);
+  });
+
+  test('sorts numerical predictions by value', () => {
+    renderScorecard({
+      project: levelProject(ANIMAL_COLUMNS, 'legs'),
+      examples: [['bird'], ['dog'], ['snake']],
+      labels: [1.5, 1.25, 10],
+      predictedLabels: [1.5, 1.25, 10],
+    });
+    fireEvent.click(sortButton('Sort by AI predicts low to high'));
+
+    expect(bodyRows()).toEqual([
+      ['2', 'dog', '1.25', '1.25'],
+      ['1', 'bird', '1.5', '1.5'],
+      ['3', 'snake', '10', '10'],
+    ]);
+  });
+
+  test('filters by the AI prediction, counts each grade, and says when no shown row matches', async () => {
+    renderScorecard();
+    expect(screen.getByRole('button', {name: 'Correct (2)'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Incorrect (1)'})).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Filter'}));
+    fireEvent.click(screen.getByRole('button', {name: /^AI predicts/}));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
+    const incorrect = await waitFor(() =>
+      screen.getByRole('button', {name: 'Incorrect (0)'})
+    );
+    expect(screen.getByRole('button', {name: 'Correct (1)'})).toBeTruthy();
+    expect(bodyRows()).toEqual([['2', '4', 'dog', 'dog']]);
+
+    fireEvent.click(incorrect);
+
+    expect(screen.getByText('No rows match this filter.')).toBeTruthy();
   });
 });

@@ -1,18 +1,23 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {
   formatAccuracy,
-  getCorrectCount,
-  getResultsByGrade,
+  getAccuracyGrades,
+  getAllResults,
 } from '../helpers/accuracy';
+import {dataColumnsFor} from '../helpers/columnDetails';
+import type {Grade} from '../helpers/displayTreeNodeContent';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
+import {useGradedView} from '../useGradedView';
+import {useResultsTableView} from '../useResultsTableView';
 
 import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
+import TableFilter from './TableFilter';
 
 import styles from './resultsDetails.module.scss';
 
@@ -25,14 +30,26 @@ const ResultsDetails = () => {
   const resultsTab = useAppSelector(state => state.resultsTab);
   const dispatch = useAppDispatch();
   const [showAllColumns, setShowAllColumns] = useState(false);
+  const data = useAppSelector(state => state.data);
   const results = useAppSelector(
-    state => getResultsByGrade(state, project, resultsTab),
+    state => getAllResults(state, project),
     deepEqual
   );
-  const gradeCounts = useAppSelector(state => {
-    const {correct, total} = getCorrectCount(state, project);
-    return {correct, incorrect: total - correct};
-  }, deepEqual);
+  const grades = useAppSelector(state => getAccuracyGrades(state, project));
+  const rowsByGrade = useMemo(() => {
+    const byGrade: Record<Grade, number[]> = {correct: [], incorrect: []};
+    grades.forEach((grade, row) => byGrade[grade as Grade].push(row));
+    return byGrade;
+  }, [grades]);
+  const columns = useMemo(
+    () => dataColumnsFor(data, project, showAllColumns),
+    [data, project, showAllColumns]
+  );
+  const {view, counts} = useGradedView(
+    useResultsTableView(results, columns),
+    rowsByGrade,
+    resultsTab as Grade
+  );
 
   return (
     <div className={styles.details}>
@@ -54,9 +71,10 @@ const ResultsDetails = () => {
               <ResultsToggle
                 grade={resultsTab}
                 onChange={grade => dispatch(setResultsTab(grade))}
-                counts={gradeCounts}
+                counts={counts}
               />
             )}
+            <TableFilter view={view} />
             <ColumnsButton
               showAllColumns={showAllColumns}
               onToggle={() => setShowAllColumns(shown => !shown)}
@@ -64,7 +82,7 @@ const ResultsDetails = () => {
           </div>
         </div>
       </div>
-      <ResultsTable results={results} showAllColumns={showAllColumns} />
+      <ResultsTable results={results} columns={columns} view={view} />
     </div>
   );
 };

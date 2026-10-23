@@ -1,30 +1,40 @@
 /* React component to handle displaying imported data. */
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Typography} from '@mui/material';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
+import {useDatasetTableView} from '../useDatasetTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
+import TableFilter from './TableFilter';
 
 import styles from './dataDisplay.module.scss';
 
 const DataDisplay = () => {
   const dispatch = useAppDispatch();
-  const rowCount = useAppSelector(state => state.data.length);
+  const data = useAppSelector(state => state.data);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
+  const rows = useMemo(() => [...data.keys()], [data]);
+  const columns = useMemo(() => Object.keys(data[0] ?? {}), [data]);
+  const tableView = useDatasetTableView(rows, columns);
 
+  const rowCount = data.length;
   if (rowCount === 0) {
     return null;
   }
 
-  const rowCountText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
+  const isTable = datasetLayout === 'table';
+  const shownCount = tableView.rows.length;
+  const totalText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
+  const rowCountText =
+    shownCount === rowCount ? totalText : `${shownCount} of ${totalText}`;
   const rowCountMessage =
-    datasetLayout === 'table' && rowCount > DATA_TABLE_ROW_LIMIT
+    isTable && shownCount > DATA_TABLE_ROW_LIMIT
       ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
       : rowCountText;
 
@@ -50,36 +60,39 @@ const DataDisplay = () => {
             {rowCountMessage}
           </Typography>
         </div>
-        <div
-          role="group"
-          aria-label="Dataset view"
-          className={styles.viewToggle}
-        >
-          <SegmentedButtons
-            size="xs"
-            selectedButtonValue={datasetLayout}
-            onChange={onLayoutChange}
-            buttons={[
-              {
-                value: 'table',
-                label: 'Table',
-                iconLeft: {iconName: 'table', iconStyle: 'solid'},
-              },
-              {
-                value: 'cards',
-                label: 'Cards',
-                iconLeft: {iconName: 'cards-blank', iconStyle: 'solid'},
-              },
-            ]}
-          />
+        <div className={styles.actions}>
+          <TableFilter view={tableView} />
+          <div
+            role="group"
+            aria-label="Dataset view"
+            className={styles.viewToggle}
+          >
+            <SegmentedButtons
+              size="xs"
+              selectedButtonValue={datasetLayout}
+              onChange={onLayoutChange}
+              buttons={[
+                {
+                  value: 'table',
+                  label: 'Table',
+                  iconLeft: {iconName: 'table', iconStyle: 'solid'},
+                },
+                {
+                  value: 'cards',
+                  label: 'Cards',
+                  iconLeft: {iconName: 'cards-blank', iconStyle: 'solid'},
+                },
+              ]}
+            />
+          </div>
         </div>
       </div>
-      {datasetLayout === 'cards' ? (
-        <DatasetCardDeck />
-      ) : (
+      {isTable ? (
         <div className={styles.tableContainer}>
-          <DataTable />
+          <DataTable view={tableView} />
         </div>
+      ) : (
+        <DatasetCardDeck rows={tableView.rows} />
       )}
     </div>
   );

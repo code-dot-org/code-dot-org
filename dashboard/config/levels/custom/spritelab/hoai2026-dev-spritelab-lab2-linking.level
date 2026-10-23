@@ -29,7 +29,7 @@
       "sprite": "friend"
     },
     "objectives": {
-      "title": "**Link your scenes.**",
+      "title": "**Link your scenes**",
       "items": [
         {
           "text": "Drag **go to scene** onto the dotted outline.",

@@ -256,10 +256,10 @@
       "id": "add-details",
       "title": "Add Details",
       "description": "Add concrete details (layout, colors, content, purpose) so the prompt isn't vague",
-      "skillIds": ["build"],
+      "skillIds": ["language"],
       "requires": ["introduction"],
       "targetEvidenceLevels": {
-        "build": 1
+        "language": 2
       },
       "skippable": true,
       "steps": [
@@ -362,10 +362,10 @@
       "id": "edit-by-hand",
       "title": "Edit by Hand",
       "description": "Decide when a direct edit beats another prompt, and make it",
-      "skillIds": ["build"],
+      "skillIds": ["debug"],
       "requires": ["introduction"],
       "targetEvidenceLevels": {
-        "build": 2
+        "debug": 2
       },
       "skippable": true,
       "steps": [

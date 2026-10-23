@@ -10,19 +10,6 @@ module ChoiceQuestion
       return nil
     end
 
-    # id and text must both be non-blank, not just Strings - a blank text
-    # would render as an answer choice with no visible label.
-    unless choices.all? {|c| c.is_a?(Hash) && c['id'].is_a?(String) && c['id'].present? && c['text'].is_a?(String) && c['text'].present?}
-      errors.add(:content, 'each choice must have a non-blank "id" and "text"')
-      return nil
-    end
-
-    choice_ids = choices.map {|c| c['id']}
-    unless choice_ids.uniq.length == choice_ids.length
-      errors.add(:content, '"choices" ids must be unique')
-      return nil
-    end
-
-    choice_ids
+    validate_items(choices, 'choice')
   end
 end

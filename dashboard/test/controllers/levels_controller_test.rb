@@ -737,6 +737,32 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "edit hides the header label field from a level outside a simple-progress unit" do
+    script_level = create(:script_level, levels: [@level])
+    refute script_level.script.simple_progress?
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label', 0
+  end
+
+  test "edit shows the header label field for a level in a simple-progress unit" do
+    script_level = create(:script_level, levels: [@level])
+    script_level.script.update!(simple_progress: true)
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label', 1
+  end
+
+  test "edit keeps the header label field while the level has a label" do
+    @level.update!(header_label: 'Story')
+
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_select 'input#level_header_label[value=?]', 'Story'
+  end
+
   test "should get edit blocks" do
     @level.update(toolbox_blocks: @program)
     get :edit_blocks, params: {id: @level.id, type: 'toolbox_blocks'}
