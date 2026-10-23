@@ -19,3 +19,8 @@ also print the email to stdout. You can copy the link (make sure the
 url has the correct hostname, e.g. I noticed that levelbuilder is
 sending emails with a staging url).
 
+On production-console, ActiveRecord defaults to the read-only
+reporting replica; wrap the call in
+`ActiveRecord::Base.connected_to(role: :writing) { ... }` so the reset
+token can be saved.
+
