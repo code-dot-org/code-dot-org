@@ -2,6 +2,9 @@
 // anything inside it, so fill and stroke coming from a CSS rule are lost:
 // outlined shapes turn solid black and edges vanish. Copy the paint properties
 // onto the elements themselves so the clone carries them, then restore.
+// Known issue in html-to-image: https://github.com/bubkoo/html-to-image/issues/516
+// but it doesn't look like much/any development is happening on it.
+// We need to use version 1.11.13 in order to use includeStyleProperties.
 
 const SVG_PAINT_PROPERTIES = [
   'fill',
