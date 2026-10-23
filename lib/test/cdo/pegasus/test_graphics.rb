@@ -3,7 +3,7 @@ require 'sinatra/base'
 require 'rmagick'
 require 'cdo/pegasus/graphics'
 
-FIXTURES_DIR = File.expand_path('../../../fixtures', __FILE__).freeze
+FIXTURES_DIR = File.expand_path('../../fixtures', __dir__).freeze
 IMAGE_EXTNAMES = ['.png', '.jpeg', '.jpg', '.gif'].freeze
 
 # Minimal Sinatra stub that mimics SharedResources image handling,

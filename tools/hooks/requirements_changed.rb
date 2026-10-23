@@ -1,6 +1,6 @@
 require 'pathname'
 
-REPO_DIR = File.expand_path('../../../', __FILE__)
+REPO_DIR = File.expand_path('../..', __dir__)
 
 # Hash of several common requirements file patterns. Note that not all
 # of these are currently used, but are included for future-proofing.

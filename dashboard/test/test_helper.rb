@@ -37,7 +37,7 @@ if defined? CDO
 end
 Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 
 # ... then, we apply some unit-test-specific configuration. We cannot target
 # the config layer from this file because Spring may have already loaded the

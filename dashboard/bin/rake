@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 begin
-  load File.expand_path('../spring', __FILE__)
+  load File.expand_path('spring', __dir__)
 rescue LoadError => exception
   raise unless exception.message.include?('spring')
 end

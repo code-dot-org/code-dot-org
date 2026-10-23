@@ -224,11 +224,6 @@ Style/CombinableLoops:
 Style/CommentAnnotation:
   Enabled: false
 
-# Offense count: 132
-# This cop supports safe autocorrection (--autocorrect).
-Style/ExpandPathArguments:
-  Enabled: false
-
 # Offense count: 3652
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: EnforcedStyle.

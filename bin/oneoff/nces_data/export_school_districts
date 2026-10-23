@@ -18,7 +18,7 @@ OptionParser.new do |opts|
 end.parse!
 CDO.log.info "Called with options: #{options}"
 
-seed_filename = File.expand_path('../../../../dashboard', __FILE__)
+seed_filename = File.expand_path('../../../dashboard', __dir__)
 seed_filename += "/#{SchoolDistrict.get_seed_filename(options[:test])}"
 
 if options[:test]

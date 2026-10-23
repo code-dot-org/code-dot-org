@@ -8,7 +8,7 @@ require 'cdo/rack/optimize'
 class OptimizeTest < Minitest::Test
   include Rack::Test::Methods
 
-  FIXTURES_DIR = File.expand_path('../../../fixtures', __FILE__).freeze
+  FIXTURES_DIR = File.expand_path('../../fixtures', __dir__).freeze
 
   def setup
     require 'cdo/optimizer'
