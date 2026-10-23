@@ -265,7 +265,7 @@ class Level < ApplicationRecord
   UI_TEST_NAME_PREFIX = 'ui test '.freeze
 
   # Whether the level name falls into the UI test partition.
-  # See dashboard/test/ui/config/README.md.
+  # See dashboard/config/PARTITIONS.md.
   def self.ui_test_partition_name?(name)
     name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
   end
@@ -275,7 +275,7 @@ class Level < ApplicationRecord
   end
 
   # Whether the level name falls into the standalone project partition.
-  # See dashboard/config/standalone_projects/README.md.
+  # See dashboard/config/PARTITIONS.md.
   def self.standalone_partition_name?(name)
     Policies::StandaloneProjects.partition_name?(name)
   end
@@ -511,7 +511,7 @@ class Level < ApplicationRecord
   # script references the level, or while it is attached to another level as a
   # parent or child (contained level, project template, LevelGroup/BubbleChoice
   # sublevel), since parent and child must stay in one partition. See
-  # dashboard/test/ui/config/README.md.
+  # dashboard/config/PARTITIONS.md.
   def name_change_stays_within_partition
     return unless name_changed?
     return if Policies::LevelFiles.same_partition?(name, name_was)
@@ -525,7 +525,7 @@ class Level < ApplicationRecord
   # daily content push from the levelbuilder environment must never modify.
   # Refuse to save or destroy these levels from its web application, while
   # allowing them to be modified by the seed task. The throw halts a destroy and
-  # is harmless during validation. See dashboard/test/ui/config/README.md.
+  # is harmless during validation. See dashboard/config/PARTITIONS.md.
   def non_production_levels_are_immutable_on_levelbuilder
     return unless rack_env?(:levelbuilder) && CDO.running_web_application?
     return if [name, name_was].none? {|n| Level.ui_test_partition_name?(n) || Level.standalone_partition_name?(n)}

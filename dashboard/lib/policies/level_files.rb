@@ -1,8 +1,7 @@
 module Policies
   module LevelFiles
     # A level's name selects exactly one of these trees, so no two trees ever
-    # define the same level. See dashboard/test/ui/config/README.md and
-    # dashboard/config/standalone_projects/README.md.
+    # define the same level. See dashboard/config/PARTITIONS.md.
     LEVELS_SUBDIR = {
       production: 'config/levels',
       ui_test: 'test/ui/config/levels',

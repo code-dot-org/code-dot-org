@@ -95,7 +95,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   # A unit and the levels it references must be on the same side of the
-  # "UI Test " partition. See dashboard/test/ui/config/README.md.
+  # "UI Test " partition. See dashboard/config/PARTITIONS.md.
   def levels_stay_within_ui_test_partition
     offending = cross_partition_level_keys(level_keys || [])
     return if offending.empty?

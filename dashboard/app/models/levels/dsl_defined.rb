@@ -148,8 +148,7 @@ class DSLDefined < Level
     existing_filename.presence || canonical_filename
   end
 
-  # See dashboard/test/ui/config/README.md and
-  # dashboard/config/standalone_projects/README.md.
+  # See dashboard/config/PARTITIONS.md.
   SCRIPTS_DIRS = {
     production: 'config/scripts',
     ui_test: 'test/ui/config/scripts',

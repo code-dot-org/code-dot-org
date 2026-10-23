@@ -4,7 +4,7 @@ class LevelLoader
   # Top-level entry point. With a level_name, the partition is chosen by the
   # name; without one, `partition` picks which partition's levels to load (a
   # Policies::LevelFiles::LEVELS_SUBDIR key). See
-  # dashboard/test/ui/config/README.md.
+  # dashboard/config/PARTITIONS.md.
   def self.load_custom_levels(level_name, root_dir, partition: nil)
     import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, partition: partition), level_name: level_name)
   end
@@ -38,8 +38,7 @@ class LevelLoader
     end
 
     # A file must sit in the tree its level name selects, or seeding another
-    # tree would quietly pick it up; see dashboard/test/ui/config/README.md
-    # and dashboard/config/standalone_projects/README.md.
+    # tree would quietly pick it up; see dashboard/config/PARTITIONS.md.
     subdirs = Policies::LevelFiles::LEVELS_SUBDIR
     misfiled = level_file_paths.filter_map do |path|
       from = Policies::LevelFiles.partition_for_path(path)

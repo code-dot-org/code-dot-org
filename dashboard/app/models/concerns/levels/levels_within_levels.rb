@@ -200,7 +200,7 @@ module Levels
     end
 
     # A parent level and its children must be in the same partition; see
-    # dashboard/test/ui/config/README.md.
+    # dashboard/config/PARTITIONS.md.
     #
     # The row-level check lives on ParentLevelsChildLevel, where it covers
     # every path that writes parent/child rows. This validation is the
