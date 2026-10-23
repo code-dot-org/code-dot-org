@@ -32,7 +32,6 @@ function renderScorecard({
   const store = levelStore();
   if (data) {
     store.dispatch(setImportedData(data, false));
-    // Every column needs a type, or the dataset counts as half described.
     Object.keys(data[0]).forEach(column =>
       store.dispatch(
         setColumnsByDataType(

@@ -98,7 +98,6 @@ test('leaves a student who is still choosing a dataset on the picker', () => {
   expect(rendered.trainingData().trainedModel).toBeDefined();
 });
 
-// The project already names the run; recording it again would list it twice.
 test('leaves the history as the project described it', () => {
   const saved = savedAfterTraining();
 
@@ -146,7 +145,6 @@ describe('a pretrained level whose saved run cannot be rebuilt', () => {
     );
   });
 
-  // Reconciliation drops a run the columns no longer match, keeping the history.
   test('pretrains when reconciliation has already dropped the run', () => {
     const saved = savedAfterTraining();
 
@@ -164,7 +162,6 @@ describe('a pretrained level whose saved run cannot be rebuilt', () => {
 });
 
 describe('a run trained on columns the project has since changed', () => {
-  // The student narrowed the features after training, and did not retrain.
   const narrowed = saved => ({...saved, selectedFeatures: ['temperature']});
 
   test('rebuilds for the columns the run was trained on', () => {

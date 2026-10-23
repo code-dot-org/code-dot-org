@@ -50,12 +50,10 @@ export function useRestoreModel(): boolean {
     }
     setTrainedModel(run.trainedModel);
 
-    /*
-      Clicking a dataset loads it while the picker is still open.
-      Don't move to the results panel in that case because the user
-      hasn't actually selected the dataset yet.
-    */
     const state = store.getState();
+    // Don't move to the results panel if the dataset panel is active,
+    // because the user hasn't actually selected the dataset yet (they just
+    // clicked it to see more info).
     if (
       state.currentPanel !== 'selectDataset' &&
       isPanelEnabled(state, project, 'results')

@@ -21,7 +21,6 @@ import {
   TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
@@ -30,8 +29,7 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
@@ -66,7 +64,6 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   const [validator] = useState(() => new AccuracyValidator());
   const [dynamicInstructionsKey, setDynamicInstructionsKey] =
     useState<InstructionsKey>();
-  const levelStatus = useAppSelector(state => getCurrentLevel(state)?.status);
   const mode: Mode | undefined = useMemo(
     () => (levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined),
     [levelProperties.mode]
@@ -129,9 +126,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
   };
 
   const onTrained = (accuracy: number) => {
-    if (levelStatus === LevelStatus.not_tried) {
-      dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
-    }
+    dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
     validator.latestAccuracy = accuracy;
     progressManager?.resetValidation();
     progressManager?.updateProgress();

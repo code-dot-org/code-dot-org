@@ -64,9 +64,7 @@ export const ProjectProvider = ({
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
-  /*
-    A project waiting for the dataset to load.
-  */
+  // A project waiting for the dataset to load.
   const [pendingProject, setPendingProject] = useState<
     AilabProject | undefined
   >();
