@@ -1,4 +1,4 @@
-import {fireEvent, screen, within} from '@testing-library/react';
+import {fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
@@ -156,5 +156,21 @@ describe('ResultsDetails', () => {
       ['1', 'bird', '1.5', '1.5'],
       ['3', 'snake', '10', '10'],
     ]);
+  });
+
+  test('filters by the AI prediction, and says when no shown row matches', async () => {
+    renderScorecard();
+    fireEvent.click(screen.getByRole('button', {name: 'Filter'}));
+    fireEvent.click(screen.getByRole('button', {name: /^AI predicts/}));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
+    const incorrect = await waitFor(() =>
+      screen.getByRole('button', {name: 'Incorrect (1)'})
+    );
+    expect(bodyRows()).toEqual([['2', '4', 'dog', 'dog']]);
+
+    fireEvent.click(incorrect);
+
+    expect(screen.getByText('No rows match this filter.')).toBeTruthy();
   });
 });

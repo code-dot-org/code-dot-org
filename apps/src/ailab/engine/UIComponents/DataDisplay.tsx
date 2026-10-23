@@ -10,6 +10,7 @@ import {useDatasetTableView} from '../useTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
+import TableFilter from './TableFilter';
 
 import styles from './dataDisplay.module.scss';
 
@@ -27,9 +28,13 @@ const DataDisplay = () => {
     return null;
   }
 
-  const rowCountText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
+  const isTable = datasetLayout === 'table';
+  const shownCount = tableView.rows.length;
+  const totalText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
+  const rowCountText =
+    shownCount === rowCount ? totalText : `${shownCount} of ${totalText}`;
   const rowCountMessage =
-    datasetLayout === 'table' && rowCount > DATA_TABLE_ROW_LIMIT
+    isTable && shownCount > DATA_TABLE_ROW_LIMIT
       ? `${rowCountText} (Showing first ${DATA_TABLE_ROW_LIMIT})`
       : rowCountText;
 
@@ -55,36 +60,39 @@ const DataDisplay = () => {
             {rowCountMessage}
           </Typography>
         </div>
-        <div
-          role="group"
-          aria-label="Dataset view"
-          className={styles.viewToggle}
-        >
-          <SegmentedButtons
-            size="xs"
-            selectedButtonValue={datasetLayout}
-            onChange={onLayoutChange}
-            buttons={[
-              {
-                value: 'table',
-                label: 'Table',
-                iconLeft: {iconName: 'table', iconStyle: 'solid'},
-              },
-              {
-                value: 'cards',
-                label: 'Cards',
-                iconLeft: {iconName: 'cards-blank', iconStyle: 'solid'},
-              },
-            ]}
-          />
+        <div className={styles.actions}>
+          <TableFilter view={tableView} />
+          <div
+            role="group"
+            aria-label="Dataset view"
+            className={styles.viewToggle}
+          >
+            <SegmentedButtons
+              size="xs"
+              selectedButtonValue={datasetLayout}
+              onChange={onLayoutChange}
+              buttons={[
+                {
+                  value: 'table',
+                  label: 'Table',
+                  iconLeft: {iconName: 'table', iconStyle: 'solid'},
+                },
+                {
+                  value: 'cards',
+                  label: 'Cards',
+                  iconLeft: {iconName: 'cards-blank', iconStyle: 'solid'},
+                },
+              ]}
+            />
+          </div>
         </div>
       </div>
-      {datasetLayout === 'cards' ? (
-        <DatasetCardDeck />
-      ) : (
+      {isTable ? (
         <div className={styles.tableContainer}>
           <DataTable view={tableView} />
         </div>
+      ) : (
+        <DatasetCardDeck rows={tableView.rows} />
       )}
     </div>
   );

@@ -74,11 +74,8 @@ export const ProjectProvider = ({
   const datasetDescribed = data.length > 0 && columnTypesKnown;
 
   useResetSignal(
-    useCallback((keepsPendingProject: boolean) => {
+    useCallback(() => {
       previousRun.current = undefined;
-      if (!keepsPendingProject) {
-        pendingProject.current = undefined;
-      }
       setProject(initialProject);
     }, [])
   );

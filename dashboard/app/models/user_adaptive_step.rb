@@ -33,6 +33,9 @@ class UserAdaptiveStep < ApplicationRecord
 
   validates :step_id, presence: true
 
+  # Checks of a step's work kept per student; the oldest go first.
+  MAX_VALIDATION_ATTEMPTS = 20
+
   def record_progress!(started: false, completed: false, seconds: nil, answers: nil)
     with_lock do
       merged = progress || {}
@@ -46,6 +49,14 @@ class UserAdaptiveStep < ApplicationRecord
       end
       # Any progress at all makes the step started, so a no-op save leaves it nil.
       self.progress = merged if merged.any?
+      save!
+    end
+  end
+
+  def record_validation!(attempt)
+    with_lock do
+      history = (validation_history || []) + [attempt]
+      self.validation_history = history.last(MAX_VALIDATION_ATTEMPTS)
       save!
     end
   end

@@ -32,7 +32,7 @@ let finishCSV;
 let finishJSON;
 
 beforeEach(() => {
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   parseCSV.mockImplementation(
     () =>
       new Promise(resolve => {
