@@ -3,6 +3,7 @@ import {toBlob} from 'html-to-image';
 
 import {
   CAPTURE_ERROR,
+  CAPTURE_TIMEOUT_MS,
   createSketchSnapshotBlob,
 } from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import {getCanvasBounds} from '@cdo/apps/sketchlab/reactFlow/utils/getCanvasBounds';
@@ -99,6 +100,38 @@ describe('createSketchSnapshotBlob', () => {
     expect(await second).toEqual({blob});
     expect(path.getAttribute('style')).toBeNull();
     expect(mockToBlob).toHaveBeenCalledTimes(1);
+  });
+
+  it('gives up on a capture that never settles and lets the next one run', async () => {
+    jest.useFakeTimers();
+    try {
+      const viewport = document.querySelector('.react-flow__viewport')!;
+      viewport.insertAdjacentHTML(
+        'beforeend',
+        '<svg class="react-flow__edge"><path d="M0 0L10 10"></path></svg>'
+      );
+      const path = viewport.querySelector('path')!;
+      mockToBlob.mockReturnValueOnce(new Promise(() => {}));
+
+      const stuck = createSketchSnapshotBlob(reactFlow);
+      await jest.advanceTimersByTimeAsync(CAPTURE_TIMEOUT_MS);
+
+      expect(await stuck).toEqual({error: CAPTURE_ERROR});
+      expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
+        'Sketch snapshot error',
+        expect.any(SketchCaptureError),
+        expect.objectContaining({
+          reason: `capture timed out after ${CAPTURE_TIMEOUT_MS} ms`,
+        })
+      );
+      expect(path.getAttribute('style')).toBeNull();
+
+      const blob = new Blob();
+      mockToBlob.mockResolvedValueOnce(blob);
+      expect(await createSketchSnapshotBlob(reactFlow)).toEqual({blob});
+    } finally {
+      jest.useRealTimers();
+    }
   });
 
   it('starts a new capture once the previous one has finished', async () => {

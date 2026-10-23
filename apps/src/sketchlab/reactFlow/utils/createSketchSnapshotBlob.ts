@@ -18,8 +18,23 @@ const EXPORT_PADDING_PX = 10;
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
+// html-to-image never settles if the browser loads an image but cannot decode it.
+export const CAPTURE_TIMEOUT_MS = 30_000;
 
 type SnapshotResult = {blob?: Blob; error?: string};
+
+const withTimeout = <T>(promise: Promise<T>, timeoutMs: number): Promise<T> => {
+  let timer: number | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = window.setTimeout(
+      () => reject(new Error(`capture timed out after ${timeoutMs} ms`)),
+      timeoutMs
+    );
+  });
+  return Promise.race([promise, timeout]).finally(() =>
+    window.clearTimeout(timer)
+  );
+};
 
 let captureInFlight: Promise<SnapshotResult> | undefined;
 
@@ -77,12 +92,10 @@ const captureSketch = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
-  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
-  let blob: Blob | null;
-  try {
+  const renderBlob = async () => {
     // Supplying this stops html-to-image from inlining every font the page declares.
     const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
-    blob = await toBlob(viewport, {
+    return toBlob(viewport, {
       backgroundColor,
       fontEmbedCSS,
       includeStyleProperties: getExportStyleProperties(),
@@ -94,6 +107,12 @@ const captureSketch = async (
         transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
       },
     });
+  };
+
+  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
+  let blob: Blob | null;
+  try {
+    blob = await withTimeout(renderBlob(), CAPTURE_TIMEOUT_MS);
   } catch (cause) {
     const captureError = new SketchCaptureError(cause, {
       elements: contentRects.length,
