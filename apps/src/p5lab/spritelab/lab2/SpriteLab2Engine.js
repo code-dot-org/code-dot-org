@@ -158,6 +158,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     // frame of the next run is drawn (see onP5Setup and the draw loops).
     this.frameCaptureWaiters_ = [];
     this.frameCaptureArmed_ = false;
+    // A preview run draws its first frame and holds there: the clock and
+    // the loop stop, so the frame shows what the program sets up and no
+    // event fires until Play.
+    this.holdFirstFrame_ = false;
+    this.held_ = false;
+    this.firstFrameDue_ = false;
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -315,7 +321,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const now = new Date().getTime();
-    if (this.drawPaused_) {
+    if (this.drawPaused_ || this.held_) {
       if (this.library && !this.library.currentPauseStartTime) {
         this.library.startPause(now);
       }
@@ -470,6 +476,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (engine.frameCaptureArmed_) {
         engine.frameCaptureArmed_ = false;
         engine.settleFrameCaptures_(this.p5.canvas);
+      }
+      if (engine.firstFrameDue_) {
+        engine.firstFrameDue_ = false;
+        if (engine.holdFirstFrame_) {
+          engine.held_ = true;
+          engine.applyDrawPaused_();
+        }
       }
     };
     // Story lanes: placement by name instead of coordinates, sized so two
@@ -794,11 +807,12 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code, referencedImages, sceneType) {
+  runProgram(code, referencedImages, sceneType, {holdFirstFrame = false} = {}) {
     if (this.destroyed_) {
       return;
     }
     this.sceneType_ = sceneType;
+    this.holdFirstFrame_ = holdFirstFrame;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
     }
@@ -855,6 +869,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     super.onP5Setup();
     // A run has begun: the next frame drawn is its first.
     this.frameCaptureArmed_ = this.frameCaptureWaiters_.length > 0;
+    this.firstFrameDue_ = true;
+    this.held_ = false;
     const p5 = this.p5Wrapper.p5;
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
@@ -1322,6 +1338,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       touching,
       height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
       x: player.position.x,
+      across: Math.max(0, Math.min(1, player.position.x / view.width)),
       speed: player.speed,
     });
   }

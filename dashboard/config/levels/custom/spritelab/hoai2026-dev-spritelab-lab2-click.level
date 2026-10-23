@@ -36,7 +36,7 @@
       "title": "**Talk later**",
       "items": [
         {
-          "text": "Drag a **say** block onto the dotted outline.",
+          "text": "Drag **at 6 seconds** into the workspace, then a **say** block under it.",
           "check": {
             "kind": "block",
             "type": "gamelab_spriteSay",
@@ -52,10 +52,28 @@
         }
       ]
     },
-    "long_instructions": "# Talk later\nDrag a **say** block onto the dotted outline under **at [6] seconds**. Your new character speaks 6 seconds in.",
+    "long_instructions": "# Talk later\nDrag **at 6 seconds** into the workspace, then a **say** block under it. Your new character speaks 6 seconds in.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_atTime",
+          "fields": {
+            "UNIT": "\"seconds\""
+          },
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 6
+                }
+              }
+            }
+          },
+          "data": "at-6"
+        },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
@@ -69,62 +87,9 @@
               }
             }
           }
-        },
-        {
-          "kind": "block",
-          "type": "gamelab_atTime",
-          "inputs": {
-            "N": {
-              "shadow": {
-                "type": "math_number",
-                "fields": {
-                  "NUM": 3
-                }
-              }
-            }
-          }
         }
       ]
     },
-    "add_blocks": [
-      {
-        "type": "gamelab_atTime",
-        "data": "at-6",
-        "fields": {
-          "UNIT": "\"seconds\""
-        },
-        "inputs": {
-          "N": {
-            "shadow": {
-              "type": "math_number",
-              "fields": {
-                "NUM": 6
-              }
-            }
-          }
-        },
-        "next": {
-          "shadow": {
-            "type": "spritelab2_placeholder",
-            "extraState": {
-              "like": {
-                "type": "gamelab_spriteSay",
-                "fields": {
-                  "SPEECH": "Let's go!"
-                },
-                "inputs": {
-                  "SPRITE": {
-                    "shadow": {
-                      "type": "gamelab_allSpritesWithAnimation"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    ],
     "header_label": "Make a story"
   }
 }]]></config>

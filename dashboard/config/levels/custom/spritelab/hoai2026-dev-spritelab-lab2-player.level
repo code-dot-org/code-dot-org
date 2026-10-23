@@ -32,18 +32,6 @@
       "name": "Platformer",
       "type": "platform"
     },
-    "world_start_pattern": [
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      "....S.....",
-      "..........",
-      ".........."
-    ],
     "objectives": {
       "title": "**Make your character the player**",
       "items": [
@@ -56,15 +44,15 @@
           }
         },
         {
-          "text": "Click **Play** and move with the arrow keys: **left** and **right** to run, **up** to jump.",
+          "text": "Click **Play** and use the arrow keys to reach the platform on the right: **left** and **right** to run, **up** to jump.",
           "check": {
             "kind": "reach",
-            "moved": true
+            "across": 0.8
           }
         }
       ]
     },
-    "long_instructions": "# Make your character the player\nPut **set as player** under **when run** and pick your character. Arrow keys: left and right to run, up to jump.",
+    "long_instructions": "# Make your character the player\nPut **set as player** under **when run** and pick your character. Then run and jump to the platform on the right.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -88,7 +76,30 @@
         }
       }
     ],
-    "header_label": "Make a platformer"
+    "header_label": "Make a platformer",
+    "practice_world": {
+      "pattern": [
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "..........",
+        "......B...",
+        "..S.......",
+        "BBBBB...BB",
+        ".........."
+      ]
+    },
+    "starter_images": [
+      {
+        "name": "Tile",
+        "imageType": "block",
+        "src": "/blockly/media/spritelab_lab2/tiles/grass.png",
+        "width": 128,
+        "height": 128
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

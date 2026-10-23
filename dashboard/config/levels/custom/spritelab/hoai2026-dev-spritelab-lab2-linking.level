@@ -23,7 +23,8 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "code",
-      "sceneTabs": "all"
+      "sceneTabs": "all",
+      "openScene": "platform-scene"
     },
     "image_role_defaults": {
       "sprite": "friend"
@@ -31,6 +32,14 @@
     "objectives": {
       "title": "**Link your scenes**",
       "items": [
+        {
+          "text": "Open your **Story** scene from the scene menu.",
+          "check": {
+            "kind": "scene",
+            "id": "story-scene",
+            "opened": true
+          }
+        },
         {
           "text": "Drag **go to scene** onto the dotted outline.",
           "check": {
@@ -48,7 +57,7 @@
         }
       ]
     },
-    "long_instructions": "# Link your scenes\nDrag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
+    "long_instructions": "# Link your scenes\nOpen your Story scene, then drag **go to scene** onto the dotted outline under **at [9] seconds**. After 9 seconds, your story jumps to your platformer.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -98,7 +107,21 @@
         }
       }
     ],
-    "header_label": "Conclusion"
+    "header_label": "Conclusion",
+    "callouts": [
+      {
+        "target": "scene-option",
+        "scene": "story-scene",
+        "direction": "left",
+        "fallback": {
+          "target": "scene-dropdown",
+          "direction": "down"
+        },
+        "when": {
+          "sceneNever": "story-scene"
+        }
+      }
+    ]
   }
 }]]></config>
 </GamelabJr>

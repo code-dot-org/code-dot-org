@@ -28,8 +28,8 @@ interface VerdictRowProps {
   boxed?: boolean;
 }
 
-/** The question about the picture and the two thumbs; after a thumb down,
-    the two reasons it could be, on a row under the question. */
+/** The question about the picture and the two thumbs; after a thumb down
+    the thumbs stay, settled, and the two reasons it could be follow. */
 export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
   verdict,
   onJudge,
@@ -49,7 +49,31 @@ export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
     <span id="sentence-result-label" className={styles.resultQuestion}>
       How did the AI do?
     </span>
-    {verdict === 'down' ? (
+    <MuiIconButton
+      aria-label="Good"
+      aria-pressed={verdict === 'up'}
+      className={classNames(
+        styles.verdictButton,
+        verdict === 'up' && styles.verdictChosen
+      )}
+      disabled={disabled || verdict === 'down'}
+      onClick={() => onJudge('up')}
+    >
+      <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
+    </MuiIconButton>
+    <MuiIconButton
+      aria-label="Not so good"
+      aria-pressed={verdict === 'down'}
+      className={classNames(
+        styles.verdictButton,
+        verdict === 'down' && styles.verdictChosen
+      )}
+      disabled={disabled || verdict === 'down'}
+      onClick={() => onJudge('down')}
+    >
+      <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
+    </MuiIconButton>
+    {verdict === 'down' && (
       <div className={styles.reasonRow}>
         {VERDICT_REASONS.map(r => (
           <MuiButton
@@ -69,30 +93,6 @@ export const VerdictRow: React.FunctionComponent<VerdictRowProps> = ({
           </MuiButton>
         ))}
       </div>
-    ) : (
-      <>
-        <MuiIconButton
-          aria-label="Good"
-          aria-pressed={verdict === 'up'}
-          className={classNames(
-            styles.verdictButton,
-            verdict === 'up' && styles.verdictChosen
-          )}
-          disabled={disabled}
-          onClick={() => onJudge('up')}
-        >
-          <FontAwesomeV6Icon iconName="thumbs-up" aria-hidden />
-        </MuiIconButton>
-        <MuiIconButton
-          aria-label="Not so good"
-          aria-pressed={false}
-          className={styles.verdictButton}
-          disabled={disabled}
-          onClick={() => onJudge('down')}
-        >
-          <FontAwesomeV6Icon iconName="thumbs-down" aria-hidden />
-        </MuiIconButton>
-      </>
     )}
   </div>
 );

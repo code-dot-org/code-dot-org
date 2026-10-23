@@ -1,6 +1,6 @@
 // The premade world a level can hand a student, painted into its pinned scene.
 
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {imageTypeFromCategories} from './imageGallery';
 import {imageNamedForRole} from './imageRoleDefaults';
@@ -150,9 +150,12 @@ export function useWorldStartPattern({
   animations: RuntimeAnimationList;
   spriteRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
-}): void {
+}): World | null {
   // The effect runs again on every animation change and must not reroll.
   const roll = useRef(Math.random());
+  // The world as the pattern left it: what a level's "changed" check
+  // measures the student's edits against.
+  const [painted, setPainted] = useState<World | null>(null);
   useEffect(() => {
     const pattern = chooseStartPattern(patternOrLayouts, {
       hasProject: !!channelId,
@@ -175,6 +178,7 @@ export function useWorldStartPattern({
       }
       const next = [...scenes];
       next[index] = {...scenes[index], world};
+      setPainted(world);
       return {...prev, scenes: next};
     });
   }, [
@@ -187,4 +191,5 @@ export function useWorldStartPattern({
     spriteRole,
     updateSources,
   ]);
+  return painted;
 }

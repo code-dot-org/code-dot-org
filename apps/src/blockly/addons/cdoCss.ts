@@ -23,6 +23,11 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       stroke: none;
       fill-opacity: 0;
     }
+    .blocklyGhost.blocklyDisabled > .blocklyPath {
+      /* A ghost is a placeholder that runs nothing; it is not dimmed as disabled. */
+      stroke-opacity: 1;
+      fill-opacity: 0.2;
+    }
     .blocklyPlaceholderActive > .blocklyPath {
       /* A blank placeholder gets its outline back under a hovering block. */
       stroke: var(--text-neutral-primary, #fff);

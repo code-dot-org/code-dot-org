@@ -32,6 +32,18 @@ describe('catalogEntries', () => {
     expect(catalogEntries([WITH_HELP], toolbox)[0].sceneType).toBe('platform');
     expect(catalogEntries([WITH_HELP])[0].sceneType).toBeUndefined();
   });
+
+  it('offers a block both scene types list to any scene', () => {
+    const block = {kind: 'block', type: WITH_HELP};
+    const toolbox = {
+      kind: 'categoryToolbox',
+      contents: [
+        {kind: 'category', name: 'Platform', contents: [block]},
+        {kind: 'category', name: 'Story', contents: [block]},
+      ],
+    };
+    expect(catalogEntries([WITH_HELP], toolbox)[0].sceneType).toBeUndefined();
+  });
 });
 
 describe('heldBackBlockTypes', () => {

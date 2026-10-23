@@ -30,6 +30,8 @@ interface SentenceDialogBodyProps {
   /** Where the Type choice starts, or the type the image is locked to. */
   imageType: ImageType;
   imageSubject?: ImageSubject;
+  /** The sentence to offer, by id; the type's own when unset. */
+  sentenceId?: string;
   /** The dialog is making a new image: the Type is the student's choice. */
   typeChoice: boolean;
   /** Generations the student has left; Generate goes off at none. */
@@ -45,6 +47,7 @@ interface SentenceDialogBodyProps {
 const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
   imageType,
   imageSubject,
+  sentenceId,
   typeChoice,
   generationsLeft,
   onKeep,
@@ -185,6 +188,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
     <SentenceScene
       imageType={imageType}
       imageSubject={imageSubject}
+      sentenceId={sentenceId}
       typeChoice={typeChoice}
       generationsLeft={generationsLeft}
       onKeep={onKeep}

@@ -165,6 +165,8 @@ interface GenerateImagePaneProps {
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
+  /** The sentence a new image's form offers, by id. */
+  sentenceId?: string;
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
@@ -236,6 +238,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onDeleteImage,
   lockedImageType: levelImageType,
   lockedImageSubject: levelImageSubject,
+  sentenceId,
   imageRole,
   advanced,
   defaultStyle,
@@ -914,6 +917,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onRename={handleRename}
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
+          sentenceId={sentenceId}
           lockedImageType={lockedImageType}
           lockedImageSubject={lockedImageSubject}
           // No seed means the session started from nothing; any image
