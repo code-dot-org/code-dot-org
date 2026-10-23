@@ -334,7 +334,9 @@ namespace :seed do
 
   # Parse each .[dsl] file and setup its model.
   def parse_dsl_files(dsl_files, dsl_types)
-    level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+    # Use explicit types to match every DSL level, without relying on their
+    # classes to have been eagerly loaded.
+    level_md5s_by_name = Level.where(type: dsl_types).pluck(:name, :md5).to_h
 
     dsl_files.each do |filename|
       dsl_class = dsl_types.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)

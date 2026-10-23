@@ -23,6 +23,7 @@ export interface MultiChoiceQuestionContainerProps {
   // Therefore quiz backed levels should be used for most evaluation scenarios.
   selectedChoiceStatus?: 'correct' | 'incorrect';
   headingRef?: React.Ref<HTMLHeadingElement>;
+  disabled?: boolean;
 }
 
 const MultiChoiceQuestionContainer: React.FunctionComponent<
@@ -34,6 +35,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
   onSelectChoice,
   selectedChoiceStatus,
   headingRef,
+  disabled,
 }) => (
   <AttemptCard
     label={questionLabel}
@@ -55,6 +57,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
             value={choice.id}
             checked={isSelected}
             onChange={() => onSelectChoice(choice.id)}
+            disabled={disabled}
             className={classNames(
               styles.option,
               isSelected && styles.optionSelected,

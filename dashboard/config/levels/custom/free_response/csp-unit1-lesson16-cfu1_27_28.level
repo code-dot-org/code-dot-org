@@ -1,0 +1,33 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-16T16:31:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "> Based on your testing today, is the Fernwood library chatbot accurate enough to use without a human reviewing its answers — or does it need a human in the loop for certain kinds of questions?\r\n>\r\n> Use at least one specific example from your testing to support your answer.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18867,
+    "name_suffix": "_2025",
+    "encrypted_solution": "8kJiA4GirbrbP49LoYVtBCs22tfcinYeysqkBeUsCzl4DAeSXqSgDOshvinL\nt138xNmTIXuIBl07cKkCP0XS8I+3uMZ9/ZFy/m5QCfjKFqLmuxJGjzjb0v3a\nbrZf0evcmlBYBajGXJwxKzNR3I6hUJFe61ScNVwLFPM1L0qCa2ta+jvycuBg\nbQ7N4J89DvnvZpRubmaAQri6X9tjQsxAtSm4AuyHfI4jE/Z1dLZRhtr3cFWj\n6oUqcSIpbze4JiFEwxug4EE/GZhFshbqcPdYataCGuyCFy0Sc0BDvnV1y7fE\ne4QjiZCuEK9cPl06cBkospubTMCHjoX7DUW7xE+SY6yOfk2QKgysORPvEh9a\nFcpqiXF1NjYUASXwnskgm2qtWlyAQoFp1iLDTrW3rtoENYh8cEMpYPJ6aZ4a\n0assA3zQbY1QD4YuEF9u+C22fjx/Cz6jqO5AbO6Tr887bjLeYCtB8/lY3/qs\n8GtbXJtyOCprz44eQ2t25gq0S6LREkiGSFQZO+rRWP6/N4srl5b69fhd6XYn\nCPt1NfF8Z4DzrZqAfUhEWdKXQmxfqsB7h7GczaOCjIYgz3o68roP5nlAotTV\nJXIxb3sYAA9nv07uwnxE+mKAezFjQe9fH+jmP4oQLI3J35TGEsxUa+M9Fkec\nhfckLUqMaBNbYxK0W0FQSUafM37+O2Oq10JpXv9nHAj6iF5EFX4lV52cKx7s\n35mcWX43PJ8JBv8D2ZcWEJTjLcrbR13biD8DKYwnYpuRKdNOMTOjlM6nI/zm\nyLIWBdKAjDJjZO/IG4+FKADTILSNI+Q=\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Reflection: Evaluating Today’s Testing",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false",
+    "teacher_markdown": "A strong answer doesn’t give a flat yes/no — it distinguishes between question types, same as the activity’s own Step 4 asked. \r\n\r\nLook for students who say something like “fine for hours/pricing/policy questions, but needs review for anything about holidays or outside the library’s job” — and who back that up with an actual example from their own test results (a Meets vs. a Fails they recorded), not just a general impression. \r\n\r\nA weaker answer gives a blanket judgment (“yes it’s accurate” or “no, never trust AI”) with no reference to their own evidence."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-16T16:31:00.616+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson7_cfu1_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson7_cfu1_dev_27_28\"},{\"changed_at\":\"2026-10-16 16:33:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

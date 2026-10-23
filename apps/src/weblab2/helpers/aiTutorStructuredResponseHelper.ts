@@ -40,7 +40,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         type: 'array',
         items: CODE_ITEM_SCHEMA,
         description:
-          '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list. ' +
+          '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list, unless the mode contract allows more. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
@@ -72,6 +72,7 @@ export const acceptRejectAnswerTypes = [
   'buildCSS',
   'buildJavaScript',
   'buildJSON',
+  'buildPage',
 ];
 
 const acceptRejectCodeFileTypes = ['html', 'css', 'js', 'json'];

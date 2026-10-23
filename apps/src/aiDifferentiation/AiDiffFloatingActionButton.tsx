@@ -1,7 +1,13 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {
+  noteTaPanelEntryPoint,
+  sendTaEvent,
+  takeTaPanelEntryPoint,
+} from '@cdo/apps/aiTeacherDrawer/analytics';
 import {
   setChatIsOpen,
   fetchThreadMessages,
@@ -200,6 +206,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       });
   }, [context, dispatch]);
 
+  // Only the pre-rebrand PNG reports a load; see showPulse below.
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
   const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
@@ -287,10 +294,38 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     onDragEnd();
   };
 
-  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
+  // The TA rebrand -- new mark, pink disc, count-only badge -- ships with the
+  // rest of the new teacher panel. Without the experiment this is the old FAB,
+  // down to the pulse waiting on the PNG to load.
+  const showRebrandedIcon = experiments.isEnabled('ta-teacher-panel');
+  const showPulse =
+    canShowPulse && !hasOpened && (showRebrandedIcon || isFabImageLoaded);
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButtonRight;
+
+  // Every path that opens the drawer ends in chatIsOpen going true, including
+  // the automatic open above and the teacher panel handle, which never touch
+  // handleClick. Report the open from the transition and let whoever caused it
+  // leave their name behind (see noteTaPanelEntryPoint).
+  const wasChatOpenRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    const wasOpen = wasChatOpenRef.current;
+    wasChatOpenRef.current = chatIsOpen;
+    if (wasOpen === null || wasOpen === chatIsOpen || !chatIsOpen) {
+      return;
+    }
+    const entryPoint = takeTaPanelEntryPoint();
+    sendTaEvent(
+      EVENTS.AI_TA_PANEL_OPENED,
+      {
+        entry_point: entryPoint,
+        context_type: context.type,
+        script_name: scriptName,
+      },
+      entryPoint
+    );
+  }, [chatIsOpen, context.type, scriptName]);
 
   const handleClick = () => {
     if (wasDraggingRef.current) {
@@ -309,6 +344,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    }
+    if (!chatIsOpen) {
+      noteTaPanelEntryPoint(openToNav ? 'nav_shortcut' : 'fab');
     }
     if (openToNav) {
       dispatch(openDrawerToNav(openToNav));
@@ -340,8 +378,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     trySetSessionStorage(SESSION_STORAGE_KEY, false.toString());
     updateUnreadNotificationCount();
   };
-
-  const brand = document.documentElement.dataset.brand;
 
   return (
     <div
@@ -378,14 +414,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           }}
         >
           <Badge
+            // Rebranded, the badge is the unread count and nothing else: MUI
+            // hides it at zero, which covers both "no notifications" and
+            // "still loading". Before the rebrand it doubled as a 'TA' label.
             badgeContent={
               unreadNotificationCount === 'loading'
                 ? 0
-                : unreadNotificationCount > 0
+                : unreadNotificationCount > 0 || showRebrandedIcon
                 ? unreadNotificationCount
                 : 'TA'
             }
-            color="error"
+            color={showRebrandedIcon ? undefined : 'error'}
             overlap="circular"
             aria-label={
               unreadNotificationCount &&
@@ -396,31 +435,42 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
             sx={{
               height: '48px',
               width: '48px',
-              '& .MuiBadge-badge': {
-                backgroundColor:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--background-error-primary)'
-                    : 'var(--background-brand-aqua-primary)',
-                color:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0 ||
-                  brand === 'codeai-next'
-                    ? 'var(--text-neutral-white-fixed)'
-                    : 'var(--text-neutral-black-fixed)',
-                top: '5%',
-                right: '5%',
-              },
+              '& .MuiBadge-badge': showRebrandedIcon
+                ? {
+                    backgroundColor:
+                      'var(--background-neutral-primary-inverse)',
+                    color: 'var(--text-neutral-primary-inverse)',
+                    border: '2px solid var(--background-neutral-primary)',
+                    top: '5%',
+                    right: '18%',
+                  }
+                : {
+                    backgroundColor:
+                      unreadNotificationCount === 'loading' ||
+                      unreadNotificationCount > 0
+                        ? 'var(--background-error-primary)'
+                        : 'var(--background-brand-aqua-primary)',
+                    color: 'var(--text-neutral-white-fixed)',
+                    top: '5%',
+                    right: '5%',
+                  },
             }}
-            className={style.badge}
           >
-            <img
-              alt="AI bot - unread notifications"
-              src={aiFabWithoutText}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-              className={style.fabImageWithBadge}
-              draggable={false}
-            />
+            {showRebrandedIcon ? (
+              <FontAwesomeV6Icon
+                iconFamily="kit"
+                iconName="ta"
+                title={i18n.openOrCloseTeachingAssistant()}
+                className={style.fabIcon}
+              />
+            ) : (
+              <img
+                alt="AI bot - unread notifications"
+                src={aiFabWithoutText}
+                onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+                draggable={false}
+              />
+            )}
           </Badge>
         </button>
       )}

@@ -13,6 +13,16 @@ interface AssessmentPanelProps {
   detail: ChallengeResponseDetail;
 }
 
+const EVALUATION_ERROR_MESSAGES: Record<string, string> = {
+  pii_violation:
+    'This challenge response was flagged for containing personal information.',
+  profanity_violation:
+    'This challenge response was flagged by our content moderation policy.',
+  feedback_violation:
+    'This feedback was flagged by our content moderation policy.',
+  failure: 'An error occurred during evaluation',
+};
+
 // "11:22AM Jun 22" — the timestamp on the feedback chat card.
 const formatTimestamp = (isoDate: string) => {
   const date = new Date(isoDate);
@@ -51,7 +61,10 @@ const FeedbackCard: FC<{detail: ChallengeResponseDetail}> = ({detail}) => (
     </div>
     <div className={styles.chatBody}>
       <Typography variant="body4">
-        {detail.student_feedback || 'Feedback isn’t ready yet.'}
+        {(detail.evaluation_status &&
+          EVALUATION_ERROR_MESSAGES[detail.evaluation_status]) ||
+          detail.student_feedback ||
+          'Feedback isn’t ready yet.'}
       </Typography>
     </div>
   </div>

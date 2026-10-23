@@ -34,7 +34,7 @@ The build context is the repo root, and the Dockerfile is selected with `-f`.
 first and name it:
 
 ```
-docker build -t cdo-build:test docker/build/
+docker build -f docker/build/Dockerfile -t cdo-build:test .
 docker build -f docker/deps/Dockerfile \
   --build-arg BUILD_IMAGE=cdo-build:test \
   -t cdo-deps:test .
@@ -108,6 +108,7 @@ pyproject.toml
 uv.lock
 docker/build/Dockerfile
 docker/deps/Dockerfile
+docker/scripts/install-node.sh
 ```
 
 The key is `bundle-<sha256>` over the concatenated *contents* of those files in
@@ -140,7 +141,7 @@ out why a keyed tag did not resolve — reproduce it in a shell:
 ```
 key="bundle-$(cat .ruby-version Gemfile Gemfile.lock .python-version \
   pyproject.toml uv.lock docker/build/Dockerfile docker/deps/Dockerfile \
-  | sha256sum | cut -d' ' -f1)"
+  docker/scripts/install-node.sh | sha256sum | cut -d' ' -f1)"
 echo "$key"
 ```
 
@@ -163,11 +164,13 @@ build in a pipeline, so a builder stage and a final stage cannot land on
 different bytes. Each platform resolves its own image through that digest.
 
 `.github/workflows/cdo-deps-image.yml` builds and smoke-tests on docker and
-podman, on amd64 and arm64, for every PR touching the key inputs, and
-publishes from staging. It also gates `docker/build`, since every job there
-builds `cdo-build` anyway. The workflow is chained off `cdo-base-image`
-rather than scheduled, so this layer rebuilds on the base that just shipped
-and a failed base rebuilds nothing.
+podman, on amd64 and arm64. Normally, `cdo-base` is pulled from the published
+GHCR registry avoiding an expensive build. However, if its underlying context
+changes (this is automatically detected), `cdo-base` will be built from source
+in the PR. The workflow publishes from staging and also gates `docker/build`,
+since every job there builds `cdo-build` anyway. It is chained off
+`cdo-base-image` rather than scheduled, so this layer rebuilds on the base that
+just shipped and a failed base rebuilds nothing.
 
 ## Things that will bite
 

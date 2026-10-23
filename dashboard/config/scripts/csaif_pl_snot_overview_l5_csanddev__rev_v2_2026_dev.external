@@ -3,45 +3,46 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Troubleshooting with SNOT</h1>
+<h1>Troubleshooting Hardware</h1>
 
-<p>In this lesson's main activity, your students troubleshoot a hardware problem for a client they met in Lesson 1. They work with a partner and use a four-step strategy called SNOT, which gives them a way to narrow down a problem instead of guessing. Students record their thinking in the <a href="https://docs.google.com/document/d/1B7ouAvwOxtIZBm0ljX2x4geEcscIk0xQwvzmmRL1D8g/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Troubleshooting Hardware Issues activity guide (Google Doc)</a>.</p>
+<p>In this lesson's main activity, your students troubleshoot a hardware problem for a client they met in Lesson 1. They work with a partner and use a four-step strategy called SNOT, which gives them a way to narrow down a problem instead of guessing. Students record their thinking in the <a href="https://docs.google.com/document/d/1B7ouAvwOxtIZBm0ljX2x4geEcscIk0xQwvzmmRL1D8g/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Troubleshooting Hardware Issues activity guide (Google Doc)</a>.</p><br>
 
-<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
-<div style="font-size:16px;">
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px;">
 <p>📖 <b>Troubleshooting</b> is a form of problem solving that uses a logical, systematic search for the source of a problem.</p>
-<p>📖 <b>Decomposition</b> is breaking a larger problem into smaller, more manageable parts.</p>
 </div>
+
+<div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin-top:12px;">
+<p>📖 <b>Decomposition</b> is breaking a larger problem into smaller, more manageable parts.</p>
 </div>
 
 <h2>The Four Steps</h2>
 
 <p>Each step shrinks the list of possible causes. That is decomposition in action.</p>
 
-<div style="display:flex; flex-wrap:wrap; gap:12px; margin:20px 0;">
-<div style="flex:1 1 280px; display:flex; gap:12px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
-<div style="flex:0 0 44px; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">S</div>
+<div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin:20px 0;">
+<div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
+<div style="flex-shrink:0; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">S</div>
 <div style="font-size:16px;">
 <p><b>Self</b></p>
 <p>Restate the problem in your own words and make your best guesses about the cause.</p>
 </div>
 </div>
-<div style="flex:1 1 280px; display:flex; gap:12px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
-<div style="flex:0 0 44px; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">N</div>
+<div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
+<div style="flex-shrink:0; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">N</div>
 <div style="font-size:16px;">
 <p><b>Neighbor</b></p>
 <p>Talk through the problem with a partner to compare ideas and rule out unlikely causes.</p>
 </div>
 </div>
-<div style="flex:1 1 280px; display:flex; gap:12px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
-<div style="flex:0 0 44px; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">O</div>
+<div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
+<div style="flex-shrink:0; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">O</div>
 <div style="font-size:16px;">
 <p><b>Online</b></p>
 <p>Check a message board, a chat, and a user manual for evidence that supports or rules out a cause.</p>
 </div>
 </div>
-<div style="flex:1 1 280px; display:flex; gap:12px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
-<div style="flex:0 0 44px; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">T</div>
+<div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start; background-color:#F7F7FB; border-radius:10px; padding:12px 16px;">
+<div style="flex-shrink:0; width:44px; height:44px; background-color:#4C42CF; color:#FFFFFF; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700;">T</div>
 <div style="font-size:16px;">
 <p><b>Technical Expert</b></p>
 <p>Ask questions in an AI chat, the way an expert would, to gather information and eliminate more causes.</p>

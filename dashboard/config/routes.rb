@@ -616,6 +616,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :adaptive_pathways, only: [:show, :update], constraints: {id: /[a-z0-9][a-z0-9_-]{0,63}/}
+
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
       resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
         resources :jit_pl_exemplars, only: [:create, :update, :destroy]
@@ -1533,6 +1535,11 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :quiz_attempts, only: [:index, :create, :update]
+    resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
+      put 'steps/:step_id/progress', action: :update_progress, as: :step_progress
+      put 'steps/:step_id/generated_instructions', action: :update_generated_instructions, as: :step_generated_instructions
+      put 'steps/:step_id/validation_history', action: :update_validation_history, as: :step_validation_history
+    end
     resources :quiz_question_responses, only: [:create]
 
     resources :challenges, only: [:index, :show] do
