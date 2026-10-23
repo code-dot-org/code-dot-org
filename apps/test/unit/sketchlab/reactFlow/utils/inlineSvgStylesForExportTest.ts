@@ -65,6 +65,32 @@ describe('inlineSvgStylesForExport', () => {
     expect(path.getAttribute('style')).toBe('fill: red;');
   });
 
+  it('keeps a value the app changed during the capture', () => {
+    const {path} = buildSvg();
+    path.setAttribute('style', 'fill: blue; stroke: black;');
+    stubComputedStyle({fill: 'rgb(0, 0, 255)', 'stroke-width': '3px'});
+
+    const restore = inlineSvgStylesForExport(document.body);
+    path.style.setProperty('fill', 'red');
+    restore();
+
+    expect(path.style.getPropertyValue('fill')).toBe('red');
+    expect(path.style.getPropertyValue('stroke')).toBe('black');
+    expect(path.style.getPropertyValue('stroke-width')).toBe('');
+  });
+
+  it('restores the priority of an important inline value', () => {
+    const {path} = buildSvg();
+    path.style.setProperty('fill', 'red', 'important');
+    stubComputedStyle({fill: 'rgb(255, 0, 0)'});
+
+    const restore = inlineSvgStylesForExport(document.body);
+    restore();
+
+    expect(path.style.getPropertyValue('fill')).toBe('red');
+    expect(path.style.getPropertyPriority('fill')).toBe('important');
+  });
+
   it('ignores html outside any svg', () => {
     const div = document.createElement('div');
     document.body.appendChild(div);

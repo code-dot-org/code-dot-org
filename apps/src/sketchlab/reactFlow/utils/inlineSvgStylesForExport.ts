@@ -47,28 +47,62 @@ const SVG_PAINT_PROPERTIES = [
   'isolation',
 ];
 
-// Returns a function restoring the style attributes this wrote.
+interface InjectedProperty {
+  property: string;
+  injected: string;
+  original: string;
+  originalPriority: string;
+}
+
+interface ElementEdit {
+  element: SVGElement;
+  hadStyleAttribute: boolean;
+  properties: InjectedProperty[];
+}
+
+// Returns a function restoring the inline values this wrote.
 export const inlineSvgStylesForExport = (root: HTMLElement): (() => void) => {
-  const originalStyles = new Map<SVGElement, string | null>();
+  const edits: ElementEdit[] = [];
   root.querySelectorAll<SVGElement>('svg *').forEach(element => {
     if (!element.style) {
       return;
     }
-    originalStyles.set(element, element.getAttribute('style'));
+    const hadStyleAttribute = element.hasAttribute('style');
     const computed = window.getComputedStyle(element);
+    const properties: InjectedProperty[] = [];
     SVG_PAINT_PROPERTIES.forEach(property => {
       const value = computed.getPropertyValue(property);
-      if (value) {
-        element.style.setProperty(property, value);
+      if (!value) {
+        return;
       }
+      const original = element.style.getPropertyValue(property);
+      const originalPriority = element.style.getPropertyPriority(property);
+      element.style.setProperty(property, value);
+      properties.push({
+        property,
+        injected: element.style.getPropertyValue(property),
+        original,
+        originalPriority,
+      });
     });
+    edits.push({element, hadStyleAttribute, properties});
   });
+
+  // A value that changed during the capture was written by the app, so it stays.
   return () =>
-    originalStyles.forEach((style, element) => {
-      if (style === null) {
+    edits.forEach(({element, hadStyleAttribute, properties}) => {
+      properties.forEach(({property, injected, original, originalPriority}) => {
+        if (element.style.getPropertyValue(property) !== injected) {
+          return;
+        }
+        if (original) {
+          element.style.setProperty(property, original, originalPriority);
+        } else {
+          element.style.removeProperty(property);
+        }
+      });
+      if (!hadStyleAttribute && !element.getAttribute('style')) {
         element.removeAttribute('style');
-      } else {
-        element.setAttribute('style', style);
       }
     });
 };
