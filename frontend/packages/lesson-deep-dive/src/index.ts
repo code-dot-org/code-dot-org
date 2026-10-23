@@ -6,6 +6,10 @@ export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
 export {default as NextStepPicker} from './NextStepPicker';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
+export {default as PracticeMatch} from './SkillsCheck/QuestionTypes/Match';
+export {default as PracticeMultipleChoice} from './SkillsCheck/QuestionTypes/MultipleChoice';
+export {default as PracticeScramble} from './SkillsCheck/QuestionTypes/Scramble';
+export {default as PracticeSort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
@@ -26,7 +30,11 @@ export type {
   Challenge,
   ChallengeResponse,
   ChallengeResponseAsset,
+  MatchSolution,
+  MultiSolution,
+  PracticeProblem,
   Reaction,
+  ScrambleSolution,
 } from './types';
 export {assetWithUrl} from './gallery/assetUtils';
 export {

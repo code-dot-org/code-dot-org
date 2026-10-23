@@ -1,8 +1,9 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useDraggable} from '@dnd-kit/core';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography} from '@mui/material';
-import React from 'react';
+import {type FunctionComponent} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import styles from './practice-problems.module.scss';
 
@@ -13,9 +14,12 @@ interface DraggableOptionProps {
   showAnswer: boolean;
 }
 
-export const DraggableOptions: React.FunctionComponent<
-  DraggableOptionProps
-> = ({id, option, correct, showAnswer}) => {
+export const DraggableOptions: FunctionComponent<DraggableOptionProps> = ({
+  id,
+  option,
+  correct,
+  showAnswer,
+}) => {
   const {attributes, listeners, setNodeRef, transform, isDragging} =
     useDraggable({id});
   const style = {

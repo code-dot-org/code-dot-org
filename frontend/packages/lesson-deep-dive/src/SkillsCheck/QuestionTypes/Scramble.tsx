@@ -15,14 +15,20 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import React, {FC, useState} from 'react';
+import {
+  type Dispatch,
+  type FC,
+  type SetStateAction,
+  useCallback,
+  useState,
+} from 'react';
 
 import {
   MatchSolution,
   MultiSolution,
   PracticeProblem,
   ScrambleSolution,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+} from '../../types';
 
 import {SortableOptionCard} from './SortableOptionCard';
 
@@ -32,12 +38,10 @@ import scrambleStyles from './scramble.module.scss';
 interface PracticeScrambleProps {
   problem: PracticeProblem;
   submitted: boolean;
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  correctCallback: React.Dispatch<React.SetStateAction<boolean>>;
-  studentAnswerCallback: React.Dispatch<
-    React.SetStateAction<
-      (MultiSolution | ScrambleSolution | MatchSolution)[] | null
-    >
+  submitCallback: Dispatch<SetStateAction<boolean>>;
+  correctCallback: Dispatch<SetStateAction<boolean>>;
+  studentAnswerCallback: Dispatch<
+    SetStateAction<(MultiSolution | ScrambleSolution | MatchSolution)[] | null>
   >;
 }
 
@@ -53,7 +57,7 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
   ).sort((a, b) => a.correct - b.correct);
 
   const [sortableOptions, setSortableOptions] = useState<string[]>(
-    sortedOptions.map(s => s.option).sort(() => Math.random() - 0.5)
+    sortedOptions.map(s => s.option).sort(() => Math.random() - 0.5),
   );
 
   const isCorrect = () => {
@@ -63,10 +67,7 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
     return true;
   };
 
-  function moveOption(
-    active: Active,
-    over: Over
-  ): React.SetStateAction<string[]> {
+  function moveOption(active: Active, over: Over): SetStateAction<string[]> {
     return items => {
       const oldIndex = items.indexOf(active.id as string);
       const newIndex = items.indexOf(over.id as string);
@@ -76,17 +77,17 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
 
   const sensors = useSensors(
     useSensor(PointerSensor, {activationConstraint: {distance: 10}}),
-    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates})
+    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}),
   );
 
-  const handleDragEnd = React.useCallback(
+  const handleDragEnd = useCallback(
     (event: DragEndEvent) => {
       const {active, over} = event;
       if (over && active.id !== over.id && !submitted) {
         setSortableOptions(moveOption(active, over));
       }
     },
-    [setSortableOptions, submitted]
+    [setSortableOptions, submitted],
   );
 
   return (
@@ -126,7 +127,7 @@ const PracticeScramble: FC<PracticeScrambleProps> = ({
               sortableOptions.map((opt, index) => ({
                 option: opt,
                 correct: index,
-              }))
+              })),
             );
           }}
         >
