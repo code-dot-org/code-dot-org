@@ -38,6 +38,10 @@ import manageStudents, {
   addStudentsFull,
   transferStudentsFull,
   loadSectionStudentData,
+  parseAge,
+  parseGender,
+  parseUsState,
+  addMultipleAddRows,
   convertStudentServerData,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
@@ -62,6 +66,153 @@ const expectedBlankRow = {
   isEditing: true,
   rowType: RowType.ADD,
 };
+
+describe('parseAge', () => {
+  it('accepts valid ages', () => {
+    assert.strictEqual(parseAge('12'), '12');
+    assert.strictEqual(parseAge('21+'), '21+');
+    assert.strictEqual(parseAge('  4  '), '4');
+  });
+
+  it('normalizes ages 21 and up', () => {
+    assert.strictEqual(parseAge('21'), '21+');
+    assert.strictEqual(parseAge('22'), '21+');
+    assert.strictEqual(parseAge('  30  '), '21+');
+    assert.strictEqual(parseAge(21), '21+');
+  });
+
+  it('rejects invalid ages', () => {
+    assert.strictEqual(parseAge('3'), '');
+    assert.strictEqual(parseAge('abc'), '');
+    assert.strictEqual(parseAge('   '), '');
+  });
+
+  it('rejects falsy ages', () => {
+    assert.strictEqual(parseAge(''), '');
+    assert.strictEqual(parseAge(null), '');
+    assert.strictEqual(parseAge(undefined), '');
+  });
+});
+
+describe('parseGender', () => {
+  it('accepts valid gender values case-insensitively', () => {
+    assert.strictEqual(parseGender('Male'), 'm');
+    assert.strictEqual(parseGender('FEMALE'), 'f');
+    assert.strictEqual(parseGender('M'), 'm');
+    assert.strictEqual(parseGender('m'), 'm');
+    assert.strictEqual(parseGender('F'), 'f');
+    assert.strictEqual(parseGender('f'), 'f');
+    assert.strictEqual(parseGender('non-binary'), 'n');
+    assert.strictEqual(parseGender('nonbinary'), 'n');
+    assert.strictEqual(parseGender('Preferred term not listed'), 'o');
+    assert.strictEqual(parseGender('other'), 'o');
+  });
+
+  it('rejects unrecognized gender values', () => {
+    assert.strictEqual(parseGender('unknown'), '');
+    assert.strictEqual(parseGender('   '), '');
+  });
+
+  it('rejects falsy gender values', () => {
+    assert.strictEqual(parseGender(''), '');
+    assert.strictEqual(parseGender(null), '');
+    assert.strictEqual(parseGender(undefined), '');
+  });
+});
+
+describe('parseUsState', () => {
+  it('accepts valid two-letter state codes case-insensitively', () => {
+    assert.strictEqual(parseUsState('ca'), 'CA');
+    assert.strictEqual(parseUsState('WA'), 'WA');
+    assert.strictEqual(parseUsState('  tx  '), 'TX');
+    assert.strictEqual(parseUsState('wi'), 'WI');
+  });
+
+  it('rejects invalid state codes', () => {
+    assert.strictEqual(parseUsState('XX'), '');
+    assert.strictEqual(parseUsState('California'), '');
+    assert.strictEqual(parseUsState('   '), '');
+  });
+
+  it('rejects falsy state codes', () => {
+    assert.strictEqual(parseUsState(''), '');
+    assert.strictEqual(parseUsState(null), '');
+    assert.strictEqual(parseUsState(undefined), '');
+  });
+});
+
+describe('addMultipleAddRows', () => {
+  it('filters blank names and maps imported fields into new student rows', () => {
+    const dispatch = sinon.spy();
+
+    addMultipleAddRows([
+      {
+        name: '',
+        familyName: 'ignored',
+        age: '12',
+        gender: 'f',
+        usState: 'CA',
+      },
+      {
+        name: 'Ada',
+        familyName: 'Lovelace',
+        age: '14',
+        gender: 'f',
+        usState: 'CA',
+      },
+      {
+        name: 'Lin',
+        familyName: 'Torvalds',
+        age: '12',
+      },
+      {
+        name: 'Katherine',
+        familyName: 'Johnson',
+        age: '21+',
+      },
+      {name: 'Grace'},
+    ])(dispatch);
+
+    assert.strictEqual(dispatch.calledOnce, true);
+
+    const action = dispatch.firstCall.args[0];
+    const rows = Object.values(action.studentData);
+    assert.strictEqual(rows.length, 4);
+
+    const adaRow = rows.find(row => row.name === 'Ada');
+    const linRow = rows.find(row => row.name === 'Lin');
+    const katherineRow = rows.find(row => row.name === 'Katherine');
+    const graceRow = rows.find(row => row.name === 'Grace');
+
+    assert.strictEqual(adaRow.familyName, 'Lovelace');
+    assert.strictEqual(adaRow.age, '14');
+    assert.strictEqual(adaRow.genderTeacherInput, 'f');
+    assert.strictEqual(adaRow.sharingDisabled, false);
+    assert.strictEqual(adaRow.usState, 'CA');
+    assert.strictEqual(adaRow.isEditing, true);
+    assert.strictEqual(adaRow.rowType, RowType.NEW_STUDENT);
+
+    assert.strictEqual(linRow.age, '12');
+    assert.strictEqual(linRow.sharingDisabled, true);
+
+    assert.strictEqual(katherineRow.age, '21+');
+    assert.strictEqual(katherineRow.sharingDisabled, false);
+
+    assert.strictEqual(graceRow.familyName, '');
+    assert.strictEqual(graceRow.age, '');
+    assert.strictEqual(graceRow.genderTeacherInput, '');
+    assert.strictEqual(graceRow.sharingDisabled, true);
+    assert.strictEqual(graceRow.usState, null);
+    assert.strictEqual(graceRow.isEditing, true);
+    assert.strictEqual(graceRow.rowType, RowType.NEW_STUDENT);
+
+    assert.isBelow(adaRow.id, 0);
+    assert.isBelow(linRow.id, 0);
+    assert.isBelow(katherineRow.id, 0);
+    assert.isBelow(graceRow.id, 0);
+    assert.notStrictEqual(adaRow.id, graceRow.id);
+  });
+});
 
 describe('manageStudentsRedux', () => {
   const initialState = manageStudents(undefined, {});
@@ -802,6 +953,42 @@ describe('manageStudentsRedux', () => {
       };
       assert.deepEqual(nextState.studentData, expectedData);
       assert.deepEqual(nextState.editingData, expectedData);
+    });
+
+    it('includes age, gender, and usState when provided', () => {
+      const action = addMultipleRows({
+        '-1': {
+          id: -1,
+          name: 'student -1',
+          familyName: '',
+          age: '14',
+          genderTeacherInput: 'f',
+          usState: 'CA',
+          isEditing: true,
+        },
+      });
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData['-1'].age, '14');
+      assert.deepEqual(nextState.studentData['-1'].genderTeacherInput, 'f');
+      assert.deepEqual(nextState.studentData['-1'].usState, 'CA');
+    });
+
+    it('stores empty string or null for age, gender, and usState when not provided', () => {
+      const action = addMultipleRows({
+        '-1': {
+          id: -1,
+          name: 'student -1',
+          familyName: '',
+          age: '',
+          genderTeacherInput: '',
+          usState: null,
+          isEditing: true,
+        },
+      });
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.studentData['-1'].age, '');
+      assert.deepEqual(nextState.studentData['-1'].genderTeacherInput, '');
+      assert.deepEqual(nextState.studentData['-1'].usState, null);
     });
   });
 
