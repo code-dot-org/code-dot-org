@@ -14,8 +14,8 @@ Part of the [partitioned curriculum data proposal](https://docs.google.com/docum
 
 ## Naming
 
-Which tree something belongs to is decided by the name of the thing defined,
-not by where its file happens to sit:
+Which partition something belongs to is decided by the name of the thing
+defined, not by where its file happens to sit:
 
 - course offerings, courses, units: names beginning `ui-test-`, e.g.
   `ui-test-csf`
@@ -45,7 +45,7 @@ enforced in the models:
   child, may not be renamed across the boundary, since that would move its
   definition file between the trees or split it from its relatives.
 
-`grep -r ui_test_name? dashboard` finds every enforcement point.
+`grep -r ui_test_partition_name? dashboard` finds every enforcement point.
 
 ## Seeding
 

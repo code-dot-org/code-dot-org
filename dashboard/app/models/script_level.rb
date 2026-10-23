@@ -109,7 +109,7 @@ class ScriptLevel < ApplicationRecord
     keys = keys.compact.reject {|key| key.start_with?('blockly:')}
     return [] if keys.empty?
     ui_test_script = ui_test_script?
-    keys.reject {|key| Level.ui_test_name?(key) == ui_test_script}
+    keys.reject {|key| Level.ui_test_partition_name?(key) == ui_test_script}
   end
 
   def cross_partition_levels_message(offending_level_keys)
