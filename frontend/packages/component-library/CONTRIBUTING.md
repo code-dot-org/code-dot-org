@@ -26,30 +26,26 @@ Here’s a quick guide to the contribution process:
    If you don't have access to our slack, feel free to reach out through github issues, pull requests or any other
    means of communication.
 
-   - **Get approval** from @markabarrett and/or @moshebaricdo (design team).
-   - For technical details, ask @levadadenys and/or @kelbyhawn (engineering team).
+   - **Get approval** from the design team.
+   - For technical details, ask `@code-dot-org/component-library-engineering-reviewers`.
 
 2. **Create a separate PR** with `@code-dot-org/component-library` code changes.
 
    - Make sure the PR follows the [Best Practices](./README.md/#best-practices).
    - Include test cases and Storybook updates where applicable.
 
-3. **Get it approved** by:
-
-   - ✅ @moshebaricdo and/or @markabarrett (design)
-   - ✅ @levadadenys and/or @kelbyhawn (technical implementation)
+3. **Get it approved** by the design team and by `@code-dot-org/component-library-engineering-reviewers`, the
+   code owners of this package (see [.github/CODEOWNERS](../../../.github/CODEOWNERS)).
 
 4. **Merge the PR** once approved.
 
-5. **Use it in your code → Celebrate → Collect tons of appreciation!** 🎉
-
 ## 🧑‍💻 How to Add a New Component
 
-1. **Create a new component** in `src/componentLibrary`.
+1. **Create a new component** in `src/<name>/`.
 2. Follow the component structure (see any component for example, for best result - see at least couple components)
    and [Best Practices](./README.md/#best-practices).
-3. Add a Storybook story under `stories/`.
-4. Write unit tests using Jest + RTL + @testing-library/user-event.
+3. Add a Storybook story at `src/<name>/stories/<Name>.story.tsx`.
+4. Write unit tests in `src/<name>/__tests__/` using Vitest + RTL + @testing-library/user-event.
 5. Ensure accessibility using `axe` and screen readers. (see [README Accessibility Section](./README.md#-accessibility))
 6. Submit a PR following the [Contribution Roadmap](#-contribution-roadmap).
 
@@ -113,15 +109,15 @@ const SomeComponent = props => {
 
 ## 🎯 Coding Standards
 
-✅ Use **TypeScript** for type safety.  
-✅ Follow the [Best Practices](./README.md#best-practices) section in the README.  
-✅ Use **semantic colors** from `@code-dot-org/component-library-styles/colors.scss` where possible.  
-✅ Ensure components are tested using Jest + RTL + @testing-library/user-event..  
-✅ Follow the [Styling Guidelines](./README.md#styling) to avoid CSS specificity issues.
+- Use **TypeScript** for type safety.
+- Follow the [Best Practices](./README.md#best-practices) section in the README.
+- Use **semantic colors** from `@code-dot-org/component-library-styles/colors.css` where possible.
+- Ensure components are tested using Vitest + RTL + @testing-library/user-event.
+- Follow the [Styling Guidelines](./README.md#styling) to avoid CSS specificity issues.
 
 ## 🧪 How to Test Your Component
 
-1. **Unit Tests** — Write tests using Jest + RTL + @testing-library/user-event..
+1. **Unit Tests** — Write tests using Vitest + RTL + @testing-library/user-event.
 2. **Storybook Tests** — Ensure Storybook displays the component correctly.
 3. **Accessibility Tests** — Run Axe tests and verify with a screen reader. (see [README Accessibility Section](./README.md#-accessibility))
 4. **Visual Regression Tests** — Ensure the component appears correctly in all supported themes.
@@ -168,8 +164,7 @@ docs(typography): update documentation for heading elements
 If you need help at any point, reach out to:
 
 - `#ask-design-system` Slack channel
-- @moshebaricdo, @markabarrett for design questions
-- @levadadenys, @kelbyhawn for technical implementation questions
+- `@code-dot-org/component-library-engineering-reviewers` for technical implementation questions
 
 ## 💡 Tips for a Smooth PR Review
 

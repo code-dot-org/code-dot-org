@@ -8,6 +8,7 @@ This package exports one styled React component: [Tags](Tags.tsx). You can impor
 import Tags from '@code-dot-org/component-library/tags';
 ```
 
-For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [Design System / Tags](http://localhost:9001/?path=/story/designsystem-tags-component--default-tags).
+For guidelines on how to use these components and the features they
+offer, [visit Storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook/?path=/docs/designsystem-tags--docs).
+Or run storybook locally and go
+to [DesignSystem / Tags](http://localhost:6006/?path=/docs/designsystem-tags--docs).
