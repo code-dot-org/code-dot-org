@@ -3,10 +3,12 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {
+  itemsOn,
   labelOf,
   letterOf,
   MatchPairs,
   MatchSets,
+  MatchSide,
   partnerOf,
 } from './matchPairing';
 
@@ -14,7 +16,7 @@ import styles from './match-question-container.module.scss';
 
 interface MatchColumnProps {
   matchSets: MatchSets;
-  set: 0 | 1;
+  side: MatchSide;
   pairs: MatchPairs;
   selectedId: string | undefined;
   onClickItem: (id: string) => void;
@@ -25,7 +27,7 @@ interface MatchColumnProps {
 
 const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   matchSets,
-  set,
+  side,
   pairs,
   selectedId,
   onClickItem,
@@ -33,19 +35,19 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   disabled,
 }) => (
   <div className={styles.column}>
-    {matchSets[set].map(item => {
+    {itemsOn(matchSets, side).map(item => {
       const partnerId = partnerOf(pairs, item.id);
       const isSelected = selectedId === item.id;
-      // A second-set item shows its partner's letter once paired.
+      // An end item shows its partner's letter once paired.
       const letter =
-        set === 0
+        side === 'start'
           ? letterOf(matchSets, item.id)
           : partnerId && letterOf(matchSets, partnerId);
       return (
         <button
           key={item.id}
           type="button"
-          className={classNames(styles.card, set === 1 && styles.second, {
+          className={classNames(styles.card, side === 'end' && styles.end, {
             [styles.cardActive]: partnerId || isSelected,
           })}
           aria-pressed={isSelected}
@@ -61,9 +63,9 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
           disabled={disabled}
         >
           <Typography
-            variant={set === 0 ? 'body2' : 'body3'}
+            variant={side === 'start' ? 'body2' : 'body3'}
             component="span"
-            className={classNames(set === 0 && styles.firstText)}
+            className={classNames(side === 'start' && styles.startText)}
           >
             {item.text}
           </Typography>

@@ -7,7 +7,15 @@ export interface MatchItem {
 
 export type MatchSets = [MatchItem[], MatchItem[]];
 
-// A pair is [id from the first set, id from the second set].
+// A column, by reading order: start is the left column in left-to-right
+// languages. The start column shows the first set, whose items are lettered.
+export type MatchSide = 'start' | 'end';
+
+export function itemsOn(matchSets: MatchSets, side: MatchSide): MatchItem[] {
+  return matchSets[side === 'start' ? 0 : 1];
+}
+
+// A pair is [start id, end id].
 export type MatchPairs = [string, string][];
 
 // Pairing two items replaces any pair either was already in, so each item
@@ -15,40 +23,40 @@ export type MatchPairs = [string, string][];
 // unpairs them instead.
 export function toggleMatch(
   pairs: MatchPairs,
-  [firstId, secondId]: [string, string]
+  [startId, endId]: [string, string]
 ): MatchPairs {
   const isExisting = pairs.some(
-    ([first, second]) => first === firstId && second === secondId
+    ([start, end]) => start === startId && end === endId
   );
   const others = pairs.filter(
-    ([first, second]) => first !== firstId && second !== secondId
+    ([start, end]) => start !== startId && end !== endId
   );
-  return isExisting ? others : [...others, [firstId, secondId]];
+  return isExisting ? others : [...others, [startId, endId]];
 }
 
 export function partnerOf(pairs: MatchPairs, id: string): string | undefined {
-  for (const [first, second] of pairs) {
-    if (first === id) {
-      return second;
+  for (const [start, end] of pairs) {
+    if (start === id) {
+      return end;
     }
-    if (second === id) {
-      return first;
+    if (end === id) {
+      return start;
     }
   }
   return undefined;
 }
 
-// Each first-set item has a letter by position.
+// Each start item has a letter by position.
 export function letterOf(matchSets: MatchSets, id: string): string | undefined {
-  const index = matchSets[0].findIndex(item => item.id === id);
+  const index = itemsOn(matchSets, 'start').findIndex(item => item.id === id);
   return index === -1 ? undefined : formatChoiceLetter(index);
 }
 
-// For accessible names: a first-set item's label leads with its letter.
+// For accessible names: a start item's label leads with its letter.
 export function labelOf(matchSets: MatchSets, id: string): string | undefined {
-  const first = matchSets[0].find(item => item.id === id);
-  if (first) {
-    return `${letterOf(matchSets, id)}. ${first.text}`;
+  const startItem = itemsOn(matchSets, 'start').find(item => item.id === id);
+  if (startItem) {
+    return `${letterOf(matchSets, id)}. ${startItem.text}`;
   }
-  return matchSets[1].find(item => item.id === id)?.text;
+  return itemsOn(matchSets, 'end').find(item => item.id === id)?.text;
 }
