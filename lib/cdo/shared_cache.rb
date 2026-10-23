@@ -43,8 +43,11 @@ module Cdo
       # on import), it will get created without any of the configuration values
       # we expect to be applied to it. So, we only allow CDO.shared_cache to be
       # consulted after initialization.
-      raise "Shared cache tried to initialize before the Rails application has loaded." unless Rails.try(:application).present?
+      if defined?(@@cache_format_version) && @@cache_format_version != ActiveSupport::Cache.format_version
+        raise "config.active_support.cache_format_version changed since initialization, from #{@@cache_format_version} to #{ActiveSupport::Cache.format_version}"
+      end
 
+      @@cache_format_version ||= ActiveSupport::Cache.format_version
       @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(cache_dir))
     end
 
