@@ -1,9 +1,9 @@
 # cdo-base
 
-Shared minimal base image for code-dot-org container flavors. Downstream
-images (build stage, runtime-web, runtime-worker, dev, ci) layer on top of
-this. The base carries runtime dependencies only: no build toolchain, no
-Node, no gems, no source tree.
+Shared minimal base image for code-dot-org container flavors. The family is
+cdo-base → cdo-build → cdo-deps → cdo-rails; see [the image
+family](../README.md#the-image-family). The base carries runtime dependencies
+only: no build toolchain, no Node, no gems, no source tree.
 
 Contents: Ruby 3.2.11 (slim bookworm), the MySQL client + client libs,
 ImageMagick, jemalloc (preloaded via `LD_PRELOAD`), curl, CA certs, locales,

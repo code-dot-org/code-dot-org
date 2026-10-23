@@ -1,68 +1,27 @@
-cdo-users Cookbook
-==================
-TODO: Enter the cookbook description here.
+# cdo-users
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Creates a login account for each entry in `node['cdo-users']`.
 
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+The entries are not in this repo. They are node attributes held on the Chef
+Infra Server, so adding a user is an edit there, not a commit
+here. The cookbook defines no defaults.
 
-e.g.
-#### packages
-- `toaster` - cdo-users needs toaster to brown your bagel.
+For each `user_name => user_data` pair the recipe creates:
 
-Attributes
-----------
-TODO: List your cookbook attributes here.
+- the user and a group of the same name, with home directory `user_data['home']`
+  (default `/home/<user_name>`) and shell `user_data['shell']` (default
+  `/bin/bash`);
+- `.bashrc`, `.bash_logout`, `.inputrc` and `.profile`, written only if absent;
+- `.forward`, if `user_data['email']` is set;
+- `.ssh/authorized_keys` from `user_data['ssh-key']`;
+- `.ssh/server_access_key{,.pub}` and `.ssh/drone_access_key`, the shared
+  keys from `node['cdo-servers']`;
+- `.ssh/config`, listing every Chef node and, when AWS credentials are
+  configured, every running EC2 instance with a `Name` tag;
+- `.aws/config`, from `user_data['cdo-awscli']` or else `node['cdo-awscli']`;
+- `.chef/knife.rb`, naming `user_data['chef-user']` as the knife client.
 
-e.g.
-#### cdo-users::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['cdo-users']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+All listed users are made members of the `chef` group, which has group
+read/write on `/etc/chef/validation.pem`.
 
-Usage
------
-#### cdo-users::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `cdo-users` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[cdo-users]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
+A user removed from `node['cdo-users']` is not deleted from the host.

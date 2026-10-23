@@ -4,14 +4,16 @@
 
 Let's say we want to fetch `staging/cdo/db_writer` from our dashboard pod (aka "container")
 
+Steps 2-6 (ESO and its IAM roles) are defined in the [k8s-gitops](https://github.com/code-dot-org/k8s-gitops) repo, not here.
+
 1. In AWS Secrets Manager we have: `staging/cdo/db_writer` ([`config.yml.erb`](../../config.yml.erb))
-1. In the Kubernetes cluster, we install the [External Secrets Operator (ESO)](https://external-secrets.io/) using helm+opentofu (see: [`cluster-infra-argocd/helm.tf`](../tofu/codeai-k8s/cluster-infra-argocd/helm.tf))
-1. In each Kubernetes namespace (staging/prod/levelbuilder/test/adhoc-*) we provision a namespace-scoped ESO `SecretStore` named `aws-secrets-manager-store` ([`infra/eso-per-envtype/templates/_envtype.tpl`](../tofu/codeai-k8s/cluster-infra-argocd/infra/eso-per-envtype/templates/_envtype.tpl))
-1. That `SecretStore` uses a dedicated Kubernetes service account for staging, tied to AWS via IRSA. (see: [`infra/eso-per-envtype/templates/_envtype.tpl`](../tofu/codeai-k8s/cluster-infra-argocd/infra/eso-per-envtype/templates/_envtype.tpl))
-1. The AWS IAM role for that service account is scoped to be able to access only AWS Secrets matching: ([`modules/eso-per-envtype/iam.tf`](../tofu/codeai-k8s/cluster-infra/infra/standard-envtypes/modules/eso-per-envtype/iam.tf))
+1. In the Kubernetes cluster, we install the [External Secrets Operator (ESO)](https://external-secrets.io/) as an Argo CD application wrapping its Helm chart (see: [`external-secrets-operator/application.yaml`](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/external-secrets-operator/application.yaml))
+1. In each Kubernetes namespace (staging/prod/levelbuilder/test/adhoc-*) we provision a namespace-scoped ESO `SecretStore` named `aws-secrets-manager-store` ([`standard-envtypes/chart/templates/_envtype.tpl`](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/standard-envtypes/chart/templates/_envtype.tpl))
+1. That `SecretStore` uses a dedicated Kubernetes service account for staging, tied to AWS via IRSA. (see: [`standard-envtypes/chart/templates/_envtype.tpl`](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/standard-envtypes/chart/templates/_envtype.tpl))
+1. The AWS IAM role for that service account, a Crossplane resource, is scoped to be able to access only AWS Secrets matching: ([`standard-envtypes/chart/templates/aws/single-namespace-envtypes-iam.yaml`](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/standard-envtypes/chart/templates/aws/single-namespace-envtypes-iam.yaml))
    - `staging/cdo/*`
    - `CfnStack/staging/*`
-1. OpenTofu provisions an `ExternalSecret` which configures the External Secrets Operator to periodically sync AWS secrets matching `staging/cdo/*` into Kubernetes Secret `cdo-external-secrets` (see: [`infra/eso-per-envtype/templates/_envtype.tpl`](../tofu/codeai-k8s/cluster-infra-argocd/infra/eso-per-envtype/templates/_envtype.tpl))
+1. The same chart provisions an `ExternalSecret` which configures the External Secrets Operator to periodically sync AWS secrets matching `staging/cdo/*` into Kubernetes Secret `cdo-external-secrets` (see: [`standard-envtypes/chart/templates/_envtype.tpl`](https://github.com/code-dot-org/k8s-gitops/blob/main/apps/infra/standard-envtypes/chart/templates/_envtype.tpl))
    - While syncing it rewrites keys to remove the `staging/cdo/` prefix from AWS Secrets Manager secret names
    - The sync refreshes every 5 minutes
 1. So now we have in our Kubernetes cluster in the `staging` namespace a Kubernetes Secret `cdo-external-secrets` with 50+ child keys, one of which is `db_writer`

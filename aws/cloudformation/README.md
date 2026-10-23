@@ -62,7 +62,7 @@ bundle exec rake stack:iam:validate RAILS_ENV=production
 unset AWS_PROFILE
 ```
 
-To update the stack, you will need to set the `ADMIN` environment variable to [change the role](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/cdo/aws/cloud_formation.rb#L207) executing the change.
+To update the stack, you will need to set the `ADMIN` environment variable to change the role executing the change (see `base_options` in [`cloud_formation.rb`](../../lib/cdo/aws/cloud_formation.rb)).
 
 ```
 export AWS_PROFILE=codeorg-admin
@@ -72,4 +72,4 @@ unset AWS_PROFILE
 
 ### domain_redirect
 
-"domain_redirect.yml.erb" describes a generic domain redirect stack, and is used with "domain_redirect_deploy.sh"
+"domain_redirect.yml.erb" describes a generic domain redirect stack, and is used with "domain_redirect.sh"
