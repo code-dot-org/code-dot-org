@@ -25,6 +25,7 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
+import type {ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -34,7 +35,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
-import {type AilabProjectSources, sourceToProject} from '../sources';
+import {sourceToProject} from '../sources';
 import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
@@ -42,7 +43,7 @@ import styles from './ailab-view.module.scss';
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
   hasEdited: boolean;
-  savedSource: AilabProjectSources['source'];
+  savedSource: ProjectSources['source'];
   save: (project: AilabProject) => void;
   startOver: () => void;
   projectManager: ProjectManager | null;
