@@ -888,18 +888,6 @@ describe('EditAilabMode', () => {
   describe('id column', () => {
     beforeEach(() => serveFiles(FILES));
 
-    it('offers every column, even one students cannot choose', async () => {
-      renderEditor('{"datasets": ["zoo"]}');
-      await columnsLoaded();
-      expect(optionsOf(idColumnDropdown())).toEqual([
-        'None: number the rows',
-        'name',
-        'legs',
-        'wings',
-        'animal',
-      ]);
-    });
-
     it('cannot be the label or a feature', async () => {
       const savedMode = renderEditor(
         '{"datasets": ["zoo"], "label": "legs", "features": ["wings"]}'

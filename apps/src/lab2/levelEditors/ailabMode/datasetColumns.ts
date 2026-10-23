@@ -46,7 +46,6 @@ export async function fetchDatasetColumns(
   };
 }
 
-// Students cannot predict the id column or predict from it.
 export function withoutIdColumn(
   columns: DatasetColumns | undefined,
   idColumn: string | undefined

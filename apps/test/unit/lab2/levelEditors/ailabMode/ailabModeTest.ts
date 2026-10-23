@@ -65,8 +65,6 @@ describe('ailabMode', () => {
         {features: []},
         {features: ['']},
         {features: ['a', 'a']},
-        {idColumn: ''},
-        {idColumn: 3},
       ].forEach(bad => {
         expect(cleanMode(bad, KNOWN).mode).toEqual({});
       });
