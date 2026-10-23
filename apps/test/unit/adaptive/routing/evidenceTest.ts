@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/adaptive/routing/evidence';
 import {
   Checkpoint,
+  LevelStep,
   MultipleChoiceDiagnosticQuestion,
   Pathway,
   QuestionsStep,
@@ -64,15 +65,27 @@ const panelsStep = (id: string): Checkpoint['steps'][number] => ({
   panels: [{key: `${id}-1`, imageUrl: 'x.png', text: id}],
 });
 
+/** A project step whose work is checked against a condition and rated on `skillId`. */
+const projectStep = (id: string, skillId?: string): LevelStep => ({
+  id,
+  title: id,
+  kind: 'level',
+  level: `${id}-level`,
+  project: true,
+  ...(skillId && {
+    validation: {condition: 'Adds a heading.', measures: {skillId}},
+  }),
+});
+
 const checkpoint = (
   id: string,
   steps: Checkpoint['steps'],
   rest: Partial<Checkpoint> = {}
 ): Checkpoint => ({id, title: id, description: id, steps, ...rest});
 
-// Two skills: build measured by a survey and a graded question in the intro
-// and by a later check; debug by one survey question. A panels step sits
-// between, showing nothing.
+// Two skills: build measured by a survey and a graded question in the intro,
+// by a later check, and by the checks of a project step's work; debug by one
+// survey question. A panels step sits between, showing nothing.
 const intro = questionsStep('intro-check', [
   unmeasured,
   survey(1, 'build', {a: 0, b: 1, c: 2}),
@@ -80,16 +93,36 @@ const intro = questionsStep('intro-check', [
   survey(3, 'debug', {a: 0, b: 2}),
 ]);
 const later = questionsStep('later-check', [graded(4, 'build', 3)]);
+const build = projectStep('build-page', 'build');
 const pathway = {
   checkpoints: [
     checkpoint('intro', [panelsStep('welcome'), intro]),
-    checkpoint('basics', [later], {
+    checkpoint('basics', [later, build, projectStep('unchecked')], {
       skillIds: ['build'],
       requires: ['intro'],
       targetEvidenceLevels: {build: 2},
     }),
   ],
 } as unknown as Pathway;
+
+/** Progress with the project step's work checked at the given evidence levels, in order. */
+const checked = (
+  stepId: string,
+  evidenceLevels: number[],
+  pass = false
+): Progress => ({
+  steps: {
+    [stepId]: {
+      timeSpent: 0,
+      validationHistory: evidenceLevels.map((evidenceLevel, i) => ({
+        at: `2026-10-22T10:0${i}:00Z`,
+        pass,
+        evidenceLevel,
+        reason: `Try ${i}`,
+      })),
+    },
+  },
+});
 
 /** Progress with the given picks answered, by step and question id. */
 const answered = (entries: {
@@ -113,9 +146,15 @@ const answered = (entries: {
 });
 
 const question = (stepId: string, questionId: number) => ({
-  kind: 'question',
+  kind: 'questions',
   stepId,
   questionId,
+});
+
+const validation = (stepId: string, at: string) => ({
+  kind: 'validation',
+  stepId,
+  at,
 });
 
 describe('computeEvidence', () => {
@@ -190,6 +229,44 @@ describe('computeEvidence', () => {
     expect(
       computeEvidence(pathway, answered({'intro-check': {3: ['c']}}))
     ).toEqual({});
+  });
+
+  it("reads each check of a project step's work, keeping the highest evidence level", () => {
+    expect(computeEvidence(pathway, checked('build-page', [1, 2]))).toEqual({
+      build: {
+        skillId: 'build',
+        evidenceLevel: 2,
+        source: 'validation',
+        from: [validation('build-page', '2026-10-22T10:01:00Z')],
+      },
+    });
+  });
+
+  it('leaves the evidence where it was when a later check rates the work lower', () => {
+    expect(
+      computeEvidence(pathway, checked('build-page', [2, 1])).build
+    ).toMatchObject({
+      evidenceLevel: 2,
+      from: [validation('build-page', '2026-10-22T10:00:00Z')],
+    });
+  });
+
+  it("lets a check of the student's work outrank what they answered, at any evidence level", () => {
+    const progress: Progress = {
+      steps: {
+        ...answered({'intro-check': {1: ['c']}}).steps,
+        ...checked('build-page', [1]).steps,
+      },
+    };
+    expect(computeEvidence(pathway, progress).build).toMatchObject({
+      evidenceLevel: 1,
+      source: 'validation',
+    });
+  });
+
+  it('shows nothing for a project step with no validation block or no checks', () => {
+    expect(computeEvidence(pathway, checked('unchecked', [2]))).toEqual({});
+    expect(computeEvidence(pathway, checked('build-page', []))).toEqual({});
   });
 
   it('keeps skills apart', () => {

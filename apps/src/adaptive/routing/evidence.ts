@@ -5,17 +5,16 @@
 
 import type {Answer, Progress, StepProgress} from '../progress/model';
 import {Measures} from '../schema/question';
-import {Checkpoint, Pathway, QuestionsStep, Step} from '../types';
+import {Checkpoint, LevelStep, Pathway, QuestionsStep, Step} from '../types';
 
-/** What made an observation: answered questions, with judges of student work to follow. */
-type EvidenceSource = 'questions';
+/** What made an observation: answered questions, or a check of the student's work on a project step. */
+type EvidenceSource = 'questions' | 'validation';
 
 /** Where one observation of a skill came from. */
-type EvidencePointer = {
-  kind: 'question';
-  stepId: string;
-  questionId: number;
-};
+type EvidencePointer = {kind: EvidenceSource; stepId: string} & (
+  | {kind: 'questions'; questionId: number}
+  | {kind: 'validation'; at: string}
+);
 
 /** One thing a step showed about one skill. */
 interface EvidenceObservation {
@@ -40,11 +39,15 @@ interface SkillEvidence {
 export type PathwayEvidence = {[skillId: string]: SkillEvidence};
 
 /**
- * Sources from weakest to strongest. Where two show the same skill the
- * stronger one's evidence stands whatever its evidence level, since what a
- * student did outranks what they answered.
+ * How much each source outranks the others. Where two show the same skill
+ * the higher-ranked one's evidence stands whatever its evidence level,
+ * since what a student did outranks what they answered. Sources of equal
+ * rank are weighed by evidence level, as observations within one source are.
  */
-const SOURCE_PRECEDENCE: EvidenceSource[] = ['questions'];
+const SOURCE_RANK: {[source in EvidenceSource]: number} = {
+  validation: 2,
+  questions: 1,
+};
 
 /** The default target for a skill a checkpoint lists but sets no target for. */
 const DEFAULT_TARGET_EVIDENCE_LEVEL = 1;
@@ -82,8 +85,8 @@ function addObservation(
   {skillId, evidenceLevel, source, from}: EvidenceObservation
 ): void {
   const prior = evidence[skillId];
-  const rank = SOURCE_PRECEDENCE.indexOf(source);
-  const priorRank = prior ? SOURCE_PRECEDENCE.indexOf(prior.source) : -1;
+  const rank = SOURCE_RANK[source];
+  const priorRank = prior ? SOURCE_RANK[prior.source] : 0;
   const higher =
     !prior ||
     rank > priorRank ||
@@ -103,9 +106,30 @@ function getStepEvidence(
   switch (step.kind) {
     case 'questions':
       return questionsStepEvidence(step, entry);
+    case 'level':
+      return levelStepEvidence(step, entry);
     default:
       return [];
   }
+}
+
+/**
+ * Observations from every check of a project step's work: each shows the
+ * evidence level the judge rated the work at, in the skill the step
+ * measures. A step with no validation block shows nothing.
+ */
+function levelStepEvidence(
+  step: LevelStep,
+  entry: StepProgress | undefined
+): EvidenceObservation[] {
+  const skillId = step.validation?.measures.skillId;
+  if (!skillId) return [];
+  return (entry?.validationHistory ?? []).map(attempt => ({
+    skillId,
+    evidenceLevel: attempt.evidenceLevel,
+    source: 'validation',
+    from: {kind: 'validation', stepId: step.id, at: attempt.at},
+  }));
 }
 
 /**
@@ -133,7 +157,7 @@ function questionsStepEvidence(
       skillId: question.measures.skillId,
       evidenceLevel,
       source: 'questions',
-      from: {kind: 'question', stepId: step.id, questionId: question.id},
+      from: {kind: 'questions', stepId: step.id, questionId: question.id},
     });
   }
   return observations;
