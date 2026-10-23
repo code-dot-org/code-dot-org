@@ -9,6 +9,7 @@ import {
   ChatAsset,
   ChatEvent,
   ChatMessage,
+  ChatPromptModes,
   CompletedChatMessage,
   FeedbackValue,
   isCompletedChatMessage,
@@ -33,6 +34,7 @@ const initialState: AichatState = {
   stagedFilesAlert: undefined,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
+  promptModes: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -210,6 +212,9 @@ const aichatSlice = createSlice({
     ) {
       state.chatWorkspaceSelectedTab = action.payload;
     },
+    setPromptModes(state, action: PayloadAction<ChatPromptModes | undefined>) {
+      state.promptModes = action.payload;
+    },
     addItemToUserAddedSelectionContext(
       state,
       action: PayloadAction<UserAddedSelectionContextItem>
@@ -277,6 +282,7 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setChatWorkspaceSelectedTab,
+  setPromptModes,
   addItemToUserAddedSelectionContext,
   removeItemFromUserAddedSelectionContext,
   clearUserAddedSelectionContext,

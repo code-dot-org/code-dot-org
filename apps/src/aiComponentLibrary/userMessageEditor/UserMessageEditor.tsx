@@ -1,4 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
 import React, {useState, useMemo, useEffect, useRef, useCallback} from 'react';
@@ -18,12 +20,20 @@ const MAX_MESSAGE_LENGTH = 10000;
  * Renders the user message editor component.
  */
 
+export interface SubmitAction {
+  value: string;
+  label: string;
+  icon: Pick<FontAwesomeV6IconProps, 'iconName' | 'iconStyle'>;
+}
+
 export interface UserMessageEditorProps {
   userMessage: string;
   onChange: (userMessage: string) => void;
+  /** submitAction is the clicked action's value; Enter passes none. */
   onSubmit: (
     userMessage: string,
-    analyticsProperties?: AnalyticsProperties
+    analyticsProperties?: AnalyticsProperties,
+    submitAction?: string
   ) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
@@ -33,6 +43,8 @@ export interface UserMessageEditorProps {
   speechToTextEnabled?: boolean;
   onSpeechToTextFinished?: (analytics: SpeechToTextAnalytics) => void;
   onPaste?: (event: React.ClipboardEvent<HTMLTextAreaElement>) => void;
+  /** Labeled submit buttons, one per action, in place of the single one. */
+  submitActions?: SubmitAction[];
   children?: React.ReactNode;
 }
 
@@ -54,6 +66,7 @@ const UserMessageEditor = React.forwardRef<
       speechToTextEnabled = false,
       onSpeechToTextFinished,
       onPaste,
+      submitActions,
       children,
     },
     externalInputRef
@@ -125,6 +138,8 @@ const UserMessageEditor = React.forwardRef<
       component: 'button' as const,
     };
 
+    const submitDisabled = editorButtonCommonProps.disabled;
+
     const [speechToTextCount, setSpeechToTextCount] = useState(0);
     const [clearedMessageCount, setClearedMessageCount] = useState(0);
     /** True after the field becomes empty following STT use, until the next successful transcription. */
@@ -139,13 +154,17 @@ const UserMessageEditor = React.forwardRef<
     }, [speechToTextCount, userMessage]);
 
     const submitMessage = useCallback(
-      (userMessage: string) => {
-        onSubmit(userMessage, {
-          dictationEnabled: speechToTextEnabled,
-          dictationUsageCount: speechToTextCount,
-          dictationMessageClearedCount: clearedMessageCount,
-          dictationClearedSinceLastTranscription: lastDictationCleared,
-        });
+      (userMessage: string, submitAction?: string) => {
+        onSubmit(
+          userMessage,
+          {
+            dictationEnabled: speechToTextEnabled,
+            dictationUsageCount: speechToTextCount,
+            dictationMessageClearedCount: clearedMessageCount,
+            dictationClearedSinceLastTranscription: lastDictationCleared,
+          },
+          submitAction
+        );
         setSpeechToTextCount(0);
         setClearedMessageCount(0);
         setLastDictationCleared(false);
@@ -212,7 +231,25 @@ const UserMessageEditor = React.forwardRef<
                 disabled={disabled}
               />
             )}
-            {showSubmitLabel ? (
+            {submitActions ? (
+              submitActions.map(action => (
+                <MuiButton
+                  key={action.value}
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  disabled={submitDisabled}
+                  onClick={e => {
+                    e.stopPropagation();
+                    submitMessage(userMessage, action.value);
+                  }}
+                  startIcon={<FontAwesomeV6Icon {...action.icon} />}
+                  type="button"
+                >
+                  {action.label}
+                </MuiButton>
+              ))
+            ) : showSubmitLabel ? (
               <MuiButton
                 {...editorButtonCommonProps}
                 startIcon={<EditorButtonIcon />}

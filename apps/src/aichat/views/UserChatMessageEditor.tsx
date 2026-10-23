@@ -102,6 +102,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
+  const promptModes = useAppSelector(state => state.aichat.promptModes);
 
   const dispatch = useAppDispatch();
 
@@ -117,16 +118,34 @@ const UserChatMessageEditor: React.FunctionComponent<
   const clearUserMessage = () => setUserMessage('');
 
   const handleSubmit = useCallback(
-    async (message: string, analyticsProperties?: AnalyticsProperties) => {
+    async (
+      message: string,
+      analyticsProperties?: AnalyticsProperties,
+      submitAction?: string
+    ) => {
       if (!disabled) {
+        const promptModeValue = submitAction ?? promptModes?.defaultValue;
+        const promptMode = promptModes?.modes.find(
+          mode => mode.value === promptModeValue
+        );
         const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
             text: message,
-            modelParameters,
+            modelParameters: promptMode
+              ? {
+                  ...modelParameters,
+                  systemPrompt: promptMode.systemPrompt,
+                  responseJsonSchema:
+                    promptMode.responseJsonSchema ??
+                    modelParameters.responseJsonSchema,
+                }
+              : modelParameters,
             clientType,
             hiddenContext,
-            analyticsProperties,
+            analyticsProperties: promptMode
+              ? {...analyticsProperties, promptMode: promptMode.value}
+              : analyticsProperties,
             assets:
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
@@ -150,6 +169,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       hiddenContextCallback,
       dispatch,
       modelParameters,
+      promptModes,
       clientType,
       multimodalAvailable,
       chatAssets,
@@ -232,6 +252,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         speechToTextEnabled={speechToTextEnabled}
         onSpeechToTextFinished={onSpeechToTextFinished}
         onPaste={onPaste}
+        submitActions={promptModes?.modes}
         ref={inputRef}
       >
         {canUploadFiles && levelName && (
