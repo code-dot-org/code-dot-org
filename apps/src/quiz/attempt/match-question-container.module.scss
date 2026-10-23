@@ -1,7 +1,7 @@
 .board {
   position: relative;
   display: flex;
-  gap: 48px;
+  gap: 56px;
   width: 100%;
 }
 
@@ -16,9 +16,8 @@
 
 .line {
   fill: none;
-  stroke: var(--border-brand-mid);
+  stroke: var(--border-selected-primary);
   stroke-width: 2;
-  stroke-dasharray: 4 4;
   stroke-linecap: round;
 }
 
@@ -26,31 +25,36 @@
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
 }
 
-// The dot sits on the card's inner edge, facing the other column.
-.option {
-  display: flex;
-  align-items: center;
-
-  &.second {
-    flex-direction: row-reverse;
-  }
-}
-
+// Extra padding on the dot's side keeps text clear of it.
 .card {
-  flex: 1 0 0;
-  min-width: 0;
+  position: relative;
+  // Grow to fill a taller column, but never shrink below the text.
+  flex: 1 0 auto;
   min-height: 46px;
-  padding: 10px 16px;
+  padding-block: 10px;
+  padding-inline: 16px 22px;
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-sm);
   background: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
   text-align: center;
   cursor: pointer;
+
+  &.second {
+    padding-inline: 26px 16px;
+  }
+
+  &:hover:not(:disabled, .cardActive) {
+    border-color: var(--border-neutral-secondary);
+
+    .dot {
+      background: var(--background-neutral-tertiary);
+    }
+  }
 
   &:focus-visible {
     outline: 2px solid var(--border-selected-primary);
@@ -62,38 +66,44 @@
   }
 }
 
-.cardPaired {
-  border-color: var(--border-neutral-secondary);
-}
-
-// Not in the design yet. A box-shadow rather than a thicker border, so
-// selecting a card doesn't shift the layout.
-.cardSelected {
+// A selected card and a paired card look the same, as in the design.
+.cardActive {
   border-color: var(--border-selected-primary);
-  box-shadow: 0 0 0 1px var(--border-selected-primary);
+  background: var(--background-brand-light);
+
+  .dot {
+    border-color: var(--background-selected-primary);
+    background: var(--background-selected-primary);
+    color: var(--text-selected-primary);
+  }
 }
 
 .firstText {
   font-weight: 600;
 }
 
+// Centered on the card's inner edge, facing the other column.
 .dot {
-  position: relative;
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  inset-inline-end: -12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
-  width: 15px;
-  height: 15px;
-  margin-inline-start: -8px;
+  width: 24px;
+  height: 24px;
   border: 2px solid var(--border-neutral-secondary);
   border-radius: 50%;
   background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: var(--font-size-body-xs);
+  font-weight: 600;
+  // The glyph sits in the circle; normal leading would overflow it.
+  line-height: 1;
+  transform: translateY(-50%);
 
   .second & {
-    margin-inline: 0 -8px;
+    inset-inline: -12px auto;
   }
-}
-
-.dotActive {
-  border-color: var(--border-selected-primary);
-  background: var(--background-brand-light);
 }
