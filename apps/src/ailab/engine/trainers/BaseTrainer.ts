@@ -91,7 +91,10 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     const state = this.store.getState();
     const candidate = this.candidateFor(hyperparameters);
 
-    if (candidate === undefined) {
+    if (
+      candidate === undefined ||
+      !this.candidates(state).includes(candidate)
+    ) {
       return undefined;
     }
 
