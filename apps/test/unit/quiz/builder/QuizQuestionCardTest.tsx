@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import QuizQuestionCard from '@cdo/apps/quiz/builder/QuizQuestionCard';
 import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
 
-const QUESTION: QuizBuilderQuestion = {
+const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   id: 7,
   type: 'MultipleChoiceQuestion',
   questionName: 'Existing question',
@@ -23,19 +23,38 @@ const QUESTION: QuizBuilderQuestion = {
   page: 1,
 };
 
+const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
+  id: 8,
+  type: 'MultipleSelectQuestion',
+  questionName: 'Even numbers',
+  questionTitle: 'Which are even?',
+  choices: [
+    {id: 'a', text: '2'},
+    {id: 'b', text: '3'},
+    {id: 'c', text: '4'},
+  ],
+  correctChoiceIds: ['a'],
+  description: null,
+  explanation: null,
+  standards: [],
+  attachedToOtherQuizzes: false,
+  usedInPublishedUnit: false,
+  page: 1,
+};
+
 // QuizQuestionCard doesn't own its expanded state (QuizBuilderWorkspace does,
 // so only one card in the outline can be expanded at a time) - this wrapper
 // stands in for that parent.
 function renderCard(
   props: Partial<React.ComponentProps<typeof QuizQuestionCard>> = {}
 ) {
-  const onSave = jest.fn().mockResolvedValue(QUESTION.id);
+  const onSave = jest.fn().mockResolvedValue(MULTIPLE_CHOICE_QUESTION.id);
   const onRemove = jest.fn().mockResolvedValue(true);
   const Wrapper = () => {
     const [isExpanded, setIsExpanded] = useState(props.isExpanded ?? false);
     return (
       <QuizQuestionCard
-        question={QUESTION}
+        question={MULTIPLE_CHOICE_QUESTION}
         onSave={onSave}
         onRemove={onRemove}
         {...props}
@@ -183,7 +202,10 @@ describe('QuizQuestionCard', () => {
   });
 
   describe('a pending (not yet saved) question', () => {
-    const PENDING_QUESTION: QuizBuilderQuestion = {...QUESTION, id: -1};
+    const PENDING_QUESTION: QuizBuilderQuestion = {
+      ...MULTIPLE_CHOICE_QUESTION,
+      id: -1,
+    };
 
     it('enables Save immediately, with nothing edited', () => {
       renderCard({question: PENDING_QUESTION, isExpanded: true});
@@ -211,25 +233,6 @@ describe('QuizQuestionCard', () => {
   });
 
   describe('answers', () => {
-    const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
-      id: 8,
-      type: 'MultipleSelectQuestion',
-      questionName: 'Even numbers',
-      questionTitle: 'Which are even?',
-      choices: [
-        {id: 'a', text: '2'},
-        {id: 'b', text: '3'},
-        {id: 'c', text: '4'},
-      ],
-      correctChoiceIds: ['a'],
-      description: null,
-      explanation: null,
-      standards: [],
-      attachedToOtherQuizzes: false,
-      usedInPublishedUnit: false,
-      page: 1,
-    };
-
     const openAnswers = () =>
       fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
 
@@ -299,7 +302,7 @@ describe('QuizQuestionCard', () => {
 
     it('switches an unsaved question between multiple choice and multiple select, keeping its correct choice', async () => {
       const {onSave} = renderCard({
-        question: {...QUESTION, id: -1},
+        question: {...MULTIPLE_CHOICE_QUESTION, id: -1},
         isExpanded: true,
       });
       openAnswers();
@@ -396,7 +399,7 @@ describe('QuizQuestionCard', () => {
 
   it('opens a free response question saved without choices', () => {
     // FreeResponseQuestion#builder_content_json sends no choices.
-    const {choices, correctChoiceId, ...shared} = QUESTION;
+    const {choices, correctChoiceId, ...shared} = MULTIPLE_CHOICE_QUESTION;
     void choices;
     void correctChoiceId;
     renderCard({
