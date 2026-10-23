@@ -1,3 +1,35 @@
+<%#
+  Stack:    one stack per redirect group; operator names it at create time.
+  Profile:  codeorg-admin
+  Cadence:  rare (only when new vanity domains are registered or
+            redirect targets change).
+
+  Deployment is NOT driven by `rake stack:*`. Use the sibling shell script:
+
+    cd aws/cloudformation
+    ./domain_redirect.sh -d 'example.com,other.com' -t 'https://target.com/path'
+
+  The script:
+    - Renders this template to `domain_redirect.yml` via `erb` (passing
+      `domains` and `redirect_to` as ERB locals — these are NOT
+      CloudFormation Parameters).
+    - Runs `cfn-lint` and `aws cloudformation validate-template`.
+    - Prints the path to the rendered YAML and stops.
+
+  The script does NOT create or update a CloudFormation stack. After it
+  runs, manually upload `domain_redirect.yml` in the AWS CloudFormation
+  console (Create stack / Update stack -> Upload a template file) under
+  the codeorg-admin account.
+
+  Domain registrations themselves are not manageable via CloudFormation
+  and must be set up separately (Route53 / external registrar).
+
+  Constraints:
+    - Bare apex domains only (e.g. `example.com`). Subdomains like
+      `www.example.com` are not supported by this template.
+    - All redirected domains share one ACM certificate and CloudFront
+      distribution.
+%>
 <%
   require 'aws-sdk-route53'
 
