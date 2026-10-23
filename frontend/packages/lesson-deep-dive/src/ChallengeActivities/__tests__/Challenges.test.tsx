@@ -1,51 +1,47 @@
-import {Challenge} from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
+import {vi} from 'vitest';
 
-import Challenges from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/Challenges';
+import {type Challenge} from '../../types';
+import Challenges from '../Challenges';
 
 // Replaces ChallengePicker with a minimal stub that exposes two buttons:
 // "start" fires the callback with a real challenge, "cancel" fires it with nulls.
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengePicker',
-  () => ({
-    __esModule: true,
-    default: ({
-      lessonId,
-      challengeSetCallback,
-    }: {
-      lessonId: number;
-      challengeSetCallback: (c: Challenge | null, t: string | null) => void;
-    }) => (
-      <div>
-        <span>Lesson {lessonId}</span>
-        <button
-          type="button"
-          onClick={() =>
-            challengeSetCallback(
-              {
-                id: 5,
-                lesson_id: lessonId,
-                question: 'q',
-                default_modality: 'video',
-                whiteboard_starter_image_url: null,
-                whiteboard_starter_image_alt_text: null,
-              },
-              'video'
-            )
-          }
-        >
-          start
-        </button>
-        <button type="button" onClick={() => challengeSetCallback(null, null)}>
-          cancel
-        </button>
-      </div>
-    ),
-  })
-);
+vi.mock('../ChallengePicker', () => ({
+  __esModule: true,
+  default: ({
+    lessonId,
+    challengeSetCallback,
+  }: {
+    lessonId: number;
+    challengeSetCallback: (c: Challenge | null, t: string | null) => void;
+  }) => (
+    <div>
+      <span>Lesson {lessonId}</span>
+      <button
+        type="button"
+        onClick={() =>
+          challengeSetCallback(
+            {
+              id: 5,
+              lesson_id: lessonId,
+              question: 'q',
+              default_modality: 'video',
+              whiteboard_starter_image_url: null,
+              whiteboard_starter_image_alt_text: null,
+            },
+            'video',
+          )
+        }
+      >
+        start
+      </button>
+      <button type="button" onClick={() => challengeSetCallback(null, null)}>
+        cancel
+      </button>
+    </div>
+  ),
+}));
 
 function renderChallenges(lessonId = 42) {
   render(
@@ -57,7 +53,7 @@ function renderChallenges(lessonId = 42) {
           element={<div>challenge-page</div>}
         />
       </Routes>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 }
 

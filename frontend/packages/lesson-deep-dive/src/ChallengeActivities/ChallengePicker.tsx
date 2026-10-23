@@ -1,10 +1,12 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, IconButton, Typography} from '@mui/material';
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import {type FC, useCallback, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
+
+import {listChallenges} from '../api';
+import {type Challenge} from '../types';
 
 import styles from './challenge-picker.module.scss';
 
@@ -19,7 +21,7 @@ interface ChallengePickerProps {
   lessonId: number;
   challengeSetCallback: (
     pickedChallenge: Challenge | null,
-    pickedChallengeType: string | null
+    pickedChallengeType: string | null,
   ) => void;
   onReviewInstead?: () => void;
 }
@@ -34,6 +36,7 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   const [modality, setModality] = useState<Modality | null>(null);
   const [challengeIndex, setChallengeIndex] = useState(0);
   const navigate = useNavigate();
+  const api = useApiClient();
 
   const handleModalityChange = useCallback((next: Modality) => {
     setModality(next);
@@ -42,14 +45,8 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
 
   useEffect(() => {
     let cancelled = false;
-    const params = new URLSearchParams();
-    params.append('lesson_id', lessonId.toString());
-    HttpClient.fetchJson<Challenge[]>(
-      `/challenges?${params}`,
-      {},
-      challengeValidator
-    )
-      .then(({value}) => {
+    listChallenges(api.transport, lessonId)
+      .then(value => {
         if (cancelled) return;
         if (!value || value.length === 0) {
           setLoadFailed(true);
@@ -63,11 +60,11 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [lessonId]);
+  }, [api, lessonId]);
 
   const filtered = modality
     ? challenges.filter(
-        c => c.default_modality === modality || c.default_modality === 'both'
+        c => c.default_modality === modality || c.default_modality === 'both',
       )
     : [];
   const currentChallenge = filtered[challengeIndex] ?? null;
@@ -75,11 +72,11 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
 
   const goPrev = useCallback(
     () => setChallengeIndex(i => (i - 1 + filtered.length) % filtered.length),
-    [filtered.length]
+    [filtered.length],
   );
   const goNext = useCallback(
     () => setChallengeIndex(i => (i + 1) % filtered.length),
-    [filtered.length]
+    [filtered.length],
   );
 
   return (
