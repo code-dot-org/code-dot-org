@@ -158,15 +158,19 @@ describe('ResultsDetails', () => {
     ]);
   });
 
-  test('filters by the AI prediction, and says when no shown row matches', async () => {
+  test('filters by the AI prediction, counts each grade, and says when no shown row matches', async () => {
     renderScorecard();
+    expect(screen.getByRole('button', {name: 'Correct (2)'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Incorrect (1)'})).toBeTruthy();
+
     fireEvent.click(screen.getByRole('button', {name: 'Filter'}));
     fireEvent.click(screen.getByRole('button', {name: /^AI predicts/}));
     fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
     fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
     const incorrect = await waitFor(() =>
-      screen.getByRole('button', {name: 'Incorrect (1)'})
+      screen.getByRole('button', {name: 'Incorrect (0)'})
     );
+    expect(screen.getByRole('button', {name: 'Correct (1)'})).toBeTruthy();
     expect(bodyRows()).toEqual([['2', '4', 'dog', 'dog']]);
 
     fireEvent.click(incorrect);

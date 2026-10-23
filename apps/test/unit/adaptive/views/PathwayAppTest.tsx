@@ -29,6 +29,19 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
     </>
   ),
 }));
+jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
+  __esModule: true,
+  default: ({title, onFinish}: {title: string; onFinish?: () => void}) => (
+    <div>
+      header: {title}
+      {onFinish && (
+        <button type="button" onClick={onFinish}>
+          I'm finished!
+        </button>
+      )}
+    </div>
+  ),
+}));
 jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   __esModule: true,
   // Finishing completes the last step first, as the real player does.
@@ -38,12 +51,14 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onCompleteStep,
     onExit,
     onFinish,
+    onFinishPathway,
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
     onCompleteStep: (step: unknown, timeMs: number) => void;
     onExit: () => void;
     onFinish: () => void;
+    onFinishPathway?: () => void;
   }) => (
     <div>
       playing {checkpoint.title}
@@ -60,6 +75,11 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       >
         finish
       </button>
+      {onFinishPathway && (
+        <button type="button" onClick={onFinishPathway}>
+          finish pathway
+        </button>
+      )}
     </div>
   ),
 }));
@@ -423,5 +443,28 @@ describe('PathwayApp', () => {
     });
 
     expect(screen.getByText('map screen')).toBeTruthy();
+  });
+
+  it("opens the project from the map header's I'm finished", async () => {
+    mockLoad.mockResolvedValue({
+      steps: {'intro-step': {status: 'started', timeSpent: 0}},
+    });
+    await renderSettled();
+    expect(screen.getByText('header: Skill Tree: Pathway')).toBeTruthy();
+
+    act(() => screen.getByText("I'm finished!").click());
+
+    expect(screen.getByText('playing My Project')).toBeTruthy();
+    expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+  });
+
+  it('opens the project when a checkpoint is left for it', async () => {
+    await renderSettled();
+    expect(screen.getByText(/playing Intro/)).toBeTruthy();
+
+    act(() => screen.getByText('finish pathway').click());
+
+    expect(screen.getByText('playing My Project')).toBeTruthy();
+    expect(screen.queryByText('finish pathway')).toBeNull();
   });
 });

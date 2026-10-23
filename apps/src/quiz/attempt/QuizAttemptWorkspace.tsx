@@ -437,6 +437,20 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             disabled={isSubmitting}
           />
         );
+      // TODO: replace with a MatchQuestionContainer.
+      case 'MatchQuestion':
+        return (
+          <AttemptCard
+            key={question.id}
+            label={questionLabel}
+            title={question.questionTitle}
+            headingRef={headingRef}
+          >
+            <Typography variant="body2">
+              Matching questions are not available yet.
+            </Typography>
+          </AttemptCard>
+        );
       default: {
         // A new question type fails to compile here until it gets a case.
         const unhandledType: never = question.type;

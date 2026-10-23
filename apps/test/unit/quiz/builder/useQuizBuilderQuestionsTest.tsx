@@ -75,6 +75,37 @@ describe('useQuizBuilderQuestions', () => {
     });
   });
 
+  it('adds a match placeholder with two pairs, each id random and distinct', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPendingQuestion(1, 'MatchQuestion');
+      result.current.addPendingQuestion(1, 'MatchQuestion');
+    });
+
+    const [first, second] = result.current.questions.slice(1);
+    expect(first).toMatchObject({
+      type: 'MatchQuestion',
+      pairs: [
+        {items: [{text: 'Term A'}, {text: 'Definition A'}]},
+        {items: [{text: 'Term B'}, {text: 'Definition B'}]},
+      ],
+    });
+    const ids = [first, second].flatMap(question =>
+      question.type === 'MatchQuestion'
+        ? question.pairs.flatMap(pair => [
+            pair.id,
+            ...pair.items.map(item => item.id),
+          ])
+        : []
+    );
+    expect(ids).toHaveLength(12);
+    expect(new Set(ids).size).toBe(12);
+  });
+
   it('adds the placeholder to the given page', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizBuilderQuestions(42)

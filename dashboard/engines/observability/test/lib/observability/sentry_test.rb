@@ -59,6 +59,14 @@ describe Observability::Sentry do
         Observability::Sentry.setup
       end
 
+      it 'sets the release to the checked-out git revision' do
+        GitUtils.stubs(:git_revision).returns('45f292e6d70b29ada94da635ca905ca00310b4f7')
+        mock_config = stub_everything('sentry_config')
+        mock_config.expects(:release=).with('45f292e6d70b29ada94da635ca905ca00310b4f7')
+        Sentry.expects(:init).yields(mock_config)
+        Observability::Sentry.setup
+      end
+
       describe 'when CDO.enable_opentelemetry is false' do
         it 'does not configure the OTLP integration' do
           mock_config = stub_everything('sentry_config')
