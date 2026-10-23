@@ -263,8 +263,8 @@ const App = ({
   const hideTestingView = useAppSelector(getHideTestingView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
-  usePretrainOnLoad();
   const restoringModel = useRestoreModel();
+  usePretrainOnLoad(restoringModel);
 
   const datasetPending = useAppSelector(
     state => !!state.csvfile && state.data.length === 0 && !state.invalidData
@@ -294,6 +294,7 @@ const App = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
 
+  // TODO: don't load forever if the dataset fails to load.
   if (loading) {
     return <div className={styles.app} style={colorVariables} />;
   }

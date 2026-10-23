@@ -136,3 +136,39 @@ test('still pretrains a level with nothing saved', () => {
 
   expect(rendered.project().historicResults).toHaveLength(1);
 });
+
+/*
+  A pretrained level offers neither a retrain nor a Start Over, so a run it
+  cannot rebuild has to be replaced rather than waited on. The history is no
+  guide: it outlives the run that produced it.
+*/
+describe('a pretrained level whose saved run cannot be rebuilt', () => {
+  beforeEach(() => store.dispatch(setMode({pretrained: true})));
+
+  test('pretrains when the split no longer fits the dataset', () => {
+    const saved = savedAfterTraining();
+
+    const rendered = openLab({...saved, accuracyCheckRowIndices: [99]});
+
+    expect(rendered.trainingData().trainedModel).toBeDefined();
+    expect(rendered.project().historicResults.length).toBeGreaterThan(
+      saved.historicResults.length
+    );
+  });
+
+  // Reconciliation drops a run the columns no longer match, keeping the history.
+  test('pretrains when reconciliation has already dropped the run', () => {
+    const saved = savedAfterTraining();
+
+    const rendered = openLab({
+      ...saved,
+      hyperparameters: undefined,
+      accuracyCheckRowIndices: undefined,
+    });
+
+    expect(rendered.trainingData().trainedModel).toBeDefined();
+    expect(rendered.project().historicResults.length).toBeGreaterThan(
+      saved.historicResults.length
+    );
+  });
+});

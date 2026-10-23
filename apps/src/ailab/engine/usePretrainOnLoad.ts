@@ -7,7 +7,12 @@ import {getHideDatasetView, readyToTrain, setCurrentPanel} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
-export function usePretrainOnLoad() {
+/*
+  Trains a pretrained level on load, once the restore has had its turn: a
+  saved run that cannot be rebuilt has to be replaced, and such a level
+  offers the student neither a retrain nor a Start Over.
+*/
+export function usePretrainOnLoad(restoringModel: boolean) {
   const dispatch = useAppDispatch();
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
@@ -21,19 +26,24 @@ export function usePretrainOnLoad() {
     isPanelEnabled(state, project, 'results')
   );
 
-  const trainedBefore = project.historicResults.length > 0;
-
   useEffect(() => {
     if (
       pretrained &&
       dataLoaded &&
       canTrain &&
       !trainedModel &&
-      !trainedBefore
+      !restoringModel
     ) {
       beginRun();
     }
-  }, [pretrained, dataLoaded, canTrain, trainedModel, trainedBefore, beginRun]);
+  }, [
+    pretrained,
+    dataLoaded,
+    canTrain,
+    trainedModel,
+    restoringModel,
+    beginRun,
+  ]);
 
   // The new run reaches `project` on the next render, so wait for canTest.
   // TODO: Add loading state for before training finishes.
