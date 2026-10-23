@@ -277,28 +277,31 @@ describe('DataDisplay', () => {
         project: levelProject(),
       });
 
-    test('leads the table and names each row in place of its number', () => {
+    test('follows the row number and heads each row', () => {
       renderNamed();
       expect(
         screen
           .getAllByRole('columnheader')
           .map(header => header.getAttribute('aria-label'))
-      ).toEqual(['name', 'animal', 'legs']);
+      ).toEqual(['Row', 'name', 'animal', 'legs']);
+      expect(
+        Array.from(
+          screen.getAllByRole('row')[1].cells,
+          cell => cell.textContent
+        )
+      ).toEqual(['1', 'pet 1', 'bird', '2']);
       expect(rowNumbers().slice(0, 3)).toEqual(['pet 1', 'pet 2', 'pet 3']);
       expect(button('Sort by name A-Z')).toBeTruthy();
     });
 
-    test('titles each card, which leaves it out of the list', () => {
+    test('titles each card above its row number, and leaves the list', () => {
       renderNamed();
       fireEvent.click(button('Cards'));
       fireEvent.click(button('Next card'));
 
-      expect(screen.getByRole('group', {name: 'pet 2'})).toBeTruthy();
+      const card = screen.getByRole('group', {name: 'pet 2 Row 2'});
       expect(
-        Array.from(
-          screen.getByRole('group', {name: 'pet 2'}).querySelectorAll('dt'),
-          term => term.textContent
-        )
+        Array.from(card.querySelectorAll('dt'), term => term.textContent)
       ).toEqual(['animal, used as the label', 'legs, used as a feature']);
     });
   });

@@ -10,6 +10,7 @@ import type {ResultsData, TableView} from '../types';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
+import RowNumberCell from './RowNumberCell';
 import RowsTableHeader, {PREDICTION_COLUMN} from './RowsTableHeader';
 import TableEmptyNote from './TableEmptyNote';
 
@@ -47,11 +48,10 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
             {view.rows.map(index => {
               return (
                 <tr key={index} className={tableStyles.row}>
-                  {!idColumn && (
-                    <th scope="row" className={tableStyles.indexCell}>
-                      <CellText>{results.rowIndices[index] + 1}</CellText>
-                    </th>
-                  )}
+                  <RowNumberCell
+                    rowNumber={results.rowIndices[index] + 1}
+                    besideIdColumn={!!idColumn}
+                  />
                   {columns.map(column => {
                     const role = getColumnRole(project, column);
                     const isIdColumn = column === idColumn;

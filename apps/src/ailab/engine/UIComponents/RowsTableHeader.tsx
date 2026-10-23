@@ -32,16 +32,15 @@ const RowsTableHeader = ({
 
   return (
     <tr>
-      {!idColumn && (
-        <th
-          className={classNames(
-            tableStyles.indexCell,
-            tableStyles.indexHeader,
-            tableStyles.indexColumn
-          )}
-          aria-label="Row"
-        />
-      )}
+      <th
+        className={classNames(
+          tableStyles.indexCell,
+          tableStyles.indexHeader,
+          tableStyles.indexColumn,
+          {[tableStyles.frozenIndex]: idColumn}
+        )}
+        aria-label="Row"
+      />
       {columns.map(column => {
         const role = getColumnRole(project, column);
         const columnName = getLocalizedColumnName(datasetId, column);

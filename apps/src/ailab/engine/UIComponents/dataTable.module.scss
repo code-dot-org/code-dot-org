@@ -189,14 +189,29 @@
   border-top-width: 1px;
 }
 
-// Frozen, so each row keeps its name while the table scrolls sideways.
+// Fits a 5-digit row number, so the id column can freeze right beside it.
+$frozen-index-width: 56px;
+
+// Frozen, so each row keeps its number and name as the table scrolls sideways.
+.frozenIndex,
 .idHeader,
 .idCell {
   position: sticky;
-  left: 0;
 }
 
-// Above the other headers, which scroll under it.
+.frozenIndex {
+  left: 0;
+  width: $frozen-index-width;
+  min-width: $frozen-index-width;
+}
+
+.idHeader,
+.idCell {
+  left: $frozen-index-width;
+}
+
+// Above the other headers, which scroll under them.
+.indexHeader.frozenIndex,
 .idHeader {
   z-index: 2;
 }

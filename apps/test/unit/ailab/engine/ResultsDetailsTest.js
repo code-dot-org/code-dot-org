@@ -134,10 +134,12 @@ describe('ResultsDetails', () => {
   test('an id column names each row, even with only the model columns shown', () => {
     renderScorecard({data: NAMED_ANIMALS, mode: {idColumn: 'name'}});
 
-    expect(headerRows()).toEqual([['name', 'legs', 'animal', 'AI predicts']]);
+    expect(headerRows()).toEqual([
+      ['', 'name', 'legs', 'animal', 'AI predicts'],
+    ]);
     expect(bodyRows()).toEqual([
-      ['Tweety', '2', 'bird', 'bird'],
-      ['Fido', '4', 'dog', 'dog'],
+      ['1', 'Tweety', '2', 'bird', 'bird'],
+      ['2', 'Fido', '4', 'dog', 'dog'],
     ]);
     expect(
       screen.getAllByRole('rowheader').map(header => header.textContent)

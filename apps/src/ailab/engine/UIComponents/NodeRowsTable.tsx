@@ -13,6 +13,7 @@ import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
 import DataTableFrame from './DataTableFrame';
+import RowNumberCell from './RowNumberCell';
 import RowsTableHeader from './RowsTableHeader';
 import TableEmptyNote from './TableEmptyNote';
 
@@ -56,11 +57,10 @@ const NodeRowsTable = ({
           <tbody>
             {shownRows.map(row => (
               <tr key={row} className={tableStyles.row}>
-                {!idColumn && (
-                  <th scope="row" className={tableStyles.indexCell}>
-                    <CellText>{row + 1}</CellText>
-                  </th>
-                )}
+                <RowNumberCell
+                  rowNumber={row + 1}
+                  besideIdColumn={!!idColumn}
+                />
                 {columns.map(column => {
                   const role = getColumnRole(project, column);
                   const isIdColumn = column === idColumn;

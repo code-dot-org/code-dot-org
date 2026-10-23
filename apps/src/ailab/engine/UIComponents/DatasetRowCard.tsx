@@ -22,6 +22,7 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
   const idColumn = useAppSelector(getIdColumn);
   const {project} = useProject();
   const titleId = useId();
+  const rowNumberId = useId();
   const detailsRef = useRef<HTMLDListElement>(null);
 
   // Coming back to a row would otherwise keep where its list was scrolled.
@@ -64,19 +65,31 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
     <div
       className={styles.card}
       role="group"
-      aria-labelledby={titleId}
+      aria-labelledby={idColumn ? `${titleId} ${rowNumberId}` : titleId}
       aria-roledescription="slide"
     >
-      <Typography
-        id={titleId}
-        component="h3"
-        variant="body1"
-        className={styles.title}
-      >
-        {idColumn
-          ? getLocalizedValue(row[idColumn], datasetId)
-          : `Row ${rowNumber}`}
-      </Typography>
+      <div className={styles.heading}>
+        <Typography
+          id={titleId}
+          component="h3"
+          variant="body1"
+          className={styles.title}
+        >
+          {idColumn
+            ? getLocalizedValue(row[idColumn], datasetId)
+            : `Row ${rowNumber}`}
+        </Typography>
+        {idColumn && (
+          <Typography
+            id={rowNumberId}
+            component="p"
+            variant="body3"
+            className={styles.rowNumber}
+          >
+            {`Row ${rowNumber}`}
+          </Typography>
+        )}
+      </div>
       <div className={styles.list}>
         <dl
           ref={detailsRef}

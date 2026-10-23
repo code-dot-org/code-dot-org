@@ -17,6 +17,7 @@ import {getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import ColumnHeader from './ColumnHeader';
+import RowNumberCell from './RowNumberCell';
 
 import styles from './dataTable.module.scss';
 
@@ -67,7 +68,7 @@ const DataTable = ({
     }
   }, [currentColumn]);
 
-  const showRowNumbers = !reducedColumns && !idColumn;
+  const showRowNumbers = !reducedColumns;
   const isClickable = !reducedColumns && showColumnClicking;
 
   const isSelected = (key: string) => !reducedColumns && key === currentColumn;
@@ -144,7 +145,9 @@ const DataTable = ({
         <tr>
           {showRowNumbers && (
             <th
-              className={classNames(styles.indexCell, styles.indexHeader)}
+              className={classNames(styles.indexCell, styles.indexHeader, {
+                [styles.frozenIndex]: idColumn,
+              })}
               aria-label="Row"
             />
           )}
@@ -196,15 +199,10 @@ const DataTable = ({
           return (
             <tr key={row} className={styles.row}>
               {showRowNumbers && (
-                <th scope="row" className={styles.indexCell}>
-                  <Typography
-                    component="span"
-                    variant="body4"
-                    className={styles.cellText}
-                  >
-                    {row + 1}
-                  </Typography>
-                </th>
+                <RowNumberCell
+                  rowNumber={row + 1}
+                  besideIdColumn={!!idColumn}
+                />
               )}
               {getColumns().map(columnId => {
                 const isIdColumn = columnId === idColumn;
