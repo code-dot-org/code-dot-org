@@ -151,20 +151,6 @@ export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
   );
 }
 
-export function setIdColumn(
-  mode: ModeObject,
-  idColumn: string | undefined
-): ModeObject {
-  const newMode = setJsonObjectValue(mode, 'idColumn', idColumn);
-  if (idColumn !== undefined && newMode.label === idColumn) {
-    delete newMode.label;
-  }
-  return setFeatures(
-    newMode,
-    getFeatures(newMode).filter(feature => feature !== idColumn)
-  );
-}
-
 export function withoutLabelInFeatures(
   mode: ModeObject,
   defaultLabel: string | undefined

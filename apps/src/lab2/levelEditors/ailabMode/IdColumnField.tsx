@@ -1,7 +1,9 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 
-import {ModeObject, setIdColumn} from './ailabMode';
+import {setJsonObjectValue} from '../jsonUtils';
+
+import {getFeatures, getStartingLabel, ModeObject} from './ailabMode';
 import {DatasetColumns} from './datasetColumns';
 
 const NO_ID_COLUMN = '';
@@ -20,16 +22,28 @@ const IdColumnField: React.FunctionComponent<IdColumnFieldProps> = ({
   onChange,
 }) => {
   const savedIdColumn = mode.idColumn as string | undefined;
+  const startingLabel = getStartingLabel(mode, columns?.defaultLabel);
+  const features = getFeatures(mode);
   const choices = columns?.all ?? [];
   const savedIdColumnUnlisted =
     savedIdColumn !== undefined && !choices.includes(savedIdColumn);
+
+  const choiceItem = (column: string) => {
+    if (column === startingLabel) {
+      return {value: column, text: `${column} (label)`, disabled: true};
+    }
+    if (features.includes(column)) {
+      return {value: column, text: `${column} (feature)`, disabled: true};
+    }
+    return {value: column, text: column};
+  };
 
   const items = [
     {value: NO_ID_COLUMN, text: 'None: number the rows'},
     ...(savedIdColumnUnlisted
       ? [{value: savedIdColumn, text: savedIdColumn, disabled: true}]
       : []),
-    ...choices.map(column => ({value: column, text: column})),
+    ...choices.map(choiceItem),
   ];
 
   return (
@@ -38,7 +52,11 @@ const IdColumnField: React.FunctionComponent<IdColumnFieldProps> = ({
       name="ailab_mode_idColumn"
       items={items}
       selectedValue={savedIdColumn ?? NO_ID_COLUMN}
-      onChange={e => onChange(setIdColumn(mode, e.target.value || undefined))}
+      onChange={e =>
+        onChange(
+          setJsonObjectValue(mode, 'idColumn', e.target.value || undefined)
+        )
+      }
       disabled={!columns}
       helperMessage={helperMessage}
       errorMessage={

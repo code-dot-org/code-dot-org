@@ -1,7 +1,6 @@
 import {
   cleanMode,
   getSelectedDataset,
-  setIdColumn,
   withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
@@ -77,24 +76,6 @@ describe('ailabMode', () => {
   it('getSelectedDataset returns the one dataset', () => {
     expect(getSelectedDataset({datasets: ['zoo']})).toBe('zoo');
     expect(getSelectedDataset({})).toBeUndefined();
-  });
-
-  describe('setIdColumn', () => {
-    it('takes the id column out of the label and features', () => {
-      expect(
-        setIdColumn({label: 'a', features: ['a', 'b'], hideSave: true}, 'a')
-      ).toEqual({idColumn: 'a', features: ['b'], hideSave: true});
-      expect(setIdColumn({label: 'a', features: ['b']}, 'b')).toEqual({
-        label: 'a',
-        idColumn: 'b',
-      });
-    });
-
-    it('removes the id column when cleared', () => {
-      expect(setIdColumn({idColumn: 'a', label: 'b'}, undefined)).toEqual({
-        label: 'b',
-      });
-    });
   });
 
   describe('withDefaultTrainer', () => {

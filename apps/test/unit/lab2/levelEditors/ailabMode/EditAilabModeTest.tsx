@@ -900,35 +900,38 @@ describe('EditAilabMode', () => {
       ]);
     });
 
-    it('keeps the id column out of the label and features', async () => {
+    it('cannot be the label or a feature', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "legs", "features": ["wings", "animal"]}'
+        '{"datasets": ["zoo"], "label": "legs", "features": ["wings"]}'
       );
       await columnsLoaded();
-
-      fireEvent.change(idColumnDropdown(), {target: {value: 'legs'}});
-      expect(JSON.parse(savedMode())).toEqual({
-        datasets: ['zoo'],
-        trainer: 'knn',
-        features: ['wings', 'animal'],
-        idColumn: 'legs',
-      });
-      expect(optionsOf(labelDropdown())).toEqual([
-        'None',
-        'animal (default)',
-        'wings',
+      expect(optionsOf(idColumnDropdown())).toEqual([
+        'None: number the rows',
+        'name',
+        'legs (label)',
+        'wings (feature)',
+        'animal',
       ]);
 
       fireEvent.change(idColumnDropdown(), {target: {value: 'animal'}});
-      expect(JSON.parse(savedMode())).toMatchObject({
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'legs',
         features: ['wings'],
         idColumn: 'animal',
       });
       expect(optionsOf(labelDropdown())).toEqual(['None', 'legs', 'wings']);
-      expect(featureOptions()).toEqual(['legs', 'wings']);
+      expect(featureOptions()).toEqual(['wings']);
 
       fireEvent.change(idColumnDropdown(), {target: {value: ''}});
       expect(JSON.parse(savedMode())).not.toHaveProperty('idColumn');
+    });
+
+    it('cannot be the default label once it is locked', async () => {
+      renderEditor('{"datasets": ["zoo"], "hideSelectLabel": true}');
+      await columnsLoaded();
+      expect(optionsOf(idColumnDropdown())).toContain('animal (label)');
     });
 
     it('reports a saved id column the dataset does not have', async () => {
