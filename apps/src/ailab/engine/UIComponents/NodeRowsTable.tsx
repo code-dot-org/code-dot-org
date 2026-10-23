@@ -68,16 +68,14 @@ const NodeRowsTable = ({
                     <DataCell
                       key={column}
                       isIdColumn={column === idColumn}
+                      rowNumber={row + 1}
+                      value={getLocalizedValue(data[row][column], datasetId)}
                       className={classNames({
                         [tableStyles.bodyCellLabel]: role === 'label',
                         [tableStyles.bodyCellFeature]: role === 'feature',
                         [styles.emphasized]: column === emphasizedColumn,
                       })}
-                    >
-                      <CellText>
-                        {getLocalizedValue(data[row][column], datasetId)}
-                      </CellText>
-                    </DataCell>
+                    />
                   );
                 })}
                 {showPrediction && (

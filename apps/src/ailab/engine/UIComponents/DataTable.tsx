@@ -203,19 +203,15 @@ const DataTable = ({
                   <DataCell
                     key={columnId}
                     isIdColumn={columnId === idColumn}
+                    rowNumber={row + 1}
+                    value={
+                      startingRow !== undefined && index <= startingRow
+                        ? ' '
+                        : getLocalizedValue(data[row][columnId], datasetId)
+                    }
                     className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
-                  >
-                    <Typography
-                      component="span"
-                      variant="body4"
-                      className={styles.cellText}
-                    >
-                      {startingRow !== undefined && index <= startingRow
-                        ? ' '
-                        : getLocalizedValue(data[row][columnId], datasetId)}
-                    </Typography>
-                  </DataCell>
+                  />
                 );
               })}
             </tr>

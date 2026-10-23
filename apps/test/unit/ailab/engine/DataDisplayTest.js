@@ -305,7 +305,7 @@ describe('DataDisplay', () => {
       ).toEqual(['animal, used as the label', 'legs, used as a feature']);
     });
 
-    test('titles a card with a blank id by its row number', () => {
+    test('names a row with a blank id by its row number', () => {
       renderWithProviders(createElement(DataDisplay), {
         store: levelStore({idColumn: 'name'}, [
           {...NAMED[0], name: ''},
@@ -313,6 +313,8 @@ describe('DataDisplay', () => {
         ]),
         project: levelProject(),
       });
+      expect(screen.getByRole('rowheader', {name: 'Row 1'})).toBeTruthy();
+
       fireEvent.click(button('Cards'));
 
       expect(screen.getByRole('group', {name: 'Row 1'})).toBeTruthy();

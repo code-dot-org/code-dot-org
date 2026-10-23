@@ -59,13 +59,13 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
                       <DataCell
                         key={column}
                         isIdColumn={column === idColumn}
+                        rowNumber={results.rowIndices[index] + 1}
+                        value={view.valueAt(index, column)}
                         className={classNames({
                           [tableStyles.bodyCellLabel]: role === 'label',
                           [tableStyles.bodyCellFeature]: role === 'feature',
                         })}
-                      >
-                        <CellText>{view.valueAt(index, column)}</CellText>
-                      </DataCell>
+                      />
                     );
                   })}
                   <td className={labelCell}>
