@@ -25,7 +25,6 @@ recaptcha_secret_key: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
-db_proxy: !StackSecret # 'proxysql' or 'rdsproxy', no value means none.
 db_endpoint_writer: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
