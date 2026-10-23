@@ -122,7 +122,8 @@ cat <<JSON > $FIRST_BOOT
     "sync": <%=!daemon%>
   },
   "cdo-secrets": {
-<% if frontends -%>
+<%# Full-stack adhocs need Chef-injected endpoints; production uses stack secrets. -%>
+<% if frontends && rack_env?(:adhoc) -%>
     "redis_url": "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
 <% end -%>
