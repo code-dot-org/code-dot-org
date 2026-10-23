@@ -1,6 +1,7 @@
 import {
   cleanMode,
   getSelectedDataset,
+  setIdColumn,
   withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
@@ -54,8 +55,8 @@ describe('ailabMode', () => {
       expect(cleanMode({requireAccuracy: 101}, KNOWN).mode).toEqual({});
     });
 
-    it('checks only the shape of the label and features', () => {
-      const mode = {label: 'any column', features: ['a', 'b']};
+    it('checks only the shape of the label, features, and id column', () => {
+      const mode = {label: 'any column', features: ['a', 'b'], idColumn: 'c'};
       expect(cleanMode(mode, KNOWN).mode).toEqual(mode);
       [
         {label: 3},
@@ -65,6 +66,8 @@ describe('ailabMode', () => {
         {features: []},
         {features: ['']},
         {features: ['a', 'a']},
+        {idColumn: ''},
+        {idColumn: 3},
       ].forEach(bad => {
         expect(cleanMode(bad, KNOWN).mode).toEqual({});
       });
@@ -74,6 +77,24 @@ describe('ailabMode', () => {
   it('getSelectedDataset returns the one dataset', () => {
     expect(getSelectedDataset({datasets: ['zoo']})).toBe('zoo');
     expect(getSelectedDataset({})).toBeUndefined();
+  });
+
+  describe('setIdColumn', () => {
+    it('takes the id column out of the label and features', () => {
+      expect(
+        setIdColumn({label: 'a', features: ['a', 'b'], hideSave: true}, 'a')
+      ).toEqual({idColumn: 'a', features: ['b'], hideSave: true});
+      expect(setIdColumn({label: 'a', features: ['b']}, 'b')).toEqual({
+        label: 'a',
+        idColumn: 'b',
+      });
+    });
+
+    it('removes the id column when cleared', () => {
+      expect(setIdColumn({idColumn: 'a', label: 'b'}, undefined)).toEqual({
+        label: 'b',
+      });
+    });
   });
 
   describe('withDefaultTrainer', () => {

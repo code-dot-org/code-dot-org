@@ -26,8 +26,9 @@ function renderScorecard({
   predictedLabels = ['bird', 'dog', 'bird'],
   accuracyCheckRowIndices = [0, 1, 2],
   project = levelProject(),
+  mode,
 } = {}) {
-  const store = levelStore();
+  const store = levelStore(mode);
   if (data) {
     store.dispatch(setImportedData(data, false));
   }
@@ -128,6 +129,19 @@ describe('ResultsDetails', () => {
     fireEvent.click(screen.getByLabelText('Show only features and label'));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
+  });
+
+  test('an id column names each row, even with only the model columns shown', () => {
+    renderScorecard({data: NAMED_ANIMALS, mode: {idColumn: 'name'}});
+
+    expect(headerRows()).toEqual([['name', 'legs', 'animal', 'AI predicts']]);
+    expect(bodyRows()).toEqual([
+      ['Tweety', '2', 'bird', 'bird'],
+      ['Fido', '4', 'dog', 'dog'],
+    ]);
+    expect(
+      screen.getAllByRole('rowheader').map(header => header.textContent)
+    ).toEqual(['Tweety', 'Fido']);
   });
 
   test('sorts another dataset column by its own row', () => {

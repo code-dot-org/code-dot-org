@@ -8,6 +8,7 @@ import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
@@ -37,6 +38,7 @@ const NodeRowsTable = ({
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const idColumn = useAppSelector(getIdColumn);
   const showPrediction = prediction !== undefined;
   const shownRows = view.rows.slice(0, DATA_TABLE_ROW_LIMIT);
 
@@ -54,24 +56,34 @@ const NodeRowsTable = ({
           <tbody>
             {shownRows.map(row => (
               <tr key={row} className={tableStyles.row}>
-                <th scope="row" className={tableStyles.indexCell}>
-                  <CellText>{row + 1}</CellText>
-                </th>
+                {!idColumn && (
+                  <th scope="row" className={tableStyles.indexCell}>
+                    <CellText>{row + 1}</CellText>
+                  </th>
+                )}
                 {columns.map(column => {
                   const role = getColumnRole(project, column);
+                  const isIdColumn = column === idColumn;
+                  const Cell = isIdColumn ? 'th' : 'td';
                   return (
-                    <td
+                    <Cell
                       key={column}
-                      className={classNames(tableStyles.bodyCell, {
-                        [tableStyles.bodyCellLabel]: role === 'label',
-                        [tableStyles.bodyCellFeature]: role === 'feature',
-                        [styles.emphasized]: column === emphasizedColumn,
-                      })}
+                      scope={isIdColumn ? 'row' : undefined}
+                      className={classNames(
+                        isIdColumn
+                          ? [tableStyles.indexCell, tableStyles.idCell]
+                          : tableStyles.bodyCell,
+                        {
+                          [tableStyles.bodyCellLabel]: role === 'label',
+                          [tableStyles.bodyCellFeature]: role === 'feature',
+                          [styles.emphasized]: column === emphasizedColumn,
+                        }
+                      )}
                     >
                       <CellText>
                         {getLocalizedValue(data[row][column], datasetId)}
                       </CellText>
-                    </td>
+                    </Cell>
                   );
                 })}
                 {showPrediction && (

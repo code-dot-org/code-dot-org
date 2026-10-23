@@ -9,6 +9,7 @@ import {dataColumnsFor} from '../helpers/columnDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
+import {getIdColumn} from '../selectors';
 
 import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
@@ -29,13 +30,14 @@ const ResultsDetails = () => {
   const dispatch = useAppDispatch();
   const [showAllColumns, setShowAllColumns] = useState(false);
   const data = useAppSelector(state => state.data);
+  const idColumn = useAppSelector(getIdColumn);
   const results = useAppSelector(
     state => getResultsByGrade(state, project, resultsTab),
     deepEqual
   );
   const columns = useMemo(
-    () => dataColumnsFor(data, project, showAllColumns),
-    [data, project, showAllColumns]
+    () => dataColumnsFor(data, project, showAllColumns, idColumn),
+    [data, project, showAllColumns, idColumn]
   );
   const view = useResultsTableView(results, columns);
   const gradeCounts = useAppSelector(state => {

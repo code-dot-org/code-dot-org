@@ -264,4 +264,42 @@ describe('DataDisplay', () => {
       within(menu).getByRole('button', {name: /^animal/})
     );
   });
+
+  describe('with an id column', () => {
+    const NAMED = ANIMALS.map((row, index) => ({
+      ...row,
+      name: `pet ${index + 1}`,
+    }));
+
+    const renderNamed = () =>
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore({idColumn: 'name'}, NAMED),
+        project: levelProject(),
+      });
+
+    test('leads the table and names each row in place of its number', () => {
+      renderNamed();
+      expect(
+        screen
+          .getAllByRole('columnheader')
+          .map(header => header.getAttribute('aria-label'))
+      ).toEqual(['name', 'animal', 'legs']);
+      expect(rowNumbers().slice(0, 3)).toEqual(['pet 1', 'pet 2', 'pet 3']);
+      expect(button('Sort by name A-Z')).toBeTruthy();
+    });
+
+    test('titles each card, which leaves it out of the list', () => {
+      renderNamed();
+      fireEvent.click(button('Cards'));
+      fireEvent.click(button('Next card'));
+
+      expect(screen.getByRole('group', {name: 'pet 2'})).toBeTruthy();
+      expect(
+        Array.from(
+          screen.getByRole('group', {name: 'pet 2'}).querySelectorAll('dt'),
+          term => term.textContent
+        )
+      ).toEqual(['animal, used as the label', 'legs, used as a feature']);
+    });
+  });
 });

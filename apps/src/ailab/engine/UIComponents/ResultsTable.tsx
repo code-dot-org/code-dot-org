@@ -5,6 +5,7 @@ import {REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getColumnRole, isRegression} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getIdColumn} from '../selectors';
 import type {ResultsData, TableView} from '../types';
 
 import CellText from './CellText';
@@ -28,6 +29,7 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
   const isRegressionMode = useAppSelector(state =>
     isRegression(state, project)
   );
+  const idColumn = useAppSelector(getIdColumn);
 
   return (
     <>
@@ -45,21 +47,31 @@ const ResultsTable = ({results, columns, view}: ResultsTableProps) => {
             {view.rows.map(index => {
               return (
                 <tr key={index} className={tableStyles.row}>
-                  <th scope="row" className={tableStyles.indexCell}>
-                    <CellText>{results.rowIndices[index] + 1}</CellText>
-                  </th>
+                  {!idColumn && (
+                    <th scope="row" className={tableStyles.indexCell}>
+                      <CellText>{results.rowIndices[index] + 1}</CellText>
+                    </th>
+                  )}
                   {columns.map(column => {
                     const role = getColumnRole(project, column);
+                    const isIdColumn = column === idColumn;
+                    const Cell = isIdColumn ? 'th' : 'td';
                     return (
-                      <td
+                      <Cell
                         key={column}
-                        className={classNames(tableStyles.bodyCell, {
-                          [tableStyles.bodyCellLabel]: role === 'label',
-                          [tableStyles.bodyCellFeature]: role === 'feature',
-                        })}
+                        scope={isIdColumn ? 'row' : undefined}
+                        className={classNames(
+                          isIdColumn
+                            ? [tableStyles.indexCell, tableStyles.idCell]
+                            : tableStyles.bodyCell,
+                          {
+                            [tableStyles.bodyCellLabel]: role === 'label',
+                            [tableStyles.bodyCellFeature]: role === 'feature',
+                          }
+                        )}
                       >
                         <CellText>{view.valueAt(index, column)}</CellText>
-                      </td>
+                      </Cell>
                     );
                   })}
                   <td className={labelCell}>

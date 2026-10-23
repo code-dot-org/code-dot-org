@@ -4,11 +4,16 @@ import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
-import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
+import {
+  getColumnRole,
+  getLocalizedColumnName,
+  withIdColumnFirst,
+} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
+import {getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import ColumnHeader from './ColumnHeader';
@@ -47,6 +52,7 @@ const DataTable = ({
   const selectedFeatures = project.selectedFeatures;
   const currentColumn = useAppSelector(state => state.currentColumn);
   const showColumnClicking = useAppSelector(getShowColumnClicking);
+  const idColumn = useAppSelector(getIdColumn);
   const headerButtons = useRef<Record<string, HTMLButtonElement | null>>({});
   const previousColumn = useRef(currentColumn);
 
@@ -61,7 +67,7 @@ const DataTable = ({
     }
   }, [currentColumn]);
 
-  const showRowNumbers = !reducedColumns;
+  const showRowNumbers = !reducedColumns && !idColumn;
   const isClickable = !reducedColumns && showColumnClicking;
 
   const isSelected = (key: string) => !reducedColumns && key === currentColumn;
@@ -72,6 +78,7 @@ const DataTable = ({
       [styles.headerLabel]: role === 'label',
       [styles.headerFeature]: role === 'feature',
       [styles.headerSelected]: isSelected(key),
+      [styles.idHeader]: key === idColumn,
       [styles.clickable]: isClickable,
     });
   };
@@ -87,9 +94,12 @@ const DataTable = ({
       variant = styles.bodyCellFeature;
     }
 
-    return classNames('uitest-data-table-column', styles.bodyCell, variant, {
-      [styles.clickable]: isClickable,
-    });
+    return classNames(
+      'uitest-data-table-column',
+      key === idColumn ? [styles.indexCell, styles.idCell] : styles.bodyCell,
+      variant,
+      {[styles.clickable]: isClickable}
+    );
   };
 
   const getColumns = () => {
@@ -105,7 +115,7 @@ const DataTable = ({
       const selected = columns.filter(key => selectedFeatures.includes(key));
       return noLabel ? selected : [...selected, labelColumn];
     }
-    return columns;
+    return withIdColumnFirst(columns, idColumn);
   };
 
   const getRows = () => {
@@ -197,9 +207,12 @@ const DataTable = ({
                 </th>
               )}
               {getColumns().map(columnId => {
+                const isIdColumn = columnId === idColumn;
+                const Cell = isIdColumn ? 'th' : 'td';
                 return (
-                  <td
+                  <Cell
                     key={columnId}
+                    scope={isIdColumn ? 'row' : undefined}
                     className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
                   >
@@ -212,7 +225,7 @@ const DataTable = ({
                         ? ' '
                         : getLocalizedValue(data[row][columnId], datasetId)}
                     </Typography>
-                  </td>
+                  </Cell>
                 );
               })}
             </tr>

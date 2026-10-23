@@ -4,8 +4,10 @@ import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
+import {withIdColumnFirst} from '../helpers/columnDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
+import {getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
@@ -19,8 +21,12 @@ const DataDisplay = () => {
   const data = useAppSelector(state => state.data);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
+  const idColumn = useAppSelector(getIdColumn);
   const rows = useMemo(() => [...data.keys()], [data]);
-  const columns = useMemo(() => Object.keys(data[0] ?? {}), [data]);
+  const columns = useMemo(
+    () => withIdColumnFirst(Object.keys(data[0] ?? {}), idColumn),
+    [data, idColumn]
+  );
   const tableView = useDatasetTableView(rows, columns);
 
   const rowCount = data.length;

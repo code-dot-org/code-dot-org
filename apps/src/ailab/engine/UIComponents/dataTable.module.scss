@@ -189,6 +189,23 @@
   border-top-width: 1px;
 }
 
+// Frozen, so each row keeps its name while the table scrolls sideways.
+.idHeader,
+.idCell {
+  position: sticky;
+  left: 0;
+}
+
+// Above the other headers, which scroll under it.
+.idHeader {
+  z-index: 2;
+}
+
+.idCell {
+  text-align: left;
+  color: var(--text-neutral-primary);
+}
+
 .bodyCell {
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-primary);
