@@ -15,8 +15,8 @@ Their naming and partition rules are in `dashboard/config/PARTITIONS.md`.
 
 ## Adding a project
 
-Work locally with `levelbuilder_mode` on. Using a valid name puts the file in
-the correct location on the first save.
+Work locally with `levelbuilder_mode` on. Following the naming rules puts each
+level file in the correct location on the first save.
 
 1. Create the level as `New Foo Project`, and set `"is_project_level": true`
    in its file by hand (`standalone` in a BubbleChoice DSL); levelbuilder has
