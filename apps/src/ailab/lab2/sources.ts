@@ -1,5 +1,6 @@
 /*
-  AI Lab's main.json: a student's project as the engine stores it.
+  Validators and helpers to manage AI Lab's main.json, 
+  a student's project as the engine stores it.
 */
 
 import {
