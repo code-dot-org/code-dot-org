@@ -5,7 +5,8 @@ import {dataColumnsFor} from '../helpers/columnDetails';
 import type {Grade} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {useDatasetTableView, useGradedView} from '../useTableView';
+import {useDatasetTableView} from '../useDatasetTableView';
+import {useGradedView} from '../useGradedView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
@@ -66,7 +67,7 @@ const RowsPanel = ({
           {description}
         </Typography>
         <div className={styles.actions}>
-          {!counts && (
+          {!rowsByGrade && (
             <>
               <Typography variant="body3" component="span">
                 <strong>
@@ -77,7 +78,7 @@ const RowsPanel = ({
             </>
           )}
           <div className={styles.actionGroup}>
-            {counts && (
+            {rowsByGrade && (
               <ResultsToggle
                 grade={grade}
                 onChange={setGrade}

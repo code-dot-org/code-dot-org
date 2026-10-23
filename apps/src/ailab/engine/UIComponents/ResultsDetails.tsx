@@ -10,14 +10,14 @@ import type {Grade} from '../helpers/displayTreeNodeContent';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
-import {useGradedView} from '../useTableView';
+import {useGradedView} from '../useGradedView';
+import {useResultsTableView} from '../useResultsTableView';
 
 import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
 import TableFilter from './TableFilter';
-import {useResultsTableView} from './useResultsTableView';
 
 import styles from './resultsDetails.module.scss';
 

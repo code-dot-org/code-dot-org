@@ -1,19 +1,8 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
-import type {Grade} from './helpers/displayTreeNodeContent';
-import type {DisplayTreeNodeCounts} from './helpers/displayTreeTrace';
 import {compareText} from './helpers/utils';
-import {getLocalizedValue} from './helpers/valueDetails';
-import {useAppSelector} from './hooks';
-import {getFilterableColumns} from './selectors';
-import type {
-  ColumnFilter,
-  ColumnId,
-  DatasetTableView,
-  SortDirection,
-  TableView,
-} from './types';
+import type {ColumnFilter, ColumnId, SortDirection, TableView} from './types';
 
 interface TableSort {
   column: ColumnId;
@@ -140,58 +129,4 @@ export function useTableView({
       setFilter(values.length ? {column, values} : undefined),
     clearFilter: () => setFilter(undefined),
   };
-}
-
-export function useDatasetTableView(
-  rows: number[],
-  columns: string[]
-): DatasetTableView {
-  const data = useAppSelector(state => state.data);
-  const columnTypes = useAppSelector(state => state.columnsByDataType);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const filterableColumns = useAppSelector(getFilterableColumns);
-  const valueAt = useCallback(
-    (row: number, column: ColumnId) =>
-      getLocalizedValue(data[row][column as string], datasetId),
-    [data, datasetId]
-  );
-  return {
-    ...useTableView({rows, columns, columnTypes, filterableColumns, valueAt}),
-    columns,
-  };
-}
-
-// The view spans every grade, so each grade's count follows the filter.
-export function useGradedView<View extends TableView>(
-  view: View,
-  rowsByGrade: Record<Grade, number[]> | undefined,
-  grade: Grade
-): {view: View; counts?: DisplayTreeNodeCounts} {
-  const {rows} = view;
-  const graded = useMemo(() => {
-    if (!rowsByGrade) {
-      return undefined;
-    }
-    const matchingRows = (rowGrade: Grade) => {
-      const gradeRows = new Set(rowsByGrade[rowGrade]);
-      return rows.filter(row => gradeRows.has(row));
-    };
-    const matching = {
-      correct: matchingRows('correct'),
-      incorrect: matchingRows('incorrect'),
-    };
-    return {
-      rows: matching[grade],
-      totalRowCount: rowsByGrade[grade].length,
-      counts: {
-        correct: matching.correct.length,
-        incorrect: matching.incorrect.length,
-      },
-    };
-  }, [rows, rowsByGrade, grade]);
-  if (!graded) {
-    return {view};
-  }
-  const {counts, ...gradeView} = graded;
-  return {view: {...view, ...gradeView}, counts};
 }

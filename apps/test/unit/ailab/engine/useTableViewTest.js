@@ -1,7 +1,7 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
-import {useGradedView, useTableView} from '@cdo/apps/ailab/engine/useTableView';
+import {useTableView} from '@cdo/apps/ailab/engine/useTableView';
 
 const DATA = [
   {name: 'ant', size: '2', habitat: 'land'},
@@ -226,33 +226,5 @@ describe('useTableView', () => {
     });
     expect(result.current.shownFilterableColumns).toEqual(['name']);
     expect(result.current.rows).toEqual([1, 2]);
-  });
-
-  test('a grade shows its matching rows and counts each grade after the filter', () => {
-    const rowsByGrade = {correct: [0, 2, 3], incorrect: [1]};
-    const {result, rerender} = renderHook(
-      ({grade}) =>
-        useGradedView(
-          useTableView({
-            rows: ALL_ROWS,
-            columns: ALL_COLUMNS,
-            columnTypes: COLUMN_TYPES,
-            filterableColumns: ['habitat'],
-            valueAt,
-          }),
-          rowsByGrade,
-          grade
-        ),
-      {initialProps: {grade: 'correct'}}
-    );
-    act(() => result.current.view.filterBy('habitat', ['sea']));
-
-    expect(result.current.view.rows).toEqual([2]);
-    expect(result.current.view.totalRowCount).toBe(3);
-    expect(result.current.counts).toEqual({correct: 1, incorrect: 1});
-
-    rerender({grade: 'incorrect'});
-    expect(result.current.view.rows).toEqual([1]);
-    expect(result.current.view.totalRowCount).toBe(1);
   });
 });
