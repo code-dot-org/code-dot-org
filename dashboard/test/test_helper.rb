@@ -69,7 +69,7 @@ Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_op
 require 'rails/test_help'
 
 # Raise exceptions instead of rendering exception templates.
-Dashboard::Application.config.action_dispatch.show_exceptions = false
+Dashboard::Application.config.action_dispatch.show_exceptions = :none
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
