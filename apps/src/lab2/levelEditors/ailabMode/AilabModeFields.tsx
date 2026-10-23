@@ -244,7 +244,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           columns={columns}
           helperMessage={
             columnsHelperMessage ??
-            'Names each row in the tables and cards, in place of its row number. Students cannot use it as the label or a feature.'
+            'Names each row in the tables and cards. Students cannot use it as the label or a feature.'
           }
           onChange={changeMode}
         />
