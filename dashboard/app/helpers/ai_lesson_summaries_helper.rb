@@ -1,7 +1,42 @@
 class OpenaiLessonSummaryTimeout < StandardError; end
+class OpenaiLessonSummaryInvalidResponse < StandardError; end
 
 module AiLessonSummariesHelper
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+
+  BRIEF_SUMMARY_SCHEMA = {
+    type: "object",
+    properties: {
+      learning_objective: {type: "string"},
+      lesson_beats: {type: "array", items: {type: "string"}},
+      misconceptions: {type: "array", items: {type: "string"}},
+      tips: {type: "array", items: {type: "string"}}
+    },
+    required: %w(learning_objective lesson_beats misconceptions tips)
+  }.freeze
+
+  PODCAST_SCRIPT_SCHEMA = {
+    type: "object",
+    properties: {
+      podcast_script: {type: "string"}
+    },
+    required: %w(podcast_script)
+  }.freeze
+
+  def self.response_schema(response_format)
+    if response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]
+      BRIEF_SUMMARY_SCHEMA
+    else
+      PODCAST_SCRIPT_SCHEMA
+    end
+  end
+
+  # Without strict mode OpenAI treats the request schema as a hint, not a guarantee.
+  def self.matches_response_schema?(content, response_format)
+    JSON::Validator.validate(response_schema(response_format), JSON.parse(content))
+  rescue JSON::ParserError, TypeError
+    false
+  end
 
   def self.generate_lesson_summary(lesson_id, user_id = nil, response_format = AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id, user_id, response_format)
@@ -16,7 +51,10 @@ module AiLessonSummariesHelper
     if response.code == 200
       response_body = JSON.parse(response.body)
       response_body = response_body['choices'][0]['message']['content']
-      evaluation =  {status: response.code, json: response_body}
+      unless matches_response_schema?(response_body, response_format)
+        raise OpenaiLessonSummaryInvalidResponse.new("AI lesson summary for lesson #{lesson_id} does not match its schema: #{response_body.inspect.truncate(500)}")
+      end
+      evaluation = {status: response.code, json: response_body}
       return {status: evaluation[:status], json: evaluation[:json]}
     else
       raise StandardError.new("Recieved status code #{response.code} when processing AI lesson summary: #{response.body}")
@@ -99,16 +137,6 @@ module AiLessonSummariesHelper
         "Authorization" => "Bearer #{api_key}"
       }
 
-      response_props = response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
-        {
-          learning_objective: {type: "string"},
-          lesson_beats: {type: "array", items: {type: "string"}},
-          misconceptions: {type: "array", items: {type: "string"}},
-          tips: {type: "array", items: {type: "string"}}
-        } : {
-          podcast_script: {type: "string"}
-        }
-
       data = {
         model: model,
         messages: [{
@@ -119,10 +147,7 @@ module AiLessonSummariesHelper
           type: "json_schema",
           json_schema: {
             name: "lesson_summary",
-            schema: {
-              type: "object",
-              properties: response_props,
-            }
+            schema: AiLessonSummariesHelper.response_schema(response_format)
           }
         }
       }
