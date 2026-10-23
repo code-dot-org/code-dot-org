@@ -77,6 +77,22 @@ describe('sourceToProject', () => {
   });
 
   /*
+    A trainer asks the saved value which family it belongs to with `in`, which
+    throws on anything that is not an object.
+  */
+  test('drops hyperparameters that name no trainer', () => {
+    const dropped = saved =>
+      sourceToProject({...SAVED, hyperparameters: saved}).hyperparameters;
+
+    expect(dropped(3)).toBeUndefined();
+    expect(dropped('k=3')).toBeUndefined();
+    expect(dropped(null)).toBeUndefined();
+    expect(dropped({})).toBeUndefined();
+    expect(dropped({k: '3'})).toBeUndefined();
+    expect(dropped({maxDepth: 4})).toEqual({maxDepth: 4});
+  });
+
+  /*
     The indices name rows of the dataset, so a partly valid list is worse than
     none: train.refit would grade against rows the saved run never used.
   */
