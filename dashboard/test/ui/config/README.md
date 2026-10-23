@@ -1,23 +1,23 @@
 # UI test curriculum content
 
 Curriculum content which exists only for the UI tests in
-`dashboard/test/ui/features`. The layout mirrors `dashboard/config`. Its naming
+`dashboard/test/ui/features` and the playwright tests in
+`frontend/packages/e2e-tests`. The layout mirrors `dashboard/config`. Its naming
 and partition rules are in `dashboard/config/PARTITIONS.md`.
 
-The point of the partition is to keep production curriculum content — roughly
-a gigabyte of files, on its way out of this repo entirely — away from
-environments which only run tests. CI and dev containers seed this tree and
-nothing else, which is what makes a short-lived container practical. A second
-benefit runs the other way: test content is never seeded in production, so a
-`ui-test-` course can be `stable` without appearing to users.
+The point of the partition is to keep production curriculum content — roughly a
+gigabyte of files — out of development and test environments. CI and dev
+containers seed without production content, which is what makes a short-lived
+container practical. A second benefit runs the other way: test content is never
+seeded in production, so a `ui-test-` course can be `stable` without appearing
+to users.
 
 ## Seeding
 
 `rake seed:ui_test` seeds this tree, and is the default seed in the test
-environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`.
-It seeds UI test levels, needed by ui-test- units, standalone project levels,
-which back urls like https://test-studio.code.org/projects/applab/, and, for
-now, production levels.
+environment; see `UI_TEST_SEED_TASKS` in `dashboard/lib/tasks/seed.rake`. It
+seeds UI test levels, needed by ui-test- units, and standalone project levels,
+which back urls like https://test-studio.code.org/projects/applab/.
 
 ## Cached units
 
