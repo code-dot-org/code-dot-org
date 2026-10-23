@@ -1,6 +1,6 @@
 import {QuizQuestionType} from '../types';
 
-export interface QuizQuestionChoice {
+export interface QuizQuestionItem {
   id: string;
   text: string;
 }
@@ -23,7 +23,7 @@ interface QuizQuestionSharedFields {
 
 export interface MultipleChoiceDraft extends QuizQuestionSharedFields {
   type: 'MultipleChoiceQuestion';
-  choices: QuizQuestionChoice[];
+  choices: QuizQuestionItem[];
   correctChoiceId: string | null;
 }
 
@@ -33,7 +33,7 @@ export interface FreeResponseDraft extends QuizQuestionSharedFields {
 
 export interface MatchPair {
   id: string;
-  items: [QuizQuestionChoice, QuizQuestionChoice];
+  items: [QuizQuestionItem, QuizQuestionItem];
 }
 
 export interface MatchDraft extends QuizQuestionSharedFields {

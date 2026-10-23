@@ -86,7 +86,8 @@ export default function useQuizBuilderQuestions(
           question = {...shared, type};
           break;
         case 'MatchQuestion':
-          // Built per call: every question needs its own random ids.
+          // We use nondeterministic IDs (via newMatchPair) when generating boilerplate
+          // match items to avoid possible exposure of solutions to students.
           question = {
             ...shared,
             type,
