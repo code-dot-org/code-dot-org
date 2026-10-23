@@ -4,7 +4,7 @@ import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
-import {IconButton} from '@mui/material';
+import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -68,6 +68,22 @@ function withCorrectChoiceIds(
     : {...shared, type, correctChoiceId: correctChoiceIds[0] ?? null};
 }
 
+// Labels a group of controls; each control keeps its own accessible name.
+const FieldGroup: React.FunctionComponent<{
+  label: string;
+  className?: string;
+  children: React.ReactNode;
+}> = ({label, className, children}) => (
+  <fieldset className={classNames(styles.fieldGroup, className)}>
+    <legend className={styles.fieldGroupLabel}>
+      <Typography variant="label3" component="span">
+        {label}
+      </Typography>
+    </legend>
+    {children}
+  </fieldset>
+);
+
 interface ChoicesEditorProps {
   draft: ChoiceQuestionDraft;
   onChange: (draft: ChoiceQuestionDraft) => void;
@@ -123,7 +139,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
 
   return (
     <>
-      <FormFieldWrapper label="Selection type:">
+      <FieldGroup label="Selection type:">
         <SegmentedButtons
           size="s"
           selectedButtonValue={draft.type}
@@ -143,8 +159,8 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
             disabled,
           }))}
         />
-      </FormFieldWrapper>
-      <FormFieldWrapper label="Options" className={styles.optionsField}>
+      </FieldGroup>
+      <FieldGroup label="Options" className={styles.optionsField}>
         <div className={styles.optionsList}>
           {draft.choices.map((choice, index) => {
             const isCorrect = correctChoiceIds.includes(choice.id);
@@ -209,7 +225,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
             disabled={disabled}
           />
         </div>
-      </FormFieldWrapper>
+      </FieldGroup>
     </>
   );
 };

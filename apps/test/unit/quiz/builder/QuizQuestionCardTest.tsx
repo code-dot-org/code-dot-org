@@ -1,4 +1,4 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {useState} from 'react';
 
@@ -340,6 +340,39 @@ describe('QuizQuestionCard', () => {
       expect(
         screen.getByRole('radio', {name: 'Option A is correct'})
       ).not.toBeChecked();
+    });
+
+    it('names the type buttons by their own labels and groups them under "Selection type:"', () => {
+      renderCard({isExpanded: true});
+      openAnswers();
+
+      const group = screen.getByRole('group', {name: 'Selection type:'});
+      expect(
+        within(group).getByRole('button', {name: 'Multiple choice'})
+      ).toBeInTheDocument();
+      expect(
+        within(group).getByRole('button', {name: 'Multiple select'})
+      ).toBeInTheDocument();
+      expect(screen.getByRole('group', {name: 'Options'})).toBeInTheDocument();
+    });
+
+    it('leaves the draft unchanged when a group label is clicked', () => {
+      renderCard({
+        question: {...MULTIPLE_SELECT_QUESTION, correctChoiceIds: ['b', 'c']},
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(screen.getByText('Selection type:'));
+      fireEvent.click(screen.getByText('Options'));
+
+      expect(
+        screen.getByRole('button', {name: 'Multiple select'})
+      ).toHaveAttribute('aria-pressed', 'true');
+      expect(
+        screen.getByRole('checkbox', {name: 'Option A is correct'})
+      ).not.toBeChecked();
+      expect(screen.getByRole('button', {name: 'Save'})).toBeDisabled();
     });
 
     it('saves a type change on a saved question with the new type', async () => {

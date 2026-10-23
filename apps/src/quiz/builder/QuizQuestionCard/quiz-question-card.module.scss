@@ -7,10 +7,27 @@
   background: var(--background-neutral-primary);
 }
 
-// FormFieldWrapper aligns its children to flex-start; the options list
-// should span the card.
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--text-neutral-primary);
+}
+
+// A legend floats over the fieldset border by default.
+.fieldGroupLabel {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
 .optionsField {
-  width: 100%;
+  align-self: stretch;
 
   > * {
     align-self: stretch;
