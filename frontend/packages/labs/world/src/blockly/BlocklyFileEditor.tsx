@@ -39,6 +39,7 @@ import {
   usesSimpleColors,
   type WorldLevelProperties,
 } from '../levelData';
+import {gameModuleOf} from '../mainWorld';
 import {useMaybeProgression} from '../progression/progressionContext';
 import {shelvedToolbox} from '../progression/toolboxShelf';
 import {resolveRuleContents} from '../rules/ruleReference';
@@ -419,7 +420,7 @@ export const BlocklyFileEditor = ({
     const path = filePath(currentSources.source, fileId);
     return path?.endsWith('.world')
       ? path.replace(/\.world$/, '')
-      : (projectWorldOptions(files)[0]?.[1] ?? '');
+      : (gameModuleOf(files) ?? projectWorldOptions(files)[0]?.[1] ?? '');
   }, [currentSources.source, fileId, files]);
 
   /**

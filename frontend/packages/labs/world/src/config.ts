@@ -14,6 +14,7 @@ import {EffectFileEditor} from './effect/EffectFileEditor';
 import {FILE_ICONS} from './fileIcons';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
+import {ScreenEditor} from './mapEditor/ScreenEditor';
 import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
 import {resolveRuleContents} from './rules/ruleReference';
@@ -42,6 +43,9 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'rule',
   'actor',
   'world',
+  // A `.screen` is a map document that is shown on the display: the Main
+  // Screen is the game (specs/SCREEN_MAP_PLAN.md).
+  'screen',
   // A `.map` is a world-population document, edited in the visual map editor.
   'map',
   // A `.anim` is an animation file (JSON), edited in the visual animation editor.
@@ -102,6 +106,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     rule: 'rule',
     actor: 'actor',
     world: 'world',
+    screen: 'screen',
     map: 'map',
     anim: 'anim',
     effect: 'effect',
@@ -130,6 +135,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     // (specs/MAP_FIRST.md, "The editor's modes").
     world: orShowCode(WorldEditor),
     map: orShowCode(MapEditor),
+    screen: orShowCode(ScreenEditor),
     anim: AnimationEditor,
     effect: EffectFileEditor,
     // A theme: values, and what each control is made of (specs/STYLES_PLAN.md).

@@ -1759,7 +1759,13 @@ const defineEmitBlock = (event: EventMeta) => {
         // for ⟨world⟩` binding would have made at author time and is better
         // made here — a map may then serve two worlds that both declare it.
         const inMap = (generator as {__mapModule?: string}).__mapModule;
-        if (inMap && refModule(event.ref)?.startsWith('worlds/')) {
+        // …and the Main Screen's, which a screen project's maps raise the
+        // same way (specs/SCREEN_MAP_PLAN.md, step 4).
+        const owner = refModule(event.ref);
+        if (
+          inMap &&
+          (owner?.startsWith('worlds/') || owner?.startsWith('screens/'))
+        ) {
           return `world.emitNamed(${str(event.name)}${values});\n`;
         }
         // `refCode` resolves a project event to the bare local name when the
@@ -12699,8 +12705,11 @@ export function buildDomainPalette(
       // "At home" is the right word for it rather than a special case: a map
       // is not a reader of the world's vocabulary, it is one of the two
       // places that speaks it.
+      // The Main Screen's too, which holds the same vocabulary as data
+      // (specs/SCREEN_MAP_PLAN.md, step 4).
       (options.ownMapModule !== undefined &&
-        actor.modulePath.startsWith('worlds/'));
+        (actor.modulePath.startsWith('worlds/') ||
+          actor.modulePath.startsWith('screens/')));
     const blocks: string[] = [];
     const seen = new Set<string>();
     for (

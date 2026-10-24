@@ -15,6 +15,7 @@
 
 import type {BlockParam} from '../actors/stock/workspace';
 import {parseWorldOwnMeta} from '../blockly/ownProperties';
+import {eventDeclaration, type ScreenEvent} from '../blockly/screenData';
 import {topBlocksOf, type TopBlock} from '../blockly/topBlocks';
 import {MAIN_WORLD_PATH} from '../mainWorld';
 
@@ -25,26 +26,6 @@ export interface RaisedEvent {
   /** Its one parameter, for an event that carries a value. */
   readonly carries?: BlockParam;
 }
-
-/** `define event ⟨a tab is chosen ⟨which⟩⟩`, as a world's body holds one. */
-const declaration = (event: RaisedEvent) => ({
-  type: 'world_rule_event',
-  extraState: {
-    parts: [
-      {kind: 'label', text: event.name},
-      ...(event.carries
-        ? [
-            {
-              kind: 'param',
-              name: event.carries.name,
-              type: event.carries.type,
-              var: event.carries.id,
-            },
-          ]
-        : []),
-    ],
-  },
-});
 
 /**
  * The world's file, with a `define event` for every named event it lacks.
@@ -89,7 +70,7 @@ export function declareEvents(
     tail = tail.next.block;
   }
   for (const event of missing) {
-    const block = declaration(event) as TopBlock;
+    const block = eventDeclaration(event) as TopBlock;
     tail.next = {block};
     tail = block;
     // A parameter is a workspace VARIABLE that the declaration names by id
@@ -106,5 +87,40 @@ export function declareEvents(
       }
     }
   }
+  return `${JSON.stringify(parsed, null, 2)}\n`;
+}
+
+/**
+ * The Main Screen's file, with every named event it lacks in its `events`
+ * (specs/SCREEN_MAP_PLAN.md, step 4): the same promise as `declareEvents`,
+ * kept in data. Only ever adds; the contents unchanged when there is nothing
+ * to add or the file will not parse.
+ */
+export function declareScreenEvents(
+  contents: string,
+  events: readonly RaisedEvent[],
+): string {
+  let parsed: {events?: ScreenEvent[]};
+  try {
+    parsed = JSON.parse(contents) as typeof parsed;
+  } catch {
+    return contents;
+  }
+  if (!parsed || typeof parsed !== 'object') {
+    return contents;
+  }
+  const held = Array.isArray(parsed.events) ? parsed.events : [];
+  const already = new Set(held.map(event => event?.name));
+  const missing = events.filter(event => !already.has(event.name));
+  if (missing.length === 0) {
+    return contents;
+  }
+  parsed.events = [
+    ...held,
+    ...missing.map(event => ({
+      name: event.name,
+      ...(event.carries ? {carries: event.carries} : {}),
+    })),
+  ];
   return `${JSON.stringify(parsed, null, 2)}\n`;
 }

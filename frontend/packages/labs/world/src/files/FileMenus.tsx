@@ -97,6 +97,7 @@ import {
   ANIMATIONS_FOLDER,
   BACKGROUNDS_FOLDER,
   FOLDER_MENUS,
+  SCREENS_FOLDER,
   SPRITES_FOLDER,
   WORLDS_FOLDER,
   type FolderMenu,
@@ -1153,6 +1154,14 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
               // that the button is never a dead end: opening the first and
               // hiding the second would be worse than saying there are two.
               if (menu.folder === WORLDS_FOLDER) {
+                // The Main Screen, in a project whose game is one.
+                const main = filesIn(SCREENS_FOLDER).find(
+                  ({file}) => file.name === 'main.screen',
+                );
+                if (main) {
+                  ops.activateFile(main.file.id);
+                  return;
+                }
                 const worlds = filesIn(WORLDS_FOLDER);
                 if (worlds.length === 1) {
                   ops.activateFile(worlds[0].file.id);

@@ -34,3 +34,15 @@ export const entryFileOf = (
   `${MAIN_SCREEN_PATH}.screen` in files
     ? `${MAIN_SCREEN_PATH}.screen`
     : `${MAIN_WORLD_PATH}.world`;
+
+/**
+ * The game's module path — `screens/main` or `worlds/main` — or nothing for
+ * a project that holds neither. What a thumbnail manifest imports for the
+ * rules and animations an actor is drawn with.
+ */
+export const gameModuleOf = (
+  files: Readonly<Record<string, unknown>>,
+): string | undefined => {
+  const entry = entryFileOf(files);
+  return entry in files ? entry.replace(/\.[^.]+$/, '') : undefined;
+};

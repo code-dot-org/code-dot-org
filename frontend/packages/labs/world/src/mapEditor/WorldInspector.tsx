@@ -12,6 +12,7 @@ import {useEffect, useRef, useState} from 'react';
 
 import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 
@@ -35,6 +36,13 @@ import {
 
 export interface WorldInspectorProps {
   header: WorldHeader;
+  /** What the head says: `World`, or `Main Screen`. */
+  title?: string;
+  /**
+   * Declare a new value of the game's own. Only where they are data — a
+   * Main Screen's; a world's are `define property` rows in its code.
+   */
+  onAddProperty?: (name: string, type: string) => void;
   onRename: (name: string) => void;
   /**
    * Set one property's starting value. What that MEANS differs by where the
@@ -78,8 +86,17 @@ const EDITABLE = new Set(['number', 'angle', 'string', 'boolean']);
 /** The two axes of a point, each its own field. */
 const AXES = ['x', 'y'] as const;
 
+/** The kinds of value a new one may be, as `[label, type]`. */
+const NEW_VALUE_TYPES = [
+  ['Number', 'number'],
+  ['Text', 'string'],
+  ['True or false', 'boolean'],
+] as const;
+
 export const WorldInspector = ({
   header,
+  title = 'World',
+  onAddProperty,
   onRename,
   onSetDefault,
   theme,
@@ -95,6 +112,9 @@ export const WorldInspector = ({
   // What is being typed, committed on blur or Enter as a placement's fields
   // are.
   const [name, setName] = useState(header.name);
+  // A value being added: its name as typed, and its kind.
+  const [newName, setNewName] = useState('');
+  const [newType, setNewType] = useState<string>('number');
   // Keyed by the SETTER where there is one: two rules may each have a
   // property called `strength`, and the world's own may too.
   const keyOf = (property: WorldProperty) => property.setter ?? property.name;
@@ -140,6 +160,16 @@ export const WorldInspector = ({
       onRename(next);
     } else {
       setName(header.name);
+    }
+  };
+  const taken = new Set(
+    header.properties.filter(p => !p.rule).map(p => p.name),
+  );
+  const addValue = () => {
+    const next = newName.trim();
+    if (next && !taken.has(next)) {
+      onAddProperty?.(next, newType);
+      setNewName('');
     }
   };
   const commitValue = (property: WorldProperty) => {
@@ -280,7 +310,7 @@ export const WorldInspector = ({
     >
       <div className={styles.inspectorHead}>
         <Typography variant="subtitle2" component="span">
-          World
+          {title}
         </Typography>
       </div>
       <TextField
@@ -315,6 +345,46 @@ export const WorldInspector = ({
       )}
       {own.length > 0 && (
         <div className={styles.inspectorGroup}>{own.map(renderField)}</div>
+      )}
+      {onAddProperty && !isReadOnly && (
+        // A new value the whole game keeps — a score, lives — named and
+        // given a kind here, and read and set by blocks anywhere.
+        <div className={styles.inspectorGroup} data-testid="world-add-value">
+          <TextField
+            name="world-new-value"
+            label="New value"
+            size="s"
+            value={newName}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              setNewName(event.target.value)
+            }
+            onKeyDown={(event: KeyboardEvent<HTMLInputElement>) => {
+              if (event.key === 'Enter') {
+                addValue();
+              }
+            }}
+          />
+          <SimpleDropdown
+            name="world-new-value-type"
+            labelText="Kind"
+            size="s"
+            className={styles.inspectorDropdown}
+            selectedValue={newType}
+            items={NEW_VALUE_TYPES.map(([text, value]) => ({value, text}))}
+            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+              setNewType(event.target.value)
+            }
+          />
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
+            disabled={!newName.trim() || taken.has(newName.trim())}
+            onClick={addValue}
+          >
+            Add value
+          </Button>
+        </div>
       )}
       {rules.length > 0 && (
         <Accordion

@@ -21,7 +21,7 @@ import {CalloutAnnouncer} from '../callouts/CalloutAnnouncer';
 import {pointAt} from '../callouts/pointAt';
 import {setRevealer} from '../callouts/reveal';
 import {fileToReveal} from '../callouts/revealFile';
-import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
+import {ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {ShowCodeContext} from '../debug/showCode';
 import {FileMenus} from '../files/FileMenus';
@@ -31,9 +31,10 @@ import {
   type WorldLevelProperties,
 } from '../levelData';
 import {LibraryImports} from '../library/LibraryImports';
+import {entryFileOf} from '../mainWorld';
 import {WorldPreview} from '../preview/WorldPreview';
 import {ProgressionButton} from '../progression/ProgressionButton';
-import {fileIdAt} from '../runtime/projectFiles';
+import {fileIdAt, projectFiles} from '../runtime/projectFiles';
 
 import styles from './worldLayout.module.css';
 
@@ -115,7 +116,13 @@ const WorldLayout = () => {
     return () => setRevealer('file', null);
   }, []);
   const entryFileId = useMemo(
-    () => (browsable ? undefined : fileIdAt(currentSources.source, ENTRY_FILE)),
+    () =>
+      browsable
+        ? undefined
+        : fileIdAt(
+            currentSources.source,
+            entryFileOf(projectFiles(currentSources.source)),
+          ),
     [browsable, currentSources],
   );
   const [instructionsWidth, setInstructionsWidth] = useState(

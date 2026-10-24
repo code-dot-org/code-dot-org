@@ -51,6 +51,7 @@ import {
 import {setRevealer} from '../callouts/reveal';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import fields from '../formFields.module.css';
+import {gameModuleOf} from '../mainWorld';
 import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
 import {agreedViewSize} from '../runtime/declaredSizes';
@@ -241,10 +242,7 @@ export const MapEditor = ({
     },
     [currentSources, updateSources],
   );
-  const worldPath = useMemo(
-    () => projectWorldOptions(files)[0]?.[1] ?? '',
-    [files],
-  );
+  const worldPath = useMemo(() => gameModuleOf(files) ?? '', [files]);
 
   /**
    * The project's maps, for a Viewport's `map` property, and the map each
@@ -531,8 +529,8 @@ export const MapEditor = ({
   // The world's own cameras, for the strip — from the file, which the stage
   // never sees (`worldCameras`). Absent for a `.map`, which has none.
   const worldCameraList = useMemo(
-    () => (document.world ? worldCameras(fileText) : []),
-    [document.world, fileText],
+    () => (document.hasWorldCameras ? worldCameras(fileText) : []),
+    [document.hasWorldCameras, fileText],
   );
   // …and what they can be told. The world's cameras are made HERE and kept
   // on its main map, never as blocks in its code (`placementCameras`); the
@@ -545,49 +543,52 @@ export const MapEditor = ({
     id === MAIN_CAMERA
       ? map.mainCamera
       : map.cameras?.find(camera => camera.id === id);
-  const worldCameraEditor: WorldCameraEditor | undefined = document.world
-    ? {
-        starting: map.startingCamera
-          ? (cameraBlockId(map.startingCamera) ?? MAIN_CAMERA)
-          : startingCamera(fileText),
-        choices: cameraChoices,
-        traitsOf: id => storedCamera(id)?.traits ?? [],
-        valueOf: (id, property) =>
-          storedCamera(id)?.values.find(each => each.setter === property.setter)
-            ?.value,
-        add: () => {
-          const made = addMapCamera(
-            map,
-            worldCameraList.map(camera => camera.name),
-          );
-          commit(made.doc);
-          return made.id;
-        },
-        remove: id => commit(removeMapCamera(map, id)),
-        rename: (id, name) => commit(renameMapCamera(map, id, name)),
-        setStarting: id =>
-          commit(
-            withStartingCamera(
+  const worldCameraEditor: WorldCameraEditor | undefined =
+    document.hasWorldCameras
+      ? {
+          starting: map.startingCamera
+            ? (cameraBlockId(map.startingCamera) ?? MAIN_CAMERA)
+            : startingCamera(fileText),
+          choices: cameraChoices,
+          traitsOf: id => storedCamera(id)?.traits ?? [],
+          valueOf: (id, property) =>
+            storedCamera(id)?.values.find(
+              each => each.setter === property.setter,
+            )?.value,
+          add: () => {
+            const made = addMapCamera(
               map,
-              id === MAIN_CAMERA ? MAIN_CAMERA : cameraValue(id),
+              worldCameraList.map(camera => camera.name),
+            );
+            commit(made.doc);
+            return made.id;
+          },
+          remove: id => commit(removeMapCamera(map, id)),
+          rename: (id, name) => commit(renameMapCamera(map, id, name)),
+          setStarting: id =>
+            commit(
+              withStartingCamera(
+                map,
+                id === MAIN_CAMERA ? MAIN_CAMERA : cameraValue(id),
+              ),
             ),
-          ),
-        setTrait: (id, trait, elected) =>
-          commit(withMapCameraTrait(map, id, trait, elected)),
-        setValue: (id, property, value) =>
-          commit(
-            withMapCameraValue(map, id, {
-              setter: property.setter,
-              type: property.type,
-              value,
-            }),
-          ),
-      }
-    : undefined;
+          setTrait: (id, trait, elected) =>
+            commit(withMapCameraTrait(map, id, trait, elected)),
+          setValue: (id, property, value) =>
+            commit(
+              withMapCameraValue(map, id, {
+                setter: property.setter,
+                type: property.type,
+                value,
+              }),
+            ),
+        }
+      : undefined;
   const worldInspector =
     document.world && worldHeader
       ? {
           header: worldHeader,
+          title: document.world.title,
           onRename: (name: string) =>
             writeFile(document.world!.writeName(contentsRef.current, name)),
           // A rule's property is a `set` row; the world's own is a DEFAULT
@@ -614,6 +615,11 @@ export const MapEditor = ({
           // theme` row is written, and a theme the main map held of its own
           // goes, so that there is one answer and not two.
           onTheme: (path: string | undefined) => {
+            // A screen's theme is its map's own key, and the game's base.
+            if (document.scriptKind === 'screen') {
+              commit({...map, theme: path});
+              return;
+            }
             const written = document.world!.writeTheme(
               contentsRef.current,
               path,
@@ -626,6 +632,14 @@ export const MapEditor = ({
             setMap(next);
             writeFile(document.write(written, next));
           },
+          // …and a new value of the game's own, where the document holds
+          // them as data (a screen).
+          onAddProperty: document.world.addProperty
+            ? (name: string, type: string) =>
+                writeFile(
+                  document.world!.addProperty!(contentsRef.current, name, type),
+                )
+            : undefined,
           // …and how many rules it holds, for the button that opens them.
           ruleCount: projectRuleOptions(files).length,
           // …and the color behind the background, a row in the world's code.
@@ -688,8 +702,14 @@ export const MapEditor = ({
         // A workspace per placement: opening another is a new one.
         key={script.kind === 'map' ? 'map' : `placement:${script.id}`}
         memoryKey={`${fileId}#${script.kind === 'map' ? 'map' : script.id}`}
-        title={scripted ? `${scripted.id} (${kindName(scripted.type)})` : 'Map'}
-        kind={scripted ? 'placement' : 'map'}
+        title={
+          scripted
+            ? `${scripted.id} (${kindName(scripted.type)})`
+            : document.scriptKind === 'screen'
+              ? 'Screen'
+              : 'Map'
+        }
+        kind={scripted ? 'placement' : (document.scriptKind ?? 'map')}
         actorKind={scripted?.type}
         mapModule={mapModule}
         placements={map.actors.map(actor => actor.id)}
@@ -880,7 +900,13 @@ export const MapEditor = ({
         kinds={kinds}
         onEnhanceKind={enhanceKind}
         onOpenKind={openKind}
-        mapScriptLabel={document.hasMapScript ? 'Map code' : 'World code'}
+        mapScriptLabel={
+          document.scriptKind === 'screen'
+            ? 'Screen code'
+            : document.hasMapScript
+              ? 'Map code'
+              : 'World code'
+        }
         world={worldInspector}
         worldCameras={worldCameraList}
         worldCameraEditor={worldCameraEditor}

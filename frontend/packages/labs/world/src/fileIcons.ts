@@ -38,6 +38,7 @@ export const FILE_ICONS = {
   effect: icon('wand-sparkles'),
   rule: icon('scroll'),
   map: icon('map'),
+  screen: icon('display'),
   anim: icon('film'),
   sheet: icon('table-cells'),
 } as const satisfies Record<string, FileIcon>;

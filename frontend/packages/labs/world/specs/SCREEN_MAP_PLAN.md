@@ -1,6 +1,6 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 3 BUILT, 4a BUILT; the rest of 4, and 5, planned. The working record, as the
+STATUS: STEPS 1 TO 4 BUILT; 5 planned. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -170,6 +170,23 @@ the Main Screen's code loads, compiled as one.
   above. Importing a stock map declares its events in the screen's data.
 - 4c. A stock map's world events are named from the project's entry, not
   from a constant, so the Pause Menu raises `quit` in either shape.
+
+4b and 4c BUILT, together, since an editor that opened a screen and could
+not import a dialog into it would be half of one. `screenDocumentFor` gives
+the Main Screen an adapter whose inspector reads and writes the five keys
+(`screenProperties`), with a row to add a game-wide value; any other
+screen is edited as a map. The screen's own workspace opens as the map
+editor's third view with the game's hats, and the theme is the screen's
+own key. The World button opens the Main Screen when there is one. An
+import declares a dialog's events in the screen's data and renames its
+blocks from `WorldsMain` to `ScreensMain` (`raisedOnTheScreen`); a map's
+`emit` names a screen's event as it names a world's, since importing the
+screen into a map it loads is a cycle. The thumbnail manifest imports the
+game's module in either shape (`gameModuleOf`).
+
+Not yet seen in the browser: no scenario holds a Main Screen until step 5.
+Not built: making a new screen from the file menus, which waits for
+something that loads one.
 
 ### 5. Fixtures and scenarios in the new shape
 

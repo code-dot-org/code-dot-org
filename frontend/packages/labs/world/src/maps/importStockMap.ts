@@ -18,10 +18,11 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {ENTRY_FILE} from '../constants';
+import {pathSlug} from '../blockly/ruleRegistry';
+import {MAIN_SCREEN_PATH, MAIN_WORLD_PATH} from '../mainWorld';
 import {fileIdAt} from '../runtime/projectFiles';
 
-import {declareEvents} from './declareEvents';
+import {declareEvents, declareScreenEvents} from './declareEvents';
 import type {StockMap} from './stock';
 
 const MAPS_FOLDER = 'maps';
@@ -50,11 +51,34 @@ function mapsFolder(source: MultiFileSource): {
   return {source: next, folderId: created?.id ?? '0'};
 }
 
+/**
+ * A stock map's contents with the world's events named as the Main Screen's.
+ *
+ * An `emit` or a hat is minted from the module the event is declared in, and
+ * a stock map is written against `worlds/main` (`stock/workspace`). In a
+ * project whose game is a Main Screen the same events are declared there,
+ * so the block types are renamed to match — `world_emit_WorldsMain_QuitEvent`
+ * becomes `world_emit_ScreensMain_QuitEvent`.
+ */
+export const raisedOnTheScreen = (contents: string): string => {
+  const world = pathSlug(MAIN_WORLD_PATH);
+  const screen = pathSlug(MAIN_SCREEN_PATH);
+  return contents.replace(
+    new RegExp(`"world_(emit|on)_${world}_`, 'g'),
+    `"world_$1_${screen}_`,
+  );
+};
+
 const alreadyImported = (source: MultiFileSource, id: string): boolean =>
   Object.values(source.files).some(file => file.name === `${id}.map`);
 
+/** The project's Main Screen's file id, if it is in that shape. */
+const mainScreenId = (source: MultiFileSource): string | undefined =>
+  fileIdAt(source, `${MAIN_SCREEN_PATH}.screen`);
+
 /**
- * The project with the map's events declared in its world.
+ * The project with the map's events declared in its world, or in its Main
+ * Screen's data when it has one (`entryFileOf`).
  *
  * The world is found by PATH rather than by extension: a project has one, at
  * `worlds/main.world`, and that is the same fact a stock map's `emit` block is
@@ -69,12 +93,16 @@ function withDeclaredEvents(
   if (!map.raises?.length) {
     return source;
   }
-  const id = fileIdAt(source, ENTRY_FILE);
+  const screen = mainScreenId(source);
+  const id = screen ?? fileIdAt(source, `${MAIN_WORLD_PATH}.world`);
   const world = id === undefined ? undefined : source.files[id];
   if (!world) {
     return source;
   }
-  const contents = declareEvents(world.contents ?? '', map.raises);
+  const contents = (screen ? declareScreenEvents : declareEvents)(
+    world.contents ?? '',
+    map.raises,
+  );
   if (contents === world.contents) {
     return source;
   }
@@ -112,7 +140,9 @@ export function importStockMap(
           id: fileId,
           name: `${map.id}.map`,
           language: 'map',
-          contents: map.contents,
+          contents: mainScreenId(current)
+            ? raisedOnTheScreen(map.contents)
+            : map.contents,
           folderId: placed.folderId,
         },
       },

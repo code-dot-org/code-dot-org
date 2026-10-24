@@ -31,6 +31,7 @@ import {renameRuleInSource} from '../blockly/renameRule';
 import {mapWorkspaces, rewriteWorkspace} from '../blockly/rewriteWorkspaces';
 import {namedRootOf} from '../blockly/topBlocks';
 import {ENTRY_FILE} from '../constants';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 import {fileStem, renamed} from './newThing';
@@ -174,8 +175,9 @@ export function renameThing(
   if (!stem) {
     return {source, refusal: 'A name needs a letter or a number in it.'};
   }
-  const entry =
-    `${source.folders[file.folderId]?.name}/${file.name}` === ENTRY_FILE;
+  // The game's own file keeps its name, in either shape (`entryFileOf`).
+  const at = `${source.folders[file.folderId]?.name}/${file.name}`;
+  const entry = at === ENTRY_FILE || at === `${MAIN_SCREEN_PATH}.screen`;
   const toFileName = entry ? file.name : `${stem}.${extension}`;
 
   const clash = Object.values(source.files).find(

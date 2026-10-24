@@ -4,9 +4,22 @@
 // to is the document's business (`MapDocumentAdapter`). A `.map` is the
 // document; a `.world` holds one under `map` and its workspace under `blocks`,
 // and a write must carry the blocks through untouched
-// (specs/MAIN_MAP_PLAN.md).
+// (specs/MAIN_MAP_PLAN.md). A `.screen` is a map document with the game's
+// values beside it as keys, and a write must carry those through
+// (specs/SCREEN_MAP_PLAN.md, step 4).
+
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 
 import {mapFromRaw, parseMap, type MapDoc} from './mapModel';
+import {
+  addScreenProperty,
+  readScreenHeader,
+  writeScreenBackgroundColor,
+  writeScreenName,
+  writeScreenPropertyDefault,
+  writeScreenRuleValue,
+  writeScreenTheme,
+} from './screenProperties';
 import {
   readWorldHeader,
   writeWorldBackgroundColor,
@@ -31,6 +44,17 @@ export interface MapDocumentAdapter {
    */
   hasMapScript: boolean;
   /**
+   * What the document's own workspace is, when it has one: a map's, or a
+   * screen's, which holds the game's hats rather than the map hats.
+   */
+  scriptKind?: 'map' | 'screen';
+  /**
+   * Whether the world's own cameras are edited here. A world's are, on its
+   * main map; a screen has none, since a camera belongs to the Viewport
+   * that looks through it (specs/SIMPLE_INTERFACE.md).
+   */
+  hasWorldCameras?: boolean;
+  /**
    * The world the document is, for the inspector with nothing selected: its
    * name and properties, and the two edits. Only a `.world` has one.
    */
@@ -51,6 +75,13 @@ export interface MapDocumentAdapter {
     writeBackgroundColor(contents: string, color: string): string;
     /** …and the theme it is painted in, a `use theme` row. */
     writeTheme(contents: string, theme: string | undefined): string;
+    /** What the inspector's head calls it. */
+    title: string;
+    /**
+     * A new value of the game's own, where the document declares them as
+     * data. A world's are `define property` rows, made in its code.
+     */
+    addProperty?(contents: string, name: string, type: string): string;
   };
 }
 
@@ -90,7 +121,9 @@ export const worldFileDocument: MapDocumentAdapter = {
   },
   modulePath: path => path.replace(/\.world$/, ''),
   hasMapScript: false,
+  hasWorldCameras: true,
   world: {
+    title: 'World',
     read: readWorldHeader,
     writeName: writeWorldName,
     writeDefault: writeWorldPropertyDefault,
@@ -99,3 +132,57 @@ export const worldFileDocument: MapDocumentAdapter = {
     writeTheme: writeWorldTheme,
   },
 };
+
+/** The keys of a screen that are not its map's, kept through a map edit. */
+const SCREEN_KEYS = [
+  'name',
+  'properties',
+  'events',
+  'rules',
+  'backgroundColor',
+] as const;
+
+/**
+ * The Main Screen's file: the document is the map, with the game's values
+ * beside it, which its inspector shows.
+ */
+export const screenFileDocument: MapDocumentAdapter = {
+  read: parseMap,
+  write: (contents, doc) => {
+    let kept: Record<string, unknown> = {};
+    try {
+      const held = JSON.parse(contents) as Record<string, unknown>;
+      kept = Object.fromEntries(
+        SCREEN_KEYS.filter(key => held?.[key] !== undefined).map(key => [
+          key,
+          held[key],
+        ]),
+      );
+    } catch {
+      // A screen that will not parse has nothing to keep.
+    }
+    return JSON.stringify({...kept, ...doc}, null, 2);
+  },
+  modulePath: path => path.replace(/\.screen$/, ''),
+  hasMapScript: true,
+  scriptKind: 'screen',
+  world: {
+    title: 'Main Screen',
+    read: readScreenHeader,
+    writeName: writeScreenName,
+    writeDefault: writeScreenPropertyDefault,
+    writeRuleValue: writeScreenRuleValue,
+    writeBackgroundColor: writeScreenBackgroundColor,
+    writeTheme: writeScreenTheme,
+    addProperty: addScreenProperty,
+  },
+};
+
+/**
+ * The adapter for a `.screen` at `path`. The Main Screen is the game, and
+ * shows the game's values; any other screen is a map the game loads.
+ */
+export const screenDocumentFor = (path: string): MapDocumentAdapter =>
+  path === `${MAIN_SCREEN_PATH}.screen`
+    ? screenFileDocument
+    : {...mapFileDocument, modulePath: screenFileDocument.modulePath};

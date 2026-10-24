@@ -39,6 +39,12 @@ import {requestStyleImport} from '../styles/styleImport';
 export const ACTORS_FOLDER = 'actors';
 /** …and the world's, which holds exactly one file (specs/MAP_EVENTS_PLAN.md). */
 export const WORLDS_FOLDER = 'worlds';
+/**
+ * …and the screens', whose Main Screen is the game in the shape that
+ * replaces a world: the World button opens it when a project holds one
+ * (specs/SCREEN_MAP_PLAN.md, step 4).
+ */
+export const SCREENS_FOLDER = 'screens';
 
 /**
  * The sprites' folder, named for the same reason: its button opens the picture

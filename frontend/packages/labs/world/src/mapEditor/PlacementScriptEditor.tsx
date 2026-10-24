@@ -68,8 +68,11 @@ const plugins = [
 export interface PlacementScriptEditorProps {
   /** What the header says this is: the placement's name and kind, or the map. */
   title: string;
-  /** `placement` for a placed actor's workspace, `map` for the map's own. */
-  kind: Extract<FileKind, 'placement' | 'map'>;
+  /**
+   * `placement` for a placed actor's workspace, `map` for the map's own,
+   * `screen` for a screen's own, which holds the game's hats.
+   */
+  kind: Extract<FileKind, 'placement' | 'map' | 'screen'>;
   /** The placed actor's kind, `actors/button`; nothing for the map's own. */
   actorKind?: string;
   /**
