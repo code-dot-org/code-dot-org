@@ -1346,6 +1346,13 @@ export class PhaserBinding {
         );
         host.camera.setZoom(RENDER_SCALE * Math.abs(matrix.scaleX));
         host.camera.centerOn(space.camera.x, space.camera.y);
+        // The space's own sky, painted inside its rectangle; none leaves the
+        // box see-through, as it always was (`World.setBackgroundColor`).
+        const [r, g, b, a] = space.clearColor ?? [0, 0, 0, 0];
+        const byte = (channel: number) => Math.round(channel * 255);
+        host.camera.setBackgroundColor(
+          Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
+        );
       }
       band(scene, spaces, byId, stateOf);
     };

@@ -1429,3 +1429,81 @@ describe('where the running code is', () => {
     expect(here).toBe('main');
   });
 });
+
+describe('world blocks act where they run', () => {
+  // specs/SIMPLE_INTERFACE.md, "World blocks act where they run": the Screen's
+  // code acts on the screen, a level's on the level, an actor's on the layer
+  // it is in.
+
+  /** A level of two layers, with a coin on the front one. */
+  const LAYERED: WorldMap = {
+    ...LEVEL,
+    layers: [{id: 'main'}, {id: 'front'}],
+    actors: [{...LEVEL.actors[0], layer: 'front'}],
+  };
+
+  const loaded = (script?: WorldMap['script']) => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    const [coin] = world.loadMapInto(window, {...LAYERED, script});
+    return {world, window, coin, space: world.viewportSpaceOf(window)!};
+  };
+
+  const sprites = (layers: readonly {background: {sprite?: string}}[]) =>
+    layers.map(layer => layer.background.sprite);
+
+  it('sets a level’s background from the level’s own code', () => {
+    const {world, space} = loaded(running => {
+      running.setBackground('cave.png');
+    });
+    expect(sprites(space.layers)).toEqual(['cave.png', undefined]);
+    expect(world.backdropSnapshot()[0].sprite).toBeUndefined();
+  });
+
+  it('sets the background of the layer an actor is in, from its code', () => {
+    const {world, coin, space} = loaded();
+    world.withActor(coin, () => world.setBackground('stars.png'));
+    expect(sprites(space.layers)).toEqual([undefined, 'stars.png']);
+    // …and a layer named outright is still the one named.
+    world.withActor(coin, () => world.setBackground('cave.png', 'main'));
+    expect(sprites(space.layers)).toEqual(['cave.png', 'stars.png']);
+  });
+
+  it('sets the screen’s background with nothing in hand', () => {
+    const {world, space} = loaded();
+    world.setBackground('screen.png');
+    expect(world.backdropSnapshot()[0].sprite).toBe('screen.png');
+    expect(sprites(space.layers)).toEqual([undefined, undefined]);
+  });
+
+  it('gives a Viewport a sky of its own, and leaves it see-through until then', () => {
+    const {world, coin, space} = loaded();
+    const screen = world.backdropColor();
+    expect(world.spaceSnapshot()[0].clearColor).toBeUndefined();
+
+    world.withActor(coin, () => world.setBackgroundColor('#ff0000'));
+    expect(world.spaceSnapshot()[0].clearColor).toEqual([1, 0, 0, 1]);
+    expect(space.clearColor).toEqual([1, 0, 0, 1]);
+    expect(world.backdropColor()).toEqual(screen);
+  });
+
+  it('sizes the level, not the screen, from the level’s code', () => {
+    const {world, space} = loaded(running => running.setMapSize(30, 12));
+    expect(space.bounds).toEqual(new Vector(30 * 32, 12 * 32));
+    expect(world.mapBounds()).not.toEqual(space.bounds);
+  });
+
+  it('loads over the level, and takes it back, from code in the level', () => {
+    const {world, coin, space} = loaded();
+    const before = world.spaceOf(undefined).loads.length;
+    const [door] = world.withActor(coin, () =>
+      world.loadMap({actors: [{type: 'actors/coin', id: 'door'}]}),
+    );
+    expect(world.spaceOf(door)).toBe(space);
+    expect(space.loads).toHaveLength(2);
+    expect(world.spaceOf(undefined).loads).toHaveLength(before);
+
+    expect(world.withActor(coin, () => world.unloadNewestMap())).toBe(true);
+    expect(space.loads).toHaveLength(1);
+  });
+});

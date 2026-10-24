@@ -214,6 +214,9 @@ vi.mock('phaser', () => {
         record.center = [x, y];
         return this;
       },
+      setBackgroundColor() {
+        return this;
+      },
       ignore(entry: Base) {
         record.ignored.push(entry.record);
         return this;

@@ -167,6 +167,7 @@ import {
   DEFAULT_PARALLAX,
   LAYER_FIXED_OPTIONS,
   layerIdFromValue,
+  layerArgumentOf,
   layerOf,
   layerOptions,
   layerOptionsExtension,
@@ -7530,7 +7531,7 @@ const defineSlotBlocks = (slot: {
         }
         // A whole image, never a cell: a backdrop is not a spritesheet, so this
         // field never carries the `name.png#3` a `set sprite` field can.
-        return `world.set${slot.method}(${str(name)}, ${str(layerOf(block))});\n`;
+        return `world.set${slot.method}(${str(name)}${layerArgumentOf(block)});\n`;
       },
     },
   });
@@ -7553,7 +7554,7 @@ const defineSlotBlocks = (slot: {
         const offset =
           generator.valueToCode(block, 'OFFSET', Order.NONE) ||
           'new WorldLab.Vector(0, 0)';
-        return `world.set${slot.method}Offset(${offset}, ${str(layerOf(block))});\n`;
+        return `world.set${slot.method}Offset(${offset}${layerArgumentOf(block)});\n`;
       },
     },
   });
@@ -7587,7 +7588,7 @@ const defineSlotBlocks = (slot: {
     generator: {
       javascript(block) {
         const repeat = block.getFieldValue('REPEAT') === 'true';
-        return `world.set${slot.method}Repeat(${repeat}, ${str(layerOf(block))});\n`;
+        return `world.set${slot.method}Repeat(${repeat}${layerArgumentOf(block)});\n`;
       },
     },
   });
@@ -7616,7 +7617,7 @@ const defineSlotBlocks = (slot: {
       'offset and the tiling stay as they were, for the next image.',
     generator: {
       javascript(block) {
-        return `world.set${slot.method}(undefined, ${str(layerOf(block))});\n`;
+        return `world.set${slot.method}(undefined${layerArgumentOf(block)});\n`;
       },
     },
   });
@@ -7708,10 +7709,12 @@ const defineEffectBlocks = (owner: {
           `import ${importVar(path)} from ${str(path)};`,
         );
         const values = effectParamValuesCode(block, generator);
-        const layer = owner.layered ? `, ${str(layerOf(block))}` : '';
+        // None named is "the layer this code runs in", which the engine
+        // works out (`World.here`).
+        const layer = owner.layered ? layerArgumentOf(block) : '';
         // `undefined` rather than nothing when a layer follows: the layer is
         // the fourth argument, so the third cannot simply be left off.
-        const settings = values || (owner.layered ? 'undefined' : '');
+        const settings = values || (layer ? 'undefined' : '');
         return `world.add${owner.method}Effect(${str(path)}, ${importVar(path)}${
           settings ? `, ${settings}` : ''
         }${layer});\n`;
@@ -7743,7 +7746,7 @@ const defineEffectBlocks = (owner: {
           return '';
         }
         // No import: removing needs only the effect's identity, not its graph.
-        const layer = owner.layered ? `, ${str(layerOf(block))}` : '';
+        const layer = owner.layered ? layerArgumentOf(block) : '';
         return `world.remove${owner.method}Effect(${str(path)}${layer});\n`;
       },
     },

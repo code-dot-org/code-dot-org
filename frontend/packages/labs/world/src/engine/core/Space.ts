@@ -11,6 +11,7 @@
 
 import type {Actor} from './Actor';
 import {DEFAULT_CAMERA_ID, type Camera} from './Camera';
+import type {Rgba} from './color';
 import type {Layer} from './Layer';
 import type {Vector} from './Vector';
 import type {MapLoad} from './World';
@@ -98,6 +99,13 @@ export class Space {
   get mirrors(): boolean {
     return this.mirrorOf !== undefined;
   }
+
+  /**
+   * The color behind the map this space shows, or none: a Viewport is
+   * see-through until code in it says otherwise (`World.setBackgroundColor`).
+   * Unused for the root, whose sky is the world's.
+   */
+  clearColor: Rgba | undefined;
 
   /** The loads this space holds, oldest first — `unload` takes them back. */
   readonly loads: MapLoad[] = [];

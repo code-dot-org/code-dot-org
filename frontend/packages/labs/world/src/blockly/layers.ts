@@ -95,7 +95,19 @@ export const layerOptions = (
  * layer and those in none — would make every question about layers have to
  * invent an answer for the second kind, forever (core/Layer).
  */
-export const layerOf = (block: Blockly.Block): string => {
+export const layerOf = (block: Blockly.Block): string =>
+  namedLayerOf(block) ?? DEFAULT_LAYER_ID;
+
+/**
+ * The layer a block's own context names — a `define layer` or `within layer`
+ * around it — or nothing.
+ *
+ * What a block that acts on the world passes, where {@link layerOf} is what
+ * one that places passes. Nothing named means "where this code runs": the
+ * layer of the actor whose handler it is, which only the engine knows
+ * (`World.here`, specs/SIMPLE_INTERFACE.md "World blocks act where they run").
+ */
+export const namedLayerOf = (block: Blockly.Block): string | undefined => {
   // SURROUND parent, not parent. In Blockly a block chained BELOW another is
   // that block's child — `getParent()` on a statement returns the statement
   // above it in the same stack. Walking that chain put every block written
@@ -128,7 +140,16 @@ export const layerOf = (block: Blockly.Block): string => {
         : DEFAULT_LAYER_ID;
     }
   }
-  return DEFAULT_LAYER_ID;
+  return undefined;
+};
+
+/**
+ * The trailing layer argument of a world call, for the layer `block` names:
+ * `, "<id>"`, or nothing for none — see {@link namedLayerOf}.
+ */
+export const layerArgumentOf = (block: Blockly.Block): string => {
+  const named = namedLayerOf(block);
+  return named === undefined ? '' : `, ${JSON.stringify(named)}`;
 };
 
 /**

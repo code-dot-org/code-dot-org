@@ -789,23 +789,6 @@ export class World {
    */
   private readonly worldHandlers = new Map<GameEvent, WorldEventHandler[]>();
   /**
-   * How big the world is; see `mapBounds`. One screen until a map is loaded.
-   *
-   * A VECTOR, not a `{width, height}`. The blocks that report it are typed
-   * `Vector`, and every block that takes one apart reads `.x`/`.y` — so a pair
-   * named the other way is a value whose own type is a lie about it, and the
-   * failure is silent: `x of ⟨map size⟩` is `undefined`, the arithmetic around
-   * it is NaN, and nothing throws.
-   */
-  private get bounds(): Vector {
-    return this.rootSpace.bounds;
-  }
-
-  private set bounds(value: Vector) {
-    this.rootSpace.bounds = value;
-  }
-
-  /**
    * The world's spaces (specs/VIEWPORT_PLAN.md): the root, which the main
    * map and every `load map` fill, and one per Viewport placed. Every actor
    * is in exactly one; see `Actor.space`.
@@ -1614,15 +1597,14 @@ export class World {
    * a rule turning this every tick would otherwise share one Vector with the
    * world.
    */
-  setLayerParallax(parallax: Vector, layer = DEFAULT_LAYER_ID): this {
-    const found = this.layer(layer) ?? this.layerList[0];
-    found.parallax = new Vector(parallax.x, parallax.y);
+  setLayerParallax(parallax: Vector, layer?: string): this {
+    this.layerHere(layer).parallax = new Vector(parallax.x, parallax.y);
     return this;
   }
 
   /** Whether a layer ignores the camera entirely — what a HUD is. */
-  setLayerFit(fit: boolean, layer = DEFAULT_LAYER_ID): this {
-    (this.layer(layer) ?? this.layerList[0]).fit = fit;
+  setLayerFit(fit: boolean, layer?: string): this {
+    this.layerHere(layer).fit = fit;
     return this;
   }
 
@@ -2509,6 +2491,8 @@ export class World {
     camera: {x: number; y: number};
     view: {x: number; y: number};
     bounds: {x: number; y: number};
+    /** The color behind its map, or none for a see-through box. */
+    clearColor: Rgba | undefined;
     /** The space's own layers, back to front, as `layerSnapshot` gives the world's. */
     layers: ReadonlyArray<{
       id: string;
@@ -2534,6 +2518,9 @@ export class World {
           camera: {x: space.camera.position.x, y: space.camera.position.y},
           view: {x: view.x, y: view.y},
           bounds: {x: space.bounds.x, y: space.bounds.y},
+          clearColor: space.clearColor
+            ? ([...space.clearColor] as Rgba)
+            : undefined,
           // A mirror has no layers of its own to draw: what it shows is the
           // target's scene, layers and all, through the target's containers.
           // Reporting the target's here would have the driver build a second
@@ -2676,7 +2663,9 @@ export class World {
    * past this, which keeps "as big as the biggest thing in it" true.
    */
   setMapSize(columns: number, rows: number): void {
-    this.bounds = new Vector(
+    // The size of the space the code is in: a level's own code sizes the
+    // level, not the screen it is shown on (`here`).
+    this.here().space.bounds = new Vector(
       Math.max(0, Math.round(columns)) * TILE_SIZE || VIEWPORT_WIDTH,
       Math.max(0, Math.round(rows)) * TILE_SIZE || VIEWPORT_HEIGHT,
     );
@@ -2770,9 +2759,15 @@ export class World {
    * `layer` puts every actor the map describes into one layer, which is what
    * makes a HUD a HUD: the map is an ordinary map, and the layer it is loaded
    * into is the whole of what makes it an interface (specs/VIEWPORT.md).
+   *
+   * INTO THE SPACE THE CODE IS IN: the root from the Screen's code or a world
+   * event, and the Viewport's space from a level's own code or an actor in it
+   * (specs/SIMPLE_INTERFACE.md, "World blocks act where they run").
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
-    const added = this.loadInto(this.rootSpace, map, layer);
+    // Over what the running code's space holds: the root for the Screen's
+    // code, a level's Viewport for a door in the level (`here`).
+    const added = this.loadInto(this.here().space, map, layer);
     // A Viewport this map placed holds its map FROM HERE, not from the end
     // of the next tick, which is when `settleSpaces` would get to it. A
     // world built from a main map with a Viewport on it has its level in it
@@ -2808,13 +2803,12 @@ export class World {
   }
 
   /**
-   * Close the newest map the world itself holds, and say whether there was
-   * one — `unload the newest map`, and the whole of what "back" is.
+   * Close the newest map the running code's space holds, and say whether
+   * there was one — `unload the newest map`, and the whole of what "back" is.
    *
-   * THE WORLD'S OWN SPACE, not a Viewport's: a Viewport shows one map and
-   * swapping it is `load map ⟨…⟩ into ⟨…⟩`, which has its own block and its
-   * own meaning. This is the stack a screen sits on
-   * (specs/SCREENS_PLAN.md).
+   * The root's from the Screen's code, which is the stack a screen sits on
+   * (specs/SCREENS_PLAN.md); a Viewport's from code in its level, which takes
+   * back what that level's code loaded over it (`here`).
    *
    * The map a world was BUILT from is a load like any other, so a project
    * that goes back often enough closes its own first screen and is left with
@@ -2822,7 +2816,7 @@ export class World {
    * the rule's business, and `Screens` keeps one.
    */
   unloadNewestMap(): boolean {
-    const load = this.rootSpace.loads.at(-1);
+    const load = this.here().space.loads.at(-1);
     load?.unload();
     return load !== undefined;
   }
@@ -4217,9 +4211,31 @@ export class World {
    * block, and deleting that block while a `set background` still names it
    * should paint somewhere visible instead of taking the world down.
    */
-  private backdropAt(layer: string): LayerSlot {
-    return (this.layer(layer) ?? this.layerList[this.depthOf(DEFAULT_LAYER_ID)])
-      .background;
+  private backdropAt(layer?: string): LayerSlot {
+    return this.layerHere(layer).background;
+  }
+
+  /**
+   * A layer of the space the running code is in (`here`): the one named, else
+   * the layer of the actor in hand, else the default.
+   *
+   * IN THAT SPACE'S OWN LIST. A Viewport's layers are the map's it shows, and
+   * looking a block's layer up among the root's would paint the screen behind
+   * the game instead of the game (specs/SIMPLE_INTERFACE.md, "World blocks
+   * act where they run"). An id the space does not hold is its default layer,
+   * for the reason `backdropAt` gives.
+   */
+  private layerHere(named?: string): Layer {
+    const {space, layer} = this.here();
+    const id = named ?? layer ?? DEFAULT_LAYER_ID;
+    if (space === this.rootSpace || space.layers.length === 0) {
+      return this.layer(id) ?? this.layerList[this.depthOf(DEFAULT_LAYER_ID)];
+    }
+    return (
+      space.layers.find(held => held.id === id) ??
+      space.layers.find(held => held.id === DEFAULT_LAYER_ID) ??
+      space.layers[0]
+    );
   }
 
   /**
@@ -4230,7 +4246,7 @@ export class World {
    * big it is, and a backdrop is never a spritesheet, so this takes a file name
    * and never a cell reference.
    */
-  setBackground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
+  setBackground(sprite: string | undefined, layer?: string): this {
     this.backdropAt(layer).sprite = sprite;
     return this;
   }
@@ -4314,7 +4330,7 @@ export class World {
    * drifting clouds expressible before cameras exist at all (core/Layer). Pair
    * it with `setBackgroundRepeat` unless the image is meant to leave a gap.
    */
-  setBackgroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+  setBackgroundOffset(offset: Vector, layer?: string): this {
     // Copied, never adopted. `Vector.from` hands back the same instance when it
     // is already a Vector, and a step writing this every tick would then share
     // one object with the world — mutating it in place would move the sky with
@@ -4324,7 +4340,7 @@ export class World {
   }
 
   /** Tile a layer's background rather than stretching it to the surface. */
-  setBackgroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+  setBackgroundRepeat(repeat: boolean, layer?: string): this {
     this.backdropAt(layer).repeat = repeat;
     return this;
   }
@@ -4336,11 +4352,17 @@ export class World {
    * `r g b a` — because `rgba` accepts both and every color block can then
    * feed this one (see color.ts).
    *
-   * One sky, not one per layer: a color on any layer but the bottom would be
-   * hidden by the layer under it.
+   * One sky per space, not one per layer: a color on any layer but the bottom
+   * would be hidden by the layer under it. The root's is the world's; a
+   * Viewport's is behind the map it shows (`here`).
    */
   setBackgroundColor(color: ColorValue): this {
-    this.clearColor = rgba(color);
+    const {space} = this.here();
+    if (space === this.rootSpace) {
+      this.clearColor = rgba(color);
+    } else {
+      space.clearColor = rgba(color);
+    }
     return this;
   }
 
@@ -4358,7 +4380,7 @@ export class World {
     path: string,
     document: AppliedEffectSpec['document'],
     values?: AppliedEffectSpec['values'],
-    layer = DEFAULT_LAYER_ID,
+    layer?: string,
   ): this {
     const spec = values ? {path, document, values} : {path, document};
     const effects = this.backdropAt(layer).effects;
@@ -4384,10 +4406,10 @@ export class World {
     path: string,
     document: AppliedEffectSpec['document'],
     values?: AppliedEffectSpec['values'],
-    layer = DEFAULT_LAYER_ID,
+    layer?: string,
   ): this {
     const spec = values ? {path, document, values} : {path, document};
-    const effects = (this.layer(layer) ?? this.layerList[0]).effects;
+    const effects = this.layerHere(layer).effects;
     const index = effects.findIndex(effect => effect.path === path);
     if (index >= 0) {
       effects[index] = spec;
@@ -4398,8 +4420,8 @@ export class World {
   }
 
   /** Stop an effect on a layer. Removing one not playing is a no-op. */
-  removeLayerEffect(path: string, layer = DEFAULT_LAYER_ID): this {
-    const effects = (this.layer(layer) ?? this.layerList[0]).effects;
+  removeLayerEffect(path: string, layer?: string): this {
+    const effects = this.layerHere(layer).effects;
     const index = effects.findIndex(effect => effect.path === path);
     if (index >= 0) {
       effects.splice(index, 1);
@@ -4449,7 +4471,7 @@ export class World {
   }
 
   /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
-  removeBackgroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+  removeBackgroundEffect(path: string, layer?: string): this {
     const effects = this.backdropAt(layer).effects;
     const index = effects.findIndex(effect => effect.path === path);
     if (index >= 0) {

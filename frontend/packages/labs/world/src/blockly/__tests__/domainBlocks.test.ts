@@ -2590,7 +2590,7 @@ describe('world block generators', () => {
     // The sprite field can carry `coinSpin.png#3`; this one cannot. A backdrop
     // is stretched over the viewport, so a grid of it means nothing.
     expect(run('world_set_background', {BACKGROUND: 'cave.png'}, {}, '')).toBe(
-      'world.setBackground("cave.png", "main");\n',
+      'world.setBackground("cave.png");\n',
     );
   });
 
@@ -2611,7 +2611,7 @@ describe('world block generators', () => {
     // see the case below — so removing it had to be said out loud, the way
     // `stop music` is.
     expect(run('world_clear_background', {}, {}, '')).toBe(
-      'world.setBackground(undefined, "main");\n',
+      'world.setBackground(undefined);\n',
     );
   });
 
@@ -2625,7 +2625,7 @@ describe('world block generators', () => {
     ) as string;
 
     expect(code).toBe(
-      'world.setBackgroundOffset(new WorldLab.Vector(8, 0), "main");\n',
+      'world.setBackgroundOffset(new WorldLab.Vector(8, 0));\n',
     );
   });
 
@@ -2638,7 +2638,7 @@ describe('world block generators', () => {
     ) as string;
 
     expect(code).toBe(
-      'world.setBackgroundOffset(new WorldLab.Vector(0, 0), "main");\n',
+      'world.setBackgroundOffset(new WorldLab.Vector(0, 0));\n',
     );
   });
 
@@ -2652,8 +2652,8 @@ describe('world block generators', () => {
         {} as never,
       ) as string;
 
-    expect(run('true')).toBe('world.setBackgroundRepeat(true, "main");\n');
-    expect(run('false')).toBe('world.setBackgroundRepeat(false, "main");\n');
+    expect(run('true')).toBe('world.setBackgroundRepeat(true);\n');
+    expect(run('false')).toBe('world.setBackgroundRepeat(false);\n');
   });
 
   it('world_set_background_color hands the color over as it arrived', () => {
@@ -2681,7 +2681,7 @@ describe('world block generators', () => {
       '',
     );
     expect(code).toBe(
-      'world.addBackgroundEffect("effects/ripple", EffectsRipple, undefined, "main");\n',
+      'world.addBackgroundEffect("effects/ripple", EffectsRipple);\n',
     );
     expect(defs['mod:effects/ripple']).toBe(
       'import EffectsRipple from "effects/ripple";',
@@ -2708,9 +2708,7 @@ describe('world block generators', () => {
       defs,
       '',
     );
-    expect(code).toBe(
-      'world.removeBackgroundEffect("effects/ripple", "main");\n',
-    );
+    expect(code).toBe('world.removeBackgroundEffect("effects/ripple");\n');
     expect(Object.keys(defs)).toEqual([]);
   });
 
@@ -2733,9 +2731,10 @@ describe('world block generators', () => {
     expect(actorAdd.args0.some(arg => arg.type === 'input_value')).toBe(true);
   });
 
-  it('names the layer for a slot effect, and does not for the world’s', () => {
+  it('leaves the layer of a slot effect to where it runs, and the world’s out', () => {
     // A world effect covers the whole screen and belongs to no layer; a slot's
-    // belongs to the layer its block is written in.
+    // belongs to the layer its block names, and with none named to the layer
+    // the code runs in, which only the engine knows (`World.here`).
     const defs: Record<string, string> = {};
     const run = (type: string) =>
       generatorFor(type)(
@@ -2745,13 +2744,13 @@ describe('world block generators', () => {
       ) as string;
 
     expect(run('world_add_background_effect')).toBe(
-      'world.addBackgroundEffect("effects/ripple", EffectsRipple, undefined, "main");\n',
+      'world.addBackgroundEffect("effects/ripple", EffectsRipple);\n',
     );
     expect(run('world_add_world_effect')).toBe(
       'world.addEffect("effects/ripple", EffectsRipple);\n',
     );
     expect(run('world_remove_background_effect')).toBe(
-      'world.removeBackgroundEffect("effects/ripple", "main");\n',
+      'world.removeBackgroundEffect("effects/ripple");\n',
     );
     expect(run('world_remove_world_effect')).toBe(
       'world.removeEffect("effects/ripple");\n',
