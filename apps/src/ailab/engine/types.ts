@@ -12,6 +12,8 @@ export interface Mode {
   // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
   lockFeatures?: boolean;
+  // Names each row beside its row number, else the dataset's default does; null turns that off.
+  idColumn?: string | null;
   // Trains on `label` and `features` when the level loads. Requires both locks and `reserveLastRows`.
   pretrained?: boolean;
   // Opens on the results once pretrained, with no way back. Requires `pretrained`.
@@ -127,6 +129,7 @@ export interface Metadata {
   name?: string;
   card: MetadataCard;
   defaultLabelColumn?: string;
+  defaultIdColumn?: string;
   fields?: MetadataField[];
 }
 
