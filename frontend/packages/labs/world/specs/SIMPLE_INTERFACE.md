@@ -560,3 +560,38 @@ the World's own. Before any interface is built, every lesson check and
 fixture is run with its game moved into a Viewport docked to a bare Main
 Screen, to find what rules, collisions, cameras and pointer input do
 differently there.
+
+Done, October 2026, for the lesson checks (249 cases), by moving each
+project's game at the point it is checked: the world's main map and its
+`set size of map` became `maps/game.map`, each `add actor` row became a
+placement there whose script ran the row's body when it was created, the
+main camera became a camera of the Viewport, and the world's main map held
+only the Viewport. Every actor landed in the Viewport's space, and the
+engine played the same games there. What differed:
+
+- **Backgrounds set from the world's code land on the screen.** A
+  `set background` row or handler acts on the root, which is the Main
+  Screen now, not on the map in the Viewport (`look/background`,
+  `adventure/world`, `story/scene`). The blocks that act on "the world" —
+  background, effects, layers, map size — need to say whether they mean the
+  screen or the map.
+- **A placement cannot read the world's variables.** Rows that placed
+  actors from a variable declared in the world's code lost it in a
+  placement's script (`memory/variable`, `memory/actor-state`). Game-wide
+  values, decided above, are what such a lesson uses instead.
+- **Setup in a "when created" script lands a frame late.** Speeds, text and
+  traits given in a placement's script arrive after the first frame, where a
+  row gave them before it (`simulation/emergent`, `story/scene`'s first
+  click). Placements keep their values as data, which the inspector already
+  does, rather than as code.
+- **A Viewport looks through its chosen camera one tick after loading.**
+  The camera followed and stopped at the map's edge as before, but the first
+  frame was seen through the Viewport's main camera.
+- **Seven lessons' static checks** read the world file's own blocks and map,
+  and fail against a moved project before anything runs. They are rewritten
+  with the lessons.
+
+Not covered by the checks, and still to see in the browser: drawing, the
+pointer while the Viewport's camera has scrolled, where keyboard focus goes,
+the cost of the extra space, and the root-only behavior of anchors and of
+modal maps stacked over the screen.
