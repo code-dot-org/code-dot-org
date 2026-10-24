@@ -5,6 +5,7 @@
  */
 import {createRouter} from '@tanstack/react-router';
 
+import {isMobileBuild} from '@/config/buildMode';
 import {routeTree} from '@/routeTree.gen';
 
 /**
@@ -20,8 +21,14 @@ import {routeTree} from '@/routeTree.gen';
  * Route files in `src/routes/` declare canonical paths (e.g. `/projects/...`).
  * The basepath below tells the router to strip `/frontend-studio` from the
  * URL when matching and to prepend it when constructing links.
+ *
+ * The mobile build is the exception: Capacitor serves it from the root of
+ * `https://localhost`, so its routes sit at `/launcher` and `/offline`.
  */
-const router = createRouter({routeTree, basepath: '/frontend-studio'});
+const router = createRouter({
+  routeTree,
+  basepath: isMobileBuild() ? '/' : '/frontend-studio',
+});
 
 // Register the router instance for type safety
 declare module '@tanstack/react-router' {

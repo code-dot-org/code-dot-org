@@ -1,0 +1,204 @@
+// Card measures follow curriculum_catalog_card.module.scss in apps/, so the
+// launcher matches studio.code.org/catalog.
+$card-radius: 4px;
+
+.launcher {
+  min-height: 100vh;
+  font-family: var(--font-family-main);
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+}
+
+// Baselines: the privacy text sits on the logo's bottom edge.
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-p-m);
+  padding: var(--spacing-p-s) var(--spacing-p-l);
+  background: var(--background-brand-purple-primary-fixed);
+}
+
+// Two classes outrank the theme's Typography color.
+// Line height 1 keeps the room below its baseline, and so the bar, small.
+.header .privacy {
+  margin: 0;
+  line-height: 1;
+  color: var(--text-neutral-white-fixed);
+}
+
+// The theme's text button, drawn as the address it copies. Three classes
+// outrank the theme's button classes.
+.header .privacy .privacyCopy {
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-transform: none;
+  vertical-align: baseline;
+
+  &:hover,
+  &:active {
+    background: transparent;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// The off-screen field the fallback copy selects.
+.copyField {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.logoHeading {
+  margin: 0;
+  line-height: 0;
+}
+
+.logo {
+  height: 32px;
+}
+
+.main {
+  padding: var(--spacing-p-l);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-p-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: flex;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: $card-radius;
+  background-color: var(--background-neutral-primary);
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  overflow: hidden;
+  border-radius: $card-radius $card-radius 0 0;
+  background: var(--background-brand-purple-primary-fixed);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.imageContain img {
+  width: auto;
+  height: 96px;
+  object-fit: contain;
+}
+
+.imageFallback {
+  color: var(--text-neutral-white-fixed);
+  font-family: var(--font-family-heading);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border: 1px solid var(--borders-neutral-primary);
+  border-top: 0;
+  border-radius: 0 0 $card-radius $card-radius;
+  padding: 1.25em 1em;
+}
+
+// Above the Try Now overlay, so a tap on "+N" opens its tooltip.
+.tags {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.5em;
+}
+
+// At most two lines, like the catalog card.
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 0.5em;
+  color: var(--text-neutral-primary);
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 0.75em;
+  color: var(--text-neutral-secondary);
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.aspect {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em;
+
+  i {
+    font-size: 0.875em;
+    color: var(--text-neutral-secondary);
+  }
+
+  > p {
+    margin: 0;
+    font-size: 0.875em;
+    color: var(--text-neutral-primary);
+  }
+}
+
+// Pinned to the bottom, so buttons line up across a row of cards. Static
+// rather than MUI's relative, so the overlay below spans the card.
+.tryNow {
+  position: static;
+  width: 100%;
+  margin-top: auto;
+
+  // Stretches the tap area over the card.
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
