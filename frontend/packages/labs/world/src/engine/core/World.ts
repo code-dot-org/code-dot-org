@@ -247,6 +247,12 @@ export class MapLoad {
    * (specs/SCREENS_PLAN.md).
    */
   private readonly among: MapLoad[];
+  /**
+   * The space this load was loaded into: the root, or a Viewport's. What
+   * the map's own script does — a background, a size, another load — is
+   * done there (`World.here`).
+   */
+  readonly space: Space;
   /** Every actor this load placed, in placement order. */
   readonly actors: readonly Actor[];
   /**
@@ -267,13 +273,14 @@ export class MapLoad {
   constructor(
     world: World,
     actors: readonly Actor[],
-    among: MapLoad[] = [],
+    space: Space,
     modal = false,
     theme = '',
   ) {
     this.world = world;
     this.actors = actors;
-    this.among = among;
+    this.space = space;
+    this.among = space.loads;
     this.modal = modal;
     this.theme = theme;
   }
@@ -825,8 +832,11 @@ export class World {
    * place, what is near a point, where to put a spawn — is answered for this
    * actor's space, so a rule written before spaces existed keeps meaning
    * what it meant in each space (specs/VIEWPORT_PLAN.md).
+   *
+   * A SPACE in hand is a map's script running: no actor, but a place — the
+   * space the map was loaded into (`withSpace`).
    */
-  private readonly inHand: Array<Actor | Camera> = [];
+  private readonly inHand: Array<Actor | Camera | Space> = [];
 
   /** The project's maps by module path — see `defineMap`. */
   private readonly maps = new Map<string, WorldMap>();
@@ -2061,11 +2071,37 @@ export class World {
 
   // ── Spaces (specs/VIEWPORT_PLAN.md) ──────────────────────────────────────
 
-  /** The space `subject` is in: an actor's own; a camera's is the root. */
-  spaceOf(subject: Actor | Camera | undefined): Space {
+  /**
+   * The space `subject` is in: an actor's own, a camera's own, a space
+   * itself; nothing is in the root.
+   */
+  spaceOf(subject: Actor | Camera | Space | undefined): Space {
+    if (subject instanceof Space) {
+      return subject;
+    }
     return subject && 'space' in subject && subject.space
       ? subject.space
       : this.rootSpace;
+  }
+
+  /**
+   * Where the code that is running is: the space, and the layer if there is
+   * one to speak of.
+   *
+   * An actor's is the space and layer it is in AT THE TIME, not where it was
+   * put; a camera's is its space; a map's script is in the space the map was
+   * loaded into; and code with nothing in hand — the Screen's, a world event's
+   * — is in the root. What acts on "the world" acts here
+   * (specs/SIMPLE_INTERFACE.md, "World blocks act where they run").
+   */
+  here(): {space: Space; layer?: string} {
+    const subject = this.inHand.at(-1);
+    const space = this.spaceOf(subject);
+    return subject &&
+      !(subject instanceof Space) &&
+      !(subject instanceof Camera)
+      ? {space, layer: subject.layer}
+      : {space};
   }
 
   /** The space a Viewport owns, or nothing for an actor that is not one. */
@@ -2092,6 +2128,16 @@ export class World {
     }
   }
 
+  /** Hold `space` for the length of `fn`, with no actor in hand — see the field. */
+  private withSpace<T>(space: Space, fn: () => T): T {
+    this.inHand.push(space);
+    try {
+      return fn();
+    } finally {
+      this.inHand.pop();
+    }
+  }
+
   /** The two halves of `withActor`, for a generated loop's body. */
   enter(subject: Actor | Camera): void {
     this.inHand.push(subject);
@@ -2103,7 +2149,8 @@ export class World {
 
   /** The actor in hand, if any — for what asks after it by name. */
   actorInHand(): Actor | Camera | undefined {
-    return this.inHand.at(-1);
+    const subject = this.inHand.at(-1);
+    return subject instanceof Space ? undefined : subject;
   }
 
   /**
@@ -2910,7 +2957,7 @@ export class World {
     const load = new MapLoad(
       this,
       added,
-      space.loads,
+      space,
       map.modal === true,
       typeof map.theme === 'string' ? map.theme : '',
     );
@@ -2919,7 +2966,13 @@ export class World {
       this.loadOf.set(actor, load);
     }
     if (typeof map.script === 'function') {
-      map.script(this, Object.fromEntries(placed), load);
+      // In the space it was loaded into, so what the script does without
+      // naming an actor — a background, a spawn, another load — happens
+      // there and not in the root (`here`).
+      const script = map.script;
+      this.withSpace(space, () =>
+        script(this, Object.fromEntries(placed), load),
+      );
     }
     return added;
   }

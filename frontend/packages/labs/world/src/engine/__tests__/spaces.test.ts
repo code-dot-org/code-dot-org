@@ -1374,3 +1374,58 @@ describe('a Viewport that elects a camera trait', () => {
     expect(win.get(Offset)).toBe(0);
   });
 });
+
+describe('where the running code is', () => {
+  it('is the root with nothing in hand', () => {
+    const world = makeWorld();
+    expect(world.here()).toEqual({space: world.spaceOf(undefined)});
+    expect(world.here().space.id).toBe('main');
+  });
+
+  it('is an actor’s space and layer while it is in hand', () => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    const [inside] = world.loadMapInto(window, LEVEL);
+    const here = world.withActor(inside, () => world.here());
+    expect(here.space).toBe(world.viewportSpaceOf(window));
+    expect(here.layer).toBe(inside.layer);
+  });
+
+  it('is the space a map was loaded into while its script runs', () => {
+    // Nothing is in hand while a map's script runs, and it used to be in the
+    // root for that reason even when the map was a Viewport's. What it spawns
+    // lands beside what the map placed.
+    const world = makeWorld();
+    const window = placeWindow(world);
+    const seen: {here?: string; inHand?: unknown; spawned?: string} = {};
+    world.loadMapInto(window, {
+      ...LEVEL,
+      script: (running, _placed, load) => {
+        seen.here = running.here().space.id;
+        seen.inHand = running.actorInHand();
+        const spawned = running.addActor(Coin.instantiate('s', 'actors/coin'));
+        seen.spawned = running.spaceOf(spawned).id;
+        expect(load.space).toBe(running.here().space);
+      },
+    });
+    expect(seen).toEqual({
+      here: 'main/win',
+      inHand: undefined,
+      spawned: 'main/win',
+    });
+    // …and back in the root after.
+    expect(world.here().space.id).toBe('main');
+  });
+
+  it('is the root while a map loaded there runs its script', () => {
+    const world = makeWorld();
+    let here = '';
+    world.loadMap({
+      ...LEVEL,
+      script: running => {
+        here = running.here().space.id;
+      },
+    });
+    expect(here).toBe('main');
+  });
+});

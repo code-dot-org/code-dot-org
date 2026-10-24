@@ -350,7 +350,7 @@ export function firstOf(value: ActorSource): readonly Actor[] {
  * see the candidate's own space and accept everything.
  */
 export function inThisSpace(world: World, value: ActorSource): LazyActors {
-  const space = world.spaceOf(world.actorInHand());
+  const space = world.here().space;
   return filtered(value, actor => actor.space === space);
 }
 
