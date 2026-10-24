@@ -202,6 +202,31 @@ describe('renaming an actor', () => {
   });
 });
 
+describe('renaming a screen', () => {
+  it('writes the Main Screen’s own name, and leaves its file where it is', () => {
+    const source = project();
+    source.folders.screens = {
+      id: 'screens',
+      name: 'screens',
+      parentId: '0',
+      open: true,
+    };
+    source.files.s = file({
+      id: 's',
+      name: 'main.screen',
+      language: 'screen',
+      folderId: 'screens',
+      // One never renamed holds no name of its own.
+      contents: JSON.stringify({type: 'map', actors: []}),
+    });
+
+    const {source: next} = renameThing(source, source.files.s, 'Coins');
+
+    expect(next.files.s.name).toBe('main.screen');
+    expect(JSON.parse(read(next, 's')).name).toBe('Coins');
+  });
+});
+
 describe('renaming the world the lab runs', () => {
   it('renames the world and leaves its file where the runtime looks', () => {
     // `worlds/main.world` is the entry BY PATH: without it the runtime says

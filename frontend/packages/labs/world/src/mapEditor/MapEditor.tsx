@@ -88,6 +88,7 @@ import {
   type WorkspaceState,
 } from './mapModel';
 import {MapStage, type WorldCameraEditor} from './MapStage';
+import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {MAIN_CAMERA, startingCamera} from './worldCameraCode';
 import {worldCameras} from './worldCameras';
@@ -762,6 +763,7 @@ export const MapEditor = ({
   return (
     <div className={styles.editor}>
       <div className={styles.picker}>
+        <PlaceHeading fileId={fileId} isReadOnly={isReadOnly} />
         <div className={`${styles.sizeField} ${fields.narrow}`}>
           <TextField
             name="map-width"

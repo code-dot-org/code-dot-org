@@ -160,6 +160,25 @@ The stage keeps zoom, Code marks, Layers and Cameras.
 The switcher lists names. Pictures of Screens and Maps need a renderer and
 a place in the project to keep them, and are later work.
 
+BUILT, with two departures. **Code and Reset view stay on the stage's own
+toolbar**, beside the zoom and the layers: they act on the stage's camera
+and the stage's script view, which the stage owns, and moving them up a
+row would only have put a wire between the two. **A Screen's size is
+still in tiles.** It is stored in tiles, as a map's is, and showing pixels
+over a value kept in tiles would round whatever was typed; a Screen sized
+in pixels, or by device, is a change to what the file holds.
+
+`mapEditor/PlaceHeading` (the name and the actions menu) and
+`mapEditor/PlaceSwitcher`. Make, Rename and Delete are asked of the file
+menus through `files/fileActs`; a new screen is made from `SCREENS_MENU`,
+which has no folder button. A screen now renames as one: its module path
+is what other files name (`renameThing`'s `CODE`), and the Main Screen's
+name is written into its own `name` key. The file label moved out of
+`config` into `files/fileLabel`, which the map editor reads without
+importing the lab's config. In the browser: the switcher opened the
+starter's level, made a screen called Title, and renamed it Pause, with
+the breadcrumb following each.
+
 ### 5. Undo and redo
 
 Each Screen and Map editor keeps a history of its file's contents: every

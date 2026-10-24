@@ -251,6 +251,7 @@ vi.mock('@code-dot-org/lab/redux', () => ({
 const {FileMenus} = await import('../FileMenus');
 const {requestActorCreate} = await import('../../actors/create/actorCreate');
 const {requestActorDelete} = await import('../../actors/actorDelete');
+const {requestFileAct} = await import('../fileActs');
 
 // Cleared between cases, because `toHaveBeenCalled` on a mock that ALREADY was
 // is a wait that ends immediately — and then `calls.at(-1)` reads the last
@@ -824,5 +825,46 @@ describe('an actor deleted from the palette', () => {
     render(<FileMenus menus={false} />);
     expect(await requestActorDelete('actors/ghost')).toBeUndefined();
     expect(confirm).not.toHaveBeenCalled();
+  });
+});
+
+describe('a Screen or Map acted on from the toolbar', () => {
+  // The toolbar over the map editor asks these menus, which own the
+  // prompts (`files/fileActs`, specs/SHELL_PLAN.md).
+  it('makes a new map, asking its name', async () => {
+    render(<FileMenus menus={false} />);
+    promptForName.mockResolvedValueOnce('Level 2');
+    await requestFileAct({act: 'make', folder: 'maps'});
+
+    expect(promptForName).toHaveBeenCalledWith(
+      expect.objectContaining({title: 'New map'}),
+    );
+    expect(createNewFile).toHaveBeenCalledWith(
+      expect.objectContaining({fileName: 'level2.map'}),
+    );
+  });
+
+  it('makes a new screen, though no folder button makes one', async () => {
+    render(<FileMenus menus={false} />);
+    promptForName.mockResolvedValueOnce('Title');
+    await requestFileAct({act: 'make', folder: 'screens'});
+
+    expect(createNewFile).toHaveBeenCalledWith(
+      expect.objectContaining({fileName: 'title.screen'}),
+    );
+  });
+
+  it('renames one by what it is called, and deletes one after asking', async () => {
+    render(<FileMenus menus={false} />);
+    promptForName.mockResolvedValueOnce('Level One');
+    await requestFileAct({act: 'rename', fileId: 'b'});
+    expect(promptForName).toHaveBeenCalledWith(
+      expect.objectContaining({title: 'Rename level1.map'}),
+    );
+    expect(replaceSources).toHaveBeenCalled();
+
+    await requestFileAct({act: 'delete', fileId: 'b'});
+    expect(confirm).toHaveBeenCalled();
+    expect(deleteFile).toHaveBeenCalledWith('b');
   });
 });

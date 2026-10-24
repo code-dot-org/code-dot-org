@@ -7,17 +7,15 @@ import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 import {AnimationEditor} from './animationEditor/AnimationEditor';
 import {followImages} from './appearance/sheetCompanions';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
-import {label} from './blockly/label';
-import {authoredName} from './blockly/projectModules';
 import {orShowCode} from './debug/orShowCode';
 import {EffectFileEditor} from './effect/EffectFileEditor';
 import {FILE_ICONS} from './fileIcons';
+import {fileLabel} from './files/fileLabel';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
 import {ScreenEditor} from './mapEditor/ScreenEditor';
 import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
-import {resolveRuleContents} from './rules/ruleReference';
 import {StyleFileEditor} from './styles/StyleFileEditor';
 
 /**
@@ -153,14 +151,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
    *
    * The file BROWSER still shows file names, and should: it is a view of files.
    */
-  fileLabel: file =>
-    // Resolved: a rule nobody has edited holds a reference to the library's
-    // and declares nothing of its own (rules/ruleReference), so without this
-    // the tab for every unedited rule reads its stem — the one place in the
-    // lab saying something else, which is the thing this whole option exists
-    // to stop.
-    authoredName(resolveRuleContents(file.contents ?? '')) ??
-    label((file.name ?? '').replace(/\.[^.]+$/, '')),
+  fileLabel,
   // File-browser icons for World's own extensions (all FontAwesome solid). The
   // built-in types (js/json/png/…) keep their defaults; these give each World
   // file type a distinct, meaningful glyph.

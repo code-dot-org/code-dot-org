@@ -142,7 +142,10 @@ export const seedFor = (extension: string, name: string): Seed | undefined => {
           2,
         )}\n`,
       };
+    // A map, and a screen, which is a map shown over the root rather than in
+    // a Viewport (specs/SCREEN_MAP_PLAN.md).
     case 'map':
+    case 'screen':
       // The empty map the editor would make, rather than nothing (see above).
       return {
         contents: `${JSON.stringify(

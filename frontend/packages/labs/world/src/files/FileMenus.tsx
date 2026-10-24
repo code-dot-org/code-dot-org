@@ -94,6 +94,7 @@ import {resolveRuleContents} from '../rules/ruleReference';
 import {fileIdAt, filePath} from '../runtime/projectFiles';
 
 import {actorUses, withoutPlacementsOf} from './actorUses';
+import {setFileActHandler} from './fileActs';
 import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
@@ -101,6 +102,7 @@ import {
   BACKGROUNDS_FOLDER,
   FOLDER_MENUS,
   SCREENS_FOLDER,
+  SCREENS_MENU,
   SPRITES_FOLDER,
   WORLDS_FOLDER,
   type FolderMenu,
@@ -806,6 +808,40 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     },
     [ops, config, confirm, alert, thenAsk],
   );
+
+  /**
+   * A Screen or a Map made, renamed or deleted, asked for by the toolbar
+   * over the map editor (`files/fileActs`). The same acts a folder's row
+   * menu offers, with the same prompts.
+   */
+  useEffect(() => {
+    setFileActHandler(async request => {
+      if (isReadOnly) {
+        return undefined;
+      }
+      if (request.act === 'make') {
+        const menu =
+          request.folder === SCREENS_FOLDER
+            ? SCREENS_MENU
+            : FOLDER_MENUS.find(each => each.folder === request.folder);
+        if (menu?.makes[0]) {
+          await make(menu, menu.makes[0]);
+        }
+        return undefined;
+      }
+      const file = live.current.files[request.fileId];
+      if (!file) {
+        return undefined;
+      }
+      if (request.act === 'rename') {
+        await rename(file, config.fileLabel?.(file) ?? file.name);
+      } else {
+        await remove(file);
+      }
+      return undefined;
+    });
+    return () => setFileActHandler(null);
+  }, [isReadOnly, make, rename, remove, config]);
 
   /**
    * An actor taken out of the project, asked for by the Actor Palette

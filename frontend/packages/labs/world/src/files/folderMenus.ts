@@ -119,6 +119,18 @@ export interface FolderMenu {
  * sounds; then the two documents — a map is a world's arrangement and an
  * effect is a picture's.
  */
+/**
+ * Screens, which have no button: the World button opens the Main Screen,
+ * and the others are reached from the map editor's switcher, which makes
+ * new ones through this (`files/fileActs`).
+ */
+export const SCREENS_MENU: FolderMenu = {
+  folder: SCREENS_FOLDER,
+  label: 'Screens',
+  icon: 'display',
+  makes: [{label: 'New screen', extension: 'screen', placeholder: 'Title'}],
+};
+
 export const FOLDER_MENUS: readonly FolderMenu[] = [
   {
     // ONE WORLD PER PROJECT, so this button opens it rather than listing a

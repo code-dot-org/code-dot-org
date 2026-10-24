@@ -19,7 +19,7 @@
   background: var(--background-neutral-primary);
 }
 
-/* The strip over the stage and the palette: the map's size. */
+/* The strip over the stage and the palette: the map's name and size. */
 .picker {
   display: flex;
   gap: 0.5rem;
