@@ -347,6 +347,90 @@ describe('removing and placing', () => {
     expect(selectedId()).toBeNull();
   });
 
+  describe('the brush', () => {
+    // specs/SHELL_PLAN.md, step 3. Cell (column, row) of a 32-tile map, at
+    // its center.
+    const cell = (column: number, row: number) => ({
+      x: column * 32 + 16,
+      y: row * 32 + 16,
+    });
+    const click = (canvas: Element, point: Vec, init: MouseEventInit = {}) =>
+      fireEvent.click(canvas, {clientX: point.x, clientY: point.y, ...init});
+    const stroke = (canvas: Element, map: MapDoc, from: Vec, to: Vec) => {
+      pointer(canvas, 'pointerdown', screenPoint(map, from));
+      pointer(canvas, 'pointermove', screenPoint(map, to));
+      pointer(canvas, 'pointerup', screenPoint(map, to));
+      // …and the click a press and a release make, which the stroke has
+      // already acted on.
+      click(canvas, screenPoint(map, to));
+    };
+    const at = (map: MapDoc) =>
+      map.actors.map(actor => actor.properties?.positional?.position);
+
+    it('paints one in each cell a drag crosses, and writes once', () => {
+      const map = doc();
+      const {canvas, written, onDocChange} = mount(map, {
+        placing: 'actors/coin',
+      });
+      stroke(canvas, map, cell(3, 5), cell(6, 5));
+
+      expect(onDocChange).toHaveBeenCalledTimes(1);
+      expect(at(written()).slice(2)).toEqual([
+        cell(3, 5),
+        cell(4, 5),
+        cell(5, 5),
+        cell(6, 5),
+      ]);
+    });
+
+    it('paints nothing over one of its own kind', () => {
+      const map = doc(); // coins at cells (1, 1) and (4, 1)
+      const {canvas, written} = mount(map, {placing: 'actors/coin'});
+      stroke(canvas, map, cell(0, 1), cell(5, 1));
+
+      expect(at(written()).slice(2)).toEqual([
+        cell(0, 1),
+        cell(2, 1),
+        cell(3, 1),
+        cell(5, 1),
+      ]);
+    });
+
+    it('takes them away along a drag that began on one', () => {
+      const map = doc();
+      const {canvas, written} = mount(map, {placing: 'actors/coin'});
+      stroke(canvas, map, cell(1, 1), cell(4, 1));
+
+      expect(written().actors).toEqual([]);
+    });
+
+    it('takes one away with a click, as a stroke of one cell', () => {
+      const map = doc();
+      const {canvas, written} = mount(map, {placing: 'actors/coin'});
+      click(canvas, screenPoint(map, cell(1, 1)));
+
+      expect(written().actors.map(actor => actor.id)).toEqual(['b']);
+    });
+
+    it('places one with Alt wherever it is put, and paints nothing on a press', () => {
+      const map = doc();
+      const {canvas, written, onDocChange} = mount(map, {
+        placing: 'actors/coin',
+      });
+      const on = screenPoint(map, {x: 50, y: 47});
+      pointer(canvas, 'pointerdown', on, {altKey: true});
+      pointer(canvas, 'pointerup', on, {altKey: true});
+      expect(onDocChange).not.toHaveBeenCalled();
+      click(canvas, on, {altKey: true});
+
+      expect(at(written())).toEqual([
+        {x: 48, y: 48},
+        {x: 144, y: 48},
+        {x: 50, y: 47},
+      ]);
+    });
+  });
+
   it('places the chosen kind at the clicked cell’s center', () => {
     const map = doc();
     const {canvas, written} = mount(map, {placing: 'actors/coin'});

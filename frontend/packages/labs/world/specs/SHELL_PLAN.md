@@ -134,6 +134,13 @@ selects, as now.
 The cell arithmetic is in a pure module (`stageGeometry`); the strokes are
 checked in the browser.
 
+BUILT. `MapStage`'s stroke (`strokeRef`, `brushAt`), with `strokePoints`
+and a `hitTest` that asks after one kind only, so a coin under a ground
+block is still a coin to erase. A click with no press before it is a
+stroke of one cell. In the browser: a drag with Ground in hand painted a
+row across the starter's level, a drag from inside the row took three
+cells out, and the running game followed each stroke.
+
 ### 4. The toolbar
 
 Over the stage, shared by the Screen and the Map:

@@ -314,10 +314,14 @@ export function hitTest(
   sizes: KindSizes,
   scales: KindScales = undefined,
   placementSizes: PlacementSizes = undefined,
+  // Which placements count, when not all do: the brush asks only after its
+  // own kind. The whole list is still what each one's transform is read
+  // through, since a parent of another kind still carries its children.
+  accept: (actor: Placement) => boolean = () => true,
 ): Placement | undefined {
   for (let i = actors.length - 1; i >= 0; i--) {
     const actor = actors[i];
-    if (!positionOf(actor)) {
+    if (!positionOf(actor) || !accept(actor)) {
       continue;
     }
     const local = toLocalFrame(world, worldTransformOf(actor, actors, scales));
@@ -329,6 +333,26 @@ export function hitTest(
     }
   }
   return undefined;
+}
+
+/**
+ * The points a brush stroke passes through between two pointer samples,
+ * `from` excluded and `to` included (specs/SHELL_PLAN.md, step 3).
+ *
+ * A fast drag reports samples tiles apart, and painting only where the
+ * pointer was reported would leave gaps in the line. Half a tile apart, no
+ * cell the segment crosses through its middle is missed.
+ */
+export function strokePoints(from: Vec, to: Vec, tile: Tile): Vec[] {
+  const step = Math.min(tile.width, tile.height) / 2;
+  const count = Math.max(
+    1,
+    Math.ceil(Math.hypot(to.x - from.x, to.y - from.y) / step),
+  );
+  return Array.from({length: count}, (_, at) => ({
+    x: from.x + ((to.x - from.x) * (at + 1)) / count,
+    y: from.y + ((to.y - from.y) * (at + 1)) / count,
+  }));
 }
 
 /**

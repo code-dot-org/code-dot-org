@@ -120,6 +120,7 @@ import {
   drawnSize,
   fitView,
   hitTest,
+  strokePoints,
   nextSelection,
   panIntoView,
   type Remembered,
@@ -353,8 +354,10 @@ export interface MapStageProps {
 /**
  * The canvas and its inspector.
  *
- * Snap-to-grid by default; hold Alt to place freely. Middle-drag (or left-drag
- * with no actor selected) pans; the wheel zooms toward the cursor; a button
+ * With an actor in hand, a press paints one in the cell under it and a drag
+ * paints along its path; a press on one of the same kind takes it away, and
+ * a drag from there takes away along its path. Alt places one off the grid.
+ * Middle-drag (or left-drag with no actor selected) pans; the wheel zooms toward the cursor; a button
  * resets the view. In select mode, clicking a placed actor selects it, the arrow
  * keys cycle the selection (panning it into view), Shift+arrow nudges it a tile
  * (a pixel with Alt), dragging moves it, Delete removes it, and the inspector
@@ -620,6 +623,27 @@ export const MapStage = ({
     box?: {width: number; height: number};
   } | null>(null);
 
+  /**
+   * A stroke of the brush (specs/SHELL_PLAN.md, step 3). A press on an
+   * empty cell paints one of the kind in hand, and a press on a placement of
+   * that kind takes it away; the drag that follows does the same in each
+   * cell it crosses, and nothing twice in one cell. The map is written once,
+   * when the stroke ends, as a drag writes it.
+   */
+  const strokeRef = useRef<{
+    mode: 'paint' | 'erase';
+    pointerId: number;
+    last: Vec;
+    done: Set<string>;
+    changed: boolean;
+  } | null>(null);
+  /**
+   * Whether a stroke just ended: the click that ends one has already been
+   * acted on. A click with no press before it, as a test sends, is a stroke
+   * of one cell.
+   */
+  const strokedRef = useRef(false);
+
   // Entering place mode drops any placed-actor selection: the two modes are
   // exclusive, and an inspector for something you are no longer editing is a
   // panel in the way.
@@ -756,6 +780,76 @@ export const MapStage = ({
   const deleteActor = (id: string) => {
     commit(withoutPlacement(mapRef.current, id));
     setSelectedId(null);
+  };
+
+  /** The map as it is mid-gesture, drawn and previewed, not yet written. */
+  const preview = (next: MapDoc) => {
+    mapRef.current = next;
+    setMap(next);
+    onDocPreview?.(next);
+  };
+
+  /** A placement of the kind in hand under a world point, if there is one. */
+  const sameKindUnder = (world: Vec): Placement | undefined =>
+    hitTest(
+      mapRef.current.actors,
+      world,
+      sizes,
+      scales,
+      placementSizes,
+      actor => actor.type === selected,
+    );
+
+  /**
+   * One cell of a stroke: a placement of the kind in hand painted at the
+   * point's cell, unless one is already there, or the one under the point
+   * taken away. Whether it changed anything.
+   */
+  const brushAt = (world: Vec, mode: 'paint' | 'erase'): boolean => {
+    if (!selected) {
+      return false;
+    }
+    if (mode === 'erase') {
+      const hit = sameKindUnder(world);
+      if (hit) {
+        preview(withoutPlacement(mapRef.current, hit.id));
+      }
+      return Boolean(hit);
+    }
+    const pos = snap(world, false, ghostBox);
+    if (sameKindUnder(pos)) {
+      return false;
+    }
+    preview(withNewPlacement(mapRef.current, selected, pos));
+    return true;
+  };
+
+  /** The map with one more of `type` at `pos`. */
+  const withNewPlacement = (map: MapDoc, type: string, pos: Vec): MapDoc => {
+    const name = type.split('/').pop() ?? type;
+    return {
+      ...map,
+      actors: [
+        ...map.actors,
+        withPlacementLayer(
+          {
+            type,
+            id: `${name}-${crypto.randomUUID().slice(0, 8)}`,
+            properties: {positional: {position: pos}},
+          },
+          // On the layer the strip has selected, if the map still has it.
+          layersOf(map).some(layer => layer.id === selectedLayer)
+            ? selectedLayer
+            : DEFAULT_LAYER,
+        ),
+      ],
+    };
+  };
+
+  /** Which cell a point of a stroke is in, as the brush snaps it. */
+  const cellOf = (world: Vec): string => {
+    const at = snap(world, false, ghostBox);
+    return `${at.x},${at.y}`;
   };
 
   // --- Inspector: edit the selected actor's properties -------------------
@@ -1696,6 +1790,15 @@ export const MapStage = ({
   };
 
   const endGesture = () => {
+    const stroke = strokeRef.current;
+    if (stroke) {
+      canvasRef.current?.releasePointerCapture(stroke.pointerId);
+      strokeRef.current = null;
+      strokedRef.current = true;
+      if (stroke.changed) {
+        commit(mapRef.current);
+      }
+    }
     const grip = gripRef.current;
     if (grip) {
       canvasRef.current?.releasePointerCapture(grip.pointerId);
@@ -1742,8 +1845,23 @@ export const MapStage = ({
     if (event.button !== 0) {
       return;
     }
-    // Left button in PLACE mode: placement happens on click, nothing on down.
+    // Left button in PLACE mode: a stroke of the brush. With Alt the click
+    // places one, off the grid, and a press does nothing.
     if (selected) {
+      if (isReadOnly || event.altKey) {
+        return;
+      }
+      event.preventDefault();
+      const world = screenToWorld(event.clientX, event.clientY);
+      const mode = sameKindUnder(world) ? 'erase' : 'paint';
+      strokeRef.current = {
+        mode,
+        pointerId: event.pointerId,
+        last: world,
+        done: new Set([cellOf(world)]),
+        changed: brushAt(world, mode),
+      };
+      canvasRef.current?.setPointerCapture(event.pointerId);
       return;
     }
     const world = screenToWorld(event.clientX, event.clientY);
@@ -1836,6 +1954,20 @@ export const MapStage = ({
   };
 
   const handlePointerMove = (event: ReactPointerEvent) => {
+    const stroke = strokeRef.current;
+    if (stroke) {
+      const world = screenToWorld(event.clientX, event.clientY);
+      for (const point of strokePoints(stroke.last, world, map.tile)) {
+        const cell = cellOf(point);
+        if (!stroke.done.has(cell)) {
+          stroke.done.add(cell);
+          stroke.changed = brushAt(point, stroke.mode) || stroke.changed;
+        }
+      }
+      stroke.last = world;
+      setHover(snap(world, false, ghostBox));
+      return;
+    }
     const grip = gripRef.current;
     if (grip) {
       const world = screenToWorld(event.clientX, event.clientY);
@@ -2209,34 +2341,28 @@ export const MapStage = ({
   };
 
   const handleClick = (event: ReactMouseEvent) => {
+    // The click that ends a stroke: the stroke has done what it meant.
+    if (strokedRef.current) {
+      strokedRef.current = false;
+      return;
+    }
     // Placement (place mode). A pan drag ends with a click; ignore it, and any
     // click with no template selected.
     if (isReadOnly || !selected || !view || panRef.current) {
       return;
     }
-    const pos = snap(
-      screenToWorld(event.clientX, event.clientY),
-      event.altKey,
-      ghostBox,
-    );
-    const name = selected.split('/').pop() ?? selected;
-    commit({
-      ...map,
-      actors: [
-        ...map.actors,
-        withPlacementLayer(
-          {
-            type: selected,
-            id: `${name}-${crypto.randomUUID().slice(0, 8)}`,
-            properties: {positional: {position: pos}},
-          },
-          // On the layer the strip has selected, if the map still has it.
-          layersOf(map).some(layer => layer.id === selectedLayer)
-            ? selectedLayer
-            : DEFAULT_LAYER,
-        ),
-      ],
-    });
+    const world = screenToWorld(event.clientX, event.clientY);
+    // With Alt, one placed where it was put, whatever is there; without, a
+    // stroke of one cell.
+    if (event.altKey) {
+      commit(
+        withNewPlacement(mapRef.current, selected, snap(world, true, ghostBox)),
+      );
+      return;
+    }
+    if (brushAt(world, sameKindUnder(world) ? 'erase' : 'paint')) {
+      commit(mapRef.current);
+    }
   };
 
   const resetView = () => {

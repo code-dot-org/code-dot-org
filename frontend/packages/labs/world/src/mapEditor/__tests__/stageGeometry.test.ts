@@ -14,6 +14,7 @@ import {
   drawnSize,
   fitView,
   hitTest,
+  strokePoints,
   placementSize,
   rememberedPicture,
   scriptButtonAt,
@@ -304,6 +305,25 @@ describe('hitTest', () => {
     expect(hitTest(actors, {x: 96, y: 48}, undefined)).toBeUndefined();
   });
 
+  it('asks only after the ones it is told to', () => {
+    // The brush: a coin under a ground block is still a coin to erase.
+    const actors = [
+      at('coin', 48, 48, {}, 'actors/coin'),
+      at('ground', 48, 48, {}, 'actors/ground'),
+    ];
+    expect(hitTest(actors, {x: 48, y: 48}, undefined)?.id).toBe('ground');
+    expect(
+      hitTest(
+        actors,
+        {x: 48, y: 48},
+        undefined,
+        undefined,
+        undefined,
+        actor => actor.type === 'actors/coin',
+      )?.id,
+    ).toBe('coin');
+  });
+
   it('prefers the one drawn last where two overlap', () => {
     // Actors draw in array order, so the last is on top and is the one a
     // click on the overlap should grab.
@@ -557,5 +577,26 @@ describe('scriptButtonAt', () => {
       x: 800 - 60 - 8,
       y: 8,
     });
+  });
+});
+
+describe('strokePoints', () => {
+  const tile = {width: 32, height: 32};
+
+  it('reaches every cell between two samples a fast drag reports', () => {
+    const points = strokePoints({x: 16, y: 16}, {x: 16 + 32 * 3, y: 16}, tile);
+    // Half a tile apart, the last where the pointer is, the first not where
+    // it was.
+    expect(points).toHaveLength(6);
+    expect(points.at(-1)).toEqual({x: 112, y: 16});
+    expect(points[0]).toEqual({x: 32, y: 16});
+    const cells = new Set(points.map(point => Math.floor(point.x / 32)));
+    expect([...cells]).toEqual([1, 2, 3]);
+  });
+
+  it('is the one point for a sample that did not move far', () => {
+    expect(strokePoints({x: 0, y: 0}, {x: 3, y: 4}, tile)).toEqual([
+      {x: 3, y: 4},
+    ]);
   });
 });
