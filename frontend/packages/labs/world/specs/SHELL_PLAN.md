@@ -81,6 +81,13 @@ what only they reach now: effects, animations, sprites, styles and sounds.
 The trail's rules are a pure module with tests; the breadcrumb is checked
 in the browser.
 
+BUILT. `layout/trail.ts` (`follow`, `withScript`, `scriptOf`), kept by
+`WorldLayout` and handed down through `TrailContext`; `MapEditor` takes its
+open script from `useScriptStep`. The breadcrumb's separator is the
+character `›`, not an icon. In the browser: opening the level from the
+Maps menu, then its code, then going back a step at a time, closes the
+code and returns to the Main Screen.
+
 ### 2. The Actor Palette
 
 The actor strip becomes a column down the left of the map editor:

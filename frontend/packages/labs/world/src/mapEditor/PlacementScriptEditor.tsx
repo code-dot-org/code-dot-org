@@ -87,7 +87,8 @@ export interface PlacementScriptEditorProps {
   /** The workspace as stored, or nothing yet. */
   contents: BlocklySerialization | undefined;
   onChange: (next: BlocklySerialization) => void;
-  onBack: () => void;
+  /** The way back to the map, when no breadcrumb above says it. */
+  onBack?: () => void;
   isReadOnly: boolean;
 }
 
@@ -227,16 +228,18 @@ export const PlacementScriptEditor = ({
   return (
     <div className={styles.script}>
       <div className={styles.scriptHeader}>
-        <Button
-          variant="text"
-          size="extraSmall"
-          startIcon={
-            <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
-          }
-          onClick={onBack}
-        >
-          Map
-        </Button>
+        {onBack && (
+          <Button
+            variant="text"
+            size="extraSmall"
+            startIcon={
+              <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+            }
+            onClick={onBack}
+          >
+            Map
+          </Button>
+        )}
         <Typography component="span" variant="label2">
           {title}
         </Typography>

@@ -1,4 +1,4 @@
-import {act, fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import {expect, it, vi} from 'vitest';
 
 import {
@@ -79,13 +79,17 @@ it('renders the World Lab shell from the default project', async () => {
   // default project renders.
   await act(async () => {});
 
-  // The default project's open file has a tab, called what the world in it is
-  // called — the word its blocks and the menus use (`worldConfig.fileLabel`).
-  // The file name is the tab's tooltip.
-  const tab = await screen.findByRole('tab', {name: 'Platform World'});
-  expect(tab.title).toBe('main.screen');
-  // …and the way around the project is the folder menus, one button per
-  // folder, in the tab bar (`files/FileMenus`).
+  // No file tabs: the breadcrumb stands where they were, and names the open
+  // file what the screen in it is called — the word its blocks and the menus
+  // use (`worldConfig.fileLabel`, specs/SHELL_PLAN.md).
+  const trail = await screen.findByRole('navigation', {name: 'Breadcrumb'});
+  expect(within(trail).getByText('Platform World')).toHaveAttribute(
+    'aria-current',
+    'page',
+  );
+  expect(screen.queryByRole('tab', {name: 'Platform World'})).toBeNull();
+  // …and the folder menus, one button per folder, sit before it
+  // (`files/FileMenus`).
   // Singular, and the one button that is not a menu: there is one world per
   // project, so it opens (specs/MAP_EVENTS_PLAN.md).
   expect(screen.getByRole('button', {name: 'World'})).toBeTruthy();
@@ -125,10 +129,10 @@ it('swaps the editor for the JavaScript it makes, and back', async () => {
   // …in the editor's PLACE, which is the whole of what changed from a panel
   // below it.
   expect(screen.queryByText('screen editor')).toBeNull();
-  // …and the file tabs are still there, which is why the swap is around each
+  // …and the breadcrumb is still there, which is why the swap is around each
   // editor rather than around Codebridge's whole workspace: a reader can move
   // between files without leaving the code first.
-  expect(screen.getByRole('tab', {name: 'Platform World'})).toBeTruthy();
+  expect(screen.getByRole('navigation', {name: 'Breadcrumb'})).toBeTruthy();
 
   // The view's own way out, beside the button that opened it.
   fireEvent.click(screen.getByRole('button', {name: 'Back'}));

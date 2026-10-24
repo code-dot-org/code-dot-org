@@ -1,7 +1,20 @@
 import {Button} from '@mui/material';
-import {useEffect, useMemo, useRef, useState, type CSSProperties} from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react';
 
-import {activateFile, InfoPanel, Workspace} from '@code-dot-org/codebridge';
+import {
+  activateFile,
+  getActiveFileForSource,
+  InfoPanel,
+  shouldShowFile,
+  Workspace,
+} from '@code-dot-org/codebridge';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -36,6 +49,9 @@ import {WorldPreview} from '../preview/WorldPreview';
 import {ProgressionButton} from '../progression/ProgressionButton';
 import {fileIdAt, projectFiles} from '../runtime/projectFiles';
 
+import {Breadcrumb} from './Breadcrumb';
+import {follow, withScript, type ScriptStep, type Trail} from './trail';
+import {TrailContext, type TrailContextValue} from './TrailContext';
 import styles from './worldLayout.module.css';
 
 const clamp = (value: number, min: number, max: number) =>
@@ -81,15 +97,9 @@ const WorldLayout = () => {
     return () => setActiveAppBuilder(false);
   }, [app]);
 
-  // …and with nothing to browse, closing a tab can be a one-way door. Every
-  // other file is reachable from a block that names it (blockly/openModule),
-  // but the world itself is what those blocks are IN — close it and there is
-  // no list to reopen it from and no block left to ask. So it is pinned, and
-  // only while the browser is hidden: with a browser, closing it is an
-  // ordinary thing to do and one click to undo.
   const {currentSources, updateSources} = useSources<MultiFileSource>();
 
-  // "Show me" for a place in another TAB. Only the active file's editor is
+  // "Show me" for a place in another FILE. Only the active file's editor is
   // mounted, so until the file is in front nobody answers for what is in it
   // (`callouts/reveal`). Answered here because this is what is always
   // mounted, and what has the project. A lesson names the actor, not a path:
@@ -117,13 +127,55 @@ const WorldLayout = () => {
   }, []);
   const entryFileId = useMemo(
     () =>
-      browsable
-        ? undefined
-        : fileIdAt(
-            currentSources.source,
-            entryFileOf(projectFiles(currentSources.source)),
-          ),
-    [browsable, currentSources],
+      fileIdAt(
+        currentSources.source,
+        entryFileOf(projectFiles(currentSources.source)),
+      ),
+    [currentSources],
+  );
+
+  // THE TRAIL, from the entry to the file in front, which the breadcrumb
+  // draws where the tabs were (specs/SHELL_PLAN.md, step 1). It follows the
+  // active file rather than being told where the learner went, and is
+  // brought up to date as this renders, so no editor below ever reads one a
+  // file behind.
+  const [storedTrail, setTrail] = useState<Trail>([]);
+  const source = currentSources.source;
+  const trail = follow(
+    storedTrail,
+    getActiveFileForSource(source)?.id,
+    entryFileId,
+    fileId => shouldShowFile(source.files[fileId]),
+  );
+  if (trail !== storedTrail) {
+    setTrail(trail);
+  }
+  const trailRef = useRef(trail);
+  trailRef.current = trail;
+  const goTo = useCallback((index: number) => {
+    const step = trailRef.current[index];
+    if (!step) {
+      return;
+    }
+    // Cut back first, so the step's own script, if it is one, stays open
+    // once its file is in front: the two land in one render.
+    setTrail(trailRef.current.slice(0, index + 1));
+    const now = sourcesRef.current;
+    if (!now.source.files[step.fileId]?.active) {
+      updateRef.current({
+        ...now,
+        source: activateFile(now.source, step.fileId),
+      });
+    }
+  }, []);
+  const setScript = useCallback(
+    (fileId: string, script: ScriptStep | null) =>
+      setTrail(withScript(trailRef.current, fileId, script)),
+    [],
+  );
+  const trailContext = useMemo<TrailContextValue>(
+    () => ({trail, goTo, setScript}),
+    [trail, goTo, setScript],
   );
   const [instructionsWidth, setInstructionsWidth] = useState(
     INSTRUCTIONS.initial,
@@ -176,172 +228,180 @@ const WorldLayout = () => {
   const isSplit = showEditor && showPreview;
 
   return (
-    <ShowCodeContext.Provider value={showCode}>
-      {/* The instructions width rides on a custom property so it can land on the
+    <TrailContext.Provider value={trailContext}>
+      <ShowCodeContext.Provider value={showCode}>
+        {/* The instructions width rides on a custom property so it can land on the
         ResourcePanel itself (which takes a className but no style prop). */}
-      <div
-        className={styles.layout}
-        style={
-          {'--instructions-width': `${instructionsWidth}px`} as CSSProperties
-        }
-      >
-        <InfoPanel
-          className={styles.instructions}
-          documentationUrl="/docs/ide/world"
-          hasConsole={false}
-          // Read-only: it reads the generated code and the console, and answers
-          // in blocks. It offers no file edits, because a model cannot author a
-          // Blockly workspace safely (`aiTutor/useWorldTutor`).
-          aiTutor={aiTutor}
-          // "Show me": a link in a lesson's instructions names a place, and
-          // pressing it points there (`callouts/pointAt`).
-          onInstructionsTextClick={showMe}
-          extraSettings={[blocklyThemeSetting]}
-          // The way into the progression map, in the panel's bottom icon strip
-          // (specs/PROGRESSION_UI.md).
-          extraLinks={<ProgressionButton />}
-        />
-        {!isInstructionsCollapsed && (
-          <ResizeHandle
-            axis="x"
-            ariaLabel="Resize instructions"
-            value={instructionsWidth}
-            min={INSTRUCTIONS.min}
-            max={INSTRUCTIONS.max}
-            onDelta={dx =>
-              setInstructionsWidth(w =>
-                clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
-              )
-            }
-            onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
+        <div
+          className={styles.layout}
+          style={
+            {'--instructions-width': `${instructionsWidth}px`} as CSSProperties
+          }
+        >
+          <InfoPanel
+            className={styles.instructions}
+            documentationUrl="/docs/ide/world"
+            hasConsole={false}
+            // Read-only: it reads the generated code and the console, and answers
+            // in blocks. It offers no file edits, because a model cannot author a
+            // Blockly workspace safely (`aiTutor/useWorldTutor`).
+            aiTutor={aiTutor}
+            // "Show me": a link in a lesson's instructions names a place, and
+            // pressing it points there (`callouts/pointAt`).
+            onInstructionsTextClick={showMe}
+            extraSettings={[blocklyThemeSetting]}
+            // The way into the progression map, in the panel's bottom icon strip
+            // (specs/PROGRESSION_UI.md).
+            extraLinks={<ProgressionButton />}
           />
-        )}
+          {!isInstructionsCollapsed && (
+            <ResizeHandle
+              axis="x"
+              ariaLabel="Resize instructions"
+              value={instructionsWidth}
+              min={INSTRUCTIONS.min}
+              max={INSTRUCTIONS.max}
+              onDelta={dx =>
+                setInstructionsWidth(w =>
+                  clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
+                )
+              }
+              onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
+            />
+          )}
 
-        <div className={styles.workspaceColumn}>
-          <PanelContainer
-            id="world-workspace"
-            className={styles.workspacePanel}
-            headerContent={<WorkspaceHeader />}
-            rightHeaderContent={
-              // NOT IN PREVIEW-ONLY VIEW, where there is no editor pane to
-              // swap: a button that visibly does nothing is worse than no
-              // button.
-              //
-              // "JavaScript" and not "Show Code": the segmented buttons beside
-              // this one already call the blocks editor "Code", and a lab with
-              // two controls using that word for two different panes is a lab
-              // nobody can be told about.
-              showEditor ? (
-                <Button
-                  variant="text"
-                  size="extraSmall"
-                  startIcon={
-                    <FontAwesomeV6Icon iconName="file-code" iconStyle="solid" />
-                  }
-                  aria-pressed={showGeneratedCode}
-                  onClick={() => setShowGeneratedCode(shown => !shown)}
-                >
-                  JavaScript
-                </Button>
-              ) : undefined
-            }
-            leftHeaderContent={
-              <SegmentedButtons
-                size="xs"
-                selectedButtonValue={viewMode}
-                onChange={value => setViewMode(value as ViewModeType)}
-                buttons={[
-                  {
-                    value: ViewMode.CODE,
-                    label: 'Code',
-                    ariaLabel: 'View code editor only',
-                    iconLeft: {iconName: 'code', iconStyle: 'solid'},
-                  },
-                  {
-                    value: ViewMode.PREVIEW,
-                    label: 'Preview',
-                    ariaLabel: 'View world preview only',
-                    iconLeft: {iconName: 'eye', iconStyle: 'solid'},
-                  },
-                  {
-                    value: ViewMode.SPLIT,
-                    label: 'Split View',
-                    ariaLabel: 'View code and world preview side by side',
-                    iconLeft: {iconName: 'table-columns', iconStyle: 'solid'},
-                  },
-                ]}
-              />
-            }
-          >
-            <div className={styles.editorAndPreview}>
-              {/* The import shelves, mounted beside the workspace rather than
+          <div className={styles.workspaceColumn}>
+            <PanelContainer
+              id="world-workspace"
+              className={styles.workspacePanel}
+              headerContent={<WorkspaceHeader />}
+              rightHeaderContent={
+                // NOT IN PREVIEW-ONLY VIEW, where there is no editor pane to
+                // swap: a button that visibly does nothing is worse than no
+                // button.
+                //
+                // "JavaScript" and not "Show Code": the segmented buttons beside
+                // this one already call the blocks editor "Code", and a lab with
+                // two controls using that word for two different panes is a lab
+                // nobody can be told about.
+                showEditor ? (
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    startIcon={
+                      <FontAwesomeV6Icon
+                        iconName="file-code"
+                        iconStyle="solid"
+                      />
+                    }
+                    aria-pressed={showGeneratedCode}
+                    onClick={() => setShowGeneratedCode(shown => !shown)}
+                  >
+                    JavaScript
+                  </Button>
+                ) : undefined
+              }
+              leftHeaderContent={
+                <SegmentedButtons
+                  size="xs"
+                  selectedButtonValue={viewMode}
+                  onChange={value => setViewMode(value as ViewModeType)}
+                  buttons={[
+                    {
+                      value: ViewMode.CODE,
+                      label: 'Code',
+                      ariaLabel: 'View code editor only',
+                      iconLeft: {iconName: 'code', iconStyle: 'solid'},
+                    },
+                    {
+                      value: ViewMode.PREVIEW,
+                      label: 'Preview',
+                      ariaLabel: 'View world preview only',
+                      iconLeft: {iconName: 'eye', iconStyle: 'solid'},
+                    },
+                    {
+                      value: ViewMode.SPLIT,
+                      label: 'Split View',
+                      ariaLabel: 'View code and world preview side by side',
+                      iconLeft: {iconName: 'table-columns', iconStyle: 'solid'},
+                    },
+                  ]}
+                />
+              }
+            >
+              <div className={styles.editorAndPreview}>
+                {/* The import shelves, mounted beside the workspace rather than
                 inside an editor: they are asked for from a block's `(import…)`
                 row AND from the file menus, and the menus are on screen
                 whatever is open (`library/LibraryImports`). */}
-              <LibraryImports />
-              {/* Where Show me says what it pointed at, and the ring's style. */}
-              <CalloutAnnouncer />
-              {showEditor && (
-                <div className={styles.editorPane}>
-                  <div className={styles.editorMain}>
-                    <Workspace
-                      // NO FILE TREE. The menus are the way around a World
-                      // project (`files/folderMenus`), and the tree beside them
-                      // was a second one that could do a thing they deliberately
-                      // will not: rename a FILE, which for an actor leaves every
-                      // reference pointing at a path that is not there any more.
-                      // Everything it offered has a place in the menus now,
-                      // uploading included.
-                      hideFileBrowser
-                      pinnedFileId={entryFileId}
-                      // Mounted either way, with its buttons off when there
-                      // is nothing to browse: the dialogs it owns are asked
-                      // for from elsewhere too (`files/FileMenus`, `menus`).
-                      tabBarStart={<FileMenus menus={browsable} />}
-                    />
+                <LibraryImports />
+                {/* Where Show me says what it pointed at, and the ring's style. */}
+                <CalloutAnnouncer />
+                {showEditor && (
+                  <div className={styles.editorPane}>
+                    <div className={styles.editorMain}>
+                      <Workspace
+                        // NO FILE TREE. The menus are the way around a World
+                        // project (`files/folderMenus`), and the tree beside them
+                        // was a second one that could do a thing they deliberately
+                        // will not: rename a FILE, which for an actor leaves every
+                        // reference pointing at a path that is not there any more.
+                        // Everything it offered has a place in the menus now,
+                        // uploading included.
+                        hideFileBrowser
+                        // NO TABS EITHER: one place at a time, and the
+                        // breadcrumb is the way back to the ones before it
+                        // (specs/SHELL_PLAN.md).
+                        tabStrip={<Breadcrumb />}
+                        // Mounted either way, with its buttons off when there
+                        // is nothing to browse: the dialogs it owns are asked
+                        // for from elsewhere too (`files/FileMenus`, `menus`).
+                        tabBarStart={<FileMenus menus={browsable} />}
+                      />
+                    </div>
+                    {/* Code-only view: the console falls back to under the editor. */}
+                    {!showPreview && <ConsolePanel />}
                   </div>
-                  {/* Code-only view: the console falls back to under the editor. */}
-                  {!showPreview && <ConsolePanel />}
-                </div>
-              )}
-              {isSplit && (
-                <ResizeHandle
-                  axis="x"
-                  ariaLabel="Resize preview"
-                  value={previewWidth}
-                  min={PREVIEW.min}
-                  max={PREVIEW.max}
-                  // Dragging right shrinks the preview: it is the trailing pane,
-                  // so its width moves opposite to the pointer.
-                  onDelta={dx =>
-                    setPreviewWidth(w =>
-                      clamp(w - dx, PREVIEW.min, PREVIEW.max),
-                    )
-                  }
-                  onReset={() => setPreviewWidth(PREVIEW.initial)}
-                />
-              )}
-              {showPreview && (
-                // Alone, the preview takes the whole column; split, it is sized by
-                // the divider and the editor takes what is left.
-                <div
-                  className={
-                    isSplit
-                      ? styles.previewPane
-                      : `${styles.previewPane} ${styles.previewPaneFull}`
-                  }
-                  style={isSplit ? {width: previewWidth} : undefined}
-                >
-                  <WorldPreview />
-                  {/* The console lives under the preview whenever it is shown. */}
-                  <ConsolePanel />
-                </div>
-              )}
-            </div>
-          </PanelContainer>
+                )}
+                {isSplit && (
+                  <ResizeHandle
+                    axis="x"
+                    ariaLabel="Resize preview"
+                    value={previewWidth}
+                    min={PREVIEW.min}
+                    max={PREVIEW.max}
+                    // Dragging right shrinks the preview: it is the trailing pane,
+                    // so its width moves opposite to the pointer.
+                    onDelta={dx =>
+                      setPreviewWidth(w =>
+                        clamp(w - dx, PREVIEW.min, PREVIEW.max),
+                      )
+                    }
+                    onReset={() => setPreviewWidth(PREVIEW.initial)}
+                  />
+                )}
+                {showPreview && (
+                  // Alone, the preview takes the whole column; split, it is sized by
+                  // the divider and the editor takes what is left.
+                  <div
+                    className={
+                      isSplit
+                        ? styles.previewPane
+                        : `${styles.previewPane} ${styles.previewPaneFull}`
+                    }
+                    style={isSplit ? {width: previewWidth} : undefined}
+                  >
+                    <WorldPreview />
+                    {/* The console lives under the preview whenever it is shown. */}
+                    <ConsolePanel />
+                  </div>
+                )}
+              </div>
+            </PanelContainer>
+          </div>
         </div>
-      </div>
-    </ShowCodeContext.Provider>
+      </ShowCodeContext.Provider>
+    </TrailContext.Provider>
   );
 };
 

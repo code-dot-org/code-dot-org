@@ -52,6 +52,12 @@ export interface WorkspaceProps {
    * open anything from.
    */
   pinnedFileId?: string;
+  /**
+   * Drawn in place of the file tabs. A lab whose editor shows one place at a
+   * time, with its own way between them, passes that here; World Lab passes
+   * its breadcrumb. Most labs pass nothing and keep their tabs.
+   */
+  tabStrip?: React.ReactNode;
 }
 
 /**
@@ -69,6 +75,7 @@ export const Workspace = ({
   hideFileBrowser,
   pinnedFileId,
   tabBarStart,
+  tabStrip,
 }: WorkspaceProps) => {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
   // Legacy has no draggable file-browser divider, only a collapse toggle; we
@@ -111,7 +118,7 @@ export const Workspace = ({
           )}
           {tabBarStart}
           <div className={styles.tabsFill}>
-            <FileTabs pinnedFileId={pinnedFileId} />
+            {tabStrip ?? <FileTabs pinnedFileId={pinnedFileId} />}
           </div>
         </div>
         {children}

@@ -51,6 +51,7 @@ import {
 import {setRevealer} from '../callouts/reveal';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import fields from '../formFields.module.css';
+import {useScriptStep} from '../layout/TrailContext';
 import {gameModuleOf} from '../mainWorld';
 import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
@@ -98,7 +99,6 @@ import {cameraTraitChoices, worldRuleProperties} from './worldRuleProperties';
 const PICTURE_DEBOUNCE_MS = 150;
 
 /** Which workspace the editor is showing instead of the map, if any. */
-type ScriptView = {kind: 'placement'; id: string} | {kind: 'map'};
 
 export interface MapEditorProps extends CustomEditorProps {
   /**
@@ -654,9 +654,11 @@ export const MapEditor = ({
    * The third view (specs/MAP_FIRST.md, "The editor's modes"): a placement's
    * workspace, or the map's own, in the editor's place. The map document
    * stays here, so what the workspace writes lands in it through `commit`
-   * as an inspector edit does, and the way back is one button.
+   * as an inspector edit does. Which one is open is a step on the trail, so
+   * the breadcrumb is the way back (specs/SHELL_PLAN.md); without the
+   * layout, the header's own button is.
    */
-  const [script, setScript] = useState<ScriptView | null>(null);
+  const [script, setScript, onTrail] = useScriptStep(fileId);
   // A REVEAL NEVER LEAVES A SCRIPT A LEARNER HAS OPEN
   // (specs/SHOW_ME_PLAN.md). While one is, the stage is not mounted to
   // answer for a selection, and this answers no: Show me then says where the
@@ -715,7 +717,7 @@ export const MapEditor = ({
         placements={map.actors.map(actor => actor.id)}
         contents={scripted ? scripted.blocks : map.blocks}
         onChange={writeScript}
-        onBack={() => setScript(null)}
+        onBack={onTrail ? undefined : () => setScript(null)}
         isReadOnly={isReadOnly}
       />
     );
