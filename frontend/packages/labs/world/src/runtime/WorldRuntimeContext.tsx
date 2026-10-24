@@ -31,7 +31,7 @@ import {
   refreshProjectDropdowns,
 } from '../blockly/projectDropdowns';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
-import {ENTRY_FILE} from '../constants';
+import {entryFileOf} from '../mainWorld';
 
 import type {CheckResult, CheckRun} from './checks';
 import {collapseConsole, type ConsoleLine} from './consoleCollapse';
@@ -388,10 +388,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     // A clearer message than the compiler's raw "no such project file" when the
     // project simply has no entry (e.g. a stale saved project after the entry
     // moved). Reset the demo's saved state with `?cdoMockReset=1`.
-    if (!compileFiles[ENTRY_FILE]) {
+    const entry = entryFileOf(compileFiles);
+    if (!compileFiles[entry]) {
       pushConsole({
         level: 'error',
-        text: `No entry file "${ENTRY_FILE}" in the project.`,
+        text: `No entry file "${entry}" in the project.`,
       });
       setStatus('error');
       return;
@@ -408,7 +409,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       // Compile the code and gather the uploaded image assets in parallel; the
       // preview needs both to draw the game.
       const [moduleUrl, assets] = await Promise.all([
-        pair.compile.compile(compileFiles, ENTRY_FILE),
+        pair.compile.compile(compileFiles, entry),
         // From the ref, not the render's closure: this runs after a debounce,
         // and the effect that scheduled it no longer re-runs on every change.
         projectAssets(sourcesRef.current.source),
@@ -570,7 +571,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       };
     }
     const [moduleUrl, assets] = await Promise.all([
-      pair.compile.compile(files, ENTRY_FILE),
+      pair.compile.compile(files, entryFileOf(files)),
       projectAssets(sourcesRef.current.source),
     ]);
     return pair.preview.check(moduleUrl, run, assets);

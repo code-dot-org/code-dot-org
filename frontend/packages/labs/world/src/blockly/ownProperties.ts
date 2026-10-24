@@ -51,6 +51,7 @@ import {
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
+import {parseScreenData, screenDeclarationDocument} from './screenData';
 
 /** A block as it appears in a serialized workspace. */
 interface ActorBlock {
@@ -192,6 +193,27 @@ export function parseWorldOwnMeta(
   contents: string,
 ): OwnMeta | undefined {
   return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
+}
+
+/**
+ * A SCREEN's own declarations: its game-wide values and events, which it
+ * holds as data rather than as rows (specs/SCREEN_MAP_PLAN.md, step 4).
+ *
+ * Read through the world's walk, over the rows `define world` would have
+ * held (`screenDeclarationDocument`), so a screen's declarations are a
+ * world's in every respect but the module path they are named by.
+ */
+export function parseScreenOwnMeta(
+  modulePath: string,
+  contents: string,
+): OwnMeta | undefined {
+  const data = parseScreenData(contents);
+  return data
+    ? parseWorldOwnMeta(
+        modulePath,
+        JSON.stringify(screenDeclarationDocument(data)),
+      )
+    : undefined;
 }
 
 /** The walk both share: a root's chain, and every declaration in it. */

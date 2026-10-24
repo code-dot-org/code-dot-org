@@ -16,3 +16,21 @@
 
 /** The module path of the world every project starts with. */
 export const MAIN_WORLD_PATH = 'worlds/main';
+
+/**
+ * The Main Screen's module path: the game in the shape that replaces a world
+ * (specs/SCREEN_MAP_PLAN.md, step 4). A project holds one or the other.
+ */
+export const MAIN_SCREEN_PATH = 'screens/main';
+
+/**
+ * The file a project's game is compiled from: its Main Screen if it holds
+ * one, else its world. Both shapes compile until the lessons are rewritten,
+ * and then the world goes.
+ */
+export const entryFileOf = (
+  files: Readonly<Record<string, unknown>>,
+): string =>
+  `${MAIN_SCREEN_PATH}.screen` in files
+    ? `${MAIN_SCREEN_PATH}.screen`
+    : `${MAIN_WORLD_PATH}.world`;

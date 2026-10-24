@@ -69,6 +69,20 @@ const stubWorld = (contents: string): string => {
 };
 
 /**
+ * A screen with its placements taken out, for the same reason: the rest of
+ * it is the game's name, values and events, which the manifest's world
+ * declares (specs/SCREEN_MAP_PLAN.md, step 4).
+ */
+const stubScreen = (contents: string): string => {
+  try {
+    const parsed = JSON.parse(contents) as {actors?: unknown};
+    return parsed.actors ? JSON.stringify({...parsed, actors: []}) : contents;
+  } catch {
+    return contents;
+  }
+};
+
+/**
  * The project's files as the manifest compile should see them: every `.map`
  * replaced by an empty one.
  *
@@ -90,7 +104,9 @@ export function manifestFiles(
       ? stubMap(contents)
       : path.endsWith('.world')
         ? stubWorld(contents)
-        : contents;
+        : path.endsWith('.screen')
+          ? stubScreen(contents)
+          : contents;
   }
   return out;
 }

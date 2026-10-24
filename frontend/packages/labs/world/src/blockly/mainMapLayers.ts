@@ -24,18 +24,33 @@ export interface MainMapLayer {
 /** The layers a world file's `map` states, or none. */
 export function mainMapLayersOf(contents: string): MainMapLayer[] {
   try {
-    const layers = (JSON.parse(contents) as {map?: {layers?: unknown}}).map
-      ?.layers;
-    return Array.isArray(layers)
-      ? layers.filter(
-          (layer): layer is MainMapLayer =>
-            Boolean(layer) && typeof (layer as MainMapLayer).id === 'string',
-        )
-      : [];
+    return layersIn(
+      (JSON.parse(contents) as {map?: {layers?: unknown}}).map?.layers,
+    );
   } catch {
     return [];
   }
 }
+
+/**
+ * The layers a screen states, or none. A screen is the map it shows, so its
+ * layers are its own top-level key rather than a `map`'s.
+ */
+export function screenLayersOf(contents: string): MainMapLayer[] {
+  try {
+    return layersIn((JSON.parse(contents) as {layers?: unknown}).layers);
+  } catch {
+    return [];
+  }
+}
+
+const layersIn = (layers: unknown): MainMapLayer[] =>
+  Array.isArray(layers)
+    ? layers.filter(
+        (layer): layer is MainMapLayer =>
+          Boolean(layer) && typeof (layer as MainMapLayer).id === 'string',
+      )
+    : [];
 
 const q = (value: string): string => JSON.stringify(value);
 const num = (value: unknown, fallback: number): number =>

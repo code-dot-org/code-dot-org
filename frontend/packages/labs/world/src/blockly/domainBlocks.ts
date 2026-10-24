@@ -172,6 +172,7 @@ import {
   layerOptions,
   layerOptionsExtension,
   layerPlan,
+  type LayerPlanEntry,
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
@@ -7016,11 +7017,6 @@ const worldWorld = defineBlock({
   generator: {
     javascript(block, generator) {
       const name = block.getFieldValue('NAME');
-      addImport(
-        generator,
-        'world_lab',
-        `import * as WorldLab from 'world-lab';`,
-      );
       // ROWS THAT MUST PRECEDE THE FIRST PLACEMENT are lifted out of the body
       // as it is generated, into this list, and emitted with the prologue
       // below. The main map is loaded between the prologue and the body
@@ -7033,194 +7029,241 @@ const worldWorld = defineBlock({
       (generator as {__worldHoist?: string[]}).__worldHoist = hoisted;
       const body = nextChainCode(block, generator);
       (generator as {__worldHoist?: string[]}).__worldHoist = undefined;
-      // EVERY `.rule` THE PROJECT HOLDS, in play. Exactly the argument the
-      // animations below have always made — a file is not a thing a world opts
-      // into, it is a thing the project HAS — and it took a while to see that
-      // rules are the same. This was the foundational ones only; the rest had
-      // to be named in a `use rule`.
-      //
-      // What makes it safe is that a rule with no elected trait does nothing.
-      // Every one of them either steps per actor holding its trait or filters
-      // a rule step on `hasTrait`; the two input rules raise world events
-      // nobody is obliged to hear, and Shooting has no step at all. So gravity
-      // in a world with nothing falling is inert, and "which rules does this
-      // world run" stopped being a question worth making a learner answer.
-      //
-      // What it buys is the thing that confused everyone: a trait is offered
-      // when the rule providing it is in play, so importing Gravity and then
-      // failing to find "Affected by Gravity" in `use trait` — because the
-      // WORLD had not also been told — was the shape of the language's worst
-      // half-hour. Holding the file is now the whole of it.
-      //
-      // Delete the file and nothing is emitted. Name it in a `use rule` as
-      // well and it is the same module, so the world has it once — which is
-      // what keeps the rows in projects saved before this harmless.
-      const rules = ruleModuleOptions()
-        .map(([, modulePath]) => modulePath)
-        .filter(modulePath => modulePath)
-        .map(modulePath => {
-          addImport(
-            generator,
-            `mod:${modulePath}`,
-            `import ${importVar(modulePath)} from ${str(modulePath)};`,
-          );
-          return `world.useRules([${importVar(modulePath)}]);\n`;
-        })
-        .join('');
-      // Every `.anim` in the project, registered. There is no block for this and
-      // deliberately so: an animation file is not a thing a world opts into, it
-      // is a thing the project HAS — a learner who draws one and plays it should
-      // not also have to remember to say the world may use it. The blocks below
-      // decide what plays; this decides what exists.
-      const animations = animationFileOptions()
-        .map(([, modulePath]) => modulePath)
-        .filter(modulePath => modulePath)
-        .map(modulePath => {
-          addImport(
-            generator,
-            `mod:${modulePath}`,
-            `import ${importVar(modulePath)} from ${str(modulePath)};`,
-          );
-          return `world.useAnimations(WorldLab.parseAnimationFile(${importVar(
-            modulePath,
-          )}));\n`;
-        })
-        .join('');
-      // Every MAP the project holds, registered by path with the kinds it
-      // places defined, by the argument the animations above make: a map is
-      // a thing the project has, and a Viewport names one by path in a
-      // property, which no import can follow (specs/VIEWPORT_PLAN.md).
-      // …and every ACTOR the project holds, registered by path. `add actor`
-      // has its template in hand and needs none of this; `bring back what was
-      // remembered` is handed a path that was stored in a BROWSER, which no
-      // import could have followed, so it can only look one up
-      // (specs/RECORDS_PLAN.md).
-      // …and every THEME, by path, for the same reason one level along: a
-      // drawing names a class and the FILE is chosen three ways — the world's
-      // `use theme` row, a map's field, a placement's property — and only the
-      // first of those is a path an import could have followed. The other two
-      // are strings in data, and a file that says `extends` is a fourth. So
-      // the world is handed the lot and looks one up (specs/STYLES_PLAN.md).
-      const themes = projectStylePaths()
-        .map(path => {
-          addImport(
-            generator,
-            `mod:${path}`,
-            `import ${importVar(path)} from ${str(path)};`,
-          );
-          return `world.defineTheme(${str(path)}, ${importVar(path)});\n`;
-        })
-        .join('');
-      const kinds = projectActorPaths()
-        .map(path => {
-          addImport(
-            generator,
-            `mod:${path}`,
-            `import ${importVar(path)} from ${str(path)};`,
-          );
-          return `world.define(${str(path)}, ${importVar(path)});\n`;
-        })
-        .join('');
-      const maps = projectMapPaths()
-        .map(mapPath => {
-          const defines = mapActorTypes(mapPath)
-            .map(type => {
-              addImport(
-                generator,
-                `mod:${type}`,
-                `import ${importVar(type)} from ${str(type)};`,
-              );
-              return `world.define(${str(type)}, ${importVar(type)});\n`;
-            })
-            .join('');
-          addImport(
-            generator,
-            `map:${mapPath}`,
-            `import ${importVar(mapPath)} from ${str(mapPath)};`,
-          );
-          return `${defines}world.defineMap(${str(mapPath)}, ${importVar(mapPath)});\n`;
-        })
-        .join('');
-      // Layers, hoisted (blockly/layers). Every `defineLayer` has to precede
-      // the first placement — the first placement builds the World, and a
-      // layer cannot be spliced into one that exists — so the declarations
-      // cannot be emitted where their blocks sit. `layerPlan` reads the body's
-      // order and reports the stack, including where the default belongs.
-      // Emitted only when the world declares one: a world with no layers says
-      // nothing about layers, and the engine supplies the default.
-      const plan = layerPlan(block);
-      // How big each of the project's images is, stated for the same reason
-      // the animations above are and by the same argument: a picture's size is
-      // not something a world opts into, it is a fact about what the project
-      // holds. The engine cannot measure a PNG — no decoder, no browser — but
-      // the editor already has, so it simply says.
-      //
-      // What reads it: `intrinsic size`, and through it `collision size of`.
-      // Without it those were only ever written for a SPRITESHEET, whose cells
-      // state their own size, so every actor drawing one whole image was a 32
-      // by 32 square to anything that asked — a paddle collided as a cube.
-      //
-      // Keys sorted so the same project compiles to the same text.
-      const measured = measuredImages();
-      const sizes = Object.fromEntries(
-        Object.keys(measured)
-          .sort()
-          .map(name => [name, measured[name]]),
-      );
-      const imageSizes = Object.keys(sizes).length
-        ? `world.useImageSizes(${JSON.stringify(sizes)});\n`
-        : '';
-      // …with the MAIN MAP's ahead of them, slots and all: the world's file
-      // holds the map, so the generator hands its layers over
-      // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
-      const layers = layerDeclarations(
-        (generator as {__mainMapLayers?: MainMapLayer[]}).__mainMapLayers ?? [],
-        plan,
-        DEFAULT_LAYER_ID,
-      );
-      // The world's OWN state, hoisted for the same reason the layers above
-      // are: a declaration cannot be emitted where its block sits when the body
-      // around it reads the const it makes. `add actor … set text to ⟨score⟩`
-      // written above the `define property` compiled to a use before the
-      // declaration — which esbuild rewrites, so it threw as "Cannot read
-      // properties of undefined" rather than as the temporal-dead-zone error it
-      // was (specs/WORLD_STATE.md).
-      //
-      // Passed on the generator rather than read off the block, so there is ONE
-      // parse of a world's declarations (`parseWorldOwnMeta`) instead of a
-      // second walk over live blocks that could drift from it — the same
-      // bargain `__ruleModule` makes two lines below the same seam.
-      const own = (generator as {__worldOwn?: string}).__worldOwn ?? '';
-      // THE MAIN MAP, loaded HERE: after everything that has to precede a
-      // placement, and before the rows, so that a row can name what the map
-      // placed — a camera told to follow `any ⟨Hero⟩`, a `set … of the
-      // ⟨Hero⟩`. It was after the rows, where no row could. What the rows
-      // place is then drawn over what the map placed. Compiled by the
-      // generator before this block runs and handed over on it, as the
-      // map's layers are (`BlocklyGenerator`, `assembleMainMap`).
-      const mainMap = (generator as {__mainMap?: string}).__mainMap ?? '';
       return (
-        `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
+        worldModulePrologue(generator, {
           name,
-        )}});\n` +
-        own +
-        rules +
-        hoisted.join('') +
-        animations +
-        // BEFORE the body, which is where `use theme` sits: the row names a
-        // base and the world has to be able to find it, and every other
-        // theme besides, before anything draws.
-        themes +
-        kinds +
-        maps +
-        imageSizes +
-        layers +
-        mainMap +
-        body
+          hoisted,
+          plan: layerPlan(block),
+          own: (generator as {__worldOwn?: string}).__worldOwn ?? '',
+          // …with the MAIN MAP's ahead of them, slots and all: the world's
+          // file holds the map, so the generator hands its layers over
+          // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
+          mapLayers:
+            (generator as {__mainMapLayers?: MainMapLayer[]}).__mainMapLayers ??
+            [],
+          mainMap: (generator as {__mainMap?: string}).__mainMap ?? '',
+        }) + body
       );
     },
   },
 });
+
+/** What `worldModulePrologue` is handed: the parts a file supplies. */
+export interface WorldPrologue {
+  /** The game's name, which the builder is named by. */
+  name: string;
+  /** Rows lifted out of the body to precede the first placement. */
+  hoisted: readonly string[];
+  /** The layers `define layer` rows declare, in order (`layerPlan`). */
+  plan: readonly LayerPlanEntry[];
+  /** The world's own declarations (`worldOwnPropertyDeclarations`). */
+  own: string;
+  /** The layers of the map the world is, with their slots. */
+  mapLayers: readonly MainMapLayer[];
+  /** That map's load (`assembleMainMap`), or nothing. */
+  mainMap: string;
+}
+
+/**
+ * Everything a game's module does before its rows: the builder, its own
+ * declarations, every rule, animation, theme, actor and map the project
+ * holds, image sizes, layers, and the load of the map the world is.
+ *
+ * `define world` emits this and then its rows; a Main Screen emits it from
+ * its data and then the rows its data stands for
+ * (specs/SCREEN_MAP_PLAN.md, step 4). One function, so the two shapes
+ * cannot drift while both exist.
+ */
+export function worldModulePrologue(
+  generator: Parameters<typeof addImport>[0],
+  prologue: WorldPrologue,
+): string {
+  addImport(generator, 'world_lab', `import * as WorldLab from 'world-lab';`);
+  // EVERY `.rule` THE PROJECT HOLDS, in play. Exactly the argument the
+  // animations below have always made — a file is not a thing a world opts
+  // into, it is a thing the project HAS — and it took a while to see that
+  // rules are the same. This was the foundational ones only; the rest had
+  // to be named in a `use rule`.
+  //
+  // What makes it safe is that a rule with no elected trait does nothing.
+  // Every one of them either steps per actor holding its trait or filters
+  // a rule step on `hasTrait`; the two input rules raise world events
+  // nobody is obliged to hear, and Shooting has no step at all. So gravity
+  // in a world with nothing falling is inert, and "which rules does this
+  // world run" stopped being a question worth making a learner answer.
+  //
+  // What it buys is the thing that confused everyone: a trait is offered
+  // when the rule providing it is in play, so importing Gravity and then
+  // failing to find "Affected by Gravity" in `use trait` — because the
+  // WORLD had not also been told — was the shape of the language's worst
+  // half-hour. Holding the file is now the whole of it.
+  //
+  // Delete the file and nothing is emitted. Name it in a `use rule` as
+  // well and it is the same module, so the world has it once — which is
+  // what keeps the rows in projects saved before this harmless.
+  const rules = ruleModuleOptions()
+    .map(([, modulePath]) => modulePath)
+    .filter(modulePath => modulePath)
+    .map(modulePath => {
+      addImport(
+        generator,
+        `mod:${modulePath}`,
+        `import ${importVar(modulePath)} from ${str(modulePath)};`,
+      );
+      return `world.useRules([${importVar(modulePath)}]);\n`;
+    })
+    .join('');
+  // Every `.anim` in the project, registered. There is no block for this and
+  // deliberately so: an animation file is not a thing a world opts into, it
+  // is a thing the project HAS — a learner who draws one and plays it should
+  // not also have to remember to say the world may use it. The blocks below
+  // decide what plays; this decides what exists.
+  const animations = animationFileOptions()
+    .map(([, modulePath]) => modulePath)
+    .filter(modulePath => modulePath)
+    .map(modulePath => {
+      addImport(
+        generator,
+        `mod:${modulePath}`,
+        `import ${importVar(modulePath)} from ${str(modulePath)};`,
+      );
+      return `world.useAnimations(WorldLab.parseAnimationFile(${importVar(
+        modulePath,
+      )}));\n`;
+    })
+    .join('');
+  // Every MAP the project holds, registered by path with the kinds it
+  // places defined, by the argument the animations above make: a map is
+  // a thing the project has, and a Viewport names one by path in a
+  // property, which no import can follow (specs/VIEWPORT_PLAN.md).
+  // …and every ACTOR the project holds, registered by path. `add actor`
+  // has its template in hand and needs none of this; `bring back what was
+  // remembered` is handed a path that was stored in a BROWSER, which no
+  // import could have followed, so it can only look one up
+  // (specs/RECORDS_PLAN.md).
+  // …and every THEME, by path, for the same reason one level along: a
+  // drawing names a class and the FILE is chosen three ways — the world's
+  // `use theme` row, a map's field, a placement's property — and only the
+  // first of those is a path an import could have followed. The other two
+  // are strings in data, and a file that says `extends` is a fourth. So
+  // the world is handed the lot and looks one up (specs/STYLES_PLAN.md).
+  const themes = projectStylePaths()
+    .map(path => {
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      return `world.defineTheme(${str(path)}, ${importVar(path)});\n`;
+    })
+    .join('');
+  const kinds = projectActorPaths()
+    .map(path => {
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      return `world.define(${str(path)}, ${importVar(path)});\n`;
+    })
+    .join('');
+  const maps = projectMapPaths()
+    .map(mapPath => {
+      const defines = mapActorTypes(mapPath)
+        .map(type => {
+          addImport(
+            generator,
+            `mod:${type}`,
+            `import ${importVar(type)} from ${str(type)};`,
+          );
+          return `world.define(${str(type)}, ${importVar(type)});\n`;
+        })
+        .join('');
+      addImport(
+        generator,
+        `map:${mapPath}`,
+        `import ${importVar(mapPath)} from ${str(mapPath)};`,
+      );
+      return `${defines}world.defineMap(${str(mapPath)}, ${importVar(mapPath)});\n`;
+    })
+    .join('');
+  // Layers, hoisted (blockly/layers). Every `defineLayer` has to precede
+  // the first placement — the first placement builds the World, and a
+  // layer cannot be spliced into one that exists — so the declarations
+  // cannot be emitted where their blocks sit. `layerPlan` reads the body's
+  // order and reports the stack, including where the default belongs.
+  // Emitted only when the world declares one: a world with no layers says
+  // nothing about layers, and the engine supplies the default.
+  // How big each of the project's images is, stated for the same reason
+  // the animations above are and by the same argument: a picture's size is
+  // not something a world opts into, it is a fact about what the project
+  // holds. The engine cannot measure a PNG — no decoder, no browser — but
+  // the editor already has, so it simply says.
+  //
+  // What reads it: `intrinsic size`, and through it `collision size of`.
+  // Without it those were only ever written for a SPRITESHEET, whose cells
+  // state their own size, so every actor drawing one whole image was a 32
+  // by 32 square to anything that asked — a paddle collided as a cube.
+  //
+  // Keys sorted so the same project compiles to the same text.
+  const measured = measuredImages();
+  const sizes = Object.fromEntries(
+    Object.keys(measured)
+      .sort()
+      .map(name => [name, measured[name]]),
+  );
+  const imageSizes = Object.keys(sizes).length
+    ? `world.useImageSizes(${JSON.stringify(sizes)});\n`
+    : '';
+  // …with the MAIN MAP's ahead of them, slots and all: the world's file
+  // holds the map, so the generator hands its layers over
+  // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
+  const layers = layerDeclarations(
+    prologue.mapLayers,
+    prologue.plan,
+    DEFAULT_LAYER_ID,
+  );
+  // The world's OWN state, hoisted for the same reason the layers above
+  // are: a declaration cannot be emitted where its block sits when the body
+  // around it reads the const it makes. `add actor … set text to ⟨score⟩`
+  // written above the `define property` compiled to a use before the
+  // declaration — which esbuild rewrites, so it threw as "Cannot read
+  // properties of undefined" rather than as the temporal-dead-zone error it
+  // was (specs/WORLD_STATE.md).
+  //
+  // Passed on the generator rather than read off the block, so there is ONE
+  // parse of a world's declarations (`parseWorldOwnMeta`) instead of a
+  // second walk over live blocks that could drift from it — the same
+  // bargain `__ruleModule` makes two lines below the same seam.
+  const own = prologue.own;
+  // THE MAIN MAP, loaded HERE: after everything that has to precede a
+  // placement, and before the rows, so that a row can name what the map
+  // placed — a camera told to follow `any ⟨Hero⟩`, a `set … of the
+  // ⟨Hero⟩`. It was after the rows, where no row could. What the rows
+  // place is then drawn over what the map placed. Compiled by the
+  // generator before this block runs and handed over on it, as the
+  // map's layers are (`BlocklyGenerator`, `assembleMainMap`).
+  const mainMap = prologue.mainMap;
+  const name = prologue.name;
+  return (
+    `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
+      name,
+    )}});\n` +
+    own +
+    rules +
+    prologue.hoisted.join('') +
+    animations +
+    // BEFORE the body, which is where `use theme` sits: the row names a
+    // base and the world has to be able to find it, and every other
+    // theme besides, before anything draws.
+    themes +
+    kinds +
+    maps +
+    imageSizes +
+    layers +
+    mainMap
+  );
+}
 
 /**
  * `map ⟨…⟩` — a map as a VALUE: its path, which is what a Viewport's `map`

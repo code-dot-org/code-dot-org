@@ -32,6 +32,7 @@ import {refreshProjectDropdowns} from '../../blockly/projectDropdowns';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {registerProjectRules} from '../../blockly/ruleRegistry';
 import type {World, WorldBuilder} from '../../engine';
+import {entryFileOf} from '../../mainWorld';
 import {
   evaluate,
   type RuleModule,
@@ -151,9 +152,9 @@ export async function compileProject(
     evaluate(code[path], modules, modules[path]);
   }
 
-  const built = Object.entries(modules).find(([path]) =>
-    path.startsWith('worlds/'),
-  );
+  // The Main Screen's module if the project holds one, else the world's
+  // (`entryFileOf`).
+  const built = modules[modulePath(entryFileOf(files))];
   if (!built) {
     throw new Error('project has no world module');
   }
@@ -164,7 +165,7 @@ export async function compileProject(
   // in it" test caught. It is also what the real driver calls
   // (sandbox/worldPreviewWorkerManager).
   return {
-    world: (built[1].default as WorldBuilder).getWorld(),
+    world: (built.default as WorldBuilder).getWorld(),
     modules,
     code,
   };

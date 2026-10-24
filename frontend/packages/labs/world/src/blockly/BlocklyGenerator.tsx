@@ -15,6 +15,8 @@ import {
   useBlocklyContext,
 } from '@code-dot-org/blockly';
 
+import {TILE_SIZE} from '../runtime/viewport';
+
 import {
   assembleActorModule,
   assembleMainMap,
@@ -23,12 +25,18 @@ import {
   type GeneratedBlock,
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
-import {buildDomainPalette, importVar, str} from './domainBlocks';
+import {
+  buildDomainPalette,
+  importVar,
+  str,
+  worldModulePrologue,
+} from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
-import {mainMapLayersOf} from './mainMapLayers';
+import {mainMapLayersOf, screenLayersOf} from './mainMapLayers';
 import {setCurrentPlacements} from './moduleOptions';
 import {
   ownPropertyDeclarations,
+  parseScreenOwnMeta,
   parseWorldOwnMeta,
   worldOwnPropertyDeclarations,
   parseActorOwnMeta,
@@ -45,6 +53,13 @@ import {
   ruleMetaToModule,
   type RuleMeta,
 } from './ruleMeta';
+import {
+  DEFAULT_SCREEN_NAME,
+  MAIN_SCREEN_PATH,
+  parseScreenData,
+  screenSetupRows,
+  type ScreenData,
+} from './screenData';
 import {standInBlocks} from './standInBlocks';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
@@ -189,7 +204,7 @@ function generateMap(
   path: string,
   rootTypes: ReadonlySet<string>,
 ): string {
-  const modulePath = path.replace(/\.map$/, '');
+  const modulePath = path.replace(/\.(map|screen)$/, '');
   const source = (contents.trim() ? JSON.parse(contents) : {}) as MapSource;
   const {placements, mapLevel, definitions} = generateWorkspaces(
     generator,
@@ -227,10 +242,32 @@ function generateMainMap(
   } catch {
     return undefined;
   }
-  if (!source?.actors?.length) {
+  return source
+    ? generateLoad(
+        generator,
+        workspace,
+        source,
+        path.replace(/\.world$/, ''),
+        rootTypes,
+      )
+    : undefined;
+}
+
+/**
+ * The load of the map a game is — a world's main map, or the Main Screen
+ * itself — with a `define` for each kind it places, and the imports its
+ * placements' code needed. Nothing for a map that places nothing.
+ */
+function generateLoad(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  source: MapSource,
+  modulePath: string,
+  rootTypes: ReadonlySet<string>,
+): {code: string; definitions: Record<string, string>} | undefined {
+  if (!source.actors?.length) {
     return undefined;
   }
-  const modulePath = path.replace(/\.world$/, '');
   const {placements, definitions} = generateWorkspaces(
     generator,
     workspace,
@@ -260,6 +297,124 @@ function generateMainMap(
     definitions,
   };
 }
+
+/** The keys of a screen that are compiled into code, not loaded as its map. */
+const SCREEN_KEYS: ReadonlySet<string> = new Set([
+  'name',
+  'properties',
+  'events',
+  'rules',
+  'backgroundColor',
+  'theme',
+  'blocks',
+]);
+
+/**
+ * The Main Screen's module (specs/SCREEN_MAP_PLAN.md, step 4): what `define
+ * world` compiles to, from the screen's data.
+ *
+ * The screen is the map the game is, so its placements are loaded as a
+ * world's main map is; its game-wide values and events are declared as a
+ * world's rows declare them (`parseScreenOwnMeta`); its theme, background
+ * color and rule settings become the rows the inspector would have written
+ * under `define world` (`screenSetupRows`); and its own workspace holds the
+ * hats, which go either side of the world as a world file's do
+ * (`assembleWorldModule`).
+ */
+function generateMainScreen(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  contents: string,
+  path: string,
+  rootTypes: ReadonlySet<string>,
+  worldEventTypes: ReadonlySet<string>,
+): string {
+  const modulePath = path.replace(/\.screen$/, '');
+  const data = (parseScreenData(contents) ?? {}) as ScreenData &
+    MapSource &
+    Record<string, unknown>;
+  // What the engine loads is the map alone: the game-wide keys are compiled
+  // into code below, and the theme is the game's base rather than the
+  // screen's override, as a world's main map has none of its own.
+  const map = Object.fromEntries(
+    Object.entries(data).filter(([key]) => !SCREEN_KEYS.has(key)),
+  ) as MapSource & Parameters<typeof screenSize>[0];
+  const {name, blocks} = data as {name?: unknown; blocks?: object};
+  const load = generateLoad(generator, workspace, map, modulePath, rootTypes);
+
+  workspace.clear();
+  Blockly.serialization.workspaces.load(blocks ?? {}, workspace);
+  const topBlocks = workspace
+    .getTopBlocks(true)
+    .filter(block => block.isEnabled());
+  // Refuses a `define world` or any other defining root: a screen's
+  // workspace holds events (`fileKind`).
+  moduleShape(
+    path,
+    topBlocks.map(block => block.type),
+  );
+  generator.init(workspace);
+  (generator as {__ruleModule?: string}).__ruleModule = modulePath;
+  const asString = (code: string | [string, number]): string =>
+    Array.isArray(code) ? code[0] : code;
+  const generated = topBlocks.map(block => ({
+    type: block.type,
+    id: block.id,
+    code: asString(generator.blockToCode(block, rootTypes.has(block.type))),
+  }));
+  const setup = screenSetupRows(data);
+  const rows = setup
+    ? asString(
+        generator.blockToCode(
+          Blockly.serialization.blocks.append(setup, workspace),
+        ),
+      )
+    : '';
+  const own = parseScreenOwnMeta(modulePath, contents);
+  const prologue = worldModulePrologue(generator, {
+    name: typeof name === 'string' && name ? name : DEFAULT_SCREEN_NAME,
+    hoisted: [],
+    plan: [],
+    own: own ? worldOwnPropertyDeclarations(own) : '',
+    mapLayers: screenLayersOf(contents),
+    mainMap: screenSize(map) + (load?.code ?? ''),
+  });
+  (generator as {__ruleModule?: string}).__ruleModule = undefined;
+  if (load) {
+    mergeDefinitions(generator, load.definitions);
+  }
+  return generator.finish(
+    assembleWorldModule(
+      [...generated, {type: 'world_world', id: path, code: prologue + rows}],
+      worldEventTypes,
+    ),
+  );
+}
+
+/**
+ * The view and the root's bounds, set to the screen's extent: a screen's
+ * size is the size the game is shown at. In the engine's tiles, which are
+ * `TILE_SIZE` pixels whatever the screen's own grid is. Nothing for a
+ * screen that states no size, which takes the engine's.
+ */
+const screenSize = (map: {
+  size?: {width?: unknown; height?: unknown};
+  tile?: {width?: unknown; height?: unknown};
+}): string => {
+  const extent = (tiles: unknown, tile: unknown): number | undefined => {
+    const count = Number(tiles);
+    const each = tile === undefined ? TILE_SIZE : Number(tile);
+    return Number.isFinite(count) && count > 0 && Number.isFinite(each)
+      ? (count * each) / TILE_SIZE
+      : undefined;
+  };
+  const columns = extent(map.size?.width, map.tile?.width);
+  const rows = extent(map.size?.height, map.tile?.height);
+  return columns !== undefined && rows !== undefined
+    ? `world.setViewSize(${columns}, ${rows});\n` +
+        `world.setMapSize(${columns}, ${rows});\n`
+    : '';
+};
 
 export interface BlocklyGeneratorHandle {
   /**
@@ -399,7 +554,19 @@ export const BlocklyGenerator = forwardRef<
         );
         // A `.map` is several workspaces in one JSON document, each generated
         // in turn there; everything else is one workspace and one shape.
-        if (fileKindOf(path) === 'map') {
+        // The Main Screen is the game, compiled from its data; any other
+        // screen is a map the game loads.
+        if (path === `${MAIN_SCREEN_PATH}.screen`) {
+          return generateMainScreen(
+            generator,
+            workspace,
+            contents,
+            path,
+            rootTypesRef.current,
+            worldEventsRef.current,
+          );
+        }
+        if (fileKindOf(path) === 'map' || fileKindOf(path) === 'screen') {
           return generateMap(
             generator,
             workspace,

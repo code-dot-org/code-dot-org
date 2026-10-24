@@ -100,6 +100,7 @@ const A_FILE: Record<FileKind, string> = {
   rule: 'a rule',
   map: 'a map',
   placement: 'a placed actor',
+  screen: 'a screen',
 };
 
 /**

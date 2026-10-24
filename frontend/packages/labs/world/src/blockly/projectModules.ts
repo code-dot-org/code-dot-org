@@ -15,6 +15,7 @@ import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
 import {
   parseActorOwnMeta,
+  parseScreenOwnMeta,
   parseWorldOwnMeta,
   type OwnMeta,
 } from './ownProperties';
@@ -361,6 +362,14 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
     if (path.startsWith('worlds/') && path.endsWith('.world')) {
       const world = path.replace(/\.world$/, '');
       const meta = parseWorldOwnMeta(world, contents);
+      if (meta) {
+        metas.push(meta);
+      }
+    }
+    // …and a SCREEN's, which are the same declarations held as data
+    // (specs/SCREEN_MAP_PLAN.md, step 4).
+    if (path.startsWith('screens/') && path.endsWith('.screen')) {
+      const meta = parseScreenOwnMeta(path.replace(/\.screen$/, ''), contents);
       if (meta) {
         metas.push(meta);
       }

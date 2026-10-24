@@ -8,7 +8,13 @@
 // both ask here.
 
 /** Which kind of file this is. */
-export type FileKind = 'actor' | 'world' | 'rule' | 'map' | 'placement';
+export type FileKind =
+  | 'actor'
+  | 'world'
+  | 'rule'
+  | 'map'
+  | 'placement'
+  | 'screen';
 
 /**
  * A Blockly file's kind, from its path — the one place the extensions are read.
@@ -18,7 +24,7 @@ export type FileKind = 'actor' | 'world' | 'rule' | 'map' | 'placement';
  * callers with no path (tests), and treats it as "work it out from the blocks".
  */
 export const fileKindOf = (path?: string): FileKind | undefined => {
-  const match = /\.(rule|actor|world|map)$/.exec(path ?? '');
+  const match = /\.(rule|actor|world|map|screen)$/.exec(path ?? '');
   return match ? (match[1] as FileKind) : undefined;
 };
 

@@ -1,6 +1,6 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 3 BUILT; 4 and 5 planned. The working record, as the
+STATUS: STEPS 1 TO 3 BUILT, 4a BUILT; the rest of 4, and 5, planned. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -115,6 +115,61 @@ lands a map.
 The `.world` shape keeps compiling beside it until the lessons are
 rewritten, since their 249 checks start from `define world` projects. Then
 it is deleted outright. Nothing converts one shape to the other.
+
+#### The file
+
+A `.screen` is a `.map` document with five more keys, all optional:
+
+| Key               | Holds                                                     |
+| ----------------- | --------------------------------------------------------- |
+| `name`            | the game's name; `Main` when absent                       |
+| `properties`      | game-wide values: `{name, type, value}`, as the inspector |
+| `events`          | game-wide events: `{name, carries?}`, as a map raises one |
+| `rules`           | rule settings: setter block type to value, only those set |
+| `backgroundColor` | `#rrggbb`, the color behind the screen                    |
+
+Its size is stored as a map's is, in tiles of its `tile`, so the map editor
+edits it unchanged; what it means is the screen's extent in pixels, and the
+compiled screen sets the view and the root's bounds to it. The toolbar that
+states it in pixels is the editor shell's.
+
+Properties and events are data rather than `define property` and `define
+event` blocks because a screen's workspace holds events only. They are read
+into the same declarations a world's rows give (`screenOwnMeta`), so their
+blocks are minted, named and imported exactly as a world's are, under the
+screen's module path: `world_get_ScreensMain_ScoreProperty`.
+
+#### What it compiles to
+
+The steps of `define world`, from data: the builder named by `name`, the
+game-wide declarations, every rule, animations, themes, actors and maps,
+image sizes, the screen's layers, the view and bounds, the screen's own
+load, then the theme, background color and rule settings as the rows
+`define world` would have held, and the screen's world-event hats. The
+prologue `world_world` emits is one function both call
+(`worldModulePrologue`), so the two shapes cannot drift while both exist.
+
+Only the Main Screen is compiled as the game. Another `.screen` is a map
+the Main Screen's code loads, compiled as one.
+
+#### Steps
+
+- 4a. The kind compiles: `fileKind` knows `.screen`, the generator
+  assembles one, the runtime and the test compiler take
+  `screens/main.screen` as the entry when the project holds one and
+  `worlds/main.world` otherwise. A test compiles a Main Screen holding a
+  Viewport onto `maps/main.map` and runs it.
+  BUILT. `blockly/screenData` reads the five keys and turns them back
+  into rows; `parseScreenOwnMeta` reads the declarations through the
+  world's walk; `generateMainScreen` assembles the module around
+  `worldModulePrologue`; `entryFileOf` picks the entry. The bundler
+  resolves `.screen`. The thumbnail manifest stubs a screen's placements
+  as it does a map's.
+- 4b. The editor opens one: the file menus, icons and tab, the map editor
+  through a screen adapter, and the inspector reading and writing the data
+  above. Importing a stock map declares its events in the screen's data.
+- 4c. A stock map's world events are named from the project's entry, not
+  from a constant, so the Pause Menu raises `quit` in either shape.
 
 ### 5. Fixtures and scenarios in the new shape
 
