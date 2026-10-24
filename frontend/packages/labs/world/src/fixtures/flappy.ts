@@ -50,7 +50,7 @@
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
-import {TILE_SIZE} from '../runtime/viewport';
+import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 /** The middle of tile `index`, the same grid every other scenario uses. */
 const at = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
@@ -138,7 +138,7 @@ export const vector = (x: number, y: number) => ({
   block: {type: 'world_vector', fields: {VECTOR: {x, y}}},
 });
 
-/** What the world sets `amount of gravity` to. See {@link FLAP}. */
+/** What the Main Screen sets `amount of gravity` to. See {@link FLAP}. */
 export const GRAVITY = 9;
 
 /**
@@ -356,53 +356,66 @@ const COIN_ACTOR = JSON.stringify({
   },
 });
 
-const FLAPPY_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
+/** The screen, in pixels: one screen of the level at a time. */
+const SCREEN = VIEWPORT_TILES * TILE_SIZE;
+
+/**
+ * The Main Screen: one Viewport the size of the screen, showing the level
+ * (specs/SCREEN_MAP_PLAN.md). Its camera follows the Bird and stays inside
+ * the level, as the map editor stores a Viewport's camera
+ * (`placementCameras`), and the Viewport looks through it from the first
+ * frame.
+ */
+const FLAPPY_SCREEN = JSON.stringify(
+  {
+    type: 'map',
+    name: 'Flappy',
+    size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    // Said out loud although it is also the rule's default, because it is
+    // the one number that decides how this game feels and it should be one
+    // click from the screen a reader is already looking at. The
+    // instructions point at it.
+    rules: [
       {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Flappy'},
-        next: {
-          block: stack([
-            // Said out loud although it is also the rule's default, because it
-            // is the one number that decides how this game feels and it should
-            // be one click from the world a reader is already looking at. The
-            // instructions point at it.
-            {
-              type: 'world_set_Gravity_AmountOfGravityProperty',
-              inputs: {VALUE: number(GRAVITY)},
-            },
-            {type: 'world_load_map', fields: {MAP: 'maps/flappy'}},
-          ]),
+        setter: 'world_set_Gravity_AmountOfGravityProperty',
+        type: 'number',
+        value: String(GRAVITY),
+      },
+    ],
+    actors: [
+      {
+        type: 'actors/viewport',
+        id: 'Game',
+        properties: {
+          positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
+          Label: {text: ''},
+          hasABox: {width: SCREEN, height: SCREEN},
+          showsMap: {map: 'maps/main', showsThrough: 'Follow'},
         },
+        cameras: [
+          {
+            id: 'follow',
+            name: 'Follow',
+            traits: [
+              'Camera Follow#FollowsTrait',
+              'Camera Confined#ConfinedToTheMapTrait',
+            ],
+            values: [
+              {
+                setter: 'world_set_CameraFollow_ActorToFollowProperty',
+                type: 'actor',
+                value: 'actors/bird',
+              },
+            ],
+          },
+        ],
       },
     ],
   },
-  // The view: the world's main camera following the Bird and kept inside the
-  // level, as the map editor's camera inspector stores it (`placementCameras`).
-  // A stored camera is declared after the world's rows, so it is set up after
-  // `load map` and `any ⟨Bird⟩` finds the Bird. The main map holds nothing
-  // else; the level is `maps/flappy`, which the world loads.
-  map: {
-    type: 'map',
-    actors: [],
-    mainCamera: {
-      traits: [
-        'Camera Follow#FollowsTrait',
-        'Camera Confined#ConfinedToTheMapTrait',
-      ],
-      values: [
-        {
-          setter: 'world_set_CameraFollow_ActorToFollowProperty',
-          type: 'actor',
-          value: 'actors/bird',
-        },
-      ],
-    },
-  },
-});
+  null,
+  2,
+);
 
 /**
  * The rules and pictures, which are the same in both tellings.
@@ -479,7 +492,7 @@ export const FLAPPY_SUPPORT_FILES: ProjectSpec['files'] = {
 export const FLAPPY_SPEC: ProjectSpec = {
   folders: [
     'rules',
-    'worlds',
+    'screens',
     'actors',
     'animations',
     'sprites',
@@ -489,10 +502,10 @@ export const FLAPPY_SPEC: ProjectSpec = {
   ],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: FLAPPY_WORLD,
-      folderId: 'worlds',
+      name: 'main.screen',
+      language: 'screen',
+      contents: FLAPPY_SCREEN,
+      folderId: 'screens',
       active: true,
       open: true,
     },
@@ -515,7 +528,7 @@ export const FLAPPY_SPEC: ProjectSpec = {
       folderId: 'actors',
     },
     flappyMap: {
-      name: 'flappy.map',
+      name: 'main.map',
       language: 'map',
       contents: FLAPPY_MAP,
       folderId: 'maps',

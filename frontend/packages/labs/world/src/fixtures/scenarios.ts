@@ -204,7 +204,11 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'A bird that only falls, a key that un-falls it, and a level 48 tiles ' +
       'wide — the first scenario whose map is bigger than the screen, so the ' +
       'camera has something to do.',
-    source: buildProject(FLAPPY_SPEC).source,
+    // …with the stock Viewport the level is played in.
+    source: importStockActor(
+      buildProject(FLAPPY_SPEC).source,
+      stockActorById('viewport')!,
+    ).source,
     instructions:
       '## Flappy\n\nFly through the gaps. The up arrow is the only control.\n\n' +
       '- Click the preview, then press up to flap — the bird is always ' +

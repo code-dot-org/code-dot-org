@@ -8,8 +8,10 @@
 import {describe, expect, it} from 'vitest';
 
 import {keyName, KEY_CHOICES} from '../../engine/core/keys';
+import {entryFileOf} from '../../mainWorld';
 import {lessonChannel} from '../../progression/lessonRoute';
 import {LESSONS} from '../../progression/lessons';
+import {projectFiles} from '../../runtime/projectFiles';
 import {VIEWPORT_TILES} from '../../runtime/viewport';
 import {
   WORLD_SCENARIOS,
@@ -92,9 +94,10 @@ describe('the scenario catalogue', () => {
       for (const id of openFiles) {
         expect(files[id]).toBeDefined();
       }
-      expect(
-        Object.values(files).some(file => file.name.endsWith('.world')),
-      ).toBe(true);
+      // …and a game to compile: a Main Screen, or a world until every
+      // scenario has one (`entryFileOf`).
+      const paths = projectFiles(WORLD_SCENARIOS[tag].source);
+      expect(paths[entryFileOf(paths)]).toBeDefined();
     }
   });
 
@@ -307,7 +310,7 @@ describe('the scenario catalogue', () => {
     const contents = (name: string) =>
       files.find(file => file.name === name)?.contents ?? '';
 
-    const map = JSON.parse(contents('flappy.map')) as {
+    const map = JSON.parse(contents('main.map')) as {
       size: {width: number; height: number};
     };
     expect(map.size.width).toBeGreaterThan(VIEWPORT_TILES);
@@ -315,18 +318,29 @@ describe('the scenario catalogue', () => {
     // camera rules that only have something to say about y.
     expect(map.size.height).toBe(VIEWPORT_TILES);
 
-    // The view is the MAIN camera's, kept on the world's main map as the map
+    // The view is the Viewport's camera, kept on its placement as the map
     // editor keeps it — not a `define camera` in blocks, which the Cameras
-    // list would show as "in code".
-    const main = contents('main.world');
+    // list would show as "in code" — and the one the Viewport looks through.
+    const main = contents('main.screen');
     expect(main).not.toContain('world_define_camera');
-    expect(JSON.parse(main).map.mainCamera).toMatchObject({
-      traits: [
-        'Camera Follow#FollowsTrait',
-        'Camera Confined#ConfinedToTheMapTrait',
-      ],
-      values: [{value: 'actors/bird'}],
+    const [viewport] = JSON.parse(main).actors as Array<{
+      properties: {showsMap: {map: string; showsThrough: string}};
+      cameras: object[];
+    }>;
+    expect(viewport.properties.showsMap).toEqual({
+      map: 'maps/main',
+      showsThrough: 'Follow',
     });
+    expect(viewport.cameras).toMatchObject([
+      {
+        name: 'Follow',
+        traits: [
+          'Camera Follow#FollowsTrait',
+          'Camera Confined#ConfinedToTheMapTrait',
+        ],
+        values: [{value: 'actors/bird'}],
+      },
+    ]);
   });
 
   it('holds every rule flappy needs, including the ones it did not choose', () => {

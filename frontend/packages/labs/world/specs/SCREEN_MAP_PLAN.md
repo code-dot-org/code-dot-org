@@ -1,6 +1,6 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 4 BUILT; 5 planned. The working record, as the
+STATUS: STEPS 1 TO 4 BUILT, 5a BUILT; the rest of 5 planned. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -194,6 +194,25 @@ Flappy, the stock scenarios and a new project become a Main Screen and
 `maps/main.map`. The transform written for the Viewport check is where this
 starts. FILES.md, MAPS.md, VIEWPORT.md and SCREENS_PLAN.md are updated to
 match.
+
+#### Steps
+
+One commit each, so each fixture's tests move with it.
+
+- 5a. Flappy: its level becomes `maps/main.map`, shown by a Viewport on
+  the Main Screen whose camera follows the Bird and stays in the level.
+  Gravity is a rule setting in the screen's data.
+  BUILT. Seen in the browser: the Main Screen's inspector, and the game
+  played in the Viewport with the camera following the Bird.
+- 5b. The starter and the empty project, which are what a new project is.
+- 5c. The other games: breakout, meteors, jetpack, tapper, sokoban, novel.
+- 5d. The two apps, interface and app, whose Main Screen holds no
+  Viewport.
+- 5e. The documents.
+
+A test that is about the `.world` shape itself — a world's own cameras,
+its rows — builds a small world of its own rather than reading a
+scenario, since no scenario will have one.
 
 ## Not in this phase
 

@@ -102,27 +102,37 @@ describe('a Viewport’s cameras made in the map editor', () => {
   }, 60000);
 });
 
+/**
+ * Flappy in the shape before the Main Screen: a world that loads the level,
+ * with `main` as its main map. A world's own cameras are a `.world`'s alone,
+ * and no scenario holds one any more (specs/SCREEN_MAP_PLAN.md, step 5).
+ */
+const flappyAsAWorld = (main: object): Record<string, string> => {
+  const files = {...projectFiles(WORLD_SCENARIOS.flappy.source)};
+  delete files['screens/main.screen'];
+  files['worlds/main.world'] = JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_world',
+          fields: {NAME: 'Flappy'},
+          next: {
+            block: {type: 'world_load_map', fields: {MAP: 'maps/main'}},
+          },
+        },
+      ],
+    },
+    map: {type: 'map', actors: [], ...main},
+  });
+  return files;
+};
+
 /** Flappy with a camera its map editor made, which the world starts with. */
-const withOverview = () => {
-  const source = WORLD_SCENARIOS.flappy.source;
-  const [worldId, file] = Object.entries(source.files).find(([, each]) =>
-    each.name.endsWith('.world'),
-  )!;
-  const parsed = JSON.parse(file.contents);
-  parsed.map = {
-    ...parsed.map,
-    actors: parsed.map?.actors ?? [],
+const withOverview = () =>
+  flappyAsAWorld({
     cameras: [{id: 'overview', name: 'Overview', traits: [], values: []}],
     startingCamera: 'camera:overview',
-  };
-  return projectFiles({
-    ...source,
-    files: {
-      ...source.files,
-      [worldId]: {...file, contents: JSON.stringify(parsed)},
-    },
   });
-};
 
 describe('a world’s cameras made in the map editor', () => {
   it('are declared, and the world starts through the one its map says', async () => {
@@ -134,15 +144,8 @@ describe('a world’s cameras made in the map editor', () => {
 });
 
 /** Flappy with its MAIN camera told to follow the Bird, and started through. */
-const withMainFollowing = () => {
-  const source = WORLD_SCENARIOS.flappy.source;
-  const [worldId, file] = Object.entries(source.files).find(([, each]) =>
-    each.name.endsWith('.world'),
-  )!;
-  const parsed = JSON.parse(file.contents);
-  parsed.map = {
-    ...parsed.map,
-    actors: parsed.map?.actors ?? [],
+const withMainFollowing = () =>
+  flappyAsAWorld({
     mainCamera: {
       traits: ['Camera Follow#FollowsTrait'],
       values: [
@@ -154,15 +157,7 @@ const withMainFollowing = () => {
       ],
     },
     startingCamera: 'main',
-  };
-  return projectFiles({
-    ...source,
-    files: {
-      ...source.files,
-      [worldId]: {...file, contents: JSON.stringify(parsed)},
-    },
   });
-};
 
 describe('the world’s main camera, given traits in the map editor', () => {
   it('is given them, and the world looks through it', async () => {
