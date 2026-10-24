@@ -20,7 +20,8 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   disabled,
 }) => (
   <div className={builderCommonStyles.section}>
-    {draft.type === 'MultipleChoiceQuestion' && (
+    {(draft.type === 'MultipleChoiceQuestion' ||
+      draft.type === 'MultipleSelectQuestion') && (
       <ChoicesEditor draft={draft} onChange={onChange} disabled={disabled} />
     )}
     {draft.type === 'MatchQuestion' && (

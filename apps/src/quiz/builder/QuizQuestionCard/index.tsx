@@ -43,6 +43,13 @@ function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
         choices: question.choices,
         correctChoiceId: question.correctChoiceId,
       };
+    case 'MultipleSelectQuestion':
+      return {
+        ...shared,
+        type: question.type,
+        choices: question.choices,
+        correctChoiceIds: question.correctChoiceIds,
+      };
     case 'FreeResponseQuestion':
       return {...shared, type: question.type};
     case 'MatchQuestion':
@@ -110,7 +117,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
 
   return (
     <BuilderCard
-      iconName={QUESTION_TYPE_LABELS_ICONS[question.type].iconName}
+      iconName={QUESTION_TYPE_LABELS_ICONS[draft.type].iconName}
       name={draft.questionName}
       preview={draft.questionTitle}
       itemLabel="question"

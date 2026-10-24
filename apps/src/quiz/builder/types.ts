@@ -27,6 +27,15 @@ export interface MultipleChoiceDraft extends QuizQuestionSharedFields {
   correctChoiceId: string | null;
 }
 
+export interface MultipleSelectDraft extends QuizQuestionSharedFields {
+  type: 'MultipleSelectQuestion';
+  choices: QuizQuestionItem[];
+  correctChoiceIds: string[];
+}
+
+// The two choice types share an editor and can be switched between.
+export type ChoiceQuestionDraft = MultipleChoiceDraft | MultipleSelectDraft;
+
 export interface FreeResponseDraft extends QuizQuestionSharedFields {
   type: 'FreeResponseQuestion';
 }
@@ -44,6 +53,7 @@ export interface MatchDraft extends QuizQuestionSharedFields {
 // A question card's unsaved working copy; Save sends it as the request body.
 export type QuizQuestionDraft =
   | MultipleChoiceDraft
+  | MultipleSelectDraft
   | FreeResponseDraft
   | MatchDraft;
 

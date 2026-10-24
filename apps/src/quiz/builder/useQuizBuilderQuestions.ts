@@ -18,13 +18,10 @@ const NEW_QUESTION_DEFAULTS = {
   questionTitle: 'New question',
 };
 
-const NEW_MULTIPLE_CHOICE_ANSWERS = {
-  choices: [
-    {id: '0', text: 'Option A'},
-    {id: '1', text: 'Option B'},
-  ],
-  correctChoiceId: '0',
-};
+const NEW_CHOICES = [
+  {id: '0', text: 'Option A'},
+  {id: '1', text: 'Option B'},
+];
 
 // A hook for managing a quiz's questions.
 // Provides the current state of the quiz's questions, including loading and error states.
@@ -80,7 +77,20 @@ export default function useQuizBuilderQuestions(
       let question: QuizBuilderQuestion;
       switch (type) {
         case 'MultipleChoiceQuestion':
-          question = {...shared, type, ...NEW_MULTIPLE_CHOICE_ANSWERS};
+          question = {
+            ...shared,
+            type,
+            choices: NEW_CHOICES,
+            correctChoiceId: '0',
+          };
+          break;
+        case 'MultipleSelectQuestion':
+          question = {
+            ...shared,
+            type,
+            choices: NEW_CHOICES,
+            correctChoiceIds: ['0'],
+          };
           break;
         case 'FreeResponseQuestion':
           question = {...shared, type};
@@ -107,8 +117,8 @@ export default function useQuizBuilderQuestions(
   // Resolves with the saved question's id, which may differ from the one
   // passed in: a pending question (see isPendingQuestionId) is created
   // server-side on its first save, and QuizQuestionsController#update
-  // forks a question that's used in a published unit rather than editing
-  // it in place.
+  // forks a question that's used in a published unit, or whose type
+  // changed, rather than editing it in place.
   const saveQuestion = useCallback(
     async (id: number, payload: QuizQuestionDraft) => {
       setError(null);
@@ -118,11 +128,9 @@ export default function useQuizBuilderQuestions(
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
-              JSON.stringify({
-                ...payload,
-                type: question?.type,
-                page: question?.page ?? 1,
-              }),
+              // The draft's type, not the question's: a choice question can
+              // be switched between MC and multi-select before it's saved.
+              JSON.stringify({...payload, page: question?.page ?? 1}),
               true,
               {'Content-Type': 'application/json'}
             )
