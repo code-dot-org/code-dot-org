@@ -8,24 +8,29 @@ class SpriteLab2Controller < ApplicationController
   # GET /sprite_lab2/section_scenes?level_id=N&script_id=M
   # Scene metadata from section-mates' projects on the given level and script,
   # excluding the caller's own project: {scenes: [{channel, sceneId,
-  # sceneName, ownerName}]}. Powers the go-to-external-scene block's dropdown.
+  # sceneName, ownerName}]}. ownerName is the owner's first name, plus their
+  # last initial if someone else in the section has the same first name.
+  # Powers the go-to-external-scene block's dropdown.
   def section_scenes
     level = Level.find(params.require(:level_id))
     return head :bad_request unless sprite_lab2_level?(level)
     script_id = params[:script_id].presence
     return head :bad_request unless script_id
+    first_name_counts = section_mates.map(&:short_name).tally
     scenes = []
     section_mates.each do |user|
       next if user == current_user
       channel, sources = project_sources_for(user, level, script_id)
       next unless sources
+      initial = user.family_name&.first if first_name_counts[user.short_name] > 1
+      owner_name = initial ? "#{user.short_name} #{initial}." : user.short_name
       (sources['scenes'] || []).each do |scene|
         next unless scene['id'] && scene['name']
         scenes << {
           channel: channel,
           sceneId: scene['id'],
           sceneName: scene['name'],
-          ownerName: user.name,
+          ownerName: owner_name,
         }
       end
     end

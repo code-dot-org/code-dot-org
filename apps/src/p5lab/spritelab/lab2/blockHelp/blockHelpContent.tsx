@@ -79,7 +79,7 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'celebrate.',
   },
   spritelab2_goToExternalScene: {
-    title: 'Go to external scene',
+    title: 'Go to project',
     animation: {
       src: animGoToExternalScene,
       alt: 'An arrow from one scene to another.',

@@ -31,7 +31,7 @@ class SpriteLab2ControllerTest < ActionController::TestCase
     assert_equal 1, scenes.length
     assert_equal 'story-scene', scenes.first['sceneId']
     assert_equal 'Story', scenes.first['sceneName']
-    assert_equal @student.name, scenes.first['ownerName']
+    assert_equal @student.short_name, scenes.first['ownerName']
   end
 
   test 'refuses a request with no script id' do
