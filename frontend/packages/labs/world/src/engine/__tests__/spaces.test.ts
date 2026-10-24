@@ -1507,3 +1507,48 @@ describe('world blocks act where they run', () => {
     expect(space.loads).toHaveLength(1);
   });
 });
+
+describe('a Viewport placed by a map', () => {
+  it('looks through its chosen camera from the first frame, on the level', () => {
+    // Its level is loaded before the placing map's script runs, so a camera
+    // that script declares can be aimed at what the level holds; and the
+    // camera it names is the one it looks through before any tick
+    // (specs/SCREEN_MAP_PLAN.md, step three).
+    const world = makeWorld();
+    world.defineMap('maps/level', LEVEL);
+    const order: string[] = [];
+    world.loadMap({
+      actors: [
+        {
+          type: 'actors/window',
+          id: 'win',
+          properties: {
+            [ViewportMapProperty.ownerId]: {
+              [ViewportMapProperty.id]: 'maps/level',
+              [ViewportShowsThroughProperty.id]: 'chase',
+            },
+          },
+        },
+      ],
+      script: (running, placed) => {
+        const space = running.viewportSpaceOf(placed.win)!;
+        order.push(`level holds ${space.loads[0]?.actors.length ?? 0}`);
+        running.defineCamera({
+          id: 'chase',
+          name: 'chase',
+          viewport: placed.win,
+          traits: [FollowsACoin],
+        });
+      },
+    });
+    expect(order).toEqual(['level holds 3']);
+
+    const win = [...world.actors].find(actor => actor.id === 'win')!;
+    const space = world.viewportSpaceOf(win)!;
+    expect(space.camera!.name).toBe('chase');
+
+    world.tick(0);
+    const coin = [...world.actors].find(actor => actor.id === 'a')!;
+    expect(space.camera!.position).toEqual(coin.get(PositionProperty));
+  });
+});

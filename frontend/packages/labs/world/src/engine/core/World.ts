@@ -2187,6 +2187,7 @@ export class World {
     space.bounds = new Vector(view.x, view.y);
     space.camera!.position = new Vector(view.x / 2, view.y / 2);
     const added = this.loadInto(space, held, layer);
+    this.showsThrough(space);
     this.settleSpace(space);
     // …and the Viewport hears that its map has landed, with the path as the
     // value when there is one. AFTER the load and queued, so a handler that
@@ -2767,7 +2768,6 @@ export class World {
   loadMap(map: WorldMap, layer?: string): Actor[] {
     // Over what the running code's space holds: the root for the Screen's
     // code, a level's Viewport for a door in the level (`here`).
-    const added = this.loadInto(this.here().space, map, layer);
     // A Viewport this map placed holds its map FROM HERE, not from the end
     // of the next tick, which is when `settleSpaces` would get to it. A
     // world built from a main map with a Viewport on it has its level in it
@@ -2775,13 +2775,28 @@ export class World {
     // that serves the ball — finds the ball. One level deep on purpose: a
     // Viewport inside the map just shown waits for the tick, so a map that
     // holds a Viewport onto itself grows a level a tick and not a stack.
-    for (const actor of added) {
-      const space = actor.has(ViewportTrait)
-        ? this.viewportSpaceOf(actor)
-        : undefined;
-      if (space) {
-        this.showHeldMap(space);
+    //
+    // BEFORE THIS MAP'S SCRIPT, which is where a Viewport's cameras are
+    // declared and told what to follow (`placementCameras`): `any ⟨Player⟩`
+    // is read when its row runs, and the Player is in the level.
+    const held: Space[] = [];
+    const added = this.loadInto(this.here().space, map, layer, placed => {
+      for (const actor of placed) {
+        const space = actor.has(ViewportTrait)
+          ? this.viewportSpaceOf(actor)
+          : undefined;
+        if (space) {
+          this.showHeldMap(space);
+          held.push(space);
+        }
       }
+    });
+    // …and each looks through the camera it names from the first frame,
+    // which the script has now declared, rather than from the end of the
+    // first tick.
+    for (const space of held) {
+      this.showsThrough(space);
+      this.settleSpace(space);
     }
     return added;
   }
@@ -2821,8 +2836,18 @@ export class World {
     return load !== undefined;
   }
 
-  /** Place a map's actors into `space` — `loadMap`'s body, for any space. */
-  private loadInto(space: Space, map: WorldMap, layer?: string): Actor[] {
+  /**
+   * Place a map's actors into `space` — `loadMap`'s body, for any space.
+   *
+   * `beforeScript` is told what was placed once every reference is followed
+   * and before the map's script runs.
+   */
+  private loadInto(
+    space: Space,
+    map: WorldMap,
+    layer?: string,
+    beforeScript?: (placed: readonly Actor[]) => void,
+  ): Actor[] {
     this.growSpaceToFit(space, map);
     const lookup = this.propertyLookup();
     const added: Actor[] = [];
@@ -2959,6 +2984,7 @@ export class World {
     for (const actor of added) {
       this.loadOf.set(actor, load);
     }
+    beforeScript?.(added);
     if (typeof map.script === 'function') {
       // In the space it was loaded into, so what the script does without
       // naming an actor — a background, a spawn, another load — happens

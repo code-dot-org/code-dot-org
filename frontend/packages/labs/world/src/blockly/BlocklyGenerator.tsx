@@ -35,7 +35,7 @@ import {
   type OwnMeta,
 } from './ownProperties';
 import {
-  withCameraHandler,
+  withCameraDeclarations,
   withWorldCameras,
   type PlacementCamera,
 } from './placementCameras';
@@ -156,7 +156,7 @@ function generateWorkspaces(
   // map editor keeps a Viewport's cameras as data, and they become blocks
   // only here, where no editor sees them (`placementCameras`).
   const placements = (source.actors ?? []).flatMap(entry => {
-    const state = withCameraHandler(entry.blocks, entry.cameras);
+    const state = withCameraDeclarations(entry.blocks, entry.cameras);
     return entry.id && state
       ? [{id: entry.id, blocks: generateOne(state, entry.id)}]
       : [];

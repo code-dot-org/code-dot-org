@@ -6,12 +6,13 @@
 // placement's code, which a learner reads and may change. One place to make
 // a camera, the visual one, and nothing in the code editor to keep in step.
 //
-// WHAT THE ENGINE NEEDS is still a camera declared in that Viewport's `on
-// create`, which is where its space exists. So the compiler makes one: it
-// turns each stored camera into the `define camera … for ⟨this actor⟩` a
-// learner would have written, under a `when this actor is created` hat, and
-// generates THAT beside the placement's own code (`BlocklyGenerator`). The
-// blocks exist only while the map is compiled; no editor ever loads them.
+// WHAT THE ENGINE NEEDS is still a camera declared for that Viewport. So the
+// compiler makes one: it turns each stored camera into the `define camera …
+// for ⟨this actor⟩` a learner would have written, and generates THAT at the
+// head of the placement's own code (`BlocklyGenerator`), which runs as the
+// map loads — after the Viewport's own map is in it, and before the first
+// tick (`World.loadMap`). The blocks exist only while the map is compiled; no
+// editor ever loads them.
 //
 // Plain JSON in, plain JSON out, so the editor's writes and the compiler's
 // reading are tested without a workspace.
@@ -137,22 +138,27 @@ const definitionOf = (
 };
 
 /**
- * Where the hidden handler sits: above anywhere a learner could put a block.
+ * Where the declarations sit: above anywhere a learner could put a block.
  *
- * FIRST, AND THAT IS THE POINT. A learner may write a `when this actor is
- * created` of their own that looks through one of these cameras, or aims it;
- * handlers for one event run in the order they were registered, and the
- * compiler registers a workspace's hats top to bottom (`getTopBlocks(true)`).
- * So the cameras are declared before any code of the learner's runs.
+ * FIRST, so they are generated first (`getTopBlocks(true)` goes top to
+ * bottom). They run as the map loads, before any handler of the learner's
+ * could — a `when this actor is created` that looks through one of these
+ * cameras finds it there.
  */
 const FIRST = {x: 0, y: -1_000_000};
 
 /**
  * A placement's workspace with its stored cameras declared, for the compiler
- * only: one `when this actor is created` hat, before whatever the placement's
- * own code holds, whose rows are the cameras. Identity when it stores none.
+ * only: one stack of `define camera` rows, before whatever the placement's own
+ * code holds, run where the placement's code runs. Identity when it stores
+ * none.
+ *
+ * NOT UNDER A HAT. Under `when this actor is created` the cameras did not
+ * exist until the first tick's handlers ran, so a Viewport looked through its
+ * main camera for that tick and its chosen one followed nothing until the
+ * next (specs/SCREEN_MAP_PLAN.md, step three).
  */
-export function withCameraHandler(
+export function withCameraDeclarations(
   state: object | undefined,
   cameras: readonly PlacementCamera[] | undefined,
 ): object | undefined {
@@ -162,17 +168,16 @@ export function withCameraHandler(
   const document = (state ?? {}) as {
     blocks?: {languageVersion?: number; blocks?: Block[]};
   };
-  const handler: Block & typeof FIRST = {
-    type: 'world_on_Space_CreatedEvent',
+  const declarations: Block & typeof FIRST = {
+    ...chain(cameras.map(camera => definitionOf(camera)))!,
     ...FIRST,
-    next: {block: chain(cameras.map(camera => definitionOf(camera)))},
   };
   return {
     ...document,
     blocks: {
       languageVersion: 0,
       ...document.blocks,
-      blocks: [handler, ...(document.blocks?.blocks ?? [])],
+      blocks: [declarations, ...(document.blocks?.blocks ?? [])],
     },
   };
 }

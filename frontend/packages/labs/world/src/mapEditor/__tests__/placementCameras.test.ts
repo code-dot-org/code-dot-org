@@ -3,7 +3,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {withCameraHandler} from '../../blockly/placementCameras';
+import {withCameraDeclarations} from '../../blockly/placementCameras';
 import {
   addPlacementCamera,
   removePlacementCamera,
@@ -80,13 +80,13 @@ describe('a Viewport’s cameras in the map', () => {
 });
 
 describe('the declarations the compiler makes of them', () => {
-  it('is one `when created`, FIRST and above the learner’s own', () => {
+  it('is one stack of definitions, FIRST and under no hat', () => {
     const mine = {
       blocks: {
         blocks: [{type: 'world_on_Space_CreatedEvent', x: 20, y: 20}],
       },
     };
-    const made = withCameraHandler(mine, [
+    const made = withCameraDeclarations(mine, [
       {
         id: 'wide',
         name: 'Wide',
@@ -95,7 +95,8 @@ describe('the declarations the compiler makes of them', () => {
       },
     ]) as {blocks: {blocks: Array<{type: string; y?: number; next?: unknown}>}};
     const [hidden, theirs] = made.blocks.blocks;
-    expect(hidden.type).toBe('world_on_Space_CreatedEvent');
+    // Run as the map loads, not by a handler a tick later.
+    expect(hidden.type).toBe('world_define_camera');
     expect(hidden.y!).toBeLessThan(theirs.y!);
     expect(JSON.stringify(hidden)).toContain('"NAME":"Wide"');
     expect(JSON.stringify(hidden)).toContain('world_this_actor');
@@ -103,8 +104,8 @@ describe('the declarations the compiler makes of them', () => {
 
   it('leaves a placement with no cameras as it was', () => {
     const state = {blocks: {blocks: []}};
-    expect(withCameraHandler(state, undefined)).toBe(state);
-    expect(withCameraHandler(undefined, [])).toBeUndefined();
+    expect(withCameraDeclarations(state, undefined)).toBe(state);
+    expect(withCameraDeclarations(undefined, [])).toBeUndefined();
   });
 });
 

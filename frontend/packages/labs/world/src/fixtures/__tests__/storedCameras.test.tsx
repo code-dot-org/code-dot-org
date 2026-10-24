@@ -80,6 +80,16 @@ describe('a Viewport’s cameras made in the map editor', () => {
     expect(world.indexOf('defineCamera')).toBeLessThan(world.indexOf('"mine"'));
   }, 60000);
 
+  it('look through the chosen camera before the first tick', async () => {
+    // Declared as the map loads and chosen when the Viewport's map lands, so
+    // the first frame drawn is through it (specs/SCREEN_MAP_PLAN.md).
+    const {world} = await compileProject(withWideCamera());
+    const mini = [...world.actors].find(actor => actor.id === 'Mini')!;
+    const space = world.viewportSpaceOf(mini)!;
+    expect(space.cameraNamed('Wide')).toBeDefined();
+    expect(space.camera?.name).toBe('Wide');
+  }, 60000);
+
   it('give the Viewport a camera to look through, with its traits', async () => {
     const {world} = await compileProject(withWideCamera());
     const mini = [...world.actors].find(actor => actor.id === 'Mini')!;
