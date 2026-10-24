@@ -606,6 +606,12 @@ and `<actor> is in layer <layer name via dropdown>` query.
 
 ## Viewports
 
+AND NOW THE GAME IS IN ONE. A game is a Main Screen holding one Viewport the
+size of the screen, showing `maps/main.map`; the level's actors live in the
+Viewport's space and the screen is the root (specs/SCREEN_MAP_PLAN.md). The
+"basic case" below — one implicit viewport — is what a world still is, and
+what a Main Screen is for an app, which holds no Viewport.
+
 PROPOSED DEPARTURE: specs/MAP_FIRST.md makes a Viewport a stock ACTOR placed
 on a world's main map, which CONTAINS the map it holds rather than selecting
 from the world's layers; a second view of the same contents is a Viewport
@@ -661,6 +667,11 @@ render-to-texture). A Camera shipped before layers would be a Camera that
 scrolls the score off the screen.
 
 ## Viewport size
+
+A Main Screen's size is the view's (specs/SCREEN_MAP_PLAN.md): its compiled
+module sets the view and the root's bounds to the screen's extent, which is
+what `set size of view` said in a world. The DEFERRED part below — the size
+changing while the game runs — still stands.
 
 Finally, we will add a few direct Viewport manipulations. Advanced creators will
 have the `set viewport width <x> and height <y>` and associated `get` blocks

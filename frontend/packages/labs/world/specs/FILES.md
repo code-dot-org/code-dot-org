@@ -64,9 +64,13 @@ this lab records where one lives (`files/renameThing`):
 Prose is left alone: the walk reads fields, and a `log` block saying
 "actors/player" is a sentence about the project rather than a reference to it.
 
-**One file does not move.** `worlds/main.world` is the entry BY PATH — without
-it the runtime says "No entry file" and nothing runs — so renaming that world
-renames the thing and leaves the file where the runtime looks.
+**One file does not move.** The game's own file is the entry BY PATH —
+`screens/main.screen`, the Main Screen, or `worlds/main.world` in a project
+still in the world's shape (`entryFileOf`, specs/SCREEN_MAP_PLAN.md). Without
+it the runtime says "No entry file" and nothing runs, so renaming the game
+renames the thing and leaves the file where the runtime looks. The World
+button opens that file rather than listing a folder: the Main Screen when
+there is one, else the world.
 
 The tree still renames a FILE, which is a different act: it leaves the thing
 inside called what it was.

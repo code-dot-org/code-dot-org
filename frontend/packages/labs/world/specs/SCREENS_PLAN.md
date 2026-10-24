@@ -3,6 +3,15 @@
 STATUS: BUILT, not yet seen in the browser. What turns the Interface Kit from one screen into an
 app. The working record, as the other plans are.
 
+SINCE: the screen everything sits on is a FILE now, the Main Screen
+(`screens/main.screen`), and what a world's main map was is that file
+(specs/SCREEN_MAP_PLAN.md). The stack below is unchanged: a map loaded from
+the Main Screen's code goes over the screen, and `unload the newest map`
+takes back the newest load of the space the code runs in — the root from
+the screen's code, a Viewport's from a level's (specs/SIMPLE_INTERFACE.md,
+"World blocks act where they run"). The "world's own space" below is that
+root.
+
 ## What a screen already is
 
 - **A screen is a map**, and the lab has had them all along. `load map

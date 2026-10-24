@@ -9,6 +9,12 @@ and not beside it — is the one the main map rests on, and is why this is
 kept. What is said here of `.map` files, of placements, of references
 between them and of `load map` stands.
 
+And the main map is itself the old shape now. A game's level is
+`maps/main.map`, a `.map` like any other, shown by the Viewport on its Main
+Screen; the screen is a map document of its own (specs/SCREEN_MAP_PLAN.md).
+What a world's main map was, a Main Screen is, and the level moved out of
+it into a file — which is §6's question answered the other way.
+
 A world places actors two ways today. `add actor` places one, with its
 per-instance values set by blocks chained under it; `load map` places everything
 a `.map` file describes, which is where an arrangement of twenty coins belongs

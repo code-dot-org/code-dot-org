@@ -1,6 +1,7 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 4 BUILT, 5a TO 5d BUILT; 5e planned. The working record, as the
+STATUS: BUILT. Phase one is done; tapper, novel and the lessons stay
+worlds until they are rewritten. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -245,6 +246,11 @@ One commit each, so each fixture's tests move with it.
   above it to override. Seen in the browser.
 
 - 5e. The documents.
+
+  BUILT. FILES.md says which file is the entry in either shape and what
+  the World button opens; MAPS.md and SCREENS_PLAN.md say what a world's
+  main map became; VIEWPORT.md says the game is in a Viewport now and that
+  the Main Screen's size is the view's.
 
 A test that is about the `.world` shape itself — a world's own cameras,
 its rows — builds a small world of its own rather than reading a
