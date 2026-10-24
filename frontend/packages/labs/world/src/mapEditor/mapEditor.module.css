@@ -43,6 +43,17 @@
   color: var(--text-neutral-secondary, var(--text-neutral-primary));
 }
 
+/* Undo and redo, after the size. */
+.history {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: var(--lab-border-default);
+}
+
 /* A control a gated lab withholds: there, focusable, and not to be used.
    Dimmed, and never by that alone — the note beside it says which lesson
    brings it (`WithheldNote`). */

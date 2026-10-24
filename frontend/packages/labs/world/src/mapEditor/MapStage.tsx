@@ -250,6 +250,12 @@ export interface MapStageProps {
    */
   onEditScript?: (id: string | undefined) => void;
   /**
+   * Undo and redo, which the editor keeps (`editHistory`); asked for by the
+   * usual keys while the stage has focus.
+   */
+  onUndo?: () => void;
+  onRedo?: () => void;
+  /**
    * The events an actor of a kind can start a section with, for the quick
    * add in the inspector (`blockly/eventChoices`). Absent, it is not offered.
    */
@@ -458,6 +464,8 @@ export const MapStage = ({
   onDocChange,
   onDocPreview,
   onEditScript,
+  onUndo,
+  onRedo,
   eventsFor,
   worldCameras = [],
   worldCameraEditor,
@@ -1862,6 +1870,9 @@ export const MapStage = ({
         changed: brushAt(world, mode),
       };
       canvasRef.current?.setPointerCapture(event.pointerId);
+      // A prevented press focuses nothing, and the keys (an undo straight
+      // after the stroke) go where the focus is.
+      canvasRef.current?.focus();
       return;
     }
     const world = screenToWorld(event.clientX, event.clientY);
@@ -2259,6 +2270,17 @@ export const MapStage = ({
   };
 
   const handleKeyDown = (event: ReactKeyboardEvent) => {
+    // Undo and redo, in either mode: Ctrl or Cmd with Z, and with Shift or Y
+    // for redo.
+    if ((event.ctrlKey || event.metaKey) && !event.altKey) {
+      const key = event.key.toLowerCase();
+      const again = key === 'y' || (key === 'z' && event.shiftKey);
+      if (key === 'z' || key === 'y') {
+        event.preventDefault();
+        (again ? onRedo : onUndo)?.();
+        return;
+      }
+    }
     // Escape disarms a reference pick, which is what Escape means everywhere:
     // the next click goes back to selecting, and nothing was changed.
     if (event.key === 'Escape' && picking) {

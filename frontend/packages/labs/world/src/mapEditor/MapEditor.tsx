@@ -9,7 +9,7 @@
 // The canvas and the inspector live in `MapStage`. What this adds is the
 // palette and the file.
 
-import {Typography} from '@mui/material';
+import {IconButton, Typography} from '@mui/material';
 import {
   useCallback,
   useEffect,
@@ -20,6 +20,7 @@ import {
 } from 'react';
 
 import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
@@ -66,6 +67,7 @@ import {
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {ActorPalette, type PaletteActor} from './ActorPalette';
+import {EMPTY_HISTORY, record, redo, undo, type History} from './editHistory';
 import {
   drawsItself,
   localPictures,
@@ -295,6 +297,8 @@ export const MapEditor = ({
       return;
     }
     seenEpoch.current = sourcesEpoch;
+    // What came before was another document's.
+    setHistory(EMPTY_HISTORY);
     contentsRef.current = initialContents;
     setFileText(initialContents);
     setMap(document.read(initialContents));
@@ -496,11 +500,43 @@ export const MapEditor = ({
     [schemas, files],
   );
 
-  const writeFile = (written: string) => {
+  /**
+   * Undo and redo (specs/SHELL_PLAN.md, step 5): every write is a step, and
+   * a run of writes from one gesture (`group`) is one. Kept while the editor
+   * is open, and forgotten when the document is replaced from outside.
+   */
+  const [history, setHistory] = useState<History>(EMPTY_HISTORY);
+  const historyRef = useRef(history);
+  historyRef.current = history;
+  const writeFile = (written: string, group?: string) => {
+    const next = record(
+      historyRef.current,
+      contentsRef.current,
+      written,
+      Date.now(),
+      group,
+    );
+    historyRef.current = next;
+    setHistory(next);
     contentsRef.current = written;
     setFileText(written);
     onChange(written);
   };
+  /** The file as a step of the history left it, put back in front. */
+  const restore = (step: {contents: string; history: History} | undefined) => {
+    if (!step) {
+      return;
+    }
+    historyRef.current = step.history;
+    setHistory(step.history);
+    contentsRef.current = step.contents;
+    setFileText(step.contents);
+    setMap(document.read(step.contents));
+    onChange(step.contents);
+  };
+  const undoEdit = () => restore(undo(historyRef.current, contentsRef.current));
+  const redoEdit = () =>
+    restore(redo(historyRef.current, contentsRef.current, Date.now()));
   /** The project's backgrounds by file name, for a layer's two slots. */
   const backgroundChoices = useMemo(
     () =>
@@ -524,9 +560,9 @@ export const MapEditor = ({
     return held;
   }, [map, files]);
 
-  const commit = (next: MapDoc) => {
+  const commit = (next: MapDoc, group?: string) => {
     setMap(next);
-    writeFile(document.write(contentsRef.current, next));
+    writeFile(document.write(contentsRef.current, next), group);
   };
   // What the world's window offers besides the world's own properties
   // (`worldRuleProperties`, specs/WORLD_RULE_FIELDS_PLAN.md).
@@ -749,7 +785,8 @@ export const MapEditor = ({
     if (tiles === undefined) {
       return; // mid-edit: an emptied field is not a size
     }
-    commit({...map, size: {...map.size, [axis]: tiles}});
+    // Each keystroke is a write, and the typing one step.
+    commit({...map, size: {...map.size, [axis]: tiles}}, `size:${axis}`);
   };
 
   /** The kinds, as the palette draws them, each with what it is for. */
@@ -803,6 +840,28 @@ export const MapEditor = ({
         >
           tiles
         </Typography>
+        {!isReadOnly && (
+          <div className={styles.history}>
+            <IconButton
+              size="small"
+              aria-label="Undo"
+              title="Undo (Ctrl+Z)"
+              disabled={!history.past.length}
+              onClick={undoEdit}
+            >
+              <FontAwesomeV6Icon iconName="rotate-left" iconStyle="solid" />
+            </IconButton>
+            <IconButton
+              size="small"
+              aria-label="Redo"
+              title="Redo (Ctrl+Shift+Z)"
+              disabled={!history.future.length}
+              onClick={redoEdit}
+            >
+              <FontAwesomeV6Icon iconName="rotate-right" iconStyle="solid" />
+            </IconButton>
+          </div>
+        )}
         {/*
           WHAT IS NOT HERE: whether the map covers what is under it, and what it
           is painted out of. Both were, beside the sizes — and neither is about
@@ -846,6 +905,8 @@ export const MapEditor = ({
           scales={scales}
           isReadOnly={isReadOnly}
           visible={visible}
+          onUndo={undoEdit}
+          onRedo={redoEdit}
           onEditScript={id => {
             if (id !== undefined) {
               setScript({kind: 'placement', id});

@@ -242,6 +242,34 @@ describe('MapEditor size controls', () => {
     expect(screen.getByTestId('stage')).toHaveAttribute('data-size', '20x4');
   });
 
+  it('undoes the typing as one step, and redoes it', () => {
+    // specs/SHELL_PLAN.md, step 5.
+    const onChange = open();
+    const undo = screen.getByRole('button', {name: 'Undo'});
+    const redo = screen.getByRole('button', {name: 'Redo'});
+    expect(undo).toBeDisabled();
+
+    // Typing 1 then 2: two writes, one gesture.
+    fireEvent.change(screen.getByLabelText('Width'), {target: {value: '1'}});
+    fireEvent.change(screen.getByLabelText('Width'), {target: {value: '12'}});
+    fireEvent.change(screen.getByLabelText('Height'), {target: {value: '4'}});
+    expect(screen.getByTestId('stage')).toHaveAttribute('data-size', '12x4');
+
+    fireEvent.click(undo);
+    expect(screen.getByTestId('stage')).toHaveAttribute('data-size', '12x10');
+    fireEvent.click(undo);
+    expect(written(onChange).size).toEqual({
+      width: VIEWPORT_TILES,
+      height: VIEWPORT_TILES,
+    });
+    expect(undo).toBeDisabled();
+
+    fireEvent.click(redo);
+    fireEvent.click(redo);
+    expect(written(onChange).size).toEqual({width: 12, height: 4});
+    expect(redo).toBeDisabled();
+  });
+
   it('keeps only the frame in the strip, not the map’s properties', () => {
     // "Covers what is under it" and "Theme" were here, beside the sizes. Both
     // are properties of the map rather than the frame it is drawn inside, so

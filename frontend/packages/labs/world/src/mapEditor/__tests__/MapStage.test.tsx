@@ -347,6 +347,18 @@ describe('removing and placing', () => {
     expect(selectedId()).toBeNull();
   });
 
+  it('asks for undo and redo by the usual keys, in either mode', () => {
+    const map = doc();
+    const onUndo = vi.fn();
+    const onRedo = vi.fn();
+    const {canvas} = mount(map, {onUndo, onRedo, placing: 'actors/coin'});
+    fireEvent.keyDown(canvas, {key: 'z', ctrlKey: true});
+    fireEvent.keyDown(canvas, {key: 'Z', metaKey: true, shiftKey: true});
+    fireEvent.keyDown(canvas, {key: 'y', ctrlKey: true});
+    expect(onUndo).toHaveBeenCalledTimes(1);
+    expect(onRedo).toHaveBeenCalledTimes(2);
+  });
+
   describe('the brush', () => {
     // specs/SHELL_PLAN.md, step 3. Cell (column, row) of a 32-tile map, at
     // its center.

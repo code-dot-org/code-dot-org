@@ -188,6 +188,19 @@ the usual keys while the stage has focus. Adding an actor or a rule to the
 project is not in the history, as SIMPLE_INTERFACE.md says. The history is
 a pure module with tests.
 
+BUILT. `mapEditor/editHistory` (`record`, `undo`, `redo`), kept by
+`MapEditor` around its one `writeFile`. A write names its gesture, and a
+write of the same gesture within 1.5 seconds joins its step; the size
+fields name theirs, and the stage already writes once per drag or stroke.
+The history lasts while the editor is open and is forgotten when the
+document is replaced from outside (a rename, a deleted actor, a restored
+version). It holds the whole file, so code edited in a placement's
+workspace is a step too, undone from the map once the code is closed.
+The buttons follow the size; the keys are Ctrl or Cmd with Z, and with
+Shift or Y for redo, while the stage has focus, which a stroke now gives
+it. In the browser: a painted row went with Ctrl+Z and came back with
+Redo, in the stage and in the running game.
+
 ### 6. Add Rules in the code workspaces
 
 The toolbox of every code workspace ends with an **Add Rules** button that
