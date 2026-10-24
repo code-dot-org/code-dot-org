@@ -14,11 +14,10 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {asAWorld} from '../../__tests__/support/asAWorld';
 import {compileProject} from '../../__tests__/support/compileProject';
-import {importStockActor} from '../../actors/importStockActor';
-import {stockActorById} from '../../actors/stock';
 import {PositionProperty} from '../../engine/rules/spatial';
-import {fileIdAt, projectFiles} from '../../runtime/projectFiles';
+import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
 /** The one row: `set actor to follow of ⟨this actor⟩ to ⟨any Pilot⟩`, under `on create`. */
@@ -47,35 +46,24 @@ const FOLLOW_THE_PILOT = {
   },
 };
 
-/** Jetpack with the stock Viewport imported and placed on the world's main map. */
-const withMinimap = () => {
-  let source = importStockActor(
-    WORLD_SCENARIOS.jetpack.source,
-    stockActorById('viewport')!,
-  ).source;
-  const worldId = fileIdAt(source, 'worlds/main.world')!;
-  const parsed = JSON.parse(source.files[worldId].contents);
-  // Jetpack's world has no main map of its own — it `load map`s the level —
-  // so placing a Viewport on it makes one, as the map editor would.
-  parsed.map ??= {actors: []};
-  parsed.map.actors.push({
-    type: 'actors/viewport',
-    id: 'Mini',
-    properties: {
-      positional: {position: {x: 80, y: 60}},
-      showsMap: {mirrorsTheWorld: true},
-    },
-    blocks: FOLLOW_THE_PILOT,
+/**
+ * Jetpack as a world (`asAWorld`), with a Viewport on the world's main map
+ * mirroring it. The scenario carries the stock Viewport already.
+ */
+const withMinimap = () =>
+  asAWorld(projectFiles(WORLD_SCENARIOS.jetpack.source), {
+    actors: [
+      {
+        type: 'actors/viewport',
+        id: 'Mini',
+        properties: {
+          positional: {position: {x: 80, y: 60}},
+          showsMap: {mirrorsTheWorld: true},
+        },
+        blocks: FOLLOW_THE_PILOT,
+      },
+    ],
   });
-  source = {
-    ...source,
-    files: {
-      ...source.files,
-      [worldId]: {...source.files[worldId], contents: JSON.stringify(parsed)},
-    },
-  };
-  return projectFiles(source);
-};
 
 describe('a minimap of Jetpack that follows the Pilot', () => {
   it('brings the camera rules with the Viewport', () => {

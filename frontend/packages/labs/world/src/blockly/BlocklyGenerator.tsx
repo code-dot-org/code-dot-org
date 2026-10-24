@@ -217,6 +217,17 @@ function generateMap(
   const actors = (source.actors ?? []).map(withoutBlocks);
   generator.init(workspace);
   mergeDefinitions(generator, definitions);
+  // The engine's own names — `WorldLab.CreatedEvent`, `new WorldLab.Vector` —
+  // which an actor file has from its `define actor` and a map has from no
+  // block at all. Left out, the module compiled and threw as it loaded in
+  // the browser; the test compiler hands every module `WorldLab` and could
+  // not see it.
+  const code = [...mapLevel, ...placements.flatMap(each => each.blocks)];
+  if (code.some(block => block.code.includes('WorldLab.'))) {
+    mergeDefinitions(generator, {
+      world_lab: `import * as WorldLab from 'world-lab';`,
+    });
+  }
   return generator.finish(
     assembleMapModule({...data, actors}, mapLevel, placements),
   );

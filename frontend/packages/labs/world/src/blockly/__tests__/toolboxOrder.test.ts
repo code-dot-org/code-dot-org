@@ -19,6 +19,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {SOKOBAN} from '../../fixtures/sokoban';
 import {mouseRule} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette, DOMAIN_TOOLBOX} from '../domainBlocks';
@@ -322,8 +323,10 @@ describe('an actor’s own blocks', () => {
     //
     // SOKOBAN, and it used to be the jetpack — which now holds a Progress Bar,
     // and a Progress Bar declares the fraction and the two colors it is drawn
-    // from. Those were a rule with no behavior in it.
-    const files = projectFiles(WORLD_SCENARIOS.sokoban.source);
+    // from. Those were a rule with no behavior in it. Sokoban as written,
+    // before the scenario adds the Viewport its screen shows it in, which
+    // declares the map it holds.
+    const files = projectFiles(SOKOBAN.source);
     const rows = shape(
       buildDomainPalette(projectRuleMetas(files), {
         fileKind: 'actor',

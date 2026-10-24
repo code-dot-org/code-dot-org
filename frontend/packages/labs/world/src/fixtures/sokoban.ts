@@ -32,6 +32,7 @@
 
 import {
   buildProject,
+  gameScreen,
   place,
   stack,
   starterSprites,
@@ -402,25 +403,6 @@ const TARGET_ACTOR = JSON.stringify({
   },
 });
 
-const MAIN_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Sokoban'},
-        next: {
-          block: {
-            type: 'world_load_map',
-            fields: {MAP: 'maps/level1'},
-          },
-        },
-      },
-    ],
-  },
-});
-
 const LEVEL1_MAP = JSON.stringify(
   {
     type: 'map',
@@ -433,13 +415,14 @@ const LEVEL1_MAP = JSON.stringify(
 );
 
 const SPEC: ProjectSpec = {
-  folders: ['worlds', 'actors', 'maps', 'rules', 'sprites'],
+  folders: ['screens', 'actors', 'maps', 'rules', 'sprites'],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: MAIN_WORLD,
-      folderId: 'worlds',
+      name: 'main.screen',
+      language: 'screen',
+      // The board on screen, shown by the Main Screen's Viewport.
+      contents: gameScreen('Sokoban'),
+      folderId: 'screens',
     },
     player: {
       name: 'player.actor',
@@ -466,7 +449,7 @@ const SPEC: ProjectSpec = {
       folderId: 'actors',
     },
     level1: {
-      name: 'level1.map',
+      name: 'main.map',
       language: 'map',
       contents: LEVEL1_MAP,
       folderId: 'maps',

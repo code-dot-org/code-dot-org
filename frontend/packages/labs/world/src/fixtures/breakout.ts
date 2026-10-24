@@ -45,8 +45,9 @@
 // The serve was on that list until the ball was left at rest, which is the
 // smaller lesson: some of what is missing is missing because nobody wrote it.
 
-import {defineEvent, hearWorldEvent} from '../actors/stock/workspace';
+import {hearWorldEvent} from '../actors/stock/workspace';
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
 import {TILE_SIZE} from '../runtime/viewport';
@@ -131,9 +132,9 @@ export const setNumber = (type: string, value: number) => ({
  * @param ball how this telling names the Ball — a path in one, a local id in
  *   the other.
  * @param where the corner of the canvas it sits at, since the two tellings have
- *   different things on theirs. Under the world block by default, because a
- *   reader opening `main.world` should not have to scroll sideways to find the
- *   only other thing in it.
+ *   different things on theirs. Near the top by default, because a reader
+ *   opening the screen's code should not have to scroll sideways to find
+ *   it.
  */
 /**
  * THE PAUSE MENU, wired the way any game wires one (specs/UI_ACTORS.md, "The
@@ -174,12 +175,12 @@ export const pauseHandlers = (level: string, viewport = 'actors/viewport') => {
         },
       },
     },
-    // The menu's Resume takes the menu away itself; Quit is the world's to
-    // answer, and here it starts the level over. `quit` is the WORLD's event
-    // — declared under `define world` below and raised by the menu, which
-    // says it raises it and declares nothing (specs/MAP_EVENTS_PLAN.md).
+    // The menu's Resume takes the menu away itself; Quit is the game's to
+    // answer, and here it starts the level over. `quit` is the Main Screen's
+    // event — declared in its data below and raised by the menu, which says
+    // it raises it and declares nothing (specs/MAP_EVENTS_PLAN.md).
     {
-      type: hearWorldEvent('quit'),
+      type: hearWorldEvent('quit', MAIN_SCREEN_PATH),
       x: 20,
       y: 560,
       next: {
@@ -441,44 +442,39 @@ const BALL_ACTOR = JSON.stringify({
 /** The whole screen: the level is as big as the view. */
 const SCREEN = ALL_COLUMNS.length * TILE_SIZE;
 
-const BREAKOUT_WORLD = JSON.stringify({
+/**
+ * The Main Screen: the window the level is played in, and the game's own
+ * code, which serves the ball and pauses (specs/SCREEN_MAP_PLAN.md). The
+ * level is `maps/main.map`, held by path; starting it over is loading it
+ * into the Viewport again.
+ */
+const BREAKOUT_SCREEN = JSON.stringify({
+  type: 'map',
+  name: 'Breakout',
+  size: {width: ALL_COLUMNS.length, height: ALL_COLUMNS.length},
+  tile: {width: TILE_SIZE, height: TILE_SIZE},
+  // The one word the pause menu says back. The import adds it when a
+  // learner adds the menu themselves (`maps/declareEvents`); here the
+  // fixture ships with it.
+  events: [{name: 'quit'}],
   blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Breakout'},
-        // The one word the pause menu says back. The import writes this row
-        // when a learner adds the menu themselves (`maps/declareEvents`);
-        // here the fixture ships with it.
-        next: {block: defineEvent('quit')},
-      },
-      serveHandler('actors/ball'),
-      ...pauseHandlers('maps/breakout'),
-    ],
+    blocks: {
+      languageVersion: 0,
+      blocks: [serveHandler('actors/ball'), ...pauseHandlers('maps/main')],
+    },
   },
-  // The main map is the screen, and the one thing on it is the window the
-  // level is played in (specs/MAP_FIRST.md, "Levels: the Viewport"). The
-  // level is `maps/breakout.map`, held by path; starting it over is loading
-  // it into the Viewport again.
-  map: {
-    type: 'map',
-    size: {width: ALL_COLUMNS.length, height: ALL_COLUMNS.length},
-    tile: {width: TILE_SIZE, height: TILE_SIZE},
-    actors: [
-      {
-        type: 'actors/viewport',
-        id: 'Game',
-        properties: {
-          positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
-          Label: {text: ''},
-          hasABox: {width: SCREEN, height: SCREEN},
-          showsMap: {map: 'maps/breakout'},
-        },
+  actors: [
+    {
+      type: 'actors/viewport',
+      id: 'Game',
+      properties: {
+        positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
+        Label: {text: ''},
+        hasABox: {width: SCREEN, height: SCREEN},
+        showsMap: {map: 'maps/main'},
       },
-    ],
-  },
+    },
+  ],
 });
 
 /**
@@ -552,7 +548,7 @@ export const BREAKOUT_SUPPORT_FILES: ProjectSpec['files'] = {
 export const BREAKOUT_SPEC: ProjectSpec = {
   folders: [
     'rules',
-    'worlds',
+    'screens',
     'actors',
     'animations',
     'sprites',
@@ -562,10 +558,10 @@ export const BREAKOUT_SPEC: ProjectSpec = {
   ],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: BREAKOUT_WORLD,
-      folderId: 'worlds',
+      name: 'main.screen',
+      language: 'screen',
+      contents: BREAKOUT_SCREEN,
+      folderId: 'screens',
       active: true,
       open: true,
     },
@@ -594,7 +590,7 @@ export const BREAKOUT_SPEC: ProjectSpec = {
       folderId: 'actors',
     },
     breakoutMap: {
-      name: 'breakout.map',
+      name: 'main.map',
       language: 'map',
       contents: BREAKOUT_MAP,
       folderId: 'maps',

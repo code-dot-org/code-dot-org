@@ -262,9 +262,6 @@ const MAIN_MAP = JSON.stringify(
   2,
 );
 
-/** The screen, in pixels: the level is one screen. */
-const SCREEN_PIXELS = VIEWPORT_TILES * TILE_SIZE;
-
 /**
  * A game's Main Screen: one Viewport the size of the screen, showing the
  * level (specs/SCREEN_MAP_PLAN.md). What a new project opens on.
@@ -277,12 +274,18 @@ const SCREEN_PIXELS = VIEWPORT_TILES * TILE_SIZE;
 export const gameScreen = (
   name: string,
   data: Record<string, unknown> = {},
-): string =>
-  JSON.stringify(
+  size: {width: number; height: number} = {
+    width: VIEWPORT_TILES,
+    height: VIEWPORT_TILES,
+  },
+): string => {
+  const width = size.width * TILE_SIZE;
+  const height = size.height * TILE_SIZE;
+  return JSON.stringify(
     {
       type: 'map',
       name,
-      size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+      size,
       tile: {width: TILE_SIZE, height: TILE_SIZE},
       ...data,
       actors: [
@@ -290,11 +293,9 @@ export const gameScreen = (
           type: 'actors/viewport',
           id: 'Game',
           properties: {
-            positional: {
-              position: {x: SCREEN_PIXELS / 2, y: SCREEN_PIXELS / 2},
-            },
+            positional: {position: {x: width / 2, y: height / 2}},
             Label: {text: ''},
-            hasABox: {width: SCREEN_PIXELS, height: SCREEN_PIXELS},
+            hasABox: {width, height},
             showsMap: {map: 'maps/main'},
           },
         },
@@ -303,6 +304,7 @@ export const gameScreen = (
     null,
     2,
   );
+};
 
 const MAIN_SCREEN = gameScreen('Platform World', {
   // Three coins at ten each. Set HERE rather than left to the rule's default

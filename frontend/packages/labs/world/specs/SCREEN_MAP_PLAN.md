@@ -1,6 +1,6 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 4 BUILT, 5a AND 5b BUILT; the rest of 5 planned. The working record, as the
+STATUS: STEPS 1 TO 4 BUILT, 5a TO 5c BUILT; 5d and 5e planned. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -214,6 +214,25 @@ One commit each, so each fixture's tests move with it.
   space now writes it into `EMPTY_WORLD_PROJECT`, which goes when the
   `.world` shape does. Played in the browser.
 - 5c. The other games: breakout, meteors, jetpack, tapper, sokoban, novel.
+  BUILT for breakout, meteors, jetpack and sokoban, each a Main Screen
+  whose Viewport shows `maps/main.map`. Meteors' `add actor` rows became
+  placements, each sending itself off in a random direction from its
+  `when created` script. Jetpack's screen is the room's size, which is
+  what its `set size of view` row said. Breakout's serve and pause
+  handlers are the screen's own code, and its `quit` is the screen's
+  event. Playing meteors in the browser found that a `.map` whose
+  placement code names the engine (`WorldLab.CreatedEvent`) never imported
+  it, which no test could see: the test compiler hands every module
+  `WorldLab`. Fixed, with a test.
+
+  NOT tapper and novel, which stay worlds. Tapper places its coins with
+  two counting loops, binds a Label to a variable for its score, and
+  builds its layers in code; novel is a portrait and a speech box that
+  its world's rows dress. Each is a showcase of exactly the rows a Main
+  Screen does not have, and moving either means writing it again in the
+  new shape (game-wide values, docking) rather than moving it. Both move
+  with the lessons.
+
 - 5d. The two apps, interface and app, whose Main Screen holds no
   Viewport.
 - 5e. The documents.

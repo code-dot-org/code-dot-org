@@ -4,10 +4,9 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {asAWorld} from '../../__tests__/support/asAWorld';
 import {compileProject} from '../../__tests__/support/compileProject';
-import {importStockActor} from '../../actors/importStockActor';
-import {stockActorById} from '../../actors/stock';
-import {fileIdAt, projectFiles} from '../../runtime/projectFiles';
+import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
 /** A learner's own `when created`, marked so its place in the code shows. */
@@ -30,47 +29,38 @@ const MINE = {
   },
 };
 
-/** Jetpack with a Viewport whose map editor made it a camera called Wide. */
-const withWideCamera = () => {
-  let source = importStockActor(
-    WORLD_SCENARIOS.jetpack.source,
-    stockActorById('viewport')!,
-  ).source;
-  const worldId = fileIdAt(source, 'worlds/main.world')!;
-  const parsed = JSON.parse(source.files[worldId].contents);
-  parsed.map ??= {actors: []};
-  parsed.map.actors.push({
-    type: 'actors/viewport',
-    id: 'Mini',
-    properties: {
-      positional: {position: {x: 80, y: 60}},
-      showsMap: {mirrorsTheWorld: true, showsThrough: 'Wide'},
-    },
-    blocks: MINE,
-    cameras: [
+/** The camera the map editor made: Wide, following the Pilot. */
+const WIDE = [
+  {
+    id: 'wide',
+    name: 'Wide',
+    traits: ['Camera Follow#FollowsTrait'],
+    values: [
       {
-        id: 'wide',
-        name: 'Wide',
-        traits: ['Camera Follow#FollowsTrait'],
-        values: [
-          {
-            setter: 'world_set_CameraFollow_ActorToFollowProperty',
-            type: 'actor',
-            value: 'actors/pilot',
-          },
-        ],
+        setter: 'world_set_CameraFollow_ActorToFollowProperty',
+        type: 'actor',
+        value: 'actors/pilot',
+      },
+    ],
+  },
+];
+
+/** Jetpack as a world, with a Viewport whose map editor made it a camera called Wide. */
+const withWideCamera = () =>
+  asAWorld(projectFiles(WORLD_SCENARIOS.jetpack.source), {
+    actors: [
+      {
+        type: 'actors/viewport',
+        id: 'Mini',
+        properties: {
+          positional: {position: {x: 80, y: 60}},
+          showsMap: {mirrorsTheWorld: true, showsThrough: 'Wide'},
+        },
+        blocks: MINE,
+        cameras: WIDE,
       },
     ],
   });
-  source = {
-    ...source,
-    files: {
-      ...source.files,
-      [worldId]: {...source.files[worldId], contents: JSON.stringify(parsed)},
-    },
-  };
-  return projectFiles(source);
-};
 
 describe('a Viewport’s cameras made in the map editor', () => {
   it('are declared before the learner’s own `when created` runs', async () => {
@@ -102,30 +92,9 @@ describe('a Viewport’s cameras made in the map editor', () => {
   }, 60000);
 });
 
-/**
- * Flappy in the shape before the Main Screen: a world that loads the level,
- * with `main` as its main map. A world's own cameras are a `.world`'s alone,
- * and no scenario holds one any more (specs/SCREEN_MAP_PLAN.md, step 5).
- */
-const flappyAsAWorld = (main: object): Record<string, string> => {
-  const files = {...projectFiles(WORLD_SCENARIOS.flappy.source)};
-  delete files['screens/main.screen'];
-  files['worlds/main.world'] = JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          fields: {NAME: 'Flappy'},
-          next: {
-            block: {type: 'world_load_map', fields: {MAP: 'maps/main'}},
-          },
-        },
-      ],
-    },
-    map: {type: 'map', actors: [], ...main},
-  });
-  return files;
-};
+/** Flappy as a world, with `main` as its main map (`asAWorld`). */
+const flappyAsAWorld = (main: object) =>
+  asAWorld(projectFiles(WORLD_SCENARIOS.flappy.source), main);
 
 /** Flappy with a camera its map editor made, which the world starts with. */
 const withOverview = () =>

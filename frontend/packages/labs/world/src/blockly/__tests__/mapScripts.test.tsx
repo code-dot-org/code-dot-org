@@ -166,6 +166,20 @@ describe('the module a map compiles to', () => {
     expect(js).toContain('world.removeActor(placed["Pause"]);');
   });
 
+  it('imports the engine when its code names it', async () => {
+    // `when this actor leaves the map` is the engine's own event, so the hat
+    // says `WorldLab.LeftMapEvent`; a map has no `define actor` to have
+    // brought the import in.
+    const js = await generate(MENU);
+    expect(js).toContain('WorldLab.');
+    expect(js).toContain("import * as WorldLab from 'world-lab';");
+    // …and a map that names nothing of it imports nothing.
+    const quiet = await generate(
+      JSON.stringify({type: 'map', actors: [{type: 'actors/coin', id: 'c'}]}),
+    );
+    expect(quiet).not.toContain('world-lab');
+  });
+
   it('puts the map’s own hats in the script', async () => {
     const js = await generate(MENU);
     expect(js).toContain('map.onUnload((world) => {');

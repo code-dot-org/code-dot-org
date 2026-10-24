@@ -697,8 +697,15 @@ export const emitWorldEvent = (name: string, carrying?: object) => ({
   ...(carrying ? {inputs: {VALUE: carrying}} : {}),
 });
 
-/** `when ⟨quit⟩` — the hat a WORLD hangs on one of its own events. */
-export const hearWorldEvent = (name: string) => worldEventBlock('on', name);
+/**
+ * `when ⟨quit⟩` — the hat a WORLD hangs on one of its own events, or a Main
+ * Screen when `owner` is its module path (specs/SCREEN_MAP_PLAN.md).
+ */
+export const hearWorldEvent = (name: string, owner = MAIN_WORLD_PATH) =>
+  worldEventBlock('on', name, owner);
 
-const worldEventBlock = (prefix: 'emit' | 'on', name: string) =>
-  `world_${prefix}_${pathSlug(MAIN_WORLD_PATH)}_${pascal(name)}Event`;
+const worldEventBlock = (
+  prefix: 'emit' | 'on',
+  name: string,
+  owner = MAIN_WORLD_PATH,
+) => `world_${prefix}_${pathSlug(owner)}_${pascal(name)}Event`;

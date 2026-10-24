@@ -33,10 +33,16 @@
 // velocity turned two ways, which is sayable now. It is left out so the file
 // stays readable, not because it cannot be said.
 
-import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
+import {
+  gameScreen,
+  stack,
+  starterSprites,
+  useTrait,
+  type ProjectSpec,
+} from '../constants';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
-import {TILE_SIZE} from '../runtime/viewport';
+import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 import {setNumber} from './breakout';
 
@@ -260,38 +266,49 @@ const METEOR_ACTOR = JSON.stringify({
  * A random position can put a rock on top of the ship on the first frame, which
  * reads as a broken game rather than as a hard one; a random heading cannot.
  */
-const meteorAt = (column: number, row: number) => ({
-  type: 'world_add_actor',
-  fields: {ACTOR: 'actors/meteor'},
-  inputs: {
-    DO: {
-      block: stack([
+/** Where tile `column, row` is, as a placement's position. */
+const placedAt = (column: number, row: number) => ({
+  positional: {position: {x: at(column), y: at(row)}},
+});
+
+/**
+ * A meteor placed in the level, sent off in a direction of its own when it
+ * is made: its placement's script, since no two are to go the same way and
+ * a stored speed would be one direction for ever.
+ */
+const meteorAt = (column: number, row: number, index: number) => ({
+  type: 'actors/meteor',
+  id: `Meteor${index + 1}`,
+  properties: placedAt(column, row),
+  blocks: {
+    blocks: {
+      languageVersion: 0,
+      blocks: [
         {
-          type: 'world_set_position',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            X: number(at(column)),
-            Y: number(at(row)),
-          },
-        },
-        {
-          type: 'world_set_Physics_VelocityProperty',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            VALUE: {
-              block: {
-                type: 'world_vector_rotate',
-                inputs: {
-                  VECTOR: {
-                    block: {
-                      type: 'world_vector',
-                      fields: {VECTOR: {x: 0, y: -1.2}},
-                    },
-                  },
-                  DEGREES: {
-                    block: {
-                      type: 'math_random_int',
-                      inputs: {FROM: number(0), TO: number(359)},
+          type: 'world_on_Space_CreatedEvent',
+          x: 20,
+          y: 20,
+          next: {
+            block: {
+              type: 'world_set_Physics_VelocityProperty',
+              inputs: {
+                ACTOR: {block: {type: 'world_this_actor'}},
+                VALUE: {
+                  block: {
+                    type: 'world_vector_rotate',
+                    inputs: {
+                      VECTOR: {
+                        block: {
+                          type: 'world_vector',
+                          fields: {VECTOR: {x: 0, y: -1.2}},
+                        },
+                      },
+                      DEGREES: {
+                        block: {
+                          type: 'math_random_int',
+                          inputs: {FROM: number(0), TO: number(359)},
+                        },
+                      },
                     },
                   },
                 },
@@ -299,7 +316,7 @@ const meteorAt = (column: number, row: number) => ({
             },
           },
         },
-      ]),
+      ],
     },
   },
 });
@@ -315,39 +332,20 @@ export const RING: Array<[number, number]> = [
   [1, 6],
 ];
 
-const METEORS_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Asteroids'},
-        next: {
-          block: stack([
-            {
-              type: 'world_add_actor',
-              fields: {ACTOR: 'actors/ship'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_position',
-                    inputs: {
-                      ACTOR: {block: {type: 'world_this_actor'}},
-                      X: number(at(4)),
-                      Y: number(at(4)),
-                    },
-                  },
-                },
-              },
-            },
-            ...RING.map(([column, row]) => meteorAt(column, row)),
-          ]),
-        },
-      },
+/** The level: the ship in the middle, and the ring of rocks round it. */
+const METEORS_MAP = JSON.stringify(
+  {
+    type: 'map',
+    size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    actors: [
+      {type: 'actors/ship', id: 'Ship', properties: placedAt(4, 4)},
+      ...RING.map(([column, row], index) => meteorAt(column, row, index)),
     ],
   },
-});
+  null,
+  2,
+);
 
 /**
  * The rules meteors runs on, the ones those pull in, and the pictures it draws
@@ -412,7 +410,7 @@ export const METEORS_SUPPORT_FILES: ProjectSpec['files'] = {
 export const METEORS_SPEC: ProjectSpec = {
   folders: [
     'rules',
-    'worlds',
+    'screens',
     'actors',
     'animations',
     'sprites',
@@ -422,12 +420,18 @@ export const METEORS_SPEC: ProjectSpec = {
   ],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: METEORS_WORLD,
-      folderId: 'worlds',
+      name: 'main.screen',
+      language: 'screen',
+      contents: gameScreen('Asteroids'),
+      folderId: 'screens',
       active: true,
       open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: METEORS_MAP,
+      folderId: 'maps',
     },
     ship: {
       name: 'ship.actor',

@@ -176,6 +176,13 @@ const EMPTY_SPEC: ProjectSpec = {
   open: ['main'],
 };
 
+/**
+ * A project with the stock Viewport its Main Screen shows the level in, and
+ * the rules the Viewport requires (specs/SCREEN_MAP_PLAN.md).
+ */
+const withViewport = (source: MultiFileSource): MultiFileSource =>
+  importStockActor(source, stockActorById('viewport')!).source;
+
 export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
   simple: {
     name: 'Platformer',
@@ -222,8 +229,8 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'Console counts what it has taken\n' +
       '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
       'it notices\n' +
-      '- The level is `maps/breakout.map`, played inside the Viewport on ' +
-      'the world’s map: select it there to see which map it holds\n' +
+      '- The level is `maps/main.map`, played inside the Viewport on ' +
+      'the Main Screen: select it there to see which map it holds\n' +
       '- Press P to pause: the stock Pause Menu map loads over the game, ' +
       'which stops moving and keeps listening. Resume takes it away; Quit ' +
       'loads the level into the Viewport again. Open `maps/pauseMenu.map` ' +
@@ -235,7 +242,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     description:
       'A ship that turns and thrusts, rocks that drift and wrap, and a zapper ' +
       'with a recharge. Arrow Drive, Screen Wrap, Zapping and Expiry.',
-    source: buildProject(METEORS_SPEC).source,
+    source: withViewport(buildProject(METEORS_SPEC).source),
     instructions:
       '## Meteors\n\nTurn, thrust, and zap the rocks.\n\n' +
       '- Click the preview, then left and right to TURN and up to thrust — ' +
@@ -253,10 +260,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'wide — the first scenario whose map is bigger than the screen, so the ' +
       'camera has something to do.',
     // …with the stock Viewport the level is played in.
-    source: importStockActor(
-      buildProject(FLAPPY_SPEC).source,
-      stockActorById('viewport')!,
-    ).source,
+    source: withViewport(buildProject(FLAPPY_SPEC).source),
     instructions:
       '## Flappy\n\nFly through the gaps. The up arrow is the only control.\n\n' +
       '- Click the preview, then press up to flap — the bird is always ' +
@@ -277,7 +281,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'A room 26 by 16 with all of it on screen at once, and a tank that ' +
       'empties while you fly around it — the first level that is a place ' +
       'rather than a corridor, and the first with something that runs out.',
-    source: buildProject(JETPACK_SPEC).source,
+    source: withViewport(buildProject(JETPACK_SPEC).source),
     instructions:
       '## Jetpack\n\nHold space to fly. Arrows to walk. Land on the cans.\n\n' +
       '- Click the preview, then HOLD space — the jetpack is a **force**, so ' +
@@ -290,8 +294,8 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The press does BOTH `make jump` and `start flying`, with no question ' +
       'round either: `start flying` does nothing on an empty tank, so the hop ' +
       'is what is left\n' +
-      '- The whole room is on screen because the world says ' +
-      '`set size of view to 26 x 16`. There is no camera in this project\n' +
+      '- The whole room is on screen because the Main Screen is 26 by 16 ' +
+      'and its Viewport fills it. There is no camera in this project\n' +
       '- **Three gems** are what the level is about. Take all three and the ' +
       'door at the far right opens; walk into it and you are out\n' +
       '- Coins are points and gems are the way out, and they are the SAME ' +
@@ -358,7 +362,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'Push the crates onto the marks. The only game here with no speeds in ' +
       'it — a thing is on a square or crossing to the next one, and never ' +
       'anywhere else.',
-    source: SOKOBAN.source,
+    source: withViewport(SOKOBAN.source),
     instructions:
       '## Sokoban\n\nPush both crates onto the two marks.\n\n' +
       '- Arrow keys. You move one square at a time, and cannot stop between ' +
@@ -439,10 +443,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     description:
       'A screen showing an empty level, and the folders to put things in. ' +
       'What a learner starting from scratch sees.',
-    source: importStockActor(
-      buildProject(EMPTY_SPEC).source,
-      stockActorById('viewport')!,
-    ).source,
+    source: withViewport(buildProject(EMPTY_SPEC).source),
     instructions:
       '## An empty game\n\nNothing is in it yet.\n\n' +
       '- Import a rule to give the game an ability, then `use trait` to give ' +

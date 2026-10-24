@@ -62,6 +62,7 @@ describe('what the JavaScript panel shows', () => {
       'actors/label.actor',
       'rules/falls.rule',
       'worlds/main.world',
+      'screens/main.screen',
       'maps/level1.map',
     ]) {
       expect(generatedCodeFor(path, '{}', generate).kind).toBe('code');

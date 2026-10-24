@@ -104,6 +104,7 @@ import {
   swatch,
 } from '../actors/stock/workspace';
 import {
+  gameScreen,
   stack,
   starterAnimations,
   starterSprites,
@@ -2141,40 +2142,25 @@ const FUEL_BAR_ACTOR = JSON.stringify({
   },
 });
 
-const JETPACK_WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Jetpack'},
-        next: {
-          block: stack([
-            // The whole room on screen at once, which is what this scenario is
-            // for. Said before the map loads, so the view is the shape it will
-            // keep from the first frame — a resize afterwards would be a
-            // visible jump on a world that has already drawn.
-            {
-              type: 'world_set_view_size',
-              inputs: {X: number(MAP_COLUMNS), Y: number(MAP_ROWS)},
-            },
-            {type: 'world_load_map', fields: {MAP: 'maps/jetpack'}},
-          ]),
-        },
-      },
-    ],
-  },
-});
+/**
+ * The Main Screen: the whole room on screen at once, which is what this
+ * scenario is for, so the screen is the room's size and its Viewport shows
+ * all of it from the first frame.
+ */
+const JETPACK_SCREEN = gameScreen(
+  'Jetpack',
+  {},
+  {width: MAP_COLUMNS, height: MAP_ROWS},
+);
 
 export const JETPACK_SPEC: ProjectSpec = {
-  folders: ['worlds', 'actors', 'rules', 'maps', 'sprites', 'animations'],
+  folders: ['screens', 'actors', 'rules', 'maps', 'sprites', 'animations'],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: JETPACK_WORLD,
-      folderId: 'worlds',
+      name: 'main.screen',
+      language: 'screen',
+      contents: JETPACK_SCREEN,
+      folderId: 'screens',
       active: true,
       open: true,
     },
@@ -2372,7 +2358,7 @@ export const JETPACK_SPEC: ProjectSpec = {
       folderId: 'actors',
     },
     jetpackMap: {
-      name: 'jetpack.map',
+      name: 'main.map',
       language: 'map',
       contents: JETPACK_MAP,
       folderId: 'maps',
