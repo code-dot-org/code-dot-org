@@ -17,6 +17,7 @@ import {
   compileProject,
   type CompiledProject,
 } from '../../__tests__/support/compileProject';
+import {importedContents} from '../../actors/importStockActor';
 import {STOCK_ACTORS} from '../../actors/stock';
 import {PositionProperty} from '../../engine';
 import {SpriteProperty} from '../../engine/rules/animation';
@@ -300,7 +301,7 @@ describe('a lesson with no file browser', () => {
     // learner is meant to CHANGE somewhere they cannot see — so an `.actor`
     // file that is not one of the library's, untouched, is open beside the
     // world.
-    const stock = new Set(STOCK_ACTORS.map(actor => actor.contents));
+    const stock = new Set(STOCK_ACTORS.map(importedContents));
     const source = LESSONS[id].source;
     const open = new Set(source.openFiles);
     for (const [fileId, file] of Object.entries(source.files)) {

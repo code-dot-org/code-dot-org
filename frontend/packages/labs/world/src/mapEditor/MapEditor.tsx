@@ -20,11 +20,12 @@ import {
 } from 'react';
 
 import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {requestActorDelete} from '../actors/actorDelete';
+import {purposeOf} from '../actors/actorPurpose';
 import {requestActorCreate} from '../actors/create/actorCreate';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {useAppBuilder} from '../appBuilder';
@@ -49,7 +50,6 @@ import {
   projectWorldOptions,
 } from '../blockly/projectModules';
 import {setRevealer} from '../callouts/reveal';
-import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import fields from '../formFields.module.css';
 import {useScriptStep} from '../layout/TrailContext';
 import {gameModuleOf} from '../mainWorld';
@@ -65,6 +65,7 @@ import {
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
+import {ActorPalette, type PaletteActor} from './ActorPalette';
 import {
   drawsItself,
   localPictures,
@@ -88,7 +89,6 @@ import {
 } from './mapModel';
 import {MapStage, type WorldCameraEditor} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
-import {WithheldNote} from './WithheldNote';
 import {MAIN_CAMERA, startingCamera} from './worldCameraCode';
 import {worldCameras} from './worldCameras';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
@@ -242,6 +242,17 @@ export const MapEditor = ({
     },
     [currentSources, updateSources],
   );
+  /**
+   * A kind taken out of the project, from the palette's Delete. The file
+   * menus ask first, saying where it is used (`actors/actorDelete`).
+   */
+  const deleteKind = useCallback((path: string) => {
+    void requestActorDelete(path).then(deleted => {
+      if (deleted) {
+        setSelected(null);
+      }
+    });
+  }, []);
   const worldPath = useMemo(() => gameModuleOf(files) ?? '', [files]);
 
   /**
@@ -740,9 +751,17 @@ export const MapEditor = ({
     commit({...map, size: {...map.size, [axis]: tiles}});
   };
 
+  /** The kinds, as the palette draws them, each with what it is for. */
+  const paletteActors: PaletteActor[] = actorOptions.map(([name, path]) => ({
+    name,
+    path,
+    picture: pictureOf(path),
+    purpose: purposeOf(files[`${path}.actor`]),
+  }));
+
   return (
     <div className={styles.editor}>
-      <div className={styles.picker} data-callout="map.palette">
+      <div className={styles.picker}>
         <div className={`${styles.sizeField} ${fields.narrow}`}>
           <TextField
             name="map-width"
@@ -793,131 +812,70 @@ export const MapEditor = ({
           inside rather than a property of the finished thing, and they are
           adjusted while looking at the canvas.
         */}
-        {actorOptions.map(([name, path]) => (
-          <button
-            key={path}
-            type="button"
-            className={
-              path === selected
-                ? `${styles.actor} ${styles.selected}`
-                : styles.actor
-            }
-            // Entering place mode clears any placed-actor selection — the
-            // stage does that itself, since that selection is its state.
-            onClick={() => setSelected(path === selected ? null : path)}
-            aria-pressed={path === selected}
-            data-callout={`map.palette:${name}`}
-          >
-            {/* THE GROUND IS THE CELL'S, not the image's, and it is the
-                PICKER'S ground rather than any world's. A thumbnail is a
-                faithful transparent PNG, and without something behind it a
-                white-on-transparent Label over a white strip was not a faint
-                cell but an empty one.
-
-                What it is NOT is a claim about where the actor will sit: an
-                `.actor` belongs to no world, a project may hold several with
-                different backgrounds, and a thumbnail is made per kind. This
-                is the lab's default backdrop used as a dark neutral, which
-                reads for most drawings and cannot read for all of them — a
-                black-lettered Label needs a light ground and will not get one.
-                That is what the elected icon is for (specs/UI_ACTORS.md) —
-                and a kind that elected one wears it here, as it does in every
-                other picker, because a picker's question is WHICH KIND and an
-                interface actor's picture is its content, not its kind. */}
-            <span
-              className={styles.thumb}
-              style={{background: DEFAULT_BACKDROP_COLOR}}
-            >
-              {pictureOf(path) && <img src={pictureOf(path)} alt="" />}
-            </span>
-            <span className={styles.name}>{name}</span>
-          </button>
-        ))}
-        {!isReadOnly && (
-          // The last tile of the palette, where a new kind will appear: the
-          // Actor Creator, asked of the lab (`actors/create/actorCreate`).
-          // Withheld, it is drawn disabled beside the lesson that grants it.
-          <>
-            <button
-              type="button"
-              className={
-                withheld.has('map-new-actor')
-                  ? `${styles.actor} ${styles.withheld}`
-                  : styles.actor
-              }
-              data-callout="map.newActor"
-              // Focusable when withheld, and described by the note beside
-              // it, so a keyboard can reach it and hear why (`WithheldNote`).
-              {...(withheld.has('map-new-actor')
-                ? {
-                    'aria-disabled': true,
-                    'aria-describedby': 'withheld-map-new-actor',
-                  }
-                : {onClick: newActor})}
-            >
-              {/* Decoration: the words beside it are the button's name. */}
-              <span
-                className={`${styles.thumb} ${styles.newActor}`}
-                aria-hidden="true"
-              >
-                <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-              </span>
-              <span className={styles.name}>New actor…</span>
-            </button>
-            {withheld.has('map-new-actor') && (
-              <WithheldNote
-                affordance="map-new-actor"
-                id="withheld-map-new-actor"
-              />
-            )}
-          </>
-        )}
       </div>
-      <MapStage
-        doc={map}
-        onDocChange={commit}
-        onDocPreview={setLiveMap}
-        placing={selected}
-        thumbnails={thumbnails}
-        pictures={shown.pictures}
-        schemas={shownSchemas}
-        themeOptions={themeOptions}
-        sizes={shown.sizes}
-        placementSizes={shown.placementSizes}
-        scales={scales}
-        isReadOnly={isReadOnly}
-        visible={visible}
-        onEditScript={id => {
-          if (id !== undefined) {
-            setScript({kind: 'placement', id});
-          } else if (document.hasMapScript) {
-            setScript({kind: 'map'});
-          } else {
-            onOpenMapScript?.();
+      <div className={styles.body}>
+        <ActorPalette
+          // A screen holds an interface, a map a game; either tab is a
+          // press away.
+          key={document.scriptKind === 'screen' ? 'interface' : 'game'}
+          startTab={document.scriptKind === 'screen' ? 'interface' : 'game'}
+          actors={paletteActors}
+          selected={selected}
+          // Entering place mode clears any placed-actor selection — the
+          // stage does that itself, since that selection is its state.
+          onSelect={setSelected}
+          onOpen={openKind}
+          onDelete={deleteKind}
+          onNew={newActor}
+          newWithheld={withheld.has('map-new-actor')}
+          isReadOnly={isReadOnly}
+        />
+        <MapStage
+          doc={map}
+          onDocChange={commit}
+          onDocPreview={setLiveMap}
+          placing={selected}
+          thumbnails={thumbnails}
+          pictures={shown.pictures}
+          schemas={shownSchemas}
+          themeOptions={themeOptions}
+          sizes={shown.sizes}
+          placementSizes={shown.placementSizes}
+          scales={scales}
+          isReadOnly={isReadOnly}
+          visible={visible}
+          onEditScript={id => {
+            if (id !== undefined) {
+              setScript({kind: 'placement', id});
+            } else if (document.hasMapScript) {
+              setScript({kind: 'map'});
+            } else {
+              onOpenMapScript?.();
+            }
+          }}
+          withheld={withheld}
+          appBuilder={appBuilder}
+          eventsFor={eventsFor}
+          kinds={kinds}
+          onEnhanceKind={enhanceKind}
+          onOpenKind={openKind}
+          mapScriptLabel={
+            document.scriptKind === 'screen'
+              ? 'Screen code'
+              : document.hasMapScript
+                ? 'Map code'
+                : 'World code'
           }
-        }}
-        withheld={withheld}
-        appBuilder={appBuilder}
-        eventsFor={eventsFor}
-        kinds={kinds}
-        onEnhanceKind={enhanceKind}
-        onOpenKind={openKind}
-        mapScriptLabel={
-          document.scriptKind === 'screen'
-            ? 'Screen code'
-            : document.hasMapScript
-              ? 'Map code'
-              : 'World code'
-        }
-        world={worldInspector}
-        worldCameras={worldCameraList}
-        worldCameraEditor={worldCameraEditor}
-        cameraChoices={cameraChoices}
-        mapChoices={mapChoices}
-        heldMaps={heldMaps}
-        backgroundChoices={backgroundChoices}
-        backgroundImages={images}
-      />
+          world={worldInspector}
+          worldCameras={worldCameraList}
+          worldCameraEditor={worldCameraEditor}
+          cameraChoices={cameraChoices}
+          mapChoices={mapChoices}
+          heldMaps={heldMaps}
+          backgroundChoices={backgroundChoices}
+          backgroundImages={images}
+        />
+      </div>
     </div>
   );
 };

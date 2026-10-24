@@ -173,6 +173,13 @@ vi.mock('@code-dot-org/codebridge', () => ({
     },
   }),
   createNewFile: (args: {source: MultiFileSource}) => createNewFile(args),
+  // The pure one, which the palette's Delete writes with.
+  deleteFile: (source: MultiFileSource, fileId: string) => ({
+    ...source,
+    files: Object.fromEntries(
+      Object.entries(source.files).filter(([id]) => id !== fileId),
+    ),
+  }),
   // The pure one, which the menus use to put a tab back in front
   // (`actors/create/actorCreate`): one file active, the rest not.
   activateFile: (source: MultiFileSource, fileId: string) => ({
@@ -243,6 +250,7 @@ vi.mock('@code-dot-org/lab/redux', () => ({
 
 const {FileMenus} = await import('../FileMenus');
 const {requestActorCreate} = await import('../../actors/create/actorCreate');
+const {requestActorDelete} = await import('../../actors/actorDelete');
 
 // Cleared between cases, because `toHaveBeenCalled` on a mock that ALREADY was
 // is a wait that ends immediately — and then `calls.at(-1)` reads the last
@@ -751,7 +759,7 @@ describe('the file menus', () => {
 
 describe('the Actor Creator, asked for from the map', () => {
   // A level with nothing to browse has no folder buttons, and the map
-  // editor's palette still has `New actor…` (specs/KINDS_FROM_THE_MAP_PLAN.md).
+  // editor's palette still has `Add New Actor` (specs/KINDS_FROM_THE_MAP_PLAN.md).
   it('is mounted without its buttons, and still answers', async () => {
     render(<FileMenus menus={false} />);
     expect(screen.queryByRole('button', {name: 'Actors'})).toBeNull();
@@ -780,5 +788,41 @@ describe('the Actor Creator, asked for from the map', () => {
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
     expect(await asked).toBeUndefined();
+  });
+});
+
+describe('an actor deleted from the palette', () => {
+  // The Actor Palette's Delete is asked of these menus, which own the
+  // prompts (`actors/actorDelete`, specs/SHELL_PLAN.md).
+  it('asks first, then takes the actor out of the project', async () => {
+    render(<FileMenus menus={false} />);
+    const asked = requestActorDelete('actors/coin');
+
+    expect(await asked).toBe('actors/coin');
+    expect(confirm).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'Delete actor',
+        message: expect.stringMatching(/^Delete coin\.actor\?/),
+      }),
+    );
+    // Replaced, so the map open beside the palette reads its file again.
+    const written = replaceSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(written.source.files.f).toBeUndefined();
+    expect(written.source.files.a).toBeDefined();
+  });
+
+  it('keeps it when the learner says no', async () => {
+    confirm.mockResolvedValueOnce(false);
+    render(<FileMenus menus={false} />);
+    expect(await requestActorDelete('actors/coin')).toBeUndefined();
+    expect(replaceSources).not.toHaveBeenCalled();
+  });
+
+  it('answers nothing for an actor the project does not hold', async () => {
+    render(<FileMenus menus={false} />);
+    expect(await requestActorDelete('actors/ghost')).toBeUndefined();
+    expect(confirm).not.toHaveBeenCalled();
   });
 });

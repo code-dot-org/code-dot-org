@@ -12,7 +12,7 @@ import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
-import {importStockActor} from '../../importStockActor';
+import {importedContents, importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {healthEnhancement} from '../health';
 
@@ -52,7 +52,7 @@ describe('the health enhancement, as edits', () => {
     expect(at(after, 'rules/health.rule')).toBeTruthy();
     expect(at(after, 'rules/attachment.rule')).toBeUndefined();
     expect(at(after, 'actors/healthBar.actor')).toBe(
-      stockActorById('healthBar')!.contents,
+      importedContents(stockActorById('healthBar')!),
     );
   });
 

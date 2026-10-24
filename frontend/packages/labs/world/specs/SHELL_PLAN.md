@@ -105,11 +105,23 @@ the toolbar (step 4).
 The tabs need to know what each actor is for. A stock actor says so
 (`StockActor.for`: `game`, `interface` or `both`), and importing one writes
 it into the actor file as a top-level key, beside the workspace. An actor
-file that says nothing is a game actor; the wizard writes `game`. An actor
-for both is under both tabs. The flag's other uses (which wizard, what each
-import dialog offers) are a later phase.
+file that says nothing is a game actor, which is what the wizard makes from
+nothing; a copy keeps its original's flag. An actor for both is under both
+tabs. The flag's other uses (which wizard, what each import dialog offers)
+are a later phase.
 
 A Screen opens on the Interface tab, a Map on the Game tab.
+
+BUILT. `mapEditor/ActorPalette`; the flag is `actors/actorPurpose` and
+`StockActor.for`, written by `importedContents`. Delete is asked of the
+file menus, which own the prompts (`actors/actorDelete`), and says where
+the actor is placed and whose code names it (`files/actorUses`). It writes
+with `replaceSources`, so the open map reads its file again rather than
+keeping the placements it took away. Building it found that renaming an
+actor missed `.screen` placements and the code kept inside maps; that is
+fixed (`WORKSPACE_FILE`). The size fields stay over the stage until step 4. In the browser: the starter's Main Screen shows the Viewport under
+Interface; its level shows the eight game actors; deleting the Ball takes
+it off the palette, the stage and the running game.
 
 ### 3. Painting with the brush
 

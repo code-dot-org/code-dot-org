@@ -19,7 +19,7 @@
   background: var(--background-neutral-primary);
 }
 
-/* The actor palette: a scrollable strip of thumbnail buttons. */
+/* The strip over the stage and the palette: the map's size. */
 .picker {
   display: flex;
   gap: 0.5rem;
@@ -29,8 +29,7 @@
   border-bottom: var(--lab-border-default);
 }
 
-/* How big the map is, in tiles — at the head of the palette strip, since it is
-   a fact about the whole map rather than about what is being placed in it. */
+/* How big the map is, in tiles. */
 .sizeField {
   flex-shrink: 0;
   width: 4.5rem;
@@ -42,52 +41,6 @@
   margin-right: 0.25rem;
   flex-shrink: 0;
   color: var(--text-neutral-secondary, var(--text-neutral-primary));
-  border-right: var(--lab-border-default);
-  padding-right: 0.75rem;
-}
-
-.actor {
-  font: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.15rem;
-  padding: 0.25rem;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background: transparent;
-  cursor: pointer;
-  color: var(--text-neutral-primary);
-}
-
-.actor:hover {
-  background: var(--background-neutral-secondary);
-}
-
-.actor.selected {
-  border-color: var(--borders-active, #1a73e8);
-  background: var(--background-neutral-secondary);
-}
-
-/* The cell's picture box: a fixed height so the names line up, and up to twice
-   that wide so a wide drawing is shown as the strip it is rather than squashed
-   into a square (`drawingThumbnail`). The image sizes itself inside it. */
-.thumb {
-  display: flex;
-  min-width: 40px;
-  max-width: 80px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-}
-
-/* `New actor…`: a tile like the kinds', with a plus where a picture goes and
-   a dashed edge, the convention for "one more goes here". */
-.newActor {
-  min-width: 40px;
-  border: 1px dashed var(--borders-neutral-primary);
-  color: var(--text-neutral-secondary);
 }
 
 /* A control a gated lab withholds: there, focusable, and not to be used.
@@ -99,25 +52,11 @@
   opacity: 0.55;
 }
 
-.actor img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  image-rendering: pixelated;
-}
-
-.placeholder {
-  width: 40px;
-  height: 40px;
-  display: block;
-  image-rendering: pixelated;
-  background: var(--background-neutral-secondary);
-  border-radius: 3px;
-}
-
-.name {
-  font-size: var(--font-size-body-xs);
-  white-space: nowrap;
+/* The palette and the stage, side by side under the strip. */
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
 }
 
 /* The map stage: the canvas fills it; the camera draws the bordered map space
@@ -126,6 +65,7 @@
   position: relative;
   flex: 1;
   min-height: 0;
+  min-width: 0;
   overflow: hidden;
 }
 

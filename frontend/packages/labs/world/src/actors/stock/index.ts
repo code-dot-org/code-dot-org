@@ -11,6 +11,8 @@
 // Importing copies the workspace into `actors/<id>.actor`, where it is theirs:
 // openable, editable, and no longer connected to anything here.
 
+import type {ActorPurpose} from '../actorPurpose';
+
 import {buttonActor} from './button';
 import {COIN_ANIMATION, coinActor} from './coin';
 import {dropdownActor} from './dropdown';
@@ -76,13 +78,19 @@ export interface StockActor {
    * `requires` makes for a rule, one level up.
    */
   actors?: readonly string[];
-  /** The `.actor` workspace JSON, copied verbatim on import. */
+  /**
+   * What it is for, which decides the Actor Palette's tab it is under
+   * (`actorPurpose`). Written into the file on import.
+   */
+  for: ActorPurpose;
+  /** The `.actor` workspace JSON, copied on import. */
   contents: string;
 }
 
 export const STOCK_ACTORS: readonly StockActor[] = [
   {
     id: 'label',
+    for: 'both',
     name: 'Label',
     description:
       'A word on the screen. Give it text, a size, a color and an anchor, and it draws them — the smallest way for a game to say anything to the player.',
@@ -94,6 +102,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'progressBar',
+    for: 'both',
     name: 'Progress Bar',
     description:
       'A bar that fills up. Set its fraction between 0 and 1 and it draws that much of itself — health, a loading bar, how close a boss is to waking. Attach it to an actor to have it ride above one.',
@@ -106,6 +115,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'healthBar',
+    for: 'both',
     name: 'Health Bar',
     description:
       'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or set its parent to have it ride above the actor it is about.',
@@ -131,6 +141,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'button',
+    for: 'interface',
     name: 'Button',
     description:
       'A label you can press — with the mouse, or with Enter once the keyboard is on it. It raises “is clicked with” on itself either way, so one handler answers both and needs no hit test of its own.',
@@ -151,6 +162,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'toggle',
+    for: 'interface',
     name: 'Toggle',
     description:
       'A button that is on or off. Click it, or press Enter on it, and it flips — and says “turned on” or “turned off”, so one handler does whatever the switch is for.',
@@ -165,6 +177,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'slider',
+    for: 'interface',
     name: 'Slider',
     description:
       'A bar the player drags. Press it and the knob follows the pointer; the arrow keys nudge it once the keyboard is on it. Read its fraction, or hear “changed” when it moves.',
@@ -178,6 +191,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'list',
+    for: 'interface',
     name: 'List',
     description:
       'A box of words you scroll with a finger and choose one of. The arrows move the highlight, Page Up and Page Down move by a boxful, and Enter chooses — so it works with no pointer at all. Hear “is chosen” for the word and where it was.',
@@ -190,6 +204,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'textInput',
+    for: 'interface',
     name: 'Text Input',
     description:
       'A line the player types into. Click it or tab to it, and what is typed goes in — with a caret after the last letter, and the words sliding left once they no longer fit.',
@@ -202,6 +217,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'dropdown',
+    for: 'interface',
     name: 'Dropdown',
     description:
       'A list of words with one of them chosen. Click it to open, click a row to choose; the arrows and Enter do the same from the keyboard. The choice is its text, and “chosen” says when it changed.',
@@ -214,6 +230,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'textArea',
+    for: 'interface',
     name: 'Text Area',
     description:
       'Several lines the player types into. Enter starts a new one, the arrows walk the caret up and down them, and the words break where Enter was pressed and nowhere else.',
@@ -225,6 +242,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'speechBox',
+    for: 'interface',
     name: 'Speech Box',
     description:
       'A panel with room for a sentence — what a line of dialogue is read from. It types itself out: say a line and the letters arrive at reading pace.',
@@ -236,6 +254,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'panel',
+    for: 'interface',
     name: 'Panel',
     description:
       'A box behind a group. Make a title, a field and a button its children and they move, turn and fade with it — a dialog is a Panel and what it carries.',
@@ -247,6 +266,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'viewport',
+    for: 'interface',
     name: 'Viewport',
     description:
       'A window onto a map of its own. Set its map and the level shows inside it, with a camera of its own; what is around the window stays put — a level inside its interface.',
@@ -259,6 +279,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'image',
+    for: 'both',
     name: 'Image',
     description:
       'A picture in a box you decide the size of — a thumbnail in a row, an avatar beside a name. Give it a width, a height and a picture and it fits the picture to them; turn on “stretches” to fill the box exactly instead.',
@@ -272,6 +293,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'scrollView',
+    for: 'interface',
     name: 'Scroll View',
     description:
       'A window onto something taller than itself. Set its map and drag it, or tab to it and use the arrows; a bar down the edge says where you are. What a long screen, a settings page or a list of real rows is made of.',
@@ -286,6 +308,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'portrait',
+    for: 'interface',
     name: 'Portrait',
     description:
       'The face of whoever is speaking. It starts invisible, so a scene fades it in when its turn comes and out again when it passes.',
@@ -296,6 +319,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'coin',
+    for: 'game',
     name: 'Coin',
     description:
       'A spinning coin that can be picked up. It knows nothing about points — who may collect it, and what that is worth, are the game\u2019s to say.',
@@ -308,6 +332,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'shot',
+    for: 'game',
     name: 'Shot',
     description:
       'A small bright square that flies, hits, hurts, and disappears a few seconds later. Something for a shooter to send \u2014 repaint it, or give it a picture of your own.',
@@ -319,6 +344,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'player',
+    for: 'game',
     // The GAME it assumes, in the name: this one walks left and right, jumps,
     // and falls, which is the wrong player for a top-down game. See the note
     // in `player.ts`. The id stays `player` — it is the file's stem, and the
@@ -335,6 +361,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'ground',
+    for: 'game',
     name: 'Ground',
     description:
       'A tile that holds things up and cannot be walked through. The other half of the Platformer Player \u2014 gravity with nothing to land on is a long fall.',

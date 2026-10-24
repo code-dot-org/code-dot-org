@@ -382,7 +382,7 @@ tab you have been opening — so they are in the list like everything else.
 3. Open the picture you imported and **paint on it**. It is yours now — the copy
    in the library is untouched.
 4. Go back to the [Map](#clickable=view.map) and press
-   [New actor…](#clickable=map.newActor). Its picture step offers the picture
+   [Add New Actor](#clickable=map.newActor). Its picture step offers the picture
    you imported: it was never the Hero's, it is the project's.
 `.trim(),
 };

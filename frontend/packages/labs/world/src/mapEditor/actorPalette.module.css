@@ -1,0 +1,114 @@
+/* The Actor Palette: a column down the left of the stage, its tabs at the
+   head, the actors scrolling between, and Add New Actor fixed at the foot. */
+.palette {
+  display: flex;
+  flex-direction: column;
+  width: 13.5rem;
+  flex-shrink: 0;
+  min-height: 0;
+  border-right: var(--lab-border-default);
+  font-family: var(--font-family-main, sans-serif);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  border-bottom: var(--lab-border-default);
+}
+
+/* Two to a row; the actor in hand takes the whole row, for its acts. */
+.actors {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* The ring around the actor in hand and its acts, as one region. */
+.inHand {
+  grid-column: 1 / -1;
+  border-color: var(--borders-active, #1a73e8);
+  background: var(--background-neutral-secondary);
+}
+
+.actor {
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+}
+
+.cell:not(.inHand) .actor:hover {
+  background: var(--background-neutral-secondary);
+}
+
+/* A fixed height so the names line up; up to twice as wide, so a wide
+   drawing is shown as the strip it is (`drawingThumbnail`). */
+.thumb {
+  display: flex;
+  min-width: 40px;
+  max-width: 80px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-size-body-xs);
+}
+
+.acts {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 0.25rem 0.25rem;
+}
+
+.foot {
+  padding: 0.5rem;
+  border-top: var(--lab-border-default);
+}
+
+/* A control a gated lab withholds: there, focusable, and not to be used.
+   Dimmed, and never by that alone — the note beside it says which lesson
+   brings it (`WithheldNote`). */
+.withheld,
+.withheld:hover {
+  cursor: not-allowed;
+  opacity: 0.55;
+}

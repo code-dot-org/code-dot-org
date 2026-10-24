@@ -36,7 +36,15 @@ import {
 import {importStockRule} from '../rules/importStockRule';
 import {stockRuleByName, type StockRule} from '../rules/stock';
 
+import {withPurpose} from './actorPurpose';
 import {stockActorById, type StockActor} from './stock';
+
+/**
+ * What an import writes into the actor's file: the library's workspace,
+ * with what it is for beside it (`actorPurpose`).
+ */
+export const importedContents = (actor: StockActor): string =>
+  withPurpose(actor.contents, actor.for);
 
 /** Where actors live, by the lab's directory convention (GLOSSARY.md). */
 const ACTORS_FOLDER = 'actors';
@@ -200,7 +208,7 @@ function writeActor(
           id: fileId,
           name: `${actor.id}.actor`,
           language: 'actor',
-          contents: actor.contents,
+          contents: importedContents(actor),
           folderId: placed.folderId,
         },
       },

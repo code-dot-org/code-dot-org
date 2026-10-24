@@ -49,6 +49,7 @@ import {
   createExternalFile,
   activateFile,
   createNewFile,
+  deleteFile,
   getFileExtension,
   languageForFileName,
   shouldShowFile,
@@ -65,6 +66,7 @@ import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
 import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
+import {setActorDeleteHandler} from '../actors/actorDelete';
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {setActorCreateHandler} from '../actors/create/actorCreate';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
@@ -91,6 +93,7 @@ import {folderIn} from '../projectWrite';
 import {resolveRuleContents} from '../rules/ruleReference';
 import {fileIdAt, filePath} from '../runtime/projectFiles';
 
+import {actorUses, withoutPlacementsOf} from './actorUses';
 import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
@@ -803,6 +806,55 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     },
     [ops, config, confirm, alert, thenAsk],
   );
+
+  /**
+   * An actor taken out of the project, asked for by the Actor Palette
+   * (`actors/actorDelete`). It says where the actor is placed and which
+   * files' code names it, and its placements go with it: a placement of an
+   * actor the project does not hold places nothing. The code that names it
+   * is left as it is.
+   */
+  useEffect(() => {
+    setActorDeleteHandler(async path => {
+      const source = live.current;
+      const fileId = fileIdAt(source, `${path}.actor`);
+      const file = fileId ? source.files[fileId] : undefined;
+      if (isReadOnly || !fileId || !file) {
+        return undefined;
+      }
+      await thenAsk();
+      const named = (ids: string[]) =>
+        ids
+          .map(
+            id => config.fileLabel?.(source.files[id]) ?? source.files[id].name,
+          )
+          .join(', ');
+      const {placedIn, namedIn} = actorUses(source, path);
+      const message = [
+        `Delete ${config.fileLabel?.(file) ?? file.name}? This cannot be undone.`,
+        placedIn.length
+          ? `It goes from where it is placed: ${named(placedIn)}.`
+          : '',
+        namedIn.length
+          ? `Code in ${named(namedIn)} names it, and will stop working where it does.`
+          : '',
+      ]
+        .filter(Boolean)
+        .join(' ');
+      if (!(await confirm({title: 'Delete actor', message}))) {
+        return undefined;
+      }
+      // REPLACED, not edited, as a rename is: the map open beside the
+      // palette still holds the placements this takes away, and only a new
+      // epoch makes it read its file again (`replaceSources`).
+      replaceSources({
+        ...currentSources,
+        source: deleteFile(withoutPlacementsOf(live.current, path), fileId),
+      });
+      return path;
+    });
+    return () => setActorDeleteHandler(null);
+  }, [isReadOnly, thenAsk, config, confirm, replaceSources, currentSources]);
 
   const files = open ? filesIn(open.menu.folder) : [];
 

@@ -37,10 +37,10 @@ import {resolveRuleContents} from '../rules/ruleReference';
 import {fileStem, renamed} from './newThing';
 
 /** Blocks whose fields are PROSE, and so are never references. */
-const SAYS_WORDS = new Set(['text', 'world_print']);
+export const SAYS_WORDS = new Set(['text', 'world_print']);
 
 /** Member block types: `world_get_<owner>_<member>` (`renameRule`). */
-const MEMBER_TYPE =
+export const MEMBER_TYPE =
   /^(world_(?:get|set|do|query|on|push|drop))_([A-Za-z0-9]+)_(.+)$/;
 
 /** The extension a file's name ends with, without the dot. */

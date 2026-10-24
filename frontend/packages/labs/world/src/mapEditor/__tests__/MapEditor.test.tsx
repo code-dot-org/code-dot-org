@@ -474,7 +474,7 @@ describe('from the map to a kind', () => {
   });
 });
 
-describe('`New actor…` on the palette', () => {
+describe('`Add New Actor` on the palette', () => {
   const tile = (name: string) => screen.getByRole('button', {name});
   beforeEach(() => requestActorCreate.mockClear());
 
@@ -484,7 +484,7 @@ describe('`New actor…` on the palette', () => {
     open();
     expect(tile('Coin')).toHaveAttribute('aria-pressed', 'false');
 
-    fireEvent.click(tile('New actor…'));
+    fireEvent.click(tile('Add New Actor'));
     expect(requestActorCreate).toHaveBeenCalled();
     // What was made is what is about to be placed.
     await vi.waitFor(() =>
@@ -495,7 +495,7 @@ describe('`New actor…` on the palette', () => {
   it('leaves the hand as it was when the learner backs out', async () => {
     created = undefined;
     open();
-    fireEvent.click(tile('New actor…'));
+    fireEvent.click(tile('Add New Actor'));
     await Promise.resolve();
     expect(tile('Coin')).toHaveAttribute('aria-pressed', 'false');
   });
@@ -508,7 +508,7 @@ describe('`New actor…` on the palette', () => {
     };
     open();
     // Where it was, focusable, inert, and saying why.
-    const button = tile('New actor…');
+    const button = tile('Add New Actor');
     expect(button).toHaveAttribute('aria-disabled', 'true');
     expect(button).not.toBeDisabled();
     expect(
@@ -541,7 +541,7 @@ describe('Show me, while a script is open', () => {
       'data-callout',
       'map.palette:Coin',
     );
-    expect(screen.getByRole('button', {name: 'New actor…'})).toHaveAttribute(
+    expect(screen.getByRole('button', {name: 'Add New Actor'})).toHaveAttribute(
       'data-callout',
       'map.newActor',
     );
