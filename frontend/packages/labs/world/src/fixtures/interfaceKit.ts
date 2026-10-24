@@ -205,115 +205,89 @@ const INTERFACE_MAP = {
 };
 
 /** `set size of ⟨map|view⟩ to x ⟨columns⟩ y ⟨rows⟩ tiles`. */
-const sized = (what: 'map' | 'view') => ({
-  type: `world_set_${what}_size`,
-  inputs: {X: number(PORTRAIT.columns), Y: number(PORTRAIT.rows)},
-});
-
-/** Chain top-level rows under the world block. */
-const chain = (rows: object[]) =>
-  rows.reduceRight((next, row) => ({...row, next: {block: next}}));
-
-const MAIN_WORLD = JSON.stringify(
+/**
+ * The Main Screen: the interface itself, with no Viewport, since an app
+ * has no level to look into (specs/SCREEN_MAP_PLAN.md). Its size is the
+ * phone-shaped window the app is seen through.
+ */
+const INTERFACE_SCREEN = JSON.stringify(
   {
-    // THE ARRANGEMENT IS THE WORLD'S OWN, under `map` beside `blocks`
-    // (specs/MAIN_MAP_PLAN.md). It was a `maps/interface.map` with a `load
-    // map` row naming it, which is one file and one row more than the idea
-    // needs: this world IS the interface, and opening it should show it.
-    //
-    // Nothing downstream changes. A world's main map compiles to the same
-    // `world.loadMap` a named one does (`blockly/assembleActorModule`), so
-    // its placements get a load, modality still asks of that load, and a
-    // screen put up over this one still covers it.
-    map: INTERFACE_MAP,
+    ...INTERFACE_MAP,
+    name: 'Interface',
+    // …AND WHAT IT IS ALL PAINTED OUT OF, which is the setting this fixture
+    // exists to show off. Every control names a CLASS — `button`,
+    // `caption`, `ring` — and this says which file those classes are looked
+    // up in. Point it at `styles/classic` and the whole kit changes without
+    // a drawing being edited (specs/STYLES_PLAN.md).
+    theme: 'styles/modern',
     blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Interface'},
-          next: {
-            block: chain([
-              // The screen's shape, first, so the map is placed on the
-              // window it is seen through. The map file says the same size;
-              // the world saying it too is what a world with no map would
-              // say, and it costs one row.
-              sized('view'),
-              sized('map'),
-              // …AND WHAT IT IS ALL PAINTED OUT OF, which is the row this
-              // fixture exists to show off. Every control below names a
-              // CLASS — `button`, `caption`, `ring` — and this says which
-              // file those classes are looked up in. Point it at
-              // `styles/classic` and the whole kit changes without a drawing
-              // being edited (specs/STYLES_PLAN.md).
-              {type: 'world_use_theme', fields: {THEME: 'styles/modern'}},
-            ]),
-          },
-        },
-        // THE FIELD'S OWN EVENT, heard by the world: a Text Input declares
-        // `changed` for itself, and this is the whole reason an actor may
-        // declare one (`ActorBuilder.defineEvent`).
-        {
-          type: 'world_on_ActorsTextInput_ChangedEvent',
-          x: 20,
-          y: 260,
-          fields: {SUBJECT: 'actors/textInput'},
-          next: {
-            block: {
-              type: 'world_set_ActorsProgressBar_FractionProperty',
-              inputs: {
-                ACTOR: kind('actors/progressBar'),
-                VALUE: {
-                  block: {
-                    type: 'math_arithmetic',
-                    fields: {OP: 'DIVIDE'},
-                    inputs: {
-                      A: {
-                        block: {
-                          type: 'text_length',
-                          inputs: {VALUE: typedIn()},
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          // THE FIELD'S OWN EVENT, heard by the screen: a Text Input declares
+          // `changed` for itself, and this is the whole reason an actor may
+          // declare one (`ActorBuilder.defineEvent`).
+          {
+            type: 'world_on_ActorsTextInput_ChangedEvent',
+            x: 20,
+            y: 260,
+            fields: {SUBJECT: 'actors/textInput'},
+            next: {
+              block: {
+                type: 'world_set_ActorsProgressBar_FractionProperty',
+                inputs: {
+                  ACTOR: kind('actors/progressBar'),
+                  VALUE: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'DIVIDE'},
+                      inputs: {
+                        A: {
+                          block: {
+                            type: 'text_length',
+                            inputs: {VALUE: typedIn()},
+                          },
                         },
+                        B: number(12),
                       },
-                      B: number(12),
                     },
                   },
                 },
               },
             },
           },
-        },
-        // …and the button, which needs no hit test of its own.
-        {
-          type: 'world_on_Mouse_IsClickedWithEvent',
-          x: 20,
-          y: 400,
-          fields: {FILTER0: '', SUBJECT: 'actors/button'},
-          next: {
-            block: {
-              type: 'world_do_ActorsSpeechBox_SayAction',
-              inputs: {
-                ACTOR: kind('actors/speechBox'),
-                // `⟨HELLO ⟩ + ⟨what was typed⟩` — a chain, read left to right.
-                //
-                // NO ADAPTER, because there is nothing to adapt. A chain's
-                // socket takes `String` and `text of ⟨…⟩` reports one, so it
-                // plugs straight in; `as text` is the door for everything that
-                // is NOT already words — a score, a choice — and putting one
-                // here would say the field's words needed turning into words
-                // (`domainBlocks.worldAsText`).
-                VALUE: {
-                  block: {
-                    type: 'text',
-                    fields: {TEXT: 'HELLO '},
-                    inputs: {ADD: typedIn()},
+          // …and the button, which needs no hit test of its own.
+          {
+            type: 'world_on_Mouse_IsClickedWithEvent',
+            x: 20,
+            y: 400,
+            fields: {FILTER0: '', SUBJECT: 'actors/button'},
+            next: {
+              block: {
+                type: 'world_do_ActorsSpeechBox_SayAction',
+                inputs: {
+                  ACTOR: kind('actors/speechBox'),
+                  // `⟨HELLO ⟩ + ⟨what was typed⟩` — a chain, read left to right.
+                  //
+                  // NO ADAPTER, because there is nothing to adapt. A chain's
+                  // socket takes `String` and `text of ⟨…⟩` reports one, so it
+                  // plugs straight in; `as text` is the door for everything that
+                  // is NOT already words — a score, a choice — and putting one
+                  // here would say the field's words needed turning into words
+                  // (`domainBlocks.worldAsText`).
+                  VALUE: {
+                    block: {
+                      type: 'text',
+                      fields: {TEXT: 'HELLO '},
+                      inputs: {ADD: typedIn()},
+                    },
                   },
                 },
               },
             },
           },
-        },
-      ],
+        ],
+      },
     },
   },
   null,
@@ -369,7 +343,7 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   }
 
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   );
   if (!main) {
     return source;
@@ -381,7 +355,7 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
     ...source,
     files: {
       ...source.files,
-      [main.id]: {...main, contents: MAIN_WORLD},
+      [main.id]: {...main, contents: INTERFACE_SCREEN},
       // The Scroll View's contents. Written here rather than imported: a
       // stock map is something several projects share, and a settings page
       // is this kit's own idea of something to scroll.

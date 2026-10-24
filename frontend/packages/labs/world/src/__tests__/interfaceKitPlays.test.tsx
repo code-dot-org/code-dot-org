@@ -66,8 +66,13 @@ describe('the theme, through the whole path', () => {
   });
 
   /**
-   * The project with its MAIN MAP edited — which is the world's own file now,
-   * under `map` beside `blocks` (specs/MAIN_MAP_PLAN.md).
+   * The kit as a WORLD whose main map is the screen, edited by `edit`, and
+   * which uses the screen's theme as its base.
+   *
+   * A world, because the middle of the cascade is a map's own theme over
+   * the game's, and a Main Screen's theme IS the game's: there is nothing
+   * above it on the screen for it to override (specs/SCREEN_MAP_PLAN.md).
+   * A world's main map has the world above it.
    */
   const withMainMap = (
     edit: (map: {
@@ -75,13 +80,26 @@ describe('the theme, through the whole path', () => {
       actors: Array<{type: string; properties?: Record<string, unknown>}>;
     }) => void,
   ) => {
-    const files = projectFiles(WORLD_SCENARIOS.interface.source);
-    const path = Object.keys(files).find(one => one.endsWith('.world'))!;
-    const world = JSON.parse(files[path]) as {
-      map: Parameters<typeof edit>[0];
-    };
-    edit(world.map);
-    return {...files, [path]: JSON.stringify(world)};
+    const files = {...projectFiles(WORLD_SCENARIOS.interface.source)};
+    const {name, theme, ...map} = JSON.parse(
+      files['screens/main.screen'],
+    ) as Parameters<typeof edit>[0] & {name: string; theme: string};
+    delete (map as {blocks?: unknown}).blocks;
+    edit(map);
+    delete files['screens/main.screen'];
+    files['worlds/main.world'] = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_world',
+            fields: {NAME: name},
+            next: {block: {type: 'world_use_theme', fields: {THEME: theme}}},
+          },
+        ],
+      },
+      map,
+    });
+    return files;
   };
 
   it('lets a MAP override the world, all the way through', async () => {

@@ -58,9 +58,12 @@ const typesIn = (source: string): Named[] => {
     }
     visit(one.next?.block ?? one.next?.shadow);
   };
-  const roots = (JSON.parse(source) as {blocks?: {blocks?: unknown[]}}).blocks
-    ?.blocks;
-  for (const root of roots ?? []) {
+  // A Blockly file is a workspace, `{blocks: {blocks: […]}}`; a screen holds
+  // one under its own `blocks`, a level deeper.
+  const held = (JSON.parse(source) as {blocks?: {blocks?: unknown}}).blocks
+    ?.blocks as unknown[] | {blocks?: unknown[]} | undefined;
+  const roots = Array.isArray(held) ? held : (held?.blocks ?? []);
+  for (const root of roots) {
     visit(root);
   }
   return found;

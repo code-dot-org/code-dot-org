@@ -135,13 +135,14 @@ describe('a project that parents one actor to another', () => {
   const chain = (rows: object[]) =>
     rows.reduceRight((next, row) => ({...row, next: {block: next}}));
 
-  /** The Interface Kit's actors, under a world that parents a Button. */
+  /**
+   * The Interface Kit's actors, under a world that parents a Button in place
+   * of the kit's Main Screen: `add actor` rows are a world's.
+   */
   const project = () => {
-    const source = WORLD_SCENARIOS.interface.source;
-    const main = Object.values(source.files).find(
-      file => file.name === 'main.world',
-    )!;
-    const world = JSON.stringify({
+    const files = {...projectFiles(WORLD_SCENARIOS.interface.source)};
+    delete files['screens/main.screen'];
+    files['worlds/main.world'] = JSON.stringify({
       blocks: {
         blocks: [
           {
@@ -189,14 +190,11 @@ describe('a project that parents one actor to another', () => {
         ],
       },
     });
-    return {
-      ...source,
-      files: {...source.files, [main.id]: {...main, contents: world}},
-    };
+    return files;
   };
 
   it('puts the child where the engine says: parent plus local', async () => {
-    const {world} = await compileProject(projectFiles(project()));
+    const {world} = await compileProject(project());
     const actors = [...world.actors];
     const label = actors.find(actor => actor.type === 'actors/label')!;
     const button = actors.find(actor => actor.type === 'actors/button')!;

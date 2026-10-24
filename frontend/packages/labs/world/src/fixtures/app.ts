@@ -40,7 +40,6 @@ import {stockActorById} from '../actors/stock';
 import {
   actorFile,
   chain,
-  defineEvent,
   defineMap,
   defineProperty,
   emitWorldEvent,
@@ -49,6 +48,7 @@ import {
   me,
 } from '../actors/stock/workspace';
 import {APP_ACTORS} from '../appBuilder';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {importStockMap} from '../maps/importStockMap';
 import {stockMapById} from '../maps/stock';
 import {importStockRule} from '../rules/importStockRule';
@@ -59,9 +59,6 @@ import {TILE_SIZE} from '../runtime/viewport';
 export const PORTRAIT = {columns: 10, rows: 18};
 const WIDTH = PORTRAIT.columns * TILE_SIZE;
 
-const number = (value: number) => ({
-  block: {type: 'math_number', fields: {NUM: value}},
-});
 const words = (text: string) => ({block: {type: 'text', fields: {TEXT: text}}});
 
 /** `any ⟨kind⟩` — how a world names the actor a handler is about. */
@@ -233,12 +230,12 @@ const WRITE_MAP = mapFile(
     }),
     place('actors/button', 'Save', 96, 144, {
       anchor: 'top',
-      emits: emitWorldEvent('save'),
+      emits: emitWorldEvent('save', undefined, MAIN_SCREEN_PATH),
       own: {Label: {text: 'SAVE'}, hasABox: {width: 120}},
     }),
     place('actors/button', 'Cancel', 224, 144, {
       anchor: 'top',
-      emits: emitWorldEvent('cancel'),
+      emits: emitWorldEvent('cancel', undefined, MAIN_SCREEN_PATH),
       own: {Label: {text: 'CANCEL'}, hasABox: {width: 120}},
     }),
   ],
@@ -311,7 +308,7 @@ const fieldOf = (exportName: string) => ({
 });
 
 /** The world's own list of notes — `notes` in `main.world`. */
-const notes = () => ({block: {type: 'world_get_WorldsMain_NotesProperty'}});
+const notes = () => ({block: {type: 'world_get_ScreensMain_NotesProperty'}});
 
 /** `set ⟨items⟩ of ⟨any ⟨List⟩⟩ to ⟨notes⟩` — the list shows what is kept. */
 const showNotes = () => ({
@@ -329,7 +326,7 @@ const showNotes = () => ({
  */
 const rebuildRows = () => [
   {
-    type: 'world_set_WorldsMain_NotesProperty',
+    type: 'world_set_ScreensMain_NotesProperty',
     inputs: {VALUE: {block: {type: 'lists_create_empty'}}},
   },
   {
@@ -339,7 +336,7 @@ const rebuildRows = () => [
       SOURCE: kind('actors/note'),
       DO: {
         block: {
-          type: 'world_push_WorldsMain_NotesProperty',
+          type: 'world_push_ScreensMain_NotesProperty',
           inputs: {
             ITEM: joined([
               {
@@ -360,202 +357,157 @@ const rebuildRows = () => [
   showNotes(),
 ];
 
-/** `set size of ⟨map|view⟩ to x ⟨columns⟩ y ⟨rows⟩ tiles`. */
-const sized = (what: 'map' | 'view') => ({
-  type: `world_set_${what}_size`,
-  inputs: {X: number(PORTRAIT.columns), Y: number(PORTRAIT.rows)},
-});
-
 const MEMORY = 'notes';
 
-const MAIN_WORLD = JSON.stringify(
+/**
+ * The Main Screen: home, with no Viewport, since an app has no level to look
+ * into (specs/SCREEN_MAP_PLAN.md). The write screen is loaded over it and
+ * home is what the stack sits on, which is why the Screens rule's floor is
+ * empty rather than one: with home underneath, a floor of one would mean the
+ * write screen could never be closed (specs/SCREENS_PLAN.md).
+ */
+const MAIN_SCREEN = JSON.stringify(
   {
-    // HOME IS THE WORLD'S OWN MAP, under `map` beside `blocks`
-    // (specs/MAIN_MAP_PLAN.md). It was `maps/home.map` with a `go to screen`
-    // row naming it, and the difference is not one file: it is that home is
-    // no longer ON the stack. It is what the stack sits on.
-    //
-    // Which is why the Screens rule's floor moved. It used to refuse to pop
-    // the last screen, on the reasoning that the engine would leave an empty
-    // world; with home underneath, that floor meant the write screen could
-    // never be closed (specs/SCREENS_PLAN.md).
-    map: HOME_MAP,
+    ...HOME_MAP,
+    name: 'Main',
+    properties: [
+      // WHAT THIS APP KEEPS. A game-wide value, which is exactly what `save`
+      // writes and `load` puts back — so saving is one block rather than a
+      // format (specs/WORLD_STATE.md).
+      {name: 'notes', type: 'words', value: ''},
+      // …and whether the last write got through. `save` REPORTS rather than
+      // acts, because a browser with its site data blocked is a real thing
+      // and not a crash — so the answer is kept rather than dropped, and an
+      // app that wanted to say "could not save" has it to say
+      // (specs/SAVING_PLAN.md).
+      {name: 'saved', type: 'boolean', value: 'true'},
+      // …and whether there was anything to come back to. False on a first
+      // run, which is what a start screen would say something about
+      // (specs/SAVING_PLAN.md).
+      {name: 'remembered', type: 'boolean', value: 'false'},
+    ],
+    // …AND WHAT THE WRITE SCREEN SAYS BACK. Both events are the game's,
+    // declared here and raised by a map (`maps/write` raises them; its two
+    // buttons say them). A map declares no events of its own: one
+    // vocabulary, held where the handlers are (specs/MAP_EVENTS_PLAN.md).
+    events: [{name: 'save'}, {name: 'cancel'}],
     blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Main'},
-          next: {
-            block: chain([
-              // The screen's shape first, so the maps are placed on the window
-              // they are seen through.
-              sized('view'),
-              sized('map'),
-              // WHAT THIS APP KEEPS. A world's own property, which is exactly
-              // what `save` writes and `load` puts back — so saving is one
-              // block rather than a format (specs/WORLD_STATE.md).
-              {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'words',
-                  ACCESS: 'writable',
-                  NAME: 'notes',
-                },
-              },
-              // …and whether the last write got through. `save` REPORTS
-              // rather than acts, because a browser with its site data
-              // blocked is a real thing and not a crash — so the answer is
-              // kept rather than dropped, and an app that wanted to say
-              // "could not save" has it to say (specs/SAVING_PLAN.md).
-              {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'boolean',
-                  ACCESS: 'writable',
-                  NAME: 'saved',
-                  DEFAULT: 'true',
-                },
-              },
-              // …and whether there was anything to come back to. False on a
-              // first run, which is what a start screen would say something
-              // about (specs/SAVING_PLAN.md).
-              {
-                type: 'world_rule_property',
-                fields: {
-                  TYPE: 'boolean',
-                  ACCESS: 'writable',
-                  NAME: 'remembered',
-                  DEFAULT: 'false',
-                },
-              },
-              // …AND WHAT THE WRITE SCREEN SAYS BACK. Both events are the
-              // WORLD's, declared here and raised by a map (`maps/write`
-              // raises them; its two buttons say them). A map declares no
-              // events of its own: one vocabulary, held where the handlers
-              // are (specs/MAP_EVENTS_PLAN.md).
-              defineEvent('save'),
-              defineEvent('cancel'),
-              // …AND NO FIRST SCREEN. Home is the world's own map, loaded
-              // before any of these rows run, so there is nothing to go to:
-              // the app starts on it and the stack starts empty.
-            ]),
-          },
-        },
-        // RESTORING IS A HANDLER, not a row in the body above. The storage is
-        // lent once the world exists, and a world's body runs while it is
-        // still being described — so a `load` written up there answers false
-        // every time (specs/SAVING_PLAN.md). `is created` runs on the first
-        // tick, which is after.
-        //
-        // Hung on the LIST because the list is the thing that has to show the
-        // answer: recall, then fill, in one handler, in that order.
-        {
-          type: 'world_on_Space_CreatedEvent',
-          x: 20,
-          y: 260,
-          fields: {SUBJECT: 'actors/list'},
-          next: {
-            block: chain([
-              // The answer is KEPT rather than branched on, and the list is
-              // filled either way. A list that is only filled when something
-              // was remembered is a list still showing the stock rows it was
-              // born with on a first run — which is what this did first.
-              {
-                type: 'world_set_WorldsMain_RememberedProperty',
-                inputs: {
-                  VALUE: {
-                    block: {
-                      // `any actors in ⟨…⟩` rather than a count the block
-                      // answers itself: bringing them back hands over the
-                      // ACTORS, and asking whether there were any is a block
-                      // the lab already has (specs/RECORDS_PLAN.md).
-                      type: 'world_any_actors',
-                      inputs: {
-                        LIST: {
-                          block: {
-                            type: 'world_recall_actors',
-                            inputs: {NAME: words(MEMORY)},
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          // RESTORING IS A HANDLER. The storage is lent once the world exists,
+          // and setup runs while it is still being described — so a `load`
+          // there would answer false every time (specs/SAVING_PLAN.md). `is
+          // created` runs on the first tick, which is after.
+          //
+          // Hung on the LIST because the list is the thing that has to show the
+          // answer: recall, then fill, in one handler, in that order.
+          {
+            type: 'world_on_Space_CreatedEvent',
+            x: 20,
+            y: 260,
+            fields: {SUBJECT: 'actors/list'},
+            next: {
+              block: chain([
+                // The answer is KEPT rather than branched on, and the list is
+                // filled either way. A list that is only filled when something
+                // was remembered is a list still showing the stock rows it was
+                // born with on a first run — which is what this did first.
+                {
+                  type: 'world_set_ScreensMain_RememberedProperty',
+                  inputs: {
+                    VALUE: {
+                      block: {
+                        // `any actors in ⟨…⟩` rather than a count the block
+                        // answers itself: bringing them back hands over the
+                        // ACTORS, and asking whether there were any is a block
+                        // the lab already has (specs/RECORDS_PLAN.md).
+                        type: 'world_any_actors',
+                        inputs: {
+                          LIST: {
+                            block: {
+                              type: 'world_recall_actors',
+                              inputs: {NAME: words(MEMORY)},
+                            },
                           },
                         },
                       },
                     },
                   },
                 },
-              },
-              ...rebuildRows(),
-            ]),
+                ...rebuildRows(),
+              ]),
+            },
           },
-        },
-        // SAVE: keep it, show it, write it down, and come back.
-        //
-        // The order is the whole of what an app has to get right here. The
-        // note goes on the list before the screen goes away, because the
-        // field it came from is on the screen that is about to be unloaded.
-        {
-          type: hearWorldEvent('save'),
-          x: 20,
-          y: 600,
-          next: {
-            block: chain([
-              // A RECORD, not a line of words: the note and when it was
-              // written, each in a field of its own.
-              {
-                type: 'world_add_actor',
-                fields: {ACTOR: 'actors/note'},
-                inputs: {
-                  DO: {
-                    block: chain([
-                      {
-                        type: 'world_set_ActorsNote_TextProperty',
-                        inputs: {ACTOR: me(), VALUE: typed()},
-                      },
-                      {
-                        type: 'world_set_ActorsNote_AtProperty',
-                        inputs: {
-                          ACTOR: me(),
-                          VALUE: {block: {type: 'world_now'}},
+          // SAVE: keep it, show it, write it down, and come back.
+          //
+          // The order is the whole of what an app has to get right here. The
+          // note goes on the list before the screen goes away, because the
+          // field it came from is on the screen that is about to be unloaded.
+          {
+            type: hearWorldEvent('save', MAIN_SCREEN_PATH),
+            x: 20,
+            y: 600,
+            next: {
+              block: chain([
+                // A RECORD, not a line of words: the note and when it was
+                // written, each in a field of its own.
+                {
+                  type: 'world_add_actor',
+                  fields: {ACTOR: 'actors/note'},
+                  inputs: {
+                    DO: {
+                      block: chain([
+                        {
+                          type: 'world_set_ActorsNote_TextProperty',
+                          inputs: {ACTOR: me(), VALUE: typed()},
                         },
-                      },
-                    ]),
+                        {
+                          type: 'world_set_ActorsNote_AtProperty',
+                          inputs: {
+                            ACTOR: me(),
+                            VALUE: {block: {type: 'world_now'}},
+                          },
+                        },
+                      ]),
+                    },
                   },
                 },
-              },
-              ...rebuildRows(),
-              {
-                type: 'world_set_WorldsMain_SavedProperty',
-                inputs: {
-                  VALUE: {
-                    block: {
-                      type: 'world_remember_actors',
-                      inputs: {
-                        ACTORS: kind('actors/note'),
-                        NAME: words(MEMORY),
+                ...rebuildRows(),
+                {
+                  type: 'world_set_ScreensMain_SavedProperty',
+                  inputs: {
+                    VALUE: {
+                      block: {
+                        type: 'world_remember_actors',
+                        inputs: {
+                          ACTORS: kind('actors/note'),
+                          NAME: words(MEMORY),
+                        },
                       },
                     },
                   },
                 },
-              },
-              // Twice, because the keyboard went on over the form.
-              {type: 'world_do_Screens_GoBackAction'},
-              {type: 'world_do_Screens_GoBackAction'},
-            ]),
+                // Twice, because the keyboard went on over the form.
+                {type: 'world_do_Screens_GoBackAction'},
+                {type: 'world_do_Screens_GoBackAction'},
+              ]),
+            },
           },
-        },
-        // CANCEL: the same way back, and nothing kept.
-        {
-          type: hearWorldEvent('cancel'),
-          x: 20,
-          y: 820,
-          next: {
-            block: chain([
-              {type: 'world_do_Screens_GoBackAction'},
-              {type: 'world_do_Screens_GoBackAction'},
-            ]),
+          // CANCEL: the same way back, and nothing kept.
+          {
+            type: hearWorldEvent('cancel', MAIN_SCREEN_PATH),
+            x: 20,
+            y: 820,
+            next: {
+              block: chain([
+                {type: 'world_do_Screens_GoBackAction'},
+                {type: 'world_do_Screens_GoBackAction'},
+              ]),
+            },
           },
-        },
-      ],
+        ],
+      },
     },
   },
   null,
@@ -588,7 +540,7 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
   source = importStockMap(source, stockMapById('keyboard')!).source;
 
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   );
   const maps = Object.values(source.folders).find(
     folder => folder.name === 'maps' && folder.parentId === '0',
@@ -604,7 +556,7 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
     ...source,
     files: {
       ...source.files,
-      [main.id]: {...main, contents: MAIN_WORLD},
+      [main.id]: {...main, contents: MAIN_SCREEN},
       // The record kind. Written here rather than imported, because a Note is
       // this app's own idea — a stock actor is something several projects
       // share, and nobody else's notes have these two fields.

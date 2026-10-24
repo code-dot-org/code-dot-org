@@ -110,9 +110,8 @@ const EMPTY_WORLD = JSON.stringify({
 });
 
 /**
- * …as a world: what the two apps start from until they move (5d), and what
- * a test about an actor or an enhancement writes a world into. It goes when
- * the `.world` shape does (specs/SCREEN_MAP_PLAN.md).
+ * …as a world: what a test about an actor or an enhancement writes a world
+ * into. It goes when the `.world` shape does (specs/SCREEN_MAP_PLAN.md).
  */
 const EMPTY_WORLD_SPEC: ProjectSpec = {
   folders: [
@@ -141,6 +140,34 @@ const EMPTY_WORLD_SPEC: ProjectSpec = {
 /** The empty project as a world (`EMPTY_WORLD_SPEC`). */
 export const EMPTY_WORLD_PROJECT: MultiFileSource =
   buildProject(EMPTY_WORLD_SPEC).source;
+
+/**
+ * An empty app: a Main Screen with nothing on it and no Viewport, which the
+ * two apps write their screens into (specs/SCREEN_MAP_PLAN.md).
+ */
+const EMPTY_APP_SPEC: ProjectSpec = {
+  folders: [
+    'rules',
+    'screens',
+    'actors',
+    'animations',
+    'sprites',
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.screen',
+      language: 'screen',
+      contents: JSON.stringify({type: 'map', name: 'Main', actors: []}),
+      folderId: 'screens',
+      active: true,
+      open: true,
+    },
+  },
+  open: ['main'],
+};
 
 /**
  * An empty game: a Main Screen whose Viewport shows an empty level
@@ -382,13 +409,13 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     description:
       'Every interface actor on one screen, answering each other — a Label, ' +
       'a field you can type into, a Button, a bar and a Speech Box.',
-    source: interfaceKit(EMPTY_WORLD_PROJECT),
+    source: interfaceKit(buildProject(EMPTY_APP_SPEC).source),
     // An app, as Notes is: controls on a phone-shaped screen, and nothing
     // a game wants on offer (`appBuilder`).
     levelData: {mode: 'app'},
     instructions:
       '## The interface kit\n\nType your name and press the button.\n\n' +
-      '- The screen is a MAP. Open `maps/interface.map` and the title, the ' +
+      '- The Main Screen is a MAP. The title, the ' +
       'field, the button, the bar and the box are placements on a ' +
       'phone-shaped canvas; the words on the title and the button are ' +
       'property overrides on their placements, in the inspector\n' +
@@ -397,7 +424,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'a screen stay apart — and it is the Tab Navigation rule doing it, ' +
       'not the field. Tab moves between them and Escape lets go\n' +
       '- The bar follows what you type, because the field raises `changed` ' +
-      'and the world answers it. That event is the FIELD\u2019s own, ' +
+      'and the screen\u2019s code answers it. That event is the FIELD\u2019s own, ' +
       'declared in `textInput.actor` — an actor may say something happened ' +
       'without a rule in between\n' +
       '- The box says its line a letter at a time, on a timer it holds. Open ' +
@@ -412,7 +439,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'An app rather than a game: two screens, a form with an on-screen ' +
       'keyboard, a list of what you wrote, and it is all still there after a ' +
       'reload.',
-    source: notesApp(EMPTY_WORLD_PROJECT),
+    source: notesApp(buildProject(EMPTY_APP_SPEC).source),
     // App Builder: no game rules or actors on offer, and no layers or
     // cameras in the map editor (`appBuilder`, specs/APPS.md).
     levelData: {mode: 'app'},
@@ -428,15 +455,16 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The keys type. None of them names the field — each one raises what ' +
       'a real keyboard raises, so the field that has the focus is the one ' +
       'that fills, and you can use your own keyboard instead\n' +
-      '- The notes are a property of the WORLD, so `save what the world ' +
-      'remembers` is one block and not a format. Reload the preview and ' +
+      '- The notes are a game-wide value, kept in the Main Screen, so ' +
+      '`save what the world remembers` is one block and not a format. ' +
+      'Reload the preview and ' +
       'they come back, because `when ⟨…⟩ is created` does the `load`\n' +
-      '- Open `maps/home.map`: the header holds the TOP and the button holds ' +
+      '- The Main Screen is home: the header holds the TOP and the button holds ' +
       'the BOTTOM, so the list takes whatever room is left on a window that ' +
       'is not the shape this was drawn at\n' +
-      '- The buttons talk through their map\u2019s own events. Open the ' +
-      'map\u2019s workspace and `save` and `cancel` are declared there; the ' +
-      'world answers them, so moving a button rewires nothing',
+      '- The write screen\u2019s buttons raise `save` and `cancel`, which ' +
+      'the Main Screen declares and its code answers, so moving a button ' +
+      'rewires nothing',
   },
   empty: {
     name: 'Empty',

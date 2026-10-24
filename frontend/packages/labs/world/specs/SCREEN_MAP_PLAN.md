@@ -1,6 +1,6 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 4 BUILT, 5a TO 5c BUILT; 5d and 5e planned. The working record, as the
+STATUS: STEPS 1 TO 4 BUILT, 5a TO 5d BUILT; 5e planned. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -235,6 +235,15 @@ One commit each, so each fixture's tests move with it.
 
 - 5d. The two apps, interface and app, whose Main Screen holds no
   Viewport.
+
+  BUILT. Each app's world map is its Main Screen, with no Viewport; the
+  world's rows are the screen's data: the interface kit's theme, and the
+  notes app's three game-wide values and its `save` and `cancel` events.
+  Both start from an empty Main Screen (`EMPTY_APP_SPEC`). The two theme
+  tests that override the game's theme from a main map build the kit as a
+  world: on a Main Screen the screen's theme is the base, and nothing is
+  above it to override. Seen in the browser.
+
 - 5e. The documents.
 
 A test that is about the `.world` shape itself — a world's own cameras,

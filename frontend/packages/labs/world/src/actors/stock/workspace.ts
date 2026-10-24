@@ -692,8 +692,12 @@ export const defineMap = (name: string) => ({
  * `carrying` is the value input for an event with a parameter — `a tab is
  * chosen ⟨"HOME"⟩` — and is left off for the events that carry nothing.
  */
-export const emitWorldEvent = (name: string, carrying?: object) => ({
-  type: worldEventBlock('emit', name),
+export const emitWorldEvent = (
+  name: string,
+  carrying?: object,
+  owner = MAIN_WORLD_PATH,
+) => ({
+  type: worldEventBlock('emit', name, owner),
   ...(carrying ? {inputs: {VALUE: carrying}} : {}),
 });
 
