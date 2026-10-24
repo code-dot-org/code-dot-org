@@ -573,8 +573,8 @@ engine played the same games there. What differed:
   `set background` row or handler acts on the root, which is the Main
   Screen now, not on the map in the Viewport (`look/background`,
   `adventure/world`, `story/scene`). The blocks that act on "the world" —
-  background, effects, layers, map size — need to say whether they mean the
-  screen or the map.
+  background, effects, layers, map size — take their target from where the
+  code runs; see "World blocks act where they run" below.
 - **A placement cannot read the world's variables.** Rows that placed
   actors from a variable declared in the world's code lost it in a
   placement's script (`memory/variable`, `memory/actor-state`). Game-wide
@@ -595,3 +595,24 @@ Not covered by the checks, and still to see in the browser: drawing, the
 pointer while the Viewport's camera has scrolled, where keyboard focus goes,
 the cost of the extra space, and the root-only behavior of anchors and of
 modal maps stacked over the screen.
+
+### World blocks act where they run
+
+A block that acts on "the world" has no dropdown naming a screen or a map.
+It acts on the place its code belongs to:
+
+| Code belongs to      | `set background` sets                 |
+| -------------------- | ------------------------------------- |
+| a Screen             | that Screen's background              |
+| a Map                | that Map's background                 |
+| an actor on a Screen | the background of the Screen it is on |
+| an actor in a Map    | the background of the layer it is in  |
+
+An actor's place is where it is when the block runs, not where it was put:
+an actor that moves to another layer, or is carried into another map, sets
+that one's. An actor in a map with no layers of its own is in the map's one
+layer, so it sets the map's background.
+
+The other blocks that act on "the world" follow the same rule. Effects act
+on the Screen, Map or layer the code runs in; map size and layer visibility
+act on the Map it runs in. Code that means some other place has to name it.
