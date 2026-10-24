@@ -313,6 +313,14 @@
       "import": "./dist/popover/index.mjs",
       "require": "./dist/popover/index.js"
     },
+    "./progressWidget": {
+      "types": {
+        "import": "./dist/progressWidget/index.d.ts",
+        "require": "./dist/progressWidget/index.d.ts"
+      },
+      "import": "./dist/progressWidget/index.mjs",
+      "require": "./dist/progressWidget/index.js"
+    },
     "./radioButton": {
       "types": {
         "import": "./dist/radioButton/index.d.ts",
