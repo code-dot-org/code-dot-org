@@ -72,24 +72,6 @@
               "layout": "text-bottom-right"
             },
             {
-              "key": "adaptive-test-kickoff-388e91e4-3f9c-4072-a12c-81dead86efd2",
-              "imageUrl": "https://images.code.org/b9499ec8e0d0089c1a804c9782dacd63-Second Helpings meal pickup dashboard.png",
-              "text": "###Second Helpings\nConnect extra food with the people who need it, before it goes to waste.",
-              "layout": "text-bottom-right"
-            },
-            {
-              "key": "adaptive-test-kickoff-8da3742a-efad-47fd-b3bd-6c3b62e712f4",
-              "imageUrl": "https://images.code.org/fdce7115752a614e912d3f6bbfea64cd-Calm Open Door teen support dashboard.png",
-              "text": "####Open Door\nMake it easier for a teen to find the right support at the right moment.",
-              "layout": "text-bottom-right"
-            },
-            {
-              "key": "adaptive-test-kickoff-3fc8f926-869c-4d76-86d0-b4041931f9f5",
-              "imageUrl": "https://images.code.org/4d73db76c6b43c86d4f2e73a172a849d-Puente_ School news in your language.png",
-              "text": "###Puente\nMake sure every family can understand what’s happening at school.",
-              "layout": "text-bottom-right"
-            },
-            {
               "key": "adaptive-test-kickoff-5c85af8a-bed3-4276-8b1a-7c64cea8ae9b",
               "imageUrl": "https://images.code.org/f1dc3032a40eb929d2182f0f1da7373d-Panel 4.png",
               "text": "####Build it!\nIn this lesson, your path is unique. Share your idea and your coding experience, and your lesson shifts with every answer along the way.",
@@ -123,7 +105,7 @@
             {
               "id": 101,
               "type": "freeResponse",
-              "text": "TODO"
+              "text": "Explain a website you would like to make in this activity. What is the topic or theme of the site? Who is it for?"
             }
           ]
         },
