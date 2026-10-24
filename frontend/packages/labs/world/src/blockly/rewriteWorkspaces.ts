@@ -12,9 +12,11 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 /**
- * File kinds that are Blockly workspaces, and so can hold a reference.
+ * File kinds that hold Blockly workspaces, and so can hold a reference. A map
+ * and a screen are documents, but their own code and each placement's are
+ * workspaces inside them, and the walk below finds them there.
  */
-export const WORKSPACE_FILE = /\.(rule|actor|world)$/;
+export const WORKSPACE_FILE = /\.(rule|actor|world|map|screen)$/;
 
 /** How a saved workspace is rewritten: block types, and reference fields. */
 export interface Rewriter {

@@ -112,6 +112,60 @@ describe('renaming an actor', () => {
     expect(JSON.parse(read(next, 'm')).actors[0].type).toBe('actors/hero');
   });
 
+  it('carries it onto a screen, and into code kept in a map', () => {
+    // A screen places actors as a map does, and a map's own code and each
+    // placement's are workspaces inside the document.
+    const source = project();
+    source.folders.screens = {
+      id: 'screens',
+      name: 'screens',
+      parentId: '0',
+      open: true,
+    };
+    source.files.s = file({
+      id: 's',
+      name: 'main.screen',
+      language: 'screen',
+      folderId: 'screens',
+      contents: JSON.stringify({
+        type: 'map',
+        actors: [{type: 'actors/player', id: 'Player'}],
+      }),
+    });
+    source.files.m = {
+      ...source.files.m,
+      contents: JSON.stringify({
+        type: 'map',
+        actors: [
+          {
+            type: 'actors/coin',
+            id: 'Coin',
+            blocks: {
+              blocks: {
+                blocks: [
+                  {
+                    type: 'world_get_ActorsPlayer_IdProperty',
+                    fields: {KIND: 'actors/player'},
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      }),
+    };
+
+    const {source: next} = renameThing(source, source.files.a, 'Hero');
+
+    expect(JSON.parse(read(next, 's')).actors[0].type).toBe('actors/hero');
+    const coin = JSON.parse(read(next, 'm')).actors[0];
+    expect(coin.type).toBe('actors/coin');
+    expect(coin.blocks.blocks.blocks[0]).toEqual({
+      type: 'world_get_ActorsHero_IdProperty',
+      fields: {KIND: 'actors/hero'},
+    });
+  });
+
   it('carries the block types minted from its path', () => {
     // An actor's own properties and blocks are keyed by `pathSlug` of the
     // file's path, so a moved file leaves every saved `get id of` block naming

@@ -117,10 +117,12 @@ export function renameReferences(
 }
 
 /**
- * …and the same in every `.map`, which is a document rather than a workspace.
+ * …and the same in every `.map` and `.screen`, whose placements are a
+ * document rather than a workspace.
  *
  * A placement names the kind it places by module path, so a map is the one
- * other place an actor's path is written down (`mapEditor/mapModel`).
+ * other place an actor's path is written down (`mapEditor/mapModel`); a
+ * screen is a map (specs/SCREEN_MAP_PLAN.md).
  */
 function renameInMaps(
   source: MultiFileSource,
@@ -130,7 +132,7 @@ function renameInMaps(
   const files = {...source.files};
   let changed = false;
   for (const [id, file] of Object.entries(source.files)) {
-    if (!file.name.endsWith('.map') || !file.contents?.includes(from)) {
+    if (!/\.(map|screen)$/.test(file.name) || !file.contents?.includes(from)) {
       continue;
     }
     let document: {actors?: Array<{type?: string}>};
