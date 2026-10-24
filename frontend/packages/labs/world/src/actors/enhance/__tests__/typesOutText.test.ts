@@ -12,7 +12,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -28,8 +28,7 @@ const LINE = 'The rain had not stopped for three days.';
 
 /** The empty scenario with a Label in it. */
 const withLabel = () =>
-  importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('label')!)
-    .source;
+  importStockActor(EMPTY_WORLD_PROJECT, stockActorById('label')!).source;
 
 const at = (source: ReturnType<typeof withLabel>, path: string) => {
   const id = fileIdAt(source, path);
@@ -91,7 +90,7 @@ describe('the types-out-text enhancement, as edits', () => {
     // It ships with the same blocks from the same place (`actors/typewriter`),
     // so offering it again would be offering a second copy of what is there.
     const source = importStockActor(
-      WORLD_SCENARIOS.empty.source,
+      EMPTY_WORLD_PROJECT,
       stockActorById('speechBox')!,
     ).source;
 
@@ -110,8 +109,7 @@ describe('the types-out-text enhancement, as edits', () => {
     // got — a file naming a block nothing defines.
     const source = importStockActor(
       importStockActor(
-        importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('coin')!)
-          .source,
+        importStockActor(EMPTY_WORLD_PROJECT, stockActorById('coin')!).source,
         stockActorById('speechBox')!,
       ).source,
       stockActorById('label')!,

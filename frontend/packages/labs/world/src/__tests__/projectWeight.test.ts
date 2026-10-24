@@ -63,9 +63,14 @@ describe('what a new project weighs', () => {
     // placement be the dangerous button (specs/STYLES_PLAN.md). Three
     // kilobytes for that is a bargain; the ceiling moves and the reason is
     // written down, which is what this test is for.
+    //
+    // The last fifteen are THE VIEWPORT the game is played in, now that a
+    // new project is a Main Screen showing its level (specs/SCREEN_MAP_PLAN.md):
+    // its actor file, 14KB, and the three camera rules it requires, which are
+    // references of forty bytes each.
     const whole = bytes(JSON.stringify(DEFAULT_PROJECT.source));
 
-    expect(whole).toBeLessThan(100_000);
+    expect(whole).toBeLessThan(120_000);
   });
 
   it('is dominated by the game, which is the inversion', () => {
@@ -74,7 +79,8 @@ describe('what a new project weighs', () => {
     // starter level IS — a world, six actors, a map, an animation, six
     // sprites, an effect. Those 40KB have not moved. The megabyte beside them
     // has become 470 bytes.
-    expect(rules).toHaveLength(11);
+    // …and three more for the Viewport's cameras.
+    expect(rules).toHaveLength(14);
     expect(total(rules)).toBeLessThan(1_000);
     expect(total(files) - total(rules)).toBeGreaterThan(35_000);
     expect(total(rules) / total(files)).toBeLessThan(0.02);
@@ -116,7 +122,7 @@ describe('what the references stand for', () => {
       .filter(([path]) => path.endsWith('.rule'))
       .map(([, contents]) => bytes(contents));
 
-    expect(resolved).toHaveLength(11);
+    expect(resolved).toHaveLength(14);
     expect(resolved.reduce((sum, one) => sum + one, 0)).toBeGreaterThan(
       900_000,
     );

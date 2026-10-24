@@ -19,7 +19,7 @@ import {describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
@@ -115,10 +115,7 @@ const QUIET = JSON.stringify({
 });
 
 const project = (world: string) => {
-  const withBox = importStockActor(
-    WORLD_SCENARIOS.empty.source,
-    speechBox,
-  ).source;
+  const withBox = importStockActor(EMPTY_WORLD_PROJECT, speechBox).source;
   const main = Object.values(withBox.files).find(
     file => file.name === 'main.world',
   )!;

@@ -12,7 +12,7 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import type {Actor, World} from '../../engine';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
@@ -51,7 +51,7 @@ const WORLD = (map: string) =>
   });
 
 const play = async (id: string) => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   for (const actor of ['label', 'panel', 'button']) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }

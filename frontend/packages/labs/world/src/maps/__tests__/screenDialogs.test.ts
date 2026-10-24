@@ -13,7 +13,7 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import type {World} from '../../engine';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {declareScreenEvents} from '../declareEvents';
 import {importStockMap, raisedOnTheScreen} from '../importStockMap';
@@ -21,7 +21,7 @@ import {stockMapById} from '../stock';
 
 /** The empty scenario, its world file replaced by a bare Main Screen. */
 function emptyScreenProject() {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   for (const actor of ['label', 'panel', 'button']) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }

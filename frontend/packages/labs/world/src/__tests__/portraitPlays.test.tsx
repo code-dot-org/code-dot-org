@@ -16,7 +16,7 @@ import {describe, expect, it} from 'vitest';
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
 import {OpacityProperty} from '../engine';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
@@ -43,7 +43,7 @@ const WORLD = JSON.stringify({
 
 const project = () => {
   const imported = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('portrait')!,
   ).source;
   const world = Object.values(imported.files).find(
@@ -60,7 +60,7 @@ describe('a Portrait', () => {
     // A sprite it names and the project does not hold is a dropdown value with
     // no option behind it, and nothing anywhere reports that.
     const {source} = importStockActor(
-      WORLD_SCENARIOS.empty.source,
+      EMPTY_WORLD_PROJECT,
       stockActorById('portrait')!,
     );
 

@@ -11,7 +11,7 @@ import {
   type Property,
   Vector,
 } from '../../engine';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -28,7 +28,7 @@ const chain = (rows: object[]) =>
 
 /** A world with a Toggle and a Label, the Label saying what the Toggle did. */
 const project = (): MultiFileSource => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   source = importStockActor(source, stockActorById('toggle')!).source;
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',

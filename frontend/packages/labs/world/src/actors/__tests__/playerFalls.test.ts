@@ -15,7 +15,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {PositionProperty, type World} from '../../engine';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -43,7 +43,7 @@ const place = (path: string, x: number, y: number) => ({
 
 /** The empty scenario with both actors imported, and a world that places them. */
 const platformer = () => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   source = importStockActor(source, player).source;
   source = importStockActor(source, ground).source;
   const world = Object.values(source.files).find(
@@ -100,7 +100,7 @@ const play = (world: World, seconds: number) => {
 // as a Player would hold things up whether or not its shelf entry asked for it.
 describe('an imported Ground, with no Player to bring Gravity', () => {
   it('carries both the traits its file elects', async () => {
-    let source = WORLD_SCENARIOS.empty.source;
+    let source = EMPTY_WORLD_PROJECT;
     source = importStockActor(source, ground).source;
     const file = Object.values(source.files).find(
       one => one.name === 'main.world',

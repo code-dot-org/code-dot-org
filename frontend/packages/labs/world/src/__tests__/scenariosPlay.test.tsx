@@ -37,13 +37,13 @@ describe.each(WORLD_SCENARIO_TAGS)('the %s scenario', tag => {
     // A world that builds EMPTY is the failure mode to fear here: `load map`
     // emits its `world.define` lines from a registry, and an empty map is
     // legal, so nothing downstream complains. Which is why `empty` is named
-    // rather than skipped — it is the one scenario for which nothing placed is
-    // the right answer, and saying so is what keeps the check meaningful for
-    // the other four.
+    // rather than skipped — it is the one scenario whose level is empty, and
+    // saying so is what keeps the check meaningful for the others. What it
+    // places is the Viewport its empty level is shown in, and nothing else.
     const {world} = await built(tag);
     const placed = [...world.actors].length;
 
-    expect(placed).toBe(tag === 'empty' ? 0 : placed);
+    expect(placed).toBe(tag === 'empty' ? 1 : placed);
     if (tag !== 'empty') {
       // More than three is what a GAME places — a board, a player, the things
       // it is about. A novel places two, a portrait and a box, and everything

@@ -23,7 +23,7 @@ import {
 } from '../appBuilder';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {withoutBlocks} from '../blockly/toolboxFilter';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {WORLD_SCENARIOS, EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {STOCK_RULES} from '../rules/stock';
 import {projectFiles} from '../runtime/projectFiles';
@@ -110,7 +110,7 @@ describe('the app scenarios', () => {
       const missing = [...APP_ACTORS].filter(id => {
         // Where an import into an empty project writes it.
         const {path} = importStockActor(
-          WORLD_SCENARIOS.empty.source,
+          EMPTY_WORLD_PROJECT,
           STOCK_ACTORS.find(actor => actor.id === id)!,
         );
         return !(`${path}.actor` in files);

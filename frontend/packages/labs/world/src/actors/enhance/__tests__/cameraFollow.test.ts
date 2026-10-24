@@ -10,7 +10,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -24,7 +24,7 @@ const GROUND = 'actors/ground';
 /** The empty scenario with a Platformer Player and a Ground imported. */
 const withActors = () => {
   let source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('player')!,
   ).source;
   source = importStockActor(source, stockActorById('ground')!).source;

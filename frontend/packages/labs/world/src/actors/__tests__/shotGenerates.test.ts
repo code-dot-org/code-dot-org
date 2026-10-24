@@ -5,7 +5,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -13,7 +13,7 @@ import {stockActorById} from '../stock';
 /** The empty scenario with a Shot imported and one line placing it. */
 const withAShotInIt = () => {
   const {source} = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('shot')!,
   );
   const world = Object.values(source.files).find(

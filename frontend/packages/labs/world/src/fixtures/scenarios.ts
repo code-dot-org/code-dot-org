@@ -26,7 +26,12 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
+import {
+  buildProject,
+  DEFAULT_PROJECT,
+  gameScreen,
+  type ProjectSpec,
+} from '../constants';
 import type {WorldLevelData} from '../levelData';
 import {importStockMap} from '../maps/importStockMap';
 import {stockMapById} from '../maps/stock';
@@ -104,7 +109,12 @@ const EMPTY_WORLD = JSON.stringify({
   },
 });
 
-const EMPTY_SPEC: ProjectSpec = {
+/**
+ * …as a world: what the two apps start from until they move (5d), and what
+ * a test about an actor or an enhancement writes a world into. It goes when
+ * the `.world` shape does (specs/SCREEN_MAP_PLAN.md).
+ */
+const EMPTY_WORLD_SPEC: ProjectSpec = {
   folders: [
     'rules',
     'worlds',
@@ -128,6 +138,44 @@ const EMPTY_SPEC: ProjectSpec = {
   open: ['main'],
 };
 
+/** The empty project as a world (`EMPTY_WORLD_SPEC`). */
+export const EMPTY_WORLD_PROJECT: MultiFileSource =
+  buildProject(EMPTY_WORLD_SPEC).source;
+
+/**
+ * An empty game: a Main Screen whose Viewport shows an empty level
+ * (specs/SCREEN_MAP_PLAN.md). What a learner starting from scratch sees.
+ */
+const EMPTY_SPEC: ProjectSpec = {
+  folders: [
+    'rules',
+    'screens',
+    'actors',
+    'animations',
+    'sprites',
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.screen',
+      language: 'screen',
+      contents: gameScreen('My Game'),
+      folderId: 'screens',
+      active: true,
+      open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: JSON.stringify({type: 'map', actors: []}, null, 2),
+      folderId: 'maps',
+    },
+  },
+  open: ['main'],
+};
+
 export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
   simple: {
     name: 'Platformer',
@@ -137,8 +185,8 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'score to reach, and something walking about that will damage you.',
     source: DEFAULT_PROJECT.source,
     instructions:
-      '## World Lab\n\nBuild a game world in code. Edit the world and ' +
-      'actors under `worlds/` and `actors/`.\n\n' +
+      '## World Lab\n\nBuild a game in code. The level is `maps/main.map`, ' +
+      'shown on the Main Screen; the actors are under `actors/`.\n\n' +
       '- The preview runs your game as you edit\n' +
       '- Click the preview, then use the arrow keys to move the player, and space to jump\n' +
       '- Walk into a coin to take it: the coin is `Can Be Collected` and the ' +
@@ -330,7 +378,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     description:
       'Every interface actor on one screen, answering each other — a Label, ' +
       'a field you can type into, a Button, a bar and a Speech Box.',
-    source: interfaceKit(buildProject(EMPTY_SPEC).source),
+    source: interfaceKit(EMPTY_WORLD_PROJECT),
     // An app, as Notes is: controls on a phone-shaped screen, and nothing
     // a game wants on offer (`appBuilder`).
     levelData: {mode: 'app'},
@@ -360,7 +408,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'An app rather than a game: two screens, a form with an on-screen ' +
       'keyboard, a list of what you wrote, and it is all still there after a ' +
       'reload.',
-    source: notesApp(buildProject(EMPTY_SPEC).source),
+    source: notesApp(EMPTY_WORLD_PROJECT),
     // App Builder: no game rules or actors on offer, and no layers or
     // cameras in the map editor (`appBuilder`, specs/APPS.md).
     levelData: {mode: 'app'},
@@ -389,14 +437,18 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
   empty: {
     name: 'Empty',
     description:
-      'One world that does nothing, and the folders to put things in. What a ' +
-      'learner starting from scratch sees.',
-    source: buildProject(EMPTY_SPEC).source,
+      'A screen showing an empty level, and the folders to put things in. ' +
+      'What a learner starting from scratch sees.',
+    source: importStockActor(
+      buildProject(EMPTY_SPEC).source,
+      stockActorById('viewport')!,
+    ).source,
     instructions:
-      '## An empty world\n\nNothing is in it yet.\n\n' +
-      '- `use rule` to give the world an ability, then `use trait` to give an ' +
-      'actor a share of it\n' +
-      '- Actors are files under `actors/`; add one and place it with `add actor`\n' +
+      '## An empty game\n\nNothing is in it yet.\n\n' +
+      '- Import a rule to give the game an ability, then `use trait` to give ' +
+      'an actor a share of it\n' +
+      '- Actors are files under `actors/`; add one and place it in ' +
+      '`maps/main.map`, the level the screen shows\n' +
       '- Upload a picture into `sprites/` to draw with, or `backgrounds/` for a backdrop',
   },
 };

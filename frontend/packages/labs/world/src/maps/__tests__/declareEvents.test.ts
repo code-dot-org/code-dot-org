@@ -10,7 +10,7 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {parseWorldOwnMeta} from '../../blockly/ownProperties';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {MAIN_WORLD_PATH} from '../../mainWorld';
 import {declareEvents} from '../declareEvents';
 import {importStockMap} from '../importStockMap';
@@ -94,7 +94,7 @@ describe('declareEvents', () => {
 });
 
 describe('importing a stock map', () => {
-  const EMPTY = WORLD_SCENARIOS.empty.source;
+  const EMPTY = EMPTY_WORLD_PROJECT;
   const worldId = Object.keys(EMPTY.files).find(
     id => EMPTY.files[id].name === 'main.world',
   )!;

@@ -18,7 +18,7 @@ import {
   IntrinsicSizeProperty,
   RotationProperty,
 } from '../../engine/rules/spatial';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -68,7 +68,7 @@ const WORLD = JSON.stringify({
 
 const play = async () => {
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('button')!,
   ).source;
   const main = Object.values(source.files).find(

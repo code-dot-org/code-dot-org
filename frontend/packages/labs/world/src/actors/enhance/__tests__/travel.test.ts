@@ -11,7 +11,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty, type World} from '../../../engine';
 import {keyName} from '../../../engine/core/keys';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -23,11 +23,10 @@ import {wrapsAcrossEnhancement, wrapsDownEnhancement} from '../wraps';
 
 const COIN = {kind: 'actor' as const, path: 'actors/coin', name: 'Coin'};
 
-type Source = typeof WORLD_SCENARIOS.empty.source;
+type Source = typeof EMPTY_WORLD_PROJECT;
 
 const withCoin = (): Source =>
-  importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('coin')!)
-    .source;
+  importStockActor(EMPTY_WORLD_PROJECT, stockActorById('coin')!).source;
 
 const at = (source: Source, path: string) => {
   const id = fileIdAt(source, path);

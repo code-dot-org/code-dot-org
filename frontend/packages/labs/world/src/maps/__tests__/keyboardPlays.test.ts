@@ -12,7 +12,7 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import type {Actor} from '../../engine';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
@@ -53,7 +53,7 @@ const WORLD = JSON.stringify({
 
 const play = async () => {
   const withField = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('textInput')!,
   ).source;
   const source = importStockMap(withField, stockMapById('keyboard')!).source;

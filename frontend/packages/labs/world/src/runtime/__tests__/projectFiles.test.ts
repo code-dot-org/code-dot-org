@@ -18,10 +18,15 @@ describe('projectFiles', () => {
       'actors/player.actor',
       'actors/progressBar.actor',
       'actors/scoreboard.actor',
+      'actors/viewport.actor',
       'animations/coinSpin.anim',
       'animations/game.anim',
       'effects/ripple.effect',
+      'maps/main.map',
       'rules/arrows.rule',
+      'rules/camera.rule',
+      'rules/cameraConfined.rule',
+      'rules/cameraFollow.rule',
       'rules/collect.rule',
       'rules/collisions.rule',
       'rules/gravity.rule',
@@ -34,13 +39,13 @@ describe('projectFiles', () => {
       'rules/solid.rule',
       // The images themselves are bytes on a `url`, so they are not here; the
       // `.sheet` saying how to cut one of them up is text, so it is.
+      'screens/main.screen',
       'sprites/coinSpin.sheet',
-      'worlds/main.world',
     ]);
-    // The world is a Blockly workspace (generated to a WorldBuilder at
-    // compile), with its level beside the blocks as its main map.
-    expect(files['worlds/main.world']).toContain('world_world');
-    expect(files['worlds/main.world']).toContain('"map"');
+    // The Main Screen is a map document holding the Viewport, and the level
+    // it shows is a map of its own.
+    expect(files['screens/main.screen']).toContain('actors/viewport');
+    expect(files['maps/main.map']).toContain('actors/player');
   });
 
   it('nests through multiple folder levels', () => {
@@ -69,13 +74,13 @@ describe('projectFiles', () => {
 });
 
 describe('fileIdAt', () => {
-  it('finds the entry world, which is the file that must stay open', () => {
+  it('finds the entry, which is the file that must stay open', () => {
     // What pins the tab when a level hides the file browser (layout/
     // WorldLayout): every other file is reachable from a block that names it,
-    // but the world is what those blocks are IN.
-    const id = fileIdAt(DEFAULT_PROJECT.source, 'worlds/main.world');
+    // but the Main Screen is the game they are all part of.
+    const id = fileIdAt(DEFAULT_PROJECT.source, 'screens/main.screen');
     expect(id).toBeDefined();
-    expect(DEFAULT_PROJECT.source.files[id!].name).toBe('main.world');
+    expect(DEFAULT_PROJECT.source.files[id!].name).toBe('main.screen');
   });
 
   it('is undefined for a path the project does not have', () => {

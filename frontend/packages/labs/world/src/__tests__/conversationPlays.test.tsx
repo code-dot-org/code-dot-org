@@ -14,7 +14,7 @@ import {describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
 import {importStockRule} from '../rules/importStockRule';
 import {stockRuleByName} from '../rules/stock';
 import {projectFiles} from '../runtime/projectFiles';
@@ -68,7 +68,7 @@ const WORLD = JSON.stringify({
 
 const project = () => {
   const withLabel = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('label')!,
   ).source;
   const imported = importStockRule(

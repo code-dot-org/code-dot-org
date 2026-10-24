@@ -5,6 +5,8 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
+import {importStockActor} from './actors/importStockActor';
+import {stockActorById} from './actors/stock';
 import {coinActor} from './actors/stock/coin';
 import {groundActor} from './actors/stock/ground';
 import {healthBarActor} from './actors/stock/healthBar';
@@ -240,69 +242,80 @@ export const LEVEL1_ACTORS = [
   place('actors/scoreboard', 'Scoreboard', tileCenter(2), tileCenter(0)),
 ];
 
-// The world (`main.world`): its MAP, which is the level and what a new
-// project opens on, and its blocks, a `world_world` root
-// (specs/MAP_FIRST.md, "The main map"). The level used to be a file of its
-// own, `maps/level1.map`, behind a `load map` row; a world's arrangement is
-// its own map now, and a `.map` file is for what is loaded while the game
-// runs — a menu, or a level a Viewport holds.
+// The level, `maps/main.map`: what the Main Screen's Viewport shows.
 //
-// NO `use rule` ROWS, and this is where that reads loudest, since this is the
-// first thing a learner sees. The rules in play are the ones under `rules/` —
-// gravity, the arrow keys, collection, and the four those pull in through their
-// own `requires` — and the project holds them, which is the whole of saying so
-// (blockly/projectModules). It used to be three rows here and a standing
-// question about why Space, Appearance and Input were not among them.
-//
-// Animations go the same way and always did, which is where the argument came
-// from: a file is not a thing a world opts into, it is a thing the project has.
-//
-// One ordering survives, and it is the generator's rather than the author's:
-// rules and animations are emitted before the map is loaded, because loading
-// builds the World and a rule arriving after it is too late (WorldBuilder
-// throws rather than quietly dropping it). The rows under `define world` run
-// AFTER the map is loaded, so a row can name what the map placed
-// (specs/MAP_BEFORE_ROWS_PLAN.md); the target below names nothing, and would
-// do as well either side.
-const MAIN_WORLD = JSON.stringify(
+// The HUD — the Scoreboard and the Health Bar — is in the level for now and
+// moves to the screen with docking (specs/SIMPLE_INTERFACE.md, "The grid
+// layout is a tree of splits"): the Health Bar names the Player it watches by
+// its placement here, and the two are in one space while they are in one map.
+const MAIN_MAP = JSON.stringify(
   {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Platform World'},
-          next: {
-            block: stack([
-              // Three coins at ten each. Set HERE rather than left to the
-              // rule's default of nothing, because a target of zero is a game
-              // that can be played and not won — and the level has an ending
-              // in it.
-              {
-                type: 'world_set_Scoring_TargetScoreProperty',
-                inputs: {
-                  VALUE: {block: {type: 'math_number', fields: {NUM: 30}}},
-                },
-              },
-            ]),
-          },
-        },
-      ],
-    },
-    map: {
-      type: 'map',
-      // Said out loud rather than left to the default, so the shipped map is
-      // a worked example of the field: how many tiles across and down (the
-      // map editor's Width/Height), against `tile`, which is how big ONE is.
-      size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
-      tile: {width: TILE_SIZE, height: TILE_SIZE},
-      actors: LEVEL1_ACTORS,
-    },
+    type: 'map',
+    // Said out loud rather than left to the default, so the shipped map is a
+    // worked example of the field: how many tiles across and down (the map
+    // editor's Width/Height), against `tile`, which is how big ONE is.
+    size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    actors: LEVEL1_ACTORS,
   },
   null,
   2,
 );
+
+/** The screen, in pixels: the level is one screen. */
+const SCREEN_PIXELS = VIEWPORT_TILES * TILE_SIZE;
+
+/**
+ * A game's Main Screen: one Viewport the size of the screen, showing the
+ * level (specs/SCREEN_MAP_PLAN.md). What a new project opens on.
+ *
+ * NO RULES NAMED. The rules in play are the ones under `rules/` — gravity,
+ * the arrow keys, collection, and the four those pull in through their own
+ * `requires` — and the project holds them, which is the whole of saying so
+ * (blockly/projectModules). Animations go the same way.
+ */
+export const gameScreen = (
+  name: string,
+  data: Record<string, unknown> = {},
+): string =>
+  JSON.stringify(
+    {
+      type: 'map',
+      name,
+      size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+      tile: {width: TILE_SIZE, height: TILE_SIZE},
+      ...data,
+      actors: [
+        {
+          type: 'actors/viewport',
+          id: 'Game',
+          properties: {
+            positional: {
+              position: {x: SCREEN_PIXELS / 2, y: SCREEN_PIXELS / 2},
+            },
+            Label: {text: ''},
+            hasABox: {width: SCREEN_PIXELS, height: SCREEN_PIXELS},
+            showsMap: {map: 'maps/main'},
+          },
+        },
+      ],
+    },
+    null,
+    2,
+  );
+
+const MAIN_SCREEN = gameScreen('Platform World', {
+  // Three coins at ten each. Set HERE rather than left to the rule's default
+  // of nothing, because a target of zero is a game that can be played and
+  // not won — and the level has an ending in it.
+  rules: [
+    {
+      setter: 'world_set_Scoring_TargetScoreProperty',
+      type: 'number',
+      value: '30',
+    },
+  ],
+});
 
 const PLAYER_ACTOR = JSON.stringify(
   {
@@ -882,7 +895,7 @@ function starterAnimation(id: string): Record<string, StarterFile> {
 export const STARTER_SPEC: ProjectSpec = {
   folders: [
     'rules',
-    'worlds',
+    'screens',
     'actors',
     'animations',
     'sprites',
@@ -895,12 +908,18 @@ export const STARTER_SPEC: ProjectSpec = {
   ],
   files: {
     main: {
-      name: 'main.world',
-      language: 'world',
-      contents: MAIN_WORLD,
-      folderId: 'worlds',
+      name: 'main.screen',
+      language: 'screen',
+      contents: MAIN_SCREEN,
+      folderId: 'screens',
       active: true,
       open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: MAIN_MAP,
+      folderId: 'maps',
     },
     player: {
       name: 'player.actor',
@@ -1069,7 +1088,8 @@ export const STARTER_SPEC: ProjectSpec = {
 const STARTER = buildProject(STARTER_SPEC);
 
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
-  source: STARTER.source,
+  // …with the stock Viewport the level is played in, and what it needs.
+  source: importStockActor(STARTER.source, stockActorById('viewport')!).source,
 };
 
 /**

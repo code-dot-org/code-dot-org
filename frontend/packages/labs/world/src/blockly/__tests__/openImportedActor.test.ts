@@ -13,7 +13,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {moduleNamedBy} from '../extensions/openSourceButton';
 import {
@@ -34,8 +34,7 @@ beforeEach(() => {
 
 describe('a Coin just imported', () => {
   const withACoin = () =>
-    importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('coin')!)
-      .source;
+    importStockActor(EMPTY_WORLD_PROJECT, stockActorById('coin')!).source;
 
   it('can be opened from a block that names it', () => {
     refreshProjectDropdowns(projectFiles(withACoin()), [], {}, []);
@@ -55,12 +54,7 @@ describe('a Coin just imported', () => {
   });
 
   it('offers nothing for an actor the project has not got', () => {
-    refreshProjectDropdowns(
-      projectFiles(WORLD_SCENARIOS.empty.source),
-      [],
-      {},
-      [],
-    );
+    refreshProjectDropdowns(projectFiles(EMPTY_WORLD_PROJECT), [], {}, []);
 
     expect(canOpenModule(moduleNamedBy(block({ACTOR: 'actors/coin'})))).toBe(
       false,
@@ -99,7 +93,7 @@ describe('the kinds a module path can name', () => {
   it('resolves an imported actor to its actual file', () => {
     // The end of the chain, and the assertion the button's promise rests on.
     const source = importStockActor(
-      WORLD_SCENARIOS.empty.source,
+      EMPTY_WORLD_PROJECT,
       stockActorById('coin')!,
     ).source;
     const held = projectFiles(source);

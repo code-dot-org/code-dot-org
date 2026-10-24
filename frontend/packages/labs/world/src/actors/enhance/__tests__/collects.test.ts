@@ -9,7 +9,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -23,7 +23,7 @@ const PLAYER = {
 
 /** The empty scenario with a Player, a Ground and a Coin in it. */
 const withActors = () => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   for (const id of ['player', 'ground', 'coin']) {
     source = importStockActor(source, stockActorById(id)!).source;
   }

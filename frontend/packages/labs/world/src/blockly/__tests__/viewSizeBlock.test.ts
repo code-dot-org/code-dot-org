@@ -9,12 +9,12 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 
 /** The empty scenario, with its world saying how much of itself to show. */
 const showing = (columns: number, rows: number) => {
-  const source = WORLD_SCENARIOS.empty.source;
+  const source = EMPTY_WORLD_PROJECT;
   const file = Object.values(source.files).find(
     one => one.name === 'main.world',
   )!;
@@ -70,9 +70,7 @@ describe('a world that says how much of itself is on screen', () => {
   });
 
   it('leaves a world that says nothing exactly as it was', async () => {
-    const {world} = await compileProject(
-      projectFiles(WORLD_SCENARIOS.empty.source),
-    );
+    const {world} = await compileProject(projectFiles(EMPTY_WORLD_PROJECT));
 
     expect(world.viewSize()).toEqual({x: 320, y: 320});
   });

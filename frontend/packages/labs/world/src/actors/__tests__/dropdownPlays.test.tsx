@@ -14,7 +14,7 @@ import {
   RotationProperty,
 } from '../../engine';
 import {HeightProperty} from '../../engine/rules/boxed';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -31,7 +31,7 @@ const chain = (rows: object[]) =>
 
 /** A Dropdown at (100, 100) and a Label that hears it choose. */
 const project = (): MultiFileSource => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   source = importStockActor(source, stockActorById('dropdown')!).source;
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',

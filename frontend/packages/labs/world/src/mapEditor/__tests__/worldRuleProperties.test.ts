@@ -4,20 +4,21 @@
 // The pure surgery is tested with a world written by hand
 // (`worldProperties.test`); this is the other half — that the properties
 // offered are the ones the rules actually declare, and that a value typed
-// into one lands in the world's file as the row the engine reads.
+// into one lands in the Main Screen's data, which compiles to the row the
+// engine reads (specs/SCREEN_MAP_PLAN.md).
 
 import {describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../../constants';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
-import {readWorldHeader, writeWorldRuleValue} from '../worldProperties';
+import {readScreenHeader, writeScreenRuleValue} from '../screenProperties';
 import {cameraTraitChoices, worldRuleProperties} from '../worldRuleProperties';
 
 const files = projectFiles(DEFAULT_PROJECT.source);
 const offered = worldRuleProperties(files);
-const world = files['worlds/main.world'];
-const header = (contents: string) => readWorldHeader(contents, offered)!;
+const world = files['screens/main.screen'];
+const header = (contents: string) => readScreenHeader(contents, offered)!;
 const named = (contents: string, name: string) =>
   header(contents).properties.find(property => property.name === name);
 
@@ -55,8 +56,8 @@ describe('what the world’s window offers', () => {
 
 describe('the starter’s world, through the window', () => {
   it('shows the target score the starter sets in a block', () => {
-    // `constants.ts` sets it to 30 under `define world`, which is the row
-    // the field reads.
+    // `constants.ts` sets it to 30 in the Main Screen's rule settings,
+    // which is what the field reads.
     expect(named(world, 'target score')).toMatchObject({
       value: '30',
       rule: 'Scoring',
@@ -76,13 +77,13 @@ describe('the starter’s world, through the window', () => {
       rule: 'Gravity',
       value: '0,1',
     });
-    const turned = writeWorldRuleValue(
+    const turned = writeScreenRuleValue(
       world,
       offered.find(each => each.setter === direction.setter)!,
       '0,-1',
     );
     expect(named(turned, 'direction of gravity')!.value).toBe('0,-1');
-    expect(turned).toContain('"type": "world_vector"');
+    expect(turned).toContain('"value": "0,-1"');
   });
 
   it('shows the world’s own properties first, then the rules’', () => {
@@ -93,19 +94,19 @@ describe('the starter’s world, through the window', () => {
     expect(properties.slice(first).every(p => p.setter)).toBe(true);
   });
 
-  it('writes a typed value into the row the starter already has', () => {
+  it('writes a typed value into the setting the starter already has', () => {
     const target = offered.find(property => property.name === 'target score')!;
-    const written = writeWorldRuleValue(world, target, '45');
+    const written = writeScreenRuleValue(world, target, '45');
     expect(named(written, 'target score')!.value).toBe('45');
     expect(written.split(target.setter)).toHaveLength(2);
   });
 
-  it('adds a row for a rule value the world had said nothing about', () => {
+  it('adds a setting for a rule value the screen had said nothing about', () => {
     const gravity = offered.find(
       property => property.name === 'amount of gravity',
     )!;
     expect(world).not.toContain(gravity.setter);
-    const written = writeWorldRuleValue(world, gravity, '3');
+    const written = writeScreenRuleValue(world, gravity, '3');
     expect(written).toContain(gravity.setter);
     expect(named(written, 'amount of gravity')!.value).toBe('3');
   });

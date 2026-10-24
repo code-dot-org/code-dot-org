@@ -10,7 +10,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
 import {PositionProperty} from '../../../engine';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -19,7 +19,7 @@ import {healthEnhancement} from '../health';
 /** The empty scenario with a Platformer Player in it, which is the case. */
 const withPlayer = () => {
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('player')!,
   ).source;
   return source;

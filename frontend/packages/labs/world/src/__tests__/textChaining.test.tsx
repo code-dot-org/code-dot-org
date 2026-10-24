@@ -16,7 +16,7 @@ import {describe, expect, it} from 'vitest';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
@@ -81,7 +81,7 @@ const worldSaying = (value: object) =>
 /** The stock Label, placed and told to say `value`. */
 const said = async (value: object) => {
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('label')!,
   ).source;
   const main = Object.values(source.files).find(

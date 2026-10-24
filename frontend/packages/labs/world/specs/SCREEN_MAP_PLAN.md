@@ -1,6 +1,6 @@
 # Plan: the Screen and Map file kinds (SIMPLE_INTERFACE.md, phase one)
 
-STATUS: STEPS 1 TO 4 BUILT, 5a BUILT; the rest of 5 planned. The working record, as the
+STATUS: STEPS 1 TO 4 BUILT, 5a AND 5b BUILT; the rest of 5 planned. The working record, as the
 other plans are.
 
 The first phase of the simple interface: make a Screen and a Map concrete as
@@ -205,6 +205,14 @@ One commit each, so each fixture's tests move with it.
   BUILT. Seen in the browser: the Main Screen's inspector, and the game
   played in the Viewport with the camera following the Bird.
 - 5b. The starter and the empty project, which are what a new project is.
+  BUILT. A new project is a Main Screen holding a Viewport onto
+  `maps/main.map` (`constants.gameScreen`), and the starter's target
+  score is a rule setting. The Scoreboard and Health Bar stay in the level
+  until docking puts them on the screen: the bar names the Player by its
+  placement, which holds only within one map. The Viewport adds 15KB to a
+  new project. A test that wrote a world into the empty project as scratch
+  space now writes it into `EMPTY_WORLD_PROJECT`, which goes when the
+  `.world` shape does. Played in the browser.
 - 5c. The other games: breakout, meteors, jetpack, tapper, sokoban, novel.
 - 5d. The two apps, interface and app, whose Main Screen holds no
   Viewport.

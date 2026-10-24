@@ -34,16 +34,16 @@ vi.mock('@xterm/addon-fit', () => ({
 }));
 vi.mock('@xterm/addon-image', () => ({ImageAddon: class {}}));
 
-// The default project opens on `main.world`, a Blockly file, so the visible
-// Blockly editor mounts. Blockly needs a real browser (injects CSS/observers
+// Any Blockly editor is stubbed. Blockly needs a real browser (injects CSS/observers
 // jsdom can't handle), like xterm above — stub it; this smoke test asserts the
 // shell composes, not Blockly's rendering (covered by the blockly/ tests).
 vi.mock('../blockly/BlocklyFileEditor', () => ({
   BlocklyFileEditor: () => <div>blockly editor</div>,
 }));
-// A world opens in the world editor — its map first (specs/MAP_FIRST.md).
-vi.mock('../mapEditor/WorldEditor', () => ({
-  WorldEditor: () => <div>world editor</div>,
+// The Main Screen opens in the screen editor, which is the map editor over
+// it (specs/SCREEN_MAP_PLAN.md).
+vi.mock('../mapEditor/ScreenEditor', () => ({
+  ScreenEditor: () => <div>screen editor</div>,
 }));
 
 // Stub the info panel: it renders the base ResourcePanel, which calls the
@@ -83,7 +83,7 @@ it('renders the World Lab shell from the default project', async () => {
   // called — the word its blocks and the menus use (`worldConfig.fileLabel`).
   // The file name is the tab's tooltip.
   const tab = await screen.findByRole('tab', {name: 'Platform World'});
-  expect(tab.title).toBe('main.world');
+  expect(tab.title).toBe('main.screen');
   // …and the way around the project is the folder menus, one button per
   // folder, in the tab bar (`files/FileMenus`).
   // Singular, and the one button that is not a menu: there is one world per
@@ -95,8 +95,8 @@ it('renders the World Lab shell from the default project', async () => {
   // which for an actor strands every reference to it (`layout/WorldLayout`).
   expect(screen.queryByText('actors')).toBeNull();
   expect(screen.queryByRole('button', {name: /file manager/i})).toBeNull();
-  // The active file is the Blockly world, so its (stubbed) Blockly editor mounts.
-  expect(screen.getByText('world editor')).toBeTruthy();
+  // The active file is the Main Screen, so its (stubbed) editor mounts.
+  expect(screen.getByText('screen editor')).toBeTruthy();
   // The preview view toggle rendered.
   expect(screen.getByText('Preview')).toBeTruthy();
   // No sandbox is configured under jsdom, so the preview says so.
@@ -112,8 +112,8 @@ it('swaps the editor for the JavaScript it makes, and back', async () => {
   renderLab();
   await act(async () => {});
 
-  // The default project opens on `main.world`, whose (stubbed) editor is up.
-  expect(screen.getByText('world editor')).toBeTruthy();
+  // The default project opens on `main.screen`, whose (stubbed) editor is up.
+  expect(screen.getByText('screen editor')).toBeTruthy();
   expect(
     screen.queryByRole('region', {name: 'Generated JavaScript'}),
   ).toBeNull();
@@ -124,7 +124,7 @@ it('swaps the editor for the JavaScript it makes, and back', async () => {
   ).toBeTruthy();
   // …in the editor's PLACE, which is the whole of what changed from a panel
   // below it.
-  expect(screen.queryByText('world editor')).toBeNull();
+  expect(screen.queryByText('screen editor')).toBeNull();
   // …and the file tabs are still there, which is why the swap is around each
   // editor rather than around Codebridge's whole workspace: a reader can move
   // between files without leaving the code first.
@@ -132,7 +132,7 @@ it('swaps the editor for the JavaScript it makes, and back', async () => {
 
   // The view's own way out, beside the button that opened it.
   fireEvent.click(screen.getByRole('button', {name: 'Back'}));
-  expect(screen.getByText('world editor')).toBeTruthy();
+  expect(screen.getByText('screen editor')).toBeTruthy();
   expect(
     screen.queryByRole('region', {name: 'Generated JavaScript'}),
   ).toBeNull();

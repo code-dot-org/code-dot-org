@@ -9,7 +9,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -22,8 +22,7 @@ const HERO = {
 };
 
 const withPlayer = () =>
-  importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('player')!)
-    .source;
+  importStockActor(EMPTY_WORLD_PROJECT, stockActorById('player')!).source;
 
 const at = (source: ReturnType<typeof withPlayer>, path: string) => {
   const id = fileIdAt(source, path);

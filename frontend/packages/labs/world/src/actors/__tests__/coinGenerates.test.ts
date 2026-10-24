@@ -19,7 +19,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -36,7 +36,7 @@ const coin = stockActorById('coin')!;
  * file at all.
  */
 const withACoinInIt = () => {
-  const {source} = importStockActor(WORLD_SCENARIOS.empty.source, coin);
+  const {source} = importStockActor(EMPTY_WORLD_PROJECT, coin);
   const world = Object.values(source.files).find(
     file => file.name === 'main.world',
   )!;

@@ -14,10 +14,13 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor} from '../../engine';
-import {keyName} from '../../engine/core/keys';
 import {RotationProperty} from '../../engine';
-import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {
+  keyName,
+  KEY_REPEAT_DELAY,
+  KEY_REPEAT_INTERVAL,
+} from '../../engine/core/keys';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import type {StockActor} from '../stock';
@@ -76,10 +79,7 @@ const sixPerCharacter = (words: string, size: number) =>
   words.length * (size / 2);
 
 const play = async (measure?: (words: string, size: number) => number) => {
-  const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
-    TEXT_INPUT,
-  ).source;
+  const source = importStockActor(EMPTY_WORLD_PROJECT, TEXT_INPUT).source;
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',
   )!;

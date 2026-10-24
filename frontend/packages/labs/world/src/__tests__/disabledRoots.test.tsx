@@ -9,14 +9,14 @@
 import {describe, expect, it} from 'vitest';
 
 import {MISPLACED} from '../blockly/misplacedBlocks';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 
 import {compileProject} from './support/compileProject';
 
 /** The empty scenario's world, with a `define actor` root beside the world. */
 const worldHolding = (actor: object) => {
-  const source = WORLD_SCENARIOS.empty.source;
+  const source = EMPTY_WORLD_PROJECT;
   const world = Object.values(source.files).find(
     file => file.name === 'main.world',
   )!;

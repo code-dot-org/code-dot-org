@@ -17,7 +17,7 @@ import {compileProject} from '../../../__tests__/support/compileProject';
 import type {Actor, World} from '../../../engine';
 import * as WorldLab from '../../../engine';
 import {PositionProperty} from '../../../engine';
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {pointerFor} from '../../../rules/demos/device';
 import {rgb, type Cell} from '../../../rules/demos/record/strip';
 import {projectFiles} from '../../../runtime/projectFiles';
@@ -92,7 +92,7 @@ export async function stageActorDemo(
   id: string,
   demo: ActorDemo,
 ): Promise<StagedDemo> {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   const paths: Record<string, string> = {};
   for (const actorId of [id, ...(demo.supporting ?? [])]) {
     const stock = stockActorById(actorId);

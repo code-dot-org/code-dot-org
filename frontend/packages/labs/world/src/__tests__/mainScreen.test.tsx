@@ -10,8 +10,6 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {importStockActor} from '../actors/importStockActor';
-import {stockActorById} from '../actors/stock';
 import {projectOwnMetas} from '../blockly/projectModules';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {worldRuleProperties} from '../mapEditor/worldRuleProperties';
@@ -24,38 +22,15 @@ const COLUMNS = 12;
 const ROWS = 9;
 
 /**
- * The simple scenario, reshaped: its world's map is `maps/main.map`, and a Main Screen
- * holding a Viewport the size of the screen shows it. The world file is
- * gone, so nothing but the screen can have built the game.
+ * The starter, whose Main Screen holds a Viewport onto `maps/main.map`, at
+ * a size of its own and with `screen` laid over its data.
  */
 function simpleOnAScreen(screen: object = {}): Record<string, string> {
-  const files = {
-    ...projectFiles(
-      importStockActor(
-        WORLD_SCENARIOS.simple.source,
-        stockActorById('viewport')!,
-      ).source,
-    ),
-  };
-  const world = JSON.parse(files['worlds/main.world']) as {map: object};
-  delete files['worlds/main.world'];
-  files['maps/main.map'] = JSON.stringify(world.map);
+  const files = {...projectFiles(WORLD_SCENARIOS.simple.source)};
+  expect(files['worlds/main.world']).toBeUndefined();
   files['screens/main.screen'] = JSON.stringify({
-    type: 'map',
-    name: 'Simple',
+    ...JSON.parse(files['screens/main.screen']),
     size: {width: COLUMNS, height: ROWS},
-    tile: {width: 32, height: 32},
-    actors: [
-      {
-        type: 'actors/viewport',
-        id: 'game',
-        properties: {
-          positional: {position: {x: (COLUMNS * 32) / 2, y: (ROWS * 32) / 2}},
-          hasABox: {width: COLUMNS * 32, height: ROWS * 32},
-          showsMap: {map: 'maps/main'},
-        },
-      },
-    ],
     ...screen,
   });
   return files;

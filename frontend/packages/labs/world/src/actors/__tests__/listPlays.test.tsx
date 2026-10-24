@@ -13,7 +13,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {compileProject} from '../../__tests__/support/compileProject';
 import {RotationProperty, type Actor, type Property} from '../../engine';
 import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL} from '../../engine/core/keys';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -36,7 +36,7 @@ const project = (
   boxHeight?: number,
   words: readonly string[] = WORDS,
 ): MultiFileSource => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   source = importStockActor(source, stockActorById('list')!).source;
   source = importStockActor(source, stockActorById('label')!).source;
   const main = Object.values(source.files).find(

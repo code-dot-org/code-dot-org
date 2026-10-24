@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {fileIdAt} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
@@ -21,10 +21,10 @@ const PLAYER = {
 };
 const COIN = {kind: 'actor' as const, path: 'actors/coin', name: 'Coin'};
 
-type Source = typeof WORLD_SCENARIOS.empty.source;
+type Source = typeof EMPTY_WORLD_PROJECT;
 
 const withActors = (...ids: string[]): Source => {
-  let source: Source = WORLD_SCENARIOS.empty.source;
+  let source: Source = EMPTY_WORLD_PROJECT;
   for (const id of ids) {
     source = importStockActor(source, stockActorById(id)!).source;
   }

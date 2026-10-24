@@ -12,7 +12,7 @@ import {
   IntrinsicSizeProperty,
   RotationProperty,
 } from '../../engine/rules/spatial';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -29,7 +29,7 @@ const chain = (rows: object[]) =>
 
 /** A Slider at (100, 100), 96 wide, and a Label that counts its changes. */
 const project = (): MultiFileSource => {
-  let source = WORLD_SCENARIOS.empty.source;
+  let source = EMPTY_WORLD_PROJECT;
   source = importStockActor(source, stockActorById('slider')!).source;
   source = importStockActor(source, stockActorById('label')!).source;
   const main = Object.values(source.files).find(

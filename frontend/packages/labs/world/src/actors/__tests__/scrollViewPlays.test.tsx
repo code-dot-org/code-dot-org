@@ -12,7 +12,7 @@ import {
   ViewportContentProperty,
   ViewportScrollProperty,
 } from '../../engine/rules/viewport';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -76,7 +76,7 @@ const LONG_MAP = JSON.stringify({
 
 const play = async () => {
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('scrollView')!,
   ).source;
   const main = Object.values(source.files).find(

@@ -10,7 +10,7 @@ import {describe, expect, it} from 'vitest';
 import {compileProject} from '../../__tests__/support/compileProject';
 import {Vector} from '../../engine/core/Vector';
 import {IntrinsicSizeProperty, ScaleProperty} from '../../engine/rules/spatial';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
@@ -54,7 +54,7 @@ const WORLD = JSON.stringify({
 
 const play = async () => {
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('image')!,
   ).source;
   const main = Object.values(source.files).find(

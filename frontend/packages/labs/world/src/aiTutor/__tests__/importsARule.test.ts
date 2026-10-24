@@ -23,7 +23,7 @@ import {stockActorById} from '../../actors/stock';
 import {projectRuleMetas} from '../../blockly/projectModules';
 import {ruleByName} from '../../blockly/ruleRegistry';
 import {anyTraitOptions} from '../../blockly/traitOptions';
-import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {impliedRules, ruleNamesIn} from '../impliedRules';
 import {
@@ -79,7 +79,7 @@ const WORLD = JSON.stringify({
 /** The empty scenario with a Player in it, which is where the question starts. */
 const withAPlayer = () => {
   const source = importStockActor(
-    WORLD_SCENARIOS.empty.source,
+    EMPTY_WORLD_PROJECT,
     stockActorById('player')!,
   ).source;
   const world = Object.values(source.files).find(

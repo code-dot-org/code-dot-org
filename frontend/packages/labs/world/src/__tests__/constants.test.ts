@@ -60,7 +60,7 @@ describe('the starter project', () => {
     const active = files.filter(file => file.active);
     expect(active).toHaveLength(1);
     expect(source.openFiles).toContain(active[0].id);
-    expect(active[0].name).toBe('main.world');
+    expect(active[0].name).toBe('main.screen');
   });
 
   it('says every actor in blocks, so every actor can be opened', () => {
@@ -121,13 +121,12 @@ describe('the starter project', () => {
     // exists (specs/MAPS.md).
     expect(starterFile('healthBar').contents).toBe(healthBarActor);
 
-    const {map} = JSON.parse(starterFile('main').contents) as {
-      map: {
-        actors: Array<{
-          id?: string;
-          properties?: Record<string, Record<string, unknown>>;
-        }>;
-      };
+    // The level the Main Screen's Viewport shows.
+    const map = JSON.parse(starterFile('level').contents) as {
+      actors: Array<{
+        id?: string;
+        properties?: Record<string, Record<string, unknown>>;
+      }>;
     };
     const bar = map.actors.find(actor => actor.id === 'HealthBar');
     const named = bar?.properties?.Health_Bar?.subject;
@@ -167,8 +166,8 @@ describe('the starter project', () => {
     // The player prints how many coins it has taken. With one coin in the map
     // that number is only ever 1, which makes `how many ⟨Coin⟩ in ⟨collected⟩`
     // look like decoration rather than a question — so the map ships three.
-    const {map} = JSON.parse(starterFile('main').contents) as {
-      map: {actors: Array<{type: string}>};
+    const map = JSON.parse(starterFile('level').contents) as {
+      actors: Array<{type: string}>;
     };
     const coins = map.actors.filter(actor => actor.type === 'actors/coin');
     expect(coins.length).toBeGreaterThan(1);
@@ -181,7 +180,8 @@ describe('the starter project', () => {
 
 describe('starterFile', () => {
   it('finds a file by the name it is written under', () => {
-    expect(starterFile('main').name).toBe('main.world');
+    expect(starterFile('main').name).toBe('main.screen');
+    expect(starterFile('level').name).toBe('main.map');
     expect(starterFile('gravityRule').name).toBe('gravity.rule');
     expect(starterFile('sprite-coin').name).toBe('coin.png');
   });
