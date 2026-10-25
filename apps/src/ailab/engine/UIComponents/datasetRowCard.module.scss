@@ -12,11 +12,20 @@
   box-shadow: var(--shadow-lg);
 }
 
-.card .title {
+.heading {
   flex-shrink: 0;
-  margin: 0;
   padding: 0 20px;
+}
+
+.card .title {
+  margin: 0;
   font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.card .rowNumber {
+  margin: 0;
+  color: var(--text-neutral-tertiary);
 }
 
 .list {

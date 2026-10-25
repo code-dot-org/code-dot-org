@@ -10,6 +10,7 @@ import {
   BooleanModeKey,
   clearDataset,
   DEFAULT_TRAINER,
+  getLevelIdColumn,
   getSelectedDataset,
   isSetByHiddenTesting,
   isSetByPretrained,
@@ -22,8 +23,9 @@ import {
   setHideTestingView,
   withoutLabelInFeatures,
 } from './ailabMode';
-import {DatasetFiles} from './datasetColumns';
+import {DatasetFiles, withoutIdColumn} from './datasetColumns';
 import FeaturesField from './FeaturesField';
+import IdColumnField from './IdColumnField';
 import LabelField from './LabelField';
 import PretrainedField from './PretrainedField';
 import {useDatasetColumns} from './useDatasetColumns';
@@ -74,8 +76,12 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const [accuracyText, setAccuracyText] = useState(() => getAccuracyText(mode));
 
   const selectedDataset = getSelectedDataset(mode);
-  const {columns, failed: columnsFailed} = useDatasetColumns(
+  const {columns: datasetColumns, failed: columnsFailed} = useDatasetColumns(
     datasets.find(dataset => dataset.id === selectedDataset)
+  );
+  const columns = withoutIdColumn(
+    datasetColumns,
+    getLevelIdColumn(mode, datasetColumns?.defaultIdColumn)
   );
 
   const datasetItems = [
@@ -228,6 +234,17 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           helperMessage={
             columnsHelperMessage ??
             'The columns students start out predicting from.'
+          }
+          onChange={changeMode}
+        />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <IdColumnField
+          mode={mode}
+          columns={columns}
+          helperMessage={
+            columnsHelperMessage ??
+            'Names each row in the tables and cards. Students cannot use it as the label or a feature.'
           }
           onChange={changeMode}
         />
