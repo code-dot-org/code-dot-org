@@ -165,6 +165,15 @@ folder). Then, by kind:
   with Rename and Delete.
 - **Maps**: Clone in the switcher's actions.
 
+BUILT, door by door; each line below is a commit.
+
+- **The seam.** `fileActs` takes `make` in any folder that makes something
+  (of a given extension where a folder makes more than one), `upload` into
+  any that takes uploads, and `open`, `rename`, `clone` and `delete` of any
+  file. `make` answers the new file's id, so the door that asked can take
+  it. `upload` answers at once, since the browser's picker says nothing
+  when it is cancelled. `open` is the one act a read-only project keeps.
+
 ### 5. The folder buttons go
 
 FileMenus draws no buttons; `showFileBrowser` and its lesson settings are

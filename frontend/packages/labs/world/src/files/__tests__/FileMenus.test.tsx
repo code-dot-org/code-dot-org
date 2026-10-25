@@ -895,4 +895,45 @@ describe('a Screen or Map acted on from the toolbar', () => {
     expect(confirm).toHaveBeenCalled();
     expect(deleteFile).toHaveBeenCalledWith('b');
   });
+  // Every kind, from the place it is used (specs/SHELL_FINISH_PLAN.md, step
+  // 4): the folder buttons are not the only way to these.
+  it('makes any kind, and answers the new file’s id', async () => {
+    render(<FileMenus menus={false} />);
+    promptForName.mockResolvedValueOnce('Chaser');
+    const made = await requestFileAct({act: 'make', folder: 'sprites'});
+    expect(createExternalFile).toHaveBeenCalledWith(
+      expect.objectContaining({fileName: 'chaser.png'}),
+    );
+    expect(made).toBe('made');
+  });
+
+  it('answers nothing for a folder nothing makes in', async () => {
+    render(<FileMenus menus={false} />);
+    expect(await requestFileAct({act: 'make', folder: 'sounds'})).toBe(
+      undefined,
+    );
+    expect(promptForName).not.toHaveBeenCalled();
+  });
+
+  it('opens, clones and uploads', async () => {
+    const picker = vi
+      .spyOn(HTMLInputElement.prototype, 'click')
+      .mockImplementation(() => {});
+    render(<FileMenus menus={false} />);
+    await requestFileAct({act: 'open', fileId: 'b'});
+    expect(activateFile).toHaveBeenCalledWith('b');
+
+    promptForName.mockResolvedValueOnce('Gravity Two');
+    await requestFileAct({act: 'clone', fileId: 'a'});
+    expect(promptForName).toHaveBeenCalledWith(
+      expect.objectContaining({title: 'Clone gravity.rule'}),
+    );
+    expect(newFile).toHaveBeenCalledWith(
+      expect.objectContaining({fileName: 'gravityTwo.rule'}),
+    );
+
+    await requestFileAct({act: 'upload', folder: 'backgrounds'});
+    expect(picker).toHaveBeenCalled();
+    picker.mockRestore();
+  });
 });

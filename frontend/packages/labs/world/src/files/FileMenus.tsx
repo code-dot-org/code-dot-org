@@ -331,9 +331,15 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    * The lab's reconcile still gets the last word, as it does on every write
    * through `useFileOperations` — companion files are its business, not this
    * menu's (`worldConfig.reconcileSource`).
+   *
+   * Answers the new file's id, so a door that asked for one — the Theme
+   * field's New — can take it (`files/fileActs`).
    */
   const make = useCallback(
-    async (menu: FolderMenu, makeable: Makeable) => {
+    async (
+      menu: FolderMenu,
+      makeable: Makeable,
+    ): Promise<string | undefined> => {
       await thenAsk();
       const name = await promptForName({
         title: makeable.label,
@@ -347,7 +353,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
           ),
       });
       if (!name) {
-        return;
+        return undefined;
       }
       // ONE NAME, SAID ONCE: it becomes the file's stem and the thing's own
       // name, so the menus — which read what a file declares — call it what
@@ -378,6 +384,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
         ...currentSources,
         source: config.reconcileSource?.(made, ops.source) ?? made,
       });
+      return Object.keys(made.files).find(id => !(id in placed.source.files));
     },
     [
       ops.source,
@@ -825,38 +832,72 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   );
 
   /**
-   * A Screen or a Map made, renamed or deleted, asked for by the toolbar
-   * over the map editor (`files/fileActs`). The same acts a folder's row
-   * menu offers, with the same prompts.
+   * A file made, uploaded, opened, renamed, cloned or deleted, asked for by
+   * the place its kind is used — the switcher over the map editor, a look
+   * in the Actor Editor, the Theme field (`files/fileActs`). The same acts
+   * a folder's row menu offers, with the same prompts.
    */
   useEffect(() => {
     setFileActHandler(async request => {
+      if (request.act === 'open') {
+        // Opening reads; it is the one act a read-only project still has.
+        if (live.current.files[request.fileId]) {
+          ops.activateFile(request.fileId);
+        }
+        return undefined;
+      }
       if (isReadOnly) {
         return undefined;
       }
-      if (request.act === 'make') {
+      if (request.act === 'make' || request.act === 'upload') {
         const menu =
           request.folder === SCREENS_FOLDER
             ? SCREENS_MENU
             : FOLDER_MENUS.find(each => each.folder === request.folder);
-        if (menu?.makes[0]) {
-          await make(menu, menu.makes[0]);
+        if (!menu) {
+          return undefined;
         }
-        return undefined;
+        if (request.act === 'upload') {
+          // Answered before the learner has chosen anything: the browser's
+          // picker says nothing at all when it is cancelled, so a promise
+          // waiting on it could wait forever. What arrives is seen in the
+          // folder.
+          if (menu.uploads && uploading.enabled) {
+            await uploadInto(menu);
+          }
+          return undefined;
+        }
+        const makeable =
+          menu.makes.find(each => each.extension === request.extension) ??
+          menu.makes[0];
+        return makeable ? make(menu, makeable) : undefined;
       }
       const file = live.current.files[request.fileId];
       if (!file) {
         return undefined;
       }
+      const name = config.fileLabel?.(file) ?? file.name;
       if (request.act === 'rename') {
-        await rename(file, config.fileLabel?.(file) ?? file.name);
+        await rename(file, name);
+      } else if (request.act === 'clone') {
+        await clone(file, name);
       } else {
         await remove(file);
       }
       return undefined;
     });
     return () => setFileActHandler(null);
-  }, [isReadOnly, make, rename, remove, config]);
+  }, [
+    isReadOnly,
+    make,
+    rename,
+    clone,
+    remove,
+    uploadInto,
+    uploading,
+    ops,
+    config,
+  ]);
 
   /**
    * An actor taken out of the project, asked for by the Actor Palette
