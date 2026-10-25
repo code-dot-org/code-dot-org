@@ -67,4 +67,29 @@ describe('Add Rules at the foot of the toolbox', () => {
     expect(asked).toHaveBeenCalledTimes(1);
     setRuleImportHandler(null);
   });
+
+  it('has Rules in Play beside it, opened to change unless read only', async () => {
+    const {TOOLBOX_ADD_RULES} = await import('../toolboxStyle');
+    const {setRulesConfigHandler} = await import('../rulesConfig');
+    const Item = Blockly.registry.getClass(
+      Blockly.registry.Type.TOOLBOX_ITEM,
+      TOOLBOX_ADD_RULES,
+    )!;
+    const asked = vi.fn(async () => undefined);
+    setRulesConfigHandler(asked);
+    for (const readOnly of [false, true]) {
+      const toolbox = {getWorkspace: () => ({options: {readOnly}})};
+      const item = new Item(
+        {kind: TOOLBOX_ADD_RULES} as never,
+        toolbox as never,
+      );
+      item.init();
+      const inPlay = [...item.getDiv()!.querySelectorAll('button')].find(
+        one => one.textContent === 'Rules in Play',
+      )!;
+      inPlay.click();
+      expect(asked).toHaveBeenLastCalledWith({editable: !readOnly});
+    }
+    setRulesConfigHandler(null);
+  });
 });

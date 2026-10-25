@@ -157,4 +157,41 @@ describe('SoundLibraryDialog', () => {
 
     expect(screen.getByRole('button', {name: 'Adding…'})).toBeDisabled();
   });
+
+  // The project's own, first (specs/SHELL_FINISH_PLAN.md, step 4).
+  it('lists the project’s own sounds to use, rename and delete, and uploads', () => {
+    const handlers = {
+      onUseOwn: vi.fn(),
+      onUpload: vi.fn(),
+      onRename: vi.fn(),
+      onDelete: vi.fn(),
+    };
+    const {make, played} = recorder();
+    open({
+      own: [{fileId: 'f9', name: 'roar.mp3', url: 'data:audio/mpeg,roar'}],
+      makePlayer: make,
+      ...handlers,
+    });
+    const mine = screen.getByRole('list', {name: 'In your project'});
+    expect(mine).toHaveTextContent('roar.mp3');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Play roar.mp3'}));
+    expect(played).toEqual(['data:audio/mpeg,roar']);
+
+    fireEvent.click(screen.getByRole('button', {name: 'roar.mp3'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Use this sound'}));
+    expect(handlers.onUseOwn).toHaveBeenCalledWith('roar.mp3');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Rename roar.mp3'}));
+    expect(handlers.onRename).toHaveBeenCalledWith('f9');
+    fireEvent.click(screen.getByRole('button', {name: 'Delete roar.mp3'}));
+    expect(handlers.onDelete).toHaveBeenCalledWith('f9');
+    fireEvent.click(screen.getByRole('button', {name: 'Upload a sound…'}));
+    expect(handlers.onUpload).toHaveBeenCalled();
+  });
+
+  it('leaves the section out for a project with no sounds of its own', () => {
+    open();
+    expect(screen.queryByRole('list', {name: 'In your project'})).toBeNull();
+  });
 });

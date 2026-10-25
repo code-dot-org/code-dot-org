@@ -7,8 +7,11 @@
 // leaves no other way to see `rules/` at all.
 //
 // So this is the file browser for one folder, and the answer to one question.
-// It lists what is in play, and offers exactly what a learner can do about it:
-// add one, or take one away.
+// It lists what is in play, and offers what a learner can do about it: add
+// one from the shelf, make a new one, take one away — and, since the folder
+// buttons went, open, rename and clone one (specs/SHELL_FINISH_PLAN.md, step
+// 4). It is reached from the world block, the World inspector, and the
+// toolbox beside Add Rules.
 //
 // REMOVING DELETES THE FILE, because that is what "not in play" now means.
 // There is no third state where a project holds a rule and does not run it —
@@ -41,7 +44,7 @@
 // should be translating, so they wear `data-notranslate` where they interpolate
 // into a sentence that is.
 
-import {Button, Typography} from '@mui/material';
+import {Button, ListItemText, Menu, MenuItem, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
@@ -64,6 +67,14 @@ export interface RulesInPlayDialogProps {
   onAdd: () => void;
   /** Take one away, file and all. */
   onRemove: (rule: HeldRule) => void;
+  /** Open its file, to read or change what it does. */
+  onOpen?: (rule: HeldRule) => void;
+  /** Rename it, file and name together. */
+  onRename?: (rule: HeldRule) => void;
+  /** A copy of it, under a new name, opened. */
+  onClone?: (rule: HeldRule) => void;
+  /** A new one from nothing, opened. */
+  onNew?: () => void;
   /** Dismissed. */
   onClose: () => void;
   /**
@@ -80,9 +91,18 @@ export const RulesInPlayDialog = ({
   source,
   onAdd,
   onRemove,
+  onOpen,
+  onRename,
+  onClone,
+  onNew,
   onClose,
   editable = true,
 }: RulesInPlayDialogProps) => {
+  // The row whose More menu is open, and where.
+  const [more, setMore] = useState<{
+    rule: HeldRule;
+    anchor: HTMLElement;
+  } | null>(null);
   // Which row is asking to be sure. One at a time, and cleared by any answer:
   // the question is about a specific rule and reads as noise anywhere else.
   const [confirming, setConfirming] = useState<string | null>(null);
@@ -108,41 +128,53 @@ export const RulesInPlayDialog = ({
         onClick: onClose,
       }}
       customContent={
-        <ul className={styles.list}>
-          {/* The engine's own, first and always: they are what everything else
+        <>
+          {editable && onNew && (
+            // From nothing, beside the shelf the primary button opens.
+            <Button
+              variant="text"
+              size="small"
+              className={styles.newRule}
+              onClick={onNew}
+            >
+              Write a new rule…
+            </Button>
+          )}
+          <ul className={styles.list}>
+            {/* The engine's own, first and always: they are what everything else
               is built on, and a panel that started at "Has Gravity" would read
               as though being somewhere were a mechanic too. */}
-          {BASE_RULES.map(rule => (
-            <li key={rule.name} className={`${styles.rule} ${styles.base}`}>
-              <span className={styles.what}>
-                <Typography component="span" variant="label2">
-                  {rule.ability}
-                </Typography>
-                <Typography component="span" variant="body4">
-                  Built in — every world has it.
-                </Typography>
-              </span>
-            </li>
-          ))}
-          {rules.length === 0 && (
-            <li>
-              <Typography
-                className={styles.empty}
-                variant="body2"
-                color="textSecondary"
-              >
-                Your project has no rules of its own yet, so nothing moves,
-                falls or collides. Add one to get started.
-              </Typography>
-            </li>
-          )}
-          {rules.map(rule => {
-            const needed = rulesRequiring(source, rule);
-            const used = filesUsing(source, rule);
-            return (
-              <li key={rule.path} className={styles.rule}>
+            {BASE_RULES.map(rule => (
+              <li key={rule.name} className={`${styles.rule} ${styles.base}`}>
                 <span className={styles.what}>
-                  {/* The ability leads, as it does in the picker: this panel
+                  <Typography component="span" variant="label2">
+                    {rule.ability}
+                  </Typography>
+                  <Typography component="span" variant="body4">
+                    Built in — every world has it.
+                  </Typography>
+                </span>
+              </li>
+            ))}
+            {rules.length === 0 && (
+              <li>
+                <Typography
+                  className={styles.empty}
+                  variant="body2"
+                  color="textSecondary"
+                >
+                  Your project has no rules of its own yet, so nothing moves,
+                  falls or collides. Add one to get started.
+                </Typography>
+              </li>
+            )}
+            {rules.map(rule => {
+              const needed = rulesRequiring(source, rule);
+              const used = filesUsing(source, rule);
+              return (
+                <li key={rule.path} className={styles.rule}>
+                  <span className={styles.what}>
+                    {/* The ability leads, as it does in the picker: this panel
                       answers "what does this world have?", and the rule's own
                       name is what its toolbox category says.
 
@@ -153,99 +185,163 @@ export const RulesInPlayDialog = ({
                       to inherit, which beside a Blockly workspace is not the
                       design system's. `label2` is the 14px/600 step above the
                       `body4` lines under it, and it is what a label is for. */}
-                  <Typography component="span" variant="label2">
-                    {rule.ability ?? rule.name}
-                  </Typography>
-                  <Typography component="span" variant="body4">
-                    {/* A file name is the learner's, not a phrase: masked so
-                        the DOM engine leaves it alone (see the module note). */}
-                    <span data-notranslate>{rule.fileName}</span>
-                  </Typography>
-                  {rule.provides.length > 0 && (
-                    // The traits, named — a rule reaches actors through them,
-                    // so this is what would stop being electable.
+                    <Typography component="span" variant="label2">
+                      {rule.ability ?? rule.name}
+                    </Typography>
                     <Typography component="span" variant="body4">
-                      Gives actors:{' '}
-                      <span data-notranslate>{rule.provides.join(', ')}</span>
+                      {/* A file name is the learner's, not a phrase: masked so
+                        the DOM engine leaves it alone (see the module note). */}
+                      <span data-notranslate>{rule.fileName}</span>
                     </Typography>
-                  )}
-                  {needed.length > 0 && (
-                    // Why the button beside it is dead. Said in the row rather
-                    // than on the click, so a learner reads the shape of their
-                    // own project rather than bumping into it.
-                    <Typography
-                      className={styles.warning}
-                      component="span"
-                      variant="body4"
-                      color="textSecondary"
-                    >
-                      Required by{' '}
-                      <span data-notranslate>{needed.join(', ')}</span>.
-                    </Typography>
-                  )}
-                  {confirming === rule.path && used.length > 0 && (
-                    // The other way a rule holds something up: an actor that
-                    // elected one of its traits. Not a block — a learner taking
-                    // gravity out of their game means it, and the actors are
-                    // theirs to fix — but said before the click, because the
-                    // failure is a compile error naming a file they were not
-                    // looking at.
-                    <Typography
-                      className={styles.warning}
-                      component="span"
-                      variant="body4"
-                      color="error"
-                    >
-                      {/* "Used by", not "{names} uses" — the list may be one
+                    {rule.provides.length > 0 && (
+                      // The traits, named — a rule reaches actors through them,
+                      // so this is what would stop being electable.
+                      <Typography component="span" variant="body4">
+                        Gives actors:{' '}
+                        <span data-notranslate>{rule.provides.join(', ')}</span>
+                      </Typography>
+                    )}
+                    {needed.length > 0 && (
+                      // Why the button beside it is dead. Said in the row rather
+                      // than on the click, so a learner reads the shape of their
+                      // own project rather than bumping into it.
+                      <Typography
+                        className={styles.warning}
+                        component="span"
+                        variant="body4"
+                        color="textSecondary"
+                      >
+                        Required by{' '}
+                        <span data-notranslate>{needed.join(', ')}</span>.
+                      </Typography>
+                    )}
+                    {confirming === rule.path && used.length > 0 && (
+                      // The other way a rule holds something up: an actor that
+                      // elected one of its traits. Not a block — a learner taking
+                      // gravity out of their game means it, and the actors are
+                      // theirs to fix — but said before the click, because the
+                      // failure is a compile error naming a file they were not
+                      // looking at.
+                      <Typography
+                        className={styles.warning}
+                        component="span"
+                        variant="body4"
+                        color="error"
+                      >
+                        {/* "Used by", not "{names} uses" — the list may be one
                           file or five, and a sentence whose verb has to agree
                           with it is a sentence that will read wrong half the
                           time. */}
-                      Used by <span data-notranslate>{used.join(', ')}</span>.
-                      Deleting it stops the project running until you edit those
-                      too.
-                    </Typography>
+                        Used by <span data-notranslate>{used.join(', ')}</span>.
+                        Deleting it stops the project running until you edit
+                        those too.
+                      </Typography>
+                    )}
+                  </span>
+                  {editable &&
+                    (confirming === rule.path ? (
+                      <span className={styles.decide}>
+                        <Button
+                          variant="contained"
+                          color="error"
+                          size="small"
+                          onClick={() => {
+                            setConfirming(null);
+                            onRemove(rule);
+                          }}
+                        >
+                          Delete
+                        </Button>
+                        <Button
+                          variant="outlined"
+                          color="secondary"
+                          size="small"
+                          onClick={() => setConfirming(null)}
+                        >
+                          Cancel
+                        </Button>
+                      </span>
+                    ) : (
+                      <span className={styles.decide}>
+                        {onOpen && (
+                          <Button
+                            variant="outlined"
+                            color="secondary"
+                            size="small"
+                            aria-label={`Open ${rule.ability ?? rule.name}`}
+                            onClick={() => onOpen(rule)}
+                          >
+                            Open
+                          </Button>
+                        )}
+                        <Button
+                          variant="outlined"
+                          color="secondary"
+                          size="small"
+                          disabled={needed.length > 0}
+                          onClick={() => setConfirming(rule.path)}
+                        >
+                          Remove
+                        </Button>
+                        {(onRename || onClone) && (
+                          <Button
+                            variant="text"
+                            size="small"
+                            aria-label={`More for ${rule.ability ?? rule.name}`}
+                            aria-haspopup="menu"
+                            onClick={event =>
+                              setMore({rule, anchor: event.currentTarget})
+                            }
+                          >
+                            More
+                          </Button>
+                        )}
+                      </span>
+                    ))}
+                  {!editable && onOpen && (
+                    // Reading is reading: a project handed out to read still
+                    // opens its rules.
+                    <span className={styles.decide}>
+                      <Button
+                        variant="outlined"
+                        color="secondary"
+                        size="small"
+                        aria-label={`Open ${rule.ability ?? rule.name}`}
+                        onClick={() => onOpen(rule)}
+                      >
+                        Open
+                      </Button>
+                    </span>
                   )}
-                </span>
-                {editable &&
-                  (confirming === rule.path ? (
-                    <span className={styles.decide}>
-                      <Button
-                        variant="contained"
-                        color="error"
-                        size="small"
-                        onClick={() => {
-                          setConfirming(null);
-                          onRemove(rule);
-                        }}
-                      >
-                        Delete
-                      </Button>
-                      <Button
-                        variant="outlined"
-                        color="secondary"
-                        size="small"
-                        onClick={() => setConfirming(null)}
-                      >
-                        Cancel
-                      </Button>
-                    </span>
-                  ) : (
-                    <span className={styles.decide}>
-                      <Button
-                        variant="outlined"
-                        color="secondary"
-                        size="small"
-                        disabled={needed.length > 0}
-                        onClick={() => setConfirming(rule.path)}
-                      >
-                        Remove
-                      </Button>
-                    </span>
-                  ))}
-              </li>
-            );
-          })}
-        </ul>
+                </li>
+              );
+            })}
+          </ul>
+          {more && (
+            <Menu open anchorEl={more.anchor} onClose={() => setMore(null)}>
+              {onRename && (
+                <MenuItem
+                  onClick={() => {
+                    setMore(null);
+                    onRename(more.rule);
+                  }}
+                >
+                  <ListItemText>Rename…</ListItemText>
+                </MenuItem>
+              )}
+              {onClone && (
+                <MenuItem
+                  onClick={() => {
+                    setMore(null);
+                    onClone(more.rule);
+                  }}
+                >
+                  <ListItemText>Clone…</ListItemText>
+                </MenuItem>
+              )}
+            </Menu>
+          )}
+        </>
       }
     />
   );

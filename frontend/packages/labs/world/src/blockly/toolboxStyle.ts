@@ -63,6 +63,7 @@ import {
 import {PluginType, type Plugin} from '@code-dot-org/blockly/plugins';
 
 import {requestRuleImport} from './ruleImport';
+import {requestRulesConfig} from './rulesConfig';
 
 /**
  * Registered once, and it has to be.
@@ -193,6 +194,8 @@ const TOOLBOX_CSS = `
  * to the Actor Palette's Add New Actor (specs/SHELL_PLAN.md, step 6). */
 .worldToolboxButton {
   display: flex;
+  flex-direction: column;
+  gap: 4px;
   justify-content: center;
   padding: 12px 6px 4px;
   margin-top: 6px;
@@ -292,7 +295,20 @@ class ToolboxAddRules extends Blockly.ToolboxItem {
       own(event);
       void requestRuleImport();
     });
-    element.appendChild(button);
+    // …and the rules the project holds, to open, rename, clone or take
+    // away: the way to a rule no block on screen names, now that the folder
+    // buttons are gone (`rules/RulesInPlayDialog`).
+    const inPlay = document.createElement('button');
+    inPlay.type = 'button';
+    inPlay.textContent = 'Rules in Play';
+    inPlay.addEventListener('pointerdown', own);
+    inPlay.addEventListener('click', event => {
+      own(event);
+      // Read-only, it opens to be read (`RulesInPlayDialog`, `editable`).
+      const workspace = this.parentToolbox_.getWorkspace();
+      void requestRulesConfig({editable: !workspace.options.readOnly});
+    });
+    element.append(button, inPlay);
     this.element = element;
   }
 

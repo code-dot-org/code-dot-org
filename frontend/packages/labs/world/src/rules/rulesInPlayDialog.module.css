@@ -75,3 +75,8 @@
   padding: 12px 0;
   text-align: center;
 }
+
+/* Write a new rule, over the list: the making beside the shelf. */
+.newRule {
+  align-self: flex-start;
+}

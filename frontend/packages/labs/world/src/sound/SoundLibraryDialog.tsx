@@ -18,12 +18,17 @@
 // answer to a settled question), the recording flow, the underage warning, and
 // the global `Sounds` singleton.
 //
+// AND THE PROJECT'S OWN, above the stock ones (specs/SHELL_FINISH_PLAN.md,
+// step 4): each to hear, to use, to rename or to delete, and Upload for one
+// of the learner's own. With the folder buttons gone this is where a
+// project's sounds are seen at all.
+//
 // NO CATEGORIES. Upstream has 37 of them because it has 1598 sounds; this shelf
 // has 39, and a category tree over 39 rows is furniture. The categories are in
 // the upstream manifest and come back with the full library if it is ever wired
 // to the studio API (specs/SOUND.md).
 
-import {Typography} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import {useEffect, useRef, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
@@ -32,6 +37,14 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import styles from './soundLibraryDialog.module.css';
 import {SoundPreview, type MakePlayable} from './soundPreview';
 import {stockSounds, type StockSound} from './stock';
+
+/** A sound the project already holds. */
+export interface OwnSound {
+  fileId: string;
+  /** Its file name, which is what a block names it by. */
+  name: string;
+  url: string;
+}
 
 export interface SoundLibraryDialogProps {
   /** Chosen — fetch its bytes and copy it into the project. */
@@ -44,7 +57,18 @@ export interface SoundLibraryDialogProps {
   busy?: boolean;
   /** How a preview is made. The default is a real `Audio`; tests pass their own. */
   makePlayer?: MakePlayable;
+  /** The project's own sounds, listed first; none, and the section is left out. */
+  own?: readonly OwnSound[];
+  /** One of the project's chosen: nothing to fetch, its name is the answer. */
+  onUseOwn?: (name: string) => void;
+  /** Bring in one of the learner's own files. */
+  onUpload?: () => void;
+  onRename?: (fileId: string) => void;
+  onDelete?: (fileId: string) => void;
 }
+
+/** Which row is chosen: a stock sound by its id, the project's by its file. */
+const OWN = 'own:';
 
 export const SoundLibraryDialog = ({
   onImport,
@@ -52,6 +76,11 @@ export const SoundLibraryDialog = ({
   error,
   busy = false,
   makePlayer,
+  own = [],
+  onUseOwn,
+  onUpload,
+  onRename,
+  onDelete,
 }: SoundLibraryDialogProps) => {
   const sounds = stockSounds();
   // Selecting then confirming, like the backdrop shelf — and for a sharper
@@ -59,6 +88,7 @@ export const SoundLibraryDialog = ({
   // expensive" is true of pictures and truer here, where browsing IS clicking.
   const [chosen, setChosen] = useState<string>('');
   const picked = sounds.find(sound => sound.id === chosen);
+  const pickedOwn = own.find(sound => `${OWN}${sound.fileId}` === chosen);
 
   // One player for the life of the dialog, stopped when it goes. A preview
   // still sounding after the dialog closed is a noise with no source on screen.
@@ -68,7 +98,7 @@ export const SoundLibraryDialog = ({
   useEffect(() => () => player.stop(), [player]);
 
   const [, redraw] = useState(0);
-  const listen = (sound: StockSound) => {
+  const listen = (sound: {id: string; url: string}) => {
     if (player.playing() === sound.id) {
       player.stop();
     } else {
@@ -94,8 +124,15 @@ export const SoundLibraryDialog = ({
       closeLabel="Close"
       primaryButtonProps={{
         children: busy ? 'Adding…' : 'Use this sound',
-        disabled: !picked || busy,
-        onClick: () => picked && choose(picked),
+        disabled: !(picked || (pickedOwn && onUseOwn)) || busy,
+        onClick: () => {
+          if (pickedOwn) {
+            player.stop();
+            onUseOwn?.(pickedOwn.name);
+          } else if (picked) {
+            choose(picked);
+          }
+        },
       }}
       secondaryButtonProps={{
         children: 'Cancel',
@@ -103,6 +140,98 @@ export const SoundLibraryDialog = ({
       }}
       customContent={
         <div className={styles.body}>
+          {onUpload && (
+            <Button
+              variant="text"
+              size="small"
+              startIcon={
+                <FontAwesomeV6Icon iconName="upload" iconStyle="solid" />
+              }
+              onClick={() => {
+                player.stop();
+                onUpload();
+              }}
+            >
+              Upload a sound…
+            </Button>
+          )}
+          {own.length > 0 && (
+            <>
+              <Typography variant="body2" component="h3">
+                In your project
+              </Typography>
+              <ul className={styles.shelf} aria-label="In your project">
+                {own.map(sound => {
+                  const key = `${OWN}${sound.fileId}`;
+                  const sounding = player.playing() === key;
+                  return (
+                    <li key={key} className={styles.row}>
+                      <button
+                        type="button"
+                        className={styles.listen}
+                        aria-label={
+                          sounding ? `Stop ${sound.name}` : `Play ${sound.name}`
+                        }
+                        onClick={() => listen({id: key, url: sound.url})}
+                      >
+                        <FontAwesomeV6Icon
+                          iconName={sounding ? 'stop' : 'play'}
+                          iconStyle="solid"
+                        />
+                      </button>
+                      <button
+                        type="button"
+                        className={
+                          key === chosen
+                            ? `${styles.choose} ${styles.chosen}`
+                            : styles.choose
+                        }
+                        aria-pressed={key === chosen}
+                        onClick={() => setChosen(key)}
+                      >
+                        <Typography
+                          component="span"
+                          variant="body2"
+                          className={styles.name}
+                        >
+                          {sound.name}
+                        </Typography>
+                      </button>
+                      {onRename && (
+                        <Button
+                          variant="text"
+                          size="extraSmall"
+                          aria-label={`Rename ${sound.name}`}
+                          onClick={() => {
+                            player.stop();
+                            onRename(sound.fileId);
+                          }}
+                        >
+                          Rename
+                        </Button>
+                      )}
+                      {onDelete && (
+                        <Button
+                          variant="text"
+                          size="extraSmall"
+                          aria-label={`Delete ${sound.name}`}
+                          onClick={() => {
+                            player.stop();
+                            onDelete(sound.fileId);
+                          }}
+                        >
+                          Delete
+                        </Button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+              <Typography variant="body2" component="h3">
+                To add
+              </Typography>
+            </>
+          )}
           {sounds.length === 0 ? (
             <Typography variant="body2">
               There are no sounds to choose from.

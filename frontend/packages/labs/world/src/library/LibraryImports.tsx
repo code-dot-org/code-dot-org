@@ -71,6 +71,7 @@ import {
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
+import {requestFileAct} from '../files/fileActs';
 import {ImportMapDialog} from '../maps/ImportMapDialog';
 import {importStockMap} from '../maps/importStockMap';
 import {setMapImportHandler} from '../maps/mapImport';
@@ -82,8 +83,9 @@ import {RulesInPlayDialog} from '../rules/RulesInPlayDialog';
 import type {StockRule} from '../rules/stock';
 import {fetchStockSound} from '../sound/fetchStockSound';
 import {importStockSound} from '../sound/importStockSound';
+import {SOUNDS_FOLDER} from '../sound/soundFiles';
 import {setSoundImportHandler} from '../sound/soundImport';
-import {SoundLibraryDialog} from '../sound/SoundLibraryDialog';
+import {SoundLibraryDialog, type OwnSound} from '../sound/SoundLibraryDialog';
 import type {StockSound} from '../sound/stock';
 import {importStockStyle} from '../styles/importStockStyle';
 import {ImportStyleDialog} from '../styles/ImportStyleDialog';
@@ -91,6 +93,17 @@ import type {StockStyle} from '../styles/stock';
 import {setStyleImportHandler} from '../styles/styleImport';
 
 import {refreshFor} from './refreshRegistries';
+
+/** The sounds a project holds, by file name, for the sound shelf. */
+const ownSounds = (source: MultiFileSource): OwnSound[] => {
+  const folder = Object.values(source.folders).find(
+    one => one.name === SOUNDS_FOLDER,
+  );
+  return Object.values(source.files)
+    .filter(file => folder && file.folderId === folder.id && file.url)
+    .map(file => ({fileId: file.id, name: file.name, url: file.url!}))
+    .sort((a, b) => a.name.localeCompare(b.name));
+};
 
 /** Which shelf is open. One at a time, which is what a modal means anyway. */
 type Shelf =
@@ -292,6 +305,28 @@ export const LibraryImports = () => {
             setRules(held);
           }}
           onRemove={removeHeld}
+          // The rest are the file menus' acts (`files/fileActs`). One dialog
+          // on screen at a time: the panel goes while one asks its question.
+          // Opening a rule, or making one, ends the errand on that rule's
+          // file; a rename comes back to the panel.
+          onOpen={rule => {
+            finishRules();
+            void requestFileAct({act: 'open', fileId: rule.fileId});
+          }}
+          onRename={async rule => {
+            const held = rules;
+            setRules(null);
+            await requestFileAct({act: 'rename', fileId: rule.fileId});
+            setRules(held);
+          }}
+          onClone={rule => {
+            finishRules();
+            void requestFileAct({act: 'clone', fileId: rule.fileId});
+          }}
+          onNew={() => {
+            finishRules();
+            void requestFileAct({act: 'make', folder: 'rules'});
+          }}
           onClose={finishRules}
         />
       )}
@@ -416,6 +451,24 @@ export const LibraryImports = () => {
         <SoundLibraryDialog
           busy={fetching}
           error={failure}
+          own={ownSounds(sourcesRef.current.source)}
+          // One of the project's own is the answer as it is, with nothing
+          // to fetch or write.
+          onUseOwn={name => finish(name)}
+          // The rest are the file menus' acts (`files/fileActs`), asked
+          // once the shelf has gone: one dialog on screen at a time.
+          onUpload={() => {
+            cancel();
+            void requestFileAct({act: 'upload', folder: SOUNDS_FOLDER});
+          }}
+          onRename={fileId => {
+            cancel();
+            void requestFileAct({act: 'rename', fileId});
+          }}
+          onDelete={fileId => {
+            cancel();
+            void requestFileAct({act: 'delete', fileId});
+          }}
           onImport={(chosen: StockSound) =>
             fetched(
               () => fetchStockSound(chosen),

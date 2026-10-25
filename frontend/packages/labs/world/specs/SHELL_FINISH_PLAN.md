@@ -212,6 +212,18 @@ BUILT, door by door; each line below is a commit.
 - **Maps.** The place's actions beside its name, a Map's or a Screen's,
   gain Clone, which asks a name and opens the copy. In the browser: Clone
   on the starter's Main map, named Level Two, opened the copy.
+- **Rules.** Rules in Play has Open on each rule, and a More menu with
+  Rename and Clone, beside Remove; Write a new rule makes one and opens
+  it. A project handed out to read still opens its rules. The panel is
+  reached from the toolbox too, a Rules in Play button under Add Rules,
+  which opens it to change unless the workspace is read only. Rename comes
+  back to the panel; Open, Clone and New end on the rule's file. In the
+  browser, from the Player's code: the panel listed Moves with Arrow Keys,
+  Rename asked for its name and Cancel came back, and Open opened it.
+- **Sounds.** The sound shelf lists the project's own sounds first, "In
+  your project", each to hear, to use as it is, to rename and to delete,
+  and has Upload a sound. In the browser: after Coin was imported, the
+  shelf listed `coin.mp3` under the project's, and Rename asked its name.
 
 ### 5. The folder buttons go
 
