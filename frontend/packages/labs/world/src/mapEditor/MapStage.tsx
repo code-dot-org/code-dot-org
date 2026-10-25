@@ -45,7 +45,6 @@ import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
 import {
   dividers,
-  dock,
   fixedSideOf,
   resize,
   undock,
@@ -64,7 +63,8 @@ import {CameraInspector} from './CameraInspector';
 import {CameraPanel} from './CameraPanel';
 import {
   dividerAt,
-  dockSize,
+  dockChoices,
+  dockedAt,
   dockZones,
   dragDivider,
   fitLayout,
@@ -151,6 +151,8 @@ import {
   snapPoint,
   snapToTile,
   steppedBy,
+  cellAt,
+  cursorStep,
   zoomToward,
 } from './stageGeometry';
 import {useAfterImport} from './useAfterImport';
@@ -560,6 +562,8 @@ export const MapStage = ({
   const canOpenScript = Boolean(onEditScript) && !locked('map-scripts');
   /** The open quick-add menu's anchor: the button it opened from. */
   const [eventMenu, setEventMenu] = useState<HTMLElement | null>(null);
+  /** The open Dock menu's button, while it is open. */
+  const [dockMenu, setDockMenu] = useState<HTMLElement | null>(null);
   const noteId = (id: Affordance, where: string) => `withheld-${id}-${where}`;
   const orWithheld = (id: Affordance, where: string, act: () => void) =>
     locked(id)
@@ -1850,17 +1854,7 @@ export const MapStage = ({
     }
     const zone = at ? zoneAt(dockZones(map, id), at) : undefined;
     if (zone) {
-      const placement = map.actors.find(actor => actor.id === id);
-      return {
-        ...map,
-        layout: dock(
-          map.layout,
-          id,
-          zone.target,
-          zone.side,
-          placement ? dockSize(placement, zone.side) : 48,
-        ),
-      };
+      return dockedAt(map, id, zone.target, zone.side);
     }
     return isDocked(map, id) ? withLayout(map, undock(map.layout, id)) : map;
   };
@@ -2388,8 +2382,48 @@ export const MapStage = ({
       setPicking(null);
       return;
     }
-    // Place mode is click-driven; the keyboard shortcuts are select-mode only.
+    // WITH AN ACTOR IN HAND the arrows move a cursor cell — the ghost, where
+    // a press would leave one — and Enter or Space does there what a press
+    // does: places one, or takes away the one of that kind already there.
+    // Each is said aloud, since the cell is pixels (specs/PURPOSE_PLAN.md,
+    // step 5). The select-mode keys are not taken here.
     if (selected) {
+      const named = kinds?.[selected]?.name ?? kindName(selected);
+      const where = (at: Vec) => {
+        const {column, row} = cellAt(at, map.tile, ghostBox);
+        return `column ${column}, row ${row}`;
+      };
+      const step = ARROW_STEPS[event.key];
+      if (step && !event.altKey && !event.shiftKey) {
+        event.preventDefault();
+        const at = cursorStep(
+          hover,
+          map.tile,
+          extent,
+          step.dx,
+          step.dy,
+          ghostBox,
+        );
+        setHover(at);
+        ensureVisible(at);
+        const here = sameKindUnder(at) ? `, a ${named} is here` : '';
+        say(`${where(at)}${here}`);
+        return;
+      }
+      if (
+        (event.key === 'Enter' || event.key === ' ') &&
+        hover &&
+        !isReadOnly
+      ) {
+        event.preventDefault();
+        const erase = Boolean(sameKindUnder(hover));
+        if (brushAt(hover, erase ? 'erase' : 'paint')) {
+          commit(mapRef.current);
+          say(
+            `${erase ? 'Took away' : 'Placed'} a ${named} at ${where(hover)}`,
+          );
+        }
+      }
       return;
     }
     // Enter opens the selection's script: what double-clicking it does, from
@@ -3152,11 +3186,17 @@ export const MapStage = ({
          */
         // eslint-disable-next-line jsx-a11y/no-interactive-element-to-noninteractive-role
         role="application"
+        // What the keys do depends on whether an actor is in hand, so the
+        // name says which (specs/PURPOSE_PLAN.md, step 5).
         aria-label={
-          'Map. Arrow keys move between the actors on it. Shift and an arrow ' +
-          'moves the selected one, Alt and an arrow resizes it, and the ' +
-          'square brackets turn it. Enter opens its code, and Delete ' +
-          'removes it.'
+          selected
+            ? `Map, placing ${kinds?.[selected]?.name ?? kindName(selected)}. ` +
+              'Arrow keys move a cursor a cell at a time. Enter or Space ' +
+              'places one there, or takes away the one already there.'
+            : 'Map. Arrow keys move between the actors on it. Shift and an ' +
+              'arrow moves the selected one, Alt and an arrow resizes it, and ' +
+              'the square brackets turn it. Enter opens its code, and Delete ' +
+              'removes it.'
         }
       />
       <div
@@ -3535,6 +3575,78 @@ export const MapStage = ({
              * context and was the one place in the lab not using the word the
              * spec, the engine and the property all use.
              */}
+            {canDock &&
+              !isReadOnly &&
+              (() => {
+                // DOCK WITHOUT A DRAG: the zones a drag offers, as a menu —
+                // the screen's edges and the sides of what is docked already
+                // — each doing what a drop there does (specs/PURPOSE_PLAN.md,
+                // step 5; ACCESSIBILITY.md, "Docking").
+                const choices = dockChoices(map, selectedActor.id);
+                if (choices.length === 0) {
+                  return null;
+                }
+                const rows: JSX.Element[] = [];
+                let group = '';
+                for (const choice of choices) {
+                  const heading = choice.target
+                    ? `Beside ${choice.target}`
+                    : 'The screen';
+                  if (heading !== group) {
+                    group = heading;
+                    rows.push(
+                      <ListSubheader key={`group:${heading}`}>
+                        {heading}
+                      </ListSubheader>,
+                    );
+                  }
+                  rows.push(
+                    <MenuItem
+                      key={`${choice.target ?? ''}:${choice.side}`}
+                      dense
+                      onClick={() => {
+                        setDockMenu(null);
+                        commit(
+                          dockedAt(
+                            mapRef.current,
+                            selectedActor.id,
+                            choice.target,
+                            choice.side,
+                          ),
+                        );
+                        say(`${selectedActor.id} docked: ${choice.label}`);
+                      }}
+                    >
+                      {choice.label}
+                    </MenuItem>,
+                  );
+                }
+                return (
+                  <>
+                    <Button
+                      variant="text"
+                      size="extraSmall"
+                      aria-haspopup="menu"
+                      aria-expanded={dockMenu !== null}
+                      onClick={event => setDockMenu(event.currentTarget)}
+                    >
+                      {isDocked(map, selectedActor.id)
+                        ? 'Dock somewhere else…'
+                        : 'Dock…'}
+                    </Button>
+                    {dockMenu && (
+                      <Menu
+                        open
+                        anchorEl={dockMenu}
+                        onClose={() => setDockMenu(null)}
+                        slotProps={{paper: {style: {maxHeight: 420}}}}
+                      >
+                        {rows}
+                      </Menu>
+                    )}
+                  </>
+                );
+              })()}
             {canDock && isDocked(map, selectedActor.id) && (
               // Docked: it fills its region of the screen, and Undock lets
               // it float again where it is (specs/DOCKING_PLAN.md).

@@ -4,6 +4,8 @@ import {describe, expect, it} from 'vitest';
 
 import {
   dividerAt,
+  dockChoices,
+  dockedAt,
   dockSize,
   dockZones,
   dragDivider,
@@ -131,6 +133,39 @@ describe('the line between two docked sides', () => {
     const line = dividerAt(doc, {x: 100, y: 280}, 6)!;
     expect(dragDivider(doc, line, {x: 100, y: 260}).layout).toMatchObject({
       size: 60,
+    });
+  });
+});
+
+describe('docking from the inspector', () => {
+  // specs/PURPOSE_PLAN.md, step 5: the zones a drag offers, as a list.
+  it('offers the screen’s edges, and the sides of what is docked', () => {
+    const choices = dockChoices(screen(), 'hud');
+    expect(choices.map(choice => choice.label)).toEqual([
+      'Along the top of the screen',
+      'Along the bottom of the screen',
+      'Down the left of the screen',
+      'Down the right of the screen',
+      'Above game',
+      'Below game',
+      'Left of game',
+      'Right of game',
+    ]);
+  });
+
+  it('offers nothing beside itself', () => {
+    expect(
+      dockChoices(screen(), 'game').filter(choice => choice.target),
+    ).toEqual([]);
+  });
+
+  it('docks as a drop does, at its own box’s size across the side', () => {
+    expect(dockedAt(screen(), 'hud', 'game', 'bottom').layout).toEqual({
+      split: 'down',
+      fixed: 'second',
+      size: 40,
+      first: {dock: 'game'},
+      second: {dock: 'hud'},
     });
   });
 });

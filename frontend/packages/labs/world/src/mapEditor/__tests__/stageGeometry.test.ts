@@ -11,6 +11,8 @@ import {describe, expect, it} from 'vitest';
 import {placementKey} from '../../blockly/mapPlacements';
 import type {Placement, Transform, View} from '../mapModel';
 import {
+  cellAt,
+  cursorStep,
   drawnSize,
   fitView,
   hitTest,
@@ -598,5 +600,47 @@ describe('strokePoints', () => {
     expect(strokePoints({x: 0, y: 0}, {x: 3, y: 4}, tile)).toEqual([
       {x: 3, y: 4},
     ]);
+  });
+});
+
+describe('the keyboard cursor, with an actor in hand', () => {
+  const tile = {width: 32, height: 32};
+  const extent = {w: 320, h: 320};
+
+  it('starts in the middle of the map, whichever arrow it was', () => {
+    expect(cursorStep(null, tile, extent, 1, 0)).toEqual({x: 176, y: 176});
+  });
+
+  it('moves a cell, and never off the map', () => {
+    expect(cursorStep({x: 176, y: 176}, tile, extent, 1, 0)).toEqual({
+      x: 208,
+      y: 176,
+    });
+    expect(cursorStep({x: 16, y: 16}, tile, extent, -1, 0)).toEqual({
+      x: 16,
+      y: 16,
+    });
+    expect(cursorStep({x: 304, y: 304}, tile, extent, 0, 1)).toEqual({
+      x: 304,
+      y: 304,
+    });
+  });
+
+  it('keeps a box inside the map by its edges', () => {
+    // A Button is 96 by 32: its middle can go no nearer the right edge than
+    // half of it.
+    const box = {width: 96, height: 32};
+    expect(cursorStep({x: 272, y: 16}, tile, extent, 1, 0, box)).toEqual({
+      x: 272,
+      y: 16,
+    });
+  });
+
+  it('names a cell from one, by its top left corner', () => {
+    expect(cellAt({x: 16, y: 16}, tile)).toEqual({column: 1, row: 1});
+    expect(cellAt({x: 80, y: 48}, tile, {width: 96, height: 32})).toEqual({
+      column: 2,
+      row: 2,
+    });
   });
 });

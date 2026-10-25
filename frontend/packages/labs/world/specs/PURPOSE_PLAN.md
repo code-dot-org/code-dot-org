@@ -137,6 +137,23 @@ block for every file, and a plain file is the older shape.
   drawn and said aloud, and Enter or Space places one there, or takes one
   away as a press does.
 
+BUILT. **Dock…** in the inspector of a placement on a Screen opens a menu
+of the zones a drag offers, without the drag: the screen's four edges,
+then the four sides of each other docked placement, grouped by which.
+A choice does what a drop there does (`docking.dockedAt`, which the drop
+now calls too) and is said aloud. A docked placement's reads "Dock
+somewhere else…", beside Undock and its size field.
+
+**With an actor in hand** the stage's arrows move the ghost a cell at a
+time, starting in the middle of the map, never off it, and a box by its
+edges (`stageGeometry.cursorStep`). Each move says the cell and whether
+one of the kind in hand is there ("column 5, row 9, a Scoreboard is
+here"). Enter or Space is the brush's press at the cursor, and says what
+it did. The canvas's name says which keys it takes, placing or not. In
+the browser, keyboard only: a Scoreboard taken from its tile with Enter,
+placed at column 5, row 9, selected by the arrows and docked along the
+bottom from the menu; the game drew it there.
+
 ### 6. Documents, the browser, and the ledger
 
 ## Not in this phase

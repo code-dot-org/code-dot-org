@@ -11,6 +11,7 @@
 
 import {
   dividers,
+  dock,
   dockedIds,
   layoutBoxes,
   resize,
@@ -142,6 +143,76 @@ export const zoneAt = (
       at.y >= zone.box.y &&
       at.y <= zone.box.y + zone.box.height,
   );
+
+/** One place the inspector offers to dock a placement. */
+export interface DockChoice {
+  /** The docked placement it goes beside; nothing, the screen's own edge. */
+  target?: string;
+  side: Side;
+  /** What the menu says. */
+  label: string;
+}
+
+const EDGE_WORDS: Record<Side, string> = {
+  top: 'Along the top of the screen',
+  bottom: 'Along the bottom of the screen',
+  left: 'Down the left of the screen',
+  right: 'Down the right of the screen',
+};
+const BESIDE_WORDS: Record<Side, string> = {
+  top: 'Above',
+  bottom: 'Below',
+  left: 'Left of',
+  right: 'Right of',
+};
+const SIDES: readonly Side[] = ['top', 'bottom', 'left', 'right'];
+
+/**
+ * Where `id` could dock, as the inspector lists it (specs/PURPOSE_PLAN.md,
+ * step 5): the zones a drag offers, without the drag. The screen's four
+ * edges, then the four sides of every other docked placement. Nothing for a
+ * placement inside another, which a drag cannot dock either.
+ */
+export function dockChoices(doc: MapDoc, id: string): DockChoice[] {
+  if (!dockable(doc)(id)) {
+    return [];
+  }
+  const others = dockedIds(undock(doc.layout, id)).filter(dockable(doc));
+  return [
+    ...SIDES.map(side => ({side, label: EDGE_WORDS[side]})),
+    ...others.flatMap(target =>
+      SIDES.map(side => ({
+        target,
+        side,
+        label: `${BESIDE_WORDS[side]} ${target}`,
+      })),
+    ),
+  ];
+}
+
+/**
+ * The document with `id` docked on `side` of `target`, or of the screen:
+ * what a drop in that zone does. Its side is fixed at the size of its own box
+ * across it, and it is moved if it was docked elsewhere.
+ */
+export function dockedAt(
+  doc: MapDoc,
+  id: string,
+  target: string | undefined,
+  side: Side,
+): MapDoc {
+  const placement = doc.actors.find(actor => actor.id === id);
+  return withLayout(
+    doc,
+    dock(
+      doc.layout,
+      id,
+      target,
+      side,
+      placement ? dockSize(placement, side) : 48,
+    ),
+  );
+}
 
 /** What a placement docked on `side` is fixed at: its own box across it. */
 export function dockSize(placement: Placement, side: Side): number {

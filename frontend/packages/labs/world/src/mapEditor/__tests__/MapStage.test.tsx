@@ -444,6 +444,52 @@ describe('removing and placing', () => {
     });
   });
 
+  describe('the brush from the keyboard', () => {
+    // specs/PURPOSE_PLAN.md, step 5. The map is ten cells square; the cursor
+    // starts in its middle, cell (5, 5) from zero.
+    const said = () => screen.getByTestId('stage-announcer').textContent;
+
+    it('moves a cursor a cell at a time, and Enter places one there', () => {
+      const map = doc();
+      const {canvas, written} = mount(map, {placing: 'actors/coin'});
+      fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+      expect(said()).toBe('column 6, row 6');
+      fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+      fireEvent.keyDown(canvas, {key: 'ArrowUp'});
+      expect(said()).toBe('column 7, row 5');
+      fireEvent.keyDown(canvas, {key: 'Enter'});
+
+      const placed = written().actors;
+      expect(placed[2].properties?.positional?.position).toEqual({
+        x: 6 * 32 + 16,
+        y: 4 * 32 + 16,
+      });
+      expect(said()).toMatch(/^Placed a .* at column 7, row 5$/);
+    });
+
+    it('takes away the one already there with Space, and says it is there', () => {
+      const map = doc(); // coins at cells (1, 1) and (4, 1)
+      const {canvas, written} = mount(map, {placing: 'actors/coin'});
+      fireEvent.keyDown(canvas, {key: 'ArrowUp'}); // (5, 5)
+      for (let at = 0; at < 4; at++) {
+        fireEvent.keyDown(canvas, {key: 'ArrowUp'});
+      }
+      fireEvent.keyDown(canvas, {key: 'ArrowLeft'});
+      expect(said()).toMatch(/^column 5, row 2, a .* is here$/);
+      fireEvent.keyDown(canvas, {key: ' '});
+
+      expect(written().actors.map(actor => actor.id)).toEqual(['a']);
+      expect(said()).toMatch(/^Took away a .* at column 5, row 2$/);
+    });
+
+    it('does nothing on Enter before the cursor is anywhere', () => {
+      const map = doc();
+      const {canvas, onDocChange} = mount(map, {placing: 'actors/coin'});
+      fireEvent.keyDown(canvas, {key: 'Enter'});
+      expect(onDocChange).not.toHaveBeenCalled();
+    });
+  });
+
   it('places the chosen kind at the clicked cell’s center', () => {
     const map = doc();
     const {canvas, written} = mount(map, {placing: 'actors/coin'});
@@ -2527,6 +2573,30 @@ describe('docking on a Screen', () => {
     const {canvas, written} = mount(map);
     drag(canvas, map, {x: 160, y: 120}, {x: 160, y: 4});
     expect(written().layout).toEqual({dock: 'game'});
+  });
+
+  it('docks a placement from the inspector, as a drop does', () => {
+    // specs/PURPOSE_PLAN.md, step 5: the zones as a menu, for a keyboard.
+    const map = screenDoc();
+    const {canvas, written, ...view} = mount(map, {canDock: true});
+    // Select the Panel, at its middle.
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 160, y: 120}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 160, y: 120}));
+    fireEvent.click(view.getByRole('button', {name: 'Dock…'}));
+    fireEvent.click(
+      view.getByRole('menuitem', {name: 'Along the top of the screen'}),
+    );
+
+    expect(written().layout).toEqual({
+      split: 'down',
+      fixed: 'first',
+      size: 40,
+      first: {dock: 'hud'},
+      second: {dock: 'game'},
+    });
+    expect(view.getByTestId('stage-announcer').textContent).toBe(
+      'hud docked: Along the top of the screen',
+    );
   });
 
   it('says a selected placement is docked, and undocks it', () => {

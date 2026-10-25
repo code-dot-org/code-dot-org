@@ -181,6 +181,64 @@ export function steppedBy(
       );
 }
 
+/**
+ * Where the keyboard's cursor goes on an arrow, with an actor in hand
+ * (specs/PURPOSE_PLAN.md, step 5): a cell in that direction, as a press
+ * there would snap it, and never off the map. With no cursor yet it starts
+ * in the middle of the map, whichever arrow was pressed — the first press
+ * shows where it is rather than moving it.
+ */
+export function cursorStep(
+  pos: Vec | null,
+  tile: Tile,
+  extent: Size,
+  dx: number,
+  dy: number,
+  box?: {width: number; height: number},
+): Vec {
+  const half = {
+    x: (box?.width ?? tile.width) / 2,
+    y: (box?.height ?? tile.height) / 2,
+  };
+  const inside = (at: Vec): Vec => ({
+    x: clamp(at.x, half.x, Math.max(half.x, extent.w - half.x)),
+    y: clamp(at.y, half.y, Math.max(half.y, extent.h - half.y)),
+  });
+  if (!pos) {
+    return snapToTile(
+      inside({x: extent.w / 2, y: extent.h / 2}),
+      tile,
+      false,
+      box,
+    );
+  }
+  const moved = steppedBy(pos, tile, dx, dy, false, box);
+  const kept = inside(moved);
+  // Pushed back inside, it snaps again: a box wider than the map's edge
+  // allows sits against it, on the grid.
+  return kept.x === moved.x && kept.y === moved.y
+    ? moved
+    : snapToTile(kept, tile, false, box);
+}
+
+/**
+ * The cell a placement at `pos` is in, counted from one, as it is said
+ * aloud: where its top left corner is, which for a tile-sized thing is the
+ * cell it fills.
+ */
+export function cellAt(
+  pos: Vec,
+  tile: Tile,
+  box?: {width: number; height: number},
+): {column: number; row: number} {
+  const width = box?.width ?? tile.width;
+  const height = box?.height ?? tile.height;
+  return {
+    column: Math.floor((pos.x - width / 2) / tile.width + 1e-9) + 1,
+    row: Math.floor((pos.y - height / 2) / tile.height + 1e-9) + 1,
+  };
+}
+
 /** How big each kind is in the world, for the kinds that declare a picture. */
 export type KindSizes =
   | Record<string, {width: number; height: number}>

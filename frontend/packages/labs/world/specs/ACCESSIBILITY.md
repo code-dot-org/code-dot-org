@@ -31,6 +31,8 @@ below, and are listed last.
   selecting, and with an actor in hand it ignores them. (2.1.1 Keyboard.)
   Wanted: with an actor in hand, the arrows move a cursor cell and Enter or
   Space places or takes away there, said aloud.
+  CLOSED by PURPOSE_PLAN.md, step 5: so they do, and the canvas's name
+  says so while an actor is in hand.
 - **A stroke is a drag.** Painting a row is one drag; the same row is a
   click per cell, which is the single-pointer way (2.5.7 Dragging Movements
   holds), but slow. Recorded so the keyboard answer above covers it too.
@@ -73,6 +75,8 @@ below, and are listed last.
   button and a docked side's size has a field, so those two are covered.
   Wanted: a "Dock" choice in the inspector — which edge of the screen, or
   beside which docked placement — doing what a drop does.
+  CLOSED by PURPOSE_PLAN.md, step 5: "Dock…" opens a menu of the same
+  zones, and a choice is said aloud.
 - **A zone is shown only by a tint**, and nothing is said when one is
   entered or when a placement docks. (1.4.1 Use of Color, for the tint
   alone; 4.1.3 Status Messages.)
@@ -90,6 +94,18 @@ below, and are listed last.
 - **The fold is not redone.** The checklist decides which groups are shut
   when it first draws; "Show everything" then adds up to 29 rows open,
   which is a long walk by Tab.
+
+### Placing and docking from the keyboard (PURPOSE_PLAN.md, step 5)
+
+- **The cursor is found only by being moved.** It starts in the middle of
+  the map on the first arrow, and nothing says where it is before then;
+  Enter before any arrow does nothing, silently.
+- **Placements are named by their ids** in the Dock menu ("Above
+  HealthBar"), which are what the inspector shows but not always what a
+  learner would call them.
+- **Reaching the stage from a tile is a walk by Tab** past the rest of the
+  palette; taking an actor in hand does not move focus to the stage, which
+  is right for a pointer and long for a keyboard.
 
 ## Not yet done for any phase
 
