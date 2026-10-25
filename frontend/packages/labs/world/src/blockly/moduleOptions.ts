@@ -26,7 +26,6 @@ import {projectImage} from './projectImages';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
-let projectAnimationFiles: Array<[string, string]> = [];
 let projectSprites: Array<[string, string]> = [];
 // The same, for the images under `backgrounds/` — a pool of its own, because a
 // sky and a costume are never wanted in the same list (BACKGROUNDS.md §5).
@@ -131,13 +130,6 @@ export function setProjectBackgrounds(options: Array<[string, string]>): void {
 /** Replace the sound options the SOUND dropdowns offer. */
 export function setProjectSounds(options: Array<[string, string]>): void {
   projectSounds = options;
-}
-
-/** Replace the animation-file options the FILE dropdown offers. */
-export function setProjectAnimationFiles(
-  options: Array<[string, string]>,
-): void {
-  projectAnimationFiles = options;
 }
 
 /** Replace the style-file options the THEME dropdown offers. */
@@ -378,11 +370,6 @@ export function backgroundImportOptions(): DropdownOptions {
     ...orNone(projectBackgrounds, '(no backgrounds yet)').map(asPicture),
     ['(import…)', IMPORT_BACKGROUND_VALUE],
   ];
-}
-
-/** Current FILE dropdown options (the project's animation files). */
-export function animationFileOptions(): Array<[string, string]> {
-  return orNone(projectAnimationFiles, '(no animations yet)');
 }
 
 /** Current EFFECT dropdown options (the project's effect files). */
@@ -758,11 +745,6 @@ export const actorTypeOptionsExtension = liveDropdown(
   'world_actor_type_options',
   'TYPE',
   actorFieldOptions,
-);
-export const animationFileOptionsExtension = liveDropdown(
-  'world_animation_file_options',
-  'FILE',
-  animationFileOptions,
 );
 export const effectFileOptionsExtension = liveDropdown(
   'world_effect_file_options',

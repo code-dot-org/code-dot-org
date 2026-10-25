@@ -2,7 +2,7 @@
 //
 // The editor needs image dimensions to say how many cells a spritesheet holds:
 // a `.sheet` gives the size of one cell, and the image says how many fit. The
-// animation editor has the decoded `<img>` to hand; the Blockly side does not —
+// image editor has the decoded `<img>` to hand; the Blockly side does not —
 // its dropdowns are built from the flattened project, which holds no pixels.
 //
 // A PNG says so in its own first bytes. The IHDR chunk begins at offset 8 and

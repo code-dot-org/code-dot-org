@@ -33,7 +33,6 @@ export const LESSON_FOLDERS = [
   'rules',
   'worlds',
   'actors',
-  'animations',
   'sprites',
   'backgrounds',
   'maps',

@@ -21,11 +21,7 @@ import {
 import {paramSockets} from '../extensions/effectParamsMutator';
 import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
-import {
-  setProjectAnimationFiles,
-  setProjectMaps,
-  setProjectRuleModules,
-} from '../moduleOptions';
+import {setProjectMaps, setProjectRuleModules} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {forgetImageSizes, setProjectGrids} from '../spriteCells';
@@ -952,10 +948,13 @@ describe('domain block generators', () => {
     // Default (empty socket → `this actor`) sets it on the current actor. The
     // cell is written every time — an actor that drew one cell and is then set
     // to a picture must stop drawing it — and (0, 0) means the whole image.
+    // And whatever was playing stops, or it would put its own picture back
+    // on the next frame (specs/ANIMATION_PLAN.md).
     expect(emit('world_set_sprite', {SPRITE: 'player'})).toBe(
       'actor.set(WorldLab.SpriteProperty, "player");\n' +
         'actor.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(0, 0));\n' +
-        'actor.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(0, 0));\n',
+        'actor.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(0, 0));\n' +
+        "actor.set(WorldLab.AnimationProperty, '');\n",
     );
     // A plugged-in actor (e.g. a loop's touched actor) is set instead.
     expect(
@@ -963,7 +962,8 @@ describe('domain block generators', () => {
     ).toBe(
       'touched.set(WorldLab.SpriteProperty, "switch");\n' +
         'touched.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(0, 0));\n' +
-        'touched.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(0, 0));\n',
+        'touched.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(0, 0));\n' +
+        "touched.set(WorldLab.AnimationProperty, '');\n",
     );
   });
 
@@ -978,7 +978,8 @@ describe('domain block generators', () => {
     expect(emit('world_set_sprite', {SPRITE: 'coinSpin.png#3'})).toBe(
       'actor.set(WorldLab.SpriteProperty, "coinSpin.png");\n' +
         'actor.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(96, 0));\n' +
-        'actor.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(32, 32));\n',
+        'actor.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(32, 32));\n' +
+        "actor.set(WorldLab.AnimationProperty, '');\n",
     );
 
     // An index the grid no longer holds draws the whole picture: a visible
@@ -2768,33 +2769,48 @@ describe('world block generators', () => {
     );
   });
 
-  it('registers every animation file the project holds, with no block for it', () => {
-    // There is no `use animations` block and deliberately so: an animation file
-    // is not something a world opts into, it is something the project HAS. A
-    // learner who draws one and plays it should not also have to remember to
-    // say the world may use it.
-    setProjectAnimationFiles([
-      ['game', 'animations/game'],
-      ['coinSpin', 'animations/coinSpin'],
-    ]);
-    const defs: Record<string, string> = {};
-    const code = run('world_world', {NAME: 'Platform World'}, defs, '');
-
+  it('declares an actor\u2019s animations on its kind, and plays its Main', () => {
+    // The row the data's view writes (`actors/actorData`): no toolbox offers
+    // it, and its state is the timelines (specs/ANIMATION_PLAN.md).
+    setProjectGrids(
+      {'coin.png': {type: 'sheet', cell: {width: 16, height: 16}}},
+      {'coin.png': {width: 48, height: 16}},
+    );
+    const definitions: Record<string, string> = {};
+    const block = {
+      animations_: {
+        Main: {
+          loop: true,
+          tracks: {
+            sprite: [{at: 0, value: 'coin.png#2'}],
+            'effect:effects/glow': [{at: 0.5, value: true}],
+          },
+        },
+      },
+    };
+    const code = generatorFor('world_actor_animations')(
+      block as never,
+      {definitions_: definitions} as never,
+      {} as never,
+    ) as string;
+    // A cell is resolved to its rectangle, as `set sprite`'s is…
     expect(code).toContain(
-      'world.useAnimations(WorldLab.parseAnimationFile(AnimationsGame));',
+      '"value":{"sprite":"coin.png","cell":{"x":32,"y":0,"width":16,"height":16}}',
     );
-    expect(code).toContain(
-      'world.useAnimations(WorldLab.parseAnimationFile(AnimationsCoinSpin));',
+    // …an effect a track switches on is imported, for its graph…
+    expect(code).toContain('"effects/glow": {document: EffectsGlow}');
+    expect(definitions['mod:effects/glow']).toBe(
+      'import EffectsGlow from "effects/glow";',
     );
-    expect(defs['mod:animations/game']).toBe(
-      'import AnimationsGame from "animations/game";',
-    );
-    setProjectAnimationFiles([]);
+    // …and Main plays when the actor is made.
+    expect(code).toContain('WorldLab.playAnimation(actor, "Main");');
+    setProjectGrids({}, {});
+    forgetImageSizes();
   });
 
   it('puts every rule the project holds in play, with no block for it', () => {
-    // Same argument as the animations above, and now made for rules too: a
-    // file is not a thing a world opts into, it is a thing the project HAS.
+    // A file is not a thing a world opts into, it is a thing the project
+    // HAS.
     // What made it safe to say is that a rule with no elected trait does
     // nothing, so gravity in a world with nothing falling costs a learner
     // nothing but used to cost them a row.

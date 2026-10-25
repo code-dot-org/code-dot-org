@@ -35,7 +35,10 @@ const AUDIT: ReadonlyArray<[item: string, doors: readonly Door[]]> = [
     ],
   ],
   ['the image editor, for a background', [[BACKGROUND_FIELD, /act: 'open'/]]],
-  ['the animation editor', [[ACTOR_EDITOR, /'Edit animation'/]]],
+  // The animation editor went with the `.anim` files: an animation is the
+  // actor's own, and is reached in the Actor Editor
+  // (specs/ANIMATION_PLAN.md).
+  ['an animation', [[ACTOR_EDITOR, /requestAppearanceImport\('animation'\)/]]],
   [
     'the effect editor',
     [[ACTOR_EDITOR, /path: `\$\{effect\.effect\}\.effect`/]],
@@ -50,7 +53,6 @@ const AUDIT: ReadonlyArray<[item: string, doors: readonly Door[]]> = [
     'a new background',
     [[BACKGROUND_FIELD, /act: 'make',\s+folder: BACKGROUNDS_FOLDER/]],
   ],
-  ['a new animation', [[ACTOR_EDITOR, /act: 'make',\s+folder: 'animations'/]]],
   ['a new effect', [[ACTOR_EDITOR, /act: 'make',\s+folder: 'effects'/]]],
   ['a new theme', [[THEME_FIELD, /act: 'make',\s+folder: 'styles'/]]],
   ['a new rule', [[SHELVES, /act: 'make', folder: 'rules'/]]],

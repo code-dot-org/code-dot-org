@@ -8,7 +8,6 @@
 // learner wanted to see a spin.
 
 import {render, screen} from '@testing-library/react';
-import {act} from 'react';
 import {describe, expect, it, vi} from 'vitest';
 
 import {AnimationPreview} from '../AnimationPreview';
@@ -93,24 +92,6 @@ describe('the dialog itself', () => {
     expect(container.querySelectorAll('img')).toHaveLength(0);
   });
 
-  it('DOES offer strips when frames are being cut from them', () => {
-    // The one caller for which a spritesheet is the answer: the animation
-    // editor, giving a frame its source. Giving an actor its picture and
-    // giving a frame its source are the same dialog and opposite questions,
-    // and hiding strips from both would have taken the sheet away from the
-    // one place it belongs.
-    render(
-      <ImportAppearanceDialog
-        kind="sprite"
-        forFrames
-        onImport={vi.fn()}
-        onCancel={vi.fn()}
-      />,
-    );
-
-    expect(rowNames().some(name => name.startsWith('Coin Spin'))).toBe(true);
-  });
-
   it('still draws a picture as an image', () => {
     const {container} = open('sprite');
 
@@ -119,53 +100,12 @@ describe('the dialog itself', () => {
 });
 
 describe('an animation row', () => {
-  it('draws one frame at a time, not the whole strip', () => {
-    // A strip is six cells wide. What a row shows is one cell of it, which is
-    // the difference between a contact sheet and an animation.
+  it('plays the animation, rather than showing its strip', () => {
+    // A strip is six cells wide; what a row shows is the animation, painted
+    // a moment at a time (`TimelineThumb`, `paintTimeline`, whose own tests
+    // say which cell each moment draws).
     const spin = stockAnimation('coinSpin')!;
     const {container} = render(<AnimationPreview animation={spin} />);
-
-    const cell = container.querySelector('span > span') as HTMLElement;
-    expect(cell.style.width).toBe('32px');
-    expect(cell.style.backgroundPosition).toBe('0px 0px');
-  });
-
-  it('moves on to the next frame at the document’s own rate', () => {
-    // The rate comes out of the file the import writes, so the preview and the
-    // imported animation cannot run at different speeds.
-    vi.useFakeTimers();
-    try {
-      const spin = stockAnimation('coinSpin')!;
-      const {container} = render(<AnimationPreview animation={spin} />);
-      const cell = () => container.querySelector('span > span') as HTMLElement;
-      expect(cell().style.backgroundPosition).toBe('0px 0px');
-
-      // Twelve frames a second, so one lasts a twelfth.
-      act(() => {
-        vi.advanceTimersByTime(1000 / 12 + 1);
-      });
-
-      expect(cell().style.backgroundPosition).toBe('-32px 0px');
-    } finally {
-      vi.useRealTimers();
-    }
-  });
-
-  it('comes back round to the first frame', () => {
-    vi.useFakeTimers();
-    try {
-      const spin = stockAnimation('coinSpin')!;
-      const {container} = render(<AnimationPreview animation={spin} />);
-      const cell = () => container.querySelector('span > span') as HTMLElement;
-
-      // Six frames at twelve a second: half a second is the whole loop.
-      act(() => {
-        vi.advanceTimersByTime(6 * (1000 / 12) + 6);
-      });
-
-      expect(cell().style.backgroundPosition).toBe('0px 0px');
-    } finally {
-      vi.useRealTimers();
-    }
+    expect(container.querySelector('canvas')).not.toBeNull();
   });
 });

@@ -46,9 +46,6 @@ export const SCREENS_FOLDER = 'screens';
  */
 export const SPRITES_FOLDER = 'sprites';
 
-/** …and the animations'. */
-export const ANIMATIONS_FOLDER = 'animations';
-
 // The backdrops' folder is NOT declared here: it is a rule about which images
 // are backdrops rather than a path, and it is read by the dropdowns and the
 // importer as well (`appearance/backgroundsFolder`).
@@ -98,9 +95,9 @@ export const SCREENS_MENU: FolderMenu = {
 /**
  * The kinds, in the order a project is built up in: a world, then the
  * pictures, because they come before the things made out of them; then the
- * actors, the rules that give them behavior, the animations made of those
- * same pictures, and the sounds; then the maps, and the effects and themes a
- * picture is drawn through.
+ * actors, the rules that give them behavior, and the sounds; then the maps,
+ * and the effects and themes a picture is drawn through. (No animations: an
+ * animation is an actor's own, specs/ANIMATION_PLAN.md.)
  */
 export const FOLDER_MENUS: readonly FolderMenu[] = [
   {
@@ -139,14 +136,6 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     label: 'Rules',
     icon: 'scroll',
     makes: [{label: 'New rule', extension: 'rule', placeholder: 'Gravity'}],
-  },
-  {
-    folder: ANIMATIONS_FOLDER,
-    label: 'Animations',
-    icon: 'film',
-    makes: [
-      {label: 'New animation', extension: 'anim', placeholder: 'Coin Spin'},
-    ],
   },
   {
     folder: 'sounds',

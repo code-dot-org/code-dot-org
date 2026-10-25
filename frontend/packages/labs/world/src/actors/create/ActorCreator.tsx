@@ -65,9 +65,8 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {AnimationThumb} from '../../animationEditor/AnimationThumb';
-import type {AnimDef} from '../../animationEditor/animDocument';
 import {CellThumb} from '../../animationEditor/CellThumb';
+import {AnimationPreview} from '../../appearance/AnimationPreview';
 import {DescribePicture} from '../../appearance/generate/DescribePicture';
 import type {
   GeneratedPicture,
@@ -75,6 +74,7 @@ import type {
 } from '../../appearance/generate/imageGenerator';
 import type {ImageKind} from '../../appearance/generate/imagePrompts';
 import type {TileScale} from '../../appearance/generate/ScaleGrid';
+import type {StockAnimation} from '../../appearance/stock';
 import type {PaletteTab} from '../actorPurpose';
 import {
   allAnswered,
@@ -116,12 +116,16 @@ export interface ActorTemplate {
   look?: ActorLook;
 }
 
-/** One animation the project holds, to be shown playing. */
+/**
+ * One animation from the library, to be shown playing: chosen, it is the
+ * actor's Main, and its pictures come into the project with it
+ * (specs/ANIMATION_PLAN.md).
+ */
 export interface PickableAnimation {
-  /** The id a `play animation` row stores. */
+  /** The library's id (`appearance/stock`). */
   id: string;
   name: string;
-  animation?: AnimDef;
+  animation: StockAnimation;
 }
 
 /** What the wizard comes to. */
@@ -850,12 +854,7 @@ export const ActorCreator = ({
                         }
                       >
                         <span className={styles.picture}>
-                          {one.animation && one.animation.frames.length > 0 && (
-                            <AnimationThumb
-                              animation={one.animation}
-                              images={images}
-                            />
-                          )}
+                          <AnimationPreview animation={one.animation} />
                         </span>
                         <Typography
                           component="span"

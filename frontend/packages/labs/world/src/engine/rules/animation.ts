@@ -1,18 +1,20 @@
 // The Animation rule ("Has Appearance") — governs how an Actor looks
-// (INTERFACE.md §Animations). An Actor elects the appearance trait and sets a
-// static `sprite` or a named `animation`; the rule advances the animation's
-// current frame each tick by the frame's resolved delay (its own, or the
-// animation's frame rate — animationTypes.frameDelay) and emits `AnimationEnded` when
-// a non-looping animation finishes. `World.renderSnapshot` reads the resulting
-// frame; the driver draws it. The engine owns timing and events — not Phaser.
+// (INTERFACE.md §Animations; specs/ANIMATION_PLAN.md). Every actor that is
+// drawn has the appearance trait, with a still `sprite` or a named
+// `animation` playing: one of its KIND's own, a timeline of keyframes
+// (`core/keyframes`). Each tick the rule advances it and sets what each of
+// its tracks says — the picture, where the picture is drawn against the
+// actor, how solid, which effects — and emits `AnimationEnded` when one that
+// does not loop finishes. `World.renderSnapshot` reads the result; the driver
+// draws it. The engine owns timing and events — not Phaser.
 //
-// Frame stepping is deterministic (a pure function of accumulated `delta` and
-// the animation's per-frame delays), so it is snapshot-visible and unit-tested
-// without a browser, like every other rule.
+// Deterministic (a pure function of accumulated `delta` and the timeline), so
+// it is snapshot-visible and unit-tested without a browser, like every other
+// rule.
 
 import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
-import {type AnimationDef, type Cell, frameDelay} from '../core/animationTypes';
+import type {Cell} from '../core/animationTypes';
 import {timeIn, valueAt, type Timeline} from '../core/keyframes';
 import {APPEARANCE} from '../core/spatialKeys';
 import type {Property} from '../core/types';
@@ -227,24 +229,27 @@ function publishPictureSize(world: World, actor: Actor): void {
 }
 
 /**
- * Set the actor's `IntrinsicSizeProperty` to the largest cell in `def` — a
- * stable, frame-independent box, so it does not pulse with the animation.
+ * Set the actor's `IntrinsicSizeProperty` to the largest cell its animation
+ * draws — a stable box, so it does not pulse as the pictures change.
  *
- * Runs after {@link publishPictureSize} and overrides it for an animated actor,
- * which is the right way round: that one reports the cell being drawn NOW.
+ * Runs after {@link publishPictureSize} and overrides it for an animated
+ * actor, which is the right way round: that one reports the cell being drawn
+ * NOW. A key naming a whole picture contributes nothing; the engine knows a
+ * whole picture's size only by asking, which `publishPictureSize` does.
  */
-function publishIntrinsicSize(actor: Actor, def: AnimationDef): void {
+function publishAnimationSize(actor: Actor, timeline: Timeline): void {
   let width = 0;
   let height = 0;
-  for (const frame of def.frames) {
-    if (frame.position) {
-      width = Math.max(width, frame.position.width);
-      height = Math.max(height, frame.position.height);
+  for (const key of timeline.tracks.sprite ?? []) {
+    const cell = (key.value as {cell?: Cell} | undefined)?.cell;
+    if (cell) {
+      width = Math.max(width, cell.width);
+      height = Math.max(height, cell.height);
     }
   }
   if (width > 0 && height > 0) {
-    // The LARGEST cell decides the fit, so a smaller frame draws smaller
-    // rather than every frame swelling to fill a tile — which is the same
+    // The LARGEST cell decides the fit, so a smaller picture draws smaller
+    // rather than every one swelling to fill a tile — which is the same
     // reason the largest cell is what the box is measured from.
     const fit = fitToTile(width, height);
     actor.set(IntrinsicSizeProperty, new Vector(width * fit, height * fit));
@@ -259,76 +264,31 @@ export const AdvanceAnimationStep = rule.addStep(
       // send a picture-only one away — it has a size too.
       publishPictureSize(world, actor);
       const id = actor.get(AnimationProperty);
-      // The actor's KIND's animation of that name first: a timeline, kept on
-      // the kind (specs/ANIMATION_PLAN.md). A project-wide flipbook second.
+      // The actor's KIND's animation of that name, kept on the kind
+      // (specs/ANIMATION_PLAN.md). There is no other kind of animation.
       const timeline = id ? world.timelineOf(actor, id) : undefined;
-      const def = id && !timeline ? world.animation(id) : undefined;
       // A replay was requested via `playAnimation` (consume it either way).
       const requested = actor.get(RestartRequestedProperty);
       if (requested) {
         actor.set(RestartRequestedProperty, false);
       }
-      // Restart frame state when the selection changed — or when a replay of the
-      // *same* animation was requested and that animation is non-looping. A
-      // looping animation is already cycling, so replaying it leaves it be
-      // (avoids a visible hitch); a non-looping one has stopped, so replaying it
-      // starts it over. `world.animation` is missing until the id resolves, so
-      // treat unknown ids as looping (the default) and let the guards below skip.
-      const looping = timeline
-        ? Boolean(timeline.loop)
-        : def
-          ? (def.loop ?? true)
-          : true;
+      // Restart when the selection changed — or when a replay of the SAME
+      // animation was requested and that animation does not loop. A loop is
+      // already cycling, so replaying it leaves it be (avoids a visible
+      // hitch); one that does not loop has stopped, so replaying it starts it
+      // over.
       const changed = id !== actor.get(PlayingProperty);
-      if (changed || (requested && !looping)) {
+      if (changed || (requested && !timeline?.loop)) {
         actor.set(PlayingProperty, id);
         actor.set(FrameProperty, 0);
         actor.set(ElapsedProperty, 0);
         actor.set(DoneProperty, false);
       }
-      if (!id || actor.get(DoneProperty)) {
+      if (!timeline || actor.get(DoneProperty)) {
         continue;
       }
-      if (timeline) {
-        playTimeline(world, actor, timeline, delta, changed || requested);
-        continue;
-      }
-      if (!def || def.frames.length === 0) {
-        continue;
-      }
-      // Publish this actor's intrinsic bounding size for Collision to default
-      // its box to (spatial trait). Use the largest frame cell so the box is
-      // stable across frames rather than pulsing with the animation; frames
-      // without a cell (a whole single image) contribute nothing, since the
-      // engine cannot know their pixel size.
-      publishIntrinsicSize(actor, def);
-      const loop = def.loop ?? true;
-      const last = def.frames.length - 1;
-      let frame = actor.get(FrameProperty);
-      let elapsed = actor.get(ElapsedProperty) + delta * 1000;
-      // Cross as many frame boundaries as `elapsed` allows. A non-positive or
-      // infinite delay holds the frame (a static one-frame sprite never advances).
-      for (;;) {
-        const delay = frameDelay(def, def.frames[frame]);
-        if (!Number.isFinite(delay) || delay <= 0 || elapsed < delay) {
-          break;
-        }
-        elapsed -= delay;
-        if (frame < last) {
-          frame += 1;
-        } else if (loop) {
-          frame = 0;
-        } else {
-          elapsed = 0;
-          actor.set(DoneProperty, true);
-          world.emit(AnimationEndedEvent, actor);
-          break;
-        }
-        // The frame changed; report it (detail = the new frame index).
-        world.emit(FrameChangedEvent, actor, frame);
-      }
-      actor.set(FrameProperty, frame);
-      actor.set(ElapsedProperty, elapsed);
+      publishAnimationSize(actor, timeline);
+      playTimeline(world, actor, timeline, delta);
     }
   },
 );
@@ -340,8 +300,8 @@ type SpriteKey = string | {sprite: string; cell?: Cell};
  * Advance a timeline animation and set what each of its tracks says now
  * (specs/ANIMATION_PLAN.md, step 2; `core/keyframes`).
  *
- * The frame is the sprite track's key, so `animation frame changes` means
- * what it meant for a flipbook: a new picture. A track that says nothing
+ * The frame is which picture the sprite track shows, so `animation frame
+ * changes` means what it meant for a flipbook: a new picture. A track that says nothing
  * yet — before its first key — leaves its property as the actor has it.
  */
 function playTimeline(
@@ -349,7 +309,6 @@ function playTimeline(
   actor: Actor,
   timeline: Timeline,
   delta: number,
-  started: boolean,
 ): void {
   const elapsed = actor.get(ElapsedProperty) + delta * 1000;
   const {t, ended} = timeIn(timeline, elapsed / 1000);
@@ -360,12 +319,23 @@ function playTimeline(
     }
     applyTrack(world, actor, property, value);
   }
+  // The frame is which PICTURE, counted as they change: a key repeating the
+  // one before it — the closing key that gives a flipbook's last picture its
+  // time (`core/keyframes`) — is the same frame, and changes nothing.
   const sprites = timeline.tracks.sprite ?? [];
   let frame = -1;
   for (let at = 0; at < sprites.length && sprites[at].at <= t; at++) {
-    frame = at;
+    if (
+      at === 0 ||
+      JSON.stringify(sprites[at].value) !==
+        JSON.stringify(sprites[at - 1].value)
+    ) {
+      frame += 1;
+    }
   }
-  if (frame >= 0 && frame !== actor.get(FrameProperty) && !started) {
+  // Against the frame before, which a start has just put at 0: so starting
+  // says nothing, and every picture after it says which it is.
+  if (frame >= 0 && frame !== actor.get(FrameProperty)) {
     world.emit(FrameChangedEvent, actor, frame);
   }
   actor.set(FrameProperty, Math.max(frame, 0));
@@ -452,10 +422,9 @@ export function playAnimation(target: AnimationTarget, id: string): void {
   target.set(RestartRequestedProperty, true);
 }
 
-// NO STOCK ANIMATIONS. An animation is frames of an image, and both are files a
-// project holds — the appearance library (`src/appearance/stock`) is a shelf to
-// copy from, not a set of things every game already has. The rule owns timing
-// and the properties; what plays is whatever the project registered
-// (`WorldBuilder.useAnimations`, from its own `.anim` files).
+// NO STOCK ANIMATIONS. An animation is the actor's own, made in the Actor
+// Editor or copied from the appearance library (`src/appearance/stock`) onto
+// the actor that takes it; the rule owns timing and the properties, and plays
+// what the kind declares (`ActorBuilder.useAnimations`).
 
 export const AnimationRule = rule.build();

@@ -9,9 +9,11 @@
 // reads, and the first thing they read is that a Label is an actor that elects
 // one trait and draws one thing (specs/UI_ACTORS.md).
 
+import {stockAnimation} from '../../appearance/stock';
 import {pascal, STARTS_EMPTY} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MAIN_WORLD_PATH} from '../../mainWorld';
+import {ANIMATIONS_ROW} from '../actorData';
 
 /**
  * How far apart a stock actor's handlers are listed.
@@ -139,17 +141,36 @@ export const onKey = (key: string, body: object[]) => ({
 });
 
 /**
- * `play animation ⟨id⟩` — the picture, for an actor that has one.
- *
- * The id is the animation's own key inside its `.anim` file, which is not
- * always the file's stem: the stock "switch" animation holds "switchFlip".
- * `importStockAnimation` returns the key it registered, so an actor and its
- * import can be checked against each other rather than trusted to agree.
+ * `play animation ⟨name⟩` — one of this actor's own animations, by the name
+ * it keeps it under (`animationsRow`).
  */
-export const playAnimation = (id: string) => ({
+export const playAnimation = (name: string) => ({
   type: 'world_play_animation',
-  fields: {ANIMATION: id},
+  fields: {ANIMATION: name},
 });
+
+/**
+ * The row that gives an actor its animations, by name, and plays its Main
+ * (specs/ANIMATION_PLAN.md): the library's timelines, by their stock ids.
+ * The pictures they read come in with the actor (`StockActor.animations`).
+ */
+export const animationsRow = (byName: Record<string, string>) => ({
+  type: ANIMATIONS_ROW,
+  extraState: {
+    animations: Object.fromEntries(
+      Object.entries(byName).map(([name, id]) => {
+        const stock = stockAnimation(id);
+        if (!stock) {
+          throw new Error(`no stock animation named "${id}"`);
+        }
+        return [name, stock.timeline];
+      }),
+    ),
+  },
+});
+
+/** An actor that looks like a stock animation: it is its Main. */
+export const looksLike = (id: string) => animationsRow({Main: id});
 
 /**
  * `define ⟨type⟩ ⟨property⟩ ⟨name⟩ with default ⟨value⟩` — state this KIND keeps.

@@ -53,8 +53,9 @@ describe('every stock actor', () => {
       // (`ActorBuilder.actsLike`).
       const blocks = types(actor.contents);
       const paints = blocks.includes('world_define_drawing');
+      // A still picture, or its own animations (specs/ANIMATION_PLAN.md).
       const pictured =
-        blocks.includes('world_play_animation') ||
+        blocks.includes('world_actor_animations') ||
         blocks.includes('world_set_sprite');
       const inherits = blocks.includes('world_acts_like');
       expect(paints || pictured || inherits, actor.id).toBe(true);

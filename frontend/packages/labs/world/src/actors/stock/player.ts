@@ -28,7 +28,7 @@
 // rather than neutral. A control scheme is what a player IS; what jumping is
 // FOR is still the game's.
 
-import {actorFile, onKey, playAnimation, useTrait} from './workspace';
+import {actorFile, looksLike, onKey, useTrait} from './workspace';
 
 /** The animation this plays, and so the one the import must bring. */
 export const PLAYER_ANIMATION = 'playerWalk';
@@ -52,7 +52,7 @@ export const playerActor = actorFile(
     // makes `rules/input` also tell THIS actor, and it is why that broadcast
     // walks one player rather than every coin.
     useTrait('Input#TakesKeyboardInputTrait'),
-    playAnimation(PLAYER_ANIMATION),
+    looksLike(PLAYER_ANIMATION),
   ],
   {handlers: [onKey('space', [jump])]},
 );

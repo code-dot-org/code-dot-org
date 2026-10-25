@@ -5,7 +5,6 @@
 import type {EffectDocument} from '../../effect/model/types';
 
 import type {Actor} from './Actor';
-import type {AnimationDef} from './animationTypes';
 import type {Trait} from './Trait';
 import type {World} from './World';
 
@@ -369,6 +368,4 @@ export interface Rule {
   readonly events: Readonly<Record<string, GameEvent>>;
   readonly traits: Readonly<Record<string, Trait>>;
   readonly steps: Readonly<Record<string, Step>>;
-  /** Stock animations this rule ships; a World seeds its registry from these. */
-  readonly animations: Readonly<Record<string, AnimationDef>>;
 }

@@ -14,9 +14,10 @@
 // whatever else is in the dropdown.
 //
 // So an import is an aggregate. A Coin asks for ONE rule and ONE animation and
-// writes seven files: Collection, the Collisions it requires, the Motion that
-// requires, the `.anim`, the strip its frames read, that strip's `.sheet`, and
-// the actor. Nothing here counts to seven — each of the three importers this
+// writes six files: Collection, the Collisions it requires, the Motion that
+// requires, the strip its animation reads, that strip's `.sheet`, and the
+// actor, which keeps the animation itself (specs/ANIMATION_PLAN.md). Nothing
+// here counts to six — each of the three importers this
 // calls walks its own dependencies and is a pure never-overwrite transform, so
 // they compose without any of them knowing about the others.
 

@@ -110,31 +110,6 @@ export function projectRuleOptions(
 }
 
 /**
- * `[label, path]` options for the project's animation files (`.anim` under
- * `animations/`) — the `world_use_animations` dropdown. The value is the
- * extension-less path the world imports (`animations/game`).
- */
-export function projectAnimationFileOptions(
-  files: Record<string, string>,
-): Array<[string, string]> {
-  const options: Array<[string, string]> = [];
-  for (const [path, contents] of Object.entries(files)) {
-    if (path.startsWith('animations/') && path.endsWith('.anim')) {
-      const modulePath = path.replace(/\.anim$/, '');
-      options.push([
-        // The name the file carries, else its stem titled: an imported one
-        // says "Coin Spin", the words the dialog offered it under, where the
-        // stem is the camelCase id a block stores (`AnimationFile.name`).
-        authoredName(contents) ??
-          label(modulePath.split('/').pop() ?? modulePath),
-        modulePath,
-      ]);
-    }
-  }
-  return options;
-}
-
-/**
  * `[name, path]` options for the project's effect files (`.effect` under
  * `effects/`) — the `world_add_effect` dropdown. The value is the
  * extension-less path the actor imports (`effects/ripple`).
@@ -407,8 +382,8 @@ export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
  * language's worst half-hour, and it existed to maintain a distinction only the
  * generated code made.
  *
- * Now holding the file is the whole of it, on the terms the `.anim` files have
- * always had, and the world generator emits what this reports. It is safe
+ * Now holding the file is the whole of it, and the world generator emits what
+ * this reports. It is safe
  * because a rule with no elected trait does nothing — see the note on
  * `world_world`'s generator.
  *

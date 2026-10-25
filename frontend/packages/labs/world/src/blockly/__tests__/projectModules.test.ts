@@ -3,7 +3,6 @@ import {describe, expect, it} from 'vitest';
 import {FOUNDATION_RULE_NAMES} from '../foundation';
 import {
   projectActorOptions,
-  projectAnimationFileOptions,
   projectEffectFileOptions,
   projectEffectParameters,
   projectMapActorTypes,
@@ -44,12 +43,6 @@ describe('projectModules', () => {
     // File is `platform` but the world calls itself "Platform World".
     expect(projectWorldOptions(FILES)).toEqual([
       ['Platform World', 'worlds/platform'],
-    ]);
-  });
-
-  it('lists animation files under animations/ as extension-less paths', () => {
-    expect(projectAnimationFileOptions(FILES)).toEqual([
-      ['Game', 'animations/game'],
     ]);
   });
 

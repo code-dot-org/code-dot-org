@@ -19,7 +19,7 @@ import {
 
 import type {Actor} from './Actor';
 import {anchored, isAnchor, type Anchor} from './anchors';
-import type {AnimationDef, FrameState} from './animationTypes';
+import type {FrameState} from './animationTypes';
 import {DEFAULT_CAMERA_ID, makeCamera, Camera, type CameraInit} from './Camera';
 import {
   isTimePart,
@@ -38,7 +38,7 @@ import {
 } from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
-import type {Timeline} from './keyframes';
+import {valueAt, type Timeline} from './keyframes';
 import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL, RESERVED_KEYS} from './keys';
 import {
   DEFAULT_LAYER_ID,
@@ -601,8 +601,6 @@ export interface WorldInit {
   name: string;
   /** Explicitly-used rules; their dependencies are pulled in implicitly. */
   rules: Rule[];
-  /** Animations to register beyond the active rules' stock, by id. */
-  animations?: Array<[string, AnimationDef]>;
   /**
    * The layers actors are drawn in, back to front (core/Layer).
    *
@@ -870,7 +868,6 @@ export class World {
   private elapsed = 0;
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
-  private readonly animationDefs = new Map<string, AnimationDef>();
   /**
    * How big each of the project's images is, by file name.
    *
@@ -1072,17 +1069,6 @@ export class World {
     // the file in front of the learner wins over one they imported.
     for (const property of init.ownProperties ?? []) {
       this.defineOwnProperty(property, property.default);
-    }
-
-    // Seed the animation registry from every active rule's stock animations,
-    // then apply any the builder registered (imported `.anim` files).
-    for (const rule of rules) {
-      for (const [id, def] of Object.entries(rule.animations)) {
-        this.animationDefs.set(id, def);
-      }
-    }
-    for (const [id, def] of init.animations ?? []) {
-      this.animationDefs.set(id, def);
     }
 
     this.appliedEffects = [];
@@ -4128,32 +4114,6 @@ export class World {
   }
 
   /**
-   * How much an animation's frames are shrunk, by its largest cell.
-   *
-   * THE LARGEST, not each frame's own: fitted one by one, a two-pixel frame
-   * would draw as big as a hundred-pixel one and the actor would pulse. It is
-   * the same quantity `publishIntrinsicSize` measures the box from, which is
-   * what keeps the drawn size and the box the same number
-   * (specs/ACTOR_SIZE.md).
-   */
-  private publishAnimationSize(actor: Actor, def: AnimationDef): number {
-    let width = 0;
-    let height = 0;
-    for (const frame of def.frames) {
-      if (frame.position) {
-        width = Math.max(width, frame.position.width);
-        height = Math.max(height, frame.position.height);
-      }
-    }
-    if (width <= 0 || height <= 0) {
-      return 1;
-    }
-    const fit = fitToTile(width, height);
-    this.publishSize(actor, width * fit, height * fit);
-    return fit;
-  }
-
-  /**
    * Say how big an actor is, if it has changed.
    *
    * WRITTEN FROM THE SNAPSHOT, which the drawing branch below has always done
@@ -4238,14 +4198,10 @@ export class World {
     }
   }
 
-  animation(id: string): AnimationDef | undefined {
-    return this.animationDefs.get(id);
-  }
-
   /**
    * The animation `name` an actor plays, when its KIND has one of that name
-   * (specs/ANIMATION_PLAN.md): a timeline, which wins over a project-wide
-   * flipbook of the same id.
+   * (specs/ANIMATION_PLAN.md). An animation is its kind's and nobody
+   * else's: there is no project-wide one to fall back to.
    */
   timelineOf(actor: Actor, name: string): Timeline | undefined {
     return this.kindAnimations.get(actor.type)?.timelines[name];
@@ -4295,11 +4251,6 @@ export class World {
     }
     const load = this.loadOf.get(actor);
     return load ? loads.indexOf(load) >= topModal : false;
-  }
-
-  /** The ids of every registered animation (active rules' stock + world extras). */
-  animationIds(): string[] {
-    return [...this.animationDefs.keys()];
   }
 
   /** Advance the simulation by `delta` seconds. */
@@ -4906,9 +4857,6 @@ export class World {
     const animationProp = appearanceTrait?.properties[APPEARANCE.animation] as
       | Property<string>
       | undefined;
-    const frameProp = appearanceTrait?.properties[APPEARANCE.frame] as
-      | Property<number>
-      | undefined;
     const drawnOffsetProp = appearanceTrait?.properties[
       APPEARANCE.drawnOffset
     ] as Property<Vector> | undefined;
@@ -4932,42 +4880,36 @@ export class World {
         ? {}
         : {drawn: {x, y, scale, turn}};
     };
-    // Resolve one actor's current appearance frame: a playing animation's frame
-    // wins, then a static sprite, then nothing (a plain rectangle).
+    // Resolve one actor's current appearance frame: its sprite, then nothing
+    // (a plain rectangle). An animation sets the sprite as it plays
+    // (`rules/animation.playTimeline`) — except before the first step has
+    // run, when it has set nothing yet: then the picture is the animation's
+    // own at its start.
     const frameFor = (actor: Actor): FrameState | undefined => {
       if (!appearanceTrait || !actor.has(appearanceTrait)) {
         return undefined;
       }
+      let sprite = spriteProp ? actor.get(spriteProp) : '';
+      let first: FrameState['cell'];
       const animId = animationProp ? actor.get(animationProp) : '';
-      // A timeline sets the sprite itself (`rules/animation.playTimeline`), so
-      // an actor playing one is drawn from its sprite, below, even where a
-      // project-wide flipbook has the same id.
-      if (animId && !this.timelineOf(actor, animId)) {
-        const def = this.animationDefs.get(animId);
-        if (def && def.frames.length > 0) {
-          const index = frameProp ? actor.get(frameProp) : 0;
-          const f = def.frames[Math.min(index, def.frames.length - 1)];
-          return {
-            sprite: f.sprite,
-            cell: f.position,
-            offset: f.offset ?? {x: 0, y: 0},
-            // FITTED, by the same factor the size was published with: the
-            // largest cell across the whole animation, so a smaller frame
-            // draws smaller instead of every frame swelling to a tile
-            // (`rules/animation.publishIntrinsicSize`, specs/ACTOR_SIZE.md).
-            scale: (f.scale ?? 1) * this.publishAnimationSize(actor, def),
-          };
-        }
+      const timeline = animId ? this.timelineOf(actor, animId) : undefined;
+      if (!sprite && timeline) {
+        const key = valueAt(timeline.tracks.sprite ?? [], 0) as
+          | string
+          | {sprite: string; cell?: FrameState['cell']}
+          | undefined;
+        sprite = typeof key === 'string' ? key : (key?.sprite ?? '');
+        first = typeof key === 'string' ? undefined : key?.cell;
       }
-      const sprite = spriteProp ? actor.get(spriteProp) : '';
       if (sprite) {
         // A static sprite may draw one cell of a spritesheet: the rectangle is
         // on the actor (set by `set sprite`), since the engine knows nothing of
         // grids. A size of (0, 0) means the whole image.
         const size = cellSizeProp ? actor.get(cellSizeProp) : undefined;
         const origin = cellOriginProp ? actor.get(cellOriginProp) : undefined;
-        const cell =
-          size && size.x > 0 && size.y > 0
+        const cell = first
+          ? first
+          : size && size.x > 0 && size.y > 0
             ? {
                 x: origin?.x ?? 0,
                 y: origin?.y ?? 0,

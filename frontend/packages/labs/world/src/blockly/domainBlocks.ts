@@ -99,7 +99,6 @@ import {
   namesPlacedActor,
 } from './extensions/addActorName';
 import {
-  animationImportFieldExtension,
   backgroundImportFieldExtension,
   spriteImportFieldExtension,
 } from './extensions/appearanceImportField';
@@ -187,7 +186,6 @@ import {
   actorImportOptionsExtension,
   actorOptionsExtension,
   actorTypeOptionsExtension,
-  animationFileOptions,
   effectFileImportOptions,
   effectFileImportOptionsExtension,
   effectFileOptions,
@@ -321,9 +319,8 @@ const spriteOptionsExtension = liveDropdown(
 );
 
 // The animation dropdown's static fallback. The `animationOptionsExtension`
-// replaces it at block-init with the live registry: the ids the project's own
-// `.anim` files define, and `(import…)`. There are no built-in animations —
-// an animation is frames of an image, and both are files a project holds.
+// replaces it at block-init with the live registry: the actor's own
+// animations (specs/ANIMATION_PLAN.md). There are no built-in ones.
 const ANIMATION_OPTIONS = (): Array<[string, string]> => animationOptions();
 
 // The rules whose members drive the block palette: the built-in library as
@@ -767,7 +764,7 @@ const worldActorAnimations = defineBlock({
                   property === 'sprite'
                     ? track.map(key => ({
                         ...key,
-                        value: spriteKeyValue(String(key.value)),
+                        value: spriteKeyValue(key.value),
                       }))
                     : track,
                 ];
@@ -797,8 +794,14 @@ const worldActorAnimations = defineBlock({
   },
 });
 
-/** A sprite key as the engine takes one: a file, or a file and a rectangle. */
-const spriteKeyValue = (value: string) => {
+/**
+ * A sprite key as the engine takes one: a file, or a file and a rectangle.
+ * One already a rectangle — the library writes them so — is as it is.
+ */
+const spriteKeyValue = (value: unknown) => {
+  if (typeof value !== 'string') {
+    return value;
+  }
   const cell = spriteCell(value);
   return cell ? {sprite: parseSpriteRef(value).sprite, cell} : value;
 };
@@ -1314,6 +1317,10 @@ const worldSetSprite = defineBlock({
           `${actor}.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(${
             cell?.width ?? 0
           }, ${cell?.height ?? 0}))`,
+          // A still picture, so whatever was playing stops: an animation
+          // still playing would put its own picture back on the next frame
+          // (specs/ANIMATION_PLAN.md).
+          `${actor}.set(WorldLab.AnimationProperty, '')`,
         ].join(';\n');
       return forEachActor(target, lines);
     },
@@ -1328,11 +1335,7 @@ const worldPlayAnimation = defineBlock({
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
   inputsInline: true,
-  extensions: [
-    animationOptionsExtension,
-    animationImportFieldExtension,
-    actorInputExtension,
-  ],
+  extensions: [animationOptionsExtension, actorInputExtension],
   previousStatement: true,
   nextStatement: true,
   // `play animation` is an action of the appearance rule → the action (default)
@@ -7198,28 +7201,8 @@ export function worldModulePrologue(
       return `world.useRules([${importVar(modulePath)}]);\n`;
     })
     .join('');
-  // Every `.anim` in the project, registered. There is no block for this and
-  // deliberately so: an animation file is not a thing a world opts into, it
-  // is a thing the project HAS — a learner who draws one and plays it should
-  // not also have to remember to say the world may use it. The blocks below
-  // decide what plays; this decides what exists.
-  const animations = animationFileOptions()
-    .map(([, modulePath]) => modulePath)
-    .filter(modulePath => modulePath)
-    .map(modulePath => {
-      addImport(
-        generator,
-        `mod:${modulePath}`,
-        `import ${importVar(modulePath)} from ${str(modulePath)};`,
-      );
-      return `world.useAnimations(WorldLab.parseAnimationFile(${importVar(
-        modulePath,
-      )}));\n`;
-    })
-    .join('');
   // Every MAP the project holds, registered by path with the kinds it
-  // places defined, by the argument the animations above make: a map is
-  // a thing the project has, and a Viewport names one by path in a
+  // places defined: a map is a thing the project has, and a Viewport names one by path in a
   // property, which no import can follow (specs/VIEWPORT_PLAN.md).
   // …and every ACTOR the project holds, registered by path. `add actor`
   // has its template in hand and needs none of this; `bring back what was
@@ -7337,7 +7320,6 @@ export function worldModulePrologue(
     own +
     rules +
     prologue.hoisted.join('') +
-    animations +
     // BEFORE the body, which is where `use theme` sits: the row names a
     // base and the world has to be able to find it, and every other
     // theme besides, before anything draws.

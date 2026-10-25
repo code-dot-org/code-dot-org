@@ -347,8 +347,10 @@ const unlockIcon = (unlock: Unlock): string => {
     case 'asset':
       // A picture or a strip of them — which it is, is a fact about the
       // library rather than about the unlock, so this asks the library.
+      // An animation is no folder's (specs/ANIMATION_PLAN.md), so it wears
+      // the film the Actor Editor's animations are drawn with.
       return STOCK_ANIMATIONS.some(one => one.id === unlock.id)
-        ? iconFor('animations')
+        ? 'film'
         : iconFor('sprites');
     case 'editor':
     case 'affordance':

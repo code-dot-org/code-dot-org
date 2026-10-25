@@ -14,7 +14,6 @@ import type {Block, FieldDropdown} from 'blockly';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {
-  IMPORT_ANIMATION_VALUE,
   IMPORT_BACKGROUND_VALUE,
   IMPORT_SPRITE_VALUE,
   requestAppearanceImport,
@@ -32,12 +31,6 @@ const KINDS: ReadonlyArray<{
     field: 'SPRITE',
     sentinel: IMPORT_SPRITE_VALUE,
     kind: 'sprite',
-  },
-  {
-    extension: 'world_animation_import_field',
-    field: 'ANIMATION',
-    sentinel: IMPORT_ANIMATION_VALUE,
-    kind: 'animation',
   },
   {
     extension: 'world_background_import_field',
@@ -94,8 +87,7 @@ const importField = ({
     },
   });
 
-export const [
-  spriteImportFieldExtension,
-  animationImportFieldExtension,
-  backgroundImportFieldExtension,
-] = KINDS.map(importField);
+// No `play animation` row: an animation is the actor's own, added to it in
+// the Actor Editor, not a file a block can fetch (specs/ANIMATION_PLAN.md).
+export const [spriteImportFieldExtension, backgroundImportFieldExtension] =
+  KINDS.map(importField);

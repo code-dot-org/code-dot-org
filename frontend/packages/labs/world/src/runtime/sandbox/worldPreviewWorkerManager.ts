@@ -45,8 +45,8 @@ const DEFERRED_PROPS = new Set<string>([]);
 /**
  * Enumerable string properties → their allowed values, so the editor renders a
  * dropdown. Keyed by `${ownerId}.${propId}`; `animation` resolves against the
- * world's live registry (the project's own animations), `sprite` against the
- * images the project holds. There is no built-in set on either side: a game
+ * actor's kind's own animations, `sprite` against the images the project
+ * holds. There is no built-in set on either side: a game
  * draws what its project has.
  */
 function optionsFor(
@@ -333,7 +333,6 @@ export async function start(): Promise<void> {
         if (metrics) {
           world.useTextMetrics(metrics);
         }
-        const animationIds = world.animationIds();
         // Uploaded sprites: the same asset map the thumbnails render from — its
         // keys are the sprite names a placement may reference.
         const uploadedSprites = Object.keys(lastAssets);
@@ -349,7 +348,13 @@ export async function start(): Promise<void> {
           world.addActor(actor);
           typeOf.set(actor, type);
           builders.set(type, builder);
-          schemas[type] = describeActor(actor, animationIds, uploadedSprites);
+          // The kind's own animations, which are the only ones it can play
+          // (specs/ANIMATION_PLAN.md).
+          schemas[type] = describeActor(
+            actor,
+            Object.keys(builder.ownAnimations),
+            uploadedSprites,
+          );
         }
         // …and one actor per REQUESTED PLACEMENT, wearing that placement's
         // overrides. A kind's picture is not a placement's — three Labels say

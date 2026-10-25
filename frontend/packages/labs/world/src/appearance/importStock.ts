@@ -26,7 +26,6 @@ import {
 
 /** Where each kind lives, by the lab's directory convention (GLOSSARY.md). */
 const SPRITES_FOLDER = 'sprites';
-const ANIMATIONS_FOLDER = 'animations';
 
 /** The result of an import: the new project, and what the block should name. */
 export interface ImportedAppearance {
@@ -59,7 +58,7 @@ export function importStockSprite(
     mimeType: 'image/png',
   });
   // A grid comes with the file that says it is one — an image without its
-  // `.sheet` is a picture, and the animation editor would offer no frames.
+  // `.sheet` is a picture, with no cells to cut.
   if (sprite.sheet) {
     current = writeFile(current, placed.folderId, {
       name: sheetFileName(name),
@@ -80,7 +79,7 @@ export function importStockSprite(
  *
  * No `.sheet`, ever. A backdrop is stretched over the viewport, so a grid of one
  * means nothing, and a file saying otherwise beside it would be a lie the
- * animation editor believes.
+ * cell pickers believe.
  */
 export function importStockBackground(
   source: MultiFileSource,
@@ -100,7 +99,14 @@ export function importStockBackground(
   };
 }
 
-/** Copy a stock animation in, with the images its frames read. */
+/**
+ * Copy in the pictures a stock animation reads.
+ *
+ * Only the pictures: the animation itself is a timeline the actor that takes
+ * it keeps (specs/ANIMATION_PLAN.md), so it is written into that actor, not
+ * into the project. The value is the library's id, which the one who asked
+ * looks the timeline up by (`stockAnimation`).
+ */
 export function importStockAnimation(
   source: MultiFileSource,
   animation: StockAnimation,
@@ -112,21 +118,5 @@ export function importStockAnimation(
       current = importStockSprite(current, sprite).source;
     }
   }
-  const placed = folderIn(current, ANIMATIONS_FOLDER);
-  // The NAME the dialog offered it under, written into the file. Without it
-  // the project's only word for this animation was `coinSpin` — the id, which
-  // is camelCase because a block stores it — and a learner who chose "Coin
-  // Spin" never saw those words again (`AnimationFile.name`).
-  const document = {name: animation.name, ...animation.document};
-  return {
-    source: writeFile(placed.source, placed.folderId, {
-      name: `${animation.id}.anim`,
-      language: 'anim',
-      contents: `${JSON.stringify(document, null, 2)}\n`,
-    }),
-    // The id a `play animation` block stores — the animation's own key inside
-    // the file, which is not always the file's stem ("switch" holds
-    // "switchFlip").
-    value: Object.keys(animation.document.animations)[0] ?? animation.id,
-  };
+  return {source: current, value: animation.id};
 }

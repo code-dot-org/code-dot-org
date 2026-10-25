@@ -36,8 +36,7 @@ describe('what a new file starts as', () => {
     for (const extension of ['world', 'actor', 'rule']) {
       expect(named(extension), extension).toBe('Chaser');
     }
-    // …and the two documents that name themselves at the top level.
-    expect(named('anim')).toBe('Chaser');
+    // …and the document that names itself at the top level.
     expect(named('effect')).toBe('Chaser');
   });
 

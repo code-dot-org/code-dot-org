@@ -956,7 +956,7 @@ describe('WorldBuilder declaration order', () => {
 
   it('names the block to move, not the internal state', () => {
     // The message is read by a learner in the console, so it says what to drag.
-    expect(() => placed().useAnimations({})).toThrow(
+    expect(() => placed().defineLayer({id: 'front'} as never)).toThrow(
       /move it above "load map"/,
     );
   });

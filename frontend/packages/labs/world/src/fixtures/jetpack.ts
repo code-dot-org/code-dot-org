@@ -97,8 +97,10 @@ import {labelActor} from '../actors/stock/label';
 import {progressBarActor} from '../actors/stock/progressBar';
 import {
   actsLike,
+  animationsRow,
   drawText,
   fill,
+  looksLike,
   rectangle,
   setText,
   swatch,
@@ -106,7 +108,7 @@ import {
 import {
   gameScreen,
   stack,
-  starterAnimations,
+  starterAnimationPictures,
   starterSprites,
   useTrait,
   type ProjectSpec,
@@ -636,6 +638,9 @@ const PILOT_ACTOR = JSON.stringify({
             useTrait('Arrow Keys#MovesAcrossTrait'),
             useTrait('Jumping#JumpsTrait'),
             useTrait('Jetpack#FliesWithAJetpackTrait'),
+            // What flying and climbing look like: the Pilot's own animations,
+            // played by the handlers below (specs/ANIMATION_PLAN.md).
+            animationsRow({Fly: 'pilotFly', Climb: 'pilotClimb'}),
             // Up and down climb, and only on a ladder. `Climbs` is the
             // mechanic; the keys that steer it are the step below, which is
             // what `actors/enhance/climbArrows` writes for a learner — the
@@ -830,9 +835,9 @@ const PILOT_ACTOR = JSON.stringify({
       // rule names a picture — a jetpack does not know it has a flame — so
       // this is where the project says what flying and climbing look like,
       // and it is four handlers and nothing else.
-      looks('Jetpack_StartsFlyingEvent', playAnimation('pilotFly'), 880),
+      looks('Jetpack_StartsFlyingEvent', playAnimation('Fly'), 880),
       looks('Jetpack_StopsFlyingEvent', still(), 1000),
-      looks('Climbing_StartsClimbingEvent', playAnimation('pilotClimb'), 1120),
+      looks('Climbing_StartsClimbingEvent', playAnimation('Climb'), 1120),
       looks('Climbing_StopsClimbingEvent', still(), 1240),
       // A coin is a point BECAUSE THIS LINE SAYS SO. The coin elects the same
       // trait a gem does and knows nothing about either.
@@ -2154,7 +2159,7 @@ const JETPACK_SCREEN = gameScreen(
 );
 
 export const JETPACK_SPEC: ProjectSpec = {
-  folders: ['screens', 'actors', 'rules', 'maps', 'sprites', 'animations'],
+  folders: ['screens', 'actors', 'rules', 'maps', 'sprites'],
   files: {
     main: {
       name: 'main.screen',
@@ -2289,7 +2294,7 @@ export const JETPACK_SPEC: ProjectSpec = {
               next: {
                 block: stack([
                   useTrait('Collection#CanBeCollectedTrait'),
-                  playAnimation('coinSpin'),
+                  looksLike('coinSpin'),
                 ]),
               },
             },
@@ -2536,7 +2541,7 @@ export const JETPACK_SPEC: ProjectSpec = {
       'fuelCan',
       'fuelCanSmall',
     ]),
-    ...starterAnimations(['pilotFly', 'pilotClimb', 'coinSpin']),
+    ...starterAnimationPictures(['pilotFly', 'pilotClimb', 'coinSpin']),
   },
   open: ['main'],
 };

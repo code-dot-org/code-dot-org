@@ -496,7 +496,6 @@ export const FLAPPY_SPEC: ProjectSpec = {
     'rules',
     'screens',
     'actors',
-    'animations',
     'sprites',
     'backgrounds',
     'maps',

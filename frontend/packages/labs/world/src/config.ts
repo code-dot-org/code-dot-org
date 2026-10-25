@@ -5,7 +5,6 @@ import {markdown} from '@codemirror/lang-markdown';
 import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
 import {ActorFileEditor} from './actors/editor/ActorEditor';
-import {AnimationEditor} from './animationEditor/AnimationEditor';
 import {followImages} from './appearance/sheetCompanions';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {orShowCode} from './debug/orShowCode';
@@ -27,11 +26,11 @@ import {StyleFileEditor} from './styles/StyleFileEditor';
  * imports the compiled bundle (SANDBOX.md, PLAN §6).
  *
  * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, and
- * `world` are Blockly-authored; `map` is a world-population document,
- * `anim` an animation file, and `effect` a shader graph — all JSON on disk with
- * no CodeMirror language. `editorComponents` routes each to its custom editor
- * (the Blockly workspace editor, the visual map editor, the animation editor,
- * or the effect graph editor). Images (`png`) are supported (shown in the tree,
+ * `world` are Blockly-authored; `map` is a world-population document and
+ * `effect` a shader graph — both JSON on disk with no CodeMirror language.
+ * `editorComponents` routes each to its custom editor (the Blockly workspace
+ * editor, the visual map editor, or the effect graph editor). An animation is
+ * not a file: it is the actor's own (specs/ANIMATION_PLAN.md). Images (`png`) are supported (shown in the tree,
  * handed to the game) but not edited.
  */
 export const WORLD_EDITABLE_FILE_TYPES = [
@@ -48,8 +47,6 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'screen',
   // A `.map` is a world-population document, edited in the visual map editor.
   'map',
-  // A `.anim` is an animation file (JSON), edited in the visual animation editor.
-  'anim',
   // An `.effect` is a node graph that compiles to a GLSL shader, edited in the
   // effect editor (specs/EFFECT_EDITOR.md).
   'effect',
@@ -111,7 +108,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     world: 'world',
     screen: 'screen',
     map: 'map',
-    anim: 'anim',
     effect: 'effect',
     style: 'style',
     sheet: 'json',
@@ -141,7 +137,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     world: orShowCode(WorldEditor),
     map: orShowCode(MapEditor),
     screen: orShowCode(ScreenEditor),
-    anim: AnimationEditor,
     effect: EffectFileEditor,
     // A theme: values, and what each control is made of (specs/STYLES_PLAN.md).
     style: StyleFileEditor,

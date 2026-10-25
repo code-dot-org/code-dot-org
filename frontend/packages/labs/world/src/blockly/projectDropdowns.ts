@@ -20,13 +20,12 @@ import {
 import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
 
-import {setKindAnimations, setProjectAnimations} from './animationOptions';
+import {setKindAnimations} from './animationOptions';
 import {setStoredCameras} from './cameras';
 import {duplicateEnumNames, registerProjectEnums} from './enums';
 import {
   setActorParents,
   setProjectActors,
-  setProjectAnimationFiles,
   setProjectEffectFiles,
   setProjectStyleFiles,
   setProjectStyleNames,
@@ -38,10 +37,8 @@ import {
   setProjectSprites,
 } from './moduleOptions';
 import {OPENABLE_EXTENSIONS, setOpenableModules} from './openModule';
-import {projectAnimationIds} from './projectAnimations';
 import {
   projectActorOptions,
-  projectAnimationFileOptions,
   projectEffectFileOptions,
   projectStyleFileOptions,
   projectStyleNames,
@@ -105,10 +102,9 @@ export function refreshProjectDropdowns(
   // are — together they say how many cells a sheet holds, which is what a
   // `set sprite` dropdown offers and what its generator resolves (spriteCells).
   setProjectGrids(projectSheets(files), imageSizes);
-  const animationIds = projectAnimationIds(files);
-  setProjectAnimations(animationIds);
   // …and each data-shaped actor's own, by its module path.
-  setKindAnimations(kindAnimationNames(files));
+  const kindAnimations = kindAnimationNames(files);
+  setKindAnimations(kindAnimations);
   // The images a `set sprite` block may name: the project's own, and nothing
   // else — a game draws what its project holds.
   const sprites = projectSpriteOptions(files, images);
@@ -140,8 +136,6 @@ export function refreshProjectDropdowns(
       ),
     ),
   );
-  const animationFiles = projectAnimationFileOptions(files);
-  setProjectAnimationFiles(animationFiles);
   const effectFiles = projectEffectFileOptions(files);
   setProjectEffectFiles(effectFiles);
   // The themes, and the style names they define between them: one dropdown for
@@ -202,11 +196,10 @@ export function refreshProjectDropdowns(
   environment = JSON.stringify([
     measuredImages(),
     sounds,
-    animationIds,
+    kindAnimations,
     sprites,
     backgrounds,
     actors,
-    animationFiles,
     effectFiles,
     effectParameters,
     maps,

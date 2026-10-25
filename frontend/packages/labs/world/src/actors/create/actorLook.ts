@@ -18,6 +18,7 @@
 // about the project or about React.
 
 import {
+  ANIMATIONS_ROW,
   isDataShaped,
   lookOf as dataLookOf,
   throughView,
@@ -25,6 +26,7 @@ import {
   type ActorData,
 } from '../actorData';
 import {down, rootsOf, type BlockJson} from '../enhance/patch';
+import {looksLike} from '../stock/workspace';
 
 const SPRITE_ROW = 'world_set_sprite';
 const ANIMATION_ROW = 'world_play_animation';
@@ -35,9 +37,14 @@ export type ActorLook =
   | {kind: 'sprite'; value: string}
   | {kind: 'animation'; value: string};
 
-/** Whether a row is one of the two that says what an actor looks like. */
+/**
+ * Whether a row says what an actor looks like: a still picture, a flipbook
+ * it plays, or its own animations (`actorData.ANIMATIONS_ROW`).
+ */
 const isLook = (block: BlockJson): boolean =>
-  block.type === SPRITE_ROW || block.type === ANIMATION_ROW;
+  block.type === SPRITE_ROW ||
+  block.type === ANIMATION_ROW ||
+  block.type === ANIMATIONS_ROW;
 
 /** The look a workspace's `define actor` already declares, if it declares one. */
 export function lookOf(file: string): ActorLook | undefined {
@@ -45,11 +52,7 @@ export function lookOf(file: string): ActorLook | undefined {
   // an animated Main has no `set sprite` row for (specs/ANIMATION_PLAN.md).
   if (isDataShaped(file)) {
     const look = dataLookOf(JSON.parse(file) as ActorData);
-    return !look
-      ? undefined
-      : 'sprite' in look
-        ? {kind: 'sprite', value: look.sprite}
-        : {kind: 'animation', value: look.animation};
+    return look ? {kind: 'sprite', value: look.sprite} : undefined;
   }
   // Either shape (`actors/actorData`).
   const contents = viewOf(file);
@@ -69,11 +72,14 @@ export function lookOf(file: string): ActorLook | undefined {
   return undefined;
 }
 
-/** The row a look is written as. */
+/**
+ * The row a look is written as: a still picture's `set sprite`, or, for an
+ * animation from the library, the actor's own Main (`stock/workspace`).
+ */
 const rowFor = (look: ActorLook): BlockJson =>
   look.kind === 'sprite'
     ? {type: SPRITE_ROW, fields: {SPRITE: look.value}}
-    : {type: ANIMATION_ROW, fields: {ANIMATION: look.value}};
+    : (looksLike(look.value) as BlockJson);
 
 /**
  * Make the actor look like this, replacing whatever it looked like.

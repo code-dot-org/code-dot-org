@@ -52,13 +52,11 @@ export interface StockActor {
    */
   requires: readonly string[];
   /**
-   * The stock ANIMATIONS the workspace plays, by id.
+   * The stock ANIMATIONS the actor keeps, by id (`stock/workspace.looksLike`).
    *
-   * Brought with the actor for the reason the rules are. A `play animation`
-   * field holds an id the project's own `.anim` files define, so one naming an
-   * animation the project lacks is a field whose value is not among its
-   * options — which resolves to something else or to nothing, and says so
-   * nowhere. Each animation brings the image its frames read.
+   * The animation is written into the actor; what is brought with it, for the
+   * reason the rules are, are the pictures its keys read — an animation of a
+   * picture the project lacks draws nothing, and says so nowhere.
    */
   animations?: readonly string[];
   /**

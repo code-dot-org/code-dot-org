@@ -16,11 +16,10 @@
 //   - `useRules`: rule membership resolves through a DependencySet, seeds every
 //     world-scoped property default, and fixes the per-tick step order
 //     (`new Scheduler(steps)`). None of those has an incremental form.
-//   - `useAnimations`: the registry is seeded once, from the active rules.
 //   - `defineLayer`: declaration order IS draw order, so a layer arriving later
 //     would have to be spliced into a scene graph the driver already made.
 //
-// Those three THROW when they arrive too late — silently dropping a rule a
+// Those two THROW when they arrive too late — silently dropping a rule a
 // learner can see they asked for is worse. Everything else is a one-line
 // `defer`, which is the point: there is no per-method decision to get wrong.
 // A method that forwards to a World it does not have was this file's recurring
@@ -35,7 +34,6 @@
 
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
-import type {AnimationDef} from '../core/animationTypes';
 import type {Camera, CameraInit} from '../core/Camera';
 import type {ColorValue} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
@@ -110,7 +108,6 @@ export class WorldBuilder {
   private readonly name: string;
   private rules: Rule[] = [];
   private readonly hidden = new Set<Rule>();
-  private readonly animations: Record<string, AnimationDef> = {};
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
@@ -198,16 +195,6 @@ export class WorldBuilder {
   /** Whether a rule is marked hidden (for the interface layer). */
   isHidden(rule: Rule): boolean {
     return this.hidden.has(rule);
-  }
-
-  /**
-   * Register animations (typically from imported `.anim` files) by id, in
-   * addition to the stock animations the active rules ship.
-   */
-  useAnimations(defs: Record<string, AnimationDef>): this {
-    this.requireNoActors('use animations');
-    Object.assign(this.animations, defs);
-    return this;
   }
 
   /**
@@ -873,7 +860,6 @@ export class WorldBuilder {
       id: this.id,
       name: this.name,
       rules: this.rulesInPlay(),
-      animations: Object.entries(this.animations),
       layers: this.layers.map(layer => ({...layer})),
       ownProperties: this.own,
     });

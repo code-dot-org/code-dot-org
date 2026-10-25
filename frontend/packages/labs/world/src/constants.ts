@@ -18,6 +18,7 @@ import {
   actsLike,
   drawText,
   fill,
+  looksLike,
   showAs,
   textOf,
 } from './actors/stock/workspace';
@@ -399,19 +400,15 @@ const PLAYER_ACTOR = JSON.stringify(
               // making a second kind of thing collectible is an edit to that
               // thing and not to this file.
               useTrait('Collection#CollectsTrait'),
-              // Plays a learner-authored animation (game.anim) — its id is in
-              // the dropdown because the lab feeds the project's animations to
-              // the block (Phase D). Position is set by the map when the world
-              // places this actor, not here.
+              // Looks like the library's bob, which is its own Main animation
+              // (specs/ANIMATION_PLAN.md). Position is set by the map when
+              // the world places this actor, not here.
               //
               // No `use trait Has Appearance` above it any more: every actor
               // has that, and being positioned, without electing either
               // (ActorBuilder's foundation). What is left are the traits that
               // make this actor a PLAYER rather than a coin.
-              {
-                type: 'world_play_animation',
-                fields: {ANIMATION: 'playerBob'},
-              },
+              looksLike('playerBob'),
             ]),
           },
         },
@@ -553,7 +550,7 @@ const PLAYER_ACTOR = JSON.stringify(
 // get wrong — there is only one "Gravity" in play.
 const GROUND_ACTOR = groundActor;
 
-// A coin playing "coinSpin" — the animation in animations/coinSpin.anim — and
+// A coin spinning — the library's Coin Spin, its Main animation — and
 // electing to be takeable.
 //
 // "Can Be Collected" is the whole of the coin's side of collecting: it does not
@@ -725,46 +722,8 @@ const CRAWLER_ACTOR = actorFile('Crawler', [
   {type: 'world_set_sprite', fields: {SPRITE: 'crawler.png'}},
 ]);
 
-// A ball playing "pulse" — the animation in animations/game.anim.
-const BALL_ACTOR = actorFile('Ball', [
-  {type: 'world_play_animation', fields: {ANIMATION: 'pulse'}},
-]);
-
-// Learner-authored animations — a `.anim` file (JSON on disk), discriminated by
-// `type: 'animation'` (INTERFACE.md §Animations). Every `.anim` in the project is
-// registered when the world is built, so a file being here is what makes its
-// animations playable. Both of these scale one image per frame rather than
-// reading a strip, and both are selectable in the `play animation` dropdown:
-// "pulse" (the ball) and "playerBob" (the player). Each says its timing once,
-// as a frame rate, rather than repeating a delay on every frame — a frame only
-// carries a delay when it is an exception (engine animationTypes.frameDelay).
-const GAME_ANIMATIONS = JSON.stringify(
-  {
-    type: 'animation',
-    animations: {
-      pulse: {
-        frameRate: 6,
-        frames: [
-          {sprite: 'ball.png', scale: 0.7},
-          {sprite: 'ball.png', scale: 1.0},
-          {sprite: 'ball.png', scale: 1.3},
-          {sprite: 'ball.png', scale: 1.0},
-        ],
-      },
-      playerBob: {
-        frameRate: 7,
-        frames: [
-          {sprite: 'player.png', scale: 1.0},
-          {sprite: 'player.png', scale: 1.25},
-          {sprite: 'player.png', scale: 1.0},
-          {sprite: 'player.png', scale: 0.8},
-        ],
-      },
-    },
-  },
-  null,
-  2,
-);
+// A ball pulsing — the library's Pulse, its Main animation.
+const BALL_ACTOR = actorFile('Ball', [looksLike('pulse')]);
 
 /**
  * A starter file as written below: no id, and naming its folder rather than
@@ -881,8 +840,8 @@ export function starterSprites(ids: readonly string[]) {
       mimeType: 'image/png',
     };
     // A grid ships with the file that says it is one, the same as an import
-    // writes it — without the `.sheet`, `coinSpin.png` is a wide picture and the
-    // animation editor has no cells to offer.
+    // writes it — without the `.sheet`, `coinSpin.png` is a wide picture with
+    // no cells to cut.
     if (sprite.sheet) {
       const name = sheetFileName(spriteFileName(id));
       files[`sheet-${id}`] = {
@@ -896,45 +855,22 @@ export function starterSprites(ids: readonly string[]) {
   return files;
 }
 
-/** A stock animation shipped as a project file, exactly as an import leaves it. */
 /**
- * Several animations, WITH the images their frames read.
+ * The pictures several stock animations read.
  *
- * An animation document names a strip and reads squares out of it, so one
- * copied in without its picture is a project holding an animation of nothing —
- * which draws as a black square and says so nowhere. The starter lists the
- * strip by hand beside the animation; anything using this need not.
+ * An animation names a strip and reads squares out of it, so an actor given
+ * one without its picture plays an animation of nothing — which draws as a
+ * black square and says so nowhere. The animation itself is the actor's own
+ * (`stock/workspace.animationsRow`); these are the files it needs.
  */
-export function starterAnimations(
+export function starterAnimationPictures(
   ids: readonly string[],
 ): Record<string, StarterFile> {
-  const strips = ids.flatMap(
-    id => STOCK_ANIMATIONS.find(entry => entry.id === id)?.sprites ?? [],
+  return starterSprites(
+    ids.flatMap(
+      id => STOCK_ANIMATIONS.find(entry => entry.id === id)?.sprites ?? [],
+    ),
   );
-  return Object.assign(
-    {},
-    starterSprites(strips),
-    ...ids.map(id => starterAnimation(id)),
-  );
-}
-
-function starterAnimation(id: string): Record<string, StarterFile> {
-  const animation = STOCK_ANIMATIONS.find(entry => entry.id === id);
-  if (!animation) {
-    return {};
-  }
-  return {
-    [`anim-${id}`]: {
-      name: `${id}.anim`,
-      language: 'anim',
-      // The NAME first, as an import writes it (`appearance/importStock`): a
-      // starter file is a copy of what importing one would leave, and a copy
-      // that left the name out would be a starter whose animation is called
-      // `coinSpin` where an imported one is called "Coin Spin".
-      contents: `${JSON.stringify({name: animation.name, ...animation.document}, null, 2)}\n`,
-      folderId: 'animations',
-    },
-  };
 }
 
 /**
@@ -947,7 +883,6 @@ export const STARTER_SPEC: ProjectSpec = {
     'rules',
     'screens',
     'actors',
-    'animations',
     'sprites',
     // Empty until something is imported into it, and present anyway: the
     // folder is what makes an image a backdrop (BACKGROUNDS.md §5), so a
@@ -1032,12 +967,6 @@ export const STARTER_SPEC: ProjectSpec = {
       language: 'actor',
       contents: BALL_ACTOR,
       folderId: 'actors',
-    },
-    gameAnimations: {
-      name: 'game.anim',
-      language: 'anim',
-      contents: GAME_ANIMATIONS,
-      folderId: 'animations',
     },
     jumpRule: {
       name: 'jump.rule',
@@ -1127,11 +1056,6 @@ export const STARTER_SPEC: ProjectSpec = {
       'crawler',
       'coinSpin',
     ]),
-    // …and one animation copied in whole, frames and image both: the coin's
-    // spin, which reads six squares out of one strip. The other two
-    // animations here scale a single image instead — between them they show
-    // the two ways an animation is made.
-    ...starterAnimation('coinSpin'),
   },
   open: ['main'],
 };

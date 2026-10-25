@@ -39,6 +39,5 @@ export const FILE_ICONS = {
   rule: icon('scroll'),
   map: icon('map'),
   screen: icon('display'),
-  anim: icon('film'),
   sheet: icon('table-cells'),
 } as const satisfies Record<string, FileIcon>;

@@ -8,8 +8,8 @@
 // the only place that reads one.
 //
 // So one name, said once: it becomes the file's stem AND the thing's own name.
-// `Coin Spin` writes `coinSpin.anim` holding `"name": "Coin Spin"` — the same
-// pair an import leaves behind (`appearance/importStock`).
+// `Ripple` writes `ripple.effect` holding `"name": "Ripple"` — the same
+// pair an import leaves behind.
 //
 // A `.map` is seeded twice over: with the empty map the editor would have made
 // — a file created with no contents at all gets Codebridge's "Add your changes
@@ -127,12 +127,6 @@ export const seedFor = (extension: string, name: string): Seed | undefined => {
       };
     case 'rule':
       return newRule(name);
-    case 'anim':
-      // No animations in it yet — the editor adds the first one, and asks for
-      // its id there. What this carries is the FILE's name.
-      return {
-        contents: `${JSON.stringify({type: 'animation', name, animations: {}}, null, 2)}\n`,
-      };
     case 'effect':
       // A passthrough graph, which is what the effect editor makes for a new
       // one anywhere else: an effect that draws what it was given, and a place

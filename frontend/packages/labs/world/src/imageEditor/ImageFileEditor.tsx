@@ -52,7 +52,7 @@ export const ImageFileEditor = ({fileId, isReadOnly}: CustomEditorProps) => {
 
   // A backdrop is not a grid of cells (BACKGROUNDS.md §5). It is stretched over
   // the whole viewport, so there is nothing a cell of one would mean — and a
-  // `.sheet` written beside it would be a claim the animation editor believes.
+  // `.sheet` written beside it would be a claim the cell pickers believe.
   // So an image under `backgrounds/` is edited as the picture it is: no grid
   // drawn over it, and no controls offering to cut one.
   const isBackdrop = isBackgroundPath(filePath(currentSources.source, fileId));

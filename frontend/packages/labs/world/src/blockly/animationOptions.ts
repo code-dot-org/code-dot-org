@@ -1,7 +1,6 @@
-// The `world_play_animation` dropdown lists, first, the animations of the
-// actor whose file it is in — its Main and the rest, kept on it
-// (specs/ANIMATION_PLAN.md) — and then the animations the PROJECT holds, the
-// ids defined across its `.anim` files, until those are retired. There are no
+// The `world_play_animation` dropdown lists the animations of the actor whose
+// file it is in — its Main and the rest, kept on it (specs/ANIMATION_PLAN.md).
+// An animation is its kind's, so there is nothing else to offer. There are no
 // built-in animations to play: an animation is frames of an image, both of them
 // files, and a project draws only what it holds. The last row is how you get
 // more (`(import…)`, appearance/stock).
@@ -13,13 +12,9 @@
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {IMPORT_ANIMATION_VALUE} from '../appearance/appearanceImport';
-
 import {editingActorModule} from './editingRule';
-import {label} from './label';
 import {bindLiveOptions, orNone} from './moduleOptions';
 
-let projectAnimations: string[] = [];
 /** Each kind's own animations, by its module path. */
 let kindAnimations: Readonly<Record<string, readonly string[]>> = {};
 
@@ -30,36 +25,22 @@ export function setKindAnimations(
   kindAnimations = byKind;
 }
 
-/** Replace the project-authored animation ids the dropdown offers. */
-export function setProjectAnimations(ids: string[]): void {
-  projectAnimations = ids;
-}
-
 /**
  * Current `[label, id]` options: the project's animations, then `(import…)`.
  *
- * With nothing defined the list is "(no animations yet)" and the import row,
- * in that order — never the import row alone. A fresh block takes its first
- * option as its value, so a project with no `.anim` files gave `play animation`
- * a dialog for a value, and so did a block whose animation had been deleted.
- * The wording is `orNone`'s: a project with no animations did not choose to
- * play none, it has nothing in `animations/` yet.
+ * With nothing defined the list is "(no animations yet)", whose value is
+ * empty, so a fresh block stays unfinished and generates nothing until
+ * somebody chooses. There is no import row: an animation is added to an actor
+ * in the Actor Editor (specs/ANIMATION_PLAN.md).
  */
 export function animationOptions(kind?: string): Array<[string, string]> {
   const own = kind ? (kindAnimations[kind] ?? []) : [];
-  const ids = [...new Set(projectAnimations)].filter(id => !own.includes(id));
-  return [
-    ...orNone(
-      [
-        // Its own by the name it gave them, which is the value too: the
-        // engine finds a name on the actor's kind first.
-        ...own.map((name): [string, string] => [name, name]),
-        ...ids.map((id): [string, string] => [label(id), id]),
-      ],
-      '(no animations yet)',
-    ),
-    ['(import…)', IMPORT_ANIMATION_VALUE],
-  ];
+  // By the name it gave them, which is the value too: the engine finds a
+  // name on the actor's kind.
+  return orNone(
+    own.map((name): [string, string] => [name, name]),
+    '(no animations yet)',
+  );
 }
 
 export const ANIMATION_OPTIONS_EXTENSION = 'world_animation_options';

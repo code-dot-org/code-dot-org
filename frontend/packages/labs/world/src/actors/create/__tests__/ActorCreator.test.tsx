@@ -12,6 +12,7 @@ import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../../../appearance/generate/imageGenerator';
+import {stockAnimation} from '../../../appearance/stock';
 import {groupsFor} from '../../enhance/enhancements';
 import {ActorCreator} from '../ActorCreator';
 
@@ -27,7 +28,7 @@ const TEMPLATES = [
 
 const SPRITES = ['coin.png', 'crawler.png'];
 const ANIMATIONS = [
-  {id: 'coinSpin', name: 'Coin Spin', animation: {frames: []}},
+  {id: 'coinSpin', name: 'Coin Spin', animation: stockAnimation('coinSpin')!},
 ];
 
 /**

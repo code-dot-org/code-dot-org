@@ -14,7 +14,6 @@ import {importSeam, type ImportHandler} from '../blockly/libraryImport';
 
 /** What a dropdown's `(import…)` row carries. */
 export const IMPORT_SPRITE_VALUE = '__import_sprite__';
-export const IMPORT_ANIMATION_VALUE = '__import_animation__';
 export const IMPORT_BACKGROUND_VALUE = '__import_background__';
 
 /** Which library the picker should open on. */

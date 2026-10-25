@@ -83,33 +83,37 @@ describe('the stock appearance library', () => {
     }
   });
 
+  /** The sprite keys of an animation, as file and rectangle. */
+  const keysOf = (animation: (typeof STOCK_ANIMATIONS)[number]) =>
+    (animation.timeline.tracks.sprite ?? []).map(key =>
+      typeof key.value === 'string'
+        ? {sprite: key.value, cell: undefined}
+        : (key.value as {sprite: string; cell?: {x: number; width: number}}),
+    );
+
   it('reads as many frames out of a strip as the strip has', () => {
     for (const animation of STOCK_ANIMATIONS) {
-      for (const def of Object.values(animation.document.animations)) {
-        const strip = def.frames.filter(frame => frame.position);
-        if (strip.length === 0) {
-          continue; // a scaling animation, not a strip
-        }
-        const spec = generator.ANIMATION_SPECS[animation.id];
-        expect(spec, animation.id).toBeDefined();
-        expect(strip.length).toBe(spec.frames);
-        // Every rectangle lands inside the drawing.
-        for (const frame of strip) {
-          expect(frame.position!.x + frame.position!.width).toBeLessThanOrEqual(
-            spec.frames * STOCK_CELL,
-          );
-        }
+      const strip = keysOf(animation).filter(key => key.cell);
+      if (strip.length === 0) {
+        continue; // a scaling animation, not a strip
+      }
+      const spec = generator.ANIMATION_SPECS[animation.id];
+      expect(spec, animation.id).toBeDefined();
+      // Every cell once, and the last again: the closing key that gives the
+      // last picture its frame (specs/ANIMATION_PLAN.md, step 1).
+      expect(strip.length).toBe(spec.frames + 1);
+      // Every rectangle lands inside the drawing.
+      for (const key of strip) {
+        expect(key.cell!.x + key.cell!.width).toBeLessThanOrEqual(
+          spec.frames * STOCK_CELL,
+        );
       }
     }
   });
 
   it('names the image file each animation reads, and ships it', () => {
     for (const animation of STOCK_ANIMATIONS) {
-      const named = new Set(
-        Object.values(animation.document.animations).flatMap(def =>
-          def.frames.map(frame => frame.sprite),
-        ),
-      );
+      const named = new Set(keysOf(animation).map(key => key.sprite));
       expect([...named].sort()).toEqual(
         animation.sprites.map(spriteFileName).sort(),
       );

@@ -119,7 +119,6 @@ const EMPTY_WORLD_SPEC: ProjectSpec = {
     'rules',
     'worlds',
     'actors',
-    'animations',
     'sprites',
     'backgrounds',
     'maps',
@@ -151,7 +150,6 @@ const EMPTY_APP_SPEC: ProjectSpec = {
     'rules',
     'screens',
     'actors',
-    'animations',
     'sprites',
     'backgrounds',
     'maps',
@@ -179,7 +177,6 @@ const EMPTY_SPEC: ProjectSpec = {
     'rules',
     'screens',
     'actors',
-    'animations',
     'sprites',
     'backgrounds',
     'maps',
@@ -235,7 +232,8 @@ export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
       '- Avoid the Crawler, which walks its beat and takes a heart off you ' +
       'each time it touches — watch the bar at the top right, and three and ' +
       'it is over\n' +
-      '- Animations are files under `animations/`: open one to edit its frames\n' +
+      '- The coin spins and the player bobs: each is the actor\u2019s own ' +
+      'animation, its Main, chosen under Looks like in the Actor Editor\n' +
       '- `console.log` output appears in the Console\n' +
       '- Try changing the player’s start position, gravity, or move speed — or ' +
       'make the ball collectible too, which is one row in `ball.actor`',

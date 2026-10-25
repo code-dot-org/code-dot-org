@@ -31,8 +31,9 @@ import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
-import {parseAnim} from '../../animationEditor/animDocument';
+import {requestAppearanceImport} from '../../appearance/appearanceImport';
 import {isBackgroundPath} from '../../appearance/backgroundsFolder';
+import {stockAnimation} from '../../appearance/stock';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {WORKSPACE_KEYS} from '../../blockly/documentExtras';
 import {requestEffectImport} from '../../blockly/effectImport';
@@ -45,13 +46,18 @@ import {useScriptStep} from '../../layout/TrailContext';
 import {gameModuleOf} from '../../mainWorld';
 import {useAfterImport} from '../../mapEditor/useAfterImport';
 import {
-  fileIdAt,
   filePath,
   projectFiles,
   projectImagePaths,
 } from '../../runtime/projectFiles';
 import {useWorldRuntime} from '../../runtime/WorldRuntimeContext';
-import {isActorData, lookOf, type ActorData} from '../actorData';
+import {
+  isActorData,
+  isAnimated,
+  lookOf,
+  withMainAnimation,
+  type ActorData,
+} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
@@ -84,6 +90,10 @@ const parse = (contents: string): ActorData | undefined => {
     return undefined;
   }
 };
+
+/** Looks like's row for a Main that moves, and for the library's door. */
+const ANIMATED = 'animated:';
+const FROM_LIBRARY = 'library:';
 
 /** The trait that gives an actor a box, and its drawing a box's size. */
 const BOX_TRAIT = 'Boxed#HasABoxTrait';
@@ -254,8 +264,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
   }, [contents, hasCompiled, modulePath, worldPath]);
 
   /**
-   * What it can look like: the project's pictures that are not backdrops,
-   * then its animations, as the blocks' own dropdowns offer them; and what it
+   * What it can look like: the project's pictures that are not backdrops;
+   * its own Main animation, when Main moves; and an animation from the
+   * library, which becomes its Main (specs/ANIMATION_PLAN.md). And what it
    * looks like now, whatever that is, so the field never says otherwise.
    */
   // Main's picture, or the flipbook it plays (`actorData.lookOf`).
@@ -263,61 +274,72 @@ export const ActorEditor = (props: CustomEditorProps) => {
     const held = parse(contents);
     return held ? lookOf(held) : undefined;
   }, [contents]);
-  const lookValue = !look
-    ? ''
-    : 'sprite' in look
-      ? `sprite:${look.sprite}`
-      : `animation:${look.animation}`;
+  const animated = useMemo(() => {
+    const held = parse(contents);
+    return held ? isAnimated(held) : false;
+  }, [contents]);
+  const pictureNames = useMemo(
+    () =>
+      projectImagePaths(currentSources.source)
+        .filter(one => !isBackgroundPath(one))
+        .map(one => one.split('/').pop()!)
+        .sort(),
+    [currentSources],
+  );
+  const lookValue = animated ? ANIMATED : look ? `sprite:${look.sprite}` : '';
   const looks = useMemo(() => {
-    const sprites = projectImagePaths(currentSources.source)
-      .filter(one => !isBackgroundPath(one))
-      .map(one => one.split('/').pop()!)
-      .sort();
-    const animations = Object.entries(files)
-      .filter(([one]) => one.endsWith('.anim'))
-      .flatMap(([, held]) => Object.keys(parseAnim(held).animations ?? {}))
-      .sort();
     const items = [
       {value: '', text: '(drawn by its code)'},
-      ...sprites.map(sprite => ({value: `sprite:${sprite}`, text: sprite})),
-      ...animations.map(id => ({
-        value: `animation:${id}`,
-        text: `${id} (animation)`,
+      ...pictureNames.map(sprite => ({
+        value: `sprite:${sprite}`,
+        text: sprite,
       })),
+      ...(animated ? [{value: ANIMATED, text: '(its own animation)'}] : []),
+      {value: FROM_LIBRARY, text: '(an animation from the library…)'},
     ];
     return items.some(item => item.value === lookValue)
       ? items
       : [...items, {value: lookValue, text: lookValue.replace(/^[a-z]+:/, '')}];
-  }, [files, currentSources, lookValue]);
+  }, [pictureNames, animated, lookValue]);
+  // An animation from the library is its Main: taken once its pictures are
+  // in the project, which is the render that has them (`useAfterImport`).
+  const libraryAnimation = useRef('');
+  const mainThen = useAfterImport(pictureNames, () => {
+    const stock = stockAnimation(libraryAnimation.current);
+    if (data && stock) {
+      edit(withMainAnimation(data, stock.timeline));
+    }
+  });
+  const fromLibrary = () =>
+    mainThen(
+      () =>
+        requestAppearanceImport('animation').then(id => {
+          const stock = id ? stockAnimation(id) : undefined;
+          libraryAnimation.current = stock?.id ?? '';
+          return stock?.sprites[0] ? `${stock.sprites[0]}.png` : undefined;
+        }),
+      undefined,
+    );
 
   /**
-   * The file behind what it looks like: a picture by its name among the
-   * actors' pictures, an animation by the `.anim` that holds it. None for an
-   * actor drawn by its code, or one naming what the project lacks.
+   * The file behind what it looks like: the picture it shows, or its Main
+   * shows first, by its name among the actors' pictures. None for an actor
+   * drawn by its code, or one naming what the project lacks.
    */
   const lookFile = useMemo(() => {
     if (!look) {
       return undefined;
     }
     const source = currentSources.source;
-    if ('sprite' in look) {
-      return Object.values(source.files).find(
-        file =>
-          file.name === look.sprite &&
-          !isBackgroundPath(filePath(source, file.id) ?? ''),
-      );
-    }
-    const holder = Object.entries(files).find(
-      ([one, held]) =>
-        one.endsWith('.anim') &&
-        look.animation in (parseAnim(held).animations ?? {}),
+    return Object.values(source.files).find(
+      file =>
+        file.name === look.sprite &&
+        !isBackgroundPath(filePath(source, file.id) ?? ''),
     );
-    const id = holder && fileIdAt(source, holder[0]);
-    return id ? source.files[id] : undefined;
-  }, [look, currentSources, files]);
+  }, [look, currentSources]);
   const [lookAt, setLookAt] = useState<HTMLElement | null>(null);
-  // A picture or animation made or drawn here is what the actor then looks
-  // like: taken in the render whose project has the file, as an import is
+  // A picture made or drawn here is what the actor then looks like: taken in
+  // the render whose project has the file, as an import is
   // (`useAfterImport`), and then, for one made to be drawn on, opened — a
   // step on the trail, the actor the crumb before it.
   const lookThen = useAfterImport<{open: boolean}>(
@@ -327,13 +349,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
       if (!data || !made) {
         return;
       }
-      const animation = made.name.endsWith('.anim')
-        ? Object.keys(parseAnim(made.contents ?? '').animations ?? {})[0]
-        : undefined;
-      if (made.name.endsWith('.anim') && !animation) {
-        return;
-      }
-      edit(setLook(data, animation ? {animation} : {sprite: made.name}));
+      edit(setLook(data, {sprite: made.name}));
       if (open) {
         // Opened on the file menus' next render, which has this save in it
         // (`fileActs`, `open`).
@@ -848,18 +864,15 @@ export const ActorEditor = (props: CustomEditorProps) => {
             selectedValue={lookValue}
             items={looks}
             onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-              const [kind, ...rest] = event.target.value.split(':');
-              const value = rest.join(':');
-              edit(
-                setLook(
-                  data,
-                  !kind
-                    ? undefined
-                    : kind === 'sprite'
-                      ? {sprite: value}
-                      : {animation: value},
-                ),
-              );
+              if (event.target.value === ANIMATED) {
+                return;
+              }
+              if (event.target.value === FROM_LIBRARY) {
+                fromLibrary();
+                return;
+              }
+              const value = event.target.value.replace(/^sprite:/, '');
+              edit(setLook(data, value ? {sprite: value} : undefined));
             }}
           />
           {/* THE WAY TO ITS PICTURES, where the picture is
@@ -881,7 +894,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   void requestFileAct({act: 'open', fileId: lookFile.id})
                 }
               >
-                {'sprite' in (look ?? {}) ? 'Edit picture' : 'Edit animation'}
+                Edit picture
               </Button>
             )}
             {!isReadOnly && (
@@ -918,20 +931,8 @@ export const ActorEditor = (props: CustomEditorProps) => {
                 >
                   <ListItemText>New picture…</ListItemText>
                 </MenuItem>
-                <MenuItem
-                  onClick={lookAct(() =>
-                    lookThen(
-                      () =>
-                        requestFileAct({
-                          act: 'make',
-                          folder: 'animations',
-                          open: false,
-                        }),
-                      {open: true},
-                    ),
-                  )}
-                >
-                  <ListItemText>New animation…</ListItemText>
+                <MenuItem onClick={lookAct(fromLibrary)}>
+                  <ListItemText>Animation from the library…</ListItemText>
                 </MenuItem>
                 <MenuItem
                   onClick={lookAct(

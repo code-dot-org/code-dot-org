@@ -11,8 +11,6 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {importStockAnimation} from '../../appearance/importStock';
-import {STOCK_ANIMATIONS} from '../../appearance/stock';
 import {actorRequirements, importStockActor} from '../importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../stock';
 
@@ -128,19 +126,16 @@ describe('importStockActor, for an actor with a picture', () => {
   const names = (source: MultiFileSource) =>
     Object.values(source.files).map(file => file.name);
 
-  it('writes the animation, the strip it reads, and the strip\u2019s grid', () => {
+  it('writes the strip its animation reads, and the strip\u2019s grid', () => {
     const {source} = importStockActor(project(), coin);
 
-    // Three files for one animation, and the third is the one that is easy to
-    // forget: without the `.sheet`, `coinSpin.png` is a wide picture and the
-    // animation has no frames to play.
+    // The animation is the Coin's own (specs/ANIMATION_PLAN.md); what comes
+    // with it is the picture its keys read, and the `.sheet` that makes that
+    // picture a strip of cells rather than one wide picture.
     expect(names(source)).toEqual(
-      expect.arrayContaining([
-        'coinSpin.anim',
-        'coinSpin.png',
-        'coinSpin.sheet',
-      ]),
+      expect.arrayContaining(['coinSpin.png', 'coinSpin.sheet']),
     );
+    expect(names(source)).not.toContain('coinSpin.anim');
   });
 
   it('brings the rule the trait needs, and the rules that rule needs', () => {
@@ -160,12 +155,11 @@ describe('importStockActor, for an actor with a picture', () => {
     );
   });
 
-  it('writes seven files for one click', () => {
+  it('writes six files for one click', () => {
     const {source} = importStockActor(project(), coin);
 
     expect(names(source).sort()).toEqual([
       'coin.actor',
-      'coinSpin.anim',
       'coinSpin.png',
       'coinSpin.sheet',
       'collect.rule',
@@ -174,24 +168,21 @@ describe('importStockActor, for an actor with a picture', () => {
     ]);
   });
 
-  it('plays an animation the import actually registered', () => {
-    // THE POINT OF THE WHOLE EXERCISE. A `play animation` field stores the
-    // animation's key INSIDE its file, which is not always the file's stem —
-    // the stock "switch" animation holds "switchFlip". An actor naming a key
-    // the import does not write is a dropdown value with no option behind it,
-    // and nothing anywhere reports that.
-    const played = [...coin.contents.matchAll(/"ANIMATION": "([^"]+)"/g)].map(
-      match => match[1],
+  it('plays its own animation, which reads the pictures the import wrote', () => {
+    // THE POINT OF THE WHOLE EXERCISE. The Coin's Main is a timeline whose
+    // keys name a picture; one naming a file the import does not write is an
+    // animation of nothing, and nothing anywhere reports that.
+    const {source} = importStockActor(project(), coin);
+    const files = names(source);
+    const read = new Set(
+      [...coin.contents.matchAll(/"sprite": "([^"]+)"/g)].map(
+        match => match[1],
+      ),
     );
-    const registered = (coin.animations ?? []).map(
-      id =>
-        importStockAnimation(
-          project(),
-          STOCK_ANIMATIONS.find(entry => entry.id === id)!,
-        ).value,
-    );
-
-    expect(played).toEqual(registered);
+    expect(read.size).toBeGreaterThan(0);
+    for (const file of read) {
+      expect(files, file).toContain(file);
+    }
   });
 
   it('is unchanged by a second import, pictures and all', () => {

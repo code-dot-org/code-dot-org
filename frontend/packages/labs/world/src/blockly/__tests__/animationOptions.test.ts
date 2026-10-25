@@ -1,72 +1,48 @@
 // What a `play animation` block may name.
 //
-// The project's own animations, and nothing else. There are no built-ins to
-// play: an animation is frames of an image, both of them files, and a project
-// draws only what it holds. The last row is how you get more.
+// The animations of the actor whose file the block is in, by the names it
+// keeps them under (specs/ANIMATION_PLAN.md). An animation is its kind's, so
+// there is nothing else to offer, and no row that fetches one: an animation
+// is added to an actor in the Actor Editor.
 
 import {afterEach, describe, expect, it} from 'vitest';
 
-import {IMPORT_ANIMATION_VALUE} from '../../appearance/appearanceImport';
-import {
-  animationOptions,
-  setKindAnimations,
-  setProjectAnimations,
-} from '../animationOptions';
+import {animationOptions, setKindAnimations} from '../animationOptions';
 
 // Registry is module state; reset it between cases.
-afterEach(() => {
-  setProjectAnimations([]);
-  setKindAnimations({});
-});
+afterEach(() => setKindAnimations({}));
 
 describe('animationOptions', () => {
-  it('names what is missing before it offers a way in', () => {
-    // NOT the import row alone, which is what this asserted while a fresh
-    // `play animation` block was taking its first option as its value: a
-    // project with no `.anim` files gave the block a dialog for a value. The
-    // placeholder carries the empty value, so the block stays unfinished and
-    // generates nothing until somebody chooses.
-    expect(animationOptions()).toEqual([
+  it('names what is missing, with an empty value', () => {
+    // A fresh block takes its first option as its value; an empty one leaves
+    // it unfinished, and generating nothing, until somebody chooses.
+    expect(animationOptions()).toEqual([['(no animations yet)', '']]);
+    expect(animationOptions('actors/coin')).toEqual([
       ['(no animations yet)', ''],
-      ['(import…)', IMPORT_ANIMATION_VALUE],
     ]);
   });
 
-  it('offers the project’s animations, deduped, with Title Case labels', () => {
-    setProjectAnimations(['pulse', 'coinSpin', 'pulse']);
-    const options = animationOptions();
-
-    expect(options).toContainEqual(['Pulse', 'pulse']);
-    expect(options.filter(([, id]) => id === 'pulse')).toHaveLength(1);
-    expect(options.map(([, id]) => id)).toEqual([
-      'pulse',
-      'coinSpin',
-      IMPORT_ANIMATION_VALUE,
-    ]);
-  });
-
-  it('always ends with the import row', () => {
-    // A project with no animations still needs a way to get one, and a project
-    // with several still needs a way to get another.
-    setProjectAnimations(['pulse']);
-    const last = animationOptions().at(-1);
-    expect(last).toEqual(['(import…)', IMPORT_ANIMATION_VALUE]);
-  });
-
-  it('offers the actor’s own first, by the names it gave them', () => {
-    // Kept on the actor (specs/ANIMATION_PLAN.md): a Coin's Main is the
-    // Coin's, and a block in another file is not offered it.
+  it('offers the actor’s own, by the names it gave them', () => {
     setKindAnimations({'actors/coin': ['Main', 'Spin']});
-    setProjectAnimations(['pulse']);
-    expect(animationOptions('actors/coin').map(([, id]) => id)).toEqual([
-      'Main',
-      'Spin',
-      'pulse',
-      IMPORT_ANIMATION_VALUE,
+    expect(animationOptions('actors/coin')).toEqual([
+      ['Main', 'Main'],
+      ['Spin', 'Spin'],
     ]);
-    expect(animationOptions('actors/gem').map(([, id]) => id)).toEqual([
-      'pulse',
-      IMPORT_ANIMATION_VALUE,
+  });
+
+  it('offers nobody else’s', () => {
+    // A Coin's Main is the Coin's, and a block in another file is not
+    // offered it.
+    setKindAnimations({'actors/coin': ['Main', 'Spin']});
+    expect(animationOptions('actors/gem')).toEqual([
+      ['(no animations yet)', ''],
     ]);
+  });
+
+  it('has no import row', () => {
+    setKindAnimations({'actors/coin': ['Main']});
+    expect(animationOptions('actors/coin').map(([text]) => text)).not.toContain(
+      '(import…)',
+    );
   });
 });

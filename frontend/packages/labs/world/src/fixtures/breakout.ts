@@ -552,7 +552,6 @@ export const BREAKOUT_SPEC: ProjectSpec = {
     'rules',
     'screens',
     'actors',
-    'animations',
     'sprites',
     'backgrounds',
     'maps',

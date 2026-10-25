@@ -6,7 +6,6 @@ import {addActorThumbnails, setActorThumbnails} from '../actorThumbnails';
 import {
   actorFieldOptions,
   actorOptions,
-  animationFileOptions,
   backgroundOptions,
   bindLiveOptions,
   mapOptions,
@@ -73,7 +72,6 @@ describe('an empty dropdown', () => {
       ['actors', actorOptions()],
       ['sprites', spriteOptions() as Array<[unknown, string]>],
       ['backgrounds', backgroundOptions() as Array<[unknown, string]>],
-      ['animations', animationFileOptions()],
       // …and the two with a shelf, which is where the wording came from.
       // Their import row is listed after the fallback, never instead of it.
       ['maps', mapOptions().slice(0, 1)],

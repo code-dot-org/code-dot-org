@@ -44,24 +44,6 @@ describe('WorldCompiler', () => {
     expect(code).not.toMatch(/: string =/);
   });
 
-  it('bundles an imported animation `.anim` file (JSON), resolving the extension', async () => {
-    const project: Record<string, string> = {
-      'worlds/main.ts': `
-        import {WorldBuilder} from 'world-lab';
-        import Spin from 'animations/spin';
-        const world = new WorldBuilder({id: 'g', name: 'G'});
-        console.log(Spin.animations.spin.frames.length);
-        export default world;
-      `,
-      'animations/spin.anim': `{"type":"animation","animations":{"spin":{"frames":[{"sprite":"coin","delay":80}]}}}`,
-    };
-    const code = await compiler.compile(project, 'worlds/main.ts');
-    // The animation JSON is inlined into the bundle as an object literal.
-    expect(code).toContain('type: "animation"');
-    expect(code).toContain('sprite: "coin"');
-    expect(code).toContain('delay: 80');
-  });
-
   it('bundles an imported `.effect` file as data, resolving the extension', async () => {
     // An `.effect` is a shader graph. It travels through the bundle as JSON and
     // is compiled to GLSL in the preview surface, where Phaser is — so what

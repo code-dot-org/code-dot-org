@@ -83,14 +83,13 @@ describe('a Coin imported into a project that had none', () => {
     expect(built[0].has(collect.CanBeCollectedTrait as never)).toBe(true);
   });
 
-  it('holds the animation module its `play animation` row names', async () => {
+  it('holds the picture its animation reads, and no animation file', async () => {
     const {modules} = await compileProject(projectFiles(withACoinInIt()));
 
-    // The row stores an id; this is the file behind it. The two are checked
-    // against each other in `importStockActor.test.ts` — an animation's key
-    // inside its file is not always the file's stem.
-    expect(modules['animations/coinSpin']).toBeDefined();
+    // The spin is the Coin's own (specs/ANIMATION_PLAN.md): what the project
+    // holds is the strip it reads, not a file of animations.
     expect(modules['sprites/coinSpin']).toBeDefined();
+    expect(modules['animations/coinSpin']).toBeUndefined();
   });
 
   it('brings rules the empty project had none of', async () => {

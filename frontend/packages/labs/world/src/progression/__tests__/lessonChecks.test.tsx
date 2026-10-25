@@ -20,6 +20,7 @@ import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {enhanceWith} from '../../actors/enhance/enhancements';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
+import {looksLike} from '../../actors/stock/workspace';
 import {
   importStockAnimation,
   importStockSprite,
@@ -1855,18 +1856,22 @@ describe('the animation lesson’s check', () => {
   });
 
   it('accepts one playing a walk cycle', async () => {
-    // What importing does, in its two moves: the animation lands in the
-    // project with the image it reads, and the actor names it.
+    // What taking one from the library does, in its two moves: the image it
+    // reads lands in the project, and the actor keeps the animation as its
+    // own Main (specs/ANIMATION_PLAN.md).
     const imported = importStockAnimation(
       lesson.source,
       stockAnimation('playerWalk')!,
     );
     const solved = editing(imported.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      under(actorIn(workspace, 'Hero'), {
-        type: 'world_play_animation',
-        fields: {ANIMATION: imported.value},
-      });
+      // At the END of its chain: a `set sprite` after it would stop it, a
+      // still picture being what that row says.
+      let last = actorIn(workspace, 'Hero');
+      while (last.next?.block) {
+        last = last.next.block;
+      }
+      last.next = {block: looksLike(imported.value) as Row};
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('look/animation', solved);

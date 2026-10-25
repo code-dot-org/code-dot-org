@@ -19,8 +19,6 @@ describe('projectFiles', () => {
       'actors/progressBar.actor',
       'actors/scoreboard.actor',
       'actors/viewport.actor',
-      'animations/coinSpin.anim',
-      'animations/game.anim',
       'effects/ripple.effect',
       'maps/main.map',
       'rules/arrows.rule',

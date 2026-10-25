@@ -107,12 +107,16 @@ describe('changing a look', () => {
       value: 'coinSpin',
     });
 
+    // An animation from the library is the actor's own Main
+    // (specs/ANIMATION_PLAN.md), in the picture's place.
     expect(rowsIn(after)).toEqual([
       'world_actor',
-      'world_play_animation',
+      'world_actor_animations',
       'world_use_trait',
     ]);
-    expect(lookOf(after)).toEqual({kind: 'animation', value: 'coinSpin'});
+    // …which is no longer the library's: there is no id to open the step
+    // on, and it opens on nothing chosen.
+    expect(lookOf(after)).toBeUndefined();
   });
 
   it('leaves it where it was in the chain', () => {
@@ -249,10 +253,10 @@ describe('the look of a data-shaped actor', () => {
 
   it('is changed, and scaled, as data', () => {
     const after = withLook(data, {kind: 'animation', value: 'coinSpin'});
-    expect(JSON.parse(after)).toMatchObject({
-      type: 'actor',
-      look: {animation: 'coinSpin'},
-    });
+    const written = JSON.parse(after);
+    expect(written).toMatchObject({type: 'actor'});
+    expect(written.look).toBeUndefined();
+    expect(written.animations.Main.tracks.sprite).toHaveLength(7);
     const scaled = JSON.parse(
       withScale(after, {x: 1, y: 2}, {width: 512, height: 512}),
     );

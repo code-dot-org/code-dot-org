@@ -91,7 +91,9 @@ describe('importStockSprite', () => {
 });
 
 describe('importStockAnimation', () => {
-  it('brings the images its frames name, and their sheets', () => {
+  it('brings the images its keys name, and their sheets, and no file of its own', () => {
+    // The animation is the actor's own (specs/ANIMATION_PLAN.md); what the
+    // project gains is what it reads.
     const {source, value} = importStockAnimation(
       project(),
       stockAnimation('coinSpin')!,
@@ -99,44 +101,26 @@ describe('importStockAnimation', () => {
 
     expect(value).toBe('coinSpin');
     const files = byName(source);
-    expect(files['coinSpin.anim']).toBeDefined();
-    expect(folderOf(source, 'coinSpin.anim')).toBe('animations');
+    expect(files['coinSpin.anim']).toBeUndefined();
     expect(files['coinSpin.png'].url).toBe(coinSpin.dataUrl);
     expect(files['coinSpin.sheet']).toBeDefined();
   });
 
-  it('writes the name the dialog offered it under', () => {
-    // The words a learner CHOSE. Without them the project's only word for this
-    // was `coinSpin` — the id, camelCase because a block stores it — and the
-    // name they picked was never seen again (`AnimationFile.name`).
-    const {source} = importStockAnimation(
-      project(),
-      stockAnimation('coinSpin')!,
-    );
-
-    const written = JSON.parse(byName(source)['coinSpin.anim'].contents) as {
-      name?: string;
-    };
-    expect(written.name).toBe('Coin Spin');
-  });
-
-  it('names the animation inside the file, not the file', () => {
-    // "switch.anim" holds an animation called "switchFlip"; a `play animation`
-    // block stores what the runtime looks up, which is the latter.
+  it('answers the library\u2019s id, which the timeline is found by', () => {
     const {value} = importStockAnimation(project(), stockAnimation('switch')!);
-
-    expect(value).toBe('switchFlip');
+    expect(stockAnimation(value!)?.name).toBe('Switch');
   });
 
-  it('writes frames that reference the files it wrote', () => {
+  it('writes every picture its keys read', () => {
     const animation = stockAnimation('playerWalk')!;
     const {source} = importStockAnimation(project(), animation);
 
     const named = new Set(
-      Object.values(
-        JSON.parse(byName(source)['playerWalk.anim'].contents)
-          .animations as Record<string, {frames: {sprite: string}[]}>,
-      ).flatMap(def => def.frames.map(frame => frame.sprite)),
+      (animation.timeline.tracks.sprite ?? []).map(key =>
+        typeof key.value === 'string'
+          ? key.value
+          : (key.value as {sprite: string}).sprite,
+      ),
     );
     for (const sprite of named) {
       expect(byName(source)[sprite], sprite).toBeDefined();

@@ -62,15 +62,13 @@ export interface ActorEffect {
 }
 
 /**
- * What it looks like: a still picture, or an animation playing.
+ * The picture it looks like, as the Actor Editor's Looks like says it.
  *
- * As DATA a still picture is the actor's Main animation, one sprite key at 0
- * (`animations`); `look` holds only a project-wide flipbook it plays, until
- * those are retired (specs/ANIMATION_PLAN.md, step 4). This type is what the
- * Actor Editor's Looks like says, read through `lookOf` and written through
- * `withLookOf`.
+ * As DATA a picture is the actor's Main animation, one sprite key at 0
+ * (`animations`, specs/ANIMATION_PLAN.md); this is read through `lookOf` and
+ * written through `withLookOf`.
  */
-export type ActorLook = {sprite: string} | {animation: string};
+export type ActorLook = {sprite: string};
 
 /** The animation an actor plays when it is made (SIMPLE_INTERFACE.md). */
 export const MAIN_ANIMATION = 'Main';
@@ -110,7 +108,6 @@ export interface ActorData {
   actsLike?: string;
   isData?: true;
   icon?: string;
-  look?: ActorLook;
   /**
    * Its animations, by name, as timelines of keyframes (`engine/core/
    * keyframes`); `Main` plays when it is made (specs/ANIMATION_PLAN.md).
@@ -353,11 +350,11 @@ const oneField = (row: Block, type: string, field: string) => {
 };
 
 /**
- * A look row: `set sprite` or `play animation`, on this actor or on nothing,
- * which is this actor too.
+ * A look row: `set sprite`, on this actor or on nothing, which is this actor
+ * too. (`play animation` is code: it plays one of the actor's own.)
  */
 function readLook(row: Block): ActorLook | undefined {
-  if (row.type !== 'world_set_sprite' && row.type !== 'world_play_animation') {
+  if (row.type !== 'world_set_sprite') {
     return undefined;
   }
   const inputs = isObject(row.inputs) ? row.inputs : {};
@@ -369,11 +366,7 @@ function readLook(row: Block): ActorLook | undefined {
   }
   const bare = {type: row.type, fields: row.fields};
   const sprite = oneField(bare, 'world_set_sprite', 'SPRITE');
-  if (sprite !== undefined) {
-    return {sprite};
-  }
-  const animation = oneField(bare, 'world_play_animation', 'ANIMATION');
-  return animation === undefined ? undefined : {animation};
+  return sprite === undefined ? undefined : {sprite};
 }
 
 const ADD_EFFECT = 'world_add_effect';
@@ -413,11 +406,6 @@ function readEffect(row: Block): ActorEffect | undefined {
 const writeEffect = (effect: ActorEffect): Block =>
   effect.row ?? {type: ADD_EFFECT, fields: {EFFECT: effect.effect}};
 
-const writeLook = (look: ActorLook): Block =>
-  'sprite' in look
-    ? {type: 'world_set_sprite', fields: {SPRITE: look.sprite}}
-    : {type: 'world_play_animation', fields: {ANIMATION: look.animation}};
-
 /** The row that declares an actor's animations and plays its Main. */
 export const ANIMATIONS_ROW = 'world_actor_animations';
 
@@ -433,11 +421,21 @@ function writeAnimations(
   if (!names.length) {
     return [];
   }
+  // A still Main is its `set sprite`, beside the row for the others if
+  // there are any; the fold reads the two back as one set of animations.
   const still = stillSpriteOf(animations![MAIN_ANIMATION]);
-  if (names.length === 1 && still !== undefined) {
-    return [{type: 'world_set_sprite', fields: {SPRITE: still}}];
+  const rest = {...animations};
+  if (still !== undefined) {
+    delete rest[MAIN_ANIMATION];
   }
-  return [{type: ANIMATIONS_ROW, extraState: {animations}}];
+  return [
+    ...(Object.keys(rest).length
+      ? [{type: ANIMATIONS_ROW, extraState: {animations: rest}}]
+      : []),
+    ...(still !== undefined
+      ? [{type: 'world_set_sprite', fields: {SPRITE: still}}]
+      : []),
+  ];
 }
 
 /** The animations an animations row declares, or nothing. */
@@ -451,11 +449,25 @@ function readAnimations(row: Block): Record<string, Timeline> | undefined {
     : undefined;
 }
 
+/** The data with `timeline` as its Main animation. */
+export function withMainAnimation(
+  data: ActorData,
+  timeline: Timeline,
+): ActorData {
+  return {
+    ...data,
+    animations: {...(data.animations ?? {}), [MAIN_ANIMATION]: timeline},
+  };
+}
+
+/** Whether the actor's Main moves: more than one still picture. */
+export const isAnimated = (data: ActorData): boolean => {
+  const main = data.animations?.[MAIN_ANIMATION];
+  return Boolean(main) && stillSpriteOf(main) === undefined;
+};
+
 /** What the actor looks like, as Looks like says it. */
 export function lookOf(data: ActorData): ActorLook | undefined {
-  if (data.look && 'animation' in data.look) {
-    return data.look;
-  }
   const main = data.animations?.[MAIN_ANIMATION];
   const still = stillSpriteOf(main);
   if (still !== undefined) {
@@ -463,25 +475,26 @@ export function lookOf(data: ActorData): ActorLook | undefined {
   }
   // An animated Main: what it shows first, which is what a still of it is.
   const first = main?.tracks.sprite?.[0]?.value;
-  return typeof first === 'string' ? {sprite: first} : undefined;
+  const file =
+    typeof first === 'string'
+      ? first
+      : (first as {sprite?: unknown} | undefined)?.sprite;
+  return typeof file === 'string' ? {sprite: file} : undefined;
 }
 
 /**
  * The data looking like `look`: a picture is a still Main, replacing the
- * one it had; a flipbook is the look; nothing is neither.
+ * one it had; nothing is no Main.
  */
 export function withLookOf(
   data: ActorData,
   look: ActorLook | undefined,
 ): ActorData {
   const next: ActorData = {...data};
-  delete next.look;
   const animations = {...(data.animations ?? {})};
   delete animations[MAIN_ANIMATION];
-  if (look && 'sprite' in look) {
+  if (look) {
     animations[MAIN_ANIMATION] = stillAnimation(look.sprite);
-  } else if (look) {
-    next.look = look;
   }
   if (Object.keys(animations).length) {
     next.animations = animations;
@@ -525,7 +538,6 @@ const DATA_KEYS = new Set([
   'actsLike',
   'isData',
   'icon',
-  'look',
   'animations',
   'traits',
   'properties',
@@ -561,6 +573,7 @@ export function foldActor(
   const setup: Block[] = [];
   const code: Block[] = [];
   let animations: Record<string, Timeline> | undefined;
+  let sawAnimationsRow = false;
   for (const row of rowsUnder(root)) {
     const trait = oneField(row, 'world_use_trait', 'TRAIT');
     const parent = oneField(row, 'world_acts_like', 'ACTOR');
@@ -581,18 +594,16 @@ export function foldActor(
       data.isData = true;
     } else if (icon !== undefined && data.icon === undefined) {
       data.icon = icon;
-    } else if (readAnimations(row) && !animations) {
-      animations = {...readAnimations(row)!};
-    } else if (look && !data.look && !animations?.[MAIN_ANIMATION]) {
-      // A still picture is the Main animation; a flipbook is the look.
-      if ('sprite' in look) {
-        animations = {
-          ...animations,
-          [MAIN_ANIMATION]: stillAnimation(look.sprite),
-        };
-      } else {
-        data.look = look;
-      }
+    } else if (readAnimations(row) && !sawAnimationsRow) {
+      // Before or after a still Main's `set sprite`: one set of animations.
+      sawAnimationsRow = true;
+      animations = {...readAnimations(row)!, ...animations};
+    } else if (look && !animations?.[MAIN_ANIMATION]) {
+      // A still picture is the Main animation.
+      animations = {
+        ...animations,
+        [MAIN_ANIMATION]: stillAnimation(look.sprite),
+      };
     } else if (property) {
       properties.push(property);
     } else if (value) {
@@ -657,7 +668,6 @@ export function actorView(data: ActorData): Record<string, unknown> {
       ? []
       : [{type: 'world_show_as', fields: {ICON: data.icon}}]),
     ...writeAnimations(data.animations),
-    ...(data.look ? [writeLook(data.look)] : []),
     ...(data.traits ?? []).map(trait => ({
       type: 'world_use_trait',
       fields: {TRAIT: trait},

@@ -130,17 +130,10 @@ export * from './rules/viewport';
 export {Space, ROOT_SPACE_ID} from './core/Space';
 export type {MapLayer, MapSlot} from './core/Layer';
 
-// The animation serialization model.
-export type {
-  AnimationDef,
-  AnimationFrame,
-  Cell,
-  FrameState,
-} from './core/animationTypes';
-// How long a frame is held — exported because the editor's preview has to play
-// an animation by the same rule the engine steps it by.
-export {DEFAULT_FRAME_DELAY, frameDelay} from './core/animationTypes';
-export {parseAnimationFile, type AnimationFile} from './core/animationFile';
+// What the driver is told of a picture, and an animation as keyframes
+// (specs/ANIMATION_PLAN.md).
+export type {Cell, FrameState} from './core/animationTypes';
+export type {Key, Timeline, Track} from './core/keyframes';
 
 // Color conversion for effect parameters: the generated `add effect` call
 // wraps whatever a color block produced, so any of them can drive a uniform.

@@ -128,14 +128,8 @@ describe('a look', () => {
     expect(looking.animations).toEqual({
       Main: {loop: true, tracks: {sprite: [{at: 0, value: 'player.png'}]}},
     });
-    expect(looking.look).toBeUndefined();
     const gone = setLook(looking, undefined);
     expect(gone.animations).toBeUndefined();
-    expect(gone.look).toBeUndefined();
-    // A flipbook is the look, and takes Main's place.
-    const flipping = setLook(looking, {animation: 'coinSpin'});
-    expect(flipping.look).toEqual({animation: 'coinSpin'});
-    expect(flipping.animations).toBeUndefined();
   });
 });
 

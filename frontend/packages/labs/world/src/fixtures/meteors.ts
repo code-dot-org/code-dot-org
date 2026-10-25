@@ -412,7 +412,6 @@ export const METEORS_SPEC: ProjectSpec = {
     'rules',
     'screens',
     'actors',
-    'animations',
     'sprites',
     'backgrounds',
     'maps',

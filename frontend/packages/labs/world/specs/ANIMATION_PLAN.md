@@ -209,6 +209,55 @@ the animation editor, its picker and dialogs, the Pictures menu's New
 animation, and the look's Edit animation. The fixtures and the stock
 actors are converted, not migrated. Likely two commits.
 
+BUILT, as one commit: the conversion and the retirement could not be
+separated without fixing the same tests twice.
+
+The library's nine animations are timelines (`appearance/stock`): a strip
+is a sprite track of cells with its closing key; a pulse is a drawn-scale
+tween that returns to where it began, so it loops without a seam where the
+frames used to step. An actor that looks like one keeps it as its Main
+(`stock/workspace.looksLike`, `animationsRow`): the stock Coin and Player,
+the starter's Ball, Jetpack's Coin, and Jetpack's Pilot, which keeps Fly
+and Climb and plays them by name. Taking one brings only the pictures it
+reads (`importStockAnimation`). The Actor Creator's picture step offers the
+library's animations, chosen as Main; Looks like says "(its own
+animation)" when Main moves, and offers "(an animation from the
+library…)", as does the Pictures menu; `play animation` has no import row.
+`TimelineThumb` plays an animation on a canvas, from `paintTimeline`, which
+paints one moment of one, and serves the shelf and the Creator.
+
+Then `.anim` went: the engine's flipbooks (`AnimationDef`, the world's
+registry, rules shipping animations, `parseAnimationFile`), the file kind,
+its folder, its icon and its seed, the generator's registration of every
+`.anim`, the dropdown registries and the rename that carried an id, and the
+animation editor with what only it used. The look is a picture only.
+
+Found on the way:
+
+- `set sprite` now stops whatever is playing; an animation still playing
+  would put its own picture back on the next frame. Jetpack's Pilot is
+  the case: it goes back to its picture when it stops flying.
+- An actor playing an animation is drawn from the animation's first
+  picture before the first step has run, as a flipbook's first frame was;
+  otherwise the first snapshot of a world has nothing to draw.
+- The frame is which picture, counted as they change, so a closing key is
+  not a frame and raises no `animation frame changes`.
+- A still Main beside other animations is written as its `set sprite` and
+  the others' row, and the fold reads them back as one set in either
+  order.
+- A timeline is sampled each tick, where a flipbook stepped through every
+  frame it crossed; a tick longer than a picture's time steps over it,
+  which a game's sixty a second never does.
+
+In the browser: the starter's coins spin and Ball pulses, Jetpack and
+Asteroids play, with no page errors; Ground given the library's Asteroid
+Tumble in the Actor Editor tumbled in the game. Not right yet: the Actor
+Editor's own preview of an actor just given a library animation showed a
+plain square, though the game drew it; it looks like the sandbox's
+thumbnail was asked for before the newly imported picture had reached it.
+The stock actors' previews, whose pictures were there from the start,
+show their animations.
+
 ### 5. The animations in the Actor Editor
 
 Under the preview, the actor's animations as a row (a menu when they do

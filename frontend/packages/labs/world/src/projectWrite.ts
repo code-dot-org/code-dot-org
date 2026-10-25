@@ -51,8 +51,8 @@ export interface NewFile {
    * What the file tree and the editor make of it.
    *
    * Stated by the caller rather than guessed from the name here, because the
-   * guess was a nested ternary that knew about `.sheet` and `.anim` — facts
-   * about the appearance library, in a helper three libraries share.
+   * guess was a nested ternary that knew about `.sheet` — a fact about the
+   * appearance library, in a helper three libraries share.
    */
   language: string;
   contents?: string;

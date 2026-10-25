@@ -56,6 +56,10 @@ vi.mock('../../enhance/actorEnhance', () => ({
 
 const {ActorFileEditor} = await import('../ActorEditor');
 const {setFileActHandler} = await import('../../../files/fileActs');
+const {setAppearanceImportHandler} = await import(
+  '../../../appearance/appearanceImport'
+);
+const {stockAnimation} = await import('../../../appearance/stock');
 
 const onChange = vi.fn();
 beforeEach(() => onChange.mockClear());
@@ -89,24 +93,41 @@ describe('the Actor Editor', () => {
 
   it('says what it looks like, and changes it', () => {
     open();
+    // The Player's Main is the library's bob, its own animation
+    // (specs/ANIMATION_PLAN.md).
     const look = screen.getByLabelText('Looks like') as HTMLSelectElement;
-    expect(look.value).toBe('animation:playerBob');
+    expect(look.value).toBe('animated:');
+    expect(look.selectedOptions[0].textContent).toBe('(its own animation)');
     fireEvent.change(look, {target: {value: ''}});
     expect(written().look).toBeUndefined();
+    expect(written().animations).toBeUndefined();
+  });
+
+  it('takes an animation from the library as its Main', async () => {
+    setAppearanceImportHandler(async () => 'coinSpin');
+    open();
+    fireEvent.change(screen.getByLabelText('Looks like'), {
+      target: {value: 'library:'},
+    });
+    // The starter holds the strip already, so the Main is taken at once.
+    await vi.waitFor(() =>
+      expect(written().animations.Main).toEqual(
+        stockAnimation('coinSpin')!.timeline,
+      ),
+    );
+    setAppearanceImportHandler(null);
   });
 
   it('opens what it looks like, as a step on the trail', () => {
     const acts = vi.fn(async () => undefined);
     setFileActHandler(acts);
     open();
-    fireEvent.click(screen.getByRole('button', {name: 'Edit animation'}));
-    const anim = Object.values(SOURCE.files).find(
-      file =>
-        file.name.endsWith('.anim') &&
-        (file.contents ?? '').includes('playerBob'),
+    // The picture its Main shows first.
+    fireEvent.click(screen.getByRole('button', {name: 'Edit picture'}));
+    const picture = Object.values(SOURCE.files).find(
+      file => file.name === 'player.png',
     )!;
-    expect(anim.name).toMatch(/\.anim$/);
-    expect(acts).toHaveBeenCalledWith({act: 'open', fileId: anim.id});
+    expect(acts).toHaveBeenCalledWith({act: 'open', fileId: picture.id});
     setFileActHandler(null);
   });
 

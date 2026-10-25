@@ -17,43 +17,55 @@ import {
   Vector,
   WorldBuilder,
   playAnimation,
-  type AnimationDef,
+  type Timeline,
 } from '../index';
 
 /**
- * A six-frame strip, the way a project's own `.anim` file describes one.
- *
- * The engine ships no animations — they are files a project holds — so a test
- * about timing brings its own, exactly as a learner's project would: frames that
- * name an image and a rectangle in it.
+ * A strip of `frames` cells, `rate` a second: a sprite key per cell, and a
+ * closing key that gives the last its time (`core/keyframes`). The engine
+ * ships no animations — they are the actor's own — so a test about timing
+ * brings its own, as an actor would.
  */
 const CELL = 32;
-const coinSpin: AnimationDef = {
-  loop: true,
-  frames: Array.from({length: 6}, (_unused, index) => ({
-    sprite: 'coinSpin.png',
-    position: {x: index * CELL, y: 0, width: CELL, height: CELL},
-    delay: 1000 / 12,
-  })),
+const strip = (
+  sprite: string,
+  frames: number,
+  rate: number,
+  loop = true,
+): Timeline => {
+  const key = (index: number, at: number) => ({
+    at,
+    value: {
+      sprite,
+      cell: {x: index * CELL, y: 0, width: CELL, height: CELL},
+    },
+  });
+  return {
+    loop,
+    tracks: {
+      sprite: [
+        ...Array.from({length: frames}, (_unused, index) =>
+          key(index, Math.round((index / rate) * 1000) / 1000),
+        ),
+        key(frames - 1, Math.round((frames / rate) * 1000) / 1000),
+      ],
+    },
+  };
 };
-const playerWalk: AnimationDef = {
-  loop: true,
-  frames: Array.from({length: 4}, (_unused, index) => ({
-    sprite: 'playerWalk.png',
-    position: {x: index * CELL, y: 0, width: CELL, height: CELL},
-    delay: 1000 / 8,
-  })),
-};
+const coinSpin = strip('coinSpin.png', 6, 12);
+const playerWalk = strip('playerWalk.png', 4, 8);
+const oneShot = strip('s', 2, 10, false);
 
 // A world with the Animation rule and one actor that has the appearance trait.
 function makeWorld(animation = '') {
-  const builder = new WorldBuilder({id: 'w', name: 'W'})
-    .useRules([AnimationRule])
-    .useAnimations({coinSpin, playerWalk});
+  const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+    AnimationRule,
+  ]);
   const world = builder.getWorld();
   const actor = builder.addActor(
     new ActorBuilder({id: 'a', name: 'A'})
       .useTraits([AppearanceTrait])
+      .useAnimations({coinSpin, playerWalk, oneShot})
       .set(PositionProperty, new Vector(0, 0))
       .set(AnimationProperty, animation),
   );
@@ -157,20 +169,14 @@ describe('the Animation rule', () => {
   });
 
   it('holds the last frame and emits AnimationEnded once when a non-looping animation finishes', () => {
-    const oneShot: AnimationDef = {
-      loop: false,
-      frames: [
-        {sprite: 's', delay: 100},
-        {sprite: 's', delay: 100},
-      ],
-    };
-    const builder = new WorldBuilder({id: 'w2', name: 'W2'})
-      .useRules([AnimationRule])
-      .useAnimations({oneShot});
+    const builder = new WorldBuilder({id: 'w2', name: 'W2'}).useRules([
+      AnimationRule,
+    ]);
     const world = builder.getWorld();
     const actor = builder.addActor(
       new ActorBuilder({id: 'a2', name: 'A2'})
         .useTraits([AppearanceTrait])
+        .useAnimations({oneShot})
         .set(PositionProperty, new Vector(0, 0))
         .set(AnimationProperty, 'oneShot'),
     );
@@ -188,20 +194,14 @@ describe('the Animation rule', () => {
   });
 
   it('restarts a finished non-looping animation when it is replayed', () => {
-    const oneShot: AnimationDef = {
-      loop: false,
-      frames: [
-        {sprite: 's', delay: 100},
-        {sprite: 's', delay: 100},
-      ],
-    };
-    const builder = new WorldBuilder({id: 'wr', name: 'WR'})
-      .useRules([AnimationRule])
-      .useAnimations({oneShot});
+    const builder = new WorldBuilder({id: 'wr', name: 'WR'}).useRules([
+      AnimationRule,
+    ]);
     const world = builder.getWorld();
     const actor = builder.addActor(
       new ActorBuilder({id: 'ar', name: 'AR'})
         .useTraits([AppearanceTrait])
+        .useAnimations({oneShot})
         .set(PositionProperty, new Vector(0, 0))
         .set(AnimationProperty, 'oneShot'),
     );
@@ -247,8 +247,11 @@ describe('the Animation rule', () => {
       frames.push(detail),
     );
     // Advance well past one loop; the first six frame changes are 1..5 then 0.
-    for (let i = 0; i < 8; i++) {
-      world.tick(0.1);
+    // In steps shorter than a frame: a timeline is sampled where it is each
+    // tick, so a tick longer than a picture's time steps over it. A game
+    // ticks sixty times a second, which no animation's frame is shorter than.
+    for (let i = 0; i < 12; i++) {
+      world.tick(0.05);
     }
     expect(frames.slice(0, 6)).toEqual([1, 2, 3, 4, 5, 0]);
   });
@@ -269,9 +272,12 @@ describe('the Animation rule', () => {
     expect(frame?.sprite).toBe('coinSpin.png');
     expect(frame?.cell).toEqual({x: 32, y: 0, width: 32, height: 32});
 
-    // Clearing the animation and setting a static sprite reports a whole image.
+    // Clearing the animation and setting a static sprite reports a whole
+    // image — the cell put back, as `set sprite` does.
     actor.set(AnimationProperty, '');
     actor.set(SpriteProperty, 'player');
+    actor.set(SpriteCellOriginProperty, new Vector(0, 0));
+    actor.set(SpriteCellSizeProperty, new Vector(0, 0));
     world.tick(0);
     const still = world.renderSnapshot().find(s => s.actor === actor)?.frame;
     expect(still?.sprite).toBe('player');

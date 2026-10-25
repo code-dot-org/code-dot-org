@@ -127,9 +127,6 @@ describe('when a declaration is too late', () => {
     expect(() => made.useRules([GravityRule])).toThrow(
       /must come before the actors are placed/,
     );
-    expect(() => made.useAnimations({})).toThrow(
-      /must come before the actors are placed/,
-    );
     expect(() => made.defineLayer({id: 'sky'})).toThrow(
       /must come before the actors are placed/,
     );

@@ -21,7 +21,6 @@ import {
   Vector,
   WorldBuilder,
   playAnimation,
-  type AnimationDef,
 } from '../index';
 
 /** A coin's spin: three cells, a tenth of a second each, and its closing key. */
@@ -69,16 +68,10 @@ const GLOW: Timeline = {
 
 const GLOW_DOCUMENT = {name: 'Glow', parameters: [], nodes: []} as never;
 
-/** A project-wide flipbook, called what the Coin calls one of its own. */
-const FLIPBOOK: AnimationDef = {
-  loop: true,
-  frames: [{sprite: 'other.png'}],
-};
-
 function coinWorld(playing: string) {
-  const builder = new WorldBuilder({id: 'w', name: 'W'})
-    .useRules([AnimationRule])
-    .useAnimations({Spin: FLIPBOOK});
+  const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+    AnimationRule,
+  ]);
   const world = builder.getWorld();
   const actor = builder.addActor(
     new ActorBuilder({id: 'coin', name: 'Coin'})
@@ -94,11 +87,15 @@ function coinWorld(playing: string) {
 }
 
 describe('a kind’s timeline animation', () => {
-  it('is the kind’s own, over a project-wide flipbook of the same name', () => {
+  it('is drawn from its first picture before the first step, and its own after', () => {
     const {world, actor} = coinWorld('Spin');
+    const before = world.renderSnapshot().find(state => state.actor === actor);
+    expect(before?.frame).toMatchObject({
+      sprite: 'coin.png',
+      cell: {x: 0, y: 0, width: 16, height: 16},
+    });
     world.tick(0.05);
     expect(actor.get(SpriteProperty)).toBe('coin.png');
-    // …and it is drawn from that sprite, not from the flipbook.
     const drawn = world.renderSnapshot().find(state => state.actor === actor);
     expect(drawn?.frame?.sprite).toBe('coin.png');
   });
@@ -173,11 +170,16 @@ describe('a kind’s timeline animation', () => {
     expect(actor.get(OpacityProperty)).toBeCloseTo(0.4);
   });
 
-  it('is nobody else’s: a kind without one falls back to the flipbook', () => {
-    const builder = new WorldBuilder({id: 'w', name: 'W'})
-      .useRules([AnimationRule])
-      .useAnimations({Spin: FLIPBOOK});
+  it('is nobody else’s: a kind without one of that name plays nothing', () => {
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      AnimationRule,
+    ]);
     const world = builder.getWorld();
+    builder.addActor(
+      new ActorBuilder({id: 'coin', name: 'Coin'})
+        .useTraits([AppearanceTrait])
+        .useAnimations({Spin: SPIN}),
+    );
     const other = builder.addActor(
       new ActorBuilder({id: 'gem', name: 'Gem'})
         .useTraits([AppearanceTrait])
@@ -186,7 +188,7 @@ describe('a kind’s timeline animation', () => {
     );
     world.tick(0.05);
     const state = world.renderSnapshot().find(one => one.actor === other);
-    expect(state?.frame?.sprite).toBe('other.png');
+    expect(state?.frame).toBeUndefined();
     expect(state?.drawn).toBeUndefined();
   });
 

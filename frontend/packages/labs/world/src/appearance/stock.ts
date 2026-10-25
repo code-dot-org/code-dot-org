@@ -2,8 +2,8 @@
 //
 // NOTHING here is available to a game until it has been imported. A World
 // project draws only what it holds: an image an actor wears is a file in the
-// project, and an animation is a `.anim` in the project that reads rectangles
-// out of one. That is the whole point of the library — it is a shelf, not a
+// project, and an animation is a timeline an actor keeps that reads
+// rectangles out of one (specs/ANIMATION_PLAN.md). That is the whole point of the library — it is a shelf, not a
 // runtime.
 //
 // The same shape as the stock effects and stock rules: an id that becomes a file
@@ -11,7 +11,7 @@
 // one copies it in, and from that moment it is the learner's — repaintable,
 // renamable, deletable, and nothing outside the project depends on it.
 
-import type {AnimationFile} from '../engine';
+import type {Timeline} from '../engine/core/keyframes';
 import {getBackgroundBaseUrl} from '../runtime/worldConfig';
 
 import type {SheetFile} from './sheetFile';
@@ -41,7 +41,7 @@ export interface StockSprite {
 }
 
 export interface StockAnimation {
-  /** File stem this is imported as — `coinSpin` becomes `animations/coinSpin.anim`. */
+  /** What the library and a fixture call it — `coinSpin`. */
   id: string;
   /** What it is, for the picker. */
   name: string;
@@ -49,8 +49,11 @@ export interface StockAnimation {
   description: string;
   /** Sprite ids it draws, imported alongside it — an animation is frames OF something. */
   sprites: readonly string[];
-  /** The `.anim` document written into the project. */
-  document: AnimationFile;
+  /**
+   * The animation, as the actor that takes it keeps it: a timeline whose
+   * sprite keys name the pictures above by file and rectangle.
+   */
+  timeline: Timeline;
 }
 
 const image = (id: string): string => {
@@ -71,50 +74,71 @@ const SQUARE_CELLS: SheetFile = {
 export const spriteFileName = (id: string): string => `${id}.png`;
 
 /**
- * One animation over a horizontal strip of `STOCK_CELL` cells.
+ * One animation over a horizontal strip of `STOCK_CELL` cells: a sprite key
+ * per cell, each held for one frame at `frameRate`.
  *
  * The cell rectangles are written out rather than implied: the driver reads a
  * rectangle from a plain image, so a strip is not a kind of asset — it is an
- * image this animation happens to read six squares out of.
+ * image this animation happens to read six squares out of. The last cell is
+ * keyed twice, when it starts and a frame later, because an animation ends at
+ * its last key and the last picture is owed its frame
+ * (specs/ANIMATION_PLAN.md, step 1).
  */
 function strip(
   sprite: string,
   frames: number,
   frameRate: number,
   loop = true,
-): AnimationFile['animations'][string] {
+): Timeline {
+  const cell = (index: number) => ({
+    sprite: spriteFileName(sprite),
+    cell: {
+      x: index * STOCK_CELL,
+      y: 0,
+      width: STOCK_CELL,
+      height: STOCK_CELL,
+    },
+  });
+  const keys = Array.from({length: frames}, (_unused, index) => ({
+    at: frameTime(index, frameRate),
+    value: cell(index),
+  }));
   return {
     loop,
-    // The timing said once, on the animation, rather than copied onto every
-    // frame: a strip has ONE rate, and six copies of it are six things to keep
-    // in step by hand (animationTypes.frameDelay).
-    frameRate,
-    frames: Array.from({length: frames}, (_unused, index) => ({
-      sprite: spriteFileName(sprite),
-      position: {
-        x: index * STOCK_CELL,
-        y: 0,
-        width: STOCK_CELL,
-        height: STOCK_CELL,
-      },
-    })),
+    tracks: {
+      sprite: [
+        ...keys,
+        {at: frameTime(frames, frameRate), value: cell(frames - 1)},
+      ],
+    },
   };
 }
 
-/** One animation that scales a single image, rather than reading a strip. */
+/**
+ * One animation that scales a single image: a still picture, and its drawn
+ * scale moving through `scales` and back to where it began, so a loop has no
+ * seam.
+ */
 function pulse(
   sprite: string,
   scales: readonly number[],
   frameRate: number,
-): AnimationFile['animations'][string] {
+): Timeline {
   return {
-    frameRate,
-    frames: scales.map(scale => ({
-      sprite: spriteFileName(sprite),
-      scale,
-    })),
+    loop: true,
+    tracks: {
+      sprite: [{at: 0, value: spriteFileName(sprite)}],
+      drawnScale: [...scales, scales[0]].map((scale, index) => ({
+        at: frameTime(index, frameRate),
+        value: scale,
+      })),
+    },
   };
 }
+
+/** When frame `index` starts at `frameRate`, to the millisecond. */
+const frameTime = (index: number, frameRate: number): number =>
+  Math.round((index / frameRate) * 1000) / 1000;
 
 /**
  * The sprites a picture picker should offer: every stock image EXCEPT the ones
@@ -415,20 +439,14 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     name: 'Coin Spin',
     description: 'A coin turning on the spot, over and over.',
     sprites: ['coinSpin'],
-    document: {
-      type: 'animation',
-      animations: {coinSpin: strip('coinSpin', 6, 12)},
-    },
+    timeline: strip('coinSpin', 6, 12),
   },
   {
     id: 'playerWalk',
     name: 'Player Walk',
     description: 'A walking stride, for a character on the move.',
     sprites: ['playerWalk'],
-    document: {
-      type: 'animation',
-      animations: {playerWalk: strip('playerWalk', 4, 8)},
-    },
+    timeline: strip('playerWalk', 4, 8),
   },
   {
     id: 'switch',
@@ -436,30 +454,21 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     description:
       'A switch flipping from one side to the other — plays once and holds.',
     sprites: ['switch'],
-    document: {
-      type: 'animation',
-      animations: {switchFlip: strip('switch', 6, 12, false)},
-    },
+    timeline: strip('switch', 6, 12, false),
   },
   {
     id: 'pilotFly',
     name: 'Pilot Flying',
     description: 'A jetpack burning, for while it is switched on.',
     sprites: ['pilotFly'],
-    document: {
-      type: 'animation',
-      animations: {pilotFly: strip('pilotFly', 4, 16)},
-    },
+    timeline: strip('pilotFly', 4, 16),
   },
   {
     id: 'pilotClimb',
     name: 'Pilot Climbing',
     description: 'Hand over hand up a ladder, for while a climb lasts.',
     sprites: ['pilotClimb'],
-    document: {
-      type: 'animation',
-      animations: {pilotClimb: strip('pilotClimb', 4, 8)},
-    },
+    timeline: strip('pilotClimb', 4, 8),
   },
   {
     id: 'shipThrust',
@@ -467,42 +476,28 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     description:
       'A ship with its engine burning, for while the throttle is on.',
     sprites: ['shipThrust'],
-    document: {
-      type: 'animation',
-      animations: {shipThrust: strip('shipThrust', 4, 12)},
-    },
+    timeline: strip('shipThrust', 4, 12),
   },
   {
     id: 'asteroidSpin',
     name: 'Asteroid Tumble',
     description: 'A rock turning end over end, over and over.',
     sprites: ['asteroidSpin'],
-    document: {
-      type: 'animation',
-      animations: {asteroidSpin: strip('asteroidSpin', 8, 10)},
-    },
+    timeline: strip('asteroidSpin', 8, 10),
   },
   {
     id: 'pulse',
     name: 'Pulse',
     description: 'A gentle grow and shrink, made by scaling one image.',
     sprites: ['ball'],
-    document: {
-      type: 'animation',
-      animations: {pulse: pulse('ball', [0.7, 1, 1.3, 1], 6)},
-    },
+    timeline: pulse('ball', [0.7, 1, 1.3, 1], 6),
   },
   {
     id: 'playerBob',
     name: 'Player Bob',
     description: 'A character bobbing on the spot, made by scaling one image.',
     sprites: ['player'],
-    document: {
-      type: 'animation',
-      animations: {
-        playerBob: pulse('player', [1, 1.25, 1, 0.8], 7),
-      },
-    },
+    timeline: pulse('player', [1, 1.25, 1, 0.8], 7),
   },
 ];
 

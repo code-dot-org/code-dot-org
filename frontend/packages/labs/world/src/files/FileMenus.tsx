@@ -57,13 +57,14 @@ import {lookOf, withLook, withScale} from '../actors/create/actorLook';
 import {newActorFile} from '../actors/create/newActor';
 import {importStockActorAsData} from '../actors/importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../actors/stock';
-import {parseAnim} from '../animationEditor/animDocument';
 import {offersActor, useAppBuilder} from '../appBuilder';
 import {chooseImageGenerator} from '../appearance/generate/chooseImageGenerator';
 import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../appearance/generate/imageGenerator';
+import {importStockAnimation} from '../appearance/importStock';
+import {STOCK_ANIMATIONS, stockAnimation} from '../appearance/stock';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {actorIconImage} from '../blockly/actorIcons';
 import {actorIcon, actorThumbnail} from '../blockly/actorThumbnails';
@@ -79,7 +80,6 @@ import {setFileActHandler, type FileRef, type MadeAnswer} from './fileActs';
 import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
-  ANIMATIONS_FOLDER,
   BACKGROUNDS_FOLDER,
   FOLDER_MENUS,
   SCREENS_FOLDER,
@@ -417,6 +417,15 @@ export const FileMenus = () => {
       if (draft.look) {
         contents = withLook(contents, draft.look);
       }
+      // An animation from the library brings the pictures it reads, as an
+      // import does (`appearance/importStock`).
+      const stock =
+        draft.look?.kind === 'animation'
+          ? stockAnimation(draft.look.value)
+          : undefined;
+      const withPictures = stock
+        ? importStockAnimation(source, stock).source
+        : source;
       if (draft.shape) {
         // How many tiles it fills, as a row of its own. One tile writes
         // nothing, which is every actor that never touched the widget — and
@@ -426,8 +435,8 @@ export const FileMenus = () => {
         contents = withScale(contents, draft.shape, draft.drawn);
       }
       return {
-        ...source,
-        files: {...source.files, [id as string]: {...file, contents}},
+        ...withPictures,
+        files: {...withPictures.files, [id as string]: {...file, contents}},
       };
     },
     [],
@@ -944,29 +953,24 @@ export const FileMenus = () => {
     [creating, app, creatingFor],
   );
 
-  /**
-   * The project's pictures and animations, as the wizard's picture step wants
-   * them.
-   *
-   * An animation is listed by its own KEY inside its `.anim` file rather than
-   * by the file: a `play animation` row stores that key, and one file may hold
-   * several (`actors/stock/workspace.playAnimation`).
-   */
+  /** The project's pictures, as the wizard's picture step wants them. */
   const spriteNames = useMemo(
     () => (creating ? filesIn(SPRITES_FOLDER).map(({file}) => file.name) : []),
     [creating, filesIn],
   );
 
+  // The library's animations: one chosen is the new actor's Main, and its
+  // pictures come in with it (`buildActor`, specs/ANIMATION_PLAN.md).
   const pickableAnimations = useMemo(
     () =>
       creating
-        ? filesIn(ANIMATIONS_FOLDER).flatMap(({file}) =>
-            Object.entries(parseAnim(file.contents ?? '').animations).map(
-              ([id, animation]) => ({id, name: label(id), animation}),
-            ),
-          )
+        ? STOCK_ANIMATIONS.map(animation => ({
+            id: animation.id,
+            name: animation.name,
+            animation,
+          }))
         : [],
-    [creating, filesIn],
+    [creating],
   );
 
   /**
@@ -1186,7 +1190,7 @@ export const nameProblem = (
   return taken ? `There is already one called ${fileName} here.` : undefined;
 };
 
-/** `coinSpin.anim` is `coinSpin`, which `label` then titles. */
+/** `ripple.effect` is `ripple`, which `label` then titles. */
 const stemOf = (name: string): string => name.replace(/\.[^.]+$/, '');
 
 /**

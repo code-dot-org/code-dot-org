@@ -17,7 +17,6 @@ const EXT_ORDER = [
   '.js',
   '.json',
   '.map',
-  '.anim',
   '.effect',
   '.style',
   '.rule',
@@ -71,16 +70,14 @@ function loaderFor(path: string): Loader {
   }
   if (
     path.endsWith('.json') ||
-    path.endsWith('.anim') ||
     path.endsWith('.effect') ||
     // …and `.style`, a theme, imported by a world's `use theme` block and
     // read by the engine as data — the same deal an `.effect` gets, for the
     // same reason: nothing about it is code (specs/STYLES_PLAN.md).
     path.endsWith('.style')
   ) {
-    // `.anim` (an animation file) and `.effect` (a shader graph) are raw JSON
-    // on disk, imported like `.json` — an `.anim` by the world's `use
-    // animations` block, an `.effect` by an `add effect` block. A `.map` is
+    // An `.effect` (a shader graph) is raw JSON on disk, imported like
+    // `.json`, by an `add effect` block. A `.map` is
     // JSON on disk too, and used to be one of these; it carries workspaces
     // now and is generated into a module before the bundler sees it
     // (specs/MAP_FIRST.md), so it falls through to `js` with the rest.
