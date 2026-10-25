@@ -432,7 +432,7 @@
   pointer-events: none;
 }
 
-/* One panel in that column: the layer strip, the camera list, the records.
+/* One panel in that column: the layer strip, the records.
  * The records are a class of their own, beside the canvas because they are
  * nowhere on it (specs/RECORDS_PLAN.md), and share this rule rather than
  * `composes` it, which this package's stylelint does not know. */
@@ -556,6 +556,15 @@
 }
 
 /* Docked: said, with the way to undock beside it (specs/DOCKING_PLAN.md). */
+
+/* The cameras of a Viewport, or of the world, as a section of its
+   inspector (`CameraList`). */
+.cameraList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .inspectorDocked {
   display: flex;
   align-items: center;

@@ -62,7 +62,7 @@ import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {AngleInput} from './AngleInput';
 import {CameraInspector} from './CameraInspector';
-import {CameraPanel} from './CameraPanel';
+import {CameraList} from './CameraList';
 import {
   dividerAt,
   dockChoices,
@@ -370,8 +370,8 @@ export interface MapStageProps {
     onTheme?: (path: string | undefined) => void;
   };
   /**
-   * The cameras the world's own workspace declares, for the camera strip on a
-   * main map with nothing selected. Read by the editor, which has the file's
+   * The cameras the world's own workspace declares, for the camera list in
+   * the world's inspector on a main map with nothing selected. Read by the editor, which has the file's
    * text; the stage knows nothing of files (`worldCameras`).
    */
   worldCameras?: readonly DeclaredCamera[];
@@ -829,12 +829,14 @@ export const MapStage = ({
   // The topmost placed actor under a world point, through each one's own
   // transform (`stageGeometry.hitTest`). Reads the ref rather than the state
   // so a gesture mid-drag sees the position it just wrote.
-  // The layers and the cameras are rarely what a map is being opened for, and
-  // each is a column of rows over the top-left of the map, so each starts
-  // hidden behind a toolbar button. A lesson that points at one opens it
-  // (`callouts/places`, `map.layers`).
-  const [panels, setPanels] = useState({layers: false, cameras: false});
-  const togglePanel = (panel: 'layers' | 'cameras') =>
+  // The layers are rarely what a map is being opened for, and are a column
+  // of rows over the top-left of the map, so they start hidden behind a
+  // toolbar button. A lesson that points at them opens them
+  // (`callouts/places`, `map.layers`). The cameras were the other such
+  // panel; they are a section of the inspector of what has them now
+  // (`CameraList`).
+  const [panels, setPanels] = useState({layers: false});
+  const togglePanel = (panel: 'layers') =>
     setPanels(open => ({...open, [panel]: !open[panel]}));
   /**
    * WHILE A LAYER IS EDITED — the strip open — the layers in front of it
@@ -3379,11 +3381,11 @@ export const MapStage = ({
   // this lesson: a list whose one button opens a script nobody may open is a
   // list that says less than nothing.
   //
-  // …except the world's own, which are EDITED in the strip and need no
+  // …except the world's own, which are EDITED in the list and need no
   // script to be offered (`worldCameraCode`).
   const scripts = !appBuilder && onEditScript && !locked('map-scripts');
   // A SELECTED VIEWPORT'S cameras are edited as the world's are, through the
-  // same strip and inspector — but they are data on the placement, made here
+  // same list and inspector — but they are data on the placement, made here
   // and nowhere else, which the compiler turns into their declarations
   // (`blockly/placementCameras`). Its `shows through` says which it looks
   // through, by name.
@@ -3460,7 +3462,10 @@ export const MapStage = ({
             owner: selectedActor.id,
             open: scripts ? () => onEditScript?.(selectedActor.id) : undefined,
           }
-        : scripts
+        : // Not a Viewport, or no camera rules to edit one with: only what
+          // its code declares, when it declares any — a section saying
+          // "only the main camera" on every placement says nothing.
+          scripts && placementCameras(selectedActor.blocks).length > 0
           ? {
               list: placementCameras(selectedActor.blocks),
               inCode: [],
@@ -3485,6 +3490,38 @@ export const MapStage = ({
         ? {id: MAIN_CAMERA, name: 'Main camera'}
         : editableCameras.find(each => each.id === inspectingCamera)
       : undefined;
+  // The cameras of whatever is inspected, as a section of its inspector: a
+  // selected Viewport's, or the world's on a main map with nothing selected
+  // — and nothing on a level `.map`, since a map has none
+  // (specs/SPACE_CAMERAS_PLAN.md). A row opens the camera's inspector in
+  // place of this one, and its Close comes back.
+  const cameraSection = cameras ? (
+    <CameraList
+      cameras={cameras.list}
+      owner={cameras.owner}
+      onOpen={cameras.open}
+      inCode={cameras.inCode}
+      edits={
+        cameraEditor
+          ? {
+              starting: cameraEditor.starting,
+              onSelect: id => {
+                setInspectingCamera(id);
+                setInspectingLayer(false);
+              },
+              onAdd: () => {
+                const id = cameraEditor.add();
+                if (id) {
+                  setInspectingCamera(id);
+                  setInspectingLayer(false);
+                }
+              },
+              isReadOnly,
+            }
+          : undefined
+      }
+    />
+  ) : null;
 
   return (
     <div className={styles.stage} ref={stageRef}>
@@ -3578,14 +3615,6 @@ export const MapStage = ({
             onClick={() => togglePanel('layers')}
           />
         )}
-        {cameras && (
-          <ToolbarIcon
-            label="Cameras"
-            icon="video"
-            pressed={panels.cameras}
-            onClick={() => togglePanel('cameras')}
-          />
-        )}
         {onEditScript && (
           <>
             <ToolbarIcon
@@ -3645,42 +3674,6 @@ export const MapStage = ({
                 isReadOnly={isReadOnly}
               />
             ))}
-          {/* The cameras of whatever is being edited: the world's on a main map
-            with nothing selected, a placement's when one is — and nothing on
-            a level `.map` with nothing selected, since a map has none
-            (specs/SPACE_CAMERAS_PLAN.md). */}
-          {panels.cameras && cameras && (
-            <CameraPanel
-              cameras={cameras.list}
-              owner={cameras.owner}
-              onOpen={cameras.open}
-              inCode={cameras.inCode}
-              edits={
-                cameraEditor
-                  ? {
-                      selected: inspectedCamera?.id ?? null,
-                      starting: cameraEditor.starting,
-                      onSelect: id => {
-                        setInspectingCamera(id);
-                        setInspectingLayer(false);
-                      },
-                      onAdd: () => {
-                        const id = cameraEditor.add();
-                        if (id) {
-                          setInspectingCamera(id);
-                          setInspectingLayer(false);
-                        }
-                      },
-                      onRemove: id => {
-                        cameraEditor.remove(id);
-                        setInspectingCamera(null);
-                      },
-                      isReadOnly,
-                    }
-                  : undefined
-              }
-            />
-          )}
           <RecordPanel
             records={records}
             kinds={recordKinds}
@@ -3720,6 +3713,10 @@ export const MapStage = ({
               cameraEditor.setValue(inspectedCamera.id, property, value)
             }
             onClose={() => setInspectingCamera(null)}
+            onRemove={() => {
+              cameraEditor.remove(inspectedCamera.id);
+              setInspectingCamera(null);
+            }}
             looker={selectedActor ? 'This Viewport' : 'The world'}
             // The world's main camera takes traits, stored on its main map; a
             // Viewport's has its kind's.
@@ -3766,6 +3763,7 @@ export const MapStage = ({
               themeOptions={themeOptions}
               onTheme={path => world.onTheme?.(path)}
               {...backgroundProps}
+              cameras={cameraSection}
               isReadOnly={isReadOnly}
             />
           )}
@@ -4072,6 +4070,7 @@ export const MapStage = ({
                   }
                 />
               )}
+            {cameraSection}
             {selectedSchema.length > 0 && (
               <Accordion
                 className={styles.inspectorAccordion}

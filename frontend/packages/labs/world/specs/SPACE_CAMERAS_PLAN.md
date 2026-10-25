@@ -353,7 +353,9 @@ for ⟨actor⟩`, a socket.**
      offer, and it says so where the list is empty rather than reading as "no
      view", since every space has a main camera regardless. It starts
      closed behind a Cameras button in the stage's toolbar, which appears
-     only where there would be a list to show.
+     only where there would be a list to show. (The strip and its button
+     are gone since: the list is a section of the Viewport's, or the
+     world's, inspector — specs/SHELL_FINISH_PLAN.md, step 3.)
    - **9b. Add, remove, rename. BUILT, and as MAP DATA.** A camera is made
      in one place, the visual one. The world's are stored on its main map
      (`map.cameras`, with `map.startingCamera` saying which one it starts

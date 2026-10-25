@@ -28,8 +28,8 @@ export type Reveal =
   | {kind: 'view'; view: 'map' | 'world'}
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */
   | {kind: 'placement'; named?: string}
-  /** One of the map's panels that start hidden behind a button (`MapStage`). */
-  | {kind: 'mapPanel'; panel: 'layers' | 'cameras'}
+  /** The map's panel that starts hidden behind a button (`MapStage`). */
+  | {kind: 'mapPanel'; panel: 'layers'}
   /** A toolbox drawer open, on a block or by name (`BlocklyFileEditor`). */
   | {kind: 'toolbox'; block?: string; drawer?: string};
 

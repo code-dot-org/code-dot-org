@@ -1,6 +1,6 @@
 // @vitest-environment node
 //
-// The camera strip's reader, as arithmetic over block JSON.
+// The camera list's reader, as arithmetic over block JSON.
 
 import {describe, expect, it} from 'vitest';
 

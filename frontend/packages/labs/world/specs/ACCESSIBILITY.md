@@ -121,6 +121,12 @@ below, and are listed last.
   What the place holds is not said.
 - **Layers in front vanish without a word** when a layer is pressed in
   the strip; only the box "Show all layers" says they can come back.
+- **A camera's inspector takes the place of its owner's, and focus is
+  not moved**: pressing a row of the camera list, or Add a camera, removes
+  the button that was pressed, so focus falls to the page; Close and
+  Remove this camera do the same coming back. Focus should land on the
+  camera inspector's heading going in, and on the camera's row (or Add a
+  camera) coming back.
 
 ## Not yet done for any phase
 

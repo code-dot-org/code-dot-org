@@ -994,7 +994,7 @@ describe('the world, with nothing selected', () => {
   });
 });
 
-describe('the camera strip', () => {
+describe('the camera list', () => {
   // What cameras the thing being edited has declared, read from its blocks
   // (specs/SPACE_CAMERAS_PLAN.md, step 9a). Only offered when a script can be
   // opened, since opening it is the one thing the strip does.
@@ -1019,7 +1019,7 @@ describe('the camera strip', () => {
     },
   };
 
-  it('lists the world’s cameras on a main map with nothing selected', () => {
+  it('lists the world’s cameras in its inspector, with nothing selected', () => {
     const view = mount(doc(), {
       onEditScript: vi.fn(),
       world: {
@@ -1031,13 +1031,10 @@ describe('the camera strip', () => {
         {id: 'c1', name: 'Wide', traits: ['Camera Follow#Follows']},
       ],
     });
-    // Behind its toolbar button until asked for.
-    expect(view.queryByTestId('camera-panel')).toBeNull();
-    const toggle = view.getByRole('button', {name: 'Cameras'});
-    expect(toggle).toHaveAttribute('aria-pressed', 'false');
-    fireEvent.click(toggle);
-    expect(toggle).toHaveAttribute('aria-pressed', 'true');
-    expect(view.getByTestId('camera-panel')).toBeInTheDocument();
+    // A section of the world's inspector, and no button on the stage.
+    expect(view.queryByRole('button', {name: 'Cameras'})).toBeNull();
+    const list = view.getByTestId('camera-list');
+    expect(view.getByTestId('world-inspector')).toContainElement(list);
     expect(view.getByText('Wide')).toBeInTheDocument();
     expect(view.getByText(/Follows/)).toBeInTheDocument();
   });
@@ -1049,7 +1046,6 @@ describe('the camera strip', () => {
     const {canvas, ...view} = mount(map, {onEditScript});
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
-    fireEvent.click(view.getByRole('button', {name: 'Cameras'}));
     expect(view.getByText('Chase')).toBeInTheDocument();
 
     fireEvent.click(view.getByRole('button', {name: 'Open code'}));
@@ -1068,7 +1064,7 @@ describe('the camera strip', () => {
       },
       worldCameras: [{id: 'c1', name: 'Wide', traits: []}],
     });
-    expect(view.queryByRole('button', {name: 'Cameras'})).toBeNull();
+    expect(view.queryByTestId('camera-list')).toBeNull();
     expect(view.queryByRole('button', {name: 'Layers'})).toBeNull();
     // A lesson pointing at the strip finds nothing to open.
     let answer: unknown;
@@ -1081,9 +1077,7 @@ describe('the camera strip', () => {
 
   it('shows nothing on a level map with nothing selected, which has none', () => {
     const view = mount(doc(), {onEditScript: vi.fn()});
-    expect(view.queryByTestId('camera-panel')).toBeNull();
-    // …and offers no button for a list that would be empty by definition.
-    expect(view.queryByRole('button', {name: 'Cameras'})).toBeNull();
+    expect(view.queryByTestId('camera-list')).toBeNull();
   });
 });
 
@@ -1222,7 +1216,6 @@ describe('a level, with nothing selected', () => {
         kinds: {'actors/bird': {name: 'Bird'}},
       },
     );
-    fireEvent.click(main.getByRole('button', {name: 'Cameras'}));
     fireEvent.click(main.getByRole('button', {name: /^Chase/}));
     expect(main.getByTestId('camera-inspector')).toBeInTheDocument();
     expect(main.getByLabelText('Follows')).toBeChecked();
@@ -1243,7 +1236,10 @@ describe('a level, with nothing selected', () => {
       'Camera Follow#FollowsTrait',
       false,
     );
-    fireEvent.click(main.getByRole('button', {name: 'Add camera'}));
+    fireEvent.click(main.getByRole('button', {name: 'Remove this camera'}));
+    expect(editor.remove).toHaveBeenCalledWith('chase');
+    // Gone, the world's inspector is back with its list.
+    fireEvent.click(main.getByRole('button', {name: 'Add a camera'}));
     expect(editor.add).toHaveBeenCalled();
   });
 
@@ -1273,8 +1269,14 @@ describe('a level, with nothing selected', () => {
       onEditScript: vi.fn(),
     });
     fireEvent.keyDown(canvas, {key: 'ArrowRight'});
-    fireEvent.click(view.getByRole('button', {name: 'Cameras'}));
-    fireEvent.click(view.getByRole('button', {name: 'Add camera'}));
+    // In the Viewport's own inspector: the main camera always, and a way to
+    // add another.
+    const list = view.getByTestId('camera-list');
+    expect(
+      view.getByRole('button', {name: /^Main camera/}),
+    ).toBeInTheDocument();
+    expect(list).toHaveTextContent('at the start');
+    fireEvent.click(view.getByRole('button', {name: 'Add a camera'}));
     // Stored on the placement, and nothing written into its code.
     expect(written().actors[0].cameras).toEqual([
       {id: expect.any(String), name: 'Camera 2', traits: [], values: []},
@@ -1287,6 +1289,20 @@ describe('a level, with nothing selected', () => {
     expect(written().actors[0].properties?.showsMap?.showsThrough).toBe(
       'Camera 2',
     );
+    // Closed, the Viewport's inspector again, the new camera in its list.
+    fireEvent.click(view.getByRole('button', {name: 'Close'}));
+    expect(view.queryByTestId('camera-inspector')).toBeNull();
+    expect(view.getByRole('button', {name: /^Camera 2/})).toBeInTheDocument();
+  });
+
+  it('gives a placement that is not a Viewport no camera section', () => {
+    const {canvas, ...view} = mount(doc(), {
+      cameraChoices: [],
+      onEditScript: vi.fn(),
+    });
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    expect(view.getByRole('textbox', {name: 'ID'})).toBeInTheDocument();
+    expect(view.queryByTestId('camera-list')).toBeNull();
   });
 
   it('never offers that on a world’s main map, which has nothing under it', () => {

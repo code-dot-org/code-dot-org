@@ -7,7 +7,7 @@
 // block remains for a value that changes while the game runs.
 
 import {Button, Typography} from '@mui/material';
-import type {ChangeEvent, KeyboardEvent} from 'react';
+import type {ChangeEvent, KeyboardEvent, ReactNode} from 'react';
 import {useEffect, useRef, useState} from 'react';
 
 import Accordion from '@code-dot-org/component-library/accordion';
@@ -74,6 +74,8 @@ export interface WorldInspectorProps {
    * button counts — for the button here that opens the same panel.
    */
   ruleCount?: number;
+  /** The world's cameras, as a section at the foot (`CameraList`). */
+  cameras?: ReactNode;
   isReadOnly: boolean;
 }
 
@@ -107,6 +109,7 @@ export const WorldInspector = ({
   onBackground,
   onBackgroundColor,
   ruleCount,
+  cameras,
   isReadOnly,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
@@ -429,6 +432,7 @@ export const WorldInspector = ({
         emptyLabel="(none)"
         isReadOnly={isReadOnly}
       />
+      {cameras}
     </div>
   );
 };

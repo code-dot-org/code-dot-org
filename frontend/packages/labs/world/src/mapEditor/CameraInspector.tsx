@@ -1,12 +1,14 @@
-// The inspector for one of the world's cameras (specs/SPACE_CAMERAS_PLAN.md,
-// step 9c): its name, whether the world starts looking through it, the
+// The inspector for one camera, a Viewport's or the world's
+// (specs/SPACE_CAMERAS_PLAN.md, step 9c), opened from a row of the camera
+// list in that Viewport's or world's own inspector (`CameraList`) and closed
+// back to it: its name, whether its owner starts looking through it, the
 // camera traits it elects, and a field per property of each — `actor to
 // follow`, `look offset` — which is what a placement's inspector does for an
-// actor's traits.
+// actor's traits. An added camera is removed here.
 //
-// Every field is a row of the camera's `define camera` in the world's code,
-// read and written by `worldCameraCode`, so what this shows and what the
-// blocks say are one thing.
+// What it shows and writes is data kept on the owner — a Viewport's on its
+// placement, the world's on its main map — which the compiler turns into the
+// camera's `define camera` (`blockly/placementCameras`).
 //
 // The main camera has no traits of its own here: every world has it, and it
 // shows the map from its top left. Following something is what an added
@@ -50,6 +52,8 @@ export interface CameraInspectorProps {
   onTrait: (trait: string, elected: boolean) => void;
   onValue: (property: CameraProperty, value: string) => void;
   onClose: () => void;
+  /** Take the camera away; absent for the main camera, which cannot go. */
+  onRemove?: () => void;
   /** What is said of the main camera. */
   mainNote?: string;
   /**
@@ -78,6 +82,7 @@ export const CameraInspector = ({
   onTrait,
   onValue,
   onClose,
+  onRemove,
   mainNote = 'Every world has this camera. It shows the map from its top ' +
     'left until a camera rule moves it.',
   looker = 'The world',
@@ -322,6 +327,17 @@ export const CameraInspector = ({
             {choice.properties.map(renderField)}
           </section>
         ))}
+      {!main && onRemove && (
+        <Button
+          variant="text"
+          size="small"
+          disabled={isReadOnly}
+          startIcon={<FontAwesomeV6Icon iconName="trash" iconStyle="solid" />}
+          onClick={onRemove}
+        >
+          Remove this camera
+        </Button>
+      )}
     </div>
   );
 };

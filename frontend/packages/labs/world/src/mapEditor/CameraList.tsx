@@ -1,46 +1,43 @@
-// The camera strip: what cameras the thing being edited has declared.
+// The cameras of what is being inspected, as a section of its inspector:
+// a selected Viewport's, or the world's on a project still shaped as a world
+// (SIMPLE_INTERFACE.md, "Cameras"; specs/SHELL_FINISH_PLAN.md, step 3).
 //
-// The world's on a main map with nothing selected, a Viewport's with that
-// placement selected, and nothing at all on a level `.map` — which is the
-// plan's point made visible: a map has no cameras, a Viewport decides, and the
-// world is the main Viewport (specs/SPACE_CAMERAS_PLAN.md, step 9a).
+// The main camera is listed first, because every Viewport and every world
+// has one, and it is the one looked through unless told otherwise. A row
+// opens that camera in its own inspector (`CameraInspector`), which is where
+// it is named, given traits, told what to follow, and removed. Cameras
+// declared in code beside the ones made here are listed and marked, and are
+// changed only in the code.
 //
-// THE WORLD'S ARE EDITED HERE (9b): added, removed, and opened in a camera's
-// inspector by clicking one, which is where it is named, given traits and
-// told what to follow (`CameraInspector`, `worldCameraCode`). Its main
-// camera is listed first, because every world has one and it is the one the
-// world looks through unless told otherwise. A Viewport's stay read-only,
-// declared in its placement's code, and the strip says so with one button.
-// Built the way the layer strip is, because it is the same shape of thing: a
-// short list belonging to what is being edited.
+// It was a strip on the stage behind a toolbar button, apart from the thing
+// whose cameras it listed; selecting the Viewport and then finding the strip
+// was two errands for one.
 
 import {Button, Typography} from '@mui/material';
 
-import {IconAction} from './IconAction';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import styles from './mapEditor.module.css';
 import {MAIN_CAMERA} from './worldCameraCode';
 import type {DeclaredCamera} from './worldCameras';
 
-/** What makes the strip an editor, for the world's own cameras. */
-export interface CameraStripEdits {
-  /** The camera open in the inspector, if one is. */
-  selected: string | null;
-  /** The camera the world starts looking through, `MAIN_CAMERA` by default. */
+/** What makes the list an editor, for cameras made here. */
+export interface CameraListEdits {
+  /** The camera the owner starts looking through, `MAIN_CAMERA` by default. */
   starting: string;
   onSelect: (id: string) => void;
   onAdd: () => void;
-  onRemove: (id: string) => void;
   isReadOnly: boolean;
 }
 
-export interface CameraPanelProps {
+export interface CameraListProps {
   cameras: readonly DeclaredCamera[];
-  /** Whose cameras these are, for the heading: "the world", "Minimap". */
+  /** Whose cameras these are, for the list's name: "the world", "Minimap". */
   owner: string;
   /** Open the script they are declared in, where they are written. */
   onOpen?: () => void;
-  /** Present for the cameras edited here: the world's, a Viewport's. */
-  edits?: CameraStripEdits;
+  /** Present for the cameras edited here. */
+  edits?: CameraListEdits;
   /**
    * Cameras declared in code beside the ones edited here — a Viewport's
    * written in its placement's code — listed, and changed only there.
@@ -48,23 +45,27 @@ export interface CameraPanelProps {
   inCode?: readonly DeclaredCamera[];
 }
 
-/** `Camera Follow#Follows` → `Follows`: the trait's own name, for a chip. */
+/** `Camera Follow#Follows` → `Follows`: the trait's own name, for a row. */
 const traitName = (ref: string): string =>
   (ref.split('#').pop() ?? ref).replace(/Trait$/, '');
 
-export const CameraPanel = ({
+export const CameraList = ({
   cameras,
   owner,
   onOpen,
   edits,
   inCode = [],
-}: CameraPanelProps) => {
+}: CameraListProps) => {
   const rows = edits
     ? [{id: MAIN_CAMERA, name: 'Main camera', traits: []}, ...cameras]
     : cameras;
   return (
-    <div className={styles.layers} data-testid="camera-panel">
-      <Typography variant="subtitle2" component="span">
+    <section
+      className={styles.cameraList}
+      aria-label="Cameras"
+      data-testid="camera-list"
+    >
+      <Typography variant="body2" component="h3">
         Cameras
       </Typography>
       {rows.length === 0 ? (
@@ -86,7 +87,6 @@ export const CameraPanel = ({
                 <button
                   type="button"
                   className={styles.layerRow}
-                  aria-pressed={camera.id === edits.selected}
                   onClick={() => edits.onSelect(camera.id)}
                 >
                   {camera.name}
@@ -118,29 +118,18 @@ export const CameraPanel = ({
         </ul>
       )}
       <div className={styles.layerActions}>
-        {edits && (
-          <>
-            <IconAction
-              label="Add camera"
-              icon="plus"
-              onClick={edits.onAdd}
-              disabled={edits.isReadOnly}
-            />
-            <IconAction
-              label="Remove camera"
-              icon="trash"
-              onClick={() => edits.selected && edits.onRemove(edits.selected)}
-              // The main camera cannot go: every world has one.
-              disabled={
-                edits.isReadOnly ||
-                !edits.selected ||
-                edits.selected === MAIN_CAMERA
-              }
-            />
-          </>
+        {edits && !edits.isReadOnly && (
+          <Button
+            variant="text"
+            size="extraSmall"
+            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+            onClick={edits.onAdd}
+          >
+            Add a camera
+          </Button>
         )}
         {onOpen && (!edits || inCode.length > 0) && (
-          // "Open code" and not "Code": the placement inspector beside this
+          // "Open code" and not "Code": the placement inspector this sits in
           // already has a button called Code, and two buttons with one name
           // is one a screen reader cannot tell apart.
           <Button variant="text" size="extraSmall" onClick={onOpen}>
@@ -148,8 +137,8 @@ export const CameraPanel = ({
           </Button>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
-export default CameraPanel;
+export default CameraList;

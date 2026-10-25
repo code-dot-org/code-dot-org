@@ -126,6 +126,25 @@ the world's cameras use. The stage's camera strip goes; the world's own
 cameras, on a project still shaped as a world, keep the inspector they
 have.
 
+BUILT. Most of this was there already, and "What exists" above misread
+it: a Viewport's cameras were edited, not read-only — kept as data on its
+placement (`placement.cameras`) since SPACE_CAMERAS_PLAN.md step 9b, with
+the same `CameraInspector` the world's use. What was wrong was where: a
+strip behind a toolbar button, apart from the Viewport it belonged to.
+The list is now a section of the inspector of what has the cameras
+(`CameraList`): a selected Viewport's, above its traits, and the world's,
+at the foot of the world's inspector. The main camera is always its first
+row, marked when it is the one looked through at the start; Add a camera
+makes one and opens it. A row opens that camera's inspector in place of
+the owner's, and its Close comes back; Remove this camera is in the
+camera's inspector, since the list no longer has a selected row. A
+placement that is not a Viewport shows the section only when its code
+declares a camera. The toolbar's Cameras button and the strip are gone,
+and a lesson can no longer point at a cameras panel (`callouts/places`).
+In the browser: the starter's Viewport listed its main camera; Add a
+camera opened Camera 2, Close showed it in the list, and Remove took it
+away. Tapper, still a world, lists the world's in its inspector.
+
 ### 4. Doors for every kind
 
 `fileActs` widened first (make, rename, clone, delete, upload, for any

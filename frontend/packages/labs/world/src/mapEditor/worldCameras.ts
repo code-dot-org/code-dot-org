@@ -4,7 +4,7 @@
 // world's own workspace for the world's, and in a Viewport placement's script
 // for that Viewport's, where `this actor` is the Viewport
 // (specs/SPACE_CAMERAS_PLAN.md). Nothing in the editor said what cameras a
-// project had; this is the reader the camera strip lists from, and it is the
+// project had; this is the reader the camera list reads from, and it is the
 // same document walk `worldProperties` does for a world's properties.
 //
 // READ-ONLY. Adding, removing and renaming a camera are a row spliced into or
