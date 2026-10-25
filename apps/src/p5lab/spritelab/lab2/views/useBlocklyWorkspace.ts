@@ -18,10 +18,12 @@ import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
 import {withoutBlockTypes} from '../blockCatalog';
+import {lockBlocks, withoutLocks} from '../blockLocks';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {guardGhostConnections, withoutGhosts} from '../ghostBlocks';
 import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
@@ -40,6 +42,9 @@ interface UseBlocklyWorkspaceOptions {
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   /** Block types kept out of the toolbox; read at inject and on refresh. */
   hiddenBlockTypes?: ReadonlySet<string>;
+  /** Runs before a change is saved; true when it changed the workspace
+      (ghostBlocks.ts settles the level's ghosts here). */
+  beforeSave?: (workspace: BlocklyCore.WorkspaceSvg) => boolean;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
 }
@@ -58,8 +63,12 @@ interface UseBlocklyWorkspaceResult {
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
-  /** Load code into the workspace. */
-  loadCode: (source: WorkspaceSerialization) => void;
+  /** Load code into the workspace; `lock` keeps every loaded block from
+      deletion but the level's own stacks (blockLocks.ts). */
+  loadCode: (
+    source: WorkspaceSerialization,
+    options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}
+  ) => void;
   /**
    * Register the change listeners:
    * - onWorkspaceChange fires with the serialized workspace after a user edit.
@@ -84,10 +93,13 @@ export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
   hiddenBlockTypes,
+  beforeSave,
   sharedBlocks,
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const beforeSaveRef = useRef(beforeSave);
+  beforeSaveRef.current = beforeSave;
   const hiddenRef = useRef(hiddenBlockTypes);
   hiddenRef.current = hiddenBlockTypes;
   // A level's authored definition with the lab's additions, filtered to
@@ -163,6 +175,7 @@ export default function useBlocklyWorkspace({
     workspaceRef.current.options.plugins[
       BlocklyCore.registry.Type.CONNECTION_PREVIEWER.toString()
     ] = PlaceholderPreviewer;
+    guardGhostConnections(workspaceRef.current);
 
     // CDO Blockly shrinks the container by the workspace-header height to
     // leave room for a header bar we don't render, leaving a gap at the
@@ -218,9 +231,15 @@ export default function useBlocklyWorkspace({
       if (workspaceRef.current.isDragging()) {
         return;
       }
-      const serialized = Blockly.serialization.workspaces.save(
+      beforeSaveRef.current?.(workspaceRef.current);
+      let serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;
+      // Levelbuilder's own locks and ghosts are authored; a student's are
+      // the level's.
+      if (!isToolboxMode && !isStartMode) {
+        serialized = withoutGhosts(withoutLocks(serialized));
+      }
       currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);
     };
@@ -280,22 +299,31 @@ export default function useBlocklyWorkspace({
     []
   );
 
-  const loadCode = useCallback((source: WorkspaceSerialization) => {
-    const workspace = workspaceRef.current;
-    if (!workspace) {
-      return;
-    }
-    pendingLoadsRef.current++;
-    try {
-      loadBlocksToWorkspace(workspace, JSON.stringify(source));
-      // Update ref here (instead of in change listener) since callers may read this synchronously.
-      currentBlocksRef.current = source;
-    } catch (e) {
-      // Decrement the counter if there was an error.
-      pendingLoadsRef.current--;
-      throw e;
-    }
-  }, []);
+  const loadCode = useCallback(
+    (
+      source: WorkspaceSerialization,
+      options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}
+    ) => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      pendingLoadsRef.current++;
+      try {
+        loadBlocksToWorkspace(workspace, JSON.stringify(source));
+        if (options?.lock) {
+          lockBlocks(workspace, options.own);
+        }
+        // Update ref here (instead of in change listener) since callers may read this synchronously.
+        currentBlocksRef.current = source;
+      } catch (e) {
+        // Decrement the counter if there was an error.
+        pendingLoadsRef.current--;
+        throw e;
+      }
+    },
+    []
+  );
 
   const getCurrentBlocks = useCallback(() => currentBlocksRef.current, []);
 

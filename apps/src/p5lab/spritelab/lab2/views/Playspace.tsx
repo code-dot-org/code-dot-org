@@ -172,6 +172,9 @@ interface PlayspaceProps {
   // Scenes UI variant: increment to play a quick fade-in-from-black over the
   // canvas (used when the go-to-scene block jumps scenes). 0 = never faded.
   fadeTrigger?: number;
+  // Increment to play a quicker fade-from-black: the preview's scene changed
+  // under the editor. 0 = never.
+  switchTrigger?: number;
   // Hold a solid black cover over the canvas (from a jump trigger until the
   // target scene lands, when the fade takes over).
   covered?: boolean;
@@ -212,6 +215,7 @@ interface PlayspaceProps {
 const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   mode,
   fadeTrigger = 0,
+  switchTrigger = 0,
   covered = false,
   loading = false,
   boxRef,
@@ -704,6 +708,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         {/* Keyed so each scene jump restarts the fade-from-black animation. */}
         {fadeTrigger > 0 && (
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
+        )}
+        {switchTrigger > 0 && (
+          <div
+            key={`switch-${switchTrigger}`}
+            className={classNames(
+              moduleStyles.sceneFade,
+              moduleStyles.sceneFadeQuick
+            )}
+          />
         )}
         {/* Loading overlay: mounted for the whole load, but CSS delays its
             fade-in so only slow loads ever show it. */}

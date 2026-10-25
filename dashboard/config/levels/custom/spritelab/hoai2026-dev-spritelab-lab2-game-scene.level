@@ -22,7 +22,13 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "imageFirst": true,
+      "imageType": "background",
+      "imageRole": "platform-background",
+      "sentence": "place-detail",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background for your game.**"
     },
     "image_role_defaults": {
       "background": "platform-background"
@@ -36,22 +42,24 @@
       "title": "**Add the background to your game**",
       "items": [
         {
-          "text": "Put **set background** under **when run**.",
+          "text": "Prompt AI to make a background for your game.",
           "check": {
-            "kind": "block",
-            "type": "gamelab_setBackgroundImageAs",
-            "under": "spritelab2_whenRun"
+            "kind": "image",
+            "imageType": "background"
           }
         },
         {
-          "text": "Click **Play**.",
+          "text": "Put **set background** under **when run** and pick your game background.",
           "check": {
-            "kind": "play"
+            "kind": "block",
+            "type": "gamelab_setBackgroundImageAs",
+            "under": "spritelab2_whenRun",
+            "namesImage": "IMG"
           }
         }
       ]
     },
-    "long_instructions": "# Add the background to your game\nPut **set background** under **when run** and pick your game background.",
+    "long_instructions": "# Add the background to your game\nMake a background for your game, then put **set background** under **when run** and pick it.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

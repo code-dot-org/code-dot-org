@@ -24,7 +24,10 @@
     "level_mode": {
       "kind": "build",
       "imageType": "sprite",
-      "placeOne": true
+      "paletteRoles": [
+        "block",
+        "friend"
+      ]
     },
     "pinned_scene": {
       "id": "platform-scene",
@@ -45,14 +48,12 @@
           }
         },
         {
-          "text": "In **Code**, drag **begins patrolling** onto the dotted outline.",
+          "text": "In **Code**, give your second character something to do.",
           "check": {
             "kind": "block",
             "type": "spritelab2_beginsBehavior",
             "under": "spritelab2_whenRun",
-            "fields": {
-              "BEHAVIOR": "patrollingOnBlocks"
-            }
+            "spriteRole": "friend"
           }
         },
         {
@@ -90,6 +91,20 @@
               }
             }
           }
+        }
+      }
+    ],
+    "callouts": [
+      {
+        "target": "code-tab",
+        "when": {
+          "done": [
+            0
+          ],
+          "notDone": [
+            1
+          ],
+          "tabNot": "Code"
         }
       }
     ],

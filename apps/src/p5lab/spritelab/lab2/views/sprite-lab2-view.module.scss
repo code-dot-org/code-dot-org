@@ -1,4 +1,5 @@
 @use './imageTile' as tile;
+@use './sentence/sr-only' as *;
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
@@ -519,6 +520,12 @@ $z-over-blockly: 71;
   text-transform: none;
 }
 
+// Still, it keeps its colors: it is a label, not a button that is off.
+.sceneDropdown > button.sceneTriggerStill:disabled {
+  border-color: var(--borders-neutral-strong);
+  color: var(--text-neutral-primary);
+}
+
 .sceneTriggerName {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -894,7 +901,7 @@ $z-over-blockly: 71;
   }
 }
 
-// The new-scene dialog: name above the type choice.
+// The new-scene dialog: the type choice, as picture cards, above the name.
 .newSceneFields {
   display: flex;
   flex-direction: column;
@@ -920,6 +927,61 @@ $z-over-blockly: 71;
     color: var(--text-neutral-primary);
     font-size: 14px;
     line-height: inherit;
+  }
+}
+
+.sceneTypeCards {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+// A card is the radio's label: the whole picture picks. The chosen one
+// carries the brand border; the others a quiet one. Sized from the
+// viewport's height so the dialog fits a short screen (605px) whole.
+.sceneTypeCard {
+  display: flex;
+  flex: 0 1 clamp(136px, calc(100vh - 340px), 336px);
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 8px 10px;
+  gap: 8px;
+  border: 2px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    object-fit: cover;
+    // Full quality: undo the page's hover dimming of images in a label.
+    opacity: 1;
+  }
+}
+
+.sceneTypeCardChosen,
+.sceneTypeCardChosen:hover {
+  border-color: var(--borders-brand-teal-primary);
+}
+
+// The native radio stays for keyboard and screen readers; its card shows
+// the focus.
+.sceneTypeInput {
+  @include sr-only;
+
+  &:focus-visible + img {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
   }
 }
 
@@ -1271,6 +1333,15 @@ $z-over-blockly: 71;
   opacity: 0;
   animation: scene-fade-in 0.45s ease-out;
   pointer-events: none;
+}
+
+// The editor's scene switch: over before the eye settles on the new scene.
+.sceneFadeQuick {
+  animation-duration: 0.18s;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 @keyframes scene-fade-in {

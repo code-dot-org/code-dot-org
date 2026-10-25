@@ -46,8 +46,9 @@ import AnimatedSheetPreview from '../AnimatedSheetPreview';
 
 import AlternativeThumbs from './AlternativeThumbs';
 import BehindTheScenes from './BehindTheScenes';
+import FiringBlob from './FiringBlob';
 import GeneratingSteps from './GeneratingSteps';
-import {PixelReveal, PixelShuffle, SparkleBurst} from './PixelReveal';
+import {PixelReveal, SparkleBurst} from './PixelReveal';
 import ResultActions, {
   Verdict,
   VerdictReason,
@@ -66,6 +67,7 @@ import {
 import SentenceSceneLayout from './SentenceSceneLayout';
 import {playSound} from './sentenceSounds';
 import {SentPrompts, sentPromptsFor} from './sentPrompts';
+import {slotLineColors} from './wordHues';
 import WordMenus from './WordMenus';
 
 import styles from './sentence-scene.module.scss';
@@ -451,6 +453,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     }
     panelRef.current?.focus();
   }, [mode]);
+  // The blob's signal colors, read under the dialog's theme as a run starts.
+  const [signalColors, setSignalColors] = useState<string[]>([]);
+  useEffect(() => {
+    if (generating && panelRef.current) {
+      setSignalColors(slotLineColors(sentence, panelRef.current));
+    }
+  }, [generating, sentence]);
   const status = generating
     ? 'Making your picture…'
     : showingResult
@@ -610,7 +619,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
-      <PixelShuffle />
+      <FiringBlob colors={signalColors} />
     </div>
   ) : made ? (
     <>

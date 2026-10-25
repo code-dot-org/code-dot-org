@@ -16,6 +16,9 @@ describe('camelize', () => {
       pinned_scene: 'pinnedScene',
       add_blocks: 'addBlocks',
       world_start_pattern: 'worldStartPattern',
+      callouts: 'callouts',
+      starter_images: 'starterImages',
+      practice_world: 'practiceWorld',
     };
     expect(Object.keys(expected).sort()).toEqual(
       [...RAW_EDITABLE_PROPERTIES].sort()

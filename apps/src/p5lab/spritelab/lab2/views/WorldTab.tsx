@@ -266,8 +266,9 @@ interface WorldTabProps {
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
   // Shown with nothing to place; the owner knows where images come from.
   emptyMessage: string;
-  // The one image the palette offers: a world level's image of its kind.
-  only?: string;
+  // The images the palette offers, when a level narrows it: a world
+  // level's image of its kind, or the images of the roles it names.
+  only?: string[];
   // Present when the level places one thing (level_mode.placeOne): no Erase,
   // the image goes on an empty cell, and choosing another cell moves it there.
   onMoveCell?: (row: number, col: number, cell: WorldCell) => void;
@@ -330,7 +331,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     [animationList, trimVersion]
   );
   const palette = useMemo(
-    () => placeable.filter(item => !only || item.image === only),
+    () => placeable.filter(item => !only || only.includes(item.image)),
     [placeable, only]
   );
   const thumbsByImage = useMemo(

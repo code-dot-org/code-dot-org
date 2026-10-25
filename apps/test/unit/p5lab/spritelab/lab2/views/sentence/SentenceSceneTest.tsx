@@ -292,9 +292,11 @@ describe('SentenceScene', () => {
       expect.objectContaining({verdict: 'down', promptText: 'A cat'}),
       true
     );
-    // A thumb down asks why, once, in the thumbs' place.
-    expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
-    expect(screen.queryByRole('button', {name: 'Not so good'})).toBeNull();
+    // A thumb down asks why, once; the thumbs stay, settled.
+    expect(screen.getByRole('button', {name: 'Good'})).toBeDisabled();
+    const settled = screen.getByRole('button', {name: 'Not so good'});
+    expect(settled).toBeDisabled();
+    expect(settled).toHaveAttribute('aria-pressed', 'true');
     const mismatch = screen.getByRole('button', {
       name: "Doesn't match my prompt",
     });

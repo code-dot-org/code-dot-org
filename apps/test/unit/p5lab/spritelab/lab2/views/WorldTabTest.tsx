@@ -248,7 +248,7 @@ describe('WorldTab palette', () => {
       const onMoveCell = jest.fn();
       const {onPaintCell} = renderTab({
         world: {grid: [[hero, stone]]},
-        only: 'Hero',
+        only: ['Hero'],
         onMoveCell,
       });
       expect(screen.queryByRole('radio', {name: /Erase/})).toBeNull();
@@ -265,7 +265,7 @@ describe('WorldTab palette', () => {
       const onMoveCell = jest.fn();
       const {onPaintCell} = renderTab({
         world: {grid: [[stone]]},
-        only: 'Hero',
+        only: ['Hero'],
         onMoveCell,
         selected: hero,
       });
@@ -296,7 +296,7 @@ describe('WorldTab palette', () => {
       // A blocks-only palette: the hero stays through Erase, Delete and
       // painting over.
       const {onPaintCell} = renderTab({
-        only: 'Stone',
+        only: ['Stone'],
         world: {grid: [[hero]]},
         selected: 'erase',
       });
@@ -330,7 +330,7 @@ describe('WorldTab palette', () => {
 
     it('keeps a one-cell palette shape with nothing to place', () => {
       const errors = jest.spyOn(console, 'error').mockImplementation(() => {});
-      renderTab({only: 'Nothing', onMoveCell: jest.fn()});
+      renderTab({only: ['Nothing'], onMoveCell: jest.fn()});
       expect(screen.queryAllByRole('radio')).toHaveLength(0);
       expect(screen.getByText('Nothing yet.')).toBeTruthy();
       expect(errors.mock.calls.flat().join(' ')).not.toMatch(/NaN/);
