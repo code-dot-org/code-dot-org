@@ -27,7 +27,8 @@ Built in phases, each with its own plan and record: the Screen and Map
 file kinds and the game inside a Viewport (SCREEN_MAP_PLAN.md), then the
 editor shell — the breadcrumb, the Actor Palette, the brush, the toolbar,
 undo, and Add Rules (SHELL_PLAN.md), then an actor as data and events, with
-the Actor Editor (ACTOR_EDITOR_PLAN.md).
+the Actor Editor (ACTOR_EDITOR_PLAN.md), then docking and the grid layout
+(DOCKING_PLAN.md).
 
 ## World Editor is now a Screen Editor
 

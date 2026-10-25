@@ -6,6 +6,7 @@ import type {
 } from '@code-dot-org/core/api';
 
 import {inDataShape} from './actors/actorData';
+import {withPurpose} from './actors/actorPurpose';
 import {importStockActor} from './actors/importStockActor';
 import {stockActorById} from './actors/stock';
 import {coinActor} from './actors/stock/coin';
@@ -1001,7 +1002,8 @@ export const STARTER_SPEC: ProjectSpec = {
     healthBar: {
       name: 'healthBar.actor',
       language: 'actor',
-      contents: healthBarActor,
+      // For both: a HUD on the Main Screen, and a bar a game may place.
+      contents: withPurpose(healthBarActor, 'both'),
       folderId: 'actors',
     },
     crawler: {
@@ -1022,7 +1024,7 @@ export const STARTER_SPEC: ProjectSpec = {
     scoreboard: {
       name: 'scoreboard.actor',
       language: 'actor',
-      contents: SCOREBOARD_ACTOR,
+      contents: withPurpose(SCOREBOARD_ACTOR, 'both'),
       folderId: 'actors',
     },
     ball: {

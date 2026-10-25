@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 
 import {getNextFileId, getNextFolderId} from '@code-dot-org/codebridge';
 
+import {withPurpose} from '../actors/actorPurpose';
 import {healthBarActor} from '../actors/stock/healthBar';
 import {DEFAULT_PROJECT, starterFile} from '../constants';
 import {dockedIds} from '../engine/core/layout';
@@ -120,7 +121,11 @@ describe('the starter project', () => {
     // with a single hurtable thing in it. This is the file a learner gets by
     // importing, so the starter is a worked example of the shelf rather than a
     // thing beside it.
-    expect(starterFile('healthBar').contents).toBe(healthBarActor);
+    // …said to be for both, so it is under the Interface tab of the screen
+    // it is on as well as the Game tab of a level (`actorPurpose`).
+    expect(starterFile('healthBar').contents).toBe(
+      withPurpose(healthBarActor, 'both'),
+    );
 
     // It is on the Main Screen, docked in the HUD bar over the Viewport
     // (specs/DOCKING_PLAN.md, step 6) …

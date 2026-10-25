@@ -132,7 +132,9 @@ order nothing actually runs in. Two now do it the other way round
 - **No scaling, only placing.** A panel 200 wide is 200 wide in a window
   of any shape, so a wide thing in a narrow window still overhangs.
   Stretching is a size question and wants a vocabulary for "as wide as
-  the window" that this does not invent.
+  the window" that this does not invent. Docking is that vocabulary for a Screen: a
+  docked placement fills its region of the window, size and all
+  (specs/DOCKING_PLAN.md).
 - **The editor draws the map's own shape**, which is the arrangement at
   the map's size. What a placement does in a window of another shape is
   not previewed, and the honest way to see it is to load the map into a

@@ -1,6 +1,6 @@
 # Plan: docking and the grid layout (SIMPLE_INTERFACE.md, phase four)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT. The working record, as the other plans are.
 
 The fourth phase of the simple interface. A Screen's interface actors can
 be DOCKED: dragged to an edge of the screen or of something already
@@ -165,6 +165,14 @@ browser: walking right took two coins and ran into the Crawler, and the
 bar at the top drained to empty while the Scoreboard said GAME OVER.
 
 ### 7. Documents and the browser
+
+BUILT. SIMPLE_INTERFACE.md names this plan; ANCHORS_PLAN.md's "no
+scaling" now points here, since a docked placement is sized as well as
+placed. In the browser every scenario opened with no page errors. The
+pass found the starter's Scoreboard and Health Bar listed under the Game
+tab of the screen they are now on: the starter writes their files itself
+rather than importing them, so they said nothing about their purpose. Both
+now say `both`.
 
 ## Not in this phase
 
