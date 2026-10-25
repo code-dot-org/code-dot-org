@@ -107,7 +107,8 @@ dock show as zones: the four edges of the screen, and the four sides of
 each docked actor. Let go in one, and it is docked there, at a fixed size
 taken from its own box. Dragged away from its region, it is undocked and
 floats. The inspector says whether a placement is docked, and has Undock,
-for the keyboard.
+for the keyboard. (Docking itself from the keyboard, a Dock menu of the
+same zones, came in PURPOSE_PLAN.md, step 5.)
 
 BUILT. `mapEditor/docking.ts`: `fitLayout` keeps a docked placement's
 stored position and box equal to its region at the screen's own size, on

@@ -28,7 +28,10 @@ file kinds and the game inside a Viewport (SCREEN_MAP_PLAN.md), then the
 editor shell — the breadcrumb, the Actor Palette, the brush, the toolbar,
 undo, and Add Rules (SHELL_PLAN.md), then an actor as data and events, with
 the Actor Editor (ACTOR_EDITOR_PLAN.md), then docking and the grid layout
-(DOCKING_PLAN.md).
+(DOCKING_PLAN.md), then game or interface all the way through: the
+wizards, the shelves, a drawing the size of its box, and docking and
+placing from the keyboard (PURPOSE_PLAN.md). The accessibility gaps each
+phase opened or closed are kept in ACCESSIBILITY.md.
 
 ## World Editor is now a Screen Editor
 
@@ -69,7 +72,8 @@ of the divider. When an Interface Actor is already docked, there will be
 anchors on the sides of them in order to sub-divide the region that Actor is
 currently taking to add the dragged actor into that region. Dragging an Actor
 out of the region will create a void and essentially undo that division allowing
-Actors to fill that void as necessary.
+Actors to fill that void as necessary. The same places are offered without
+a drag, as the Dock menu in a placement's inspector.
 
 This Grid Layout serves as a fairly easy way to create rich interfaces quickly.
 
@@ -101,6 +105,8 @@ the map editor to present the actors, we should move to a vertical side bar of
 current Actors. Visually, they work the sawe: we see the visual depictions of
 each Actor. Clicking on them places them as the current Brush and clicking into
 the map will place them on the grid in the same way the Map Editor already does.
+From the keyboard, with an actor in hand, the arrows move a cursor a cell at a
+time on the stage and Enter or Space places one there, each said aloud.
 
 The Actor has its own view, which we will discuss later. When an Actor is
 clicked it presents a couple of buttons below it while surrounding the entire
@@ -542,7 +548,10 @@ on and off while the game runs; the stored flag is how it starts.
 Every stock actor, rule and enhancement says whether it is for interfaces,
 for games, or for both. A Health Bar is both. The flag decides which tab of
 the Actor Palette an actor is under, which of the two wizards makes it, and
-what each import dialog offers in that context.
+what each import dialog offers in that context. It decides what is offered
+FIRST and never what can be used: each dialog lists what fits and keeps the
+rest behind "Show everything", and the engine and the compiler do not read
+it.
 
 ### A breadcrumb back
 

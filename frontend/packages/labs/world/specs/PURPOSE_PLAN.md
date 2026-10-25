@@ -1,6 +1,6 @@
 # Plan: game or interface, all the way through (SIMPLE_INTERFACE.md, phase five)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT. The working record, as the other plans are.
 
 The fifth phase of the simple interface. SIMPLE_INTERFACE.md, "Interface,
 game, or both", decided that every stock actor, rule and enhancement says
@@ -155,6 +155,24 @@ placed at column 5, row 9, selected by the arrows and docked along the
 bottom from the menu; the game drew it there.
 
 ### 6. Documents, the browser, and the ledger
+
+BUILT. SIMPLE_INTERFACE.md lists this phase with the others, says what a
+flag decides and does not, and gives the palette's keyboard placement and
+the Dock menu a sentence each; DOCKING_PLAN.md points here for docking
+from the keyboard. ACCESSIBILITY.md marks the two keyboard gaps closed and
+records what steps 3 and 5 opened. In the browser, every scenario opens
+and its switcher and breadcrumb walk as before, with no page errors.
+
+## What it left
+
+- **Interface enhancements.** An Interface Actor made from nothing is
+  offered no enhancement until "Show everything" is ticked (step 3): the
+  shelf has two for an interface and neither fits a bare actor. A hover
+  look, a press sound and focus on Tab are the obvious first ones.
+- **The checklist's fold is decided once**, when it first draws, so
+  "Show everything" opens every row.
+- **The toolbox's `define drawing`** in a plain `.actor` file is still 32
+  by 32 (step 4).
 
 ## Not in this phase
 
