@@ -204,6 +204,11 @@ BUILT, door by door; each line below is a commit.
   the project. Add Effect gains New effect, which makes one, adds it to
   the actor and opens it. In the browser: New effect on the starter's
   Player made Glow, opened it as "Player › Glow", and the Player had it.
+- **Themes.** The Theme field, the map's and the world's, has Edit theme
+  for the chosen one and New theme, which makes one, gives it to the map
+  and opens it in the theme editor. A placement's own Theme dropdown is
+  left as it was. In the browser: New theme on the starter's Main map made
+  Dusk, opened it, and the map's theme was `styles/dusk`.
 
 ### 5. The folder buttons go
 

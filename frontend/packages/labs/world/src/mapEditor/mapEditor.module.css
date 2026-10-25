@@ -570,3 +570,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/* The Theme field, with Edit and New under it (`ThemeField`). */
+.themeField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
