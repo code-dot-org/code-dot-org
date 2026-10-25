@@ -80,6 +80,17 @@ below, and are listed last.
   pointer that is not precise (2.5.8 Target Size is about controls, and
   this is one); the size field is the alternative.
 
+### Shelves by purpose (PURPOSE_PLAN.md, step 3)
+
+- **"Show everything" changes a list without saying so.** Ticking it
+  adds rows under it, and clearing it takes them away, which a screen
+  reader is not told; nor is it told how many the box is hiding.
+  (4.1.3 Status Messages.) Wanted: the box's label, or a line beside it,
+  saying how many more it shows.
+- **The fold is not redone.** The checklist decides which groups are shut
+  when it first draws; "Show everything" then adds up to 29 rows open,
+  which is a long walk by Tab.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

@@ -31,6 +31,8 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {purposeOfTarget} from '../PurposeFilter';
+
 import {
   allAnswered,
   EnhancementChecklist,
@@ -91,6 +93,7 @@ export const EnhanceActorDialog = ({
           }
           answers={picks.answers}
           onAnswer={(id, value) => setPicks(was => withAnswer(was, id, value))}
+          purpose={purposeOfTarget(source, target)}
         />
       }
     />

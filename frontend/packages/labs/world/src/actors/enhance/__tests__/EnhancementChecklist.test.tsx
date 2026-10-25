@@ -83,7 +83,9 @@ vi.mock('../enhancements', async importActual => ({
     (groupsFor as unknown as (t: EnhanceTarget) => unknown)(target),
 }));
 
-const show = () =>
+const show = (
+  props: Partial<React.ComponentProps<typeof EnhancementChecklist>> = {},
+) =>
   render(
     <EnhancementChecklist
       source={SOURCE}
@@ -92,6 +94,7 @@ const show = () =>
       onPick={vi.fn()}
       answers={{}}
       onAnswer={vi.fn()}
+      {...props}
     />,
   );
 
@@ -181,5 +184,37 @@ describe('a row a gated lab has not got to', () => {
     shelfHolds = () => true;
     expect(oneRow()).toBeEnabled();
     expect(screen.queryByText(/Unlocked by/)).toBeNull();
+  });
+});
+
+describe('the list opened for a purpose', () => {
+  /** A group of one row for a game, one for an interface, one for both. */
+  const mixed = () => [
+    {
+      name: 'Mixed',
+      members: [
+        {...ability('forAGame'), for: 'game' as const},
+        {...ability('forAnInterface'), for: 'interface' as const},
+        {...ability('forBoth'), for: 'both' as const},
+      ],
+    },
+  ];
+  const listed = (id: string) => screen.queryAllByText(id).length > 0;
+
+  it('lists what fits, and the rest behind "Show everything"', () => {
+    groupsFor.mockReturnValue(mixed());
+    show({purpose: 'interface'});
+    expect(listed('forAnInterface')).toBe(true);
+    expect(listed('forBoth')).toBe(true);
+    expect(listed('forAGame')).toBe(false);
+
+    fireEvent.click(screen.getByRole('checkbox', {name: /Show everything/}));
+    expect(listed('forAGame')).toBe(true);
+  });
+
+  it('keeps a ticked row, or it could not be unticked', () => {
+    groupsFor.mockReturnValue(mixed());
+    show({purpose: 'interface', picked: ['forAGame']});
+    expect(listed('forAGame')).toBe(true);
   });
 });

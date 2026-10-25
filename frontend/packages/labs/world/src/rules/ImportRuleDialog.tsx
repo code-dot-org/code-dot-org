@@ -32,6 +32,8 @@ import {useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import type {PaletteTab} from '../actors/actorPurpose';
+import {usePurposeFilter} from '../actors/PurposeFilter';
 import {offersRule, useAppBuilder} from '../appBuilder';
 import {LessonLink, unlockLesson} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
@@ -54,6 +56,11 @@ export interface ImportRuleDialogProps {
    * specialist machinery nobody had asked for.
    */
   subject?: 'actor' | 'camera';
+  /**
+   * What it was opened for: what fits that is listed, and the rest behind
+   * "Show everything" (specs/PURPOSE_PLAN.md). Nothing lists everything.
+   */
+  purpose?: PaletteTab;
 }
 
 /**
@@ -81,7 +88,9 @@ export const ImportRuleDialog = ({
   onImport,
   onCancel,
   subject = 'actor',
+  purpose,
 }: ImportRuleDialogProps) => {
+  const {shows, toggle} = usePurposeFilter(purpose);
   // Picking a tile selects it; `Import` is what commits. A rule brings the
   // rules it needs with it, so the tile a learner lands on first is rarely the
   // one they meant once they have read what else comes along.
@@ -102,7 +111,8 @@ export const ImportRuleDialog = ({
       rules: group.rules.filter(
         rule =>
           offersRule(rule.id, app) &&
-          (rule.subject === 'camera') === (subject === 'camera'),
+          (rule.subject === 'camera') === (subject === 'camera') &&
+          shows(rule.for),
       ),
     }))
     .filter(group => group.rules.length > 0);
@@ -132,6 +142,7 @@ export const ImportRuleDialog = ({
       }}
       customContent={
         <div className={styles.body}>
+          {toggle}
           <div className={styles.shelf}>
             {groups.map(({region, rules}) => (
               <section key={region.id}>

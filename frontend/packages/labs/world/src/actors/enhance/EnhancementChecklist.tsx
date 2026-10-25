@@ -69,6 +69,8 @@ import {
   useMaybeProgression,
   type Progression,
 } from '../../progression/progressionContext';
+import type {PaletteTab} from '../actorPurpose';
+import {usePurposeFilter} from '../PurposeFilter';
 
 import styles from './enhancementChecklist.module.css';
 import {
@@ -91,6 +93,11 @@ export interface EnhancementChecklistProps {
   /** Answers to the questions some of them ask, by enhancement id. */
   answers: Readonly<Record<string, string>>;
   onAnswer: (id: string, value: string) => void;
+  /**
+   * What the actor is for: what fits that is listed, and the rest behind
+   * "Show everything" (specs/PURPOSE_PLAN.md). Nothing lists everything.
+   */
+  purpose?: PaletteTab;
 }
 
 /**
@@ -242,7 +249,9 @@ export const EnhancementChecklist = ({
   onPick,
   answers,
   onAnswer,
+  purpose,
 }: EnhancementChecklistProps) => {
+  const {shows, toggle} = usePurposeFilter(purpose);
   /** Which rows have been opened to read about. Shut is the resting state. */
   const [open, setOpen] = useState<readonly string[]>([]);
   /**
@@ -287,7 +296,9 @@ export const EnhancementChecklist = ({
       members: group.members.filter(
         one =>
           picked.includes(one.id) ||
-          (offersEnhancement(one.id, app) && onOffer(one, draft, target)),
+          (offersEnhancement(one.id, app) &&
+            onOffer(one, draft, target) &&
+            shows(one.for ?? 'game')),
       ),
     }))
     .filter(group => group.members.length > 0);
@@ -321,12 +332,16 @@ export const EnhancementChecklist = ({
   if (groups.length === 0) {
     // The wording every empty list in this lab uses.
     return (
-      <Typography variant="body4">(nothing to add to this yet)</Typography>
+      <>
+        {toggle}
+        <Typography variant="body4">(nothing to add to this yet)</Typography>
+      </>
     );
   }
 
   return (
     <div className={styles.groups}>
+      {toggle}
       {groups.map(group => {
         const folded = shut.includes(group.name);
         return (

@@ -915,6 +915,7 @@ export const ActorCreator = ({
               onAnswer={(id, value) =>
                 setPicks(was => withAnswer(was, id, value))
               }
+              purpose={purpose}
             />
           )}
         </div>

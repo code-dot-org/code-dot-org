@@ -40,6 +40,7 @@ import {EnhanceActorDialog} from '../actors/enhance/EnhanceActorDialog';
 import type {EnhanceTarget} from '../actors/enhance/enhancements';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
 import {importStockActorAsData} from '../actors/importStockActor';
+import {purposeHere} from '../actors/PurposeFilter';
 import type {StockActor} from '../actors/stock';
 import {
   setAppearanceImportHandler,
@@ -308,6 +309,8 @@ export const LibraryImports = () => {
       )}
       {shelf === 'rule' && (
         <ImportRuleDialog
+          // What fits the file the block is in (`PurposeFilter`).
+          purpose={purposeHere(sourcesRef.current.source)}
           onImport={(rule: StockRule) => {
             // The value is the rule's NAME — a rule field says which rule,
             // never which file (`useRuleOptions`).
@@ -352,6 +355,7 @@ export const LibraryImports = () => {
       )}
       {shelf === 'actor' && (
         <ImportActorDialog
+          purpose={purposeHere(sourcesRef.current.source)}
           onImport={(actor: StockActor) => {
             // …and here the MODULE PATH: an actor dropdown says which file
             // (`actorFieldOptions`).

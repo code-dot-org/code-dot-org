@@ -269,3 +269,31 @@ describe('the shelf’s pictures', () => {
     }
   });
 });
+
+describe('the shelf opened for a purpose', () => {
+  const ability = (id: string) =>
+    STOCK_RULES.find(rule => rule.id === id)?.ability ?? id;
+  const tile = (id: string) =>
+    screen.queryAllByRole('button', {name: ability(id)}).length;
+
+  it('lists what fits, and the rest behind "Show everything"', () => {
+    // A flag decides what is offered first, never what can be used
+    // (specs/PURPOSE_PLAN.md, step 3).
+    open({purpose: 'interface'});
+    expect(tile('tabNavigation')).toBe(1);
+    expect(tile('health')).toBe(1);
+    expect(tile('gravity')).toBe(0);
+
+    fireEvent.click(screen.getByRole('checkbox', {name: /Show everything/}));
+    expect(tile('gravity')).toBe(1);
+  });
+
+  it('lists everything, and has no box, when opened for nothing', () => {
+    open();
+    expect(tile('tabNavigation')).toBe(1);
+    expect(tile('gravity')).toBe(1);
+    expect(screen.queryByRole('checkbox', {name: /Show everything/})).toBe(
+      null,
+    );
+  });
+});

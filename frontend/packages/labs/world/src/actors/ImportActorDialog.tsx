@@ -28,6 +28,7 @@ import {offersActor, useAppBuilder} from '../appBuilder';
 import {LessonLink, unlockLesson} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
 
+import type {PaletteTab} from './actorPurpose';
 import {actorDemoFrames, actorDemoUrl, ACTOR_DEMO_SIZE} from './demos';
 import styles from './importActorDialog.module.css';
 import {
@@ -37,6 +38,7 @@ import {
   actorSprites,
 } from './importStockActor';
 import {ActorPreview} from './preview/ActorPreview';
+import {usePurposeFilter} from './PurposeFilter';
 import {STOCK_ACTORS, type StockActor} from './stock';
 
 export interface ImportActorDialogProps {
@@ -44,6 +46,11 @@ export interface ImportActorDialogProps {
   onImport: (actor: StockActor) => void;
   /** Dismissed without choosing. */
   onCancel: () => void;
+  /**
+   * What it was opened for: what fits that is listed, and the rest behind
+   * "Show everything" (specs/PURPOSE_PLAN.md). Nothing lists everything.
+   */
+  purpose?: PaletteTab;
 }
 
 /**
@@ -70,14 +77,18 @@ const TILE_SIZE = {
 export const ImportActorDialog = ({
   onImport,
   onCancel,
+  purpose,
 }: ImportActorDialogProps) => {
+  const {shows, toggle} = usePurposeFilter(purpose);
   const [chosen, setChosen] = useState<StockActor | null>(null);
   // See the same lines in ImportRuleDialog: shown either way, locked until the
   // lesson that grants it is done.
   const progression = useMaybeProgression();
   // In App Builder, the controls only (`appBuilder`).
   const app = useAppBuilder();
-  const offered = STOCK_ACTORS.filter(actor => offersActor(actor.id, app));
+  const offered = STOCK_ACTORS.filter(
+    actor => offersActor(actor.id, app) && shows(actor.for),
+  );
   const held = (actor: StockActor) =>
     progression?.holds({kind: 'actor', id: actor.id}) ?? true;
 
@@ -98,6 +109,7 @@ export const ImportActorDialog = ({
       secondaryButtonProps={{children: 'Cancel', onClick: onCancel}}
       customContent={
         <div className={styles.body}>
+          {toggle}
           <ul className={styles.grid}>
             {offered.map(actor => {
               const locked = !held(actor);

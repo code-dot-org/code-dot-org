@@ -13,8 +13,10 @@ import {RootStateProvider} from '@code-dot-org/core/redux';
 import {LevelPropertiesProvider} from '@code-dot-org/lab/contexts';
 
 import {ProgressionProvider} from '../../progression/ProgressionProvider';
+import type {PaletteTab} from '../actorPurpose';
 import {ACTOR_DEMOS} from '../demos';
 import {ImportActorDialog} from '../ImportActorDialog';
+import {STOCK_ACTORS} from '../stock';
 
 // The map's tile detail draws a real Blockly workspace under an unlock, which
 // needs a real browser — jsdom cannot parse the stylesheet Blockly writes.
@@ -25,8 +27,14 @@ vi.mock('../../progression/BlockPreview', () => ({
   blockForRule: () => undefined,
 }));
 
-const open = () =>
-  render(<ImportActorDialog onImport={vi.fn()} onCancel={vi.fn()} />);
+const open = (purpose?: PaletteTab) =>
+  render(
+    <ImportActorDialog
+      onImport={vi.fn()}
+      onCancel={vi.fn()}
+      purpose={purpose}
+    />,
+  );
 
 /**
  * The `<li>` a row's button sits in, which is what the CSS keys on.
@@ -146,4 +154,24 @@ describe('an actor nobody has earned yet', () => {
       expect(screen.getByRole('button', {name: 'Import'})).toBeDisabled();
     },
   );
+});
+
+describe('the shelf opened for a purpose', () => {
+  const named = (id: string) =>
+    STOCK_ACTORS.find(actor => actor.id === id)?.name ?? id;
+  const rows = (id: string) =>
+    screen.queryAllByRole('button', {name: new RegExp(`^${named(id)}`)}).length;
+
+  it('lists what fits a game, and the rest behind "Show everything"', async () => {
+    // A flag decides what is offered first, never what can be used
+    // (specs/PURPOSE_PLAN.md, step 3).
+    open('game');
+    expect(rows('coin')).toBe(1);
+    expect(rows('button')).toBe(0);
+
+    await userEvent.click(
+      screen.getByRole('checkbox', {name: /Show everything/}),
+    );
+    expect(rows('button')).toBe(1);
+  });
 });

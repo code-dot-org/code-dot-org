@@ -90,6 +90,25 @@ for the purpose they were opened for, with "Show everything". From the
 Actor Editor, the purpose is the actor's; from a block's `(import…)`, it is
 the file's actor's, and everything when the file is no actor's.
 
+BUILT. `actors/PurposeFilter`: `usePurposeFilter(purpose)` answers whether
+a row shows and draws the "Show everything" box, which is absent when
+there is no purpose to narrow by; an actor for both narrows nothing. The
+rule shelf and the actor shelf take the purpose of the file the block is
+in (`purposeHere`): an actor's own, a Screen's an interface's, a level's
+or a world's a game's — a small widening of the above, since a Screen is
+plainly an interface's — and nothing for anything else. Enhance takes the
+actor's (`purposeOfTarget`); the wizard's abilities step takes the tab it
+was opened from. A ticked row stays whatever the filter says, or it could
+not be unticked. The camera's rule shelf is not narrowed.
+
+What it showed, in the browser: an Interface Actor made from nothing is
+offered NOTHING until "Show everything" is ticked. Of the 29 enhancements
+only Types Out Text and the Scoreboard fit an interface, and neither is on
+offer for a bare actor. That is the flags being honest, not the filter
+being wrong; the shelf wants interface enhancements (a hover look, a press
+sound, focus on Tab), which is a phase of its own. And the fold is decided
+when the list first draws, so ticking the box shows all 29 rows unfolded.
+
 ### 4. A drawing is its box
 
 In an actor with a box, a new `define drawing` starts at `width of this
