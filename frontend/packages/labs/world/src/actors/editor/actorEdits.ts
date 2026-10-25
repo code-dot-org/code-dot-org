@@ -25,6 +25,7 @@ import type {
   ActorValue,
   Block,
 } from '../actorData';
+import {withLookOf} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
 
 /** One property of a trait, as the panel edits it. */
@@ -286,18 +287,15 @@ export function setPropertyDefault(
   return {...data, properties};
 }
 
-/** The data looking like something else, or like nothing it chose. */
+/**
+ * The data looking like something else, or like nothing it chose: a
+ * picture is its Main animation, still (`actorData.withLookOf`).
+ */
 export function setLook(
   data: ActorData,
   look: ActorLook | undefined,
 ): ActorData {
-  const next = {...data};
-  if (look) {
-    next.look = look;
-  } else {
-    delete next.look;
-  }
-  return next;
+  return withLookOf(data, look);
 }
 
 /** The data for a game, an interface, or both (`actorPurpose`). */

@@ -73,7 +73,10 @@ describe('an actor folded into data', () => {
       type: 'actor',
       name: 'Badge',
       icon: 'star',
-      look: {sprite: 'badge.png'},
+      // A still picture is the Main animation (specs/ANIMATION_PLAN.md).
+      animations: {
+        Main: {loop: true, tracks: {sprite: [{at: 0, value: 'badge.png'}]}},
+      },
       traits: ['Gravity#AffectedByGravityTrait'],
       properties: [
         {name: 'lives', type: 'number', access: 'writable', value: '3'},
@@ -108,7 +111,9 @@ describe('an actor folded into data', () => {
         computed,
       ]),
     );
-    expect(data.look).toEqual({sprite: 'a.png'});
+    expect(data.animations).toEqual({
+      Main: {loop: true, tracks: {sprite: [{at: 0, value: 'a.png'}]}},
+    });
     expect(data.setup!.map(row => row.type)).toEqual([
       'world_set_sprite',
       'world_set_ActorsLabel_SizeProperty',

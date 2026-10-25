@@ -151,7 +151,9 @@ describe('the Actor Editor', () => {
           onChange={onChange}
         />,
       );
-      expect(written().look).toEqual({sprite: 'crab.png'});
+      expect(written().animations.Main.tracks.sprite).toEqual([
+        {at: 0, value: 'crab.png'},
+      ]);
     });
     // …and the picture opens, once the file menus have that save.
     expect(acts).toHaveBeenCalledWith({act: 'open', fileId: 'crab'});

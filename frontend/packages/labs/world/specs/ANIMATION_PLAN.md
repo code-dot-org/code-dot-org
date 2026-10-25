@@ -171,6 +171,34 @@ this actor's when the target is `this actor`. The readers that draw an
 actor from its file — the palette, the stage's local pictures, the Actor
 Creator's picture step — read Main's first sprite.
 
+BUILT. `ActorData.animations`, by name; a still picture is a Main of one
+sprite key at 0 (`stillAnimation`), and `look` now holds only a project
+flipbook the actor plays, until step 4. Looks like reads and writes
+through `lookOf` and `withLookOf`: a picture replaces Main with a still
+one, a flipbook takes Main's place.
+
+The view writes a still Main as the `set sprite` row it always was, so
+every reader that looks in a view for a picture still finds one, and
+anything more as `world_actor_animations`, a row in no toolbox whose extra
+state is the timelines (`blockly/extensions/actorAnimations`). Its
+generator declares them on the kind (`actor.useAnimations`), resolving a
+sheet cell (`coin.png#3`) to its rectangle and importing each effect a
+track switches on, and plays Main. The fold reads the row back, and a
+`set sprite` row as a still Main.
+
+`play animation` offers the actor's own animations first when the block is
+in an actor's file (`animationOptions`, by `editingActorModule`), then the
+project's flipbooks. Not done: a block in another file, playing on `any
+Coin`, is not offered the Coin's names; the engine still resolves one
+typed there by the target's kind. The wizard's copy step reads a
+data-shaped actor's look from its data rather than its view.
+
+A test compiles a project that places an actor written as data and finds
+Main playing from the start, looping at its last key, and Hop played by
+name moving the picture. In the browser: Ground's Looks like set to
+`coin.png` drew coins where the ground was, and the Player's flipbook
+played as before.
+
 ### 4. The stock, and `.anim` retired
 
 The stock animations become timelines (`appearance/stock`), carried by the

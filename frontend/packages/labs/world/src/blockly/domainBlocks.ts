@@ -84,6 +84,7 @@ import {
   THIS_FIELD,
   THIS_INPUT,
 } from './eventSubject';
+import {actorAnimationsMutator} from './extensions/actorAnimations';
 import {actorBlockReportsExtension} from './extensions/actorBlockReports';
 import {
   actorContextExtension,
@@ -725,6 +726,82 @@ const worldActorIsData = defineBlock({
     },
   },
 });
+
+/**
+ * An actor's animations, declared, and its Main played
+ * (specs/ANIMATION_PLAN.md, step 3).
+ *
+ * Never in a toolbox: the timelines are made in the Actor Editor and kept as
+ * the actor's data, and this row is only how they reach the compiler, in
+ * the `define actor` the data stands for (`actors/actorData`). A sprite key
+ * naming one cell of a sheet (`coin.png#3`) is resolved here to the
+ * rectangle, as `set sprite`'s is, since the engine is told only
+ * rectangles; an effect track's file is imported, since switching an effect
+ * on needs its graph.
+ */
+const worldActorAnimations = defineBlock({
+  type: 'world_actor_animations',
+  message0: 'animations',
+  previousStatement: true,
+  nextStatement: true,
+  mutator: actorAnimationsMutator,
+  extensions: [traitContextExtension],
+  style: 'sprite_blocks',
+  tooltip: 'What this kind’s animations are, made in the Actor Editor.',
+  generator: {
+    javascript(block, generator) {
+      const animations = block.animations_ ?? {};
+      const effects = new Set<string>();
+      const resolved = Object.fromEntries(
+        Object.entries(animations).map(([name, timeline]) => [
+          name,
+          {
+            ...timeline,
+            tracks: Object.fromEntries(
+              Object.entries(timeline.tracks).map(([property, track]) => {
+                if (property.startsWith('effect:')) {
+                  effects.add(property.slice('effect:'.length));
+                }
+                return [
+                  property,
+                  property === 'sprite'
+                    ? track.map(key => ({
+                        ...key,
+                        value: spriteKeyValue(String(key.value)),
+                      }))
+                    : track,
+                ];
+              }),
+            ),
+          },
+        ]),
+      );
+      const documents = [...effects].map(path => {
+        addImport(
+          generator,
+          `mod:${path}`,
+          `import ${importVar(path)} from ${str(path)};`,
+        );
+        return `${str(path)}: {document: ${importVar(path)}}`;
+      });
+      const play =
+        'Main' in animations
+          ? `WorldLab.playAnimation(actor, ${str('Main')});\n`
+          : '';
+      return (
+        `actor.useAnimations(${JSON.stringify(resolved)}, {${documents.join(
+          ', ',
+        )}});\n` + play
+      );
+    },
+  },
+});
+
+/** A sprite key as the engine takes one: a file, or a file and a rectangle. */
+const spriteKeyValue = (value: string) => {
+  const cell = spriteCell(value);
+  return cell ? {sprite: parseSpriteRef(value).sprite, cell} : value;
+};
 
 const worldActsLike = defineBlock({
   type: 'world_acts_like',
@@ -11265,6 +11342,7 @@ export const DOMAIN_BLOCKS = [
   worldPauseGame,
   worldSaveMemory,
   worldActorIsData,
+  worldActorAnimations,
   worldRememberActors,
   worldRecallActors,
   worldRecallMemory,

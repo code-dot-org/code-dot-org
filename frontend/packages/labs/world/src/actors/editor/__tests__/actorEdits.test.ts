@@ -123,9 +123,19 @@ describe('a property of its own', () => {
 
 describe('a look', () => {
   it('is set, and taken away', () => {
+    // A picture is a still Main; nothing is no Main, and no look.
     const looking = setLook(PLAYER, {sprite: 'player.png'});
-    expect(looking.look).toEqual({sprite: 'player.png'});
-    expect(setLook(looking, undefined).look).toBeUndefined();
+    expect(looking.animations).toEqual({
+      Main: {loop: true, tracks: {sprite: [{at: 0, value: 'player.png'}]}},
+    });
+    expect(looking.look).toBeUndefined();
+    const gone = setLook(looking, undefined);
+    expect(gone.animations).toBeUndefined();
+    expect(gone.look).toBeUndefined();
+    // A flipbook is the look, and takes Main's place.
+    const flipping = setLook(looking, {animation: 'coinSpin'});
+    expect(flipping.look).toEqual({animation: 'coinSpin'});
+    expect(flipping.animations).toBeUndefined();
   });
 });
 

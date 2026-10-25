@@ -12,10 +12,15 @@
 // comparable string, and the generated-file cache keys on it — see
 // `runtime/generatedFiles` for what went wrong without it.
 
+import {
+  isDataShaped,
+  MAIN_ANIMATION,
+  type ActorData,
+} from '../actors/actorData';
 import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
 
-import {setProjectAnimations} from './animationOptions';
+import {setKindAnimations, setProjectAnimations} from './animationOptions';
 import {setStoredCameras} from './cameras';
 import {duplicateEnumNames, registerProjectEnums} from './enums';
 import {
@@ -102,6 +107,8 @@ export function refreshProjectDropdowns(
   setProjectGrids(projectSheets(files), imageSizes);
   const animationIds = projectAnimationIds(files);
   setProjectAnimations(animationIds);
+  // …and each data-shaped actor's own, by its module path.
+  setKindAnimations(kindAnimationNames(files));
   // The images a `set sprite` block may name: the project's own, and nothing
   // else — a game draws what its project holds.
   const sprites = projectSpriteOptions(files, images);
@@ -265,4 +272,29 @@ function warnAboutDuplicateNames(): void {
         .join(', ')}; the words offered are the first one's.`,
     );
   }
+}
+
+/**
+ * What each data-shaped actor's own animations are called, by its module
+ * path (specs/ANIMATION_PLAN.md). Main first, since it is the one an actor
+ * plays when it is made.
+ */
+function kindAnimationNames(
+  files: Record<string, string>,
+): Record<string, string[]> {
+  const byKind: Record<string, string[]> = {};
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.endsWith('.actor') || !isDataShaped(contents)) {
+      continue;
+    }
+    const names = Object.keys(
+      (JSON.parse(contents) as ActorData).animations ?? {},
+    ).sort((a, b) =>
+      a === MAIN_ANIMATION ? -1 : b === MAIN_ANIMATION ? 1 : a.localeCompare(b),
+    );
+    if (names.length) {
+      byKind[path.replace(/\.actor$/, '')] = names;
+    }
+  }
+  return byKind;
 }

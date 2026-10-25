@@ -7,10 +7,17 @@
 import {afterEach, describe, expect, it} from 'vitest';
 
 import {IMPORT_ANIMATION_VALUE} from '../../appearance/appearanceImport';
-import {animationOptions, setProjectAnimations} from '../animationOptions';
+import {
+  animationOptions,
+  setKindAnimations,
+  setProjectAnimations,
+} from '../animationOptions';
 
 // Registry is module state; reset it between cases.
-afterEach(() => setProjectAnimations([]));
+afterEach(() => {
+  setProjectAnimations([]);
+  setKindAnimations({});
+});
 
 describe('animationOptions', () => {
   it('names what is missing before it offers a way in', () => {
@@ -44,5 +51,22 @@ describe('animationOptions', () => {
     setProjectAnimations(['pulse']);
     const last = animationOptions().at(-1);
     expect(last).toEqual(['(import…)', IMPORT_ANIMATION_VALUE]);
+  });
+
+  it('offers the actor’s own first, by the names it gave them', () => {
+    // Kept on the actor (specs/ANIMATION_PLAN.md): a Coin's Main is the
+    // Coin's, and a block in another file is not offered it.
+    setKindAnimations({'actors/coin': ['Main', 'Spin']});
+    setProjectAnimations(['pulse']);
+    expect(animationOptions('actors/coin').map(([, id]) => id)).toEqual([
+      'Main',
+      'Spin',
+      'pulse',
+      IMPORT_ANIMATION_VALUE,
+    ]);
+    expect(animationOptions('actors/gem').map(([, id]) => id)).toEqual([
+      'pulse',
+      IMPORT_ANIMATION_VALUE,
+    ]);
   });
 });

@@ -51,7 +51,7 @@ import {
   projectImagePaths,
 } from '../../runtime/projectFiles';
 import {useWorldRuntime} from '../../runtime/WorldRuntimeContext';
-import {isActorData, type ActorData} from '../actorData';
+import {isActorData, lookOf, type ActorData} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
@@ -258,11 +258,16 @@ export const ActorEditor = (props: CustomEditorProps) => {
    * then its animations, as the blocks' own dropdowns offer them; and what it
    * looks like now, whatever that is, so the field never says otherwise.
    */
-  const lookValue = !data?.look
+  // Main's picture, or the flipbook it plays (`actorData.lookOf`).
+  const look = useMemo(() => {
+    const held = parse(contents);
+    return held ? lookOf(held) : undefined;
+  }, [contents]);
+  const lookValue = !look
     ? ''
-    : 'sprite' in data.look
-      ? `sprite:${data.look.sprite}`
-      : `animation:${data.look.animation}`;
+    : 'sprite' in look
+      ? `sprite:${look.sprite}`
+      : `animation:${look.animation}`;
   const looks = useMemo(() => {
     const sprites = projectImagePaths(currentSources.source)
       .filter(one => !isBackgroundPath(one))
@@ -291,7 +296,6 @@ export const ActorEditor = (props: CustomEditorProps) => {
    * actor drawn by its code, or one naming what the project lacks.
    */
   const lookFile = useMemo(() => {
-    const look = data?.look;
     if (!look) {
       return undefined;
     }
@@ -310,7 +314,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
     );
     const id = holder && fileIdAt(source, holder[0]);
     return id ? source.files[id] : undefined;
-  }, [data?.look, currentSources, files]);
+  }, [look, currentSources, files]);
   const [lookAt, setLookAt] = useState<HTMLElement | null>(null);
   // A picture or animation made or drawn here is what the actor then looks
   // like: taken in the render whose project has the file, as an import is
@@ -877,9 +881,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   void requestFileAct({act: 'open', fileId: lookFile.id})
                 }
               >
-                {'sprite' in (data.look ?? {})
-                  ? 'Edit picture'
-                  : 'Edit animation'}
+                {'sprite' in (look ?? {}) ? 'Edit picture' : 'Edit animation'}
               </Button>
             )}
             {!isReadOnly && (

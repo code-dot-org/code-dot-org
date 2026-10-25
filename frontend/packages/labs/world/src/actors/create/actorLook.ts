@@ -17,7 +17,13 @@
 // builds its actor in a draft source and commits once, so nothing here knows
 // about the project or about React.
 
-import {throughView, viewOf} from '../actorData';
+import {
+  isDataShaped,
+  lookOf as dataLookOf,
+  throughView,
+  viewOf,
+  type ActorData,
+} from '../actorData';
 import {down, rootsOf, type BlockJson} from '../enhance/patch';
 
 const SPRITE_ROW = 'world_set_sprite';
@@ -35,6 +41,16 @@ const isLook = (block: BlockJson): boolean =>
 
 /** The look a workspace's `define actor` already declares, if it declares one. */
 export function lookOf(file: string): ActorLook | undefined {
+  // A data-shaped actor says it as data: its Main's picture, which a view of
+  // an animated Main has no `set sprite` row for (specs/ANIMATION_PLAN.md).
+  if (isDataShaped(file)) {
+    const look = dataLookOf(JSON.parse(file) as ActorData);
+    return !look
+      ? undefined
+      : 'sprite' in look
+        ? {kind: 'sprite', value: look.sprite}
+        : {kind: 'animation', value: look.animation};
+  }
   // Either shape (`actors/actorData`).
   const contents = viewOf(file);
   for (const root of rootsOf(contents)) {
