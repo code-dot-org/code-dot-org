@@ -2610,6 +2610,96 @@ describe('docking on a Screen', () => {
     expect(written().layout).toBeUndefined();
   });
 
+  describe('a docked placement selected', () => {
+    // Its box is its region's, so it has no corner grips and no turn; it has
+    // a grip on each edge that is a divider, and keys to match.
+    const barred = () =>
+      fitLayout({
+        ...screenDoc(),
+        layout: {
+          split: 'down',
+          fixed: 'first',
+          size: 40,
+          first: {dock: 'hud'},
+          second: {dock: 'game'},
+        },
+      });
+    const said = (view: ReturnType<typeof mount>) =>
+      view.getByTestId('stage-announcer').textContent;
+    const choose = (canvas: Element, map: MapDoc, at: Vec) => {
+      pointer(canvas, 'pointerdown', screenPoint(map, at));
+      pointer(canvas, 'pointerup', screenPoint(map, at));
+    };
+
+    it('drags its divider by the grip on its edge', () => {
+      const map = barred();
+      const view = mount(map, {canDock: true});
+      choose(view.canvas, map, {x: 160, y: 180}); // the game, at its middle
+      // Beside the line, past its own six pixels, and on the grip: the
+      // press is the grip's.
+      const scale =
+        screenPoint(map, {x: 1, y: 0}).x - screenPoint(map, {x: 0, y: 0}).x;
+      const on = {x: 160 + 10 / scale, y: 40 + 8 / scale};
+      pointer(view.canvas, 'pointerdown', screenPoint(map, on));
+      pointer(view.canvas, 'pointermove', screenPoint(map, {x: 160, y: 100}));
+      pointer(view.canvas, 'pointerup', screenPoint(map, {x: 160, y: 100}));
+      expect(view.written().layout).toMatchObject({size: 100});
+    });
+
+    it('moves the line an arrow points at, with Alt', () => {
+      const map = barred();
+      const view = mount(map, {canDock: true});
+      choose(view.canvas, map, {x: 160, y: 20}); // the bar
+      fireEvent.keyDown(view.canvas, {key: 'ArrowDown', altKey: true});
+      expect(view.written().layout).toMatchObject({size: 48});
+      expect(said(view)).toBe('hud is 320 by 48');
+      // Its top is the screen's, so Up moves the line under it.
+      fireEvent.keyDown(view.canvas, {key: 'ArrowUp', altKey: true});
+      expect(view.written().layout).toMatchObject({size: 40});
+    });
+
+    it('does not turn, or nudge, and says why', () => {
+      const map = barred();
+      const view = mount(map, {canDock: true});
+      choose(view.canvas, map, {x: 160, y: 20});
+      fireEvent.keyDown(view.canvas, {key: ']'});
+      expect(said(view)).toBe('A docked actor does not turn');
+      fireEvent.keyDown(view.canvas, {key: 'ArrowRight', shiftKey: true});
+      expect(said(view)).toMatch(/is docked/);
+      expect(view.onDocChange).not.toHaveBeenCalled();
+    });
+
+    it('shows its box in the inspector, and does not edit it', () => {
+      const map = barred();
+      const view = mount(map, {
+        canDock: true,
+        schemas: {
+          'actors/coin': [
+            {
+              trait: 'hasABox',
+              traitName: 'Has a Box',
+              props: [
+                {
+                  ownerId: 'hasABox',
+                  propId: 'width',
+                  name: 'width',
+                  type: 'number',
+                  default: 32,
+                },
+              ],
+            },
+          ],
+        },
+      });
+      choose(view.canvas, map, {x: 160, y: 20});
+      const width = view.container.querySelector(
+        'input[name="prop-hasABox.width"]',
+      ) as HTMLInputElement;
+      expect(width).toBeDisabled();
+      expect(view.getByText(/set by where it is docked/)).toBeInTheDocument();
+    });
+  });
+
   it('resizes a docked side by its line, and by its number', () => {
     const map = fitLayout({
       ...screenDoc(),

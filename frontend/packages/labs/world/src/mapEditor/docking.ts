@@ -70,11 +70,17 @@ export function fitLayout(doc: MapDoc): MapDoc {
       | {x: number; y: number}
       | undefined;
     const sized = boxOf(actor);
+    // NOT TURNED. The engine fits a docked actor's middle and box to its
+    // region and leaves its rotation alone, so a turned one drew tilted
+    // across its neighbours. Docked, it is square to the screen.
+    const turned = actor.properties?.positional?.rotation;
+    const square = typeof turned !== 'number' || turned === 0;
     if (
       held?.x === position.x &&
       held?.y === position.y &&
       sized.width === box.width &&
-      sized.height === box.height
+      sized.height === box.height &&
+      square
     ) {
       return actor;
     }
@@ -83,7 +89,11 @@ export function fitLayout(doc: MapDoc): MapDoc {
       ...actor,
       properties: {
         ...actor.properties,
-        positional: {...actor.properties?.positional, position},
+        positional: {
+          ...actor.properties?.positional,
+          position,
+          ...(square ? {} : {rotation: 0}),
+        },
         hasABox: {...boxOf(actor), width: box.width, height: box.height},
       },
     };
@@ -279,4 +289,91 @@ export function dragDivider(
   );
   const size = split.fixed === 'first' ? along : whole - along;
   return withLayout(doc, resize(doc.layout, line.path, size));
+}
+
+/** The props a dock decides, which the inspector shows and does not edit. */
+export const SET_BY_DOCK: ReadonlyArray<{owner: string; prop: string}> = [
+  {owner: 'positional', prop: 'position'},
+  {owner: 'positional', prop: 'rotation'},
+  {owner: 'hasABox', prop: 'width'},
+  {owner: 'hasABox', prop: 'height'},
+];
+
+/** One edge of a docked placement's region that can be moved. */
+export interface DockedEdge {
+  side: Side;
+  /** The divider the edge lies on, which moving the edge drags. */
+  line: Divider;
+  /** The middle of the edge, where its grip is drawn. */
+  at: {x: number; y: number};
+}
+
+/**
+ * The edges of `id`'s region that are dividers, which are the only ones
+ * that can move: an edge on the screen's own boundary stays where it is
+ * whatever is dragged. A top bar has one, its bottom; the Viewport under it
+ * has one, its top. Nothing for a placement that is not docked.
+ *
+ * Each edge lies on exactly one divider — the nearest split above it in the
+ * tree that has something on both sides — so the first found is the one.
+ */
+export function dockedEdges(doc: MapDoc, id: string): DockedEdge[] {
+  const extent = extentOf(doc);
+  const present = dockable(doc);
+  const box = layoutBoxes(doc.layout, extent.w, extent.h, present).get(id);
+  if (!box) {
+    return [];
+  }
+  const lines = dividers(doc.layout, extent.w, extent.h, present);
+  const near = (a: number, b: number) => Math.abs(a - b) < 0.5;
+  const spans = (line: Divider, from: number, to: number) => {
+    const start = line.split === 'across' ? line.box.y : line.box.x;
+    const end =
+      start + (line.split === 'across' ? line.box.height : line.box.width);
+    return from >= start - 0.5 && to <= end + 0.5;
+  };
+  const edges: Array<{side: Side; split: 'across' | 'down'; at: number}> = [
+    {side: 'top', split: 'down', at: box.y},
+    {side: 'bottom', split: 'down', at: box.y + box.height},
+    {side: 'left', split: 'across', at: box.x},
+    {side: 'right', split: 'across', at: box.x + box.width},
+  ];
+  const found: DockedEdge[] = [];
+  for (const edge of edges) {
+    const across = edge.split === 'across';
+    const line = lines.find(
+      one =>
+        one.split === edge.split &&
+        near(one.at, edge.at) &&
+        (across
+          ? spans(one, box.y, box.y + box.height)
+          : spans(one, box.x, box.x + box.width)),
+    );
+    if (line) {
+      found.push({
+        side: edge.side,
+        line,
+        at: across
+          ? {x: edge.at, y: box.y + box.height / 2}
+          : {x: box.x + box.width / 2, y: edge.at},
+      });
+    }
+  }
+  return found;
+}
+
+/** The document with a divider moved `by` pixels, right or down. */
+export const nudgeDivider = (doc: MapDoc, line: Divider, by: number): MapDoc =>
+  dragDivider(
+    doc,
+    line,
+    line.split === 'across'
+      ? {x: line.at + by, y: line.box.y}
+      : {x: line.box.x, y: line.at + by},
+  );
+
+/** The region a docked placement fills, at the map's own size. */
+export function dockedBox(doc: MapDoc, id: string): Box | undefined {
+  const extent = extentOf(doc);
+  return layoutBoxes(doc.layout, extent.w, extent.h, dockable(doc)).get(id);
 }

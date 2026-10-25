@@ -116,6 +116,16 @@
   cursor: grabbing;
 }
 
+/* Over a line between docked sides, or a docked edge's grip: the cursor says
+   which way it drags. */
+.canvas.resizeAcross {
+  cursor: col-resize;
+}
+
+.canvas.resizeDown {
+  cursor: row-resize;
+}
+
 /* Arming a reference: the click chooses an actor rather than grabbing one, and
    the crosshair is the cursor that already means exactly that.
    LAST, because it has to beat `.hovering` — an armed click over an actor is

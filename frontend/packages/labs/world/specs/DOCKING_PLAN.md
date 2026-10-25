@@ -175,6 +175,32 @@ tab of the screen they are now on: the starter writes their files itself
 rather than importing them, so they said nothing about their purpose. Both
 now say `both`.
 
+### 8. Grips that fit a docked placement
+
+Added after the phase, from use. A docked placement still had the eight
+resize grips and the turn grip every boxed placement has, and none of
+them did anything useful. A resize was put back by `fitLayout`. A turn
+was kept and drawn, because the engine fits a docked actor's middle and
+box but not its rotation, so a turned HUD bar drew tilted across its
+neighbours.
+
+BUILT. Selected and docked, a placement has no corner grips and no turn
+grip. It has a bar on each edge that lies on a divider, and none on the
+screen's own boundary (`docking.dockedEdges`). A top bar has one, on its
+bottom; the Viewport under it has one, on its top. Dragging a bar drags
+that divider, and the cursor over a bar or a divider says which way it
+moves. Alt and an arrow moves the line on that side, or the opposite one
+when that side is the screen's, a step at a time, and says the new size
+(`nudgeDivider`). Shift and an arrow, and the brackets, change nothing and
+say why. Docking squares a placement (`fitLayout` writes its rotation as
+0), so the file agrees with what the game draws. In the inspector its
+position, size and turn are shown, not edited, under "Its place, size and
+turn are set by where it is docked." In the browser, on the starter's Main
+Screen: the Viewport showed one bar and the Health Bar two, and Alt and Up
+on the Viewport grew it by a step and said so.
+
+Left for later: the corner where two dividers meet, which could move both.
+
 ## Not in this phase
 
 - A ratio side, or more than two sides to a split.

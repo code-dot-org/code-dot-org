@@ -49,6 +49,7 @@ import {
   resize,
   undock,
   type Divider,
+  type Side,
 } from '../engine/core/layout';
 import {STYLED} from '../engine/rules/styled';
 import {VIEWPORT} from '../engine/rules/viewport';
@@ -65,6 +66,10 @@ import {
   dividerAt,
   dockChoices,
   dockedAt,
+  dockedBox,
+  dockedEdges,
+  nudgeDivider,
+  SET_BY_DOCK,
   dockZones,
   dragDivider,
   fitLayout,
@@ -209,6 +214,11 @@ const DOCK_ZONE = 'rgba(77, 159, 255, 0.35)';
 const DIVIDER = '#4d9fff';
 /** How near a divider a press grabs it, in screen pixels. */
 const DIVIDER_REACH = 6;
+/**
+ * How long a docked edge's grip is, in screen pixels. A bar along the edge
+ * rather than a square on it, so it reads as "move this line".
+ */
+const EDGE_GRIP = 28;
 /** The corner mark on a placement whose workspace holds blocks. */
 const SCRIPT = '#7c4dff';
 const DEG2RAD = Math.PI / 180;
@@ -614,6 +624,8 @@ export const MapStage = ({
   // skewed sprite (drawn far from a naive center point) is easy to find and grab.
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [hover, setHover] = useState<Vec | null>(null);
+  /** Which way a draggable line under the pointer runs, for the cursor. */
+  const [overLine, setOverLine] = useState<'across' | 'down' | null>(null);
   const [size, setSize] = useState<Size>({w: 0, h: 0});
   const [view, setView] = useState<View | null>(null);
   const [panning, setPanning] = useState(false);
@@ -1127,6 +1139,27 @@ export const MapStage = ({
   /** Every grip and where it is, for drawing and for hit-testing alike. */
   const handlesOf = (box: Box) =>
     RESIZE_HANDLES.map(handle => ({handle, at: handlePoint(box, handle)}));
+  /**
+   * DOCKED, A PLACEMENT'S BOX IS ITS REGION'S, and the dock decides it: a
+   * resize is put back by `fitLayout`, and a turn is never drawn. So it has
+   * no corner grips and no turn grip, only one on each edge that is a
+   * divider, which drags that divider (`docking.dockedEdges`).
+   */
+  const selectedDocked =
+    canDock && selectedId !== null && isDocked(map, selectedId);
+  const edgesOf = (doc: MapDoc) =>
+    selectedDocked && selectedId ? dockedEdges(doc, selectedId) : [];
+  /** The docked edge whose grip is under a point, if any. */
+  const edgeGripAt = (doc: MapDoc, world: Vec, scale: number) => {
+    const long = EDGE_GRIP / scale / 2;
+    const thick = HANDLE_SIZE / scale;
+    return edgesOf(doc).find(edge => {
+      const across = edge.line.split === 'across';
+      const dx = Math.abs(world.x - edge.at.x);
+      const dy = Math.abs(world.y - edge.at.y);
+      return across ? dx <= thick && dy <= long : dy <= thick && dx <= long;
+    });
+  };
 
   /** A list property's rows, as the inspector draws them. */
   const listItems = (value: unknown): unknown[] =>
@@ -1380,6 +1413,15 @@ export const MapStage = ({
   // Render one property's editor by type: number/string → a field, vector → an
   // X/Y pair, boolean → a checkbox, color → a swatch and a hex field.
   const renderProp = (actor: Placement, prop: PropertySchema) => {
+    // What the dock decides is shown and not edited: an edit would be put
+    // back by `fitLayout` as soon as it was written.
+    const locked =
+      isReadOnly ||
+      (canDock &&
+        isDocked(map, actor.id) &&
+        SET_BY_DOCK.some(
+          one => one.owner === prop.ownerId && one.prop === prop.propId,
+        ));
     if (prop.type === 'boolean') {
       return (
         <Checkbox
@@ -1387,7 +1429,7 @@ export const MapStage = ({
           name={`prop-${fieldKey(prop)}`}
           label={capitalize(prop.name)}
           checked={Boolean(valueOf(actor, prop))}
-          disabled={isReadOnly}
+          disabled={locked}
           onChange={(event: ChangeEvent<HTMLInputElement>) =>
             toggleBool(prop, event.target.checked)
           }
@@ -1413,7 +1455,7 @@ export const MapStage = ({
             labelText={capitalize(prop.name)}
             size="s"
             className={styles.inspectorDropdown}
-            disabled={isReadOnly}
+            disabled={locked}
             selectedValue={draft[fieldKey(prop)] ?? ''}
             items={[{value: '', text: '(none)'}, ...others]}
             onChange={(event: ChangeEvent<HTMLSelectElement>) =>
@@ -1423,7 +1465,7 @@ export const MapStage = ({
           <Button
             variant={pickingThis ? 'contained' : 'text'}
             size="extraSmall"
-            disabled={isReadOnly}
+            disabled={locked}
             aria-pressed={pickingThis}
             onClick={() =>
               setPicking(
@@ -1468,7 +1510,7 @@ export const MapStage = ({
                   <Button
                     variant="text"
                     size="extraSmall"
-                    disabled={isReadOnly}
+                    disabled={locked}
                     aria-label={`Remove ${id}`}
                     onClick={() =>
                       setChosen(
@@ -1486,7 +1528,7 @@ export const MapStage = ({
           <Button
             variant={pickingThis ? 'contained' : 'text'}
             size="extraSmall"
-            disabled={isReadOnly}
+            disabled={locked}
             aria-pressed={pickingThis}
             onClick={() =>
               setPicking(
@@ -1520,7 +1562,7 @@ export const MapStage = ({
                     inputType={prop.type === 'numbers' ? 'number' : 'text'}
                     size="s"
                     value={draft[itemKey(prop, index)] ?? ''}
-                    disabled={isReadOnly}
+                    disabled={locked}
                     onChange={(event: ChangeEvent<HTMLInputElement>) =>
                       editItem(prop, index, event.target.value)
                     }
@@ -1530,7 +1572,7 @@ export const MapStage = ({
                   <Button
                     variant="text"
                     size="extraSmall"
-                    disabled={isReadOnly}
+                    disabled={locked}
                     aria-label={`Remove ${prop.name} ${index + 1}`}
                     onClick={() => removeItem(prop, index)}
                   >
@@ -1543,7 +1585,7 @@ export const MapStage = ({
           <Button
             variant="text"
             size="extraSmall"
-            disabled={isReadOnly}
+            disabled={locked}
             aria-label={`Add to ${prop.name}`}
             onClick={() => addItem(prop)}
           >
@@ -1561,7 +1603,7 @@ export const MapStage = ({
           labelText="Map"
           size="s"
           className={styles.inspectorDropdown}
-          disabled={isReadOnly}
+          disabled={locked}
           selectedValue={draft[fieldKey(prop)] ?? ''}
           items={[
             {value: '', text: '(none)'},
@@ -1584,7 +1626,7 @@ export const MapStage = ({
           labelText={capitalize(prop.name)}
           size="s"
           className={styles.inspectorDropdown}
-          disabled={isReadOnly}
+          disabled={locked}
           selectedValue={draft[fieldKey(prop)] ?? ''}
           items={[
             {value: '', text: '(none)'},
@@ -1624,7 +1666,7 @@ export const MapStage = ({
           labelText={capitalize(prop.name)}
           size="s"
           className={styles.inspectorDropdown}
-          disabled={isReadOnly}
+          disabled={locked}
           selectedValue={chosen}
           items={[
             {value: '', text: 'Main camera'},
@@ -1649,7 +1691,7 @@ export const MapStage = ({
           labelText="Theme"
           size="s"
           className={styles.inspectorDropdown}
-          disabled={isReadOnly}
+          disabled={locked}
           selectedValue={draft[fieldKey(prop)] ?? ''}
           items={[
             // Empty is INHERIT, not "none": a placement that says nothing
@@ -1699,7 +1741,7 @@ export const MapStage = ({
             label={capitalize(prop.name)}
             size="s"
             value={typed}
-            disabled={isReadOnly}
+            disabled={locked}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               editScalar(prop, event.target.value)
             }
@@ -1718,7 +1760,7 @@ export const MapStage = ({
             // parse would silently become black, so it shows white and the
             // field beside it still holds what is really stored.
             value={/^#[0-9a-fA-F]{6}$/.test(typed) ? typed : '#ffffff'}
-            disabled={isReadOnly}
+            disabled={locked}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               editScalar(prop, event.target.value)
             }
@@ -1742,7 +1784,7 @@ export const MapStage = ({
           name={`prop-${fieldKey(prop)}`}
           label={capitalize(prop.name)}
           value={held}
-          disabled={isReadOnly}
+          disabled={locked}
           onChange={next => {
             setDraft(d => ({
               ...d,
@@ -1784,7 +1826,7 @@ export const MapStage = ({
               inputType="number"
               size="s"
               value={draft[fieldKey(prop, axis)] ?? ''}
-              disabled={isReadOnly}
+              disabled={locked}
               onChange={(event: ChangeEvent<HTMLInputElement>) =>
                 editVector(prop, axis, event.target.value)
               }
@@ -1805,7 +1847,7 @@ export const MapStage = ({
           name={`prop-${fieldKey(prop)}`}
           label={capitalize(prop.name)}
           value={Number.isFinite(held) ? held : 0}
-          disabled={isReadOnly}
+          disabled={locked}
           onChange={degrees => {
             editScalar(prop, String(degrees));
             commitEdit();
@@ -1821,7 +1863,7 @@ export const MapStage = ({
         inputType={prop.type === 'number' ? 'number' : 'text'}
         size="s"
         value={draft[fieldKey(prop)] ?? ''}
-        disabled={isReadOnly}
+        disabled={locked}
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           editScalar(prop, event.target.value)
         }
@@ -2003,7 +2045,20 @@ export const MapStage = ({
     // selection's edge, which is usually over the actor itself or over its
     // neighbour, so a press there means "resize this" rather than "select
     // that" (specs/BOXES_PLAN.md).
-    if (selectedBox && selectedId && !isReadOnly) {
+    if (selectedDocked && !isReadOnly) {
+      const edge = edgeGripAt(mapRef.current, world, view.scale);
+      if (edge) {
+        event.preventDefault();
+        dividerRef.current = {
+          line: edge.line,
+          pointerId: event.pointerId,
+          moved: false,
+        };
+        canvasRef.current?.setPointerCapture(event.pointerId);
+        return;
+      }
+    }
+    if (selectedBox && selectedId && !isReadOnly && !selectedDocked) {
       const reach = HANDLE_SIZE / view.scale;
       const near = (at: {x: number; y: number}) =>
         Math.abs(at.x - world.x) <= reach && Math.abs(at.y - world.y) <= reach;
@@ -2147,16 +2202,23 @@ export const MapStage = ({
       return;
     }
     if (view) {
-      const hit = isReadOnly
-        ? undefined
-        : hitUnder(screenToWorld(event.clientX, event.clientY));
+      const world = screenToWorld(event.clientX, event.clientY);
+      const hit = isReadOnly ? undefined : hitUnder(world);
       setHoveredId(hit ? hit.id : null);
+      // Over a line that can be dragged, the cursor says which way.
+      const line =
+        canDock && !isReadOnly && mapRef.current.layout
+          ? (edgeGripAt(mapRef.current, world, view.scale)?.line ??
+            dividerAt(mapRef.current, world, DIVIDER_REACH / view.scale))
+          : undefined;
+      setOverLine(line ? line.split : null);
     }
   };
 
   const handlePointerLeave = () => {
     endGesture();
     setHover(null);
+    setOverLine(null);
     setHoveredId(null);
   };
 
@@ -2433,8 +2495,63 @@ export const MapStage = ({
       onEditScript?.(selectedId);
       return;
     }
-    // Shift+arrow NUDGES the selection rather than cycling it.
+    // DOCKED, THE DOCK DECIDES where it is, how big and which way up: Shift
+    // and an arrow would be put back, and a turn never drawn. Alt and an
+    // arrow moves the line the arrow points at — the edge on that side, or
+    // the other if that one is the screen's — which is what dragging its
+    // grip does.
     const step = ARROW_STEPS[event.key];
+    if (selectedDocked && selectedId && !isReadOnly) {
+      if (step && event.altKey) {
+        event.preventDefault();
+        const toward: Side =
+          step.dx > 0
+            ? 'right'
+            : step.dx < 0
+              ? 'left'
+              : step.dy > 0
+                ? 'bottom'
+                : 'top';
+        const opposite: Record<Side, Side> = {
+          top: 'bottom',
+          bottom: 'top',
+          left: 'right',
+          right: 'left',
+        };
+        const edges = dockedEdges(mapRef.current, selectedId);
+        const edge =
+          edges.find(one => one.side === toward) ??
+          edges.find(one => one.side === opposite[toward]);
+        if (!edge) {
+          say(`${selectedId} fills the screen, so it has no side to move`);
+          return;
+        }
+        const next = fitLayout(
+          nudgeDivider(
+            mapRef.current,
+            edge.line,
+            (step.dx + step.dy) * RESIZE_STEP,
+          ),
+        );
+        commit(next);
+        const box = dockedBox(next, selectedId);
+        if (box) {
+          say(`${selectedId} is ${box.width} by ${box.height}`);
+        }
+        return;
+      }
+      if (step && event.shiftKey) {
+        event.preventDefault();
+        say(`${selectedId} is docked; drag it, or use Dock, to move it`);
+        return;
+      }
+      if (event.key === '[' || event.key === ']') {
+        event.preventDefault();
+        say('A docked actor does not turn');
+        return;
+      }
+    }
+    // Shift+arrow NUDGES the selection rather than cycling it.
     if (step && event.shiftKey && selectedId && !isReadOnly) {
       event.preventDefault();
       nudgeSelection(step.dx, step.dy, event.altKey);
@@ -2909,7 +3026,10 @@ export const MapStage = ({
       // SCREEN pixels so they stay the same size to grab at any zoom, and
       // placed by the same `handlePoint` the press hit-tests with, so what is
       // drawn and what is grabbable cannot drift apart (specs/BOXES_PLAN.md).
-      const grips = selectedBox && selectedId ? handlesOf(selectedBox) : [];
+      const grips =
+        selectedBox && selectedId && !selectedDocked
+          ? handlesOf(selectedBox)
+          : [];
       for (const {at} of grips) {
         const size = HANDLE_SIZE / view.scale;
         ctx.fillStyle = MAP_BG;
@@ -2920,7 +3040,22 @@ export const MapStage = ({
         ctx.fill();
         ctx.stroke();
       }
-      if (selectedBox && selectedId) {
+      // …or, docked, a bar on each edge that is a divider.
+      for (const edge of edgesOf(map)) {
+        const long = EDGE_GRIP / view.scale;
+        const thick = HANDLE_SIZE / view.scale;
+        const across = edge.line.split === 'across';
+        const w = across ? thick : long;
+        const h = across ? long : thick;
+        ctx.fillStyle = MAP_BG;
+        ctx.strokeStyle = SELECT;
+        ctx.lineWidth = 2 / view.scale;
+        ctx.beginPath();
+        ctx.roundRect(edge.at.x - w / 2, edge.at.y - h / 2, w, h, thick / 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+      if (selectedBox && selectedId && !selectedDocked) {
         // …and the turn grip, beyond the top edge, on a stalk so it reads as
         // apart from the corners rather than as a ninth resize.
         const top = handlePoint(selectedBox, 'top');
@@ -3002,6 +3137,7 @@ export const MapStage = ({
     // …and where a dragged placement would dock.
     dockZone,
     canDock,
+    selectedDocked,
   ]);
 
   const canvasClass = [
@@ -3013,9 +3149,13 @@ export const MapStage = ({
       ? styles.panning
       : selected
         ? styles.placing
-        : hoveredId
-          ? styles.hovering
-          : '',
+        : overLine === 'across'
+          ? styles.resizeAcross
+          : overLine === 'down'
+            ? styles.resizeDown
+            : hoveredId
+              ? styles.hovering
+              : '',
   ]
     .filter(Boolean)
     .join(' ');
@@ -3760,6 +3900,23 @@ export const MapStage = ({
                           {group.traitDescription}
                         </Typography>
                       )}
+                      {selectedDocked &&
+                        group.props.some(prop =>
+                          SET_BY_DOCK.some(
+                            one =>
+                              one.owner === prop.ownerId &&
+                              one.prop === prop.propId,
+                          ),
+                        ) && (
+                          <Typography
+                            variant="body3"
+                            component="p"
+                            className={styles.inspectorNote}
+                          >
+                            Its place, size and turn are set by where it is
+                            docked.
+                          </Typography>
+                        )}
                       {group.props.map(prop => renderProp(selectedActor, prop))}
                     </div>
                   ),

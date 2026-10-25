@@ -83,6 +83,9 @@ below, and are listed last.
 - **The line between two sides is grabbed within six pixels.** Small for a
   pointer that is not precise (2.5.8 Target Size is about controls, and
   this is one); the size field is the alternative.
+  NARROWED by DOCKING_PLAN.md, step 8: with a docked placement selected,
+  each of its movable edges has a grip 28 pixels long, and Alt and an
+  arrow moves the line. Unselected, the line is still six pixels.
 
 ### Shelves by purpose (PURPOSE_PLAN.md, step 3)
 

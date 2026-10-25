@@ -6,11 +6,14 @@ import {
   dividerAt,
   dockChoices,
   dockedAt,
+  dockedBox,
+  dockedEdges,
   dockSize,
   dockZones,
   dragDivider,
   fitLayout,
   isDocked,
+  nudgeDivider,
   zoneAt,
 } from '../docking';
 import type {MapDoc} from '../mapModel';
@@ -167,5 +170,77 @@ describe('docking from the inspector', () => {
       first: {dock: 'game'},
       second: {dock: 'hud'},
     });
+  });
+});
+
+describe('the edges of a docked placement', () => {
+  // A bar 40 tall along the top, the game under it, and a sidebar 60 wide
+  // down the game's right: every kind of edge there is.
+  const nested = (): MapDoc => ({
+    ...screen(),
+    layout: {
+      split: 'down',
+      fixed: 'first',
+      size: 40,
+      first: {dock: 'hud'},
+      second: {
+        split: 'across',
+        fixed: 'second',
+        size: 60,
+        first: {dock: 'game'},
+        second: {dock: 'side'},
+      },
+    },
+    actors: [
+      ...screen().actors,
+      {
+        type: 'actors/panel',
+        id: 'side',
+        properties: {positional: {position: {x: 0, y: 0}}},
+      },
+    ],
+  });
+  const sides = (id: string) =>
+    dockedEdges(nested(), id).map(edge => edge.side);
+
+  it('are only those that lie on a divider', () => {
+    // The screen's own boundary does not move, so it has no grip.
+    expect(sides('hud')).toEqual(['bottom']);
+    expect(sides('game')).toEqual(['top', 'right']);
+    expect(sides('side')).toEqual(['top', 'left']);
+    expect(sides('nobody')).toEqual([]);
+  });
+
+  it('have their grip at the middle of the edge', () => {
+    const [right] = dockedEdges(nested(), 'game').filter(
+      edge => edge.side === 'right',
+    );
+    expect(right.at).toEqual({x: 260, y: 180});
+  });
+
+  it('move their divider when nudged, the way it is nudged', () => {
+    const [bottom] = dockedEdges(nested(), 'hud');
+    const moved = nudgeDivider(nested(), bottom.line, 8);
+    expect(dockedBox(moved, 'hud')).toEqual({
+      x: 0,
+      y: 0,
+      width: 320,
+      height: 48,
+    });
+    const [, right] = dockedEdges(nested(), 'game');
+    expect(
+      dockedBox(nudgeDivider(nested(), right.line, -10), 'side')?.width,
+    ).toBe(70);
+  });
+});
+
+describe('a docked placement that was turned', () => {
+  it('is squared to the screen, since the game does not turn it', () => {
+    const turned = screen();
+    turned.actors[0].properties!.positional!.rotation = 30;
+    expect(props(fitLayout(turned), 'game')?.positional?.rotation).toBe(0);
+    // …and a floating one keeps its turn.
+    turned.actors[1].properties!.positional!.rotation = 15;
+    expect(props(fitLayout(turned), 'hud')?.positional?.rotation).toBe(15);
   });
 });
