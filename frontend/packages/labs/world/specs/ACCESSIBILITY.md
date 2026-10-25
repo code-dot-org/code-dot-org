@@ -1,0 +1,89 @@
+# Accessibility: the gaps, as they are found
+
+A ledger, kept as the lab is built. Each phase adds what it found and marks
+what it closed; nothing is taken off, so the record says when a gap opened
+and what closed it. The floor is WCAG 2.2 AA; criteria are cited where one
+plainly applies.
+
+None of this has been tried with a screen reader. Most of it has not been
+tried with a keyboard alone. Those two passes are owed for every phase
+below, and are listed last.
+
+## What already holds
+
+- **The map stage speaks.** A placement is pixels on a canvas, not an
+  element, so the stage announces what keyboard actions did through a
+  polite live region: a resize's size, a turn's angle, the box it is in
+  (`MapStage`, `say`; specs/BOXES_PLAN.md). The arrow keys cycle the
+  selection, Shift and an arrow nudges it, Enter opens its code, Delete
+  removes it.
+- **The breadcrumb is a list in a `nav` landmark**, the separators hidden
+  from assistive technology and the last step marked `aria-current`.
+- **Icon-only buttons carry names**: Undo, Redo, the Screen or Map actions,
+  every folder button.
+
+## Open
+
+### The Actor Palette and the brush (SHELL_PLAN.md, steps 2 and 3)
+
+- **Nothing can be placed from the keyboard.** A tile takes an actor in
+  hand, and only a click on the stage places it; the stage's keys are for
+  selecting, and with an actor in hand it ignores them. (2.1.1 Keyboard.)
+  Wanted: with an actor in hand, the arrows move a cursor cell and Enter or
+  Space places or takes away there, said aloud.
+- **A stroke is a drag.** Painting a row is one drag; the same row is a
+  click per cell, which is the single-pointer way (2.5.7 Dragging Movements
+  holds), but slow. Recorded so the keyboard answer above covers it too.
+- **Which tab an actor is under is said only by being under it.** The
+  tabs are a segmented control; whether a screen reader hears the actors
+  change when the tab does is untested.
+
+### The toolbar (SHELL_PLAN.md, steps 4 and 5)
+
+- **Undo says nothing.** The buttons and the keys work, but what was undone
+  is not announced, and the stage's region says only what the keyboard
+  moved. (4.1.3 Status Messages.)
+- **The keys are found only by hovering**, in the buttons' titles. Nothing
+  lists them.
+
+### Add Rules in the toolbox (SHELL_PLAN.md, step 6)
+
+- **A button inside Blockly's tree.** It is an ordinary button reached by
+  Tab, but where Tab lands relative to the tree's own arrow-key walk is
+  untested.
+
+### The Actor Editor (ACTOR_EDITOR_PLAN.md)
+
+- **Focus after an in-place change.** Rename and Delete on a property swap
+  its row for a field or a question in place; where focus goes when the
+  row comes back, and after the property is gone, is not managed.
+  (2.4.3 Focus Order.)
+- **The preview is a picture with a name**, and says nothing of what the
+  actor looks like beyond it.
+- **The "+" between sections**, which is now how an actor's drawing, its own
+  blocks and events and its every-frame work are added, is drawn on the
+  Blockly canvas; whether it is reachable from the keyboard is untested,
+  and was before this phase too.
+
+### Docking (DOCKING_PLAN.md)
+
+- **Docking is a drag, and only a drag.** There is no key and no
+  single-pointer way to dock a placement: the zones appear only while
+  dragging. (2.1.1 Keyboard; 2.5.7 Dragging Movements.) Undocking has a
+  button and a docked side's size has a field, so those two are covered.
+  Wanted: a "Dock" choice in the inspector — which edge of the screen, or
+  beside which docked placement — doing what a drop does.
+- **A zone is shown only by a tint**, and nothing is said when one is
+  entered or when a placement docks. (1.4.1 Use of Color, for the tint
+  alone; 4.1.3 Status Messages.)
+- **The line between two sides is grabbed within six pixels.** Small for a
+  pointer that is not precise (2.5.8 Target Size is about controls, and
+  this is one); the size field is the alternative.
+
+## Not yet done for any phase
+
+- A keyboard-only pass through the shell: the breadcrumb, the palette, the
+  switcher, the toolbar, the Actor Editor, docking.
+- A screen-reader pass through the same.
+- Contrast of the drop-zone tint, the divider and the palette's ring
+  against both themes.
