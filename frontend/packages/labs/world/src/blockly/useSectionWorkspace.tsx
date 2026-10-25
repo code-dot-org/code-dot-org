@@ -818,10 +818,12 @@ export function useSectionWorkspace({
       if (!workspace) {
         return;
       }
+      // A choice may say what the block holds, not only what it is.
+      const state = eventMenuChoices.find(one => one.type === type)?.state;
       Blockly.Events.setGroup(true);
       try {
         const block = Blockly.serialization.blocks.append(
-          {type, x: COLUMN_X, y} as never,
+          {...state, type, x: COLUMN_X, y} as never,
           workspace,
         );
         revealAfterLayout.current = block.id;
@@ -829,7 +831,7 @@ export function useSectionWorkspace({
         Blockly.Events.setGroup(false);
       }
     },
-    [workspaceRef],
+    [workspaceRef, eventMenuChoices],
   );
 
   /**

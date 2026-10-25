@@ -64,3 +64,33 @@ export const ACTOR_CODE_CHOICES: readonly EventChoice[] = [
   },
   {type: 'world_define_drawing', label: 'its drawing', drawer: 'What it does'},
 ];
+
+/** `⟨width|height⟩ of this actor`, over the 32 a socket holds when emptied. */
+const boxSide = (name: 'Width' | 'Height') => ({
+  shadow: {type: 'math_number', fields: {NUM: 32}},
+  block: {
+    type: `world_get_Boxed_${name}Property`,
+    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+  },
+});
+
+/**
+ * What the "+" offers in this actor's code. In an actor with a box, its
+ * drawing starts as big as the box, `width of this actor` by `height of this
+ * actor`, rather than 32 by 32 (SIMPLE_INTERFACE.md, "Interface Actors"): a
+ * box that is resized is a drawing that is redrawn to fit, and the number a
+ * learner would otherwise type is one that stops being true.
+ */
+export const actorCodeChoices = (boxed: boolean): readonly EventChoice[] =>
+  boxed
+    ? ACTOR_CODE_CHOICES.map(choice =>
+        choice.type === 'world_define_drawing'
+          ? {
+              ...choice,
+              state: {
+                inputs: {WIDTH: boxSide('Width'), HEIGHT: boxSide('Height')},
+              },
+            }
+          : choice,
+      )
+    : ACTOR_CODE_CHOICES;

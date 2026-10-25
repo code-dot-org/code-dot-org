@@ -26,6 +26,11 @@ export interface EventChoice {
   label: string;
   /** The drawer it is in, which is what the list is grouped by. */
   drawer: string;
+  /**
+   * The block as it is added, when it is more than its type: its sockets
+   * filled for where it is going (`codeRoots.actorCodeChoices`).
+   */
+  state?: Readonly<Record<string, unknown>>;
 }
 
 /** A block definition, as far as a label is read from it. */

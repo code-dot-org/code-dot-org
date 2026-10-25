@@ -60,7 +60,7 @@ import {projectActorIcons} from './actorIconMeta';
 import {addActorThumbnails, setActorIcons} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
-import {ACTOR_CODE_CHOICES, rootCodeRows} from './codeRoots';
+import {actorCodeChoices, rootCodeRows} from './codeRoots';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
@@ -261,6 +261,11 @@ export interface BlocklyFileEditorProps extends CustomEditorProps {
    * (`codeRoots`, specs/ACTOR_EDITOR_PLAN.md step 4c).
    */
   actorCode?: boolean;
+  /**
+   * The actor has a box, so a drawing added to its code starts as big as
+   * the box (`codeRoots.actorCodeChoices`). Read with `actorCode`.
+   */
+  boxed?: boolean;
 }
 
 export const BlocklyFileEditor = ({
@@ -269,6 +274,7 @@ export const BlocklyFileEditor = ({
   isReadOnly,
   onChange,
   actorCode = false,
+  boxed = false,
 }: BlocklyFileEditorProps) => {
   // What this file SAYS, which is not always what it holds.
   //
@@ -675,12 +681,13 @@ export const BlocklyFileEditor = ({
     const narrow = eventsNarrowerFor(files);
     return (choices: EventChoice[]) => narrow(choices, ownActorModule);
   }, [files, ownActorModule]);
+  const codeChoices = useMemo(() => actorCodeChoices(boxed), [boxed]);
   const sections = useSectionWorkspace({
     memoryKey: fileId,
     definitions: blocks,
     getToolbox: () => surfaceToolboxRef.current,
     narrowEvents,
-    ...(actorCode ? {moreChoices: ACTOR_CODE_CHOICES} : {}),
+    ...(actorCode ? {moreChoices: codeChoices} : {}),
     isReadOnly,
     workspaceRef,
     isShowingSections: () => surfaceRef.current === null,

@@ -4,7 +4,7 @@
 import * as Blockly from 'blockly/core';
 import {afterEach, beforeAll, describe, expect, it} from 'vitest';
 
-import {rootCodeRows} from '../codeRoots';
+import {ACTOR_CODE_CHOICES, actorCodeChoices, rootCodeRows} from '../codeRoots';
 
 // Shaped as the real ones are where it matters here: a row, with something
 // above and below it, and a body.
@@ -100,5 +100,29 @@ describe('a code row at the top of an actor’s code', () => {
     const block = workspace.getBlockById('step')!;
     expect(block.previousConnection).toBeNull();
     expect(block.getNextBlock()?.id).toBe('next');
+  });
+});
+
+describe('a drawing added by the "+"', () => {
+  const drawing = (boxed: boolean) =>
+    actorCodeChoices(boxed).find(
+      choice => choice.type === 'world_define_drawing',
+    );
+
+  it('starts as big as the box, in an actor with one', () => {
+    // SIMPLE_INTERFACE.md, "Interface Actors": the size is read off the
+    // actor, over the 32 the socket keeps for when it is emptied.
+    const inputs = drawing(true)?.state?.inputs as Record<
+      string,
+      {block: {type: string}; shadow: {fields: {NUM: number}}}
+    >;
+    expect(inputs.WIDTH.block.type).toBe('world_get_Boxed_WidthProperty');
+    expect(inputs.HEIGHT.block.type).toBe('world_get_Boxed_HeightProperty');
+    expect(inputs.WIDTH.shadow.fields.NUM).toBe(32);
+  });
+
+  it('is the block as it always was, in an actor without one', () => {
+    expect(actorCodeChoices(false)).toBe(ACTOR_CODE_CHOICES);
+    expect(drawing(false)?.state).toBeUndefined();
   });
 });

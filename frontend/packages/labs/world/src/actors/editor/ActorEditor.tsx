@@ -83,6 +83,9 @@ const parse = (contents: string): ActorData | undefined => {
   }
 };
 
+/** The trait that gives an actor a box, and its drawing a box's size. */
+const BOX_TRAIT = 'Boxed#HasABoxTrait';
+
 /** The actor's code workspace, as the file editor is handed a file. */
 const workspaceOf = (contents: string): string =>
   JSON.stringify(
@@ -289,6 +292,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           <BlocklyFileEditor
             {...props}
             actorCode
+            boxed={data?.traits?.includes(BOX_TRAIT) ?? false}
             initialContents={workspaceOf(contents)}
             onChange={next => write(withWorkspace(written.current, next))}
           />

@@ -115,6 +115,19 @@ In an actor with a box, a new `define drawing` starts at `width of this
 actor` by `height of this actor`, not 32 by 32 (SIMPLE_INTERFACE.md,
 "Interface Actors").
 
+BUILT. The Code view's "+" is how a data-shaped actor gains a drawing, and
+in an actor with Has a Box its "its drawing" adds the block with `width of
+this actor` and `height of this actor` in its sockets, each over the 32 a
+socket keeps for when the block is pulled out (`codeRoots.actorCodeChoices`,
+read from the actor's traits by the Actor Editor). A "+" choice may now say
+what its block holds as well as its type (`EventChoice.state`). In the
+browser: on the interface kit's Label, the new drawing compiled to
+`actor.get(WidthProperty)` by `actor.get(HeightProperty)`.
+
+Not changed: the toolbox's own `define drawing`, which a learner editing a
+plain `.actor` file drags out, is still 32 by 32. A toolbox entry is one
+block for every file, and a plain file is the older shape.
+
 ### 5. Docking and placing from the keyboard
 
 - **Dock** in the inspector of a placement on a Screen: which edge of the
