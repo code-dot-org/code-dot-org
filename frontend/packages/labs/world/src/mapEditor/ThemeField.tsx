@@ -11,10 +11,12 @@
 //
 // With the way to the themes themselves (specs/SHELL_FINISH_PLAN.md, step
 // 4): Edit opens the chosen one in the theme editor, a step on the trail,
-// and New theme makes one, which the map then takes (`files/fileActs`).
+// and a Themes menu makes one, which the map then takes, and renames,
+// clones and deletes the chosen one (`files/fileActs`).
 
-import {Button} from '@mui/material';
+import {Button, ListItemText, Menu, MenuItem} from '@mui/material';
 import type {ChangeEvent} from 'react';
+import {useState} from 'react';
 
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -59,7 +61,13 @@ export const ThemeField = ({
       }
     },
   );
-  const chosen = value && options.some(([, path]) => path === value);
+  const chosenName = options.find(([, path]) => path === value)?.[0];
+  const chosen = Boolean(value && chosenName);
+  const [menuAt, setMenuAt] = useState<HTMLElement | null>(null);
+  const act = (then: () => void) => () => {
+    setMenuAt(null);
+    then();
+  };
   return (
     <div className={styles.themeField}>
       <SimpleDropdown
@@ -111,24 +119,51 @@ export const ThemeField = ({
           <Button
             variant="text"
             size="extraSmall"
-            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
-            onClick={() =>
-              importThen(
-                () =>
-                  requestFileAct({
-                    act: 'make',
-                    folder: 'styles',
-                    open: false,
-                    answer: 'name',
-                  }).then(
-                    made => made && `styles/${made.replace(/\.style$/, '')}`,
-                  ),
-                {open: true},
-              )
+            aria-haspopup="menu"
+            aria-expanded={menuAt !== null}
+            endIcon={
+              <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
             }
+            onClick={event => setMenuAt(event.currentTarget)}
           >
-            New theme
+            Themes
           </Button>
+        )}
+        {menuAt && (
+          <Menu open anchorEl={menuAt} onClose={() => setMenuAt(null)}>
+            <MenuItem
+              onClick={act(() =>
+                importThen(
+                  () =>
+                    requestFileAct({
+                      act: 'make',
+                      folder: 'styles',
+                      open: false,
+                      answer: 'name',
+                    }).then(
+                      made => made && `styles/${made.replace(/\.style$/, '')}`,
+                    ),
+                  {open: true},
+                ),
+              )}
+            >
+              <ListItemText>New theme…</ListItemText>
+            </MenuItem>
+            {chosen &&
+              (['rename', 'clone', 'delete'] as const).map(verb => (
+                <MenuItem
+                  key={verb}
+                  onClick={act(
+                    () =>
+                      void requestFileAct({act: verb, path: `${value}.style`}),
+                  )}
+                >
+                  <ListItemText>
+                    {`${verb[0].toUpperCase()}${verb.slice(1)} ${chosenName}…`}
+                  </ListItemText>
+                </MenuItem>
+              ))}
+          </Menu>
         )}
       </div>
     </div>

@@ -205,8 +205,8 @@ BUILT, door by door; each line below is a commit.
   the actor and opens it. In the browser: New effect on the starter's
   Player made Glow, opened it as "Player › Glow", and the Player had it.
 - **Themes.** The Theme field, the map's and the world's, has Edit theme
-  for the chosen one and New theme, which makes one, gives it to the map
-  and opens it in the theme editor. A placement's own Theme dropdown is
+  for the chosen one and New theme (since in a Themes menu, below), which
+  makes one, gives it to the map and opens it in the theme editor. A placement's own Theme dropdown is
   left as it was. In the browser: New theme on the starter's Main map made
   Dusk, opened it, and the map's theme was `styles/dusk`.
 - **Maps.** The place's actions beside its name, a Map's or a Screen's,
@@ -224,6 +224,12 @@ BUILT, door by door; each line below is a commit.
   your project", each to hear, to use as it is, to rename and to delete,
   and has Upload a sound. In the browser: after Coin was imported, the
   shelf listed `coin.mp3` under the project's, and Rename asked its name.
+- **What the audit still found.** Read against the audit's list, the
+  doors above left Clone without a door for pictures, animations,
+  backgrounds and effects, and Rename, Clone and Delete for themes. The
+  look's Pictures menu, the Backgrounds menu and an effect's row menu
+  gain Clone; the Theme field's New theme became a Themes menu with New,
+  and Rename, Clone and Delete of the chosen theme.
 
 ### 5. The folder buttons go
 

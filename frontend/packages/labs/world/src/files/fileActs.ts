@@ -51,10 +51,8 @@ export type FileAct =
    * save its own file and ask this in one breath.
    */
   | ({act: 'open'} & FileRef)
-  | ({act: 'rename'} & FileRef)
-  /** A copy, under a name the learner gives. */
-  | ({act: 'clone'} & FileRef)
-  | ({act: 'delete'} & FileRef);
+  /** `clone` is a copy, under a name the learner gives. */
+  | ({act: 'rename' | 'clone' | 'delete'} & FileRef);
 
 const seam = importSeam<[act: FileAct]>();
 

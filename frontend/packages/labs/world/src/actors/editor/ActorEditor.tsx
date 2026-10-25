@@ -743,6 +743,19 @@ export const ActorEditor = (props: CustomEditorProps) => {
                     onClick={() => {
                       setEffectMenu(null);
                       void requestFileAct({
+                        act: 'clone',
+                        path: `${effectMenu.effect}.effect`,
+                      });
+                    }}
+                  >
+                    <ListItemText>
+                      Clone {effectNamed(effectMenu.effect)}…
+                    </ListItemText>
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      setEffectMenu(null);
+                      void requestFileAct({
                         act: 'delete',
                         path: `${effectMenu.effect}.effect`,
                       });
@@ -948,6 +961,19 @@ export const ActorEditor = (props: CustomEditorProps) => {
                     )}
                   >
                     <ListItemText>Rename {fileLabel(lookFile)}…</ListItemText>
+                  </MenuItem>
+                )}
+                {lookFile && (
+                  <MenuItem
+                    onClick={lookAct(
+                      () =>
+                        void requestFileAct({
+                          act: 'clone',
+                          fileId: lookFile.id,
+                        }),
+                    )}
+                  >
+                    <ListItemText>Clone {fileLabel(lookFile)}…</ListItemText>
                   </MenuItem>
                 )}
                 {lookFile && (

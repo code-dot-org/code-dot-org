@@ -223,6 +223,19 @@ export const BackgroundField = ({
                 onClick={act(
                   () =>
                     void requestFileAct({
+                      act: 'clone',
+                      path: pathOf(slot.sprite!),
+                    }),
+                )}
+              >
+                <ListItemText>Clone {nameOf(slot.sprite!)}…</ListItemText>
+              </MenuItem>
+            )}
+            {chosen && (
+              <MenuItem
+                onClick={act(
+                  () =>
+                    void requestFileAct({
                       act: 'delete',
                       path: pathOf(slot.sprite!),
                     }),

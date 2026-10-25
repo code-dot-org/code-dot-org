@@ -32,7 +32,14 @@ describe('the Theme field', () => {
       path: 'styles/neon.style',
     });
 
-    fireEvent.click(screen.getByRole('button', {name: 'New theme'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Themes'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Delete Neon…'}));
+    expect(acts).toHaveBeenCalledWith({
+      act: 'delete',
+      path: 'styles/neon.style',
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Themes'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'New theme…'}));
     expect(acts).toHaveBeenCalledWith({
       act: 'make',
       folder: 'styles',
@@ -62,5 +69,9 @@ describe('the Theme field', () => {
   it('offers no Edit for a theme the project does not hold', () => {
     render(field([], vi.fn()));
     expect(screen.queryByRole('button', {name: 'Edit theme'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Themes'}));
+    expect(
+      screen.getAllByRole('menuitem').map(item => item.textContent),
+    ).toEqual(['New theme…']);
   });
 });
