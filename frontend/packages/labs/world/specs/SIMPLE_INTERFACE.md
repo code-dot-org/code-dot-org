@@ -30,8 +30,12 @@ undo, and Add Rules (SHELL_PLAN.md), then an actor as data and events, with
 the Actor Editor (ACTOR_EDITOR_PLAN.md), then docking and the grid layout
 (DOCKING_PLAN.md), then game or interface all the way through: the
 wizards, the shelves, a drawing the size of its box, and docking and
-placing from the keyboard (PURPOSE_PLAN.md). The accessibility gaps each
-phase opened or closed are kept in ACCESSIBILITY.md.
+placing from the keyboard (PURPOSE_PLAN.md), then the shell finished: a
+picture of each Screen and Map in the switcher, layers in front hidden
+while one is edited, a Viewport's cameras in its own inspector, a way in
+for every kind of file where it is used, and the folder buttons gone
+(SHELL_FINISH_PLAN.md). The accessibility gaps each phase opened or closed
+are kept in ACCESSIBILITY.md.
 
 ## World Editor is now a Screen Editor
 
@@ -516,7 +520,7 @@ own: an actor's Self, a Screen, and the game as a whole.
 | theme                             | a Screen's properties, and a Map's          |
 | background image and color        | a Screen's properties, and a Map's          |
 | view size                         | the Main Screen's size                      |
-| cameras                           | the Viewport's Cameras tab                  |
+| cameras                           | the Viewport's inspector, a Cameras section |
 | layers                            | the Map's layer control                     |
 | `load map`                        | the Viewport's map                          |
 
@@ -561,6 +565,30 @@ With the file tabs gone, an editor can be several steps from the Main Screen:
 Main › the Viewport › Level 1 › the Hero placed there › its code. A
 breadcrumb above the editor names each step and is the way back to any of
 them.
+
+### Every kind of file is reached where it is used
+
+There is no list of a project's files. Each kind is opened, made, renamed,
+cloned and deleted from the place that uses it, and those places all ask
+one host for the act, with the same prompts:
+
+| Kind                 | Where                                                     |
+| -------------------- | --------------------------------------------------------- |
+| Screens and Maps     | the switcher, and the actions beside the name             |
+| Actors               | the Actor Palette, and the Actor Editor                   |
+| Pictures, animations | an actor's Looks like; the open button on `set sprite`    |
+| Backgrounds          | the Background field                                      |
+| Effects              | an actor's Effects tab                                    |
+| Themes               | the Theme field                                           |
+| Rules                | Rules in Play, from the toolbox, the world, the inspector |
+| Sounds               | the sound shelf, under "In your project"                  |
+
+A file opened from one of these is a step on the breadcrumb, and the step
+before it is the way back.
+
+A Viewport's cameras are a section of its inspector rather than a tab of
+their own: a placement's inspector has no tabs, and one section beside its
+traits is what a tab would have held.
 
 ### Lessons last
 

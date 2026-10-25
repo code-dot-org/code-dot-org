@@ -149,7 +149,9 @@ below, and are listed last.
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the
-  switcher, the toolbar, the Actor Editor, docking.
+  switcher, the toolbar, the Actor Editor, docking, and the doors to each
+  kind of file (the Pictures, Backgrounds and Themes menus, Rules in Play,
+  the sound shelf).
 - A screen-reader pass through the same.
 - Contrast of the drop-zone tint, the divider and the palette's ring
   against both themes.

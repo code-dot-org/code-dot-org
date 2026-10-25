@@ -1,6 +1,6 @@
 # Plan: finishing the shell (SIMPLE_INTERFACE.md, phase six)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT. The working record, as the other plans are.
 
 The sixth phase of the simple interface. SIMPLE_INTERFACE.md opens with
 the aim of hiding the file tabs and folder buttons, so the Screen or Map
@@ -269,6 +269,38 @@ that were about the buttons and grids went with them. In the browser: the
 starter, Tapper and Breakout open with no folder buttons.
 
 ### 6. Documents, the browser, and the ledger
+
+BUILT. SIMPLE_INTERFACE.md lists this phase with the others, corrects its
+decisions table (a Viewport's cameras are a section of its inspector, not
+a tab, and says why), and gains a table of where each kind of file is
+reached. LAYOUT.md and CANVAS_FIRST.md note that `showFileBrowser` is
+gone. ACCESSIBILITY.md has this phase's gaps under "Finishing the shell".
+
+In the browser every scenario opened with no page errors; the switcher
+and the breadcrumb walked to a map and back; and once a place had been
+opened, the switcher showed it as a picture. The pass found one bug, in
+the App's maps, which never got a picture: the map editor asked the
+sandbox for a picture of the Note records, which it cannot make, and
+counted each empty answer as a change, so it asked again every few
+hundred milliseconds and the stage never sat still long enough to paint.
+An answer that adds nothing now changes nothing (`MapEditor.withAnswers`),
+with a test that fails without it.
+
+## What it left
+
+- **A placement's own Theme dropdown** has no Edit or New; the map's and
+  the world's Theme field have both.
+- **No single list of pictures or effects.** Each is reached through what
+  uses it. A picture nothing uses yet is reached by making an actor look
+  like it; the ledger has this.
+- **Focus after a door opens a file** stays on the page, and nothing is
+  said (ACCESSIBILITY.md).
+- **Not driven in the browser:** Draw with AI, any upload (both need what
+  the demo has not got: a drawing service, a file chosen by hand), and
+  Clone for pictures, backgrounds and effects. Each is covered by tests of
+  how it is wired.
+- **The corner where two dividers meet**, from DOCKING_PLAN.md step 8,
+  still moves one at a time.
 
 ## Not in this phase
 
