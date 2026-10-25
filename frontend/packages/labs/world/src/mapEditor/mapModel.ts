@@ -17,6 +17,7 @@ import type {
   MainCameraSettings,
   PlacementCamera,
 } from '../blockly/placementCameras';
+import {isLayout, type LayoutNode} from '../engine/core/layout';
 import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 /** The grid a placement snaps to, in world pixels. */
@@ -343,6 +344,11 @@ export interface MapDoc {
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */
   layers?: MapLayerDoc[];
+  /**
+   * The grid layout its placements dock into (`engine/core/layout`,
+   * specs/DOCKING_PLAN.md). A Screen's; absent, everything floats.
+   */
+  layout?: LayoutNode;
   // NO CAMERA ON A LEVEL. A map is data: it says where things are and nothing
   // about how the view onto it behaves. A Viewport decides that, and the
   // world is the main Viewport (specs/SPACE_CAMERAS_PLAN.md) — which is the
@@ -435,6 +441,7 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
     // map back without them, so a screen stopped covering what was under it
     // and a theme went back to the world's.
     ...(raw.modal === true ? {modal: true} : {}),
+    ...(isLayout(raw.layout) ? {layout: raw.layout} : {}),
     ...(typeof raw.theme === 'string' && raw.theme ? {theme: raw.theme} : {}),
     ...(raw.mainCamera && Array.isArray(raw.mainCamera.traits)
       ? {mainCamera: raw.mainCamera}

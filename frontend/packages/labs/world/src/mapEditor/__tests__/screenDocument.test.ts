@@ -62,6 +62,27 @@ describe('the Main Screen document', () => {
     expect(written.backgroundColor).toBe('#112233');
   });
 
+  it('keeps its layout through a map edit, and drops one it cannot read', () => {
+    // specs/DOCKING_PLAN.md: the first edit to a screen used to write it back
+    // without its layout, undocking the Viewport.
+    const docked = JSON.stringify({
+      ...JSON.parse(SCREEN),
+      layout: {dock: 'game'},
+    });
+    const doc = screenFileDocument.read(docked);
+    expect(doc.layout).toEqual({dock: 'game'});
+    const written = JSON.parse(
+      screenFileDocument.write(docked, {...doc, actors: doc.actors}),
+    );
+    expect(written.layout).toEqual({dock: 'game'});
+
+    expect(
+      screenFileDocument.read(
+        JSON.stringify({...JSON.parse(SCREEN), layout: {dock: 7}}),
+      ).layout,
+    ).toBeUndefined();
+  });
+
   it('is the Main Screen alone; another screen is a map', () => {
     expect(screenDocumentFor('screens/main.screen')).toBe(screenFileDocument);
     const other = screenDocumentFor('screens/title.screen');
