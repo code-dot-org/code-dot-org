@@ -38,6 +38,7 @@ import {
 } from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
+import type {Timeline} from './keyframes';
 import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL, RESERVED_KEYS} from './keys';
 import {
   DEFAULT_LAYER_ID,
@@ -122,6 +123,16 @@ export interface ActorTemplate {
    * the same structural reason `ownSteps` is.
    */
   readonly ownDrawing?: ActorDrawing;
+  /** This KIND's animations, by name — see `ActorBuilder.useAnimations`. */
+  readonly ownAnimations?: Readonly<Record<string, Timeline>>;
+  /** …and the effects they switch on, by path. */
+  readonly animationEffects?: Readonly<Record<string, AnimationEffect>>;
+}
+
+/** An effect an animation can switch on: its graph, and its settings. */
+export interface AnimationEffect {
+  document: AppliedEffectSpec['document'];
+  values?: AppliedEffectSpec['values'];
 }
 
 /**
@@ -524,6 +535,13 @@ export interface RenderState {
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
   frame?: FrameState;
   /**
+   * Where the actor's own picture is drawn against its transform: moved,
+   * scaled and turned on top of it, as an animation leaves it
+   * (specs/ANIMATION_PLAN.md). Absent is no change. Its children are placed
+   * from the actor, not from its picture, and do not follow it.
+   */
+  drawn?: {x: number; y: number; scale: number; turn: number};
+  /**
    * A picture the actor's kind describes for itself, which wins over `frame`
    * when both are there (specs/DRAWING.md).
    *
@@ -786,6 +804,14 @@ export class World {
   private readonly kindsWithSteps = new Set<string>();
   /** How each kind that describes its own picture draws itself, by type. */
   private readonly kindDrawings = new Map<string, ActorDrawing>();
+  /** Each kind's animations, and the effects they switch on, by type. */
+  private readonly kindAnimations = new Map<
+    string,
+    {
+      timelines: Readonly<Record<string, Timeline>>;
+      effects: Readonly<Record<string, AnimationEffect>>;
+    }
+  >();
   /** The properties this world declared for itself — see `defineOwnProperty`. */
   private readonly ownProperties: Array<Property<unknown>> = [];
   private readonly events = new EventQueue();
@@ -1268,6 +1294,17 @@ export class World {
     // which is the commonest shape an interface actor has (specs/UI_ACTORS.md).
     if (template.ownDrawing && !this.kindDrawings.has(type)) {
       this.kindDrawings.set(type, template.ownDrawing);
+    }
+    // …and its animations, the same way: by the type, once.
+    if (
+      template.ownAnimations &&
+      Object.keys(template.ownAnimations).length &&
+      !this.kindAnimations.has(type)
+    ) {
+      this.kindAnimations.set(type, {
+        timelines: template.ownAnimations,
+        effects: template.animationEffects ?? {},
+      });
     }
     if (template.cameraTraits?.length && !this.kindCameraTraits.has(type)) {
       this.kindCameraTraits.set(type, template.cameraTraits);
@@ -4206,6 +4243,20 @@ export class World {
   }
 
   /**
+   * The animation `name` an actor plays, when its KIND has one of that name
+   * (specs/ANIMATION_PLAN.md): a timeline, which wins over a project-wide
+   * flipbook of the same id.
+   */
+  timelineOf(actor: Actor, name: string): Timeline | undefined {
+    return this.kindAnimations.get(actor.type)?.timelines[name];
+  }
+
+  /** The effect at `path` an actor's animations switch on, if its kind has one. */
+  animationEffect(actor: Actor, path: string): AnimationEffect | undefined {
+    return this.kindAnimations.get(actor.type)?.effects[path];
+  }
+
+  /**
    * Whether input reaches this actor — `⟨…⟩ can be reached`.
    *
    * FALSE WHILE SOMETHING MODAL COVERS IT. A screen loaded over another is a
@@ -4858,6 +4909,29 @@ export class World {
     const frameProp = appearanceTrait?.properties[APPEARANCE.frame] as
       | Property<number>
       | undefined;
+    const drawnOffsetProp = appearanceTrait?.properties[
+      APPEARANCE.drawnOffset
+    ] as Property<Vector> | undefined;
+    const drawnScaleProp = appearanceTrait?.properties[
+      APPEARANCE.drawnScale
+    ] as Property<number> | undefined;
+    const drawnTurnProp = appearanceTrait?.properties[APPEARANCE.drawnTurn] as
+      | Property<number>
+      | undefined;
+    /** Where the picture is against the actor, when it is anywhere else. */
+    const drawnFor = (actor: Actor): Pick<RenderState, 'drawn'> => {
+      if (!appearanceTrait || !actor.has(appearanceTrait)) {
+        return {};
+      }
+      const offset = drawnOffsetProp ? actor.get(drawnOffsetProp) : undefined;
+      const scale = drawnScaleProp ? actor.get(drawnScaleProp) : 1;
+      const turn = drawnTurnProp ? actor.get(drawnTurnProp) : 0;
+      const x = offset?.x ?? 0;
+      const y = offset?.y ?? 0;
+      return x === 0 && y === 0 && scale === 1 && turn === 0
+        ? {}
+        : {drawn: {x, y, scale, turn}};
+    };
     // Resolve one actor's current appearance frame: a playing animation's frame
     // wins, then a static sprite, then nothing (a plain rectangle).
     const frameFor = (actor: Actor): FrameState | undefined => {
@@ -4865,7 +4939,10 @@ export class World {
         return undefined;
       }
       const animId = animationProp ? actor.get(animationProp) : '';
-      if (animId) {
+      // A timeline sets the sprite itself (`rules/animation.playTimeline`), so
+      // an actor playing one is drawn from its sprite, below, even where a
+      // project-wide flipbook has the same id.
+      if (animId && !this.timelineOf(actor, animId)) {
         const def = this.animationDefs.get(animId);
         if (def && def.frames.length > 0) {
           const index = frameProp ? actor.get(frameProp) : 0;
@@ -4993,6 +5070,7 @@ export class World {
             ? actor.get(opacityProp)
             : 1,
         frame: frameFor(actor),
+        ...drawnFor(actor),
         drawing: drawingFor(actor),
         effects: actor.effects(),
         layer: this.depthOf(actor.layer ?? DEFAULT_LAYER_ID, actor.space),

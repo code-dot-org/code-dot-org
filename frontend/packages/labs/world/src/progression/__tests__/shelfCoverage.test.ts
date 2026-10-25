@@ -137,6 +137,11 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_set_Appearance_OpacityProperty',
     'world_get_Appearance_OpacityProperty',
     'world_get_Appearance_AnimationProperty',
+    // Where an animation has the picture against the actor; read, and
+    // set only by animations (specs/ANIMATION_PLAN.md).
+    'world_get_Appearance_DrawnOffsetProperty',
+    'world_get_Appearance_DrawnScaleProperty',
+    'world_get_Appearance_DrawnTurnProperty',
     'world_get_Appearance_FrameProperty',
     'world_on_Appearance_AnimationEndedEvent',
     'world_on_Appearance_FrameChangedEvent',

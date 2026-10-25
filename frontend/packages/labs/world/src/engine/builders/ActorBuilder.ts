@@ -6,6 +6,7 @@
 import type {EffectDocument} from '../../effect/model/types';
 import {Actor} from '../core/Actor';
 import type {ActorDrawing, Pen} from '../core/drawing';
+import type {Timeline} from '../core/keyframes';
 import {Trait} from '../core/Trait';
 import type {
   ActionParam,
@@ -16,7 +17,7 @@ import type {
   Property,
   PropertyType,
 } from '../core/types';
-import type {ActorStep, World} from '../core/World';
+import type {AnimationEffect, ActorStep, World} from '../core/World';
 import {AppearanceTrait} from '../rules/animation';
 import {PositionalTrait} from '../rules/spatial';
 
@@ -66,6 +67,8 @@ export class ActorBuilder {
   private readonly effects: AppliedEffectSpec[] = [];
   private readonly steps: ActorStep[] = [];
   private drawing: ActorDrawing | undefined;
+  private animations: Record<string, Timeline> = {};
+  private animationEffectSpecs: Record<string, AnimationEffect> = {};
 
   constructor(opts: {id: string; name: string}) {
     this.id = opts.id;
@@ -203,6 +206,13 @@ export class ActorBuilder {
       this.addEffect(effect.path, effect.document, effect.values);
     }
     this.drawing ??= other.drawing;
+    // …and its animations, under its own names, where this kind has none of
+    // that name: as with the drawing, what this kind said first is kept.
+    this.animations = {...other.animations, ...this.animations};
+    this.animationEffectSpecs = {
+      ...other.animationEffectSpecs,
+      ...this.animationEffectSpecs,
+    };
     return this;
   }
 
@@ -378,6 +388,34 @@ export class ActorBuilder {
   /** The picture this kind describes for itself, for the World to run. */
   get ownDrawing(): ActorDrawing | undefined {
     return this.drawing;
+  }
+
+  /**
+   * Declare this KIND's animations, by name (specs/ANIMATION_PLAN.md).
+   *
+   * Timelines of keyframes (`core/keyframes`), kept on the kind and named
+   * within it: `play animation ⟨Walk⟩` on a Coin plays the Coin's Walk, and
+   * another kind's Walk is another animation. `effects` are the documents an
+   * effect track switches on — an animation may turn on an effect the actor
+   * does not start with, and turning one on needs its graph.
+   */
+  useAnimations(
+    animations: Readonly<Record<string, Timeline>>,
+    effects: Readonly<Record<string, AnimationEffect>> = {},
+  ): this {
+    this.animations = {...this.animations, ...animations};
+    this.animationEffectSpecs = {...this.animationEffectSpecs, ...effects};
+    return this;
+  }
+
+  /** This kind's animations, by name, for the World to play. */
+  get ownAnimations(): Readonly<Record<string, Timeline>> {
+    return this.animations;
+  }
+
+  /** The effects its animations switch on, by path. */
+  get animationEffects(): Readonly<Record<string, AnimationEffect>> {
+    return this.animationEffectSpecs;
   }
 
   /**

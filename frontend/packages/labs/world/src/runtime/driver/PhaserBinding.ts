@@ -1271,7 +1271,16 @@ export class PhaserBinding {
           : base;
 
         const frame = state.frame;
-        const {x, y, scaleX, scaleY, rotation} = own;
+        // The picture where an animation has it, against the actor's own
+        // transform (specs/ANIMATION_PLAN.md): moved, scaled and turned
+        // further. Only this image — the children were placed above, from
+        // the actor's transform.
+        const drawn = state.drawn;
+        const x = own.x + (drawn?.x ?? 0);
+        const y = own.y + (drawn?.y ?? 0);
+        const scaleX = own.scaleX * (drawn?.scale ?? 1);
+        const scaleY = own.scaleY * (drawn?.scale ?? 1);
+        const rotation = own.rotation + (drawn?.turn ?? 0);
         if (state.drawing && object instanceof Phaser.GameObjects.Image) {
           // `acquire` is what notices a change: the key is computed from the
           // commands, so this is a map lookup on every frame where the picture

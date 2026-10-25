@@ -137,6 +137,31 @@ Appearance properties, which `renderSnapshot` applies; an effect track
 adds and removes the effect. `AnimationEnded` and `FrameChanged` keep
 their meaning, a frame being a key of the sprite track. Engine tests.
 
+BUILT. `ActorBuilder.useAnimations(timelines, effects)` keeps a kind's
+animations by name, with the documents of any effect they switch on (an
+animation may turn on an effect the actor does not start with, and that
+needs its graph); a kind that acts like another takes its animations
+where it has none of the same name. The World holds them by the actor's
+type, as it holds a kind's drawing (`useActorKind`, `timelineOf`).
+
+The Appearance step resolves the playing name against the actor's kind
+first and plays a timeline (`rules/animation.playTimeline`): it keeps
+where it is in the elapsed slot, so a loop does not count up for ever,
+sets each track's value at that moment, and emits `animation frame
+changes` when the sprite track reaches a new key and `animation ends`
+once. A sprite key is a file or `{sprite, cell}` — a rectangle, as the
+engine is only ever told; the generator resolves a sheet's cell, as it
+does for `set sprite`. The drawn offset, scale and turn are new
+Appearance properties, `readonly` as the frame is, so the map editor does
+not offer them as fields; `renderSnapshot` reports them as `drawn`, and
+the driver moves, scales and turns the actor's own image by them and not
+its children. A project-wide flipbook still plays where the kind has no
+timeline of that name, until step 4 retires them. Their getter blocks
+join the Appearance drawer's ledger.
+
+In the browser, nothing plays a timeline yet (step 3 writes them); the
+starter, Interface Kit and Asteroids draw as before with no page errors.
+
 ### 3. The actor's data and its code
 
 `ActorData.animations`; the code view registers them and plays Main when

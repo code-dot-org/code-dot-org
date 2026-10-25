@@ -12,7 +12,8 @@
 
 import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
-import {type AnimationDef, frameDelay} from '../core/animationTypes';
+import {type AnimationDef, type Cell, frameDelay} from '../core/animationTypes';
+import {timeIn, valueAt, type Timeline} from '../core/keyframes';
 import {APPEARANCE} from '../core/spatialKeys';
 import type {Property} from '../core/types';
 import {Vector} from '../core/Vector';
@@ -92,6 +93,37 @@ export const SpriteCellSizeProperty = AppearanceTrait.addProperty(
   'vector',
   new Vector(0, 0),
   {readonly: true},
+);
+
+/**
+ * Where the picture is drawn, against the actor's own position — an offset
+ * in world pixels, which an animation moves (a bob, a shake) while the rule
+ * that moves the actor goes on moving it (specs/ANIMATION_PLAN.md).
+ *
+ * `readonly`, as the frame is: the animation's to set, and not a field the
+ * map editor's inspector offers on every drawn actor.
+ */
+export const DrawnOffsetProperty = AppearanceTrait.addProperty(
+  APPEARANCE.drawnOffset,
+  'vector',
+  new Vector(0, 0),
+  {name: 'drawn offset', readonly: true},
+);
+
+/** …how much bigger the picture is drawn than the actor's own scale says. */
+export const DrawnScaleProperty = AppearanceTrait.addProperty(
+  APPEARANCE.drawnScale,
+  'number',
+  1,
+  {name: 'drawn scale', readonly: true},
+);
+
+/** …and how far it is turned past the actor's own turn, in degrees. */
+export const DrawnTurnProperty = AppearanceTrait.addProperty(
+  APPEARANCE.drawnTurn,
+  'number',
+  0,
+  {name: 'drawn turn', readonly: true},
 );
 
 /** The animation to play — an id known to the world (empty = none). */
@@ -227,7 +259,10 @@ export const AdvanceAnimationStep = rule.addStep(
       // send a picture-only one away — it has a size too.
       publishPictureSize(world, actor);
       const id = actor.get(AnimationProperty);
-      const def = id ? world.animation(id) : undefined;
+      // The actor's KIND's animation of that name first: a timeline, kept on
+      // the kind (specs/ANIMATION_PLAN.md). A project-wide flipbook second.
+      const timeline = id ? world.timelineOf(actor, id) : undefined;
+      const def = id && !timeline ? world.animation(id) : undefined;
       // A replay was requested via `playAnimation` (consume it either way).
       const requested = actor.get(RestartRequestedProperty);
       if (requested) {
@@ -239,7 +274,11 @@ export const AdvanceAnimationStep = rule.addStep(
       // (avoids a visible hitch); a non-looping one has stopped, so replaying it
       // starts it over. `world.animation` is missing until the id resolves, so
       // treat unknown ids as looping (the default) and let the guards below skip.
-      const looping = def ? (def.loop ?? true) : true;
+      const looping = timeline
+        ? Boolean(timeline.loop)
+        : def
+          ? (def.loop ?? true)
+          : true;
       const changed = id !== actor.get(PlayingProperty);
       if (changed || (requested && !looping)) {
         actor.set(PlayingProperty, id);
@@ -248,6 +287,10 @@ export const AdvanceAnimationStep = rule.addStep(
         actor.set(DoneProperty, false);
       }
       if (!id || actor.get(DoneProperty)) {
+        continue;
+      }
+      if (timeline) {
+        playTimeline(world, actor, timeline, delta, changed || requested);
         continue;
       }
       if (!def || def.frames.length === 0) {
@@ -289,6 +332,105 @@ export const AdvanceAnimationStep = rule.addStep(
     }
   },
 );
+
+/** A picture a sprite key names: a file, or one cell of one. */
+type SpriteKey = string | {sprite: string; cell?: Cell};
+
+/**
+ * Advance a timeline animation and set what each of its tracks says now
+ * (specs/ANIMATION_PLAN.md, step 2; `core/keyframes`).
+ *
+ * The frame is the sprite track's key, so `animation frame changes` means
+ * what it meant for a flipbook: a new picture. A track that says nothing
+ * yet — before its first key — leaves its property as the actor has it.
+ */
+function playTimeline(
+  world: World,
+  actor: Actor,
+  timeline: Timeline,
+  delta: number,
+  started: boolean,
+): void {
+  const elapsed = actor.get(ElapsedProperty) + delta * 1000;
+  const {t, ended} = timeIn(timeline, elapsed / 1000);
+  for (const [property, track] of Object.entries(timeline.tracks)) {
+    const value = valueAt(track, t);
+    if (value === undefined) {
+      continue;
+    }
+    applyTrack(world, actor, property, value);
+  }
+  const sprites = timeline.tracks.sprite ?? [];
+  let frame = -1;
+  for (let at = 0; at < sprites.length && sprites[at].at <= t; at++) {
+    frame = at;
+  }
+  if (frame >= 0 && frame !== actor.get(FrameProperty) && !started) {
+    world.emit(FrameChangedEvent, actor, frame);
+  }
+  actor.set(FrameProperty, Math.max(frame, 0));
+  // Where it is, not how long it has run: kept small while it loops, so a
+  // game left running for an hour is not counting milliseconds a float can
+  // no longer tell apart.
+  actor.set(ElapsedProperty, t * 1000);
+  if (ended) {
+    actor.set(DoneProperty, true);
+    world.emit(AnimationEndedEvent, actor);
+  }
+}
+
+/** Set one track's value on the actor. A track nothing knows is left alone. */
+function applyTrack(
+  world: World,
+  actor: Actor,
+  property: string,
+  value: unknown,
+): void {
+  if (property.startsWith('effect:')) {
+    const path = property.slice('effect:'.length);
+    const worn = actor.effects().some(effect => effect.path === path);
+    if (value === true && !worn) {
+      const effect = world.animationEffect(actor, path);
+      if (effect) {
+        actor.addEffect(path, effect.document, effect.values);
+      }
+    } else if (value === false && worn) {
+      actor.removeEffect(path);
+    }
+    return;
+  }
+  switch (property) {
+    case 'sprite': {
+      const key = value as SpriteKey;
+      const sprite = typeof key === 'string' ? key : key.sprite;
+      const cell = typeof key === 'string' ? undefined : key.cell;
+      actor.set(SpriteProperty, sprite);
+      actor.set(
+        SpriteCellOriginProperty,
+        new Vector(cell?.x ?? 0, cell?.y ?? 0),
+      );
+      actor.set(
+        SpriteCellSizeProperty,
+        new Vector(cell?.width ?? 0, cell?.height ?? 0),
+      );
+      return;
+    }
+    case 'drawnOffset': {
+      const at = value as {x: number; y: number};
+      actor.set(DrawnOffsetProperty, new Vector(at.x, at.y));
+      return;
+    }
+    case 'drawnScale':
+      actor.set(DrawnScaleProperty, value as number);
+      return;
+    case 'drawnTurn':
+      actor.set(DrawnTurnProperty, value as number);
+      return;
+    case 'opacity':
+      actor.set(OpacityProperty, value as number);
+      return;
+  }
+}
 
 /** Anything the `playAnimation` routine can drive: an Actor or its ActorBuilder. */
 interface AnimationTarget {

@@ -48,6 +48,12 @@ export const APPEARANCE = {
   // position and no appearance (specs/VIEWPORT.md), and a camera you could
   // fade would be a camera nobody draws.
   opacity: 'opacity',
+  // Where the PICTURE is, against the actor: moved, scaled and turned on top
+  // of the actor's own transform, which is what an animation moves so that
+  // it never fights the rule moving the actor (specs/ANIMATION_PLAN.md).
+  drawnOffset: 'drawnOffset',
+  drawnScale: 'drawnScale',
+  drawnTurn: 'drawnTurn',
   frame: 'frame',
   elapsed: 'elapsed',
   done: 'done',
