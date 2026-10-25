@@ -70,6 +70,14 @@
   justify-content: space-between;
 }
 
+/* An effect's own buttons at the right of its heading: Edit, Remove, and
+   the menu of what else can be done to the effect itself. */
+.groupActions {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
 .group h3 {
   margin: 0;
 }

@@ -14,6 +14,7 @@
 import {
   Button,
   Divider,
+  IconButton,
   ListItemText,
   Menu,
   MenuItem,
@@ -196,11 +197,23 @@ export const ActorEditor = (props: CustomEditorProps) => {
       edit(addEffect(data, effect, file.parameters));
     }
   };
-  // An effect brought from the shelf is added once the project holds it.
-  const importEffectThen = useAfterImport(
+  // An effect brought from the shelf, or made here, is added once the
+  // project holds it; one made here is then opened in the effect editor, a
+  // step on the trail (`fileActs`).
+  const importEffectThen = useAfterImport<{open: boolean} | undefined>(
     effectFiles.map(one => one.path),
-    effect => addEffectAt(effect),
+    (effect, then) => {
+      addEffectAt(effect);
+      if (then?.open) {
+        void requestFileAct({act: 'open', path: `${effect}.effect`});
+      }
+    },
   );
+  /** The effect whose row's menu is open, and where. */
+  const [effectMenu, setEffectMenu] = useState<{
+    effect: string;
+    anchor: HTMLElement;
+  } | null>(null);
   const taken = (data?.traits ?? []).map(
     value =>
       choices.find(choice => choice.value === value) ??
@@ -447,16 +460,55 @@ export const ActorEditor = (props: CustomEditorProps) => {
                     <Typography variant="body2" component="h3">
                       {effectNamed(effect.effect)}
                     </Typography>
-                    {!isReadOnly && (
+                    <div className={styles.groupActions}>
+                      {/* The effect itself, not this actor's use of it:
+                          opened in the effect editor, a step on the trail,
+                          or renamed or deleted from the project. */}
                       <Button
                         variant="text"
                         size="extraSmall"
-                        aria-label={`Remove ${effectNamed(effect.effect)}`}
-                        onClick={() => edit(removeEffect(data, effect.effect))}
+                        aria-label={`Edit ${effectNamed(effect.effect)}`}
+                        onClick={() =>
+                          void requestFileAct({
+                            act: 'open',
+                            path: `${effect.effect}.effect`,
+                          })
+                        }
                       >
-                        Remove
+                        Edit
                       </Button>
-                    )}
+                      {!isReadOnly && (
+                        <Button
+                          variant="text"
+                          size="extraSmall"
+                          aria-label={`Remove ${effectNamed(effect.effect)}`}
+                          onClick={() =>
+                            edit(removeEffect(data, effect.effect))
+                          }
+                        >
+                          Remove
+                        </Button>
+                      )}
+                      {!isReadOnly && (
+                        <IconButton
+                          size="extraSmall"
+                          color="tertiary"
+                          aria-label={`More for ${effectNamed(effect.effect)}`}
+                          aria-haspopup="menu"
+                          onClick={event =>
+                            setEffectMenu({
+                              effect: effect.effect,
+                              anchor: event.currentTarget,
+                            })
+                          }
+                        >
+                          <FontAwesomeV6Icon
+                            iconName="ellipsis-v"
+                            iconStyle="solid"
+                          />
+                        </IconButton>
+                      )}
+                    </div>
                   </div>
                   {/* How it starts. Code and animations turn it on and off
                       while the game runs. */}
@@ -642,12 +694,66 @@ export const ActorEditor = (props: CustomEditorProps) => {
                 <MenuItem
                   onClick={() => {
                     setEffectAt(null);
+                    importEffectThen(
+                      () =>
+                        requestFileAct({
+                          act: 'make',
+                          folder: 'effects',
+                          open: false,
+                          answer: 'name',
+                        }).then(
+                          made =>
+                            made && `effects/${made.replace(/\.effect$/, '')}`,
+                        ),
+                      {open: true},
+                    );
+                  }}
+                >
+                  <ListItemText>New effect…</ListItemText>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    setEffectAt(null);
                     importEffectThen(requestEffectImport, undefined);
                   }}
                 >
                   <ListItemText>Import…</ListItemText>
                 </MenuItem>
               </Menu>
+              {effectMenu && (
+                <Menu
+                  open
+                  anchorEl={effectMenu.anchor}
+                  onClose={() => setEffectMenu(null)}
+                >
+                  <MenuItem
+                    onClick={() => {
+                      setEffectMenu(null);
+                      void requestFileAct({
+                        act: 'rename',
+                        path: `${effectMenu.effect}.effect`,
+                      });
+                    }}
+                  >
+                    <ListItemText>
+                      Rename {effectNamed(effectMenu.effect)}…
+                    </ListItemText>
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      setEffectMenu(null);
+                      void requestFileAct({
+                        act: 'delete',
+                        path: `${effectMenu.effect}.effect`,
+                      });
+                    }}
+                  >
+                    <ListItemText>
+                      Delete {effectNamed(effectMenu.effect)} from the project…
+                    </ListItemText>
+                  </MenuItem>
+                </Menu>
+              )}
             </div>
           )}
           {!isReadOnly && tab === 'traits' && (

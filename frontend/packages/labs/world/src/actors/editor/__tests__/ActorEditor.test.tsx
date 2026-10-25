@@ -159,6 +159,76 @@ describe('the Actor Editor', () => {
     setFileActHandler(null);
   });
 
+  it('opens an effect it has, and adds a new one, opened to be made', async () => {
+    const acts = vi.fn(async (act: {act: string}) =>
+      act.act === 'make' ? 'glow.effect' : undefined,
+    );
+    setFileActHandler(acts);
+    const shipped = SOURCE;
+    const ripple = Object.values(SOURCE.files).find(
+      file => file.name === 'ripple.effect',
+    )!;
+    const view = open();
+    fireEvent.click(screen.getByRole('button', {name: 'Effects'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Add Effect'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'New effect…'}));
+    expect(acts).toHaveBeenCalledWith({
+      act: 'make',
+      folder: 'effects',
+      open: false,
+      answer: 'name',
+    });
+    // The project has the new effect: the actor takes it, and it opens.
+    SOURCE = {
+      ...SOURCE,
+      files: {
+        ...SOURCE.files,
+        glow: {...ripple, id: 'glow', name: 'glow.effect'},
+      },
+    };
+    const again = (contents: string) =>
+      view.rerender(
+        <ActorFileEditor
+          fileId={PLAYER_ID}
+          initialContents={contents}
+          language="actor"
+          isReadOnly={false}
+          onChange={onChange}
+        />,
+      );
+    await vi.waitFor(() => {
+      again(PLAYER);
+      expect(
+        written().effects.map((one: {effect: string}) => one.effect),
+      ).toEqual(['effects/glow']);
+    });
+    expect(acts).toHaveBeenCalledWith({
+      act: 'open',
+      path: 'effects/glow.effect',
+    });
+
+    // On its row: Edit opens it, and its menu renames and deletes it.
+    again(onChange.mock.calls.at(-1)![0] as string);
+    const name = screen
+      .getByRole('region', {name: /./})
+      .getAttribute('aria-label')!;
+    fireEvent.click(screen.getByRole('button', {name: `Edit ${name}`}));
+    expect(acts).toHaveBeenCalledWith({
+      act: 'open',
+      path: 'effects/glow.effect',
+    });
+    fireEvent.click(screen.getByRole('button', {name: `More for ${name}`}));
+    fireEvent.click(
+      screen.getByRole('menuitem', {name: `Delete ${name} from the project…`}),
+    );
+    expect(acts).toHaveBeenCalledWith({
+      act: 'delete',
+      path: 'effects/glow.effect',
+    });
+    SOURCE = shipped;
+    setFileActHandler(null);
+  });
+
   it('adds a property of its own, and sets where it starts', () => {
     open();
     fireEvent.change(screen.getByLabelText('New property'), {

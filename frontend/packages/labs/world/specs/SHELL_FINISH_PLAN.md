@@ -198,6 +198,12 @@ BUILT, door by door; each line below is a commit.
   Actor Editor no longer waits for its save itself. In the browser: New
   background on the starter's Main map made Dark Cave, opened it as
   "Main › Dark Cave", and the map's background was `darkCave.png`.
+- **Effects.** Each effect on the Actor Editor's Effects tab has Edit,
+  which opens it in the effect editor, beside Remove (which takes it off
+  this actor), and a menu for the effect itself: Rename, and Delete from
+  the project. Add Effect gains New effect, which makes one, adds it to
+  the actor and opens it. In the browser: New effect on the starter's
+  Player made Glow, opened it as "Player › Glow", and the Player had it.
 
 ### 5. The folder buttons go
 
