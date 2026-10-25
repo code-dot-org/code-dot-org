@@ -1,6 +1,8 @@
 # Plan: an actor as data and events, and its editor (SIMPLE_INTERFACE.md, phase three)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT, BUT FOR 4c. Every step is in except the code rows as roots
+of their own (4c), so the Actor Editor's code still shows `define actor`.
+The working record, as the other plans are.
 
 The third phase of the simple interface. Phase one made Screens and Maps
 files (SCREEN_MAP_PLAN.md); phase two put the editors in a shell
@@ -247,6 +249,10 @@ value it starts at) and takes the property and that value away. In the
 browser: lives, added to the starter's Player, renamed hearts and deleted.
 
 ### 7. Documents and the browser
+
+BUILT. SIMPLE_INTERFACE.md names this plan; FILES.md needed nothing, since
+a data-shaped actor declares its name as a key, which `authoredName`
+already reads. Each step above was seen in the browser as it landed.
 
 ## Not in this phase
 
