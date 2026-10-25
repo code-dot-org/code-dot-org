@@ -508,10 +508,9 @@ describe('the file menus', () => {
     const {contents} = createNewFile.mock.calls.at(-1)![0] as unknown as {
       contents: string;
     };
-    expect(JSON.parse(contents).blocks.blocks[0]).toMatchObject({
-      type: 'world_actor',
-      fields: {NAME: 'Chaser'},
-    });
+    // An actor made from nothing is data-shaped, its name a key of its own
+    // (specs/ACTOR_EDITOR_PLAN.md).
+    expect(JSON.parse(contents)).toMatchObject({type: 'actor', name: 'Chaser'});
   });
 
   it('copies a template the project already has, rather than renaming it', async () => {

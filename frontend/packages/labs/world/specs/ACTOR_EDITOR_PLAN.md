@@ -166,11 +166,35 @@ editor as now. New actors from the wizard are data-shaped.
   properties, each a name, a type and a value, with Add. Then each trait,
   which opens to its properties and can be removed. Enhance Actor at the
   foot lists the known traits and opens the enhancement checklist.
-- **Effects**, each with an on switch and its settings, and Add Effect at
+- **Effects** (4b), each with an on switch and its settings, and Add Effect at
   the foot. The data gains `effects: [{effect, on, settings}]`, which the
   view writes as `add effect` rows for the ones that are on.
 - **The preview** of the actor's look, with its animations listed under it.
 - **Code**, which opens the events workspace as a step on the breadcrumb.
+
+BUILT, but for Effects. `actors/editor/ActorEditor` (the panel, the
+preview and Code), `actorEdits` (each change to the data, and the traits on
+offer, read as `cameraTraitChoices` reads a camera's), and `ValueField`.
+`ActorFileEditor` chooses the editor by the file's shape. The wizard's
+actor from nothing is data-shaped (`seedFor`). A trait's fields are its
+properties that take a literal; one that takes an actor or a list of them
+is set in code. The preview is the sandbox's picture of the actor, asked
+again whenever the file changes; "Looks like" offers the project's sprites
+and animations.
+
+**The code is the actor's view, for now.** Code opens the file editor over
+the `define actor` workspace the data stands for, and each save there is
+folded back. The definition rows are therefore in the code as well as the
+panel. Giving the code rows (a drawing, an own block, an own event, an
+every-frame step) forms that can stand as roots of the workspace is its own
+step, 4c: each of the four is found by its type across the lab (its body's
+surface, its button, the layout), so a second type for each is a change to
+all of those, not to the view alone.
+
+In the browser: a Badge made with the wizard from nothing opened in the
+editor from the palette; a property and Affected by Gravity were added, the
+trait showing its two fields; Code opened the view as a step on the
+breadcrumb, and the breadcrumb led back.
 
 ### 5. The stock actors and the scenarios in the data shape
 

@@ -7,8 +7,14 @@
 // watching that one fact keeps the trail right without any of them knowing it
 // exists.
 
-/** A placed actor's code, or the Screen's or Map's own, open in its file. */
-export type ScriptStep = {kind: 'placement'; id: string} | {kind: 'map'};
+/**
+ * A placed actor's code, or the Screen's or Map's own, open in its file; or
+ * an actor's code, open from the Actor Editor (`code`).
+ */
+export type ScriptStep =
+  | {kind: 'placement'; id: string}
+  | {kind: 'map'}
+  | {kind: 'code'};
 
 /** One step: a file, or a script open within it. */
 export interface TrailStep {

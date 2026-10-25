@@ -28,6 +28,8 @@ export interface ActorProperty {
   access: 'writable' | 'readonly';
   /** Its default, as the block's field holds it; absent for one that starts empty. */
   value?: string;
+  /** …and a vector's second half, which the block holds in a field of its own. */
+  valueY?: string;
 }
 
 /** A literal, as a `set` row's socket holds one. */
@@ -248,7 +250,7 @@ function writeValue(value: ActorValue): Block {
   return {type: value.setter, inputs};
 }
 
-const PROPERTY_FIELDS = ['TYPE', 'ACCESS', 'NAME', 'DEFAULT'];
+const PROPERTY_FIELDS = ['TYPE', 'ACCESS', 'NAME', 'DEFAULT', 'DEFAULT_Y'];
 
 function readProperty(row: Block): ActorProperty | undefined {
   const fields = fieldsOf(row);
@@ -259,7 +261,8 @@ function readProperty(row: Block): ActorProperty | undefined {
     typeof fields.TYPE !== 'string' ||
     typeof fields.NAME !== 'string' ||
     (fields.ACCESS !== 'writable' && fields.ACCESS !== 'readonly') ||
-    (fields.DEFAULT !== undefined && typeof fields.DEFAULT !== 'string')
+    (fields.DEFAULT !== undefined && typeof fields.DEFAULT !== 'string') ||
+    (fields.DEFAULT_Y !== undefined && typeof fields.DEFAULT_Y !== 'string')
   ) {
     return undefined;
   }
@@ -268,6 +271,7 @@ function readProperty(row: Block): ActorProperty | undefined {
     type: fields.TYPE,
     access: fields.ACCESS,
     ...(fields.DEFAULT === undefined ? {} : {value: fields.DEFAULT}),
+    ...(fields.DEFAULT_Y === undefined ? {} : {valueY: fields.DEFAULT_Y}),
   };
 }
 
@@ -278,6 +282,7 @@ const writeProperty = (property: ActorProperty): Block => ({
     ACCESS: property.access,
     NAME: property.name,
     ...(property.value === undefined ? {} : {DEFAULT: property.value}),
+    ...(property.valueY === undefined ? {} : {DEFAULT_Y: property.valueY}),
   },
 });
 

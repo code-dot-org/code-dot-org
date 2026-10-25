@@ -112,7 +112,19 @@ export const seedFor = (extension: string, name: string): Seed | undefined => {
     case 'world':
       return rootNamed('world_world', name);
     case 'actor':
-      return rootNamed('world_actor', name);
+      // In the data shape: what it is as keys, and nothing it does yet
+      // (specs/ACTOR_EDITOR_PLAN.md).
+      return {
+        contents: `${JSON.stringify(
+          {
+            type: 'actor',
+            name,
+            blocks: {blocks: {languageVersion: 0, blocks: []}},
+          },
+          null,
+          2,
+        )}\n`,
+      };
     case 'rule':
       return newRule(name);
     case 'anim':

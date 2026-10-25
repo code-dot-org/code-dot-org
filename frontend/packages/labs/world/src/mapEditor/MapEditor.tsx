@@ -706,7 +706,9 @@ export const MapEditor = ({
    * the breadcrumb is the way back (specs/SHELL_PLAN.md); without the
    * layout, the header's own button is.
    */
-  const [script, setScript, onTrail] = useScriptStep(fileId);
+  const [step, setScript, onTrail] = useScriptStep(fileId);
+  // A map's are a placement's code and its own; an actor's is not one here.
+  const script = step?.kind === 'code' ? null : step;
   // A REVEAL NEVER LEAVES A SCRIPT A LEARNER HAS OPEN
   // (specs/SHOW_ME_PLAN.md). While one is, the stage is not mounted to
   // answer for a selection, and this answers no: Show me then says where the

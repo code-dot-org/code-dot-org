@@ -1,0 +1,145 @@
+/* The Actor Editor: a head with the actor's name, then the panel beside the
+   preview, as the map editor puts its palette beside the stage. */
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  font-family: var(--font-family-main, sans-serif);
+  background: var(--background-neutral-primary);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  border-bottom: var(--lab-border-default);
+}
+
+.name {
+  align-self: center;
+  margin: 0;
+}
+
+.codeButton {
+  margin-left: auto;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* As wide as the Actor Palette, so the two editors keep one shape. */
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  flex-shrink: 0;
+  min-height: 0;
+  border-right: var(--lab-border-default);
+}
+
+.groups {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: var(--lab-border-default);
+}
+
+.groupHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.group h3 {
+  margin: 0;
+}
+
+.note {
+  margin: 0;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.foot {
+  padding: 0.5rem;
+  border-top: var(--lab-border-default);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: var(--font-size-body-s, 14px);
+  color: var(--text-neutral-primary);
+}
+
+/* The actor's picture, large, over what it looks like. */
+.preview {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 4px;
+}
+
+.picture img {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+}
+
+/* The code: the file editor over the actor's view. */
+.code {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.codeHeader {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  border-bottom: var(--lab-border-default);
+}
+
+.codeBlocks {
+  flex: 1;
+  min-height: 0;
+}

@@ -4,6 +4,7 @@ import {markdown} from '@codemirror/lang-markdown';
 
 import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
+import {ActorFileEditor} from './actors/editor/ActorEditor';
 import {AnimationEditor} from './animationEditor/AnimationEditor';
 import {followImages} from './appearance/sheetCompanions';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
@@ -128,7 +129,9 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     // them, and because an editor that had to know about it would be an editor
     // that could get it wrong.
     rule: orShowCode(BlocklyFileEditor),
-    actor: orShowCode(BlocklyFileEditor),
+    // An actor in the data shape opens in the Actor Editor, one still in
+    // blocks in the file editor (specs/ACTOR_EDITOR_PLAN.md).
+    actor: orShowCode(ActorFileEditor),
     // A world opens on its main map, with its workspace one switch away
     // (specs/MAP_FIRST.md, "The editor's modes").
     world: orShowCode(WorldEditor),
