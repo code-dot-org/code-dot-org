@@ -216,6 +216,21 @@ Through their two helpers (`actors/stock/workspace.actorFile` and the one
 in `constants`). The lessons' actors stay block-shaped until the lessons
 are rewritten, as their worlds do.
 
+BUILT, at the projects rather than the helpers. Most scenario actors are
+written as `define actor` workspaces inline, not through a helper, so the
+default project and each scenario are folded where they are listed
+(`inDataShape`); `SCENARIOS_AS_WRITTEN` keeps them as written, for the
+tests that compare the two shapes. The stock library keeps its entries in
+blocks: what a learner imports, from the shelf or the wizard, is written in
+the data shape (`importStockActorAsData`), while an import made in building
+a lesson, a map or an enhancement writes blocks as before, since the
+lessons' checks read actors' rows. The tests that read a shipped actor as
+blocks now read its view. "Looks like" offers the project's pictures (they
+are files with a URL, which `projectFiles` leaves out) and always holds the
+actor's own look. In the browser: the Player, the Bird, the Paddle, the
+Pilot and the Button each open in the Actor Editor with their traits and
+their look, and the games play.
+
 ### 6. A Self property renamed or deleted
 
 A rename rewrites every block that reads or sets it, in every file: its

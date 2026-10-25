@@ -32,6 +32,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {parseAnim} from '../../animationEditor/animDocument';
+import {isBackgroundPath} from '../../appearance/backgroundsFolder';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {requestEffectImport} from '../../blockly/effectImport';
 import {parseEffectDocument} from '../../effect/model/schema';
@@ -42,7 +43,11 @@ import {fileLabel} from '../../files/fileLabel';
 import {useScriptStep} from '../../layout/TrailContext';
 import {gameModuleOf} from '../../mainWorld';
 import {useAfterImport} from '../../mapEditor/useAfterImport';
-import {filePath, projectFiles} from '../../runtime/projectFiles';
+import {
+  filePath,
+  projectFiles,
+  projectImagePaths,
+} from '../../runtime/projectFiles';
 import {useWorldRuntime} from '../../runtime/WorldRuntimeContext';
 import {asActorData, isActorData, viewOf, type ActorData} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
@@ -205,17 +210,26 @@ export const ActorEditor = (props: CustomEditorProps) => {
     };
   }, [contents, hasCompiled, modulePath, worldPath]);
 
-  /** What it can look like: the project's sprites, then its animations. */
+  /**
+   * What it can look like: the project's pictures that are not backdrops,
+   * then its animations, as the blocks' own dropdowns offer them; and what it
+   * looks like now, whatever that is, so the field never says otherwise.
+   */
+  const lookValue = !data?.look
+    ? ''
+    : 'sprite' in data.look
+      ? `sprite:${data.look.sprite}`
+      : `animation:${data.look.animation}`;
   const looks = useMemo(() => {
-    const sprites = Object.keys(files)
-      .filter(one => one.startsWith('sprites/') && one.endsWith('.png'))
+    const sprites = projectImagePaths(currentSources.source)
+      .filter(one => !isBackgroundPath(one))
       .map(one => one.split('/').pop()!)
       .sort();
     const animations = Object.entries(files)
       .filter(([one]) => one.endsWith('.anim'))
       .flatMap(([, held]) => Object.keys(parseAnim(held).animations ?? {}))
       .sort();
-    return [
+    const items = [
       {value: '', text: '(drawn by its code)'},
       ...sprites.map(sprite => ({value: `sprite:${sprite}`, text: sprite})),
       ...animations.map(id => ({
@@ -223,12 +237,10 @@ export const ActorEditor = (props: CustomEditorProps) => {
         text: `${id} (animation)`,
       })),
     ];
-  }, [files]);
-  const lookValue = !data?.look
-    ? ''
-    : 'sprite' in data.look
-      ? `sprite:${data.look.sprite}`
-      : `animation:${data.look.animation}`;
+    return items.some(item => item.value === lookValue)
+      ? items
+      : [...items, {value: lookValue, text: lookValue.replace(/^[a-z]+:/, '')}];
+  }, [files, currentSources, lookValue]);
 
   if (script?.kind === 'code') {
     return (

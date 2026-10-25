@@ -5,6 +5,7 @@ import type {
   ProjectSources,
 } from '@code-dot-org/core/api';
 
+import {inDataShape} from './actors/actorData';
 import {importStockActor} from './actors/importStockActor';
 import {stockActorById} from './actors/stock';
 import {coinActor} from './actors/stock/coin';
@@ -1091,7 +1092,10 @@ const STARTER = buildProject(STARTER_SPEC);
 
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   // …with the stock Viewport the level is played in, and what it needs.
-  source: importStockActor(STARTER.source, stockActorById('viewport')!).source,
+  // Its actors in the data shape (specs/ACTOR_EDITOR_PLAN.md, step 5).
+  source: inDataShape(
+    importStockActor(STARTER.source, stockActorById('viewport')!).source,
+  ),
 };
 
 /**

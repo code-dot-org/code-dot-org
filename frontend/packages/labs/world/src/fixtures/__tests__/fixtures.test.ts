@@ -7,6 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {viewOf} from '../../actors/actorData';
 import {keyName, KEY_CHOICES} from '../../engine/core/keys';
 import {entryFileOf} from '../../mainWorld';
 import {lessonChannel} from '../../progression/lessonRoute';
@@ -277,9 +278,14 @@ describe('the scenario catalogue', () => {
     // answers, so a held key is not a wall of energy balls. Spawning the ball
     // straight from the key press would be a gun with no rate limit — it would
     // look identical until someone held the key down.
-    const ship = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
-      file => file.name === 'ship.actor',
-    )!.contents;
+    // Compact, as the actor was written: it is data-shaped and spaced now.
+    const ship = JSON.stringify(
+      JSON.parse(
+        Object.values(WORLD_SCENARIOS.meteors.source.files).find(
+          file => file.name === 'ship.actor',
+        )!.contents,
+      ),
+    );
 
     expect(ship).toContain('world_do_Zapping_MakeZapAction');
     expect(ship).toContain('world_on_Zapping_ZapsEvent');
@@ -503,7 +509,10 @@ describe('every actor file a scenario ships', () => {
         .filter(file => file.name.endsWith('.actor'))
         .map(file => ({
           where: `${tag}/${file.name}`,
-          roots: (JSON.parse(file.contents).blocks?.blocks ?? []) as Array<{
+          // As the compiler reads it: a data-shaped actor's view, whose
+          // root its code rows chain under (`actors/actorData`).
+          roots: (JSON.parse(viewOf(file.contents)).blocks?.blocks ??
+            []) as Array<{
             type: string;
           }>,
         })),

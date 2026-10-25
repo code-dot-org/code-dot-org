@@ -35,7 +35,9 @@ import {
 } from '../appearance/stock';
 import {importStockRule} from '../rules/importStockRule';
 import {stockRuleByName, type StockRule} from '../rules/stock';
+import {fileIdAt} from '../runtime/projectFiles';
 
+import {asActorData} from './actorData';
 import {withPurpose} from './actorPurpose';
 import {stockActorById, type StockActor} from './stock';
 
@@ -153,6 +155,36 @@ export function importStockActor(
   actor: StockActor,
 ): ImportedActor {
   return writeActor(source, actor, new Set());
+}
+
+/**
+ * The same, with the actor it writes in the data shape: what a learner's
+ * import writes, from the shelf or the wizard, so it opens in the Actor
+ * Editor (specs/ACTOR_EDITOR_PLAN.md, step 5). An actor the project already
+ * held is left in the shape it has; so are the parents an import brings,
+ * which are the project's to open as they are.
+ */
+export function importStockActorAsData(
+  source: MultiFileSource,
+  actor: StockActor,
+): ImportedActor {
+  const had = fileIdAt(source, `${ACTORS_FOLDER}/${actor.id}.actor`);
+  const imported = importStockActor(source, actor);
+  const id = fileIdAt(imported.source, `${imported.path}.actor`);
+  if (had !== undefined || id === undefined) {
+    return imported;
+  }
+  const file = imported.source.files[id];
+  return {
+    ...imported,
+    source: {
+      ...imported.source,
+      files: {
+        ...imported.source.files,
+        [id]: {...file, contents: asActorData(file.contents)},
+      },
+    },
+  };
 }
 
 /**

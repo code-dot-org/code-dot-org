@@ -10,7 +10,7 @@ import BlocklyGenerator, {
 import {refreshProjectDropdowns} from '../../blockly/projectDropdowns';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {registerProjectRules} from '../../blockly/ruleRegistry';
-import {WORLD_SCENARIOS} from '../../fixtures';
+import {SCENARIOS_AS_WRITTEN as WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {LESSONS} from '../../progression/lessons';
 import {projectFiles} from '../../runtime/projectFiles';
 import {
@@ -157,10 +157,17 @@ const PROJECTS: Array<[string, Record<string, string>]> = [
   ],
   ...Object.entries(WORLD_SCENARIOS).map(
     ([tag, scenario]) =>
-      [`scenario ${tag}`, projectFiles(scenario.source)] as [
-        string,
-        Record<string, string>,
-      ],
+      // As blocks: the default project, which `simple` is, ships its actors
+      // as data already.
+      [
+        `scenario ${tag}`,
+        Object.fromEntries(
+          Object.entries(projectFiles(scenario.source)).map(([path, held]) => [
+            path,
+            viewOf(held),
+          ]),
+        ),
+      ] as [string, Record<string, string>],
   ),
   ...Object.entries(LESSONS).map(
     ([id, lesson]) =>

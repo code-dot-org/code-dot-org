@@ -247,7 +247,8 @@ interface JsonBlock {
 export function traitValuesIn(contents: string): string[] {
   let document: {blocks?: {blocks?: JsonBlock[]}};
   try {
-    document = JSON.parse(contents) as typeof document;
+    // Either shape (`actors/actorData`).
+    document = JSON.parse(viewOf(contents)) as typeof document;
   } catch {
     return [];
   }
@@ -301,9 +302,7 @@ export function kindFactsFrom(
 ): (module: string) => KindFacts | undefined {
   const byModule = new Map(owns.map(meta => [meta.modulePath, meta]));
   return module => {
-    const held = files[`${module}.actor`];
-    // Either shape (`actors/actorData`).
-    const contents = held === undefined ? undefined : viewOf(held);
+    const contents = files[`${module}.actor`];
     const meta = byModule.get(module);
     if (contents === undefined && !meta) {
       return undefined;

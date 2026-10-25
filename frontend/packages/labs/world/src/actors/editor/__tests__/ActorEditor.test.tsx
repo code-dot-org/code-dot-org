@@ -6,7 +6,7 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
-import {asActorData} from '../../actorData';
+import {asActorData, viewOf} from '../../actorData';
 
 // The starter's project, with its Player in the data shape.
 const STARTER = WORLD_SCENARIOS.simple.source;
@@ -73,9 +73,17 @@ describe('the Actor Editor', () => {
   });
 
   it('leaves an actor still in blocks to the file editor', () => {
-    open(STARTER.files[PLAYER_ID].contents);
+    open(viewOf(PLAYER));
     expect(screen.getByTestId('blocks')).toBeInTheDocument();
     expect(screen.queryByTestId('actor-editor')).toBeNull();
+  });
+
+  it('says what it looks like, and changes it', () => {
+    open();
+    const look = screen.getByLabelText('Looks like') as HTMLSelectElement;
+    expect(look.value).toBe('animation:playerBob');
+    fireEvent.change(look, {target: {value: ''}});
+    expect(written().look).toBeUndefined();
   });
 
   it('adds a property of its own, and sets where it starts', () => {

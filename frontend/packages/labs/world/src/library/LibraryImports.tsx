@@ -39,7 +39,7 @@ import {setActorEnhanceHandler} from '../actors/enhance/actorEnhance';
 import {EnhanceActorDialog} from '../actors/enhance/EnhanceActorDialog';
 import type {EnhanceTarget} from '../actors/enhance/enhancements';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
-import {importStockActor} from '../actors/importStockActor';
+import {importStockActorAsData} from '../actors/importStockActor';
 import type {StockActor} from '../actors/stock';
 import {
   setAppearanceImportHandler,
@@ -355,7 +355,7 @@ export const LibraryImports = () => {
           onImport={(actor: StockActor) => {
             // …and here the MODULE PATH: an actor dropdown says which file
             // (`actorFieldOptions`).
-            const {source, path} = importStockActor(
+            const {source, path} = importStockActorAsData(
               sourcesRef.current.source,
               actor,
             );

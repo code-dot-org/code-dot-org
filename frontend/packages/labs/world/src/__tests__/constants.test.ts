@@ -75,9 +75,13 @@ describe('the starter project', () => {
     for (const actor of actors) {
       expect(actor.name).toMatch(/\.actor$/);
       expect(actor.language).toBe('actor');
-      // …and each is a workspace with a `define actor` in it, rather than an
-      // empty file that merely has the right extension.
-      expect(actor.contents).toContain('world_actor');
+      // …and each is an actor in the data shape, which the Actor Editor opens
+      // (specs/ACTOR_EDITOR_PLAN.md), rather than an empty file that merely
+      // has the right extension.
+      expect(JSON.parse(actor.contents)).toMatchObject({
+        type: 'actor',
+        name: expect.any(String),
+      });
     }
   });
 

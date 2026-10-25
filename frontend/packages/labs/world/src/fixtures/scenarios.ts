@@ -24,6 +24,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {inDataShape} from '../actors/actorData';
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
 import {
@@ -210,7 +211,11 @@ const EMPTY_SPEC: ProjectSpec = {
 const withViewport = (source: MultiFileSource): MultiFileSource =>
   importStockActor(source, stockActorById('viewport')!).source;
 
-export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
+/**
+ * The scenarios as they are written, their actors as `define actor`
+ * workspaces: what a test of the data shape compares against.
+ */
+export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
   simple: {
     name: 'Platformer',
     description:
@@ -481,6 +486,19 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- Upload a picture into `sprites/` to draw with, or `backgrounds/` for a backdrop',
   },
 };
+
+/**
+ * The scenarios, each with its actors in the data shape
+ * (specs/ACTOR_EDITOR_PLAN.md, step 5). Written as `define actor`
+ * workspaces, since that is how most of them were built, and folded here.
+ */
+export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> =
+  Object.fromEntries(
+    Object.entries(SCENARIOS_AS_WRITTEN).map(([tag, scenario]) => [
+      tag,
+      {...scenario, source: inDataShape(scenario.source)},
+    ]),
+  ) as Record<WorldScenarioTag, WorldScenario>;
 
 /** Whether a string names a scenario — for reading one out of a URL. */
 export function isScenarioTag(tag: string | null): tag is WorldScenarioTag {

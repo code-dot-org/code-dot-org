@@ -6,7 +6,10 @@ import {describe, expect, it, vi} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {PositionProperty} from '../../engine';
-import {WORLD_SCENARIOS, WORLD_SCENARIO_TAGS} from '../../fixtures/scenarios';
+import {
+  SCENARIOS_AS_WRITTEN as WORLD_SCENARIOS,
+  WORLD_SCENARIO_TAGS,
+} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {asActorData} from '../actorData';
 

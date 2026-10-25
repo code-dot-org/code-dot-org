@@ -21,13 +21,20 @@ import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
 import {typesIn} from '../../__tests__/support/blockTypes';
+import {viewOf} from '../../actors/actorData';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 
-const files = projectFiles(DEFAULT_PROJECT.source);
+// Each actor as the blocks it stands for: a data-shaped one names its rows'
+// types through its view (`actors/actorData`).
+const files = Object.fromEntries(
+  Object.entries(projectFiles(DEFAULT_PROJECT.source)).map(
+    ([path, contents]) => [path, viewOf(contents)],
+  ),
+);
 
 // The generator's palette, not an editor's: it defines every rule's blocks at
 // once, which is the widest set a shipped file may draw on — and every actor's

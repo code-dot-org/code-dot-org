@@ -14,6 +14,8 @@
 // and a writer edits the view and folds it back. Both are pure, and a fold
 // loses nothing: a row it cannot say as data is kept as code.
 
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
 import {WORKSPACE_KEYS} from '../blockly/documentExtras';
 
 import type {ActorPurpose} from './actorPurpose';
@@ -649,4 +651,20 @@ export function throughView(
   return changed === viewOf(contents)
     ? contents
     : asActorData(changed, contents);
+}
+
+/** The project with every actor file in the data shape. */
+export function inDataShape(source: MultiFileSource): MultiFileSource {
+  let files: MultiFileSource['files'] | undefined;
+  for (const [id, file] of Object.entries(source.files)) {
+    if (!file.name.endsWith('.actor')) {
+      continue;
+    }
+    const contents = asActorData(file.contents);
+    if (contents !== file.contents) {
+      files ??= {...source.files};
+      files[id] = {...file, contents};
+    }
+  }
+  return files ? {...source, files} : source;
 }

@@ -97,7 +97,11 @@ describe('renameAnimationInSource', () => {
       renameAnimationInSource(source, 'playerBob', 'bob'),
     );
 
-    expect(after['actors/player.actor']).toContain('"ANIMATION": "bob"');
+    // The player is data-shaped, its look a key of its own, which the
+    // rename reaches through its view (specs/ACTOR_EDITOR_PLAN.md).
+    expect(JSON.parse(after['actors/player.actor']).look).toEqual({
+      animation: 'bob',
+    });
     expect(after['actors/player.actor']).not.toContain('playerBob');
     // The `.anim` that DEFINES it is not a workspace: the editor rekeys that
     // itself, in the same write.
