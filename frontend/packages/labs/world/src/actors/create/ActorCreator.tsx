@@ -75,6 +75,7 @@ import type {
 } from '../../appearance/generate/imageGenerator';
 import type {ImageKind} from '../../appearance/generate/imagePrompts';
 import type {TileScale} from '../../appearance/generate/ScaleGrid';
+import type {PaletteTab} from '../actorPurpose';
 import {
   allAnswered,
   EnhancementChecklist,
@@ -155,6 +156,12 @@ export interface ActorDraft {
    * itself — and one copied from something already looks like it.
    */
   look?: ActorLook;
+  /**
+   * What it is for, when the wizard was asked from a tab of the Actor
+   * Palette (specs/PURPOSE_PLAN.md): an actor made from nothing is made for
+   * it. Nothing, from a folder's menu, which makes a game's as it always has.
+   */
+  purpose?: PaletteTab;
 }
 
 export interface ActorCreatorProps {
@@ -206,6 +213,12 @@ export interface ActorCreatorProps {
    */
   onCreate: (source: MultiFileSource) => Promise<boolean> | boolean;
   onCancel: () => void;
+  /**
+   * Which wizard this is: a game's or an interface's, from the palette's tab.
+   * An interface's skips the picture: an Interface Actor is drawn, and made
+   * from nothing it starts with a drawing the size of its box.
+   */
+  purpose?: PaletteTab;
 }
 
 /** What `build` answers: a project with the actor in it, and its path. */
@@ -275,7 +288,16 @@ export const ActorCreator = ({
   build,
   onCreate,
   onCancel,
+  purpose,
 }: ActorCreatorProps) => {
+  // An interface's wizard asks nothing about a picture (`purpose`).
+  const steps = useMemo(
+    () =>
+      purpose === 'interface'
+        ? STEPS.filter(step => step.id !== 'look')
+        : STEPS,
+    [purpose],
+  );
   const [at, setAt] = useState(0);
   const [origin, setOrigin] = useState<OriginKind>();
   const [source, setSource] = useState<string>();
@@ -394,7 +416,7 @@ export const ActorCreator = ({
     chosenName.length > 0 &&
     problem === undefined;
 
-  const last = at === STEPS.length - 1;
+  const last = at === steps.length - 1;
 
   /** The actor these rows are about, named as everything else names one. */
   const target: EnhanceTarget | undefined = built && {
@@ -467,7 +489,7 @@ export const ActorCreator = ({
       // Built on the way in, and rebuilt if the answers behind it changed:
       // walking back to rename the actor and forward again must not leave the
       // abilities step editing the actor that was.
-      if (STEPS[at + 1].id === 'abilities') {
+      if (steps[at + 1].id === 'abilities') {
         setBuilt(
           build({
             origin,
@@ -476,6 +498,7 @@ export const ActorCreator = ({
             look: keeping,
             shape,
             drawn,
+            purpose,
           }),
         );
         // The ticks were about the actor that WAS. Walking back to rename it
@@ -531,6 +554,7 @@ export const ActorCreator = ({
       look: keeping,
       shape,
       drawn,
+      purpose,
     });
     if (!made) {
       return;
@@ -589,7 +613,7 @@ export const ActorCreator = ({
         <div className={styles.body}>
           <div className={styles.heading}>
             <Typography variant="body4" className={styles.progress}>
-              {`Step ${at + 1} of ${STEPS.length} — ${STEPS[at].title}`}
+              {`Step ${at + 1} of ${steps.length} — ${steps[at].title}`}
             </Typography>
             {!last && (
               // The way out. Quiet, because the steps after this one are worth
@@ -611,7 +635,7 @@ export const ActorCreator = ({
             )}
           </div>
 
-          {STEPS[at].id === 'origin' && (
+          {steps[at].id === 'origin' && (
             <>
               <ul className={styles.doors}>
                 {DOORS.map(door => (
@@ -717,7 +741,7 @@ export const ActorCreator = ({
             </>
           )}
 
-          {STEPS[at].id === 'look' && describing && (
+          {steps[at].id === 'look' && describing && (
             <DescribePicture
               drawing={drawing}
               kind={kind}
@@ -755,7 +779,7 @@ export const ActorCreator = ({
             />
           )}
 
-          {STEPS[at].id === 'look' && !describing && (
+          {steps[at].id === 'look' && !describing && (
             <>
               <ul className={styles.choices}>
                 {/* THE PICTURES FIRST, then the animations, which is the order
@@ -879,7 +903,7 @@ export const ActorCreator = ({
           {/* NO BUTTON UNDER IT. Ticking is the whole act, and `Create` is
               what applies them — which is the press a learner was going to
               make anyway (`enhance/EnhancementChecklist`). */}
-          {STEPS[at].id === 'abilities' && built && target && (
+          {steps[at].id === 'abilities' && built && target && (
             <EnhancementChecklist
               source={built.source}
               target={target}

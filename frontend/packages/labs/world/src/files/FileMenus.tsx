@@ -68,9 +68,11 @@ import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {setActorDeleteHandler} from '../actors/actorDelete';
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
+import {isUnder, type PaletteTab} from '../actors/actorPurpose';
 import {setActorCreateHandler} from '../actors/create/actorCreate';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
 import {lookOf, withLook, withScale} from '../actors/create/actorLook';
+import {newActorFile} from '../actors/create/newActor';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {importStockActorAsData} from '../actors/importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../actors/stock';
@@ -194,6 +196,12 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    * is the moment a learner has the question it asks.
    */
   const [creating, setCreating] = useState(false);
+  /**
+   * …and for what, when the Actor Palette asked from one of its tabs; from
+   * a folder's menu, nothing, and the wizard offers everything
+   * (specs/PURPOSE_PLAN.md).
+   */
+  const [creatingFor, setCreatingFor] = useState<PaletteTab>();
   const [row, setRow] = useState<RowMenu>();
   // The tolerant form: this renders inside the lab, which provides a theme,
   // and in a bare tree in tests, which does not — and a menu is not worth a
@@ -612,13 +620,19 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
       // depending on the kind, and an actor's is always text — but the type
       // says so for `.png` too, and reading `.contents` off the other arm is
       // exactly the mistake it is shaped to catch.
+      // …for what it is for, when the palette said: an interface's starts
+      // with a box and a drawing as big as it (`create/newActor`).
       const seed = seedFor('actor', draft.name);
       const made = createNewFile({
         source: placed.source,
         fileName,
         language,
         folderId: placed.folderId,
-        contents: seed && 'contents' in seed ? seed.contents : undefined,
+        contents: draft.purpose
+          ? newActorFile(draft.name, draft.purpose)
+          : seed && 'contents' in seed
+            ? seed.contents
+            : undefined,
       });
       return {
         source: dressed(made, fileName, draft),
@@ -663,7 +677,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   const lastBuilt = useRef<string | undefined>(undefined);
   useEffect(() => {
     setActorCreateHandler(
-      () =>
+      purpose =>
         new Promise<string | undefined>(settle => {
           // One Creator at a time: a second ask lets the first go.
           asked.current?.settle(undefined);
@@ -677,6 +691,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
               file => file.active,
             )?.id,
           };
+          setCreatingFor(purpose);
           setCreating(true);
         }),
     );
@@ -998,16 +1013,19 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   const templates = useMemo(
     () =>
       creating
-        ? STOCK_ACTORS.filter(actor => offersActor(actor.id, app)).map(
-            actor => ({
-              id: actor.id,
-              name: actor.name,
-              description: actor.description,
-              look: lookOf(actor.contents),
-            }),
-          )
+        ? STOCK_ACTORS.filter(
+            actor =>
+              offersActor(actor.id, app) &&
+              // The palette's tab's, when it asked (`creatingFor`).
+              (!creatingFor || isUnder(actor.for, creatingFor)),
+          ).map(actor => ({
+            id: actor.id,
+            name: actor.name,
+            description: actor.description,
+            look: lookOf(actor.contents),
+          }))
         : [],
-    [creating, app],
+    [creating, app, creatingFor],
   );
 
   /**
@@ -1385,7 +1403,10 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
           // (`actors/create/ActorCreator`).
           onNew={() => {
             setPicking(false);
-            setTimeout(() => setCreating(true), 0);
+            setTimeout(() => {
+              setCreatingFor(undefined);
+              setCreating(true);
+            }, 0);
           }}
           // The grid closes and the menu opens off the ACTORS BUTTON, which is
           // still there — rather than off the tile, which is not. Two focus
@@ -1429,6 +1450,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
             return made;
           }}
           onCreate={commitActor}
+          purpose={creatingFor}
           onCancel={() => {
             setCreating(false);
             asked.current?.settle(undefined);

@@ -72,6 +72,17 @@ The palette's Add New Actor tells the wizard its tab
   and a drawing the size of its box, and the wizard skips its picture step:
   an Interface Actor is drawn, not given a sprite.
 
+BUILT. `requestActorCreate(purpose)` from the palette's Add New Actor;
+the file menus keep it (`creatingFor`), narrow the templates with
+`isUnder`, and hand it to the wizard, which drops its picture step for an
+interface. An actor made from nothing is `create/newActor`'s: a game's is
+data saying so; an interface's has Has a Box at 96 by 32 and a drawing of
+a bordered panel sized `width of this actor` by `height of this actor`.
+From a folder's menu the wizard is as it was. In the browser: on the
+starter's Main Screen the Interface tab's Add New Actor offered fifteen
+templates, none a game's, in two steps; a Badge made from nothing came
+under the Interface tab and, placed, drew as a panel in the game.
+
 ### 3. The shelves offer by purpose
 
 The rule shelf, the actor shelf and the enhancement checklist list what is

@@ -782,6 +782,35 @@ describe('the Actor Creator, asked for from the map', () => {
     expect(written.source.files.a.active).toBe(true);
   });
 
+  it('from the Interface tab, offers interface templates and asks no picture', async () => {
+    // specs/PURPOSE_PLAN.md, step 2.
+    render(<FileMenus menus={false} />);
+    const asked = requestActorCreate('interface');
+    await screen.findByText('Start from a template');
+    fireEvent.click(screen.getByText('Start from a template'));
+    // A Button is an interface's; a Coin is a game's; a Label is both.
+    expect(screen.getByRole('button', {name: 'Button'})).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Label'})).toBeInTheDocument();
+    expect(screen.queryByRole('button', {name: 'Coin'})).toBeNull();
+    // Two steps, the picture left out.
+    expect(screen.getByText(/^Step 1 of 2/)).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Badge'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Create'}));
+    expect(await asked).toBe('actors/badge');
+    // Made from nothing for an interface: a box, and a drawing the size of it.
+    const {contents} = createNewFile.mock.calls.at(-1)![0] as unknown as {
+      contents: string;
+    };
+    expect(JSON.parse(contents)).toMatchObject({
+      type: 'actor',
+      for: 'interface',
+      traits: ['Boxed#HasABoxTrait'],
+    });
+  });
+
   it('answers with nothing when the learner backs out', async () => {
     render(<FileMenus menus={false} />);
     const asked = requestActorCreate();

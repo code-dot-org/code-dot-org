@@ -41,7 +41,8 @@ export interface ActorPaletteProps {
   onSelect: (path: string | null) => void;
   onOpen: (path: string) => void;
   onDelete: (path: string) => void;
-  onNew: () => void;
+  /** Add New Actor, asked with the tab it is under (specs/PURPOSE_PLAN.md). */
+  onNew: (purpose: PaletteTab) => void;
   /** Whether a lesson withholds Add New Actor (`WithheldNote`). */
   newWithheld: boolean;
   /** A read-only project offers neither Delete nor Add New Actor. */
@@ -153,7 +154,7 @@ export const ActorPalette = ({
                   'aria-disabled': true,
                   'aria-describedby': 'withheld-map-new-actor',
                 }
-              : {onClick: onNew})}
+              : {onClick: () => onNew(tab)})}
           >
             Add New Actor
           </Button>

@@ -26,7 +26,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {requestActorDelete} from '../actors/actorDelete';
-import {purposeOf} from '../actors/actorPurpose';
+import {purposeOf, type PaletteTab} from '../actors/actorPurpose';
 import {requestActorCreate} from '../actors/create/actorCreate';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {useAppBuilder} from '../appBuilder';
@@ -226,8 +226,8 @@ export const MapEditor = ({
    * and the kind that was made is the one in hand: a learner who asked from
    * the map wants to place it.
    */
-  const newActor = useCallback(() => {
-    void requestActorCreate().then(path => {
+  const newActor = useCallback((purpose?: PaletteTab) => {
+    void requestActorCreate(purpose).then(path => {
       if (path) {
         setSelected(path);
       }

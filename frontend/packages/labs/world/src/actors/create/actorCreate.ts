@@ -19,8 +19,12 @@
 // back when the request came through here.
 
 import {importSeam} from '../../blockly/libraryImport';
+import type {PaletteTab} from '../actorPurpose';
 
-const seam = importSeam();
+// …AND WHICH WIZARD: the Actor Palette asks with its tab, so a learner on the
+// Interface tab is offered interface templates and makes an interface actor
+// (specs/PURPOSE_PLAN.md). A folder's menu asks with nothing.
+const seam = importSeam<[purpose?: PaletteTab]>();
 
 export const setActorCreateHandler = seam.register;
 export const requestActorCreate = seam.request;
