@@ -127,6 +127,15 @@ below, and are listed last.
   Remove this camera do the same coming back. Focus should land on the
   camera inspector's heading going in, and on the camera's row (or Add a
   camera) coming back.
+- **A door that opens a file leaves focus behind**: Edit picture, Edit
+  background, Edit theme, an effect's Edit, a rule's Open, and every New
+  that opens what it made put another editor in front, and focus stays on
+  the page rather than moving into it or to its breadcrumb. Nothing is
+  said, either; the breadcrumb changing is the only sign.
+- **The effect row's More and the sound shelf's Rename and Delete are
+  small text buttons in a dense row**; their names say whose they are
+  ("More for Glow", "Rename coin.mp3"), but their targets are under 24
+  pixels tall at the extra-small size.
 
 ## Not yet done for any phase
 
