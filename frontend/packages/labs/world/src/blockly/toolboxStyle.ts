@@ -55,8 +55,14 @@
 // `::before`, which puts a piece of the interface's text in a stylesheet where
 // nothing can translate it.
 
-import {Blockly} from '@code-dot-org/blockly';
+import {
+  Blockly,
+  type Toolbox,
+  type ToolboxCategory,
+} from '@code-dot-org/blockly';
 import {PluginType, type Plugin} from '@code-dot-org/blockly/plugins';
+
+import {requestRuleImport} from './ruleImport';
 
 /**
  * Registered once, and it has to be.
@@ -183,6 +189,42 @@ const TOOLBOX_CSS = `
   pointer-events: none;
 }
 
+/* Add Rules, at the foot of the strip: the code workspaces' counterpart
+ * to the Actor Palette's Add New Actor (specs/SHELL_PLAN.md, step 6). */
+.worldToolboxButton {
+  display: flex;
+  justify-content: center;
+  padding: 12px 6px 4px;
+  margin-top: 6px;
+  border-top: 1px solid var(--borders-neutral-secondary, #ccc);
+}
+
+.worldToolboxButton button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid var(--borders-neutral-primary, #8c8c8c);
+  border-radius: var(--border-radius, 4px);
+  background: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-primary, #1a1a1a);
+  font-family: var(--font-family-main, inherit);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.worldToolboxButton button:hover {
+  background: var(--background-neutral-tertiary, #e4e4e4);
+}
+
+.worldToolboxButton button:focus-visible {
+  outline: var(--borders-brand-teal-primary, #0090a0) solid 2px;
+  outline-offset: 1px;
+}
+
 /* …and nothing above the first one, which happens when everything before it
  * has been filtered out (see toolboxFilter). A rule with nothing over it
  * reads as a stray line. */
@@ -209,6 +251,76 @@ export const toolboxHeading = (text: string, icon?: string) => ({
   name: text,
   icon,
 });
+
+/** The `kind` the Add Rules row declares, and what it is registered as. */
+export const TOOLBOX_ADD_RULES = 'world_add_rules';
+
+/**
+ * The toolbox with Add Rules at its foot, which opens the rule import dialog
+ * (`ruleImport`). Added after every filter has run, since a filter that
+ * drops a heading over nothing would take this for something under it.
+ */
+export const withAddRules = (toolbox: Toolbox): Toolbox =>
+  Array.isArray(toolbox)
+    ? [...toolbox, {kind: TOOLBOX_ADD_RULES} as unknown as ToolboxCategory]
+    : toolbox;
+
+/**
+ * Add Rules: a button in the toolbox, not a category. The same base class as
+ * the heading below, for the same reasons; the button is an ordinary one, so
+ * it is reached by Tab and pressed by Enter as a button is, rather than being
+ * a stop in the tree's own arrow-key walk.
+ */
+class ToolboxAddRules extends Blockly.ToolboxItem {
+  private element: HTMLDivElement | null = null;
+
+  override init(): void {
+    const element = document.createElement('div');
+    element.className = 'worldToolboxButton';
+    element.setAttribute('role', 'presentation');
+    const button = document.createElement('button');
+    button.type = 'button';
+    const glyph = document.createElement('i');
+    glyph.className = 'fa-solid fa-plus';
+    glyph.setAttribute('aria-hidden', 'true');
+    button.append(glyph, document.createTextNode('Add Rules'));
+    // The toolbox handles a press on anything inside it by focusing its
+    // tree, which opens the first drawer; this one is the button's alone.
+    const own = (event: Event) => event.stopPropagation();
+    button.addEventListener('pointerdown', own);
+    button.addEventListener('click', event => {
+      own(event);
+      void requestRuleImport();
+    });
+    element.appendChild(button);
+    this.element = element;
+  }
+
+  override getDiv(): HTMLDivElement | null {
+    return this.element;
+  }
+
+  override getClickTarget(): Element | null {
+    return null;
+  }
+
+  override isSelectable(): boolean {
+    return false;
+  }
+
+  override isCollapsible(): boolean {
+    return false;
+  }
+
+  canBeFocused(): boolean {
+    return false;
+  }
+
+  override dispose(): void {
+    this.element?.remove();
+    this.element = null;
+  }
+}
 
 /**
  * A row of words in the toolbox that is not a category.
@@ -322,6 +434,12 @@ export const DesignSystemToolboxPlugin: Plugin = {
       Blockly.registry.Type.TOOLBOX_ITEM,
       TOOLBOX_HEADING,
       ToolboxHeading,
+      true,
+    );
+    Blockly.registry.register(
+      Blockly.registry.Type.TOOLBOX_ITEM,
+      TOOLBOX_ADD_RULES,
+      ToolboxAddRules,
       true,
     );
   },

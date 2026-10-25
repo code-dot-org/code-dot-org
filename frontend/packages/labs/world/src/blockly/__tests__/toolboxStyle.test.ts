@@ -14,9 +14,9 @@
 // module is enough, and `DesignSystemToolboxPlugin.initialize` is deliberately
 // never called here.
 
-import {describe, expect, it} from 'vitest';
+import {describe, expect, it, vi} from 'vitest';
 
-import {Blockly} from '@code-dot-org/blockly';
+import {Blockly, type Toolbox} from '@code-dot-org/blockly';
 
 import '../toolboxStyle';
 
@@ -33,5 +33,38 @@ describe('the toolbox stylesheet', () => {
     // the toolbox classes we restyle, so asking for one of those would pass
     // over a stylesheet that never made it in.
     expect(sheet!.textContent).toContain('.worldToolboxHeading');
+  });
+});
+
+describe('Add Rules at the foot of the toolbox', () => {
+  // specs/SHELL_PLAN.md, step 6. The item is built as the toolbox builds
+  // it, from the registry, without a workspace around it.
+  it('is the last row, and opens the rule import dialog', async () => {
+    const {DesignSystemToolboxPlugin, TOOLBOX_ADD_RULES, withAddRules} =
+      await import('../toolboxStyle');
+    const {setRuleImportHandler} = await import('../ruleImport');
+    // A global plugin: initializing it is what registers the item.
+    (DesignSystemToolboxPlugin as {initialize: () => void}).initialize();
+
+    const rows = withAddRules([
+      {kind: 'category', name: 'Logic', contents: []},
+    ] as unknown as Toolbox) as Array<{kind: string}>;
+    expect(rows.map(row => row.kind)).toEqual(['category', TOOLBOX_ADD_RULES]);
+
+    const Item = Blockly.registry.getClass(
+      Blockly.registry.Type.TOOLBOX_ITEM,
+      TOOLBOX_ADD_RULES,
+    )!;
+    const toolbox = {getWorkspace: () => ({})};
+    const item = new Item(rows[1] as never, toolbox as never);
+    item.init();
+    const button = item.getDiv()!.querySelector('button')!;
+    expect(button.textContent).toBe('Add Rules');
+
+    const asked = vi.fn(async () => undefined);
+    setRuleImportHandler(asked);
+    button.click();
+    expect(asked).toHaveBeenCalledTimes(1);
+    setRuleImportHandler(null);
   });
 });

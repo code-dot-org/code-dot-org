@@ -207,6 +207,12 @@ The toolbox of every code workspace ends with an **Add Rules** button that
 opens the rule import dialog (`requestRuleImport`), as the Actor Palette
 ends with Add New Actor.
 
+BUILT. A toolbox item of its own kind (`TOOLBOX_ADD_RULES`, registered
+beside the heading), appended by `withAddRules` after every filter, in the
+file editor and in a placement's or map's workspace. It is an ordinary
+button, reached by Tab. In the browser: the Player's code, opened from the
+palette, ends with Add Rules, and pressing it opens Add a rule.
+
 ### 7. Documents, fixtures and the browser
 
 SIMPLE_INTERFACE.md, FILES.md and MAPS.md are brought into line; every

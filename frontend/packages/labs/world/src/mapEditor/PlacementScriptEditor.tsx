@@ -48,7 +48,7 @@ import {setCurrentPlacements} from '../blockly/moduleOptions';
 import {projectOwnMetas, projectRuleMetas} from '../blockly/projectModules';
 import {standInBlocks} from '../blockly/standInBlocks';
 import {withoutBlocks, withoutEmptyHeadings} from '../blockly/toolboxFilter';
-import {DesignSystemToolboxPlugin} from '../blockly/toolboxStyle';
+import {DesignSystemToolboxPlugin, withAddRules} from '../blockly/toolboxStyle';
 import {useSectionWorkspace} from '../blockly/useSectionWorkspace';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {refreshFor} from '../library/refreshRegistries';
@@ -143,7 +143,9 @@ export const PlacementScriptEditor = ({
         ...palette.blocks,
         ...standInBlocks(Object.values(files), known),
       ],
-      toolbox: withoutEmptyHeadings(withoutBlocks(palette.toolbox, unheard)),
+      toolbox: withAddRules(
+        withoutEmptyHeadings(withoutBlocks(palette.toolbox, unheard)),
+      ),
     };
   }, [files, kind, mapModule, actorKind]);
   const localizedBlocks = useMemo(

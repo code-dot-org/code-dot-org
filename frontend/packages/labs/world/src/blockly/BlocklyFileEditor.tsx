@@ -119,7 +119,7 @@ import {
   withoutCategories,
   withoutEmptyHeadings,
 } from './toolboxFilter';
-import {DesignSystemToolboxPlugin} from './toolboxStyle';
+import {DesignSystemToolboxPlugin, withAddRules} from './toolboxStyle';
 import {useSectionWorkspace} from './useSectionWorkspace';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -607,7 +607,7 @@ export const BlocklyFileEditor = ({
       // …and LAST, after everything that can empty a group: the headings were
       // decided while the toolbox was built, and any of the three filters
       // above can leave one standing over nothing (`toolboxFilter`).
-      toolbox: withoutEmptyHeadings(shelved),
+      toolbox: withAddRules(withoutEmptyHeadings(shelved)),
       // What this kind of file may HOLD, which is the whole palette for it.
       // Every filter above is advice about what to offer — a rule out of
       // scope, a level's hidden drawers, an app's, a hat this actor cannot
