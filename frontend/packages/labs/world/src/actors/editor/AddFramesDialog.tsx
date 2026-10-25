@@ -1,5 +1,11 @@
 // Building frames out of a spritesheet, in one go.
 //
+// Moved from the animation editor to the Actor Editor's timeline
+// (specs/ANIMATION_PLAN.md, step 8): the chosen cells are laid on the
+// animation's picture track from the playhead, one key per cell, at the
+// frame rate asked for here — the one job of the old frame list that the
+// timeline does not do by hand.
+//
 // A walk cycle is four cells of one image in reading order, and making it a
 // frame at a time — add frame, pick the sprite, pick the cell, four times over —
 // is work a learner should never have been asked to do. A `.sheet` already says
@@ -14,24 +20,32 @@ import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import TextField from '@code-dot-org/component-library/textField';
 
-import type {SheetFile} from '../appearance/sheetFile';
+import {CellThumb} from '../../animationEditor/CellThumb';
+import cellStyles from '../../animationEditor/cellThumb.module.css';
+import {
+  type CellRect,
+  sheetCells,
+  sheetGrid,
+} from '../../animationEditor/sheetFrames';
+import type {SheetFile} from '../../appearance/sheetFile';
 
 import styles from './addFramesDialog.module.css';
-import {CellThumb} from './CellThumb';
-import cellStyles from './cellThumb.module.css';
-import {type CellRect, sheetCells, sheetGrid} from './sheetFrames';
 
 /** Cells are drawn at 2×, as everywhere else in this editor. */
 const SCALE = 2;
+
+/** What a strip is played at unless asked otherwise: the stock walk's. */
+export const DEFAULT_FRAME_RATE = 8;
 
 export interface AddFramesDialogProps {
   /** The project's grids, by image file name. */
   sheets: Record<string, SheetFile>;
   /** Those images, decoded — the editor already holds them for its canvases. */
   images: Record<string, HTMLImageElement>;
-  /** Add these cells of this image, in this order, as frames. */
-  onAdd: (sprite: string, cells: CellRect[]) => void;
+  /** Add these cells of this image, in this order, `frameRate` a second. */
+  onAdd: (sprite: string, cells: CellRect[], frameRate: number) => void;
   onCancel: () => void;
 }
 
@@ -71,6 +85,10 @@ export const AddFramesDialog = ({
       return next;
     });
 
+  const [rate, setRate] = useState(String(DEFAULT_FRAME_RATE));
+  const frameRate = Number(rate);
+  const rateOk = Number.isFinite(frameRate) && frameRate > 0 && frameRate <= 60;
+
   // Reading order, whatever order they were clicked in.
   const order = [...chosen].sort((a, b) => a - b);
 
@@ -78,17 +96,18 @@ export const AddFramesDialog = ({
     <Dialog
       role="dialog"
       title="Add frames from a spritesheet"
-      description="Each cell becomes a frame, in the order they are read: left to right, top to bottom."
+      description="Each cell becomes a frame from the playhead, in the order they are read: left to right, top to bottom."
       onClose={onCancel}
       closeLabel="Close"
       primaryButtonProps={{
         children:
           order.length === 1 ? 'Add 1 frame' : `Add ${order.length} frames`,
-        disabled: order.length === 0,
+        disabled: order.length === 0 || !rateOk,
         onClick: () =>
           onAdd(
             sprite,
             order.map(index => cells[index]),
+            frameRate,
           ),
       }}
       secondaryButtonProps={{
@@ -132,6 +151,19 @@ export const AddFramesDialog = ({
                 ))}
               </div>
             )}
+
+            <TextField
+              name="frame-rate"
+              label="Frames a second"
+              inputType="number"
+              size="s"
+              className={styles.rate}
+              value={rate}
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setRate(event.target.value)
+              }
+              errorMessage={rateOk ? undefined : 'From 1 to 60'}
+            />
 
             <div className={styles.actions}>
               <Button

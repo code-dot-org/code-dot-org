@@ -361,6 +361,26 @@ key per cell, which is the frame list's one job that the timeline does
 not do by hand; the cell picker comes from the animation editor
 (`CellPicker`, `AddFramesDialog`), moved to the Actor Editor.
 
+BUILT. "Add frames…" on the timeline's head opens `AddFramesDialog`, now
+in `actors/editor`: the project's sheets, every cell taken to start with,
+each cell a button saying where it lands, and a Frames a second field (8
+unless changed, 1 to 60). The cells are laid on the picture track from the
+playhead (`addAnimationFrames`), a key per cell and the last cell keyed
+again a frame later, as the stock's strips are; picture keys already in
+that span are replaced, and a timeline whose length is set is drawn long
+enough to hold them.
+
+Departure: `CellPicker` is deleted rather than moved. It chose the one
+cell a frame drew, and there are no frames: a single cell is a picture
+key, which "Add frames…" with one cell writes. `CellThumb` and
+`sheetFrames` stay in `animationEditor/`, read by the actor creator and
+the image editor; the folder's name outlives the editor, and step 10 may
+rename it.
+
+In the browser: Jetpack's Pilot's Climb, the playhead at its end (0.5 s),
+took pilotFly.png's four cells at 4 a second: its closing key gave way to
+four keys from 0.5 s and a closing one at 1.5 s, nine picture keys in all.
+
 ### 9. The lessons and the scenarios
 
 The lessons and scenario instructions that name `animations/`, `.anim`

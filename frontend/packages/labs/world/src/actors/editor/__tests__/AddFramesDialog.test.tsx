@@ -7,7 +7,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';
 
-import type {SheetFile} from '../../appearance/sheetFile';
+import type {SheetFile} from '../../../appearance/sheetFile';
 import {AddFramesDialog} from '../AddFramesDialog';
 
 const SHEET: SheetFile = {type: 'sheet', cell: {width: 32, height: 32}};
@@ -63,10 +63,14 @@ describe('AddFramesDialog', () => {
     fireEvent.click(cell(1));
     fireEvent.click(screen.getByRole('button', {name: 'Add 2 frames'}));
 
-    expect(onAdd).toHaveBeenCalledWith('coinSpin.png', [
-      {x: 0, y: 0, width: 32, height: 32},
-      {x: 64, y: 0, width: 32, height: 32},
-    ]);
+    expect(onAdd).toHaveBeenCalledWith(
+      'coinSpin.png',
+      [
+        {x: 0, y: 0, width: 32, height: 32},
+        {x: 64, y: 0, width: 32, height: 32},
+      ],
+      8,
+    );
   });
 
   it('counts one frame as one frame', () => {
@@ -77,6 +81,17 @@ describe('AddFramesDialog', () => {
 
     fireEvent.click(cell(2));
     expect(screen.getByRole('button', {name: 'Add 1 frame'})).toBeEnabled();
+  });
+
+  it('asks how many frames a second, and will not take nonsense', () => {
+    const onAdd = vi.fn();
+    open({onAdd});
+    const rate = screen.getByLabelText(/^Frames a second/);
+    fireEvent.change(rate, {target: {value: '0'}});
+    expect(screen.getByRole('button', {name: 'Add 3 frames'})).toBeDisabled();
+    fireEvent.change(rate, {target: {value: '12'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Add 3 frames'}));
+    expect(onAdd.mock.calls[0][2]).toBe(12);
   });
 
   it('lets a project with several sheets choose between them', () => {

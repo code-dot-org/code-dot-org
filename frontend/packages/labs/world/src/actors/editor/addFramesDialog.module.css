@@ -33,6 +33,10 @@
   image-rendering: pixelated;
 }
 
+.rate {
+  max-width: 10rem;
+}
+
 .actions {
   display: flex;
   gap: 0.25rem;

@@ -41,6 +41,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {requestAppearanceImport} from '../../appearance/appearanceImport';
 import {isBackgroundPath} from '../../appearance/backgroundsFolder';
 import {largestCell} from '../../appearance/paintTimeline';
+import {projectSheets} from '../../appearance/sheetFile';
 import {stockAnimation} from '../../appearance/stock';
 import {TimelineThumb} from '../../appearance/TimelineThumb';
 import {useProjectImages} from '../../appearance/useProjectImages';
@@ -78,6 +79,7 @@ import {
   addEffect,
   addProperty,
   addAnimation,
+  addAnimationFrames,
   addTrait,
   animationNameProblem,
   animationNames,
@@ -100,6 +102,7 @@ import {
   valueText,
   type TraitChoice,
 } from './actorEdits';
+import {AddFramesDialog} from './AddFramesDialog';
 import {AnimationRow} from './AnimationRow';
 import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
@@ -421,6 +424,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
       : undefined;
   // Where the playhead is, in seconds; back to the start for another one.
   const [time, setTime] = useState(0);
+  // Adding frames from a sheet: the dialog, and the sheets it offers.
+  const [addingFrames, setAddingFrames] = useState(false);
+  const sheets = useMemo(() => projectSheets(files), [files]);
   const [selectedKey, setSelectedKey] = useState<
     {property: string; at: number} | undefined
   >();
@@ -1164,6 +1170,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
                         setSelectedKey(undefined);
                       }
                 }
+                onAddFrames={
+                  isReadOnly ? undefined : () => setAddingFrames(true)
+                }
                 onLength={
                   isReadOnly
                     ? undefined
@@ -1195,6 +1204,26 @@ export const ActorEditor = (props: CustomEditorProps) => {
           )}
         </div>
       </div>
+      {addingFrames && selected && (
+        <AddFramesDialog
+          sheets={sheets}
+          images={projectImages}
+          onAdd={(sprite, cells, frameRate) => {
+            setAddingFrames(false);
+            edit(
+              addAnimationFrames(
+                data,
+                selected,
+                sprite,
+                cells,
+                time,
+                frameRate,
+              ),
+            );
+          }}
+          onCancel={() => setAddingFrames(false)}
+        />
+      )}
     </div>
   );
 };

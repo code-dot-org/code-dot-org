@@ -164,6 +164,9 @@ below, and are listed last.
 - **The values at the playhead are labelled fields**, and one not keyed
   there says so in words ("Between keys", "Held from the last key"), not
   only in italics. The section is named for the time.
+- **Add frames** is the old dialog, keyboard and screen reader as before
+  (each cell a button saying which frame it becomes); its frame rate is a
+  labelled field that says what it will take when it will not.
 
 ## Not yet done for any phase
 

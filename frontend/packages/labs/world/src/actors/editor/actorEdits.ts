@@ -669,3 +669,47 @@ export const setAnimationLength = (
     const next = Math.max(endOf(timeline), Math.round(length * 10) / 10);
     return timeline.length === next ? timeline : {...timeline, length: next};
   });
+
+/**
+ * The data with a sheet's `cells` laid on an animation's picture track from
+ * `from`, one key per cell at `frameRate` a second, and the last cell keyed
+ * again a frame later, because an animation ends at its last key and the
+ * last picture is owed its frame (as the stock's strips are,
+ * `appearance/stock`). Picture keys already in that span are replaced.
+ */
+export const addAnimationFrames = (
+  data: ActorData,
+  name: string,
+  sprite: string,
+  cells: readonly {x: number; y: number; width: number; height: number}[],
+  from: number,
+  frameRate: number,
+): ActorData => {
+  if (cells.length === 0 || !(frameRate > 0)) {
+    return data;
+  }
+  const time = (index: number) =>
+    Math.round((from + index / frameRate) * 1000) / 1000;
+  const until = time(cells.length);
+  return withTimeline(data, name, timeline => {
+    const kept = (timeline.tracks.sprite ?? []).filter(
+      key => key.at < from || key.at > until,
+    );
+    const laid = [
+      ...cells.map((cell, index) => ({
+        at: time(index),
+        value: {sprite, cell: {...cell}},
+      })),
+      {at: until, value: {sprite, cell: {...cells[cells.length - 1]}}},
+    ];
+    const sprites = [...kept, ...laid].sort((a, b) => a.at - b.at);
+    return {
+      ...timeline,
+      // Drawn long enough to hold them.
+      ...(timeline.length !== undefined && timeline.length < until
+        ? {length: until}
+        : {}),
+      tracks: {...timeline.tracks, sprite: sprites},
+    };
+  });
+};

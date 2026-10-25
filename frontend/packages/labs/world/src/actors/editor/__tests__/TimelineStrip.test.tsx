@@ -134,6 +134,21 @@ describe('the timeline', () => {
     expect(onDeleteKey).toHaveBeenCalledWith('drawnOffset', 0.5);
   });
 
+  it('has a button to add frames, when it may', () => {
+    const onAddFrames = vi.fn();
+    render(
+      <TimelineStrip
+        name="Hop"
+        timeline={HOP}
+        time={0}
+        onTime={vi.fn()}
+        onAddFrames={onAddFrames}
+      />,
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Add frames…'}));
+    expect(onAddFrames).toHaveBeenCalled();
+  });
+
   it('is made longer with its Length field', () => {
     const {onLength} = show();
     fireEvent.change(screen.getByRole('spinbutton', {name: /Length/}), {

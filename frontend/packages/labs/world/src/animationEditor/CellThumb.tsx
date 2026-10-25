@@ -1,8 +1,8 @@
 // One cell of a spritesheet, drawn.
 //
-// Shared by the two places that ask which cell: the picker on a frame
-// (CellPicker) and the one that builds frames out of a whole sheet
-// (AddFramesDialog). A cell is a rectangle in an image, so drawing one is a
+// Drawn wherever a cell is chosen: frames built out of a whole sheet
+// (`actors/editor/AddFramesDialog`), a cell for a new actor, a cell for the
+// image editor. A cell is a rectangle in an image, so drawing one is a
 // `drawImage` with a source rectangle — there is no way to crop an `<img>`
 // without one, and every other approach (background-position, clip-path)
 // re-derives the same arithmetic somewhere it cannot be tested.

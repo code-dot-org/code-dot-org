@@ -85,6 +85,8 @@ export interface TimelineStripProps {
   onDeleteKey?: (property: string, at: number) => void;
   /** Draw the strip this many seconds long; absent, it cannot be changed. */
   onLength?: (length: number) => void;
+  /** Lay a sheet's cells on from the playhead; absent, no button for it. */
+  onAddFrames?: () => void;
 }
 
 export const TimelineStrip = ({
@@ -98,6 +100,7 @@ export const TimelineStrip = ({
   onMoveKey,
   onDeleteKey,
   onLength,
+  onAddFrames,
 }: TimelineStripProps) => {
   const end = endOf(timeline);
   const length = drawnLength(timeline);
@@ -223,6 +226,19 @@ export const TimelineStrip = ({
         <Typography variant="body3" component="span" aria-hidden="true">
           {seconds(time)}
         </Typography>
+        {onAddFrames && (
+          <Button
+            variant="text"
+            size="small"
+            startIcon={<FontAwesomeV6Icon iconName="film" iconStyle="solid" />}
+            onClick={() => {
+              setPlaying(false);
+              onAddFrames();
+            }}
+          >
+            Add frames…
+          </Button>
+        )}
         {onLength && (
           // Room for keys later than its last: the strip is drawn this long.
           <label className={styles.timelineLength}>

@@ -26,6 +26,7 @@ import {
   animationNames,
   removeAnimation,
   renameAnimation,
+  addAnimationFrames,
   moveAnimationKey,
   removeAnimationKey,
   setAnimationKey,
@@ -291,6 +292,49 @@ describe('its animations', () => {
     expect(gone.animations!.Hop.tracks).toEqual({});
     // Main is untouched throughout.
     expect(gone.animations!.Main).toBe(BOBBER.animations!.Main);
+  });
+
+  it('take a sheet’s cells as frames from a time, and owe the last its frame', () => {
+    const cell = (x: number) => ({x, y: 0, width: 16, height: 16});
+    const laid = addAnimationFrames(
+      BOBBER,
+      'Hop',
+      'coin.png',
+      [cell(0), cell(16)],
+      0.5,
+      4,
+    );
+    expect(laid.animations!.Hop.tracks.sprite).toEqual([
+      {at: 0.5, value: {sprite: 'coin.png', cell: cell(0)}},
+      {at: 0.75, value: {sprite: 'coin.png', cell: cell(16)}},
+      {at: 1, value: {sprite: 'coin.png', cell: cell(16)}},
+    ]);
+    // Laid again over them, the picture keys in that span are replaced; the
+    // one before it stays.
+    const main = addAnimationFrames(
+      BOBBER,
+      'Main',
+      'coin.png',
+      [cell(32)],
+      0,
+      2,
+    );
+    expect(main.animations!.Main.tracks.sprite).toEqual([
+      {at: 0, value: {sprite: 'coin.png', cell: cell(32)}},
+      {at: 0.5, value: {sprite: 'coin.png', cell: cell(32)}},
+    ]);
+    const later = addAnimationFrames(
+      BOBBER,
+      'Main',
+      'coin.png',
+      [cell(0)],
+      1,
+      2,
+    );
+    expect(later.animations!.Main.tracks.sprite).toHaveLength(3);
+    expect(addAnimationFrames(BOBBER, 'Hop', 'coin.png', [], 0, 4)).toBe(
+      BOBBER,
+    );
   });
 
   it('are drawn as long as asked, but never shorter than their last key', () => {
