@@ -46,6 +46,21 @@ unflagged, and the stock actors, rules and enhancements a stock actor
 `requires` agree with it (a game actor requiring an interface-only rule is
 a mistake in one of the two).
 
+BUILT. `StockRule.for` on all 46: two are an interface's (Screens, Tab
+Navigation), eight are both (Health, Time, Conversation, Scoring, Input,
+Mouse, Gestures, History), the rest a game's. The enhancements' are given
+in one table beside their groups (`PURPOSES` in `enhance/enhancements`):
+all a game's but Types Out Text (an interface's) and the Scoreboard
+(both); a test lists every one, so a new enhancement is placed by a
+decision. The agreement test found the Viewport, flagged an interface's,
+needing the two camera rules a game's view is steered by; the flag was
+the mistake, and the Viewport is for both: the window a Screen shows its
+game through, and a minimap inside a level.
+
+What a flag means, said once: it decides what is OFFERED first — the
+palette's tab, the wizard's templates, a shelf's list — and never what can
+be used. The engine and the compiler do not read it.
+
 ### 2. Two wizards
 
 The palette's Add New Actor tells the wizard its tab

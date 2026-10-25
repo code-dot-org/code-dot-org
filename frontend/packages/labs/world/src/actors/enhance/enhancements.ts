@@ -61,6 +61,8 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import type {ActorPurpose} from '../actorPurpose';
+
 import {cameraFollowEnhancement} from './cameraFollow';
 import {carriesEnhancement} from './carries';
 import {chasesEnhancement} from './chases';
@@ -110,6 +112,13 @@ export interface Enhancement {
   subject: 'actor' | 'world';
   /** What it is called, on the shelf — a sentence about the thing, not a file. */
   name: string;
+  /**
+   * What it is for: a game, an interface, or both (`actors/actorPurpose`),
+   * which decides what the checklist offers where. Given here, in one place
+   * beside the groups, rather than in each enhancement's file
+   * (`PURPOSES`, specs/PURPOSE_PLAN.md).
+   */
+  for?: ActorPurpose;
   /** One line on what it gives that thing. */
   description: string;
   /**
@@ -340,13 +349,26 @@ const AS_WRITTEN: readonly EnhancementGroup[] = [
 ];
 
 /**
+ * What each enhancement is for. Nearly all are a game's — how a thing moves,
+ * falls, fights or follows — and the few that are not are said here. One
+ * missing from this table is a game's, and a test lists every enhancement so
+ * a new one is a choice made rather than a default taken.
+ */
+const PURPOSES: Readonly<Record<string, ActorPurpose>> = {
+  typesOutText: 'interface',
+  scoreboard: 'both',
+};
+
+/**
  * The groups, each enhancement made to work on an actor of either shape: it
  * is written against `define actor` rows, and is asked and applied through a
  * data-shaped actor's view (`throughTheView`, specs/ACTOR_EDITOR_PLAN.md).
  */
 export const GROUPS: readonly EnhancementGroup[] = AS_WRITTEN.map(group => ({
   ...group,
-  members: group.members.map(throughTheView),
+  members: group.members.map(one =>
+    throughTheView({...one, for: PURPOSES[one.id] ?? 'game'}),
+  ),
 }));
 
 export const ENHANCEMENTS: readonly Enhancement[] = GROUPS.flatMap(

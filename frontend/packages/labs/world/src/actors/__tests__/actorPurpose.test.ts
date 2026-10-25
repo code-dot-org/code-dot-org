@@ -31,7 +31,7 @@ describe('what an actor is for', () => {
   });
 
   it('comes with a stock actor when it is imported', () => {
-    expect(purposeOf(importedContents(stockActorById('viewport')!))).toBe(
+    expect(purposeOf(importedContents(stockActorById('button')!))).toBe(
       'interface',
     );
     expect(purposeOf(importedContents(stockActorById('label')!))).toBe('both');

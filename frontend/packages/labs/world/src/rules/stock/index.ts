@@ -10,6 +10,8 @@
 // rule any more (see `builtinMeta`): "Has Gravity" is one of these, and the
 // default project is a project that imported it.
 
+import type {ActorPurpose} from '../../actors/actorPurpose';
+
 import {arrowsRule} from './arrows';
 import {boundsRule} from './bounds';
 import {cameraRule} from './camera';
@@ -94,6 +96,11 @@ export interface StockRule {
    * actually declares (`stockRuleSubjects.test.ts`), so it cannot drift.
    */
   subject?: 'camera';
+  /**
+   * What it is for: a game, an interface, or both (`actors/actorPurpose`),
+   * which decides what the rule shelf offers where (specs/PURPOSE_PLAN.md).
+   */
+  for: ActorPurpose;
   /** The `.rule` workspace JSON, copied verbatim on import. */
   contents: string;
 }
@@ -106,6 +113,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'motion',
     name: 'Physics',
+    for: 'game',
     ability: 'Has Physics',
     description:
       'Gives actors a speed, moves them by it every frame, and lets a force change it.',
@@ -115,6 +123,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'collisions',
     name: 'Collisions',
+    for: 'game',
     ability: 'Notices Collisions',
     description:
       'Works out which actors are touching which, once a tick, and writes each one down. Says nothing about what to do about it.',
@@ -124,6 +133,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'solid',
     name: 'Solid Bodies',
+    for: 'game',
     ability: 'Has Solid Bodies',
     description:
       'Stops moving actors passing through solid ones, pushing them out at the face they entered.',
@@ -133,6 +143,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'collect',
     name: 'Collection',
+    for: 'game',
     ability: 'Collects Things',
     description:
       'Lets an actor pick up the things it walks into, and says which kinds can be picked up. It keeps what each collector has taken, so a game can ask how many of a kind somebody holds, and raises an event on both sides of the moment.',
@@ -142,6 +153,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'inventory',
     name: 'Inventory',
+    for: 'game',
     ability: 'Holds Things',
     description:
       'A bag: what an actor is holding, and the way to spend one of a kind. Collection keeps a record of everything picked up, which only grows; this is the half that can go down, for a key that is gone once the door is open.',
@@ -151,6 +163,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'health',
     name: 'Health',
+    for: 'both',
     ability: 'Has Health',
     description:
       'Lets actors be damaged and run out. One ability says what can be damaged and the other says what damages it, so a spike, an energy ball and a patrolling crawler are dangerous without knowing who to. Contact damage is spaced by a mercy time, and running out raises an event rather than removing anything — what running out means is the game\u2019s to say.',
@@ -160,6 +173,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'steering',
     name: 'Steering',
+    for: 'game',
     ability: 'Chases and Flees',
     description:
       'Lets an actor go after another one, or run from it. A chaser walks toward what it is told to chase and stops when it is close enough; a fleer runs only when the thing it avoids is too near. It sets velocity, so walls still stop it and gravity still owns the vertical when you say so \u2014 and it brings the \u201cdistance from \u2039a\u203a to \u2039b\u203a\u201d block, which is what \u201cthe nearest enemy\u201d is asked with.',
@@ -169,6 +183,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'path',
     name: 'Path',
+    for: 'game',
     ability: 'Finds a Way',
     description:
       'Works out the next step toward something, around whatever solid is in between \u2014 which is what Steering cannot do: going toward a thing walks into the wall in front of it. It floods outward from the goal a square at a time and hands back the square to walk to, on a beat rather than every frame. What a square IS is a setting, so a tiled room and a room of scattered crates search the same way.',
@@ -178,6 +193,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'patrol',
     name: 'Patrol',
+    for: 'game',
     ability: 'Patrols',
     description:
       'Walks an actor out and back on a beat of its own, across or down or both. What an enemy does when the player is not there, and what a moving platform does always.',
@@ -187,6 +203,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'carry',
     name: 'Carrying',
+    for: 'game',
     ability: 'Carries Riders',
     description:
       'Moves whatever is standing on an actor along with it, however that actor is being moved \u2014 a lift, a raft, a platform on a track. Two abilities: what carries, and what rides.',
@@ -196,6 +213,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'time',
     name: 'Time',
+    for: 'both',
     ability: 'Keeps Time',
     description:
       'Lets things happen every so often, and lets things be done only every so often. A timer belongs to an actor and raises an event on its own beat \u2014 a spawner, a blinking lamp, a bomb \u2014 and each one starts, stops and restarts on its own. A cooldown is the same idea with the sides swapped: ask whether it is ready, and start the wait when it is used.',
@@ -205,6 +223,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'spawner',
     name: 'Spawner',
+    for: 'game',
     ability: 'Sends Things',
     description:
       'Sends something on a beat that closes as the game goes on \u2014 which is what makes a wave a wave rather than a metronome. It says WHEN and how many, and never what: the handler for "sends something" places whatever the wave is made of. Set how many to send to stop after a number of them, and closer each time to under one to make each gap shorter than the last.',
@@ -214,6 +233,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'conversation',
     name: 'Conversation',
+    for: 'both',
     ability: 'Has a Conversation',
     description:
       'Keeps a place in a script and moves through it. It raises an event each time it moves, so the project decides what each line is — a portrait, a sound, a question — and `go to line` is how a choice sends the talk somewhere else.',
@@ -223,6 +243,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'score',
     name: 'Scoring',
+    for: 'both',
     ability: 'Keeps Score',
     description:
       'A score the whole world shares, and an event the moment it reaches the target. Says when the game is won; what winning looks like is the project\u2019s to write.',
@@ -232,6 +253,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'goals',
     name: 'Goals',
+    for: 'game',
     ability: 'Has an Ending',
     description:
       'Won, lost, and the way back to neither \u2014 the two moments every game has, in one place that guards them. The first ending is the one that counts; what winning LOOKS like is still the project\u2019s.',
@@ -241,6 +263,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'input',
     name: 'Input',
+    for: 'both',
     ability: 'Reads the Keyboard',
     description:
       'Raises an event when a key goes down or comes up, so a handler can react to a press rather than to it being held. The world hears every key; an actor hears the ones it elected to.',
@@ -250,6 +273,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'mouse',
     name: 'Mouse',
+    for: 'both',
     ability: 'Reads the Mouse',
     description:
       'Raises an event when a mouse button goes down or comes up, on the same terms as the keyboard rule, and tells an actor when a press landed on it. Where the pointer is is not an event — it is the “mouse position” block, which answers at any moment.',
@@ -259,6 +283,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'gestures',
     name: 'Gestures',
+    for: 'both',
     ability: 'Reads Gestures',
     description:
       'What a press, a movement and a release add up to: a drag, a swipe, a hold. A gesture belongs to what the press began on, so a thing stays yours to drag once the finger has left it. How far and how fast before a press counts as one of these are numbers you can change.',
@@ -268,6 +293,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'screens',
     name: 'Screens',
+    for: 'interface',
     ability: 'Shows Screens',
     description:
       'A stack of maps and a way back down it. A screen is a map, and loading one puts it over what is already there; “go to screen” puts one on top, “go back” takes the top one off, and “the screen showing” says which is in front. Going back from the last one does nothing, so a project cannot empty its own world.',
@@ -277,6 +303,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'tabNavigation',
     name: 'Tab Navigation',
+    for: 'interface',
     ability: 'Moves Focus with Tab',
     description:
       'One actor at a time holds the keyboard. Tab moves the focus to the next control and Escape drops it, which is also what hands Tab back to the page. An actor can take the focus when it is clicked — or say it never does, for a control that is only ever pointed at.',
@@ -286,6 +313,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'arrows',
     name: 'Arrow Keys',
+    for: 'game',
     ability: 'Moves with Arrow Keys',
     description:
       'Moves an actor while the arrow keys are held, at a speed the actor carries. Across and down are separate abilities: a platformer takes one, a top-down game takes both.',
@@ -295,6 +323,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'grid',
     name: 'Grid',
+    for: 'game',
     ability: 'Moves on a Grid',
     description:
       'Moves an actor one whole square at a time instead of by a speed, refusing a step it cannot finish. Walls block a step and crates are pushed by one, which is the whole of a board game.',
@@ -304,6 +333,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'history',
     name: 'History',
+    for: 'both',
     ability: 'Undoes Moves',
     description:
       'Writes down where everything is when the project says a move is happening, and puts it all back when the project says to undo one. Eight moves deep, and it remembers places rather than everything.',
@@ -313,6 +343,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'turns',
     name: 'Turns',
+    for: 'game',
     ability: 'Takes Turns',
     description:
       'A clock only the player can wind: the project says when a turn has happened, and everything that takes turns is told to act. A number on each actor says how often \u2014 every turn, every other one, never.',
@@ -322,6 +353,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'gravity',
     name: 'Gravity',
+    for: 'game',
     ability: 'Has Gravity',
     description:
       'Pulls actors downward, lands them on solid ground, and tells them when they start and stop falling. Landing is about DIRECTION \u2014 a faller has to be coming down onto a thing to rest on it \u2014 so a ledge that only acts as ground is one you jump up through, and a ledge that is also Solid is one you cannot.',
@@ -331,6 +363,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'jump',
     name: 'Jumping',
+    for: 'game',
     ability: 'Jumps',
     description:
       'Pushes an actor away from the ground when it asks, and only when it has a jump left. Carries a jump height, a moment of grace after walking off a ledge, and a count for double jumps.',
@@ -340,6 +373,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'jetpack',
     name: 'Jetpack',
+    for: 'game',
     ability: 'Flies with a Jetpack',
     description:
       'Thrust for as long as a key is held, against gravity, out of a tank that empties. Carries the push, a top climbing speed, the fuel and how fast it burns — and says when the flying starts, stops, or runs dry.',
@@ -349,6 +383,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'climb',
     name: 'Climbing',
+    for: 'game',
     ability: 'Climbs Ladders',
     description:
       'A ladder to go up, and — the part a one-way platform cannot do on its own — to go back down through. Says what a ladder is, what climbs one, and offers a control scheme for the arrow keys that a climber need not take.',
@@ -358,6 +393,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'surfaces',
     name: 'Surfaces',
+    for: 'game',
     ability: 'Has Special Floors',
     description:
       'Three kinds of floor that do something to whoever stands on them: a belt that carries you along, ice you cannot stop or turn on, and sludge that drags. A tile takes one; a walker takes one trait and meets all three.',
@@ -367,6 +403,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'turning',
     name: 'Turning',
+    for: 'game',
     ability: 'Turns at Walls',
     description:
       'Goes the way it is facing and turns when it stops getting anywhere. One number decides what kind of enemy it is: a hundred and eighty is a ball rolling back and forth, ninety is a rocket taking the next turning.',
@@ -376,6 +413,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'prowling',
     name: 'Prowling',
+    for: 'game',
     ability: 'Prowls',
     description:
       'An enemy that goes the way it is going and reconsiders only where reconsidering is possible — when it lands, when it reaches a ladder, when a climb ends. It takes ladders using the same trait a player does.',
@@ -385,6 +423,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'flapping',
     name: 'Flapping',
+    for: 'game',
     ability: 'Flaps and Glides',
     description:
       'An enemy that flies in two phases: a few short flutters, each upward and a little towards you, and then a long straight glide aimed at where you were when it began. The glide commits, so walking under it is the way past.',
@@ -394,6 +433,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'teleport',
     name: 'Teleport',
+    for: 'game',
     ability: 'Has Teleport Pads',
     description:
       'Pads that are two ends of one place. Step on one and come out of another of the same color, chosen afresh each time — a player when it asks to, an enemy whether it wants to or not.',
@@ -403,6 +443,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'switches',
     name: 'Switches',
+    for: 'game',
     ability: 'Has Switches',
     description:
       'Pads on the floor that flip every wall painted the same color — each wall from wherever it was, so a switch swaps a corridor rather than opening one. Anything that moves can press one.',
@@ -412,6 +453,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'digging',
     name: 'Digging',
+    for: 'game',
     ability: 'Digs Holes',
     description:
       'A hole you make in the ground where you point, and one that fills itself back in on whoever is standing in it. The block owns how long it lasts, so two kinds of floor can close at two speeds.',
@@ -421,6 +463,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'drive',
     name: 'Arrow Drive',
+    for: 'game',
     ability: 'Drives with Arrow Keys',
     description:
       'Left and right TURN an actor, up thrusts the way it faces, and letting go leaves it coasting. The other reading of the arrow keys — elect this or "Moves with Arrow Keys", not both.',
@@ -430,6 +473,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'drag',
     name: 'Drag',
+    for: 'game',
     ability: 'Slows Down',
     description:
       'Bleeds off an actor\u2019s speed while nothing is pushing it, so it coasts to a stop instead of drifting forever. Elect it beside anything that moves \u2014 it is what makes a car a car rather than a spaceship, and it gives a top speed for free.',
@@ -439,6 +483,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'zaps',
     name: 'Zapping',
+    for: 'game',
     ability: 'Zaps',
     description:
       'Limits how often an actor may zap and raises "zaps" when one happens \u2014 your handler decides what a zap SENDS, so it can be an energy ball or anything else. Pair "make \u2026 zap" on a key press with a "zaps" handler.',
@@ -448,6 +493,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'expires',
     name: 'Expiry',
+    for: 'game',
     ability: 'Expires',
     description:
       'Takes an actor out of the world once it is older than its lifetime \u2014 the other half of spawning. Without it, bullets and sparks pile up forever and the game slowly grinds down.',
@@ -457,6 +503,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'bounds',
     name: 'Boundaries',
+    for: 'game',
     ability: 'Stays in the Map',
     description:
       'Stops an actor at the edge of the map instead of letting it leave \u2014 the whole actor, not its middle. Two abilities, so a paddle can stay across without hovering, and a platformer can stay down without sticking to the sides.',
@@ -466,6 +513,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'wrap',
     name: 'Screen Wrap',
+    for: 'game',
     ability: 'Wraps at the Edges',
     description:
       'Brings an actor back on the opposite side of the map when it walks off an edge. Two abilities, so you can wrap across, down, or both.',
@@ -475,6 +523,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'camera',
     name: 'Camera',
+    for: 'game',
     ability: 'Has a Camera',
     description:
       'Gives a camera somewhere it wants to look, and moves it there at the end of each frame. On its own it holds the view still; other camera rules decide where to look.',
@@ -485,6 +534,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraFollow',
     name: 'Camera Follow',
+    for: 'game',
     ability: 'Follows an Actor',
     description:
       'Points a camera at an actor, so the view keeps up as it moves. Needs Camera, which is what actually moves the view.',
@@ -495,6 +545,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraEase',
     name: 'Camera Ease',
+    for: 'game',
     ability: 'Catches Up Smoothly',
     description:
       'Lets a camera catch up to what it is aiming at over a few frames instead of snapping to it. Needs Camera.',
@@ -505,6 +556,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraDeadzone',
     name: 'Camera Deadzone',
+    for: 'game',
     ability: 'Ignores Small Moves',
     description:
       'Holds a camera still while what it follows moves about inside a box, so the view only travels when the player really goes somewhere. Needs Camera.',
@@ -515,6 +567,7 @@ export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'cameraConfined',
     name: 'Camera Confined',
+    for: 'game',
     ability: 'Keeps the View Inside',
     description:
       'Stops a camera at the edge of the map, so the view never shows past the level. Needs Camera.',

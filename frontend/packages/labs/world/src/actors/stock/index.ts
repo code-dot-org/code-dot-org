@@ -266,7 +266,9 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'viewport',
-    for: 'interface',
+    // Both: the window a Screen shows its game through, and a minimap or a
+    // picture-in-picture inside a level; and its own camera is a game's.
+    for: 'both',
     name: 'Viewport',
     description:
       'A window onto a map of its own. Set its map and the level shows inside it, with a camera of its own; what is around the window stays put — a level inside its interface.',
