@@ -114,6 +114,14 @@ below, and are listed last.
   palette; taking an actor in hand does not move focus to the stage, which
   is right for a pointer and long for a keyboard.
 
+### Finishing the shell (SHELL_FINISH_PLAN.md)
+
+- **A place's picture in the switcher has no text of its own**: the name
+  under it labels the button, and the picture is decorative (`alt=""`).
+  What the place holds is not said.
+- **Layers in front vanish without a word** when a layer is pressed in
+  the strip; only the box "Show all layers" says they can come back.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

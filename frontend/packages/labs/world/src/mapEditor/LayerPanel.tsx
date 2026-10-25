@@ -8,6 +8,9 @@
 // since that is the order they are drawn in.
 
 import {Typography} from '@mui/material';
+import type {ChangeEvent} from 'react';
+
+import Checkbox from '@code-dot-org/component-library/checkbox';
 
 import {IconAction} from './IconAction';
 import styles from './mapEditor.module.css';
@@ -22,6 +25,12 @@ export interface LayerPanelProps {
   onRemove: (id: string) => void;
   /** +1 is nearer the front, −1 nearer the back. */
   onMove: (id: string, by: 1 | -1) => void;
+  /**
+   * Whether the layers in front of the selected one are drawn. While the
+   * strip is open they are not, so they do not cover the one being edited.
+   */
+  showAll: boolean;
+  onShowAll: (shown: boolean) => void;
   isReadOnly: boolean;
 }
 
@@ -32,6 +41,8 @@ export const LayerPanel = ({
   onAdd,
   onRemove,
   onMove,
+  showAll,
+  onShowAll,
   isReadOnly,
 }: LayerPanelProps) => {
   const at = layers.findIndex(layer => layer.id === selected);
@@ -65,6 +76,16 @@ export const LayerPanel = ({
           </li>
         ))}
       </ul>
+      {/* Front first, so what is hidden is what is above the pressed row. */}
+      <Checkbox
+        name="layers-show-all"
+        size="s"
+        label="Show all layers"
+        checked={showAll}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          onShowAll(event.target.checked)
+        }
+      />
       {/* Icons, named in words for a reader and a pointer's tooltip, as
           the inspector's actions are (`IconAction`). */}
       <div className={styles.layerActions}>

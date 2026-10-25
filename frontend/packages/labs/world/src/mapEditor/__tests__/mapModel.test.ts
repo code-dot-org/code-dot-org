@@ -10,6 +10,7 @@ import {describe, expect, it} from 'vitest';
 
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 import {
+  layersInFrontOf,
   addLayer,
   clampTiles,
   drawOrder,
@@ -700,5 +701,17 @@ describe('withEventHandler', () => {
       'world_on_Space_CreatedEvent',
     );
     expect(added.blocks!.blocks!.blocks).toHaveLength(1);
+  });
+});
+
+describe('the layers in front of one', () => {
+  const map = {
+    ...parseMap('{}'),
+    layers: [{id: 'sky'}, {id: 'main'}, {id: 'front'}],
+  };
+  it('are those after it, back to front', () => {
+    expect([...layersInFrontOf(map, 'sky')]).toEqual(['main', 'front']);
+    expect([...layersInFrontOf(map, 'front')]).toEqual([]);
+    expect([...layersInFrontOf(map, 'gone')]).toEqual([]);
   });
 });

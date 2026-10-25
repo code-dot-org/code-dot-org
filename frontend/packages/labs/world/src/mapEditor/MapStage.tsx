@@ -114,6 +114,7 @@ import {
   hasScript,
   layerName,
   layerOfPlacement,
+  layersInFrontOf,
   layersOf,
   moveLayer,
   parentIdOf,
@@ -611,6 +612,8 @@ export const MapStage = ({
    * its row until it is closed or a placement is selected.
    */
   const [selectedLayer, setSelectedLayer] = useState(DEFAULT_LAYER);
+  /** Whether the layers in front of the selected one are drawn anyway. */
+  const [allLayers, setAllLayers] = useState(false);
   const [inspectingLayer, setInspectingLayer] = useState(false);
   /** The world's camera open in its inspector, if one is. */
   const [inspectingCamera, setInspectingCamera] = useState<string | null>(null);
@@ -826,8 +829,32 @@ export const MapStage = ({
   // The topmost placed actor under a world point, through each one's own
   // transform (`stageGeometry.hitTest`). Reads the ref rather than the state
   // so a gesture mid-drag sees the position it just wrote.
+  // The layers and the cameras are rarely what a map is being opened for, and
+  // each is a column of rows over the top-left of the map, so each starts
+  // hidden behind a toolbar button. A lesson that points at one opens it
+  // (`callouts/places`, `map.layers`).
+  const [panels, setPanels] = useState({layers: false, cameras: false});
+  const togglePanel = (panel: 'layers' | 'cameras') =>
+    setPanels(open => ({...open, [panel]: !open[panel]}));
+  /**
+   * WHILE A LAYER IS EDITED — the strip open — the layers in front of it
+   * are not drawn and cannot be clicked, so they do not cover it
+   * (SIMPLE_INTERFACE.md, "Map Layers"). Those behind it still are.
+   */
+  const hiddenLayers =
+    panels.layers && !allLayers
+      ? layersInFrontOf(map, selectedLayer)
+      : new Set<string>();
+  const layerIds = new Set(layersOf(map).map(layer => layer.id));
+  /** Whether a placement is on a layer that is drawn. */
+  const shown = (actor: Placement) =>
+    !hiddenLayers.has(
+      layerIds.has(layerOfPlacement(actor))
+        ? layerOfPlacement(actor)
+        : DEFAULT_LAYER,
+    );
   const hitUnder = (world: Vec): Placement | undefined =>
-    hitTest(mapRef.current.actors, world, sizes, scales, placementSizes);
+    hitTest(mapRef.current.actors, world, sizes, scales, placementSizes, shown);
 
   /**
    * What to STORE so that placement `id` lands at world point `at`: the
@@ -883,7 +910,7 @@ export const MapStage = ({
       sizes,
       scales,
       placementSizes,
-      actor => actor.type === selected,
+      actor => actor.type === selected && shown(actor),
     );
 
   /**
@@ -979,13 +1006,6 @@ export const MapStage = ({
     return () => setRevealer('placement', null);
   }, []);
 
-  // The layers and the cameras are rarely what a map is being opened for, and
-  // each is a column of rows over the top-left of the map, so each starts
-  // hidden behind a toolbar button. A lesson that points at one opens it
-  // (`callouts/places`, `map.layers`).
-  const [panels, setPanels] = useState({layers: false, cameras: false});
-  const togglePanel = (panel: 'layers' | 'cameras') =>
-    setPanels(open => ({...open, [panel]: !open[panel]}));
   useEffect(() => {
     setRevealer('mapPanel', ({panel}) => {
       // An app has neither panel, so there is nothing to open.
@@ -3010,6 +3030,11 @@ export const MapStage = ({
       ctx.restore();
     };
     for (const layer of layers) {
+      // Not the layers in front of the one being edited; but all of them
+      // in a picture, which is the place as it is.
+      if (decorate && hiddenLayers.has(layer.id)) {
+        continue;
+      }
       drawSlot(layer.background);
       for (const actor of map.actors) {
         const on = known.has(layerOfPlacement(actor))
@@ -3293,6 +3318,8 @@ export const MapStage = ({
     selectedDocked,
     incoming,
     dropAt,
+    // …and the layers left undrawn while one is edited.
+    [...hiddenLayers].join(' '),
   ]);
 
   const canvasClass = [
@@ -3540,7 +3567,10 @@ export const MapStage = ({
             onClick={() => setShowIcons(shown => !shown)}
           />
         )}
-        {!appBuilder && (
+        {/* Not on a Screen, which has panels and docking instead of
+            layers (SIMPLE_INTERFACE.md, "Map Layers"); a Screen is the one
+            place that docks. */}
+        {!appBuilder && !canDock && (
           <ToolbarIcon
             label="Layers"
             icon="layer-group"
@@ -3577,6 +3607,7 @@ export const MapStage = ({
       <div className={styles.leftColumn}>
         <div className={styles.panels}>
           {!appBuilder &&
+            !canDock &&
             panels.layers &&
             (locked('map-layers') ? (
               // The strip's place, kept: a list nobody can use yet is still where
@@ -3609,6 +3640,8 @@ export const MapStage = ({
                   setSelectedLayer(DEFAULT_LAYER);
                 }}
                 onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
+                showAll={allLayers}
+                onShowAll={setAllLayers}
                 isReadOnly={isReadOnly}
               />
             ))}

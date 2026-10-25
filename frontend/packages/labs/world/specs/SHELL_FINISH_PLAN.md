@@ -107,6 +107,15 @@ pictures after each was opened once, and the preview did not restart.
 - While a layer is selected on a Map, the layers in front of it are not
   drawn; those behind it are. "Show all" in the strip draws every one.
 
+BUILT. While the layer strip is open, the layers in front of the selected
+one are neither drawn nor clickable, so the brush and a press reach only
+what is on that layer or behind it (`mapModel.layersInFrontOf`); "Show all
+layers" in the strip brings them back. Closed, every layer is drawn as
+before, and a place's picture always draws them all. A Screen has no
+Layers button. In the browser: two Coins painted on a new layer in front
+of Main disappeared when Main was pressed in the strip, and came back
+with the box ticked.
+
 ### 3. Cameras on the Viewport
 
 A selected Viewport's inspector has its cameras: the Main Camera always,

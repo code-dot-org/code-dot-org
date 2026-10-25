@@ -137,6 +137,18 @@ export const layerName = (layer: MapLayerDoc): string =>
 export const layerOfPlacement = (placement: Placement): string =>
   placement.layer ?? DEFAULT_LAYER;
 
+/**
+ * The layers in front of `id`, which the editor leaves undrawn while `id`
+ * is edited, so that what is in front does not cover what is being worked
+ * on (SIMPLE_INTERFACE.md, "Map Layers"). Nothing for the front layer, or
+ * for a layer the map has not got.
+ */
+export function layersInFrontOf(doc: MapDoc, id: string): Set<string> {
+  const layers = layersOf(doc);
+  const at = layers.findIndex(layer => layer.id === id);
+  return new Set(at < 0 ? [] : layers.slice(at + 1).map(layer => layer.id));
+}
+
 /** A new layer in front of the rest, and its id: the lowest `layerN` free. */
 export function addLayer(doc: MapDoc): {doc: MapDoc; id: string} {
   const layers = layersOf(doc);

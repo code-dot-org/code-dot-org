@@ -1355,6 +1355,51 @@ describe('a level, with nothing selected', () => {
   });
 });
 
+describe('editing one layer', () => {
+  // SIMPLE_INTERFACE.md, "Map Layers": while the strip is open, the layers
+  // in front of the selected one are not drawn and cannot be clicked.
+  const fronted = (): MapDoc => {
+    const map = doc();
+    return {
+      ...map,
+      layers: [{id: 'main'}, {id: 'front'}],
+      actors: map.actors.map(actor =>
+        actor.id === 'b' ? {...actor, layer: 'front'} : actor,
+      ),
+    };
+  };
+  const press = (canvas: Element, map: MapDoc, at: Vec) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, at));
+    pointer(canvas, 'pointerup', screenPoint(map, at));
+  };
+
+  it('leaves what is in front alone, until asked to show it', () => {
+    const map = fronted();
+    const view = mount(map);
+    // Closed, every layer is there to click.
+    press(view.canvas, map, {x: 144, y: 48});
+    expect(view.selectedId()).toBe('b');
+    press(view.canvas, map, {x: 300, y: 300});
+
+    fireEvent.click(view.getByRole('button', {name: 'Layers'}));
+    press(view.canvas, map, {x: 144, y: 48});
+    expect(view.selectedId()).toBeNull();
+    // …but what is on the layer being edited still is.
+    press(view.canvas, map, {x: 48, y: 48});
+    expect(view.selectedId()).toBe('a');
+
+    fireEvent.click(view.getByRole('checkbox', {name: 'Show all layers'}));
+    press(view.canvas, map, {x: 144, y: 48});
+    expect(view.selectedId()).toBe('b');
+  });
+
+  it('offers no layers on a Screen', () => {
+    const map = fronted();
+    const view = mount(map, {canDock: true});
+    expect(view.queryByRole('button', {name: 'Layers'})).toBeNull();
+  });
+});
+
 describe('what a gated lab withholds', () => {
   const layered = (): MapDoc => ({
     ...doc(),
