@@ -15,6 +15,7 @@ vi.mock('../../appearance/appearanceImport', () => ({
 
 const {LayerInspector} = await import('../LayerInspector');
 const {IMPORT_SLOT} = await import('../BackgroundField');
+const {setFileActHandler} = await import('../../files/fileActs');
 
 const inspector = (
   backgrounds: string[],
@@ -83,5 +84,53 @@ describe('a layer’s background', () => {
     pick(IMPORT_SLOT);
     await Promise.resolve();
     expect(onBackground).not.toHaveBeenCalled();
+  });
+
+  // The way to the backgrounds themselves, where one is chosen
+  // (specs/SHELL_FINISH_PLAN.md, step 4).
+  it('opens the chosen one, and shows a new one once it is made', async () => {
+    const acts = vi.fn(async (act: {act: string}) =>
+      act.act === 'make' ? 'cave.png' : undefined,
+    );
+    setFileActHandler(acts);
+    const onBackground = vi.fn();
+    const layer = (backgrounds: string[], on: typeof onBackground) => (
+      <LayerInspector
+        layer={{id: 'main', background: {sprite: 'sky.png'}}}
+        backgrounds={backgrounds}
+        onChange={vi.fn()}
+        onBackground={on}
+        onClose={vi.fn()}
+        isReadOnly={false}
+      />
+    );
+    const {rerender} = render(layer(['sky.png'], onBackground));
+    fireEvent.click(screen.getByRole('button', {name: 'Edit background'}));
+    expect(acts).toHaveBeenCalledWith({
+      act: 'open',
+      path: 'backgrounds/sky.png',
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Backgrounds'}));
+    expect(
+      screen.getByRole('menuitem', {name: 'Rename Sky…'}),
+    ).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('menuitem', {name: 'New background…'}));
+    expect(acts).toHaveBeenCalledWith({
+      act: 'make',
+      folder: 'backgrounds',
+      open: false,
+      answer: 'name',
+    });
+    const current = vi.fn();
+    rerender(layer(['cave.png', 'sky.png'], current));
+    await vi.waitFor(() =>
+      expect(current).toHaveBeenCalledWith({sprite: 'cave.png'}),
+    );
+    expect(acts).toHaveBeenCalledWith({
+      act: 'open',
+      path: 'backgrounds/cave.png',
+    });
+    setFileActHandler(null);
   });
 });

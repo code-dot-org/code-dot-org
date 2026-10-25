@@ -318,22 +318,12 @@ export const ActorEditor = (props: CustomEditorProps) => {
       }
       edit(setLook(data, animation ? {animation} : {sprite: made.name}));
       if (open) {
-        setOpenAfter(madeId);
+        // Opened on the file menus' next render, which has this save in it
+        // (`fileActs`, `open`).
+        void requestFileAct({act: 'open', fileId: madeId});
       }
     },
   );
-  // …opened once the look is saved: the project in front of every editor
-  // has it then, and opening cannot write over it.
-  const [openAfter, setOpenAfter] = useState<string | null>(null);
-  useEffect(() => {
-    if (
-      openAfter &&
-      currentSources.source.files[fileId]?.contents === written.current
-    ) {
-      setOpenAfter(null);
-      void requestFileAct({act: 'open', fileId: openAfter});
-    }
-  }, [openAfter, currentSources, fileId]);
   const lookAct = (act: () => void) => () => {
     setLookAt(null);
     act();

@@ -905,6 +905,15 @@ describe('a Screen or Map acted on from the toolbar', () => {
       expect.objectContaining({fileName: 'chaser.png'}),
     );
     expect(made).toBe('made');
+
+    promptForName.mockResolvedValueOnce('Cave');
+    expect(
+      await requestFileAct({
+        act: 'make',
+        folder: 'backgrounds',
+        answer: 'name',
+      }),
+    ).toBe('cave.png');
   });
 
   it('answers nothing for a folder nothing makes in', async () => {
@@ -921,10 +930,11 @@ describe('a Screen or Map acted on from the toolbar', () => {
       .mockImplementation(() => {});
     render(<FileMenus menus={false} />);
     await requestFileAct({act: 'open', fileId: 'b'});
-    const opened = updateSources.mock.calls.at(-1)![0] as {
-      source: MultiFileSource;
-    };
-    expect(opened.source.files.b.active).toBe(true);
+    await vi.waitFor(() => expect(activateFile).toHaveBeenCalledWith('b'));
+    // …and by its path, for a door that holds no project.
+    activateFile.mockClear();
+    await requestFileAct({act: 'open', path: 'rules/gravity.rule'});
+    await vi.waitFor(() => expect(activateFile).toHaveBeenCalledWith('a'));
 
     promptForName.mockResolvedValueOnce('Gravity Two');
     await requestFileAct({act: 'clone', fileId: 'a'});

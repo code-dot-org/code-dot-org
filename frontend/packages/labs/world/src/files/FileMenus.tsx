@@ -97,7 +97,7 @@ import {fileIdAt, filePath} from '../runtime/projectFiles';
 
 import {actorUses, withoutPlacementsOf} from './actorUses';
 import {DrawPictureDialog} from './DrawPictureDialog';
-import {setFileActHandler} from './fileActs';
+import {setFileActHandler, type FileRef, type MadeAnswer} from './fileActs';
 import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
@@ -203,7 +203,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    */
   const [describingFor, setDescribingFor] = useState<{
     folder: string;
-    settle: (fileId: string | undefined) => void;
+    settle: (kept: Made | undefined) => void;
   }>();
   /**
    * …and for what, when the Actor Palette asked from one of its tabs; from
@@ -349,7 +349,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
       menu: FolderMenu,
       makeable: Makeable,
       open = true,
-    ): Promise<string | undefined> => {
+    ): Promise<Made | undefined> => {
       await thenAsk();
       const name = await promptForName({
         title: makeable.label,
@@ -398,7 +398,10 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
         ...currentSources,
         source: config.reconcileSource?.(written, ops.source) ?? written,
       });
-      return Object.keys(made.files).find(id => !(id in placed.source.files));
+      const id = Object.keys(made.files).find(
+        each => !(each in placed.source.files),
+      );
+      return id ? {id, name: fileName} : undefined;
     },
     [
       ops.source,
@@ -853,17 +856,19 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    */
   useEffect(() => {
     setFileActHandler(async request => {
+      /** The file a request names, by id or by path, as the project is now. */
+      const named = (ref: FileRef) =>
+        'fileId' in ref
+          ? live.current.files[ref.fileId]
+          : live.current.files[fileIdAt(live.current, ref.path) ?? ''];
+      /** What `make` and `draw` answer for the file they made. */
+      const answer = (made: Made | undefined, how?: MadeAnswer) =>
+        how === 'name' ? made?.name : made?.id;
       if (request.act === 'open') {
         // Opening reads; it is the one act a read-only project still has.
-        // On the project as it is NOW, not as this render held it: the door
-        // may have saved its own file a moment ago — the Actor Editor, its
-        // new look — and a write from the render before would undo that.
-        const now = live.current;
-        if (now.files[request.fileId]) {
-          updateSources({
-            ...currentSources,
-            source: activateFile(now, request.fileId),
-          });
+        const file = named(request);
+        if (file) {
+          setOpening(file.id);
         }
         return undefined;
       }
@@ -892,16 +897,20 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
           menu.makes.find(each => each.extension === request.extension) ??
           menu.makes[0];
         return makeable
-          ? make(menu, makeable, request.open !== false)
+          ? answer(
+              await make(menu, makeable, request.open !== false),
+              request.answer,
+            )
           : undefined;
       }
       if (request.act === 'draw') {
         await thenAsk();
-        return new Promise(settle =>
+        const kept = await new Promise<Made | undefined>(settle =>
           setDescribingFor({folder: request.folder, settle}),
         );
+        return answer(kept, request.answer);
       }
-      const file = live.current.files[request.fileId];
+      const file = named(request);
       if (!file) {
         return undefined;
       }
@@ -927,9 +936,22 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     ops,
     config,
     thenAsk,
-    updateSources,
-    currentSources,
   ]);
+
+  /**
+   * A file asked to be opened (`fileActs`, `open`), opened on the render
+   * after the asking. The door may have saved its own file in the same
+   * breath — the Actor Editor, its new look — and that save is in the
+   * project this render is handed, where a write from the render before
+   * would have undone it.
+   */
+  const [opening, setOpening] = useState<string>();
+  useEffect(() => {
+    if (opening) {
+      setOpening(undefined);
+      ops.activateFile(opening);
+    }
+  }, [opening, ops]);
 
   /**
    * An actor taken out of the project, asked for by the Actor Palette
@@ -1609,7 +1631,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
                     (folderId === undefined || file.folderId === folderId),
                 )
               : undefined;
-            describingFor.settle(kept?.id);
+            describingFor.settle(kept && {id: kept.id, name: kept.name});
             setDescribingFor(undefined);
           }}
         />
@@ -1723,6 +1745,12 @@ const stemOf = (name: string): string => name.replace(/\.[^.]+$/, '');
  */
 const fileNameFor = (name: string, extension: string): string =>
   name.endsWith(`.${extension}`) ? name : `${fileStem(name)}.${extension}`;
+
+/** A file `make` or a drawing wrote: its id, and its name in its folder. */
+interface Made {
+  id: string;
+  name: string;
+}
 
 /**
  * `made` with nothing newly opened: the files open and in front as they were

@@ -6,16 +6,25 @@
 // in the map's own with nothing selected, where it is the background of the
 // layer at the back — the one `set background to` sets — so that a map has
 // a background without the Layers panel having to be found first.
+//
+// AND THE WAY TO THE BACKGROUNDS THEMSELVES, where one is chosen
+// (specs/SHELL_FINISH_PLAN.md, step 4): Edit opens the chosen one in the
+// image editor, a step on the trail, and a menu makes, uploads, draws,
+// renames and deletes them, through the file menus (`files/fileActs`).
 
-import {Typography} from '@mui/material';
+import {Button, ListItemText, Menu, MenuItem, Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
 import {requestAppearanceImport} from '../appearance/appearanceImport';
+import {BACKGROUNDS_FOLDER} from '../appearance/backgroundsFolder';
+import {label} from '../blockly/label';
+import {requestFileAct} from '../files/fileActs';
 import fields from '../formFields.module.css';
 
 import styles from './mapEditor.module.css';
@@ -39,6 +48,12 @@ export interface BackgroundFieldProps {
   isReadOnly: boolean;
 }
 
+/** Where a background of this file name is in the project. */
+const pathOf = (file: string) => `${BACKGROUNDS_FOLDER}/${file}`;
+
+/** `darkCave.png` → `Dark Cave`, as the file menus name it. */
+const nameOf = (file: string) => label(file.replace(/\.[^.]+$/, ''));
+
 const asNumber = (text: string, fallback: number): number => {
   const value = Number(text);
   return text.trim() !== '' && Number.isFinite(value) ? value : fallback;
@@ -60,9 +75,24 @@ export const BackgroundField = ({
     x: String(slot?.offset?.x ?? 0),
     y: String(slot?.offset?.y ?? 0),
   });
-  const importThen = useAfterImport(backgrounds, file =>
-    onChange({sprite: file}),
+  // A background imported, made or drawn here is the one this then shows:
+  // taken in the render whose project has it, and one made to be drawn on
+  // is then opened, on the render after (`useAfterImport`, `fileActs`).
+  const importThen = useAfterImport<{open: boolean} | undefined>(
+    backgrounds,
+    (file, then) => {
+      onChange({sprite: file});
+      if (then?.open) {
+        void requestFileAct({act: 'open', path: pathOf(file)});
+      }
+    },
   );
+  const [menuAt, setMenuAt] = useState<HTMLElement | null>(null);
+  const chosen = slot?.sprite && backgrounds.includes(slot.sprite);
+  const act = (then: () => void) => () => {
+    setMenuAt(null);
+    then();
+  };
   const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       (event.target as HTMLInputElement).blur();
@@ -102,6 +132,108 @@ export const BackgroundField = ({
           importThen(() => requestAppearanceImport('background'), undefined);
         }}
       />
+      <div className={styles.layerActions}>
+        {chosen && (
+          <Button
+            variant="text"
+            size="extraSmall"
+            startIcon={
+              <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="solid" />
+            }
+            onClick={() =>
+              void requestFileAct({act: 'open', path: pathOf(slot.sprite!)})
+            }
+          >
+            Edit background
+          </Button>
+        )}
+        {!isReadOnly && (
+          <Button
+            variant="text"
+            size="extraSmall"
+            aria-haspopup="menu"
+            aria-expanded={menuAt !== null}
+            endIcon={
+              <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
+            }
+            onClick={event => setMenuAt(event.currentTarget)}
+          >
+            Backgrounds
+          </Button>
+        )}
+        {menuAt && (
+          <Menu open anchorEl={menuAt} onClose={() => setMenuAt(null)}>
+            <MenuItem
+              onClick={act(() =>
+                importThen(
+                  () =>
+                    requestFileAct({
+                      act: 'make',
+                      folder: BACKGROUNDS_FOLDER,
+                      open: false,
+                      answer: 'name',
+                    }),
+                  {open: true},
+                ),
+              )}
+            >
+              <ListItemText>New background…</ListItemText>
+            </MenuItem>
+            <MenuItem
+              onClick={act(
+                () =>
+                  void requestFileAct({
+                    act: 'upload',
+                    folder: BACKGROUNDS_FOLDER,
+                  }),
+              )}
+            >
+              <ListItemText>Upload a background…</ListItemText>
+            </MenuItem>
+            <MenuItem
+              onClick={act(() =>
+                importThen(
+                  () =>
+                    requestFileAct({
+                      act: 'draw',
+                      folder: BACKGROUNDS_FOLDER,
+                      answer: 'name',
+                    }),
+                  undefined,
+                ),
+              )}
+            >
+              <ListItemText>Draw a background with AI…</ListItemText>
+            </MenuItem>
+            {chosen && (
+              <MenuItem
+                onClick={act(
+                  () =>
+                    void requestFileAct({
+                      act: 'rename',
+                      path: pathOf(slot.sprite!),
+                    }),
+                )}
+              >
+                <ListItemText>Rename {nameOf(slot.sprite!)}…</ListItemText>
+              </MenuItem>
+            )}
+            {chosen && (
+              <MenuItem
+                onClick={act(
+                  () =>
+                    void requestFileAct({
+                      act: 'delete',
+                      path: pathOf(slot.sprite!),
+                    }),
+                )}
+              >
+                <ListItemText>Delete {nameOf(slot.sprite!)}…</ListItemText>
+              </MenuItem>
+            )}
+          </Menu>
+        )}
+      </div>
       <Checkbox
         name={`${name}-tiled`}
         label="Tiled"

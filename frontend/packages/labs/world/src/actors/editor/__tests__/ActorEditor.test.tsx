@@ -110,7 +110,7 @@ describe('the Actor Editor', () => {
     setFileActHandler(null);
   });
 
-  it('looks like a new picture once it is made, and then opens it', async () => {
+  it('looks like a new picture once it is made, and opens it', async () => {
     const acts = vi.fn(async (act: {act: string}) =>
       act.act === 'make' ? 'crab' : undefined,
     );
@@ -153,28 +153,8 @@ describe('the Actor Editor', () => {
       );
       expect(written().look).toEqual({sprite: 'crab.png'});
     });
-    expect(acts).not.toHaveBeenCalledWith({act: 'open', fileId: 'crab'});
-    // …and once that is saved, the picture opens.
-    const saved = onChange.mock.calls.at(-1)![0] as string;
-    SOURCE = {
-      ...SOURCE,
-      files: {
-        ...SOURCE.files,
-        [PLAYER_ID]: {...SOURCE.files[PLAYER_ID], contents: saved},
-      },
-    };
-    view.rerender(
-      <ActorFileEditor
-        fileId={PLAYER_ID}
-        initialContents={saved}
-        language="actor"
-        isReadOnly={false}
-        onChange={onChange}
-      />,
-    );
-    await vi.waitFor(() =>
-      expect(acts).toHaveBeenCalledWith({act: 'open', fileId: 'crab'}),
-    );
+    // …and the picture opens, once the file menus have that save.
+    expect(acts).toHaveBeenCalledWith({act: 'open', fileId: 'crab'});
     SOURCE = shipped;
     setFileActHandler(null);
   });

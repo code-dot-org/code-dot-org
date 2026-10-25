@@ -187,6 +187,17 @@ BUILT, door by door; each line below is a commit.
   as it is now, so it cannot write over the save. In the browser: Edit
   animation opened the Player's, and New picture made Crab, opened it in
   the image editor as "Player › Crab", and the Player looked like it.
+- **Backgrounds.** The Background field — in a layer's inspector, the
+  map's, and the world's — has Edit background, which opens the chosen
+  one, and a Backgrounds menu: New background, Upload a background, Draw
+  a background with AI, and Rename and Delete of the chosen one. A new or
+  drawn one is the one shown. For it the acts take a file by its path as
+  well as its id (the field holds file names, not a project), and `make`
+  and `draw` can answer the new file's name; `open` now opens on the file
+  menus' next render, so a door may save and open in one breath, and the
+  Actor Editor no longer waits for its save itself. In the browser: New
+  background on the starter's Main map made Dark Cave, opened it as
+  "Main › Dark Cave", and the map's background was `darkCave.png`.
 
 ### 5. The folder buttons go
 
