@@ -44,6 +44,7 @@ import {useScriptStep} from '../../layout/TrailContext';
 import {gameModuleOf} from '../../mainWorld';
 import {useAfterImport} from '../../mapEditor/useAfterImport';
 import {
+  fileIdAt,
   filePath,
   projectFiles,
   projectImagePaths,
@@ -270,6 +271,73 @@ export const ActorEditor = (props: CustomEditorProps) => {
       ? items
       : [...items, {value: lookValue, text: lookValue.replace(/^[a-z]+:/, '')}];
   }, [files, currentSources, lookValue]);
+
+  /**
+   * The file behind what it looks like: a picture by its name among the
+   * actors' pictures, an animation by the `.anim` that holds it. None for an
+   * actor drawn by its code, or one naming what the project lacks.
+   */
+  const lookFile = useMemo(() => {
+    const look = data?.look;
+    if (!look) {
+      return undefined;
+    }
+    const source = currentSources.source;
+    if ('sprite' in look) {
+      return Object.values(source.files).find(
+        file =>
+          file.name === look.sprite &&
+          !isBackgroundPath(filePath(source, file.id) ?? ''),
+      );
+    }
+    const holder = Object.entries(files).find(
+      ([one, held]) =>
+        one.endsWith('.anim') &&
+        look.animation in (parseAnim(held).animations ?? {}),
+    );
+    const id = holder && fileIdAt(source, holder[0]);
+    return id ? source.files[id] : undefined;
+  }, [data?.look, currentSources, files]);
+  const [lookAt, setLookAt] = useState<HTMLElement | null>(null);
+  // A picture or animation made or drawn here is what the actor then looks
+  // like: taken in the render whose project has the file, as an import is
+  // (`useAfterImport`), and then, for one made to be drawn on, opened — a
+  // step on the trail, the actor the crumb before it.
+  const lookThen = useAfterImport<{open: boolean}>(
+    Object.keys(currentSources.source.files),
+    (madeId, {open}) => {
+      const made = currentSources.source.files[madeId];
+      if (!data || !made) {
+        return;
+      }
+      const animation = made.name.endsWith('.anim')
+        ? Object.keys(parseAnim(made.contents ?? '').animations ?? {})[0]
+        : undefined;
+      if (made.name.endsWith('.anim') && !animation) {
+        return;
+      }
+      edit(setLook(data, animation ? {animation} : {sprite: made.name}));
+      if (open) {
+        setOpenAfter(madeId);
+      }
+    },
+  );
+  // …opened once the look is saved: the project in front of every editor
+  // has it then, and opening cannot write over it.
+  const [openAfter, setOpenAfter] = useState<string | null>(null);
+  useEffect(() => {
+    if (
+      openAfter &&
+      currentSources.source.files[fileId]?.contents === written.current
+    ) {
+      setOpenAfter(null);
+      void requestFileAct({act: 'open', fileId: openAfter});
+    }
+  }, [openAfter, currentSources, fileId]);
+  const lookAct = (act: () => void) => () => {
+    setLookAt(null);
+    act();
+  };
 
   if (script?.kind === 'code') {
     return (
@@ -681,6 +749,127 @@ export const ActorEditor = (props: CustomEditorProps) => {
               );
             }}
           />
+          {/* THE WAY TO ITS PICTURES, where the picture is
+              (specs/SHELL_FINISH_PLAN.md, step 4): Edit opens the one it
+              looks like, as a step on the trail; the menu makes, brings in,
+              renames and deletes them. */}
+          <div className={styles.lookActions}>
+            {lookFile && (
+              <Button
+                variant="text"
+                size="small"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconName="pen-to-square"
+                    iconStyle="solid"
+                  />
+                }
+                onClick={() =>
+                  void requestFileAct({act: 'open', fileId: lookFile.id})
+                }
+              >
+                {'sprite' in (data.look ?? {})
+                  ? 'Edit picture'
+                  : 'Edit animation'}
+              </Button>
+            )}
+            {!isReadOnly && (
+              <Button
+                variant="text"
+                size="small"
+                aria-haspopup="menu"
+                aria-expanded={lookAt !== null}
+                endIcon={
+                  <FontAwesomeV6Icon
+                    iconName="chevron-down"
+                    iconStyle="solid"
+                  />
+                }
+                onClick={event => setLookAt(event.currentTarget)}
+              >
+                Pictures
+              </Button>
+            )}
+            {lookAt && (
+              <Menu open anchorEl={lookAt} onClose={() => setLookAt(null)}>
+                <MenuItem
+                  onClick={lookAct(() =>
+                    lookThen(
+                      () =>
+                        requestFileAct({
+                          act: 'make',
+                          folder: 'sprites',
+                          open: false,
+                        }),
+                      {open: true},
+                    ),
+                  )}
+                >
+                  <ListItemText>New picture…</ListItemText>
+                </MenuItem>
+                <MenuItem
+                  onClick={lookAct(() =>
+                    lookThen(
+                      () =>
+                        requestFileAct({
+                          act: 'make',
+                          folder: 'animations',
+                          open: false,
+                        }),
+                      {open: true},
+                    ),
+                  )}
+                >
+                  <ListItemText>New animation…</ListItemText>
+                </MenuItem>
+                <MenuItem
+                  onClick={lookAct(
+                    () =>
+                      void requestFileAct({act: 'upload', folder: 'sprites'}),
+                  )}
+                >
+                  <ListItemText>Upload a picture…</ListItemText>
+                </MenuItem>
+                <MenuItem
+                  onClick={lookAct(() =>
+                    lookThen(
+                      () => requestFileAct({act: 'draw', folder: 'sprites'}),
+                      {open: false},
+                    ),
+                  )}
+                >
+                  <ListItemText>Draw a picture with AI…</ListItemText>
+                </MenuItem>
+                {lookFile && <Divider />}
+                {lookFile && (
+                  <MenuItem
+                    onClick={lookAct(
+                      () =>
+                        void requestFileAct({
+                          act: 'rename',
+                          fileId: lookFile.id,
+                        }),
+                    )}
+                  >
+                    <ListItemText>Rename {fileLabel(lookFile)}…</ListItemText>
+                  </MenuItem>
+                )}
+                {lookFile && (
+                  <MenuItem
+                    onClick={lookAct(
+                      () =>
+                        void requestFileAct({
+                          act: 'delete',
+                          fileId: lookFile.id,
+                        }),
+                    )}
+                  >
+                    <ListItemText>Delete {fileLabel(lookFile)}…</ListItemText>
+                  </MenuItem>
+                )}
+              </Menu>
+            )}
+          </div>
         </div>
       </div>
     </div>

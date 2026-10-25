@@ -5,8 +5,8 @@
 // The menus own the prompts and already do each of these from a folder's
 // row menu, so the doors ask them rather than doing it again
 // (`actors/actorDelete` is the same seam for an actor). A request resolves
-// once the act is done or abandoned. `make` answers the new file's id, so
-// the door that asked can take it; the rest answer nothing, and what they
+// once the act is done or abandoned. `make` and `draw` answer the new file's
+// id, so the door that asked can take it; the rest answer nothing, and what they
 // did is seen in the project. A file made or opened is the one now in
 // front, a step on the trail.
 
@@ -18,7 +18,21 @@ export type FileAct =
    * name the learner gives; of `extension` where the folder makes more than
    * one kind.
    */
-  | {act: 'make'; folder: string; extension?: string}
+  | {
+      act: 'make';
+      folder: string;
+      extension?: string;
+      /**
+       * False to leave it closed, for a door with more to do first; it then
+       * asks `open` itself.
+       */
+      open?: boolean;
+    }
+  /**
+   * A picture drawn from words, into `sprites` or `backgrounds`; answers
+   * the kept file's id, or nothing.
+   */
+  | {act: 'draw'; folder: string}
   /** One of the learner's own files, into a folder that takes them. */
   | {act: 'upload'; folder: string}
   /** Put it in front, in its editor. */

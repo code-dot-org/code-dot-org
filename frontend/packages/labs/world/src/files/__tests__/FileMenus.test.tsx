@@ -921,7 +921,10 @@ describe('a Screen or Map acted on from the toolbar', () => {
       .mockImplementation(() => {});
     render(<FileMenus menus={false} />);
     await requestFileAct({act: 'open', fileId: 'b'});
-    expect(activateFile).toHaveBeenCalledWith('b');
+    const opened = updateSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(opened.source.files.b.active).toBe(true);
 
     promptForName.mockResolvedValueOnce('Gravity Two');
     await requestFileAct({act: 'clone', fileId: 'a'});

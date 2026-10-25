@@ -55,6 +55,7 @@ vi.mock('../../enhance/actorEnhance', () => ({
 }));
 
 const {ActorFileEditor} = await import('../ActorEditor');
+const {setFileActHandler} = await import('../../../files/fileActs');
 
 const onChange = vi.fn();
 beforeEach(() => onChange.mockClear());
@@ -92,6 +93,90 @@ describe('the Actor Editor', () => {
     expect(look.value).toBe('animation:playerBob');
     fireEvent.change(look, {target: {value: ''}});
     expect(written().look).toBeUndefined();
+  });
+
+  it('opens what it looks like, as a step on the trail', () => {
+    const acts = vi.fn(async () => undefined);
+    setFileActHandler(acts);
+    open();
+    fireEvent.click(screen.getByRole('button', {name: 'Edit animation'}));
+    const anim = Object.values(SOURCE.files).find(
+      file =>
+        file.name.endsWith('.anim') &&
+        (file.contents ?? '').includes('playerBob'),
+    )!;
+    expect(anim.name).toMatch(/\.anim$/);
+    expect(acts).toHaveBeenCalledWith({act: 'open', fileId: anim.id});
+    setFileActHandler(null);
+  });
+
+  it('looks like a new picture once it is made, and then opens it', async () => {
+    const acts = vi.fn(async (act: {act: string}) =>
+      act.act === 'make' ? 'crab' : undefined,
+    );
+    setFileActHandler(acts);
+    const shipped = SOURCE;
+    const view = open();
+    fireEvent.click(screen.getByRole('button', {name: 'Pictures'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'New picture…'}));
+    expect(acts).toHaveBeenCalledWith({
+      act: 'make',
+      folder: 'sprites',
+      open: false,
+    });
+    // The project has the new picture: the actor takes it…
+    const sprites = Object.values(SOURCE.files).find(file =>
+      file.name.endsWith('.png'),
+    )!.folderId;
+    SOURCE = {
+      ...SOURCE,
+      files: {
+        ...SOURCE.files,
+        crab: {
+          id: 'crab',
+          name: 'crab.png',
+          language: 'png',
+          contents: '',
+          folderId: sprites,
+        },
+      },
+    };
+    await vi.waitFor(() => {
+      view.rerender(
+        <ActorFileEditor
+          fileId={PLAYER_ID}
+          initialContents={PLAYER}
+          language="actor"
+          isReadOnly={false}
+          onChange={onChange}
+        />,
+      );
+      expect(written().look).toEqual({sprite: 'crab.png'});
+    });
+    expect(acts).not.toHaveBeenCalledWith({act: 'open', fileId: 'crab'});
+    // …and once that is saved, the picture opens.
+    const saved = onChange.mock.calls.at(-1)![0] as string;
+    SOURCE = {
+      ...SOURCE,
+      files: {
+        ...SOURCE.files,
+        [PLAYER_ID]: {...SOURCE.files[PLAYER_ID], contents: saved},
+      },
+    };
+    view.rerender(
+      <ActorFileEditor
+        fileId={PLAYER_ID}
+        initialContents={saved}
+        language="actor"
+        isReadOnly={false}
+        onChange={onChange}
+      />,
+    );
+    await vi.waitFor(() =>
+      expect(acts).toHaveBeenCalledWith({act: 'open', fileId: 'crab'}),
+    );
+    SOURCE = shipped;
+    setFileActHandler(null);
   });
 
   it('adds a property of its own, and sets where it starts', () => {

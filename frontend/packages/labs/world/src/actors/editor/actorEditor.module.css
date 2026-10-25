@@ -162,3 +162,10 @@
   display: flex;
   gap: 0.25rem;
 }
+
+/* Edit, and the menu of what to do with its pictures, under the look. */
+.lookActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}

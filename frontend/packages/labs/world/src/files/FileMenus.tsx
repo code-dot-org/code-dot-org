@@ -96,6 +96,7 @@ import {resolveRuleContents} from '../rules/ruleReference';
 import {fileIdAt, filePath} from '../runtime/projectFiles';
 
 import {actorUses, withoutPlacementsOf} from './actorUses';
+import {DrawPictureDialog} from './DrawPictureDialog';
 import {setFileActHandler} from './fileActs';
 import styles from './fileMenus.module.css';
 import {
@@ -196,6 +197,14 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    * is the moment a learner has the question it asks.
    */
   const [creating, setCreating] = useState(false);
+  /**
+   * A picture being drawn from words for a door (`fileActs`, `draw`): which
+   * folder it lands in, and how to answer the door.
+   */
+  const [describingFor, setDescribingFor] = useState<{
+    folder: string;
+    settle: (fileId: string | undefined) => void;
+  }>();
   /**
    * …and for what, when the Actor Palette asked from one of its tabs; from
    * a folder's menu, nothing, and the wizard offers everything
@@ -339,6 +348,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     async (
       menu: FolderMenu,
       makeable: Makeable,
+      open = true,
     ): Promise<string | undefined> => {
       await thenAsk();
       const name = await promptForName({
@@ -380,9 +390,13 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
               folderId: placed.folderId,
               contents: seed?.contents,
             });
+      // Unopened, for a door with more to do before the file is in front:
+      // the Actor Editor gives its actor the new picture first, which it
+      // cannot do once its editor has gone (`fileActs`).
+      const written = open ? made : quietly(made, ops.source);
       updateSources({
         ...currentSources,
-        source: config.reconcileSource?.(made, ops.source) ?? made,
+        source: config.reconcileSource?.(written, ops.source) ?? written,
       });
       return Object.keys(made.files).find(id => !(id in placed.source.files));
     },
@@ -841,8 +855,15 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     setFileActHandler(async request => {
       if (request.act === 'open') {
         // Opening reads; it is the one act a read-only project still has.
-        if (live.current.files[request.fileId]) {
-          ops.activateFile(request.fileId);
+        // On the project as it is NOW, not as this render held it: the door
+        // may have saved its own file a moment ago — the Actor Editor, its
+        // new look — and a write from the render before would undo that.
+        const now = live.current;
+        if (now.files[request.fileId]) {
+          updateSources({
+            ...currentSources,
+            source: activateFile(now, request.fileId),
+          });
         }
         return undefined;
       }
@@ -870,7 +891,15 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
         const makeable =
           menu.makes.find(each => each.extension === request.extension) ??
           menu.makes[0];
-        return makeable ? make(menu, makeable) : undefined;
+        return makeable
+          ? make(menu, makeable, request.open !== false)
+          : undefined;
+      }
+      if (request.act === 'draw') {
+        await thenAsk();
+        return new Promise(settle =>
+          setDescribingFor({folder: request.folder, settle}),
+        );
       }
       const file = live.current.files[request.fileId];
       if (!file) {
@@ -897,6 +926,9 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     uploading,
     ops,
     config,
+    thenAsk,
+    updateSources,
+    currentSources,
   ]);
 
   /**
@@ -1201,25 +1233,8 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
         url,
         mimeType: picture.mediaType,
       });
-      // …AND IT OPENS NOTHING. `createExternalFile` activates what it makes,
-      // and the tab bar reads the SOURCE's `openFiles` list — so both that and
-      // the file's own two flags have to be put back, which took three goes to
-      // find (`codebridge.activateFile` writes all three).
-      const quiet = {
-        ...made,
-        openFiles: from.openFiles,
-        files: Object.fromEntries(
-          Object.entries(made.files).map(([id, file]) => {
-            const before = from.files[id];
-            return [
-              id,
-              before
-                ? {...file, open: before.open, active: before.active}
-                : {...file, open: false, active: false},
-            ];
-          }),
-        ),
-      };
+      // …AND IT OPENS NOTHING (`quietly`).
+      const quiet = quietly(made, from);
       const next = config.reconcileSource?.(quiet, from) ?? quiet;
       // Said here as well as dispatched, because a caller may read it back
       // before React has rendered — the wizard does, one line later.
@@ -1578,6 +1593,27 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
           onCancel={() => setPainting(false)}
         />
       )}
+      {describingFor && (
+        <DrawPictureDialog
+          drawing={drawing}
+          background={describingFor.folder === BACKGROUNDS_FOLDER}
+          onKeep={picture => keepPicture(picture, describingFor.folder)}
+          onDone={fileName => {
+            const folderId = folderIds.get(describingFor.folder);
+            // By its name in its folder, as it is now: the keep has written
+            // it, and this render's project may not have it yet.
+            const kept = fileName
+              ? Object.values(live.current.files).find(
+                  file =>
+                    file.name === fileName &&
+                    (folderId === undefined || file.folderId === folderId),
+                )
+              : undefined;
+            describingFor.settle(kept?.id);
+            setDescribingFor(undefined);
+          }}
+        />
+      )}
       {/* One input for all nine menus: which folder asked is a ref, because the
           browser's file picker answers long after the click that opened it. */}
       <input
@@ -1687,3 +1723,31 @@ const stemOf = (name: string): string => name.replace(/\.[^.]+$/, '');
  */
 const fileNameFor = (name: string, extension: string): string =>
   name.endsWith(`.${extension}`) ? name : `${fileStem(name)}.${extension}`;
+
+/**
+ * `made` with nothing newly opened: the files open and in front as they were
+ * in `from`, and a new one closed.
+ *
+ * `createNewFile` and `createExternalFile` activate what they make, and the
+ * tab bar reads the SOURCE's `openFiles` list, so that and each file's own
+ * two flags have to be put back, which took three goes to find
+ * (`codebridge.activateFile` writes all three).
+ */
+const quietly = (
+  made: MultiFileSource,
+  from: MultiFileSource,
+): MultiFileSource => ({
+  ...made,
+  openFiles: from.openFiles,
+  files: Object.fromEntries(
+    Object.entries(made.files).map(([id, file]) => {
+      const before = from.files[id];
+      return [
+        id,
+        before
+          ? {...file, open: before.open, active: before.active}
+          : {...file, open: false, active: false},
+      ];
+    }),
+  ),
+});

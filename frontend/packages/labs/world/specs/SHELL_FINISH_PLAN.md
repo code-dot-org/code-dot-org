@@ -173,6 +173,20 @@ BUILT, door by door; each line below is a commit.
   file. `make` answers the new file's id, so the door that asked can take
   it. `upload` answers at once, since the browser's picker says nothing
   when it is cancelled. `open` is the one act a read-only project keeps.
+- **Pictures and animations.** Under the Actor Editor's "Looks like",
+  Edit picture (or Edit animation) opens the file it looks like, a step
+  on the trail ("Player › Game"), and a Pictures menu has New picture,
+  New animation, Upload a picture, Draw a picture with AI, and Rename and
+  Delete of the one it looks like. A picture or animation made or drawn
+  there is what the actor then looks like. Two acts were added for it:
+  `make` may leave the new file closed (`open: false`), and `draw` asks
+  for a picture in words (`DrawPictureDialog`, the panel the Actor
+  Creator uses) and answers the kept file's id. The actor takes its new
+  look in the render whose project has the file (`useAfterImport`), and
+  only once that is saved is the picture opened; `open` reads the project
+  as it is now, so it cannot write over the save. In the browser: Edit
+  animation opened the Player's, and New picture made Crab, opened it in
+  the image editor as "Player › Crab", and the Player looked like it.
 
 ### 5. The folder buttons go
 
