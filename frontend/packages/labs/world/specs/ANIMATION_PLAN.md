@@ -1,0 +1,207 @@
+# Plan: animations on the actor (SIMPLE_INTERFACE.md, phase seven)
+
+STATUS: IN PROGRESS.
+
+The seventh phase of the simple interface: "Animations", under the Actor
+Editor. An actor is a set of animations with a Main one; each is a timeline
+of keyframes over the actor's look; a flipbook and a tween are the same
+thing, made on the same timeline in the Actor Editor. Three plans left this
+for here (ACTOR_EDITOR_PLAN.md, SHELL_FINISH_PLAN.md, and the spec's own
+"Not in this phase" lists).
+
+## What exists
+
+- **An animation is a flipbook in a project file.** A `.anim` file under
+  `animations/` holds named animations, each a list of frames: a sprite or
+  one cell of a sheet, with an optional delay, scale and offset, and a
+  frame rate and a loop flag for the whole (`animationEditor/animDocument`,
+  `engine/core/animationFile`). Ids are global: `playerBob`, `coinSpin`.
+- **Every `.anim` is registered with the world** by the generated code,
+  whether anything plays it (`domainBlocks`, `world.useAnimations`).
+- **The engine plays one animation per actor** (`engine/rules/animation`,
+  the Appearance rule): `AnimationProperty` names it, a per-tick step
+  advances the frame by its delay, and `AnimationEnded` fires when one that
+  does not loop finishes. `World.renderSnapshot` draws the frame, with the
+  frame's offset and scale.
+- **An actor names one by id.** A data-shaped actor's look is
+  `{sprite}` or `{animation}` (`actors/actorData`, `ActorLook`), written
+  as a `set sprite` or `play animation` row in its code view. `play
+animation ⟨id⟩ on ⟨actor⟩` offers every id the project's files define.
+- **They are edited apart from the actor**, in the animation editor
+  (`animationEditor/AnimationEditor`, about 1,450 lines), opened from the
+  look's Edit animation since phase six.
+- **Nine stock animations** ship as `.anim` data with the sprites they
+  read (`appearance/stock`, `STOCK_ANIMATIONS`), two of them brought by
+  stock actors (the Coin's spin, the Player's bob); `pulse` and
+  `playerBob` are already tweens made of frames, one picture scaled or
+  moved frame by frame. The animation shelf imports the others.
+- **Effects are data on the actor**, each with whether it starts on, and
+  the engine adds and removes them by path (`Actor.addEffect`,
+  `removeEffect`).
+
+## Decisions
+
+Taken from the review of the phase; the spec's own words are in
+SIMPLE_INTERFACE.md, "Animations".
+
+- **Animations are data on the actor**, as its effects are:
+  `animations: {Main: {...}, Walk: {...}}` in the actor's file. They are
+  reached from the actor and named within it; `play animation ⟨Walk⟩` on
+  a Coin means the Coin's Walk.
+- **`.anim` files and the separate animation editor are retired**, not
+  kept beside the timeline. Nothing has shipped (no migrations). A
+  flipbook is a timeline whose only track is the sprite, so the timeline
+  replaces the frame list rather than standing next to it. The stock
+  animations become animation data that the actor bringing them carries,
+  and the lessons that teach "an animation is a file" are rewritten.
+- **A curated set of properties is animated**, not every property a trait
+  declares: the sprite (and its cell), where the picture is drawn relative
+  to the actor, its scale, its turn, its opacity, and each effect's on
+  and off. Effect settings that are numbers come after, in the same
+  shape. Physics is not animated.
+- **What moves is the DRAWING, not the actor.** Position, scale and turn
+  tracks are a drawn offset, a drawn scale and a drawn turn on top of the
+  actor's own, which is what a frame's offset and scale already are. So a
+  bob plays wherever the actor stands and while it walks, and an
+  animation never fights the rule moving the actor.
+- **Each animation has a Loop box.** Main loops by default, as the
+  flipbooks do now; a new one does not. One that does not loop ends at its
+  last key and raises `AnimationEnded`.
+- **Linear only.** Numbers and vectors are interpolated linearly between
+  keys; a sprite, a cell and an effect's on and off hold until the next
+  key. A key has room for an `ease` that is not written yet.
+- **Main is the look.** An actor with a still picture has a Main of one
+  sprite key at 0. The Actor Editor's "Looks like" becomes Main's sprite.
+
+## The shape
+
+```json
+"animations": {
+  "Main": {
+    "loop": true,
+    "length": 0.6,
+    "tracks": {
+      "sprite": [
+        {"at": 0, "value": "coinSpin.png#0"},
+        {"at": 0.1, "value": "coinSpin.png#1"}
+      ],
+      "drawnOffset": [
+        {"at": 0, "value": {"x": 0, "y": 0}},
+        {"at": 0.3, "value": {"x": 0, "y": -4}}
+      ],
+      "effect:effects/ripple": [{"at": 0.2, "value": true}]
+    }
+  }
+}
+```
+
+- A track per property; a key is a time in seconds and a value.
+- `length` is the timeline's, 5 seconds by default; the animation ends at
+  its last key, and a loop wraps there.
+- A track the animation does not have leaves that property alone, so an
+  animation of only a turn leaves the sprite to Main or to code.
+
+## What is being built
+
+One commit each, or a few where a step is large.
+
+### 1. The animation as data, and its arithmetic
+
+`engine/core/keyframes.ts`: the types, `valueAt(track, t)` (linear for
+numbers and vectors, held for the rest), `endOf(animation)`, and the
+edits the editor makes — set a value at a time (adding or replacing a
+key), remove a key, move one. Pure, with tests.
+
+BUILT. `engine/core/keyframes`: `Key`, `Track`, `Timeline`;
+`valueAt`, which says nothing before a track's first key (an effect
+switched on at 0.2 leaves the actor's own until then) and holds the last
+value after its last; `endOf`; `timeIn`, which wraps a loop at its end and
+stops one that does not, so that one whose every key is at 0 — a still
+picture — has ended at once; and `withKey`, `withoutKey`, `withKeyMoved`.
+Times are kept to the millisecond, so a key is found where it was put.
+
+Found while building: an animation ends at its LAST KEY, so a flipbook's
+last picture, keyed when it starts, would be shown for no time at all
+before a loop wrapped. A flipbook therefore carries a closing key, its last
+picture again, one frame after it; the conversion in step 4 and Add frames
+in step 8 write it.
+
+### 2. The engine plays it
+
+The actor's kind registers its animations with the world under its own
+name (`actors/coin#Main`), and `play animation` resolves a name against
+the actor's kind before anything else. The Appearance rule's step plays a
+timeline animation: it advances the time, wraps or ends it, and sets each
+track's property at that time. The drawn offset, scale and turn are new
+Appearance properties, which `renderSnapshot` applies; an effect track
+adds and removes the effect. `AnimationEnded` and `FrameChanged` keep
+their meaning, a frame being a key of the sprite track. Engine tests.
+
+### 3. The actor's data and its code
+
+`ActorData.animations`; the code view registers them and plays Main when
+the actor is created; the fold reads them back. `ActorLook` folds into
+Main. `play animation`'s dropdown offers the target's kind's animations,
+this actor's when the target is `this actor`. The readers that draw an
+actor from its file — the palette, the stage's local pictures, the Actor
+Creator's picture step — read Main's first sprite.
+
+### 4. The stock, and `.anim` retired
+
+The stock animations become timelines (`appearance/stock`), carried by the
+stock actors that use them; the animation shelf adds one to the actor in
+the Actor Editor rather than writing a file. Then `.anim` goes: the file
+kind, `animations/` in the list of kinds, `world.useAnimations` of files,
+the animation editor, its picker and dialogs, the Pictures menu's New
+animation, and the look's Edit animation. The fixtures and the stock
+actors are converted, not migrated. Likely two commits.
+
+### 5. The animations in the Actor Editor
+
+Under the preview, the actor's animations as a row (a menu when they do
+not fit), Main first and marked; Add New Animation; rename, delete, and
+Loop. Choosing one shows its first moment in the preview.
+
+### 6. The timeline
+
+Below the row: a strip the animation's length, ticks along it, each key as
+a mark on its track's row, and a playhead. Pressing the strip moves the
+playhead and previews that moment; Play runs it. The preview is painted
+here from the actor's pictures (`mapEditor/localPictures`), since the
+sandbox's thumbnail cannot be asked for a moment; effects are not drawn in
+it, and the preview says so when an effect track is on. Keyboard: the
+arrows move the playhead a tick, Home and End go to the ends.
+
+### 7. Editing at the playhead
+
+The side panel shows each animated property at the playhead: a key's own
+value plainly, an interpolated one in italics. Changing one writes a key
+there. A key is selected by pressing its mark, moved by dragging it (or
+Alt and an arrow), and removed with Delete. An effect's on and off at the
+playhead is its checkbox on the Effects tab, which writes an effect key.
+
+### 8. A flipbook from a sheet
+
+"Add frames" puts a sheet's cells on the sprite track at a frame rate, one
+key per cell, which is the frame list's one job that the timeline does
+not do by hand; the cell picker comes from the animation editor
+(`CellPicker`, `AddFramesDialog`), moved to the Actor Editor.
+
+### 9. The lessons and the scenarios
+
+The lessons and scenario instructions that name `animations/`, `.anim`
+or the animation editor are rewritten for the actor's animations; the
+catalogue's checks that read `.anim` files read the actor's instead.
+
+### 10. Documents, the browser, and the ledger
+
+## Not in this phase
+
+- Easing. The key has room for it.
+- Animating a trait's own properties, or effect settings that are not
+  numbers.
+- An animation shared between two kinds. One kind may act like another
+  (`actsLike`), and what that means for animations is decided when it
+  comes up.
+- Importing a Screen or Map from another project; effects on a whole
+  Screen or Map; the All maps and This map switch.
