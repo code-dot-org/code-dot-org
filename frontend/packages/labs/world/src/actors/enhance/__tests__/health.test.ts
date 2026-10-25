@@ -175,11 +175,8 @@ describe('the health enhancement, played', () => {
       HealthProperty: never;
       MostHealthProperty: never;
     };
-    // TWO ticks, and the reason is the design: `is created` is queued like
-    // every other event, so the bar is added on the first tick's flush and
-    // is in the world by the second. One frame, and it buys a handler that
-    // may add an actor without the world growing while somebody walks it
-    // (`engine/rules/spatial`).
+    // The bar is there before anything is drawn (`World.settleCreations`);
+    // two ticks so it has also been laid out and filled by its steps.
     world.tick(1 / 60);
     world.tick(1 / 60);
     const actors = [...world.actors];
@@ -206,6 +203,22 @@ describe('the health enhancement, played', () => {
     const [, fill] = state.drawing!.commands;
     return fill.width!;
   };
+
+  it('brings the bar in time for the first picture', async () => {
+    // Not a frame late: `is created` runs before the actor is first drawn,
+    // and the driver draws once before it ticks
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 1).
+    const {world, modules} = await compileProject(projectFiles(enhanced(1)));
+    const health = modules['rules/health'] as unknown as {
+      HasHealthTrait: never;
+    };
+    const drawn = world.renderSnapshot() as Array<{
+      actor: {has: (trait: never) => boolean};
+    }>;
+    expect(
+      drawn.filter(state => !state.actor.has(health.HasHealthTrait)),
+    ).not.toHaveLength(0);
+  }, 60000);
 
   it('gives the player health, and draws how much of it is left', async () => {
     const {world, health, players, bars} = await played();

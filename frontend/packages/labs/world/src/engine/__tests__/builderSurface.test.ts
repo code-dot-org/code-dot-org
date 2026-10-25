@@ -78,8 +78,8 @@ const RUNTIME_ONLY: Record<string, string> = {
     'being described has nowhere to write (specs/SAVING_PLAN.md)',
   recall:
     'the same, and why restoring belongs in a handler rather than in a ' +
-    'world\u2019s body: `when \u27e8…\u27e9 is created` runs on the first tick, ' +
-    'which is after the driver has lent the storage',
+    'world\u2019s body: `when \u27e8…\u27e9 is created` runs before the actor ' +
+    'is first drawn, which is after the driver has lent the storage',
   forget: 'the same again',
   rememberActors:
     'the storage is lent once the world exists, and there are no actors to ' +

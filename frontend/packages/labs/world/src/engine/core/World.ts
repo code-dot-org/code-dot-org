@@ -87,6 +87,13 @@ import {
 } from './viewport';
 
 /**
+ * How many rounds of creation handlers one `settleCreations` runs: an actor
+ * made by a handler that was itself made is a second round, and so on. Past
+ * this, the rest are set up on the next call.
+ */
+const CREATION_ROUNDS = 16;
+
+/**
  * The steps a paused world still runs: the `sense` phase, where held keys
  * and buttons become events, and nothing else (`World.pause`). A step with
  * no phase — the Animation rule's frame advance is one — is work, and waits
@@ -814,6 +821,14 @@ export class World {
   private readonly ownProperties: Array<Property<unknown>> = [];
   private readonly events = new EventQueue();
   /**
+   * Actors made and not yet told so: `is created` runs for each once it
+   * exists and before it is first drawn (specs/ACTORS_AS_DATA_PLAN.md,
+   * step 1). See {@link settleCreations}.
+   */
+  private creating: Actor[] = [];
+  /** Whether {@link settleCreations} is running, so it does not run inside itself. */
+  private settling = false;
+  /**
    * Handlers for the world's own events, by event.
    *
    * On the World rather than on some actor standing in for it. `rules/input`
@@ -1419,18 +1434,72 @@ export class World {
         traits: [...this.cameraTraitsOf(actor.type)],
       });
     }
-    // …and the actor hears that it exists, which is the one event every actor
-    // gets without electing anything (`rules/spatial`). Queued like the rest,
-    // so a handler that adds ANOTHER actor — which is the commonest thing to
-    // do here — is not growing this list while somebody is walking it.
-    //
-    // Looked up by id rather than imported: core cannot reach the rule layer,
-    // and this is the same door `renderSnapshot` opens for the transform.
-    const created = this.spatialEvent(SPATIAL.created);
-    if (created) {
-      this.emit(created, actor);
-    }
+    // …and the actor will hear that it exists, which is the one event every
+    // actor gets without electing anything (`rules/spatial`). NOT HERE, so a
+    // handler that adds ANOTHER actor — the commonest thing to do in one — is
+    // not growing this list while somebody is walking it; and not on the
+    // general queue either, which would leave the actor drawn once before it
+    // had been set up. See `settleCreations`.
+    this.creating.push(actor);
     return actor;
+  }
+
+  /**
+   * Run `is created` for every actor made and not yet told, and for the
+   * actors those handlers make, before anything is drawn.
+   *
+   * An actor's creation handler is where what it does on being made lives:
+   * the definitional work that is not a value (specs/ACTORS_AS_DATA_PLAN.md).
+   * So it runs ONCE THE ACTOR EXISTS AND BEFORE IT IS FIRST DRAWN, which can
+   * be the tick that made it. Called at the start of a tick, before the
+   * steps, so an actor placed while the world was built is set up before
+   * anything moves it; at the end of one, after the handlers, so an actor a
+   * handler made is set up in the tick that made it; and at the start of
+   * `renderSnapshot`, so nothing is drawn unannounced — the driver's first
+   * frame, a thumbnail and a play check alike.
+   *
+   * Never inside the call that placed the actor, which is why there is a
+   * list: placing from a handler is ordinary, and the list being walked
+   * here is this one, not the world's. A handler that makes actors makes
+   * another round, up to a bound, past which they wait for the next call —
+   * so an actor that makes another of itself costs a frame each, rather
+   * than hanging this one.
+   */
+  private settleCreations(): void {
+    if (this.settling || this.creating.length === 0) {
+      return;
+    }
+    // Looked up by id rather than imported: core cannot reach the rule
+    // layer, and this is the same door `renderSnapshot` opens for the
+    // transform. A world without that rule has nobody to tell.
+    const created = this.spatialEvent(SPATIAL.created);
+    if (!created) {
+      this.creating = [];
+      return;
+    }
+    this.settling = true;
+    try {
+      for (
+        let round = 0;
+        round < CREATION_ROUNDS && this.creating.length > 0;
+        round++
+      ) {
+        const batch = this.creating;
+        this.creating = [];
+        for (const actor of batch) {
+          // Gone before it was told, by a handler or a step: there is no
+          // actor left to set up.
+          if (actor.world !== this || this.leaving.has(actor)) {
+            continue;
+          }
+          for (const handler of actor.handlersFor(created)) {
+            this.withActor(actor, () => handler(this, actor));
+          }
+        }
+      }
+    } finally {
+      this.settling = false;
+    }
   }
 
   /**
@@ -4304,10 +4373,15 @@ export class World {
       for (const space of this.viewportSpaces) {
         this.lendCameraProperties(space);
       }
+      // Whatever was made since the last tick is set up before any step
+      // reads it (`settleCreations`).
+      this.settleCreations();
       this.scheduler.run(this, delta, this.paused ? whilePaused : undefined);
       // Handlers run here, and a handler is where "remove that coin" comes
       // from — so the sweep below is after them, not before.
       this.events.flush(this);
+      // …and what the steps and handlers made, before this tick is drawn.
+      this.settleCreations();
     } finally {
       this.inTick = false;
       for (const actor of this.leaving) {
@@ -4812,6 +4886,8 @@ export class World {
   }
 
   renderSnapshot(): RenderState[] {
+    // Nothing is drawn before it has heard it was made (`settleCreations`).
+    this.settleCreations();
     const spatial = this.membership.items().find(r => r.id === SPATIAL.rule);
     const positional: Trait | undefined = spatial?.traits[SPATIAL.trait];
     if (!positional) {

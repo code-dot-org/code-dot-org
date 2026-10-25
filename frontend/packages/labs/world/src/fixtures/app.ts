@@ -398,7 +398,7 @@ const MAIN_SCREEN = JSON.stringify(
           // RESTORING IS A HANDLER. The storage is lent once the world exists,
           // and setup runs while it is still being described — so a `load`
           // there would answer false every time (specs/SAVING_PLAN.md). `is
-          // created` runs on the first tick, which is after.
+          // created` runs before the list is first drawn, which is after.
           //
           // Hung on the LIST because the list is the thing that has to show the
           // answer: recall, then fill, in one handler, in that order.
