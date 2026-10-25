@@ -2,7 +2,7 @@
 // a dropdown that opens the switcher, and beside it the actions on it
 // (SIMPLE_INTERFACE.md, "Screen/Map Toolbar"; specs/SHELL_PLAN.md, step 4).
 //
-// Rename and Delete are the file menus' own acts, asked for through
+// Rename, Clone and Delete are the file menus' own acts, asked for through
 // `files/fileActs`; the Main Screen can be renamed and not deleted, since a
 // project is run from it.
 
@@ -103,6 +103,11 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
           >
             <MenuItem onClick={() => act({act: 'rename', fileId})}>
               <ListItemText>Rename</ListItemText>
+            </MenuItem>
+            {/* A copy under a new name, opened: a second level that starts
+                as this one. */}
+            <MenuItem onClick={() => act({act: 'clone', fileId})}>
+              <ListItemText>Clone</ListItemText>
             </MenuItem>
             {!isEntry && (
               <MenuItem onClick={() => act({act: 'delete', fileId})}>

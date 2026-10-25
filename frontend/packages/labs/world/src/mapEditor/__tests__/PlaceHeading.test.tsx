@@ -94,6 +94,16 @@ describe('the head of the toolbar', () => {
     });
   });
 
+  it('clones a map, from its actions', () => {
+    render(<PlaceHeading fileId="level" isReadOnly={false} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Map actions'}));
+    fireEvent.click(screen.getByRole('menuitem', {name: 'Clone'}));
+    expect(requestFileAct).toHaveBeenCalledWith({
+      act: 'clone',
+      fileId: 'level',
+    });
+  });
+
   it('offers nothing to change in a project that is read only', () => {
     render(<PlaceHeading fileId="main" isReadOnly />);
     expect(screen.queryByRole('button', {name: 'Screen actions'})).toBeNull();

@@ -209,6 +209,9 @@ BUILT, door by door; each line below is a commit.
   and opens it in the theme editor. A placement's own Theme dropdown is
   left as it was. In the browser: New theme on the starter's Main map made
   Dusk, opened it, and the map's theme was `styles/dusk`.
+- **Maps.** The place's actions beside its name, a Map's or a Screen's,
+  gain Clone, which asks a name and opens the copy. In the browser: Clone
+  on the starter's Main map, named Level Two, opened the copy.
 
 ### 5. The folder buttons go
 
