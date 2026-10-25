@@ -105,6 +105,15 @@ whatever their shape. A test folds every stock actor, scenario actor and
 lesson actor, views it again, and compiles both: the two modules hold the
 same lines.
 
+BUILT. `actors/actorData.ts`. Every shipped and taught actor folds with
+nothing left over as `setup`, and views and folds again to the same data.
+The two modules hold the same lines once the ids Blockly gives a block
+saved without one are masked, since those are random on every load. The
+view puts the definition rows in its own order (acts like, is data, icon,
+look, traits, properties, values, then the code), so the lines are
+compared in no order; that no actor's behavior hangs on the order of its
+rows is shown when the scenarios play in the data shape (step 5).
+
 ### 2. The compiler and the readers through the view
 
 The generator, `parseActorOwnMeta` and the project's module list, the icon

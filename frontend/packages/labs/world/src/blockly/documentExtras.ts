@@ -9,7 +9,7 @@
 // back on every save.
 
 /** The keys Blockly's own serializers own; everything else is the file's. */
-const WORKSPACE_KEYS: ReadonlySet<string> = new Set([
+export const WORKSPACE_KEYS: ReadonlySet<string> = new Set([
   'blocks',
   'variables',
   'procedures',
