@@ -152,6 +152,10 @@ below, and are listed last.
   and Main says it plays "when made"; the preview of the chosen one is an
   image named for it ("Pilot, Fly at its start"). Choosing one changes the
   picture and says nothing else.
+- **The timeline is a slider** (`role="slider"`, the time as its
+  value text), moved by the arrows, Home and End. What it does not say:
+  which tracks it has and where their keys are, which are drawn and
+  hidden from a screen reader; and Play changes the picture with no word.
 
 ## Not yet done for any phase
 

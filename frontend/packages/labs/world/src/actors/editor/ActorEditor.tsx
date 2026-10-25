@@ -65,6 +65,7 @@ import {
   isActorData,
   isAnimated,
   lookOf,
+  MAIN_ANIMATION,
   withMainAnimation,
   type ActorData,
 } from '../actorData';
@@ -97,6 +98,7 @@ import {
 } from './actorEdits';
 import {AnimationRow} from './AnimationRow';
 import {SelfProperty} from './SelfProperty';
+import {TimelineStrip} from './TimelineStrip';
 import {ValueField} from './ValueField';
 
 const parse = (contents: string): ActorData | undefined => {
@@ -391,17 +393,30 @@ export const ActorEditor = (props: CustomEditorProps) => {
     (file: string) => projectImages[file],
     [projectImages],
   );
-  const shownTimeline = selected
+  const chosenTimeline = selected
     ? parse(contents)?.animations?.[selected]
     : undefined;
-  // Only one with a picture to paint: one that only moves or fades is shown
-  // on the actor's own picture, as the game will show it.
+  // One that only moves or fades is painted on Main's pictures, which is
+  // what the game shows it on: an animation with no picture track leaves the
+  // picture as the actor has it (`core/keyframes.valueAt`).
+  const mainPictures =
+    parse(contents)?.animations?.[MAIN_ANIMATION]?.tracks.sprite;
+  const shownTimeline =
+    chosenTimeline && !chosenTimeline.tracks.sprite && mainPictures
+      ? {
+          ...chosenTimeline,
+          tracks: {sprite: mainPictures, ...chosenTimeline.tracks},
+        }
+      : chosenTimeline;
   const shown =
     shownTimeline &&
     largestCell(shownTimeline, imageFor).width > 0 &&
     (shownTimeline.tracks.sprite?.length ?? 0) > 0
       ? shownTimeline
       : undefined;
+  // Where the playhead is, in seconds; back to the start for another one.
+  const [time, setTime] = useState(0);
+  useEffect(() => setTime(0), [selected]);
   const newAnimation = async () => {
     if (!data) {
       return;
@@ -940,13 +955,16 @@ export const ActorEditor = (props: CustomEditorProps) => {
             {shown ? (
               <span
                 role="img"
-                aria-label={`${data.name}, ${selected} at its start`}
+                aria-label={`${data.name}, ${selected} at ${
+                  Math.round(time * 10) / 10
+                } seconds`}
               >
                 <TimelineThumb
                   timeline={shown}
                   imageFor={imageFor}
                   size={PREVIEW_SIZE}
                   playing={false}
+                  at={time}
                 />
               </span>
             ) : picture ? (
@@ -1107,6 +1125,25 @@ export const ActorEditor = (props: CustomEditorProps) => {
             onLoop={(name, loop) => edit(setAnimationLoop(data, name, loop))}
             isReadOnly={isReadOnly}
           />
+          {selected && chosenTimeline && (
+            <>
+              <TimelineStrip
+                name={selected}
+                timeline={chosenTimeline}
+                time={time}
+                onTime={setTime}
+                effectName={path => effectNamed(path)}
+              />
+              {Object.keys(chosenTimeline.tracks).some(track =>
+                track.startsWith('effect:'),
+              ) && (
+                // A shader, which only the game runs.
+                <Typography variant="body3" className={styles.note}>
+                  Effects are not shown here. Run the game to see them.
+                </Typography>
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>

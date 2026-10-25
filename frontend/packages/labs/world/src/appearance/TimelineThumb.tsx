@@ -21,8 +21,10 @@ export interface TimelineThumbProps {
   imageFor: ImageFor;
   /** Its edge, in CSS pixels. */
   size?: number;
-  /** Whether it plays, or shows its first moment and holds it. */
+  /** Whether it plays, or shows one moment and holds it. */
   playing?: boolean;
+  /** The moment it holds when it is not playing, in seconds; 0 if unsaid. */
+  at?: number;
 }
 
 export const TimelineThumb = ({
@@ -30,6 +32,7 @@ export const TimelineThumb = ({
   imageFor,
   size = THUMB,
   playing = true,
+  at = 0,
 }: TimelineThumbProps) => {
   const canvas = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -65,7 +68,7 @@ export const TimelineThumb = ({
       !playing ||
       endOf(timeline) <= 0 ||
       window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    paint(0);
+    paint(still ? at : 0);
     if (still) {
       return;
     }
@@ -80,7 +83,7 @@ export const TimelineThumb = ({
     };
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
-  }, [timeline, imageFor, size, playing]);
+  }, [timeline, imageFor, size, playing, at]);
   return (
     <canvas
       ref={canvas}

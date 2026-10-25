@@ -208,3 +208,111 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+/* An animation's timeline (`TimelineStrip`): the track names down the
+   left, and the strip — ruler, a row per track, a playhead — beside them. */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.timelineHead {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timelineBody {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.trackNames {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 5rem;
+  margin: 0;
+  padding: 1.25rem 0 0;
+  list-style: none;
+  font-size: var(--font-size-body-s, 14px);
+  color: var(--text-neutral-secondary, #5b5f66);
+}
+
+.trackNames li {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.strip {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  padding-top: 1.25rem;
+  border: var(--lab-border-default);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+  cursor: pointer;
+  touch-action: none;
+}
+
+.strip:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.ruler {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1.25rem;
+  border-bottom: var(--lab-border-default);
+}
+
+.rulerSecond,
+.rulerHalf {
+  position: absolute;
+  bottom: 0;
+  border-left: 1px solid var(--borders-neutral-primary, #8c8c8c);
+  font-size: 11px;
+  padding-left: 2px;
+  color: var(--text-neutral-secondary, #5b5f66);
+}
+
+.rulerSecond {
+  height: 100%;
+}
+
+.rulerHalf {
+  height: 35%;
+}
+
+.track {
+  position: relative;
+  height: 1.5rem;
+  border-bottom: 1px dashed var(--borders-neutral-secondary, #ccc);
+}
+
+.key {
+  position: absolute;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--background-brand-primary, #0093a4);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--borders-danger-primary, #d32f2f);
+  pointer-events: none;
+}

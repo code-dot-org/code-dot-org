@@ -294,6 +294,27 @@ sandbox's thumbnail cannot be asked for a moment; effects are not drawn in
 it, and the preview says so when an effect track is on. Keyboard: the
 arrows move the playhead a tick, Home and End go to the ends.
 
+BUILT. `TimelineStrip`, under the row: Play (or Stop) and the time; the
+track names down the left; and the strip, a slider to a keyboard — the
+arrows move the playhead a tenth of a second, Home goes to 0 and End to
+the last key, and it says the time — with a ruler in half seconds, a row
+per track with a mark at each key, and the playhead. Pressing or dragging
+it moves the playhead, to the tick. Play runs from the playhead by the
+clock through `timeIn`, round again if it loops and stopping at its end
+if not. The picture above is the chosen animation at the playhead
+(`TimelineThumb`, held at a moment), and one with no picture track is
+painted on Main's pictures, which is what the game shows it on. A note
+says effects are not shown, when an animation has one.
+
+Departure: the strip is drawn five seconds long only for an animation with
+nothing on it yet. One with keys is drawn its own length, to the next
+whole second (`drawnLength`): the Pilot's quarter-second Fly drawn across
+five seconds was five keys on top of each other. Keys past that length
+cannot be placed until the length can be changed, which step 7 needs.
+
+In the browser: Jetpack's Pilot's Fly, stepped with the arrows, changed
+its picture each tick, and played.
+
 ### 7. Editing at the playhead
 
 The side panel shows each animated property at the playhead: a key's own
